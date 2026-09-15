@@ -150,8 +150,8 @@
     },
     {
       "path": "catalogue.json",
-      "bytes": 33595,
-      "sha256": "77f9bc3cba598b739432f7cece5d89e10fa2006d8e77e8de5990794d20177e0a",
+      "bytes": 34634,
+      "sha256": "bbda62787a90d14fef98344f9120ab3f0d1b5c55e0de0bb649de359f91ec14d8",
       "kind": "Structured public bibliography",
       "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
       "license_note": "See RIGHTS_AND_SOURCES.md"

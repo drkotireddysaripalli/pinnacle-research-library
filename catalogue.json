@@ -175,8 +175,8 @@
       "url": "https://zenodo.org/records/19482476",
       "version_displayed": "2.1",
       "publication_date_displayed": "2026-04-09",
-      "resource_type_displayed": "Peer review",
-      "peer_review_status": "Unverified; displayed resource type is metadata, not proof of completed scholarly peer review.",
+      "resource_type_displayed": "Preprint",
+      "peer_review_status": "Preprint; no completed journal peer review is asserted.",
       "authors_displayed": [
         "Saripalli, Koti Reddy",
         "Ramtenki, Raghupathi",
@@ -189,7 +189,7 @@
       "contributors_displayed": [],
       "publisher_displayed": "Pinnacle Blooms Network of Bharath Healthcare P LIMITED",
       "license_displayed": "Creative Commons Attribution 4.0 International",
-      "description": "Psychometric validation study protocol; peer-review status not established by the repository label.",
+      "description": "Psychometric validation study protocol; preprint, with planned research methods.",
       "source_metadata_note": "Title and repository metadata are transcribed for identification; deposit is not journal publication or proof of peer review, clinical effectiveness, patent status or priority.",
       "files": [
         {
@@ -212,7 +212,14 @@
           "relation": "Is supplement to",
           "doi": "10.5281/zenodo.19482123"
         }
-      ]
+      ],
+      "metadata_correction": {
+        "date": "2026-09-15",
+        "field": "resource_type",
+        "before": "Peer review",
+        "after": "Preprint",
+        "source_files_changed": false
+      }
     },
     {
       "record_id": "19482123",
@@ -222,8 +229,8 @@
       "url": "https://zenodo.org/records/19482123",
       "version_displayed": "v1",
       "publication_date_displayed": "2026-04-09",
-      "resource_type_displayed": "Peer review",
-      "peer_review_status": "Unverified; displayed resource type is metadata, not proof of completed scholarly peer review.",
+      "resource_type_displayed": "Preprint",
+      "peer_review_status": "Preprint; no completed journal peer review is asserted.",
       "authors_displayed": [
         "Saripalli, Koti Reddy",
         "Ramtenki, Raghupathi",
@@ -236,7 +243,7 @@
       "contributors_displayed": [],
       "publisher_displayed": "Pinnacle Blooms Network of Bharath Healthcare P LIMITED",
       "license_displayed": "Creative Commons Attribution 4.0 International",
-      "description": "Development and preliminary psychometric characterization monograph; peer-review status not independently established.",
+      "description": "Development and preliminary psychometric characterization monograph; preprint.",
       "source_metadata_note": "Title and repository metadata are transcribed for identification; deposit is not journal publication or proof of peer review, clinical effectiveness, patent status or priority.",
       "files": [
         {
@@ -254,7 +261,14 @@
           "url": "https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness"
         }
       ],
-      "version_note": "Zenodo displays Version v1. A reference on the companion protocol calls the monograph Technical Monograph v3.0. These describe different version fields; do not silently replace the repository version with the manuscript label."
+      "version_note": "Zenodo displays Version v1. A reference on the companion protocol calls the monograph Technical Monograph v3.0. These describe different version fields; do not silently replace the repository version with the manuscript label.",
+      "metadata_correction": {
+        "date": "2026-09-15",
+        "field": "resource_type",
+        "before": "Peer review",
+        "after": "Preprint",
+        "source_files_changed": false
+      }
     },
     {
       "record_id": "15487405",
@@ -514,7 +528,13 @@
       "category": "canonical_zenodo_mirror",
       "file_status": "Use the unchanged canonical Zenodo file included in this repository.",
       "reuse_license_verified": false,
-      "metadata_note": "Source title retained as bibliographic metadata; claims in the title are not independently endorsed. No patent or journal acceptance is inferred."
+      "metadata_note": "Source title retained as bibliographic metadata; claims in the title are not independently endorsed. No patent or journal acceptance is inferred.",
+      "canonical_author_credit": [
+        "Koti Reddy Saripalli",
+        "Raghupathi Ramtenki",
+        "Srikanth Yadav Boini"
+      ],
+      "author_credit_note": "Verified 2026-09-15: the saved author list contains the three source-backed people; the public More Info section gives their full canonical names. The header may show only linked author profiles."
     },
     {
       "record_id": "165582431",
@@ -530,7 +550,13 @@
       "category": "canonical_zenodo_mirror",
       "file_status": "Use the unchanged canonical Zenodo file included in this repository.",
       "reuse_license_verified": false,
-      "metadata_note": "Source title retained as bibliographic metadata; claims in the title are not independently endorsed. No patent or journal acceptance is inferred."
+      "metadata_note": "Source title retained as bibliographic metadata; claims in the title are not independently endorsed. No patent or journal acceptance is inferred.",
+      "canonical_author_credit": [
+        "Koti Reddy Saripalli",
+        "Raghupathi Ramtenki",
+        "Srikanth Yadav Boini"
+      ],
+      "author_credit_note": "Verified 2026-09-15: the saved author list contains the three source-backed people; the public More Info section gives their full canonical names. The header may show only linked author profiles."
     },
     {
       "record_id": "175562550",
@@ -577,5 +603,6 @@
       "reuse_license_verified": false,
       "metadata_note": "Source title retained as bibliographic metadata; claims in the title are not independently endorsed. No patent or journal acceptance is inferred."
     }
-  ]
+  ],
+  "metadata_reconciled_date": "2026-09-15"
 }
