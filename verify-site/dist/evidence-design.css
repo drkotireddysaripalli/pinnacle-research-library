@@ -1,0 +1,50 @@
+/* Evidence layer: accessible, source-led presentation shared by every route. */
+.truth-icon{width:1.05em;height:1.05em;display:inline-block;flex:0 0 auto;vertical-align:-.16em;color:currentColor}
+.record-category .truth-icon,.badge .truth-icon{width:1.05em;height:1.05em}
+.category-list button>span:first-child,.record-category,.badge,.record-actions a,.format-links a,.register-categories a,.faq-item summary,.breadcrumbs{display:inline-flex;align-items:center;gap:.45rem}
+.search-icon{width:1.3rem;height:1.3rem;vertical-align:middle}
+.record-actions a{gap:.4rem}
+.record-actions a .truth-icon,.format-links a .truth-icon{width:1rem;height:1rem}
+.care-path li>span{font-size:0;width:2.25rem;height:2.25rem}
+.care-path li>span .truth-icon{width:1.2rem;height:1.2rem}
+.care-path li small{display:block;font-size:.7rem;color:var(--muted);letter-spacing:.08em;margin:.6rem 0 .35rem}
+.queue-item>.badge{align-self:start}
+.faq-section{padding:4.5rem 0 5rem;border-top:1px solid var(--line)}
+.faq-section>h2{margin-bottom:2rem;max-width:32rem}
+.faq-item{border-top:1px solid var(--line);padding:0}
+.faq-item:last-child{border-bottom:1px solid var(--line)}
+.faq-item summary{list-style:none;cursor:pointer;justify-content:space-between;gap:1rem;padding:1.15rem 0;font-weight:700;font-size:1rem}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .faq-toggle{margin-left:auto;transition:transform .2s ease}
+.faq-item[open] summary .faq-toggle{transform:rotate(45deg)}
+.faq-item>div{padding:0 2rem 1.3rem 1.65rem;max-width:58rem}
+.faq-item p{font-size:1rem;line-height:1.75;color:var(--muted);margin:0 0 .75rem}
+.faq-item a,.centre-source{color:var(--teal);font-weight:700;font-size:.875rem;text-decoration:none;display:inline-flex;align-items:center;gap:.35rem}
+.format-section{display:grid;grid-template-columns:1fr 1fr;gap:4rem;padding:3.5rem 0 5rem;border-top:1px solid var(--line);align-items:start}
+.format-section p:not(.eyebrow){font-size:1rem;line-height:1.75;color:var(--muted);max-width:34rem}
+.format-links{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.format-links a{border:1px solid var(--line);border-radius:7px;padding:1rem;text-decoration:none;color:var(--teal);font-weight:700;font-size:.9rem}
+.format-links a:hover{border-color:var(--teal);background:var(--pale)}
+.centre-card .centre-source{margin-top:1rem;padding-top:.8rem;border-top:1px solid var(--line);font-size:.8rem}
+.record-page{padding-block:2rem 5rem}
+.breadcrumbs{flex-wrap:wrap;margin-bottom:2.5rem;font-size:.8rem;color:var(--muted)}
+.breadcrumbs a{color:var(--teal)}
+.record-page>article{max-width:900px}
+.record-page h1{font-size:clamp(2rem,4vw,3.25rem);margin:.75rem 0 1rem}
+.record-page .intro-copy{max-width:760px;margin-bottom:2rem}
+.record-page .record-body{padding-top:1rem}
+.record-page .record-body .record-actions{margin-top:1.8rem}
+.record-page-boundary{background:#fff8ef;border-left:2px solid #d7973a;padding:1rem 1.1rem;font-size:.9rem;line-height:1.7;color:#7b541e;margin-top:2rem}
+.related-records{max-width:900px;border-top:1px solid var(--line);margin-top:3rem;padding-top:2rem}
+.related-records h2{font-size:1.3rem}
+.related-records ul{display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;padding:0;list-style:none}
+.related-records a{color:var(--teal);font-weight:700;text-decoration:none;font-size:.9rem;display:inline-flex;align-items:center;gap:.3rem}
+.register-page>h1{max-width:50rem}
+.register-categories{display:flex;flex-wrap:wrap;gap:.6rem;margin:2rem 0 3rem}
+.register-categories a{padding:.65rem .8rem;border:1px solid var(--line);border-radius:6px;color:var(--teal);font-size:.82rem;text-decoration:none;font-weight:700}
+.register-category{margin:3.5rem 0}
+.register-category>h2{font-size:1.55rem;border-bottom:1px solid var(--line);padding-bottom:1rem;margin-bottom:0;display:flex;align-items:center;gap:.6rem}
+.register-category .evidence-record:last-child{border-bottom:1px solid var(--line)}
+.register-page .evidence-record summary{padding-block:1.4rem}
+@media(max-width:760px){.faq-section,.format-section,.record-page{padding-inline:18px}.format-section{grid-template-columns:1fr;gap:2rem}.format-links,.related-records ul{grid-template-columns:1fr}.breadcrumbs{line-height:1.7}.record-page h1{font-size:2rem}.faq-item summary{font-size:.95rem}.faq-item>div{padding-left:1.55rem;padding-right:.5rem}.register-categories{margin-top:1.5rem}.register-category{margin-block:2.6rem}}
+@media print{.faq-section,.format-section{padding-block:1.5rem}.truth-icon{print-color-adjust:exact}}

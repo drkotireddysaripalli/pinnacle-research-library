@@ -1,0 +1,5 @@
+# Private review edition; public discovery is not enabled.
+User-agent: *
+Disallow: /
+
+Sitemap: https://pinnacle-verify.saripalli.chatgpt.site/sitemap.xml
