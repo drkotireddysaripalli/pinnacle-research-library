@@ -61,7 +61,17 @@
           "title": "Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO’s July 2026 Guidance",
           "url": "https://www.academia.edu/175562550/Licensing_Developmental_Support_Software_in_India_An_April_2026_Case_Study_Assessed_Against_CDSCO_s_July_2026_Guidance"
         }
-      ]
+      ],
+      "journal_submission_status": {
+        "as_of": "2026-09-15",
+        "journal": "Therapeutic Innovation & Regulatory Science",
+        "article_type": "Analysis",
+        "status": "Submitted; received at Technical Check",
+        "journal_acceptance_confirmed": false,
+        "completed_peer_review_confirmed": false,
+        "source_files_changed": false,
+        "note": "A journal version was submitted. The released Zenodo preprint, its DOI and the library source files remain unchanged."
+      }
     },
     {
       "record_id": "22761810",
@@ -604,5 +614,22 @@
       "metadata_note": "Source title retained as bibliographic metadata; claims in the title are not independently endorsed. No patent or journal acceptance is inferred."
     }
   ],
-  "metadata_reconciled_date": "2026-09-15"
+  "metadata_reconciled_date": "2026-09-15",
+  "researcher_profiles": [
+    {
+      "service": "ScienceOpen",
+      "name": "Koti Reddy Saripalli",
+      "url": "https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f",
+      "as_of": "2026-09-15",
+      "status": "Public profile verified; five current preprint DOI requests received, additions not yet confirmed. Imported legacy metadata are not the canonical six-work catalogue."
+    },
+    {
+      "service": "Web of Science Researcher Profile",
+      "name": "Koti Reddy Saripalli",
+      "researcher_id": "RBA-8832-2026",
+      "url": "https://www.webofscience.com/wos/author/record/RBA-8832-2026",
+      "as_of": "2026-09-15",
+      "status": "Public profile verified with five non-indexed bibliography entries. This is not a claim of Web of Science indexing or completed journal peer review."
+    }
+  ]
 }

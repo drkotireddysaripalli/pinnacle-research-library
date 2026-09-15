@@ -10,7 +10,7 @@
     "10.5281/zenodo.19482123",
     "10.5281/zenodo.15487405"
   ],
-  "file_count_excluding_manifest_and_checksums": 28,
+  "file_count_excluding_manifest_and_checksums": 29,
   "checksum_scope": "This manifest lists all substantive files. SHA256SUMS.txt also hashes this manifest; it excludes itself to avoid a circular checksum.",
   "files": [
     {
@@ -149,12 +149,12 @@
       "source_md5_verified": "1d901e6391210fd0a1447d3e6e40c7f0"
     },
     {
-      "path": "catalogue.json",
-      "bytes": 34634,
-      "sha256": "bbda62787a90d14fef98344f9120ab3f0d1b5c55e0de0bb649de359f91ec14d8",
-      "kind": "Structured public bibliography",
-      "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
-      "license_note": "See RIGHTS_AND_SOURCES.md"
+      "path": "Pinnacle_Public_Research_Briefing.md",
+      "bytes": 7407,
+      "sha256": "df570617e585d2cfe3ab4fa84f1d34fc36c0d1e41f5e8da9d43853edc0c38922",
+      "kind": "Public-facing research briefing; not an additional canonical research paper",
+      "source": "Canonical manuscripts and verified repository metadata observed 15 September 2026",
+      "content_modification": "Exact copy of the finalized public research briefing; no manuscript or data changes."
     },
     {
       "path": "Pinnacle_Research_Library.bib",
@@ -177,9 +177,25 @@
     },
     {
       "path": "README.md",
-      "bytes": 11029,
-      "sha256": "950c75da54914194a05e25d570dcea6d10c221c615deb79451e6961e5a39ce9e",
+      "bytes": 12240,
+      "sha256": "70d568cd4191e243fdb0fe326277ddb95d9e102e0539f39ec436593003878bfa",
       "kind": "Repository introduction and public catalogue",
+      "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
+      "license_note": "See RIGHTS_AND_SOURCES.md"
+    },
+    {
+      "path": "RIGHTS_AND_SOURCES.md",
+      "bytes": 3463,
+      "sha256": "5b7d6aadd7818be11e08e3ac2dec4c05e7975fa665602dbd4d8c432aab07e370",
+      "kind": "Source attribution and licence scope",
+      "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
+      "license_note": "See RIGHTS_AND_SOURCES.md"
+    },
+    {
+      "path": "catalogue.json",
+      "bytes": 35976,
+      "sha256": "a95ae2c0c6b51e0da66840ffe15a879c76c94f015748fad98a3c5af626c9e472",
+      "kind": "Structured public bibliography",
       "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
       "license_note": "See RIGHTS_AND_SOURCES.md"
     },
@@ -204,14 +220,6 @@
       "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/requirements.txt",
       "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
       "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
-    },
-    {
-      "path": "RIGHTS_AND_SOURCES.md",
-      "bytes": 3463,
-      "sha256": "5b7d6aadd7818be11e08e3ac2dec4c05e7975fa665602dbd4d8c432aab07e370",
-      "kind": "Source attribution and licence scope",
-      "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
-      "license_note": "See RIGHTS_AND_SOURCES.md"
     },
     {
       "path": "workforce_change_log.csv",

@@ -2,15 +2,19 @@
 
 Research manuscripts, public supplements and a reproducible analysis of the geography of RCI-listed rehabilitation training institutions in India. The library brings together six canonical Zenodo works and a linked bibliography of existing Academia.edu records.
 
+**Research briefing:** [A plain-language guide to the six works and what the evidence establishes](Pinnacle_Public_Research_Briefing.md). This is a public-facing briefing, not a seventh research paper.
+
 **Start with the reproducible register study:** [read the paper](02_RCI_Institution_Geography.pdf), [inspect the institution data](workforce_institutions_audited.csv), and [follow the reproduction guide](RCI_DATA_README.md).
 
 ## Six canonical works
 
-The three September 2026 works are preprints and have not been peer reviewed. Each work below links to its canonical Zenodo version and available files.
+Five canonical works are preprints; PGAF is a report. Completed journal peer review is not established for these repository versions. Each work below links to its canonical Zenodo version and available files.
 
 ### 1. Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance
 
 Regulatory case study. Source version: 3.0; 2026-09-15.
+
+**Journal status, 15 September 2026:** A journal version was submitted to *Therapeutic Innovation & Regulatory Science* as an **Analysis** and received at **Technical Check**. Submission does not establish acceptance or completed peer review. This library retains the released Zenodo preprint and its original files.
 
 **Authors:** Saripalli, Koti Reddy.
 
@@ -109,6 +113,12 @@ These nine Academia listings had no uploaded document when observed on 15 Septem
 - [Pinnacle Global Autism Framework (PGAF): India’s First Validated, Scalable, Outcome-Based Child Development System](https://www.academia.edu/129496052/Pinnacle_Global_Autism_Framework_PGAF_India_s_First_Validated_Scalable_Outcome_Based_Child_Development_System)
 - [Autism Mothers Handbook (ఆటిజం మదర్స్ హ్యాండ్బుక్)](https://www.academia.edu/129496053/Autism_Mothers_Handbook_%E0%B0%86%E0%B0%9F%E0%B0%BF%E0%B0%9C%E0%B0%82_%E0%B0%AE%E0%B0%A6%E0%B0%B0_%E0%B0%B8_%E0%B0%B9_%E0%B0%AF%E0%B0%BE%E0%B0%82%E0%B0%A1_%E0%B0%AC%E0%B1%81%E0%B0%95_)
 - [India’s Pinnacle Global Autism Framework (PGAF): The First Fully Validated, Scalable, and Measurable Child Development System for the World](https://www.academia.edu/129496054/India_s_Pinnacle_Global_Autism_Framework_PGAF_The_First_Fully_Validated_Scalable_and_Measurable_Child_Development_System_for_the_World)
+
+## Researcher profiles
+
+[ORCID](https://orcid.org/0009-0007-7866-0737) · [ScienceOpen](https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f) · [Web of Science researcher profile](https://www.webofscience.com/wos/author/record/RBA-8832-2026)
+
+As of 15 September 2026, ScienceOpen has received requests for the five current preprint DOIs; additions are not yet confirmed. The Web of Science profile displays five **non-indexed** bibliography entries. Profile presence does not establish indexing, peer review or journal acceptance. Canonical titles, types and author/contributor credit are recorded in this library.
 
 ## Citation, rights and file integrity
 
