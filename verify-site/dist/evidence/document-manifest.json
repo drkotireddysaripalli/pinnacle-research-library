@@ -1,0 +1,50 @@
+[
+  {
+    "file": "bis.pdf",
+    "sha256": "91abd06c40e110180ca036afd374ddd8b9d8ebb4ae027ce5a093d0ab8ea5c250",
+    "bytes": 3810982,
+    "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
+  },
+  {
+    "file": "classification-application.pdf",
+    "sha256": "1a5e96c3fe7eccb793cd2b88df4b7b0604e82e997cc266d2e7c03d0c72eeef95",
+    "bytes": 294089,
+    "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
+  },
+  {
+    "file": "district-excerpts.pdf",
+    "sha256": "60be903abfbf06b73bf30f5c4ab502fe769ecdefd544330170aa5cad1b4a963a",
+    "bytes": 5274297,
+    "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
+  },
+  {
+    "file": "dpiit.pdf",
+    "sha256": "00447971b4ede9c00147a82d18db139fd09c9f86d3d7c61a5e38acdcef656fa3",
+    "bytes": 2549305,
+    "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
+  },
+  {
+    "file": "iso13485.pdf",
+    "sha256": "b577fb0227453d322d521b4399079375748d3158cc25a360e6d9754e459e333a",
+    "bytes": 3743697,
+    "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
+  },
+  {
+    "file": "iso27001.pdf",
+    "sha256": "4e50011495c76c43c6caabc0e85e2bb9450a1ea53b1e3b6adc859a691fab3c37",
+    "bytes": 3737181,
+    "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
+  },
+  {
+    "file": "mca.pdf",
+    "sha256": "c167d68862828d1b3b59d888fb0d97248de3ca3e114f460507e0952f7d428219",
+    "bytes": 422598,
+    "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
+  },
+  {
+    "file": "md5.pdf",
+    "sha256": "09a063e47b664e870d55439b1a3f3fddcafcd47eb01f10a44d09a27cf9099ba0",
+    "bytes": 624563,
+    "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
+  }
+]
