@@ -1,0 +1,22 @@
+{
+  "study_id": "BHCL-PUB-2026-09-02",
+  "version": "2.0",
+  "source_title": "List of Approved Institutions upto 04-02-2026",
+  "source_url": "https://cdnbbsr.s3waas.gov.in/s34f4eeef3a8c90dfceaddd5c6d64e4ebb/uploads/2026/02/202602051296274170.pdf",
+  "source_sha256": "cd8486f239a95740d5baa814211edb4c51eb77159eccbf190a16c8fbdbb8f476",
+  "source_pages": 113,
+  "source_snapshot_date": "2026-02-04",
+  "audit_date": "2026-09-15",
+  "python_version": "3.12.14",
+  "pdfplumber_version": "0.11.9",
+  "analytical_unit": "one distinct RCI institution code listed in this source snapshot",
+  "scope_exclusions": [
+    "current approval/activity status",
+    "programme counts",
+    "seat/intake capacity",
+    "workforce counts",
+    "ownership",
+    "population-adjusted rates"
+  ],
+  "validation_description": "All source codes, printed serials, heading-derived geographies, prefix cross-checks and label-source matches were checked computationally; AI-assisted review resolved 14 label exceptions. This is not independent human double extraction."
+}

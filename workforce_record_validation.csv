@@ -1,0 +1,1069 @@
+﻿institute_code,source_page,source_serial,source_heading_state,prefix_crosscheck_state,heading_prefix_agree,final_label_source_match,name_extraction_route
+AP004,1,1,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP008,1,2,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP011,1,3,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP012,1,4,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP013,1,5,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP014,1,6,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP016,1,7,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP022,1,8,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP028,1,9,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP031,1,10,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP032,1,11,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP033,1,12,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,coordinate_crop
+AP034,2,13,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP035,2,14,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP036,2,15,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP037,2,16,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP038,2,17,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP040,2,18,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP041,2,19,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP042,2,20,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP043,2,21,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,coordinate_crop
+AP044,3,22,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP045,3,23,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP046,3,24,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP047,3,25,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP048,3,26,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP049,3,27,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AP050,3,28,Andhra Pradesh,Andhra Pradesh,True,exact_normalized_substring,table_cell
+AR001,3,29,Arunachal Pradesh,Arunachal Pradesh,True,exact_normalized_substring,table_cell
+AR002,3,30,Arunachal Pradesh,Arunachal Pradesh,True,exact_normalized_substring,table_cell
+AR003,3,31,Arunachal Pradesh,Arunachal Pradesh,True,exact_normalized_substring,table_cell
+AR004,3,32,Arunachal Pradesh,Arunachal Pradesh,True,exact_normalized_substring,coordinate_crop
+AS002,4,33,Assam,Assam,True,exact_normalized_substring,table_cell
+AS003,4,34,Assam,Assam,True,exact_normalized_substring,table_cell
+AS004,4,35,Assam,Assam,True,exact_normalized_substring,table_cell
+AS005,4,36,Assam,Assam,True,exact_normalized_substring,table_cell
+AS007,4,37,Assam,Assam,True,exact_normalized_substring,table_cell
+BR001,4,38,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR002,4,39,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR003,5,40,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR005,5,41,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR007,5,42,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR009,5,43,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR010,5,44,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR012,5,45,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR013,5,46,Bihar,Bihar,True,exact_normalized_substring,coordinate_crop
+BR014,6,47,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR015,6,48,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR016,6,49,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR017,6,50,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR018,6,51,Bihar,Bihar,True,exact_normalized_substring,table_cell
+BR019,6,52,Bihar,Bihar,True,exact_normalized_substring,table_cell
+CH001,6,53,Chandigarh,Chandigarh,True,exact_normalized_substring,table_cell
+CH002,6,54,Chandigarh,Chandigarh,True,exact_normalized_substring,table_cell
+CH003,6,55,Chandigarh,Chandigarh,True,exact_normalized_substring,coordinate_crop
+CH004,7,56,Chandigarh,Chandigarh,True,exact_normalized_substring,table_cell
+CH005,7,57,Chandigarh,Chandigarh,True,exact_normalized_substring,table_cell
+CG001,7,58,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG002,7,59,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG006,7,60,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG007,7,61,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG008,7,62,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG009,7,63,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,coordinate_crop
+CG010,8,64,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG011,8,65,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG012,8,66,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG013,8,67,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG014,8,68,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG015,8,69,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG016,8,70,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG017,8,71,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+CG018,8,72,Chhattisgarh,Chhattisgarh,True,exact_normalized_substring,table_cell
+DL001,8,73,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL003,8,74,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL005,8,75,Delhi,Delhi,True,exact_normalized_substring,coordinate_crop
+DL007,9,76,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL008,9,77,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL009,9,78,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL011,9,79,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL012,9,80,Delhi,Delhi,True,exact_normalized_substring,coordinate_crop
+DL013,10,81,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL014,10,82,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL016,10,83,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL017,10,84,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL018,10,85,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL019,10,86,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL020,10,87,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL021,10,88,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL022,10,89,Delhi,Delhi,True,exact_normalized_substring,coordinate_crop
+DL025,11,90,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL026,11,91,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL028,11,92,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL029,11,93,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL030,11,94,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL031,11,95,Delhi,Delhi,True,exact_normalized_substring,coordinate_crop
+DL032,12,96,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL033,12,97,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL034,12,98,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL035,12,99,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL036,12,100,Delhi,Delhi,True,exact_normalized_substring,coordinate_crop
+DL037,13,101,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL038,13,102,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL039,13,103,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL040,13,104,Delhi,Delhi,True,exact_normalized_substring,table_cell
+DL041,13,105,Delhi,Delhi,True,exact_normalized_substring,table_cell
+GO001,13,106,Goa,Goa,True,exact_normalized_substring,table_cell
+GO004,13,107,Goa,Goa,True,exact_normalized_substring,table_cell
+GO005,13,108,Goa,Goa,True,exact_normalized_substring,table_cell
+GJ001,13,109,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ003,13,110,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ005,13,111,Gujarat,Gujarat,True,exact_normalized_substring,coordinate_crop
+GJ006,14,112,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ007,14,113,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ010,14,114,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ011,14,115,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ012,14,116,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ015,14,117,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ016,14,118,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ019,14,119,Gujarat,Gujarat,True,exact_normalized_substring,coordinate_crop
+GJ020,15,120,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ021,15,121,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ022,15,122,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ024,15,123,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ025,15,124,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ026,15,125,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ027,15,126,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+GJ028,15,127,Gujarat,Gujarat,True,exact_normalized_substring,table_cell
+HR001,15,128,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR002,15,129,Haryana,Haryana,True,exact_normalized_substring,coordinate_crop
+HR003,16,130,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR006,16,131,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR007,16,132,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR008,16,133,Haryana,Haryana,True,exact_normalized_substring,coordinate_crop
+HR009,17,134,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR012,17,135,Haryana,Haryana,True,exact_normalized_substring,coordinate_crop
+HR013,18,136,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR014,18,137,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR015,18,138,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR016,18,139,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR017,18,140,Haryana,Haryana,True,exact_normalized_substring,coordinate_crop
+HR018,19,141,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR019,19,142,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR020,19,143,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR021,19,144,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR022,19,145,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR023,19,146,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR024,19,147,Haryana,Haryana,True,exact_normalized_substring,coordinate_crop
+HR026,20,148,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR027,20,149,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR028,20,150,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR029,20,151,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR030,20,152,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR034,20,153,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR036,20,154,Haryana,Haryana,True,exact_normalized_substring,coordinate_crop
+HR038,21,155,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR039,21,156,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR040,21,157,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR041,21,158,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR042,21,159,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR043,21,160,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR044,21,161,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR045,21,162,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR046,22,163,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR047,22,164,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR048,22,165,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR049,22,166,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR050,22,167,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR051,22,168,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR052,22,169,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR053,22,170,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR054,22,171,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR055,22,172,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR056,22,173,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR057,22,174,Haryana,Haryana,True,exact_normalized_substring,coordinate_crop
+HR058,23,175,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR059,23,176,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR060,23,177,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR061,23,178,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR062,23,179,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR063,23,180,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR064,23,181,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR065,23,182,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR066,23,183,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR067,23,184,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR068,23,185,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR069,23,186,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR070,23,187,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR071,23,188,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR072,23,189,Haryana,Haryana,True,exact_normalized_substring,coordinate_crop
+HR073,24,190,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR074,24,191,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR075,24,192,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR076,24,193,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR077,24,194,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR078,24,195,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR079,24,196,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR080,24,197,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR081,24,198,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR082,24,199,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR083,24,200,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR084,24,201,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HR085,25,202,Haryana,Haryana,True,exact_normalized_substring,table_cell
+HP001,25,203,Himachal Pradesh,Himachal Pradesh,True,exact_normalized_substring,table_cell
+HP002,25,204,Himachal Pradesh,Himachal Pradesh,True,exact_normalized_substring,table_cell
+HP003,25,205,Himachal Pradesh,Himachal Pradesh,True,exact_normalized_substring,table_cell
+HP005,25,206,Himachal Pradesh,Himachal Pradesh,True,exact_normalized_substring,table_cell
+HP006,25,207,Himachal Pradesh,Himachal Pradesh,True,exact_normalized_substring,table_cell
+HP007,25,208,Himachal Pradesh,Himachal Pradesh,True,exact_normalized_substring,table_cell
+HP008,25,209,Himachal Pradesh,Himachal Pradesh,True,exact_normalized_substring,table_cell
+JK001,25,210,Jammu and Kashmir,Jammu and Kashmir,True,exact_normalized_substring,coordinate_crop
+JK002,26,211,Jammu and Kashmir,Jammu and Kashmir,True,exact_normalized_substring,table_cell
+JK005,26,212,Jammu and Kashmir,Jammu and Kashmir,True,exact_normalized_substring,table_cell
+JKH001,26,213,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH002,26,214,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH003,26,215,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH004,26,216,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH005,26,217,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH007,26,218,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH008,26,219,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH009,26,220,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH010,26,221,Jharkhand,Jharkhand,True,exact_normalized_substring,coordinate_crop
+JKH012,27,222,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH013,27,223,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH014,27,224,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH016,27,225,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH017,27,226,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH018,27,227,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH019,27,228,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH020,27,229,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+JKH021,27,230,Jharkhand,Jharkhand,True,exact_normalized_substring,table_cell
+KK001,27,231,Karnataka,Karnataka,True,exact_normalized_substring,coordinate_crop
+KK004,28,232,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK005,28,233,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK006,28,234,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK008,28,235,Karnataka,Karnataka,True,exact_normalized_substring,coordinate_crop
+KK009,29,236,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK014,29,237,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK015,29,238,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK016,29,239,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK017,29,240,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK018,29,241,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK019,29,242,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK020,29,243,Karnataka,Karnataka,True,exact_normalized_substring,coordinate_crop
+KK021,30,244,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK024,30,245,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK026,30,246,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK027,30,247,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK029,30,248,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK033,30,249,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK034,30,250,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK037,30,251,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK039,31,252,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK040,31,253,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK041,31,254,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK042,31,255,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK043,31,256,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK044,31,257,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK045,31,258,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK046,31,259,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK047,31,260,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK048,31,261,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK049,31,262,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK050,31,263,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK051,32,264,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK052,32,265,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK054,32,266,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK056,32,267,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK057,32,268,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KK058,32,269,Karnataka,Karnataka,True,exact_normalized_substring,table_cell
+KL003,32,270,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL004,32,271,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL005,32,272,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL006,32,273,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL008,32,274,Kerala,Kerala,True,exact_normalized_substring,coordinate_crop
+KL010,33,275,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL011,33,276,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL012,33,277,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL013,33,278,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL014,33,279,Kerala,Kerala,True,exact_normalized_substring,coordinate_crop
+KL015,34,280,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL017,34,281,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL019,34,282,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL020,34,283,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL021,34,284,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL022,34,285,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL023,34,286,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL027,34,287,Kerala,Kerala,True,exact_normalized_substring,coordinate_crop
+KL031,35,288,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL032,35,289,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL033,35,290,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL035,35,291,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL036,35,292,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL039,35,293,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL040,35,294,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL041,35,295,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL042,35,296,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL044,35,297,Kerala,Kerala,True,exact_normalized_substring,coordinate_crop
+KL045,36,298,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL046,36,299,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL047,36,300,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL048,36,301,Kerala,Kerala,True,exact_normalized_substring,table_cell
+KL049,36,302,Kerala,Kerala,True,exact_normalized_substring,table_cell
+LDK001,36,303,Ladakh,Ladakh,True,exact_normalized_substring,table_cell
+MP001,36,304,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP003,36,305,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP005,36,306,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,coordinate_crop
+MP006,37,307,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP007,37,308,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP009,37,309,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP010,37,310,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP011,37,311,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP012,37,312,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP013,37,313,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP014,37,314,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,coordinate_crop
+MP015,38,315,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP016,38,316,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP017,38,317,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP018,38,318,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP019,38,319,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP021,38,320,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP023,38,321,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP025,38,322,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP027,38,323,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP028,38,324,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,coordinate_crop
+MP029,39,325,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP030,39,326,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP031,39,327,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP032,39,328,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP033,39,329,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP034,39,330,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP035,39,331,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP036,39,332,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP037,39,333,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP038,39,334,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,coordinate_crop
+MP039,40,335,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP040,40,336,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP041,40,337,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP042,40,338,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP043,40,339,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP044,40,340,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP045,40,341,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP046,40,342,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP047,40,343,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP048,40,344,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP049,40,345,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP050,40,346,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,coordinate_crop
+MP051,41,347,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP052,41,348,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP053,41,349,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MP054,41,350,Madhya Pradesh,Madhya Pradesh,True,exact_normalized_substring,table_cell
+MH002,41,351,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH003,41,352,Maharashtra,Maharashtra,True,exact_normalized_substring,coordinate_crop
+MH004,42,353,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH005,42,354,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH009,42,355,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH017,42,356,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH020,42,357,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH021,43,358,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH022,43,359,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH023,43,360,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH024,43,361,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH025,43,362,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH026,43,363,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH030,43,364,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH031,43,365,Maharashtra,Maharashtra,True,exact_normalized_substring,coordinate_crop
+MH032,44,366,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH033,44,367,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH036,44,368,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH038,44,369,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH039,44,370,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH043,44,371,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH045,44,372,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH046,44,373,Maharashtra,Maharashtra,True,exact_normalized_substring,coordinate_crop
+MH048,45,374,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH050,45,375,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH054,45,376,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH055,45,377,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH057,45,378,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH060,45,379,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH061,45,380,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH066,45,381,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH064,45,382,Maharashtra,Maharashtra,True,exact_normalized_substring,coordinate_crop
+MH071,46,383,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH075,46,384,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH077,46,385,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH078,46,386,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH083,46,387,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH084,46,388,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH089,46,389,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH090,46,390,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH091,46,391,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH094,46,392,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH095,46,393,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH096,46,394,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH097,46,395,Maharashtra,Maharashtra,True,exact_normalized_substring,coordinate_crop
+MH101,47,396,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH102,47,397,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH104,47,398,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH105,47,399,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH107,47,400,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH108,47,401,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH109,47,402,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH110,47,403,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH111,47,404,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH112,47,405,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH113,47,406,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH114,47,407,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH115,47,408,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MH116,47,409,Maharashtra,Maharashtra,True,exact_normalized_substring,table_cell
+MZ001,48,410,Mizoram,Mizoram,True,exact_normalized_substring,table_cell
+MZ003,48,411,Mizoram,Mizoram,True,exact_normalized_substring,table_cell
+MZ004,48,412,Mizoram,Mizoram,True,exact_normalized_substring,table_cell
+MN001,48,413,Manipur,Manipur,True,exact_normalized_substring,table_cell
+MN002,48,414,Manipur,Manipur,True,exact_normalized_substring,table_cell
+MN003,48,415,Manipur,Manipur,True,exact_normalized_substring,table_cell
+MN004,48,416,Manipur,Manipur,True,exact_normalized_substring,table_cell
+MN005,48,417,Manipur,Manipur,True,exact_normalized_substring,table_cell
+MG001,48,418,Meghalaya,Meghalaya,True,exact_normalized_substring,table_cell
+MG004,48,419,Meghalaya,Meghalaya,True,exact_normalized_substring,coordinate_crop
+MG005,49,420,Meghalaya,Meghalaya,True,exact_normalized_substring,table_cell
+OR001,49,421,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR002,49,422,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR003,49,423,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR004,49,424,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR005,49,425,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR006,49,426,Odisha,Odisha,True,exact_normalized_substring,coordinate_crop
+OR008,50,427,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR009,50,428,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR010,50,429,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR012,50,430,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR013,50,431,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR015,50,432,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR017,51,433,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR018,51,434,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR019,51,435,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR020,51,436,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR022,51,437,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR023,51,438,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR024,51,439,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR025,51,440,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR026,51,441,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR027,51,442,Odisha,Odisha,True,exact_normalized_substring,coordinate_crop
+OR028,52,443,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR029,52,444,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR030,52,445,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR031,52,446,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR032,52,447,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR033,52,448,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR034,52,449,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR035,52,450,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR036,52,451,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR037,52,452,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR038,52,453,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR039,52,454,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR040,52,455,Odisha,Odisha,True,exact_normalized_substring,table_cell
+OR041,52,456,Odisha,Odisha,True,exact_normalized_substring,table_cell
+PD001,52,457,Puducherry,Puducherry,True,exact_normalized_substring,coordinate_crop
+PD003,53,458,Puducherry,Puducherry,True,exact_normalized_substring,table_cell
+PD004,53,459,Puducherry,Puducherry,True,exact_normalized_substring,table_cell
+PD005,53,460,Puducherry,Puducherry,True,exact_normalized_substring,table_cell
+PB001,53,461,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB003,53,462,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB004,53,463,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB006,53,464,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB007,53,465,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB008,53,466,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB010,53,467,Punjab,Punjab,True,exact_normalized_substring,coordinate_crop
+PB011,54,468,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB012,54,469,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB013,54,470,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB014,54,471,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB015,54,472,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB016,54,473,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB017,54,474,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB018,54,475,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB019,54,476,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB020,54,477,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB021,54,478,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB022,54,479,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB023,54,480,Punjab,Punjab,True,exact_normalized_substring,table_cell
+PB024,55,481,Punjab,Punjab,True,exact_normalized_substring,table_cell
+RJ002,55,482,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ004,55,483,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ005,55,484,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ006,55,485,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ007,55,486,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ008,55,487,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ011,56,488,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ013,56,489,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ015,56,490,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ017,56,491,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ018,56,492,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ019,57,493,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ021,57,494,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ022,57,495,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ023,57,496,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ025,57,497,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ026,57,498,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ027,57,499,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ028,57,500,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ029,57,501,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ031,57,502,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ032,57,503,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ033,58,504,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ034,58,505,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ035,58,506,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ036,58,507,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ037,58,508,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ039,58,509,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ040,58,510,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ041,58,511,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ042,58,512,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ044,59,513,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ045,59,514,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ046,59,515,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ047,59,516,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ048,59,517,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ049,59,518,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ050,59,519,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ051,59,520,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ052,59,521,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ053,59,522,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ054,59,523,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ055,59,524,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ056,60,525,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ057,60,526,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ058,60,527,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ059,60,528,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ060,60,529,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ061,60,530,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ062,60,531,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ063,60,532,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ064,60,533,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ065,60,534,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ066,60,535,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ067,61,536,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ068,61,537,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ069,61,538,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ070,61,539,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ071,61,540,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ072,61,541,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ073,61,542,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ074,61,543,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ075,61,544,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ076,61,545,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ077,61,546,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ078,61,547,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ079,62,548,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ080,62,549,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ081,62,550,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ082,62,551,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ083,62,552,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ084,62,553,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ085,62,554,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ086,62,555,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ087,62,556,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ088,62,557,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ089,62,558,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ090,62,559,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ091,62,560,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ092,63,561,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ093,63,562,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ094,63,563,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ095,63,564,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ096,63,565,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ097,63,566,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ098,63,567,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ099,63,568,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ100,63,569,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ101,63,570,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ102,63,571,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ103,64,572,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ104,64,573,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ105,64,574,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ106,64,575,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ107,64,576,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ108,64,577,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ109,64,578,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ110,64,579,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ111,64,580,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ112,64,581,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ113,64,582,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ114,64,583,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ115,64,584,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ116,64,585,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ117,65,586,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ118,65,587,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ119,65,588,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ120,65,589,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ121,65,590,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ122,65,591,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ123,65,592,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ124,65,593,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ125,65,594,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ126,65,595,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ128,65,596,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ129,65,597,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ130,65,598,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ131,65,599,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ132,66,600,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ133,66,601,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ134,66,602,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ135,66,603,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ136,66,604,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ137,66,605,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ138,66,606,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ139,66,607,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ140,66,608,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ141,66,609,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ142,66,610,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ143,66,611,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ144,66,612,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ145,66,613,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ146,66,614,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ147,67,615,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ148,67,616,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ149,67,617,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ150,67,618,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ151,67,619,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ152,67,620,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ153,67,621,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ154,67,622,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ155,67,623,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ156,67,624,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ157,67,625,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ158,67,626,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ159,67,627,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ160,67,628,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ161,68,629,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ162,68,630,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ163,68,631,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ164,68,632,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ165,68,633,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ166,68,634,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ167,68,635,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ168,68,636,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ169,68,637,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ170,68,638,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ171,68,639,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ172,68,640,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ173,68,641,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ174,68,642,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ175,68,643,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ176,69,644,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ177,69,645,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ178,69,646,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ179,69,647,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ180,69,648,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ181,69,649,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ182,69,650,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ183,69,651,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ184,69,652,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ185,69,653,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ186,69,654,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ187,69,655,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ188,69,656,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ189,69,657,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ190,69,658,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ191,70,659,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ192,70,660,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ193,70,661,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ194,70,662,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ195,70,663,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ196,70,664,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ197,70,665,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ198,70,666,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ199,70,667,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ200,70,668,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ201,70,669,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ202,70,670,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ203,70,671,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ204,70,672,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ205,70,673,Rajasthan,Rajasthan,True,exact_normalized_substring,coordinate_crop
+RJ206,71,674,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ207,71,675,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ208,71,676,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ209,71,677,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ210,71,678,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ211,71,679,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ212,71,680,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ213,71,681,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ214,71,682,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ215,71,683,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ216,71,684,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ217,71,685,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ218,71,686,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ219,71,687,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ220,72,688,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ221,72,689,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ222,72,690,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ223,72,691,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ224,72,692,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ225,72,693,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ226,72,694,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ227,72,695,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ228,72,696,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ229,72,697,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ230,72,698,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ231,72,699,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ232,72,700,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ233,72,701,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ234,72,702,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ235,72,703,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ236,73,704,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ237,73,705,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ238,73,706,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ239,73,707,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ240,73,708,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+RJ241,73,709,Rajasthan,Rajasthan,True,exact_normalized_substring,table_cell
+SK001,73,710,Sikkim,Sikkim,True,exact_normalized_substring,table_cell
+SK002,73,711,Sikkim,Sikkim,True,exact_normalized_substring,table_cell
+SK003,73,712,Sikkim,Sikkim,True,exact_normalized_substring,table_cell
+SK004,73,713,Sikkim,Sikkim,True,exact_normalized_substring,table_cell
+TN001,73,714,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN002,73,715,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,coordinate_crop
+TN004,74,716,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN006,74,717,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,coordinate_crop
+TN008,75,718,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN011,75,719,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN012,75,720,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN013,75,721,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN014,75,722,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,coordinate_crop
+TN015,76,723,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN017,76,724,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN018,76,725,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN020,76,726,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN021,76,727,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN023,76,728,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,coordinate_crop
+TN024,77,729,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN025,77,730,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN027,77,731,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN028,77,732,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN032,78,733,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN037,78,734,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN038,78,735,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN042,78,736,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN043,78,737,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN044,78,738,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN045,78,739,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN046,78,740,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN047,78,741,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN048,78,742,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,coordinate_crop
+TN049,79,743,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN050,79,744,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN052,79,745,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN053,79,746,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN055,79,747,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN056,79,748,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN057,79,749,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN058,79,750,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN059,79,751,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN060,79,752,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN061,79,753,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN062,80,754,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN063,80,755,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TN064,80,756,Tamil Nadu,Tamil Nadu,True,exact_normalized_substring,table_cell
+TL001,80,757,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL002,80,758,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL003,81,759,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL004,81,760,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL005,81,761,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL006,81,762,Telangana,Telangana,True,exact_normalized_substring,coordinate_crop
+TL007,82,763,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL008,82,764,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL009,82,765,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL010,82,766,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL013,82,767,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL014,82,768,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL015,82,769,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL019,82,770,Telangana,Telangana,True,exact_normalized_substring,coordinate_crop
+TL021,83,771,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL022,83,772,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL023,83,773,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL024,83,774,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL025,83,775,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TL026,83,776,Telangana,Telangana,True,exact_normalized_substring,table_cell
+TR002,83,777,Tripura,Tripura,True,exact_normalized_substring,table_cell
+TR004,83,778,Tripura,Tripura,True,exact_normalized_substring,table_cell
+UP001,83,779,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP002,83,780,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP004,84,781,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP005,84,782,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP007,84,783,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP008,84,784,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP010,84,785,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP011,84,786,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP014,84,787,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP015,85,788,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP017,85,789,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP018,85,790,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP019,85,791,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP020,85,792,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP023,85,793,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP024,86,794,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP025,86,795,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP027,86,796,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP031,86,797,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP032,86,798,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP033,87,799,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP034,87,800,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP035,87,801,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP036,87,802,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP037,87,803,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP038,88,804,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP039,88,805,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP040,88,806,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP041,89,807,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP042,89,808,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP043,90,809,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP044,90,810,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP046,90,811,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP047,90,812,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP048,90,813,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP049,90,814,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP050,90,815,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP051,90,816,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP052,91,817,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP053,91,818,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP054,91,819,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP055,91,820,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP056,91,821,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP057,91,822,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP058,91,823,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP059,91,824,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP061,92,825,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP062,92,826,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP063,92,827,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP064,92,828,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP065,92,829,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP066,92,830,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP067,92,831,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP068,92,832,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP070,92,833,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP071,93,834,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP072,93,835,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP073,93,836,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP074,93,837,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP076,93,838,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP075,93,839,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP077,93,840,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP078,94,841,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP079,94,842,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP082,94,843,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP083,94,844,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP084,94,845,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP085,94,846,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP087,94,847,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP088,94,848,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP089,95,849,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP091,95,850,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP090,95,851,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP093,95,852,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP094,95,853,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP095,95,854,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP096,95,855,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP097,96,856,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP099,96,857,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP100,96,858,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP101,96,859,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP102,96,860,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP103,96,861,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP104,96,862,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP105,96,863,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP106,96,864,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP107,97,865,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP108,97,866,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP109,97,867,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP110,97,868,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP111,97,869,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP112,97,870,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP113,97,871,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP114,98,872,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP115,98,873,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP116,98,874,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP117,98,875,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP118,98,876,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP119,98,877,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP120,98,878,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP121,98,879,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP122,98,880,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP123,98,881,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP124,98,882,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP125,98,883,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP126,99,884,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP127,99,885,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP128,99,886,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP129,99,887,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP130,99,888,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP131,99,889,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP132,99,890,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP133,99,891,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP134,99,892,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP135,99,893,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP136,99,894,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP137,99,895,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP139,99,896,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP140,100,897,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP141,100,898,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP142,100,899,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP143,100,900,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP144,100,901,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP145,100,902,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP146,100,903,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP147,100,904,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP148,100,905,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP149,100,906,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP150,100,907,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP151,100,908,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP152,100,909,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP153,101,910,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP154,101,911,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP155,101,912,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP156,101,913,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP157,101,914,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP158,101,915,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP159,101,916,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP160,101,917,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP161,101,918,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP162,101,919,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP163,101,920,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP164,101,921,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP165,101,922,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP166,101,923,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP167,102,924,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP169,102,925,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP170,102,926,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP171,102,927,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP172,102,928,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP173,102,929,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP174,102,930,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP175,102,931,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP176,102,932,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP177,102,933,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP178,102,934,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP179,102,935,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP180,102,936,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP181,102,937,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP182,102,938,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP183,103,939,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP184,103,940,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP185,103,941,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP186,103,942,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP187,103,943,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP188,103,944,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP189,103,945,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP190,103,946,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP191,103,947,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP192,103,948,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP193,103,949,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP194,103,950,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP195,103,951,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP196,103,952,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP197,104,953,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP198,104,954,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP199,104,955,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP200,104,956,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP201,104,957,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP202,104,958,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP203,104,959,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP204,104,960,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP205,104,961,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP206,104,962,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP207,104,963,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP208,104,964,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP209,104,965,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP210,104,966,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP211,104,967,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP212,105,968,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP213,105,969,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP214,105,970,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP215,105,971,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP216,105,972,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP217,105,973,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP218,105,974,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP219,105,975,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP220,105,976,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP221,105,977,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP222,105,978,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP223,105,979,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP224,105,980,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP225,105,981,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,coordinate_crop
+UP226,106,982,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP227,106,983,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP228,106,984,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP229,106,985,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP230,106,986,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP231,106,987,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP232,106,988,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP233,106,989,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP234,106,990,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP235,106,991,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP236,106,992,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP237,106,993,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP238,106,994,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP239,107,995,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP240,107,996,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP241,107,997,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP242,107,998,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP243,107,999,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP244,107,1000,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP245,107,1001,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP246,107,1002,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP247,107,1003,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP248,107,1004,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP249,107,1005,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP250,107,1006,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP251,107,1007,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP252,107,1008,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP253,107,1009,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP254,107,1010,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP255,108,1011,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP256,108,1012,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP257,108,1013,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP258,108,1014,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP259,108,1015,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP260,108,1016,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP261,108,1017,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP262,108,1018,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP263,108,1019,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP264,108,1020,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP265,108,1021,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP266,108,1022,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP267,108,1023,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP268,108,1024,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP269,109,1025,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP270,109,1026,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP271,109,1027,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP272,109,1028,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP273,109,1029,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP274,109,1030,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP275,109,1031,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UP276,109,1032,Uttar Pradesh,Uttar Pradesh,True,exact_normalized_substring,table_cell
+UT001,109,1033,Uttarakhand,Uttarakhand,True,exact_normalized_substring,coordinate_crop
+UT002,110,1034,Uttarakhand,Uttarakhand,True,exact_normalized_substring,table_cell
+UT004,110,1035,Uttarakhand,Uttarakhand,True,exact_normalized_substring,table_cell
+UT007,110,1036,Uttarakhand,Uttarakhand,True,exact_normalized_substring,table_cell
+WB001,110,1037,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB002,110,1038,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB003,110,1039,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB004,110,1040,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB005,110,1041,West Bengal,West Bengal,True,exact_normalized_substring,coordinate_crop
+WB006,111,1042,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB007,111,1043,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB009,111,1044,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB010,111,1045,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB016,111,1046,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB017,111,1047,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB018,111,1048,West Bengal,West Bengal,True,exact_normalized_substring,coordinate_crop
+WB020,112,1049,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB022,112,1050,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB023,112,1051,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB026,112,1052,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB028,112,1053,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB029,112,1054,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB030,112,1055,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB031,112,1056,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB032,112,1057,West Bengal,West Bengal,True,exact_normalized_substring,coordinate_crop
+WB033,113,1058,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB034,113,1059,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB035,113,1060,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB037,113,1061,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB038,113,1062,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB039,113,1063,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB040,113,1064,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB041,113,1065,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB042,113,1066,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB043,113,1067,West Bengal,West Bengal,True,exact_normalized_substring,table_cell
+WB044,113,1068,West Bengal,West Bengal,True,exact_normalized_substring,table_cell

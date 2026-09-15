@@ -1,0 +1,316 @@
+{
+  "package": "Pinnacle Research Library",
+  "release_date": "2026-09-15",
+  "layout": "Flat repository root; all paths are relative to that root.",
+  "canonical_dois": [
+    "10.5281/zenodo.22761782",
+    "10.5281/zenodo.22761810",
+    "10.5281/zenodo.22761832",
+    "10.5281/zenodo.19482476",
+    "10.5281/zenodo.19482123",
+    "10.5281/zenodo.15487405"
+  ],
+  "file_count_excluding_manifest_and_checksums": 28,
+  "checksum_scope": "This manifest lists all substantive files. SHA256SUMS.txt also hashes this manifest; it excludes itself to avoid a circular checksum.",
+  "files": [
+    {
+      "path": "01_Developmental_Software_Regulatory_Case_Supplementary_Figures.zip",
+      "bytes": 1919295,
+      "sha256": "6a1e0fe511a05580751b95f3aefe4f6eb0dc511060a7835aad1de956a181ada7",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761782",
+      "source_url": "https://zenodo.org/records/22761782/files/01_Developmental_Software_Regulatory_Case_Supplementary_Figures.zip?download=1",
+      "source_filename": "01_Developmental_Software_Regulatory_Case_Supplementary_Figures.zip",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "01_Regulatory_Case.docx",
+      "bytes": 837404,
+      "sha256": "e289930435dd547c0e082bddc921332263899709e7bc1bc9feb5776beffc914d",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761782",
+      "source_url": "https://zenodo.org/records/22761782/files/01_Regulatory_Case.docx?download=1",
+      "source_filename": "01_Regulatory_Case.docx",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "01_Regulatory_Case.pdf",
+      "bytes": 417646,
+      "sha256": "ca3eb27620e11c05770725731844dc47f70038298903f593683044a52a5aa63a",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761782",
+      "source_url": "https://zenodo.org/records/22761782/files/01_Regulatory_Case.pdf?download=1",
+      "source_filename": "01_Regulatory_Case.pdf",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "02_RCI_Institution_Geography.docx",
+      "bytes": 929134,
+      "sha256": "8aba7c640be9210058c72767f1f977fc5d7a2d2d47f01175e9b25607ec8d9baa",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography.docx?download=1",
+      "source_filename": "02_RCI_Institution_Geography.docx",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "02_RCI_Institution_Geography.pdf",
+      "bytes": 488419,
+      "sha256": "134705dc6cf2bfcb4b25a959791a35f0bfda69bb7fc88717a24b320298f0a545",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography.pdf?download=1",
+      "source_filename": "02_RCI_Institution_Geography.pdf",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "02_RCI_Institution_Geography_Data_Code_and_Figures.zip",
+      "bytes": 2279727,
+      "sha256": "205f0f8285f9e1fea381a85b7d67d25078bd12619906807f7273971465f49e9a",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "source_filename": "02_RCI_Institution_Geography_Data_Code_and_Figures.zip",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "03_PINNACLE_TRAJ_Protocol.docx",
+      "bytes": 729002,
+      "sha256": "5b5ae3984bd6801fafe83891927a531aa5ce7446922df400916928c6f9895319",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761832",
+      "source_url": "https://zenodo.org/records/22761832/files/03_PINNACLE_TRAJ_Protocol.docx?download=1",
+      "source_filename": "03_PINNACLE_TRAJ_Protocol.docx",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "03_PINNACLE_TRAJ_Protocol.pdf",
+      "bytes": 509508,
+      "sha256": "3d732bf504aa8a9ba5883aa684abfa3f23bd1f99f3c8f0b272990707be624f14",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761832",
+      "source_url": "https://zenodo.org/records/22761832/files/03_PINNACLE_TRAJ_Protocol.pdf?download=1",
+      "source_filename": "03_PINNACLE_TRAJ_Protocol.pdf",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "03_PINNACLE_TRAJ_Protocol_Supplementary_Figures.zip",
+      "bytes": 1737267,
+      "sha256": "6a26696e7cc98c8036fbe446414e300b1de4a930ab12077243919cf86fe6c194",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.22761832",
+      "source_url": "https://zenodo.org/records/22761832/files/03_PINNACLE_TRAJ_Protocol_Supplementary_Figures.zip?download=1",
+      "source_filename": "03_PINNACLE_TRAJ_Protocol_Supplementary_Figures.zip",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only."
+    },
+    {
+      "path": "04_AbilityScore_Psychometric_Validation_Protocol.pdf",
+      "bytes": 310186,
+      "sha256": "3dc3e4fc2ed23001cb28938c62768191ad8aa578f21f346c96273be3d8dfbe24",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.19482476",
+      "source_url": "https://zenodo.org/records/19482476/files/PinnacleAI%20AbilityScore%20Development%20and%20Preliminary%20Psychometric%20Characterization%20of%20a%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness%20Validation%20Protocol--.pdf?download=1",
+      "source_filename": "PinnacleAI AbilityScore Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness Validation Protocol--.pdf",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only.",
+      "source_md5_verified": "950f2350f7ae9f220a6aaa7d2c18ac70"
+    },
+    {
+      "path": "05_AbilityScore_Development_Monograph.pdf",
+      "bytes": 370904,
+      "sha256": "61348d8c1f5159a0d77d7c4f91f1b39b9deb3fe6a0ef299ba335d8c6c313edba",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.19482123",
+      "source_url": "https://zenodo.org/records/19482123/files/PinnacleAI%20AbilityScore%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness.pdf?download=1",
+      "source_filename": "PinnacleAI AbilityScore Standardized Composite Index for Quantifying Child Developmental Readiness.pdf",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only.",
+      "source_md5_verified": "f8d17e9da26905e4ce8656b8597257d8"
+    },
+    {
+      "path": "06_PGAF_Report.pdf",
+      "bytes": 18250160,
+      "sha256": "7511fe153af7da127132294106bbd9f474e9ea0a53947637ec88af551719dd3f",
+      "kind": "Canonical public source file",
+      "doi": "10.5281/zenodo.15487405",
+      "source_url": "https://zenodo.org/records/15487405/files/Pinnacle%20Global%20Research%20Whitebook%20-%20The%20World%E2%80%99s%20First%20Fully%20Validated,%20Multi-Domain,%20Parent-First%20Child%20Development%20Framework.pdf?download=1",
+      "source_filename": "Pinnacle Global Research Whitebook - The World’s First Fully Validated, Multi-Domain, Parent-First Child Development Framework.pdf",
+      "declared_license": "CC-BY-4.0",
+      "content_modification": "None; descriptive filename used for the older three PDFs only.",
+      "source_md5_verified": "1d901e6391210fd0a1447d3e6e40c7f0"
+    },
+    {
+      "path": "catalogue.json",
+      "bytes": 33595,
+      "sha256": "77f9bc3cba598b739432f7cece5d89e10fa2006d8e77e8de5990794d20177e0a",
+      "kind": "Structured public bibliography",
+      "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
+      "license_note": "See RIGHTS_AND_SOURCES.md"
+    },
+    {
+      "path": "Pinnacle_Research_Library.bib",
+      "bytes": 10133,
+      "sha256": "a3df54a013c5907b07ea7e06d2fc848e17095cc6ad533ba8e1d8335f8483ea8e",
+      "kind": "BibTeX bibliography: six canonical works plus twelve additional Academia listings",
+      "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
+      "license_note": "See RIGHTS_AND_SOURCES.md"
+    },
+    {
+      "path": "RCI_DATA_README.md",
+      "bytes": 7699,
+      "sha256": "56cfb8d438ce8310440f8cf34a42a0e561d6f48c953a9fd6128d0d15fe61bbd7",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/README.md",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "README.md",
+      "bytes": 11029,
+      "sha256": "950c75da54914194a05e25d570dcea6d10c221c615deb79451e6961e5a39ce9e",
+      "kind": "Repository introduction and public catalogue",
+      "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
+      "license_note": "See RIGHTS_AND_SOURCES.md"
+    },
+    {
+      "path": "reproduce_workforce.py",
+      "bytes": 10239,
+      "sha256": "201a19ce53d550cf65793dcee541dce860989e92d4e9dcbd264835cf2fb1a1fb",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/reproduce_workforce.py",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 19,
+      "sha256": "b06476a88b0bee8c24424a8ed5785200e8daf826ae6f4891a142d3e4027ef510",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/requirements.txt",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "RIGHTS_AND_SOURCES.md",
+      "bytes": 3463,
+      "sha256": "5b7d6aadd7818be11e08e3ac2dec4c05e7975fa665602dbd4d8c432aab07e370",
+      "kind": "Source attribution and licence scope",
+      "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
+      "license_note": "See RIGHTS_AND_SOURCES.md"
+    },
+    {
+      "path": "workforce_change_log.csv",
+      "bytes": 3106,
+      "sha256": "b79b4d4a88993da14286d666209b3e968b7e954e67e06660c4bb9d704425085d",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_change_log.csv",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "workforce_institutions_audited.csv",
+      "bytes": 290294,
+      "sha256": "7290563f721b7f631082a08e9475be85f6760de3bb87fc3c90f2e224e567ed53",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_institutions_audited.csv",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "workforce_label_crosswalk.csv",
+      "bytes": 160608,
+      "sha256": "f433c9aa21cf58b6853819b71f2b67420be14b64901b36491f2f4030d8d5c40b",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_label_crosswalk.csv",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "workforce_lorenz.csv",
+      "bytes": 1631,
+      "sha256": "f73f3de645ad34f935bfadbb94fc41c2b3a119aec7d2b1cd4b40c5e145cbe57e",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_lorenz.csv",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "workforce_metrics.json",
+      "bytes": 1239,
+      "sha256": "263c787511312dde92ffd17811db118d960c8308b5c347f8537b7ce623dc1726",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_metrics.json",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "workforce_record_validation.csv",
+      "bytes": 85026,
+      "sha256": "708c00a8c330f17d7aa99313cf50b0ab9f3da779d060e5b67caccfb7eba02d28",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_record_validation.csv",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "workforce_source_headings.csv",
+      "bytes": 964,
+      "sha256": "8ef853269af13a0feae46be200eb61badcb56577289e73d1bbfa979d648b2383",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_source_headings.csv",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "workforce_source_manifest.json",
+      "bytes": 1066,
+      "sha256": "6b36da4c11fb24a88b5826f170cc2376e3ff1780c1e39076bfebd379dc9bf1f4",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_source_manifest.json",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    },
+    {
+      "path": "workforce_state_counts.csv",
+      "bytes": 2771,
+      "sha256": "9c9750754510f820d0911f1d352b6775511b3855bd446ee04e2a352fccf01817",
+      "kind": "Readable RCI reproduction supplement",
+      "doi": "10.5281/zenodo.22761810",
+      "source_url": "https://zenodo.org/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip?download=1",
+      "archive_member": "02_RCI_Institution_Geography_Data_Code_and_Figures/data/workforce_state_counts.csv",
+      "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
+      "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
+    }
+  ]
+}

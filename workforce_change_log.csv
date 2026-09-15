@@ -1,0 +1,16 @@
+﻿institute_code,field,old_value,new_value,source_page,reason
+AS005,institution_label,Institute of Yoga and Nutrition Sciences (YNS) 2nd H.O Siddha Point,Institute of Yoga and Nutrition Sciences (YNS),4,source text restores missing name or removes misplaced address tokens
+KK019,institution_label,"Mobility India, 1st 1st Post Box No. 7812",Mobility India,29,source text restores missing name or removes misplaced address tokens
+KK021,institution_label,1st 5th Samvaad Institute of Speech & Hearing,Samvaad Institute of Speech & Hearing,30,source text restores missing name or removes misplaced address tokens
+KK037,institution_label,75th Asha Kirana School for the Mentally Retarded,Asha Kirana School for the Mentally Retarded,30,source text restores missing name or removes misplaced address tokens
+MH102,institution_label,SOPAN (Society of Parents of Children with Autistic 1st Disorders),SOPAN (Society of Parents of Children with Autistic Disorders),47,source text restores missing name or removes misplaced address tokens
+MZ001,institution_label,,"National Institute for the Orthopaedically Handicapped, North Eastern Regional Centre",48,source text restores missing name or removes misplaced address tokens
+RJ205,institution_label,Sangam Special Institute Peeplu (R b Sh i D Shik h S iti) T k R j th,Sangam Special Institute Peeplu,70,source text restores missing name or removes misplaced address tokens
+TN017,institution_label,1st Bala Vidyalaya Institute for Teachers Training,Bala Vidyalaya Institute for Teachers Training,76,source text restores missing name or removes misplaced address tokens
+TN018,institution_label,3rd Vijay Human Services,Vijay Human Services,76,source text restores missing name or removes misplaced address tokens
+TN032,institution_label,Madras ENT Research Foundation Charitable Trust MERF Institute of Speech & Hearing (A Unit of Madras ENT 1st Research Foundation (P). Ltd.)No. 1,Madras ENT Research Foundation Charitable Trust MERF Institute of Speech & Hearing (A Unit of Madras ENT Research Foundation (P). Ltd.),78,source text restores missing name or removes misplaced address tokens
+TN048,institution_label,3rd Ishwar Institute of Prosthetics & Orthotics,Ishwar Institute of Prosthetics & Orthotics,78,source text restores missing name or removes misplaced address tokens
+UP044,institution_label,1st Rehabilitation Society of the Visually Impaired,Rehabilitation Society of the Visually Impaired,90,source text restores missing name or removes misplaced address tokens
+UP211,institution_label,Shri Ram Lakhan Lal College of special Education Sh i h B S t K bi N Utt P d h 272162,Shri Ram Lakhan Lal College of special Education,104,source text restores missing name or removes misplaced address tokens
+UP225,institution_label,Swami Ramananad Rehab Shikshan Prashikshan S h,Swami Ramananad Rehab Shikshan Prashikshan Sansthan,105,source text restores missing name or removes misplaced address tokens
+TN001,source_serial,not extracted by initial full-stop-only rule,714,73,source printed serial lacks terminal full stop; final parser permits it

@@ -1,0 +1,122 @@
+# Pinnacle Research Library
+
+Research manuscripts, public supplements and a reproducible analysis of the geography of RCI-listed rehabilitation training institutions in India. The library brings together six canonical Zenodo works and a linked bibliography of existing Academia.edu records.
+
+**Start with the reproducible register study:** [read the paper](02_RCI_Institution_Geography.pdf), [inspect the institution data](workforce_institutions_audited.csv), and [follow the reproduction guide](RCI_DATA_README.md).
+
+## Six canonical works
+
+The three September 2026 works are preprints and have not been peer reviewed. Each work below links to its canonical Zenodo version and available files.
+
+### 1. Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance
+
+Regulatory case study. Source version: 3.0; 2026-09-15.
+
+**Authors:** Saripalli, Koti Reddy.
+
+[DOI](https://doi.org/10.5281/zenodo.22761782) · [Zenodo record](https://zenodo.org/records/22761782) · [PDF](01_Regulatory_Case.pdf) · [Editable DOCX](01_Regulatory_Case.docx) · [Supplement ZIP](01_Developmental_Software_Regulatory_Case_Supplementary_Figures.zip) · [Academia mirror](https://www.academia.edu/175562550/Licensing_Developmental_Support_Software_in_India_An_April_2026_Case_Study_Assessed_Against_CDSCO_s_July_2026_Guidance)
+
+### 2. Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis
+
+Original register analysis. Source version: 2.0; 2026-09-15.
+
+**Authors:** Saripalli, Koti Reddy.
+
+[DOI](https://doi.org/10.5281/zenodo.22761810) · [Zenodo record](https://zenodo.org/records/22761810) · [PDF](02_RCI_Institution_Geography.pdf) · [Editable DOCX](02_RCI_Institution_Geography.docx) · [Supplement ZIP](02_RCI_Institution_Geography_Data_Code_and_Figures.zip) · [Academia mirror](https://www.academia.edu/175563040/Geographic_Concentration_of_RCI_Listed_Rehabilitation_Training_Institutions_in_India_A_Reproducible_National_Register_Analysis)
+
+### 3. Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study
+
+Retrospective cohort study protocol; planned analysis with no clinical results reported. Source version: 1.1; 2026-09-15.
+
+**Authors:** Saripalli, Koti Reddy.
+
+[DOI](https://doi.org/10.5281/zenodo.22761832) · [Zenodo record](https://zenodo.org/records/22761832) · [PDF](03_PINNACLE_TRAJ_Protocol.pdf) · [Editable DOCX](03_PINNACLE_TRAJ_Protocol.docx) · [Supplement ZIP](03_PINNACLE_TRAJ_Protocol_Supplementary_Figures.zip) · [Academia mirror](https://www.academia.edu/175563111/Six_Month_Change_and_Follow_up_Patterns_in_AbilityScore_During_Routine_Paediatric_Developmental_Care_in_India_Protocol_for_the_PINNACLE_TRAJ_Retrospective_Multicentre_Cohort_Study)
+
+### 4. Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol
+
+Psychometric validation study protocol. Source version: 2.1; 2026-04-09.
+
+**Authors:** Saripalli, Koti Reddy; Ramtenki, Raghupathi; Boini, Srikanth Yadav.
+
+[DOI](https://doi.org/10.5281/zenodo.19482476) · [Zenodo record](https://zenodo.org/records/19482476) · [PDF](04_AbilityScore_Psychometric_Validation_Protocol.pdf) · [Academia mirror](https://www.academia.edu/165583376/Concurrent_Validity_Test_Retest_Reliability_and_Preliminary_Minimal_Clinically_Important_Difference_of_PinnacleAI_AbilityScore_A_Cross_Sectional_Psychometric_Validation_Study_Protocol)
+
+### 5. AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness
+
+Development and preliminary psychometric characterization monograph. Source version: v1; 2026-04-09.
+
+**Authors:** Saripalli, Koti Reddy; Ramtenki, Raghupathi; Boini, Srikanth Yadav.
+
+[DOI](https://doi.org/10.5281/zenodo.19482123) · [Zenodo record](https://zenodo.org/records/19482123) · [PDF](05_AbilityScore_Development_Monograph.pdf) · [Academia mirror](https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness)
+
+### 6. Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System
+
+Framework report. Source version: v1.0; 2025-05-22.
+
+**Authors:** Saripalli, Koti Reddy.
+
+**Additional source credits:** Saripalli, Sreeja Reddy (Editor); Koti Group SEVA Foundation (Research group).
+
+[DOI](https://doi.org/10.5281/zenodo.15487405) · [Zenodo record](https://zenodo.org/records/15487405) · [PDF](06_PGAF_Report.pdf) · [Academia mirror](https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework)
+
+## Reproduce the RCI register analysis
+
+The released dataset contains one record for each of 1,068 distinct institution codes in the RCI list dated 4 February 2026. It describes entries in that source snapshot. It does not measure current course approvals, annual seats, practitioner supply, clinical quality or population-adjusted access. Jurisdictional concentration statistics concern counts of listed codes.
+
+Requirements: Python 3.10 or newer and the dependency listed in [requirements.txt](requirements.txt). Keep the script, manifest and label crosswalk together in the repository root.
+
+```text
+python -m pip install -r requirements.txt
+python reproduce_workforce.py --output-dir reproduced
+```
+
+The script downloads the official source and verifies its SHA-256 checksum before extraction. To use an existing copy:
+
+```text
+python reproduce_workforce.py --source /path/to/RCI_source.pdf --output-dir reproduced
+```
+
+Read [RCI_DATA_README.md](RCI_DATA_README.md) for the data dictionary, validation approach and limitations. The official government source PDF is linked in [workforce_source_manifest.json](workforce_source_manifest.json).
+
+Useful files:
+
+- [Audited institution records](workforce_institutions_audited.csv)
+- [All 36 jurisdiction counts](workforce_state_counts.csv)
+- [Lorenz figure coordinates](workforce_lorenz.csv)
+- [Concentration statistics and checks](workforce_metrics.json)
+- [Record-level validation](workforce_record_validation.csv)
+- [Source heading crosswalk](workforce_source_headings.csv)
+- [Label crosswalk](workforce_label_crosswalk.csv) and [scientific change log](workforce_change_log.csv)
+- [Portable reproduction script](reproduce_workforce.py)
+
+## Additional public documents — links only
+
+These three Academia records provide public document links. Reuse licences were not verified, so full text is available through the source pages.
+
+- [V2 Andhra Pradesh Government Recognition to Pinnacle](https://www.academia.edu/130287600/V2_Andhra_Pradesh_Government_Recognition_to_Pinnacle)
+- [The Mother, The Map, and the Movement: How India Quietly Built the World's Most Complete Autism Care System](https://www.academia.edu/129496111/The_Mother_The_Map_and_the_Movement_How_India_Quietly_Built_the_Worlds_Most_Complete_Autism_Care_System)
+- [The Science Behind Pinnacle AbilityScore®: India's Patented 0-1000 Universal Child Development Metric Transforming Autism, Speech, ABA, Occupational & Developmental Therapy Worldwide](https://www.academia.edu/130287792/The_Science_Behind_Pinnacle_AbilityScore_Indias_Patented_0_1000_Universal_Child_Development_Metric_Transforming_Autism_Speech_ABA_Occupational_and_Developmental_Therapy_Worldwide)
+
+## Bibliographic listings — uploaded files unavailable
+
+These nine Academia listings had no uploaded document when observed on 15 September 2026. Their original titles and record links are provided for reference.
+
+- [A Concurrency-Enabled, Hardware-Accelerated System and Method for Autism AbilityScore (PAA)](https://www.academia.edu/129496051/A_Concurrency_Enabled_Hardware_Accelerated_System_and_Method_for_Autism_AbilityScore_PAA_)
+- [Pinnacle TherapySphere™ – A Specialized Therapeutic Environment for Sensorial Conditions](https://www.academia.edu/129496050/Pinnacle_TherapySphere_A_Specialized_Therapeutic_Environment_for_Sensorial_Conditions)
+- [Everyday Therapy Program™ – Parent-Led Generalization of Therapy Goals](https://www.academia.edu/129496049/Everyday_Therapy_Program_Parent_Led_Generalization_of_Therapy_Goals)
+- [Autism Early Detection Grid™ (AEDG) – Structured Red Flag Identification System](https://www.academia.edu/129496048/Autism_Early_Detection_Grid_AEDG_Structured_Red_Flag_Identification_System)
+- [TherapeuticAI® – AI-Powered Autism Therapy Personalization](https://www.academia.edu/129496047/TherapeuticAI_AI_Powered_Autism_Therapy_Personalization)
+- [A System for Assessing Developmental Readiness of a Child and Method Thereof](https://www.academia.edu/129496046/A_System_for_Assessing_Developmental_Readiness_of_a_Child_and_Method_Thereof)
+- [Pinnacle Global Autism Framework (PGAF): India’s First Validated, Scalable, Outcome-Based Child Development System](https://www.academia.edu/129496052/Pinnacle_Global_Autism_Framework_PGAF_India_s_First_Validated_Scalable_Outcome_Based_Child_Development_System)
+- [Autism Mothers Handbook (ఆటిజం మదర్స్ హ్యాండ్బుక్)](https://www.academia.edu/129496053/Autism_Mothers_Handbook_%E0%B0%86%E0%B0%9F%E0%B0%BF%E0%B0%9C%E0%B0%82_%E0%B0%AE%E0%B0%A6%E0%B0%B0_%E0%B0%B8_%E0%B0%B9_%E0%B0%AF%E0%B0%BE%E0%B0%82%E0%B0%A1_%E0%B0%AC%E0%B1%81%E0%B0%95_)
+- [India’s Pinnacle Global Autism Framework (PGAF): The First Fully Validated, Scalable, and Measurable Child Development System for the World](https://www.academia.edu/129496054/India_s_Pinnacle_Global_Autism_Framework_PGAF_The_First_Fully_Validated_Scalable_and_Measurable_Child_Development_System_for_the_World)
+
+## Citation, rights and file integrity
+
+- Cite each work using its **original Zenodo DOI**.
+- [catalogue.json](catalogue.json) records all six canonical works and all 18 Academia records, including the six corresponding mirrors.
+- [Pinnacle_Research_Library.bib](Pinnacle_Research_Library.bib) contains the six canonical citations and twelve additional Academia bibliography entries.
+- All six Zenodo records declare **Creative Commons Attribution 4.0 International**. Preserve author and contributor attribution. See [RIGHTS_AND_SOURCES.md](RIGHTS_AND_SOURCES.md) for source, code and third-party rights.
+- The six PDFs, three DOCX files, three supplement archives and readable RCI files retain their original content. Three older PDFs use shorter descriptive filenames; the exact public filenames and URLs remain in the catalogue and manifest.
+- [package_manifest.json](package_manifest.json) and [SHA256SUMS.txt](SHA256SUMS.txt) identify file sizes, checksums and provenance.
+
+Public metadata was observed on 15 September 2026.

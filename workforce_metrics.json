@@ -1,0 +1,43 @@
+{
+  "institution_count": 1068,
+  "jurisdiction_count": 36,
+  "represented_jurisdictions": 32,
+  "states_represented": 27,
+  "UTs_represented": 5,
+  "absent_jurisdictions": [
+    "Andaman and Nicobar Islands",
+    "Dadra and Nagar Haveli and Daman and Diu",
+    "Lakshadweep",
+    "Nagaland"
+  ],
+  "top2_n": 482,
+  "top2_percent": 45.1310861423221,
+  "top5_n": 663,
+  "top5_percent": 62.07865168539326,
+  "top10_n": 847,
+  "top10_percent": 79.30711610486891,
+  "median_all36": 11.0,
+  "median_nonzero32": 16.5,
+  "gini_all36": 0.6913753641281731,
+  "HHI_unit_scale": 0.12157555864158566,
+  "HHI_10000_scale": 1215.7555864158567,
+  "effective_jurisdictions": 8.225337487019729,
+  "state_total": 1022,
+  "UT_total": 46,
+  "jurisdictions_1_to_5": 13,
+  "institutions_jurisdictions_1_to_5": 46,
+  "bottom18_n": 53,
+  "bottom18_percent": 4.962546816479401,
+  "gini_nonzero32": 0.6527972846441947,
+  "validation": {
+    "codes_unique": true,
+    "serials_complete": true,
+    "all_heading_prefix_agree": true,
+    "all_final_labels_source_match": true,
+    "no_contact_addresses": true,
+    "sum_counts": true,
+    "rows_checked": 1068,
+    "table_cell_names": 980,
+    "coordinate_crop_names": 88
+  }
+}
