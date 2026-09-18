@@ -216,8 +216,8 @@
       "id": "bis"
     },
     {
-      "q": "Are 79 abilities and 349 skills different counts of the same thing?",
-      "a": "The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.",
+      "q": "What do 17 domains, 79 abilities and 349 skills mean?",
+      "a": "Pinnacle describes these as different layers of its developmental framework: 17 domains, 79 abilities and 349 skills, with 591 observations and AbilityScore on a 0–1000 scale. The totals belong to Pinnacle’s architecture, not a WHO-defined numerical hierarchy. Individual plans select relevant priorities. The earlier Whitebook used 344 skills across six domains; validation of an earlier version should not be automatically transferred to the newer framework.",
       "id": "sovereign-walkthrough"
     },
     {
@@ -226,9 +226,24 @@
       "id": "sovereign-walkthrough"
     },
     {
-      "q": "Does ICD-11 alignment mean WHO approval of PinnacleAI?",
-      "a": "No. The handout and dossier state classification alignment. An item-by-item mapping audit was not supplied. Using WHO classifications does not establish WHO approval or endorsement of a third-party product. BIS and the MD-5 have their own named scopes.",
-      "id": "september-handout"
+      "q": "How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI?",
+      "a": "Pinnacle’s dossier describes architecture and mappings using WHO’s ICD-11, ICF and ICHI, alongside SNOMED CT terminology from SNOMED International. Their roles are health information, functioning and participation, interventions, and consistent clinical meaning. Correct implementation can support interoperability; an item-by-item mapping audit was not supplied. Alignment is separate from endorsement, clinical validation and the licensed device’s intended use.",
+      "id": "dossier"
+    },
+    {
+      "q": "Does Pinnacle focus on a diagnosis or on everyday-life goals?",
+      "a": "Families may arrive with questions about autism, ADHD, communication, sensory processing, movement, learning or other developmental concerns. Pinnacle’s stated purpose centres on the capabilities that help each child grow toward self-sufficiency and participate in mainstream life, with the support and accommodations they need. These are examples of individual goals, not promised results. Professional assessment identifies the support appropriate to each child; diagnosis and medical care remain important where indicated. The licensed software’s scope is non-diagnostic developmental support for ages 0–12, not treatment of every condition.",
+      "id": "md5"
+    },
+    {
+      "q": "Is PinnacleAI certified as sovereign-grade or authorised worldwide?",
+      "a": "The reviewed documents do not establish a sovereign-grade certification or worldwide market authorisation. Pinnacle describes an architecture intended for population-scale developmental support. A specific deployment needs documented local control and governance, validated interoperability, applicable permissions, operational capacity and evidence of performance for that population. MD-5 and BIS provide the particular scopes shown in their records.",
+      "id": "dossier"
+    },
+    {
+      "q": "Are parents and caregivers named in the MD-5 intended use?",
+      "a": "Yes. The MD-5 annexure states that PinnacleAI GPT-OS is intended to assist parents, therapists, educators and caregivers through developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for ages 0–12. This explicitly includes family users of the licensed software. It does not confer professional therapist credentials or register homes as therapy centres; worldwide exclusivity has not been established.",
+      "id": "md5"
     }
   ],
   "familyMeaning": {
