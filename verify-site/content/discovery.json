@@ -1,0 +1,8 @@
+{
+  "publicBase": "https://www.pinnacleblooms.org/verify/",
+  "indexNow": {
+    "key": "9eccddfeede58a1e7db0a8a2aa8286ab",
+    "keyLocation": "https://www.pinnacleblooms.org/verify/9eccddfeede58a1e7db0a8a2aa8286ab.txt",
+    "note": "Public host-verification key. Submission acceptance is not confirmation of indexing or ranking."
+  }
+}
