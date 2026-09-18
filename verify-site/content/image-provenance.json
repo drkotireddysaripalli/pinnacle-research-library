@@ -1,0 +1,26 @@
+{
+  "created": "2026-09-18",
+  "tool": "Built-in image-generation tool",
+  "purpose": "Conceptual imagery for Pinnacle verification page; no documented patients or outcomes",
+  "brand": "Authentic emblem overlaid in HTML from existing official asset; no AI-generated logo",
+  "images": [
+    {
+      "name": "family-journey",
+      "prompt": "Use case: photorealistic-natural. Asset type: editorial healthcare website hero, landscape 3:2 composition. Create a polished Pinnacle World-inspired conceptual scene: luminous pure white background extending all the way to every edge. Centre-right, a soft-edged photographic vignette showing a contemporary Indian mother in a soft teal kurta and a happy five-year-old child in a warm yellow top, collaborating to assemble simple colourful learning shapes at a child-height table. They are warmly engaged with each other and the shapes, candid dignity, growing capability and joyful participation, natural eye-level camera. One strong human scene, not a collage. Gentle organic scene edges fade into white without a visible photo rectangle. Below and lightly around the scene, a restrained fine flowing developmental ribbon in purple, cyan, pink, yellow and green with subtle light, airy and scientifically calm, not fantasy. Plenty of luminous white breathing room. Anatomically natural correct hands and fingers, realistic skin, no exaggerated gestures. High-end editorial healthcare brand photographic treatment. NO text, NO letters, NO numbers, NO statistics, NO logos, NO emblems, NO government marks, NO badges, NO credentials, NO UI dashboards, NO dark background, NO busy decorative objects, NO enclosing border. This is a conceptual family illustration, not an actual patient or testimonial. Keep people and tabletop complete within generous white margins.\n"
+    },
+    {
+      "name": "care-participation",
+      "prompt": "Use case: illustration-story. Asset type: Pinnacle World developmental-care pathway illustration for a responsive evidence website, 3:2 landscape. Create a luminous PURE WHITE canvas, white to all edges, with three soft-edged photographic circular vignettes connected by one graceful, lightly glowing developmental ribbon in purple, cyan, pink, yellow and green. LEFT: an Indian developmental practitioner in a plain lavender top at child's eye level with a young Indian child, using simple coloured play shapes. CENTRE: an Indian mother in teal calmly guiding her young child through a practical everyday task at a low table at home, warm natural smiles. RIGHT: an Indian school-age child joyfully taking part with a peer in a welcoming classroom, teacher nearby. All characters fully clothed, dignified, capable, anatomy and hands natural. No before-and-after transformation, no promised outcome. The connected ribbon represents coordination and continuing review between professional support, home practice and participation, not a success graph. Editorial healthcare quality, tasteful photographic realism with delicate line-art accents, airy spacing, soft daylight. Human journey dominant, canvas mostly white, uncluttered. NO TEXT OR NUMBERS, NO LOGOS, no emblems, no fake seals/certificates, no official government marks, no charts, no dashboard screens, no labels, no watermark. Root will place exact official Pinnacle branding in HTML and identify this as a conceptual illustration. Do not recreate any text from previous reference images.\n"
+    },
+    {
+      "name": "connected-records",
+      "prompt": "Use case: scientific-educational. Asset type: a conceptual editorial illustration for the Pinnacle child-development evidence verification website, wide 3:2 landscape. Create a new image. PURE WHITE background edge to edge, with generous breathing room. An airy, gently curving luminous developmental ribbon connects four elegant translucent rounded observation cards across the composition. Include small abstract coloured dots, a simple calendar-like outline without dates, and a small clear sequence of observation tokens. A tiny warm parent-and-child soft-edged human vignette sits at one end, suggesting a child’s everyday experience rather than a patient photograph. Visually communicate that observations collected over time help a team review a child's plan. Delicate frosted glass, clean precise thin navy and teal linework, restrained purple, electric cyan, pink, yellow and green highlights inspired by an optimistic flowing developmental pathway. Soft shadows, balanced restrained luminosity, coherent minimal editorial composition, no science-fiction appearance. Important constraints: no literal data charts, no axes, no upward outcome arrows, no brains or neurons, no medical scanner, no invented numerical outcomes. Absolutely NO letters, numbers, text, logos, brand marks, badges, seals or government emblems. Do not depict a screenshot or actual patient data. No border, no coloured background panel. Ensure all four cards and the parent-child vignette remain inside spacious white margins.\n"
+    }
+  ],
+  "responsiveWidths": [
+    600,
+    1000,
+    1536
+  ],
+  "format": "WebP"
+}

@@ -1,0 +1,126 @@
+{
+  "reviewed": "2026-09-18",
+  "purpose": "Every child deserves a wonderful life.",
+  "mission": "Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs.",
+  "positioning": "A connected developmental journey: understand present abilities, identify useful next goals, coordinate support, practise in everyday life, track and correct the plan, and reassess progress toward participation.",
+  "stages": [
+    {
+      "id": "measure",
+      "icon": "scan-eye",
+      "title": "Understand the child’s abilities",
+      "product": "AbilityScore® · 0–1000",
+      "text": "Begin with what the child can do, their interests and the everyday situations where support would help. The company walkthrough describes 79 abilities, 349 skills, 17 domains and 591 observations, with AbilityScore on a 0–1000 scale. These are different layers of the framework.",
+      "family": "A starting point the family and care team can discuss together.",
+      "source": "Company walkthrough, page 26; September handout, pages 5–6",
+      "record": "sovereign-walkthrough"
+    },
+    {
+      "id": "plan",
+      "icon": "clipboard-list",
+      "title": "Build a child-specific direction",
+      "product": "Prognose® + personal development kernel",
+      "text": "Connect the observed abilities with priorities, readiness goals and a plan for this child. The dossier describes a personal development kernel: a persistent child-specific record of measurements, responses to techniques, environment and history that informs subsequent recommendations.",
+      "family": "Clarity about what to work on next, why it matters and who will help.",
+      "source": "Evidence Dossier, pages 48–49; BIS schedule, page 2",
+      "record": "dossier"
+    },
+    {
+      "id": "coordinate",
+      "icon": "users",
+      "title": "Coordinate professional support",
+      "product": "TherapeuticAI® + human oversight",
+      "text": "Use the plan to coordinate appropriate therapies and intervention. Pinnacle describes practitioners, parents, caregivers and educators contributing to the programme; software supports professional judgement and shared goals.",
+      "family": "People working from an agreed direction across the child’s support team.",
+      "source": "September handout, pages 5–7; MD-5 intended use",
+      "record": "md5"
+    },
+    {
+      "id": "practise",
+      "icon": "house",
+      "title": "Make the plan part of everyday life",
+      "product": "Everyday Therapy™ · 7–9 techniques a day",
+      "text": "The September handout describes 7–9 techniques selected for the child’s programme each day. Parents and other caregivers receive guidance for practice connected to the child’s current abilities and goals; the care team agrees what is appropriate.",
+      "family": "A practical way to carry support into home routines and other everyday settings.",
+      "source": "September handout, pages 5–7",
+      "record": "september-handout"
+    },
+    {
+      "id": "correct",
+      "icon": "chart-no-axes-combined",
+      "title": "Observe, track and correct",
+      "product": "Fusion Module · people in the loop",
+      "text": "Record how practice goes and bring observations from the family and professionals back into review. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module.",
+      "family": "A plan that can respond when an activity, setting or support needs to change.",
+      "source": "BIS licence schedule, page 2",
+      "record": "bis"
+    },
+    {
+      "id": "reassess",
+      "icon": "rotate-ccw",
+      "title": "Reassess and explain the trajectory",
+      "product": "Monthly AbilityScore refresh + progress review",
+      "text": "Compare the child’s present abilities with their own earlier assessments and review the next priorities. The company walkthrough describes a monthly AbilityScore refresh; the Whitebook also describes monthly review. The care team should explain the schedule and any child-specific changes.",
+      "family": "An understandable record of change over time, connected to daily-life goals—not a judgement of the child’s worth.",
+      "source": "Company walkthrough, pages 35, 37; Whitebook, page 12",
+      "record": "sovereign-walkthrough"
+    },
+    {
+      "id": "participate",
+      "icon": "network",
+      "title": "Grow toward self-sufficiency and participation",
+      "product": "Readiness indexes + real-life goals",
+      "text": "Work toward communication, daily living, learning, relationships and participation in school and community. The BIS scope names seven readiness indexes, including Self Sufficiency and Mainstream Inclusion. Continue reassessment and support as needs change.",
+      "family": "A wonderful life defined with the child and family, including the supports that make participation possible.",
+      "source": "BIS licence schedule, page 2",
+      "record": "bis"
+    }
+  ],
+  "boundary": "This is Pinnacle’s documented developmental-support approach. PinnacleAI GPT-OS v1.0.0 is a non-diagnostic Class B SaMD for ages 0–12 under the supplied MD-5. A programme, score or licence does not guarantee independence, school entry or a particular outcome. Inclusion is a right; it is not conditional on a score.",
+  "measurementNote": "The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.",
+  "standards": [
+    {
+      "id": "icf",
+      "name": "ICF · functioning and participation",
+      "text": "WHO’s ICF gives a framework for functioning, activities, participation and environmental context. It helps explain why the child’s everyday life belongs at the centre of developmental goals.",
+      "url": "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health",
+      "source": "WHO · International Classification of Functioning, Disability and Health"
+    },
+    {
+      "id": "icd11",
+      "name": "ICD-11 · consistent health information",
+      "text": "WHO’s ICD-11 provides a shared language for recording and comparing health information. Consistent definitions can support clinical records, health-system planning and responsible analysis across settings.",
+      "url": "https://www.who.int/standards/classifications/classification-of-diseases",
+      "source": "WHO · International Classification of Diseases"
+    }
+  ],
+  "sdgs": [
+    {
+      "goal": "3",
+      "title": "Health and well-being",
+      "target": "Target 3.8",
+      "meaning": "A mission to make developmental support clearer and more accessible to families.",
+      "url": "https://sdgs.un.org/goals/goal3"
+    },
+    {
+      "goal": "4",
+      "title": "Quality education",
+      "target": "Targets 4.2 and 4.5",
+      "meaning": "Early development, inclusive learning and support that helps children participate in education.",
+      "url": "https://sdgs.un.org/goals/goal4"
+    },
+    {
+      "goal": "10",
+      "title": "Reduced inequalities",
+      "target": "Target 10.2",
+      "meaning": "Participation and inclusion, including for children with disabilities and their families.",
+      "url": "https://sdgs.un.org/goals/goal10"
+    },
+    {
+      "goal": "17",
+      "title": "Partnerships for the goals",
+      "target": "Target 17.17",
+      "meaning": "A direction for accountable collaboration. Specific partnership achievements require named agreements and measured contributions.",
+      "url": "https://sdgs.un.org/goals/goal17"
+    }
+  ]
+}
