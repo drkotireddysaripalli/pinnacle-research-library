@@ -63,7 +63,7 @@
       const expanded = centreMore?.dataset.expanded === 'true';
       const limit = expanded ? rows.length : (window.innerWidth < 761 ? 6 : 10);
       centreCards.forEach(card => card.hidden = true); rows.slice(0,limit).forEach(({card}) => card.hidden = false);
-      if (centreCount) centreCount.textContent = `${rows.length} ${rows.length === 1 ? 'centre record' : 'centre records'}${kind === 'all' ? '' : ' · ' + (kind === 'hfr' ? 'Health Facility Registry' : 'district summary')}`;
+      if (centreCount) centreCount.textContent = `${rows.length} ${rows.length === 1 ? 'evidence entry' : 'evidence entries'}${kind === 'all' && !q ? ' · 53 HFR IDs + 8 district summaries' : ' · ' + (kind === 'hfr' ? 'HFR identifiers' : kind === 'district' ? 'district summaries' : 'matching sources')}`;
       if (centreEmpty) centreEmpty.hidden = rows.length > 0;
       if (centreMore) { centreMore.hidden = rows.length <= limit && !expanded; centreMore.textContent = expanded ? 'Show fewer records' : 'Show more records'; }
     };

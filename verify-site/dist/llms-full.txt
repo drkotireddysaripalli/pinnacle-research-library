@@ -2,7 +2,7 @@
 
 > Source-led evidence for Pinnacle Blooms Network and Bharath Healthcare Laboratories Private Limited.
 
-Source review: 15 September 2026. Selected originals and review conclusions rechecked: 18 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Human page approval has not been recorded.
+Source review: 15 September 2026. Selected originals and review conclusions rechecked: 18 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Source review does not establish endorsement by the issuing organisations.
 
 Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 
@@ -19,6 +19,10 @@ Licence number: MFG/MD/2026/000248
 Issuer: State Licensing Authority · Telangana Drugs Control Administration
 Licence holder: Bharath Healthcare Laboratories Pvt. Ltd.
 Issued: 21 April 2026
+Intended population: Children aged 0–12
+Intended functions: Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support
+
+Family relevance: A defined intended use lets your family understand what the software is designed to support and when professional clinical evaluation is needed.
 
 What this supports: The supplied Form MD-5 licenses the listed Class B device for manufacture for sale or distribution at the specified premises. Intended users include parents, therapists, educators and caregivers supporting children aged 0–12.
 
@@ -47,8 +51,11 @@ Licence number: MD/L-2026029599
 Issuer: Bureau of Indian Standards
 Licence holder: Bharath Healthcare Laboratories Private Limited
 Stated validity: 3 September 2026 – 2 September 2029
+Named developmental modules: AbilityScore mapping, Prognose, Everyday Therapy through TherapeuticAI, tracking and correction through Fusion
 
-What this supports: The supplied BIS licence and schedule cover medical device quality management and essential principles of safety and performance for the specified software lifecycle and developmental-support modules.
+Family relevance: A documented software lifecycle makes quality responsibilities and the scope of developmental-support modules easier to examine.
+
+What this supports: The supplied BIS licence and schedule cover the specified software design, development, verification, validation, release, deployment, maintenance, support and post-market surveillance. The schedule names developmental mapping, planning, everyday practice, tracking and correction, with school, speech, motor, Study IQ, behaviour, self-sufficiency and mainstream-inclusion readiness modules across the developmental lifecycle.
 
 Scope and limits: The licence applies to its schedule and listed address. It is not a guarantee of clinical outcomes for a child.
 
@@ -74,6 +81,8 @@ CIN: U74999TG2016PTC113063
 LEI: 894500OJYBVC18BUDN89
 Registry: Global Legal Entity Identifier Foundation (GLEIF)
 Live record checked: 15 September 2026
+
+Family relevance: A matching legal identity helps you trace the organisation behind a credential or agreement.
 
 What this supports: The official GLEIF record matches the company name and CIN. It reports entity status ACTIVE and LEI registration status ISSUED.
 
@@ -104,6 +113,8 @@ Reported decision date: 13 April 2026
 Decision source: Reported in the dossier and September handout
 Application source: 8 January 2026 · proposed Class A
 
+Family relevance: Reading the application and issued licence together helps you distinguish a requested classification from the device’s licensed classification.
+
 What this supports: The issued MD-5 identifies the device as Class B. Company publications describe a preceding Central Licensing Authority classification decision.
 
 Scope and limits: The locally available risk-classification form is an application proposing Class A, not the approved Class B decision. A classification decision is also distinct from a manufacturing licence.
@@ -130,6 +141,8 @@ Application reference: MFG/MD/2026/189231
 Applicant: Bharath Healthcare Laboratories Private Limited
 Form dated: 17 April 2026
 Fee payment shown: 16 April 2026
+
+Family relevance: The application explains part of the regulatory journey; the issued licence is the document to use for the resulting permission.
 
 What this supports: The reviewed application records the applicant’s request for a Class B manufacturing licence and the stated device particulars.
 
@@ -158,6 +171,8 @@ Certification body: QRO Certification LLP
 Certified: 25 November 2025
 Stated expiry: 24 November 2028
 
+Family relevance: Quality-management evidence helps you ask how software development, changes and corrective action are controlled.
+
 What this supports: The supplied certificate covers the named company’s quality-management scope for the design, development, deployment, maintenance and support of the specified SaMD.
 
 Scope and limits: Certification applies to the certificate’s system scope. Historic “diagnostic mapping” wording does not extend the later MD-5’s non-diagnostic intended use. Accreditation-chain and live certificate status have not been independently checked.
@@ -184,6 +199,8 @@ Certificate: 305025120207IS
 Certification body: QRO Certification LLP
 Certified: 2 December 2025
 Stated expiry: 1 December 2028
+
+Family relevance: Information-security evidence helps you ask how sensitive developmental information is managed within the certified scope.
 
 What this supports: The original certificate covers information-security management for the listed SaMD platforms, cloud operations, cybersecurity, data protection and support.
 
@@ -212,6 +229,8 @@ Issuer: Registrar of Companies, Hyderabad · MCA
 Name-change certificate: 18 May 2017
 Current name on certificate: Bharath Healthcare Laboratories Private Limited
 
+Family relevance: A documented name history connects today’s organisation with credentials issued under earlier names.
+
 What this supports: The certificate records the change from Bharath Diagnostics Labs Private Limited to Bharath Healthcare Laboratories Private Limited. The CIN agrees with the live GLEIF record.
 
 Scope and limits: A historic incorporation/name-change certificate establishes the recorded identity event. Current MCA filings, directors and compliance require current MCA records.
@@ -238,6 +257,8 @@ Recognition number: DIPP8651
 Issued: 6 September 2017
 Date printed on older certificate: Valid up to 21 November 2026
 Official historical corroboration: Startup India list · 3 November 2023
+
+Family relevance: Startup recognition explains a business credential. Your child’s care plan should be evaluated using its own clinical and service evidence.
 
 What this supports: The supplied recognition certificate and an official historical Startup India list identify the company as a recognised startup.
 
@@ -267,6 +288,8 @@ Registered: 9 June 2021
 Later snapshot: Small · FY 2025–26; classification dated 1 April 2025
 Snapshot printed: 29 November 2025
 
+Family relevance: Enterprise registration makes the business identity and classification traceable.
+
 What this supports: The later supplied Udyam record identifies the company and records a Small enterprise classification for FY 2025–26.
 
 Scope and limits: This is enterprise registration, not an MSME award or a clinical accreditation. Enterprise classification can change; the displayed snapshot is not a live September 2026 confirmation.
@@ -295,6 +318,8 @@ Issued: 9 December 2017
 Legal name on supplied copy: Bharath Diagnostics Labs Private Limited
 Trade name on supplied copy: Bharath Healthcare Laboratories Private Limited
 
+Family relevance: The printed legal and trade names help families and institutions match the supplier on invoices and records.
+
 What this supports: The 2017 GST certificate records registration under the names printed on that document. The MCA name-change certificate supplies part of the corporate-name history.
 
 Scope and limits: The original retains the former legal name. A current GST taxpayer record or amended certificate is needed before describing the current name and registration status as matched. GST registration does not establish clinical quality.
@@ -321,6 +346,8 @@ Date of incorporation shown: 22 November 2016
 Document type: Corporate Permanent Account Number card
 Access: Identifier and QR withheld
 
+Family relevance: The inspected corporate identity document adds an identity check while keeping the tax identifier out of public display.
+
 What this supports: The supplied corporate PAN card identifies the company and its incorporation date.
 
 Scope and limits: PAN supports tax identity. It does not establish current tax compliance or clinical authorisation. Live PAN verification has its own matching-information and OTP requirements.
@@ -337,26 +364,30 @@ Reviewed: 15 September 2026
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html
 Category: Centre registrations
-Review status: Original reviewed
+Review status: Workbook & certificate copies reviewed
 Current issuer or registry status: not independently confirmed.
 
-28 unique facility identifiers in the reviewed collection
+All 52 workbook centres · 53 distinct HFR IDs across both source sets
 
-Issuer: National Health Authority · Ayushman Bharat Digital Mission
-Source collection: 29 certificate entries; 28 unique HFR IDs
-Duplicate handling: Srikakulam appears twice; counted once
-Scope: Each registered facility and address
+Registry: National Health Authority · Ayushman Bharat Digital Mission
+Workbook: 52 centre rows; 52 unique HFR IDs
+Certificate copies: 28 unique HFR IDs from 29 certificate entries
+Source reconciliation: 27 IDs in both sources; 25 additional workbook IDs; one certificate-only ID
+Combined inventory: 53 distinct HFR identifiers; not a count of confirmed active centres
 
-What this supports: The reviewed HFR certificate copies record registration of the named facilities. The facility register lists the IDs and certificate dates separately.
+Family relevance: A facility identifier gives you a specific record to ask about when checking the centre your family will visit.
 
-Scope and limits: HFR registration is not clinical-outcome certification or a substitute for local registrations. The collection does not prove that every network centre is registered or that every record remains current.
+What this supports: The complete supplied centre workbook lists 52 centres, addresses and HFR identifiers. Twenty-seven IDs correspond to the inspected certificate collection. The combined register preserves all 53 identifiers and labels the source and certificate-review level of each entry.
 
-Source note: Two different Tirupati identifiers appear in the collection. They are retained as distinct records pending address-level reconciliation.
+Scope and limits: Workbook entries are company-supplied, not live government registry checks. The RS column is undefined; its ACTIVE/INACTIVE flags do not establish current operational or HFR status. HFR is not clinical-outcome certification or a replacement for local permissions. A matching ID does not independently reconcile current addresses.
 
-Source citation: Recognitions bundle, physical pp67–95; duplicate Srikakulam entry reconciled by HFR ID.
+Source note: The workbook’s Tirupati entry is IN2810065148. The separately inspected IN2810053847 certificate is retained as an additional record; replacement, cancellation or address equivalence has not been established. Duplicate Srikakulam certificate copies count once.
+
+Source citation: All Centers With HFR.xlsx, sheet All Centers With HFR, rows 2–53 (reviewed 18 September 2026); original recognitions bundle, physical pp67–95.
 Reviewed: 15 September 2026
 - [View facility register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html)
 - [ABDM Health Facility Registry](https://hfr.abdm.gov.in/)
+- [Download complete HFR inventory · CSV](https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.csv)
 
 ---
 
@@ -373,6 +404,8 @@ Legal framework: RPwD Act, 2016 · Section 51
 Departments: District welfare / disability-empowerment authorities
 Source grouping: Eight districts · Telangana and Andhra Pradesh
 Current-status basis: Certificate dates and renewals require centre-level review
+
+Family relevance: District summaries help locate relevant institution documents; match the individual certificate to the exact premises.
 
 What this supports: The source collection contains district-specific institution-registration copies. Four selected originals are documented below; the September handout groups the broader collection.
 
@@ -399,6 +432,8 @@ Issuer: District Welfare Officer · Ranga Reddy
 Certificate reference: Not entered on supplied copy
 Stated validity: 8 January 2025 – 7 January 2030
 Scope: The institution and address named on the certificate
+
+Family relevance: This document gives families an institution-specific registration to match against the address and service being considered.
 
 What this supports: The supplied certificate records the named institution’s district registration under Section 51 of the RPwD Act.
 
@@ -427,6 +462,8 @@ Certificate reference: 32 of 2024
 Stated validity: 17 December 2024 – 31 March 2027
 Scope: The institution and address named on the certificate
 
+Family relevance: This document gives families an institution-specific registration to match against the address and service being considered.
+
 What this supports: The supplied certificate records the named institution’s district registration under Section 51 of the RPwD Act.
 
 Scope and limits: The record covers its listed institution and location. Face-date validity does not confirm that no later change, suspension or cancellation has occurred.
@@ -451,6 +488,8 @@ Issuer: District Welfare Officer · Nizamabad
 Certificate reference: 05 of 2024
 Stated validity: 5 January 2024 – 4 January 2027
 Scope: The institution and address named on the certificate
+
+Family relevance: This document gives families an institution-specific registration to match against the address and service being considered.
 
 What this supports: The supplied certificate records the named institution’s district registration under Section 51 of the RPwD Act.
 
@@ -479,6 +518,8 @@ Certificate: 06 of 2023
 Stated validity: 31 October 2023 – 30 October 2024
 Renewal: Not established by the reviewed original
 
+Family relevance: The historical record makes the earlier registration period traceable and identifies the renewal needed to establish current coverage.
+
 What this supports: The supplied historical certificate records the named institution’s registration for the printed period.
 
 Scope and limits: The face date has passed. This review does not establish the absence of a renewal, but cannot present the historical copy as current.
@@ -504,6 +545,8 @@ Practitioner: NPSY & Co., Chartered Accountants
 Firm registration: 013580S
 Report dated: 3 September 2026
 UDIN: 26200027GMBLXU4868
+
+Family relevance: A clearly defined assurance scope helps you distinguish institutional-record checks from evidence about a child’s clinical outcome.
 
 What this supports: The report records limited assurance over its defined Statement of Institutional Claims using the Board-adopted criteria specified in the report.
 
@@ -531,6 +574,8 @@ Report dated: 3 September 2026
 UDIN: 26200027HCNFEI9138
 Subject date: 17 July 2026
 
+Family relevance: Specified factual checks make the counting method more understandable; they do not supply an assurance opinion on outcomes.
+
 What this supports: The report records factual findings from the specified agreed procedures on institutional claims and supporting records.
 
 Scope and limits: An agreed-upon-procedures report is not an assurance opinion. Readers need the complete procedures, criteria and findings to assess its meaning. It does not establish clinical outcomes.
@@ -550,22 +595,29 @@ Category: Research & outcomes
 Review status: Company-published
 Current issuer or registry status: not independently confirmed.
 
-Keep cumulative services, people and operational centres distinct
+2.7 billion+ reported structured records · dated counts with defined units
 
 Measurement date: 17 July 2026, as described in the September handout
 Therapy services reported: 31,052,382
 Operational centres reported: 49 under the stated four-condition test
 People metric reported: 792,614 unique beneficiary / family registrations
+Structured platform records reported: 2,700,000,000+ observed database row/event counts
+Counting unit: Discrete structured record: session entry, assessment observation, technique rating, sensor event or equivalent mapped field
+Technique repository update: 130,000 entries; management-supplied 18 September 2026. Earlier 7 September handout: 90,000+ techniques.
+International reach reported: Families from 70+ countries of origin, including remote delivery; company-reported
+Network reported: 70+ centres including network stages distinct from the report’s operational-centre test
 
-What this supports: The handout connects dated operational counts to the practitioner reports and their Board-adopted criteria. It separately describes a 70+ network figure.
+Family relevance: Consistent records can support continuity across a child’s journey. Ask to see your child’s own goals and progress reviews alongside network-level numbers.
 
-Scope and limits: Therapy services include assessments, screenings and parent training under the report’s criteria; they are not all one-to-one therapy sessions. Beneficiary/family registrations are not a count of unique children. Network and operational centres use different definitions.
+What this supports: The September handout reports 2.7 billion+ structured platform records and connects dated operational counts to specified procedures and Board-adopted criteria. It separately describes a 70+ network figure. The 2.5 billion floor assertion and 2.7 billion observed row-count finding have different reporting roles.
 
-Source note: The 70+ network figure, 49 operational-centre count and differing figures on public pages need one maintained, dated metric register.
+Scope and limits: Therapy services include assessments, screenings and parent training under the report’s criteria; they are not all one-to-one therapy sessions. Beneficiary/family registrations are not a count of unique children. Network and operational centres use different definitions. Platform records are not unique children, independent clinical-trial observations or verified, deduplicated AI-training examples. Volume alone does not establish model performance, clinical effectiveness or a worldwide size ranking. The 130,000 technique update has no inspected inventory extract; neither practitioner report establishes that updated count or the 70+ countries claim.
 
-Source citation: September handout, physical pp3 and 14; SRS 4400 p3; SAE 3000 criteria, physical p6. Restricted-use practitioner sources.
+Source note: The July dossier used a 2.5 billion+ floor and retired earlier 2.7 billion wording. The September handout subsequently publishes 2.7 billion+ observed row counts. Limited assurance over the 2.5 billion floor is distinct from factual findings without an assurance opinion on the 2.7 billion row count. The 70+ network and 49 operational-centre figures also use different definitions.
+
+Source citation: Company handout, 7 September 2026, physical pp3, 14–15; July dossier pp6, 74, 76, 79, 124. Restricted practitioner sources inspected: SRS 4400 pp2–3; SAE 3000 pp3–4 and criteria p6. Cutoff 17 July 2026. Technique count: management update received 18 September 2026; earlier 90,000+ in September handout pp5, 7, 15. Countries of family origin: July dossier pp75–76; network definition pp75–77.
 Reviewed: 15 September 2026
-
+- [Six statistics with source mapping](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html)
 
 ---
 
@@ -582,6 +634,8 @@ Repository: Zenodo
 Published: 9 April 2026
 DOI: 10.5281/zenodo.19482123
 Publication type: Preprint · preliminary evidence
+
+Family relevance: A methods paper lets practitioners examine how a measurement approach was developed and where further validation is needed.
 
 What this supports: The public record describes the construction of AbilityScore and preliminary operational psychometric findings. The authors identify formal validation as planned.
 
@@ -611,6 +665,8 @@ Published: 9 April 2026 · version 2.1
 DOI: 10.5281/zenodo.19482476
 Study size described: Planned 300-participant component; 60-person retest subset
 
+Family relevance: A published protocol makes the proposed research question and methods visible before a completed result is claimed.
+
 What this supports: The deposited protocol describes planned concurrent-validity, test–retest and minimal-clinically-important-difference research, including comparator instruments.
 
 Scope and limits: This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed.
@@ -636,6 +692,8 @@ Source type: Company-authored research portfolio
 Summary editions: 2025 Whitebook; July 2026 dossier; September 2026 handout
 Evidence design: Varies by study; operator-network research
 Review boundary: Portfolio mapped; full independent re-analysis not performed
+
+Family relevance: Study-level detail helps families and referring professionals see which children and outcomes a research statement actually concerns.
 
 What this supports: The source publications describe twelve research topics across measurement, therapy, home practice, equity and participation. The study index identifies the populations and available original report links.
 
@@ -666,6 +724,8 @@ Required basis: Defined outcome, denominator and period
 Source status: Company publications
 Assurance scope: Outcome-study figures excluded from practitioner report scope
 
+Family relevance: Your child’s goals, starting point and reassessments make progress meaningful; a network headline cannot predict an individual result.
+
 What this supports: The company publications contain a headline improvement claim and a twelve-study narrative. These identify the claim that needs a transparent evidence trail.
 
 Scope and limits: The reviewed materials do not establish the full network-wide calculation or make it an individual outcome guarantee. Practitioner assurance over operational counts does not validate excluded outcome percentages.
@@ -691,6 +751,8 @@ Source set: Seven signed letters / instruments
 Institutions represented: A Lok Sabha member and state ministerial offices
 Document type: Appreciation, acknowledgement and recommendation
 Scope: The wording of each individual instrument
+
+Family relevance: Original letters let you understand who acknowledged which contribution and in what context.
 
 What this supports: The reviewed letters record appreciation and a recommendation for consideration of collaboration. The letter register identifies authors, dates and references.
 
@@ -718,6 +780,8 @@ National Awards references: 5050061 · 5050246 · 5050330 (handout-reported)
 Winner decision: Not established in this review
 Other sources: Sakshi achievement docket; named MSME file reviewed as registration
 
+Family relevance: Distinguishing a nomination from an award decision keeps recognition meaningful and traceable.
+
 What this supports: The source materials document preparation or submission for recognition and describe the cited nomination references.
 
 Scope and limits: A nomination, application or achievements dossier is not proof of an award being conferred. Publish an award title only with the issuer’s winner decision or award certificate.
@@ -743,6 +807,8 @@ Lead PCT reference: PCT/IB2023/062509 · company-reported
 September portfolio claim: 16 applications: 13 PCT + 3 Indian
 Indian references reported: 202541014547 · 202541057215 · 202441016027
 Independent current office match: Not completed in this review
+
+Family relevance: Application records show a stage of intellectual-property activity. Clinical value needs its own evidence.
 
 What this supports: The dossier and handout identify claimed patent-application references and the application-stage nature of the portfolio.
 
@@ -770,6 +836,8 @@ Public record example: Copyright diary 30339/2024-CO/A · 28 September 2024
 Record type: Application listing
 Trademark / copyright grants: Full current register not checked
 
+Family relevance: Product and publication identities help you locate the correct materials and distinguish ownership records from clinical evidence.
+
 What this supports: An official copyright application list records a named Pinnacle artwork application. Company publications identify a wider intellectual-property and publishing portfolio.
 
 Scope and limits: An application listing is not a granted registration. Brand usage, ISBNs and book publication do not establish device efficacy or patent rights.
@@ -795,6 +863,8 @@ Edition: 2025 Global Edition
 Source role: Historical research narrative
 Authorship: Pinnacle / named founders and consortium
 Version handling: Upload dates do not change the edition date
+
+Family relevance: The Whitebook explains Pinnacle’s published framework and research narrative, which can guide more specific questions about sources.
 
 What this supports: The Whitebook explains the company’s framework and its historical study narrative. It is useful for tracing the origins of claims and the research portfolio.
 
@@ -822,6 +892,8 @@ Issued: 25 July 2026
 Supersedes: July 2026 v1
 Source role: Company-authored evidence map
 
+Family relevance: The dossier brings many institutional claims together; its value is strongest when each claim remains linked to its underlying record.
+
 What this supports: The dossier consolidates references, regulatory chronology, research summaries and source exhibits. It explicitly supersedes the earlier edition.
 
 Scope and limits: A dossier is a map to evidence. Where it conflicts with an operative document or primary research record, the original source governs the verification entry.
@@ -847,6 +919,8 @@ Document control: BHCL-INV-2026-09
 Issued: 7 September 2026
 Edition: Final · source file V1
 Source role: Investor narrative and evidence references
+
+Family relevance: A dated company summary helps explain developments over time, including updates that supersede older publications.
 
 What this supports: The handout adds the September BIS licence, practitioner-report references, operational definitions and a consolidated registration and recognition narrative.
 
@@ -874,6 +948,8 @@ Publisher printed: India Herald Group of Publishers
 ISBN printed: 978-93-5493-628-9
 The Voice of the Unheard: Sreeja Reddy Saripalli named as author in the book
 
+Family relevance: Parent resources can support informed conversations and everyday participation alongside an individual professional plan.
+
 What this supports: The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey.
 
 Scope and limits: A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred.
@@ -883,3 +959,191 @@ Source note: No ISBN or publication year was established for The Voice of the Un
 Source citation: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132.
 Reviewed: 15 September 2026
 
+
+---
+
+# Pinnacle: family relevance and global context
+
+Reviewed: 18 September 2026
+
+A clearer starting point. A connected plan. Progress that matters in everyday life.
+
+## Development happens across a child’s whole day.
+The Nurturing Care Framework brings together health, learning, responsive caregiving and supportive environments.
+Pinnacle connection: Pinnacle’s seven-stage pathway connects a developmental plan with therapy, home practice and participation goals.
+Family question: How will the plan connect with our child’s day at home and school?
+Source: https://www.who.int/news/item/29-06-2023-new-report-calls-for-greater-attention-to-children-s-vital-first-years
+
+## A plan that comes home with you.
+WHO describes practical caregiver skills for families of children with developmental delays or disabilities.
+Pinnacle connection: The BIS schedule names Everyday Therapy through TherapeuticAI and parent/family tracking through Fusion.
+Family question: What can we practise between sessions, and who will guide us?
+Source: https://www.who.int/publications/i/item/9789240048836
+
+## Clarity starts with noticing change.
+CDC distinguishes ongoing developmental monitoring from formal screening and professional evaluation.
+Pinnacle connection: Pinnacle’s licensed non-diagnostic software includes ability measurement and readiness tracking. This CDC reference does not validate AbilityScore as a screening test.
+Family question: What is our starting point, and when will we review progress?
+Source: https://www.cdc.gov/act-early/about/developmental-monitoring-and-screening.html
+
+## Shared goals. Clear responsibilities.
+NICE recommends coordinated multidisciplinary support and developmentally appropriate parent, carer or teacher involvement for autistic children and young people.
+Pinnacle connection: Pinnacle describes integrated therapies and regular plan review. Families can ask how professionals share goals and who coordinates their child’s support.
+Family question: Who brings the team’s observations together into one plan?
+Source: https://www.nice.org.uk/guidance/cg170/chapter/recommendations
+
+## More ways to take part.
+Inclusive education addresses barriers in teaching and learning environments.
+Pinnacle connection: Pinnacle’s pathway works toward communication, daily living and participation. Readiness goals do not determine a child’s right to education or inclusion.
+Family question: Which supports will help our child participate with others?
+Source: https://www.unesco.org/en/inclusion-education
+
+## Technology with defined responsibilities.
+IMDRF describes quality management across medical-software development, deployment and maintenance.
+Pinnacle connection: Pinnacle’s MD-5, BIS, quality-system and information-security records document different parts of this accountability picture.
+Family question: What is the software intended for, and how are safety and changes managed?
+Source: https://www.imdrf.org/documents/software-medical-device-samd-application-quality-management-system
+
+## Selected global approaches
+Cognoa · Canvas Dx: Prescription machine-learning software that assists clinicians assessing autism in children aged 18–72 months, alongside clinical assessment.
+Evidence: US FDA Class II · De Novo DEN200069 · 2021
+Comparison boundary: Pinnacle’s MD-5 describes non-diagnostic developmental support. These products have different intended uses.
+Source: https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN200069.pdf
+
+EarliTec · EarliPoint: Eye tracking and software to support qualified clinicians’ autism diagnosis and assessment in children aged 16–95 months.
+Evidence: US FDA Class II · K253442 · March 2026
+Comparison boundary: A regulated assessment tool illustrates one part of the journey. Its clearance does not establish a complete care-service network.
+Source: https://www.accessdata.fda.gov/cdrh_docs/pdf25/K253442.pdf
+
+Akili · EndeavorRx: Prescription software for attention function measured by computer testing in children aged 8–17 with specified ADHD presentations, within a therapeutic programme.
+Evidence: US FDA Class II · K231337 · 2023
+Comparison boundary: A specific therapeutic indication should be compared on its own evidence and population, rather than equated with broad developmental support.
+Source: https://www.accessdata.fda.gov/cdrh_docs/pdf23/K231337.pdf
+
+Cortica: Its published model combines diagnostics, medical care, ABA, developmental therapies and mental-health counselling, involving family, home, school and community.
+Evidence: Provider’s published service model
+Comparison boundary: Integrated child-development care exists internationally. Compare actual coordination, local availability and evidence for the services your child needs.
+Source: https://www.corticacare.com/whole-child
+
+CentralReach · CanaryBI: Its November 2025 release reports over 5 billion clinical and financial data points in CanaryBI.
+Evidence: Company-reported dataset volume · 2025
+Comparison boundary: This mixed clinical/financial count and Pinnacle’s structured-record count use different definitions. They do not establish a like-for-like ranking.
+Source: https://centralreach.com/blog/centralreach-publishes-semi-annual-2025-autism-and-idd-care-market-report-the-industry-benchmark-for-growth-and-innovation/
+
+This is a targeted comparison, not proof of global exclusivity or superiority.
+
+What does Pinnacle’s 2.7 billion+ data-point figure mean?
+The September 2026 company handout reports 2.7 billion+ structured platform records, based on database rows/events with a 17 July 2026 cutoff. Examples include session entries, assessment observations and technique ratings. The number is not a count of unique children, independent trial observations or verified AI-training examples.
+
+Does this establish the world’s largest child-development dataset?
+No comparable worldwide ranking is established. For example, CentralReach reports over 5 billion clinical and financial data points, using a different counting basis. A valid comparison would need common definitions, dates, populations, data quality and permitted uses.
+
+Does the MD-5 licence approve the entire child-development lifecycle?
+The MD-5 names PinnacleAI GPT-OS v1.0.0 and defined non-diagnostic functions for ages 0–12. The broader BIS schedule lists software processes and developmental-support modules across the journey. These instruments establish different scopes; neither guarantees outcomes or certifies global exclusivity.
+
+Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle?
+No endorsement is established by the references on this page. Their guidance explains why monitoring, coordinated support, caregiver participation and inclusion matter. Pinnacle’s own documents must separately establish what Pinnacle provides.
+
+---
+
+# Pinnacle scale: figures, definitions and evidence
+
+Reviewed: 18 September 2026
+
+## 2.7 billion+ — Structured developmental records
+Company-reported · source reviewed
+A large record system can preserve observations across a child’s developmental journey, supporting continuity and review.
+Counting basis: Reported in the 7 September 2026 handout. Database row/event counts at 17 July 2026.
+Evidence boundary: Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness.
+Sources: operating-metrics, srs4400, sae3000
+
+## 31 million+ — Cumulative therapy services reported
+Dated institutional count
+The useful family question is how the experience recorded across services informs a clear plan and review for your child.
+Counting basis: 31,052,382 under the practitioner reports’ service-counting criteria, at 17 July 2026.
+Evidence boundary: The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures.
+Sources: operating-metrics, sae3000, srs4400
+
+## 1.3 lakh — Early-intervention technique repository
+Management update · inventory not inspected
+A technique library is useful when a practitioner selects and adapts activities to a child’s goals, interests and everyday routines.
+Counting basis: 130,000 techniques: management-supplied update received 18 September 2026. The 7 September handout reports an earlier 90,000+ library.
+Evidence boundary: The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions.
+Sources: operating-metrics, september-handout
+
+## 7.9 lakh+ — Beneficiary / family registrations reported
+Dated institutional count
+Behind each registration is a family seeking support. A family’s own goals and progress reviews remain the measure that matters to them.
+Counting basis: 792,614 unique beneficiary/family registrations under the stated criteria, at 17 July 2026.
+Evidence boundary: This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment.
+Sources: operating-metrics, sae3000, srs4400
+
+## 70+ — Countries of family origin reported
+Company-reported international reach
+Families may connect with developmental support across borders, including through remote delivery where available.
+Counting basis: Company-reported international reach in the July 2026 dossier, including remote delivery.
+Evidence boundary: Countries of family origin are different from countries with a physical Pinnacle centre. The reviewed practitioner reports do not establish this country count.
+Sources: operating-metrics, dossier
+
+## 70+ — Centres in the reported network
+Network scope distinguished
+A network becomes relevant locally. Find your centre, its facility identifier and the source behind each listed document.
+Counting basis: Network figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026.
+Evidence boundary: Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.
+Sources: hfr, operating-metrics, srs4400
+
+## Complete supplied HFR inventory
+All 52 workbook rows are included. Twenty-seven IDs match the certificate collection; 25 are additional workbook entries. One further Tirupati certificate makes 53 distinct IDs across the two sources. These totals do not establish the number of currently operating centres.
+Ananthapuram | IN2810053167 | 2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh | Workbook + certificate copy | Workbook row 49 | Certificate 14 Apr 2026 p93 | Workbook RS: ACTIVE (undefined)
+AS Rao Nagar | IN3610023707 | Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062 | Workbook-listed | Workbook row 7 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Attapur | IN3610023458 | Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048 | Workbook-listed | Workbook row 25 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Begumpet | IN3610023004 | Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016. | Workbook-listed | Workbook row 5 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Bhimavaram | IN2810039042 | Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202 | Workbook + certificate copy | Workbook row 32 | Certificate 16 Mar 2026 p82 | Workbook RS: ACTIVE (undefined)
+Chanda Nagar | IN3610023460 | Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050 | Workbook-listed | Workbook row 40 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Dilsukhnagar | IN3610023028 | No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana. | Workbook + certificate copy | Workbook row 12 | Certificate 09 Mar 2026 p67 | Workbook RS: ACTIVE (undefined)
+East Marredpally | IN3610023007 | First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026 | Workbook-listed | Workbook row 41 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Eluru | IN2810051629 | Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, EluruÂ District, A.P | Workbook + certificate copy | Workbook row 26 | Certificate 14 Apr 2026 p91 | Workbook RS: ACTIVE (undefined)
+Gachibowli | IN3610023016 | Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084. | Workbook + certificate copy | Workbook row 13 | Certificate 12 Mar 2026 p83 | Workbook RS: ACTIVE (undefined)
+Gajuwaka | IN2810065153 | Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, AndhraÂ PradeshÂ 530026 | Workbook + certificate copy | Workbook row 27 | Certificate 08 May 2026 p72 | Workbook RS: ACTIVE (undefined)
+Guntur | IN2810039036 | M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007 | Workbook + certificate copy | Workbook row 14 | Certificate 11 Mar 2026 p75 | Workbook RS: ACTIVE (undefined)
+Habsiguda | IN3610023015 | Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007 | Workbook-listed | Workbook row 9 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Hayathnagar | IN3610023006 | 2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505 | Workbook + certificate copy | Workbook row 23 | Certificate 12 Mar 2026 p78 | Workbook RS: INACTIVE (undefined)
+Himayat Nagar | IN3610023005 | Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana | Workbook-listed | Workbook row 6 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+HitechCity, Madhapur | IN3610023459 | Pinnacle Blooms Network, Beside Metro Station, Shop No -  1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081 | Workbook-listed | Workbook row 33 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Indira Nagar | IN2910116253 | Opp. Motherhood Hospital, CMH Road, Indira Nagar, Bengaluru, Karnataka, IN - 560038. | Workbook-listed | Workbook row 17 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Jaya Nagar | IN2910116254 | 12th Main, 27th Cross, 4th Block East, Jaya Nagar, Bengaluru, Karnataka, IN - 560011. | Workbook-listed | Workbook row 18 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Kachiguda | IN3610023020 | Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027 | Workbook-listed | Workbook row 35 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Kadapa | IN2810065144 | Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh | Workbook + certificate copy | Workbook row 44 | Certificate 10 May 2026 p70 | Workbook RS: ACTIVE (undefined)
+Kakinada | IN2810053820 | Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001 | Workbook + certificate copy | Workbook row 31 | Certificate 24 Apr 2026 p94 | Workbook RS: ACTIVE (undefined)
+Karimnagar | IN3610023681 | Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001 | Workbook-listed | Workbook row 20 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Khajaguda, Mehdipatnam | IN3610023019 | Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032 | Workbook + certificate copy | Workbook row 34 | Certificate 12 Mar 2026 p85 | Workbook RS: ACTIVE (undefined)
+Khammam | IN3610023018 | Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 | Workbook-listed | Workbook row 29 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Kukatpally | IN3610023014 | Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib | Workbook-listed | Workbook row 3 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Kurnool | IN2810039037 | Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001 | Workbook + certificate copy | Workbook row 30 | Certificate 02 Feb 2026 p76 | Workbook RS: ACTIVE (undefined)
+Labbipet | IN2810050768 | Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007 | Workbook + certificate copy | Workbook row 10 | Certificate 10 Mar 2026 p87 | Workbook RS: ACTIVE (undefined)
+LB Nagar | IN3610023705 | No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074 | Workbook-listed | Workbook row 8 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Madhurawada | IN2810039041 | 2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041 | Workbook + certificate copy | Workbook row 51 | Certificate 12 Jan 2026 p81 | Workbook RS: INACTIVE (undefined)
+Mahbubnagar | IN3610023702 | GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana | Workbook-listed | Workbook row 52 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Marathahalli | IN2910116252 | No 3, Khata no 2389, SY No 115/6, KUNDALAHALLI, Bengaluru (Bangalore) Urban, Karnataka, 560049 | Workbook-listed | Workbook row 38 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Miryalaguda | IN3610023024 | D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207 | Workbook + certificate copy | Workbook row 48 | Certificate 02 Mar 2026 p86 | Workbook RS: ACTIVE (undefined)
+NAD, Vizag | IN2810039038 | Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027 | Workbook + certificate copy | Workbook row 19 | Certificate 12 Jan 2026 p77 | Workbook RS: ACTIVE (undefined)
+Nallagandla | IN3610023017 | Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019 | Workbook + certificate copy | Workbook row 21 | Certificate 12 Mar 2026 p84 | Workbook RS: ACTIVE (undefined)
+Nandyala | IN2810065160 | Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh | Workbook + certificate copy | Workbook row 46 | Certificate 08 May 2026 p73 | Workbook RS: ACTIVE (undefined)
+Nellore | IN2810051616 | Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001 | Workbook + certificate copy | Workbook row 22 | Certificate 12 Mar 2026 p90 | Workbook RS: ACTIVE (undefined)
+New Delhi | IN0710006582 | Ground, E17,  Main Market, South Extension - 1, Near AIIMS, Delhi 110049 | Workbook + certificate copy | Workbook row 16 | Certificate 15 Mar 2026 p68 | Workbook RS: INACTIVE (undefined)
+Nizamabad | IN3610023008 | Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001 | Workbook-listed | Workbook row 42 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Nizampet | IN3610023704 | 2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090 | Workbook-listed | Workbook row 43 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Ongole | IN2810050814 | Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001 | Workbook + certificate copy | Workbook row 47 | Certificate 09 Mar 2026 p89 | Workbook RS: ACTIVE (undefined)
+Pragathi Nagar | IN3610023685 | Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, TelanganaÂ 500072 | Workbook-listed | Workbook row 24 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Rajhamundary | IN2810051854 | Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103 | Workbook + certificate copy | Workbook row 39 | Certificate 16 Apr 2026 p92 | Workbook RS: ACTIVE (undefined)
+Santosh Nagar | IN3610023021 | Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059 | Workbook-listed | Workbook row 36 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+SR Nagar | IN3610023027 | Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018 | Workbook-listed | Workbook row 4 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Srikakulam | IN2810039040 | Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh | Workbook + certificate copy | Workbook row 45 | Certificate 11 Mar 2026 p79;80 | Workbook RS: ACTIVE (undefined)
+Suchitra | IN3610023010 | Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067 | Workbook-listed | Workbook row 2 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Tirupati | IN2810065148 | Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh | Workbook + certificate copy | Workbook row 50 | Certificate 10 May 2026 p71 | Workbook RS: ACTIVE (undefined)
+Tirupati · additional certificate record | IN2810053847 | Not supplied in the workbook | Certificate copy only | Workbook row not listed | Certificate 17 Apr 2026 p95 | Workbook RS: not listed (undefined)
+Vidyanagar | IN3610023456 | Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana | Workbook-listed | Workbook row 53 | No inspected certificate copy | Workbook RS: ACTIVE (undefined)
+Vijayawada | IN2810050793 | Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008 | Workbook + certificate copy | Workbook row 37 | Certificate 10 Mar 2026 p88 | Workbook RS: ACTIVE (undefined)
+Vikrampuri | IN3610023703 | Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009. | Workbook-listed | Workbook row 15 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
+Visakhapatnam | IN2810039035 | Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020 | Workbook + certificate copy | Workbook row 11 | Certificate 12 Jan 2026 p74 | Workbook RS: ACTIVE (undefined)
+Warangal | IN3610023461 | Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, TelanganaÂ 506001 | Workbook + certificate copy | Workbook row 28 | Certificate 13 May 2026 p69 | Workbook RS: ACTIVE (undefined)

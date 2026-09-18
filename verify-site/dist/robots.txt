@@ -1,5 +1,5 @@
-# Private review edition; public discovery is not enabled.
+# Public verification content. Domain-level crawl policy is served at /robots.txt.
 User-agent: *
-Disallow: /
+Allow: /
 
 Sitemap: https://pinnacle-verify.saripalli.chatgpt.site/sitemap.xml

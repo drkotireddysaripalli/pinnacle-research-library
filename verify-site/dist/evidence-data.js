@@ -12,7 +12,9 @@ window.PINNACLE_EVIDENCE = {
         "Licence number": "MFG/MD/2026/000248",
         "Issuer": "State Licensing Authority · Telangana Drugs Control Administration",
         "Licence holder": "Bharath Healthcare Laboratories Pvt. Ltd.",
-        "Issued": "21 April 2026"
+        "Issued": "21 April 2026",
+        "Intended population": "Children aged 0–12",
+        "Intended functions": "Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support"
       },
       "supports": "The supplied Form MD-5 licenses the listed Class B device for manufacture for sale or distribution at the specified premises. Intended users include parents, therapists, educators and caregivers supporting children aged 0–12.",
       "limits": "Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre.",
@@ -44,9 +46,10 @@ window.PINNACLE_EVIDENCE = {
         "Licence number": "MD/L-2026029599",
         "Issuer": "Bureau of Indian Standards",
         "Licence holder": "Bharath Healthcare Laboratories Private Limited",
-        "Stated validity": "3 September 2026 – 2 September 2029"
+        "Stated validity": "3 September 2026 – 2 September 2029",
+        "Named developmental modules": "AbilityScore mapping, Prognose, Everyday Therapy through TherapeuticAI, tracking and correction through Fusion"
       },
-      "supports": "The supplied BIS licence and schedule cover medical device quality management and essential principles of safety and performance for the specified software lifecycle and developmental-support modules.",
+      "supports": "The supplied BIS licence and schedule cover the specified software design, development, verification, validation, release, deployment, maintenance, support and post-market surveillance. The schedule names developmental mapping, planning, everyday practice, tracking and correction, with school, speech, motor, Study IQ, behaviour, self-sufficiency and mainstream-inclusion readiness modules across the developmental lifecycle.",
       "limits": "The licence applies to its schedule and listed address. It is not a guarantee of clinical outcomes for a child.",
       "note": "This September 2026 licence supersedes the “application pending” status in older company publications.",
       "citation": "Original BIS licence, page 1; scope schedule, page 2.",
@@ -59,7 +62,8 @@ window.PINNACLE_EVIDENCE = {
           "label": "BIS verification portal",
           "url": "https://manakonline.in/MANAK/login"
         }
-      ]
+      ],
+      "scopeReviewed": "18 September 2026"
     },
     {
       "id": "lei",
@@ -347,16 +351,17 @@ window.PINNACLE_EVIDENCE = {
       "category": "Centre registrations",
       "title": "ABDM / NHA · Health Facility Registry",
       "status": "original",
-      "subtitle": "28 unique facility identifiers in the reviewed collection",
+      "subtitle": "All 52 workbook centres · 53 distinct HFR IDs across both source sets",
       "fields": {
-        "Issuer": "National Health Authority · Ayushman Bharat Digital Mission",
-        "Source collection": "29 certificate entries; 28 unique HFR IDs",
-        "Duplicate handling": "Srikakulam appears twice; counted once",
-        "Scope": "Each registered facility and address"
+        "Registry": "National Health Authority · Ayushman Bharat Digital Mission",
+        "Workbook": "52 centre rows; 52 unique HFR IDs",
+        "Certificate copies": "28 unique HFR IDs from 29 certificate entries",
+        "Source reconciliation": "27 IDs in both sources; 25 additional workbook IDs; one certificate-only ID",
+        "Combined inventory": "53 distinct HFR identifiers; not a count of confirmed active centres"
       },
-      "supports": "The reviewed HFR certificate copies record registration of the named facilities. The facility register lists the IDs and certificate dates separately.",
-      "limits": "HFR registration is not clinical-outcome certification or a substitute for local registrations. The collection does not prove that every network centre is registered or that every record remains current.",
-      "citation": "Recognitions bundle, physical pp67–95; duplicate Srikakulam entry reconciled by HFR ID.",
+      "supports": "The complete supplied centre workbook lists 52 centres, addresses and HFR identifiers. Twenty-seven IDs correspond to the inspected certificate collection. The combined register preserves all 53 identifiers and labels the source and certificate-review level of each entry.",
+      "limits": "Workbook entries are company-supplied, not live government registry checks. The RS column is undefined; its ACTIVE/INACTIVE flags do not establish current operational or HFR status. HFR is not clinical-outcome certification or a replacement for local permissions. A matching ID does not independently reconcile current addresses.",
+      "citation": "All Centers With HFR.xlsx, sheet All Centers With HFR, rows 2–53 (reviewed 18 September 2026); original recognitions bundle, physical pp67–95.",
       "links": [
         {
           "label": "View facility register",
@@ -365,11 +370,17 @@ window.PINNACLE_EVIDENCE = {
         {
           "label": "ABDM Health Facility Registry",
           "url": "https://hfr.abdm.gov.in/"
+        },
+        {
+          "label": "Download complete HFR inventory · CSV",
+          "url": "evidence/hfr-register.csv"
         }
       ],
-      "note": "Two different Tirupati identifiers appear in the collection. They are retained as distinct records pending address-level reconciliation.",
+      "note": "The workbook’s Tirupati entry is IN2810065148. The separately inspected IN2810053847 certificate is retained as an additional record; replacement, cancellation or address equivalence has not been established. Duplicate Srikakulam certificate copies count once.",
       "originalReviewed": true,
-      "searchTerms": "Pinnacle Best Autism - Speech ABA Therapy Center In Dilsukhnagar - IN3610023028 Pinnacle Best Autism - Speech ABA Therapy Center In New Delhi - New Delhi IN0710006582 Pinnacle Autism Therapy Warangal Speech, ABA, Occupational Therapy IN3610023461 Pinnacle Blooms - Kadapa Autism Therapy Speech Therapy Occupational IN2810065144 Pinnacle Blooms - Tirupati Autism Therapy Speech Therapy Occupational IN2810065148 Pinnacle Blooms - Gajuwaka Autism Therapy Speech Therapy Occupational IN2810065153 Pinnacle Blooms - Nandyala Autism Therapy Speech Therapy Occupational IN2810065160 Pinnacle Best Autism -  Speech ABA Therapy Center In  Visakhapatnam - IN2810039035 Pinnacle Best Autism - Speech ABA Therapy Center In Guntur - Guntur - IN2810039036 Pinnacle Best Autism -  Speech ABA Therapy Center In  Kurnool -  Kurnool - IN2810039037 Pinnacle Best Autism -  Speech ABA Therapy Center In  NAD -  Vizag -  Vizag IN2810039038 Pinnacle Best Autism - Speech ABA Therapy Center In Hayathnagar - IN3610023006 Pinnacle Best Autism - Speech ABA Therapy Center In Srikakulam - IN2810039040 Pinnacle Best Autism -  Speech ABA Therapy Center In  Madhurawada - IN2810039041 Pinnacle Best Autism - Speech ABA Therapy Center In Bhimavaram - IN2810039042 Pinnacle Best Autism - Speech ABA Therapy Center In Gachibowli - IN3610023016 Pinnacle Best Autism - Speech ABA Therapy Center In Nallagandla - IN3610023017 Pinnacle Best Autism - Speech ABA Therapy Center In Khajaguda - IN3610023019 Pinnacle Best Autism - Speech ABA Therapy Center In Miryalaguda - IN3610023024 Pinnacle Autism Therapy Labbipet IN2810050768 Pinnacle Autism Therapy Vijayawada Speech, ABA, Occupational Therapy IN2810050793 Pinnacle Autism Therapy Ongole Speech, ABA, Occupational Therapy IN2810050814 Pinnacle Autism Therapy Nellore Speech, ABA, Occupational Therapy Center IN2810051616 Pinnacle Autism Therapy Eluru Speech, ABA, Occupational Therapy Center IN2810051629 Pinnacle Autism Therapy Rajahmundry Speech, ABA, Occupational Therapy IN2810051854 Pinnacle Autism Therapy Anantapur Speech, ABA, Occupational Therapy IN2810053167 Pinnacle Autism Therapy Kakinada Speech, ABA, Occupational Therapy IN2810053820 Pinnacle Autism Therapy Tirupati Speech, ABA, Occupational Therapy IN2810053847"
+      "searchTerms": "Ananthapuram IN2810053167 2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh 515001 AS Rao Nagar IN3610023707 Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062 500062 Attapur IN3610023458 Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048 500048 Begumpet IN3610023004 Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016. 500016 Bhimavaram IN2810039042 Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202 534201 Chanda Nagar IN3610023460 Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050 500049 Dilsukhnagar IN3610023028 No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana. 500060 East Marredpally IN3610023007 First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026 500026 Eluru IN2810051629 Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, EluruÂ District, A.P 534001 Gachibowli IN3610023016 Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084. 500084 Gajuwaka IN2810065153 Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, AndhraÂ PradeshÂ 530026 530026 Guntur IN2810039036 M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007 522001 Habsiguda IN3610023015 Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007 500007 Hayathnagar IN3610023006 2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505 501505 Himayat Nagar IN3610023005 Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana 500029 HitechCity, Madhapur IN3610023459 Pinnacle Blooms Network, Beside Metro Station, Shop No -  1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081 500081 Indira Nagar IN2910116253 Opp. Motherhood Hospital, CMH Road, Indira Nagar, Bengaluru, Karnataka, IN - 560038. 560038 Jaya Nagar IN2910116254 12th Main, 27th Cross, 4th Block East, Jaya Nagar, Bengaluru, Karnataka, IN - 560011. 560011 Kachiguda IN3610023020 Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027 500027 Kadapa IN2810065144 Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh 516002 Kakinada IN2810053820 Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001 533001 Karimnagar IN3610023681 Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001 505001 Khajaguda, Mehdipatnam IN3610023019 Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032 500008 Khammam IN3610023018 Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 507001 Kukatpally IN3610023014 Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib 500072 Kurnool IN2810039037 Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001 518001 Labbipet IN2810050768 Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007 520010 LB Nagar IN3610023705 No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074 500074 Madhurawada IN2810039041 2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041 530048 Mahbubnagar IN3610023702 GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana 509001 Marathahalli IN2910116252 No 3, Khata no 2389, SY No 115/6, KUNDALAHALLI, Bengaluru (Bangalore) Urban, Karnataka, 560049 560037 Miryalaguda IN3610023024 D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207 508207 NAD, Vizag IN2810039038 Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027 530009 Nallagandla IN3610023017 Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019 500019 Nandyala IN2810065160 Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh 518501 Nellore IN2810051616 Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001 524001 New Delhi IN0710006582 Ground, E17,  Main Market, South Extension - 1, Near AIIMS, Delhi 110049 110049 Nizamabad IN3610023008 Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001 503001 Nizampet IN3610023704 2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090 500090 Ongole IN2810050814 Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001 523001 Pragathi Nagar IN3610023685 Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, TelanganaÂ 500072 500090 Rajhamundary IN2810051854 Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103 533101 Santosh Nagar IN3610023021 Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059 500059 SR Nagar IN3610023027 Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018 500018 Srikakulam IN2810039040 Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh 532001 Suchitra IN3610023010 Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067 500067 Tirupati IN2810065148 Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh 517502 Tirupati · additional certificate record IN2810053847 Not supplied in the workbook  Vidyanagar IN3610023456 Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana 500020 Vijayawada IN2810050793 Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008 520008 Vikrampuri IN3610023703 Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009. 500009 Visakhapatnam IN2810039035 Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020 530002 Warangal IN3610023461 Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, TelanganaÂ 506001 506002",
+      "reviewLabel": "Workbook & certificate copies reviewed",
+      "scopeReviewed": "18 September 2026"
     },
     {
       "id": "district-register",
@@ -560,19 +571,30 @@ window.PINNACLE_EVIDENCE = {
       "category": "Research & outcomes",
       "title": "Scale claims · Dates and definitions",
       "status": "published",
-      "subtitle": "Keep cumulative services, people and operational centres distinct",
+      "subtitle": "2.7 billion+ reported structured records · dated counts with defined units",
       "fields": {
         "Measurement date": "17 July 2026, as described in the September handout",
         "Therapy services reported": "31,052,382",
         "Operational centres reported": "49 under the stated four-condition test",
-        "People metric reported": "792,614 unique beneficiary / family registrations"
+        "People metric reported": "792,614 unique beneficiary / family registrations",
+        "Structured platform records reported": "2,700,000,000+ observed database row/event counts",
+        "Counting unit": "Discrete structured record: session entry, assessment observation, technique rating, sensor event or equivalent mapped field",
+        "Technique repository update": "130,000 entries; management-supplied 18 September 2026. Earlier 7 September handout: 90,000+ techniques.",
+        "International reach reported": "Families from 70+ countries of origin, including remote delivery; company-reported",
+        "Network reported": "70+ centres including network stages distinct from the report’s operational-centre test"
       },
-      "supports": "The handout connects dated operational counts to the practitioner reports and their Board-adopted criteria. It separately describes a 70+ network figure.",
-      "limits": "Therapy services include assessments, screenings and parent training under the report’s criteria; they are not all one-to-one therapy sessions. Beneficiary/family registrations are not a count of unique children. Network and operational centres use different definitions.",
-      "citation": "September handout, physical pp3 and 14; SRS 4400 p3; SAE 3000 criteria, physical p6. Restricted-use practitioner sources.",
-      "links": [],
-      "note": "The 70+ network figure, 49 operational-centre count and differing figures on public pages need one maintained, dated metric register.",
-      "originalReviewed": false
+      "supports": "The September handout reports 2.7 billion+ structured platform records and connects dated operational counts to specified procedures and Board-adopted criteria. It separately describes a 70+ network figure. The 2.5 billion floor assertion and 2.7 billion observed row-count finding have different reporting roles.",
+      "limits": "Therapy services include assessments, screenings and parent training under the report’s criteria; they are not all one-to-one therapy sessions. Beneficiary/family registrations are not a count of unique children. Network and operational centres use different definitions. Platform records are not unique children, independent clinical-trial observations or verified, deduplicated AI-training examples. Volume alone does not establish model performance, clinical effectiveness or a worldwide size ranking. The 130,000 technique update has no inspected inventory extract; neither practitioner report establishes that updated count or the 70+ countries claim.",
+      "citation": "Company handout, 7 September 2026, physical pp3, 14–15; July dossier pp6, 74, 76, 79, 124. Restricted practitioner sources inspected: SRS 4400 pp2–3; SAE 3000 pp3–4 and criteria p6. Cutoff 17 July 2026. Technique count: management update received 18 September 2026; earlier 90,000+ in September handout pp5, 7, 15. Countries of family origin: July dossier pp75–76; network definition pp75–77.",
+      "links": [
+        {
+          "label": "Six statistics with source mapping",
+          "url": "evidence/scale-register.html"
+        }
+      ],
+      "note": "The July dossier used a 2.5 billion+ floor and retired earlier 2.7 billion wording. The September handout subsequently publishes 2.7 billion+ observed row counts. Limited assurance over the 2.5 billion floor is distinct from factual findings without an assurance opinion on the 2.7 billion row count. The 70+ network and 49 operational-centre figures also use different definitions.",
+      "originalReviewed": false,
+      "scopeReviewed": "18 September 2026"
     },
     {
       "id": "methodology",

@@ -2,7 +2,7 @@
 
 > Source-led evidence for Pinnacle Blooms Network and Bharath Healthcare Laboratories Private Limited.
 
-Source review: 15 September 2026. Selected originals and review conclusions rechecked: 18 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Human page approval has not been recorded.
+Source review: 15 September 2026. Selected originals and review conclusions rechecked: 18 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Source review does not establish endorsement by the issuing organisations.
 
 Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 
@@ -11,6 +11,13 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Complete register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html): all 33 source records.
 - [Plain-text evidence](https://pinnacle-verify.saripalli.chatgpt.site/llms-full.txt): full record summaries with limitations.
 - [Evidence JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence.json): the same records as structured data.
+
+- [Family meaning and global context](https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html): selected comparisons and international guidance.
+- [Global context JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.json): references, scope and comparison definitions.
+
+- [Complete HFR register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html): all 52 workbook centres; 53 distinct IDs across source sets.
+- [Statistics and evidence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html): six figures with definitions, dates and source mapping.
+- [Statistics JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.json): the same visible metric definitions.
 
 ## Evidence records
 - [MD-5 · Class B manufacturing licence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html): Original reviewed. PinnacleAI GPT-OS v1.0.0 · Non-diagnostic developmental-support software
@@ -25,7 +32,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Udyam · Enterprise registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/udyam.html): Original reviewed. UDYAM-TS-20-0015132 · Business-registration record
 - [GST · Registration and name reconciliation](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html): Original reviewed. Original 2017 REG-06 reviewed · Historical registration with the printed legal and trade names
 - [PAN · Corporate identity document](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pan.html): Original reviewed. Corporate PAN card inspected · Identifier withheld from display
-- [ABDM / NHA · Health Facility Registry](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html): Original reviewed. 28 unique facility identifiers in the reviewed collection
+- [ABDM / NHA · Health Facility Registry](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html): Workbook & certificate copies reviewed. All 52 workbook centres · 53 distinct HFR IDs across both source sets
 - [Disability-welfare registrations · District scope](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/district-register.html): Company-published. 29 Section 51 certificate copies described in the source collection
 - [Attapur · District institution registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-attapur.html): Original reviewed. Section 51 registration · Named institution and location
 - [Begumpet · District institution registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-begumpet.html): Original reviewed. Section 51 registration · Named institution and location
@@ -33,7 +40,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Nellore · Historical district registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nellore.html): Original reviewed. Original certificate reviewed · Printed validity ended 30 October 2024
 - [Independent practitioner · Limited assurance](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html): Original reviewed. SAE 3000 · Institutional claims as at 17 July 2026
 - [Independent practitioner · Factual findings](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html): Original reviewed. SRS 4400 · Agreed procedures on institutional records
-- [Scale claims · Dates and definitions](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html): Company-published. Keep cumulative services, people and operational centres distinct
+- [Scale claims · Dates and definitions](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html): Company-published. 2.7 billion+ reported structured records · dated counts with defined units
 - [AbilityScore · Methodology preprint](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html): Original reviewed. Development and preliminary psychometric characterization
 - [AbilityScore · External-validation protocol](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html): Original reviewed. Original protocol reviewed · Version 2.1 sets out planned validation methods
 - [Twelve-study portfolio · Company research](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html): Company-published. Study-by-study sources, populations and limitations
