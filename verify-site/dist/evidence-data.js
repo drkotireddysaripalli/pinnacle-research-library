@@ -872,6 +872,28 @@ window.PINNACLE_EVIDENCE = {
       "note": "No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata.",
       "citation": "Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132.",
       "links": []
+    },
+    {
+      "id": "sovereign-walkthrough",
+      "category": "Source publications",
+      "title": "PinnacleAI walkthrough · Developmental architecture",
+      "status": "published",
+      "originalReviewed": true,
+      "reviewedOn": "2026-09-18",
+      "reviewedDate": "18 September 2026",
+      "subtitle": "Company-authored walkthrough · AbilityScore layers and programme cadence",
+      "fields": {
+        "Source": "PinnacleAI - Soveriegn WalkThrough.pdf",
+        "Edition date": "Not established from the reviewed copy",
+        "Length": "61 PDF pages",
+        "Measurement layers": "79 abilities · 349 skills · 17 domains · 591 observations",
+        "Programme cadence": "7–9 daily techniques; monthly AbilityScore refresh"
+      },
+      "supports": "The reviewed company walkthrough explicitly distinguishes abilities, skills, domains and observations. It describes the personal development kernel, daily practice, monthly reassessment and participation goals.",
+      "limits": "A company-authored architecture and programme description is not independent clinical validation or a regulatory extension. Historical diagnosis, exclusivity, patent and endorsement wording is not adopted by this review. Current MD-5 and BIS originals control their respective scopes.",
+      "citation": "PinnacleAI - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026.",
+      "links": [],
+      "note": "The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references."
     }
   ],
   "updated": "18 September 2026"

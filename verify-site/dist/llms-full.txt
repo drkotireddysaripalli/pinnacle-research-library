@@ -962,6 +962,35 @@ Reviewed: 15 September 2026
 
 ---
 
+## PinnacleAI walkthrough · Developmental architecture
+
+Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+Category: Source publications
+Review status: Company-published
+Company-authored source; underlying claims need their own evidence.
+
+Company-authored walkthrough · AbilityScore layers and programme cadence
+
+Source: PinnacleAI - Soveriegn WalkThrough.pdf
+Edition date: Not established from the reviewed copy
+Length: 61 PDF pages
+Measurement layers: 79 abilities · 349 skills · 17 domains · 591 observations
+Programme cadence: 7–9 daily techniques; monthly AbilityScore refresh
+
+Family relevance: Helps you ask how the initial assessment, daily programme and monthly review connect. Ask the care team which version is used for your child and how recommendations are reviewed by people.
+
+What this supports: The reviewed company walkthrough explicitly distinguishes abilities, skills, domains and observations. It describes the personal development kernel, daily practice, monthly reassessment and participation goals.
+
+Scope and limits: A company-authored architecture and programme description is not independent clinical validation or a regulatory extension. Historical diagnosis, exclusivity, patent and endorsement wording is not adopted by this review. Current MD-5 and BIS originals control their respective scopes.
+
+Source note: The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references.
+
+Source citation: PinnacleAI - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026.
+Reviewed: 18 September 2026
+
+
+---
+
 # Pinnacle: family relevance and global context
 
 Reviewed: 18 September 2026
@@ -1043,6 +1072,18 @@ The MD-5 names PinnacleAI GPT-OS v1.0.0 and defined non-diagnostic functions for
 
 Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle?
 No endorsement is established by the references on this page. Their guidance explains why monitoring, coordinated support, caregiver participation and inclusion matter. Pinnacle’s own documents must separately establish what Pinnacle provides.
+
+What is the purpose of the Pinnacle developmental pathway?
+Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. Its tagline is “Every child deserves a wonderful life.” The described approach connects ability measurement, child-specific planning, coordinated intervention, everyday practice, tracking, correction and reassessment. Individual outcomes vary.
+
+Are 79 abilities and 349 skills different counts of the same thing?
+The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.
+
+How do daily practice and monthly review connect?
+The company sources describe 7–9 daily techniques selected for the child’s programme, human feedback through the Fusion tracking and correction module, and monthly AbilityScore refresh. The care team should explain the child-specific goals, practice guidance, review schedule and any adjustments. This is a programme description, not a guaranteed outcome.
+
+Does ICD-11 alignment mean WHO approval of PinnacleAI?
+No. The handout and dossier state classification alignment. An item-by-item mapping audit was not supplied. Using WHO classifications does not establish WHO approval or endorsement of a third-party product. BIS and the MD-5 have their own named scopes.
 
 ---
 
@@ -1154,17 +1195,19 @@ Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Li
 The company describes a seven-stage developmental pathway connecting measurement, planning, integrated support, parent-guided practice and progress review. Its supplied MD-5 names non-diagnostic Class B developmental-support software. The BIS scope names connected software modules. Individual outcomes vary.
 
 ## Main page sections
-- [Check the evidence. Choose with clarity.](https://pinnacle-verify.saripalli.chatgpt.site/#section-check-the-evidence-choose-with-clarity): A clearer starting point. A connected plan. Progress that matters in everyday life. Explore the documents behind Pinnacle’s developmental-support approach, understand what they mean for your family, and compare them in context.
+- [Every child deserves a wonderful life.](https://pinnacle-verify.saripalli.chatgpt.site/#section-every-child-deserves-a-wonderful-life): Growing toward self-sufficiency. Participating in mainstream life.
 - [Review summary](https://pinnacle-verify.saripalli.chatgpt.site/#section-review-summary): A source for every conclusion Reading a certificate and checking its current status are separate steps. Read the review conclusions .
+- [From present abilities toward a wonderful life.](https://pinnacle-verify.saripalli.chatgpt.site/#care): Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. The practical question is: “What can my child do now, what support will help next, and how will we understand progress?”
 - [Measurement. A connected plan. Support for everyday life.](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-profile): Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Pinnacle describes a seven-stage child-development pathway connecting ability measurement, child-specific planning, integrated support, parent-guided practice and progress review toward participation and growing independence.
 - [Every number should lead to its source.](https://pinnacle-verify.saripalli.chatgpt.site/#scale): Explore six measures of Pinnacle’s reported reach, activity and resources. Each keeps its counting unit, date and evidence type visible, so scale can be understood in the context of one child’s care.
 - [A clearer starting point. A connected way forward.](https://pinnacle-verify.saripalli.chatgpt.site/#impact): For a family, evidence becomes useful when it helps answer three questions: What can my child do now? What will we work on together? How will we understand what changes?
-- [What would you like to verify?](https://pinnacle-verify.saripalli.chatgpt.site/#records): 33 records
+- [What would you like to verify?](https://pinnacle-verify.saripalli.chatgpt.site/#records): 34 records
 - [Three questions. A clearer starting point.](https://pinnacle-verify.saripalli.chatgpt.site/#family): Credentials are most useful when they help you ask informed questions about the support your child will receive.
 - [Structured developmental records. One child’s journey at a time.](https://pinnacle-verify.saripalli.chatgpt.site/#data-scale): Company-reported in the 7 September 2026 handout. Counting basis: database rows/events · cutoff 17 July 2026.
 - [Understand what each credential adds.](https://pinnacle-verify.saripalli.chatgpt.site/#regulated-purpose): An issued licence defines the software’s intended use. Quality records describe how the system is managed. The BIS schedule connects those processes to a broader set of developmental-support modules.
 - [Start with the centre your family knows.](https://pinnacle-verify.saripalli.chatgpt.site/#centres): Search the supplied facility and district records. Match the exact premises before relying on a document; a network credential does not cover every centre automatically.
-- [One child. A connected path forward.](https://pinnacle-verify.saripalli.chatgpt.site/#care): Measurement should lead to a useful plan, everyday practice and decisions informed by progress. This is the seven-stage care pathway Pinnacle describes.
+- [Abilities and participation. Records people can understand.](https://pinnacle-verify.saripalli.chatgpt.site/#international-standards): International classifications help describe health and functioning consistently. For families, the value is a clearer account of abilities, support needs and participation over time.
+- [A wonderful life. A place to participate.](https://pinnacle-verify.saripalli.chatgpt.site/#global-goals): Pinnacle’s stated mission has practical connections to the UN Sustainable Development Goals: access to support, early learning, inclusion and accountable collaboration.
 - [Why these capabilities matter to families.](https://pinnacle-verify.saripalli.chatgpt.site/#global-principles): Independent guidance explains the importance of monitoring, caregiver participation, coordinated support and inclusion. These organisations do not endorse or evaluate Pinnacle through the references below.
 - [See where Pinnacle fits. Compare what matters.](https://pinnacle-verify.saripalli.chatgpt.site/#global-context): Different organisations address diagnosis, assessment, digital treatment, integrated services or provider software. A useful comparison starts with the job each is designed to do.
 - [Originals reviewed. Conclusions made clear.](https://pinnacle-verify.saripalli.chatgpt.site/#review): Each conclusion reflects the documents inspected. Historical certificates, study protocols and company-reported claims are identified precisely, so you can see what each source establishes.
@@ -1198,3 +1241,60 @@ Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.
 
 SRS 4400 — Agreed-upon procedures and factual findings: The supplied report records procedures and findings for defined institutional counts. It does not provide an assurance opinion. Its observed counts and the SAE 3000 assertion floors have different reporting roles.
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html
+
+# Pinnacle purpose and developmental pathway
+
+Every child deserves a wonderful life.
+Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs.
+
+1. Understand the child’s abilities — AbilityScore® · 0–1000
+Begin with what the child can do, their interests and the everyday situations where support would help. The company walkthrough describes 79 abilities, 349 skills, 17 domains and 591 observations, with AbilityScore on a 0–1000 scale. These are different layers of the framework.
+For the family: A starting point the family and care team can discuss together.
+Source: Company walkthrough, page 26; September handout, pages 5–6; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+
+2. Build a child-specific direction — Prognose® + personal development kernel
+Connect the observed abilities with priorities, readiness goals and a plan for this child. The dossier describes a personal development kernel: a persistent child-specific record of measurements, responses to techniques, environment and history that informs subsequent recommendations.
+For the family: Clarity about what to work on next, why it matters and who will help.
+Source: Evidence Dossier, pages 48–49; BIS schedule, page 2; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+3. Coordinate professional support — TherapeuticAI® + human oversight
+Use the plan to coordinate appropriate therapies and intervention. Pinnacle describes practitioners, parents, caregivers and educators contributing to the programme; software supports professional judgement and shared goals.
+For the family: People working from an agreed direction across the child’s support team.
+Source: September handout, pages 5–7; MD-5 intended use; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+4. Make the plan part of everyday life — Everyday Therapy™ · 7–9 techniques a day
+The September handout describes 7–9 techniques selected for the child’s programme each day. Parents and other caregivers receive guidance for practice connected to the child’s current abilities and goals; the care team agrees what is appropriate.
+For the family: A practical way to carry support into home routines and other everyday settings.
+Source: September handout, pages 5–7; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html
+
+5. Observe, track and correct — Fusion Module · people in the loop
+Record how practice goes and bring observations from the family and professionals back into review. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module.
+For the family: A plan that can respond when an activity, setting or support needs to change.
+Source: BIS licence schedule, page 2; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+6. Reassess and explain the trajectory — Monthly AbilityScore refresh + progress review
+Compare the child’s present abilities with their own earlier assessments and review the next priorities. The company walkthrough describes a monthly AbilityScore refresh; the Whitebook also describes monthly review. The care team should explain the schedule and any child-specific changes.
+For the family: An understandable record of change over time, connected to daily-life goals—not a judgement of the child’s worth.
+Source: Company walkthrough, pages 35, 37; Whitebook, page 12; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+
+7. Grow toward self-sufficiency and participation — Readiness indexes + real-life goals
+Work toward communication, daily living, learning, relationships and participation in school and community. The BIS scope names seven readiness indexes, including Self Sufficiency and Mainstream Inclusion. Continue reassessment and support as needs change.
+For the family: A wonderful life defined with the child and family, including the supports that make participation possible.
+Source: BIS licence schedule, page 2; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+This is Pinnacle’s documented developmental-support approach. PinnacleAI GPT-OS v1.0.0 is a non-diagnostic Class B SaMD for ages 0–12 under the supplied MD-5. A programme, score or licence does not guarantee independence, school entry or a particular outcome. Inclusion is a right; it is not conditional on a score.
+The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.
+
+ICF · functioning and participation
+WHO’s ICF gives a framework for functioning, activities, participation and environmental context. It helps explain why the child’s everyday life belongs at the centre of developmental goals.
+https://www.who.int/classifications/international-classification-of-functioning-disability-and-health
+
+ICD-11 · consistent health information
+WHO’s ICD-11 provides a shared language for recording and comparing health information. Consistent definitions can support clinical records, health-system planning and responsible analysis across settings.
+https://www.who.int/standards/classifications/classification-of-diseases
+
+SDG mission connections: 3 — Health and well-being; A mission to make developmental support clearer and more accessible to families. https://sdgs.un.org/goals/goal3
+4 — Quality education; Early development, inclusive learning and support that helps children participate in education. https://sdgs.un.org/goals/goal4
+10 — Reduced inequalities; Participation and inclusion, including for children with disabilities and their families. https://sdgs.un.org/goals/goal10
+17 — Partnerships for the goals; A direction for accountable collaboration. Specific partnership achievements require named agreements and measured contributions. https://sdgs.un.org/goals/goal17
+Company-published ICD-11/ICF alignment has not been independently audited in this review. No WHO or UN endorsement is established.

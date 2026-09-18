@@ -8,7 +8,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 
 ## Reference files
 - [Verification centre](https://pinnacle-verify.saripalli.chatgpt.site/): human-readable evidence and review method.
-- [Complete register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html): all 33 source records.
+- [Complete register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html): all 34 source records.
 - [Plain-text evidence](https://pinnacle-verify.saripalli.chatgpt.site/llms-full.txt): full record summaries with limitations.
 - [Evidence JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence.json): the same records as structured data.
 
@@ -53,6 +53,12 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Evidence Dossier · Version 2.0](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html): Company-published. 25 July 2026 · Controlled institutional circulation
 - [September handout · Current source narrative](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html): Company-published. 7 September 2026 · Private & confidential investor handout
 - [Books & parent resources · Publication records](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html): Company-published. Authorship and publication metadata read from the supplied books
+- [PinnacleAI walkthrough · Developmental architecture](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html): Company-published. Company-authored walkthrough · AbilityScore layers and programme cadence
+
+## Purpose and developmental pathway
+- [Seven-stage journey](https://pinnacle-verify.saripalli.chatgpt.site/#care): documented measurement layers, daily practice and monthly reassessment.
+- [Pathway JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.json): the same visible description with source references.
+- [Pathway text](https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.txt): readable lifecycle and international context.
 
 ## Section navigation and terminology
 - [Section and source index](https://pinnacle-verify.saripalli.chatgpt.site/evidence/section-index.json): visible page blocks, source links and scoped descriptions.
