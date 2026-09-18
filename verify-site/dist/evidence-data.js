@@ -7,7 +7,7 @@ window.PINNACLE_EVIDENCE = {
       "title": "MD-5 · Class B manufacturing licence",
       "status": "original",
       "originalReviewed": true,
-      "subtitle": "PinnacleAI GPT-OS v1.0.0 · Non-diagnostic developmental-support software",
+      "subtitle": "PinnacleAI® GPT-OS v1.0.0 · Non-diagnostic developmental-support software",
       "fields": {
         "Licence number": "MFG/MD/2026/000248",
         "Issuer": "State Licensing Authority · Telangana Drugs Control Administration",
@@ -18,7 +18,7 @@ window.PINNACLE_EVIDENCE = {
       },
       "supports": "The supplied Form MD-5 licenses the listed Class B device for manufacture for sale or distribution at the specified premises. Intended users include parents, therapists, educators and caregivers supporting children aged 0–12.",
       "limits": "Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre.",
-      "citation": "Original Form MD-5, page 1 including device annexure; supplied PinnacleAI_SAMD_License.pdf re-inspected 18 September 2026.",
+      "citation": "Original Form MD-5, page 1 including device annexure; supplied PinnacleAI®_SAMD_License.pdf re-inspected 18 September 2026.",
       "scopeReviewed": "18 September 2026",
       "links": [
         {
@@ -34,7 +34,7 @@ window.PINNACLE_EVIDENCE = {
           "url": "https://dca.telangana.gov.in/"
         }
       ],
-      "note": "The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together."
+      "note": "The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI®_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together."
     },
     {
       "id": "bis",
@@ -123,7 +123,7 @@ window.PINNACLE_EVIDENCE = {
       "note": "The separate 13 April 2026 CAL/decision is described in company publications; its issued copy was not available for inspection. This review does not authenticate that separate decision.",
       "originalReviewed": true,
       "scopeLabel": "Application + issued licence",
-      "reviewConclusion": "The January application records a proposed Class A classification. The issued MD-5 identifies PinnacleAI GPT-OS v1.0.0 as Class B. These documents are presented in their regulatory sequence.",
+      "reviewConclusion": "The January application records a proposed Class A classification. The issued MD-5 identifies PinnacleAI® GPT-OS v1.0.0 as Class B. These documents are presented in their regulatory sequence.",
       "verificationNote": "Application and issued MD-5 inspected; separate issued CAL not inspected.",
       "scopeReviewed": "18 September 2026"
     },
@@ -877,14 +877,14 @@ window.PINNACLE_EVIDENCE = {
     {
       "id": "sovereign-walkthrough",
       "category": "Source publications",
-      "title": "PinnacleAI walkthrough · Developmental architecture",
+      "title": "PinnacleAI® walkthrough · Developmental architecture",
       "status": "published",
       "originalReviewed": true,
       "reviewedOn": "2026-09-18",
       "reviewedDate": "18 September 2026",
       "subtitle": "Company-authored walkthrough · AbilityScore layers and programme cadence",
       "fields": {
-        "Source": "PinnacleAI - Soveriegn WalkThrough.pdf",
+        "Source": "PinnacleAI® - Soveriegn WalkThrough.pdf",
         "Edition date": "Not established from the reviewed copy",
         "Length": "61 PDF pages",
         "Measurement layers": "79 abilities · 349 skills · 17 domains · 591 observations",
@@ -892,7 +892,7 @@ window.PINNACLE_EVIDENCE = {
       },
       "supports": "The reviewed company walkthrough explicitly distinguishes abilities, skills, domains and observations. It describes the personal development kernel, daily practice, monthly reassessment and participation goals.",
       "limits": "A company-authored architecture and programme description is not independent clinical validation or a regulatory extension. Historical diagnosis, exclusivity, patent and endorsement wording is not adopted by this review. Current MD-5 and BIS originals control their respective scopes.",
-      "citation": "PinnacleAI - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026.",
+      "citation": "PinnacleAI® - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026.",
       "links": [],
       "note": "The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references."
     }

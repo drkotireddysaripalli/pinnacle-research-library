@@ -20,7 +20,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Statistics JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.json): the same visible metric definitions.
 
 ## Evidence records
-- [MD-5 · Class B manufacturing licence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html): Original reviewed. PinnacleAI GPT-OS v1.0.0 · Non-diagnostic developmental-support software
+- [MD-5 · Class B manufacturing licence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html): Original reviewed. PinnacleAI® GPT-OS v1.0.0 · Non-diagnostic developmental-support software
 - [BIS · Medical device management system](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html): Original reviewed. IS 23485:2019 · Licence and scope schedule reviewed
 - [Legal entity · Independent registry match](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html): Registry record matched. Bharath Healthcare Laboratories Private Limited
 - [CDSCO classification · Application and licence trail](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html): Original reviewed. Original application reviewed · Class B is recorded in the issued MD-5
@@ -53,7 +53,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Evidence Dossier · Version 2.0](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html): Company-published. 25 July 2026 · Controlled institutional circulation
 - [September handout · Current source narrative](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html): Company-published. 7 September 2026 · Private & confidential investor handout
 - [Books & parent resources · Publication records](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html): Company-published. Authorship and publication metadata read from the supplied books
-- [PinnacleAI walkthrough · Developmental architecture](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html): Company-published. Company-authored walkthrough · AbilityScore layers and programme cadence
+- [PinnacleAI® walkthrough · Developmental architecture](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html): Company-published. Company-authored walkthrough · AbilityScore layers and programme cadence
 
 ## Purpose and developmental pathway
 - [Seven-stage journey](https://pinnacle-verify.saripalli.chatgpt.site/#care): documented measurement layers, daily practice and monthly reassessment.

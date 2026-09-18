@@ -13,7 +13,7 @@ Category: Medical device regulation
 Review status: Original reviewed
 Current issuer or registry status: not independently confirmed.
 
-PinnacleAI GPT-OS v1.0.0 · Non-diagnostic developmental-support software
+PinnacleAI® GPT-OS v1.0.0 · Non-diagnostic developmental-support software
 
 Licence number: MFG/MD/2026/000248
 Issuer: State Licensing Authority · Telangana Drugs Control Administration
@@ -28,9 +28,9 @@ What this supports: The supplied Form MD-5 licenses the listed Class B device fo
 
 Scope and limits: Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre.
 
-Source note: The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together.
+Source note: The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI®_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together.
 
-Source citation: Original Form MD-5, page 1 including device annexure; supplied PinnacleAI_SAMD_License.pdf re-inspected 18 September 2026.
+Source citation: Original Form MD-5, page 1 including device annexure; supplied PinnacleAI®_SAMD_License.pdf re-inspected 18 September 2026.
 Reviewed: 15 September 2026
 - [Read redacted licence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/md5.pdf)
 - [Corrected forwarding letter · Drive](https://drive.google.com/file/d/1A22-NS5A1-ck2qXRBFrRSn9vlLyAzdhT/view)
@@ -103,7 +103,7 @@ Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/class
 Category: Medical device regulation
 Review status: Original reviewed
 Evidence scope: Application + issued licence
-Source review conclusion: The January application records a proposed Class A classification. The issued MD-5 identifies PinnacleAI GPT-OS v1.0.0 as Class B. These documents are presented in their regulatory sequence.
+Source review conclusion: The January application records a proposed Class A classification. The issued MD-5 identifies PinnacleAI® GPT-OS v1.0.0 as Class B. These documents are presented in their regulatory sequence.
 Application and issued MD-5 inspected; separate issued CAL not inspected.
 
 Original application reviewed · Class B is recorded in the issued MD-5
@@ -962,7 +962,7 @@ Reviewed: 15 September 2026
 
 ---
 
-## PinnacleAI walkthrough · Developmental architecture
+## PinnacleAI® walkthrough · Developmental architecture
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
 Category: Source publications
@@ -971,7 +971,7 @@ Company-authored source; underlying claims need their own evidence.
 
 Company-authored walkthrough · AbilityScore layers and programme cadence
 
-Source: PinnacleAI - Soveriegn WalkThrough.pdf
+Source: PinnacleAI® - Soveriegn WalkThrough.pdf
 Edition date: Not established from the reviewed copy
 Length: 61 PDF pages
 Measurement layers: 79 abilities · 349 skills · 17 domains · 591 observations
@@ -985,7 +985,7 @@ Scope and limits: A company-authored architecture and programme description is n
 
 Source note: The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references.
 
-Source citation: PinnacleAI - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026.
+Source citation: PinnacleAI® - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026.
 Reviewed: 18 September 2026
 
 
@@ -1068,7 +1068,7 @@ Does this establish the world’s largest child-development dataset?
 No comparable worldwide ranking is established. For example, CentralReach reports over 5 billion clinical and financial data points, using a different counting basis. A valid comparison would need common definitions, dates, populations, data quality and permitted uses.
 
 Does the MD-5 licence approve the entire child-development lifecycle?
-The MD-5 names PinnacleAI GPT-OS v1.0.0 and defined non-diagnostic functions for ages 0–12. The broader BIS schedule lists software processes and developmental-support modules across the journey. These instruments establish different scopes; neither guarantees outcomes or certifies global exclusivity.
+The MD-5 names PinnacleAI® GPT-OS v1.0.0 and defined non-diagnostic functions for ages 0–12. The broader BIS schedule lists software processes and developmental-support modules across the journey. These instruments establish different scopes; neither guarantees outcomes or certifies global exclusivity.
 
 Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle?
 No endorsement is established by the references on this page. Their guidance explains why monitoring, coordinated support, caregiver participation and inclusion matter. Pinnacle’s own documents must separately establish what Pinnacle provides.
@@ -1082,17 +1082,17 @@ Pinnacle describes these as different layers of its developmental framework: 17 
 How do daily practice and monthly review connect?
 The company sources describe 7–9 daily techniques selected for the child’s programme, human feedback through the Fusion tracking and correction module, and monthly AbilityScore refresh. The care team should explain the child-specific goals, practice guidance, review schedule and any adjustments. This is a programme description, not a guaranteed outcome.
 
-How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI?
+How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI®?
 Pinnacle’s dossier describes architecture and mappings using WHO’s ICD-11, ICF and ICHI, alongside SNOMED CT terminology from SNOMED International. Their roles are health information, functioning and participation, interventions, and consistent clinical meaning. Correct implementation can support interoperability; an item-by-item mapping audit was not supplied. Alignment is separate from endorsement, clinical validation and the licensed device’s intended use.
 
 Does Pinnacle focus on a diagnosis or on everyday-life goals?
 Families may arrive with questions about autism, ADHD, communication, sensory processing, movement, learning or other developmental concerns. Pinnacle’s stated purpose centres on the capabilities that help each child grow toward self-sufficiency and participate in mainstream life, with the support and accommodations they need. These are examples of individual goals, not promised results. Professional assessment identifies the support appropriate to each child; diagnosis and medical care remain important where indicated. The licensed software’s scope is non-diagnostic developmental support for ages 0–12, not treatment of every condition.
 
-Is PinnacleAI certified as sovereign-grade or authorised worldwide?
+Is PinnacleAI® certified as sovereign-grade or authorised worldwide?
 The reviewed documents do not establish a sovereign-grade certification or worldwide market authorisation. Pinnacle describes an architecture intended for population-scale developmental support. A specific deployment needs documented local control and governance, validated interoperability, applicable permissions, operational capacity and evidence of performance for that population. MD-5 and BIS provide the particular scopes shown in their records.
 
 Are parents and caregivers named in the MD-5 intended use?
-Yes. The MD-5 annexure states that PinnacleAI GPT-OS is intended to assist parents, therapists, educators and caregivers through developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for ages 0–12. This explicitly includes family users of the licensed software. It does not confer professional therapist credentials or register homes as therapy centres; worldwide exclusivity has not been established.
+Yes. The MD-5 annexure states that PinnacleAI® GPT-OS is intended to assist parents, therapists, educators and caregivers through developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for ages 0–12. This explicitly includes family users of the licensed software. It does not confer professional therapist credentials or register homes as therapy centres; worldwide exclusivity has not been established.
 
 ---
 
@@ -1223,17 +1223,17 @@ The company describes a seven-stage developmental pathway connecting measurement
 - [Evidence with its meaning intact.](https://pinnacle-verify.saripalli.chatgpt.site/#method): A record is useful when you can see both what it supports and the limits of that support.
 - [Clear terms. Better questions.](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): A practical reading guide to the credentials, report types and international classifications used on this page. Each definition links to its Pinnacle source record.
 - [Your child’s next step deserves a clear conversation.](https://pinnacle-verify.saripalli.chatgpt.site/#next-step): Ask the Pinnacle team about your child’s starting abilities, the proposed goals, who coordinates care and when progress will be reviewed. Bring the evidence questions that matter to your family.
-- [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): The supplied MD-5 lists PinnacleAI GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.
+- [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): The supplied MD-5 lists PinnacleAI® GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.
 - [Take the source with you.](https://pinnacle-verify.saripalli.chatgpt.site/#section-take-the-source-with-you): Readable records retain their review status, source references and limitations in every format.
 
 ## Terms explained
-SaMD — Software as a Medical Device: Software intended for a medical purpose without being part of a hardware medical device. PinnacleAI GPT-OS is listed as Class B, non-diagnostic developmental-support software in the supplied MD-5.
+SaMD — Software as a Medical Device: Software intended for a medical purpose without being part of a hardware medical device. PinnacleAI® GPT-OS is listed as Class B, non-diagnostic developmental-support software in the supplied MD-5.
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
 
 MD-3 — Application for a manufacturing licence: The application submitted for a licence to manufacture Class A or Class B medical devices. An application is a step in the regulatory record; it is not the issued licence.
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html
 
-MD-5 — Issued manufacturing licence: The issued licence records the named manufacturer, premises, device and intended use. Pinnacle’s supplied MD-5 names PinnacleAI GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.
+MD-5 — Issued manufacturing licence: The issued licence records the named manufacturer, premises, device and intended use. Pinnacle’s supplied MD-5 names PinnacleAI® GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
 
 BIS scope — Bureau of Indian Standards licence and scope schedule: The reviewed BIS record describes the management system and activities within its named scope, including developmental-support software modules. It does not establish every centre’s registration or guarantee clinical outcomes.
@@ -1320,7 +1320,7 @@ Work toward communication, daily living, learning, relationships and participati
 For the family: A wonderful life defined with the child and family, including the supports that make participation possible.
 Source: BIS licence schedule, page 2; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
 
-This is Pinnacle’s documented developmental-support approach. PinnacleAI GPT-OS v1.0.0 is a non-diagnostic Class B SaMD for ages 0–12 under the supplied MD-5. A programme, score or licence does not guarantee independence, school entry or a particular outcome. Inclusion is a right; it is not conditional on a score.
+This is Pinnacle’s documented developmental-support approach. PinnacleAI® GPT-OS v1.0.0 is a non-diagnostic Class B SaMD for ages 0–12 under the supplied MD-5. A programme, score or licence does not guarantee independence, school entry or a particular outcome. Inclusion is a right; it is not conditional on a score.
 The company walkthrough labels 17 domains, 79 abilities, 349 skills and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.
 
 ICD-11 · health information
