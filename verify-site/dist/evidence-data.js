@@ -93,9 +93,9 @@ window.PINNACLE_EVIDENCE = {
     {
       "id": "classification",
       "category": "Medical device regulation",
-      "title": "CDSCO classification · decision record",
-      "status": "reconcile",
-      "subtitle": "Class B appears on the issued MD-5; separate classification decision copy pending",
+      "title": "CDSCO classification · Application and licence trail",
+      "status": "original",
+      "subtitle": "Original application reviewed · Class B is recorded in the issued MD-5",
       "fields": {
         "Reported file": "MD/classification/2025/150",
         "Reported decision date": "13 April 2026",
@@ -115,8 +115,12 @@ window.PINNACLE_EVIDENCE = {
           "url": "https://cdsco.gov.in/opencms/opencms/en/Medical-Device-Diagnostics/Medical-Device-Diagnostics/"
         }
       ],
-      "note": "Required for this separate record: the complete issued CAL/decision, including annexures and any verification reference.",
-      "originalReviewed": true
+      "note": "The separate 13 April 2026 CAL/decision is described in company publications; its issued copy was not available for inspection. This review does not authenticate that separate decision.",
+      "originalReviewed": true,
+      "scopeLabel": "Application + issued licence",
+      "reviewConclusion": "The January application records a proposed Class A classification. The issued MD-5 identifies PinnacleAI GPT-OS v1.0.0 as Class B. These documents are presented in their regulatory sequence.",
+      "verificationNote": "Application and issued MD-5 inspected; separate issued CAL not inspected.",
+      "scopeReviewed": "18 September 2026"
     },
     {
       "id": "md3",
@@ -290,8 +294,8 @@ window.PINNACLE_EVIDENCE = {
       "id": "gst",
       "category": "Legal identity",
       "title": "GST · Registration and name reconciliation",
-      "status": "reconcile",
-      "subtitle": "Historical REG-06 reviewed · Current amended record needed",
+      "status": "original",
+      "subtitle": "Original 2017 REG-06 reviewed · Historical registration with the printed legal and trade names",
       "fields": {
         "Document": "GST REG-06",
         "Issued": "9 December 2017",
@@ -308,7 +312,11 @@ window.PINNACLE_EVIDENCE = {
         }
       ],
       "note": "Full tax identifiers and director annexures are excluded from this display. Use the current company-provided GSTIN in the official lookup.",
-      "originalReviewed": true
+      "originalReviewed": true,
+      "scopeLabel": "Historical registration",
+      "reviewConclusion": "The supplied certificate establishes the registration details printed in 2017. Its former legal name is retained exactly as issued, alongside the company’s documented name-change history.",
+      "verificationNote": "Historical certificate inspected; current amended legal-name match is not established.",
+      "scopeReviewed": "18 September 2026"
     },
     {
       "id": "pan",
@@ -475,8 +483,8 @@ window.PINNACLE_EVIDENCE = {
       "id": "rpwd-nellore",
       "category": "Centre registrations",
       "title": "Nellore · Historical district registration",
-      "status": "reconcile",
-      "subtitle": "Renewed original needed before displaying a current registration",
+      "status": "original",
+      "subtitle": "Original certificate reviewed · Printed validity ended 30 October 2024",
       "fields": {
         "Issuer": "Welfare of Differently Abled & Senior Citizens · SPSR Nellore",
         "Certificate": "06 of 2023",
@@ -492,8 +500,12 @@ window.PINNACLE_EVIDENCE = {
           "url": "evidence/district-register.html"
         }
       ],
-      "note": "Obtain the current renewed certificate and match the centre’s address.",
-      "originalReviewed": true
+      "note": "A renewal was not supplied for inspection. This historical certificate is not presented as evidence of current registration.",
+      "originalReviewed": true,
+      "scopeLabel": "Historical · ended 30 Oct 2024",
+      "reviewConclusion": "Certificate 06 of 2023 documents registration for the stated Nellore institution during 31 October 2023–30 October 2024. It is retained as historical evidence.",
+      "verificationNote": "Original inspected; printed validity period has ended. Current renewal not established.",
+      "scopeReviewed": "18 September 2026"
     },
     {
       "id": "sae3000",
@@ -590,8 +602,8 @@ window.PINNACLE_EVIDENCE = {
       "id": "external-validation",
       "category": "Research & outcomes",
       "title": "AbilityScore · External-validation protocol",
-      "status": "reconcile",
-      "subtitle": "A published study plan; completed results require a separate report",
+      "status": "original",
+      "subtitle": "Original protocol reviewed · Version 2.1 sets out planned validation methods",
       "fields": {
         "Protocol": "BHCL-VAL-2026-001",
         "Published": "9 April 2026 · version 2.1",
@@ -607,8 +619,12 @@ window.PINNACLE_EVIDENCE = {
           "url": "https://zenodo.org/records/19482476"
         }
       ],
-      "note": "Some secondary sources describe these plans as completed validation. A later completed report, ethics documentation, registration and results are needed to support that claim.",
-      "originalReviewed": true
+      "note": "Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion.",
+      "originalReviewed": true,
+      "scopeLabel": "Study protocol",
+      "reviewConclusion": "The reviewed source is protocol BHCL-VAL-2026-001, version 2.1. It describes a proposed external-validation study and sample plan; completed validation results are not claimed.",
+      "verificationNote": "Primary protocol and repository metadata reviewed; completed comparator validation is not established.",
+      "scopeReviewed": "18 September 2026"
     },
     {
       "id": "study-portfolio",
@@ -642,8 +658,8 @@ window.PINNACLE_EVIDENCE = {
       "id": "outcome-claim",
       "category": "Research & outcomes",
       "title": "Network-wide improvement claim · Evidence definition",
-      "status": "reconcile",
-      "subtitle": "Outcome definition, eligible cohort and calculation needed",
+      "status": "published",
+      "subtitle": "Company outcome claim recorded with its source and calculation boundary",
       "fields": {
         "Claim type": "Network-wide outcome statement",
         "Required basis": "Defined outcome, denominator and period",
@@ -654,9 +670,14 @@ window.PINNACLE_EVIDENCE = {
       "limits": "The reviewed materials do not establish the full network-wide calculation or make it an individual outcome guarantee. Practitioner assurance over operational counts does not validate excluded outcome percentages.",
       "citation": "Whitebook; Evidence Dossier v2; September handout; SAE 3000 scope.",
       "links": [],
-      "note": "Before using the percentage in a public verification conclusion, document eligibility, baseline/follow-up, missing data, assessment version, calculation and study links.",
+      "note": "A verified percentage would require the eligible population, denominator, measurement period, baseline and follow-up, assessment version, missing-data handling and reproducible calculation.",
       "originalReviewed": false,
-      "searchTerms": "97 97% improvement outcomes results efficacy"
+      "searchTerms": "97 97% improvement outcomes results efficacy",
+      "reviewLabel": "Source publications reviewed",
+      "scopeLabel": "Company-reported outcome",
+      "reviewConclusion": "The headline outcome claim is recorded as company-reported. The supplied material does not establish a verified network-wide improvement percentage; the SAE 3000 report excludes outcome-study figures from its scope.",
+      "verificationNote": "Company publications reviewed; underlying network-wide outcome calculation not independently established.",
+      "scopeReviewed": "18 September 2026"
     },
     {
       "id": "appreciations",
@@ -830,5 +851,6 @@ window.PINNACLE_EVIDENCE = {
       "citation": "Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132.",
       "links": []
     }
-  ]
+  ],
+  "updated": "18 September 2026"
 };

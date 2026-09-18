@@ -2,7 +2,7 @@
 
 > Source-led evidence for Pinnacle Blooms Network and Bharath Healthcare Laboratories Private Limited.
 
-Private review edition. Source review: 15 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Human page approval has not been recorded.
+Source review: 15 September 2026. Selected originals and review conclusions rechecked: 18 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Human page approval has not been recorded.
 
 Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 
@@ -16,28 +16,28 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [MD-5 · Class B manufacturing licence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html): Original reviewed. PinnacleAI GPT-OS v1.0.0 · Non-diagnostic developmental-support software
 - [BIS · Medical device management system](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html): Original reviewed. IS 23485:2019 · Licence and scope schedule reviewed
 - [Legal entity · Independent registry match](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html): Registry record matched. Bharath Healthcare Laboratories Private Limited
-- [CDSCO classification · decision record](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html): Needs follow-up. Class B appears on the issued MD-5; separate classification decision copy pending
+- [CDSCO classification · Application and licence trail](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html): Original reviewed. Original application reviewed · Class B is recorded in the issued MD-5
 - [MD-3 · Manufacturing-licence application](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html): Original reviewed. Application record in the route to the issued MD-5
 - [ISO 13485 · Quality management](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html): Original reviewed. Medical device quality-management system · ISO 13485:2016
 - [ISO/IEC 27001 · Information security](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html): Original reviewed. Information-security management system · ISO/IEC 27001:2022
 - [Company incorporation & name history](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/mca.html): Original reviewed. The legal entity behind the supplied core credentials
 - [DPIIT / DIPP · Startup recognition](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dpiit.html): Original reviewed. DIPP8651 · Issued recognition with an updated-certificate check due
 - [Udyam · Enterprise registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/udyam.html): Original reviewed. UDYAM-TS-20-0015132 · Business-registration record
-- [GST · Registration and name reconciliation](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html): Needs follow-up. Historical REG-06 reviewed · Current amended record needed
+- [GST · Registration and name reconciliation](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html): Original reviewed. Original 2017 REG-06 reviewed · Historical registration with the printed legal and trade names
 - [PAN · Corporate identity document](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pan.html): Original reviewed. Corporate PAN card inspected · Identifier withheld from display
 - [ABDM / NHA · Health Facility Registry](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html): Original reviewed. 28 unique facility identifiers in the reviewed collection
 - [Disability-welfare registrations · District scope](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/district-register.html): Company-published. 29 Section 51 certificate copies described in the source collection
 - [Attapur · District institution registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-attapur.html): Original reviewed. Section 51 registration · Named institution and location
 - [Begumpet · District institution registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-begumpet.html): Original reviewed. Section 51 registration · Named institution and location
 - [Nizamabad · District institution registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nizamabad.html): Original reviewed. Section 51 registration · Named institution and location
-- [Nellore · Historical district registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nellore.html): Needs follow-up. Renewed original needed before displaying a current registration
+- [Nellore · Historical district registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nellore.html): Original reviewed. Original certificate reviewed · Printed validity ended 30 October 2024
 - [Independent practitioner · Limited assurance](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html): Original reviewed. SAE 3000 · Institutional claims as at 17 July 2026
 - [Independent practitioner · Factual findings](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html): Original reviewed. SRS 4400 · Agreed procedures on institutional records
 - [Scale claims · Dates and definitions](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html): Company-published. Keep cumulative services, people and operational centres distinct
 - [AbilityScore · Methodology preprint](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html): Original reviewed. Development and preliminary psychometric characterization
-- [AbilityScore · External-validation protocol](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html): Needs follow-up. A published study plan; completed results require a separate report
+- [AbilityScore · External-validation protocol](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html): Original reviewed. Original protocol reviewed · Version 2.1 sets out planned validation methods
 - [Twelve-study portfolio · Company research](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html): Company-published. Study-by-study sources, populations and limitations
-- [Network-wide improvement claim · Evidence definition](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html): Needs follow-up. Outcome definition, eligible cohort and calculation needed
+- [Network-wide improvement claim · Evidence definition](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html): Source publications reviewed. Company outcome claim recorded with its source and calculation boundary
 - [Government appreciation · Seven source letters](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/appreciations.html): Original reviewed. Each letter retains its author, date and specific context
 - [Awards & nominations · Evidence of stage](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/awards.html): Company-published. Nomination and achievement-docket records are not award decisions
 - [Intellectual property · Application-stage claims](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/patents.html): Company-published. PCT and Indian filings must be distinguished from granted patents

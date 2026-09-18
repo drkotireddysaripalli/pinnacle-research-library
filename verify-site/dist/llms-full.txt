@@ -2,7 +2,7 @@
 
 > Source-led evidence for Pinnacle Blooms Network and Bharath Healthcare Laboratories Private Limited.
 
-Private review edition. Source review: 15 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Human page approval has not been recorded.
+Source review: 15 September 2026. Selected originals and review conclusions rechecked: 18 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Human page approval has not been recorded.
 
 Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 
@@ -88,14 +88,16 @@ Reviewed: 15 September 2026
 
 ---
 
-## CDSCO classification · decision record
+## CDSCO classification · Application and licence trail
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html
 Category: Medical device regulation
-Review status: Needs follow-up
-Current issuer or registry status: not independently confirmed.
+Review status: Original reviewed
+Evidence scope: Application + issued licence
+Source review conclusion: The January application records a proposed Class A classification. The issued MD-5 identifies PinnacleAI GPT-OS v1.0.0 as Class B. These documents are presented in their regulatory sequence.
+Application and issued MD-5 inspected; separate issued CAL not inspected.
 
-Class B appears on the issued MD-5; separate classification decision copy pending
+Original application reviewed · Class B is recorded in the issued MD-5
 
 Reported file: MD/classification/2025/150
 Reported decision date: 13 April 2026
@@ -106,7 +108,7 @@ What this supports: The issued MD-5 identifies the device as Class B. Company pu
 
 Scope and limits: The locally available risk-classification form is an application proposing Class A, not the approved Class B decision. A classification decision is also distinct from a manufacturing licence.
 
-Source note: Required for this separate record: the complete issued CAL/decision, including annexures and any verification reference.
+Source note: The separate 13 April 2026 CAL/decision is described in company publications; its issued copy was not available for inspection. This review does not authenticate that separate decision.
 
 Source citation: Risk-classification application, p1; Evidence Dossier v2, pp23–24; September handout, physical pp1 and 9; operative MD-5, p1.
 Reviewed: 15 September 2026
@@ -281,10 +283,12 @@ Reviewed: 15 September 2026
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html
 Category: Legal identity
-Review status: Needs follow-up
-Current issuer or registry status: not independently confirmed.
+Review status: Original reviewed
+Evidence scope: Historical registration
+Source review conclusion: The supplied certificate establishes the registration details printed in 2017. Its former legal name is retained exactly as issued, alongside the company’s documented name-change history.
+Historical certificate inspected; current amended legal-name match is not established.
 
-Historical REG-06 reviewed · Current amended record needed
+Original 2017 REG-06 reviewed · Historical registration with the printed legal and trade names
 
 Document: GST REG-06
 Issued: 9 December 2017
@@ -463,10 +467,12 @@ Reviewed: 15 September 2026
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nellore.html
 Category: Centre registrations
-Review status: Needs follow-up
-Current issuer or registry status: not independently confirmed.
+Review status: Original reviewed
+Evidence scope: Historical · ended 30 Oct 2024
+Source review conclusion: Certificate 06 of 2023 documents registration for the stated Nellore institution during 31 October 2023–30 October 2024. It is retained as historical evidence.
+Original inspected; printed validity period has ended. Current renewal not established.
 
-Renewed original needed before displaying a current registration
+Original certificate reviewed · Printed validity ended 30 October 2024
 
 Issuer: Welfare of Differently Abled & Senior Citizens · SPSR Nellore
 Certificate: 06 of 2023
@@ -477,7 +483,7 @@ What this supports: The supplied historical certificate records the named instit
 
 Scope and limits: The face date has passed. This review does not establish the absence of a renewal, but cannot present the historical copy as current.
 
-Source note: Obtain the current renewed certificate and match the centre’s address.
+Source note: A renewal was not supplied for inspection. This historical certificate is not presented as evidence of current registration.
 
 Source citation: Recognitions bundle, physical p117.
 Reviewed: 15 September 2026
@@ -593,10 +599,12 @@ Reviewed: 15 September 2026
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html
 Category: Research & outcomes
-Review status: Needs follow-up
-Repository metadata checked; journal peer review not established.
+Review status: Original reviewed
+Evidence scope: Study protocol
+Source review conclusion: The reviewed source is protocol BHCL-VAL-2026-001, version 2.1. It describes a proposed external-validation study and sample plan; completed validation results are not claimed.
+Primary protocol and repository metadata reviewed; completed comparator validation is not established.
 
-A published study plan; completed results require a separate report
+Original protocol reviewed · Version 2.1 sets out planned validation methods
 
 Protocol: BHCL-VAL-2026-001
 Published: 9 April 2026 · version 2.1
@@ -607,7 +615,7 @@ What this supports: The deposited protocol describes planned concurrent-validity
 
 Scope and limits: This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed.
 
-Source note: Some secondary sources describe these plans as completed validation. A later completed report, ethics documentation, registration and results are needed to support that claim.
+Source note: Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion.
 
 Source citation: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026.
 Reviewed: 15 September 2026
@@ -646,10 +654,12 @@ Reviewed: 15 September 2026
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html
 Category: Research & outcomes
-Review status: Needs follow-up
-Current issuer or registry status: not independently confirmed.
+Review status: Source publications reviewed
+Evidence scope: Company-reported outcome
+Source review conclusion: The headline outcome claim is recorded as company-reported. The supplied material does not establish a verified network-wide improvement percentage; the SAE 3000 report excludes outcome-study figures from its scope.
+Company publications reviewed; underlying network-wide outcome calculation not independently established.
 
-Outcome definition, eligible cohort and calculation needed
+Company outcome claim recorded with its source and calculation boundary
 
 Claim type: Network-wide outcome statement
 Required basis: Defined outcome, denominator and period
@@ -660,7 +670,7 @@ What this supports: The company publications contain a headline improvement clai
 
 Scope and limits: The reviewed materials do not establish the full network-wide calculation or make it an individual outcome guarantee. Practitioner assurance over operational counts does not validate excluded outcome percentages.
 
-Source note: Before using the percentage in a public verification conclusion, document eligibility, baseline/follow-up, missing data, assessment version, calculation and study links.
+Source note: A verified percentage would require the eligible population, denominator, measurement period, baseline and follow-up, assessment version, missing-data handling and reproducible calculation.
 
 Source citation: Whitebook; Evidence Dossier v2; September handout; SAE 3000 scope.
 Reviewed: 15 September 2026

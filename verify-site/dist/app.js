@@ -2,7 +2,6 @@
 (() => {
   const data = window.PINNACLE_EVIDENCE || {records:[]};
   const records = data.records || [];
-  const labels = {original:'Original reviewed',published:'Company-published',reconcile:'Needs follow-up',missing:'Source needed',matched:'Registry record matched'};
   const list = document.getElementById('evidence-list');
   if (!list) return;
   const categoryButtons = [...document.querySelectorAll('#category-list [data-category]')];
@@ -14,8 +13,8 @@
   const cards = [...list.querySelectorAll('.evidence-record')];
   const recordFor = id => records.find(r => r.id === id);
   const matches = (r, query, selected) => {
-    const haystack = [r.id,r.title,r.subtitle,r.category,r.supports,r.limits,r.note,r.searchTerms,...Object.values(r.fields || {})].join(' ').toLocaleLowerCase();
-    return (category === 'All evidence' || r.category === category) && (!query || haystack.includes(query)) && (selected === 'all' || (selected === 'matched' && r.status === 'matched') || (selected === 'original' && r.status === 'original') || (selected === 'published' && r.status === 'published') || (selected === 'followup' && ['reconcile','missing'].includes(r.status)));
+    const haystack = [r.id,r.title,r.subtitle,r.category,r.supports,r.limits,r.note,r.searchTerms,r.scopeLabel,r.reviewConclusion,r.reviewLabel,...Object.values(r.fields || {})].join(' ').toLocaleLowerCase();
+    return (category === 'All evidence' || r.category === category) && (!query || haystack.includes(query)) && (selected === 'all' || (selected === 'matched' && r.status === 'matched') || (selected === 'original' && r.originalReviewed) || (selected === 'published' && r.status === 'published') || (selected === 'scoped' && Boolean(r.reviewConclusion)));
   };
   const updateCategories = () => categoryButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === category)));
   const updateExpandLabel = () => {
@@ -42,7 +41,7 @@
   search?.addEventListener('input', render);
   status?.addEventListener('change', render);
   clear?.addEventListener('click', () => { search.value = ''; render(); search.focus(); });
-  document.getElementById('reset-filters')?.addEventListener('click', () => { category = 'All evidence'; if(search) search.value = ''; if(status) status.value = 'all'; updateCategories(); render(); search?.focus(); });
+  document.getElementById('reset-filters')?.addEventListener('click', () => { category = 'All evidence'; if(search) search.value = ''; if(status) status.value = 'all'; if(mobileCategory) mobileCategory.value = 'All evidence'; updateCategories(); render(); search?.focus(); });
   document.getElementById('expand-all')?.addEventListener('click', () => { const visible = cards.filter(card => !card.hidden); const shouldOpen = !visible.length || !visible.every(card => card.open); visible.forEach(card => card.open = shouldOpen); updateExpandLabel(); });
   cards.forEach(card => card.addEventListener('toggle', updateExpandLabel));
   const revealHash = () => { const id = location.hash.slice(1); const card = document.getElementById(id); if (!card || !recordFor(id)) return; category = 'All evidence'; if(search) search.value = ''; if(status) status.value = 'all'; updateCategories(); render(); card.open = true; card.scrollIntoView({block:'start'}); };
