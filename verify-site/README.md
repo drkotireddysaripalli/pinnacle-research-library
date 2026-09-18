@@ -14,7 +14,8 @@ The authorised public `/verify/` route is indexable. The page describes document
 - `content/`: page template, source-linked statistics, international context, the complete supplied HFR inventory, review conclusions and terminology.
 - `scripts/`: static content builders and semantic markup generated from visible page content.
 - `dist/`: 42 HTML pages, 34 permanent evidence records, reviewed public document copies, centre and statistics registers, metadata, a sitemap, and readable JSON/text exports.
-- `dist/evidence/section-index.json`: all 368 meaningful page blocks and their source links, including 195 blocks across 21 homepage sections.
+- `dist/evidence/section-index.json`: all 385 meaningful page blocks and their source links, including 206 blocks across 21 homepage sections.
+- The company-described 17-domain, 79-ability, 349-skill framework; source-linked ICD-11, ICF, ICHI and SNOMED CT explanations; explicitly named parent/caregiver intended users; and the full BIS module-scope quotation. Seventeen visible FAQs match their structured data.
 - Three responsive Pinnacle World illustrations, the authentic emblem, image descriptions and image metadata. Original generation prompts are recorded in content/image-provenance.json.
 - `assets/lucide/`: pinned SVG icons and licence information.
 - `.openai/hosting.json`: Sites deployment configuration.
