@@ -53,3 +53,8 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Evidence Dossier · Version 2.0](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html): Company-published. 25 July 2026 · Controlled institutional circulation
 - [September handout · Current source narrative](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html): Company-published. 7 September 2026 · Private & confidential investor handout
 - [Books & parent resources · Publication records](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html): Company-published. Authorship and publication metadata read from the supplied books
+
+## Section navigation and terminology
+- [Section and source index](https://pinnacle-verify.saripalli.chatgpt.site/evidence/section-index.json): visible page blocks, source links and scoped descriptions.
+- [Pinnacle at a glance](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-profile): legal identity and documented approach.
+- [Terms explained](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): SaMD, MD-3, MD-5, BIS, HFR, UDIN and report types.

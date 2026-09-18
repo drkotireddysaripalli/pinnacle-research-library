@@ -1147,3 +1147,54 @@ Vijayawada | IN2810050793 | Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside 
 Vikrampuri | IN3610023703 | Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009. | Workbook-listed | Workbook row 15 | No inspected certificate copy | Workbook RS: INACTIVE (undefined)
 Visakhapatnam | IN2810039035 | Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020 | Workbook + certificate copy | Workbook row 11 | Certificate 12 Jan 2026 p74 | Workbook RS: ACTIVE (undefined)
 Warangal | IN3610023461 | Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, TelanganaÂ 506001 | Workbook + certificate copy | Workbook row 28 | Certificate 13 May 2026 p69 | Workbook RS: ACTIVE (undefined)
+
+
+## Pinnacle identity and documented approach
+Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Company CIN: U74999TG2016PTC113063. LEI: 894500OJYBVC18BUDN89.
+The company describes a seven-stage developmental pathway connecting measurement, planning, integrated support, parent-guided practice and progress review. Its supplied MD-5 names non-diagnostic Class B developmental-support software. The BIS scope names connected software modules. Individual outcomes vary.
+
+## Main page sections
+- [Check the evidence. Choose with clarity.](https://pinnacle-verify.saripalli.chatgpt.site/#section-check-the-evidence-choose-with-clarity): A clearer starting point. A connected plan. Progress that matters in everyday life. Explore the documents behind Pinnacle’s developmental-support approach, understand what they mean for your family, and compare them in context.
+- [Review summary](https://pinnacle-verify.saripalli.chatgpt.site/#section-review-summary): A source for every conclusion Reading a certificate and checking its current status are separate steps. Read the review conclusions .
+- [Measurement. A connected plan. Support for everyday life.](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-profile): Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Pinnacle describes a seven-stage child-development pathway connecting ability measurement, child-specific planning, integrated support, parent-guided practice and progress review toward participation and growing independence.
+- [Every number should lead to its source.](https://pinnacle-verify.saripalli.chatgpt.site/#scale): Explore six measures of Pinnacle’s reported reach, activity and resources. Each keeps its counting unit, date and evidence type visible, so scale can be understood in the context of one child’s care.
+- [A clearer starting point. A connected way forward.](https://pinnacle-verify.saripalli.chatgpt.site/#impact): For a family, evidence becomes useful when it helps answer three questions: What can my child do now? What will we work on together? How will we understand what changes?
+- [What would you like to verify?](https://pinnacle-verify.saripalli.chatgpt.site/#records): 33 records
+- [Three questions. A clearer starting point.](https://pinnacle-verify.saripalli.chatgpt.site/#family): Credentials are most useful when they help you ask informed questions about the support your child will receive.
+- [Structured developmental records. One child’s journey at a time.](https://pinnacle-verify.saripalli.chatgpt.site/#data-scale): Company-reported in the 7 September 2026 handout. Counting basis: database rows/events · cutoff 17 July 2026.
+- [Understand what each credential adds.](https://pinnacle-verify.saripalli.chatgpt.site/#regulated-purpose): An issued licence defines the software’s intended use. Quality records describe how the system is managed. The BIS schedule connects those processes to a broader set of developmental-support modules.
+- [Start with the centre your family knows.](https://pinnacle-verify.saripalli.chatgpt.site/#centres): Search the supplied facility and district records. Match the exact premises before relying on a document; a network credential does not cover every centre automatically.
+- [One child. A connected path forward.](https://pinnacle-verify.saripalli.chatgpt.site/#care): Measurement should lead to a useful plan, everyday practice and decisions informed by progress. This is the seven-stage care pathway Pinnacle describes.
+- [Why these capabilities matter to families.](https://pinnacle-verify.saripalli.chatgpt.site/#global-principles): Independent guidance explains the importance of monitoring, caregiver participation, coordinated support and inclusion. These organisations do not endorse or evaluate Pinnacle through the references below.
+- [See where Pinnacle fits. Compare what matters.](https://pinnacle-verify.saripalli.chatgpt.site/#global-context): Different organisations address diagnosis, assessment, digital treatment, integrated services or provider software. A useful comparison starts with the job each is designed to do.
+- [Originals reviewed. Conclusions made clear.](https://pinnacle-verify.saripalli.chatgpt.site/#review): Each conclusion reflects the documents inspected. Historical certificates, study protocols and company-reported claims are identified precisely, so you can see what each source establishes.
+- [Evidence with its meaning intact.](https://pinnacle-verify.saripalli.chatgpt.site/#method): A record is useful when you can see both what it supports and the limits of that support.
+- [Clear terms. Better questions.](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): A practical reading guide to the credentials and report types used on this page. Each definition links to its Pinnacle source record.
+- [Your child’s next step deserves a clear conversation.](https://pinnacle-verify.saripalli.chatgpt.site/#next-step): Ask the Pinnacle team about your child’s starting abilities, the proposed goals, who coordinates care and when progress will be reviewed. Bring the evidence questions that matter to your family.
+- [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): The supplied MD-5 lists PinnacleAI GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.
+- [Take the source with you.](https://pinnacle-verify.saripalli.chatgpt.site/#section-take-the-source-with-you): Readable records retain their review status, source references and limitations in every format.
+
+## Terms explained
+SaMD — Software as a Medical Device: Software intended for a medical purpose without being part of a hardware medical device. PinnacleAI GPT-OS is listed as Class B, non-diagnostic developmental-support software in the supplied MD-5.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+MD-3 — Application for a manufacturing licence: The application submitted for a licence to manufacture Class A or Class B medical devices. An application is a step in the regulatory record; it is not the issued licence.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html
+
+MD-5 — Issued manufacturing licence: The issued licence records the named manufacturer, premises, device and intended use. Pinnacle’s supplied MD-5 names PinnacleAI GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+BIS scope — Bureau of Indian Standards licence and scope schedule: The reviewed BIS record describes the management system and activities within its named scope, including developmental-support software modules. It does not establish every centre’s registration or guarantee clinical outcomes.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+HFR — Health Facility Registry: The registry assigns a facility identifier. This page lists identifiers found in the supplied workbook and certificate copies. Source review is separate from confirming a facility’s current registry status, operational status or clinical quality.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html
+
+UDIN — Unique Document Identification Number: An identifier for a practitioner’s document. The two supplied report numbers are recorded here; their particulars have not been independently matched on the ICAI portal in this review. A UDIN does not extend a report’s scope.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html
+
+SAE 3000 — Limited-assurance report in this evidence collection: The supplied practitioner report gives limited assurance over specified institutional assertions and counting criteria. Read its dated thresholds and scope; it does not validate every headline statistic or a child’s clinical outcome.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html
+
+SRS 4400 — Agreed-upon procedures and factual findings: The supplied report records procedures and findings for defined institutional counts. It does not provide an assurance opinion. Its observed counts and the SAE 3000 assertion floors have different reporting roles.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html

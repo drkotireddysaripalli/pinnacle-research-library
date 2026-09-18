@@ -44,7 +44,13 @@
   document.getElementById('reset-filters')?.addEventListener('click', () => { category = 'All evidence'; if(search) search.value = ''; if(status) status.value = 'all'; if(mobileCategory) mobileCategory.value = 'All evidence'; updateCategories(); render(); search?.focus(); });
   document.getElementById('expand-all')?.addEventListener('click', () => { const visible = cards.filter(card => !card.hidden); const shouldOpen = !visible.length || !visible.every(card => card.open); visible.forEach(card => card.open = shouldOpen); updateExpandLabel(); });
   cards.forEach(card => card.addEventListener('toggle', updateExpandLabel));
-  const revealHash = () => { const id = location.hash.slice(1); const card = document.getElementById(id); if (!card || !recordFor(id)) return; category = 'All evidence'; if(search) search.value = ''; if(status) status.value = 'all'; updateCategories(); render(); card.open = true; card.scrollIntoView({block:'start'}); };
+  const revealHash = () => {
+    const id = location.hash.slice(1), card = document.getElementById(id);
+    if (!card) return;
+    if (recordFor(id)) { category = 'All evidence'; if(search) search.value = ''; if(status) status.value = 'all'; if(mobileCategory) mobileCategory.value='All evidence'; updateCategories(); render(); }
+    for(let item=card;item;item=item.parentElement)if(item.tagName==='DETAILS')item.open=true;
+    if(!card.hidden)card.scrollIntoView({block:'start'});
+  };
   updateCategories(); render(); revealHash(); window.addEventListener('hashchange', revealHash);
 
   const centreList = document.getElementById('centre-list');
@@ -72,6 +78,13 @@
     document.getElementById('centre-reset')?.addEventListener('click', () => { if(centreSearch) centreSearch.value=''; if(centreType) centreType.value='all'; if(centreMore) centreMore.dataset.expanded='false'; centreRender(); centreSearch?.focus(); });
     centreMore?.addEventListener('click', () => { centreMore.dataset.expanded = centreMore.dataset.expanded === 'true' ? 'false' : 'true'; centreRender(); });
     centreRender();
+    const revealCentreHash = () => {
+      const card=document.getElementById(location.hash.slice(1));
+      if(!card?.classList.contains('centre-card'))return;
+      if(centreSearch)centreSearch.value='';if(centreType)centreType.value='all';
+      if(centreMore)centreMore.dataset.expanded='true';centreRender();card.scrollIntoView({block:'start'});
+    };
+    revealCentreHash();window.addEventListener('hashchange',revealCentreHash);
   }
   document.getElementById('print-review')?.addEventListener('click', () => window.print());
 })();
