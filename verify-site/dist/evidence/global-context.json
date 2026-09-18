@@ -202,7 +202,7 @@
     },
     {
       "q": "Does the MD-5 licence approve the entire child-development lifecycle?",
-      "a": "The MD-5 names PinnacleAI GPT-OS v1.0.0 and defined non-diagnostic functions for ages 0–12. The broader BIS schedule lists software processes and developmental-support modules across the journey. These instruments establish different scopes; neither guarantees outcomes or certifies global exclusivity.",
+      "a": "The MD-5 names PinnacleAI® GPT-OS v1.0.0 and defined non-diagnostic functions for ages 0–12. The broader BIS schedule lists software processes and developmental-support modules across the journey. These instruments establish different scopes; neither guarantees outcomes or certifies global exclusivity.",
       "id": "bis"
     },
     {
@@ -226,7 +226,7 @@
       "id": "sovereign-walkthrough"
     },
     {
-      "q": "How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI?",
+      "q": "How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI®?",
       "a": "Pinnacle’s dossier describes architecture and mappings using WHO’s ICD-11, ICF and ICHI, alongside SNOMED CT terminology from SNOMED International. Their roles are health information, functioning and participation, interventions, and consistent clinical meaning. Correct implementation can support interoperability; an item-by-item mapping audit was not supplied. Alignment is separate from endorsement, clinical validation and the licensed device’s intended use.",
       "id": "dossier"
     },
@@ -236,13 +236,13 @@
       "id": "md5"
     },
     {
-      "q": "Is PinnacleAI certified as sovereign-grade or authorised worldwide?",
+      "q": "Is PinnacleAI® certified as sovereign-grade or authorised worldwide?",
       "a": "The reviewed documents do not establish a sovereign-grade certification or worldwide market authorisation. Pinnacle describes an architecture intended for population-scale developmental support. A specific deployment needs documented local control and governance, validated interoperability, applicable permissions, operational capacity and evidence of performance for that population. MD-5 and BIS provide the particular scopes shown in their records.",
       "id": "dossier"
     },
     {
       "q": "Are parents and caregivers named in the MD-5 intended use?",
-      "a": "Yes. The MD-5 annexure states that PinnacleAI GPT-OS is intended to assist parents, therapists, educators and caregivers through developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for ages 0–12. This explicitly includes family users of the licensed software. It does not confer professional therapist credentials or register homes as therapy centres; worldwide exclusivity has not been established.",
+      "a": "Yes. The MD-5 annexure states that PinnacleAI® GPT-OS is intended to assist parents, therapists, educators and caregivers through developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for ages 0–12. This explicitly includes family users of the licensed software. It does not confer professional therapist credentials or register homes as therapy centres; worldwide exclusivity has not been established.",
       "id": "md5"
     }
   ],
