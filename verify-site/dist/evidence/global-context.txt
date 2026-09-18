@@ -79,3 +79,15 @@ The MD-5 names PinnacleAI GPT-OS v1.0.0 and defined non-diagnostic functions for
 
 Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle?
 No endorsement is established by the references on this page. Their guidance explains why monitoring, coordinated support, caregiver participation and inclusion matter. Pinnacle’s own documents must separately establish what Pinnacle provides.
+
+What is the purpose of the Pinnacle developmental pathway?
+Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. Its tagline is “Every child deserves a wonderful life.” The described approach connects ability measurement, child-specific planning, coordinated intervention, everyday practice, tracking, correction and reassessment. Individual outcomes vary.
+
+Are 79 abilities and 349 skills different counts of the same thing?
+The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.
+
+How do daily practice and monthly review connect?
+The company sources describe 7–9 daily techniques selected for the child’s programme, human feedback through the Fusion tracking and correction module, and monthly AbilityScore refresh. The care team should explain the child-specific goals, practice guidance, review schedule and any adjustments. This is a programme description, not a guaranteed outcome.
+
+Does ICD-11 alignment mean WHO approval of PinnacleAI?
+No. The handout and dossier state classification alignment. An item-by-item mapping audit was not supplied. Using WHO classifications does not establish WHO approval or endorsement of a third-party product. BIS and the MD-5 have their own named scopes.

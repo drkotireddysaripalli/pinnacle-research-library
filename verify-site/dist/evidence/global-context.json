@@ -209,6 +209,26 @@
       "q": "Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle?",
       "a": "No endorsement is established by the references on this page. Their guidance explains why monitoring, coordinated support, caregiver participation and inclusion matter. Pinnacle’s own documents must separately establish what Pinnacle provides.",
       "id": null
+    },
+    {
+      "q": "What is the purpose of the Pinnacle developmental pathway?",
+      "a": "Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. Its tagline is “Every child deserves a wonderful life.” The described approach connects ability measurement, child-specific planning, coordinated intervention, everyday practice, tracking, correction and reassessment. Individual outcomes vary.",
+      "id": "bis"
+    },
+    {
+      "q": "Are 79 abilities and 349 skills different counts of the same thing?",
+      "a": "The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.",
+      "id": "sovereign-walkthrough"
+    },
+    {
+      "q": "How do daily practice and monthly review connect?",
+      "a": "The company sources describe 7–9 daily techniques selected for the child’s programme, human feedback through the Fusion tracking and correction module, and monthly AbilityScore refresh. The care team should explain the child-specific goals, practice guidance, review schedule and any adjustments. This is a programme description, not a guaranteed outcome.",
+      "id": "sovereign-walkthrough"
+    },
+    {
+      "q": "Does ICD-11 alignment mean WHO approval of PinnacleAI?",
+      "a": "No. The handout and dossier state classification alignment. An item-by-item mapping audit was not supplied. Using WHO classifications does not establish WHO approval or endorsement of a third-party product. BIS and the MD-5 have their own named scopes.",
+      "id": "september-handout"
     }
   ],
   "familyMeaning": {
@@ -244,7 +264,8 @@
     "whitebook": "The Whitebook explains Pinnacle’s published framework and research narrative, which can guide more specific questions about sources.",
     "dossier": "The dossier brings many institutional claims together; its value is strongest when each claim remains linked to its underlying record.",
     "september-handout": "A dated company summary helps explain developments over time, including updates that supersede older publications.",
-    "books": "Parent resources can support informed conversations and everyday participation alongside an individual professional plan."
+    "books": "Parent resources can support informed conversations and everyday participation alongside an individual professional plan.",
+    "sovereign-walkthrough": "Helps you ask how the initial assessment, daily programme and monthly review connect. Ask the care team which version is used for your child and how recommendations are reviewed by people."
   },
   "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html",
   "comparisonBoundary": "Targeted review of five examples; no global exclusivity, dataset-size ranking, regulatory equivalence or comparative effectiveness established."

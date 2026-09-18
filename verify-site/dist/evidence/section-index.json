@@ -43,12 +43,12 @@
       "title": "Verify Pinnacle Blooms Network | Evidence, Care Pathway &amp; Scale",
       "sections": [
         {
-          "id": "section-check-the-evidence-choose-with-clarity",
-          "name": "Check the evidence. Choose with clarity.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#section-check-the-evidence-choose-with-clarity",
+          "id": "section-every-child-deserves-a-wonderful-life",
+          "name": "Every child deserves a wonderful life.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#section-every-child-deserves-a-wonderful-life",
           "kind": "section",
           "parent": null,
-          "description": "A clearer starting point. A connected plan. Progress that matters in everyday life. Explore the documents behind Pinnacle’s developmental-support approach, understand what they mean for your family, and compare them in context.",
+          "description": "Growing toward self-sufficiency. Participating in mainstream life.",
           "citations": []
         },
         {
@@ -59,6 +59,133 @@
           "parent": null,
           "description": "A source for every conclusion Reading a certificate and checking its current status are separate steps. Read the review conclusions .",
           "citations": []
+        },
+        {
+          "id": "care",
+          "name": "From present abilities toward a wonderful life.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care",
+          "kind": "section",
+          "parent": null,
+          "description": "Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. The practical question is: “What can my child do now, what support will help next, and how will we understand progress?”",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html"
+          ]
+        },
+        {
+          "id": "block-a-family-needs-a-connected-journey",
+          "name": "A family needs a connected journey.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-a-family-needs-a-connected-journey",
+          "kind": "article",
+          "parent": "care",
+          "description": "A car needs its engine, steering and wheels to work together. In the same way, assessment, therapy, home practice and progress review need coordination. Families should not have to assemble that plan alone.",
+          "text": "A family needs a connected journey. A car needs its engine, steering and wheels to work together. In the same way, assessment, therapy, home practice and progress review need coordination. Families should not have to assemble that plan alone. Pinnacle describes a shared developmental pathway around the child. Diagnostic information can matter for clinical care and access to support; the plan also needs to address communication, daily routines, learning, relationships and participation. Company-described care model Modules named in the BIS scope",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "care-measure",
+          "name": "01 Understand the child’s abilities",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-measure",
+          "kind": "li",
+          "parent": "care",
+          "description": "AbilityScore® · 0–1000",
+          "text": "AbilityScore® · 0–1000 01 Understand the child’s abilities Begin with what the child can do, their interests and the everyday situations where support would help. The company walkthrough describes 79 abilities, 349 skills, 17 domains and 591 observations, with AbilityScore on a 0–1000 scale. These are different layers of the framework. For the family: A starting point the family and care team can discuss together. Company walkthrough, page 26; September handout, pages 5–6",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
+          ]
+        },
+        {
+          "id": "care-plan",
+          "name": "02 Build a child-specific direction",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-plan",
+          "kind": "li",
+          "parent": "care",
+          "description": "Prognose® + personal development kernel",
+          "text": "Prognose® + personal development kernel 02 Build a child-specific direction Connect the observed abilities with priorities, readiness goals and a plan for this child. The dossier describes a personal development kernel: a persistent child-specific record of measurements, responses to techniques, environment and history that informs subsequent recommendations. For the family: Clarity about what to work on next, why it matters and who will help. Evidence Dossier, pages 48–49; BIS schedule, page 2",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
+        },
+        {
+          "id": "care-coordinate",
+          "name": "03 Coordinate professional support",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-coordinate",
+          "kind": "li",
+          "parent": "care",
+          "description": "TherapeuticAI® + human oversight",
+          "text": "TherapeuticAI® + human oversight 03 Coordinate professional support Use the plan to coordinate appropriate therapies and intervention. Pinnacle describes practitioners, parents, caregivers and educators contributing to the programme; software supports professional judgement and shared goals. For the family: People working from an agreed direction across the child’s support team. September handout, pages 5–7; MD-5 intended use",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
+          ]
+        },
+        {
+          "id": "care-practise",
+          "name": "04 Make the plan part of everyday life",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-practise",
+          "kind": "li",
+          "parent": "care",
+          "description": "Everyday Therapy™ · 7–9 techniques a day",
+          "text": "Everyday Therapy™ · 7–9 techniques a day 04 Make the plan part of everyday life The September handout describes 7–9 techniques selected for the child’s programme each day. Parents and other caregivers receive guidance for practice connected to the child’s current abilities and goals; the care team agrees what is appropriate. For the family: A practical way to carry support into home routines and other everyday settings. September handout, pages 5–7",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html"
+          ]
+        },
+        {
+          "id": "care-correct",
+          "name": "05 Observe, track and correct",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-correct",
+          "kind": "li",
+          "parent": "care",
+          "description": "Fusion Module · people in the loop",
+          "text": "Fusion Module · people in the loop 05 Observe, track and correct Record how practice goes and bring observations from the family and professionals back into review. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module. For the family: A plan that can respond when an activity, setting or support needs to change. BIS licence schedule, page 2",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "care-reassess",
+          "name": "06 Reassess and explain the trajectory",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-reassess",
+          "kind": "li",
+          "parent": "care",
+          "description": "Monthly AbilityScore refresh + progress review",
+          "text": "Monthly AbilityScore refresh + progress review 06 Reassess and explain the trajectory Compare the child’s present abilities with their own earlier assessments and review the next priorities. The company walkthrough describes a monthly AbilityScore refresh; the Whitebook also describes monthly review. The care team should explain the schedule and any child-specific changes. For the family: An understandable record of change over time, connected to daily-life goals—not a judgement of the child’s worth. Company walkthrough, pages 35, 37; Whitebook, page 12",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
+          ]
+        },
+        {
+          "id": "care-participate",
+          "name": "07 Grow toward self-sufficiency and participation",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-participate",
+          "kind": "li",
+          "parent": "care",
+          "description": "Readiness indexes + real-life goals",
+          "text": "Readiness indexes + real-life goals 07 Grow toward self-sufficiency and participation Work toward communication, daily living, learning, relationships and participation in school and community. The BIS scope names seven readiness indexes, including Self Sufficiency and Mainstream Inclusion. Continue reassessment and support as needs change. For the family: A wonderful life defined with the child and family, including the supports that make participation possible. BIS licence schedule, page 2",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "block-measurement-versions-and-review-cadence",
+          "name": "Measurement versions and review cadence",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-measurement-versions-and-review-cadence",
+          "kind": "details",
+          "parent": "care",
+          "description": "The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.",
+          "text": "Measurement versions and review cadence The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version. A 0–1000 score is a company-described developmental measure. It is not a diagnosis, an IQ score, a credit score or a guarantee of future independence. Review the methods and limitations alongside the number. AbilityScore methodology Historical framework and review cycle",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html"
+          ]
         },
         {
           "id": "pinnacle-profile",
@@ -79,8 +206,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-explore-this-verification-guide",
           "kind": "details",
           "parent": "pinnacle-profile",
-          "description": "Explore this verification guide Six statistics & sources Meaning for families 33 evidence records Software & quality scope Centre documentation Developmental pathway International guidance Global comparisons Review conclusions Review method Terms explained Common questions",
-          "text": "Explore this verification guide Six statistics & sources Meaning for families 33 evidence records Software & quality scope Centre documentation Developmental pathway International guidance Global comparisons Review conclusions Review method Terms explained Common questions",
+          "description": "Explore this verification guide Six statistics & sources Meaning for families 34 evidence records Software & quality scope Centre documentation Developmental pathway ICD-11 & functioning SDGs 3, 4, 10 & 17 International guidance Global comparisons Review conclusions Review method Terms explained Common questions",
+          "text": "Explore this verification guide Six statistics & sources Meaning for families 34 evidence records Software & quality scope Centre documentation Developmental pathway ICD-11 & functioning SDGs 3, 4, 10 & 17 International guidance Global comparisons Review conclusions Review method Terms explained Common questions",
           "citations": []
         },
         {
@@ -311,7 +438,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#records",
           "kind": "section",
           "parent": null,
-          "description": "33 records",
+          "description": "34 records",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/md5.pdf",
@@ -382,7 +509,8 @@
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
             "https://drive.google.com/file/d/1TyNq0qZzZwF5C_H5f3Ao4xxYpYubNn8s/view",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html"
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
           ]
         },
         {
@@ -827,6 +955,18 @@
           ]
         },
         {
+          "id": "sovereign-walkthrough",
+          "name": "PinnacleAI walkthrough · Developmental architecture",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#sovereign-walkthrough",
+          "kind": "details",
+          "parent": "records",
+          "description": "Company-authored walkthrough · AbilityScore layers and programme cadence",
+          "text": "Source publications Company-published PinnacleAI walkthrough · Developmental architecture Company-authored walkthrough · AbilityScore layers and programme cadence What this means for your family Helps you ask how the initial assessment, daily programme and monthly review connect. Ask the care team which version is used for your child and how recommendations are reviewed by people. Source PinnacleAI - Soveriegn WalkThrough.pdf Edition date Not established from the reviewed copy Length 61 PDF pages Measurement layers 79 abilities · 349 skills · 17 domains · 591 observations Programme cadence 7–9 daily techniques; monthly AbilityScore refresh What this supports The reviewed company walkthrough explicitly distinguishes abilities, skills, domains and observations. It describes the personal development kernel, daily practice, monthly reassessment and participation goals. Scope & limits A company-authored architecture and programme description is not independent clinical validation or a regulatory extension. Historical diagnosis, exclusivity, patent and endorsement wording is not adopted by this review. Current MD-5 and BIS originals control their respective scopes. The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references. Permanent record Ask about this record Source: PinnacleAI - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026. Reviewed: 18 September 2026 · Company-authored source; underlying claims need their own evidence.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
+          ]
+        },
+        {
           "id": "family",
           "name": "Three questions. A clearer starting point.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#family",
@@ -936,6 +1076,19 @@
           "text": "SYSTEMS & MODULES BIS scope schedule The schedule names software development, deployment and maintenance, plus ability mapping, parent-guided practice, progress correction and readiness modules. Read Pinnacle’s source record",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "block-for-the-full-developmental-lifecycle-of-children",
+          "name": "“for the full developmental lifecycle of children.”",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-for-the-full-developmental-lifecycle-of-children",
+          "kind": "article",
+          "parent": "regulated-purpose",
+          "description": "The schedule names AbilityScore, Prognose®, the Everyday Therapy Programme through TherapeuticAI®, the Fusion tracking and correction module, and seven readiness indexes—including Self Sufficiency and Mainstream Inclusion.",
+          "text": "WORDS IN THE ORIGINAL BIS SCHEDULE “for the full developmental lifecycle of children.” The schedule names AbilityScore, Prognose®, the Everyday Therapy Programme through TherapeuticAI®, the Fusion tracking and correction module, and seven readiness indexes—including Self Sufficiency and Mainstream Inclusion. This is the named quality-system and software-module scope. The MD-5 records the device’s four intended functions: ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Both documents retain their named software and premises. The MD-5 intended population is ages 0–12; individual outcomes remain subject to the child’s circumstances and support. BIS MD/L-2026029599 · schedule page 2 DCA MD-5 MFG/MD/2026/000248",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
           ]
         },
         {
@@ -1736,86 +1889,134 @@
           ]
         },
         {
-          "id": "care",
-          "name": "One child. A connected path forward.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care",
+          "id": "international-standards",
+          "name": "Abilities and participation. Records people can understand.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#international-standards",
           "kind": "section",
           "parent": null,
-          "description": "Measurement should lead to a useful plan, everyday practice and decisions informed by progress. This is the seven-stage care pathway Pinnacle describes.",
+          "description": "International classifications help describe health and functioning consistently. For families, the value is a clearer account of abilities, support needs and participation over time.",
           "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+            "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health",
+            "https://www.who.int/standards/classifications/classification-of-diseases",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://icd.who.int/en/docs/icd11-license.pdf",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
           ]
         },
         {
-          "id": "block-01-understand",
-          "name": "01 Understand",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-01-understand",
-          "kind": "li",
-          "parent": "care",
-          "description": "Identify capabilities with AbilityScore® measurement.",
-          "text": "01 Understand Identify capabilities with AbilityScore® measurement.",
-          "citations": []
+          "id": "block-icf-functioning-and-participation",
+          "name": "ICF · functioning and participation",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-icf-functioning-and-participation",
+          "kind": "article",
+          "parent": "international-standards",
+          "description": "WHO’s ICF gives a framework for functioning, activities, participation and environmental context. It helps explain why the child’s everyday life belongs at the centre of developmental goals.",
+          "text": "ICF · functioning and participation WHO’s ICF gives a framework for functioning, activities, participation and environmental context. It helps explain why the child’s everyday life belongs at the centre of developmental goals. WHO · International Classification of Functioning, Disability and Health",
+          "citations": [
+            "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health"
+          ]
         },
         {
-          "id": "block-02-plan",
-          "name": "02 Plan",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-02-plan",
-          "kind": "li",
-          "parent": "care",
-          "description": "Forecast readiness and shape a child-specific plan.",
-          "text": "02 Plan Forecast readiness and shape a child-specific plan.",
-          "citations": []
+          "id": "block-icd-11-consistent-health-information",
+          "name": "ICD-11 · consistent health information",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-icd-11-consistent-health-information",
+          "kind": "article",
+          "parent": "international-standards",
+          "description": "WHO’s ICD-11 provides a shared language for recording and comparing health information. Consistent definitions can support clinical records, health-system planning and responsible analysis across settings.",
+          "text": "ICD-11 · consistent health information WHO’s ICD-11 provides a shared language for recording and comparing health information. Consistent definitions can support clinical records, health-system planning and responsible analysis across settings. WHO · International Classification of Diseases",
+          "citations": [
+            "https://www.who.int/standards/classifications/classification-of-diseases"
+          ]
         },
         {
-          "id": "block-03-support",
-          "name": "03 Support",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-03-support",
-          "kind": "li",
-          "parent": "care",
-          "description": "Coordinate therapies and intervention.",
-          "text": "03 Support Coordinate therapies and intervention.",
-          "citations": []
+          "id": "block-pinnacle-s-stated-alignment",
+          "name": "Pinnacle’s stated alignment",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-pinnacle-s-stated-alignment",
+          "kind": "article",
+          "parent": "international-standards",
+          "description": "The September handout describes skills carrying WHO ICF codes with ICD-11 reference alignment. This is a company-published mapping claim. The reviewed set does not include an item-by-item mapping audit or implementation-conformance report.",
+          "text": "Pinnacle’s stated alignment The September handout describes skills carrying WHO ICF codes with ICD-11 reference alignment. This is a company-published mapping claim. The reviewed set does not include an item-by-item mapping audit or implementation-conformance report. September handout · page 6 Use of a WHO classification does not mean WHO approval or endorsement of Pinnacle. WHO classification licence .",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://icd.who.int/en/docs/icd11-license.pdf"
+          ]
         },
         {
-          "id": "block-04-practise",
-          "name": "04 Practise",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-04-practise",
-          "kind": "li",
-          "parent": "care",
-          "description": "Bring parent-guided practice into everyday life.",
-          "text": "04 Practise Bring parent-guided practice into everyday life.",
-          "citations": []
+          "id": "block-what-population-scale-readiness-should-mean",
+          "name": "What population-scale readiness should mean",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-population-scale-readiness-should-mean",
+          "kind": "article",
+          "parent": "international-standards",
+          "description": "Pinnacle’s reported institutional volume and its public-system ambitions deserve precise definitions. Scalable records, lawful data use, local governance, security, interoperability and independently evaluated performance each need their own evidence. The company’s “sovereign” positioning is an architectural ambition; it is not a WHO certification category.",
+          "text": "What population-scale readiness should mean Pinnacle’s reported institutional volume and its public-system ambitions deserve precise definitions. Scalable records, lawful data use, local governance, security, interoperability and independently evaluated performance each need their own evidence. The company’s “sovereign” positioning is an architectural ambition; it is not a WHO certification category. The reported 2.7 billion+ structured records describe database rows and events. They do not establish a nationally representative child population, verified AI-training volume or population-level clinical effectiveness. Dated volume and counting units Information-security scope Company architecture and public-system positioning",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
         },
         {
-          "id": "block-05-track",
-          "name": "05 Track",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-05-track",
-          "kind": "li",
-          "parent": "care",
-          "description": "Review progress and correct the plan.",
-          "text": "05 Track Review progress and correct the plan.",
-          "citations": []
+          "id": "global-goals",
+          "name": "A wonderful life. A place to participate.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#global-goals",
+          "kind": "section",
+          "parent": null,
+          "description": "Pinnacle’s stated mission has practical connections to the UN Sustainable Development Goals: access to support, early learning, inclusion and accountable collaboration.",
+          "citations": [
+            "https://sdgs.un.org/goals/goal3",
+            "https://sdgs.un.org/goals/goal4",
+            "https://sdgs.un.org/goals/goal10",
+            "https://sdgs.un.org/goals/goal17"
+          ]
         },
         {
-          "id": "block-06-reassess",
-          "name": "06 Reassess",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-06-reassess",
-          "kind": "li",
-          "parent": "care",
-          "description": "Repeat assessment and support toward readiness.",
-          "text": "06 Reassess Repeat assessment and support toward readiness.",
-          "citations": []
+          "id": "block-health-and-well-being",
+          "name": "Health and well-being",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-health-and-well-being",
+          "kind": "article",
+          "parent": "global-goals",
+          "description": "A mission to make developmental support clearer and more accessible to families.",
+          "text": "SDG 3 Health and well-being A mission to make developmental support clearer and more accessible to families. Target 3.8 · UN source",
+          "citations": [
+            "https://sdgs.un.org/goals/goal3"
+          ]
         },
         {
-          "id": "block-07-participate",
-          "name": "07 Participate",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-07-participate",
-          "kind": "li",
-          "parent": "care",
-          "description": "Work toward independence, school readiness and life with others.",
-          "text": "07 Participate Work toward independence, school readiness and life with others.",
-          "citations": []
+          "id": "block-quality-education",
+          "name": "Quality education",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-quality-education",
+          "kind": "article",
+          "parent": "global-goals",
+          "description": "Early development, inclusive learning and support that helps children participate in education.",
+          "text": "SDG 4 Quality education Early development, inclusive learning and support that helps children participate in education. Targets 4.2 and 4.5 · UN source",
+          "citations": [
+            "https://sdgs.un.org/goals/goal4"
+          ]
+        },
+        {
+          "id": "block-reduced-inequalities",
+          "name": "Reduced inequalities",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-reduced-inequalities",
+          "kind": "article",
+          "parent": "global-goals",
+          "description": "Participation and inclusion, including for children with disabilities and their families.",
+          "text": "SDG 10 Reduced inequalities Participation and inclusion, including for children with disabilities and their families. Target 10.2 · UN source",
+          "citations": [
+            "https://sdgs.un.org/goals/goal10"
+          ]
+        },
+        {
+          "id": "block-partnerships-for-the-goals",
+          "name": "Partnerships for the goals",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-partnerships-for-the-goals",
+          "kind": "article",
+          "parent": "global-goals",
+          "description": "A direction for accountable collaboration. Specific partnership achievements require named agreements and measured contributions.",
+          "text": "SDG 17 Partnerships for the goals A direction for accountable collaboration. Specific partnership achievements require named agreements and measured contributions. Target 17.17 · UN source",
+          "citations": [
+            "https://sdgs.un.org/goals/goal17"
+          ]
         },
         {
           "id": "global-principles",
@@ -2096,8 +2297,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-change-history",
           "kind": "details",
           "parent": "review",
-          "description": "Change history + 18 September 2026 · Section descriptions and identity: connected the brand and legal entity, added section links and a terminology guide, and matched structured page descriptions to the visible evidence. 18 September 2026 · Complete HFR inventory and statistics: added all 52 supplied workbook centres, reconciled 53 distinct HFR IDs across source sets, and linked six headline statistics to definitions and source records. 18 September 2026 · Family meaning and global context: added family relevance to all 33 records, dated data-scale definitions, the distinct MD-3/MD-5/BIS scopes, international guidance and five sourced global comparisons. Enabled public indexing and expanded matching structured data. 18 September 2026 · Review conclusions: rechecked the flagged source material; separated original review from historical validity, application status, study protocols and company-reported outcomes. Improved typography, navigation and source icons. 15 September 2026 · Experience update: added family explanations, centre lookup, evidence filters, record links, correction requests and the source-review register; corrected mobile layout. 15 September 2026 · Initial source review: recorded the operative MD-5 reference 000248, September BIS licence, legal identity registry match and source-specific research limitations.",
-          "text": "Change history + 18 September 2026 · Section descriptions and identity: connected the brand and legal entity, added section links and a terminology guide, and matched structured page descriptions to the visible evidence. 18 September 2026 · Complete HFR inventory and statistics: added all 52 supplied workbook centres, reconciled 53 distinct HFR IDs across source sets, and linked six headline statistics to definitions and source records. 18 September 2026 · Family meaning and global context: added family relevance to all 33 records, dated data-scale definitions, the distinct MD-3/MD-5/BIS scopes, international guidance and five sourced global comparisons. Enabled public indexing and expanded matching structured data. 18 September 2026 · Review conclusions: rechecked the flagged source material; separated original review from historical validity, application status, study protocols and company-reported outcomes. Improved typography, navigation and source icons. 15 September 2026 · Experience update: added family explanations, centre lookup, evidence filters, record links, correction requests and the source-review register; corrected mobile layout. 15 September 2026 · Initial source review: recorded the operative MD-5 reference 000248, September BIS licence, legal identity registry match and source-specific research limitations.",
+          "description": "Change history + 18 September 2026 · Purpose, pathway and imagery: added the documented AbilityScore layers, daily practice and monthly review cycle, original-source regulatory scope, classification and SDG context, plus three clearly labelled Pinnacle World illustrations. Improved phone and tablet layouts. 18 September 2026 · Section descriptions and identity: connected the brand and legal entity, added section links and a terminology guide, and matched structured page descriptions to the visible evidence. 18 September 2026 · Complete HFR inventory and statistics: added all 52 supplied workbook centres, reconciled 53 distinct HFR IDs across source sets, and linked six headline statistics to definitions and source records. 18 September 2026 · Family meaning and global context: added family relevance to all 33 records, dated data-scale definitions, the distinct MD-3/MD-5/BIS scopes, international guidance and five sourced global comparisons. Enabled public indexing and expanded matching structured data. 18 September 2026 · Review conclusions: rechecked the flagged source material; separated original review from historical validity, application status, study protocols and company-reported outcomes. Improved typography, navigation and source icons. 15 September 2026 · Experience update: added family explanations, centre lookup, evidence filters, record links, correction requests and the source-review register; corrected mobile layout. 15 September 2026 · Initial source review: recorded the operative MD-5 reference 000248, September BIS licence, legal identity registry match and source-specific research limitations.",
+          "text": "Change history + 18 September 2026 · Purpose, pathway and imagery: added the documented AbilityScore layers, daily practice and monthly review cycle, original-source regulatory scope, classification and SDG context, plus three clearly labelled Pinnacle World illustrations. Improved phone and tablet layouts. 18 September 2026 · Section descriptions and identity: connected the brand and legal entity, added section links and a terminology guide, and matched structured page descriptions to the visible evidence. 18 September 2026 · Complete HFR inventory and statistics: added all 52 supplied workbook centres, reconciled 53 distinct HFR IDs across source sets, and linked six headline statistics to definitions and source records. 18 September 2026 · Family meaning and global context: added family relevance to all 33 records, dated data-scale definitions, the distinct MD-3/MD-5/BIS scopes, international guidance and five sourced global comparisons. Enabled public indexing and expanded matching structured data. 18 September 2026 · Review conclusions: rechecked the flagged source material; separated original review from historical validity, application status, study protocols and company-reported outcomes. Improved typography, navigation and source icons. 15 September 2026 · Experience update: added family explanations, centre lookup, evidence filters, record links, correction requests and the source-review register; corrected mobile layout. 15 September 2026 · Initial source review: recorded the operative MD-5 reference 000248, September BIS licence, legal identity registry match and source-specific research limitations.",
           "citations": []
         },
         {
@@ -2191,7 +2392,9 @@
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html"
           ]
         },
         {
@@ -2311,6 +2514,54 @@
           "citations": []
         },
         {
+          "id": "block-what-is-the-purpose-of-the-pinnacle-developmental-pathway",
+          "name": "What is the purpose of the Pinnacle developmental pathway?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-is-the-purpose-of-the-pinnacle-developmental-pathway",
+          "kind": "details",
+          "parent": "questions",
+          "description": "Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. Its tagline is “Every child deserves a wonderful life.” The described approach connects ability measurement, child-specific planning, coordinated intervention, everyday practice, tracking, correction and reassessment. Individual outcomes vary.",
+          "text": "What is the purpose of the Pinnacle developmental pathway? Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. Its tagline is “Every child deserves a wonderful life.” The described approach connects ability measurement, child-specific planning, coordinated intervention, everyday practice, tracking, correction and reassessment. Individual outcomes vary. Read the evidence record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "block-are-79-abilities-and-349-skills-different-counts-of-the-same-thing",
+          "name": "Are 79 abilities and 349 skills different counts of the same thing?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-are-79-abilities-and-349-skills-different-counts-of-the-same-thing",
+          "kind": "details",
+          "parent": "questions",
+          "description": "The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.",
+          "text": "Are 79 abilities and 349 skills different counts of the same thing? The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version. Read the evidence record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
+          ]
+        },
+        {
+          "id": "block-how-do-daily-practice-and-monthly-review-connect",
+          "name": "How do daily practice and monthly review connect?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-how-do-daily-practice-and-monthly-review-connect",
+          "kind": "details",
+          "parent": "questions",
+          "description": "The company sources describe 7–9 daily techniques selected for the child’s programme, human feedback through the Fusion tracking and correction module, and monthly AbilityScore refresh. The care team should explain the child-specific goals, practice guidance, review schedule and any adjustments. This is a programme description, not a guaranteed outcome.",
+          "text": "How do daily practice and monthly review connect? The company sources describe 7–9 daily techniques selected for the child’s programme, human feedback through the Fusion tracking and correction module, and monthly AbilityScore refresh. The care team should explain the child-specific goals, practice guidance, review schedule and any adjustments. This is a programme description, not a guaranteed outcome. Read the evidence record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
+          ]
+        },
+        {
+          "id": "block-does-icd-11-alignment-mean-who-approval-of-pinnacleai",
+          "name": "Does ICD-11 alignment mean WHO approval of PinnacleAI?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-does-icd-11-alignment-mean-who-approval-of-pinnacleai",
+          "kind": "details",
+          "parent": "questions",
+          "description": "No. The handout and dossier state classification alignment. An item-by-item mapping audit was not supplied. Using WHO classifications does not establish WHO approval or endorsement of a third-party product. BIS and the MD-5 have their own named scopes.",
+          "text": "Does ICD-11 alignment mean WHO approval of PinnacleAI? No. The handout and dossier state classification alignment. An item-by-item mapping audit was not supplied. Using WHO classifications does not establish WHO approval or endorsement of a third-party product. BIS and the MD-5 have their own named scopes. Read the evidence record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html"
+          ]
+        },
+        {
           "id": "section-take-the-source-with-you",
           "name": "Take the source with you.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#section-take-the-source-with-you",
@@ -2321,7 +2572,8 @@
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence.json",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.json",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/section-index.json"
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/section-index.json",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.json"
           ]
         }
       ]
@@ -3119,6 +3371,149 @@
           ]
         },
         {
+          "id": "block-for-the-full-developmental-lifecycle-of-children",
+          "name": "“for the full developmental lifecycle of children.”",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-for-the-full-developmental-lifecycle-of-children",
+          "kind": "article",
+          "parent": "regulated-purpose",
+          "description": "The schedule names AbilityScore, Prognose®, the Everyday Therapy Programme through TherapeuticAI®, the Fusion tracking and correction module, and seven readiness indexes—including Self Sufficiency and Mainstream Inclusion.",
+          "text": "WORDS IN THE ORIGINAL BIS SCHEDULE “for the full developmental lifecycle of children.” The schedule names AbilityScore, Prognose®, the Everyday Therapy Programme through TherapeuticAI®, the Fusion tracking and correction module, and seven readiness indexes—including Self Sufficiency and Mainstream Inclusion. This is the named quality-system and software-module scope. The MD-5 records the device’s four intended functions: ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Both documents retain their named software and premises. The MD-5 intended population is ages 0–12; individual outcomes remain subject to the child’s circumstances and support. BIS MD/L-2026029599 · schedule page 2 DCA MD-5 MFG/MD/2026/000248",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
+          ]
+        },
+        {
+          "id": "international-standards",
+          "name": "Abilities and participation. Records people can understand.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#international-standards",
+          "kind": "section",
+          "parent": null,
+          "description": "International classifications help describe health and functioning consistently. For families, the value is a clearer account of abilities, support needs and participation over time.",
+          "citations": [
+            "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health",
+            "https://www.who.int/standards/classifications/classification-of-diseases",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://icd.who.int/en/docs/icd11-license.pdf",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
+        },
+        {
+          "id": "block-icf-functioning-and-participation",
+          "name": "ICF · functioning and participation",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-icf-functioning-and-participation",
+          "kind": "article",
+          "parent": "international-standards",
+          "description": "WHO’s ICF gives a framework for functioning, activities, participation and environmental context. It helps explain why the child’s everyday life belongs at the centre of developmental goals.",
+          "text": "ICF · functioning and participation WHO’s ICF gives a framework for functioning, activities, participation and environmental context. It helps explain why the child’s everyday life belongs at the centre of developmental goals. WHO · International Classification of Functioning, Disability and Health",
+          "citations": [
+            "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health"
+          ]
+        },
+        {
+          "id": "block-icd-11-consistent-health-information",
+          "name": "ICD-11 · consistent health information",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-icd-11-consistent-health-information",
+          "kind": "article",
+          "parent": "international-standards",
+          "description": "WHO’s ICD-11 provides a shared language for recording and comparing health information. Consistent definitions can support clinical records, health-system planning and responsible analysis across settings.",
+          "text": "ICD-11 · consistent health information WHO’s ICD-11 provides a shared language for recording and comparing health information. Consistent definitions can support clinical records, health-system planning and responsible analysis across settings. WHO · International Classification of Diseases",
+          "citations": [
+            "https://www.who.int/standards/classifications/classification-of-diseases"
+          ]
+        },
+        {
+          "id": "block-pinnacle-s-stated-alignment",
+          "name": "Pinnacle’s stated alignment",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-pinnacle-s-stated-alignment",
+          "kind": "article",
+          "parent": "international-standards",
+          "description": "The September handout describes skills carrying WHO ICF codes with ICD-11 reference alignment. This is a company-published mapping claim. The reviewed set does not include an item-by-item mapping audit or implementation-conformance report.",
+          "text": "Pinnacle’s stated alignment The September handout describes skills carrying WHO ICF codes with ICD-11 reference alignment. This is a company-published mapping claim. The reviewed set does not include an item-by-item mapping audit or implementation-conformance report. September handout · page 6 Use of a WHO classification does not mean WHO approval or endorsement of Pinnacle. WHO classification licence .",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://icd.who.int/en/docs/icd11-license.pdf"
+          ]
+        },
+        {
+          "id": "block-what-population-scale-readiness-should-mean",
+          "name": "What population-scale readiness should mean",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-what-population-scale-readiness-should-mean",
+          "kind": "article",
+          "parent": "international-standards",
+          "description": "Pinnacle’s reported institutional volume and its public-system ambitions deserve precise definitions. Scalable records, lawful data use, local governance, security, interoperability and independently evaluated performance each need their own evidence. The company’s “sovereign” positioning is an architectural ambition; it is not a WHO certification category.",
+          "text": "What population-scale readiness should mean Pinnacle’s reported institutional volume and its public-system ambitions deserve precise definitions. Scalable records, lawful data use, local governance, security, interoperability and independently evaluated performance each need their own evidence. The company’s “sovereign” positioning is an architectural ambition; it is not a WHO certification category. The reported 2.7 billion+ structured records describe database rows and events. They do not establish a nationally representative child population, verified AI-training volume or population-level clinical effectiveness. Dated volume and counting units Information-security scope Company architecture and public-system positioning",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
+        },
+        {
+          "id": "global-goals",
+          "name": "A wonderful life. A place to participate.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#global-goals",
+          "kind": "section",
+          "parent": null,
+          "description": "Pinnacle’s stated mission has practical connections to the UN Sustainable Development Goals: access to support, early learning, inclusion and accountable collaboration.",
+          "citations": [
+            "https://sdgs.un.org/goals/goal3",
+            "https://sdgs.un.org/goals/goal4",
+            "https://sdgs.un.org/goals/goal10",
+            "https://sdgs.un.org/goals/goal17"
+          ]
+        },
+        {
+          "id": "block-health-and-well-being",
+          "name": "Health and well-being",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-health-and-well-being",
+          "kind": "article",
+          "parent": "global-goals",
+          "description": "A mission to make developmental support clearer and more accessible to families.",
+          "text": "SDG 3 Health and well-being A mission to make developmental support clearer and more accessible to families. Target 3.8 · UN source",
+          "citations": [
+            "https://sdgs.un.org/goals/goal3"
+          ]
+        },
+        {
+          "id": "block-quality-education",
+          "name": "Quality education",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-quality-education",
+          "kind": "article",
+          "parent": "global-goals",
+          "description": "Early development, inclusive learning and support that helps children participate in education.",
+          "text": "SDG 4 Quality education Early development, inclusive learning and support that helps children participate in education. Targets 4.2 and 4.5 · UN source",
+          "citations": [
+            "https://sdgs.un.org/goals/goal4"
+          ]
+        },
+        {
+          "id": "block-reduced-inequalities",
+          "name": "Reduced inequalities",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-reduced-inequalities",
+          "kind": "article",
+          "parent": "global-goals",
+          "description": "Participation and inclusion, including for children with disabilities and their families.",
+          "text": "SDG 10 Reduced inequalities Participation and inclusion, including for children with disabilities and their families. Target 10.2 · UN source",
+          "citations": [
+            "https://sdgs.un.org/goals/goal10"
+          ]
+        },
+        {
+          "id": "block-partnerships-for-the-goals",
+          "name": "Partnerships for the goals",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#block-partnerships-for-the-goals",
+          "kind": "article",
+          "parent": "global-goals",
+          "description": "A direction for accountable collaboration. Specific partnership achievements require named agreements and measured contributions.",
+          "text": "SDG 17 Partnerships for the goals A direction for accountable collaboration. Specific partnership achievements require named agreements and measured contributions. Target 17.17 · UN source",
+          "citations": [
+            "https://sdgs.un.org/goals/goal17"
+          ]
+        },
+        {
           "id": "global-principles",
           "name": "Why these capabilities matter to families.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html#global-principles",
@@ -3319,7 +3714,7 @@
     },
     {
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html",
-      "title": "Pinnacle Evidence Register | 33 Source Records",
+      "title": "Pinnacle Evidence Register | 34 Source Records",
       "sections": [
         {
           "id": "category-0",
@@ -3849,7 +4244,8 @@
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
             "https://drive.google.com/file/d/1TyNq0qZzZwF5C_H5f3Ao4xxYpYubNn8s/view",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html"
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
           ]
         },
         {
@@ -3900,6 +4296,18 @@
           "text": "Source publications Company-published Books & parent resources · Publication records Authorship and publication metadata read from the supplied books What this means for your family Parent resources can support informed conversations and everyday participation alongside an individual professional plan. Autism — mother’s hand book Sreeja Reddy Saripalli · first published 2021 Publisher printed India Herald Group of Publishers ISBN printed 978-93-5493-628-9 The Voice of the Unheard Sreeja Reddy Saripalli named as author in the book What this supports The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. Scope & limits A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata. Permanent record Ask about this record Source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html"
+          ]
+        },
+        {
+          "id": "sovereign-walkthrough",
+          "name": "PinnacleAI walkthrough · Developmental architecture",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html#sovereign-walkthrough",
+          "kind": "details",
+          "parent": "category-6",
+          "description": "Company-authored walkthrough · AbilityScore layers and programme cadence",
+          "text": "Source publications Company-published PinnacleAI walkthrough · Developmental architecture Company-authored walkthrough · AbilityScore layers and programme cadence What this means for your family Helps you ask how the initial assessment, daily programme and monthly review connect. Ask the care team which version is used for your child and how recommendations are reviewed by people. Source PinnacleAI - Soveriegn WalkThrough.pdf Edition date Not established from the reviewed copy Length 61 PDF pages Measurement layers 79 abilities · 349 skills · 17 domains · 591 observations Programme cadence 7–9 daily techniques; monthly AbilityScore refresh What this supports The reviewed company walkthrough explicitly distinguishes abilities, skills, domains and observations. It describes the personal development kernel, daily practice, monthly reassessment and participation goals. Scope & limits A company-authored architecture and programme description is not independent clinical validation or a regulatory extension. Historical diagnosis, exclusivity, patent and endorsement wording is not adopted by this review. Current MD-5 and BIS originals control their respective scopes. The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references. Permanent record Ask about this record Source: PinnacleAI - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026. Reviewed: 18 September 2026 · Company-authored source; underlying claims need their own evidence.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
           ]
         }
       ]
@@ -4501,6 +4909,22 @@
           "parent": null,
           "description": "Authorship and publication metadata read from the supplied books",
           "text": "Source publications Company-published Books & parent resources · Publication records Authorship and publication metadata read from the supplied books What this means for your family Parent resources can support informed conversations and everyday participation alongside an individual professional plan. Autism — mother’s hand book Sreeja Reddy Saripalli · first published 2021 Publisher printed India Herald Group of Publishers ISBN printed 978-93-5493-628-9 The Voice of the Unheard Sreeja Reddy Saripalli named as author in the book What this supports The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. Scope & limits A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata. Ask about this record Source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+      "title": "PinnacleAI walkthrough · Developmental architecture | Verify Pinnacle",
+      "sections": [
+        {
+          "id": "block-pinnacleai-walkthrough-developmental-architecture",
+          "name": "PinnacleAI walkthrough · Developmental architecture",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html#block-pinnacleai-walkthrough-developmental-architecture",
+          "kind": "article",
+          "parent": null,
+          "description": "Company-authored walkthrough · AbilityScore layers and programme cadence",
+          "text": "Source publications Company-published PinnacleAI walkthrough · Developmental architecture Company-authored walkthrough · AbilityScore layers and programme cadence What this means for your family Helps you ask how the initial assessment, daily programme and monthly review connect. Ask the care team which version is used for your child and how recommendations are reviewed by people. Source PinnacleAI - Soveriegn WalkThrough.pdf Edition date Not established from the reviewed copy Length 61 PDF pages Measurement layers 79 abilities · 349 skills · 17 domains · 591 observations Programme cadence 7–9 daily techniques; monthly AbilityScore refresh What this supports The reviewed company walkthrough explicitly distinguishes abilities, skills, domains and observations. It describes the personal development kernel, daily practice, monthly reassessment and participation goals. Scope & limits A company-authored architecture and programme description is not independent clinical validation or a regulatory extension. Historical diagnosis, exclusivity, patent and endorsement wording is not adopted by this review. Current MD-5 and BIS originals control their respective scopes. The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references. Ask about this record Source: PinnacleAI - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026. Reviewed: 18 September 2026 · Company-authored source; underlying claims need their own evidence. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
           "citations": []
         }
       ]
