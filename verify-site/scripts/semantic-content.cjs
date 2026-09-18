@@ -58,9 +58,12 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
   let page=graph.find(x=>['WebPage','CollectionPage'].includes(x['@type'])&&(x.url===url));
   if(!page){page={'@type':'WebPage','@id':pageId,name:plain(html.match(/<title>([\s\S]*?)<\/title>/)[1]),url};graph.push(page);}
   page['@id'] ||= pageId;page.inLanguage='en-IN';page.dateModified=date;page.publisher={'@id':organization['@id']};page.about=[{'@id':organization['@id']},{'@id':brand['@id']}];
-  page.isPartOf={'@id':origin+'/#website'};
+  page.isPartOf={'@id':origin+'/#website'};page.isAccessibleForFree=true;
   page.hasPart=blocks.filter(b=>!b.parent).map(b=>({'@id':b.url+'-element'}));
   const crumbs=graph.find(x=>x['@type']==='BreadcrumbList');if(crumbs)page.breadcrumb={'@id':crumbs['@id']};
+  const faqPage=graph.find(x=>x['@type']==='FAQPage');
+  if(faqPage){faqPage.url=url+'#questions';faqPage.isPartOf={'@id':page['@id']};for(const q of faqPage.mainEntity){const b=blocks.find(b=>b.kind==='details'&&b.name===q.name);if(b){q['@id']=b.url+'-question';q.url=b.url;q.acceptedAnswer['@id']=b.url+'-answer';}}}
+  if(url.endsWith('/evidence/hfr-register.html'))graph.push({'@type':'Dataset','@id':url+'#source-inventory',name:'Pinnacle HFR source inventory',description:'Public inventory of 52 supplied workbook centres, reconciled into 53 distinct HFR identifiers across workbook and certificate sources. This is a documentary inventory, not a current operational-status or quality rating.',url,dateModified:date,inLanguage:'en-IN',publisher:{'@id':organization['@id']},isBasedOn:origin+'/evidence/records/hfr.html',isPartOf:{'@id':page['@id']},distribution:[{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.json',encodingFormat:'application/json'},{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.csv',encodingFormat:'text/csv'}]});
   const article=graph.find(x=>x['@type']==='Article');if(article){article.publisher={'@id':organization['@id']};article.mainEntityOfPage={'@id':page['@id']};page.mainEntity={'@id':article['@id']||url+'#article'};article['@id'] ||= url+'#article';}
   graph.push(...blocks.map(b=>({'@type':'WebPageElement','@id':b.url+'-element',url:b.url,name:b.name,description:b.description,inLanguage:'en-IN',cssSelector:'#'+b.id,isPartOf:{'@id':b.parent?url+'#'+b.parent+'-element':page['@id']},...(b.citations.length?{citation:b.citations}:{}),...(b.text?{text:b.text}:{}),...(blocks.some(x=>x.parent===b.id)?{hasPart:blocks.filter(x=>x.parent===b.id).map(x=>({'@id':x.url+'-element'}))}:{})})));
   if(url===origin+'/')graph.push(...termGraph);
