@@ -195,13 +195,18 @@ write('llms-full.txt',read('llms-full.txt')+'\n---\n\n'+metrics.text+'\n## Compl
 const urls=['/','/evidence/hfr-register.html','/evidence/scale-register.html','/evidence/global-context.html','/evidence/evidence-register.html',...records.map(recordPath),...Object.keys(registerMeta).map(p=>'/evidence/'+p)];
 // Apply the same semantic coverage to every page without maintaining a second claim set.
 const sectionPages=[];
+const sharePages=[];
+const addSharing=require('./sharing-content.cjs');
 for(const p of urls){
  const file=p==='/'?'index.html':p.slice(1),url=absolute(p);
- let html=read(file).replace(/<p class="entity-line wrap">[\s\S]*?<\/p>/g,'');
+ let html=read(file).replace(/<p class="entity-line wrap">[\s\S]*?<\/p>/g,'').replace(/<!-- share:start -->[\s\S]*?<!-- share:end -->/g,'').replace(/<svg class="share-symbols"[\s\S]*?<\/svg>/g,'').replace(/<p class="share-status"[\s\S]*?<\/dialog>/g,'');
  if(p!=='/')html=html.replace('</main>','<p class="entity-line wrap">Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. <a href="/evidence/records/lei.html">View legal identity evidence</a>.</p></main>');
- const enhanced=semantic.enhance(html,url);write(file,enhanced.html);
- sectionPages.push({url,title:html.match(/<title>(.*?)<\/title>/)[1],sections:enhanced.blocks});
+ const enhanced=semantic.enhance(html,url);
+ const page={url,title:html.match(/<title>(.*?)<\/title>/)[1],sections:enhanced.blocks};sectionPages.push(page);
+ const shared=addSharing(enhanced.html,page,exportRecords);write(file,shared.html.replace('</head>','<link rel="stylesheet" href="/share.css"><script defer src="/share.js"></script></head>'));
+ sharePages.push({url,items:shared.rows});
 }
+write('evidence/share-index.json',JSON.stringify({updated:date,description:'Ready-to-share drafts retain source scope. Visitors choose whether to post.',pages:sharePages},null,2));
 write('evidence/section-index.json',JSON.stringify({title:'Pinnacle page sections and sources',canonical:origin+'/',updated:date,organization,brand,description:'An index derived from the visible page content. Source links, reporting definitions and evidence limitations travel with each block.',pages:sectionPages},null,2));
 const sectionText='\n\n## Pinnacle identity and documented approach\nPinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Company CIN: U74999TG2016PTC113063. LEI: 894500OJYBVC18BUDN89.\nThe company describes a seven-stage developmental pathway connecting measurement, planning, integrated support, parent-guided practice and progress review. Its supplied MD-5 names non-diagnostic Class B developmental-support software. The BIS scope names connected software modules. Individual outcomes vary.\n\n## Main page sections\n'+sectionPages[0].sections.filter(s=>s.kind==='section').map(s=>`- [${s.name}](${s.url}): ${s.description}`).join('\n')+'\n\n## Terms explained\n'+semantic.terms.map(t=>`${t.name} — ${t.expanded}: ${t.description}\nSource: ${origin}/evidence/records/${t.record}.html`).join('\n\n')+'\n';
 write('llms-full.txt',read('llms-full.txt')+sectionText+'\n'+world.text);
@@ -212,5 +217,6 @@ write('evidence/answers.json',JSON.stringify({title:'Pinnacle verification quest
 write('llms.txt',read('llms.txt')+'\n## Direct answers\n- [Verification questions]('+origin+'/#questions): seventeen visible, source-linked answers.\n- [Questions and answers JSON]('+origin+'/evidence/answers.json): the same answers with their evidence links.\n');
 write('robots.txt',`# Public verification content. Domain-level crawl policy is served at /robots.txt.\nUser-agent: *\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n`);
 write('THIRD-PARTY-NOTICES.txt','Lucide static SVG icons, version 1.46.0. https://lucide.dev\nOnly used icons are included inline.\n\n'+fs.readFileSync(path.join(root,'assets/lucide/LICENSE.txt'),'utf8'));
+require('./build-performance.cjs');
 require('./build-discovery.cjs');
 console.log(JSON.stringify({records:records.length,originals:records.filter(r=>r.originalReviewed).length,registryMatches:records.filter(r=>r.issuerMatched).length,hfr:centres.filter(r=>r.kind==='hfr').length,districtSummaries:centres.filter(r=>r.kind==='district').length,htmlPages:urls.length,robots}));

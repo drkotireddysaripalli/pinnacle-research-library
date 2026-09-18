@@ -81,3 +81,5 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
  }
  return {profile,glossary,enhance,terms};
 };
+module.exports.tree = tree;
+module.exports.plain = plain;

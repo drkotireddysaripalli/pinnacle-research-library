@@ -1,9 +1,11 @@
 'use strict';
-// Maintain public routing inventory from the same published HTML files.
-const fs=require('node:fs'),path=require('node:path');
-const root=path.resolve(__dirname,'..');
-const paths=fs.readdirSync(path.join(root,'dist'),{recursive:true}).filter(p=>p.endsWith('.html')).map(p=>'/'+p.replaceAll('\\','/')).sort();
-const worker=path.join(root,'pinnacle-route-v10.mjs');
-const source=fs.readFileSync(worker,'utf8').replace(/const HTML_PATHS = (?:__HTML_PATHS__|\[[^\n]*\]);/,'const HTML_PATHS = '+JSON.stringify(paths)+';');
-fs.writeFileSync(worker,source);
-console.log(JSON.stringify({htmlRoutes:paths.length}));
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+const root=path.resolve(__dirname,'..'),dist=path.join(root,'dist');
+const files=fs.readdirSync(dist,{recursive:true}).filter(p=>fs.statSync(path.join(dist,p)).isFile()&&!p.replaceAll('\\','/').split('/').some(part=>part.startsWith('.'))&&!p.endsWith('.md')).sort();
+const paths=files.filter(p=>p.endsWith('.html')).map(p=>'/'+p.replaceAll('\\','/'));
+const manifest=Object.fromEntries(files.map(p=>['/'+p.replaceAll('\\','/'),crypto.createHash('sha256').update(fs.readFileSync(path.join(dist,p))).digest('hex').slice(0,16)]));
+const worker=path.join(root,'pinnacle-route-v11.mjs');
+const logic=fs.readFileSync(worker,'utf8').replace(/const (HTML_PATHS|STATIC_FILES|RELEASE) = [^\n]+;/g,'');
+const release=crypto.createHash('sha256').update(JSON.stringify(manifest)+logic.replace(/\r\n/g,'\n')).digest('hex').slice(0,16);
+let source=fs.readFileSync(worker,'utf8').replace(/const HTML_PATHS = [^\n]+;/,'const HTML_PATHS = '+JSON.stringify(paths)+';').replace(/const STATIC_FILES = [^\n]+;/,'const STATIC_FILES = '+JSON.stringify(manifest)+';').replace(/const RELEASE = [^\n]+;/,'const RELEASE = '+JSON.stringify(release)+';');
+fs.writeFileSync(worker,source);console.log(JSON.stringify({htmlRoutes:paths.length,staticFiles:files.length,release}));
