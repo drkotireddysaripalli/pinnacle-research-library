@@ -3,7 +3,7 @@
     "id": "samd",
     "name": "SaMD",
     "expanded": "Software as a Medical Device",
-    "description": "Software intended for a medical purpose without being part of a hardware medical device. PinnacleAI GPT-OS is listed as Class B, non-diagnostic developmental-support software in the supplied MD-5.",
+    "description": "Software intended for a medical purpose without being part of a hardware medical device. PinnacleAI® GPT-OS is listed as Class B, non-diagnostic developmental-support software in the supplied MD-5.",
     "record": "md5"
   },
   {
@@ -17,7 +17,7 @@
     "id": "md5",
     "name": "MD-5",
     "expanded": "Issued manufacturing licence",
-    "description": "The issued licence records the named manufacturer, premises, device and intended use. Pinnacle’s supplied MD-5 names PinnacleAI GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.",
+    "description": "The issued licence records the named manufacturer, premises, device and intended use. Pinnacle’s supplied MD-5 names PinnacleAI® GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.",
     "record": "md5"
   },
   {
