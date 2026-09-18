@@ -19,7 +19,7 @@ const robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-pr
 const date = '2026-09-18';
 const sourceDate = '2026-09-15';
 const title = 'Verify Pinnacle Blooms Network | Evidence, Care Pathway & Scale';
-const description = 'Explore PinnacleAI’s developmental pathway: AbilityScore, daily practice and monthly review toward self-sufficiency and participation, with MD-5, BIS and source-linked evidence.';
+const description = 'Explore PinnacleAI®’s developmental pathway: AbilityScore, daily practice and monthly review toward self-sufficiency and participation, with MD-5, BIS and source-linked evidence.';
 const e = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const absolute = p => new URL(p, origin+'/').href;
 const recordPath = r => `/evidence/records/${r.id}.html`;
@@ -55,10 +55,11 @@ const breadcrumb = (items,url) => ({'@type':'BreadcrumbList','@id':url+'#breadcr
 const listSchema = {'@type':'ItemList','@id':origin+'/#evidence-list',name:'Pinnacle evidence records',numberOfItems:records.length,itemListElement:records.map((r,i)=>({'@type':'ListItem',position:i+1,name:r.title,url:absolute(recordPath(r))}))};
 const head = (pageTitle,desc,url,graph,scripts=false) => `<head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="lxrRvKgDv43c28DuT_1uMBEJdkOErCekj9NNRjh4p-w">
 <title>${e(pageTitle)}</title><meta name="description" content="${e(desc)}">
 <meta name="robots" content="${robots}"><meta name="theme-color" content="#007f86"><meta name="application-name" content="Pinnacle Verify"><meta name="color-scheme" content="light">
 <link rel="canonical" href="${e(url)}"><meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="Pinnacle Verification Centre"><meta property="og:title" content="${e(pageTitle)}"><meta property="og:description" content="${e(desc)}"><meta property="og:url" content="${e(url)}">
-<meta property="og:image" content="${origin}/images/family-journey-1536.webp"><meta property="og:image:width" content="1536"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="Conceptual illustration of a mother and child learning together along the Pinnacle developmental pathway"><meta name="twitter:image" content="${origin}/images/family-journey-1536.webp"><meta name="twitter:image:alt" content="Conceptual illustration of a mother and child learning together along the Pinnacle developmental pathway"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(pageTitle)}"><meta name="twitter:description" content="${e(desc)}">
+<meta property="og:image" content="${origin}/images/pinnacle-verify-social-20260918.jpg"><meta property="og:image:secure_url" content="${origin}/images/pinnacle-verify-social-20260918.jpg"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Pinnacle Blooms Network — Verify Pinnacle. Licences. Records. Sources."><meta name="twitter:image" content="${origin}/images/pinnacle-verify-social-20260918.jpg"><meta name="twitter:image:alt" content="Pinnacle Blooms Network — Verify Pinnacle. Licences. Records. Sources."><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(pageTitle)}"><meta name="twitter:description" content="${e(desc)}">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap">
 <link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/upgrade.css"><link rel="stylesheet" href="/evidence-design.css"><link rel="stylesheet" href="/impact.css"><link rel="stylesheet" href="/semantic.css"><link rel="stylesheet" href="/world.css">
 <link rel="icon" href="/favicon.ico" sizes="50x50"><link rel="icon" type="image/png" sizes="50x50" href="/favicon.png"><link rel="apple-touch-icon" sizes="50x50" href="/favicon.png"><link rel="manifest" href="/site.webmanifest">
@@ -71,7 +72,7 @@ const pageHeader = `<div class="review-strip"><span>EVIDENCE & CONTEXT</span> Up
 const footer = `<footer class="wrap"><div class="h-card"><strong><a class="p-name u-url" href="https://www.pinnacleblooms.org/">Pinnacle Blooms Network</a></strong><p>Verification contact: Gokul Rao · <a class="u-email" href="mailto:care@pinnacleblooms.org">care@pinnacleblooms.org</a> · <a class="p-tel" href="tel:+919100181181">9100 181 181</a></p></div><a href="/#method">How we review evidence</a></footer>`;
 const crumbsHTML = items => `<nav class="breadcrumbs" aria-label="Breadcrumb">${items.map((x,i)=>i===items.length-1?`<span aria-current="page">${e(x[0])}</span>`:`<a href="${e(x[1])}">${e(x[0])}</a>${icon('chevron-right')}`).join('')}</nav>`;
 const faq = [
- {q:'What is PinnacleAI GPT-OS licensed for?',a:'The supplied MD-5 lists PinnacleAI GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.',id:'md5'},
+ {q:'What is PinnacleAI® GPT-OS licensed for?',a:'The supplied MD-5 lists PinnacleAI® GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.',id:'md5'},
  {q:'Are an MD-3 application and an MD-5 licence the same?',a:'No. MD-3 is an application for a manufacturing licence. MD-5 is the issued manufacturing licence. The original application is reviewed; Class B is recorded on the issued MD-5. The separate issued classification decision copy was not available for inspection.',id:'md3'},
  {q:'What do the BIS and ISO records establish?',a:'They describe specified management systems and the activities and locations within their scope. They do not establish the effectiveness of every intervention or promise a particular outcome for a child.',id:'bis'},
  {q:'Does a research protocol prove external validation?',a:'No. A protocol describes planned methods. The AbilityScore external-validation record here is a protocol; completed results and their limitations are needed before treating that study as completed validation.',id:'external-validation'},
@@ -91,7 +92,7 @@ const queue = JSON.parse(fs.readFileSync(queuePath,'utf8'));
 faq.push(...impact.data.faq);
 const faqSchema = {'@type':'FAQPage','@id':origin+'/#questions',mainEntity:faq.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))};
 let body = fs.readFileSync(templatePath,'utf8');
-const worldHero=`<section class="intro world-intro wrap" aria-labelledby="page-title"><div class="world-intro-copy"><p class="eyebrow">VERIFY PINNACLE BLOOMS NETWORK</p><h1 id="page-title">Every child deserves<br><em>a wonderful life.</em></h1><p class="intro-purpose">Growing toward self-sufficiency.<br>Participating in mainstream life.</p><p class="intro-copy">Understand your child’s abilities. Build a personal plan. Connect professional support, everyday practice and monthly progress review. Explore the evidence behind PinnacleAI and the people who put that journey into practice.</p><div class="hero-actions"><a class="primary-link" href="#care">${icon('network')}Explore the developmental journey</a><a class="outline-link" href="#records">${icon('file-search')}Inspect the evidence</a></div><p class="hero-scope">PinnacleAI GPT-OS · Non-diagnostic Class B SaMD · Ages 0–12.<br>Developmental support toward individual goals; outcomes vary.</p></div>${world.hero}</section><div class="wrap">${world.proof}</div>`;
+const worldHero=`<section class="intro world-intro wrap" aria-labelledby="page-title"><div class="world-intro-copy"><p class="eyebrow">VERIFY PINNACLE BLOOMS NETWORK</p><h1 id="page-title">Every child deserves<br><em>a wonderful life.</em></h1><p class="intro-purpose">Growing toward self-sufficiency.<br>Participating in mainstream life.</p><p class="intro-copy">Understand your child’s abilities. Build a personal plan. Connect professional support, everyday practice and monthly progress review. Explore the evidence behind PinnacleAI® and the people who put that journey into practice.</p><div class="hero-actions"><a class="primary-link" href="#care">${icon('network')}Explore the developmental journey</a><a class="outline-link" href="#records">${icon('file-search')}Inspect the evidence</a></div><p class="hero-scope">PinnacleAI® GPT-OS · Non-diagnostic Class B SaMD · Ages 0–12.<br>Developmental support toward individual goals; outcomes vary.</p></div>${world.hero}</section><div class="wrap">${world.proof}</div>`;
 body=body.replace('<!-- WORLD HERO -->',worldHero).replace('<!-- LIFECYCLE -->',world.lifecycle).replace('<!-- STANDARDS -->',world.standards).replace('<!-- SDGS -->',world.sdgs);
 body=body.replace('<!-- METRICS -->',semantic.profile+'<!-- METRICS -->').replace('<!-- CTA -->',semantic.glossary+'<!-- CTA -->');
 body=body.replace('<!-- METRICS -->',metrics.section).replace('<!-- HFR SUMMARY -->',hfr.summary);
@@ -169,7 +170,7 @@ const registerMeta={
 };
 for(const [file,[name,desc]] of Object.entries(registerMeta)){
  const p='evidence/'+file,url=absolute(p),crumbs=[['Verify Pinnacle','/'],[name.split(' | ')[0],'/'+p]];
- let html=read(p);
+ let html=read(p).replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g,'');
  html=html.replace(/<head>[\s\S]*?<\/head>/,head(name,desc,url,[website,{'@type':'WebPage',name,url,description:desc,inLanguage:'en-IN',dateModified:date,breadcrumb:{'@id':url+'#breadcrumb'},isPartOf:{'@id':website['@id']}},breadcrumb(crumbs,url)]));
  if(!html.includes('class="breadcrumbs"')) html=html.replace(/(<main[^>]*>)/,'$1'+crumbsHTML(crumbs));
  write(p,html);
@@ -203,7 +204,10 @@ for(const p of urls){
  if(p!=='/')html=html.replace('</main>','<p class="entity-line wrap">Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. <a href="/evidence/records/lei.html">View legal identity evidence</a>.</p></main>');
  const enhanced=semantic.enhance(html,url);
  const page={url,title:html.match(/<title>(.*?)<\/title>/)[1],sections:enhanced.blocks};sectionPages.push(page);
- const shared=addSharing(enhanced.html,page,exportRecords);write(file,shared.html.replace('</head>','<link rel="stylesheet" href="/share.css"><script defer src="/share.js"></script></head>'));
+ const shared=addSharing(enhanced.html,page,exportRecords);
+ // Keep the crawler-facing head short; structured data remains server-rendered in the body.
+ const schema=shared.html.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/)?.[0]||'';
+ write(file,shared.html.replace(schema,'').replace('</body>',schema+'</body>').replace('</head>','<link rel="stylesheet" href="/share.css"><script defer src="/share.js"></script></head>'));
  sharePages.push({url,items:shared.rows});
 }
 write('evidence/share-index.json',JSON.stringify({updated:date,description:'Ready-to-share drafts retain source scope. Visitors choose whether to post.',pages:sharePages},null,2));

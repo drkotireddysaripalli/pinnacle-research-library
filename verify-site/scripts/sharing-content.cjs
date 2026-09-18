@@ -6,7 +6,7 @@ const metrics=require('../content/metrics.json').metrics;
 const hfr=require('../content/hfr-register.json').rows;
 const PUBLIC='https://www.pinnacleblooms.org/verify';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const ascii=s=>s.normalize('NFC').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[–—]/g,'-').replace(/[^\x20-\x7e]/g,' ').replace(/\s+/g,' ').trim();
+const ascii=s=>s.normalize('NFC').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[–—]/g,'-').replace(/[^\x20-\x7e\u00ae]/g,' ').replace(/\s+/g,' ').trim();
 const snippet=s=>{const text=ascii(s);return text.length>115?text.slice(0,115).replace(/\s+\S*$/,''):text;};
 const attr=(n,k)=>n.open.match(new RegExp('\\b'+k+'="([^"]*)"'))?.[1];
 const mark=id=>`<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24"><use href="#share-icon-${id}"></use></svg>`;
@@ -39,7 +39,9 @@ module.exports=function addSharing(html,page,records){
   let at;
   if(b.kind==='page'){const h=nodes.find(n=>n.tag==='h1');at=h?.close;}
   else if(node.tag==='tr'){const td=nodes.filter(n=>n.tag==='td'&&n.start>node.start&&n.end<node.end).at(-1);at=td?.end;}
-  else if(node.tag==='section'){const h=nodes.find(n=>/^h[12]$/.test(n.tag)&&n.start>node.start&&n.end<node.end);at=h?.close??node.end;}
+  else if(node.tag==='section'){const h=nodes.find(n=>/^h[12]$/.test(n.tag)&&n.start>node.start&&n.end<node.end);let wrapper=h?.parent;while(wrapper&&wrapper!==node&&!/(?:^|\s)section-heading(?:\s|$)/.test(attr(wrapper,'class')||''))wrapper=wrapper.parent;at=wrapper&&wrapper!==node?wrapper.end:h?.close??node.end;}
+  else if(/(?:^|\s)(?:queue-item|lifecycle-scope)(?:\s|$)/.test(attr(node,'class')||'')){at=node.children.find(n=>n.tag==='div')?.end??node.end;}
+  else if(node.children.some(n=>/(?:^|\s)stage-content(?:\s|$)/.test(attr(n,'class')||''))){at=node.children.find(n=>/(?:^|\s)stage-content(?:\s|$)/.test(attr(n,'class')||''))?.end??node.end;}
   else at=node.end;
   if(at){edits.push({at,value:bar});rows.push({id:b.id,url,text:short,whatsapp:full,xLength:short.length+24});}
  }
