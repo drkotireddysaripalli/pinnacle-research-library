@@ -1,37 +1,58 @@
 [
-  [
-    "CDSCO classification decision",
-    "Issued classification decision for MD/classification/2025/150; the located January form is an application.",
-    "Attach the 13 April 2026 decision copy and record the issuing authority."
-  ],
-  [
-    "Current issuer and renewal checks",
-    "MD-5, BIS, ISO, DPIIT, Udyam, GST and centre registrations have source copies; current status checks are separate.",
-    "Date-stamp official portal checks and record any changed, suspended or renewed status."
-  ],
-  [
-    "GST legal-name update",
-    "The supplied 2017 REG-06 carries the former legal name after the company name change.",
-    "Add the current amended certificate or taxpayer record and reconcile the legal name."
-  ],
-  [
-    "Completed external validation",
-    "The Zenodo external-validation item is a protocol; the methodology item reports preliminary operational evidence.",
-    "Publish the final registered study, ethics record, methods, results and limitations when issued."
-  ],
-  [
-    "Outcome metric definition",
-    "Network totals include assessments, screenings and parent training; beneficiary registrations are not unique children.",
-    "Publish denominator, period, assessment version, eligibility and missing-data handling before using an improvement percentage."
-  ],
-  [
-    "Centre-level document set",
-    "Four district originals were individually inspected; the wider collection is represented by group summaries and HFR transcriptions.",
-    "Add current, address-matched copies for each centre and reconcile the two Tirupati HFR identifiers."
-  ],
-  [
-    "Public circulation permissions",
-    "SAE 3000 and SRS 4400 reports are restricted beyond named audiences without practitioner consent.",
-    "Record permitted public wording or a consented excerpt before publishing report claims."
-  ]
+  {
+    "title": "Classification: follow the issued licence",
+    "icon": "file-cog",
+    "label": "Application + MD-5 reviewed",
+    "finding": "Class B is documented in the issued MD-5. The earlier Class A application is retained as part of the regulatory history.",
+    "boundary": "The separate issued CAL copy is not in the reviewed set; its date and reference are attributed to company publications.",
+    "id": "classification"
+  },
+  {
+    "title": "Licence and registration copies: read their stated scope",
+    "icon": "file-search",
+    "label": "Originals reviewed",
+    "finding": "Original licence and registration copies are reviewed by named entity, activity, reference and printed dates.",
+    "boundary": "Current suspension, cancellation, renewal or amendment status requires a dated issuer check. Only exact live registry matches receive the registry badge.",
+    "id": "md5"
+  },
+  {
+    "title": "GST: preserve the historical record",
+    "icon": "building-2",
+    "label": "Historical original reviewed",
+    "finding": "The 2017 REG-06 is retained with its printed legal and trade names, alongside the company name-change history.",
+    "boundary": "The reviewed certificate does not establish the current amended legal name or taxpayer status.",
+    "id": "gst"
+  },
+  {
+    "title": "External validation: identify the source as a protocol",
+    "icon": "flask-conical",
+    "label": "Original protocol reviewed",
+    "finding": "The reviewed external-validation source is a published study protocol. It sets out planned methods; completed results are not claimed.",
+    "boundary": "A final study report, with its population, methods, results and limitations, would support a new evidence conclusion.",
+    "id": "external-validation"
+  },
+  {
+    "title": "Outcome claims: keep the calculation boundary visible",
+    "icon": "chart-no-axes-combined",
+    "label": "Source publications reviewed",
+    "finding": "The headline improvement claim is recorded as company-reported. No verified network-wide percentage is concluded from this document set.",
+    "boundary": "The SAE 3000 scope excludes outcome-study figures. A defined denominator and reproducible calculation are required to evaluate the headline claim.",
+    "id": "outcome-claim"
+  },
+  {
+    "title": "Centre evidence: match each document to its premises",
+    "icon": "map-pin",
+    "label": "Source review recorded",
+    "finding": "Centre evidence is reported by document, institution, printed period and review level: 28 HFR entries, eight district summaries and four individually inspected district originals.",
+    "boundary": "Nellore’s reviewed period ended on 30 October 2024. The two Tirupati HFR identifiers remain separate until their addresses are reconciled.",
+    "id": "centres"
+  },
+  {
+    "title": "Practitioner reports: preserve the stated scope",
+    "icon": "shield",
+    "label": "Original reports reviewed",
+    "finding": "Report particulars and scope are recorded. Restricted full reports are not republished here.",
+    "boundary": "The reports’ circulation restrictions remain attached. A UDIN match authenticates particulars and does not enlarge a report’s assurance scope.",
+    "id": "sae3000"
+  }
 ]
