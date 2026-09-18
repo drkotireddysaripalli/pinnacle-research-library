@@ -1,0 +1,20 @@
+{
+  "name": "Pinnacle Blooms Network — Evidence & Verification",
+  "short_name": "Pinnacle Verify",
+  "description": "Source-linked licences, developmental pathway, centre records and evidence.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "lang": "en-IN",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#007f86",
+  "icons": [
+    {
+      "src": "./favicon.png",
+      "sizes": "50x50",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

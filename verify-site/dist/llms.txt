@@ -64,3 +64,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Section and source index](https://pinnacle-verify.saripalli.chatgpt.site/evidence/section-index.json): visible page blocks, source links and scoped descriptions.
 - [Pinnacle at a glance](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-profile): legal identity and documented approach.
 - [Terms explained](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): SaMD, MD-3, MD-5, BIS, HFR, UDIN and report types.
+
+## Direct answers
+- [Verification questions](https://pinnacle-verify.saripalli.chatgpt.site/#questions): seventeen visible, source-linked answers.
+- [Questions and answers JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/answers.json): the same answers with their evidence links.
