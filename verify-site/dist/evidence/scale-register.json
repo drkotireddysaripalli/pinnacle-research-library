@@ -1,0 +1,143 @@
+{
+  "reviewed": "18 September 2026",
+  "title": "Pinnacle scale: figures, definitions and evidence",
+  "metrics": [
+    {
+      "id": "scale-data",
+      "icon": "files",
+      "value": "2.7 billion+",
+      "label": "Structured developmental records",
+      "meaning": "A large record system can preserve observations across a child’s developmental journey, supporting continuity and review.",
+      "basis": "Reported in the 7 September 2026 handout. Database row/event counts at 17 July 2026.",
+      "boundary": "Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness.",
+      "status": "Company-reported · source reviewed",
+      "evidence": [
+        {
+          "id": "operating-metrics",
+          "label": "Definition & source history"
+        },
+        {
+          "id": "srs4400",
+          "label": "SRS 4400 factual findings"
+        },
+        {
+          "id": "sae3000",
+          "label": "SAE 3000 · 2.5B floor"
+        }
+      ]
+    },
+    {
+      "id": "scale-services",
+      "icon": "users",
+      "value": "31 million+",
+      "label": "Cumulative therapy services reported",
+      "meaning": "The useful family question is how the experience recorded across services informs a clear plan and review for your child.",
+      "basis": "31,052,382 under the practitioner reports’ service-counting criteria, at 17 July 2026.",
+      "boundary": "The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures.",
+      "status": "Dated institutional count",
+      "evidence": [
+        {
+          "id": "operating-metrics",
+          "label": "Service definition"
+        },
+        {
+          "id": "sae3000",
+          "label": "SAE 3000 scope & UDIN"
+        },
+        {
+          "id": "srs4400",
+          "label": "SRS 4400 scope & UDIN"
+        }
+      ]
+    },
+    {
+      "id": "scale-techniques",
+      "icon": "book-open",
+      "value": "1.3 lakh",
+      "label": "Early-intervention technique repository",
+      "meaning": "A technique library is useful when a practitioner selects and adapts activities to a child’s goals, interests and everyday routines.",
+      "basis": "130,000 techniques: management-supplied update received 18 September 2026. The 7 September handout reports an earlier 90,000+ library.",
+      "boundary": "The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions.",
+      "status": "Management update · inventory not inspected",
+      "evidence": [
+        {
+          "id": "operating-metrics",
+          "label": "Updated figure & evidence scope"
+        },
+        {
+          "id": "september-handout",
+          "label": "Earlier published library count"
+        }
+      ]
+    },
+    {
+      "id": "scale-families",
+      "icon": "house",
+      "value": "7.9 lakh+",
+      "label": "Beneficiary / family registrations reported",
+      "meaning": "Behind each registration is a family seeking support. A family’s own goals and progress reviews remain the measure that matters to them.",
+      "basis": "792,614 unique beneficiary/family registrations under the stated criteria, at 17 July 2026.",
+      "boundary": "This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment.",
+      "status": "Dated institutional count",
+      "evidence": [
+        {
+          "id": "operating-metrics",
+          "label": "Population & counting basis"
+        },
+        {
+          "id": "sae3000",
+          "label": "SAE 3000 scope & UDIN"
+        },
+        {
+          "id": "srs4400",
+          "label": "SRS 4400 scope & UDIN"
+        }
+      ]
+    },
+    {
+      "id": "scale-countries",
+      "icon": "network",
+      "value": "70+",
+      "label": "Countries of family origin reported",
+      "meaning": "Families may connect with developmental support across borders, including through remote delivery where available.",
+      "basis": "Company-reported international reach in the July 2026 dossier, including remote delivery.",
+      "boundary": "Countries of family origin are different from countries with a physical Pinnacle centre. The reviewed practitioner reports do not establish this country count.",
+      "status": "Company-reported international reach",
+      "evidence": [
+        {
+          "id": "operating-metrics",
+          "label": "What international reach counts"
+        },
+        {
+          "id": "dossier",
+          "label": "Dossier · dated source"
+        }
+      ]
+    },
+    {
+      "id": "scale-centres",
+      "icon": "map-pin",
+      "value": "70+",
+      "label": "Centres in the reported network",
+      "meaning": "A network becomes relevant locally. Find your centre, its facility identifier and the source behind each listed document.",
+      "basis": "Network figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026.",
+      "boundary": "Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.",
+      "status": "Network scope distinguished",
+      "evidence": [
+        {
+          "id": "hfr",
+          "label": "Complete HFR evidence"
+        },
+        {
+          "id": "operating-metrics",
+          "label": "Network vs operational definition"
+        },
+        {
+          "id": "srs4400",
+          "label": "49-centre factual findings"
+        }
+      ]
+    }
+  ],
+  "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html"
+}
