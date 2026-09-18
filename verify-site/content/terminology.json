@@ -1,10 +1,86 @@
 [
-  {"id":"samd","name":"SaMD","expanded":"Software as a Medical Device","description":"Software intended for a medical purpose without being part of a hardware medical device. PinnacleAI GPT-OS is listed as Class B, non-diagnostic developmental-support software in the supplied MD-5.","record":"md5"},
-  {"id":"md3","name":"MD-3","expanded":"Application for a manufacturing licence","description":"The application submitted for a licence to manufacture Class A or Class B medical devices. An application is a step in the regulatory record; it is not the issued licence.","record":"md3"},
-  {"id":"md5","name":"MD-5","expanded":"Issued manufacturing licence","description":"The issued licence records the named manufacturer, premises, device and intended use. Pinnacle’s supplied MD-5 names PinnacleAI GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.","record":"md5"},
-  {"id":"bis","name":"BIS scope","expanded":"Bureau of Indian Standards licence and scope schedule","description":"The reviewed BIS record describes the management system and activities within its named scope, including developmental-support software modules. It does not establish every centre’s registration or guarantee clinical outcomes.","record":"bis"},
-  {"id":"hfr","name":"HFR","expanded":"Health Facility Registry","description":"The registry assigns a facility identifier. This page lists identifiers found in the supplied workbook and certificate copies. Source review is separate from confirming a facility’s current registry status, operational status or clinical quality.","record":"hfr"},
-  {"id":"udin","name":"UDIN","expanded":"Unique Document Identification Number","description":"An identifier for a practitioner’s document. The two supplied report numbers are recorded here; their particulars have not been independently matched on the ICAI portal in this review. A UDIN does not extend a report’s scope.","record":"sae3000"},
-  {"id":"sae3000","name":"SAE 3000","expanded":"Limited-assurance report in this evidence collection","description":"The supplied practitioner report gives limited assurance over specified institutional assertions and counting criteria. Read its dated thresholds and scope; it does not validate every headline statistic or a child’s clinical outcome.","record":"sae3000"},
-  {"id":"srs4400","name":"SRS 4400","expanded":"Agreed-upon procedures and factual findings","description":"The supplied report records procedures and findings for defined institutional counts. It does not provide an assurance opinion. Its observed counts and the SAE 3000 assertion floors have different reporting roles.","record":"srs4400"}
+  {
+    "id": "samd",
+    "name": "SaMD",
+    "expanded": "Software as a Medical Device",
+    "description": "Software intended for a medical purpose without being part of a hardware medical device. PinnacleAI GPT-OS is listed as Class B, non-diagnostic developmental-support software in the supplied MD-5.",
+    "record": "md5"
+  },
+  {
+    "id": "md3",
+    "name": "MD-3",
+    "expanded": "Application for a manufacturing licence",
+    "description": "The application submitted for a licence to manufacture Class A or Class B medical devices. An application is a step in the regulatory record; it is not the issued licence.",
+    "record": "md3"
+  },
+  {
+    "id": "md5",
+    "name": "MD-5",
+    "expanded": "Issued manufacturing licence",
+    "description": "The issued licence records the named manufacturer, premises, device and intended use. Pinnacle’s supplied MD-5 names PinnacleAI GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.",
+    "record": "md5"
+  },
+  {
+    "id": "bis",
+    "name": "BIS scope",
+    "expanded": "Bureau of Indian Standards licence and scope schedule",
+    "description": "The reviewed BIS record describes the management system and activities within its named scope, including developmental-support software modules. It does not establish every centre’s registration or guarantee clinical outcomes.",
+    "record": "bis"
+  },
+  {
+    "id": "hfr",
+    "name": "HFR",
+    "expanded": "Health Facility Registry",
+    "description": "The registry assigns a facility identifier. This page lists identifiers found in the supplied workbook and certificate copies. Source review is separate from confirming a facility’s current registry status, operational status or clinical quality.",
+    "record": "hfr"
+  },
+  {
+    "id": "udin",
+    "name": "UDIN",
+    "expanded": "Unique Document Identification Number",
+    "description": "An identifier for a practitioner’s document. The two supplied report numbers are recorded here; their particulars have not been independently matched on the ICAI portal in this review. A UDIN does not extend a report’s scope.",
+    "record": "sae3000"
+  },
+  {
+    "id": "sae3000",
+    "name": "SAE 3000",
+    "expanded": "Limited-assurance report in this evidence collection",
+    "description": "The supplied practitioner report gives limited assurance over specified institutional assertions and counting criteria. Read its dated thresholds and scope; it does not validate every headline statistic or a child’s clinical outcome.",
+    "record": "sae3000"
+  },
+  {
+    "id": "srs4400",
+    "name": "SRS 4400",
+    "expanded": "Agreed-upon procedures and factual findings",
+    "description": "The supplied report records procedures and findings for defined institutional counts. It does not provide an assurance opinion. Its observed counts and the SAE 3000 assertion floors have different reporting roles.",
+    "record": "srs4400"
+  },
+  {
+    "id": "icd11",
+    "name": "ICD-11",
+    "expanded": "International Classification of Diseases, 11th Revision",
+    "description": "World Health Organization. A common classification and clinical terminology for recording, comparing and aggregating health information. It gives health-related records a consistent reference language. Pinnacle’s dossier describes ICD-11 reference alignment; this does not make the software diagnostic.",
+    "record": "dossier"
+  },
+  {
+    "id": "icf",
+    "name": "ICF",
+    "expanded": "International Classification of Functioning, Disability and Health",
+    "description": "World Health Organization. A framework covering body functions and structures, activities, participation and environmental context. It helps keep daily life and the support needed to participate in view. Pinnacle’s handout and dossier describe ICF mappings. The dossier’s b-code examples describe body functions; activity, participation and environment need their own relevant codes.",
+    "record": "dossier"
+  },
+  {
+    "id": "ichi",
+    "name": "ICHI",
+    "expanded": "International Classification of Health Interventions",
+    "description": "World Health Organization. A classification for recording and analysing health interventions through their target, action and means. It can help describe what intervention is delivered in a consistent way. Pinnacle’s dossier describes ICHI intervention coding within its architecture.",
+    "record": "dossier"
+  },
+  {
+    "id": "snomed",
+    "name": "SNOMED CT",
+    "expanded": "SNOMED CT clinical terminology",
+    "description": "SNOMED International. A detailed clinical terminology that represents information through concepts, descriptions and relationships. It supports consistent meaning in electronic clinical records. Pinnacle’s dossier describes SNOMED CT terminology alignment. SNOMED International is the responsible organisation.",
+    "record": "dossier"
+  }
 ]
