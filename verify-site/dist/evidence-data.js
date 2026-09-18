@@ -18,7 +18,8 @@ window.PINNACLE_EVIDENCE = {
       },
       "supports": "The supplied Form MD-5 licenses the listed Class B device for manufacture for sale or distribution at the specified premises. Intended users include parents, therapists, educators and caregivers supporting children aged 0–12.",
       "limits": "Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre.",
-      "citation": "Original Form MD-5, page 1 including device annexure.",
+      "citation": "Original Form MD-5, page 1 including device annexure; supplied PinnacleAI_SAMD_License.pdf re-inspected 18 September 2026.",
+      "scopeReviewed": "18 September 2026",
       "links": [
         {
           "label": "Read redacted licence",
@@ -33,7 +34,7 @@ window.PINNACLE_EVIDENCE = {
           "url": "https://dca.telangana.gov.in/"
         }
       ],
-      "note": "The operative licence reads 000248. A corrected forwarding letter also reads 000248; older compiled material contains 000150. Use the operative licence and corrected letter together."
+      "note": "The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together."
     },
     {
       "id": "bis",

@@ -28,9 +28,9 @@ What this supports: The supplied Form MD-5 licenses the listed Class B device fo
 
 Scope and limits: Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre.
 
-Source note: The operative licence reads 000248. A corrected forwarding letter also reads 000248; older compiled material contains 000150. Use the operative licence and corrected letter together.
+Source note: The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together.
 
-Source citation: Original Form MD-5, page 1 including device annexure.
+Source citation: Original Form MD-5, page 1 including device annexure; supplied PinnacleAI_SAMD_License.pdf re-inspected 18 September 2026.
 Reviewed: 15 September 2026
 - [Read redacted licence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/md5.pdf)
 - [Corrected forwarding letter · Drive](https://drive.google.com/file/d/1A22-NS5A1-ck2qXRBFrRSn9vlLyAzdhT/view)
@@ -1076,14 +1076,23 @@ No endorsement is established by the references on this page. Their guidance exp
 What is the purpose of the Pinnacle developmental pathway?
 Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. Its tagline is “Every child deserves a wonderful life.” The described approach connects ability measurement, child-specific planning, coordinated intervention, everyday practice, tracking, correction and reassessment. Individual outcomes vary.
 
-Are 79 abilities and 349 skills different counts of the same thing?
-The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.
+What do 17 domains, 79 abilities and 349 skills mean?
+Pinnacle describes these as different layers of its developmental framework: 17 domains, 79 abilities and 349 skills, with 591 observations and AbilityScore on a 0–1000 scale. The totals belong to Pinnacle’s architecture, not a WHO-defined numerical hierarchy. Individual plans select relevant priorities. The earlier Whitebook used 344 skills across six domains; validation of an earlier version should not be automatically transferred to the newer framework.
 
 How do daily practice and monthly review connect?
 The company sources describe 7–9 daily techniques selected for the child’s programme, human feedback through the Fusion tracking and correction module, and monthly AbilityScore refresh. The care team should explain the child-specific goals, practice guidance, review schedule and any adjustments. This is a programme description, not a guaranteed outcome.
 
-Does ICD-11 alignment mean WHO approval of PinnacleAI?
-No. The handout and dossier state classification alignment. An item-by-item mapping audit was not supplied. Using WHO classifications does not establish WHO approval or endorsement of a third-party product. BIS and the MD-5 have their own named scopes.
+How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI?
+Pinnacle’s dossier describes architecture and mappings using WHO’s ICD-11, ICF and ICHI, alongside SNOMED CT terminology from SNOMED International. Their roles are health information, functioning and participation, interventions, and consistent clinical meaning. Correct implementation can support interoperability; an item-by-item mapping audit was not supplied. Alignment is separate from endorsement, clinical validation and the licensed device’s intended use.
+
+Does Pinnacle focus on a diagnosis or on everyday-life goals?
+Families may arrive with questions about autism, ADHD, communication, sensory processing, movement, learning or other developmental concerns. Pinnacle’s stated purpose centres on the capabilities that help each child grow toward self-sufficiency and participate in mainstream life, with the support and accommodations they need. These are examples of individual goals, not promised results. Professional assessment identifies the support appropriate to each child; diagnosis and medical care remain important where indicated. The licensed software’s scope is non-diagnostic developmental support for ages 0–12, not treatment of every condition.
+
+Is PinnacleAI certified as sovereign-grade or authorised worldwide?
+The reviewed documents do not establish a sovereign-grade certification or worldwide market authorisation. Pinnacle describes an architecture intended for population-scale developmental support. A specific deployment needs documented local control and governance, validated interoperability, applicable permissions, operational capacity and evidence of performance for that population. MD-5 and BIS provide the particular scopes shown in their records.
+
+Are parents and caregivers named in the MD-5 intended use?
+Yes. The MD-5 annexure states that PinnacleAI GPT-OS is intended to assist parents, therapists, educators and caregivers through developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for ages 0–12. This explicitly includes family users of the licensed software. It does not confer professional therapist credentials or register homes as therapy centres; worldwide exclusivity has not been established.
 
 ---
 
@@ -1206,13 +1215,13 @@ The company describes a seven-stage developmental pathway connecting measurement
 - [Structured developmental records. One child’s journey at a time.](https://pinnacle-verify.saripalli.chatgpt.site/#data-scale): Company-reported in the 7 September 2026 handout. Counting basis: database rows/events · cutoff 17 July 2026.
 - [Understand what each credential adds.](https://pinnacle-verify.saripalli.chatgpt.site/#regulated-purpose): An issued licence defines the software’s intended use. Quality records describe how the system is managed. The BIS schedule connects those processes to a broader set of developmental-support modules.
 - [Start with the centre your family knows.](https://pinnacle-verify.saripalli.chatgpt.site/#centres): Search the supplied facility and district records. Match the exact premises before relying on a document; a network credential does not cover every centre automatically.
-- [Abilities and participation. Records people can understand.](https://pinnacle-verify.saripalli.chatgpt.site/#international-standards): International classifications help describe health and functioning consistently. For families, the value is a clearer account of abilities, support needs and participation over time.
+- [Structured for understanding. Designed for connected care.](https://pinnacle-verify.saripalli.chatgpt.site/#international-standards): Four distinct standards help explain the architecture: health information, functioning and participation, interventions, and clinical terminology. Their value depends on how accurately they are implemented.
 - [A wonderful life. A place to participate.](https://pinnacle-verify.saripalli.chatgpt.site/#global-goals): Pinnacle’s stated mission has practical connections to the UN Sustainable Development Goals: access to support, early learning, inclusion and accountable collaboration.
 - [Why these capabilities matter to families.](https://pinnacle-verify.saripalli.chatgpt.site/#global-principles): Independent guidance explains the importance of monitoring, caregiver participation, coordinated support and inclusion. These organisations do not endorse or evaluate Pinnacle through the references below.
 - [See where Pinnacle fits. Compare what matters.](https://pinnacle-verify.saripalli.chatgpt.site/#global-context): Different organisations address diagnosis, assessment, digital treatment, integrated services or provider software. A useful comparison starts with the job each is designed to do.
 - [Originals reviewed. Conclusions made clear.](https://pinnacle-verify.saripalli.chatgpt.site/#review): Each conclusion reflects the documents inspected. Historical certificates, study protocols and company-reported claims are identified precisely, so you can see what each source establishes.
 - [Evidence with its meaning intact.](https://pinnacle-verify.saripalli.chatgpt.site/#method): A record is useful when you can see both what it supports and the limits of that support.
-- [Clear terms. Better questions.](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): A practical reading guide to the credentials and report types used on this page. Each definition links to its Pinnacle source record.
+- [Clear terms. Better questions.](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): A practical reading guide to the credentials, report types and international classifications used on this page. Each definition links to its Pinnacle source record.
 - [Your child’s next step deserves a clear conversation.](https://pinnacle-verify.saripalli.chatgpt.site/#next-step): Ask the Pinnacle team about your child’s starting abilities, the proposed goals, who coordinates care and when progress will be reviewed. Bring the evidence questions that matter to your family.
 - [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): The supplied MD-5 lists PinnacleAI GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.
 - [Take the source with you.](https://pinnacle-verify.saripalli.chatgpt.site/#section-take-the-source-with-you): Readable records retain their review status, source references and limitations in every format.
@@ -1242,13 +1251,42 @@ Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.
 SRS 4400 — Agreed-upon procedures and factual findings: The supplied report records procedures and findings for defined institutional counts. It does not provide an assurance opinion. Its observed counts and the SAE 3000 assertion floors have different reporting roles.
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html
 
+ICD-11 — International Classification of Diseases, 11th Revision: World Health Organization. A common classification and clinical terminology for recording, comparing and aggregating health information. It gives health-related records a consistent reference language. Pinnacle’s dossier describes ICD-11 reference alignment; this does not make the software diagnostic.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+ICF — International Classification of Functioning, Disability and Health: World Health Organization. A framework covering body functions and structures, activities, participation and environmental context. It helps keep daily life and the support needed to participate in view. Pinnacle’s handout and dossier describe ICF mappings. The dossier’s b-code examples describe body functions; activity, participation and environment need their own relevant codes.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+ICHI — International Classification of Health Interventions: World Health Organization. A classification for recording and analysing health interventions through their target, action and means. It can help describe what intervention is delivered in a consistent way. Pinnacle’s dossier describes ICHI intervention coding within its architecture.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+SNOMED CT — SNOMED CT clinical terminology: SNOMED International. A detailed clinical terminology that represents information through concepts, descriptions and relationships. It supports consistent meaning in electronic clinical records. Pinnacle’s dossier describes SNOMED CT terminology alignment. SNOMED International is the responsible organisation.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
 # Pinnacle purpose and developmental pathway
 
 Every child deserves a wonderful life.
 Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs.
 
+17 domains. 79 abilities. 349 skills.
+A broad view of development, organised into abilities and skills that can inform a child-specific plan. The direction is practical: what helps this child communicate, learn, manage daily routines and take part in life?
+17 Developmental domains: The broad areas considered in Pinnacle’s framework.
+79 Abilities: The capabilities the framework helps organise.
+349 Skills: More detailed skills to connect with individual goals.
+591 observations · AbilityScore® 0–1000
+The company-described observation framework and score support a starting point and subsequent progress review. A child’s plan selects relevant priorities; the totals do not mean every child needs every intervention.
+Pinnacle-defined architecture: company walkthrough, page 26; September handout, pages 5–6. The standards below supply classification and terminology; WHO does not define these numerical totals. An item-level domain–ability–skill crosswalk has not been independently audited in this review.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+
+Different starting points. Meaningful everyday goals.
+Families may arrive with questions about autism, ADHD, communication, sensory processing, movement, learning or other developmental concerns. Pinnacle’s stated purpose centres on the capabilities that help each child grow toward self-sufficiency and participate in mainstream life, with the support and accommodations they need.
+Communication and choice: Express a need, make a choice and connect with other people.
+Daily-life independence: Build participation in familiar routines and practise useful daily-living skills.
+Learning and belonging: Take part in school, relationships and community with appropriate support.
+These are examples of individual goals, not promised results. Professional assessment identifies the support appropriate to each child; diagnosis and medical care remain important where indicated. The licensed software’s scope is non-diagnostic developmental support for ages 0–12, not treatment of every condition.
+
 1. Understand the child’s abilities — AbilityScore® · 0–1000
-Begin with what the child can do, their interests and the everyday situations where support would help. The company walkthrough describes 79 abilities, 349 skills, 17 domains and 591 observations, with AbilityScore on a 0–1000 scale. These are different layers of the framework.
+Begin with what the child can do, their interests and the everyday situations where support would help. Pinnacle describes 17 developmental domains, 79 abilities and 349 skills, supported by 591 observations and an AbilityScore on a 0–1000 scale. These are different layers of its developmental framework.
 For the family: A starting point the family and care team can discuss together.
 Source: Company walkthrough, page 26; September handout, pages 5–6; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
 
@@ -1283,18 +1321,61 @@ For the family: A wonderful life defined with the child and family, including th
 Source: BIS licence schedule, page 2; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
 
 This is Pinnacle’s documented developmental-support approach. PinnacleAI GPT-OS v1.0.0 is a non-diagnostic Class B SaMD for ages 0–12 under the supplied MD-5. A programme, score or licence does not guarantee independence, school entry or a particular outcome. Inclusion is a right; it is not conditional on a score.
-The company walkthrough labels 79 abilities, 349 skills, 17 domains and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.
+The company walkthrough labels 17 domains, 79 abilities, 349 skills and 591 observations as different layers. The September 2026 handout also describes 349 skills, 17 domains and 591 observations. The earlier Whitebook uses 344 skills across six domains. The dossier acknowledges architecture changes, but a complete crosswalk between versions was not supplied. Newer counts should not be attached retrospectively to validation of an older version.
+
+ICD-11 · health information
+World Health Organization
+A common classification and clinical terminology for recording, comparing and aggregating health information. It gives health-related records a consistent reference language.
+Pinnacle’s dossier describes ICD-11 reference alignment; this does not make the software diagnostic.
+https://www.who.int/standards/classifications/classification-of-diseases
 
 ICF · functioning and participation
-WHO’s ICF gives a framework for functioning, activities, participation and environmental context. It helps explain why the child’s everyday life belongs at the centre of developmental goals.
+World Health Organization
+A framework covering body functions and structures, activities, participation and environmental context. It helps keep daily life and the support needed to participate in view.
+Pinnacle’s handout and dossier describe ICF mappings. The dossier’s b-code examples describe body functions; activity, participation and environment need their own relevant codes.
 https://www.who.int/classifications/international-classification-of-functioning-disability-and-health
 
-ICD-11 · consistent health information
-WHO’s ICD-11 provides a shared language for recording and comparing health information. Consistent definitions can support clinical records, health-system planning and responsible analysis across settings.
-https://www.who.int/standards/classifications/classification-of-diseases
+ICHI · health interventions
+World Health Organization
+A classification for recording and analysing health interventions through their target, action and means. It can help describe what intervention is delivered in a consistent way.
+Pinnacle’s dossier describes ICHI intervention coding within its architecture.
+https://www.who.int/standards/classifications/international-classification-of-health-interventions
+
+SNOMED CT · clinical terminology
+SNOMED International
+A detailed clinical terminology that represents information through concepts, descriptions and relationships. It supports consistent meaning in electronic clinical records.
+Pinnacle’s dossier describes SNOMED CT terminology alignment. SNOMED International is the responsible organisation.
+https://www.snomed.org/what-is-snomed-ct
+
+Pinnacle’s framework, connected to international languages
+The Evidence Dossier describes mappings to ICD-11, ICF and ICHI, alongside SNOMED CT and LOINC terminology and HL7 FHIR representations. These are company-described architecture and mapping claims. Correctly implemented mappings can support more consistent records, exchange and analysis across settings.
+The reviewed evidence does not include a complete item-by-item mapping audit or implementation-conformance report. Classification alignment does not establish WHO, UN or SNOMED endorsement, validate the developmental score, or expand the MD-5 intended use.
+Source: Evidence Dossier, pages 45–46, 84 and 86; September handout, pages 6 and 8; https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+A population-scale ambition. One child’s life at the centre.
+Pinnacle describes a connected developmental-support architecture designed for wider deployment: a common framework, a persistent child-specific record, guided daily practice and human review. Its potential value at scale is continuity—helping families and professionals work from the same developmental direction across home, therapy and school.
+What makes “sovereign-ready” and “world-ready” meaningful?
+For a health system, sovereign readiness means demonstrable control over data and operations under its own governance requirements. International readiness also needs validated mappings, appropriate local language and workflows, applicable regulatory permissions, and evidence of safe, useful performance in that setting.
+Local control and accountability: Document hosting location, data-controller responsibilities, lawful use, consent, access controls and audit trails.
+Interoperability in practice: Validate the mappings and test information exchange with the systems that will actually use it.
+Capacity and real-world value: Test deployment performance, accessibility and child-centred outcomes in the intended population and setting.
+The reviewed MD-5 and BIS scope establish specific regulatory and quality-system foundations. Reported network activity and information-security records add context. Together they support examining the deployment proposition; they are not a sovereign-grade certification or authorisation to operate in every country.
+The reported 2.7 billion+ structured records count database rows and events. They do not establish a nationally representative population, verified AI-training volume or population-level clinical effectiveness.
 
 SDG mission connections: 3 — Health and well-being; A mission to make developmental support clearer and more accessible to families. https://sdgs.un.org/goals/goal3
 4 — Quality education; Early development, inclusive learning and support that helps children participate in education. https://sdgs.un.org/goals/goal4
 10 — Reduced inequalities; Participation and inclusion, including for children with disabilities and their families. https://sdgs.un.org/goals/goal10
 17 — Partnerships for the goals; A direction for accountable collaboration. Specific partnership achievements require named agreements and measured contributions. https://sdgs.un.org/goals/goal17
-Company-published ICD-11/ICF alignment has not been independently audited in this review. No WHO or UN endorsement is established.
+
+Parents are explicitly included in the licensed intended use.
+“The software is intended to assist parents, therapists, educators, and caregivers by providing developmental ability measurement, readiness tracking, progress forecasting, and adaptive therapy-plan support for children aged 0–12 years.”
+MD-5 MFG/MD/2026/000248 · intended-use annexure · 21 April 2026
+Bring guided developmental practice into everyday life. The licensed intended use names parents and caregivers alongside therapists and educators. Families have an explicit role in using the software’s developmental-support functions, with goals and guidance appropriate to their child.
+Pinnacle’s Everyday Therapy programme and Fusion Module describe how that participation connects with daily practice, feedback and professional review. The BIS schedule names parent, family and caregiver tracking and correction as part of the connected developmental journey.
+The intended use identifies whom the software assists and what it supports. It does not confer professional therapist credentials, register a home as a therapy centre or replace appropriate clinical care. A worldwide exclusivity claim is not established by these documents.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+BIS schedule — software and developmental-module scope
+“Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.”
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+No WHO or UN endorsement is established.
