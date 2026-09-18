@@ -38,7 +38,7 @@ const metrics = require('./metrics-content.cjs')({e,icon});
 const hfr = require('./hfr-content.cjs')({e,icon});
 const world = require('./world-content.cjs')({e,icon,origin});
 impact.scale=impact.scale.replace('<details class="context-disclosure">',world.observations+'<details class="context-disclosure">');
-impact.regulatory=impact.regulatory.replace('<div class="licensed-functions">',world.scope+'<div class="licensed-functions">');
+impact.regulatory=impact.regulatory.replace('<div class="licensed-functions">',world.parentRole+world.scope+'<div class="licensed-functions">');
 for (const r of records) r.familyMeaning = impact.data.familyMeaning[r.id];
 const familyMeaning = r => r.familyMeaning ? `<div class="record-family"><span class="section-icon">${icon('users')}</span><div><h4>What this means for your family</h4><p>${e(r.familyMeaning)}</p></div></div>` : '';
 const reviewLabel = r => r.reviewLabel || labels[r.status];
