@@ -13,8 +13,9 @@ The authorised public `/verify/` route is indexable. The page describes document
 
 - `content/`: page template, source-linked statistics, international context, the complete supplied HFR inventory, review conclusions and terminology.
 - `scripts/`: static content builders and semantic markup generated from visible page content.
-- `dist/`: 41 HTML pages, 33 permanent evidence records, reviewed public document copies, centre and statistics registers, metadata, a sitemap, and readable JSON/text exports.
-- `dist/evidence/section-index.json`: all 337 meaningful page blocks and their source links, including 177 blocks across 19 homepage sections.
+- `dist/`: 42 HTML pages, 34 permanent evidence records, reviewed public document copies, centre and statistics registers, metadata, a sitemap, and readable JSON/text exports.
+- `dist/evidence/section-index.json`: all 368 meaningful page blocks and their source links, including 195 blocks across 21 homepage sections.
+- Three responsive Pinnacle World illustrations, the authentic emblem, image descriptions and image metadata. Original generation prompts are recorded in content/image-provenance.json.
 - `assets/lucide/`: pinned SVG icons and licence information.
 - `.openai/hosting.json`: Sites deployment configuration.
 
