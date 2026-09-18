@@ -43,8 +43,8 @@
     "title": "Centre evidence: match each document to its premises",
     "icon": "map-pin",
     "label": "Source review recorded",
-    "finding": "Centre evidence is reported by document, institution, printed period and review level: 28 HFR entries, eight district summaries and four individually inspected district originals.",
-    "boundary": "Nellore’s reviewed period ended on 30 October 2024. The two Tirupati HFR identifiers remain separate until their addresses are reconciled.",
+    "finding": "All 52 workbook centres are included. Across the workbook and inspected certificate copies, 53 distinct HFR identifiers are retained. Eight district summaries and four individually inspected district originals remain separate.",
+    "boundary": "Workbook RS flags do not establish operational or HFR status. Nellore’s district certificate period ended on 30 October 2024. The additional Tirupati certificate is retained without assuming replacement or cancellation.",
     "id": "centres"
   },
   {
