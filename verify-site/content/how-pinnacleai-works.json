@@ -1,0 +1,185 @@
+{
+  "reviewed": "2026-09-19",
+  "title": "Your observations shape the next plan.",
+  "intro": "PinnacleAI® connects measurement, a child-specific plan, guided everyday practice and feedback. The purpose is practical: help the child build abilities that matter at home, in school and in everyday life.",
+  "modules": [
+    {
+      "name": "AbilityScore®",
+      "verb": "Understand",
+      "icon": "scan-eye",
+      "text": "Bring observations into a structured view of the child’s present abilities and readiness.",
+      "record": "methodology"
+    },
+    {
+      "name": "Personal Development Kernel + Prognose®",
+      "verb": "Plan",
+      "icon": "clipboard-list",
+      "text": "Connect this child’s history, goals and responses to the next recommendations.",
+      "record": "dossier"
+    },
+    {
+      "name": "TherapeuticAI® + Everyday Therapy™",
+      "verb": "Practise",
+      "icon": "house",
+      "text": "Turn goals into guided activities that the care team and family can put into practice.",
+      "record": "september-handout"
+    },
+    {
+      "name": "Fusion Module + reassessment",
+      "verb": "Review & adapt",
+      "icon": "rotate-ccw",
+      "text": "Bring people’s feedback into review, adjust the plan and reassess progress over time.",
+      "record": "bis"
+    }
+  ],
+  "continuity": "One child’s history connects each cycle. What the family and professionals observe today informs what they review next.",
+  "details": [
+    {
+      "id": "family-observations",
+      "question": "Where do parents and the care team fit?",
+      "answer": "Parents and caregivers contribute observations from everyday life; therapists and educators bring the context they see. The MD-5 intended use explicitly names parents, therapists, educators and caregivers. Their participation connects home routines with professional support.",
+      "note": "The reviewed dossier describes the clinical AbilityScore® as clinician-administered and clinically governed. A family questionnaire should therefore be distinguished from the clinical assessment and score.",
+      "sources": [
+        {
+          "record": "md5",
+          "label": "MD-5 · intended-use annexure"
+        },
+        {
+          "record": "dossier",
+          "label": "Evidence Dossier · page 40"
+        }
+      ]
+    },
+    {
+      "id": "personal-development-kernel",
+      "question": "What is the Personal Development Kernel?",
+      "answer": "It is the child-specific developmental record described in Pinnacle’s architecture: measurements, goals, responses to activities, environment and history stay connected. That record informs subsequent recommendations, so the next plan can take earlier experience into account.",
+      "note": "For a family, the useful question is simple: how did what we observed last time change what we will do next?",
+      "sources": [
+        {
+          "record": "dossier",
+          "label": "Evidence Dossier · pages 48–49"
+        },
+        {
+          "record": "methodology",
+          "label": "Methodology preprint · page 3"
+        }
+      ]
+    },
+    {
+      "id": "goals-to-everyday-practice",
+      "question": "How does a goal become everyday practice?",
+      "answer": "The documented programme connects selected activities to the child’s goals and abilities. The September handout describes 7–9 daily techniques and a four-day therapy forecast. The methodology preprint describes programmes delivered four days ahead, giving families time to prepare.",
+      "note": "The care team should explain the selected activities, demonstration and support appropriate to the child. Programme counts in different publications vary; the agreed individual plan determines what to practise.",
+      "sources": [
+        {
+          "record": "september-handout",
+          "label": "September handout · pages 5–7"
+        },
+        {
+          "record": "methodology",
+          "label": "Methodology preprint · page 3"
+        }
+      ]
+    },
+    {
+      "id": "feedback-changes-plan",
+      "question": "What happens when an activity is too hard or does not engage the child?",
+      "answer": "That experience is useful feedback. The methodology preprint describes 1–9-star technique ratings feeding the Personal Development Kernel. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module. This makes review of the plan part of the described workflow. The dossier describes human oversight of recommendations; technique selection is not left to the system alone.",
+      "note": "Illustrative example: the family records difficulty with an agreed communication activity; the care team reviews the observation, adjusts the activity or support, and reviews the response at the next check. This explains the feedback loop; it is not a patient case or a promised result.",
+      "sources": [
+        {
+          "record": "methodology",
+          "label": "Methodology preprint · page 3"
+        },
+        {
+          "record": "sovereign-walkthrough",
+          "label": "Company walkthrough · page 35"
+        },
+        {
+          "record": "bis",
+          "label": "BIS schedule · tracking and correction scope"
+        },
+        {
+          "record": "dossier",
+          "label": "Evidence Dossier · pages 48, 52–53"
+        }
+      ]
+    },
+    {
+      "id": "monthly-readiness-review",
+      "question": "What should the monthly review make clearer?",
+      "answer": "Compare the child’s present abilities with earlier assessments, discuss progress and difficulties, and agree the next priorities. The company walkthrough and methodology preprint describe monthly reassessment. A useful review connects the score with observable changes in the child’s daily life.",
+      "note": "The BIS scope names seven readiness indexes: School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index and Mainstream Inclusion Index. These names describe the modules; they do not promise school entry or independence.",
+      "sources": [
+        {
+          "record": "sovereign-walkthrough",
+          "label": "Company walkthrough · pages 35, 37"
+        },
+        {
+          "record": "methodology",
+          "label": "Methodology preprint · page 3"
+        },
+        {
+          "record": "bis",
+          "label": "BIS schedule · seven readiness indexes"
+        }
+      ]
+    },
+    {
+      "id": "who-can-access-the-programme",
+      "question": "Who can access the child’s programme?",
+      "answer": "The company describes parental-consent controls and role-based access for the clinical and caregiving people involved in the child’s programme. Access should support coordinated care while respecting the child and family’s privacy.",
+      "note": "The dossier documents the access model. Families can ask their care team which people have access and how permissions and consent are managed for their child.",
+      "sources": [
+        {
+          "record": "dossier",
+          "label": "Evidence Dossier · page 54"
+        }
+      ]
+    }
+  ],
+  "scope": "This explains the workflow described in the cited documents. The MD-5 establishes the intended use of a non-diagnostic Class B device for ages 0–12; the BIS schedule names the software and quality-system scope. Research methods, workflow descriptions and evidence of clinical outcomes are different types of evidence.",
+  "versionNote": "The supplied September report examples display AbilityScore® and all seven readiness indices on a 0–1000 scale; the overall cover identifies V-1.6.9.9. The older methodology preprint describes readiness indices on a 0–100 scale. These are version-specific descriptions and should not be combined without a crosswalk. The preprint also describes 400+ Personal Development Kernel data points, while the company walkthrough describes 4,000+ developmental data points; those counts need a current version-specific definition.",
+  "reportPack": {
+    "title": "One overall profile. Seven focused readiness reports.",
+    "intro": "The eight supplied report examples present an overall AbilityScore® and seven readiness indices on a 0–1000 display scale. Together, the overall profile and focused views give the family and care team a shared starting point for discussing priorities and the next plan.",
+    "reports": [
+      {
+        "name": "AbilityScore® / TherapeuticAI® report",
+        "meaning": "The overall developmental profile."
+      },
+      {
+        "name": "Speech Readiness Index",
+        "meaning": "A focused view to discuss communication priorities."
+      },
+      {
+        "name": "Behavior Readiness Index",
+        "meaning": "A focused view to discuss behaviour and participation."
+      },
+      {
+        "name": "Motor Readiness Index",
+        "meaning": "A focused view to discuss movement-related abilities."
+      },
+      {
+        "name": "Study/IQ Readiness Index",
+        "meaning": "The report’s named view of readiness for learning."
+      },
+      {
+        "name": "School Readiness Index",
+        "meaning": "A focused view to discuss preparation and support for school."
+      },
+      {
+        "name": "Self-Sufficiency Index",
+        "meaning": "A focused view to discuss growing everyday independence."
+      },
+      {
+        "name": "Mainstream Readiness Index",
+        "meaning": "A focused view to discuss participation with other people."
+      }
+    ],
+    "review": "Report titles checked against eight supplied examples on 19 September 2026. The overall report cover identifies version V-1.6.9.9. This is a review of report format, not an independent study of outcomes.",
+    "privacy": "This public guide describes the report structure. Children’s identities, individual results and original reports remain private.",
+    "interpretation": "Each index report includes an “Assessment By” field. Read the results with the assessment context and care-team explanation. Readiness-index titles are not diagnoses; the Study/IQ Readiness title should not be read as an independently established IQ test."
+  }
+}

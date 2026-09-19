@@ -91,13 +91,135 @@
           "parent": null,
           "description": "Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. The practical question is: “What can my child do now, what support will help next, and how will we understand progress?”",
           "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html"
+          ]
+        },
+        {
+          "id": "how-pinnacleai-works",
+          "name": "Your observations shape the next plan.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works",
+          "kind": "article",
+          "parent": "care",
+          "description": "PinnacleAI® connects measurement, a child-specific plan, guided everyday practice and feedback. The purpose is practical: help the child build abilities that matter at home, in school and in everyday life.",
+          "text": "HOW PINNACLEAI® WORKS Your observations shape the next plan. PinnacleAI® connects measurement, a child-specific plan, guided everyday practice and feedback. The purpose is practical: help the child build abilities that matter at home, in school and in everyday life. 01 · Understand AbilityScore® Bring observations into a structured view of the child’s present abilities and readiness. 02 · Plan Personal Development Kernel + Prognose® Connect this child’s history, goals and responses to the next recommendations. 03 · Practise TherapeuticAI® + Everyday Therapy™ Turn goals into guided activities that the care team and family can put into practice. 04 · Review & adapt Fusion Module + reassessment Bring people’s feedback into review, adjust the plan and reassess progress over time. One child’s history connects each cycle. What the family and professionals observe today informs what they review next. Explore the part that matters to you What do the child’s reports explain? One overall profile. Seven focused readiness reports. The eight supplied report examples present an overall AbilityScore® and seven readiness indices on a 0–1000 display scale. Together, the overall profile and focused views give the family and care team a shared starting point for discussing priorities and the next plan. AbilityScore® / TherapeuticAI® report The overall developmental profile. Speech Readiness Index A focused view to discuss communication priorities. Behavior Readiness Index A focused view to discuss behaviour and participation. Motor Readiness Index A focused view to discuss movement-related abilities. Study/IQ Readiness Index The report’s named view of readiness for learning. School Readiness Index A focused view to discuss preparation and support for school. Self-Sufficiency Index A focused view to discuss growing everyday independence. Mainstream Readiness Index A focused view to discuss participation with other people. Each index report includes an “Assessment By” field. Read the results with the assessment context and care-team explanation. Readiness-index titles are not diagnoses; the Study/IQ Readiness title should not be read as an independently established IQ test. Report titles checked against eight supplied examples on 19 September 2026. The overall report cover identifies version V-1.6.9.9. This is a review of report format, not an independent study of outcomes. This public guide describes the report structure. Children’s identities, individual results and original reports remain private. Where do parents and the care team fit? Parents and caregivers contribute observations from everyday life; therapists and educators bring the context they see. The MD-5 intended use explicitly names parents, therapists, educators and caregivers. Their participation connects home routines with professional support. The reviewed dossier describes the clinical AbilityScore® as clinician-administered and clinically governed. A family questionnaire should therefore be distinguished from the clinical assessment and score. MD-5 · intended-use annexure Evidence Dossier · page 40 What is the Personal Development Kernel? It is the child-specific developmental record described in Pinnacle’s architecture: measurements, goals, responses to activities, environment and history stay connected. That record informs subsequent recommendations, so the next plan can take earlier experience into account. For a family, the useful question is simple: how did what we observed last time change what we will do next? Evidence Dossier · pages 48–49 Methodology preprint · page 3 How does a goal become everyday practice? The documented programme connects selected activities to the child’s goals and abilities. The September handout describes 7–9 daily techniques and a four-day therapy forecast. The methodology preprint describes programmes delivered four days ahead, giving families time to prepare. The care team should explain the selected activities, demonstration and support appropriate to the child. Programme counts in different publications vary; the agreed individual plan determines what to practise. September handout · pages 5–7 Methodology preprint · page 3 What happens when an activity is too hard or does not engage the child? That experience is useful feedback. The methodology preprint describes 1–9-star technique ratings feeding the Personal Development Kernel. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module. This makes review of the plan part of the described workflow. The dossier describes human oversight of recommendations; technique selection is not left to the system alone. Illustrative example: the family records difficulty with an agreed communication activity; the care team reviews the observation, adjusts the activity or support, and reviews the response at the next check. This explains the feedback loop; it is not a patient case or a promised result. Methodology preprint · page 3 Company walkthrough · page 35 BIS schedule · tracking and correction scope Evidence Dossier · pages 48, 52–53 What should the monthly review make clearer? Compare the child’s present abilities with earlier assessments, discuss progress and difficulties, and agree the next priorities. The company walkthrough and methodology preprint describe monthly reassessment. A useful review connects the score with observable changes in the child’s daily life. The BIS scope names seven readiness indexes: School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index and Mainstream Inclusion Index. These names describe the modules; they do not promise school entry or independence. Company walkthrough · pages 35, 37 Methodology preprint · page 3 BIS schedule · seven readiness indexes Who can access the child’s programme? The company describes parental-consent controls and role-based access for the clinical and caregiving people involved in the child’s programme. Access should support coordinated care while respecting the child and family’s privacy. The dossier documents the access model. Families can ask their care team which people have access and how permissions and consent are managed for their child. Evidence Dossier · page 54 This explains the workflow described in the cited documents. The MD-5 establishes the intended use of a non-diagnostic Class B device for ages 0–12; the BIS schedule names the software and quality-system scope. Research methods, workflow descriptions and evidence of clinical outcomes are different types of evidence. Licensed intended use Named software modules Methods, studies and research status Document versions and measurement detail The supplied September report examples display AbilityScore® and all seven readiness indices on a 0–1000 scale; the overall cover identifies V-1.6.9.9. The older methodology preprint describes readiness indices on a 0–100 scale. These are version-specific descriptions and should not be combined without a crosswalk. The preprint also describes 400+ Personal Development Kernel data points, while the company walkthrough describes 4,000+ developmental data points; those counts need a current version-specific definition. Methodology preprint · page 3 Company walkthrough · page 35",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html"
+          ]
+        },
+        {
+          "id": "child-report-pack",
+          "name": "One overall profile. Seven focused readiness reports.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#child-report-pack",
+          "kind": "details",
+          "parent": "how-pinnacleai-works",
+          "description": "The eight supplied report examples present an overall AbilityScore® and seven readiness indices on a 0–1000 display scale. Together, the overall profile and focused views give the family and care team a shared starting point for discussing priorities and the next plan.",
+          "text": "What do the child’s reports explain? One overall profile. Seven focused readiness reports. The eight supplied report examples present an overall AbilityScore® and seven readiness indices on a 0–1000 display scale. Together, the overall profile and focused views give the family and care team a shared starting point for discussing priorities and the next plan. AbilityScore® / TherapeuticAI® report The overall developmental profile. Speech Readiness Index A focused view to discuss communication priorities. Behavior Readiness Index A focused view to discuss behaviour and participation. Motor Readiness Index A focused view to discuss movement-related abilities. Study/IQ Readiness Index The report’s named view of readiness for learning. School Readiness Index A focused view to discuss preparation and support for school. Self-Sufficiency Index A focused view to discuss growing everyday independence. Mainstream Readiness Index A focused view to discuss participation with other people. Each index report includes an “Assessment By” field. Read the results with the assessment context and care-team explanation. Readiness-index titles are not diagnoses; the Study/IQ Readiness title should not be read as an independently established IQ test. Report titles checked against eight supplied examples on 19 September 2026. The overall report cover identifies version V-1.6.9.9. This is a review of report format, not an independent study of outcomes. This public guide describes the report structure. Children’s identities, individual results and original reports remain private.",
+          "citations": []
+        },
+        {
+          "id": "family-observations",
+          "name": "Where do parents and the care team fit?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#family-observations",
+          "kind": "details",
+          "parent": "how-pinnacleai-works",
+          "description": "Parents and caregivers contribute observations from everyday life; therapists and educators bring the context they see. The MD-5 intended use explicitly names parents, therapists, educators and caregivers. Their participation connects home routines with professional support.",
+          "text": "Where do parents and the care team fit? Parents and caregivers contribute observations from everyday life; therapists and educators bring the context they see. The MD-5 intended use explicitly names parents, therapists, educators and caregivers. Their participation connects home routines with professional support. The reviewed dossier describes the clinical AbilityScore® as clinician-administered and clinically governed. A family questionnaire should therefore be distinguished from the clinical assessment and score. MD-5 · intended-use annexure Evidence Dossier · page 40",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
+        },
+        {
+          "id": "personal-development-kernel",
+          "name": "What is the Personal Development Kernel?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#personal-development-kernel",
+          "kind": "details",
+          "parent": "how-pinnacleai-works",
+          "description": "It is the child-specific developmental record described in Pinnacle’s architecture: measurements, goals, responses to activities, environment and history stay connected. That record informs subsequent recommendations, so the next plan can take earlier experience into account.",
+          "text": "What is the Personal Development Kernel? It is the child-specific developmental record described in Pinnacle’s architecture: measurements, goals, responses to activities, environment and history stay connected. That record informs subsequent recommendations, so the next plan can take earlier experience into account. For a family, the useful question is simple: how did what we observed last time change what we will do next? Evidence Dossier · pages 48–49 Methodology preprint · page 3",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html"
+          ]
+        },
+        {
+          "id": "goals-to-everyday-practice",
+          "name": "How does a goal become everyday practice?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#goals-to-everyday-practice",
+          "kind": "details",
+          "parent": "how-pinnacleai-works",
+          "description": "The documented programme connects selected activities to the child’s goals and abilities. The September handout describes 7–9 daily techniques and a four-day therapy forecast. The methodology preprint describes programmes delivered four days ahead, giving families time to prepare.",
+          "text": "How does a goal become everyday practice? The documented programme connects selected activities to the child’s goals and abilities. The September handout describes 7–9 daily techniques and a four-day therapy forecast. The methodology preprint describes programmes delivered four days ahead, giving families time to prepare. The care team should explain the selected activities, demonstration and support appropriate to the child. Programme counts in different publications vary; the agreed individual plan determines what to practise. September handout · pages 5–7 Methodology preprint · page 3",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html"
+          ]
+        },
+        {
+          "id": "feedback-changes-plan",
+          "name": "What happens when an activity is too hard or does not engage the child?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#feedback-changes-plan",
+          "kind": "details",
+          "parent": "how-pinnacleai-works",
+          "description": "That experience is useful feedback. The methodology preprint describes 1–9-star technique ratings feeding the Personal Development Kernel. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module. This makes review of the plan part of the described workflow. The dossier describes human oversight of recommendations; technique selection is not left to the system alone.",
+          "text": "What happens when an activity is too hard or does not engage the child? That experience is useful feedback. The methodology preprint describes 1–9-star technique ratings feeding the Personal Development Kernel. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module. This makes review of the plan part of the described workflow. The dossier describes human oversight of recommendations; technique selection is not left to the system alone. Illustrative example: the family records difficulty with an agreed communication activity; the care team reviews the observation, adjusts the activity or support, and reviews the response at the next check. This explains the feedback loop; it is not a patient case or a promised result. Methodology preprint · page 3 Company walkthrough · page 35 BIS schedule · tracking and correction scope Evidence Dossier · pages 48, 52–53",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
+        },
+        {
+          "id": "monthly-readiness-review",
+          "name": "What should the monthly review make clearer?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#monthly-readiness-review",
+          "kind": "details",
+          "parent": "how-pinnacleai-works",
+          "description": "Compare the child’s present abilities with earlier assessments, discuss progress and difficulties, and agree the next priorities. The company walkthrough and methodology preprint describe monthly reassessment. A useful review connects the score with observable changes in the child’s daily life.",
+          "text": "What should the monthly review make clearer? Compare the child’s present abilities with earlier assessments, discuss progress and difficulties, and agree the next priorities. The company walkthrough and methodology preprint describe monthly reassessment. A useful review connects the score with observable changes in the child’s daily life. The BIS scope names seven readiness indexes: School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index and Mainstream Inclusion Index. These names describe the modules; they do not promise school entry or independence. Company walkthrough · pages 35, 37 Methodology preprint · page 3 BIS schedule · seven readiness indexes",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "who-can-access-the-programme",
+          "name": "Who can access the child’s programme?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#who-can-access-the-programme",
+          "kind": "details",
+          "parent": "how-pinnacleai-works",
+          "description": "The company describes parental-consent controls and role-based access for the clinical and caregiving people involved in the child’s programme. Access should support coordinated care while respecting the child and family’s privacy.",
+          "text": "Who can access the child’s programme? The company describes parental-consent controls and role-based access for the clinical and caregiving people involved in the child’s programme. Access should support coordinated care while respecting the child and family’s privacy. The dossier documents the access model. Families can ask their care team which people have access and how permissions and consent are managed for their child. Evidence Dossier · page 54",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
+        },
+        {
+          "id": "workflow-document-versions",
+          "name": "Document versions and measurement detail",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#workflow-document-versions",
+          "kind": "details",
+          "parent": "how-pinnacleai-works",
+          "description": "The supplied September report examples display AbilityScore® and all seven readiness indices on a 0–1000 scale; the overall cover identifies V-1.6.9.9. The older methodology preprint describes readiness indices on a 0–100 scale. These are version-specific descriptions and should not be combined without a crosswalk. The preprint also describes 400+ Personal Development Kernel data points, while the company walkthrough describes 4,000+ developmental data points; those counts need a current version-specific definition.",
+          "text": "Document versions and measurement detail The supplied September report examples display AbilityScore® and all seven readiness indices on a 0–1000 scale; the overall cover identifies V-1.6.9.9. The older methodology preprint describes readiness indices on a 0–100 scale. These are version-specific descriptions and should not be combined without a crosswalk. The preprint also describes 400+ Personal Development Kernel data points, while the company walkthrough describes 4,000+ developmental data points; those counts need a current version-specific definition. Methodology preprint · page 3 Company walkthrough · page 35",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
           ]
         },
         {
@@ -140,11 +262,27 @@
           ]
         },
         {
+          "id": "full-developmental-journey",
+          "name": "01 Understand the child’s abilities",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#full-developmental-journey",
+          "kind": "details",
+          "parent": "care",
+          "description": "AbilityScore® · 0–1000",
+          "text": "Explore all seven stages and their sources AbilityScore® · 0–1000 01 Understand the child’s abilities Begin with what the child can do, their interests and the everyday situations where support would help. Pinnacle describes 17 developmental domains, 79 abilities and 349 skills, supported by 591 observations and an AbilityScore on a 0–1000 scale. These are different layers of its developmental framework. For the family: A starting point the family and care team can discuss together. Company walkthrough, page 26; September handout, pages 5–6 Prognose® + personal development kernel 02 Build a child-specific direction Connect the observed abilities with priorities, readiness goals and a plan for this child. The dossier describes a personal development kernel: a persistent child-specific record of measurements, responses to techniques, environment and history that informs subsequent recommendations. For the family: Clarity about what to work on next, why it matters and who will help. Evidence Dossier, pages 48–49; BIS schedule, page 2 TherapeuticAI® + human oversight 03 Coordinate professional support Use the plan to coordinate appropriate therapies and intervention. Pinnacle describes practitioners, parents, caregivers and educators contributing to the programme; software supports professional judgement and shared goals. For the family: People working from an agreed direction across the child’s support team. September handout, pages 5–7; MD-5 intended use Everyday Therapy™ · 7–9 techniques a day 04 Make the plan part of everyday life The September handout describes 7–9 techniques selected for the child’s programme each day. Parents and other caregivers receive guidance for practice connected to the child’s current abilities and goals; the care team agrees what is appropriate. For the family: A practical way to carry support into home routines and other everyday settings. September handout, pages 5–7 Fusion Module · people in the loop 05 Observe, track and correct Record how practice goes and bring observations from the family and professionals back into review. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module. For the family: A plan that can respond when an activity, setting or support needs to change. BIS licence schedule, page 2 Monthly AbilityScore refresh + progress review 06 Reassess and explain the trajectory Compare the child’s present abilities with their own earlier assessments and review the next priorities. The company walkthrough describes a monthly AbilityScore refresh; the Whitebook also describes monthly review. The care team should explain the schedule and any child-specific changes. For the family: An understandable record of change over time, connected to daily-life goals—not a judgement of the child’s worth. Company walkthrough, pages 35, 37; Whitebook, page 12 Readiness indexes + real-life goals 07 Grow toward self-sufficiency and participation Work toward communication, daily living, learning, relationships and participation in school and community. The BIS scope names seven readiness indexes, including Self Sufficiency and Mainstream Inclusion. Continue reassessment and support as needs change. For the family: A wonderful life defined with the child and family, including the supports that make participation possible. BIS licence schedule, page 2",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
           "id": "care-measure",
           "name": "01 Understand the child’s abilities",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-measure",
           "kind": "li",
-          "parent": "care",
+          "parent": "full-developmental-journey",
           "description": "AbilityScore® · 0–1000",
           "text": "AbilityScore® · 0–1000 01 Understand the child’s abilities Begin with what the child can do, their interests and the everyday situations where support would help. Pinnacle describes 17 developmental domains, 79 abilities and 349 skills, supported by 591 observations and an AbilityScore on a 0–1000 scale. These are different layers of its developmental framework. For the family: A starting point the family and care team can discuss together. Company walkthrough, page 26; September handout, pages 5–6",
           "citations": [
@@ -156,7 +294,7 @@
           "name": "02 Build a child-specific direction",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-plan",
           "kind": "li",
-          "parent": "care",
+          "parent": "full-developmental-journey",
           "description": "Prognose® + personal development kernel",
           "text": "Prognose® + personal development kernel 02 Build a child-specific direction Connect the observed abilities with priorities, readiness goals and a plan for this child. The dossier describes a personal development kernel: a persistent child-specific record of measurements, responses to techniques, environment and history that informs subsequent recommendations. For the family: Clarity about what to work on next, why it matters and who will help. Evidence Dossier, pages 48–49; BIS schedule, page 2",
           "citations": [
@@ -168,7 +306,7 @@
           "name": "03 Coordinate professional support",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-coordinate",
           "kind": "li",
-          "parent": "care",
+          "parent": "full-developmental-journey",
           "description": "TherapeuticAI® + human oversight",
           "text": "TherapeuticAI® + human oversight 03 Coordinate professional support Use the plan to coordinate appropriate therapies and intervention. Pinnacle describes practitioners, parents, caregivers and educators contributing to the programme; software supports professional judgement and shared goals. For the family: People working from an agreed direction across the child’s support team. September handout, pages 5–7; MD-5 intended use",
           "citations": [
@@ -180,7 +318,7 @@
           "name": "04 Make the plan part of everyday life",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-practise",
           "kind": "li",
-          "parent": "care",
+          "parent": "full-developmental-journey",
           "description": "Everyday Therapy™ · 7–9 techniques a day",
           "text": "Everyday Therapy™ · 7–9 techniques a day 04 Make the plan part of everyday life The September handout describes 7–9 techniques selected for the child’s programme each day. Parents and other caregivers receive guidance for practice connected to the child’s current abilities and goals; the care team agrees what is appropriate. For the family: A practical way to carry support into home routines and other everyday settings. September handout, pages 5–7",
           "citations": [
@@ -192,7 +330,7 @@
           "name": "05 Observe, track and correct",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-correct",
           "kind": "li",
-          "parent": "care",
+          "parent": "full-developmental-journey",
           "description": "Fusion Module · people in the loop",
           "text": "Fusion Module · people in the loop 05 Observe, track and correct Record how practice goes and bring observations from the family and professionals back into review. The BIS schedule names parent, family, caregiver, therapist and clinical tracking and correction through the Fusion Module. For the family: A plan that can respond when an activity, setting or support needs to change. BIS licence schedule, page 2",
           "citations": [
@@ -204,7 +342,7 @@
           "name": "06 Reassess and explain the trajectory",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-reassess",
           "kind": "li",
-          "parent": "care",
+          "parent": "full-developmental-journey",
           "description": "Monthly AbilityScore refresh + progress review",
           "text": "Monthly AbilityScore refresh + progress review 06 Reassess and explain the trajectory Compare the child’s present abilities with their own earlier assessments and review the next priorities. The company walkthrough describes a monthly AbilityScore refresh; the Whitebook also describes monthly review. The care team should explain the schedule and any child-specific changes. For the family: An understandable record of change over time, connected to daily-life goals—not a judgement of the child’s worth. Company walkthrough, pages 35, 37; Whitebook, page 12",
           "citations": [
@@ -216,7 +354,7 @@
           "name": "07 Grow toward self-sufficiency and participation",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care-participate",
           "kind": "li",
-          "parent": "care",
+          "parent": "full-developmental-journey",
           "description": "Readiness indexes + real-life goals",
           "text": "Readiness indexes + real-life goals 07 Grow toward self-sufficiency and participation Work toward communication, daily living, learning, relationships and participation in school and community. The BIS scope names seven readiness indexes, including Self Sufficiency and Mainstream Inclusion. Continue reassessment and support as needs change. For the family: A wonderful life defined with the child and family, including the supports that make participation possible. BIS licence schedule, page 2",
           "citations": [

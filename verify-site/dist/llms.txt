@@ -61,6 +61,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Bibliography](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.txt): readable citations with research-stage labels.
 
 ## Purpose and developmental pathway
+- [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.
 - [Seven-stage journey](https://pinnacle-verify.saripalli.chatgpt.site/#care): documented measurement layers, daily practice and monthly reassessment.
 - [Pathway JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.json): the same visible description with source references.
 - [Pathway text](https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.txt): readable lifecycle and international context.
