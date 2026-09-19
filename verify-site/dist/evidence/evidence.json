@@ -637,6 +637,11 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/issuer-checks.json"
         },
         {
+          "label": "ICAI UDIN verification receipt · PDF page 2",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=2",
+          "kind": "verification-receipt"
+        },
+        {
           "label": "Independent CA claim and page map",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html"
         }
@@ -649,6 +654,16 @@
       "verificationNote": "ICAI UDIN 26200027GMBLXU4868 matched with Active status on 19 September 2026; member 200027, firm 013580S and signing date 3 September 2026 matched the source.",
       "issuerCheckedOn": "2026-09-19",
       "issuerCheckUrl": "/evidence/issuer-checks.json",
+      "issuerReceipt": {
+        "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=2",
+        "page": 2,
+        "pageCount": 2,
+        "sha256": "cef973ab3232c8fd0047c51ad2a1061d0d4b4dfd290ab6653a4ffaff51543efa",
+        "bytes": 267051,
+        "systemGeneratedAt": "19-09-2026 | 14:30:38",
+        "archivedOn": "2026-09-19",
+        "description": "Unmodified two-page ICAI portal verification PDF supplied by the owner; exact UDIN and particulars visually matched to this page."
+      },
       "familyMeaning": "A clearly defined assurance scope helps you distinguish institutional-record checks from evidence about a child’s clinical outcome.",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
       "statusLabel": "Original reviewed · UDIN matched",
@@ -679,6 +694,11 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/issuer-checks.json"
         },
         {
+          "label": "ICAI UDIN verification receipt · PDF page 1",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=1",
+          "kind": "verification-receipt"
+        },
+        {
           "label": "Independent CA claim and page map",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html"
         }
@@ -691,6 +711,16 @@
       "verificationNote": "ICAI UDIN 26200027HCNFEI9138 matched with Active status on 19 September 2026; member 200027, firm 013580S and signing date 3 September 2026 matched the source.",
       "issuerCheckedOn": "2026-09-19",
       "issuerCheckUrl": "/evidence/issuer-checks.json",
+      "issuerReceipt": {
+        "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=1",
+        "page": 1,
+        "pageCount": 2,
+        "sha256": "cef973ab3232c8fd0047c51ad2a1061d0d4b4dfd290ab6653a4ffaff51543efa",
+        "bytes": 267051,
+        "systemGeneratedAt": "19-09-2026 | 14:30:38",
+        "archivedOn": "2026-09-19",
+        "description": "Unmodified two-page ICAI portal verification PDF supplied by the owner; exact UDIN and particulars visually matched to this page."
+      },
       "familyMeaning": "Specified factual checks make the counting method more understandable; they do not supply an assurance opinion on outcomes.",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
       "statusLabel": "Original reviewed · UDIN matched",

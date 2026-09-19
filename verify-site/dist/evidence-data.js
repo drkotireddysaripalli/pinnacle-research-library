@@ -558,7 +558,17 @@ window.PINNACLE_EVIDENCE = {
       "reviewLabel": "Original reviewed · UDIN matched",
       "verificationNote": "ICAI UDIN 26200027GMBLXU4868 matched with Active status on 19 September 2026; member 200027, firm 013580S and signing date 3 September 2026 matched the source.",
       "issuerCheckedOn": "2026-09-19",
-      "issuerCheckUrl": "/evidence/issuer-checks.json"
+      "issuerCheckUrl": "/evidence/issuer-checks.json",
+      "issuerReceipt": {
+        "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=2",
+        "page": 2,
+        "pageCount": 2,
+        "sha256": "cef973ab3232c8fd0047c51ad2a1061d0d4b4dfd290ab6653a4ffaff51543efa",
+        "bytes": 267051,
+        "systemGeneratedAt": "19-09-2026 | 14:30:38",
+        "archivedOn": "2026-09-19",
+        "description": "Unmodified two-page ICAI portal verification PDF supplied by the owner; exact UDIN and particulars visually matched to this page."
+      }
     },
     {
       "id": "srs4400",
@@ -588,7 +598,17 @@ window.PINNACLE_EVIDENCE = {
       "reviewLabel": "Original reviewed · UDIN matched",
       "verificationNote": "ICAI UDIN 26200027HCNFEI9138 matched with Active status on 19 September 2026; member 200027, firm 013580S and signing date 3 September 2026 matched the source.",
       "issuerCheckedOn": "2026-09-19",
-      "issuerCheckUrl": "/evidence/issuer-checks.json"
+      "issuerCheckUrl": "/evidence/issuer-checks.json",
+      "issuerReceipt": {
+        "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=1",
+        "page": 1,
+        "pageCount": 2,
+        "sha256": "cef973ab3232c8fd0047c51ad2a1061d0d4b4dfd290ab6653a4ffaff51543efa",
+        "bytes": 267051,
+        "systemGeneratedAt": "19-09-2026 | 14:30:38",
+        "archivedOn": "2026-09-19",
+        "description": "Unmodified two-page ICAI portal verification PDF supplied by the owner; exact UDIN and particulars visually matched to this page."
+      }
     },
     {
       "id": "operating-metrics",

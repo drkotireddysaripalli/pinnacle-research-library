@@ -1,16 +1,16 @@
 /* Anek: nine Indian scripts plus Latin; other scripts use the device's fonts.
    Faces share a family and script ranges, so only rendered scripts download. */
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-latin.woff2') format('woff2');unicode-range:U+0000-024F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+25CC}
-@font-face{font-family:'Pinnacle Anek Latin';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-latin.woff2') format('woff2');unicode-range:U+0000-024F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+25CC}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-devanagari.woff2') format('woff2');unicode-range:U+0900-097F,U+1CD0-1CFF,U+A8E0-A8FF}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-bangla.woff2') format('woff2');unicode-range:U+0980-09FF}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-gurmukhi.woff2') format('woff2');unicode-range:U+0A00-0A7F}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-gujarati.woff2') format('woff2');unicode-range:U+0A80-0AFF}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-odia.woff2') format('woff2');unicode-range:U+0B00-0B7F}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-tamil.woff2') format('woff2');unicode-range:U+0B80-0BFF}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-telugu.woff2') format('woff2');unicode-range:U+0C00-0C7F}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-kannada.woff2') format('woff2');unicode-range:U+0C80-0CFF}
-@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url('/fonts/anek-malayalam.woff2') format('woff2');unicode-range:U+0D00-0D7F}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-latin.woff2) format('woff2');unicode-range:U+0000-024F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+25CC}
+@font-face{font-family:'Pinnacle Anek Latin';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-latin.woff2) format('woff2');unicode-range:U+0000-024F,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+25CC}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-devanagari.woff2) format('woff2');unicode-range:U+0900-097F,U+1CD0-1CFF,U+A8E0-A8FF}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-bangla.woff2) format('woff2');unicode-range:U+0980-09FF}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-gurmukhi.woff2) format('woff2');unicode-range:U+0A00-0A7F}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-gujarati.woff2) format('woff2');unicode-range:U+0A80-0AFF}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-odia.woff2) format('woff2');unicode-range:U+0B00-0B7F}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-tamil.woff2) format('woff2');unicode-range:U+0B80-0BFF}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-telugu.woff2) format('woff2');unicode-range:U+0C00-0C7F}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-kannada.woff2) format('woff2');unicode-range:U+0C80-0CFF}
+@font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-malayalam.woff2) format('woff2');unicode-range:U+0D00-0D7F}
 :root{--reader-scale:1;font-size:calc(100% * var(--reader-scale))}
 body,button,input,select,textarea,h1,h2,h3,h4,h5,h6,.parent-guide,.guide-lang-nav a,.guide-languages a,.chapter-number,.source-preview,.world-intro h1{font-family:'Pinnacle Anek','Nirmala UI',system-ui,sans-serif!important;font-synthesis:none}
 body{font-size:1.0625rem;font-weight:500;line-height:1.75;text-rendering:optimizeLegibility}

@@ -17,7 +17,17 @@
       "nature": "Limited assurance under SAE 3000; report says aligned with ISAE 3000 (Revised).",
       "scope": "Statement of Institutional Claims, Annexure I assertions A1-A6, B1, C1-C4, D1-D2, measured under Annexure II Board-adopted criteria.",
       "signaturePage": 3,
-      "sha256": "79353b9336ff31bdc50c2e2f1678e21c3ad67c0f06bb31605e6dd59c2b1cb979"
+      "sha256": "79353b9336ff31bdc50c2e2f1678e21c3ad67c0f06bb31605e6dd59c2b1cb979",
+      "verificationReceipt": {
+        "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=2",
+        "page": 2,
+        "pageCount": 2,
+        "sha256": "cef973ab3232c8fd0047c51ad2a1061d0d4b4dfd290ab6653a4ffaff51543efa",
+        "bytes": 267051,
+        "systemGeneratedAt": "19-09-2026 | 14:30:38",
+        "archivedOn": "2026-09-19",
+        "description": "Unmodified two-page ICAI portal verification PDF supplied by the owner; exact UDIN and particulars visually matched to this page."
+      }
     },
     {
       "id": "srs4400",
@@ -26,7 +36,17 @@
       "nature": "Agreed procedures under SRS 4400, adapted to non-financial information; factual findings with no assurance conclusion.",
       "scope": "12 annexure items; factual findings confined to those matters and company records produced.",
       "signaturePage": 2,
-      "sha256": "f969077a9175a8843112881a5918c85f9f73963a51552a6360d88d0cc0aac0e9"
+      "sha256": "f969077a9175a8843112881a5918c85f9f73963a51552a6360d88d0cc0aac0e9",
+      "verificationReceipt": {
+        "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=1",
+        "page": 1,
+        "pageCount": 2,
+        "sha256": "cef973ab3232c8fd0047c51ad2a1061d0d4b4dfd290ab6653a4ffaff51543efa",
+        "bytes": 267051,
+        "systemGeneratedAt": "19-09-2026 | 14:30:38",
+        "archivedOn": "2026-09-19",
+        "description": "Unmodified two-page ICAI portal verification PDF supplied by the owner; exact UDIN and particulars visually matched to this page."
+      }
     }
   ],
   "claims": [

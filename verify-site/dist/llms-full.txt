@@ -562,6 +562,7 @@ Source citation: Original seven-page SAE 3000 report; September handout physical
 Reviewed: 15 September 2026
 - [Verify UDIN at ICAI](https://udin.icai.org/)
 - [Dated live issuer-check record](https://pinnacle-verify.saripalli.chatgpt.site/evidence/issuer-checks.json)
+- [ICAI UDIN verification receipt · PDF page 2](https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=2)
 - [Independent CA claim and page map](https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html)
 
 ---
@@ -592,6 +593,7 @@ Source citation: Original four-page SRS 4400 report.
 Reviewed: 15 September 2026
 - [Verify UDIN at ICAI](https://udin.icai.org/)
 - [Dated live issuer-check record](https://pinnacle-verify.saripalli.chatgpt.site/evidence/issuer-checks.json)
+- [ICAI UDIN verification receipt · PDF page 1](https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=1)
 - [Independent CA claim and page map](https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html)
 
 ---
@@ -2084,11 +2086,15 @@ Independent Practitioner's Limited Assurance Report under SAE 3000
 UDIN: 26200027GMBLXU4868
 Limited assurance under SAE 3000; report says aligned with ISAE 3000 (Revised).
 Statement of Institutional Claims, Annexure I assertions A1-A6, B1, C1-C4, D1-D2, measured under Annexure II Board-adopted criteria.
+ICAI verification receipt: https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=2
+Receipt SHA-256: cef973ab3232c8fd0047c51ad2a1061d0d4b4dfd290ab6653a4ffaff51543efa
 
 Independent Chartered Accountant's Report of Factual Findings
 UDIN: 26200027HCNFEI9138
 Agreed procedures under SRS 4400, adapted to non-financial information; factual findings with no assurance conclusion.
 12 annexure items; factual findings confined to those matters and company records produced.
+ICAI verification receipt: https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf#page=1
+Receipt SHA-256: cef973ab3232c8fd0047c51ad2a1061d0d4b4dfd290ab6653a4ffaff51543efa
 
 ## Cumulative services
 Within the specified report scope
