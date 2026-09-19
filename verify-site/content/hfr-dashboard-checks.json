@@ -3,7 +3,7 @@
   "source": "NHPR / ABDM Health Facility Registry · authenticated facility-manager dashboard",
   "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
   "method": "Read all four dashboard pages in the authenticated browser. Exact displayed HFR identifiers and workflow statuses were transcribed. No registration, query response or facility details were changed.",
-  "scope": "An exact identifier match and dated dashboard workflow status do not establish current centre operations, clinical quality or outcomes. The account dashboard is not a public per-facility verification link. One masked Draft record is recorded separately and excluded from complete-identifier totals.",
+  "scope": "An exact identifier match and dated dashboard workflow status do not establish current centre operations, clinical quality or outcomes. The account dashboard is not a public per-facility verification link. One masked Draft record is recorded separately and excluded from complete-identifier totals. This check covers one authenticated NHPR account. Pinnacle advises that registrations may be administered across different accounts; those accounts have not been reconciled in this review.",
   "counts": {
     "dashboardRecords": 57,
     "completeIds": 56,

@@ -231,7 +231,7 @@
         "status": "matched",
         "issuerMatched": true,
         "originalReviewed": true,
-        "reviewLabel": "Source inventory + NHPR dashboard matched",
+        "reviewLabel": "HFR account records reviewed",
         "scopeReviewed": "19 September 2026",
         "reviewedOn": "2026-09-19",
         "reviewedDate": "19 September 2026",
@@ -248,7 +248,7 @@
           "Source reconciliation": "All 53 earlier workbook/certificate IDs matched; 3 additional dashboard IDs"
         },
         "supports": "The authenticated dashboard matched all 53 earlier inventory IDs and supplied three additional complete IDs, giving 56. Each record retains its displayed workflow status and observation date. The source workbook and certificate references remain available beside the live check.",
-        "limits": "Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs.",
+        "limits": "Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs. The observation covers one authenticated NHPR account; registrations administered in other accounts have not been reconciled here.",
         "citation": "NHPR / ABDM authenticated facility-manager dashboard, all four pages, inspected 19 September 2026. Earlier sources: All Centers With HFR.xlsx rows 2–53 and original recognitions bundle pp67–95.",
         "note": "Tirupati has two preserved IDs; Bhimavaram, Nizamabad and Khammam each have an additional dashboard ID. Exact ID matching does not establish that one record replaces or cancels another. Workbook RS flags are historical supplied fields and remain separate from dashboard statuses.",
         "links": [
@@ -274,6 +274,10 @@
         {
           "date": "2026-09-19",
           "change": "Matched all 53 earlier source IDs against the authenticated NHPR dashboard, added three complete IDs and retained exact workflow statuses; one masked Draft is separate."
+        },
+        {
+          "date": "2026-09-19",
+          "change": "All 56 complete IDs remain visible. Approval ticks are limited to the 33 IDs displayed Approved in the reviewed account; other IDs have a neutral label. Exact dated workflow observations remain in source details and data exports. Other accounts have not been reconciled."
         }
       ]
     }

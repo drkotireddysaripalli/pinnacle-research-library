@@ -29,7 +29,7 @@
     "approvedIds": 33,
     "draftRecords": 1
   },
-  "scope": "All 56 complete identifiers were matched to the authenticated NHPR / ABDM facility-manager dashboard on 19 September 2026. Statuses are the exact workflow labels displayed on that date, not a live feed or a clinical-quality rating. Approved, Submitted, Query Raised, Query Resolved and Rejected are kept distinct. One masked Draft is separate. Original workbook RS flags are preserved and do not define the registry status or whether a centre is operating.",
+  "scope": "All 56 complete identifiers were matched to the authenticated NHPR / ABDM facility-manager dashboard on 19 September 2026. Statuses are the exact workflow labels displayed on that date, not a live feed or a clinical-quality rating. Approved, Submitted, Query Raised, Query Resolved and Rejected are kept distinct. One masked Draft is separate. Original workbook RS flags are preserved and do not define the registry status or whether a centre is operating. This check covers one authenticated NHPR account. Pinnacle advises that registrations may be administered across different accounts; those accounts have not been reconciled in this review.",
   "rows": [
     {
       "id": "IN2810053167",
@@ -1228,7 +1228,7 @@
       "Query Resolved": 1,
       "Draft": 1
     },
-    "scope": "An exact identifier match and dated dashboard workflow status do not establish current centre operations, clinical quality or outcomes. The account dashboard is not a public per-facility verification link. One masked Draft record is recorded separately and excluded from complete-identifier totals."
+    "scope": "All 56 complete identifiers were matched to the authenticated NHPR / ABDM facility-manager dashboard on 19 September 2026. Statuses are the exact workflow labels displayed on that date, not a live feed or a clinical-quality rating. Approved, Submitted, Query Raised, Query Resolved and Rejected are kept distinct. One masked Draft is separate. Original workbook RS flags are preserved and do not define the registry status or whether a centre is operating. This check covers one authenticated NHPR account. Pinnacle advises that registrations may be administered across different accounts; those accounts have not been reconciled in this review."
   },
   "drafts": [
     {

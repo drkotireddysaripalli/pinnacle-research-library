@@ -15,7 +15,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Family meaning and global context](https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.html): selected comparisons and international guidance.
 - [Global context JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/global-context.json): references, scope and comparison definitions.
 
-- [Complete HFR register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html): 56 complete IDs matched; 33 Approved in the dated NHPR dashboard. Original workbook/certificate coverage is preserved; one masked Draft is separate.
+- [Complete HFR register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html): 56 complete IDs matched; 33 Approved in the NHPR account reviewed on 19 September 2026. Other accounts have not been reconciled. Original source coverage is preserved; one masked Draft is separate.
 - [Statistics and evidence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html): six figures with definitions, dates and source mapping.
 - [Statistics JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.json): the same visible metric definitions.
 
@@ -32,7 +32,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Udyam · Enterprise registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/udyam.html): Original reviewed. UDYAM-TS-20-0015132 · Business-registration record
 - [GST · Registration and name reconciliation](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html): Original reviewed. Original 2017 REG-06 reviewed · Historical registration with the printed legal and trade names
 - [PAN · Corporate identity document](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pan.html): Original reviewed. Corporate PAN card inspected · Identifier withheld from display
-- [ABDM / NHA · Health Facility Registry](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html): Source inventory + NHPR dashboard matched. 56 complete IDs matched · 33 Approved · dated NHPR workflow statuses
+- [ABDM / NHA · Health Facility Registry](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html): HFR account records reviewed. 56 complete IDs matched · 33 Approved · dated NHPR workflow statuses
 - [Disability-welfare registrations · District scope](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/district-register.html): Company-published. 29 Section 51 certificate copies described in the source collection
 - [Attapur · District institution registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-attapur.html): Original reviewed. Section 51 registration · Named institution and location
 - [Begumpet · District institution registration](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-begumpet.html): Original reviewed. Section 51 registration · Named institution and location

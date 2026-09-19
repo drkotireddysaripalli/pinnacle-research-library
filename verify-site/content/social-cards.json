@@ -81,15 +81,15 @@
   {
     "route": "/evidence/hfr-register.html",
     "id": "evidence-hfr-register",
-    "title": "Every HFR record. Its dated status.",
+    "title": "Find your centre. Follow its HFR record.",
     "lines": [
-      "Every HFR record.",
-      "Its dated status."
+      "Find your centre.",
+      "Follow its HFR record."
     ],
-    "category": "ABDM / HFR · LIVE DASHBOARD CHECK",
-    "note": "56 complete IDs matched · 33 Approved · checked 19 Sep 2026",
+    "category": "ABDM / HFR · DATED ACCOUNT REVIEW",
+    "note": "56 IDs recorded · 33 Approved · account checked 19 Sep 2026",
     "icon": "map-pin",
-    "description": "Pinnacle HFR records with dated dashboard statuses: 56 complete IDs matched, 33 Approved and one masked Draft listed separately."
+    "description": "Explore all 56 recorded HFR identifiers and their sources. The reviewed NHPR account displayed 33 Approved statuses on 19 September 2026; other accounts are not reconciled in this review."
   },
   {
     "route": "/evidence/privacy.html",
@@ -294,10 +294,10 @@
       "ABDM / HFR",
       "Centre identifiers."
     ],
-    "category": "CENTRE RECORDS",
-    "note": "56 IDs matched in the NHPR dashboard · 19 Sep 2026",
+    "category": "ABDM / HFR · DATED ACCOUNT REVIEW",
+    "note": "56 IDs recorded · 33 Approved · account checked 19 Sep 2026",
     "icon": "map-pin",
-    "description": "ABDM HFR evidence: exact identifier matches, dated dashboard statuses and source certificates. Read the scope of each record."
+    "description": "Explore all 56 recorded HFR identifiers and their sources. The reviewed NHPR account displayed 33 Approved statuses on 19 September 2026; other accounts are not reconciled in this review."
   },
   {
     "route": "/evidence/records/iso13485.html",
