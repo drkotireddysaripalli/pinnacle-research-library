@@ -64,6 +64,10 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Claim-to-page evidence map](https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html): specified institutional counts, both UDINs, source pages, dates and scope.
 - [Claim map JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.json): the same visible evidence mapping.
 
+## Citations and reader choices
+- [Citation library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html): 44 reusable citations with original sources and scope.
+- [Privacy and analytics choices](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): optional consent-based measurement and language translation.
+
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.
 - [Seven-stage journey](https://pinnacle-verify.saripalli.chatgpt.site/#care): documented measurement layers, daily practice and monthly reassessment.

@@ -13,6 +13,48 @@
           "xLength": 182
         },
         {
+          "id": "proof-map",
+          "url": "https://www.pinnacleblooms.org/verify/#proof-map",
+          "text": "Explore Pinnacle's evidence on A clear source for each kind of question. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A clear source for each kind of question. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
+        },
+        {
+          "id": "block-what-is-the-licensed-purpose",
+          "url": "https://www.pinnacleblooms.org/verify/#block-what-is-the-licensed-purpose",
+          "text": "Explore Pinnacle's evidence on What is the licensed purpose. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What is the licensed purpose. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 151
+        },
+        {
+          "id": "block-how-are-the-modules-connected",
+          "url": "https://www.pinnacleblooms.org/verify/#block-how-are-the-modules-connected",
+          "text": "Explore Pinnacle's evidence on How are the modules connected. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on How are the modules connected. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 152
+        },
+        {
+          "id": "block-what-has-been-studied",
+          "url": "https://www.pinnacleblooms.org/verify/#block-what-has-been-studied",
+          "text": "Explore Pinnacle's evidence on What has been studied. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What has been studied. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-what-supports-the-scale-and-network",
+          "url": "https://www.pinnacleblooms.org/verify/#block-what-supports-the-scale-and-network",
+          "text": "Explore Pinnacle's evidence on What supports the scale and network. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What supports the scale and network. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 158
+        },
+        {
+          "id": "interactive-guides",
+          "url": "https://www.pinnacleblooms.org/verify/#interactive-guides",
+          "text": "Explore Pinnacle's evidence on See how one observation can inform the next step. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on See how one observation can inform the next step. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 171
+        },
+        {
           "id": "experience",
           "url": "https://www.pinnacleblooms.org/verify/#experience",
           "text": "Explore Pinnacle's evidence on See how one observation can inform the next step. Read the source, review date and scope before drawing conclusions.",
@@ -83,39 +125,11 @@
           "xLength": 149
         },
         {
-          "id": "proof-map",
-          "url": "https://www.pinnacleblooms.org/verify/#proof-map",
-          "text": "Explore Pinnacle's evidence on A clear source for each kind of question. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A clear source for each kind of question. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 163
-        },
-        {
-          "id": "block-what-is-the-licensed-purpose",
-          "url": "https://www.pinnacleblooms.org/verify/#block-what-is-the-licensed-purpose",
-          "text": "Explore Pinnacle's evidence on What is the licensed purpose. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What is the licensed purpose. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 151
-        },
-        {
-          "id": "block-how-are-the-modules-connected",
-          "url": "https://www.pinnacleblooms.org/verify/#block-how-are-the-modules-connected",
-          "text": "Explore Pinnacle's evidence on How are the modules connected. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on How are the modules connected. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 152
-        },
-        {
-          "id": "block-what-has-been-studied",
-          "url": "https://www.pinnacleblooms.org/verify/#block-what-has-been-studied",
-          "text": "Explore Pinnacle's evidence on What has been studied. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What has been studied. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 144
-        },
-        {
-          "id": "block-what-supports-the-scale-and-network",
-          "url": "https://www.pinnacleblooms.org/verify/#block-what-supports-the-scale-and-network",
-          "text": "Explore Pinnacle's evidence on What supports the scale and network. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What supports the scale and network. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 158
+          "id": "cite-and-reuse",
+          "url": "https://www.pinnacleblooms.org/verify/#cite-and-reuse",
+          "text": "Explore Pinnacle's evidence on Evidence you can take with you. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Evidence you can take with you. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 153
         },
         {
           "id": "care",
@@ -4469,6 +4483,688 @@
           "text": "Explore Pinnacle's evidence on Reference this map. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Reference this map. Read the source, review date and scope before drawing conclusions.",
           "xLength": 141
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html",
+          "text": "Explore Pinnacle Citation Library. Read the source records, review dates and evidence scope.",
+          "whatsapp": "Explore Pinnacle Citation Library. Read the source records, review dates and evidence scope.",
+          "xLength": 116
+        },
+        {
+          "id": "publication-citations",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#publication-citations",
+          "text": "Explore Pinnacle's evidence on Publications & books. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Publications & books. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 143
+        },
+        {
+          "id": "block-licensing-developmental-support-software-in-india-an-april-2026-case-study-assessed-agains",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-licensing-developmental-support-software-in-india-an-april-2026-case-study-assessed-agains",
+          "text": "Explore Pinnacle's evidence on Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 233
+        },
+        {
+          "id": "cite-zenodo-22761782",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-zenodo-22761782",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-geographic-concentration-of-rci-listed-rehabilitation-training-institutions-in-india-a-rep",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-geographic-concentration-of-rci-listed-rehabilitation-training-institutions-in-india-a-rep",
+          "text": "Explore Pinnacle's evidence on Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 232
+        },
+        {
+          "id": "cite-zenodo-22761810",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-zenodo-22761810",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-six-month-change-and-follow-up-patterns-in-abilityscore-during-routine-paediatric-developm",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-six-month-change-and-follow-up-patterns-in-abilityscore-during-routine-paediatric-developm",
+          "text": "Explore Pinnacle's evidence on Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India:. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India:. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 233
+        },
+        {
+          "id": "cite-zenodo-22761832",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-zenodo-22761832",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-concurrent-validity-test-retest-reliability-and-preliminary-minimal-clinically-important-d",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-concurrent-validity-test-retest-reliability-and-preliminary-minimal-clinically-important-d",
+          "text": "Explore Pinnacle's evidence on Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 227
+        },
+        {
+          "id": "cite-zenodo-19482476",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-zenodo-19482476",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-abilityscore-development-and-preliminary-psychometric-characterization-of-a-standardized-c",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-abilityscore-development-and-preliminary-psychometric-characterization-of-a-standardized-c",
+          "text": "Explore Pinnacle's evidence on AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 232
+        },
+        {
+          "id": "cite-zenodo-19482123",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-zenodo-19482123",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-pinnacle-global-autism-framework-pgaf-india-s-first-validated-scalable-outcome-based-child",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-pinnacle-global-autism-framework-pgaf-india-s-first-validated-scalable-outcome-based-child",
+          "text": "Explore Pinnacle's evidence on Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 237
+        },
+        {
+          "id": "cite-zenodo-15487405",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-zenodo-15487405",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-meaningful-change-in-childhood-participation-a-systematic-review-protocol-for-child-and-ca",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-meaningful-change-in-childhood-participation-a-systematic-review-protocol-for-child-and-ca",
+          "text": "Explore Pinnacle's evidence on Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 231
+        },
+        {
+          "id": "cite-zenodo-22827813",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-zenodo-22827813",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-autism-mother-s-hand-book",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-autism-mother-s-hand-book",
+          "text": "Explore Pinnacle's evidence on Autism - mother's hand book. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Autism - mother's hand book. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 150
+        },
+        {
+          "id": "cite-autism-mothers-handbook-english",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-autism-mothers-handbook-english",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-",
+          "text": "Explore Pinnacle's evidence on -. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on -. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 124
+        },
+        {
+          "id": "cite-autism-mothers-handbook-telugu",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-autism-mothers-handbook-telugu",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-the-voice-of-the-unheard",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-the-voice-of-the-unheard",
+          "text": "Explore Pinnacle's evidence on The Voice of the Unheard. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on The Voice of the Unheard. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
+        },
+        {
+          "id": "cite-voice-of-the-unheard",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-voice-of-the-unheard",
+          "text": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this publication. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "evidence-citations",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#evidence-citations",
+          "text": "Explore Pinnacle's evidence on Evidence summaries. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Evidence summaries. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 141
+        },
+        {
+          "id": "block-md-5-class-b-manufacturing-licence",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-md-5-class-b-manufacturing-licence",
+          "text": "Explore Pinnacle's evidence on MD-5 Class B manufacturing licence. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on MD-5 Class B manufacturing licence. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 157
+        },
+        {
+          "id": "cite-record-md5",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-md5",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-bis-medical-device-management-system",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-bis-medical-device-management-system",
+          "text": "Explore Pinnacle's evidence on BIS Medical device management system. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on BIS Medical device management system. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
+        },
+        {
+          "id": "cite-record-bis",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-bis",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-legal-entity-independent-registry-match",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-legal-entity-independent-registry-match",
+          "text": "Explore Pinnacle's evidence on Legal entity Independent registry match. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Legal entity Independent registry match. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 162
+        },
+        {
+          "id": "cite-record-lei",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-lei",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-cdsco-classification-application-and-licence-trail",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-cdsco-classification-application-and-licence-trail",
+          "text": "Explore Pinnacle's evidence on CDSCO classification Application and licence trail. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on CDSCO classification Application and licence trail. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 173
+        },
+        {
+          "id": "cite-record-classification",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-classification",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-md-3-manufacturing-licence-application",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-md-3-manufacturing-licence-application",
+          "text": "Explore Pinnacle's evidence on MD-3 Manufacturing-licence application. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on MD-3 Manufacturing-licence application. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 161
+        },
+        {
+          "id": "cite-record-md3",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-md3",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-iso-13485-quality-management",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-iso-13485-quality-management",
+          "text": "Explore Pinnacle's evidence on ISO 13485 Quality management. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on ISO 13485 Quality management. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 151
+        },
+        {
+          "id": "cite-record-iso13485",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-iso13485",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-iso-iec-27001-information-security",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-iso-iec-27001-information-security",
+          "text": "Explore Pinnacle's evidence on ISO/IEC 27001 Information security. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on ISO/IEC 27001 Information security. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 157
+        },
+        {
+          "id": "cite-record-iso27001",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-iso27001",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-company-incorporation-name-history",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-company-incorporation-name-history",
+          "text": "Explore Pinnacle's evidence on Company incorporation & name history. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Company incorporation & name history. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
+        },
+        {
+          "id": "cite-record-mca",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-mca",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-dpiit-dipp-startup-recognition",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-dpiit-dipp-startup-recognition",
+          "text": "Explore Pinnacle's evidence on DPIIT / DIPP Startup recognition. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on DPIIT / DIPP Startup recognition. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 155
+        },
+        {
+          "id": "cite-record-dpiit",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-dpiit",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-udyam-enterprise-registration",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-udyam-enterprise-registration",
+          "text": "Explore Pinnacle's evidence on Udyam Enterprise registration. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Udyam Enterprise registration. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 152
+        },
+        {
+          "id": "cite-record-udyam",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-udyam",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-gst-registration-and-name-reconciliation",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-gst-registration-and-name-reconciliation",
+          "text": "Explore Pinnacle's evidence on GST Registration and name reconciliation. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on GST Registration and name reconciliation. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
+        },
+        {
+          "id": "cite-record-gst",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-gst",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-pan-corporate-identity-document",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-pan-corporate-identity-document",
+          "text": "Explore Pinnacle's evidence on PAN Corporate identity document. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on PAN Corporate identity document. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 154
+        },
+        {
+          "id": "cite-record-pan",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-pan",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-abdm-nha-health-facility-registry",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-abdm-nha-health-facility-registry",
+          "text": "Explore Pinnacle's evidence on ABDM / NHA Health Facility Registry. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on ABDM / NHA Health Facility Registry. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 158
+        },
+        {
+          "id": "cite-record-hfr",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-hfr",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-disability-welfare-registrations-district-scope",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-disability-welfare-registrations-district-scope",
+          "text": "Explore Pinnacle's evidence on Disability-welfare registrations District scope. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Disability-welfare registrations District scope. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 170
+        },
+        {
+          "id": "cite-record-district-register",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-district-register",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-attapur-district-institution-registration",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-attapur-district-institution-registration",
+          "text": "Explore Pinnacle's evidence on Attapur District institution registration. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Attapur District institution registration. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
+        },
+        {
+          "id": "cite-record-rpwd-attapur",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-rpwd-attapur",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-begumpet-district-institution-registration",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-begumpet-district-institution-registration",
+          "text": "Explore Pinnacle's evidence on Begumpet District institution registration. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Begumpet District institution registration. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 165
+        },
+        {
+          "id": "cite-record-rpwd-begumpet",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-rpwd-begumpet",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-nizamabad-district-institution-registration",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-nizamabad-district-institution-registration",
+          "text": "Explore Pinnacle's evidence on Nizamabad District institution registration. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Nizamabad District institution registration. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 166
+        },
+        {
+          "id": "cite-record-rpwd-nizamabad",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-rpwd-nizamabad",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-nellore-historical-district-registration",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-nellore-historical-district-registration",
+          "text": "Explore Pinnacle's evidence on Nellore Historical district registration. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Nellore Historical district registration. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
+        },
+        {
+          "id": "cite-record-rpwd-nellore",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-rpwd-nellore",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-independent-practitioner-limited-assurance",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-independent-practitioner-limited-assurance",
+          "text": "Explore Pinnacle's evidence on Independent practitioner Limited assurance. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Independent practitioner Limited assurance. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 165
+        },
+        {
+          "id": "cite-record-sae3000",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-sae3000",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-independent-practitioner-factual-findings",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-independent-practitioner-factual-findings",
+          "text": "Explore Pinnacle's evidence on Independent practitioner Factual findings. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Independent practitioner Factual findings. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
+        },
+        {
+          "id": "cite-record-srs4400",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-srs4400",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-scale-claims-dates-and-definitions",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-scale-claims-dates-and-definitions",
+          "text": "Explore Pinnacle's evidence on Scale claims Dates and definitions. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Scale claims Dates and definitions. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 157
+        },
+        {
+          "id": "cite-record-operating-metrics",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-operating-metrics",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-abilityscore-methodology-preprint",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-abilityscore-methodology-preprint",
+          "text": "Explore Pinnacle's evidence on AbilityScore Methodology preprint. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on AbilityScore Methodology preprint. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 156
+        },
+        {
+          "id": "cite-record-methodology",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-methodology",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-abilityscore-external-validation-protocol",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-abilityscore-external-validation-protocol",
+          "text": "Explore Pinnacle's evidence on AbilityScore External-validation protocol. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on AbilityScore External-validation protocol. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
+        },
+        {
+          "id": "cite-record-external-validation",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-external-validation",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-twelve-study-portfolio-company-research",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-twelve-study-portfolio-company-research",
+          "text": "Explore Pinnacle's evidence on Twelve-study portfolio Company research. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Twelve-study portfolio Company research. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 162
+        },
+        {
+          "id": "cite-record-study-portfolio",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-study-portfolio",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-network-wide-improvement-claim-evidence-definition",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-network-wide-improvement-claim-evidence-definition",
+          "text": "Explore Pinnacle's evidence on Network-wide improvement claim Evidence definition. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Network-wide improvement claim Evidence definition. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 173
+        },
+        {
+          "id": "cite-record-outcome-claim",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-outcome-claim",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-government-appreciation-seven-source-letters",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-government-appreciation-seven-source-letters",
+          "text": "Explore Pinnacle's evidence on Government appreciation Seven source letters. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Government appreciation Seven source letters. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 167
+        },
+        {
+          "id": "cite-record-appreciations",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-appreciations",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-awards-nominations-evidence-of-stage",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-awards-nominations-evidence-of-stage",
+          "text": "Explore Pinnacle's evidence on Awards & nominations Evidence of stage. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Awards & nominations Evidence of stage. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 161
+        },
+        {
+          "id": "cite-record-awards",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-awards",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-intellectual-property-application-stage-claims",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-intellectual-property-application-stage-claims",
+          "text": "Explore Pinnacle's evidence on Intellectual property Application-stage claims. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Intellectual property Application-stage claims. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 169
+        },
+        {
+          "id": "cite-record-patents",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-patents",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-trademarks-copyright-publishing-records",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-trademarks-copyright-publishing-records",
+          "text": "Explore Pinnacle's evidence on Trademarks, copyright & publishing records. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Trademarks, copyright & publishing records. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 165
+        },
+        {
+          "id": "cite-record-marks-copyright",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-marks-copyright",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-global-research-whitebook-historical-edition",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-global-research-whitebook-historical-edition",
+          "text": "Explore Pinnacle's evidence on Global Research Whitebook Historical edition. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Global Research Whitebook Historical edition. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 167
+        },
+        {
+          "id": "cite-record-whitebook",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-whitebook",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-evidence-dossier-version-2-0",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-evidence-dossier-version-2-0",
+          "text": "Explore Pinnacle's evidence on Evidence Dossier Version 2.0. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Evidence Dossier Version 2.0. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 151
+        },
+        {
+          "id": "cite-record-dossier",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-dossier",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-september-handout-current-source-narrative",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-september-handout-current-source-narrative",
+          "text": "Explore Pinnacle's evidence on September handout Current source narrative. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on September handout Current source narrative. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 165
+        },
+        {
+          "id": "cite-record-september-handout",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-september-handout",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-books-parent-resources-publication-records",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-books-parent-resources-publication-records",
+          "text": "Explore Pinnacle's evidence on Books & parent resources Publication records. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Books & parent resources Publication records. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 167
+        },
+        {
+          "id": "cite-record-books",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-books",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "block-pinnacleai-walkthrough-developmental-architecture",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#block-pinnacleai-walkthrough-developmental-architecture",
+          "text": "Explore Pinnacle's evidence on PinnacleAI® walkthrough Developmental architecture. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on PinnacleAI® walkthrough Developmental architecture. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 173
+        },
+        {
+          "id": "cite-record-sovereign-walkthrough",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#cite-record-sovereign-walkthrough",
+          "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "machine-sources",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html#machine-sources",
+          "text": "Explore Pinnacle's evidence on The same evidence in readable data. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on The same evidence in readable data. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 157
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/privacy.html",
+          "text": "Explore Privacy & Analytics Choices. Read the source records, review dates and evidence scope.",
+          "whatsapp": "Explore Privacy & Analytics Choices. Read the source records, review dates and evidence scope.",
+          "xLength": 118
+        },
+        {
+          "id": "section-optional-google-analytics",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/privacy.html#section-optional-google-analytics",
+          "text": "Explore Pinnacle's evidence on Optional Google Analytics. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Optional Google Analytics. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 148
+        },
+        {
+          "id": "section-reading-in-another-language",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/privacy.html#section-reading-in-another-language",
+          "text": "Explore Pinnacle's evidence on Reading in another language. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Reading in another language. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 150
+        },
+        {
+          "id": "section-questions-or-corrections",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/privacy.html#section-questions-or-corrections",
+          "text": "Explore Pinnacle's evidence on Questions or corrections. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Questions or corrections. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
         }
       ]
     }
