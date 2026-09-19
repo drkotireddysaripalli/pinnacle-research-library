@@ -58,7 +58,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#section-your-child-s-path-toward-self-sufficiency-and-mainstream-life",
           "kind": "section",
           "parent": null,
-          "description": "PinnacleAI® — the way forward.",
+          "description": "Because every child deserves a wonderful life.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
@@ -70,7 +70,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-for-every-child",
           "kind": "section",
           "parent": null,
-          "description": "A connected system for understanding abilities, planning everyday practice and reviewing progress toward a more independent life.",
+          "description": "Pinnacle aggregate estimate · Counting basis",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html#scale-families",
@@ -83,11 +83,26 @@
           ]
         },
         {
+          "id": "block-all-that-scale-should-lead-to-a-clearer-next-step-for-your-child",
+          "name": "All that scale should lead to a clearer next step for your child.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-all-that-scale-should-lead-to-a-clearer-next-step-for-your-child",
+          "kind": "details",
+          "parent": "scale-for-every-child",
+          "description": "The value is the connection: a personal goal, a chosen activity, guided practice, feedback and a plan that can change with your child.",
+          "text": "How the figures connect · sources & counting basis All that scale should lead to a clearer next step for your child. The value is the connection: a personal goal, a chosen activity, guided practice, feedback and a plan that can change with your child. Personal goals Understand the abilities that matter in this child's everyday life. Everyday Therapy™ Connect selected techniques to a personal plan and guided daily practice. Feedback & correction Bring family and therapist observations into progress review and the Personal Development Kernel. The next step Reassess readiness and adapt support toward growing independence and participation. Follow the PinnacleAI® journey Read the counting basis and independent evidence Current figures and dated report findings Pinnacle's owner confirmed this as a current calculated total on 19 September 2026. The component counts supplied do not reproduce 400 billion. A point definition, reproducible calculation, deduplication rules and measurement cutoff have not been supplied. This aggregate is not established by the linked UDIN reports. Built for 900 million children, parents and families is the mission described in the 7 September 2026 handout, pages 1, 7 and 20. It is not a count of people served or an independently established estimate of unmet need. 2.7B+ · Clinical AI data points 2.7B+ structured developmental events at 17 July 2026 in SRS 4400 annexure p3, item 5. SAE 3000 separately covers a 2.5B+ floor. Clinical AI data points is Pinnacle’s description; the report counts structured events, not necessarily independent clinical observations or AI-training examples. 31M+ · Therapy & developmental services 31,052,382 cumulative services at 17 July 2026 in SRS 4400 annexure p3, item 1. The defined total includes assessments, screenings and parent training. SAE 3000 separately provides limited assurance over the 31M+ floor. This is a volume measure, not a successful-outcome count. 10.4M · Calculated report outputs 1.3 million completed assessments × eight reports = 10.4 million report outputs. Pinnacle’s owner confirmed on 19 September 2026 that each assessment produces one cumulative AbilityScore and seven readiness-index reports. This is arithmetic based on that operational statement; a complete report-generation log has not been inspected, and the linked practitioner reports do not establish this report total. 1.3L+ · Intervention techniques 130,000+ techniques, owner-supplied operational update, 19 September 2026. A dated inventory extract has not been inspected. The earlier September handout describes 90,000+. The linked UDIN reports do not verify this updated figure or the separate clinical effectiveness of every technique. 792,614 unique beneficiary/family registrations at 17 July 2026: SRS 4400 annexure p3, item 2. SAE 3000 separately covers the 790,000+ floor. This is the defined registration measure, not an independently verified outcome count. Pinnacle describes everyday programmes with nine personalised intervention techniques, nine therapeutic goals per service in its programme model, and family/therapist feedback feeding review and correction. These are programme descriptions; no deduplicated totals for programmes, goal assignments or Fusion Module entries were supplied. The 31M+ cumulative service definition also includes assessments, screenings and parent training, so it cannot automatically be multiplied by nine to establish unique therapeutic goals. These categories describe different, potentially overlapping units. They must not be added or multiplied to imply unique children, independent observations or a verified aggregate. Programme, goal and feedback-entry totals are not quantified here. Independent practitioner evidence: SAE 3000 limited assurance and SRS 4400 factual findings, with separately defined scopes. Both UDINs were verified Active on 19 September 2026. SAE 3000: 26200027GMBLXU4868 SRS 4400: 26200027HCNFEI9138 Read the claim-to-report map Open the shareable scale story Original ICAI verification receipt These figures as readable data A practical comparison question, not a claim that no other provider worldwide has comparable capabilities. No exhaustive global comparison has been established. A BETTER QUESTION WHEN CHOOSING SUPPORT Ask every provider: can you show this depth of measurement, personalised planning, everyday practice, progress tracking and source-linked evidence? See what Pinnacle can show you",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-and-mission.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/icai-udin-verifications-2026-09-19.pdf",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-story.json"
+          ]
+        },
+        {
           "id": "scale-story-basis",
           "name": "Current figures and dated report findings",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-story-basis",
           "kind": "details",
-          "parent": "scale-for-every-child",
+          "parent": "block-all-that-scale-should-lead-to-a-clearer-next-step-for-your-child",
           "description": "Pinnacle's owner confirmed this as a current calculated total on 19 September 2026. The component counts supplied do not reproduce 400 billion. A point definition, reproducible calculation, deduplication rules and measurement cutoff have not been supplied. This aggregate is not established by the linked UDIN reports.",
           "text": "Read the counting basis and independent evidence Current figures and dated report findings Pinnacle's owner confirmed this as a current calculated total on 19 September 2026. The component counts supplied do not reproduce 400 billion. A point definition, reproducible calculation, deduplication rules and measurement cutoff have not been supplied. This aggregate is not established by the linked UDIN reports. Built for 900 million children, parents and families is the mission described in the 7 September 2026 handout, pages 1, 7 and 20. It is not a count of people served or an independently established estimate of unmet need. 2.7B+ · Clinical AI data points 2.7B+ structured developmental events at 17 July 2026 in SRS 4400 annexure p3, item 5. SAE 3000 separately covers a 2.5B+ floor. Clinical AI data points is Pinnacle’s description; the report counts structured events, not necessarily independent clinical observations or AI-training examples. 31M+ · Therapy & developmental services 31,052,382 cumulative services at 17 July 2026 in SRS 4400 annexure p3, item 1. The defined total includes assessments, screenings and parent training. SAE 3000 separately provides limited assurance over the 31M+ floor. This is a volume measure, not a successful-outcome count. 10.4M · Calculated report outputs 1.3 million completed assessments × eight reports = 10.4 million report outputs. Pinnacle’s owner confirmed on 19 September 2026 that each assessment produces one cumulative AbilityScore and seven readiness-index reports. This is arithmetic based on that operational statement; a complete report-generation log has not been inspected, and the linked practitioner reports do not establish this report total. 1.3L+ · Intervention techniques 130,000+ techniques, owner-supplied operational update, 19 September 2026. A dated inventory extract has not been inspected. The earlier September handout describes 90,000+. The linked UDIN reports do not verify this updated figure or the separate clinical effectiveness of every technique. 792,614 unique beneficiary/family registrations at 17 July 2026: SRS 4400 annexure p3, item 2. SAE 3000 separately covers the 790,000+ floor. This is the defined registration measure, not an independently verified outcome count. Pinnacle describes everyday programmes with nine personalised intervention techniques, nine therapeutic goals per service in its programme model, and family/therapist feedback feeding review and correction. These are programme descriptions; no deduplicated totals for programmes, goal assignments or Fusion Module entries were supplied. The 31M+ cumulative service definition also includes assessments, screenings and parent training, so it cannot automatically be multiplied by nine to establish unique therapeutic goals. These categories describe different, potentially overlapping units. They must not be added or multiplied to imply unique children, independent observations or a verified aggregate. Programme, goal and feedback-entry totals are not quantified here. Independent practitioner evidence: SAE 3000 limited assurance and SRS 4400 factual findings, with separately defined scopes. Both UDINs were verified Active on 19 September 2026. SAE 3000: 26200027GMBLXU4868 SRS 4400: 26200027HCNFEI9138 Read the claim-to-report map Open the shareable scale story Original ICAI verification receipt These figures as readable data A practical comparison question, not a claim that no other provider worldwide has comparable capabilities. No exhaustive global comparison has been established.",
           "citations": [
@@ -98,66 +113,14 @@
           ]
         },
         {
-          "id": "proof-map",
-          "name": "A clear source for each kind of question.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#proof-map",
-          "kind": "section",
+          "id": "block-reading-controls",
+          "name": "Reading controls",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-reading-controls",
+          "kind": "details",
           "parent": null,
-          "description": "MD-5 names the non-diagnostic Class B software’s intended use and users.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html"
-          ]
-        },
-        {
-          "id": "block-what-is-the-licensed-purpose",
-          "name": "What is the licensed purpose?",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-is-the-licensed-purpose",
-          "kind": "article",
-          "parent": "proof-map",
-          "description": "MD-5 names the non-diagnostic Class B software’s intended use and users.",
-          "text": "What is the licensed purpose? MD-5 names the non-diagnostic Class B software’s intended use and users. Read the intended use",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
-          ]
-        },
-        {
-          "id": "block-how-are-the-modules-connected",
-          "name": "How are the modules connected?",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-how-are-the-modules-connected",
-          "kind": "article",
-          "parent": "proof-map",
-          "description": "The BIS schedule names the quality-system scope and developmental modules.",
-          "text": "How are the modules connected? The BIS schedule names the quality-system scope and developmental modules. Inspect the BIS schedule",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
-          ]
-        },
-        {
-          "id": "block-what-has-been-studied",
-          "name": "What has been studied?",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-has-been-studied",
-          "kind": "article",
-          "parent": "proof-map",
-          "description": "Explore published methods, study summaries and protocols with their research status.",
-          "text": "What has been studied? Explore published methods, study summaries and protocols with their research status. Explore research and authors",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html"
-          ]
-        },
-        {
-          "id": "block-what-supports-the-scale-and-network",
-          "name": "What supports the scale and network?",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-supports-the-scale-and-network",
-          "kind": "article",
-          "parent": "proof-map",
-          "description": "Follow each metric to its reporting basis, and each centre to its supplied records.",
-          "text": "What supports the scale and network? Follow each metric to its reporting basis, and each centre to its supplied records. See figures, definitions and sources",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html"
-          ]
+          "description": "Reading controls Go straight to a topic Choose one of 16 topics… 01 · Your child’s journey 02 · What it means for families 03 · Questions before choosing care 04 · Pinnacle at a glance 05 · Licences & software scope 06 · Explore the original evidence 07 · Understand the six figures 08 · Developmental data, explained 09 · Find your centre 10 · Research, books & authors 11 · International standards 12 · Health, learning & inclusion 13 · Guidance from global bodies 14 · Compare the wider picture 15 · Questions & clear terms 16 · Review & accountability Back to top ↑",
+          "text": "Reading controls Go straight to a topic Choose one of 16 topics… 01 · Your child’s journey 02 · What it means for families 03 · Questions before choosing care 04 · Pinnacle at a glance 05 · Licences & software scope 06 · Explore the original evidence 07 · Understand the six figures 08 · Developmental data, explained 09 · Find your centre 10 · Research, books & authors 11 · International standards 12 · Health, learning & inclusion 13 · Guidance from global bodies 14 · Compare the wider picture 15 · Questions & clear terms 16 · Review & accountability Back to top ↑",
+          "citations": []
         },
         {
           "id": "interactive-guides",
@@ -166,7 +129,7 @@
           "kind": "details",
           "parent": null,
           "description": "Explore the documented process through an illustrative family scenario. This guide uses no child data and does not perform an assessment.",
-          "text": "EXPLORE THE EXPERIENCE See the journey in practice. A guided walkthrough and eight report views — open when you are ready. THE CONNECTED JOURNEY · A ONE-MINUTE GUIDE See how one observation can inform the next step. Explore the documented process through an illustrative family scenario. This guide uses no child data and does not perform an assessment. 01 Observe Start with everyday life. A family wants to help their child express a choice during a familiar routine. They describe what the child already does, what interests them and where support helps. Family contribution Everyday observations give the care team context. Parents and caregivers in the intended use 02 Review Bring the observations together. The family and professionals review the starting point and agree a useful goal. Pinnacle describes the Personal Development Kernel as the child-specific record connecting measurements, context and responses. People + a connected record The care team checks the goal and the support appropriate to this child. Personal Development Kernel and human oversight 03 Report Make the starting point understandable. The overall AbilityScore® report and seven readiness views help organise the discussion. The important connection is from the report to an agreed everyday goal. One profile. Seven readiness views. Explore what each report is for below. No individual child’s results are displayed here. Read the measurement methods 04 Practise Turn the goal into guided practice. The documented Everyday Therapy™ programme links selected techniques with goals. In this illustration, the care team explains a communication activity within a familiar routine and agrees how the family can take part. Guidance for the people around the child The activity, support and practice schedule are agreed with the care team. Everyday Therapy programme description 05 Give feedback What happened during practice? Feedback connects the experience at home with the next review. Try either response to see how the discussion can change. The care team reviews what happened, discusses the activity and support with the family, and agrees what to try next. For a difficult activity, discuss a smaller step or more support. For an activity the child can manage, discuss a suitable next challenge. These are examples of a review conversation. An illustrative feedback example This demonstration does not assess a child, prescribe an activity or generate a treatment plan. Tracking, correction and human oversight 06 Review again Use the experience to shape the next plan. The care team reviews feedback, adjusts goals or support, and discusses the next assessment. Monthly reassessment is described in the reviewed methodology and walkthrough. Keep the child’s everyday life in view Look for meaningful changes in communication, routines, learning and participation, alongside the scores. Reassessment and methodology Step 1 of 6 Explore the eight reports Read the full workflow and sources UNDERSTAND THE REPORTS One overall profile. Seven focused readiness views. The supplied report examples use a 0–1000 display scale. Explore what each view brings to a conversation about your child’s next steps. Choose a report AbilityScore® / TherapeuticAI® report Speech Readiness Index Behavior Readiness Index Motor Readiness Index Study/IQ Readiness Index School Readiness Index Self-Sufficiency Index Mainstream Readiness Index REPORT GUIDE · OVERALL PROFILE AbilityScore® / TherapeuticAI® report The overall developmental profile. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “Which abilities should we prioritise, and why?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Speech Readiness Index A focused view to discuss communication priorities. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “How can we support communication in everyday routines?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Behavior Readiness Index A focused view to discuss behaviour and participation. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What helps my child feel comfortable and take part?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Motor Readiness Index A focused view to discuss movement-related abilities. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “Which movement skills matter for my child’s routines?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Study/IQ Readiness Index The report’s named view of readiness for learning. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What support could make learning more accessible?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW School Readiness Index A focused view to discuss preparation and support for school. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What would help my child participate at school?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Self-Sufficiency Index A focused view to discuss growing everyday independence. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “Which everyday task could my child do with less help?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Mainstream Readiness Index A focused view to discuss participation with other people. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What support would help my child join in with others?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects Each index report includes an “Assessment By” field. Read the results with the assessment context and care-team explanation. Readiness-index titles are not diagnoses; the Study/IQ Readiness title should not be read as an independently established IQ test. Report presentation version V-1.6.9.9 is separate from the SaMD software version.",
+          "text": "TRY THE WALKTHROUGH See the journey. Explore the reports. A guided example and eight report views. THE CONNECTED JOURNEY · A ONE-MINUTE GUIDE See how one observation can inform the next step. Explore the documented process through an illustrative family scenario. This guide uses no child data and does not perform an assessment. 01 Observe Start with everyday life. A family wants to help their child express a choice during a familiar routine. They describe what the child already does, what interests them and where support helps. Family contribution Everyday observations give the care team context. Parents and caregivers in the intended use 02 Review Bring the observations together. The family and professionals review the starting point and agree a useful goal. Pinnacle describes the Personal Development Kernel as the child-specific record connecting measurements, context and responses. People + a connected record The care team checks the goal and the support appropriate to this child. Personal Development Kernel and human oversight 03 Report Make the starting point understandable. The overall AbilityScore® report and seven readiness views help organise the discussion. The important connection is from the report to an agreed everyday goal. One profile. Seven readiness views. Explore what each report is for below. No individual child’s results are displayed here. Read the measurement methods 04 Practise Turn the goal into guided practice. The documented Everyday Therapy™ programme links selected techniques with goals. In this illustration, the care team explains a communication activity within a familiar routine and agrees how the family can take part. Guidance for the people around the child The activity, support and practice schedule are agreed with the care team. Everyday Therapy programme description 05 Give feedback What happened during practice? Feedback connects the experience at home with the next review. Try either response to see how the discussion can change. The care team reviews what happened, discusses the activity and support with the family, and agrees what to try next. For a difficult activity, discuss a smaller step or more support. For an activity the child can manage, discuss a suitable next challenge. These are examples of a review conversation. An illustrative feedback example This demonstration does not assess a child, prescribe an activity or generate a treatment plan. Tracking, correction and human oversight 06 Review again Use the experience to shape the next plan. The care team reviews feedback, adjusts goals or support, and discusses the next assessment. Monthly reassessment is described in the reviewed methodology and walkthrough. Keep the child’s everyday life in view Look for meaningful changes in communication, routines, learning and participation, alongside the scores. Reassessment and methodology Step 1 of 6 Explore the eight reports Read the full workflow and sources UNDERSTAND THE REPORTS One overall profile. Seven focused readiness views. The supplied report examples use a 0–1000 display scale. Explore what each view brings to a conversation about your child’s next steps. Choose a report AbilityScore® / TherapeuticAI® report Speech Readiness Index Behavior Readiness Index Motor Readiness Index Study/IQ Readiness Index School Readiness Index Self-Sufficiency Index Mainstream Readiness Index REPORT GUIDE · OVERALL PROFILE AbilityScore® / TherapeuticAI® report The overall developmental profile. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “Which abilities should we prioritise, and why?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Speech Readiness Index A focused view to discuss communication priorities. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “How can we support communication in everyday routines?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Behavior Readiness Index A focused view to discuss behaviour and participation. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What helps my child feel comfortable and take part?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Motor Readiness Index A focused view to discuss movement-related abilities. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “Which movement skills matter for my child’s routines?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Study/IQ Readiness Index The report’s named view of readiness for learning. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What support could make learning more accessible?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW School Readiness Index A focused view to discuss preparation and support for school. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What would help my child participate at school?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Self-Sufficiency Index A focused view to discuss growing everyday independence. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “Which everyday task could my child do with less help?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects REPORT GUIDE · READINESS VIEW Mainstream Readiness Index A focused view to discuss participation with other people. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What support would help my child join in with others?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects Each index report includes an “Assessment By” field. Read the results with the assessment context and care-team explanation. Readiness-index titles are not diagnoses; the Study/IQ Readiness title should not be read as an independently established IQ test. Report presentation version V-1.6.9.9 is separate from the SaMD software version.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
@@ -275,26 +238,6 @@
           "parent": "report-explorer",
           "description": "A focused view to discuss participation with other people.",
           "text": "REPORT GUIDE · READINESS VIEW Mainstream Readiness Index A focused view to discuss participation with other people. 0 Display scale 1000 Format explained · no child scores shown A USEFUL QUESTION FOR YOUR CARE TEAM “What support would help my child join in with others?” Connect the report with what you observe, the agreed goals and the support your child needs. Review change over time with the care team. Report-format review and context How reassessment connects",
-          "citations": []
-        },
-        {
-          "id": "cite-and-reuse",
-          "name": "Evidence you can take with you.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#cite-and-reuse",
-          "kind": "section",
-          "parent": null,
-          "description": "Every publication has a reusable citation. Every evidence summary keeps its source and scope attached.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html"
-          ]
-        },
-        {
-          "id": "parent-guides",
-          "name": "Three questions. A clearer next step.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#parent-guides",
-          "kind": "section",
-          "parent": null,
-          "description": "Read each guide in English, తెలుగు or हिन्दी . Source links accompany every topic.",
           "citations": []
         },
         {
@@ -651,6 +594,15 @@
           ]
         },
         {
+          "id": "parent-guides",
+          "name": "Three questions. A clearer next step.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#parent-guides",
+          "kind": "section",
+          "parent": null,
+          "description": "Read each guide in English, తెలుగు or हिन्दी . Source links accompany every topic.",
+          "citations": []
+        },
+        {
           "id": "family",
           "name": "Three questions. A clearer starting point.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#family",
@@ -807,6 +759,68 @@
           "description": "“Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.”",
           "text": "Read the full software and developmental-module scope “Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.” BIS MD/L-2026029599 · schedule page 2 · line breaks normalised",
           "citations": []
+        },
+        {
+          "id": "proof-map",
+          "name": "A clear source for each kind of question.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#proof-map",
+          "kind": "section",
+          "parent": null,
+          "description": "MD-5 names the non-diagnostic Class B software’s intended use and users.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html"
+          ]
+        },
+        {
+          "id": "block-what-is-the-licensed-purpose",
+          "name": "What is the licensed purpose?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-is-the-licensed-purpose",
+          "kind": "article",
+          "parent": "proof-map",
+          "description": "MD-5 names the non-diagnostic Class B software’s intended use and users.",
+          "text": "What is the licensed purpose? MD-5 names the non-diagnostic Class B software’s intended use and users. Read the intended use",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
+          ]
+        },
+        {
+          "id": "block-how-are-the-modules-connected",
+          "name": "How are the modules connected?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-how-are-the-modules-connected",
+          "kind": "article",
+          "parent": "proof-map",
+          "description": "The BIS schedule names the quality-system scope and developmental modules.",
+          "text": "How are the modules connected? The BIS schedule names the quality-system scope and developmental modules. Inspect the BIS schedule",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "block-what-has-been-studied",
+          "name": "What has been studied?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-has-been-studied",
+          "kind": "article",
+          "parent": "proof-map",
+          "description": "Explore published methods, study summaries and protocols with their research status.",
+          "text": "What has been studied? Explore published methods, study summaries and protocols with their research status. Explore research and authors",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html"
+          ]
+        },
+        {
+          "id": "block-what-supports-the-scale-and-network",
+          "name": "What supports the scale and network?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-supports-the-scale-and-network",
+          "kind": "article",
+          "parent": "proof-map",
+          "description": "Follow each metric to its reporting basis, and each centre to its supplied records.",
+          "text": "What supports the scale and network? Follow each metric to its reporting basis, and each centre to its supplied records. See figures, definitions and sources",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html"
+          ]
         },
         {
           "id": "records",
@@ -2840,6 +2854,17 @@
           "description": "NHPR workflow: Approved Reviewed account · 19 September 2026. Other accounts have not been reconciled in this review.",
           "text": "Dated account details NHPR workflow: Approved Reviewed account · 19 September 2026. Other accounts have not been reconciled in this review.",
           "citations": []
+        },
+        {
+          "id": "cite-and-reuse",
+          "name": "Evidence you can take with you.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#cite-and-reuse",
+          "kind": "section",
+          "parent": null,
+          "description": "Every publication has a reusable citation. Every evidence summary keeps its source and scope attached.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html"
+          ]
         },
         {
           "id": "research",
