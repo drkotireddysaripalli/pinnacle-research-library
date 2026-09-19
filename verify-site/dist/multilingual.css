@@ -30,7 +30,7 @@ h1,h2,h3,h4{line-height:1.38}.world-intro h1{line-height:1.22;letter-spacing:-.0
 .reader-language-bar select{width:100%;min-width:0;font-size:1rem;line-height:1.5;font-weight:550;padding:8px 12px;min-height:48px;border-color:#90bfc4}
 /* The native selector's full option list should not fetch nine script fonts. */
 .reader-language-bar select,.reader-language-bar option{font-family:'Pinnacle Anek Latin','Nirmala UI',system-ui,sans-serif!important}
-.reader-language-bar [type=submit]{font-size:1rem;line-height:1.5;padding:8px 15px;min-height:48px;white-space:nowrap}
+.reader-language-bar [data-read-language]{font-size:1rem;line-height:1.5;padding:8px 15px;min-height:48px;white-space:nowrap}
 .reader-language-bar .reading-size{display:flex;align-items:center;gap:5px;align-self:center;white-space:nowrap;font-size:.9375rem}
 .reading-size button{display:inline-flex;align-items:center;justify-content:center;padding:6px 8px;min-width:43px;min-height:48px;border:1px solid #a5cbd0;border-radius:8px;background:white;color:#005f68;font-size:1rem;font-weight:600;cursor:pointer}
 .reading-size button[aria-pressed=true]{background:#e9f5f3;border-color:#007f86;color:#005c64;box-shadow:inset 0 0 0 1px #007f86}

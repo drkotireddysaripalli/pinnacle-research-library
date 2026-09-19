@@ -143,8 +143,6 @@
  const submitLanguage=form=>{
   const language=form.querySelector('select')?.value,destination=languageNavigationURL(originalSource(form),language,location.href);
   if(!destination){announce('This page cannot be translated. Please open the English original.');return;}
-  form.dataset.languageDestination=destination;
-  announce('Opening '+(form.querySelector('select')?.selectedOptions[0]?.textContent||'the selected language')+'…');
   send('verify_language',{language});navigateLanguage(destination);
  };
  document.addEventListener('submit',event=>{
