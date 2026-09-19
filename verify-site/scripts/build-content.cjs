@@ -98,7 +98,7 @@ const head = (pageTitle,desc,url,graph,scripts=false) => `<head>
 ${scripts?'<script defer src="/app.js"></script><script defer src="/reader.js"></script><script defer src="/experience.js"></script>':''}
 </head>`;
 const pageHeader = `<div class="review-strip"><span>EVIDENCE & CONTEXT</span> Updated: 19 September 2026</div><header class="wrap site-header"><a href="/" aria-label="Pinnacle verification home" class="brand"><span class="logo-crop"><img src="/images/pinnacle-logo.webp" alt="Pinnacle Blooms Network" width="420" height="158"></span></a><a class="outline-link" href="/#records">${icon('arrow-left')}Evidence library</a></header>`;
-const footer = `<footer class="wrap"><div class="h-card"><strong><a class="p-name u-url" href="https://www.pinnacleblooms.org/">Pinnacle Blooms Network</a></strong><p>Verification contact: Gokul Rao · <a class="u-email" href="mailto:care@pinnacleblooms.org">care@pinnacleblooms.org</a> · <a class="p-tel" href="tel:+919100181181">9100 181 181</a></p></div><a href="/#method">How we review evidence</a></footer>`;
+const footer = require('./evidence-footer.cjs')({e,icon});
 const crumbsHTML = items => `<nav class="breadcrumbs" aria-label="Breadcrumb">${items.map((x,i)=>i===items.length-1?`<span aria-current="page">${e(x[0])}</span>`:`<a href="${e(x[1])}">${e(x[0])}</a>${icon('chevron-right')}`).join('')}</nav>`;
 const parentGuides=require('./parent-guides.cjs')({e,icon,origin,date,head,pageHeader,footer,breadcrumb,crumbsHTML,write});
 const faq = [
@@ -263,6 +263,8 @@ for(const resource of [{route:'/evidence/cite.html',title:'Pinnacle Citation Lib
  write(resource.route.slice(1),'<!doctype html><html lang="en-IN">'+head(resource.title,resource.description,url,[organization,website,{'@type':resource.type,'@id':url+'#page',url,name:resource.title,dateModified:date},breadcrumb(crumbs,url)])+'<body>'+pageHeader+'<main class="wrap record-page resource-page">'+crumbsHTML(crumbs)+resource.content+'</main>'+footer+'</body></html>');urls.push(resource.route);
 }
 write('llms.txt',read('llms.txt')+'\n## Citations and reader choices\n- [Citation library]('+origin+'/evidence/cite.html): 44 reusable citations with original sources and scope.\n- [Privacy and analytics choices]('+origin+'/evidence/privacy.html): optional consent-based measurement and language translation.\n');
+const scaleStoryPage=require('./scale-story-page.cjs')({e,icon,origin,date,organization,website,head,pageHeader,footer,breadcrumb,crumbsHTML,write,story:scaleStory});
+urls.push(scaleStoryPage.route);
 // Apply the same semantic coverage to every page without maintaining a second claim set.
 const sectionPages=[];
 const sharePages=[];
@@ -273,6 +275,7 @@ for(const p of urls){
  let html=read(file).replace(/<p class="entity-line wrap">[\s\S]*?<\/p>/g,'').replace(/<!-- share:start -->[\s\S]*?<!-- share:end -->/g,'').replace(/<svg class="share-symbols"[\s\S]*?<\/svg>/g,'').replace(/<p class="share-status"[\s\S]*?<\/dialog>/g,'');
  // Legacy registers are rebuilt from their checked-in HTML; replace common chrome cleanly.
  html=html.replace(/<div class="reader-utility\b[^>]*>[\s\S]*?<\/details><\/div>/g,'').replace(/<aside class="analytics-choice"[\s\S]*?<\/aside>/g,'').replace(/<div class="privacy-links">[\s\S]*?<\/div>/g,'');
+ html=html.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/,footer);
  if(p!=='/')html=html.replace('</main>','<p class="entity-line wrap">Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. <a href="/evidence/records/lei.html">View legal identity evidence</a>.</p></main>');
  html=html.replace('</header>','</header>'+presentation.utility(url)).replace('</footer>','<div class="privacy-links">'+presentation.settings+'</div></footer>').replace('</body>',presentation.consent+'</body>').replace('</head>','<meta name="ahrefs-site-verification" content="'+integrations.ahrefsVerification+'"><meta name="pinnacle-analytics-id" content="'+integrations.measurementId+'"><script defer src="/reader-extras.js"></script></head>');
  const enhanced=semantic.enhance(html,url);
@@ -300,8 +303,10 @@ write('llms-full.txt',read('llms-full.txt')+'\n\n'+experience.text);
 write('llms.txt',read('llms.txt')+'\n## Guided experience\n- [Workflow guide]('+origin+'/#experience): illustrative walkthrough, not a live assessment.\n- [Report explorer]('+origin+'/#report-explorer): eight report types and questions for the care team.\n- [Guide JSON]('+origin+'/evidence/experience-guide.json): the same visible explanation and source references.\n');
 write('llms.txt',read('llms.txt')+'\n## Cite and read original publications\n- [Citation index]('+origin+'/evidence/citation-index.json): original-publication citations and separately labelled evidence-summary citations.\n- [Source pinpoints]('+origin+'/evidence/evidence-provenance.json): inspected excerpts, document page references and record revision history.\n'+publicationPages.map(p=>'- ['+p.title+']('+p.url+'): '+p.status).join('\n')+'\n');
 write('llms-full.txt',read('llms-full.txt')+'\n\n'+publicationPages.map(p=>'## '+p.title+'\n'+p.url+'\n'+p.status+'\n'+p.abstractLabel+'\n'+p.abstractText).join('\n\n'));
-write('evidence/scale-story.json',JSON.stringify({...scaleStory.data,canonical:origin+'/#scale-for-every-child'},null,2));
-write('evidence/scale-story.txt',scaleStory.text);
+write('evidence/scale-story.json',JSON.stringify({...scaleStory.data,canonical:origin+'/evidence/scale-and-mission.html'},null,2));
+write('evidence/scale-story.txt',scaleStory.text+'\n\n'+scaleStoryPage.text);
+write('llms.txt',read('llms.txt')+'\n## Shareable scale and mission reference\n- [PinnacleAI® scale and mission]('+scaleStoryPage.url+'): the dedicated share page with its own image, five source-linked answers and reusable citation.\n- [Scale questions and answers]('+origin+'/evidence/scale-story-answers.json): matching visible answers and source references.\n');
+write('llms-full.txt',read('llms-full.txt')+'\n\n'+scaleStoryPage.text);
 write('llms-full.txt',read('llms-full.txt')+'\n\n'+scaleStory.text);
 write('llms.txt',read('llms.txt')+'\n## Scale and mission\n- [Scale behind a personal journey]('+origin+'/#scale-for-every-child): Pinnacle’s aggregate estimate, current operational figures, dated practitioner findings and mission population are distinguished.\n- [Counting basis]('+origin+'/evidence/scale-story.json): attribution, calculation limits and links to original evidence.\n');
 require('./build-performance.cjs');

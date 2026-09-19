@@ -15,16 +15,16 @@
         },
         {
           "id": "scale-for-every-child",
-          "url": "https://www.pinnacleblooms.org/verify/#scale-for-every-child",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
           "text": "Explore the scale behind PinnacleAI®: current figures, counting methods, independent report findings and a mission to empower children and families. See the evidence behind each number.",
           "whatsapp": "Explore the scale behind PinnacleAI®: current figures, counting methods, independent report findings and a mission to empower children and families. See the evidence behind each number.",
           "xLength": 209
         },
         {
           "id": "scale-story-basis",
-          "url": "https://www.pinnacleblooms.org/verify/#scale-story-basis",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#scale-story-basis",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
           "text": "Explore Pinnacle's evidence on Current figures and dated report findings. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Current figures and dated report findings. Read the source, review date and scope before drawing conclusions.",
           "xLength": 164
@@ -6956,6 +6956,83 @@
           "text": "Explore Pinnacle's evidence on Questions or corrections. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Questions or corrections. Read the source, review date and scope before drawing conclusions.",
           "xLength": 147
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-and-mission.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore PinnacleAI® Scale & Mission. Read the source records, review dates and evidence scope.",
+          "whatsapp": "Explore PinnacleAI® Scale & Mission. Read the source records, review dates and evidence scope.",
+          "xLength": 118
+        },
+        {
+          "id": "scale-story-basis",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#scale-story-basis",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore Pinnacle's evidence on Current figures and dated report findings. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Current figures and dated report findings. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore Pinnacle's evidence on Five questions. Source-linked answers. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Five questions. Source-linked answers. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 160
+        },
+        {
+          "id": "what-does-400-billion-mean",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#what-does-400-billion-mean",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore Pinnacle's evidence on What does 400 billion PinnacleAI® points mean. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What does 400 billion PinnacleAI® points mean. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 168
+        },
+        {
+          "id": "does-900-million-mean-people-served",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#does-900-million-mean-people-served",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore Pinnacle's evidence on Does 900 million mean people already served. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Does 900 million mean people already served. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 166
+        },
+        {
+          "id": "how-are-reports-calculated",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#how-are-reports-calculated",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore Pinnacle's evidence on How is the 10.4 million report figure calculated. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on How is the 10.4 million report figure calculated. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 171
+        },
+        {
+          "id": "which-figures-have-independent-reports",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#which-figures-have-independent-reports",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore Pinnacle's evidence on Which scale figures are covered by the independent reports. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Which scale figures are covered by the independent reports. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 181
+        },
+        {
+          "id": "what-does-scale-mean-for-my-child",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#what-does-scale-mean-for-my-child",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore Pinnacle's evidence on What should this scale mean for my child. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What should this scale mean for my child. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
+        },
+        {
+          "id": "cite-scale-story",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html#cite-scale-story",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-scale-and-mission-5bec27e7071d.jpg",
+          "text": "Explore Pinnacle's evidence on Cite this explanation. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Cite this explanation. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
         }
       ]
     }

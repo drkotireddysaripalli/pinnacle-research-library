@@ -157,6 +157,8 @@ async function drawCover(ctx, value) {
 }
 
 async function render(card, logo, artwork) {
+  if(card.customRenderer){if(card.customRenderer!=='render-scale-share-card.cjs'||!fs.existsSync(path.join(DIST,card.image)))throw Error('Run the named custom renderer first.');return card;}
+
   const canvas = createCanvas(WIDTH, HEIGHT);
   const ctx = canvas.getContext('2d');
   const bounds = [];

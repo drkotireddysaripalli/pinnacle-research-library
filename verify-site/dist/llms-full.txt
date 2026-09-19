@@ -2726,6 +2726,28 @@ Authored parent handbook
 Author-written abstract
 
 
+## Scale and mission: direct answers
+What does 400 billion PinnacleAI® points mean?
+Pinnacle's owner confirmed this as a current calculated total on 19 September 2026. The component counts supplied do not reproduce 400 billion. A point definition, reproducible calculation, deduplication rules and measurement cutoff have not been supplied. This aggregate is not established by the linked UDIN reports.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-and-mission.html#scale-story-basis
+
+Does 900 million mean people already served?
+Built for 900 million children, parents and families is the mission described in the 7 September 2026 handout, pages 1, 7 and 20. It is not a count of people served or an independently established estimate of unmet need.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html
+
+How is the 10.4 million report figure calculated?
+1.3 million completed assessments × eight reports = 10.4 million report outputs. Pinnacle’s owner confirmed on 19 September 2026 that each assessment produces one cumulative AbilityScore and seven readiness-index reports. This is arithmetic based on that operational statement; a complete report-generation log has not been inspected, and the linked practitioner reports do not establish this report total.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+Which scale figures are covered by the independent reports?
+For the 17 July 2026 cutoff, SRS 4400 records 2.7 billion+ structured events, 31,052,382 defined services and 792,614 beneficiary/family registrations. SAE 3000 separately provides limited assurance over specified floors, including 2.5 billion+ records, 31 million+ services and 790,000+ registrations. The UDIN verification receipt confirms the report particulars and Active status; it does not extend either report to later updates, every technique, the 400 billion aggregate estimate or individual child outcomes.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html
+
+What should this scale mean for my child?
+It should make the next step easier to understand: a measured starting point, a personal plan, selected activities, guided practice, feedback and review. Ask your care team how your child’s own goals and daily participation are tracked. Platform volume by itself does not predict an individual outcome.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/guides/everyday-practice.html
+Citation: Bharath Healthcare Laboratories Private Limited. (2026, September 19). PinnacleAI® scale and mission: figures, reports and evidence. Pinnacle Verification Centre. https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-and-mission.html.
+
 ## The scale behind a personal journey
 
 400 billion PinnacleAI® points — Pinnacle aggregate estimate. Pinnacle's owner confirmed this as a current calculated total on 19 September 2026. The component counts supplied do not reproduce 400 billion. A point definition, reproducible calculation, deduplication rules and measurement cutoff have not been supplied. This aggregate is not established by the linked UDIN reports.

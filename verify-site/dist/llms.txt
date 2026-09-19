@@ -88,7 +88,7 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [Privacy and analytics choices](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): optional consent-based measurement and language translation.
 
 ## Share images
-- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 65 branded image cards linked to their source pages.
+- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 66 branded image cards linked to their source pages.
 
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.
@@ -123,6 +123,10 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [Autism — mother’s hand book](https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/autism-mothers-handbook-english.html): Authored parent handbook
 - [ఆటిజం — మదర్స్ హ్యాండ్ బుక్](https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/autism-mothers-handbook-telugu.html): Authored parent handbook
 - [The Voice of the Unheard](https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/voice-of-the-unheard.html): Authored parent handbook
+
+## Shareable scale and mission reference
+- [PinnacleAI® scale and mission](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-and-mission.html): the dedicated share page with its own image, five source-linked answers and reusable citation.
+- [Scale questions and answers](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-story-answers.json): matching visible answers and source references.
 
 ## Scale and mission
 - [Scale behind a personal journey](https://pinnacle-verify.saripalli.chatgpt.site/#scale-for-every-child): Pinnacle’s aggregate estimate, current operational figures, dated practitioner findings and mission population are distinguished.
