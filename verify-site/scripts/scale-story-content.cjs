@@ -5,7 +5,7 @@ module.exports=({e,icon,origin})=>{
  const text='## '+data.title+'\n\n'+data.aggregate.display+' '+data.aggregate.label+' — '+data.aggregate.status+'. '+data.aggregate.basis+'\n'+data.mission.display+' '+data.mission.label+' — '+data.mission.status+'. '+data.mission.basis+'\n\n'+data.metrics.map(m=>m.value+' '+m.label+' — '+m.status+'\n'+m.basis+'\nSource: '+new URL(m.source,origin).href).join('\n\n')+'\n\n'+data.families.value+' '+data.families.label+'\n'+data.families.basis+'\n'+data.programmeDescription+'\n\n'+data.countingNote+'\n'+data.comparisonQuestion+'\n'+data.comparisonScope+'\n';
  // Keep the full shareable article; the homepage offers its detail on demand.
  let homeHtml=html.replace('class="scale-story wrap"','class="scale-story scale-story-home wrap"');
- homeHtml=homeHtml.replace('<p>A connected system for understanding abilities, planning everyday practice and reviewing progress toward a more independent life.</p>','');
+ homeHtml=homeHtml.replace('<p>A connected system for understanding abilities, planning everyday practice and reviewing progress toward a more independent life.</p>','<p>Behind every number is the same purpose: helping a family understand their child’s abilities and plan what comes next. Explore the scale of the system—and the source behind each figure.</p>');
  for(const m of data.metrics)homeHtml=homeHtml.replace(`<p>${e(m.meaning)}</p>`,'');
  homeHtml=homeHtml.replace('<div class="scale-story-human">',`<details class="scale-story-more"><summary>${icon('files')}How the figures connect · sources &amp; counting basis ${icon('plus')}</summary><div class="scale-story-human">`).replace('</section>','</details></section>');
  return {data,html,homeHtml,text};

@@ -60,6 +60,7 @@
           "parent": null,
           "description": "Because every child deserves a wonderful life.",
           "citations": [
+            "https://wa.me/919100181181?text=Hello%20Pinnacle%2C%20I%20would%20like%20to%20understand%20the%20next%20steps%20for%20my%20child%20and%20discuss%20an%20assessment.",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
           ]
@@ -70,7 +71,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-for-every-child",
           "kind": "section",
           "parent": null,
-          "description": "Pinnacle aggregate estimate · Counting basis",
+          "description": "Behind every number is the same purpose: helping a family understand their child’s abilities and plan what comes next. Explore the scale of the system—and the source behind each figure.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html#scale-families",
@@ -242,11 +243,11 @@
         },
         {
           "id": "care",
-          "name": "From present abilities toward a wonderful life.",
+          "name": "Start with what your child can do today.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#care",
           "kind": "section",
           "parent": null,
-          "description": "Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. The practical question is: “What can my child do now, what support will help next, and how will we understand progress?”",
+          "description": "Perhaps you want your child to ask for what they need, take part in a family routine or feel more confident with others. The journey begins by understanding their current abilities, then agreeing what to work toward with the care team.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
@@ -406,13 +407,13 @@
           ]
         },
         {
-          "id": "block-a-family-needs-a-connected-journey",
-          "name": "A family needs a connected journey.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-a-family-needs-a-connected-journey",
+          "id": "block-your-child-s-plan-should-travel-with-them",
+          "name": "Your child’s plan should travel with them.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-your-child-s-plan-should-travel-with-them",
           "kind": "article",
           "parent": "care",
-          "description": "A car needs its engine, steering and wheels to work together. In the same way, assessment, therapy, home practice and progress review need coordination. Families should not have to assemble that plan alone.",
-          "text": "A family needs a connected journey. A car needs its engine, steering and wheels to work together. In the same way, assessment, therapy, home practice and progress review need coordination. Families should not have to assemble that plan alone. Pinnacle describes a shared developmental pathway around the child. Diagnostic information can matter for clinical care and access to support; the plan also needs to address communication, daily routines, learning, relationships and participation. Company-described care model Modules named in the BIS scope",
+          "description": "What happens in a therapy session needs to connect with life at home and school. Assessment, therapy, everyday practice and review are most useful to a family when the people involved understand the same goals.",
+          "text": "Your child’s plan should travel with them. What happens in a therapy session needs to connect with life at home and school. Assessment, therapy, everyday practice and review are most useful to a family when the people involved understand the same goals. Pinnacle describes a shared pathway that brings those steps together around your child. Diagnostic information still matters for clinical care and access to support. Alongside it, the plan keeps communication, daily routines, learning, relationships and participation in view. Company-described care model Modules named in the BIS scope",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
@@ -551,8 +552,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-a-starting-point-you-can-understand",
           "kind": "article",
           "parent": "impact",
-          "description": "Ability measurement and defined developmental goals help families ask what to work on and why.",
-          "text": "A starting point you can understand. Ability measurement and defined developmental goals help families ask what to work on and why. Read Pinnacle’s source record",
+          "description": "Begin with what your child can do today. Use the assessment to discuss the abilities you want to build next.",
+          "text": "A starting point you can understand. Begin with what your child can do today. Use the assessment to discuss the abilities you want to build next. Read Pinnacle’s source record",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
           ]
@@ -563,8 +564,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-a-plan-people-can-work-on-together",
           "kind": "article",
           "parent": "impact",
-          "description": "Pinnacle describes a connected pathway across practitioners, parent-guided practice and progress review.",
-          "text": "A plan people can work on together. Pinnacle describes a connected pathway across practitioners, parent-guided practice and progress review. Read Pinnacle’s source record",
+          "description": "Understand who does what: your care team, your family and the people supporting your child each day. Pinnacle’s pathway is designed to connect that work.",
+          "text": "A plan people can work on together. Understand who does what: your care team, your family and the people supporting your child each day. Pinnacle’s pathway is designed to connect that work. Read Pinnacle’s source record",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
           ]
@@ -575,8 +576,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-practice-that-belongs-in-everyday-life",
           "kind": "article",
           "parent": "impact",
-          "description": "The BIS schedule names parent-facing developmental-support modules alongside tracking and correction.",
-          "text": "Practice that belongs in everyday life. The BIS schedule names parent-facing developmental-support modules alongside tracking and correction. Read Pinnacle’s source record",
+          "description": "Bring the goals into familiar routines, with guidance from the care team. The BIS scope includes parent-facing support and tracking modules.",
+          "text": "Practice that belongs in everyday life. Bring the goals into familiar routines, with guidance from the care team. The BIS scope includes parent-facing support and tracking modules. Read Pinnacle’s source record",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
           ]
@@ -587,8 +588,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-progress-you-can-discuss",
           "kind": "article",
           "parent": "impact",
-          "description": "Ask how changing abilities will inform the next plan, the next reassessment and participation goals.",
-          "text": "Progress you can discuss. Ask how changing abilities will inform the next plan, the next reassessment and participation goals. Read Pinnacle’s source record",
+          "description": "Look at what is changing in daily life alongside the reports. Discuss what to continue, where to adjust the plan and when to reassess.",
+          "text": "Progress you can discuss. Look at what is changing in daily life alongside the reports. Discuss what to continue, where to adjust the plan and when to reassess. Read Pinnacle’s source record",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html"
           ]
@@ -3674,12 +3675,14 @@
         },
         {
           "id": "next-step",
-          "name": "Your child’s next step deserves a clear conversation.",
+          "name": "Let’s talk about your child.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#next-step",
           "kind": "section",
           "parent": null,
-          "description": "Ask the Pinnacle team about your child’s starting abilities, the proposed goals, who coordinates care and when progress will be reviewed. Bring the evidence questions that matter to your family.",
-          "citations": []
+          "description": "Tell us what matters most in your child’s everyday life. Ask how Pinnacle would understand their abilities, build a plan with you and review progress. Start with a conversation.",
+          "citations": [
+            "https://wa.me/919100181181?text=Hello%20Pinnacle%2C%20I%20would%20like%20to%20understand%20the%20next%20steps%20for%20my%20child%20and%20discuss%20an%20assessment."
+          ]
         },
         {
           "id": "section-take-the-source-with-you",
@@ -11901,7 +11904,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html#section-optional-google-analytics",
           "kind": "section",
           "parent": null,
-          "description": "With your permission, we use Google Analytics to understand visits and use of this public evidence library: topics opened, source links, document downloads, citation copying, language selection and sharing controls. These are interactions with public information, not clinical assessments.",
+          "description": "With your permission, we use Google Analytics to understand visits and use of this public evidence library: topics opened, source links, document downloads, citation copying, language selection, sharing controls and contact-button clicks. These are interactions with public information, not clinical assessments.",
           "citations": [
             "https://policies.google.com/technologies/partner-sites",
             "https://tools.google.com/dlpage/gaoptout"
