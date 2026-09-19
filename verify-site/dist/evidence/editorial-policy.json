@@ -30,5 +30,15 @@
     "confirmedBy": "Pinnacle site owner",
     "scope": "Pinnacle confirms that its organisational coverage is complete. This company confirmation is recorded alongside the source inventory; it does not change historical document dates, report scope or the statuses observed in official portals."
   },
+  "evidenceOwner": {
+    "name": "Sourabh Sashank",
+    "jobTitle": "Lead PinnacleAI®",
+    "role": "Evidence owner",
+    "email": "care@pinnacleblooms.org",
+    "telephone": "+919100181181",
+    "displayTelephone": "9100 181 181",
+    "appointedOn": "2026-09-19",
+    "responsibility": "Maintains the verification evidence register, coordinates source updates and responds to evidence questions and corrections."
+  },
   "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/#editorial-policy"
 }

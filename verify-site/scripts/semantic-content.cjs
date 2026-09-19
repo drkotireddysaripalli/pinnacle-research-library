@@ -61,6 +61,9 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
   if(!page){page={'@type':'WebPage','@id':pageId,name:plain(html.match(/<title>([\s\S]*?)<\/title>/)[1]),url};graph.push(page);}
   page['@id'] ||= pageId;page.inLanguage=html.match(/<html[^>]*\blang="([^"]+)"/)?.[1]||'en-IN';page.dateModified=date;page.publisher={'@id':organization['@id']};page.about=[{'@id':organization['@id']},{'@id':brand['@id']}];
   page.isPartOf={'@id':origin+'/#website'};page.isAccessibleForFree=true;
+  const owner=editorial.evidenceOwner,ownerId=origin+'/#evidence-owner';
+  graph.push({'@type':'Person','@id':ownerId,name:owner.name,jobTitle:owner.jobTitle,description:owner.role+'. '+owner.responsibility,email:owner.email,telephone:owner.telephone,worksFor:{'@id':organization['@id']},url:origin+'/#editorial-policy'});
+  page.maintainer={'@id':ownerId};
   if(editorial.clinicalReview?.status==='confirmed'&&(url===origin+'/'||url.includes('/guides/'))){const committeeId=origin+'/#clinical-committee';graph.push({'@type':'Organization','@id':committeeId,name:editorial.responsibleBody,parentOrganization:{'@id':organization['@id']},url:origin+'/#editorial-policy',description:editorial.remit});page.reviewedBy={'@id':committeeId};}
   page.hasPart=blocks.filter(b=>!b.parent).map(b=>({'@id':b.url+'-element'}));
   const crumbs=graph.find(x=>x['@type']==='BreadcrumbList');if(crumbs)page.breadcrumb={'@id':crumbs['@id']};

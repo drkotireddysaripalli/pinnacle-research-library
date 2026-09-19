@@ -73,3 +73,5 @@ No. MD-3 is a manufacturing-licence application. MD-5 is the issued manufacturin
 Clinical explanations reviewed by the Pinnacle Clinical Committee. Confirmation recorded: 19 September 2026. Prepared with AI editorial assistance.
 
 PinnacleAI® GPT-OS: non-diagnostic developmental support, ages 0–12. Plans and outcomes are individual.
+
+For source documents or a question about this explanation, contact Sourabh Sashank (Lead PinnacleAI®) at care@pinnacleblooms.org or 9100 181 181.

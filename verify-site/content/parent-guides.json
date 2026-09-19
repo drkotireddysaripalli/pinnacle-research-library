@@ -77,7 +77,7 @@
         "Grow and participate"
       ],
       "contact": "Ask about the evidence",
-      "contactText": "For source documents or a question about this explanation, contact Gokul Rao at care@pinnacleblooms.org or 9100 181 181.",
+      "contactText": "For source documents or a question about this explanation, contact {evidenceOwnerName} ({evidenceOwnerRole}) at care@pinnacleblooms.org or 9100 181 181.",
       "purpose": "Because every child deserves a wonderful life.",
       "allGuides": "Choose a parent guide",
       "scope": "PinnacleAI® GPT-OS: non-diagnostic developmental support, ages 0–12. Plans and outcomes are individual."
@@ -110,7 +110,7 @@
         "ఎదగడం, అందరితో కలవడం"
       ],
       "contact": "ఆధారాల గురించి అడగండి",
-      "contactText": "మూల పత్రాలు కావాలన్నా, ఈ వివరణ గురించి సందేహం ఉన్నా Gokul Raoను సంప్రదించండి: care@pinnacleblooms.org లేదా 9100 181 181.",
+      "contactText": "మూల పత్రాలు కావాలన్నా, ఈ వివరణ గురించి సందేహం ఉన్నా {evidenceOwnerName} ({evidenceOwnerRole})ను సంప్రదించండి: care@pinnacleblooms.org లేదా 9100 181 181.",
       "purpose": "ప్రతి బిడ్డకూ అద్భుతమైన జీవితం దక్కాలి.",
       "allGuides": "మీకు కావాల్సిన గైడ్ ఎంచుకోండి",
       "scope": "PinnacleAI® GPT-OS: 0–12 ఏళ్ల పిల్లల డెవలప్‌మెంట్‌కు సపోర్ట్ ఇచ్చే సాఫ్ట్‌వేర్; వ్యాధి నిర్ధారణ చేయదు. Plan, ఫలితాలు ఒక్కో బిడ్డకు వేరుగా ఉంటాయి."
@@ -143,7 +143,7 @@
         "आत्मनिर्भरता और भागीदारी"
       ],
       "contact": "प्रमाणों के बारे में पूछें",
-      "contactText": "मूल दस्तावेज़ या इस जानकारी के बारे में किसी सवाल के लिए Gokul Rao से संपर्क करें: care@pinnacleblooms.org या 9100 181 181.",
+      "contactText": "मूल दस्तावेज़ या इस जानकारी के बारे में किसी सवाल के लिए {evidenceOwnerName} ({evidenceOwnerRole}) से संपर्क करें: care@pinnacleblooms.org या 9100 181 181.",
       "purpose": "क्योंकि हर बच्चा एक शानदार ज़िंदगी का हकदार है।",
       "allGuides": "अपनी ज़रूरत की गाइड चुनें",
       "scope": "PinnacleAI® GPT-OS: 0–12 वर्ष के बच्चों के विकास में सहायता के लिए; रोग की पहचान या निदान नहीं करता। हर बच्चे का प्लान और उसके परिणाम अलग हो सकते हैं।"

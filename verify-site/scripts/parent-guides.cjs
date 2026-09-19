@@ -3,6 +3,7 @@
 // their matching text/JSON exports and a small shared stylesheet. It does not
 // change the main page, sitemap, share-image catalogue or source evidence.
 const data = require('../content/parent-guides.json');
+const evidenceOwner=require('../content/editorial-policy.json').evidenceOwner;
 const languageKeys = Object.keys(data.languages);
 const pathIcons = ['scan-eye','clipboard-list','users','house','chart-no-axes-combined','rotate-ccw','network'];
 const routeFor = (id, language) => `/guides/${language === 'en' ? '' : language + '/'}${id}.html`;
@@ -51,7 +52,8 @@ module.exports = ({e, icon, origin, date = data.updated, head, footer, breadcrum
   const pages=[];
   for (const guide of data.guides) {
     for (const language of languageKeys) {
-      const l=data.languages[language], copy=guide.translations[language];
+      const originalLanguage=data.languages[language];
+      const l={...originalLanguage,contactText:originalLanguage.contactText.replaceAll('{evidenceOwnerName}',evidenceOwner.name).replaceAll('{evidenceOwnerRole}',evidenceOwner.jobTitle)}, copy=guide.translations[language];
       if(copy.sections.length!==guide.sections.length)throw Error('Guide section mismatch: '+guide.id+'/'+language);
       const route=routeFor(guide.id,language), url=absolute(route), englishUrl=absolute(routeFor(guide.id,'en'));
       const crumbs=[[l.home,'/'],[copy.shortTitle,route]];
@@ -71,13 +73,13 @@ module.exports = ({e, icon, origin, date = data.updated, head, footer, breadcrum
       const content=`<main class="wrap parent-guide" lang="${l.lang}">${crumbsHTML(crumbs)}${languageNav}<article class="h-entry"><div class="guide-hero"><div><p class="eyebrow">${e(l.guideLabel)} · PINNACLEAI®</p><h1 class="p-name">${e(copy.title)}</h1><p class="guide-answer p-summary">${e(copy.answer)}</p></div>${figure}</div><nav class="guide-toc" aria-label="${e(l.contents)}"><h2>${e(l.contents)}</h2><ol>${guide.sections.map((s,i)=>`<li><a href="#${s.id}">${e(copy.sections[i].title)}</a></li>`).join('')}</ol></nav><div class="guide-path"><h2>${e(l.pathTitle)}</h2><ol>${l.path.map((stage,i)=>`<li>${icon(pathIcons[i])}<span>${e(stage)}</span></li>`).join('')}</ol></div><div class="e-content">${sections}<section class="guide-questions" id="questions-for-your-team"><h2>${e(l.questions)}</h2><ul>${copy.questions.map(q=>`<li>${e(q)}</li>`).join('')}</ul></section><section class="guide-faq" id="quick-answers"><h2>${faqTitle}</h2>${copy.faq.map((f,i)=>`<details id="answer-${i+1}"><summary>${e(f.q)}</summary><p>${e(f.a)}</p></details>`).join('')}</section>${sourceList}<div class="guide-review"><p><time datetime="${date}">${e(l.updated)}: ${date}</time>. ${e(l.review)} <a href="/#editorial-policy" lang="en">Clinical review record</a></p>${l.translation?`<p>${e(l.translation)}</p>`:''}<p>${e(l.scope)}</p></div></div></article><aside class="guide-related"><h2>${e(l.related)}</h2><div class="guide-cards">${localizedCards(language,guide.id)}</div></aside><section class="guide-contact" id="ask-about-evidence"><h2>${e(l.contact)}</h2><p>${e(l.contactText).replace('care@pinnacleblooms.org','<a href="mailto:care@pinnacleblooms.org">care@pinnacleblooms.org</a>').replace('9100 181 181','<a href="tel:+919100181181">9100 181 181</a>')}</p><p><strong>${e(l.purpose)}</strong></p></section></main>`;
       const html='<!doctype html><html lang="'+l.lang+'">'+pageHead+'<body>'+localHeader+content+footer+'</body></html>';
       write(route.slice(1),html);
-      const text=[copy.title,url,'Language: '+l.lang,'Updated: '+date,'',copy.answer,'',...guide.sections.flatMap((s,i)=>[copy.sections[i].title,...copy.sections[i].paragraphs,...s.sources.map(key=>'Source: '+sourceLink(key).title+' — '+absolute(sourceLink(key).url)), '']),l.questions,...copy.questions,'',...copy.faq.flatMap(f=>[f.q,f.a,'']),l.review,l.translation,l.scope].filter(Boolean).join('\n\n');
+      const text=[copy.title,url,'Language: '+l.lang,'Updated: '+date,'',copy.answer,'',...guide.sections.flatMap((s,i)=>[copy.sections[i].title,...copy.sections[i].paragraphs,...s.sources.map(key=>'Source: '+sourceLink(key).title+' — '+absolute(sourceLink(key).url)), '']),l.questions,...copy.questions,'',...copy.faq.flatMap(f=>[f.q,f.a,'']),l.review,l.translation,l.scope,l.contactText].filter(Boolean).join('\n\n');
       write(route.slice(1).replace(/\.html$/,'.txt'),text+'\n');
       pages.push({id:guide.id+'-'+language,topic:guide.id,language,lang:l.lang,route,url,title:copy.title,description:copy.description,answer:copy.answer,icon:guide.icon,image:'/images/'+guide.image+'-1000.webp',sources:guide.sources.map(key=>({...sourceLink(key),url:absolute(sourceLink(key).url)})),text});
     }
   }
   write('parent-guides.css',style);
-  write('evidence/parent-guides.json',JSON.stringify({updated:date,editorialBasis:data.editorialBasis,pages:pages.map(({text,...p})=>p)},null,2));
+  write('evidence/parent-guides.json',JSON.stringify({updated:date,editorialBasis:data.editorialBasis,evidenceOwner,pages:pages.map(({text,...p})=>p)},null,2));
   const teaser=`<section class="guide-teaser wrap" id="parent-guides"><p class="eyebrow">UNDERSTAND THE EVIDENCE IN EVERYDAY LIFE</p><h2>Three questions. A clearer next step.</h2><div class="guide-cards">${localizedCards('en')}</div><p class="guide-languages">Read each guide in English, <a href="${routeFor('abilityscore','te')}" lang="te">తెలుగు</a> or <a href="${routeFor('abilityscore','hi')}" lang="hi">हिन्दी</a>. Source links accompany every topic.</p></section>`;
   return {pages,teaser,style,text:pages.map(p=>p.text).join('\n\n---\n\n'),indexText:pages.map(p=>`- [${p.title}](${p.url}): ${p.description}`).join('\n')};
 };

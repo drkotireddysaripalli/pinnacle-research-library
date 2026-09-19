@@ -5,9 +5,14 @@
   "conclusionsUpdated": "2026-09-19",
   "audience": "Public evidence and context",
   "contact": {
-    "name": "Gokul Rao",
+    "name": "Sourabh Sashank",
+    "jobTitle": "Lead PinnacleAI®",
+    "role": "Evidence owner",
     "email": "care@pinnacleblooms.org",
-    "telephone": "+919100181181"
+    "telephone": "+919100181181",
+    "displayTelephone": "9100 181 181",
+    "appointedOn": "2026-09-19",
+    "responsibility": "Maintains the verification evidence register, coordinates source updates and responds to evidence questions and corrections."
   },
   "reviewBoundary": "Source inspection is separate from current issuer verification. Source review does not establish endorsement by the issuing organisations.",
   "records": [

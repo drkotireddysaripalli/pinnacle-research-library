@@ -25,7 +25,9 @@
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "contactType": "verification enquiries",
+      "name": "Sourabh Sashank",
+      "contactType": "evidence questions and corrections",
+      "description": "Lead PinnacleAI®; Evidence owner",
       "email": "care@pinnacleblooms.org",
       "telephone": "+919100181181"
     }
@@ -3301,8 +3303,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-who-can-help-with-a-correction-or-a-current-document",
           "kind": "details",
           "parent": "questions",
-          "description": "Contact Gokul Rao at care@pinnacleblooms.org or 9100 181 181. Include the record title, reference number and source date so the relevant document can be located.",
-          "text": "Who can help with a correction or a current document? Contact Gokul Rao at care@pinnacleblooms.org or 9100 181 181. Include the record title, reference number and source date so the relevant document can be located. Email the verification contact",
+          "description": "Contact Sourabh Sashank, Lead PinnacleAI® and evidence owner, at care@pinnacleblooms.org or 9100 181 181. Include the record title, reference number and source date so the relevant document can be located.",
+          "text": "Who can help with a correction or a current document? Contact Sourabh Sashank, Lead PinnacleAI® and evidence owner, at care@pinnacleblooms.org or 9100 181 181. Include the record title, reference number and source date so the relevant document can be located. Email the verification contact",
           "citations": []
         },
         {
@@ -3613,12 +3615,12 @@
         },
         {
           "id": "editorial-policy",
-          "name": "Pinnacle Clinical Committee",
+          "name": "Evidence owner",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#editorial-policy",
           "kind": "details",
           "parent": "method",
-          "description": "The designated committee brings together paediatric speech therapists, occupational therapists, ABA therapists, special education therapists, data scientists, technology experts and statisticians. Additional qualified specialists may contribute where needed.",
-          "text": "Clinical review confirmed & editorial responsibility Pinnacle Clinical Committee The designated committee brings together paediatric speech therapists, occupational therapists, ABA therapists, special education therapists, data scientists, technology experts and statisticians. Additional qualified specialists may contribute where needed. Review parent-facing explanations against the cited source, the intended use of the named software version and the child's individual care context. Include additional qualified specialists when the subject requires them. Current review status: Clinical review completed by the Pinnacle Clinical Committee; confirmation recorded on 19 September 2026. The confirmation applies to the parent-facing clinical explanations in the 19 September 2026 published edition. Later substantive clinical changes require a new review record. Automatic translations remain labelled as machine-assisted. Coverage confirmation: Pinnacle confirms its organisational coverage is complete. Confirmation recorded: 19 September 2026. Individual records retain their source dates and the exact scope of the documents inspected. Document inspection, a live issuer match and clinical review are recorded separately. Read the editorial record · Send a source or correction",
+          "description": "Sourabh Sashank · Lead PinnacleAI® care@pinnacleblooms.org · 9100 181 181",
+          "text": "Clinical review confirmed & editorial responsibility Evidence owner Sourabh Sashank · Lead PinnacleAI® care@pinnacleblooms.org · 9100 181 181 Maintains the verification evidence register, coordinates source updates and responds to evidence questions and corrections. Pinnacle Clinical Committee The designated committee brings together paediatric speech therapists, occupational therapists, ABA therapists, special education therapists, data scientists, technology experts and statisticians. Additional qualified specialists may contribute where needed. Review parent-facing explanations against the cited source, the intended use of the named software version and the child's individual care context. Include additional qualified specialists when the subject requires them. Current review status: Clinical review completed by the Pinnacle Clinical Committee; confirmation recorded on 19 September 2026. The confirmation applies to the parent-facing clinical explanations in the 19 September 2026 published edition. Later substantive clinical changes require a new review record. Automatic translations remain labelled as machine-assisted. Coverage confirmation: Pinnacle confirms its organisational coverage is complete. Confirmation recorded: 19 September 2026. Individual records retain their source dates and the exact scope of the documents inspected. Document inspection, a live issuer match and clinical review are recorded separately. Read the editorial record · Send a source or correction",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json"
           ]
@@ -3629,8 +3631,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#site-update-history",
           "kind": "details",
           "parent": "method",
-          "description": "For a current original or a correction, contact Gokul Rao at care@pinnacleblooms.org . Each evidence record retains its own source-review date.",
-          "text": "Recent updates to this guide + 19 September 2026 Added a guided workflow, an eight-report explorer and focused reading paths. Linked seven DOI publications, parent books and author profiles. Clarified that the report presentation version is separate from the SaMD software version. 18 September 2026 Updated selected source conclusions, regulatory scope, scale definitions and the documented developmental pathway. 15 September 2026 Prepared the initial evidence register and centre-document inventory. For a current original or a correction, contact Gokul Rao at care@pinnacleblooms.org . Each evidence record retains its own source-review date.",
+          "description": "For a current original or a correction, contact Sourabh Sashank, Lead PinnacleAI®, at care@pinnacleblooms.org . Each evidence record retains its own source-review date.",
+          "text": "Recent updates to this guide + 19 September 2026 Added a guided workflow, an eight-report explorer and focused reading paths. Linked seven DOI publications, parent books and author profiles. Clarified that the report presentation version is separate from the SaMD software version. 18 September 2026 Updated selected source conclusions, regulatory scope, scale definitions and the documented developmental pathway. 15 September 2026 Prepared the initial evidence register and centre-document inventory. For a current original or a correction, contact Sourabh Sashank, Lead PinnacleAI®, at care@pinnacleblooms.org . Each evidence record retains its own source-review date.",
           "citations": []
         },
         {
@@ -3639,8 +3641,8 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-review-boundaries-publication-notes",
           "kind": "details",
           "parent": "method",
-          "description": "The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The named verification contact can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source.",
-          "text": "Review boundaries & publication notes + The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The named verification contact can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source. Public document copies preserve issuer, entity, reference, scope and dates while removing personal identifiers and signatures where appropriate. A document’s stated validity is recorded separately from a live check for suspension, cancellation or changes. View file-integrity records . Research protocols describe planned methods. Company summaries and operational totals are not substitutes for completed study results with methods, populations, outcomes and limitations.",
+          "description": "The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The evidence owner can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source.",
+          "text": "Review boundaries & publication notes + The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The evidence owner can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source. Public document copies preserve issuer, entity, reference, scope and dates while removing personal identifiers and signatures where appropriate. A document’s stated validity is recorded separately from a live check for suspension, cancellation or changes. View file-integrity records . Research protocols describe planned methods. Company summaries and operational totals are not substitutes for completed study results with methods, populations, outcomes and limitations.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/document-manifest.json"
           ]
@@ -8433,7 +8435,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/abilityscore.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "For source documents or a question about this explanation, contact Gokul Rao at care@pinnacleblooms.org or 9100 181 181 .",
+          "description": "For source documents or a question about this explanation, contact Sourabh Sashank (Lead PinnacleAI®) at care@pinnacleblooms.org or 9100 181 181 .",
           "citations": []
         }
       ]
@@ -8577,7 +8579,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/abilityscore.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "మూల పత్రాలు కావాలన్నా, ఈ వివరణ గురించి సందేహం ఉన్నా Gokul Raoను సంప్రదించండి: care@pinnacleblooms.org లేదా 9100 181 181 .",
+          "description": "మూల పత్రాలు కావాలన్నా, ఈ వివరణ గురించి సందేహం ఉన్నా Sourabh Sashank (Lead PinnacleAI®)ను సంప్రదించండి: care@pinnacleblooms.org లేదా 9100 181 181 .",
           "citations": []
         }
       ]
@@ -8721,7 +8723,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/abilityscore.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "मूल दस्तावेज़ या इस जानकारी के बारे में किसी सवाल के लिए Gokul Rao से संपर्क करें: care@pinnacleblooms.org या 9100 181 181 .",
+          "description": "मूल दस्तावेज़ या इस जानकारी के बारे में किसी सवाल के लिए Sourabh Sashank (Lead PinnacleAI®) से संपर्क करें: care@pinnacleblooms.org या 9100 181 181 .",
           "citations": []
         }
       ]
@@ -8868,7 +8870,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/everyday-practice.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "For source documents or a question about this explanation, contact Gokul Rao at care@pinnacleblooms.org or 9100 181 181 .",
+          "description": "For source documents or a question about this explanation, contact Sourabh Sashank (Lead PinnacleAI®) at care@pinnacleblooms.org or 9100 181 181 .",
           "citations": []
         }
       ]
@@ -9015,7 +9017,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/everyday-practice.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "మూల పత్రాలు కావాలన్నా, ఈ వివరణ గురించి సందేహం ఉన్నా Gokul Raoను సంప్రదించండి: care@pinnacleblooms.org లేదా 9100 181 181 .",
+          "description": "మూల పత్రాలు కావాలన్నా, ఈ వివరణ గురించి సందేహం ఉన్నా Sourabh Sashank (Lead PinnacleAI®)ను సంప్రదించండి: care@pinnacleblooms.org లేదా 9100 181 181 .",
           "citations": []
         }
       ]
@@ -9162,7 +9164,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/everyday-practice.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "मूल दस्तावेज़ या इस जानकारी के बारे में किसी सवाल के लिए Gokul Rao से संपर्क करें: care@pinnacleblooms.org या 9100 181 181 .",
+          "description": "मूल दस्तावेज़ या इस जानकारी के बारे में किसी सवाल के लिए Sourabh Sashank (Lead PinnacleAI®) से संपर्क करें: care@pinnacleblooms.org या 9100 181 181 .",
           "citations": []
         }
       ]
@@ -9302,7 +9304,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/licences-and-scope.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "For source documents or a question about this explanation, contact Gokul Rao at care@pinnacleblooms.org or 9100 181 181 .",
+          "description": "For source documents or a question about this explanation, contact Sourabh Sashank (Lead PinnacleAI®) at care@pinnacleblooms.org or 9100 181 181 .",
           "citations": []
         }
       ]
@@ -9442,7 +9444,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/licences-and-scope.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "మూల పత్రాలు కావాలన్నా, ఈ వివరణ గురించి సందేహం ఉన్నా Gokul Raoను సంప్రదించండి: care@pinnacleblooms.org లేదా 9100 181 181 .",
+          "description": "మూల పత్రాలు కావాలన్నా, ఈ వివరణ గురించి సందేహం ఉన్నా Sourabh Sashank (Lead PinnacleAI®)ను సంప్రదించండి: care@pinnacleblooms.org లేదా 9100 181 181 .",
           "citations": []
         }
       ]
@@ -9582,7 +9584,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/licences-and-scope.html#ask-about-evidence",
           "kind": "section",
           "parent": null,
-          "description": "मूल दस्तावेज़ या इस जानकारी के बारे में किसी सवाल के लिए Gokul Rao से संपर्क करें: care@pinnacleblooms.org या 9100 181 181 .",
+          "description": "मूल दस्तावेज़ या इस जानकारी के बारे में किसी सवाल के लिए Sourabh Sashank (Lead PinnacleAI®) से संपर्क करें: care@pinnacleblooms.org या 9100 181 181 .",
           "citations": []
         }
       ]
@@ -11895,7 +11897,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html#section-questions-or-corrections",
           "kind": "section",
           "parent": null,
-          "description": "Contact Gokul Rao at care@pinnacleblooms.org for verification-page enquiries.",
+          "description": "Contact Sourabh Sashank, Lead PinnacleAI® and evidence owner, at care@pinnacleblooms.org or 9100 181 181 for verification-page enquiries.",
           "citations": []
         }
       ]

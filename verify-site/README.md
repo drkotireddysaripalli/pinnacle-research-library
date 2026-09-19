@@ -43,7 +43,7 @@ The brand and exact legal entity are connected through Organization and Brand da
 
 Report type, source date, counting unit, source-review status and clinical limitations remain part of each claim. HFR records combine the original source inventory with 56 exact ID matches in the authenticated NHPR dashboard on 19 September 2026: 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved; one masked Draft is separate. These are workflow statuses, not a claim that every listed facility is currently operating. The dated check is in content/hfr-dashboard-checks.json. Both exact UDINs and document particulars were matched as Active in the live ICAI portal on 19 September 2026, after user-completed CAPTCHA and OTP verification. The dated record is in content/issuer-checks.json. Restricted practitioner reports are not republished.
 
-Verification contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
+Evidence owner: Sourabh Sashank · Lead PinnacleAI® · care@pinnacleblooms.org · +91 9100 181 181. The current owner record is maintained in `content/editorial-policy.json` and reused by contact details, the footer, editorial disclosure, parent guides, structured data and readable exports. Evidence ownership is distinct from the Pinnacle Clinical Committee’s recorded review and the approving authorities named in original source documents.
 
 Last content and semantic review: 19 September 2026.
 
