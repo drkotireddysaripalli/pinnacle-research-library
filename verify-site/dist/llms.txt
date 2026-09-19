@@ -55,6 +55,19 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Books & parent resources · Publication records](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html): Company-published. Authorship and publication metadata read from the supplied books
 - [PinnacleAI® walkthrough · Developmental architecture](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html): Company-published. Company-authored walkthrough · AbilityScore layers and programme cadence
 
+## Parent guides in English, Telugu and Hindi
+- [What does my child’s AbilityScore® mean?](https://pinnacle-verify.saripalli.chatgpt.site/guides/abilityscore.html): Understand your child’s AbilityScore®, the report context and useful questions for the care team, with links to the original Pinnacle evidence.
+- [నా బిడ్డ AbilityScore® ఏం చెబుతుంది?](https://pinnacle-verify.saripalli.chatgpt.site/guides/te/abilityscore.html): మీ బిడ్డ AbilityScore®, రిపోర్ట్ వివరాలు, కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలను సులభంగా తెలుసుకోండి. ప్రతి వివరణకు Pinnacle మూల ఆధారాలు చూడండి.
+- [मेरे बच्चे का AbilityScore® क्या बताता है?](https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/abilityscore.html): अपने बच्चे के AbilityScore®, रिपोर्ट के संदर्भ और केयर टीम से पूछने वाले सवाल समझें। जानकारी के साथ Pinnacle के मूल प्रमाणों के लिंक पढ़ें।
+- [From assessment to everyday practice](https://pinnacle-verify.saripalli.chatgpt.site/guides/everyday-practice.html): See how PinnacleAI® connects assessment, a personal plan, home practice and monthly review, with family questions and links to the documented workflow.
+- [Assessment నుంచి రోజువారీ Practice వరకు](https://pinnacle-verify.saripalli.chatgpt.site/guides/te/everyday-practice.html): PinnacleAI®లో Assessment, బిడ్డకు సరిపోయే Plan, ఇంట్లో Practice, నెలవారీ రివ్యూ ఎలా కలుస్తాయో తెలుసుకోండి. వివరణలతో పాటు మూల ఆధారాలు చదవండి.
+- [आकलन से रोज़मर्रा के अभ्यास तक](https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/everyday-practice.html): जानें कि PinnacleAI® आकलन, बच्चे के लिए बने प्लान, घर के अभ्यास और मासिक समीक्षा को कैसे जोड़ता है। साथ में मूल स्रोत और उपयोगी सवाल पढ़ें।
+- [What do PinnacleAI®’s MD-5 and BIS records cover?](https://pinnacle-verify.saripalli.chatgpt.site/guides/licences-and-scope.html): Read what PinnacleAI®’s MD-5 and BIS records establish, how parents fit into the intended use, and why an MD-3 application is different from a licence.
+- [PinnacleAI® MD-5, BIS పత్రాలు ఏం చెబుతాయి?](https://pinnacle-verify.saripalli.chatgpt.site/guides/te/licences-and-scope.html): PinnacleAI® MD-5, BIS పత్రాల పరిధి, తల్లిదండ్రుల పాత్ర, MD-3 దరఖాస్తుకు లైసెన్స్‌కు ఉన్న తేడా తెలుసుకోండి. అసలు ఆధారాలతో కలిసి చదవండి.
+- [PinnacleAI® के MD-5 और BIS रिकॉर्ड क्या बताते हैं?](https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/licences-and-scope.html): PinnacleAI® के MD-5 और BIS का दायरा, माता-पिता की भूमिका और MD-3 आवेदन व जारी लाइसेंस का अंतर समझें। मूल प्रमाणों के साथ विवरण पढ़ें।
+- [Parent guide index](https://pinnacle-verify.saripalli.chatgpt.site/evidence/parent-guides.json): language-specific answers, source references and canonical links.
+- [Editorial responsibility](https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json): designated committee and exact review status.
+
 ## Research, books and authors
 - [Research library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html): seven DOI-linked works, original books, company-study sources and matched author profiles.
 - [Research JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.json): publication dates, DOI identifiers, authors and source URLs.
@@ -69,7 +82,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Privacy and analytics choices](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): optional consent-based measurement and language translation.
 
 ## Share images
-- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 56 branded image cards linked to their source pages.
+- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 65 branded image cards linked to their source pages.
 
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.

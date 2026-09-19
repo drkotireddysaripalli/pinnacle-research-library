@@ -15,13 +15,14 @@ function enhance(html,url){
  for(const key of ['og:image','og:image:secure_url'])meta('property',key,image);
  meta('property','og:image:alt',card.alt);meta('property','og:image:type','image/jpeg');
  meta('property','og:image:width',1200);meta('property','og:image:height',630);
- meta('property','og:title',title+' | Pinnacle Verify');meta('property','og:description',description);
+ const isGuide=routeOf(url).startsWith('/guides/');
+ if(!isGuide){meta('property','og:title',title+' | Pinnacle Verify');meta('property','og:description',description);}
  meta('name','twitter:image',image);meta('name','twitter:image:alt',card.alt);
- meta('name','twitter:title',title+' | Pinnacle Verify');meta('name','twitter:description',description);
+ if(!isGuide){meta('name','twitter:title',title+' | Pinnacle Verify');meta('name','twitter:description',description);}
  // Bibliographic titles stay intact in the visible publication, citation tags and Article graph.
  if(routeOf(url).startsWith('/evidence/publications/'))html=html.replace(/<title>[\s\S]*?<\/title>/,'<title>'+e(title+' | Pinnacle Research')+'</title>');
  const existingDescription=html.match(/<meta name="description" content="([^"]*)">/)?.[1];
- if(existingDescription){
+ if(existingDescription&&!isGuide){
   let searchDescription=(existingDescription.length>160||existingDescription.includes('.. '))?description:existingDescription;
   if(searchDescription.length<110)searchDescription+=' Read the original sources and their evidence scope.';
   if(searchDescription!==existingDescription)meta('name','description',searchDescription);

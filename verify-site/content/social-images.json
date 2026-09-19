@@ -960,6 +960,159 @@
       "width": 1200,
       "height": 630,
       "alt": "Childhood participation. Meaningful change. REVIEW PROTOCOL. DOI 10.5281/zenodo.22827813. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/abilityscore.html",
+      "id": "guide-abilityscore-en",
+      "title": "Understand your child’s AbilityScore®",
+      "lines": [
+        "Understand your child’s",
+        "AbilityScore®"
+      ],
+      "category": "PARENT GUIDE · ENGLISH",
+      "note": "Abilities. Context. Questions for your care team.",
+      "icon": "scan-eye",
+      "description": "Understand your child’s AbilityScore®. ENGLISH edition. Abilities. Context. Questions for your care team.",
+      "image": "/images/social/guide-abilityscore-en-5f492c595991.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Understand your child’s AbilityScore® PARENT GUIDE · ENGLISH. Abilities. Context. Questions for your care team.. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/te/abilityscore.html",
+      "id": "guide-abilityscore-te",
+      "title": "Understand your child’s AbilityScore®",
+      "lines": [
+        "Understand your child’s",
+        "AbilityScore®"
+      ],
+      "category": "PARENT GUIDE · TELUGU",
+      "note": "Abilities. Context. Questions for your care team.",
+      "icon": "scan-eye",
+      "description": "Understand your child’s AbilityScore®. TELUGU edition. Abilities. Context. Questions for your care team.",
+      "image": "/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Understand your child’s AbilityScore® PARENT GUIDE · TELUGU. Abilities. Context. Questions for your care team.. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/hi/abilityscore.html",
+      "id": "guide-abilityscore-hi",
+      "title": "Understand your child’s AbilityScore®",
+      "lines": [
+        "Understand your child’s",
+        "AbilityScore®"
+      ],
+      "category": "PARENT GUIDE · HINDI",
+      "note": "Abilities. Context. Questions for your care team.",
+      "icon": "scan-eye",
+      "description": "Understand your child’s AbilityScore®. HINDI edition. Abilities. Context. Questions for your care team.",
+      "image": "/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Understand your child’s AbilityScore® PARENT GUIDE · HINDI. Abilities. Context. Questions for your care team.. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/everyday-practice.html",
+      "id": "guide-everyday-practice-en",
+      "title": "From assessment to everyday practice",
+      "lines": [
+        "From assessment",
+        "to everyday practice"
+      ],
+      "category": "PARENT GUIDE · ENGLISH",
+      "note": "A child-specific plan. Shared practice. Progress review.",
+      "icon": "house",
+      "description": "From assessment to everyday practice. ENGLISH edition. A child-specific plan. Shared practice. Progress review.",
+      "image": "/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "From assessment to everyday practice PARENT GUIDE · ENGLISH. A child-specific plan. Shared practice. Progress review.. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/te/everyday-practice.html",
+      "id": "guide-everyday-practice-te",
+      "title": "From assessment to everyday practice",
+      "lines": [
+        "From assessment",
+        "to everyday practice"
+      ],
+      "category": "PARENT GUIDE · TELUGU",
+      "note": "A child-specific plan. Shared practice. Progress review.",
+      "icon": "house",
+      "description": "From assessment to everyday practice. TELUGU edition. A child-specific plan. Shared practice. Progress review.",
+      "image": "/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "From assessment to everyday practice PARENT GUIDE · TELUGU. A child-specific plan. Shared practice. Progress review.. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/hi/everyday-practice.html",
+      "id": "guide-everyday-practice-hi",
+      "title": "From assessment to everyday practice",
+      "lines": [
+        "From assessment",
+        "to everyday practice"
+      ],
+      "category": "PARENT GUIDE · HINDI",
+      "note": "A child-specific plan. Shared practice. Progress review.",
+      "icon": "house",
+      "description": "From assessment to everyday practice. HINDI edition. A child-specific plan. Shared practice. Progress review.",
+      "image": "/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "From assessment to everyday practice PARENT GUIDE · HINDI. A child-specific plan. Shared practice. Progress review.. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/licences-and-scope.html",
+      "id": "guide-licences-and-scope-en",
+      "title": "MD-3. MD-5. BIS. Understand the scope.",
+      "lines": [
+        "MD-3. MD-5. BIS.",
+        "Understand the scope."
+      ],
+      "category": "PARENT GUIDE · ENGLISH",
+      "note": "Know what each document supports for your family.",
+      "icon": "file-search",
+      "description": "MD-3. MD-5. BIS. Understand the scope.. ENGLISH edition. Know what each document supports for your family.",
+      "image": "/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "MD-3. MD-5. BIS. Understand the scope. PARENT GUIDE · ENGLISH. Know what each document supports for your family.. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/te/licences-and-scope.html",
+      "id": "guide-licences-and-scope-te",
+      "title": "MD-3. MD-5. BIS. Understand the scope.",
+      "lines": [
+        "MD-3. MD-5. BIS.",
+        "Understand the scope."
+      ],
+      "category": "PARENT GUIDE · TELUGU",
+      "note": "Know what each document supports for your family.",
+      "icon": "file-search",
+      "description": "MD-3. MD-5. BIS. Understand the scope.. TELUGU edition. Know what each document supports for your family.",
+      "image": "/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "MD-3. MD-5. BIS. Understand the scope. PARENT GUIDE · TELUGU. Know what each document supports for your family.. Pinnacle Blooms Network."
+    },
+    {
+      "route": "/guides/hi/licences-and-scope.html",
+      "id": "guide-licences-and-scope-hi",
+      "title": "MD-3. MD-5. BIS. Understand the scope.",
+      "lines": [
+        "MD-3. MD-5. BIS.",
+        "Understand the scope."
+      ],
+      "category": "PARENT GUIDE · HINDI",
+      "note": "Know what each document supports for your family.",
+      "icon": "file-search",
+      "description": "MD-3. MD-5. BIS. Understand the scope.. HINDI edition. Know what each document supports for your family.",
+      "image": "/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "MD-3. MD-5. BIS. Understand the scope. PARENT GUIDE · HINDI. Know what each document supports for your family.. Pinnacle Blooms Network."
     }
   ]
 }

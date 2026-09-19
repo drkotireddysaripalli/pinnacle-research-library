@@ -1,0 +1,20 @@
+{
+  "sourceRepository": "https://github.com/google/fonts",
+  "commit": "f2bd09badbc763d8757951d52deec29da27e85fb",
+  "licence": "SIL Open Font License 1.1",
+  "processing": "Google Fonts variable TTF, width axis fixed at 100, weight axis and all glyphs retained; converted to WOFF2 with fontTools and Brotli.",
+  "files": [
+    {
+      "file": "/fonts/anek-telugu.woff2",
+      "bytes": 191708,
+      "sha256": "62d434974ff49ab7775df0c0bc8ade9c7ad19fbdad22c319b6cf5b88010d7f5b",
+      "license": "/fonts/anek-telugu-OFL.txt"
+    },
+    {
+      "file": "/fonts/noto-sans-devanagari.woff2",
+      "bytes": 151044,
+      "sha256": "7b31d0cb802984aa3c738364125fa5d8a5753b2c3d660b64190b0aa99cd382ce",
+      "license": "/fonts/noto-sans-devanagari-OFL.txt"
+    }
+  ]
+}

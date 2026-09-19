@@ -735,5 +735,122 @@
     "icon": "book-open",
     "cover": "/images/research/zenodo-22827813-600.webp",
     "description": "Childhood participation. Meaningful change.. DOI 10.5281/zenodo.22827813. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/guides/abilityscore.html",
+    "id": "guide-abilityscore-en",
+    "title": "Understand your child’s AbilityScore®",
+    "lines": [
+      "Understand your child’s",
+      "AbilityScore®"
+    ],
+    "category": "PARENT GUIDE · ENGLISH",
+    "note": "Abilities. Context. Questions for your care team.",
+    "icon": "scan-eye",
+    "description": "Understand your child’s AbilityScore®. ENGLISH edition. Abilities. Context. Questions for your care team."
+  },
+  {
+    "route": "/guides/te/abilityscore.html",
+    "id": "guide-abilityscore-te",
+    "title": "Understand your child’s AbilityScore®",
+    "lines": [
+      "Understand your child’s",
+      "AbilityScore®"
+    ],
+    "category": "PARENT GUIDE · TELUGU",
+    "note": "Abilities. Context. Questions for your care team.",
+    "icon": "scan-eye",
+    "description": "Understand your child’s AbilityScore®. TELUGU edition. Abilities. Context. Questions for your care team."
+  },
+  {
+    "route": "/guides/hi/abilityscore.html",
+    "id": "guide-abilityscore-hi",
+    "title": "Understand your child’s AbilityScore®",
+    "lines": [
+      "Understand your child’s",
+      "AbilityScore®"
+    ],
+    "category": "PARENT GUIDE · HINDI",
+    "note": "Abilities. Context. Questions for your care team.",
+    "icon": "scan-eye",
+    "description": "Understand your child’s AbilityScore®. HINDI edition. Abilities. Context. Questions for your care team."
+  },
+  {
+    "route": "/guides/everyday-practice.html",
+    "id": "guide-everyday-practice-en",
+    "title": "From assessment to everyday practice",
+    "lines": [
+      "From assessment",
+      "to everyday practice"
+    ],
+    "category": "PARENT GUIDE · ENGLISH",
+    "note": "A child-specific plan. Shared practice. Progress review.",
+    "icon": "house",
+    "description": "From assessment to everyday practice. ENGLISH edition. A child-specific plan. Shared practice. Progress review."
+  },
+  {
+    "route": "/guides/te/everyday-practice.html",
+    "id": "guide-everyday-practice-te",
+    "title": "From assessment to everyday practice",
+    "lines": [
+      "From assessment",
+      "to everyday practice"
+    ],
+    "category": "PARENT GUIDE · TELUGU",
+    "note": "A child-specific plan. Shared practice. Progress review.",
+    "icon": "house",
+    "description": "From assessment to everyday practice. TELUGU edition. A child-specific plan. Shared practice. Progress review."
+  },
+  {
+    "route": "/guides/hi/everyday-practice.html",
+    "id": "guide-everyday-practice-hi",
+    "title": "From assessment to everyday practice",
+    "lines": [
+      "From assessment",
+      "to everyday practice"
+    ],
+    "category": "PARENT GUIDE · HINDI",
+    "note": "A child-specific plan. Shared practice. Progress review.",
+    "icon": "house",
+    "description": "From assessment to everyday practice. HINDI edition. A child-specific plan. Shared practice. Progress review."
+  },
+  {
+    "route": "/guides/licences-and-scope.html",
+    "id": "guide-licences-and-scope-en",
+    "title": "MD-3. MD-5. BIS. Understand the scope.",
+    "lines": [
+      "MD-3. MD-5. BIS.",
+      "Understand the scope."
+    ],
+    "category": "PARENT GUIDE · ENGLISH",
+    "note": "Know what each document supports for your family.",
+    "icon": "file-search",
+    "description": "MD-3. MD-5. BIS. Understand the scope.. ENGLISH edition. Know what each document supports for your family."
+  },
+  {
+    "route": "/guides/te/licences-and-scope.html",
+    "id": "guide-licences-and-scope-te",
+    "title": "MD-3. MD-5. BIS. Understand the scope.",
+    "lines": [
+      "MD-3. MD-5. BIS.",
+      "Understand the scope."
+    ],
+    "category": "PARENT GUIDE · TELUGU",
+    "note": "Know what each document supports for your family.",
+    "icon": "file-search",
+    "description": "MD-3. MD-5. BIS. Understand the scope.. TELUGU edition. Know what each document supports for your family."
+  },
+  {
+    "route": "/guides/hi/licences-and-scope.html",
+    "id": "guide-licences-and-scope-hi",
+    "title": "MD-3. MD-5. BIS. Understand the scope.",
+    "lines": [
+      "MD-3. MD-5. BIS.",
+      "Understand the scope."
+    ],
+    "category": "PARENT GUIDE · HINDI",
+    "note": "Know what each document supports for your family.",
+    "icon": "file-search",
+    "description": "MD-3. MD-5. BIS. Understand the scope.. HINDI edition. Know what each document supports for your family."
   }
 ]

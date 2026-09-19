@@ -1,0 +1,75 @@
+What do PinnacleAI®’s MD-5 and BIS records cover?
+
+https://pinnacle-verify.saripalli.chatgpt.site/guides/licences-and-scope.html
+
+Language: en-IN
+
+Updated: 2026-09-19
+
+The reviewed MD-5 records the named device and its non-diagnostic developmental-support intended use for ages 0–12. The BIS licence and schedule describe a quality-management-system scope and named software activities and modules. Reading them together explains distinct parts of the evidence; neither guarantees a child’s outcome.
+
+MD-5: the named device and intended use
+
+The supplied issued manufacturing licence is MFG/MD/2026/000248. Its reviewed record identifies PinnacleAI® GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device for children aged 0–12. Read the named manufacturer, premises, device version and intended use together.
+
+The annexure describes developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Non-diagnostic means this record does not authorise the software to diagnose autism or another condition.
+
+Source: MD-5: MFG/MD/2026/000248 — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+Parents and caregivers are named users
+
+The intended-use wording names parents, therapists, educators and caregivers. That makes family participation explicit in this device’s documented use. It connects with Pinnacle’s described workflow of shared observations, guided everyday practice and professional review.
+
+The wording does not mean a parent acquires a therapist’s professional qualification, nor does it remove the need for appropriate clinical judgement. The dossier describes clinician-governed assessment and human oversight of recommendations.
+
+Source: MD-5: MFG/MD/2026/000248 — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+Source: Pinnacle Evidence Dossier — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+BIS: the quality-system activities and module scope
+
+BIS licence MD/L-2026029599 and its schedule name design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance for the specified software scope.
+
+The schedule includes Ability Score, Prognose®, Everyday Therapy through Therapeutic AI®, tracking and correction, and seven readiness indexes, including Self Sufficiency and Mainstream Inclusion. Its phrase ‘full developmental lifecycle of children’ belongs to this named scope. It does not expand the MD-5 age range or establish a lifelong clinical indication.
+
+Source: BIS: MD/L-2026029599 — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+MD-3: an application, separate from the issued licence
+
+MD-3 is an application for a manufacturing licence for Class A or Class B medical devices. The issued manufacturing licence is MD-5. The evidence library provides separate records so the application step and the licence decision are not mistaken for the same document.
+
+When a provider shows a number or badge, ask which document it identifies and where the original can be read. The useful answer is the actual document, its scope and its status.
+
+Source: MD-3 manufacturing-licence application — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html
+
+Source: MD-5: MFG/MD/2026/000248 — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+Use each record for the question it can answer
+
+A manufacturing licence, a quality-system record, a facility registration and a research study answer different questions. MD-5 helps establish the named device’s licensed intended use; BIS describes the named quality-system scope. Clinical outcomes need appropriate study evidence.
+
+The Verify library provides source-copy pages, excerpts and review dates. Reviewing a supplied document and confirming its current issuer status are separate checks. Follow each record’s current verification note, and ask for clarification when a scope or status is unclear.
+
+Source: MD-5: MFG/MD/2026/000248 — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+Source: BIS: MD/L-2026029599 — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+Questions to take to your care team
+
+Does the software and version being offered match the named MD-5 record?
+
+How will the care team involve our family within the documented intended use?
+
+Which evidence answers my question: device use, quality system, facility registration or outcomes?
+
+Does the BIS phrase ‘full developmental lifecycle’ change the MD-5 age range?
+
+No. That phrase appears in the BIS scope for named software modules and activities. The reviewed MD-5 intended use remains non-diagnostic developmental support for ages 0–12.
+
+Are MD-3 and MD-5 both issued licences?
+
+No. MD-3 is a manufacturing-licence application. MD-5 is the issued manufacturing licence. The two documents have distinct roles in the regulatory record.
+
+Source-based editorial explanation, prepared with AI assistance. No clinical review is claimed.
+
+PinnacleAI® GPT-OS: non-diagnostic developmental support, ages 0–12. Plans and outcomes are individual.

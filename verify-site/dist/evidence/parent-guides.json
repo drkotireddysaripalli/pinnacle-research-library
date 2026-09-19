@@ -1,0 +1,396 @@
+{
+  "updated": "2026-09-19",
+  "editorialBasis": "Explanations based on existing reviewed Pinnacle source records. English, Telugu and Hindi copy underwent an AI editorial and language-naturalness pass; no named human language or clinical reviewer is attributed.",
+  "pages": [
+    {
+      "id": "abilityscore-en",
+      "topic": "abilityscore",
+      "language": "en",
+      "lang": "en-IN",
+      "route": "/guides/abilityscore.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/abilityscore.html",
+      "title": "What does my child’s AbilityScore® mean?",
+      "description": "Understand your child’s AbilityScore®, the report context and useful questions for the care team, with links to the original Pinnacle evidence.",
+      "answer": "AbilityScore® is Pinnacle’s structured description of a child’s present developmental abilities. Read it alongside the assessed skills, everyday observations and the care team’s explanation. The useful question is: what can my child do now, and what should we work on next?",
+      "icon": "scan-eye",
+      "image": "/images/connected-records-1000.webp",
+      "sources": [
+        {
+          "title": "Pinnacle company walkthrough",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+          "pinpoint": "Page 26: framework; pages 35, 37: feedback and monthly review"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        },
+        {
+          "title": "AbilityScore® methodology preprint",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+          "pinpoint": "Methods and preliminary evidence; programme description, page 3"
+        },
+        {
+          "title": "AbilityScore® external-validation protocol",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
+          "pinpoint": "BHCL-VAL-2026-001, version 2.1; planned research"
+        },
+        {
+          "title": "Report-format review and eight-report guide",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer",
+          "pinpoint": "Supplied September examples; presentation version V-1.6.9.9, separate from SaMD version"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        }
+      ]
+    },
+    {
+      "id": "abilityscore-te",
+      "topic": "abilityscore",
+      "language": "te",
+      "lang": "te-IN",
+      "route": "/guides/te/abilityscore.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/abilityscore.html",
+      "title": "నా బిడ్డ AbilityScore® ఏం చెబుతుంది?",
+      "description": "మీ బిడ్డ AbilityScore®, రిపోర్ట్ వివరాలు, కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలను సులభంగా తెలుసుకోండి. ప్రతి వివరణకు Pinnacle మూల ఆధారాలు చూడండి.",
+      "answer": "AbilityScore® మీ బిడ్డ ప్రస్తుతం చేయగల పనులు, సామర్థ్యాలను ఒక క్రమంలో చూపించే Pinnacle విధానం. స్కోర్‌తో పాటు చూసిన స్కిల్స్, ఇంట్లో మీరు గమనించిన విషయాలు, కేర్ టీమ్ వివరణను కలిపి అర్థం చేసుకోండి. ముఖ్యమైన ప్రశ్న: నా బిడ్డ ఇప్పుడు ఏం చేయగలదు? తర్వాత దేనిపై పని చేయాలి?",
+      "icon": "scan-eye",
+      "image": "/images/connected-records-1000.webp",
+      "sources": [
+        {
+          "title": "Pinnacle company walkthrough",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+          "pinpoint": "Page 26: framework; pages 35, 37: feedback and monthly review"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        },
+        {
+          "title": "AbilityScore® methodology preprint",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+          "pinpoint": "Methods and preliminary evidence; programme description, page 3"
+        },
+        {
+          "title": "AbilityScore® external-validation protocol",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
+          "pinpoint": "BHCL-VAL-2026-001, version 2.1; planned research"
+        },
+        {
+          "title": "Report-format review and eight-report guide",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer",
+          "pinpoint": "Supplied September examples; presentation version V-1.6.9.9, separate from SaMD version"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        }
+      ]
+    },
+    {
+      "id": "abilityscore-hi",
+      "topic": "abilityscore",
+      "language": "hi",
+      "lang": "hi-IN",
+      "route": "/guides/hi/abilityscore.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/abilityscore.html",
+      "title": "मेरे बच्चे का AbilityScore® क्या बताता है?",
+      "description": "अपने बच्चे के AbilityScore®, रिपोर्ट के संदर्भ और केयर टीम से पूछने वाले सवाल समझें। जानकारी के साथ Pinnacle के मूल प्रमाणों के लिंक पढ़ें।",
+      "answer": "AbilityScore® बच्चे की मौजूदा विकास संबंधी क्षमताओं को एक व्यवस्थित रूप में दिखाने का Pinnacle का तरीका है। इसे जाँचे गए कौशल, रोज़मर्रा के अनुभवों और केयर टीम की व्याख्या के साथ पढ़ें। असली सवाल है: मेरा बच्चा अभी क्या कर सकता है और आगे किस पर काम करना चाहिए?",
+      "icon": "scan-eye",
+      "image": "/images/connected-records-1000.webp",
+      "sources": [
+        {
+          "title": "Pinnacle company walkthrough",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+          "pinpoint": "Page 26: framework; pages 35, 37: feedback and monthly review"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        },
+        {
+          "title": "AbilityScore® methodology preprint",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+          "pinpoint": "Methods and preliminary evidence; programme description, page 3"
+        },
+        {
+          "title": "AbilityScore® external-validation protocol",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
+          "pinpoint": "BHCL-VAL-2026-001, version 2.1; planned research"
+        },
+        {
+          "title": "Report-format review and eight-report guide",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer",
+          "pinpoint": "Supplied September examples; presentation version V-1.6.9.9, separate from SaMD version"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        }
+      ]
+    },
+    {
+      "id": "everyday-practice-en",
+      "topic": "everyday-practice",
+      "language": "en",
+      "lang": "en-IN",
+      "route": "/guides/everyday-practice.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/everyday-practice.html",
+      "title": "From assessment to everyday practice",
+      "description": "See how PinnacleAI® connects assessment, a personal plan, home practice and monthly review, with family questions and links to the documented workflow.",
+      "answer": "Pinnacle’s documented approach connects an assessment to a child-specific plan, guided daily activities, feedback and reassessment. Parents, caregivers, educators and therapists contribute different observations. The aim is a shared direction that can be reviewed and adjusted as the child’s needs change.",
+      "icon": "house",
+      "image": "/images/care-participation-1000.webp",
+      "sources": [
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        },
+        {
+          "title": "September 2026 handout",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+          "pinpoint": "Pages 5–7: framework and everyday programme"
+        },
+        {
+          "title": "AbilityScore® methodology preprint",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+          "pinpoint": "Methods and preliminary evidence; programme description, page 3"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "Pinnacle company walkthrough",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+          "pinpoint": "Page 26: framework; pages 35, 37: feedback and monthly review"
+        }
+      ]
+    },
+    {
+      "id": "everyday-practice-te",
+      "topic": "everyday-practice",
+      "language": "te",
+      "lang": "te-IN",
+      "route": "/guides/te/everyday-practice.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/everyday-practice.html",
+      "title": "Assessment నుంచి రోజువారీ Practice వరకు",
+      "description": "PinnacleAI®లో Assessment, బిడ్డకు సరిపోయే Plan, ఇంట్లో Practice, నెలవారీ రివ్యూ ఎలా కలుస్తాయో తెలుసుకోండి. వివరణలతో పాటు మూల ఆధారాలు చదవండి.",
+      "answer": "Pinnacle వివరించే విధానంలో Assessment నుంచి బిడ్డకు సరిపోయే Plan, మార్గదర్శకత్వంతో రోజువారీ Practice, Feedback, మళ్లీ Assessment వరకు అన్ని దశలూ కలుస్తాయి. తల్లిదండ్రులు, కేర్‌గివర్లు, టీచర్లు, థెరపిస్టులు తాము గమనించిన విషయాలు పంచుకుంటారు. బిడ్డ అవసరాలకు తగ్గట్టు Planను మార్చుకుంటూ ముందుకు వెళ్లడం లక్ష్యం.",
+      "icon": "house",
+      "image": "/images/care-participation-1000.webp",
+      "sources": [
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        },
+        {
+          "title": "September 2026 handout",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+          "pinpoint": "Pages 5–7: framework and everyday programme"
+        },
+        {
+          "title": "AbilityScore® methodology preprint",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+          "pinpoint": "Methods and preliminary evidence; programme description, page 3"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "Pinnacle company walkthrough",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+          "pinpoint": "Page 26: framework; pages 35, 37: feedback and monthly review"
+        }
+      ]
+    },
+    {
+      "id": "everyday-practice-hi",
+      "topic": "everyday-practice",
+      "language": "hi",
+      "lang": "hi-IN",
+      "route": "/guides/hi/everyday-practice.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/everyday-practice.html",
+      "title": "आकलन से रोज़मर्रा के अभ्यास तक",
+      "description": "जानें कि PinnacleAI® आकलन, बच्चे के लिए बने प्लान, घर के अभ्यास और मासिक समीक्षा को कैसे जोड़ता है। साथ में मूल स्रोत और उपयोगी सवाल पढ़ें।",
+      "answer": "Pinnacle की बताई प्रक्रिया आकलन को बच्चे के लिए बने प्लान, निर्देशित दैनिक गतिविधियों, फीडबैक और दोबारा आकलन से जोड़ती है। माता-पिता, देखभाल करने वाले, शिक्षक और थेरपिस्ट अलग-अलग अनुभव साझा करते हैं। उद्देश्य है एक साझा दिशा, जिसे बच्चे की ज़रूरत के अनुसार बदला जा सके।",
+      "icon": "house",
+      "image": "/images/care-participation-1000.webp",
+      "sources": [
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        },
+        {
+          "title": "September 2026 handout",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+          "pinpoint": "Pages 5–7: framework and everyday programme"
+        },
+        {
+          "title": "AbilityScore® methodology preprint",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+          "pinpoint": "Methods and preliminary evidence; programme description, page 3"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "Pinnacle company walkthrough",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+          "pinpoint": "Page 26: framework; pages 35, 37: feedback and monthly review"
+        }
+      ]
+    },
+    {
+      "id": "licences-and-scope-en",
+      "topic": "licences-and-scope",
+      "language": "en",
+      "lang": "en-IN",
+      "route": "/guides/licences-and-scope.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/licences-and-scope.html",
+      "title": "What do PinnacleAI®’s MD-5 and BIS records cover?",
+      "description": "Read what PinnacleAI®’s MD-5 and BIS records establish, how parents fit into the intended use, and why an MD-3 application is different from a licence.",
+      "answer": "The reviewed MD-5 records the named device and its non-diagnostic developmental-support intended use for ages 0–12. The BIS licence and schedule describe a quality-management-system scope and named software activities and modules. Reading them together explains distinct parts of the evidence; neither guarantees a child’s outcome.",
+      "icon": "shield",
+      "image": "/images/family-journey-1000.webp",
+      "sources": [
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        },
+        {
+          "title": "MD-3 manufacturing-licence application",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
+          "pinpoint": "Application record, distinct from the issued MD-5"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        }
+      ]
+    },
+    {
+      "id": "licences-and-scope-te",
+      "topic": "licences-and-scope",
+      "language": "te",
+      "lang": "te-IN",
+      "route": "/guides/te/licences-and-scope.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/licences-and-scope.html",
+      "title": "PinnacleAI® MD-5, BIS పత్రాలు ఏం చెబుతాయి?",
+      "description": "PinnacleAI® MD-5, BIS పత్రాల పరిధి, తల్లిదండ్రుల పాత్ర, MD-3 దరఖాస్తుకు లైసెన్స్‌కు ఉన్న తేడా తెలుసుకోండి. అసలు ఆధారాలతో కలిసి చదవండి.",
+      "answer": "పరిశీలించిన MD-5లో పేర్కొన్న డివైస్ 0–12 ఏళ్ల పిల్లల డెవలప్‌మెంట్‌కు సపోర్ట్ ఇస్తుంది; వ్యాధి నిర్ధారణ చేయదు. BIS లైసెన్స్, షెడ్యూల్‌లో క్వాలిటీ మేనేజ్‌మెంట్ సిస్టమ్ పరిధి, సాఫ్ట్‌వేర్ పనులు, మాడ్యూల్స్ ఉన్నాయి. ఈ రెండు పత్రాలు వేర్వేరు విషయాలకు ఆధారాలు; బిడ్డకు నిర్దిష్ట ఫలితం వస్తుందని హామీ ఇవ్వవు.",
+      "icon": "shield",
+      "image": "/images/family-journey-1000.webp",
+      "sources": [
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        },
+        {
+          "title": "MD-3 manufacturing-licence application",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
+          "pinpoint": "Application record, distinct from the issued MD-5"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        }
+      ]
+    },
+    {
+      "id": "licences-and-scope-hi",
+      "topic": "licences-and-scope",
+      "language": "hi",
+      "lang": "hi-IN",
+      "route": "/guides/hi/licences-and-scope.html",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/licences-and-scope.html",
+      "title": "PinnacleAI® के MD-5 और BIS रिकॉर्ड क्या बताते हैं?",
+      "description": "PinnacleAI® के MD-5 और BIS का दायरा, माता-पिता की भूमिका और MD-3 आवेदन व जारी लाइसेंस का अंतर समझें। मूल प्रमाणों के साथ विवरण पढ़ें।",
+      "answer": "जाँचा गया MD-5 नामित डिवाइस को 0–12 वर्ष के बच्चों के विकास में सहायता के लिए दर्ज करता है; यह रोग का निदान नहीं करता। BIS लाइसेंस और schedule गुणवत्ता-प्रबंधन प्रणाली का दायरा तथा सॉफ्टवेयर के काम और मॉड्यूल बताते हैं। दोनों अलग तरह के प्रमाण हैं; बच्चे के परिणाम की गारंटी नहीं।",
+      "icon": "shield",
+      "image": "/images/family-journey-1000.webp",
+      "sources": [
+        {
+          "title": "MD-5: MFG/MD/2026/000248",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+          "pinpoint": "Intended-use annexure; original source copy linked on the record"
+        },
+        {
+          "title": "MD-3 manufacturing-licence application",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
+          "pinpoint": "Application record, distinct from the issued MD-5"
+        },
+        {
+          "title": "BIS: MD/L-2026029599",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+          "pinpoint": "Schedule, physical PDF page 2; named quality-system activities and modules"
+        },
+        {
+          "title": "Pinnacle Evidence Dossier",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+          "pinpoint": "Page 40: assessment governance; pages 48–49, 52–54: planning, oversight and access"
+        }
+      ]
+    }
+  ]
+}

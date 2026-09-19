@@ -150,6 +150,14 @@
           "xLength": 153
         },
         {
+          "id": "parent-guides",
+          "url": "https://www.pinnacleblooms.org/verify/#parent-guides",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
+          "text": "Explore Pinnacle's evidence on Three questions. A clearer next step. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Three questions. A clearer next step. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
+        },
+        {
           "id": "care",
           "url": "https://www.pinnacleblooms.org/verify/#care",
           "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
@@ -1852,6 +1860,14 @@
           "text": "Explore Pinnacle's evidence on Keep each claim precise. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Keep each claim precise. Read the source, review date and scope before drawing conclusions.",
           "xLength": 146
+        },
+        {
+          "id": "editorial-policy",
+          "url": "https://www.pinnacleblooms.org/verify/#editorial-policy",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
+          "text": "Explore Pinnacle's evidence on Pinnacle Clinical Committee. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Pinnacle Clinical Committee. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 150
         },
         {
           "id": "site-update-history",
@@ -4494,6 +4510,987 @@
           "text": "Explore Pinnacle Research Index. Read the source records, review dates and evidence scope.",
           "whatsapp": "Explore Pinnacle Research Index. Read the source records, review dates and evidence scope.",
           "xLength": 114
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/abilityscore.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: What does my child’s AbilityScore® mean? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: What does my child’s AbilityScore® mean? Read the guide and its evidence.",
+          "xLength": 127
+        },
+        {
+          "id": "block-what-does-my-child-s-abilityscore-mean",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#block-what-does-my-child-s-abilityscore-mean",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: What does my child’s AbilityScore® mean? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: What does my child’s AbilityScore® mean? Read the guide and its evidence.",
+          "xLength": 127
+        },
+        {
+          "id": "what-it-means",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#what-it-means",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Start with abilities, then look at the number Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Start with abilities, then look at the number Read the guide and its evidence.",
+          "xLength": 132
+        },
+        {
+          "id": "read-the-profile",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#read-the-profile",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Read the overall profile and the focused reports Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Read the overall profile and the focused reports Read the guide and its evidence.",
+          "xLength": 135
+        },
+        {
+          "id": "put-the-score-in-context",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#put-the-score-in-context",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Ask what sits behind the score Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Ask what sits behind the score Read the guide and its evidence.",
+          "xLength": 117
+        },
+        {
+          "id": "compare-over-time",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#compare-over-time",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Compare your child’s progress over time Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Compare your child’s progress over time Read the guide and its evidence.",
+          "xLength": 126
+        },
+        {
+          "id": "what-the-evidence-shows",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#what-the-evidence-shows",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Understand the stage of the research Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Understand the stage of the research Read the guide and its evidence.",
+          "xLength": 123
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Questions to take to your care team Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Questions to take to your care team Read the guide and its evidence.",
+          "xLength": 122
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Quick answers Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Quick answers Read the guide and its evidence.",
+          "xLength": 100
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Is AbilityScore® a diagnosis? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Is AbilityScore® a diagnosis? Read the guide and its evidence.",
+          "xLength": 116
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Can I compare two different report versions? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Can I compare two different report versions? Read the guide and its evidence.",
+          "xLength": 131
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Sources and exact context Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Sources and exact context Read the guide and its evidence.",
+          "xLength": 112
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-en-5f492c595991.jpg",
+          "text": "A source-linked parent guide: Ask about the evidence Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Ask about the evidence Read the guide and its evidence.",
+          "xLength": 109
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/abilityscore.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: నా బిడ్డ AbilityScore® ఏం చెబుతుంది? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: నా బిడ్డ AbilityScore® ఏం చెబుతుంది? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 108
+        },
+        {
+          "id": "block-abilityscore",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#block-abilityscore",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: నా బిడ్డ AbilityScore® ఏం చెబుతుంది? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: నా బిడ్డ AbilityScore® ఏం చెబుతుంది? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 108
+        },
+        {
+          "id": "what-it-means",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#what-it-means",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: ముందు సామర్థ్యాలను చూడండి; తర్వాత స్కోర్‌ను చూడండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: ముందు సామర్థ్యాలను చూడండి; తర్వాత స్కోర్‌ను చూడండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 122
+        },
+        {
+          "id": "read-the-profile",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#read-the-profile",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: మొత్తం ప్రొఫైల్‌తో పాటు ఒక్కో రిపోర్ట్‌ను చూడండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: మొత్తం ప్రొఫైల్‌తో పాటు ఒక్కో రిపోర్ట్‌ను చూడండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 120
+        },
+        {
+          "id": "put-the-score-in-context",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#put-the-score-in-context",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: ఈ స్కోర్ వెనుక ఏం ఉందో అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: ఈ స్కోర్ వెనుక ఏం ఉందో అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 101
+        },
+        {
+          "id": "compare-over-time",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#compare-over-time",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: మీ బిడ్డలో వచ్చిన మార్పును కాలక్రమంలో చూడండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: మీ బిడ్డలో వచ్చిన మార్పును కాలక్రమంలో చూడండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 116
+        },
+        {
+          "id": "what-the-evidence-shows",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#what-the-evidence-shows",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: పరిశోధన ఏ దశలో ఉందో తెలుసుకోండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: పరిశోధన ఏ దశలో ఉందో తెలుసుకోండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 103
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: మీ కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: మీ కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 106
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: చిన్న ప్రశ్నలకు స్పష్టమైన జవాబులు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: చిన్న ప్రశ్నలకు స్పష్టమైన జవాబులు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 105
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: AbilityScore® వ్యాధిని నిర్ధారిస్తుందా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: AbilityScore® వ్యాధిని నిర్ధారిస్తుందా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 111
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: వేర్వేరు వెర్షన్ల రిపోర్టులను పోల్చవచ్చా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: వేర్వేరు వెర్షన్ల రిపోర్టులను పోల్చవచ్చా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 113
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: ఆధారాలు, వాటి వివరాలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: ఆధారాలు, వాటి వివరాలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 93
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-te-fedf58a210e3.jpg",
+          "text": "తల్లిదండ్రుల కోసం: ఆధారాల గురించి అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: ఆధారాల గురించి అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 93
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/abilityscore.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: मेरे बच्चे का AbilityScore® क्या बताता है? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: मेरे बच्चे का AbilityScore® क्या बताता है? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 110
+        },
+        {
+          "id": "block-abilityscore",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#block-abilityscore",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: मेरे बच्चे का AbilityScore® क्या बताता है? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: मेरे बच्चे का AbilityScore® क्या बताता है? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 110
+        },
+        {
+          "id": "what-it-means",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#what-it-means",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: पहले क्षमताएँ समझें, फिर स्कोर देखें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: पहले क्षमताएँ समझें, फिर स्कोर देखें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 104
+        },
+        {
+          "id": "read-the-profile",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#read-the-profile",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: पूरी प्रोफाइल के साथ अलग-अलग रिपोर्ट भी पढ़ें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: पूरी प्रोफाइल के साथ अलग-अलग रिपोर्ट भी पढ़ें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 113
+        },
+        {
+          "id": "put-the-score-in-context",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#put-the-score-in-context",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: पूछें कि स्कोर किन बातों पर आधारित है गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: पूछें कि स्कोर किन बातों पर आधारित है गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 105
+        },
+        {
+          "id": "compare-over-time",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#compare-over-time",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: समय के साथ अपने बच्चे की प्रगति देखें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: समय के साथ अपने बच्चे की प्रगति देखें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 105
+        },
+        {
+          "id": "what-the-evidence-shows",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#what-the-evidence-shows",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: समझें कि शोध अभी किस चरण में है गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: समझें कि शोध अभी किस चरण में है गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 99
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: अपनी केयर टीम से पूछने के सवाल गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: अपनी केयर टीम से पूछने के सवाल गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 98
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: छोटे सवाल, स्पष्ट जवाब गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: छोटे सवाल, स्पष्ट जवाब गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 90
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: क्या AbilityScore® किसी रोग का निदान है? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: क्या AbilityScore® किसी रोग का निदान है? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 108
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: क्या अलग संस्करणों की रिपोर्ट की तुलना कर सकते हैं? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: क्या अलग संस्करणों की रिपोर्ट की तुलना कर सकते हैं? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 119
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: स्रोत और उनका संदर्भ गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: स्रोत और उनका संदर्भ गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 88
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-abilityscore-hi-f56bd9dbaa8d.jpg",
+          "text": "माता-पिता के लिए: प्रमाणों के बारे में पूछें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: प्रमाणों के बारे में पूछें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 94
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/everyday-practice.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: From assessment to everyday practice Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: From assessment to everyday practice Read the guide and its evidence.",
+          "xLength": 123
+        },
+        {
+          "id": "block-from-assessment-to-everyday-practice",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#block-from-assessment-to-everyday-practice",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: From assessment to everyday practice Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: From assessment to everyday practice Read the guide and its evidence.",
+          "xLength": 123
+        },
+        {
+          "id": "start-with-a-shared-goal",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#start-with-a-shared-goal",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Agree what matters in your child’s day Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Agree what matters in your child’s day Read the guide and its evidence.",
+          "xLength": 125
+        },
+        {
+          "id": "make-the-plan-practical",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#make-the-plan-practical",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Ask for activities you can understand Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Ask for activities you can understand Read the guide and its evidence.",
+          "xLength": 124
+        },
+        {
+          "id": "bring-practice-home",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#bring-practice-home",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Connect professional support with home practice Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Connect professional support with home practice Read the guide and its evidence.",
+          "xLength": 134
+        },
+        {
+          "id": "use-feedback",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#use-feedback",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Let feedback change the plan Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Let feedback change the plan Read the guide and its evidence.",
+          "xLength": 115
+        },
+        {
+          "id": "review-every-month",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#review-every-month",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Use the monthly review to agree what comes next Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Use the monthly review to agree what comes next Read the guide and its evidence.",
+          "xLength": 134
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Questions to take to your care team Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Questions to take to your care team Read the guide and its evidence.",
+          "xLength": 122
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Quick answers Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Quick answers Read the guide and its evidence.",
+          "xLength": 100
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Does every child follow the same daily programme? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Does every child follow the same daily programme? Read the guide and its evidence.",
+          "xLength": 136
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: What should a monthly review include? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: What should a monthly review include? Read the guide and its evidence.",
+          "xLength": 124
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Sources and exact context Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Sources and exact context Read the guide and its evidence.",
+          "xLength": 112
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-en-20cb84cad85a.jpg",
+          "text": "A source-linked parent guide: Ask about the evidence Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Ask about the evidence Read the guide and its evidence.",
+          "xLength": 109
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/everyday-practice.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: Assessment నుంచి రోజువారీ Practice వరకు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: Assessment నుంచి రోజువారీ Practice వరకు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 111
+        },
+        {
+          "id": "block-assessment-practice",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#block-assessment-practice",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: Assessment నుంచి రోజువారీ Practice వరకు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: Assessment నుంచి రోజువారీ Practice వరకు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 111
+        },
+        {
+          "id": "start-with-a-shared-goal",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#start-with-a-shared-goal",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: బిడ్డ రోజువారీ జీవితంలో ఏది ముఖ్యమో కలిసి నిర్ణయించండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: బిడ్డ రోజువారీ జీవితంలో ఏది ముఖ్యమో కలిసి నిర్ణయించండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 126
+        },
+        {
+          "id": "make-the-plan-practical",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#make-the-plan-practical",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: మీకు స్పష్టంగా అర్థమయ్యే Activities అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: మీకు స్పష్టంగా అర్థమయ్యే Activities అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 114
+        },
+        {
+          "id": "bring-practice-home",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#bring-practice-home",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: నిపుణుల సపోర్ట్‌ను ఇంట్లో Practiceతో కలపండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: నిపుణుల సపోర్ట్‌ను ఇంట్లో Practiceతో కలపండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 115
+        },
+        {
+          "id": "use-feedback",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#use-feedback",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: మీ Feedbackతో Planను మెరుగుపరచండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: మీ Feedbackతో Planను మెరుగుపరచండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 105
+        },
+        {
+          "id": "review-every-month",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#review-every-month",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: నెలవారీ రివ్యూలో తర్వాతి దిశ నిర్ణయించండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: నెలవారీ రివ్యూలో తర్వాతి దిశ నిర్ణయించండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 113
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: మీ కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: మీ కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 106
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: చిన్న ప్రశ్నలకు స్పష్టమైన జవాబులు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: చిన్న ప్రశ్నలకు స్పష్టమైన జవాబులు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 105
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: పిల్లలందరికీ ఒకే రోజువారీ ప్రోగ్రామ్ ఉంటుందా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: పిల్లలందరికీ ఒకే రోజువారీ ప్రోగ్రామ్ ఉంటుందా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 117
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: నెలవారీ రివ్యూలో ఏం చూడాలి? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: నెలవారీ రివ్యూలో ఏం చూడాలి? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 99
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: ఆధారాలు, వాటి వివరాలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: ఆధారాలు, వాటి వివరాలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 93
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/everyday-practice.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-te-9113bec15759.jpg",
+          "text": "తల్లిదండ్రుల కోసం: ఆధారాల గురించి అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: ఆధారాల గురించి అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 93
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/everyday-practice.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: आकलन से रोज़मर्रा के अभ्यास तक गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: आकलन से रोज़मर्रा के अभ्यास तक गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 98
+        },
+        {
+          "id": "block-",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#block-",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: आकलन से रोज़मर्रा के अभ्यास तक गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: आकलन से रोज़मर्रा के अभ्यास तक गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 98
+        },
+        {
+          "id": "start-with-a-shared-goal",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#start-with-a-shared-goal",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: तय करें कि बच्चे की दिनचर्या में क्या महत्वपूर्ण है गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: तय करें कि बच्चे की दिनचर्या में क्या महत्वपूर्ण है गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 119
+        },
+        {
+          "id": "make-the-plan-practical",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#make-the-plan-practical",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: ऐसी गतिविधियाँ माँगें जिन्हें आप समझ सकें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: ऐसी गतिविधियाँ माँगें जिन्हें आप समझ सकें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 109
+        },
+        {
+          "id": "bring-practice-home",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#bring-practice-home",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: पेशेवर सहयोग को घर के अभ्यास से जोड़ें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: पेशेवर सहयोग को घर के अभ्यास से जोड़ें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 106
+        },
+        {
+          "id": "use-feedback",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#use-feedback",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: फीडबैक से प्लान को बेहतर बनाएँ गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: फीडबैक से प्लान को बेहतर बनाएँ गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 98
+        },
+        {
+          "id": "review-every-month",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#review-every-month",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: मासिक समीक्षा में अगला कदम तय करें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: मासिक समीक्षा में अगला कदम तय करें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 102
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: अपनी केयर टीम से पूछने के सवाल गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: अपनी केयर टीम से पूछने के सवाल गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 98
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: छोटे सवाल, स्पष्ट जवाब गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: छोटे सवाल, स्पष्ट जवाब गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 90
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: क्या सभी बच्चे एक ही दैनिक कार्यक्रम करते हैं? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: क्या सभी बच्चे एक ही दैनिक कार्यक्रम करते हैं? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 114
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: मासिक समीक्षा में क्या शामिल होना चाहिए? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: मासिक समीक्षा में क्या शामिल होना चाहिए? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 108
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: स्रोत और उनका संदर्भ गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: स्रोत और उनका संदर्भ गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 88
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/everyday-practice.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-everyday-practice-hi-8f1738a3a3ac.jpg",
+          "text": "माता-पिता के लिए: प्रमाणों के बारे में पूछें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: प्रमाणों के बारे में पूछें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 94
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/licences-and-scope.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: What do PinnacleAI®’s MD-5 and BIS records cover? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: What do PinnacleAI®’s MD-5 and BIS records cover? Read the guide and its evidence.",
+          "xLength": 136
+        },
+        {
+          "id": "block-what-do-pinnacleai-s-md-5-and-bis-records-cover",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#block-what-do-pinnacleai-s-md-5-and-bis-records-cover",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: What do PinnacleAI®’s MD-5 and BIS records cover? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: What do PinnacleAI®’s MD-5 and BIS records cover? Read the guide and its evidence.",
+          "xLength": 136
+        },
+        {
+          "id": "what-md5-records",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#what-md5-records",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: MD-5: the named device and intended use Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: MD-5: the named device and intended use Read the guide and its evidence.",
+          "xLength": 126
+        },
+        {
+          "id": "where-parents-fit",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#where-parents-fit",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: Parents and caregivers are named users Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Parents and caregivers are named users Read the guide and its evidence.",
+          "xLength": 125
+        },
+        {
+          "id": "what-bis-covers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#what-bis-covers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: BIS: the quality-system activities and module scope Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: BIS: the quality-system activities and module scope Read the guide and its evidence.",
+          "xLength": 138
+        },
+        {
+          "id": "why-md3-is-different",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#why-md3-is-different",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: MD-3: an application, separate from the issued licence Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: MD-3: an application, separate from the issued licence Read the guide and its evidence.",
+          "xLength": 141
+        },
+        {
+          "id": "read-the-evidence-together",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#read-the-evidence-together",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: Use each record for the question it can answer Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Use each record for the question it can answer Read the guide and its evidence.",
+          "xLength": 133
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: Questions to take to your care team Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Questions to take to your care team Read the guide and its evidence.",
+          "xLength": 122
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: Quick answers Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Quick answers Read the guide and its evidence.",
+          "xLength": 100
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: Does the BIS phrase ‘full developmental lifecycle’ change the MD-5 age range? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Does the BIS phrase ‘full developmental lifecycle’ change the MD-5 age range? Read the guide and its evidence.",
+          "xLength": 164
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: Are MD-3 and MD-5 both issued licences? Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Are MD-3 and MD-5 both issued licences? Read the guide and its evidence.",
+          "xLength": 126
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: Sources and exact context Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Sources and exact context Read the guide and its evidence.",
+          "xLength": 112
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-en-1b56bffd4678.jpg",
+          "text": "A source-linked parent guide: Ask about the evidence Read the guide and its evidence.",
+          "whatsapp": "A source-linked parent guide: Ask about the evidence Read the guide and its evidence.",
+          "xLength": 109
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/te/licences-and-scope.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: PinnacleAI® MD-5, BIS పత్రాలు ఏం చెబుతాయి? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: PinnacleAI® MD-5, BIS పత్రాలు ఏం చెబుతాయి? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 114
+        },
+        {
+          "id": "block-pinnacleai-md-5-bis",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#block-pinnacleai-md-5-bis",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: PinnacleAI® MD-5, BIS పత్రాలు ఏం చెబుతాయి? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: PinnacleAI® MD-5, BIS పత్రాలు ఏం చెబుతాయి? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 114
+        },
+        {
+          "id": "what-md5-records",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#what-md5-records",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: MD-5: ఏ డివైస్, ఏ ఉపయోగం కోసం? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: MD-5: ఏ డివైస్, ఏ ఉపయోగం కోసం? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 102
+        },
+        {
+          "id": "where-parents-fit",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#where-parents-fit",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: తల్లిదండ్రులు, కేర్‌గివర్ల పాత్ర పత్రంలోనే ఉంది గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: తల్లిదండ్రులు, కేర్‌గివర్ల పాత్ర పత్రంలోనే ఉంది గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 119
+        },
+        {
+          "id": "what-bis-covers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#what-bis-covers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: BIS: క్వాలిటీ సిస్టమ్ పనులు, మాడ్యూల్స్ పరిధి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: BIS: క్వాలిటీ సిస్టమ్ పనులు, మాడ్యూల్స్ పరిధి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 117
+        },
+        {
+          "id": "why-md3-is-different",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#why-md3-is-different",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: MD-3 దరఖాస్తు; MD-5 ఇచ్చిన లైసెన్స్ గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: MD-3 దరఖాస్తు; MD-5 ఇచ్చిన లైసెన్స్ గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 107
+        },
+        {
+          "id": "read-the-evidence-together",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#read-the-evidence-together",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: మీ ప్రశ్నకు సరిపోయే ఆధారాన్ని చూడండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: మీ ప్రశ్నకు సరిపోయే ఆధారాన్ని చూడండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 108
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: మీ కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: మీ కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 106
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: చిన్న ప్రశ్నలకు స్పష్టమైన జవాబులు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: చిన్న ప్రశ్నలకు స్పష్టమైన జవాబులు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 105
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: BISలో ‘full developmental lifecycle’ అంటే MD-5 వయసు పరిధి మారుతుందా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: BISలో ‘full developmental lifecycle’ అంటే MD-5 వయసు పరిధి మారుతుందా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 140
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: MD-3, MD-5 రెండూ ఇచ్చిన లైసెన్స్‌లేనా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: MD-3, MD-5 రెండూ ఇచ్చిన లైసెన్స్‌లేనా? గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 110
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: ఆధారాలు, వాటి వివరాలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: ఆధారాలు, వాటి వివరాలు గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 93
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/licences-and-scope.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-te-e3e1e91c3713.jpg",
+          "text": "తల్లిదండ్రుల కోసం: ఆధారాల గురించి అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "whatsapp": "తల్లిదండ్రుల కోసం: ఆధారాల గురించి అడగండి గైడ్‌తో పాటు ఆధారాలూ చదవండి.",
+          "xLength": 93
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/licences-and-scope.html",
+      "items": [
+        {
+          "id": "page",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: PinnacleAI® के MD-5 और BIS रिकॉर्ड क्या बताते हैं? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: PinnacleAI® के MD-5 और BIS रिकॉर्ड क्या बताते हैं? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 118
+        },
+        {
+          "id": "block-pinnacleai-md-5-bis",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#block-pinnacleai-md-5-bis",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: PinnacleAI® के MD-5 और BIS रिकॉर्ड क्या बताते हैं? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: PinnacleAI® के MD-5 और BIS रिकॉर्ड क्या बताते हैं? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 118
+        },
+        {
+          "id": "what-md5-records",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#what-md5-records",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: MD-5: नामित डिवाइस और उसका उपयोग गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: MD-5: नामित डिवाइस और उसका उपयोग गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 100
+        },
+        {
+          "id": "where-parents-fit",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#where-parents-fit",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: माता-पिता और देखभाल करने वाले नामित उपयोगकर्ता हैं गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: माता-पिता और देखभाल करने वाले नामित उपयोगकर्ता हैं गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 118
+        },
+        {
+          "id": "what-bis-covers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#what-bis-covers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: BIS: गुणवत्ता प्रणाली के काम और मॉड्यूल गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: BIS: गुणवत्ता प्रणाली के काम और मॉड्यूल गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 107
+        },
+        {
+          "id": "why-md3-is-different",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#why-md3-is-different",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: MD-3 आवेदन है; MD-5 जारी लाइसेंस है गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: MD-3 आवेदन है; MD-5 जारी लाइसेंस है गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 103
+        },
+        {
+          "id": "read-the-evidence-together",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#read-the-evidence-together",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: हर सवाल के लिए सही प्रमाण देखें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: हर सवाल के लिए सही प्रमाण देखें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 99
+        },
+        {
+          "id": "questions-for-your-team",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#questions-for-your-team",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: अपनी केयर टीम से पूछने के सवाल गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: अपनी केयर टीम से पूछने के सवाल गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 98
+        },
+        {
+          "id": "quick-answers",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#quick-answers",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: छोटे सवाल, स्पष्ट जवाब गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: छोटे सवाल, स्पष्ट जवाब गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 90
+        },
+        {
+          "id": "answer-1",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#answer-1",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: क्या BIS का ‘full developmental lifecycle’ वाक्य MD-5 की उम्र-सीमा बदलता है? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: क्या BIS का ‘full developmental lifecycle’ वाक्य MD-5 की उम्र-सीमा बदलता है? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 144
+        },
+        {
+          "id": "answer-2",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#answer-2",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: क्या MD-3 और MD-5 दोनों जारी लाइसेंस हैं? गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: क्या MD-3 और MD-5 दोनों जारी लाइसेंस हैं? गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 109
+        },
+        {
+          "id": "sources",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#sources",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: स्रोत और उनका संदर्भ गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: स्रोत और उनका संदर्भ गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 88
+        },
+        {
+          "id": "ask-about-evidence",
+          "url": "https://www.pinnacleblooms.org/verify/guides/hi/licences-and-scope.html#ask-about-evidence",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/guide-licences-and-scope-hi-f230b61f734b.jpg",
+          "text": "माता-पिता के लिए: प्रमाणों के बारे में पूछें गाइड और उसके स्रोत पढ़ें।",
+          "whatsapp": "माता-पिता के लिए: प्रमाणों के बारे में पूछें गाइड और उसके स्रोत पढ़ें।",
+          "xLength": 94
         }
       ]
     },

@@ -1,4 +1,4 @@
-Fonts: DM Sans and Manrope, SIL Open Font License 1.1. See /fonts/dm-sans-OFL.txt and /fonts/manrope-OFL.txt.
+Fonts: DM Sans, Manrope, Anek Telugu and Noto Sans Devanagari, SIL Open Font License 1.1. See /fonts/dm-sans-OFL.txt, /fonts/manrope-OFL.txt, /fonts/anek-telugu-OFL.txt and /fonts/noto-sans-devanagari-OFL.txt.
 
 Lucide static SVG icons, version 1.46.0. https://lucide.dev
 Only used icons are included inline.

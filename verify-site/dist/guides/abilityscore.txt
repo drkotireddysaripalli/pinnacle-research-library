@@ -1,0 +1,81 @@
+What does my child’s AbilityScore® mean?
+
+https://pinnacle-verify.saripalli.chatgpt.site/guides/abilityscore.html
+
+Language: en-IN
+
+Updated: 2026-09-19
+
+AbilityScore® is Pinnacle’s structured description of a child’s present developmental abilities. Read it alongside the assessed skills, everyday observations and the care team’s explanation. The useful question is: what can my child do now, and what should we work on next?
+
+Start with abilities, then look at the number
+
+Pinnacle’s current company descriptions organise development into 17 domains, 79 abilities and 349 skills. These are different levels of the framework, rather than interchangeable counts. AbilityScore® presents a structured starting point for discussing the child’s strengths and next priorities.
+
+The reviewed dossier describes clinical AbilityScore® as clinician-administered and clinically governed. A parent’s observations contribute valuable context; a questionnaire and a clinical assessment should be explained as different parts of the process.
+
+Source: Pinnacle company walkthrough — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+
+Source: Pinnacle Evidence Dossier — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+Read the overall profile and the focused reports
+
+The supplied September examples contain an overall AbilityScore® / TherapeuticAI® report and seven focused readiness reports: speech, behaviour, motor, study/IQ, school, self-sufficiency and mainstream readiness. Each view gives the family and care team a way to discuss a different part of daily life.
+
+The Study/IQ Readiness report title does not establish it as an independent IQ test. A readiness label is not a diagnosis or a promise of admission to school.
+
+Source: Report-format review and eight-report guide — https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+Source: BIS: MD/L-2026029599 — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+Ask what sits behind the score
+
+Look for who assessed the child, when the assessment happened and the situations the observations describe. Ask the care team to show the skills that inform the profile and connect them to what the child does at home, in learning and with other people.
+
+For example, a family might ask: ‘Which communication ability are we working on, and what change would we notice during our usual day?’ This is a discussion prompt, not an interpretation of any child’s score.
+
+Source: Pinnacle Evidence Dossier — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+Source: Report-format review and eight-report guide — https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+Compare your child’s progress over time
+
+The supplied September report examples display the overall score and readiness indices on a 0–1000 scale. Older methodology material describes readiness indices on a 0–100 scale. Confirm the report version and scale before comparing results; do not treat different versions as directly equivalent.
+
+Pinnacle’s workflow describes monthly reassessment. Ask what has changed in everyday life, which goals remain useful and how the next plan follows from the review. The report’s presentation version is separate from the medical-device software version.
+
+Source: Pinnacle company walkthrough — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+
+Source: Report-format review and eight-report guide — https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+Source: AbilityScore® methodology preprint — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html
+
+Understand the stage of the research
+
+The methodology preprint describes development and preliminary measurement findings. The separately published external-validation protocol sets out planned research; it is not a completed validation result. The evidence library links both records so families and professionals can read what each one establishes.
+
+A score helps organise a conversation. It does not define a child’s worth, guarantee independence or determine their right to belong and participate.
+
+Source: AbilityScore® methodology preprint — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html
+
+Source: AbilityScore® external-validation protocol — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html
+
+Questions to take to your care team
+
+Which abilities and daily-life priorities does this profile highlight?
+
+Who completed the assessment, using which report version and scale?
+
+What will we practise, and what change will we look for at the next review?
+
+Is AbilityScore® a diagnosis?
+
+PinnacleAI® is described in the reviewed MD-5 as non-diagnostic developmental-support software. AbilityScore® should be discussed as a developmental ability profile, not used as a disease diagnosis.
+
+Can I compare two different report versions?
+
+Ask the care team to confirm the scale and instrument version first. The reviewed September reports and older methodology material describe different readiness-index scales; a direct comparison is not established by those sources.
+
+Source-based editorial explanation, prepared with AI assistance. No clinical review is claimed.
+
+PinnacleAI® GPT-OS: non-diagnostic developmental support, ages 0–12. Plans and outcomes are individual.

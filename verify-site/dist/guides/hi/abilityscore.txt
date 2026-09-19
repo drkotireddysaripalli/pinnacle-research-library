@@ -1,0 +1,83 @@
+मेरे बच्चे का AbilityScore® क्या बताता है?
+
+https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/abilityscore.html
+
+Language: hi-IN
+
+Updated: 2026-09-19
+
+AbilityScore® बच्चे की मौजूदा विकास संबंधी क्षमताओं को एक व्यवस्थित रूप में दिखाने का Pinnacle का तरीका है। इसे जाँचे गए कौशल, रोज़मर्रा के अनुभवों और केयर टीम की व्याख्या के साथ पढ़ें। असली सवाल है: मेरा बच्चा अभी क्या कर सकता है और आगे किस पर काम करना चाहिए?
+
+पहले क्षमताएँ समझें, फिर स्कोर देखें
+
+Pinnacle के वर्तमान विवरण में विकास को 17 डोमेन, 79 क्षमताओं और 349 कौशलों में व्यवस्थित किया गया है। ये अलग-अलग स्तर हैं, एक ही चीज़ की अलग गिनती नहीं। AbilityScore® बच्चे की ताकत और अगली प्राथमिकताओं पर बात शुरू करने का एक आधार देता है।
+
+जाँचे गए Evidence Dossier में क्लिनिकल AbilityScore® को क्लिनिशियन द्वारा किया जाने वाला, चिकित्सकीय निगरानी में संचालित आकलन बताया गया है। माता-पिता के अनुभव महत्वपूर्ण संदर्भ देते हैं। अभिभावक की प्रश्नावली और क्लिनिकल आकलन को प्रक्रिया के अलग हिस्सों के रूप में समझाया जाना चाहिए।
+
+Source: Pinnacle company walkthrough — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+
+Source: Pinnacle Evidence Dossier — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+पूरी प्रोफाइल के साथ अलग-अलग रिपोर्ट भी पढ़ें
+
+दिए गए सितंबर के उदाहरणों में एक पूरी AbilityScore® / TherapeuticAI® रिपोर्ट और सात Readiness रिपोर्ट हैं: Speech, Behavior, Motor, Study/IQ, School, Self-Sufficiency और Mainstream Readiness। ये परिवार और केयर टीम को रोज़मर्रा की ज़िंदगी के अलग पहलुओं पर बात करने में मदद करती हैं।
+
+Study/IQ Readiness नाम अपने आप में इसे स्वतंत्र रूप से स्थापित IQ टेस्ट नहीं बनाता। Readiness का नाम किसी रोग का निदान या स्कूल में प्रवेश का वादा नहीं है।
+
+Source: Report-format review and eight-report guide — https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+Source: BIS: MD/L-2026029599 — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+पूछें कि स्कोर किन बातों पर आधारित है
+
+देखें कि आकलन किसने किया, कब किया और बच्चे को किन परिस्थितियों में देखा गया। केयर टीम से उन कौशलों को समझाने के लिए कहें जिनसे प्रोफाइल बनी है। उन्हें घर, सीखने और दूसरे लोगों के साथ बच्चे के अनुभवों से जोड़कर समझें।
+
+मसलन, परिवार पूछ सकता है: ‘अभी हम बातचीत के किस कौशल पर काम कर रहे हैं, और रोज़ के कामों में कौन-सा बदलाव दिखेगा?’ यह बातचीत का एक उदाहरण है, किसी बच्चे के स्कोर की व्याख्या नहीं।
+
+Source: Pinnacle Evidence Dossier — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+Source: Report-format review and eight-report guide — https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+समय के साथ अपने बच्चे की प्रगति देखें
+
+दिए गए सितंबर के उदाहरणों में कुल स्कोर और Readiness सूचकांक 0–1000 के पैमाने पर हैं। पुराने मेथडोलॉजी दस्तावेज़ में Readiness सूचकांकों का पैमाना 0–100 है। तुलना से पहले रिपोर्ट का संस्करण और पैमाना समझें; अलग संस्करणों को सीधे एक जैसा न मानें।
+
+Pinnacle की बताई प्रक्रिया में हर महीने दोबारा आकलन शामिल है। पूछें कि रोज़मर्रा की ज़िंदगी में क्या बदला, कौन-से लक्ष्य अभी ज़रूरी हैं और समीक्षा के बाद अगला प्लान कैसे बदलेगा। रिपोर्ट के प्रस्तुति संस्करण और मेडिकल-डिवाइस सॉफ्टवेयर के संस्करण अलग हैं।
+
+Source: Pinnacle company walkthrough — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+
+Source: Report-format review and eight-report guide — https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+Source: AbilityScore® methodology preprint — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html
+
+समझें कि शोध अभी किस चरण में है
+
+मेथडोलॉजी preprint बताता है कि मापने का तरीका कैसे विकसित हुआ और शुरुआती निष्कर्ष क्या थे। अलग से प्रकाशित external-validation protocol नियोजित शोध की रूपरेखा है; यह पूरी हो चुकी validation का परिणाम नहीं है। दोनों मूल रिकॉर्ड प्रमाण लाइब्रेरी में पढ़े जा सकते हैं।
+
+स्कोर बातचीत को व्यवस्थित करने का एक आधार है। यह बच्चे का महत्व तय नहीं करता, आत्मनिर्भरता की गारंटी नहीं देता और समाज में शामिल होने के उसके अधिकार को निर्धारित नहीं करता।
+
+Source: AbilityScore® methodology preprint — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html
+
+Source: AbilityScore® external-validation protocol — https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html
+
+अपनी केयर टीम से पूछने के सवाल
+
+यह प्रोफाइल किन क्षमताओं और रोज़मर्रा के लक्ष्यों को प्राथमिकता देती है?
+
+आकलन किसने किया और रिपोर्ट का कौन-सा संस्करण व पैमाना इस्तेमाल हुआ?
+
+हमें किसका अभ्यास करना है और अगली समीक्षा में कौन-सा बदलाव देखना है?
+
+क्या AbilityScore® किसी रोग का निदान है?
+
+जाँचे गए MD-5 में PinnacleAI® को non-diagnostic developmental-support सॉफ्टवेयर बताया गया है। AbilityScore® को विकास संबंधी क्षमताओं की प्रोफाइल के रूप में समझें, किसी रोग के निदान के रूप में नहीं।
+
+क्या अलग संस्करणों की रिपोर्ट की तुलना कर सकते हैं?
+
+पहले केयर टीम से पैमाने और संस्करण की पुष्टि करें। सितंबर के उदाहरणों और पुराने मेथडोलॉजी दस्तावेज़ में Readiness सूचकांकों के अलग पैमाने हैं। ये स्रोत उनकी सीधी तुलना स्थापित नहीं करते।
+
+पहले से जाँचे गए स्रोतों पर आधारित, AI की सहायता से तैयार संपादकीय जानकारी। चिकित्सकीय समीक्षा का दावा नहीं है।
+
+AI की सहायता से किया गया हिन्दी अनुवाद। स्रोतों से मिलान और सहज भाषा के लिए संपादकीय जाँच की गई है; मानव भाषा विशेषज्ञ की समीक्षा अभी नहीं हुई है।
+
+PinnacleAI® GPT-OS: 0–12 वर्ष के बच्चों के विकास में सहायता के लिए; रोग की पहचान या निदान नहीं करता। हर बच्चे का प्लान और उसके परिणाम अलग हो सकते हैं।
