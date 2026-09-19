@@ -50,8 +50,8 @@
   {
     "title": "Practitioner reports: preserve the stated scope",
     "icon": "shield",
-    "label": "Original reports reviewed",
-    "finding": "Report particulars and scope are recorded. Restricted full reports are not republished here.",
+    "label": "Originals reviewed · live UDINs matched",
+    "finding": "Both exact UDINs showed Active in the ICAI portal on 19 September 2026, with practitioner and signing particulars matched. Restricted full reports are not republished here.",
     "boundary": "The reports’ circulation restrictions remain attached. A UDIN match authenticates particulars and does not enlarge a report’s assurance scope.",
     "id": "sae3000"
   }

@@ -41,7 +41,7 @@ The favicon is the unchanged 50×50 emblem already served by the official Pinnac
 
 The brand and exact legal entity are connected through Organization and Brand data. Page sections use WebPageElement with working selectors, stable links and matching visible descriptions. Record summaries, breadcrumbs, questions and definitions retain their source-specific meaning. FAQ markup supplies semantics; Google retired FAQ rich results in May 2026. Text exports are reusable references, not a special Google ranking mechanism.
 
-Report type, source date, counting unit, source-review status and clinical limitations remain part of each claim. HFR identifiers are a source inventory, not a claim that every listed facility is currently operational. UDIN particulars have not been independently matched in this review. Restricted practitioner reports are not republished.
+Report type, source date, counting unit, source-review status and clinical limitations remain part of each claim. HFR identifiers are a source inventory, not a claim that every listed facility is currently operational. Both exact UDINs and document particulars were matched as Active in the live ICAI portal on 19 September 2026, after user-completed CAPTCHA and OTP verification. The dated record is in content/issuer-checks.json. Restricted practitioner reports are not republished.
 
 Verification contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 

@@ -1,0 +1,54 @@
+{
+  "updated": "2026-09-19",
+  "scope": "Exact live UDIN particulars matched to the two supplied report references. This establishes the portal record and stated status on the check date; it does not enlarge the practitioner report scope or establish clinical efficacy.",
+  "records": [
+    {
+      "id": "sae3000",
+      "udin": "26200027GMBLXU4868",
+      "portal": "https://udin.icai.org/ICAI/verifyUDIN",
+      "verifiedOn": "2026-09-19",
+      "portalVerificationTime": "19-09-2026 | 14:30:27",
+      "method": "User completed the portal identity, CAPTCHA and OTP steps; both result rows and document-detail views were then inspected.",
+      "status": "Active",
+      "memberNumber": "200027",
+      "memberName": "PRASADA RAO N",
+      "firmRegistration": "013580S",
+      "firmName": "NPSY & CO",
+      "documentType": "Audit and Assurance Functions",
+      "signedDate": "2026-09-03",
+      "financialYear": "01-04-2026 - 31-03-2027",
+      "createdAtPortal": "03-09-2026 | 19:36:01",
+      "documentSubType": "Any Other Audit not covered Above",
+      "particulars": {
+        "Unique children, parents and families served": "790000",
+        "Company Formation year": "2016",
+        "Any Comment/ Recommendation/ Adverse Comment": "Based on details provided before us"
+      },
+      "documentDescription": "Unique children, parents and families served: not less than 7,90,000 (7.9 Lakh+)."
+    },
+    {
+      "id": "srs4400",
+      "udin": "26200027HCNFEI9138",
+      "portal": "https://udin.icai.org/ICAI/verifyUDIN",
+      "verifiedOn": "2026-09-19",
+      "portalVerificationTime": "19-09-2026 | 14:30:27",
+      "method": "User completed the portal identity, CAPTCHA and OTP steps; both result rows and document-detail views were then inspected.",
+      "status": "Active",
+      "memberNumber": "200027",
+      "memberName": "PRASADA RAO N",
+      "firmRegistration": "013580S",
+      "firmName": "NPSY & CO",
+      "documentType": "Audit and Assurance Functions",
+      "signedDate": "2026-09-03",
+      "financialYear": "01-04-2026 - 31-03-2027",
+      "createdAtPortal": "03-09-2026 | 19:09:44",
+      "documentSubType": "Agreed upon Procedures in terms of SRS 4400",
+      "particulars": {
+        "No of Branches": "49",
+        "Unique children, parents and families served": "792614",
+        "Any Comment/ Recommendation/ Adverse Comment": "Based on the information provided before us"
+      },
+      "documentDescription": "1. No of Branches visited - 7 Visited Physically."
+    }
+  ]
+}

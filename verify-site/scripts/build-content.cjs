@@ -49,7 +49,9 @@ impact.scale=impact.scale.replace('<details class="context-disclosure">',world.o
 impact.regulatory=impact.regulatory.replace('<div class="licensed-functions">',world.parentRole+world.scope+'<div class="licensed-functions">');
 for (const r of records) r.familyMeaning = impact.data.familyMeaning[r.id];
 const provenance=require('../content/evidence-provenance.json');
-for(const r of records){const p=provenance.records.find(x=>x.id===r.id);if(p?.recordUpdate)Object.assign(r,p.recordUpdate);}
+const issuerChecks=require('../content/issuer-checks.json');
+write('evidence/issuer-checks.json',JSON.stringify(issuerChecks,null,2));
+for(const r of records){const p=provenance.records.find(x=>x.id===r.id);if(p?.recordUpdate)Object.assign(r,p.recordUpdate);if(r.issuerCheckUrl)r.links=[...(r.links||[]),{label:'Dated live issuer-check record',url:r.issuerCheckUrl}];}
 for(const r of records.filter(r=>['sae3000','srs4400','operating-metrics','september-handout'].includes(r.id)))r.links=[...(r.links||[]),{label:'Independent CA claim and page map',url:assurance.route}];
 const citations=require('./citation-content.cjs')({e,origin,date,records,research:require('../content/research-library.json'),write});
 const presentation=require('./presentation-content.cjs')({e,icon,origin,citations});

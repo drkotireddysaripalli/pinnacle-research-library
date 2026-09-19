@@ -8,7 +8,7 @@
   "membership": "200027",
   "signedDate": "2026-09-03",
   "subjectDate": "2026-07-17",
-  "reviewMethod": "Original signed documents and all annexure page images inspected. UDIN particulars transcribed from the originals; a fresh ICAI portal match has not been completed in this website review.",
+  "reviewMethod": "Original signed documents and annexures inspected. Both exact UDINs and practitioner/signing particulars matched on the live ICAI portal on 19 September 2026; both showed Active. Report scope and cutoff remain unchanged.",
   "reports": [
     {
       "id": "sae3000",
@@ -546,5 +546,11 @@
         "books"
       ]
     }
-  ]
+  ],
+  "issuerVerification": {
+    "date": "2026-09-19",
+    "status": "Both UDINs Active",
+    "record": "/evidence/issuer-checks.json",
+    "portal": "https://udin.icai.org/ICAI/verifyUDIN"
+  }
 }

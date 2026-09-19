@@ -38,7 +38,7 @@
     "id": "udin",
     "name": "UDIN",
     "expanded": "Unique Document Identification Number",
-    "description": "An identifier for a practitioner’s document. The two supplied report numbers are recorded here; their particulars have not been independently matched on the ICAI portal in this review. A UDIN does not extend a report’s scope.",
+    "description": "An identifier for a practitioner’s document. Both supplied UDINs were matched in the live ICAI portal on 19 September 2026 and showed Active. A UDIN authenticates registered particulars; it does not extend the report’s scope.",
     "record": "sae3000"
   },
   {

@@ -536,8 +536,8 @@ Reviewed: 15 September 2026
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html
 Category: Research & outcomes
-Review status: Original reviewed
-Report inspected; UDIN not independently matched in this review.
+Review status: Original reviewed · UDIN matched
+ICAI UDIN 26200027GMBLXU4868 matched with Active status on 19 September 2026; member 200027, firm 013580S and signing date 3 September 2026 matched the source.
 
 SAE 3000 · Institutional claims as at 17 July 2026
 
@@ -557,6 +557,7 @@ Source note: The report is marked private/confidential and restricted-use. Its f
 Source citation: Original seven-page SAE 3000 report; September handout physical p14 provides a secondary summary.
 Reviewed: 15 September 2026
 - [Verify UDIN at ICAI](https://udin.icai.org/)
+- [Dated live issuer-check record](https://pinnacle-verify.saripalli.chatgpt.site/evidence/issuer-checks.json)
 - [Independent CA claim and page map](https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html)
 
 ---
@@ -565,8 +566,8 @@ Reviewed: 15 September 2026
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html
 Category: Research & outcomes
-Review status: Original reviewed
-Report inspected; UDIN not independently matched in this review.
+Review status: Original reviewed · UDIN matched
+ICAI UDIN 26200027HCNFEI9138 matched with Active status on 19 September 2026; member 200027, firm 013580S and signing date 3 September 2026 matched the source.
 
 SRS 4400 · Agreed procedures on institutional records
 
@@ -586,6 +587,7 @@ Source note: Restricted-use source. A UDIN lookup authenticates document particu
 Source citation: Original four-page SRS 4400 report.
 Reviewed: 15 September 2026
 - [Verify UDIN at ICAI](https://udin.icai.org/)
+- [Dated live issuer-check record](https://pinnacle-verify.saripalli.chatgpt.site/evidence/issuer-checks.json)
 - [Independent CA claim and page map](https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html)
 
 ---
@@ -2068,7 +2070,7 @@ Issuer: NPSY & Co., Chartered Accountants
 Signatory: N Prasada Rao, Partner
 Signed: 2026-09-03
 Cutoff: 2026-07-17
-Original signed documents and all annexure page images inspected. UDIN particulars transcribed from the originals; a fresh ICAI portal match has not been completed in this website review.
+Original signed documents and annexures inspected. Both exact UDINs and practitioner/signing particulars matched on the live ICAI portal on 19 September 2026; both showed Active. Report scope and cutoff remain unchanged.
 
 Independent Practitioner's Limited Assurance Report under SAE 3000
 UDIN: 26200027GMBLXU4868
@@ -2327,7 +2329,7 @@ Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
 HFR — Health Facility Registry: The registry assigns a facility identifier. This page lists identifiers found in the supplied workbook and certificate copies. Source review is separate from confirming a facility’s current registry status, operational status or clinical quality.
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html
 
-UDIN — Unique Document Identification Number: An identifier for a practitioner’s document. The two supplied report numbers are recorded here; their particulars have not been independently matched on the ICAI portal in this review. A UDIN does not extend a report’s scope.
+UDIN — Unique Document Identification Number: An identifier for a practitioner’s document. Both supplied UDINs were matched in the live ICAI portal on 19 September 2026 and showed Active. A UDIN authenticates registered particulars; it does not extend the report’s scope.
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html
 
 SAE 3000 — Limited-assurance report in this evidence collection: The supplied practitioner report gives limited assurance over specified institutional assertions and counting criteria. Read its dated thresholds and scope; it does not validate every headline statistic or a child’s clinical outcome.
