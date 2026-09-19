@@ -1,0 +1,28 @@
+## The scale behind a personal journey
+
+400 billion PinnacleAI® points — Pinnacle aggregate estimate. Pinnacle's owner confirmed this as a current calculated total on 19 September 2026. The component counts supplied do not reproduce 400 billion. A point definition, reproducible calculation, deduplication rules and measurement cutoff have not been supplied. This aggregate is not established by the linked UDIN reports.
+900 million Children, parents & families — The population Pinnacle aims to empower. Built for 900 million children, parents and families is the mission described in the 7 September 2026 handout, pages 1, 7 and 20. It is not a count of people served or an independently established estimate of unmet need.
+
+2.7B+ Clinical AI data points — Structured events · SRS 4400 finding
+2.7B+ structured developmental events at 17 July 2026 in SRS 4400 annexure p3, item 5. SAE 3000 separately covers a 2.5B+ floor. Clinical AI data points is Pinnacle’s description; the report counts structured events, not necessarily independent clinical observations or AI-training examples.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html#scale-data
+
+31M+ Therapy & developmental services — Independent practitioner reports
+31,052,382 cumulative services at 17 July 2026 in SRS 4400 annexure p3, item 1. The defined total includes assessments, screenings and parent training. SAE 3000 separately provides limited assurance over the 31M+ floor. This is a volume measure, not a successful-outcome count.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html
+
+10.4M Calculated report outputs — 1.3M assessments × 8 report types
+1.3 million completed assessments × eight reports = 10.4 million report outputs. Pinnacle’s owner confirmed on 19 September 2026 that each assessment produces one cumulative AbilityScore and seven readiness-index reports. This is arithmetic based on that operational statement; a complete report-generation log has not been inspected, and the linked practitioner reports do not establish this report total.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+1.3L+ Intervention techniques — Current Pinnacle library figure
+130,000+ techniques, owner-supplied operational update, 19 September 2026. A dated inventory extract has not been inspected. The earlier September handout describes 90,000+. The linked UDIN reports do not verify this updated figure or the separate clinical effectiveness of every technique.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html#scale-techniques
+
+7.9 lakh+ Beneficiary / family registrations
+792,614 unique beneficiary/family registrations at 17 July 2026: SRS 4400 annexure p3, item 2. SAE 3000 separately covers the 790,000+ floor. This is the defined registration measure, not an independently verified outcome count.
+Pinnacle describes everyday programmes with nine personalised intervention techniques, nine therapeutic goals per service in its programme model, and family/therapist feedback feeding review and correction. These are programme descriptions; no deduplicated totals for programmes, goal assignments or Fusion Module entries were supplied. The 31M+ cumulative service definition also includes assessments, screenings and parent training, so it cannot automatically be multiplied by nine to establish unique therapeutic goals.
+
+These categories describe different, potentially overlapping units. They must not be added or multiplied to imply unique children, independent observations or a verified aggregate. Programme, goal and feedback-entry totals are not quantified here.
+Ask every provider: can you show this depth of measurement, personalised planning, everyday practice, progress tracking and source-linked evidence?
+A practical comparison question, not a claim that no other provider worldwide has comparable capabilities. No exhaustive global comparison has been established.

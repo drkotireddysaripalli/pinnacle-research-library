@@ -47,6 +47,16 @@ Verification contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 
 Last content and semantic review: 19 September 2026.
 
+## Confirmed review, scale story and contextual links
+
+The owner confirmed Pinnacle Clinical Committee review on 19 September 2026. The editorial record identifies the reviewed published edition and source commit. `reviewedBy` is limited to the homepage's parent explanations and the nine parent-guide editions; original issuer documents are not represented as committee-authored or committee-validated studies. Organisational coverage confirmation is recorded separately from observed portal statuses.
+
+The post-hero scale story derives from `content/scale-story.json`. It distinguishes the owner-stated 400 billion aggregate estimate, the handout's 900 million mission, report-backed 2.7 billion structured events / 31 million services / 7.9 lakh registrations, and owner-supplied assessment/library updates. The 10.4 million report figure is explicitly 1.3 million assessments multiplied by eight reports. The 400 billion formula has not been supplied or reproduced; it is not marked as independently assured. HTML, text exports, source links and sharing retain these distinctions.
+
+The Worker adds one contextual evidence panel to eight allowlisted parent-site pages. The seven exact Ask source paths are delegated to the existing `pinnacle-ask` Worker via an HTTP service binding named `PINNACLE_ASK`. Keep that service binding, the `ASSETS` binding and inherited `SITES_BYPASS_TOKEN` when deploying. Narrow source-path routes take precedence over the unchanged broad `pinnacleblooms.org/ask*` route; suffix paths, non-GET methods and ineligible responses pass through without alteration. The separate `www.pinnacleblooms.org/abilityscore*` route fetches the existing website origin. Only the exact public HTML pages receive a panel; private/no-store/no-transform, cookie-setting, noindex, range and authenticated responses are excluded. Original canonical links, security headers and cache directives are preserved. No new cache storage or host redirects are added for these article pages.
+
+Release checks: `node scripts/check-editorial-confirmation.cjs`, `node scripts/check-scale-story.cjs`, `node scripts/check-hfr-presentation.cjs`. Contextual-route fixture tests cover all eight pages, response preservation and 17 routing/transformation conditions; verify the actual live Worker after deployment.
+
 ## Research and reader controls
 
 The opening offers audience-specific reading paths, a six-step illustrative workflow and an eight-report explorer. The guide contains no child data, does not run an assessment, and retains source links. Report presentation version V-1.6.9.9 is explicitly separate from the SaMD software version. Native controls and keyboard navigation progressively enhance server-rendered content, with all views available without JavaScript and when printing. WhatsApp remains directly accessible; other sharing choices expand under More. Machine-readable guide exports match the visible explanation.

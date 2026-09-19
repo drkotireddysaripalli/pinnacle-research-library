@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-19",
-  "editorialBasis": "Explanations based on existing reviewed Pinnacle source records. English, Telugu and Hindi copy underwent an AI editorial and language-naturalness pass; no named human language or clinical reviewer is attributed.",
+  "editorialBasis": "Source-linked explanations prepared with AI assistance. The Pinnacle site owner confirmed completed Clinical Committee review of the published parent-facing wording on 19 September 2026. English, Telugu and Hindi copy retain the source and language-assistance notes; a separate professional translation certification is not claimed.",
   "sources": {
     "methodology": {
       "title": "AbilityScore® methodology preprint",
@@ -62,7 +62,7 @@
       "sourceLink": "Source",
       "related": "Continue reading",
       "questions": "Questions to take to your care team",
-      "review": "Source-based editorial explanation, prepared with AI assistance. No clinical review is claimed.",
+      "review": "Clinical explanations reviewed by the Pinnacle Clinical Committee. Confirmation recorded: 19 September 2026. Prepared with AI editorial assistance.",
       "translation": "",
       "updated": "Updated",
       "illustration": "Conceptual illustration; not a patient case.",
@@ -95,7 +95,7 @@
       "sourceLink": "ఆధారం",
       "related": "ఇంకా చదవండి",
       "questions": "మీ కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలు",
-      "review": "ఇప్పటికే పరిశీలించిన ఆధారాలతో, AI సహాయంతో రూపొందించిన వివరణ. వైద్య నిపుణుల సమీక్ష జరిగిందని చెప్పడం లేదు.",
+      "review": "ఈ వివరణలను Pinnacle Clinical Committee సమీక్షించింది. సమీక్ష పూర్తయినట్లు 19 సెప్టెంబర్ 2026న నిర్ధారించారు. రచనలో AI సహాయం తీసుకున్నాం.",
       "translation": "AI సహాయంతో చేసిన తెలుగు అనువాదం. మూల ఆధారాలతో పోల్చి, సహజమైన భాష కోసం సంపాదకీయ పరిశీలన చేశాం; మానవ భాషా నిపుణుల సమీక్ష ఇంకా జరగలేదు.",
       "updated": "చివరి నవీకరణ",
       "illustration": "విషయాన్ని అర్థం చేసుకోవడానికి రూపొందించిన చిత్రం; నిజమైన పిల్లల కేసు కాదు.",
@@ -128,7 +128,7 @@
       "sourceLink": "स्रोत",
       "related": "आगे पढ़ें",
       "questions": "अपनी केयर टीम से पूछने के सवाल",
-      "review": "पहले से जाँचे गए स्रोतों पर आधारित, AI की सहायता से तैयार संपादकीय जानकारी। चिकित्सकीय समीक्षा का दावा नहीं है।",
+      "review": "इन जानकारियों की समीक्षा Pinnacle Clinical Committee ने की है। समीक्षा पूरी होने की पुष्टि 19 सितंबर 2026 को दर्ज की गई। लेखन में AI की सहायता ली गई है।",
       "translation": "AI की सहायता से किया गया हिन्दी अनुवाद। स्रोतों से मिलान और सहज भाषा के लिए संपादकीय जाँच की गई है; मानव भाषा विशेषज्ञ की समीक्षा अभी नहीं हुई है।",
       "updated": "अंतिम अपडेट",
       "illustration": "समझाने के लिए बनाई गई तस्वीर; किसी वास्तविक बच्चे का केस नहीं।",

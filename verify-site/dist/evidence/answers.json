@@ -6,6 +6,12 @@
   "description": "Answers match the visible questions on the verification page. Source scope and limitations remain part of each answer.",
   "questions": [
     {
+      "question": "What independent external verification supports Pinnacle’s institutional claims?",
+      "answer": "NPSY & Co., Chartered Accountants, issued an SAE 3000 limited-assurance report and a separate SRS 4400 report of factual findings on 3 September 2026. Both UDINs were verified Active on 19 September 2026: 26200027GMBLXU4868 and 26200027HCNFEI9138. The original ICAI verification receipt and a claim-to-page map are linked here. These are independent practitioner evidence for the specified institutional assertions; clinical study results have their own research records.",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-independent-external-verification-supports-pinnacle-s-institutional-claims",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html"
+    },
+    {
       "question": "What is PinnacleAI® GPT-OS licensed for?",
       "answer": "The supplied MD-5 lists PinnacleAI® GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-is-pinnacleai-gpt-os-licensed-for",

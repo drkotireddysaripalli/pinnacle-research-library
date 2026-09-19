@@ -68,6 +68,12 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Parent guide index](https://pinnacle-verify.saripalli.chatgpt.site/evidence/parent-guides.json): language-specific answers, source references and canonical links.
 - [Editorial responsibility](https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json): designated committee and exact review status.
 
+## Clinical review and organisational coverage
+Clinical review completed by the Pinnacle Clinical Committee; confirmation recorded on 19 September 2026.
+The confirmation applies to the parent-facing clinical explanations in the 19 September 2026 published edition. Later substantive clinical changes require a new review record. Automatic translations remain labelled as machine-assisted.
+Coverage: complete as confirmed by Pinnacle; confirmed 2026-09-19. Pinnacle confirms that its organisational coverage is complete. This company confirmation is recorded alongside the source inventory; it does not change historical document dates, report scope or the statuses observed in official portals.
+Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json
+
 ## Research, books and authors
 - [Research library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html): seven DOI-linked works, original books, company-study sources and matched author profiles.
 - [Research JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.json): publication dates, DOI identifiers, authors and source URLs.
@@ -117,6 +123,10 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Autism — mother’s hand book](https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/autism-mothers-handbook-english.html): Authored parent handbook
 - [ఆటిజం — మదర్స్ హ్యాండ్ బుక్](https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/autism-mothers-handbook-telugu.html): Authored parent handbook
 - [The Voice of the Unheard](https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/voice-of-the-unheard.html): Authored parent handbook
+
+## Scale and mission
+- [Scale behind a personal journey](https://pinnacle-verify.saripalli.chatgpt.site/#scale-for-every-child): Pinnacle’s aggregate estimate, current operational figures, dated practitioner findings and mission population are distinguished.
+- [Counting basis](https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-story.json): attribution, calculation limits and links to original evidence.
 
 ## Sixteen reading topics
 - [Explore at your pace](https://pinnacle-verify.saripalli.chatgpt.site/#reader-guide): sixteen expandable topics with original sources, research and practical explanations.

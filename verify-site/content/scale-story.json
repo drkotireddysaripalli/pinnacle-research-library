@@ -1,0 +1,93 @@
+{
+  "updated": "2026-09-19",
+  "title": "The scale behind a personal journey",
+  "aggregate": {
+    "display": "400 billion",
+    "label": "PinnacleAI® points",
+    "status": "Pinnacle aggregate estimate",
+    "basis": "Pinnacle's owner confirmed this as a current calculated total on 19 September 2026. The component counts supplied do not reproduce 400 billion. A point definition, reproducible calculation, deduplication rules and measurement cutoff have not been supplied. This aggregate is not established by the linked UDIN reports."
+  },
+  "mission": {
+    "display": "900 million",
+    "label": "Children, parents & families",
+    "status": "The population Pinnacle aims to empower",
+    "basis": "Built for 900 million children, parents and families is the mission described in the 7 September 2026 handout, pages 1, 7 and 20. It is not a count of people served or an independently established estimate of unmet need."
+  },
+  "metrics": [
+    {
+      "value": "2.7B+",
+      "label": "Clinical AI data points",
+      "status": "Structured events · SRS 4400 finding",
+      "meaning": "A developmental history to inform the next conversation, plan and review.",
+      "basis": "2.7B+ structured developmental events at 17 July 2026 in SRS 4400 annexure p3, item 5. SAE 3000 separately covers a 2.5B+ floor. Clinical AI data points is Pinnacle’s description; the report counts structured events, not necessarily independent clinical observations or AI-training examples.",
+      "source": "/evidence/scale-register.html#scale-data",
+      "icon": "files"
+    },
+    {
+      "value": "31M+",
+      "label": "Therapy & developmental services",
+      "status": "Independent practitioner reports",
+      "meaning": "Experience across assessment, intervention, screening and parent support.",
+      "basis": "31,052,382 cumulative services at 17 July 2026 in SRS 4400 annexure p3, item 1. The defined total includes assessments, screenings and parent training. SAE 3000 separately provides limited assurance over the 31M+ floor. This is a volume measure, not a successful-outcome count.",
+      "source": "/evidence/assurance-map.html",
+      "icon": "users"
+    },
+    {
+      "value": "10.4M",
+      "label": "Calculated report outputs",
+      "status": "1.3M assessments × 8 report types",
+      "meaning": "AbilityScore® plus seven readiness indexes: a fuller view of the child's next steps.",
+      "basis": "1.3 million completed assessments × eight reports = 10.4 million report outputs. Pinnacle’s owner confirmed on 19 September 2026 that each assessment produces one cumulative AbilityScore and seven readiness-index reports. This is arithmetic based on that operational statement; a complete report-generation log has not been inspected, and the linked practitioner reports do not establish this report total.",
+      "source": "/#report-explorer",
+      "icon": "file-text"
+    },
+    {
+      "value": "1.3L+",
+      "label": "Intervention techniques",
+      "status": "Current Pinnacle library figure",
+      "meaning": "A repertoire from which the care team can select activities for a child's goals.",
+      "basis": "130,000+ techniques, owner-supplied operational update, 19 September 2026. A dated inventory extract has not been inspected. The earlier September handout describes 90,000+. The linked UDIN reports do not verify this updated figure or the separate clinical effectiveness of every technique.",
+      "source": "/evidence/scale-register.html#scale-techniques",
+      "icon": "book-open"
+    }
+  ],
+  "journey": [
+    {
+      "label": "Personal goals",
+      "detail": "Understand the abilities that matter in this child's everyday life.",
+      "icon": "clipboard-list"
+    },
+    {
+      "label": "Everyday Therapy™",
+      "detail": "Connect selected techniques to a personal plan and guided daily practice.",
+      "icon": "house"
+    },
+    {
+      "label": "Feedback & correction",
+      "detail": "Bring family and therapist observations into progress review and the Personal Development Kernel.",
+      "icon": "network"
+    },
+    {
+      "label": "The next step",
+      "detail": "Reassess readiness and adapt support toward growing independence and participation.",
+      "icon": "chart-no-axes-combined"
+    }
+  ],
+  "comparisonQuestion": "Ask every provider: can you show this depth of measurement, personalised planning, everyday practice, progress tracking and source-linked evidence?",
+  "comparisonScope": "A practical comparison question, not a claim that no other provider worldwide has comparable capabilities. No exhaustive global comparison has been established.",
+  "countingNote": "These categories describe different, potentially overlapping units. They must not be added or multiplied to imply unique children, independent observations or a verified aggregate. Programme, goal and feedback-entry totals are not quantified here.",
+  "sources": [
+    "/evidence/records/september-handout.html",
+    "/evidence/assurance-map.html",
+    "/evidence/icai-udin-verifications-2026-09-19.pdf",
+    "/evidence/scale-register.html",
+    "/evidence/developmental-pathway.json"
+  ],
+  "families": {
+    "value": "7.9 lakh+",
+    "label": "Beneficiary / family registrations",
+    "basis": "792,614 unique beneficiary/family registrations at 17 July 2026: SRS 4400 annexure p3, item 2. SAE 3000 separately covers the 790,000+ floor. This is the defined registration measure, not an independently verified outcome count.",
+    "source": "/evidence/scale-register.html#scale-families"
+  },
+  "programmeDescription": "Pinnacle describes everyday programmes with nine personalised intervention techniques, nine therapeutic goals per service in its programme model, and family/therapist feedback feeding review and correction. These are programme descriptions; no deduplicated totals for programmes, goal assignments or Fusion Module entries were supplied. The 31M+ cumulative service definition also includes assessments, screenings and parent training, so it cannot automatically be multiplied by nine to establish unique therapeutic goals."
+}

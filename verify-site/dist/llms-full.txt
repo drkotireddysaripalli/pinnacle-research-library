@@ -1296,7 +1296,7 @@ Can I compare two different report versions?
 
 Ask the care team to confirm the scale and instrument version first. The reviewed September reports and older methodology material describe different readiness-index scales; a direct comparison is not established by those sources.
 
-Source-based editorial explanation, prepared with AI assistance. No clinical review is claimed.
+Clinical explanations reviewed by the Pinnacle Clinical Committee. Confirmation recorded: 19 September 2026. Prepared with AI editorial assistance.
 
 PinnacleAI® GPT-OS: non-diagnostic developmental support, ages 0–12. Plans and outcomes are individual.
 
@@ -1380,7 +1380,7 @@ AbilityScore® వ్యాధిని నిర్ధారిస్తుం�
 
 ముందుగా స్కేల్, వెర్షన్‌ను కేర్ టీమ్‌తో నిర్ధారించుకోండి. సెప్టెంబర్ నమూనాలు, పాత మెథడాలజీ పత్రం వేర్వేరు Readiness స్కేల్స్‌ను వివరిస్తున్నాయి. వాటిని నేరుగా పోల్చవచ్చని ఈ ఆధారాలు నిర్ధారించడం లేదు.
 
-ఇప్పటికే పరిశీలించిన ఆధారాలతో, AI సహాయంతో రూపొందించిన వివరణ. వైద్య నిపుణుల సమీక్ష జరిగిందని చెప్పడం లేదు.
+ఈ వివరణలను Pinnacle Clinical Committee సమీక్షించింది. సమీక్ష పూర్తయినట్లు 19 సెప్టెంబర్ 2026న నిర్ధారించారు. రచనలో AI సహాయం తీసుకున్నాం.
 
 AI సహాయంతో చేసిన తెలుగు అనువాదం. మూల ఆధారాలతో పోల్చి, సహజమైన భాష కోసం సంపాదకీయ పరిశీలన చేశాం; మానవ భాషా నిపుణుల సమీక్ష ఇంకా జరగలేదు.
 
@@ -1466,7 +1466,7 @@ Source: AbilityScore® external-validation protocol — https://pinnacle-verify.
 
 पहले केयर टीम से पैमाने और संस्करण की पुष्टि करें। सितंबर के उदाहरणों और पुराने मेथडोलॉजी दस्तावेज़ में Readiness सूचकांकों के अलग पैमाने हैं। ये स्रोत उनकी सीधी तुलना स्थापित नहीं करते।
 
-पहले से जाँचे गए स्रोतों पर आधारित, AI की सहायता से तैयार संपादकीय जानकारी। चिकित्सकीय समीक्षा का दावा नहीं है।
+इन जानकारियों की समीक्षा Pinnacle Clinical Committee ने की है। समीक्षा पूरी होने की पुष्टि 19 सितंबर 2026 को दर्ज की गई। लेखन में AI की सहायता ली गई है।
 
 AI की सहायता से किया गया हिन्दी अनुवाद। स्रोतों से मिलान और सहज भाषा के लिए संपादकीय जाँच की गई है; मानव भाषा विशेषज्ञ की समीक्षा अभी नहीं हुई है।
 
@@ -1552,7 +1552,7 @@ What should a monthly review include?
 
 The described workflow connects reassessment with earlier abilities, everyday observations, difficulties and the next priorities. Families can ask how those findings change the plan, while confirming the report version and scale.
 
-Source-based editorial explanation, prepared with AI assistance. No clinical review is claimed.
+Clinical explanations reviewed by the Pinnacle Clinical Committee. Confirmation recorded: 19 September 2026. Prepared with AI editorial assistance.
 
 PinnacleAI® GPT-OS: non-diagnostic developmental support, ages 0–12. Plans and outcomes are individual.
 
@@ -1636,7 +1636,7 @@ Source: BIS: MD/L-2026029599 — https://pinnacle-verify.saripalli.chatgpt.site/
 
 వివరించిన విధానంలో మళ్లీ Assessment చేయడం, మునుపటి సామర్థ్యాలు, రోజువారీ అనుభవాలు, కష్టాలు, తర్వాతి ప్రాధాన్యాలు కలుస్తాయి. రిపోర్ట్ వెర్షన్, స్కేల్‌ను నిర్ధారించుకుని, ఈ వివరాల వల్ల Plan ఎలా మారుతుందో అడగవచ్చు.
 
-ఇప్పటికే పరిశీలించిన ఆధారాలతో, AI సహాయంతో రూపొందించిన వివరణ. వైద్య నిపుణుల సమీక్ష జరిగిందని చెప్పడం లేదు.
+ఈ వివరణలను Pinnacle Clinical Committee సమీక్షించింది. సమీక్ష పూర్తయినట్లు 19 సెప్టెంబర్ 2026న నిర్ధారించారు. రచనలో AI సహాయం తీసుకున్నాం.
 
 AI సహాయంతో చేసిన తెలుగు అనువాదం. మూల ఆధారాలతో పోల్చి, సహజమైన భాష కోసం సంపాదకీయ పరిశీలన చేశాం; మానవ భాషా నిపుణుల సమీక్ష ఇంకా జరగలేదు.
 
@@ -1722,7 +1722,7 @@ Source: BIS: MD/L-2026029599 — https://pinnacle-verify.saripalli.chatgpt.site/
 
 बताई प्रक्रिया दोबारा आकलन को पिछली क्षमताओं, रोज़मर्रा के अनुभवों, कठिनाइयों और अगली प्राथमिकताओं से जोड़ती है। रिपोर्ट के संस्करण और पैमाने की पुष्टि करके परिवार पूछ सकता है कि इन बातों से प्लान में क्या बदलाव आएगा।
 
-पहले से जाँचे गए स्रोतों पर आधारित, AI की सहायता से तैयार संपादकीय जानकारी। चिकित्सकीय समीक्षा का दावा नहीं है।
+इन जानकारियों की समीक्षा Pinnacle Clinical Committee ने की है। समीक्षा पूरी होने की पुष्टि 19 सितंबर 2026 को दर्ज की गई। लेखन में AI की सहायता ली गई है।
 
 AI की सहायता से किया गया हिन्दी अनुवाद। स्रोतों से मिलान और सहज भाषा के लिए संपादकीय जाँच की गई है; मानव भाषा विशेषज्ञ की समीक्षा अभी नहीं हुई है।
 
@@ -1802,7 +1802,7 @@ Are MD-3 and MD-5 both issued licences?
 
 No. MD-3 is a manufacturing-licence application. MD-5 is the issued manufacturing licence. The two documents have distinct roles in the regulatory record.
 
-Source-based editorial explanation, prepared with AI assistance. No clinical review is claimed.
+Clinical explanations reviewed by the Pinnacle Clinical Committee. Confirmation recorded: 19 September 2026. Prepared with AI editorial assistance.
 
 PinnacleAI® GPT-OS: non-diagnostic developmental support, ages 0–12. Plans and outcomes are individual.
 
@@ -1880,7 +1880,7 @@ MD-3, MD-5 రెండూ ఇచ్చిన లైసెన్స్‌లే�
 
 కాదు. MD-3 తయారీ లైసెన్స్ కోసం దరఖాస్తు. MD-5 జారీ చేసిన తయారీ లైసెన్స్. నియంత్రణ రికార్డులో వాటి పాత్రలు వేర్వేరు.
 
-ఇప్పటికే పరిశీలించిన ఆధారాలతో, AI సహాయంతో రూపొందించిన వివరణ. వైద్య నిపుణుల సమీక్ష జరిగిందని చెప్పడం లేదు.
+ఈ వివరణలను Pinnacle Clinical Committee సమీక్షించింది. సమీక్ష పూర్తయినట్లు 19 సెప్టెంబర్ 2026న నిర్ధారించారు. రచనలో AI సహాయం తీసుకున్నాం.
 
 AI సహాయంతో చేసిన తెలుగు అనువాదం. మూల ఆధారాలతో పోల్చి, సహజమైన భాష కోసం సంపాదకీయ పరిశీలన చేశాం; మానవ భాషా నిపుణుల సమీక్ష ఇంకా జరగలేదు.
 
@@ -1960,11 +1960,17 @@ Source: BIS: MD/L-2026029599 — https://pinnacle-verify.saripalli.chatgpt.site/
 
 नहीं। MD-3 विनिर्माण लाइसेंस का आवेदन है। MD-5 जारी विनिर्माण लाइसेंस है। नियामक रिकॉर्ड में दोनों की भूमिका अलग है।
 
-पहले से जाँचे गए स्रोतों पर आधारित, AI की सहायता से तैयार संपादकीय जानकारी। चिकित्सकीय समीक्षा का दावा नहीं है।
+इन जानकारियों की समीक्षा Pinnacle Clinical Committee ने की है। समीक्षा पूरी होने की पुष्टि 19 सितंबर 2026 को दर्ज की गई। लेखन में AI की सहायता ली गई है।
 
 AI की सहायता से किया गया हिन्दी अनुवाद। स्रोतों से मिलान और सहज भाषा के लिए संपादकीय जाँच की गई है; मानव भाषा विशेषज्ञ की समीक्षा अभी नहीं हुई है।
 
 PinnacleAI® GPT-OS: 0–12 वर्ष के बच्चों के विकास में सहायता के लिए; रोग की पहचान या निदान नहीं करता। हर बच्चे का प्लान और उसके परिणाम अलग हो सकते हैं।
+## Clinical review and organisational coverage
+Clinical review completed by the Pinnacle Clinical Committee; confirmation recorded on 19 September 2026.
+The confirmation applies to the parent-facing clinical explanations in the 19 September 2026 published edition. Later substantive clinical changes require a new review record. Automatic translations remain labelled as machine-assisted.
+Coverage: complete as confirmed by Pinnacle; confirmed 2026-09-19. Pinnacle confirms that its organisational coverage is complete. This company confirmation is recorded alongside the source inventory; it does not change historical document dates, report scope or the statuses observed in official portals.
+Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json
+
 
 # Pinnacle research and books
 Checked: 2026-09-19
@@ -2300,6 +2306,7 @@ The company describes a seven-stage developmental pathway connecting measurement
 
 ## Main page sections
 - [Your child’s path toward self-sufficiency and mainstream life.](https://pinnacle-verify.saripalli.chatgpt.site/#section-your-child-s-path-toward-self-sufficiency-and-mainstream-life): PinnacleAI® — the way forward.
+- [Built at scale. Focused on your child.](https://pinnacle-verify.saripalli.chatgpt.site/#scale-for-every-child): A connected system for understanding abilities, planning everyday practice and reviewing progress toward a more independent life.
 - [A clear source for each kind of question.](https://pinnacle-verify.saripalli.chatgpt.site/#proof-map): MD-5 names the non-diagnostic Class B software’s intended use and users.
 - [See how one observation can inform the next step.](https://pinnacle-verify.saripalli.chatgpt.site/#experience): Explore the documented process through an illustrative family scenario. This guide uses no child data and does not perform an assessment.
 - [One overall profile. Seven focused readiness views.](https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer): The supplied report examples use a 0–1000 display scale. Explore what each view brings to a conversation about your child’s next steps.
@@ -2319,7 +2326,7 @@ The company describes a seven-stage developmental pathway connecting measurement
 - [A wonderful life. A place to participate.](https://pinnacle-verify.saripalli.chatgpt.site/#global-goals): Pinnacle’s stated mission has practical connections to the UN Sustainable Development Goals: access to support, early learning, inclusion and accountable collaboration.
 - [Why these capabilities matter to families.](https://pinnacle-verify.saripalli.chatgpt.site/#global-principles): Independent guidance explains the importance of monitoring, caregiver participation, coordinated support and inclusion. These organisations do not endorse or evaluate Pinnacle through the references below.
 - [See where Pinnacle fits. Compare what matters.](https://pinnacle-verify.saripalli.chatgpt.site/#global-context): Different organisations address diagnosis, assessment, digital treatment, integrated services or provider software. A useful comparison starts with the job each is designed to do.
-- [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): The supplied MD-5 lists PinnacleAI® GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.
+- [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): NPSY & Co., Chartered Accountants, issued an SAE 3000 limited-assurance report and a separate SRS 4400 report of factual findings on 3 September 2026. Both UDINs were verified Active on 19 September 2026: 26200027GMBLXU4868 and 26200027HCNFEI9138. The original ICAI verification receipt and a claim-to-page map are linked here. These are independent practitioner evidence for the specified institutional assertions; clinical study results have their own research records.
 - [Clear terms. Better questions.](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): A practical reading guide to the credentials, report types and international classifications used on this page. Each definition links to its Pinnacle source record.
 - [Review summary](https://pinnacle-verify.saripalli.chatgpt.site/#review-summary): A source for every conclusion Reading a certificate and checking its current status are separate steps. Read the review conclusions .
 - [Originals reviewed. Conclusions made clear.](https://pinnacle-verify.saripalli.chatgpt.site/#review): Each conclusion reflects the documents inspected. Historical certificates, study protocols and company-reported claims are identified precisely, so you can see what each source establishes.
@@ -2717,3 +2724,33 @@ Author-written abstract
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/voice-of-the-unheard.html
 Authored parent handbook
 Author-written abstract
+
+
+## The scale behind a personal journey
+
+400 billion PinnacleAI® points — Pinnacle aggregate estimate. Pinnacle's owner confirmed this as a current calculated total on 19 September 2026. The component counts supplied do not reproduce 400 billion. A point definition, reproducible calculation, deduplication rules and measurement cutoff have not been supplied. This aggregate is not established by the linked UDIN reports.
+900 million Children, parents & families — The population Pinnacle aims to empower. Built for 900 million children, parents and families is the mission described in the 7 September 2026 handout, pages 1, 7 and 20. It is not a count of people served or an independently established estimate of unmet need.
+
+2.7B+ Clinical AI data points — Structured events · SRS 4400 finding
+2.7B+ structured developmental events at 17 July 2026 in SRS 4400 annexure p3, item 5. SAE 3000 separately covers a 2.5B+ floor. Clinical AI data points is Pinnacle’s description; the report counts structured events, not necessarily independent clinical observations or AI-training examples.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html#scale-data
+
+31M+ Therapy & developmental services — Independent practitioner reports
+31,052,382 cumulative services at 17 July 2026 in SRS 4400 annexure p3, item 1. The defined total includes assessments, screenings and parent training. SAE 3000 separately provides limited assurance over the 31M+ floor. This is a volume measure, not a successful-outcome count.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html
+
+10.4M Calculated report outputs — 1.3M assessments × 8 report types
+1.3 million completed assessments × eight reports = 10.4 million report outputs. Pinnacle’s owner confirmed on 19 September 2026 that each assessment produces one cumulative AbilityScore and seven readiness-index reports. This is arithmetic based on that operational statement; a complete report-generation log has not been inspected, and the linked practitioner reports do not establish this report total.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer
+
+1.3L+ Intervention techniques — Current Pinnacle library figure
+130,000+ techniques, owner-supplied operational update, 19 September 2026. A dated inventory extract has not been inspected. The earlier September handout describes 90,000+. The linked UDIN reports do not verify this updated figure or the separate clinical effectiveness of every technique.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html#scale-techniques
+
+7.9 lakh+ Beneficiary / family registrations
+792,614 unique beneficiary/family registrations at 17 July 2026: SRS 4400 annexure p3, item 2. SAE 3000 separately covers the 790,000+ floor. This is the defined registration measure, not an independently verified outcome count.
+Pinnacle describes everyday programmes with nine personalised intervention techniques, nine therapeutic goals per service in its programme model, and family/therapist feedback feeding review and correction. These are programme descriptions; no deduplicated totals for programmes, goal assignments or Fusion Module entries were supplied. The 31M+ cumulative service definition also includes assessments, screenings and parent training, so it cannot automatically be multiplied by nine to establish unique therapeutic goals.
+
+These categories describe different, potentially overlapping units. They must not be added or multiplied to imply unique children, independent observations or a verified aggregate. Programme, goal and feedback-entry totals are not quantified here.
+Ask every provider: can you show this depth of measurement, personalised planning, everyday practice, progress tracking and source-linked evidence?
+A practical comparison question, not a claim that no other provider worldwide has comparable capabilities. No exhaustive global comparison has been established.

@@ -14,6 +14,22 @@
           "xLength": 182
         },
         {
+          "id": "scale-for-every-child",
+          "url": "https://www.pinnacleblooms.org/verify/#scale-for-every-child",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
+          "text": "Explore the scale behind PinnacleAI®: current figures, counting methods, independent report findings and a mission to empower children and families. See the evidence behind each number.",
+          "whatsapp": "Explore the scale behind PinnacleAI®: current figures, counting methods, independent report findings and a mission to empower children and families. See the evidence behind each number.",
+          "xLength": 209
+        },
+        {
+          "id": "scale-story-basis",
+          "url": "https://www.pinnacleblooms.org/verify/#scale-story-basis",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
+          "text": "Explore Pinnacle's evidence on Current figures and dated report findings. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Current figures and dated report findings. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
+        },
+        {
           "id": "proof-map",
           "url": "https://www.pinnacleblooms.org/verify/#proof-map",
           "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
@@ -1628,6 +1644,14 @@
           "text": "Explore Pinnacle's evidence on Clear answers. Connected to the source. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Clear answers. Connected to the source. Read the source, review date and scope before drawing conclusions.",
           "xLength": 161
+        },
+        {
+          "id": "block-what-independent-external-verification-supports-pinnacle-s-institutional-claims",
+          "url": "https://www.pinnacleblooms.org/verify/#block-what-independent-external-verification-supports-pinnacle-s-institutional-claims",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
+          "text": "Explore Pinnacle's evidence on What independent external verification supports Pinnacle's institutional claims. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What independent external verification supports Pinnacle's institutional claims. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 202
         },
         {
           "id": "block-what-is-pinnacleai-gpt-os-licensed-for",

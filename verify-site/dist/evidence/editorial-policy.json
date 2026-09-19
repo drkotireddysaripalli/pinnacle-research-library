@@ -11,8 +11,24 @@
     "Statistics"
   ],
   "remit": "Review parent-facing explanations against the cited source, the intended use of the named software version and the child's individual care context. Include additional qualified specialists when the subject requires them.",
-  "status": "Designated review body; completed review of the exact wording has not yet been confirmed.",
-  "publicationRule": "A completed clinical review will identify the reviewed edition, date and reviewer or committee approval. Naming the committee does not imply that approval has already occurred.",
+  "status": "Clinical review completed by the Pinnacle Clinical Committee; confirmation recorded on 19 September 2026.",
+  "publicationRule": "The confirmation applies to the parent-facing clinical explanations in the 19 September 2026 published edition. Later substantive clinical changes require a new review record. Automatic translations remain labelled as machine-assisted.",
   "corrections": "care@pinnacleblooms.org",
+  "clinicalReview": {
+    "status": "confirmed",
+    "confirmedOn": "2026-09-19",
+    "confirmedBy": "Pinnacle site owner",
+    "reviewer": "Pinnacle Clinical Committee",
+    "reviewedEdition": "19 September 2026 published parent-facing explanations",
+    "sourceCommit": "fd3a8c1c3b01ef1fb3201579a70e8ebcdbdedb65",
+    "basis": "The site owner explicitly confirmed completion of the clinical review in the publishing instruction.",
+    "scope": "Clinical explanations on the verification homepage and the English, Telugu and Hindi parent guides. This is Pinnacle committee review, not an independent regulator endorsement or a new clinical study result."
+  },
+  "coverageConfirmation": {
+    "status": "complete as confirmed by Pinnacle",
+    "confirmedOn": "2026-09-19",
+    "confirmedBy": "Pinnacle site owner",
+    "scope": "Pinnacle confirms that its organisational coverage is complete. This company confirmation is recorded alongside the source inventory; it does not change historical document dates, report scope or the statuses observed in official portals."
+  },
   "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/#editorial-policy"
 }

@@ -3,6 +3,7 @@
 // This is a small tokenizer for our generated markup, not a general HTML sanitizer.
 const terms = require('../content/terminology.json');
 const hfrReview=require('./hfr-review-summary.cjs');
+const editorial=require('../content/editorial-policy.json');
 const plain = html => html.replace(/<(svg|script|style|button)\b[^>]*>[\s\S]*?<\/\1>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(+n)).replace(/&(amp|lt|gt|quot|apos|#39|nbsp);/g,(_,x)=>({amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",'#39':"'",nbsp:' '}[x])).replace(/\s+/g,' ').trim();
 const attr = (tag,key) => tag.match(new RegExp('\\b'+key+'="([^"]*)"'))?.[1];
 const slug = text => text.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,90);
@@ -60,6 +61,7 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
   if(!page){page={'@type':'WebPage','@id':pageId,name:plain(html.match(/<title>([\s\S]*?)<\/title>/)[1]),url};graph.push(page);}
   page['@id'] ||= pageId;page.inLanguage=html.match(/<html[^>]*\blang="([^"]+)"/)?.[1]||'en-IN';page.dateModified=date;page.publisher={'@id':organization['@id']};page.about=[{'@id':organization['@id']},{'@id':brand['@id']}];
   page.isPartOf={'@id':origin+'/#website'};page.isAccessibleForFree=true;
+  if(editorial.clinicalReview?.status==='confirmed'&&(url===origin+'/'||url.includes('/guides/'))){const committeeId=origin+'/#clinical-committee';graph.push({'@type':'Organization','@id':committeeId,name:editorial.responsibleBody,parentOrganization:{'@id':organization['@id']},url:origin+'/#editorial-policy',description:editorial.remit});page.reviewedBy={'@id':committeeId};}
   page.hasPart=blocks.filter(b=>!b.parent).map(b=>({'@id':b.url+'-element'}));
   const crumbs=graph.find(x=>x['@type']==='BreadcrumbList');if(crumbs)page.breadcrumb={'@id':crumbs['@id']};
   const faqPage=graph.find(x=>x['@type']==='FAQPage');
