@@ -384,7 +384,7 @@
       }
     ],
     "scope": "This explains the workflow described in the cited documents. The MD-5 establishes the intended use of a non-diagnostic Class B device for ages 0–12; the BIS schedule names the software and quality-system scope. Research methods, workflow descriptions and evidence of clinical outcomes are different types of evidence.",
-    "versionNote": "The supplied September report examples display AbilityScore® and all seven readiness indices on a 0–1000 scale; the overall cover identifies V-1.6.9.9. The older methodology preprint describes readiness indices on a 0–100 scale. These are version-specific descriptions and should not be combined without a crosswalk. The preprint also describes 400+ Personal Development Kernel data points, while the company walkthrough describes 4,000+ developmental data points; those counts need a current version-specific definition.",
+    "versionNote": "The supplied September report examples display AbilityScore® and all seven readiness indices on a 0–1000 scale; the overall cover identifies report presentation version V-1.6.9.9, separate from the SaMD software version. The older methodology preprint describes readiness indices on a 0–100 scale. These are version-specific descriptions and should not be combined without a crosswalk. The preprint also describes 400+ Personal Development Kernel data points, while the company walkthrough describes 4,000+ developmental data points; those counts need a current version-specific definition.",
     "reportPack": {
       "title": "One overall profile. Seven focused readiness reports.",
       "intro": "The eight supplied report examples present an overall AbilityScore® and seven readiness indices on a 0–1000 display scale. Together, the overall profile and focused views give the family and care team a shared starting point for discussing priorities and the next plan.",
@@ -422,7 +422,7 @@
           "meaning": "A focused view to discuss participation with other people."
         }
       ],
-      "review": "Report titles checked against eight supplied examples on 19 September 2026. The overall report cover identifies version V-1.6.9.9. This is a review of report format, not an independent study of outcomes.",
+      "review": "Report titles checked against eight supplied examples on 19 September 2026. The overall report cover identifies report presentation version V-1.6.9.9. This is a review of report format, not an independent study of outcomes.",
       "privacy": "This public guide describes the report structure. Children’s identities, individual results and original reports remain private.",
       "interpretation": "Each index report includes an “Assessment By” field. Read the results with the assessment context and care-team explanation. Readiness-index titles are not diagnoses; the Study/IQ Readiness title should not be read as an independently established IQ test."
     }

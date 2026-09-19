@@ -74,3 +74,8 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 ## Direct answers
 - [Verification questions](https://pinnacle-verify.saripalli.chatgpt.site/#questions): seventeen visible, source-linked answers.
 - [Questions and answers JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/answers.json): the same answers with their evidence links.
+
+## Guided experience
+- [Workflow guide](https://pinnacle-verify.saripalli.chatgpt.site/#experience): illustrative walkthrough, not a live assessment.
+- [Report explorer](https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer): eight report types and questions for the care team.
+- [Guide JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/experience-guide.json): the same visible explanation and source references.

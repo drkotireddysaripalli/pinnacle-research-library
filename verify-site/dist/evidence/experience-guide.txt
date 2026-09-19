@@ -1,0 +1,56 @@
+# PinnacleAI® guided explanation
+An illustrative guide to the documented workflow; no child data, assessment or product recording.
+Start with everyday life.
+A family wants to help their child express a choice during a familiar routine. They describe what the child already does, what interests them and where support helps.
+Everyday observations give the care team context.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/md5.html
+
+Bring the observations together.
+The family and professionals review the starting point and agree a useful goal. Pinnacle describes the Personal Development Kernel as the child-specific record connecting measurements, context and responses.
+The care team checks the goal and the support appropriate to this child.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html
+
+Make the starting point understandable.
+The overall AbilityScore® report and seven readiness views help organise the discussion. The important connection is from the report to an agreed everyday goal.
+Explore what each report is for below. No individual child’s results are displayed here.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html
+
+Turn the goal into guided practice.
+The documented Everyday Therapy™ programme links selected techniques with goals. In this illustration, the care team explains a communication activity within a familiar routine and agrees how the family can take part.
+The activity, support and practice schedule are agreed with the care team.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html
+
+What happened during practice?
+Feedback connects the experience at home with the next review. Try either response to see how the discussion can change.
+This demonstration does not assess a child, prescribe an activity or generate a treatment plan.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html
+
+Use the experience to shape the next plan.
+The care team reviews feedback, adjusts goals or support, and discusses the next assessment. Monthly reassessment is described in the reviewed methodology and walkthrough.
+Look for meaningful changes in communication, routines, learning and participation, alongside the scores.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html
+
+Report explorer
+AbilityScore® / TherapeuticAI® report: The overall developmental profile.
+Question for the care team: Which abilities should we prioritise, and why?
+
+Speech Readiness Index: A focused view to discuss communication priorities.
+Question for the care team: How can we support communication in everyday routines?
+
+Behavior Readiness Index: A focused view to discuss behaviour and participation.
+Question for the care team: What helps my child feel comfortable and take part?
+
+Motor Readiness Index: A focused view to discuss movement-related abilities.
+Question for the care team: Which movement skills matter for my child’s routines?
+
+Study/IQ Readiness Index: The report’s named view of readiness for learning.
+Question for the care team: What support could make learning more accessible?
+
+School Readiness Index: A focused view to discuss preparation and support for school.
+Question for the care team: What would help my child participate at school?
+
+Self-Sufficiency Index: A focused view to discuss growing everyday independence.
+Question for the care team: Which everyday task could my child do with less help?
+
+Mainstream Readiness Index: A focused view to discuss participation with other people.
+Question for the care team: What support would help my child join in with others?

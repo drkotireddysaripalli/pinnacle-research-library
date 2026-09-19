@@ -7,7 +7,7 @@ const hfr=require('../content/hfr-register.json').rows;
 const PUBLIC='https://www.pinnacleblooms.org/verify';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const ascii=s=>s.normalize('NFC').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[–—]/g,'-').replace(/[^\x20-\x7e\u00ae]/g,' ').replace(/\s+/g,' ').trim();
-const snippet=s=>{const text=ascii(s);return text.length>115?text.slice(0,115).replace(/\s+\S*$/,''):text;};
+const snippet=s=>{const text=ascii(s),short=text.length>115?text.slice(0,115).replace(/\s+\S*$/,''):text;return short.replace(/[.!?]+$/,'');};
 const attr=(n,k)=>n.open.match(new RegExp('\\b'+k+'="([^"]*)"'))?.[1];
 const mark=id=>`<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24"><use href="#share-icon-${id}"></use></svg>`;
 const sprite='<svg class="share-symbols" aria-hidden="true" width="0" height="0"><defs><symbol id="share-icon-wa" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.9 7L3 20l1.4-4.8A8 8 0 1 1 20 11.6Z"/><path d="M8.1 7.6c.3-.5.9-.1 1.1.4l.6 1.4c.2.4-.2.7-.5 1 .8 1.5 1.8 2.5 3.5 3.2.4-.5.8-1.3 1.3-1l1.6.8c.6.3.6.9.2 1.3-1.5 1.8-4.1.5-6.1-1.3-1.9-1.8-3.3-4.2-1.7-5.8Z"/></symbol><symbol id="share-icon-x" viewBox="0 0 24 24"><path d="m4 3 16 18M20 3 4 21M3 3h5l13 18h-5Z"/></symbol><symbol id="share-icon-link" viewBox="0 0 24 24"><path d="m9 15 6-6m-7 9-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 6a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-1 1"/></symbol><symbol id="share-icon-more" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M5 12v9h14v-9"/></symbol></defs></svg>';
@@ -35,11 +35,11 @@ module.exports=function addSharing(html,page,records){
   if(centre)full+='\nSource level: '+centre.sourceLevel+'. Current registry status was not independently queried.';
   const wa='https://wa.me/?text='+encodeURIComponent(full+'\n\n'+url);
   const x='https://twitter.com/intent/tweet?text='+encodeURIComponent(short)+'&url='+encodeURIComponent(url);
-  const bar=`<!-- share:start --><div class="fact-share" data-share-url="${e(url)}" data-share-title="${e(b.name)}"><span class="share-context">Share ${record?'evidence':b.kind==='page'?'this page':'this'}</span><a class="share-wa" href="${e(wa)}" target="_blank" rel="noopener noreferrer" aria-label="Share ${e(b.name)} on WhatsApp">${mark('wa')}WhatsApp</a><a class="share-x" href="${e(x)}" target="_blank" rel="noopener noreferrer" aria-label="Share ${e(b.name)} on X">${mark('x')}X</a><button type="button" class="copy-share" aria-label="Copy link to ${e(b.name)}">${mark('link')}Copy link</button><button type="button" class="device-share" hidden aria-label="More sharing options for ${e(b.name)}">${mark('more')}Share</button></div><!-- share:end -->`;
+  const bar=`<!-- share:start --><div class="fact-share" data-share-url="${e(url)}" data-share-title="${e(b.name)}"><span class="share-context">Share ${record?'evidence':b.kind==='page'?'this page':'this'}</span><a class="share-wa" href="${e(wa)}" target="_blank" rel="noopener noreferrer" aria-label="Share ${e(b.name)} on WhatsApp">${mark('wa')}WhatsApp</a><button type="button" class="share-toggle" hidden aria-expanded="false" aria-label="More ways to share ${e(b.name)}">${mark('more')}More</button><div class="share-options"><a class="share-x" href="${e(x)}" target="_blank" rel="noopener noreferrer" aria-label="Share ${e(b.name)} on X">${mark('x')}X</a><button type="button" class="copy-share" aria-label="Copy link to ${e(b.name)}">${mark('link')}Copy link</button><button type="button" class="device-share" hidden aria-label="More sharing options for ${e(b.name)}">${mark('more')}Share</button></div></div><!-- share:end -->`;
   let at;
-  if(b.kind==='page'){const h=nodes.find(n=>n.tag==='h1');at=h?.close;}
+  if(b.kind==='page'){const slot=nodes.find(n=>/hero-share-slot/.test(attr(n,'class')||'')),h=nodes.find(n=>n.tag==='h1');at=slot?.end||h?.close;}
   else if(node.tag==='tr'){const td=nodes.filter(n=>n.tag==='td'&&n.start>node.start&&n.end<node.end).at(-1);at=td?.end;}
-  else if(node.tag==='section'){const h=nodes.find(n=>/^h[12]$/.test(n.tag)&&n.start>node.start&&n.end<node.end);let wrapper=h?.parent;while(wrapper&&wrapper!==node&&!/(?:^|\s)section-heading(?:\s|$)/.test(attr(wrapper,'class')||''))wrapper=wrapper.parent;at=wrapper&&wrapper!==node?wrapper.end:h?.close??node.end;}
+  else if(node.tag==='section'){at=node.end;}
   else if(/(?:^|\s)(?:queue-item|lifecycle-scope)(?:\s|$)/.test(attr(node,'class')||'')){at=node.children.find(n=>n.tag==='div')?.end??node.end;}
   else if(node.children.some(n=>/(?:^|\s)stage-content(?:\s|$)/.test(attr(n,'class')||''))){at=node.children.find(n=>/(?:^|\s)stage-content(?:\s|$)/.test(attr(n,'class')||''))?.end??node.end;}
   else at=node.end;

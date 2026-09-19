@@ -1315,9 +1315,10 @@ Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Li
 The company describes a seven-stage developmental pathway connecting measurement, planning, integrated support, parent-guided practice and progress review. Its supplied MD-5 names non-diagnostic Class B developmental-support software. The BIS scope names connected software modules. Individual outcomes vary.
 
 ## Main page sections
-- [Every child deserves a wonderful life.](https://pinnacle-verify.saripalli.chatgpt.site/#section-every-child-deserves-a-wonderful-life): Growing toward self-sufficiency. Participating in mainstream life.
-- [Review summary](https://pinnacle-verify.saripalli.chatgpt.site/#section-review-summary): A source for every conclusion Reading a certificate and checking its current status are separate steps. Read the review conclusions .
-- [Read the research. Meet the authors.](https://pinnacle-verify.saripalli.chatgpt.site/#research): Seven DOI-linked works, parent books in English and Telugu, the twelve-study company portfolio, and verified researcher profiles — connected in one reading library.
+- [Your child’s abilities. A connected way forward.](https://pinnacle-verify.saripalli.chatgpt.site/#section-your-child-s-abilities-a-connected-way-forward): Because every child deserves a wonderful life.
+- [See how one observation can inform the next step.](https://pinnacle-verify.saripalli.chatgpt.site/#experience): Explore the documented process through an illustrative family scenario. This guide uses no child data and does not perform an assessment.
+- [One overall profile. Seven focused readiness views.](https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer): The supplied report examples use a 0–1000 display scale. Explore what each view brings to a conversation about your child’s next steps.
+- [A clear source for each kind of question.](https://pinnacle-verify.saripalli.chatgpt.site/#proof-map): MD-5 names the non-diagnostic Class B software’s intended use and users.
 - [From present abilities toward a wonderful life.](https://pinnacle-verify.saripalli.chatgpt.site/#care): Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. The practical question is: “What can my child do now, what support will help next, and how will we understand progress?”
 - [Measurement. A connected plan. Support for everyday life.](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-profile): Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Pinnacle describes a seven-stage child-development pathway connecting ability measurement, child-specific planning, integrated support, parent-guided practice and progress review toward participation and growing independence.
 - [A clearer starting point. A connected way forward.](https://pinnacle-verify.saripalli.chatgpt.site/#impact): For a family, evidence becomes useful when it helps answer three questions: What can my child do now? What will we work on together? How will we understand what changes?
@@ -1333,8 +1334,10 @@ The company describes a seven-stage developmental pathway connecting measurement
 - [See where Pinnacle fits. Compare what matters.](https://pinnacle-verify.saripalli.chatgpt.site/#global-context): Different organisations address diagnosis, assessment, digital treatment, integrated services or provider software. A useful comparison starts with the job each is designed to do.
 - [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): The supplied MD-5 lists PinnacleAI® GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.
 - [Clear terms. Better questions.](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): A practical reading guide to the credentials, report types and international classifications used on this page. Each definition links to its Pinnacle source record.
+- [Review summary](https://pinnacle-verify.saripalli.chatgpt.site/#review-summary): A source for every conclusion Reading a certificate and checking its current status are separate steps. Read the review conclusions .
 - [Originals reviewed. Conclusions made clear.](https://pinnacle-verify.saripalli.chatgpt.site/#review): Each conclusion reflects the documents inspected. Historical certificates, study protocols and company-reported claims are identified precisely, so you can see what each source establishes.
 - [Evidence with its meaning intact.](https://pinnacle-verify.saripalli.chatgpt.site/#method): A record is useful when you can see both what it supports and the limits of that support.
+- [Read the research. Meet the authors.](https://pinnacle-verify.saripalli.chatgpt.site/#research): Seven DOI-linked works, parent books in English and Telugu, the twelve-study company portfolio, and verified researcher profiles — connected in one reading library.
 - [Your child’s next step deserves a clear conversation.](https://pinnacle-verify.saripalli.chatgpt.site/#next-step): Ask the Pinnacle team about your child’s starting abilities, the proposed goals, who coordinates care and when progress will be reviewed. Bring the evidence questions that matter to your family.
 - [Take the source with you.](https://pinnacle-verify.saripalli.chatgpt.site/#section-take-the-source-with-you): Readable records retain their review status, source references and limitations in every format.
 
@@ -1554,7 +1557,7 @@ The dossier documents the access model. Families can ask their care team which p
 Evidence Dossier · page 54: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
 
 This explains the workflow described in the cited documents. The MD-5 establishes the intended use of a non-diagnostic Class B device for ages 0–12; the BIS schedule names the software and quality-system scope. Research methods, workflow descriptions and evidence of clinical outcomes are different types of evidence.
-The supplied September report examples display AbilityScore® and all seven readiness indices on a 0–1000 scale; the overall cover identifies V-1.6.9.9. The older methodology preprint describes readiness indices on a 0–100 scale. These are version-specific descriptions and should not be combined without a crosswalk. The preprint also describes 400+ Personal Development Kernel data points, while the company walkthrough describes 4,000+ developmental data points; those counts need a current version-specific definition.
+The supplied September report examples display AbilityScore® and all seven readiness indices on a 0–1000 scale; the overall cover identifies report presentation version V-1.6.9.9, separate from the SaMD software version. The older methodology preprint describes readiness indices on a 0–100 scale. These are version-specific descriptions and should not be combined without a crosswalk. The preprint also describes 400+ Personal Development Kernel data points, while the company walkthrough describes 4,000+ developmental data points; those counts need a current version-specific definition.
 
 One overall profile. Seven focused readiness reports.
 The eight supplied report examples present an overall AbilityScore® and seven readiness indices on a 0–1000 display scale. Together, the overall profile and focused views give the family and care team a shared starting point for discussing priorities and the next plan.
@@ -1567,5 +1570,63 @@ School Readiness Index: A focused view to discuss preparation and support for sc
 Self-Sufficiency Index: A focused view to discuss growing everyday independence.
 Mainstream Readiness Index: A focused view to discuss participation with other people.
 Each index report includes an “Assessment By” field. Read the results with the assessment context and care-team explanation. Readiness-index titles are not diagnoses; the Study/IQ Readiness title should not be read as an independently established IQ test.
-Report titles checked against eight supplied examples on 19 September 2026. The overall report cover identifies version V-1.6.9.9. This is a review of report format, not an independent study of outcomes.
+Report titles checked against eight supplied examples on 19 September 2026. The overall report cover identifies report presentation version V-1.6.9.9. This is a review of report format, not an independent study of outcomes.
 This public guide describes the report structure. Children’s identities, individual results and original reports remain private.
+
+
+# PinnacleAI® guided explanation
+An illustrative guide to the documented workflow; no child data, assessment or product recording.
+Start with everyday life.
+A family wants to help their child express a choice during a familiar routine. They describe what the child already does, what interests them and where support helps.
+Everyday observations give the care team context.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/md5.html
+
+Bring the observations together.
+The family and professionals review the starting point and agree a useful goal. Pinnacle describes the Personal Development Kernel as the child-specific record connecting measurements, context and responses.
+The care team checks the goal and the support appropriate to this child.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html
+
+Make the starting point understandable.
+The overall AbilityScore® report and seven readiness views help organise the discussion. The important connection is from the report to an agreed everyday goal.
+Explore what each report is for below. No individual child’s results are displayed here.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html
+
+Turn the goal into guided practice.
+The documented Everyday Therapy™ programme links selected techniques with goals. In this illustration, the care team explains a communication activity within a familiar routine and agrees how the family can take part.
+The activity, support and practice schedule are agreed with the care team.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html
+
+What happened during practice?
+Feedback connects the experience at home with the next review. Try either response to see how the discussion can change.
+This demonstration does not assess a child, prescribe an activity or generate a treatment plan.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html
+
+Use the experience to shape the next plan.
+The care team reviews feedback, adjusts goals or support, and discusses the next assessment. Monthly reassessment is described in the reviewed methodology and walkthrough.
+Look for meaningful changes in communication, routines, learning and participation, alongside the scores.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html
+
+Report explorer
+AbilityScore® / TherapeuticAI® report: The overall developmental profile.
+Question for the care team: Which abilities should we prioritise, and why?
+
+Speech Readiness Index: A focused view to discuss communication priorities.
+Question for the care team: How can we support communication in everyday routines?
+
+Behavior Readiness Index: A focused view to discuss behaviour and participation.
+Question for the care team: What helps my child feel comfortable and take part?
+
+Motor Readiness Index: A focused view to discuss movement-related abilities.
+Question for the care team: Which movement skills matter for my child’s routines?
+
+Study/IQ Readiness Index: The report’s named view of readiness for learning.
+Question for the care team: What support could make learning more accessible?
+
+School Readiness Index: A focused view to discuss preparation and support for school.
+Question for the care team: What would help my child participate at school?
+
+Self-Sufficiency Index: A focused view to discuss growing everyday independence.
+Question for the care team: Which everyday task could my child do with less help?
+
+Mainstream Readiness Index: A focused view to discuss participation with other people.
+Question for the care team: What support would help my child join in with others?

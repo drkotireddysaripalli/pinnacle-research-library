@@ -13,18 +13,109 @@
           "xLength": 182
         },
         {
-          "id": "section-review-summary",
-          "url": "https://www.pinnacleblooms.org/verify/#section-review-summary",
-          "text": "Explore Pinnacle's evidence on Review summary. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Review summary. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 137
+          "id": "experience",
+          "url": "https://www.pinnacleblooms.org/verify/#experience",
+          "text": "Explore Pinnacle's evidence on See how one observation can inform the next step. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on See how one observation can inform the next step. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 171
         },
         {
-          "id": "research",
-          "url": "https://www.pinnacleblooms.org/verify/#research",
-          "text": "Explore Pinnacle's evidence on Read the research. Meet the authors.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Read the research. Meet the authors.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 159
+          "id": "report-explorer",
+          "url": "https://www.pinnacleblooms.org/verify/#report-explorer",
+          "text": "Explore Pinnacle's evidence on One overall profile. Seven focused readiness views. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on One overall profile. Seven focused readiness views. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 173
+        },
+        {
+          "id": "report-view-0",
+          "url": "https://www.pinnacleblooms.org/verify/#report-view-0",
+          "text": "Explore Pinnacle's evidence on AbilityScore® / TherapeuticAI® report. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on AbilityScore® / TherapeuticAI® report. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 160
+        },
+        {
+          "id": "report-view-1",
+          "url": "https://www.pinnacleblooms.org/verify/#report-view-1",
+          "text": "Explore Pinnacle's evidence on Speech Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Speech Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 145
+        },
+        {
+          "id": "report-view-2",
+          "url": "https://www.pinnacleblooms.org/verify/#report-view-2",
+          "text": "Explore Pinnacle's evidence on Behavior Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Behavior Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
+        },
+        {
+          "id": "report-view-3",
+          "url": "https://www.pinnacleblooms.org/verify/#report-view-3",
+          "text": "Explore Pinnacle's evidence on Motor Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Motor Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "report-view-4",
+          "url": "https://www.pinnacleblooms.org/verify/#report-view-4",
+          "text": "Explore Pinnacle's evidence on Study/IQ Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Study/IQ Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
+        },
+        {
+          "id": "report-view-5",
+          "url": "https://www.pinnacleblooms.org/verify/#report-view-5",
+          "text": "Explore Pinnacle's evidence on School Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on School Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 145
+        },
+        {
+          "id": "report-view-6",
+          "url": "https://www.pinnacleblooms.org/verify/#report-view-6",
+          "text": "Explore Pinnacle's evidence on Self-Sufficiency Index. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Self-Sufficiency Index. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 145
+        },
+        {
+          "id": "report-view-7",
+          "url": "https://www.pinnacleblooms.org/verify/#report-view-7",
+          "text": "Explore Pinnacle's evidence on Mainstream Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Mainstream Readiness Index. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
+        },
+        {
+          "id": "proof-map",
+          "url": "https://www.pinnacleblooms.org/verify/#proof-map",
+          "text": "Explore Pinnacle's evidence on A clear source for each kind of question. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A clear source for each kind of question. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
+        },
+        {
+          "id": "block-what-is-the-licensed-purpose",
+          "url": "https://www.pinnacleblooms.org/verify/#block-what-is-the-licensed-purpose",
+          "text": "Explore Pinnacle's evidence on What is the licensed purpose. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What is the licensed purpose. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 151
+        },
+        {
+          "id": "block-how-are-the-modules-connected",
+          "url": "https://www.pinnacleblooms.org/verify/#block-how-are-the-modules-connected",
+          "text": "Explore Pinnacle's evidence on How are the modules connected. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on How are the modules connected. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 152
+        },
+        {
+          "id": "block-what-has-been-studied",
+          "url": "https://www.pinnacleblooms.org/verify/#block-what-has-been-studied",
+          "text": "Explore Pinnacle's evidence on What has been studied. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What has been studied. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 144
+        },
+        {
+          "id": "block-what-supports-the-scale-and-network",
+          "url": "https://www.pinnacleblooms.org/verify/#block-what-supports-the-scale-and-network",
+          "text": "Explore Pinnacle's evidence on What supports the scale and network. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What supports the scale and network. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 158
         },
         {
           "id": "care",
@@ -43,30 +134,30 @@
         {
           "id": "child-report-pack",
           "url": "https://www.pinnacleblooms.org/verify/#child-report-pack",
-          "text": "Explore Pinnacle's evidence on One overall profile. Seven focused readiness reports.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on One overall profile. Seven focused readiness reports.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 176
+          "text": "Explore Pinnacle's evidence on One overall profile. Seven focused readiness reports. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on One overall profile. Seven focused readiness reports. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 175
         },
         {
           "id": "family-observations",
           "url": "https://www.pinnacleblooms.org/verify/#family-observations",
-          "text": "Explore Pinnacle's evidence on Where do parents and the care team fit?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Where do parents and the care team fit?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 162
+          "text": "Explore Pinnacle's evidence on Where do parents and the care team fit. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Where do parents and the care team fit. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 161
         },
         {
           "id": "personal-development-kernel",
           "url": "https://www.pinnacleblooms.org/verify/#personal-development-kernel",
-          "text": "Explore Pinnacle's evidence on What is the Personal Development Kernel?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What is the Personal Development Kernel?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 163
+          "text": "Explore Pinnacle's evidence on What is the Personal Development Kernel. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What is the Personal Development Kernel. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 162
         },
         {
           "id": "goals-to-everyday-practice",
           "url": "https://www.pinnacleblooms.org/verify/#goals-to-everyday-practice",
-          "text": "Explore Pinnacle's evidence on How does a goal become everyday practice?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on How does a goal become everyday practice?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 164
+          "text": "Explore Pinnacle's evidence on How does a goal become everyday practice. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on How does a goal become everyday practice. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
         },
         {
           "id": "feedback-changes-plan",
@@ -78,16 +169,16 @@
         {
           "id": "monthly-readiness-review",
           "url": "https://www.pinnacleblooms.org/verify/#monthly-readiness-review",
-          "text": "Explore Pinnacle's evidence on What should the monthly review make clearer?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What should the monthly review make clearer?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 167
+          "text": "Explore Pinnacle's evidence on What should the monthly review make clearer. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What should the monthly review make clearer. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 166
         },
         {
           "id": "who-can-access-the-programme",
           "url": "https://www.pinnacleblooms.org/verify/#who-can-access-the-programme",
-          "text": "Explore Pinnacle's evidence on Who can access the child's programme?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Who can access the child's programme?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 160
+          "text": "Explore Pinnacle's evidence on Who can access the child's programme. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Who can access the child's programme. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
         },
         {
           "id": "workflow-document-versions",
@@ -99,23 +190,23 @@
         {
           "id": "developmental-framework",
           "url": "https://www.pinnacleblooms.org/verify/#developmental-framework",
-          "text": "Explore Pinnacle's evidence on 17 domains. 79 abilities. 349 skills.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on 17 domains. 79 abilities. 349 skills.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 160
+          "text": "Explore Pinnacle's evidence on 17 domains. 79 abilities. 349 skills. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on 17 domains. 79 abilities. 349 skills. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
         },
         {
           "id": "everyday-life-goals",
           "url": "https://www.pinnacleblooms.org/verify/#everyday-life-goals",
-          "text": "Explore Pinnacle's evidence on Different starting points. Meaningful everyday goals.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Different starting points. Meaningful everyday goals.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 176
+          "text": "Explore Pinnacle's evidence on Different starting points. Meaningful everyday goals. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Different starting points. Meaningful everyday goals. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 175
         },
         {
           "id": "block-a-family-needs-a-connected-journey",
           "url": "https://www.pinnacleblooms.org/verify/#block-a-family-needs-a-connected-journey",
-          "text": "Explore Pinnacle's evidence on A family needs a connected journey.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A family needs a connected journey.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 158
+          "text": "Explore Pinnacle's evidence on A family needs a connected journey. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A family needs a connected journey. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 157
         },
         {
           "id": "full-developmental-journey",
@@ -197,72 +288,72 @@
         {
           "id": "impact",
           "url": "https://www.pinnacleblooms.org/verify/#impact",
-          "text": "Explore Pinnacle's evidence on A clearer starting point. A connected way forward.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A clearer starting point. A connected way forward.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 173
+          "text": "Explore Pinnacle's evidence on A clearer starting point. A connected way forward. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A clearer starting point. A connected way forward. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 172
         },
         {
           "id": "block-a-starting-point-you-can-understand",
           "url": "https://www.pinnacleblooms.org/verify/#block-a-starting-point-you-can-understand",
-          "text": "Explore Pinnacle's evidence on A starting point you can understand.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A starting point you can understand.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 159
+          "text": "Explore Pinnacle's evidence on A starting point you can understand. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A starting point you can understand. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 158
         },
         {
           "id": "block-a-plan-people-can-work-on-together",
           "url": "https://www.pinnacleblooms.org/verify/#block-a-plan-people-can-work-on-together",
-          "text": "Explore Pinnacle's evidence on A plan people can work on together.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A plan people can work on together.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 158
+          "text": "Explore Pinnacle's evidence on A plan people can work on together. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A plan people can work on together. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 157
         },
         {
           "id": "block-practice-that-belongs-in-everyday-life",
           "url": "https://www.pinnacleblooms.org/verify/#block-practice-that-belongs-in-everyday-life",
-          "text": "Explore Pinnacle's evidence on Practice that belongs in everyday life.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Practice that belongs in everyday life.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 162
+          "text": "Explore Pinnacle's evidence on Practice that belongs in everyday life. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Practice that belongs in everyday life. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 161
         },
         {
           "id": "block-progress-you-can-discuss",
           "url": "https://www.pinnacleblooms.org/verify/#block-progress-you-can-discuss",
-          "text": "Explore Pinnacle's evidence on Progress you can discuss.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Progress you can discuss.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 148
+          "text": "Explore Pinnacle's evidence on Progress you can discuss. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Progress you can discuss. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
         },
         {
           "id": "family",
           "url": "https://www.pinnacleblooms.org/verify/#family",
-          "text": "Explore Pinnacle's evidence on Three questions. A clearer starting point.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Three questions. A clearer starting point.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 165
+          "text": "Explore Pinnacle's evidence on Three questions. A clearer starting point. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Three questions. A clearer starting point. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
         },
         {
           "id": "block-is-this-the-right-document",
           "url": "https://www.pinnacleblooms.org/verify/#block-is-this-the-right-document",
-          "text": "Explore Pinnacle's evidence on Is this the right document?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Is this the right document?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 150
+          "text": "Explore Pinnacle's evidence on Is this the right document. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Is this the right document. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 149
         },
         {
           "id": "block-what-can-it-tell-me",
           "url": "https://www.pinnacleblooms.org/verify/#block-what-can-it-tell-me",
-          "text": "Explore Pinnacle's evidence on What can it tell me?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What can it tell me?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 143
+          "text": "Explore Pinnacle's evidence on What can it tell me. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What can it tell me. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 142
         },
         {
           "id": "block-how-will-we-know-it-is-helping",
           "url": "https://www.pinnacleblooms.org/verify/#block-how-will-we-know-it-is-helping",
-          "text": "Explore Pinnacle's evidence on How will we know it is helping?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on How will we know it is helping?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 154
+          "text": "Explore Pinnacle's evidence on How will we know it is helping. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on How will we know it is helping. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 153
         },
         {
           "id": "records",
           "url": "https://www.pinnacleblooms.org/verify/#records",
-          "text": "Explore Pinnacle's evidence on What would you like to verify?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What would you like to verify?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 153
+          "text": "Explore Pinnacle's evidence on What would you like to verify. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What would you like to verify. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 152
         },
         {
           "id": "md5",
@@ -505,9 +596,9 @@
         {
           "id": "regulated-purpose",
           "url": "https://www.pinnacleblooms.org/verify/#regulated-purpose",
-          "text": "Explore Pinnacle's evidence on Understand what each credential adds.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Understand what each credential adds.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 160
+          "text": "Explore Pinnacle's evidence on Understand what each credential adds. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Understand what each credential adds. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
         },
         {
           "id": "block-md-3",
@@ -533,9 +624,9 @@
         {
           "id": "parents-in-licensed-use",
           "url": "https://www.pinnacleblooms.org/verify/#parents-in-licensed-use",
-          "text": "Explore Pinnacle's evidence on Parents are explicitly included in the licensed intended use.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Parents are explicitly included in the licensed intended use.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 184
+          "text": "Explore Pinnacle's evidence on Parents are explicitly included in the licensed intended use. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Parents are explicitly included in the licensed intended use. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 183
         },
         {
           "id": "block-what-this-wording-establishes",
@@ -561,9 +652,9 @@
         {
           "id": "scale",
           "url": "https://www.pinnacleblooms.org/verify/#scale",
-          "text": "Explore Pinnacle's evidence on Every number should lead to its source.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Every number should lead to its source.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 162
+          "text": "Explore Pinnacle's evidence on Every number should lead to its source. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Every number should lead to its source. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 161
         },
         {
           "id": "scale-data",
@@ -652,23 +743,23 @@
         {
           "id": "data-scale",
           "url": "https://www.pinnacleblooms.org/verify/#data-scale",
-          "text": "Explore Pinnacle's evidence on Structured developmental records. One child's journey at a time.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Structured developmental records. One child's journey at a time.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 187
+          "text": "Explore Pinnacle's evidence on Structured developmental records. One child's journey at a time. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Structured developmental records. One child's journey at a time. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 186
         },
         {
           "id": "block-why-do-some-pinnacle-sources-say-2-5-billion-and-others-2-7-billion",
           "url": "https://www.pinnacleblooms.org/verify/#block-why-do-some-pinnacle-sources-say-2-5-billion-and-others-2-7-billion",
-          "text": "Explore Pinnacle's evidence on Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 193
+          "text": "Explore Pinnacle's evidence on Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 192
         },
         {
           "id": "centres",
           "url": "https://www.pinnacleblooms.org/verify/#centres",
-          "text": "Explore Pinnacle's evidence on Start with the centre your family knows.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Start with the centre your family knows.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 163
+          "text": "Explore Pinnacle's evidence on Start with the centre your family knows. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Start with the centre your family knows. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 162
         },
         {
           "id": "block-ananthapuram",
@@ -1100,9 +1191,9 @@
         {
           "id": "international-standards",
           "url": "https://www.pinnacleblooms.org/verify/#international-standards",
-          "text": "Explore Pinnacle's evidence on Structured for understanding. Designed for connected care.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Structured for understanding. Designed for connected care.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 181
+          "text": "Explore Pinnacle's evidence on Structured for understanding. Designed for connected care. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Structured for understanding. Designed for connected care. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 180
         },
         {
           "id": "standard-icd11",
@@ -1142,9 +1233,9 @@
         {
           "id": "population-scale",
           "url": "https://www.pinnacleblooms.org/verify/#population-scale",
-          "text": "Explore Pinnacle's evidence on A population-scale ambition. One child's life at the centre.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A population-scale ambition. One child's life at the centre.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 183
+          "text": "Explore Pinnacle's evidence on A population-scale ambition. One child's life at the centre. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A population-scale ambition. One child's life at the centre. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 182
         },
         {
           "id": "block-how-to-interpret-reported-data-volume",
@@ -1156,9 +1247,9 @@
         {
           "id": "global-goals",
           "url": "https://www.pinnacleblooms.org/verify/#global-goals",
-          "text": "Explore Pinnacle's evidence on A wonderful life. A place to participate.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A wonderful life. A place to participate.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 164
+          "text": "Explore Pinnacle's evidence on A wonderful life. A place to participate. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A wonderful life. A place to participate. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
         },
         {
           "id": "block-health-and-well-being",
@@ -1191,58 +1282,58 @@
         {
           "id": "global-principles",
           "url": "https://www.pinnacleblooms.org/verify/#global-principles",
-          "text": "Explore Pinnacle's evidence on Why these capabilities matter to families.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Why these capabilities matter to families.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 165
+          "text": "Explore Pinnacle's evidence on Why these capabilities matter to families. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Why these capabilities matter to families. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
         },
         {
           "id": "block-development-happens-across-a-child-s-whole-day",
           "url": "https://www.pinnacleblooms.org/verify/#block-development-happens-across-a-child-s-whole-day",
-          "text": "Explore Pinnacle's evidence on Development happens across a child's whole day.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Development happens across a child's whole day.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 170
+          "text": "Explore Pinnacle's evidence on Development happens across a child's whole day. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Development happens across a child's whole day. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 169
         },
         {
           "id": "block-a-plan-that-comes-home-with-you",
           "url": "https://www.pinnacleblooms.org/verify/#block-a-plan-that-comes-home-with-you",
-          "text": "Explore Pinnacle's evidence on A plan that comes home with you.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A plan that comes home with you.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 155
+          "text": "Explore Pinnacle's evidence on A plan that comes home with you. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A plan that comes home with you. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 154
         },
         {
           "id": "block-clarity-starts-with-noticing-change",
           "url": "https://www.pinnacleblooms.org/verify/#block-clarity-starts-with-noticing-change",
-          "text": "Explore Pinnacle's evidence on Clarity starts with noticing change.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Clarity starts with noticing change.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 159
+          "text": "Explore Pinnacle's evidence on Clarity starts with noticing change. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Clarity starts with noticing change. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 158
         },
         {
           "id": "block-shared-goals-clear-responsibilities",
           "url": "https://www.pinnacleblooms.org/verify/#block-shared-goals-clear-responsibilities",
-          "text": "Explore Pinnacle's evidence on Shared goals. Clear responsibilities.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Shared goals. Clear responsibilities.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 160
+          "text": "Explore Pinnacle's evidence on Shared goals. Clear responsibilities. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Shared goals. Clear responsibilities. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
         },
         {
           "id": "block-more-ways-to-take-part",
           "url": "https://www.pinnacleblooms.org/verify/#block-more-ways-to-take-part",
-          "text": "Explore Pinnacle's evidence on More ways to take part.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on More ways to take part.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 146
+          "text": "Explore Pinnacle's evidence on More ways to take part. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on More ways to take part. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 145
         },
         {
           "id": "block-technology-with-defined-responsibilities",
           "url": "https://www.pinnacleblooms.org/verify/#block-technology-with-defined-responsibilities",
-          "text": "Explore Pinnacle's evidence on Technology with defined responsibilities.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Technology with defined responsibilities.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 164
+          "text": "Explore Pinnacle's evidence on Technology with defined responsibilities. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Technology with defined responsibilities. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
         },
         {
           "id": "global-context",
           "url": "https://www.pinnacleblooms.org/verify/#global-context",
-          "text": "Explore Pinnacle's evidence on See where Pinnacle fits. Compare what matters.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on See where Pinnacle fits. Compare what matters.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 169
+          "text": "Explore Pinnacle's evidence on See where Pinnacle fits. Compare what matters. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on See where Pinnacle fits. Compare what matters. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 168
         },
         {
           "id": "block-cognoa-canvas-dx-autism-diagnostic-aid",
@@ -1282,142 +1373,149 @@
         {
           "id": "questions",
           "url": "https://www.pinnacleblooms.org/verify/#questions",
-          "text": "Explore Pinnacle's evidence on Clear answers. Connected to the source.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Clear answers. Connected to the source.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 162
+          "text": "Explore Pinnacle's evidence on Clear answers. Connected to the source. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Clear answers. Connected to the source. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 161
         },
         {
           "id": "block-what-is-pinnacleai-gpt-os-licensed-for",
           "url": "https://www.pinnacleblooms.org/verify/#block-what-is-pinnacleai-gpt-os-licensed-for",
-          "text": "Explore Pinnacle's evidence on What is PinnacleAI® GPT-OS licensed for?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What is PinnacleAI® GPT-OS licensed for?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 163
+          "text": "Explore Pinnacle's evidence on What is PinnacleAI® GPT-OS licensed for. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What is PinnacleAI® GPT-OS licensed for. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 162
         },
         {
           "id": "block-are-an-md-3-application-and-an-md-5-licence-the-same",
           "url": "https://www.pinnacleblooms.org/verify/#block-are-an-md-3-application-and-an-md-5-licence-the-same",
-          "text": "Explore Pinnacle's evidence on Are an MD-3 application and an MD-5 licence the same?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Are an MD-3 application and an MD-5 licence the same?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 176
+          "text": "Explore Pinnacle's evidence on Are an MD-3 application and an MD-5 licence the same. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Are an MD-3 application and an MD-5 licence the same. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 175
         },
         {
           "id": "block-what-do-the-bis-and-iso-records-establish",
           "url": "https://www.pinnacleblooms.org/verify/#block-what-do-the-bis-and-iso-records-establish",
-          "text": "Explore Pinnacle's evidence on What do the BIS and ISO records establish?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What do the BIS and ISO records establish?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 165
+          "text": "Explore Pinnacle's evidence on What do the BIS and ISO records establish. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What do the BIS and ISO records establish. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
         },
         {
           "id": "block-does-a-research-protocol-prove-external-validation",
           "url": "https://www.pinnacleblooms.org/verify/#block-does-a-research-protocol-prove-external-validation",
-          "text": "Explore Pinnacle's evidence on Does a research protocol prove external validation?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Does a research protocol prove external validation?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 174
+          "text": "Explore Pinnacle's evidence on Does a research protocol prove external validation. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Does a research protocol prove external validation. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 173
         },
         {
           "id": "block-does-one-credential-cover-every-pinnacle-centre",
           "url": "https://www.pinnacleblooms.org/verify/#block-does-one-credential-cover-every-pinnacle-centre",
-          "text": "Explore Pinnacle's evidence on Does one credential cover every Pinnacle centre?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Does one credential cover every Pinnacle centre?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 171
+          "text": "Explore Pinnacle's evidence on Does one credential cover every Pinnacle centre. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Does one credential cover every Pinnacle centre. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 170
         },
         {
           "id": "block-who-can-help-with-a-correction-or-a-current-document",
           "url": "https://www.pinnacleblooms.org/verify/#block-who-can-help-with-a-correction-or-a-current-document",
-          "text": "Explore Pinnacle's evidence on Who can help with a correction or a current document?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Who can help with a correction or a current document?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 176
+          "text": "Explore Pinnacle's evidence on Who can help with a correction or a current document. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Who can help with a correction or a current document. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 175
         },
         {
           "id": "block-what-does-pinnacle-s-2-7-billion-data-point-figure-mean",
           "url": "https://www.pinnacleblooms.org/verify/#block-what-does-pinnacle-s-2-7-billion-data-point-figure-mean",
-          "text": "Explore Pinnacle's evidence on What does Pinnacle's 2.7 billion+ data-point figure mean?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What does Pinnacle's 2.7 billion+ data-point figure mean?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 180
+          "text": "Explore Pinnacle's evidence on What does Pinnacle's 2.7 billion+ data-point figure mean. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What does Pinnacle's 2.7 billion+ data-point figure mean. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 179
         },
         {
           "id": "block-does-this-establish-the-world-s-largest-child-development-dataset",
           "url": "https://www.pinnacleblooms.org/verify/#block-does-this-establish-the-world-s-largest-child-development-dataset",
-          "text": "Explore Pinnacle's evidence on Does this establish the world's largest child-development dataset?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Does this establish the world's largest child-development dataset?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 189
+          "text": "Explore Pinnacle's evidence on Does this establish the world's largest child-development dataset. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Does this establish the world's largest child-development dataset. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 188
         },
         {
           "id": "block-does-the-md-5-licence-approve-the-entire-child-development-lifecycle",
           "url": "https://www.pinnacleblooms.org/verify/#block-does-the-md-5-licence-approve-the-entire-child-development-lifecycle",
-          "text": "Explore Pinnacle's evidence on Does the MD-5 licence approve the entire child-development lifecycle?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Does the MD-5 licence approve the entire child-development lifecycle?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 192
+          "text": "Explore Pinnacle's evidence on Does the MD-5 licence approve the entire child-development lifecycle. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Does the MD-5 licence approve the entire child-development lifecycle. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 191
         },
         {
           "id": "block-do-who-unicef-cdc-nice-or-unesco-endorse-pinnacle",
           "url": "https://www.pinnacleblooms.org/verify/#block-do-who-unicef-cdc-nice-or-unesco-endorse-pinnacle",
-          "text": "Explore Pinnacle's evidence on Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 176
+          "text": "Explore Pinnacle's evidence on Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Do WHO, UNICEF, CDC, NICE or UNESCO endorse Pinnacle. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 175
         },
         {
           "id": "block-what-is-the-purpose-of-the-pinnacle-developmental-pathway",
           "url": "https://www.pinnacleblooms.org/verify/#block-what-is-the-purpose-of-the-pinnacle-developmental-pathway",
-          "text": "Explore Pinnacle's evidence on What is the purpose of the Pinnacle developmental pathway?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What is the purpose of the Pinnacle developmental pathway?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 181
+          "text": "Explore Pinnacle's evidence on What is the purpose of the Pinnacle developmental pathway. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What is the purpose of the Pinnacle developmental pathway. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 180
         },
         {
           "id": "block-what-do-17-domains-79-abilities-and-349-skills-mean",
           "url": "https://www.pinnacleblooms.org/verify/#block-what-do-17-domains-79-abilities-and-349-skills-mean",
-          "text": "Explore Pinnacle's evidence on What do 17 domains, 79 abilities and 349 skills mean?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on What do 17 domains, 79 abilities and 349 skills mean?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 176
+          "text": "Explore Pinnacle's evidence on What do 17 domains, 79 abilities and 349 skills mean. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What do 17 domains, 79 abilities and 349 skills mean. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 175
         },
         {
           "id": "block-how-do-daily-practice-and-monthly-review-connect",
           "url": "https://www.pinnacleblooms.org/verify/#block-how-do-daily-practice-and-monthly-review-connect",
-          "text": "Explore Pinnacle's evidence on How do daily practice and monthly review connect?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on How do daily practice and monthly review connect?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 172
+          "text": "Explore Pinnacle's evidence on How do daily practice and monthly review connect. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on How do daily practice and monthly review connect. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 171
         },
         {
           "id": "block-how-do-icd-11-icf-ichi-and-snomed-ct-relate-to-pinnacleai",
           "url": "https://www.pinnacleblooms.org/verify/#block-how-do-icd-11-icf-ichi-and-snomed-ct-relate-to-pinnacleai",
-          "text": "Explore Pinnacle's evidence on How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI®?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI®?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 184
+          "text": "Explore Pinnacle's evidence on How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI®. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on How do ICD-11, ICF, ICHI and SNOMED CT relate to PinnacleAI®. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 183
         },
         {
           "id": "block-does-pinnacle-focus-on-a-diagnosis-or-on-everyday-life-goals",
           "url": "https://www.pinnacleblooms.org/verify/#block-does-pinnacle-focus-on-a-diagnosis-or-on-everyday-life-goals",
-          "text": "Explore Pinnacle's evidence on Does Pinnacle focus on a diagnosis or on everyday-life goals?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Does Pinnacle focus on a diagnosis or on everyday-life goals?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 184
+          "text": "Explore Pinnacle's evidence on Does Pinnacle focus on a diagnosis or on everyday-life goals. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Does Pinnacle focus on a diagnosis or on everyday-life goals. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 183
         },
         {
           "id": "block-is-pinnacleai-certified-as-sovereign-grade-or-authorised-worldwide",
           "url": "https://www.pinnacleblooms.org/verify/#block-is-pinnacleai-certified-as-sovereign-grade-or-authorised-worldwide",
-          "text": "Explore Pinnacle's evidence on Is PinnacleAI® certified as sovereign-grade or authorised worldwide?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Is PinnacleAI® certified as sovereign-grade or authorised worldwide?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 191
+          "text": "Explore Pinnacle's evidence on Is PinnacleAI® certified as sovereign-grade or authorised worldwide. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Is PinnacleAI® certified as sovereign-grade or authorised worldwide. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 190
         },
         {
           "id": "block-are-parents-and-caregivers-named-in-the-md-5-intended-use",
           "url": "https://www.pinnacleblooms.org/verify/#block-are-parents-and-caregivers-named-in-the-md-5-intended-use",
-          "text": "Explore Pinnacle's evidence on Are parents and caregivers named in the MD-5 intended use?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Are parents and caregivers named in the MD-5 intended use?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 181
+          "text": "Explore Pinnacle's evidence on Are parents and caregivers named in the MD-5 intended use. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Are parents and caregivers named in the MD-5 intended use. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 180
         },
         {
           "id": "terminology",
           "url": "https://www.pinnacleblooms.org/verify/#terminology",
-          "text": "Explore Pinnacle's evidence on Clear terms. Better questions.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Clear terms. Better questions.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 153
+          "text": "Explore Pinnacle's evidence on Clear terms. Better questions. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Clear terms. Better questions. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 152
+        },
+        {
+          "id": "review-summary",
+          "url": "https://www.pinnacleblooms.org/verify/#review-summary",
+          "text": "Explore Pinnacle's evidence on Review summary. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Review summary. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 137
         },
         {
           "id": "review",
           "url": "https://www.pinnacleblooms.org/verify/#review",
-          "text": "Explore Pinnacle's evidence on Originals reviewed. Conclusions made clear.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Originals reviewed. Conclusions made clear.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 166
+          "text": "Explore Pinnacle's evidence on Originals reviewed. Conclusions made clear. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Originals reviewed. Conclusions made clear. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 165
         },
         {
           "id": "block-classification-follow-the-issued-licence",
@@ -1478,9 +1576,9 @@
         {
           "id": "method",
           "url": "https://www.pinnacleblooms.org/verify/#method",
-          "text": "Explore Pinnacle's evidence on Evidence with its meaning intact.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Evidence with its meaning intact.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 156
+          "text": "Explore Pinnacle's evidence on Evidence with its meaning intact. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Evidence with its meaning intact. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 155
         },
         {
           "id": "block-start-with-the-source",
@@ -1504,6 +1602,13 @@
           "xLength": 146
         },
         {
+          "id": "site-update-history",
+          "url": "https://www.pinnacleblooms.org/verify/#site-update-history",
+          "text": "Explore Pinnacle's evidence on Recent updates to this guide +. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Recent updates to this guide +. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 153
+        },
+        {
           "id": "block-review-boundaries-publication-notes",
           "url": "https://www.pinnacleblooms.org/verify/#block-review-boundaries-publication-notes",
           "text": "Explore Pinnacle's evidence on Review boundaries & publication notes +. Read the source, review date and scope before drawing conclusions.",
@@ -1511,18 +1616,25 @@
           "xLength": 162
         },
         {
+          "id": "research",
+          "url": "https://www.pinnacleblooms.org/verify/#research",
+          "text": "Explore Pinnacle's evidence on Read the research. Meet the authors. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Read the research. Meet the authors. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 158
+        },
+        {
           "id": "next-step",
           "url": "https://www.pinnacleblooms.org/verify/#next-step",
-          "text": "Explore Pinnacle's evidence on Your child's next step deserves a clear conversation.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Your child's next step deserves a clear conversation.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 176
+          "text": "Explore Pinnacle's evidence on Your child's next step deserves a clear conversation. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Your child's next step deserves a clear conversation. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 175
         },
         {
           "id": "section-take-the-source-with-you",
           "url": "https://www.pinnacleblooms.org/verify/#section-take-the-source-with-you",
-          "text": "Explore Pinnacle's evidence on Take the source with you.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Take the source with you.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 148
+          "text": "Explore Pinnacle's evidence on Take the source with you. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Take the source with you. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
         }
       ]
     },
@@ -1595,9 +1707,9 @@
         {
           "id": "parent-books",
           "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html#parent-books",
-          "text": "Explore Pinnacle's evidence on Books for families. Sources for readers.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Books for families. Sources for readers.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 163
+          "text": "Explore Pinnacle's evidence on Books for families. Sources for readers. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Books for families. Sources for readers. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 162
         },
         {
           "id": "autism-mothers-handbook-english",
@@ -2172,9 +2284,9 @@
         {
           "id": "scale",
           "url": "https://www.pinnacleblooms.org/verify/evidence/scale-register.html#scale",
-          "text": "Explore Pinnacle's evidence on Every number should lead to its source.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Every number should lead to its source.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 162
+          "text": "Explore Pinnacle's evidence on Every number should lead to its source. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Every number should lead to its source. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 161
         },
         {
           "id": "scale-data",
@@ -2275,23 +2387,23 @@
         {
           "id": "data-scale",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#data-scale",
-          "text": "Explore Pinnacle's evidence on Structured developmental records. One child's journey at a time.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Structured developmental records. One child's journey at a time.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 187
+          "text": "Explore Pinnacle's evidence on Structured developmental records. One child's journey at a time. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Structured developmental records. One child's journey at a time. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 186
         },
         {
           "id": "block-why-do-some-pinnacle-sources-say-2-5-billion-and-others-2-7-billion",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#block-why-do-some-pinnacle-sources-say-2-5-billion-and-others-2-7-billion",
-          "text": "Explore Pinnacle's evidence on Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+?. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+?. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 193
+          "text": "Explore Pinnacle's evidence on Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 192
         },
         {
           "id": "regulated-purpose",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#regulated-purpose",
-          "text": "Explore Pinnacle's evidence on Understand what each credential adds.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Understand what each credential adds.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 160
+          "text": "Explore Pinnacle's evidence on Understand what each credential adds. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Understand what each credential adds. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
         },
         {
           "id": "block-md-3",
@@ -2317,9 +2429,9 @@
         {
           "id": "parents-in-licensed-use",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#parents-in-licensed-use",
-          "text": "Explore Pinnacle's evidence on Parents are explicitly included in the licensed intended use.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Parents are explicitly included in the licensed intended use.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 184
+          "text": "Explore Pinnacle's evidence on Parents are explicitly included in the licensed intended use. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Parents are explicitly included in the licensed intended use. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 183
         },
         {
           "id": "block-what-this-wording-establishes",
@@ -2345,9 +2457,9 @@
         {
           "id": "international-standards",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#international-standards",
-          "text": "Explore Pinnacle's evidence on Structured for understanding. Designed for connected care.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Structured for understanding. Designed for connected care.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 181
+          "text": "Explore Pinnacle's evidence on Structured for understanding. Designed for connected care. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Structured for understanding. Designed for connected care. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 180
         },
         {
           "id": "standard-icd11",
@@ -2387,9 +2499,9 @@
         {
           "id": "population-scale",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#population-scale",
-          "text": "Explore Pinnacle's evidence on A population-scale ambition. One child's life at the centre.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A population-scale ambition. One child's life at the centre.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 183
+          "text": "Explore Pinnacle's evidence on A population-scale ambition. One child's life at the centre. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A population-scale ambition. One child's life at the centre. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 182
         },
         {
           "id": "block-how-to-interpret-reported-data-volume",
@@ -2401,9 +2513,9 @@
         {
           "id": "global-goals",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#global-goals",
-          "text": "Explore Pinnacle's evidence on A wonderful life. A place to participate.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A wonderful life. A place to participate.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 164
+          "text": "Explore Pinnacle's evidence on A wonderful life. A place to participate. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A wonderful life. A place to participate. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
         },
         {
           "id": "block-health-and-well-being",
@@ -2436,58 +2548,58 @@
         {
           "id": "global-principles",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#global-principles",
-          "text": "Explore Pinnacle's evidence on Why these capabilities matter to families.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Why these capabilities matter to families.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 165
+          "text": "Explore Pinnacle's evidence on Why these capabilities matter to families. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Why these capabilities matter to families. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
         },
         {
           "id": "block-development-happens-across-a-child-s-whole-day",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#block-development-happens-across-a-child-s-whole-day",
-          "text": "Explore Pinnacle's evidence on Development happens across a child's whole day.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Development happens across a child's whole day.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 170
+          "text": "Explore Pinnacle's evidence on Development happens across a child's whole day. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Development happens across a child's whole day. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 169
         },
         {
           "id": "block-a-plan-that-comes-home-with-you",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#block-a-plan-that-comes-home-with-you",
-          "text": "Explore Pinnacle's evidence on A plan that comes home with you.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on A plan that comes home with you.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 155
+          "text": "Explore Pinnacle's evidence on A plan that comes home with you. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A plan that comes home with you. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 154
         },
         {
           "id": "block-clarity-starts-with-noticing-change",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#block-clarity-starts-with-noticing-change",
-          "text": "Explore Pinnacle's evidence on Clarity starts with noticing change.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Clarity starts with noticing change.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 159
+          "text": "Explore Pinnacle's evidence on Clarity starts with noticing change. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Clarity starts with noticing change. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 158
         },
         {
           "id": "block-shared-goals-clear-responsibilities",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#block-shared-goals-clear-responsibilities",
-          "text": "Explore Pinnacle's evidence on Shared goals. Clear responsibilities.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Shared goals. Clear responsibilities.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 160
+          "text": "Explore Pinnacle's evidence on Shared goals. Clear responsibilities. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Shared goals. Clear responsibilities. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 159
         },
         {
           "id": "block-more-ways-to-take-part",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#block-more-ways-to-take-part",
-          "text": "Explore Pinnacle's evidence on More ways to take part.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on More ways to take part.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 146
+          "text": "Explore Pinnacle's evidence on More ways to take part. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on More ways to take part. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 145
         },
         {
           "id": "block-technology-with-defined-responsibilities",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#block-technology-with-defined-responsibilities",
-          "text": "Explore Pinnacle's evidence on Technology with defined responsibilities.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Technology with defined responsibilities.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 164
+          "text": "Explore Pinnacle's evidence on Technology with defined responsibilities. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Technology with defined responsibilities. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
         },
         {
           "id": "global-context",
           "url": "https://www.pinnacleblooms.org/verify/evidence/global-context.html#global-context",
-          "text": "Explore Pinnacle's evidence on See where Pinnacle fits. Compare what matters.. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on See where Pinnacle fits. Compare what matters.. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 169
+          "text": "Explore Pinnacle's evidence on See where Pinnacle fits. Compare what matters. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on See where Pinnacle fits. Compare what matters. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 168
         },
         {
           "id": "block-cognoa-canvas-dx-autism-diagnostic-aid",

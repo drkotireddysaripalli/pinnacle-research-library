@@ -1,0 +1,97 @@
+{
+  "kind": "Illustrative workflow and report guide",
+  "assessment": false,
+  "steps": [
+    {
+      "id": "observe",
+      "action": "Observe",
+      "title": "Start with everyday life.",
+      "description": "A family wants to help their child express a choice during a familiar routine. They describe what the child already does, what interests them and where support helps.",
+      "meaning": "Everyday observations give the care team context.",
+      "evidence": "/evidence/records/md5.html"
+    },
+    {
+      "id": "review",
+      "action": "Review",
+      "title": "Bring the observations together.",
+      "description": "The family and professionals review the starting point and agree a useful goal. Pinnacle describes the Personal Development Kernel as the child-specific record connecting measurements, context and responses.",
+      "meaning": "The care team checks the goal and the support appropriate to this child.",
+      "evidence": "/evidence/records/dossier.html"
+    },
+    {
+      "id": "report",
+      "action": "Report",
+      "title": "Make the starting point understandable.",
+      "description": "The overall AbilityScore® report and seven readiness views help organise the discussion. The important connection is from the report to an agreed everyday goal.",
+      "meaning": "Explore what each report is for below. No individual child’s results are displayed here.",
+      "evidence": "/evidence/records/methodology.html"
+    },
+    {
+      "id": "practise",
+      "action": "Practise",
+      "title": "Turn the goal into guided practice.",
+      "description": "The documented Everyday Therapy™ programme links selected techniques with goals. In this illustration, the care team explains a communication activity within a familiar routine and agrees how the family can take part.",
+      "meaning": "The activity, support and practice schedule are agreed with the care team.",
+      "evidence": "/evidence/records/september-handout.html"
+    },
+    {
+      "id": "feedback",
+      "action": "Give feedback",
+      "title": "What happened during practice?",
+      "description": "Feedback connects the experience at home with the next review. Try either response to see how the discussion can change.",
+      "meaning": "This demonstration does not assess a child, prescribe an activity or generate a treatment plan.",
+      "evidence": "/evidence/records/dossier.html"
+    },
+    {
+      "id": "next",
+      "action": "Review again",
+      "title": "Use the experience to shape the next plan.",
+      "description": "The care team reviews feedback, adjusts goals or support, and discusses the next assessment. Monthly reassessment is described in the reviewed methodology and walkthrough.",
+      "meaning": "Look for meaningful changes in communication, routines, learning and participation, alongside the scores.",
+      "evidence": "/evidence/records/methodology.html"
+    }
+  ],
+  "reports": [
+    {
+      "name": "AbilityScore® / TherapeuticAI® report",
+      "meaning": "The overall developmental profile.",
+      "question": "Which abilities should we prioritise, and why?"
+    },
+    {
+      "name": "Speech Readiness Index",
+      "meaning": "A focused view to discuss communication priorities.",
+      "question": "How can we support communication in everyday routines?"
+    },
+    {
+      "name": "Behavior Readiness Index",
+      "meaning": "A focused view to discuss behaviour and participation.",
+      "question": "What helps my child feel comfortable and take part?"
+    },
+    {
+      "name": "Motor Readiness Index",
+      "meaning": "A focused view to discuss movement-related abilities.",
+      "question": "Which movement skills matter for my child’s routines?"
+    },
+    {
+      "name": "Study/IQ Readiness Index",
+      "meaning": "The report’s named view of readiness for learning.",
+      "question": "What support could make learning more accessible?"
+    },
+    {
+      "name": "School Readiness Index",
+      "meaning": "A focused view to discuss preparation and support for school.",
+      "question": "What would help my child participate at school?"
+    },
+    {
+      "name": "Self-Sufficiency Index",
+      "meaning": "A focused view to discuss growing everyday independence.",
+      "question": "Which everyday task could my child do with less help?"
+    },
+    {
+      "name": "Mainstream Readiness Index",
+      "meaning": "A focused view to discuss participation with other people.",
+      "question": "What support would help my child join in with others?"
+    }
+  ],
+  "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/#experience"
+}

@@ -49,6 +49,8 @@ Last content and semantic review: 19 September 2026.
 
 ## Research and reader controls
 
+The opening offers audience-specific reading paths, a six-step illustrative workflow and an eight-report explorer. The guide contains no child data, does not run an assessment, and retains source links. Report presentation version V-1.6.9.9 is explicitly separate from the SaMD software version. Native controls and keyboard navigation progressively enhance server-rendered content, with all views available without JavaScript and when printing. WhatsApp remains directly accessible; other sharing choices expand under More. Machine-readable guide exports match the visible explanation.
+
 The homepage groups existing source content into six native expandable topics, with jump navigation, open/close controls, direct-anchor expansion and print expansion. The new research library links seven distinct DOI works, a Research Square alternate version, three original book PDFs, the twelve-study company portfolio and matched author profiles. Eight authentic cover/first-page illustrations load responsively. Book, ScholarlyArticle, Report and Person descriptions match visible publication stages. JSON, text and RIS exports accompany the library.
 
 Cloudflare review on 19 September found AI bot protections disabled and existing robots rules permitting verification content. No broad security bypass was added. The 43-page sitemap includes the research library. Availability to crawlers does not guarantee ranking or citation.
