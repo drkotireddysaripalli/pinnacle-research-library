@@ -1,0 +1,155 @@
+{
+  "updated": "2026-09-19",
+  "reviewType": "Document text and page-image inspection for this website; not a live issuer-status check or named professional sign-off.",
+  "records": [
+    {
+      "id": "md5",
+      "checkedOn": "2026-09-19",
+      "method": "Quoted wording compared with the complete public source-copy page.",
+      "boundary": "The intended-use statement is for the named non-diagnostic device and age range; the quote does not extend the device indication to all ages.",
+      "sourceSha256": "09a063e47b664e870d55439b1a3f3fddcafcd47eb01f10a44d09a27cf9099ba0",
+      "excerpts": [
+        {
+          "quote": "The software is intended to assist parents, therapists, educators, and caregivers by providing developmental ability measurement, readiness tracking, progress forecasting, and adaptive therapy-plan support for children aged 0-12 years.",
+          "source": "Form MD-5 · MFG/MD/2026/000248 · ANNEXURE, Intended Use field · physical PDF page 1",
+          "url": "/evidence/md5.pdf#page=1",
+          "page": 1
+        }
+      ],
+      "preview": {
+        "caption": "Open the source-copy page to inspect the quoted wording in context. Existing redactions remain visible.",
+        "url": "/evidence/md5.pdf#page=1",
+        "image": "/images/sources/md5-page-1-650.webp",
+        "alt": "MFG/MD/2026/000248 · source-copy page 1",
+        "width": 650,
+        "height": 982
+      },
+      "recordUpdate": {
+        "scopeReviewed": "19 September 2026"
+      },
+      "history": [
+        {
+          "date": "2026-09-19",
+          "change": "Added visually checked source excerpt, exact PDF page link and source-copy preview."
+        }
+      ]
+    },
+    {
+      "id": "bis",
+      "checkedOn": "2026-09-19",
+      "method": "Quoted wording compared with the complete public source-copy page.",
+      "boundary": "Full developmental lifecycle is wording in the BIS schedule describing the named software/module quality-system scope. Preserve the MD-5 non-diagnostic intended use, ages 0-12 and model/version separately; this phrase does not establish lifelong clinical indication or guaranteed outcomes.",
+      "sourceSha256": "91abd06c40e110180ca036afd374ddd8b9d8ebb4ae027ce5a093d0ab8ea5c250",
+      "excerpts": [
+        {
+          "quote": "associated digital developmental support modules for the full developmental lifecycle of children.",
+          "source": "Licence for Medical Devices - Quality Management System Requirements and Essential Principles of Safety & Performance for Medical Devices · MD/L-2026029599 · SCHEDULE, final words of bold scope paragraph · physical PDF page 2",
+          "url": "/evidence/bis.pdf#page=2",
+          "page": 2
+        }
+      ],
+      "preview": {
+        "caption": "Open the source-copy page to inspect the quoted wording in context. Existing redactions remain visible.",
+        "url": "/evidence/bis.pdf#page=2",
+        "image": "/images/sources/bis-page-2-650.webp",
+        "alt": "MD/L-2026029599 · source-copy page 2",
+        "width": 650,
+        "height": 1050
+      },
+      "recordUpdate": {
+        "scopeReviewed": "19 September 2026"
+      },
+      "history": [
+        {
+          "date": "2026-09-19",
+          "change": "Added visually checked source excerpt, exact PDF page link and source-copy preview."
+        }
+      ]
+    },
+    {
+      "id": "sae3000",
+      "checkedOn": "2026-09-19",
+      "method": "Original document and annexure page images inspected; figures and references compared across all three supplied documents.",
+      "boundary": "The issuer is NPSY & Co. ICAI provides the UDIN mechanism. Report findings retain their stated scope and cutoff; current portal status is a separate check.",
+      "sourceSha256": "79353b9336ff31bdc50c2e2f1678e21c3ad67c0f06bb31605e6dd59c2b1cb979",
+      "excerpts": [],
+      "findings": [
+        "Annexure I, physical page 4: enumerated institutional assertions.",
+        "Annexure II, physical pages 6–7: definitions and criteria.",
+        "Physical page 3: limited-assurance conclusion, scope exclusions, signature and UDIN."
+      ],
+      "recordUpdate": {
+        "scopeReviewed": "19 September 2026"
+      },
+      "history": [
+        {
+          "date": "2026-09-19",
+          "change": "Rechecked the supplied originals and added claim-to-page mapping, report dates and independent practitioner attribution."
+        }
+      ]
+    },
+    {
+      "id": "srs4400",
+      "checkedOn": "2026-09-19",
+      "method": "Original document and annexure page images inspected; figures and references compared across all three supplied documents.",
+      "boundary": "The issuer is NPSY & Co. ICAI provides the UDIN mechanism. Report findings retain their stated scope and cutoff; current portal status is a separate check.",
+      "sourceSha256": "f969077a9175a8843112881a5918c85f9f73963a51552a6360d88d0cc0aac0e9",
+      "excerpts": [],
+      "findings": [
+        "Annexure, physical pages 3–4: twelve procedures and factual findings.",
+        "Physical page 2: engagement boundary, signature and UDIN."
+      ],
+      "recordUpdate": {
+        "scopeReviewed": "19 September 2026"
+      },
+      "history": [
+        {
+          "date": "2026-09-19",
+          "change": "Rechecked the supplied originals and added claim-to-page mapping, report dates and independent practitioner attribution."
+        }
+      ]
+    },
+    {
+      "id": "operating-metrics",
+      "checkedOn": "2026-09-19",
+      "method": "Original document and annexure page images inspected; figures and references compared across all three supplied documents.",
+      "boundary": "The source handout is a company-authored publication by Bharath Healthcare / Pinnacle. NPSY & Co. issued the two referenced practitioner reports. Their findings retain the stated scope and cutoff; ICAI portal status is a separate check.",
+      "sourceSha256": "c358357f91bf61d120f076089d7c5d6ab3f70412ecfcfdd3f93d3be0f5d8d04e",
+      "excerpts": [],
+      "findings": [
+        "September handout, physical PDF page 14 (printed page 23/23): summary of the two assurance instruments.",
+        "Exact figures cross-referenced to the signed SRS 4400 annexure and SAE 3000 criteria."
+      ],
+      "recordUpdate": {
+        "scopeReviewed": "19 September 2026"
+      },
+      "history": [
+        {
+          "date": "2026-09-19",
+          "change": "Rechecked the supplied originals and added claim-to-page mapping, report dates and independent practitioner attribution."
+        }
+      ]
+    },
+    {
+      "id": "september-handout",
+      "checkedOn": "2026-09-19",
+      "method": "Original document and annexure page images inspected; figures and references compared across all three supplied documents.",
+      "boundary": "The source handout is a company-authored publication by Bharath Healthcare / Pinnacle. NPSY & Co. issued the two referenced practitioner reports. Their findings retain the stated scope and cutoff; ICAI portal status is a separate check.",
+      "sourceSha256": "c358357f91bf61d120f076089d7c5d6ab3f70412ecfcfdd3f93d3be0f5d8d04e",
+      "excerpts": [],
+      "findings": [
+        "September handout, physical PDF page 14 (printed page 23/23): summary of the two assurance instruments.",
+        "Exact figures cross-referenced to the signed SRS 4400 annexure and SAE 3000 criteria."
+      ],
+      "recordUpdate": {
+        "scopeReviewed": "19 September 2026"
+      },
+      "history": [
+        {
+          "date": "2026-09-19",
+          "change": "Rechecked the supplied originals and added claim-to-page mapping, report dates and independent practitioner attribution."
+        }
+      ]
+    }
+  ]
+}

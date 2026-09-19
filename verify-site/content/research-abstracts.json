@@ -1,0 +1,119 @@
+{
+  "reviewedOn": "2026-09-19",
+  "records": [
+    {
+      "id": "zenodo-22761782",
+      "abstractText": "Developmental-support software can influence assessment and intervention without making a diagnosis. Its regulation therefore requires a precise intended purpose, proportionate evidence, and control of software changes. This analytical report examines the April 2026 Indian licensing of PinnacleAI GPT-OS v1.0.0 and retrospectively assesses the case against CDSCO’s medical-device-software guidance released in July 2026. Electronic copies of the issued manufacturing licence, its accompanying letter, and quality-system certificates were examined alongside the manufacturer’s case account and public regulatory sources. Digital signatures and current registry status were not independently validated. The MD-5 licence and matching covering letter establish the documented Class B scope, an application dated 16 April, and a grant dated 21 April 2026. The manufacturer separately reports a classification decision on 13 April and a notified-body audit on 18 April. The comparison identifies continuity with the July guidance while distinguishing a software release record from a test licence, a management-system licence from product-performance certification, and risk classification from clinical validity. A claim–evidence matrix shows how licensing, technical verification, clinical evaluation, and outcome studies answer different questions. The case contributes a reusable documentary framework for developmental-support software regulation. Its findings concern a documented regulatory pathway and evidence architecture; they do not establish comparative effectiveness, international authorisation, or a general licensing timetable.",
+      "sourceUrl": "https://zenodo.org/api/records/22761782/files/01_Regulatory_Case.pdf/content#page=2",
+      "documentVersion": "3.0",
+      "repositoryVersion": "3.0",
+      "sourceWarnings": [],
+      "abstractLabel": "Author-written abstract",
+      "abstractSourceLabel": "original manuscript, PDF page 2",
+      "reviewedOn": "2026-09-19",
+      "versionNote": "",
+      "localPdf": "/evidence/publications/zenodo-22761782.pdf",
+      "pdfSha256": "ca3eb27620e11c05770725731844dc47f70038298903f593683044a52a5aa63a",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "zenodo-22761810",
+      "abstractText": "Background: Reliable information on training institutions can support rehabilitation workforce planning, but regulatory listings do not directly measure active capacity or professional supply. This study describes the geographic distribution and concentration of institutional entries in a fixed Rehabilitation Council of India (RCI) register snapshot.\n\nMethods: A descriptive census reconstructed every institution code and printed serial number from the 113-page RCI list dated 4 February 2026. Source-heading state assignments were checked against code prefixes. Every final institution label was reconciled with source text; extraction exceptions were reviewed with AI assistance. All 36 states and union territories were retained, including those absent from the source. Jurisdictional counts, cumulative shares, the Herfindahl-Hirschman index (HHI) and Gini coefficient were calculated. Course counts, seats, current approval status and population-adjusted rates were outside scope.\n\nResults: The reconstruction recovered 1,068 unique codes and the complete serial sequence 1–1,068. Entries were present in 32 jurisdictions: 27 states and five union territories. Fourteen institutional display labels were corrected or restored without changing state totals. Uttar Pradesh and Rajasthan accounted for 482 entries (45.13%); the five largest counts totalled 663 (62.08%) and the ten largest 847 (79.31%). Four jurisdictions were not represented in the source. Gini across all 36 jurisdictions was 0.6914 and HHI was 0.1216. Excluding unrepresented jurisdictions reduced Gini to 0.6528.\n\nConclusions: RCI-listed institutional entries are geographically concentrated. The source-linked dataset offers a reproducible organisational frame for further workforce research. These counts do not establish active training capacity, workforce shortage or population-adjusted inequity; those questions require additional programme-period, student-flow, employment and need data.",
+      "sourceUrl": "https://zenodo.org/api/records/22761810/files/02_RCI_Institution_Geography.pdf/content#page=2",
+      "documentVersion": "2.0",
+      "repositoryVersion": "2.0",
+      "sourceWarnings": [],
+      "abstractLabel": "Author-written abstract",
+      "abstractSourceLabel": "original manuscript, PDF page 2",
+      "reviewedOn": "2026-09-19",
+      "versionNote": "",
+      "localPdf": "/evidence/publications/zenodo-22761810.pdf",
+      "pdfSha256": "134705dc6cf2bfcb4b25a959791a35f0bfda69bb7fc88717a24b320298f0a545",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "zenodo-22761832",
+      "abstractText": "Background: Repeated developmental assessments collected during routine care can describe change and gaps in reassessment across a service network. Their interpretation depends on comparable measurement over time and inclusion of children who do not return. A clearly defined cohort and transparent analysis of missing follow-up are needed to characterize changes in AbilityScore, a developmental index recorded in paediatric services.\n\nObjective: To estimate mean change in AbilityScore between baseline and a prespecified six-month assessment window in a baseline-defined cohort, and to describe the availability and characteristics of follow-up. Secondary objectives concern longer-term scores, recorded developmental domains and associations with baseline characteristics.\n\nMethods: PINNACLE-TRAJ is a planned retrospective observational study of routine records from eligible Pinnacle Blooms Network centres in India. The proposed database close is 30 June 2026. A documented comparable scoring era and eligible centres will be fixed from deployment and measurement records before outcome inspection. Children aged under 13 years at their first eligible baseline will enter the cohort without any requirement for a subsequent visit. Baselines must permit the full 150–210-day primary window; with the proposed close, the latest permissible baseline is 2 December 2025. The primary endpoint is the comparable score nearest day 180 within that window. Mean within-child change will be estimated with multilevel multiple imputation under a stated missing-at-random assumption and centre-aware uncertainty. Observed-case, weighting and missing-not-at-random analyses will assess sensitivity. Postbaseline care exposure will not define cohort membership or the primary contrast.\n\nResults: Ethics review, study registration and selection of the final scoring era are pending. The eligible cohort size will be established after the required approvals and deployment review. This protocol reports the planned study; results are not yet available for publication.\n\nConclusions: The study is intended to describe score change and reassessment patterns within an eligible service population. Its uncontrolled design cannot estimate treatment effectiveness, isolate an AI contribution, establish an important clinical difference or provide population developmental norms.",
+      "sourceUrl": "https://zenodo.org/api/records/22761832/files/03_PINNACLE_TRAJ_Protocol.pdf/content#page=2",
+      "documentVersion": "1.1",
+      "repositoryVersion": "1.1",
+      "sourceWarnings": [],
+      "abstractLabel": "Author-written abstract",
+      "abstractSourceLabel": "original manuscript, PDF page 2",
+      "reviewedOn": "2026-09-19",
+      "versionNote": "",
+      "localPdf": "/evidence/publications/zenodo-22761832.pdf",
+      "pdfSha256": "3d732bf504aa8a9ba5883aa684abfa3f23bd1f99f3c8f0b272990707be624f14",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "zenodo-19482476",
+      "abstractText": "Background: AbilityScore is a standardized composite developmental index (0–1000) that quantifies child developmental performance relative to age-normed expectations. Operational data from more than 18.6 million therapy sessions show inter-rater reliability r = 0.91 and ICC = 0.88. However, formal concurrent validity against established reference instruments, controlled test-retest reliability, and minimal clinically important difference (MCID) have not been published.\n\nObjective: To determine the concurrent validity of AbilityScore against Vineland-3, CARS-2, Bayley-4, and ABAS-3; to assess the reliability of the 7-day test-retest; and to estimate a preliminary MCID.\n\nMethods: Cross-sectional multi-center psychometric validation study with a nested prospective test-retest substudy. Component A: n = 300 children aged 7 months to 7 years assessed with AbilityScore and comparator instruments in the same session by blinded raters in 6 Pinnacle Blooms Network centers. Component B: n = 60 subset, reassessed at 7 days. Primary analysis: Pearson correlation (Bonferroni-adjusted α = 0.017). Pre-registered SAP on OSF.\n\nDiscussion: This study addresses the single most important evidence gap for AbilityScore. It will determine whether the instrument meets the accepted thresholds for concurrent validity (r ≥ 0.50) and reliability (ICC ≥ 0.80), allowing the progression from operational evidence to formal psychometric validation.\n\nTrial registration: CTRI (to be registered prior to first enrollment). OSF pre-registration of SAP (to be completed prior to data collection).",
+      "sourceUrl": "https://zenodo.org/api/records/19482476/files/PinnacleAI%20AbilityScore%20Development%20and%20Preliminary%20Psychometric%20Characterization%20of%20a%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness%20Validation%20Protocol--.pdf/content#page=1",
+      "documentVersion": "2.1 FINAL",
+      "repositoryVersion": "2.1",
+      "sourceWarnings": [
+        "The abstract contains both “Pre-registered SAP on OSF” and a trial-registration sentence stating OSF pre-registration is to be completed. Preserve the quotation; do not claim completed OSF/CTRI registration without a registry source."
+      ],
+      "abstractLabel": "Author-written abstract",
+      "abstractSourceLabel": "original manuscript, PDF page 1",
+      "reviewedOn": "2026-09-19",
+      "versionNote": "The original abstract contains conflicting statements about OSF registration. Completed registration is not established by the reviewed source.",
+      "localPdf": "/evidence/publications/zenodo-19482476.pdf",
+      "pdfSha256": "3dc3e4fc2ed23001cb28938c62768191ad8aa578f21f346c96273be3d8dfbe24",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "zenodo-19482123",
+      "abstractText": "Background: Since the late nineteenth century, developmental assessment has relied on a series of siloed instruments rather than a single developmental score. A child assessed with ADOS-2, Vineland and Bayley receives three separate reports on three incompatible scales, leaving families and clinicians without a unified picture of progress.\n\nObjective: To describe the architecture, computation methodology, and preliminary psychometric evidence for AbilityScore, a standardized composite developmental index (0–1000) that quantifies observed functional developmental performance relative to age-normed expectations in multiple validated constructs.\n\nMethods: AbilityScore synthesizes the clinical essence of 25 internationally validated assessments into a single metric, mapping 339 skills across 148 abilities through structured clinical observations. The scoring algorithm uses a Skill Index (60%) and Ability Index (40%) weighted composite with age-gender normalization. Seven domain-specific Readiness Indexes (Speech, Motor, Behaviour, Cognitive, School, Self-Sufficiency, Mainstream) provide multidimensional profiling. Preliminary psychometric evidence comes from operational data from approximately 18.6 million therapy sessions spanning more than 70 centers, 4 Indian states, 16 languages, and 28 diagnostic categories.\n\nResults: Operational data show inter-rater reliability r = 0.91 (p < 0.001), intraclass correlation coefficient ICC = 0.88 (95% CI 0.84–0.91), mean absolute percentage error MAPE = 6.7%, and bias variance ratio ≤ 1.05. These real-world scoring consistency metrics from routine operations across more than 70 centers provide a robust operational foundation for the formal validation study now in planning, but do not substitute for controlled psychometric validation.\n\nConclusions: AbilityScore is a scientifically structured, WHO ICF-aligned composite index for developmental measurement. Formal concurrent validity testing against Vineland-3, CARS-2, and Bayley-4, along with test-retest reliability studies, are now in planning (BHCL-VAL-2026-001). This monograph documents the instrument in sufficient detail to support the upcoming validation studies, regulatory submissions, and clinical use.",
+      "sourceUrl": "https://zenodo.org/api/records/19482123/files/PinnacleAI%20AbilityScore%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness.pdf/content#page=1",
+      "documentVersion": "3.0",
+      "repositoryVersion": null,
+      "sourceWarnings": [
+        "Document title page states Technical Monograph v3.0 (March 2026). The Zenodo metadata has no version field. Existing site catalogue v1 denotes a repository-version label, not the manuscript version; display the distinction explicitly."
+      ],
+      "abstractLabel": "Author-written abstract",
+      "abstractSourceLabel": "original manuscript, PDF page 1",
+      "reviewedOn": "2026-09-19",
+      "versionNote": "The manuscript title page identifies Technical Monograph v3.0. The repository metadata does not specify a version; this page cites the manuscript version. This manuscript describes 339 skills and 148 abilities; the current company-described framework uses 349 skills and 79 abilities. The original abstract is preserved as version-specific evidence.",
+      "localPdf": "/evidence/publications/zenodo-19482123.pdf",
+      "pdfSha256": "61348d8c1f5159a0d77d7c4f91f1b39b9deb3fe6a0ef299ba335d8c6c313edba",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "zenodo-15487405",
+      "abstractText": "This whitebook presents 12 formal research studies comprising India’s first nationally validated, scalable, and outcome-driven autism care framework. Developed under the Pinnacle Global Research Consortium, the Pinnacle Global Autism Framework (PGAF) integrates five patented systems — AbilityScore®, TherapeuticAI®, SEVA™, Everyday Therapy™, and TherapySphere™.\n\nTogether, these systems have been validated across over 19 million therapy sessions in 70+ Indian cities, leading to outcome improvements in behavior, sensory regulation, speech, and school readiness. This whitebook is intended to support governments, educators, therapists, and global development agencies working to implement measurable, ethical child development systems aligned with SDG 3, SDG 4, and SDG 10.\n\nOriginally submitted to SSRN, this version is preserved in Zenodo as the open-access, archival edition for permanent citation. Indexed on ORCID and Google Scholar. Patents filed under Indian IP registry support core systems described.",
+      "sourceUrl": "https://zenodo.org/records/15487405",
+      "documentVersion": "2025 Global Edition",
+      "repositoryVersion": "v1.0",
+      "sourceWarnings": [
+        "The original author description uses “patented”, “validated” and priority language. These are attributed historical source claims, not the verification page’s conclusions. Display the application-stage IP boundary and study-scope note alongside the original description.",
+        "The repository includes a journal-title field and an ISBN-like alternate identifier. They do not establish a peer-reviewed journal publication or verified edition ISBN; do not infer either."
+      ],
+      "abstractLabel": "Author-supplied repository description",
+      "abstractSourceLabel": "author-supplied repository description",
+      "reviewedOn": "2026-09-19",
+      "versionNote": "The historical source description includes patent and validation claims. These are the author’s statements; this verification collection establishes application-stage IP claims and distinguishes study designs and research stages.",
+      "localPdf": "/evidence/publications/zenodo-15487405.pdf",
+      "pdfSha256": "7511fe153af7da127132294106bbd9f474e9ea0a53947637ec88af551719dd3f",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    {
+      "id": "zenodo-22827813",
+      "abstractText": "Background: A change in participation score does not establish whether children or caregivers consider it important. Published estimates may represent different constructs, reporters and statistical quantities, limiting their use as individual decision thresholds.\n\nObjective: To identify and appraise child- or caregiver-anchored estimates of important change in childhood participation, distinguish their interpretations, and map evidence gaps.\n\nMethods: Eligible longitudinal studies will derive, evaluate or explicitly attempt an important-change estimate for participation attendance or involvement among children with a prespecified neurodevelopmental condition who are younger than 18 years at baseline. Later assessments crossing age 18 will be retained and flagged. Searches are planned in PubMed, Embase, CINAHL, PsycINFO, ERIC and ProQuest Dissertations and Theses Global, supplemented by citation, registry and preprint searching. Two human reviewers will independently select reports, extract data and appraise estimates. The analysis unit is an estimate or documented failed attempt within a study family. Participation content, anchor, reporter and estimand will be coded separately. Individual responder thresholds, anchor-defined mean change and longitudinal group contrasts will retain distinct interpretations. An adapted domain-level appraisal will assess respondent alignment, anchor relevance, association with target change, precision and the importance represented by the anchor contrast. The co-primary outputs are an estimate catalogue and an evidence-gap and credibility map. Narrative synthesis will preserve instrument scales and study dependence; meta-analysis is not planned.\n\nDiscussion: The review will distinguish supported interpretations from uncertainty and missing evidence, including if few estimates are eligible. It may guide future anchor studies; it will not establish proprietary-instrument validity or treatment effectiveness.\n\nRegistration: PROSPERO submission is planned before formal screening, subject to eligibility and completion of the required declarations. No identifier has been assigned.",
+      "sourceUrl": "https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.pdf/content#page=1",
+      "documentVersion": "1.0",
+      "repositoryVersion": "1.0",
+      "sourceWarnings": [
+        "Unregistered systematic-review protocol. Exploratory scoping only; no completed review findings or treatment-effectiveness evidence. Planned independent reviewers are study methods, not reviewers of this website."
+      ],
+      "abstractLabel": "Author-written abstract",
+      "abstractSourceLabel": "original manuscript, PDF page 1",
+      "reviewedOn": "2026-09-19",
+      "versionNote": "",
+      "localPdf": "/evidence/publications/zenodo-22827813.pdf",
+      "pdfSha256": "2d97944d00fd078c2e0e7e7cec1a1f58984fbce1b787bf31657a7af99e94fadb",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
+}

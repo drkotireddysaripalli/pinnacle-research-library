@@ -1,5 +1,5 @@
 {
-  "reviewed": "18 September 2026",
+  "reviewed": "19 September 2026",
   "title": "Pinnacle scale: figures, definitions and evidence",
   "metrics": [
     {
@@ -8,9 +8,9 @@
       "value": "2.7 billion+",
       "label": "Structured developmental records",
       "meaning": "A large record system can preserve observations across a child’s developmental journey, supporting continuity and review.",
-      "basis": "Reported in the 7 September 2026 handout. Database row/event counts at 17 July 2026.",
+      "basis": "2,700,000,000+ records in the SRS 4400 findings at 17 July 2026 (annexure p3, item 5). SAE 3000 separately covers a 2.5 billion+ floor.",
       "boundary": "Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness.",
-      "status": "Company-reported · source reviewed",
+      "status": "Independent CA factual finding · SRS 4400",
       "evidence": [
         {
           "id": "operating-metrics",
@@ -30,11 +30,11 @@
       "id": "scale-services",
       "icon": "users",
       "value": "31 million+",
-      "label": "Cumulative therapy services reported",
+      "label": "Cumulative services recorded",
       "meaning": "The useful family question is how the experience recorded across services informs a clear plan and review for your child.",
-      "basis": "31,052,382 under the practitioner reports’ service-counting criteria, at 17 July 2026.",
+      "basis": "31,052,382 in the SRS 4400 findings (annexure p3, item 1), at 17 July 2026. SAE 3000 provides limited assurance over the 31 million+ floor.",
       "boundary": "The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures.",
-      "status": "Dated institutional count",
+      "status": "Independent CA reports · defined count",
       "evidence": [
         {
           "id": "operating-metrics",
@@ -74,11 +74,11 @@
       "id": "scale-families",
       "icon": "house",
       "value": "7.9 lakh+",
-      "label": "Beneficiary / family registrations reported",
+      "label": "Beneficiary / family registrations",
       "meaning": "Behind each registration is a family seeking support. A family’s own goals and progress reviews remain the measure that matters to them.",
-      "basis": "792,614 unique beneficiary/family registrations under the stated criteria, at 17 July 2026.",
+      "basis": "792,614 unique beneficiary/family registrations in SRS 4400 (annexure p3, item 2), at 17 July 2026. SAE 3000 covers the 790,000+ floor.",
       "boundary": "This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment.",
-      "status": "Dated institutional count",
+      "status": "Independent CA reports · defined count",
       "evidence": [
         {
           "id": "operating-metrics",

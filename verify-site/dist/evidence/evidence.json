@@ -29,7 +29,7 @@
       "supports": "The supplied Form MD-5 licenses the listed Class B device for manufacture for sale or distribution at the specified premises. Intended users include parents, therapists, educators and caregivers supporting children aged 0–12.",
       "limits": "Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre.",
       "citation": "Original Form MD-5, page 1 including device annexure; supplied PinnacleAI®_SAMD_License.pdf re-inspected 18 September 2026.",
-      "scopeReviewed": "18 September 2026",
+      "scopeReviewed": "19 September 2026",
       "links": [
         {
           "label": "Read redacted licence",
@@ -78,7 +78,7 @@
           "url": "https://manakonline.in/MANAK/login"
         }
       ],
-      "scopeReviewed": "18 September 2026",
+      "scopeReviewed": "19 September 2026",
       "familyMeaning": "A documented software lifecycle makes quality responsibilities and the scope of developmental-support modules easier to examine.",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
       "statusLabel": "Original reviewed",
@@ -620,11 +620,16 @@
         {
           "label": "Verify UDIN at ICAI",
           "url": "https://udin.icai.org/"
+        },
+        {
+          "label": "Independent CA claim and page map",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html"
         }
       ],
       "note": "The report is marked private/confidential and restricted-use. Its full text is not republished here; permitted circulation should be confirmed before a public evidence-room release.",
       "originalReviewed": true,
       "familyMeaning": "A clearly defined assurance scope helps you distinguish institutional-record checks from evidence about a child’s clinical outcome.",
+      "scopeReviewed": "19 September 2026",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
       "statusLabel": "Original reviewed",
       "reviewStatusNote": "Report inspected; UDIN not independently matched in this review."
@@ -648,11 +653,16 @@
         {
           "label": "Verify UDIN at ICAI",
           "url": "https://udin.icai.org/"
+        },
+        {
+          "label": "Independent CA claim and page map",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html"
         }
       ],
       "note": "Restricted-use source. A UDIN lookup authenticates document particulars; it does not expand the report’s scope.",
       "originalReviewed": true,
       "familyMeaning": "Specified factual checks make the counting method more understandable; they do not supply an assurance opinion on outcomes.",
+      "scopeReviewed": "19 September 2026",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
       "statusLabel": "Original reviewed",
       "reviewStatusNote": "Report inspected; UDIN not independently matched in this review."
@@ -681,11 +691,15 @@
         {
           "label": "Six statistics with source mapping",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html"
+        },
+        {
+          "label": "Independent CA claim and page map",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html"
         }
       ],
       "note": "The July dossier used a 2.5 billion+ floor and retired earlier 2.7 billion wording. The September handout subsequently publishes 2.7 billion+ observed row counts. Limited assurance over the 2.5 billion floor is distinct from factual findings without an assurance opinion on the 2.7 billion row count. The 70+ network and 49 operational-centre figures also use different definitions.",
       "originalReviewed": false,
-      "scopeReviewed": "18 September 2026",
+      "scopeReviewed": "19 September 2026",
       "familyMeaning": "Consistent records can support continuity across a child’s journey. Ask to see your child’s own goals and progress reviews alongside network-level numbers.",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
       "statusLabel": "Company-published",
@@ -1001,10 +1015,16 @@
       "supports": "The handout adds the September BIS licence, practitioner-report references, operational definitions and a consolidated registration and recognition narrative.",
       "limits": "Its claims must be traced to their underlying instruments. Confidential circulation, research-stage language, operational counts and letter references require careful handling before public reuse.",
       "citation": "Original 23-page handout; physical PDF pages used because printed page numbering is out of order.",
-      "links": [],
+      "links": [
+        {
+          "label": "Independent CA claim and page map",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html"
+        }
+      ],
       "note": "The full confidential handout is not republished. This page cites physical pages and surfaces the relevant evidence topics.",
       "originalReviewed": true,
       "familyMeaning": "A dated company summary helps explain developments over time, including updates that supersede older publications.",
+      "scopeReviewed": "19 September 2026",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
       "statusLabel": "Company-published",
       "reviewStatusNote": "Company-authored source; underlying claims need their own evidence."

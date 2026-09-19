@@ -1,18 +1,18 @@
 # Pinnacle scale: figures, definitions and evidence
 
-Reviewed: 18 September 2026
+Reviewed: 19 September 2026
 
 ## 2.7 billion+ — Structured developmental records
-Company-reported · source reviewed
+Independent CA factual finding · SRS 4400
 A large record system can preserve observations across a child’s developmental journey, supporting continuity and review.
-Counting basis: Reported in the 7 September 2026 handout. Database row/event counts at 17 July 2026.
+Counting basis: 2,700,000,000+ records in the SRS 4400 findings at 17 July 2026 (annexure p3, item 5). SAE 3000 separately covers a 2.5 billion+ floor.
 Evidence boundary: Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness.
 Sources: operating-metrics, srs4400, sae3000
 
-## 31 million+ — Cumulative therapy services reported
-Dated institutional count
+## 31 million+ — Cumulative services recorded
+Independent CA reports · defined count
 The useful family question is how the experience recorded across services informs a clear plan and review for your child.
-Counting basis: 31,052,382 under the practitioner reports’ service-counting criteria, at 17 July 2026.
+Counting basis: 31,052,382 in the SRS 4400 findings (annexure p3, item 1), at 17 July 2026. SAE 3000 provides limited assurance over the 31 million+ floor.
 Evidence boundary: The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures.
 Sources: operating-metrics, sae3000, srs4400
 
@@ -23,10 +23,10 @@ Counting basis: 130,000 techniques: management-supplied update received 18 Septe
 Evidence boundary: The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions.
 Sources: operating-metrics, september-handout
 
-## 7.9 lakh+ — Beneficiary / family registrations reported
-Dated institutional count
+## 7.9 lakh+ — Beneficiary / family registrations
+Independent CA reports · defined count
 Behind each registration is a family seeking support. A family’s own goals and progress reviews remain the measure that matters to them.
-Counting basis: 792,614 unique beneficiary/family registrations under the stated criteria, at 17 July 2026.
+Counting basis: 792,614 unique beneficiary/family registrations in SRS 4400 (annexure p3, item 2), at 17 July 2026. SAE 3000 covers the 790,000+ floor.
 Evidence boundary: This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment.
 Sources: operating-metrics, sae3000, srs4400
 
