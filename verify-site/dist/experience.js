@@ -10,6 +10,6 @@
  const showReport=id=>{if(!reports.some(r=>r.id===id))return;reports.forEach(r=>r.hidden=r.id!==id);select.value=id;};
  if(select){document.querySelector('.report-picker').hidden=false;select.addEventListener('change',()=>showReport(select.value));showReport(select.value);}
  function reveal(){const id=location.hash.slice(1),node=document.getElementById(id);if(!node)return;const panel=node.closest('[data-experience-panel]');if(panel)showStep(panels.indexOf(panel));const report=node.closest('[data-report-panel]');if(report)showReport(report.id);}
- addEventListener('hashchange',reveal);reveal();
+ addEventListener('hashchange',reveal);addEventListener('pinnacle:reveal',reveal);reveal();
  let printState=[];addEventListener('beforeprint',()=>{printState=[...panels,...reports].map(p=>[p,p.hidden]);printState.forEach(([p])=>p.hidden=false);});addEventListener('afterprint',()=>printState.forEach(([p,hidden])=>p.hidden=hidden));
 })();

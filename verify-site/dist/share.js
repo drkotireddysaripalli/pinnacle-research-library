@@ -15,6 +15,6 @@
   const link=bar.querySelector('.share-x');const text=new URL(link.href).searchParams.get('text')||bar.dataset.shareTitle;
   try{await navigator.share({title:bar.dataset.shareTitle,text,url});}catch(error){if(error.name!=='AbortError')fallback(url);}
  });
- const reveal=()=>{let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const element=document.getElementById(id);if(!element)return;for(let item=element;item;item=item.parentElement){if(item.tagName==='DETAILS')item.open=true;}if(!element.hidden)requestAnimationFrame(()=>element.scrollIntoView({block:'start',behavior:'instant'}));};
+ const reveal=()=>{if(document.querySelector('.reading-jump-bar'))return;let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const element=document.getElementById(id);if(!element)return;for(let item=element;item;item=item.parentElement){if(item.tagName==='DETAILS')item.open=true;}if(!element.hidden)requestAnimationFrame(()=>element.scrollIntoView({block:'start',behavior:'instant'}));};
  window.addEventListener('hashchange',reveal);reveal();
 })();
