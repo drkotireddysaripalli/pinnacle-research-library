@@ -55,6 +55,11 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Books & parent resources · Publication records](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html): Company-published. Authorship and publication metadata read from the supplied books
 - [PinnacleAI® walkthrough · Developmental architecture](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html): Company-published. Company-authored walkthrough · AbilityScore layers and programme cadence
 
+## Research, books and authors
+- [Research library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html): seven DOI-linked works, original books, company-study sources and matched author profiles.
+- [Research JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.json): publication dates, DOI identifiers, authors and source URLs.
+- [Bibliography](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.txt): readable citations with research-stage labels.
+
 ## Purpose and developmental pathway
 - [Seven-stage journey](https://pinnacle-verify.saripalli.chatgpt.site/#care): documented measurement layers, daily practice and monthly reassessment.
 - [Pathway JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.json): the same visible description with source references.

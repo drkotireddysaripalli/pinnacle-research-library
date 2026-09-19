@@ -1,7 +1,7 @@
 {
   "title": "Pinnacle page sections and sources",
   "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/",
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "organization": {
     "@type": "Organization",
     "@id": "https://pinnacle-verify.saripalli.chatgpt.site/#organization",
@@ -67,6 +67,21 @@
           "parent": null,
           "description": "A source for every conclusion Reading a certificate and checking its current status are separate steps. Read the review conclusions .",
           "citations": []
+        },
+        {
+          "id": "research",
+          "name": "Read the research. Meet the authors.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#research",
+          "kind": "section",
+          "parent": null,
+          "description": "Seven DOI-linked works, parent books in English and Telugu, the twelve-study company portfolio, and verified researcher profiles — connected in one reading library.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-english",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-telugu",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#authors"
+          ]
         },
         {
           "id": "care",
@@ -245,166 +260,6 @@
           "citations": []
         },
         {
-          "id": "scale",
-          "name": "Every number should lead to its source.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale",
-          "kind": "section",
-          "parent": null,
-          "description": "Explore six measures of Pinnacle’s reported reach, activity and resources. Each keeps its counting unit, date and evidence type visible, so scale can be understood in the context of one child’s care.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
-            "https://udin.icai.org/",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html"
-          ]
-        },
-        {
-          "id": "scale-data",
-          "name": "Structured developmental records",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-data",
-          "kind": "article",
-          "parent": "scale",
-          "description": "A large record system can preserve observations across a child’s developmental journey, supporting continuity and review.",
-          "text": "Company-reported · source reviewed 2.7 billion+ Structured developmental records A large record system can preserve observations across a child’s developmental journey, supporting continuity and review. Reported in the 7 September 2026 handout. Database row/event counts at 17 July 2026. What this figure counts Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness. Definition & source history SRS 4400 factual findings SAE 3000 · 2.5B floor",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html"
-          ]
-        },
-        {
-          "id": "block-what-this-figure-counts",
-          "name": "What this figure counts",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts",
-          "kind": "details",
-          "parent": "scale-data",
-          "description": "Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness.",
-          "text": "What this figure counts Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness.",
-          "citations": []
-        },
-        {
-          "id": "scale-services",
-          "name": "Cumulative therapy services reported",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-services",
-          "kind": "article",
-          "parent": "scale",
-          "description": "The useful family question is how the experience recorded across services informs a clear plan and review for your child.",
-          "text": "Dated institutional count 31 million+ Cumulative therapy services reported The useful family question is how the experience recorded across services informs a clear plan and review for your child. 31,052,382 under the practitioner reports’ service-counting criteria, at 17 July 2026. What this figure counts The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures. Service definition SAE 3000 scope & UDIN SRS 4400 scope & UDIN",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html"
-          ]
-        },
-        {
-          "id": "block-what-this-figure-counts-2",
-          "name": "What this figure counts",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-2",
-          "kind": "details",
-          "parent": "scale-services",
-          "description": "The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures.",
-          "text": "What this figure counts The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures.",
-          "citations": []
-        },
-        {
-          "id": "scale-techniques",
-          "name": "Early-intervention technique repository",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-techniques",
-          "kind": "article",
-          "parent": "scale",
-          "description": "A technique library is useful when a practitioner selects and adapts activities to a child’s goals, interests and everyday routines.",
-          "text": "Management update · inventory not inspected 1.3 lakh Early-intervention technique repository A technique library is useful when a practitioner selects and adapts activities to a child’s goals, interests and everyday routines. 130,000 techniques: management-supplied update received 18 September 2026. The 7 September handout reports an earlier 90,000+ library. What this figure counts The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions. Updated figure & evidence scope Earlier published library count",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html"
-          ]
-        },
-        {
-          "id": "block-what-this-figure-counts-3",
-          "name": "What this figure counts",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-3",
-          "kind": "details",
-          "parent": "scale-techniques",
-          "description": "The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions.",
-          "text": "What this figure counts The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions.",
-          "citations": []
-        },
-        {
-          "id": "scale-families",
-          "name": "Beneficiary / family registrations reported",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-families",
-          "kind": "article",
-          "parent": "scale",
-          "description": "Behind each registration is a family seeking support. A family’s own goals and progress reviews remain the measure that matters to them.",
-          "text": "Dated institutional count 7.9 lakh+ Beneficiary / family registrations reported Behind each registration is a family seeking support. A family’s own goals and progress reviews remain the measure that matters to them. 792,614 unique beneficiary/family registrations under the stated criteria, at 17 July 2026. What this figure counts This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment. Population & counting basis SAE 3000 scope & UDIN SRS 4400 scope & UDIN",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html"
-          ]
-        },
-        {
-          "id": "block-what-this-figure-counts-4",
-          "name": "What this figure counts",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-4",
-          "kind": "details",
-          "parent": "scale-families",
-          "description": "This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment.",
-          "text": "What this figure counts This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment.",
-          "citations": []
-        },
-        {
-          "id": "scale-countries",
-          "name": "Countries of family origin reported",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-countries",
-          "kind": "article",
-          "parent": "scale",
-          "description": "Families may connect with developmental support across borders, including through remote delivery where available.",
-          "text": "Company-reported international reach 70+ Countries of family origin reported Families may connect with developmental support across borders, including through remote delivery where available. Company-reported international reach in the July 2026 dossier, including remote delivery. What this figure counts Countries of family origin are different from countries with a physical Pinnacle centre. The reviewed practitioner reports do not establish this country count. What international reach counts Dossier · dated source",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
-          ]
-        },
-        {
-          "id": "block-what-this-figure-counts-5",
-          "name": "What this figure counts",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-5",
-          "kind": "details",
-          "parent": "scale-countries",
-          "description": "Countries of family origin are different from countries with a physical Pinnacle centre. The reviewed practitioner reports do not establish this country count.",
-          "text": "What this figure counts Countries of family origin are different from countries with a physical Pinnacle centre. The reviewed practitioner reports do not establish this country count.",
-          "citations": []
-        },
-        {
-          "id": "scale-centres",
-          "name": "Centres in the reported network",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-centres",
-          "kind": "article",
-          "parent": "scale",
-          "description": "A network becomes relevant locally. Find your centre, its facility identifier and the source behind each listed document.",
-          "text": "Network scope distinguished 70+ Centres in the reported network A network becomes relevant locally. Find your centre, its facility identifier and the source behind each listed document. Network figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026. What this figure counts Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing. Complete HFR evidence Network vs operational definition 49-centre factual findings",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html"
-          ]
-        },
-        {
-          "id": "block-what-this-figure-counts-6",
-          "name": "What this figure counts",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-6",
-          "kind": "details",
-          "parent": "scale-centres",
-          "description": "Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.",
-          "text": "What this figure counts Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.",
-          "citations": []
-        },
-        {
           "id": "impact",
           "name": "A clearer starting point. A connected way forward.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#impact",
@@ -467,6 +322,45 @@
           ]
         },
         {
+          "id": "family",
+          "name": "Three questions. A clearer starting point.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#family",
+          "kind": "section",
+          "parent": null,
+          "description": "Credentials are most useful when they help you ask informed questions about the support your child will receive.",
+          "citations": []
+        },
+        {
+          "id": "block-is-this-the-right-document",
+          "name": "Is this the right document?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-is-this-the-right-document",
+          "kind": "article",
+          "parent": "family",
+          "description": "Match the name of the product or centre, its address and the activity covered. Ask for the latest copy for the place you will visit.",
+          "text": "Is this the right document? Match the name of the product or centre, its address and the activity covered. Ask for the latest copy for the place you will visit. Check centre records ↗",
+          "citations": []
+        },
+        {
+          "id": "block-what-can-it-tell-me",
+          "name": "What can it tell me?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-can-it-tell-me",
+          "kind": "article",
+          "parent": "family",
+          "description": "A licence describes permitted activity. A quality certificate describes a system. A study explores a specific question in a defined group of children.",
+          "text": "What can it tell me? A licence describes permitted activity. A quality certificate describes a system. A study explores a specific question in a defined group of children. Understand evidence types ↗",
+          "citations": []
+        },
+        {
+          "id": "block-how-will-we-know-it-is-helping",
+          "name": "How will we know it is helping?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-how-will-we-know-it-is-helping",
+          "kind": "article",
+          "parent": "family",
+          "description": "Ask how your child’s starting abilities, goals and progress will be measured, when the plan will be reviewed and how practice carries into home and school.",
+          "text": "How will we know it is helping? Ask how your child’s starting abilities, goals and progress will be measured, when the plan will be reviewed and how practice carries into home and school. See the seven-stage pathway ↗",
+          "citations": []
+        },
+        {
           "id": "records",
           "name": "What would you like to verify?",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#records",
@@ -526,11 +420,14 @@
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
             "https://zenodo.org/records/19482123",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
             "https://zenodo.org/records/19482476",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482476",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html",
             "https://www.pinnacleblooms.org/research-studies",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-studies",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/appreciations.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/recognition-register.html",
@@ -540,10 +437,12 @@
             "https://www.ipindia.gov.in/storage/uploads/docs-operator/c47b878d-ac11-41b8-a3a7-4133c61fbff2.pdf",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
             "https://www.pinnacleblooms.org/global-research-whitebook",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#global-research-whitebook",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
             "https://drive.google.com/file/d/1TyNq0qZzZwF5C_H5f3Ao4xxYpYubNn8s/view",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#parent-books",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
           ]
         },
@@ -843,10 +742,11 @@
           "kind": "details",
           "parent": "records",
           "description": "Development and preliminary psychometric characterization",
-          "text": "Research & outcomes Original reviewed AbilityScore · Methodology preprint Development and preliminary psychometric characterization What this means for your family A methods paper lets practitioners examine how a measurement approach was developed and where further validation is needed. Repository Zenodo Published 9 April 2026 DOI 10.5281/zenodo.19482123 Publication type Preprint · preliminary evidence What this supports The public record describes the construction of AbilityScore and preliminary operational psychometric findings. The authors identify formal validation as planned. Scope & limits Operational inter-rater reliability is not completed external concurrent validity. A repository deposit does not establish journal peer review or independent replication. Read reported measurement properties within the instrument version, methods and population stated by the authors. Permanent record Read methodology preprint Ask about this record Source: Original Zenodo repository metadata and abstract, retrieved 15 September 2026. Reviewed: 15 September 2026 · Repository metadata checked; journal peer review not established.",
+          "text": "Research & outcomes Original reviewed AbilityScore · Methodology preprint Development and preliminary psychometric characterization What this means for your family A methods paper lets practitioners examine how a measurement approach was developed and where further validation is needed. Repository Zenodo Published 9 April 2026 DOI 10.5281/zenodo.19482123 Publication type Preprint · preliminary evidence What this supports The public record describes the construction of AbilityScore and preliminary operational psychometric findings. The authors identify formal validation as planned. Scope & limits Operational inter-rater reliability is not completed external concurrent validity. A repository deposit does not establish journal peer review or independent replication. Read reported measurement properties within the instrument version, methods and population stated by the authors. Permanent record Read methodology preprint Research, books & author profiles Ask about this record Source: Original Zenodo repository metadata and abstract, retrieved 15 September 2026. Reviewed: 15 September 2026 · Repository metadata checked; journal peer review not established.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
-            "https://zenodo.org/records/19482123"
+            "https://zenodo.org/records/19482123",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123"
           ]
         },
         {
@@ -856,10 +756,11 @@
           "kind": "details",
           "parent": "records",
           "description": "Original protocol reviewed · Version 2.1 sets out planned validation methods",
-          "text": "Research & outcomes Original reviewed Study protocol AbilityScore · External-validation protocol Original protocol reviewed · Version 2.1 sets out planned validation methods What this means for your family A published protocol makes the proposed research question and methods visible before a completed result is claimed. Source review conclusion The reviewed source is protocol BHCL-VAL-2026-001, version 2.1. It describes a proposed external-validation study and sample plan; completed validation results are not claimed. Protocol BHCL-VAL-2026-001 Published 9 April 2026 · version 2.1 DOI 10.5281/zenodo.19482476 Study size described Planned 300-participant component; 60-person retest subset What this supports The deposited protocol describes planned concurrent-validity, test–retest and minimal-clinically-important-difference research, including comparator instruments. Scope & limits This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed. Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion. Permanent record Read the study protocol Ask about this record Source: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026. Reviewed: 15 September 2026 · Scope rechecked: 18 September 2026 · Primary protocol and repository metadata reviewed; completed comparator validation is not established.",
+          "text": "Research & outcomes Original reviewed Study protocol AbilityScore · External-validation protocol Original protocol reviewed · Version 2.1 sets out planned validation methods What this means for your family A published protocol makes the proposed research question and methods visible before a completed result is claimed. Source review conclusion The reviewed source is protocol BHCL-VAL-2026-001, version 2.1. It describes a proposed external-validation study and sample plan; completed validation results are not claimed. Protocol BHCL-VAL-2026-001 Published 9 April 2026 · version 2.1 DOI 10.5281/zenodo.19482476 Study size described Planned 300-participant component; 60-person retest subset What this supports The deposited protocol describes planned concurrent-validity, test–retest and minimal-clinically-important-difference research, including comparator instruments. Scope & limits This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed. Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion. Permanent record Read the study protocol Research, books & author profiles Ask about this record Source: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026. Reviewed: 15 September 2026 · Scope rechecked: 18 September 2026 · Primary protocol and repository metadata reviewed; completed comparator validation is not established.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
-            "https://zenodo.org/records/19482476"
+            "https://zenodo.org/records/19482476",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482476"
           ]
         },
         {
@@ -869,11 +770,12 @@
           "kind": "details",
           "parent": "records",
           "description": "Study-by-study sources, populations and limitations",
-          "text": "Research & outcomes Company-published Twelve-study portfolio · Company research Study-by-study sources, populations and limitations What this means for your family Study-level detail helps families and referring professionals see which children and outcomes a research statement actually concerns. Source type Company-authored research portfolio Summary editions 2025 Whitebook; July 2026 dossier; September 2026 handout Evidence design Varies by study; operator-network research Review boundary Portfolio mapped; full independent re-analysis not performed What this supports The source publications describe twelve research topics across measurement, therapy, home practice, equity and participation. The study index identifies the populations and available original report links. Scope & limits Small study cohorts cannot be replaced by cumulative network-service totals. Journal peer review, independent replication and ethics approval require their own documents. Findings apply to the populations and methods studied. School-entry findings must remain qualified to children meeting readiness criteria; the parent-led generalisation report notes limitations and a non-significant home-adherence correlation. Permanent record View study evidence index Company research library Ask about this record Source: Whitebook pp12–21; Evidence Dossier v2 study register; September handout physical p8; company-hosted study reports. Reviewed: 15 September 2026 · Current issuer or registry status: not independently confirmed.",
+          "text": "Research & outcomes Company-published Twelve-study portfolio · Company research Study-by-study sources, populations and limitations What this means for your family Study-level detail helps families and referring professionals see which children and outcomes a research statement actually concerns. Source type Company-authored research portfolio Summary editions 2025 Whitebook; July 2026 dossier; September 2026 handout Evidence design Varies by study; operator-network research Review boundary Portfolio mapped; full independent re-analysis not performed What this supports The source publications describe twelve research topics across measurement, therapy, home practice, equity and participation. The study index identifies the populations and available original report links. Scope & limits Small study cohorts cannot be replaced by cumulative network-service totals. Journal peer review, independent replication and ethics approval require their own documents. Findings apply to the populations and methods studied. School-entry findings must remain qualified to children meeting readiness criteria; the parent-led generalisation report notes limitations and a non-significant home-adherence correlation. Permanent record View study evidence index Company research library Research, books & author profiles Ask about this record Source: Whitebook pp12–21; Evidence Dossier v2 study register; September handout physical p8; company-hosted study reports. Reviewed: 15 September 2026 · Current issuer or registry status: not independently confirmed.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html",
-            "https://www.pinnacleblooms.org/research-studies"
+            "https://www.pinnacleblooms.org/research-studies",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-studies"
           ]
         },
         {
@@ -945,10 +847,11 @@
           "kind": "details",
           "parent": "records",
           "description": "2025 Global Edition · Company-authored framework and study summaries",
-          "text": "Source publications Company-published Global Research Whitebook · Historical edition 2025 Global Edition · Company-authored framework and study summaries What this means for your family The Whitebook explains Pinnacle’s published framework and research narrative, which can guide more specific questions about sources. Edition 2025 Global Edition Source role Historical research narrative Authorship Pinnacle / named founders and consortium Version handling Upload dates do not change the edition date What this supports The Whitebook explains the company’s framework and its historical study narrative. It is useful for tracing the origins of claims and the research portfolio. Scope & limits It is not an independent issuer record. Historical scale figures, patent language, exclusivity claims and validation language need reconciliation with current originals. Treat the title and text as a historical company publication, not as this page’s verification conclusion. Permanent record Company Whitebook page Ask about this record Source: Original 30-page Whitebook reviewed; study summaries pp12–21. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
+          "text": "Source publications Company-published Global Research Whitebook · Historical edition 2025 Global Edition · Company-authored framework and study summaries What this means for your family The Whitebook explains Pinnacle’s published framework and research narrative, which can guide more specific questions about sources. Edition 2025 Global Edition Source role Historical research narrative Authorship Pinnacle / named founders and consortium Version handling Upload dates do not change the edition date What this supports The Whitebook explains the company’s framework and its historical study narrative. It is useful for tracing the origins of claims and the research portfolio. Scope & limits It is not an independent issuer record. Historical scale figures, patent language, exclusivity claims and validation language need reconciliation with current originals. Treat the title and text as a historical company publication, not as this page’s verification conclusion. Permanent record Company Whitebook page Research, books & author profiles Ask about this record Source: Original 30-page Whitebook reviewed; study summaries pp12–21. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
-            "https://www.pinnacleblooms.org/global-research-whitebook"
+            "https://www.pinnacleblooms.org/global-research-whitebook",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#global-research-whitebook"
           ]
         },
         {
@@ -983,9 +886,10 @@
           "kind": "details",
           "parent": "records",
           "description": "Authorship and publication metadata read from the supplied books",
-          "text": "Source publications Company-published Books & parent resources · Publication records Authorship and publication metadata read from the supplied books What this means for your family Parent resources can support informed conversations and everyday participation alongside an individual professional plan. Autism — mother’s hand book Sreeja Reddy Saripalli · first published 2021 Publisher printed India Herald Group of Publishers ISBN printed 978-93-5493-628-9 The Voice of the Unheard Sreeja Reddy Saripalli named as author in the book What this supports The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. Scope & limits A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata. Permanent record Ask about this record Source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
+          "text": "Source publications Company-published Books & parent resources · Publication records Authorship and publication metadata read from the supplied books What this means for your family Parent resources can support informed conversations and everyday participation alongside an individual professional plan. Autism — mother’s hand book Sreeja Reddy Saripalli · first published 2021 Publisher printed India Herald Group of Publishers ISBN printed 978-93-5493-628-9 The Voice of the Unheard Sreeja Reddy Saripalli named as author in the book What this supports The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. Scope & limits A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata. Permanent record Research, books & author profiles Ask about this record Source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
           "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html"
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#parent-books"
           ]
         },
         {
@@ -998,68 +902,6 @@
           "text": "Source publications Company-published PinnacleAI® walkthrough · Developmental architecture Company-authored walkthrough · AbilityScore layers and programme cadence What this means for your family Helps you ask how the initial assessment, daily programme and monthly review connect. Ask the care team which version is used for your child and how recommendations are reviewed by people. Source PinnacleAI® - Soveriegn WalkThrough.pdf Edition date Not established from the reviewed copy Length 61 PDF pages Measurement layers 79 abilities · 349 skills · 17 domains · 591 observations Programme cadence 7–9 daily techniques; monthly AbilityScore refresh What this supports The reviewed company walkthrough explicitly distinguishes abilities, skills, domains and observations. It describes the personal development kernel, daily practice, monthly reassessment and participation goals. Scope & limits A company-authored architecture and programme description is not independent clinical validation or a regulatory extension. Historical diagnosis, exclusivity, patent and endorsement wording is not adopted by this review. Current MD-5 and BIS originals control their respective scopes. The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references. Permanent record Ask about this record Source: PinnacleAI® - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026. Reviewed: 18 September 2026 · Company-authored source; underlying claims need their own evidence.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
-          ]
-        },
-        {
-          "id": "family",
-          "name": "Three questions. A clearer starting point.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#family",
-          "kind": "section",
-          "parent": null,
-          "description": "Credentials are most useful when they help you ask informed questions about the support your child will receive.",
-          "citations": []
-        },
-        {
-          "id": "block-is-this-the-right-document",
-          "name": "Is this the right document?",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-is-this-the-right-document",
-          "kind": "article",
-          "parent": "family",
-          "description": "Match the name of the product or centre, its address and the activity covered. Ask for the latest copy for the place you will visit.",
-          "text": "Is this the right document? Match the name of the product or centre, its address and the activity covered. Ask for the latest copy for the place you will visit. Check centre records ↗",
-          "citations": []
-        },
-        {
-          "id": "block-what-can-it-tell-me",
-          "name": "What can it tell me?",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-can-it-tell-me",
-          "kind": "article",
-          "parent": "family",
-          "description": "A licence describes permitted activity. A quality certificate describes a system. A study explores a specific question in a defined group of children.",
-          "text": "What can it tell me? A licence describes permitted activity. A quality certificate describes a system. A study explores a specific question in a defined group of children. Understand evidence types ↗",
-          "citations": []
-        },
-        {
-          "id": "block-how-will-we-know-it-is-helping",
-          "name": "How will we know it is helping?",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-how-will-we-know-it-is-helping",
-          "kind": "article",
-          "parent": "family",
-          "description": "Ask how your child’s starting abilities, goals and progress will be measured, when the plan will be reviewed and how practice carries into home and school.",
-          "text": "How will we know it is helping? Ask how your child’s starting abilities, goals and progress will be measured, when the plan will be reviewed and how practice carries into home and school. See the seven-stage pathway ↗",
-          "citations": []
-        },
-        {
-          "id": "data-scale",
-          "name": "Structured developmental records. One child’s journey at a time.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#data-scale",
-          "kind": "section",
-          "parent": null,
-          "description": "Company-reported in the 7 September 2026 handout. Counting basis: database rows/events · cutoff 17 July 2026.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
-          ]
-        },
-        {
-          "id": "block-why-do-some-pinnacle-sources-say-2-5-billion-and-others-2-7-billion",
-          "name": "Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+?",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-why-do-some-pinnacle-sources-say-2-5-billion-and-others-2-7-billion",
-          "kind": "details",
-          "parent": "data-scale",
-          "description": "The July dossier used a 2.5 billion+ floor and retired earlier 2.7 billion wording. The September handout subsequently reports 2.7 billion+ observed row counts. The source review distinguishes the 2.5 billion floor assertion in limited assurance from the 2.7 billion factual row-count finding under agreed procedures. Those procedures do not provide an assurance opinion.",
-          "text": "Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+? The July dossier used a 2.5 billion+ floor and retired earlier 2.7 billion wording. The September handout subsequently reports 2.7 billion+ observed row counts. The source review distinguishes the 2.5 billion floor assertion in limited assurance from the 2.7 billion factual row-count finding under agreed procedures. Those procedures do not provide an assurance opinion. These are dated measures with different reporting roles. Neither should be described as an audited count of AI-training examples. Restricted practitioner reports are not republished here. Read Pinnacle’s source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
           ]
         },
         {
@@ -1157,6 +999,189 @@
           "description": "“Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.”",
           "text": "Read the full software and developmental-module scope “Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.” BIS MD/L-2026029599 · schedule page 2 · line breaks normalised",
           "citations": []
+        },
+        {
+          "id": "scale",
+          "name": "Every number should lead to its source.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale",
+          "kind": "section",
+          "parent": null,
+          "description": "Explore six measures of Pinnacle’s reported reach, activity and resources. Each keeps its counting unit, date and evidence type visible, so scale can be understood in the context of one child’s care.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
+            "https://udin.icai.org/",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html"
+          ]
+        },
+        {
+          "id": "scale-data",
+          "name": "Structured developmental records",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-data",
+          "kind": "article",
+          "parent": "scale",
+          "description": "A large record system can preserve observations across a child’s developmental journey, supporting continuity and review.",
+          "text": "Company-reported · source reviewed 2.7 billion+ Structured developmental records A large record system can preserve observations across a child’s developmental journey, supporting continuity and review. Reported in the 7 September 2026 handout. Database row/event counts at 17 July 2026. What this figure counts Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness. Definition & source history SRS 4400 factual findings SAE 3000 · 2.5B floor",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html"
+          ]
+        },
+        {
+          "id": "block-what-this-figure-counts",
+          "name": "What this figure counts",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts",
+          "kind": "details",
+          "parent": "scale-data",
+          "description": "Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness.",
+          "text": "What this figure counts Session entries, assessment observations, technique ratings and other structured events. The evidence does not identify every record as an AI-training example or establish clinical effectiveness.",
+          "citations": []
+        },
+        {
+          "id": "scale-services",
+          "name": "Cumulative therapy services reported",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-services",
+          "kind": "article",
+          "parent": "scale",
+          "description": "The useful family question is how the experience recorded across services informs a clear plan and review for your child.",
+          "text": "Dated institutional count 31 million+ Cumulative therapy services reported The useful family question is how the experience recorded across services informs a clear plan and review for your child. 31,052,382 under the practitioner reports’ service-counting criteria, at 17 July 2026. What this figure counts The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures. Service definition SAE 3000 scope & UDIN SRS 4400 scope & UDIN",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html"
+          ]
+        },
+        {
+          "id": "block-what-this-figure-counts-2",
+          "name": "What this figure counts",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-2",
+          "kind": "details",
+          "parent": "scale-services",
+          "description": "The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures.",
+          "text": "What this figure counts The defined total includes assessments, screenings and parent training. It is not established as 31 million successful one-to-one therapy sessions; service volume and clinical success are separate measures.",
+          "citations": []
+        },
+        {
+          "id": "scale-techniques",
+          "name": "Early-intervention technique repository",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-techniques",
+          "kind": "article",
+          "parent": "scale",
+          "description": "A technique library is useful when a practitioner selects and adapts activities to a child’s goals, interests and everyday routines.",
+          "text": "Management update · inventory not inspected 1.3 lakh Early-intervention technique repository A technique library is useful when a practitioner selects and adapts activities to a child’s goals, interests and everyday routines. 130,000 techniques: management-supplied update received 18 September 2026. The 7 September handout reports an earlier 90,000+ library. What this figure counts The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions. Updated figure & evidence scope Earlier published library count",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html"
+          ]
+        },
+        {
+          "id": "block-what-this-figure-counts-3",
+          "name": "What this figure counts",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-3",
+          "kind": "details",
+          "parent": "scale-techniques",
+          "description": "The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions.",
+          "text": "What this figure counts The updated repository count has not been reconciled to a dated inventory extract. The reviewed UDIN reports do not establish this figure, and technique count does not mean 130,000 separately validated interventions.",
+          "citations": []
+        },
+        {
+          "id": "scale-families",
+          "name": "Beneficiary / family registrations reported",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-families",
+          "kind": "article",
+          "parent": "scale",
+          "description": "Behind each registration is a family seeking support. A family’s own goals and progress reviews remain the measure that matters to them.",
+          "text": "Dated institutional count 7.9 lakh+ Beneficiary / family registrations reported Behind each registration is a family seeking support. A family’s own goals and progress reviews remain the measure that matters to them. 792,614 unique beneficiary/family registrations under the stated criteria, at 17 July 2026. What this figure counts This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment. Population & counting basis SAE 3000 scope & UDIN SRS 4400 scope & UDIN",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html"
+          ]
+        },
+        {
+          "id": "block-what-this-figure-counts-4",
+          "name": "What this figure counts",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-4",
+          "kind": "details",
+          "parent": "scale-families",
+          "description": "This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment.",
+          "text": "What this figure counts This is the defined registration measure. It is not a count of unique children with independently verified outcomes, and it does not itself measure family empowerment.",
+          "citations": []
+        },
+        {
+          "id": "scale-countries",
+          "name": "Countries of family origin reported",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-countries",
+          "kind": "article",
+          "parent": "scale",
+          "description": "Families may connect with developmental support across borders, including through remote delivery where available.",
+          "text": "Company-reported international reach 70+ Countries of family origin reported Families may connect with developmental support across borders, including through remote delivery where available. Company-reported international reach in the July 2026 dossier, including remote delivery. What this figure counts Countries of family origin are different from countries with a physical Pinnacle centre. The reviewed practitioner reports do not establish this country count. What international reach counts Dossier · dated source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
+        },
+        {
+          "id": "block-what-this-figure-counts-5",
+          "name": "What this figure counts",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-5",
+          "kind": "details",
+          "parent": "scale-countries",
+          "description": "Countries of family origin are different from countries with a physical Pinnacle centre. The reviewed practitioner reports do not establish this country count.",
+          "text": "What this figure counts Countries of family origin are different from countries with a physical Pinnacle centre. The reviewed practitioner reports do not establish this country count.",
+          "citations": []
+        },
+        {
+          "id": "scale-centres",
+          "name": "Centres in the reported network",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#scale-centres",
+          "kind": "article",
+          "parent": "scale",
+          "description": "A network becomes relevant locally. Find your centre, its facility identifier and the source behind each listed document.",
+          "text": "Network scope distinguished 70+ Centres in the reported network A network becomes relevant locally. Find your centre, its facility identifier and the source behind each listed document. Network figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026. What this figure counts Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing. Complete HFR evidence Network vs operational definition 49-centre factual findings",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html"
+          ]
+        },
+        {
+          "id": "block-what-this-figure-counts-6",
+          "name": "What this figure counts",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-figure-counts-6",
+          "kind": "details",
+          "parent": "scale-centres",
+          "description": "Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.",
+          "text": "What this figure counts Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.",
+          "citations": []
+        },
+        {
+          "id": "data-scale",
+          "name": "Structured developmental records. One child’s journey at a time.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#data-scale",
+          "kind": "section",
+          "parent": null,
+          "description": "Company-reported in the 7 September 2026 handout. Counting basis: database rows/events · cutoff 17 July 2026.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
+          ]
+        },
+        {
+          "id": "block-why-do-some-pinnacle-sources-say-2-5-billion-and-others-2-7-billion",
+          "name": "Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-why-do-some-pinnacle-sources-say-2-5-billion-and-others-2-7-billion",
+          "kind": "details",
+          "parent": "data-scale",
+          "description": "The July dossier used a 2.5 billion+ floor and retired earlier 2.7 billion wording. The September handout subsequently reports 2.7 billion+ observed row counts. The source review distinguishes the 2.5 billion floor assertion in limited assurance from the 2.7 billion factual row-count finding under agreed procedures. Those procedures do not provide an assurance opinion.",
+          "text": "Why do some Pinnacle sources say 2.5 billion+ and others 2.7 billion+? The July dossier used a 2.5 billion+ floor and retired earlier 2.7 billion wording. The September handout subsequently reports 2.7 billion+ observed row counts. The source review distinguishes the 2.5 billion floor assertion in limited assurance from the 2.7 billion factual row-count finding under agreed procedures. Those procedures do not provide an assurance opinion. These are dated measures with different reporting roles. Neither should be described as an audited count of AI-training examples. Restricted practitioner reports are not republished here. Read Pinnacle’s source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
+          ]
         },
         {
           "id": "centres",
@@ -2306,193 +2331,6 @@
           ]
         },
         {
-          "id": "review",
-          "name": "Originals reviewed. Conclusions made clear.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#review",
-          "kind": "section",
-          "parent": null,
-          "description": "Each conclusion reflects the documents inspected. Historical certificates, study protocols and company-reported claims are identified precisely, so you can see what each source establishes.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html"
-          ]
-        },
-        {
-          "id": "block-classification-follow-the-issued-licence",
-          "name": "Classification: follow the issued licence",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-classification-follow-the-issued-licence",
-          "kind": "article",
-          "parent": "review",
-          "description": "Class B is documented in the issued MD-5. The earlier Class A application is retained as part of the regulatory history.",
-          "text": "Application + MD-5 reviewed Classification: follow the issued licence Class B is documented in the issued MD-5. The earlier Class A application is retained as part of the regulatory history. Evidence scope: The separate issued CAL copy is not in the reviewed set; its date and reference are attributed to company publications. Read the source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html"
-          ]
-        },
-        {
-          "id": "block-licence-and-registration-copies-read-their-stated-scope",
-          "name": "Licence and registration copies: read their stated scope",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-licence-and-registration-copies-read-their-stated-scope",
-          "kind": "article",
-          "parent": "review",
-          "description": "Original licence and registration copies are reviewed by named entity, activity, reference and printed dates.",
-          "text": "Originals reviewed Licence and registration copies: read their stated scope Original licence and registration copies are reviewed by named entity, activity, reference and printed dates. Evidence scope: Current suspension, cancellation, renewal or amendment status requires a dated issuer check. Only exact live registry matches receive the registry badge. Read the source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
-          ]
-        },
-        {
-          "id": "block-gst-preserve-the-historical-record",
-          "name": "GST: preserve the historical record",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-gst-preserve-the-historical-record",
-          "kind": "article",
-          "parent": "review",
-          "description": "The 2017 REG-06 is retained with its printed legal and trade names, alongside the company name-change history.",
-          "text": "Historical original reviewed GST: preserve the historical record The 2017 REG-06 is retained with its printed legal and trade names, alongside the company name-change history. Evidence scope: The reviewed certificate does not establish the current amended legal name or taxpayer status. Read the source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html"
-          ]
-        },
-        {
-          "id": "block-external-validation-identify-the-source-as-a-protocol",
-          "name": "External validation: identify the source as a protocol",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-external-validation-identify-the-source-as-a-protocol",
-          "kind": "article",
-          "parent": "review",
-          "description": "The reviewed external-validation source is a published study protocol. It sets out planned methods; completed results are not claimed.",
-          "text": "Original protocol reviewed External validation: identify the source as a protocol The reviewed external-validation source is a published study protocol. It sets out planned methods; completed results are not claimed. Evidence scope: A final study report, with its population, methods, results and limitations, would support a new evidence conclusion. Read the source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html"
-          ]
-        },
-        {
-          "id": "block-outcome-claims-keep-the-calculation-boundary-visible",
-          "name": "Outcome claims: keep the calculation boundary visible",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-outcome-claims-keep-the-calculation-boundary-visible",
-          "kind": "article",
-          "parent": "review",
-          "description": "The headline improvement claim is recorded as company-reported. No verified network-wide percentage is concluded from this document set.",
-          "text": "Source publications reviewed Outcome claims: keep the calculation boundary visible The headline improvement claim is recorded as company-reported. No verified network-wide percentage is concluded from this document set. Evidence scope: The SAE 3000 scope excludes outcome-study figures. A defined denominator and reproducible calculation are required to evaluate the headline claim. Read the source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html"
-          ]
-        },
-        {
-          "id": "block-centre-evidence-match-each-document-to-its-premises",
-          "name": "Centre evidence: match each document to its premises",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-centre-evidence-match-each-document-to-its-premises",
-          "kind": "article",
-          "parent": "review",
-          "description": "All 52 workbook centres are included. Across the workbook and inspected certificate copies, 53 distinct HFR identifiers are retained. Eight district summaries and four individually inspected district originals remain separate.",
-          "text": "Source review recorded Centre evidence: match each document to its premises All 52 workbook centres are included. Across the workbook and inspected certificate copies, 53 distinct HFR identifiers are retained. Eight district summaries and four individually inspected district originals remain separate. Evidence scope: Workbook RS flags do not establish operational or HFR status. Nellore’s district certificate period ended on 30 October 2024. The additional Tirupati certificate is retained without assuming replacement or cancellation. Read the source record",
-          "citations": []
-        },
-        {
-          "id": "block-practitioner-reports-preserve-the-stated-scope",
-          "name": "Practitioner reports: preserve the stated scope",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-practitioner-reports-preserve-the-stated-scope",
-          "kind": "article",
-          "parent": "review",
-          "description": "Report particulars and scope are recorded. Restricted full reports are not republished here.",
-          "text": "Original reports reviewed Practitioner reports: preserve the stated scope Report particulars and scope are recorded. Restricted full reports are not republished here. Evidence scope: The reports’ circulation restrictions remain attached. A UDIN match authenticates particulars and does not enlarge a report’s assurance scope. Read the source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html"
-          ]
-        },
-        {
-          "id": "block-change-history",
-          "name": "Change history +",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-change-history",
-          "kind": "details",
-          "parent": "review",
-          "description": "Change history + 18 September 2026 · Purpose, pathway and imagery: added the documented AbilityScore layers, daily practice and monthly review cycle, original-source regulatory scope, classification and SDG context, plus three clearly labelled Pinnacle World illustrations. Improved phone and tablet layouts. 18 September 2026 · Section descriptions and identity: connected the brand and legal entity, added section links and a terminology guide, and matched structured page descriptions to the visible evidence. 18 September 2026 · Complete HFR inventory and statistics: added all 52 supplied workbook centres, reconciled 53 distinct HFR IDs across source sets, and linked six headline statistics to definitions and source records. 18 September 2026 · Family meaning and global context: added family relevance to all 33 records, dated data-scale definitions, the distinct MD-3/MD-5/BIS scopes, international guidance and five sourced global comparisons. Enabled public indexing and expanded matching structured data. 18 September 2026 · Review conclusions: rechecked the flagged source material; separated original review from historical validity, application status, study protocols and company-reported outcomes. Improved typography, navigation and source icons. 15 September 2026 · Experience update: added family explanations, centre lookup, evidence filters, record links, correction requests and the source-review register; corrected mobile layout. 15 September 2026 · Initial source review: recorded the operative MD-5 reference 000248, September BIS licence, legal identity registry match and source-specific research limitations.",
-          "text": "Change history + 18 September 2026 · Purpose, pathway and imagery: added the documented AbilityScore layers, daily practice and monthly review cycle, original-source regulatory scope, classification and SDG context, plus three clearly labelled Pinnacle World illustrations. Improved phone and tablet layouts. 18 September 2026 · Section descriptions and identity: connected the brand and legal entity, added section links and a terminology guide, and matched structured page descriptions to the visible evidence. 18 September 2026 · Complete HFR inventory and statistics: added all 52 supplied workbook centres, reconciled 53 distinct HFR IDs across source sets, and linked six headline statistics to definitions and source records. 18 September 2026 · Family meaning and global context: added family relevance to all 33 records, dated data-scale definitions, the distinct MD-3/MD-5/BIS scopes, international guidance and five sourced global comparisons. Enabled public indexing and expanded matching structured data. 18 September 2026 · Review conclusions: rechecked the flagged source material; separated original review from historical validity, application status, study protocols and company-reported outcomes. Improved typography, navigation and source icons. 15 September 2026 · Experience update: added family explanations, centre lookup, evidence filters, record links, correction requests and the source-review register; corrected mobile layout. 15 September 2026 · Initial source review: recorded the operative MD-5 reference 000248, September BIS licence, legal identity registry match and source-specific research limitations.",
-          "citations": []
-        },
-        {
-          "id": "method",
-          "name": "Evidence with its meaning intact.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#method",
-          "kind": "section",
-          "parent": null,
-          "description": "A record is useful when you can see both what it supports and the limits of that support.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/document-manifest.json"
-          ]
-        },
-        {
-          "id": "block-start-with-the-source",
-          "name": "Start with the source",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-start-with-the-source",
-          "kind": "article",
-          "parent": "method",
-          "description": "Original documents take priority over cover letters, brochures and website summaries. The review date describes our inspection, not a fresh confirmation from the issuer.",
-          "text": "01 / PROVENANCE Start with the source Original documents take priority over cover letters, brochures and website summaries. The review date describes our inspection, not a fresh confirmation from the issuer.",
-          "citations": []
-        },
-        {
-          "id": "block-match-the-exact-entity",
-          "name": "Match the exact entity",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-match-the-exact-entity",
-          "kind": "article",
-          "parent": "method",
-          "description": "Read the named company, product, address and permitted activity. A product licence does not establish the registration of every therapy centre.",
-          "text": "02 / SCOPE Match the exact entity Read the named company, product, address and permitted activity. A product licence does not establish the registration of every therapy centre.",
-          "citations": []
-        },
-        {
-          "id": "block-keep-each-claim-precise",
-          "name": "Keep each claim precise",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-keep-each-claim-precise",
-          "kind": "article",
-          "parent": "method",
-          "description": "Business identity, quality systems, clinical evidence and government appreciation serve different purposes. Ask what each one means for your child’s plan; individual outcomes vary.",
-          "text": "03 / MEANING Keep each claim precise Business identity, quality systems, clinical evidence and government appreciation serve different purposes. Ask what each one means for your child’s plan; individual outcomes vary.",
-          "citations": []
-        },
-        {
-          "id": "block-review-boundaries-publication-notes",
-          "name": "Review boundaries & publication notes +",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-review-boundaries-publication-notes",
-          "kind": "details",
-          "parent": "method",
-          "description": "The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The named verification contact can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source.",
-          "text": "Review boundaries & publication notes + The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The named verification contact can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source. Public document copies preserve issuer, entity, reference, scope and dates while removing personal identifiers and signatures where appropriate. A document’s stated validity is recorded separately from a live check for suspension, cancellation or changes. View file-integrity records . Research protocols describe planned methods. Company summaries and operational totals are not substitutes for completed study results with methods, populations, outcomes and limitations.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/document-manifest.json"
-          ]
-        },
-        {
-          "id": "terminology",
-          "name": "Clear terms. Better questions.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#terminology",
-          "kind": "section",
-          "parent": null,
-          "description": "A practical reading guide to the credentials, report types and international classifications used on this page. Each definition links to its Pinnacle source record.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
-          ]
-        },
-        {
-          "id": "next-step",
-          "name": "Your child’s next step deserves a clear conversation.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#next-step",
-          "kind": "section",
-          "parent": null,
-          "description": "Ask the Pinnacle team about your child’s starting abilities, the proposed goals, who coordinates care and when progress will be reviewed. Bring the evidence questions that matter to your family.",
-          "citations": []
-        },
-        {
           "id": "questions",
           "name": "Clear answers. Connected to the source.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#questions",
@@ -2711,6 +2549,193 @@
           ]
         },
         {
+          "id": "terminology",
+          "name": "Clear terms. Better questions.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#terminology",
+          "kind": "section",
+          "parent": null,
+          "description": "A practical reading guide to the credentials, report types and international classifications used on this page. Each definition links to its Pinnacle source record.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+          ]
+        },
+        {
+          "id": "review",
+          "name": "Originals reviewed. Conclusions made clear.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#review",
+          "kind": "section",
+          "parent": null,
+          "description": "Each conclusion reflects the documents inspected. Historical certificates, study protocols and company-reported claims are identified precisely, so you can see what each source establishes.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html"
+          ]
+        },
+        {
+          "id": "block-classification-follow-the-issued-licence",
+          "name": "Classification: follow the issued licence",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-classification-follow-the-issued-licence",
+          "kind": "article",
+          "parent": "review",
+          "description": "Class B is documented in the issued MD-5. The earlier Class A application is retained as part of the regulatory history.",
+          "text": "Application + MD-5 reviewed Classification: follow the issued licence Class B is documented in the issued MD-5. The earlier Class A application is retained as part of the regulatory history. Evidence scope: The separate issued CAL copy is not in the reviewed set; its date and reference are attributed to company publications. Read the source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html"
+          ]
+        },
+        {
+          "id": "block-licence-and-registration-copies-read-their-stated-scope",
+          "name": "Licence and registration copies: read their stated scope",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-licence-and-registration-copies-read-their-stated-scope",
+          "kind": "article",
+          "parent": "review",
+          "description": "Original licence and registration copies are reviewed by named entity, activity, reference and printed dates.",
+          "text": "Originals reviewed Licence and registration copies: read their stated scope Original licence and registration copies are reviewed by named entity, activity, reference and printed dates. Evidence scope: Current suspension, cancellation, renewal or amendment status requires a dated issuer check. Only exact live registry matches receive the registry badge. Read the source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
+          ]
+        },
+        {
+          "id": "block-gst-preserve-the-historical-record",
+          "name": "GST: preserve the historical record",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-gst-preserve-the-historical-record",
+          "kind": "article",
+          "parent": "review",
+          "description": "The 2017 REG-06 is retained with its printed legal and trade names, alongside the company name-change history.",
+          "text": "Historical original reviewed GST: preserve the historical record The 2017 REG-06 is retained with its printed legal and trade names, alongside the company name-change history. Evidence scope: The reviewed certificate does not establish the current amended legal name or taxpayer status. Read the source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html"
+          ]
+        },
+        {
+          "id": "block-external-validation-identify-the-source-as-a-protocol",
+          "name": "External validation: identify the source as a protocol",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-external-validation-identify-the-source-as-a-protocol",
+          "kind": "article",
+          "parent": "review",
+          "description": "The reviewed external-validation source is a published study protocol. It sets out planned methods; completed results are not claimed.",
+          "text": "Original protocol reviewed External validation: identify the source as a protocol The reviewed external-validation source is a published study protocol. It sets out planned methods; completed results are not claimed. Evidence scope: A final study report, with its population, methods, results and limitations, would support a new evidence conclusion. Read the source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html"
+          ]
+        },
+        {
+          "id": "block-outcome-claims-keep-the-calculation-boundary-visible",
+          "name": "Outcome claims: keep the calculation boundary visible",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-outcome-claims-keep-the-calculation-boundary-visible",
+          "kind": "article",
+          "parent": "review",
+          "description": "The headline improvement claim is recorded as company-reported. No verified network-wide percentage is concluded from this document set.",
+          "text": "Source publications reviewed Outcome claims: keep the calculation boundary visible The headline improvement claim is recorded as company-reported. No verified network-wide percentage is concluded from this document set. Evidence scope: The SAE 3000 scope excludes outcome-study figures. A defined denominator and reproducible calculation are required to evaluate the headline claim. Read the source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html"
+          ]
+        },
+        {
+          "id": "block-centre-evidence-match-each-document-to-its-premises",
+          "name": "Centre evidence: match each document to its premises",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-centre-evidence-match-each-document-to-its-premises",
+          "kind": "article",
+          "parent": "review",
+          "description": "All 52 workbook centres are included. Across the workbook and inspected certificate copies, 53 distinct HFR identifiers are retained. Eight district summaries and four individually inspected district originals remain separate.",
+          "text": "Source review recorded Centre evidence: match each document to its premises All 52 workbook centres are included. Across the workbook and inspected certificate copies, 53 distinct HFR identifiers are retained. Eight district summaries and four individually inspected district originals remain separate. Evidence scope: Workbook RS flags do not establish operational or HFR status. Nellore’s district certificate period ended on 30 October 2024. The additional Tirupati certificate is retained without assuming replacement or cancellation. Read the source record",
+          "citations": []
+        },
+        {
+          "id": "block-practitioner-reports-preserve-the-stated-scope",
+          "name": "Practitioner reports: preserve the stated scope",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-practitioner-reports-preserve-the-stated-scope",
+          "kind": "article",
+          "parent": "review",
+          "description": "Report particulars and scope are recorded. Restricted full reports are not republished here.",
+          "text": "Original reports reviewed Practitioner reports: preserve the stated scope Report particulars and scope are recorded. Restricted full reports are not republished here. Evidence scope: The reports’ circulation restrictions remain attached. A UDIN match authenticates particulars and does not enlarge a report’s assurance scope. Read the source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html"
+          ]
+        },
+        {
+          "id": "block-change-history",
+          "name": "Change history +",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-change-history",
+          "kind": "details",
+          "parent": "review",
+          "description": "Change history + 19 September 2026 · Research and reading: linked DOI publications, original parent books and matched author profiles; added expandable topic navigation and reduced duplicate downloads. 18 September 2026 · Purpose, pathway and imagery: added the documented AbilityScore layers, daily practice and monthly review cycle, original-source regulatory scope, classification and SDG context, plus three clearly labelled Pinnacle World illustrations. Improved phone and tablet layouts. 18 September 2026 · Section descriptions and identity: connected the brand and legal entity, added section links and a terminology guide, and matched structured page descriptions to the visible evidence. 18 September 2026 · Complete HFR inventory and statistics: added all 52 supplied workbook centres, reconciled 53 distinct HFR IDs across source sets, and linked six headline statistics to definitions and source records. 18 September 2026 · Family meaning and global context: added family relevance to all 33 records, dated data-scale definitions, the distinct MD-3/MD-5/BIS scopes, international guidance and five sourced global comparisons. Enabled public indexing and expanded matching structured data. 18 September 2026 · Review conclusions: rechecked the flagged source material; separated original review from historical validity, application status, study protocols and company-reported outcomes. Improved typography, navigation and source icons. 15 September 2026 · Experience update: added family explanations, centre lookup, evidence filters, record links, correction requests and the source-review register; corrected mobile layout. 15 September 2026 · Initial source review: recorded the operative MD-5 reference 000248, September BIS licence, legal identity registry match and source-specific research limitations.",
+          "text": "Change history + 19 September 2026 · Research and reading: linked DOI publications, original parent books and matched author profiles; added expandable topic navigation and reduced duplicate downloads. 18 September 2026 · Purpose, pathway and imagery: added the documented AbilityScore layers, daily practice and monthly review cycle, original-source regulatory scope, classification and SDG context, plus three clearly labelled Pinnacle World illustrations. Improved phone and tablet layouts. 18 September 2026 · Section descriptions and identity: connected the brand and legal entity, added section links and a terminology guide, and matched structured page descriptions to the visible evidence. 18 September 2026 · Complete HFR inventory and statistics: added all 52 supplied workbook centres, reconciled 53 distinct HFR IDs across source sets, and linked six headline statistics to definitions and source records. 18 September 2026 · Family meaning and global context: added family relevance to all 33 records, dated data-scale definitions, the distinct MD-3/MD-5/BIS scopes, international guidance and five sourced global comparisons. Enabled public indexing and expanded matching structured data. 18 September 2026 · Review conclusions: rechecked the flagged source material; separated original review from historical validity, application status, study protocols and company-reported outcomes. Improved typography, navigation and source icons. 15 September 2026 · Experience update: added family explanations, centre lookup, evidence filters, record links, correction requests and the source-review register; corrected mobile layout. 15 September 2026 · Initial source review: recorded the operative MD-5 reference 000248, September BIS licence, legal identity registry match and source-specific research limitations.",
+          "citations": []
+        },
+        {
+          "id": "method",
+          "name": "Evidence with its meaning intact.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#method",
+          "kind": "section",
+          "parent": null,
+          "description": "A record is useful when you can see both what it supports and the limits of that support.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/document-manifest.json"
+          ]
+        },
+        {
+          "id": "block-start-with-the-source",
+          "name": "Start with the source",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-start-with-the-source",
+          "kind": "article",
+          "parent": "method",
+          "description": "Original documents take priority over cover letters, brochures and website summaries. The review date describes our inspection, not a fresh confirmation from the issuer.",
+          "text": "01 / PROVENANCE Start with the source Original documents take priority over cover letters, brochures and website summaries. The review date describes our inspection, not a fresh confirmation from the issuer.",
+          "citations": []
+        },
+        {
+          "id": "block-match-the-exact-entity",
+          "name": "Match the exact entity",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-match-the-exact-entity",
+          "kind": "article",
+          "parent": "method",
+          "description": "Read the named company, product, address and permitted activity. A product licence does not establish the registration of every therapy centre.",
+          "text": "02 / SCOPE Match the exact entity Read the named company, product, address and permitted activity. A product licence does not establish the registration of every therapy centre.",
+          "citations": []
+        },
+        {
+          "id": "block-keep-each-claim-precise",
+          "name": "Keep each claim precise",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-keep-each-claim-precise",
+          "kind": "article",
+          "parent": "method",
+          "description": "Business identity, quality systems, clinical evidence and government appreciation serve different purposes. Ask what each one means for your child’s plan; individual outcomes vary.",
+          "text": "03 / MEANING Keep each claim precise Business identity, quality systems, clinical evidence and government appreciation serve different purposes. Ask what each one means for your child’s plan; individual outcomes vary.",
+          "citations": []
+        },
+        {
+          "id": "block-review-boundaries-publication-notes",
+          "name": "Review boundaries & publication notes +",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-review-boundaries-publication-notes",
+          "kind": "details",
+          "parent": "method",
+          "description": "The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The named verification contact can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source.",
+          "text": "Review boundaries & publication notes + The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The named verification contact can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source. Public document copies preserve issuer, entity, reference, scope and dates while removing personal identifiers and signatures where appropriate. A document’s stated validity is recorded separately from a live check for suspension, cancellation or changes. View file-integrity records . Research protocols describe planned methods. Company summaries and operational totals are not substitutes for completed study results with methods, populations, outcomes and limitations.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/document-manifest.json"
+          ]
+        },
+        {
+          "id": "next-step",
+          "name": "Your child’s next step deserves a clear conversation.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#next-step",
+          "kind": "section",
+          "parent": null,
+          "description": "Ask the Pinnacle team about your child’s starting abilities, the proposed goals, who coordinates care and when progress will be reviewed. Bring the evidence questions that matter to your family.",
+          "citations": []
+        },
+        {
           "id": "section-take-the-source-with-you",
           "name": "Take the source with you.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#section-take-the-source-with-you",
@@ -2724,6 +2749,532 @@
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/section-index.json",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/answers.json",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.json"
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
+      "title": "Pinnacle Research Library | Papers, Books, DOI &amp; Author Profiles",
+      "sections": [
+        {
+          "id": "publications",
+          "name": "Publications with a DOI",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#publications",
+          "kind": "section",
+          "parent": null,
+          "description": "Original repository records, complete bylines, publication dates and clearly stated research stages.",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.22761782",
+            "https://zenodo.org/records/22761782",
+            "https://zenodo.org/api/records/22761782/files/01_Regulatory_Case.pdf/content",
+            "https://www.academia.edu/175562550/Licensing_Developmental_Support_Software_in_India_An_April_2026_Case_Study_Assessed_Against_CDSCO_s_July_2026_Guidance",
+            "https://doi.org/10.5281/zenodo.22761810",
+            "https://zenodo.org/records/22761810",
+            "https://zenodo.org/api/records/22761810/files/02_RCI_Institution_Geography.pdf/content",
+            "https://www.researchsquare.com/article/rs-11043330/v1",
+            "https://www.academia.edu/175563040/Geographic_Concentration_of_RCI_Listed_Rehabilitation_Training_Institutions_in_India_A_Reproducible_National_Register_Analysis",
+            "https://doi.org/10.5281/zenodo.22761832",
+            "https://zenodo.org/records/22761832",
+            "https://zenodo.org/api/records/22761832/files/03_PINNACLE_TRAJ_Protocol.pdf/content",
+            "https://www.academia.edu/175563111/Six_Month_Change_and_Follow_up_Patterns_in_AbilityScore_During_Routine_Paediatric_Developmental_Care_in_India_Protocol_for_the_PINNACLE_TRAJ_Retrospective_Multicentre_Cohort_Study",
+            "https://doi.org/10.5281/zenodo.19482476",
+            "https://zenodo.org/records/19482476",
+            "https://zenodo.org/api/records/19482476/files/PinnacleAI%20AbilityScore%20Development%20and%20Preliminary%20Psychometric%20Characterization%20of%20a%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness%20Validation%20Protocol--.pdf/content",
+            "https://www.academia.edu/165583376/Concurrent_Validity_Test_Retest_Reliability_and_Preliminary_Minimal_Clinically_Important_Difference_of_PinnacleAI_AbilityScore_A_Cross_Sectional_Psychometric_Validation_Study_Protocol",
+            "https://doi.org/10.5281/zenodo.19482123",
+            "https://zenodo.org/records/19482123",
+            "https://zenodo.org/api/records/19482123/files/PinnacleAI%20AbilityScore%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness.pdf/content",
+            "https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness",
+            "https://doi.org/10.5281/zenodo.15487405",
+            "https://zenodo.org/records/15487405",
+            "https://zenodo.org/api/records/15487405/files/Pinnacle%20Global%20Research%20Whitebook%20-%20The%20World%E2%80%99s%20First%20Fully%20Validated,%20Multi-Domain,%20Parent-First%20Child%20Development%20Framework.pdf/content",
+            "https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework",
+            "https://doi.org/10.5281/zenodo.22827813",
+            "https://zenodo.org/records/22827813",
+            "https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.pdf/content",
+            "https://zenodo.org/api/records/22827813/files/P15_v1_Supplementary_Methods.pdf/content",
+            "https://doi.org/10.21203/rs.3.rs-11043330/v1"
+          ]
+        },
+        {
+          "id": "zenodo-22761782",
+          "name": "Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-22761782",
+          "kind": "article",
+          "parent": "publications",
+          "description": "Saripalli, Koti Reddy",
+          "text": "Regulatory case study — preprint Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance Saripalli, Koti Reddy 2026-09-15 · Version 3.0 Documentary regulatory analysis; not an efficacy study or regulatory approval. Repository describes it as not peer reviewed. DOI: 10.5281/zenodo.22761782 ↗ Publication record ↗ Read original PDF · 0.4 MB ↗ Academia copy ↗",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.22761782",
+            "https://zenodo.org/records/22761782",
+            "https://zenodo.org/api/records/22761782/files/01_Regulatory_Case.pdf/content",
+            "https://www.academia.edu/175562550/Licensing_Developmental_Support_Software_in_India_An_April_2026_Case_Study_Assessed_Against_CDSCO_s_July_2026_Guidance"
+          ]
+        },
+        {
+          "id": "zenodo-22761810",
+          "name": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-22761810",
+          "kind": "article",
+          "parent": "publications",
+          "description": "Saripalli, Koti Reddy",
+          "text": "Reproducible register analysis — preprint Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis Saripalli, Koti Reddy 2026-09-15 · Version 2.0 Analysis of 1,068 RCI-listed institutional entries; not current training capacity or clinician counts. Repository describes it as not peer reviewed. DOI: 10.5281/zenodo.22761810 ↗ Publication record ↗ Read original PDF · 0.5 MB ↗ Research Square version ↗ Academia copy ↗",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.22761810",
+            "https://zenodo.org/records/22761810",
+            "https://zenodo.org/api/records/22761810/files/02_RCI_Institution_Geography.pdf/content",
+            "https://www.researchsquare.com/article/rs-11043330/v1",
+            "https://www.academia.edu/175563040/Geographic_Concentration_of_RCI_Listed_Rehabilitation_Training_Institutions_in_India_A_Reproducible_National_Register_Analysis"
+          ]
+        },
+        {
+          "id": "zenodo-22761832",
+          "name": "Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-22761832",
+          "kind": "article",
+          "parent": "publications",
+          "description": "Saripalli, Koti Reddy",
+          "text": "PINNACLE-TRAJ study protocol — preprint Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study Saripalli, Koti Reddy 2026-09-15 · Version 1.1 Planned retrospective cohort analysis. Ethics, registration and scoring-era selection pending; no results. DOI: 10.5281/zenodo.22761832 ↗ Publication record ↗ Read original PDF · 0.5 MB ↗ Academia copy ↗",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.22761832",
+            "https://zenodo.org/records/22761832",
+            "https://zenodo.org/api/records/22761832/files/03_PINNACLE_TRAJ_Protocol.pdf/content",
+            "https://www.academia.edu/175563111/Six_Month_Change_and_Follow_up_Patterns_in_AbilityScore_During_Routine_Paediatric_Developmental_Care_in_India_Protocol_for_the_PINNACLE_TRAJ_Retrospective_Multicentre_Cohort_Study"
+          ]
+        },
+        {
+          "id": "zenodo-19482476",
+          "name": "Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482476",
+          "kind": "article",
+          "parent": "publications",
+          "description": "Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav",
+          "text": "Psychometric validation protocol — preprint Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav 2026-04-09 · Version 2.1 Planned comparator validation, n=300 plus 60 retest. This record does not report completed validation results. DOI: 10.5281/zenodo.19482476 ↗ Publication record ↗ Read original PDF · 0.3 MB ↗ Academia copy ↗",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.19482476",
+            "https://zenodo.org/records/19482476",
+            "https://zenodo.org/api/records/19482476/files/PinnacleAI%20AbilityScore%20Development%20and%20Preliminary%20Psychometric%20Characterization%20of%20a%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness%20Validation%20Protocol--.pdf/content",
+            "https://www.academia.edu/165583376/Concurrent_Validity_Test_Retest_Reliability_and_Preliminary_Minimal_Clinically_Important_Difference_of_PinnacleAI_AbilityScore_A_Cross_Sectional_Psychometric_Validation_Study_Protocol"
+          ]
+        },
+        {
+          "id": "zenodo-19482123",
+          "name": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123",
+          "kind": "article",
+          "parent": "publications",
+          "description": "Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav",
+          "text": "Methodology and preliminary psychometrics — preprint AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav 2026-04-09 · Version v1 Operational preliminary evidence; formal validation described as planned. DOI: 10.5281/zenodo.19482123 ↗ Publication record ↗ Read original PDF · 0.4 MB ↗ Academia copy ↗",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.19482123",
+            "https://zenodo.org/records/19482123",
+            "https://zenodo.org/api/records/19482123/files/PinnacleAI%20AbilityScore%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness.pdf/content",
+            "https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness"
+          ]
+        },
+        {
+          "id": "zenodo-15487405",
+          "name": "Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-15487405",
+          "kind": "article",
+          "parent": "publications",
+          "description": "Saripalli, Koti Reddy",
+          "text": "Institution-authored framework report Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System Saripalli, Koti Reddy 2025-05-22 · Version v1.0 Source title contains validation/priority claims; the title is recorded for identification, not endorsed as a verified conclusion. No independent peer-review evidence established. DOI: 10.5281/zenodo.15487405 ↗ Publication record ↗ Read original PDF · 17.4 MB ↗ Academia copy ↗",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.15487405",
+            "https://zenodo.org/records/15487405",
+            "https://zenodo.org/api/records/15487405/files/Pinnacle%20Global%20Research%20Whitebook%20-%20The%20World%E2%80%99s%20First%20Fully%20Validated,%20Multi-Domain,%20Parent-First%20Child%20Development%20Framework.pdf/content",
+            "https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework"
+          ]
+        },
+        {
+          "id": "zenodo-22827813",
+          "name": "Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-22827813",
+          "kind": "article",
+          "parent": "publications",
+          "description": "Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav",
+          "text": "Systematic-review protocol — preprint; unregistered Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav 2026-09-18 · Version 1.0 Unregistered protocol. Formal searches, screening, extraction, appraisal and synthesis have not begun; no review results. Author interests disclosed. DOI: 10.5281/zenodo.22827813 ↗ Publication record ↗ Read original PDF · 0.4 MB ↗ Read original PDF · 0.2 MB ↗",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.22827813",
+            "https://zenodo.org/records/22827813",
+            "https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.pdf/content",
+            "https://zenodo.org/api/records/22827813/files/P15_v1_Supplementary_Methods.pdf/content"
+          ]
+        },
+        {
+          "id": "parent-books",
+          "name": "Books for families. Sources for readers.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#parent-books",
+          "kind": "section",
+          "parent": null,
+          "description": "Sreeja Reddy Saripalli · English",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/autism-mothers-handbook-english.pdf",
+            "https://play.google.com/store/books/details?id=BHhPEAAAQBAJ&amp;hl=en",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/autism-mothers-handbook-telugu.pdf",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/voice-of-the-unheard.pdf",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "autism-mothers-handbook-english",
+          "name": "Autism — mother’s hand book",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-english",
+          "kind": "article",
+          "parent": "parent-books",
+          "description": "Sreeja Reddy Saripalli · English",
+          "text": "Authored parent handbook Autism — mother’s hand book Sreeja Reddy Saripalli · English 2021 The English and Telugu originals print the same ISBN. This is an authored parent resource. ISBN: 978-93-5493-628-9 Read original PDF · 14.7 MB ↗",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/autism-mothers-handbook-english.pdf"
+          ]
+        },
+        {
+          "id": "autism-mothers-handbook-telugu",
+          "name": "ఆటిజం — మదర్స్ హ్యాండ్ బుక్",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-telugu",
+          "kind": "article",
+          "parent": "parent-books",
+          "description": "Sreeja Reddy Saripalli · Telugu",
+          "text": "Authored parent handbook ఆటిజం — మదర్స్ హ్యాండ్ బుక్ Sreeja Reddy Saripalli · Telugu 2021 The English and Telugu originals print the same ISBN. This is an authored parent resource. ISBN: 978-93-5493-628-9 Publisher listing ↗ Read original PDF · 15.9 MB ↗",
+          "citations": [
+            "https://play.google.com/store/books/details?id=BHhPEAAAQBAJ&amp;hl=en",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/autism-mothers-handbook-telugu.pdf"
+          ]
+        },
+        {
+          "id": "voice-of-the-unheard",
+          "name": "The Voice of the Unheard",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#voice-of-the-unheard",
+          "kind": "article",
+          "parent": "parent-books",
+          "description": "Sreeja Reddy Saripalli · English",
+          "text": "Authored parent handbook The Voice of the Unheard Sreeja Reddy Saripalli · English Authored parent resource. The supplied original does not establish a publication year or ISBN. Read original PDF · 5.9 MB ↗",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/voice-of-the-unheard.pdf"
+          ]
+        },
+        {
+          "id": "global-research-whitebook",
+          "name": "Global Research Whitebook",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#global-research-whitebook",
+          "kind": "article",
+          "parent": "parent-books",
+          "description": "The original company publication brings together the study portfolio and developmental framework. Its title and cover remain as published.",
+          "text": "Institutional research compendium Global Research Whitebook The original company publication brings together the study portfolio and developmental framework. Its title and cover remain as published. Whitebook evidence record ↗ Read the study index ↗",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "authors",
+          "name": "Authors & research profiles",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#authors",
+          "kind": "section",
+          "parent": null,
+          "description": "Profiles are matched using original bylines, ORCID identifiers and explicit profile cross-links. They identify people and their work; profile presence does not establish journal indexing or independent endorsement.",
+          "citations": [
+            "https://orcid.org/0009-0007-7866-0737",
+            "https://scholar.google.com/citations?user=OuHrlcsAAAAJ",
+            "https://svuniversity.academia.edu/DrKotiSaripalli",
+            "https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f",
+            "https://www.webofscience.com/wos/author/record/RBA-8832-2026",
+            "https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli",
+            "https://orcid.org/0000-0002-3357-2326",
+            "https://zenodo.org/records/19482123"
+          ]
+        },
+        {
+          "id": "koti-reddy-saripalli",
+          "name": "Koti Reddy Saripalli",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#koti-reddy-saripalli",
+          "kind": "article",
+          "parent": "authors",
+          "description": "Author of the seven DOI-linked works in this library; coauthor of the AbilityScore and childhood-participation protocols.",
+          "text": "Koti Reddy Saripalli Author of the seven DOI-linked works in this library; coauthor of the AbilityScore and childhood-participation protocols. ORCID ↗ Google Scholar ↗ Academia.edu ↗ ScienceOpen ↗ Web of Science researcher profile ↗",
+          "citations": [
+            "https://orcid.org/0009-0007-7866-0737",
+            "https://scholar.google.com/citations?user=OuHrlcsAAAAJ",
+            "https://svuniversity.academia.edu/DrKotiSaripalli",
+            "https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f",
+            "https://www.webofscience.com/wos/author/record/RBA-8832-2026"
+          ]
+        },
+        {
+          "id": "sreeja-reddy-saripalli",
+          "name": "Sreeja Reddy Saripalli",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#sreeja-reddy-saripalli",
+          "kind": "article",
+          "parent": "authors",
+          "description": "Author of the parent handbooks and The Voice of the Unheard. Listed as editor on the PGAF repository record.",
+          "text": "Sreeja Reddy Saripalli Author of the parent handbooks and The Voice of the Unheard. Listed as editor on the PGAF repository record. Pinnacle leadership ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli"
+          ]
+        },
+        {
+          "id": "raghupathi-ramtenki",
+          "name": "Raghupathi Ramtenki",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#raghupathi-ramtenki",
+          "kind": "article",
+          "parent": "authors",
+          "description": "Coauthor on the AbilityScore methodology, validation protocol and childhood-participation review protocol.",
+          "text": "Raghupathi Ramtenki Coauthor on the AbilityScore methodology, validation protocol and childhood-participation review protocol. ORCID ↗",
+          "citations": [
+            "https://orcid.org/0000-0002-3357-2326"
+          ]
+        },
+        {
+          "id": "srikanth-yadav-boini",
+          "name": "Srikanth Yadav Boini",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#srikanth-yadav-boini",
+          "kind": "article",
+          "parent": "authors",
+          "description": "Coauthor on the AbilityScore methodology, validation protocol and childhood-participation review protocol. Author credit is linked to the original byline.",
+          "text": "Srikanth Yadav Boini Coauthor on the AbilityScore methodology, validation protocol and childhood-participation review protocol. Author credit is linked to the original byline. Original coauthor byline ↗",
+          "citations": [
+            "https://zenodo.org/records/19482123"
+          ]
+        },
+        {
+          "id": "company-studies",
+          "name": "The twelve-study company portfolio",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-studies",
+          "kind": "section",
+          "parent": null,
+          "description": "These are company-published summaries. Nine have linked publisher pages; three are accessed through the framework report and study index. Their designs, populations and reporting periods differ.",
+          "citations": [
+            "https://www.pinnacleblooms.org/abilityscore-global-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html",
+            "https://www.pinnacleblooms.org/seva-impact-study",
+            "https://www.pinnacleblooms.org/therapeuticai-effectiveness-study",
+            "https://www.pinnacleblooms.org/everyday-therapy-home-study",
+            "https://zenodo.org/records/15487405",
+            "https://www.pinnacleblooms.org/school-readiness-study",
+            "https://www.pinnacleblooms.org/abilityscore-predictive-study",
+            "https://www.pinnacleblooms.org/therapysphere-study",
+            "https://www.pinnacleblooms.org/question-comprehension-study",
+            "https://www.pinnacleblooms.org/parent-led-generalization",
+            "https://www.academia.edu/130287600/V2_Andhra_Pradesh_Government_Recognition_to_Pinnacle",
+            "https://www.academia.edu/129496051/A_Concurrency_Enabled_Hardware_Accelerated_System_and_Method_for_Autism_AbilityScore_PAA_",
+            "https://www.academia.edu/129496050/Pinnacle_TherapySphere_A_Specialized_Therapeutic_Environment_for_Sensorial_Conditions",
+            "https://www.academia.edu/129496049/Everyday_Therapy_Program_Parent_Led_Generalization_of_Therapy_Goals",
+            "https://www.academia.edu/129496048/Autism_Early_Detection_Grid_AEDG_Structured_Red_Flag_Identification_System",
+            "https://www.academia.edu/129496047/TherapeuticAI_AI_Powered_Autism_Therapy_Personalization",
+            "https://www.academia.edu/129496046/A_System_for_Assessing_Developmental_Readiness_of_a_Child_and_Method_Thereof",
+            "https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework",
+            "https://www.academia.edu/129496111/The_Mother_The_Map_and_the_Movement_How_India_Quietly_Built_the_Worlds_Most_Complete_Autism_Care_System",
+            "https://www.academia.edu/129496052/Pinnacle_Global_Autism_Framework_PGAF_India_s_First_Validated_Scalable_Outcome_Based_Child_Development_System",
+            "https://www.academia.edu/129496053/Autism_Mothers_Handbook_%E0%B0%86%E0%B0%9F%E0%B0%BF%E0%B0%9C%E0%B0%82_%E0%B0%AE%E0%B0%A6%E0%B0%B0_%E0%B0%B8_%E0%B0%B9_%E0%B0%AF%E0%B0%BE%E0%B0%82%E0%B0%A1_%E0%B0%AC%E0%B1%81%E0%B0%95_",
+            "https://www.academia.edu/129496054/India_s_Pinnacle_Global_Autism_Framework_PGAF_The_First_Fully_Validated_Scalable_and_Measurable_Child_Development_System_for_the_World",
+            "https://www.academia.edu/130287792/The_Science_Behind_Pinnacle_AbilityScore_Indias_Patented_0_1000_Universal_Child_Development_Metric_Transforming_Autism_Speech_ABA_Occupational_and_Developmental_Therapy_Worldwide",
+            "https://www.academia.edu/165583376/Concurrent_Validity_Test_Retest_Reliability_and_Preliminary_Minimal_Clinically_Important_Difference_of_PinnacleAI_AbilityScore_A_Cross_Sectional_Psychometric_Validation_Study_Protocol",
+            "https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness",
+            "https://www.academia.edu/175562550/Licensing_Developmental_Support_Software_in_India_An_April_2026_Case_Study_Assessed_Against_CDSCO_s_July_2026_Guidance",
+            "https://www.academia.edu/175563040/Geographic_Concentration_of_RCI_Listed_Rehabilitation_Training_Institutions_in_India_A_Reproducible_National_Register_Analysis",
+            "https://www.academia.edu/175563111/Six_Month_Change_and_Follow_up_Patterns_in_AbilityScore_During_Routine_Paediatric_Developmental_Care_in_India_Protocol_for_the_PINNACLE_TRAJ_Retrospective_Multicentre_Cohort_Study"
+          ]
+        },
+        {
+          "id": "company-study-1",
+          "name": "AbilityScore® Longitudinal Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-1",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary AbilityScore® Longitudinal Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary AbilityScore® Longitudinal Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/abilityscore-global-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-2",
+          "name": "SEVA™ Therapy Outcomes Impact Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-2",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary SEVA™ Therapy Outcomes Impact Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary SEVA™ Therapy Outcomes Impact Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/seva-impact-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-3",
+          "name": "TherapeuticAI® Effectiveness Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-3",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary TherapeuticAI® Effectiveness Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary TherapeuticAI® Effectiveness Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/therapeuticai-effectiveness-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-4",
+          "name": "Everyday Therapy™ Home Integration Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-4",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary Everyday Therapy™ Home Integration Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary Everyday Therapy™ Home Integration Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/everyday-therapy-home-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-5",
+          "name": "Multilingual Therapy Outcomes Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-5",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary Multilingual Therapy Outcomes Study Framework report containing the summary ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary Multilingual Therapy Outcomes Study Framework report containing the summary ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://zenodo.org/records/15487405",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-6",
+          "name": "School Readiness & Inclusion Outcomes Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-6",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary School Readiness & Inclusion Outcomes Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary School Readiness & Inclusion Outcomes Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/school-readiness-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-7",
+          "name": "SEVA™ Social Equity Index Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-7",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary SEVA™ Social Equity Index Study Framework report containing the summary ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary SEVA™ Social Equity Index Study Framework report containing the summary ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://zenodo.org/records/15487405",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-8",
+          "name": "Therapist Burnout & Empathy Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-8",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary Therapist Burnout & Empathy Study Framework report containing the summary ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary Therapist Burnout & Empathy Study Framework report containing the summary ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://zenodo.org/records/15487405",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-9",
+          "name": "AbilityScore® Predictive Validity Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-9",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary AbilityScore® Predictive Validity Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary AbilityScore® Predictive Validity Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/abilityscore-predictive-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-10",
+          "name": "TherapySphere™ Sensory Environment Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-10",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary TherapySphere™ Sensory Environment Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary TherapySphere™ Sensory Environment Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/therapysphere-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-11",
+          "name": "Question Comprehension Improvement Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-11",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary Question Comprehension Improvement Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary Question Comprehension Improvement Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/question-comprehension-study",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "company-study-12",
+          "name": "Parent-Led Generalization Study",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-study-12",
+          "kind": "article",
+          "parent": "company-studies",
+          "description": "Company study summary Parent-Led Generalization Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "text": "Company study summary Parent-Led Generalization Study Publisher study page ↗ Portfolio scope & study index ↗",
+          "citations": [
+            "https://www.pinnacleblooms.org/parent-led-generalization",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html"
+          ]
+        },
+        {
+          "id": "block-additional-academia-copies-catalogue-entries",
+          "name": "Additional Academia copies & catalogue entries",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#block-additional-academia-copies-catalogue-entries",
+          "kind": "details",
+          "parent": "company-studies",
+          "description": "These are catalogue-linked copies and legacy entries, not additional independent studies. Use the DOI-linked record above when available.",
+          "text": "Additional Academia copies & catalogue entries These are catalogue-linked copies and legacy entries, not additional independent studies. Use the DOI-linked record above when available. V2 Andhra Pradesh Government Recognition to Pinnacle ↗ A Concurrency-Enabled, Hardware-Accelerated System and Method for Autism AbilityScore (PAA) ↗ Pinnacle TherapySphere™ – A Specialized Therapeutic Environment for Sensorial Conditions ↗ Everyday Therapy Program™ – Parent-Led Generalization of Therapy Goals ↗ Autism Early Detection Grid™ (AEDG) – Structured Red Flag Identification System ↗ TherapeuticAI® – AI-Powered Autism Therapy Personalization ↗ A System for Assessing Developmental Readiness of a Child and Method Thereof ↗ Pinnacle Global Research Whitebook: The World’s First Fully Validated, Multi-Domain, Parent-First Child Development Framework ↗ The Mother, The Map, and the Movement: How India Quietly Built the World's Most Complete Autism Care System ↗ Pinnacle Global Autism Framework (PGAF): India’s First Validated, Scalable, Outcome-Based Child Development System ↗ Autism Mothers Handbook (ఆటిజం మదర్స్ హ్యాండ్బుక్) ↗ India’s Pinnacle Global Autism Framework (PGAF): The First Fully Validated, Scalable, and Measurable Child Development System for the World ↗ The Science Behind Pinnacle AbilityScore®: India's Patented 0-1000 Universal Child Development Metric Transforming Autism, Speech, ABA, Occupational & Developmental Therapy Worldwide ↗ Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol ↗ AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness ↗ Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO’s July 2026 Guidance ↗ Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis ↗ Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study ↗",
+          "citations": [
+            "https://www.academia.edu/130287600/V2_Andhra_Pradesh_Government_Recognition_to_Pinnacle",
+            "https://www.academia.edu/129496051/A_Concurrency_Enabled_Hardware_Accelerated_System_and_Method_for_Autism_AbilityScore_PAA_",
+            "https://www.academia.edu/129496050/Pinnacle_TherapySphere_A_Specialized_Therapeutic_Environment_for_Sensorial_Conditions",
+            "https://www.academia.edu/129496049/Everyday_Therapy_Program_Parent_Led_Generalization_of_Therapy_Goals",
+            "https://www.academia.edu/129496048/Autism_Early_Detection_Grid_AEDG_Structured_Red_Flag_Identification_System",
+            "https://www.academia.edu/129496047/TherapeuticAI_AI_Powered_Autism_Therapy_Personalization",
+            "https://www.academia.edu/129496046/A_System_for_Assessing_Developmental_Readiness_of_a_Child_and_Method_Thereof",
+            "https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework",
+            "https://www.academia.edu/129496111/The_Mother_The_Map_and_the_Movement_How_India_Quietly_Built_the_Worlds_Most_Complete_Autism_Care_System",
+            "https://www.academia.edu/129496052/Pinnacle_Global_Autism_Framework_PGAF_India_s_First_Validated_Scalable_Outcome_Based_Child_Development_System",
+            "https://www.academia.edu/129496053/Autism_Mothers_Handbook_%E0%B0%86%E0%B0%9F%E0%B0%BF%E0%B0%9C%E0%B0%82_%E0%B0%AE%E0%B0%A6%E0%B0%B0_%E0%B0%B8_%E0%B0%B9_%E0%B0%AF%E0%B0%BE%E0%B0%82%E0%B0%A1_%E0%B0%AC%E0%B1%81%E0%B0%95_",
+            "https://www.academia.edu/129496054/India_s_Pinnacle_Global_Autism_Framework_PGAF_The_First_Fully_Validated_Scalable_and_Measurable_Child_Development_System_for_the_World",
+            "https://www.academia.edu/130287792/The_Science_Behind_Pinnacle_AbilityScore_Indias_Patented_0_1000_Universal_Child_Development_Metric_Transforming_Autism_Speech_ABA_Occupational_and_Developmental_Therapy_Worldwide",
+            "https://www.academia.edu/165583376/Concurrent_Validity_Test_Retest_Reliability_and_Preliminary_Minimal_Clinically_Important_Difference_of_PinnacleAI_AbilityScore_A_Cross_Sectional_Psychometric_Validation_Study_Protocol",
+            "https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness",
+            "https://www.academia.edu/175562550/Licensing_Developmental_Support_Software_in_India_An_April_2026_Case_Study_Assessed_Against_CDSCO_s_July_2026_Guidance",
+            "https://www.academia.edu/175563040/Geographic_Concentration_of_RCI_Listed_Rehabilitation_Training_Institutions_in_India_A_Reproducible_National_Register_Analysis",
+            "https://www.academia.edu/175563111/Six_Month_Change_and_Follow_up_Patterns_in_AbilityScore_During_Routine_Paediatric_Developmental_Care_in_India_Protocol_for_the_PINNACLE_TRAJ_Retrospective_Multicentre_Cohort_Study"
+          ]
+        },
+        {
+          "id": "research-exports",
+          "name": "Take the sources with you",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#research-exports",
+          "kind": "section",
+          "parent": null,
+          "description": "Human-readable citations and matching structured records are available for researchers, reference managers and automated readers.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.json",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.txt",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.ris",
+            "https://github.com/drkotireddysaripalli/pinnacle-research-library"
           ]
         }
       ]
@@ -4190,11 +4741,14 @@
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
             "https://zenodo.org/records/19482123",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
             "https://zenodo.org/records/19482476",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482476",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html",
             "https://www.pinnacleblooms.org/research-studies",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-studies",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html"
           ]
         },
@@ -4244,10 +4798,11 @@
           "kind": "details",
           "parent": "category-3",
           "description": "Development and preliminary psychometric characterization",
-          "text": "Research & outcomes Original reviewed AbilityScore · Methodology preprint Development and preliminary psychometric characterization What this means for your family A methods paper lets practitioners examine how a measurement approach was developed and where further validation is needed. Repository Zenodo Published 9 April 2026 DOI 10.5281/zenodo.19482123 Publication type Preprint · preliminary evidence What this supports The public record describes the construction of AbilityScore and preliminary operational psychometric findings. The authors identify formal validation as planned. Scope & limits Operational inter-rater reliability is not completed external concurrent validity. A repository deposit does not establish journal peer review or independent replication. Read reported measurement properties within the instrument version, methods and population stated by the authors. Permanent record Read methodology preprint Ask about this record Source: Original Zenodo repository metadata and abstract, retrieved 15 September 2026. Reviewed: 15 September 2026 · Repository metadata checked; journal peer review not established.",
+          "text": "Research & outcomes Original reviewed AbilityScore · Methodology preprint Development and preliminary psychometric characterization What this means for your family A methods paper lets practitioners examine how a measurement approach was developed and where further validation is needed. Repository Zenodo Published 9 April 2026 DOI 10.5281/zenodo.19482123 Publication type Preprint · preliminary evidence What this supports The public record describes the construction of AbilityScore and preliminary operational psychometric findings. The authors identify formal validation as planned. Scope & limits Operational inter-rater reliability is not completed external concurrent validity. A repository deposit does not establish journal peer review or independent replication. Read reported measurement properties within the instrument version, methods and population stated by the authors. Permanent record Read methodology preprint Research, books & author profiles Ask about this record Source: Original Zenodo repository metadata and abstract, retrieved 15 September 2026. Reviewed: 15 September 2026 · Repository metadata checked; journal peer review not established.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
-            "https://zenodo.org/records/19482123"
+            "https://zenodo.org/records/19482123",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123"
           ]
         },
         {
@@ -4257,10 +4812,11 @@
           "kind": "details",
           "parent": "category-3",
           "description": "Original protocol reviewed · Version 2.1 sets out planned validation methods",
-          "text": "Research & outcomes Original reviewed Study protocol AbilityScore · External-validation protocol Original protocol reviewed · Version 2.1 sets out planned validation methods What this means for your family A published protocol makes the proposed research question and methods visible before a completed result is claimed. Source review conclusion The reviewed source is protocol BHCL-VAL-2026-001, version 2.1. It describes a proposed external-validation study and sample plan; completed validation results are not claimed. Protocol BHCL-VAL-2026-001 Published 9 April 2026 · version 2.1 DOI 10.5281/zenodo.19482476 Study size described Planned 300-participant component; 60-person retest subset What this supports The deposited protocol describes planned concurrent-validity, test–retest and minimal-clinically-important-difference research, including comparator instruments. Scope & limits This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed. Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion. Permanent record Read the study protocol Ask about this record Source: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026. Reviewed: 15 September 2026 · Scope rechecked: 18 September 2026 · Primary protocol and repository metadata reviewed; completed comparator validation is not established.",
+          "text": "Research & outcomes Original reviewed Study protocol AbilityScore · External-validation protocol Original protocol reviewed · Version 2.1 sets out planned validation methods What this means for your family A published protocol makes the proposed research question and methods visible before a completed result is claimed. Source review conclusion The reviewed source is protocol BHCL-VAL-2026-001, version 2.1. It describes a proposed external-validation study and sample plan; completed validation results are not claimed. Protocol BHCL-VAL-2026-001 Published 9 April 2026 · version 2.1 DOI 10.5281/zenodo.19482476 Study size described Planned 300-participant component; 60-person retest subset What this supports The deposited protocol describes planned concurrent-validity, test–retest and minimal-clinically-important-difference research, including comparator instruments. Scope & limits This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed. Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion. Permanent record Read the study protocol Research, books & author profiles Ask about this record Source: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026. Reviewed: 15 September 2026 · Scope rechecked: 18 September 2026 · Primary protocol and repository metadata reviewed; completed comparator validation is not established.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
-            "https://zenodo.org/records/19482476"
+            "https://zenodo.org/records/19482476",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482476"
           ]
         },
         {
@@ -4270,11 +4826,12 @@
           "kind": "details",
           "parent": "category-3",
           "description": "Study-by-study sources, populations and limitations",
-          "text": "Research & outcomes Company-published Twelve-study portfolio · Company research Study-by-study sources, populations and limitations What this means for your family Study-level detail helps families and referring professionals see which children and outcomes a research statement actually concerns. Source type Company-authored research portfolio Summary editions 2025 Whitebook; July 2026 dossier; September 2026 handout Evidence design Varies by study; operator-network research Review boundary Portfolio mapped; full independent re-analysis not performed What this supports The source publications describe twelve research topics across measurement, therapy, home practice, equity and participation. The study index identifies the populations and available original report links. Scope & limits Small study cohorts cannot be replaced by cumulative network-service totals. Journal peer review, independent replication and ethics approval require their own documents. Findings apply to the populations and methods studied. School-entry findings must remain qualified to children meeting readiness criteria; the parent-led generalisation report notes limitations and a non-significant home-adherence correlation. Permanent record View study evidence index Company research library Ask about this record Source: Whitebook pp12–21; Evidence Dossier v2 study register; September handout physical p8; company-hosted study reports. Reviewed: 15 September 2026 · Current issuer or registry status: not independently confirmed.",
+          "text": "Research & outcomes Company-published Twelve-study portfolio · Company research Study-by-study sources, populations and limitations What this means for your family Study-level detail helps families and referring professionals see which children and outcomes a research statement actually concerns. Source type Company-authored research portfolio Summary editions 2025 Whitebook; July 2026 dossier; September 2026 handout Evidence design Varies by study; operator-network research Review boundary Portfolio mapped; full independent re-analysis not performed What this supports The source publications describe twelve research topics across measurement, therapy, home practice, equity and participation. The study index identifies the populations and available original report links. Scope & limits Small study cohorts cannot be replaced by cumulative network-service totals. Journal peer review, independent replication and ethics approval require their own documents. Findings apply to the populations and methods studied. School-entry findings must remain qualified to children meeting readiness criteria; the parent-led generalisation report notes limitations and a non-significant home-adherence correlation. Permanent record View study evidence index Company research library Research, books & author profiles Ask about this record Source: Whitebook pp12–21; Evidence Dossier v2 study register; September handout physical p8; company-hosted study reports. Reviewed: 15 September 2026 · Current issuer or registry status: not independently confirmed.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html",
-            "https://www.pinnacleblooms.org/research-studies"
+            "https://www.pinnacleblooms.org/research-studies",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-studies"
           ]
         },
         {
@@ -4469,10 +5026,12 @@
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
             "https://www.pinnacleblooms.org/global-research-whitebook",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#global-research-whitebook",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
             "https://drive.google.com/file/d/1TyNq0qZzZwF5C_H5f3Ao4xxYpYubNn8s/view",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#parent-books",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
           ]
         },
@@ -4483,10 +5042,11 @@
           "kind": "details",
           "parent": "category-6",
           "description": "2025 Global Edition · Company-authored framework and study summaries",
-          "text": "Source publications Company-published Global Research Whitebook · Historical edition 2025 Global Edition · Company-authored framework and study summaries What this means for your family The Whitebook explains Pinnacle’s published framework and research narrative, which can guide more specific questions about sources. Edition 2025 Global Edition Source role Historical research narrative Authorship Pinnacle / named founders and consortium Version handling Upload dates do not change the edition date What this supports The Whitebook explains the company’s framework and its historical study narrative. It is useful for tracing the origins of claims and the research portfolio. Scope & limits It is not an independent issuer record. Historical scale figures, patent language, exclusivity claims and validation language need reconciliation with current originals. Treat the title and text as a historical company publication, not as this page’s verification conclusion. Permanent record Company Whitebook page Ask about this record Source: Original 30-page Whitebook reviewed; study summaries pp12–21. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
+          "text": "Source publications Company-published Global Research Whitebook · Historical edition 2025 Global Edition · Company-authored framework and study summaries What this means for your family The Whitebook explains Pinnacle’s published framework and research narrative, which can guide more specific questions about sources. Edition 2025 Global Edition Source role Historical research narrative Authorship Pinnacle / named founders and consortium Version handling Upload dates do not change the edition date What this supports The Whitebook explains the company’s framework and its historical study narrative. It is useful for tracing the origins of claims and the research portfolio. Scope & limits It is not an independent issuer record. Historical scale figures, patent language, exclusivity claims and validation language need reconciliation with current originals. Treat the title and text as a historical company publication, not as this page’s verification conclusion. Permanent record Company Whitebook page Research, books & author profiles Ask about this record Source: Original 30-page Whitebook reviewed; study summaries pp12–21. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
-            "https://www.pinnacleblooms.org/global-research-whitebook"
+            "https://www.pinnacleblooms.org/global-research-whitebook",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#global-research-whitebook"
           ]
         },
         {
@@ -4521,9 +5081,10 @@
           "kind": "details",
           "parent": "category-6",
           "description": "Authorship and publication metadata read from the supplied books",
-          "text": "Source publications Company-published Books & parent resources · Publication records Authorship and publication metadata read from the supplied books What this means for your family Parent resources can support informed conversations and everyday participation alongside an individual professional plan. Autism — mother’s hand book Sreeja Reddy Saripalli · first published 2021 Publisher printed India Herald Group of Publishers ISBN printed 978-93-5493-628-9 The Voice of the Unheard Sreeja Reddy Saripalli named as author in the book What this supports The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. Scope & limits A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata. Permanent record Ask about this record Source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
+          "text": "Source publications Company-published Books & parent resources · Publication records Authorship and publication metadata read from the supplied books What this means for your family Parent resources can support informed conversations and everyday participation alongside an individual professional plan. Autism — mother’s hand book Sreeja Reddy Saripalli · first published 2021 Publisher printed India Herald Group of Publishers ISBN printed 978-93-5493-628-9 The Voice of the Unheard Sreeja Reddy Saripalli named as author in the book What this supports The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. Scope & limits A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata. Permanent record Research, books & author profiles Ask about this record Source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence.",
           "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html"
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#parent-books"
           ]
         },
         {
@@ -4966,10 +5527,11 @@
           "kind": "article",
           "parent": null,
           "description": "Development and preliminary psychometric characterization",
-          "text": "Research & outcomes Original reviewed AbilityScore · Methodology preprint Development and preliminary psychometric characterization What this means for your family A methods paper lets practitioners examine how a measurement approach was developed and where further validation is needed. Repository Zenodo Published 9 April 2026 DOI 10.5281/zenodo.19482123 Publication type Preprint · preliminary evidence What this supports The public record describes the construction of AbilityScore and preliminary operational psychometric findings. The authors identify formal validation as planned. Scope & limits Operational inter-rater reliability is not completed external concurrent validity. A repository deposit does not establish journal peer review or independent replication. Read reported measurement properties within the instrument version, methods and population stated by the authors. Permanent record Read methodology preprint Ask about this record Source: Original Zenodo repository metadata and abstract, retrieved 15 September 2026. Reviewed: 15 September 2026 · Repository metadata checked; journal peer review not established. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
+          "text": "Research & outcomes Original reviewed AbilityScore · Methodology preprint Development and preliminary psychometric characterization What this means for your family A methods paper lets practitioners examine how a measurement approach was developed and where further validation is needed. Repository Zenodo Published 9 April 2026 DOI 10.5281/zenodo.19482123 Publication type Preprint · preliminary evidence What this supports The public record describes the construction of AbilityScore and preliminary operational psychometric findings. The authors identify formal validation as planned. Scope & limits Operational inter-rater reliability is not completed external concurrent validity. A repository deposit does not establish journal peer review or independent replication. Read reported measurement properties within the instrument version, methods and population stated by the authors. Permanent record Read methodology preprint Research, books & author profiles Ask about this record Source: Original Zenodo repository metadata and abstract, retrieved 15 September 2026. Reviewed: 15 September 2026 · Repository metadata checked; journal peer review not established. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
-            "https://zenodo.org/records/19482123"
+            "https://zenodo.org/records/19482123",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123"
           ]
         }
       ]
@@ -4985,10 +5547,11 @@
           "kind": "article",
           "parent": null,
           "description": "Original protocol reviewed · Version 2.1 sets out planned validation methods",
-          "text": "Research & outcomes Original reviewed Study protocol AbilityScore · External-validation protocol Original protocol reviewed · Version 2.1 sets out planned validation methods What this means for your family A published protocol makes the proposed research question and methods visible before a completed result is claimed. Source review conclusion The reviewed source is protocol BHCL-VAL-2026-001, version 2.1. It describes a proposed external-validation study and sample plan; completed validation results are not claimed. Protocol BHCL-VAL-2026-001 Published 9 April 2026 · version 2.1 DOI 10.5281/zenodo.19482476 Study size described Planned 300-participant component; 60-person retest subset What this supports The deposited protocol describes planned concurrent-validity, test–retest and minimal-clinically-important-difference research, including comparator instruments. Scope & limits This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed. Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion. Permanent record Read the study protocol Ask about this record Source: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026. Reviewed: 15 September 2026 · Scope rechecked: 18 September 2026 · Primary protocol and repository metadata reviewed; completed comparator validation is not established. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
+          "text": "Research & outcomes Original reviewed Study protocol AbilityScore · External-validation protocol Original protocol reviewed · Version 2.1 sets out planned validation methods What this means for your family A published protocol makes the proposed research question and methods visible before a completed result is claimed. Source review conclusion The reviewed source is protocol BHCL-VAL-2026-001, version 2.1. It describes a proposed external-validation study and sample plan; completed validation results are not claimed. Protocol BHCL-VAL-2026-001 Published 9 April 2026 · version 2.1 DOI 10.5281/zenodo.19482476 Study size described Planned 300-participant component; 60-person retest subset What this supports The deposited protocol describes planned concurrent-validity, test–retest and minimal-clinically-important-difference research, including comparator instruments. Scope & limits This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed. Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion. Permanent record Read the study protocol Research, books & author profiles Ask about this record Source: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026. Reviewed: 15 September 2026 · Scope rechecked: 18 September 2026 · Primary protocol and repository metadata reviewed; completed comparator validation is not established. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
-            "https://zenodo.org/records/19482476"
+            "https://zenodo.org/records/19482476",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482476"
           ]
         }
       ]
@@ -5004,11 +5567,12 @@
           "kind": "article",
           "parent": null,
           "description": "Study-by-study sources, populations and limitations",
-          "text": "Research & outcomes Company-published Twelve-study portfolio · Company research Study-by-study sources, populations and limitations What this means for your family Study-level detail helps families and referring professionals see which children and outcomes a research statement actually concerns. Source type Company-authored research portfolio Summary editions 2025 Whitebook; July 2026 dossier; September 2026 handout Evidence design Varies by study; operator-network research Review boundary Portfolio mapped; full independent re-analysis not performed What this supports The source publications describe twelve research topics across measurement, therapy, home practice, equity and participation. The study index identifies the populations and available original report links. Scope & limits Small study cohorts cannot be replaced by cumulative network-service totals. Journal peer review, independent replication and ethics approval require their own documents. Findings apply to the populations and methods studied. School-entry findings must remain qualified to children meeting readiness criteria; the parent-led generalisation report notes limitations and a non-significant home-adherence correlation. Permanent record View study evidence index Company research library Ask about this record Source: Whitebook pp12–21; Evidence Dossier v2 study register; September handout physical p8; company-hosted study reports. Reviewed: 15 September 2026 · Current issuer or registry status: not independently confirmed. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
+          "text": "Research & outcomes Company-published Twelve-study portfolio · Company research Study-by-study sources, populations and limitations What this means for your family Study-level detail helps families and referring professionals see which children and outcomes a research statement actually concerns. Source type Company-authored research portfolio Summary editions 2025 Whitebook; July 2026 dossier; September 2026 handout Evidence design Varies by study; operator-network research Review boundary Portfolio mapped; full independent re-analysis not performed What this supports The source publications describe twelve research topics across measurement, therapy, home practice, equity and participation. The study index identifies the populations and available original report links. Scope & limits Small study cohorts cannot be replaced by cumulative network-service totals. Journal peer review, independent replication and ethics approval require their own documents. Findings apply to the populations and methods studied. School-entry findings must remain qualified to children meeting readiness criteria; the parent-led generalisation report notes limitations and a non-significant home-adherence correlation. Permanent record View study evidence index Company research library Research, books & author profiles Ask about this record Source: Whitebook pp12–21; Evidence Dossier v2 study register; September handout physical p8; company-hosted study reports. Reviewed: 15 September 2026 · Current issuer or registry status: not independently confirmed. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html",
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html",
-            "https://www.pinnacleblooms.org/research-studies"
+            "https://www.pinnacleblooms.org/research-studies",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-studies"
           ]
         }
       ]
@@ -5116,10 +5680,11 @@
           "kind": "article",
           "parent": null,
           "description": "2025 Global Edition · Company-authored framework and study summaries",
-          "text": "Source publications Company-published Global Research Whitebook · Historical edition 2025 Global Edition · Company-authored framework and study summaries What this means for your family The Whitebook explains Pinnacle’s published framework and research narrative, which can guide more specific questions about sources. Edition 2025 Global Edition Source role Historical research narrative Authorship Pinnacle / named founders and consortium Version handling Upload dates do not change the edition date What this supports The Whitebook explains the company’s framework and its historical study narrative. It is useful for tracing the origins of claims and the research portfolio. Scope & limits It is not an independent issuer record. Historical scale figures, patent language, exclusivity claims and validation language need reconciliation with current originals. Treat the title and text as a historical company publication, not as this page’s verification conclusion. Permanent record Company Whitebook page Ask about this record Source: Original 30-page Whitebook reviewed; study summaries pp12–21. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
+          "text": "Source publications Company-published Global Research Whitebook · Historical edition 2025 Global Edition · Company-authored framework and study summaries What this means for your family The Whitebook explains Pinnacle’s published framework and research narrative, which can guide more specific questions about sources. Edition 2025 Global Edition Source role Historical research narrative Authorship Pinnacle / named founders and consortium Version handling Upload dates do not change the edition date What this supports The Whitebook explains the company’s framework and its historical study narrative. It is useful for tracing the origins of claims and the research portfolio. Scope & limits It is not an independent issuer record. Historical scale figures, patent language, exclusivity claims and validation language need reconciliation with current originals. Treat the title and text as a historical company publication, not as this page’s verification conclusion. Permanent record Company Whitebook page Research, books & author profiles Ask about this record Source: Original 30-page Whitebook reviewed; study summaries pp12–21. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
-            "https://www.pinnacleblooms.org/global-research-whitebook"
+            "https://www.pinnacleblooms.org/global-research-whitebook",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#global-research-whitebook"
           ]
         }
       ]
@@ -5172,9 +5737,10 @@
           "kind": "article",
           "parent": null,
           "description": "Authorship and publication metadata read from the supplied books",
-          "text": "Source publications Company-published Books & parent resources · Publication records Authorship and publication metadata read from the supplied books What this means for your family Parent resources can support informed conversations and everyday participation alongside an individual professional plan. Autism — mother’s hand book Sreeja Reddy Saripalli · first published 2021 Publisher printed India Herald Group of Publishers ISBN printed 978-93-5493-628-9 The Voice of the Unheard Sreeja Reddy Saripalli named as author in the book What this supports The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. Scope & limits A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata. Permanent record Ask about this record Source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
+          "text": "Source publications Company-published Books & parent resources · Publication records Authorship and publication metadata read from the supplied books What this means for your family Parent resources can support informed conversations and everyday participation alongside an individual professional plan. Autism — mother’s hand book Sreeja Reddy Saripalli · first published 2021 Publisher printed India Herald Group of Publishers ISBN printed 978-93-5493-628-9 The Voice of the Unheard Sreeja Reddy Saripalli named as author in the book What this supports The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. Scope & limits A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata. Permanent record Research, books & author profiles Ask about this record Source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132. Reviewed: 15 September 2026 · Company-authored source; underlying claims need their own evidence. This page summarizes the listed evidence; it is not an issuer’s verification service. A source review is separate from checking current issuer status.",
           "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html"
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#parent-books"
           ]
         }
       ]

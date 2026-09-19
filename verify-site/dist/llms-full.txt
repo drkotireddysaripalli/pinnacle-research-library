@@ -646,6 +646,7 @@ Source note: Read reported measurement properties within the instrument version,
 Source citation: Original Zenodo repository metadata and abstract, retrieved 15 September 2026.
 Reviewed: 15 September 2026
 - [Read methodology preprint](https://zenodo.org/records/19482123)
+- [Research, books & author profiles](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123)
 
 ---
 
@@ -676,6 +677,7 @@ Source note: Repository metadata was rechecked on 18 September 2026 and continue
 Source citation: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026.
 Reviewed: 15 September 2026
 - [Read the study protocol](https://zenodo.org/records/19482476)
+- [Research, books & author profiles](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482476)
 
 ---
 
@@ -705,6 +707,7 @@ Source citation: Whitebook pp12–21; Evidence Dossier v2 study register; Septem
 Reviewed: 15 September 2026
 - [View study evidence index](https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html)
 - [Company research library](https://www.pinnacleblooms.org/research-studies)
+- [Research, books & author profiles](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-studies)
 
 ---
 
@@ -875,6 +878,7 @@ Source note: Treat the title and text as a historical company publication, not a
 Source citation: Original 30-page Whitebook reviewed; study summaries pp12–21.
 Reviewed: 15 September 2026
 - [Company Whitebook page](https://www.pinnacleblooms.org/global-research-whitebook)
+- [Research, books & author profiles](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#global-research-whitebook)
 
 ---
 
@@ -958,7 +962,7 @@ Source note: No ISBN or publication year was established for The Voice of the Un
 
 Source citation: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132.
 Reviewed: 15 September 2026
-
+- [Research, books & author profiles](https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#parent-books)
 
 ---
 
@@ -1199,6 +1203,113 @@ Visakhapatnam | IN2810039035 | Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor
 Warangal | IN3610023461 | Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, TelanganaÂ 506001 | Workbook + certificate copy | Workbook row 28 | Certificate 13 May 2026 p69 | Workbook RS: ACTIVE (undefined)
 
 
+# Pinnacle research and books
+Checked: 2026-09-19
+
+Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance
+Saripalli, Koti Reddy
+Regulatory case study — preprint
+2026-09-15
+DOI: 10.5281/zenodo.22761782
+https://doi.org/10.5281/zenodo.22761782
+Documentary regulatory analysis; not an efficacy study or regulatory approval. Repository describes it as not peer reviewed.
+https://zenodo.org/api/records/22761782/files/01_Regulatory_Case.pdf/content
+
+Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis
+Saripalli, Koti Reddy
+Reproducible register analysis — preprint
+2026-09-15
+DOI: 10.5281/zenodo.22761810
+https://doi.org/10.5281/zenodo.22761810
+Analysis of 1,068 RCI-listed institutional entries; not current training capacity or clinician counts. Repository describes it as not peer reviewed.
+https://zenodo.org/api/records/22761810/files/02_RCI_Institution_Geography.pdf/content
+
+Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study
+Saripalli, Koti Reddy
+PINNACLE-TRAJ study protocol — preprint
+2026-09-15
+DOI: 10.5281/zenodo.22761832
+https://doi.org/10.5281/zenodo.22761832
+Planned retrospective cohort analysis. Ethics, registration and scoring-era selection pending; no results.
+https://zenodo.org/api/records/22761832/files/03_PINNACLE_TRAJ_Protocol.pdf/content
+
+Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol
+Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav
+Psychometric validation protocol — preprint
+2026-04-09
+DOI: 10.5281/zenodo.19482476
+https://doi.org/10.5281/zenodo.19482476
+Planned comparator validation, n=300 plus 60 retest. This record does not report completed validation results.
+https://zenodo.org/api/records/19482476/files/PinnacleAI%20AbilityScore%20Development%20and%20Preliminary%20Psychometric%20Characterization%20of%20a%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness%20Validation%20Protocol--.pdf/content
+
+AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness
+Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav
+Methodology and preliminary psychometrics — preprint
+2026-04-09
+DOI: 10.5281/zenodo.19482123
+https://doi.org/10.5281/zenodo.19482123
+Operational preliminary evidence; formal validation described as planned.
+https://zenodo.org/api/records/19482123/files/PinnacleAI%20AbilityScore%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness.pdf/content
+
+Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System
+Saripalli, Koti Reddy
+Institution-authored framework report
+2025-05-22
+DOI: 10.5281/zenodo.15487405
+https://doi.org/10.5281/zenodo.15487405
+Source title contains validation/priority claims; the title is recorded for identification, not endorsed as a verified conclusion. No independent peer-review evidence established.
+https://zenodo.org/api/records/15487405/files/Pinnacle%20Global%20Research%20Whitebook%20-%20The%20World%E2%80%99s%20First%20Fully%20Validated,%20Multi-Domain,%20Parent-First%20Child%20Development%20Framework.pdf/content
+
+Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability
+Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav
+Systematic-review protocol — preprint; unregistered
+2026-09-18
+DOI: 10.5281/zenodo.22827813
+https://doi.org/10.5281/zenodo.22827813
+Unregistered protocol. Formal searches, screening, extraction, appraisal and synthesis have not begun; no review results. Author interests disclosed.
+https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.pdf/content
+https://zenodo.org/api/records/22827813/files/P15_v1_Supplementary_Methods.pdf/content
+
+Autism — mother’s hand book
+Sreeja Reddy Saripalli
+Authored parent handbook
+2021
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-english
+The English and Telugu originals print the same ISBN. This is an authored parent resource.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/autism-mothers-handbook-english.pdf
+
+ఆటిజం — మదర్స్ హ్యాండ్ బుక్
+Sreeja Reddy Saripalli
+Authored parent handbook
+2021
+https://play.google.com/store/books/details?id=BHhPEAAAQBAJ&hl=en
+The English and Telugu originals print the same ISBN. This is an authored parent resource.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/autism-mothers-handbook-telugu.pdf
+
+The Voice of the Unheard
+Sreeja Reddy Saripalli
+Authored parent handbook
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#voice-of-the-unheard
+Authored parent resource. The supplied original does not establish a publication year or ISBN.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/voice-of-the-unheard.pdf
+
+## Authors
+Koti Reddy Saripalli
+ORCID: https://orcid.org/0009-0007-7866-0737
+Google Scholar: https://scholar.google.com/citations?user=OuHrlcsAAAAJ
+Academia.edu: https://svuniversity.academia.edu/DrKotiSaripalli
+ScienceOpen: https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f
+Web of Science researcher profile: https://www.webofscience.com/wos/author/record/RBA-8832-2026
+
+Sreeja Reddy Saripalli
+Pinnacle leadership: https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli
+
+Raghupathi Ramtenki
+ORCID: https://orcid.org/0000-0002-3357-2326
+
+Srikanth Yadav Boini
+
+
 ## Pinnacle identity and documented approach
 Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Company CIN: U74999TG2016PTC113063. LEI: 894500OJYBVC18BUDN89.
 The company describes a seven-stage developmental pathway connecting measurement, planning, integrated support, parent-guided practice and progress review. Its supplied MD-5 names non-diagnostic Class B developmental-support software. The BIS scope names connected software modules. Individual outcomes vary.
@@ -1206,24 +1317,25 @@ The company describes a seven-stage developmental pathway connecting measurement
 ## Main page sections
 - [Every child deserves a wonderful life.](https://pinnacle-verify.saripalli.chatgpt.site/#section-every-child-deserves-a-wonderful-life): Growing toward self-sufficiency. Participating in mainstream life.
 - [Review summary](https://pinnacle-verify.saripalli.chatgpt.site/#section-review-summary): A source for every conclusion Reading a certificate and checking its current status are separate steps. Read the review conclusions .
+- [Read the research. Meet the authors.](https://pinnacle-verify.saripalli.chatgpt.site/#research): Seven DOI-linked works, parent books in English and Telugu, the twelve-study company portfolio, and verified researcher profiles — connected in one reading library.
 - [From present abilities toward a wonderful life.](https://pinnacle-verify.saripalli.chatgpt.site/#care): Pinnacle’s purpose is to help children grow toward self-sufficiency and participation in mainstream life, with the support and accommodations each child needs. The practical question is: “What can my child do now, what support will help next, and how will we understand progress?”
 - [Measurement. A connected plan. Support for everyday life.](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-profile): Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Pinnacle describes a seven-stage child-development pathway connecting ability measurement, child-specific planning, integrated support, parent-guided practice and progress review toward participation and growing independence.
-- [Every number should lead to its source.](https://pinnacle-verify.saripalli.chatgpt.site/#scale): Explore six measures of Pinnacle’s reported reach, activity and resources. Each keeps its counting unit, date and evidence type visible, so scale can be understood in the context of one child’s care.
 - [A clearer starting point. A connected way forward.](https://pinnacle-verify.saripalli.chatgpt.site/#impact): For a family, evidence becomes useful when it helps answer three questions: What can my child do now? What will we work on together? How will we understand what changes?
-- [What would you like to verify?](https://pinnacle-verify.saripalli.chatgpt.site/#records): 34 records
 - [Three questions. A clearer starting point.](https://pinnacle-verify.saripalli.chatgpt.site/#family): Credentials are most useful when they help you ask informed questions about the support your child will receive.
-- [Structured developmental records. One child’s journey at a time.](https://pinnacle-verify.saripalli.chatgpt.site/#data-scale): Company-reported in the 7 September 2026 handout. Counting basis: database rows/events · cutoff 17 July 2026.
+- [What would you like to verify?](https://pinnacle-verify.saripalli.chatgpt.site/#records): 34 records
 - [Understand what each credential adds.](https://pinnacle-verify.saripalli.chatgpt.site/#regulated-purpose): An issued licence defines the software’s intended use. Quality records describe how the system is managed. The BIS schedule connects those processes to a broader set of developmental-support modules.
+- [Every number should lead to its source.](https://pinnacle-verify.saripalli.chatgpt.site/#scale): Explore six measures of Pinnacle’s reported reach, activity and resources. Each keeps its counting unit, date and evidence type visible, so scale can be understood in the context of one child’s care.
+- [Structured developmental records. One child’s journey at a time.](https://pinnacle-verify.saripalli.chatgpt.site/#data-scale): Company-reported in the 7 September 2026 handout. Counting basis: database rows/events · cutoff 17 July 2026.
 - [Start with the centre your family knows.](https://pinnacle-verify.saripalli.chatgpt.site/#centres): Search the supplied facility and district records. Match the exact premises before relying on a document; a network credential does not cover every centre automatically.
 - [Structured for understanding. Designed for connected care.](https://pinnacle-verify.saripalli.chatgpt.site/#international-standards): Four distinct standards help explain the architecture: health information, functioning and participation, interventions, and clinical terminology. Their value depends on how accurately they are implemented.
 - [A wonderful life. A place to participate.](https://pinnacle-verify.saripalli.chatgpt.site/#global-goals): Pinnacle’s stated mission has practical connections to the UN Sustainable Development Goals: access to support, early learning, inclusion and accountable collaboration.
 - [Why these capabilities matter to families.](https://pinnacle-verify.saripalli.chatgpt.site/#global-principles): Independent guidance explains the importance of monitoring, caregiver participation, coordinated support and inclusion. These organisations do not endorse or evaluate Pinnacle through the references below.
 - [See where Pinnacle fits. Compare what matters.](https://pinnacle-verify.saripalli.chatgpt.site/#global-context): Different organisations address diagnosis, assessment, digital treatment, integrated services or provider software. A useful comparison starts with the job each is designed to do.
+- [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): The supplied MD-5 lists PinnacleAI® GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.
+- [Clear terms. Better questions.](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): A practical reading guide to the credentials, report types and international classifications used on this page. Each definition links to its Pinnacle source record.
 - [Originals reviewed. Conclusions made clear.](https://pinnacle-verify.saripalli.chatgpt.site/#review): Each conclusion reflects the documents inspected. Historical certificates, study protocols and company-reported claims are identified precisely, so you can see what each source establishes.
 - [Evidence with its meaning intact.](https://pinnacle-verify.saripalli.chatgpt.site/#method): A record is useful when you can see both what it supports and the limits of that support.
-- [Clear terms. Better questions.](https://pinnacle-verify.saripalli.chatgpt.site/#terminology): A practical reading guide to the credentials, report types and international classifications used on this page. Each definition links to its Pinnacle source record.
 - [Your child’s next step deserves a clear conversation.](https://pinnacle-verify.saripalli.chatgpt.site/#next-step): Ask the Pinnacle team about your child’s starting abilities, the proposed goals, who coordinates care and when progress will be reviewed. Bring the evidence questions that matter to your family.
-- [Clear answers. Connected to the source.](https://pinnacle-verify.saripalli.chatgpt.site/#questions): The supplied MD-5 lists PinnacleAI® GPT-OS v1.0.0 as a Class B, non-diagnostic developmental-support device. Its scope is tied to the named device, version, intended use and premises; it does not establish diagnostic authority or guarantee clinical outcomes.
 - [Take the source with you.](https://pinnacle-verify.saripalli.chatgpt.site/#section-take-the-source-with-you): Readable records retain their review status, source references and limitations in every format.
 
 ## Terms explained

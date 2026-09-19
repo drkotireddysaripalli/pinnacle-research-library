@@ -1,0 +1,105 @@
+# Pinnacle research and books
+Checked: 2026-09-19
+
+Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance
+Saripalli, Koti Reddy
+Regulatory case study — preprint
+2026-09-15
+DOI: 10.5281/zenodo.22761782
+https://doi.org/10.5281/zenodo.22761782
+Documentary regulatory analysis; not an efficacy study or regulatory approval. Repository describes it as not peer reviewed.
+https://zenodo.org/api/records/22761782/files/01_Regulatory_Case.pdf/content
+
+Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis
+Saripalli, Koti Reddy
+Reproducible register analysis — preprint
+2026-09-15
+DOI: 10.5281/zenodo.22761810
+https://doi.org/10.5281/zenodo.22761810
+Analysis of 1,068 RCI-listed institutional entries; not current training capacity or clinician counts. Repository describes it as not peer reviewed.
+https://zenodo.org/api/records/22761810/files/02_RCI_Institution_Geography.pdf/content
+
+Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study
+Saripalli, Koti Reddy
+PINNACLE-TRAJ study protocol — preprint
+2026-09-15
+DOI: 10.5281/zenodo.22761832
+https://doi.org/10.5281/zenodo.22761832
+Planned retrospective cohort analysis. Ethics, registration and scoring-era selection pending; no results.
+https://zenodo.org/api/records/22761832/files/03_PINNACLE_TRAJ_Protocol.pdf/content
+
+Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol
+Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav
+Psychometric validation protocol — preprint
+2026-04-09
+DOI: 10.5281/zenodo.19482476
+https://doi.org/10.5281/zenodo.19482476
+Planned comparator validation, n=300 plus 60 retest. This record does not report completed validation results.
+https://zenodo.org/api/records/19482476/files/PinnacleAI%20AbilityScore%20Development%20and%20Preliminary%20Psychometric%20Characterization%20of%20a%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness%20Validation%20Protocol--.pdf/content
+
+AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness
+Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav
+Methodology and preliminary psychometrics — preprint
+2026-04-09
+DOI: 10.5281/zenodo.19482123
+https://doi.org/10.5281/zenodo.19482123
+Operational preliminary evidence; formal validation described as planned.
+https://zenodo.org/api/records/19482123/files/PinnacleAI%20AbilityScore%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness.pdf/content
+
+Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System
+Saripalli, Koti Reddy
+Institution-authored framework report
+2025-05-22
+DOI: 10.5281/zenodo.15487405
+https://doi.org/10.5281/zenodo.15487405
+Source title contains validation/priority claims; the title is recorded for identification, not endorsed as a verified conclusion. No independent peer-review evidence established.
+https://zenodo.org/api/records/15487405/files/Pinnacle%20Global%20Research%20Whitebook%20-%20The%20World%E2%80%99s%20First%20Fully%20Validated,%20Multi-Domain,%20Parent-First%20Child%20Development%20Framework.pdf/content
+
+Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability
+Saripalli, Koti Reddy · Ramtenki, Raghupathi · Boini, Srikanth Yadav
+Systematic-review protocol — preprint; unregistered
+2026-09-18
+DOI: 10.5281/zenodo.22827813
+https://doi.org/10.5281/zenodo.22827813
+Unregistered protocol. Formal searches, screening, extraction, appraisal and synthesis have not begun; no review results. Author interests disclosed.
+https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.pdf/content
+https://zenodo.org/api/records/22827813/files/P15_v1_Supplementary_Methods.pdf/content
+
+Autism — mother’s hand book
+Sreeja Reddy Saripalli
+Authored parent handbook
+2021
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-english
+The English and Telugu originals print the same ISBN. This is an authored parent resource.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/autism-mothers-handbook-english.pdf
+
+ఆటిజం — మదర్స్ హ్యాండ్ బుక్
+Sreeja Reddy Saripalli
+Authored parent handbook
+2021
+https://play.google.com/store/books/details?id=BHhPEAAAQBAJ&hl=en
+The English and Telugu originals print the same ISBN. This is an authored parent resource.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/autism-mothers-handbook-telugu.pdf
+
+The Voice of the Unheard
+Sreeja Reddy Saripalli
+Authored parent handbook
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#voice-of-the-unheard
+Authored parent resource. The supplied original does not establish a publication year or ISBN.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/books/voice-of-the-unheard.pdf
+
+## Authors
+Koti Reddy Saripalli
+ORCID: https://orcid.org/0009-0007-7866-0737
+Google Scholar: https://scholar.google.com/citations?user=OuHrlcsAAAAJ
+Academia.edu: https://svuniversity.academia.edu/DrKotiSaripalli
+ScienceOpen: https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f
+Web of Science researcher profile: https://www.webofscience.com/wos/author/record/RBA-8832-2026
+
+Sreeja Reddy Saripalli
+Pinnacle leadership: https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli
+
+Raghupathi Ramtenki
+ORCID: https://orcid.org/0000-0002-3357-2326
+
+Srikanth Yadav Boini

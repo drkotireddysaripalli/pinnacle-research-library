@@ -1,3 +1,5 @@
+Fonts: DM Sans and Manrope, SIL Open Font License 1.1. See /fonts/dm-sans-OFL.txt and /fonts/manrope-OFL.txt.
+
 Lucide static SVG icons, version 1.46.0. https://lucide.dev
 Only used icons are included inline.
 

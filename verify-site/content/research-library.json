@@ -1,0 +1,1072 @@
+{
+  "asOf": "2026-09-19",
+  "records": [
+    {
+      "id": "zenodo-22761782",
+      "type": "preprint",
+      "title": "Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance",
+      "url": "https://zenodo.org/records/22761782",
+      "doi": "10.5281/zenodo.22761782",
+      "doiUrl": "https://doi.org/10.5281/zenodo.22761782",
+      "authors": [
+        {
+          "name": "Saripalli, Koti Reddy",
+          "affiliation": "Pinnacle Global Research Consortium, Pinnacle Blooms Network, Bharath Healthcare Laboratories Pvt. Ltd.",
+          "orcid": "0009-0007-7866-0737"
+        }
+      ],
+      "contributors": [],
+      "publicationDate": "2026-09-15",
+      "version": "3.0",
+      "publicationStatus": "Regulatory case study — preprint",
+      "scopeNote": "Documentary regulatory analysis; not an efficacy study or regulatory approval. Repository describes it as not peer reviewed.",
+      "license": "cc-by-4.0",
+      "academiaMirrors": [
+        {
+          "record_id": "175562550",
+          "title": "Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO’s July 2026 Guidance",
+          "url": "https://www.academia.edu/175562550/Licensing_Developmental_Support_Software_in_India_An_April_2026_Case_Study_Assessed_Against_CDSCO_s_July_2026_Guidance"
+        }
+      ],
+      "sourceUrls": [
+        "https://zenodo.org/api/records/22761782"
+      ],
+      "files": [
+        {
+          "name": "01_Regulatory_Case.docx",
+          "url": "https://zenodo.org/api/records/22761782/files/01_Regulatory_Case.docx/content",
+          "bytes": 837404,
+          "checksum": "md5:0ecdf3e9b5abc7801fc7a6def48a8a8c"
+        },
+        {
+          "name": "01_Regulatory_Case.pdf",
+          "url": "https://zenodo.org/api/records/22761782/files/01_Regulatory_Case.pdf/content",
+          "bytes": 417646,
+          "checksum": "md5:72c19c3ab63bab2f4d05851c15f93f3f"
+        },
+        {
+          "name": "01_Developmental_Software_Regulatory_Case_Supplementary_Figures.zip",
+          "url": "https://zenodo.org/api/records/22761782/files/01_Developmental_Software_Regulatory_Case_Supplementary_Figures.zip/content",
+          "bytes": 1919295,
+          "checksum": "md5:fb3cd647cf15713bf78cc87a3467485d"
+        }
+      ]
+    },
+    {
+      "id": "zenodo-22761810",
+      "type": "preprint",
+      "title": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+      "url": "https://zenodo.org/records/22761810",
+      "doi": "10.5281/zenodo.22761810",
+      "doiUrl": "https://doi.org/10.5281/zenodo.22761810",
+      "authors": [
+        {
+          "name": "Saripalli, Koti Reddy",
+          "affiliation": "Pinnacle Global Research Consortium, Pinnacle Blooms Network, Bharath Healthcare Laboratories Pvt. Ltd.",
+          "orcid": "0009-0007-7866-0737"
+        }
+      ],
+      "contributors": [],
+      "publicationDate": "2026-09-15",
+      "version": "2.0",
+      "publicationStatus": "Reproducible register analysis — preprint",
+      "scopeNote": "Analysis of 1,068 RCI-listed institutional entries; not current training capacity or clinician counts. Repository describes it as not peer reviewed.",
+      "license": "cc-by-4.0",
+      "academiaMirrors": [
+        {
+          "record_id": "175563040",
+          "title": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+          "url": "https://www.academia.edu/175563040/Geographic_Concentration_of_RCI_Listed_Rehabilitation_Training_Institutions_in_India_A_Reproducible_National_Register_Analysis"
+        }
+      ],
+      "sourceUrls": [
+        "https://zenodo.org/api/records/22761810"
+      ],
+      "files": [
+        {
+          "name": "02_RCI_Institution_Geography.docx",
+          "url": "https://zenodo.org/api/records/22761810/files/02_RCI_Institution_Geography.docx/content",
+          "bytes": 929134,
+          "checksum": "md5:755364ddedbacebd4c7744a00eb5c754"
+        },
+        {
+          "name": "02_RCI_Institution_Geography_Data_Code_and_Figures.zip",
+          "url": "https://zenodo.org/api/records/22761810/files/02_RCI_Institution_Geography_Data_Code_and_Figures.zip/content",
+          "bytes": 2279727,
+          "checksum": "md5:4c4a230a1109f1bcb23d23c0bbd98bfe"
+        },
+        {
+          "name": "02_RCI_Institution_Geography.pdf",
+          "url": "https://zenodo.org/api/records/22761810/files/02_RCI_Institution_Geography.pdf/content",
+          "bytes": 488419,
+          "checksum": "md5:944bb41142e370e61783f61763bfe801"
+        }
+      ]
+    },
+    {
+      "id": "zenodo-22761832",
+      "type": "preprint",
+      "title": "Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study",
+      "url": "https://zenodo.org/records/22761832",
+      "doi": "10.5281/zenodo.22761832",
+      "doiUrl": "https://doi.org/10.5281/zenodo.22761832",
+      "authors": [
+        {
+          "name": "Saripalli, Koti Reddy",
+          "affiliation": "Pinnacle Global Research Consortium, Pinnacle Blooms Network, Bharath Healthcare Laboratories Pvt. Ltd.",
+          "orcid": "0009-0007-7866-0737"
+        }
+      ],
+      "contributors": [],
+      "publicationDate": "2026-09-15",
+      "version": "1.1",
+      "publicationStatus": "PINNACLE-TRAJ study protocol — preprint",
+      "scopeNote": "Planned retrospective cohort analysis. Ethics, registration and scoring-era selection pending; no results.",
+      "license": "cc-by-4.0",
+      "academiaMirrors": [
+        {
+          "record_id": "175563111",
+          "title": "Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study",
+          "url": "https://www.academia.edu/175563111/Six_Month_Change_and_Follow_up_Patterns_in_AbilityScore_During_Routine_Paediatric_Developmental_Care_in_India_Protocol_for_the_PINNACLE_TRAJ_Retrospective_Multicentre_Cohort_Study"
+        }
+      ],
+      "sourceUrls": [
+        "https://zenodo.org/api/records/22761832"
+      ],
+      "files": [
+        {
+          "name": "03_PINNACLE_TRAJ_Protocol.docx",
+          "url": "https://zenodo.org/api/records/22761832/files/03_PINNACLE_TRAJ_Protocol.docx/content",
+          "bytes": 729002,
+          "checksum": "md5:c3ce6339fa44d66b3b17a87630bb9a40"
+        },
+        {
+          "name": "03_PINNACLE_TRAJ_Protocol.pdf",
+          "url": "https://zenodo.org/api/records/22761832/files/03_PINNACLE_TRAJ_Protocol.pdf/content",
+          "bytes": 509508,
+          "checksum": "md5:ff36d2ed414f7b16855904b000745b7b"
+        },
+        {
+          "name": "03_PINNACLE_TRAJ_Protocol_Supplementary_Figures.zip",
+          "url": "https://zenodo.org/api/records/22761832/files/03_PINNACLE_TRAJ_Protocol_Supplementary_Figures.zip/content",
+          "bytes": 1737267,
+          "checksum": "md5:59a66893c1ae0a572cea8bc3877f512c"
+        }
+      ]
+    },
+    {
+      "id": "zenodo-19482476",
+      "type": "preprint",
+      "title": "Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol",
+      "url": "https://zenodo.org/records/19482476",
+      "doi": "10.5281/zenodo.19482476",
+      "doiUrl": "https://doi.org/10.5281/zenodo.19482476",
+      "authors": [
+        {
+          "name": "Saripalli, Koti Reddy",
+          "affiliation": "Bharath Healthcare P LIMITED",
+          "orcid": "0009-0007-7866-0737"
+        },
+        {
+          "name": "Ramtenki, Raghupathi",
+          "affiliation": "TRR Institue of Medical Sciences",
+          "orcid": "0000-0002-3357-2326"
+        },
+        {
+          "name": "Boini, Srikanth Yadav",
+          "affiliation": "Omega PRK Hospitals"
+        }
+      ],
+      "contributors": [],
+      "publicationDate": "2026-04-09",
+      "version": "2.1",
+      "publicationStatus": "Psychometric validation protocol — preprint",
+      "scopeNote": "Planned comparator validation, n=300 plus 60 retest. This record does not report completed validation results.",
+      "license": "cc-by-4.0",
+      "academiaMirrors": [
+        {
+          "record_id": "165583376",
+          "title": "Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol",
+          "url": "https://www.academia.edu/165583376/Concurrent_Validity_Test_Retest_Reliability_and_Preliminary_Minimal_Clinically_Important_Difference_of_PinnacleAI_AbilityScore_A_Cross_Sectional_Psychometric_Validation_Study_Protocol"
+        }
+      ],
+      "sourceUrls": [
+        "https://zenodo.org/api/records/19482476"
+      ],
+      "files": [
+        {
+          "name": "PinnacleAI AbilityScore Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness Validation Protocol--.pdf",
+          "url": "https://zenodo.org/api/records/19482476/files/PinnacleAI%20AbilityScore%20Development%20and%20Preliminary%20Psychometric%20Characterization%20of%20a%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness%20Validation%20Protocol--.pdf/content",
+          "bytes": 310186,
+          "checksum": "md5:950f2350f7ae9f220a6aaa7d2c18ac70"
+        }
+      ]
+    },
+    {
+      "id": "zenodo-19482123",
+      "type": "preprint",
+      "title": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
+      "url": "https://zenodo.org/records/19482123",
+      "doi": "10.5281/zenodo.19482123",
+      "doiUrl": "https://doi.org/10.5281/zenodo.19482123",
+      "authors": [
+        {
+          "name": "Saripalli, Koti Reddy",
+          "affiliation": "Bharath Healthcare P LIMITED",
+          "orcid": "0009-0007-7866-0737"
+        },
+        {
+          "name": "Ramtenki, Raghupathi",
+          "affiliation": "TRR Institute of Medical Sciences",
+          "orcid": "0000-0002-3357-2326"
+        },
+        {
+          "name": "Boini, Srikanth Yadav",
+          "affiliation": "Omega PRK Hospital"
+        }
+      ],
+      "contributors": [],
+      "publicationDate": "2026-04-09",
+      "version": "v1",
+      "publicationStatus": "Methodology and preliminary psychometrics — preprint",
+      "scopeNote": "Operational preliminary evidence; formal validation described as planned.",
+      "license": "cc-by-4.0",
+      "academiaMirrors": [
+        {
+          "record_id": "165582431",
+          "title": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
+          "url": "https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness"
+        }
+      ],
+      "sourceUrls": [
+        "https://zenodo.org/api/records/19482123"
+      ],
+      "files": [
+        {
+          "name": "PinnacleAI AbilityScore Standardized Composite Index for Quantifying Child Developmental Readiness.pdf",
+          "url": "https://zenodo.org/api/records/19482123/files/PinnacleAI%20AbilityScore%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness.pdf/content",
+          "bytes": 370904,
+          "checksum": "md5:f8d17e9da26905e4ce8656b8597257d8"
+        }
+      ]
+    },
+    {
+      "id": "zenodo-15487405",
+      "type": "report",
+      "title": "Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System",
+      "url": "https://zenodo.org/records/15487405",
+      "doi": "10.5281/zenodo.15487405",
+      "doiUrl": "https://doi.org/10.5281/zenodo.15487405",
+      "authors": [
+        {
+          "name": "Saripalli, Koti Reddy",
+          "affiliation": "Pinnacle Global Research Consortium, Pinnacle Blooms Network, Bharath Healthcare Laboratories Pvt. Ltd.",
+          "orcid": "0009-0007-7866-0737"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Saripalli, Sreeja Reddy",
+          "affiliation": "Pinnacle Blooms Network",
+          "type": "Editor"
+        },
+        {
+          "name": "Koti Group SEVA Foundation",
+          "affiliation": "Koti Group",
+          "type": "ResearchGroup"
+        }
+      ],
+      "publicationDate": "2025-05-22",
+      "version": "v1.0",
+      "publicationStatus": "Institution-authored framework report",
+      "scopeNote": "Source title contains validation/priority claims; the title is recorded for identification, not endorsed as a verified conclusion. No independent peer-review evidence established.",
+      "license": "cc-by-4.0",
+      "academiaMirrors": [
+        {
+          "record_id": "129496991",
+          "title": "Pinnacle Global Research Whitebook: The World’s First Fully Validated, Multi-Domain, Parent-First Child Development Framework",
+          "url": "https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework"
+        }
+      ],
+      "sourceUrls": [
+        "https://zenodo.org/api/records/15487405"
+      ],
+      "files": [
+        {
+          "name": "Pinnacle Global Research Whitebook - The World’s First Fully Validated, Multi-Domain, Parent-First Child Development Framework.pdf",
+          "url": "https://zenodo.org/api/records/15487405/files/Pinnacle%20Global%20Research%20Whitebook%20-%20The%20World%E2%80%99s%20First%20Fully%20Validated,%20Multi-Domain,%20Parent-First%20Child%20Development%20Framework.pdf/content",
+          "bytes": 18250160,
+          "checksum": "md5:1d901e6391210fd0a1447d3e6e40c7f0"
+        }
+      ]
+    },
+    {
+      "id": "zenodo-22827813",
+      "type": "preprint",
+      "title": "Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability",
+      "url": "https://zenodo.org/records/22827813",
+      "doi": "10.5281/zenodo.22827813",
+      "doiUrl": "https://doi.org/10.5281/zenodo.22827813",
+      "authors": [
+        {
+          "name": "Saripalli, Koti Reddy",
+          "affiliation": "Bharath Healthcare Laboratories Private Limited, Pinnacle Blooms Network, Hyderabad, India",
+          "orcid": "0009-0007-7866-0737"
+        },
+        {
+          "name": "Ramtenki, Raghupathi",
+          "affiliation": "Department of Paediatrics, TRR Institute of Medical Sciences, Patancheru, Telangana, India",
+          "orcid": "0000-0002-3357-2326"
+        },
+        {
+          "name": "Boini, Srikanth Yadav",
+          "affiliation": "Department of Neurology, Omega PRK Hospital, Chandanagar, Hyderabad, Telangana, India"
+        }
+      ],
+      "contributors": [],
+      "publicationDate": "2026-09-18",
+      "version": "1.0",
+      "publicationStatus": "Systematic-review protocol — preprint; unregistered",
+      "scopeNote": "Unregistered protocol. Formal searches, screening, extraction, appraisal and synthesis have not begun; no review results. Author interests disclosed.",
+      "license": "cc-by-4.0",
+      "academiaMirrors": [],
+      "sourceUrls": [
+        "https://zenodo.org/api/records/22827813"
+      ],
+      "files": [
+        {
+          "name": "P15_Publication_v1_2026-09-18.zip",
+          "url": "https://zenodo.org/api/records/22827813/files/P15_Publication_v1_2026-09-18.zip/content",
+          "bytes": 2421269,
+          "checksum": "md5:3a4c81d5effb70b491e42c0b1e710ba0"
+        },
+        {
+          "name": "P15_v1_Reader_Edition.docx",
+          "url": "https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.docx/content",
+          "bytes": 432737,
+          "checksum": "md5:1d83bc3d857e5161bee64267c885c9cf"
+        },
+        {
+          "name": "P15_v1_Reader_Edition.pdf",
+          "url": "https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.pdf/content",
+          "bytes": 470574,
+          "checksum": "md5:4d93cc02b3a8b8e82ef33a3cb0049bf0"
+        },
+        {
+          "name": "P15_v1_Supplementary_Methods.pdf",
+          "url": "https://zenodo.org/api/records/22827813/files/P15_v1_Supplementary_Methods.pdf/content",
+          "bytes": 245168,
+          "checksum": "md5:2203287a2cdfb29c7d03f9ddfeab75ee"
+        }
+      ]
+    },
+    {
+      "id": "researchsquare-rci-geography",
+      "type": "preprint-mirror",
+      "title": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+      "url": "https://www.researchsquare.com/article/rs-11043330/v1",
+      "doi": "10.21203/rs.3.rs-11043330/v1",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "publicationDate": "2026-09-16",
+      "publicationStatus": "Posted preprint; official page explicitly says not peer reviewed by a journal",
+      "sourceUrls": [
+        "https://www.researchsquare.com/article/rs-11043330/v1"
+      ],
+      "files": []
+    },
+    {
+      "id": "autism-mothers-handbook-english",
+      "type": "book",
+      "title": "Autism — mother’s hand book",
+      "authors": [
+        "Sreeja Reddy Saripalli"
+      ],
+      "publicationDate": "2021",
+      "publicationStatus": "Authored parent handbook",
+      "scopeNote": "The English and Telugu originals print the same ISBN. This is an authored parent resource.",
+      "language": "English",
+      "bookISBN": "978-93-5493-628-9",
+      "publisher": "India Herald Group of Publishers P LIMITED (printed local edition)",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli"
+      ],
+      "files": [
+        {
+          "name": "Original book PDF",
+          "url": "/evidence/books/autism-mothers-handbook-english.pdf",
+          "bytes": 15379556,
+          "sha256": "ee6da521dfa3598712ed82f34c0c7d56808549649198a24f8b4d03996792d054"
+        }
+      ]
+    },
+    {
+      "id": "autism-mothers-handbook-telugu",
+      "type": "book",
+      "title": "ఆటిజం — మదర్స్ హ్యాండ్ బుక్",
+      "url": "https://play.google.com/store/books/details?id=BHhPEAAAQBAJ&hl=en",
+      "authors": [
+        "Sreeja Reddy Saripalli"
+      ],
+      "publicationDate": "2021",
+      "publicationStatus": "Authored parent handbook",
+      "scopeNote": "The English and Telugu originals print the same ISBN. This is an authored parent resource.",
+      "language": "Telugu",
+      "bookISBN": "978-93-5493-628-9",
+      "publisher": "India Herald Group of Publishers P LIMITED (printed local edition)",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli",
+        "https://play.google.com/store/books/details?id=BHhPEAAAQBAJ&hl=en"
+      ],
+      "files": [
+        {
+          "name": "Original book PDF",
+          "url": "/evidence/books/autism-mothers-handbook-telugu.pdf",
+          "bytes": 16707978,
+          "sha256": "bd5ba04d7c64b08f078c37b5295a794025949ad7627951680ac5663d3bb6278d"
+        }
+      ]
+    },
+    {
+      "id": "voice-of-the-unheard",
+      "type": "book",
+      "title": "The Voice of the Unheard",
+      "authors": [
+        "Sreeja Reddy Saripalli"
+      ],
+      "publicationStatus": "Authored parent handbook",
+      "scopeNote": "Authored parent resource. The supplied original does not establish a publication year or ISBN.",
+      "language": "English",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli"
+      ],
+      "files": [
+        {
+          "name": "Original book PDF",
+          "url": "/evidence/books/voice-of-the-unheard.pdf",
+          "bytes": 6183216,
+          "sha256": "cc1500b2356035c2ef11be08cc6f41eaf60c13edb370c53258b9b3ada0fb3db5"
+        }
+      ]
+    },
+    {
+      "id": "company-study-1",
+      "type": "company-study-report",
+      "title": "AbilityScore® Longitudinal Study",
+      "url": "https://www.pinnacleblooms.org/abilityscore-global-study",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/abilityscore-global-study"
+      ],
+      "files": []
+    },
+    {
+      "id": "company-study-2",
+      "type": "company-study-report",
+      "title": "SEVA™ Therapy Outcomes Impact Study",
+      "url": "https://www.pinnacleblooms.org/seva-impact-study",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/seva-impact-study"
+      ],
+      "files": []
+    },
+    {
+      "id": "company-study-3",
+      "type": "company-study-report",
+      "title": "TherapeuticAI® Effectiveness Study",
+      "url": "https://www.pinnacleblooms.org/therapeuticai-effectiveness-study",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/therapeuticai-effectiveness-study"
+      ],
+      "files": []
+    },
+    {
+      "id": "company-study-4",
+      "type": "company-study-report",
+      "title": "Everyday Therapy™ Home Integration Study",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy-home-study",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/everyday-therapy-home-study"
+      ],
+      "files": []
+    },
+    {
+      "id": "company-study-5",
+      "type": "company-study-report",
+      "title": "Multilingual Therapy Outcomes Study",
+      "url": "https://zenodo.org/records/15487405",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [],
+      "files": []
+    },
+    {
+      "id": "company-study-6",
+      "type": "company-study-report",
+      "title": "School Readiness & Inclusion Outcomes Study",
+      "url": "https://www.pinnacleblooms.org/school-readiness-study",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/school-readiness-study"
+      ],
+      "files": []
+    },
+    {
+      "id": "company-study-7",
+      "type": "company-study-report",
+      "title": "SEVA™ Social Equity Index Study",
+      "url": "https://zenodo.org/records/15487405",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [],
+      "files": []
+    },
+    {
+      "id": "company-study-8",
+      "type": "company-study-report",
+      "title": "Therapist Burnout & Empathy Study",
+      "url": "https://zenodo.org/records/15487405",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [],
+      "files": []
+    },
+    {
+      "id": "company-study-9",
+      "type": "company-study-report",
+      "title": "AbilityScore® Predictive Validity Study",
+      "url": "https://www.pinnacleblooms.org/abilityscore-predictive-study",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/abilityscore-predictive-study"
+      ],
+      "files": []
+    },
+    {
+      "id": "company-study-10",
+      "type": "company-study-report",
+      "title": "TherapySphere™ Sensory Environment Study",
+      "url": "https://www.pinnacleblooms.org/therapysphere-study",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/therapysphere-study"
+      ],
+      "files": []
+    },
+    {
+      "id": "company-study-11",
+      "type": "company-study-report",
+      "title": "Question Comprehension Improvement Study",
+      "url": "https://www.pinnacleblooms.org/question-comprehension-study",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/question-comprehension-study"
+      ],
+      "files": []
+    },
+    {
+      "id": "company-study-12",
+      "type": "company-study-report",
+      "title": "Parent-Led Generalization Study",
+      "url": "https://www.pinnacleblooms.org/parent-led-generalization",
+      "authors": [],
+      "publicationStatus": "Company-published study; independent journal peer review not established",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/parent-led-generalization"
+      ],
+      "files": []
+    },
+    {
+      "id": "koti-orcid",
+      "type": "author-profile",
+      "title": "Koti Reddy Saripalli — ORCID",
+      "url": "https://orcid.org/0009-0007-7866-0737",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "scopeNote": "Researcher-maintained profile; does not independently certify credentials or claims.",
+      "sourceUrls": [
+        "https://pub.orcid.org/v3.0/0009-0007-7866-0737/record"
+      ],
+      "files": []
+    },
+    {
+      "id": "koti-google-scholar",
+      "type": "author-profile",
+      "title": "Google Scholar — Koti Reddy Saripalli",
+      "url": "https://scholar.google.com/citations?user=OuHrlcsAAAAJ",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "scopeNote": "Profile presence is not proof of publication indexing or peer review.",
+      "sourceUrls": [
+        "https://pub.orcid.org/v3.0/0009-0007-7866-0737/record",
+        "https://scholar.google.com/citations?user=OuHrlcsAAAAJ"
+      ],
+      "files": []
+    },
+    {
+      "id": "koti-academia.edu",
+      "type": "author-profile",
+      "title": "Academia.edu — Koti Reddy Saripalli",
+      "url": "https://svuniversity.academia.edu/DrKotiSaripalli",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "scopeNote": "Profile presence is not proof of publication indexing or peer review.",
+      "sourceUrls": [
+        "https://pub.orcid.org/v3.0/0009-0007-7866-0737/record",
+        "https://svuniversity.academia.edu/DrKotiSaripalli"
+      ],
+      "files": []
+    },
+    {
+      "id": "koti-scienceopen",
+      "type": "author-profile",
+      "title": "ScienceOpen — Koti Reddy Saripalli",
+      "url": "https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "scopeNote": "Profile presence is not proof of publication indexing or peer review.",
+      "sourceUrls": [
+        "https://pub.orcid.org/v3.0/0009-0007-7866-0737/record",
+        "https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f"
+      ],
+      "files": []
+    },
+    {
+      "id": "koti-web-of-science-researcher-profile",
+      "type": "author-profile",
+      "title": "Web of Science researcher profile — Koti Reddy Saripalli",
+      "url": "https://www.webofscience.com/wos/author/record/RBA-8832-2026",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "scopeNote": "Profile presence is not proof of publication indexing or peer review.",
+      "sourceUrls": [
+        "https://pub.orcid.org/v3.0/0009-0007-7866-0737/record",
+        "https://www.webofscience.com/wos/author/record/RBA-8832-2026"
+      ],
+      "files": []
+    },
+    {
+      "id": "raghupathi-orcid",
+      "type": "author-profile",
+      "title": "Raghupathi Ramtenki — ORCID",
+      "url": "https://orcid.org/0000-0002-3357-2326",
+      "authors": [
+        "Raghupathi Ramtenki"
+      ],
+      "scopeNote": "ORCID employment details are self-maintained; no current credential audit implied.",
+      "sourceUrls": [
+        "https://pub.orcid.org/v3.0/0000-0002-3357-2326/record"
+      ],
+      "files": []
+    },
+    {
+      "id": "sreeja-leadership",
+      "type": "author-profile",
+      "title": "Sreeja Reddy Saripalli — Pinnacle leadership",
+      "url": "https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli",
+      "authors": [
+        "Sreeja Reddy Saripalli"
+      ],
+      "scopeNote": "Leadership profile, not a research registry. No ORCID confirmed for this author.",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/Leadership/DR-sreeja-reddy-saripalli"
+      ],
+      "files": []
+    },
+    {
+      "id": "srikanth-author-credit",
+      "type": "author-credit",
+      "title": "Srikanth Yadav Boini — coauthor credit",
+      "authors": [
+        "Srikanth Yadav Boini"
+      ],
+      "scopeNote": "Do not link namesake research or infer an ORCID. Display byline/affiliation with the papers.",
+      "sourceUrls": [
+        "https://zenodo.org/records/22827813",
+        "https://zenodo.org/records/19482123",
+        "https://zenodo.org/records/19482476"
+      ],
+      "files": []
+    },
+    {
+      "id": "pinnacle-research-library",
+      "type": "research-library",
+      "title": "Pinnacle Research Library — papers, data and code",
+      "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "publicationStatus": "Public distribution and reproducibility repository; currently six canonical works in catalogue",
+      "scopeNote": "Seventh work22827813 confirmed independently through ORCID/Zenodo; catalogue has not yet incorporated it.",
+      "sourceUrls": [
+        "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+      ],
+      "files": []
+    },
+    {
+      "id": "pinnacle-company-research-index",
+      "type": "research-library",
+      "title": "Pinnacle company study library",
+      "url": "https://www.pinnacleblooms.org/research-studies",
+      "authors": [],
+      "publicationStatus": "Institutional publication index",
+      "sourceUrls": [
+        "https://www.pinnacleblooms.org/research-studies"
+      ],
+      "files": []
+    }
+  ],
+  "covers": [
+    {
+      "id": "autism-mothers-handbook-english",
+      "title": "Autism — mother’s hand book",
+      "sourcePage": 1,
+      "sourceSha256": "ee6da521dfa3598712ed82f34c0c7d56808549649198a24f8b4d03996792d054",
+      "variants": [
+        {
+          "url": "/images/research/autism-mothers-handbook-english-300.webp",
+          "width": 300,
+          "height": 425,
+          "bytes": 23270
+        },
+        {
+          "url": "/images/research/autism-mothers-handbook-english-600.webp",
+          "width": 600,
+          "height": 849,
+          "bytes": 53146
+        }
+      ]
+    },
+    {
+      "id": "autism-mothers-handbook-telugu",
+      "title": "ఆటిజం — మదర్స్ హ్యాండ్ బుక్",
+      "sourcePage": 1,
+      "sourceSha256": "bd5ba04d7c64b08f078c37b5295a794025949ad7627951680ac5663d3bb6278d",
+      "variants": [
+        {
+          "url": "/images/research/autism-mothers-handbook-telugu-300.webp",
+          "width": 300,
+          "height": 480,
+          "bytes": 27062
+        },
+        {
+          "url": "/images/research/autism-mothers-handbook-telugu-600.webp",
+          "width": 600,
+          "height": 960,
+          "bytes": 59910
+        }
+      ]
+    },
+    {
+      "id": "voice-of-the-unheard",
+      "title": "The Voice of the Unheard",
+      "sourcePage": 1,
+      "sourceSha256": "cc1500b2356035c2ef11be08cc6f41eaf60c13edb370c53258b9b3ada0fb3db5",
+      "variants": [
+        {
+          "url": "/images/research/voice-of-the-unheard-300.webp",
+          "width": 300,
+          "height": 449,
+          "bytes": 23994
+        },
+        {
+          "url": "/images/research/voice-of-the-unheard-600.webp",
+          "width": 600,
+          "height": 899,
+          "bytes": 60646
+        }
+      ]
+    },
+    {
+      "id": "global-research-whitebook",
+      "title": "Pinnacle Global Research Whitebook",
+      "sourcePage": 1,
+      "sourceSha256": "7511fe153af7da127132294106bbd9f474e9ea0a53947637ec88af551719dd3f",
+      "variants": [
+        {
+          "url": "/images/research/global-research-whitebook-300.webp",
+          "width": 300,
+          "height": 494,
+          "bytes": 31586
+        },
+        {
+          "url": "/images/research/global-research-whitebook-600.webp",
+          "width": 600,
+          "height": 988,
+          "bytes": 93848
+        }
+      ]
+    },
+    {
+      "id": "zenodo-19482123",
+      "title": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
+      "sourcePage": 1,
+      "sourceSha256": "61348d8c1f5159a0d77d7c4f91f1b39b9deb3fe6a0ef299ba335d8c6c313edba",
+      "variants": [
+        {
+          "url": "/images/research/zenodo-19482123-300.webp",
+          "width": 300,
+          "height": 424,
+          "bytes": 28668
+        },
+        {
+          "url": "/images/research/zenodo-19482123-600.webp",
+          "width": 600,
+          "height": 848,
+          "bytes": 98392
+        }
+      ]
+    },
+    {
+      "id": "zenodo-19482476",
+      "title": "Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol",
+      "sourcePage": 1,
+      "sourceSha256": "3dc3e4fc2ed23001cb28938c62768191ad8aa578f21f346c96273be3d8dfbe24",
+      "variants": [
+        {
+          "url": "/images/research/zenodo-19482476-300.webp",
+          "width": 300,
+          "height": 424,
+          "bytes": 29576
+        },
+        {
+          "url": "/images/research/zenodo-19482476-600.webp",
+          "width": 600,
+          "height": 848,
+          "bytes": 101014
+        }
+      ]
+    },
+    {
+      "id": "zenodo-22761810",
+      "title": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+      "sourcePage": 1,
+      "sourceSha256": "134705dc6cf2bfcb4b25a959791a35f0bfda69bb7fc88717a24b320298f0a545",
+      "variants": [
+        {
+          "url": "/images/research/zenodo-22761810-300.webp",
+          "width": 300,
+          "height": 424,
+          "bytes": 7132
+        },
+        {
+          "url": "/images/research/zenodo-22761810-600.webp",
+          "width": 600,
+          "height": 848,
+          "bytes": 21316
+        }
+      ]
+    },
+    {
+      "id": "zenodo-22827813",
+      "title": "Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability",
+      "sourcePage": 1,
+      "sourceSha256": "2d97944d00fd078c2e0e7e7cec1a1f58984fbce1b787bf31657a7af99e94fadb",
+      "variants": [
+        {
+          "url": "/images/research/zenodo-22827813-300.webp",
+          "width": 300,
+          "height": 424,
+          "bytes": 23732
+        },
+        {
+          "url": "/images/research/zenodo-22827813-600.webp",
+          "width": 600,
+          "height": 848,
+          "bytes": 80974
+        }
+      ]
+    }
+  ],
+  "academiaCatalogue": [
+    {
+      "title": "V2 Andhra Pradesh Government Recognition to Pinnacle",
+      "type": "additional_public_document_link_only",
+      "doi": null,
+      "url": "https://www.academia.edu/130287600/V2_Andhra_Pradesh_Government_Recognition_to_Pinnacle",
+      "publicationStatus": "Public PDF link observed; file is not redistributed here because reuse rights were not verified.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "A Concurrency-Enabled, Hardware-Accelerated System and Method for Autism AbilityScore (PAA)",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496051/A_Concurrency_Enabled_Hardware_Accelerated_System_and_Method_for_Autism_AbilityScore_PAA_",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Pinnacle TherapySphere™ – A Specialized Therapeutic Environment for Sensorial Conditions",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496050/Pinnacle_TherapySphere_A_Specialized_Therapeutic_Environment_for_Sensorial_Conditions",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Everyday Therapy Program™ – Parent-Led Generalization of Therapy Goals",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496049/Everyday_Therapy_Program_Parent_Led_Generalization_of_Therapy_Goals",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Autism Early Detection Grid™ (AEDG) – Structured Red Flag Identification System",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496048/Autism_Early_Detection_Grid_AEDG_Structured_Red_Flag_Identification_System",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "TherapeuticAI® – AI-Powered Autism Therapy Personalization",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496047/TherapeuticAI_AI_Powered_Autism_Therapy_Personalization",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "A System for Assessing Developmental Readiness of a Child and Method Thereof",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496046/A_System_for_Assessing_Developmental_Readiness_of_a_Child_and_Method_Thereof",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Pinnacle Global Research Whitebook: The World’s First Fully Validated, Multi-Domain, Parent-First Child Development Framework",
+      "type": "canonical_zenodo_mirror",
+      "doi": "10.5281/zenodo.15487405",
+      "url": "https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework",
+      "publicationStatus": "Use the unchanged canonical Zenodo file included in this repository.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "The Mother, The Map, and the Movement: How India Quietly Built the World's Most Complete Autism Care System",
+      "type": "additional_public_document_link_only",
+      "doi": null,
+      "url": "https://www.academia.edu/129496111/The_Mother_The_Map_and_the_Movement_How_India_Quietly_Built_the_Worlds_Most_Complete_Autism_Care_System",
+      "publicationStatus": "Public PDF link observed; file is not redistributed here because reuse rights were not verified.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Pinnacle Global Autism Framework (PGAF): India’s First Validated, Scalable, Outcome-Based Child Development System",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496052/Pinnacle_Global_Autism_Framework_PGAF_India_s_First_Validated_Scalable_Outcome_Based_Child_Development_System",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Autism Mothers Handbook (ఆటిజం మదర్స్ హ్యాండ్బుక్)",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496053/Autism_Mothers_Handbook_%E0%B0%86%E0%B0%9F%E0%B0%BF%E0%B0%9C%E0%B0%82_%E0%B0%AE%E0%B0%A6%E0%B0%B0_%E0%B0%B8_%E0%B0%B9_%E0%B0%AF%E0%B0%BE%E0%B0%82%E0%B0%A1_%E0%B0%AC%E0%B1%81%E0%B0%95_",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "India’s Pinnacle Global Autism Framework (PGAF): The First Fully Validated, Scalable, and Measurable Child Development System for the World",
+      "type": "bibliographic_listing_file_unavailable",
+      "doi": null,
+      "url": "https://www.academia.edu/129496054/India_s_Pinnacle_Global_Autism_Framework_PGAF_The_First_Fully_Validated_Scalable_and_Measurable_Child_Development_System_for_the_World",
+      "publicationStatus": "No uploaded document was available on the observed listing.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "The Science Behind Pinnacle AbilityScore®: India's Patented 0-1000 Universal Child Development Metric Transforming Autism, Speech, ABA, Occupational & Developmental Therapy Worldwide",
+      "type": "additional_public_document_link_only",
+      "doi": null,
+      "url": "https://www.academia.edu/130287792/The_Science_Behind_Pinnacle_AbilityScore_Indias_Patented_0_1000_Universal_Child_Development_Metric_Transforming_Autism_Speech_ABA_Occupational_and_Developmental_Therapy_Worldwide",
+      "publicationStatus": "Public PDF link observed; file is not redistributed here because reuse rights were not verified.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol",
+      "type": "canonical_zenodo_mirror",
+      "doi": "10.5281/zenodo.19482476",
+      "url": "https://www.academia.edu/165583376/Concurrent_Validity_Test_Retest_Reliability_and_Preliminary_Minimal_Clinically_Important_Difference_of_PinnacleAI_AbilityScore_A_Cross_Sectional_Psychometric_Validation_Study_Protocol",
+      "publicationStatus": "Use the unchanged canonical Zenodo file included in this repository.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
+      "type": "canonical_zenodo_mirror",
+      "doi": "10.5281/zenodo.19482123",
+      "url": "https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness",
+      "publicationStatus": "Use the unchanged canonical Zenodo file included in this repository.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO’s July 2026 Guidance",
+      "type": "canonical_zenodo_mirror",
+      "doi": "10.5281/zenodo.22761782",
+      "url": "https://www.academia.edu/175562550/Licensing_Developmental_Support_Software_in_India_An_April_2026_Case_Study_Assessed_Against_CDSCO_s_July_2026_Guidance",
+      "publicationStatus": "Use the unchanged canonical Zenodo file included in this repository.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+      "type": "canonical_zenodo_mirror",
+      "doi": "10.5281/zenodo.22761810",
+      "url": "https://www.academia.edu/175563040/Geographic_Concentration_of_RCI_Listed_Rehabilitation_Training_Institutions_in_India_A_Reproducible_National_Register_Analysis",
+      "publicationStatus": "Use the unchanged canonical Zenodo file included in this repository.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    },
+    {
+      "title": "Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study",
+      "type": "canonical_zenodo_mirror",
+      "doi": "10.5281/zenodo.22761832",
+      "url": "https://www.academia.edu/175563111/Six_Month_Change_and_Follow_up_Patterns_in_AbilityScore_During_Routine_Paediatric_Developmental_Care_in_India_Protocol_for_the_PINNACLE_TRAJ_Retrospective_Multicentre_Cohort_Study",
+      "publicationStatus": "Use the unchanged canonical Zenodo file included in this repository.",
+      "source": "Public GitHub catalogue, metadata observed15Sep2026; fetched19Sep2026",
+      "evidenceSource": "https://raw.githubusercontent.com/drkotireddysaripalli/pinnacle-research-library/main/catalogue.json"
+    }
+  ],
+  "summary": {
+    "distinctZenodoWorks": 7,
+    "additionalResearchSquareMirror": 1,
+    "authoredBookEditions": 3,
+    "companyStudySummaries": 12,
+    "companyStudyPagesLiveChecked": 9,
+    "authorProfileOrCreditRecords": 8,
+    "academiaCatalogueEntries": 18,
+    "originalCoverAssets": 8
+  }
+}

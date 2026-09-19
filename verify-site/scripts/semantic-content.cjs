@@ -27,7 +27,7 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
   const nodes=tree(html),used=new Set(nodes.map(n=>attr(n.open,'id')).filter(Boolean));
   const underMain=n=>{for(let p=n.parent;p;p=p.parent)if(p.tag==='main')return true;return false;};
   const descendants=n=>nodes.filter(x=>x.start>n.start&&(x.close??x.openEnd)<=n.end);
-  const elements=nodes.filter(n=>underMain(n)&&(
+  const elements=nodes.filter(n=>underMain(n)&&!(/\breader-chapter\b/.test(attr(n.open,'class')||''))&&(
    ['section','article','details'].includes(n.tag)||
    n.tag==='li'&&/\bcare-path\b/.test(attr(n.parent?.open||'','class'))||
    n.tag==='tr'&&n.parent?.tag==='tbody'
@@ -65,7 +65,7 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
   if(faqPage){faqPage.url=url+'#questions';faqPage.isPartOf={'@id':page['@id']};for(const q of faqPage.mainEntity){const b=blocks.find(b=>b.kind==='details'&&b.name===q.name);if(b){q['@id']=b.url+'-question';q.url=b.url;q.acceptedAnswer['@id']=b.url+'-answer';}}}
   if(url.endsWith('/evidence/hfr-register.html'))graph.push({'@type':'Dataset','@id':url+'#source-inventory',name:'Pinnacle HFR source inventory',description:'Public inventory of 52 supplied workbook centres, reconciled into 53 distinct HFR identifiers across workbook and certificate sources. This is a documentary inventory, not a current operational-status or quality rating.',url,dateModified:date,inLanguage:'en-IN',publisher:{'@id':organization['@id']},isBasedOn:origin+'/evidence/records/hfr.html',isPartOf:{'@id':page['@id']},distribution:[{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.json',encodingFormat:'application/json'},{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.csv',encodingFormat:'text/csv'}]});
   const article=graph.find(x=>x['@type']==='Article');if(article){article.publisher={'@id':organization['@id']};article.mainEntityOfPage={'@id':page['@id']};page.mainEntity={'@id':article['@id']||url+'#article'};article['@id'] ||= url+'#article';}
-  graph.push(...blocks.map(b=>({'@type':'WebPageElement','@id':b.url+'-element',url:b.url,name:b.name,description:b.description,inLanguage:'en-IN',cssSelector:'#'+b.id,isPartOf:{'@id':b.parent?url+'#'+b.parent+'-element':page['@id']},...(b.citations.length?{citation:b.citations}:{}),...(b.text?{text:b.text}:{}),...(blocks.some(x=>x.parent===b.id)?{hasPart:blocks.filter(x=>x.parent===b.id).map(x=>({'@id':x.url+'-element'}))}:{})})));
+  graph.push(...blocks.map(b=>({'@type':'WebPageElement','@id':b.url+'-element',name:b.name,description:b.description.slice(0,320),cssSelector:'#'+b.id,isPartOf:{'@id':b.parent?url+'#'+b.parent+'-element':page['@id']},...(b.citations.length?{citation:b.citations.slice(0,6)}:{})})));
   if(url===origin+'/')graph.push(...termGraph);
   const illustrations=nodes.filter(n=>n.tag==='figure'&&/\bworld-figure\b/.test(attr(n.open,'class')||''));
   for(const figure of illustrations){

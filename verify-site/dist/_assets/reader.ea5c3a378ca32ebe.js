@@ -1,0 +1,17 @@
+'use strict';
+(()=>{
+ const chapters=[...document.querySelectorAll('.reader-chapter')];
+ const open=document.getElementById('reader-open'),close=document.getElementById('reader-close');
+ if(!chapters.length)return;
+ [open,close].forEach(b=>{if(b)b.hidden=false;});
+ open?.addEventListener('click',()=>chapters.forEach(c=>c.open=true));
+ close?.addEventListener('click',()=>{chapters.forEach(c=>c.open=false);document.getElementById('reader-guide')?.scrollIntoView({block:'start'});});
+ const reveal=()=>{let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}const node=document.getElementById(id);if(!node)return;for(let p=node;p;p=p.parentElement)if(p.tagName==='DETAILS')p.open=true;requestAnimationFrame(()=>node.scrollIntoView({block:'start'}));};
+ document.getElementById('reader-jump')?.addEventListener('change',event=>{if(event.target.value){location.hash=event.target.value;reveal();event.target.value='';}});
+ window.addEventListener('hashchange',reveal);
+ document.addEventListener('click',event=>{const a=event.target.closest('a[href^="#"]');if(a&&a.hash===location.hash)reveal();});
+ if(location.hash)reveal();
+ let printState=[];
+ window.addEventListener('beforeprint',()=>{printState=[...document.querySelectorAll('details')].map(n=>[n,n.open]);printState.forEach(([n])=>n.open=true);});
+ window.addEventListener('afterprint',()=>printState.forEach(([n,value])=>n.open=value));
+})();

@@ -2,7 +2,7 @@
 const data=require('../content/lifecycle.json');
 module.exports=({e,icon,origin})=>{
  const evidence=(id,label)=>`<a class="source-link" href="/evidence/records/${id}.html">${icon('file-search')}${e(label)}</a>`;
- const emblem=`<span class="world-brand" aria-label="Pinnacle Blooms Network"><span class="world-brand-crop"><img src="/brand-header.jpg" width="1727" height="242" alt="Pinnacle Blooms Network"></span></span>`;
+ const emblem=`<span class="world-brand" aria-label="Pinnacle Blooms Network"><span class="world-brand-crop"><img src="/images/pinnacle-logo.webp" width="420" height="158" alt="Pinnacle Blooms Network"></span></span>`;
  const figure=(name,alt,caption,hero=false)=>`<figure class="world-figure world-${name}" id="visual-${name}"><div class="world-art">${emblem}<img class="world-image" src="/images/${name}-1000.webp" srcset="/images/${name}-600.webp 600w, /images/${name}-1000.webp 1000w, /images/${name}-1536.webp 1536w" sizes="${hero?'(min-width: 1100px) 580px, (min-width: 700px) 640px, calc(100vw - 40px)':'(min-width: 1100px) 1100px, calc(100vw - 40px)'}" width="1536" height="1024" alt="${e(alt)}" loading="${hero?'eager':'lazy'}" decoding="async"${hero?' fetchpriority="high"':''}></div><figcaption>${e(caption)} <span>AI-generated conceptual illustration.</span></figcaption></figure>`;
  const hero=figure('family-journey','Illustration of a mother and child learning together, connected by the colours of the Pinnacle developmental pathway.','The purpose is a child’s everyday life.',true);
  const observations=figure('connected-records','Illustration connecting daily observations, developmental activities and a team reviewing a child’s plan.','Observations become useful when people can review them together.');

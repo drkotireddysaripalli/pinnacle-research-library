@@ -13,8 +13,8 @@ The authorised public `/verify/` route is indexable. The page describes document
 
 - `content/`: page template, source-linked statistics, international context, the complete supplied HFR inventory, review conclusions and terminology.
 - `scripts/`: static content builders and semantic markup generated from visible page content.
-- `dist/`: 42 HTML pages, 34 permanent evidence records, reviewed public document copies, centre and statistics registers, metadata, a sitemap, and readable JSON/text exports.
-- `dist/evidence/section-index.json`: all 385 meaningful page blocks and their source links, including 206 blocks across 21 homepage sections.
+- `dist/`: 43 HTML pages, 34 permanent evidence records, reviewed public document copies, centre and statistics registers, metadata, a sitemap, and readable JSON/text exports.
+- `dist/evidence/section-index.json`: page blocks and their source links, derived from the current visible content.
 - The company-described 17-domain, 79-ability, 349-skill framework; source-linked ICD-11, ICF, ICHI and SNOMED CT explanations; explicitly named parent/caregiver intended users; and the full BIS module-scope quotation. Seventeen visible FAQs match their structured data.
 - Stable official PNG/ICO favicon assets, a browser manifest, visible h-card/h-entry microformats, direct FAQ links and answers JSON, and an HFR Dataset description linked to its public JSON/CSV exports.
 - Three responsive Pinnacle World illustrations, the authentic emblem, image descriptions and image metadata. Original generation prompts are recorded in content/image-provenance.json.
@@ -31,11 +31,11 @@ The published custom-domain route rewrites Sites-origin links to `/verify/`. The
 
 Individual facts, evidence records, FAQs and HFR entries include WhatsApp, X, copy-link and supported device sharing. Messages retain claim scope and link to the specific record or anchored block. Visitors edit and send messages themselves. `dist/evidence/share-index.json` records the generated drafts and destinations. X drafts reserve 23 characters for the shortened URL.
 
-Sharing bars span their containing content area and wrap within phone, tablet and desktop layouts. All 42 pages expose a lightweight 1200×630 JPEG brand preview with explicit Open Graph image type and dimensions. Critical metadata appears within the first 5 KB of HTML; server-rendered JSON-LD remains in the document body. The Google Search Console ownership tag is retained for the authorised verification URL-prefix property. Authored product mentions use PinnacleAI®.
+Sharing bars span their containing content area and wrap within phone, tablet and desktop layouts. All 43 pages expose a lightweight 1200×630 JPEG brand preview with explicit Open Graph image type and dimensions. Critical metadata appears within the first 5 KB of HTML; server-rendered JSON-LD remains in the document body. The Google Search Console ownership tag is retained for the authorised verification URL-prefix property. Authored product mentions use PinnacleAI®.
 
-CSS is bundled once and CSS/JavaScript filenames are content-fingerprinted for one-year immutable browser caching. The Worker caches only the generated public static inventory, using a release key that includes file hashes and Worker transformation logic. HTML/data edge TTL is one hour; other assets use one day. Browser HTML/data TTL is one minute with revalidation; stable images/documents use one hour. Cache entries are local to each Cloudflare location. The `X-Pinnacle-Cache` header reports actual HIT/MISS/BYPASS; publication changes the release key. Errors, redirects and partial responses are not cached, and visitor cookies/authentication never reach the private static origin. Range requests are ignored for rewritten text and when If-Range cannot be satisfied by the weak public validator.
+CSS is bundled once and CSS/JavaScript filenames are content-fingerprinted for one-year immutable browser caching. The Worker caches only the generated public static inventory, using a release key that includes file hashes and Worker transformation logic. All public assets have a one-day edge TTL. The approved static build is deployed to Cloudflare Workers Static Assets, removing the private-origin round trip on cold requests; the Sites origin remains a fallback when no ASSETS binding is configured. Browser HTML/data TTL is one minute with revalidation; stable images/documents use one hour. Cache entries are local to each Cloudflare location. The `X-Pinnacle-Cache` header reports actual HIT/MISS/BYPASS; publication changes the release key. Errors, redirects and partial responses are not cached, and visitor cookies/authentication never reach the private static origin. Range requests are ignored for rewritten text and when If-Range cannot be satisfied by the weak public validator.
 
-The favicon is the unchanged 50×50 emblem already served by the official Pinnacle website. The ICO wraps those same PNG pixels without redrawing or upscaling. Provenance is recorded in content/favicon-provenance.json. Font connections start in the document head rather than through a chained CSS import.
+The favicon is the unchanged 50×50 emblem already served by the official Pinnacle website. The ICO wraps those same PNG pixels without redrawing or upscaling. Provenance is recorded in content/favicon-provenance.json. DM Sans and Manrope are self-hosted variable WOFF2 files with font-display: swap. Repeated icons use shared SVG symbols; metadata links to full exports without duplicating whole blocks. Search indexes the existing HTML instead of downloading duplicate record datasets.
 
 ## Evidence and metadata
 
@@ -45,4 +45,11 @@ Report type, source date, counting unit, source-review status and clinical limit
 
 Verification contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 
-Last content and semantic review: 18 September 2026.
+Last content and semantic review: 19 September 2026.
+
+## Research and reader controls
+
+The homepage groups existing source content into six native expandable topics, with jump navigation, open/close controls, direct-anchor expansion and print expansion. The new research library links seven distinct DOI works, a Research Square alternate version, three original book PDFs, the twelve-study company portfolio and matched author profiles. Eight authentic cover/first-page illustrations load responsively. Book, ScholarlyArticle, Report and Person descriptions match visible publication stages. JSON, text and RIS exports accompany the library.
+
+Cloudflare review on 19 September found AI bot protections disabled and existing robots rules permitting verification content. No broad security bypass was added. The 43-page sitemap includes the research library. Availability to crawlers does not guarantee ranking or citation.
+

@@ -2,7 +2,7 @@
   "title": "Pinnacle evidence register",
   "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/",
   "sourceReviewed": "2026-09-15",
-  "conclusionsUpdated": "2026-09-18",
+  "conclusionsUpdated": "2026-09-19",
   "audience": "Public evidence and context",
   "contact": {
     "name": "Gokul Rao",
@@ -710,6 +710,10 @@
         {
           "label": "Read methodology preprint",
           "url": "https://zenodo.org/records/19482123"
+        },
+        {
+          "label": "Research, books & author profiles",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123"
         }
       ],
       "note": "Read reported measurement properties within the instrument version, methods and population stated by the authors.",
@@ -738,6 +742,10 @@
         {
           "label": "Read the study protocol",
           "url": "https://zenodo.org/records/19482476"
+        },
+        {
+          "label": "Research, books & author profiles",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482476"
         }
       ],
       "note": "Repository metadata was rechecked on 18 September 2026 and continues to identify the source as a protocol. A completed study report with methods, results and limitations would support a later conclusion.",
@@ -774,6 +782,10 @@
         {
           "label": "Company research library",
           "url": "https://www.pinnacleblooms.org/research-studies"
+        },
+        {
+          "label": "Research, books & author profiles",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#company-studies"
         }
       ],
       "note": "School-entry findings must remain qualified to children meeting readiness criteria; the parent-led generalisation report notes limitations and a non-significant home-adherence correlation.",
@@ -933,6 +945,10 @@
         {
           "label": "Company Whitebook page",
           "url": "https://www.pinnacleblooms.org/global-research-whitebook"
+        },
+        {
+          "label": "Research, books & author profiles",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#global-research-whitebook"
         }
       ],
       "note": "Treat the title and text as a historical company publication, not as this page’s verification conclusion.",
@@ -1010,7 +1026,12 @@
       "limits": "A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred.",
       "note": "No ISBN or publication year was established for The Voice of the Unheard in this review. The book’s internal authorship takes precedence over inconsistent PDF metadata.",
       "citation": "Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132.",
-      "links": [],
+      "links": [
+        {
+          "label": "Research, books & author profiles",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#parent-books"
+        }
+      ],
       "familyMeaning": "Parent resources can support informed conversations and everyday participation alongside an individual professional plan.",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
       "statusLabel": "Company-published",
