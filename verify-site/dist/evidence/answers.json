@@ -31,7 +31,7 @@
     },
     {
       "question": "Does one credential cover every Pinnacle centre?",
-      "answer": "No. Match the named institution and premises on each document. This collection contains all 52 workbook centres and 53 distinct HFR identifiers across the workbook and certificate copies. Eight district summaries are separate; these are not counts of verified active centres.",
+      "answer": "No. Match the named institution and premises on each document. All 56 complete HFR identifiers were matched in the authenticated NHPR dashboard on 19 September 2026; 33 displayed Approved. Other workflow statuses and one masked Draft are shown separately. Eight district summaries remain separate. An identifier match is not a finding that every centre is approved or currently operating.",
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-does-one-credential-cover-every-pinnacle-centre",
       "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html"
     },

@@ -1,0 +1,304 @@
+{
+  "checkedOn": "2026-09-19",
+  "source": "NHPR / ABDM Health Facility Registry · authenticated facility-manager dashboard",
+  "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+  "method": "Read all four dashboard pages in the authenticated browser. Exact displayed HFR identifiers and workflow statuses were transcribed. No registration, query response or facility details were changed.",
+  "scope": "An exact identifier match and dated dashboard workflow status do not establish current centre operations, clinical quality or outcomes. The account dashboard is not a public per-facility verification link. One masked Draft record is recorded separately and excluded from complete-identifier totals.",
+  "counts": {
+    "dashboardRecords": 57,
+    "completeIds": 56,
+    "maskedDraftRecords": 1,
+    "Approved": 33,
+    "Query Raised": 14,
+    "Submitted": 4,
+    "Rejected": 4,
+    "Query Resolved": 1,
+    "Draft": 1
+  },
+  "records": [
+    {
+      "id": "IN3610023707",
+      "status": "Rejected",
+      "page": 1
+    },
+    {
+      "id": "IN3610023705",
+      "status": "Submitted",
+      "page": 1
+    },
+    {
+      "id": "IN3610023704",
+      "status": "Rejected",
+      "page": 1
+    },
+    {
+      "id": "IN3610023703",
+      "status": "Query Raised",
+      "page": 1
+    },
+    {
+      "id": "IN3610023702",
+      "status": "Approved",
+      "page": 1
+    },
+    {
+      "id": "IN3610023685",
+      "status": "Rejected",
+      "page": 1
+    },
+    {
+      "id": "IN3610023681",
+      "status": "Query Raised",
+      "page": 1
+    },
+    {
+      "id": "IN2810065160",
+      "status": "Approved",
+      "page": 1
+    },
+    {
+      "id": "IN2810065153",
+      "status": "Approved",
+      "page": 1
+    },
+    {
+      "id": "IN2810065148",
+      "status": "Approved",
+      "page": 1
+    },
+    {
+      "id": "IN2810065144",
+      "status": "Approved",
+      "page": 1
+    },
+    {
+      "id": "IN3610023461",
+      "status": "Approved",
+      "page": 1
+    },
+    {
+      "id": "IN3610023460",
+      "status": "Submitted",
+      "page": 1
+    },
+    {
+      "id": "IN3610023459",
+      "status": "Submitted",
+      "page": 1
+    },
+    {
+      "id": "IN3610023458",
+      "status": "Submitted",
+      "page": 1
+    },
+    {
+      "id": "IN2810053847",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN3610023456",
+      "status": "Query Raised",
+      "page": 2
+    },
+    {
+      "id": "IN2810053820",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN2810053167",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN2810051854",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN2810051839",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN2810051629",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN2810051616",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN2810050814",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN2810050793",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN2810050768",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN3610023029",
+      "status": "Rejected",
+      "page": 2
+    },
+    {
+      "id": "IN2910116254",
+      "status": "Query Raised",
+      "page": 2
+    },
+    {
+      "id": "IN0710006582",
+      "status": "Approved",
+      "page": 2
+    },
+    {
+      "id": "IN3610023028",
+      "status": "Approved",
+      "page": 3
+    },
+    {
+      "id": "IN3610023027",
+      "status": "Query Raised",
+      "page": 3
+    },
+    {
+      "id": "IN3610023024",
+      "status": "Approved",
+      "page": 3
+    },
+    {
+      "id": "IN3610023023",
+      "status": "Approved",
+      "page": 3
+    },
+    {
+      "id": "IN3610023021",
+      "status": "Query Resolved",
+      "page": 3
+    },
+    {
+      "id": "IN3610023020",
+      "status": "Query Raised",
+      "page": 3
+    },
+    {
+      "id": "IN3610023019",
+      "status": "Approved",
+      "page": 3
+    },
+    {
+      "id": "IN3610023018",
+      "status": "Approved",
+      "page": 3
+    },
+    {
+      "id": "IN3610023017",
+      "status": "Approved",
+      "page": 3
+    },
+    {
+      "id": "IN2910116253",
+      "status": "Query Raised",
+      "page": 3
+    },
+    {
+      "id": "IN3610023016",
+      "status": "Approved",
+      "page": 3
+    },
+    {
+      "id": "IN3610023015",
+      "status": "Query Raised",
+      "page": 3
+    },
+    {
+      "id": "IN3610023014",
+      "status": "Query Raised",
+      "page": 3
+    },
+    {
+      "id": "IN3610023010",
+      "status": "Query Raised",
+      "page": 3
+    },
+    {
+      "id": "IN2910116252",
+      "status": "Query Raised",
+      "page": 3
+    },
+    {
+      "id": "IN2810039042",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN2810039041",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN2810039040",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN3610023008",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN3610023007",
+      "status": "Query Raised",
+      "page": 4
+    },
+    {
+      "id": "IN3610023006",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN2810039038",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN2810039037",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN2810039036",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN2810039035",
+      "status": "Approved",
+      "page": 4
+    },
+    {
+      "id": "IN3610023005",
+      "status": "Query Raised",
+      "page": 4
+    },
+    {
+      "id": "IN3610023004",
+      "status": "Query Raised",
+      "page": 4
+    }
+  ],
+  "drafts": {
+    "count": 1,
+    "scope": "One masked Draft dashboard entry is excluded from complete-identifier counts. The full source register describes it separately."
+  }
+}

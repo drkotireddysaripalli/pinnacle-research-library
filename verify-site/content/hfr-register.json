@@ -1,12 +1,18 @@
 {
-  "reviewed": "18 September 2026",
+  "reviewed": "19 September 2026",
   "source": {
     "workbook": "All Centers With HFR.xlsx",
     "sheet": "All Centers With HFR",
     "range": "B2:G53",
     "sha256": "2245768373cac98ebc89e3ed3a4f4204015971922072f39f65dbd53d8d6282c9",
     "workbookDate": "No source-date column supplied",
-    "certificateCollection": "Recognitions bundle, physical pages 67–95"
+    "certificateCollection": "Recognitions bundle, physical pages 67–95",
+    "dashboard": {
+      "name": "NHPR / ABDM Health Facility Registry · authenticated facility-manager dashboard",
+      "url": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+      "checkedOn": "2026-09-19",
+      "pages": 4
+    }
   },
   "counts": {
     "workbookRows": 52,
@@ -15,9 +21,15 @@
     "matchingIds": 27,
     "additionalWorkbookIds": 25,
     "certificateOnlyIds": 1,
-    "combinedIds": 53
+    "combinedIds": 56,
+    "originalCombinedIds": 53,
+    "dashboardAdditionalIds": 3,
+    "liveMatchedIds": 56,
+    "dashboardRecords": 57,
+    "approvedIds": 33,
+    "draftRecords": 1
   },
-  "scope": "A supplied workbook entry, an inspected certificate copy and a live government registry match are different evidence levels. Current live HFR status was not queried. Workbook RS flags are reproduced as supplied; their meaning is undefined and they do not establish operational or HFR status.",
+  "scope": "All 56 complete identifiers were matched to the authenticated NHPR / ABDM facility-manager dashboard on 19 September 2026. Statuses are the exact workflow labels displayed on that date, not a live feed or a clinical-quality rating. Approved, Submitted, Query Raised, Query Resolved and Rejected are kept distinct. One masked Draft is separate. Original workbook RS flags are preserved and do not define the registry status or whether a centre is operating.",
   "rows": [
     {
       "id": "IN2810053167",
@@ -32,7 +44,15 @@
         "date": "14 Apr 2026",
         "pages": "93"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810053167",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023707",
@@ -43,7 +63,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023707",
+        "status": "Rejected",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023458",
@@ -54,7 +82,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023458",
+        "status": "Submitted",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023004",
@@ -65,7 +101,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023004",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810039042",
@@ -80,7 +124,35 @@
         "date": "16 Mar 2026",
         "pages": "82"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810039042",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
+    },
+    {
+      "id": "IN2810051839",
+      "name": "Bhimavaram · additional dashboard record",
+      "address": "20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh 534201 West Godavari Andhra Pradesh 534201",
+      "postcode": "534201",
+      "workbookRow": null,
+      "workbookSheet": null,
+      "sourceFlag": null,
+      "certificate": null,
+      "sourceLevel": "Live dashboard record",
+      "liveLookup": {
+        "id": "IN2810051839",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard.",
+        "displayedName": "Pinnacle Autism Therapy Bhimavaram Speech, ABA, Occupational Therapy Center"
+      }
     },
     {
       "id": "IN3610023460",
@@ -91,7 +163,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023460",
+        "status": "Submitted",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023028",
@@ -106,7 +186,15 @@
         "date": "09 Mar 2026",
         "pages": "67"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN3610023028",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023007",
@@ -117,7 +205,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023007",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810051629",
@@ -132,7 +228,15 @@
         "date": "14 Apr 2026",
         "pages": "91"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810051629",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023016",
@@ -147,7 +251,15 @@
         "date": "12 Mar 2026",
         "pages": "83"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN3610023016",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810065153",
@@ -162,7 +274,15 @@
         "date": "08 May 2026",
         "pages": "72"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810065153",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810039036",
@@ -177,7 +297,15 @@
         "date": "11 Mar 2026",
         "pages": "75"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810039036",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023015",
@@ -188,7 +316,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023015",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023006",
@@ -203,7 +339,15 @@
         "date": "12 Mar 2026",
         "pages": "78"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN3610023006",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023005",
@@ -214,7 +358,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023005",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023459",
@@ -225,7 +377,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023459",
+        "status": "Submitted",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2910116253",
@@ -236,7 +396,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN2910116253",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2910116254",
@@ -247,7 +415,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN2910116254",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023020",
@@ -258,7 +434,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023020",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810065144",
@@ -273,7 +457,15 @@
         "date": "10 May 2026",
         "pages": "70"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810065144",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810053820",
@@ -288,7 +480,15 @@
         "date": "24 Apr 2026",
         "pages": "94"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810053820",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023681",
@@ -299,7 +499,16 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023681",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard.",
+        "displayedName": "3-1-323/A, Savaran St, behind Civil hospital, Christian Colony, Karimnagar, Telangana 505001"
+      }
     },
     {
       "id": "IN3610023019",
@@ -314,7 +523,15 @@
         "date": "12 Mar 2026",
         "pages": "85"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN3610023019",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023018",
@@ -325,7 +542,35 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023018",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
+    },
+    {
+      "id": "IN3610023023",
+      "name": "Khammam · additional dashboard record",
+      "address": "Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 Khammam Telangana 507002",
+      "postcode": "507002",
+      "workbookRow": null,
+      "workbookSheet": null,
+      "sourceFlag": null,
+      "certificate": null,
+      "sourceLevel": "Live dashboard record",
+      "liveLookup": {
+        "id": "IN3610023023",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard.",
+        "displayedName": "Pinnacle Best Autism - Speech ABA Therapy Center In Khammam - Khammam - Telangana - 507001 - 9100053004"
+      }
     },
     {
       "id": "IN3610023014",
@@ -336,7 +581,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023014",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810039037",
@@ -351,7 +604,15 @@
         "date": "02 Feb 2026",
         "pages": "76"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810039037",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810050768",
@@ -366,7 +627,15 @@
         "date": "10 Mar 2026",
         "pages": "87"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810050768",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023705",
@@ -377,7 +646,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023705",
+        "status": "Submitted",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810039041",
@@ -392,7 +669,15 @@
         "date": "12 Jan 2026",
         "pages": "81"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810039041",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023702",
@@ -403,7 +688,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023702",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2910116252",
@@ -414,7 +707,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN2910116252",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023024",
@@ -429,7 +730,15 @@
         "date": "02 Mar 2026",
         "pages": "86"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN3610023024",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810039038",
@@ -444,7 +753,15 @@
         "date": "12 Jan 2026",
         "pages": "77"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810039038",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023017",
@@ -459,7 +776,15 @@
         "date": "12 Mar 2026",
         "pages": "84"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN3610023017",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810065160",
@@ -474,7 +799,15 @@
         "date": "08 May 2026",
         "pages": "73"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810065160",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810051616",
@@ -489,7 +822,15 @@
         "date": "12 Mar 2026",
         "pages": "90"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810051616",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN0710006582",
@@ -504,7 +845,15 @@
         "date": "15 Mar 2026",
         "pages": "68"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN0710006582",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023008",
@@ -515,7 +864,35 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023008",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
+    },
+    {
+      "id": "IN3610023029",
+      "name": "Nizamabad · additional dashboard record",
+      "address": "Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001 Nizamabad Telangana 503001",
+      "postcode": "503001",
+      "workbookRow": null,
+      "workbookSheet": null,
+      "sourceFlag": null,
+      "certificate": null,
+      "sourceLevel": "Live dashboard record",
+      "liveLookup": {
+        "id": "IN3610023029",
+        "status": "Rejected",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard.",
+        "displayedName": "Pinnacle Best Autism - Speech ABA Therapy Center In Nizamabad - Hyderabd - Telangana - 503001 - 7671816868"
+      }
     },
     {
       "id": "IN3610023704",
@@ -526,7 +903,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023704",
+        "status": "Rejected",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810050814",
@@ -541,7 +926,15 @@
         "date": "09 Mar 2026",
         "pages": "89"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810050814",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023685",
@@ -552,7 +945,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023685",
+        "status": "Rejected",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810051854",
@@ -567,7 +968,15 @@
         "date": "16 Apr 2026",
         "pages": "92"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810051854",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023021",
@@ -578,7 +987,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023021",
+        "status": "Query Resolved",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023027",
@@ -589,7 +1006,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023027",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810039040",
@@ -604,7 +1029,15 @@
         "date": "11 Mar 2026",
         "pages": "79;80"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810039040",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023010",
@@ -615,7 +1048,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023010",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 3,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810065148",
@@ -630,7 +1071,15 @@
         "date": "10 May 2026",
         "pages": "71"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810065148",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810053847",
@@ -645,7 +1094,15 @@
         "date": "17 Apr 2026",
         "pages": "95"
       },
-      "sourceLevel": "Certificate copy only"
+      "sourceLevel": "Certificate copy only",
+      "liveLookup": {
+        "id": "IN2810053847",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023456",
@@ -656,7 +1113,15 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "ACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023456",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN2810050793",
@@ -671,7 +1136,15 @@
         "date": "10 Mar 2026",
         "pages": "88"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810050793",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 2,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023703",
@@ -682,7 +1155,16 @@
       "workbookSheet": "All Centers With HFR",
       "sourceFlag": "INACTIVE",
       "certificate": null,
-      "sourceLevel": "Workbook-listed"
+      "sourceLevel": "Workbook-listed",
+      "liveLookup": {
+        "id": "IN3610023703",
+        "status": "Query Raised",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard.",
+        "displayedName": "Pinnacle Blooms - Karkhana, Hyderabad Autism Therapy Speech Therapy ABA Child Development Center"
+      }
     },
     {
       "id": "IN2810039035",
@@ -697,7 +1179,15 @@
         "date": "12 Jan 2026",
         "pages": "74"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN2810039035",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 4,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
     },
     {
       "id": "IN3610023461",
@@ -712,7 +1202,42 @@
         "date": "13 May 2026",
         "pages": "69"
       },
-      "sourceLevel": "Workbook + certificate copy"
+      "sourceLevel": "Workbook + certificate copy",
+      "liveLookup": {
+        "id": "IN3610023461",
+        "status": "Approved",
+        "checkedOn": "2026-09-19",
+        "page": 1,
+        "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+        "method": "Exact HFR identifier matched in the authenticated NHPR facility-manager dashboard."
+      }
+    }
+  ],
+  "dashboard": {
+    "checkedOn": "2026-09-19",
+    "sourceUrl": "https://nhpr.abdm.gov.in/nhpr/v4/hfr/dashboard",
+    "method": "Read all four dashboard pages in the authenticated browser. Exact displayed HFR identifiers and workflow statuses were transcribed. No registration, query response or facility details were changed.",
+    "statusCounts": {
+      "dashboardRecords": 57,
+      "completeIds": 56,
+      "maskedDraftRecords": 1,
+      "Approved": 33,
+      "Query Raised": 14,
+      "Submitted": 4,
+      "Rejected": 4,
+      "Query Resolved": 1,
+      "Draft": 1
+    },
+    "scope": "An exact identifier match and dated dashboard workflow status do not establish current centre operations, clinical quality or outcomes. The account dashboard is not a public per-facility verification link. One masked Draft record is recorded separately and excluded from complete-identifier totals."
+  },
+  "drafts": [
+    {
+      "displayedId": "IN361*****55",
+      "name": "Vanasthalipuram",
+      "displayedName": "Pinnacle Autism Therapy Vanasthalipuram Speech, ABA, Occupational Therapy Center",
+      "status": "Draft",
+      "page": 2,
+      "address": "MBR complex, Hill Colony, Vanasthalipuram, Hyderabad, Telangana 500070 Ranga Reddy Telangana 500070"
     }
   ]
 }

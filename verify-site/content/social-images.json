@@ -106,19 +106,19 @@
     {
       "route": "/evidence/hfr-register.html",
       "id": "evidence-hfr-register",
-      "title": "Every supplied centre. Every HFR identifier.",
+      "title": "Every HFR record. Its dated status.",
       "lines": [
-        "Every supplied centre.",
-        "Every HFR identifier."
+        "Every HFR record.",
+        "Its dated status."
       ],
-      "category": "ABDM / HFR SOURCE INVENTORY",
-      "note": "52 workbook centres · 53 IDs across supplied sources",
+      "category": "ABDM / HFR · LIVE DASHBOARD CHECK",
+      "note": "56 complete IDs matched · 33 Approved · checked 19 Sep 2026",
       "icon": "map-pin",
-      "description": "Every supplied centre. Every HFR identifier.. 52 workbook centres · 53 IDs across supplied sources. Read original sources, dates and evidence scope in Pinnacle Verify.",
-      "image": "/images/social/evidence-hfr-register-93ad245052cc.jpg",
+      "description": "Pinnacle HFR records with dated dashboard statuses: 56 complete IDs matched, 33 Approved and one masked Draft listed separately.",
+      "image": "/images/social/evidence-hfr-register-45016b0b4625.jpg",
       "width": 1200,
       "height": 630,
-      "alt": "Every supplied centre. Every HFR identifier. ABDM / HFR SOURCE INVENTORY. 52 workbook centres · 53 IDs across supplied sources. Pinnacle Blooms Network."
+      "alt": "Every HFR record. Its dated status. ABDM / HFR · LIVE DASHBOARD CHECK. 56 complete IDs matched · 33 Approved · checked 19 Sep 2026. Pinnacle Blooms Network."
     },
     {
       "route": "/evidence/privacy.html",
@@ -384,13 +384,13 @@
         "Centre identifiers."
       ],
       "category": "CENTRE RECORDS",
-      "note": "Supplied registry identifiers and certificate copies",
+      "note": "56 IDs matched in the NHPR dashboard · 19 Sep 2026",
       "icon": "map-pin",
-      "description": "ABDM / HFR Centre identifiers.. Supplied registry identifiers and certificate copies. Read original sources, dates and evidence scope in Pinnacle Verify.",
-      "image": "/images/social/evidence-records-hfr-1403c1ceccd7.jpg",
+      "description": "ABDM HFR evidence: exact identifier matches, dated dashboard statuses and source certificates. Read the scope of each record.",
+      "image": "/images/social/evidence-records-hfr-04e8afcffc12.jpg",
       "width": 1200,
       "height": 630,
-      "alt": "ABDM / HFR Centre identifiers. CENTRE RECORDS. Supplied registry identifiers and certificate copies. Pinnacle Blooms Network."
+      "alt": "ABDM / HFR Centre identifiers. CENTRE RECORDS. 56 IDs matched in the NHPR dashboard · 19 Sep 2026. Pinnacle Blooms Network."
     },
     {
       "route": "/evidence/records/iso13485.html",

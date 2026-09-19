@@ -1,0 +1,59 @@
+{
+  "upstream": "https://github.com/google/fonts",
+  "commit": "f2bd09badbc763d8757951d52deec29da27e85fb",
+  "designerProject": "https://github.com/EkType/Anek",
+  "license": "SIL Open Font License 1.1; a separate copyright/OFL copy accompanies each family.",
+  "conversion": "TTF width axis fixed at100; complete glyph sets and variable weight retained; WOFF2 conversion with fontTools/Brotli. No glyph subset or manual redrawing.",
+  "fonts": [
+    {
+      "file": "/fonts/anek-bangla.woff2",
+      "bytes": 216096,
+      "sha256": "db5e83e0c21b1f10f8271dc1c43ef4d311ca74772e4ffe6807fc7ddb76b65391"
+    },
+    {
+      "file": "/fonts/anek-devanagari.woff2",
+      "bytes": 311316,
+      "sha256": "0c06d579af07b6ba0eb2fc7892e663811c9c3de58c8382ffc3f6c5cc7e4543e8"
+    },
+    {
+      "file": "/fonts/anek-gujarati.woff2",
+      "bytes": 206100,
+      "sha256": "e10036a06fe5a75d0df2e4a100454d0d5b2f17d8466c75fac2b13bd7152a83d2"
+    },
+    {
+      "file": "/fonts/anek-gurmukhi.woff2",
+      "bytes": 79320,
+      "sha256": "723c4ade7a01c7804d1ccd3eb511f7c56b2168a1b7140cc4686b056667bedd10"
+    },
+    {
+      "file": "/fonts/anek-kannada.woff2",
+      "bytes": 164924,
+      "sha256": "43da33559cb4ee9dfb19eec90e19278bb9cb3c14cca80815f5858ff111504a63"
+    },
+    {
+      "file": "/fonts/anek-latin.woff2",
+      "bytes": 84336,
+      "sha256": "0e96e6c2621df1ea18c6f47bb25b9c556bd3c347bf2309eac20f0107eb7d9043"
+    },
+    {
+      "file": "/fonts/anek-malayalam.woff2",
+      "bytes": 117840,
+      "sha256": "e9d8f899d84af59a814ec20cbac306556c8ceb5f2ecdb4bc30920afe4a59084d"
+    },
+    {
+      "file": "/fonts/anek-odia.woff2",
+      "bytes": 138768,
+      "sha256": "a8909e51460e9be4204270afa5244937a42f38594185aa066878a890a2f2213f"
+    },
+    {
+      "file": "/fonts/anek-tamil.woff2",
+      "bytes": 123084,
+      "sha256": "f99260016ddf1b7a0d4358e92eae96b717b26a4503e72d81073327a2656979f0"
+    },
+    {
+      "file": "/fonts/anek-telugu.woff2",
+      "bytes": 191964,
+      "sha256": "3aef251e0d11458f0d040eecabd36450fa1c19e9a91071130c489ae307caab2e"
+    }
+  ]
+}

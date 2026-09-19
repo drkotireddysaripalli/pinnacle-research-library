@@ -41,7 +41,7 @@ The favicon is the unchanged 50×50 emblem already served by the official Pinnac
 
 The brand and exact legal entity are connected through Organization and Brand data. Page sections use WebPageElement with working selectors, stable links and matching visible descriptions. Record summaries, breadcrumbs, questions and definitions retain their source-specific meaning. FAQ markup supplies semantics; Google retired FAQ rich results in May 2026. Text exports are reusable references, not a special Google ranking mechanism.
 
-Report type, source date, counting unit, source-review status and clinical limitations remain part of each claim. HFR identifiers are a source inventory, not a claim that every listed facility is currently operational. Both exact UDINs and document particulars were matched as Active in the live ICAI portal on 19 September 2026, after user-completed CAPTCHA and OTP verification. The dated record is in content/issuer-checks.json. Restricted practitioner reports are not republished.
+Report type, source date, counting unit, source-review status and clinical limitations remain part of each claim. HFR records combine the original source inventory with 56 exact ID matches in the authenticated NHPR dashboard on 19 September 2026: 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved; one masked Draft is separate. These are workflow statuses, not a claim that every listed facility is currently operating. The dated check is in content/hfr-dashboard-checks.json. Both exact UDINs and document particulars were matched as Active in the live ICAI portal on 19 September 2026, after user-completed CAPTCHA and OTP verification. The dated record is in content/issuer-checks.json. Restricted practitioner reports are not republished.
 
 Verification contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 
@@ -61,3 +61,7 @@ Cloudflare review on 19 September found AI bot protections disabled and existing
 Nine source-linked parent guides cover AbilityScore®, everyday practice and licence scope in English, Telugu and Hindi, with reciprocal hreflang, self-canonical URLs, Article/FAQ metadata, local-language sharing and text/JSON exports. Anek Telugu and Noto Sans Devanagari are self-hosted OFL fonts pinned to Google Fonts commit f2bd09badbc763d8757951d52deec29da27e85fb with the width axis fixed at 100.
 
 The sitemap includes a unique share image for each of the 65 pages. These are discovery aids, not ranking guarantees. Pinnacle Clinical Committee is the designated review body; completed review of exact wording is not claimed. Source inspection, issuer verification and clinical review remain separate records.
+
+## Multilingual reading
+
+Anek now covers Latin and nine Indian scripts, self-hosted as variable WOFF2 fonts with script-specific Unicode ranges. Only rendered scripts download. Unsupported scripts use device fallbacks. The language panel always builds Google translations from the public English source, supports direct English/Telugu/Hindi guide editions and top-level switching, and offers three locally stored reading sizes. No accessibility overlay is loaded. Font source/version/hashes are recorded in content/anek-font-provenance.json; OFL notices accompany each font.

@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-19",
-  "reviewType": "Document text and page-image inspection, with separately recorded live UDIN matches on 19 September 2026; no completed clinical sign-off is claimed.",
+  "reviewType": "Document text and page-image inspection, with dated exact issuer checks where recorded. Two ICAI UDINs and the HFR dashboard inventory were matched on 19 September 2026. No named professional clinical sign-off is implied.",
   "records": [
     {
       "id": "md5",
@@ -170,6 +170,62 @@
         {
           "date": "2026-09-19",
           "change": "Rechecked the supplied originals and added claim-to-page mapping, report dates and independent practitioner attribution."
+        }
+      ]
+    },
+    {
+      "id": "hfr",
+      "checkedOn": "2026-09-19",
+      "method": "Read all four dashboard pages in the authenticated browser. Exact displayed HFR identifiers and workflow statuses were transcribed. No registration, query response or facility details were changed.",
+      "boundary": "Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs.",
+      "excerpts": [],
+      "recordUpdate": {
+        "status": "matched",
+        "issuerMatched": true,
+        "originalReviewed": true,
+        "reviewLabel": "Source inventory + NHPR dashboard matched",
+        "scopeReviewed": "19 September 2026",
+        "reviewedOn": "2026-09-19",
+        "reviewedDate": "19 September 2026",
+        "subtitle": "56 complete IDs matched · 33 Approved · dated NHPR workflow statuses",
+        "verificationNote": "All 56 complete identifiers were matched in the authenticated NHPR facility-manager dashboard on 19 September 2026. The dashboard showed 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved. One masked Draft is separate.",
+        "fields": {
+          "Registry": "National Health Authority · Ayushman Bharat Digital Mission / NHPR",
+          "Live dashboard check": "19 September 2026 · authenticated facility-manager dashboard",
+          "Complete identifiers": "56 exact ID matches",
+          "Workflow statuses": "33 Approved; 14 Query Raised; 4 Submitted; 4 Rejected; 1 Query Resolved",
+          "Separate Draft": "1 masked Draft record; excluded from complete-ID total",
+          "Original workbook": "52 rows and 52 identifiers",
+          "Certificate copies": "28 unique IDs from 29 entries",
+          "Source reconciliation": "All 53 earlier workbook/certificate IDs matched; 3 additional dashboard IDs"
+        },
+        "supports": "The authenticated dashboard matched all 53 earlier inventory IDs and supplied three additional complete IDs, giving 56. Each record retains its displayed workflow status and observation date. The source workbook and certificate references remain available beside the live check.",
+        "limits": "Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs.",
+        "citation": "NHPR / ABDM authenticated facility-manager dashboard, all four pages, inspected 19 September 2026. Earlier sources: All Centers With HFR.xlsx rows 2–53 and original recognitions bundle pp67–95.",
+        "note": "Tirupati has two preserved IDs; Bhimavaram, Nizamabad and Khammam each have an additional dashboard ID. Exact ID matching does not establish that one record replaces or cancels another. Workbook RS flags are historical supplied fields and remain separate from dashboard statuses.",
+        "links": [
+          {
+            "label": "HFR dashboard and source register",
+            "url": "/evidence/hfr-register.html"
+          },
+          {
+            "label": "Dated NHPR workflow checks · JSON",
+            "url": "/evidence/hfr-dashboard-checks.json"
+          },
+          {
+            "label": "Download complete HFR inventory · CSV",
+            "url": "/evidence/hfr-register.csv"
+          },
+          {
+            "label": "Official NHPR portal",
+            "url": "https://nhpr.abdm.gov.in/nhpr/v4/"
+          }
+        ]
+      },
+      "history": [
+        {
+          "date": "2026-09-19",
+          "change": "Matched all 53 earlier source IDs against the authenticated NHPR dashboard, added three complete IDs and retained exact workflow statuses; one masked Draft is separate."
         }
       ]
     }

@@ -19,7 +19,7 @@ window.PINNACLE_EVIDENCE = {
       "supports": "The supplied Form MD-5 licenses the listed Class B device for manufacture for sale or distribution at the specified premises. Intended users include parents, therapists, educators and caregivers supporting children aged 0–12.",
       "limits": "Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre.",
       "citation": "Original Form MD-5, page 1 including device annexure; supplied PinnacleAI®_SAMD_License.pdf re-inspected 18 September 2026.",
-      "scopeReviewed": "18 September 2026",
+      "scopeReviewed": "19 September 2026",
       "links": [
         {
           "label": "Read redacted licence",
@@ -64,7 +64,7 @@ window.PINNACLE_EVIDENCE = {
           "url": "https://manakonline.in/MANAK/login"
         }
       ],
-      "scopeReviewed": "18 September 2026"
+      "scopeReviewed": "19 September 2026"
     },
     {
       "id": "lei",
@@ -351,37 +351,48 @@ window.PINNACLE_EVIDENCE = {
       "id": "hfr",
       "category": "Centre registrations",
       "title": "ABDM / NHA · Health Facility Registry",
-      "status": "original",
-      "subtitle": "All 52 workbook centres · 53 distinct HFR IDs across both source sets",
+      "status": "matched",
+      "subtitle": "56 complete IDs matched · 33 Approved · dated NHPR workflow statuses",
       "fields": {
-        "Registry": "National Health Authority · Ayushman Bharat Digital Mission",
-        "Workbook": "52 centre rows; 52 unique HFR IDs",
-        "Certificate copies": "28 unique HFR IDs from 29 certificate entries",
-        "Source reconciliation": "27 IDs in both sources; 25 additional workbook IDs; one certificate-only ID",
-        "Combined inventory": "53 distinct HFR identifiers; not a count of confirmed active centres"
+        "Registry": "National Health Authority · Ayushman Bharat Digital Mission / NHPR",
+        "Live dashboard check": "19 September 2026 · authenticated facility-manager dashboard",
+        "Complete identifiers": "56 exact ID matches",
+        "Workflow statuses": "33 Approved; 14 Query Raised; 4 Submitted; 4 Rejected; 1 Query Resolved",
+        "Separate Draft": "1 masked Draft record; excluded from complete-ID total",
+        "Original workbook": "52 rows and 52 identifiers",
+        "Certificate copies": "28 unique IDs from 29 entries",
+        "Source reconciliation": "All 53 earlier workbook/certificate IDs matched; 3 additional dashboard IDs"
       },
-      "supports": "The complete supplied centre workbook lists 52 centres, addresses and HFR identifiers. Twenty-seven IDs correspond to the inspected certificate collection. The combined register preserves all 53 identifiers and labels the source and certificate-review level of each entry.",
-      "limits": "Workbook entries are company-supplied, not live government registry checks. The RS column is undefined; its ACTIVE/INACTIVE flags do not establish current operational or HFR status. HFR is not clinical-outcome certification or a replacement for local permissions. A matching ID does not independently reconcile current addresses.",
-      "citation": "All Centers With HFR.xlsx, sheet All Centers With HFR, rows 2–53 (reviewed 18 September 2026); original recognitions bundle, physical pp67–95.",
+      "supports": "The authenticated dashboard matched all 53 earlier inventory IDs and supplied three additional complete IDs, giving 56. Each record retains its displayed workflow status and observation date. The source workbook and certificate references remain available beside the live check.",
+      "limits": "Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs.",
+      "citation": "NHPR / ABDM authenticated facility-manager dashboard, all four pages, inspected 19 September 2026. Earlier sources: All Centers With HFR.xlsx rows 2–53 and original recognitions bundle pp67–95.",
       "links": [
         {
-          "label": "View facility register",
-          "url": "evidence/hfr-register.html"
+          "label": "HFR dashboard and source register",
+          "url": "/evidence/hfr-register.html"
         },
         {
-          "label": "ABDM Health Facility Registry",
-          "url": "https://hfr.abdm.gov.in/"
+          "label": "Dated NHPR workflow checks · JSON",
+          "url": "/evidence/hfr-dashboard-checks.json"
         },
         {
           "label": "Download complete HFR inventory · CSV",
-          "url": "evidence/hfr-register.csv"
+          "url": "/evidence/hfr-register.csv"
+        },
+        {
+          "label": "Official NHPR portal",
+          "url": "https://nhpr.abdm.gov.in/nhpr/v4/"
         }
       ],
-      "note": "The workbook’s Tirupati entry is IN2810065148. The separately inspected IN2810053847 certificate is retained as an additional record; replacement, cancellation or address equivalence has not been established. Duplicate Srikakulam certificate copies count once.",
+      "note": "Tirupati has two preserved IDs; Bhimavaram, Nizamabad and Khammam each have an additional dashboard ID. Exact ID matching does not establish that one record replaces or cancels another. Workbook RS flags are historical supplied fields and remain separate from dashboard statuses.",
       "originalReviewed": true,
       "searchTerms": "Ananthapuram IN2810053167 2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh 515001 AS Rao Nagar IN3610023707 Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062 500062 Attapur IN3610023458 Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048 500048 Begumpet IN3610023004 Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016. 500016 Bhimavaram IN2810039042 Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202 534201 Chanda Nagar IN3610023460 Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050 500049 Dilsukhnagar IN3610023028 No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana. 500060 East Marredpally IN3610023007 First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026 500026 Eluru IN2810051629 Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, EluruÂ District, A.P 534001 Gachibowli IN3610023016 Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084. 500084 Gajuwaka IN2810065153 Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, AndhraÂ PradeshÂ 530026 530026 Guntur IN2810039036 M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007 522001 Habsiguda IN3610023015 Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007 500007 Hayathnagar IN3610023006 2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505 501505 Himayat Nagar IN3610023005 Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana 500029 HitechCity, Madhapur IN3610023459 Pinnacle Blooms Network, Beside Metro Station, Shop No -  1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081 500081 Indira Nagar IN2910116253 Opp. Motherhood Hospital, CMH Road, Indira Nagar, Bengaluru, Karnataka, IN - 560038. 560038 Jaya Nagar IN2910116254 12th Main, 27th Cross, 4th Block East, Jaya Nagar, Bengaluru, Karnataka, IN - 560011. 560011 Kachiguda IN3610023020 Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027 500027 Kadapa IN2810065144 Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh 516002 Kakinada IN2810053820 Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001 533001 Karimnagar IN3610023681 Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001 505001 Khajaguda, Mehdipatnam IN3610023019 Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032 500008 Khammam IN3610023018 Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 507001 Kukatpally IN3610023014 Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib 500072 Kurnool IN2810039037 Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001 518001 Labbipet IN2810050768 Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007 520010 LB Nagar IN3610023705 No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074 500074 Madhurawada IN2810039041 2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041 530048 Mahbubnagar IN3610023702 GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana 509001 Marathahalli IN2910116252 No 3, Khata no 2389, SY No 115/6, KUNDALAHALLI, Bengaluru (Bangalore) Urban, Karnataka, 560049 560037 Miryalaguda IN3610023024 D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207 508207 NAD, Vizag IN2810039038 Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027 530009 Nallagandla IN3610023017 Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019 500019 Nandyala IN2810065160 Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh 518501 Nellore IN2810051616 Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001 524001 New Delhi IN0710006582 Ground, E17,  Main Market, South Extension - 1, Near AIIMS, Delhi 110049 110049 Nizamabad IN3610023008 Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001 503001 Nizampet IN3610023704 2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090 500090 Ongole IN2810050814 Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001 523001 Pragathi Nagar IN3610023685 Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, TelanganaÂ 500072 500090 Rajhamundary IN2810051854 Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103 533101 Santosh Nagar IN3610023021 Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059 500059 SR Nagar IN3610023027 Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018 500018 Srikakulam IN2810039040 Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh 532001 Suchitra IN3610023010 Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067 500067 Tirupati IN2810065148 Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh 517502 Tirupati · additional certificate record IN2810053847 Not supplied in the workbook  Vidyanagar IN3610023456 Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana 500020 Vijayawada IN2810050793 Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008 520008 Vikrampuri IN3610023703 Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009. 500009 Visakhapatnam IN2810039035 Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020 530002 Warangal IN3610023461 Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, TelanganaÂ 506001 506002",
-      "reviewLabel": "Workbook & certificate copies reviewed",
-      "scopeReviewed": "18 September 2026"
+      "reviewLabel": "Source inventory + NHPR dashboard matched",
+      "scopeReviewed": "19 September 2026",
+      "issuerMatched": true,
+      "reviewedOn": "2026-09-19",
+      "reviewedDate": "19 September 2026",
+      "verificationNote": "All 56 complete identifiers were matched in the authenticated NHPR facility-manager dashboard on 19 September 2026. The dashboard showed 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved. One masked Draft is separate."
     },
     {
       "id": "district-register",
@@ -523,7 +534,7 @@ window.PINNACLE_EVIDENCE = {
       "id": "sae3000",
       "category": "Research & outcomes",
       "title": "Independent practitioner · Limited assurance",
-      "status": "original",
+      "status": "matched",
       "subtitle": "SAE 3000 · Institutional claims as at 17 July 2026",
       "fields": {
         "Practitioner": "NPSY & Co., Chartered Accountants",
@@ -541,13 +552,19 @@ window.PINNACLE_EVIDENCE = {
         }
       ],
       "note": "The report is marked private/confidential and restricted-use. Its full text is not republished here; permitted circulation should be confirmed before a public evidence-room release.",
-      "originalReviewed": true
+      "originalReviewed": true,
+      "scopeReviewed": "19 September 2026",
+      "issuerMatched": true,
+      "reviewLabel": "Original reviewed · UDIN matched",
+      "verificationNote": "ICAI UDIN 26200027GMBLXU4868 matched with Active status on 19 September 2026; member 200027, firm 013580S and signing date 3 September 2026 matched the source.",
+      "issuerCheckedOn": "2026-09-19",
+      "issuerCheckUrl": "/evidence/issuer-checks.json"
     },
     {
       "id": "srs4400",
       "category": "Research & outcomes",
       "title": "Independent practitioner · Factual findings",
-      "status": "original",
+      "status": "matched",
       "subtitle": "SRS 4400 · Agreed procedures on institutional records",
       "fields": {
         "Practitioner": "NPSY & Co., Chartered Accountants",
@@ -565,7 +582,13 @@ window.PINNACLE_EVIDENCE = {
         }
       ],
       "note": "Restricted-use source. A UDIN lookup authenticates document particulars; it does not expand the report’s scope.",
-      "originalReviewed": true
+      "originalReviewed": true,
+      "scopeReviewed": "19 September 2026",
+      "issuerMatched": true,
+      "reviewLabel": "Original reviewed · UDIN matched",
+      "verificationNote": "ICAI UDIN 26200027HCNFEI9138 matched with Active status on 19 September 2026; member 200027, firm 013580S and signing date 3 September 2026 matched the source.",
+      "issuerCheckedOn": "2026-09-19",
+      "issuerCheckUrl": "/evidence/issuer-checks.json"
     },
     {
       "id": "operating-metrics",
@@ -595,7 +618,7 @@ window.PINNACLE_EVIDENCE = {
       ],
       "note": "The July dossier used a 2.5 billion+ floor and retired earlier 2.7 billion wording. The September handout subsequently publishes 2.7 billion+ observed row counts. Limited assurance over the 2.5 billion floor is distinct from factual findings without an assurance opinion on the 2.7 billion row count. The 70+ network and 49 operational-centre figures also use different definitions.",
       "originalReviewed": false,
-      "scopeReviewed": "18 September 2026"
+      "scopeReviewed": "19 September 2026"
     },
     {
       "id": "methodology",
@@ -853,7 +876,8 @@ window.PINNACLE_EVIDENCE = {
       "citation": "Original 23-page handout; physical PDF pages used because printed page numbering is out of order.",
       "links": [],
       "note": "The full confidential handout is not republished. This page cites physical pages and surfaces the relevant evidence topics.",
-      "originalReviewed": true
+      "originalReviewed": true,
+      "scopeReviewed": "19 September 2026"
     },
     {
       "id": "books",

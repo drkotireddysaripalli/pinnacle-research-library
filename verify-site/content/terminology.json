@@ -31,7 +31,7 @@
     "id": "hfr",
     "name": "HFR",
     "expanded": "Health Facility Registry",
-    "description": "The registry assigns a facility identifier. This page lists identifiers found in the supplied workbook and certificate copies. Source review is separate from confirming a facility’s current registry status, operational status or clinical quality.",
+    "description": "The Health Facility Registry assigns facility identifiers. On 19 September 2026, 56 complete IDs were matched in the authenticated NHPR dashboard; 33 displayed Approved. Other workflow statuses and one masked Draft are shown separately. A directory match is not a finding about current operations, clinical quality or outcomes.",
     "record": "hfr"
   },
   {

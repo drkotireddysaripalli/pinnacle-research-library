@@ -81,15 +81,15 @@
   {
     "route": "/evidence/hfr-register.html",
     "id": "evidence-hfr-register",
-    "title": "Every supplied centre. Every HFR identifier.",
+    "title": "Every HFR record. Its dated status.",
     "lines": [
-      "Every supplied centre.",
-      "Every HFR identifier."
+      "Every HFR record.",
+      "Its dated status."
     ],
-    "category": "ABDM / HFR SOURCE INVENTORY",
-    "note": "52 workbook centres · 53 IDs across supplied sources",
+    "category": "ABDM / HFR · LIVE DASHBOARD CHECK",
+    "note": "56 complete IDs matched · 33 Approved · checked 19 Sep 2026",
     "icon": "map-pin",
-    "description": "Every supplied centre. Every HFR identifier.. 52 workbook centres · 53 IDs across supplied sources. Read original sources, dates and evidence scope in Pinnacle Verify."
+    "description": "Pinnacle HFR records with dated dashboard statuses: 56 complete IDs matched, 33 Approved and one masked Draft listed separately."
   },
   {
     "route": "/evidence/privacy.html",
@@ -295,9 +295,9 @@
       "Centre identifiers."
     ],
     "category": "CENTRE RECORDS",
-    "note": "Supplied registry identifiers and certificate copies",
+    "note": "56 IDs matched in the NHPR dashboard · 19 Sep 2026",
     "icon": "map-pin",
-    "description": "ABDM / HFR Centre identifiers.. Supplied registry identifiers and certificate copies. Read original sources, dates and evidence scope in Pinnacle Verify."
+    "description": "ABDM HFR evidence: exact identifier matches, dated dashboard statuses and source certificates. Read the scope of each record."
   },
   {
     "route": "/evidence/records/iso13485.html",

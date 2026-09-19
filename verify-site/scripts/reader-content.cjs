@@ -9,7 +9,7 @@ const groups=[
  ['proof','Explore the original evidence','Search all 34 records and follow the source documents.',['records'],'file-search','teal'],
  ['scale','Understand the six figures','Definitions, reporting dates and evidence for each measure.',['scale'],'chart-no-axes-combined','purple'],
  ['data','Developmental data, explained','What the record counts mean and how observations connect.',['data-scale'],'clipboard-list','teal'],
- ['network','Find your centre','Explore the supplied HFR and district registration records.',['centres'],'map-pin','rose'],
+ ['network','Find your centre','Explore dated NHPR workflow statuses, source identifiers and district registration records.',['centres'],'map-pin','rose'],
  ['research','Research, books & authors','DOI-linked works, parent books and researcher profiles.',['research'],'book-open','purple'],
  ['standards','International standards','Understand ICD-11, ICF, ICHI and SNOMED CT in context.',['international-standards'],'scan-eye','teal'],
  ['goals','Health, learning & inclusion','How the stated purpose connects with UN SDGs 3, 4, 10 and 17.',['global-goals'],'landmark','rose'],

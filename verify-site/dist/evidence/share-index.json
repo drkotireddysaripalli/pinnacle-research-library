@@ -592,10 +592,10 @@
         {
           "id": "hfr",
           "url": "https://www.pinnacleblooms.org/verify/evidence/records/hfr.html",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-1403c1ceccd7.jpg",
-          "text": "Find a Pinnacle centre's HFR identifier and source. The inventory includes 52 workbook centres and 53 distinct IDs across both sources; it is not a live operational-status check.",
-          "whatsapp": "Find a Pinnacle centre's HFR identifier and source. The inventory includes 52 workbook centres and 53 distinct IDs across both sources; it is not a live operational-status check.\n\nReview: Workbook & certificate copies reviewed.\nCurrent issuer or registry status: not independently confirmed.\nScope: Workbook entries are company-supplied, not live government registry checks. The RS column is undefined; its ACTIVE/INACTIVE flags do not establish current operational or HFR status. HFR is not clinical-outcome certification or a replacement for local permissions. A matching ID does not independently reconcile current addresses.",
-          "xLength": 202
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-04e8afcffc12.jpg",
+          "text": "Explore 56 complete HFR IDs matched in the NHPR dashboard on 19 September 2026: 33 Approved, with other workflow statuses and one masked Draft shown separately. Read every status and source.",
+          "whatsapp": "Explore 56 complete HFR IDs matched in the NHPR dashboard on 19 September 2026: 33 Approved, with other workflow statuses and one masked Draft shown separately. Read every status and source.\n\nReview: Source inventory + NHPR dashboard matched.\nAll 56 complete identifiers were matched in the authenticated NHPR facility-manager dashboard on 19 September 2026. The dashboard showed 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved. One masked Draft is separate.\nScope: Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs.",
+          "xLength": 214
         },
         {
           "id": "district-register",
@@ -858,7 +858,7 @@
           "url": "https://www.pinnacleblooms.org/verify/evidence/scale-register.html#scale-centres",
           "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-scale-register-d853deb81f85.jpg",
           "text": "Pinnacle reports a 70+ centre network. Operational counts and HFR IDs are distinct measures; explore the centre inventory and dated evidence.",
-          "whatsapp": "Pinnacle reports a 70+ centre network. Operational counts and HFR IDs are distinct measures; explore the centre inventory and dated evidence.\n\nNetwork figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026.\nNetwork size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.",
+          "whatsapp": "Pinnacle reports a 70+ centre network. Operational counts and HFR IDs are distinct measures; explore the centre inventory and dated evidence.\n\nNetwork figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026.\nNetwork size, operational-centre counts and HFR identifiers are different measures. On 19 September 2026, 56 complete IDs matched in the NHPR dashboard and 33 displayed Approved; other workflow statuses and one masked Draft remain separate. An HFR record does not establish clinical outcomes or replace location-specific permissions.",
           "xLength": 165
         },
         {
@@ -888,7 +888,7 @@
         {
           "id": "centres",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
           "text": "Explore Pinnacle's evidence on Start with the centre your family knows. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Start with the centre your family knows. Read the source, review date and scope before drawing conclusions.",
           "xLength": 162
@@ -896,106 +896,114 @@
         {
           "id": "block-ananthapuram",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810053167",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Ananthapuram: HFR ID IN2810053167 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Ananthapuram: HFR ID IN2810053167 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Ananthapuram: HFR IN2810053167. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Ananthapuram: HFR IN2810053167. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "block-as-rao-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023707",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore AS Rao Nagar: HFR ID IN3610023707 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore AS Rao Nagar: HFR ID IN3610023707 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore AS Rao Nagar: HFR IN3610023707. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore AS Rao Nagar: HFR IN3610023707. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Rejected. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "block-attapur",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023458",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Attapur: HFR ID IN3610023458 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Attapur: HFR ID IN3610023458 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 172
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Attapur: HFR IN3610023458. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Attapur: HFR IN3610023458. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Submitted. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "block-begumpet",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023004",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Begumpet: HFR ID IN3610023004 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Begumpet: HFR ID IN3610023004 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Begumpet: HFR IN3610023004. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Begumpet: HFR IN3610023004. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "block-bhimavaram",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039042",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Bhimavaram: HFR ID IN2810039042 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Bhimavaram: HFR ID IN2810039042 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Bhimavaram: HFR IN2810039042. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Bhimavaram: HFR IN2810039042. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
+        },
+        {
+          "id": "block-bhimavaram-additional-dashboard-record",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810051839",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Bhimavaram additional dashboard record: HFR IN2810051839. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Bhimavaram additional dashboard record: HFR IN2810051839. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Live dashboard record. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 166
         },
         {
           "id": "block-chanda-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023460",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Chanda Nagar: HFR ID IN3610023460 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Chanda Nagar: HFR ID IN3610023460 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Chanda Nagar: HFR IN3610023460. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Chanda Nagar: HFR IN3610023460. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Submitted. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 141
         },
         {
           "id": "block-dilsukhnagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023028",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Dilsukhnagar: HFR ID IN3610023028 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Dilsukhnagar: HFR ID IN3610023028 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Dilsukhnagar: HFR IN3610023028. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Dilsukhnagar: HFR IN3610023028. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "block-east-marredpally",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023007",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore East Marredpally: HFR ID IN3610023007 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore East Marredpally: HFR ID IN3610023007 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 181
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore East Marredpally: HFR IN3610023007. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore East Marredpally: HFR IN3610023007. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 148
         },
         {
           "id": "block-eluru",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810051629",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Eluru: HFR ID IN2810051629 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Eluru: HFR ID IN2810051629 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 170
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Eluru: HFR IN2810051629. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Eluru: HFR IN2810051629. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 133
         },
         {
           "id": "block-gachibowli",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023016",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Gachibowli: HFR ID IN3610023016 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Gachibowli: HFR ID IN3610023016 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Gachibowli: HFR IN3610023016. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Gachibowli: HFR IN3610023016. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
         },
         {
           "id": "block-gajuwaka",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810065153",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Gajuwaka: HFR ID IN2810065153 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Gajuwaka: HFR ID IN2810065153 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Gajuwaka: HFR IN2810065153. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Gajuwaka: HFR IN2810065153. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "block-guntur",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039036",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Guntur: HFR ID IN2810039036 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Guntur: HFR ID IN2810039036 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 171
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Guntur: HFR IN2810039036. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Guntur: HFR IN2810039036. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 134
         },
         {
           "id": "block-habsiguda",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023015",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Habsiguda: HFR ID IN3610023015 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Habsiguda: HFR ID IN3610023015 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 174
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Habsiguda: HFR IN3610023015. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Habsiguda: HFR IN3610023015. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 141
         },
         {
           "id": "block-hanumakonda-telangana",
@@ -1008,26 +1016,26 @@
         {
           "id": "block-hayathnagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023006",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Hayathnagar: HFR ID IN3610023006 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Hayathnagar: HFR ID IN3610023006 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Hayathnagar: HFR IN3610023006. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Hayathnagar: HFR IN3610023006. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "block-himayat-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023005",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Himayat Nagar: HFR ID IN3610023005 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Himayat Nagar: HFR ID IN3610023005 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 178
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Himayat Nagar: HFR IN3610023005. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Himayat Nagar: HFR IN3610023005. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 145
         },
         {
           "id": "block-hitechcity-madhapur",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023459",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore HitechCity, Madhapur: HFR ID IN3610023459 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore HitechCity, Madhapur: HFR ID IN3610023459 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 185
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore HitechCity, Madhapur: HFR IN3610023459. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore HitechCity, Madhapur: HFR IN3610023459. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Submitted. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 149
         },
         {
           "id": "block-hyderabad-telangana",
@@ -1040,50 +1048,50 @@
         {
           "id": "block-indira-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2910116253",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Indira Nagar: HFR ID IN2910116253 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Indira Nagar: HFR ID IN2910116253 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Indira Nagar: HFR IN2910116253. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Indira Nagar: HFR IN2910116253. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 144
         },
         {
           "id": "block-jaya-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2910116254",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Jaya Nagar: HFR ID IN2910116254 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Jaya Nagar: HFR ID IN2910116254 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Jaya Nagar: HFR IN2910116254. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Jaya Nagar: HFR IN2910116254. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "block-kachiguda",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023020",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kachiguda: HFR ID IN3610023020 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kachiguda: HFR ID IN3610023020 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 174
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kachiguda: HFR IN3610023020. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kachiguda: HFR IN3610023020. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 141
         },
         {
           "id": "block-kadapa",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810065144",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kadapa: HFR ID IN2810065144 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kadapa: HFR ID IN2810065144 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 171
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kadapa: HFR IN2810065144. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kadapa: HFR IN2810065144. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 134
         },
         {
           "id": "block-kakinada",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810053820",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kakinada: HFR ID IN2810053820 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kakinada: HFR ID IN2810053820 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kakinada: HFR IN2810053820. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kakinada: HFR IN2810053820. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "block-karimnagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023681",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Karimnagar: HFR ID IN3610023681 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Karimnagar: HFR ID IN3610023681 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Karimnagar: HFR IN3610023681. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Karimnagar: HFR IN3610023681. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "block-karimnagar-telangana",
@@ -1096,18 +1104,26 @@
         {
           "id": "block-khajaguda-mehdipatnam",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023019",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Khajaguda, Mehdipatnam: HFR ID IN3610023019 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Khajaguda, Mehdipatnam: HFR ID IN3610023019 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 187
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Khajaguda, Mehdipatnam: HFR IN3610023019. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Khajaguda, Mehdipatnam: HFR IN3610023019. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 150
         },
         {
           "id": "block-khammam",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023018",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Khammam: HFR ID IN3610023018 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Khammam: HFR ID IN3610023018 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 172
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Khammam: HFR IN3610023018. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Khammam: HFR IN3610023018. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 135
+        },
+        {
+          "id": "block-khammam-additional-dashboard-record",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023023",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Khammam additional dashboard record: HFR IN3610023023. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Khammam additional dashboard record: HFR IN3610023023. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Live dashboard record. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 163
         },
         {
           "id": "block-khammam-telangana",
@@ -1120,58 +1136,58 @@
         {
           "id": "block-kukatpally",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023014",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kukatpally: HFR ID IN3610023014 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kukatpally: HFR ID IN3610023014 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kukatpally: HFR IN3610023014. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kukatpally: HFR IN3610023014. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "block-kurnool",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039037",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kurnool: HFR ID IN2810039037 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kurnool: HFR ID IN2810039037 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 172
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kurnool: HFR IN2810039037. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kurnool: HFR IN2810039037. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 135
         },
         {
           "id": "block-labbipet",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810050768",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Labbipet: HFR ID IN2810050768 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Labbipet: HFR ID IN2810050768 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Labbipet: HFR IN2810050768. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Labbipet: HFR IN2810050768. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "block-lb-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023705",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore LB Nagar: HFR ID IN3610023705 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore LB Nagar: HFR ID IN3610023705 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore LB Nagar: HFR IN3610023705. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore LB Nagar: HFR IN3610023705. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Submitted. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 137
         },
         {
           "id": "block-madhurawada",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039041",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Madhurawada: HFR ID IN2810039041 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Madhurawada: HFR ID IN2810039041 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Madhurawada: HFR IN2810039041. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Madhurawada: HFR IN2810039041. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "block-mahbubnagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023702",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Mahbubnagar: HFR ID IN3610023702 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Mahbubnagar: HFR ID IN3610023702 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Mahbubnagar: HFR IN3610023702. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Mahbubnagar: HFR IN3610023702. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "block-marathahalli",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2910116252",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Marathahalli: HFR ID IN2910116252 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Marathahalli: HFR ID IN2910116252 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Marathahalli: HFR IN2910116252. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Marathahalli: HFR IN2910116252. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 144
         },
         {
           "id": "block-medchal-malkajgiri-telangana",
@@ -1184,58 +1200,66 @@
         {
           "id": "block-miryalaguda",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023024",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Miryalaguda: HFR ID IN3610023024 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Miryalaguda: HFR ID IN3610023024 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Miryalaguda: HFR IN3610023024. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Miryalaguda: HFR IN3610023024. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "block-nad-vizag",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039038",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore NAD, Vizag: HFR ID IN2810039038 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore NAD, Vizag: HFR ID IN2810039038 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore NAD, Vizag: HFR IN2810039038. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore NAD, Vizag: HFR IN2810039038. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
         },
         {
           "id": "block-nallagandla",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023017",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nallagandla: HFR ID IN3610023017 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nallagandla: HFR ID IN3610023017 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nallagandla: HFR IN3610023017. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nallagandla: HFR IN3610023017. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "block-nandyala",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810065160",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nandyala: HFR ID IN2810065160 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nandyala: HFR ID IN2810065160 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nandyala: HFR IN2810065160. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nandyala: HFR IN2810065160. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "block-nellore",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810051616",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nellore: HFR ID IN2810051616 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nellore: HFR ID IN2810051616 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 172
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nellore: HFR IN2810051616. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nellore: HFR IN2810051616. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 135
         },
         {
           "id": "block-new-delhi",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN0710006582",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore New Delhi: HFR ID IN0710006582 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore New Delhi: HFR ID IN0710006582 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 174
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore New Delhi: HFR IN0710006582. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore New Delhi: HFR IN0710006582. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 137
         },
         {
           "id": "block-nizamabad",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023008",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nizamabad: HFR ID IN3610023008 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nizamabad: HFR ID IN3610023008 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 174
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nizamabad: HFR IN3610023008. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nizamabad: HFR IN3610023008. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 137
+        },
+        {
+          "id": "block-nizamabad-additional-dashboard-record",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023029",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nizamabad additional dashboard record: HFR IN3610023029. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nizamabad additional dashboard record: HFR IN3610023029. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.\nSource level: Live dashboard record. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Rejected. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 165
         },
         {
           "id": "block-nizamabad-telangana",
@@ -1248,34 +1272,34 @@
         {
           "id": "block-nizampet",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023704",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nizampet: HFR ID IN3610023704 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nizampet: HFR ID IN3610023704 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nizampet: HFR IN3610023704. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nizampet: HFR IN3610023704. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Rejected. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "block-ongole",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810050814",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Ongole: HFR ID IN2810050814 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Ongole: HFR ID IN2810050814 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 171
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Ongole: HFR IN2810050814. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Ongole: HFR IN2810050814. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 134
         },
         {
           "id": "block-pragathi-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023685",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Pragathi Nagar: HFR ID IN3610023685 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Pragathi Nagar: HFR ID IN3610023685 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 179
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Pragathi Nagar: HFR IN3610023685. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Pragathi Nagar: HFR IN3610023685. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Rejected. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "block-rajhamundary",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810051854",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Rajhamundary: HFR ID IN2810051854 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Rajhamundary: HFR ID IN2810051854 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Rajhamundary: HFR IN2810051854. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Rajhamundary: HFR IN2810051854. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "block-ranga-reddy-telangana",
@@ -1288,10 +1312,10 @@
         {
           "id": "block-santosh-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023021",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Santosh Nagar: HFR ID IN3610023021 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Santosh Nagar: HFR ID IN3610023021 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 178
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Santosh Nagar: HFR IN3610023021. NHPR workflow: Query Resolved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Santosh Nagar: HFR IN3610023021. NHPR workflow: Query Resolved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Resolved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 147
         },
         {
           "id": "block-spsr-nellore-andhra-pradesh",
@@ -1304,82 +1328,82 @@
         {
           "id": "block-sr-nagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023027",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore SR Nagar: HFR ID IN3610023027 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore SR Nagar: HFR ID IN3610023027 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore SR Nagar: HFR IN3610023027. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore SR Nagar: HFR IN3610023027. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "block-srikakulam",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039040",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Srikakulam: HFR ID IN2810039040 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Srikakulam: HFR ID IN2810039040 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Srikakulam: HFR IN2810039040. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Srikakulam: HFR IN2810039040. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
         },
         {
           "id": "block-suchitra",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023010",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Suchitra: HFR ID IN3610023010 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Suchitra: HFR ID IN3610023010 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Suchitra: HFR IN3610023010. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Suchitra: HFR IN3610023010. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "block-tirupati",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810065148",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Tirupati: HFR ID IN2810065148 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Tirupati: HFR ID IN2810065148 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Tirupati: HFR IN2810065148. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Tirupati: HFR IN2810065148. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "block-tirupati-additional-certificate-record",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810053847",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Tirupati additional certificate record: HFR ID IN2810053847 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Tirupati additional certificate record: HFR ID IN2810053847 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Certificate copy only. Current registry status was not independently queried.",
-          "xLength": 203
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Tirupati additional certificate record: HFR IN2810053847. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Tirupati additional certificate record: HFR IN2810053847. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Certificate copy only. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 166
         },
         {
           "id": "block-vidyanagar",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023456",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Vidyanagar: HFR ID IN3610023456 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Vidyanagar: HFR ID IN3610023456 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Vidyanagar: HFR IN3610023456. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Vidyanagar: HFR IN3610023456. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "block-vijayawada",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810050793",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Vijayawada: HFR ID IN2810050793 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Vijayawada: HFR ID IN2810050793 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Vijayawada: HFR IN2810050793. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Vijayawada: HFR IN2810050793. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
         },
         {
           "id": "block-vikrampuri",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023703",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Vikrampuri: HFR ID IN3610023703 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Vikrampuri: HFR ID IN3610023703 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Vikrampuri: HFR IN3610023703. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Vikrampuri: HFR IN3610023703. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "block-visakhapatnam",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039035",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Visakhapatnam: HFR ID IN2810039035 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Visakhapatnam: HFR ID IN2810039035 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 178
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Visakhapatnam: HFR IN2810039035. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Visakhapatnam: HFR IN2810039035. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 141
         },
         {
           "id": "block-warangal",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023461",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Warangal: HFR ID IN3610023461 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Warangal: HFR ID IN3610023461 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Warangal: HFR IN3610023461. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Warangal: HFR IN3610023461. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "research",
@@ -2186,439 +2210,479 @@
         {
           "id": "page",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
           "text": "Explore Pinnacle HFR Register. Read the source records, review dates and evidence scope.",
           "whatsapp": "Explore Pinnacle HFR Register. Read the source records, review dates and evidence scope.",
           "xLength": 112
         },
         {
+          "id": "section-what-the-dashboard-shows",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#section-what-the-dashboard-shows",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Pinnacle's evidence on What the dashboard shows. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What the dashboard shows. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
+        },
+        {
           "id": "hfr-IN2810053167",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810053167",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Ananthapuram: HFR ID IN2810053167 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Ananthapuram: HFR ID IN2810053167 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Ananthapuram: HFR IN2810053167. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Ananthapuram: HFR IN2810053167. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "hfr-IN3610023707",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023707",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore AS Rao Nagar: HFR ID IN3610023707 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore AS Rao Nagar: HFR ID IN3610023707 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore AS Rao Nagar: HFR IN3610023707. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore AS Rao Nagar: HFR IN3610023707. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Rejected. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "hfr-IN3610023458",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023458",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Attapur: HFR ID IN3610023458 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Attapur: HFR ID IN3610023458 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 172
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Attapur: HFR IN3610023458. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Attapur: HFR IN3610023458. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Submitted. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "hfr-IN3610023004",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023004",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Begumpet: HFR ID IN3610023004 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Begumpet: HFR ID IN3610023004 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Begumpet: HFR IN3610023004. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Begumpet: HFR IN3610023004. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "hfr-IN2810039042",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039042",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Bhimavaram: HFR ID IN2810039042 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Bhimavaram: HFR ID IN2810039042 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Bhimavaram: HFR IN2810039042. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Bhimavaram: HFR IN2810039042. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
+        },
+        {
+          "id": "hfr-IN2810051839",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810051839",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Bhimavaram additional dashboard record: HFR IN2810051839. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Bhimavaram additional dashboard record: HFR IN2810051839. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Live dashboard record. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 166
         },
         {
           "id": "hfr-IN3610023460",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023460",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Chanda Nagar: HFR ID IN3610023460 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Chanda Nagar: HFR ID IN3610023460 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Chanda Nagar: HFR IN3610023460. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Chanda Nagar: HFR IN3610023460. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Submitted. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 141
         },
         {
           "id": "hfr-IN3610023028",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023028",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Dilsukhnagar: HFR ID IN3610023028 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Dilsukhnagar: HFR ID IN3610023028 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Dilsukhnagar: HFR IN3610023028. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Dilsukhnagar: HFR IN3610023028. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "hfr-IN3610023007",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023007",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore East Marredpally: HFR ID IN3610023007 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore East Marredpally: HFR ID IN3610023007 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 181
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore East Marredpally: HFR IN3610023007. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore East Marredpally: HFR IN3610023007. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 148
         },
         {
           "id": "hfr-IN2810051629",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810051629",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Eluru: HFR ID IN2810051629 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Eluru: HFR ID IN2810051629 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 170
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Eluru: HFR IN2810051629. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Eluru: HFR IN2810051629. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 133
         },
         {
           "id": "hfr-IN3610023016",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023016",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Gachibowli: HFR ID IN3610023016 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Gachibowli: HFR ID IN3610023016 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Gachibowli: HFR IN3610023016. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Gachibowli: HFR IN3610023016. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
         },
         {
           "id": "hfr-IN2810065153",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810065153",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Gajuwaka: HFR ID IN2810065153 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Gajuwaka: HFR ID IN2810065153 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Gajuwaka: HFR IN2810065153. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Gajuwaka: HFR IN2810065153. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "hfr-IN2810039036",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039036",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Guntur: HFR ID IN2810039036 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Guntur: HFR ID IN2810039036 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 171
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Guntur: HFR IN2810039036. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Guntur: HFR IN2810039036. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 134
         },
         {
           "id": "hfr-IN3610023015",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023015",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Habsiguda: HFR ID IN3610023015 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Habsiguda: HFR ID IN3610023015 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 174
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Habsiguda: HFR IN3610023015. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Habsiguda: HFR IN3610023015. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 141
         },
         {
           "id": "hfr-IN3610023006",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023006",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Hayathnagar: HFR ID IN3610023006 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Hayathnagar: HFR ID IN3610023006 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Hayathnagar: HFR IN3610023006. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Hayathnagar: HFR IN3610023006. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "hfr-IN3610023005",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023005",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Himayat Nagar: HFR ID IN3610023005 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Himayat Nagar: HFR ID IN3610023005 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 178
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Himayat Nagar: HFR IN3610023005. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Himayat Nagar: HFR IN3610023005. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 145
         },
         {
           "id": "hfr-IN3610023459",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023459",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore HitechCity, Madhapur: HFR ID IN3610023459 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore HitechCity, Madhapur: HFR ID IN3610023459 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 185
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore HitechCity, Madhapur: HFR IN3610023459. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore HitechCity, Madhapur: HFR IN3610023459. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Submitted. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 149
         },
         {
           "id": "hfr-IN2910116253",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2910116253",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Indira Nagar: HFR ID IN2910116253 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Indira Nagar: HFR ID IN2910116253 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Indira Nagar: HFR IN2910116253. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Indira Nagar: HFR IN2910116253. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 144
         },
         {
           "id": "hfr-IN2910116254",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2910116254",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Jaya Nagar: HFR ID IN2910116254 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Jaya Nagar: HFR ID IN2910116254 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Jaya Nagar: HFR IN2910116254. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Jaya Nagar: HFR IN2910116254. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "hfr-IN3610023020",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023020",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kachiguda: HFR ID IN3610023020 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kachiguda: HFR ID IN3610023020 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 174
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kachiguda: HFR IN3610023020. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kachiguda: HFR IN3610023020. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 141
         },
         {
           "id": "hfr-IN2810065144",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810065144",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kadapa: HFR ID IN2810065144 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kadapa: HFR ID IN2810065144 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 171
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kadapa: HFR IN2810065144. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kadapa: HFR IN2810065144. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 134
         },
         {
           "id": "hfr-IN2810053820",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810053820",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kakinada: HFR ID IN2810053820 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kakinada: HFR ID IN2810053820 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kakinada: HFR IN2810053820. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kakinada: HFR IN2810053820. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "hfr-IN3610023681",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023681",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Karimnagar: HFR ID IN3610023681 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Karimnagar: HFR ID IN3610023681 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Karimnagar: HFR IN3610023681. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Karimnagar: HFR IN3610023681. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "hfr-IN3610023019",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023019",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Khajaguda, Mehdipatnam: HFR ID IN3610023019 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Khajaguda, Mehdipatnam: HFR ID IN3610023019 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 187
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Khajaguda, Mehdipatnam: HFR IN3610023019. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Khajaguda, Mehdipatnam: HFR IN3610023019. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 150
         },
         {
           "id": "hfr-IN3610023018",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023018",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Khammam: HFR ID IN3610023018 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Khammam: HFR ID IN3610023018 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 172
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Khammam: HFR IN3610023018. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Khammam: HFR IN3610023018. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 135
+        },
+        {
+          "id": "hfr-IN3610023023",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023023",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Khammam additional dashboard record: HFR IN3610023023. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Khammam additional dashboard record: HFR IN3610023023. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Live dashboard record. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 163
         },
         {
           "id": "hfr-IN3610023014",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023014",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kukatpally: HFR ID IN3610023014 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kukatpally: HFR ID IN3610023014 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kukatpally: HFR IN3610023014. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kukatpally: HFR IN3610023014. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "hfr-IN2810039037",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039037",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Kurnool: HFR ID IN2810039037 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Kurnool: HFR ID IN2810039037 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 172
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Kurnool: HFR IN2810039037. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Kurnool: HFR IN2810039037. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 135
         },
         {
           "id": "hfr-IN2810050768",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810050768",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Labbipet: HFR ID IN2810050768 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Labbipet: HFR ID IN2810050768 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Labbipet: HFR IN2810050768. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Labbipet: HFR IN2810050768. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "hfr-IN3610023705",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023705",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore LB Nagar: HFR ID IN3610023705 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore LB Nagar: HFR ID IN3610023705 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore LB Nagar: HFR IN3610023705. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore LB Nagar: HFR IN3610023705. NHPR workflow: Submitted, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Submitted. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 137
         },
         {
           "id": "hfr-IN2810039041",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039041",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Madhurawada: HFR ID IN2810039041 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Madhurawada: HFR ID IN2810039041 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Madhurawada: HFR IN2810039041. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Madhurawada: HFR IN2810039041. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "hfr-IN3610023702",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023702",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Mahbubnagar: HFR ID IN3610023702 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Mahbubnagar: HFR ID IN3610023702 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Mahbubnagar: HFR IN3610023702. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Mahbubnagar: HFR IN3610023702. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "hfr-IN2910116252",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2910116252",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Marathahalli: HFR ID IN2910116252 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Marathahalli: HFR ID IN2910116252 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Marathahalli: HFR IN2910116252. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Marathahalli: HFR IN2910116252. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 144
         },
         {
           "id": "hfr-IN3610023024",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023024",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Miryalaguda: HFR ID IN3610023024 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Miryalaguda: HFR ID IN3610023024 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Miryalaguda: HFR IN3610023024. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Miryalaguda: HFR IN3610023024. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "hfr-IN2810039038",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039038",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore NAD, Vizag: HFR ID IN2810039038 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore NAD, Vizag: HFR ID IN2810039038 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore NAD, Vizag: HFR IN2810039038. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore NAD, Vizag: HFR IN2810039038. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
         },
         {
           "id": "hfr-IN3610023017",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023017",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nallagandla: HFR ID IN3610023017 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nallagandla: HFR ID IN3610023017 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 176
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nallagandla: HFR IN3610023017. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nallagandla: HFR IN3610023017. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 139
         },
         {
           "id": "hfr-IN2810065160",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810065160",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nandyala: HFR ID IN2810065160 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nandyala: HFR ID IN2810065160 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nandyala: HFR IN2810065160. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nandyala: HFR IN2810065160. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "hfr-IN2810051616",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810051616",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nellore: HFR ID IN2810051616 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nellore: HFR ID IN2810051616 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 172
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nellore: HFR IN2810051616. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nellore: HFR IN2810051616. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 135
         },
         {
           "id": "hfr-IN0710006582",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN0710006582",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore New Delhi: HFR ID IN0710006582 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore New Delhi: HFR ID IN0710006582 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 174
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore New Delhi: HFR IN0710006582. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore New Delhi: HFR IN0710006582. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 137
         },
         {
           "id": "hfr-IN3610023008",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023008",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nizamabad: HFR ID IN3610023008 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nizamabad: HFR ID IN3610023008 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 174
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nizamabad: HFR IN3610023008. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nizamabad: HFR IN3610023008. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 137
+        },
+        {
+          "id": "hfr-IN3610023029",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023029",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nizamabad additional dashboard record: HFR IN3610023029. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nizamabad additional dashboard record: HFR IN3610023029. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.\nSource level: Live dashboard record. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Rejected. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 165
         },
         {
           "id": "hfr-IN3610023704",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023704",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Nizampet: HFR ID IN3610023704 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Nizampet: HFR ID IN3610023704 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Nizampet: HFR IN3610023704. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Nizampet: HFR IN3610023704. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Rejected. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "hfr-IN2810050814",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810050814",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Ongole: HFR ID IN2810050814 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Ongole: HFR ID IN2810050814 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 171
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Ongole: HFR IN2810050814. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Ongole: HFR IN2810050814. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 134
         },
         {
           "id": "hfr-IN3610023685",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023685",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Pragathi Nagar: HFR ID IN3610023685 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Pragathi Nagar: HFR ID IN3610023685 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 179
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Pragathi Nagar: HFR IN3610023685. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Pragathi Nagar: HFR IN3610023685. NHPR workflow: Rejected, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Rejected. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "hfr-IN2810051854",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810051854",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Rajhamundary: HFR ID IN2810051854 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Rajhamundary: HFR ID IN2810051854 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 177
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Rajhamundary: HFR IN2810051854. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Rajhamundary: HFR IN2810051854. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "hfr-IN3610023021",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023021",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Santosh Nagar: HFR ID IN3610023021 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Santosh Nagar: HFR ID IN3610023021 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 178
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Santosh Nagar: HFR IN3610023021. NHPR workflow: Query Resolved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Santosh Nagar: HFR IN3610023021. NHPR workflow: Query Resolved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Resolved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 147
         },
         {
           "id": "hfr-IN3610023027",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023027",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore SR Nagar: HFR ID IN3610023027 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore SR Nagar: HFR ID IN3610023027 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore SR Nagar: HFR IN3610023027. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore SR Nagar: HFR IN3610023027. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "hfr-IN2810039040",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039040",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Srikakulam: HFR ID IN2810039040 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Srikakulam: HFR ID IN2810039040 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Srikakulam: HFR IN2810039040. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Srikakulam: HFR IN2810039040. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
         },
         {
           "id": "hfr-IN3610023010",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023010",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Suchitra: HFR ID IN3610023010 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Suchitra: HFR ID IN3610023010 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Suchitra: HFR IN3610023010. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Suchitra: HFR IN3610023010. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 140
         },
         {
           "id": "hfr-IN2810065148",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810065148",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Tirupati: HFR ID IN2810065148 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Tirupati: HFR ID IN2810065148 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Tirupati: HFR IN2810065148. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Tirupati: HFR IN2810065148. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
         },
         {
           "id": "hfr-IN2810053847",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810053847",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Tirupati additional certificate record: HFR ID IN2810053847 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Tirupati additional certificate record: HFR ID IN2810053847 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Certificate copy only. Current registry status was not independently queried.",
-          "xLength": 203
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Tirupati additional certificate record: HFR IN2810053847. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Tirupati additional certificate record: HFR IN2810053847. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Certificate copy only. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 166
         },
         {
           "id": "hfr-IN3610023456",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023456",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Vidyanagar: HFR ID IN3610023456 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Vidyanagar: HFR ID IN3610023456 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Vidyanagar: HFR IN3610023456. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Vidyanagar: HFR IN3610023456. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "hfr-IN2810050793",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810050793",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Vijayawada: HFR ID IN2810050793 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Vijayawada: HFR ID IN2810050793 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Vijayawada: HFR IN2810050793. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Vijayawada: HFR IN2810050793. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 138
         },
         {
           "id": "hfr-IN3610023703",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023703",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Vikrampuri: HFR ID IN3610023703 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Vikrampuri: HFR ID IN3610023703 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook-listed. Current registry status was not independently queried.",
-          "xLength": 175
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Vikrampuri: HFR IN3610023703. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Vikrampuri: HFR IN3610023703. NHPR workflow: Query Raised, 19 September 2026. Read the exact source and scope.\nSource level: Workbook-listed. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Query Raised. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 142
         },
         {
           "id": "hfr-IN2810039035",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN2810039035",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Visakhapatnam: HFR ID IN2810039035 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Visakhapatnam: HFR ID IN2810039035 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 178
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Visakhapatnam: HFR IN2810039035. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Visakhapatnam: HFR IN2810039035. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 141
         },
         {
           "id": "hfr-IN3610023461",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-IN3610023461",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
-          "text": "Explore Warangal: HFR ID IN3610023461 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.",
-          "whatsapp": "Explore Warangal: HFR ID IN3610023461 in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.\nSource level: Workbook + certificate copy. Current registry status was not independently queried.",
-          "xLength": 173
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Warangal: HFR IN3610023461. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.",
+          "whatsapp": "Explore Warangal: HFR IN3610023461. NHPR workflow: Approved, 19 September 2026. Read the exact source and scope.\nSource level: Workbook + certificate copy. Exact ID matched in the authenticated NHPR dashboard on 19 September 2026. Workflow status: Approved. An ID match is separate from approval, present operations and clinical quality.",
+          "xLength": 136
+        },
+        {
+          "id": "hfr-draft",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#hfr-draft",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
+          "text": "Explore Pinnacle's evidence on One Draft, kept separate. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on One Draft, kept separate. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
         },
         {
           "id": "section-how-to-read-this-register",
           "url": "https://www.pinnacleblooms.org/verify/evidence/hfr-register.html#section-how-to-read-this-register",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-93ad245052cc.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-hfr-register-45016b0b4625.jpg",
           "text": "Explore Pinnacle's evidence on How to read this register. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on How to read this register. Read the source, review date and scope before drawing conclusions.",
           "xLength": 148
@@ -2729,7 +2793,7 @@
           "url": "https://www.pinnacleblooms.org/verify/evidence/scale-register.html#scale-centres",
           "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-scale-register-d853deb81f85.jpg",
           "text": "Pinnacle reports a 70+ centre network. Operational counts and HFR IDs are distinct measures; explore the centre inventory and dated evidence.",
-          "whatsapp": "Pinnacle reports a 70+ centre network. Operational counts and HFR IDs are distinct measures; explore the centre inventory and dated evidence.\n\nNetwork figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026.\nNetwork size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.",
+          "whatsapp": "Pinnacle reports a 70+ centre network. Operational counts and HFR IDs are distinct measures; explore the centre inventory and dated evidence.\n\nNetwork figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026.\nNetwork size, operational-centre counts and HFR identifiers are different measures. On 19 September 2026, 56 complete IDs matched in the NHPR dashboard and 33 displayed Approved; other workflow statuses and one masked Draft remain separate. An HFR record does not establish clinical outcomes or replace location-specific permissions.",
           "xLength": 165
         },
         {
@@ -3257,10 +3321,10 @@
         {
           "id": "hfr",
           "url": "https://www.pinnacleblooms.org/verify/evidence/records/hfr.html",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-1403c1ceccd7.jpg",
-          "text": "Find a Pinnacle centre's HFR identifier and source. The inventory includes 52 workbook centres and 53 distinct IDs across both sources; it is not a live operational-status check.",
-          "whatsapp": "Find a Pinnacle centre's HFR identifier and source. The inventory includes 52 workbook centres and 53 distinct IDs across both sources; it is not a live operational-status check.\n\nReview: Workbook & certificate copies reviewed.\nCurrent issuer or registry status: not independently confirmed.\nScope: Workbook entries are company-supplied, not live government registry checks. The RS column is undefined; its ACTIVE/INACTIVE flags do not establish current operational or HFR status. HFR is not clinical-outcome certification or a replacement for local permissions. A matching ID does not independently reconcile current addresses.",
-          "xLength": 202
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-04e8afcffc12.jpg",
+          "text": "Explore 56 complete HFR IDs matched in the NHPR dashboard on 19 September 2026: 33 Approved, with other workflow statuses and one masked Draft shown separately. Read every status and source.",
+          "whatsapp": "Explore 56 complete HFR IDs matched in the NHPR dashboard on 19 September 2026: 33 Approved, with other workflow statuses and one masked Draft shown separately. Read every status and source.\n\nReview: Source inventory + NHPR dashboard matched.\nAll 56 complete identifiers were matched in the authenticated NHPR facility-manager dashboard on 19 September 2026. The dashboard showed 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved. One masked Draft is separate.\nScope: Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs.",
+          "xLength": 214
         },
         {
           "id": "district-register",
@@ -3778,23 +3842,39 @@
         {
           "id": "page",
           "url": "https://www.pinnacleblooms.org/verify/evidence/records/hfr.html",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-1403c1ceccd7.jpg",
-          "text": "Find a Pinnacle centre's HFR identifier and source. The inventory includes 52 workbook centres and 53 distinct IDs across both sources; it is not a live operational-status check.",
-          "whatsapp": "Find a Pinnacle centre's HFR identifier and source. The inventory includes 52 workbook centres and 53 distinct IDs across both sources; it is not a live operational-status check.\n\nReview: Workbook & certificate copies reviewed.\nCurrent issuer or registry status: not independently confirmed.\nScope: Workbook entries are company-supplied, not live government registry checks. The RS column is undefined; its ACTIVE/INACTIVE flags do not establish current operational or HFR status. HFR is not clinical-outcome certification or a replacement for local permissions. A matching ID does not independently reconcile current addresses.",
-          "xLength": 202
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-04e8afcffc12.jpg",
+          "text": "Explore 56 complete HFR IDs matched in the NHPR dashboard on 19 September 2026: 33 Approved, with other workflow statuses and one masked Draft shown separately. Read every status and source.",
+          "whatsapp": "Explore 56 complete HFR IDs matched in the NHPR dashboard on 19 September 2026: 33 Approved, with other workflow statuses and one masked Draft shown separately. Read every status and source.\n\nReview: Source inventory + NHPR dashboard matched.\nAll 56 complete identifiers were matched in the authenticated NHPR facility-manager dashboard on 19 September 2026. The dashboard showed 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved. One masked Draft is separate.\nScope: Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs.",
+          "xLength": 214
         },
         {
           "id": "block-abdm-nha-health-facility-registry",
           "url": "https://www.pinnacleblooms.org/verify/evidence/records/hfr.html",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-1403c1ceccd7.jpg",
-          "text": "Find a Pinnacle centre's HFR identifier and source. The inventory includes 52 workbook centres and 53 distinct IDs across both sources; it is not a live operational-status check.",
-          "whatsapp": "Find a Pinnacle centre's HFR identifier and source. The inventory includes 52 workbook centres and 53 distinct IDs across both sources; it is not a live operational-status check.\n\nReview: Workbook & certificate copies reviewed.\nCurrent issuer or registry status: not independently confirmed.\nScope: Workbook entries are company-supplied, not live government registry checks. The RS column is undefined; its ACTIVE/INACTIVE flags do not establish current operational or HFR status. HFR is not clinical-outcome certification or a replacement for local permissions. A matching ID does not independently reconcile current addresses.",
-          "xLength": 202
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-04e8afcffc12.jpg",
+          "text": "Explore 56 complete HFR IDs matched in the NHPR dashboard on 19 September 2026: 33 Approved, with other workflow statuses and one masked Draft shown separately. Read every status and source.",
+          "whatsapp": "Explore 56 complete HFR IDs matched in the NHPR dashboard on 19 September 2026: 33 Approved, with other workflow statuses and one masked Draft shown separately. Read every status and source.\n\nReview: Source inventory + NHPR dashboard matched.\nAll 56 complete identifiers were matched in the authenticated NHPR facility-manager dashboard on 19 September 2026. The dashboard showed 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved. One masked Draft is separate.\nScope: Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs.",
+          "xLength": 214
+        },
+        {
+          "id": "source-pinpoints",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/records/hfr.html#source-pinpoints",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-04e8afcffc12.jpg",
+          "text": "Explore Pinnacle's evidence on The exact source. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on The exact source. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 139
+        },
+        {
+          "id": "block-record-revision-history",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/records/hfr.html#block-record-revision-history",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-04e8afcffc12.jpg",
+          "text": "Explore Pinnacle's evidence on Record revision history. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Record revision history. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 146
         },
         {
           "id": "cite-record-hfr",
           "url": "https://www.pinnacleblooms.org/verify/evidence/records/hfr.html#cite-record-hfr",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-1403c1ceccd7.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-records-hfr-04e8afcffc12.jpg",
           "text": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Cite this evidence summary. Read the source, review date and scope before drawing conclusions.",
           "xLength": 149

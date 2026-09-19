@@ -41,5 +41,5 @@ Sources: operating-metrics, dossier
 Network scope distinguished
 A network becomes relevant locally. Find your centre, its facility identifier and the source behind each listed document.
 Counting basis: Network figure reported in the September handout. The practitioner-report criteria separately identify 49 operational centres at 17 July 2026.
-Evidence boundary: Network size, operational status and HFR identifiers are different measures. The full supplied HFR workbook is reconciled with certificate copies below; an HFR entry does not establish clinical outcomes or replace location-specific licensing.
+Evidence boundary: Network size, operational-centre counts and HFR identifiers are different measures. On 19 September 2026, 56 complete IDs matched in the NHPR dashboard and 33 displayed Approved; other workflow statuses and one masked Draft remain separate. An HFR record does not establish clinical outcomes or replace location-specific permissions.
 Sources: hfr, operating-metrics, srs4400

@@ -1,4 +1,4 @@
-Fonts: DM Sans, Manrope, Anek Telugu and Noto Sans Devanagari, SIL Open Font License 1.1. See /fonts/dm-sans-OFL.txt, /fonts/manrope-OFL.txt, /fonts/anek-telugu-OFL.txt and /fonts/noto-sans-devanagari-OFL.txt.
+Fonts: Anek (Latin, Bangla, Devanagari, Gujarati, Gurmukhi, Kannada, Malayalam, Odia, Tamil and Telugu), DM Sans, Manrope and Noto Sans Devanagari. SIL Open Font License 1.1. Each family has its licence in /fonts/: anek-latin-OFL.txt, anek-bangla-OFL.txt, anek-devanagari-OFL.txt, anek-gujarati-OFL.txt, anek-gurmukhi-OFL.txt, anek-kannada-OFL.txt, anek-malayalam-OFL.txt, anek-odia-OFL.txt, anek-tamil-OFL.txt, anek-telugu-OFL.txt, dm-sans-OFL.txt, manrope-OFL.txt and noto-sans-devanagari-OFL.txt. Anek source: https://github.com/EkType/Anek
 
 Lucide static SVG icons, version 1.46.0. https://lucide.dev
 Only used icons are included inline.

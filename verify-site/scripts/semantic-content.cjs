@@ -2,6 +2,7 @@
 // All section metadata is derived from the same visible HTML readers receive.
 // This is a small tokenizer for our generated markup, not a general HTML sanitizer.
 const terms = require('../content/terminology.json');
+const hfrReview=require('./hfr-review-summary.cjs');
 const plain = html => html.replace(/<(svg|script|style|button)\b[^>]*>[\s\S]*?<\/\1>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(+n)).replace(/&(amp|lt|gt|quot|apos|#39|nbsp);/g,(_,x)=>({amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",'#39':"'",nbsp:' '}[x])).replace(/\s+/g,' ').trim();
 const attr = (tag,key) => tag.match(new RegExp('\\b'+key+'="([^"]*)"'))?.[1];
 const slug = text => text.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,90);
@@ -63,7 +64,7 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
   const crumbs=graph.find(x=>x['@type']==='BreadcrumbList');if(crumbs)page.breadcrumb={'@id':crumbs['@id']};
   const faqPage=graph.find(x=>x['@type']==='FAQPage');
   if(faqPage){faqPage.url=url+(html.includes('id="quick-answers"')?'#quick-answers':'#questions');faqPage.isPartOf={'@id':page['@id']};for(const q of faqPage.mainEntity){const b=blocks.find(b=>b.kind==='details'&&b.name===q.name);if(b){q['@id']=b.url+'-question';q.url=b.url;q.acceptedAnswer['@id']=b.url+'-answer';}}}
-  if(url.endsWith('/evidence/hfr-register.html'))graph.push({'@type':'Dataset','@id':url+'#source-inventory',name:'Pinnacle HFR source inventory',description:'Public inventory of 52 supplied workbook centres, reconciled into 53 distinct HFR identifiers across workbook and certificate sources. This is a documentary inventory, not a current operational-status or quality rating.',url,dateModified:date,inLanguage:'en-IN',publisher:{'@id':organization['@id']},creator:{'@id':organization['@id']},isBasedOn:origin+'/evidence/records/hfr.html',mainEntityOfPage:{'@id':page['@id']},distribution:[{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.json',encodingFormat:'application/json'},{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.csv',encodingFormat:'text/csv'}]});
+  if(url.endsWith('/evidence/hfr-register.html'))graph.push({'@type':'Dataset','@id':url+'#source-inventory',name:'Pinnacle HFR dashboard and source register',description:hfrReview.description,url,dateModified:date,inLanguage:'en-IN',publisher:{'@id':organization['@id']},creator:{'@id':organization['@id']},isBasedOn:origin+'/evidence/records/hfr.html',mainEntityOfPage:{'@id':page['@id']},distribution:[{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.json',encodingFormat:'application/json'},{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.csv',encodingFormat:'text/csv'}]});
   const article=graph.find(x=>x['@type']==='Article');if(article){article.publisher={'@id':organization['@id']};article.mainEntityOfPage={'@id':page['@id']};page.mainEntity={'@id':article['@id']||url+'#article'};article['@id'] ||= url+'#article';}
   graph.push(...blocks.map(b=>({'@type':'WebPageElement','@id':b.url+'-element',name:b.name,description:b.description.slice(0,320),cssSelector:'#'+b.id,isPartOf:{'@id':b.parent?url+'#'+b.parent+'-element':page['@id']},...(b.citations.length?{citation:b.citations.slice(0,6)}:{})})));
   if(url===origin+'/')graph.push(...termGraph);

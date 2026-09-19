@@ -94,7 +94,7 @@
       "number": 9,
       "id": "chapter-network",
       "title": "Find your centre",
-      "description": "Explore the supplied HFR and district registration records.",
+      "description": "Explore dated NHPR workflow statuses, source identifiers and district registration records.",
       "sections": [
         "centres"
       ],

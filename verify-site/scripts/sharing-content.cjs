@@ -4,6 +4,7 @@ const {tree,plain}=require('./semantic-content.cjs');
 const copy=require('../content/share-copy.json');
 const metrics=require('../content/metrics.json').metrics;
 const hfr=require('../content/hfr-register.json').rows;
+const hfrReview=require('./hfr-review-summary.cjs');
 const social=require('./social-content.cjs');
 const PUBLIC='https://www.pinnacleblooms.org/verify';
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -32,7 +33,7 @@ module.exports=function addSharing(html,page,records){
   let url=publicUrl(record?record.url:centre?'https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-'+centre.id:target||b.url);
   const card=social.cardFor(url),image=PUBLIC+card.image;
   let short=copy[record?.id||b.id]||`Explore Pinnacle's evidence on ${snippet(b.name)}. Read the source, review date and scope before drawing conclusions.`;
-  if(centre)short=`Explore ${snippet(centre.name)}: HFR ID ${centre.id} in Pinnacle's source inventory. An identifier does not establish current operating status or clinical outcomes.`;
+  if(centre)short=`Explore ${snippet(centre.name)}: HFR ${centre.id}. NHPR workflow: ${hfrReview.statusFor(centre.id)||'not matched'}, ${hfrReview.dateLabel}. Read the exact source and scope.`;
   if(b.kind==='page'&&!record)short=page.url.endsWith('/')?copy.page:`Explore ${snippet(b.name.split(' | ')[0])}. Read the source records, review dates and evidence scope.`;
   short=ascii(short);if(short.length+24>280)short=`Explore Pinnacle's evidence on ${snippet(b.name)}. Read the source and scope.`;
   if(guideLanguage){let subject=plain(b.name.split(' | ')[0]);while(weighted(shareLabels.intro+subject+shareLabels.tail)+24>270)subject=subject.slice(0,-1);short=shareLabels.intro+subject.trim()+shareLabels.tail;}
@@ -40,7 +41,7 @@ module.exports=function addSharing(html,page,records){
   let full=short;
   if(record)full+='\n\nReview: '+record.statusLabel+'.\n'+record.reviewStatusNote+'\nScope: '+record.limits;
   if(metric)full+='\n\n'+metric.basis+'\n'+metric.boundary;
-  if(centre)full+='\nSource level: '+centre.sourceLevel+'. Current registry status was not independently queried.';
+  if(centre)full+='\nSource level: '+centre.sourceLevel+'. Exact ID matched in the authenticated NHPR dashboard on '+hfrReview.dateLabel+'. Workflow status: '+(hfrReview.statusFor(centre.id)||'not matched')+'. An ID match is separate from approval, present operations and clinical quality.';
   const wa='https://wa.me/?text='+encodeURIComponent(full+'\n\n'+url);
   const x='https://twitter.com/intent/tweet?text='+encodeURIComponent(short)+'&url='+encodeURIComponent(url);
   const bar=`<!-- share:start --><div class="fact-share" data-share-url="${e(url)}" data-share-title="${e(b.name)}"><span class="share-context">${guideLanguage?shareLabels.share:'Share '+(record?'evidence':b.kind==='page'?'this page':'this')}</span><a class="share-wa" href="${e(wa)}" target="_blank" rel="noopener noreferrer" aria-label="Share ${e(b.name)} on WhatsApp">${mark('wa')}WhatsApp</a><button type="button" class="share-toggle" hidden aria-expanded="false" aria-label="More ways to share ${e(b.name)}">${mark('more')}${shareLabels.more}</button><div class="share-options"><a class="share-x" href="${e(x)}" target="_blank" rel="noopener noreferrer" aria-label="Share ${e(b.name)} on X">${mark('x')}X</a><button type="button" class="copy-share" aria-label="Copy link to ${e(b.name)}">${mark('link')}${shareLabels.copy}</button><a class="share-image" href="${e(image)}" download="${e(card.id)}.jpg" aria-label="Download share image for ${e(card.title)}">${mark('more')}${shareLabels.image}</a><button type="button" class="device-share" hidden aria-label="More sharing options for ${e(b.name)}">${mark('more')}${shareLabels.share}</button></div></div><!-- share:end -->`;

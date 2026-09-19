@@ -42,9 +42,9 @@
   {
     "title": "Centre evidence: match each document to its premises",
     "icon": "map-pin",
-    "label": "Source review recorded",
-    "finding": "All 52 workbook centres are included. Across the workbook and inspected certificate copies, 53 distinct HFR identifiers are retained. Eight district summaries and four individually inspected district originals remain separate.",
-    "boundary": "Workbook RS flags do not establish operational or HFR status. Nellore’s district certificate period ended on 30 October 2024. The additional Tirupati certificate is retained without assuming replacement or cancellation.",
+    "label": "56 IDs matched · 33 Approved",
+    "finding": "All 53 earlier source IDs matched in the authenticated NHPR dashboard on 19 September 2026. Three additional complete IDs bring the register to 56: 33 Approved, 14 Query Raised, 4 Submitted, 4 Rejected and 1 Query Resolved. One masked Draft is separate. Workbook and certificate references remain visible.",
+    "boundary": "These are dated dashboard workflow statuses, not findings about present operations or clinical quality. Additional IDs do not establish replacement or cancellation. Workbook RS flags remain separate. Nellore’s inspected district certificate period ended on 30 October 2024; an HFR match does not renew a district certificate.",
     "id": "centres"
   },
   {
