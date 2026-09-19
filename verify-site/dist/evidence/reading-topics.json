@@ -1,0 +1,185 @@
+{
+  "title": "Explore Pinnacle in 16 topics",
+  "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/#reader-guide",
+  "topics": [
+    {
+      "number": 1,
+      "id": "chapter-journey",
+      "title": "Your child’s journey",
+      "description": "Abilities, a personal plan, everyday practice and progress.",
+      "sections": [
+        "care"
+      ],
+      "icon": "network",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-journey"
+    },
+    {
+      "number": 2,
+      "id": "chapter-family-meaning",
+      "title": "What it means for families",
+      "description": "Connect the evidence with the goals that matter at home.",
+      "sections": [
+        "impact"
+      ],
+      "icon": "users",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-family-meaning"
+    },
+    {
+      "number": 3,
+      "id": "chapter-choosing-care",
+      "title": "Questions before choosing care",
+      "description": "Know what to ask, compare and discuss with the care team.",
+      "sections": [
+        "family"
+      ],
+      "icon": "circle-help",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-choosing-care"
+    },
+    {
+      "number": 4,
+      "id": "chapter-identity",
+      "title": "Pinnacle at a glance",
+      "description": "The organisation, its identity and its documented approach.",
+      "sections": [
+        "pinnacle-profile"
+      ],
+      "icon": "building-2",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-identity"
+    },
+    {
+      "number": 5,
+      "id": "chapter-licences",
+      "title": "Licences & software scope",
+      "description": "MD-3, MD-5, BIS and the intended users and purpose.",
+      "sections": [
+        "regulated-purpose"
+      ],
+      "icon": "file-cog",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-licences"
+    },
+    {
+      "number": 6,
+      "id": "chapter-proof",
+      "title": "Explore the original evidence",
+      "description": "Search all 34 records and follow the source documents.",
+      "sections": [
+        "records"
+      ],
+      "icon": "file-search",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-proof"
+    },
+    {
+      "number": 7,
+      "id": "chapter-scale",
+      "title": "Understand the six figures",
+      "description": "Definitions, reporting dates and evidence for each measure.",
+      "sections": [
+        "scale"
+      ],
+      "icon": "chart-no-axes-combined",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-scale"
+    },
+    {
+      "number": 8,
+      "id": "chapter-data",
+      "title": "Developmental data, explained",
+      "description": "What the record counts mean and how observations connect.",
+      "sections": [
+        "data-scale"
+      ],
+      "icon": "clipboard-list",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-data"
+    },
+    {
+      "number": 9,
+      "id": "chapter-network",
+      "title": "Find your centre",
+      "description": "Explore the supplied HFR and district registration records.",
+      "sections": [
+        "centres"
+      ],
+      "icon": "map-pin",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-network"
+    },
+    {
+      "number": 10,
+      "id": "chapter-research",
+      "title": "Research, books & authors",
+      "description": "DOI-linked works, parent books and researcher profiles.",
+      "sections": [
+        "research"
+      ],
+      "icon": "book-open",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-research"
+    },
+    {
+      "number": 11,
+      "id": "chapter-standards",
+      "title": "International standards",
+      "description": "Understand ICD-11, ICF, ICHI and SNOMED CT in context.",
+      "sections": [
+        "international-standards"
+      ],
+      "icon": "scan-eye",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-standards"
+    },
+    {
+      "number": 12,
+      "id": "chapter-goals",
+      "title": "Health, learning & inclusion",
+      "description": "How the stated purpose connects with UN SDGs 3, 4, 10 and 17.",
+      "sections": [
+        "global-goals"
+      ],
+      "icon": "landmark",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-goals"
+    },
+    {
+      "number": 13,
+      "id": "chapter-principles",
+      "title": "Guidance from global bodies",
+      "description": "Monitoring, family participation, coordination and inclusion.",
+      "sections": [
+        "global-principles"
+      ],
+      "icon": "house",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-principles"
+    },
+    {
+      "number": 14,
+      "id": "chapter-context",
+      "title": "Compare the wider picture",
+      "description": "Compare intended uses and evidence across selected approaches.",
+      "sections": [
+        "global-context"
+      ],
+      "icon": "flask-conical",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-context"
+    },
+    {
+      "number": 15,
+      "id": "chapter-understand",
+      "title": "Questions & clear terms",
+      "description": "Direct answers and plain-language explanations.",
+      "sections": [
+        "questions",
+        "terminology"
+      ],
+      "icon": "file-text",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-understand"
+    },
+    {
+      "number": 16,
+      "id": "chapter-accountability",
+      "title": "Review & accountability",
+      "description": "Findings, review methods, updates and the contact for corrections.",
+      "sections": [
+        "review-summary",
+        "review",
+        "method"
+      ],
+      "icon": "shield",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/#chapter-accountability"
+    }
+  ]
+}

@@ -144,7 +144,8 @@ body=body.replace('id="centre-count" role="status" aria-live="polite"></p>','id=
 body=body.replace('<option value="district">District / DDEW registration</option>','<option value="district">District / DDEW summaries</option>');
 body=body.replace('HFR identifiers and district registrations answer different questions and are listed separately.','All 52 workbook centres and 53 distinct HFR identifiers across both source sets are available above. Eight district summaries describe 29 certificate copies; four district originals were individually inspected.');
 write('centre-data.js',`window.PINNACLE_CENTRES = ${JSON.stringify(centres)};\n`);
-body=require('./reader-content.cjs')(body,research.teaser);
+body=require('./reader-content.cjs')(body,research.teaser,{icon,e});
+write('evidence/reading-topics.json',JSON.stringify({title:'Explore Pinnacle in 16 topics',canonical:origin+'/#reader-guide',topics:require('./reader-content.cjs').topics.map(t=>({...t,url:origin+'/#'+t.id}))},null,2));
 write('index.html','<!doctype html>\n<html lang="en-IN">\n'+head(title,description,origin+'/',[organization,website,{'@type':'CollectionPage','@id':origin+'/#page',name:title,url:origin+'/',description,inLanguage:'en-IN',dateModified:date,isPartOf:{'@id':website['@id']},about:{'@id':organization['@id']},mainEntity:{'@id':listSchema['@id']}},listSchema,faqSchema],true)+'\n<body>'+body+'</body></html>\n');
 
 for (const r of records) {
@@ -242,5 +243,6 @@ write('THIRD-PARTY-NOTICES.txt','Fonts: DM Sans and Manrope, SIL Open Font Licen
 write('llms-full.txt',read('llms-full.txt')+'\n\n'+experience.text);
 write('llms.txt',read('llms.txt')+'\n## Guided experience\n- [Workflow guide]('+origin+'/#experience): illustrative walkthrough, not a live assessment.\n- [Report explorer]('+origin+'/#report-explorer): eight report types and questions for the care team.\n- [Guide JSON]('+origin+'/evidence/experience-guide.json): the same visible explanation and source references.\n');
 require('./build-performance.cjs');
+write('llms.txt',read('llms.txt')+'\n## Sixteen reading topics\n- [Explore at your pace]('+origin+'/#reader-guide): sixteen expandable topics with original sources, research and practical explanations.\n- [Reading topics JSON]('+origin+'/evidence/reading-topics.json): the same topic titles, descriptions and direct links.\n');
 require('./build-discovery.cjs');
 console.log(JSON.stringify({records:records.length,originals:records.filter(r=>r.originalReviewed).length,registryMatches:records.filter(r=>r.issuerMatched).length,hfr:centres.filter(r=>r.kind==='hfr').length,districtSummaries:centres.filter(r=>r.kind==='district').length,htmlPages:urls.length,robots}));

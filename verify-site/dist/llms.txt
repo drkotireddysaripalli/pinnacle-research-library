@@ -79,3 +79,7 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Workflow guide](https://pinnacle-verify.saripalli.chatgpt.site/#experience): illustrative walkthrough, not a live assessment.
 - [Report explorer](https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer): eight report types and questions for the care team.
 - [Guide JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/experience-guide.json): the same visible explanation and source references.
+
+## Sixteen reading topics
+- [Explore at your pace](https://pinnacle-verify.saripalli.chatgpt.site/#reader-guide): sixteen expandable topics with original sources, research and practical explanations.
+- [Reading topics JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/reading-topics.json): the same topic titles, descriptions and direct links.

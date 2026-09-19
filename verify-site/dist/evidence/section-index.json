@@ -519,29 +519,6 @@
           ]
         },
         {
-          "id": "pinnacle-profile",
-          "name": "Measurement. A connected plan. Support for everyday life.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-profile",
-          "kind": "section",
-          "parent": null,
-          "description": "Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Pinnacle describes a seven-stage child-development pathway connecting ability measurement, child-specific planning, integrated support, parent-guided practice and progress review toward participation and growing independence.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
-          ]
-        },
-        {
-          "id": "block-explore-this-verification-guide",
-          "name": "Explore this verification guide",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-explore-this-verification-guide",
-          "kind": "details",
-          "parent": "pinnacle-profile",
-          "description": "Explore this verification guide Six statistics & sources Meaning for families 34 evidence records Software & quality scope Centre documentation Developmental pathway International standards SDGs 3, 4, 10 & 17 International guidance Global comparisons Review conclusions Review method Terms explained Common questions",
-          "text": "Explore this verification guide Six statistics & sources Meaning for families 34 evidence records Software & quality scope Centre documentation Developmental pathway International standards SDGs 3, 4, 10 & 17 International guidance Global comparisons Review conclusions Review method Terms explained Common questions",
-          "citations": []
-        },
-        {
           "id": "impact",
           "name": "A clearer starting point. A connected way forward.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#impact",
@@ -640,6 +617,125 @@
           "parent": "family",
           "description": "Ask how your child’s starting abilities, goals and progress will be measured, when the plan will be reviewed and how practice carries into home and school.",
           "text": "How will we know it is helping? Ask how your child’s starting abilities, goals and progress will be measured, when the plan will be reviewed and how practice carries into home and school. See the seven-stage pathway ↗",
+          "citations": []
+        },
+        {
+          "id": "pinnacle-profile",
+          "name": "Measurement. A connected plan. Support for everyday life.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-profile",
+          "kind": "section",
+          "parent": null,
+          "description": "Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Pinnacle describes a seven-stage child-development pathway connecting ability measurement, child-specific planning, integrated support, parent-guided practice and progress review toward participation and growing independence.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "block-explore-this-verification-guide",
+          "name": "Explore this verification guide",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-explore-this-verification-guide",
+          "kind": "details",
+          "parent": "pinnacle-profile",
+          "description": "Explore this verification guide Six statistics & sources Meaning for families 34 evidence records Software & quality scope Centre documentation Developmental pathway International standards SDGs 3, 4, 10 & 17 International guidance Global comparisons Review conclusions Review method Terms explained Common questions",
+          "text": "Explore this verification guide Six statistics & sources Meaning for families 34 evidence records Software & quality scope Centre documentation Developmental pathway International standards SDGs 3, 4, 10 & 17 International guidance Global comparisons Review conclusions Review method Terms explained Common questions",
+          "citations": []
+        },
+        {
+          "id": "regulated-purpose",
+          "name": "Understand what each credential adds.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#regulated-purpose",
+          "kind": "section",
+          "parent": null,
+          "description": "An issued licence defines the software’s intended use. Quality records describe how the system is managed. The BIS schedule connects those processes to a broader set of developmental-support modules.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://cdsco.gov.in/opencms/opencms/en/Acts-and-rules/Medical-Devices-Rules/"
+          ]
+        },
+        {
+          "id": "block-md-3",
+          "name": "MD-3",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-md-3",
+          "kind": "article",
+          "parent": "regulated-purpose",
+          "description": "The application for a manufacturing licence. It is part of the regulatory record, rather than a second approval.",
+          "text": "APPLICATION HISTORY MD-3 The application for a manufacturing licence. It is part of the regulatory record, rather than a second approval. Read Pinnacle’s source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html"
+          ]
+        },
+        {
+          "id": "block-md-5-class-b",
+          "name": "MD-5 · Class B",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-md-5-class-b",
+          "kind": "article",
+          "parent": "regulated-purpose",
+          "description": "Telangana DCA licence MFG/MD/2026/000248 lists PinnacleAI® GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.",
+          "text": "ISSUED MANUFACTURING LICENCE MD-5 · Class B Telangana DCA licence MFG/MD/2026/000248 lists PinnacleAI® GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12. Read Pinnacle’s source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
+          ]
+        },
+        {
+          "id": "block-bis-scope-schedule",
+          "name": "BIS scope schedule",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-bis-scope-schedule",
+          "kind": "article",
+          "parent": "regulated-purpose",
+          "description": "The schedule names software development, deployment and maintenance, plus ability mapping, parent-guided practice, progress correction and readiness modules.",
+          "text": "SYSTEMS & MODULES BIS scope schedule The schedule names software development, deployment and maintenance, plus ability mapping, parent-guided practice, progress correction and readiness modules. Read Pinnacle’s source record",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "parents-in-licensed-use",
+          "name": "Parents are explicitly included in the licensed intended use.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#parents-in-licensed-use",
+          "kind": "article",
+          "parent": "regulated-purpose",
+          "description": "“The software is intended to assist parents, therapists, educators, and caregivers by providing developmental ability measurement, readiness tracking, progress forecasting, and adaptive therapy-plan support for children aged 0–12 years.”",
+          "text": "PARENTS IN THE LICENSED INTENDED USE Parents are explicitly included in the licensed intended use. “The software is intended to assist parents, therapists, educators, and caregivers by providing developmental ability measurement, readiness tracking, progress forecasting, and adaptive therapy-plan support for children aged 0–12 years.” MD-5 MFG/MD/2026/000248 · intended-use annexure · 21 April 2026 Bring guided developmental practice into everyday life. The licensed intended use names parents and caregivers alongside therapists and educators. Families have an explicit role in using the software’s developmental-support functions, with goals and guidance appropriate to their child. Pinnacle’s Everyday Therapy programme and Fusion Module describe how that participation connects with daily practice, feedback and professional review. The BIS schedule names parent, family and caregiver tracking and correction as part of the connected developmental journey. Read the MD-5 intended-use annexure Read the BIS connected-module scope What this wording establishes The intended use identifies whom the software assists and what it supports. It does not confer professional therapist credentials, register a home as a therapy centre or replace appropriate clinical care. A worldwide exclusivity claim is not established by these documents.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+          ]
+        },
+        {
+          "id": "block-what-this-wording-establishes",
+          "name": "What this wording establishes",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-wording-establishes",
+          "kind": "details",
+          "parent": "parents-in-licensed-use",
+          "description": "The intended use identifies whom the software assists and what it supports. It does not confer professional therapist credentials, register a home as a therapy centre or replace appropriate clinical care. A worldwide exclusivity claim is not established by these documents.",
+          "text": "What this wording establishes The intended use identifies whom the software assists and what it supports. It does not confer professional therapist credentials, register a home as a therapy centre or replace appropriate clinical care. A worldwide exclusivity claim is not established by these documents.",
+          "citations": []
+        },
+        {
+          "id": "block-for-the-full-developmental-lifecycle-of-children",
+          "name": "“for the full developmental lifecycle of children.”",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-for-the-full-developmental-lifecycle-of-children",
+          "kind": "article",
+          "parent": "regulated-purpose",
+          "description": "The schedule names AbilityScore, Prognose®, the Everyday Therapy Programme through TherapeuticAI®, the Fusion tracking and correction module, and seven readiness indexes—including Self Sufficiency and Mainstream Inclusion.",
+          "text": "WORDS IN THE ORIGINAL BIS SCHEDULE “for the full developmental lifecycle of children.” The schedule names AbilityScore, Prognose®, the Everyday Therapy Programme through TherapeuticAI®, the Fusion tracking and correction module, and seven readiness indexes—including Self Sufficiency and Mainstream Inclusion. This is the named quality-system and software-module scope. The MD-5 records the device’s four intended functions: ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Both documents retain their named software and premises. The MD-5 intended population is ages 0–12; individual outcomes remain subject to the child’s circumstances and support. Read the full software and developmental-module scope “Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.” BIS MD/L-2026029599 · schedule page 2 · line breaks normalised BIS MD/L-2026029599 · schedule page 2 DCA MD-5 MFG/MD/2026/000248",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
+          ]
+        },
+        {
+          "id": "block-read-the-full-software-and-developmental-module-scope",
+          "name": "Read the full software and developmental-module scope",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-read-the-full-software-and-developmental-module-scope",
+          "kind": "details",
+          "parent": "block-for-the-full-developmental-lifecycle-of-children",
+          "description": "“Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.”",
+          "text": "Read the full software and developmental-module scope “Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.” BIS MD/L-2026029599 · schedule page 2 · line breaks normalised",
           "citations": []
         },
         {
@@ -1093,102 +1189,6 @@
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html"
           ]
-        },
-        {
-          "id": "regulated-purpose",
-          "name": "Understand what each credential adds.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#regulated-purpose",
-          "kind": "section",
-          "parent": null,
-          "description": "An issued licence defines the software’s intended use. Quality records describe how the system is managed. The BIS schedule connects those processes to a broader set of developmental-support modules.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
-            "https://cdsco.gov.in/opencms/opencms/en/Acts-and-rules/Medical-Devices-Rules/"
-          ]
-        },
-        {
-          "id": "block-md-3",
-          "name": "MD-3",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-md-3",
-          "kind": "article",
-          "parent": "regulated-purpose",
-          "description": "The application for a manufacturing licence. It is part of the regulatory record, rather than a second approval.",
-          "text": "APPLICATION HISTORY MD-3 The application for a manufacturing licence. It is part of the regulatory record, rather than a second approval. Read Pinnacle’s source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html"
-          ]
-        },
-        {
-          "id": "block-md-5-class-b",
-          "name": "MD-5 · Class B",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-md-5-class-b",
-          "kind": "article",
-          "parent": "regulated-purpose",
-          "description": "Telangana DCA licence MFG/MD/2026/000248 lists PinnacleAI® GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12.",
-          "text": "ISSUED MANUFACTURING LICENCE MD-5 · Class B Telangana DCA licence MFG/MD/2026/000248 lists PinnacleAI® GPT-OS v1.0.0 for non-diagnostic developmental support, ages 0–12. Read Pinnacle’s source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
-          ]
-        },
-        {
-          "id": "block-bis-scope-schedule",
-          "name": "BIS scope schedule",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-bis-scope-schedule",
-          "kind": "article",
-          "parent": "regulated-purpose",
-          "description": "The schedule names software development, deployment and maintenance, plus ability mapping, parent-guided practice, progress correction and readiness modules.",
-          "text": "SYSTEMS & MODULES BIS scope schedule The schedule names software development, deployment and maintenance, plus ability mapping, parent-guided practice, progress correction and readiness modules. Read Pinnacle’s source record",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
-          ]
-        },
-        {
-          "id": "parents-in-licensed-use",
-          "name": "Parents are explicitly included in the licensed intended use.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#parents-in-licensed-use",
-          "kind": "article",
-          "parent": "regulated-purpose",
-          "description": "“The software is intended to assist parents, therapists, educators, and caregivers by providing developmental ability measurement, readiness tracking, progress forecasting, and adaptive therapy-plan support for children aged 0–12 years.”",
-          "text": "PARENTS IN THE LICENSED INTENDED USE Parents are explicitly included in the licensed intended use. “The software is intended to assist parents, therapists, educators, and caregivers by providing developmental ability measurement, readiness tracking, progress forecasting, and adaptive therapy-plan support for children aged 0–12 years.” MD-5 MFG/MD/2026/000248 · intended-use annexure · 21 April 2026 Bring guided developmental practice into everyday life. The licensed intended use names parents and caregivers alongside therapists and educators. Families have an explicit role in using the software’s developmental-support functions, with goals and guidance appropriate to their child. Pinnacle’s Everyday Therapy programme and Fusion Module describe how that participation connects with daily practice, feedback and professional review. The BIS schedule names parent, family and caregiver tracking and correction as part of the connected developmental journey. Read the MD-5 intended-use annexure Read the BIS connected-module scope What this wording establishes The intended use identifies whom the software assists and what it supports. It does not confer professional therapist credentials, register a home as a therapy centre or replace appropriate clinical care. A worldwide exclusivity claim is not established by these documents.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
-          ]
-        },
-        {
-          "id": "block-what-this-wording-establishes",
-          "name": "What this wording establishes",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-what-this-wording-establishes",
-          "kind": "details",
-          "parent": "parents-in-licensed-use",
-          "description": "The intended use identifies whom the software assists and what it supports. It does not confer professional therapist credentials, register a home as a therapy centre or replace appropriate clinical care. A worldwide exclusivity claim is not established by these documents.",
-          "text": "What this wording establishes The intended use identifies whom the software assists and what it supports. It does not confer professional therapist credentials, register a home as a therapy centre or replace appropriate clinical care. A worldwide exclusivity claim is not established by these documents.",
-          "citations": []
-        },
-        {
-          "id": "block-for-the-full-developmental-lifecycle-of-children",
-          "name": "“for the full developmental lifecycle of children.”",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-for-the-full-developmental-lifecycle-of-children",
-          "kind": "article",
-          "parent": "regulated-purpose",
-          "description": "The schedule names AbilityScore, Prognose®, the Everyday Therapy Programme through TherapeuticAI®, the Fusion tracking and correction module, and seven readiness indexes—including Self Sufficiency and Mainstream Inclusion.",
-          "text": "WORDS IN THE ORIGINAL BIS SCHEDULE “for the full developmental lifecycle of children.” The schedule names AbilityScore, Prognose®, the Everyday Therapy Programme through TherapeuticAI®, the Fusion tracking and correction module, and seven readiness indexes—including Self Sufficiency and Mainstream Inclusion. This is the named quality-system and software-module scope. The MD-5 records the device’s four intended functions: ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Both documents retain their named software and premises. The MD-5 intended population is ages 0–12; individual outcomes remain subject to the child’s circumstances and support. Read the full software and developmental-module scope “Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.” BIS MD/L-2026029599 · schedule page 2 · line breaks normalised BIS MD/L-2026029599 · schedule page 2 DCA MD-5 MFG/MD/2026/000248",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
-          ]
-        },
-        {
-          "id": "block-read-the-full-software-and-developmental-module-scope",
-          "name": "Read the full software and developmental-module scope",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#block-read-the-full-software-and-developmental-module-scope",
-          "kind": "details",
-          "parent": "block-for-the-full-developmental-lifecycle-of-children",
-          "description": "“Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.”",
-          "text": "Read the full software and developmental-module scope “Design, development, verification and validation, release, deployment, maintenance, technical support and post-market surveillance of Software as a Medical Device (SaMD), including Pinnacle AI GPT-OS™, and Developmental Support Software (Non-Diagnostic), including developmental ability mapping (Ability Score), prognostic engine Prognose®, Clinical Intervention Every Day Therapy Programme through Therapeutic AI®, Parent, Family, Caregiver, Therapist, Clinical Tracking and Correction Fusion Module, School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index, Mainstream Inclusion Index, 7 readiness indexing and associated digital developmental support modules for the full developmental lifecycle of children.” BIS MD/L-2026029599 · schedule page 2 · line breaks normalised",
-          "citations": []
         },
         {
           "id": "scale",
@@ -2171,6 +2171,21 @@
           ]
         },
         {
+          "id": "research",
+          "name": "Read the research. Meet the authors.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#research",
+          "kind": "section",
+          "parent": null,
+          "description": "Seven DOI-linked works, parent books in English and Telugu, the twelve-study company portfolio, and verified researcher profiles — connected in one reading library.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-english",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-telugu",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#authors"
+          ]
+        },
+        {
           "id": "international-standards",
           "name": "Structured for understanding. Designed for connected care.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/#international-standards",
@@ -2933,21 +2948,6 @@
           "text": "Review boundaries & publication notes + The source register was prepared on 15 September 2026, with selected originals and review conclusions rechecked on 18 September 2026. The page does not represent a regulator’s certification service. The named verification contact can help with source questions and corrections. The cited organisations have not endorsed this page. Live registry matches are counted only when an exact record has been checked against an official registry source. Public document copies preserve issuer, entity, reference, scope and dates while removing personal identifiers and signatures where appropriate. A document’s stated validity is recorded separately from a live check for suspension, cancellation or changes. View file-integrity records . Research protocols describe planned methods. Company summaries and operational totals are not substitutes for completed study results with methods, populations, outcomes and limitations.",
           "citations": [
             "https://pinnacle-verify.saripalli.chatgpt.site/evidence/document-manifest.json"
-          ]
-        },
-        {
-          "id": "research",
-          "name": "Read the research. Meet the authors.",
-          "url": "https://pinnacle-verify.saripalli.chatgpt.site/#research",
-          "kind": "section",
-          "parent": null,
-          "description": "Seven DOI-linked works, parent books in English and Telugu, the twelve-study company portfolio, and verified researcher profiles — connected in one reading library.",
-          "citations": [
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-english",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#autism-mothers-handbook-telugu",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#zenodo-19482123",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
-            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#authors"
           ]
         },
         {
