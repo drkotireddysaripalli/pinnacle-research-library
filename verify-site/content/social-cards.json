@@ -1,0 +1,739 @@
+[
+  {
+    "route": "/",
+    "id": "pinnacle-verify",
+    "title": "Your child’s abilities. PinnacleAI® The way forward.",
+    "lines": [
+      "Your child’s abilities.",
+      "PinnacleAI®",
+      "The way forward."
+    ],
+    "category": "PINNACLE BLOOMS NETWORK",
+    "note": "Measurement. Personal planning. Everyday practice.",
+    "icon": "users",
+    "description": "Your child’s abilities. PinnacleAI® The way forward.. Measurement. Personal planning. Everyday practice.. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/assurance-map.html",
+    "id": "evidence-assurance-map",
+    "title": "Independent CA reports Claims. Pages. UDINs.",
+    "lines": [
+      "Independent CA reports",
+      "Claims. Pages. UDINs."
+    ],
+    "category": "INDEPENDENT PRACTITIONER REPORTS",
+    "note": "SAE 3000 limited assurance · SRS 4400 factual findings",
+    "icon": "file-search",
+    "description": "Independent CA reports Claims. Pages. UDINs.. SAE 3000 limited assurance · SRS 4400 factual findings. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/cite.html",
+    "id": "evidence-cite",
+    "title": "Cite the source. Keep the context.",
+    "lines": [
+      "Cite the source.",
+      "Keep the context."
+    ],
+    "category": "CITATION LIBRARY",
+    "note": "44 references · Plain text, BibTeX and RIS",
+    "icon": "book-open",
+    "description": "Cite the source. Keep the context.. 44 references · Plain text, BibTeX and RIS. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/district-register.html",
+    "id": "evidence-district-register",
+    "title": "District registrations Location by location.",
+    "lines": [
+      "District registrations",
+      "Location by location."
+    ],
+    "category": "INSTITUTION RECORDS",
+    "note": "District-specific scope and inspected originals",
+    "icon": "map-pin",
+    "description": "District registrations Location by location.. District-specific scope and inspected originals. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/evidence-register.html",
+    "id": "evidence-evidence-register",
+    "title": "The evidence. In one place.",
+    "lines": [
+      "The evidence.",
+      "In one place."
+    ],
+    "category": "SOURCE REGISTER",
+    "note": "34 source records · Originals, dates and scope",
+    "icon": "files",
+    "description": "The evidence. In one place.. 34 source records · Originals, dates and scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/global-context.html",
+    "id": "evidence-global-context",
+    "title": "A connected approach. A global perspective.",
+    "lines": [
+      "A connected approach.",
+      "A global perspective."
+    ],
+    "category": "FAMILY RELEVANCE & GLOBAL CONTEXT",
+    "note": "Licence scope and international guidance",
+    "icon": "network",
+    "description": "A connected approach. A global perspective.. Licence scope and international guidance. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/hfr-register.html",
+    "id": "evidence-hfr-register",
+    "title": "Every supplied centre. Every HFR identifier.",
+    "lines": [
+      "Every supplied centre.",
+      "Every HFR identifier."
+    ],
+    "category": "ABDM / HFR SOURCE INVENTORY",
+    "note": "52 workbook centres · 53 IDs across supplied sources",
+    "icon": "map-pin",
+    "description": "Every supplied centre. Every HFR identifier.. 52 workbook centres · 53 IDs across supplied sources. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/privacy.html",
+    "id": "evidence-privacy",
+    "title": "Your reading. Your choices.",
+    "lines": [
+      "Your reading.",
+      "Your choices."
+    ],
+    "category": "PRIVACY & ANALYTICS",
+    "note": "Optional analytics and on-demand translation",
+    "icon": "shield",
+    "description": "Your reading. Your choices.. Optional analytics and on-demand translation. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/recognition-register.html",
+    "id": "evidence-recognition-register",
+    "title": "Government appreciation Read the originals.",
+    "lines": [
+      "Government appreciation",
+      "Read the originals."
+    ],
+    "category": "SOURCE LETTERS",
+    "note": "Seven letters · Their context and scope",
+    "icon": "landmark",
+    "description": "Government appreciation Read the originals.. Seven letters · Their context and scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/research-library.html",
+    "id": "evidence-research-library",
+    "title": "Research. Books. Original sources.",
+    "lines": [
+      "Research. Books.",
+      "Original sources."
+    ],
+    "category": "RESEARCH LIBRARY",
+    "note": "DOIs, author profiles and publication status",
+    "icon": "book-open",
+    "description": "Research. Books. Original sources.. DOIs, author profiles and publication status. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/scale-register.html",
+    "id": "evidence-scale-register",
+    "title": "Pinnacle’s scale. Trace the evidence.",
+    "lines": [
+      "Pinnacle’s scale.",
+      "Trace the evidence."
+    ],
+    "category": "SIX MEASURES & THEIR SOURCES",
+    "note": "Definitions, reporting dates and CA source mapping",
+    "icon": "chart-no-axes-combined",
+    "description": "Pinnacle’s scale. Trace the evidence.. Definitions, reporting dates and CA source mapping. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/study-index.html",
+    "id": "evidence-study-index",
+    "title": "The study portfolio. Explore the sources.",
+    "lines": [
+      "The study portfolio.",
+      "Explore the sources."
+    ],
+    "category": "RESEARCH INDEX",
+    "note": "Twelve-study portfolio and research-stage labels",
+    "icon": "flask-conical",
+    "description": "The study portfolio. Explore the sources.. Twelve-study portfolio and research-stage labels. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/appreciations.html",
+    "id": "evidence-records-appreciations",
+    "title": "Government appreciation Seven source letters.",
+    "lines": [
+      "Government appreciation",
+      "Seven source letters."
+    ],
+    "category": "RECOGNITION",
+    "note": "Appreciation letters and their documentary scope",
+    "icon": "landmark",
+    "description": "Government appreciation Seven source letters.. Appreciation letters and their documentary scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/awards.html",
+    "id": "evidence-records-awards",
+    "title": "Awards & nominations The documented stage.",
+    "lines": [
+      "Awards & nominations",
+      "The documented stage."
+    ],
+    "category": "RECOGNITION",
+    "note": "Distinguishing applications, nominations and awards",
+    "icon": "landmark",
+    "description": "Awards & nominations The documented stage.. Distinguishing applications, nominations and awards. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/bis.html",
+    "id": "evidence-records-bis",
+    "title": "BIS licence. Full lifecycle scope.",
+    "lines": [
+      "BIS licence.",
+      "Full lifecycle scope."
+    ],
+    "category": "MANAGEMENT-SYSTEM LICENCE",
+    "note": "MD/L-2026029599 · Read the licence and schedule",
+    "icon": "shield",
+    "description": "BIS licence. Full lifecycle scope.. MD/L-2026029599 · Read the licence and schedule. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/books.html",
+    "id": "evidence-records-books",
+    "title": "Books for parents. Sources for readers.",
+    "lines": [
+      "Books for parents.",
+      "Sources for readers."
+    ],
+    "category": "PUBLICATIONS",
+    "note": "Original book editions and publication records",
+    "icon": "book-open",
+    "description": "Books for parents. Sources for readers.. Original book editions and publication records. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/classification.html",
+    "id": "evidence-records-classification",
+    "title": "Class B SaMD. The classification trail.",
+    "lines": [
+      "Class B SaMD.",
+      "The classification trail."
+    ],
+    "category": "MEDICAL DEVICE REGULATION",
+    "note": "Application and licence records for developmental support",
+    "icon": "file-cog",
+    "description": "Class B SaMD. The classification trail.. Application and licence records for developmental support. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/district-register.html",
+    "id": "evidence-records-district-register",
+    "title": "District registrations Read each scope.",
+    "lines": [
+      "District registrations",
+      "Read each scope."
+    ],
+    "category": "CENTRE RECORDS",
+    "note": "Institution-specific records and source boundaries",
+    "icon": "map-pin",
+    "description": "District registrations Read each scope.. Institution-specific records and source boundaries. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/dossier.html",
+    "id": "evidence-records-dossier",
+    "title": "The evidence dossier. A source-led overview.",
+    "lines": [
+      "The evidence dossier.",
+      "A source-led overview."
+    ],
+    "category": "SOURCE PUBLICATION",
+    "note": "Version 2.0 · Company-compiled evidence dossier",
+    "icon": "files",
+    "description": "The evidence dossier. A source-led overview.. Version 2.0 · Company-compiled evidence dossier. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/dpiit.html",
+    "id": "evidence-records-dpiit",
+    "title": "Startup recognition. The original record.",
+    "lines": [
+      "Startup recognition.",
+      "The original record."
+    ],
+    "category": "DPIIT / DIPP",
+    "note": "Recognition record and entity identity",
+    "icon": "building-2",
+    "description": "Startup recognition. The original record.. Recognition record and entity identity. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/external-validation.html",
+    "id": "evidence-records-external-validation",
+    "title": "AbilityScore® External-validation plan.",
+    "lines": [
+      "AbilityScore®",
+      "External-validation plan."
+    ],
+    "category": "STUDY PROTOCOL",
+    "note": "Planned validation · Read the protocol and status",
+    "icon": "flask-conical",
+    "description": "AbilityScore® External-validation plan.. Planned validation · Read the protocol and status. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/gst.html",
+    "id": "evidence-records-gst",
+    "title": "GST registration. Trace the entity.",
+    "lines": [
+      "GST registration.",
+      "Trace the entity."
+    ],
+    "category": "LEGAL IDENTITY",
+    "note": "Registration record and company-name reconciliation",
+    "icon": "building-2",
+    "description": "GST registration. Trace the entity.. Registration record and company-name reconciliation. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/hfr.html",
+    "id": "evidence-records-hfr",
+    "title": "ABDM / HFR Centre identifiers.",
+    "lines": [
+      "ABDM / HFR",
+      "Centre identifiers."
+    ],
+    "category": "CENTRE RECORDS",
+    "note": "Supplied registry identifiers and certificate copies",
+    "icon": "map-pin",
+    "description": "ABDM / HFR Centre identifiers.. Supplied registry identifiers and certificate copies. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/iso13485.html",
+    "id": "evidence-records-iso13485",
+    "title": "ISO 13485 Quality management.",
+    "lines": [
+      "ISO 13485",
+      "Quality management."
+    ],
+    "category": "MANAGEMENT SYSTEM",
+    "note": "Certificate, scope and review status",
+    "icon": "shield",
+    "description": "ISO 13485 Quality management.. Certificate, scope and review status. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/iso27001.html",
+    "id": "evidence-records-iso27001",
+    "title": "ISO/IEC 27001 Information security.",
+    "lines": [
+      "ISO/IEC 27001",
+      "Information security."
+    ],
+    "category": "MANAGEMENT SYSTEM",
+    "note": "Certificate, scope and review status",
+    "icon": "shield",
+    "description": "ISO/IEC 27001 Information security.. Certificate, scope and review status. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/lei.html",
+    "id": "evidence-records-lei",
+    "title": "The legal identity. A registry match.",
+    "lines": [
+      "The legal identity.",
+      "A registry match."
+    ],
+    "category": "LEGAL ENTITY IDENTIFIER",
+    "note": "Bharath Healthcare Laboratories Private Limited",
+    "icon": "building-2",
+    "description": "The legal identity. A registry match.. Bharath Healthcare Laboratories Private Limited. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/marks-copyright.html",
+    "id": "evidence-records-marks-copyright",
+    "title": "Brand & publishing The records behind them.",
+    "lines": [
+      "Brand & publishing",
+      "The records behind them."
+    ],
+    "category": "INTELLECTUAL PROPERTY",
+    "note": "Trademarks, copyright and publishing records",
+    "icon": "file-text",
+    "description": "Brand & publishing The records behind them.. Trademarks, copyright and publishing records. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/mca.html",
+    "id": "evidence-records-mca",
+    "title": "Company identity. Incorporation & history.",
+    "lines": [
+      "Company identity.",
+      "Incorporation & history."
+    ],
+    "category": "LEGAL IDENTITY",
+    "note": "Original incorporation and name-history records",
+    "icon": "building-2",
+    "description": "Company identity. Incorporation & history.. Original incorporation and name-history records. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/md3.html",
+    "id": "evidence-records-md3",
+    "title": "MD-3 application. Trace the licence trail.",
+    "lines": [
+      "MD-3 application.",
+      "Trace the licence trail."
+    ],
+    "category": "MEDICAL DEVICE REGULATION",
+    "note": "Manufacturing-licence application record",
+    "icon": "file-cog",
+    "description": "MD-3 application. Trace the licence trail.. Manufacturing-licence application record. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/md5.html",
+    "id": "evidence-records-md5",
+    "title": "PinnacleAI® MD-5 · Class B SaMD.",
+    "lines": [
+      "PinnacleAI®",
+      "MD-5 · Class B SaMD."
+    ],
+    "category": "MEDICAL DEVICE LICENCE",
+    "note": "Non-diagnostic developmental support · Ages 0–12",
+    "icon": "file-cog",
+    "description": "PinnacleAI® MD-5 · Class B SaMD.. Non-diagnostic developmental support · Ages 0–12. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/methodology.html",
+    "id": "evidence-records-methodology",
+    "title": "AbilityScore® The measurement method.",
+    "lines": [
+      "AbilityScore®",
+      "The measurement method."
+    ],
+    "category": "RESEARCH PREPRINT",
+    "note": "Development and preliminary psychometric work",
+    "icon": "flask-conical",
+    "description": "AbilityScore® The measurement method.. Development and preliminary psychometric work. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/operating-metrics.html",
+    "id": "evidence-records-operating-metrics",
+    "title": "The scale figures. Definitions & evidence.",
+    "lines": [
+      "The scale figures.",
+      "Definitions & evidence."
+    ],
+    "category": "OPERATING MEASURES",
+    "note": "Source dates, definitions and claim coverage",
+    "icon": "chart-no-axes-combined",
+    "description": "The scale figures. Definitions & evidence.. Source dates, definitions and claim coverage. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/outcome-claim.html",
+    "id": "evidence-records-outcome-claim",
+    "title": "Improvement claims. Understand the measure.",
+    "lines": [
+      "Improvement claims.",
+      "Understand the measure."
+    ],
+    "category": "OUTCOME EVIDENCE",
+    "note": "Definitions, study populations and limits",
+    "icon": "chart-no-axes-combined",
+    "description": "Improvement claims. Understand the measure.. Definitions, study populations and limits. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/pan.html",
+    "id": "evidence-records-pan",
+    "title": "Corporate identity. The PAN record.",
+    "lines": [
+      "Corporate identity.",
+      "The PAN record."
+    ],
+    "category": "LEGAL IDENTITY",
+    "note": "Source document and company-identity context",
+    "icon": "building-2",
+    "description": "Corporate identity. The PAN record.. Source document and company-identity context. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/patents.html",
+    "id": "evidence-records-patents",
+    "title": "Patent applications. The documented stage.",
+    "lines": [
+      "Patent applications.",
+      "The documented stage."
+    ],
+    "category": "INTELLECTUAL PROPERTY",
+    "note": "Application-stage records and source scope",
+    "icon": "file-text",
+    "description": "Patent applications. The documented stage.. Application-stage records and source scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/rpwd-attapur.html",
+    "id": "evidence-records-rpwd-attapur",
+    "title": "Attapur Institution registration.",
+    "lines": [
+      "Attapur",
+      "Institution registration."
+    ],
+    "category": "DISTRICT RECORD",
+    "note": "Location-specific registration and scope",
+    "icon": "map-pin",
+    "description": "Attapur Institution registration.. Location-specific registration and scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/rpwd-begumpet.html",
+    "id": "evidence-records-rpwd-begumpet",
+    "title": "Begumpet Institution registration.",
+    "lines": [
+      "Begumpet",
+      "Institution registration."
+    ],
+    "category": "DISTRICT RECORD",
+    "note": "Location-specific registration and scope",
+    "icon": "map-pin",
+    "description": "Begumpet Institution registration.. Location-specific registration and scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/rpwd-nellore.html",
+    "id": "evidence-records-rpwd-nellore",
+    "title": "Nellore Historical registration.",
+    "lines": [
+      "Nellore",
+      "Historical registration."
+    ],
+    "category": "DISTRICT RECORD",
+    "note": "Historical source · Read the dates and scope",
+    "icon": "map-pin",
+    "description": "Nellore Historical registration.. Historical source · Read the dates and scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/rpwd-nizamabad.html",
+    "id": "evidence-records-rpwd-nizamabad",
+    "title": "Nizamabad Institution registration.",
+    "lines": [
+      "Nizamabad",
+      "Institution registration."
+    ],
+    "category": "DISTRICT RECORD",
+    "note": "Location-specific registration and scope",
+    "icon": "map-pin",
+    "description": "Nizamabad Institution registration.. Location-specific registration and scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/sae3000.html",
+    "id": "evidence-records-sae3000",
+    "title": "SAE 3000 Limited assurance.",
+    "lines": [
+      "SAE 3000",
+      "Limited assurance."
+    ],
+    "category": "INDEPENDENT PRACTITIONER REPORT",
+    "note": "UDIN 26200027GMBLXU4868 · Specified subject matter",
+    "icon": "file-search",
+    "description": "SAE 3000 Limited assurance.. UDIN 26200027GMBLXU4868 · Specified subject matter. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/september-handout.html",
+    "id": "evidence-records-september-handout",
+    "title": "The September handout. Follow the sources.",
+    "lines": [
+      "The September handout.",
+      "Follow the sources."
+    ],
+    "category": "SOURCE PUBLICATION",
+    "note": "Company narrative and claim-to-source context",
+    "icon": "book-open",
+    "description": "The September handout. Follow the sources.. Company narrative and claim-to-source context. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/sovereign-walkthrough.html",
+    "id": "evidence-records-sovereign-walkthrough",
+    "title": "PinnacleAI® Developmental architecture.",
+    "lines": [
+      "PinnacleAI®",
+      "Developmental architecture."
+    ],
+    "category": "DOCUMENTED PRODUCT WALKTHROUGH",
+    "note": "Connected modules, workflow and source scope",
+    "icon": "network",
+    "description": "PinnacleAI® Developmental architecture.. Connected modules, workflow and source scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/srs4400.html",
+    "id": "evidence-records-srs4400",
+    "title": "SRS 4400 Factual findings.",
+    "lines": [
+      "SRS 4400",
+      "Factual findings."
+    ],
+    "category": "INDEPENDENT PRACTITIONER REPORT",
+    "note": "UDIN 26200027HCNFEI9138 · Agreed-upon procedures",
+    "icon": "file-search",
+    "description": "SRS 4400 Factual findings.. UDIN 26200027HCNFEI9138 · Agreed-upon procedures. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/study-portfolio.html",
+    "id": "evidence-records-study-portfolio",
+    "title": "Twelve-study portfolio. Find the source.",
+    "lines": [
+      "Twelve-study portfolio.",
+      "Find the source."
+    ],
+    "category": "COMPANY RESEARCH",
+    "note": "Research-stage labels and publication references",
+    "icon": "flask-conical",
+    "description": "Twelve-study portfolio. Find the source.. Research-stage labels and publication references. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/udyam.html",
+    "id": "evidence-records-udyam",
+    "title": "Udyam registration. The enterprise record.",
+    "lines": [
+      "Udyam registration.",
+      "The enterprise record."
+    ],
+    "category": "LEGAL IDENTITY",
+    "note": "Enterprise registration and named entity",
+    "icon": "building-2",
+    "description": "Udyam registration. The enterprise record.. Enterprise registration and named entity. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/records/whitebook.html",
+    "id": "evidence-records-whitebook",
+    "title": "Global Research Whitebook.",
+    "lines": [
+      "Global Research",
+      "Whitebook."
+    ],
+    "category": "HISTORICAL PUBLICATION",
+    "note": "Historical edition · Original source and scope",
+    "icon": "book-open",
+    "cover": "/images/research/global-research-whitebook-600.webp",
+    "description": "Global Research Whitebook.. Historical edition · Original source and scope. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/autism-mothers-handbook-english.html",
+    "id": "evidence-publications-autism-mothers-handbook-english",
+    "title": "Autism A mother’s handbook.",
+    "lines": [
+      "Autism",
+      "A mother’s handbook."
+    ],
+    "category": "PARENT BOOK · ENGLISH",
+    "note": "Original edition · Author and source details",
+    "icon": "book-open",
+    "cover": "/images/research/autism-mothers-handbook-english-600.webp",
+    "description": "Autism A mother’s handbook.. Original edition · Author and source details. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/autism-mothers-handbook-telugu.html",
+    "id": "evidence-publications-autism-mothers-handbook-telugu",
+    "title": "Autism A mother’s handbook.",
+    "lines": [
+      "Autism",
+      "A mother’s handbook."
+    ],
+    "category": "PARENT BOOK · TELUGU",
+    "note": "Original edition · Author and source details",
+    "icon": "book-open",
+    "cover": "/images/research/autism-mothers-handbook-telugu-600.webp",
+    "description": "Autism A mother’s handbook.. Original edition · Author and source details. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/voice-of-the-unheard.html",
+    "id": "evidence-publications-voice-of-the-unheard",
+    "title": "The Voice of the Unheard.",
+    "lines": [
+      "The Voice",
+      "of the Unheard."
+    ],
+    "category": "PARENT BOOK",
+    "note": "Original edition · Author and source details",
+    "icon": "book-open",
+    "cover": "/images/research/voice-of-the-unheard-600.webp",
+    "description": "The Voice of the Unheard.. Original edition · Author and source details. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/zenodo-15487405.html",
+    "id": "evidence-publications-zenodo-15487405",
+    "title": "The PGAF framework. Read the research.",
+    "lines": [
+      "The PGAF framework.",
+      "Read the research."
+    ],
+    "category": "RESEARCH PUBLICATION",
+    "note": "DOI 10.5281/zenodo.15487405",
+    "icon": "book-open",
+    "description": "The PGAF framework. Read the research.. DOI 10.5281/zenodo.15487405. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/zenodo-19482123.html",
+    "id": "evidence-publications-zenodo-19482123",
+    "title": "AbilityScore® Measurement research.",
+    "lines": [
+      "AbilityScore®",
+      "Measurement research."
+    ],
+    "category": "RESEARCH PREPRINT",
+    "note": "DOI 10.5281/zenodo.19482123",
+    "icon": "book-open",
+    "cover": "/images/research/zenodo-19482123-600.webp",
+    "description": "AbilityScore® Measurement research.. DOI 10.5281/zenodo.19482123. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/zenodo-19482476.html",
+    "id": "evidence-publications-zenodo-19482476",
+    "title": "AbilityScore® External-validation plan.",
+    "lines": [
+      "AbilityScore®",
+      "External-validation plan."
+    ],
+    "category": "STUDY PROTOCOL",
+    "note": "DOI 10.5281/zenodo.19482476",
+    "icon": "book-open",
+    "cover": "/images/research/zenodo-19482476-600.webp",
+    "description": "AbilityScore® External-validation plan.. DOI 10.5281/zenodo.19482476. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/zenodo-22761782.html",
+    "id": "evidence-publications-zenodo-22761782",
+    "title": "Developmental software. The licensing case study.",
+    "lines": [
+      "Developmental software.",
+      "The licensing case study."
+    ],
+    "category": "REGULATORY PREPRINT",
+    "note": "DOI 10.5281/zenodo.22761782",
+    "icon": "book-open",
+    "description": "Developmental software. The licensing case study.. DOI 10.5281/zenodo.22761782. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/zenodo-22761810.html",
+    "id": "evidence-publications-zenodo-22761810",
+    "title": "Rehabilitation training. A national register study.",
+    "lines": [
+      "Rehabilitation training.",
+      "A national register study."
+    ],
+    "category": "RESEARCH PREPRINT",
+    "note": "DOI 10.5281/zenodo.22761810",
+    "icon": "book-open",
+    "cover": "/images/research/zenodo-22761810-600.webp",
+    "description": "Rehabilitation training. A national register study.. DOI 10.5281/zenodo.22761810. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/zenodo-22761832.html",
+    "id": "evidence-publications-zenodo-22761832",
+    "title": "AbilityScore® Six-month trajectories.",
+    "lines": [
+      "AbilityScore®",
+      "Six-month trajectories."
+    ],
+    "category": "COHORT STUDY PROTOCOL",
+    "note": "DOI 10.5281/zenodo.22761832",
+    "icon": "book-open",
+    "description": "AbilityScore® Six-month trajectories.. DOI 10.5281/zenodo.22761832. Read original sources, dates and evidence scope in Pinnacle Verify."
+  },
+  {
+    "route": "/evidence/publications/zenodo-22827813.html",
+    "id": "evidence-publications-zenodo-22827813",
+    "title": "Childhood participation. Meaningful change.",
+    "lines": [
+      "Childhood participation.",
+      "Meaningful change."
+    ],
+    "category": "REVIEW PROTOCOL",
+    "note": "DOI 10.5281/zenodo.22827813",
+    "icon": "book-open",
+    "cover": "/images/research/zenodo-22827813-600.webp",
+    "description": "Childhood participation. Meaningful change.. DOI 10.5281/zenodo.22827813. Read original sources, dates and evidence scope in Pinnacle Verify."
+  }
+]

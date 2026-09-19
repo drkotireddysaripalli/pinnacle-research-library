@@ -37,11 +37,11 @@
     "url": "https://www.pinnacleblooms.org/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://pinnacle-verify.saripalli.chatgpt.site/favicon.png",
-      "contentUrl": "https://pinnacle-verify.saripalli.chatgpt.site/favicon.png",
-      "width": 50,
-      "height": 50,
-      "caption": "Official Pinnacle Blooms Network emblem"
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/images/pinnacle-logo.webp",
+      "contentUrl": "https://pinnacle-verify.saripalli.chatgpt.site/images/pinnacle-logo.webp",
+      "width": 420,
+      "height": 158,
+      "caption": "Official Pinnacle Blooms Network logo"
     }
   },
   "description": "An index derived from the visible page content. Source links, reporting definitions and evidence limitations travel with each block.",

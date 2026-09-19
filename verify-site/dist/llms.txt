@@ -68,6 +68,9 @@ Contact: Gokul Rao · care@pinnacleblooms.org · +91 9100 181 181.
 - [Citation library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html): 44 reusable citations with original sources and scope.
 - [Privacy and analytics choices](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): optional consent-based measurement and language translation.
 
+## Share images
+- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 56 branded image cards linked to their source pages.
+
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.
 - [Seven-stage journey](https://pinnacle-verify.saripalli.chatgpt.site/#care): documented measurement layers, daily practice and monthly reassessment.
