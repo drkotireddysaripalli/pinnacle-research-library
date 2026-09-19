@@ -29,6 +29,8 @@ The published custom-domain route rewrites Sites-origin links to `/verify/`. The
 
 ## Sharing and performance
 
+Mobile navigation uses an expandable, keyboard-accessible menu up to 1000px wide. Phone and tablet controls use at least 16px form text, and standalone navigation, footer, source and reading controls have larger touch targets. Responsive browser checks covered 320, 360, 390, 430, 768 and 1280px, with the largest reader text setting at 320px, evidence search/expansion, copying a source link, report switching, centre filtering and a 390px-tall landscape privacy panel. These are browser viewport checks, not physical iOS/Safari certification.
+
 Individual facts, evidence records, FAQs and HFR entries include WhatsApp, X, copy-link and supported device sharing. Messages retain claim scope and link to the specific record or anchored block. Visitors edit and send messages themselves. `dist/evidence/share-index.json` records the generated drafts and destinations. X drafts reserve 23 characters for the shortened URL.
 
 Sharing bars span their containing content area and wrap within phone, tablet and desktop layouts. All 65 pages expose a lightweight 1200×630 JPEG brand preview with explicit Open Graph image type and dimensions. Critical metadata appears within the first 5 KB of HTML; server-rendered JSON-LD remains in the document body. The Google Search Console ownership tag is retained for the authorised verification URL-prefix property. Authored product mentions use PinnacleAI®.
