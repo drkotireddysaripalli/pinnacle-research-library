@@ -63,6 +63,15 @@ check(new Set(sitemapRoutes).size===sitemapRoutes.length,'Duplicate sitemap URLs
 const htmlFiles=fs.readdirSync(dist,{recursive:true}).filter(p=>p.endsWith('.html'));
 check(sitemapRoutes.length===htmlFiles.length,'Sitemap count differs from generated HTML count');
 check(cards.length===htmlFiles.length,'Share-card count differs from generated HTML count');
+// Inspect the bundles actually linked by generated pages, not stale asset files.
+// The public /verify route rewrites unquoted url(/fonts/...) references.
+const stylesheetBundles=new Set(htmlFiles.flatMap(relative=>pageAt(relative).nodes.filter(n=>n.tag==='link'&&n.attrs.rel==='stylesheet'&&/^\/_assets\/[^?]+\.css$/.test(n.attrs.href||'')).map(n=>n.attrs.href)));
+check(stylesheetBundles.size>0,'Generated pages must reference a stylesheet bundle');
+for(const href of stylesheetBundles){
+ const css=read(routeFile(href));
+ check(!/url\(\s*['"]\/fonts\//i.test(css),href+' contains quoted root font URLs that the public route cannot rewrite');
+}
+stats.stylesheetBundles=stylesheetBundles.size;
 
 for(const route of routes){
  const page=pageAt(routeFile(route)),{html,nodes,graph}=page,canonical=origin+route;
