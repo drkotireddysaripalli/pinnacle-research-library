@@ -1,3 +1,3 @@
-Bharath Healthcare Laboratories Private Limited. (2026-09-19). Legal entity · Independent registry match. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html
+Bharath Healthcare Laboratories Private Limited. (2026-09-21). Legal entity · Independent registry match. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html
 
 matched The official GLEIF record matches the company name and CIN. It reports entity status ACTIVE and LEI registration status ISSUED. A legal entity match establishes identity within this registry. It does not establish clinical outcomes, device permissions or current tax compliance. Original source: GLEIF live API record; updated 29 April 2026; next LEI renewal shown as 25 June 2027.

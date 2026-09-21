@@ -870,5 +870,31 @@
     "height": 630,
     "alt": "Pinnacle Blooms Network. Built at scale. Focused on your child. 400B PinnacleAI® points: Pinnacle aggregate estimate. 900M children, parents and families: mission population. 2.7B+ structured events, 31M+ defined services and 10.4M calculated report outputs. Illustrative mother and child.",
     "customRenderer": "render-scale-share-card.cjs"
+  },
+  {
+    "id": "pinnacle-paradigm-shift",
+    "route": "/evidence/pinnacle-paradigm-shift.html",
+    "title": "Pinnacle Paradigm Shift",
+    "lines": [
+      "One child.",
+      "One connected plan."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT",
+    "note": "A direction toward self-sufficiency and mainstream participation.",
+    "icon": "network",
+    "description": "How measurement, people, practice and review connect around a child’s everyday life."
+  },
+  {
+    "id": "pinnacle-organisation-profile",
+    "route": "/evidence/organisation-profile.html",
+    "title": "Pinnacle Blooms Network: organisation profile",
+    "lines": [
+      "Pinnacle Blooms Network",
+      "Facts. Sources. Purpose."
+    ],
+    "category": "ORGANISATION REFERENCE",
+    "note": "Identity, documented approach, licences, research and dated figures.",
+    "icon": "building-2",
+    "description": "A source-linked first-party organisation profile for readers, journalists and reference editors."
   }
 ]

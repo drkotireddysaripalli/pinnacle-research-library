@@ -29,7 +29,7 @@ function enhance(html,url){
  }
  html=html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/,(all,json)=>{
   const schema=JSON.parse(json),graph=schema['@graph'];
-  const page=graph.find(x=>['WebPage','CollectionPage'].includes(x['@type'])&&x.url===url);
+  const page=graph.find(x=>['WebPage','CollectionPage','AboutPage'].includes(x['@type'])&&x.url===url);
   const imageId=url+'#share-image';
   graph.push({'@type':'ImageObject','@id':imageId,url:image,contentUrl:image,width:1200,height:630,encodingFormat:'image/jpeg',name:card.title,caption:card.alt,description:'Pinnacle-branded editorial share card for this source page. Illustrative artwork is not a documented patient or outcome.',isPartOf:{'@id':page?.['@id']||url+'#page'}});
   if(page){page.image={'@id':imageId};page.primaryImageOfPage||={'@id':imageId};}
@@ -37,7 +37,7 @@ function enhance(html,url){
  });
  return html;
 }
-const simple={'scale-for-every-child':'/evidence/scale-and-mission.html','scale-story-basis':'/evidence/scale-and-mission.html#scale-story-basis',research:'/evidence/research-library.html',centres:'/evidence/hfr-register.html',records:'/evidence/evidence-register.html','cite-and-reuse':'/evidence/cite.html'};
+const simple={'pinnacle-paradigm-shift':'/evidence/pinnacle-paradigm-shift.html','scale-for-every-child':'/evidence/scale-and-mission.html','scale-story-basis':'/evidence/scale-and-mission.html#scale-story-basis',research:'/evidence/research-library.html',centres:'/evidence/hfr-register.html',records:'/evidence/evidence-register.html','cite-and-reuse':'/evidence/cite.html'};
 function shareTarget(url,id){
  const route=routeOf(url);
  if(route==='/evidence/research-library.html'&&byRoute.has('/evidence/publications/'+id+'.html'))return origin+'/evidence/publications/'+id+'.html';

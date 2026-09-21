@@ -1224,7 +1224,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/abilityscore.html
 
 Language: en-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 AbilityScore® is Pinnacle’s structured description of a child’s present developmental abilities. Read it alongside the assessed skills, everyday observations and the care team’s explanation. The useful question is: what can my child do now, and what should we work on next?
 
@@ -1310,7 +1310,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/te/abilityscore.html
 
 Language: te-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 AbilityScore® మీ బిడ్డ ప్రస్తుతం చేయగల పనులు, సామర్థ్యాలను ఒక క్రమంలో చూపించే Pinnacle విధానం. స్కోర్‌తో పాటు చూసిన స్కిల్స్, ఇంట్లో మీరు గమనించిన విషయాలు, కేర్ టీమ్ వివరణను కలిపి అర్థం చేసుకోండి. ముఖ్యమైన ప్రశ్న: నా బిడ్డ ఇప్పుడు ఏం చేయగలదు? తర్వాత దేనిపై పని చేయాలి?
 
@@ -1398,7 +1398,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/abilityscore.html
 
 Language: hi-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 AbilityScore® बच्चे की मौजूदा विकास संबंधी क्षमताओं को एक व्यवस्थित रूप में दिखाने का Pinnacle का तरीका है। इसे जाँचे गए कौशल, रोज़मर्रा के अनुभवों और केयर टीम की व्याख्या के साथ पढ़ें। असली सवाल है: मेरा बच्चा अभी क्या कर सकता है और आगे किस पर काम करना चाहिए?
 
@@ -1486,7 +1486,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/everyday-practice.html
 
 Language: en-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 Pinnacle’s documented approach connects an assessment to a child-specific plan, guided daily activities, feedback and reassessment. Parents, caregivers, educators and therapists contribute different observations. The aim is a shared direction that can be reviewed and adjusted as the child’s needs change.
 
@@ -1572,7 +1572,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/te/everyday-practice.html
 
 Language: te-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 Pinnacle వివరించే విధానంలో Assessment నుంచి బిడ్డకు సరిపోయే Plan, మార్గదర్శకత్వంతో రోజువారీ Practice, Feedback, మళ్లీ Assessment వరకు అన్ని దశలూ కలుస్తాయి. తల్లిదండ్రులు, కేర్‌గివర్లు, టీచర్లు, థెరపిస్టులు తాము గమనించిన విషయాలు పంచుకుంటారు. బిడ్డ అవసరాలకు తగ్గట్టు Planను మార్చుకుంటూ ముందుకు వెళ్లడం లక్ష్యం.
 
@@ -1660,7 +1660,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/everyday-practice.html
 
 Language: hi-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 Pinnacle की बताई प्रक्रिया आकलन को बच्चे के लिए बने प्लान, निर्देशित दैनिक गतिविधियों, फीडबैक और दोबारा आकलन से जोड़ती है। माता-पिता, देखभाल करने वाले, शिक्षक और थेरपिस्ट अलग-अलग अनुभव साझा करते हैं। उद्देश्य है एक साझा दिशा, जिसे बच्चे की ज़रूरत के अनुसार बदला जा सके।
 
@@ -1748,7 +1748,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/licences-and-scope.html
 
 Language: en-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 The reviewed MD-5 records the named device and its non-diagnostic developmental-support intended use for ages 0–12. The BIS licence and schedule describe a quality-management-system scope and named software activities and modules. Reading them together explains distinct parts of the evidence; neither guarantees a child’s outcome.
 
@@ -1828,7 +1828,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/te/licences-and-scope.html
 
 Language: te-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 పరిశీలించిన MD-5లో పేర్కొన్న డివైస్ 0–12 ఏళ్ల పిల్లల డెవలప్‌మెంట్‌కు సపోర్ట్ ఇస్తుంది; వ్యాధి నిర్ధారణ చేయదు. BIS లైసెన్స్, షెడ్యూల్‌లో క్వాలిటీ మేనేజ్‌మెంట్ సిస్టమ్ పరిధి, సాఫ్ట్‌వేర్ పనులు, మాడ్యూల్స్ ఉన్నాయి. ఈ రెండు పత్రాలు వేర్వేరు విషయాలకు ఆధారాలు; బిడ్డకు నిర్దిష్ట ఫలితం వస్తుందని హామీ ఇవ్వవు.
 
@@ -1910,7 +1910,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/guides/hi/licences-and-scope.html
 
 Language: hi-IN
 
-Updated: 2026-09-19
+Updated: 2026-09-21
 
 जाँचा गया MD-5 नामित डिवाइस को 0–12 वर्ष के बच्चों के विकास में सहायता के लिए दर्ज करता है; यह रोग का निदान नहीं करता। BIS लाइसेंस और schedule गुणवत्ता-प्रबंधन प्रणाली का दायरा तथा सॉफ्टवेयर के काम और मॉड्यूल बताते हैं। दोनों अलग तरह के प्रमाण हैं; बच्चे के परिणाम की गारंटी नहीं।
 
@@ -2318,6 +2318,162 @@ SAE 3000: Outside Annexure I except the specific patent/DOI/identity assertions 
 SRS 4400: Outside the twelve annexure items except specific overlaps already mapped
 Handout physical PDF pages: 2, 4, 9, 15, 16, 17, 18, 19, 20, 21, 22, 23
 
+# Pinnacle Paradigm Shift
+
+How PinnacleAI® connects ability measurement, a personal plan, everyday practice and progress review toward self-sufficiency and mainstream participation.
+
+You picture a life. We build the plan around it.
+
+One child. One connected plan. A shared direction toward self-sufficiency, mainstream participation and a wonderful life.
+
+1. Understand abilities
+Start with what your child can do today. AbilityScore® brings observations into a structured starting point for discussion with the care team.
+Measurement framework: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html
+
+2. Agree a personal plan
+Choose the abilities that matter in everyday life. The Personal Development Kernel connects the child’s history, goals and responses; Prognose® supports readiness planning.
+Planning and child-specific record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+3. Connect the care team
+Give professional support a shared direction. Therapists, educators, parents and caregivers contribute different perspectives around the child’s agreed goals.
+Named users and intended use: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+4. Practise in daily life
+Carry the plan into familiar routines. The documented Everyday Therapy™ programme describes 7–9 selected techniques a day, with guidance appropriate to the child.
+Everyday programme · pages 5–7: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html
+
+5. Track and correct
+Let what happens at home inform the next step. The Fusion Module brings family and professional feedback into review of the activities, support and plan.
+Tracking and correction in scope: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+6. Reassess and repeat
+See what changed. Decide what comes next. The published methodology describes monthly reassessment. Review the child’s progress and adapt priorities with the care team.
+Published review methodology: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html
+
+7. Grow toward participation
+Keep the purpose in view: a wonderful life. Work toward communication, daily-living abilities, school readiness and participation, with the support and accommodations each child needs.
+Self Sufficiency and Mainstream Inclusion: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+What does Pinnacle mean by a paradigm shift?
+Pinnacle uses the term for a connected approach to child development: begin with everyday-life goals, measure abilities, agree a personal plan, connect professional support and home practice, then track, correct and reassess. The phrase describes its approach; it is not a claim of worldwide exclusivity.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+How are parents included in the licensed intended use?
+The MD-5 annexure names parents, therapists, educators and caregivers as intended users of non-diagnostic developmental-support software for children aged 0–12. It describes ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Family participation works alongside appropriate professional guidance.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+What connects the approach to self-sufficiency and mainstream life?
+The BIS scope names developmental mapping, planning, everyday therapy, tracking and correction, seven readiness indexes, Self Sufficiency and Mainstream Inclusion across the full developmental lifecycle. These named functions describe the direction and scope of the system; individual outcomes depend on the child and their care context.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+What evidence supports the scale behind Pinnacle?
+At 17 July 2026, the SRS 4400 report records 2.7 billion+ structured developmental events, 31,052,382 defined cumulative services and 792,614 beneficiary/family registrations. A separate SAE 3000 report provides limited assurance over specified institutional assertions. The claim map links each figure to its source page; these volume measures are distinct from child outcomes.
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html
+
+# Pinnacle Blooms Network: organisation profile
+
+Pinnacle Blooms Network is the child-development service brand of Bharath Healthcare Laboratories Private Limited, an Indian company incorporated in 2016. Its published approach connects developmental ability measurement, individual planning, integrated intervention, parent-guided everyday practice and progress review. The company holds an MD-5 manufacturing licence naming PinnacleAI® GPT-OS v1.0.0, Class B non-diagnostic developmental-support software. This profile brings together corporate identity records, the software licence, quality-system documentation, dated institutional counts, facility-register observations and research publications. It distinguishes company descriptions, independent practitioner findings and clinical research, so readers can cite each statement with its source, date and scope.
+
+Public-facing brand: Pinnacle Blooms Network
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
+
+Legal entity: Bharath Healthcare Laboratories Private Limited
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html
+
+Company identifier: CIN U74999TG2016PTC113063
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/mca.html
+
+Legal Entity Identifier: LEI 894500OJYBVC18BUDN89; official GLEIF record matched on 15 September 2026
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html
+
+Documented corporate history: Incorporated in 2016; changed name from Bharath Diagnostics Labs Private Limited on 18 May 2017
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-operating-years
+
+Named licensed software: PinnacleAI® GPT-OS v1.0.0; Class B, non-diagnostic developmental-support software for children aged 0–12
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+Manufacturing licence: Form MD-5, MFG/MD/2026/000248; issued 21 April 2026 by the Telangana State Licensing Authority
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+Medical-device management-system record: BIS licence MD/L-2026029599; stated validity 3 September 2026 to 2 September 2029
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+Institutional report cutoff: 17 July 2026; NPSY & Co. issued separate SAE 3000 and SRS 4400 reports on 3 September 2026
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html
+
+Research catalogue: Seven DOI-linked repository works: six preprints and one institution-authored framework report; catalogue checked 19 September 2026
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html#publications
+
+Evidence owner: Sourabh Sashank, Lead PinnacleAI®; care@pinnacleblooms.org; +91 9100 181 181
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json
+
+## Brand, company and history
+Pinnacle Blooms Network is the brand; Bharath Healthcare Laboratories Private Limited is the legal entity named in the identity and licensing records. The name-change certificate records the earlier company name, Bharath Diagnostics Labs Private Limited, and the change on 18 May 2017. The institutional reports use incorporation in 2016 as the start of corporate operating history. These records do not establish a separate founding date for the Pinnacle brand or a 16-year corporate history. A reference entry should identify the company incorporation year and the brand founding date as separate facts.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/mca.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-operating-years
+
+## Developmental approach and licensed scope
+Pinnacle describes a seven-stage pathway: identify capabilities and measure ability; forecast readiness and create a child-specific plan; provide integrated intervention; support parent-guided everyday practice; track progress and correct the plan; reassess and repeat until readiness; and support growing independence and participation. This is the company’s service and educational explanation. The MD-5 separately specifies the named software version, manufacturer, premises and intended use: developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for children aged 0–12. It is non-diagnostic. The BIS schedule describes management-system activities and named developmental modules. Neither record establishes a guaranteed child outcome or approval of every broader service description.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.json
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+
+## Dated institutional counts and independent reports
+At 17 July 2026, the SRS 4400 report records 31,052,382 cumulative services, 792,614 beneficiary/family registrations, 2.7 billion-plus structured developmental records and 49 centres meeting its operational definition. Services include assessments, screenings and parent training; registrations are counted under the report’s beneficiary/family criteria; structured records include platform events. These units describe different aspects of operations and should not be added together or treated as clinical successes. NPSY & Co.’s separate SAE 3000 report provides limited assurance over stated assertions and thresholds. SRS 4400 reports agreed procedures and factual findings without an assurance conclusion. Both UDINs were matched as Active on 19 September 2026; the claim-to-page map preserves each report’s scope.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-register.html
+
+## Company estimates and mission figures
+The September handout describes a wider network of 70-plus centres and a mission to empower 900 million children, parents and families. The latter is an intended population, not a count served. Pinnacle’s owner supplied a 400-billion PinnacleAI®-points aggregate estimate on 19 September 2026. The existing record does not provide a reproducible calculation, point definition, deduplication rules or measurement cutoff for that aggregate. It is separate from the 2.7-billion-plus structured-record finding and is not established by the practitioner reports. The 10.4-million report-output figure is a calculation from 1.3 million assessments multiplied by eight report types, based on the owner’s operational statement. Each figure should retain its own attribution and counting basis.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-and-mission.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-story.json
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-data-points
+
+## Facility identifiers and centre status
+The authenticated NHPR facility-manager account reviewed on 19 September 2026 contained 56 complete HFR identifiers: 33 Approved, 14 Query Raised, four Submitted, four Rejected and one Query Resolved. One masked Draft was recorded separately. These are the displayed account workflow statuses on that date. They describe a different population from the 49 operational centres in the July-cutoff reports and the company’s wider 70-plus network figure. An HFR identifier or Approved workflow status does not establish current operations, clinical outcomes or all location-specific permissions. The register preserves individual identifiers and source references; other NHPR accounts were not reconciled in this observation.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-operational-centres
+
+## Publications, research stages and outcomes
+The research catalogue contains seven DOI-linked works covering regulatory analysis, a rehabilitation-training register analysis, preliminary AbilityScore methodology, three research protocols and an institution-authored framework report. A DOI identifies a repository publication; it does not establish journal peer review. The AbilityScore external-validation protocol describes planned research and does not report completed validation results. The twelve-study company portfolio is listed separately with its own designs, populations and report links; these categories should not be combined into a count of independent clinical trials. Clinical findings should be attributed to the particular study and its participants. The institutional practitioner reports expressly exclude outcome-study figures, including the network-wide improvement claim.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/study-index.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html
+
+## Editorial responsibility and reference use
+This is a first-party reference profile maintained within Pinnacle Verify. Sourabh Sashank, Lead PinnacleAI®, is the named evidence owner and contact for source updates and corrections. Pinnacle confirmed clinical review by its Clinical Committee for the 19 September 2026 edition of the parent-facing homepage explanations and English, Telugu and Hindi guides. That review is recorded separately from document inspection, registry matching and independent practitioner work. Journalists and reference editors can follow each citation to the relevant original or source summary and retain its date, source type and scope. Company publications identify company statements; issuer records and practitioner reports support the particular facts within their remit. This profile does not substitute for independent editorial coverage.
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html
+
+Are Pinnacle Blooms Network and Bharath Healthcare Laboratories Private Limited the same name?
+They have different roles. Pinnacle Blooms Network is the public-facing brand. Bharath Healthcare Laboratories Private Limited is the legal entity identified by CIN U74999TG2016PTC113063 and LEI 894500OJYBVC18BUDN89 and named in the licensing records.
+
+What founding date can a reference editor use?
+The cited institutional records establish company incorporation in 2016 and a corporate name change on 18 May 2017. They do not establish a separate Pinnacle brand founding date. Label 2016 as the company’s incorporation year; keep the brand founding date unassigned unless a dated source establishes it.
+
+What does the PinnacleAI® licence cover?
+The supplied MD-5 names PinnacleAI® GPT-OS v1.0.0, a Class B non-diagnostic developmental-support device for children aged 0–12, with specified functions, manufacturer and premises. The wider seven-stage pathway explains how Pinnacle describes its services; the licence is not a blanket approval of all educational explanations, centres or promised outcomes.
+
+Which figures come from the independent practitioner reports?
+The SRS 4400 findings at 17 July 2026 record 31,052,382 defined cumulative services, 792,614 beneficiary/family registrations, 2.7 billion-plus structured records and 49 operational centres. The SAE 3000 report separately provides limited assurance over specified assertions and thresholds. The 400-billion aggregate estimate, wider 70-plus network figure and clinical outcome percentages have separate source bases.
+
+Do seven DOI-linked works mean seven completed clinical studies?
+No. The catalogue includes analyses, preliminary methodology, three protocols and a framework report. Protocols describe planned research, and repository publication does not establish journal peer review. The twelve-study company portfolio is a separate collection whose study populations, methods and findings must be read individually.
+
+How should this profile and its evidence be cited?
+Identify Pinnacle Verify as a first-party publication of Bharath Healthcare Laboratories Private Limited. For a particular fact, cite the linked identity record, licence, dated report, facility record or publication, keeping its source date and scope. Use the citation page for reusable record citations. Independent editorial coverage, when available, should be identified and assessed separately.
+
+Bharath Healthcare Laboratories Private Limited. (2026, September 21). Pinnacle Blooms Network: organisation profile. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html
+
 ## Pinnacle identity and documented approach
 Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. Company CIN: U74999TG2016PTC113063. LEI: 894500OJYBVC18BUDN89.
 The company describes a seven-stage developmental pathway connecting measurement, planning, integrated support, parent-guided practice and progress review. Its supplied MD-5 names non-diagnostic Class B developmental-support software. The BIS scope names connected software modules. Individual outcomes vary.
@@ -2325,6 +2481,7 @@ The company describes a seven-stage developmental pathway connecting measurement
 ## Main page sections
 - [Your child’s path toward self-sufficiency and mainstream life.](https://pinnacle-verify.saripalli.chatgpt.site/#section-your-child-s-path-toward-self-sufficiency-and-mainstream-life): Because every child deserves a wonderful life.
 - [Built at scale. Focused on your child.](https://pinnacle-verify.saripalli.chatgpt.site/#scale-for-every-child): Behind every number is the same purpose: helping a family understand their child’s abilities and plan what comes next. Explore the scale of the system—and the source behind each figure.
+- [The parts matter. So does how they work together.](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-paradigm-shift): A shared direction toward self-sufficiency, mainstream participation and a wonderful life.
 - [See how one observation can inform the next step.](https://pinnacle-verify.saripalli.chatgpt.site/#experience): Explore the documented process through an illustrative family scenario. This guide uses no child data and does not perform an assessment.
 - [One overall profile. Seven focused readiness views.](https://pinnacle-verify.saripalli.chatgpt.site/#report-explorer): The supplied report examples use a 0–1000 display scale. Explore what each view brings to a conversation about your child’s next steps.
 - [Start with what your child can do today.](https://pinnacle-verify.saripalli.chatgpt.site/#care): Perhaps you want your child to ask for what they need, take part in a family routine or feel more confident with others. The journey begins by understanding their current abilities, then agreeing what to work toward with the care team.

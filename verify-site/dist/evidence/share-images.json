@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "description": "Page-specific editorial share images. Citation and evidence scope remain on the linked pages.",
   "images": [
     {
@@ -593,6 +593,24 @@
       "title": "Built at scale. Focused on your child.",
       "description": "PinnacleAI® scale and mission: current figures, report calculations, independent report findings and their sources.",
       "alt": "Pinnacle Blooms Network. Built at scale. Focused on your child. 400B PinnacleAI® points: Pinnacle aggregate estimate. 900M children, parents and families: mission population. 2.7B+ structured events, 31M+ defined services and 10.4M calculated report outputs. Illustrative mother and child.",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html",
+      "image": "https://pinnacle-verify.saripalli.chatgpt.site/images/social/pinnacle-paradigm-shift-35e01d67f5ac.jpg",
+      "title": "Pinnacle Paradigm Shift",
+      "description": "How measurement, people, practice and review connect around a child’s everyday life.",
+      "alt": "One child. One connected plan. PINNACLE PARADIGM SHIFT. A direction toward self-sufficiency and mainstream participation.. Pinnacle Blooms Network.",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html",
+      "image": "https://pinnacle-verify.saripalli.chatgpt.site/images/social/pinnacle-organisation-profile-3ed09e2eaa0a.jpg",
+      "title": "Pinnacle Blooms Network: organisation profile",
+      "description": "A source-linked first-party organisation profile for readers, journalists and reference editors.",
+      "alt": "Pinnacle Blooms Network Facts. Sources. Purpose. ORGANISATION REFERENCE. Identity, documented approach, licences, research and dated figures.. Pinnacle Blooms Network.",
       "width": 1200,
       "height": 630
     }

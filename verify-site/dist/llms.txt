@@ -87,8 +87,14 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [Citation library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html): 44 reusable citations with original sources and scope.
 - [Privacy and analytics choices](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): optional consent-based measurement and language translation.
 
+## Pinnacle approach and organisation reference
+- [Pinnacle Paradigm Shift](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html): one child, one connected plan; seven stages, named software functions and source-linked answers.
+- [Organisation profile](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html): brand, legal entity, corporate history, software scope, dated figures, publications and editorial responsibility.
+- [Organisation profile JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.json): the same facts and source references.
+- [Connected approach JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.json): the same seven stages and evidence-linked answers.
+
 ## Share images
-- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 66 branded image cards linked to their source pages.
+- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 68 branded image cards linked to their source pages.
 
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.

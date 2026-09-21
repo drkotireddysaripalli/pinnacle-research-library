@@ -26,6 +26,8 @@ module.exports=function addSharing(html,page,records){
   const node=b.kind==='page'?null:nodes.find(n=>attr(n,'id')===b.id);
   if(b.kind!=='page'&&!node?.end)continue;
   if(node?.tag==='details'&&/(?:^|\s)hfr-source-details(?:\s|$)/.test(attr(node,'class')||''))continue;
+  // The connected story is shared as one sourced explanation, not as repeated UI labels.
+  if(b.kind!=='page'&&b.id!=='pinnacle-paradigm-shift'&&node&&nodes.some(n=>attr(n,'id')==='pinnacle-paradigm-shift'&&n.start<node.start&&n.end>node.end))continue;
   if(node?.tag==='section'&&nodes.some(n=>n.tag==='h1'&&n.start>node.start&&n.end<node.end))continue;
   const record=recordById.get(b.id)||records.find(r=>page.url.endsWith('/records/'+r.id+'.html')&&(b.kind==='article'||b.kind==='page'));
   const metric=metrics.find(m=>m.id===b.id);

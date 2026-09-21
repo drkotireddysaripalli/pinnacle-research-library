@@ -85,3 +85,11 @@ Anek now covers Latin and nine Indian scripts, self-hosted as variable WOFF2 fon
 The responsive hero separates headline, family artwork and short introductory copy. Existing compressed Pinnacle artwork and original book covers introduce four reading sections. A persistent four-link section bar highlights the current reading section. Detailed scale commentary, source orientation, guided reports and citation resources remain available through native disclosures and their original anchors. All 396 prior non-icon homepage IDs are retained. No extra illustration or icon library downloads were introduced; section images load lazily while the hero remains eager and high priority.
 
 Browser checks covered 320px and 390px phones, 768px tablet and 1280px desktop, with the largest reader setting at 320px. The hero image falls within the first portrait viewport in these phone checks. Menu navigation, nested report selection, evidence search, source-link copying and HFR filtering were exercised. These are emulated viewport checks, not physical-device or comprehensive accessibility certification.
+
+## Connected narrative and reference profile · 21 September 2026
+
+The first reading section now presents Pinnacle Paradigm Shift: seven stages connecting ability measurement, a child-specific plan, coordinated support, daily practice, tracking, reassessment and participation. Both the dedicated narrative page and the first-party organisation profile include source links, share images, FAQs and text/JSON exports. The sitemap contains 68 pages. All 407 prior non-icon homepage anchors remain available.
+
+Inline schema now describes meaningful sections rather than duplicating every disclosure and table row. The homepage HTML is 10.4% smaller than the preceding source version despite the new narrative. Browser viewport checks covered desktop and narrow phones; check-paradigm-reference, check-scale-discovery and check-editorial-confirmation pass.
+
+The owner-confirmed clinical review applies to the recorded 19 September edition and unchanged parent guides. New narrative and reference content does not inherit an exact-edition clinical sign-off. This first-party profile does not establish Wikipedia notability or guarantee a Google knowledge panel.

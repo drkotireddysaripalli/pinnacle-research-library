@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19",
+  "updated": "2026-09-21",
   "description": "Citations preserve the distinction between original publications and Pinnacle website evidence summaries.",
   "items": [
     {
@@ -8,13 +8,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
       "status": "original",
       "scope": "The supplied Form MD-5 licenses the listed Class B device for manufacture for sale or distribution at the specified premises. Intended users include parents, therapists, educators and caregivers supporting children aged 0–12. Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre. Original source: Original Form MD-5, page 1 including device annexure; supplied PinnacleAI®_SAMD_License.pdf re-inspected 18 September 2026.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). MD-5 · Class B manufacturing licence. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). MD-5 · Class B manufacturing licence. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
       "downloads": {
         "text": "/evidence/citations/record-md5.txt",
         "ris": "/evidence/citations/record-md5.ris",
@@ -27,13 +27,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
       "status": "original",
       "scope": "The supplied BIS licence and schedule cover the specified software design, development, verification, validation, release, deployment, maintenance, support and post-market surveillance. The schedule names developmental mapping, planning, everyday practice, tracking and correction, with school, speech, motor, Study IQ, behaviour, self-sufficiency and mainstream-inclusion readiness modules across the developmental lifecycle. The licence applies to its schedule and listed address. It is not a guarantee of clinical outcomes for a child. Original source: Original BIS licence, page 1; scope schedule, page 2.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). BIS · Medical device management system. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). BIS · Medical device management system. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
       "downloads": {
         "text": "/evidence/citations/record-bis.txt",
         "ris": "/evidence/citations/record-bis.ris",
@@ -46,13 +46,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html",
       "status": "matched",
       "scope": "The official GLEIF record matches the company name and CIN. It reports entity status ACTIVE and LEI registration status ISSUED. A legal entity match establishes identity within this registry. It does not establish clinical outcomes, device permissions or current tax compliance. Original source: GLEIF live API record; updated 29 April 2026; next LEI renewal shown as 25 June 2027.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Legal entity · Independent registry match. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Legal entity · Independent registry match. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html",
       "downloads": {
         "text": "/evidence/citations/record-lei.txt",
         "ris": "/evidence/citations/record-lei.ris",
@@ -65,13 +65,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html",
       "status": "original",
       "scope": "The issued MD-5 identifies the device as Class B. Company publications describe a preceding Central Licensing Authority classification decision. The locally available risk-classification form is an application proposing Class A, not the approved Class B decision. A classification decision is also distinct from a manufacturing licence. Original source: Risk-classification application, p1; Evidence Dossier v2, pp23–24; September handout, physical pp1 and 9; operative MD-5, p1.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). CDSCO classification · Application and licence trail. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). CDSCO classification · Application and licence trail. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html",
       "downloads": {
         "text": "/evidence/citations/record-classification.txt",
         "ris": "/evidence/citations/record-classification.ris",
@@ -84,13 +84,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
       "status": "original",
       "scope": "The reviewed application records the applicant’s request for a Class B manufacturing licence and the stated device particulars. MD-3 is an application, not an additional granted licence. The permission is established by the operative MD-5 and its conditions. Original source: Original Form_MD_189231.pdf reviewed through Google Drive.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). MD-3 · Manufacturing-licence application. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). MD-3 · Manufacturing-licence application. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md3.html",
       "downloads": {
         "text": "/evidence/citations/record-md3.txt",
         "ris": "/evidence/citations/record-md3.ris",
@@ -103,13 +103,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html",
       "status": "original",
       "scope": "The supplied certificate covers the named company’s quality-management scope for the design, development, deployment, maintenance and support of the specified SaMD. Certification applies to the certificate’s system scope. Historic “diagnostic mapping” wording does not extend the later MD-5’s non-diagnostic intended use. Accreditation-chain and live certificate status have not been independently checked. Original source: Original ISO 13485 certificate, p1.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). ISO 13485 · Quality management. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). ISO 13485 · Quality management. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html",
       "downloads": {
         "text": "/evidence/citations/record-iso13485.txt",
         "ris": "/evidence/citations/record-iso13485.ris",
@@ -122,13 +122,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
       "status": "original",
       "scope": "The original certificate covers information-security management for the listed SaMD platforms, cloud operations, cybersecurity, data protection and support. Certification does not guarantee zero breaches or cover every process outside the declared scope. Current certificate status and the accreditation chain remain separate checks. Original source: Original ISO/IEC 27001 certificate; recognitions bundle physical p10; standalone Drive copy.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). ISO/IEC 27001 · Information security. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). ISO/IEC 27001 · Information security. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
       "downloads": {
         "text": "/evidence/citations/record-iso27001.txt",
         "ris": "/evidence/citations/record-iso27001.ris",
@@ -141,13 +141,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/mca.html",
       "status": "original",
       "scope": "The certificate records the change from Bharath Diagnostics Labs Private Limited to Bharath Healthcare Laboratories Private Limited. The CIN agrees with the live GLEIF record. A historic incorporation/name-change certificate establishes the recorded identity event. Current MCA filings, directors and compliance require current MCA records. Original source: BHCL Inc.pdf, p1.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Company incorporation & name history. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/mca.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Company incorporation & name history. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/mca.html",
       "downloads": {
         "text": "/evidence/citations/record-mca.txt",
         "ris": "/evidence/citations/record-mca.ris",
@@ -160,13 +160,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dpiit.html",
       "status": "original",
       "scope": "The supplied recognition certificate and an official historical Startup India list identify the company as a recognised startup. Recognition is distinct from a tax-exemption certificate, healthcare approval or an award. Current eligibility and status should be read from the updated certificate and applicable rules. Original source: COR_DIPP8651.pdf, p1; Startup India list dated 3 November 2023, row 3630.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). DPIIT / DIPP · Startup recognition. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dpiit.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). DPIIT / DIPP · Startup recognition. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dpiit.html",
       "downloads": {
         "text": "/evidence/citations/record-dpiit.txt",
         "ris": "/evidence/citations/record-dpiit.ris",
@@ -179,13 +179,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/udyam.html",
       "status": "original",
       "scope": "The later supplied Udyam record identifies the company and records a Small enterprise classification for FY 2025–26. This is enterprise registration, not an MSME award or a clinical accreditation. Enterprise classification can change; the displayed snapshot is not a live September 2026 confirmation. Original source: Udyam Certificate 2026 full.pdf reviewed through Drive; the file name does not change the 2025 print date.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Udyam · Enterprise registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/udyam.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Udyam · Enterprise registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/udyam.html",
       "downloads": {
         "text": "/evidence/citations/record-udyam.txt",
         "ris": "/evidence/citations/record-udyam.ris",
@@ -198,13 +198,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html",
       "status": "original",
       "scope": "The 2017 GST certificate records registration under the names printed on that document. The MCA name-change certificate supplies part of the corporate-name history. The original retains the former legal name. A current GST taxpayer record or amended certificate is needed before describing the current name and registration status as matched. GST registration does not establish clinical quality. Original source: BHARATH HEALTHCARE GSTIN CERTIFICATE OF BHARATH- FULL.pdf, pp1–3; MCA name-change certificate, p1.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). GST · Registration and name reconciliation. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). GST · Registration and name reconciliation. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/gst.html",
       "downloads": {
         "text": "/evidence/citations/record-gst.txt",
         "ris": "/evidence/citations/record-gst.ris",
@@ -217,13 +217,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pan.html",
       "status": "original",
       "scope": "The supplied corporate PAN card identifies the company and its incorporation date. PAN supports tax identity. It does not establish current tax compliance or clinical authorisation. Live PAN verification has its own matching-information and OTP requirements. Original source: Bharath Healthcare PAN.jpeg; original image inspected.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). PAN · Corporate identity document. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pan.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). PAN · Corporate identity document. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pan.html",
       "downloads": {
         "text": "/evidence/citations/record-pan.txt",
         "ris": "/evidence/citations/record-pan.ris",
@@ -236,13 +236,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
       "status": "HFR account records reviewed",
       "scope": "The authenticated dashboard matched all 53 earlier inventory IDs and supplied three additional complete IDs, giving 56. Each record retains its displayed workflow status and observation date. The source workbook and certificate references remain available beside the live check. Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs. The observation covers one authenticated NHPR account; registrations administered in other accounts have not been reconciled here. Original source: NHPR / ABDM authenticated facility-manager dashboard, all four pages, inspected 19 September 2026. Earlier sources: All Centers With HFR.xlsx rows 2–53 and original recognitions bundle pp67–95.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). ABDM / NHA · Health Facility Registry. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). ABDM / NHA · Health Facility Registry. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
       "downloads": {
         "text": "/evidence/citations/record-hfr.txt",
         "ris": "/evidence/citations/record-hfr.ris",
@@ -255,13 +255,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/district-register.html",
       "status": "published",
       "scope": "The source collection contains district-specific institution-registration copies. Four selected originals are documented below; the September handout groups the broader collection. These are separate institution records, not one nationwide DDEW licence. A network count should not be treated as proof that all centres hold current registrations. Original source: Recognitions bundle, pp96–124; September handout, physical p12.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Disability-welfare registrations · District scope. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/district-register.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Disability-welfare registrations · District scope. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/district-register.html",
       "downloads": {
         "text": "/evidence/citations/record-district-register.txt",
         "ris": "/evidence/citations/record-district-register.ris",
@@ -274,13 +274,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-attapur.html",
       "status": "original",
       "scope": "The supplied certificate records the named institution’s district registration under Section 51 of the RPwD Act. The record covers its listed institution and location. Face-date validity does not confirm that no later change, suspension or cancellation has occurred. Original source: Recognitions bundle, physical p97.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Attapur · District institution registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-attapur.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Attapur · District institution registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-attapur.html",
       "downloads": {
         "text": "/evidence/citations/record-rpwd-attapur.txt",
         "ris": "/evidence/citations/record-rpwd-attapur.ris",
@@ -293,13 +293,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-begumpet.html",
       "status": "original",
       "scope": "The supplied certificate records the named institution’s district registration under Section 51 of the RPwD Act. The record covers its listed institution and location. Face-date validity does not confirm that no later change, suspension or cancellation has occurred. Original source: Recognitions bundle, physical p98.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Begumpet · District institution registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-begumpet.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Begumpet · District institution registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-begumpet.html",
       "downloads": {
         "text": "/evidence/citations/record-rpwd-begumpet.txt",
         "ris": "/evidence/citations/record-rpwd-begumpet.ris",
@@ -312,13 +312,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nizamabad.html",
       "status": "original",
       "scope": "The supplied certificate records the named institution’s district registration under Section 51 of the RPwD Act. The record covers its listed institution and location. Face-date validity does not confirm that no later change, suspension or cancellation has occurred. Original source: Recognitions bundle, physical p118.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Nizamabad · District institution registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nizamabad.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Nizamabad · District institution registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nizamabad.html",
       "downloads": {
         "text": "/evidence/citations/record-rpwd-nizamabad.txt",
         "ris": "/evidence/citations/record-rpwd-nizamabad.ris",
@@ -331,13 +331,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nellore.html",
       "status": "original",
       "scope": "The supplied historical certificate records the named institution’s registration for the printed period. The face date has passed. This review does not establish the absence of a renewal, but cannot present the historical copy as current. Original source: Recognitions bundle, physical p117.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Nellore · Historical district registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nellore.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Nellore · Historical district registration. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/rpwd-nellore.html",
       "downloads": {
         "text": "/evidence/citations/record-rpwd-nellore.txt",
         "ris": "/evidence/citations/record-rpwd-nellore.ris",
@@ -350,13 +350,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
       "status": "Original reviewed · UDIN matched",
       "scope": "The report records limited assurance over its defined Statement of Institutional Claims using the Board-adopted criteria specified in the report. Limited assurance is different from reasonable assurance. Outcome-study figures, ratings and financial statements fall outside the described scope; the report does not independently validate clinical efficacy. Original source: Original seven-page SAE 3000 report; September handout physical p14 provides a secondary summary.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Independent practitioner · Limited assurance. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Independent practitioner · Limited assurance. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
       "downloads": {
         "text": "/evidence/citations/record-sae3000.txt",
         "ris": "/evidence/citations/record-sae3000.ris",
@@ -369,13 +369,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
       "status": "Original reviewed · UDIN matched",
       "scope": "The report records factual findings from the specified agreed procedures on institutional claims and supporting records. An agreed-upon-procedures report is not an assurance opinion. Readers need the complete procedures, criteria and findings to assess its meaning. It does not establish clinical outcomes. Original source: Original four-page SRS 4400 report.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Independent practitioner · Factual findings. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Independent practitioner · Factual findings. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
       "downloads": {
         "text": "/evidence/citations/record-srs4400.txt",
         "ris": "/evidence/citations/record-srs4400.ris",
@@ -388,13 +388,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
       "status": "published",
       "scope": "The September handout reports 2.7 billion+ structured platform records and connects dated operational counts to specified procedures and Board-adopted criteria. It separately describes a 70+ network figure. The 2.5 billion floor assertion and 2.7 billion observed row-count finding have different reporting roles. Therapy services include assessments, screenings and parent training under the report’s criteria; they are not all one-to-one therapy sessions. Beneficiary/family registrations are not a count of unique children. Network and operational centres use different definitions. Platform records are not unique children, independent clinical-trial observations or verified, deduplicated AI-training examples. Volume alone does not establish model performance, clinical effectiveness or a worldwide size ranking. The 130,000 technique update has no inspected inventory extract; neither practitioner report establishes that updated count or the 70+ countries claim. Original source: Company handout, 7 September 2026, physical pp3, 14–15; July dossier pp6, 74, 76, 79, 124. Restricted practitioner sources inspected: SRS 4400 pp2–3; SAE 3000 pp3–4 and criteria p6. Cutoff 17 July 2026. Technique count: management update received 18 September 2026; earlier 90,000+ in September handout pp5, 7, 15. Countries of family origin: July dossier pp75–76; network definition pp75–77.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Scale claims · Dates and definitions. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Scale claims · Dates and definitions. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html",
       "downloads": {
         "text": "/evidence/citations/record-operating-metrics.txt",
         "ris": "/evidence/citations/record-operating-metrics.ris",
@@ -407,13 +407,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
       "status": "original",
       "scope": "The public record describes the construction of AbilityScore and preliminary operational psychometric findings. The authors identify formal validation as planned. Operational inter-rater reliability is not completed external concurrent validity. A repository deposit does not establish journal peer review or independent replication. Original source: Original Zenodo repository metadata and abstract, retrieved 15 September 2026.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). AbilityScore · Methodology preprint. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). AbilityScore · Methodology preprint. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
       "downloads": {
         "text": "/evidence/citations/record-methodology.txt",
         "ris": "/evidence/citations/record-methodology.ris",
@@ -426,13 +426,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
       "status": "original",
       "scope": "The deposited protocol describes planned concurrent-validity, test–retest and minimal-clinically-important-difference research, including comparator instruments. This record is a protocol preprint, not completed results. It does not establish that the planned recruitment, testing or external validation has been completed. Original source: Original Zenodo record 19482476 and its metadata, retrieved 15 September 2026.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). AbilityScore · External-validation protocol. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). AbilityScore · External-validation protocol. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/external-validation.html",
       "downloads": {
         "text": "/evidence/citations/record-external-validation.txt",
         "ris": "/evidence/citations/record-external-validation.ris",
@@ -445,13 +445,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html",
       "status": "published",
       "scope": "The source publications describe twelve research topics across measurement, therapy, home practice, equity and participation. The study index identifies the populations and available original report links. Small study cohorts cannot be replaced by cumulative network-service totals. Journal peer review, independent replication and ethics approval require their own documents. Findings apply to the populations and methods studied. Original source: Whitebook pp12–21; Evidence Dossier v2 study register; September handout physical p8; company-hosted study reports.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Twelve-study portfolio · Company research. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Twelve-study portfolio · Company research. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/study-portfolio.html",
       "downloads": {
         "text": "/evidence/citations/record-study-portfolio.txt",
         "ris": "/evidence/citations/record-study-portfolio.ris",
@@ -464,13 +464,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html",
       "status": "Source publications reviewed",
       "scope": "The company publications contain a headline improvement claim and a twelve-study narrative. These identify the claim that needs a transparent evidence trail. The reviewed materials do not establish the full network-wide calculation or make it an individual outcome guarantee. Practitioner assurance over operational counts does not validate excluded outcome percentages. Original source: Whitebook; Evidence Dossier v2; September handout; SAE 3000 scope.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Network-wide improvement claim · Evidence definition. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Network-wide improvement claim · Evidence definition. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/outcome-claim.html",
       "downloads": {
         "text": "/evidence/citations/record-outcome-claim.txt",
         "ris": "/evidence/citations/record-outcome-claim.ris",
@@ -483,13 +483,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/appreciations.html",
       "status": "original",
       "scope": "The reviewed letters record appreciation and a recommendation for consideration of collaboration. The letter register identifies authors, dates and references. Appreciation is distinct from a licence, procurement contract, signed MoU or clinical endorsement. A recommendation for consideration does not mean the proposed agreement was executed. Original source: Recognitions bundle, physical pp2–8; cross-checked against September handout physical p13.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Government appreciation · Seven source letters. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/appreciations.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Government appreciation · Seven source letters. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/appreciations.html",
       "downloads": {
         "text": "/evidence/citations/record-appreciations.txt",
         "ris": "/evidence/citations/record-appreciations.ris",
@@ -502,13 +502,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/awards.html",
       "status": "published",
       "scope": "The source materials document preparation or submission for recognition and describe the cited nomination references. A nomination, application or achievements dossier is not proof of an award being conferred. Publish an award title only with the issuer’s winner decision or award certificate. Original source: September handout physical p12; Drive metadata for nomination/achievement dossiers.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Awards & nominations · Evidence of stage. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/awards.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Awards & nominations · Evidence of stage. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/awards.html",
       "downloads": {
         "text": "/evidence/citations/record-awards.txt",
         "ris": "/evidence/citations/record-awards.ris",
@@ -521,13 +521,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/patents.html",
       "status": "published",
       "scope": "The dossier and handout identify claimed patent-application references and the application-stage nature of the portfolio. A PCT application is not a granted patent or worldwide enforceable protection. Each claimed application needs applicant, title, filing/publication data and current office status. Original source: Evidence Dossier v2 IP section; September handout physical p15.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Intellectual property · Application-stage claims. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/patents.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Intellectual property · Application-stage claims. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/patents.html",
       "downloads": {
         "text": "/evidence/citations/record-patents.txt",
         "ris": "/evidence/citations/record-patents.ris",
@@ -540,13 +540,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/marks-copyright.html",
       "status": "published",
       "scope": "An official copyright application list records a named Pinnacle artwork application. Company publications identify a wider intellectual-property and publishing portfolio. An application listing is not a granted registration. Brand usage, ISBNs and book publication do not establish device efficacy or patent rights. Original source: Official copyright application list; September handout physical p15.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Trademarks, copyright & publishing records. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/marks-copyright.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Trademarks, copyright & publishing records. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/marks-copyright.html",
       "downloads": {
         "text": "/evidence/citations/record-marks-copyright.txt",
         "ris": "/evidence/citations/record-marks-copyright.ris",
@@ -559,13 +559,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
       "status": "published",
       "scope": "The Whitebook explains the company’s framework and its historical study narrative. It is useful for tracing the origins of claims and the research portfolio. It is not an independent issuer record. Historical scale figures, patent language, exclusivity claims and validation language need reconciliation with current originals. Original source: Original 30-page Whitebook reviewed; study summaries pp12–21.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Global Research Whitebook · Historical edition. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Global Research Whitebook · Historical edition. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/whitebook.html",
       "downloads": {
         "text": "/evidence/citations/record-whitebook.txt",
         "ris": "/evidence/citations/record-whitebook.ris",
@@ -578,13 +578,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
       "status": "published",
       "scope": "The dossier consolidates references, regulatory chronology, research summaries and source exhibits. It explicitly supersedes the earlier edition. A dossier is a map to evidence. Where it conflicts with an operative document or primary research record, the original source governs the verification entry. Original source: Original Evidence Dossier 2026, v2.0-M; 125 physical pages reviewed for relevant sections.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Evidence Dossier · Version 2.0. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Evidence Dossier · Version 2.0. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
       "downloads": {
         "text": "/evidence/citations/record-dossier.txt",
         "ris": "/evidence/citations/record-dossier.ris",
@@ -597,13 +597,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
       "status": "published",
       "scope": "The handout adds the September BIS licence, practitioner-report references, operational definitions and a consolidated registration and recognition narrative. Its claims must be traced to their underlying instruments. Confidential circulation, research-stage language, operational counts and letter references require careful handling before public reuse. Original source: Original 23-page handout; physical PDF pages used because printed page numbering is out of order.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). September handout · Current source narrative. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). September handout · Current source narrative. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
       "downloads": {
         "text": "/evidence/citations/record-september-handout.txt",
         "ris": "/evidence/citations/record-september-handout.ris",
@@ -616,13 +616,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
       "status": "published",
       "scope": "The supplied books establish the publication metadata printed in those editions and provide parent-facing context for the developmental journey. A book’s publication is distinct from peer-reviewed clinical evidence or a professional qualification. The English and Telugu handbook copies show the same ISBN; separate-edition registration is not inferred. Original source: Supplied Books Pubished folder: English and Telugu handbook p6; The Voice of the Unheard pp1,7,132.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). Books & parent resources · Publication records. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Books & parent resources · Publication records. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html",
       "downloads": {
         "text": "/evidence/citations/record-books.txt",
         "ris": "/evidence/citations/record-books.ris",
@@ -635,13 +635,13 @@
       "authors": [
         "Bharath Healthcare Laboratories Private Limited"
       ],
-      "date": "2026-09-19",
+      "date": "2026-09-21",
       "kind": "Pinnacle Verification Centre evidence summary",
       "summary": true,
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
       "status": "published",
       "scope": "The reviewed company walkthrough explicitly distinguishes abilities, skills, domains and observations. It describes the personal development kernel, daily practice, monthly reassessment and participation goals. A company-authored architecture and programme description is not independent clinical validation or a regulatory extension. Historical diagnosis, exclusivity, patent and endorsement wording is not adopted by this review. Current MD-5 and BIS originals control their respective scopes. Original source: PinnacleAI® - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026.",
-      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-19). PinnacleAI® walkthrough · Developmental architecture. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). PinnacleAI® walkthrough · Developmental architecture. Pinnacle Verification Centre evidence summary. https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
       "downloads": {
         "text": "/evidence/citations/record-sovereign-walkthrough.txt",
         "ris": "/evidence/citations/record-sovereign-walkthrough.ris",

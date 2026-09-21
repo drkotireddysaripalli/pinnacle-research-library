@@ -57,21 +57,51 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
   if(legalIndex>=0)graph[legalIndex]=organization;else graph.unshift(organization);
   if(!graph.some(x=>x['@id']===brand['@id']))graph.push(brand);
   const pageId=url+'#page';
-  let page=graph.find(x=>['WebPage','CollectionPage'].includes(x['@type'])&&(x.url===url));
+  let page=graph.find(x=>['WebPage','CollectionPage','AboutPage'].includes(x['@type'])&&(x.url===url));
   if(!page){page={'@type':'WebPage','@id':pageId,name:plain(html.match(/<title>([\s\S]*?)<\/title>/)[1]),url};graph.push(page);}
   page['@id'] ||= pageId;page.inLanguage=html.match(/<html[^>]*\blang="([^"]+)"/)?.[1]||'en-IN';page.dateModified=date;page.publisher={'@id':organization['@id']};page.about=[{'@id':organization['@id']},{'@id':brand['@id']}];
   page.isPartOf={'@id':origin+'/#website'};page.isAccessibleForFree=true;
   const owner=editorial.evidenceOwner,ownerId=origin+'/#evidence-owner';
   graph.push({'@type':'Person','@id':ownerId,name:owner.name,jobTitle:owner.jobTitle,description:owner.role+'. '+owner.responsibility,email:owner.email,telephone:owner.telephone,worksFor:{'@id':organization['@id']},url:origin+'/#editorial-policy'});
   page.maintainer={'@id':ownerId};
-  if(editorial.clinicalReview?.status==='confirmed'&&(url===origin+'/'||url.includes('/guides/'))){const committeeId=origin+'/#clinical-committee';graph.push({'@type':'Organization','@id':committeeId,name:editorial.responsibleBody,parentOrganization:{'@id':organization['@id']},url:origin+'/#editorial-policy',description:editorial.remit});page.reviewedBy={'@id':committeeId};}
-  page.hasPart=blocks.filter(b=>!b.parent).map(b=>({'@id':b.url+'-element'}));
+  if(editorial.clinicalReview?.status==='confirmed'&&url.includes('/guides/')){const committeeId=origin+'/#clinical-committee';graph.push({'@type':'Organization','@id':committeeId,name:editorial.responsibleBody,parentOrganization:{'@id':organization['@id']},url:origin+'/#editorial-policy',description:editorial.remit});page.reviewedBy={'@id':committeeId};}
+  // The full block index remains available in the readable exports. Inline
+  // schema describes the section hierarchy without repeating every disclosure
+  // and table row already present in the visible HTML.
+  const sections=blocks.filter(b=>b.kind==='section');
+  const blockById=new Map(blocks.map(b=>[b.id,b]));
+  const sectionIds=new Set(sections.map(b=>b.id));
+  const sectionParent=new Map(sections.map(b=>{
+   let parent=blockById.get(b.parent);
+   while(parent&&!sectionIds.has(parent.id))parent=blockById.get(parent.parent);
+   return [b.id,parent?.id||null];
+  }));
+  const sectionChildren=id=>sections.filter(b=>sectionParent.get(b.id)===id).map(b=>({'@id':b.url+'-element'}));
+  page.hasPart=sectionChildren(null);
   const crumbs=graph.find(x=>x['@type']==='BreadcrumbList');if(crumbs)page.breadcrumb={'@id':crumbs['@id']};
   const faqPage=graph.find(x=>x['@type']==='FAQPage');
-  if(faqPage){faqPage.url=url+(html.includes('id="quick-answers"')?'#quick-answers':'#questions');faqPage.isPartOf={'@id':page['@id']};for(const q of faqPage.mainEntity){const b=blocks.find(b=>b.kind==='details'&&b.name===q.name);if(b){q['@id']=b.url+'-question';q.url=b.url;q.acceptedAnswer['@id']=b.url+'-answer';}}}
+  if(faqPage){
+   const faqSectionId=html.includes('id="quick-answers"')?'quick-answers':'questions';
+   faqPage.url=url+'#'+faqSectionId;faqPage.isPartOf={'@id':page['@id']};
+   for(const q of faqPage.mainEntity){
+    const candidates=blocks.filter(b=>b.kind==='details'&&b.name===q.name);
+    let existingUrl;try{if(q.url)existingUrl=new URL(q.url,url).href;}catch{}
+    const b=candidates.find(b=>b.url===existingUrl)||candidates.find(b=>{
+     for(let parent=blockById.get(b.parent);parent;parent=blockById.get(parent.parent))if(parent.id===faqSectionId)return true;
+     return false;
+    })||candidates[0];
+    if(b){q['@id']=b.url+'-question';q.url=b.url;q.acceptedAnswer['@id']=b.url+'-answer';}
+   }
+  }
   if(url.endsWith('/evidence/hfr-register.html'))graph.push({'@type':'Dataset','@id':url+'#source-inventory',name:'Pinnacle HFR dashboard and source register',description:hfrReview.description,url,dateModified:date,inLanguage:'en-IN',publisher:{'@id':organization['@id']},creator:{'@id':organization['@id']},isBasedOn:origin+'/evidence/records/hfr.html',mainEntityOfPage:{'@id':page['@id']},distribution:[{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.json',encodingFormat:'application/json'},{'@type':'DataDownload',contentUrl:origin+'/evidence/hfr-register.csv',encodingFormat:'text/csv'}]});
   const article=graph.find(x=>x['@type']==='Article');if(article){article.publisher={'@id':organization['@id']};article.mainEntityOfPage={'@id':page['@id']};page.mainEntity={'@id':article['@id']||url+'#article'};article['@id'] ||= url+'#article';}
-  graph.push(...blocks.map(b=>({'@type':'WebPageElement','@id':b.url+'-element',name:b.name,description:b.description.slice(0,320),cssSelector:'#'+b.id,isPartOf:{'@id':b.parent?url+'#'+b.parent+'-element':page['@id']},...(b.citations.length?{citation:b.citations.slice(0,6)}:{})})));
+  // Replace our generated nodes when enhancing an already enhanced document.
+  const generatedElementIds=new Set(blocks.map(b=>b.url+'-element'));
+  for(let i=graph.length-1;i>=0;i--)if(graph[i]['@type']==='WebPageElement'&&generatedElementIds.has(graph[i]['@id']))graph.splice(i,1);
+  graph.push(...sections.map(b=>{
+   const parent=sectionParent.get(b.id),children=sectionChildren(b.id);
+   return {'@type':'WebPageElement','@id':b.url+'-element',name:b.name,description:b.description.slice(0,320),cssSelector:'#'+b.id,isPartOf:{'@id':parent?url+'#'+parent+'-element':page['@id']},...(children.length?{hasPart:children}:{}),...(b.citations.length?{citation:b.citations.slice(0,6)}:{})};
+  }));
   if(url===origin+'/')graph.push(...termGraph);
   const illustrations=nodes.filter(n=>n.tag==='figure'&&/\bworld-figure\b/.test(attr(n.open,'class')||''));
   for(const figure of illustrations){
