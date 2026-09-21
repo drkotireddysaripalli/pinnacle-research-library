@@ -88,13 +88,26 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [Privacy and analytics choices](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): optional consent-based measurement and language translation.
 
 ## Pinnacle approach and organisation reference
-- [Pinnacle Paradigm Shift](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html): one child, one connected plan; seven stages, named software functions and source-linked answers.
+- [Pinnacle Paradigm Shift](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html): nine care-system perspectives, the seven-stage developmental pathway, named software functions and source-linked answers.
 - [Organisation profile](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html): brand, legal entity, corporate history, software scope, dated figures, publications and editorial responsibility.
 - [Organisation profile JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.json): the same facts and source references.
-- [Connected approach JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.json): the same seven stages and evidence-linked answers.
+- [Connected approach JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.json): nine perspectives, seven stages and evidence-linked answers.
+
+## Pinnacle Paradigm Shift — nine care-system perspectives
+- [01 · You wanted the car. Not a box of parts.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/01-life-in-view.html): The shift is in the architecture: measurement, planning, professional care, home practice and review working as one connected system.
+- [02 · Separate reports. A shared starting point.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/02-shared-starting-point.html): A common ability framework gives each part of care a reference point for the same child.
+- [03 · One child. One continuing record.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/03-plan-with-a-memory.html): Continuity needs a record that connects measurements, goals, context and responses across successive plans.
+- [04 · Many specialists. One shared direction.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/04-one-shared-direction.html): Expertise becomes a connected system when the people involved can work from shared goals and context.
+- [05 · Beyond the session. A connected programme.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/05-practice-in-everyday-life.html): A connected programme carries agreed goals beyond the appointment, with practical guidance for the people supporting the child.
+- [06 · Close the feedback loop. Review. Correct. Repeat.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/06-feedback-that-shapes-care.html): A system needs a way to bring observations back into decisions about activities, support and the next plan.
+- [07 · Tasks with a purpose. Participation in view.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/07-skills-with-a-purpose.html): Holding a pencil can be one target. Participating in a classroom activity gives that target a wider purpose.
+- [08 · A plan that evolves. Eight views to review.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/08-review-and-reassess.html): A connected system has a review cycle: compare the child's present abilities, reconsider priorities and explain what should change next.
+- [09 · Beyond more sessions. A direction for transition.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/09-independence-and-belonging.html): A developmental system needs a direction for what comes next: school participation, growing independence and the support that makes them possible.
+- [All nine explanations and sources · JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm-story.json)
+- [All nine explanations and sources · text](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm-story.txt)
 
 ## Share images
-- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 68 branded image cards linked to their source pages.
+- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 77 branded image cards linked to their source pages.
 
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.

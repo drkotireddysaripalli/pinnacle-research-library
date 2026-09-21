@@ -1,10 +1,136 @@
 {
-  "title": "Pinnacle Paradigm Shift | One Child, One Connected Plan",
-  "description": "How PinnacleAI® connects ability measurement, a personal plan, everyday practice and progress review toward self-sufficiency and mainstream participation.",
+  "title": "Pinnacle Paradigm Shift | One Connected Care System",
+  "headline": "The outcome leads. The whole system follows.",
+  "description": "Nine perspectives on how PinnacleAI® connects measurement, plans, professional care, home practice and review, with original sources and a seven-stage pathway.",
   "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html",
   "updated": "2026-09-21",
   "publisher": "Bharath Healthcare Laboratories Private Limited",
   "sourceType": "Source-linked company explanation",
+  "perspectives": [
+    {
+      "number": 1,
+      "title": "You wanted the car. Not a box of parts.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/01-life-in-view.html",
+      "lead": "The shift is in the architecture: measurement, planning, professional care, home practice and review working as one connected system.",
+      "disconnected": "When each service operates separately, the family may be left to assemble the bigger plan.",
+      "connected": "PinnacleAI® connects measurement, a child-specific record, coordinated support, everyday practice and review around a direction for self-sufficiency and mainstream participation.",
+      "meaning": "The whole system needs a destination from the first conversation.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Separate reports. A shared starting point.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/02-shared-starting-point.html",
+      "lead": "A common ability framework gives each part of care a reference point for the same child.",
+      "disconnected": "When reports use separate reference points, their findings may be difficult to connect into shared priorities.",
+      "connected": "AbilityScore® brings Pinnacle's 17 domains, 79 abilities and 349 skills into a structured starting point for discussing priorities across care.",
+      "meaning": "A shared baseline helps connect decisions across the system.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "One child. One continuing record.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/03-plan-with-a-memory.html",
+      "lead": "Continuity needs a record that connects measurements, goals, context and responses across successive plans.",
+      "disconnected": "When each provider holds a separate plan, useful history may not inform the next recommendation.",
+      "connected": "The Personal Development Kernel retains the child's measurements, goals, environment and responses, giving subsequent recommendations a connected developmental history.",
+      "meaning": "The next plan can build on what the system already knows.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Many specialists. One shared direction.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/04-one-shared-direction.html",
+      "lead": "Expertise becomes a connected system when the people involved can work from shared goals and context.",
+      "disconnected": "If a handoff passes the child along without shared goals, coordination may depend on the family carrying every detail.",
+      "connected": "Pinnacle's model connects appropriate multidisciplinary therapies, parents, caregivers and educators around a child-specific plan, supported by professional judgement and human oversight.",
+      "meaning": "Each professional contribution can support the same developmental direction.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Beyond the session. A connected programme.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/05-practice-in-everyday-life.html",
+      "lead": "A connected programme carries agreed goals beyond the appointment, with practical guidance for the people supporting the child.",
+      "disconnected": "If the programme stops at the session door, home practice may lack a clear connection to the professional plan.",
+      "connected": "Everyday Therapy™ describes 7–9 selected daily techniques, connecting guided home practice with the child's abilities, goals and professional support.",
+      "meaning": "Home practice becomes a connected part of the programme.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Close the feedback loop. Review. Correct. Repeat.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/06-feedback-that-shapes-care.html",
+      "lead": "A system needs a way to bring observations back into decisions about activities, support and the next plan.",
+      "disconnected": "When observations remain in separate conversations or records, important feedback may never reach the next planning decision.",
+      "connected": "The Fusion Module links family and professional tracking with review and correction, helping the care team adjust activities or support.",
+      "meaning": "Feedback becomes an input to the next decision.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Tasks with a purpose. Participation in view.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/07-skills-with-a-purpose.html",
+      "lead": "Holding a pencil can be one target. Participating in a classroom activity gives that target a wider purpose.",
+      "disconnected": "If completing a task becomes the endpoint, the plan may miss how that ability supports participation.",
+      "connected": "Pinnacle's pathway connects selected skills with goals for communication, daily living, learning and participation across its readiness framework.",
+      "meaning": "The activity and its purpose belong in the same plan.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "A plan that evolves. Eight views to review.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/08-review-and-reassess.html",
+      "lead": "A connected system has a review cycle: compare the child's present abilities, reconsider priorities and explain what should change next.",
+      "disconnected": "Without scheduled reassessment, a plan may continue without a clear comparison of what has changed.",
+      "connected": "Pinnacle describes monthly reassessment, supported by eight report types: an overall AbilityScore® and seven readiness views for discussion and planning.",
+      "meaning": "The review feeds the next version of the plan.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/methodology.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Beyond more sessions. A direction for transition.",
+      "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/09-independence-and-belonging.html",
+      "lead": "A developmental system needs a direction for what comes next: school participation, growing independence and the support that makes them possible.",
+      "disconnected": "If session counts are the main measure, the direction for readiness, transition and continuing support may remain unclear.",
+      "connected": "Pinnacle's model uses readiness review to guide next steps toward school participation, self-sufficiency and mainstream inclusion, with appropriate continuing support.",
+      "meaning": "Readiness gives the plan a direction beyond the next appointment.",
+      "sources": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html"
+      ]
+    }
+  ],
+  "perspectiveNote": "Nine perspectives on the architecture supporting the seven-stage developmental approach.",
   "stages": [
     {
       "position": 1,
@@ -78,5 +204,5 @@
       "sourceHref": "/evidence/assurance-map.html"
     }
   ],
-  "citation": "Bharath Healthcare Laboratories Private Limited. (2026, September 21). Pinnacle Paradigm Shift: one child, one connected plan. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html"
+  "citation": "Bharath Healthcare Laboratories Private Limited. (2026-09-21). Pinnacle Paradigm Shift: one connected care system. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html"
 }

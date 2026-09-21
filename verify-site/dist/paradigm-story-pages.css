@@ -1,0 +1,29 @@
+.ps-reference-page{max-width:1100px;padding-bottom:48px}
+.ps-reference-page h1{max-width:23ch;font-size:clamp(32px,5vw,54px);line-height:1.15;margin:14px 0 20px}
+.ps-reference-intro{max-width:72ch;margin-bottom:28px}
+.ps-reference-intro .intro-copy{font-size:clamp(18px,2.3vw,23px);line-height:1.6}
+.ps-reference-position,.ps-reference-context,.ps-reference-art-note{color:#4c626e;font-size:14px;line-height:1.7}
+.ps-reference-layout{display:grid;gap:28px;align-items:start}
+.ps-reference-figure{margin:0;min-width:0}
+.ps-reference-poster{display:block;width:100%;max-width:432px;height:auto;margin-inline:auto;border:1px solid #d6e6e6;border-radius:14px}
+.ps-reference-figure figcaption{max-width:432px;margin:12px auto 0}
+.ps-reference-actions,.ps-reference-nav{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-block:20px}
+.ps-reference-actions a,.ps-reference-nav a{display:inline-flex;align-items:center;gap:7px;min-height:44px;color:#006d73}
+.ps-reference-comparison{min-width:0}
+.ps-reference-comparison h2,.ps-reference-sources h2,.ps-reference-context h2,.ps-reference-citation h2{font-size:22px;line-height:1.35}
+.ps-reference-comparison dl{margin:0;display:grid;gap:18px}
+.ps-reference-comparison dl>div{padding:20px;border:1px solid #c9dddf;border-radius:14px;background:#fff}
+.ps-reference-comparison dl>div:nth-child(2){border-color:#82bcbb;background:#f4faf9}
+.ps-reference-comparison dt{font-weight:700;color:#152953;font-size:16px;line-height:1.45}
+.ps-reference-comparison dd{margin:10px 0 0;font-size:18px;line-height:1.7;color:#294756}
+.ps-reference-meaning{padding:20px 0;color:#006d73;font-size:21px;font-weight:650;line-height:1.6}
+.ps-reference-sources{padding-top:10px}
+.ps-reference-sources ul{padding-left:20px;display:grid;gap:12px;line-height:1.6}
+.ps-reference-sources a{color:#006d73;text-underline-offset:3px}
+.ps-reference-source-note{font-size:15px;line-height:1.7;color:#405b67}
+.ps-reference-context,.ps-reference-citation{margin-top:30px;padding-top:24px;border-top:1px solid #d9e7e8}
+.ps-reference-citation p{line-height:1.75;overflow-wrap:anywhere}
+.ps-reference-nav{margin-top:28px;padding-top:18px;border-top:1px solid #d9e7e8;justify-content:space-between}
+.ps-reference-page a:focus-visible{outline:3px solid #007f86;outline-offset:4px}
+@media(min-width:800px){.ps-reference-layout{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:40px}}
+@media print{.ps-reference-layout{display:block}.ps-reference-poster{max-width:250px}.ps-reference-actions,.ps-reference-nav{display:none}.ps-reference-comparison dl>div{break-inside:avoid}}

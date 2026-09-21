@@ -15,6 +15,8 @@ const mark=id=>`<svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 2
 const sprite='<svg class="share-symbols" aria-hidden="true" width="0" height="0"><defs><symbol id="share-icon-wa" viewBox="0 0 24 24"><path d="M20 11.6a8 8 0 0 1-11.9 7L3 20l1.4-4.8A8 8 0 1 1 20 11.6Z"/><path d="M8.1 7.6c.3-.5.9-.1 1.1.4l.6 1.4c.2.4-.2.7-.5 1 .8 1.5 1.8 2.5 3.5 3.2.4-.5.8-1.3 1.3-1l1.6.8c.6.3.6.9.2 1.3-1.5 1.8-4.1.5-6.1-1.3-1.9-1.8-3.3-4.2-1.7-5.8Z"/></symbol><symbol id="share-icon-x" viewBox="0 0 24 24"><path d="m4 3 16 18M20 3 4 21M3 3h5l13 18h-5Z"/></symbol><symbol id="share-icon-link" viewBox="0 0 24 24"><path d="m9 15 6-6m-7 9-1 1a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m2 6a4 4 0 0 0 6 0l4-4a4 4 0 0 0-6-6l-1 1"/></symbol><symbol id="share-icon-more" viewBox="0 0 24 24"><path d="M12 16V3m-5 5 5-5 5 5M5 12v9h14v-9"/></symbol></defs></svg>';
 module.exports=function addSharing(html,page,records){
  const nodes=tree(html),edits=[],rows=[];
+ const managedSections=nodes.filter(n=>n.tag==='section'&&attr(n,'data-share-managed')==='true');
+ const withinManagedSection=(position,includeStart=false)=>managedSections.some(n=>(includeStart?position>=n.start:position>n.start)&&position<n.close);
  const guideLanguage=page.url.includes('/guides/')?(html.match(/<html lang="(te|hi)-IN"/)?.[1]||'en'):null;
  const guideCopy={en:{intro:'A source-linked parent guide: ',tail:' Read the guide and its evidence.',share:'Share',more:'More',copy:'Copy link',image:'Share image'},te:{intro:'తల్లిదండ్రుల కోసం: ',tail:' గైడ్‌తో పాటు ఆధారాలూ చదవండి.',share:'షేర్ చేయండి',more:'మరిన్ని',copy:'లింక్ కాపీ',image:'షేర్ చిత్రం'},hi:{intro:'माता-पिता के लिए: ',tail:' गाइड और उसके स्रोत पढ़ें।',share:'शेयर करें',more:'और विकल्प',copy:'लिंक कॉपी करें',image:'शेयर तस्वीर'}};
  const shareLabels=guideCopy[guideLanguage]||guideCopy.en;
@@ -25,6 +27,8 @@ module.exports=function addSharing(html,page,records){
  for(const b of sections){
   const node=b.kind==='page'?null:nodes.find(n=>attr(n,'id')===b.id);
   if(b.kind!=='page'&&!node?.end)continue;
+  // Components with their own share controls own both their section and descendants.
+  if(node&&withinManagedSection(node.start,true))continue;
   if(node?.tag==='details'&&/(?:^|\s)hfr-source-details(?:\s|$)/.test(attr(node,'class')||''))continue;
   // The connected story is shared as one sourced explanation, not as repeated UI labels.
   if(b.kind!=='page'&&b.id!=='pinnacle-paradigm-shift'&&node&&nodes.some(n=>attr(n,'id')==='pinnacle-paradigm-shift'&&n.start<node.start&&n.end>node.end))continue;
@@ -55,7 +59,8 @@ module.exports=function addSharing(html,page,records){
   else if(/(?:^|\s)(?:queue-item|lifecycle-scope)(?:\s|$)/.test(attr(node,'class')||'')){at=node.children.find(n=>n.tag==='div')?.end??node.end;}
   else if(node.children.some(n=>/(?:^|\s)stage-content(?:\s|$)/.test(attr(n,'class')||''))){at=node.children.find(n=>/(?:^|\s)stage-content(?:\s|$)/.test(attr(n,'class')||''))?.end??node.end;}
   else at=node.end;
-  if(at){edits.push({at,value:bar});rows.push({id:b.id,url,image,text:short,whatsapp:full,xLength:short.length+24});}
+  // A page-level share slot or H1 may also live inside a managed component.
+  if(at&&!withinManagedSection(at)){edits.push({at,value:bar});rows.push({id:b.id,url,image,text:short,whatsapp:full,xLength:short.length+24});}
  }
  edits.sort((a,b)=>b.at-a.at);for(const edit of edits)html=html.slice(0,edit.at)+edit.value+html.slice(edit.at);
  html=html.replace('</body>',sprite+'<p class="share-status" role="status" aria-live="polite"></p><dialog class="share-fallback" aria-labelledby="share-fallback-title"><h2 id="share-fallback-title">Copy this evidence link</h2><p>Select and copy the link below.</p><input readonly aria-label="Evidence link"><form method="dialog"><button>Close</button></form></dialog></body>');

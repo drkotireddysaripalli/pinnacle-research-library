@@ -874,15 +874,16 @@
   {
     "id": "pinnacle-paradigm-shift",
     "route": "/evidence/pinnacle-paradigm-shift.html",
-    "title": "Pinnacle Paradigm Shift",
+    "title": "The outcome leads. The whole system follows.",
     "lines": [
-      "One child.",
-      "One connected plan."
+      "The outcome leads.",
+      "The whole system follows."
     ],
     "category": "PINNACLE PARADIGM SHIFT",
-    "note": "A direction toward self-sufficiency and mainstream participation.",
+    "note": "Life goal. Connected care. Measured progress.",
     "icon": "network",
-    "description": "How measurement, people, practice and review connect around a child’s everyday life."
+    "description": "Start with the abilities a child needs for self-sufficiency and mainstream participation. Then connect every assessment, specialist, technique and review to that direction.",
+    "cover": "/images/paradigm/01-life-in-view-8594b22394ba.jpg"
   },
   {
     "id": "pinnacle-organisation-profile",
@@ -896,5 +897,131 @@
     "note": "Identity, documented approach, licences, research and dated figures.",
     "icon": "building-2",
     "description": "A source-linked first-party organisation profile for readers, journalists and reference editors."
+  },
+  {
+    "id": "paradigm-01-life-in-view",
+    "route": "/evidence/paradigm/01-life-in-view.html",
+    "title": "You wanted the car. Not a box of parts.",
+    "lines": [
+      "You wanted the car.",
+      "Not a box of parts."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 01 / 09",
+    "note": "One child-specific system connects care, practice and review.",
+    "icon": "network",
+    "description": "The shift is in the architecture: measurement, planning, professional care, home practice and review working as one connected system.",
+    "cover": "/images/paradigm/01-life-in-view-8594b22394ba.jpg"
+  },
+  {
+    "id": "paradigm-02-shared-starting-point",
+    "route": "/evidence/paradigm/02-shared-starting-point.html",
+    "title": "Separate reports. A shared starting point.",
+    "lines": [
+      "Separate reports.",
+      "A shared starting point."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 02 / 09",
+    "note": "AbilityScore® connects 17 domains, 79 abilities and 349 skills.",
+    "icon": "network",
+    "description": "A common ability framework gives each part of care a reference point for the same child.",
+    "cover": "/images/paradigm/02-shared-starting-point-4f572007f33a.jpg"
+  },
+  {
+    "id": "paradigm-03-plan-with-a-memory",
+    "route": "/evidence/paradigm/03-plan-with-a-memory.html",
+    "title": "One child. One continuing record.",
+    "lines": [
+      "One child.",
+      "One continuing record."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 03 / 09",
+    "note": "The Personal Development Kernel keeps history, goals and responses connected.",
+    "icon": "network",
+    "description": "Continuity needs a record that connects measurements, goals, context and responses across successive plans.",
+    "cover": "/images/paradigm/03-plan-with-a-memory-3c248c0ec099.jpg"
+  },
+  {
+    "id": "paradigm-04-one-shared-direction",
+    "route": "/evidence/paradigm/04-one-shared-direction.html",
+    "title": "Many specialists. One shared direction.",
+    "lines": [
+      "Many specialists.",
+      "One shared direction."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 04 / 09",
+    "note": "A coordinated team works from one child-specific direction.",
+    "icon": "network",
+    "description": "Expertise becomes a connected system when the people involved can work from shared goals and context.",
+    "cover": "/images/paradigm/04-one-shared-direction-ad93b45bb032.jpg"
+  },
+  {
+    "id": "paradigm-05-practice-in-everyday-life",
+    "route": "/evidence/paradigm/05-practice-in-everyday-life.html",
+    "title": "Beyond the session. A connected programme.",
+    "lines": [
+      "Beyond the session.",
+      "A connected programme."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 05 / 09",
+    "note": "Guided home practice connects 7–9 daily techniques with agreed goals.",
+    "icon": "network",
+    "description": "A connected programme carries agreed goals beyond the appointment, with practical guidance for the people supporting the child.",
+    "cover": "/images/paradigm/05-practice-in-everyday-life-5ea75a25ee85.jpg"
+  },
+  {
+    "id": "paradigm-06-feedback-that-shapes-care",
+    "route": "/evidence/paradigm/06-feedback-that-shapes-care.html",
+    "title": "Close the feedback loop. Review. Correct. Repeat.",
+    "lines": [
+      "Close the feedback loop.",
+      "Review. Correct. Repeat."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 06 / 09",
+    "note": "Fusion links feedback, professional review and plan correction.",
+    "icon": "network",
+    "description": "A system needs a way to bring observations back into decisions about activities, support and the next plan.",
+    "cover": "/images/paradigm/06-feedback-that-shapes-care-f45a208fa317.jpg"
+  },
+  {
+    "id": "paradigm-07-skills-with-a-purpose",
+    "route": "/evidence/paradigm/07-skills-with-a-purpose.html",
+    "title": "Tasks with a purpose. Participation in view.",
+    "lines": [
+      "Tasks with a purpose.",
+      "Participation in view."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 07 / 09",
+    "note": "Selected skills connect with functional goals across the readiness framework.",
+    "icon": "network",
+    "description": "Holding a pencil can be one target. Participating in a classroom activity gives that target a wider purpose.",
+    "cover": "/images/paradigm/07-skills-with-a-purpose-f4fa127eb3ab.jpg"
+  },
+  {
+    "id": "paradigm-08-review-and-reassess",
+    "route": "/evidence/paradigm/08-review-and-reassess.html",
+    "title": "A plan that evolves. Eight views to review.",
+    "lines": [
+      "A plan that evolves.",
+      "Eight views to review."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 08 / 09",
+    "note": "Monthly reassessment. AbilityScore® plus seven readiness views inform the next plan.",
+    "icon": "network",
+    "description": "A connected system has a review cycle: compare the child's present abilities, reconsider priorities and explain what should change next.",
+    "cover": "/images/paradigm/08-review-and-reassess-776d15839b59.jpg"
+  },
+  {
+    "id": "paradigm-09-independence-and-belonging",
+    "route": "/evidence/paradigm/09-independence-and-belonging.html",
+    "title": "Beyond more sessions. A direction for transition.",
+    "lines": [
+      "Beyond more sessions.",
+      "A direction for transition."
+    ],
+    "category": "PINNACLE PARADIGM SHIFT · 09 / 09",
+    "note": "Readiness guides the next step toward inclusion, with appropriate support.",
+    "icon": "network",
+    "description": "A developmental system needs a direction for what comes next: school participation, growing independence and the support that makes them possible.",
+    "cover": "/images/paradigm/09-independence-and-belonging-ea4c7492286b.jpg"
   }
 ]

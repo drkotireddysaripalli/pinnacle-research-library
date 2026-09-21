@@ -1,0 +1,113 @@
+{
+  "generated": "2026-09-21",
+  "cards": [
+    {
+      "id": "01-life-in-view",
+      "number": 1,
+      "artKey": "01",
+      "poster": "/images/paradigm/01-life-in-view-8594b22394ba.jpg",
+      "preview": "/images/paradigm/01-life-in-view-8594b22394ba-540.webp",
+      "art": "/images/paradigm/01-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 355943,
+      "previewBytes": 68770
+    },
+    {
+      "id": "02-shared-starting-point",
+      "number": 2,
+      "artKey": "02",
+      "poster": "/images/paradigm/02-shared-starting-point-4f572007f33a.jpg",
+      "preview": "/images/paradigm/02-shared-starting-point-4f572007f33a-540.webp",
+      "art": "/images/paradigm/02-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 382874,
+      "previewBytes": 74126
+    },
+    {
+      "id": "03-plan-with-a-memory",
+      "number": 3,
+      "artKey": "03",
+      "poster": "/images/paradigm/03-plan-with-a-memory-3c248c0ec099.jpg",
+      "preview": "/images/paradigm/03-plan-with-a-memory-3c248c0ec099-540.webp",
+      "art": "/images/paradigm/03-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 380080,
+      "previewBytes": 72740
+    },
+    {
+      "id": "04-one-shared-direction",
+      "number": 4,
+      "artKey": "04",
+      "poster": "/images/paradigm/04-one-shared-direction-ad93b45bb032.jpg",
+      "preview": "/images/paradigm/04-one-shared-direction-ad93b45bb032-540.webp",
+      "art": "/images/paradigm/04-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 364852,
+      "previewBytes": 69954
+    },
+    {
+      "id": "05-practice-in-everyday-life",
+      "number": 5,
+      "artKey": "05",
+      "poster": "/images/paradigm/05-practice-in-everyday-life-5ea75a25ee85.jpg",
+      "preview": "/images/paradigm/05-practice-in-everyday-life-5ea75a25ee85-540.webp",
+      "art": "/images/paradigm/05-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 361005,
+      "previewBytes": 69568
+    },
+    {
+      "id": "06-feedback-that-shapes-care",
+      "number": 6,
+      "artKey": "06",
+      "poster": "/images/paradigm/06-feedback-that-shapes-care-f45a208fa317.jpg",
+      "preview": "/images/paradigm/06-feedback-that-shapes-care-f45a208fa317-540.webp",
+      "art": "/images/paradigm/06-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 369177,
+      "previewBytes": 71734
+    },
+    {
+      "id": "07-skills-with-a-purpose",
+      "number": 7,
+      "artKey": "07",
+      "poster": "/images/paradigm/07-skills-with-a-purpose-f4fa127eb3ab.jpg",
+      "preview": "/images/paradigm/07-skills-with-a-purpose-f4fa127eb3ab-540.webp",
+      "art": "/images/paradigm/07-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 431562,
+      "previewBytes": 83694
+    },
+    {
+      "id": "08-review-and-reassess",
+      "number": 8,
+      "artKey": "08",
+      "poster": "/images/paradigm/08-review-and-reassess-776d15839b59.jpg",
+      "preview": "/images/paradigm/08-review-and-reassess-776d15839b59-540.webp",
+      "art": "/images/paradigm/08-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 417446,
+      "previewBytes": 82074
+    },
+    {
+      "id": "09-independence-and-belonging",
+      "number": 9,
+      "artKey": "09",
+      "poster": "/images/paradigm/09-independence-and-belonging-ea4c7492286b.jpg",
+      "preview": "/images/paradigm/09-independence-and-belonging-ea4c7492286b-540.webp",
+      "art": "/images/paradigm/09-art.webp",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 468994,
+      "previewBytes": 91224
+    }
+  ]
+}
