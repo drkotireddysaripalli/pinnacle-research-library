@@ -269,6 +269,7 @@ Source note: The older certificate uses a ₹100 crore threshold. General recogn
 Source citation: COR_DIPP8651.pdf, p1; Startup India list dated 3 November 2023, row 3630.
 Reviewed: 15 September 2026
 - [Read redacted certificate](https://pinnacle-verify.saripalli.chatgpt.site/evidence/dpiit.pdf)
+- [Official recognised-startups list · 3 Nov 2023](https://www.startupindia.gov.in/content/dam/invest-india/Templates/public/ListofStartups_03112023.pdf)
 - [Validate startup recognition](https://www.startupindia.gov.in/content/sih/en/startupgov/validate-startup-recognition.html)
 - [Current recognition rules](https://www.startupindia.gov.in/content/sih/en/startupgov/startup_recognition_page.html)
 
