@@ -66,6 +66,20 @@ const sitemapEntries=[...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/g)].map(m=>m[1
 const sitemapRoutes=sitemapEntries.map(entry=>decode(entry.match(/<loc>([^<]+)<\/loc>/)?.[1]||''));
 check(new Set(sitemapRoutes).size===sitemapRoutes.length,'Duplicate sitemap URLs');
 const htmlFiles=fs.readdirSync(dist,{recursive:true}).filter(p=>p.endsWith('.html'));
+// A standalone list may be valid while its WebPage points to an empty object.
+// Resolve the emitted relationship, not just the existence of a BreadcrumbList.
+for(const relative of htmlFiles){
+ const graph=pageAt(relative).graph;
+ for(const node of graph.filter(n=>n.breadcrumb!==undefined)){
+  const id=node.breadcrumb?.['@id'];
+  const lists=graph.filter(n=>n['@id']===id&&n['@type']==='BreadcrumbList');
+  check(typeof id==='string'&&id.length>0&&lists.length===1,relative+' breadcrumb resolves to exactly one identified BreadcrumbList');
+  if(lists.length===1){
+   const items=lists[0].itemListElement;
+   check(Array.isArray(items)&&items.length>0&&items.every((item,i)=>item['@type']==='ListItem'&&item.position===i+1&&item.name&&item.item),relative+' breadcrumb contains ordered, named destinations');
+  }
+ }
+}
 check(sitemapRoutes.length===htmlFiles.length,'Sitemap count differs from generated HTML count');
 check(cards.length===htmlFiles.length,'Share-card count differs from generated HTML count');
 // Inspect the bundles actually linked by generated pages, not stale asset files.

@@ -78,7 +78,11 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
   }));
   const sectionChildren=id=>sections.filter(b=>sectionParent.get(b.id)===id).map(b=>({'@id':b.url+'-element'}));
   page.hasPart=sectionChildren(null);
-  const crumbs=graph.find(x=>x['@type']==='BreadcrumbList');if(crumbs)page.breadcrumb={'@id':crumbs['@id']};
+  const crumbs=graph.find(x=>x['@type']==='BreadcrumbList');
+  if(crumbs){
+   if(!crumbs['@id'])throw Error('BreadcrumbList needs a stable @id before linking WebPage: '+url);
+   page.breadcrumb={'@id':crumbs['@id']};
+  }
   const faqPage=graph.find(x=>x['@type']==='FAQPage');
   if(faqPage){
    const faqSectionId=html.includes('id="quick-answers"')?'quick-answers':'questions';
