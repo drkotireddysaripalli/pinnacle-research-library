@@ -12,11 +12,11 @@
 @font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-kannada.woff2) format('woff2');unicode-range:U+0C80-0CFF}
 @font-face{font-family:'Pinnacle Anek';font-style:normal;font-weight:100 800;font-display:swap;src:url(/fonts/anek-malayalam.woff2) format('woff2');unicode-range:U+0D00-0D7F}
 :root{--reader-scale:1;font-size:calc(100% * var(--reader-scale))}
-body,button,input,select,textarea,h1,h2,h3,h4,h5,h6,.parent-guide,.guide-lang-nav a,.guide-languages a,.chapter-number,.source-preview,.world-intro h1{font-family:'Pinnacle Anek','Nirmala UI',system-ui,sans-serif!important;font-synthesis:none}
+body,button,input,select,textarea,h1,h2,h3,h4,h5,h6,.parent-guide,.guide-lang-nav a,.guide-languages a,.chapter-number,.source-preview,.world-intro h1{font-family:'Pinnacle Anek','Arial Narrow',Roboto,'Noto Sans','Nirmala UI',Arial,system-ui,sans-serif!important;font-synthesis:none}
 body{font-size:1.0625rem;font-weight:500;line-height:1.75;text-rendering:optimizeLegibility}
 h1,h2,h3,h4,.record-title,.chapter-heading strong{font-weight:750;letter-spacing:0}
 h1,h2,h3,h4{line-height:1.38}.world-intro h1{line-height:1.22;letter-spacing:-.015em}
-.parent-guide:lang(te) h1,.parent-guide:lang(hi) h1,.parent-guide:lang(te) h2,.parent-guide:lang(hi) h2{font-family:'Pinnacle Anek','Nirmala UI',system-ui,sans-serif!important;line-height:1.48}
+.parent-guide:lang(te) h1,.parent-guide:lang(hi) h1,.parent-guide:lang(te) h2,.parent-guide:lang(hi) h2{font-family:'Pinnacle Anek','Arial Narrow',Roboto,'Noto Sans','Nirmala UI',Arial,system-ui,sans-serif!important;line-height:1.48}
 .guide-section p,.guide-faq p{font-size:1.0625rem;line-height:1.85}.parent-guide .guide-answer{font-size:1.1875rem;line-height:1.85}
 .record-body p,.record-brief p,.scope-columns p,.record-conclusion p,.record-family p,.research-card p,.chapter-description{font-size:1rem;line-height:1.8}
 .record-citation,.provenance-note,.source-link,.guide-review,.guide-source-links,.research-links a{font-size:.9375rem;line-height:1.75}
@@ -29,7 +29,7 @@ h1,h2,h3,h4{line-height:1.38}.world-intro h1{line-height:1.22;letter-spacing:-.0
 .reader-language-bar label{font-weight:650;font-size:.9375rem}
 .reader-language-bar select{width:100%;min-width:0;font-size:1rem;line-height:1.5;font-weight:550;padding:8px 12px;min-height:48px;border-color:#90bfc4}
 /* The native selector's full option list should not fetch nine script fonts. */
-.reader-language-bar select,.reader-language-bar option{font-family:'Pinnacle Anek Latin','Nirmala UI',system-ui,sans-serif!important}
+.reader-language-bar select,.reader-language-bar option{font-family:'Pinnacle Anek Latin','Arial Narrow',Roboto,'Noto Sans','Nirmala UI',Arial,system-ui,sans-serif!important}
 .reader-language-bar [data-read-language]{font-size:1rem;line-height:1.5;padding:8px 15px;min-height:48px;white-space:nowrap}
 .reader-language-bar .reading-size{display:flex;align-items:center;gap:5px;align-self:center;white-space:nowrap;font-size:.9375rem}
 .reading-size button{display:inline-flex;align-items:center;justify-content:center;padding:6px 8px;min-width:43px;min-height:48px;border:1px solid #a5cbd0;border-radius:8px;background:white;color:#005f68;font-size:1rem;font-weight:600;cursor:pointer}

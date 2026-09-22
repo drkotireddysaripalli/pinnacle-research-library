@@ -10,7 +10,7 @@ for(const file of fs.readdirSync(dist,{recursive:true}).filter(p=>p.endsWith('.h
  const full=path.join(dist,file);let html=fs.readFileSync(full,'utf8'),added=false;
  const previousSymbols=new Map([...html.matchAll(/<symbol id="(truth-[^"]+)"[^>]*>([\s\S]*?)<\/symbol>/g)].map(m=>[m[1],m[2]]));
  html=html.replace(/<svg class="truth-symbols"[\s\S]*?<\/svg>/g,'').replace(/<use href="#(truth-[^"]+)"><\/use>/g,(all,id)=>previousSymbols.get(id)||all);
- html=html.replace(/<link rel="stylesheet" href="\/(styles|upgrade|evidence-design|impact|semantic|world|share|reader|experience|parent-guides|paradigm|paradigm-story|paradigm-story-pages)\.css">/g,()=>{if(added)return '';added=true;return `<link rel="stylesheet" href="${bundle}">`;});
+ html=html.replace(/<link rel="stylesheet" href="\/(?:_assets\/site\.[a-f0-9]{16}|styles|upgrade|evidence-design|impact|semantic|world|share|reader|experience|parent-guides|paradigm|paradigm-story|paradigm-story-pages)\.css">/g,()=>{if(added)return '';added=true;return `<link rel="stylesheet" href="${bundle}">`;});
  for(const [name,target]of Object.entries(js))html=html.replaceAll('src="/'+name+'"','src="'+target+'"');
  // One definition per icon retains the same artwork without repeating SVG paths.
  const symbols=new Map();html=html.replace(/<svg class="truth-icon([^"]*)"[^>]*>([\s\S]*?)<\/svg>/g,(all,extra,inner)=>{
