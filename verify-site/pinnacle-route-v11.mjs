@@ -192,6 +192,13 @@ export const CONTEXTUAL_EVIDENCE_RULES=[
 // Keep existing application responses intact outside the exact public allowlist.
 // This helper performs no network requests, Cache API operations, redirects or origin rewrites.
 const CONTEXT_MARKER='pinnacle-evidence-context';
+export const HOME_EVIDENCE_RULE={
+ id:'HOME-EVIDENCE-20260922',path:'/',
+ insertion:{selector:'.cm-pinnacle-services-equipment > .pltr > .cm-container',method:'append'},
+ panel:{compact:true,title:'Explore the evidence behind Pinnacle',
+  description:'Read the licences, research, dated operating figures and centre records behind Pinnacle Blooms Network and PinnacleAI®.',
+  primaryLabel:'Explore Pinnacle Verify',primaryUrl:PUBLIC+'/'}
+};
 const CONTEXT_BODY_LIMIT=2*1024*1024;
 const escapeContext=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const hasRobotsExclusion=value=>/\b(?:noindex|none)\b/i.test(value||'');
@@ -202,7 +209,7 @@ export function contextualEvidenceRule(request,rules=CONTEXTUAL_EVIDENCE_RULES){
  if(request.method!=='GET'||!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(url.hostname))return null;
  if(request.headers.has('authorization')||request.headers.has('range')||/\bno-transform\b/i.test(request.headers.get('cache-control')||''))return null;
  // A single trailing slash is the only tolerated path variant. Prefix matches never receive content.
- const pathname=url.pathname.endsWith('/')?url.pathname.slice(0,-1):url.pathname;
+ const pathname=url.pathname!=='/'&&url.pathname.endsWith('/')?url.pathname.slice(0,-1):url.pathname;
  return rules.find(rule=>rule.path===pathname)||null;
 }
 
@@ -216,6 +223,10 @@ export function canTransformContextResponse(response){
 
 export function contextualEvidencePanel(rule){
  const p=rule.panel;
+ if(p.compact)return '<aside id="'+CONTEXT_MARKER+'" aria-labelledby="pinnacle-evidence-context-title" style="clear:both;box-sizing:border-box;width:100%;max-width:832px;margin:1.5rem auto;padding:1.25rem;border:1px solid #b8dad5;border-radius:12px;background:#fff;color:#143347;text-align:center;line-height:1.6">'
+  +'<h2 id="pinnacle-evidence-context-title" style="margin:0 0 .6rem;font-size:1.35rem;line-height:1.3;color:#143347">'+escapeContext(p.title)+'</h2>'
+  +'<p style="margin:0 auto .8rem;max-width:65ch;font-size:1rem">'+escapeContext(p.description)+'</p>'
+  +'<a href="'+escapeContext(p.primaryUrl)+'" style="display:inline-block;box-sizing:border-box;max-width:100%;padding:.6rem 1rem;border:1px solid #087f8c;border-radius:6px;color:#056678;font-size:1rem;font-weight:700;text-decoration:underline;text-underline-offset:.15em">'+escapeContext(p.primaryLabel)+'</a></aside>';
  const note=p.contextNote?'<p style="margin:.75rem 0 0">'+escapeContext(p.contextNote)+'</p>':'';
  // Inline styles are presentation only: content and its ordinary link remain readable if a future CSP blocks them.
  return '<aside id="'+CONTEXT_MARKER+'" class="pinnacle-evidence-context" aria-labelledby="pinnacle-evidence-context-title" style="margin:1.25rem 0;padding:1.15rem;border:1px solid #b8dad5;border-inline-start:4px solid #087f8c;border-radius:12px;background:#fff;color:#143347;font:inherit;line-height:1.6">'
@@ -304,7 +315,8 @@ export default {
   if(incoming.hostname==='www.pinnacleblooms.org'&&(incoming.pathname==='/abilityscore'||incoming.pathname==='/abilityscore/'))return transformContextualEvidence(request,await fetch(request));
   if(incoming.hostname!=='www.pinnacleblooms.org')return fetch(request);
   if(incoming.pathname==='/'){
-   const response=await fetch(request);if(!['GET','HEAD'].includes(request.method)||response.status!==200||!response.headers.get('content-type')?.includes('text/html'))return response;
+   const original=await fetch(request);if(!['GET','HEAD'].includes(request.method)||original.status!==200||!original.headers.get('content-type')?.includes('text/html'))return original;
+   const response=await transformContextualEvidence(request,original,globalThis.HTMLRewriter,[HOME_EVIDENCE_RULE]);
    const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])h.delete(k);
    if(!h.get('cache-control')?.match(/private|no-store/i)&&!h.has('set-cookie'))h.set('cache-control','public, max-age=60');
    if(request.method==='HEAD')return new Response(null,{status:200,headers:h});
