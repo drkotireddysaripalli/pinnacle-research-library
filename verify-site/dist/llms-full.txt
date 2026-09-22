@@ -2742,11 +2742,75 @@ Communicating. Learning. Making choices. Taking part. Let the life your child is
 
 [Talk to Pinnacle about your child](tel:+919100181181) · [Explore an AbilityScore® report](https://www.pinnacleblooms.org/verify/#report-explorer)
 
-## The principle
+## The outcome belongs at the beginning.
 
-The Moon was the mission. The rocket was the means. The destination determined the engineering, people and preparation. At Pinnacle, the purpose is the child’s self-sufficient, mainstream life. That purpose guides the abilities, goals, techniques and support brought into the work.
+More assessments. More techniques. More sessions. What life are we building for the child?
 
-Pinnacle’s AbilityScore® monograph names its historical challenge: [160 Years Without a Unified Metric](https://doi.org/10.5281/zenodo.19482123).
+### 160 years — Pinnacle’s historical challenge
+
+160 Years Without a Unified Metric — Pinnacle’s AbilityScore® monograph
+
+A history of measuring separate developmental dimensions raises a larger question: how do the findings guide the child’s whole life?
+
+A technique can improve a task while its contribution to everyday participation remains unclear. Pinnacle challenges making the method the starting point and leaving the life question until later.
+
+Source: https://doi.org/10.5281/zenodo.19482123
+
+### Independently documented care gaps
+
+2023 · WHO and UNICEF
+The global report identifies unmet needs, fragmented and underfunded systems, waiting lists and exclusion. It calls for people-centred services and support for caregivers.
+Source: https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities
+
+2001 · Functioning becomes an international reference
+WHO Member States endorse ICF, a framework addressing functioning, disability and environmental context.
+Source: https://www.who.int/classifications/international-classification-of-functioning-disability-and-health
+
+2006 · Independence and inclusion are explicit rights
+The UN adopts the CRPD. Article 26 connects habilitation and rehabilitation with independence, inclusion and participation.
+Source: https://treaties.un.org/Pages/ViewDetails.aspx?chapter=4&mtdsg_no=IV-15&src=IND
+
+2023 · The delivery gap remains
+WHO and UNICEF report fragmented systems and unmet needs, and call for people-centred services and caregiver support.
+Source: https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities
+
+The 160-year framing is the monograph’s historical thesis. It is not a finding that every provider failed throughout that period. WHO–UNICEF documents care gaps; it does not endorse PinnacleAI® or establish comparative superiority.
+
+### Change where the work begins
+
+Two orders of decision-making. They explain the approach Pinnacle challenges and the approach it intends to implement; provider practices vary.
+
+When the method comes first:
+1. Choose a method or speciality
+2. Set exercises within that method
+3. Record performance on those tasks
+4. Ask what it adds up to in the child’s life
+
+PinnacleAI® — life first:
+1. Name the child’s meaningful life priorities
+2. Understand the abilities and support they require
+3. Set observable goals; select the methods and people
+4. Review everyday use; adapt the work to the child
+
+Your child’s life decides the work. PinnacleAI® starts there.
+
+### The Moon was the mission. The rocket was the means.
+
+The destination determined the engineering, the people and the preparation. At Pinnacle, a self-sufficient, mainstream life for your child. That purpose guides the work.
+
+### A skill matters through what it makes possible
+
+Holding a pencil → Taking part in learning
+
+Using a word → Asking, choosing, saying “stop”
+
+Taking a step → Reaching somewhere the child wants to go
+
+AbilityScore® informs the starting picture. Goals identify what to work on. The child-specific Personal Development Kernel connects that picture with the programme and feedback. People practise, observe and review; the next decision returns to what matters in the child’s life.
+
+### See the philosophy inside the work
+
+“Help.” “More.” “Stop.” A child’s voice becomes the goal. Follow one life ability into a measurable goal, the activities selected for it, family practice and what the team would record for review.
 
 ## See what the session is for. Before it begins.
 
@@ -4015,7 +4079,7 @@ The company describes a seven-stage developmental pathway connecting measurement
 
 ## Main page sections
 - [Your child’s life is the mission. PinnacleAI® puts it first.](https://pinnacle-verify.saripalli.chatgpt.site/#section-your-child-s-life-is-the-mission-pinnacleai-puts-it-first): Because every child deserves a wonderful life.
-- [Your child’s life is the mission. PinnacleAI® puts it first.](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-paradigm-story): A self-sufficient, mainstream life for your child.
+- [The outcome belongs at the beginning.](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-paradigm-story): When the work begins with a technique, families can be left to connect the parts to the life they want for their child.
 - [Built at scale. Focused on your child.](https://pinnacle-verify.saripalli.chatgpt.site/#scale-for-every-child): Behind every number is the same purpose: helping a family understand their child’s abilities and plan what comes next. Explore the scale of the system—and the source behind each figure.
 - [The parts matter. So does how they work together.](https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-paradigm-shift): A shared direction toward self-sufficiency, mainstream participation and a wonderful life.
 - [See how one observation can inform the next step.](https://pinnacle-verify.saripalli.chatgpt.site/#experience): Explore the documented process through an illustrative family scenario. This guide uses no child data and does not perform an assessment.

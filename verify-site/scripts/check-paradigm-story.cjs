@@ -109,7 +109,8 @@ async function main(){
  if(intro){
   const inside=homePage.descendants(intro);
   check(intro.attrs['data-share-managed']==='true','Homepage introduction owns its sharing');
-  check(homePage.text(intro).includes(plain(approved.headline)),'Homepage approved mission-first headline');
+  check(homePage.text(intro).includes('The outcome belongs at the beginning.'),'Homepage establishes the decision-order reversal');
+  check(homePage.text(intro).includes('160 Years Without a Unified Metric')&&homePage.text(intro).includes('Pinnacle’s AbilityScore® monograph'),'Homepage historical framing retains its author attribution');
   check(!inside.some(n=>n.attrs['data-story-card']),'Homepage does not duplicate the retired nine-card carousel');
   for(const card of data.cards)for(const suffix of ['', '-title'])check(homePage.ids.has('paradigm-story-card-'+card.id+suffix),'Homepage legacy anchor '+card.id+suffix);
   for(const href of [overview,overview+'#documented-example'])check(inside.some(n=>n.tag==='a'&&n.attrs.href===href),'Homepage story/example destination '+href);
@@ -117,6 +118,13 @@ async function main(){
   const img=inside.find(n=>n.tag==='img');check(img?.attrs.src==='/images/paradigm-finale/moon-600.webp'&&img.attrs.loading==='lazy','Homepage deferred Moon illustration');
  }
  check(approved.cards.length===18&&published.perspectives?.length===18,'Eighteen approved and exported finale perspectives');
+ const thesis=require('../content/paradigm-finale/paradigm-thesis.cjs').data;
+ const historyNode=finale.ids.get('history-and-purpose'),reversalNode=finale.ids.get('change-the-starting-point');
+ check(historyNode&&reversalNode&&historyNode.start<reversalNode.start&&reversalNode.start<finale.ids.get('documented-example')?.start,'Historical challenge and reversal precede the session demonstration');
+ check(JSON.stringify(published.historicalChallenge)===JSON.stringify(thesis),'Machine-readable historical thesis and decision models match the authored source');
+ for(const step of [...thesis.methodFirst,...thesis.lifeFirst])check(reversalNode&&finale.text(reversalNode).includes(plain(step)),'Visible decision step: '+step);
+ check(historyNode&&finale.text(historyNode).includes(plain(thesis.sourceBoundary)),'Historical source scope is available beside the challenge');
+ for(const milestone of thesis.milestones)check(finale.text(historyNode).includes(plain(milestone.text))&&read('evidence/pinnacle-paradigm-shift.txt').includes(milestone.url),'Historical chronology is visible and exported: '+milestone.year);
  const chapters=finale.nodes.filter(n=>n.tag==='article'&&hasClass(n,'chapter'));
  check(chapters.length===18,'Eighteen indexable finale chapters');
  check(finale.ids.get('complete-story')?.tag==='details','Full story remains available through native disclosure');

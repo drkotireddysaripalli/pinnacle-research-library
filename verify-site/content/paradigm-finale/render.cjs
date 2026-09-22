@@ -5,6 +5,7 @@ const decision=require('./decision-story.cjs');
 const foundation=require('./institution-foundation.cjs');
 const documented=require('./documented-example.cjs');
 const goalExample=require('./goal-session-example.cjs');
+const thesis=require('./paradigm-thesis.cjs');
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'assets/manifest.json'),'utf8'));
 const e=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const line=s=>e(s).replace(/\n/g,'<br>');
@@ -42,14 +43,14 @@ function card(c,i){const group=acts.find(a=>a.id===c.act),next=cards[i+1],prev=c
 const chapterLabels=['The shift','Your child','Daily practice','Life & progress'];
 const cardHtml=cards.map(card).join('');
 const browserData=JSON.stringify(cards.map(c=>({number:c.number,id:c.id,act:c.act,title:c.title,share:share(c)}))).replace(/</g,'\\u003c');
-const css=fs.readFileSync(path.join(root,'finale.css'),'utf8')+'\n'+decision.styles+'\n'+foundation.styles+'\n'+documented.styles+'\n'+goalExample.styles+'\n'+fs.readFileSync(path.join(root,'reading-route.css'),'utf8');
+const css=fs.readFileSync(path.join(root,'finale.css'),'utf8')+'\n'+decision.styles+'\n'+foundation.styles+'\n'+documented.styles+'\n'+goalExample.styles+'\n'+thesis.styles+'\n'+fs.readFileSync(path.join(root,'reading-route.css'),'utf8');
 const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="description" content="The PinnacleAI® paradigm shift: begin with a child’s self-sufficient, mainstream life, then choose the abilities, goals, practice and review that serve it."><meta name="theme-color" content="#007f87"><title>PinnacleAI® Paradigm Shift — Life is the mission</title><link rel="icon" href="assets/favicon.png"><link rel="preload" href="assets/anek-latin.woff2" as="font" type="font/woff2" crossorigin><style>${css}</style></head><body>
 <a class="skip" href="#story">Skip to the full story</a>
 <header class="site-header wrap">${header()}<a class="evidence-link" href="${base}" target="_blank" rel="noopener">${icon('shield')} Evidence portal ↗</a></header>
 <main>
 <section class="hero wrap" id="top"><div class="hero-title"><p class="eyebrow">${e(F.heroEyebrow)}</p><h1>${e(F.heroTitle.split("\n")[0])}<br><em>${e(F.heroTitle.split("\n").slice(1).join(" "))}</em></h1></div><div class="hero-image">${image('hero','Illustrative scene of a child and mother welcomed into school life.',true)}<span class="image-word">A life of possibilities.</span></div><div class="hero-copy"><p class="hero-purpose">${e(F.heroPurpose)}</p><p>${e(F.heroSupport)}</p><div class="actions"><a class="button primary" href="#overview">See the paradigm shift ${icon('arrow')}</a>${cta(F.parentCTA,'button secondary')}</div><p class="small">PinnacleAI® · Non-diagnostic developmental support · Ages 0–12</p></div></section>
-<nav class="main-route wrap" aria-label="Choose your reading route"><a href="#overview"><span>01</span> The principle</a><a href="#documented-example"><span>02</span> Inside a session</a><a href="#institutional-foundation"><span>03</span> The institution</a><a href="#complete-story"><span>04</span> The full story</a></nav>
-<section class="overview wrap short-principle" id="overview"><div class="mission-split"><div class="feature-image">${image('moon','A rocket follows a luminous route toward the Moon.')}</div><div class="feature-copy"><p class="eyebrow">The PinnacleAI® paradigm shift</p><h2>The Moon was the mission.<br><em>The rocket was the means.</em></h2><p>The destination determined the engineering, the people and the preparation.</p><p><strong>At Pinnacle, the purpose is your child’s self-sufficient, mainstream life.</strong> That purpose guides the abilities, goals, techniques and support brought into the work.</p><p class="principle-line">Life sets the direction. Therapy serves the purpose.</p></div></div><div class="historical-question"><div><span class="eyebrow">The question that must be answered</span><h3>After the sessions and reports,<br>what is becoming possible in life?</h3></div><p>Pinnacle’s AbilityScore® monograph names its historical challenge: <a href="#the-historical-challenge">“160 Years Without a Unified Metric.”</a> The next example shows how a life ability shapes a written goal and the activities selected for a session.</p></div></section>
+<nav class="main-route wrap" aria-label="Choose your reading route"><a href="#overview"><span>01</span> Why the shift</a><a href="#documented-example"><span>02</span> See it in practice</a><a href="#institutional-foundation"><span>03</span> Examine the evidence</a><a href="#complete-story"><span>04</span> The full story</a></nav>
+${thesis.markup}
 ${goalExample.markup}
 <details class="report-source-reader wrap" id="report-source-reader"><summary>Also explore a supplied assessment report: one priority, four professional contributions <span aria-hidden="true">+</span></summary>${documented.markup.replace('id="documented-example"','id="documented-report"')}</details>
 ${foundation.markup}

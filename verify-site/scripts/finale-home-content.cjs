@@ -1,73 +1,89 @@
 'use strict';
 
-// Compact homepage introduction. The complete campaign has its own public page.
+// The homepage establishes the argument; the complete campaign carries its depth.
 const legacyStory = require('../content/paradigm-story.json');
 const route = '/evidence/pinnacle-paradigm-shift.html';
 const publicRoute = 'https://www.pinnacleblooms.org/verify' + route;
 
 module.exports = ({e, icon}) => {
-  // Compatibility anchors keep previously shared homepage fragments useful.
-  // They identify the updated introduction; the original reference pages remain available.
-  const oldIds = ['section-your-child-s-path-toward-self-sufficiency-and-mainstream-life','block-about-the-story-and-its-evidence',...Array.from({length:9},(_,i)=>['block-read-the-card','block-card-sources'].map(x=>x+(i?'-'+(i+1):''))).flat(),'paradigm-story-track', ...legacyStory.cards.flatMap(card => [
-    'paradigm-story-card-' + card.id,
-    'paradigm-story-card-' + card.id + '-title'
-  ])];
+  // Compatibility anchors preserve earlier authored and automatically generated links.
+  const oldIds = ['section-your-child-s-path-toward-self-sufficiency-and-mainstream-life', 'block-about-the-story-and-its-evidence',
+    ...Array.from({length:9}, (_,i) => ['block-read-the-card', 'block-card-sources'].map(x => x + (i ? '-' + (i+1) : ''))).flat(),
+    'paradigm-story-track', ...legacyStory.cards.flatMap(card => [
+      'paradigm-story-card-' + card.id,
+      'paradigm-story-card-' + card.id + '-title'
+    ])];
   const compatibility = oldIds.map(id => `<span class="finale-home-compat" id="${e(id)}" aria-hidden="true"></span>`).join('');
-  const share = 'PinnacleAI® begins with the life a child is growing toward: self-sufficiency and mainstream participation. See how that purpose shapes goals, practice and review, with an anonymised supplied session example and source records.\n\n' + publicRoute;
+  const model = (kind, title, steps) => `<div class="finale-home-model finale-home-${kind}"><h3>${e(title)}</h3><ol>${steps.map((step,i) => `<li><span class="finale-home-step-number" aria-hidden="true">${i+1}</span><span>${e(step)}</span></li>`).join('')}</ol></div>`;
+  const share = 'The outcome belongs at the beginning. PinnacleAI® starts with the child’s self-sufficient, mainstream life, then selects abilities, goals, methods and support to serve it. Explore the historical challenge, the reversal in starting order, a supplied planning example and original sources.\n\n' + publicRoute;
   const html = `<section class="finale-home wrap" id="pinnacle-paradigm-story" data-share-managed="true" aria-labelledby="paradigm-story-heading">
 ${compatibility}
 <div class="finale-home-frame">
-  <header class="finale-home-heading"><p class="finale-home-eyebrow">PinnacleAI® Paradigm Shift</p><h2 id="paradigm-story-heading">Your child’s life is the mission.<br><em>PinnacleAI® puts it first.</em></h2></header>
-  <figure class="finale-home-visual"><img src="/images/paradigm-finale/moon-600.webp" width="600" height="400" loading="lazy" decoding="async" alt="Illustrated rocket and a luminous route toward the Moon."><figcaption>The Moon was the mission.<br><strong>The rocket was the means.</strong></figcaption></figure>
-  <div class="finale-home-copy"><p class="finale-home-purpose">A self-sufficient, mainstream life for your child.</p><p>That purpose comes first at Pinnacle. It guides which abilities to build, which goals to set, and which techniques, people and practice to bring into the work.</p><p class="finale-home-thesis">Life sets the direction.<br>Therapy serves the purpose.</p><div class="finale-home-actions"><a class="finale-home-primary" href="${route}">Explore the full story ${icon('arrow-up-right')}</a><a class="finale-home-secondary" href="${route}#documented-example">See a goal become a session ${icon('file-search')}</a></div></div>
-  <div class="finale-home-example"><div class="finale-home-example-heading"><h3>See what the session is for.<br>Before it begins.</h3><p>Inside one supplied planning example:</p></div><ul class="finale-home-facts"><li><a href="${route}#documented-example"><strong>7</strong><span>supplied goals</span></a></li><li><a href="${route}#session-timeline"><strong>6</strong><span>activities linked to 3 goals</span></a></li><li><a href="${route}#session-timeline"><strong>40 <small>+ 5 min</small></strong><span>planned therapy + family handover</span></a></li></ul><p class="finale-home-example-note">Anonymised planning excerpts. Targets and activities show the proposed work; they are not completed-session results.</p></div>
-  <div class="finale-home-foot"><p>Pinnacle’s AbilityScore® monograph frames its historical challenge as <a href="/evidence/publications/zenodo-19482123.html">“160 Years Without a Unified Metric.”</a> Explore the thesis, the approach and their sources.</p><a class="finale-home-share" href="https://wa.me/?text=${e(encodeURIComponent(share))}" target="_blank" rel="noopener noreferrer" aria-label="Share the PinnacleAI paradigm shift on WhatsApp">Share on WhatsApp ${icon('arrow-up-right')}</a></div>
+  <div class="finale-home-history"><p class="finale-home-eyebrow">PinnacleAI® Paradigm Shift</p><a href="/evidence/publications/zenodo-19482123.html"><strong>“160 Years Without a Unified Metric”</strong><span>The historical challenge in Pinnacle’s AbilityScore® monograph ${icon('arrow-up-right')}</span></a></div>
+  <header class="finale-home-heading"><h2 id="paradigm-story-heading">The outcome belongs<br><em>at the beginning.</em></h2><p>When the work begins with a technique, families can be left to connect the parts to the life they want for their child.</p><p class="finale-home-family-question">“After all these sessions, what is becoming possible in my child’s life?”</p></header>
+  <div class="finale-home-models" aria-label="Two decision models: the change in starting order">
+    ${model('method', 'Method-first decision model', ['Choose a specialty or technique', 'Set its exercises and sessions', 'Record task performance', 'Ask how it adds up to life'])}
+    ${model('life', 'PinnacleAI®: life first', ['Start with self-sufficiency and participation', 'Measure abilities. Identify priorities.', 'Choose goals, methods and people', 'Review everyday use. Adapt the work.'])}
+  </div>
+  <p class="finale-home-model-note">These paths illustrate different starting orders; individual care models vary.</p>
+  <div class="finale-home-application"><figure class="finale-home-visual"><img src="/images/paradigm-finale/moon-600.webp" width="600" height="400" loading="lazy" decoding="async" alt="Illustrated rocket following a luminous route toward the Moon."><figcaption>The Moon was the mission.<br><strong>The rocket was the means.</strong></figcaption></figure><div class="finale-home-life-example"><p class="finale-home-eyebrow">Life sets the direction. Therapy serves the purpose.</p><h3>From completing a task<br>to using an ability.</h3><a class="finale-home-example-link" href="${route}#documented-example">Help. More. Stop. ${icon('arrow-up-right')}</a><p>A way to ask. A choice that is heard. See how a life ability shapes a written goal, the practice selected and what to review.</p><span class="finale-home-example-label">Explore an anonymised supplied planning example.</span></div></div>
+  <div class="finale-home-close"><div><strong>A self-sufficient, mainstream life for your child.</strong><span>The purpose at Pinnacle. The starting point for PinnacleAI®.</span></div><a class="finale-home-primary" href="${route}">See the paradigm shift ${icon('arrow-up-right')}</a></div>
+  <div class="finale-home-foot"><a href="${route}#the-historical-challenge">Read the historical argument and its sources ${icon('file-search')}</a><a class="finale-home-share" href="https://wa.me/?text=${e(encodeURIComponent(share))}" target="_blank" rel="noopener noreferrer" aria-label="Share the PinnacleAI paradigm shift on WhatsApp">Share on WhatsApp ${icon('arrow-up-right')}</a></div>
 </div></section>`;
 
   const css = `
-.finale-home{position:relative;padding-block:22px 36px;color:#14204d}
+.finale-home .section-permalink{display:none}
+.finale-home{position:relative;padding-block:20px 34px;color:#14204d}
 .finale-home .finale-home-compat{position:absolute;top:0;left:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.finale-home .finale-home-frame{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:20px 38px;padding:36px;border:1px solid #cce2e3;border-radius:24px;background:#fff;box-shadow:0 12px 34px rgb(20 32 77 / 4%)}
-.finale-home .finale-home-heading{grid-column:1/-1;max-width:950px}
-.finale-home .finale-home-eyebrow{margin:0 0 13px;color:#007d83;font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
-.finale-home .finale-home-heading h2{margin:0;font-size:clamp(30px,3.4vw,46px);font-weight:750;line-height:1.12;letter-spacing:-.025em;color:#14204d}
+.finale-home .finale-home-frame{padding:35px 38px 18px;border:1px solid #cbdfe2;border-radius:23px;background:#fff;box-shadow:0 12px 32px rgb(20 32 77 / 4%)}
+.finale-home .finale-home-eyebrow{margin:0 0 10px;color:#007d83;font-size:11px;font-weight:750;line-height:1.5;letter-spacing:.095em;text-transform:uppercase}
+.finale-home .finale-home-history{padding-bottom:23px;border-bottom:1px solid #dce8e9}
+.finale-home .finale-home-history a{display:inline-flex;flex-direction:column;gap:7px;text-decoration:none;color:#14204d}
+.finale-home .finale-home-history strong{font-size:clamp(23px,2.5vw,31px);line-height:1.2;font-weight:750;letter-spacing:-.02em;color:#bc234c}
+.finale-home .finale-home-history a>span{display:flex;align-items:center;gap:7px;font-size:13px;line-height:1.5;color:#496371}
+.finale-home .finale-home-heading{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:13px 34px;padding-top:27px}
+.finale-home .finale-home-heading h2{grid-row:1/3;margin:0;font-size:clamp(33px,4vw,50px);font-weight:750;line-height:1.07;letter-spacing:-.035em;color:#14204d}
 .finale-home .finale-home-heading em{font-style:normal;color:#007d83}
-.finale-home .finale-home-visual{margin:0;align-self:center;min-width:0}
-.finale-home .finale-home-visual img{display:block;width:100%;height:auto;max-height:310px;object-fit:contain}
-.finale-home .finale-home-visual figcaption{text-align:center;color:#496371;font-size:17px;line-height:1.45;margin-top:3px}
+.finale-home .finale-home-heading>p{margin:0;font-size:17px;line-height:1.6;color:#496371}
+.finale-home .finale-home-heading .finale-home-family-question{font-size:19px;line-height:1.45;font-weight:650;color:#14204d}
+.finale-home .finale-home-models{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:26px}
+.finale-home .finale-home-model{border:1px solid #e4d5db;border-radius:13px;overflow:hidden;background:#fff}
+.finale-home .finale-home-model h3{margin:0;padding:15px 20px;font-size:18px;font-weight:750;line-height:1.3;letter-spacing:-.01em;color:#a72c4a;background:#fcf6f8;border-bottom:1px solid #eadde2}
+.finale-home .finale-home-model ol{list-style:none;margin:0;padding:8px 20px 10px;display:grid;gap:0}
+.finale-home .finale-home-model li{position:relative;display:flex;align-items:center;gap:13px;min-height:57px;padding:9px 0;margin:0;font-size:17px;font-weight:600;line-height:1.35;color:#496371}
+.finale-home .finale-home-model li+li{border-top:1px solid #edf0f1}
+.finale-home .finale-home-step-number{display:grid;place-items:center;flex:0 0 27px;height:27px;border:1px solid #dce1e4;border-radius:50%;font-size:12px;font-weight:650;color:#647580;background:#fff}
+.finale-home .finale-home-life{border-color:#a9ced0;background:#f8fcfb}
+.finale-home .finale-home-life h3{background:#eaf6f3;border-color:#c7e2df;color:#006e73}
+.finale-home .finale-home-life li{color:#14204d}
+.finale-home .finale-home-life .finale-home-step-number{background:#007d83;color:#fff;border-color:#007d83}
+.finale-home .finale-home-model-note{margin:10px 0 0;font-size:12px;line-height:1.5;color:#5c6c79}
+.finale-home .finale-home-application{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:30px;align-items:center;padding:24px 0 27px;margin-top:13px;border-top:1px solid #dce8e9}
+.finale-home .finale-home-visual{margin:0;min-width:0}
+.finale-home .finale-home-visual img{display:block;width:100%;max-height:193px;height:auto;object-fit:contain}
+.finale-home .finale-home-visual figcaption{margin-top:0;text-align:center;font-size:15px;line-height:1.5;color:#496371}
 .finale-home .finale-home-visual strong{color:#14204d;font-weight:700}
-.finale-home .finale-home-copy{align-self:center;min-width:0}
-.finale-home .finale-home-copy p{font-size:18px;line-height:1.6;margin:0 0 18px;color:#496371}
-.finale-home .finale-home-copy .finale-home-purpose{font-size:23px;line-height:1.3;font-weight:700;color:#14204d}
-.finale-home .finale-home-copy .finale-home-thesis{font-size:25px;line-height:1.2;font-weight:750;letter-spacing:-.015em;color:#007d83;margin-block:22px}
-.finale-home .finale-home-actions{display:flex;flex-wrap:wrap;gap:8px 15px;align-items:center}
-.finale-home .finale-home-actions a{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;font-size:16px;font-weight:650;line-height:1.3;text-decoration:none}
-.finale-home .finale-home-primary{padding:12px 17px;border:1px solid #007d83;border-radius:9px;color:#fff;background:#007d83}
-.finale-home .finale-home-primary:hover{background:#00656c}
-.finale-home .finale-home-secondary{color:#006c73;padding-block:8px}
-.finale-home .finale-home-secondary:hover{text-decoration:underline}
-.finale-home .finale-home-actions svg,.finale-home .finale-home-share svg{flex:0 0 18px;width:18px;height:18px}
-.finale-home .finale-home-example{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.6fr);gap:18px 24px;padding-top:26px;margin-top:6px;border-top:1px solid #d6e6e8}
-.finale-home .finale-home-example-heading h3{margin:0 0 9px;font-size:23px;line-height:1.2;color:#14204d;font-weight:700;letter-spacing:-.015em}
-.finale-home .finale-home-example-heading p{margin:0;font-size:15px;line-height:1.5;color:#496371}
-.finale-home .finale-home-facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;min-width:0}
-.finale-home .finale-home-facts li{margin:0;min-width:0}
-.finale-home .finale-home-facts a{display:flex;flex-direction:column;gap:7px;height:100%;min-height:110px;padding:14px;border:1px solid #d6e6e8;border-radius:12px;text-decoration:none;background:#f5faf9;color:#496371}
-.finale-home .finale-home-facts a:hover{border-color:#007d83}
-.finale-home .finale-home-facts strong{font-size:37px;line-height:1.1;font-weight:750;color:#007d83;letter-spacing:-.025em;white-space:nowrap}
-.finale-home .finale-home-facts small{font-size:17px;font-weight:650;letter-spacing:0}
-.finale-home .finale-home-facts span{font-size:15px;line-height:1.3}
-.finale-home .finale-home-example-note{grid-column:1/-1;font-size:12px;line-height:1.6;color:#496371;margin:0}
-.finale-home .finale-home-foot{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid #e0ecec;padding-top:18px}
-.finale-home .finale-home-foot p{font-size:13px;line-height:1.6;margin:0;max-width:76ch;color:#496371}
-.finale-home .finale-home-foot a{color:#006c73;text-underline-offset:3px}
-.finale-home .finale-home-share{display:inline-flex;align-items:center;gap:7px;min-height:44px;flex-shrink:0;font-size:14px;font-weight:650;text-decoration:none}
-.finale-home .finale-home-share:hover{text-decoration:underline}
+.finale-home .finale-home-life-example h3{margin:0 0 11px;font-size:28px;line-height:1.15;font-weight:700;color:#14204d;letter-spacing:-.02em}
+.finale-home .finale-home-life-example>p:not(.finale-home-eyebrow){margin:10px 0 7px;font-size:17px;line-height:1.55;color:#496371;max-width:53ch}
+.finale-home .finale-home-example-link{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:25px;font-weight:750;line-height:1.2;text-decoration:none;color:#007d83}
+.finale-home .finale-home-example-label{font-size:12px;line-height:1.5;color:#5c6c79}
+.finale-home .finale-home-close{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:20px 0;border-top:1px solid #cbdfe2}
+.finale-home .finale-home-close>div{display:grid;gap:7px}
+.finale-home .finale-home-close strong{font-size:20px;line-height:1.3;color:#14204d;font-weight:700}
+.finale-home .finale-home-close span{font-size:14px;line-height:1.5;color:#496371}
+.finale-home .finale-home-primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:47px;padding:12px 19px;border:1px solid #007d83;border-radius:9px;background:#007d83;color:#fff;font-size:16px;line-height:1.3;font-weight:650;text-decoration:none;flex-shrink:0}
+.finale-home .finale-home-primary:hover{background:#00636a}
+.finale-home .finale-home-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;border-top:1px solid #e5edef}
+.finale-home .finale-home-foot a{display:inline-flex;align-items:center;gap:7px;min-height:44px;color:#006e73;font-size:13px;line-height:1.4;text-decoration:none}
+.finale-home .finale-home-foot a:hover,.finale-home .finale-home-history a:hover strong,.finale-home .finale-home-example-link:hover{text-decoration:underline;text-underline-offset:4px}
+.finale-home .finale-home-share{flex-shrink:0;font-weight:650}
+.finale-home a svg{width:18px;height:18px;flex:0 0 18px}
 .finale-home a:focus-visible{outline:3px solid #8a3bb0;outline-offset:4px}
-@media(max-width:900px){.finale-home .finale-home-frame{padding:26px;gap:22px}.finale-home .finale-home-example{grid-template-columns:1fr}.finale-home .finale-home-foot{align-items:flex-start;flex-direction:column;gap:6px}.finale-home .finale-home-copy p{font-size:17px}}
-@media(max-width:620px){.finale-home{padding-block:12px 28px}.finale-home .finale-home-frame{grid-template-columns:1fr;padding:23px 18px;gap:19px;border-radius:17px}.finale-home .finale-home-heading h2{font-size:30px;line-height:1.12}.finale-home .finale-home-eyebrow{font-size:10px;letter-spacing:.09em;margin-bottom:11px}.finale-home .finale-home-visual img{max-height:205px}.finale-home .finale-home-visual figcaption{font-size:15px}.finale-home .finale-home-copy .finale-home-purpose{font-size:21px}.finale-home .finale-home-copy .finale-home-thesis{font-size:24px;margin-block:18px}.finale-home .finale-home-actions{align-items:stretch;flex-direction:column;gap:3px}.finale-home .finale-home-actions a{font-size:15px}.finale-home .finale-home-example{padding-top:22px;gap:15px}.finale-home .finale-home-example-heading h3{font-size:23px}.finale-home .finale-home-facts{gap:7px}.finale-home .finale-home-facts a{padding:12px 9px;min-height:111px;gap:7px}.finale-home .finale-home-facts strong{font-size:31px}.finale-home .finale-home-facts small{font-size:12px}.finale-home .finale-home-facts span{font-size:12px;line-height:1.4}.finale-home .finale-home-example-note{font-size:11px}.finale-home .finale-home-foot p{font-size:12px}}
-@media(max-width:380px){.finale-home .finale-home-frame{padding-inline:14px}.finale-home .finale-home-heading h2{font-size:27px}.finale-home .finale-home-facts strong{font-size:27px}.finale-home .finale-home-facts small{font-size:10px}.finale-home .finale-home-facts a{padding-inline:7px}}
-@media print{.finale-home .finale-home-frame{box-shadow:none;break-inside:avoid}.finale-home .finale-home-actions,.finale-home .finale-home-share{display:none}.finale-home .finale-home-visual img{max-height:160px}}
+@media(max-width:760px){.finale-home .finale-home-frame{padding:25px 22px 14px}.finale-home .finale-home-heading{grid-template-columns:1fr;gap:13px;padding-top:22px}.finale-home .finale-home-heading h2{grid-row:auto;font-size:38px}.finale-home .finale-home-models{gap:10px;margin-top:22px}.finale-home .finale-home-model h3{padding:12px 13px;font-size:16px;min-height:65px;display:flex;align-items:center}.finale-home .finale-home-model ol{padding-inline:12px}.finale-home .finale-home-model li{font-size:15px;gap:9px;min-height:69px}.finale-home .finale-home-step-number{flex-basis:22px;height:22px;font-size:10px}.finale-home .finale-home-application{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:18px}.finale-home .finale-home-life-example h3{font-size:24px}.finale-home .finale-home-life-example>p:not(.finale-home-eyebrow){font-size:15px}.finale-home .finale-home-close{flex-direction:column;align-items:stretch;gap:16px}.finale-home .finale-home-primary{align-self:flex-start}.finale-home .finale-home-foot{align-items:flex-start;gap:8px}.finale-home .finale-home-foot a{font-size:12px}}
+@media(max-width:480px){.finale-home{padding-block:13px 27px}.finale-home .finale-home-frame{padding:22px 15px 12px;border-radius:17px}.finale-home .finale-home-history{padding-bottom:18px}.finale-home .finale-home-eyebrow{font-size:10px}.finale-home .finale-home-history strong{font-size:23px}.finale-home .finale-home-history a>span{font-size:11px;align-items:flex-start}.finale-home .finale-home-heading h2{font-size:35px}.finale-home .finale-home-heading>p{font-size:16px}.finale-home .finale-home-heading .finale-home-family-question{font-size:18px}.finale-home .finale-home-models{gap:8px}.finale-home .finale-home-model h3{padding:11px 10px;font-size:14px;min-height:62px}.finale-home .finale-home-model ol{padding:3px 9px 7px}.finale-home .finale-home-model li{align-items:flex-start;font-size:13px;min-height:82px;padding-block:13px;gap:6px}.finale-home .finale-home-step-number{flex-basis:19px;height:19px;font-size:9px;margin-top:1px}.finale-home .finale-home-model-note{font-size:11px;margin-top:9px}.finale-home .finale-home-application{grid-template-columns:1fr;gap:19px;margin-top:16px;padding-block:19px 23px}.finale-home .finale-home-visual img{max-height:138px}.finale-home .finale-home-visual figcaption{font-size:13px}.finale-home .finale-home-life-example h3{font-size:26px}.finale-home .finale-home-life-example>p:not(.finale-home-eyebrow){font-size:16px}.finale-home .finale-home-example-link{font-size:25px}.finale-home .finale-home-close strong{font-size:19px}.finale-home .finale-home-close span{font-size:13px}.finale-home .finale-home-primary{align-self:stretch;font-size:15px}.finale-home .finale-home-foot{flex-direction:column;gap:0}.finale-home .finale-home-foot a{min-height:43px}}
+@media(max-width:360px){.finale-home .finale-home-frame{padding-inline:12px}.finale-home .finale-home-heading h2{font-size:31px}.finale-home .finale-home-model h3{font-size:13px;padding-inline:8px}.finale-home .finale-home-model ol{padding-inline:7px}.finale-home .finale-home-model li{font-size:12px;min-height:88px;gap:5px}.finale-home .finale-home-step-number{flex-basis:17px;height:17px}}
+@media(max-width:620px){.finale-home .finale-home-models{grid-template-columns:1fr;gap:14px}.finale-home .finale-home-model h3{font-size:18px;min-height:55px;padding:13px 16px}.finale-home .finale-home-model ol{padding:4px 15px 8px}.finale-home .finale-home-model li{align-items:center;font-size:16px;min-height:57px;padding-block:11px;gap:12px}.finale-home .finale-home-step-number{flex-basis:27px;height:27px;font-size:12px;margin-top:0}}
+@media print{.finale-home .finale-home-frame{box-shadow:none}.finale-home .finale-home-primary,.finale-home .finale-home-share{display:none}.finale-home .finale-home-visual img{max-height:120px}.finale-home .finale-home-models{break-inside:avoid}}
 `;
   return {html, css};
 };

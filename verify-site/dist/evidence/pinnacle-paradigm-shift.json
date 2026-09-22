@@ -6,6 +6,76 @@
   "sourceType": "Source-linked company explanation",
   "purpose": "Pinnacle’s purpose: A self-sufficient, mainstream life for your child.",
   "headline": "Your child’s life is the mission.\nPinnacleAI® puts it first.",
+  "historicalChallenge": {
+    "title": "The outcome belongs at the beginning.",
+    "purpose": "A self-sufficient, mainstream life for your child.",
+    "history": {
+      "title": "160 Years Without a Unified Metric",
+      "author": "Pinnacle’s AbilityScore® monograph",
+      "url": "https://doi.org/10.5281/zenodo.19482123",
+      "thesis": "A history of measuring separate developmental dimensions raises a larger question: how do the findings guide the child’s whole life?",
+      "gap": "A technique can improve a task while its contribution to everyday participation remains unclear. Pinnacle challenges making the method the starting point and leaving the life question until later."
+    },
+    "independentContext": {
+      "organization": "WHO and UNICEF",
+      "year": 2023,
+      "text": "The global report identifies unmet needs, fragmented and underfunded systems, waiting lists and exclusion. It calls for people-centred services and support for caregivers.",
+      "url": "https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities"
+    },
+    "milestones": [
+      {
+        "year": 2001,
+        "title": "Functioning becomes an international reference",
+        "text": "WHO Member States endorse ICF, a framework addressing functioning, disability and environmental context.",
+        "url": "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health"
+      },
+      {
+        "year": 2006,
+        "title": "Independence and inclusion are explicit rights",
+        "text": "The UN adopts the CRPD. Article 26 connects habilitation and rehabilitation with independence, inclusion and participation.",
+        "url": "https://treaties.un.org/Pages/ViewDetails.aspx?chapter=4&mtdsg_no=IV-15&src=IND"
+      },
+      {
+        "year": 2023,
+        "title": "The delivery gap remains",
+        "text": "WHO and UNICEF report fragmented systems and unmet needs, and call for people-centred services and caregiver support.",
+        "url": "https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities"
+      }
+    ],
+    "comparisonScope": "Two orders of decision-making. They explain the approach Pinnacle challenges and the approach it intends to implement; provider practices vary.",
+    "methodFirst": [
+      "Choose a method or speciality",
+      "Set exercises within that method",
+      "Record performance on those tasks",
+      "Ask what it adds up to in the child’s life"
+    ],
+    "lifeFirst": [
+      "Name the child’s meaningful life priorities",
+      "Understand the abilities and support they require",
+      "Set observable goals; select the methods and people",
+      "Review everyday use; adapt the work to the child"
+    ],
+    "examples": [
+      {
+        "task": "Holding a pencil",
+        "purpose": "Taking part in learning",
+        "icon": "pencil"
+      },
+      {
+        "task": "Using a word",
+        "purpose": "Asking, choosing, saying “stop”",
+        "icon": "speech"
+      },
+      {
+        "task": "Taking a step",
+        "purpose": "Reaching somewhere the child wants to go",
+        "icon": "steps"
+      }
+    ],
+    "thesis": "Your child’s life decides the work. PinnacleAI® starts there.",
+    "implementation": "AbilityScore® informs the starting picture. Goals identify what to work on. The child-specific Personal Development Kernel connects that picture with the programme and feedback. People practise, observe and review; the next decision returns to what matters in the child’s life.",
+    "sourceBoundary": "The 160-year framing is the monograph’s historical thesis. It is not a finding that every provider failed throughout that period. WHO–UNICEF documents care gaps; it does not endorse PinnacleAI® or establish comparative superiority."
+  },
   "perspectives": [
     {
       "id": "the-childs-life",
