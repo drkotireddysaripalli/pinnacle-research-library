@@ -589,6 +589,63 @@
       "files": []
     },
     {
+      "id": "koti-frontiers-loop",
+      "type": "author-profile",
+      "title": "Frontiers Loop — Koti Reddy Saripalli",
+      "url": "https://loop.frontiersin.org/people/3711171/overview",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "scopeNote": "Public researcher profile; profile presence does not establish an editorial role, publisher endorsement or peer review.",
+      "sourceUrls": [
+        "https://loop.frontiersin.org/people/3711171/overview"
+      ],
+      "files": []
+    },
+    {
+      "id": "koti-force11",
+      "type": "author-profile",
+      "title": "FORCE11 member profile — Koti Reddy Saripalli",
+      "url": "https://force11.org/members/kotireddysaripalli/",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "scopeNote": "Public member profile; membership does not establish an institutional affiliation or independent endorsement of research claims.",
+      "sourceUrls": [
+        "https://force11.org/members/kotireddysaripalli/"
+      ],
+      "files": []
+    },
+    {
+      "id": "koti-euraxess",
+      "type": "author-profile",
+      "title": "EURAXESS member access (sign-in required) — Koti Reddy Saripalli",
+      "url": "https://euraxess.ec.europa.eu/partnering/members/190849",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "includeInSameAs": false,
+      "scopeNote": "Member profile requires sign-in; not treated as a publicly readable identity source. Profile presence does not establish institutional membership or research funding.",
+      "sourceUrls": [
+        "https://euraxess.ec.europa.eu/partnering/members/190849"
+      ],
+      "files": []
+    },
+    {
+      "id": "koti-rda",
+      "type": "author-profile",
+      "title": "Research Data Alliance — member profile — Koti Reddy Saripalli",
+      "url": "https://www.rd-alliance.org/members/kotireddysaripalli/",
+      "authors": [
+        "Koti Reddy Saripalli"
+      ],
+      "scopeNote": "Public individual member profile; membership does not establish organisational endorsement, institutional affiliation or validation of research claims.",
+      "sourceUrls": [
+        "https://www.rd-alliance.org/members/kotireddysaripalli/"
+      ],
+      "files": []
+    },
+    {
       "id": "koti-orcid",
       "type": "author-profile",
       "title": "Koti Reddy Saripalli — ORCID",
@@ -1065,7 +1122,7 @@
     "authoredBookEditions": 3,
     "companyStudySummaries": 12,
     "companyStudyPagesLiveChecked": 9,
-    "authorProfileOrCreditRecords": 8,
+    "authorProfileOrCreditRecords": 12,
     "academiaCatalogueEntries": 18,
     "originalCoverAssets": 8
   },

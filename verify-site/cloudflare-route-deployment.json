@@ -1,9 +1,9 @@
 {
   "worker": "pinnacle-verify-route",
   "account_id": "862998def1cd610fdb86b8e5c1d6ed4d",
-  "version": "cd1daba6-a74f-4b4c-b9f0-4a79c6e7049b",
-  "deployment": "66cbdd02-f733-4959-9893-6ecf3d760f11",
-  "createdAt": "2026-09-22T11:54:08.995528Z",
+  "version": "fbd948b4-16d4-4e94-a97e-c70d15c418e4",
+  "deployment": "59efa973-6cc6-453f-90bb-40b6068a5080",
+  "createdAt": "2026-09-22T12:38:06.191077Z",
   "compatibility_date": "2026-09-18",
   "usage_model": "standard",
   "assets": {
@@ -29,12 +29,13 @@
       "type": "secret_text"
     }
   ],
-  "sourceSha256": "bda7f987851ac6e453e0258094ae60fccd835a6643925207ab78ebe4da6fd6bf",
+  "sourceSha256": "2d5676b24113b9b68b33a9911703d4049ef78321bbe66f81b4feebaaa956d2a8",
   "notes": [
     "Always run the routing Worker before static assets. Default asset-first routing incorrectly serves the Verify index at the main homepage and Verify-local robots at the domain robots URL.",
     "Keep assets and all three bindings on subsequent deployments. Secret values are intentionally absent from this manifest.",
     "Legacy version upload with keep_assets=true preserved the old asset routing configuration despite submitted run_worker_first=true. A guarded JSON Merge Patch to /workers/workers/{worker_id}/versions/latest applied the routing correction while inheriting assets/modules/bindings.",
     "Production homepage, robots, helpline, Verify, DPIIT and Ask checks all passed.",
-    "Version54 also fixes HEAD requests with Content-Length:0 by constructing a fresh upstream GET and removing request body framing headers. PowerShell GET/HEAD and curl HEAD with Content-Length:0 passed; all six live page regressions passed."
+    "Version54 also fixes HEAD requests with Content-Length:0 by constructing a fresh upstream GET and removing request body framing headers. PowerShell GET/HEAD and curl HEAD with Content-Length:0 passed; all six live page regressions passed.",
+    "Version55 publishes Verify release35fd4e391ec9ec9c with the coordinated research identity crosslinks and corrected canonical URLs for two book citation exports. The Worker-first asset configuration and all three bindings were preserved."
   ]
 }
