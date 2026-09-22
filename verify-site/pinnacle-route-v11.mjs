@@ -323,11 +323,11 @@ export default {
    return new HTMLRewriter()
     .on('head',{element(element){element.append(FAVICON_LINKS+'<meta name="ahrefs-site-verification" content="bc583a48d3e574453dd16c6719ff9b935dc158da08e5473efa5446368de630bb">',{html:true});}})
     .on('script[type="application/ld+json"]',new RootEntityCorrection())
-    .on('.cm-f-footer-privacylinks > ul',{element(element){element.append('<li><a href="https://www.pinnacleblooms.org/verify/">Licences, research &amp; evidence</a></li>',{html:true});}})
+    .on('.cm-f-footer-privacylinks > ul',{element(element){element.append('<li><a href="https://www.pinnacleblooms.org/verify/">Licences, research &amp; evidence</a></li>',{html:true});if(contextualEvidenceRule(request,[HOME_EVIDENCE_RULE])&&canTransformContextResponse(response))element.append('<li><a href="https://www.pinnacleblooms.org/national-autism-helpline">National Autism Helpline — 9100 181 181</a></li>',{html:true});}})
     .transform(new Response(response.body,{status:200,headers:h}));
   }
   if(incoming.pathname==='/robots.txt'){
-   const response=await fetch(new Request(request,{method:'GET'}));if(response.status!==200)return response;let body=await readTextLimited(response,65536);if(!body.includes(PUBLIC+'/sitemap.xml'))body=body.trimEnd()+'\n\n# Pinnacle verification evidence\nSitemap: '+PUBLIC+'/sitemap.xml\n';const h=cleanHeaders(response.headers,true);h.set('content-type','text/plain; charset=utf-8');h.set('cache-control','public, max-age=300');return new Response(request.method==='HEAD'?null:body,{status:200,headers:h});
+   const originHeaders=new Headers(request.headers);originHeaders.delete('content-length');originHeaders.delete('transfer-encoding');const response=await fetch(new Request(request.url,{method:'GET',headers:originHeaders,redirect:request.redirect}));if(response.status!==200)return response;let body=await readTextLimited(response,65536);if(!body.includes(PUBLIC+'/sitemap.xml'))body=body.trimEnd()+'\n\n# Pinnacle verification evidence\nSitemap: '+PUBLIC+'/sitemap.xml\n';for(const sitemap of ['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml'])if(!body.split(/\r?\n/).some(line=>line.trim()==='Sitemap: '+sitemap))body=body.trimEnd()+'\nSitemap: '+sitemap+'\n';const h=cleanHeaders(response.headers,true);h.set('content-type','text/plain; charset=utf-8');h.set('cache-control','public, max-age=300');return new Response(request.method==='HEAD'?null:body,{status:200,headers:h});
   }
   if(incoming.pathname==='/llms.txt')return Response.redirect(PUBLIC+'/llms.txt',308);
   return fetch(request);
