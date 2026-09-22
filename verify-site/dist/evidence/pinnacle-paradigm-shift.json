@@ -6,75 +6,198 @@
   "sourceType": "Source-linked company explanation",
   "purpose": "Pinnacle’s purpose: A self-sufficient, mainstream life for your child.",
   "headline": "Your child’s life is the mission.\nPinnacleAI® puts it first.",
-  "historicalChallenge": {
-    "title": "The outcome belongs at the beginning.",
+  "visualOpening": {
+    "title": "Your child’s life. The purpose behind everything.",
+    "eyebrow": "The PinnacleAI® paradigm shift",
     "purpose": "A self-sufficient, mainstream life for your child.",
+    "introduction": "Seven pictures. One change in where the work begins.",
+    "slides": [
+      {
+        "id": "moon-mission",
+        "label": "Moon",
+        "image": "moon",
+        "width": 1200,
+        "height": 800,
+        "alt": "A rocket, a luminous flight path and the Moon illustrate a mission that determines the means.",
+        "title": [
+          "First, the Moon.",
+          "Then, the rocket."
+        ],
+        "copy": "A mission gives the engineering its purpose. The rocket, the instruments, the people and every decision must serve the destination.",
+        "connection": "At Pinnacle, your child’s self-sufficient, mainstream life is the mission. Therapy is one of the means.",
+        "signature": "The purpose decides the work."
+      },
+      {
+        "id": "home-before-bricks",
+        "label": "Home",
+        "image": "home",
+        "width": 1200,
+        "height": 800,
+        "alt": "A family home illustrates planning around the life a family wants to live.",
+        "title": [
+          "First, the life at home.",
+          "Then, the bricks."
+        ],
+        "copy": "You imagine a place to live, learn, rest and belong. Those needs shape the rooms, the materials and the people who build it.",
+        "connection": "PinnacleAI® begins with what matters in your child’s life. The abilities and support that life needs guide what comes next.",
+        "signature": "Begin with what the whole is for."
+      },
+      {
+        "id": "child-life-before-therapy",
+        "label": "Child",
+        "image": "hero",
+        "width": 900,
+        "height": 600,
+        "alt": "A mother and child share a warm moment, representing the child and family at the centre of developmental support.",
+        "title": [
+          "First, your child’s life.",
+          "Then, the therapy."
+        ],
+        "copy": "Communicating a need. Making a choice. Learning with others. Growing independence. These are reasons to choose the work—not questions to leave until the sessions are over.",
+        "connection": "PinnacleAI® starts with that purpose, understands the child’s abilities and helps select the goals, methods and people to serve it.",
+        "signature": "Life first. From the first conversation."
+      },
+      {
+        "id": "car-before-parts",
+        "label": "Car",
+        "image": "car",
+        "width": 1200,
+        "height": 800,
+        "alt": "A car and its parts illustrate how each component serves the purpose of the whole vehicle.",
+        "title": [
+          "You want a car",
+          "you can drive."
+        ],
+        "copy": "An engine, wheels and a steering system matter because of what they enable together: a car that takes you where you want to go. A collection of parts leaves the bigger job with you.",
+        "connection": "PinnacleAI® asks what each goal contributes to your child’s life before choosing the technique. Every specialist’s contribution has a purpose.",
+        "signature": "The whole gives each part its job."
+      },
+      {
+        "id": "child-abilities-for-life",
+        "label": "Child",
+        "image": "practice",
+        "width": 900,
+        "height": 600,
+        "alt": "An adult and child practise together, illustrating an ability being used in a meaningful interaction.",
+        "title": [
+          "“Help.” “More.” “Stop.”",
+          "A child has a say."
+        ],
+        "copy": "A word matters when it helps a child ask, choose or refuse. Holding a pencil matters through participation in learning. The purpose reaches beyond completing the task.",
+        "connection": "PinnacleAI® links the child’s priorities with observable goals and practice. The supplied communication example shows how a life ability can shape a session.",
+        "signature": "An ability matters through what it makes possible."
+      },
+      {
+        "id": "home-rooms-for-life",
+        "label": "Home",
+        "image": "home",
+        "width": 1200,
+        "height": 800,
+        "alt": "A family home represents different spaces designed to support the same family’s daily life.",
+        "title": [
+          "Different rooms.",
+          "The life you imagined."
+        ],
+        "copy": "The kitchen, bedroom and doorway do different jobs. You judge them by how they support living in the home—not by how impressive each looks on its own.",
+        "connection": "At Pinnacle, speech, movement, learning, behaviour support and home practice serve the child’s life priorities. Each contribution must have a reason.",
+        "signature": "Different expertise. A purpose in the child’s life."
+      },
+      {
+        "id": "child-life-from-minute-one",
+        "label": "Child",
+        "image": "learning",
+        "width": 900,
+        "height": 600,
+        "alt": "A child participates in learning with an adult, representing abilities in use beyond an isolated task.",
+        "title": [
+          "Your child’s life.",
+          "The purpose from minute one."
+        ],
+        "copy": "Understand the abilities. Set meaningful goals. Choose the methods and people. Practise where life happens. Review what the child can use, and adapt the work.",
+        "connection": "A self-sufficient, mainstream life for your child is Pinnacle’s purpose. PinnacleAI® brings that purpose to each decision, with people guiding the work and the child’s needs shaping the next step.",
+        "signature": "Because every child deserves a wonderful life."
+      }
+    ],
     "history": {
-      "title": "160 Years Without a Unified Metric",
-      "author": "Pinnacle’s AbilityScore® monograph",
-      "url": "https://doi.org/10.5281/zenodo.19482123",
-      "thesis": "A history of measuring separate developmental dimensions raises a larger question: how do the findings guide the child’s whole life?",
-      "gap": "A technique can improve a task while its contribution to everyday participation remains unclear. Pinnacle challenges making the method the starting point and leaving the life question until later."
+      "title": "160 years. The child’s life must lead.",
+      "attribution": "Pinnacle’s historical challenge",
+      "introduction": "Children need abilities they can use to communicate, learn, participate and grow in independence. Pinnacle challenges an approach that starts with a technique, then leaves families to discover how separate gains add up to the life they want for their child.",
+      "issues": [
+        {
+          "title": "A task improves. The life question remains.",
+          "text": "A child may perform an exercise more successfully while the family still needs to understand what it enables in learning, communication, choice or participation."
+        },
+        {
+          "title": "The family is left to join the parts.",
+          "text": "When recommendations are fragmented, parents must work out how separate assessments, specialists and sessions serve the same child’s life."
+        },
+        {
+          "title": "Progress needs a place in real life.",
+          "text": "A review needs to ask where an ability is useful, which support the child needs and what to work on next—not only which tasks were completed."
+        }
+      ],
+      "independentContext": "WHO and UNICEF’s 2023 report documents unmet needs, fragmented systems, waiting lists and exclusion. It calls for people-centred services and support for caregivers.",
+      "sourceTitle": "160 Years Without a Unified Metric — Pinnacle’s AbilityScore® monograph",
+      "sourceUrl": "https://doi.org/10.5281/zenodo.19482123",
+      "contextUrl": "https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities",
+      "boundary": "The 160-year framing is Pinnacle’s historical argument. These are care problems and decision models, not a finding that every provider failed. WHO–UNICEF documents care gaps; it does not endorse PinnacleAI® or establish its comparative superiority."
     },
-    "independentContext": {
-      "organization": "WHO and UNICEF",
-      "year": 2023,
-      "text": "The global report identifies unmet needs, fragmented and underfunded systems, waiting lists and exclusion. It calls for people-centred services and support for caregivers.",
-      "url": "https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities"
-    },
-    "milestones": [
+    "philosophy": {
+      "title": "Your child’s life decides the work.",
+      "introduction": "Self-sufficiency and mainstream participation give the work its direction. At Pinnacle, the life purpose comes first; abilities, goals, methods, specialists, everyday practice and review follow from it.",
+      "steps": [
+        {
+          "title": "Name what matters in life",
+          "text": "Understand the child and family’s priorities for communication, choice, learning, participation and growing independence."
+        },
+        {
+          "title": "Understand the abilities",
+          "text": "Use AbilityScore® and the child’s everyday observations to understand the starting point and the support needed."
+        },
+        {
+          "title": "Give each goal a purpose",
+          "text": "Make the intended ability observable, so the family can understand what the goal would mean in the child’s life."
+        },
+        {
+          "title": "Choose the people and practice",
+          "text": "Select the methods, specialist contributions and everyday programme around those goals, with human guidance."
+        },
+        {
+          "title": "Bring learning into daily life",
+          "text": "Parents, caregivers, educators and therapists contribute through the child-specific programme and feedback."
+        },
+        {
+          "title": "Review. Learn. Adapt.",
+          "text": "The Personal Development Kernel brings the child’s information and feedback into review. Ask what is becoming useful and let that guide the next decision."
+        }
+      ],
+      "close": "The measure of the work is what it helps make possible in the child’s life.",
+      "scope": "Self-sufficiency and participation are the purpose of support. Each child’s progress, support needs and outcomes are individual."
+    }
+  },
+  "historicalChallenge": {
+    "title": "160 years. The child’s life must lead.",
+    "attribution": "Pinnacle’s historical challenge",
+    "introduction": "Children need abilities they can use to communicate, learn, participate and grow in independence. Pinnacle challenges an approach that starts with a technique, then leaves families to discover how separate gains add up to the life they want for their child.",
+    "issues": [
       {
-        "year": 2001,
-        "title": "Functioning becomes an international reference",
-        "text": "WHO Member States endorse ICF, a framework addressing functioning, disability and environmental context.",
-        "url": "https://www.who.int/classifications/international-classification-of-functioning-disability-and-health"
+        "title": "A task improves. The life question remains.",
+        "text": "A child may perform an exercise more successfully while the family still needs to understand what it enables in learning, communication, choice or participation."
       },
       {
-        "year": 2006,
-        "title": "Independence and inclusion are explicit rights",
-        "text": "The UN adopts the CRPD. Article 26 connects habilitation and rehabilitation with independence, inclusion and participation.",
-        "url": "https://treaties.un.org/Pages/ViewDetails.aspx?chapter=4&mtdsg_no=IV-15&src=IND"
+        "title": "The family is left to join the parts.",
+        "text": "When recommendations are fragmented, parents must work out how separate assessments, specialists and sessions serve the same child’s life."
       },
       {
-        "year": 2023,
-        "title": "The delivery gap remains",
-        "text": "WHO and UNICEF report fragmented systems and unmet needs, and call for people-centred services and caregiver support.",
-        "url": "https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities"
+        "title": "Progress needs a place in real life.",
+        "text": "A review needs to ask where an ability is useful, which support the child needs and what to work on next—not only which tasks were completed."
       }
     ],
-    "comparisonScope": "Two orders of decision-making. They explain the approach Pinnacle challenges and the approach it intends to implement; provider practices vary.",
-    "methodFirst": [
-      "Choose a method or speciality",
-      "Set exercises within that method",
-      "Record performance on those tasks",
-      "Ask what it adds up to in the child’s life"
-    ],
-    "lifeFirst": [
-      "Name the child’s meaningful life priorities",
-      "Understand the abilities and support they require",
-      "Set observable goals; select the methods and people",
-      "Review everyday use; adapt the work to the child"
-    ],
-    "examples": [
-      {
-        "task": "Holding a pencil",
-        "purpose": "Taking part in learning",
-        "icon": "pencil"
-      },
-      {
-        "task": "Using a word",
-        "purpose": "Asking, choosing, saying “stop”",
-        "icon": "speech"
-      },
-      {
-        "task": "Taking a step",
-        "purpose": "Reaching somewhere the child wants to go",
-        "icon": "steps"
-      }
-    ],
-    "thesis": "Your child’s life decides the work. PinnacleAI® starts there.",
-    "implementation": "AbilityScore® informs the starting picture. Goals identify what to work on. The child-specific Personal Development Kernel connects that picture with the programme and feedback. People practise, observe and review; the next decision returns to what matters in the child’s life.",
-    "sourceBoundary": "The 160-year framing is the monograph’s historical thesis. It is not a finding that every provider failed throughout that period. WHO–UNICEF documents care gaps; it does not endorse PinnacleAI® or establish comparative superiority."
+    "independentContext": "WHO and UNICEF’s 2023 report documents unmet needs, fragmented systems, waiting lists and exclusion. It calls for people-centred services and support for caregivers.",
+    "sourceTitle": "160 Years Without a Unified Metric — Pinnacle’s AbilityScore® monograph",
+    "sourceUrl": "https://doi.org/10.5281/zenodo.19482123",
+    "contextUrl": "https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities",
+    "boundary": "The 160-year framing is Pinnacle’s historical argument. These are care problems and decision models, not a finding that every provider failed. WHO–UNICEF documents care gaps; it does not endorse PinnacleAI® or establish its comparative superiority."
   },
   "perspectives": [
     {
@@ -124,13 +247,13 @@
       "id": "the-historical-challenge",
       "act": "why",
       "analogy": "course",
-      "title": "160 years.\nA question worth changing.",
-      "hook": "“160 Years Without a Unified Metric”: the challenge in Pinnacle’s AbilityScore® monograph.",
+      "title": "160 years.\nThe child’s life cannot wait.",
+      "hook": "The historical challenge: parts can improve while the direction for the child’s life remains unclear.",
       "contrast": "Choose the specialty, technique or test first. Leave the family to work out how it all serves the child’s life.",
       "pinnacle": "PinnacleAI® begins with the intended life. Identify the abilities that matter, choose the work that serves them, and return to that purpose at every review.",
       "punch": "Change the first question. Change the direction of the work.",
       "narration": [
-        "“160 Years Without a Unified Metric.” Pinnacle’s AbilityScore® monograph uses those words to frame its historical challenge. For a family, the question is immediate: after the assessments, appointments and effort, how do we understand what all this means for our child’s life?",
+        "Pinnacle frames a 160-year historical challenge in its research account. The deeper question for families is about life: after the assessments, appointments and effort, what is becoming possible for this child?",
         "More terminology, more instruments and more activities can still leave that question unanswered. A family needs an understandable direction: what are we building, why does it matter, and how will we review what becomes possible?",
         "PinnacleAI® proposes a different starting order. Begin with the child’s life priorities. Understand the relevant abilities and skills. Select the goals, people and techniques that serve them. Keep that purpose visible in the next decision. That is the paradigm shift this story asks you to examine."
       ],
@@ -159,7 +282,7 @@
       ],
       "number": 2,
       "contrastLabel": "WHEN THE METHOD SETS THE DIRECTION",
-      "shareText": "160 years. A question worth changing. Change the first question. Change the direction of the work. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+      "shareText": "The child’s life cannot wait. PinnacleAI® starts with self-sufficiency and mainstream participation as the purpose, then chooses the abilities, goals, people and practice that serve it."
     },
     {
       "id": "clarity-before-choice",

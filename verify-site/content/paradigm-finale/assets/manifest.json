@@ -108,5 +108,15 @@
     "width": 774,
     "height": 1095,
     "bytes": 189540
+  },
+  "home-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 50036
+  },
+  "home-1200": {
+    "width": 1200,
+    "height": 800,
+    "bytes": 157094
   }
 }

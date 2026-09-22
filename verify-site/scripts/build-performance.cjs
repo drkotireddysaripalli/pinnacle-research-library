@@ -5,7 +5,7 @@ const fingerprint=(name,body,ext)=>{const hash=crypto.createHash('sha256').updat
 const css=['fonts/fonts.css','styles.css','upgrade.css','evidence-design.css','impact.css','semantic.css','world.css','share.css','reader.css','experience.css','topics.css','citations.css','presentation.css','parent-guides.css','multilingual.css','mobile.css','narrative.css'];
 css.push('finale-home.css','paradigm.css','paradigm-story.css','paradigm-story-pages.css');
 const bundle=fingerprint('site',css.map(p=>fs.readFileSync(path.join(dist,p),'utf8')).join('\n'),'css');
-const js={};for(const file of ['share.js','app.js','reader.js','experience.js','hfr-register.js','citations.js','reader-extras.js','paradigm-story.js'])js[file]=fingerprint(path.basename(file,'.js'),fs.readFileSync(path.join(dist,file),'utf8'),'js');
+const js={};for(const file of ['share.js','app.js','reader.js','experience.js','hfr-register.js','citations.js','reader-extras.js','paradigm-story.js','paradigm-opening.js'])js[file]=fingerprint(path.basename(file,'.js'),fs.readFileSync(path.join(dist,file),'utf8'),'js');
 for(const file of fs.readdirSync(dist,{recursive:true}).filter(p=>p.endsWith('.html'))){
  const full=path.join(dist,file);let html=fs.readFileSync(full,'utf8'),added=false;
  const previousSymbols=new Map([...html.matchAll(/<symbol id="(truth-[^"]+)"[^>]*>([\s\S]*?)<\/symbol>/g)].map(m=>[m[1],m[2]]));

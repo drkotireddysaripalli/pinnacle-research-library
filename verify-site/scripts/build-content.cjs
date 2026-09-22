@@ -26,7 +26,7 @@ const robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-pr
 const date = '2026-09-22';
 const sourceDate = '2026-09-15';
 const title = 'PinnacleAI® Verify | Pinnacle Blooms Network';
-const description = 'Understand how PinnacleAI® connects measurement, planning and everyday practice. Explore eight developmental report types, MD-5, BIS, research and centre evidence.';
+const description = 'A self-sufficient, mainstream life for your child is PinnacleAI®’s purpose. Explore the paradigm shift, developmental reports, research, licences and original evidence.';
 const e = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const absolute = p => new URL(p, origin+'/').href;
 const recordPath = r => `/evidence/records/${r.id}.html`;
@@ -43,7 +43,7 @@ const icon = (name,extra='') => {
 const scaleStory = require('./scale-story-content.cjs')({e,icon,origin});
 const paradigm = require('./paradigm-content.cjs')({e,icon,origin});
 const storyDeck = require('./paradigm-story-content.cjs')({e,icon,origin});
-const finaleHome=require('./finale-home-content.cjs')({e,icon});write('finale-home.css',finaleHome.css);
+const finaleHome=require('./finale-home-content.cjs')({e,icon});write('finale-home.css',finaleHome.css);write('paradigm-opening.js',finaleHome.script);
 const impact = require('./impact-content.cjs')({e,icon});
 const assurance = require('./assurance-content.cjs')({e,icon});
 const metrics = require('./metrics-content.cjs')({e,icon});
@@ -103,7 +103,7 @@ const head = (pageTitle,desc,url,graph,scripts=false) => `<head>
 <link rel="alternate" type="application/json" href="/evidence/research-library.json" title="Research and book catalogue"><link rel="alternate" type="application/json" href="/evidence/evidence.json" title="Pinnacle evidence register"><link rel="alternate" type="text/plain" href="/llms-full.txt" title="Pinnacle evidence in plain text">
 <link rel="alternate" type="application/json" href="/evidence/section-index.json" title="Page sections and their source links"><link rel="alternate" type="application/json" href="/evidence/answers.json" title="Source-linked verification questions and answers"><link rel="sitemap" type="application/xml" href="/sitemap.xml"><link rel="alternate" type="text/plain" href="/llms.txt" title="Source index for automated readers">
 <script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':graph}).replace(/</g,'\\u003c')}</script>
-${scripts?'<script defer src="/app.js"></script><script defer src="/reader.js"></script><script defer src="/experience.js"></script>':''}
+${scripts?'<script defer src="/app.js"></script><script defer src="/reader.js"></script><script defer src="/experience.js"></script><script defer src="/paradigm-opening.js"></script>':''}
 </head>`;
 const pageHeader = `<div class="review-strip"><span>EVIDENCE & CONTEXT</span> Updated: 22 September 2026</div><header class="wrap site-header"><a href="/" aria-label="Pinnacle verification home" class="brand"><span class="logo-crop"><img src="/images/pinnacle-logo.webp" alt="Pinnacle Blooms Network" width="420" height="158"></span></a><a class="outline-link" href="/#records">${icon('arrow-left')}Evidence library</a></header>`;
 const footer = require('./evidence-footer.cjs')({e,icon});

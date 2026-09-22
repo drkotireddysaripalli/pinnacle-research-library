@@ -109,22 +109,35 @@ async function main(){
  if(intro){
   const inside=homePage.descendants(intro);
   check(intro.attrs['data-share-managed']==='true','Homepage introduction owns its sharing');
-  check(homePage.text(intro).includes('The outcome belongs at the beginning.'),'Homepage establishes the decision-order reversal');
-  check(homePage.text(intro).includes('160 Years Without a Unified Metric')&&homePage.text(intro).includes('Pinnacle’s AbilityScore® monograph'),'Homepage historical framing retains its author attribution');
+  check(homePage.text(intro).includes('Your child’s life. The purpose behind everything.'),'Homepage establishes the child’s life purpose');
+  check(!inside.filter(n=>['h2','h3'].includes(n.tag)).some(n=>homePage.text(n).includes('Unified Metric')),'A metric does not define the campaign headline');
   check(!inside.some(n=>n.attrs['data-story-card']),'Homepage does not duplicate the retired nine-card carousel');
   for(const card of data.cards)for(const suffix of ['', '-title'])check(homePage.ids.has('paradigm-story-card-'+card.id+suffix),'Homepage legacy anchor '+card.id+suffix);
   for(const href of [overview,overview+'#documented-example'])check(inside.some(n=>n.tag==='a'&&n.attrs.href===href),'Homepage story/example destination '+href);
-  check(inside.some(n=>n.tag==='a'&&n.attrs.href?.startsWith('https://wa.me/')&&new URL(n.attrs.href).searchParams.get('text')?.includes(publicBase+overview)),'Homepage custom WhatsApp destination');
+  check(inside.some(n=>n.tag==='a'&&n.attrs.href?.startsWith('https://wa.me/')&&new URL(n.attrs.href).searchParams.get('text')?.includes(publicBase)),'Homepage custom WhatsApp destination');
   const img=inside.find(n=>n.tag==='img');check(img?.attrs.src==='/images/paradigm-finale/moon-600.webp'&&img.attrs.loading==='lazy','Homepage deferred Moon illustration');
  }
  check(approved.cards.length===18&&published.perspectives?.length===18,'Eighteen approved and exported finale perspectives');
- const thesis=require('../content/paradigm-finale/paradigm-thesis.cjs').data;
- const historyNode=finale.ids.get('history-and-purpose'),reversalNode=finale.ids.get('change-the-starting-point');
- check(historyNode&&reversalNode&&historyNode.start<reversalNode.start&&reversalNode.start<finale.ids.get('documented-example')?.start,'Historical challenge and reversal precede the session demonstration');
- check(JSON.stringify(published.historicalChallenge)===JSON.stringify(thesis),'Machine-readable historical thesis and decision models match the authored source');
- for(const step of [...thesis.methodFirst,...thesis.lifeFirst])check(reversalNode&&finale.text(reversalNode).includes(plain(step)),'Visible decision step: '+step);
- check(historyNode&&finale.text(historyNode).includes(plain(thesis.sourceBoundary)),'Historical source scope is available beside the challenge');
- for(const milestone of thesis.milestones)check(finale.text(historyNode).includes(plain(milestone.text))&&read('evidence/pinnacle-paradigm-shift.txt').includes(milestone.url),'Historical chronology is visible and exported: '+milestone.year);
+ const opening=require('../content/paradigm-finale/paradigm-opening.cjs').data;
+ check(JSON.stringify(published.visualOpening)===JSON.stringify(opening),'Opening export equals visible authored content');
+ check(JSON.stringify(published.historicalChallenge)===JSON.stringify(opening.history),'Historical context exported consistently');
+ for(const [page,prefix]of [[homePage,'pinnacle-opening'],[finale,'paradigm-opening']]){
+  const openingRoot=page.ids.get(prefix),track=page.ids.get(prefix+'-slides'),historyNode=page.ids.get(prefix+'-history'),philosophyNode=page.ids.get(prefix+'-philosophy');
+  check(openingRoot&&track&&historyNode&&philosophyNode&&track.start<historyNode.start&&historyNode.start<philosophyNode.start,'Slider, history, philosophy appear in requested order: '+prefix);
+  const slides=page.descendants(openingRoot).filter(n=>hasClass(n,'po-slide'));
+  check(slides.length===7,'Seven opening slides: '+prefix);
+  check(opening.slides.map(x=>x.label).join(',')==='Moon,Home,Child,Car,Child,Home,Child','Requested seven-image sequence');
+  for(const [i,slide]of opening.slides.entries()){
+   const node=slides[i];check(node?.attrs.id===prefix+'-'+slide.id,'Slide order '+prefix+' '+i);
+   if(!node)continue;for(const copy of [...slide.title,slide.copy,slide.connection,slide.signature])check(page.text(node).includes(plain(copy)),'Opening slide copy '+prefix+' '+i);
+   const children=page.descendants(node),img=children.find(n=>n.tag==='img');check(img?.attrs.src==='/images/paradigm-finale/'+slide.image+'-600.webp','Slide illustration '+prefix+' '+i);
+   if(img)await dimensions(localFile(img.attrs.src,overview,'Opening asset'),'Opening asset');
+   const share=children.find(n=>n.tag==='a'&&n.attrs.href?.startsWith('https://wa.me/'));check(share&&new URL(share.attrs.href).searchParams.get('text')?.includes('#'+node.attrs.id),'Direct slide sharing '+prefix+' '+i);
+  }
+  check(page.text(historyNode).includes(plain(opening.history.boundary)),'Historical scope retained '+prefix);
+  check(page.text(philosophyNode).includes(plain(opening.philosophy.introduction)),'Philosophy governs the work '+prefix);
+ }
+ check(finale.ids.has('history-and-purpose')&&finale.ids.has('change-the-starting-point')&&finale.ids.has('from-task-to-life'),'Previous philosophy anchors preserved');
  const chapters=finale.nodes.filter(n=>n.tag==='article'&&hasClass(n,'chapter'));
  check(chapters.length===18,'Eighteen indexable finale chapters');
  check(finale.ids.get('complete-story')?.tag==='details','Full story remains available through native disclosure');

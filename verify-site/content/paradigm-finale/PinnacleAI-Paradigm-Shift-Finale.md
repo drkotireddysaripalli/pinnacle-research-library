@@ -409,7 +409,7 @@ https://www.pinnacleblooms.org/verify/
 
 ### 02 · 160 years. A question worth changing.
 
-**“160 Years Without a Unified Metric”: the challenge in Pinnacle’s AbilityScore® monograph.**
+**The historical challenge: parts can improve while the direction for the child’s life remains unclear.**
 
 **WHEN THE METHOD SETS THE DIRECTION**
 
@@ -423,7 +423,7 @@ PinnacleAI® begins with the intended life. Identify the abilities that matter, 
 
 #### The fuller story
 
-“160 Years Without a Unified Metric.” Pinnacle’s AbilityScore® monograph uses those words to frame its historical challenge. For a family, the question is immediate: after the assessments, appointments and effort, how do we understand what all this means for our child’s life?
+Pinnacle frames a 160-year historical challenge in its research account. The deeper question for families is about life: after the assessments, appointments and effort, what is becoming possible for this child?
 
 More terminology, more instruments and more activities can still leave that question unanswered. A family needs an understandable direction: what are we building, why does it matter, and how will we review what becomes possible?
 
