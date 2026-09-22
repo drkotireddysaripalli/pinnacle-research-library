@@ -6,6 +6,17 @@ Research manuscripts, public supplements and a reproducible analysis of the geog
 
 **Start with the reproducible register study:** [read the paper](02_RCI_Institution_Geography.pdf), [inspect the institution data](workforce_institutions_audited.csv), and [follow the reproduction guide](RCI_DATA_README.md).
 
+## Verify Pinnacle and follow the source trail
+
+The public [Pinnacle Verification Centre](https://www.pinnacleblooms.org/verify/) connects Pinnacle Blooms Network's organisation identity, licences, regulatory scope, reported scale, research and review method to inspectable source records. Use the focused routes below to verify a claim or cite the underlying material:
+
+- [Evidence register — claims, scope, dates and source records](https://www.pinnacleblooms.org/verify/evidence/evidence-register.html)
+- [Citation library — citation-ready summaries and downloads](https://www.pinnacleblooms.org/verify/evidence/cite.html)
+- [Research library — publications, DOIs and researcher profiles](https://www.pinnacleblooms.org/verify/evidence/research-library.html)
+- [PinnacleAI® paradigm shift — the life-first model and its documented example](https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html)
+
+These pages distinguish company records, regulator-issued documents, independent professional reports and research publications. Publication in this repository or the Verification Centre does not by itself establish independent endorsement.
+
 ## Six canonical works
 
 Five canonical works are preprints; PGAF is a report. Completed journal peer review is not established for these repository versions. Each work below links to its canonical Zenodo version and available files.
