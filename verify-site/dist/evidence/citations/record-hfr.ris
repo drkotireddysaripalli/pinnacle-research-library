@@ -2,8 +2,8 @@ TY  - ELEC
 TI  - ABDM / NHA · Health Facility Registry
 AU  - Bharath Healthcare Laboratories Private Limited
 PY  - 2026
-DA  - 2026/09/21
+DA  - 2026/09/22
 UR  - https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html
-Y2  - 2026/09/21
+Y2  - 2026/09/22
 N1  - HFR account records reviewed The authenticated dashboard matched all 53 earlier inventory IDs and supplied three additional complete IDs, giving 56. Each record retains its displayed workflow status and observation date. The source workbook and certificate references remain available beside the live check. Exact HFR identifier matches and dashboard workflow statuses are separate from current centre operations, clinical quality, outcomes and other location-specific permissions. Approved applies only to the displayed NHPR workflow state; Query Raised, Submitted, Rejected and Query Resolved retain their literal meanings. One masked Draft is excluded from complete-ID totals. No replacement or cancellation relationship is inferred between additional IDs. The observation covers one authenticated NHPR account; registrations administered in other accounts have not been reconciled here. Original source: NHPR / ABDM authenticated facility-manager dashboard, all four pages, inspected 19 September 2026. Earlier sources: All Centers With HFR.xlsx rows 2–53 and original recognitions bundle pp67–95.
 ER  -

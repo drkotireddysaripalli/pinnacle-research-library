@@ -60,7 +60,7 @@ module.exports=function addSharing(html,page,records){
   else if(node.children.some(n=>/(?:^|\s)stage-content(?:\s|$)/.test(attr(n,'class')||''))){at=node.children.find(n=>/(?:^|\s)stage-content(?:\s|$)/.test(attr(n,'class')||''))?.end??node.end;}
   else at=node.end;
   // A page-level share slot or H1 may also live inside a managed component.
-  if(at&&!withinManagedSection(at)){edits.push({at,value:bar});rows.push({id:b.id,url,image,text:short,whatsapp:full,xLength:short.length+24});}
+  if(at&&(b.kind==='page'||!withinManagedSection(at))){edits.push({at,value:bar});rows.push({id:b.id,url,image,text:short,whatsapp:full,xLength:short.length+24});}
  }
  edits.sort((a,b)=>b.at-a.at);for(const edit of edits)html=html.slice(0,edit.at)+edit.value+html.slice(edit.at);
  html=html.replace('</body>',sprite+'<p class="share-status" role="status" aria-live="polite"></p><dialog class="share-fallback" aria-labelledby="share-fallback-title"><h2 id="share-fallback-title">Copy this evidence link</h2><p>Select and copy the link below.</p><input readonly aria-label="Evidence link"><form method="dialog"><button>Close</button></form></dialog></body>');

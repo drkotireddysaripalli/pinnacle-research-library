@@ -1,0 +1,1018 @@
+{
+  "version": "2026-09-22-campaign-finale",
+  "title": "PinnacleAI® Paradigm Shift",
+  "headline": "Your child’s life is the mission.\nPinnacleAI® puts it first.",
+  "purpose": "Pinnacle’s purpose: A self-sufficient, mainstream life for your child.",
+  "signature": "Life is the mission. Abilities are the milestones. Therapy serves the purpose.",
+  "tagline": "Because every child deserves a wonderful life.",
+  "header": "C:/Users/Siri Palace/OneDrive/Documents/Win/Videos/Pinnacle Design Elements - Header.jpg",
+  "phone": "9100 181 181",
+  "email": "care@pinnacleblooms.org",
+  "url": "https://www.pinnacleblooms.org/verify/",
+  "cta": "Discuss your child’s abilities, inspect a report, and understand the proposed goals, support, costs and review. Make the next choice with clarity.",
+  "intro": [
+    "Communicating. Learning. Making choices. Taking part. Growing independence. The life you want for your child gives every developmental goal its purpose.",
+    "PinnacleAI® begins with that purpose, identifies the abilities that matter, and brings assessment, people, practice and review to the work of building them.",
+    "Start with the short story. Explore the full journey at your pace. Open any evidence panel to inspect the sources."
+  ],
+  "acts": [
+    {
+      "id": "why",
+      "title": "1 · Change the starting question",
+      "range": [
+        1,
+        4
+      ]
+    },
+    {
+      "id": "child",
+      "title": "2 · Understand this child",
+      "range": [
+        5,
+        8
+      ]
+    },
+    {
+      "id": "work",
+      "title": "3 · Make every day purposeful",
+      "range": [
+        9,
+        14
+      ]
+    },
+    {
+      "id": "life",
+      "title": "4 · Bring progress into life",
+      "range": [
+        15,
+        18
+      ]
+    }
+  ],
+  "releaseNote": "Campaign finale manuscript and local reader. Comparisons illustrate decision models, not every provider. Sources and product-version details are available with each card. The child’s self-sufficient, mainstream life is the purpose, not a guaranteed outcome. This edition has not been deployed to the public /verify/ page.",
+  "cards": [
+    {
+      "id": "the-childs-life",
+      "act": "why",
+      "analogy": "life",
+      "title": "Your child’s life.\nThe reason for every step.",
+      "hook": "You want your child to communicate, learn, make choices and take part.",
+      "contrastLabel": "WHEN ACTIVITY BECOMES THE DESTINATION",
+      "contrast": "The exercise is completed. The session is counted. You are still asking: what does this help my child do in life?",
+      "pinnacle": "Pinnacle starts with that question. The life your child is working toward gives the abilities, goals, people and everyday practice their purpose.",
+      "punch": "Make every step answer to your child’s life.",
+      "narration": [
+        "You want to understand what your child can do, what would help next, and how today’s effort relates to the life ahead. That deserves an answer you can recognise in your child’s everyday world.",
+        "A child may practise holding a pencil. How does that help them participate in learning? A child may practise movement. How does that help them reach somewhere they want to go? The answer gives an activity its purpose.",
+        "When appointments, separate reports, temporary gains or regression leave that direction unclear, families carry the uncertainty. Pinnacle’s starting question brings the child’s life back into focus: which abilities and supports matter, and why is this the right work to consider now?",
+        "Early experiences matter. Purposeful, responsive opportunities to build capabilities give those experiences direction. From the first conversation, the child’s priorities should guide what follows."
+      ],
+      "mechanism": [
+        "Name a meaningful life priority with the child and family.",
+        "Identify the abilities and support that may contribute to it.",
+        "Require an explainable relationship between that priority and the work selected."
+      ],
+      "proof": [
+        "WHO–UNICEF documents unmet needs, exclusion and fragmented services. It does not establish that every provider neglects life outcomes.",
+        "The pencil and movement examples illustrate the owner’s argument; they are not reported patient outcomes.",
+        "Early-development evidence supports responsive learning opportunities, not a guaranteed result or a universal deadline."
+      ],
+      "sources": [
+        [
+          "WHO–UNICEF: developmental-disability care gaps",
+          "https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities"
+        ],
+        [
+          "Early experience and brain development",
+          "https://developingchild.harvard.edu/key-concept/brain-architecture/"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ]
+      ],
+      "number": 1,
+      "shareText": "Your child’s life. The reason for every step. Make every step answer to your child’s life. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "the-historical-challenge",
+      "act": "why",
+      "analogy": "course",
+      "title": "160 years.\nA question worth changing.",
+      "hook": "“160 Years Without a Unified Metric”: the challenge in Pinnacle’s AbilityScore® monograph.",
+      "contrast": "Choose the specialty, technique or test first. Leave the family to work out how it all serves the child’s life.",
+      "pinnacle": "PinnacleAI® begins with the intended life. Identify the abilities that matter, choose the work that serves them, and return to that purpose at every review.",
+      "punch": "Change the first question. Change the direction of the work.",
+      "narration": [
+        "“160 Years Without a Unified Metric.” Pinnacle’s AbilityScore® monograph uses those words to frame its historical challenge. For a family, the question is immediate: after the assessments, appointments and effort, how do we understand what all this means for our child’s life?",
+        "More terminology, more instruments and more activities can still leave that question unanswered. A family needs an understandable direction: what are we building, why does it matter, and how will we review what becomes possible?",
+        "PinnacleAI® proposes a different starting order. Begin with the child’s life priorities. Understand the relevant abilities and skills. Select the goals, people and techniques that serve them. Keep that purpose visible in the next decision. That is the paradigm shift this story asks you to examine."
+      ],
+      "mechanism": [
+        "Make the governing purpose explicit.",
+        "Use measurement to inform the priorities that serve it.",
+        "Review methods against their contribution to those priorities."
+      ],
+      "proof": [
+        "The 160-year phrase is the monograph’s thesis. Its references do not establish a single 160-year chronology of universal failure.",
+        "UN CRPD Article 26 predates Pinnacle’s platform and centres independence and inclusion. The campaign presents Pinnacle’s implementation rather than claiming invention of those goals."
+      ],
+      "sources": [
+        [
+          "AbilityScore® monograph and methodology",
+          "https://doi.org/10.5281/zenodo.19482123"
+        ],
+        [
+          "Independence and inclusion: UN CRPD Article 26",
+          "https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities/article-26-habilitation-and-rehabilitation.html"
+        ],
+        [
+          "WHO–UNICEF: developmental-disability care gaps",
+          "https://www.who.int/news/item/15-09-2023-new-reports-highlights-neglected-health-needs-of-children-with-developmental-disabilities"
+        ]
+      ],
+      "number": 2,
+      "contrastLabel": "WHEN THE METHOD SETS THE DIRECTION",
+      "shareText": "160 years. A question worth changing. Change the first question. Change the direction of the work. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "clarity-before-choice",
+      "act": "why",
+      "analogy": "car",
+      "title": "You wanted the car.\nYou were handed the parts.",
+      "hook": "You deserve to understand the whole before choosing the next step.",
+      "contrastLabel": "WHEN YOU MUST ASSEMBLE THE ANSWER",
+      "contrast": "An engine here. A chassis there. More parts promised later. You must work out whether they fit—and who will make the whole work.",
+      "pinnacle": "At Pinnacle, explore how assessment, goals, therapy, everyday practice and review serve your child’s priorities. Ask to see the approach before deciding.",
+      "punch": "Clarity belongs at the beginning.",
+      "narration": [
+        "You enter a showroom. You see the car, open the doors, sit inside and take a test drive. You discuss cost, usefulness, comfort and how it suits your family. You can make a decision about a comprehensible whole.",
+        "Now imagine separate sellers promising you an engine, steering, electricals and a chassis in the coming months. You must decide whether they will fit, what else is needed and who is responsible for making the whole work. You came to make an informed choice. You have been given the responsibility of assembling the answer.",
+        "For your child, speech, occupational, behavioural and educational expertise each needs a clear purpose. At Pinnacle, ask how each contribution serves your child’s priorities, how the goals fit together and how progress will be reviewed. Understand the process, the people, the schedule and the costs. Begin with clarity about the work you are choosing."
+      ],
+      "mechanism": [
+        "Inspect an authorised assessment/report example.",
+        "Ask how a proposed goal serves a life priority.",
+        "Understand the programme, roles, costs, feedback and review arrangements."
+      ],
+      "proof": [
+        "The supplied report examples and programme documents can demonstrate the process.",
+        "The car analogy concerns clarity about the care system, not purchasing a predetermined future for a child.",
+        "Do not represent a sample report as a forecast or promise for another child."
+      ],
+      "sources": [
+        [
+          "How PinnacleAI® works and report examples",
+          "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works"
+        ],
+        [
+          "September programme description",
+          "https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ]
+      ],
+      "number": 3,
+      "shareText": "You wanted the car. You were handed the parts. Clarity belongs at the beginning. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "mission-before-means",
+      "act": "why",
+      "analogy": "moon",
+      "title": "The Moon was the mission.\nThe rocket was the means.",
+      "hook": "The destination gave every part of the mission a reason to exist.",
+      "contrast": "Start with the method available. Build around it. Leave the family hoping the activities add up to the life they want.",
+      "pinnacle": "PinnacleAI® starts with your child’s life priorities. Those priorities guide the abilities, goals, techniques, people and support brought into the work.",
+      "punch": "Life is the mission. Therapy serves the purpose.",
+      "narration": [
+        "Apollo’s goal was to land people on the Moon and return them safely. That destination directed the engineering, the people and the preparation. Every contribution had a purpose within the mission.",
+        "For your child, the purpose is a life: communicating needs, making choices, learning, participating and growing in independence with the appropriate support. PinnacleAI® places those priorities at the beginning of the decision.",
+        "The abilities needed for that life guide the work. Therapy, technology, professional expertise, family participation and environmental support each need a reason to belong. The team works together because it is serving that purpose. The purpose determines what the team does."
+      ],
+      "mechanism": [
+        "Life priorities → relevant abilities and skills.",
+        "Current assessment → agreed goals and support.",
+        "Selected techniques and people → purposeful practice.",
+        "Observed response and reassessment → the next decision."
+      ],
+      "proof": [
+        "NASA supports the historical analogy, not a claim about Pinnacle’s effectiveness.",
+        "The Pinnacle dossier and BIS schedule describe the developmental modules; their existence and clinical outcome performance are separate questions."
+      ],
+      "sources": [
+        [
+          "NASA: the decision to go to the Moon",
+          "https://www.nasa.gov/history/the-decision-to-go-to-the-moon/"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ],
+        [
+          "BIS licence and full-lifecycle scope",
+          "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
+        ]
+      ],
+      "number": 4,
+      "contrastLabel": "WHEN THE TECHNIQUE COMES FIRST",
+      "shareText": "The Moon was the mission. The rocket was the means. Life is the mission. Therapy serves the purpose. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "knowledge-with-a-purpose",
+      "act": "child",
+      "analogy": "mission",
+      "title": "A world of experience.\nFocused on your child.",
+      "hook": "Accumulated knowledge earns its value in the next decision for one child.",
+      "contrastLabel": "WHEN THE KNOWLEDGE STAYS GENERAL",
+      "contrast": "A large catalogue offers possibilities. You still need to understand why this particular goal or activity fits your child.",
+      "pinnacle": "Explore Pinnacle’s research, operating evidence and child-specific approach. Then ask how that knowledge informs your child’s assessment, goals and review.",
+      "punch": "Big numbers matter when their purpose becomes personal.",
+      "narration": [
+        "Pinnacle presents a sixteen-year journey of research and practical learning. Books, publications, programme descriptions, operating records and regulatory documents make that foundation inspectable.",
+        "The recorded operating scale includes 2.7B+ structured developmental records, 31M+ cumulative services and 7.9 lakh+ beneficiary/family registrations. Each figure has a definition, date and evidence source. You can inspect those alongside the story.",
+        "For your family, the important next question is personal: how does this accumulated knowledge help explain what is selected for my child? PinnacleAI® brings the wider resources together with your child’s assessed abilities, circumstances, goals and feedback. The Personal Development Kernel carries that child-specific picture into planning and review."
+      ],
+      "mechanism": [
+        "Read the research and operating history.",
+        "Inspect the definitions and evidence behind each number.",
+        "Follow how general resources are selected in relation to the individual child."
+      ],
+      "proof": [
+        "SRS 4400 records 2.7B+ structured developmental records, 31,052,382 cumulative services and 792,614 beneficiary/family registrations at the July 2026 cutoff. Services include more than one-to-one therapy.",
+        "SAE 3000 limited assurance and SRS 4400 factual findings have different scopes. Neither establishes a universal clinical success rate.",
+        "Sixteen years refers to Pinnacle’s stated research/experience narrative; it must not silently redefine the incorporation date or age of a particular licensed software version."
+      ],
+      "sources": [
+        [
+          "Books, research and publication records",
+          "https://www.pinnacleblooms.org/verify/#research"
+        ],
+        [
+          "Operating figures and assurance scope",
+          "https://www.pinnacleblooms.org/verify/evidence/assurance-map.html"
+        ],
+        [
+          "SRS 4400 factual-findings record",
+          "https://www.pinnacleblooms.org/verify/evidence/records/srs4400.html"
+        ],
+        [
+          "SAE 3000 limited-assurance record",
+          "https://www.pinnacleblooms.org/verify/evidence/records/sae3000.html"
+        ]
+      ],
+      "number": 5,
+      "shareText": "A world of experience. Focused on your child. Big numbers matter when their purpose becomes personal. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "understand-this-child",
+      "act": "child",
+      "analogy": "home",
+      "title": "Understand your child.\nThen shape the programme.",
+      "hook": "A home is designed around the people who will live in it.",
+      "contrast": "Choose the available package. Try to fit your child’s needs around what it offers.",
+      "pinnacle": "Begin with an AbilityScore® profile across Pinnacle’s 17 domains, 79 abilities and 349 skills. Bring family observations and professional interpretation into the starting picture.",
+      "punch": "Let your child’s needs shape the next step.",
+      "narration": [
+        "An architect asks how a family will live before selecting the materials. Their needs shape the design and the expertise required. Developmental planning deserves the same order: understand this child, then discuss the work.",
+        "The initial AbilityScore® assessment is described in the programme materials as a 90-minute process with a 0–1000 profile across 17 domains, 79 abilities and 349 skills. Bring what you see at home and in other settings. The team combines relevant observations with clinical assessment and interpretation.",
+        "Adaptive observation selection is described as 160-plus observations, up to 259, drawn from 591 variations, with age-related context and bias-tolerance design. Those details sit within the assessment specification; the evidence panel records the version differences.",
+        "The practical benefit to discuss is a structured starting picture: current capabilities, preferences, circumstances and support needs. Use it to understand which priorities matter next before agreeing the programme."
+      ],
+      "mechanism": [
+        "Consider biological/developmental context, strengths, preferences and support needs.",
+        "Bring relevant observations into the assessment.",
+        "Use the profile to discuss priorities before selecting the programme."
+      ],
+      "proof": [
+        "The handout and methodology support the 90-minute description and framework; duration for an individual assessment should be explained by the team.",
+        "Adaptive counts and bias-tolerance details are supplied in the owner’s operating brief. The later 519-observation wording differs from the 591-variation source and remains in the version register.",
+        "The framework is Pinnacle-defined. Standards mapping does not make its numerical hierarchy a WHO-defined scale.",
+        "Adaptive selection is described in the supplied operating brief as 160-plus to 259 observations drawn from 591 variations, with age-related context and bias-tolerance design. These specification details are not independent validation results."
+      ],
+      "sources": [
+        [
+          "September programme description",
+          "https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html"
+        ],
+        [
+          "AbilityScore® monograph and methodology",
+          "https://doi.org/10.5281/zenodo.19482123"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ]
+      ],
+      "number": 6,
+      "contrastLabel": "WHEN THE PACKAGE COMES FIRST",
+      "shareText": "Understand your child. Then shape the programme. Let your child’s needs shape the next step. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "readable-starting-point",
+      "act": "child",
+      "analogy": "map",
+      "title": "One AbilityScore®.\nSeven readiness views.",
+      "hook": "See the starting point. Understand the next questions.",
+      "contrastLabel": "WHEN A REPORT ENDS AT A NUMBER",
+      "contrast": "The score arrives. You still have to work out what it means for your child’s abilities and next priorities.",
+      "pinnacle": "Explore the overall profile and focused readiness reports with the team. Connect what you see in the report to what your child does in life.",
+      "punch": "Make the report a conversation you can take part in.",
+      "narration": [
+        "One consolidated AbilityScore® and seven focused readiness views give you several ways to explore the child’s profile. The described views cover speech, motor, behaviour, study/cognitive, school, self-sufficiency and mainstream readiness; the actual report version determines the titles.",
+        "The output description includes 0–1000 scores, red, yellow and green visual zones and more than 4,000 dimensions/data points across the assessment outputs. Ask the team to explain what each relevant result means and how it informs the discussion.",
+        "Bring the report back to familiar questions. What can my child do now? What are we seeing in different settings? What support would help? Which priority comes next? The profile supports that conversation. Your child’s worth and future cannot be reduced to a number."
+      ],
+      "mechanism": [
+        "Inspect the actual authorised report formats.",
+        "Connect a relevant observation to an ability or skill.",
+        "Discuss what the result can inform and what requires further interpretation."
+      ],
+      "proof": [
+        "Eight supplied report examples were reviewed; their presentation version is distinct from the SaMD software version.",
+        "The owner’s 1.3M assessments × eight reports equals 10.4M calculated report outputs. The arithmetic is clear; completeness of that production count requires its own records.",
+        "The 4,000-plus dimensions and precise visual interpretation are source-attributed operating details pending exact-version confirmation."
+      ],
+      "sources": [
+        [
+          "How PinnacleAI® works and report examples",
+          "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ],
+        [
+          "September programme description",
+          "https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html"
+        ]
+      ],
+      "number": 7,
+      "shareText": "One AbilityScore®. Seven readiness views. Make the report a conversation you can take part in. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "personal-development-kernel",
+      "act": "child",
+      "analogy": "mission",
+      "title": "A world of knowledge.\nYour child’s own Kernel.",
+      "hook": "What matters is how the knowledge fits your child.",
+      "contrastLabel": "WHEN THE RECORD ONLY STORES THE PAST",
+      "contrast": "Information is collected. You cannot see how your child’s needs or responses influence what is chosen next.",
+      "pinnacle": "The Personal Development Kernel brings your child’s measurements, goals, circumstances and feedback into child-specific recommendations and review.",
+      "punch": "Let what is learned about your child inform what comes next.",
+      "narration": [
+        "Your child’s Personal Development Kernel is the evolving child-specific record used in PinnacleAI® planning. It brings the wider knowledge base into the context of this child’s abilities, needs and experience.",
+        "Measurements, developmental history, goals, circumstances and authorised observations build that picture. They are intended to inform which goals and activities are suggested and which decisions need review. Ask the team to explain the link between the recommendation and your child.",
+        "Personalisation gains meaning when the system retains what people have learned and brings it into the next cycle. The Kernel supports that continuity while human judgement remains part of choosing, reviewing and adapting the work."
+      ],
+      "mechanism": [
+        "General resources + the child’s current evidence → proposed priorities.",
+        "Goals, activity responses and contextual observations → accumulated child-specific history.",
+        "Human feedback and reassessment → revised selections and review."
+      ],
+      "proof": [
+        "The dossier and methodology describe the Personal Development Kernel and feedback-informed planning.",
+        "Do not imply that the software directly maps a child’s neurons, measures every causal influence or guarantees it can identify a uniquely best intervention."
+      ],
+      "sources": [
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ],
+        [
+          "AbilityScore® monograph and methodology",
+          "https://doi.org/10.5281/zenodo.19482123"
+        ],
+        [
+          "September programme description",
+          "https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html"
+        ]
+      ],
+      "number": 8,
+      "shareText": "A world of knowledge. Your child’s own Kernel. Let what is learned about your child inform what comes next. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "goals-you-can-understand",
+      "act": "work",
+      "analogy": "home",
+      "title": "Know the goal.\nRecognise the progress.",
+      "hook": "Understand what your child is working toward before the work begins.",
+      "contrast": "A therapy or activity is named. You are unsure which ability it serves or what progress would actually look like.",
+      "pinnacle": "Discuss goals in observable terms: what your child would be doing, in which setting and with what support. Understand how each goal serves the life priority.",
+      "punch": "A clear goal gives the family a part in the conversation.",
+      "narration": [
+        "Life priorities identify the abilities to consider. The assessment helps the team discuss goals and the speech, occupational, behavioural or educational contributions that may serve them. Immediate opportunities and longer-term needs both belong in that discussion.",
+        "The goal model described by Pinnacle provides nine goals for each enrolled therapy type—36 when four types are involved. For each goal, ask what 10%, 25%, 40%, 70%, 90% or 100% attainment would look like. The answer should explain what your child can do, under which conditions and with what support.",
+        "That makes a goal something you can understand and discuss. Look at how the contributions fit together and how each serves a relevant ability. The evidence panel preserves the exact checkpoint and version details behind this description."
+      ],
+      "mechanism": [
+        "Life priority → relevant ability/skill → proposed goal.",
+        "Explain what the child would be doing at the stated attainment stages.",
+        "Check how goals across the selected therapies fit together."
+      ],
+      "proof": [
+        "The September handout describes nine goals × four domains × seven gates. Exact therapy-type allocation and the six percentages in the owner’s brief are not identical specifications.",
+        "The register preserves both descriptions; a real current interface/specification is needed to reconcile them.",
+        "A feedback rating, a percentage attainment description and a clinical outcome measure are different things.",
+        "The six owner-specified attainment examples are 10%, 25%, 40%, 70%, 90% and 100%; retain them alongside the seven-gate handout description until the current interface resolves the difference.",
+        "The subsequently supplied goal/session example uses milestone labels 10%, 25%, 45%, 70%, 90% and 100%. Its named levels contain their own success and support criteria; they are not response-accuracy percentages or completed outcomes. The different wording in earlier materials is retained as source history, not silently combined."
+      ],
+      "sources": [
+        [
+          "September programme description",
+          "https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ]
+      ],
+      "number": 9,
+      "contrastLabel": "WHEN THE GOAL IS HARD TO PICTURE",
+      "shareText": "Know the goal. Recognise the progress. A clear goal gives the family a part in the conversation. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "human-agency-in-goals",
+      "act": "work",
+      "analogy": "practice",
+      "title": "Your voice belongs\ninside the decision.",
+      "hook": "You know things about your child that the programme needs to hear.",
+      "contrastLabel": "WHEN YOUR CONCERN GOES NOWHERE",
+      "contrast": "The goal feels unsuitable. You explain why. It remains unclear how that changes the next decision.",
+      "pinnacle": "Review the goal, question its fit and explain your rating. Pinnacle’s goal-feedback model brings those reasons into reconsideration and the child’s Kernel.",
+      "punch": "Understand the goal. Question the fit. Shape the next discussion.",
+      "narration": [
+        "Too easy. Too difficult. Unclear. Unlikely to engage your child. These observations matter. Rating a proposed goal and explaining why gives the team something specific to work with.",
+        "The latest goal-setting description uses a 0–9 rating, with goals rated 0–3 replaced through the selection process until goal-setting is complete. The parent, caregiver, teacher or professional explains why a target fits or needs reconsideration. Earlier material uses 1–9 and 1–3; the evidence panel keeps that version distinction visible.",
+        "Goal feedback concerns the proposed target. Technique feedback concerns what happened during practice. Keep both conversations available. Appropriate professional judgement and workflow controls guide how a proposed change is acted on, with the reason retained in the child-specific history."
+      ],
+      "mechanism": [
+        "Review a proposed goal and its meaning.",
+        "Record a rating and a reason.",
+        "Reconsider or replace the goal through the applicable workflow.",
+        "Retain the reason in the child-specific record."
+      ],
+      "proof": [
+        "The exact rating/replacement thresholds are owner-described product details not located in the reviewed publications. They are included here with attribution, not represented as independently demonstrated automation.",
+        "The earlier pasted brief specifies 1–9 stars and replacement in the 1–3 range; the later owner description specifies 0–9 and 0–3. Both versions require reconciliation against the current interface.",
+        "The dossier supports human oversight and the child-specific record; it does not by itself prove every UI behaviour described in the brief.",
+        "The goal-rating and replacement workflow in the narrative is the supplied product description. Demonstrate its current interface, relevant professional controls and threshold settings before relying on exact automation behaviour."
+      ],
+      "sources": [
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ],
+        [
+          "MD-5 intended use",
+          "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
+        ]
+      ],
+      "number": 10,
+      "shareText": "Your voice belongs inside the decision. Understand the goal. Question the fit. Shape the next discussion. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "programme-before-the-day",
+      "act": "work",
+      "analogy": "map",
+      "title": "Four days ahead.\nA reason for every activity.",
+      "hook": "See the programme. Understand the purpose. Prepare to take part.",
+      "contrast": "An instruction arrives. You need to know what it serves and how to prepare.",
+      "pinnacle": "The programme is described as arriving four days ahead, with selected techniques connected to goals and the abilities your child is working on.",
+      "punch": "Know why it belongs before the day begins.",
+      "narration": [
+        "Once the priorities and goals are agreed, the programme makes the work practical. Four-day advance delivery gives the relevant adults time to read, ask questions and prepare.",
+        "Pinnacle’s updated repository description includes 1.3 lakh-plus intervention techniques. Selection through the child’s Kernel is intended to relate the technique to a goal, an ability or skill, and the relevant readiness priority. Follow that chain with the team.",
+        "Which ability does this activity support? Why does it belong now? How should it fit your child’s engagement and sensory needs? A written programme gives you a place to ask those questions and understand your role. The exact daily quantity and current repository version are recorded in the evidence panel."
+      ],
+      "mechanism": [
+        "Life priority → ability/skill → goal → selected technique.",
+        "Prepare and explain the programme in advance.",
+        "Discuss how to practise appropriately and what observations will inform review."
+      ],
+      "proof": [
+        "Methodology and September materials support the four-day advance/forecast description.",
+        "Programme quantity needs a version decision: seven to nine a day in the September material, nine per programme in one operating brief and nine per therapy type in another. All three descriptions are preserved.",
+        "The updated 1.3 lakh repository is an owner-supplied figure; the reviewed earlier handout describes a smaller inventory.",
+        "The child’s agreed programme governs practice. Neither an ambiguous “2 min” phrase nor a fixed count is used here as a universal practice prescription."
+      ],
+      "sources": [
+        [
+          "AbilityScore® monograph and methodology",
+          "https://doi.org/10.5281/zenodo.19482123"
+        ],
+        [
+          "September programme description",
+          "https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ]
+      ],
+      "number": 11,
+      "contrastLabel": "WHEN THE ACTIVITY ARRIVES WITHOUT A WHY",
+      "shareText": "Four days ahead. A reason for every activity. Know why it belongs before the day begins. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "instruction-people-can-use",
+      "act": "work",
+      "analogy": "practice",
+      "title": "Watch it. Understand it.\nPractise it with support.",
+      "hook": "Make the guidance useful where your child lives, learns and plays.",
+      "contrastLabel": "WHEN THE EXPLANATION STAYS IN THE ROOM",
+      "contrast": "You hear the technique’s name but lack a demonstration, usable instructions or guidance in a language you understand.",
+      "pinnacle": "Explore Pinnacle’s written guidance, short technique videos and personalised PinnacleTV playlists. Understand the selected activity and the part you can play.",
+      "punch": "Bring understanding into everyday practice.",
+      "narration": [
+        "Parents, family members, caregivers, teachers, therapists, clinicians and relevant community workers see the child in different settings. Clear guidance helps each person understand the selected activity, its purpose and their appropriate role.",
+        "The delivery model describes 90–180-second technique videos, written guidance in 133-plus languages and personalised PinnacleTV playlists on phones, tablets or smart TVs. Ask to see the current experience: open the programme, watch the relevant demonstration and understand the activity before practising.",
+        "A parent can prepare at home. A teacher can discuss a classroom activity. A therapist can understand what happened elsewhere. Guidance, feedback and professional support make participation practical for the people around your child."
+      ],
+      "mechanism": [
+        "Explain the purpose in language the intended user understands.",
+        "Show a relevant demonstration and written instructions.",
+        "Provide appropriate support and a way to give feedback."
+      ],
+      "proof": [
+        "The MD-5 annexure names parents, therapists, educators and caregivers as intended users.",
+        "The precise video durations, language availability, device coverage and personalised playlist behaviour are owner-described details needing current-product demonstration.",
+        "The narrative preserves those mechanisms instead of reducing them to generic home practice.",
+        "The narrative presents the described delivery model, not a verification of every language, device or video in current availability."
+      ],
+      "sources": [
+        [
+          "MD-5 intended use",
+          "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
+        ],
+        [
+          "September programme description",
+          "https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ]
+      ],
+      "number": 12,
+      "shareText": "Watch it. Understand it. Practise it with support. Bring understanding into everyday practice. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "feedback-that-informs-the-next-day",
+      "act": "work",
+      "analogy": "course",
+      "title": "What happens today\nshould shape tomorrow.",
+      "hook": "Your child’s response belongs in the next decision.",
+      "contrastLabel": "WHEN FEEDBACK IS ONLY COLLECTED",
+      "contrast": "An activity is rated. It is hard to see whether anyone reconsidered the work in light of your child’s experience.",
+      "pinnacle": "The Fusion Module brings technique ratings and observations into the Kernel, supporting human review of what to continue, change or support differently.",
+      "punch": "Make the response part of the reasoning.",
+      "narration": [
+        "After practice, tell the system what happened. The technique-feedback model uses 1–9-star ratings, with simple multiple-choice reasons described in the workflow. A rating becomes more useful when the context accompanies it.",
+        "The primary caregiver is described as deciding who has access to the programme. Relevant observations from authorised participants build the child-specific picture: engagement, difficulty, access, setting and changes in performance. Bring those observations into the next discussion.",
+        "Over repeated activities, the record can show more of this child’s experience. What engaged them? What was difficult? Which setting helped? What changed? The approximately 100-technique example in the original brief illustrates accumulating experience; it does not establish a fixed learning threshold. Personalisation depends on taking the actual response seriously."
+      ],
+      "mechanism": [
+        "Record a technique rating separately from goal acceptance.",
+        "Capture the reason and context.",
+        "Bring relevant experience into human review.",
+        "Retain what was learned for subsequent selection."
+      ],
+      "proof": [
+        "The methodology supports 1–9-star technique feedback; BIS scope names the tracking/correction Fusion Module.",
+        "Caregiver access permissions and multiple-choice UI detail are supplied in the operating brief and require exact-version confirmation.",
+        "The owner’s approximately 100-technique example is retained as an illustration of accumulated experience; it is not a validated learning threshold or guarantee of identifying the best intervention.",
+        "Preference, observed response and clinical effectiveness are different measures."
+      ],
+      "sources": [
+        [
+          "AbilityScore® monograph and methodology",
+          "https://doi.org/10.5281/zenodo.19482123"
+        ],
+        [
+          "BIS licence and full-lifecycle scope",
+          "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ]
+      ],
+      "number": 13,
+      "shareText": "What happens today should shape tomorrow. Make the response part of the reasoning. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "prognosis-with-context",
+      "act": "work",
+      "analogy": "distance",
+      "title": "See the direction.\nUnderstand the expectations.",
+      "hook": "Discuss what you are working toward, what it depends on and when to review.",
+      "contrastLabel": "WHEN “KEEP GOING” IS THE WHOLE ANSWER",
+      "contrast": "You still need to understand which abilities matter next, what the team is watching and when the approach should be reconsidered.",
+      "pinnacle": "Explore Prognose® readiness and forecasting support. Connect expectations to your child’s profile, the proposed work and the response being observed.",
+      "punch": "Understand the direction—and what could change it.",
+      "narration": [
+        "What changes are we working toward? Through which activities and support? Over what kind of review interval? Prognose® is described around making those questions discussable.",
+        "Progress forecasting and readiness tracking appear in the MD-5 intended use. A useful demonstration should make the reasoning visible: what informs the expectation, which assumptions apply and how new observations affect the discussion.",
+        "Keep the forecast and the observed result clear. If the child’s experience differs, bring that difference into review and reconsider the work and support. Knowing what an expectation depends on is part of making an informed decision."
+      ],
+      "mechanism": [
+        "Identify the relevant ability/readiness priority.",
+        "Explain the proposed work and assumptions behind the expectation.",
+        "Keep forecasts distinguishable from observations.",
+        "Review expectations against the child’s actual response."
+      ],
+      "proof": [
+        "Progress forecasting is named in the MD-5 intended use; this does not establish a universal predictive accuracy or guaranteed date.",
+        "The owner’s real-time description needs a current interface demonstration and update-frequency specification.",
+        "The BIS schedule explicitly names the prognostic engine and developmental-support modules. The owner also describes real-time operation; observed update frequency and predictive validation require separate evidence."
+      ],
+      "sources": [
+        [
+          "MD-5 intended use",
+          "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
+        ],
+        [
+          "BIS licence and full-lifecycle scope",
+          "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
+        ],
+        [
+          "AbilityScore® monograph and methodology",
+          "https://doi.org/10.5281/zenodo.19482123"
+        ]
+      ],
+      "number": 14,
+      "shareText": "See the direction. Understand the expectations. Understand the direction—and what could change it. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "review-the-child-reconsider-the-work",
+      "act": "life",
+      "analogy": "course",
+      "title": "Reassess. Compare.\nCorrect. Repeat.",
+      "hook": "Understand what has changed, what remains difficult and what comes next.",
+      "contrastLabel": "WHEN THE SESSION COUNT BECOMES THE REVIEW",
+      "contrast": "More sessions have happened. You still need a clear comparison of abilities and a reason for the next programme.",
+      "pinnacle": "Monthly reassessment brings the profile, readiness views and everyday observations back into discussion. Review progress, unchanged areas and regression together.",
+      "punch": "Let the review guide the next step.",
+      "narration": [
+        "At the agreed interval, return to your child. What can they do now? What is emerging? What remains difficult? Has anything become harder? Gains, regression and changed circumstances all belong in the conversation.",
+        "The methodology describes monthly reassessment. Review the same relevant abilities, involve the people who observe the child and record the circumstances. Compare the profile with the earlier assessment and discuss what you see in daily life.",
+        "Use the consolidated AbilityScore® and seven readiness views to decide what needs consolidation, change, investigation or new priority. The child’s history remains part of that decision. Repeat the cycle around the next meaningful need."
+      ],
+      "mechanism": [
+        "Reassess the relevant profile at the agreed interval.",
+        "Compare like constructs and record context.",
+        "Discuss gains, unchanged areas and regression.",
+        "Agree the next priorities and the reasons for them."
+      ],
+      "proof": [
+        "Monthly reassessment is described in the methodology.",
+        "Supplied reports demonstrate output formats, not a fabricated before-and-after outcome.",
+        "The owner’s same-observer comparison is preserved as part of the workflow; it is not presented as complete protection against measurement bias."
+      ],
+      "sources": [
+        [
+          "AbilityScore® monograph and methodology",
+          "https://doi.org/10.5281/zenodo.19482123"
+        ],
+        [
+          "How PinnacleAI® works and report examples",
+          "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ]
+      ],
+      "number": 15,
+      "shareText": "Reassess. Compare. Correct. Repeat. Let the review guide the next step. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "the-skill-and-the-life",
+      "act": "life",
+      "analogy": "car",
+      "title": "Holding a pencil is a step.\nLearning is the purpose.",
+      "hook": "Bring the skill into the life where it matters.",
+      "contrastLabel": "WHEN THE TASK IS THE WHOLE STORY",
+      "contrast": "A practised action improves. Its place in learning, communication, choice or participation stays outside the review.",
+      "pinnacle": "Pinnacle asks how an ability helps your child take part in life, which support remains useful and what priority should guide the next stage.",
+      "punch": "Bring every gain back to the life it can support.",
+      "narration": [
+        "Holding a pencil is one step. What helps that child participate in learning? Practising movement is one step. What helps the child get where they want to go? The next question brings the skill into the setting where it matters, with the access, communication and support that make participation possible.",
+        "The purpose of developmental support is to build capabilities and support participation. Sensory needs, communication differences, assistive tools and environmental adjustments may all shape what helps. Independence does not require a child to become indistinguishable from others or to lose access to support.",
+        "Pinnacle’s proposed loop keeps the meaningful life priority in command: identify, understand, select, practise, observe, reassess and adapt. School readiness and mainstream participation are directions of that work, with the child’s individual needs determining the appropriate next step."
+      ],
+      "mechanism": [
+        "Look beyond success in the practice setting.",
+        "Discuss use of the ability in a meaningful activity.",
+        "Identify supports and environmental changes where needed.",
+        "Repeat the developmental cycle around the next relevant priority."
+      ],
+      "proof": [
+        "The examples are explanatory comparisons, not reported patient outcomes.",
+        "The purpose is growing capability and participation; graduation, independence or school admission is not guaranteed.",
+        "The owner-requested 97% claim and its evidence requirements are preserved in the separate register rather than used here as causal proof."
+      ],
+      "sources": [
+        [
+          "BIS licence and full-lifecycle scope",
+          "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
+        ],
+        [
+          "Programme architecture",
+          "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
+        ],
+        [
+          "Independence and inclusion: UN CRPD Article 26",
+          "https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities/article-26-habilitation-and-rehabilitation.html"
+        ]
+      ],
+      "number": 16,
+      "shareText": "Holding a pencil is a step. Learning is the purpose. Bring every gain back to the life it can support. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "a-population-scale-ambition",
+      "act": "life",
+      "analogy": "life",
+      "title": "Think at population scale.\nDecide for one child.",
+      "hook": "The ambition is wide. The starting point is personal.",
+      "contrastLabel": "WHEN GUIDANCE IS HARD TO REACH",
+      "contrast": "Useful knowledge is difficult to access, understand or carry into the child’s other settings.",
+      "pinnacle": "Pinnacle’s mission is to empower 900 million children, parents and families through understandable guidance, child-specific planning and professional support.",
+      "punch": "Make the ambition practical, one child’s needs at a time.",
+      "narration": [
+        "Pinnacle’s ambition is to empower 900 million children, parents and families. Making that ambition useful starts with the individual: understandable reports, a programme people can prepare for, guidance in a usable language and format, and a way for the child’s experience to reach the next decision.",
+        "The MD-5 annexure explicitly names parents, therapists, educators and caregivers as intended users of developmental-support software for children aged 0–12. The BIS schedule names software lifecycle activities and developmental modules, including self-sufficiency, mainstream inclusion and the full developmental lifecycle. Those are specific records a reader can inspect.",
+        "The evidence portal gives families and institutions a place to inspect the foundation: research, operating figures, HFR records, corporate identity, licence scope and oversight. Read the documents. Understand what each establishes. Ask how the proposed system would work for the child or community you represent."
+      ],
+      "mechanism": [
+        "Make the intended user roles clear.",
+        "Demonstrate accessible delivery and feedback across relevant settings.",
+        "Inspect licence scope, research, operating evidence and governance separately.",
+        "Evaluate scale and deployment claims against actual capacity evidence."
+      ],
+      "proof": [
+        "900 million is the owner-stated mission; it is not a measured served population.",
+        "Population-scale and sovereign-grade positioning require their own capacity, interoperability, security, governance and deployment evidence.",
+        "MD-5 is a Class B manufacturing licence with a defined non-diagnostic intended use. BIS management-system scope is not a guarantee of individual outcomes.",
+        "UDINs identify the recorded professional documents: SAE 3000 26200027GMBLXU4868 and SRS 4400 26200027HCNFEI9138; their scopes differ."
+      ],
+      "sources": [
+        [
+          "MD-5 intended use",
+          "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
+        ],
+        [
+          "BIS licence and full-lifecycle scope",
+          "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
+        ],
+        [
+          "Operating figures and assurance scope",
+          "https://www.pinnacleblooms.org/verify/evidence/assurance-map.html"
+        ],
+        [
+          "Books, research and publication records",
+          "https://www.pinnacleblooms.org/verify/#research"
+        ]
+      ],
+      "number": 17,
+      "shareText": "Think at population scale. Decide for one child. Make the ambition practical, one child’s needs at a time. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    },
+    {
+      "id": "begin-with-clarity",
+      "act": "life",
+      "analogy": "moon",
+      "title": "Your child’s life.\nA clearer place to begin.",
+      "hook": "Talk through the assessment, the goals, the support and the next review.",
+      "contrastLabel": "WHEN YOU MUST COMMIT BEFORE UNDERSTANDING",
+      "contrast": "Choose the sessions first. Discover later whether the explanations, goals and review fit your family’s needs.",
+      "pinnacle": "Talk to Pinnacle about your child. Inspect a report. Ask how the proposed goals serve the life priorities, what participation involves and how progress will be reviewed.",
+      "punch": "Life is the mission. Abilities are the milestones. Therapy serves the purpose.",
+      "narration": [
+        "The question is your child’s life. Keep it visible as you explore an assessment, discuss a goal, watch a technique, share feedback and review the next report.",
+        "Ask the team what is being prioritised and why. Understand your role, the professional support, the programme, the costs and how progress or concerns will be reviewed. An authorised example can make that conversation concrete.",
+        "Life gives the direction. Abilities define the work. Your child’s response guides the next decision. That is the PinnacleAI® proposition to explore with us. Pinnacle’s purpose: a self-sufficient, mainstream life for your child—because every child deserves a wonderful life."
+      ],
+      "mechanism": [
+        "Discuss the child’s life priorities.",
+        "Understand the starting assessment and proposed goals.",
+        "Inspect the programme, roles, costs and evidence.",
+        "Agree the next step and review arrangements."
+      ],
+      "proof": [
+        "Contact: 9100 181 181 · care@pinnacleblooms.org.",
+        "The owner named for the platform is Sourabh Sashank, Lead PinnacleAI; clinical governance is attributed to the Pinnacle Clinical Committee in the existing portal records.",
+        "The owner-confirmed review of an earlier edition does not automatically certify every new sentence in this manuscript."
+      ],
+      "sources": [
+        [
+          "How PinnacleAI® works and report examples",
+          "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works"
+        ],
+        [
+          "Operating figures and assurance scope",
+          "https://www.pinnacleblooms.org/verify/evidence/assurance-map.html"
+        ],
+        [
+          "Explore the complete evidence portal",
+          "https://www.pinnacleblooms.org/verify/"
+        ]
+      ],
+      "number": 18,
+      "shareText": "Your child’s life. A clearer place to begin. Life is the mission. Abilities are the milestones. Therapy serves the purpose. Pinnacle’s purpose: A self-sufficient, mainstream life for your child."
+    }
+  ],
+  "evidenceRegister": [
+    {
+      "category": "Historical thesis",
+      "detail": "The 160-year challenge",
+      "decision": "Retained prominently on card 2 as the AbilityScore® monograph’s own thesis. No invented origin year or universal-failure verdict."
+    },
+    {
+      "category": "Assessment versions",
+      "detail": "591 possible variations versus the later 519 wording; 160–259 observations",
+      "decision": "Full detail retained on card 6 and in the source archive. Current product/version needed to reconcile exact counts."
+    },
+    {
+      "category": "Anatomy and standards",
+      "detail": "79 organs; ICD-11, ICF, ICH/ICHI, SNOMED",
+      "decision": "Preserve the original wording in the audit. Publish each mapping only against the actual mapping documentation; do not label the 17/79/349 hierarchy WHO-defined or WHO-approved."
+    },
+    {
+      "category": "Assessment governance",
+      "detail": "Household observations versus clinical assessment",
+      "decision": "Show both: family/intended-user participation and the professional governance described in the dossier. Do not erase either role."
+    },
+    {
+      "category": "Assessment output",
+      "detail": "4,000+ dimensions; 0–1000 outputs and visual zones",
+      "decision": "Retained in card 7 as owner-described output detail. Exact report/UI version and validation remain distinct."
+    },
+    {
+      "category": "Goal architecture",
+      "detail": "Nine goals per therapy; 36 for four therapies; six percentage levels",
+      "decision": "Retained explicitly in card 9 narration. Reconcile with the handout’s 9 × 4 × 7 checkpoint description using current product specification."
+    },
+    {
+      "category": "Goal feedback",
+      "detail": "1–9/1–3 earlier versus 0–9/0–3 later",
+      "decision": "Retained explicitly in card 10. It is not merged with technique feedback; automatic replacement behaviour needs a product demonstration."
+    },
+    {
+      "category": "Programme quantity",
+      "detail": "7–9 daily; 9 per programme; 9 per therapy type",
+      "decision": "All retained in card 11 notes. Main poster describes selected techniques until unit/version is resolved."
+    },
+    {
+      "category": "Repository",
+      "detail": "1.3 lakh+ technique inventory",
+      "decision": "Retained as owner update. Earlier published 90,000+ and newer inventory must have clear dates; do not attach an unrelated audit opinion."
+    },
+    {
+      "category": "Practice ambiguity",
+      "detail": "“2 min”",
+      "decision": "Unresolved literal phrase. No minutes or minimum technique prescription inferred."
+    },
+    {
+      "category": "Delivery",
+      "detail": "PinnacleTV; 90–180-second videos; 133+ languages; phones/tablets/TV",
+      "decision": "Retained in card 12 as the supplied operating description. Demonstrate actual current availability rather than deleting the mechanism."
+    },
+    {
+      "category": "Access control",
+      "detail": "Primary caregiver decides who has access",
+      "decision": "Retained in card 13. Confirm the actual permissions model and appropriate clinical access controls."
+    },
+    {
+      "category": "Learning threshold",
+      "detail": "Approximately 100 techniques",
+      "decision": "Retained as owner’s illustration of accumulating experience, not a validated threshold or guarantee of knowing the best intervention."
+    },
+    {
+      "category": "Forecasting",
+      "detail": "Real-time prognosis; timing/effort expectations",
+      "decision": "The affirmative function is explained on card 14; the UI, update frequency, assumptions and predictive validation must be separately documented."
+    },
+    {
+      "category": "Outcomes",
+      "detail": "97% proven improvement, measured across 31 Million+ therapy services and validated across 12 clinical studies.",
+      "decision": "Owner-requested claim preserved here. It is not used as proven causality or universal superiority; numerator, denominator, endpoint, population, study status and relevant methods must support any public outcome statement. Activity audits do not supply that proof."
+    },
+    {
+      "category": "Patents",
+      "detail": "“Patented” versus applications filed",
+      "decision": "Retain the IP/research argument; use actual current filing/grant status. Reviewed dossier states applications, not granted patents."
+    },
+    {
+      "category": "Scale",
+      "detail": "2.7B+ records; 31M+ services; 7.9 lakh+ registrations",
+      "decision": "Placed in card 5 with exact units and separate assurance scopes. These are not counts of unique children, one-to-one successes or proven training examples."
+    },
+    {
+      "category": "Calculated outputs",
+      "detail": "1.3M assessments × 8 = 10.4M reports",
+      "decision": "Retained in card 7 evidence layer. Owner-confirmed input and arithmetic are distinct from inspected generation logs."
+    },
+    {
+      "category": "Unreproduced total",
+      "detail": "400B PinnacleAI® Points; earlier 2.9B+ update",
+      "decision": "Preserved in the audit. No reproducible 400B formula supplied; no invented sum/multiplication of unlike units."
+    },
+    {
+      "category": "Population and infrastructure",
+      "detail": "900M mission; population-scale; sovereign-grade",
+      "decision": "Card 17 connects ambition to specific delivery and governance mechanisms. Capacity, security, interoperability and deployment require their own evidence."
+    },
+    {
+      "category": "Regulatory terms",
+      "detail": "MD-3/MD-5; CAL; BIS MDS/PMS/QMS; original MD33 wording",
+      "decision": "Retained for terminology resolution. MD-5 and BIS direct sources explain actual scope; MD-3 should not be silently promoted from application/form terminology to a separate granted efficacy approval."
+    },
+    {
+      "category": "Standards and mission alignment",
+      "detail": "WHO/UN AI principles; SDGs 3, 4, 10, 17",
+      "decision": "Retained as the requested alignment argument. Specific documented mappings and practices should be explained; no universal WHO/UN endorsement or “exceeds all standards” claim."
+    },
+    {
+      "category": "Neuroscience",
+      "detail": "Early opportunity; 86 billion neurons; neuroplasticity",
+      "decision": "Retain the reason for individualised, responsive support. Do not claim neuron-level mapping, a fixed learning deadline or measured brain effects from product operation without evidence."
+    },
+    {
+      "category": "Family language",
+      "detail": "Every home/every parent; therapy as empowerment, not cure",
+      "decision": "Preserved through intended-user participation, guided practice and capability-building. Do not imply everyone becomes a licensed clinician or reject necessary healthcare."
+    },
+    {
+      "category": "Brand and delivery",
+      "detail": "Authentic header; 9:16; paired comparisons; individual sharing; post-hero block; SEO/AEO",
+      "decision": "The manuscript and reader preserve the creative structure. Final photographic posters, unique published share URLs/OG, public integration and deployment are separate production work; not falsely marked complete."
+    }
+  ],
+  "finale": {
+    "heroEyebrow": "THE PINNACLEAI® PARADIGM SHIFT",
+    "heroTitle": "Your child’s life is the mission.\nPinnacleAI® puts it first.",
+    "heroSupport": "Communicating. Learning. Making choices. Taking part. Let the life your child is working toward guide every goal, every activity and every review.",
+    "heroPurpose": "Pinnacle’s purpose: A self-sufficient, mainstream life for your child.",
+    "heroBridge": "Life sets the direction. Abilities define the work. Your child’s response guides what happens next.",
+    "shortStory": [
+      {
+        "number": 1,
+        "title": "Start with the life.",
+        "body": "What would help your child communicate, learn, make choices and participate? Begin there.",
+        "cardId": "mission-before-means"
+      },
+      {
+        "number": 2,
+        "title": "Understand your child.",
+        "body": "Explore current abilities and the support your child needs. Give the next decision a clear starting point.",
+        "cardId": "understand-this-child"
+      },
+      {
+        "number": 3,
+        "title": "Give every activity a reason.",
+        "body": "Connect the life priority to an ability, a goal and purposeful practice. Understand why each belongs.",
+        "cardId": "programme-before-the-day"
+      },
+      {
+        "number": 4,
+        "title": "Make your experience count.",
+        "body": "Question the fit. Share what happens. Bring the child’s response into the next decision.",
+        "cardId": "human-agency-in-goals"
+      },
+      {
+        "number": 5,
+        "title": "See what each ability makes possible.",
+        "body": "Reassess, discuss progress and difficulties, and adapt the work around what matters next.",
+        "cardId": "the-skill-and-the-life"
+      }
+    ],
+    "parentCTA": {
+      "label": "Talk to Pinnacle about your child",
+      "href": "tel:+919100181181"
+    },
+    "reportCTA": {
+      "label": "Explore an AbilityScore® report",
+      "href": "https://www.pinnacleblooms.org/verify/#report-explorer"
+    },
+    "institutionCTA": {
+      "label": "Request a PinnacleAI® demonstration",
+      "href": "mailto:care@pinnacleblooms.org?subject=PinnacleAI%20demonstration%20enquiry"
+    },
+    "closingTitle": "Begin with the life you want your child to build.",
+    "closingBody": "Discuss your child’s abilities, inspect a report, and understand the proposed goals, support, costs and review. Make the next choice with clarity.",
+    "institutionalTitle": "Bring the questions your organisation needs answered.",
+    "institutionalBody": "Explore the proposed workflow, implementation requirements, training, clinical governance and evidence with the Pinnacle team.",
+    "productExample": {
+      "source": "Owner-supplied goal and session examples, 22 September 2026",
+      "goals": 7,
+      "selectedGoals": 3,
+      "sessionActivities": 6,
+      "therapyMinutes": 40,
+      "separateFamilyMinutes": 5,
+      "plannedNotObserved": true,
+      "redacted": true
+    }
+  }
+}

@@ -2,16 +2,16 @@
   {
     "route": "/",
     "id": "pinnacle-verify",
-    "title": "Your child’s abilities. PinnacleAI® The way forward.",
+    "title": "Your child’s life is the mission. PinnacleAI® puts it first.",
     "lines": [
-      "Your child’s abilities.",
-      "PinnacleAI®",
-      "The way forward."
+      "Your child’s life",
+      "is the mission.",
+      "PinnacleAI® puts it first."
     ],
     "category": "PINNACLE BLOOMS NETWORK",
-    "note": "Measurement. Personal planning. Everyday practice.",
+    "note": "Life sets the direction. Therapy serves the purpose.",
     "icon": "users",
-    "description": "Your child’s abilities. PinnacleAI® The way forward.. Measurement. Personal planning. Everyday practice.. Read original sources, dates and evidence scope in Pinnacle Verify."
+    "description": "See how life abilities guide goals, practice and review, with source records and an anonymised supplied planning example."
   },
   {
     "route": "/evidence/assurance-map.html",
@@ -874,15 +874,16 @@
   {
     "id": "pinnacle-paradigm-shift",
     "route": "/evidence/pinnacle-paradigm-shift.html",
-    "title": "The outcome leads. The whole system follows.",
+    "title": "Your child’s life is the mission. PinnacleAI® puts it first.",
     "lines": [
-      "The outcome leads.",
-      "The whole system follows."
+      "Your child’s life",
+      "is the mission.",
+      "PinnacleAI® puts it first."
     ],
     "category": "PINNACLE PARADIGM SHIFT",
-    "note": "Life goal. Connected care. Measured progress.",
+    "note": "Life sets the direction. Therapy serves the purpose.",
     "icon": "network",
-    "description": "Start with the abilities a child needs for self-sufficiency and mainstream participation. Then connect every assessment, specialist, technique and review to that direction.",
+    "description": "See how life abilities guide goals, practice and review, with source records and an anonymised supplied planning example.",
     "cover": "/images/paradigm/01-life-in-view-8594b22394ba.jpg"
   },
   {

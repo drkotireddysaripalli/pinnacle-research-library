@@ -87,11 +87,11 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [Citation library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html): 44 reusable citations with original sources and scope.
 - [Privacy and analytics choices](https://pinnacle-verify.saripalli.chatgpt.site/evidence/privacy.html): optional consent-based measurement and language translation.
 
-## Pinnacle approach and organisation reference
-- [Pinnacle Paradigm Shift](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html): nine care-system perspectives, the seven-stage developmental pathway, named software functions and source-linked answers.
-- [Organisation profile](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html): brand, legal entity, corporate history, software scope, dated figures, publications and editorial responsibility.
-- [Organisation profile JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.json): the same facts and source references.
-- [Connected approach JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.json): nine perspectives, seven stages and evidence-linked answers.
+## Organisation reference
+- [Organisation profile](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html): brand, legal identity, dated facts and original sources.
+
+## Earlier nine-perspective edition
+The current 18-part life-first explanation is linked below. These earlier care-system perspectives remain available for existing citations.
 
 ## Pinnacle Paradigm Shift — nine care-system perspectives
 - [01 · You wanted the car. Not a box of parts.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/01-life-in-view.html): The shift is in the architecture: measurement, planning, professional care, home practice and review working as one connected system.
@@ -105,6 +105,11 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [09 · Beyond more sessions. A direction for transition.](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm/09-independence-and-belonging.html): A developmental system needs a direction for what comes next: school participation, growing independence and the support that makes them possible.
 - [All nine explanations and sources · JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm-story.json)
 - [All nine explanations and sources · text](https://pinnacle-verify.saripalli.chatgpt.site/evidence/paradigm-story.txt)
+
+## PinnacleAI®: life sets the direction
+- [The complete eighteen-part paradigm story](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html): philosophy, anonymised supplied goal/session examples, institutional evidence and cited sources.
+- [Inside a supplied session](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html#documented-example): six activities, three selected goals and forty planned minutes plus five minutes of family handover.
+- [Structured explanation](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.json): the same visible claims, planning criteria and evidence boundaries.
 
 ## Share images
 - [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 77 branded image cards linked to their source pages.

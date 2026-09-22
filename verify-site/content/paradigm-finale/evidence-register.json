@@ -1,0 +1,127 @@
+[
+  {
+    "category": "Historical thesis",
+    "detail": "The 160-year challenge",
+    "decision": "Retained prominently on card 2 as the AbilityScore® monograph’s own thesis. No invented origin year or universal-failure verdict."
+  },
+  {
+    "category": "Assessment versions",
+    "detail": "591 possible variations versus the later 519 wording; 160–259 observations",
+    "decision": "Full detail retained on card 6 and in the source archive. Current product/version needed to reconcile exact counts."
+  },
+  {
+    "category": "Anatomy and standards",
+    "detail": "79 organs; ICD-11, ICF, ICH/ICHI, SNOMED",
+    "decision": "Preserve the original wording in the audit. Publish each mapping only against the actual mapping documentation; do not label the 17/79/349 hierarchy WHO-defined or WHO-approved."
+  },
+  {
+    "category": "Assessment governance",
+    "detail": "Household observations versus clinical assessment",
+    "decision": "Show both: family/intended-user participation and the professional governance described in the dossier. Do not erase either role."
+  },
+  {
+    "category": "Assessment output",
+    "detail": "4,000+ dimensions; 0–1000 outputs and visual zones",
+    "decision": "Retained in card 7 as owner-described output detail. Exact report/UI version and validation remain distinct."
+  },
+  {
+    "category": "Goal architecture",
+    "detail": "Nine goals per therapy; 36 for four therapies; six percentage levels",
+    "decision": "Retained explicitly in card 9 narration. Reconcile with the handout’s 9 × 4 × 7 checkpoint description using current product specification."
+  },
+  {
+    "category": "Goal feedback",
+    "detail": "1–9/1–3 earlier versus 0–9/0–3 later",
+    "decision": "Retained explicitly in card 10. It is not merged with technique feedback; automatic replacement behaviour needs a product demonstration."
+  },
+  {
+    "category": "Programme quantity",
+    "detail": "7–9 daily; 9 per programme; 9 per therapy type",
+    "decision": "All retained in card 11 notes. Main poster describes selected techniques until unit/version is resolved."
+  },
+  {
+    "category": "Repository",
+    "detail": "1.3 lakh+ technique inventory",
+    "decision": "Retained as owner update. Earlier published 90,000+ and newer inventory must have clear dates; do not attach an unrelated audit opinion."
+  },
+  {
+    "category": "Practice ambiguity",
+    "detail": "“2 min”",
+    "decision": "Unresolved literal phrase. No minutes or minimum technique prescription inferred."
+  },
+  {
+    "category": "Delivery",
+    "detail": "PinnacleTV; 90–180-second videos; 133+ languages; phones/tablets/TV",
+    "decision": "Retained in card 12 as the supplied operating description. Demonstrate actual current availability rather than deleting the mechanism."
+  },
+  {
+    "category": "Access control",
+    "detail": "Primary caregiver decides who has access",
+    "decision": "Retained in card 13. Confirm the actual permissions model and appropriate clinical access controls."
+  },
+  {
+    "category": "Learning threshold",
+    "detail": "Approximately 100 techniques",
+    "decision": "Retained as owner’s illustration of accumulating experience, not a validated threshold or guarantee of knowing the best intervention."
+  },
+  {
+    "category": "Forecasting",
+    "detail": "Real-time prognosis; timing/effort expectations",
+    "decision": "The affirmative function is explained on card 14; the UI, update frequency, assumptions and predictive validation must be separately documented."
+  },
+  {
+    "category": "Outcomes",
+    "detail": "97% proven improvement, measured across 31 Million+ therapy services and validated across 12 clinical studies.",
+    "decision": "Owner-requested claim preserved here. It is not used as proven causality or universal superiority; numerator, denominator, endpoint, population, study status and relevant methods must support any public outcome statement. Activity audits do not supply that proof."
+  },
+  {
+    "category": "Patents",
+    "detail": "“Patented” versus applications filed",
+    "decision": "Retain the IP/research argument; use actual current filing/grant status. Reviewed dossier states applications, not granted patents."
+  },
+  {
+    "category": "Scale",
+    "detail": "2.7B+ records; 31M+ services; 7.9 lakh+ registrations",
+    "decision": "Placed in card 5 with exact units and separate assurance scopes. These are not counts of unique children, one-to-one successes or proven training examples."
+  },
+  {
+    "category": "Calculated outputs",
+    "detail": "1.3M assessments × 8 = 10.4M reports",
+    "decision": "Retained in card 7 evidence layer. Owner-confirmed input and arithmetic are distinct from inspected generation logs."
+  },
+  {
+    "category": "Unreproduced total",
+    "detail": "400B PinnacleAI® Points; earlier 2.9B+ update",
+    "decision": "Preserved in the audit. No reproducible 400B formula supplied; no invented sum/multiplication of unlike units."
+  },
+  {
+    "category": "Population and infrastructure",
+    "detail": "900M mission; population-scale; sovereign-grade",
+    "decision": "Card 17 connects ambition to specific delivery and governance mechanisms. Capacity, security, interoperability and deployment require their own evidence."
+  },
+  {
+    "category": "Regulatory terms",
+    "detail": "MD-3/MD-5; CAL; BIS MDS/PMS/QMS; original MD33 wording",
+    "decision": "Retained for terminology resolution. MD-5 and BIS direct sources explain actual scope; MD-3 should not be silently promoted from application/form terminology to a separate granted efficacy approval."
+  },
+  {
+    "category": "Standards and mission alignment",
+    "detail": "WHO/UN AI principles; SDGs 3, 4, 10, 17",
+    "decision": "Retained as the requested alignment argument. Specific documented mappings and practices should be explained; no universal WHO/UN endorsement or “exceeds all standards” claim."
+  },
+  {
+    "category": "Neuroscience",
+    "detail": "Early opportunity; 86 billion neurons; neuroplasticity",
+    "decision": "Retain the reason for individualised, responsive support. Do not claim neuron-level mapping, a fixed learning deadline or measured brain effects from product operation without evidence."
+  },
+  {
+    "category": "Family language",
+    "detail": "Every home/every parent; therapy as empowerment, not cure",
+    "decision": "Preserved through intended-user participation, guided practice and capability-building. Do not imply everyone becomes a licensed clinician or reject necessary healthcare."
+  },
+  {
+    "category": "Brand and delivery",
+    "detail": "Authentic header; 9:16; paired comparisons; individual sharing; post-hero block; SEO/AEO",
+    "decision": "The manuscript and reader preserve the creative structure. Final photographic posters, unique published share URLs/OG, public integration and deployment are separate production work; not falsely marked complete."
+  }
+]

@@ -23,7 +23,7 @@ write('evidence-data.js','window.PINNACLE_EVIDENCE = '+JSON.stringify(data,null,
 const origin = 'https://pinnacle-verify.saripalli.chatgpt.site';
 // The authorised public /verify/ route is indexable; hosting access controls are unchanged.
 const robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
-const date = '2026-09-21';
+const date = '2026-09-22';
 const sourceDate = '2026-09-15';
 const title = 'PinnacleAI® Verify | Pinnacle Blooms Network';
 const description = 'Understand how PinnacleAI® connects measurement, planning and everyday practice. Explore eight developmental report types, MD-5, BIS, research and centre evidence.';
@@ -43,6 +43,7 @@ const icon = (name,extra='') => {
 const scaleStory = require('./scale-story-content.cjs')({e,icon,origin});
 const paradigm = require('./paradigm-content.cjs')({e,icon,origin});
 const storyDeck = require('./paradigm-story-content.cjs')({e,icon,origin});
+const finaleHome=require('./finale-home-content.cjs')({e,icon});write('finale-home.css',finaleHome.css);
 const impact = require('./impact-content.cjs')({e,icon});
 const assurance = require('./assurance-content.cjs')({e,icon});
 const metrics = require('./metrics-content.cjs')({e,icon});
@@ -104,7 +105,7 @@ const head = (pageTitle,desc,url,graph,scripts=false) => `<head>
 <script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':graph}).replace(/</g,'\\u003c')}</script>
 ${scripts?'<script defer src="/app.js"></script><script defer src="/reader.js"></script><script defer src="/experience.js"></script>':''}
 </head>`;
-const pageHeader = `<div class="review-strip"><span>EVIDENCE & CONTEXT</span> Updated: 21 September 2026</div><header class="wrap site-header"><a href="/" aria-label="Pinnacle verification home" class="brand"><span class="logo-crop"><img src="/images/pinnacle-logo.webp" alt="Pinnacle Blooms Network" width="420" height="158"></span></a><a class="outline-link" href="/#records">${icon('arrow-left')}Evidence library</a></header>`;
+const pageHeader = `<div class="review-strip"><span>EVIDENCE & CONTEXT</span> Updated: 22 September 2026</div><header class="wrap site-header"><a href="/" aria-label="Pinnacle verification home" class="brand"><span class="logo-crop"><img src="/images/pinnacle-logo.webp" alt="Pinnacle Blooms Network" width="420" height="158"></span></a><a class="outline-link" href="/#records">${icon('arrow-left')}Evidence library</a></header>`;
 const footer = require('./evidence-footer.cjs')({e,icon});
 const crumbsHTML = items => `<nav class="breadcrumbs" aria-label="Breadcrumb">${items.map((x,i)=>i===items.length-1?`<span aria-current="page">${e(x[0])}</span>`:`<a href="${e(x[1])}">${e(x[0])}</a>${icon('chevron-right')}`).join('')}</nav>`;
 const parentGuides=require('./parent-guides.cjs')({e,icon,origin,date,head,pageHeader,footer,breadcrumb,crumbsHTML,write});
@@ -131,7 +132,7 @@ faq.push(...impact.data.faq);
 const faqSchema = {'@type':'FAQPage','@id':origin+'/#questions',mainEntity:faq.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))};
 let body = fs.readFileSync(templatePath,'utf8').replaceAll('{{EVIDENCE_OWNER_NAME}}',e(evidenceOwner.name)).replaceAll('{{EVIDENCE_OWNER_ROLE}}',e(evidenceOwner.jobTitle));
 const guidedExperience=`<details class="guided-experience wrap" id="interactive-guides"><summary><div><span class="eyebrow">TRY THE WALKTHROUGH</span><strong>See the journey. Explore the reports.</strong><span>A guided example and eight report views.</span></div>${icon('plus')}</summary>${experience.tour}${experience.reports}</details>`;
-const worldHero=`<section class="intro world-intro wrap" aria-labelledby="page-title"><div class="hero-heading"><p class="eyebrow">PINNACLEAI® · THE WAY FORWARD</p><h1 id="page-title">Your child’s path toward <em>self-sufficiency and mainstream life.</em></h1></div>${world.hero}<div class="world-intro-copy"><p class="intro-purpose">Because every child deserves a wonderful life.</p><p class="intro-copy">What can my child do today, and what could help next? PinnacleAI® connects assessment, a personal plan, everyday practice and progress review, with your family and care team working together.</p><div class="hero-actions"><a class="primary-link contact-whatsapp" href="${e(whatsapp)}" data-contact-location="hero">${icon('phone')}WhatsApp Pinnacle</a><a class="outline-link" href="#pinnacle-paradigm-story">${icon('network')}See the paradigm shift</a></div><p class="hero-contact-choice"><a href="tel:+919100181181">Call 9100 181 181</a><span aria-hidden="true">·</span><a href="#reading-evidence">Explore the evidence</a></p><div class="hero-credentials"><a href="/evidence/records/md5.html">${icon('file-cog')}MD-5 · Class B SaMD</a><a href="/evidence/records/bis.html">${icon('shield')}BIS licence & scope</a></div><p class="hero-scope">Non-diagnostic developmental support · Ages 0–12 · Individual outcomes vary.</p><div class="hero-share-slot"></div></div></section>${storyDeck.html}${scaleStory.homeHtml}`;
+const worldHero=`<section class="intro world-intro wrap" aria-labelledby="page-title"><div class="hero-heading"><p class="eyebrow">PINNACLEAI® · THE WAY FORWARD</p><h1 id="page-title">Your child’s life is the mission. <em>PinnacleAI® puts it first.</em></h1></div>${world.hero}<div class="world-intro-copy"><p class="intro-purpose">Because every child deserves a wonderful life.</p><p class="intro-copy">Communicating. Learning. Making choices. Taking part. Pinnacle’s purpose is a self-sufficient, mainstream life for your child. That purpose guides the abilities, goals, techniques and support brought into the work.</p><div class="hero-actions"><a class="primary-link contact-whatsapp" href="${e(whatsapp)}" data-contact-location="hero">${icon('phone')}WhatsApp Pinnacle</a><a class="outline-link" href="#pinnacle-paradigm-story">${icon('network')}See the paradigm shift</a></div><p class="hero-contact-choice"><a href="tel:+919100181181">Call 9100 181 181</a><span aria-hidden="true">·</span><a href="#reading-evidence">Explore the evidence</a></p><div class="hero-credentials"><a href="/evidence/records/md5.html">${icon('file-cog')}MD-5 · Class B SaMD</a><a href="/evidence/records/bis.html">${icon('shield')}BIS licence & scope</a></div><p class="hero-scope">Non-diagnostic developmental support · Ages 0–12 · Individual outcomes vary.</p><div class="hero-share-slot"></div></div></section>${finaleHome.html}${scaleStory.homeHtml}`;
 
 body=body.replace('<!-- WORLD HERO -->',worldHero).replace('<!-- LIFECYCLE -->',world.lifecycle).replace('<!-- STANDARDS -->',world.standards).replace('<!-- SDGS -->',world.sdgs);
 body=body.replace('<!-- METRICS -->',semantic.profile+'<!-- METRICS -->').replace('<!-- CTA -->',semantic.glossary+'<!-- CTA -->');
@@ -178,7 +179,7 @@ write('centre-data.js',`window.PINNACLE_CENTRES = ${JSON.stringify(centres)};\n`
 body=body.replace('<details class="review-disclosure" id="site-update-history">',require('./editorial-content.cjs')({e,write,origin})+'<details class="review-disclosure" id="site-update-history">');
 body=require('./reader-content.cjs')(body,research.teaser,{icon,e,paradigm:`<details class="context-disclosure paradigm-legacy"><summary>The seven-stage care pathway ${icon('plus')}</summary>${paradigm.homeHtml}</details>`,chapterExtras:{journey:guidedExperience,'choosing-care':parentGuides.teaser,proof:experience.proof+presentation.snapshot,research:presentation.reference}});
 write('evidence/reading-topics.json',JSON.stringify({title:'Explore Pinnacle in 16 topics',canonical:origin+'/#reader-guide',topics:require('./reader-content.cjs').topics.map(t=>({...t,url:origin+'/#'+t.id}))},null,2));
-body=body.replace('Updated 19 September 2026','Updated 21 September 2026');
+body=body.replace(/Updated (?:19|21) September 2026/,'Updated 22 September 2026');
 write('index.html','<!doctype html>\n<html lang="en-IN">\n'+head(title,description,origin+'/',[organization,website,{'@type':'CollectionPage','@id':origin+'/#page',name:title,url:origin+'/',description,inLanguage:'en-IN',dateModified:date,isPartOf:{'@id':website['@id']},about:{'@id':organization['@id']},mainEntity:{'@id':listSchema['@id']}},listSchema,faqSchema],true)+'\n<body>'+body+'</body></html>\n');
 
 for (const r of records) {
@@ -273,12 +274,15 @@ const scaleStoryPage=require('./scale-story-page.cjs')({e,icon,origin,date,organ
 urls.push(scaleStoryPage.route);
 const references=require('./reference-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write,paradigm,storyDeck});
 urls.push(...references.routes);
-write('llms.txt',read('llms.txt')+references.index);
-write('llms-full.txt',read('llms-full.txt')+'\n\n'+references.text);
+write('llms.txt',read('llms.txt')+'\n## Organisation reference\n- [Organisation profile]('+origin+'/evidence/organisation-profile.html): brand, legal identity, dated facts and original sources.\n');
+write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/organisation-profile.txt'));
 const storyPages=require('./paradigm-story-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write});
 urls.push(...storyPages.routes);
-write('llms.txt',read('llms.txt')+storyPages.index);
-write('llms-full.txt',read('llms-full.txt')+'\n\n'+storyPages.text);
+write('llms.txt',read('llms.txt')+'\n## Earlier nine-perspective edition\nThe current 18-part life-first explanation is linked below. These earlier care-system perspectives remain available for existing citations.\n'+storyPages.index);
+write('llms-full.txt',read('llms-full.txt')+'\n\n# Earlier nine-perspective edition\nHistorical supporting perspectives; the current life-first explanation follows below.\n'+storyPages.text);
+const finalePage=require('./finale-page.cjs')({e,origin,date,organization,website,brand,head,footer,write});
+write('llms.txt',read('llms.txt')+finalePage.index);
+write('llms-full.txt',read('llms-full.txt')+'\n\n'+finalePage.text+'\n\n## Seven stages of the developmental pathway\n'+paradigm.text);
 // Apply the same semantic coverage to every page without maintaining a second claim set.
 const sectionPages=[];
 const sharePages=[];
@@ -287,7 +291,6 @@ const social=require('./social-content.cjs');
 for(const p of urls){
  const file=p==='/'?'index.html':p.slice(1),url=absolute(p);
  let html=read(file).replace(/<p class="entity-line wrap">[\s\S]*?<\/p>/g,'').replace(/<!-- share:start -->[\s\S]*?<!-- share:end -->/g,'').replace(/<svg class="share-symbols"[\s\S]*?<\/svg>/g,'').replace(/<p class="share-status"[\s\S]*?<\/dialog>/g,'');
- if(p==='/'||p==='/evidence/pinnacle-paradigm-shift.html')html=html.replace('</head>','<script defer src="/paradigm-story.js"></script></head>');
  // Legacy registers are rebuilt from their checked-in HTML; replace common chrome cleanly.
  html=html.replace(/<div class="reader-utility\b[^>]*>[\s\S]*?<\/details><\/div>/g,'').replace(/<aside class="analytics-choice"[\s\S]*?<\/aside>/g,'').replace(/<div class="privacy-links">[\s\S]*?<\/div>/g,'');
  html=html.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/,footer);
@@ -297,6 +300,7 @@ for(const p of urls){
  const page={url,title:html.match(/<title>(.*?)<\/title>/)[1],sections:enhanced.blocks};sectionPages.push(page);
  const shared=addSharing(social.enhance(enhanced.html,url),page,exportRecords);
  // Keep the crawler-facing head short; structured data remains server-rendered in the body.
+ if(p==='/evidence/pinnacle-paradigm-shift.html'){const specific=shared.html.match(/<link rel="stylesheet" href="\/_assets\/finale\.[a-f0-9]+\.css">/)?.[0];if(specific)shared.html=shared.html.replace(specific,'').replace('</head>',specific+'</head>');}
  const schema=shared.html.match(/<script type="application\/ld\+json">[\s\S]*?<\/script>/)?.[0]||'';
  write(file,shared.html.replace(schema,'').replace('</body>',schema+'</body>').replace('</head>','<link rel="stylesheet" href="/share.css"><script defer src="/share.js"></script><script defer src="/citations.js"></script></head>'));
  sharePages.push({url,items:shared.rows});

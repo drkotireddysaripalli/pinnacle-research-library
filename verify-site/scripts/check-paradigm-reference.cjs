@@ -50,7 +50,12 @@ function allSourceValues(value,from){
  if(Array.isArray(value)){value.forEach(v=>allSourceValues(v,from));return;}
  if(!value||typeof value!=='object')return;
  for(const [key,item]of Object.entries(value)){
-  if(/^(source|sourceHref|sourceHrefs|canonical|url)$/.test(key))for(const href of Array.isArray(item)?item:[item])if(typeof href==='string')localTarget(href,from,'Export '+from);
+  if(/^(source|sourceHref|sourceHrefs|canonical|url)$/.test(key))for(const href of Array.isArray(item)?item:[item])if(typeof href==='string'){
+   // A source field may also be a prose provenance label. URL-bearing fields
+   // and every actual URL/path source retain the same file/fragment validation.
+   if(key!=='source'||/^(?:https?:\/\/|\/|#|\.\/|\.\.\/|evidence\/|guides\/)/.test(href))localTarget(href,from,'Export '+from);
+   else check(href.trim().length>0,'Export '+from+' source provenance must not be empty');
+  }
   allSourceValues(item,from);
  }
 }
@@ -108,9 +113,10 @@ for(const route of routes){
  check(data.canonical===canonical,route+' export canonical');allSourceValues(data,route);
  check(fs.existsSync(path.join(dist,routeFile(route).replace(/\.html$/,'.txt'))),route+' text export');
  const faq=graph.find(n=>n['@type']==='FAQPage'),faqSection=page.ids.get('quick-answers');
- check(!!faq&&!!faqSection,route+' visible and structured FAQ');
+ if(route==='/evidence/organisation-profile.html')check(!!faq&&!!faqSection,route+' visible and structured FAQ');
+ else check(Boolean(faq)===Boolean(faqSection),route+' FAQ metadata exists only with corresponding visible answers');
  const details=faqSection?page.descendants(faqSection).filter(n=>n.tag==='details'&&hasClass(n,'faq-item')):[];
- check(details.length===(faq?.mainEntity||[]).length&&details.length>0,route+' FAQ count matches');
+ check(details.length===(faq?.mainEntity||[]).length&&(!faq||details.length>0),route+' FAQ count matches');
  for(const node of details){
   const summary=node.children.find(n=>n.tag==='summary'),paragraph=page.descendants(node).find(n=>n.tag==='p');
   const question=summary?page.content(summary):'',answer=paragraph?page.content(paragraph):'';
@@ -123,14 +129,27 @@ for(const route of routes){
  stats.pages++;
 }
 
-const paradigm=pageAt(routeFile(routes[0])),stages=JSON.parse(read('evidence/pinnacle-paradigm-shift.json')).stages;
-for(const [label,page]of [['homepage',pageAt('index.html')],['paradigm page',paradigm]]){
- const lists=page.nodes.filter(n=>n.tag==='ol'&&hasClass(n,'paradigm-path'));check(lists.length===1,label+' one seven-stage pathway');
- const items=lists[0]?.children.filter(n=>n.tag==='li')||[];check(items.length===7,label+' seven visible stages');
- check(stages.length===7&&stages.every((s,i)=>s.position===i+1),'Seven ordered stage records');
- items.forEach((node,i)=>{const heading=page.descendants(node).find(n=>/^h[2-6]$/.test(n.tag));check(heading&&page.content(heading)===stages[i]?.name,label+' stage order/name '+(i+1));});
+const paradigm=pageAt(routeFile(routes[0])),finale=JSON.parse(read('evidence/pinnacle-paradigm-shift.json'));
+const approved=JSON.parse(fs.readFileSync(path.join(root,'content/paradigm-finale/story.json'),'utf8'));
+const legacyPathway=require('./paradigm-content.cjs')({e:value=>String(value),icon:()=>'',origin}).stages;
+const home=pageAt('index.html'),lists=home.nodes.filter(n=>n.tag==='ol'&&hasClass(n,'paradigm-path'));
+check(lists.length===1,'Homepage retains one seven-stage pathway');
+const items=lists[0]?.children.filter(n=>n.tag==='li')||[];check(items.length===7,'Homepage retains seven visible care stages');
+check(legacyPathway.length===7&&legacyPathway.every((s,i)=>s.position===i+1),'Seven ordered care-stage source records');
+items.forEach((node,i)=>{const heading=home.descendants(node).find(n=>/^h[2-6]$/.test(n.tag));check(heading&&home.content(heading)===legacyPathway[i]?.name,'Homepage care-stage order/name '+(i+1));});
+check(fullText.includes('Seven stages')||legacyPathway.every(s=>fullText.includes(s.name)),'Full text retains the care pathway');
+check(finale.perspectives?.length===18&&approved.cards.length===18,'Eighteen finale perspectives are exported');
+const chapters=paradigm.nodes.filter(n=>n.tag==='article'&&hasClass(n,'chapter'));
+check(chapters.length===18,'Full finale contains eighteen static chapters');
+for(const [index,card]of approved.cards.entries()){
+ const node=chapters[index];check(node?.attrs.id===card.id&&node.attrs['data-card']===String(card.number),'Finale source order and identity '+card.id);
+ check(JSON.stringify(finale.perspectives[index])===JSON.stringify(card),'Finale JSON retains approved narrative '+card.id);
+ check(fullText.includes(card.pinnacle),'LLM full text includes approved narrative '+card.id);
+ for(const [,href]of card.sources)localTarget(href,routes[0],'Finale source '+card.id);
 }
-check(fullText.includes('Seven stages')||stages.every(s=>fullText.includes(s.name)),'Full text includes the connected pathway');
+check(paradigm.ids.has('documented-example')&&paradigm.ids.has('institutional-foundation'),'Finale example and institutional evidence anchors');
+check(llms.includes(origin+routes[0]+'#documented-example'),'LLM index links to documented example');
+for(const file of [routeFile(routes[0]),'evidence/pinnacle-paradigm-shift.json','evidence/pinnacle-paradigm-shift.txt','llms.txt','llms-full.txt'])check(!/Vishwanath|VISH-[A-Z0-9]|72742/i.test(read(file)),'Private example identifiers excluded from '+file);
 check(fullText.includes('Pinnacle Blooms Network: organisation profile'),'Full text includes organisation profile');
 const profile=pageAt(routeFile(routes[1]));
 const legal=profile.graph.find(n=>n['@type']==='Organization'&&n.legalName==='Bharath Healthcare Laboratories Private Limited');
@@ -142,6 +161,8 @@ check(!(brand?.sameAs||[]).some(url=>url.includes('gleif.org')),'Legal registry 
 const homeShare=shareIndex.pages.find(p=>p.url===origin+'/')?.items.find(i=>i.id==='pinnacle-paradigm-shift');
 const paradigmCard=cards.find(c=>c.route===routes[0]);
 check(homeShare?.url===publicBase+routes[0]&&homeShare?.image===publicBase+paradigmCard?.image,'Homepage paradigm sharing uses dedicated route and card');
+const compact=home.ids.get('pinnacle-paradigm-story');
+check(compact&&home.descendants(compact).some(n=>n.tag==='a'&&n.attrs.href?.startsWith('https://wa.me/')&&new URL(n.attrs.href).searchParams.get('text')?.includes(publicBase+routes[0])),'Compact homepage story shares the complete canonical explanation');
 
 // Check references throughout the built site: reducing section schema must never
 // leave a page/section pointing to an omitted disclosure or table row node.

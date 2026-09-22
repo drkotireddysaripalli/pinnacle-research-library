@@ -93,3 +93,14 @@ The first reading section now presents Pinnacle Paradigm Shift: seven stages con
 Inline schema now describes meaningful sections rather than duplicating every disclosure and table row. The homepage HTML is 10.4% smaller than the preceding source version despite the new narrative. Browser viewport checks covered desktop and narrow phones; check-paradigm-reference, check-scale-discovery and check-editorial-confirmation pass.
 
 The owner-confirmed clinical review applies to the recorded 19 September edition and unchanged parent guides. New narrative and reference content does not inherit an exact-edition clinical sign-off. This first-party profile does not establish Wikipedia notability or guarantee a Google knowledge panel.
+
+
+## Life-first finale · 22 September 2026
+
+The homepage now leads with “Your child’s life is the mission. PinnacleAI® puts it first.” A compact illustrated introduction links to the full 18-part reader at the existing /evidence/pinnacle-paradigm-shift.html address. The reader lets families choose the principle, a supplied session, institutional evidence or the full story. Responsive native disclosures, individual chapter navigation and WhatsApp/X links keep the reader in control. All 462 previous homepage anchors and nine earlier reference/poster routes remain available.
+
+The supplied planning example is anonymised: seven goals were provided; this session selects three goals through six activities totalling 40 minutes, with a separate five-minute family handover. Plan-defined milestone labels and proposed criteria are not completed outcomes. The separate supplied assessment-report excerpt is not asserted to belong to the same child. No identifying child name or raw session/goal identifiers are published.
+
+Source lives in content/paradigm-finale; finale-page.cjs adapts it into the portal and scopes its CSS. finale-home-content.cjs renders the compact introduction. Existing compressed artwork is tracked under dist/images/paradigm-finale. Build with node scripts/build-content.cjs. Shared metadata, 77-page sitemap, llms.txt, llms-full.txt, citation and structured exports update from the build. Page-specific JS/CSS is fingerprinted and only loaded on the full reader. The earlier nine downloadable posters are retained as an earlier edition.
+
+Validation: check-paradigm-story, check-paradigm-reference, check-scale-story, check-scale-discovery, check-editorial-confirmation and check-hfr-presentation. Browser checks cover 1280px desktop and 390px phone, hero artwork, interactive goal/session mapping, the 18-part reader, direct anchors and horizontal overflow. Existing dated clinical-review coverage is preserved; this new narrative does not inherit a prior exact-edition sign-off.

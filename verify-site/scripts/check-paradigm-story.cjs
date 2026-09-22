@@ -4,7 +4,7 @@ const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),dist=path.join(root,'dist');
 const origin='https://pinnacle-verify.saripalli.chatgpt.site',publicBase='https://www.pinnacleblooms.org/verify';
 const overview='/evidence/pinnacle-paradigm-shift.html',failures=[];
-const stats={storyPages:0,customCards:0,posters:0,previews:0,socialImages:0,localTargets:0,storyScriptPages:0};
+const stats={storyPages:0,customCards:0,posters:0,previews:0,socialImages:0,localTargets:0,storyScriptPages:0,sessionActivities:0};
 const check=(ok,message)=>{if(!ok)failures.push(message);};
 const read=file=>fs.readFileSync(path.join(dist,file),'utf8');
 const decode=value=>String(value??'').replace(/&#x([\da-f]+);/gi,(_,n)=>String.fromCodePoint(parseInt(n,16))).replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(+n)).replace(/&(amp|lt|gt|quot|apos|nbsp);/g,(_,n)=>({amp:'&',lt:'<',gt:'>',quot:'"',apos:"'",nbsp:' '}[n]));
@@ -71,6 +71,7 @@ async function validatePage(route){
  const links=page.nodes.filter(n=>n.tag==='link'&&n.attrs.rel==='canonical');check(links.length===1&&links[0].attrs.href===canonical,route+' self-canonical');
  for(const name of ['description','og:title','og:description','og:url','og:image','og:image:width','og:image:height','twitter:image'])check(metadata(page,name).length===1&&metadata(page,name)[0].attrs.content,route+' unique '+name);
  check(metadata(page,'og:url')[0]?.attrs.content===canonical,route+' OG canonical');
+ check(metadata(page,'robots').some(n=>/^index,follow(?:,|$)/.test(n.attrs.content)),route+' indexable robots');
  const image=metadata(page,'og:image')[0]?.attrs.content;check(image===metadata(page,'twitter:image')[0]?.attrs.content,route+' social image consistency');
  if(image){const size=await dimensions(localFile(image,route,route+' OG image'),route+' OG image');if(size){check(size.width===Number(metadata(page,'og:image:width')[0]?.attrs.content)&&size.height===Number(metadata(page,'og:image:height')[0]?.attrs.content),route+' OG dimensions must match actual image');check(size.width>=600&&size.height>=315,route+' social image resolution');stats.socialImages++;}}
  for(const node of page.nodes)if(node.attrs.href)localFile(node.attrs.href,route,route);
@@ -101,44 +102,75 @@ async function main(){
   const pageBars=page.nodes.filter(n=>hasClass(n,'fact-share')&&n.attrs['data-share-url']===publicBase+route);check(pageBars.length>=1,route+' canonical page sharing');
   stats.storyPages++;
  }
- for(const route of ['/',overview]){
-  const page=await validatePage(route),deck=page.ids.get('pinnacle-paradigm-story');check(!!deck,route+' story deck');if(!deck)continue;
-  check(deck.attrs['data-share-managed']==='true',route+' owns its custom sharing');
-  const inside=page.descendants(deck),cards=inside.filter(n=>n.attrs['data-story-card']);check(cards.length===9,route+' nine indexable custom cards');
-  check(inside.filter(n=>hasClass(n,'fact-share')).length===9,route+' exactly nine custom share bars, without automatic duplicates');
-  check(inside.some(n=>/^h[1-3]$/.test(n.tag)&&page.text(n)===data.headline),route+' current authored headline');
-  const steps=inside.filter(n=>n.tag==='ol'&&hasClass(n,'ps-simple-steps'));check(steps.length===1&&steps[0].children.filter(n=>n.tag==='li').length===3,route+' three simple introductory steps');
-  check(data.simpleSteps?.length===3,'Three authored introductory steps');
-  for(const step of data.simpleSteps||[])check(steps[0]&&page.text(steps[0]).includes(step.title)&&page.text(steps[0]).includes(step.text),route+' visible introductory step: '+step.title);
-  for(const [index,card]of data.cards.entries()){
-   const node=cards.find(n=>n.attrs['data-story-card']===card.id);check(!!node,route+' card '+card.id);if(!node)continue;
-   const child=page.descendants(node),asset=assets.find(a=>a.id===card.id),url=publicBase+routes[index];
-   const bars=child.filter(n=>hasClass(n,'fact-share'));check(bars.length===1&&bars[0].attrs['data-share-url']===url,route+' custom canonical sharing '+card.id);
-   const barChildren=bars[0]?page.descendants(bars[0]):[];
-   const wa=barChildren.find(n=>n.tag==='a'&&hasClass(n,'share-wa')),x=barChildren.find(n=>n.tag==='a'&&hasClass(n,'share-x'));
-   check(wa&&new URL(wa.attrs.href).searchParams.get('text')?.includes(url),route+' WhatsApp card destination '+card.id);
-   check(x&&new URL(x.attrs.href).searchParams.get('url')===url,route+' X card destination '+card.id);
-   check(barChildren.some(n=>n.tag==='button'&&hasClass(n,'copy-share')),route+' delegated copy control '+card.id);
-   check(child.some(n=>n.tag==='a'&&n.attrs.href===routes[index]),route+' readable card page '+card.id);
-   check(child.some(n=>n.tag==='a'&&n.attrs.href===asset?.poster&&n.attrs.download),route+' actual card poster download '+card.id);
-   const img=child.find(n=>n.tag==='img');check(img?.attrs.src===asset?.preview,route+' correct preview '+card.id);check(img?.attrs.loading===(index===0?'eager':'lazy'),route+' image loading priority '+card.id);
-   for(const copy of [card.disconnected,card.connected,card.lifeMeaning])check(page.text(node).includes(plain(copy)),route+' transcribed card copy '+card.id);
-   stats.customCards++;
-  }
-  const mission=inside.find(n=>hasClass(n,'ps-mission'));check(mission&&page.text(mission).includes(data.mission.value)&&page.text(mission).includes(data.mission.text),route+' mission value and text');
-  check(mission&&page.descendants(mission).some(n=>n.tag==='a'&&n.attrs.href==='/evidence/records/'+data.mission.sourceId+'.html'),route+' mission source');
+ const homePage=await validatePage('/'),finale=await validatePage(overview);
+ const approved=JSON.parse(fs.readFileSync(path.join(root,'content/paradigm-finale/story.json'),'utf8'));
+ const published=JSON.parse(read('evidence/pinnacle-paradigm-shift.json'));
+ const intro=homePage.ids.get('pinnacle-paradigm-story');check(!!intro,'Homepage compact life-first introduction');
+ if(intro){
+  const inside=homePage.descendants(intro);
+  check(intro.attrs['data-share-managed']==='true','Homepage introduction owns its sharing');
+  check(homePage.text(intro).includes(plain(approved.headline)),'Homepage approved mission-first headline');
+  check(!inside.some(n=>n.attrs['data-story-card']),'Homepage does not duplicate the retired nine-card carousel');
+  for(const card of data.cards)for(const suffix of ['', '-title'])check(homePage.ids.has('paradigm-story-card-'+card.id+suffix),'Homepage legacy anchor '+card.id+suffix);
+  for(const href of [overview,overview+'#documented-example'])check(inside.some(n=>n.tag==='a'&&n.attrs.href===href),'Homepage story/example destination '+href);
+  check(inside.some(n=>n.tag==='a'&&n.attrs.href?.startsWith('https://wa.me/')&&new URL(n.attrs.href).searchParams.get('text')?.includes(publicBase+overview)),'Homepage custom WhatsApp destination');
+  const img=inside.find(n=>n.tag==='img');check(img?.attrs.src==='/images/paradigm-finale/moon-600.webp'&&img.attrs.loading==='lazy','Homepage deferred Moon illustration');
+ }
+ check(approved.cards.length===18&&published.perspectives?.length===18,'Eighteen approved and exported finale perspectives');
+ const chapters=finale.nodes.filter(n=>n.tag==='article'&&hasClass(n,'chapter'));
+ check(chapters.length===18,'Eighteen indexable finale chapters');
+ check(finale.ids.get('complete-story')?.tag==='details','Full story remains available through native disclosure');
+ for(const [index,card]of approved.cards.entries()){
+  const node=chapters.find(n=>n.attrs.id===card.id);check(!!node,'Finale card '+card.id);if(!node)continue;
+  check(node.attrs['data-card']===String(index+1)&&card.number===index+1,'Finale card order '+card.id);
+  check(!/\bhidden(?:\s|=|>)/.test(finale.html.slice(node.start,node.inner)),'Finale card static content available without JavaScript '+card.id);
+  for(const key of ['title','hook','pinnacle','contrast','punch'])check(finale.text(node).includes(plain(card[key])),'Finale visible '+key+' '+card.id);
+  for(const key of ['narration','mechanism','proof'])for(const value of card[key])check(finale.text(node).includes(plain(value)),'Finale preserved '+key+' '+card.id);
+  const child=finale.descendants(node),url=publicBase+overview+'#'+card.id;
+  for(const source of card.sources)check(child.some(n=>n.tag==='a'&&n.attrs.href===source[1]),'Finale source link '+card.id+' '+source[1]);
+  check(JSON.stringify(published.perspectives[index])===JSON.stringify(card),'Finale exported card matches approved source '+card.id);
+  const wa=child.find(n=>n.tag==='a'&&n.attrs.href?.startsWith('https://wa.me/')),x=child.find(n=>n.tag==='a'&&n.attrs.href?.startsWith('https://twitter.com/intent/tweet'));
+  check(wa&&new URL(wa.attrs.href).searchParams.get('text')?.includes(url),'Finale WhatsApp direct fragment '+card.id);
+  check(x&&new URL(x.attrs.href).searchParams.get('url')===url,'Finale X direct fragment '+card.id);
+  check(child.some(n=>n.tag==='button'&&n.attrs['data-copy']===String(card.number)),'Finale copy control '+card.id);
+  check(child.some(n=>n.tag==='a'&&n.attrs.href==='#'+card.id),'Finale direct card link '+card.id);
+  stats.customCards++;
+ }
+ const example=published.goalSessionExample,sourceExample=require('../content/paradigm-finale/goal-session-example.cjs');
+ check(example?.suppliedGoalCount===7&&example.selectedGoals?.length===3&&example.activities?.length===6,'Supplied and selected example counts');
+ check(example?.activities?.reduce((sum,a)=>sum+a.minutes,0)===40&&example.sessionMinutes===40&&example.separateFamilyMinutes===5,'Forty-minute plan and separate five-minute handover');
+ check(JSON.stringify(example?.selectedGoals)===JSON.stringify(sourceExample.goals)&&JSON.stringify(example?.activities)===JSON.stringify(sourceExample.activities),'Published example equals anonymised approved excerpts');
+ const exampleNode=finale.ids.get('documented-example'),timeline=finale.ids.get('session-timeline');check(!!exampleNode&&!!timeline,'Visible supplied goal/session example');
+ const activities=timeline?finale.descendants(timeline).filter(n=>n.attrs['data-activity-goal']):[];check(activities.length===6,'Six visible session activities');
+ for(const [i,activity]of (example?.activities||[]).entries()){
+  const node=activities[i];check(node?.attrs.href==='#goal-panel-'+activity.goal&&node.attrs['data-activity-goal']===activity.goal,'Activity-to-goal link '+(i+1));
+  check(node&&finale.text(node).includes(activity.name)&&node.attrs['aria-label']?.includes(activity.minutes+' minutes'),'Visible activity name and duration '+(i+1));stats.sessionActivities++;
+ }
+ for(const goal of example?.selectedGoals||[]){
+  const node=finale.ids.get('goal-panel-'+goal.id);check(!!node,'Goal panel '+goal.id);
+  check(activities.filter(n=>n.attrs['data-activity-goal']===goal.id).length===2,'Two activities for selected goal '+goal.id);
+  check(goal.steps.map(s=>s[0]).join(',')==='10%,25%,45%,70%,90%,100%','Preserved plan milestone labels '+goal.id);
+  for(const [label,value]of goal.steps)check(node&&finale.text(node).includes(label)&&finale.text(node).includes(plain(value)),'Visible planning criterion '+goal.id+' '+label);
+ }
+ check(exampleNode&&finale.text(exampleNode).includes('not completed-session feedback, observed progress or a promised result'),'Example keeps planning-versus-result boundary');
+ for(const file of [fileFor(overview),'evidence/pinnacle-paradigm-shift.json','evidence/pinnacle-paradigm-shift.txt','llms.txt','llms-full.txt'])check(!/Vishwanath|VISH-[A-Z0-9]|72742/i.test(read(file)),'Private example identifiers excluded from '+file);
+ for(const card of approved.cards)check(plain(read('evidence/pinnacle-paradigm-shift.txt')).includes(plain(card.pinnacle)),'Full-text finale claim '+card.id);
+ check(llms.includes(origin+overview+'#documented-example'),'Source index links to supplied example');
+ for(const img of finale.nodes.filter(n=>n.tag==='img')){
+  const file=localFile(img.attrs.src,overview,'Finale image');const size=await dimensions(file,'Finale image');check(!!size,'Finale image is inspectable '+img.attrs.src);
+  if(img.attrs.srcset)for(const entry of img.attrs.srcset.split(','))localFile(entry.trim().split(/\s+/)[0],overview,'Finale responsive image');
  }
  const home=pageAt('/'),hero=home.nodes.find(n=>n.tag==='section'&&hasClass(n,'world-intro')),deck=home.ids.get('pinnacle-paradigm-story'),scale=home.ids.get('scale-for-every-child');
- check(hero&&deck&&scale&&hero.end<=deck.start&&deck.end<=scale.start,'Homepage order must be hero → nine-card story → scale');
+ check(hero&&deck&&scale&&hero.end<=deck.start&&deck.end<=scale.start,'Homepage order must be hero → compact life-first story → scale');
  const jump=home.nodes.find(n=>n.tag==='nav'&&hasClass(n,'reading-jump-bar'));
  check(jump&&home.descendants(jump).some(n=>n.tag==='a'&&n.attrs.href==='#reading-journey'&&home.text(n)==='Journey'),'Reading navigation retains Journey label and destination');
  const files=fs.readdirSync(dist,{recursive:true}).filter(f=>f.endsWith('.html'));
  const scriptPages=[],globalDefinitions=new Map();
  for(const file of files){const page=pageAt(file);for(const node of page.graph)if(node['@id'])globalDefinitions.set(node['@id'],node);
-  const scripts=[...page.html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*>/g)].map(m=>decode(m[1])).filter(src=>/\/paradigm-story(?:\.[a-f0-9]{16})?\.js$/.test(src));
-  if(scripts.length){scriptPages.push(file.replaceAll('\\','/'));check(scripts.length===1,file+' one story script');check(/^\/_assets\/paradigm-story\.[a-f0-9]{16}\.js$/.test(scripts[0]),file+' fingerprinted story script');localFile(scripts[0],'/'+file.replaceAll('\\','/'),file+' story script');}
+  const scripts=[...page.html.matchAll(/<script\b[^>]*\bsrc="([^"]+)"[^>]*>/g)].map(m=>decode(m[1])).filter(src=>/\/finale(?:\.[a-f0-9]{16})?\.js$/.test(src));
+  if(scripts.length){scriptPages.push(file.replaceAll('\\','/'));check(scripts.length===1,file+' one finale script');check(/^\/_assets\/finale\.[a-f0-9]{16}\.js$/.test(scripts[0]),file+' fingerprinted finale script');const scriptFile=localFile(scripts[0],'/'+file.replaceAll('\\','/'),file+' finale script');if(scriptFile)try{new Function(fs.readFileSync(scriptFile,'utf8'));}catch(error){check(false,file+' invalid finale script: '+error.message);}}
  }
- check(JSON.stringify(scriptPages.sort())===JSON.stringify(['index.html',fileFor(overview)].sort()),'Story script must load only on homepage and story overview');stats.storyScriptPages=scriptPages.length;
+ check(JSON.stringify(scriptPages.sort())===JSON.stringify([fileFor(overview)]),'Finale script must load only on its complete story page');stats.storyScriptPages=scriptPages.length;
  for(const route of ['/',overview,...routes]){
   const page=pageAt(route),local=new Map(page.graph.map(n=>[n['@id'],n]));
   for(const node of page.graph){

@@ -3,20 +3,20 @@
     {
       "route": "/",
       "id": "pinnacle-verify",
-      "title": "Your child’s abilities. PinnacleAI® The way forward.",
+      "title": "Your child’s life is the mission. PinnacleAI® puts it first.",
       "lines": [
         "Your child’s abilities.",
         "PinnacleAI®",
         "The way forward."
       ],
       "category": "PINNACLE BLOOMS NETWORK",
-      "note": "Measurement. Personal planning. Everyday practice.",
+      "note": "Explore the child’s life abilities, research, regulatory scope and source records",
       "icon": "users",
       "description": "Your child’s abilities. PinnacleAI® The way forward.. Measurement. Personal planning. Everyday practice.. Read original sources, dates and evidence scope in Pinnacle Verify.",
       "image": "/images/social/pinnacle-verify-e142acf48dd4.jpg",
       "width": 1200,
       "height": 630,
-      "alt": "Your child’s abilities. PinnacleAI® The way forward. PINNACLE BLOOMS NETWORK. Measurement. Personal planning. Everyday practice.. Pinnacle Blooms Network."
+      "alt": "Pinnacle Blooms Network. Your child’s abilities. PinnacleAI® The way forward. Mother and child illustration."
     },
     {
       "route": "/evidence/assurance-map.html",
@@ -1135,20 +1135,20 @@
     {
       "id": "pinnacle-paradigm-shift",
       "route": "/evidence/pinnacle-paradigm-shift.html",
-      "title": "The outcome leads. The whole system follows.",
+      "title": "Your child’s life is the mission. PinnacleAI® puts it first.",
       "lines": [
         "The outcome leads.",
         "The whole system follows."
       ],
       "category": "PINNACLE PARADIGM SHIFT",
-      "note": "Life goal. Connected care. Measured progress.",
+      "note": "An eighteen-part explanation with anonymised goals, a planned session and institutional evidence",
       "icon": "network",
       "description": "Start with the abilities a child needs for self-sufficiency and mainstream participation. Then connect every assessment, specialist, technique and review to that direction.",
       "cover": "/images/paradigm/01-life-in-view-8594b22394ba.jpg",
-      "image": "/images/social/pinnacle-paradigm-shift-8fa722610839.jpg",
+      "image": "/images/social/pinnacle-verify-e142acf48dd4.jpg",
       "width": 1200,
       "height": 630,
-      "alt": "The outcome leads. The whole system follows. PINNACLE PARADIGM SHIFT. Life goal. Connected care. Measured progress.. Pinnacle Blooms Network."
+      "alt": "Pinnacle Blooms Network. Your child’s abilities. PinnacleAI® The way forward. Mother and child illustration."
     },
     {
       "id": "pinnacle-organisation-profile",

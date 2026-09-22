@@ -1,0 +1,112 @@
+{
+  "brand-header-600": {
+    "width": 600,
+    "height": 84,
+    "bytes": 15384
+  },
+  "brand-header-1200": {
+    "width": 1200,
+    "height": 168,
+    "bytes": 43394
+  },
+  "moon-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 12640
+  },
+  "moon-1200": {
+    "width": 1200,
+    "height": 800,
+    "bytes": 37192
+  },
+  "car-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 24178
+  },
+  "car-1200": {
+    "width": 1200,
+    "height": 800,
+    "bytes": 70080
+  },
+  "hero-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 32906
+  },
+  "hero-1200": {
+    "width": 900,
+    "height": 600,
+    "bytes": 60590
+  },
+  "family-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 46794
+  },
+  "family-1200": {
+    "width": 1000,
+    "height": 667,
+    "bytes": 116846
+  },
+  "practice-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 17320
+  },
+  "practice-1200": {
+    "width": 900,
+    "height": 600,
+    "bytes": 31458
+  },
+  "learning-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 28818
+  },
+  "learning-1200": {
+    "width": 900,
+    "height": 600,
+    "bytes": 54824
+  },
+  "review-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 26214
+  },
+  "review-1200": {
+    "width": 900,
+    "height": 600,
+    "bytes": 48024
+  },
+  "assessment-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 23288
+  },
+  "assessment-1200": {
+    "width": 900,
+    "height": 600,
+    "bytes": 43342
+  },
+  "team-600": {
+    "width": 600,
+    "height": 400,
+    "bytes": 21366
+  },
+  "team-1200": {
+    "width": 900,
+    "height": 600,
+    "bytes": 40706
+  },
+  "report-cover-600": {
+    "width": 600,
+    "height": 849,
+    "bytes": 134924
+  },
+  "report-cover-1200": {
+    "width": 774,
+    "height": 1095,
+    "bytes": 189540
+  }
+}
