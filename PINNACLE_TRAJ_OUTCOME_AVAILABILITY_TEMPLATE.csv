@@ -1,0 +1,10 @@
+row_order,stage_or_reason,children_n,centres_n,definition_or_denominator,status,source_location
+1,"Candidate unique children",,,"Candidate calendar boundary",,"Supplement S2 Table S1"
+2,"Excluded: baseline data invalid or unresolved",,,"After deterministic validation",,"Supplement S2 Table S1"
+3,"Excluded: calendar version or age coverage",,,"Prespecified scoring-era manifest",,"Supplement S2 Table S1"
+4,"Primary baseline cohort",,,"All baseline-eligible children",,"Supplement S2 Table S1"
+5,"Observed valid 150–210-day endpoint",,,"Primary baseline cohort",,"Supplement S2 Table S1"
+6,"No assessment in the primary window",,,"Primary baseline cohort",,"Supplement S2 Table S1"
+7,"Only incompatible or invalid window record",,,"Primary baseline cohort",,"Supplement S2 Table S1"
+8,"Recorded death or undefined endpoint",,,"Primary baseline cohort; undefined rather than ordinary missingness",,"Supplement S2 Table S1"
+9,"Primary-score analysis denominator qualification",,,"State the denominator used by each analysis",,"Supplement S2 Table S1"

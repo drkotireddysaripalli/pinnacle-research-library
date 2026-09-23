@@ -1,0 +1,13 @@
+manifest_item,value_or_identifier,evidence_or_file,decision_date,outcome_values_visible,amendment_required,notes
+"Database close","Proposed 30 June 2026",,,,,
+"Eligible baseline start",,,,,,
+"Eligible baseline end",,,,,,
+"Centres and operational intervals",,,,,,
+"Scoring versions and supported age range",,,,,,
+"Excluded versions and reasons",,,,,,
+"Ethics decision and permissions","Pending in released protocol",,,,,
+"Registry identifiers","Pending in released protocol",,,,,
+"Prior access or analysis",,,,,,"Requires an investigator and custodian declaration"
+"Code and SAP freeze",,,,,,
+"Authorized outcome-data release",,,,,,
+"Amendments",,,,,,"Record actual date old and new rule reason stage and whether outcomes were visible"

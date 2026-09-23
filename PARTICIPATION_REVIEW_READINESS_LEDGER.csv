@@ -1,0 +1,10 @@
+decision,relevant_protocol_section,responsible_person,evidence_or_access_status,agreed_action,actual_completion_date,approval,amendment_required,notes
+"Actual review stage and registration status","Reader status statement and registration plan",,,,,,,"Preserve unregistered status until an identifier is publicly verified"
+"Independent reviewer and adjudicator roles","Reader sections 2.6 and 5.1–5.3",,,,,,,"Planned roles do not prove completed work"
+"Database access inventory","Reader section 2.5",,,,,,,"Log unavailable interfaces rather than silently narrowing coverage"
+"Predecessor-review overlap check","Supplement Appendix P",,,,,,,"Do not claim novelty from abstracts alone"
+"Instrument version and reporter mapping","Reader Table 1",,,,,,,"Separate self report proxy report observer performance and anchor respondent"
+"Calibration of eligibility and appraisal","Supplement M3–M6",,,,,,,"Record human calibration before live appraisal"
+"Responsiveness hypotheses","Supplement M6.3 and M7",,,,,,,"Timestamp hypotheses before numerical extraction; mark later additions exploratory"
+"Caregiver perspective involvement","Reader section 4.1",,,,,,,"Record actual involvement and scope or report none"
+"Dissemination and reproduction rights","Reader section 5.4",,,,,,,"Check permissions before sharing protected instrument content"
