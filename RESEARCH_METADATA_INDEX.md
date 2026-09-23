@@ -15,6 +15,11 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 - [Portfolio deduplication rules](PORTFOLIO_DEDUPLICATION_RULES.md) — prevents versions, registrations, mirrors and profiles from inflating the seven-work count.
 - [Citation and version guide](CITATION_AND_VERSION_GUIDE.md) — explains which DOI and version to cite and how to state research status.
 - [Metadata QA checklist](METADATA_QA_CHECKLIST.md) — repeatable identity, role, version, evidence-language and verification checks for profile work.
+- [RIS bibliography](Pinnacle_Research_Library.ris) — seven canonical records for citation-manager import with version and status notes.
+- [Canonical keyword map](CANONICAL_KEYWORD_MAP.csv) — preserves deposited discovery terms while stating what they do not establish.
+- [Research resource map](RESEARCH_RESOURCE_MAP.csv) — connects each work to its citation, methods, reproduction or provenance aids.
+- [Public verification protocol](PUBLIC_VERIFICATION_PROTOCOL.md) — separates saved, public, indexed and independently cited states after profile changes.
+- [Portfolio integrity manifest](PORTFOLIO_INTEGRITY_MANIFEST.csv) — SHA-256 checksums for the public citation and metadata-control files in this index.
 
 ## RCI register analysis
 
