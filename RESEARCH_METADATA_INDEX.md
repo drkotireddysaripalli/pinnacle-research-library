@@ -21,6 +21,9 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 - [Public verification protocol](PUBLIC_VERIFICATION_PROTOCOL.md) — separates saved, public, indexed and independently cited states after profile changes.
 - [Portfolio integrity manifest](PORTFOLIO_INTEGRITY_MANIFEST.csv) — SHA-256 checksums for the public citation and metadata-control files in this index.
 
+## Plain-language researcher summaries
+
+- [Seven-work researcher-summary index](RESEARCHER_SUMMARY_INDEX.md) — per-work question, design, evidence state, DOI and key interpretation limit for readers and profile editors.
 ## RCI register analysis
 
 - [Reproduction checklist](RCI_REPRODUCTION_CHECKLIST.md) — source checksum, environment, validation and interpretation checks.
