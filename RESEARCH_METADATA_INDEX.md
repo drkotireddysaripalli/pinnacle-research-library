@@ -43,6 +43,7 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 - [Authors and roles](AUTHORS_AND_ROLES.md) — human-readable creator, editor, research-group and ORCID boundaries.
 - [Metadata file dictionary](METADATA_FILE_DICTIONARY.csv) — audience, purpose, primary key and boundary for ten core resources.
 - [Correction and contribution guide](METADATA_CORRECTION_CONTRIBUTION_GUIDE.md) — evidence requirements and safe correction workflow.
+
 ## RCI register analysis
 
 - [Reproduction checklist](RCI_REPRODUCTION_CHECKLIST.md) — source checksum, environment, validation and interpretation checks.
