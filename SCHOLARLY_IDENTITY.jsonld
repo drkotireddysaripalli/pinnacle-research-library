@@ -1,0 +1,34 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://orcid.org/0009-0007-7866-0737",
+  "name": "Koti Reddy Saripalli",
+  "givenName": "Koti Reddy",
+  "familyName": "Saripalli",
+  "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Bharath Healthcare Laboratories Private Limited",
+    "alternateName": "Pinnacle Blooms Network",
+    "url": "https://www.pinnacleblooms.org/"
+  },
+  "sameAs": [
+    "https://orcid.org/0009-0007-7866-0737",
+    "https://osf.io/n98rg/",
+    "https://www.researchgate.net/profile/Koti-Reddy-Saripalli",
+    "https://svuniversity.academia.edu/DrKotiSaripalli",
+    "https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f",
+    "https://openreview.net/profile?id=~Dr._Koti_Reddy_Saripalli1",
+    "https://www.webofscience.com/wos/author/record/RBA-8832-2026",
+    "https://loop.frontiersin.org/people/3711171/overview",
+    "https://scholar.google.com/citations?user=OuHrlcsAAAAJ",
+    "https://www.rd-alliance.org/members/kotireddysaripalli/",
+    "https://www.growkudos.com/profile/koti_reddy_saripalli"
+  ],
+  "subjectOf": {
+    "@type": "Dataset",
+    "name": "Pinnacle Research Library",
+    "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library",
+    "description": "A public library of seven canonical works and source-bounded citation, methods and profile-reconciliation resources."
+  }
+}

@@ -1,0 +1,16 @@
+field,primary_source,secondary_check,allowed_statement,do_not_infer
+Canonical researcher identifier,https://orcid.org/0009-0007-7866-0737,Canonical Zenodo creator metadata,ORCID 0009-0007-7866-0737 belongs to Koti Reddy Saripalli,Namesake records are not automatically the same person
+Professional affiliation,Canonical work metadata and official research library,Existing owned profile fields,Bharath Healthcare Laboratories Private Limited / Pinnacle Blooms Network,Do not substitute similarly named OpenAlex institutions
+Education,Credential source and owned profile record,Research profile audit,Completed Indian School of Business online executive education,Not a degree current enrolment or employment appointment
+Work title,Canonical Zenodo record,Deposited PDF title page,Use exact deposited title,Do not shorten into a new work identity
+Work type,Canonical Zenodo resource type,Canonical work status matrix,Six preprints and one report,Do not call all seven journal articles
+Publication date,Canonical repository deposit metadata,Deposited PDF only for document-internal date,Use exact repository date and preserve internal-date distinction,Do not replace deposit date with PDF drafting date
+Version,Canonical repository version field or PDF cover where explicitly absent,Canonical citation records,Use source-specific version with provenance,Do not invent a version from filenames
+Creator order,Canonical Zenodo creator list,Deposited PDF byline,Preserve deposited order,Do not promote contributors or editors into authors
+Contributor role,Canonical Zenodo contributor metadata,Authors and roles guide,Koti is PGAF creator and Sreeja is editor,Do not merge Koti and Sreeja identities
+Protocol results status,Protocol and registration text,Canonical abstract boundary notes,Planned analyses or no results as recorded,Do not convert planned n=300/60 into achieved samples
+PINNACLE-VAL registration timing,Public OSF registration and source protocol,Portfolio relationship graph,Retrospective because some planned analyses had already run,Do not call it prospectively registered
+RCI version relationship,Zenodo and Research Square DOI records,DOI resolution manifest,Two manifestations of one underlying study,Do not count Research Square as an eighth work
+Profile public state,Anonymous destination read after save,Signed-in read-back,Saved and anonymously public only when both are verified,Do not equate a successful save with indexing
+Search indexing,Dated search-engine result,Destination public page,Indexed only when independently observed,Do not infer indexing from profile existence
+Citation or endorsement,Independent citing source,Canonical work record,Claim only a verified independent citation or endorsement,Do not use membership profile or self-link as evidence

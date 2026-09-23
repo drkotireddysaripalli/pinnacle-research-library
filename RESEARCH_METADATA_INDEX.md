@@ -30,6 +30,10 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 
 ## Profile and relationship interoperability
 
+- [Researcher profile directory](RESEARCHER_PROFILE_DIRECTORY.md) and [endpoint registry](RESEARCHER_PROFILE_ENDPOINTS.csv) — human- and machine-readable routes with platform-specific non-inference boundaries.
+- [Scholarly identity JSON-LD](SCHOLARLY_IDENTITY.jsonld) — a compact Person record using the canonical ORCID, BHCL affiliation and source-matched public routes.
+- [Profile source-priority matrix](PROFILE_SOURCE_PRIORITY_MATRIX.csv) — assigns each identity, work and verification field to its controlling source and prohibited inference.
+- [Profile discovery boundaries](PROFILE_DISCOVERY_BOUNDARIES.md) — separates saved, public, indexed, cited and endorsed states.
 - [ORCID-compatible BibTeX import aid](ORCID_WORK_IMPORT.bib) — seven exact-title DOI records for checked import into profiles and citation tools.
 - [Portfolio relationship graph](PORTFOLIO_RELATIONSHIP_GRAPH.json) — machine-readable canonical nodes and verified version, citation and registration edges.
 - [Scholarly-profile field map](SCHOLARLY_PROFILE_FIELD_MAP.csv) — exact type, date, DOI, short description and required qualifier for every work.

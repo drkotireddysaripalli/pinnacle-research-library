@@ -10,6 +10,8 @@ Research manuscripts, public supplements and a reproducible analysis of the geog
 
 Use the [repository landing guide](REPOSITORY_LANDING_GUIDE.md) to start from a research task, or open the [seven-work portfolio overview](RESEARCH_PORTFOLIO_OVERVIEW.md) for a compact source-and-limit table. The [open-science resource catalog](OPEN_SCIENCE_RESOURCE_CATALOG.csv) lists reusable public aids by audience and purpose, while the [research metadata index](RESEARCH_METADATA_INDEX.md) and [methods resource index](METHODS_RESOURCE_INDEX.md) organize structured metadata and implementation materials.
 
+The [researcher profile directory](RESEARCHER_PROFILE_DIRECTORY.md) links source-matched public identity routes and states what each route can and cannot establish. Machine users can use the [profile endpoint registry](RESEARCHER_PROFILE_ENDPOINTS.csv) and [scholarly identity JSON-LD](SCHOLARLY_IDENTITY.jsonld).
+
 For provenance and machine reuse, see the [open-science changelog](OPEN_SCIENCE_CHANGELOG.md), [release manifest](PORTFOLIO_RELEASE_MANIFEST.csv), [repository citation metadata](CITATION.cff) and [RO-Crate metadata](ro-crate-metadata.json). These navigation and metadata resources add no new study, result, citation or endorsement.
 
 ## Verify Pinnacle and follow the source trail
