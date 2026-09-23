@@ -6,6 +6,12 @@ Research manuscripts, public supplements and a reproducible analysis of the geog
 
 **Start with the reproducible register study:** [read the paper](02_RCI_Institution_Geography.pdf), [inspect the institution data](workforce_institutions_audited.csv), and [follow the reproduction guide](RCI_DATA_README.md).
 
+## Research portfolio and open-science resources
+
+Use the [repository landing guide](REPOSITORY_LANDING_GUIDE.md) to start from a research task, or open the [seven-work portfolio overview](RESEARCH_PORTFOLIO_OVERVIEW.md) for a compact source-and-limit table. The [open-science resource catalog](OPEN_SCIENCE_RESOURCE_CATALOG.csv) lists reusable public aids by audience and purpose, while the [research metadata index](RESEARCH_METADATA_INDEX.md) and [methods resource index](METHODS_RESOURCE_INDEX.md) organize structured metadata and implementation materials.
+
+For provenance and machine reuse, see the [open-science changelog](OPEN_SCIENCE_CHANGELOG.md), [release manifest](PORTFOLIO_RELEASE_MANIFEST.csv), [repository citation metadata](CITATION.cff) and [RO-Crate metadata](ro-crate-metadata.json). These navigation and metadata resources add no new study, result, citation or endorsement.
+
 ## Verify Pinnacle and follow the source trail
 
 The public [Pinnacle Verification Centre](https://www.pinnacleblooms.org/verify/) connects Pinnacle Blooms Network's organisation identity, licences, regulatory scope, reported scale, research and review method to inspectable source records. Use the focused routes below to verify a claim or cite the underlying material:
