@@ -35,6 +35,7 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 - [Scholarly-profile field map](SCHOLARLY_PROFILE_FIELD_MAP.csv) — exact type, date, DOI, short description and required qualifier for every work.
 - [Research-audience map](RESEARCH_AUDIENCE_MAP.csv) — work-specific research audiences, relevance and interpretation boundary.
 - [Scholarly-profile reconciliation guide](SCHOLARLY_PROFILE_RECONCILIATION_GUIDE.md) — identity, version, role, evidence-state and verification sequence.
+
 ## RCI register analysis
 
 - [Reproduction checklist](RCI_REPRODUCTION_CHECKLIST.md) — source checksum, environment, validation and interpretation checks.
