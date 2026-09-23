@@ -82,7 +82,19 @@ const recordBody = (r,linkToPage=true) => `<div class="record-body">${familyMean
 const recordSummary=r=>`<div class="record-body record-brief"><p><strong>What this supports:</strong> ${e(r.supports)}</p><p class="record-brief-scope"><strong>Scope:</strong> ${e(r.limits)}</p><div class="record-actions"><a href="${recordPath(r)}">${icon('file-search')}Read the full record & originals</a></div><p class="record-citation">${r.reviewedDate?'Source inspected':'Collection inspected'}: ${e(r.reviewedDate||data.reviewed)} · ${e(statusText(r))}</p></div>`;
 const renderRecord = (r,compact=false) => `<details class="evidence-record" id="${e(r.id)}" data-category="${e(r.category)}" data-status="${e(r.status)}" data-original="${Boolean(r.originalReviewed)}" data-scoped="${Boolean(r.reviewConclusion)}" data-search="${e([r.searchTerms||'',...Object.values(r.fields||{})].join(' '))}"><summary><div><div class="record-topline"><span class="record-category">${icon(categoryIcons[r.category])}${e(r.category)}</span>${badge(r)}</div><h3 class="record-title">${e(r.title)}</h3><p class="record-subtitle">${e(r.subtitle)}</p></div><span class="expand-sign" aria-hidden="true">${icon('plus')}</span></summary>${compact?recordSummary(r):recordBody(r)}</details>`;
 const brand = {'@type':'Brand','@id':origin+'/#pinnacle-brand',name:'Pinnacle Blooms Network',url:'https://www.pinnacleblooms.org/',logo:{'@type':'ImageObject',url:origin+'/images/pinnacle-logo.webp',contentUrl:origin+'/images/pinnacle-logo.webp',width:420,height:158,caption:'Official Pinnacle Blooms Network logo'}};
-const organization = {'@type':'Organization','@id':origin+'/#organization',name:'Bharath Healthcare Laboratories Private Limited',legalName:'Bharath Healthcare Laboratories Private Limited',brand:{'@id':brand['@id']},url:'https://www.pinnacleblooms.org/',identifier:[{'@type':'PropertyValue',propertyID:'CIN',value:'U74999TG2016PTC113063'},{'@type':'PropertyValue',propertyID:'LEI',value:'894500OJYBVC18BUDN89'}],contactPoint:{'@type':'ContactPoint',name:evidenceOwner.name,contactType:'evidence questions and corrections',description:evidenceOwner.jobTitle+'; '+evidenceOwner.role,email:evidenceOwner.email,telephone:evidenceOwner.telephone}};
+const organization = {
+ '@type':'Organization','@id':origin+'/#organization',
+ name:'Bharath Healthcare Laboratories Private Limited',legalName:'Bharath Healthcare Laboratories Private Limited',
+ brand:{'@id':brand['@id']},url:'https://www.pinnacleblooms.org/',
+ telephone:evidenceOwner.telephone,email:evidenceOwner.email,
+ areaServed:[
+  {'@type':'City',name:'Hyderabad',containedInPlace:{'@type':'AdministrativeArea',name:'Telangana'}},
+  {'@type':'AdministrativeArea',name:'Telangana'},
+  {'@type':'AdministrativeArea',name:'Andhra Pradesh'}
+ ],
+ identifier:[{'@type':'PropertyValue',propertyID:'CIN',value:'U74999TG2016PTC113063'},{'@type':'PropertyValue',propertyID:'LEI',value:'894500OJYBVC18BUDN89'}],
+ contactPoint:{'@type':'ContactPoint',name:'Pinnacle Blooms Network contact',contactType:'parent, family, evidence and correction enquiries',description:evidenceOwner.name+', '+evidenceOwner.jobTitle+' and '+evidenceOwner.role,email:evidenceOwner.email,telephone:evidenceOwner.telephone,areaServed:['Hyderabad','Telangana','Andhra Pradesh']}
+};
 organization.logo=brand.logo;
 organization.sameAs=require('./organisation-profile-content.cjs').sameAs;
 const semantic = require('./semantic-content.cjs')({e,icon,origin,date,organization,brand,recordIds:records.map(r=>r.id)});
@@ -257,14 +269,22 @@ write('evidence/publications.json',JSON.stringify({updated:date,publications:pub
 write('evidence/evidence-provenance.json',JSON.stringify(provenance,null,2));
 write('llms.txt',read('llms.txt')+'\n## Research, books and authors\n- [Research library]('+research.url+'): seven DOI-linked works, original books, company-study sources and matched author profiles.\n- [Research JSON]('+origin+'/evidence/research-library.json): publication dates, DOI identifiers, authors and source URLs.\n- [Bibliography]('+origin+'/evidence/research-library.txt): readable citations with research-stage labels.\n');
 write('llms-full.txt',read('llms-full.txt')+'\n\n'+research.text);
-const assuranceUrl=origin+assurance.route;
-const assuranceCrumbs=[['Verify Pinnacle','/'],['Independent CA evidence',assurance.route]];
-write(assurance.route.slice(1),'<!doctype html><html lang="en-IN">'+head('Pinnacle Independent CA Evidence | SAE 3000, SRS 4400 & UDIN','Exact institutional counts, two independent practitioner reports, both UDINs and a claim-by-claim source-page map.',assuranceUrl,[organization,website,{'@type':'Article','@id':assuranceUrl+'#article',url:assuranceUrl,headline:assurance.data.title,dateModified:date,author:{'@id':organization['@id']},citation:assurance.data.reports.map(r=>origin+'/evidence/records/'+r.id+'.html')},breadcrumb(assuranceCrumbs,assuranceUrl)])+'<body>'+pageHeader+'<main class="wrap record-page assurance-page">'+crumbsHTML(assuranceCrumbs)+assurance.content+'</main>'+footer+'</body></html>');
+ const assuranceUrl=origin+assurance.route;
+ const assuranceCrumbs=[['Verify Pinnacle','/'],['Independent CA evidence',assurance.route]];
+ const claimLedger=require('./claim-ledger-content.cjs')({e,origin,organization,assuranceMap:assurance.data});
+ const claimCrumbs=[['Verify Pinnacle','/'],['Dated claim and source ledger',claimLedger.route]];
+ write(claimLedger.route.slice(1),'<!doctype html><html lang="en-IN">'+head('Pinnacle Claim & Source Ledger | Six Dated Institutional Measures','Six dated institutional measures with counting rules, source-page links and the distinction between factual findings and limited assurance.',claimLedger.canonical,[organization,website,{'@type':'WebPage','@id':claimLedger.canonical+'#page',url:claimLedger.canonical,name:claimLedger.data.title,dateModified:claimLedger.updated,inLanguage:'en-IN',publisher:{'@id':organization['@id']},mainEntity:{'@id':claimLedger.canonical+'#dataset'},breadcrumb:{'@id':claimLedger.canonical+'#breadcrumb'}},claimLedger.graph,breadcrumb(claimCrumbs,claimLedger.canonical)])+'<body>'+pageHeader.replace('Updated: 22 September 2026','Updated: 23 September 2026')+'<main class="wrap record-page organisation-profile">'+crumbsHTML(claimCrumbs)+'<header><p class="eyebrow">EVIDENCE · DEFINITIONS · SOURCE PAGES</p><h1>Check the count.<br>Check what it counts.</h1><p class="intro-copy">A dated reference for Pinnacle Blooms Network’s documented institutional measures.</p></header>'+claimLedger.section+'</main>'+footer+'</body></html>');
+ write('evidence/claim-ledger.json',JSON.stringify(claimLedger.data,null,2));
+ write('evidence/claim-ledger.csv',claimLedger.csv);
+ urls.push(claimLedger.route);
+ write(assurance.route.slice(1),'<!doctype html><html lang="en-IN">'+head('Pinnacle Independent CA Evidence | SAE 3000, SRS 4400 & UDIN','Exact institutional counts, two independent practitioner reports, both UDINs and a claim-by-claim source-page map.',assuranceUrl,[organization,website,{'@type':'Article','@id':assuranceUrl+'#article',url:assuranceUrl,headline:assurance.data.title,dateModified:date,author:{'@id':organization['@id']},citation:assurance.data.reports.map(r=>origin+'/evidence/records/'+r.id+'.html')},breadcrumb(assuranceCrumbs,assuranceUrl)])+'<body>'+pageHeader+'<main class="wrap record-page assurance-page">'+crumbsHTML(assuranceCrumbs)+assurance.content+'<p><a href="/evidence/claim-ledger.html">Read the six dated measures and their counting rules</a></p></main>'+footer+'</body></html>');
 write('evidence/assurance-map.json',JSON.stringify({...assurance.data,canonical:assuranceUrl},null,2));
 write('evidence/assurance-map.txt',assurance.text);
 urls.push(assurance.route);
-write('llms.txt',read('llms.txt')+'\n## Independent CA reports and claim coverage\n- [Claim-to-page evidence map]('+assuranceUrl+'): specified institutional counts, both UDINs, source pages, dates and scope.\n- [Claim map JSON]('+origin+'/evidence/assurance-map.json): the same visible evidence mapping.\n');
-write('llms-full.txt',read('llms-full.txt')+'\n\n'+assurance.text);
+ write('llms.txt',read('llms.txt')+'\n## Independent CA reports and claim coverage\n- [Claim-to-page evidence map]('+assuranceUrl+'): specified institutional counts, both UDINs, source pages, dates and scope.\n- [Claim map JSON]('+origin+'/evidence/assurance-map.json): the same visible evidence mapping.\n');
+ write('llms-full.txt',read('llms-full.txt')+'\n\n'+assurance.text);
+ write('llms.txt',read('llms.txt')+'- [Dated claim and source ledger]('+claimLedger.canonical+'): six institutional measures with source-page citations, definitions and assurance boundaries.\n- [Claim ledger JSON]('+origin+'/evidence/claim-ledger.json): source-linked values, report types and counting rules.\n- [Claim ledger CSV]('+origin+'/evidence/claim-ledger.csv): the same six measures for reuse with their source links.\n');
+ write('llms-full.txt',read('llms-full.txt')+'\n\n## Six dated institutional measures (17 July 2026)\n'+claimLedger.data.interpretation+'\n'+claimLedger.data.claims.map(c=>`${c.title}: ${c.comparison==='at least'?'at least ':''}${c.value} ${c.unit}. ${c.definition} ${c.countingRule} SRS 4400: ${c.srs4400.sourceUrl} (${c.srs4400.sourcePage}). SAE 3000: ${c.sae3000.sourceUrl} (${c.sae3000.sourcePage}).`).join('\n')+'\n');
 for(const resource of [{route:'/evidence/cite.html',title:'Pinnacle Citation Library | Original Sources & Reusable References',description:'Copy and download 44 source-linked citations in plain text, BibTeX and RIS, with original publications and evidence scope.',content:presentation.citeContent,type:'CollectionPage'},{route:'/evidence/privacy.html',title:'Privacy & Analytics Choices | Pinnacle Verify',description:'Your choices for optional analytics and language translation in the Pinnacle evidence library.',content:presentation.privacyContent,type:'WebPage'}]){
  const url=origin+resource.route,crumbs=[['Verify Pinnacle','/'],[resource.title.split(' | ')[0],resource.route]];
  write(resource.route.slice(1),'<!doctype html><html lang="en-IN">'+head(resource.title,resource.description,url,[organization,website,{'@type':resource.type,'@id':url+'#page',url,name:resource.title,dateModified:date},breadcrumb(crumbs,url)])+'<body>'+pageHeader+'<main class="wrap record-page resource-page">'+crumbsHTML(crumbs)+resource.content+'</main>'+footer+'</body></html>');urls.push(resource.route);
@@ -272,11 +292,16 @@ for(const resource of [{route:'/evidence/cite.html',title:'Pinnacle Citation Lib
 write('llms.txt',read('llms.txt')+'\n## Citations and reader choices\n- [Citation library]('+origin+'/evidence/cite.html): 44 reusable citations with original sources and scope.\n- [Privacy and analytics choices]('+origin+'/evidence/privacy.html): optional consent-based measurement and language translation.\n');
 const scaleStoryPage=require('./scale-story-page.cjs')({e,icon,origin,date,organization,website,head,pageHeader,footer,breadcrumb,crumbsHTML,write,story:scaleStory});
 urls.push(scaleStoryPage.route);
-const references=require('./reference-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write,paradigm,storyDeck});
-urls.push(...references.routes);
+ const references=require('./reference-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write,paradigm,storyDeck});
+ urls.push(...references.routes);
+ urls.push('/evidence/centre-entity-reference.html');
 write('llms.txt',read('llms.txt')+'\n## Organisation reference\n- [Organisation profile]('+origin+'/evidence/organisation-profile.html): brand, legal identity, dated facts and original sources.\n');
 write('llms.txt',read('llms.txt')+'- [Public evidence pack for editors]('+origin+require('../content/public-evidence-pack.json').path+'): company-prepared PDF summary; check the original records and their scope.\n');
+ write('llms.txt',read('llms.txt')+'- [Hyderabad, Telangana and Andhra Pradesh contact and location sources]('+origin+'/evidence/hyderabad-telangana-andhra-pradesh-contact.html): central phone and WhatsApp, source-linked addresses, HFR identifiers and dated workflow labels.\n- [Regional contact and location JSON]('+origin+'/evidence/hyderabad-telangana-andhra-pradesh-contact.json): the same regional facts with explicit source boundaries.\n');
+ write('llms.txt',read('llms.txt')+'- [58-record centre entity reference]('+origin+'/evidence/centre-entity-reference.html): official centre URLs, 56 complete HFR identifiers, dated workflow labels and two explicit sitemap canonical gaps.\n- [Centre entity reference JSON]('+origin+'/evidence/centre-entity-reference.json): the same source crosswalk in a machine-readable format.\n');
 write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/organisation-profile.txt'));
+ write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/hyderabad-telangana-andhra-pradesh-contact.txt'));
+ write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/centre-entity-reference.txt'));
 const storyPages=require('./paradigm-story-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write});
 urls.push(...storyPages.routes);
 write('llms.txt',read('llms.txt')+'\n## Earlier nine-perspective edition\nThe current 18-part life-first explanation is linked below. These earlier care-system perspectives remain available for existing citations.\n'+storyPages.index);

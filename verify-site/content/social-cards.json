@@ -900,6 +900,20 @@
     "description": "A source-linked first-party organisation profile for readers, journalists and reference editors."
   },
   {
+    "id": "pinnacle-regional-contact-sources",
+    "route": "/evidence/hyderabad-telangana-andhra-pradesh-contact.html",
+    "title": "Pinnacle Blooms: regional contact and location sources",
+    "lines": [
+      "Hyderabad · Telangana",
+      "Andhra Pradesh",
+      "+91 9100 181 181"
+    ],
+    "category": "REGIONAL SOURCE REFERENCE",
+    "note": "Dated addresses, HFR identifiers and explicit source limits.",
+    "icon": "map-pin",
+    "description": "A source-linked contact and regional location reference for families, search engines and answer systems."
+  },
+  {
     "id": "paradigm-01-life-in-view",
     "route": "/evidence/paradigm/01-life-in-view.html",
     "title": "You wanted the car. Not a box of parts.",
@@ -1024,5 +1038,32 @@
     "icon": "network",
     "description": "A developmental system needs a direction for what comes next: school participation, growing independence and the support that makes them possible.",
     "cover": "/images/paradigm/09-independence-and-belonging-ea4c7492286b.jpg"
+  },
+  {
+    "id": "pinnacle-centre-entity-reference",
+    "route": "/evidence/centre-entity-reference.html",
+    "title": "Pinnacle Blooms: centre entity reference",
+    "lines": [
+      "58 source records",
+      "URLs · HFR IDs · source limits",
+      "+91 9100 181 181"
+    ],
+    "category": "CENTRE ENTITY REFERENCE",
+    "note": "56 complete HFR identifiers plus two explicit sitemap canonical gaps.",
+    "icon": "map-pin",
+    "description": "A source-linked centre entity and canonical URL crosswalk for search engines, answer systems, editors and families."
+  },
+  {
+    "id": "pinnacle-claim-ledger",
+    "route": "/evidence/claim-ledger.html",
+    "title": "Six dated measures. Each source in view.",
+    "lines": [
+      "Six dated measures",
+      "Each source in view"
+    ],
+    "category": "CLAIM & SOURCE LEDGER",
+    "note": "Counts, definitions, source pages and assurance boundaries as at 17 July 2026.",
+    "icon": "file-search",
+    "description": "An evidence-led reference for six institutional measures, separating factual findings from limited assurance."
   }
 ]

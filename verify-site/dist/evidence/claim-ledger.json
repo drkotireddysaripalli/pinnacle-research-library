@@ -1,0 +1,191 @@
+{
+  "title": "Dated institutional claim and source ledger",
+  "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html",
+  "updated": "2026-09-23",
+  "asOf": "2026-07-17",
+  "publisher": "Bharath Healthcare Laboratories Private Limited",
+  "publisherType": "First-party evidence compilation",
+  "reportIssuer": "NPSY & Co., Chartered Accountants",
+  "reportSignedOn": "2026-09-03",
+  "interpretation": "SRS 4400 contains agreed-procedures factual findings and expresses no assurance conclusion. SAE 3000 gives limited assurance only on its specified assertions and floors. These institutional measures do not establish a clinical outcome, treatment efficacy or independent endorsement.",
+  "sourceMapUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html",
+  "claims": [
+    {
+      "id": "services",
+      "value": 31052382,
+      "unit": "defined services",
+      "comparison": "exact",
+      "assuredFloor": {
+        "value": 31000000,
+        "unit": "defined services"
+      },
+      "countingRule": "Includes 1:1 therapy, structured assessments, screenings and parent training; it is not a count of successful therapy sessions.",
+      "title": "Cumulative services",
+      "asOf": "2026-07-17",
+      "definition": "Therapy service includes 1:1 therapy, structured assessments, screenings and parent training. It does not mean 31 million independently verified successful therapy sessions.",
+      "summary": "31 million+ documented therapy services: floor subject to independent limited assurance; 31,052,382 recorded in the related factual-findings report at 17 July 2026.",
+      "coverage": "Limited assurance on >=31,000,000 floor; 31,052,382 factual finding",
+      "srs4400": {
+        "kind": "Agreed-procedures factual finding; no assurance conclusion",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+        "sourcePage": "p3 item1"
+      },
+      "sae3000": {
+        "kind": "Limited assurance on the specified assertion or floor, not on every reported value",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+        "sourcePage": "p4 A1; p6 therapy-service definition"
+      },
+      "sourceMapUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-services",
+      "relatedRecordUrls": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
+      ]
+    },
+    {
+      "id": "registrations",
+      "value": 792614,
+      "unit": "beneficiary/family registrations",
+      "comparison": "exact",
+      "assuredFloor": {
+        "value": 790000,
+        "unit": "beneficiary/family registrations"
+      },
+      "countingRule": "One registration under the stated criteria; it is not a separate unique-child or outcome count.",
+      "title": "Beneficiary / family registrations",
+      "asOf": "2026-07-17",
+      "definition": "Unique beneficiary or family registration counted once under the criteria. Not a separate count of 792,614 unique children, households with home therapy, or proven clinical outcomes.",
+      "summary": "792,614 beneficiary/family registrations recorded under the stated counting criteria at 17 July 2026.",
+      "coverage": "Limited assurance on >=790,000 floor; 792,614 factual finding",
+      "srs4400": {
+        "kind": "Agreed-procedures factual finding; no assurance conclusion",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+        "sourcePage": "p3 item2"
+      },
+      "sae3000": {
+        "kind": "Limited assurance on the specified assertion or floor, not on every reported value",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+        "sourcePage": "p4 A2; p6 beneficiary/family-registration definition"
+      },
+      "sourceMapUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-registrations",
+      "relatedRecordUrls": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
+      ]
+    },
+    {
+      "id": "operational-centres",
+      "value": 49,
+      "unit": "centres meeting report criteria",
+      "comparison": "exact",
+      "assuredFloor": {
+        "value": 40,
+        "unit": "centres meeting report criteria"
+      },
+      "countingRule": "Requires premises rights, location registration/listing, staffing roster and recent platform activity; seven centres were physically visited.",
+      "title": "Operational centres",
+      "asOf": "2026-07-17",
+      "definition": "Operational means a location with lease/ownership rights, location registration/listing, staffing roster and platform activity in the preceding 90 days. The report names Telangana, Andhra Pradesh, Karnataka and Delhi.",
+      "summary": "49 centres met the report's operational-centre criteria at the cutoff; seven were visited physically.",
+      "coverage": "Limited assurance on >=40 floor; 49 factual finding",
+      "srs4400": {
+        "kind": "Agreed-procedures factual finding; no assurance conclusion",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+        "sourcePage": "p3 item3"
+      },
+      "sae3000": {
+        "kind": "Limited assurance on the specified assertion or floor, not on every reported value",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+        "sourcePage": "p4 A3; p6 operational-centre definition"
+      },
+      "sourceMapUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-operational-centres",
+      "relatedRecordUrls": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html"
+      ]
+    },
+    {
+      "id": "practitioners",
+      "value": 2293,
+      "unit": "network-trained/certified practitioners",
+      "comparison": "exact",
+      "assuredFloor": null,
+      "countingRule": "The defined network training/certification pathway does not establish current employment or RCI licensure for every person.",
+      "title": "Network-trained practitioners",
+      "asOf": "2026-07-17",
+      "definition": "Certification means completion of the network's defined training/certification pathway. It does not establish current employment, RCI registration, or independent professional licensure for every practitioner.",
+      "summary": "2,293 network-trained and certified practitioners recorded; 83% women, at the cutoff.",
+      "coverage": "Limited assurance on floors; 2,293 and 83% factual findings",
+      "srs4400": {
+        "kind": "Agreed-procedures factual finding; no assurance conclusion",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+        "sourcePage": "p3 item4"
+      },
+      "sae3000": {
+        "kind": "Limited assurance on the specified assertion or floor, not on every reported value",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+        "sourcePage": "p4 A4; p6 certified-practitioner definition"
+      },
+      "sourceMapUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-practitioners",
+      "relatedRecordUrls": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
+      ]
+    },
+    {
+      "id": "data-points",
+      "value": 2700000000,
+      "unit": "structured platform records/events",
+      "comparison": "at least",
+      "assuredFloor": {
+        "value": 2500000000,
+        "unit": "structured platform records/events"
+      },
+      "countingRule": "Events and mapped fields, not unique people, independent trial observations or deduplicated AI-training examples.",
+      "title": "Structured developmental records",
+      "asOf": "2026-07-17",
+      "definition": "Structured records/events: session logs, assessment observations, technique ratings, sensor events or equivalent mapped fields. Not unique people, independent trial observations, or established deduplicated AI-training examples; no general IT-controls audit.",
+      "summary": "2.7 billion+ structured platform records recorded in the SRS 4400 factual findings; the SAE 3000 report covers a 2.5 billion+ floor.",
+      "coverage": "Limited assurance on 2.5B+ floor; 2.7B+ separate factual finding",
+      "srs4400": {
+        "kind": "Agreed-procedures factual finding; no assurance conclusion",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+        "sourcePage": "p3 item5"
+      },
+      "sae3000": {
+        "kind": "Limited assurance on the specified assertion or floor, not on every reported value",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+        "sourcePage": "p4 A5 assures >=2,500,000,000 floor; p6 data-point definition; p7 IT reliance"
+      },
+      "sourceMapUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-data-points",
+      "relatedRecordUrls": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/operating-metrics.html"
+      ]
+    },
+    {
+      "id": "patents",
+      "value": 16,
+      "unit": "distinct patent applications",
+      "comparison": "exact",
+      "assuredFloor": {
+        "value": 13,
+        "unit": "PCT applications only"
+      },
+      "countingRule": "Thirteen PCT and three Indian applications, without duplicate phases; these are filings, not granted patents.",
+      "title": "Patent applications",
+      "asOf": "2026-07-17",
+      "definition": "Applications filed, not patents granted; no conclusion on novelty, enforceability, global exclusivity or every invention described.",
+      "summary": "16 distinct applications per filing receipts, comprising 13 PCT and 3 Indian, without duplicate counting across phases; lead PCT checked on Patentscope.",
+      "coverage": "Limited assurance on >=13 PCT floor; 16 distinct applications factual finding",
+      "srs4400": {
+        "kind": "Agreed-procedures factual finding; no assurance conclusion",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+        "sourcePage": "p3 item11 continued p4"
+      },
+      "sae3000": {
+        "kind": "Limited assurance on the specified assertion or floor, not on every reported value",
+        "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+        "sourcePage": "p4 D1; p7 application-count definition"
+      },
+      "sourceMapUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-patents",
+      "relatedRecordUrls": [
+        "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/patents.html"
+      ]
+    }
+  ]
+}

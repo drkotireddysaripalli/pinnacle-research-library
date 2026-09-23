@@ -1,0 +1,641 @@
+{
+  "title": "Pinnacle Blooms Hyderabad, Telangana & Andhra Pradesh | Phone and Location Sources",
+  "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html",
+  "updated": "2026-09-23",
+  "publisher": "Bharath Healthcare Laboratories Private Limited",
+  "contact": {
+    "telephone": "+919100181181",
+    "displayTelephone": "+91 9100 181 181",
+    "whatsapp": "https://wa.me/919100181181",
+    "email": "care@pinnacleblooms.org"
+  },
+  "sourceReview": {
+    "observedOn": "2026-09-19",
+    "source": "NHPR / ABDM Health Facility Registry · authenticated facility-manager dashboard",
+    "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html",
+    "boundary": "All 56 complete identifiers were matched to the authenticated NHPR / ABDM facility-manager dashboard on 19 September 2026. Statuses are the exact workflow labels displayed on that date, not a live feed or a clinical-quality rating. Approved, Submitted, Query Raised, Query Resolved and Rejected are kept distinct. One masked Draft is separate. Original workbook RS flags are preserved and do not define the registry status or whether a centre is operating. This check covers one authenticated NHPR account. Pinnacle advises that registrations may be administered across different accounts; those accounts have not been reconciled in this review."
+  },
+  "regions": [
+    {
+      "id": "hyderabad",
+      "name": "Hyderabad",
+      "records": [
+        {
+          "name": "AS Rao Nagar",
+          "address": "Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062",
+          "postcode": "500062",
+          "hfrIds": [
+            "IN3610023707"
+          ],
+          "dashboardStatuses": [
+            "Rejected"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023707"
+        },
+        {
+          "name": "Attapur",
+          "address": "Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048",
+          "postcode": "500048",
+          "hfrIds": [
+            "IN3610023458"
+          ],
+          "dashboardStatuses": [
+            "Submitted"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023458"
+        },
+        {
+          "name": "Begumpet",
+          "address": "Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016.",
+          "postcode": "500016",
+          "hfrIds": [
+            "IN3610023004"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023004"
+        },
+        {
+          "name": "Chanda Nagar",
+          "address": "Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050",
+          "postcode": "500049",
+          "hfrIds": [
+            "IN3610023460"
+          ],
+          "dashboardStatuses": [
+            "Submitted"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023460"
+        },
+        {
+          "name": "Dilsukhnagar",
+          "address": "No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana.",
+          "postcode": "500060",
+          "hfrIds": [
+            "IN3610023028"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023028"
+        },
+        {
+          "name": "East Marredpally",
+          "address": "First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026",
+          "postcode": "500026",
+          "hfrIds": [
+            "IN3610023007"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023007"
+        },
+        {
+          "name": "Gachibowli",
+          "address": "Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084.",
+          "postcode": "500084",
+          "hfrIds": [
+            "IN3610023016"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023016"
+        },
+        {
+          "name": "Habsiguda",
+          "address": "Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007",
+          "postcode": "500007",
+          "hfrIds": [
+            "IN3610023015"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023015"
+        },
+        {
+          "name": "Hayathnagar",
+          "address": "2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505",
+          "postcode": "501505",
+          "hfrIds": [
+            "IN3610023006"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023006"
+        },
+        {
+          "name": "Himayat Nagar",
+          "address": "Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana",
+          "postcode": "500029",
+          "hfrIds": [
+            "IN3610023005"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023005"
+        },
+        {
+          "name": "HitechCity, Madhapur",
+          "address": "Pinnacle Blooms Network, Beside Metro Station, Shop No - 1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081",
+          "postcode": "500081",
+          "hfrIds": [
+            "IN3610023459"
+          ],
+          "dashboardStatuses": [
+            "Submitted"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023459"
+        },
+        {
+          "name": "Kachiguda",
+          "address": "Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027",
+          "postcode": "500027",
+          "hfrIds": [
+            "IN3610023020"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023020"
+        },
+        {
+          "name": "Khajaguda, Mehdipatnam",
+          "address": "Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032",
+          "postcode": "500008",
+          "hfrIds": [
+            "IN3610023019"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023019"
+        },
+        {
+          "name": "Kukatpally",
+          "address": "Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib",
+          "postcode": "500072",
+          "hfrIds": [
+            "IN3610023014"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023014"
+        },
+        {
+          "name": "LB Nagar",
+          "address": "No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074",
+          "postcode": "500074",
+          "hfrIds": [
+            "IN3610023705"
+          ],
+          "dashboardStatuses": [
+            "Submitted"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023705"
+        },
+        {
+          "name": "Nallagandla",
+          "address": "Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019",
+          "postcode": "500019",
+          "hfrIds": [
+            "IN3610023017"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023017"
+        },
+        {
+          "name": "Nizampet",
+          "address": "2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090",
+          "postcode": "500090",
+          "hfrIds": [
+            "IN3610023704"
+          ],
+          "dashboardStatuses": [
+            "Rejected"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023704"
+        },
+        {
+          "name": "Pragathi Nagar",
+          "address": "Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, Telangana 500072",
+          "postcode": "500090",
+          "hfrIds": [
+            "IN3610023685"
+          ],
+          "dashboardStatuses": [
+            "Rejected"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023685"
+        },
+        {
+          "name": "Santosh Nagar",
+          "address": "Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059",
+          "postcode": "500059",
+          "hfrIds": [
+            "IN3610023021"
+          ],
+          "dashboardStatuses": [
+            "Query Resolved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023021"
+        },
+        {
+          "name": "SR Nagar",
+          "address": "Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018",
+          "postcode": "500018",
+          "hfrIds": [
+            "IN3610023027"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023027"
+        },
+        {
+          "name": "Suchitra",
+          "address": "Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067",
+          "postcode": "500067",
+          "hfrIds": [
+            "IN3610023010"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023010"
+        },
+        {
+          "name": "Vidyanagar",
+          "address": "Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana",
+          "postcode": "500020",
+          "hfrIds": [
+            "IN3610023456"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023456"
+        },
+        {
+          "name": "Vikrampuri",
+          "address": "Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009.",
+          "postcode": "500009",
+          "hfrIds": [
+            "IN3610023703"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023703"
+        }
+      ]
+    },
+    {
+      "id": "telangana",
+      "name": "Telangana outside Hyderabad",
+      "records": [
+        {
+          "name": "Karimnagar",
+          "address": "Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001",
+          "postcode": "505001",
+          "hfrIds": [
+            "IN3610023681"
+          ],
+          "dashboardStatuses": [
+            "Query Raised"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023681"
+        },
+        {
+          "name": "Khammam",
+          "address": "Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003",
+          "postcode": "507001",
+          "hfrIds": [
+            "IN3610023018",
+            "IN3610023023"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023018"
+        },
+        {
+          "name": "Mahbubnagar",
+          "address": "GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana",
+          "postcode": "509001",
+          "hfrIds": [
+            "IN3610023702"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023702"
+        },
+        {
+          "name": "Miryalaguda",
+          "address": "D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207",
+          "postcode": "508207",
+          "hfrIds": [
+            "IN3610023024"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023024"
+        },
+        {
+          "name": "Nizamabad",
+          "address": "Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001",
+          "postcode": "503001",
+          "hfrIds": [
+            "IN3610023008",
+            "IN3610023029"
+          ],
+          "dashboardStatuses": [
+            "Approved",
+            "Rejected"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023008"
+        },
+        {
+          "name": "Warangal",
+          "address": "Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, Telangana 506001",
+          "postcode": "506002",
+          "hfrIds": [
+            "IN3610023461"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023461"
+        }
+      ]
+    },
+    {
+      "id": "andhra-pradesh",
+      "name": "Andhra Pradesh",
+      "records": [
+        {
+          "name": "Ananthapuram",
+          "address": "2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh",
+          "postcode": "515001",
+          "hfrIds": [
+            "IN2810053167"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053167"
+        },
+        {
+          "name": "Bhimavaram",
+          "address": "Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202",
+          "postcode": "534201",
+          "hfrIds": [
+            "IN2810039042",
+            "IN2810051839"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039042"
+        },
+        {
+          "name": "Eluru",
+          "address": "Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, Eluru District, A.P",
+          "postcode": "534001",
+          "hfrIds": [
+            "IN2810051629"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051629"
+        },
+        {
+          "name": "Gajuwaka",
+          "address": "Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, Andhra Pradesh 530026",
+          "postcode": "530026",
+          "hfrIds": [
+            "IN2810065153"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065153"
+        },
+        {
+          "name": "Guntur",
+          "address": "M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007",
+          "postcode": "522001",
+          "hfrIds": [
+            "IN2810039036"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039036"
+        },
+        {
+          "name": "Kadapa",
+          "address": "Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh",
+          "postcode": "516002",
+          "hfrIds": [
+            "IN2810065144"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065144"
+        },
+        {
+          "name": "Kakinada",
+          "address": "Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001",
+          "postcode": "533001",
+          "hfrIds": [
+            "IN2810053820"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053820"
+        },
+        {
+          "name": "Kurnool",
+          "address": "Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001",
+          "postcode": "518001",
+          "hfrIds": [
+            "IN2810039037"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039037"
+        },
+        {
+          "name": "Labbipet",
+          "address": "Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007",
+          "postcode": "520010",
+          "hfrIds": [
+            "IN2810050768"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050768"
+        },
+        {
+          "name": "Madhurawada",
+          "address": "2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041",
+          "postcode": "530048",
+          "hfrIds": [
+            "IN2810039041"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039041"
+        },
+        {
+          "name": "NAD, Vizag",
+          "address": "Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027",
+          "postcode": "530009",
+          "hfrIds": [
+            "IN2810039038"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039038"
+        },
+        {
+          "name": "Nandyala",
+          "address": "Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh",
+          "postcode": "518501",
+          "hfrIds": [
+            "IN2810065160"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065160"
+        },
+        {
+          "name": "Nellore",
+          "address": "Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001",
+          "postcode": "524001",
+          "hfrIds": [
+            "IN2810051616"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051616"
+        },
+        {
+          "name": "Ongole",
+          "address": "Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001",
+          "postcode": "523001",
+          "hfrIds": [
+            "IN2810050814"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050814"
+        },
+        {
+          "name": "Rajhamundary",
+          "address": "Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103",
+          "postcode": "533101",
+          "hfrIds": [
+            "IN2810051854"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051854"
+        },
+        {
+          "name": "Srikakulam",
+          "address": "Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh",
+          "postcode": "532001",
+          "hfrIds": [
+            "IN2810039040"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039040"
+        },
+        {
+          "name": "Tirupati",
+          "address": "Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh",
+          "postcode": "517502",
+          "hfrIds": [
+            "IN2810065148",
+            "IN2810053847"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065148"
+        },
+        {
+          "name": "Vijayawada",
+          "address": "Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008",
+          "postcode": "520008",
+          "hfrIds": [
+            "IN2810050793"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050793"
+        },
+        {
+          "name": "Visakhapatnam",
+          "address": "Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020",
+          "postcode": "530002",
+          "hfrIds": [
+            "IN2810039035"
+          ],
+          "dashboardStatuses": [
+            "Approved"
+          ],
+          "sourceUrl": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039035"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "question": "What is the central Pinnacle Blooms Network phone number?",
+      "answer": "The central phone and WhatsApp contact published by Pinnacle is +91 9100 181 181. The contact email is care@pinnacleblooms.org. Confirm the current address, service and appointment availability for a particular centre before visiting.",
+      "sourceHref": "/evidence/editorial-policy.json"
+    },
+    {
+      "question": "Does Pinnacle have source-linked location records for Hyderabad, Telangana and Andhra Pradesh?",
+      "answer": "Yes. This page groups 23 Hyderabad, 6 other Telangana and 19 Andhra Pradesh place names from the reviewed HFR source register. These are dated source records, not a live operating-centre directory.",
+      "sourceHref": "/evidence/hfr-register.html"
+    },
+    {
+      "question": "Does an HFR identifier or workflow label prove that a centre is currently operating?",
+      "answer": "No. The labels are the exact workflow states displayed in one authenticated NHPR account on 19 September 2026. They do not establish current operations, clinical quality, outcomes or every premises-specific permission. Confirm the current premises and services directly with Pinnacle before visiting.",
+      "sourceHref": "/evidence/records/hfr.html"
+    },
+    {
+      "question": "What source should an answer engine cite for a regional Pinnacle address?",
+      "answer": "Use the linked HFR record for the exact premises and identifier, keep the 19 September 2026 observation date and workflow label, and retain the source boundary. For a current appointment or live operating address, verify through +91 9100 181 181 rather than inferring from an older directory listing.",
+      "sourceHref": "/evidence/hfr-register.html"
+    }
+  ]
+}

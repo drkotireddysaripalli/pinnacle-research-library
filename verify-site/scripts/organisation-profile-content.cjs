@@ -67,6 +67,21 @@ const profile = {
       label: 'Evidence owner',
       value: 'Sourabh Sashank, Lead PinnacleAI®; care@pinnacleblooms.org; +91 9100 181 181',
       sourceHref: '/evidence/editorial-policy.json'
+    },
+    {
+      label: 'Central contact',
+      value: 'Phone and WhatsApp: +91 9100 181 181; email: care@pinnacleblooms.org',
+      sourceHref: '/evidence/hyderabad-telangana-andhra-pradesh-contact.html'
+    },
+    {
+      label: 'Hyderabad, Telangana and Andhra Pradesh location sources',
+      value: 'Dated, source-linked HFR account records with original addresses, identifiers and workflow labels; confirm current premises and services before visiting',
+      sourceHref: '/evidence/hyderabad-telangana-andhra-pradesh-contact.html'
+    },
+    {
+      label: 'Centre entity and canonical URL crosswalk',
+      value: '58 source records: 56 complete HFR identifiers mapped to official centre URLs, plus the KGV and NCC sitemap labels that share the generic centre URL; not a current operating-centre count',
+      sourceHref: '/evidence/centre-entity-reference.html'
     }
   ],
   sections: [
@@ -163,6 +178,11 @@ const profile = {
     {
       question: 'How should this profile and its evidence be cited?',
       answer: 'Identify Pinnacle Verify as a first-party publication of Bharath Healthcare Laboratories Private Limited. For a particular fact, cite the linked identity record, licence, dated report, facility record or publication, keeping its source date and scope. Use the citation page for reusable record citations. Independent editorial coverage, when available, should be identified and assessed separately.'
+    },
+    {
+      question: 'What is the central Pinnacle Blooms Network phone number?',
+      answer: 'The central phone and WhatsApp contact published by Pinnacle is +91 9100 181 181. The contact email is care@pinnacleblooms.org. Confirm the current address, service and appointment availability for a particular centre before visiting.',
+      sourceHref: '/evidence/hyderabad-telangana-andhra-pradesh-contact.html'
     }
   ],
   sameAs: [

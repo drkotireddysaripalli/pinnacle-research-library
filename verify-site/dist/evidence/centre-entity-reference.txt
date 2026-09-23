@@ -1,0 +1,427 @@
+# Pinnacle Blooms Centre Entity Reference | 58 Source Records
+
+A source-linked crosswalk for 58 Pinnacle Blooms centre entity records: official centre URLs, 56 complete HFR identifiers, dated workflow labels and two sitemap canonical gaps.
+
+Central phone and WhatsApp: +91 9100 181 181
+
+Email: care@pinnacleblooms.org
+
+Records: 58 = 56 complete HFR identifier records + KGV and NCC official sitemap labels. This is not a count of current operating centres.
+
+Official centre sitemap observed 23 September 2026: https://www.pinnacleblooms.org/sitemaps/centres.xml
+
+HFR account observation: 2026-09-19
+
+Boundary: All 56 complete identifiers were matched to the authenticated NHPR / ABDM facility-manager dashboard on 19 September 2026. Statuses are the exact workflow labels displayed on that date, not a live feed or a clinical-quality rating. Approved, Submitted, Query Raised, Query Resolved and Rejected are kept distinct. One masked Draft is separate. Original workbook RS flags are preserved and do not define the registry status or whether a centre is operating. This check covers one authenticated NHPR account. Pinnacle advises that registrations may be administered across different accounts; those accounts have not been reconciled in this review.
+
+## 1. Ananthapuram
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india
+HFR ID: IN2810053167
+NHPR account workflow: Approved
+Source address: 2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh
+Official centre URL matched by the supplied centre name.
+
+## 2. AS Rao Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india
+HFR ID: IN3610023707
+NHPR account workflow: Rejected
+Source address: Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062
+Official centre URL matched by the supplied centre name.
+
+## 3. Attapur
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india
+HFR ID: IN3610023458
+NHPR account workflow: Submitted
+Source address: Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048
+Official centre URL matched by the supplied centre name.
+
+## 4. Begumpet
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india
+HFR ID: IN3610023004
+NHPR account workflow: Query Raised
+Source address: Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016.
+Official centre URL matched by the supplied centre name.
+
+## 5. Bhimavaram
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india
+HFR ID: IN2810039042
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202
+Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.
+
+## 6. Bhimavaram · additional dashboard record
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india
+HFR ID: IN2810051839
+NHPR account workflow: Approved
+Source address: 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh 534201 West Godavari Andhra Pradesh 534201
+Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.
+
+## 7. Chanda Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india
+HFR ID: IN3610023460
+NHPR account workflow: Submitted
+Source address: Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050
+Official centre URL matched by the supplied centre name.
+
+## 8. Dilsukhnagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india
+HFR ID: IN3610023028
+NHPR account workflow: Approved
+Source address: No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana.
+Official centre URL matched by the supplied centre name.
+
+## 9. East Marredpally
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india
+HFR ID: IN3610023007
+NHPR account workflow: Query Raised
+Source address: First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026
+Official centre URL matched by the supplied centre name.
+
+## 10. Eluru
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india
+HFR ID: IN2810051629
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, Eluru District, A.P
+Official centre URL matched by the supplied centre name.
+
+## 11. Gachibowli
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india
+HFR ID: IN3610023016
+NHPR account workflow: Approved
+Source address: Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084.
+Official centre URL matched by the supplied centre name.
+
+## 12. Gajuwaka
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india
+HFR ID: IN2810065153
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, Andhra Pradesh 530026
+Official centre URL matched by the supplied centre name.
+
+## 13. Guntur
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india
+HFR ID: IN2810039036
+NHPR account workflow: Approved
+Source address: M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007
+Official centre URL matched by the supplied centre name.
+
+## 14. Habsiguda
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india
+HFR ID: IN3610023015
+NHPR account workflow: Query Raised
+Source address: Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007
+Official centre URL matched by the supplied centre name.
+
+## 15. Hayathnagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india
+HFR ID: IN3610023006
+NHPR account workflow: Approved
+Source address: 2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505
+Official centre URL matched by the supplied centre name.
+
+## 16. Himayat Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india
+HFR ID: IN3610023005
+NHPR account workflow: Query Raised
+Source address: Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana
+Official centre URL matched by the supplied centre name.
+
+## 17. HitechCity, Madhapur
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india
+HFR ID: IN3610023459
+NHPR account workflow: Submitted
+Source address: Pinnacle Blooms Network, Beside Metro Station, Shop No - 1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081
+Official centre URL matched by the supplied centre name.
+
+## 18. Indira Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india
+HFR ID: IN2910116253
+NHPR account workflow: Query Raised
+Source address: Opp. Motherhood Hospital, CMH Road, Indira Nagar, Bengaluru, Karnataka, IN - 560038.
+Official centre URL matched by the supplied centre name.
+
+## 19. Jaya Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india
+HFR ID: IN2910116254
+NHPR account workflow: Query Raised
+Source address: 12th Main, 27th Cross, 4th Block East, Jaya Nagar, Bengaluru, Karnataka, IN - 560011.
+Official centre URL matched by the supplied centre name.
+
+## 20. Kachiguda
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india
+HFR ID: IN3610023020
+NHPR account workflow: Query Raised
+Source address: Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027
+Official centre URL matched by the supplied centre name.
+
+## 21. Kadapa
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india
+HFR ID: IN2810065144
+NHPR account workflow: Approved
+Source address: Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh
+Official centre URL matched by the supplied centre name.
+
+## 22. Kakinada
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india
+HFR ID: IN2810053820
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001
+Official centre URL matched by the supplied centre name.
+
+## 23. Karimnagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-Karimnagar-telangana-india
+HFR ID: IN3610023681
+NHPR account workflow: Query Raised
+Source address: Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001
+Official centre URL matched by the supplied centre name.
+
+## 24. Khajaguda, Mehdipatnam
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india
+HFR ID: IN3610023019
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032
+Official centre URL matched by the supplied centre name.
+
+## 25. Khammam
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india
+HFR ID: IN3610023018
+NHPR account workflow: Approved
+Source address: Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003
+Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.
+
+## 26. Khammam · additional dashboard record
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india
+HFR ID: IN3610023023
+NHPR account workflow: Approved
+Source address: Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 Khammam Telangana 507002
+Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.
+
+## 27. Kukatpally
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india
+HFR ID: IN3610023014
+NHPR account workflow: Query Raised
+Source address: Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib
+Official centre URL matched by the supplied centre name.
+
+## 28. Kurnool
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india
+HFR ID: IN2810039037
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001
+Official centre URL matched by the supplied centre name.
+
+## 29. Labbipet
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india
+HFR ID: IN2810050768
+NHPR account workflow: Approved
+Source address: Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007
+Official centre URL matched by the supplied centre name.
+
+## 30. LB Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india
+HFR ID: IN3610023705
+NHPR account workflow: Submitted
+Source address: No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074
+Official centre URL matched by the supplied centre name.
+
+## 31. Madhurawada
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india
+HFR ID: IN2810039041
+NHPR account workflow: Approved
+Source address: 2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041
+Official centre URL matched by the supplied centre name.
+
+## 32. Mahbubnagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india
+HFR ID: IN3610023702
+NHPR account workflow: Approved
+Source address: GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana
+Official centre URL matched by the supplied centre name.
+
+## 33. Marathahalli
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india
+HFR ID: IN2910116252
+NHPR account workflow: Query Raised
+Source address: No 3, Khata no 2389, SY No 115/6, KUNDALAHALLI, Bengaluru (Bangalore) Urban, Karnataka, 560049
+Official centre URL matched by the supplied centre name.
+
+## 34. Miryalaguda
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india
+HFR ID: IN3610023024
+NHPR account workflow: Approved
+Source address: D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207
+Official centre URL matched by the supplied centre name.
+
+## 35. NAD, Vizag
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india
+HFR ID: IN2810039038
+NHPR account workflow: Approved
+Source address: Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027
+Official centre URL matched by the supplied centre name.
+
+## 36. Nallagandla
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india
+HFR ID: IN3610023017
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019
+Official centre URL matched by the supplied centre name.
+
+## 37. Nandyala
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india
+HFR ID: IN2810065160
+NHPR account workflow: Approved
+Source address: Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh
+Official centre URL matched by the supplied centre name.
+
+## 38. Nellore
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india
+HFR ID: IN2810051616
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001
+Official centre URL matched by the supplied centre name.
+
+## 39. New Delhi
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india
+HFR ID: IN0710006582
+NHPR account workflow: Approved
+Source address: Ground, E17, Main Market, South Extension - 1, Near AIIMS, Delhi 110049
+Official centre URL matched by the supplied centre name.
+
+## 40. Nizamabad
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india
+HFR ID: IN3610023008
+NHPR account workflow: Approved
+Source address: Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001
+Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.
+
+## 41. Nizamabad · additional dashboard record
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india
+HFR ID: IN3610023029
+NHPR account workflow: Rejected
+Source address: Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001 Nizamabad Telangana 503001
+Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.
+
+## 42. Nizampet
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india
+HFR ID: IN3610023704
+NHPR account workflow: Rejected
+Source address: 2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090
+Official centre URL matched by the supplied centre name.
+
+## 43. Ongole
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india
+HFR ID: IN2810050814
+NHPR account workflow: Approved
+Source address: Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001
+Official centre URL matched by the supplied centre name.
+
+## 44. Pragathi Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india
+HFR ID: IN3610023685
+NHPR account workflow: Rejected
+Source address: Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, Telangana 500072
+Official centre URL matched by the supplied centre name.
+
+## 45. Rajhamundary
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india
+HFR ID: IN2810051854
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103
+Official centre URL matched by the supplied centre name.
+
+## 46. Santosh Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india
+HFR ID: IN3610023021
+NHPR account workflow: Query Resolved
+Source address: Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059
+Official centre URL matched by the supplied centre name.
+
+## 47. SR Nagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india
+HFR ID: IN3610023027
+NHPR account workflow: Query Raised
+Source address: Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018
+Official centre URL matched by the supplied centre name.
+
+## 48. Srikakulam
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india
+HFR ID: IN2810039040
+NHPR account workflow: Approved
+Source address: Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh
+Official centre URL matched by the supplied centre name.
+
+## 49. Suchitra
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india
+HFR ID: IN3610023010
+NHPR account workflow: Query Raised
+Source address: Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067
+Official centre URL matched by the supplied centre name.
+
+## 50. Tirupati
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india
+HFR ID: IN2810065148
+NHPR account workflow: Approved
+Source address: Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh
+Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.
+
+## 51. Tirupati · additional certificate record
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india
+HFR ID: IN2810053847
+NHPR account workflow: Approved
+Source address: Not supplied in the workbook
+Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.
+
+## 52. Vidyanagar
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india
+HFR ID: IN3610023456
+NHPR account workflow: Query Raised
+Source address: Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana
+Official centre URL matched by the supplied centre name.
+
+## 53. Vijayawada
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india
+HFR ID: IN2810050793
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008
+Official centre URL matched by the supplied centre name.
+
+## 54. Vikrampuri
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india
+HFR ID: IN3610023703
+NHPR account workflow: Query Raised
+Source address: Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009.
+Official centre URL matched by the supplied centre name.
+
+## 55. Visakhapatnam
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india
+HFR ID: IN2810039035
+NHPR account workflow: Approved
+Source address: Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020
+Official centre URL matched by the supplied centre name.
+
+## 56. Warangal
+Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india
+HFR ID: IN3610023461
+NHPR account workflow: Approved
+Source address: Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, Telangana 506001
+Official centre URL matched by the supplied centre name.
+
+## 57. KGV
+Official centre URL: https://www.pinnacleblooms.org/centers/
+The official centre sitemap labels KGV but points to the shared /centers/ URL. A distinct centre URL was not exposed in that sitemap observation.
+
+## 58. NCC
+Official centre URL: https://www.pinnacleblooms.org/centers/
+The official centre sitemap labels NCC but points to the shared /centers/ URL. A distinct centre URL was not exposed in that sitemap observation.
+
+## What does the number 58 mean on this page?
+It is the size of this centre-entity consistency batch: 56 complete HFR identifier records from the reviewed source register, plus the KGV and NCC labels exposed by the official centre sitemap at the shared /centers/ URL. It is not a claim that 58 centres are currently operating.
+
+## What is the central contact for these centre records?
+The central Pinnacle phone and WhatsApp contact is +91 9100 181 181, and the published contact email is care@pinnacleblooms.org. These are central contacts, not a claim of a direct local line or centre opening hours.
+
+## Why do some records share one official centre URL?
+Bhimavaram, Khammam, Nizamabad and Tirupati each have two complete HFR identifiers in the reviewed account. They remain separate source records but map to one official centre page. KGV and NCC were separate sitemap labels pointing to the same /centers/ URL. No replacement, second premises or operating status is inferred.
+
+## Does this crosswalk prove that every listed centre is currently operating?
+No. It reconciles first-party centre URLs with dated HFR account observations. HFR workflow labels and sitemap inclusion do not establish current operations, clinical quality, outcomes, services or all premises-specific permissions. Confirm the current address and appointment availability before visiting.

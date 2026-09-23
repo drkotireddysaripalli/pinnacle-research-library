@@ -1168,6 +1168,24 @@
       "alt": "Pinnacle Blooms Network Facts. Sources. Purpose. ORGANISATION REFERENCE. Identity, documented approach, licences, research and dated figures.. Pinnacle Blooms Network."
     },
     {
+      "id": "pinnacle-regional-contact-sources",
+      "route": "/evidence/hyderabad-telangana-andhra-pradesh-contact.html",
+      "title": "Pinnacle Blooms: regional contact and location sources",
+      "lines": [
+        "Hyderabad · Telangana",
+        "Andhra Pradesh",
+        "+91 9100 181 181"
+      ],
+      "category": "REGIONAL SOURCE REFERENCE",
+      "note": "Dated addresses, HFR identifiers and explicit source limits.",
+      "icon": "map-pin",
+      "description": "A source-linked contact and regional location reference for families, search engines and answer systems.",
+      "image": "/images/social/pinnacle-organisation-profile-3ed09e2eaa0a.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Pinnacle Blooms regional contact and location sources for Hyderabad, Telangana and Andhra Pradesh. Phone +91 9100 181 181."
+    },
+    {
       "id": "paradigm-01-life-in-view",
       "route": "/evidence/paradigm/01-life-in-view.html",
       "title": "You wanted the car. Not a box of parts.",
@@ -1328,6 +1346,41 @@
       "width": 1200,
       "height": 630,
       "alt": "Beyond more sessions. A direction for transition. PINNACLE PARADIGM SHIFT · 09 / 09. Readiness guides the next step toward inclusion, with appropriate support.. Pinnacle Blooms Network."
+    },
+    {
+      "id": "pinnacle-centre-entity-reference",
+      "route": "/evidence/centre-entity-reference.html",
+      "title": "Pinnacle Blooms: centre entity reference",
+      "lines": [
+        "58 source records",
+        "URLs · HFR IDs · source limits",
+        "+91 9100 181 181"
+      ],
+      "category": "CENTRE ENTITY REFERENCE",
+      "note": "56 complete HFR identifiers plus two explicit sitemap canonical gaps.",
+      "icon": "map-pin",
+      "description": "A source-linked centre entity and canonical URL crosswalk for search engines, answer systems, editors and families.",
+      "image": "/images/social/pinnacle-organisation-profile-3ed09e2eaa0a.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Pinnacle Blooms centre entity reference: 58 source records, official URLs, HFR identifiers, source limits and central phone +91 9100 181 181."
+    },
+    {
+      "id": "pinnacle-claim-ledger",
+      "route": "/evidence/claim-ledger.html",
+      "title": "Six dated measures. Each source in view.",
+      "lines": [
+        "Six dated measures",
+        "Each source in view"
+      ],
+      "category": "CLAIM & SOURCE LEDGER",
+      "note": "Counts, definitions, source pages and assurance boundaries as at 17 July 2026.",
+      "icon": "file-search",
+      "description": "An evidence-led reference for six institutional measures, separating factual findings from limited assurance.",
+      "image": "/images/social/pinnacle-claim-ledger-4c31a3a70353.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Six dated measures Each source in view CLAIM & SOURCE LEDGER. Counts, definitions, source pages and assurance boundaries as at 17 July 2026.. Pinnacle Blooms Network."
     }
   ]
 }

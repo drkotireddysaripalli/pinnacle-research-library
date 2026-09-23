@@ -248,6 +248,11 @@ async function render(card, logo, artwork) {
 async function main() {
   if (!fs.existsSync(CATALOGUE)) throw new Error(`Create the approved catalogue first: ${CATALOGUE}`);
   const cards = JSON.parse(fs.readFileSync(CATALOGUE, 'utf8'));
+  const onlyArg = process.argv.find(arg => arg.startsWith('--only='));
+  const onlyId = onlyArg?.slice('--only='.length);
+  if (onlyId && !cards.some(card => card.id === onlyId)) throw new Error(`Unknown card id: ${onlyId}`);
+  const existingPath = path.join(CONTENT, 'social-images.json');
+  const existing = onlyId && fs.existsSync(existingPath) ? new Map(JSON.parse(fs.readFileSync(existingPath, 'utf8')).cards.map(card => [card.id, card])) : new Map();
   if (!Array.isArray(cards) || cards.length === 0) throw new Error('Catalogue must be a non-empty card array');
   const ids = new Set();
   const routes = new Set();
@@ -267,7 +272,13 @@ async function main() {
   const logo = await image(path.join(DIST, 'images', 'pinnacle-logo.webp'));
   const artwork = await image(path.join(ROOT, 'assets', 'social-artwork.webp'));
   const rendered = [];
-  for (const card of cards) rendered.push(await render(card, logo, artwork));
+  for (const card of cards) {
+    if (onlyId && card.id !== onlyId) {
+      const prior = existing.get(card.id);
+      if (!prior || prior.route !== card.route || !fs.existsSync(path.join(DIST, `.${prior.image}`))) throw new Error(`Cannot preserve missing prior card: ${card.id}`);
+      rendered.push(prior);
+    } else rendered.push(await render(card, logo, artwork));
+  }
   const manifest = { cards: rendered };
   fs.writeFileSync(path.join(CONTENT, 'social-images.json'), JSON.stringify(manifest, null, 2) + '\n');
   const sizes = rendered.map(card => fs.statSync(path.join(DIST, `.${card.image}`)).size);

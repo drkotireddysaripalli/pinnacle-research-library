@@ -57,7 +57,7 @@ The post-hero scale story derives from `content/scale-story.json`. It distinguis
 
 The Worker adds one contextual evidence panel to eight allowlisted parent-site pages. The seven exact Ask source paths are delegated to the existing `pinnacle-ask` Worker via an HTTP service binding named `PINNACLE_ASK`. Keep that service binding, the `ASSETS` binding and inherited `SITES_BYPASS_TOKEN` when deploying. Narrow source-path routes take precedence over the unchanged broad `pinnacleblooms.org/ask*` route; suffix paths, non-GET methods and ineligible responses pass through without alteration. The separate `www.pinnacleblooms.org/abilityscore*` route fetches the existing website origin. Only the exact public HTML pages receive a panel; private/no-store/no-transform, cookie-setting, noindex, range and authenticated responses are excluded. Original canonical links, security headers and cache directives are preserved. No new cache storage or host redirects are added for these article pages.
 
-Release checks: `node scripts/check-editorial-confirmation.cjs`, `node scripts/check-scale-story.cjs`, `node scripts/check-hfr-presentation.cjs`. Contextual-route fixture tests cover all eight pages, response preservation and 17 routing/transformation conditions; verify the actual live Worker after deployment.
+Release checks: `node scripts/check-editorial-confirmation.cjs`, `node scripts/check-scale-story.cjs`, `node scripts/check-hfr-presentation.cjs`, `node scripts/check-regional-contact.cjs`, `node scripts/check-centre-entity-reference.cjs`. Contextual-route fixture tests cover all eight pages, response preservation and 17 routing/transformation conditions; verify the actual live Worker after deployment.
 
 ## Research and reader controls
 

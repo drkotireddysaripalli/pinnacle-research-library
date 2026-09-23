@@ -11,6 +11,26 @@
       "@id": "https://pinnacle-verify.saripalli.chatgpt.site/#pinnacle-brand"
     },
     "url": "https://www.pinnacleblooms.org/",
+    "telephone": "+919100181181",
+    "email": "care@pinnacleblooms.org",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Hyderabad",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Telangana"
+        }
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Telangana"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Andhra Pradesh"
+      }
+    ],
     "identifier": [
       {
         "@type": "PropertyValue",
@@ -25,11 +45,16 @@
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "name": "Sourabh Sashank",
-      "contactType": "evidence questions and corrections",
-      "description": "Lead PinnacleAI®; Evidence owner",
+      "name": "Pinnacle Blooms Network contact",
+      "contactType": "parent, family, evidence and correction enquiries",
+      "description": "Sourabh Sashank, Lead PinnacleAI® and Evidence owner",
       "email": "care@pinnacleblooms.org",
-      "telephone": "+919100181181"
+      "telephone": "+919100181181",
+      "areaServed": [
+        "Hyderabad",
+        "Telangana",
+        "Andhra Pradesh"
+      ]
     },
     "logo": {
       "@type": "ImageObject",
@@ -10470,6 +10495,33 @@
       ]
     },
     {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html",
+      "title": "Pinnacle Claim &amp; Source Ledger | Six Dated Institutional Measures",
+      "sections": [
+        {
+          "id": "dated-measures",
+          "name": "Six measures, with their counting rules",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html#dated-measures",
+          "kind": "section",
+          "parent": null,
+          "description": "These institutional counts refer to records as at 17 July 2026 . NPSY & Co. signed the two reports on 3 September 2026 . The SRS 4400 report records factual findings under agreed procedures; it gives no assurance conclusion. The separate SAE 3000 report gives limited assurance on specified assertions or floors. Neither establishes clinical outcomes.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/srs4400.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sae3000.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.json",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.csv",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-services",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-registrations",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-operational-centres",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-practitioners",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-data-points",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-patents"
+          ]
+        }
+      ]
+    },
+    {
       "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html",
       "title": "Pinnacle Independent CA Evidence | SAE 3000, SRS 4400 &amp; UDIN",
       "sections": [
@@ -14796,7 +14848,9 @@
           "kind": "section",
           "parent": null,
           "description": "They have different roles. Pinnacle Blooms Network is the public-facing brand. Bharath Healthcare Laboratories Private Limited is the legal entity identified by CIN U74999TG2016PTC113063 and LEI 894500OJYBVC18BUDN89 and named in the licensing records.",
-          "citations": []
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html"
+          ]
         },
         {
           "id": "answer-1",
@@ -14859,12 +14913,1734 @@
           "citations": []
         },
         {
+          "id": "answer-7",
+          "name": "What is the central Pinnacle Blooms Network phone number?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html#answer-7",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "The central phone and WhatsApp contact published by Pinnacle is +91 9100 181 181. The contact email is care@pinnacleblooms.org. Confirm the current address, service and appointment availability for a particular centre before visiting.",
+          "text": "What is the central Pinnacle Blooms Network phone number? The central phone and WhatsApp contact published by Pinnacle is +91 9100 181 181. The contact email is care@pinnacleblooms.org. Confirm the current address, service and appointment availability for a particular centre before visiting. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html"
+          ]
+        },
+        {
           "id": "cite-organisation",
           "name": "Cite this profile",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html#cite-organisation",
           "kind": "section",
           "parent": null,
           "description": "Bharath Healthcare Laboratories Private Limited. (2026, September 23). Pinnacle Blooms Network: organisation profile. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html",
+      "title": "Pinnacle Blooms Hyderabad, Telangana &amp; Andhra Pradesh | Phone and Location Sources",
+      "sections": [
+        {
+          "id": "source-boundary",
+          "name": "How to read this page",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#source-boundary",
+          "kind": "section",
+          "parent": null,
+          "description": "The source addresses, identifiers and workflow labels below were observed in one authenticated NHPR facility-manager account on 19 September 2026. “Approved”, “Submitted”, “Query Raised”, “Query Resolved” and “Rejected” are administrative workflow labels, not clinical ratings or proof that a centre is currently operating. Workbook flags are not used as current operating claims. Confirm the exact premises, services and appointment availability through the central contact before visiting.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-review-method"
+          ]
+        },
+        {
+          "id": "hyderabad",
+          "name": "Hyderabad source records",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#hyderabad",
+          "kind": "section",
+          "parent": null,
+          "description": "23 place names after merging duplicate identifiers for the same supplied premises label. Every identifier remains separately linked.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023707",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023458",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023004",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023460",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023028",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023007",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023016",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023015",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023006",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023005",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023459",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023020",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023019",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023014",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023705",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023017",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023704",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023685",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023021",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023027",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023010",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023456",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023703"
+          ]
+        },
+        {
+          "id": "block-as-rao-nagar",
+          "name": "AS Rao Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-as-rao-nagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062",
+          "text": "AS Rao Nagar Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062 HFR ID: IN3610023707 NHPR account workflow · 19 September 2026: Rejected",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023707"
+          ]
+        },
+        {
+          "id": "block-attapur",
+          "name": "Attapur",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-attapur",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048",
+          "text": "Attapur Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048 HFR ID: IN3610023458 NHPR account workflow · 19 September 2026: Submitted",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023458"
+          ]
+        },
+        {
+          "id": "block-begumpet",
+          "name": "Begumpet",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-begumpet",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016.",
+          "text": "Begumpet Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016. HFR ID: IN3610023004 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023004"
+          ]
+        },
+        {
+          "id": "block-chanda-nagar",
+          "name": "Chanda Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-chanda-nagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050 · 500049",
+          "text": "Chanda Nagar Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050 · 500049 HFR ID: IN3610023460 NHPR account workflow · 19 September 2026: Submitted",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023460"
+          ]
+        },
+        {
+          "id": "block-dilsukhnagar",
+          "name": "Dilsukhnagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-dilsukhnagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana. · 500060",
+          "text": "Dilsukhnagar No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana. · 500060 HFR ID: IN3610023028 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023028"
+          ]
+        },
+        {
+          "id": "block-east-marredpally",
+          "name": "East Marredpally",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-east-marredpally",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026",
+          "text": "East Marredpally First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026 HFR ID: IN3610023007 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023007"
+          ]
+        },
+        {
+          "id": "block-gachibowli",
+          "name": "Gachibowli",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-gachibowli",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084.",
+          "text": "Gachibowli Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084. HFR ID: IN3610023016 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023016"
+          ]
+        },
+        {
+          "id": "block-habsiguda",
+          "name": "Habsiguda",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-habsiguda",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007",
+          "text": "Habsiguda Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007 HFR ID: IN3610023015 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023015"
+          ]
+        },
+        {
+          "id": "block-hayathnagar",
+          "name": "Hayathnagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-hayathnagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505",
+          "text": "Hayathnagar 2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505 HFR ID: IN3610023006 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023006"
+          ]
+        },
+        {
+          "id": "block-himayat-nagar",
+          "name": "Himayat Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-himayat-nagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana · 500029",
+          "text": "Himayat Nagar Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana · 500029 HFR ID: IN3610023005 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023005"
+          ]
+        },
+        {
+          "id": "block-hitechcity-madhapur",
+          "name": "HitechCity, Madhapur",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-hitechcity-madhapur",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Pinnacle Blooms Network, Beside Metro Station, Shop No - 1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081",
+          "text": "HitechCity, Madhapur Pinnacle Blooms Network, Beside Metro Station, Shop No - 1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081 HFR ID: IN3610023459 NHPR account workflow · 19 September 2026: Submitted",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023459"
+          ]
+        },
+        {
+          "id": "block-kachiguda",
+          "name": "Kachiguda",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-kachiguda",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027",
+          "text": "Kachiguda Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027 HFR ID: IN3610023020 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023020"
+          ]
+        },
+        {
+          "id": "block-khajaguda-mehdipatnam",
+          "name": "Khajaguda, Mehdipatnam",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-khajaguda-mehdipatnam",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032 · 500008",
+          "text": "Khajaguda, Mehdipatnam Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032 · 500008 HFR ID: IN3610023019 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023019"
+          ]
+        },
+        {
+          "id": "block-kukatpally",
+          "name": "Kukatpally",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-kukatpally",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib · 500072",
+          "text": "Kukatpally Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib · 500072 HFR ID: IN3610023014 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023014"
+          ]
+        },
+        {
+          "id": "block-lb-nagar",
+          "name": "LB Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-lb-nagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074",
+          "text": "LB Nagar No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074 HFR ID: IN3610023705 NHPR account workflow · 19 September 2026: Submitted",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023705"
+          ]
+        },
+        {
+          "id": "block-nallagandla",
+          "name": "Nallagandla",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-nallagandla",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019",
+          "text": "Nallagandla Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019 HFR ID: IN3610023017 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023017"
+          ]
+        },
+        {
+          "id": "block-nizampet",
+          "name": "Nizampet",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-nizampet",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090",
+          "text": "Nizampet 2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090 HFR ID: IN3610023704 NHPR account workflow · 19 September 2026: Rejected",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023704"
+          ]
+        },
+        {
+          "id": "block-pragathi-nagar",
+          "name": "Pragathi Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-pragathi-nagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, Telangana 500072 · 500090",
+          "text": "Pragathi Nagar Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, Telangana 500072 · 500090 HFR ID: IN3610023685 NHPR account workflow · 19 September 2026: Rejected",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023685"
+          ]
+        },
+        {
+          "id": "block-santosh-nagar",
+          "name": "Santosh Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-santosh-nagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059",
+          "text": "Santosh Nagar Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059 HFR ID: IN3610023021 NHPR account workflow · 19 September 2026: Query Resolved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023021"
+          ]
+        },
+        {
+          "id": "block-sr-nagar",
+          "name": "SR Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-sr-nagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018 · 500018",
+          "text": "SR Nagar Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018 · 500018 HFR ID: IN3610023027 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023027"
+          ]
+        },
+        {
+          "id": "block-suchitra",
+          "name": "Suchitra",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-suchitra",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067 · 500067",
+          "text": "Suchitra Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067 · 500067 HFR ID: IN3610023010 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023010"
+          ]
+        },
+        {
+          "id": "block-vidyanagar",
+          "name": "Vidyanagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-vidyanagar",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana · 500020",
+          "text": "Vidyanagar Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana · 500020 HFR ID: IN3610023456 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023456"
+          ]
+        },
+        {
+          "id": "block-vikrampuri",
+          "name": "Vikrampuri",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-vikrampuri",
+          "kind": "article",
+          "parent": "hyderabad",
+          "description": "Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009.",
+          "text": "Vikrampuri Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009. HFR ID: IN3610023703 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023703"
+          ]
+        },
+        {
+          "id": "telangana",
+          "name": "Telangana outside Hyderabad source records",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#telangana",
+          "kind": "section",
+          "parent": null,
+          "description": "6 place names after merging duplicate identifiers for the same supplied premises label. Every identifier remains separately linked.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023681",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023018",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023023",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023702",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023024",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023008",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023029",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023461"
+          ]
+        },
+        {
+          "id": "block-karimnagar",
+          "name": "Karimnagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-karimnagar",
+          "kind": "article",
+          "parent": "telangana",
+          "description": "Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001",
+          "text": "Karimnagar Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001 HFR ID: IN3610023681 NHPR account workflow · 19 September 2026: Query Raised",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023681"
+          ]
+        },
+        {
+          "id": "block-khammam",
+          "name": "Khammam",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-khammam",
+          "kind": "article",
+          "parent": "telangana",
+          "description": "Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 · 507001",
+          "text": "Khammam Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 · 507001 HFR IDs: IN3610023018 · IN3610023023 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023018",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023023"
+          ]
+        },
+        {
+          "id": "block-mahbubnagar",
+          "name": "Mahbubnagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-mahbubnagar",
+          "kind": "article",
+          "parent": "telangana",
+          "description": "GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana · 509001",
+          "text": "Mahbubnagar GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana · 509001 HFR ID: IN3610023702 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023702"
+          ]
+        },
+        {
+          "id": "block-miryalaguda",
+          "name": "Miryalaguda",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-miryalaguda",
+          "kind": "article",
+          "parent": "telangana",
+          "description": "D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207",
+          "text": "Miryalaguda D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207 HFR ID: IN3610023024 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023024"
+          ]
+        },
+        {
+          "id": "block-nizamabad",
+          "name": "Nizamabad",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-nizamabad",
+          "kind": "article",
+          "parent": "telangana",
+          "description": "Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001",
+          "text": "Nizamabad Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001 HFR IDs: IN3610023008 · IN3610023029 NHPR account workflow · 19 September 2026: Approved · Rejected",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023008",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023029"
+          ]
+        },
+        {
+          "id": "block-warangal",
+          "name": "Warangal",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-warangal",
+          "kind": "article",
+          "parent": "telangana",
+          "description": "Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, Telangana 506001 · 506002",
+          "text": "Warangal Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, Telangana 506001 · 506002 HFR ID: IN3610023461 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023461"
+          ]
+        },
+        {
+          "id": "andhra-pradesh",
+          "name": "Andhra Pradesh source records",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#andhra-pradesh",
+          "kind": "section",
+          "parent": null,
+          "description": "19 place names after merging duplicate identifiers for the same supplied premises label. Every identifier remains separately linked.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053167",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039042",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051839",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051629",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065153",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039036",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065144",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053820",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039037",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050768",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039041",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039038",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065160",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051616",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050814",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051854",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039040",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065148",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053847",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050793",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039035"
+          ]
+        },
+        {
+          "id": "block-ananthapuram",
+          "name": "Ananthapuram",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-ananthapuram",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh · 515001",
+          "text": "Ananthapuram 2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh · 515001 HFR ID: IN2810053167 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053167"
+          ]
+        },
+        {
+          "id": "block-bhimavaram",
+          "name": "Bhimavaram",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-bhimavaram",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202 · 534201",
+          "text": "Bhimavaram Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202 · 534201 HFR IDs: IN2810039042 · IN2810051839 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039042",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051839"
+          ]
+        },
+        {
+          "id": "block-eluru",
+          "name": "Eluru",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-eluru",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, Eluru District, A.P · 534001",
+          "text": "Eluru Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, Eluru District, A.P · 534001 HFR ID: IN2810051629 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051629"
+          ]
+        },
+        {
+          "id": "block-gajuwaka",
+          "name": "Gajuwaka",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-gajuwaka",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, Andhra Pradesh 530026",
+          "text": "Gajuwaka Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, Andhra Pradesh 530026 HFR ID: IN2810065153 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065153"
+          ]
+        },
+        {
+          "id": "block-guntur",
+          "name": "Guntur",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-guntur",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007 · 522001",
+          "text": "Guntur M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007 · 522001 HFR ID: IN2810039036 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039036"
+          ]
+        },
+        {
+          "id": "block-kadapa",
+          "name": "Kadapa",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-kadapa",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh · 516002",
+          "text": "Kadapa Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh · 516002 HFR ID: IN2810065144 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065144"
+          ]
+        },
+        {
+          "id": "block-kakinada",
+          "name": "Kakinada",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-kakinada",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001",
+          "text": "Kakinada Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001 HFR ID: IN2810053820 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053820"
+          ]
+        },
+        {
+          "id": "block-kurnool",
+          "name": "Kurnool",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-kurnool",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001",
+          "text": "Kurnool Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001 HFR ID: IN2810039037 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039037"
+          ]
+        },
+        {
+          "id": "block-labbipet",
+          "name": "Labbipet",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-labbipet",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007 · 520010",
+          "text": "Labbipet Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007 · 520010 HFR ID: IN2810050768 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050768"
+          ]
+        },
+        {
+          "id": "block-madhurawada",
+          "name": "Madhurawada",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-madhurawada",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041 · 530048",
+          "text": "Madhurawada 2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041 · 530048 HFR ID: IN2810039041 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039041"
+          ]
+        },
+        {
+          "id": "block-nad-vizag",
+          "name": "NAD, Vizag",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-nad-vizag",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027 · 530009",
+          "text": "NAD, Vizag Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027 · 530009 HFR ID: IN2810039038 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039038"
+          ]
+        },
+        {
+          "id": "block-nandyala",
+          "name": "Nandyala",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-nandyala",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh · 518501",
+          "text": "Nandyala Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh · 518501 HFR ID: IN2810065160 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065160"
+          ]
+        },
+        {
+          "id": "block-nellore",
+          "name": "Nellore",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-nellore",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001",
+          "text": "Nellore Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001 HFR ID: IN2810051616 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051616"
+          ]
+        },
+        {
+          "id": "block-ongole",
+          "name": "Ongole",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-ongole",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001",
+          "text": "Ongole Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001 HFR ID: IN2810050814 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050814"
+          ]
+        },
+        {
+          "id": "block-rajhamundary",
+          "name": "Rajhamundary",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-rajhamundary",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103 · 533101",
+          "text": "Rajhamundary Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103 · 533101 HFR ID: IN2810051854 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051854"
+          ]
+        },
+        {
+          "id": "block-srikakulam",
+          "name": "Srikakulam",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-srikakulam",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh · 532001",
+          "text": "Srikakulam Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh · 532001 HFR ID: IN2810039040 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039040"
+          ]
+        },
+        {
+          "id": "block-tirupati",
+          "name": "Tirupati",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-tirupati",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh · 517502",
+          "text": "Tirupati Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh · 517502 HFR IDs: IN2810065148 · IN2810053847 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065148",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053847"
+          ]
+        },
+        {
+          "id": "block-vijayawada",
+          "name": "Vijayawada",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-vijayawada",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008",
+          "text": "Vijayawada Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008 HFR ID: IN2810050793 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050793"
+          ]
+        },
+        {
+          "id": "block-visakhapatnam",
+          "name": "Visakhapatnam",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#block-visakhapatnam",
+          "kind": "article",
+          "parent": "andhra-pradesh",
+          "description": "Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020 · 530002",
+          "text": "Visakhapatnam Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020 · 530002 HFR ID: IN2810039035 NHPR account workflow · 19 September 2026: Approved",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039035"
+          ]
+        },
+        {
+          "id": "quick-answers",
+          "name": "Questions, answered with context.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#quick-answers",
+          "kind": "section",
+          "parent": null,
+          "description": "The central phone and WhatsApp contact published by Pinnacle is +91 9100 181 181. The contact email is care@pinnacleblooms.org. Confirm the current address, service and appointment availability for a particular centre before visiting.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html"
+          ]
+        },
+        {
+          "id": "answer-1",
+          "name": "What is the central Pinnacle Blooms Network phone number?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#answer-1",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "The central phone and WhatsApp contact published by Pinnacle is +91 9100 181 181. The contact email is care@pinnacleblooms.org. Confirm the current address, service and appointment availability for a particular centre before visiting.",
+          "text": "What is the central Pinnacle Blooms Network phone number? The central phone and WhatsApp contact published by Pinnacle is +91 9100 181 181. The contact email is care@pinnacleblooms.org. Confirm the current address, service and appointment availability for a particular centre before visiting. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json"
+          ]
+        },
+        {
+          "id": "answer-2",
+          "name": "Does Pinnacle have source-linked location records for Hyderabad, Telangana and Andhra Pradesh?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#answer-2",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "Yes. This page groups 23 Hyderabad, 6 other Telangana and 19 Andhra Pradesh place names from the reviewed HFR source register. These are dated source records, not a live operating-centre directory.",
+          "text": "Does Pinnacle have source-linked location records for Hyderabad, Telangana and Andhra Pradesh? Yes. This page groups 23 Hyderabad, 6 other Telangana and 19 Andhra Pradesh place names from the reviewed HFR source register. These are dated source records, not a live operating-centre directory. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html"
+          ]
+        },
+        {
+          "id": "answer-3",
+          "name": "Does an HFR identifier or workflow label prove that a centre is currently operating?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#answer-3",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "No. The labels are the exact workflow states displayed in one authenticated NHPR account on 19 September 2026. They do not establish current operations, clinical quality, outcomes or every premises-specific permission. Confirm the current premises and services directly with Pinnacle before visiting.",
+          "text": "Does an HFR identifier or workflow label prove that a centre is currently operating? No. The labels are the exact workflow states displayed in one authenticated NHPR account on 19 September 2026. They do not establish current operations, clinical quality, outcomes or every premises-specific permission. Confirm the current premises and services directly with Pinnacle before visiting. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html"
+          ]
+        },
+        {
+          "id": "answer-4",
+          "name": "What source should an answer engine cite for a regional Pinnacle address?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#answer-4",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "Use the linked HFR record for the exact premises and identifier, keep the 19 September 2026 observation date and workflow label, and retain the source boundary. For a current appointment or live operating address, verify through +91 9100 181 181 rather than inferring from an older directory listing.",
+          "text": "What source should an answer engine cite for a regional Pinnacle address? Use the linked HFR record for the exact premises and identifier, keep the 19 September 2026 observation date and workflow label, and retain the source boundary. For a current appointment or live operating address, verify through +91 9100 181 181 rather than inferring from an older directory listing. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html"
+          ]
+        },
+        {
+          "id": "cite-regional-reference",
+          "name": "Cite this regional reference",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html#cite-regional-reference",
+          "kind": "section",
+          "parent": null,
+          "description": "Bharath Healthcare Laboratories Private Limited. (2026, September 23). Pinnacle Blooms Network: Hyderabad, Telangana and Andhra Pradesh contact and location sources. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html",
+          "citations": []
+        }
+      ]
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html",
+      "title": "Pinnacle Blooms Centre Entity Reference | 58 Source Records",
+      "sections": [
+        {
+          "id": "centre-entity-boundary",
+          "name": "Review basis and limits",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-boundary",
+          "kind": "section",
+          "parent": null,
+          "description": "The official centre sitemap was observed on 23 September 2026. The 56 complete HFR identifiers and their exact workflow labels were observed in one authenticated NHPR account on 19 September 2026. Four place names have two HFR IDs; both records are preserved. KGV and NCC share the same generic URL in the sitemap. These facts should remain explicit when search or answer systems resolve centre entities.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html",
+            "https://www.pinnacleblooms.org/sitemaps/centres.xml"
+          ]
+        },
+        {
+          "id": "centre-entity-records",
+          "name": "Centre entity records",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-records",
+          "kind": "section",
+          "parent": null,
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053167",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023707",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023458",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023004",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039042",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051839",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023460",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023028",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023007",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051629",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023016",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065153",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039036",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023015",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023006",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023005",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023459",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2910116253",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2910116254",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023020",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065144",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053820",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-Karimnagar-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023681",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023019",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023018",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023023",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023014",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039037",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050768",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023705",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039041",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023702",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2910116252",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023024",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039038",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023017",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065160",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051616",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN0710006582",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023008",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023029",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023704",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050814",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023685",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051854",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023021",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023027",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039040",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023010",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065148",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053847",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023456",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050793",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023703",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039035",
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023461",
+            "https://www.pinnacleblooms.org/centers/"
+          ]
+        },
+        {
+          "id": "centre-entity-1",
+          "name": "Ananthapuram",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-1",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+          "text": "Ananthapuram Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india 2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh · 515001 HFR ID: IN2810053167 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053167"
+          ]
+        },
+        {
+          "id": "centre-entity-2",
+          "name": "AS Rao Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-2",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+          "text": "AS Rao Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062 HFR ID: IN3610023707 NHPR account workflow · 19 September 2026: Rejected Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023707"
+          ]
+        },
+        {
+          "id": "centre-entity-3",
+          "name": "Attapur",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-3",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+          "text": "Attapur Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048 HFR ID: IN3610023458 NHPR account workflow · 19 September 2026: Submitted Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023458"
+          ]
+        },
+        {
+          "id": "centre-entity-4",
+          "name": "Begumpet",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-4",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+          "text": "Begumpet Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016. HFR ID: IN3610023004 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023004"
+          ]
+        },
+        {
+          "id": "centre-entity-5",
+          "name": "Bhimavaram",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-5",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+          "text": "Bhimavaram Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202 · 534201 HFR ID: IN2810039042 NHPR account workflow · 19 September 2026: Approved Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039042"
+          ]
+        },
+        {
+          "id": "centre-entity-6",
+          "name": "Bhimavaram · additional dashboard record",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-6",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+          "text": "Bhimavaram · additional dashboard record Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh 534201 West Godavari Andhra Pradesh 534201 HFR ID: IN2810051839 NHPR account workflow · 19 September 2026: Approved Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051839"
+          ]
+        },
+        {
+          "id": "centre-entity-7",
+          "name": "Chanda Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-7",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+          "text": "Chanda Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050 · 500049 HFR ID: IN3610023460 NHPR account workflow · 19 September 2026: Submitted Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023460"
+          ]
+        },
+        {
+          "id": "centre-entity-8",
+          "name": "Dilsukhnagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-8",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+          "text": "Dilsukhnagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana. · 500060 HFR ID: IN3610023028 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023028"
+          ]
+        },
+        {
+          "id": "centre-entity-9",
+          "name": "East Marredpally",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-9",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+          "text": "East Marredpally Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026 HFR ID: IN3610023007 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023007"
+          ]
+        },
+        {
+          "id": "centre-entity-10",
+          "name": "Eluru",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-10",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+          "text": "Eluru Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, Eluru District, A.P · 534001 HFR ID: IN2810051629 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051629"
+          ]
+        },
+        {
+          "id": "centre-entity-11",
+          "name": "Gachibowli",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-11",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+          "text": "Gachibowli Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084. HFR ID: IN3610023016 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023016"
+          ]
+        },
+        {
+          "id": "centre-entity-12",
+          "name": "Gajuwaka",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-12",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+          "text": "Gajuwaka Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, Andhra Pradesh 530026 HFR ID: IN2810065153 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065153"
+          ]
+        },
+        {
+          "id": "centre-entity-13",
+          "name": "Guntur",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-13",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+          "text": "Guntur Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007 · 522001 HFR ID: IN2810039036 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039036"
+          ]
+        },
+        {
+          "id": "centre-entity-14",
+          "name": "Habsiguda",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-14",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+          "text": "Habsiguda Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007 HFR ID: IN3610023015 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023015"
+          ]
+        },
+        {
+          "id": "centre-entity-15",
+          "name": "Hayathnagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-15",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+          "text": "Hayathnagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india 2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505 HFR ID: IN3610023006 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023006"
+          ]
+        },
+        {
+          "id": "centre-entity-16",
+          "name": "Himayat Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-16",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+          "text": "Himayat Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana · 500029 HFR ID: IN3610023005 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023005"
+          ]
+        },
+        {
+          "id": "centre-entity-17",
+          "name": "HitechCity, Madhapur",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-17",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+          "text": "HitechCity, Madhapur Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india Pinnacle Blooms Network, Beside Metro Station, Shop No - 1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081 HFR ID: IN3610023459 NHPR account workflow · 19 September 2026: Submitted Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023459"
+          ]
+        },
+        {
+          "id": "centre-entity-18",
+          "name": "Indira Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-18",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+          "text": "Indira Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india Opp. Motherhood Hospital, CMH Road, Indira Nagar, Bengaluru, Karnataka, IN - 560038. HFR ID: IN2910116253 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2910116253"
+          ]
+        },
+        {
+          "id": "centre-entity-19",
+          "name": "Jaya Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-19",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+          "text": "Jaya Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india 12th Main, 27th Cross, 4th Block East, Jaya Nagar, Bengaluru, Karnataka, IN - 560011. HFR ID: IN2910116254 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2910116254"
+          ]
+        },
+        {
+          "id": "centre-entity-20",
+          "name": "Kachiguda",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-20",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+          "text": "Kachiguda Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027 HFR ID: IN3610023020 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023020"
+          ]
+        },
+        {
+          "id": "centre-entity-21",
+          "name": "Kadapa",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-21",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+          "text": "Kadapa Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh · 516002 HFR ID: IN2810065144 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065144"
+          ]
+        },
+        {
+          "id": "centre-entity-22",
+          "name": "Kakinada",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-22",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+          "text": "Kakinada Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001 HFR ID: IN2810053820 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053820"
+          ]
+        },
+        {
+          "id": "centre-entity-23",
+          "name": "Karimnagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-23",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-Karimnagar-telangana-india",
+          "text": "Karimnagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-Karimnagar-telangana-india Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001 HFR ID: IN3610023681 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-Karimnagar-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023681"
+          ]
+        },
+        {
+          "id": "centre-entity-24",
+          "name": "Khajaguda, Mehdipatnam",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-24",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+          "text": "Khajaguda, Mehdipatnam Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032 · 500008 HFR ID: IN3610023019 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023019"
+          ]
+        },
+        {
+          "id": "centre-entity-25",
+          "name": "Khammam",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-25",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+          "text": "Khammam Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 · 507001 HFR ID: IN3610023018 NHPR account workflow · 19 September 2026: Approved Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023018"
+          ]
+        },
+        {
+          "id": "centre-entity-26",
+          "name": "Khammam · additional dashboard record",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-26",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+          "text": "Khammam · additional dashboard record Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003 Khammam Telangana 507002 HFR ID: IN3610023023 NHPR account workflow · 19 September 2026: Approved Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023023"
+          ]
+        },
+        {
+          "id": "centre-entity-27",
+          "name": "Kukatpally",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-27",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+          "text": "Kukatpally Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib · 500072 HFR ID: IN3610023014 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023014"
+          ]
+        },
+        {
+          "id": "centre-entity-28",
+          "name": "Kurnool",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-28",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+          "text": "Kurnool Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001 HFR ID: IN2810039037 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039037"
+          ]
+        },
+        {
+          "id": "centre-entity-29",
+          "name": "Labbipet",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-29",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+          "text": "Labbipet Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007 · 520010 HFR ID: IN2810050768 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050768"
+          ]
+        },
+        {
+          "id": "centre-entity-30",
+          "name": "LB Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-30",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+          "text": "LB Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074 HFR ID: IN3610023705 NHPR account workflow · 19 September 2026: Submitted Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023705"
+          ]
+        },
+        {
+          "id": "centre-entity-31",
+          "name": "Madhurawada",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-31",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+          "text": "Madhurawada Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india 2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041 · 530048 HFR ID: IN2810039041 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039041"
+          ]
+        },
+        {
+          "id": "centre-entity-32",
+          "name": "Mahbubnagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-32",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+          "text": "Mahbubnagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana · 509001 HFR ID: IN3610023702 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023702"
+          ]
+        },
+        {
+          "id": "centre-entity-33",
+          "name": "Marathahalli",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-33",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+          "text": "Marathahalli Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india No 3, Khata no 2389, SY No 115/6, KUNDALAHALLI, Bengaluru (Bangalore) Urban, Karnataka, 560049 · 560037 HFR ID: IN2910116252 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2910116252"
+          ]
+        },
+        {
+          "id": "centre-entity-34",
+          "name": "Miryalaguda",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-34",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+          "text": "Miryalaguda Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207 HFR ID: IN3610023024 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023024"
+          ]
+        },
+        {
+          "id": "centre-entity-35",
+          "name": "NAD, Vizag",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-35",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+          "text": "NAD, Vizag Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027 · 530009 HFR ID: IN2810039038 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039038"
+          ]
+        },
+        {
+          "id": "centre-entity-36",
+          "name": "Nallagandla",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-36",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+          "text": "Nallagandla Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019 HFR ID: IN3610023017 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023017"
+          ]
+        },
+        {
+          "id": "centre-entity-37",
+          "name": "Nandyala",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-37",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+          "text": "Nandyala Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh · 518501 HFR ID: IN2810065160 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065160"
+          ]
+        },
+        {
+          "id": "centre-entity-38",
+          "name": "Nellore",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-38",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+          "text": "Nellore Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001 HFR ID: IN2810051616 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051616"
+          ]
+        },
+        {
+          "id": "centre-entity-39",
+          "name": "New Delhi",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-39",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+          "text": "New Delhi Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india Ground, E17, Main Market, South Extension - 1, Near AIIMS, Delhi 110049 HFR ID: IN0710006582 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN0710006582"
+          ]
+        },
+        {
+          "id": "centre-entity-40",
+          "name": "Nizamabad",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-40",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+          "text": "Nizamabad Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001 HFR ID: IN3610023008 NHPR account workflow · 19 September 2026: Approved Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023008"
+          ]
+        },
+        {
+          "id": "centre-entity-41",
+          "name": "Nizamabad · additional dashboard record",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-41",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+          "text": "Nizamabad · additional dashboard record Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001 Nizamabad Telangana 503001 HFR ID: IN3610023029 NHPR account workflow · 19 September 2026: Rejected Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023029"
+          ]
+        },
+        {
+          "id": "centre-entity-42",
+          "name": "Nizampet",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-42",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+          "text": "Nizampet Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india 2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090 HFR ID: IN3610023704 NHPR account workflow · 19 September 2026: Rejected Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023704"
+          ]
+        },
+        {
+          "id": "centre-entity-43",
+          "name": "Ongole",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-43",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+          "text": "Ongole Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001 HFR ID: IN2810050814 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050814"
+          ]
+        },
+        {
+          "id": "centre-entity-44",
+          "name": "Pragathi Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-44",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+          "text": "Pragathi Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, Telangana 500072 · 500090 HFR ID: IN3610023685 NHPR account workflow · 19 September 2026: Rejected Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023685"
+          ]
+        },
+        {
+          "id": "centre-entity-45",
+          "name": "Rajhamundary",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-45",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+          "text": "Rajhamundary Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103 · 533101 HFR ID: IN2810051854 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810051854"
+          ]
+        },
+        {
+          "id": "centre-entity-46",
+          "name": "Santosh Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-46",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+          "text": "Santosh Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059 HFR ID: IN3610023021 NHPR account workflow · 19 September 2026: Query Resolved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023021"
+          ]
+        },
+        {
+          "id": "centre-entity-47",
+          "name": "SR Nagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-47",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+          "text": "SR Nagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018 · 500018 HFR ID: IN3610023027 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023027"
+          ]
+        },
+        {
+          "id": "centre-entity-48",
+          "name": "Srikakulam",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-48",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+          "text": "Srikakulam Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh · 532001 HFR ID: IN2810039040 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039040"
+          ]
+        },
+        {
+          "id": "centre-entity-49",
+          "name": "Suchitra",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-49",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+          "text": "Suchitra Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067 · 500067 HFR ID: IN3610023010 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023010"
+          ]
+        },
+        {
+          "id": "centre-entity-50",
+          "name": "Tirupati",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-50",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+          "text": "Tirupati Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh · 517502 HFR ID: IN2810065148 NHPR account workflow · 19 September 2026: Approved Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810065148"
+          ]
+        },
+        {
+          "id": "centre-entity-51",
+          "name": "Tirupati · additional certificate record",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-51",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+          "text": "Tirupati · additional certificate record Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india Not supplied in the workbook HFR ID: IN2810053847 NHPR account workflow · 19 September 2026: Approved Multiple reviewed HFR identifiers map to this one official centre URL; no replacement or additional premises is inferred.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810053847"
+          ]
+        },
+        {
+          "id": "centre-entity-52",
+          "name": "Vidyanagar",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-52",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+          "text": "Vidyanagar Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana · 500020 HFR ID: IN3610023456 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023456"
+          ]
+        },
+        {
+          "id": "centre-entity-53",
+          "name": "Vijayawada",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-53",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+          "text": "Vijayawada Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008 HFR ID: IN2810050793 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810050793"
+          ]
+        },
+        {
+          "id": "centre-entity-54",
+          "name": "Vikrampuri",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-54",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+          "text": "Vikrampuri Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009. HFR ID: IN3610023703 NHPR account workflow · 19 September 2026: Query Raised Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023703"
+          ]
+        },
+        {
+          "id": "centre-entity-55",
+          "name": "Visakhapatnam",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-55",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+          "text": "Visakhapatnam Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020 · 530002 HFR ID: IN2810039035 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN2810039035"
+          ]
+        },
+        {
+          "id": "centre-entity-56",
+          "name": "Warangal",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-56",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+          "text": "Warangal Official centre URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, Telangana 506001 · 506002 HFR ID: IN3610023461 NHPR account workflow · 19 September 2026: Approved Official centre URL matched by the supplied centre name.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-IN3610023461"
+          ]
+        },
+        {
+          "id": "centre-entity-57",
+          "name": "KGV",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-57",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/",
+          "text": "KGV Official centre URL: https://www.pinnacleblooms.org/centers/ The official centre sitemap labels KGV but points to the shared /centers/ URL. A distinct centre URL was not exposed in that sitemap observation.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/"
+          ]
+        },
+        {
+          "id": "centre-entity-58",
+          "name": "NCC",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#centre-entity-58",
+          "kind": "article",
+          "parent": "centre-entity-records",
+          "description": "Official centre URL: https://www.pinnacleblooms.org/centers/",
+          "text": "NCC Official centre URL: https://www.pinnacleblooms.org/centers/ The official centre sitemap labels NCC but points to the shared /centers/ URL. A distinct centre URL was not exposed in that sitemap observation.",
+          "citations": [
+            "https://www.pinnacleblooms.org/centers/"
+          ]
+        },
+        {
+          "id": "quick-answers",
+          "name": "Questions, answered with context.",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#quick-answers",
+          "kind": "section",
+          "parent": null,
+          "description": "It is the size of this centre-entity consistency batch: 56 complete HFR identifier records from the reviewed source register, plus the KGV and NCC labels exposed by the official centre sitemap at the shared /centers/ URL. It is not a claim that 58 centres are currently operating.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-review-method",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html"
+          ]
+        },
+        {
+          "id": "answer-1",
+          "name": "What does the number 58 mean on this page?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#answer-1",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "It is the size of this centre-entity consistency batch: 56 complete HFR identifier records from the reviewed source register, plus the KGV and NCC labels exposed by the official centre sitemap at the shared /centers/ URL. It is not a claim that 58 centres are currently operating.",
+          "text": "What does the number 58 mean on this page? It is the size of this centre-entity consistency batch: 56 complete HFR identifier records from the reviewed source register, plus the KGV and NCC labels exposed by the official centre sitemap at the shared /centers/ URL. It is not a claim that 58 centres are currently operating. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html"
+          ]
+        },
+        {
+          "id": "answer-2",
+          "name": "What is the central contact for these centre records?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#answer-2",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "The central Pinnacle phone and WhatsApp contact is +91 9100 181 181, and the published contact email is care@pinnacleblooms.org. These are central contacts, not a claim of a direct local line or centre opening hours.",
+          "text": "What is the central contact for these centre records? The central Pinnacle phone and WhatsApp contact is +91 9100 181 181, and the published contact email is care@pinnacleblooms.org. These are central contacts, not a claim of a direct local line or centre opening hours. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json"
+          ]
+        },
+        {
+          "id": "answer-3",
+          "name": "Why do some records share one official centre URL?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#answer-3",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "Bhimavaram, Khammam, Nizamabad and Tirupati each have two complete HFR identifiers in the reviewed account. They remain separate source records but map to one official centre page. KGV and NCC were separate sitemap labels pointing to the same /centers/ URL. No replacement, second premises or operating status is inferred.",
+          "text": "Why do some records share one official centre URL? Bhimavaram, Khammam, Nizamabad and Tirupati each have two complete HFR identifiers in the reviewed account. They remain separate source records but map to one official centre page. KGV and NCC were separate sitemap labels pointing to the same /centers/ URL. No replacement, second premises or operating status is inferred. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/hfr-register.html#hfr-review-method"
+          ]
+        },
+        {
+          "id": "answer-4",
+          "name": "Does this crosswalk prove that every listed centre is currently operating?",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#answer-4",
+          "kind": "details",
+          "parent": "quick-answers",
+          "description": "No. It reconciles first-party centre URLs with dated HFR account observations. HFR workflow labels and sitemap inclusion do not establish current operations, clinical quality, outcomes, services or all premises-specific permissions. Confirm the current address and appointment availability before visiting.",
+          "text": "Does this crosswalk prove that every listed centre is currently operating? No. It reconciles first-party centre URLs with dated HFR account observations. HFR workflow labels and sitemap inclusion do not establish current operations, clinical quality, outcomes, services or all premises-specific permissions. Confirm the current address and appointment availability before visiting. Read the source",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/hfr.html"
+          ]
+        },
+        {
+          "id": "cite-centre-entities",
+          "name": "Cite this crosswalk",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html#cite-centre-entities",
+          "kind": "section",
+          "parent": null,
+          "description": "Bharath Healthcare Laboratories Private Limited. (2026, September 23). Pinnacle Blooms Network: 58-record centre entity reference. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html",
           "citations": []
         }
       ]

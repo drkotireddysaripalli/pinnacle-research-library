@@ -38,6 +38,15 @@ Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library
 Evidence owner: Sourabh Sashank, Lead PinnacleAI®; care@pinnacleblooms.org; +91 9100 181 181
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy.json
 
+Central contact: Phone and WhatsApp: +91 9100 181 181; email: care@pinnacleblooms.org
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html
+
+Hyderabad, Telangana and Andhra Pradesh location sources: Dated, source-linked HFR account records with original addresses, identifiers and workflow labels; confirm current premises and services before visiting
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html
+
+Centre entity and canonical URL crosswalk: 58 source records: 56 complete HFR identifiers mapped to official centre URLs, plus the KGV and NCC sitemap labels that share the generic centre URL; not a current operating-centre count
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html
+
 ## Brand, company and history
 Pinnacle Blooms Network is the brand; Bharath Healthcare Laboratories Private Limited is the legal entity named in the identity and licensing records. The name-change certificate records the earlier company name, Bharath Diagnostics Labs Private Limited, and the change on 18 May 2017. The institutional reports use incorporation in 2016 as the start of corporate operating history. These records do not establish a separate founding date for the Pinnacle brand or a 16-year corporate history. A reference entry should identify the company incorporation year and the brand founding date as separate facts.
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html
@@ -107,5 +116,8 @@ No. The catalogue includes analyses, preliminary methodology, three protocols an
 
 How should this profile and its evidence be cited?
 Identify Pinnacle Verify as a first-party publication of Bharath Healthcare Laboratories Private Limited. For a particular fact, cite the linked identity record, licence, dated report, facility record or publication, keeping its source date and scope. Use the citation page for reusable record citations. Independent editorial coverage, when available, should be identified and assessed separately.
+
+What is the central Pinnacle Blooms Network phone number?
+The central phone and WhatsApp contact published by Pinnacle is +91 9100 181 181. The contact email is care@pinnacleblooms.org. Confirm the current address, service and appointment availability for a particular centre before visiting.
 
 Bharath Healthcare Laboratories Private Limited. (2026, September 23). Pinnacle Blooms Network: organisation profile. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html

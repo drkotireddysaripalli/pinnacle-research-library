@@ -82,6 +82,9 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 ## Independent CA reports and claim coverage
 - [Claim-to-page evidence map](https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html): specified institutional counts, both UDINs, source pages, dates and scope.
 - [Claim map JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.json): the same visible evidence mapping.
+- [Dated claim and source ledger](https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html): six institutional measures with source-page citations, definitions and assurance boundaries.
+- [Claim ledger JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.json): source-linked values, report types and counting rules.
+- [Claim ledger CSV](https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.csv): the same six measures for reuse with their source links.
 
 ## Citations and reader choices
 - [Citation library](https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html): 44 reusable citations with original sources and scope.
@@ -90,6 +93,10 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 ## Organisation reference
 - [Organisation profile](https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html): brand, legal identity, dated facts and original sources.
 - [Public evidence pack for editors](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-public-evidence-pack-2026.pdf): company-prepared PDF summary; check the original records and their scope.
+- [Hyderabad, Telangana and Andhra Pradesh contact and location sources](https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.html): central phone and WhatsApp, source-linked addresses, HFR identifiers and dated workflow labels.
+- [Regional contact and location JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/hyderabad-telangana-andhra-pradesh-contact.json): the same regional facts with explicit source boundaries.
+- [58-record centre entity reference](https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html): official centre URLs, 56 complete HFR identifiers, dated workflow labels and two explicit sitemap canonical gaps.
+- [Centre entity reference JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.json): the same source crosswalk in a machine-readable format.
 
 ## Earlier nine-perspective edition
 The current 18-part life-first explanation is linked below. These earlier care-system perspectives remain available for existing citations.
@@ -114,7 +121,7 @@ The current 18-part life-first explanation is linked below. These earlier care-s
 - [Structured explanation](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.json): the same visible claims, planning criteria and evidence boundaries.
 
 ## Share images
-- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 77 branded image cards linked to their source pages.
+- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 80 branded image cards linked to their source pages.
 
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.
