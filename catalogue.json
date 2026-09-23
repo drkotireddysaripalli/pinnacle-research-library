@@ -1,13 +1,15 @@
 {
   "catalogue_title": "Pinnacle Research Library",
   "metadata_observed_date": "2026-09-15",
-  "canonical_record_policy": "The six exact Zenodo version DOIs identify the included source files. This repository is a distribution and reproducibility copy and creates no new DOI.",
+  "canonical_record_policy": "Seven exact Zenodo version DOIs identify the canonical works. Six have source files mirrored here; work 7 links to canonical files. This distribution repository creates no new DOI. The OSF retrospective companion is recorded separately.",
   "counts": {
-    "canonical_zenodo_works": 6,
+    "canonical_zenodo_works": 7,
     "academia_records": 18,
     "academia_canonical_mirrors": 6,
     "additional_academia_documents_link_only": 3,
-    "academia_listings_without_files": 9
+    "academia_listings_without_files": 9,
+    "preprints": 6,
+    "institutional_reports": 1
   },
   "status_note": "Deposit and bibliographic listing do not establish journal publication, peer review, clinical effectiveness, regulatory endorsement, patent grant or priority claims.",
   "canonical_works": [
@@ -123,6 +125,22 @@
           "title": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
           "url": "https://www.academia.edu/175563040/Geographic_Concentration_of_RCI_Listed_Rehabilitation_Training_Institutions_in_India_A_Reproducible_National_Register_Analysis"
         }
+      ],
+      "reusable_figures": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:RCI-institution-counts-India-2026.svg",
+          "title": "Institution-code counts",
+          "author": "Koti Reddy Saripalli",
+          "license": "CC BY 4.0",
+          "modification": "Original SVG unchanged"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/File:RCI-institution-concentration-Lorenz-2026.svg",
+          "title": "Institution-code concentration Lorenz curve",
+          "author": "Koti Reddy Saripalli",
+          "license": "CC BY 4.0",
+          "modification": "Original SVG unchanged"
+        }
       ]
     },
     {
@@ -237,7 +255,7 @@
       "doi": "10.5281/zenodo.19482123",
       "concept_doi": "10.5281/zenodo.19482122",
       "url": "https://zenodo.org/records/19482123",
-      "version_displayed": "v1",
+      "version_displayed": null,
       "publication_date_displayed": "2026-04-09",
       "resource_type_displayed": "Preprint",
       "peer_review_status": "Preprint; no completed journal peer review is asserted.",
@@ -271,14 +289,20 @@
           "url": "https://www.academia.edu/165582431/AbilityScore_Development_and_Preliminary_Psychometric_Characterization_of_a_Standardized_Composite_Index_for_Quantifying_Child_Developmental_Readiness"
         }
       ],
-      "version_note": "Zenodo displays Version v1. A reference on the companion protocol calls the monograph Technical Monograph v3.0. These describe different version fields; do not silently replace the repository version with the manuscript label.",
+      "version_note": "The 22 September Zenodo metadata snapshot has no explicit version value. The original PDF cover identifies Technical Monograph v3.0. PDF and repository metadata provenance are kept separate.",
       "metadata_correction": {
         "date": "2026-09-15",
         "field": "resource_type",
         "before": "Peer review",
         "after": "Preprint",
         "source_files_changed": false
-      }
+      },
+      "prior_version_observation": {
+        "date": "2026-09-15",
+        "value": "v1",
+        "note": "Retained as historical observation; superseded by the 22 September metadata reconciliation."
+      },
+      "manuscript_version": "3.0"
     },
     {
       "record_id": "15487405",
@@ -326,6 +350,62 @@
           "url": "https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework"
         }
       ]
+    },
+    {
+      "record_id": "22827813",
+      "title": "Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability",
+      "doi": "10.5281/zenodo.22827813",
+      "concept_doi": "10.5281/zenodo.22827812",
+      "version_displayed": "1.0",
+      "publication_date_displayed": "2026-09-18",
+      "resource_type_displayed": "Preprint",
+      "peer_review_status": "Systematic-review protocol preprint; no completed review results or journal peer review established.",
+      "authors_displayed": [
+        "Saripalli, Koti Reddy",
+        "Ramtenki, Raghupathi",
+        "Boini, Srikanth Yadav"
+      ],
+      "creator_orcids": [
+        "0009-0007-7866-0737",
+        "0000-0002-3357-2326"
+      ],
+      "contributors_displayed": [],
+      "publisher_displayed": "Zenodo",
+      "license_displayed": "Creative Commons Attribution 4.0 International",
+      "metadata_observed_date": "2026-09-22",
+      "description": "Unregistered systematic-review protocol for child- and caregiver-anchored important-change estimates in childhood participation.",
+      "files": [
+        {
+          "repository_path": null,
+          "public_source_url": "https://zenodo.org/api/records/22827813/files/P15_Publication_v1_2026-09-18.zip/content",
+          "public_source_filename": "P15_Publication_v1_2026-09-18.zip",
+          "bytes": 2421269,
+          "distribution": "Canonical source link only"
+        },
+        {
+          "repository_path": null,
+          "public_source_url": "https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.docx/content",
+          "public_source_filename": "P15_v1_Reader_Edition.docx",
+          "bytes": 432737,
+          "distribution": "Canonical source link only"
+        },
+        {
+          "repository_path": null,
+          "public_source_url": "https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.pdf/content",
+          "public_source_filename": "P15_v1_Reader_Edition.pdf",
+          "bytes": 470574,
+          "distribution": "Canonical source link only"
+        },
+        {
+          "repository_path": null,
+          "public_source_url": "https://zenodo.org/api/records/22827813/files/P15_v1_Supplementary_Methods.pdf/content",
+          "public_source_filename": "P15_v1_Supplementary_Methods.pdf",
+          "bytes": 245168,
+          "distribution": "Canonical source link only"
+        }
+      ],
+      "academia_mirrors": [],
+      "url": "https://zenodo.org/records/22827813"
     }
   ],
   "academia_records": [
@@ -630,6 +710,17 @@
       "url": "https://www.webofscience.com/wos/author/record/RBA-8832-2026",
       "as_of": "2026-09-15",
       "status": "Public profile verified with five non-indexed bibliography entries. This is not a claim of Web of Science indexing or completed journal peer review."
+    }
+  ],
+  "portfolio_reconciled_date": "2026-09-23",
+  "related_registrations": [
+    {
+      "doi": "10.17605/OSF.IO/78WF5",
+      "url": "https://osf.io/78wf5/",
+      "related_work": "19482476",
+      "status": "Public approved retrospective registration; archiving complete",
+      "verified_date": "2026-09-23",
+      "note": "Some planned analyses had already run; not prospective preregistration, an eighth study or completed validation results."
     }
   ]
 }

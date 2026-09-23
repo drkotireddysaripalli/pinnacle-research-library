@@ -1,8 +1,8 @@
 # Pinnacle Research Library
 
-Research manuscripts, public supplements and a reproducible analysis of the geography of RCI-listed rehabilitation training institutions in India. The library brings together six canonical Zenodo works and a linked bibliography of existing Academia.edu records.
+Research manuscripts, public supplements and a reproducible analysis of the geography of RCI-listed rehabilitation training institutions in India. The library brings together seven canonical Zenodo works and a linked bibliography of existing Academia.edu records.
 
-**Research briefing:** [A plain-language guide to the six works and what the evidence establishes](Pinnacle_Public_Research_Briefing.md). This is a public-facing briefing, not a seventh research paper.
+**Research briefing:** [A source-linked reader guide to seven works, reusable figures and study status](Pinnacle_Public_Research_Briefing.md). This is a public-facing briefing, not an eighth research paper.
 
 **Start with the reproducible register study:** [read the paper](02_RCI_Institution_Geography.pdf), [inspect the institution data](workforce_institutions_audited.csv), and [follow the reproduction guide](RCI_DATA_README.md).
 
@@ -17,9 +17,9 @@ The public [Pinnacle Verification Centre](https://www.pinnacleblooms.org/verify/
 
 These pages distinguish company records, regulator-issued documents, independent professional reports and research publications. Publication in this repository or the Verification Centre does not by itself establish independent endorsement.
 
-## Six canonical works
+## Seven canonical works
 
-Five canonical works are preprints; PGAF is a report. Completed journal peer review is not established for these repository versions. Each work below links to its canonical Zenodo version and available files.
+Six canonical works are preprints; PGAF is a report. Completed journal peer review is not established for these repository versions. Each work below links to its canonical Zenodo version and available files.
 
 ### 1. Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance
 
@@ -57,7 +57,7 @@ Psychometric validation study protocol. Source version: 2.1; 2026-04-09.
 
 ### 5. AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness
 
-Development and preliminary psychometric characterization monograph. Source version: v1; 2026-04-09.
+Development and preliminary psychometric characterization monograph. PDF cover: Technical Monograph v3.0; repository metadata has no explicit version field in the 22 September snapshot. Deposited 2026-04-09.
 
 **Authors:** Saripalli, Koti Reddy; Ramtenki, Raghupathi; Boini, Srikanth Yadav.
 
@@ -72,6 +72,20 @@ Framework report. Source version: v1.0; 2025-05-22.
 **Additional source credits:** Saripalli, Sreeja Reddy (Editor); Koti Group SEVA Foundation (Research group).
 
 [DOI](https://doi.org/10.5281/zenodo.15487405) · [Zenodo record](https://zenodo.org/records/15487405) · [PDF](06_PGAF_Report.pdf) · [Academia mirror](https://www.academia.edu/129496991/Pinnacle_Global_Research_Whitebook_The_World_s_First_Fully_Validated_Multi_Domain_Parent_First_Child_Development_Framework)
+
+### 7. Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability
+
+Systematic-review protocol preprint, version 1.0; 2026-09-18. No completed review findings.
+
+**Authors:** Saripalli, Koti Reddy; Ramtenki, Raghupathi; Boini, Srikanth Yadav.
+
+[DOI](https://doi.org/10.5281/zenodo.22827813) · [Zenodo record](https://zenodo.org/records/22827813) · [Reader PDF](https://zenodo.org/api/records/22827813/files/P15_v1_Reader_Edition.pdf/content) · [Supplementary methods](https://zenodo.org/api/records/22827813/files/P15_v1_Supplementary_Methods.pdf/content). These files are linked at the canonical repository.
+
+## Registration and reuse resources
+
+The [public PINNACLE-VAL registration](https://doi.org/10.17605/OSF.IO/78WF5) is explicitly retrospective: some planned analyses had already run. It is a companion to work 4, not an eighth independent study or a validation-results paper.
+
+The [reader guide's reusable-figures section](Pinnacle_Public_Research_Briefing.md#reusable-rci-research-figures) provides both Commons SVGs, Koti Reddy Saripalli attribution, CC BY 4.0 terms and the register-count limitations.
 
 ## Reproduce the RCI register analysis
 
@@ -134,8 +148,8 @@ As of 15 September 2026, ScienceOpen has received requests for the five current 
 ## Citation, rights and file integrity
 
 - Cite each work using its **original Zenodo DOI**.
-- [catalogue.json](catalogue.json) records all six canonical works and all 18 Academia records, including the six corresponding mirrors.
-- [Pinnacle_Research_Library.bib](Pinnacle_Research_Library.bib) contains the six canonical citations and twelve additional Academia bibliography entries.
+- [catalogue.json](catalogue.json) records all seven canonical works and all 18 Academia records, including the six corresponding mirrors.
+- [Pinnacle_Research_Library.bib](Pinnacle_Research_Library.bib) contains the seven canonical citations and twelve additional Academia bibliography entries.
 - All six Zenodo records declare **Creative Commons Attribution 4.0 International**. Preserve author and contributor attribution. See [RIGHTS_AND_SOURCES.md](RIGHTS_AND_SOURCES.md) for source, code and third-party rights.
 - The six PDFs, three DOCX files, three supplement archives and readable RCI files retain their original content. Three older PDFs use shorter descriptive filenames; the exact public filenames and URLs remain in the catalogue and manifest.
 - [package_manifest.json](package_manifest.json) and [SHA256SUMS.txt](SHA256SUMS.txt) identify file sizes, checksums and provenance.

@@ -1,8 +1,8 @@
 # Rights and sources
 
-## Six canonical Zenodo deposits
+## Seven canonical Zenodo deposits
 
-All six source records listed in [catalogue.json](catalogue.json) display **Creative Commons Attribution 4.0 International (CC BY 4.0)**. This library redistributes those recorded public source versions under their declared terms. The canonical record links, version DOIs, creators, source filenames and checksums are preserved. The CC BY 4.0 terms are available at <https://creativecommons.org/licenses/by/4.0/>.
+All seven source records listed in [catalogue.json](catalogue.json) display **Creative Commons Attribution 4.0 International (CC BY 4.0)**. This library redistributes the first six recorded public source versions under their declared terms; the seventh work links to files at its canonical source. The canonical record links, version DOIs, creators, source filenames and checksums are preserved. The CC BY 4.0 terms are available at <https://creativecommons.org/licenses/by/4.0/>.
 
 The two April 2026 AbilityScore works credit **Koti Reddy Saripalli, Raghupathi Ramtenki and Srikanth Yadav Boini** in their canonical records. Their authorship is not reduced to the owner of this repository. The PGAF source credits **Sreeja Reddy Saripalli** as editor and **Koti Group SEVA Foundation** as research group, in addition to its author. Full source attribution remains in the original files and catalogue.
 
@@ -19,6 +19,10 @@ The official RCI source is **List of Approved Institutions upto 04-02-2026**, a 
 ## Academia-only bibliography
 
 The three additional Academia documents are linked only because no record-level reuse licence was verified. The nine file-unavailable entries are titles and record links only. No Academia-only attachments, education records, CVs, account information or private originals are included. Source titles with medical, validation, patent or priority wording are bibliographic metadata, not independently verified assertions by the library.
+
+## Research briefing and figure reuse
+
+The public research briefing was updated on 23 September 2026 from the source-verified portfolio guide. It links the two original CC BY 4.0 RCI figures on Wikimedia Commons with Koti Reddy Saripalli attribution, canonical DOI and reuse limitations. No original manuscript, supplement, dataset or reproduction script was changed in this update.
 
 ## Scope of this rights statement
 

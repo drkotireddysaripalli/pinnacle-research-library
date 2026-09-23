@@ -8,10 +8,11 @@
     "10.5281/zenodo.22761832",
     "10.5281/zenodo.19482476",
     "10.5281/zenodo.19482123",
-    "10.5281/zenodo.15487405"
+    "10.5281/zenodo.15487405",
+    "10.5281/zenodo.22827813"
   ],
   "file_count_excluding_manifest_and_checksums": 29,
-  "checksum_scope": "This manifest lists all substantive files. SHA256SUMS.txt also hashes this manifest; it excludes itself to avoid a circular checksum.",
+  "checksum_scope": "Repository-root distribution files only; verify-site has its separate deployment inventory. SHA256SUMS.txt includes this manifest and excludes itself.",
   "files": [
     {
       "path": "01_Developmental_Software_Regulatory_Case_Supplementary_Figures.zip",
@@ -150,17 +151,17 @@
     },
     {
       "path": "Pinnacle_Public_Research_Briefing.md",
-      "bytes": 7407,
-      "sha256": "df570617e585d2cfe3ab4fa84f1d34fc36c0d1e41f5e8da9d43853edc0c38922",
+      "bytes": 24703,
+      "sha256": "2eabadb9638c59cf39b873bcb69bc0ce0cea05e9cea615fa8f2b0a25cc61b1c5",
       "kind": "Public-facing research briefing; not an additional canonical research paper",
       "source": "Canonical manuscripts and verified repository metadata observed 15 September 2026",
       "content_modification": "Exact copy of the finalized public research briefing; no manuscript or data changes."
     },
     {
       "path": "Pinnacle_Research_Library.bib",
-      "bytes": 10133,
-      "sha256": "a3df54a013c5907b07ea7e06d2fc848e17095cc6ad533ba8e1d8335f8483ea8e",
-      "kind": "BibTeX bibliography: six canonical works plus twelve additional Academia listings",
+      "bytes": 10863,
+      "sha256": "36f89815c431e90acfe7e11d4de1745c8482f6510872c3ea1bad3401b5e47ea5",
+      "kind": "BibTeX bibliography: seven canonical works plus twelve additional Academia listings",
       "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
       "license_note": "See RIGHTS_AND_SOURCES.md"
     },
@@ -177,24 +178,24 @@
     },
     {
       "path": "README.md",
-      "bytes": 12240,
-      "sha256": "70d568cd4191e243fdb0fe326277ddb95d9e102e0539f39ec436593003878bfa",
+      "bytes": 14740,
+      "sha256": "ff2812900da5fedb50588c14f0dfd22a14bd82dd9456c923fb14f9199efa3444",
       "kind": "Repository introduction and public catalogue",
       "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
       "license_note": "See RIGHTS_AND_SOURCES.md"
     },
     {
       "path": "RIGHTS_AND_SOURCES.md",
-      "bytes": 3463,
-      "sha256": "5b7d6aadd7818be11e08e3ac2dec4c05e7975fa665602dbd4d8c432aab07e370",
+      "bytes": 3916,
+      "sha256": "f21b651d00f4474a95a043d4c82007383cbe9b5cd8017422ba18ef88dc628870",
       "kind": "Source attribution and licence scope",
       "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
       "license_note": "See RIGHTS_AND_SOURCES.md"
     },
     {
       "path": "catalogue.json",
-      "bytes": 35976,
-      "sha256": "a95ae2c0c6b51e0da66840ffe15a879c76c94f015748fad98a3c5af626c9e472",
+      "bytes": 39981,
+      "sha256": "9306f726fe7903d7cf1003428f83d2676c57304dce03c587d8917b58b1841f62",
       "kind": "Structured public bibliography",
       "source": "Bibliographic catalogue compiled from public repository metadata observed 2026-09-15",
       "license_note": "See RIGHTS_AND_SOURCES.md"
@@ -320,5 +321,9 @@
       "declared_license": "Zenodo record declares CC-BY-4.0; third-party source rights are retained. See RIGHTS_AND_SOURCES.md",
       "content_modification": "None; README renamed to RCI_DATA_README.md for a flat repository."
     }
+  ],
+  "metadata_updated": "2026-09-23",
+  "related_registration_dois": [
+    "10.17605/OSF.IO/78WF5"
   ]
 }
