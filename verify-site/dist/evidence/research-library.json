@@ -72,6 +72,18 @@
       "publicationStatus": "Reproducible register analysis — preprint",
       "scopeNote": "Analysis of 1,068 RCI-listed institutional entries; not current training capacity or clinician counts. Repository describes it as not peer reviewed.",
       "license": "cc-by-4.0",
+      "sourceFigures": [
+        {
+          "title": "Figure 1 — RCI-listed institution codes by state or union territory",
+          "url": "https://commons.wikimedia.org/wiki/File:RCI-institution-counts-India-2026.svg",
+          "description": "Distinct institution codes in the 4 February 2026 RCI register snapshot across 36 states and union territories."
+        },
+        {
+          "title": "Figure 2 — concentration across 36 jurisdictions",
+          "url": "https://commons.wikimedia.org/wiki/File:RCI-institution-concentration-Lorenz-2026.svg",
+          "description": "Lorenz curve of institution-code counts. Its diagonal denotes equal counts per jurisdiction, not equal access per person."
+        }
+      ],
       "academiaMirrors": [
         {
           "record_id": "175563040",

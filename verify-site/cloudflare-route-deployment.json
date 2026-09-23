@@ -1,9 +1,9 @@
 {
   "worker": "pinnacle-verify-route",
   "account_id": "862998def1cd610fdb86b8e5c1d6ed4d",
-  "version": "767aae29-7159-42e1-8e59-0e04fef3f56d",
-  "deployment": "2a799b46-22ac-4bdf-9b75-06b45372e072",
-  "createdAt": "2026-09-23T02:03:56.345315Z",
+  "version": "ffc03264-d293-4d0a-bb14-77cb6c3554d0",
+  "deployment": "fe55cd26-6265-467d-be7b-9769c57a9780",
+  "createdAt": "2026-09-23T03:03:10.320335Z",
   "compatibility_date": "2026-09-18",
   "usage_model": "standard",
   "assets": {
@@ -29,7 +29,7 @@
       "type": "secret_text"
     }
   ],
-  "sourceSha256": "6ff4d2eef23f9125f042f92ee14948db7ead74b9b04803b94c8840d9eb6e5119",
+  "sourceSha256": "b2b6f2314175910f1a2de08cdd3898d27349a1cfbc395d65f9f41eb9ab9f9218",
   "notes": [
     "Always run the routing Worker before static assets. Default asset-first routing incorrectly serves the Verify index at the main homepage and Verify-local robots at the domain robots URL.",
     "Keep assets and all three bindings on subsequent deployments. Secret values are intentionally absent from this manifest.",
@@ -37,6 +37,7 @@
     "Production homepage, robots, helpline, Verify, DPIIT and Ask checks all passed.",
     "Version54 also fixes HEAD requests with Content-Length:0 by constructing a fresh upstream GET and removing request body framing headers. PowerShell GET/HEAD and curl HEAD with Content-Length:0 passed; all six live page regressions passed.",
     "Version55 publishes Verify release35fd4e391ec9ec9c with the coordinated research identity crosslinks and corrected canonical URLs for two book citation exports. The Worker-first asset configuration and all three bindings were preserved.",
-    "Version56 publishes Verify release783c950257d81c99 with the verified Wikidata organisation identity and idempotent analytics status markup. Nine production checks passed; Worker-first asset routing and all three bindings retained."
+    "Version56 publishes Verify release783c950257d81c99 with the verified Wikidata organisation identity and idempotent analytics status markup. Nine production checks passed; Worker-first asset routing and all three bindings retained.",
+    "Version57 publishes Verify releaseeed16d0946dd4ae3 with the two original RCI research figure links, attribution and register-count limits. Worker-first routing and all three bindings were verified before activation."
   ]
 }

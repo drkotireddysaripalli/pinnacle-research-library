@@ -10093,6 +10093,20 @@
           ]
         },
         {
+          "id": "research-figures",
+          "name": "Original research figures",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/zenodo-22761810.html#research-figures",
+          "kind": "section",
+          "parent": null,
+          "description": "Figures by Koti Reddy Saripalli from the version 2.0 preprint, DOI 10.5281/zenodo.22761810 (not peer reviewed). These original SVG copies are hosted on Wikimedia Commons under CC BY 4.0 . The analysis used the 4 February 2026 RCI register snapshot: 1,068 distinct institution codes across 36 states and union territories. These are register counts, not current training seats, active professionals, programme approvals, workforce shortage or access per person.",
+          "citations": [
+            "https://doi.org/10.5281/zenodo.22761810",
+            "https://creativecommons.org/licenses/by/4.0/",
+            "https://commons.wikimedia.org/wiki/File:RCI-institution-counts-India-2026.svg",
+            "https://commons.wikimedia.org/wiki/File:RCI-institution-concentration-Lorenz-2026.svg"
+          ]
+        },
+        {
           "id": "cite-zenodo-22761810",
           "name": "Cite this publication",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/zenodo-22761810.html#cite-zenodo-22761810",
