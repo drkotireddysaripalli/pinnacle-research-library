@@ -1,0 +1,101 @@
+{
+  "portfolio": "Pinnacle seven-work public research library",
+  "canonical_work_count": 7,
+  "generated_from": [
+    "CANONICAL_CITATIONS_CSL.json",
+    "CANONICAL_WORK_RELATIONSHIP_MAP.csv"
+  ],
+  "nodes": [
+    {
+      "id": "https://doi.org/10.5281/zenodo.19482123",
+      "title": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
+      "record_type": "preprint",
+      "evidence_stage": "preliminary_operational_evidence",
+      "canonical": true
+    },
+    {
+      "id": "https://doi.org/10.5281/zenodo.19482476",
+      "title": "Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol",
+      "record_type": "preprint",
+      "evidence_stage": "protocol_planned_no_results",
+      "canonical": true
+    },
+    {
+      "id": "https://doi.org/10.5281/zenodo.22761782",
+      "title": "Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance",
+      "record_type": "preprint",
+      "evidence_stage": "documentary_case_analysis",
+      "canonical": true
+    },
+    {
+      "id": "https://doi.org/10.5281/zenodo.22761810",
+      "title": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+      "record_type": "preprint",
+      "evidence_stage": "administrative_register_analysis",
+      "canonical": true
+    },
+    {
+      "id": "https://doi.org/10.5281/zenodo.22761832",
+      "title": "Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study",
+      "record_type": "preprint",
+      "evidence_stage": "protocol_planned_no_results",
+      "canonical": true
+    },
+    {
+      "id": "https://doi.org/10.5281/zenodo.22827813",
+      "title": "Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability",
+      "record_type": "preprint",
+      "evidence_stage": "systematic_review_protocol_unregistered_no_results",
+      "canonical": true
+    },
+    {
+      "id": "https://doi.org/10.5281/zenodo.15487405",
+      "title": "Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System",
+      "record_type": "report",
+      "evidence_stage": "framework_report_source_claims",
+      "canonical": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "https://doi.org/10.5281/zenodo.19482476",
+      "target": "https://doi.org/10.5281/zenodo.19482123",
+      "relation_type": "is_supplement_to",
+      "counting_rule": "Two canonical works with different evidence roles",
+      "verification_status": "verified",
+      "notes": "Protocol is planned validation; monograph is preliminary operational evidence"
+    },
+    {
+      "source": "https://doi.org/10.5281/zenodo.22761832",
+      "target": "https://doi.org/10.5281/zenodo.19482123",
+      "relation_type": "cites",
+      "counting_rule": "Citation does not merge the works",
+      "verification_status": "verified",
+      "notes": "TRAJ is a no-results retrospective cohort protocol"
+    },
+    {
+      "source": "https://doi.org/10.5281/zenodo.22761832",
+      "target": "https://doi.org/10.5281/zenodo.19482476",
+      "relation_type": "cites",
+      "counting_rule": "Citation does not merge the works",
+      "verification_status": "verified",
+      "notes": "Both remain protocols with separate questions"
+    },
+    {
+      "source": "https://doi.org/10.5281/zenodo.22761810",
+      "target": "https://doi.org/10.21203/rs.3.rs-11043330/v1",
+      "relation_type": "alternative_version_of_same_study",
+      "counting_rule": "Count as one canonical study across two repository versions",
+      "verification_status": "verified",
+      "notes": "Platform version labels are retained"
+    },
+    {
+      "source": "https://doi.org/10.17605/OSF.IO/78WF5",
+      "target": "https://doi.org/10.5281/zenodo.19482476",
+      "relation_type": "retrospective_registration_companion_to",
+      "counting_rule": "Registration is not an eighth study or a results paper",
+      "verification_status": "verified",
+      "notes": "Some planned analyses had already run"
+    }
+  ]
+}

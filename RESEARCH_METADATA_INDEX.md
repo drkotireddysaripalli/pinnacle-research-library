@@ -28,6 +28,13 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 - [Researcher-summary link manifest](RESEARCHER_SUMMARY_LINK_MANIFEST.csv) — reconciles every summary route with its canonical DOI and evidence stage.
 - [Researcher-summary reuse guide](RESEARCHER_SUMMARY_REUSE_GUIDE.md) — safe adaptation sequence and required portfolio boundaries.
 
+## Profile and relationship interoperability
+
+- [ORCID-compatible BibTeX import aid](ORCID_WORK_IMPORT.bib) — seven exact-title DOI records for checked import into profiles and citation tools.
+- [Portfolio relationship graph](PORTFOLIO_RELATIONSHIP_GRAPH.json) — machine-readable canonical nodes and verified version, citation and registration edges.
+- [Scholarly-profile field map](SCHOLARLY_PROFILE_FIELD_MAP.csv) — exact type, date, DOI, short description and required qualifier for every work.
+- [Research-audience map](RESEARCH_AUDIENCE_MAP.csv) — work-specific research audiences, relevance and interpretation boundary.
+- [Scholarly-profile reconciliation guide](SCHOLARLY_PROFILE_RECONCILIATION_GUIDE.md) — identity, version, role, evidence-state and verification sequence.
 ## RCI register analysis
 
 - [Reproduction checklist](RCI_REPRODUCTION_CHECKLIST.md) — source checksum, environment, validation and interpretation checks.
