@@ -29,6 +29,11 @@ const profile = {
       sourceHref: '/evidence/records/lei.html'
     },
     {
+      label: 'Public entity graph',
+      value: 'Wikidata Q141494911; community-maintained entity record checked on 22 September 2026',
+      sourceHref: 'https://www.wikidata.org/wiki/Q141494911'
+    },
+    {
       label: 'Documented corporate history',
       value: 'Incorporated in 2016; changed name from Bharath Diagnostics Labs Private Limited on 18 May 2017',
       sourceHref: '/evidence/assurance-map.html#claim-operating-years'
@@ -161,7 +166,8 @@ const profile = {
     }
   ],
   sameAs: [
-    'https://search.gleif.org/#/record/894500OJYBVC18BUDN89'
+    'https://search.gleif.org/#/record/894500OJYBVC18BUDN89',
+    'https://www.wikidata.org/wiki/Q141494911'
   ]
 };
 

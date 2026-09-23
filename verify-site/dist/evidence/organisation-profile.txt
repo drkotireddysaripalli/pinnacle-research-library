@@ -14,6 +14,9 @@ Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/mca.html
 Legal Entity Identifier: LEI 894500OJYBVC18BUDN89; official GLEIF record matched on 15 September 2026
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html
 
+Public entity graph: Wikidata Q141494911; community-maintained entity record checked on 22 September 2026
+Source: https://pinnacle-verify.saripalli.chatgpt.sitehttps://www.wikidata.org/wiki/Q141494911
+
 Documented corporate history: Incorporated in 2016; changed name from Bharath Diagnostics Labs Private Limited on 18 May 2017
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-operating-years
 

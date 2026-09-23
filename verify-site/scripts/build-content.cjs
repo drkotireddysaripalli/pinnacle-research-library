@@ -292,7 +292,7 @@ for(const p of urls){
  const file=p==='/'?'index.html':p.slice(1),url=absolute(p);
  let html=read(file).replace(/<p class="entity-line wrap">[\s\S]*?<\/p>/g,'').replace(/<!-- share:start -->[\s\S]*?<!-- share:end -->/g,'').replace(/<svg class="share-symbols"[\s\S]*?<\/svg>/g,'').replace(/<p class="share-status"[\s\S]*?<\/dialog>/g,'');
  // Legacy registers are rebuilt from their checked-in HTML; replace common chrome cleanly.
- html=html.replace(/<div class="reader-utility\b[^>]*>[\s\S]*?<\/details><\/div>/g,'').replace(/<aside class="analytics-choice"[\s\S]*?<\/aside>/g,'').replace(/<div class="privacy-links">[\s\S]*?<\/div>/g,'');
+ html=html.replace(/<div class="reader-utility\b[^>]*>[\s\S]*?<\/details><\/div>/g,'').replace(/<aside class="analytics-choice"[\s\S]*?<\/aside>/g,'').replace(/<p class="analytics-choice-status visually-hidden" role="status"><\/p>/g,'').replace(/<div class="privacy-links">[\s\S]*?<\/div>/g,'');
  html=html.replace(/<footer\b[^>]*>[\s\S]*?<\/footer>/,footer);
  if(p!=='/')html=html.replace('</main>','<p class="entity-line wrap">Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. <a href="/evidence/records/lei.html">View legal identity evidence</a>.</p></main>');
  html=html.replace('</header>','</header>'+presentation.utility(url)).replace('</footer>','<div class="privacy-links">'+presentation.settings+'</div></footer>').replace('</body>',presentation.consent+'</body>').replace('</head>','<meta name="ahrefs-site-verification" content="'+integrations.ahrefsVerification+'"><meta name="pinnacle-analytics-id" content="'+integrations.measurementId+'"><script defer src="/reader-extras.js"></script></head>');
