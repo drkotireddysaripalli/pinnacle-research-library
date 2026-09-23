@@ -1,0 +1,155 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.19482123",
+      "name": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Koti Reddy Saripalli"
+        },
+        {
+          "@type": "Person",
+          "name": "Raghupathi Ramtenki"
+        },
+        {
+          "@type": "Person",
+          "name": "Srikanth Yadav Boini"
+        }
+      ],
+      "datePublished": "2026-04-09",
+      "identifier": "10.5281/zenodo.19482123",
+      "url": "https://doi.org/10.5281/zenodo.19482123",
+      "description": "How AbilityScore was developed and preliminarily characterized in routine care",
+      "additionalType": "preprint",
+      "abstract": "Preliminary development and operational psychometric description Interpretation limit: No completed formal comparator or concurrent-validity result is published",
+      "subjectOf": "https://github.com/drkotireddysaripalli/pinnacle-research-library/blob/main/WORK_SUMMARY_ABILITYSCORE.md"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.19482476",
+      "name": "Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Koti Reddy Saripalli"
+        },
+        {
+          "@type": "Person",
+          "name": "Raghupathi Ramtenki"
+        },
+        {
+          "@type": "Person",
+          "name": "Srikanth Yadav Boini"
+        }
+      ],
+      "datePublished": "2026-04-09",
+      "identifier": "10.5281/zenodo.19482476",
+      "url": "https://doi.org/10.5281/zenodo.19482476",
+      "description": "How concurrent validity, test-retest reliability and preliminary meaningful change are planned for study",
+      "additionalType": "preprint",
+      "abstract": "A public analysis plan and planned target samples Interpretation limit: n=300/60 are targets rather than achieved samples; registration companion is retrospective",
+      "subjectOf": "https://github.com/drkotireddysaripalli/pinnacle-research-library/blob/main/WORK_SUMMARY_PINNACLE_VAL.md"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.22761782",
+      "name": "Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Koti Reddy Saripalli"
+        }
+      ],
+      "datePublished": "2026-09-15",
+      "identifier": "10.5281/zenodo.22761782",
+      "url": "https://doi.org/10.5281/zenodo.22761782",
+      "description": "How an April 2026 developmental-support software case maps to July 2026 CDSCO guidance",
+      "additionalType": "preprint",
+      "abstract": "Regulatory-scope and evidence-planning analysis for the dated case Interpretation limit: Does not establish clinical efficacy, legal approval or a binding legal determination",
+      "subjectOf": "https://github.com/drkotireddysaripalli/pinnacle-research-library/blob/main/WORK_SUMMARY_REGULATORY_CASE.md"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.22761810",
+      "name": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Koti Reddy Saripalli"
+        }
+      ],
+      "datePublished": "2026-09-15",
+      "identifier": "10.5281/zenodo.22761810",
+      "url": "https://doi.org/10.5281/zenodo.22761810",
+      "description": "How RCI-listed rehabilitation training-institution codes are geographically distributed in a fixed snapshot",
+      "additionalType": "preprint",
+      "abstract": "Counts and concentration of 1068 distinct codes across 36 jurisdictions Interpretation limit: Does not establish current approval, capacity, output, workforce supply, quality or population-adjusted access",
+      "subjectOf": "https://github.com/drkotireddysaripalli/pinnacle-research-library/blob/main/WORK_SUMMARY_RCI_REGISTER.md"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.22761832",
+      "name": "Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Koti Reddy Saripalli"
+        }
+      ],
+      "datePublished": "2026-09-15",
+      "identifier": "10.5281/zenodo.22761832",
+      "url": "https://doi.org/10.5281/zenodo.22761832",
+      "description": "How six-month change and follow-up patterns in routine developmental care are planned for analysis",
+      "additionalType": "preprint",
+      "abstract": "A public cohort-construction and analysis plan Interpretation limit: No cohort results are reported; approval and registration states must follow the source",
+      "subjectOf": "https://github.com/drkotireddysaripalli/pinnacle-research-library/blob/main/WORK_SUMMARY_PINNACLE_TRAJ.md"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.22827813",
+      "name": "Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Koti Reddy Saripalli"
+        },
+        {
+          "@type": "Person",
+          "name": "Raghupathi Ramtenki"
+        },
+        {
+          "@type": "Person",
+          "name": "Srikanth Yadav Boini"
+        }
+      ],
+      "datePublished": "2026-09-18",
+      "identifier": "10.5281/zenodo.22827813",
+      "url": "https://doi.org/10.5281/zenodo.22827813",
+      "description": "How child- and caregiver-anchored meaningful-change estimates will be systematically reviewed",
+      "additionalType": "preprint",
+      "abstract": "Public eligibility, extraction and synthesis methods Interpretation limit: Unregistered and not a completed systematic review; no results are reported",
+      "subjectOf": "https://github.com/drkotireddysaripalli/pinnacle-research-library/blob/main/WORK_SUMMARY_PARTICIPATION_REVIEW.md"
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.5281/zenodo.15487405",
+      "name": "Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Koti Reddy Saripalli"
+        }
+      ],
+      "datePublished": "2025-05-22",
+      "identifier": "10.5281/zenodo.15487405",
+      "url": "https://doi.org/10.5281/zenodo.15487405",
+      "description": "How the source describes the Pinnacle Global Autism Framework",
+      "additionalType": "report",
+      "abstract": "The deposited framework description and source-attributed claims Interpretation limit: Title claims are not independent validation, peer review, priority proof or endorsement",
+      "subjectOf": "https://github.com/drkotireddysaripalli/pinnacle-research-library/blob/main/WORK_SUMMARY_PGAF.md"
+    }
+  ]
+}

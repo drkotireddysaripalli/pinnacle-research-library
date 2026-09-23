@@ -24,6 +24,10 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 ## Plain-language researcher summaries
 
 - [Seven-work researcher-summary index](RESEARCHER_SUMMARY_INDEX.md) — per-work question, design, evidence state, DOI and key interpretation limit for readers and profile editors.
+- [Machine-readable researcher-summary corpus](RESEARCHER_SUMMARIES.json) and [JSON-LD graph](RESEARCHER_SUMMARIES.jsonld) — seven source-bounded summaries for reuse and discovery.
+- [Researcher-summary link manifest](RESEARCHER_SUMMARY_LINK_MANIFEST.csv) — reconciles every summary route with its canonical DOI and evidence stage.
+- [Researcher-summary reuse guide](RESEARCHER_SUMMARY_REUSE_GUIDE.md) — safe adaptation sequence and required portfolio boundaries.
+
 ## RCI register analysis
 
 - [Reproduction checklist](RCI_REPRODUCTION_CHECKLIST.md) — source checksum, environment, validation and interpretation checks.
