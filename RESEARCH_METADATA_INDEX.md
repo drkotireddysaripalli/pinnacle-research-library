@@ -36,6 +36,13 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 - [Research-audience map](RESEARCH_AUDIENCE_MAP.csv) — work-specific research audiences, relevance and interpretation boundary.
 - [Scholarly-profile reconciliation guide](SCHOLARLY_PROFILE_RECONCILIATION_GUIDE.md) — identity, version, role, evidence-state and verification sequence.
 
+## Repository reuse and governance
+
+- [Citation File Format record](CITATION.cff) — repository-level citation metadata; individual studies should still be cited by canonical DOI.
+- [RO-Crate metadata catalogue](ro-crate-metadata.json) — dataset-level catalogue with seven canonical scholarly-work parts.
+- [Authors and roles](AUTHORS_AND_ROLES.md) — human-readable creator, editor, research-group and ORCID boundaries.
+- [Metadata file dictionary](METADATA_FILE_DICTIONARY.csv) — audience, purpose, primary key and boundary for ten core resources.
+- [Correction and contribution guide](METADATA_CORRECTION_CONTRIBUTION_GUIDE.md) — evidence requirements and safe correction workflow.
 ## RCI register analysis
 
 - [Reproduction checklist](RCI_REPRODUCTION_CHECKLIST.md) — source checksum, environment, validation and interpretation checks.

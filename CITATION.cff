@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Pinnacle Public Research Library: Metadata, Reproducibility and Profile Resources"
+message: "Use the canonical DOI of the individual work when citing a study; cite this repository only for its metadata and reproducibility resources."
+type: dataset
+authors:
+  - family-names: Saripalli
+    given-names: Koti Reddy
+    orcid: "https://orcid.org/0009-0007-7866-0737"
+repository-code: "https://github.com/drkotireddysaripalli/pinnacle-research-library"
+url: "https://github.com/drkotireddysaripalli/pinnacle-research-library"
+license: CC-BY-4.0
+version: "2026-09-24"
+date-released: "2026-09-24"
+keywords:
+  - research metadata
+  - reproducibility
+  - scholarly identity
+  - developmental outcomes
+  - open science

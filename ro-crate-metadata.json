@@ -1,0 +1,122 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Pinnacle Public Research Library",
+      "description": "Open metadata, reproducibility and scholarly-profile resources for a seven-work portfolio.",
+      "license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "author": {
+        "@id": "https://orcid.org/0009-0007-7866-0737"
+      },
+      "datePublished": "2026-09-24",
+      "hasPart": [
+        {
+          "@id": "https://doi.org/10.5281/zenodo.19482123"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.19482476"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.22761782"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.22761810"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.22761832"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.22827813"
+        },
+        {
+          "@id": "https://doi.org/10.5281/zenodo.15487405"
+        }
+      ]
+    },
+    {
+      "@id": "https://orcid.org/0009-0007-7866-0737",
+      "@type": "Person",
+      "name": "Koti Reddy Saripalli",
+      "affiliation": "Bharath Healthcare Laboratories Private Limited / Pinnacle Blooms Network"
+    },
+    {
+      "@id": "https://creativecommons.org/licenses/by/4.0/",
+      "@type": "CreativeWork",
+      "name": "Creative Commons Attribution 4.0 International"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.19482123",
+      "@type": "ScholarlyArticle",
+      "name": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
+      "identifier": "10.5281/zenodo.19482123",
+      "datePublished": "2026-04-09",
+      "version": "",
+      "description": "Preliminary operational findings reported; formal comparator validation remains planned Required qualifier: Do not describe as completed concurrent-validity evidence"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.19482476",
+      "@type": "ScholarlyArticle",
+      "name": "Concurrent Validity, Test-Retest Reliability, and Preliminary Minimal Clinically Important Difference of PinnacleAI AbilityScore: A Cross-Sectional Psychometric Validation Study Protocol",
+      "identifier": "10.5281/zenodo.19482476",
+      "datePublished": "2026-04-09",
+      "version": "2.1",
+      "description": "No completed validation result in this record; n=300/60 are planned targets Required qualifier: OSF companion registration is retrospective because some planned analyses had already run"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.22761782",
+      "@type": "ScholarlyArticle",
+      "name": "Licensing Developmental-Support Software in India: An April 2026 Case Study Assessed Against CDSCO's July 2026 Guidance",
+      "identifier": "10.5281/zenodo.22761782",
+      "datePublished": "2026-09-15",
+      "version": "3.0",
+      "description": "Documentary case analysis; no clinical-efficacy result Required qualifier: Use dated regulatory scope and do not infer efficacy or legal determination"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.22761810",
+      "@type": "ScholarlyArticle",
+      "name": "Geographic Concentration of RCI-Listed Rehabilitation Training Institutions in India: A Reproducible National Register Analysis",
+      "identifier": "10.5281/zenodo.22761810",
+      "datePublished": "2026-09-15",
+      "version": "2.0",
+      "description": "Results describe 1068 listed codes in a fixed source snapshot Required qualifier: Do not infer current approvals, active capacity, practitioner supply or population-adjusted access"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.22761832",
+      "@type": "ScholarlyArticle",
+      "name": "Six-Month Change and Follow-up Patterns in AbilityScore During Routine Paediatric Developmental Care in India: Protocol for the PINNACLE-TRAJ Retrospective Multicentre Cohort Study",
+      "identifier": "10.5281/zenodo.22761832",
+      "datePublished": "2026-09-15",
+      "version": "1.1",
+      "description": "No cohort result in this protocol; approvals and registration are pending where stated Required qualifier: Describe as a retrospective multicentre cohort protocol"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.22827813",
+      "@type": "ScholarlyArticle",
+      "name": "Meaningful Change in Childhood Participation: A Systematic Review Protocol for Child- and Caregiver-Anchored Estimates in Neurodevelopmental Disability",
+      "identifier": "10.5281/zenodo.22827813",
+      "datePublished": "2026-09-18",
+      "version": "1.0",
+      "description": "No completed review result and registration is not established Required qualifier: Describe as an unregistered systematic-review protocol"
+    },
+    {
+      "@id": "https://doi.org/10.5281/zenodo.15487405",
+      "@type": "ScholarlyArticle",
+      "name": "Pinnacle Global Autism Framework (PGAF): India's First Validated, Scalable, Outcome-Based Child Development System",
+      "identifier": "10.5281/zenodo.15487405",
+      "datePublished": "2025-05-22",
+      "version": "1.0",
+      "description": "Institutional framework report; title and framework claims come from the source Required qualifier: Do not convert source claims into independent validation or priority findings"
+    }
+  ]
+}
