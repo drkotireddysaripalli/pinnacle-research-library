@@ -275,6 +275,7 @@ urls.push(scaleStoryPage.route);
 const references=require('./reference-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write,paradigm,storyDeck});
 urls.push(...references.routes);
 write('llms.txt',read('llms.txt')+'\n## Organisation reference\n- [Organisation profile]('+origin+'/evidence/organisation-profile.html): brand, legal identity, dated facts and original sources.\n');
+write('llms.txt',read('llms.txt')+'- [Public evidence pack for editors]('+origin+require('../content/public-evidence-pack.json').path+'): company-prepared PDF summary; check the original records and their scope.\n');
 write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/organisation-profile.txt'));
 const storyPages=require('./paradigm-story-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write});
 urls.push(...storyPages.routes);

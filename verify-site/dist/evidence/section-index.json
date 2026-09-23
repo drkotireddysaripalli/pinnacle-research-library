@@ -14776,6 +14776,20 @@
           ]
         },
         {
+          "id": "editor-evidence-pack",
+          "name": "Reference pack for editors",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html#editor-evidence-pack",
+          "kind": "section",
+          "parent": null,
+          "description": "Download the Pinnacle public evidence pack for editors (PDF, 3 pages) . This is a company-prepared summary for factual directory and institutional entries. The MD-5 record , BIS record and individual centre pages carry their own source, date and scope. The pack is not an issuer verification, an approval of every centre or a clinical-outcome finding. Its telephone availability describes the Pinnacle/BHCL-operated helpline, not centre or clinician hours.",
+          "citations": [
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-public-evidence-pack-2026.pdf",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+            "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+            "https://www.pinnacleblooms.org/centers"
+          ]
+        },
+        {
           "id": "quick-answers",
           "name": "Questions, answered with context.",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html#quick-answers",
@@ -14850,7 +14864,7 @@
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html#cite-organisation",
           "kind": "section",
           "parent": null,
-          "description": "Bharath Healthcare Laboratories Private Limited. (2026, September 21). Pinnacle Blooms Network: organisation profile. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html",
+          "description": "Bharath Healthcare Laboratories Private Limited. (2026, September 23). Pinnacle Blooms Network: organisation profile. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html",
           "citations": []
         }
       ]

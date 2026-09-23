@@ -15,6 +15,8 @@ The public [Pinnacle Verification Centre](https://www.pinnacleblooms.org/verify/
 - [Research library — publications, DOIs and researcher profiles](https://www.pinnacleblooms.org/verify/evidence/research-library.html)
 - [PinnacleAI® paradigm shift — the life-first model and its documented example](https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html)
 
+For directory and institutional editors, the [three-page public evidence pack](https://www.pinnacleblooms.org/verify/evidence/pinnacle-public-evidence-pack-2026.pdf) summarises the organisation, source locations and contact route. It is a company-prepared aid; cite the original licence, BIS, centre or research record for a specific finding.
+
 These pages distinguish company records, regulator-issued documents, independent professional reports and research publications. Publication in this repository or the Verification Centre does not by itself establish independent endorsement.
 
 ## Seven canonical works
