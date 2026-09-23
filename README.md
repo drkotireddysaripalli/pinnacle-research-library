@@ -87,6 +87,8 @@ Systematic-review protocol preprint, version 1.0; 2026-09-18. No completed revie
 
 The [public PINNACLE-VAL registration](https://doi.org/10.17605/OSF.IO/78WF5) is explicitly retrospective: some planned analyses had already run. It is a companion to work 4, not an eighth independent study or a validation-results paper.
 
+The [open methods resource index](METHODS_RESOURCE_INDEX.md) links six reusable, source-grounded implementation aids: a regulatory evidence matrix, deterministic PINNACLE-TRAJ cohort rules, a missingness/sensitivity matrix, a PINNACLE-VAL variable dictionary and decision register, and a participation-review extraction schema. These aids add no results and preserve the source protocols' status and limitations.
+
 The [reader guide's reusable-figures section](Pinnacle_Public_Research_Briefing.md#reusable-rci-research-figures) provides both Commons SVGs, Koti Reddy Saripalli attribution, CC BY 4.0 terms and the register-count limitations.
 
 ## Reproduce the RCI register analysis
