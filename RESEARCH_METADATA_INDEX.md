@@ -8,6 +8,13 @@ This index collects machine-readable aids for citing, attributing, deduplicating
 - [Author and contributor role map](AUTHOR_CONTRIBUTOR_ROLE_MAP.csv) — preserves creator order and keeps Sreeja Reddy Saripalli's PGAF editor role distinct from authorship.
 - [Canonical work relationship map](CANONICAL_WORK_RELATIONSHIP_MAP.csv) — records explicit citation, version and retrospective-registration edges without inflating the work count.
 - [Evidence-status vocabulary](EVIDENCE_STATUS_VOCABULARY.csv) — defines protocol, registration, preprint, report, public, indexed and independently cited states.
+- [Canonical work status matrix](CANONICAL_WORK_STATUS_MATRIX.csv) — assigns each work its repository type, evidence stage, results state and required qualifier.
+- [Licence and access matrix](CANONICAL_LICENSE_ACCESS_MATRIX.csv) — records the deposited open-access and CC BY 4.0 fields without treating access as endorsement.
+- [DOI resolution manifest](CANONICAL_DOI_RESOLUTION_MANIFEST.csv) — records verified DOI destinations and the one-study/two-manifestation RCI relationship.
+- [Abstract boundary notes](CANONICAL_ABSTRACT_BOUNDARY_NOTES.csv) — gives one source-bounded scope summary and one key non-inference for each work.
+- [Portfolio deduplication rules](PORTFOLIO_DEDUPLICATION_RULES.md) — prevents versions, registrations, mirrors and profiles from inflating the seven-work count.
+- [Citation and version guide](CITATION_AND_VERSION_GUIDE.md) — explains which DOI and version to cite and how to state research status.
+- [Metadata QA checklist](METADATA_QA_CHECKLIST.md) — repeatable identity, role, version, evidence-language and verification checks for profile work.
 
 ## RCI register analysis
 
