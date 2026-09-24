@@ -1,11 +1,11 @@
 {
-  "time": "2026-09-24T09:02:06.858Z",
-  "passed": 19,
+  "time": "2026-09-24T09:19:46.848Z",
+  "passed": 21,
   "skipped": 0,
   "assetCount": 9,
   "assetBytes": 631722,
-  "htmlBytes": 321932,
-  "gzipBytes": 210632,
+  "htmlBytes": 328802,
+  "gzipBytes": 211932,
   "results": [
     {
       "name": "GET serves the static page and correct canonical",
@@ -64,7 +64,7 @@
       "passed": true
     },
     {
-      "name": "Every call link uses the one international phone target",
+      "name": "Pinnacle calls retain one number; external resources use their own verified numbers",
       "passed": true
     },
     {
@@ -82,7 +82,41 @@
     {
       "name": "Public exports match service identity and reject unsupported methods",
       "passed": true
+    },
+    {
+      "name": "Free guidance scope, owner provenance and FAQs agree across rendered page and exports",
+      "passed": true
+    },
+    {
+      "name": "Three separate resource entries have source links and visible scope, without changing Pinnacle identity",
+      "passed": true
     }
   ],
-  "visualReview": "Pending root browser review; local server provided."
+  "visualReview": "Passed root browser review of desktop/mobile hero and external resources; four viewport measurements, no overflow or broken images.",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 640,
+      "documentWidth": 305,
+      "callBottom": 498.75,
+      "stickyTop": 571
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "documentWidth": 375,
+      "callBottom": 519.796875,
+      "stickyTop": 775
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "documentWidth": 753
+    },
+    {
+      "width": 1280,
+      "height": 900,
+      "documentWidth": 1265
+    }
+  ]
 }

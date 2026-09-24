@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-24T09:25:00.412Z",
+  "worker": "pinnacle-helpline",
+  "version": 9,
+  "versionId": "b5f9f079-e020-4412-b67c-9acfe3075824",
+  "deploymentId": "0fc1ccf8-d2d1-431c-9147-42e79c1618f3",
+  "percentage": 100,
+  "rollbackVersion": "a109916b-662d-46ed-b32d-eb9bcbe8443a",
+  "htmlEtag": "7d9834ae7b11e84ed718815c",
+  "productionExact": true,
+  "localChecks": 21,
+  "faqs": 12,
+  "externalResourceCount": 3,
+  "indexing": "Recrawl of updated wording not confirmed; no repeated console validation or unchanged submissions"
+}

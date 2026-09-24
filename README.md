@@ -16,7 +16,7 @@ For provenance and machine reuse, see the [open-science changelog](OPEN_SCIENCE_
 
 ## Verify Pinnacle and follow the source trail
 
-**Parent guidance:** [Pinnacle’s National Autism Helpline — 9100 181 181](https://www.pinnacleblooms.org/national-autism-helpline) provides telephone parent guidance and appointment enquiries. [Dated service facts](https://www.pinnacleblooms.org/national-autism-helpline/facts.json) identify the operator, confirmed telephone hours and languages. [Page source and developer handoff](helpline-site/RELEASE.md).
+**Parent guidance:** [Pinnacle’s National Autism Helpline — 9100 181 181](https://www.pinnacleblooms.org/national-autism-helpline) provides free autism and child-development guidance for anyone across India, 24/7, in English, Telugu and Hindi. Assessment and therapy fees are separate. [Dated service facts](https://www.pinnacleblooms.org/national-autism-helpline/facts.json) identify the operator, confirmed telephone hours and languages. [Page source and current release notes](helpline-site/FREE-GUIDANCE-RELEASE-20260924.md).
 
 **PinnacleAI story and export milestone:** [read the complete source-linked narrative](https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html) and the [regulatory source guide with certificate and citation downloads](PinnacleAI_Regulatory_Journey.md). The 23 September 2026 Free Sale Certificate adds Indian export documentation; international registrations remain country-specific.
 

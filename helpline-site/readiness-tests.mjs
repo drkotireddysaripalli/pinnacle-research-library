@@ -69,14 +69,20 @@ await check('Every page image references an explicitly bundled same-origin asset
     const url=new URL(match[1],CANONICAL_URL);assert.equal(url.origin,'https://www.pinnacleblooms.org');assert.ok(Object.hasOwn(HELPLINE_ASSETS,url.pathname),'Image not bundled: '+url.pathname);
   }
 });
-await check('Every call link uses the one international phone target', async () => {const matches=[...HELPLINE_HTML.matchAll(/href="(tel:[^"]+)"/g)].map(m=>m[1]); assert.ok(matches.length>=5); assert.ok(matches.every(x=>x==='tel:+919100181181'));});
+await check('Pinnacle calls retain one number; external resources use their own verified numbers', async () => {
+  const matches=[...HELPLINE_HTML.matchAll(/href="(tel:[^"]+)"/g)].map(m=>m[1]);
+  const allowed=new Set(['tel:+919100181181','tel:1800117776','tel:14456','tel:+918448448996']);
+  assert.ok(matches.filter(x=>x==='tel:+919100181181').length>=5);assert.ok(matches.every(x=>allowed.has(x)));
+  const hero=HELPLINE_HTML.slice(HELPLINE_HTML.indexOf('<main'),HELPLINE_HTML.indexOf('<section class="section first-call"'));
+  assert.ok([...hero.matchAll(/href="(tel:[^"]+)"/g)].every(m=>m[1]==='tel:+919100181181'));
+});
 await check('No forms, executable scripts, trackers, external assets or unresolved placeholders', async () => { assert.doesNotMatch(HELPLINE_HTML,/<form\b|<iframe\b|<script(?! type="application\/ld\+json")|\son[a-z]+\s*=|@@/i); assert.doesNotMatch(HELPLINE_HTML,/(?:src|srcset)="https?:|url\(['"]?https?:|googletagmanager|google-analytics|facebook\.net/i); });
 await check('Five service cards and seven journey steps exist', async () => {assert.equal((HELPLINE_HTML.match(/class="service"/g)||[]).length,5); assert.equal((HELPLINE_HTML.match(/class="step-no"/g)||[]).length,7);});
 await check('Structured data is factual and exactly matches the visible FAQ', async () => {
   const schema=JSON.parse(HELPLINE_HTML.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
   const org=schema['@graph'].find(x=>x['@type']==='Organization'), page=schema['@graph'].find(x=>Array.isArray(x['@type'])&&x['@type'].includes('FAQPage')), contact=schema['@graph'].find(x=>x['@type']==='ContactPoint'), service=schema['@graph'].find(x=>x['@type']==='Service');
   assert.equal(org.name,'Bharath Healthcare Laboratories Private Limited'); assert.equal(contact.telephone,'+919100181181'); assert.equal(page.url,CANONICAL_URL);
-  assert.equal(service.provider['@id'],org['@id']); assert.equal(service.availableChannel.servicePhone['@id'],contact['@id']); assert.equal(page.mainEntity.length,10);
+  assert.equal(service.provider['@id'],org['@id']); assert.equal(service.availableChannel.servicePhone['@id'],contact['@id']); assert.equal(page.mainEntity.length,12);
   for(const q of page.mainEntity){assert.ok(HELPLINE_HTML.includes('<summary>'+q.name+'</summary>'));assert.ok(HELPLINE_HTML.includes(q.acceptedAnswer.text));}
   assert.ok(!JSON.stringify(schema).includes('GovernmentService')); assert.ok(!JSON.stringify(schema).includes('reviewedBy'));
 });
@@ -86,7 +92,22 @@ await check('Public exports match service identity and reject unsupported method
     assert.equal((await worker.fetch(request(suffix,{method:'POST'}))).status,405);
     assert.equal(await (await worker.fetch(request(suffix,{method:'HEAD'}))).text(),'');
   }
-  const facts=await (await worker.fetch(request('/facts.json'))).json(); assert.equal(facts.questions.length,10);assert.equal(facts.telephone,'+919100181181');assert.deepEqual(facts.telephoneLanguages,['English','Telugu','Hindi']);
+  const facts=await (await worker.fetch(request('/facts.json'))).json(); assert.equal(facts.questions.length,12);assert.equal(facts.telephone,'+919100181181');assert.deepEqual(facts.telephoneLanguages,['English','Telugu','Hindi']);
+});
+await check('Free guidance scope, owner provenance and FAQs agree across rendered page and exports',async()=>{
+  const facts=await(await worker.fetch(request('/facts.json'))).json();
+  const schema=JSON.parse(HELPLINE_HTML.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
+  const faq=schema['@graph'].find(x=>Array.isArray(x['@type'])&&x['@type'].includes('FAQPage'));
+  assert.deepEqual(facts.questions,faq.mainEntity.map(q=>({question:q.name,answer:q.acceptedAnswer.text})));
+  assert.match(facts.guidanceCost,/does not charge for helpline guidance/);assert.match(facts.sourceBasis,/owner 24 September 2026/);
+  for(const suffix of ['/facts.txt','/llms.txt']) {const text=await(await worker.fetch(request(suffix))).text();assert.match(text,/Free/);assert.match(text,/Assessment and therapy fees are separate/);}
+  assert.match(HELPLINE_HTML,/Free guidance · 24\/7/);assert.doesNotMatch(HELPLINE_HTML,/Call the Pinnacle team|Talk to the Pinnacle team|Talk to us/);
+  assert.doesNotMatch(JSON.stringify(schema),/TollFree|toll.free|GovernmentService/);
+});
+await check('Three separate resource entries have source links and visible scope, without changing Pinnacle identity',async()=>{
+  const facts=await(await worker.fetch(request('/facts.json'))).json();assert.equal(facts.otherResources.length,3);
+  for(const r of facts.otherResources){assert.ok(HELPLINE_HTML.includes('id="'+r.id+'"'));assert.ok(HELPLINE_HTML.includes('href="'+r.source+'"'));assert.ok(HELPLINE_HTML.includes('href="tel:'+r.telephone+'"'));assert.ok(HELPLINE_HTML.includes(r.availability));assert.equal(r.checkedOn,'2026-09-24');}
+  assert.ok(HELPLINE_HTML.includes('call attendants are available during working hours'));
 });
 const report={time:new Date().toISOString(),passed:results.filter(result=>result.passed).length,skipped:results.filter(result=>result.skipped).length,assetCount:assetEntries.length,assetBytes:assetEntries.reduce((total,[,asset])=>total+asset.byteLength,0),htmlBytes:Buffer.byteLength(HELPLINE_HTML),gzipBytes:gzipSync(HELPLINE_HTML).length,results,visualReview:'Pending root browser review; local server provided.'};
 await writeFile(new URL('./readiness-results.json',import.meta.url),JSON.stringify(report,null,2)+'\n');

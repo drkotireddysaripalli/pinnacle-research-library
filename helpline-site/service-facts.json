@@ -5,7 +5,7 @@
   "url": "https://www.pinnacleblooms.org/national-autism-helpline",
   "telephone": "+919100181181",
   "displayTelephone": "9100 181 181",
-  "serviceType": "Parent guidance and appointment enquiries",
+  "serviceType": "Free autism and child-development guidance and appointment enquiries",
   "areaServed": "India",
   "telephoneAvailability": "24 hours a day, seven days a week",
   "telephoneLanguages": [
@@ -13,14 +13,18 @@
     "Telugu",
     "Hindi"
   ],
-  "sourceBasis": "Operator confirmation recorded 22 September 2026; publication reviewed 24 September 2026",
+  "sourceBasis": "Telephone hours and English/Telugu/Hindi confirmed by operator 22 September 2026. Free guidance, anyone-can-call access and 24/7 availability confirmed by the owner 24 September 2026.",
   "scope": "Autism and child-development guidance about Pinnacle services, assessment appointments and centre navigation",
   "boundary": "Not a government-designated, emergency or diagnostic service. Centre hours and clinician availability are confirmed separately.",
   "evidence": "https://www.pinnacleblooms.org/verify/evidence/organisation-profile.html",
   "questions": [
     {
       "question": "What is Pinnacle’s National Autism Helpline number?",
-      "answer": "Call 9100 181 181 (+91 9100181181). Pinnacle Blooms Network operates this parent-guidance and appointment-enquiry telephone service across India, 24/7 in English, Telugu and Hindi."
+      "answer": "The National Autism Helpline number is 9100 181 181 (+91 9100181181). Operated by Pinnacle Blooms Network, it offers free autism and child-development guidance to anyone across India, 24 hours a day, seven days a week, in English, Telugu and Hindi."
+    },
+    {
+      "question": "Is the National Autism Helpline free, and who can call?",
+      "answer": "Yes. Pinnacle does not charge for helpline guidance. Anyone can call, including parents, family members, caregivers, teachers and adults seeking information about a child’s development. You do not need to be an existing Pinnacle family. Assessment and therapy fees are separate; your telephone provider’s call charges depend on your plan."
     },
     {
       "question": "Can I call without an autism diagnosis?",
@@ -32,7 +36,7 @@
     },
     {
       "question": "Who operates this helpline?",
-      "answer": "Pinnacle Blooms Network operates the service. Its legal operator is Bharath Healthcare Laboratories Private Limited. This is Pinnacle’s service name, not a Government of India designation."
+      "answer": "Pinnacle Blooms Network operates this free, 24/7 helpline. Its legal operator is Bharath Healthcare Laboratories Private Limited. National Autism Helpline is the name of Pinnacle’s service; it is independently operated and is not a Government of India helpline."
     },
     {
       "question": "When can I call, and which languages are supported?",
@@ -57,6 +61,52 @@
     {
       "question": "Is this an emergency or diagnostic service?",
       "answer": "This is a parent-guidance and appointment-enquiry service. It does not provide emergency care or replace diagnosis or professional clinical assessment. For an immediate emergency, contact your local emergency services."
+    },
+    {
+      "question": "Are there other helplines that may help my family?",
+      "answer": "Yes. AIIMS operates the National Child Neurology Tele-Helpline, the Government’s National Disability Information Helpline provides disability-related information, and Nayi Disha offers family information and support resources. The Other helpful helplines section below lists their numbers, scope and official sources. Each is operated separately from Pinnacle."
+    }
+  ],
+  "guidanceCost": "Free: Pinnacle does not charge for helpline guidance. Assessment and therapy fees are separate. Telephone-network charges depend on the caller’s plan.",
+  "whoCanCall": "Anyone across India; no existing diagnosis or Pinnacle enrolment required.",
+  "otherResources": [
+    {
+      "id": "aiims-child-neurology",
+      "name": "National Child Neurology Tele-Helpline",
+      "operator": "AIIMS, New Delhi",
+      "telephone": "1800117776",
+      "displayTelephone": "1800 11 7776",
+      "description": "Information on childhood neurodevelopment. The Government’s DEPwD directory lists this service for questions about autism symptoms in children.",
+      "availability": "Listed by DEPwD as a 24/7 service.",
+      "sourceLabel": "Read the Government helpline listing",
+      "source": "https://depwd.gov.in/en/others-helplines/",
+      "additionalSource": "https://pedneuroaiims.org/",
+      "checkedOn": "2026-09-24"
+    },
+    {
+      "id": "national-disability-information",
+      "name": "National Disability Information Helpline",
+      "operator": "DEPwD · Government of India",
+      "telephone": "14456",
+      "displayTelephone": "14456",
+      "description": "Information on disabilities, UDID services, education, government schemes and support services across India.",
+      "availability": "Automated information is available round the clock; call attendants are available during working hours.",
+      "sourceLabel": "Read the official service information",
+      "source": "https://ayjnishd.nic.in/national-disability-information-helpline-service/",
+      "checkedOn": "2026-09-24"
+    },
+    {
+      "id": "nayi-disha",
+      "name": "Nayi Disha Helpline",
+      "operator": "Nayi Disha",
+      "telephone": "+918448448996",
+      "displayTelephone": "8448 448 996",
+      "description": "Family information and support resources for intellectual disabilities. Listed in the Government’s DEPwD helpline directory.",
+      "availability": "Check current availability directly with Nayi Disha.",
+      "sourceLabel": "Read the Government helpline listing",
+      "source": "https://depwd.gov.in/en/others-helplines/",
+      "additionalSource": "https://nayi-disha.org/event/ask-an-expert-8/",
+      "checkedOn": "2026-09-24"
     }
   ]
 }

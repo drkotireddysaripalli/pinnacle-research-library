@@ -1,0 +1,40 @@
+[
+  {
+    "id": "aiims-child-neurology",
+    "name": "National Child Neurology Tele-Helpline",
+    "operator": "AIIMS, New Delhi",
+    "telephone": "1800117776",
+    "displayTelephone": "1800 11 7776",
+    "description": "Information on childhood neurodevelopment. The Government’s DEPwD directory lists this service for questions about autism symptoms in children.",
+    "availability": "Listed by DEPwD as a 24/7 service.",
+    "sourceLabel": "Read the Government helpline listing",
+    "source": "https://depwd.gov.in/en/others-helplines/",
+    "additionalSource": "https://pedneuroaiims.org/",
+    "checkedOn": "2026-09-24"
+  },
+  {
+    "id": "national-disability-information",
+    "name": "National Disability Information Helpline",
+    "operator": "DEPwD · Government of India",
+    "telephone": "14456",
+    "displayTelephone": "14456",
+    "description": "Information on disabilities, UDID services, education, government schemes and support services across India.",
+    "availability": "Automated information is available round the clock; call attendants are available during working hours.",
+    "sourceLabel": "Read the official service information",
+    "source": "https://ayjnishd.nic.in/national-disability-information-helpline-service/",
+    "checkedOn": "2026-09-24"
+  },
+  {
+    "id": "nayi-disha",
+    "name": "Nayi Disha Helpline",
+    "operator": "Nayi Disha",
+    "telephone": "+918448448996",
+    "displayTelephone": "8448 448 996",
+    "description": "Family information and support resources for intellectual disabilities. Listed in the Government’s DEPwD helpline directory.",
+    "availability": "Check current availability directly with Nayi Disha.",
+    "sourceLabel": "Read the Government helpline listing",
+    "source": "https://depwd.gov.in/en/others-helplines/",
+    "additionalSource": "https://nayi-disha.org/event/ask-an-expert-8/",
+    "checkedOn": "2026-09-24"
+  }
+]
