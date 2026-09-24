@@ -23,9 +23,9 @@ await check('POST is refused without collecting a form', async () => { const r=a
 await check('ETag validator returns 304 without a body', async () => { const r=await worker.fetch(request('',{headers:{'If-None-Match':'W/'+HELPLINE_ETAG}})); assert.equal(r.status,304); assert.equal(await r.text(),''); });
 await check('Query parameters do not change or enter page output', async () => {const r=await worker.fetch(request('?test_private_marker=do-not-reflect')); assert.equal(await r.text(),HELPLINE_HTML); });
 await check('Single URL sitemap supports GET and HEAD', async () => { const r=await worker.fetch(request('/sitemap.xml')); assert.equal(r.status,200); assert.match(r.headers.get('content-type'),/application\/xml/); const xml=await r.text(); assert.equal((xml.match(/<loc>/g)||[]).length,1); assert.ok(xml.includes('<loc>'+CANONICAL_URL+'</loc>')); const head=await worker.fetch(request('/sitemap.xml',{method:'HEAD'})); assert.equal(head.status,200); assert.equal(await head.text(),''); });
-await check('CSP allows same-origin images and embedded fonts without external sources', async () => {
+await check('CSP allows same-origin images and full font without external sources', async () => {
   const r=await worker.fetch(request()); const csp=r.headers.get('content-security-policy');
-  assert.match(csp,/(?:^|;\s*)img-src 'self'(?:;|$)/); assert.match(csp,/(?:^|;\s*)font-src data:(?:;|$)/);
+  assert.match(csp,/(?:^|;\s*)img-src 'self'(?:;|$)/); assert.match(csp,/(?:^|;\s*)font-src 'self'(?:;|$)/);
   assert.match(csp,/default-src 'none'/); assert.match(csp,/script-src 'sha256-[^']+'/); assert.doesNotMatch(csp,/https?:|\*/);
 });
 await check('Unknown image paths and non-image paths return no-store404 without fetching', async () => {
@@ -98,7 +98,7 @@ await check('Free guidance scope, owner provenance and FAQs agree across rendere
   const facts=await(await worker.fetch(request('/facts.json'))).json();
   const schema=JSON.parse(HELPLINE_HTML.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
   const faq=schema['@graph'].find(x=>Array.isArray(x['@type'])&&x['@type'].includes('FAQPage'));
-  assert.deepEqual(facts.questions,faq.mainEntity.map(q=>({question:q.name,answer:q.acceptedAnswer.text})));
+  assert.deepEqual(facts.questions,faq.mainEntity.map(q=>({question:q.name,answer:q.acceptedAnswer.text,url:q['@id']})));
   assert.match(facts.guidanceCost,/does not charge for helpline guidance/);assert.match(facts.sourceBasis,/owner 24 September 2026/);
   for(const suffix of ['/facts.txt','/llms.txt']) {const text=await(await worker.fetch(request(suffix))).text();assert.match(text,/Free/);assert.match(text,/Assessment and therapy fees are separate/);}
   assert.match(HELPLINE_HTML,/Free guidance · 24\/7/);assert.doesNotMatch(HELPLINE_HTML,/Call the Pinnacle team|Talk to the Pinnacle team|Talk to us/);
@@ -108,6 +108,22 @@ await check('Three separate resource entries have source links and visible scope
   const facts=await(await worker.fetch(request('/facts.json'))).json();assert.equal(facts.otherResources.length,3);
   for(const r of facts.otherResources){assert.ok(HELPLINE_HTML.includes('id="'+r.id+'"'));assert.ok(HELPLINE_HTML.includes('href="'+r.source+'"'));assert.ok(HELPLINE_HTML.includes('href="tel:'+r.telephone+'"'));assert.ok(HELPLINE_HTML.includes(r.availability));assert.equal(r.checkedOn,'2026-09-24');}
   assert.ok(HELPLINE_HTML.includes('call attendants are available during working hours'));
+});
+await check('Image metadata and graph reference the actual share card and brand logo',async()=>{
+ const schema=JSON.parse(HELPLINE_HTML.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
+ const brand=schema['@graph'].find(n=>n['@type']==='Brand'),image=schema['@graph'].find(n=>n['@type']==='ImageObject');
+ assert.equal(brand.logo.contentUrl,CANONICAL_URL+'/assets/logo.webp');assert.equal(image.width,1200);assert.equal(image.height,630);
+ assert.ok(HELPLINE_HTML.includes('property="og:image" content="'+image.contentUrl+'"'));assert.ok(HELPLINE_HTML.includes('name="twitter:image" content="'+image.contentUrl+'"'));
+ const r=await worker.fetch(new Request(image.contentUrl));assert.equal(r.status,200);assert.equal(r.headers.get('content-type'),'image/jpeg');
+ assert.ok(HELPLINE_HTML.includes('name="twitter:image:alt"'));assert.ok(HELPLINE_HTML.includes('max-image-preview:large'));
+});
+await check('Full font remains byte-exact while HTML is lighter and every answer has a stable anchor',async()=>{
+ const {readFile}=await import('node:fs/promises');
+ const font=await readFile(new URL('./anek-telugu-subset.woff2',import.meta.url));
+ const r=await worker.fetch(request('/assets/anek-telugu-full.woff2'));assert.equal(r.headers.get('content-type'),'font/woff2');assert.deepEqual(Buffer.from(await r.arrayBuffer()),font);
+ assert.ok(Buffer.byteLength(HELPLINE_HTML)<100000);assert.doesNotMatch(HELPLINE_HTML,/data:font\/woff2/);
+ const facts=await(await worker.fetch(request('/facts.json'))).json();for(const q of facts.questions){const id=new URL(q.url).hash.slice(1);assert.ok(HELPLINE_HTML.includes('<details id="'+id+'">'));}
+ assert.ok(HELPLINE_HTML.includes('id="service"'));assert.ok(HELPLINE_HTML.includes('prefers-reduced-motion:reduce'));
 });
 const report={time:new Date().toISOString(),passed:results.filter(result=>result.passed).length,skipped:results.filter(result=>result.skipped).length,assetCount:assetEntries.length,assetBytes:assetEntries.reduce((total,[,asset])=>total+asset.byteLength,0),htmlBytes:Buffer.byteLength(HELPLINE_HTML),gzipBytes:gzipSync(HELPLINE_HTML).length,results,visualReview:'Pending root browser review; local server provided.'};
 await writeFile(new URL('./readiness-results.json',import.meta.url),JSON.stringify(report,null,2)+'\n');

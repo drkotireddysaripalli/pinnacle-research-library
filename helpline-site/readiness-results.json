@@ -1,11 +1,11 @@
 {
-  "time": "2026-09-24T09:19:46.848Z",
-  "passed": 21,
+  "time": "2026-09-24T09:42:49.458Z",
+  "passed": 23,
   "skipped": 0,
-  "assetCount": 9,
-  "assetBytes": 631722,
-  "htmlBytes": 328802,
-  "gzipBytes": 211932,
+  "assetCount": 11,
+  "assetBytes": 890864,
+  "htmlBytes": 79936,
+  "gzipBytes": 19320,
   "results": [
     {
       "name": "GET serves the static page and correct canonical",
@@ -44,7 +44,7 @@
       "passed": true
     },
     {
-      "name": "CSP allows same-origin images and embedded fonts without external sources",
+      "name": "CSP allows same-origin images and full font without external sources",
       "passed": true
     },
     {
@@ -90,33 +90,30 @@
     {
       "name": "Three separate resource entries have source links and visible scope, without changing Pinnacle identity",
       "passed": true
+    },
+    {
+      "name": "Image metadata and graph reference the actual share card and brand logo",
+      "passed": true
+    },
+    {
+      "name": "Full font remains byte-exact while HTML is lighter and every answer has a stable anchor",
+      "passed": true
     }
   ],
-  "visualReview": "Passed root browser review of desktop/mobile hero and external resources; four viewport measurements, no overflow or broken images.",
-  "viewports": [
-    {
-      "width": 320,
-      "height": 640,
-      "documentWidth": 305,
-      "callBottom": 498.75,
-      "stickyTop": 571
-    },
-    {
-      "width": 390,
-      "height": 844,
-      "documentWidth": 375,
-      "callBottom": 519.796875,
-      "stickyTop": 775
-    },
-    {
-      "width": 768,
-      "height": 1024,
-      "documentWidth": 753
-    },
-    {
-      "width": 1280,
-      "height": 900,
-      "documentWidth": 1265
-    }
-  ]
+  "visualReview": {
+    "date": "2026-09-24",
+    "viewports": [
+      320,
+      390,
+      768,
+      1280
+    ],
+    "horizontalOverflow": false,
+    "allFiveDisplayedImagesLoaded": true,
+    "fullTeluguFontLoaded": true,
+    "faqExpansion": true,
+    "serviceAnchor": true,
+    "shareCard": "1200x630 reviewed",
+    "scope": "Chrome viewport emulation, not physical-device certification"
+  }
 }

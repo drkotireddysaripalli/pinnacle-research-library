@@ -17,7 +17,15 @@
       "@type": "Brand",
       "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand",
       "name": "Pinnacle Blooms Network",
-      "url": "https://www.pinnacleblooms.org/"
+      "url": "https://www.pinnacleblooms.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline/assets/logo.webp",
+        "contentUrl": "https://www.pinnacleblooms.org/national-autism-helpline/assets/logo.webp",
+        "width": 420,
+        "height": 158,
+        "caption": "Pinnacle Blooms Network logo"
+      }
     },
     {
       "@type": "ContactPoint",
@@ -52,7 +60,14 @@
       "alternateName": "Pinnacle National Autism Helpline",
       "url": "https://www.pinnacleblooms.org/national-autism-helpline",
       "description": "National Autism Helpline: 9100 181 181. Free, 24/7 guidance for anyone in India, operated by Pinnacle Blooms Network. English, Telugu and Hindi.",
-      "serviceType": "Autism and child-development parent guidance and appointment enquiries",
+      "serviceType": "Free autism and child-development guidance and appointment enquiries",
+      "mainEntityOfPage": {
+        "@id": "https://www.pinnacleblooms.org/national-autism-helpline#webpage"
+      },
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "Parents, family members, caregivers and educators"
+      },
       "provider": {
         "@id": "https://www.pinnacleblooms.org/verify/#organization"
       },
@@ -78,10 +93,20 @@
       ],
       "@id": "https://www.pinnacleblooms.org/national-autism-helpline#webpage",
       "url": "https://www.pinnacleblooms.org/national-autism-helpline",
-      "name": "National Autism Helpline | Pinnacle Blooms | 9100181181",
+      "name": "National Autism Helpline: 9100181181 | Free 24/7 | Pinnacle",
       "inLanguage": "en",
       "description": "National Autism Helpline: 9100 181 181. Free, 24/7 guidance for anyone in India, operated by Pinnacle Blooms Network. English, Telugu and Hindi.",
       "dateModified": "2026-09-24",
+      "primaryImageOfPage": {
+        "@id": "https://www.pinnacleblooms.org/national-autism-helpline#primary-image"
+      },
+      "breadcrumb": {
+        "@id": "https://www.pinnacleblooms.org/national-autism-helpline#breadcrumb"
+      },
+      "citation": [
+        "https://www.pinnacleblooms.org/verify/evidence/organisation-profile.html",
+        "https://www.pinnacleblooms.org/national-autism-helpline/facts.txt"
+      ],
       "about": {
         "@id": "https://www.pinnacleblooms.org/national-autism-helpline#service"
       },
@@ -91,6 +116,7 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#helpline-number",
           "name": "What is Pinnacle’s National Autism Helpline number?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -99,6 +125,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#free-guidance",
           "name": "Is the National Autism Helpline free, and who can call?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -107,6 +134,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#without-diagnosis",
           "name": "Can I call without an autism diagnosis?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -115,6 +143,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#development-questions",
           "name": "Can I ask about speech, sensory or learning concerns?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -123,6 +152,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#helpline-operator",
           "name": "Who operates this helpline?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -131,6 +161,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#hours-and-languages",
           "name": "When can I call, and which languages are supported?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -139,6 +170,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#assessment-booking",
           "name": "Can I book an assessment by phone?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -147,6 +179,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#choosing-therapy",
           "name": "Do I need to know which therapy to choose?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -155,6 +188,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#assessment-and-therapy-fees",
           "name": "How much do an assessment and therapy sessions cost?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -163,6 +197,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#centre-services",
           "name": "Is every service available at every centre?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -171,6 +206,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#emergency-and-diagnosis",
           "name": "Is this an emergency or diagnostic service?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -179,6 +215,7 @@
         },
         {
           "@type": "Question",
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#other-helplines",
           "name": "Are there other helplines that may help my family?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -188,7 +225,17 @@
       ]
     },
     {
+      "@type": "ImageObject",
+      "@id": "https://www.pinnacleblooms.org/national-autism-helpline#primary-image",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/assets/national-autism-helpline-share-20260924.jpg",
+      "contentUrl": "https://www.pinnacleblooms.org/national-autism-helpline/assets/national-autism-helpline-share-20260924.jpg",
+      "width": 1200,
+      "height": 630,
+      "caption": "Pinnacle National Autism Helpline: 9100 181 181. Free guidance for anyone across India, 24/7."
+    },
+    {
       "@type": "BreadcrumbList",
+      "@id": "https://www.pinnacleblooms.org/national-autism-helpline#breadcrumb",
       "itemListElement": [
         {
           "@type": "ListItem",

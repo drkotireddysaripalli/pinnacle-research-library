@@ -1,0 +1,323 @@
+{
+  "date": "2026-09-24T09:47:29.959Z",
+  "live": {
+    "status": 200,
+    "equalsRelease": true,
+    "bytes": 79936,
+    "ms": 113,
+    "hash": "c54262b12cdbc18215304bd3db0b148780aeeb033e1450bcfc56af839a5e706a"
+  },
+  "meta": [
+    "<meta charset=\"utf-8\">",
+    "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+    "<meta name=\"description\" content=\"National Autism Helpline: 9100 181 181. Free, 24/7 guidance for anyone in India, operated by Pinnacle Blooms Network. English, Telugu and Hindi.\">",
+    "<meta property=\"og:type\" content=\"website\">",
+    "<meta property=\"og:site_name\" content=\"Pinnacle Blooms Network\">",
+    "<meta property=\"og:title\" content=\"National Autism Helpline · Free guidance, 24/7 | Pinnacle\">",
+    "<meta property=\"og:description\" content=\"National Autism Helpline: 9100 181 181. Free, 24/7 guidance for anyone in India, operated by Pinnacle Blooms Network. English, Telugu and Hindi.\">",
+    "<meta property=\"og:url\" content=\"https://www.pinnacleblooms.org/national-autism-helpline\">",
+    "<meta name=\"twitter:card\" content=\"summary_large_image\">",
+    "<meta name=\"twitter:title\" content=\"National Autism Helpline · Free guidance, 24/7 · 9100 181 181\">",
+    "<meta name=\"twitter:description\" content=\"National Autism Helpline: 9100 181 181. Free, 24/7 guidance for anyone in India, operated by Pinnacle Blooms Network. English, Telugu and Hindi.\">",
+    "<meta name=\"twitter:image\" content=\"https://www.pinnacleblooms.org/national-autism-helpline/assets/national-autism-helpline-share-20260924.jpg\">",
+    "<meta name=\"robots\" content=\"index, follow, max-image-preview:large\">",
+    "<meta property=\"og:image:width\" content=\"1200\">",
+    "<meta property=\"og:image:height\" content=\"630\">",
+    "<meta property=\"og:image:type\" content=\"image/jpeg\">",
+    "<meta property=\"og:locale\" content=\"en_IN\">",
+    "<meta name=\"twitter:image:alt\" content=\"Pinnacle National Autism Helpline: 9100 181 181. Free guidance for anyone across India, 24/7.\">",
+    "<meta name=\"theme-color\" content=\"#ffffff\">",
+    "<meta property=\"og:image\" content=\"https://www.pinnacleblooms.org/national-autism-helpline/assets/national-autism-helpline-share-20260924.jpg\">",
+    "<meta property=\"og:image:alt\" content=\"Pinnacle National Autism Helpline: 9100 181 181. Free guidance for anyone across India, 24/7.\">"
+  ],
+  "images": [
+    "<img  src=\"/national-autism-helpline/assets/logo.webp\" width=\"420\" height=\"158\" fetchpriority=\"high\" alt=\"Pinnacle Blooms Network\">",
+    "<img  src=\"/national-autism-helpline/assets/family-journey.webp\" srcset=\"/national-autism-helpline/assets/family-journey-600.webp 600w, /national-autism-helpline/assets/family-journey-1000.webp 1000w, /national-autism-helpline/assets/family-journey.webp 1536w\" sizes=\"(max-width: 760px) 100vw, 600px\" width=\"1536\" height=\"1024\" fetchpriority=\"high\" alt=\"Pinnacle family artwork: a mother and child sharing a joyful moment of learning through play\">",
+    "<img  src=\"/national-autism-helpline/assets/care-participation.webp\" srcset=\"/national-autism-helpline/assets/care-participation-600.webp 600w, /national-autism-helpline/assets/care-participation-1000.webp 1000w, /national-autism-helpline/assets/care-participation.webp 1536w\" sizes=\"(max-width: 760px) 100vw, 1040px\" width=\"1536\" height=\"1024\" loading=\"lazy\" decoding=\"async\" alt=\"Illustrative Pinnacle pathway connecting therapist-led practice, parent-guided routines at home and participation at school\">",
+    "<img class=\"review-art\" src=\"/national-autism-helpline/assets/parent-review.webp\" srcset=\"/national-autism-helpline/assets/parent-review-600.webp 600w, /national-autism-helpline/assets/parent-review.webp 900w\" sizes=\"(max-width: 760px) 100vw, 520px\" width=\"900\" height=\"600\" loading=\"lazy\" decoding=\"async\" alt=\"Illustrative scene of a family and practitioner reviewing a developmental plan\">",
+    "<img  src=\"/national-autism-helpline/assets/logo.webp\" width=\"420\" height=\"158\" loading=\"lazy\" decoding=\"async\" alt=\"Pinnacle Blooms Network home\">"
+  ],
+  "infrastructure": [
+    {
+      "url": "https://www.pinnacleblooms.org/robots.txt",
+      "finalUrl": "https://www.pinnacleblooms.org/robots.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8",
+      "robots": null,
+      "cache": null,
+      "etag": null,
+      "bytes": 360,
+      "ms": 36,
+      "hash": "ff2fe42d6d4244298ef20523799cd6d661d1285c58187423fed3bb2e1a5ee596",
+      "helplineMention": true,
+      "content": "\r\nUser-agent: *\r\nDisallow: /api\r\nDisallow: /assessmentlead\r\nDisallow: /viewinvoice\r\n\r\nSitemap: https://www.pinnacleblooms.org/sitemap.xml\n\n# Pinnacle verification evidence\nSitemap: https://www.pinnacleblooms.org/verify/sitemap.xml\nSitemap: https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml\nSitemap: https://pinnacleblooms.org/ask/sitemap.xml\n"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/llms.txt",
+      "finalUrl": "https://www.pinnacleblooms.org/verify/llms.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8",
+      "robots": null,
+      "cache": null,
+      "etag": "W/\"531e720409221199-16514c4347c06d1e\"",
+      "bytes": 28157,
+      "ms": 241,
+      "hash": "1f14963402767f63fc5be39a6ca9868463c92d58d55e950f357f0753bb0ce60e",
+      "helplineMention": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sitemap.xml",
+      "finalUrl": "https://www.pinnacleblooms.org/sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "robots": null,
+      "cache": null,
+      "etag": null,
+      "bytes": 1198,
+      "ms": 35,
+      "hash": "247d8931af013e09366d69c1c826dec0406a8c60068ecd5df93408f1e36b05a0",
+      "helplineMention": false
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml",
+      "finalUrl": "https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "robots": null,
+      "cache": null,
+      "etag": null,
+      "bytes": 215,
+      "ms": 32,
+      "hash": "34519adf5315d78f28aad1c2da9ed37dbd57172bb28db5c6922c088346d1108a",
+      "helplineMention": true
+    }
+  ],
+  "crawlerProbes": [
+    {
+      "userAgent": "Googlebot",
+      "status": 200,
+      "equalsRelease": true,
+      "bytes": 79936,
+      "robots": null
+    },
+    {
+      "userAgent": "bingbot",
+      "status": 200,
+      "equalsRelease": true,
+      "bytes": 79936,
+      "robots": null
+    },
+    {
+      "userAgent": "OAI-SearchBot",
+      "status": 200,
+      "equalsRelease": true,
+      "bytes": 79936,
+      "robots": null
+    },
+    {
+      "userAgent": "ChatGPT-User",
+      "status": 200,
+      "equalsRelease": true,
+      "bytes": 79936,
+      "robots": null
+    }
+  ],
+  "crawlerScope": "User-Agent response probes from this environment, not authenticated crawler visits or log evidence.",
+  "links": [
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/llms.txt",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/national-autism-helpline/llms.txt",
+      "ms": 11
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/facts.json",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/national-autism-helpline/facts.json",
+      "ms": 12
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/facts.txt",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/national-autism-helpline/facts.txt",
+      "ms": 17
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "title": "National Autism Helpline: 9100181181 | Free 24/7 | Pinnacle",
+      "ms": 20
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/favicon.png",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/favicon.png",
+      "ms": 25
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/",
+      "title": "#1 Autism Therapy Centres Network -for your kids to be self",
+      "ms": 43
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-therapy",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/autism-therapy",
+      "title": "Best Autism Therapy Centers in Delhi, Hyderabad, Bengaluru,",
+      "ms": 93
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "title": "Best Speech Therapy Centers in Delhi, Hyderabad, Bengaluru,",
+      "ms": 102
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+      "title": "Special Education Support for Children | Pinnacle Blooms",
+      "ms": 95
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "title": "Autism &amp; Speech Therapy in Suchitra, Hyderabad | Pinnacle Blooms",
+      "ms": 110
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+      "title": "Best Occupational Therapy Centers in Delhi, Hyderabad, Beng",
+      "ms": 200
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+      "title": "Best ABA Therapy Centers in Delhi, Hyderabad, Bengaluru, Vi",
+      "ms": 285
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+      "title": "Autism &amp; Speech Therapy in Jaya Nagar, Bengaluru | Pinnacle Blooms",
+      "ms": 220
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "title": "Autism &amp; Speech Therapy in Kukatpally, Hyderabad | Pinnacle Blooms",
+      "ms": 260
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+      "title": "Autism &amp; Speech Therapy in Indira Nagar, Bengaluru | Pinnacle Blooms",
+      "ms": 284
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "title": "Autism &amp; Speech Therapy in LB Nagar, Hyderabad | Pinnacle Blooms",
+      "ms": 303
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "title": "Autism &amp; Speech Therapy in Vijayawada | Pinnacle Blooms",
+      "ms": 82
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/contact-national-autism-helpline-24-7",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/contact-national-autism-helpline-24-7",
+      "title": "Contact Us - Pinnacle Blooms Network",
+      "ms": 92
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "title": "Autism &amp; Speech Therapy in New Delhi | Pinnacle Blooms",
+      "ms": 154
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html",
+      "title": "What does my child’s AbilityScore® mean? | Pinnacle",
+      "ms": 209
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "title": "Pinnacle Research Library | Papers, Books, DOI &amp; Author Profiles",
+      "ms": 201
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "title": "MD-5 · Class B manufacturing licence | Verify Pinnacle",
+      "ms": 210
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+      "title": "From assessment to everyday practice | Pinnacle",
+      "ms": 219
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
+      "title": "PinnacleAI® Regulatory Journey | Purpose, Evidence and Export Readiness",
+      "ms": 234
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/guides/licences-and-scope.html",
+      "title": "What do PinnacleAI®’s MD-5 and BIS records cover? | Pinnacle",
+      "ms": 201
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/organisation-profile.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/organisation-profile.html",
+      "title": "Pinnacle Blooms Network: organisation profile",
+      "ms": 212
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/scale-register.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/scale-register.html",
+      "title": "Pinnacle Statistics | Six Measures &amp; Their Evidence",
+      "ms": 219
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/",
+      "title": "PinnacleAI® Verify | Pinnacle Blooms Network",
+      "ms": 779
+    }
+  ],
+  "homeLinksToHelpline": true,
+  "verifyLinksToHelpline": true,
+  "retrievalState": "Web search tool fetched an older extract on 24 September 2026; compare live responses separately. No rank or AI answer citation claimed."
+}

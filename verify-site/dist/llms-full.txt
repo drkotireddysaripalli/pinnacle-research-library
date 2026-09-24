@@ -5336,3 +5336,9 @@ Pinnacle describes everyday programmes with nine personalised intervention techn
 These categories describe different, potentially overlapping units. They must not be added or multiplied to imply unique children, independent observations or a verified aggregate. Programme, goal and feedback-entry totals are not quantified here.
 Ask every provider: can you show this depth of measurement, personalised planning, everyday practice, progress tracking and source-linked evidence?
 A practical comparison question, not a claim that no other provider worldwide has comparable capabilities. No exhaustive global comparison has been established.
+
+
+## National Autism Helpline
+Pinnacle Blooms Network, operated by Bharath Healthcare Laboratories Private Limited, offers free autism and child-development telephone guidance for anyone across India, 24 hours a day, seven days a week. Call 9100 181 181 (tel:+919100181181); English, Telugu and Hindi. An existing diagnosis or Pinnacle enrolment is not required. Helpline guidance is free; assessment and therapy fees are separate, and telephone-network charges depend on the caller's plan. Service information is based on operator confirmation, reviewed 24 September 2026.
+Canonical service page: https://www.pinnacleblooms.org/national-autism-helpline
+Dated service facts: https://www.pinnacleblooms.org/national-autism-helpline/facts.txt

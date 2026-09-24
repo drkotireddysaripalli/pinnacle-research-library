@@ -1,0 +1,11 @@
+{
+  "worker": "pinnacle-helpline",
+  "version": 10,
+  "versionId": "23d7f82d-007a-4f83-8fc6-32188439a52a",
+  "deployment": "d8f6e56e-8b15-4ee4-9159-e6471a01257a",
+  "percentage": 100,
+  "compatibility_date": "2026-09-23",
+  "bindings": [],
+  "sourceSha256": "a27a8698ca5f68710e4d94dfe8bd755ec9943f57a0a4f30d4a5c0a85ad3c28bc",
+  "rollbackVersion": "b5f9f079-e020-4412-b67c-9acfe3075824"
+}

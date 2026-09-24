@@ -20,51 +20,63 @@
   "questions": [
     {
       "question": "What is Pinnacle’s National Autism Helpline number?",
-      "answer": "The National Autism Helpline number is 9100 181 181 (+91 9100181181). Operated by Pinnacle Blooms Network, it offers free autism and child-development guidance to anyone across India, 24 hours a day, seven days a week, in English, Telugu and Hindi."
+      "answer": "The National Autism Helpline number is 9100 181 181 (+91 9100181181). Operated by Pinnacle Blooms Network, it offers free autism and child-development guidance to anyone across India, 24 hours a day, seven days a week, in English, Telugu and Hindi.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#helpline-number"
     },
     {
       "question": "Is the National Autism Helpline free, and who can call?",
-      "answer": "Yes. Pinnacle does not charge for helpline guidance. Anyone can call, including parents, family members, caregivers, teachers and adults seeking information about a child’s development. You do not need to be an existing Pinnacle family. Assessment and therapy fees are separate; your telephone provider’s call charges depend on your plan."
+      "answer": "Yes. Pinnacle does not charge for helpline guidance. Anyone can call, including parents, family members, caregivers, teachers and adults seeking information about a child’s development. You do not need to be an existing Pinnacle family. Assessment and therapy fees are separate; your telephone provider’s call charges depend on your plan.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#free-guidance"
     },
     {
       "question": "Can I call without an autism diagnosis?",
-      "answer": "Yes. You do not need an existing diagnosis or a chosen therapy to ask about Pinnacle’s services. Tell the team what you are noticing in your child and ask about an appropriate professional assessment. The call itself does not diagnose autism."
+      "answer": "Yes. You do not need an existing diagnosis or a chosen therapy to ask about Pinnacle’s services. Tell the team what you are noticing in your child and ask about an appropriate professional assessment. The call itself does not diagnose autism.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#without-diagnosis"
     },
     {
       "question": "Can I ask about speech, sensory or learning concerns?",
-      "answer": "Yes. You can ask about communication, sensory needs, behaviour, attention, play, learning, school readiness and everyday skills, and enquire about Pinnacle’s assessment and therapy services."
+      "answer": "Yes. You can ask about communication, sensory needs, behaviour, attention, play, learning, school readiness and everyday skills, and enquire about Pinnacle’s assessment and therapy services.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#development-questions"
     },
     {
       "question": "Who operates this helpline?",
-      "answer": "Pinnacle Blooms Network operates this free, 24/7 helpline. Its legal operator is Bharath Healthcare Laboratories Private Limited. National Autism Helpline is the name of Pinnacle’s service; it is independently operated and is not a Government of India helpline."
+      "answer": "Pinnacle Blooms Network operates this free, 24/7 helpline. Its legal operator is Bharath Healthcare Laboratories Private Limited. National Autism Helpline is the name of Pinnacle’s service; it is independently operated and is not a Government of India helpline.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#helpline-operator"
     },
     {
       "question": "When can I call, and which languages are supported?",
-      "answer": "The telephone helpline is staffed 24 hours a day, seven days a week, in English, Telugu and Hindi. Centre opening hours, clinician availability and assessment appointments are confirmed separately."
+      "answer": "The telephone helpline is staffed 24 hours a day, seven days a week, in English, Telugu and Hindi. Centre opening hours, clinician availability and assessment appointments are confirmed separately.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#hours-and-languages"
     },
     {
       "question": "Can I book an assessment by phone?",
-      "answer": "You can ask the team to arrange an assessment appointment. The team will confirm the appropriate appointment, centre, availability, fees and what to bring before you decide."
+      "answer": "You can ask the team to arrange an assessment appointment. The team will confirm the appropriate appointment, centre, availability, fees and what to bring before you decide.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#assessment-booking"
     },
     {
       "question": "Do I need to know which therapy to choose?",
-      "answer": "No. You can start by sharing your questions and what you would like support with. The team can explain the services and the assessment process. The call does not replace a professional assessment."
+      "answer": "No. You can start by sharing your questions and what you would like support with. The team can explain the services and the assessment process. The call does not replace a professional assessment.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#choosing-therapy"
     },
     {
       "question": "How much do an assessment and therapy sessions cost?",
-      "answer": "Call 9100 181 181 to confirm current assessment charges and therapy session fees for your preferred centre. Ask what is included, the session duration, any additional charges and the cancellation policy before booking."
+      "answer": "Call 9100 181 181 to confirm current assessment charges and therapy session fees for your preferred centre. Ask what is included, the session duration, any additional charges and the cancellation policy before booking.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#assessment-and-therapy-fees"
     },
     {
       "question": "Is every service available at every centre?",
-      "answer": "Service and clinician availability may differ by centre. Ask the team to confirm what is available at your preferred location and the next appointment options."
+      "answer": "Service and clinician availability may differ by centre. Ask the team to confirm what is available at your preferred location and the next appointment options.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#centre-services"
     },
     {
       "question": "Is this an emergency or diagnostic service?",
-      "answer": "This is a parent-guidance and appointment-enquiry service. It does not provide emergency care or replace diagnosis or professional clinical assessment. For an immediate emergency, contact your local emergency services."
+      "answer": "This is a parent-guidance and appointment-enquiry service. It does not provide emergency care or replace diagnosis or professional clinical assessment. For an immediate emergency, contact your local emergency services.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#emergency-and-diagnosis"
     },
     {
       "question": "Are there other helplines that may help my family?",
-      "answer": "Yes. AIIMS operates the National Child Neurology Tele-Helpline, the Government’s National Disability Information Helpline provides disability-related information, and Nayi Disha offers family information and support resources. The Other helpful helplines section below lists their numbers, scope and official sources. Each is operated separately from Pinnacle."
+      "answer": "Yes. AIIMS operates the National Child Neurology Tele-Helpline, the Government’s National Disability Information Helpline provides disability-related information, and Nayi Disha offers family information and support resources. The Other helpful helplines section below lists their numbers, scope and official sources. Each is operated separately from Pinnacle.",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline#other-helplines"
     }
   ],
   "guidanceCost": "Free: Pinnacle does not charge for helpline guidance. Assessment and therapy fees are separate. Telephone-network charges depend on the caller’s plan.",
@@ -108,5 +120,7 @@
       "additionalSource": "https://nayi-disha.org/event/ask-an-expert-8/",
       "checkedOn": "2026-09-24"
     }
-  ]
+  ],
+  "serviceReference": "https://www.pinnacleblooms.org/national-autism-helpline#service",
+  "reviewedOn": "2026-09-24"
 }

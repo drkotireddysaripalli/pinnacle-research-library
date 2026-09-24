@@ -178,3 +178,7 @@ The current 18-part life-first explanation is linked below. These earlier care-s
 ## Sixteen reading topics
 - [Explore at your pace](https://pinnacle-verify.saripalli.chatgpt.site/#reader-guide): sixteen expandable topics with original sources, research and practical explanations.
 - [Reading topics JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/reading-topics.json): the same topic titles, descriptions and direct links.
+
+## National Autism Helpline
+- [Free guidance for anyone, 24/7](https://www.pinnacleblooms.org/national-autism-helpline): Pinnacle Blooms Network, operated by Bharath Healthcare Laboratories Private Limited. Call 9100 181 181; English, Telugu and Hindi.
+- [Dated service facts](https://www.pinnacleblooms.org/national-autism-helpline/facts.txt): operator-confirmed hours, languages, guidance scope and assessment/therapy fee distinctions.

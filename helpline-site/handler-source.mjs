@@ -11,8 +11,8 @@ function responseHeaders() {
     'ETag': HELPLINE_ETAG,
     'Link': '<' + CANONICAL_URL + '/sitemap.xml>; rel="sitemap"; type="application/xml"',
     'X-Content-Type-Options': 'nosniff',
-    'Referrer-Policy': 'no-referrer',
-    'Content-Security-Policy': "default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; font-src data:; script-src 'sha256-" + JSONLD_CSP_HASH + "'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
+    'Content-Security-Policy': "default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; font-src 'self'; script-src 'sha256-" + JSONLD_CSP_HASH + "'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   };
 }
@@ -28,7 +28,7 @@ function assetResponse(request, asset) {
     'Cache-Control': 'public, max-age=300',
     'ETag': asset.etag,
     'X-Content-Type-Options': 'nosniff',
-    'Referrer-Policy': 'no-referrer',
+    'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Content-Security-Policy': "default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; frame-ancestors 'none'; sandbox",
   };
   if (isNotModified(request, asset.etag)) return new Response(null, { status: 304, headers });

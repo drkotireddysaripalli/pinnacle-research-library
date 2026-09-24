@@ -8,7 +8,9 @@ const directory = path.dirname(fileURLToPath(import.meta.url));
 const canonical = 'https://www.pinnacleblooms.org/national-autism-helpline';
 const description = "National Autism Helpline: 9100 181 181. Free, 24/7 guidance for anyone in India, operated by Pinnacle Blooms Network. English, Telugu and Hindi.";
 const resources = JSON.parse(await readFile(path.join(directory,'resources.json'),'utf8'));
-const title = 'National Autism Helpline | Pinnacle Blooms | 9100181181';
+const shareUrl = "https://www.pinnacleblooms.org/national-autism-helpline/assets/national-autism-helpline-share-20260924.jpg";
+const faqIds = ['helpline-number','free-guidance','without-diagnosis','development-questions','helpline-operator','hours-and-languages','assessment-booking','choosing-therapy','assessment-and-therapy-fees','centre-services','emergency-and-diagnosis','other-helplines'];
+const title = 'National Autism Helpline: 9100181181 | Free 24/7 | Pinnacle';
 const questions = [
   [
     "What is Pinnacle’s National Autism Helpline number?",
@@ -63,13 +65,17 @@ const contactId = canonical + '#telephone';
 const contact = { '@type':'ContactPoint','@id':contactId, telephone:'+919100181181',contactType:'Parent guidance and appointment enquiries',areaServed:'IN',availableLanguage:['en','te','hi'],hoursAvailable:{'@type':'OpeningHoursSpecification',dayOfWeek:['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'].map(d=>'https://schema.org/'+d),opens:'00:00',closes:'23:59'}};
 const schema = {'@context':'https://schema.org','@graph':[
 {'@type':'Organization','@id':operatorId,name:'Bharath Healthcare Laboratories Private Limited',url:'https://www.pinnacleblooms.org/verify/evidence/organisation-profile.html',brand:{'@id':brandId},contactPoint:{'@id':contactId}},
-{'@type':'Brand','@id':brandId,name:'Pinnacle Blooms Network',url:'https://www.pinnacleblooms.org/'},contact,
-{'@type':'Service','@id':serviceId,name:'National Autism Helpline',alternateName:'Pinnacle National Autism Helpline',url:canonical,description,serviceType:'Autism and child-development parent guidance and appointment enquiries',provider:{'@id':operatorId},brand:{'@id':brandId},areaServed:{'@type':'Country',name:'India'},availableChannel:{'@type':'ServiceChannel',serviceUrl:canonical,servicePhone:{'@id':contactId}}},
-{'@type':['WebPage','FAQPage'],'@id':canonical+'#webpage',url:canonical,name:title,inLanguage:'en',description,dateModified:'2026-09-24',about:{'@id':serviceId},publisher:{'@id':operatorId},mainEntity:questions.map(([name,text])=>({'@type':'Question',name,acceptedAnswer:{'@type':'Answer',text}}))},
-{'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Pinnacle Blooms',item:'https://www.pinnacleblooms.org/'},{'@type':'ListItem',position:2,name:'National Autism Helpline',item:canonical}]}
+{'@type':'Brand','@id':brandId,name:'Pinnacle Blooms Network',url:'https://www.pinnacleblooms.org/',logo:{'@type':'ImageObject',url:canonical+'/assets/logo.webp',contentUrl:canonical+'/assets/logo.webp',width:420,height:158,caption:'Pinnacle Blooms Network logo'}},contact,
+{'@type':'Service','@id':serviceId,name:'National Autism Helpline',alternateName:'Pinnacle National Autism Helpline',url:canonical,description,serviceType:'Free autism and child-development guidance and appointment enquiries',mainEntityOfPage:{'@id':canonical+'#webpage'},audience:{'@type':'Audience',audienceType:'Parents, family members, caregivers and educators'},provider:{'@id':operatorId},brand:{'@id':brandId},areaServed:{'@type':'Country',name:'India'},availableChannel:{'@type':'ServiceChannel',serviceUrl:canonical,servicePhone:{'@id':contactId}}},
+{'@type':['WebPage','FAQPage'],'@id':canonical+'#webpage',url:canonical,name:title,inLanguage:'en',description,dateModified:'2026-09-24',primaryImageOfPage:{'@id':canonical+'#primary-image'},breadcrumb:{'@id':canonical+'#breadcrumb'},citation:['https://www.pinnacleblooms.org/verify/evidence/organisation-profile.html',canonical+'/facts.txt'],about:{'@id':serviceId},publisher:{'@id':operatorId},mainEntity:questions.map(([name,text],index)=>({'@type':'Question','@id':canonical+'#'+faqIds[index],name,acceptedAnswer:{'@type':'Answer',text}}))},
+{'@type':'ImageObject','@id':canonical+'#primary-image',url:shareUrl,contentUrl:shareUrl,width:1200,height:630,caption:'Pinnacle National Autism Helpline: 9100 181 181. Free guidance for anyone across India, 24/7.'},
+{'@type':'BreadcrumbList','@id':canonical+'#breadcrumb',itemListElement:[{'@type':'ListItem',position:1,name:'Pinnacle Blooms',item:'https://www.pinnacleblooms.org/'},{'@type':'ListItem',position:2,name:'National Autism Helpline',item:canonical}]}
 ]};
+if (questions.length!==faqIds.length) throw new Error('Each FAQ needs a stable citation ID');
 const facts = JSON.parse(await readFile(path.join(directory,'service-facts.json'),'utf8'));
-facts.questions = questions.map(([question,answer])=>({question,answer}));
+facts.questions = questions.map(([question,answer],index)=>({question,answer,url:canonical+'#'+faqIds[index]}));
+facts.serviceReference=canonical+'#service';
+facts.reviewedOn='2026-09-24';
 facts.otherResources = resources;
 const factsText = Object.entries(facts).filter(([key])=>!['questions','otherResources'].includes(key)).map(([key,value])=>key+': '+(Array.isArray(value)?value.join(', '):value)).join('\n')+'\n\n'+questions.map(([q,a])=>q+'\n'+a).join('\n\n')+'\n\nOther independently operated helplines\n'+resources.map(r=>r.name+' — '+r.operator+'\n'+r.displayTelephone+'\n'+r.description+'\n'+r.availability+'\nSource: '+r.source+'\nChecked: '+r.checkedOn).join('\n\n')+'\n';
 const llmsText = '# Pinnacle National Autism Helpline\n\n'+description+'\n\n- [Canonical service page]('+canonical+')\n- [Service facts]('+canonical+'/facts.json)\n- [Plain text]('+canonical+'/facts.txt)\n- [Other independently operated helplines]('+canonical+'#other-support)\n- [Operator evidence]('+facts.evidence+')\n\nFree refers to helpline guidance. Assessment and therapy fees are separate. Telephone-network charges depend on the caller’s plan. Centre and clinician availability are confirmed separately. Source: operator confirmation, 24 September 2026. This reading aid does not confer indexing or AI inclusion.\n';
@@ -77,19 +83,18 @@ const serviceExports = Object.fromEntries([['facts.json','application/json',JSON
 await writeFile(path.join(directory,'service-facts.json'),JSON.stringify(facts,null,2)+'\n');
 const escapeHtml = value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 let html = await readFile(path.join(directory, 'page.html'), 'utf8');
-html = html.replace('@@FAQ@@', questions.map(([q,a]) => '<details><summary>'+q+'</summary><p>'+a+'</p></details>').join('\n'));
+html = html.replace('@@FAQ@@', questions.map(([q,a],index) => '<details id="'+faqIds[index]+'"><summary>'+q+'</summary><p>'+a+'</p><a class="faq-link" href="#'+faqIds[index]+'">Link to this answer</a></details>').join('\n'));
 html = html.replace('@@RESOURCES@@', resources.map(r=>'<article class="resource-card" id="'+r.id+'"><div><p class="resource-operator">'+escapeHtml(r.operator)+'</p><h3>'+escapeHtml(r.name)+'</h3><p class="resource-description">'+escapeHtml(r.description)+'</p><a class="resource-source" href="'+r.source+'">'+escapeHtml(r.sourceLabel)+' ↗</a></div><div class="resource-contact"><a class="resource-phone" href="tel:'+r.telephone+'" aria-label="Call '+escapeHtml(r.name)+' on '+r.displayTelephone+'">'+r.displayTelephone+'</a><p class="resource-availability">'+escapeHtml(r.availability)+'</p></div></article>').join('\n'));
 const font = await readFile(path.join(directory, 'anek-telugu-subset.woff2'));
 const license = await readFile(path.join(directory, 'anek-telugu-OFL.txt'), 'utf8');
-html = html.replace('@@TELUGU_FONT@@', font.toString('base64'))
-  .replace('@@SCHEMA@@', JSON.stringify(schema).replaceAll('<', '\\u003c'))
+html = html.replace('@@SCHEMA@@', JSON.stringify(schema).replaceAll('<', '\\u003c'))
   .replace('@@FONT_LICENSE@@', license.replaceAll('--', '—'));
 if (html.includes('@@')) throw new Error('Unfilled template placeholder');
 const etag = '"' + createHash('sha256').update(html).digest('hex').slice(0,24) + '"';
 const jsonld = JSON.stringify(schema).replaceAll('<', '\\u003c');
 const jsonldHash = createHash('sha256').update(jsonld).digest('base64');
 const assetDirectory = path.join(directory, 'assets');
-const imageTypes = { '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml; charset=utf-8' };
+const imageTypes = { '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.svg': 'image/svg+xml; charset=utf-8', '.woff2': 'font/woff2' };
 const assets = Object.create(null);
 let entries;
 try { entries = await readdir(assetDirectory, { withFileTypes: true }); }
@@ -98,7 +103,7 @@ for (const entry of entries.sort((a, b) => a.name.localeCompare(b.name, 'en'))) 
   // Only explicitly bundled top-level images are public. Never follow symlinks or folders.
   const extension = path.extname(entry.name).toLowerCase();
   if (!entry.isFile() || !Object.hasOwn(imageTypes, extension)) continue;
-  if (!/^[a-z0-9][a-z0-9._-]*\.(?:png|jpg|webp|svg)$/i.test(entry.name)) throw new Error('Image filename must use URL-safe ASCII characters: ' + entry.name);
+  if (!/^[a-z0-9][a-z0-9._-]*\.(?:png|jpg|webp|svg|woff2)$/i.test(entry.name)) throw new Error('Image filename must use URL-safe ASCII characters: ' + entry.name);
   const bytes = await readFile(path.join(assetDirectory, entry.name));
   if (!bytes.length) throw new Error('Image asset is empty: ' + entry.name);
   assets['/national-autism-helpline/assets/' + entry.name] = {

@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-24T09:22:05.310Z",
+  "date": "2026-09-24T09:43:56.139Z",
   "exactHtml": true,
   "faqs": 12,
   "externalResources": 3,
@@ -30,9 +30,14 @@
       "type": "application/xml; charset=utf-8"
     },
     {
-      "url": "https://www.pinnacleblooms.org/national-autism-helpline/assets/care-participation.webp",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/assets/national-autism-helpline-share-20260924.jpg",
       "status": 200,
-      "type": "image/webp"
+      "type": "image/jpeg"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/assets/anek-telugu-full.woff2",
+      "status": 200,
+      "type": "font/woff2"
     },
     {
       "url": "https://www.pinnacleblooms.org/verify/",
