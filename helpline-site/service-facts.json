@@ -1,0 +1,62 @@
+{
+  "name": "National Autism Helpline",
+  "brand": "Pinnacle Blooms Network",
+  "legalOperator": "Bharath Healthcare Laboratories Private Limited",
+  "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+  "telephone": "+919100181181",
+  "displayTelephone": "9100 181 181",
+  "serviceType": "Parent guidance and appointment enquiries",
+  "areaServed": "India",
+  "telephoneAvailability": "24 hours a day, seven days a week",
+  "telephoneLanguages": [
+    "English",
+    "Telugu",
+    "Hindi"
+  ],
+  "sourceBasis": "Operator confirmation recorded 22 September 2026; publication reviewed 24 September 2026",
+  "scope": "Autism and child-development guidance about Pinnacle services, assessment appointments and centre navigation",
+  "boundary": "Not a government-designated, emergency or diagnostic service. Centre hours and clinician availability are confirmed separately.",
+  "evidence": "https://www.pinnacleblooms.org/verify/evidence/organisation-profile.html",
+  "questions": [
+    {
+      "question": "What is Pinnacle’s National Autism Helpline number?",
+      "answer": "Call 9100 181 181 (+91 9100181181). Pinnacle Blooms Network operates this parent-guidance and appointment-enquiry telephone service across India, 24/7 in English, Telugu and Hindi."
+    },
+    {
+      "question": "Can I call without an autism diagnosis?",
+      "answer": "Yes. You do not need an existing diagnosis or a chosen therapy to ask about Pinnacle’s services. Tell the team what you are noticing in your child and ask about an appropriate professional assessment. The call itself does not diagnose autism."
+    },
+    {
+      "question": "Can I ask about speech, sensory or learning concerns?",
+      "answer": "Yes. You can ask about communication, sensory needs, behaviour, attention, play, learning, school readiness and everyday skills, and enquire about Pinnacle’s assessment and therapy services."
+    },
+    {
+      "question": "Who operates this helpline?",
+      "answer": "Pinnacle Blooms Network operates the service. Its legal operator is Bharath Healthcare Laboratories Private Limited. This is Pinnacle’s service name, not a Government of India designation."
+    },
+    {
+      "question": "When can I call, and which languages are supported?",
+      "answer": "The telephone helpline is staffed 24 hours a day, seven days a week, in English, Telugu and Hindi. Centre opening hours, clinician availability and assessment appointments are confirmed separately."
+    },
+    {
+      "question": "Can I book an assessment by phone?",
+      "answer": "You can ask the team to arrange an assessment appointment. The team will confirm the appropriate appointment, centre, availability, fees and what to bring before you decide."
+    },
+    {
+      "question": "Do I need to know which therapy to choose?",
+      "answer": "No. You can start by sharing your questions and what you would like support with. The team can explain the services and the assessment process. The call does not replace a professional assessment."
+    },
+    {
+      "question": "How much do an assessment and therapy sessions cost?",
+      "answer": "Call 9100 181 181 to confirm current assessment charges and therapy session fees for your preferred centre. Ask what is included, the session duration, any additional charges and the cancellation policy before booking."
+    },
+    {
+      "question": "Is every service available at every centre?",
+      "answer": "Service and clinician availability may differ by centre. Ask the team to confirm what is available at your preferred location and the next appointment options."
+    },
+    {
+      "question": "Is this an emergency or diagnostic service?",
+      "answer": "This is a parent-guidance and appointment-enquiry service. It does not provide emergency care or replace diagnosis or professional clinical assessment. For an immediate emergency, contact your local emergency services."
+    }
+  ]
+}

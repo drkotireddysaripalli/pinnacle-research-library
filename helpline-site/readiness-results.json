@@ -1,0 +1,88 @@
+{
+  "time": "2026-09-24T08:31:08.837Z",
+  "passed": 19,
+  "skipped": 0,
+  "assetCount": 9,
+  "assetBytes": 631722,
+  "htmlBytes": 315520,
+  "gzipBytes": 209431,
+  "results": [
+    {
+      "name": "GET serves the static page and correct canonical",
+      "passed": true
+    },
+    {
+      "name": "HEAD returns headers and no body",
+      "passed": true
+    },
+    {
+      "name": "Trailing slash redirects to the one canonical page",
+      "passed": true
+    },
+    {
+      "name": "Non-canonical scheme redirects",
+      "passed": true
+    },
+    {
+      "name": "Unrelated paths, suffix paths and wrong hosts return 404",
+      "passed": true
+    },
+    {
+      "name": "POST is refused without collecting a form",
+      "passed": true
+    },
+    {
+      "name": "ETag validator returns 304 without a body",
+      "passed": true
+    },
+    {
+      "name": "Query parameters do not change or enter page output",
+      "passed": true
+    },
+    {
+      "name": "Single URL sitemap supports GET and HEAD",
+      "passed": true
+    },
+    {
+      "name": "CSP allows same-origin images and embedded fonts without external sources",
+      "passed": true
+    },
+    {
+      "name": "Unknown image paths and non-image paths return no-store404 without fetching",
+      "passed": true
+    },
+    {
+      "name": "Every embedded image serves exact bytes, safe MIME and matching GET/HEAD headers",
+      "passed": true
+    },
+    {
+      "name": "Asset validators, method limits, canonical scheme and host guards work",
+      "passed": true
+    },
+    {
+      "name": "Every page image references an explicitly bundled same-origin asset",
+      "passed": true
+    },
+    {
+      "name": "Every call link uses the one international phone target",
+      "passed": true
+    },
+    {
+      "name": "No forms, executable scripts, trackers, external assets or unresolved placeholders",
+      "passed": true
+    },
+    {
+      "name": "Five service cards and seven journey steps exist",
+      "passed": true
+    },
+    {
+      "name": "Structured data is factual and exactly matches the visible FAQ",
+      "passed": true
+    },
+    {
+      "name": "Public exports match service identity and reject unsupported methods",
+      "passed": true
+    }
+  ],
+  "visualReview": "Pending root browser review; local server provided."
+}

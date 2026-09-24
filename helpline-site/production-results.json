@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-24T08:32:29.076Z",
+  "exactHtml": true,
+  "faqs": 10,
+  "results": [
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/facts.json",
+      "status": 200,
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/facts.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/llms.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline/assets/care-participation.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "status": 200
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/",
+      "status": 200
+    }
+  ]
+}

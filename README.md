@@ -16,6 +16,8 @@ For provenance and machine reuse, see the [open-science changelog](OPEN_SCIENCE_
 
 ## Verify Pinnacle and follow the source trail
 
+**Parent guidance:** [Pinnacle’s National Autism Helpline — 9100 181 181](https://www.pinnacleblooms.org/national-autism-helpline) provides telephone parent guidance and appointment enquiries. [Dated service facts](https://www.pinnacleblooms.org/national-autism-helpline/facts.json) identify the operator, confirmed telephone hours and languages. [Page source and developer handoff](helpline-site/RELEASE.md).
+
 **PinnacleAI story and export milestone:** [read the complete source-linked narrative](https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html) and the [regulatory source guide with certificate and citation downloads](PinnacleAI_Regulatory_Journey.md). The 23 September 2026 Free Sale Certificate adds Indian export documentation; international registrations remain country-specific.
 
 The public [Pinnacle Verification Centre](https://www.pinnacleblooms.org/verify/) connects Pinnacle Blooms Network's organisation identity, licences, regulatory scope, reported scale, research and review method to inspectable source records. Use the focused routes below to verify a claim or cite the underlying material:

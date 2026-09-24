@@ -1,0 +1,192 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.pinnacleblooms.org/verify/#organization",
+      "name": "Bharath Healthcare Laboratories Private Limited",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/organisation-profile.html",
+      "brand": {
+        "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+      },
+      "contactPoint": {
+        "@id": "https://www.pinnacleblooms.org/national-autism-helpline#telephone"
+      }
+    },
+    {
+      "@type": "Brand",
+      "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand",
+      "name": "Pinnacle Blooms Network",
+      "url": "https://www.pinnacleblooms.org/"
+    },
+    {
+      "@type": "ContactPoint",
+      "@id": "https://www.pinnacleblooms.org/national-autism-helpline#telephone",
+      "telephone": "+919100181181",
+      "contactType": "Parent guidance and appointment enquiries",
+      "areaServed": "IN",
+      "availableLanguage": [
+        "en",
+        "te",
+        "hi"
+      ],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "https://schema.org/Monday",
+          "https://schema.org/Tuesday",
+          "https://schema.org/Wednesday",
+          "https://schema.org/Thursday",
+          "https://schema.org/Friday",
+          "https://schema.org/Saturday",
+          "https://schema.org/Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.pinnacleblooms.org/national-autism-helpline#service",
+      "name": "National Autism Helpline",
+      "alternateName": "Pinnacle National Autism Helpline",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "description": "The National Autism Helpline operated by Pinnacle Blooms Network® is 9100 181 181 — a telephone service for autism and child-development parent guidance and appointment enquiries across India.",
+      "serviceType": "Autism and child-development parent guidance and appointment enquiries",
+      "provider": {
+        "@id": "https://www.pinnacleblooms.org/verify/#organization"
+      },
+      "brand": {
+        "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "servicePhone": {
+          "@id": "https://www.pinnacleblooms.org/national-autism-helpline#telephone"
+        }
+      }
+    },
+    {
+      "@type": [
+        "WebPage",
+        "FAQPage"
+      ],
+      "@id": "https://www.pinnacleblooms.org/national-autism-helpline#webpage",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "name": "National Autism Helpline | Pinnacle Blooms | 9100181181",
+      "inLanguage": "en",
+      "description": "Call Pinnacle Blooms National Autism Helpline on 9100 181 181 for parent guidance and appointment enquiries. Telephone support: 24/7 in English, Telugu and Hindi.",
+      "dateModified": "2026-09-24",
+      "about": {
+        "@id": "https://www.pinnacleblooms.org/national-autism-helpline#service"
+      },
+      "publisher": {
+        "@id": "https://www.pinnacleblooms.org/verify/#organization"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Pinnacle’s National Autism Helpline number?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call 9100 181 181 (+91 9100181181). Pinnacle Blooms Network operates this parent-guidance and appointment-enquiry telephone service across India, 24/7 in English, Telugu and Hindi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I call without an autism diagnosis?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You do not need an existing diagnosis or a chosen therapy to ask about Pinnacle’s services. Tell the team what you are noticing in your child and ask about an appropriate professional assessment. The call itself does not diagnose autism."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I ask about speech, sensory or learning concerns?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can ask about communication, sensory needs, behaviour, attention, play, learning, school readiness and everyday skills, and enquire about Pinnacle’s assessment and therapy services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who operates this helpline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pinnacle Blooms Network operates the service. Its legal operator is Bharath Healthcare Laboratories Private Limited. This is Pinnacle’s service name, not a Government of India designation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When can I call, and which languages are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The telephone helpline is staffed 24 hours a day, seven days a week, in English, Telugu and Hindi. Centre opening hours, clinician availability and assessment appointments are confirmed separately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book an assessment by phone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can ask the team to arrange an assessment appointment. The team will confirm the appropriate appointment, centre, availability, fees and what to bring before you decide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to know which therapy to choose?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. You can start by sharing your questions and what you would like support with. The team can explain the services and the assessment process. The call does not replace a professional assessment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much do an assessment and therapy sessions cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Call 9100 181 181 to confirm current assessment charges and therapy session fees for your preferred centre. Ask what is included, the session duration, any additional charges and the cancellation policy before booking."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is every service available at every centre?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Service and clinician availability may differ by centre. Ask the team to confirm what is available at your preferred location and the next appointment options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this an emergency or diagnostic service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This is a parent-guidance and appointment-enquiry service. It does not provide emergency care or replace diagnosis or professional clinical assessment. For an immediate emergency, contact your local emergency services."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Pinnacle Blooms",
+          "item": "https://www.pinnacleblooms.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "National Autism Helpline",
+          "item": "https://www.pinnacleblooms.org/national-autism-helpline"
+        }
+      ]
+    }
+  ]
+}
