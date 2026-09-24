@@ -16,6 +16,7 @@ Use this page to reach the most relevant public research resource without treati
 
 ### Reconcile a researcher profile
 
+- Open the [researcher profile directory](RESEARCHER_PROFILE_DIRECTORY.md) for source-matched destination routes and platform-specific interpretation boundaries.
 - Start with the [scholarly profile field map](SCHOLARLY_PROFILE_FIELD_MAP.csv) and [reconciliation guide](SCHOLARLY_PROFILE_RECONCILIATION_GUIDE.md).
 - Preserve Bharath Healthcare Laboratories Private Limited as the professional affiliation. Record Indian School of Business only as completed online executive education. Keep Koti Reddy Saripalli and Sreeja Reddy Saripalli distinct.
 

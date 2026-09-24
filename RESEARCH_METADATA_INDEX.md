@@ -2,6 +2,13 @@
 
 This index collects machine-readable aids for citing, attributing, deduplicating and interpreting the seven-work portfolio. The canonical Zenodo records remain the source of record.
 
+## Portfolio navigation and release provenance
+
+- [Seven-work portfolio overview](RESEARCH_PORTFOLIO_OVERVIEW.md) — one table of canonical DOI, research question, evidence stage, attribution and interpretation limit.
+- [Repository landing guide](REPOSITORY_LANDING_GUIDE.md) — choose a route by reader, citation, profile, methods or correction task.
+- [Open-science resource catalog](OPEN_SCIENCE_RESOURCE_CATALOG.csv) — audience- and purpose-based inventory of reusable public resources.
+- [Portfolio release manifest](PORTFOLIO_RELEASE_MANIFEST.csv) and [open-science changelog](OPEN_SCIENCE_CHANGELOG.md) — dated commit-level provenance and evidence boundaries.
+
 ## Citation and identity
 
 - [Seven canonical citations in CSL-JSON](CANONICAL_CITATIONS_CSL.json) — exact titles, author order, dates, DOI, URL, type and version provenance.

@@ -4,6 +4,12 @@ This changelog tracks public metadata, methods, reproducibility and scholarly-pr
 
 ## 24 September 2026
 
+### Portfolio discovery and identity
+
+- Published a seven-work portfolio overview, task-oriented repository landing guide, audience-based resource catalog and release manifest; linked them from the repository README.
+- Published a source-matched researcher profile directory, endpoint registry, ORCID-keyed identity graph, source-priority matrix and profile-discovery boundaries.
+- Corrected two historical checksum/byte-count rows in the portfolio integrity manifest against immutable Git blobs at `f80bde5`.
+
 ### Repository citation and governance metadata
 
 - Added `CITATION.cff` for repository-level citation while directing study citations to canonical DOIs.

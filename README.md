@@ -155,15 +155,15 @@ These nine Academia listings had no uploaded document when observed on 15 Septem
 
 [ORCID](https://orcid.org/0009-0007-7866-0737) · [ScienceOpen](https://www.scienceopen.com/user/b88b8c87-855f-4e59-b68c-474d9078277f) · [Web of Science researcher profile](https://www.webofscience.com/wos/author/record/RBA-8832-2026)
 
-As of 15 September 2026, ScienceOpen has received requests for the five current preprint DOIs; additions are not yet confirmed. The Web of Science profile displays five **non-indexed** bibliography entries. Profile presence does not establish indexing, peer review or journal acceptance. Canonical titles, types and author/contributor credit are recorded in this library.
+ScienceOpen import and PGAF metadata corrections have been requested; application to the public records remains unverified. The Web of Science bibliography has included **non-indexed** entries. Check each current platform record against the canonical DOI before inferring any indexed publication. Profile presence does not establish indexing, peer review or journal acceptance. Canonical titles, types and author/contributor credit are recorded in this library.
 
 ## Citation, rights and file integrity
 
 - Cite each work using its **original Zenodo DOI**.
 - [catalogue.json](catalogue.json) records all seven canonical works and all 18 Academia records, including the six corresponding mirrors.
 - [Pinnacle_Research_Library.bib](Pinnacle_Research_Library.bib) contains the seven canonical citations and twelve additional Academia bibliography entries.
-- All six Zenodo records declare **Creative Commons Attribution 4.0 International**. Preserve author and contributor attribution. See [RIGHTS_AND_SOURCES.md](RIGHTS_AND_SOURCES.md) for source, code and third-party rights.
-- The six PDFs, three DOCX files, three supplement archives and readable RCI files retain their original content. Three older PDFs use shorter descriptive filenames; the exact public filenames and URLs remain in the catalogue and manifest.
+- All seven canonical Zenodo records display **Creative Commons Attribution 4.0 International**. Preserve author and contributor attribution. See [RIGHTS_AND_SOURCES.md](RIGHTS_AND_SOURCES.md) for source, code and third-party rights.
+- Six canonical PDFs, three DOCX files, three supplement archives and readable RCI files are mirrored here with their original content. The seventh work's files are linked at its canonical Zenodo record. Three older mirrored PDFs use shorter descriptive filenames; the exact public filenames and URLs remain in the catalogue and manifest.
 - [package_manifest.json](package_manifest.json) and [SHA256SUMS.txt](SHA256SUMS.txt) identify file sizes, checksums and provenance.
 
-Public metadata was observed on 15 September 2026.
+The initial catalogue snapshot was observed on 15 September 2026. Later work, profile and correction states are dated in the linked records and [open-science changelog](OPEN_SCIENCE_CHANGELOG.md).

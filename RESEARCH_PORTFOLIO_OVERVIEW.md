@@ -14,6 +14,10 @@ This page is a compact, source-linked map of the seven canonical works in the Pi
 | PGAF | [10.5281/zenodo.15487405](https://doi.org/10.5281/zenodo.15487405) | Framework report | Presents the source report's description of an outcome-based child-development framework. | Claims remain attributable to the report; Koti Reddy Saripalli is the author and Sreeja Reddy Saripalli is the editor. | [Summary](WORK_SUMMARY_PGAF.md) |
 | Participation review | [10.5281/zenodo.22827813](https://doi.org/10.5281/zenodo.22827813) | Systematic-review protocol preprint | Defines a planned review of child- and caregiver-anchored estimates of meaningful participation change. | The review is unregistered in the released record and reports no completed review findings. | [Summary](WORK_SUMMARY_PARTICIPATION_REVIEW.md) |
 
+## Creator and contributor attribution
+
+Koti Reddy Saripalli is the sole deposited creator of the regulatory case, RCI register analysis, PINNACLE-TRAJ protocol and PGAF report. The PINNACLE-VAL protocol, AbilityScore development monograph and participation-review protocol list **Koti Reddy Saripalli; Raghupathi Ramtenki; Srikanth Yadav Boini**, in that order. The PGAF record separately credits **Sreeja Reddy Saripalli as Editor** and **Koti Group SEVA Foundation as ResearchGroup contributor**. These contributor roles are not additional authors. The exact source fields are reproduced in the [author and contributor role map](AUTHOR_CONTRIBUTOR_ROLE_MAP.csv).
+
 ## Portfolio-wide boundaries
 
 - The portfolio contains six preprints and one report. It does not represent seven peer-reviewed journal articles.

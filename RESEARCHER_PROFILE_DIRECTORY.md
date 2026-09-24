@@ -11,6 +11,8 @@ This directory links public research-identity and dissemination routes associate
 
 Use the canonical Zenodo DOI listed for each work in the [portfolio overview](RESEARCH_PORTFOLIO_OVERVIEW.md). The public OSF PINNACLE-VAL registration is retrospective because some planned analyses had already run; it is a companion registration, not an eighth study.
 
+The [Research Square RCI preprint](https://www.researchsquare.com/article/rs-11043330/v1), DOI `10.21203/rs.3.rs-11043330/v1`, is a dated version of the RCI register study whose canonical Zenodo version is [10.5281/zenodo.22761810](https://doi.org/10.5281/zenodo.22761810). Preserve both version dates and count one underlying study.
+
 ## Scholarly profiles and research-community routes
 
 | Destination | Public route | Appropriate use | Boundary |

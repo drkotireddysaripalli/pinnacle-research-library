@@ -11,3 +11,6 @@ f80bde5,2026-09-24,interoperability,Published interoperable portfolio metadata,n
 2a33c07,2026-09-24,governance,Added repository citation and governance metadata,none,Correction route remains source-first
 4c479bb,2026-09-24,maintenance,Corrected governance index spacing,none,Presentation-only follow-up
 0052cce,2026-09-24,provenance,Documented open-science resource history,none,Changelog distinguishes resources from studies and results
+3b440ae,2026-09-24,discovery,Published seven-work portfolio overview and task-oriented landing resources,none,Navigation records preserve source DOI and evidence boundaries
+e5a787e,2026-09-24,identity,Published scholarly identity directory and source-priority resources,none,Profile routes and memberships do not imply endorsement or indexing
+ffc3208,2026-09-24,correction,Corrected two historical integrity-manifest checksum rows,none,Values match immutable source blobs at f80bde5
