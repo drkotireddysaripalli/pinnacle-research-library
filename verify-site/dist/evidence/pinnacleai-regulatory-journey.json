@@ -1,0 +1,195 @@
+{
+  "title": "PinnacleAI® Regulatory Journey | Purpose, Evidence and Export Readiness",
+  "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html",
+  "updated": "2026-09-24",
+  "publisher": "Bharath Healthcare Laboratories Private Limited",
+  "legalManufacturer": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "product": {
+    "name": "PinnacleAI GPT-OS v1.0.0",
+    "classification": "Class B",
+    "scope": "Non-diagnostic developmental-support software",
+    "population": "Children aged 0–12"
+  },
+  "purpose": [
+    [
+      "Purpose",
+      "A self-sufficient, mainstream and wonderful life for the child determines the abilities, goals, people, methods, everyday practice and review."
+    ],
+    [
+      "Measure and plan",
+      "The seven-stage pathway connects capability identification and AbilityScore® measurement with readiness forecasting and a child-specific plan."
+    ],
+    [
+      "Support everyday participation",
+      "Integrated intervention, parent-guided practice, progress review and reassessment work toward growing independence and participation."
+    ],
+    [
+      "Build accountable technology",
+      "PinnacleAI® supports the pathway as licensed non-diagnostic developmental-support software with human and professional review."
+    ]
+  ],
+  "pathway": [
+    "Identify capabilities and measure ability",
+    "Forecast readiness and create a child-specific plan",
+    "Provide integrated therapies and intervention",
+    "Support parent-guided everyday practice and home generalisation",
+    "Track progress and correct the plan",
+    "Reassess and repeat until readiness",
+    "Support growing independence, school readiness and mainstream participation"
+  ],
+  "regulatoryFoundation": [
+    {
+      "milestone": "Class B classification",
+      "meaning": "Indian medical-device classification trail",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html"
+    },
+    {
+      "milestone": "Form MD-5",
+      "meaning": "Manufacturing licence MFG/MD/2026/000248",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
+    },
+    {
+      "milestone": "ISO 13485:2016",
+      "meaning": "Quality-management system scope",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html"
+    },
+    {
+      "milestone": "ISO/IEC 27001:2022",
+      "meaning": "Information-security management scope",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html"
+    },
+    {
+      "milestone": "BIS IS 23485:2019",
+      "meaning": "Licence and certified scope",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
+    },
+    {
+      "milestone": "Free Sale Certificate",
+      "meaning": "FSC/MD/2026/000741 · 23 September 2026",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
+    }
+  ],
+  "freeSaleCertificate": {
+    "number": "FSC/MD/2026/000741",
+    "issued": "2026-09-23",
+    "meaning": "Indian domestic marketability and export eligibility, subject to importing-country law",
+    "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
+  },
+  "internationalMarkets": [
+    {
+      "country": "New Zealand",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "United Kingdom",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Brazil",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Vietnam",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Thailand",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Colombia",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Peru",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Saudi Arabia",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Canada",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Organisation describes an MDSAP audit plan; scheduling and completion are not verified. Country market access is separate."
+    },
+    {
+      "country": "Australia",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Organisation describes an MDSAP audit plan; scheduling and completion are not verified. Country market access is separate."
+    }
+  ],
+  "questions": [
+    {
+      "question": "What is PinnacleAI®?",
+      "answer": "PinnacleAI® GPT-OS v1.0.0 is identified in the supplied Indian manufacturing licence as Class B, non-diagnostic developmental-support software for children aged 0–12. Its stated functions include developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support."
+    },
+    {
+      "question": "Who is the legal manufacturer?",
+      "answer": "Bharath Healthcare Laboratories Private Limited is the licence holder and legal manufacturer named in the reviewed regulatory records. Pinnacle Blooms Network is the child-development brand and service ecosystem."
+    },
+    {
+      "question": "What does the Free Sale Certificate establish?",
+      "answer": "FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for the licensed device. It supports country-specific market-access applications; it is not approval or registration in another country."
+    },
+    {
+      "question": "Does PinnacleAI® diagnose children?",
+      "answer": "No. The licensed product is described as non-diagnostic developmental-support software. Clinical and care decisions remain within the appropriate human and professional review process."
+    },
+    {
+      "question": "Has PinnacleAI® been registered in other countries?",
+      "answer": "This page does not claim a foreign registration. Each market will be labelled researching, representative appointed, technical file prepared, submitted, under review or registered only when the corresponding evidence is available."
+    },
+    {
+      "question": "How can the evidence be reused?",
+      "answer": "Use the citation downloads and machine-readable JSON or text exports. Cite the exact licence, certificate or dated report for a specific claim and retain its date and scope."
+    }
+  ],
+  "sources": [
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html"
+  ]
+}

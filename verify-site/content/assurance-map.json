@@ -8,6 +8,118 @@
   "membership": "200027",
   "signedDate": "2026-09-03",
   "subjectDate": "2026-07-17",
+  "claimUseDecisions": [
+    {
+      "id": "homepage-patent-status",
+      "claimIds": ["patents"],
+      "decision": "allowed_with_scope",
+      "allowedWording": "16 distinct patent applications filed (13 PCT and 3 Indian) as at 17 July 2026.",
+      "heldWording": ["patented", "globally patented", "patents granted", "worldwide exclusive"],
+      "sourceEvidence": [
+        {"document": "NPSY & Co. SRS 4400 factual findings", "version": "signed 2026-09-03", "sha256": "f969077a9175a8843112881a5918c85f9f73963a51552a6360d88d0cc0aac0e9", "pages": "physical PDF p3 item 11 continuing p4", "scope": "16 distinct application filing receipts; no assurance conclusion"},
+        {"document": "NPSY & Co. SAE 3000 limited assurance", "version": "signed 2026-09-03", "sha256": "79353b9336ff31bdc50c2e2f1678e21c3ad67c0f06bb31605e6dd59c2b1cb979", "pages": "physical PDF p4 D1 and p7", "scope": "limited assurance on at least 13 PCT applications, not the exact 16 point value"}
+      ],
+      "effectiveDate": "2026-09-24",
+      "sourceAsOf": "2026-07-17",
+      "reviewerState": "Verify source-scope reconciliation; no patent-office grant determination or human legal/regulatory sign-off recorded",
+      "nextReview": "2026-10-01 or on a current patent-register change, whichever comes first",
+      "supersededCopy": ["globally patented", "patented systems"],
+      "affectedDestinations": ["homepage visible copy and JSON-LD", "20-topic Ask pilot", "social and editorial copy"],
+      "owner": "Verify evidence owner sets wording; API website owner applies homepage and Ask changes"
+    },
+    {
+      "id": "homepage-outcome-percentage",
+      "claimIds": ["outcomes"],
+      "decision": "held",
+      "allowedWording": "No network-wide improvement percentage approved for homepage or Ask copy. Describe child-specific goals and progress review without implying a guaranteed outcome.",
+      "heldWording": ["97% proven improvement", "97% success", "validated across 12 clinical studies", "guaranteed independence or school entry"],
+      "sourceEvidence": [
+        {"document": "NPSY & Co. SAE 3000 limited assurance", "version": "signed 2026-09-03", "sha256": "79353b9336ff31bdc50c2e2f1678e21c3ad67c0f06bb31605e6dd59c2b1cb979", "pages": "physical PDF p3 paragraph 10", "scope": "expressly excludes outcome-study figures"},
+        {"document": "NPSY & Co. SRS 4400 factual findings", "version": "signed 2026-09-03", "sha256": "f969077a9175a8843112881a5918c85f9f73963a51552a6360d88d0cc0aac0e9", "pages": "physical PDF p2 paragraph 5 and annexure pp3-4", "scope": "no outcome percentage procedure or assurance conclusion"},
+        {"document": "AbilityScore preliminary technical monograph, DOI 10.5281/zenodo.19482123", "version": "PDF cover v3.0; deposited 2026-04-09 preprint", "sha256": "61348d8c1f5159a0d77d7c4f91f1b39b9deb3fe6a0ef299ba335d8c6c313edba", "pages": "physical PDF pp1-5, especially abstract, methods section 2.3, section 5.2 and Table 4", "scope": "preliminary within-network measurement analysis; no 97% calculation or child-level outcome denominator; 18.6M versus >21M session figures are unreconciled"}
+      ],
+      "effectiveDate": "2026-09-24",
+      "sourceAsOf": "2026-07-17",
+      "reviewerState": "HELD: research owner appraised the monograph on 2026-09-24 and found no 97% calculation or child-level denominator; a defined outcome, auditable calculation, population/missingness limits, separate 12-study appraisal and human clinical review remain required. AI source review is not clinical sign-off",
+      "nextReview": "On receipt of the study calculation and human clinical decision; inspect again by 2026-10-01",
+      "supersededCopy": ["expired 2022 homepage COVID SpecialAnnouncement's unqualified 97% claim", "bare 97% on homepage or Ask"],
+      "affectedDestinations": ["homepage visible copy and JSON-LD", "20-topic Ask pilot", "social and editorial copy"],
+      "owner": "Research owner appraises study evidence; human clinical reviewer decides; API website owner removes stale homepage/Ask wording"
+    },
+    {
+      "id": "homepage-institutional-scale",
+      "claimIds": ["services", "registrations", "data-points", "operational-centres", "network70", "operating-years"],
+      "decision": "allowed_with_scope",
+      "allowedWording": "As at 17 July 2026: 31,052,382 defined services (including assessments, screenings and parent training); 792,614 beneficiary/family registrations; and at least 2.7 billion structured records/events. The reports also record 49 centres meeting the stated four-condition operational test. These are different units and do not establish outcomes, current active-centre totals or unique children.",
+      "heldWording": ["31 million successful one-to-one sessions", "792,614 children improved", "70+ independently assured centres", "all centres company-owned", "16+ institutional years", "India's largest", "#1", "No.1"],
+      "sourceEvidence": [
+        {"document": "NPSY & Co. SRS 4400 factual findings", "version": "signed 2026-09-03", "sha256": "f969077a9175a8843112881a5918c85f9f73963a51552a6360d88d0cc0aac0e9", "pages": "physical PDF p3 items 1, 2, 3 and 5", "scope": "point findings for defined services, registrations, centres and row-count events; no assurance conclusion"},
+        {"document": "NPSY & Co. SAE 3000 limited assurance", "version": "signed 2026-09-03", "sha256": "79353b9336ff31bdc50c2e2f1678e21c3ad67c0f06bb31605e6dd59c2b1cb979", "pages": "physical PDF p4 A1-A3 and A5-A6; p6 definitions; p7 IT reliance", "scope": "limited assurance only on specified floors and operations since incorporation in 2016"}
+      ],
+      "effectiveDate": "2026-09-24",
+      "sourceAsOf": "2026-07-17",
+      "reviewerState": "Verify source-scope reconciliation; factual historic copy allowed with definitions, not clinical or comparative sign-off",
+      "nextReview": "2026-10-01 or on a newer signed count/source, whichever comes first",
+      "supersededCopy": ["21M+ sessions presented as current", "70+ audited centres", "16+ years from these reports", "unqualified #1/No.1"],
+      "affectedDestinations": ["homepage visible copy and JSON-LD", "20-topic Ask pilot", "Google Business and Meta copy", "editorial source pack"],
+      "owner": "Verify evidence owner sets wording; API website and channel owners apply it"
+    },
+    {
+      "id": "homepage-language-and-phone-scope",
+      "claimIds": ["international-tech"],
+      "decision": "telephone_only",
+      "allowedWording": "The Pinnacle/BHCL-operated enquiry telephone 9100 181 181 is available 24/7 in English, Telugu and Hindi, according to the owner's 22 September 2026 operating confirmation.",
+      "heldWording": ["133+ service languages", "24/7 centres", "24/7 clinician availability", "official government helpline", "emergency service", "toll-free line"],
+      "sourceEvidence": [
+        {"document": "Owner-confirmed HELPLINE-FACTS.md", "version": "2026-09-22 operating confirmation", "sha256": "6595ce2c928b4574bab0017520e681e65eab227fa737ddcedf959b79097ed5b4", "pages": "Confirmed on 22 September 2026, first seven bullets", "scope": "user-supplied central telephone operation only; not independently measured staffing"},
+        {"document": "NPSY & Co. SAE 3000 limited assurance", "version": "signed 2026-09-03", "sha256": "79353b9336ff31bdc50c2e2f1678e21c3ad67c0f06bb31605e6dd59c2b1cb979", "pages": "physical PDF p4 Annexure I", "scope": "no language or international-service assertion"}
+      ],
+      "effectiveDate": "2026-09-24",
+      "sourceAsOf": "2026-09-22",
+      "reviewerState": "Owner operating statement recorded; no independent call-centre staffing audit or clinical language-coverage sign-off",
+      "nextReview": "2026-10-01 or when the phone operator changes operating facts, whichever comes first",
+      "supersededCopy": ["133+ languages stated as verified service coverage", "broad 24/7 care wording"],
+      "affectedDestinations": ["homepage telephone context and JSON-LD ContactPoint", "20-topic Ask pilot", "social and local profiles"],
+      "owner": "Helpline owner confirms operating facts; Verify evidence owner sets scope; API website and channel owners apply it"
+    },
+    {
+      "id": "warangal-centre-public-copy-and-postcode",
+      "claimIds": ["outcomes", "operational-centres", "international-tech"],
+      "decision": "held_pending_operations_and_claim_review",
+      "allowedWording": "Pinnacle Blooms Network operates a Warangal centre. For its current services, hours and appointments, use the centre's contact route. The Pinnacle/BHCL-operated central enquiry telephone is 9100 181 181; the owner's 22 September confirmation of 24/7 English, Telugu and Hindi coverage applies to that telephone only. Do not publish a postcode change until operations confirms the actual Warangal delivery address.",
+      "heldWording": ["#1 or No.1 autism therapy network", "97%+ success or unqualified improvement rate", "100+ operating centres as a current fact", "24x7 therapy, clinician or centre availability", "18+ service languages without a verified service scope", "Warangal postcode 506001 or 506002 as settled across visible and structured address data"],
+      "sourceEvidence": [
+        {"document": "Public Warangal centre HTML, https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india", "version": "anonymous GET 2026-09-24", "sha256": "60c105fbba278e69fd07422dc2d2f3faa8e22f9f66f94f9611cde298f9b4246d", "pages": "title/OG, body service and contact blocks, seven JSON-LD blocks", "scope": "Observed #1/No.1, 97%+, 100+, 24x7/18+ language implications; visible contact address says 506001 while JSON-LD postalCode says 506002. Hash is of decoded UTF-8 HTML in this read-back, not an archival origin-byte hash"},
+        {"document": "All Centers With HFR.xlsx, Warangal HFR IN3610023461 source row 28", "version": "owner-supplied workbook imported 2026-09-24", "sha256": "2245768373cac98ebc89e3ed3a4f4204015971922072f39f65dbd53d8d6282c9", "pages": "All Centers With HFR sheet, row 28 address and postcode cells", "scope": "postcode cell says 506002 while the same row's supplied address text ends 506001; owner separately confirms all 52 centres operate but has not resolved this postcode conflict"},
+        {"document": "Owner-confirmed HELPLINE-FACTS.md", "version": "2026-09-22 operating confirmation", "sha256": "6595ce2c928b4574bab0017520e681e65eab227fa737ddcedf959b79097ed5b4", "pages": "Confirmed on 22 September 2026, first seven bullets", "scope": "24/7 English, Telugu and Hindi confirmation concerns the central Pinnacle/BHCL telephone, not centre hours, clinician availability or therapy delivery"}
+      ],
+      "effectiveDate": "2026-09-24",
+      "sourceAsOf": "2026-09-24 public read-back; owner workbook and phone facts as dated",
+      "reviewerState": "HELD for page/schema correction pending operations confirmation of Warangal address/postcode, current Warangal services/hours and human clinical review of any outcome claim. Comparative #1 and current 100+ centre count have no source clearance. Owner preference for a qualified 97% sentence does not supply an auditable local outcome denominator or clinical sign-off",
+      "nextReview": "On Warangal operations/address response and study-owner clinical decision; otherwise 2026-10-01",
+      "supersededCopy": ["Warangal page's #1/No.1 superiority copy", "unqualified 97%+ success and 100+ centre copy", "24x7 therapy and 18+ service-language implication", "mismatched visible 506001 / JSON-LD 506002 postcode"],
+      "affectedDestinations": ["Warangal TS centre page visible copy, OG metadata and JSON-LD", "legacy Warangal AP redirect destination only"],
+      "owner": "Verify evidence owner records hold and safe scope; Warangal operations confirms address, services and hours; API website owner edits page/schema only after review"
+    },
+    {
+      "id": "gachibowli-observational-score-change",
+      "claimIds": ["outcomes", "international-tech"],
+      "decision": "held",
+      "allowedWording": "No 85.31%, 85.05–85.62% or 133+ language claim approved for Gachibowli Google Business posts. Life-first care principles may be described without a promised outcome.",
+      "heldWording": ["85.31% improvement", "85.05–85.62% confidence interval", "clinical success or causal benefit from recorded score increases", "133+ service languages", "attached 16-page clinical-research brochure"],
+      "sourceEvidence": [
+        {"document": "PinnacleAI - Life First Paradigm Shift Clinical Research 2026.pdf", "version": "Content-review edition dated 2026-09-22", "sha256": "1a9c1c02f407bcfe0fcecc48135f4d69f65da2eeb566648b1f8645e23f2f23a9", "pages": "physical PDF pp9-12 and 16", "scope": "organisation-supplied retrospective observational scores; p12 reports 2,433/2,852 higher first-to-last AbilityScores and 85.05–85.62% leave-one-centre-group-out sensitivity, not confidence interval or causal outcome; p16 records outstanding study-owner and release review"},
+        {"document": "PinnacleAI - Life First Paradigm Shift Clinical Research 2026.pdf", "version": "Content-review edition dated 2026-09-22", "sha256": "1a9c1c02f407bcfe0fcecc48135f4d69f65da2eeb566648b1f8645e23f2f23a9", "pages": "physical PDF pp7, 12-14 and 16", "scope": "133+ languages are organisation-described text delivery; prominent institutional marks do not establish endorsement or media-use rights"}
+      ],
+      "effectiveDate": "2026-09-24",
+      "sourceAsOf": "FY2025-26 observational records; brochure review edition 2026-09-22",
+      "reviewerState": "HELD for GBP: study-owner methods/ethics/assessment-version/selection checks, human clinical interpretation, exact attached-image identification, photographer and institutional-logo rights, and product/report-use review are not recorded. Arithmetic consistency alone is insufficient",
+      "nextReview": "When the original attached images and study-owner/rights approvals are supplied; otherwise 2026-10-01",
+      "supersededCopy": ["duplicated Gachibowli PinnacleAI caption with literal citation token and incomplete-brochure claim", "unqualified 85.31% score change or 85.05–85.62% sensitivity images"],
+      "affectedDestinations": ["Gachibowli Google Business post 478422501757076501", "Gachibowli Google Business post 2979719154601423855"],
+      "owner": "Verify evidence owner holds claim; research and human clinical reviewers appraise study; channel owner corrects posts and verifies moderation/public state"
+    }
+  ],
   "reviewMethod": "Original signed documents and annexures inspected. Both exact UDINs and practitioner/signing particulars matched on the live ICAI portal on 19 September 2026; both showed Active. Report scope and cutoff remain unchanged.",
   "reports": [
     {

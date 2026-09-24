@@ -15,7 +15,7 @@ module.exports=({e,origin,date,records,research,write})=>{
   write(base.slice(1)+'.txt',citation+'\n\n'+notes+'\n');write(base.slice(1)+'.ris',ris);write(base.slice(1)+'.bib',bib);
   const entry={...item,citation,ris,bib,downloads:{text:base+'.txt',ris:base+'.ris',bibtex:base+'.bib'}};items.push(entry);return entry;
  };
- for(const r of records)add({id:'record-'+r.id,title:r.title,authors:['Bharath Healthcare Laboratories Private Limited'],date,kind:'Pinnacle Verification Centre evidence summary',summary:true,url:origin+'/evidence/records/'+r.id+'.html',status:r.reviewLabel||r.status,scope:r.supports+' '+r.limits+' Original source: '+r.citation});
+ for(const r of records)add({id:'record-'+r.id,title:r.title,authors:['Bharath Healthcare Laboratories Private Limited'],date:r.reviewedOn||date,kind:'Pinnacle Verification Centre evidence summary',summary:true,url:origin+'/evidence/records/'+r.id+'.html',status:r.reviewLabel||r.status,scope:r.supports+' '+r.limits+' Original source: '+r.citation});
  for(const r of research.records.filter(r=>r.id.startsWith('zenodo-')||r.type==='book'))add({id:r.id,title:r.title,authors:r.authors.map(a=>typeof a==='string'?a:a.name),date:r.publicationDate,version:r.version,kind:r.type==='book'?'Book':r.publicationStatus,book:r.type==='book',report:r.type==='report',url:r.doiUrl||r.url||origin+'/evidence/publications/'+r.id+'.html',doi:r.doi,isbn:r.bookISBN,status:r.publicationStatus,scope:r.scopeNote});
  const controls=id=>{
   const item=items.find(x=>x.id===id);if(!item)return '';

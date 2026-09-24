@@ -2,13 +2,13 @@
 
 > Source-led evidence for Pinnacle Blooms Network and Bharath Healthcare Laboratories Private Limited.
 
-Source review: 15 September 2026. Selected originals and review conclusions rechecked: 18 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Source review does not establish endorsement by the issuing organisations.
+Source review: 15 September 2026. Selected originals and review conclusions rechecked: 24 September 2026. This site summarizes documentary evidence and is not a regulator’s certification service. Preserve the review status and scope limits when citing a record. A protocol is not completed validation; a management-system certificate does not guarantee a child’s outcome. Source review does not establish endorsement by the issuing organisations.
 
 Evidence owner: Sourabh Sashank · Lead PinnacleAI® · care@pinnacleblooms.org · 9100 181 181.
 
 ## Reference files
 - [Verification centre](https://pinnacle-verify.saripalli.chatgpt.site/): human-readable evidence and review method.
-- [Complete register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html): all 34 source records.
+- [Complete register](https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence-register.html): all 36 source records.
 - [Plain-text evidence](https://pinnacle-verify.saripalli.chatgpt.site/llms-full.txt): full record summaries with limitations.
 - [Evidence JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/evidence.json): the same records as structured data.
 
@@ -21,6 +21,7 @@ Evidence owner: Sourabh Sashank · Lead PinnacleAI® · care@pinnacleblooms.org 
 
 ## Evidence records
 - [MD-5 · Class B manufacturing licence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html): Original reviewed. PinnacleAI® GPT-OS v1.0.0 · Non-diagnostic developmental-support software
+- [FSC · Free Sale Certificate for export](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html): Original reviewed. Export-purpose certificate issued on the MD-5 licence · PinnacleAI® GPT-OS v1.0.0
 - [BIS · Medical device management system](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html): Original reviewed. IS 23485:2019 · Licence and scope schedule reviewed
 - [Legal entity · Independent registry match](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/lei.html): Registry record matched. Bharath Healthcare Laboratories Private Limited
 - [CDSCO classification · Application and licence trail](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html): Original reviewed. Original application reviewed · Class B is recorded in the issued MD-5
@@ -54,6 +55,7 @@ Evidence owner: Sourabh Sashank · Lead PinnacleAI® · care@pinnacleblooms.org 
 - [September handout · Current source narrative](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html): Company-published. 7 September 2026 · Private & confidential investor handout
 - [Books & parent resources · Publication records](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html): Company-published. Authorship and publication metadata read from the supplied books
 - [PinnacleAI® walkthrough · Developmental architecture](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html): Company-published. Company-authored walkthrough · AbilityScore layers and programme cadence
+- [PinnacleAI® regulatory journey · Purpose, evidence and export readiness](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pinnacleai-story.html): Company-published. Source-linked flagship narrative · child-development purpose, Indian regulatory foundation and international pathway
 
 ## Parent guides in English, Telugu and Hindi
 - [What does my child’s AbilityScore® mean?](https://pinnacle-verify.saripalli.chatgpt.site/guides/abilityscore.html): Understand your child’s AbilityScore®, the report context and useful questions for the care team, with links to the original Pinnacle evidence.
@@ -98,6 +100,11 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [58-record centre entity reference](https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.html): official centre URLs, 56 complete HFR identifiers, dated workflow labels and two explicit sitemap canonical gaps.
 - [Centre entity reference JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.json): the same source crosswalk in a machine-readable format.
 
+## Complete PinnacleAI story
+- [PinnacleAI® regulatory journey](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html): purpose, seven-stage pathway, regulated product identity, Indian regulatory foundation, FSC and evidence-backed international status.
+- [PinnacleAI® story JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.json): reusable facts, questions and source links.
+- [International registration status](https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json): market-by-market status vocabulary; no foreign registration is currently claimed.
+
 ## Earlier nine-perspective edition
 The current 18-part life-first explanation is linked below. These earlier care-system perspectives remain available for existing citations.
 
@@ -121,7 +128,7 @@ The current 18-part life-first explanation is linked below. These earlier care-s
 - [Structured explanation](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.json): the same visible claims, planning criteria and evidence boundaries.
 
 ## Share images
-- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 80 branded image cards linked to their source pages.
+- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 83 branded image cards linked to their source pages.
 
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.

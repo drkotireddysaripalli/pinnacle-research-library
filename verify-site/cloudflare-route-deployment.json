@@ -1,14 +1,14 @@
 {
   "worker": "pinnacle-verify-route",
   "account_id": "862998def1cd610fdb86b8e5c1d6ed4d",
-  "version": "d6a9a97e-5974-4555-9cc6-2a1410050227",
-  "deployment": "6ef38d53-c6a5-4c24-9969-9560a8337e94",
-  "createdAt": "2026-09-23T09:02:50.892509Z",
+  "version": "abc1310f-d83a-4f29-99e7-f25112ab29d7",
+  "deployment": "9170f6f9-49d2-4193-84da-a4ce2c28fdc1",
+  "createdAt": "2026-09-24",
   "compatibility_date": "2026-09-18",
   "usage_model": "standard",
   "assets": {
     "config": {
-      "html_handling": "auto-trailing-slash",
+      "html_handling": "none",
       "not_found_handling": "none",
       "run_worker_first": true
     }
@@ -29,7 +29,7 @@
       "type": "secret_text"
     }
   ],
-  "sourceSha256": "f483f02ddc0d7cedca5772fdfb90ca54918645bd7fccb8e848345d33ffeb085a",
+  "sourceSha256": "dd5ef30e881ef2db9aeeadafdfb5ee9dfab67060bf52a21c71828764d5d17280",
   "notes": [
     "Always run the routing Worker before static assets. Default asset-first routing incorrectly serves the Verify index at the main homepage and Verify-local robots at the domain robots URL.",
     "Keep assets and all three bindings on subsequent deployments. Secret values are intentionally absent from this manifest.",
@@ -42,6 +42,7 @@
     "Version58 publishes Verify release705177aaac7fd511 with the reviewed 3-page public evidence pack, exact SHA-256 b8bb727828affba9f9f45362e99dae900ecc69afb43c0678cb9d915bcc2e6b3d. Worker-first routing and all three bindings were verified before activation; the public PDF, profile canonical and core routes passed production read-back.",
     "Version59 adds an authenticated Sites-origin path for current text assets while preserving binary Worker Assets, Worker-first routing and all three existing bindings.",
     "Version60 publishes Verify release5905528cbaec8592 with the 58-record centre entity reference, its JSON and text exports, sitemap and AI-readable discovery links. The Worker-first asset configuration and all three bindings were verified before activation; five public routes passed production read-back.",
-    "Version62 publishes final Verify release aa274209481ba173 with six dated institutional measures, source-page links and JSON/CSV exports. Worker-first assets and all three bindings were verified before activation; the claim page, exports, sitemap, homepage and helpline passed production read-back."
+    "Version62 publishes final Verify release aa274209481ba173 with six dated institutional measures, source-page links and JSON/CSV exports. Worker-first assets and all three bindings were verified before activation; the claim page, exports, sitemap, homepage and helpline passed production read-back.",
+    "Version67 publishes release aeefcc8734a2d776: 36 evidence records, complete PinnacleAI story, FSC public evidence, 83 sitemap URLs, citations and share images. All 629 files use the ASSETS bundle with origin fallback only on 404. Preserves v64 homepage schema correction, Ask redirect and all three bindings. Staged metadata verified before 100 percent activation; production route checks passed."
   ]
 }

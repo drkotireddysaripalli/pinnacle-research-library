@@ -12,6 +12,20 @@ const sitemap=read('sitemap.xml');
 const llms=read('llms.txt');
 const canonical='https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html';
 const expected=new Map([['services',31052382],['registrations',792614],['operational-centres',49],['practitioners',2293],['data-points',2700000000],['patents',16]]);
+const gateIds=['homepage-patent-status','homepage-outcome-percentage','homepage-institutional-scale','homepage-language-and-phone-scope','warangal-centre-public-copy-and-postcode','gachibowli-observational-score-change'];
+assert.deepEqual(source.claimUseDecisions.map(c=>c.id),gateIds,'Homepage and centre-specific claim-use decisions are recorded in the existing source map');
+for(const gate of source.claimUseDecisions){
+ assert(gate.claimIds.every(id=>source.claims.some(c=>c.id===id)),gate.id+' references known claims');
+ assert(gate.allowedWording&&gate.heldWording.length&&gate.effectiveDate&&gate.sourceAsOf&&gate.reviewerState&&gate.nextReview&&gate.supersededCopy.length&&gate.affectedDestinations.length&&gate.owner,gate.id+' has an actionable review record');
+ assert(gate.sourceEvidence.length&&gate.sourceEvidence.every(s=>s.document&&s.version&&/^[0-9a-f]{64}$/.test(s.sha256)&&s.pages&&s.scope),gate.id+' has versioned source pinpoints and hashes');
+}
+assert.equal(source.claimUseDecisions.find(c=>c.id==='homepage-outcome-percentage').decision,'held');
+assert(source.claimUseDecisions.find(c=>c.id==='homepage-patent-status').heldWording.includes('globally patented'));
+assert.equal(source.claimUseDecisions.find(c=>c.id==='gachibowli-observational-score-change').decision,'held');
+const warangal=source.claimUseDecisions.find(c=>c.id==='warangal-centre-public-copy-and-postcode');
+assert.equal(warangal.decision,'held_pending_operations_and_claim_review');
+assert(warangal.heldWording.some(s=>s.includes('506001 or 506002')));
+assert(warangal.sourceEvidence.some(s=>s.document.includes('All Centers With HFR.xlsx')));
 assert.equal(data.canonical,canonical);
 assert.equal(data.asOf,'2026-07-17');
 assert.equal(data.updated,'2026-09-23');

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19",
+  "updated": "2026-09-24",
   "reviewType": "Document text and page-image inspection, with dated exact issuer checks where recorded. Two ICAI UDINs and the HFR dashboard inventory were matched on 19 September 2026. No named professional clinical sign-off is implied.",
   "records": [
     {
@@ -31,6 +31,38 @@
         {
           "date": "2026-09-19",
           "change": "Added visually checked source excerpt, exact PDF page link and source-copy preview."
+        }
+      ]
+    },
+    {
+      "id": "fsc",
+      "checkedOn": "2026-09-24",
+      "method": "Original Free Sale Certificate and forwarding letter inspected as text and page images; certificate number, licence number, product particulars, intended use and export condition compared with the supplied MD-5.",
+      "boundary": "The FSC supports Indian domestic marketability and export eligibility for the named licensed device. It is not foreign registration, comparative clinical evidence or a cryptographic validation of the embedded signature.",
+      "sourceSha256": "1b23757ee8c1a7c6c0e9e652077d57c423c4277cba1fc3a452d036f4c30f89db",
+      "excerpts": [
+        {
+          "quote": "the said firm is permitted to manufacture the products for their manufacture and sale in domestic market as per indian law and for export as per law of importing country (s).",
+          "source": "Free Sale Certificate FSC/MD/2026/000741 · physical PDF page 1",
+          "url": "/evidence/fsc.pdf#page=1",
+          "page": 1
+        }
+      ],
+      "preview": {
+        "caption": "Privacy-safe public source copy. The visible digital-signature image is removed; signatory name and designation remain.",
+        "url": "/evidence/fsc.pdf#page=1",
+        "image": "/images/sources/fsc-page-1-650.png",
+        "alt": "FSC/MD/2026/000741 · privacy-safe source-copy page 1",
+        "width": 650,
+        "height": 919
+      },
+      "recordUpdate": {
+        "scopeReviewed": "24 September 2026"
+      },
+      "history": [
+        {
+          "date": "2026-09-24",
+          "change": "Added the inspected FSC, forwarding letter, privacy-safe public copies and explicit importing-country-law boundary."
         }
       ]
     },

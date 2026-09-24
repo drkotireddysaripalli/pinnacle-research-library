@@ -14,13 +14,18 @@ window.PINNACLE_EVIDENCE = {
         "Licence holder": "Bharath Healthcare Laboratories Pvt. Ltd.",
         "Issued": "21 April 2026",
         "Intended population": "Children aged 0–12",
-        "Intended functions": "Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support"
+        "Intended functions": "Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support",
+        "Export certificate": "Free Sale Certificate FSC/MD/2026/000741 · 23 September 2026"
       },
       "supports": "The supplied Form MD-5 licenses the listed Class B device for manufacture for sale or distribution at the specified premises. Intended users include parents, therapists, educators and caregivers supporting children aged 0–12.",
       "limits": "Applies to the named device, version, intended use and premises. It does not establish diagnostic authority, clinical effectiveness or the registration of every centre.",
       "citation": "Original Form MD-5, page 1 including device annexure; supplied PinnacleAI®_SAMD_License.pdf re-inspected 18 September 2026.",
       "scopeReviewed": "19 September 2026",
       "links": [
+        {
+          "label": "Free Sale Certificate record",
+          "url": "evidence/records/fsc.html"
+        },
         {
           "label": "Read redacted licence",
           "url": "evidence/md5.pdf"
@@ -34,7 +39,54 @@ window.PINNACLE_EVIDENCE = {
           "url": "https://dca.telangana.gov.in/"
         }
       ],
-      "note": "The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI®_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together."
+      "note": "The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI®_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together. Free Sale Certificate FSC/MD/2026/000741 was issued on this licence on 23 September 2026; see the FSC record."
+    },
+    {
+      "id": "fsc",
+      "category": "Medical device regulation",
+      "title": "FSC · Free Sale Certificate for export",
+      "status": "original",
+      "originalReviewed": true,
+      "reviewedOn": "2026-09-24",
+      "reviewedDate": "24 September 2026",
+      "subtitle": "Export-purpose certificate issued on the MD-5 licence · PinnacleAI® GPT-OS v1.0.0",
+      "fields": {
+        "Certificate number": "FSC/MD/2026/000741",
+        "Issuer": "State Licensing Authority · TG SAFE (Telangana Standards Authority for Food and Essential Drugs), Government of Telangana",
+        "Licence holder": "Bharath Healthcare Laboratories Private Limited",
+        "Issued": "23 September 2026",
+        "Base licence": "Form MD-5 · MFG/MD/2026/000248",
+        "Permitted activity": "Manufacture and sale in the domestic market as per Indian law; export as per the law of the importing country",
+        "Device as printed": "Developmental Support Software (Non-Diagnostic) · Software as a Medical Device · Class B · PinnacleAI GPT-OS v1.0.0 · children aged 0–12 · non-sterilized · shelf life NIL",
+        "Intended functions": "Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support"
+      },
+      "supports": "The supplied certificate records that Bharath Healthcare Laboratories Private Limited holds manufacturing licence MFG/MD/2026/000248 under Form MD-5 and is permitted to manufacture the listed device for sale in the domestic market under Indian law and for export as per the law of the importing country. The device particulars agree with the operative MD-5 scope: non-diagnostic developmental-support software, Class B, version 1.0.0, for parents, therapists, educators and caregivers supporting children aged 0–12.",
+      "limits": "A Free Sale Certificate records the Indian regulatory standing and export eligibility of the named licensed device. It is not a registration, approval or marketing authorisation in another country; each importing regulator applies its own requirements. No validity period is printed on the certificate. It does not establish diagnostic authority, clinical effectiveness, comparative superiority or the registration of any centre.",
+      "citation": "Free Sale Certificate FSC/MD/2026/000741 and forwarding letter F.No FSC/MD/2026/204866, both dated 23 September 2026; original signed files inspected 24 September 2026.",
+      "scopeReviewed": "24 September 2026",
+      "scopeLabel": "Export-purpose certificate",
+      "reviewConclusion": "Certificate FSC/MD/2026/000741 was inspected and its device particulars agree with the operative MD-5 scope. It establishes Indian domestic marketability and export eligibility subject to the importing country’s law. No foreign registration or comparative superiority is claimed.",
+      "verificationNote": "Original certificate and forwarding letter inspected. Their populated signature fields were observed, but cryptographic signature validity was not independently verified.",
+      "familyMeaning": "This certificate describes the device’s regulatory standing in India and its eligibility for export. It does not replace the care plan agreed with the child’s qualified care team or the requirements of another country.",
+      "links": [
+        {
+          "label": "Read privacy-safe certificate",
+          "url": "evidence/fsc.pdf"
+        },
+        {
+          "label": "Read privacy-safe forwarding letter",
+          "url": "evidence/fsc-forwarding-letter.pdf"
+        },
+        {
+          "label": "CDSCO Medical Device Online portal",
+          "url": "https://cdscomdonline.gov.in/"
+        },
+        {
+          "label": "Medical Devices Rules, 2017",
+          "url": "https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/Medical%20Devices%20Rules%2C%202017.pdf"
+        }
+      ],
+      "note": "Application reference FSC/MD/2026/204866, dated 15 September 2026, is distinct from certificate FSC/MD/2026/000741. The FSC cites base licence MFG/MD/2026/000248 as issued on 20 April 2026; the supplied Form MD-5 instrument is dated 21 April 2026. Both identifiers and dates are preserved as printed. The public copies remove the visible digital-signature image while retaining the signatory name and designation; the original signed files remain in the private source set."
     },
     {
       "id": "bis",
@@ -943,7 +995,47 @@ window.PINNACLE_EVIDENCE = {
       "citation": "PinnacleAI® - Soveriegn WalkThrough.pdf: measurement layers p26; personal development kernel p27; daily practice p31; monthly refresh pp35,37. Physical PDF pages. Inspected 18 September 2026.",
       "links": [],
       "note": "The two supplied filename variants are byte-identical. Source SHA-256: 0d4b81e80e8f258c4eaf84c4ed231d8b6d1c352b61411778456d5a1b8ad7321d. The original is retained in the source collection; this public record provides the relevant scope and page references."
+    },
+    {
+      "id": "pinnacleai-story",
+      "category": "Source publications",
+      "title": "PinnacleAI® regulatory journey · Purpose, evidence and export readiness",
+      "status": "published",
+      "originalReviewed": true,
+      "reviewedOn": "2026-09-24",
+      "reviewedDate": "24 September 2026",
+      "subtitle": "Source-linked flagship narrative · child-development purpose, Indian regulatory foundation and international pathway",
+      "fields": {
+        "Publisher": "Bharath Healthcare Laboratories Private Limited",
+        "Product": "PinnacleAI GPT-OS v1.0.0",
+        "Purpose": "A self-sufficient, mainstream and wonderful life for the child",
+        "Regulatory position": "Indian Class B non-diagnostic developmental-support SaMD",
+        "Export milestone": "Free Sale Certificate FSC/MD/2026/000741 · 23 September 2026",
+        "International status": "Country-specific registration pathways; no foreign registration claimed"
+      },
+      "supports": "This first-party narrative connects Pinnacle’s documented child-development purpose and seven-stage pathway with the named licensed device, Indian regulatory records, dated institutional measures and Free Sale Certificate. It provides one stable, source-linked page for families, clinicians, regulators, partners, editors, search engines and answer systems.",
+      "limits": "The narrative does not extend the scope of any licence, certificate, standard or study. It does not claim diagnostic authority, guaranteed outcomes, foreign approval, global exclusivity or comparative superiority. Each underlying fact is governed by its linked source record.",
+      "citation": "Bharath Healthcare Laboratories Private Limited. (2026, September 24). PinnacleAI® regulatory journey: purpose, evidence and export readiness. Pinnacle Verify.",
+      "links": [
+        {
+          "label": "Read the complete PinnacleAI® story",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html"
+        },
+        {
+          "label": "Structured story and sources",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.json"
+        },
+        {
+          "label": "Inspect the Free Sale Certificate record",
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
+        }
+      ],
+      "note": "This is a first-party synthesis record. For a regulatory or statistical claim, cite the linked original record and retain its date, unit and scope.",
+      "familyMeaning": "Shows how Pinnacle’s child-first purpose, developmental pathway, technology and documented regulatory foundation fit together while keeping each source boundary visible.",
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pinnacleai-story.html",
+      "statusLabel": "Company-published",
+      "reviewStatusNote": "Source-linked first-party narrative; underlying records govern each specific claim."
     }
   ],
-  "updated": "18 September 2026"
+  "updated": "24 September 2026"
 };

@@ -23,7 +23,7 @@ write('evidence-data.js','window.PINNACLE_EVIDENCE = '+JSON.stringify(data,null,
 const origin = 'https://pinnacle-verify.saripalli.chatgpt.site';
 // The authorised public /verify/ route is indexable; hosting access controls are unchanged.
 const robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
-const date = '2026-09-22';
+const date = '2026-09-24';
 const sourceDate = '2026-09-15';
 const title = 'PinnacleAI® Verify | Pinnacle Blooms Network';
 const description = 'A self-sufficient, mainstream life for your child is PinnacleAI®’s purpose. Explore the paradigm shift, developmental reports, research, licences and original evidence.';
@@ -145,9 +145,10 @@ const faqSchema = {'@type':'FAQPage','@id':origin+'/#questions',mainEntity:faq.m
 let body = fs.readFileSync(templatePath,'utf8').replaceAll('{{EVIDENCE_OWNER_NAME}}',e(evidenceOwner.name)).replaceAll('{{EVIDENCE_OWNER_ROLE}}',e(evidenceOwner.jobTitle));
 const guidedExperience=`<details class="guided-experience wrap" id="interactive-guides"><summary><div><span class="eyebrow">TRY THE WALKTHROUGH</span><strong>See the journey. Explore the reports.</strong><span>A guided example and eight report views.</span></div>${icon('plus')}</summary>${experience.tour}${experience.reports}</details>`;
 const worldHero=`<section class="intro world-intro wrap" aria-labelledby="page-title"><div class="hero-heading"><p class="eyebrow">PINNACLEAI® · THE WAY FORWARD</p><h1 id="page-title">Your child’s life is the mission. <em>PinnacleAI® puts it first.</em></h1></div>${world.hero}<div class="world-intro-copy"><p class="intro-purpose">Because every child deserves a wonderful life.</p><p class="intro-copy">Communicating. Learning. Making choices. Taking part. Pinnacle’s purpose is a self-sufficient, mainstream life for your child. That purpose guides the abilities, goals, techniques and support brought into the work.</p><div class="hero-actions"><a class="primary-link contact-whatsapp" href="${e(whatsapp)}" data-contact-location="hero">${icon('phone')}WhatsApp Pinnacle</a><a class="outline-link" href="#pinnacle-paradigm-story">${icon('network')}See the paradigm shift</a></div><p class="hero-contact-choice"><a href="tel:+919100181181">Call 9100 181 181</a><span aria-hidden="true">·</span><a href="#reading-evidence">Explore the evidence</a></p><div class="hero-credentials"><a href="/evidence/records/md5.html">${icon('file-cog')}MD-5 · Class B SaMD</a><a href="/evidence/records/bis.html">${icon('shield')}BIS licence & scope</a></div><p class="hero-scope">Non-diagnostic developmental support · Ages 0–12 · Individual outcomes vary.</p><div class="hero-share-slot"></div></div></section>${finaleHome.html}${scaleStory.homeHtml}`;
+const fscMilestone=`<section class="wrap impact-section" id="pinnacleai-export-readiness"><div class="impact-intro"><p class="eyebrow">PINNACLEAI® · 23 SEPTEMBER 2026</p><h2>Export ready from India.<br><em>The international pathway begins.</em></h2><p>Free Sale Certificate FSC/MD/2026/000741 adds export documentation to the Indian medical-device foundation for the licensed PinnacleAI GPT-OS v1.0.0. It supports country-specific registration and market-access work under each importing country’s requirements.</p><div class="hero-actions"><a class="primary-link" href="/evidence/pinnacleai-regulatory-journey.html">${icon('network')}Read the complete PinnacleAI® story</a><a class="outline-link" href="/evidence/records/fsc.html">${icon('file-search')}Inspect the FSC record</a></div></div></section>`;
 
 body=body.replace('<!-- WORLD HERO -->',worldHero).replace('<!-- LIFECYCLE -->',world.lifecycle).replace('<!-- STANDARDS -->',world.standards).replace('<!-- SDGS -->',world.sdgs);
-body=body.replace('<!-- METRICS -->',semantic.profile+'<!-- METRICS -->').replace('<!-- CTA -->',semantic.glossary+'<!-- CTA -->');
+body=body.replace('<!-- METRICS -->',fscMilestone+semantic.profile+'<!-- METRICS -->').replace('<!-- CTA -->',semantic.glossary+'<!-- CTA -->');
 body=body.replace('<!-- METRICS -->',metrics.section).replace('<!-- HFR SUMMARY -->',hfr.summary);
 body=body.replace('<p class="centre-inventory-note"><!-- HFR NOTE --></p>','<p class="centre-inventory-note">'+hfr.note+'</p>'+hfr.legend);
 for(const name of ['impact','scale','regulatory','principles','comparisons','cta']) body=body.replace('<!-- '+name.toUpperCase()+' -->',impact[name]);
@@ -294,6 +295,8 @@ const scaleStoryPage=require('./scale-story-page.cjs')({e,icon,origin,date,organ
 urls.push(scaleStoryPage.route);
  const references=require('./reference-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write,paradigm,storyDeck});
  urls.push(...references.routes);
+ const pinnacleStory=require('./pinnacleai-story-page.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write});
+ urls.push(pinnacleStory.route);
  urls.push('/evidence/centre-entity-reference.html');
 write('llms.txt',read('llms.txt')+'\n## Organisation reference\n- [Organisation profile]('+origin+'/evidence/organisation-profile.html): brand, legal identity, dated facts and original sources.\n');
 write('llms.txt',read('llms.txt')+'- [Public evidence pack for editors]('+origin+require('../content/public-evidence-pack.json').path+'): company-prepared PDF summary; check the original records and their scope.\n');
@@ -301,7 +304,9 @@ write('llms.txt',read('llms.txt')+'- [Public evidence pack for editors]('+origin
  write('llms.txt',read('llms.txt')+'- [58-record centre entity reference]('+origin+'/evidence/centre-entity-reference.html): official centre URLs, 56 complete HFR identifiers, dated workflow labels and two explicit sitemap canonical gaps.\n- [Centre entity reference JSON]('+origin+'/evidence/centre-entity-reference.json): the same source crosswalk in a machine-readable format.\n');
 write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/organisation-profile.txt'));
  write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/hyderabad-telangana-andhra-pradesh-contact.txt'));
- write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/centre-entity-reference.txt'));
+write('llms-full.txt',read('llms-full.txt')+'\n\n'+read('evidence/centre-entity-reference.txt'));
+write('llms.txt',read('llms.txt')+pinnacleStory.index);
+write('llms-full.txt',read('llms-full.txt')+'\n\n'+pinnacleStory.text);
 const storyPages=require('./paradigm-story-pages.cjs')({e,icon,origin,date,organization,website,brand,head,pageHeader,footer,breadcrumb,crumbsHTML,write});
 urls.push(...storyPages.routes);
 write('llms.txt',read('llms.txt')+'\n## Earlier nine-perspective edition\nThe current 18-part life-first explanation is linked below. These earlier care-system perspectives remain available for existing citations.\n'+storyPages.index);

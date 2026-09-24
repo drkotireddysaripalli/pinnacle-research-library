@@ -24,6 +24,18 @@
     "note": "Reviewed source copy or excerpt; redactions are labelled on the PDF. File hash confirms this copy, not issuer authenticity."
   },
   {
+    "file": "fsc-forwarding-letter.pdf",
+    "sha256": "159e19a4906c15fb155dc2eeff9e806c47efc26d46701bc5c7dfb5403a62b8b8",
+    "bytes": 102150,
+    "note": "Privacy-safe public source copy. Visible digital-signature image removed; printed signatory name and designation retained. Hash confirms this copy, not cryptographic signature validity."
+  },
+  {
+    "file": "fsc.pdf",
+    "sha256": "84664753b59ec604a2a55c501b9786efecbdded76bfb0d9be48ca732c06a909a",
+    "bytes": 204419,
+    "note": "Privacy-safe public source copy. Visible digital-signature image removed; printed signatory name and designation retained. Hash confirms this copy, not cryptographic signature validity."
+  },
+  {
     "file": "iso13485.pdf",
     "sha256": "b577fb0227453d322d521b4399079375748d3158cc25a360e6d9754e459e333a",
     "bytes": 3743697,

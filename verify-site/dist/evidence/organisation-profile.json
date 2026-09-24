@@ -1,7 +1,7 @@
 {
   "title": "Pinnacle Blooms Network: organisation profile",
   "description": "A source-linked reference profile of Pinnacle Blooms Network and Bharath Healthcare Laboratories Private Limited, covering identity, history, services, software, scale and research.",
-  "summary": "Pinnacle Blooms Network is the child-development service brand of Bharath Healthcare Laboratories Private Limited, an Indian company incorporated in 2016. Its published approach connects developmental ability measurement, individual planning, integrated intervention, parent-guided everyday practice and progress review. The company holds an MD-5 manufacturing licence naming PinnacleAI® GPT-OS v1.0.0, Class B non-diagnostic developmental-support software. This profile brings together corporate identity records, the software licence, quality-system documentation, dated institutional counts, facility-register observations and research publications. It distinguishes company descriptions, independent practitioner findings and clinical research, so readers can cite each statement with its source, date and scope.",
+  "summary": "Pinnacle Blooms Network is the child-development service brand of Bharath Healthcare Laboratories Private Limited, an Indian company incorporated in 2016. Its published approach connects developmental ability measurement, individual planning, integrated intervention, parent-guided everyday practice and progress review. The company holds an MD-5 manufacturing licence naming PinnacleAI® GPT-OS v1.0.0, Class B non-diagnostic developmental-support software. Free Sale Certificate FSC/MD/2026/000741, dated 23 September 2026, identifies the same licensed device for domestic sale and export subject to the importing country’s law. This profile brings together corporate identity records, regulatory scope, quality-system documentation, dated institutional counts, facility-register observations and research publications. It distinguishes company descriptions, official records, independent practitioner findings and clinical research, so readers can cite each statement with its source, date and scope.",
   "facts": [
     {
       "label": "Public-facing brand",
@@ -42,6 +42,11 @@
       "label": "Manufacturing licence",
       "value": "Form MD-5, MFG/MD/2026/000248; issued 21 April 2026 by the Telangana State Licensing Authority",
       "sourceHref": "/evidence/records/md5.html"
+    },
+    {
+      "label": "Free Sale Certificate",
+      "value": "FSC/MD/2026/000741; issued 23 September 2026 for Indian domestic sale and export subject to importing-country law",
+      "sourceHref": "/evidence/records/fsc.html"
     },
     {
       "label": "Medical-device management-system record",
@@ -91,10 +96,11 @@
     },
     {
       "title": "Developmental approach and licensed scope",
-      "body": "Pinnacle describes a seven-stage pathway: identify capabilities and measure ability; forecast readiness and create a child-specific plan; provide integrated intervention; support parent-guided everyday practice; track progress and correct the plan; reassess and repeat until readiness; and support growing independence and participation. This is the company’s service and educational explanation. The MD-5 separately specifies the named software version, manufacturer, premises and intended use: developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for children aged 0–12. It is non-diagnostic. The BIS schedule describes management-system activities and named developmental modules. Neither record establishes a guaranteed child outcome or approval of every broader service description.",
+      "body": "Pinnacle describes a seven-stage pathway: identify capabilities and measure ability; forecast readiness and create a child-specific plan; provide integrated intervention; support parent-guided everyday practice; track progress and correct the plan; reassess and repeat until readiness; and support growing independence and participation. This is the company’s service and educational explanation. The MD-5 separately specifies the named software version, manufacturer, premises and intended use: developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for children aged 0–12. It is non-diagnostic. Free Sale Certificate FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for that named device, subject to the importing country’s law; it is not foreign approval. The BIS schedule describes management-system activities and named developmental modules. These records do not establish a guaranteed child outcome or comparative superiority.",
       "sourceHrefs": [
         "/evidence/developmental-pathway.json",
         "/evidence/records/md5.html",
+        "/evidence/records/fsc.html",
         "/evidence/records/bis.html"
       ]
     },
@@ -161,6 +167,11 @@
     {
       "question": "What does the PinnacleAI® licence cover?",
       "answer": "The supplied MD-5 names PinnacleAI® GPT-OS v1.0.0, a Class B non-diagnostic developmental-support device for children aged 0–12, with specified functions, manufacturer and premises. The wider seven-stage pathway explains how Pinnacle describes its services; the licence is not a blanket approval of all educational explanations, centres or promised outcomes."
+    },
+    {
+      "question": "Does the Free Sale Certificate mean PinnacleAI® is approved abroad?",
+      "answer": "No. FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for the licensed device. Registration, approval or listing in another country is a separate process under that country’s rules.",
+      "sourceHref": "/evidence/records/fsc.html"
     },
     {
       "question": "Which figures come from the independent practitioner reports?",

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22",
+  "updated": "2026-09-24",
   "description": "Page-specific editorial share images. Citation and evidence scope remain on the linked pages.",
   "images": [
     {
@@ -269,6 +269,15 @@
       "title": "PinnacleAI® MD-5 · Class B SaMD.",
       "description": "PinnacleAI® MD-5 · Class B SaMD.. Non-diagnostic developmental support · Ages 0–12. Read original sources, dates and evidence scope in Pinnacle Verify.",
       "alt": "PinnacleAI® MD-5 · Class B SaMD. MEDICAL DEVICE LICENCE. Non-diagnostic developmental support · Ages 0–12. Pinnacle Blooms Network.",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html",
+      "image": "https://pinnacle-verify.saripalli.chatgpt.site/images/social/record-fsc-bec0d678cfe5.jpg",
+      "title": "Free Sale Certificate Indian scope. Export route.",
+      "description": "Free Sale Certificate FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for PinnacleAI® GPT-OS v1.0.0.",
+      "alt": "Free Sale Certificate Indian scope. Export route. MEDICAL DEVICE REGULATION. FSC/MD/2026/000741 · importing-country rules still apply. Pinnacle Blooms Network.",
       "width": 1200,
       "height": 630
     },
@@ -719,6 +728,24 @@
       "title": "Six dated measures. Each source in view.",
       "description": "An evidence-led reference for six institutional measures, separating factual findings from limited assurance.",
       "alt": "Six dated measures Each source in view CLAIM & SOURCE LEDGER. Counts, definitions, source pages and assurance boundaries as at 17 July 2026.. Pinnacle Blooms Network.",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html",
+      "image": "https://pinnacle-verify.saripalli.chatgpt.site/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+      "title": "PinnacleAI® Regulatory Journey",
+      "description": "Purpose, seven-stage pathway, product identity, regulatory foundation and evidence-backed international status.",
+      "alt": "Built around the child’s life. Ready for global pathways. PINNACLEAI® · PURPOSE · EVIDENCE. Indian Class B SaMD foundation and export documentation, with every source linked.. Pinnacle Blooms Network.",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pinnacleai-story.html",
+      "image": "https://pinnacle-verify.saripalli.chatgpt.site/images/social/record-pinnacleai-story-c1d8183d33bc.jpg",
+      "title": "PinnacleAI® Story Evidence Record",
+      "description": "The citation-ready evidence record for the complete source-linked PinnacleAI story.",
+      "alt": "One complete story. Every source connected. EVIDENCE RECORD · 36. Purpose, regulated product identity, Indian foundation and international pathway.. Pinnacle Blooms Network.",
       "width": 1200,
       "height": 630
     }

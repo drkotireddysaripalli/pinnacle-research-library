@@ -1,6 +1,6 @@
 # Pinnacle Blooms Network: organisation profile
 
-Pinnacle Blooms Network is the child-development service brand of Bharath Healthcare Laboratories Private Limited, an Indian company incorporated in 2016. Its published approach connects developmental ability measurement, individual planning, integrated intervention, parent-guided everyday practice and progress review. The company holds an MD-5 manufacturing licence naming PinnacleAI® GPT-OS v1.0.0, Class B non-diagnostic developmental-support software. This profile brings together corporate identity records, the software licence, quality-system documentation, dated institutional counts, facility-register observations and research publications. It distinguishes company descriptions, independent practitioner findings and clinical research, so readers can cite each statement with its source, date and scope.
+Pinnacle Blooms Network is the child-development service brand of Bharath Healthcare Laboratories Private Limited, an Indian company incorporated in 2016. Its published approach connects developmental ability measurement, individual planning, integrated intervention, parent-guided everyday practice and progress review. The company holds an MD-5 manufacturing licence naming PinnacleAI® GPT-OS v1.0.0, Class B non-diagnostic developmental-support software. Free Sale Certificate FSC/MD/2026/000741, dated 23 September 2026, identifies the same licensed device for domestic sale and export subject to the importing country’s law. This profile brings together corporate identity records, regulatory scope, quality-system documentation, dated institutional counts, facility-register observations and research publications. It distinguishes company descriptions, official records, independent practitioner findings and clinical research, so readers can cite each statement with its source, date and scope.
 
 Public-facing brand: Pinnacle Blooms Network
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/dossier.html
@@ -25,6 +25,9 @@ Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
 
 Manufacturing licence: Form MD-5, MFG/MD/2026/000248; issued 21 April 2026 by the Telangana State Licensing Authority
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+
+Free Sale Certificate: FSC/MD/2026/000741; issued 23 September 2026 for Indian domestic sale and export subject to importing-country law
+Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html
 
 Medical-device management-system record: BIS licence MD/L-2026029599; stated validity 3 September 2026 to 2 September 2029
 Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
@@ -54,9 +57,10 @@ https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/mca.html
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim-operating-years
 
 ## Developmental approach and licensed scope
-Pinnacle describes a seven-stage pathway: identify capabilities and measure ability; forecast readiness and create a child-specific plan; provide integrated intervention; support parent-guided everyday practice; track progress and correct the plan; reassess and repeat until readiness; and support growing independence and participation. This is the company’s service and educational explanation. The MD-5 separately specifies the named software version, manufacturer, premises and intended use: developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for children aged 0–12. It is non-diagnostic. The BIS schedule describes management-system activities and named developmental modules. Neither record establishes a guaranteed child outcome or approval of every broader service description.
+Pinnacle describes a seven-stage pathway: identify capabilities and measure ability; forecast readiness and create a child-specific plan; provide integrated intervention; support parent-guided everyday practice; track progress and correct the plan; reassess and repeat until readiness; and support growing independence and participation. This is the company’s service and educational explanation. The MD-5 separately specifies the named software version, manufacturer, premises and intended use: developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for children aged 0–12. It is non-diagnostic. Free Sale Certificate FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for that named device, subject to the importing country’s law; it is not foreign approval. The BIS schedule describes management-system activities and named developmental modules. These records do not establish a guaranteed child outcome or comparative superiority.
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.json
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
 
 ## Dated institutional counts and independent reports
@@ -107,6 +111,9 @@ The cited institutional records establish company incorporation in 2016 and a co
 
 What does the PinnacleAI® licence cover?
 The supplied MD-5 names PinnacleAI® GPT-OS v1.0.0, a Class B non-diagnostic developmental-support device for children aged 0–12, with specified functions, manufacturer and premises. The wider seven-stage pathway explains how Pinnacle describes its services; the licence is not a blanket approval of all educational explanations, centres or promised outcomes.
+
+Does the Free Sale Certificate mean PinnacleAI® is approved abroad?
+No. FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for the licensed device. Registration, approval or listing in another country is a separate process under that country’s rules.
 
 Which figures come from the independent practitioner reports?
 The SRS 4400 findings at 17 July 2026 record 31,052,382 defined cumulative services, 792,614 beneficiary/family registrations, 2.7 billion-plus structured records and 49 operational centres. The SAE 3000 report separately provides limited assurance over specified assertions and thresholds. The 400-billion aggregate estimate, wider 70-plus network figure and clinical outcome percentages have separate source bases.

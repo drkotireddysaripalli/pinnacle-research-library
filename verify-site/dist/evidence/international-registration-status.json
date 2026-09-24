@@ -1,0 +1,96 @@
+{
+  "updated": "2026-09-24",
+  "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json",
+  "statusVocabulary": [
+    "researching requirements",
+    "local representative appointed",
+    "technical file prepared",
+    "submitted",
+    "under review",
+    "registered"
+  ],
+  "rule": "A market advances only when supporting evidence is retained and linked.",
+  "markets": [
+    {
+      "country": "New Zealand",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "United Kingdom",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Brazil",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Vietnam",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Thailand",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Colombia",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Peru",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Saudi Arabia",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Submission receipt and foreign registration not yet available in this evidence collection."
+    },
+    {
+      "country": "Canada",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Organisation describes an MDSAP audit plan; scheduling and completion are not verified. Country market access is separate."
+    },
+    {
+      "country": "Australia",
+      "status": "Announced target market",
+      "basis": "Organisation-supplied international expansion announcement, 24 September 2026",
+      "submissionVerified": false,
+      "registrationVerified": false,
+      "note": "Organisation describes an MDSAP audit plan; scheduling and completion are not verified. Country market access is separate."
+    }
+  ],
+  "currentStatement": "No foreign registration is claimed. The Indian regulatory and export-documentation foundation is established."
+}

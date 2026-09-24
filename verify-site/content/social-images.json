@@ -512,6 +512,23 @@
       "alt": "PinnacleAI® MD-5 · Class B SaMD. MEDICAL DEVICE LICENCE. Non-diagnostic developmental support · Ages 0–12. Pinnacle Blooms Network."
     },
     {
+      "route": "/evidence/records/fsc.html",
+      "id": "record-fsc",
+      "title": "Free Sale Certificate Indian scope. Export route.",
+      "lines": [
+        "Free Sale Certificate",
+        "Indian scope. Export route."
+      ],
+      "category": "MEDICAL DEVICE REGULATION",
+      "note": "FSC/MD/2026/000741 · importing-country rules still apply",
+      "icon": "badge-check",
+      "description": "Free Sale Certificate FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for PinnacleAI® GPT-OS v1.0.0.",
+      "image": "/images/social/record-fsc-bec0d678cfe5.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Free Sale Certificate Indian scope. Export route. MEDICAL DEVICE REGULATION. FSC/MD/2026/000741 · importing-country rules still apply. Pinnacle Blooms Network."
+    },
+    {
       "route": "/evidence/records/methodology.html",
       "id": "evidence-records-methodology",
       "title": "AbilityScore® The measurement method.",
@@ -1381,6 +1398,40 @@
       "width": 1200,
       "height": 630,
       "alt": "Six dated measures Each source in view CLAIM & SOURCE LEDGER. Counts, definitions, source pages and assurance boundaries as at 17 July 2026.. Pinnacle Blooms Network."
+    },
+    {
+      "id": "pinnacleai-regulatory-journey",
+      "route": "/evidence/pinnacleai-regulatory-journey.html",
+      "title": "PinnacleAI® Regulatory Journey",
+      "lines": [
+        "Built around the child’s life.",
+        "Ready for global pathways."
+      ],
+      "category": "PINNACLEAI® · PURPOSE · EVIDENCE",
+      "note": "Indian Class B SaMD foundation and export documentation, with every source linked.",
+      "icon": "network",
+      "description": "Purpose, seven-stage pathway, product identity, regulatory foundation and evidence-backed international status.",
+      "image": "/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "Built around the child’s life. Ready for global pathways. PINNACLEAI® · PURPOSE · EVIDENCE. Indian Class B SaMD foundation and export documentation, with every source linked.. Pinnacle Blooms Network."
+    },
+    {
+      "id": "record-pinnacleai-story",
+      "route": "/evidence/records/pinnacleai-story.html",
+      "title": "PinnacleAI® Story Evidence Record",
+      "lines": [
+        "One complete story.",
+        "Every source connected."
+      ],
+      "category": "EVIDENCE RECORD · 36",
+      "note": "Purpose, regulated product identity, Indian foundation and international pathway.",
+      "icon": "book-open",
+      "description": "The citation-ready evidence record for the complete source-linked PinnacleAI story.",
+      "image": "/images/social/record-pinnacleai-story-c1d8183d33bc.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "One complete story. Every source connected. EVIDENCE RECORD · 36. Purpose, regulated product identity, Indian foundation and international pathway.. Pinnacle Blooms Network."
     }
   ]
 }
