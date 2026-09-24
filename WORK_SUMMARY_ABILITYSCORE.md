@@ -16,7 +16,7 @@
 - **Professional affiliation:** Bharath Healthcare Laboratories Private Limited / Pinnacle Blooms Network, as deposited in the source record
 - **Publication date:** 9 April 2026
 - **Repository type:** preprint
-- **Version:** Not separately labelled in the status matrix
+- **Version:** Technical Monograph v3.0, printed on page 1 of the deposited PDF; the Zenodo API version field is blank. [Source PDF](https://zenodo.org/api/records/19482123/files/PinnacleAI%20AbilityScore%20Standardized%20Composite%20Index%20for%20Quantifying%20Child%20Developmental%20Readiness.pdf/content)
 - **Evidence stage:** preliminary_operational_evidence
 - **Results status:** Preliminary operational findings reported; formal comparator validation remains planned
 - **Review status:** Peer review not established
