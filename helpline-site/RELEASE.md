@@ -1,3 +1,5 @@
+Current production is v8, documented in DESIGN-RELEASE-20260924.md. The v7 entity release below is retained as historical context.
+
 # National Autism Helpline — entity and retrieval release
 
 Published 24 September 2026 by the Verify task, which retains ownership of this scope.
