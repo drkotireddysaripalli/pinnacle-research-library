@@ -61,8 +61,8 @@
       "name": "AbilityScore: Development and Preliminary Psychometric Characterization of a Standardized Composite Index for Quantifying Child Developmental Readiness",
       "identifier": "10.5281/zenodo.19482123",
       "datePublished": "2026-04-09",
-      "version": "",
-      "description": "Preliminary operational findings reported; formal comparator validation remains planned Required qualifier: Do not describe as completed concurrent-validity evidence"
+      "version": "3.0",
+      "description": "Preliminary operational findings reported; formal comparator validation remains planned. Version 3.0 is printed on the deposited PDF front page; Zenodo API metadata.version is absent. Required qualifier: Do not describe as completed concurrent-validity evidence"
     },
     {
       "@id": "https://doi.org/10.5281/zenodo.19482476",
