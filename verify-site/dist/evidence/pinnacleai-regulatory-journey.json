@@ -1,5 +1,5 @@
 {
-  "title": "PinnacleAI® Regulatory Journey | Purpose, Evidence and Export Readiness",
+  "title": "PinnacleAI®: The Complete Story | Purpose, Research & Export Readiness",
   "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html",
   "updated": "2026-09-24",
   "publisher": "Bharath Healthcare Laboratories Private Limited",
@@ -8,8 +8,25 @@
   "product": {
     "name": "PinnacleAI GPT-OS v1.0.0",
     "classification": "Class B",
-    "scope": "Non-diagnostic developmental-support software",
-    "population": "Children aged 0–12"
+    "scope": "Class B non-diagnostic developmental-support software for children aged 0–12.",
+    "functions": [
+      [
+        "Developmental ability measurement",
+        "Organise observations of a child’s abilities so the starting point and goals can be discussed."
+      ],
+      [
+        "Readiness tracking",
+        "Follow readiness for participation and everyday goals through repeated review."
+      ],
+      [
+        "Progress forecasting",
+        "Support planning with forecasts that are considered alongside professional judgement."
+      ],
+      [
+        "Adaptive therapy-plan support",
+        "Support review and adjustment of the child-specific plan as information changes."
+      ]
+    ]
   },
   "purpose": [
     [
@@ -40,33 +57,45 @@
   ],
   "regulatoryFoundation": [
     {
-      "milestone": "Class B classification",
-      "meaning": "Indian medical-device classification trail",
+      "title": "Class B classification",
+      "detail": "The operative MD-5 identifies the device as Class B.",
+      "scope": "The separate issued classification decision is still sought in this collection; the manufacturing licence is the inspected basis for the Class B description.",
+      "record": "classification",
       "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html"
     },
     {
-      "milestone": "Form MD-5",
-      "meaning": "Manufacturing licence MFG/MD/2026/000248",
+      "title": "Form MD-5",
+      "detail": "MFG/MD/2026/000248 · instrument dated 21 April 2026",
+      "scope": "Names the manufacturer, product, version and non-diagnostic intended use. The FSC cites the base licence date as 20 April; each source is reproduced as printed.",
+      "record": "md5",
       "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html"
     },
     {
-      "milestone": "ISO 13485:2016",
-      "meaning": "Quality-management system scope",
+      "title": "ISO 13485:2016",
+      "detail": "Medical-device quality-management system",
+      "scope": "Read the certificate’s named entity, scope and dates. Management-system certification is distinct from a child’s clinical outcome.",
+      "record": "iso13485",
       "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html"
     },
     {
-      "milestone": "ISO/IEC 27001:2022",
-      "meaning": "Information-security management scope",
+      "title": "ISO/IEC 27001:2022",
+      "detail": "Information-security management system",
+      "scope": "Describes the information-security management system within the certificate’s stated scope. Read the named entity, covered activities and validity dates together.",
+      "record": "iso27001",
       "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html"
     },
     {
-      "milestone": "BIS IS 23485:2019",
-      "meaning": "Licence and certified scope",
+      "title": "BIS IS 23485:2019",
+      "detail": "MD/L-2026029599 · 3 September 2026",
+      "scope": "The schedule names AbilityScore mapping, Prognose, Everyday Therapy through TherapeuticAI, and tracking and correction through Fusion within the certified scope.",
+      "record": "bis",
       "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html"
     },
     {
-      "milestone": "Free Sale Certificate",
-      "meaning": "FSC/MD/2026/000741 · 23 September 2026",
+      "title": "Free Sale Certificate",
+      "detail": "FSC/MD/2026/000741 · 23 September 2026",
+      "scope": "Records Indian domestic marketability and export of the licensed device subject to the importing country’s law.",
+      "record": "fsc",
       "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
     }
   ],
@@ -76,6 +105,32 @@
     "meaning": "Indian domestic marketability and export eligibility, subject to importing-country law",
     "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
   },
+  "research": [
+    {
+      "id": "zenodo-22761782",
+      "title": "The Indian licensing case study",
+      "type": "Preprint · regulatory analysis",
+      "description": "Koti Reddy Saripalli’s documentary analysis of the April 2026 licensing case against later CDSCO guidance. It helps readers follow the regulatory reasoning; it is not an efficacy study.",
+      "doi": "10.5281/zenodo.22761782",
+      "source": "https://doi.org/10.5281/zenodo.22761782"
+    },
+    {
+      "id": "zenodo-19482123",
+      "title": "AbilityScore® measurement research",
+      "type": "Preprint · preliminary technical monograph",
+      "description": "Explains the measurement approach and preliminary within-network analysis. Read the methods, sample definitions and limitations with the reported findings.",
+      "doi": "10.5281/zenodo.19482123",
+      "source": "https://doi.org/10.5281/zenodo.19482123"
+    },
+    {
+      "id": "zenodo-19482476",
+      "title": "The external-validation plan",
+      "type": "Preprint · study protocol",
+      "description": "Sets out a proposed validation study. A protocol describes planned work; completed external-validation results require their own report.",
+      "doi": "10.5281/zenodo.19482476",
+      "source": "https://doi.org/10.5281/zenodo.19482476"
+    }
+  ],
   "internationalMarkets": [
     {
       "country": "New Zealand",
@@ -182,14 +237,74 @@
     {
       "question": "How can the evidence be reused?",
       "answer": "Use the citation downloads and machine-readable JSON or text exports. Cite the exact licence, certificate or dated report for a specific claim and retain its date and scope."
+    },
+    {
+      "question": "What does “operating system” mean in the PinnacleAI story?",
+      "answer": "Pinnacle uses GPT-OS in its product name and describes an approach spanning measurement, planning, everyday practice and review. The regulatory description is non-diagnostic developmental-support software; “operating system” is not a separate regulatory approval category."
+    },
+    {
+      "question": "What does the export milestone mean for my child?",
+      "answer": "The Free Sale Certificate documents the device’s regulatory standing in India and supports international market-access work. For your child, the useful questions remain the individual goals, the care team, everyday practice, progress review and the relevant centre’s records."
+    },
+    {
+      "question": "Where can a family start?",
+      "answer": "Call Pinnacle’s National Autism Helpline on 9100 181 181 for free guidance, available 24/7. The service is operated by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited. Free guidance is separate from assessment or therapy charges; normal call charges may apply."
+    }
+  ],
+  "sourceMap": [
+    {
+      "claim": "Class B, non-diagnostic developmental-support software; version 1.0.0; children aged 0–12",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+      "scope": "Issued manufacturing licence and annexure; intended use, not diagnostic or outcome authority."
+    },
+    {
+      "claim": "Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+      "scope": "Licensed intended functions; human and professional review remains part of care."
+    },
+    {
+      "claim": "Bharath Healthcare Laboratories Private Limited is the licence holder and manufacturer",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
+      "scope": "Legal entity differs from the Pinnacle Blooms Network brand."
+    },
+    {
+      "claim": "BIS licence MD/L-2026029599 dated 3 September 2026",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+      "scope": "Read the management-system scope schedule and dates."
+    },
+    {
+      "claim": "FSC/MD/2026/000741 issued 23 September 2026",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html",
+      "scope": "Domestic marketability and export subject to importing-country law; not foreign registration."
+    },
+    {
+      "claim": "31,052,382 defined cumulative services; 792,614 beneficiary/family registrations; >2.7 billion structured records; 49 operationally defined centres",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html",
+      "scope": "SRS 4400 factual-findings report dated 17 July 2026; distinct units and definitions, not an outcome denominator."
+    },
+    {
+      "claim": "Research preprints, a study protocol and their source files are publicly inspectable",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
+      "scope": "Repository publication does not imply peer review, efficacy or regulator endorsement."
+    },
+    {
+      "claim": "Ten international markets are announced targets",
+      "source": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json",
+      "scope": "Organisation announcement of 24 September 2026; filings and registrations not verified in this collection."
     }
   ],
   "sources": [
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html",
     "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html",
-    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html",
-    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
     "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html",
     "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html",
-    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html"
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html",
+    "https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json",
+    "https://doi.org/10.5281/zenodo.22761782",
+    "https://doi.org/10.5281/zenodo.19482123",
+    "https://doi.org/10.5281/zenodo.19482476"
   ]
 }

@@ -24,11 +24,11 @@ window.PINNACLE_EVIDENCE = {
       "links": [
         {
           "label": "Free Sale Certificate record",
-          "url": "evidence/records/fsc.html"
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
         },
         {
           "label": "Read redacted licence",
-          "url": "evidence/md5.pdf"
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/md5.pdf"
         },
         {
           "label": "Corrected forwarding letter · Drive",
@@ -37,6 +37,10 @@ window.PINNACLE_EVIDENCE = {
         {
           "label": "Telangana DCA",
           "url": "https://dca.telangana.gov.in/"
+        },
+        {
+          "label": "PinnacleAI: purpose, research and the complete regulatory story",
+          "url": "/evidence/pinnacleai-regulatory-journey.html"
         }
       ],
       "note": "The operative licence reads 000248. A corrected forwarding letter also reads 000248; the older forwarding letter supplied as PinnacleAI®_SAMD_License_CL.pdf also reads 000150. The CL file is a forwarding letter, not a separate classification approval. Use the operative licence and corrected letter together. Free Sale Certificate FSC/MD/2026/000741 was issued on this licence on 23 September 2026; see the FSC record."
@@ -71,11 +75,11 @@ window.PINNACLE_EVIDENCE = {
       "links": [
         {
           "label": "Read privacy-safe certificate",
-          "url": "evidence/fsc.pdf"
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/fsc.pdf"
         },
         {
           "label": "Read privacy-safe forwarding letter",
-          "url": "evidence/fsc-forwarding-letter.pdf"
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/fsc-forwarding-letter.pdf"
         },
         {
           "label": "CDSCO Medical Device Online portal",
@@ -84,6 +88,10 @@ window.PINNACLE_EVIDENCE = {
         {
           "label": "Medical Devices Rules, 2017",
           "url": "https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/Medical%20Devices%20Rules%2C%202017.pdf"
+        },
+        {
+          "label": "PinnacleAI: purpose, research and the complete regulatory story",
+          "url": "/evidence/pinnacleai-regulatory-journey.html"
         }
       ],
       "note": "Application reference FSC/MD/2026/204866, dated 15 September 2026, is distinct from certificate FSC/MD/2026/000741. The FSC cites base licence MFG/MD/2026/000248 as issued on 20 April 2026; the supplied Form MD-5 instrument is dated 21 April 2026. Both identifiers and dates are preserved as printed. The public copies remove the visible digital-signature image while retaining the signatory name and designation; the original signed files remain in the private source set."
@@ -109,11 +117,15 @@ window.PINNACLE_EVIDENCE = {
       "links": [
         {
           "label": "Read redacted licence & schedule",
-          "url": "evidence/bis.pdf"
+          "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/bis.pdf"
         },
         {
           "label": "BIS verification portal",
           "url": "https://manakonline.in/MANAK/login"
+        },
+        {
+          "label": "PinnacleAI: purpose, research and the complete regulatory story",
+          "url": "/evidence/pinnacleai-regulatory-journey.html"
         }
       ],
       "scopeReviewed": "19 September 2026"
@@ -1004,7 +1016,7 @@ window.PINNACLE_EVIDENCE = {
       "originalReviewed": true,
       "reviewedOn": "2026-09-24",
       "reviewedDate": "24 September 2026",
-      "subtitle": "Source-linked flagship narrative · child-development purpose, Indian regulatory foundation and international pathway",
+      "subtitle": "Child-first purpose, licensed functions, research, Indian export documentation and source-linked international status",
       "fields": {
         "Publisher": "Bharath Healthcare Laboratories Private Limited",
         "Product": "PinnacleAI GPT-OS v1.0.0",
@@ -1028,6 +1040,14 @@ window.PINNACLE_EVIDENCE = {
         {
           "label": "Inspect the Free Sale Certificate record",
           "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
+        },
+        {
+          "label": "Claim-to-source map · CSV",
+          "url": "/evidence/pinnacleai-story-source-map.csv"
+        },
+        {
+          "label": "Citation · CSL-JSON",
+          "url": "/evidence/citations/pinnacleai-regulatory-journey.csl.json"
         }
       ],
       "note": "This is a first-party synthesis record. For a regulatory or statistical claim, cite the linked original record and retain its date, unit and scope.",

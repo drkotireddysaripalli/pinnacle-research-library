@@ -37,6 +37,7 @@ Reviewed: 15 September 2026
 - [Read redacted licence](https://pinnacle-verify.saripalli.chatgpt.site/evidence/md5.pdf)
 - [Corrected forwarding letter · Drive](https://drive.google.com/file/d/1A22-NS5A1-ck2qXRBFrRSn9vlLyAzdhT/view)
 - [Telangana DCA](https://dca.telangana.gov.in/)
+- [PinnacleAI: purpose, research and the complete regulatory story](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html)
 
 ---
 
@@ -74,6 +75,7 @@ Reviewed: 24 September 2026
 - [Read privacy-safe forwarding letter](https://pinnacle-verify.saripalli.chatgpt.site/evidence/fsc-forwarding-letter.pdf)
 - [CDSCO Medical Device Online portal](https://cdscomdonline.gov.in/)
 - [Medical Devices Rules, 2017](https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/Medical%20Devices%20Rules%2C%202017.pdf)
+- [PinnacleAI: purpose, research and the complete regulatory story](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html)
 
 ---
 
@@ -104,6 +106,7 @@ Source citation: Original BIS licence, page 1; scope schedule, page 2.
 Reviewed: 15 September 2026
 - [Read redacted licence & schedule](https://pinnacle-verify.saripalli.chatgpt.site/evidence/bis.pdf)
 - [BIS verification portal](https://manakonline.in/MANAK/login)
+- [PinnacleAI: purpose, research and the complete regulatory story](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html)
 
 ---
 
@@ -1053,7 +1056,7 @@ Category: Source publications
 Review status: Company-published
 Company-authored source; underlying claims need their own evidence.
 
-Source-linked flagship narrative · child-development purpose, Indian regulatory foundation and international pathway
+Child-first purpose, licensed functions, research, Indian export documentation and source-linked international status
 
 Publisher: Bharath Healthcare Laboratories Private Limited
 Product: PinnacleAI GPT-OS v1.0.0
@@ -1075,6 +1078,8 @@ Reviewed: 24 September 2026
 - [Read the complete PinnacleAI® story](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html)
 - [Structured story and sources](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.json)
 - [Inspect the Free Sale Certificate record](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html)
+- [Claim-to-source map · CSV](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-story-source-map.csv)
+- [Citation · CSL-JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/citations/pinnacleai-regulatory-journey.csl.json)
 
 ---
 
@@ -2465,6 +2470,7 @@ https://pinnacle-verify.saripalli.chatgpt.site/evidence/assurance-map.html#claim
 ## Developmental approach and licensed scope
 Pinnacle describes a seven-stage pathway: identify capabilities and measure ability; forecast readiness and create a child-specific plan; provide integrated intervention; support parent-guided everyday practice; track progress and correct the plan; reassess and repeat until readiness; and support growing independence and participation. This is the company’s service and educational explanation. The MD-5 separately specifies the named software version, manufacturer, premises and intended use: developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for children aged 0–12. It is non-diagnostic. Free Sale Certificate FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for that named device, subject to the importing country’s law; it is not foreign approval. The BIS schedule describes management-system activities and named developmental modules. These records do not establish a guaranteed child outcome or comparative superiority.
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/developmental-pathway.json
+https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html
 https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
@@ -3044,101 +3050,340 @@ Bhimavaram, Khammam, Nizamabad and Tirupati each have two complete HFR identifie
 No. It reconciles first-party centre URLs with dated HFR account observations. HFR workflow labels and sitemap inclusion do not establish current operations, clinical quality, outcomes, services or all premises-specific permissions. Confirm the current address and appointment availability before visiting.
 
 
-# PinnacleAI® Regulatory Journey | Purpose, Evidence and Export Readiness
+# PinnacleAI®: The Complete Story | Purpose, Research & Export Readiness
+Updated: 2026-09-24
 
-The source-linked PinnacleAI® story: child-development purpose, Class B non-diagnostic SaMD scope, Indian regulatory foundation, Free Sale Certificate and international registration pathway.
+PINNACLEAI® · THE COMPLETE STORY
 
-## Purpose
+Built around the child’s life.
 
-Purpose: A self-sufficient, mainstream and wonderful life for the child determines the abilities, goals, people, methods, everyday practice and review.
+A life-first purpose. A documented Indian medical-device foundation. A new chapter in international readiness.
 
-Measure and plan: The seven-stage pathway connects capability identification and AbilityScore® measurement with readiness forecasting and a child-specific plan.
+PinnacleAI® brings developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support into the child’s journey—with families and professionals at its heart.
 
-Support everyday participation: Integrated intervention, parent-guided practice, progress review and reassessment work toward growing independence and participation.
+Source-linked editorial review · 24 September 2026
 
-Build accountable technology: PinnacleAI® supports the pathway as licensed non-diagnostic developmental-support software with human and professional review.
+Illustrative family artwork · participation and growing independence. For families Purpose & everyday life (https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html#section-the-outcome-belongs-at-the-beginning) For clinicians & researchers Functions, studies & methods (https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html#research) For international partners Licensing & export documents (https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html#section-export-ready-from-india) PinnacleAI GPT-OS v1.0.0 is Class B, non-diagnostic developmental-support software for children aged 0–12. The licence holder and legal manufacturer is Bharath Healthcare Laboratories Private Limited . Pinnacle Blooms Network is the child-development brand and service ecosystem.
 
-## Seven-stage pathway
+Read the licensed intended use (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html) · Explore the organisation’s identity (https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html)
 
-1. Identify capabilities and measure ability
+THE PURPOSE
 
-2. Forecast readiness and create a child-specific plan
+The outcome belongs at the beginning.
 
-3. Provide integrated therapies and intervention
+A self-sufficient, mainstream and wonderful life for the child determines the abilities, goals, methods, people, practice and review.
 
-4. Support parent-guided everyday practice and home generalisation
+That means beginning with the life a child is working toward: communicating, learning, making choices, joining in, building confidence and becoming increasingly independent. A score can inform the next step; the child’s life gives that step its purpose.
 
-5. Track progress and correct the plan
+Purpose
 
-6. Reassess and repeat until readiness
+A self-sufficient, mainstream and wonderful life for the child determines the abilities, goals, people, methods, everyday practice and review.
 
-7. Support growing independence, school readiness and mainstream participation
+Measure and plan
 
-## Indian regulatory foundation
+The seven-stage pathway connects capability identification and AbilityScore® measurement with readiness forecasting and a child-specific plan.
 
-Class B classification: Indian medical-device classification trail
-Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html
+Support everyday participation
 
-Form MD-5: Manufacturing licence MFG/MD/2026/000248
-Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html
+Integrated intervention, parent-guided practice, progress review and reassessment work toward growing independence and participation.
 
-ISO 13485:2016: Quality-management system scope
-Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html
+Build accountable technology
 
-ISO/IEC 27001:2022: Information-security management scope
-Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html
+PinnacleAI® supports the pathway as licensed non-diagnostic developmental-support software with human and professional review.
 
-BIS IS 23485:2019: Licence and certified scope
-Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html
+THE SEVEN-STAGE PATHWAY
 
-Free Sale Certificate: FSC/MD/2026/000741 · 23 September 2026
-Source: https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html
+From capability to participation.
 
-## FSC
+The pathway connects professional support with practice at home and review over time. Goals and pace remain individual to each child.
 
-FSC/MD/2026/000741 records Indian domestic marketability and export eligibility, subject to importing-country law. It is not foreign approval.
+01 Identify capabilities and measure ability
 
-## International targets
+02 Forecast readiness and create a child-specific plan
 
-New Zealand: Announced target market. Submission receipt and foreign registration not yet available in this evidence collection.
+03 Provide integrated therapies and intervention
 
-United Kingdom: Announced target market. Submission receipt and foreign registration not yet available in this evidence collection.
+04 Support parent-guided everyday practice and home generalisation
 
-Brazil: Announced target market. Submission receipt and foreign registration not yet available in this evidence collection.
+05 Track progress and correct the plan
 
-Vietnam: Announced target market. Submission receipt and foreign registration not yet available in this evidence collection.
+06 Reassess and repeat until readiness
 
-Thailand: Announced target market. Submission receipt and foreign registration not yet available in this evidence collection.
+07 Support growing independence, school readiness and mainstream participation
 
-Colombia: Announced target market. Submission receipt and foreign registration not yet available in this evidence collection.
+Explore the full life-first philosophy (https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.html)
 
-Peru: Announced target market. Submission receipt and foreign registration not yet available in this evidence collection.
+THE SOFTWARE’S ROLE
 
-Saudi Arabia: Announced target market. Submission receipt and foreign registration not yet available in this evidence collection.
+Support the people supporting the child.
 
-Canada: Announced target market. Organisation describes an MDSAP audit plan; scheduling and completion are not verified. Country market access is separate.
+The manufacturing licence names four intended functions. These support measurement, planning and review by the people involved in the child’s development.
 
-Australia: Announced target market. Organisation describes an MDSAP audit plan; scheduling and completion are not verified. Country market access is separate.
+Developmental ability measurement
 
-## Questions
+Organise observations of a child’s abilities so the starting point and goals can be discussed.
 
-What is PinnacleAI®?
-PinnacleAI® GPT-OS v1.0.0 is identified in the supplied Indian manufacturing licence as Class B, non-diagnostic developmental-support software for children aged 0–12. Its stated functions include developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support.
+Readiness tracking
 
-Who is the legal manufacturer?
-Bharath Healthcare Laboratories Private Limited is the licence holder and legal manufacturer named in the reviewed regulatory records. Pinnacle Blooms Network is the child-development brand and service ecosystem.
+Follow readiness for participation and everyday goals through repeated review.
 
-What does the Free Sale Certificate establish?
-FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for the licensed device. It supports country-specific market-access applications; it is not approval or registration in another country.
+Progress forecasting
 
-Does PinnacleAI® diagnose children?
-No. The licensed product is described as non-diagnostic developmental-support software. Clinical and care decisions remain within the appropriate human and professional review process.
+Support planning with forecasts that are considered alongside professional judgement.
 
-Has PinnacleAI® been registered in other countries?
-This page does not claim a foreign registration. Each market will be labelled researching, representative appointed, technical file prepared, submitted, under review or registered only when the corresponding evidence is available.
+Adaptive therapy-plan support
 
-How can the evidence be reused?
-Use the citation downloads and machine-readable JSON or text exports. Cite the exact licence, certificate or dated report for a specific claim and retain its date and scope.
+Support review and adjustment of the child-specific plan as information changes.
+
+People remain central. Parents, therapists, educators and caregivers are the intended users. The product is non-diagnostic; clinical and care decisions remain within appropriate human and professional review.
+
+The BIS scope schedule names AbilityScore mapping, Prognose, Everyday Therapy through TherapeuticAI, and tracking and correction through Fusion. These names describe the documented software scope; each child’s goals and outcomes are individual.
+
+MD-5 functions and intended users (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html) · BIS modules and scope (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html)
+
+THE INDIAN REGULATORY FOUNDATION
+
+A documented foundation for the next chapter.
+
+Each document answers a different question: what the licensed device does, who manufactures it, which management systems are certified, and what the export certificate establishes.
+
+Class B classification
+
+The operative MD-5 identifies the device as Class B.
+
+The separate issued classification decision is still sought in this collection; the manufacturing licence is the inspected basis for the Class B description.
+
+Inspect the source record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/classification.html)
+
+Form MD-5
+
+MFG/MD/2026/000248 · instrument dated 21 April 2026
+
+Names the manufacturer, product, version and non-diagnostic intended use. The FSC cites the base licence date as 20 April; each source is reproduced as printed.
+
+Inspect the source record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html)
+
+ISO 13485:2016
+
+Medical-device quality-management system
+
+Read the certificate’s named entity, scope and dates. Management-system certification is distinct from a child’s clinical outcome.
+
+Inspect the source record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso13485.html)
+
+ISO/IEC 27001:2022
+
+Information-security management system
+
+Describes the information-security management system within the certificate’s stated scope. Read the named entity, covered activities and validity dates together.
+
+Inspect the source record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/iso27001.html)
+
+BIS IS 23485:2019
+
+MD/L-2026029599 · 3 September 2026
+
+The schedule names AbilityScore mapping, Prognose, Everyday Therapy through TherapeuticAI, and tracking and correction through Fusion within the certified scope.
+
+Inspect the source record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html)
+
+Free Sale Certificate
+
+FSC/MD/2026/000741 · 23 September 2026
+
+Records Indian domestic marketability and export of the licensed device subject to the importing country’s law.
+
+Inspect the source record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html)
+
+23 SEPTEMBER 2026 · THE EXPORT MILESTONE
+
+Export ready from India.
+
+Free Sale Certificate FSC/MD/2026/000741 adds a documented export foundation to the licensed PinnacleAI product.
+
+Issued by the State Licensing Authority, TG SAFE, Telangana, on 23 September 2026, the certificate references manufacturing licence MFG/MD/2026/000248. It records that the listed device may be manufactured and sold in India under Indian law and exported as per the law of the importing country.
+
+For potential international partners, the practical value is an inspectable source package: product identity, intended use, manufacturer, licence, management-system scope and the export certificate. Market access then proceeds under each destination’s requirements.
+
+Read the public certificate (https://pinnacle-verify.saripalli.chatgpt.site/evidence/fsc.pdf) · Read the forwarding letter (https://pinnacle-verify.saripalli.chatgpt.site/evidence/fsc-forwarding-letter.pdf)
+
+Indian export documentation is established. A foreign registration or marketing authorisation is a separate, country-specific step.
+
+(https://pinnacle-verify.saripalli.chatgpt.site/evidence/fsc.pdf) Read the certificate and original-source notes in the FSC evidence record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html).
+
+RESEARCH THAT READERS CAN INSPECT
+
+Methods, findings and the next questions.
+
+The research library brings together seven canonical works: six preprints and one report. The records preserve authorship, versions, publication status, original files and reuse licences. Three useful starting points for the PinnacleAI story are:
+
+Preprint · regulatory analysis
+
+The Indian licensing case study
+
+Koti Reddy Saripalli’s documentary analysis of the April 2026 licensing case against later CDSCO guidance. It helps readers follow the regulatory reasoning; it is not an efficacy study.
+
+Read the source guide (https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/zenodo-22761782.html)
+
+DOI 10.5281/zenodo.22761782 (https://doi.org/10.5281/zenodo.22761782)
+
+Preprint · preliminary technical monograph
+
+AbilityScore® measurement research
+
+Explains the measurement approach and preliminary within-network analysis. Read the methods, sample definitions and limitations with the reported findings.
+
+Read the source guide (https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/zenodo-19482123.html)
+
+DOI 10.5281/zenodo.19482123 (https://doi.org/10.5281/zenodo.19482123)
+
+Preprint · study protocol
+
+The external-validation plan
+
+Sets out a proposed validation study. A protocol describes planned work; completed external-validation results require their own report.
+
+Read the source guide (https://pinnacle-verify.saripalli.chatgpt.site/evidence/publications/zenodo-19482476.html)
+
+DOI 10.5281/zenodo.19482476 (https://doi.org/10.5281/zenodo.19482476)
+
+Research evidence and regulatory documents answer different questions. The library identifies what is preliminary, what is planned and what has been reported, so a reader can assess each work on its own terms.
+
+Explore all research, books and author profiles (https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html) · Check the claim-to-source ledger (https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html)
+
+DOCUMENTED SCALE · 17 JULY 2026
+
+Large numbers, with their definitions attached.
+
+The dated SRS 4400 factual-findings report records the following distinct measures:
+
+31,052,382
+
+Defined cumulative services
+
+792,614
+
+Beneficiary/family registrations
+
+2.7 billion+
+
+Structured records
+
+49
+
+Centres meeting the report’s operational definition
+
+These figures describe different units at the report date. They provide context for the organisation’s work; they should not be combined into a single child-outcome measure or presented as today’s centre count.
+
+Read the definitions and source pages (https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html) · Explore scale and mission (https://pinnacle-verify.saripalli.chatgpt.site/evidence/scale-and-mission.html)
+
+INTERNATIONAL LICENSING PATHWAY
+
+Progress that can be verified market by market.
+
+Pinnacle’s announcement identifies ten target markets. The next chapter is to translate the Indian source package into country-specific requirements, applications and—where issued—registrations.
+
+Organisation-announced target markets · 24 September 2026 Market Current documented stage
+
+New Zealand Announced target
+
+United Kingdom Announced target
+
+Brazil Announced target
+
+Vietnam Announced target
+
+Thailand Announced target
+
+Colombia Announced target
+
+Peru Announced target
+
+Saudi Arabia Announced target
+
+Canada Announced target
+
+Australia Announced target
+
+Filing receipts and foreign registrations are not yet verified in this collection. A market advances to “submitted” when a receipt is available and to “registered” when the competent authority’s record is available. The announced MDSAP audit plan remains a plan until scheduling and completion are evidenced; country market access is separate.
+
+Read the dated market-status file (https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json)
+
+YOUR NEXT STEP
+
+Start with the question that matters to you.
+
+For parents and families
+
+Discuss your child’s abilities, goals and the support that could help in everyday life. Pinnacle’s National Autism Helpline offers free guidance, 24/7.
+
+Call 9100 181 181 (tel:+919100181181) National Autism Helpline (https://www.pinnacleblooms.org/national-autism-helpline)
+
+Operated by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited. Free guidance is separate from assessment and therapy fees; normal call charges may apply.
+
+For clinicians and international partners
+
+Begin with the intended use, technical scope and research methods. For an international enquiry, include the country and the product or document you wish to discuss.
+
+Contact the Pinnacle team (mailto:care@pinnacleblooms.org?subject=PinnacleAI%20research%20or%20international%20enquiry) · Organisation and source contacts (https://pinnacle-verify.saripalli.chatgpt.site/evidence/organisation-profile.html)
+
+Use the source map below to keep product, research and market-access claims traceable.
+
+QUESTIONS FROM FAMILIES AND PARTNERS
+
+Questions, answered with context.
+
+What is PinnacleAI®? PinnacleAI® GPT-OS v1.0.0 is identified in the supplied Indian manufacturing licence as Class B, non-diagnostic developmental-support software for children aged 0–12. Its stated functions include developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support.
+
+Who is the legal manufacturer? Bharath Healthcare Laboratories Private Limited is the licence holder and legal manufacturer named in the reviewed regulatory records. Pinnacle Blooms Network is the child-development brand and service ecosystem.
+
+What does the Free Sale Certificate establish? FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for the licensed device. It supports country-specific market-access applications; it is not approval or registration in another country.
+
+Does PinnacleAI® diagnose children? No. The licensed product is described as non-diagnostic developmental-support software. Clinical and care decisions remain within the appropriate human and professional review process.
+
+Has PinnacleAI® been registered in other countries? This page does not claim a foreign registration. Each market will be labelled researching, representative appointed, technical file prepared, submitted, under review or registered only when the corresponding evidence is available.
+
+How can the evidence be reused? Use the citation downloads and machine-readable JSON or text exports. Cite the exact licence, certificate or dated report for a specific claim and retain its date and scope.
+
+What does “operating system” mean in the PinnacleAI story? Pinnacle uses GPT-OS in its product name and describes an approach spanning measurement, planning, everyday practice and review. The regulatory description is non-diagnostic developmental-support software; “operating system” is not a separate regulatory approval category.
+
+What does the export milestone mean for my child? The Free Sale Certificate documents the device’s regulatory standing in India and supports international market-access work. For your child, the useful questions remain the individual goals, the care team, everyday practice, progress review and the relevant centre’s records.
+
+Where can a family start? Call Pinnacle’s National Autism Helpline on 9100 181 181 for free guidance, available 24/7. The service is operated by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited. Free guidance is separate from assessment or therapy charges; normal call charges may apply.
+
+CLAIM TO ORIGINAL SOURCE
+
+A source for every material claim.
+
+Use this map when writing about PinnacleAI. Preserve the date, named entity, intended use and source scope.
+
+PinnacleAI story source map · 24 September 2026 Claim Source and scope
+
+Class B, non-diagnostic developmental-support software; version 1.0.0; children aged 0–12 Issued manufacturing licence and annexure; intended use, not diagnostic or outcome authority. Open the supporting record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html)
+
+Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support Licensed intended functions; human and professional review remains part of care. Open the supporting record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html)
+
+Bharath Healthcare Laboratories Private Limited is the licence holder and manufacturer Legal entity differs from the Pinnacle Blooms Network brand. Open the supporting record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/md5.html)
+
+BIS licence MD/L-2026029599 dated 3 September 2026 Read the management-system scope schedule and dates. Open the supporting record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/bis.html)
+
+FSC/MD/2026/000741 issued 23 September 2026 Domestic marketability and export subject to importing-country law; not foreign registration. Open the supporting record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html)
+
+31,052,382 defined cumulative services; 792,614 beneficiary/family registrations; >2.7 billion structured records; 49 operationally defined centres SRS 4400 factual-findings report dated 17 July 2026; distinct units and definitions, not an outcome denominator. Open the supporting record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/claim-ledger.html)
+
+Research preprints, a study protocol and their source files are publicly inspectable Repository publication does not imply peer review, efficacy or regulator endorsement. Open the supporting record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/research-library.html)
+
+Ten international markets are announced targets Organisation announcement of 24 September 2026; filings and registrations not verified in this collection. Open the supporting record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json)
+
+Download the source map · CSV (https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-story-source-map.csv) · Structured story · JSON (https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.json) · Complete story · plain text (https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.txt)
+
+Cite this story
+
+Bharath Healthcare Laboratories Private Limited. (2026, September 24). PinnacleAI®: the complete story—purpose, research and export readiness. Pinnacle Verify. https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html
+
+This is a first-party, source-linked narrative. For a regulatory or research finding, cite the linked original record and its scope. This editorial expansion does not carry a new independent clinical review.
+
+Text (https://pinnacle-verify.saripalli.chatgpt.site/evidence/citations/pinnacleai-regulatory-journey.txt) · BibTeX (https://pinnacle-verify.saripalli.chatgpt.site/evidence/citations/pinnacleai-regulatory-journey.bib) · RIS (https://pinnacle-verify.saripalli.chatgpt.site/evidence/citations/pinnacleai-regulatory-journey.ris) · CSL-JSON (https://pinnacle-verify.saripalli.chatgpt.site/evidence/citations/pinnacleai-regulatory-journey.csl.json) · Narrative evidence record (https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pinnacleai-story.html) · Full citation library (https://pinnacle-verify.saripalli.chatgpt.site/evidence/cite.html)
 
 Canonical: https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html
 

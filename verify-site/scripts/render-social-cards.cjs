@@ -175,6 +175,8 @@ async function render(card, logo, artwork) {
     white.addColorStop(1, 'rgba(255,255,255,0)');
     ctx.fillStyle = white;
     ctx.fillRect(0, 0, 775, 548);
+  } else if (card.familyArtwork) {
+    ctx.drawImage(await image(path.join(DIST, 'images/family-journey-1000.webp')), 756, 178, 430, 287);
   } else if (card.cover) {
     await drawCover(ctx, card.cover);
   } else {

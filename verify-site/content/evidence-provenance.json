@@ -25,7 +25,29 @@
         "height": 982
       },
       "recordUpdate": {
-        "scopeReviewed": "19 September 2026"
+        "scopeReviewed": "19 September 2026",
+        "links": [
+          {
+            "label": "Free Sale Certificate record",
+            "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
+          },
+          {
+            "label": "Read redacted licence",
+            "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/md5.pdf"
+          },
+          {
+            "label": "Corrected forwarding letter · Drive",
+            "url": "https://drive.google.com/file/d/1A22-NS5A1-ck2qXRBFrRSn9vlLyAzdhT/view"
+          },
+          {
+            "label": "Telangana DCA",
+            "url": "https://dca.telangana.gov.in/"
+          },
+          {
+            "label": "PinnacleAI: purpose, research and the complete regulatory story",
+            "url": "/evidence/pinnacleai-regulatory-journey.html"
+          }
+        ]
       },
       "history": [
         {
@@ -57,7 +79,29 @@
         "height": 919
       },
       "recordUpdate": {
-        "scopeReviewed": "24 September 2026"
+        "scopeReviewed": "24 September 2026",
+        "links": [
+          {
+            "label": "Read privacy-safe certificate",
+            "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/fsc.pdf"
+          },
+          {
+            "label": "Read privacy-safe forwarding letter",
+            "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/fsc-forwarding-letter.pdf"
+          },
+          {
+            "label": "CDSCO Medical Device Online portal",
+            "url": "https://cdscomdonline.gov.in/"
+          },
+          {
+            "label": "Medical Devices Rules, 2017",
+            "url": "https://cdsco.gov.in/opencms/resources/UploadCDSCOWeb/2022/m_device/Medical%20Devices%20Rules%2C%202017.pdf"
+          },
+          {
+            "label": "PinnacleAI: purpose, research and the complete regulatory story",
+            "url": "/evidence/pinnacleai-regulatory-journey.html"
+          }
+        ]
       },
       "history": [
         {
@@ -89,7 +133,21 @@
         "height": 1050
       },
       "recordUpdate": {
-        "scopeReviewed": "19 September 2026"
+        "scopeReviewed": "19 September 2026",
+        "links": [
+          {
+            "label": "Read redacted licence & schedule",
+            "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/bis.pdf"
+          },
+          {
+            "label": "BIS verification portal",
+            "url": "https://manakonline.in/MANAK/login"
+          },
+          {
+            "label": "PinnacleAI: purpose, research and the complete regulatory story",
+            "url": "/evidence/pinnacleai-regulatory-journey.html"
+          }
+        ]
       },
       "history": [
         {
@@ -310,6 +368,44 @@
         {
           "date": "2026-09-19",
           "change": "All 56 complete IDs remain visible. Approval ticks are limited to the 33 IDs displayed Approved in the reviewed account; other IDs have a neutral label. Exact dated workflow observations remain in source details and data exports. Other accounts have not been reconciled."
+        }
+      ]
+    },
+    {
+      "id": "pinnacleai-story",
+      "checkedOn": "2026-09-24",
+      "method": "First-party narrative expansion checked against the existing reviewed source records. No new clinical sign-off.",
+      "recordUpdate": {
+        "subtitle": "Child-first purpose, licensed functions, research, Indian export documentation and source-linked international status",
+        "links": [
+          {
+            "label": "Read the complete PinnacleAI® story",
+            "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html"
+          },
+          {
+            "label": "Structured story and sources",
+            "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.json"
+          },
+          {
+            "label": "Inspect the Free Sale Certificate record",
+            "url": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/fsc.html"
+          },
+          {
+            "label": "Claim-to-source map · CSV",
+            "url": "/evidence/pinnacleai-story-source-map.csv"
+          },
+          {
+            "label": "Citation · CSL-JSON",
+            "url": "/evidence/citations/pinnacleai-regulatory-journey.csl.json"
+          }
+        ]
+      },
+      "excerpts": [],
+      "boundary": "This narrative adds no new regulatory approval or independent clinical sign-off.",
+      "history": [
+        {
+          "date": "2026-09-24",
+          "change": "Expanded the first-party story with licensed functions, research context, source map and citation formats."
         }
       ]
     }

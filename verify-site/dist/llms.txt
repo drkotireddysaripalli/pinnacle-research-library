@@ -55,7 +55,7 @@ Evidence owner: Sourabh Sashank · Lead PinnacleAI® · care@pinnacleblooms.org 
 - [September handout · Current source narrative](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/september-handout.html): Company-published. 7 September 2026 · Private & confidential investor handout
 - [Books & parent resources · Publication records](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/books.html): Company-published. Authorship and publication metadata read from the supplied books
 - [PinnacleAI® walkthrough · Developmental architecture](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html): Company-published. Company-authored walkthrough · AbilityScore layers and programme cadence
-- [PinnacleAI® regulatory journey · Purpose, evidence and export readiness](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pinnacleai-story.html): Company-published. Source-linked flagship narrative · child-development purpose, Indian regulatory foundation and international pathway
+- [PinnacleAI® regulatory journey · Purpose, evidence and export readiness](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pinnacleai-story.html): Company-published. Child-first purpose, licensed functions, research, Indian export documentation and source-linked international status
 
 ## Dataset reuse
 - [Public dataset rights and reuse v1.0](https://pinnacle-verify.saripalli.chatgpt.site/evidence/dataset-reuse-v1.html): rights for public evidence compilations; source-specific licences remain separate.
@@ -104,9 +104,11 @@ Record: https://pinnacle-verify.saripalli.chatgpt.site/evidence/editorial-policy
 - [Centre entity reference JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/centre-entity-reference.json): the same source crosswalk in a machine-readable format.
 
 ## Complete PinnacleAI story
-- [PinnacleAI® regulatory journey](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html): purpose, seven-stage pathway, regulated product identity, Indian regulatory foundation, FSC and evidence-backed international status.
-- [PinnacleAI® story JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.json): reusable facts, questions and source links.
-- [International registration status](https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json): market-by-market status vocabulary; no foreign registration is currently claimed.
+- [PinnacleAI®: the complete story](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.html): child-first purpose, seven-stage pathway, licensed functions, regulatory records, research, FSC and international status.
+- [Story JSON](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-regulatory-journey.json): reusable facts, questions and original sources.
+- [Claim/source map CSV](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacleai-story-source-map.csv): exact claims and their scope.
+- [Story citations](https://pinnacle-verify.saripalli.chatgpt.site/evidence/citations/pinnacleai-regulatory-journey.csl.json): CSL-JSON; BibTeX, RIS and text also available.
+- [International registration status](https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json): announced targets; no verified foreign registration claimed.
 
 ## Earlier nine-perspective edition
 The current 18-part life-first explanation is linked below. These earlier care-system perspectives remain available for existing citations.

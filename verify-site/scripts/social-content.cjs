@@ -37,7 +37,7 @@ function enhance(html,url){
  });
  return html;
 }
-const simple={'pinnacle-paradigm-shift':'/evidence/pinnacle-paradigm-shift.html','scale-for-every-child':'/evidence/scale-and-mission.html','scale-story-basis':'/evidence/scale-and-mission.html#scale-story-basis',research:'/evidence/research-library.html',centres:'/evidence/hfr-register.html',records:'/evidence/evidence-register.html','cite-and-reuse':'/evidence/cite.html'};
+const simple={'pinnacleai-export-readiness':'/evidence/pinnacleai-regulatory-journey.html','pinnacle-paradigm-shift':'/evidence/pinnacle-paradigm-shift.html','scale-for-every-child':'/evidence/scale-and-mission.html','scale-story-basis':'/evidence/scale-and-mission.html#scale-story-basis',research:'/evidence/research-library.html',centres:'/evidence/hfr-register.html',records:'/evidence/evidence-register.html','cite-and-reuse':'/evidence/cite.html'};
 function shareTarget(url,id){
  const route=routeOf(url);
  if(route==='/evidence/research-library.html'&&byRoute.has('/evidence/publications/'+id+'.html'))return origin+'/evidence/publications/'+id+'.html';

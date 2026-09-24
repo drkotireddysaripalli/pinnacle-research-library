@@ -1402,19 +1402,20 @@
     {
       "id": "pinnacleai-regulatory-journey",
       "route": "/evidence/pinnacleai-regulatory-journey.html",
-      "title": "PinnacleAI® Regulatory Journey",
+      "title": "PinnacleAI®: The Complete Story",
       "lines": [
-        "Built around the child’s life.",
-        "Ready for global pathways."
+        "PinnacleAI®",
+        "Built around a child’s life."
       ],
-      "category": "PINNACLEAI® · PURPOSE · EVIDENCE",
-      "note": "Indian Class B SaMD foundation and export documentation, with every source linked.",
+      "category": "PURPOSE · RESEARCH · EXPORT READINESS",
+      "note": "Class B developmental-support software. Indian export documentation. Original sources",
       "icon": "network",
-      "description": "Purpose, seven-stage pathway, product identity, regulatory foundation and evidence-backed international status.",
-      "image": "/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+      "description": "Explore PinnacleAI’s child-first purpose, seven-stage pathway, Class B software, research and Indian export documentation—with original sources and citations.",
+      "familyArtwork": true,
+      "image": "/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
       "width": 1200,
       "height": 630,
-      "alt": "Built around the child’s life. Ready for global pathways. PINNACLEAI® · PURPOSE · EVIDENCE. Indian Class B SaMD foundation and export documentation, with every source linked.. Pinnacle Blooms Network."
+      "alt": "PinnacleAI® Built around a child’s life. PURPOSE · RESEARCH · EXPORT READINESS. Class B developmental-support software. Indian export documentation. Original sources. Pinnacle Blooms Network."
     },
     {
       "id": "record-pinnacleai-story",

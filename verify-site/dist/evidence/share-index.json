@@ -1983,8 +1983,8 @@
         },
         {
           "id": "pinnacleai-export-readiness",
-          "url": "https://www.pinnacleblooms.org/verify/#pinnacleai-export-readiness",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacle-verify-e142acf48dd4.jpg",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Export ready from India. The international pathway begins. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Export ready from India. The international pathway begins. Read the source, review date and scope before drawing conclusions.",
           "xLength": 180
@@ -2273,6 +2273,14 @@
           "text": "Explore Pinnacle's evidence on Additional Academia copies & catalogue entries. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Additional Academia copies & catalogue entries. Read the source, review date and scope before drawing conclusions.",
           "xLength": 169
+        },
+        {
+          "id": "research-story-context",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html#research-story-context",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/evidence-research-library-7b0cec026659.jpg",
+          "text": "Explore Pinnacle's evidence on How the research fits the PinnacleAI story. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on How the research fits the PinnacleAI story. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 165
         },
         {
           "id": "research-exports",
@@ -4705,6 +4713,22 @@
           "text": "Explore Pinnacle's evidence on PinnacleAI® regulatory journey Purpose, evidence and export readiness. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on PinnacleAI® regulatory journey Purpose, evidence and export readiness. Read the source, review date and scope before drawing conclusions.\n\nReview: Company-published.\nCompany-authored source; underlying claims need their own evidence.\nScope: The narrative does not extend the scope of any licence, certificate, standard or study. It does not claim diagnostic authority, guaranteed outcomes, foreign approval, global exclusivity or comparative superiority. Each underlying fact is governed by its linked source record.",
           "xLength": 192
+        },
+        {
+          "id": "source-pinpoints",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/records/pinnacleai-story.html#source-pinpoints",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/record-pinnacleai-story-c1d8183d33bc.jpg",
+          "text": "Explore Pinnacle's evidence on The exact source. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on The exact source. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 139
+        },
+        {
+          "id": "block-record-revision-history",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/records/pinnacleai-story.html#block-record-revision-history",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/record-pinnacleai-story-c1d8183d33bc.jpg",
+          "text": "Explore Pinnacle's evidence on Record revision history. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Record revision history. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 146
         },
         {
           "id": "cite-record-pinnacleai-story",
@@ -7909,15 +7933,15 @@
         {
           "id": "page",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
-          "text": "Explore PinnacleAI® Regulatory Journey. Read the source records, review dates and evidence scope.",
-          "whatsapp": "Explore PinnacleAI® Regulatory Journey. Read the source records, review dates and evidence scope.",
-          "xLength": 121
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore PinnacleAI®: The Complete Story. Read the source records, review dates and evidence scope.",
+          "whatsapp": "Explore PinnacleAI®: The Complete Story. Read the source records, review dates and evidence scope.",
+          "xLength": 122
         },
         {
           "id": "section-the-outcome-belongs-at-the-beginning",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#section-the-outcome-belongs-at-the-beginning",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on The outcome belongs at the beginning. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on The outcome belongs at the beginning. Read the source, review date and scope before drawing conclusions.",
           "xLength": 159
@@ -7925,7 +7949,7 @@
         {
           "id": "block-purpose",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-purpose",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Purpose. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Purpose. Read the source, review date and scope before drawing conclusions.",
           "xLength": 130
@@ -7933,7 +7957,7 @@
         {
           "id": "block-measure-and-plan",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-measure-and-plan",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Measure and plan. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Measure and plan. Read the source, review date and scope before drawing conclusions.",
           "xLength": 139
@@ -7941,7 +7965,7 @@
         {
           "id": "block-support-everyday-participation",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-support-everyday-participation",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Support everyday participation. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Support everyday participation. Read the source, review date and scope before drawing conclusions.",
           "xLength": 153
@@ -7949,7 +7973,7 @@
         {
           "id": "block-build-accountable-technology",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-build-accountable-technology",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Build accountable technology. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Build accountable technology. Read the source, review date and scope before drawing conclusions.",
           "xLength": 151
@@ -7957,15 +7981,55 @@
         {
           "id": "section-from-capability-to-participation",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#section-from-capability-to-participation",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on From capability to participation. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on From capability to participation. Read the source, review date and scope before drawing conclusions.",
           "xLength": 155
         },
         {
+          "id": "software-functions",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#software-functions",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Support the people supporting the child. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Support the people supporting the child. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 162
+        },
+        {
+          "id": "block-developmental-ability-measurement",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-developmental-ability-measurement",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Developmental ability measurement. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Developmental ability measurement. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 156
+        },
+        {
+          "id": "block-readiness-tracking",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-readiness-tracking",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Readiness tracking. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Readiness tracking. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 141
+        },
+        {
+          "id": "block-progress-forecasting",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-progress-forecasting",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Progress forecasting. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Progress forecasting. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 143
+        },
+        {
+          "id": "block-adaptive-therapy-plan-support",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-adaptive-therapy-plan-support",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Adaptive therapy-plan support. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Adaptive therapy-plan support. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 152
+        },
+        {
           "id": "section-a-documented-foundation-for-the-next-chapter",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#section-a-documented-foundation-for-the-next-chapter",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on A documented foundation for the next chapter. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on A documented foundation for the next chapter. Read the source, review date and scope before drawing conclusions.",
           "xLength": 167
@@ -7973,7 +8037,7 @@
         {
           "id": "block-class-b-classification",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-class-b-classification",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Class B classification. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Class B classification. Read the source, review date and scope before drawing conclusions.",
           "xLength": 145
@@ -7981,7 +8045,7 @@
         {
           "id": "block-form-md-5",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-form-md-5",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Form MD-5. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Form MD-5. Read the source, review date and scope before drawing conclusions.",
           "xLength": 132
@@ -7989,7 +8053,7 @@
         {
           "id": "block-iso-13485-2016",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-iso-13485-2016",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on ISO 13485:2016. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on ISO 13485:2016. Read the source, review date and scope before drawing conclusions.",
           "xLength": 137
@@ -7997,7 +8061,7 @@
         {
           "id": "block-iso-iec-27001-2022",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-iso-iec-27001-2022",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on ISO/IEC 27001:2022. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on ISO/IEC 27001:2022. Read the source, review date and scope before drawing conclusions.",
           "xLength": 141
@@ -8005,7 +8069,7 @@
         {
           "id": "block-bis-is-23485-2019",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-bis-is-23485-2019",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on BIS IS 23485:2019. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on BIS IS 23485:2019. Read the source, review date and scope before drawing conclusions.",
           "xLength": 140
@@ -8013,7 +8077,7 @@
         {
           "id": "block-free-sale-certificate",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-free-sale-certificate",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Free Sale Certificate. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Free Sale Certificate. Read the source, review date and scope before drawing conclusions.",
           "xLength": 144
@@ -8021,31 +8085,167 @@
         {
           "id": "section-export-ready-from-india",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#section-export-ready-from-india",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Export ready from India. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Export ready from India. Read the source, review date and scope before drawing conclusions.",
           "xLength": 146
         },
         {
-          "id": "section-progress-that-can-be-verified-market-by-market",
-          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#section-progress-that-can-be-verified-market-by-market",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
-          "text": "Explore Pinnacle's evidence on Progress that can be verified market by market. Read the source, review date and scope before drawing conclusions.",
-          "whatsapp": "Explore Pinnacle's evidence on Progress that can be verified market by market. Read the source, review date and scope before drawing conclusions.",
-          "xLength": 169
+          "id": "research",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#research",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Methods, findings and the next questions. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Methods, findings and the next questions. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 163
+        },
+        {
+          "id": "block-the-indian-licensing-case-study",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-the-indian-licensing-case-study",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on The Indian licensing case study. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on The Indian licensing case study. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 154
+        },
+        {
+          "id": "block-abilityscore-measurement-research",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-abilityscore-measurement-research",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on AbilityScore® measurement research. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on AbilityScore® measurement research. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 157
+        },
+        {
+          "id": "block-the-external-validation-plan",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-the-external-validation-plan",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on The external-validation plan. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on The external-validation plan. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 151
         },
         {
           "id": "section-large-numbers-with-their-definitions-attached",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#section-large-numbers-with-their-definitions-attached",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Large numbers, with their definitions attached. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Large numbers, with their definitions attached. Read the source, review date and scope before drawing conclusions.",
           "xLength": 169
         },
         {
+          "id": "section-progress-that-can-be-verified-market-by-market",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#section-progress-that-can-be-verified-market-by-market",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Progress that can be verified market by market. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Progress that can be verified market by market. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 169
+        },
+        {
+          "id": "block-new-zealand",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-new-zealand",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on New Zealand. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on New Zealand. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 134
+        },
+        {
+          "id": "block-united-kingdom",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-united-kingdom",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on United Kingdom. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on United Kingdom. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 137
+        },
+        {
+          "id": "block-brazil",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-brazil",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Brazil. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Brazil. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 129
+        },
+        {
+          "id": "block-vietnam",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-vietnam",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Vietnam. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Vietnam. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 130
+        },
+        {
+          "id": "block-thailand",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-thailand",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Thailand. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Thailand. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 131
+        },
+        {
+          "id": "block-colombia",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-colombia",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Colombia. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Colombia. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 131
+        },
+        {
+          "id": "block-peru",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-peru",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Peru. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Peru. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 127
+        },
+        {
+          "id": "block-saudi-arabia",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-saudi-arabia",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Saudi Arabia. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Saudi Arabia. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 135
+        },
+        {
+          "id": "block-canada",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-canada",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Canada. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Canada. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 129
+        },
+        {
+          "id": "block-australia",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-australia",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Australia. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Australia. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 132
+        },
+        {
+          "id": "next-step",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#next-step",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Start with the question that matters to you. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Start with the question that matters to you. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 166
+        },
+        {
+          "id": "block-for-parents-and-families",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-for-parents-and-families",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on For parents and families. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on For parents and families. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
+        },
+        {
+          "id": "block-for-clinicians-and-international-partners",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-for-clinicians-and-international-partners",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on For clinicians and international partners. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on For clinicians and international partners. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 164
+        },
+        {
           "id": "quick-answers",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#quick-answers",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Questions, answered with context. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Questions, answered with context. Read the source, review date and scope before drawing conclusions.",
           "xLength": 155
@@ -8053,7 +8253,7 @@
         {
           "id": "answer-1",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-1",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on What is PinnacleAI®. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on What is PinnacleAI®. Read the source, review date and scope before drawing conclusions.",
           "xLength": 142
@@ -8061,7 +8261,7 @@
         {
           "id": "answer-2",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-2",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Who is the legal manufacturer. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Who is the legal manufacturer. Read the source, review date and scope before drawing conclusions.",
           "xLength": 152
@@ -8069,7 +8269,7 @@
         {
           "id": "answer-3",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-3",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on What does the Free Sale Certificate establish. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on What does the Free Sale Certificate establish. Read the source, review date and scope before drawing conclusions.",
           "xLength": 168
@@ -8077,7 +8277,7 @@
         {
           "id": "answer-4",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-4",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Does PinnacleAI® diagnose children. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Does PinnacleAI® diagnose children. Read the source, review date and scope before drawing conclusions.",
           "xLength": 157
@@ -8085,7 +8285,7 @@
         {
           "id": "answer-5",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-5",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Has PinnacleAI® been registered in other countries. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Has PinnacleAI® been registered in other countries. Read the source, review date and scope before drawing conclusions.",
           "xLength": 173
@@ -8093,15 +8293,111 @@
         {
           "id": "answer-6",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-6",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on How can the evidence be reused. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on How can the evidence be reused. Read the source, review date and scope before drawing conclusions.",
           "xLength": 153
         },
         {
+          "id": "answer-7",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-7",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on What does \"operating system\" mean in the PinnacleAI story. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What does \"operating system\" mean in the PinnacleAI story. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 180
+        },
+        {
+          "id": "answer-8",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-8",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on What does the export milestone mean for my child. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on What does the export milestone mean for my child. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 171
+        },
+        {
+          "id": "answer-9",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#answer-9",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Where can a family start. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Where can a family start. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 147
+        },
+        {
+          "id": "source-map",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#source-map",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on A source for every material claim. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on A source for every material claim. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 156
+        },
+        {
+          "id": "block-class-b-non-diagnostic-developmental-support-software-version-1-0-0-children-aged-0-12",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-class-b-non-diagnostic-developmental-support-software-version-1-0-0-children-aged-0-12",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Class B, non-diagnostic developmental-support software; version 1.0.0; children aged 0-12. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Class B, non-diagnostic developmental-support software; version 1.0.0; children aged 0-12. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 212
+        },
+        {
+          "id": "block-developmental-ability-measurement-readiness-tracking-progress-forecasting-and-adaptive-the",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-developmental-ability-measurement-readiness-tracking-progress-forecasting-and-adaptive-the",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 232
+        },
+        {
+          "id": "block-bharath-healthcare-laboratories-private-limited-is-the-licence-holder-and-manufacturer",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-bharath-healthcare-laboratories-private-limited-is-the-licence-holder-and-manufacturer",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Bharath Healthcare Laboratories Private Limited is the licence holder and manufacturer. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Bharath Healthcare Laboratories Private Limited is the licence holder and manufacturer. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 209
+        },
+        {
+          "id": "block-bis-licence-md-l-2026029599-dated-3-september-2026",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-bis-licence-md-l-2026029599-dated-3-september-2026",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on BIS licence MD/L-2026029599 dated 3 September 2026. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on BIS licence MD/L-2026029599 dated 3 September 2026. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 173
+        },
+        {
+          "id": "block-fsc-md-2026-000741-issued-23-september-2026",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-fsc-md-2026-000741-issued-23-september-2026",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on FSC/MD/2026/000741 issued 23 September 2026. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on FSC/MD/2026/000741 issued 23 September 2026. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 166
+        },
+        {
+          "id": "block-31-052-382-defined-cumulative-services-792-614-beneficiary-family-registrations-2-7-billio",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-31-052-382-defined-cumulative-services-792-614-beneficiary-family-registrations-2-7-billio",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on 31,052,382 defined cumulative services; 792,614 beneficiary/family registrations; >2.7 billion structured records;. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on 31,052,382 defined cumulative services; 792,614 beneficiary/family registrations; >2.7 billion structured records;. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 237
+        },
+        {
+          "id": "block-research-preprints-a-study-protocol-and-their-source-files-are-publicly-inspectable",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-research-preprints-a-study-protocol-and-their-source-files-are-publicly-inspectable",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Research preprints, a study protocol and their source files are publicly inspectable. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Research preprints, a study protocol and their source files are publicly inspectable. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 207
+        },
+        {
+          "id": "block-ten-international-markets-are-announced-targets",
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#block-ten-international-markets-are-announced-targets",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
+          "text": "Explore Pinnacle's evidence on Ten international markets are announced targets. Read the source, review date and scope before drawing conclusions.",
+          "whatsapp": "Explore Pinnacle's evidence on Ten international markets are announced targets. Read the source, review date and scope before drawing conclusions.",
+          "xLength": 170
+        },
+        {
           "id": "section-cite-this-story",
           "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html#section-cite-this-story",
-          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4c9fcb6aea5f.jpg",
+          "image": "https://www.pinnacleblooms.org/verify/images/social/pinnacleai-regulatory-journey-4ad911fba442.jpg",
           "text": "Explore Pinnacle's evidence on Cite this story. Read the source, review date and scope before drawing conclusions.",
           "whatsapp": "Explore Pinnacle's evidence on Cite this story. Read the source, review date and scope before drawing conclusions.",
           "xLength": 138

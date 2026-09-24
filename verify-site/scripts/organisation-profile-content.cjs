@@ -104,6 +104,7 @@ const profile = {
       body: 'Pinnacle describes a seven-stage pathway: identify capabilities and measure ability; forecast readiness and create a child-specific plan; provide integrated intervention; support parent-guided everyday practice; track progress and correct the plan; reassess and repeat until readiness; and support growing independence and participation. This is the company’s service and educational explanation. The MD-5 separately specifies the named software version, manufacturer, premises and intended use: developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support for children aged 0–12. It is non-diagnostic. Free Sale Certificate FSC/MD/2026/000741 records Indian domestic marketability and export eligibility for that named device, subject to the importing country’s law; it is not foreign approval. The BIS schedule describes management-system activities and named developmental modules. These records do not establish a guaranteed child outcome or comparative superiority.',
       sourceHrefs: [
         '/evidence/developmental-pathway.json',
+        '/evidence/pinnacleai-regulatory-journey.html',
         '/evidence/records/md5.html',
         '/evidence/records/fsc.html',
         '/evidence/records/bis.html'

@@ -2,6 +2,7 @@
   "updated": "2026-09-24",
   "canonical": "https://pinnacle-verify.saripalli.chatgpt.site/evidence/international-registration-status.json",
   "statusVocabulary": [
+    "announced target",
     "researching requirements",
     "local representative appointed",
     "technical file prepared",
@@ -92,5 +93,5 @@
       "note": "Organisation describes an MDSAP audit plan; scheduling and completion are not verified. Country market access is separate."
     }
   ],
-  "currentStatement": "No foreign registration is claimed. The Indian regulatory and export-documentation foundation is established."
+  "currentStatement": "Indian regulatory and export-documentation foundation established. No foreign registration is claimed."
 }

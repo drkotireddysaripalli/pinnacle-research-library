@@ -1,8 +1,8 @@
 {
   "worker": "pinnacle-verify-route",
   "account_id": "862998def1cd610fdb86b8e5c1d6ed4d",
-  "version": "70d9c2fa-9625-4e47-8297-d9cb08286f5b",
-  "deployment": "c14a60b0-e8b7-47b7-9863-cb9b9cb80bec",
+  "version": "6c8d0a13-eab5-4107-8260-9bf6c62becf3",
+  "deployment": "b5bce8ec-d5c7-41b7-8e54-5fe35de2c707",
   "createdAt": "2026-09-24",
   "compatibility_date": "2026-09-18",
   "usage_model": "standard",
@@ -29,7 +29,7 @@
       "type": "secret_text"
     }
   ],
-  "sourceSha256": "fbcef2cddf377a40efba97a87c1cc47e91b423700c716e7c689d95c210f15ef1",
+  "sourceSha256": "0ba020a76679e1de99a8bd5aeb7ef3e2deb37be3e2a63854955598f9e2d9627a",
   "notes": [
     "Always run the routing Worker before static assets. Default asset-first routing incorrectly serves the Verify index at the main homepage and Verify-local robots at the domain robots URL.",
     "Keep assets and all three bindings on subsequent deployments. Secret values are intentionally absent from this manifest.",
@@ -46,6 +46,8 @@
     "Version67 publishes release aeefcc8734a2d776: 36 evidence records, complete PinnacleAI story, FSC public evidence, 83 sitemap URLs, citations and share images. All 629 files use the ASSETS bundle with origin fallback only on 404. Preserves v64 homepage schema correction, Ask redirect and all three bindings. Staged metadata verified before 100 percent activation; production route checks passed.",
     "Version70 publishes release 3fb4d77a66085582: four Dataset license fields and visible versioned reuse terms, 84 sitemap pages, 36 records retained. All three bindings and worker-first assets verified; full live crawl and helpline checks passed.",
     "Version71 publishes release 5ea8be45e2961115: visible page update labels derive from the 24 September release date; individual evidence source dates preserved. 36 records and 84 pages retained; Worker-first assets and all three bindings checked before activation.",
-    "Version72 publishes release531e720409221199: National Autism Helpline linked once in all 84 Verify footers and both reading indexes. Byte comparison confirms all other page content retained. 36 records, all four Dataset licences, FSC/story, Worker-first configuration and all three bindings preserved. Production story/exports/route and helpline checks passed."
+    "Version72 publishes release531e720409221199: National Autism Helpline linked once in all 84 Verify footers and both reading indexes. Byte comparison confirms all other page content retained. 36 records, all four Dataset licences, FSC/story, Worker-first configuration and all three bindings preserved. Production story/exports/route and helpline checks passed.",
+    "Version73 publishes release b26909c1f04ea12e: complete PinnacleAI narrative, seven-stage pathway, licensed functions, research, FSC preview, nine FAQs, source map CSV, CSL-JSON citations and responsive family artwork. Adds contextual story links on the homepage, AbilityScore, two relevant Ask pages, three regulatory records, organisation profile and research library. 36 records and 84 pages retained. Worker-first assets and all three bindings verified before activation.",
+    "Version74 release f2e5f5847c3d401b extends the recognized application-owned homepage evidence panel once instead of duplicating it. Same 634 assets as version73; 19 route tests passed including native panel idempotence and safety guards. Worker-first assets and all three bindings verified before activation."
   ]
 }
