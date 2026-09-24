@@ -24,6 +24,7 @@ const origin = 'https://pinnacle-verify.saripalli.chatgpt.site';
 // The authorised public /verify/ route is indexable; hosting access controls are unchanged.
 const robots = 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
 const date = '2026-09-24';
+const dateLabel = new Date(date+'T00:00:00Z').toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
 const sourceDate = '2026-09-15';
 const title = 'PinnacleAI® Verify | Pinnacle Blooms Network';
 const description = 'A self-sufficient, mainstream life for your child is PinnacleAI®’s purpose. Explore the paradigm shift, developmental reports, research, licences and original evidence.';
@@ -117,7 +118,7 @@ const head = (pageTitle,desc,url,graph,scripts=false) => `<head>
 <script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':graph}).replace(/</g,'\\u003c')}</script>
 ${scripts?'<script defer src="/app.js"></script><script defer src="/reader.js"></script><script defer src="/experience.js"></script><script defer src="/paradigm-opening.js"></script>':''}
 </head>`;
-const pageHeader = `<div class="review-strip"><span>EVIDENCE & CONTEXT</span> Updated: 22 September 2026</div><header class="wrap site-header"><a href="/" aria-label="Pinnacle verification home" class="brand"><span class="logo-crop"><img src="/images/pinnacle-logo.webp" alt="Pinnacle Blooms Network" width="420" height="158"></span></a><a class="outline-link" href="/#records">${icon('arrow-left')}Evidence library</a></header>`;
+const pageHeader = `<div class="review-strip"><span>EVIDENCE & CONTEXT</span> Updated: ${dateLabel}</div><header class="wrap site-header"><a href="/" aria-label="Pinnacle verification home" class="brand"><span class="logo-crop"><img src="/images/pinnacle-logo.webp" alt="Pinnacle Blooms Network" width="420" height="158"></span></a><a class="outline-link" href="/#records">${icon('arrow-left')}Evidence library</a></header>`;
 const footer = require('./evidence-footer.cjs')({e,icon});
 const crumbsHTML = items => `<nav class="breadcrumbs" aria-label="Breadcrumb">${items.map((x,i)=>i===items.length-1?`<span aria-current="page">${e(x[0])}</span>`:`<a href="${e(x[1])}">${e(x[0])}</a>${icon('chevron-right')}`).join('')}</nav>`;
 const parentGuides=require('./parent-guides.cjs')({e,icon,origin,date,head,pageHeader,footer,breadcrumb,crumbsHTML,write});
@@ -192,7 +193,7 @@ write('centre-data.js',`window.PINNACLE_CENTRES = ${JSON.stringify(centres)};\n`
 body=body.replace('<details class="review-disclosure" id="site-update-history">',require('./editorial-content.cjs')({e,write,origin})+'<details class="review-disclosure" id="site-update-history">');
 body=require('./reader-content.cjs')(body,research.teaser,{icon,e,paradigm:`<details class="context-disclosure paradigm-legacy"><summary>The seven-stage care pathway ${icon('plus')}</summary>${paradigm.homeHtml}</details>`,chapterExtras:{journey:guidedExperience,'choosing-care':parentGuides.teaser,proof:experience.proof+presentation.snapshot,research:presentation.reference}});
 write('evidence/reading-topics.json',JSON.stringify({title:'Explore Pinnacle in 16 topics',canonical:origin+'/#reader-guide',topics:require('./reader-content.cjs').topics.map(t=>({...t,url:origin+'/#'+t.id}))},null,2));
-body=body.replace(/Updated (?:19|21) September 2026/,'Updated 22 September 2026');
+body=body.replace(/Updated \d{1,2} September 2026/,'Updated '+dateLabel);
 write('index.html','<!doctype html>\n<html lang="en-IN">\n'+head(title,description,origin+'/',[organization,website,{'@type':'CollectionPage','@id':origin+'/#page',name:title,url:origin+'/',description,inLanguage:'en-IN',dateModified:date,isPartOf:{'@id':website['@id']},about:{'@id':organization['@id']},mainEntity:{'@id':listSchema['@id']}},listSchema,faqSchema],true)+'\n<body>'+body+'</body></html>\n');
 
 for (const r of records) {
@@ -277,7 +278,7 @@ write('llms-full.txt',read('llms-full.txt')+'\n\n'+research.text);
  const assuranceCrumbs=[['Verify Pinnacle','/'],['Independent CA evidence',assurance.route]];
  const claimLedger=require('./claim-ledger-content.cjs')({e,origin,organization,assuranceMap:assurance.data});
  const claimCrumbs=[['Verify Pinnacle','/'],['Dated claim and source ledger',claimLedger.route]];
- write(claimLedger.route.slice(1),'<!doctype html><html lang="en-IN">'+head('Pinnacle Claim & Source Ledger | Six Dated Institutional Measures','Six dated institutional measures with counting rules, source-page links and the distinction between factual findings and limited assurance.',claimLedger.canonical,[organization,website,{'@type':'WebPage','@id':claimLedger.canonical+'#page',url:claimLedger.canonical,name:claimLedger.data.title,dateModified:claimLedger.updated,inLanguage:'en-IN',publisher:{'@id':organization['@id']},mainEntity:{'@id':claimLedger.canonical+'#dataset'},breadcrumb:{'@id':claimLedger.canonical+'#breadcrumb'}},claimLedger.graph,breadcrumb(claimCrumbs,claimLedger.canonical)])+'<body>'+pageHeader.replace('Updated: 22 September 2026','Updated: 23 September 2026')+'<main class="wrap record-page organisation-profile">'+crumbsHTML(claimCrumbs)+'<header><p class="eyebrow">EVIDENCE · DEFINITIONS · SOURCE PAGES</p><h1>Check the count.<br>Check what it counts.</h1><p class="intro-copy">A dated reference for Pinnacle Blooms Network’s documented institutional measures.</p></header>'+claimLedger.section+'</main>'+footer+'</body></html>');
+ write(claimLedger.route.slice(1),'<!doctype html><html lang="en-IN">'+head('Pinnacle Claim & Source Ledger | Six Dated Institutional Measures','Six dated institutional measures with counting rules, source-page links and the distinction between factual findings and limited assurance.',claimLedger.canonical,[organization,website,{'@type':'WebPage','@id':claimLedger.canonical+'#page',url:claimLedger.canonical,name:claimLedger.data.title,dateModified:claimLedger.updated,inLanguage:'en-IN',publisher:{'@id':organization['@id']},mainEntity:{'@id':claimLedger.canonical+'#dataset'},breadcrumb:{'@id':claimLedger.canonical+'#breadcrumb'}},claimLedger.graph,breadcrumb(claimCrumbs,claimLedger.canonical)])+'<body>'+pageHeader.replace('Updated: ${dateLabel}','Updated: 23 September 2026')+'<main class="wrap record-page organisation-profile">'+crumbsHTML(claimCrumbs)+'<header><p class="eyebrow">EVIDENCE · DEFINITIONS · SOURCE PAGES</p><h1>Check the count.<br>Check what it counts.</h1><p class="intro-copy">A dated reference for Pinnacle Blooms Network’s documented institutional measures.</p></header>'+claimLedger.section+'</main>'+footer+'</body></html>');
  write('evidence/claim-ledger.json',JSON.stringify(claimLedger.data,null,2));
  write('evidence/claim-ledger.csv',claimLedger.csv);
  urls.push(claimLedger.route);
