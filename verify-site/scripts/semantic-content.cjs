@@ -115,7 +115,13 @@ module.exports=({e,icon,origin,date,organization,brand,recordIds})=>{
    graph.push({'@type':'ImageObject','@id':imageId,contentUrl:new URL(attr(picture.open,'src').replace('-1000.webp','-1536.webp'),url).href,name:attr(picture.open,'alt'),caption:caption?plain(html.slice(caption.openEnd,caption.end)):'Conceptual illustration.',description:'AI-generated conceptual illustration. It does not depict a documented patient, actual facility or measured outcome.',width:1536,height:1024,encodingFormat:'image/webp',isPartOf:{'@id':page['@id']}});
    if(url===origin+'/'&&!page.primaryImageOfPage)page.primaryImageOfPage={'@id':imageId};
   }
+  const rights=require('./dataset-rights.cjs');
+  let hasDataset=false;
+  function applyRights(node){if(!node||typeof node!=='object')return;if([node['@type']].flat().includes('Dataset')){hasDataset=true;node.license ||= rights.license(origin);}for(const value of Object.values(node)){if(Array.isArray(value))value.forEach(applyRights);else if(value&&typeof value==='object')applyRights(value);}}
+  graph.forEach(applyRights);
   edits.sort((a,b)=>b.at-a.at);for(const edit of edits)html=html.slice(0,edit.at)+edit.value+html.slice(edit.at);
+  html=html.replace(/<aside class="dataset-rights-note">[\s\S]*?<\/aside>/g,'');
+  if(hasDataset)html=html.replace('</main>','<aside class="dataset-rights-note"><p>Dataset rights: <a href="'+rights.route+'">Public dataset reuse terms v1.0</a>. Cite the source and date; original documents retain their own rights.</p></aside></main>');
   html=html.replace(match[0],'<script type="application/ld+json">'+JSON.stringify(json).replace(/</g,'\\u003c')+'</script>');
   return {html,blocks};
  }

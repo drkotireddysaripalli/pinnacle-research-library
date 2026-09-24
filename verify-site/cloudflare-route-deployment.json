@@ -1,8 +1,8 @@
 {
   "worker": "pinnacle-verify-route",
   "account_id": "862998def1cd610fdb86b8e5c1d6ed4d",
-  "version": "abc1310f-d83a-4f29-99e7-f25112ab29d7",
-  "deployment": "9170f6f9-49d2-4193-84da-a4ce2c28fdc1",
+  "version": "54997b37-273d-4cba-9fff-0051051f038e",
+  "deployment": "f55e90cb-3258-48e8-bcc6-5d012c585a29",
   "createdAt": "2026-09-24",
   "compatibility_date": "2026-09-18",
   "usage_model": "standard",
@@ -29,7 +29,7 @@
       "type": "secret_text"
     }
   ],
-  "sourceSha256": "dd5ef30e881ef2db9aeeadafdfb5ee9dfab67060bf52a21c71828764d5d17280",
+  "sourceSha256": "b66405f9e0badf9dec7ac83f06081ce372475c84eeb0dfee22142b9724716446",
   "notes": [
     "Always run the routing Worker before static assets. Default asset-first routing incorrectly serves the Verify index at the main homepage and Verify-local robots at the domain robots URL.",
     "Keep assets and all three bindings on subsequent deployments. Secret values are intentionally absent from this manifest.",
@@ -43,6 +43,7 @@
     "Version59 adds an authenticated Sites-origin path for current text assets while preserving binary Worker Assets, Worker-first routing and all three existing bindings.",
     "Version60 publishes Verify release5905528cbaec8592 with the 58-record centre entity reference, its JSON and text exports, sitemap and AI-readable discovery links. The Worker-first asset configuration and all three bindings were verified before activation; five public routes passed production read-back.",
     "Version62 publishes final Verify release aa274209481ba173 with six dated institutional measures, source-page links and JSON/CSV exports. Worker-first assets and all three bindings were verified before activation; the claim page, exports, sitemap, homepage and helpline passed production read-back.",
-    "Version67 publishes release aeefcc8734a2d776: 36 evidence records, complete PinnacleAI story, FSC public evidence, 83 sitemap URLs, citations and share images. All 629 files use the ASSETS bundle with origin fallback only on 404. Preserves v64 homepage schema correction, Ask redirect and all three bindings. Staged metadata verified before 100 percent activation; production route checks passed."
+    "Version67 publishes release aeefcc8734a2d776: 36 evidence records, complete PinnacleAI story, FSC public evidence, 83 sitemap URLs, citations and share images. All 629 files use the ASSETS bundle with origin fallback only on 404. Preserves v64 homepage schema correction, Ask redirect and all three bindings. Staged metadata verified before 100 percent activation; production route checks passed.",
+    "Version70 publishes release 3fb4d77a66085582: four Dataset license fields and visible versioned reuse terms, 84 sitemap pages, 36 records retained. All three bindings and worker-first assets verified; full live crawl and helpline checks passed."
   ]
 }

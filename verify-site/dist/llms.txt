@@ -57,6 +57,9 @@ Evidence owner: Sourabh Sashank · Lead PinnacleAI® · care@pinnacleblooms.org 
 - [PinnacleAI® walkthrough · Developmental architecture](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/sovereign-walkthrough.html): Company-published. Company-authored walkthrough · AbilityScore layers and programme cadence
 - [PinnacleAI® regulatory journey · Purpose, evidence and export readiness](https://pinnacle-verify.saripalli.chatgpt.site/evidence/records/pinnacleai-story.html): Company-published. Source-linked flagship narrative · child-development purpose, Indian regulatory foundation and international pathway
 
+## Dataset reuse
+- [Public dataset rights and reuse v1.0](https://pinnacle-verify.saripalli.chatgpt.site/evidence/dataset-reuse-v1.html): rights for public evidence compilations; source-specific licences remain separate.
+
 ## Parent guides in English, Telugu and Hindi
 - [What does my child’s AbilityScore® mean?](https://pinnacle-verify.saripalli.chatgpt.site/guides/abilityscore.html): Understand your child’s AbilityScore®, the report context and useful questions for the care team, with links to the original Pinnacle evidence.
 - [నా బిడ్డ AbilityScore® ఏం చెబుతుంది?](https://pinnacle-verify.saripalli.chatgpt.site/guides/te/abilityscore.html): మీ బిడ్డ AbilityScore®, రిపోర్ట్ వివరాలు, కేర్ టీమ్‌ను అడగాల్సిన ప్రశ్నలను సులభంగా తెలుసుకోండి. ప్రతి వివరణకు Pinnacle మూల ఆధారాలు చూడండి.
@@ -128,7 +131,7 @@ The current 18-part life-first explanation is linked below. These earlier care-s
 - [Structured explanation](https://pinnacle-verify.saripalli.chatgpt.site/evidence/pinnacle-paradigm-shift.json): the same visible claims, planning criteria and evidence boundaries.
 
 ## Share images
-- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 83 branded image cards linked to their source pages.
+- [Page-specific preview images](https://pinnacle-verify.saripalli.chatgpt.site/evidence/share-images.json): 84 branded image cards linked to their source pages.
 
 ## Purpose and developmental pathway
 - [How PinnacleAI® works](https://pinnacle-verify.saripalli.chatgpt.site/#how-pinnacleai-works): observations, child-specific planning, guided practice, feedback and human review, with source-linked explanations.

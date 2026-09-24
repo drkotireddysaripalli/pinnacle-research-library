@@ -254,6 +254,9 @@ write('llms-full.txt',intro+exportRecords.map(r=>`## ${r.title}\n\nCanonical: ${
 write('llms-full.txt',read('llms-full.txt')+'\n---\n\n'+read('evidence/global-context.txt'));
 write('llms-full.txt',read('llms-full.txt')+'\n---\n\n'+metrics.text+'\n## HFR dashboard and source inventory\n'+hfr.note+'\n'+hfrReview.description+'\n'+hfr.data.rows.map(r=>[r.name,r.id,r.address,r.sourceLevel,'Workbook row '+(r.workbookRow||'not listed'),r.certificate?'Certificate '+r.certificate.date+' p'+r.certificate.pages:'No inspected certificate copy','Workbook RS: '+(r.sourceFlag||'not listed')+' (undefined)','NHPR workflow: '+(hfrReview.statusFor(r.id)||'not matched')+' · '+hfrReview.dateLabel].join(' | ')).join('\n')+'\n');
 const urls=['/',research.route,'/evidence/hfr-register.html','/evidence/scale-register.html','/evidence/global-context.html','/evidence/evidence-register.html',...records.map(recordPath),...Object.keys(registerMeta).map(p=>'/evidence/'+p)];
+const datasetRights=require('./dataset-rights.cjs');
+urls.push(datasetRights.build({origin,head,footer,write}));
+write('llms.txt',read('llms.txt')+'\n## Dataset reuse\n- [Public dataset rights and reuse v1.0]('+origin+datasetRights.route+'): rights for public evidence compilations; source-specific licences remain separate.\n');
 urls.push(...parentGuides.pages.map(p=>p.route));
 write('llms.txt',read('llms.txt')+'\n## Parent guides in English, Telugu and Hindi\n'+parentGuides.indexText+'\n- [Parent guide index]('+origin+'/evidence/parent-guides.json): language-specific answers, source references and canonical links.\n- [Editorial responsibility]('+origin+'/evidence/editorial-policy.json): designated committee and exact review status.\n');
 write('llms-full.txt',read('llms-full.txt')+'\n\n'+parentGuides.text);
