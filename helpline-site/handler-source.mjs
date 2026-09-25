@@ -12,7 +12,10 @@ function responseHeaders() {
     'Link': '<' + CANONICAL_URL + '/sitemap.xml>; rel="sitemap"; type="application/xml"',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
-    'Content-Security-Policy': "default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; font-src 'self'; script-src 'sha256-" + JSONLD_CSP_HASH + "'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
+    // Cloudflare already injects one integrity-checked traffic beacon for this zone.
+    // Permit its file and versioned file path, and only its same-origin receiver.
+    // This restores traffic measurement; Cloudflare Web Analytics has no custom events.
+    'Content-Security-Policy': "default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; font-src 'self'; script-src 'sha256-" + JSONLD_CSP_HASH + "' 'sha256-" + ANALYTICS_CSP_HASH + "' https://www.googletagmanager.com/gtag/js https://static.cloudflareinsights.com/beacon.min.js https://static.cloudflareinsights.com/beacon.min.js/; connect-src https://www.pinnacleblooms.org/cdn-cgi/rum https://www.google-analytics.com/g/collect https://region1.google-analytics.com/g/collect; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
   };
 }

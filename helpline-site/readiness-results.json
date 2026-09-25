@@ -1,11 +1,11 @@
 {
-  "time": "2026-09-24T09:42:49.458Z",
+  "time": "2026-09-25T11:49:33.437Z",
   "passed": 23,
   "skipped": 0,
   "assetCount": 11,
   "assetBytes": 890864,
-  "htmlBytes": 79936,
-  "gzipBytes": 19320,
+  "htmlBytes": 86629,
+  "gzipBytes": 21556,
   "results": [
     {
       "name": "GET serves the static page and correct canonical",
@@ -44,7 +44,7 @@
       "passed": true
     },
     {
-      "name": "CSP allows same-origin images and full font without external sources",
+      "name": "CSP narrowly permits the existing Cloudflare beacon and its same-origin receiver",
       "passed": true
     },
     {
@@ -68,7 +68,7 @@
       "passed": true
     },
     {
-      "name": "No forms, executable scripts, trackers, external assets or unresolved placeholders",
+      "name": "Only hash-authorised first-party analytics code; no forms, remote script tag or unresolved placeholders",
       "passed": true
     },
     {
@@ -101,19 +101,14 @@
     }
   ],
   "visualReview": {
-    "date": "2026-09-24",
-    "viewports": [
-      320,
-      390,
-      768,
-      1280
-    ],
+    "checkedOn": "2026-09-25",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
     "horizontalOverflow": false,
-    "allFiveDisplayedImagesLoaded": true,
-    "fullTeluguFontLoaded": true,
-    "faqExpansion": true,
-    "serviceAnchor": true,
-    "shareCard": "1200x630 reviewed",
-    "scope": "Chrome viewport emulation, not physical-device certification"
+    "heroCallVisible": true,
+    "fixedCallVisible": true,
+    "privacyPanelBlocksCalling": false
   }
 }

@@ -1,6 +1,6 @@
 # Pinnacle National Autism Helpline
 
-Current release: 24 September 2026, Worker version 10. Full details and source checks: [RETRIEVAL-RELEASE-20260924.md](RETRIEVAL-RELEASE-20260924.md).
+Current release: 25 September 2026, Worker version 11. Measurement repair, privacy choices, tests and deployment: [MEASUREMENT-RELEASE-20260925.md](MEASUREMENT-RELEASE-20260925.md). The underlying narrative/source release remains documented in [RETRIEVAL-RELEASE-20260924.md](RETRIEVAL-RELEASE-20260924.md).
 
 ## Live service
 
@@ -18,6 +18,8 @@ Current release: 24 September 2026, Worker version 10. Full details and source c
 - `service-facts.json`: owner-confirmed service facts; questions/resources are synchronized by the builder.
 - `resources.json`: separately operated helplines, their numbers, scope and official sources.
 - `handler-source.mjs`: route, asset, canonical, sitemap, method and security handling. Do not restore the old hardcoded SERVICE_EXPORTS copy here.
+- `phone-analytics.js`: voluntary Google Analytics consent and fixed, privacy-conscious call-placement events through the existing evidence stream; no call interception.
+- `phone-analytics-tests.mjs`: consent, privacy, one-event-per-activation and collection-failure regression checks.
 - `worker.mjs`, `preview.html`, `schema.json`: generated release outputs.
 - `assets/`: nine existing branded WebP images, one dedicated JPEG share card and the unchanged full Telugu font.
 - `share-card.svg` and `render-share-card.cjs`: editable native share-card layout; render with the installed Sharp package available to Node.js.
@@ -28,12 +30,13 @@ Build from this directory:
 ```text
 node build.mjs
 node readiness-tests.mjs
+node phone-analytics-tests.mjs
 node preview-server.mjs
 ```
 
 The preview binds only to 127.0.0.1:8787. Stop it after visual review. After production deployment run `node verify-live.mjs` from this directory.
 
-This release passed 23 local checks, four responsive viewport checks, 28 linked-destination checks and exact production checks. See `readiness-results.json` and `production-results.json`. These verify the release; they do not prove a new Google crawl or AI citation.
+The current release passed 23 route/content checks, 10 analytics checks, a 390 × 844 mobile review, exact production checks and accepted browser telemetry with GA Realtime read-back. The preceding narrative release additionally had four responsive viewport and 28 destination checks. These verify delivery, not search growth or real call outcomes.
 
 ## Deployment ownership and persistence
 
@@ -41,11 +44,11 @@ Code, build and deployment remain owned by the existing Verify task. This reposi
 
 - Existing Worker: `pinnacle-helpline`.
 - Existing route: `www.pinnacleblooms.org/national-autism-helpline*`.
-- Version: `23d7f82d-007a-4f83-8fc6-32188439a52a` (10).
-- Deployment: `d8f6e56e-8b15-4ee4-9159-e6471a01257a`, 100%.
+- Version: `ac7d9543-824b-4e1f-8cb0-b6ebaa8b9b45` (11).
+- Deployment: `c14a7cbe-e46e-4564-bad4-80c4eeab6b48`, 100%.
 - Compatibility date: 2026-09-23; bindings: none.
 - Entry module: worker.mjs, self-contained, with ten images and the full font served as separate cacheable assets.
-- Rollback: retained version 9 `b5f9f079-e020-4412-b67c-9acfe3075824`.
+- Rollback: retained version 10 `23d7f82d-007a-4f83-8fc6-32188439a52a`.
 
 Use the existing Cloudflare Worker/route. Do not create a duplicate or remove the route. Keep workers.dev disabled. This Worker serves only the helpline page, its exports, sitemap and bundled assets; it does not rewrite the ASP.NET origin. An origin-only redeployment does not replace this Worker. A future Cloudflare deployment must preserve this route and include these changes.
 

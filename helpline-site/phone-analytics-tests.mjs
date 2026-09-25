@@ -1,0 +1,40 @@
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {readFile,writeFile} from 'node:fs/promises';
+const source=await readFile(new URL('./phone-analytics.js',import.meta.url),'utf8');
+const html=await readFile(new URL('./preview.html',import.meta.url),'utf8');
+const id='G-H9CLX1WJ7R',key='pinnacle-helpline-analytics-choice-v1';
+const links=[...html.matchAll(/<a\b([^>]+data-call-placement="([^"]+)"[^>]*)>/g)].map(m=>({dataset:{callPlacement:m[2]},href:m[1].match(/href="([^"]+)"/)[1]}));
+function browser(options={}){
+ const calls=[],scripts=[],listeners={},controls={},writes=[];
+ const panel={hidden:true},status={textContent:''},jar=new Map(Object.entries(options.cookies||{}));
+ const storage=new Map(options.saved?[[key,JSON.stringify(options.saved)]]:[]);
+ for(const value of ['accepted','declined'])controls[value]={dataset:{analyticsChoice:value},addEventListener:(type,fn)=>controls[value][type]=fn};
+ const document={querySelector:s=>s==='[data-analytics-panel]'?panel:status,querySelectorAll:()=>Object.values(controls),head:{append:s=>scripts.push(s)},createElement:()=>({}),addEventListener:(type,fn)=>(listeners[type]??=[]).push(fn)};
+ Object.defineProperty(document,'cookie',{get:()=>[...jar].map(([k,v])=>k+'='+v).join('; '),set:value=>{writes.push(value);jar.delete(value.split('=')[0]);}});
+ const window={};
+ const location=new URL(options.url||'https://www.pinnacleblooms.org/national-autism-helpline?email=PRIVATE_CANARY#PRIVATE_CANARY');
+ const localStorage={getItem:k=>{if(options.storageFailure)throw Error('unavailable');return storage.get(k)||null;},setItem:(k,v)=>{if(options.storageFailure)throw Error('unavailable');storage.set(k,v);}};
+ const context={window,document,location,navigator:{globalPrivacyControl:!!options.gpc},localStorage,Date,Set,Number};
+ vm.runInNewContext(source,context);
+ const commands=()=>Array.from(window.dataLayer||[],args=>Array.from(args));
+ const events=()=>commands().filter(c=>c[0]==='event');
+ const click=(link=links[0])=>{const target={dataset:link.dataset,getAttribute:k=>k==='href'?link.href:null,closest:()=>target}; const event={target,preventDefault:()=>{throw Error('Dialing was intercepted');},stopPropagation:()=>{throw Error('Event was intercepted');}};for(const fn of listeners.click||[])fn(event);};
+ return{window,document,controls,choose:v=>controls[v].click(),scripts,commands,events,click,panel,status,jar,writes,storage,listeners};
+}
+const results=[];
+function test(name,run){run();results.push({name,passed:true});}
+const accepted={value:'accepted',at:Date.now()};
+test('Eight real call links have unique approved placements and the correct number',()=>{assert.equal(links.length,8);assert.equal(new Set(links.map(l=>l.dataset.callPlacement)).size,8);assert.ok(links.every(l=>l.href==='tel:+919100181181'));});
+test('Fresh and declined choices send nothing and never load Google',()=>{for(const b of [browser(),browser({saved:{value:'declined',at:Date.now()}})]){b.click();assert.equal(b.scripts.length,0);assert.equal(b.events().length,0);b.choose('declined');assert.equal(b.commands().length,0);}});
+test('Acceptance loads one tag and one clean page view, with ads and auto page views off',()=>{const b=browser();b.choose('accepted');b.choose('accepted');assert.equal(b.scripts.length,1);assert.equal(b.scripts[0].src,'https://www.googletagmanager.com/gtag/js?id='+id);assert.equal(b.events().length,1);const config=b.commands().find(c=>c[0]==='config')[2];assert.equal(config.send_page_view,false);assert.equal(config.allow_google_signals,false);assert.equal(config.allow_ad_personalization_signals,false);assert.equal(config.cookie_path,'/national-autism-helpline');assert.equal(config.cookie_prefix,'ph');const consent=b.commands().find(c=>c[0]==='consent')[2];for(const k of ['ad_storage','ad_user_data','ad_personalization'])assert.equal(consent[k],'denied');assert(!JSON.stringify(b.commands()).includes('PRIVATE_CANARY'));});
+test('One activation gives one event for every actual placement through one bubbling listener',()=>{const b=browser({saved:accepted});assert.equal(b.listeners.click.length,1);for(const link of links){const before=b.events().length;b.click(link);assert.equal(b.events().length,before+1);const e=b.events().at(-1);assert.equal(e[1],'phone_link_click');assert.equal(e[2].link_placement,link.dataset.callPlacement);assert.deepEqual(Object.keys(e[2]).sort(),['schema_version','page_group','link_placement','destination','page_location','page_title','page_referrer','send_to'].sort());}});
+test('Unknown placements and other telephone numbers cannot enter the payload',()=>{const b=browser({saved:accepted});const n=b.events().length;for(const link of [{href:'tel:PRIVATE_CANARY',dataset:{callPlacement:'hero'}},{href:'tel:+919100181181',dataset:{callPlacement:'PRIVATE_CANARY'}}])b.click(link);assert.equal(b.events().length,n);});
+test('Collector failure never prevents or throws through dialing',()=>{const b=browser({saved:accepted});b.window.gtag=()=>{throw Error('network unavailable');};for(const link of links)assert.doesNotThrow(()=>b.click(link));});
+test('GPC overrides saved acceptance and never starts Google',()=>{const b=browser({saved:accepted,gpc:true,cookies:{ph_ga:'x'}});b.choose('accepted');b.click();assert.equal(b.scripts.length,0);assert.equal(b.controls.accepted.disabled,true);assert.equal(b.jar.has('ph_ga'),false);});
+test('Preview, apex and unrelated paths cannot load analytics',()=>{for(const url of ['http://127.0.0.1:8787/national-autism-helpline','https://pinnacleblooms.org/national-autism-helpline','https://www.pinnacleblooms.org/verify/']){const b=browser({url,saved:accepted});b.choose('accepted');b.click();assert.equal(b.scripts.length,0);assert.equal(b.commands().length,0);}});
+test('Storage unavailable, expired and future-dated consent all fail closed',()=>{for(const options of [{storageFailure:true},{saved:{value:'accepted',at:Date.now()-181*86400000}},{saved:{value:'accepted',at:Date.now()+86400000}}])assert.equal(browser(options).scripts.length,0);});
+test('Withdrawal stops events and clears only helpline cookies; renewed choice does not duplicate the tag',()=>{const b=browser({saved:accepted,cookies:{ph_ga:'1',ph_ga_H9CLX1WJ7R:'2',pv_ga:'keep',_ga:'keep'}});b.choose('declined');const n=b.events().length;b.click();assert.equal(b.events().length,n);assert.equal(b.jar.size,2);assert.equal(b.window['ga-disable-'+id],true);assert.ok(b.writes.every(c=>c.includes('path=/national-autism-helpline;')));b.choose('accepted');b.click();assert.equal(b.events().length,n+1);assert.equal(b.scripts.length,1);});
+const report={checkedAt:new Date().toISOString(),passed:results.length,results,scope:'First-party code tests. Actual third-party request/ingestion is checked separately in the browser. Phone-link events do not establish connected calls.'};
+await writeFile(new URL('./phone-analytics-test-results.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

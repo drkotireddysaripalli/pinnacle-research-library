@@ -1,0 +1,67 @@
+{
+  "checkedOn": "2026-09-25",
+  "canonical": "https://www.pinnacleblooms.org/national-autism-helpline",
+  "cloudflare": {
+    "scriptStatus": 200,
+    "integrityAttributePresent": true,
+    "receiver": "/cdn-cgi/rum",
+    "reportStatus": 204
+  },
+  "google": {
+    "existingMeasurementId": "G-H9CLX1WJ7R",
+    "requestsBeforeConsent": 0,
+    "tagStatus": 200,
+    "pageViewStatus": 204,
+    "syntheticMarkerInTelemetry": false,
+    "referrer": "",
+    "pageLocation": "https://www.pinnacleblooms.org/national-autism-helpline",
+    "events": [
+      {
+        "name": "phone_link_click",
+        "placement": "nav",
+        "status": 204
+      },
+      {
+        "name": "phone_link_click",
+        "placement": "hero",
+        "status": 204
+      },
+      {
+        "name": "phone_link_click",
+        "placement": "first_call",
+        "status": 204
+      },
+      {
+        "name": "phone_link_click",
+        "placement": "concerns",
+        "status": 204
+      },
+      {
+        "name": "phone_link_click",
+        "placement": "telugu",
+        "status": 204
+      },
+      {
+        "name": "phone_link_click",
+        "placement": "service_reference",
+        "status": 204
+      },
+      {
+        "name": "phone_link_click",
+        "placement": "closing",
+        "status": 204
+      },
+      {
+        "name": "phone_link_click",
+        "placement": "mobile_sticky",
+        "status": 204
+      }
+    ],
+    "realtimeReadback": {
+      "phone_link_click": 8,
+      "Pinnacle National Autism Helpline views": 2
+    },
+    "requestsAfterDeclinedTap": 0
+  },
+  "scope": "Synthetic QA only, approximately 11:51-11:55 UTC. Exclude eight taps and two views from organic results. No actual telephone calls. Temporary dialer-block listener removed and test consent/cookies cleared. Raw client identifiers, request headers and other users reports are not retained."
+}

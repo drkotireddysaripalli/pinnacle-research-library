@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-09-25T11:59:41.700Z",
+  "passed": 10,
+  "results": [
+    {
+      "name": "Eight real call links have unique approved placements and the correct number",
+      "passed": true
+    },
+    {
+      "name": "Fresh and declined choices send nothing and never load Google",
+      "passed": true
+    },
+    {
+      "name": "Acceptance loads one tag and one clean page view, with ads and auto page views off",
+      "passed": true
+    },
+    {
+      "name": "One activation gives one event for every actual placement through one bubbling listener",
+      "passed": true
+    },
+    {
+      "name": "Unknown placements and other telephone numbers cannot enter the payload",
+      "passed": true
+    },
+    {
+      "name": "Collector failure never prevents or throws through dialing",
+      "passed": true
+    },
+    {
+      "name": "GPC overrides saved acceptance and never starts Google",
+      "passed": true
+    },
+    {
+      "name": "Preview, apex and unrelated paths cannot load analytics",
+      "passed": true
+    },
+    {
+      "name": "Storage unavailable, expired and future-dated consent all fail closed",
+      "passed": true
+    },
+    {
+      "name": "Withdrawal stops events and clears only helpline cookies; renewed choice does not duplicate the tag",
+      "passed": true
+    }
+  ],
+  "scope": "First-party code tests. Actual third-party request/ingestion is checked separately in the browser. Phone-link events do not establish connected calls."
+}

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { writeFile } from 'node:fs/promises';
 import { gzipSync } from 'node:zlib';
+import { createHash } from 'node:crypto';
 import worker, { HELPLINE_HTML, HELPLINE_ETAG, HELPLINE_ASSETS, CANONICAL_URL } from './worker.mjs';
 
 const results = [];
@@ -23,10 +24,19 @@ await check('POST is refused without collecting a form', async () => { const r=a
 await check('ETag validator returns 304 without a body', async () => { const r=await worker.fetch(request('',{headers:{'If-None-Match':'W/'+HELPLINE_ETAG}})); assert.equal(r.status,304); assert.equal(await r.text(),''); });
 await check('Query parameters do not change or enter page output', async () => {const r=await worker.fetch(request('?test_private_marker=do-not-reflect')); assert.equal(await r.text(),HELPLINE_HTML); });
 await check('Single URL sitemap supports GET and HEAD', async () => { const r=await worker.fetch(request('/sitemap.xml')); assert.equal(r.status,200); assert.match(r.headers.get('content-type'),/application\/xml/); const xml=await r.text(); assert.equal((xml.match(/<loc>/g)||[]).length,1); assert.ok(xml.includes('<loc>'+CANONICAL_URL+'</loc>')); const head=await worker.fetch(request('/sitemap.xml',{method:'HEAD'})); assert.equal(head.status,200); assert.equal(await head.text(),''); });
-await check('CSP allows same-origin images and full font without external sources', async () => {
+await check('CSP narrowly permits the existing Cloudflare beacon and its same-origin receiver', async () => {
   const r=await worker.fetch(request()); const csp=r.headers.get('content-security-policy');
   assert.match(csp,/(?:^|;\s*)img-src 'self'(?:;|$)/); assert.match(csp,/(?:^|;\s*)font-src 'self'(?:;|$)/);
-  assert.match(csp,/default-src 'none'/); assert.match(csp,/script-src 'sha256-[^']+'/); assert.doesNotMatch(csp,/https?:|\*/);
+  assert.match(csp,/default-src 'none'/); assert.doesNotMatch(csp,/\*|unsafe-eval|script-src[^;]*unsafe-inline/);
+  const directives=Object.fromEntries(csp.split(';').map(d=>d.trim().split(/\s+/)).filter(d=>d[0]).map(([name,...values])=>[name,values]));
+  assert.equal(directives['script-src'].length,5);
+  assert.match(directives['script-src'][0],/^'sha256-[A-Za-z0-9+/]+=*'$/);
+  assert.match(directives['script-src'][1],/^'sha256-[A-Za-z0-9+/]+=*'$/);
+  assert.deepEqual(directives['script-src'].slice(2),['https://www.googletagmanager.com/gtag/js','https://static.cloudflareinsights.com/beacon.min.js','https://static.cloudflareinsights.com/beacon.min.js/']);
+  assert.deepEqual(directives['connect-src'],['https://www.pinnacleblooms.org/cdn-cgi/rum','https://www.google-analytics.com/g/collect','https://region1.google-analytics.com/g/collect']);
+  for(const name of ['default-src','base-uri','form-action','frame-ancestors'])assert.deepEqual(directives[name],["'none'"]);
+  const cached=await worker.fetch(request('',{headers:{'If-None-Match':HELPLINE_ETAG}}));
+  assert.equal(cached.headers.get('content-security-policy'),csp);
 });
 await check('Unknown image paths and non-image paths return no-store404 without fetching', async () => {
   const originalFetch=globalThis.fetch;
@@ -76,7 +86,15 @@ await check('Pinnacle calls retain one number; external resources use their own 
   const hero=HELPLINE_HTML.slice(HELPLINE_HTML.indexOf('<main'),HELPLINE_HTML.indexOf('<section class="section first-call"'));
   assert.ok([...hero.matchAll(/href="(tel:[^"]+)"/g)].every(m=>m[1]==='tel:+919100181181'));
 });
-await check('No forms, executable scripts, trackers, external assets or unresolved placeholders', async () => { assert.doesNotMatch(HELPLINE_HTML,/<form\b|<iframe\b|<script(?! type="application\/ld\+json")|\son[a-z]+\s*=|@@/i); assert.doesNotMatch(HELPLINE_HTML,/(?:src|srcset)="https?:|url\(['"]?https?:|googletagmanager|google-analytics|facebook\.net/i); });
+await check('Only hash-authorised first-party analytics code; no forms, remote script tag or unresolved placeholders', async () => {
+  assert.doesNotMatch(HELPLINE_HTML,/<form\b|<iframe\b|\son[a-z]+\s*=|@@|<script[^>]*\bsrc=/i);
+  const scripts=[...HELPLINE_HTML.matchAll(/<script([^>]*)>(.*?)<\/script>/gs)];
+  assert.equal(scripts.length,2);assert.equal(scripts[0][1],' type="application/ld+json"');assert.equal(scripts[1][1],'');
+  const source=await (await import('node:fs/promises')).readFile(new URL('./phone-analytics.js',import.meta.url),'utf8');
+  assert.equal(scripts[1][2],source);
+  const csp=(await worker.fetch(request())).headers.get('content-security-policy');
+  assert.ok(csp.includes("'sha256-"+createHash('sha256').update(source).digest('base64')+"'"));
+});
 await check('Five service cards and seven journey steps exist', async () => {assert.equal((HELPLINE_HTML.match(/class="service"/g)||[]).length,5); assert.equal((HELPLINE_HTML.match(/class="step-no"/g)||[]).length,7);});
 await check('Structured data is factual and exactly matches the visible FAQ', async () => {
   const schema=JSON.parse(HELPLINE_HTML.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
