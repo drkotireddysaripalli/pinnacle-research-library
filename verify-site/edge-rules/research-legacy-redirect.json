@@ -1,0 +1,19 @@
+{
+  "action": "redirect",
+  "action_parameters": {
+    "from_value": {
+      "target_url": {
+        "value": "https://www.pinnacleblooms.org/verify/evidence/research-library.html"
+      },
+      "status_code": 301,
+      "preserve_query_string": false
+    }
+  },
+  "expression": "(http.host in {\"pinnacleblooms.org\" \"www.pinnacleblooms.org\"} and http.request.method in {\"GET\" \"HEAD\"} and http.request.uri.path in {\"/research\" \"/research/\"})",
+  "description": "Restore legacy research citations to the current research library",
+  "enabled": true,
+  "ref": "pinnacle_research_legacy_citation_20260926",
+  "position": {
+    "before": "b2a836e69ffe472f9edfa479c27970d4"
+  }
+}

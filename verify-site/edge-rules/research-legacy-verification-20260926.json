@@ -1,0 +1,195 @@
+{
+  "observedAt": "2026-09-26T03:56:38.298286+00:00",
+  "allPassed": true,
+  "redirects": [
+    {
+      "url": "https://pinnacleblooms.org/research",
+      "method": "GET",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://pinnacleblooms.org/research",
+      "canonical": null,
+      "title": "301 Moved Permanently",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://pinnacleblooms.org/research",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://pinnacleblooms.org/research",
+      "canonical": null,
+      "title": null,
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://pinnacleblooms.org/research/",
+      "method": "GET",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://pinnacleblooms.org/research/",
+      "canonical": null,
+      "title": "301 Moved Permanently",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://pinnacleblooms.org/research/",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://pinnacleblooms.org/research/",
+      "canonical": null,
+      "title": null,
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/research",
+      "method": "GET",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://www.pinnacleblooms.org/research",
+      "canonical": null,
+      "title": "301 Moved Permanently",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/research",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://www.pinnacleblooms.org/research",
+      "canonical": null,
+      "title": null,
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/research/",
+      "method": "GET",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://www.pinnacleblooms.org/research/",
+      "canonical": null,
+      "title": "301 Moved Permanently",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/research/",
+      "method": "HEAD",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://www.pinnacleblooms.org/research/",
+      "canonical": null,
+      "title": null,
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/research?qa=legacy-check",
+      "method": "GET",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "finalUrl": "https://www.pinnacleblooms.org/research?qa=legacy-check",
+      "canonical": null,
+      "title": "301 Moved Permanently",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    }
+  ],
+  "controls": [
+    {
+      "url": "https://www.pinnacleblooms.org/",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "finalUrl": "https://www.pinnacleblooms.org/",
+      "canonical": "https://www.pinnacleblooms.org/",
+      "title": "#1 Autism Therapy Centres Network -for your kids to be self",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/",
+      "canonical": "https://www.pinnacleblooms.org/verify/",
+      "title": "PinnacleAI\u00ae Verify | Pinnacle Blooms Network",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "finalUrl": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "canonical": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "title": "National Autism Helpline: 9100181181 | Free 24/7 | Pinnacle",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/research-studies",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "finalUrl": "https://www.pinnacleblooms.org/research-studies",
+      "canonical": "https://www.pinnacleblooms.org/research-studies",
+      "title": "Pinnacle Research Studies | Global Autism Therapy Framework Validated",
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/Assets/Article/pdf/Study_11_Question_Comprehension_Improvement_Study_Global_Research.pdf",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "finalUrl": "https://www.pinnacleblooms.org/Assets/Article/pdf/Study_11_Question_Comprehension_Improvement_Study_Global_Research.pdf",
+      "canonical": null,
+      "title": null,
+      "studyIndexLink": false,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "canonical": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "title": "Pinnacle Research Library | Papers, Books, DOI &amp; Author Profiles",
+      "studyIndexLink": true,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/study-index.html",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/study-index.html",
+      "canonical": "https://www.pinnacleblooms.org/verify/evidence/study-index.html",
+      "title": "Pinnacle Research Index | Twelve-Study Portfolio",
+      "studyIndexLink": true,
+      "libraryInSitemap": null
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/sitemap.xml",
+      "method": "GET",
+      "status": 200,
+      "location": null,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/sitemap.xml",
+      "canonical": null,
+      "title": null,
+      "studyIndexLink": true,
+      "libraryInSitemap": true
+    }
+  ]
+}

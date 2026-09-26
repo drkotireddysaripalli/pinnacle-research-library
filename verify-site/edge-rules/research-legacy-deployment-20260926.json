@@ -1,0 +1,32 @@
+{
+  "observedAt": "2026-09-26T03:56:36.991Z",
+  "success": true,
+  "ruleset": "cfec803096ba4d5d9479e338c8f4ed3f",
+  "version": "23",
+  "previousVersion": "22",
+  "previousRuleCount": 8,
+  "currentRuleCount": 9,
+  "allPreviousRulesUnchanged": true,
+  "firstRuleIsNew": true,
+  "addedRules": [
+    {
+      "action": "redirect",
+      "action_parameters": {
+        "from_value": {
+          "preserve_query_string": false,
+          "status_code": 301,
+          "target_url": {
+            "value": "https://www.pinnacleblooms.org/verify/evidence/research-library.html"
+          }
+        }
+      },
+      "description": "Restore legacy research citations to the current research library",
+      "enabled": true,
+      "expression": "(http.host in {\"pinnacleblooms.org\" \"www.pinnacleblooms.org\"} and http.request.method in {\"GET\" \"HEAD\"} and http.request.uri.path in {\"/research\" \"/research/\"})",
+      "id": "2986b4c8f0184691ae4d6e690fba417e",
+      "last_updated": "2026-09-26T03:55:53.122564Z",
+      "ref": "pinnacle_research_legacy_citation_20260926",
+      "version": "1"
+    }
+  ]
+}
