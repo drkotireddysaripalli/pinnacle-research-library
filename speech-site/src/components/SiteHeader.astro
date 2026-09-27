@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/pinnacle-logo.jpg';
+import { mainNav, serviceNav, phone, url } from '../data/site';
+const { currentPath } = Astro.props;
+---
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="header-main wrap">
+    <a class="brand" href={url('/')} aria-label="Pinnacle Blooms Network home">
+      <Image src={logo} width={460} alt="Pinnacle Blooms Network" format="webp" loading="eager" />
+    </a>
+    <div class="header-right">
+      <nav class="utility" aria-label="Quick links">
+        <a href={url('/epass')}>Login</a>
+        <span class="phone"><a href={url('/national-autism-helpline')}>National Autism Helpline</a><a href={phone.href} data-cta="header-call">{phone.display}</a></span>
+        <a href="https://wa.me/919100181181" aria-label="WhatsApp Pinnacle" class="whatsapp">WhatsApp</a>
+        <a href={url('/donate')}>♡ Donate</a>
+        <a href={url('/contact')}>Centres</a>
+        <details class="site-search"><summary>Search</summary><form action={url('/search')} method="get"><label for="site-search-query">Search Pinnacle</label><div><input id="site-search-query" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
+      </nav>
+      <nav class="desktop-navigation" aria-label="Main navigation">
+        {mainNav.map(([label,path]) => <a href={url(path)}>{label}</a>)}
+      </nav>
+    </div>
+    <details class="mobile-navigation">
+      <summary>Menu <span aria-hidden="true">☰</span></summary>
+      <nav aria-label="Mobile navigation">{mainNav.map(([label,path]) => <a href={url(path)}>{label}</a>)}<a href={url('/epass')}>Login</a><a href={url('/donate')}>Donate</a><a href={url('/search')}>Search</a></nav>
+    </details>
+  </div>
+  <nav class="service-navigation" aria-label="Therapy services">
+    <div class="wrap">{serviceNav.map(([label,path]) => <a href={url(path)} aria-current={path===currentPath ? 'page' : undefined}>{label}</a>)}</div>
+  </nav>
+</header>

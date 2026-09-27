@@ -1,0 +1,73 @@
+{
+  "checkedAt": "2026-09-27T04:34:58.403Z",
+  "build": "local sales preview",
+  "productionDeployed": false,
+  "checksPassed": 30,
+  "checks": [
+    "One persistent H1",
+    "Preview remains noindex",
+    "Existing service canonical retained",
+    "Nine explanatory cards are in initial HTML",
+    "All phone links use the international number",
+    "No empty links",
+    "Assessment catalogue remains a labelled reference",
+    "Existing enrolment destination used",
+    "Unique HTML IDs",
+    "Every fragment link has a target",
+    "WebPage points to Service",
+    "Legal operator is the service provider",
+    "Pinnacle remains a separate Brand",
+    "No invented ratings, offers or clinical review",
+    "Relevant clinical source is cited instead of count ledger",
+    "Seven family pathway stages remain separate from technical walkthrough",
+    "Actual enquiry destination used for every assessment CTA",
+    "Worked example is visible without opening technical content",
+    "Study limitations and illustrative status are visible",
+    "Focused campaign preview shares the retained canonical",
+    "Share image built under the owned asset namespace",
+    "Large social card with descriptive alt",
+    "Every image has alt text and fixed dimensions",
+    "Campaign illustration is labelled",
+    "Asset responds 200: sintony-latin.woff2",
+    "Asset responds 200: SpeechPage.ukLtXRQR.css",
+    "Asset responds 200: pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
+    "Asset responds 200: speech-life-campaign.C6zyiBPG_ZqFQn5.webp",
+    "Asset responds 200: speech-measurement.js",
+    "Primary palette has at least 4.5:1 contrast with white"
+  ],
+  "htmlBytes": 48216,
+  "htmlGzipBytes": 11390,
+  "assets": [
+    {
+      "asset": "/pinnacle-pages-fonts/sintony-latin.woff2",
+      "bytes": 8548
+    },
+    {
+      "asset": "/pinnacle-pages-assets/SpeechPage.ukLtXRQR.css",
+      "bytes": 47517
+    },
+    {
+      "asset": "/pinnacle-pages-assets/pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
+      "bytes": 6794
+    },
+    {
+      "asset": "/pinnacle-pages-assets/speech-life-campaign.C6zyiBPG_ZqFQn5.webp",
+      "bytes": 88030
+    },
+    {
+      "asset": "/pinnacle-pages-scripts/speech-measurement.js",
+      "bytes": 5435
+    }
+  ],
+  "contrastWithWhite": {
+    "e4115e": 4.62,
+    "8f2879": 7.64,
+    "665e69": 6.23
+  },
+  "notMeasured": [
+    "Field Core Web Vitals",
+    "Search rankings or AI citations",
+    "Connected calls",
+    "Accepted leads or enrolments"
+  ]
+}

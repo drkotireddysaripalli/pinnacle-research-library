@@ -1,0 +1,39 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { getImage } from 'astro:assets';
+import { origin, url, phone } from '../data/site';
+import '../styles/global.css';
+import '../styles/review-refinements.css';
+const { title, description, path, label, serviceName, shareImage, focused = false } = Astro.props;
+const canonical = url(path);
+const share = await getImage({src: shareImage, width:1200, height:630, fit:'cover', format:'webp', quality:85});
+const imageUrl = url(share.src);
+const citations = ['/verify/','/verify/evidence/pinnacle-paradigm-shift.html','/verify/evidence/pinnacleai-regulatory-journey.html','/verify/evidence/records/md5.html','/verify/evidence/bis.pdf#page=2','/verify/evidence/records/fsc.html','/verify/evidence/research-library.html','/question-comprehension-study','/speech-aba-autism-assessments'].map(url);
+citations.push('https://www.asha.org/njc/communication-bill-of-rights/','https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders/');
+// This prototype is deliberately noindex. Launch requires the gates in LAUNCH-PLAN.md.
+const schema = {'@context':'https://schema.org','@graph':[
+  {'@type':'WebSite','@id':origin+'/#website',url:origin+'/',name:'Pinnacle Blooms Network',publisher:{'@id':url('/verify/#organization')}},
+  {'@type':'Organization','@id':url('/verify/#organization'),name:'Bharath Healthcare Laboratories Private Limited',url:origin+'/',telephone:'+919100181181',brand:{'@id':url('/verify/#pinnacle-brand')}},
+  {'@type':'Brand','@id':url('/verify/#pinnacle-brand'),name:'Pinnacle Blooms Network',url:origin+'/'},
+  {'@type':'WebPage','@id':canonical+'#page',url:canonical,name:title,description,inLanguage:'en-IN',isPartOf:{'@id':origin+'/#website'},mainEntity:{'@id':canonical+'#service'},publisher:{'@id':url('/verify/#organization')},primaryImageOfPage:{'@id':canonical+'#image'},citation:citations},
+  {'@type':'ImageObject','@id':canonical+'#image',contentUrl:imageUrl,width:1200,height:630,caption:'Illustrative campaign scene of a mother and child communicating during play. AI-generated artwork; not a patient outcome.'},
+  {'@type':'Service','@id':canonical+'#service',name:serviceName,serviceType:'Speech and language therapy',url:canonical,provider:{'@id':url('/verify/#organization')},brand:{'@id':url('/verify/#pinnacle-brand')}},
+  {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:origin+'/'},{'@type':'ListItem',position:2,name:label,item:canonical}]}
+]};
+---
+<!doctype html><html lang="en-IN"><head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{title}</title><meta name="description" content={description} /><meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href={canonical} /><link rel="icon" href={url('/verify/favicon.png')} />
+  <link rel="preload" href="/pinnacle-pages-fonts/sintony-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <meta property="og:type" content="website" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:site_name" content="Pinnacle Blooms Network" />
+  <meta property="og:image" content={imageUrl} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Illustrative mother and child sharing a communication moment during play." />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={imageUrl} /><meta name="twitter:image:alt" content="Illustrative mother and child sharing a communication moment during play." />
+  <meta name="theme-color" content="#8f2879" /><script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\\u003c')} />
+</head><body class:list={{'focused-campaign':focused}} data-page-variant={focused ? 'focused' : 'service'}>
+  <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>
+  <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
+  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={phone.href} data-cta="mobile-call">Call {phone.display}</a><a href={url('/enroll#contact-form-title')} data-cta="mobile-assessment">Assessment enquiry →</a></nav>
+  <script is:inline src="/pinnacle-pages-scripts/speech-measurement.js" defer></script>
+</body></html>

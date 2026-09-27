@@ -1,0 +1,86 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import HeroSlider from './HeroSlider.astro';
+import ActionStrip from './ActionStrip.astro';
+import Icon from './Icon.astro';
+import campaign from '../assets/speech-life-campaign.png';
+import { faqs, phone, url, speechPath } from '../data/site';
+import { steps, careStages, stepSources, centres, proofCards } from '../data/speech';
+const { focused = false } = Astro.props;
+const slides = [{image:campaign,alt:'Illustrative scene of a mother listening as her child points during play, with a school participation vignette.',caption:'AI-generated campaign illustration; not a patient outcome.'}];
+---
+<PageLayout path={speechPath} label="Speech Therapy" serviceName="Speech and language therapy for children" title="Speech Therapy for Children: Assessment & Care | Pinnacle Blooms" description="Explore speech therapy built around your child’s everyday life: assessment, family practice, progress review and PinnacleAI evidence. Call 9100 181 181." shareImage={campaign} focused={focused}>
+  <HeroSlider slides={slides} /><ActionStrip focused />
+
+  <section class="section wrap example-section" id="everyday-communication" aria-labelledby="example-title">
+    <div class="split-heading"><div><p class="eyebrow">The PinnacleAI difference, made practical</p><h2 id="example-title">“I need help.”<br /><em>A skill with a purpose.</em></h2></div><p>Speech therapy supports understanding, expression and interaction. The plan connects those skills to the moments your child wants to be part of—at home, in school and with other people.</p></div>
+    <div class="worked-example">
+      <div class="example-goal"><span class="example-label">Illustrative goal</span><Icon name="voice" size={46} /><h3>Ask for help<br />at home or school.</h3><p>Through speech, gestures or another appropriate communication method.</p><span class="example-label">Agreed with the child, family and care team</span></div>
+      <ol class="example-chain">
+        <li><span>01</span><div><h3>Understand the starting point.</h3><p>How does your child ask now? When is help needed?</p></div></li>
+        <li><span>02</span><div><h3>Practise a useful way to ask.</h3><p>Use an agreed communication method in therapy and familiar routines, with guidance.</p></div></li>
+        <li><span>03</span><div><h3>See where it works.</h3><p>Observe communication with familiar adults at home and, where agreed, school.</p></div></li>
+        <li><span>04</span><div><h3>Adjust the next step.</h3><p>Review the help still needed. Change the activity or support, then review again.</p></div></li>
+      </ol>
+    </div>
+    <div class="sample-review"><strong>A review you can understand</strong><span>What happened?</span><span>Where did it happen?</span><span>How much help was needed?</span><span>What changes next?</span></div>
+    <p class="source-note">This is an illustrative planning and review example, not a patient case, product screenshot or individual treatment plan. <a href="https://www.asha.org/njc/communication-bill-of-rights/">Communication rights · NJC / ASHA ↗</a></p>
+  </section>
+
+  <section class="first-visit-section section" id="first-visit" aria-labelledby="visit-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">A first step you can picture</p><h2 id="visit-title">Meet the therapist.<br /><em>Understand the next step.</em></h2></div><p>You can call before you know which therapy your child needs. Share what you are noticing and discuss a speech and language assessment.</p></div>
+    <div class="visit-grid">
+      <article><Icon name="people" size={28} /><h3>Meet your speech therapist</h3><p>Discuss your priorities and records. The therapist uses structured tasks and observation to assess communication.</p></article>
+      <article><Icon name="book" size={28} /><h3>About an hour, with a report to follow</h3><p>The published guide allows about an hour, depending on your child, and a report within a couple of days. Confirm both timings when you book.</p></article>
+      <article class="fee-card"><span class="card-tag">Published assessment price</span><strong class="assessment-price">₹2,599</strong><h3>Special Speech and Language Assessment</h3><p>Listed in Pinnacle’s assessment catalogue, checked 27 September 2026. Confirm the applicable assessment, inclusions and fee with your centre.</p><a class="text-link" href={url('/speech-aba-autism-assessments')}>See the assessment catalogue ↗</a></article>
+    </div>
+    <div class="visit-close"><div><h3>Know the plan before committing.</h3><p>Confirm the named therapist and qualifications, appointment length, report delivery, therapy schedule and fees. The service guide describes 40 minutes of therapy plus 5 minutes of parent review. Confirm the schedule and ask for a centre-specific therapy quotation.</p></div><a class="button primary" href={url('/enroll#contact-form-title')} data-cta="visit-enquiry">Request an assessment <Icon name="arrow" /></a></div>
+    <p class="source-note">Assessment process: <a href={url(speechPath)}>published speech-service information</a>, checked 27 September 2026. Appointments and fees are confirmed by the centre; this page does not reserve a slot. <a href={url('/enroll#contact-form-title')}>The enquiry form sends your request to Pinnacle’s team →</a></p>
+  </div></section>
+
+  <section class="section wrap difference" id="pinnacle-difference" aria-labelledby="difference-title">
+    <div class="section-heading"><p class="eyebrow">The child’s life sets the direction</p><h2 id="difference-title">Your child’s life is the goal.<br /><em>Speech therapy is part of the plan.</em></h2><p class="lead">Growing independence. Being included. A self-sufficient, mainstream life. That purpose shapes the abilities we work on, the people and methods we bring together, and what we practise and review each day.</p></div>
+    <aside class="home-analogy"><Icon name="home" size={42} /><p>A home is built brick by brick, but planned around the family who will live there. Therapy develops individual skills in the same way. Those skills need a purpose in your child’s life—communicating a need, taking part at school or doing more for themselves.</p></aside>
+    <ol class="care-path">{careStages.map(([icon,title,text],i)=><li><span class="care-number">{i+1}</span><Icon name={icon} size={25} /><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol>
+    <div class="family-promise"><Icon name="heart" size={30} /><p><strong>Your family helps shape the journey.</strong> Agree the priorities, understand the practice and take part in reviews with the care team. Goals and support adapt to the child.</p></div>
+    <a class="text-link" href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Read the complete PinnacleAI paradigm-shift story <Icon name="arrow" /></a>
+    <details class="technical-walkthrough" id="pinnacleai-steps"><summary><span><strong>Inside PinnacleAI: nine explanations of the technology</strong><small>Optional detail: how measurement, planning, practice and review connect.</small></span><span aria-hidden="true">+</span></summary><div class="technical-content"><p class="source-note">The seven stages above describe the family-facing pathway. These nine explanations unpack the philosophy and technology; they are not a separate nine-stage treatment programme.</p>
+      <ol class="stack-grid">{steps.map((step,i)=><li class:list={['stack-card','phase-'+(Math.floor(i/3)+1)]}><div class="technical-step"><span class="step-top"><span class="step-number">{String(i+1).padStart(2,'0')}</span><Icon name={step.icon} size={27} /></span><h3>{step.title}</h3><strong>{step.layer}</strong><p>{step.detail}</p><a href={url(stepSources[i])}>Source and scope ↗</a></div></li>)}</ol>
+      <p class="source-note">PinnacleAI GPT-OS v1.0.0 is non-diagnostic developmental-support software for children aged 0–12. Professionals guide care decisions with the family. The technology descriptions are linked to their public company and regulatory source records.</p>
+    </div></details>
+  </section>
+
+  <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title"><div class="wrap"><div class="split-heading"><div><p class="eyebrow">Open. Honest. Transparent. Self-critical.</p><h2 id="evidence-title">See what supports<br /><em>the PinnacleAI story.</em></h2></div><p>Open the licence, the named developmental modules and a relevant communication study. Each source answers a different question.</p></div>
+    <div class="evidence-cards">{proofCards.map(card=><article><span class="proof-icon"><Icon name="shield" size={28} /></span><p class="card-tag">{card.tag}</p><h3>{card.title}</h3><p>{card.text}</p><span class="record-reference">{card.ref}</span><a class="text-link" href={url(card.link)}>{card.label} ↗</a></article>)}</div>
+    <p class="source-note">Software licences describe the named device and documented scope. Research findings apply to the populations and methods studied. Your child’s goals and progress are individual.</p>
+    <details class="research-detail"><summary>AbilityScore research: what is published and what is planned <span aria-hidden="true">+</span></summary><ul><li><a href={url('/verify/evidence/research-library.html#zenodo-19482123')}>Methodology and preliminary findings</a> — how AbilityScore is constructed; preliminary operational measurement findings.</li><li><a href={url('/verify/evidence/research-library.html#zenodo-19482476')}>External-validation protocol</a> — a planned study; it does not report completed external-validation results.</li></ul></details>
+    <div class="evidence-bottom"><a class="button outline" href={url('/verify/')}><Icon name="book" />Explore Pinnacle Verify</a><a class="text-link" href={url('/verify/evidence/research-library.html')}>Research &amp; publication status →</a><a class="text-link" href={url('/verify/evidence/pinnacleai-regulatory-journey.html')}>Full story, including the Free Sale Certificate →</a></div>
+  </div></section>
+
+  <section class="section wrap centres-section" id="centres" aria-labelledby="centres-title"><div class="split-heading"><div><p class="eyebrow">People and places, closer to you</p><h2 id="centres-title">Find a Pinnacle centre.<br /><em>Meet the people behind the plan.</em></h2></div><p>Explore published centre and team details. Call to confirm the current address, speech therapist, qualifications and appointments before visiting.</p></div>
+    <div class="centre-filter" hidden><label for="centre-city">Three example centres</label><select id="centre-city"><option value="all">Show all three</option>{centres.map(c=><option value={c.city}>{c.city}</option>)}</select><span id="centre-count" role="status">3 locations shown</span></div>
+    <div class="centre-cards">{centres.map(centre=><article data-city={centre.city}><p class="card-tag">{centre.city}</p><h3>{centre.name}</h3><p>{centre.address}</p>{centre.team.length>0 ? <details class="listed-team"><summary>Speech therapists listed by this centre</summary><p>{centre.team.join(' · ')}</p></details> : <div class="listed-team"><strong>Speech appointments</strong><p>Contact the centre team to confirm the available professional.</p></div>}<a href={url(centre.path)} class="text-link" data-cta="centre-profile">View this centre and its team <Icon name="arrow" /></a></article>)}</div>
+    <p class="source-note">Public centre pages checked 27 September 2026. Staff names are published listings; individual qualifications, registration and appointment availability still need confirmation. Explore other locations for the wider network.</p>
+    <div class="centre-actions"><a href={url('/contact')} class="button outline" data-cta="all-centres"><Icon name="pin" />Explore other locations</a><a class="text-link" href={phone.href} data-cta="centre-call">Confirm a centre · {phone.display} →</a><a class="text-link" href={url('/verify/evidence/centre-entity-reference.html')}>Inspect centre registry references ↗</a></div>
+  </section>
+
+  <section class="section wrap faq-section" aria-labelledby="faq-title"><div><p class="eyebrow">Before you decide</p><h2 id="faq-title">Clear answers.<br /><em>A simpler next step.</em></h2><a class="text-link" href="https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders/">Communication development · ASHA ↗</a></div><div>{faqs.map(f=><details><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div></section>
+
+  <section class="final-cta" id="next-step" aria-labelledby="next-title"><div class="wrap"><p class="eyebrow">Start with what matters to your child</p><h2 id="next-title">A way to ask. A choice to make.<br />A life to take part in.</h2><p>Tell us about your child. Discuss the assessment, the centre and the next step.</p><div class="final-actions"><a class="button white" href={phone.href} data-cta="final-call"><Icon name="phone" />Call {phone.display}</a><a class="button light-outline" href={url('/enroll#contact-form-title')} data-cta="final-enquiry">Send an enquiry <Icon name="arrow" /></a></div><p class="final-guidance">Free guidance, 24/7 · Assessment and therapy fees are separate.</p><a class="helpline-link" href={url('/national-autism-helpline')}>Pinnacle / BHCL National Autism Helpline →</a></div></section>
+</PageLayout>
+<script>
+  const select = document.querySelector<HTMLSelectElement>('#centre-city');
+  const filter = document.querySelector<HTMLElement>('.centre-filter');
+  if (select && filter) {
+    filter.hidden = false;
+    select.addEventListener('change', () => {
+      let count = 0;
+      for (const card of document.querySelectorAll<HTMLElement>('.centre-cards [data-city]')) {
+        card.hidden = select.value !== 'all' && card.dataset.city !== select.value;
+        if (!card.hidden) count++;
+      }
+      const status = document.querySelector('#centre-count');
+      if (status) status.textContent = count + (count === 1 ? ' location shown' : ' locations shown');
+    });
+  }
+</script>

@@ -1,0 +1,6 @@
+---
+import { actions, url } from '../data/site';
+const { focused = false } = Astro.props;
+const choices = focused ? [['First assessment','#first-visit'],['Find a centre','#centres'],['See the evidence','#evidence']] : actions;
+---
+<nav class="action-strip" aria-label="I’m here to"><div class="wrap"><strong>I’m here to</strong><div class="action-links">{choices.map(([label,path]) => <a href={path.startsWith('#') ? path : url(path)}>{label}</a>)}</div></div></nav>

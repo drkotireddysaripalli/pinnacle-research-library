@@ -1,0 +1,87 @@
+'use strict';
+(() => {
+  const id = 'G-H9CLX1WJ7R';
+  const origin = 'https://www.pinnacleblooms.org';
+  const path = '/top-speech-therapy-center-india-proven-improvement-rate';
+  const canonical = origin + path;
+  const routes = new Set([path, '/speech-therapy']);
+  const key = 'pinnacle-speech-analytics-v1';
+  const variant = document.body?.dataset.pageVariant === 'focused' ? 'focused' : 'service';
+  const lifetime = 180 * 86400000;
+  const panel = document.querySelector('[data-speech-measurement]');
+  const status = document.querySelector('[data-measurement-status]');
+  if (!panel || !status) return;
+  const production = location.origin === origin && routes.has(location.pathname);
+  const blocked = navigator.globalPrivacyControl === true;
+  const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call']);
+  const enquiryPlacements = new Set(['hero-assessment','visit-enquiry','final-enquiry','mobile-assessment']);
+  let enabled = false, loaded = false;
+  const tell = text => { status.textContent = text; };
+  const send = (name, parameters) => {
+    if (!production || !enabled || blocked) return;
+    try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:canonical, page_title:'Pinnacle Speech Therapy', page_referrer:'', send_to:id}); } catch {}
+  };
+  const clearCookies = () => {
+    for (const cookie of document.cookie.split(';')) {
+      const name = cookie.trim().split('=')[0];
+      if (!name.startsWith('ps_ga')) continue;
+      for (const route of routes) for (const domain of ['', 'www.pinnacleblooms.org']) {
+        document.cookie = name + '=; Max-Age=0; path=' + route + ';' + (domain ? ' domain=' + domain + ';' : '') + ' SameSite=Lax; Secure';
+      }
+    }
+  };
+  const start = () => {
+    if (!production || blocked) return;
+    enabled = true;
+    window['ga-disable-' + id] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    if (loaded) { window.gtag('consent','update',{analytics_storage:'granted'}); return; }
+    loaded = true;
+    window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    window.gtag('js',new Date());
+    window.gtag('config',id,{
+      send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
+      cookie_prefix:'ps',cookie_path:location.pathname,cookie_domain:'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
+      page_location:canonical,page_title:'Pinnacle Speech Therapy',page_referrer:'',ignore_referrer:true,
+      campaign_id:'',campaign_source:'',campaign_medium:'',campaign_name:'',campaign_term:'',campaign_content:''
+    });
+    const script=document.createElement('script');
+    script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;
+    document.head.append(script);
+    send('page_view',{page_group:'speech_therapy',schema_version:1});
+  };
+  const choose = (value, persist = true) => {
+    if (!['accepted','declined'].includes(value)) return;
+    if (!production) { tell('Preview: analytics is disabled. No analytics data is sent.'); return; }
+    if (persist) { try { localStorage.setItem(key,JSON.stringify({value,at:Date.now()})); } catch {} }
+    if (value==='accepted' && !blocked) {
+      try { start(); tell('Optional analytics is on. Turn it off here at any time.'); }
+      catch { enabled=false; tell('Analytics is unavailable. Your enquiry and call links still work.'); }
+    } else {
+      enabled=false;window['ga-disable-'+id]=true;
+      if (loaded) { try { window.gtag('consent','update',{analytics_storage:'denied'}); } catch {} }
+      clearCookies();
+      tell(blocked ? 'Analytics is off because Global Privacy Control is enabled.' : 'Optional analytics is off. Your enquiry and call links still work.');
+    }
+  };
+  panel.hidden=false;
+  document.querySelectorAll('[data-measurement-choice]').forEach(button=>{
+    button.addEventListener('click',()=>choose(button.dataset.measurementChoice));
+    if (blocked && button.dataset.measurementChoice==='accepted') button.disabled=true;
+  });
+  if (!production) tell('Preview: analytics is disabled. No analytics data is sent.');
+  else if (blocked) choose('declined');
+  else {
+    let saved;try { saved=JSON.parse(localStorage.getItem(key)); } catch {}
+    if (saved && Number.isFinite(saved.at) && saved.at<=Date.now() && Date.now()-saved.at<lifetime) choose(saved.value, false);
+  }
+  // Fixed event vocabulary only. Query strings, visitor text and form data never enter this module.
+  document.addEventListener('click',event=>{
+    const link=event.target?.closest?.('a[data-cta]');
+    if (!link) return;
+    const placement=link.dataset.cta,href=link.getAttribute('href');
+    if (callPlacements.has(placement) && href==='tel:+919100181181') send('phone_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'national_helpline_9100181181'});
+    if (enquiryPlacements.has(placement) && href===origin+'/enroll#contact-form-title') send('enquiry_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'existing_enrolment_form'});
+  });
+})();
