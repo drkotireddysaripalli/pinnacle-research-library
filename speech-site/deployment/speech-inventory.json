@@ -4,7 +4,7 @@
   "/pinnacle-pages-assets/pinnacle-emblem-official.EFFb0QmR_ZQLHQS.webp": "aad8d4056e064102",
   "/pinnacle-pages-assets/pinnacle-logo.B0XrRmWp_Z1X80KV.webp": "7ea519b79fa3e005",
   "/pinnacle-pages-assets/pinnacle-wordmark-official.BbgTBUG8_1lOI1W.webp": "ae0ef41b5be12ca2",
-  "/pinnacle-pages-assets/speech-content.DcsUXCK-.css": "b159eb15a1308518",
+  "/pinnacle-pages-assets/speech-content.CMiuMM1S.css": "1e69a287ff7659cb",
   "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_1u7mo7.webp": "a9d2910e8c964fbe",
   "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_CHIA1.webp": "4a0b8d6474a1fc19",
   "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_Z36ofS.webp": "687fbe84652a3d05",
@@ -21,10 +21,12 @@
   "/pinnacle-pages-fonts/sintony-latin-bold.woff2": "62d9677e1cab5718",
   "/pinnacle-pages-fonts/sintony-latin.woff2": "bbd80981dfc0174f",
   "/pinnacle-pages-scripts/speech-measurement.js": "ec64ad5674320a2f",
-  "/pinnacle-pages-data/speech-llms.txt": "294b0af71b0265db",
-  "/pinnacle-pages-data/speech-service-information.json": "29482d6adda1077a",
-  "/pinnacle-pages-data/speech-service-information.txt": "929a04a9e0a9f4b5",
+  "/pinnacle-pages-data/speech-evidence.json": "b4762ea0eb1edb82",
+  "/pinnacle-pages-data/speech-evidence.txt": "f363b562a3d698a6",
+  "/pinnacle-pages-data/speech-llms.txt": "ee34a147821920b2",
+  "/pinnacle-pages-data/speech-service-information.json": "727b32cc730f1c69",
+  "/pinnacle-pages-data/speech-service-information.txt": "ec5724d5014a87f8",
   "/pinnacle-pages-data/speech-sitemap.xml": "a9ba33923af42eb8",
-  "/pinnacle-pages-html/service-information.html": "13b47b1ab85d10a4",
-  "/pinnacle-pages-html/speech.html": "90e6ba307e65f352"
+  "/pinnacle-pages-html/service-information.html": "1b53651e32bfdf03",
+  "/pinnacle-pages-html/speech.html": "92b6c532acf50c0c"
 }

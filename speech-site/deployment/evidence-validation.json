@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-09-27T07:38:56.383Z",
+  "groups": 10,
+  "sourceLinks": 18,
+  "allVisibleAndCited": true,
+  "results": [
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/#family-observations",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/#feedback-changes-plan",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/#monthly-readiness-review",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/#goals-to-everyday-practice",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/books.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/bis.pdf#page=2",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/question-comprehension-study",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/iso13485.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/iso27001.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/lei.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/sae3000.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
+      "status": 200,
+      "fragmentOk": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/fsc.html",
+      "status": 200,
+      "fragmentOk": true
+    }
+  ]
+}

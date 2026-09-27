@@ -4,6 +4,8 @@
 
 The page uses Pinnacle’s official logos, Sintony typography and vivid purple/pink palette. Everyday communication connects to the seven-stage family pathway, nine optional technology explanations and the precise source records behind PinnacleAI. The owner-confirmed speech assessment offer displays **~~₹25,999~~ FREE**. Ongoing therapy is priced separately. Repeated AI-image captions were removed at the owner's instruction; descriptive alt text and internal provenance remain.
 
+The latest revision speaks consistently as Pinnacle to parents and connects 10 decision topics to 18 relevant public sources. Evidence is placed beside assessment, review, family practice, licensed software, research, centre identities and institutional accountability. JSON/TXT source maps use the same source data as the visible citations.
+
 ## Build and review
 
 ```text
@@ -11,6 +13,7 @@ npm ci
 npm run build
 npm run preview -- --port 4326
 node scripts/validate-sales.mjs
+node scripts/validate-evidence.mjs
 node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs
 ```
 
@@ -21,7 +24,9 @@ Ordinary builds are noindex previews. `/speech-campaign.html` remains a comparis
 - Main narrative: `src/components/SpeechPage.astro`
 - Shared presentation: `src/components`, `src/layouts`, `src/styles`
 - Source record: `src/pages/speech-therapy/service-information.astro`
-- Source exports, sitemap and reading guide: `public/pinnacle-pages-data`
+- Service exports, sitemap and reading guide: `public/pinnacle-pages-data`
+- Shared evidence map: `src/data/speech-evidence.json`
+- Generated evidence exports: `src/pages/pinnacle-pages-data`
 - Optional consented CTA measurement: `public/pinnacle-pages-scripts/speech-measurement.js`
 
 ## Release preservation
@@ -32,9 +37,11 @@ Build the production edition, then run `node scripts/prepare-release.mjs <new-ou
 
 ## Verification
 
-42 preview checks, 19 measurement/routing tests and 15 production checks passed, including all 28 speech resources matching staged bytes. Chrome checks covered 320/390px mobile and desktop; keyboard menu, centre filter, source navigation and fee FAQ were exercised. Existing Verify, FSC, story, homepage, helpline and enrolment text hashes matched the before-release capture; payment remained reachable.
+42 preview checks, 19 measurement/routing tests and 15 production checks passed, including all 30 speech resources matching staged bytes. Chrome checks covered 320/390px mobile and desktop; keyboard menu, centre filter, source navigation and fee FAQ were exercised. Existing Verify, FSC, story, homepage, helpline and enrolment text hashes matched the before-release capture; payment remained reachable.
 
-Final production mobile Lighthouse 13.5.0: performance **98**, accessibility **100**, best practices **100**, SEO **100**, agentic browsing **100**. LCP 2.16 seconds, CLS 0, TBT 0. These are one lab run, not field performance or evidence of commercial results. See `PRODUCTION-PERFORMANCE-20260927.json`.
+Initial release production mobile Lighthouse 13.5.0: performance **98**, accessibility **100**, best practices **100**, SEO **100**, agentic browsing **100**. LCP 2.16 seconds, CLS 0, TBT 0. These are one lab run, not field performance or evidence of commercial results. See `PRODUCTION-PERFORMANCE-20260927.json`.
+
+Current narration revision mobile lab audit: **99 performance, 100 accessibility, 100 best practices and 100 SEO**; LCP2.12s, CLS0 and TBT0. See `NARRATION-PERFORMANCE-20260927.json`. These are lab measurements, not field or commercial results.
 
 The two released pages were submitted once to IndexNow (HTTP200). The exact speech Search Console baseline was unavailable; the known Ahrefs project covered Verify and project discovery was plan-restricted. Indexing, ranking, AI citation, connected calls and accepted leads have not been established by this release.
 

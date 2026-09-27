@@ -1,0 +1,12 @@
+---
+import evidence from '../data/speech-evidence.json';
+import Icon from './Icon.astro';
+import { url } from '../data/site';
+interface Props { group: keyof typeof evidence.groups; label?: string }
+const { group, label = 'Explore the evidence behind this step' } = Astro.props;
+const record = evidence.groups[group];
+---
+<aside class="evidence-links" aria-label={label} data-evidence-group={group}>
+  <span class="evidence-links-title"><Icon name="book" size={19} />{label}</span>
+  <ul>{record.links.map(link => <li><a href={url(link.url)}>{link.label} <span aria-hidden="true">↗</span></a>{link.kind.includes('preprint') && <small>{link.kind}</small>}</li>)}</ul>
+</aside>

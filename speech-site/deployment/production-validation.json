@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-27T06:55:09.426Z",
+  "checkedAt": "2026-09-27T07:44:30.652Z",
   "checks": [
     {
       "name": "Canonical speech response",
@@ -18,7 +18,7 @@
       "ok": true
     },
     {
-      "name": "All 28 public release files respond",
+      "name": "All public release files respond",
       "ok": true,
       "details": [
         {
@@ -52,7 +52,7 @@
           "sameBytes": true
         },
         {
-          "path": "/pinnacle-pages-assets/speech-content.DcsUXCK-.css",
+          "path": "/pinnacle-pages-assets/speech-content.CMiuMM1S.css",
           "status": 200,
           "type": "text/css; charset=utf-8",
           "sameBytes": true
@@ -151,6 +151,18 @@
           "path": "/pinnacle-pages-scripts/speech-measurement.js",
           "status": 200,
           "type": "text/javascript; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-data/speech-evidence.json",
+          "status": 200,
+          "type": "application/json; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-data/speech-evidence.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8",
           "sameBytes": true
         },
         {

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-27T06:49:02.605Z",
+  "checkedAt": "2026-09-27T07:37:44.253Z",
   "build": "local sales preview",
   "productionDeployed": false,
   "checksPassed": 42,
@@ -35,7 +35,7 @@
     "Illustrative alt retained without intrusive AI captions",
     "Asset responds 200: sintony-latin.woff2",
     "Asset responds 200: sintony-latin-bold.woff2",
-    "Asset responds 200: speech-content.DcsUXCK-.css",
+    "Asset responds 200: speech-content.iG8TEKkD.css",
     "Asset responds 200: pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
     "Asset responds 200: speech-life-campaign.C6zyiBPG_1E6Oci.webp",
     "Asset responds 200: pinnacle-emblem-official.EFFb0QmR_1CYFQi.webp",
@@ -47,8 +47,8 @@
     "Asset responds 200: speech-measurement.js",
     "Primary palette has at least 4.5:1 contrast with white"
   ],
-  "htmlBytes": 67298,
-  "htmlGzipBytes": 14890,
+  "htmlBytes": 76305,
+  "htmlGzipBytes": 16081,
   "assets": [
     {
       "asset": "/pinnacle-pages-fonts/sintony-latin.woff2",
@@ -59,8 +59,8 @@
       "bytes": 8348
     },
     {
-      "asset": "/pinnacle-pages-assets/speech-content.DcsUXCK-.css",
-      "bytes": 58624
+      "asset": "/pinnacle-pages-assets/speech-content.iG8TEKkD.css",
+      "bytes": 60359
     },
     {
       "asset": "/pinnacle-pages-assets/pinnacle-logo.B0XrRmWp_Z1X80KV.webp",

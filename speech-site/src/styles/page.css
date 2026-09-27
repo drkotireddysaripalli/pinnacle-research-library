@@ -3836,3 +3836,23 @@ a,summary,button {
 .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}.early-assessment .assessment-offer>strong,.visit-facts .assessment-offer>strong{color:#8f2879}
 
 @media(max-width:760px){.hero-assessment-offer{order:4;margin:12px 0 2px}}
+
+/* Relevant source links sit beside the family decision they support. */
+.evidence-links{margin-top:1.4rem;padding:1rem 1.15rem;border-left:3px solid var(--purple,#8f2879);background:#fff;border-radius:0 12px 12px 0;color:#35263d;font-size:.88rem;}
+.evidence-links-title{display:flex;align-items:center;gap:.55rem;font-weight:700;line-height:1.5;}
+.evidence-links ul{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;list-style:none;padding:0;margin:.7rem 0 0;}
+.evidence-links li{min-width:0;max-width:100%;}
+.evidence-links a{display:inline-block;color:#8f2879;text-decoration:underline;text-underline-offset:3px;line-height:1.7;overflow-wrap:anywhere;}
+.evidence-links small{display:block;color:#665e69;font-size:.78rem;line-height:1.5;margin-top:.2rem;}
+.institution-story{margin-top:2.5rem;border-top:1px solid #e4d6e4;padding-top:2rem;}
+.institution-story h3{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.3;margin:.5rem 0 1rem;}
+.institution-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem;margin-top:1.5rem;}
+.institution-grid>div{min-width:0;padding:1.2rem 0;border-top:3px solid #8f2879;}
+.institution-grid>div:nth-child(2){border-color:#e4115e;}.institution-grid>div:nth-child(3){border-color:#08796e;}
+.institution-grid h4{font-size:1.13rem;line-height:1.45;margin:.8rem 0;}
+.institution-grid p{font-size:.95rem;line-height:1.7;}
+.institution-grid .evidence-links{padding:.85rem;margin-top:1rem;}
+.institution-grid .evidence-links ul{display:block;}.institution-grid .evidence-links li+li{margin-top:.5rem;}
+.source-downloads a{display:inline-block;padding:.3rem 0;}
+.early-assessment .assessment-offer{display:flex;margin-bottom:.25rem;}
+@media(max-width:760px){.institution-grid{grid-template-columns:1fr;gap:.5rem}.evidence-links ul{display:block}.evidence-links li+li{margin-top:.6rem}.evidence-links{padding:.85rem 1rem}.institution-grid .evidence-links{margin-bottom:.5rem}}

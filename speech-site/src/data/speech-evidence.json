@@ -1,0 +1,58 @@
+{
+  "updatedOn": "2026-09-27",
+  "page": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+  "publisher": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "groups": {
+    "purpose": {
+      "section": "pinnacle-purpose",
+      "claim": "We begin with the life your child is working toward. That purpose guides abilities, goals, therapies, people, everyday practice and review.",
+      "links": [{"label": "Why your child’s life comes first", "url": "/verify/evidence/pinnacle-paradigm-shift.html", "kind": "Pinnacle philosophy and programme"}]
+    },
+    "measurement": {
+      "section": "assessment-start",
+      "claim": "We bring professional assessment, AbilityScore® measurement and your observations together to understand the starting point and agree meaningful goals.",
+      "links": [{"label": "AbilityScore® methodology", "url": "/verify/evidence/records/methodology.html", "kind": "Methodology preprint · preliminary findings"}, {"label": "How your observations contribute", "url": "/verify/#family-observations", "kind": "Pinnacle programme description"}]
+    },
+    "review": {
+      "section": "everyday-communication",
+      "claim": "We review where your child uses an ability, how much support helps and what needs to change next. PinnacleAI supports tracking and review; people guide the decisions.",
+      "links": [{"label": "How feedback changes the plan", "url": "/verify/#feedback-changes-plan", "kind": "Pinnacle programme description"}, {"label": "Readiness and reassessment", "url": "/verify/#monthly-readiness-review", "kind": "Pinnacle programme description"}]
+    },
+    "practice": {
+      "section": "family-practice",
+      "claim": "We help your family turn agreed goals into manageable practice in familiar routines and bring your observations into review.",
+      "links": [{"label": "Everyday Therapy™ explained", "url": "/verify/#goals-to-everyday-practice", "kind": "Pinnacle programme description"}, {"label": "Parent resources by Sreeja Reddy Saripalli", "url": "/verify/evidence/records/books.html", "kind": "Authored parent resources"}]
+    },
+    "software": {
+      "section": "pinnacleai-steps",
+      "claim": "PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software for children aged 0–12. The MD-5 intended functions include ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support.",
+      "links": [{"label": "MD-5 licence and intended use", "url": "/verify/evidence/records/md5.html", "kind": "Named device and intended-use scope"}, {"label": "Named modules in the BIS schedule", "url": "/verify/evidence/bis.pdf#page=2", "kind": "Management-system licence scope"}]
+    },
+    "research": {
+      "section": "evidence",
+      "claim": "Our six-month, company-reported study of 60 children aged 3–9 reported question-comprehension accuracy rising from 48.4% to 74.9%. Findings were descriptive and therapist-assessed, with no control group.",
+      "links": [{"label": "Question-comprehension study", "url": "/question-comprehension-study", "kind": "Company-reported descriptive study · no control group"}, {"label": "Research and publication status", "url": "/verify/evidence/research-library.html", "kind": "Preprints, protocols and company-study summaries identified separately"}]
+    },
+    "quality": {
+      "section": "organisation-behind-care",
+      "claim": "We publish our quality-management and information-security certificates with their named system scopes and review dates.",
+      "links": [{"label": "Quality management · ISO 13485", "url": "/verify/evidence/records/iso13485.html", "kind": "Certificate and defined system scope"}, {"label": "Information security · ISO/IEC 27001", "url": "/verify/evidence/records/iso27001.html", "kind": "Certificate and defined system scope"}]
+    },
+    "identity": {
+      "section": "organisation-behind-care",
+      "claim": "Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. We publish our legal-identity records and independent reports on specified institutional claims.",
+      "links": [{"label": "BHCL legal identity", "url": "/verify/evidence/records/lei.html", "kind": "Independent registry match"}, {"label": "Independent limited-assurance report", "url": "/verify/evidence/records/sae3000.html", "kind": "Specified institutional claims; not clinical efficacy"}]
+    },
+    "centres": {
+      "section": "centres",
+      "claim": "We help you find a Pinnacle centre and confirm its speech-therapy team and appointment options. Verify identifies centre-specific registry references and their recorded status.",
+      "links": [{"label": "Centre identities and registry references", "url": "/verify/evidence/centre-entity-reference.html", "kind": "Centre-specific records and statuses"}]
+    },
+    "journey": {
+      "section": "organisation-behind-care",
+      "claim": "Our complete PinnacleAI story connects the child-development purpose, research and regulatory milestones. The Free Sale Certificate records export subject to the importing country’s law.",
+      "links": [{"label": "The complete PinnacleAI story", "url": "/verify/evidence/pinnacleai-regulatory-journey.html", "kind": "Purpose, research and regulatory journey"}, {"label": "Free Sale Certificate · 23 September 2026", "url": "/verify/evidence/records/fsc.html", "kind": "Export-purpose certificate; not foreign market authorisation"}]
+    }
+  }
+}
