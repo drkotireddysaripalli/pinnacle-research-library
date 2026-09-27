@@ -3,8 +3,7 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getImage } from 'astro:assets';
 import { origin, url, phone } from '../data/site';
-import '../styles/global.css';
-import '../styles/review-refinements.css';
+import '../styles/page.css';
 const { title, description, path, label, serviceName, shareImage, focused = false } = Astro.props;
 const canonical = url(path);
 const share = await getImage({src: shareImage, width:1200, height:630, fit:'cover', format:'webp', quality:85});
@@ -27,6 +26,7 @@ const schema = {'@context':'https://schema.org','@graph':[
   <title>{title}</title><meta name="description" content={description} /><meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href={canonical} /><link rel="icon" href={url('/verify/favicon.png')} />
   <link rel="preload" href="/pinnacle-pages-fonts/sintony-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/pinnacle-pages-fonts/sintony-latin-bold.woff2" as="font" type="font/woff2" crossorigin />
   <meta property="og:type" content="website" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:site_name" content="Pinnacle Blooms Network" />
   <meta property="og:image" content={imageUrl} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Illustrative mother and child sharing a communication moment during play." />
   <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={imageUrl} /><meta name="twitter:image:alt" content="Illustrative mother and child sharing a communication moment during play." />

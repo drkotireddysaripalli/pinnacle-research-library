@@ -9,8 +9,8 @@ const { slides } = Astro.props;
     <div class="hero-copy">
       <p class="eyebrow"><span class="brand-dot"></span> Every Child Counts®</p>
       <h1 id="speech-title"><span class="service-title">Speech therapy for children</span> Help your child<br /><em>be understood.</em></h1>
-      <p class="hero-intro">At Pinnacle, your child’s everyday life sets the goal. Speech therapy, home practice and regular review work toward communication, growing independence and participation.</p>
-      <ol class="hero-mechanism" aria-label="How the plan works"><li>Understand abilities</li><li>Agree an everyday goal</li><li>Practise &amp; review</li></ol>
+      <p class="hero-intro"><strong>And take part in more of life.</strong> Asking for help. Making a choice. Joining in. At Pinnacle, everyday goals connect assessment, speech therapy, home practice and review.</p>
+      <ol class="hero-mechanism" aria-label="Everyday goals"><li><Icon name="voice" size={22} />Be heard</li><li><Icon name="heart" size={22} />Make choices</li><li><Icon name="people" size={22} />Join in</li></ol>
       <div class="hero-actions"><a class="button primary" href={phone.href} data-cta="hero-call"><Icon name="phone" />Call {phone.display}</a><a class="button outline" href={url('/enroll#contact-form-title')} data-cta="hero-assessment">Request an assessment <Icon name="arrow" /></a></div>
       <p class="guidance-note">Free guidance, 24/7. Assessment and therapy fees are separate.</p>
       <div class="hero-evidence"><Icon name="shield" size={18} /><span>PinnacleAI software: <a href={url('/verify/evidence/records/md5.html')}>MD-5 licence</a> · <a href={url('/verify/evidence/bis.pdf#page=2')}>BIS scope</a></span></div>
@@ -18,7 +18,7 @@ const { slides } = Astro.props;
     </div>
     <div class="hero-visual" data-carousel role="region" aria-roledescription="carousel" aria-label="Communication in everyday life">
       {slides.map((slide, index) => <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label={(index+1)+' of '+slides.length} hidden={index!==0}>
-        <Image src={slide.image} widths={[480,720,960,1200]} sizes="(min-width: 1000px) 56vw, 100vw" width={1200} height={1000} fit="cover" format="webp" quality={82} alt={slide.alt} loading={index===0 ? 'eager' : 'lazy'} fetchpriority={index===0 ? 'high' : 'auto'} />
+        <Image src={slide.image} widths={[480,720,960,1200]} sizes="(min-width: 1360px) 680px, (min-width: 761px) 50vw, calc(100vw - 36px)" width={1200} height={1000} fit="cover" format="webp" quality={80} alt={slide.alt} loading={index===0 ? 'eager' : 'lazy'} fetchpriority={index===0 ? 'high' : 'auto'} />
         <figcaption>{slide.caption}</figcaption>
       </figure>)}
       <div class="life-badge"><span class="badge-icon"><Icon name="sun" size={30} /></span><div><strong>The child’s life comes first.</strong><span>Goals. Practice. Progress. Participation.</span></div></div>

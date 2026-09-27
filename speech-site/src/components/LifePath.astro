@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import Icon from './Icon.astro';
+import everyday from '../assets/speech-everyday-story.png';
+const stages = [
+  ['measure','Understand abilities','AbilityScore® measurement + professional assessment.'],
+  ['compass','Plan for readiness','Readiness forecasts help shape your child’s plan.'],
+  ['people','Connect the therapies','Bring appropriate methods and specialists together.'],
+  ['home','Carry practice home','Guided practice in everyday family moments.'],
+  ['track','Track and adjust','See what changes. Correct the plan.'],
+  ['loop','Reassess and repeat','Review readiness. Keep refining the next step.'],
+  ['sun','Grow toward independence','School readiness. Participation. More choices in life.']
+];
+---
+<div class="life-path-story">
+  <ol class="life-path">{stages.map(([icon,title,text],i)=><li><div class="path-symbol"><span class="care-number">{i+1}</span><Icon name={icon} size={39} /></div><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol>
+  <div class="path-review"><Icon name="loop" size={25} /><p><strong>Your child’s needs guide the pace.</strong> Your family helps shape the plan. Reassessment brings us back to what matters next.</p></div>
+  <figure class="life-horizon"><Image src={everyday} widths={[480,800,1200,1600]} sizes="(min-width: 1360px) 1280px, calc(100vw - 36px)" width={1600} height={900} format="webp" quality={78} alt="Illustrated everyday communication: a child choosing at breakfast, playing with a sibling and participating in class." loading="lazy" decoding="async" /><div class="life-horizon-labels"><span><Icon name="home" />At home</span><span><Icon name="people" />With other people</span><span><Icon name="book" />In school</span></div><figcaption>AI-generated scenes illustrating possibilities, not patient outcomes.</figcaption></figure>
+</div>

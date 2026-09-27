@@ -1,0 +1,113 @@
+{
+  "checkedOn": "2026-09-27",
+  "target": "http://127.0.0.1:4326/",
+  "status": "unreleased local preview",
+  "results": [
+    {
+      "label": "Before visual rebuild (mobile)",
+      "fetchTime": "2026-09-27T04:53:47.094Z",
+      "lighthouseVersion": "13.5.0",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "numericValue": 1508.0239,
+          "displayValue": "1.5 s"
+        },
+        "cumulative-layout-shift": {
+          "numericValue": 0,
+          "displayValue": "0"
+        },
+        "total-blocking-time": {
+          "numericValue": 0,
+          "displayValue": "0 ms"
+        },
+        "speed-index": {
+          "numericValue": 758.0238999999999,
+          "displayValue": "0.8 s"
+        }
+      },
+      "environment": "mobile",
+      "throttlingMethod": "simulate",
+      "runWarnings": [],
+      "report": "before-visual-story.report.html"
+    },
+    {
+      "label": "Final mobile",
+      "fetchTime": "2026-09-27T05:11:34.824Z",
+      "lighthouseVersion": "13.5.0",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "numericValue": 1666.0949,
+          "displayValue": "1.7 s"
+        },
+        "cumulative-layout-shift": {
+          "numericValue": 0,
+          "displayValue": "0"
+        },
+        "total-blocking-time": {
+          "numericValue": 0,
+          "displayValue": "0 ms"
+        },
+        "speed-index": {
+          "numericValue": 766.0949,
+          "displayValue": "0.8 s"
+        }
+      },
+      "environment": "mobile",
+      "throttlingMethod": "simulate",
+      "runWarnings": [],
+      "report": "final-visual-story-mobile.report.html"
+    },
+    {
+      "label": "Final desktop",
+      "fetchTime": "2026-09-27T05:11:20.113Z",
+      "lighthouseVersion": "13.5.0",
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 66
+      },
+      "metrics": {
+        "largest-contentful-paint": {
+          "numericValue": 410.86805000000004,
+          "displayValue": "0.4 s"
+        },
+        "cumulative-layout-shift": {
+          "numericValue": 0,
+          "displayValue": "0"
+        },
+        "total-blocking-time": {
+          "numericValue": 0,
+          "displayValue": "0 ms"
+        },
+        "speed-index": {
+          "numericValue": 212.31420000000003,
+          "displayValue": "0.2 s"
+        }
+      },
+      "environment": "desktop",
+      "throttlingMethod": "simulate",
+      "runWarnings": [],
+      "report": "final-visual-story-desktop.report.html"
+    }
+  ],
+  "seoNote": "SEO 66 is expected while preview deliberately sends noindex, nofollow. Crawlability must be changed only in production release. Other scored SEO audits passed.",
+  "cleanupNote": "The final mobile run wrote valid JSON and HTML reports, then Chrome temporary-profile cleanup returned Windows EPERM. Neither report contains a runtimeError. No rerun was needed for this cleanup-only error.",
+  "limits": [
+    "Lab measurements on localhost, not production field Core Web Vitals.",
+    "One baseline mobile, one final mobile and one final desktop result; not a median or a conversion study.",
+    "Scores do not establish search rankings, AI citations, connected calls or enrolments."
+  ]
+}

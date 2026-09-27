@@ -4,7 +4,7 @@ Updated 27 September 2026 after the independent-review implementation.
 
 ## Current state
 
-The complete local review implementation is in `IMPLEMENTATION-REVIEW-20260927.md`. Both pages build, 30 page checks and eight consent/measurement tests pass. Parent, sales and evidence reviewers checked the revised source independently. This is an unreleased preview, not a replacement of the public speech page.
+The complete local review implementation is in `IMPLEMENTATION-REVIEW-20260927.md`, followed by the visual rebuild in `VISUAL-STORY-20260927.md`. Both pages build, 33 page checks and eight consent/measurement tests pass. Parent, sales and evidence reviewers checked the revised source independently. Final local mobile and desktop Lighthouse performance/accessibility/best-practices scores are each 100; details and limits are in `PERFORMANCE-20260927.json`. This is an unreleased preview, not a replacement of the public speech page.
 
 Implemented: first-visit information, dated assessment price, everyday-life example, seven-stage family pathway, optional nine technology explanations, accurate evidence, three example centres, direct enquiry-form handoff, social image/meta, structured data and optional consented CTA measurement. The old design plan is preserved in `LAUNCH-PLAN-20260926-HISTORY.md` as historical context, not current feature status.
 

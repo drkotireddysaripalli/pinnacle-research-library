@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-27T04:34:58.403Z",
+  "checkedAt": "2026-09-27T05:11:24.095Z",
   "build": "local sales preview",
   "productionDeployed": false,
-  "checksPassed": 30,
+  "checksPassed": 33,
   "checks": [
     "One persistent H1",
     "Preview remains noindex",
@@ -29,30 +29,45 @@
     "Every image has alt text and fixed dimensions",
     "Campaign illustration is labelled",
     "Asset responds 200: sintony-latin.woff2",
-    "Asset responds 200: SpeechPage.ukLtXRQR.css",
+    "Asset responds 200: sintony-latin-bold.woff2",
+    "Asset responds 200: SpeechPage.BbudIkHF.css",
     "Asset responds 200: pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
-    "Asset responds 200: speech-life-campaign.C6zyiBPG_ZqFQn5.webp",
+    "Asset responds 200: speech-life-campaign.C6zyiBPG_1E6Oci.webp",
+    "Asset responds 200: speech-everyday-story.wPFU5fBK_1u7mo7.webp",
+    "Asset responds 200: speech-first-visit.CftTJHiz_2cv0h5.webp",
     "Asset responds 200: speech-measurement.js",
     "Primary palette has at least 4.5:1 contrast with white"
   ],
-  "htmlBytes": 48216,
-  "htmlGzipBytes": 11390,
+  "htmlBytes": 58691,
+  "htmlGzipBytes": 13414,
   "assets": [
     {
       "asset": "/pinnacle-pages-fonts/sintony-latin.woff2",
       "bytes": 8548
     },
     {
-      "asset": "/pinnacle-pages-assets/SpeechPage.ukLtXRQR.css",
-      "bytes": 47517
+      "asset": "/pinnacle-pages-fonts/sintony-latin-bold.woff2",
+      "bytes": 8348
+    },
+    {
+      "asset": "/pinnacle-pages-assets/SpeechPage.BbudIkHF.css",
+      "bytes": 51122
     },
     {
       "asset": "/pinnacle-pages-assets/pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
       "bytes": 6794
     },
     {
-      "asset": "/pinnacle-pages-assets/speech-life-campaign.C6zyiBPG_ZqFQn5.webp",
-      "bytes": 88030
+      "asset": "/pinnacle-pages-assets/speech-life-campaign.C6zyiBPG_1E6Oci.webp",
+      "bytes": 80408
+    },
+    {
+      "asset": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_1u7mo7.webp",
+      "bytes": 92842
+    },
+    {
+      "asset": "/pinnacle-pages-assets/speech-first-visit.CftTJHiz_2cv0h5.webp",
+      "bytes": 67064
     },
     {
       "asset": "/pinnacle-pages-scripts/speech-measurement.js",

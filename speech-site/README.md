@@ -30,9 +30,11 @@ node --test scripts/test-measurement.mjs
 
 ## Current checks
 
-Build succeeds for both routes; 30 page checks and eight measurement tests pass. Browser inspection covered desktop and mobile, including 320 px width, keyboard disclosures, the centre selector and the existing live enquiry form destination. These checks are not a clinical approval, a Lighthouse score, evidence of indexing, or measured conversion improvement.
+Build succeeds for both routes; 33 page checks and eight measurement tests pass. Browser inspection covered desktop and mobile, including 320 px width, disclosures, the centre selector and the existing live enquiry form destination. The visual-story rebuild adds two generated campaign images, home/car illustrations, icon-led stages and stronger typography. Shared styling is consolidated in `src/styles/page.css`.
 
-See `IMPLEMENTATION-REVIEW-20260927.md` for the completed work and `LAUNCH-PLAN.md` for remaining release work. Generated campaign artwork is clearly labelled as illustrative; it is not a patient photograph or outcome. See `ASSET-SOURCES.md`.
+Final local Lighthouse 13.5.0 reports: performance 100, accessibility 100 and best practices 100 on both mobile and desktop. Mobile LCP 1.7 seconds; desktop 0.4 seconds; both CLS 0 and TBT 0 ms. SEO is 66 because this unreleased preview is deliberately blocked from indexing. These are local lab results, not production field data, indexing or conversion results. See `PERFORMANCE-20260927.json`.
+
+See `VISUAL-STORY-20260927.md` for the latest 16 completed improvements, `IMPLEMENTATION-REVIEW-20260927.md` for the preceding review implementation and `LAUNCH-PLAN.md` for remaining release work. Generated campaign artwork is clearly labelled as illustrative; it is not a patient photograph or outcome. See `ASSET-SOURCES.md` and `IMAGE-PROMPTS-20260927.md`.
 
 ## Measurement and release boundaries
 
