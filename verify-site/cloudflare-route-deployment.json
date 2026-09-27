@@ -1,8 +1,8 @@
 {
   "worker": "pinnacle-verify-route",
   "account_id": "862998def1cd610fdb86b8e5c1d6ed4d",
-  "version": "9a0a1281-152b-439f-9bf4-ad1d708b6279",
-  "deployment": "f0d3208f-59f8-48ad-bbcc-978ffefed98c",
+  "version": "cfbb08ed-27f3-4bce-a5dc-c1326a1982cd",
+  "deployment": "2bba0a4e-cb11-4b6b-8f1f-b7a11ca3e865",
   "createdAt": "2026-09-27",
   "compatibility_date": "2026-09-18",
   "usage_model": "standard",
@@ -30,7 +30,7 @@
       "type": "secret_text"
     }
   ],
-  "sourceSha256": "8d46d9ebddaeefca400465945eb083775eda418900c8fb639a662cca4085729a",
+  "sourceSha256": "2a7229df4c5e6d04f60f5d7d50f7c4c52507daa6ea7eb52eba6a47c3735d9ae2",
   "notes": [
     "Always run the routing Worker before static assets. Default asset-first routing incorrectly serves the Verify index at the main homepage and Verify-local robots at the domain robots URL.",
     "Keep assets and all three bindings on subsequent deployments. Secret values are intentionally absent from this manifest.",
@@ -51,10 +51,11 @@
     "Version73 publishes release b26909c1f04ea12e: complete PinnacleAI narrative, seven-stage pathway, licensed functions, research, FSC preview, nine FAQs, source map CSV, CSL-JSON citations and responsive family artwork. Adds contextual story links on the homepage, AbilityScore, two relevant Ask pages, three regulatory records, organisation profile and research library. 36 records and 84 pages retained. Worker-first assets and all three bindings verified before activation.",
     "Version74 release f2e5f5847c3d401b extends the recognized application-owned homepage evidence panel once instead of duplicating it. Same 634 assets as version73; 19 route tests passed including native panel idempotence and safety guards. Worker-first assets and all three bindings verified before activation.",
     "Version76 adds the selected speech service page, dated service information, FREE assessment offer confirmed by Pinnacle (listed value INR25999), sitemap and 28 speech assets while retaining all634 Verify assets and all3bindings. Current shared Worker has two modules: pinnacle-route-v12.mjs and speech-handler.mjs. Do not deploy the old v11 module or a Verify-only asset bundle. Rebuild the union and verify fresh live metadata before any deployment. Six added route IDs and two scoped edge-rule IDs are recorded under speech deployment/.",
-    "Version77 revises the speech narrative in Pinnacle voice, connects 10 decision topics to 18 relevant public sources, and adds JSON/TXT evidence exports. All30 speech assets match public response bytes; all634 Verify files preserved. Existing routes, edge rules and three bindings retained. Rollback to version76 needs no route or rule removal."
+    "Version77 revises the speech narrative in Pinnacle voice, connects 10 decision topics to 18 relevant public sources, and adds JSON/TXT evidence exports. All30 speech assets match public response bytes; all634 Verify files preserved. Existing routes, edge rules and three bindings retained. Rollback to version76 needs no route or rule removal.",
+    "Version80 restores the shared Pinnacle portal header, all six therapy submenus, complete mobile directory and original purple footer; preserves eight legacy speech anchors. 634 Verify assets plus31 speech assets. All three bindings and Worker-first assets verified before activation. Previous v77 remains the rollback for the portal restoration. Existing homepage/Verify/FSC/story/helpline content hashes unchanged; enrolment/payment remain reachable."
   ],
   "main_module": "pinnacle-route-v12.mjs",
   "sourceDirectory": "../pinnacle-page-template-20260926/deployment",
   "unionAssets": "Verify dist plus released speech assets; see speech RELEASE-20260927.md",
-  "assetCount": 664
+  "assetCount": 665
 }

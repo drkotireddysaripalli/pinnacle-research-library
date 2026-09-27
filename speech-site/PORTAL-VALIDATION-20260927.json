@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-09-27T12:30:51.414Z",
+  "checksPassed": 9,
+  "documentedLinkEntries": 168,
+  "checks": [
+    "Complete documented portal navigation is present",
+    "All six therapy menus have native disclosure controls",
+    "Header and footer navigation are server rendered",
+    "Legacy speech section targets retained",
+    "New speech submenu targets exist",
+    "No duplicate HTML IDs",
+    "Official Pinnacle TV channel preserved",
+    "Footer portal destinations preserved",
+    "Full action strip retained"
+  ]
+}

@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+import { url } from '../data/site';
+const { group }=Astro.props;
+const single=group.links.length===1;
+const headingUrl=single?group.links[0].url:({'Research Studies':'/research-studies','Pinnacle TV':'https://www.youtube.com/channel/UCAAuGmvPSBRiCnDlEcXYwEQ','Franchise Opportunity':'/franchises'} as Record<string,string>)[group.title];
+---
+<nav class="portal-footer-group" aria-label={group.title}>
+  <h3><Icon name={group.icon} size={18}/>{headingUrl?<a href={url(headingUrl)}>{group.title}</a>:group.title}</h3>
+  {!single&&<ul>{group.links.map((link:{label:string,url:string})=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul>}
+</nav>

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-27T07:44:30.652Z",
+  "checkedAt": "2026-09-27T12:30:51.346Z",
   "checks": [
     {
       "name": "Canonical speech response",
@@ -22,7 +22,7 @@
       "ok": true,
       "details": [
         {
-          "path": "/pinnacle-pages-assets/bhcl-emblem-official.BOaEeIEj_3R5W5.webp",
+          "path": "/pinnacle-pages-assets/bhcl-emblem-official.BOaEeIEj_ZCvf9T.webp",
           "status": 200,
           "type": "image/webp",
           "sameBytes": true
@@ -40,19 +40,25 @@
           "sameBytes": true
         },
         {
-          "path": "/pinnacle-pages-assets/pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
+          "path": "/pinnacle-pages-assets/pinnacle-logo.B0XrRmWp_Z1jDTec.webp",
           "status": 200,
           "type": "image/webp",
           "sameBytes": true
         },
         {
-          "path": "/pinnacle-pages-assets/pinnacle-wordmark-official.BbgTBUG8_1lOI1W.webp",
+          "path": "/pinnacle-pages-assets/pinnacle-wordmark-official.BbgTBUG8_Z1WUD6B.webp",
           "status": 200,
           "type": "image/webp",
           "sameBytes": true
         },
         {
-          "path": "/pinnacle-pages-assets/speech-content.CMiuMM1S.css",
+          "path": "/pinnacle-pages-assets/portal-footer-shapes.BezEM5wy_1Gfamd.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-content.KNnnd_Or.css",
           "status": 200,
           "type": "text/css; charset=utf-8",
           "sameBytes": true
@@ -293,7 +299,7 @@
           "path": "/enroll",
           "status": 200,
           "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
-          "sameTextHash": true,
+          "sameTextHash": false,
           "form": true
         },
         {

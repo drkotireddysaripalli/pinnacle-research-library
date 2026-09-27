@@ -1,0 +1,792 @@
+{
+  "source": "https://www.pinnacleblooms.org/",
+  "reviewedOn": "2026-09-27",
+  "main": [
+    {
+      "label": "Pinnacle Global Framework",
+      "url": "/pinnacle-global-autism-framework"
+    },
+    {
+      "label": "Research Studies",
+      "url": "/research-studies"
+    },
+    {
+      "label": "Whitebook",
+      "url": "/global-research-whitebook"
+    },
+    {
+      "label": "News",
+      "url": "/news"
+    },
+    {
+      "label": "Services",
+      "url": "/services"
+    },
+    {
+      "label": "Careers",
+      "url": "/careers"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact"
+    }
+  ],
+  "mobileExtras": [
+    {
+      "label": "Login",
+      "url": "/epass"
+    },
+    {
+      "label": "Enroll",
+      "url": "/enroll"
+    },
+    {
+      "label": "Franchise",
+      "url": "/franchises"
+    }
+  ],
+  "therapy": [
+    {
+      "label": "Autism Therapy",
+      "url": "/autism-therapy",
+      "links": [
+        {
+          "label": "What",
+          "url": "/autism-therapy#what-section"
+        },
+        {
+          "label": "Autism Redflags ?",
+          "url": "/autism-therapy#why-section"
+        },
+        {
+          "label": "Autism Therapy @ Pinnacle",
+          "url": "/autism-therapy#Advantages-section"
+        },
+        {
+          "label": "Autism Therapy Services",
+          "url": "/autism-therapy#ChildrenServices-section"
+        },
+        {
+          "label": "assessment",
+          "url": "/autism-therapy#assessment-section"
+        },
+        {
+          "label": "admission",
+          "url": "/autism-therapy#admission-section"
+        },
+        {
+          "label": "procedure",
+          "url": "/autism-therapy#procedure-section"
+        },
+        {
+          "label": "cost / fee",
+          "url": "/autism-therapy#Cost-section"
+        }
+      ]
+    },
+    {
+      "label": "Occupational",
+      "url": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "links": [
+        {
+          "label": "What",
+          "url": "/occupational-therapy#what-section"
+        },
+        {
+          "label": "Why",
+          "url": "/occupational-therapy#why-section"
+        },
+        {
+          "label": "Importance",
+          "url": "/occupational-therapy#Importance-section"
+        },
+        {
+          "label": "Advantages",
+          "url": "/occupational-therapy#Advantages-section"
+        },
+        {
+          "label": "Children Services",
+          "url": "/occupational-therapy#ChildrenServices-section"
+        },
+        {
+          "label": "Assessment",
+          "url": "/occupational-therapy#assessment-section"
+        },
+        {
+          "label": "Admission",
+          "url": "/occupational-therapy#admission-section"
+        },
+        {
+          "label": "Procedure",
+          "url": "/occupational-therapy#procedure-section"
+        },
+        {
+          "label": "Cost / fee",
+          "url": "/occupational-therapy#Cost-section"
+        }
+      ]
+    },
+    {
+      "label": "Speech Therapy",
+      "url": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "links": [
+        {
+          "label": "What",
+          "url": "/top-speech-therapy-center-india-proven-improvement-rate#everyday-communication"
+        },
+        {
+          "label": "Why",
+          "url": "/top-speech-therapy-center-india-proven-improvement-rate#pinnacle-purpose"
+        },
+        {
+          "label": "Advantages",
+          "url": "/top-speech-therapy-center-india-proven-improvement-rate#pinnacle-difference"
+        },
+        {
+          "label": "Child services",
+          "url": "/top-speech-therapy-center-india-proven-improvement-rate#service-fit"
+        },
+        {
+          "label": "Adult Services",
+          "url": "/contact"
+        },
+        {
+          "label": "Assessment",
+          "url": "/top-speech-therapy-center-india-proven-improvement-rate#assessment-start"
+        },
+        {
+          "label": "Admission",
+          "url": "/top-speech-therapy-center-india-proven-improvement-rate#next-step"
+        },
+        {
+          "label": "Procedure",
+          "url": "/top-speech-therapy-center-india-proven-improvement-rate#first-visit"
+        },
+        {
+          "label": "Fee / Cost",
+          "url": "/top-speech-therapy-center-india-proven-improvement-rate#session-details"
+        }
+      ]
+    },
+    {
+      "label": "Psychological",
+      "url": "/child-psychological-counseling",
+      "links": [
+        {
+          "label": "What",
+          "url": "/child-psychological-counseling#what-section"
+        },
+        {
+          "label": "Why",
+          "url": "/child-psychological-counseling#why-section"
+        },
+        {
+          "label": "Who can avail",
+          "url": "/child-psychological-counseling#who-avail-section"
+        },
+        {
+          "label": "Advantages",
+          "url": "/child-psychological-counseling#Advantages-section"
+        },
+        {
+          "label": "Services",
+          "url": "/child-psychological-counseling#ChildrenServices-section"
+        },
+        {
+          "label": "Fee / cost",
+          "url": "/child-psychological-counseling#Cost-section"
+        }
+      ]
+    },
+    {
+      "label": "Special Ed",
+      "url": "/best-special-education-center-call-9100181181",
+      "links": [
+        {
+          "label": "What",
+          "url": "/special-education#what-section"
+        },
+        {
+          "label": "Why",
+          "url": "/special-education#why-section"
+        },
+        {
+          "label": "Process",
+          "url": "/special-education#Advantages-section"
+        },
+        {
+          "label": "Assessment",
+          "url": "/special-education#assessment-section"
+        },
+        {
+          "label": "Admission",
+          "url": "/special-education#admission-section"
+        },
+        {
+          "label": "Procedure",
+          "url": "/special-education#procedure-section"
+        },
+        {
+          "label": "Fee",
+          "url": "/special-education#Cost-section"
+        }
+      ]
+    },
+    {
+      "label": "Behavioral",
+      "url": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "links": [
+        {
+          "label": "What",
+          "url": "/aba-therapy#what-section"
+        },
+        {
+          "label": "Why",
+          "url": "/aba-therapy#why-section"
+        },
+        {
+          "label": "Intensive Behavioral Intervention",
+          "url": "/aba-therapy#Advantages-section"
+        },
+        {
+          "label": "Importance",
+          "url": "/aba-therapy#ChildrenServices-section"
+        },
+        {
+          "label": "services",
+          "url": "/aba-therapy#adultservices-section"
+        }
+      ]
+    }
+  ],
+  "footerColumns": [
+    [
+      {
+        "title": "About Us",
+        "links": [
+          {
+            "label": "Pinnacle Global Framework",
+            "url": "/pinnacle-global-autism-framework"
+          },
+          {
+            "label": "Vision",
+            "url": "/about#Vision-section"
+          },
+          {
+            "label": "Mission",
+            "url": "/about#Mission-section"
+          },
+          {
+            "label": "Values",
+            "url": "/about#Values-section"
+          },
+          {
+            "label": "Bharath HealthCare P LIMITED",
+            "url": "/about#BHCL-section"
+          },
+          {
+            "label": "Kotii Group of Technological Ventures R&D P LIMITED",
+            "url": "/about#KGV-section"
+          }
+        ],
+        "icon": "heart"
+      },
+      {
+        "title": "Research Studies",
+        "links": [
+          {
+            "label": "Global Research Whitebook",
+            "url": "/global-research-whitebook"
+          },
+          {
+            "label": "AbilityScore® Longitudinal Study",
+            "url": "/abilityscore-global-study"
+          },
+          {
+            "label": "SEVA™ Impact Study",
+            "url": "/seva-impact-study"
+          },
+          {
+            "label": "TherapeuticAI® Effectiveness Study",
+            "url": "/therapeuticai-effectiveness-study"
+          },
+          {
+            "label": "Everyday Therapy™ Home Integration Study",
+            "url": "/everyday-therapy-home-study"
+          },
+          {
+            "label": "Multilingual Therapy Outcomes Study",
+            "url": "/multilingual-therapy-outcomes"
+          },
+          {
+            "label": "School Readiness & Inclusion Study",
+            "url": "/school-readiness-study"
+          },
+          {
+            "label": "SEVA™ Social Equity Index Study",
+            "url": "/seva-index"
+          },
+          {
+            "label": "Therapist Burnout & Empathy Study",
+            "url": "/therapist-burnout-empathy"
+          },
+          {
+            "label": "AbilityScore® Predictive Validity Study",
+            "url": "/abilityscore-predictive-study"
+          },
+          {
+            "label": "TherapySphere™ Sensory Environment Study",
+            "url": "/therapysphere-study"
+          },
+          {
+            "label": "Question Comprehension Improvement Study",
+            "url": "/question-comprehension-study"
+          },
+          {
+            "label": "Parent-Led Generalization Study",
+            "url": "/parent-led-generalization"
+          }
+        ],
+        "icon": "book"
+      },
+      {
+        "title": "Enroll My Kid",
+        "links": [
+          {
+            "label": "Enroll My Kid",
+            "url": "/enroll"
+          }
+        ],
+        "icon": "check"
+      },
+      {
+        "title": "Leadership",
+        "links": [
+          {
+            "label": "Leadership",
+            "url": "/leadership"
+          }
+        ],
+        "icon": "people"
+      },
+      {
+        "title": "Download Resources",
+        "links": [
+          {
+            "label": "Download Resources",
+            "url": "/all-resources"
+          }
+        ],
+        "icon": "download"
+      },
+      {
+        "title": "Pay Online",
+        "links": [
+          {
+            "label": "Pay Online",
+            "url": "/payonline"
+          }
+        ],
+        "icon": "card"
+      },
+      {
+        "title": "Assessments",
+        "links": [
+          {
+            "label": "Assessments",
+            "url": "/assesments"
+          }
+        ],
+        "icon": "plan"
+      },
+      {
+        "title": "Certification Courses",
+        "links": [
+          {
+            "label": "Certification Courses",
+            "url": "/certified-courses"
+          }
+        ],
+        "icon": "award"
+      },
+      {
+        "title": "Careers",
+        "links": [
+          {
+            "label": "Careers",
+            "url": "/careers"
+          }
+        ],
+        "icon": "people"
+      },
+      {
+        "title": "News",
+        "links": [
+          {
+            "label": "News",
+            "url": "/news"
+          }
+        ],
+        "icon": "send"
+      }
+    ],
+    [
+      {
+        "title": "Therapy Services",
+        "links": [
+          {
+            "label": "Autism therapy",
+            "url": "/autism-therapy"
+          },
+          {
+            "label": "Speech Therapy",
+            "url": "/top-speech-therapy-center-india-proven-improvement-rate"
+          },
+          {
+            "label": "Occupational Therapy",
+            "url": "/best-occupational-therapy-center-india-proven-improvement-rate"
+          },
+          {
+            "label": "ABA Therapy",
+            "url": "/best-aba-therapy-center-india-proven-improvement-rate"
+          },
+          {
+            "label": "Psychological Counseling",
+            "url": "/child-psychological-counseling"
+          },
+          {
+            "label": "special education",
+            "url": "/best-special-education-center-call-9100181181"
+          },
+          {
+            "label": "Dance Therapy",
+            "url": "/dance-therapy"
+          },
+          {
+            "label": "Yoga Therapy",
+            "url": "/yoga-therapy"
+          },
+          {
+            "label": "Hydro Therapy",
+            "url": "/hydro-therapy"
+          },
+          {
+            "label": "Physio Therapy",
+            "url": "/physio-therapy"
+          },
+          {
+            "label": "Music therapy",
+            "url": "/music-therapy"
+          },
+          {
+            "label": "Behavioral Therapy",
+            "url": "/best-aba-therapy-center-india-proven-improvement-rate"
+          },
+          {
+            "label": "Group Teaching",
+            "url": "/group-teaching"
+          },
+          {
+            "label": "Parent Training",
+            "url": "/parent-training"
+          },
+          {
+            "label": "Teacher Training",
+            "url": "/teacher-training"
+          },
+          {
+            "label": "School Training",
+            "url": "/school-training"
+          }
+        ],
+        "icon": "people"
+      },
+      {
+        "title": "Pinnacle TV",
+        "links": [
+          {
+            "label": "Live TV",
+            "url": "https://www.youtube.com/pinnaclebloomsnetwork"
+          },
+          {
+            "label": "Assessments",
+            "url": "https://www.youtube.com/watch?v=DVNPmQAvCUY&list=PL0lwT9W0zVph0A5YFRCw8WQEH5jTws3zW"
+          },
+          {
+            "label": "Center Tour",
+            "url": "https://www.youtube.com/watch?v=Z9BveMDW4qc&list=PL0lwT9W0zVphe-a_OUYhYl1NTiyfAW0pD"
+          },
+          {
+            "label": "Our Promise",
+            "url": "https://www.youtube.com/watch?v=gpLkt0MVbPA&list=PL0lwT9W0zVpjuOdR_87e4mDEdC3zOnmlD&t=4s"
+          },
+          {
+            "label": "Why Pinnacle",
+            "url": "https://www.youtube.com/watch?v=aRQphTyPnx4&list=PL0lwT9W0zVphxHFQ2gESGHx7UAFkwWSgh"
+          },
+          {
+            "label": "Parent's Darling",
+            "url": "https://www.youtube.com/watch?v=mRpcTIljONA&list=PL0lwT9W0zVpgS5owpJUO174UGpfmxv9Ho"
+          },
+          {
+            "label": "Group Therapies",
+            "url": "https://www.youtube.com/watch?v=avTnlyHwXzA&list=PL0lwT9W0zVph_uUC_it7z2k_N47MSotvU"
+          },
+          {
+            "label": "Speech Therapy",
+            "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpggtg4EjReDxF7U_hddJ62M"
+          },
+          {
+            "label": "Occupational",
+            "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpjE-DmjB8iLJ-CFy4Y5uDN-"
+          },
+          {
+            "label": "Special Education",
+            "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVph_2gMj-nx8J7Grb59gZCkr"
+          },
+          {
+            "label": "ABA Therapy",
+            "url": "https://www.youtube.com/watch?v=OHWXU5cyrv8&list=PL0lwT9W0zVpgER0w710_PSETVXo_UcNap"
+          },
+          {
+            "label": "Behavioral",
+            "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpiek5-R7o90GMIcVSz0A-uM"
+          },
+          {
+            "label": "Media's Darling",
+            "url": "https://www.youtube.com/watch?time_continue=97&v=o0meHkN_dz8&feature=emb_title"
+          },
+          {
+            "label": "Telugu Ad #1",
+            "url": "https://www.youtube.com/watch?v=_xteYSrmAHY&list=PL0lwT9W0zVpiLhGbr6newoQBl5-Rlcs8G&index=2"
+          },
+          {
+            "label": "Telugu Ad #2",
+            "url": "https://www.youtube.com/watch?v=_xteYSrmAHY&list=PL0lwT9W0zVpiLhGbr6newoQBl5-Rlcs8G&index=2"
+          },
+          {
+            "label": "English Ad",
+            "url": "https://www.youtube.com/watch?v=CWgQmR3_UhY&list=PL0lwT9W0zVpgcVGtxrUeDtD58JtrH00PK"
+          },
+          {
+            "label": "Pinnacle Shorts",
+            "url": "https://www.youtube.com/watch?v=FntpUgM6SDM&list=PL0lwT9W0zVphSworIQqJhYZVv-Cytqbhd"
+          }
+        ],
+        "icon": "video"
+      }
+    ],
+    [
+      {
+        "title": "Franchise Opportunity",
+        "links": [
+          {
+            "label": "What is Pinnacle Blooms Network Franchise",
+            "url": "/franchises#what-section"
+          },
+          {
+            "label": "Why Franchise with us ?",
+            "url": "/franchises#why-section"
+          },
+          {
+            "label": "Advantages of our Franchise",
+            "url": "/franchises#Advantages-section"
+          },
+          {
+            "label": "Eligibility our Franchise network",
+            "url": "/franchises#ChildrenServices-section"
+          },
+          {
+            "label": "Franchise application process",
+            "url": "/franchises#adultservices-section"
+          },
+          {
+            "label": "Our Franchise network cost",
+            "url": "/franchises#assessment-section"
+          },
+          {
+            "label": "Our network franchise",
+            "url": "/franchises#statutory-section"
+          }
+        ],
+        "icon": "home"
+      },
+      {
+        "title": "Resources & Portals",
+        "links": [
+          {
+            "label": "Pinnacle Materials",
+            "url": "https://materials.pinnacleblooms.org/"
+          },
+          {
+            "label": "Pinnacle Intervention Techniques",
+            "url": "https://interventions.pinnacleblooms.org/"
+          },
+          {
+            "label": "Pinnacle Pediatricians",
+            "url": "https://pediatricians.pinnacleblooms.org/"
+          },
+          {
+            "label": "Licences, research & evidence",
+            "url": "/verify/"
+          },
+          {
+            "label": "National Autism Helpline — 9100 181 181",
+            "url": "/national-autism-helpline"
+          }
+        ],
+        "icon": "compass"
+      }
+    ]
+  ],
+  "community": [
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/pinnacleblooms.org/"
+    },
+    {
+      "label": "Twitter",
+      "url": "https://twitter.com/pinnacleblooms"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/autism.pinnacleblooms_org/"
+    },
+    {
+      "label": "YouTube",
+      "url": "https://www.youtube.com/c/PinnacleBloomsNetwork"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/company/pinnacleblooms/"
+    },
+    {
+      "label": "PINTEREST",
+      "url": "https://in.pinterest.com/pinnacleblooms_org"
+    },
+    {
+      "label": "CONTACT US",
+      "url": "/contact"
+    }
+  ],
+  "locations": [
+    {
+      "label": "LOCATIONS - Andhra Pradesh, Telangana, Karnataka, Maharashtra, Delhi",
+      "url": "https://www.google.com/maps/search/Pinnacle+Blooms+Network/17.4987187,78.3863397,13z?source=g.page.m._"
+    },
+    {
+      "label": "Suchitra, Bowenpally, TS, IN",
+      "url": "https://g.page/r/CQf71jcpVLLBEAE"
+    },
+    {
+      "label": "Kukatpally, Hyderabad, TS, IN",
+      "url": "https://g.page/r/CTcegotJis4xEAE"
+    },
+    {
+      "label": "SR Nagar, Hyderabad, TS, IN",
+      "url": "https://g.page/r/CdgzPv7GkChZEAE"
+    },
+    {
+      "label": "Begumpet, Hyderabad, TS, IN",
+      "url": "https://g.page/pinnaclebloomsbegumpet?gm"
+    },
+    {
+      "label": "Himayath Nagar, Hyderabad, TS, IN",
+      "url": "https://g.page/r/CQCRV84JauWUEAE"
+    },
+    {
+      "label": "AS Rao Nagar, Hyderabad, TS, IN",
+      "url": "https://g.page/r/CYkL0-BsPtrwEAE"
+    },
+    {
+      "label": "Jubliee Hills, Hyderabad, TS, IN",
+      "url": "https://g.page/r/CU_cJZYtYlzKEAE"
+    },
+    {
+      "label": "LB Nagar, Hyderabad, TS, IN",
+      "url": "https://g.page/r/Cff1DDzbzJtZEAE"
+    },
+    {
+      "label": "Hydernagar, Hyderabad, TS, IN",
+      "url": "https://g.page/r/CXCIpusqpbbCEAE"
+    },
+    {
+      "label": "Uppal, Habsiguda, Hyderabad, TS, IN",
+      "url": "https://g.page/r/CftjLZYCVsIPEAE"
+    },
+    {
+      "label": "Vijayawada, AP, IN",
+      "url": "/contact#vijayawada"
+    },
+    {
+      "label": "Vishakapatnam, AP, IN",
+      "url": "https://g.page/pbnvizagjagadamba?gm"
+    },
+    {
+      "label": "Dilshuknagar, Hyderabad, TS, IN",
+      "url": "https://g.page/r/CXbwD41tm_4IEAE"
+    },
+    {
+      "label": "Vanasthalipuram, Hyderabad, TS, IN",
+      "url": "/contact#vanasthalipuram"
+    },
+    {
+      "label": "Gachibowli, Hyderabad, TS, IN",
+      "url": "/contact#gachibowli"
+    }
+  ],
+  "legal": [
+    {
+      "label": "Policies",
+      "url": "/privacy-policy"
+    },
+    {
+      "label": "Terms & Conditions",
+      "url": "/terms-of-service"
+    },
+    {
+      "label": "Age Restriction Policy",
+      "url": "/age-restriction-policy"
+    },
+    {
+      "label": "Contact Information",
+      "url": "/contact-information"
+    },
+    {
+      "label": "Disclaimer and Limitation of Liabilities",
+      "url": "/disclaimer-and-limitations-of-liabilities"
+    },
+    {
+      "label": "Endorsement and Testimonials",
+      "url": "/endorsement-and-testimonial"
+    },
+    {
+      "label": "Governing Law and Jurisdiction",
+      "url": "/governing-and-jurisdiction"
+    },
+    {
+      "label": "Third-Party Integration Policy",
+      "url": "/third-party-inegration"
+    },
+    {
+      "label": "Refund Policy",
+      "url": "/refund-policy"
+    },
+    {
+      "label": "Pinnacle Blooms Network Staff Conduct and HR Compliance Charter",
+      "url": "/staff-declaration"
+    },
+    {
+      "label": "Ethics Charter",
+      "url": "/ethics-charter"
+    },
+    {
+      "label": "Licences, research & evidence",
+      "url": "https://www.pinnacleblooms.org/verify/"
+    },
+    {
+      "label": "National Autism Helpline — 9100 181 181",
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline"
+    }
+  ]
+}

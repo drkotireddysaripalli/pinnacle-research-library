@@ -44,3 +44,7 @@ The Pinnacle logo, Sintony fonts and three generated illustrative campaign artwo
 User-supplied archive: `Koti Group - Bharath Healthcare - Pinnacle Amblems and Logos.zip`. Original selected PNGs are preserved byte-for-byte: image7 → `pinnacle-emblem-official.png`, image6 → `bhcl-emblem-official.png`, image5 → `pinnacle-wordmark-official.png`. Astro makes WebP delivery derivatives. The original homepage logo remains in the header. No regulator seals or logos are fabricated.
 
 Current FREE speech-assessment offer is owner-confirmed on27September2026; earlier price-confirmation wording is superseded for this campaign.
+
+## Portal restoration — 27 September 2026
+
+`src/assets/portal-footer-shapes.png` is the existing first-party footer artwork from https://www.pinnacleblooms.org/images/footer-shapes.png, retrieved for the authorised site restoration. Astro generates its WebP delivery derivative. Navigation is recorded in src/data/portal-navigation.json from the existing homepage, with intentional corrections documented in PORTAL-RESTORATION-20260927.md.

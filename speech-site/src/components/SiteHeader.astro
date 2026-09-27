@@ -1,34 +1,52 @@
 ---
 import { Image } from 'astro:assets';
 import logo from '../assets/pinnacle-logo.jpg';
-import { mainNav, serviceNav, phone, url } from '../data/site';
+import { phone, url } from '../data/site';
+import navigation from '../data/portal-navigation.json';
+import Icon from './Icon.astro';
 const { currentPath } = Astro.props;
+const directoryGroups = navigation.footerColumns.flat().filter(g => g.links.length > 1);
+const quickActions = navigation.footerColumns.flat().filter(g => g.links.length === 1).map(g=>g.links[0]);
 ---
 <a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="header-main wrap">
-    <a class="brand" href={url('/')} aria-label="Pinnacle Blooms Network home">
-      <Image src={logo} width={460} alt="Pinnacle Blooms Network" format="webp" loading="eager" />
-    </a>
-    <div class="header-right">
-      <nav class="utility" aria-label="Quick links">
-        <a href={url('/epass')}>Login</a>
-        <span class="phone"><a href={url('/national-autism-helpline')}>National Autism Helpline</a><a href={phone.href} data-cta="header-call">{phone.display}</a></span>
-        <a href="https://wa.me/919100181181" aria-label="WhatsApp Pinnacle" class="whatsapp">WhatsApp</a>
-        <a href={url('/donate')}>♡ Donate</a>
-        <a href={url('/contact')}>Centres</a>
-        <details class="site-search"><summary>Search</summary><form action={url('/search')} method="get"><label for="site-search-query">Search Pinnacle</label><div><input id="site-search-query" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
+<header class="portal-header">
+  <div class="portal-top portal-container">
+    <a class="portal-brand" href={url('/')} aria-label="Pinnacle Blooms Network home"><Image src={logo} width={459} alt="Pinnacle Blooms Network" format="webp" loading="eager" /></a>
+    <div class="portal-header-right">
+      <nav class="portal-utility" aria-label="Quick links">
+        <a class="portal-login" href={url('/epass')} aria-label="Login"><Icon name="shield" /><span>Login</span></a>
+        <div class="portal-national"><a class="portal-national-label" href={url('/national-autism-helpline')} aria-label="National Autism Helpline"><Icon name="telephone" /><span>National</span></a><a class="portal-whatsapp" href="https://wa.me/919100181181" aria-label="WhatsApp Pinnacle"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#27bb47" d="M12 1a11 11 0 0 0-9.5 16.6L1 23l5.5-1.4A11 11 0 1 0 12 1Z"/><path fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" d="M7.5 6.5c-2 4 4 10 8 8l1-2-3-1-1 1c-1.5-.7-2.3-1.5-3-3l1-1-1-2-2-.5Z"/></svg></a><a class="portal-phone" href={phone.href} data-cta="header-call">{phone.display}</a></div>
+        <a class="portal-donate" href={url('/donate')} aria-label="Donate"><Icon name="heart" /><span>Donate</span></a>
+        <a class="portal-location" href={url('/contact')} aria-label="Find a Pinnacle centre"><Icon name="pin" /></a>
+        <details class="portal-search"><summary aria-label="Search Pinnacle"><Icon name="search" /></summary><form action={url('/search')} method="get"><label for="portal-search-input">Search Pinnacle</label><div><input id="portal-search-input" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
+        <details class="portal-directory">
+          <summary><Icon name="menu" /><span>Menu</span></summary>
+          <nav class="portal-directory-panel" aria-label="Complete site navigation">
+            <div class="portal-mobile-main">{[...navigation.mobileExtras,...navigation.main].map(link=><a href={url(link.url)}>{link.label}</a>)}</div>
+            <div class="portal-directory-grid">{directoryGroups.map(group=><section><h2><Icon name={group.icon} />{group.title}</h2><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></section>)}</div>
+            <div class="portal-directory-actions">{quickActions.map(link=><a href={url(link.url)}>{link.label}</a>)}<a href={url('/contact')}>Find a centre</a><a href={url('/sitemap')}>Full sitemap</a><a href={url('/verify/')}>Licences, research &amp; evidence</a></div>
+          </nav>
+        </details>
       </nav>
-      <nav class="desktop-navigation" aria-label="Main navigation">
-        {mainNav.map(([label,path]) => <a href={url(path)}>{label}</a>)}
-      </nav>
+      <nav class="portal-main-nav" aria-label="Main navigation">{navigation.main.map(link=><a href={url(link.url)}>{link.label}</a>)}</nav>
     </div>
-    <details class="mobile-navigation">
-      <summary>Menu <span aria-hidden="true">☰</span></summary>
-      <nav aria-label="Mobile navigation">{mainNav.map(([label,path]) => <a href={url(path)}>{label}</a>)}<a href={url('/epass')}>Login</a><a href={url('/donate')}>Donate</a><a href={url('/search')}>Search</a></nav>
-    </details>
   </div>
-  <nav class="service-navigation" aria-label="Therapy services">
-    <div class="wrap">{serviceNav.map(([label,path]) => <a href={url(path)} aria-current={path===currentPath ? 'page' : undefined}>{label}</a>)}</div>
-  </nav>
+  <nav class="portal-therapy-nav" aria-label="Therapy services"><div class="portal-container portal-therapy-list">
+    {navigation.therapy.map(group=><div class="portal-therapy-group"><a class="portal-therapy-title" href={url(group.url)} aria-current={group.url===currentPath?'page':undefined}>{group.label}</a><details class="portal-therapy-menu"><summary aria-label={`${group.label} menu`}><Icon name="chevron" size={15} /></summary><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>)}
+  </div></nav>
 </header>
+<script>
+  const header=document.querySelector('.portal-header');
+  if(header){
+    const menus=[...header.querySelectorAll<HTMLDetailsElement>('details')];
+    menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false;});}));
+    document.addEventListener('click',event=>{if(!header.contains(event.target as Node))menus.forEach(menu=>menu.open=false);});
+    header.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=menus.find(menu=>menu.open);if(open){open.open=false;open.querySelector('summary')?.focus();}}});
+    header.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>menus.forEach(menu=>menu.open=false)));
+    header.querySelectorAll('.portal-therapy-group').forEach(group=>{
+      const menu=group.querySelector('details');
+      group.addEventListener('pointerover',event=>{if(!(event.target as Element).closest('summary')&&menu&&matchMedia('(hover:hover) and (pointer:fine)').matches)menu.open=true;});
+      group.addEventListener('pointerleave',()=>{if(menu&&!group.contains(document.activeElement))menu.open=false;});
+    });
+  }
+</script>

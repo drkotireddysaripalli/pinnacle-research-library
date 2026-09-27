@@ -15,7 +15,7 @@ export const serviceNav = [
   ['Behavioral', '/best-aba-therapy-center-india-proven-improvement-rate']
 ];
 export const actions = [
-  ['Explore assessments', '/assesments'], ['Enroll My Kid', '/enroll'], ['Pay Online', '/payonline'],
-  ['Join Certified Course', '/contact'], ['Apply Franchise', '/franchise-autism-therapy-center'],
+  ['Take Assessment', '/assesments'], ['Enroll My Kid', '/enroll'], ['Pay Online', '/payonline'],
+  ['Join Certified Course', '/certified-courses'], ['Apply Franchise', '/franchises'],
   ['Download Resources', '/all-resources'], ['More…', '/sitemap']
 ];

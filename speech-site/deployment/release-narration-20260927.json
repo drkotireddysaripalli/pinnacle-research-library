@@ -1,8 +1,8 @@
 {
   "worker": "pinnacle-verify-route",
-  "version": "cfbb08ed-27f3-4bce-a5dc-c1326a1982cd",
-  "versionNumber": 80,
-  "deployment": "2bba0a4e-cb11-4b6b-8f1f-b7a11ca3e865",
+  "version": "9a0a1281-152b-439f-9bf4-ad1d708b6279",
+  "versionNumber": 77,
+  "deployment": "f0d3208f-59f8-48ad-bbcc-978ffefed98c",
   "releasedOn": "2026-09-27",
   "canonical": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
   "sourceRecord": "https://www.pinnacleblooms.org/speech-therapy/service-information",
@@ -10,11 +10,11 @@
     "pinnacle-route-v12.mjs",
     "speech-handler.mjs"
   ],
-  "workerSha256": "2a7229df4c5e6d04f60f5d7d50f7c4c52507daa6ea7eb52eba6a47c3735d9ae2",
-  "assetCount": 665,
+  "workerSha256": "8d46d9ebddaeefca400465945eb083775eda418900c8fb639a662cca4085729a",
+  "assetCount": 664,
   "preservedVerifyAssets": 634,
-  "speechAssets": 31,
-  "rollbackVersion": "9a0a1281-152b-439f-9bf4-ad1d708b6279",
+  "speechAssets": 30,
+  "rollbackVersion": "68e1e60f-20ed-45c6-bf24-3cc2707e17b0",
   "bindings": [
     {
       "name": "ASSETS",
@@ -37,5 +37,5 @@
     "run_worker_first": true,
     "base_path": "/"
   },
-  "revision": "Shared portal header, full navigation and original purple footer"
+  "revision": "Pinnacle narration and contextual evidence source map"
 }

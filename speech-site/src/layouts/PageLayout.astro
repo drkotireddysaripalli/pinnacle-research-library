@@ -4,6 +4,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import { getImage } from 'astro:assets';
 import { origin, url, phone } from '../data/site';
 import '../styles/page.css';
+import '../styles/portal-shell.css';
 const { title, description, path, label, serviceName, shareImage, serviceType, assessmentOffer, citations = [], imageAlt, imageCaption, documentOnly = false, focused = false } = Astro.props;
 const canonical = url(path);
 const share = await getImage({src: shareImage, width:1200, height:630, fit:'cover', format:'webp', quality:85});

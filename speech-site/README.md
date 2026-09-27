@@ -4,7 +4,9 @@
 
 The page uses Pinnacle’s official logos, Sintony typography and vivid purple/pink palette. Everyday communication connects to the seven-stage family pathway, nine optional technology explanations and the precise source records behind PinnacleAI. The owner-confirmed speech assessment offer displays **~~₹25,999~~ FREE**. Ongoing therapy is priced separately. Repeated AI-image captions were removed at the owner's instruction; descriptive alt text and internal provenance remain.
 
-The latest revision speaks consistently as Pinnacle to parents and connects 10 decision topics to 18 relevant public sources. Evidence is placed beside assessment, review, family practice, licensed software, research, centre identities and institutional accountability. JSON/TXT source maps use the same source data as the visible citations.
+The narrative revision speaks consistently as Pinnacle to parents and connects 10 decision topics to 18 relevant public sources. Evidence is placed beside assessment, review, family practice, licensed software, research, centre identities and institutional accountability. JSON/TXT source maps use the same source data as the visible citations.
+
+The current portal revision restores the homepage header/menu and purple footer as shared components, with full navigation and mobile access. See [portal restoration](PORTAL-RESTORATION-20260927.md).
 
 ## Build and review
 
@@ -13,6 +15,7 @@ npm ci
 npm run build
 npm run preview -- --port 4326
 node scripts/validate-sales.mjs
+node scripts/validate-portal.mjs
 node scripts/validate-evidence.mjs
 node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs
 ```
