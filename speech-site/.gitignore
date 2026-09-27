@@ -4,3 +4,6 @@ dist/
 reference/
 preview-*.log
 audits/
+release-union*/
+evidence/
+deployment/production-speech.html

@@ -14,7 +14,7 @@
   const production = location.origin === origin && routes.has(location.pathname);
   const blocked = navigator.globalPrivacyControl === true;
   const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call']);
-  const enquiryPlacements = new Set(['hero-assessment','visit-enquiry','final-enquiry','mobile-assessment']);
+  const enquiryPlacements = new Set(['hero-assessment','early-assessment','visit-enquiry','final-enquiry','mobile-assessment']);
   let enabled = false, loaded = false;
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {

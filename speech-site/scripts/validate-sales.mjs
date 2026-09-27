@@ -14,7 +14,11 @@ check('Existing service canonical retained', html.includes('rel="canonical" href
 check('Nine explanatory cards are in initial HTML', [...html.matchAll(/class="stack-card /g)].length === 9);
 check('All phone links use the international number', [...html.matchAll(/href="(tel:[^"]+)"/g)].every(m => m[1] === 'tel:+919100181181'));
 check('No empty links', !/href="(?:#|)"/.test(html));
-check('Assessment catalogue remains a labelled reference', html.includes('href="https://www.pinnacleblooms.org/speech-aba-autism-assessments"'));
+check('Dated service information linked', html.includes('href="/speech-therapy/service-information"'));
+check('Confirmed assessment offer replaces conflicting price', html.includes('<del>₹25,999</del>') && html.includes('FREE') && !html.includes('Confirm the fee') && !html.includes('₹2,599'));
+check('Service-fit and offer precede explanation', html.indexOf('id="assessment-start"') < html.indexOf('id="everyday-communication"'));
+check('Official logos used', html.includes('Official Pinnacle logo') && html.includes('company emblem'));
+check('Review changes the next decision',html.includes('Keep the goal. Adjust the practice.'));
 check('Existing enrolment destination used', html.includes('href="https://www.pinnacleblooms.org/enroll"'));
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
 check('Unique HTML IDs', new Set(ids).size === ids.length);
@@ -26,7 +30,9 @@ const service = graph.find(e=>e['@type']==='Service');
 check('WebPage points to Service', webpage.mainEntity['@id']===service['@id']);
 check('Legal operator is the service provider', entities.get(service.provider['@id']).name==='Bharath Healthcare Laboratories Private Limited');
 check('Pinnacle remains a separate Brand', entities.get(service.brand['@id'])['@type']==='Brand');
-check('No invented ratings, offers or clinical review', !graph.some(e=>e.aggregateRating||e.review||e.reviewedBy||e.offers));
+check('No invented ratings or clinical review', !graph.some(e=>e.aggregateRating||e.review||e.reviewedBy));
+const assessment=graph.find(e=>e['@id']===canonical+'#assessment');
+check('Free offer is scoped to assessment only', !service.offers && assessment.name==='Speech and language assessment' && assessment.offers.price===0 && assessment.offers.priceCurrency==='INR' && assessment.offers.itemOffered['@id']===assessment['@id'] && html.includes('Ongoing therapy is priced separately'));
 check('Relevant clinical source is cited instead of count ledger', webpage.citation.includes('https://www.pinnacleblooms.org/question-comprehension-study') && !webpage.citation.includes('https://www.pinnacleblooms.org/verify/evidence/claim-ledger.html'));
 check('Seven family pathway stages remain separate from technical walkthrough', [...html.matchAll(/class="care-number"/g)].length===7 && html.includes('not a separate nine-stage treatment programme'));
 check('Actual enquiry destination used for every assessment CTA', [...html.matchAll(/<a[^>]+data-cta="(?:hero-assessment|mobile-assessment|visit-enquiry)"[^>]*>/g)].every(m=>m[0].includes('href="https://www.pinnacleblooms.org/enroll#contact-form-title"')));
@@ -38,7 +44,7 @@ check('Share image built under the owned asset namespace', new URL(og).pathname.
 check('Large social card with descriptive alt', html.includes('name="twitter:card" content="summary_large_image"') && html.includes('property="og:image:alt"'));
 const imageTags = [...html.matchAll(/<img\b[^>]*>/g)].map(m=>m[0]);
 check('Every image has alt text and fixed dimensions', imageTags.every(t=>/alt="[^"]+"/.test(t)&&/width="\d+"/.test(t)&&/height="\d+"/.test(t)));
-check('Campaign illustration is labelled', html.includes('AI-generated campaign illustration; not a patient outcome.'));
+check('Illustrative alt retained without intrusive AI captions', html.includes('Illustrative scene of a mother') && !html.includes('AI-generated') && !html.includes('not an actual patient'));
 const assets = new Set([...html.matchAll(/(?:src|href)="(\/(?:pinnacle-pages-assets|pinnacle-pages-fonts|pinnacle-pages-scripts)\/[^"?#]+)"/g)].map(m=>m[1]));
 const assetChecks=[];
 for(const asset of assets){

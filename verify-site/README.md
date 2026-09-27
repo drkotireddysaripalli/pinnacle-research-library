@@ -2,6 +2,10 @@
 
 Source-led verification centre for Pinnacle Blooms Network, a brand of Bharath Healthcare Laboratories Private Limited.
 
+## Current shared hosting — 27 September2026
+
+The live shared Worker is now **v76**, with `pinnacle-route-v12.mjs` and `speech-handler.mjs`. It serves the selected speech page alongside Verify using a complete union of **634 Verify +28 speech files**. **Do not deploy the older v11 Worker or a Verify-only asset bundle.** See [speech release and rebuild instructions](../speech-site/RELEASE-20260927.md) and the updated deployment manifest. All pre-existing Verify content remains intact.
+
 ## Live page
 
 - Public website: https://www.pinnacleblooms.org/verify/

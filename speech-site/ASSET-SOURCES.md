@@ -2,10 +2,10 @@
 
 ## Sales rebuild — 27 September 2026
 
-- `src/assets/speech-life-campaign.png` is new AI-generated, fictional campaign artwork: an Indian mother and child communicating during play, with an aspirational school-participation vignette. Created with the built-in image-generation tool on 27 September 2026. It is not a patient photograph, testimonial or treatment result. The page includes a visible caption and descriptive alt text.
+- `src/assets/speech-life-campaign.png` is new AI-generated, fictional campaign artwork: an Indian mother and child communicating during play, with an aspirational school-participation vignette. Created with the built-in image-generation tool on 27 September 2026. It is not a patient photograph, testimonial or treatment result. The page retains descriptive alt text. Repeated visible AI-image captions were removed at the owner’s explicit request on 27 September 2026.
 - Original generated file retained at `C:/Users/Siri Palace/.codex/generated_images/01a0cbfd-d6a8-7662-8cf4-95c3a0f1361f/exec-ce453794-6fa2-4514-9179-83b3b06480da.png`.
 - Creative brief: luminous white Indian family campaign; mother listening at eye level; child pointing during play; restrained vivid pink/purple/yellow/green pathway; no text, logos, certificates or claims embedded in the artwork.
-- Astro creates responsive WebP variants and a 1200 × 630 social-share derivative. Those published asset URLs are prepared in metadata; the assets are currently available only in the local build.
+- Astro creates responsive WebP variants and a 1200 × 630 social-share derivative. Those published asset URLs are prepared in metadata; the assets are published under the speech asset namespace.
 - Home/journey diagrams and interface icons are original SVG code. All narrative and nine-step labels remain real HTML, not image text.
 - Live homepage colours inspected on 27 September: action-strip pink `#E4115E`; purple text `#8F2879`; Sintony typography. White contrast ratios in the local audit: 4.62:1 and 7.64:1 respectively.
 - Detailed software-name explanations follow the existing `work/pinnacle-verify-fsc/content/how-pinnacleai-works.json`. The nine cards are an editorial walkthrough, not a new nine-stage clinical protocol. Free 24/7 guidance follows the owner-confirmed facts in `work/helpline-entity-20260924/service-facts.json`; it is distinct from assessment and therapy fees.
@@ -27,7 +27,7 @@ Narrative sources: the user's approved seven-stage pathway; https://www.pinnacle
 
 ## Current review implementation
 
-The Pinnacle logo, Sintony fonts and three labelled generated campaign artworks are used in the current page. The two earlier homepage photos are unused historical local assets and excluded from the saved public source package. No supplied Drive centre photo was selected or published.
+The Pinnacle logo, Sintony fonts and three generated illustrative campaign artworks are used in the current page. The two earlier homepage photos are unused historical local assets and excluded from the saved public source package. No supplied Drive centre photo was selected or published.
 
 ## Visual-story expansion — 27 September 2026
 
@@ -38,3 +38,9 @@ The Pinnacle logo, Sintony fonts and three labelled generated campaign artworks 
 - `public/pinnacle-pages-fonts/sintony-latin-bold.woff2`: actual Sintony 700 Latin from https://fonts.gstatic.com/s/sintony/v17/XoHj2YDqR7-98cVUGYgIr9AJkw.woff2. Self-hosted to match the original site typography without synthetic bold.
 - Sintony OFL licence saved as `public/pinnacle-pages-fonts/OFL-Sintony.txt`, obtained from https://raw.githubusercontent.com/google/fonts/main/ofl/sintony/OFL.txt. It covers the font family used here.
 - The two home/car analogy scenes are original inline SVG in `AnalogyStories.astro`. They explain skills, methods and direction; they do not depict an actual child or compare the child to a machine.
+
+## Official logo archive — 27 September2026
+
+User-supplied archive: `Koti Group - Bharath Healthcare - Pinnacle Amblems and Logos.zip`. Original selected PNGs are preserved byte-for-byte: image7 → `pinnacle-emblem-official.png`, image6 → `bhcl-emblem-official.png`, image5 → `pinnacle-wordmark-official.png`. Astro makes WebP delivery derivatives. The original homepage logo remains in the header. No regulator seals or logos are fabricated.
+
+Current FREE speech-assessment offer is owner-confirmed on27September2026; earlier price-confirmation wording is superseded for this campaign.

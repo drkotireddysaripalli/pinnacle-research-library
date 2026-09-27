@@ -1,43 +1,41 @@
-# Pinnacle speech therapy page — unreleased preview
+# Pinnacle speech therapy page — live release
 
-The speech page rebuild uses Pinnacle's Sintony typography, purple/pink palette and familiar site navigation. Its narrative connects speech therapy to everyday communication, growing independence and participation, with links to the precise public evidence behind the PinnacleAI story.
+**Released 27 September 2026:** [Speech therapy for children](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate). The established canonical URL is retained. See [release details](RELEASE-20260927.md) and [deployment manifest](deployment/release.json).
 
-**Status, 27 September 2026:** implemented and independently reviewed local preview. This directory is source preservation, not a production deployment. Both preview routes deliberately emit `noindex, nofollow`. Existing public speech, Verify, helpline and enrolment routes remain unchanged.
+The page uses Pinnacle’s official logos, Sintony typography and vivid purple/pink palette. Everyday communication connects to the seven-stage family pathway, nine optional technology explanations and the precise source records behind PinnacleAI. The owner-confirmed speech assessment offer displays **~~₹25,999~~ FREE**. Ongoing therapy is priced separately. Repeated AI-image captions were removed at the owner's instruction; descriptive alt text and internal provenance remain.
 
-## Run and check
-
-Requires a current Node.js version compatible with the pinned Astro dependency.
+## Build and review
 
 ```text
 npm ci
 npm run build
 npm run preview -- --port 4326
-```
-
-In another terminal, with the preview running:
-
-```text
 node scripts/validate-sales.mjs
-node --test scripts/test-measurement.mjs
+node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs
 ```
 
-- Service preview: http://127.0.0.1:4326/
-- Compact navigation variant: http://127.0.0.1:4326/speech-campaign.html
-- Main content: `src/components/SpeechPage.astro`
-- Content and sources: `src/data/speech.ts` and `src/data/site.ts`
+Ordinary builds are noindex previews. `/speech-campaign.html` remains a comparison preview even with production mode enabled. Production mode is enabled only with environment variable `PINNACLE_RELEASE=production`.
+
+- Service-specific content: `src/data/speech-content.ts`
+- Shared typed content contract: `src/data/service-content.ts`
+- Main narrative: `src/components/SpeechPage.astro`
 - Shared presentation: `src/components`, `src/layouts`, `src/styles`
-- Optional consented measurement: `public/pinnacle-pages-scripts/speech-measurement.js`
+- Source record: `src/pages/speech-therapy/service-information.astro`
+- Source exports, sitemap and reading guide: `public/pinnacle-pages-data`
+- Optional consented CTA measurement: `public/pinnacle-pages-scripts/speech-measurement.js`
 
-## Current checks
+## Release preservation
 
-Build succeeds for both routes; 33 page checks and eight measurement tests pass. Browser inspection covered desktop and mobile, including 320 px width, disclosures, the centre selector and the existing live enquiry form destination. The visual-story rebuild adds two generated campaign images, home/car illustrations, icon-led stages and stronger typography. Shared styling is consolidated in `src/styles/page.css`.
+Build the production edition, then run `node scripts/prepare-release.mjs <new-output-directory> <verify-source-directory>`. The second argument points to the current sibling `verify-site` or local `pinnacle-verify-fsc` directory. The preparation step copies its complete `dist`, adds only released speech resources and generates the two-module route source. It never replaces the homepage with speech HTML. Return the local preview to an ordinary build afterward.
 
-Final local Lighthouse 13.5.0 reports: performance 100, accessibility 100 and best practices 100 on both mobile and desktop. Mobile LCP 1.7 seconds; desktop 0.4 seconds; both CLS 0 and TBT 0 ms. SEO is 66 because this unreleased preview is deliberately blocked from indexing. These are local lab results, not production field data, indexing or conversion results. See `PERFORMANCE-20260927.json`.
+**The shared Worker now requires the union of Verify and speech assets. Never redeploy only the old v11 Worker or only Verify assets.** Read [deployment instructions and rollback](RELEASE-20260927.md) before updating shared hosting. Keep all three existing bindings and `run_worker_first: true`.
 
-See `VISUAL-STORY-20260927.md` for the latest 16 completed improvements, `IMPLEMENTATION-REVIEW-20260927.md` for the preceding review implementation and `LAUNCH-PLAN.md` for remaining release work. Generated campaign artwork is clearly labelled as illustrative; it is not a patient photograph or outcome. See `ASSET-SOURCES.md` and `IMAGE-PROMPTS-20260927.md`.
+## Verification
 
-## Measurement and release boundaries
+42 preview checks, 19 measurement/routing tests and 15 production checks passed, including all 28 speech resources matching staged bytes. Chrome checks covered 320/390px mobile and desktop; keyboard menu, centre filter, source navigation and fee FAQ were exercised. Existing Verify, FSC, story, homepage, helpline and enrolment text hashes matched the before-release capture; payment remained reachable.
 
-Analytics is disabled on localhost and unapproved paths. On the exact approved production origin/routes, it loads only after explicit consent and measures selected call/enquiry link activations. These events do not establish connected calls, bookings or accepted enquiries. No advertising pixel or new lead endpoint is included.
+Final production mobile Lighthouse 13.5.0: performance **98**, accessibility **100**, best practices **100**, SEO **100**, agentic browsing **100**. LCP 2.16 seconds, CLS 0, TBT 0. These are one lab run, not field performance or evidence of commercial results. See `PRODUCTION-PERFORMANCE-20260927.json`.
 
-Retain the established speech canonical URL. Production routing, robots, sitemap, rollback, live analytics payloads and lead acceptance still require a coordinated release. Do not copy `dist/index.html` over the whole website or enable a catch-all route.
+The two released pages were submitted once to IndexNow (HTTP200). The exact speech Search Console baseline was unavailable; the known Ahrefs project covered Verify and project discovery was plan-restricted. Indexing, ranking, AI citation, connected calls and accepted leads have not been established by this release.
+
+Code, build and release ownership remains in the owner's current task. Reviewers are read-only.

@@ -1,0 +1,28 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const root=process.cwd(),parent=path.dirname(root),out=path.resolve(process.argv[2]||path.join(root,'release-union'));
+const verifyRoot=process.argv[3]?path.resolve(process.argv[3]):await fs.access(path.join(parent,'verify-site/dist')).then(()=>path.join(parent,'verify-site')).catch(()=>path.join(parent,'pinnacle-verify-fsc'));
+await fs.mkdir(out,{recursive:false});
+await fs.cp(path.join(verifyRoot,'dist'),out,{recursive:true});
+const before=await fs.readFile(path.join(out,'index.html'));
+for(const dir of ['pinnacle-pages-assets','pinnacle-pages-fonts','pinnacle-pages-scripts','pinnacle-pages-data'])await fs.cp(path.join(root,'dist',dir),path.join(out,dir),{recursive:true});
+await fs.mkdir(path.join(out,'pinnacle-pages-html'));
+const html=await fs.readFile(path.join(root,'dist/index.html'),'utf8');
+assert(html.includes('index, follow, max-image-preview:large')&&!html.includes('class="preview-note"'));
+assert((await fs.readFile(path.join(root,'dist/speech-campaign.html'),'utf8')).includes('noindex, nofollow'));
+await fs.writeFile(path.join(out,'pinnacle-pages-html/speech.html'),html);
+await fs.copyFile(path.join(root,'dist/speech-therapy/service-information.html'),path.join(out,'pinnacle-pages-html/service-information.html'));
+assert.deepEqual(await fs.readFile(path.join(out,'index.html')),before,'Verify index must be unchanged');
+const inventory={};
+async function walk(dir){for(const item of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,item.name);if(item.isDirectory())await walk(f);else{const key='/'+path.relative(out,f).replaceAll('\\','/');inventory[key]=crypto.createHash('sha256').update(await fs.readFile(f)).digest('hex').slice(0,16);}}}
+for(const dir of ['pinnacle-pages-assets','pinnacle-pages-fonts','pinnacle-pages-scripts','pinnacle-pages-data','pinnacle-pages-html'])await walk(path.join(out,dir));
+const base=await fs.readFile(path.join(verifyRoot,'pinnacle-route-v11.mjs'),'utf8');
+const needle='  const incoming=new URL(request.url),isVerify=';
+assert(base.includes(needle));
+let worker="import {serveSpeech} from './speech-handler.mjs';\nconst SPEECH_INVENTORY="+JSON.stringify(inventory)+";\n"+base.replace(needle,'  const speechResponse=await serveSpeech(request,env,SPEECH_INVENTORY);if(speechResponse)return speechResponse;\n'+needle);
+worker=worker.replace("['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml']","['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml','https://www.pinnacleblooms.org/speech-therapy/sitemap.xml']");
+await fs.writeFile('deployment/pinnacle-route-v12.mjs',worker);
+await fs.writeFile('deployment/speech-inventory.json',JSON.stringify(inventory,null,2)+'\n');
+console.log(JSON.stringify({out,newAssets:Object.keys(inventory).length,verifyIndexPreserved:true,baseWorkerSha256:crypto.createHash('sha256').update(base).digest('hex'),workerSha256:crypto.createHash('sha256').update(worker).digest('hex')}));

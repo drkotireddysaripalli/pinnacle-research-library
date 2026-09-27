@@ -16,6 +16,8 @@ For provenance and machine reuse, see the [open-science changelog](OPEN_SCIENCE_
 
 ## Verify Pinnacle and follow the source trail
 
+**Speech therapy and everyday communication:** [Pinnacle’s speech service page](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate) connects family goals, the seven-stage pathway and documented PinnacleAI support to relevant licence and research sources. [Dated service information](https://www.pinnacleblooms.org/speech-therapy/service-information) describes the current FREE assessment offer; [release source and verification](speech-site/RELEASE-20260927.md) are preserved here.
+
 **Parent guidance:** [Pinnacle’s National Autism Helpline — 9100 181 181](https://www.pinnacleblooms.org/national-autism-helpline) provides free autism and child-development guidance for anyone across India, 24/7, in English, Telugu and Hindi. Assessment and therapy fees are separate. [Dated service facts](https://www.pinnacleblooms.org/national-autism-helpline/facts.json) identify the operator, confirmed telephone hours and languages. [Page source and current release notes](helpline-site/FREE-GUIDANCE-RELEASE-20260924.md).
 
 **PinnacleAI story and export milestone:** [read the complete source-linked narrative](https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html) and the [regulatory source guide with certificate and citation downloads](PinnacleAI_Regulatory_Journey.md). The 23 September 2026 Free Sale Certificate adds Indian export documentation; international registrations remain country-specific.

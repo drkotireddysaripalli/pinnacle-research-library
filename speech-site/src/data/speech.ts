@@ -21,8 +21,8 @@ export const proofCards = [
 ];
 
 export const careStages = [
-  ['measure','Understand abilities','Bring family observations and professional assessment into a clear starting picture.'],
-  ['compass','Agree the direction','Consider readiness and shape a child-specific plan around meaningful life goals.'],
+  ['measure','Understand abilities','AbilityScore® measurement, professional assessment and family observations shape the starting picture.'],
+  ['compass','Agree the direction','Readiness forecasts and professional judgement help shape a child-specific plan around meaningful life goals.'],
   ['people','Connect the right support','Select appropriate therapies and people for this child’s priorities.'],
   ['home','Practise in everyday life','Use agreed activities in manageable family routines.'],
   ['track','Track and adjust','Review what is changing and correct the plan where needed.'],

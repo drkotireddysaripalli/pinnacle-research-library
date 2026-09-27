@@ -1,16 +1,17 @@
 {
   "worker": "pinnacle-verify-route",
   "account_id": "862998def1cd610fdb86b8e5c1d6ed4d",
-  "version": "6c8d0a13-eab5-4107-8260-9bf6c62becf3",
-  "deployment": "b5bce8ec-d5c7-41b7-8e54-5fe35de2c707",
-  "createdAt": "2026-09-24",
+  "version": "68e1e60f-20ed-45c6-bf24-3cc2707e17b0",
+  "deployment": "c085e14c-820f-4819-8e69-ad670d4e9d8e",
+  "createdAt": "2026-09-27",
   "compatibility_date": "2026-09-18",
   "usage_model": "standard",
   "assets": {
     "config": {
       "html_handling": "none",
       "not_found_handling": "none",
-      "run_worker_first": true
+      "run_worker_first": true,
+      "base_path": "/"
     }
   },
   "bindings": [
@@ -29,7 +30,7 @@
       "type": "secret_text"
     }
   ],
-  "sourceSha256": "0ba020a76679e1de99a8bd5aeb7ef3e2deb37be3e2a63854955598f9e2d9627a",
+  "sourceSha256": "4ddc88b47f833d5656154a1a4d33cb1e5b8e4f018e992991896db430baded2f4",
   "notes": [
     "Always run the routing Worker before static assets. Default asset-first routing incorrectly serves the Verify index at the main homepage and Verify-local robots at the domain robots URL.",
     "Keep assets and all three bindings on subsequent deployments. Secret values are intentionally absent from this manifest.",
@@ -48,6 +49,12 @@
     "Version71 publishes release 5ea8be45e2961115: visible page update labels derive from the 24 September release date; individual evidence source dates preserved. 36 records and 84 pages retained; Worker-first assets and all three bindings checked before activation.",
     "Version72 publishes release531e720409221199: National Autism Helpline linked once in all 84 Verify footers and both reading indexes. Byte comparison confirms all other page content retained. 36 records, all four Dataset licences, FSC/story, Worker-first configuration and all three bindings preserved. Production story/exports/route and helpline checks passed.",
     "Version73 publishes release b26909c1f04ea12e: complete PinnacleAI narrative, seven-stage pathway, licensed functions, research, FSC preview, nine FAQs, source map CSV, CSL-JSON citations and responsive family artwork. Adds contextual story links on the homepage, AbilityScore, two relevant Ask pages, three regulatory records, organisation profile and research library. 36 records and 84 pages retained. Worker-first assets and all three bindings verified before activation.",
-    "Version74 release f2e5f5847c3d401b extends the recognized application-owned homepage evidence panel once instead of duplicating it. Same 634 assets as version73; 19 route tests passed including native panel idempotence and safety guards. Worker-first assets and all three bindings verified before activation."
-  ]
+    "Version74 release f2e5f5847c3d401b extends the recognized application-owned homepage evidence panel once instead of duplicating it. Same 634 assets as version73; 19 route tests passed including native panel idempotence and safety guards. Worker-first assets and all three bindings verified before activation.",
+    "Version76 adds the selected speech service page, dated service information, FREE assessment offer confirmed by Pinnacle (listed value INR25999), sitemap and 28 speech assets while retaining all634 Verify assets and all3bindings. Current shared Worker has two modules: pinnacle-route-v12.mjs and speech-handler.mjs. Do not deploy the old v11 module or a Verify-only asset bundle. Rebuild the union and verify fresh live metadata before any deployment. Six added route IDs and two scoped edge-rule IDs are recorded under speech deployment/."
+  ],
+  "main_module": "pinnacle-route-v12.mjs",
+  "sourceDirectory": ".",
+  "unionAssets": "Verify dist plus released speech assets; see speech RELEASE-20260927.md",
+  "assetCount": 662,
+  "assetUnionBuilder": "../speech-site/scripts/prepare-release.mjs"
 }

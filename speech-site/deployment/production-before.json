@@ -1,0 +1,90 @@
+{
+  "checkedAt": "2026-09-27T06:34:04.809Z",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/",
+      "canonical": "https://www.pinnacleblooms.org/",
+      "title": "#1 Autism Therapy Centres Network -for your kids to be self",
+      "bodySha256": "62768250a527e27428dfd786fb75329b2bd230c068983efa805e40882d54401c",
+      "bytes": 303045
+    },
+    {
+      "path": "/verify/",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/",
+      "canonical": "https://www.pinnacleblooms.org/verify/",
+      "title": "PinnacleAI® Verify | Pinnacle Blooms Network",
+      "bodySha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107",
+      "bytes": 1022245
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/records/fsc.html",
+      "canonical": "https://www.pinnacleblooms.org/verify/evidence/records/fsc.html",
+      "title": "FSC · Free Sale Certificate for export | Verify Pinnacle",
+      "bodySha256": "51d3e37a4fd98bdb1c2d4269f8ae541fcffa960533221515e825c94942dfb399",
+      "bytes": 48012
+    },
+    {
+      "path": "/verify/evidence/pinnacleai-regulatory-journey.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
+      "canonical": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
+      "title": "PinnacleAI®: The Complete Story | Purpose, Research &amp; Export Readiness",
+      "bodySha256": "f32bdde0da98dac6fc5cd4d0e8fdc3d95b5ecc881983ae6f891d94033a9e171c",
+      "bytes": 192636
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "canonical": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "title": "National Autism Helpline: 9100181181 | Free 24/7 | Pinnacle",
+      "bodySha256": "854c0374a432bfa4be49cc3632d71cd64ad3fd6d8e694331aa142dd462984d0c",
+      "bytes": 86629
+    },
+    {
+      "path": "/enroll",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "title": "Enroll Today in Pinnacle Blooms: India&#39;s Premier Nationwide",
+      "bodySha256": "59460cd8236da5f929754489be0182721878104082612006946da14a7ca74a56",
+      "bytes": 399908,
+      "form": {
+        "hasContactHeading": true,
+        "formCount": 2,
+        "hasSubmit": true,
+        "hasPhoneInput": true
+      }
+    },
+    {
+      "path": "/payonline",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/epass?landing=PayOnline",
+      "canonical": "https://www.pinnacleblooms.org/epass?landing=payonline",
+      "title": "#1 Autism Therapy Centres Network -for your kids to be self",
+      "bodySha256": "cfac584c295e2de5af76621c9c4d09c0ab41b89179f15a8cb915d12ff3f19c53",
+      "bytes": 364943
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/robots.txt",
+      "bodySha256": "ff2fe42d6d4244298ef20523799cd6d661d1285c58187423fed3bb2e1a5ee596",
+      "bytes": 360
+    },
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "canonical": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "title": "Best Speech Therapy Centers in Delhi, Hyderabad, Bengaluru,",
+      "bodySha256": "c309b1b002e8c8d2f3f7dc419b29523bb9e7bb3f500e6079d33dc9405b86d653",
+      "bytes": 537215
+    }
+  ]
+}

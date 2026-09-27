@@ -1,0 +1,296 @@
+{
+  "checkedAt": "2026-09-27T06:55:09.426Z",
+  "checks": [
+    {
+      "name": "Canonical speech response",
+      "ok": true
+    },
+    {
+      "name": "Indexable with retained canonical",
+      "ok": true
+    },
+    {
+      "name": "Approved free offer and removed captions",
+      "ok": true
+    },
+    {
+      "name": "Assessment-only zero-price offer",
+      "ok": true
+    },
+    {
+      "name": "All 28 public release files respond",
+      "ok": true,
+      "details": [
+        {
+          "path": "/pinnacle-pages-assets/bhcl-emblem-official.BOaEeIEj_3R5W5.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/pinnacle-emblem-official.EFFb0QmR_1CYFQi.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/pinnacle-emblem-official.EFFb0QmR_ZQLHQS.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/pinnacle-wordmark-official.BbgTBUG8_1lOI1W.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-content.DcsUXCK-.css",
+          "status": 200,
+          "type": "text/css; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_1u7mo7.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_CHIA1.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_Z36ofS.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_ZQB1uM.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-first-visit.CftTJHiz_2cv0h5.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-first-visit.CftTJHiz_Z27q2vA.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-first-visit.CftTJHiz_Zykclt.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-life-campaign.C6zyiBPG_12g59d.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-life-campaign.C6zyiBPG_177tjb.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-life-campaign.C6zyiBPG_1E6Oci.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-life-campaign.C6zyiBPG_Z1qL9i0.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-life-campaign.C6zyiBPG_Z2hjxWJ.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-fonts/OFL-Sintony.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-fonts/sintony-latin-bold.woff2",
+          "status": 200,
+          "type": "font/woff2",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-fonts/sintony-latin.woff2",
+          "status": 200,
+          "type": "font/woff2",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-scripts/speech-measurement.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-data/speech-llms.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-data/speech-service-information.json",
+          "status": 200,
+          "type": "application/json; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-data/speech-service-information.txt",
+          "status": 200,
+          "type": "text/plain; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-data/speech-sitemap.xml",
+          "status": 200,
+          "type": "application/xml; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/speech-therapy/service-information",
+          "status": 200,
+          "type": "text/html; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "type": "text/html; charset=utf-8",
+          "sameBytes": true
+        }
+      ]
+    },
+    {
+      "name": "All served release bytes match staged files",
+      "ok": true
+    },
+    {
+      "name": "Alias /speech-therapy",
+      "ok": true,
+      "details": {
+        "status": 301,
+        "location": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate?utm_source=release-check"
+      }
+    },
+    {
+      "name": "Alias /speech-therapy/",
+      "ok": true,
+      "details": {
+        "status": 301,
+        "location": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate?utm_source=release-check"
+      }
+    },
+    {
+      "name": "Alias /top-speech-therapy-center-india-proven-improvement-rate/",
+      "ok": true,
+      "details": {
+        "status": 301,
+        "location": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate?utm_source=release-check"
+      }
+    },
+    {
+      "name": "Alias /speech-therapy/service-information.html",
+      "ok": true,
+      "details": {
+        "status": 301,
+        "location": "https://www.pinnacleblooms.org/speech-therapy/service-information?utm_source=release-check"
+      }
+    },
+    {
+      "name": "HEAD correct",
+      "ok": true
+    },
+    {
+      "name": "/speech-therapy/sitemap.xml public",
+      "ok": true
+    },
+    {
+      "name": "/speech-therapy/llms.txt public",
+      "ok": true
+    },
+    {
+      "name": "Speech sitemap in robots",
+      "ok": true
+    },
+    {
+      "name": "Shared pages, enrolment and payment respond",
+      "ok": true,
+      "details": [
+        {
+          "path": "/",
+          "status": 200,
+          "canonical": "https://www.pinnacleblooms.org/",
+          "sameTextHash": true
+        },
+        {
+          "path": "/verify/",
+          "status": 200,
+          "canonical": "https://www.pinnacleblooms.org/verify/",
+          "sameTextHash": true
+        },
+        {
+          "path": "/verify/evidence/records/fsc.html",
+          "status": 200,
+          "canonical": "https://www.pinnacleblooms.org/verify/evidence/records/fsc.html",
+          "sameTextHash": true
+        },
+        {
+          "path": "/verify/evidence/pinnacleai-regulatory-journey.html",
+          "status": 200,
+          "canonical": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
+          "sameTextHash": true
+        },
+        {
+          "path": "/national-autism-helpline",
+          "status": 200,
+          "canonical": "https://www.pinnacleblooms.org/national-autism-helpline",
+          "sameTextHash": true
+        },
+        {
+          "path": "/enroll",
+          "status": 200,
+          "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "sameTextHash": true,
+          "form": true
+        },
+        {
+          "path": "/payonline",
+          "status": 200,
+          "canonical": "https://www.pinnacleblooms.org/epass?landing=payonline",
+          "sameTextHash": false
+        }
+      ]
+    }
+  ]
+}

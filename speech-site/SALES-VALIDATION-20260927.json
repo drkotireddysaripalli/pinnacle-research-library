@@ -1,8 +1,8 @@
 {
-  "checkedAt": "2026-09-27T05:11:24.095Z",
+  "checkedAt": "2026-09-27T06:49:02.605Z",
   "build": "local sales preview",
   "productionDeployed": false,
-  "checksPassed": 33,
+  "checksPassed": 42,
   "checks": [
     "One persistent H1",
     "Preview remains noindex",
@@ -10,14 +10,19 @@
     "Nine explanatory cards are in initial HTML",
     "All phone links use the international number",
     "No empty links",
-    "Assessment catalogue remains a labelled reference",
+    "Dated service information linked",
+    "Confirmed assessment offer replaces conflicting price",
+    "Service-fit and offer precede explanation",
+    "Official logos used",
+    "Review changes the next decision",
     "Existing enrolment destination used",
     "Unique HTML IDs",
     "Every fragment link has a target",
     "WebPage points to Service",
     "Legal operator is the service provider",
     "Pinnacle remains a separate Brand",
-    "No invented ratings, offers or clinical review",
+    "No invented ratings or clinical review",
+    "Free offer is scoped to assessment only",
     "Relevant clinical source is cited instead of count ledger",
     "Seven family pathway stages remain separate from technical walkthrough",
     "Actual enquiry destination used for every assessment CTA",
@@ -27,19 +32,23 @@
     "Share image built under the owned asset namespace",
     "Large social card with descriptive alt",
     "Every image has alt text and fixed dimensions",
-    "Campaign illustration is labelled",
+    "Illustrative alt retained without intrusive AI captions",
     "Asset responds 200: sintony-latin.woff2",
     "Asset responds 200: sintony-latin-bold.woff2",
-    "Asset responds 200: SpeechPage.BbudIkHF.css",
+    "Asset responds 200: speech-content.DcsUXCK-.css",
     "Asset responds 200: pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
     "Asset responds 200: speech-life-campaign.C6zyiBPG_1E6Oci.webp",
+    "Asset responds 200: pinnacle-emblem-official.EFFb0QmR_1CYFQi.webp",
     "Asset responds 200: speech-everyday-story.wPFU5fBK_1u7mo7.webp",
     "Asset responds 200: speech-first-visit.CftTJHiz_2cv0h5.webp",
+    "Asset responds 200: pinnacle-emblem-official.EFFb0QmR_ZQLHQS.webp",
+    "Asset responds 200: pinnacle-wordmark-official.BbgTBUG8_1lOI1W.webp",
+    "Asset responds 200: bhcl-emblem-official.BOaEeIEj_3R5W5.webp",
     "Asset responds 200: speech-measurement.js",
     "Primary palette has at least 4.5:1 contrast with white"
   ],
-  "htmlBytes": 58691,
-  "htmlGzipBytes": 13414,
+  "htmlBytes": 67298,
+  "htmlGzipBytes": 14890,
   "assets": [
     {
       "asset": "/pinnacle-pages-fonts/sintony-latin.woff2",
@@ -50,8 +59,8 @@
       "bytes": 8348
     },
     {
-      "asset": "/pinnacle-pages-assets/SpeechPage.BbudIkHF.css",
-      "bytes": 51122
+      "asset": "/pinnacle-pages-assets/speech-content.DcsUXCK-.css",
+      "bytes": 58624
     },
     {
       "asset": "/pinnacle-pages-assets/pinnacle-logo.B0XrRmWp_Z1X80KV.webp",
@@ -62,6 +71,10 @@
       "bytes": 80408
     },
     {
+      "asset": "/pinnacle-pages-assets/pinnacle-emblem-official.EFFb0QmR_1CYFQi.webp",
+      "bytes": 2480
+    },
+    {
       "asset": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_1u7mo7.webp",
       "bytes": 92842
     },
@@ -70,8 +83,20 @@
       "bytes": 67064
     },
     {
+      "asset": "/pinnacle-pages-assets/pinnacle-emblem-official.EFFb0QmR_ZQLHQS.webp",
+      "bytes": 3872
+    },
+    {
+      "asset": "/pinnacle-pages-assets/pinnacle-wordmark-official.BbgTBUG8_1lOI1W.webp",
+      "bytes": 34504
+    },
+    {
+      "asset": "/pinnacle-pages-assets/bhcl-emblem-official.BOaEeIEj_3R5W5.webp",
+      "bytes": 9452
+    },
+    {
       "asset": "/pinnacle-pages-scripts/speech-measurement.js",
-      "bytes": 5435
+      "bytes": 5454
     }
   ],
   "contrastWithWhite": {

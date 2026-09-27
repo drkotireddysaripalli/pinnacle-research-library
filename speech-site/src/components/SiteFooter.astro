@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import wordmark from '../assets/pinnacle-wordmark-official.png';
+import operator from '../assets/bhcl-emblem-official.png';
 import { serviceNav, url, phone } from '../data/site';
 const groups = [
   {title:'Discover Pinnacle', links:[['Our services','/services'],['Global framework','/pinnacle-global-autism-framework'],['Research studies','/research-studies'],['Global research whitebook','/global-research-whitebook'],['Verify our evidence','/verify/'],['News and updates','/news']]},
@@ -8,9 +11,10 @@ const groups = [
 ---
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div class="footer-purpose"><p class="footer-brand">Pinnacle<span>Blooms Network</span></p><p>Brighter children.<br />Brighter tomorrows.</p><p>A child’s abilities, everyday participation and growing independence give our work its direction.</p><a class="footer-phone" href={phone.href} data-cta="footer-call">{phone.display}</a><a href={url('/national-autism-helpline')}>National Autism Helpline →</a><p class="footer-small">Operated by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited.</p></div>
+    <div class="footer-purpose"><a class="official-footer-mark" href={url('/')} aria-label="Pinnacle Blooms Network home"><Image src={wordmark} width={600} height={600} format="webp" loading="lazy" alt="Official Pinnacle logo with national contact number 9100 181 181" /></a><p>Brighter children.<br />Brighter tomorrows.</p><p>A child’s abilities, everyday participation and growing independence give our work its direction.</p><a class="footer-phone" href={phone.href} data-cta="footer-call">{phone.display}</a><a href={url('/national-autism-helpline')}>National Autism Helpline →</a><p class="footer-small">Operated by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited.</p></div>
     {groups.map(group => <nav aria-label={group.title}><h2>{group.title}</h2><ul>{group.links.map(([label,path]) => <li><a href={url(path)}>{label}</a></li>)}</ul></nav>)}
   </div>
+  <div class="wrap operator-identity"><Image src={operator} width={100} height={100} format="webp" loading="lazy" alt="Bharath Healthcare Laboratories Private Limited company emblem" /><p><span>The organisation behind Pinnacle Blooms Network</span><strong>Bharath Healthcare Laboratories Private Limited</strong><a href={url('/verify/#organization')}>Explore operator identity and evidence ↗</a></p></div>
   <div class="wrap footer-proof"><strong>Open. Honest. Transparent. Self-critical.</strong><span>Explore the documents, research and scope behind our claims.</span><a href={url('/verify/')}>Explore Verify →</a></div>
   <details class="wrap measurement-settings" data-speech-measurement hidden><summary>Optional analytics preferences</summary><p>With your permission, Google Analytics measures page visits and call or enquiry-link clicks. These are not completed calls or bookings. We exclude form details, query parameters and advertising identifiers from these events. Advertising personalisation is off.</p><div><button type="button" data-measurement-choice="accepted">Allow analytics</button><button type="button" data-measurement-choice="declined">Keep analytics off</button></div><p data-measurement-status role="status">Optional analytics is off until you choose.</p></details>
   <div class="wrap footer-bottom"><span>© {new Date().getFullYear()} Pinnacle Blooms Network</span><nav aria-label="Legal"><a href={url('/privacy-policy')}>Privacy</a><a href={url('/terms-of-service')}>Terms</a><a href={url('/disclaimer-and-limitations-of-liabilities')}>Disclaimer</a><a href={url('/sitemap')}>Sitemap</a></nav><p>Information on this page supports a conversation with your care team. Goals, support and progress are individual to each child.</p></div>
