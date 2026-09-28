@@ -1,4 +1,6 @@
-# Pinnacle speech therapy page — live release
+# Pinnacle shared pages — speech and enrolment
+
+**Latest v87:** [New enrolment design preview](https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment) uses the shared portal shell, a short accessible form, 62 grouped location preferences and a prepared Cloudflare POST boundary. The preview cannot submit; existing live enrolment is preserved pending the owner-supplied API. See [release details](RELEASE-ENROLMENT-20260928.md) and [proposed API contract](ENROLMENT-API-CONTRACT.md). All 587 released files match production; 34 tests and five HTML document validations pass.
 
 **Updated 28 September 2026:** [Speech therapy for children](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate). The established canonical URL is retained. See [current directory and readability release](RELEASE-DIRECTORY-20260928.md) and [deployment manifest](deployment/release.json).
 
@@ -21,7 +23,7 @@ npm run preview -- --port 4326
 node scripts/validate-sales.mjs
 node scripts/validate-portal.mjs
 node scripts/validate-evidence.mjs
-node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs scripts/test-release-20260928.mjs
+node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs scripts/test-release-20260928.mjs scripts/test-enrolment.mjs
 ```
 
 Ordinary builds are noindex previews. `/speech-campaign.html` remains a comparison preview even with production mode enabled. Production mode is enabled only with environment variable `PINNACLE_RELEASE=production`.
@@ -40,7 +42,7 @@ Ordinary builds are noindex previews. `/speech-campaign.html` remains a comparis
 
 ## Release preservation
 
-Build the production edition, then run `node scripts/prepare-release.mjs <new-output-directory> <verify-source-directory>`. The second argument points to the current sibling `verify-site` or local `pinnacle-verify-fsc` directory. The preparation step copies its complete `dist`, adds only released speech resources and generates the route source. Deploy all four modules: `pinnacle-route-v12.mjs`, `speech-handler.mjs`, `speech-enquiry-handler.mjs` and `centre-facilities.mjs`. It never replaces the homepage with speech HTML. Return the local preview to an ordinary build afterward.
+Build the production edition, then run `node scripts/prepare-release.mjs <new-output-directory> <verify-source-directory>`. The second argument points to the current sibling `verify-site` or local `pinnacle-verify-fsc` directory. The preparation step copies its complete `dist`, adds only released template resources and the explicitly noindex enrolment preview and generates the route source. Deploy all four modules: `pinnacle-route-v12.mjs`, `speech-handler.mjs`, `speech-enquiry-handler.mjs` and `centre-facilities.mjs`. It never replaces the homepage with speech HTML. Return the local preview to an ordinary build afterward.
 
 The new enrolment route is guarded to rewrite only the exact GET request with `entry=speech-assessment`. The known origin form and v42 bundle are required; an unknown origin is returned unchanged. Untagged enrolment, private requests and other methods remain with the origin. Keep the edited public bundle, its provenance receipt and the entry handler together. The existing server contract is unchanged. A future origin bundle/form update must be reviewed before updating the guard. Route and analytics-injection rollback details are in the current release report.
 
@@ -48,7 +50,7 @@ The new enrolment route is guarded to rewrite only the exact GET request with `e
 
 ## Verification
 
-**Current directory release:** 582 live speech files matched staged hashes; 62 locations, 59 exact enquiry matches, 62 vCards and all 36 evidence records validated; four public HTML pages passed Nu validation with no errors or warnings; 23 routing/privacy/entry tests passed. Live mobile checks found no overflow or broken images. Local mobile Lighthouse: **99 performance, 100 accessibility, 100 best practices, 100 SEO**, LCP 2.0 seconds, CLS 0, TBT 40 ms. See `reviews/LIGHTHOUSE-DIRECTORY-SUMMARY-20260928.json`. An earlier release submitted four changed/new URLs to IndexNow with HTTP 200; this directory release made no repeat submission. This establishes submission only. Real staff/CRM receipt and appointment follow-through remain an operational validation condition.
+**Previous directory release (v85):** 582 live speech files matched staged hashes; 62 locations, 59 exact enquiry matches, 62 vCards and all 36 evidence records validated; four public HTML pages passed Nu validation with no errors or warnings; 23 routing/privacy/entry tests passed. Live mobile checks found no overflow or broken images. Local mobile Lighthouse: **99 performance, 100 accessibility, 100 best practices, 100 SEO**, LCP 2.0 seconds, CLS 0, TBT 40 ms. See `reviews/LIGHTHOUSE-DIRECTORY-SUMMARY-20260928.json`. An earlier release submitted four changed/new URLs to IndexNow with HTTP 200; this directory release made no repeat submission. This establishes submission only. Real staff/CRM receipt and appointment follow-through remain an operational validation condition.
 
 ### Earlier release checks
 

@@ -15,6 +15,9 @@ assert((await fs.readFile(path.join(root,'dist/speech-campaign.html'),'utf8')).i
 await fs.writeFile(path.join(out,'pinnacle-pages-html/speech.html'),html);
 await fs.copyFile(path.join(root,'dist/speech-therapy/service-information.html'),path.join(out,'pinnacle-pages-html/service-information.html'));
 for(const guide of ['first-visit-guide','teacher-observation-guide'])await fs.copyFile(path.join(root,'dist/speech-therapy/'+guide+'.html'),path.join(out,'pinnacle-pages-html/'+guide+'.html'));
+const enrolmentPreview=await fs.readFile(path.join(root,'dist/enrolment-preview.html'),'utf8');
+assert(enrolmentPreview.includes('noindex, nofollow')&&enrolmentPreview.includes('data-preview="true"'));
+await fs.writeFile(path.join(out,'pinnacle-pages-html/enrolment-preview.html'),enrolmentPreview);
 assert.deepEqual(await fs.readFile(path.join(out,'index.html')),before,'Verify index must be unchanged');
 const inventory={};
 async function walk(dir){for(const item of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,item.name);if(item.isDirectory())await walk(f);else{const key='/'+path.relative(out,f).replaceAll('\\','/');inventory[key]=crypto.createHash('sha256').update(await fs.readFile(f)).digest('hex').slice(0,16);}}}

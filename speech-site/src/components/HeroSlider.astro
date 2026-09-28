@@ -1,5 +1,4 @@
 ---
-import { speechOffer } from '../data/speech-offer';
 import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
 import { phone, url } from '../data/site';
@@ -17,13 +16,13 @@ const slides = [{image:content.image.source,alt:content.image.alt,caption:conten
       <h1 id={content.id+'-title'}><span class="service-title">{content.label} for children</span> {content.hero.heading}<br /><em>{content.hero.emphasis}</em></h1>
       <p class="hero-intro"><strong>{content.hero.lead}</strong> {content.hero.copy}</p>
       <ol class="hero-mechanism" aria-label="Everyday goals">{content.hero.moments.map(moment=><li><Icon name={moment.icon} size={22} />{moment.label}</li>)}</ol>
-      {content.assessmentOffer && <div class="hero-assessment-offer"><span>Speech &amp; language assessment</span><AssessmentOffer compact /></div>}
-      <div class="hero-actions"><a class="button primary" href={phone.href} data-cta="hero-call"><Icon name="phone" />Call {phone.display}</a><a class="button outline" href={speechOffer.url} data-cta="hero-assessment">{content.assessmentOffer ? 'Arrange your FREE assessment' : 'Request an assessment'} <Icon name="arrow" /></a></div>
+      {content.assessmentOffer && <div class="hero-assessment-offer"><span>{content.assessmentOffer.name}</span><AssessmentOffer compact /></div>}
+      <div class="hero-actions"><a class="button primary" href={phone.href} data-cta="hero-call"><Icon name="phone" />Call {phone.display}</a><a class="button outline" href={content.enquiry.url} data-cta="hero-assessment">{content.enquiry.label} <Icon name="arrow" /></a></div>
       <p class="guidance-note">Our team confirms your assessment appointment. Ongoing therapy is priced separately.</p>
       <div class="hero-evidence"><Icon name="shield" size={18} /><span>PinnacleAI software: <a href={url('/verify/evidence/records/md5.html')}>MD-5 licence</a> · <a href={url('/verify/evidence/bis.pdf#page=2')}>BIS scope</a></span></div>
       <a class="hero-discover" href="#first-visit">See what to expect at your first visit <span aria-hidden="true">↓</span></a>
     </div>
-    <div class="hero-visual" data-carousel role="region" aria-roledescription="carousel" aria-label="Communication in everyday life">
+    <div class="hero-visual" data-carousel role="region" aria-roledescription="carousel" aria-label={content.label+' in everyday life'}>
       {slides.map((slide, index) => <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label={(index+1)+' of '+slides.length} hidden={index!==0}>
         <Image src={slide.image} widths={[480,720,960,1200]} sizes="(min-width: 1360px) 680px, (min-width: 761px) 50vw, calc(100vw - 36px)" width={1200} height={1000} fit="cover" format="webp" quality={80} alt={slide.alt} loading={index===0 ? 'eager' : 'lazy'} fetchpriority={index===0 ? 'high' : 'auto'} />
       </figure>)}

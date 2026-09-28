@@ -5,12 +5,13 @@ import centres from '../data/centre-directory.json';
 import Icon from './Icon.astro';
 import {phone,url,speechPath} from '../data/site';
 import {speechOffer} from '../data/speech-offer';
+const {pagePath=speechPath,enquiryTarget=speechOffer.url}=Astro.props;
 const images=import.meta.glob<{default:ImageMetadata}>('../assets/centre-directory/*.jpg',{eager:true});
 const get=(file:string)=>images['../assets/centre-directory/'+file]?.default;
 const largeImages=Object.fromEntries(await Promise.all(centres.flatMap(c=>c.images).map(async p=>[p.file,(await getImage({src:get(p.file),width:1000,format:'webp',quality:82})).src])));
 const regions=[...new Set(centres.map(c=>c.region))].sort();
-const canonical=url(speechPath);
-function enquiryUrl(id:string){const target=new URL(speechOffer.url);target.searchParams.set('centre',id);return target.href;}
+const canonical=url(pagePath);
+function enquiryUrl(id:string){const target=new URL(enquiryTarget);target.searchParams.set('centre',id);return target.href;}
 const list={'@context':'https://schema.org','@type':'ItemList','@id':canonical+'#centre-directory',name:'Pinnacle centre directory',numberOfItems:centres.length,itemListElement:centres.map((c,i)=>({'@type':'ListItem',position:i+1,name:'Pinnacle Blooms Network — '+c.name,url:c.profileUrl}))};
 ---
 <section class="section wrap centre-directory" id="centres" aria-labelledby="centres-title">

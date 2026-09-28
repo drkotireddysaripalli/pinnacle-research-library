@@ -1,0 +1,59 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import Icon from './Icon.astro';
+import {Image} from 'astro:assets';
+import family from '../assets/speech-life-campaign.png';
+import centres from '../data/centre-directory.json';
+import {phone,url,origin} from '../data/site';
+import '../styles/enrolment.css';
+const {previewOnly=true,apiEndpoint=''}=Astro.props;
+const livePath='/enroll-autism-speech-aba-therapies-india';
+const path=previewOnly?'/pinnacle-pages-preview/enrolment':livePath;
+if(!previewOnly){
+ const endpoint=new URL(apiEndpoint,origin);
+ if(!apiEndpoint||endpoint.origin!==origin||!endpoint.pathname.startsWith('/api/')||endpoint.search||endpoint.hash||endpoint.username||endpoint.password)throw new Error('Live enrolment requires the approved same-origin Cloudflare API path.');
+}
+const services=[['help','Help me choose','compass'],['speech','Speech & language','voice'],['occupational','Occupational therapy','home'],['aba','ABA / behavioural support','heart'],['education','Special education','book'],['other','Another service','people']];
+const regions=[...new Set(centres.map(c=>c.region))].sort((a,b)=>a.localeCompare(b));
+const questions=[
+ ['Do I need to choose a therapy before contacting you?','No. Select “Help me choose” or call us. An appropriate professional assessment helps determine what support is suitable.'],
+ ['What happens after I request a visit?','The team contacts you to discuss your priorities and confirm the centre, professional, appointment and any fees. A request is the first step; your appointment is confirmed with you.'],
+ ['Is the assessment free?','The current speech and language assessment campaign offers a FREE assessment. Other assessments and ongoing therapy may have different fees. Confirm the service and its charges with the team before your visit.']
+];
+---
+<PageLayout path={path} label="Arrange a visit" title="Arrange Your Child’s First Visit | Pinnacle Blooms Network" description="Start your child’s journey toward greater independence and participation. Request a visit to Pinnacle or call 9100 181 181. The team confirms your appointment." shareImage={family} imageAlt="A mother and child sharing a moment during play, shown in an illustrative family scene." imageCaption="Your family. Your priorities. A clearer next step." documentOnly previewOnly={previewOnly} enquiry={{url:'#enrolment-form',mobileLabel:'Request a visit'}}>
+ <section class="enrol-hero wrap" aria-labelledby="enrol-title">
+  <div><p class="eyebrow">Your child’s next chapter starts here</p><h1 id="enrol-title">A clearer next step.<br/><em>Let’s find it together.</em></h1><p class="enrol-lead">More confidence. Growing independence. Taking part in everyday life. Tell us what matters to your family—we’ll help you take the next step.</p></div>
+  <div class="enrol-hero-contact"><p>Not sure which therapy to choose?<br/><strong>Start with a conversation.</strong></p><a href={phone.href} class="button primary" data-cta="hero-call"><Icon name="phone"/>Call {phone.display}</a><a href="#enrolment-form" class="enrol-jump">Or request a visit below <Icon name="arrow"/></a></div>
+ </section>
+ <section class="enrol-body wrap" id="enrolment-form" aria-labelledby="request-title">
+  <div class="enrol-card"><p class="eyebrow">Let’s make the first step simple</p><h2 id="request-title">How can we help your family?</h2><p class="enrol-form-intro">Your name and number are enough to begin. Everything else is optional.</p>
+   {previewOnly&&<p class="enrol-preview-note">Design preview · This form does not send enquiries. To contact us now, <a href={url(livePath)}>use the live enrolment form</a> or call {phone.display}.</p>}
+   <form id="pinnacle-enrolment" method="post" action={previewOnly?'#':apiEndpoint} novalidate data-preview={String(previewOnly)} data-api-endpoint={previewOnly?'':apiEndpoint} data-source-path={livePath} aria-describedby="enrol-privacy">
+    <noscript><p class="enrol-error-summary">Please enable JavaScript to use this form, or <a href={phone.href}>call {phone.display}</a>.</p></noscript>
+    <p id="enrol-unavailable" class="field-help">Loading the form… If it stays unavailable, please <a href={phone.href}>call {phone.display}</a>.</p>
+    <div id="enrol-error-summary" class="enrol-error-summary" role="alert" tabindex="-1" hidden></div>
+    <fieldset disabled data-enrol-fields><legend><span>1</span>Your contact details</legend><div class="enrol-fields">
+     <div><label for="parent-name">Your name <span>(required)</span></label><input id="parent-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="parent-name-error"/><p class="field-error" id="parent-name-error"></p></div>
+     <div><label for="parent-phone">Mobile number <span>(required)</span></label><input id="parent-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="25" placeholder="Your contact number" aria-describedby="phone-help parent-phone-error"/><p class="field-help" id="phone-help">Outside India? Include your country code.</p><p class="field-error" id="parent-phone-error"></p></div>
+    </div></fieldset>
+    <fieldset disabled data-enrol-fields><legend><span>2</span>Your preferences <small>(optional)</small></legend>
+     <p class="enrol-choice-label" id="service-label">What would you like help with?</p><div class="enrol-service-options" role="radiogroup" aria-labelledby="service-label">{services.map(([value,label,icon])=><label class="enrol-service-choice"><input type="radio" name="service" value={value} checked={value==='help'}/><Icon name={icon}/><span>{label}</span></label>)}</div>
+     <div class="enrol-fields"><div class="full"><label for="preferred-centre">Preferred centre</label><select id="preferred-centre" name="centre"><option value="">Help me find a centre</option>{regions.map(region=><optgroup label={region}>{centres.filter(c=>c.region===region).sort((a,b)=>a.city.localeCompare(b.city)||a.name.localeCompare(b.name)).map(c=><option value={c.id}>{c.city} — {c.name}</option>)}</optgroup>)}</select><p class="field-help">We’ll confirm the service and availability before you travel.</p></div></div>
+     <details class="enrol-optional"><summary>Add an email or a short note <span>(optional)</span></summary><div class="enrol-fields">
+      <div class="full"><label for="parent-email">Email</label><input id="parent-email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="parent-email-error"/><p class="field-error" id="parent-email-error"></p></div>
+      <div class="full"><label for="family-priority">Anything you’d like us to know?</label><textarea id="family-priority" name="message" rows="3" maxlength="500" aria-describedby="message-help" placeholder="For example: I would like to understand the assessment process."></textarea><p class="field-help" id="message-help">A short enquiry is enough. Please save medical reports and detailed child information for your private conversation with the team.</p></div>
+     </div></details>
+    </fieldset>
+    <div class="enrol-submit"><p id="enrol-privacy">We use your details to respond to this enquiry. <a href={url('/privacy-policy')}>Privacy policy</a>.</p><button class="button primary" type="submit" id="enrol-submit" disabled>{previewOnly?'Check form preview':'Request a visit'} <Icon name="arrow"/></button><div id="enrol-status" role="status" aria-live="polite" tabindex="-1"></div><p class="field-help">Your appointment, service and fees are confirmed by the team.</p><p class="enrol-call-alternative">Prefer to talk? <a href={phone.href} data-cta="final-call">Call {phone.display}</a>.</p></div>
+   </form>
+  </div>
+  <aside class="enrol-aside">
+   <figure class="enrol-family"><Image src={family} widths={[320,480,720]} sizes="(min-width:900px) 36vw, (min-width:600px) 44vw, calc(100vw - 36px)" width={720} height={600} fit="cover" format="webp" quality={80} loading="lazy" alt="Illustrative scene of a mother listening to her child during play."/><figcaption>Your child’s self-sufficient, mainstream-included life gives the journey its direction.</figcaption></figure>
+   <section class="enrol-next"><p class="eyebrow">What happens next</p><h2>A conversation.<br/><em>Clarity for your next step.</em></h2><ol><li><Icon name="phone"/><div><h3>We listen to you</h3><p>Share your priorities and ask your questions. We help you choose where to begin.</p></div></li><li><Icon name="pin"/><div><h3>We arrange the visit with you</h3><p>Confirm the centre, professional, appointment, any fees and what to bring.</p></div></li><li><Icon name="compass"/><div><h3>You decide with clarity</h3><p>Understand the assessment and recommendations before choosing ongoing support.</p></div></li></ol></section>
+   <section class="enrol-trust"><Icon name="shield" size={34}/><h3>Confidence you can verify.</h3><p>Explore the organisation, research and software licence behind Pinnacle.</p><a href={url('/verify/')}>Explore Pinnacle Verify →</a><a href={url('/verify/evidence/pinnacleai-regulatory-journey.html')}>Read the PinnacleAI story →</a></section>
+  </aside>
+ </section>
+ <section class="section wrap enrol-questions" aria-labelledby="enrol-questions-title"><h2 id="enrol-questions-title">Before your first visit</h2>{questions.map(([question,answer])=><details><summary>{question}</summary><p>{answer}</p></details>)}</section>
+ <script is:inline type="module" src="/pinnacle-pages-scripts/enrolment.js"></script>
+</PageLayout>

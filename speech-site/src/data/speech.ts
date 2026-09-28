@@ -17,7 +17,7 @@ export const moments = [
 export const proofCards = [
   {tag:'Licensed software scope', title:'Class B · MD-5', text:'PinnacleAI GPT-OS v1.0.0 is licensed as non-diagnostic developmental-support software for children aged 0–12.', ref:'MFG/MD/2026/000248', link:'/verify/evidence/records/md5.html', label:'Read the licence and scope'},
   {tag:'Named developmental modules', title:'BIS · IS 23485:2019', text:'The BIS schedule names software modules for developmental mapping, everyday practice, tracking and correction—including speech and school readiness, self-sufficiency and mainstream inclusion.', ref:'MD/L-2026029599 · Schedule, page 2', link:'/verify/evidence/bis.pdf#page=2', label:'Open the BIS scope schedule'},
-  {tag:'Company-reported communication study', title:'Understanding questions', text:'Our six-month, company-reported study of 60 children aged 3–9 reports average question-comprehension accuracy increasing from 48.4% to 74.9%. Findings were descriptive and therapist-assessed, with no control group.', ref:'60 children · 6 months · descriptive findings', link:'/question-comprehension-study', label:'Read the study and limitations'}
+  {tag:'Research you can inspect', title:'Methods. Findings. Context.', text:'Explore the work behind Pinnacle’s developmental approach, with original publications, authors and research status. The library separates preliminary findings, planned studies and company-published summaries.', ref:'Original sources · publication status', link:'/verify/evidence/research-library.html', label:'Explore the research library'}
 ];
 
 export const careStages = [

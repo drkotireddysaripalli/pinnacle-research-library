@@ -33,11 +33,11 @@ check('Pinnacle remains a separate Brand', entities.get(service.brand['@id'])['@
 check('No invented ratings or clinical review', !graph.some(e=>e.aggregateRating||e.review||e.reviewedBy));
 const assessment=graph.find(e=>e['@id']===canonical+'#assessment');
 check('Free offer is scoped to assessment only', !service.offers && assessment.name==='Speech and language assessment' && assessment.offers.price===0 && assessment.offers.priceCurrency==='INR' && assessment.offers.itemOffered['@id']===assessment['@id'] && html.includes('Ongoing therapy is priced separately'));
-check('Relevant clinical source is cited instead of count ledger', webpage.citation.includes('https://www.pinnacleblooms.org/question-comprehension-study') && !webpage.citation.includes('https://www.pinnacleblooms.org/verify/evidence/claim-ledger.html'));
+check('Relevant clinical source is cited instead of count ledger', webpage.citation.includes('https://www.pinnacleblooms.org/verify/evidence/research-library.html') && !webpage.citation.includes('https://www.pinnacleblooms.org/verify/evidence/claim-ledger.html'));
 check('Seven family pathway stages remain separate from technical walkthrough', [...html.matchAll(/class="care-number"/g)].length===7 && html.includes('not a separate nine-stage treatment programme'));
 check('Actual enquiry destination used for every assessment CTA', [...html.matchAll(/<a[^>]+data-cta="(?:hero-assessment|mobile-assessment|visit-enquiry)"[^>]*>/g)].every(m=>m[0].includes('href="https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry"')));
 check('Worked example is visible without opening technical content',html.indexOf('class="worked-example"')<html.indexOf('class="technical-walkthrough"'));
-check('Study limitations and illustrative status are visible',html.includes('no control group')&&html.includes('not a patient case'));
+check('Study limitations and illustrative status are visible',html.includes('publication status')&&html.includes('not a patient case'));
 check('Focused campaign preview shares the retained canonical',fs.readFileSync('dist/speech-campaign.html','utf8').includes('rel="canonical" href="'+canonical+'"'));
 const og = html.match(/property="og:image" content="([^"]+)"/)[1];
 check('Share image built under the owned asset namespace', new URL(og).pathname.startsWith('/pinnacle-pages-assets/') && fs.existsSync(path.join(root,'dist',new URL(og).pathname)));

@@ -3,8 +3,11 @@
   const id = 'G-H9CLX1WJ7R';
   const origin = 'https://www.pinnacleblooms.org';
   const path = '/top-speech-therapy-center-india-proven-improvement-rate';
-  const canonical = origin + path;
-  const routes = new Set([path, '/speech-therapy']);
+  const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
+  const pagePath = Object.hasOwn(documents,location.pathname)?location.pathname:path;
+  const canonical = origin + pagePath;
+  const pageTitle = documents[pagePath] || 'Pinnacle Speech Therapy';
+  const routes = new Set([path, '/speech-therapy', ...Object.keys(documents)]);
   const key = 'pinnacle-speech-analytics-v1';
   const variant = document.body?.dataset.pageVariant === 'focused' ? 'focused' : 'service';
   const lifetime = 180 * 86400000;
@@ -22,7 +25,7 @@
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {
     if (!production || !enabled || blocked) return;
-    try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:canonical, page_title:'Pinnacle Speech Therapy', page_referrer:'', send_to:id}); } catch {}
+    try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:canonical, page_title:pageTitle, page_referrer:'', send_to:id}); } catch {}
   };
   const clearCookies = () => {
     for (const cookie of document.cookie.split(';')) {
@@ -46,7 +49,7 @@
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
       cookie_prefix:'ps',cookie_path:location.pathname,cookie_domain:'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
-      page_location:canonical,page_title:'Pinnacle Speech Therapy',page_referrer:'',ignore_referrer:true,
+      page_location:canonical,page_title:pageTitle,page_referrer:'',ignore_referrer:true,
       campaign_id:'',campaign_source:'',campaign_medium:'',campaign_name:'',campaign_term:'',campaign_content:''
     });
     const script=document.createElement('script');

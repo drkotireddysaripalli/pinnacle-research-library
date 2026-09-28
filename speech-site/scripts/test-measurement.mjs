@@ -59,3 +59,12 @@ test('unavailable storage does not interrupt choice or CTA handling',()=>{
 test('page variant accepts only the two fixed values',()=>{
  for(const variant of ['service','focused','private-value']){const h=harness({variant});h.choose('accepted');assert.equal(h.events()[0][2].page_variant,variant==='focused'?'focused':'service');}
 });
+
+test('public speech guides measure their exact canonical without visitor query values',()=>{
+ for(const path of ['/speech-therapy/service-information','/speech-therapy/first-visit-guide','/speech-therapy/teacher-observation-guide']){
+  const h=harness({path});h.choose('accepted');h.click('footer-call','tel:+919100181181');
+  assert.equal(h.events().length,2);assert(h.events().every(e=>e[2].page_location==='https://www.pinnacleblooms.org'+path));
+  assert(!JSON.stringify(h.events()).includes('private-child-detail'));
+ }
+ const preview=harness({path:'/pinnacle-pages-preview/enrolment'});preview.choose('accepted');assert.equal(preview.events().length,0);
+});

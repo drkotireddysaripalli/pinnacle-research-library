@@ -12,11 +12,12 @@ export const speechContent: ServiceContent = {
   name:'Speech and language therapy for children', type:'Speech and language therapy',
   title:'Speech Therapy for Children: Assessment & Care | Pinnacle Blooms',
   description:'Help your child communicate in everyday life. Explore PinnacleAI, our family pathway and evidence. Arrange a FREE speech assessment. Call 9100 181 181.',
+  enquiry:{url:speechOffer.url,label:'Arrange your FREE assessment',mobileLabel:'FREE assessment'},
   assessmentOffer:speechOffer,
   citations:[
     '/verify/','/verify/evidence/pinnacle-paradigm-shift.html','/verify/evidence/pinnacleai-regulatory-journey.html',
     '/verify/evidence/records/md5.html','/verify/evidence/bis.pdf#page=2','/verify/evidence/records/fsc.html',
-    '/verify/evidence/research-library.html','/question-comprehension-study',serviceInformationPath
+    '/verify/evidence/research-library.html',serviceInformationPath
   ].map(url).concat(Object.values(evidence.groups).flatMap(group => group.links.map(link => url(link.url)))).filter((value,index,all) => all.indexOf(value) === index).concat(['https://www.asha.org/njc/communication-bill-of-rights/','https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders/']),
   image:{source:campaign,alt:'Illustrative scene of a mother listening as her child points during play, with a school participation vignette.',caption:'Everyday communication, family participation and growing independence.'},
   hero:{heading:'Help your child',emphasis:'be understood.',lead:'And take part in more of life.',copy:'Asking for help. Making a choice. Joining in. We start with the life your child is working toward, then shape assessment, speech therapy, home practice and review around it.',moments:[{icon:'voice',label:'Be heard'},{icon:'heart',label:'Make choices'},{icon:'people',label:'Join in'}]},

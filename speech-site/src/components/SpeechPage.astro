@@ -22,7 +22,7 @@ import { steps, stepSources, proofCards } from '../data/speech';
 const { focused = false } = Astro.props;
 const content = speechContent;
 ---
-<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} assessmentOffer={content.assessmentOffer} title={content.title} description={content.description} citations={content.citations} imageAlt="Pinnacle speech therapy: Be understood. Make choices. Join in. FREE speech assessment. Call 9100 181 181." imageCaption="Speech therapy for children at Pinnacle Blooms Network." shareImage={shareCard} focused={focused}>
+<PageLayout updatedOn="2026-09-28" enquiry={content.enquiry} path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} assessmentOffer={content.assessmentOffer} title={content.title} description={content.description} citations={content.citations} imageAlt="Pinnacle speech therapy: Be understood. Make choices. Join in. FREE speech assessment. Call 9100 181 181." imageCaption="Speech therapy for children at Pinnacle Blooms Network." shareImage={shareCard} focused={focused}>
   <HeroSlider content={content} /><ActionStrip />
 
   <span class="legacy-section-anchor" id="ChildrenServices-section" aria-hidden="true"></span><section class="wrap service-fit" id="service-fit" aria-labelledby="fit-title">
