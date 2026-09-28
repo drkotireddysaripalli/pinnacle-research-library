@@ -25,6 +25,20 @@ test('no analytics before consent; valid consent sends only fixed CTA fields',()
 test('unknown destinations and placements are ignored without blocking navigation',()=>{
  const h=harness();h.choose('accepted');h.click('hero-call','tel:+911234');h.click('not-approved','tel:+919100181181');h.click('hero-assessment','https://evil.example/enroll');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll?name=private');assert.equal(h.events().length,1);
 });
+test('all verified centre links are measured after consent without exporting centre or query values',()=>{
+ const centres=JSON.parse(fs.readFileSync('src/data/centre-directory.json','utf8')).filter(c=>c.facilityId);
+ const ids=JSON.parse(source.match(/const centreIds = (\[[^\n]+\]);/)[1]);
+ assert.deepEqual(ids,centres.map(c=>c.id));
+ const h=harness();const href=id=>'https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment&centre='+id+'#speech-assessment-enquiry';
+ h.click('centre-enquiry',href('annanagar'));assert.equal(h.events().length,0);
+ h.choose('accepted');for(const c of centres)h.click('centre-enquiry',href(c.id));
+ for(const placement of ['directory-national-call','centre-national-call','centre-enquiry'])h.click(placement,'tel:+919100181181');
+ assert.equal(h.events().filter(x=>x[1]==='enquiry_link_click').length,59);
+ assert.equal(h.events().filter(x=>x[1]==='phone_link_click').length,3);
+ const count=h.events().length;h.click('centre-enquiry',href('unverified'));h.click('centre-enquiry',href('annanagar')+'&name=private');h.click('centre-enquiry',href('annanagar').replace('www.pinnacleblooms.org','evil.example'));
+ assert.equal(h.events().length,count);assert(!JSON.stringify(h.events()).includes('centre='));assert(!JSON.stringify(h.events()).includes('annanagar'));
+ h.choose('declined');h.click('centre-enquiry',href('annanagar'));assert.equal(h.events().length,count);
+});
 test('withdrawal stops events and clears only owned cookies',()=>{
  const h=harness();h.choose('accepted');h.choose('declined');h.click('hero-call','tel:+919100181181');assert.equal(h.events().length,1);assert.ok(h.cookies.length>0);assert.ok(h.cookies.every(c=>c.startsWith('ps_ga=')));
 });
