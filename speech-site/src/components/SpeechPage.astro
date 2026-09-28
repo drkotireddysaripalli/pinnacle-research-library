@@ -16,7 +16,7 @@ import decisionArt from '../assets/speech-observe-adjust-20260928.png';
 import VisitInfographic from './VisitInfographic.astro';
 import SpeechResources from './SpeechResources.astro';
 import { speechOffer } from '../data/speech-offer';
-import { centres } from '../data/speech-centres';
+import CentreDirectory from './CentreDirectory.astro';
 import { phone, url, speechPath } from '../data/site';
 import { steps, stepSources, proofCards } from '../data/speech';
 const { focused = false } = Astro.props;
@@ -77,12 +77,7 @@ const content = speechContent;
     </div></details>
   </section>
 
-  <section class="section wrap centres-section" id="centres" aria-labelledby="centres-title"><div class="split-heading"><div><p class="eyebrow">People and places, closer to you</p><h2 id="centres-title">Find a Pinnacle centre.<br /><em>Meet the people behind the plan.</em></h2></div><p>Find a centre that works for your family. We’ll help you confirm its speech-therapy team, qualifications and appointment options before you visit.</p></div>
-    <div class="centre-filter" hidden><label for="centre-city">Three example centres</label><select id="centre-city"><option value="all">Show all three</option>{centres.map(c=><option value={c.city}>{c.city}</option>)}</select><span id="centre-count" role="status">3 locations shown</span></div>
-    <div class="centre-cards">{centres.map(centre=><article data-city={centre.city}><figure class="centre-photo"><Image src={centre.image} widths={[360,600,800]} sizes="(min-width:1000px) 30vw, (min-width:761px) 45vw, calc(100vw - 72px)" width={800} height={500} fit="cover" format="webp" quality={80} alt={centre.alt} loading="lazy" decoding="async"/><figcaption>{centre.caption}</figcaption></figure><p class="card-tag">{centre.city}</p><h3>{centre.name}</h3><p>{centre.address}</p>{centre.team.length>0 ? <details class="listed-team"><summary>Speech therapists listed by this centre</summary><p>{centre.team.join(' · ')}</p></details> : <div class="listed-team"><strong>Speech appointments</strong><p>Contact the centre team to confirm the available professional.</p></div>}<a href={url(centre.path)} class="text-link" data-cta="centre-profile">View this centre and its team <Icon name="arrow" /></a></article>)}</div>
-    <p class="source-note">Centre photographs are from Pinnacle’s supplied media. Team details come from our centre pages, checked 27 September 2026. Call us to confirm the current therapist, qualifications and availability. You can also explore the wider network.</p>
-    <div class="centre-actions"><a href={url('/contact')} class="button outline" data-cta="all-centres"><Icon name="pin" />Explore other locations</a><a class="text-link" href={phone.href} data-cta="centre-call">Confirm a centre · {phone.display} →</a><a class="text-link" href={url('/verify/evidence/centre-entity-reference.html')}>See centre identities and registry references ↗</a></div>
-  </section>
+  <CentreDirectory />
 
   <SpeechResources />
 
@@ -117,20 +112,6 @@ const content = speechContent;
   revealLinkedDetails();
   window.addEventListener('hashchange',revealLinkedDetails);
 
-  const select = document.querySelector<HTMLSelectElement>('#centre-city');
-  const filter = document.querySelector<HTMLElement>('.centre-filter');
-  if (select && filter) {
-    filter.hidden = false;
-    select.addEventListener('change', () => {
-      let count = 0;
-      for (const card of document.querySelectorAll<HTMLElement>('.centre-cards [data-city]')) {
-        card.hidden = select.value !== 'all' && card.dataset.city !== select.value;
-        if (!card.hidden) count++;
-      }
-      const status = document.querySelector('#centre-count');
-      if (status) status.textContent = count + (count === 1 ? ' location shown' : ' locations shown');
-    });
-  }
 </script>
 
 </PageLayout>

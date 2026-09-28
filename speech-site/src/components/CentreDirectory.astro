@@ -1,0 +1,62 @@
+---
+import {Image,getImage} from 'astro:assets';
+import type {ImageMetadata} from 'astro';
+import centres from '../data/centre-directory.json';
+import Icon from './Icon.astro';
+import {phone,url,speechPath} from '../data/site';
+import {speechOffer} from '../data/speech-offer';
+const images=import.meta.glob<{default:ImageMetadata}>('../assets/centre-directory/*.jpg',{eager:true});
+const get=(file:string)=>images['../assets/centre-directory/'+file]?.default;
+const largeImages=Object.fromEntries(await Promise.all(centres.flatMap(c=>c.images).map(async p=>[p.file,(await getImage({src:get(p.file),width:1000,format:'webp',quality:82})).src])));
+const regions=[...new Set(centres.map(c=>c.region))].sort();
+const canonical=url(speechPath);
+function enquiryUrl(id:string){const target=new URL(speechOffer.url);target.searchParams.set('centre',id);return target.href;}
+const list={'@context':'https://schema.org','@type':'ItemList','@id':canonical+'#centre-directory',name:'Pinnacle centre directory',numberOfItems:centres.length,itemListElement:centres.map((c,i)=>({'@type':'ListItem',position:i+1,name:'Pinnacle Blooms Network — '+c.name,url:c.profileUrl}))};
+---
+<section class="section wrap centre-directory" id="centres" aria-labelledby="centres-title">
+ <div class="split-heading"><div><p class="eyebrow">A real place. A team to meet.</p><h2 id="centres-title">Find your Pinnacle centre.<br/><em>Take the next step, closer to home.</em></h2></div><p>Explore our locations, see the spaces and share a centre with your family. We’ll help you confirm the right professional and appointment before you visit.</p></div>
+ <div class="directory-help"><Icon name="phone"/><div><strong>One number. Help finding your centre.</strong><a href={phone.href} data-cta="directory-national-call">National team · {phone.display}</a></div><a href={url('/national-autism-helpline')}>National Autism Helpline →</a></div>
+ <div class="directory-controls" hidden><label for="centre-search">Search centre, city or postcode<input type="search" id="centre-search" placeholder="Try Suchitra, Bengaluru or 500067" autocomplete="off"/></label><label for="centre-region">State / region<select id="centre-region"><option value="all">All regions</option>{regions.map(r=><option>{r}</option>)}</select></label><button type="button" class="button outline" id="centre-reset">Reset</button></div>
+ <p class="directory-results" id="centre-count" role="status">{centres.length} listed locations</p>
+ <div class="directory-grid" id="centre-cards">{centres.map(c=>{
+  const share=canonical+'#centre-'+c.id;const enquiry=c.facilityId?enquiryUrl(c.id):phone.href;
+  return <article class="directory-card" id={'centre-'+c.id} data-centre-name={c.name} data-region={c.region} data-search={[c.name,c.id,c.city,c.region,c.address].join(' ').toLowerCase()} data-share-url={share} tabindex="-1">
+   <div class="directory-card-heading">{c.emblem&&get(c.emblem)?<Image src={get(c.emblem)} width={96} height={96} format="webp" quality={85} alt={'Pinnacle '+c.name+' emblem'} loading="lazy"/>:<span class="directory-emblem-placeholder"><Icon name="pin" size={34}/></span>}<div><p>{c.city} · {c.region}</p><h3>{c.name}</h3></div></div>
+   {c.images.length>0&&get(c.images[0].file)&&<figure class="directory-cover"><Image src={get(c.images[0].file)} widths={[360,600]} sizes="(min-width:1000px) 30vw, (min-width:700px) 45vw, calc(100vw - 64px)" width={600} height={390} fit="cover" format="webp" quality={78} loading="lazy" decoding="async" alt={c.images[0].alt}/><figcaption>{c.images[0].caption}</figcaption></figure>}
+   <address>{c.address}</address>
+   <a class="directory-national" href={phone.href} data-cta="centre-national-call"><Icon name="phone" size={19}/><span>National team <strong>{phone.display}</strong></span></a>
+   {c.directTelephone&&<a href={'tel:'+c.directTelephone}>Centre direct · {c.directTelephone}</a>}
+   <div class="directory-primary"><a class="button primary" href={enquiry} data-cta="centre-enquiry">{c.facilityId?'Choose this centre':'Ask about this location'}<Icon name="arrow" size={18}/></a><a href={c.profileUrl}>{c.profileUrl.includes('/centers/')?'Centre details & team ↗':'Location contact details ↗'}</a>{c.mapsUrl&&<a href={c.mapsUrl} rel="noopener noreferrer" target="_blank"><Icon name="pin" size={18}/>Google Maps &amp; directions ↗</a>}</div>
+   {c.images.length>1&&<details class="directory-gallery"><summary>See {c.images.length-1} more centre {c.images.length===2?'photo':'photos'}</summary><div>{c.images.slice(1).map(p=><figure><a href={largeImages[p.file]} target="_blank" rel="noopener" aria-label={'Open larger photograph: '+p.caption}><Image src={get(p.file)} widths={[360,600]} sizes="(min-width:1000px) 30vw, (min-width:700px) 45vw, calc(100vw - 64px)" width={600} format="webp" quality={78} loading="lazy" decoding="async" alt={p.alt}/></a><figcaption>{p.caption}</figcaption></figure>)}</div></details>}
+   <details class="directory-share"><summary>Share, save or cite this centre</summary><div class="directory-share-actions"><a href={'https://wa.me/?text='+encodeURIComponent('Pinnacle Blooms Network — '+c.name+'\n'+share)} target="_blank" rel="noopener noreferrer">Share on WhatsApp ↗</a><button type="button" data-share-centre hidden>Share centre</button><button type="button" data-copy-centre hidden>Copy centre link</button><button type="button" data-copy-citation hidden>Copy citation</button><a href={'/pinnacle-pages-data/centre-contacts/'+c.id+'.vcf'} download>Save national contact</a><a href={c.sourceUrl}>Address source ↗</a><p class="directory-card-message" role="status" aria-live="polite"></p><p class="directory-citation">Pinnacle Blooms Network. {c.name} centre listing. Details checked 28 September 2026. {share}</p></div></details>
+  </article>;
+ })}</div>
+ <div class="directory-pagination" hidden><button class="button outline" type="button" id="centre-more">Show more centres</button><button class="text-link" type="button" id="centre-all">Show all {centres.length} locations</button></div>
+ <p id="directory-message" class="directory-message" role="status" aria-live="polite"></p>
+ <p class="source-note directory-source">Directory and enquiry choices checked 28 September 2026. Photographs supplied by Pinnacle; contact the team to confirm current premises, professional and appointment availability. The national number connects you with the Pinnacle team.</p>
+ <div class="directory-source-links"><a href={url('/verify/evidence/centre-entity-reference.html')}>Centre identities and registration references ↗</a><a href="/pinnacle-pages-data/centre-directory.json">Download the dated directory (JSON)</a></div>
+</section>
+<script type="application/ld+json" set:html={JSON.stringify(list).replace(/</g,'\\u003c')}/>
+<script>
+ const directory=document.querySelector<HTMLElement>('.centre-directory');
+ if(directory){
+  const cards=[...directory.querySelectorAll<HTMLElement>('.directory-card')];
+  const search=directory.querySelector<HTMLInputElement>('#centre-search')!;
+  const region=directory.querySelector<HTMLSelectElement>('#centre-region')!;
+  const count=directory.querySelector('#centre-count')!;
+  const more=directory.querySelector<HTMLButtonElement>('#centre-more')!;
+  const all=directory.querySelector<HTMLButtonElement>('#centre-all')!;
+  const message=directory.querySelector('#directory-message')!;
+  let limit=6;
+  const normal=(s:string)=>s.toLocaleLowerCase().replace(/[^a-z0-9]+/g,'');
+  function render(){const q=normal(search.value);const filtered=cards.filter(c=>(region.value==='all'||c.dataset.region===region.value)&&normal(c.dataset.search||'').includes(q));cards.forEach(c=>{c.hidden=!filtered.includes(c)||filtered.indexOf(c)>=limit});const shown=Math.min(limit,filtered.length);count.textContent=filtered.length?`${shown} of ${filtered.length} matching locations shown`:'No matching centre found. Try a nearby city or call 9100 181 181.';more.hidden=all.hidden=shown>=filtered.length;more.textContent=`Show ${Math.min(12,filtered.length-shown)} more centres`;}
+  directory.querySelectorAll<HTMLElement>('.directory-controls,.directory-pagination,[data-share-centre],[data-copy-centre],[data-copy-citation]').forEach(e=>e.hidden=false);
+  search.addEventListener('input',()=>{limit=12;render()});region.addEventListener('change',()=>{limit=12;render()});directory.querySelector('#centre-reset')!.addEventListener('click',()=>{search.value='';region.value='all';limit=6;render();search.focus()});
+  function showMore(n:number){const previous=cards.filter(c=>!c.hidden).length;limit=n;render();cards.filter(c=>!c.hidden)[previous]?.focus({preventScroll:true});}
+  more.addEventListener('click',()=>showMore(limit+12));all.addEventListener('click',()=>showMore(cards.length));
+  async function copy(text:string,label:string,card:HTMLElement){const local=card.querySelector('.directory-card-message')!;try{await navigator.clipboard.writeText(text);local.textContent=label+' copied.';}catch{local.textContent='Copy this text: '+text;}}
+  directory.addEventListener('click',async event=>{const button=(event.target as Element).closest('button');const card=button?.closest<HTMLElement>('.directory-card');if(!button||!card)return;const shareUrl=card.dataset.shareUrl!;if(button.hasAttribute('data-copy-centre'))await copy(shareUrl,'Centre link',card);if(button.hasAttribute('data-copy-citation'))await copy(card.querySelector('.directory-citation')!.textContent!,'Citation',card);if(button.hasAttribute('data-share-centre')){if(navigator.share){try{await navigator.share({title:'Pinnacle — '+card.dataset.centreName,url:shareUrl})}catch(error){if((error as Error).name!=='AbortError')await copy(shareUrl,'Centre link',card);}}else await copy(shareUrl,'Centre link',card);}});
+  function revealCentre(){let id='';try{id=decodeURIComponent(location.hash.slice(1))}catch{return}const target=cards.find(c=>c.id===id);if(!target)return;search.value=target.dataset.centreName||'';region.value='all';limit=cards.length;render();requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));}
+  render();revealCentre();window.addEventListener('hashchange',revealCentre);
+ }
+</script>

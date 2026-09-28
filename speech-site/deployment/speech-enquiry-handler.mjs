@@ -1,6 +1,8 @@
 // Only the explicitly tagged speech-assessment GET entry is enhanced.
+import {centreFacilities} from './centre-facilities.mjs';
 export const ENQUIRY_PATH='/enroll-autism-speech-aba-therapies-india';
 export const ENQUIRY_BUNDLE='/pinnacle-pages-scripts/speech-enquiry-origin-v42.js';
+export function selectedCentre(request){const values=new URL(request.url).searchParams.getAll('centre');return values.length===1&&Object.hasOwn(centreFacilities,values[0])?centreFacilities[values[0]]:null;}
 export function isSpeechEntry(request){
  const u=new URL(request.url);
  return u.hostname==='www.pinnacleblooms.org'&&u.pathname===ENQUIRY_PATH&&u.searchParams.getAll('entry').length===1&&u.searchParams.get('entry')==='speech-assessment'&&request.method==='GET'&&!request.headers.has('authorization')&&!request.headers.has('range')&&!/no-transform/i.test(request.headers.get('cache-control')||'');
@@ -19,6 +21,7 @@ export function prepareSpeechEntry(html){
 }
 export async function serveSpeechEnquiry(request,env,fetchOrigin=fetch){
  if(!isSpeechEntry(request))return null;
+ const centre=selectedCentre(request);
  const origin=await fetchOrigin(request);
  if(origin.status!==200||!origin.headers.get('content-type')?.includes('text/html'))return origin;
  const raw=await origin.clone().text(),html=prepareSpeechEntry(raw);
@@ -33,7 +36,8 @@ export async function serveSpeechEnquiry(request,env,fetchOrigin=fetch){
  .on('head',{element(e){e.append('<style>.speech-entry-note{background:#fff;border:2px solid #8f2879;border-radius:18px;padding:22px;margin:0 0 25px;color:#172341;line-height:1.65}.speech-entry-note strong{display:block;color:#8f2879;font-size:24px}.speech-entry-note b{color:#bf0047}.speech-entry-note a{color:#8f2879;text-decoration:underline}.speech-entry-note del{margin-right:8px}.enroll-form-submit:focus-visible{outline:3px solid #162645;outline-offset:5px}#contact-form-message{min-height:120px}</style>',{html:true});}})
  .on('.cm-form-section form',{element(e){e.prepend(note,{html:true});}})
  .on('#contact-form-services-offered-sp',{element(e){e.setAttribute('checked','checked');}})
- .on('#contact-form-message',{element(e){e.setAttribute('rows','5');e.setInnerContent('I would like to arrange the FREE speech and language assessment.');}})
+ .on('input[name="contact-facility-offered"]',{element(e){if(centre){e.removeAttribute('checked');if(e.getAttribute('value')===centre.id)e.setAttribute('checked','checked');}}})
+ .on('#contact-form-message',{element(e){e.setAttribute('rows','5');e.setInnerContent('I would like to arrange the FREE speech and language assessment'+(centre?' at '+centre.name:'')+'.');}})
  .on('.enroll-form-submit',{element(e){e.tagName='button';e.setAttribute('type','button');e.setAttribute('aria-label','Request your FREE speech assessment');}})
  .on('.enroll-form-submit .submit-wrapper > span:not(.svg)',{element(e){e.setInnerContent('Request FREE assessment');}})
  .transform(new Response(html,{headers}));

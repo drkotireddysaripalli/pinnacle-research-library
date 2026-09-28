@@ -2,7 +2,7 @@
 export const SPEECH_CANONICAL='/top-speech-therapy-center-india-proven-improvement-rate';
 const DOCUMENT='/speech-therapy/service-information';
 const GUIDES=['first-visit-guide','teacher-observation-guide'];
-const MIME={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.txt':'text/plain; charset=utf-8','.xml':'application/xml; charset=utf-8','.webp':'image/webp','.png':'image/png','.woff2':'font/woff2'};
+const MIME={'.vcf':'text/vcard; charset=utf-8','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.txt':'text/plain; charset=utf-8','.xml':'application/xml; charset=utf-8','.webp':'image/webp','.png':'image/png','.woff2':'font/woff2'};
 export async function serveSpeech(request,env,inventory){
  const u=new URL(request.url);
  if(u.hostname!=='www.pinnacleblooms.org'||!['GET','HEAD'].includes(request.method)||request.headers.has('authorization'))return null;

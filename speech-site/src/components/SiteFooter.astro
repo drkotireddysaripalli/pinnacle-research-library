@@ -7,8 +7,10 @@ import { url, phone } from '../data/site';
 import navigation from '../data/portal-navigation.json';
 import Icon from './Icon.astro';
 import PortalFooterGroup from './PortalFooterGroup.astro';
+import VerifyFooter from './VerifyFooter.astro';
 const shapes=await getImage({src:footerShapes,format:'webp',quality:80});
 ---
+<VerifyFooter />
 <footer class="portal-footer" style={`--portal-footer-art:url('${shapes.src}')`}>
   <div class="portal-footer-art"><div class="portal-container">
     <div class="portal-footer-columns">

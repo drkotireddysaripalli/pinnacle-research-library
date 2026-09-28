@@ -6,6 +6,7 @@ import { getImage } from 'astro:assets';
 import { origin, url, phone } from '../data/site';
 import '../styles/page.css';
 import '../styles/portal-shell.css';
+import '../styles/readability.css';
 const { title, description, path, label, serviceName, shareImage, serviceType, assessmentOffer, citations = [], imageAlt, imageCaption, documentOnly = false, focused = false } = Astro.props;
 const canonical = url(path);
 const share = await getImage({src: shareImage, width:1200, height:630, fit:'cover', format:'webp', quality:85});
@@ -35,6 +36,6 @@ const schema = {'@context':'https://schema.org','@graph':[
 </head><body class:list={{'focused-campaign':focused}} data-page-variant={focused ? 'focused' : 'service'}>
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
-  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={phone.href} data-cta="mobile-call">Call {phone.display}</a><a href={speechOffer.url} data-cta="mobile-assessment">Assessment enquiry →</a></nav>
+  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={phone.href} data-cta="mobile-call">Call {phone.display}</a><a href={speechOffer.url} data-cta="mobile-assessment">FREE assessment</a></nav>
   <script is:inline src="/pinnacle-pages-scripts/speech-measurement.js" defer></script>
 </body></html>

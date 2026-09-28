@@ -1,0 +1,1567 @@
+{
+  "reviewedOn": "2026-09-28",
+  "selection": "Supplied location-matched emblems and institution photography. Excluded clinical encounters, visible CCTV, personal records, third-party Street View capture and conflicting location labels. Dates of photography are not asserted.",
+  "approved": [
+    {
+      "file": "eastmarredpally-profile-0.jpg",
+      "centre": "eastmarredpally",
+      "kind": "profile",
+      "sourceName": "East Marredpally.jpg",
+      "sha256": "3a54074922838d2ef41b0a6caea4d9ead968540db0bf0addf90a63b0b6e00770",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nandyala-profile-1.jpg",
+      "centre": "nandyala",
+      "kind": "profile",
+      "sourceName": "Nandyala.jpg",
+      "sha256": "726b0b2b5b5459ad579c4357c6b8e0dffce8fc9bd54fe88400cd927a041ccbfd",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "warangal-profile-2.jpg",
+      "centre": "warangal",
+      "kind": "profile",
+      "sourceName": "Warangal.jpg",
+      "sha256": "efe17c3a7d7cc1aa216981acc2ae3381dbfe2e348ac9fa5563683584894c33cd",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "vikrampuri-profile-3.jpg",
+      "centre": "vikrampuri",
+      "kind": "profile",
+      "sourceName": "Vikrampuri.jpg",
+      "sha256": "92b9606a965b2a41bf76e0b5c8699ad7f200d3dbc7ce807b891d48703a098196",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gurunanak-profile-4.jpg",
+      "centre": "gurunanak",
+      "kind": "profile",
+      "sourceName": "Gurunanak.jpg",
+      "sha256": "8bdea49934ecdbbfc96595449362ed3410681349d9e70f60b559ff5155ecdc92",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "vidyanagar-profile-5.jpg",
+      "centre": "vidyanagar",
+      "kind": "profile",
+      "sourceName": "Vidyanagr.jpg",
+      "sha256": "c85949cd04d3acc290d3fbb111c02c6111f7a1d7d57ca393bbf570f5e3d15182",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "vanasthalipuram-profile-6.jpg",
+      "centre": "vanasthalipuram",
+      "kind": "profile",
+      "sourceName": "Vanasthalipuram.jpg",
+      "sha256": "d2408925134055a88b71eeb2fe509daa47b1b78c424dbb82d1b2d2516200a5c2",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "uppal-profile-7.jpg",
+      "centre": "uppal",
+      "kind": "profile",
+      "sourceName": "Uppal.jpg",
+      "sha256": "11a3d64e28c1a431410626048c74d7ca4e28860f90fa2712ded5bd7892b05408",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "tirupati-profile-8.jpg",
+      "centre": "tirupati",
+      "kind": "profile",
+      "sourceName": "Tirupathi.jpg",
+      "sha256": "d38015bef4ea5b63e2600f3d81a66dbd076ef2f5cf49f6f01ad072aaedfeb5c6",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "suchitra-profile-9.jpg",
+      "centre": "suchitra",
+      "kind": "profile",
+      "sourceName": "Suchitra.jpg",
+      "sha256": "1673d1901b734b10f9c6e69f6e09b2b97c9b97d0ea20f1396363df9bc8989f8b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "srikakulam-profile-10.jpg",
+      "centre": "srikakulam",
+      "kind": "profile",
+      "sourceName": "Srikakulam.jpg",
+      "sha256": "e90c0ef2dbf9e1e9e327b3e3ec013fe9edb87b5cf878a0427b01db049f6bdf1a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "srnagar-profile-11.jpg",
+      "centre": "srnagar",
+      "kind": "profile",
+      "sourceName": "SR Nagar.jpg",
+      "sha256": "0b67b0c0658987c81655da0a41947bbf85310567212fabaa85a1b8b11a716c74",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "santoshnagar-profile-12.jpg",
+      "centre": "santoshnagar",
+      "kind": "profile",
+      "sourceName": "santoshnagar.jpg",
+      "sha256": "5bce341856eb88347bcdeed23c2a8f4849a6a3b9f311c1acc86bb54299cb8783",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "rajahmundry-profile-13.jpg",
+      "centre": "rajahmundry",
+      "kind": "profile",
+      "sourceName": "Rajahmundry.jpg",
+      "sha256": "bae996b7a987771867e3f7ef9243daba7a3f376d772d705bad09a52c80414bd8",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "pragathinagar-profile-14.jpg",
+      "centre": "pragathinagar",
+      "kind": "profile",
+      "sourceName": "Pragathinagar.jpg",
+      "sha256": "e2ff466fa90d6df3fd64ab47167102bf6dacaf6ae6e05e9e5a81d75d80490e96",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ongole-profile-15.jpg",
+      "centre": "ongole",
+      "kind": "profile",
+      "sourceName": "Ongole.jpg",
+      "sha256": "0d9b9f54f0f46a4b06dd7323e97d5338831ca1482f06c96c4a4be400645807d2",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nizamabad-profile-17.jpg",
+      "centre": "nizamabad",
+      "kind": "profile",
+      "sourceName": "Nizamabad.jpg",
+      "sha256": "f33fe46facb41e7b975ca9bb293a42e45a1876e505272653226daed8e11ad864",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "delhi-profile-18.jpg",
+      "centre": "delhi",
+      "kind": "profile",
+      "sourceName": "Delhi.jpg",
+      "sha256": "935cbc1623d7c1b3a80ae91db84455ed773e7d81c2da568e24647f1458d8e362",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nellore-profile-19.jpg",
+      "centre": "nellore",
+      "kind": "profile",
+      "sourceName": "Nellore.jpg",
+      "sha256": "f191747ec52f43996dbd0b3c2e2c5ae419d589f458cc6242b52ee2c653175291",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nallagandla-profile-20.jpg",
+      "centre": "nallagandla",
+      "kind": "profile",
+      "sourceName": "Nallagandle.jpg",
+      "sha256": "6ef5388498d1d3877a8cf7e7626bdfad0e3021bd4f38d58d1ffd637431ca3f0b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nad-profile-21.jpg",
+      "centre": "nad",
+      "kind": "profile",
+      "sourceName": "NAD.jpg",
+      "sha256": "9c5573e37b3ccbfa315dfdc224b31edc067e9cefdb3a19b9d07f82c5f4b630c2",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "mvp-profile-22.jpg",
+      "centre": "mvp",
+      "kind": "profile",
+      "sourceName": "MVP.jpg",
+      "sha256": "0aced911924fa0a5db8f9b7eb0f05e2696fa2d2a44cdd8479936b696e4b6f05f",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "miryalaguda-profile-23.jpg",
+      "centre": "miryalaguda",
+      "kind": "profile",
+      "sourceName": "Miryalaguda.jpg",
+      "sha256": "933303525c892a269beda413637a3c415c586a9e99b0dbc6372c7ba10e030331",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "marathahalli-profile-24.jpg",
+      "centre": "marathahalli",
+      "kind": "profile",
+      "sourceName": "Marathalli.jpg",
+      "sha256": "dc91bd619a9c8280e02eb1fdaa95a74f4940404ff8fb20609bd835b642013a7b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "mahbubnagar-profile-25.jpg",
+      "centre": "mahbubnagar",
+      "kind": "profile",
+      "sourceName": "MahbubNagar.jpg",
+      "sha256": "7641051047de7289ca8a46b757be10dbfb811f7d5962d895312806e54b248c36",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "madhurawada-profile-26.jpg",
+      "centre": "madhurawada",
+      "kind": "profile",
+      "sourceName": "Madhurwada.jpg",
+      "sha256": "9e4f7c9f24c6683c398a50089079b6af0d8156b5e21c7983a26cefcea9e65817",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "lbnagar-profile-27.jpg",
+      "centre": "lbnagar",
+      "kind": "profile",
+      "sourceName": "LB Nagar.jpg",
+      "sha256": "ab185780917b6df171c66ee9cb806f87b82b4bdf9ce026abd1378b58d065290a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "labbipet-profile-28.jpg",
+      "centre": "labbipet",
+      "kind": "profile",
+      "sourceName": "Labbipet.jpg",
+      "sha256": "7520ca44628de62acd62482a1bf80de91540fd24143a653a8c419f7585a6a746",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kurnool-profile-29.jpg",
+      "centre": "kurnool",
+      "kind": "profile",
+      "sourceName": "Kurnool.jpg",
+      "sha256": "4d9e39f4c81de2a5a18ee7b08f611f4c1e3f1b738fe39fd7a74f17832db1fb5b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kukatpally-profile-30.jpg",
+      "centre": "kukatpally",
+      "kind": "profile",
+      "sourceName": "Kukatpally.jpg",
+      "sha256": "e60071e161e884501db6f48ced9e2d7020968adbc940b80637c496375e1c9408",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khammam-profile-31.jpg",
+      "centre": "khammam",
+      "kind": "profile",
+      "sourceName": "Khammam.jpg",
+      "sha256": "5106a050bccc2475034d982cdad78bca17fc80fa511e5cd121ea0f6387e60750",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khajaguda-profile-32.jpg",
+      "centre": "khajaguda",
+      "kind": "profile",
+      "sourceName": "Khajaguda.jpg",
+      "sha256": "99c49d8ce14d8c012b82ece8d3f21e6fce569efff71d9018bb985e6d88e929bf",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "karimnagar-profile-33.jpg",
+      "centre": "karimnagar",
+      "kind": "profile",
+      "sourceName": "Karimnagar.jpg",
+      "sha256": "0514df89d93e4f7747f4611af9bf9302174e09f03032a98d1fb295aa38135f25",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kakinada-profile-34.jpg",
+      "centre": "kakinada",
+      "kind": "profile",
+      "sourceName": "Kakinada.jpg",
+      "sha256": "d112b7e1865fbc6e1048ca912a85c28d800c30333b74ed8eafacaa119ee1408b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kadapa-profile-35.jpg",
+      "centre": "kadapa",
+      "kind": "profile",
+      "sourceName": "Kadapa.jpg",
+      "sha256": "b881b1a8b8f35274f987061b13b4de18eef8ab2a8764bf3b2f5bf166bb806aa7",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kachiguda-profile-36.jpg",
+      "centre": "kachiguda",
+      "kind": "profile",
+      "sourceName": "Kachiguda.jpg",
+      "sha256": "5634861bd720e01d4de8cd028c315a5ec68db2d2ff5034a18a93894fbb27b248",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "jayanagar-profile-37.jpg",
+      "centre": "jayanagar",
+      "kind": "profile",
+      "sourceName": "Jayanagar.jpg",
+      "sha256": "5b20674f1173d25b269adfc09950e9153f305078b295bc4ab028770c95a1e88a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "jagadamba-profile-38.jpg",
+      "centre": "jagadamba",
+      "kind": "profile",
+      "sourceName": "Jagadamba.jpg",
+      "sha256": "4d8e1b18201e2bbf3a43ab9121ced5345fc68658555a669a1223ccc5334881a7",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "indiranagar-profile-39.jpg",
+      "centre": "indiranagar",
+      "kind": "profile",
+      "sourceName": "Indira Nagar.jpg",
+      "sha256": "f0ffd79688ae761fe4754d8a59b8ad0fb68ea48f3fa8c066f3d964471afda094",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "hydernagar-profile-40.jpg",
+      "centre": "hydernagar",
+      "kind": "profile",
+      "sourceName": "HyderNagar.jpg",
+      "sha256": "1b0537dea5511a69bdff078a0de5ffef4cc06099639e01f0787f2e3ee250cce2",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "madhapur-profile-41.jpg",
+      "centre": "madhapur",
+      "kind": "profile",
+      "sourceName": "Madhapur.jpg",
+      "sha256": "efdcb7677639727cc1eed8b914255b55a92bba2f81f49b431357e13ce5ca2b1f",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "himayatnagar-profile-42.jpg",
+      "centre": "himayatnagar",
+      "kind": "profile",
+      "sourceName": "HimayatNagar.jpg",
+      "sha256": "44ffd0c4aa6a7a5c9ad049254c98bd903d9c8430135dde75eb462158f98fc59a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "hayathnagar-profile-43.jpg",
+      "centre": "hayathnagar",
+      "kind": "profile",
+      "sourceName": "HayathNagar.jpg",
+      "sha256": "0406b4688b099ce3b1a3aab59484598789b95e6cecce4ceb5f6b46d43fc2cbc2",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "habsiguda-profile-44.jpg",
+      "centre": "habsiguda",
+      "kind": "profile",
+      "sourceName": "Habsiguda.jpg",
+      "sha256": "81865758f27580fee5d9ed59be4f2cff448ec27e2472cd3998bdbc2688a5ac7c",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "guntur-profile-45.jpg",
+      "centre": "guntur",
+      "kind": "profile",
+      "sourceName": "Guntur.jpg",
+      "sha256": "980ba9b00430d08fde56de2dcf4f9ba950fea700a98cbaf80c44f12988ce429c",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gajuwaka-profile-46.jpg",
+      "centre": "gajuwaka",
+      "kind": "profile",
+      "sourceName": "Gajuwaka.jpg",
+      "sha256": "6b24f5efea1fb362a04b6cc62a30076a6d2f604f7da2df4609325558afff86ea",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gachibowli-profile-47.jpg",
+      "centre": "gachibowli",
+      "kind": "profile",
+      "sourceName": "Gachibowli.jpg",
+      "sha256": "75f6761327673aab5e1d2fe4ffd4d533e5ecfcf6e8f180d45df39a08f7f42e32",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "eluru-profile-48.jpg",
+      "centre": "eluru",
+      "kind": "profile",
+      "sourceName": "Eluru.jpg",
+      "sha256": "3b84462e423086d51419e2e2fd46f7953d9a36a8dea3eee3f8b28bc47412d390",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "dilsukhnagar-profile-50.jpg",
+      "centre": "dilsukhnagar",
+      "kind": "profile",
+      "sourceName": "Dilsukhnagar.jpg",
+      "sha256": "dbc35c6cca41dca2f624673ba3e9d6ea1cad1d764d9e65d44d98dbf15ff3f1f4",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "chandanagar-profile-51.jpg",
+      "centre": "chandanagar",
+      "kind": "profile",
+      "sourceName": "ChandaNagar.jpg",
+      "sha256": "18dfdbd612053e7032df675d0a66b930ba8cf3f0aa8063ad9cb694b0d2b45161",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "bnreddynagar-profile-52.jpg",
+      "centre": "bnreddynagar",
+      "kind": "profile",
+      "sourceName": "BN Reddy Nagar.jpg",
+      "sha256": "04a5425cc675223868585874be7d8231bbd858c224be5da53c0487e730d8b785",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "bhimavaram-profile-53.jpg",
+      "centre": "bhimavaram",
+      "kind": "profile",
+      "sourceName": "Bhimavaram.jpg",
+      "sha256": "eea9ab8d685833092f0655b129f0fb6f8b05a164d198ca6d674dc785d4e0523f",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "begumpet-profile-54.jpg",
+      "centre": "begumpet",
+      "kind": "profile",
+      "sourceName": "Begumpet.jpg",
+      "sha256": "d9268a7a39ea20881576b22f6585993a37ed849899d0bd0a1b6ae5ed850a71cd",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "attapur-profile-55.jpg",
+      "centre": "attapur",
+      "kind": "profile",
+      "sourceName": "Attapur.jpg",
+      "sha256": "900b82fcd042ea6c97410573d94b7da322105b4e2a9e4691f62168dd871a8aa1",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "asraonagar-profile-56.jpg",
+      "centre": "asraonagar",
+      "kind": "profile",
+      "sourceName": "As rao Nagar.jpg",
+      "sha256": "0e97d6ed4c0c6970736e600480589624ab9f7c1af38eda56b0014e4a66b9c824",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "annanagar-profile-57.jpg",
+      "centre": "annanagar",
+      "kind": "profile",
+      "sourceName": "Annanagar-chennai.jpg",
+      "sha256": "9a8a9b9388a9a1047011823f6f524d56a111542ee4319600242232ddc80b4f20",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ananthapuram-profile-58.jpg",
+      "centre": "ananthapuram",
+      "kind": "profile",
+      "sourceName": "Ananthapur.jpg",
+      "sha256": "c3be474fe18f30403bf31189ea95422dcdce2608d9029dca5ddf0b9c4bbfd48d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "suchitra-exterior-0.jpg",
+      "centre": "suchitra",
+      "kind": "exterior",
+      "sourceName": "Suchitra.jpg",
+      "sha256": "a9e257d3955dd15b71fc4aa13a9d1ca7420ec432edf0d85f0045da23f04a07b3",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "pragathinagar-exterior-1.jpg",
+      "centre": "pragathinagar",
+      "kind": "exterior",
+      "sourceName": "Pragathinagar.jpg",
+      "sha256": "ed9f1f19f583eee12a64a0779cb8ad8b0c48fc45f54459f51f5386d0006c00ff",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "himayatnagar-exterior-2.jpg",
+      "centre": "himayatnagar",
+      "kind": "exterior",
+      "sourceName": "Himayatnagar.jpg",
+      "sha256": "79555fa1600d8b6046be5d04ef4a927d4f6c1ed40f405ab9356bc4e8126dda2f",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "bhimavaram-exterior-3.jpg",
+      "centre": "bhimavaram",
+      "kind": "exterior",
+      "sourceName": "BHEEMAVARAM.jpeg",
+      "sha256": "8396f7f64d2ad637f5733faf5ddd54ec01e311dd6c55eb2fc979cb9e12d5c0d4",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "madhapur-exterior-4.jpg",
+      "centre": "madhapur",
+      "kind": "exterior",
+      "sourceName": "Madhapur.jpg",
+      "sha256": "394599f937237d6ad81ad98dbabbb0ef99043c774593a6dcd8aa51688e3a7e3d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "habsiguda-exterior-5.jpg",
+      "centre": "habsiguda",
+      "kind": "exterior",
+      "sourceName": "Habsiguda.jpg",
+      "sha256": "137134dd505e2a9d978c82d8ded15250896452f69ec369c9f3a3b33e096f0d40",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "vikrampuri-exterior-6.jpg",
+      "centre": "vikrampuri",
+      "kind": "exterior",
+      "sourceName": "Vikrampuri.jpg",
+      "sha256": "0060e77e1411a166e30222999141ab57847c9a1b66512ced061bb9b594de4a5a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "asraonagar-exterior-7.jpg",
+      "centre": "asraonagar",
+      "kind": "exterior",
+      "sourceName": "ASRao Nagar.jpg",
+      "sha256": "6561ad88b278e2f79893634f6351f0f1cb54e40ea8288376570986eb0d7ee4d5",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kachiguda-exterior-8.jpg",
+      "centre": "kachiguda",
+      "kind": "exterior",
+      "sourceName": "Kachiguda.jpg",
+      "sha256": "9b466d1a290ebf87dde063b72a54c16a284013cbb3fc6cacb5bac25fd0da112b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "jagadamba-exterior-9.jpg",
+      "centre": "jagadamba",
+      "kind": "exterior",
+      "sourceName": "Jagadamba.jpg",
+      "sha256": "4dc22f3790be4da69c5da534a2e76185bf9af085a331b5bc59c9efe14fa04415",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "tirupati-exterior-11.jpg",
+      "centre": "tirupati",
+      "kind": "exterior",
+      "sourceName": "Tirupati.jpg",
+      "sha256": "f4c1ec0dfc43d80829f914ce23ac6774a14d8b7503066f5870e50d346bf8e313",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "rajahmundry-exterior-12.jpg",
+      "centre": "rajahmundry",
+      "kind": "exterior",
+      "sourceName": "Rajahmundry.jpg",
+      "sha256": "825c0e461f651afc32ca0797a621bafc66b64ab26d9f1dcf96617b8840008f1e",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "mahbubnagar-exterior-13.jpg",
+      "centre": "mahbubnagar",
+      "kind": "exterior",
+      "sourceName": "Mahbubnagar.jpg",
+      "sha256": "ad1ec1645de8b19b6bcfa450d9569360d0b0060787d9848ed32b769bcb9015a0",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "dilsukhnagar-exterior-14.jpg",
+      "centre": "dilsukhnagar",
+      "kind": "exterior",
+      "sourceName": "Dilsukhnaga.jpg",
+      "sha256": "17ccbc6f74f1b435a49ddc351cfc0ae2517d5fa1e1be34ed47e575a19df0307d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "chandanagar-exterior-15.jpg",
+      "centre": "chandanagar",
+      "kind": "exterior",
+      "sourceName": "Chandanagar.jpg",
+      "sha256": "1c372c3b3a78abf29f377c3a5690a01f66fb2474fe02a6225f31c23622420569",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "begumpet-exterior-16.jpg",
+      "centre": "begumpet",
+      "kind": "exterior",
+      "sourceName": "Begumpet.jpg",
+      "sha256": "a27ce28783d6191a2d9001d66a96c7a6b349ad45c9999f45338f4946e92b250d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "attapur-exterior-17.jpg",
+      "centre": "attapur",
+      "kind": "exterior",
+      "sourceName": "Attapur.jpg",
+      "sha256": "cb58a92a359287dd765be201164a13577e6c0f78deac1f9f91e788757acc1622",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "eluru-exterior-18.jpg",
+      "centre": "eluru",
+      "kind": "exterior",
+      "sourceName": "Eluru.jpg",
+      "sha256": "742bb325e669a0df89f0ba6071add56307725864819a0a50daa32e569f9bd375",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ananthapuram-exterior-19.jpg",
+      "centre": "ananthapuram",
+      "kind": "exterior",
+      "sourceName": "Ananthapur.jpg",
+      "sha256": "02e1b7d9fab838597716a7b7dc50ead03973d60d42be3ac9eb9945df8e998447",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "eastmarredpally-exterior-20.jpg",
+      "centre": "eastmarredpally",
+      "kind": "exterior",
+      "sourceName": "East Maredpally.jpg",
+      "sha256": "7670ce0755fbe5c24856af330ba6201da853b42280f4084e635cbd45154af76b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gajuwaka-exterior-23.jpg",
+      "centre": "gajuwaka",
+      "kind": "exterior",
+      "sourceName": "Gajuwaka.jpg",
+      "sha256": "490dc9c4773216355e2c6015ef6924a8c96d26a2e032b4bfd6f70fd11205089f",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "guntur-exterior-24.jpg",
+      "centre": "guntur",
+      "kind": "exterior",
+      "sourceName": "Guntur.jpg",
+      "sha256": "1011c7e10240e40de68af2bf783e8f0f8573e98fe9f9c5a82a2eec4d9b12b55a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "karimnagar-exterior-25.jpg",
+      "centre": "karimnagar",
+      "kind": "exterior",
+      "sourceName": "Karimnagar.jpg",
+      "sha256": "c292bee12c0898b21c9484dd7684853414c00b9e66e3cae66c91d4508c02d9c6",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "indiranagar-exterior-26.jpg",
+      "centre": "indiranagar",
+      "kind": "exterior",
+      "sourceName": "Indira Nagar.jpg",
+      "sha256": "6c0faed1785a795f3cd4a296dffad1e880ba2c44f4d5d96101d6d8e4debccb61",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khajaguda-exterior-27.jpg",
+      "centre": "khajaguda",
+      "kind": "exterior",
+      "sourceName": "Khajaguda.jpg",
+      "sha256": "c34375f7d2c255c62913306656cf73c5b85a32cd5a177866d2d398870c22f8c7",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kukatpally-exterior-29.jpg",
+      "centre": "kukatpally",
+      "kind": "exterior",
+      "sourceName": "kukatpally.jpg",
+      "sha256": "78ffa6548396562dbf3c4d292fbf1f0821c46c4ca7d15fc928e689252a051b95",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kurnool-exterior-30.jpg",
+      "centre": "kurnool",
+      "kind": "exterior",
+      "sourceName": "Kurnool.jpg",
+      "sha256": "9a19187f74414a7e846cd679a2376a6a7ee68fa11dbc65778a1ec83f7b692a4c",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "madhurawada-exterior-31.jpg",
+      "centre": "madhurawada",
+      "kind": "exterior",
+      "sourceName": "Madhurwada.jpg",
+      "sha256": "ebf12d52bb01417f54a440ffa487f182c1504ba987e859fbdb7d70121984e5a6",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "lbnagar-exterior-32.jpg",
+      "centre": "lbnagar",
+      "kind": "exterior",
+      "sourceName": "LB Nagar.jpg",
+      "sha256": "251bf5fbe963b21d9ccc9c6c532509a31cf2c8a2d824dc173a05753da634b857",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nandyala-exterior-33.jpg",
+      "centre": "nandyala",
+      "kind": "exterior",
+      "sourceName": "Nandyala.jpg",
+      "sha256": "3f17be23f594892c3ac0b50cfc19d7e73e6d60b5107e33c370fa85a5d02ab50e",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nad-exterior-34.jpg",
+      "centre": "nad",
+      "kind": "exterior",
+      "sourceName": "NAD.jpg",
+      "sha256": "d927801d2b5b8c75f00397326a9c27347ffe0f02d29df5b85e31868d569f0122",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nallagandla-exterior-35.jpg",
+      "centre": "nallagandla",
+      "kind": "exterior",
+      "sourceName": "Nallagandla.jpg",
+      "sha256": "4e8d2d093cb2d9b7df6baca3cb52c4b88d74b3ebcc226abfe6d83efe6fa1b3ba",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nellore-exterior-36.jpg",
+      "centre": "nellore",
+      "kind": "exterior",
+      "sourceName": "Nellore.jpg",
+      "sha256": "e72a3ecea95754234b40ef7d6718b19c102a33c292a5ea7b421d9308e4df89f0",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ongole-exterior-37.jpg",
+      "centre": "ongole",
+      "kind": "exterior",
+      "sourceName": "Ongole.jpg",
+      "sha256": "3c56d554c2a5a44318050d7d226c17f968c8133e2b50132bd1d46a986c8a7c49",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "delhi-exterior-38.jpg",
+      "centre": "delhi",
+      "kind": "exterior",
+      "sourceName": "Delhi.jpg",
+      "sha256": "e0b2a5a048da2ab9c9c3294866ede927db459af7902aac5a816ccfefd69679c2",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "srnagar-exterior-39.jpg",
+      "centre": "srnagar",
+      "kind": "exterior",
+      "sourceName": "SRNagar.jpg",
+      "sha256": "7f0ef1ef946817c1ba7b654d9d63a20a91bfbcae61ae8b3b4022290a6bfd3904",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "warangal-exterior-40.jpg",
+      "centre": "warangal",
+      "kind": "exterior",
+      "sourceName": "Warangal.jpg",
+      "sha256": "64e79f5f81298b8aef0b28e14edcdf5bc53bc7a878ce313f15241454ae99a910",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "jayanagar-exterior-41.jpg",
+      "centre": "jayanagar",
+      "kind": "exterior",
+      "sourceName": "jayanagar.jpg",
+      "sha256": "fe6eea4e40511dec949c4bf5f5107c18a5fc5bed99feec392b5ee39cd263081e",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kakinada-exterior-42.jpg",
+      "centre": "kakinada",
+      "kind": "exterior",
+      "sourceName": "kakinada.jpg",
+      "sha256": "dcb0fd882b6cf1f3917e2ab02dbbfe63ec53dbd421b2856f1fb7376172e4f64a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kadapa-exterior-43.jpg",
+      "centre": "kadapa",
+      "kind": "exterior",
+      "sourceName": "kadapa.jpg",
+      "sha256": "5c1f53231b3ebe3971b68d30f8a65c9fc8e7b7cf81d2035addf1d6c630707b49",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "marathahalli-exterior-44.jpg",
+      "centre": "marathahalli",
+      "kind": "exterior",
+      "sourceName": "marathalli.jpg",
+      "sha256": "09130a2f151cca22c7f35c212d2087223190e554cc133d508ac823407d091b83",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "labbipet-exterior-45.jpg",
+      "centre": "labbipet",
+      "kind": "exterior",
+      "sourceName": "Labbipet.jpg",
+      "sha256": "e1eb9e8438aa6cd7175d580fc3bace65f84fa853c3c7074d9ac9bce4f61938af",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "miryalaguda-exterior-46.jpg",
+      "centre": "miryalaguda",
+      "kind": "exterior",
+      "sourceName": "miryalaguda.jpg",
+      "sha256": "c1fb0e1cc0aa92f5728d53863ecc8166f9bf1f68b10355567e694ba5b8ec147e",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nizamabad-exterior-47.jpg",
+      "centre": "nizamabad",
+      "kind": "exterior",
+      "sourceName": "nizamabad.jpg",
+      "sha256": "eb7cfe09b8280ccc8257cff53df4bf6b687ba7a3a557a8f078a75a0754a1c855",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nizampet-exterior-48.jpg",
+      "centre": "nizampet",
+      "kind": "exterior",
+      "sourceName": "nizampet.jpg",
+      "sha256": "9b772a797d21ba3361520dc73796d49b761dc7f0825db0daf020eb310f3f533d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "santoshnagar-exterior-49.jpg",
+      "centre": "santoshnagar",
+      "kind": "exterior",
+      "sourceName": "santoshnagar.jpg",
+      "sha256": "0b46cbad2143d60bff64d99585a4e28b05cebe09c08f848b7a222b2e8e884e23",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "srikakulam-exterior-50.jpg",
+      "centre": "srikakulam",
+      "kind": "exterior",
+      "sourceName": "srikakulam.jpg",
+      "sha256": "ad5f567e40bac539dc333e4424b9477af529bccfb1ec07324aaa9bfaa067625e",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "uppal-exterior-51.jpg",
+      "centre": "uppal",
+      "kind": "exterior",
+      "sourceName": "Uppal.jpg",
+      "sha256": "5477ee67cc1189d225382326d6b47433621d2ce69b65240a2becb35beacb9c93",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "vidyanagar-exterior-52.jpg",
+      "centre": "vidyanagar",
+      "kind": "exterior",
+      "sourceName": "vidyanagar.jpg",
+      "sha256": "9b9e8da7794ea06b64d9e302b9e87fe1211d02df23599854ea992d6694cee092",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "warangal-interior-0-1.jpg",
+      "centre": "warangal",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.50.36 AM.jpeg",
+      "sha256": "60376ad35c1b5a37fc55375f3496488678474911d30146a4a471c81da61edb20",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gurunanak-interior-1-0.jpg",
+      "centre": "gurunanak",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.04.10 PM (2).jpeg",
+      "sha256": "7877111676345d21e00e0a4ea4f0921b7387f19b0158b557ef22479eead41a58",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gurunanak-interior-1-1.jpg",
+      "centre": "gurunanak",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.04.11 PM (1).jpeg",
+      "sha256": "1e8c6901a8de7db71917cf947b84bf7909629d289ffbe16225e5a406d0d3e685",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gurunanak-interior-1-2.jpg",
+      "centre": "gurunanak",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.04.11 PM.jpeg",
+      "sha256": "db41479f06ab12ac9135f21d0ffb325f0d58c30a8efe40bf18bfff4d6767567a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "vidyanagar-interior-2-0.jpg",
+      "centre": "vidyanagar",
+      "kind": "interior",
+      "sourceName": "6077659911513902553.jpg",
+      "sha256": "589049a2e89fd64218d082d57712ce356dadbefbde4230039e5c2f26f78e399a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "uppal-interior-3-0.jpg",
+      "centre": "uppal",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.53.18 AM.jpeg",
+      "sha256": "c13c7d1d1122e32fda02ca825bcdf6aec0d4eb04711a5ddcaf46b3ecad49c264",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "uppal-interior-3-1.jpg",
+      "centre": "uppal",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.52.50 AM.jpeg",
+      "sha256": "5977ecd0038b288501aa6856f7c9da1997acba168bb75b3099557eb3a65ecdb7",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "uppal-interior-3-2.jpg",
+      "centre": "uppal",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.52.35 AM.jpeg",
+      "sha256": "4489ce2cd6d1435d736011b1a39940e0738003f9649fa69d0795ec23e9323929",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "tirupati-interior-4-1.jpg",
+      "centre": "tirupati",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 1.24.14 PM.jpeg",
+      "sha256": "7e1397f0be48605536519a3f3faaca5b25a4a24c2ea861464f494e8a0aa89151",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "tirupati-interior-4-2.jpg",
+      "centre": "tirupati",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 1.24.13 PM (2).jpeg",
+      "sha256": "b33e3d793c12cbc76bf4b26388bca3c0b2f0259b3e05ebdda57b3adc2dcdc8d5",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "suchitra-interior-5-1.jpg",
+      "centre": "suchitra",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 6.17.42 PM (2).jpeg",
+      "sha256": "d47f54e8e50501142089635cf4c4b5d13dd716c17156ffee03316535fa8d4e97",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "suchitra-interior-5-2.jpg",
+      "centre": "suchitra",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 6.17.42 PM (1).jpeg",
+      "sha256": "4b7021895097eab9656b04594bce3596fe1484b4a23342ed8a6411cf1b73c298",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "srnagar-interior-6-2.jpg",
+      "centre": "srnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 6.18.36 PM (1).jpeg",
+      "sha256": "d04d13a14bd00bbeb82cbba32386f291e6b09b596517b9fbd3cbe693fa638e39",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "srikakulam-interior-7-0.jpg",
+      "centre": "srikakulam",
+      "kind": "interior",
+      "sourceName": "6077659911513902545.jpg",
+      "sha256": "6c5372dd0a18e7be88a97897ca1524b82a793f19b79003de4aa9a5aeccace6c8",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "srikakulam-interior-7-1.jpg",
+      "centre": "srikakulam",
+      "kind": "interior",
+      "sourceName": "6077659911513902544.jpg",
+      "sha256": "dd761d743a6563f4a8308c3ab0612bf734aa8798ee8e9bfaeb2456dd05eab3df",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "srikakulam-interior-7-2.jpg",
+      "centre": "srikakulam",
+      "kind": "interior",
+      "sourceName": "6077659911513902543.jpg",
+      "sha256": "85d01ba177146c4d88fea607507dced850ec475de4ede333c6601d3c55f3bec7",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "delhi-interior-8-2.jpg",
+      "centre": "delhi",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 6.35.42 PM (1).jpeg",
+      "sha256": "25294cd4065ee60e6d5a13fa7bf721563b3d2a8b95904d8a68ce28139253b3b4",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "santoshnagar-interior-10-0.jpg",
+      "centre": "santoshnagar",
+      "kind": "interior",
+      "sourceName": "6077659911513902594.jpg",
+      "sha256": "b27ddf638b0f7021fd00f9062b35894d2c975f610c8ae200761ac5ce3c28918f",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "santoshnagar-interior-10-1.jpg",
+      "centre": "santoshnagar",
+      "kind": "interior",
+      "sourceName": "6077659911513902593.jpg",
+      "sha256": "4cfe11464cec304657a3b9f6ad4fd4c8fcb6ccac9cc14c47f16d447974befe6a",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "santoshnagar-interior-10-2.jpg",
+      "centre": "santoshnagar",
+      "kind": "interior",
+      "sourceName": "6077659911513902592.jpg",
+      "sha256": "3f74e3fb6012d7e4c19290bdf8b5600754b644fdb727d28fd7282f63ca428874",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "rajahmundry-interior-11-1.jpg",
+      "centre": "rajahmundry",
+      "kind": "interior",
+      "sourceName": "6077659911513902608.jpg",
+      "sha256": "a9c949fdcaa0a4d4fab3d96fe0669d7b526f14f0d84c04f132d63af95fe476cc",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "rajahmundry-interior-11-2.jpg",
+      "centre": "rajahmundry",
+      "kind": "interior",
+      "sourceName": "6077659911513902607.jpg",
+      "sha256": "a46342449ea960f335ac0d175c30ba8991cad5bb1f77125a42ed9f11dd729af3",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "pragathinagar-interior-12-0.jpg",
+      "centre": "pragathinagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.45.45 AM.jpeg",
+      "sha256": "a9f245a67a5e7eb33b8ab397e2fe30a8fb9c753b59d25f4054417f8956bc8afd",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "pragathinagar-interior-12-1.jpg",
+      "centre": "pragathinagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.45.44 AM (2).jpeg",
+      "sha256": "7e0d9cde1aef6d20deea455c10e0fc61beac93a3f7584fca5cfa9976fb15c05e",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "pragathinagar-interior-12-2.jpg",
+      "centre": "pragathinagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.45.44 AM (1).jpeg",
+      "sha256": "502df4fd4483acee5f25af233b7ad8fa77756508790a89c4f963ce343b609255",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ongole-interior-13-0.jpg",
+      "centre": "ongole",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.36.03 PM (5).jpeg",
+      "sha256": "8791bd2aedb30a0fe9a253a6601ed1b3b5cc9c45b56a84d1853f28a7757962f2",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ongole-interior-13-2.jpg",
+      "centre": "ongole",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.36.03 PM (4).jpeg",
+      "sha256": "4f004c9dce0be3916fd42f2d7f8fe914c84b055775c382fad2a2bcbb5b60eba8",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nizampet-interior-14-0.jpg",
+      "centre": "nizampet",
+      "kind": "interior",
+      "sourceName": "6079910744959946191.jpg",
+      "sha256": "2afb00f068ca62beb0ddd572a4662b8830509e077a0592f1a4aa6a1d991f9dd3",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nandyala-interior-17-1.jpg",
+      "centre": "nandyala",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.24.55 PM (1).jpeg",
+      "sha256": "3de83cb5414e31c17a435b667081ab2b84ae1aa9fdd5ede1fc1e97e444c62413",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nandyala-interior-17-2.jpg",
+      "centre": "nandyala",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.24.55 PM.jpeg",
+      "sha256": "e5a69a4bf9354ca91452b98ff2c13db3f69c22417d86ce49a72bccb04b226d78",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nallagandla-interior-18-1.jpg",
+      "centre": "nallagandla",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.11.15 PM (1).jpeg",
+      "sha256": "4d01a644b305e2b2112bba777a73f048222431b45c3962c5b4a9970f756d3e72",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nad-interior-19-0.jpg",
+      "centre": "nad",
+      "kind": "interior",
+      "sourceName": "6077659911513902618.jpg",
+      "sha256": "e70e6fe5739e7694b14dfc8d8533e737cbb2a063c26e6dcf7efd824c94b331d5",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "nad-interior-19-1.jpg",
+      "centre": "nad",
+      "kind": "interior",
+      "sourceName": "6077659911513902617.jpg",
+      "sha256": "237bc70952d7a1502ed0340a1b0bb8839226f44ac3ccd790dba5a6d59712e650",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "miryalaguda-interior-20-0.jpg",
+      "centre": "miryalaguda",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.54.37 AM.jpeg",
+      "sha256": "799f2b80220db864faa4f7c998fcc26eccaf15b7003289a1f2530f8d280a68cc",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "miryalaguda-interior-20-2.jpg",
+      "centre": "miryalaguda",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.54.36 AM.jpeg",
+      "sha256": "7bb6d82bef61dac29e3d76ad6f72664181e2486ce7dd0f4ff2aa2d8035411d71",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "marathahalli-interior-21-0.jpg",
+      "centre": "marathahalli",
+      "kind": "interior",
+      "sourceName": "6107426899618369216.jpg",
+      "sha256": "a50ef1b1237dad7a48944d27ecd259328ac07f4e0cf69fc365225e903860b9a1",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "marathahalli-interior-21-1.jpg",
+      "centre": "marathahalli",
+      "kind": "interior",
+      "sourceName": "6107426899618369215.jpg",
+      "sha256": "bdf8f77ab627ed913211dde37aefcb31928bba4f36ee8aba9bbb4f366f908fcf",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "mahbubnagar-interior-22-0.jpg",
+      "centre": "mahbubnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.57.09 AM (1).jpeg",
+      "sha256": "a27d5b75664b388f215f0c172eaeb0ba59eabfd5d6f14017f4bd8b6518b0a2dc",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "mahbubnagar-interior-22-1.jpg",
+      "centre": "mahbubnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.57.11 AM (1).jpeg",
+      "sha256": "f788c754b23eec7a973cfd49770138f76e5b5911d96a281cbac77d5bbe775bbd",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "mahbubnagar-interior-22-2.jpg",
+      "centre": "mahbubnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.57.11 AM.jpeg",
+      "sha256": "7a35568f2f740f1f1154c9459cd69bbf4798537f60de45189b450583d27e2458",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "lbnagar-interior-24-1.jpg",
+      "centre": "lbnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.24.50 PM (2).jpeg",
+      "sha256": "e510da0a76cd5fb5c8e8ab7f81df352f6895ccce02069dccaadd878f3baa4172",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "lbnagar-interior-24-2.jpg",
+      "centre": "lbnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.24.50 PM (1).jpeg",
+      "sha256": "dee2296255f50a1f44a996ecf689be6a192c078bcc346a13321e451075cb53c3",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "labbipet-interior-25-0.jpg",
+      "centre": "labbipet",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.04.52 PM (4).jpeg",
+      "sha256": "6ec1c0101444e55d869744707129b594962512970143550489546508b3f3edcd",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "labbipet-interior-25-1.jpg",
+      "centre": "labbipet",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.04.52 PM (3).jpeg",
+      "sha256": "fa4c7d8d075d91b433cd2faab82bf98fa514b41847c6fba0ef82312ed9c62768",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "labbipet-interior-25-2.jpg",
+      "centre": "labbipet",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.04.52 PM (2).jpeg",
+      "sha256": "62d73665d09b460bf8127d9d95b94987f60fdbe189d49649f6ab4777f860324c",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kurnool-interior-26-0.jpg",
+      "centre": "kurnool",
+      "kind": "interior",
+      "sourceName": "6109655734241922329.jpg",
+      "sha256": "363fb0bb74957aa0f8eda2e0d6e8aa948e246a063802f3c5af8fb3ba0bbeea8e",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kurnool-interior-26-1.jpg",
+      "centre": "kurnool",
+      "kind": "interior",
+      "sourceName": "6109655734241922331.jpg",
+      "sha256": "fedfbae91d0196f56583f9e6c4dc85e10faa8a3b68bcbbd9ffc05b3d59266a39",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kurnool-interior-26-2.jpg",
+      "centre": "kurnool",
+      "kind": "interior",
+      "sourceName": "6109655734241922332.jpg",
+      "sha256": "4036971c56a85a0c102e2ca2e26729e9bf0af08d47dff8fc8018cd92a9284151",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kukatpally-interior-27-1.jpg",
+      "centre": "kukatpally",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.09.45 PM (2).jpeg",
+      "sha256": "1f987e6a6b6373b2da6d3d0eae910dcbfa534a2ba3e7fdbb1535c412324b46e6",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kukatpally-interior-27-2.jpg",
+      "centre": "kukatpally",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.53.43 AM (5).jpeg",
+      "sha256": "1a48f59fa3f369ce2fdee608e5a30c7db19f1b20f48714e5198e3849a0dd1c78",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khammam-interior-28-0.jpg",
+      "centre": "khammam",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.55.24 AM (1).jpeg",
+      "sha256": "6069e9b4fdb9ee4a8e2b1b6c8a09792d80e80045fd60f773739c2a8bd87df2ac",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khammam-interior-28-1.jpg",
+      "centre": "khammam",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.55.24 AM.jpeg",
+      "sha256": "a8d74766720b58dc49887a2064ed0564ae37d62d25d3747cb7ebdfb37fb5bd15",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khammam-interior-28-2.jpg",
+      "centre": "khammam",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.55.23 AM (1).jpeg",
+      "sha256": "f7f6a1c1c4ae3a7e48c3c8a4c1f9d5d020d4eaafa5eb1265b708e50291c51e3d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khajaguda-interior-29-0.jpg",
+      "centre": "khajaguda",
+      "kind": "interior",
+      "sourceName": "6077659911513902588.jpg",
+      "sha256": "51e60fb4e7d4bd022d09bfcaa204c972f4bb03268c8175728de232acfa2abe2b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khajaguda-interior-29-1.jpg",
+      "centre": "khajaguda",
+      "kind": "interior",
+      "sourceName": "6077659911513902587.jpg",
+      "sha256": "38ee4ed91c8e2953a1197c77354ddcb7ed51ce87ef433f8161529145db03b2d9",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "khajaguda-interior-29-2.jpg",
+      "centre": "khajaguda",
+      "kind": "interior",
+      "sourceName": "6077659911513902586.jpg",
+      "sha256": "fa796c15eee1200b94b8512a4e0482e25f3201e1d58bbf064692c446506cb440",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "karimnagar-interior-30-0.jpg",
+      "centre": "karimnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.01.46 PM (1).jpeg",
+      "sha256": "92d23d63687460c97dd6f9ffca3941150bed3c93471aa3129ef56a6717f45c89",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "karimnagar-interior-30-1.jpg",
+      "centre": "karimnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.01.46 PM.jpeg",
+      "sha256": "9e73fbf79c569fe1da2969298cfbc88deff1bd905779e44a9f5601314c4d9866",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "karimnagar-interior-30-2.jpg",
+      "centre": "karimnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.01.45 PM (1).jpeg",
+      "sha256": "85e81140848afa32eebe994c72ef24f28808f04b2ec92829d938ac3496352413",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "kakinada-interior-31-2.jpg",
+      "centre": "kakinada",
+      "kind": "interior",
+      "sourceName": "6077659911513902565.jpg",
+      "sha256": "b976f3c93f0be2e80424dc3de0aa71255cbbd588c95dcec6c677e64768cc307d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "jagadamba-interior-34-0.jpg",
+      "centre": "jagadamba",
+      "kind": "interior",
+      "sourceName": "6077659911513902580.jpg",
+      "sha256": "2ec52cf3308394e26ffe7a66617e4ddd254b303efeed37a76a375159ef6e5e3c",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "jagadamba-interior-34-1.jpg",
+      "centre": "jagadamba",
+      "kind": "interior",
+      "sourceName": "6077659911513902576.jpg",
+      "sha256": "c202bde62a2c76a10e2eae8ac362b7f6a9104afbcc1fcf0e8dd652fe902ce97d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "jagadamba-interior-34-2.jpg",
+      "centre": "jagadamba",
+      "kind": "interior",
+      "sourceName": "6077659911513902577.jpg",
+      "sha256": "1ee38f1654ca811f28d13813e934a9b9b1ba32ab89048b70fb5edbe8cb7a033c",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "himayatnagar-interior-36-1.jpg",
+      "centre": "himayatnagar",
+      "kind": "interior",
+      "sourceName": "6077659911513902557 (2).jpg",
+      "sha256": "4fba8aa7c111f4c981459a2d6300ae72e34eae983033d52eb3175c40b0495a1f",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "himayatnagar-interior-36-2.jpg",
+      "centre": "himayatnagar",
+      "kind": "interior",
+      "sourceName": "6077659911513902556.jpg",
+      "sha256": "bd2f176d839ab484a0306174eb4285f59b22aaa3441d376d3f7e83dc7d2e0fff",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "guntur-interior-37-0.jpg",
+      "centre": "guntur",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.06.02 PM (3).jpeg",
+      "sha256": "f04e855f49bf644499d1a9fe161bad45178987cda7d15d756a95b959f42b93be",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "guntur-interior-37-1.jpg",
+      "centre": "guntur",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.06.02 PM (2).jpeg",
+      "sha256": "21ac5ea5568029890c372330547b77b3e60ae2e2671cd34e0f035c9a66814595",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "guntur-interior-37-2.jpg",
+      "centre": "guntur",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.06.02 PM (1).jpeg",
+      "sha256": "4465c71f1b4ea3be4942e1668c6c767ba407823e8aaa2ae01eeed4ef19881e48",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gajuwaka-interior-38-0.jpg",
+      "centre": "gajuwaka",
+      "kind": "interior",
+      "sourceName": "6077659911513902573.jpg",
+      "sha256": "fc25eaec39e041844431e355feed74f804329c5b3a5d5917edde0fe2d9c300f6",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gajuwaka-interior-38-2.jpg",
+      "centre": "gajuwaka",
+      "kind": "interior",
+      "sourceName": "6077659911513902571.jpg",
+      "sha256": "9191094fb8949a601c9b1784c72a3b1ae331fc336c7c599573e49b76c98db5ab",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gachibowli-interior-39-0.jpg",
+      "centre": "gachibowli",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.09.46 PM (2).jpeg",
+      "sha256": "09b0d03bd312561d38b598d411af87b45b0852c5368cefa16d9412ca8065fbf4",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gachibowli-interior-39-1.jpg",
+      "centre": "gachibowli",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.09.46 PM (1).jpeg",
+      "sha256": "fc557ba8e3974a71d97ed74e7dea308dc970f8efc4a594648957c67604bcad5c",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "gachibowli-interior-39-2.jpg",
+      "centre": "gachibowli",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.09.46 PM.jpeg",
+      "sha256": "a9e0f8f76957dfeeb447b01c38e0522735ad28e6bfbbbb18de03a618e57c2fb1",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "eluru-interior-40-1.jpg",
+      "centre": "eluru",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.01.01 PM.jpeg",
+      "sha256": "17a4c7542e5c25137076f84de986a64716444bfb01f62822aac1ab13c3aff477",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "eluru-interior-40-2.jpg",
+      "centre": "eluru",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.01.00 PM (2).jpeg",
+      "sha256": "7338f7db31e143f9afb5336de40f40eef7738a2af93bc84ac31361cc08695b84",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "eastmarredpally-interior-41-2.jpg",
+      "centre": "eastmarredpally",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.49.53 AM.jpeg",
+      "sha256": "3400e9fd8e3b15d76a2d29413668c03b2e5b55003b87268540d19228c3fb19af",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "dilsukhnagar-interior-42-0.jpg",
+      "centre": "dilsukhnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.24.01 PM (2).jpeg",
+      "sha256": "3f9e0757c000a043f3d8d6c8673d4c09c9bada4ec6165b8730f259468ed16b0d",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "dilsukhnagar-interior-42-2.jpg",
+      "centre": "dilsukhnagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.24.01 PM.jpeg",
+      "sha256": "6b5cbcb0888ba782849026370d1d58a565eacee90a85c470de7399d0b7c6f7c6",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "chandanagar-interior-43-2.jpg",
+      "centre": "chandanagar",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.12.11 PM (3).jpeg",
+      "sha256": "89bc1b0b0f5a4f09a44bc8de564ce65722acb17a48ebe44177b53bb9050c0844",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "bhimavaram-interior-44-0.jpg",
+      "centre": "bhimavaram",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.10.05 PM (3).jpeg",
+      "sha256": "a935c43b51246578361ee39b44ca88bf512ecf01330c2bd157e431c5cd8bc704",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "bhimavaram-interior-44-1.jpg",
+      "centre": "bhimavaram",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.10.05 PM (2).jpeg",
+      "sha256": "7cf2a8606f4d1f52ba8394a44d0b1f4fc228c43bacc41295b7b95b92098544c6",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "bhimavaram-interior-44-2.jpg",
+      "centre": "bhimavaram",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 12.10.05 PM (1).jpeg",
+      "sha256": "0c595c4052d4bc681c2e5ea5765c83fa0c245507937092edc83d525b189b0900",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "begumpet-interior-45-1.jpg",
+      "centre": "begumpet",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.52.43 AM (1).jpeg",
+      "sha256": "febc529d0482f0336a61f17b8efd2dcd9e11e0e7fed89ed3621af8a238e929b9",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "begumpet-interior-45-2.jpg",
+      "centre": "begumpet",
+      "kind": "interior",
+      "sourceName": "WhatsApp Image 2026-02-10 at 11.52.43 AM.jpeg",
+      "sha256": "d4804212f066f2d9e311eba653be6380e04baac60769f5eee810a93ec42a66f1",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "attapur-interior-46-0.jpg",
+      "centre": "attapur",
+      "kind": "interior",
+      "sourceName": "6077659911513902557 (1).jpg",
+      "sha256": "4fba8aa7c111f4c981459a2d6300ae72e34eae983033d52eb3175c40b0495a1f",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "attapur-interior-46-2.jpg",
+      "centre": "attapur",
+      "kind": "interior",
+      "sourceName": "6077659911513902561 (1).jpg",
+      "sha256": "20f6bd816bae868a16f558e9ca385d848da3376db430e5e97dae67b32deb595b",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ananthapuram-interior-47-0.jpg",
+      "centre": "ananthapuram",
+      "kind": "interior",
+      "sourceName": "OTRoom.jpeg",
+      "sha256": "93b646c2a59420bdd137037742e24883cf308e43ac35d681af312ff80399de15",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ananthapuram-interior-47-1.jpg",
+      "centre": "ananthapuram",
+      "kind": "interior",
+      "sourceName": "TherapyRoom.jpeg",
+      "sha256": "d9880f4d19fd872b2aba6d30a92a7a7b63cbcaccf035c61f16406f6b7b706168",
+      "reviewedOn": "2026-09-28"
+    },
+    {
+      "file": "ananthapuram-interior-47-2.jpg",
+      "centre": "ananthapuram",
+      "kind": "interior",
+      "sourceName": "ReceptionArea.jpeg",
+      "sha256": "b28a982d3033b9c0ca69522f73725fa196feea3140a74519051f01011a3751b3",
+      "reviewedOn": "2026-09-28"
+    }
+  ],
+  "unmatched": []
+}
