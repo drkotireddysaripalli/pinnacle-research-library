@@ -17,7 +17,7 @@ function harness({origin='https://www.pinnacleblooms.org',path='/speech-therapy'
 }
 test('no analytics before consent; valid consent sends only fixed CTA fields',()=>{
  const h=harness();h.click('hero-call','tel:+919100181181');assert.equal(h.scripts.length,0);assert.equal(h.events().length,0);
- h.choose('accepted');assert.equal(h.scripts.length,1);h.click('hero-call','tel:+919100181181');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll#contact-form-title');
+ h.choose('accepted');assert.equal(h.scripts.length,1);h.click('hero-call','tel:+919100181181');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry');
  assert.deepEqual(h.events().map(x=>x[1]),['page_view','phone_link_click','enquiry_link_click']);
  const serialized=JSON.stringify(h.win.dataLayer);assert.ok(!serialized.includes('private-child-detail'));assert.ok(!serialized.includes('gclid'));assert.ok(!serialized.includes('secret'));
  assert.ok(h.events().every(x=>x[2].page_referrer===''&&!x[2].page_location.includes('?')));

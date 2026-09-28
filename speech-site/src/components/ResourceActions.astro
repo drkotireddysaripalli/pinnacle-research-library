@@ -1,0 +1,11 @@
+<div class="print-actions"><button type="button" class="button outline" data-print-guide>Print this guide</button><button type="button" class="button outline" data-copy-guide>Copy guide link</button><span class="copy-status" role="status" data-copy-status></span></div>
+<script>
+  document.querySelector('[data-print-guide]')?.addEventListener('click',()=>window.print());
+  document.querySelector('[data-copy-guide]')?.addEventListener('click',async()=>{
+    const url=document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href;
+    const status=document.querySelector<HTMLElement>('[data-copy-status]');
+    if(!url||!status)return;
+    try{await navigator.clipboard.writeText(url);status.textContent='Guide link copied.';}
+    catch{status.textContent=url;}
+  });
+</script>

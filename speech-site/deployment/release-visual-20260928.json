@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-28",
+  "version": "046be99a-0765-45c7-9c82-5ff05e3862b6",
+  "versionNumber": 81,
+  "deployment": "8618d094-fbcc-4eab-bc12-b79cc2dc5158",
+  "rollbackVersion": "cfbb08ed-27f3-4bce-a5dc-c1326a1982cd",
+  "enquiryRoute": {
+    "id": "667cfaeb19e245ebbd4fbf306c664698",
+    "pattern": "www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india*",
+    "script": "pinnacle-verify-route",
+    "request_limit_fail_open": false
+  },
+  "configRuleBefore": {
+    "action": "set_config",
+    "action_parameters": {
+      "disable_rum": true
+    },
+    "description": "Speech edition: use explicit optional analytics; no automatic RUM injection",
+    "enabled": true,
+    "expression": "(http.host eq \"www.pinnacleblooms.org\" and http.request.uri.path in {\"/top-speech-therapy-center-india-proven-improvement-rate\" \"/speech-therapy/service-information\"})",
+    "id": "0964ba5392974b24b0f9cdd2b05f923c",
+    "last_updated": "2026-09-27T06:54:53.338441Z",
+    "ref": "speech_optional_analytics_20260927",
+    "version": "1"
+  },
+  "configRuleAfter": {
+    "action": "set_config",
+    "action_parameters": {
+      "disable_rum": true
+    },
+    "description": "Speech edition: use explicit optional analytics; no automatic RUM injection",
+    "enabled": true,
+    "expression": "(http.host eq \"www.pinnacleblooms.org\" and (http.request.uri.path in {\"/top-speech-therapy-center-india-proven-improvement-rate\" \"/speech-therapy/service-information\" \"/speech-therapy/first-visit-guide\" \"/speech-therapy/teacher-observation-guide\"} or (http.request.uri.path eq \"/enroll-autism-speech-aba-therapies-india\" and any(http.request.uri.args[\"entry\"][*] eq \"speech-assessment\"))))",
+    "id": "0964ba5392974b24b0f9cdd2b05f923c",
+    "last_updated": "2026-09-28T06:59:29.362158Z",
+    "ref": "speech_optional_analytics_20260927",
+    "version": "2"
+  },
+  "publicSpeechFiles": 49,
+  "verifyAssetsPreserved": 634,
+  "bindingsPreserved": true
+}

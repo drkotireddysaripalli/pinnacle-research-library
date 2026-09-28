@@ -1,0 +1,24 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import ResourceActions from '../../components/ResourceActions.astro';
+import AssessmentOffer from '../../components/AssessmentOffer.astro';
+import { speechContent } from '../../data/speech-content';
+import { speechOffer } from '../../data/speech-offer';
+import { url,phone } from '../../data/site';
+const path='/speech-therapy/first-visit-guide';
+---
+<PageLayout path={path} label="First-visit guide" title="Your First Speech Assessment: Family Guide | Pinnacle Blooms" description="A practical Pinnacle family guide: what to bring, what to ask and how to arrange your FREE speech assessment." shareImage={speechContent.image.source} imageAlt={speechContent.image.alt} imageCaption={speechContent.image.caption} citations={[url('/speech-therapy/service-information')]} documentOnly>
+ <article class="section wrap service-record">
+  <p class="eyebrow">Pinnacle Blooms Network · Family resource</p><h1>Your questions.<br/><em>A clearer first visit.</em></h1>
+  <p class="record-intro">You know the everyday moments that matter to your child. Bring a few examples, your questions and the reports you already have. You do not need to decide which therapy your child needs before speaking with us.</p>
+  <ResourceActions/>
+  <h2 id="arrange">Arrange the assessment</h2><p><AssessmentOffer/> <span>Speech and language assessment. Ongoing therapy is priced separately.</span></p><p>{speechOffer.confirmation} An enquiry does not reserve a confirmed appointment time.</p>
+  <div class="record-actions"><a class="button primary" href={speechOffer.url}>Arrange your FREE assessment</a><a class="button outline" href={phone.href}>Call {phone.display}</a></div>
+  <h2 id="bring">Bring what you already know</h2><ul class="guide-list"><li><strong>Your priorities:</strong> a moment you would like to become easier—asking for help, being understood, making a choice or joining an activity.</li><li><strong>Familiar examples:</strong> what happened, who was there, how your child communicated and what support helped.</li><li><strong>Existing reports:</strong> relevant documents you already have. Ask the centre what is useful for this appointment.</li><li><strong>Your questions:</strong> write them down if that helps. Teacher observations can add another everyday perspective.</li></ul>
+  <h2 id="confirm">Confirm these details with the centre</h2><ul class="guide-list"><li>Who will conduct the assessment, their qualifications and the communication languages available.</li><li>The appointment time and approximate duration. The current service guide describes about one hour, depending on your child.</li><li>How you can participate, and how the visit can accommodate your child’s communication, comfort and breaks.</li><li>What the written report will contain, when it will be ready and how findings will be discussed.</li><li>Any recommended next steps, alternatives, ongoing therapy fees and schedule before enrolment.</li></ul>
+  <h2 id="next">Leave with the next step understood</h2><p>Ask the team to explain the starting picture, the priorities discussed with you and what happens next. Your child’s own goals and needs shape the plan.</p>
+  <p><a href="/speech-therapy/teacher-observation-guide">Use the home and classroom observation guide →</a></p>
+  <h2 id="source">Source and citation</h2><p>Publisher: Pinnacle Blooms Network, a brand of Bharath Healthcare Laboratories Private Limited. Published 28 September 2026. Service arrangements are based on the <a href="/speech-therapy/service-information">dated speech-service information</a>; confirm your appointment’s details with the centre.</p><p>Suggested citation: Pinnacle Blooms Network. <em>Your first speech assessment: family guide.</em> 28 September 2026. <a href={url(path)}>{url(path)}</a></p>
+  <p><a class="text-link" href={url(speechContent.path)}>Speech therapy and the PinnacleAI pathway →</a> · <a href="/verify/">Explore the evidence →</a></p>
+ </article>
+</PageLayout>

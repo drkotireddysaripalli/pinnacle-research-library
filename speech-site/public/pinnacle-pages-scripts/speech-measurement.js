@@ -82,6 +82,6 @@
     if (!link) return;
     const placement=link.dataset.cta,href=link.getAttribute('href');
     if (callPlacements.has(placement) && href==='tel:+919100181181') send('phone_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'national_helpline_9100181181'});
-    if (enquiryPlacements.has(placement) && href===origin+'/enroll#contact-form-title') send('enquiry_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'existing_enrolment_form'});
+    if (enquiryPlacements.has(placement) && href===origin+'/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry') send('enquiry_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'existing_enrolment_form'});
   });
 })();

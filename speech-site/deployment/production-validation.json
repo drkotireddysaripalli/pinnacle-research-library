@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-27T12:30:51.346Z",
+  "checkedAt": "2026-09-28T07:04:29.399Z",
   "checks": [
     {
       "name": "Canonical speech response",
@@ -23,6 +23,66 @@
       "details": [
         {
           "path": "/pinnacle-pages-assets/bhcl-emblem-official.BOaEeIEj_ZCvf9T.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/exterior.Bh87jXgf_JNgOI.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/exterior.Bh87jXgf_Lpjal.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/exterior.Bh87jXgf_ZPHhkS.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/exterior.Bh87jXgf_ZvB8vn.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/interior-3.3cpAiMLg_14vBHh.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/interior-3.3cpAiMLg_1N7xuH.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/interior-3.3cpAiMLg_Z1ei77z.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/interior-3.Dg1Ip0j5_1d5TlR.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/interior-3.Dg1Ip0j5_ttXyr.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/interior-3.Dg1Ip0j5_Z1OjKgp.webp",
           "status": 200,
           "type": "image/webp",
           "sameBytes": true
@@ -58,33 +118,9 @@
           "sameBytes": true
         },
         {
-          "path": "/pinnacle-pages-assets/speech-content.KNnnd_Or.css",
+          "path": "/pinnacle-pages-assets/speech-content.DFYLSTb8.css",
           "status": 200,
           "type": "text/css; charset=utf-8",
-          "sameBytes": true
-        },
-        {
-          "path": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_1u7mo7.webp",
-          "status": 200,
-          "type": "image/webp",
-          "sameBytes": true
-        },
-        {
-          "path": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_CHIA1.webp",
-          "status": 200,
-          "type": "image/webp",
-          "sameBytes": true
-        },
-        {
-          "path": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_Z36ofS.webp",
-          "status": 200,
-          "type": "image/webp",
-          "sameBytes": true
-        },
-        {
-          "path": "/pinnacle-pages-assets/speech-everyday-story.wPFU5fBK_ZQB1uM.webp",
-          "status": 200,
-          "type": "image/webp",
           "sameBytes": true
         },
         {
@@ -136,6 +172,60 @@
           "sameBytes": true
         },
         {
+          "path": "/pinnacle-pages-assets/speech-life-direction-20260928.e9wbKRV9_1C3NhL.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-life-direction-20260928.e9wbKRV9_Z1VyuQ8.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-life-direction-20260928.e9wbKRV9_ZAIGvl.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-life-direction-20260928.e9wbKRV9_ZYOXR8.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-observe-adjust-20260928.B9QKTgo9_22KAyT.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-observe-adjust-20260928.B9QKTgo9_Z14CzWv.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-observe-adjust-20260928.B9QKTgo9_Z21m6Vv.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-observe-adjust-20260928.B9QKTgo9_Z286D1I.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-assets/speech-share-20260928.XIRXvMWa_Z2gsgtw.webp",
+          "status": 200,
+          "type": "image/webp",
+          "sameBytes": true
+        },
+        {
           "path": "/pinnacle-pages-fonts/OFL-Sintony.txt",
           "status": 200,
           "type": "text/plain; charset=utf-8",
@@ -151,6 +241,12 @@
           "path": "/pinnacle-pages-fonts/sintony-latin.woff2",
           "status": 200,
           "type": "font/woff2",
+          "sameBytes": true
+        },
+        {
+          "path": "/pinnacle-pages-scripts/speech-enquiry-origin-v42.js",
+          "status": 200,
+          "type": "text/javascript; charset=utf-8",
           "sameBytes": true
         },
         {
@@ -196,6 +292,12 @@
           "sameBytes": true
         },
         {
+          "path": "/speech-therapy/first-visit-guide",
+          "status": 200,
+          "type": "text/html; charset=utf-8",
+          "sameBytes": true
+        },
+        {
           "path": "/speech-therapy/service-information",
           "status": 200,
           "type": "text/html; charset=utf-8",
@@ -203,6 +305,12 @@
         },
         {
           "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "type": "text/html; charset=utf-8",
+          "sameBytes": true
+        },
+        {
+          "path": "/speech-therapy/teacher-observation-guide",
           "status": 200,
           "type": "text/html; charset=utf-8",
           "sameBytes": true
@@ -266,47 +374,45 @@
       "ok": true,
       "details": [
         {
-          "path": "/",
-          "status": 200,
-          "canonical": "https://www.pinnacleblooms.org/",
-          "sameTextHash": true
-        },
-        {
           "path": "/verify/",
           "status": 200,
           "canonical": "https://www.pinnacleblooms.org/verify/",
-          "sameTextHash": true
+          "sameBytes": true
         },
         {
-          "path": "/verify/evidence/records/fsc.html",
+          "path": "/verify/evidence/evidence.json",
           "status": 200,
-          "canonical": "https://www.pinnacleblooms.org/verify/evidence/records/fsc.html",
-          "sameTextHash": true
+          "sameBytes": true
+        },
+        {
+          "path": "/verify/evidence/fsc.pdf",
+          "status": 200,
+          "sameBytes": true
         },
         {
           "path": "/verify/evidence/pinnacleai-regulatory-journey.html",
           "status": 200,
           "canonical": "https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html",
-          "sameTextHash": true
+          "sameBytes": true
         },
         {
           "path": "/national-autism-helpline",
           "status": 200,
           "canonical": "https://www.pinnacleblooms.org/national-autism-helpline",
-          "sameTextHash": true
+          "sameBytes": true
         },
         {
           "path": "/enroll",
           "status": 200,
           "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
-          "sameTextHash": false,
+          "sameBytes": true,
           "form": true
         },
         {
           "path": "/payonline",
           "status": 200,
           "canonical": "https://www.pinnacleblooms.org/epass?landing=payonline",
-          "sameTextHash": false
+          "sameBytes": false
         }
       ]
     }

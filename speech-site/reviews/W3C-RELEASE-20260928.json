@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-09-28T07:04:31.691Z",
+  "results": [
+    {
+      "file": "index.html",
+      "status": 200,
+      "messages": [],
+      "errors": []
+    },
+    {
+      "file": "speech-therapy/service-information.html",
+      "status": 200,
+      "messages": [],
+      "errors": []
+    },
+    {
+      "file": "speech-therapy/first-visit-guide.html",
+      "status": 200,
+      "messages": [],
+      "errors": []
+    },
+    {
+      "file": "speech-therapy/teacher-observation-guide.html",
+      "status": 200,
+      "messages": [],
+      "errors": []
+    }
+  ]
+}

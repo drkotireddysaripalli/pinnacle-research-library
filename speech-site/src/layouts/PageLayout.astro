@@ -1,4 +1,5 @@
 ---
+import { speechOffer } from '../data/speech-offer';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import { getImage } from 'astro:assets';
@@ -34,6 +35,6 @@ const schema = {'@context':'https://schema.org','@graph':[
 </head><body class:list={{'focused-campaign':focused}} data-page-variant={focused ? 'focused' : 'service'}>
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
-  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={phone.href} data-cta="mobile-call">Call {phone.display}</a><a href={url('/enroll#contact-form-title')} data-cta="mobile-assessment">Assessment enquiry →</a></nav>
+  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={phone.href} data-cta="mobile-call">Call {phone.display}</a><a href={speechOffer.url} data-cta="mobile-assessment">Assessment enquiry →</a></nav>
   <script is:inline src="/pinnacle-pages-scripts/speech-measurement.js" defer></script>
 </body></html>

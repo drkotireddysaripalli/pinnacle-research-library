@@ -1,4 +1,5 @@
 ---
+import { speechOffer } from '../data/speech-offer';
 const { compact = false } = Astro.props;
 ---
-<span class:list={['assessment-offer', { compact }]}><span class="offer-reference"><span class="sr-only">Listed value </span><del>₹25,999</del></span><strong><span class="sr-only">Now </span>FREE</strong></span>
+<span class:list={['assessment-offer', { compact }]}><span class="offer-reference"><span class="sr-only">Listed value </span><del>{speechOffer.listedDisplay}</del></span><strong><span class="sr-only">Now </span>{speechOffer.display}</strong></span>

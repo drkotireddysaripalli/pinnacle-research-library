@@ -1,4 +1,5 @@
-{
+import { speechOffer } from './speech-offer';
+export const speechServiceFacts = {
   "title": "Pinnacle speech-service information",
   "url": "https://www.pinnacleblooms.org/speech-therapy/service-information",
   "checkedOn": "2026-09-27",
@@ -26,8 +27,13 @@
     "listedValue": 25999,
     "confirmedOn": "2026-09-27",
     "confirmedBy": "Pinnacle Blooms Network",
-    "bookingUrl": "https://www.pinnacleblooms.org/enroll#contact-form-title",
+    "bookingUrl": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry",
     "scope": "Assessment only; ongoing therapy is priced separately."
   },
-  "offerHistory": "Current offer and listed value confirmed by Pinnacle on 27 September 2026; supersedes earlier campaign price information."
-}
+  "offerHistory": "Current offer and listed value confirmed by Pinnacle on 27 September 2026; supersedes earlier campaign price information.",
+  "updatedOn": "2026-09-28",
+  "appointmentConfirmation": "The team contacts the family to confirm the centre and appointment. An enquiry is not a confirmed appointment."
+};
+speechServiceFacts.assessmentOffer.bookingUrl=speechOffer.url;
+speechServiceFacts.assessmentOffer.price=speechOffer.price;
+speechServiceFacts.assessmentOffer.listedValue=speechOffer.listedValue;

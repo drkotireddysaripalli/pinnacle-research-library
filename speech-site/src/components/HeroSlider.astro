@@ -1,4 +1,5 @@
 ---
+import { speechOffer } from '../data/speech-offer';
 import { Image } from 'astro:assets';
 import Icon from './Icon.astro';
 import { phone, url } from '../data/site';
@@ -17,10 +18,10 @@ const slides = [{image:content.image.source,alt:content.image.alt,caption:conten
       <p class="hero-intro"><strong>{content.hero.lead}</strong> {content.hero.copy}</p>
       <ol class="hero-mechanism" aria-label="Everyday goals">{content.hero.moments.map(moment=><li><Icon name={moment.icon} size={22} />{moment.label}</li>)}</ol>
       {content.assessmentOffer && <div class="hero-assessment-offer"><span>Speech &amp; language assessment</span><AssessmentOffer compact /></div>}
-      <div class="hero-actions"><a class="button primary" href={phone.href} data-cta="hero-call"><Icon name="phone" />Call {phone.display}</a><a class="button outline" href={url('/enroll#contact-form-title')} data-cta="hero-assessment">{content.assessmentOffer ? 'Book your FREE assessment' : 'Request an assessment'} <Icon name="arrow" /></a></div>
-      <p class="guidance-note">Free guidance, 24/7. Ongoing therapy is priced separately.</p>
+      <div class="hero-actions"><a class="button primary" href={phone.href} data-cta="hero-call"><Icon name="phone" />Call {phone.display}</a><a class="button outline" href={speechOffer.url} data-cta="hero-assessment">{content.assessmentOffer ? 'Arrange your FREE assessment' : 'Request an assessment'} <Icon name="arrow" /></a></div>
+      <p class="guidance-note">Our team confirms your assessment appointment. Ongoing therapy is priced separately.</p>
       <div class="hero-evidence"><Icon name="shield" size={18} /><span>PinnacleAI software: <a href={url('/verify/evidence/records/md5.html')}>MD-5 licence</a> · <a href={url('/verify/evidence/bis.pdf#page=2')}>BIS scope</a></span></div>
-      <a class="hero-discover" href="#everyday-communication">See what this means for your child <span aria-hidden="true">↓</span></a>
+      <a class="hero-discover" href="#first-visit">See what to expect at your first visit <span aria-hidden="true">↓</span></a>
     </div>
     <div class="hero-visual" data-carousel role="region" aria-roledescription="carousel" aria-label="Communication in everyday life">
       {slides.map((slide, index) => <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label={(index+1)+' of '+slides.length} hidden={index!==0}>

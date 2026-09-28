@@ -11,6 +11,9 @@
 - [PinnacleAI regulatory journey and FSC](https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html)
 - [Pinnacle / BHCL National Autism Helpline](https://www.pinnacleblooms.org/national-autism-helpline): 9100 181 181; telephone +919100181181. Pinnacle-operated parent guidance and appointment enquiries.
 
-Operator: Bharath Healthcare Laboratories Private Limited. Brand: Pinnacle Blooms Network. Book the FREE speech and language assessment through the existing enrolment page or call 9100 181 181. Ongoing therapy fees and appointments are arranged with the centre.
+Operator: Bharath Healthcare Laboratories Private Limited. Brand: Pinnacle Blooms Network. Arrange the FREE speech and language assessment through the existing enrolment page or call 9100 181 181. Ongoing therapy fees and appointments are arranged with the centre.
 
 - [Speech-page claims and their sources](https://www.pinnacleblooms.org/pinnacle-pages-data/speech-evidence.txt): relevant sections, evidence types and exact source links. [Structured source map](https://www.pinnacleblooms.org/pinnacle-pages-data/speech-evidence.json).
+
+- [First-visit guide](https://www.pinnacleblooms.org/speech-therapy/first-visit-guide): printable family preparation and questions; appointments require team confirmation.
+- [Teacher observation guide](https://www.pinnacleblooms.org/speech-therapy/teacher-observation-guide): a printable shared observation framework, not a diagnostic or validated assessment instrument. Keep individual child notes private.
