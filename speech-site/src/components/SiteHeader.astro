@@ -20,7 +20,7 @@ const quickActions = navigation.footerColumns.flat().filter(g => g.links.length 
         <a class="portal-location" href={url('/contact')} aria-label="Find a Pinnacle centre"><Icon name="pin" /></a>
         <details class="portal-search"><summary aria-label="Search Pinnacle"><Icon name="search" /></summary><form action={url('/search')} method="get"><label for="portal-search-input">Search Pinnacle</label><div><input id="portal-search-input" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
         <details class="portal-directory">
-          <summary><Icon name="menu" /><span>Menu</span></summary>
+          <summary aria-label="Menu"><Icon name="menu" /><span>Menu</span></summary>
           <nav class="portal-directory-panel" aria-label="Complete site navigation">
             <div class="portal-mobile-main">{[...navigation.mobileExtras,...navigation.main].map(link=><a href={url(link.url)}>{link.label}</a>)}</div>
             <div class="portal-directory-grid">{directoryGroups.map(group=><section><h2><Icon name={group.icon} />{group.title}</h2><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></section>)}</div>

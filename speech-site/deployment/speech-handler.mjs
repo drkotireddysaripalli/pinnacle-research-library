@@ -28,6 +28,8 @@ export async function serveSpeech(request,env,inventory){
  headers.set('content-type',MIME[key.slice(key.lastIndexOf('.'))]||'application/octet-stream');
  headers.set('x-content-type-options','nosniff');headers.set('referrer-policy','strict-origin-when-cross-origin');
  headers.set('x-pinnacle-speech-release','2026-09-28');
+ // Preserve search and answer retrieval signals in Cloudflare Markdown conversion.
+ if(isHtml)headers.set('content-signal','search=yes, ai-input=yes');
  headers.set('cache-control',key.startsWith('/pinnacle-pages-assets/')?'public, max-age=31536000, immutable':'public, max-age=60, must-revalidate');
  const etag='"speech-'+inventory[key]+'"';headers.set('etag',etag);
  if(isHtml){headers.set('x-robots-tag','index, follow, max-image-preview:large');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");}

@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-09-28T08:15:37.559Z",
+  "results": [
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "htmlStatus": 200,
+      "htmlType": "text/html; charset=utf-8",
+      "htmlSha256": "3bd4e45ece79cbfe77fd2f89a9afc0ffb8f35ffd9e54393fba4ad1106bcd6ef3",
+      "htmlMatchesStagedBuild": true,
+      "markdownStatus": 200,
+      "markdownType": "text/markdown; charset=utf-8",
+      "vary": "accept-encoding, accept",
+      "contentSignal": "search=yes, ai-input=yes",
+      "markdownBytes": 29757,
+      "htmlBytes": 120842,
+      "structuredDataRetained": true,
+      "hasOrganization": true,
+      "hasTelephone": true,
+      "isActuallyMarkdown": true
+    },
+    {
+      "path": "/speech-therapy/service-information",
+      "htmlStatus": 200,
+      "htmlType": "text/html; charset=utf-8",
+      "htmlSha256": "9314ba533f9b8faef42c404fd68b5d047609dbd4b035bd87015ffd080f0d087d",
+      "htmlMatchesStagedBuild": true,
+      "markdownStatus": 200,
+      "markdownType": "text/markdown; charset=utf-8",
+      "vary": "accept-encoding, accept",
+      "contentSignal": "search=yes, ai-input=yes",
+      "markdownBytes": 5250,
+      "htmlBytes": 54754,
+      "structuredDataRetained": true,
+      "hasOrganization": true,
+      "hasTelephone": true,
+      "isActuallyMarkdown": true
+    },
+    {
+      "path": "/speech-therapy/first-visit-guide",
+      "htmlStatus": 200,
+      "htmlType": "text/html; charset=utf-8",
+      "htmlSha256": "b527fc09a55e8e562c2ba55781c9978f25aeee0ad85c77ab85aa13f357651e80",
+      "htmlMatchesStagedBuild": true,
+      "markdownStatus": 200,
+      "markdownType": "text/markdown; charset=utf-8",
+      "vary": "accept-encoding, accept",
+      "contentSignal": "search=yes, ai-input=yes",
+      "markdownBytes": 5250,
+      "htmlBytes": 55423,
+      "structuredDataRetained": true,
+      "hasOrganization": true,
+      "hasTelephone": true,
+      "isActuallyMarkdown": true
+    },
+    {
+      "path": "/speech-therapy/teacher-observation-guide",
+      "htmlStatus": 200,
+      "htmlType": "text/html; charset=utf-8",
+      "htmlSha256": "528a72514d10a7d4ddd0a66bc6612fc640cb244c4fc3bea05fc8ea46c660ba17",
+      "htmlMatchesStagedBuild": true,
+      "markdownStatus": 200,
+      "markdownType": "text/markdown; charset=utf-8",
+      "vary": "accept-encoding, accept",
+      "contentSignal": "search=yes, ai-input=yes",
+      "markdownBytes": 5323,
+      "htmlBytes": 55440,
+      "structuredDataRetained": true,
+      "hasOrganization": true,
+      "hasTelephone": true,
+      "isActuallyMarkdown": true
+    }
+  ],
+  "controls": [
+    {
+      "path": "/verify/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": null,
+      "cacheControl": "public, max-age=60, must-revalidate"
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": null,
+      "cacheControl": "public, max-age=60, must-revalidate"
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": null,
+      "cacheControl": "public, max-age=300"
+    },
+    {
+      "path": "/enroll",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "DYNAMIC",
+      "cacheControl": "private, max-age=7192"
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india?entry=speech-assessment",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "DYNAMIC",
+      "cacheControl": "private, no-store"
+    }
+  ]
+}
