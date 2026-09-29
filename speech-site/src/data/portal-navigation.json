@@ -84,8 +84,16 @@
       "url": "/leadership"
     },
     {
+      "label": "Our Team",
+      "url": "/staff"
+    },
+    {
       "label": "Centres",
       "url": "/centers"
+    },
+    {
+      "label": "Parent stories",
+      "url": "/allmirracles"
     },
     {
       "label": "Recognition",
@@ -169,7 +177,7 @@
         },
         {
           "label": "Adult Services",
-          "url": "/contact"
+          "url": "/contact-national-autism-helpline-24-7"
         },
         {
           "label": "Assessment",
@@ -303,23 +311,39 @@
           },
           {
             "label": "Vision",
-            "url": "/about#Vision-section"
+            "url": "/about-pinnacle-proven-improvement-rate#Vision-section"
           },
           {
             "label": "Mission",
-            "url": "/about#Mission-section"
+            "url": "/about-pinnacle-proven-improvement-rate#Mission-section"
           },
           {
             "label": "Values",
-            "url": "/about#Values-section"
+            "url": "/about-pinnacle-proven-improvement-rate#Values-section"
           },
           {
             "label": "Bharath Healthcare Laboratories Private Limited",
-            "url": "/about#BHCL-section"
+            "url": "/about-pinnacle-proven-improvement-rate#BHCL-section"
           },
           {
             "label": "Kotii Group of Technological Ventures R&D P LIMITED",
-            "url": "/about#KGV-section"
+            "url": "/about-pinnacle-proven-improvement-rate#KGV-section"
+          },
+          {
+            "label": "Our Team",
+            "url": "/staff"
+          },
+          {
+            "label": "Parent stories",
+            "url": "/allmirracles"
+          },
+          {
+            "label": "Media coverage",
+            "url": "/media-coverage"
+          },
+          {
+            "label": "Events",
+            "url": "/events"
           }
         ],
         "icon": "heart"
@@ -407,7 +431,7 @@
         "links": [
           {
             "label": "Download Resources",
-            "url": "/all-resources"
+            "url": "/autism-speech-aba-parent-family-resources"
           }
         ],
         "icon": "download"
@@ -427,7 +451,7 @@
         "links": [
           {
             "label": "Assessments",
-            "url": "/assesments"
+            "url": "/speech-aba-autism-assessments"
           }
         ],
         "icon": "plan"
@@ -457,7 +481,7 @@
         "links": [
           {
             "label": "News",
-            "url": "/news"
+            "url": "/autism-speech-aba-news"
           }
         ],
         "icon": "send"
@@ -467,6 +491,10 @@
       {
         "title": "Therapy Services",
         "links": [
+          {
+            "label": "All therapy services",
+            "url": "/top-autism-therapy-services-india-proven-improvement-rate"
+          },
           {
             "label": "Autism therapy",
             "url": "/autism-therapy"
@@ -690,6 +718,10 @@
             "url": "https://pediatricians.pinnacleblooms.org/"
           },
           {
+            "label": "Ask Pinnacle · answers & guidance",
+            "url": "https://pinnacleblooms.org/ask/"
+          },
+          {
             "label": "Licences, research & evidence",
             "url": "/verify/"
           },
@@ -729,7 +761,7 @@
     },
     {
       "label": "CONTACT US",
-      "url": "/contact"
+      "url": "/contact-national-autism-helpline-24-7"
     }
   ],
   "locations": [
@@ -779,7 +811,7 @@
     },
     {
       "label": "Vijayawada, AP, IN",
-      "url": "/contact#vijayawada"
+      "url": "/contact-national-autism-helpline-24-7#vijayawada"
     },
     {
       "label": "Vishakapatnam, AP, IN",
@@ -791,21 +823,33 @@
     },
     {
       "label": "Vanasthalipuram, Hyderabad, TS, IN",
-      "url": "/contact#vanasthalipuram"
+      "url": "/contact-national-autism-helpline-24-7#vanasthalipuram"
     },
     {
       "label": "Gachibowli, Hyderabad, TS, IN",
-      "url": "/contact#gachibowli"
+      "url": "/contact-national-autism-helpline-24-7#gachibowli"
     }
   ],
   "legal": [
     {
-      "label": "Policies",
+      "label": "Privacy Policy",
       "url": "/privacy-policy"
     },
     {
-      "label": "Terms & Conditions",
-      "url": "/terms-of-service"
+      "label": "Terms of Use",
+      "url": "/terms-of-use"
+    },
+    {
+      "label": "Cookie Policy",
+      "url": "/cookie-policy"
+    },
+    {
+      "label": "Payment & Billing",
+      "url": "https://books.pinnacleblooms.org/payment-and-billing"
+    },
+    {
+      "label": "Copyright & Intellectual Property",
+      "url": "/copyright-and-intellectual"
     },
     {
       "label": "Age Restriction Policy",

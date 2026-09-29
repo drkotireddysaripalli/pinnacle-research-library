@@ -43,6 +43,27 @@ check('New speech submenu targets exist',nav.therapy.find(x=>x.label==='Speech T
 check('No duplicate HTML IDs',ids.size===[...html.matchAll(/\bid="([^"]+)"/g)].length);
 check('Official Pinnacle TV channel preserved',hrefs.has('https://www.youtube.com/channel/UCAAuGmvPSBRiCnDlEcXYwEQ'));
 check('Footer portal destinations preserved',['https://materials.pinnacleblooms.org/','https://interventions.pinnacleblooms.org/','https://pediatricians.pinnacleblooms.org/'].every(x=>hrefs.has(x)));
+check('Complete navigation exposes all high-value site hubs',[
+  'https://pinnacleblooms.org/ask/',
+  full('/staff'),
+  full('/allmirracles'),
+  full('/top-autism-therapy-services-india-proven-improvement-rate'),
+  full('/media-coverage'),
+  full('/events')
+].every(x=>hrefs.has(x)));
+check('Footer uses canonical policy destinations',[
+  '/privacy-policy',
+  '/terms-of-use',
+  '/cookie-policy',
+  'https://books.pinnacleblooms.org/payment-and-billing',
+  '/copyright-and-intellectual'
+].every(x=>hrefs.has(full(x)))&&!hrefs.has(full('/terms-of-service')));
+check('Redirecting utility aliases are replaced with direct canonicals',[
+  '/speech-aba-autism-assessments',
+  '/autism-speech-aba-parent-family-resources',
+  '/autism-speech-aba-news',
+  '/contact-national-autism-helpline-24-7'
+].every(x=>hrefs.has(full(x)))&&!['/assesments','/all-resources','/news','/contact'].some(x=>hrefs.has(full(x))));
 check('Full action strip retained',html.includes('Join Certified Course')&&hrefs.has(full('/certified-courses')));
 const result={checkedAt:new Date().toISOString(),checksPassed:checks.length,documentedLinkEntries:links.length,checks};
 fs.writeFileSync('PORTAL-VALIDATION-20260927.json',JSON.stringify(result,null,2)+'\n');

@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-29T09:37:16.973Z",
-  "checksPassed": 26,
-  "documentedLinkEntries": 180,
+  "checkedAt": "2026-09-29T10:17:00.752Z",
+  "checksPassed": 29,
+  "documentedLinkEntries": 191,
   "checks": [
     "Complete documented portal navigation is present",
     "Five priority therapy menus have native disclosure controls",
@@ -28,6 +28,9 @@
     "No duplicate HTML IDs",
     "Official Pinnacle TV channel preserved",
     "Footer portal destinations preserved",
+    "Complete navigation exposes all high-value site hubs",
+    "Footer uses canonical policy destinations",
+    "Redirecting utility aliases are replaced with direct canonicals",
     "Full action strip retained"
   ]
 }

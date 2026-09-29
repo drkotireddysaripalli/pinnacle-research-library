@@ -1,8 +1,12 @@
 import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
+import path from 'node:path';
 
 const origin='https://www.pinnacleblooms.org';
+const expectedVersion=Number(process.argv[2]||106);
+const outputPath=path.resolve(process.argv[3]||'deployment/shared-shell-production-v106-20260929.json');
+const releaseMarker=process.argv[4]||`shared-shell-v${expectedVersion}-20260929`;
 const paths=[
   '/top-speech-therapy-center-india-proven-improvement-rate',
   '/enroll-autism-speech-aba-therapies-india',
@@ -16,7 +20,7 @@ const headers=[];
 const footers=[];
 
 for(const path of paths){
-  const response=await fetch(`${origin}${path}?release=shared-shell-20260929`,{headers:{'cache-control':'no-cache'}});
+  const response=await fetch(`${origin}${path}?release=${encodeURIComponent(releaseMarker)}`,{headers:{'cache-control':'no-cache'}});
   const html=await response.text();
   assert.equal(response.status,200,path);
   assert.match(response.headers.get('x-robots-tag')||'',/^index, follow/,path);
@@ -45,6 +49,17 @@ for(const path of paths){
   assert(html.includes('class="portal-menu-close"'),`${path}: touch-accessible menu close control`);
   assert((html.match(/href="https:\/\/www\.pinnacleblooms\.org\/verify\/evidence\/cite\.html"/g)||[]).length>=2,`${path}: citations promoted`);
   assert(html.includes('href="https://www.pinnacleblooms.org/verify/evidence/research-library.html"'),`${path}: curated research destination`);
+  for(const destination of [
+    'https://pinnacleblooms.org/ask/',
+    'https://www.pinnacleblooms.org/staff',
+    'https://www.pinnacleblooms.org/allmirracles',
+    'https://www.pinnacleblooms.org/top-autism-therapy-services-india-proven-improvement-rate',
+    'https://www.pinnacleblooms.org/media-coverage',
+    'https://www.pinnacleblooms.org/events'
+  ])assert(html.includes(`href="${destination}"`),`${path}: complete hub ${destination}`);
+  for(const destination of ['/privacy-policy','/terms-of-use','/cookie-policy','/copyright-and-intellectual'])assert(html.includes(`href="${origin}${destination}"`),`${path}: canonical policy ${destination}`);
+  assert(html.includes('href="https://books.pinnacleblooms.org/payment-and-billing"'),`${path}: canonical payment policy`);
+  for(const legacy of ['/assesments','/all-resources','/terms-of-service'])assert(!html.includes(`href="${origin}${legacy}"`),`${path}: redirecting alias removed ${legacy}`);
   const headerStart=html.indexOf('<header class="portal-header"');
   const headerEnd=html.indexOf('</header>',headerStart)+'</header>'.length;
   const footerStart=html.indexOf('<footer class="portal-site-footer"');
@@ -64,7 +79,7 @@ assert.equal(new Set(headers).size,1,'Rendered shared header differs across mana
 assert.equal(new Set(footers).size,1,'Rendered Verify block and full footer differ across managed pages');
 const report={
   checkedAt:new Date().toISOString(),
-  version:106,
+  version:expectedVersion,
   managedPages:paths.length,
   sharedHeaderIdentical:true,
   verifyInsideSharedFooter:true,
@@ -75,5 +90,5 @@ const report={
   aboutContactVisible:true,
   results
 };
-await fs.writeFile('deployment/shared-shell-production-v106-20260929.json',JSON.stringify(report,null,2)+'\n');
+await fs.writeFile(outputPath,JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

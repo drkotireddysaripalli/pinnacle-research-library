@@ -1,0 +1,68 @@
+{
+  "releasedOn": "2026-09-29",
+  "release": "payment-canonical-v108",
+  "worker": "pinnacle-verify-route",
+  "versionNumber": 108,
+  "versionId": "e60437f5-06d5-4697-b3ea-6d74871f58ad",
+  "deploymentId": "56d7bc84-62dd-4579-8bdf-1a5b461fdf95",
+  "trafficPercent": 100,
+  "rollback": {
+    "versionNumber": 107,
+    "versionId": "cb991aad-fa53-45f0-8df3-a02fc6f58321",
+    "deploymentId": "4eaf8e22-239d-403e-811f-904cf33c8677"
+  },
+  "change": {
+    "label": "Payment & Billing",
+    "previousUrl": "https://www.pinnacleblooms.org/payment-and-billing",
+    "canonicalUrl": "https://books.pinnacleblooms.org/payment-and-billing",
+    "reason": "The published policy page declares the books subdomain URL as canonical."
+  },
+  "managedRoutes": [
+    "/top-speech-therapy-center-india-proven-improvement-rate",
+    "/enroll-autism-speech-aba-therapies-india",
+    "/speech-therapy/service-information",
+    "/speech-therapy/first-visit-guide",
+    "/speech-therapy/teacher-observation-guide"
+  ],
+  "verification": {
+    "managedPages200": 5,
+    "sharedHeaderSha256": "9ea028fa9d75b1c13a0b22bc8b762435ebfd1e5d56f74b164daebfa203048b20",
+    "sharedFooterSha256": "17554b0bc802512594e66c1c6e036a7c154cb260d15a7f4db062f07d02a39d6d",
+    "sharedHeaderIdentical": true,
+    "sharedFooterIdentical": true,
+    "verifyInsideSharedFooter": true,
+    "destinationPlacementsAudited": 80,
+    "portalChecksPassed": 29,
+    "salesSearchChecksPassed": 322,
+    "routeFormPrivacyChecksPassed": 44,
+    "evidenceLinksPassed": 17,
+    "enrolmentChecksPassed": 18,
+    "publicAssetsMatched": 708,
+    "retiredPreviewRedirectVerified": true,
+    "preservedPathsUnchanged": 7,
+    "machineHtmlMatchesStagedBuild": true,
+    "machineMarkdownDelivered": true,
+    "structuredDataRetained": true
+  },
+  "preservedRoutes": [
+    "/",
+    "/verify/",
+    "/verify/evidence/evidence.json",
+    "/verify/evidence/fsc.pdf",
+    "/verify/evidence/pinnacleai-regulatory-journey.html",
+    "/national-autism-helpline",
+    "/robots.txt"
+  ],
+  "cloudflareBindingsPreserved": ["ASSETS", "PINNACLE_LEGACY", "PINNACLE_ASK"],
+  "indexing": {
+    "indexNowSubmitted": true,
+    "submittedAt": "2026-09-29T10:19:08.570Z",
+    "updatedUrls": 5,
+    "httpStatus": 200,
+    "meaning": "Notification only; no discovery, indexing, ranking, AI citation or conversion claim."
+  },
+  "nextBuild": {
+    "page": "Occupational Therapy",
+    "canonical": "/best-occupational-therapy-center-india-proven-improvement-rate"
+  }
+}
