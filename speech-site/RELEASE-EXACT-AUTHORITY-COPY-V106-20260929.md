@@ -35,5 +35,6 @@ The five managed speech and enrolment pages now use the owner's literal authorit
 - Homepage, Verify, evidence JSON, FSC PDF, PinnacleAI regulatory story, National Autism Helpline and `robots.txt` remained byte-identical.
 - Cloudflare assets and the `PINNACLE_LEGACY`, `PINNACLE_ASK` and `ASSETS` bindings were retained.
 - The five changed URLs were notified through IndexNow after v106. HTTP 200 confirms notification only; it does not establish discovery, indexing, ranking, AI citation or conversion.
+- Reproducible public source and release evidence were published in Git commit `6e6a5373dbf9129f9a03ba0d952a62a55979c0e4`.
 
 Receipts: `deployment/release-exact-authority-copy-v106-20260929.json`, `deployment/production-exact-authority-copy-v106-20260929.json`, `deployment/shared-shell-production-v106-20260929.json`, `deployment/indexnow-exact-authority-copy-v106-20260929.json`, and `deployment/production-before-exact-authority-copy-v106-20260929.json`.
