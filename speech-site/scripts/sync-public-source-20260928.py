@@ -141,6 +141,11 @@ script_files = (
     "validate-special-education-live.mjs",
     "validate-special-education-responsive.cjs",
     "build-special-education-social-card.py",
+    "validate-autism-build.mjs",
+    "validate-autism-live.mjs",
+    "validate-autism-w3c.mjs",
+    "validate-autism-responsive.cjs",
+    "build-autism-therapy-social-card.py",
     "sync-public-source-20260928.py",
 )
 for name in script_files:
@@ -228,6 +233,13 @@ deployment_files = (
     "indexnow-special-education-v116-20260929.json",
     "shared-release-special-education-v116-20260929.json",
     "release-special-education-v116-20260929.json",
+    "autism-therapy-build-20260929.json",
+    "autism-therapy-live-20260929.json",
+    "autism-therapy-routes-v117-20260929.json",
+    "autism-therapy-responsive-live-20260929.json",
+    "autism-therapy-w3c-20260929.json",
+    "indexnow-autism-therapy-v117-20260929.json",
+    "release-autism-therapy-v117-20260929.json",
 )
 for name in deployment_files:
     copy_relative(f"deployment/{name}")
@@ -275,6 +287,7 @@ root_documents = (
     "RELEASE-OCCUPATIONAL-THERAPY-V112-20260929.md",
     "RELEASE-ABA-THERAPY-V113-20260929.md",
     "RELEASE-SPECIAL-EDUCATION-V116-20260929.md",
+    "RELEASE-AUTISM-THERAPY-V117-20260929.md",
     "PORTAL-VALIDATION-20260927.json",
 )
 for name in root_documents:

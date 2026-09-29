@@ -1,0 +1,38 @@
+Autism Therapy and Developmental Support for Children — claims and sources
+Checked: 29 September 2026
+Canonical: https://www.pinnacleblooms.org/autism-therapy
+
+1. Autism diversity and individual support
+Source: https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders
+Use: autism is diverse; abilities and support needs vary and can change.
+Limit: no WHO endorsement of Pinnacle and no determination of an individual plan.
+
+2. Individual and multidisciplinary planning
+Sources: https://www.nice.org.uk/guidance/cg170/chapter/Recommendations and https://www.nice.org.uk/guidance/cg128/chapter/Recommendations
+Use: consider strengths, communication, health, daily living, sensory conditions, learning, environment and family context.
+Limit: no compulsory therapy bundle and no proof of an individual outcome.
+
+3. Diagnosis boundary
+Source: https://www.cdc.gov/autism/diagnosis/index.html
+Use: diagnosis relies on developmental history and qualified professional observation.
+Limit: a call, form or PinnacleAI record does not diagnose autism.
+
+4. Pinnacle life-first direction
+Source: https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html
+Use: connect abilities, goals, relevant people, everyday practice and review with the child’s wider life.
+Limit: no guarantee of speech, independence, school admission, mainstream inclusion or a particular result.
+
+5. PinnacleAI regulatory scope
+Sources: https://www.pinnacleblooms.org/verify/evidence/records/md5.html, https://www.pinnacleblooms.org/verify/evidence/records/bis.html and https://www.pinnacleblooms.org/verify/evidence/records/fsc.html
+Use: non-diagnostic developmental-support Class B SaMD for children aged 0–12, with documented measurement, readiness, forecasting and plan-support functions.
+Limit: no autism diagnosis, professional credential, centre registration, foreign approval or outcome guarantee is inferred.
+
+6. Research and centres
+Sources: https://www.pinnacleblooms.org/verify/evidence/research-library.html and https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html
+Use: inspect study statuses and dated centre identities, addresses and maps.
+Limit: confirm the service, professional, appointment and current fees before travel.
+
+Operator: Bharath Healthcare Laboratories Private Limited
+Brand: Pinnacle Blooms Network
+National number: 9100 181 181 / tel:+919100181181
+Structured source map: https://www.pinnacleblooms.org/pinnacle-pages-data/autism-therapy-evidence.json

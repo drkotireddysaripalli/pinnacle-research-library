@@ -1,60 +1,54 @@
-# Active page work order — Special Education complete; Autism Therapy next
+# Active page work order — Autism Therapy complete; Find a Centre next
 
-29 September 2026 · Special Education status: published, verified and preserved
+29 September 2026 · Autism Therapy status: published, verified and preserved
 
-Previous completed releases: Speech Therapy, Enrolment, Occupational Therapy and ABA Therapy. Special Education now uses the same common header, authority strip, Verify gateway and complete portal footer.
+Completed managed releases now include Speech Therapy, Enrolment, Occupational Therapy, ABA Therapy, Special Education and the integrated Autism Therapy hub. Every managed page uses the common responsive header, authority navigation, 36-record Verify gateway and complete portal footer.
 
 ## Completed destination
 
-- Canonical: `https://www.pinnacleblooms.org/best-special-education-center-call-9100181181`
-- Permanent consolidation: `/special-education`, `/Special-Education`, `/t/special-education` and their trailing-slash variants resolve to the canonical.
-- Title: `Special Education Support for Children in India | Pinnacle Blooms`
-- Parent promise: understand how the child accesses learning, choose an ability that matters in school and everyday life, connect the right people and supports, practise across settings and review what changes.
+- Canonical: `https://www.pinnacleblooms.org/autism-therapy`
+- Permanent consolidation: `/autism-therapy/`, `/t/autism-therapy` and `/t/autism-therapy/` resolve to the canonical.
+- Title: `Autism Therapy & Developmental Support for Children | Pinnacle Blooms`
+- Parent promise: see the whole child, identify what the family wants to become more possible, connect only relevant professional contributions, practise in everyday life and review what changes.
 - Primary conversion: call `9100 181 181`.
-- Secondary conversion: choose a published centre or continue to enrolment.
+- Secondary conversion: start the first conversation, choose a published centre or inspect the evidence.
 
 ## Delivered narrative and evidence contract
 
-1. Starts with the child's access to learning, communication and participation rather than a label or worksheet.
-2. Explains special education in plain language and distinguishes it from tutoring.
-3. Shows recognisable concern patterns and a child-specific assessment lens.
-4. Connects educational goals to Pinnacle's seven-stage life-first pathway.
-5. Gives a concrete teaching-to-everyday-life example without implying a guaranteed result.
-6. Shows the distinct roles of special education, speech, occupational therapy, behavioural support, family, teachers and relevant health professionals.
-7. Explains PinnacleAI's non-diagnostic measurement and review role within the documented MD-5 and BIS scope.
-8. Uses Verify, source maps and primary external references with explicit boundaries.
-9. Includes a provider checklist, all published centres, 12 visible FAQs and direct call/enrolment actions.
-10. Includes unique service artwork, a 1200 × 630 social card, descriptive alt text and complete WebPage, Service, ImageObject, FAQ and breadcrumb markup.
+1. Starts with communication, routines, learning, play and participation rather than a label or compulsory therapy bundle.
+2. Answers the search question directly: autism therapy is child-specific coordinated support, and every child does not need every therapy.
+3. Preserves distinct roles for Speech Therapy, Occupational Therapy, ABA or behavioural support, Special Education, family, school and relevant health professionals.
+4. Uses one school-morning example to show how different contributions can serve one meaningful family priority.
+5. Connects the work to Pinnacle's seven-stage life-first pathway toward growing self-sufficiency and participation without guaranteeing an outcome.
+6. Explains PinnacleAI's non-diagnostic measurement, forecasting and adaptive-plan support within its documented Class B SaMD scope.
+7. Links visible claims to Verify, a citation-ready JSON/text source map, first-party Markdown and primary WHO, NICE, CDC and RCI context.
+8. Includes the full published centre directory, provider checklist, 15 visible FAQs and repeated call/enrolment actions.
+9. Includes three unique service visuals, descriptive alt text and a branded 1200 × 630 Open Graph image.
+10. Includes WebSite, Organization, Brand, WebPage, ImageObject, Service, FAQPage and BreadcrumbList structured data matching the visible page.
 
 ## Claim boundaries
 
-- Do not promise cure, school admission, mainstream placement, independence, a fixed timeframe or a particular outcome.
-- Do not claim service availability, staff credentials, fees, ratings or review volumes for every centre without current evidence.
-- PinnacleAI GPT-OS v1.0.0 remains non-diagnostic Class B developmental-support SaMD. Its regulatory scope is separate from special-education effectiveness and professional registration.
-- UNESCO, UNICEF, RCI and other external sources provide context and do not endorse Pinnacle.
-- The child's self-sufficient, mainstream-included life remains the purpose shaping abilities, goals, people, methods, everyday practice and review; it is not guaranteed by a score or licence.
+- PinnacleAI GPT-OS v1.0.0 remains non-diagnostic Class B developmental-support SaMD for children aged 0–12. Its regulatory status does not diagnose autism or prove an individual therapy outcome.
+- No cure, normalisation, guaranteed speech, school admission, mainstream placement, independence, fixed timeframe, universal service availability, rating or individual result is claimed.
+- The 160Yrs Paradigm Shift is presented as Pinnacle's life-first thesis, not as an independent condemnation of every prior professional practice.
+- External sources provide clinical and professional context; they do not endorse Pinnacle.
 
 ## Completed release gate
 
-- Production build and focused route, discovery, enrolment, privacy and measurement checks passed.
-- Responsive checks at 390, 768 and 1440 pixels passed without horizontal overflow; common header, Verify footer, portal footer and call action remain present.
-- W3C Nu returned zero errors for the live canonical.
-- Live HTML matches the staged page after normalising Cloudflare's injected analytics beacon.
+- Production build, route, discovery, analytics and shared regression checks passed.
+- Live responsive checks at 390, 768 and 1440 pixels passed without horizontal overflow, broken non-lazy images or duplicate IDs.
+- W3C Nu returned zero errors and zero warnings for the live canonical.
+- Nine managed HTML routes match their staged builds after normalising only Cloudflare's injected analytics beacon.
 - Compatible requests receive real Markdown with `Vary: Accept` and `Content-Signal: search=yes, ai-input=yes`.
-- Evidence JSON/text, sitemap and `llms.txt` surfaces are public and linked.
-- Open Graph image is public as a 1200 × 630 JPEG.
-- Cloudflare Worker v116 is serving the canonical and managed aliases with a recorded rollback.
-- IndexNow accepted one material publication notification. This is a submission record, not evidence of indexing, ranking, AI citation, calls or enrolment.
-- Public-safe source is synced, committed and pushed as the permanent build source.
+- Evidence JSON/text, root and child discovery surfaces and the 1200 × 630 JPEG are public.
+- Cloudflare Worker version `059b4206-9136-476b-8357-627e41651ef2` is live at 100%, with version `2a9ef5ca-6ada-4f9b-853e-e5c57000e044` retained for rollback.
+- IndexNow accepted one material publication notification covering the canonical and four discovery surfaces. This records submission, not indexing or ranking.
 
-One inherited zone-level rule owns the exact no-slash `/special-education` alias and drops its query string before the Worker. It still reaches the correct canonical. The canonical and the other managed aliases are unaffected; change that inherited rule only when Cloudflare Rulesets write access is available.
+## Next active destination — Find a Pinnacle Centre
 
-## Next active destination — integrated Autism Therapy hub
-
-- Retain canonical: `https://www.pinnacleblooms.org/autism-therapy`.
-- Build an integrated parent decision page connecting communication, daily living, learning, behaviour, family practice and participation without prescribing every therapy to every child.
-- Keep Speech Therapy, Occupational Therapy, ABA/behavioural support and Special Education as distinct disciplines whose relevance follows child-specific assessment.
-- Lead with the family's everyday concern and the life they want the child to grow toward; then show the seven-stage pathway, multidisciplinary roles, PinnacleAI measurement/review, Verify evidence, centres and conversion.
-- Preserve neurodiversity-affirming dignity. Do not promise cure, normalisation, school entry, independence or a fixed result.
-- Use unique narrative, imagery, metadata, FAQ, structured data, evidence exports and social card. Reuse the common shell and release plumbing.
-- Release only after build, focused tests, responsive/mobile review, HTML validity, live retrieval, discovery, rollback and public-source preservation pass once.
+- Retain the established canonical `/centers` and consolidate `/centres` rather than creating another competing directory URL.
+- Turn the directory into the local-search and family-decision hub for all published Pinnacle locations.
+- Use sourced centre names, addresses, national and local phone numbers, maps, service availability, verified exterior/interior imagery and Google Business Profile links only where current evidence exists.
+- Give each centre a usable call, WhatsApp, directions, share and citation action while keeping `9100 181 181` as the national continuity number.
+- Build unique local evidence and entity relationships; do not create thin city or location doorway pages.
+- Reuse the common shell, Verify gateway, life-first language and release pipeline. Release after one build, one responsive review, one machine/readability gate and one live regression pass.

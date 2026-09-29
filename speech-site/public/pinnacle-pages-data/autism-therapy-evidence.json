@@ -1,0 +1,64 @@
+{
+  "page": "https://www.pinnacleblooms.org/autism-therapy",
+  "title": "Autism Therapy and Developmental Support for Children | Pinnacle Blooms",
+  "checkedOn": "2026-09-29",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "telephone": "+919100181181",
+  "claims": [
+    {
+      "topic": "Autism diversity and individual support",
+      "pageStatement": "Autism is diverse; abilities and needs vary and can change. Support should reflect the individual child and family.",
+      "source": "https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders",
+      "boundary": "WHO provides general public-health information. It does not endorse Pinnacle or determine an individual child’s plan."
+    },
+    {
+      "topic": "Individual and multidisciplinary planning",
+      "pageStatement": "Assessment and support can consider communication, health, daily living, sensory conditions, learning, environment and family context.",
+      "source": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations",
+      "boundary": "General clinical guidance. It does not prescribe a Pinnacle service bundle or prove an outcome."
+    },
+    {
+      "topic": "Diagnosis boundary",
+      "pageStatement": "Autism diagnosis relies on developmental history and professional observation; a call or software record does not diagnose.",
+      "source": "https://www.cdc.gov/autism/diagnosis/index.html",
+      "boundary": "The CDC describes diagnosis generally. Families should use an appropriately qualified pathway applicable in their jurisdiction."
+    },
+    {
+      "topic": "Life-first programme direction",
+      "pageStatement": "Pinnacle connects abilities, goals, relevant people, everyday practice and review with a direction toward growing self-sufficiency and participation.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "boundary": "Pinnacle programme description. It does not guarantee speech, independence, school admission, mainstream inclusion or an individual result."
+    },
+    {
+      "topic": "PinnacleAI licensed scope",
+      "pageStatement": "PinnacleAI GPT-OS v1.0.0 is non-diagnostic developmental-support Class B SaMD for children aged 0–12 and supports ability measurement, readiness tracking, progress forecasting and adaptive plan support.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "boundary": "The licence defines software scope. It is not autism diagnosis, a therapy licence, a professional credential or an outcome guarantee."
+    },
+    {
+      "topic": "BIS scope",
+      "pageStatement": "The BIS schedule names documented medical-device management-system and software-lifecycle scope for PinnacleAI.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "boundary": "BIS scope does not establish effectiveness for an individual child or certify every centre and professional."
+    },
+    {
+      "topic": "Free Sale Certificate",
+      "pageStatement": "The FSC records lawful Indian marketability and export eligibility subject to importing-country law.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/fsc.html",
+      "boundary": "The FSC is not foreign approval and does not prove an individual therapy outcome."
+    },
+    {
+      "topic": "Research status",
+      "pageStatement": "Pinnacle publishes a research library with source, status, population, method and limitation labels.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "boundary": "Company and operator research contains varied cohorts and publication statuses and must not be generalized to every child, centre or service."
+    },
+    {
+      "topic": "Centre directory",
+      "pageStatement": "Published centre identities, addresses, maps and selected photographs are provided through a dated directory.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html",
+      "boundary": "The directory does not establish current autism-service availability, professional credentials, fees or appointment capacity. Confirm before travel."
+    }
+  ]
+}

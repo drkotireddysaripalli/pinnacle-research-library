@@ -1,0 +1,183 @@
+{
+  "recordedAt": "2026-09-29T16:24:22.4406441Z",
+  "worker": "pinnacle-verify-route",
+  "reason": "Restore complete managed trigger set after a route-scoped Wrangler deployment narrowed the trigger list; add Autism Therapy canonical and alias.",
+  "routes": [
+    {
+      "id": "2b31cb5cb2994628a4a66730fefcdf47",
+      "pattern": "www.pinnacleblooms.org/",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "53a122c81f494153be6cf684f1886da2",
+      "pattern": "www.pinnacleblooms.org/robots.txt",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "c4520c69a84f4bdd845d925513a89579",
+      "pattern": "www.pinnacleblooms.org/sitemap.xml",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "42505e5965f5433bb56776ac7e4bdd36",
+      "pattern": "www.pinnacleblooms.org/llms.txt",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "c0d1a25a2d2d473b8d83b296eb8aaafa",
+      "pattern": "www.pinnacleblooms.org/verify",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "2c1cc23cf8bd44b0be7577ea8797e2d7",
+      "pattern": "www.pinnacleblooms.org/verify/*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "82841d24d3294fd0b0b5e272af3ec30d",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-assets/*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "5facfa4f269c410996cb5e77ba0c03f6",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-fonts/*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "5ef1570509be40f295fe7d0b8a207402",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-scripts/*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "cb19edf1e50a48ba99cb920e3b102dd3",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-data/*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "0edef736abf84657ab33aa392c2fa8e9",
+      "pattern": "www.pinnacleblooms.org/speech-therapy*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "ad20236737d64c86a51c4090408b030e",
+      "pattern": "www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "b4de82e724714ca8bfa4febaa25015ae",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-preview/enrolment*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "b4498a987eef47f2aa811af6592a6b9f",
+      "pattern": "www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "2b1c965b96174b7a9d1a419535250666",
+      "pattern": "www.pinnacleblooms.org/api/enrolment*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "9d4a86a81b6c4ac78da52b9866379a1f",
+      "pattern": "www.pinnacleblooms.org/enroll/*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "4dc652a7ea8843c78481566d32ce0afe",
+      "pattern": "www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "10946ab3ee2f4954a460fdf8d4c40500",
+      "pattern": "www.pinnacleblooms.org/occupational-therapy*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "9b5cf9c9cd2e4dc98b01bb73b6b26652",
+      "pattern": "www.pinnacleblooms.org/t/occupational-therapy*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "c9f353b67af24bf186955cd49a312420",
+      "pattern": "www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "3a18c7aa5f3e494588699d6e2162697d",
+      "pattern": "www.pinnacleblooms.org/aba-therapy*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "9b8289ca58c44116afec497037db6e5f",
+      "pattern": "www.pinnacleblooms.org/aba-therapy",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "bd9886be82974aa5ac64dbf2754e8abf",
+      "pattern": "www.pinnacleblooms.org/t/aba-therapy*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "2d16df2352ee41a7ae46f0d481c1f822",
+      "pattern": "www.pinnacleblooms.org/best-special-education-center-call-9100181181*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "dd31d8566ada4daba88b765d37e86840",
+      "pattern": "www.pinnacleblooms.org/special-education*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "09738085aa8c4f909202a67647c9ac89",
+      "pattern": "www.pinnacleblooms.org/Special-Education*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "163ba453183e4581b768ed7d75b191d0",
+      "pattern": "www.pinnacleblooms.org/t/special-education*",
+      "priorScript": null,
+      "state": "created"
+    },
+    {
+      "id": "98b1c7b686884122a0e2eb3fefd49f13",
+      "pattern": "www.pinnacleblooms.org/autism-therapy*",
+      "priorScript": "pinnacle-verify-route",
+      "state": "unchanged"
+    },
+    {
+      "id": "150001ba65b24aadbbd01941ccedac63",
+      "pattern": "www.pinnacleblooms.org/t/autism-therapy*",
+      "priorScript": null,
+      "state": "created"
+    }
+  ],
+  "rollbackVersionId": "2a9ef5ca-6ada-4fdb-a246-7c3ca16461ce",
+  "currentVersionId": "059b4206-9136-476b-8357-627e41651ef2"
+}

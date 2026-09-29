@@ -73,7 +73,8 @@ test('managed therapy pages use service-specific groups and accept only their ow
   ['/top-speech-therapy-center-india-proven-improvement-rate','speech_therapy','speech'],
   ['/best-occupational-therapy-center-india-proven-improvement-rate','occupational_therapy','occupational'],
   ['/best-aba-therapy-center-india-proven-improvement-rate','aba_therapy','aba'],
-  ['/best-special-education-center-call-9100181181','special_education','education']
+  ['/best-special-education-center-call-9100181181','special_education','education'],
+  ['/autism-therapy','autism_therapy','autism']
  ];
  for(const [path,group,service] of pages){
   const h=harness({path});h.choose('accepted');

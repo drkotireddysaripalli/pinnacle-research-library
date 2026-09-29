@@ -5,6 +5,7 @@ export const speechPath = '/top-speech-therapy-center-india-proven-improvement-r
 export const occupationalPath = '/best-occupational-therapy-center-india-proven-improvement-rate';
 export const abaPath = '/best-aba-therapy-center-india-proven-improvement-rate';
 export const specialEducationPath = '/best-special-education-center-call-9100181181';
+export const autismTherapyPath = '/autism-therapy';
 export const actions = [
   ['Take Assessment', '/speech-aba-autism-assessments'], ['Enroll My Kid', '/enroll-autism-speech-aba-therapies-india'], ['Pay Online', '/payonline'],
   ['Join Certified Course', '/certified-courses'], ['Apply Franchise', '/franchises'],
