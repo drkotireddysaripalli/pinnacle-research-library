@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-09-29T08:20:00.000Z",
+  "release": "header-menu-v104",
+  "method": "Chromium layout and interaction review against the production build",
+  "results": [
+    {"width": 320, "height": 700, "bodyWidth": 305, "guidanceFont": "11px", "supportFont": "10.5px", "whatsappWidth": 44, "authorityStrip": "hidden", "therapyColumns": 3, "menuPanelHeight": 3881},
+    {"width": 390, "height": 844, "bodyWidth": 375, "guidanceFont": "11px", "supportFont": "10.5px", "whatsappWidth": 44, "authorityStrip": "hidden", "therapyColumns": 3, "menuPanelHeight": 3638},
+    {"width": 768, "height": 1024, "bodyWidth": 753, "guidanceFont": "11px", "supportFont": "10.5px", "whatsappWidth": 46, "authorityStrip": "hidden", "therapyColumns": 3, "menuPanelHeight": 2056},
+    {"width": 901, "height": 900, "bodyWidth": 886, "guidanceFont": "11px", "supportFont": "10.5px", "whatsappWidth": 46, "authorityStrip": "visible", "therapyColumns": 6, "menuPanelHeight": 1564},
+    {"width": 1100, "height": 900, "bodyWidth": 1085, "guidanceFont": "11px", "supportFont": "10.5px", "whatsappWidth": 46, "authorityStrip": "visible", "therapyColumns": 6, "menuPanelHeight": 1544},
+    {"width": 1440, "height": 1000, "bodyWidth": 1425, "guidanceFont": "12px", "supportFont": "11px", "whatsappWidth": 46, "authorityStrip": "visible", "therapyColumns": 6, "menuPanelHeight": 1497}
+  ],
+  "noHorizontalOverflow": true,
+  "moreIsFinalTherapyRowItem": true,
+  "citationsSecondInDesktopAuthorityStrip": true,
+  "citationsInFirstMobileMenuSection": true,
+  "touchCloseControlHeight": 44,
+  "outsideClickCloses": true,
+  "keyboardEnterOpens": true,
+  "keyboardEscapeClosesAndReturnsFocus": true,
+  "nestedMenuScroll": false,
+  "unsupportedRegisteredMarksUsed": false
+}
