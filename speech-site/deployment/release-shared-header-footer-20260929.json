@@ -1,0 +1,69 @@
+{
+  "releasedOn": "2026-09-29",
+  "release": "shared-footer-v101",
+  "worker": "pinnacle-verify-route",
+  "versionNumber": 101,
+  "versionId": "d1c072fb-f4d9-4527-bb9a-d8eb759f5c5a",
+  "deploymentId": "79f02222-d102-4edb-bf1e-05d53d7ed6da",
+  "trafficPercent": 100,
+  "rollback": {
+    "versionNumber": 100,
+    "versionId": "e4e2c877-77a0-4a3d-af3a-0dd02b5e5db5",
+    "deploymentId": "1497423b-007e-4335-85c2-4cdab3e451ba"
+  },
+  "managedRoutes": [
+    "/top-speech-therapy-center-india-proven-improvement-rate",
+    "/enroll-autism-speech-aba-therapies-india",
+    "/speech-therapy/service-information",
+    "/speech-therapy/first-visit-guide",
+    "/speech-therapy/teacher-observation-guide"
+  ],
+  "sharedShell": {
+    "singleHeader": true,
+    "singleSemanticFooter": true,
+    "verifyIsFirstFooterSection": true,
+    "fullPortalFooterFollowsVerify": true,
+    "donateRemoved": true,
+    "priorityNavigation": [
+      "PinnacleAI®",
+      "Verify",
+      "Research",
+      "Whitebook",
+      "News",
+      "Centres",
+      "Contact",
+      "Enroll"
+    ]
+  },
+  "liveVerification": {
+    "managedPages200": 5,
+    "sharedHeaderSha256": "e2987c27f2f034ae93d6e86e79bcd0d891c6a5330cf9478459896a1f0a52507c",
+    "sharedFooterSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
+    "sameFooterAcrossManagedPages": true,
+    "verifyInsideFooter": true,
+    "sharedWorkerUnchanged": true,
+    "verifyAssetsMatched": 634,
+    "w3cMessages": 0,
+    "focusedTestsPassed": 44,
+    "portalChecksPassed": 13,
+    "responsiveViewports": [
+      "desktop",
+      "390x844",
+      "768x1024"
+    ],
+    "horizontalOverflow": false
+  },
+  "preservedByteIdentical": [
+    "/verify/",
+    "/verify/evidence/evidence.json",
+    "/verify/evidence/fsc.pdf",
+    "/verify/evidence/pinnacleai-regulatory-journey.html",
+    "/national-autism-helpline",
+    "/robots.txt"
+  ],
+  "indexing": {
+    "repeatSubmissionMade": false,
+    "reason": "Existing public URLs were unchanged; avoid resubmitting unchanged URLs.",
+    "claims": "Publication and crawl eligibility verified; no ranking, referral-traffic or AI-citation claim."
+  }
+}

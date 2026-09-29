@@ -2,6 +2,13 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import nav from '../src/data/portal-navigation.json' with {type:'json'};
 const html=fs.readFileSync('dist/index.html','utf8');
+const managedHtml=[
+  'dist/index.html',
+  'dist/enroll-autism-speech-aba-therapies-india.html',
+  'dist/speech-therapy/service-information.html',
+  'dist/speech-therapy/first-visit-guide.html',
+  'dist/speech-therapy/teacher-observation-guide.html'
+].map(file=>fs.readFileSync(file,'utf8'));
 const checks=[];
 function check(name,value){assert(value,name);checks.push(name);}
 const hrefs=new Set([...html.matchAll(/href="([^"]+)"/g)].map(m=>m[1].replaceAll('&amp;','&')));
@@ -11,6 +18,11 @@ const links=[...nav.main,...nav.mobileExtras,...nav.therapy.flatMap(x=>[{url:x.u
 check('Complete documented portal navigation is present',links.every(x=>hrefs.has(full(x.url))));
 check('All six therapy menus have native disclosure controls',(html.match(/class="portal-therapy-menu"/g)||[]).length===6);
 check('Header and footer navigation are server rendered',html.includes('aria-label="Complete site navigation"')&&html.includes('aria-label="Research Studies"'));
+check('Priority header is identical across every managed public page',managedHtml.every(page=>['PinnacleAI®','Verify','Research','Whitebook','News','Centres','Contact'].every(label=>page.includes('>'+label+'</a>'))&&page.includes('data-cta="header-enrol"')));
+check('Donate is removed from every managed shared header',managedHtml.every(page=>!page.includes('class="portal-donate"')&&!page.includes('href="https://www.pinnacleblooms.org/donate"')));
+const sharedFooters=managedHtml.map(page=>page.slice(page.indexOf('<footer class="portal-site-footer"'),page.indexOf('</footer>')+'</footer>'.length));
+check('Verify block is inside the shared footer on every managed public page',sharedFooters.every(footer=>footer.startsWith('<footer class="portal-site-footer"')&&footer.includes('<section class="verify-footer"')&&footer.includes('Explore Pinnacle Verify')&&footer.includes('portal-footer-evidence')));
+check('Verify block and full footer are identical across every managed public page',new Set(sharedFooters).size===1);
 check('Legacy speech section targets retained',['what-section','why-section','Advantages-section','ChildrenServices-section','assessment-section','admission-section','procedure-section','Cost-section'].every(x=>ids.has(x)));
 check('New speech submenu targets exist',nav.therapy.find(x=>x.label==='Speech Therapy').links.filter(x=>x.url.includes('#')).every(x=>ids.has(x.url.split('#')[1])));
 check('No duplicate HTML IDs',ids.size===[...html.matchAll(/\bid="([^"]+)"/g)].length);

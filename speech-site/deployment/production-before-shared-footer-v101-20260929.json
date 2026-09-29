@@ -1,0 +1,17 @@
+{
+  "id": "1497423b-007e-4335-85c2-4cdab3e451ba",
+  "source": "wrangler",
+  "strategy": "percentage",
+  "author_email": "kotii@kgvpl.com",
+  "annotations": {
+    "workers/message": "Deploy shared header, Verify evidence footer and full portal footer",
+    "workers/triggered_by": "deployment"
+  },
+  "versions": [
+    {
+      "version_id": "e4e2c877-77a0-4a3d-af3a-0dd02b5e5db5",
+      "percentage": 100
+    }
+  ],
+  "created_on": "2026-09-29T06:04:44.58912Z"
+}

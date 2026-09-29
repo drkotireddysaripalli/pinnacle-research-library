@@ -10,8 +10,9 @@ import PortalFooterGroup from './PortalFooterGroup.astro';
 import VerifyFooter from './VerifyFooter.astro';
 const shapes=await getImage({src:footerShapes,format:'webp',quality:80});
 ---
-<VerifyFooter />
-<footer class="portal-footer" style={`--portal-footer-art:url('${shapes.src}')`}>
+<footer class="portal-site-footer">
+ <VerifyFooter />
+ <div class="portal-footer" style={`--portal-footer-art:url('${shapes.src}')`}>
   <div class="portal-footer-art"><div class="portal-container">
     <div class="portal-footer-columns">
       <section class="portal-footer-purpose" aria-labelledby="portal-purpose-title">
@@ -19,7 +20,7 @@ const shapes=await getImage({src:footerShapes,format:'webp',quality:80});
         <div class="portal-purpose-copy"><Icon name="heart"/><div><p>Core purposed to help children grow toward a self-sufficient, mainstream-included life—with possibilities for school, work, family and a wonderful life.</p><p>We bring assessment, therapies, family participation, everyday practice and review together around that purpose.</p></div></div>
         <div class="portal-contact-item"><Icon name="telephone"/><div><a class="portal-footer-phone" href={phone.href} data-cta="footer-call">{phone.display}</a><a href={url('/national-autism-helpline')}>National Autism Helpline</a><span>Free guidance, 24/7 · Pinnacle / BHCL</span></div></div>
         <div class="portal-contact-item"><Icon name="mail"/><a href="mailto:care@pinnacleblooms.org">care@pinnacleblooms.org</a></div>
-        <nav class="portal-locations" aria-label="Pinnacle locations"><h3><Icon name="pin"/><a href={url('/contact')}>Locations</a></h3><ul>{navigation.locations.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul><a class="portal-all-centres" href={url('/contact')}>Explore all centres →</a></nav>
+        <nav class="portal-locations" aria-label="Pinnacle locations"><h3><Icon name="pin"/><a href={url('/centers')}>Locations</a></h3><ul>{navigation.locations.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul><a class="portal-all-centres" href={url('/centers')}>Explore all centres →</a></nav>
       </section>
       <div>{navigation.footerColumns[0].map(group=><PortalFooterGroup group={group}/>)}</div>
       <div>{navigation.footerColumns[1].map(group=><PortalFooterGroup group={group}/>)}</div>
@@ -32,4 +33,5 @@ const shapes=await getImage({src:footerShapes,format:'webp',quality:80});
     <details class="measurement-settings portal-measurement" data-speech-measurement hidden><summary>Optional analytics preferences</summary><p>With your permission, Google Analytics measures page visits and call or enquiry-link clicks. These are not completed calls or bookings. We exclude form details, query parameters and advertising identifiers from these events. Advertising personalisation is off.</p><div><button type="button" data-measurement-choice="accepted">Allow analytics</button><button type="button" data-measurement-choice="declined">Keep analytics off</button></div><p data-measurement-status role="status">Optional analytics is off until you choose.</p></details>
     <p class="portal-footer-note">Information on this page supports a conversation with your care team. Goals, support and progress are individual to each child.</p>
   </div></div>
+ </div>
 </footer>

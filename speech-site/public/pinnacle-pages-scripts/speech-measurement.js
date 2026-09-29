@@ -17,7 +17,7 @@
   const production = location.origin === origin && routes.has(location.pathname);
   const blocked = navigator.globalPrivacyControl === true;
   const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry']);
-  const enquiryPlacements = new Set(['hero-assessment','early-assessment','visit-enquiry','final-enquiry','mobile-assessment','centre-enquiry']);
+  const enquiryPlacements = new Set(['header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','mobile-assessment','centre-enquiry']);
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
   const centreEnquiryUrls = new Set(centreIds.map(centre=>origin+'/enroll-autism-speech-aba-therapies-india?entry=speech-assessment&centre='+centre+'#speech-assessment-enquiry'));
@@ -88,7 +88,7 @@
     if (!link) return;
     const placement=link.dataset.cta,href=link.getAttribute('href');
     if (callPlacements.has(placement) && href==='tel:+919100181181') send('phone_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'national_helpline_9100181181'});
-    const validEnquiry=href===origin+'/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry'||(placement==='centre-enquiry'&&centreEnquiryUrls.has(href));
+    const validEnquiry=(placement==='header-enrol'&&href===origin+'/enroll-autism-speech-aba-therapies-india')||href===origin+'/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry'||(placement==='centre-enquiry'&&centreEnquiryUrls.has(href));
     if (enquiryPlacements.has(placement) && validEnquiry) send('enquiry_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'existing_enrolment_form'});
   });
 })();

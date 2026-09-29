@@ -1,13 +1,17 @@
 {
   "source": "https://www.pinnacleblooms.org/",
-  "reviewedOn": "2026-09-27",
+  "reviewedOn": "2026-09-29",
   "main": [
     {
-      "label": "Pinnacle Global Framework",
-      "url": "/pinnacle-global-autism-framework"
+      "label": "PinnacleAI®",
+      "url": "/verify/evidence/pinnacle-paradigm-shift.html"
     },
     {
-      "label": "Research Studies",
+      "label": "Verify",
+      "url": "/verify/"
+    },
+    {
+      "label": "Research",
       "url": "/research-studies"
     },
     {
@@ -16,19 +20,15 @@
     },
     {
       "label": "News",
-      "url": "/news"
+      "url": "/autism-speech-aba-news"
     },
     {
-      "label": "Services",
-      "url": "/services"
-    },
-    {
-      "label": "Careers",
-      "url": "/careers"
+      "label": "Centres",
+      "url": "/centers"
     },
     {
       "label": "Contact",
-      "url": "/contact"
+      "url": "/contact-national-autism-helpline-24-7"
     }
   ],
   "mobileExtras": [
@@ -38,7 +38,7 @@
     },
     {
       "label": "Enroll",
-      "url": "/enroll"
+      "url": "/enroll-autism-speech-aba-therapies-india"
     },
     {
       "label": "Franchise",
@@ -354,7 +354,7 @@
         "links": [
           {
             "label": "Enroll My Kid",
-            "url": "/enroll"
+            "url": "/enroll-autism-speech-aba-therapies-india"
           }
         ],
         "icon": "check"

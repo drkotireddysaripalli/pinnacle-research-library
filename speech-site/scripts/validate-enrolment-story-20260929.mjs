@@ -8,7 +8,7 @@ await fs.writeFile('reviews/W3C-ENROLMENT-20260929.json',JSON.stringify({checked
 assert(response.ok);assert.equal(report.messages.filter(m=>m.type==='error').length,0,JSON.stringify(report.messages));
 assert(html.includes('noindex, nofollow')&&html.includes('data-preview="true"'));
 assert(html.includes('id="enrol-preferences"')&&html.includes('Choose a service or centre'));
-assert(!html.includes('id="enrol-preferences" open'));
+assert(html.includes('id="enrol-preferences" open'));
 assert(html.indexOf('id="enrolment-form"')<html.indexOf('id="why-pinnacle-title"'));
 assert(html.includes('greater independence and participation in family, learning, school and community')&&html.includes('The PinnacleAI® paradigm shift'));
 for(const marker of ['Bricks matter. The home gives them purpose.','Every part matters. The journey gives it direction.','From guided work to everyday life.','SELF-SUFFICIENT · MAINSTREAM · WONDERFUL LIFE · POSSIBLE.'])assert(html.includes(marker),marker);

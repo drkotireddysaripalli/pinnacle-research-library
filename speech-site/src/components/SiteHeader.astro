@@ -7,6 +7,7 @@ import Icon from './Icon.astro';
 const { currentPath } = Astro.props;
 const directoryGroups = navigation.footerColumns.flat().filter(g => g.links.length > 1);
 const quickActions = navigation.footerColumns.flat().filter(g => g.links.length === 1).map(g=>g.links[0]);
+const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
 ---
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="portal-header">
@@ -16,19 +17,19 @@ const quickActions = navigation.footerColumns.flat().filter(g => g.links.length 
       <nav class="portal-utility" aria-label="Quick links">
         <a class="portal-login" href={url('/epass')} aria-label="Login"><Icon name="shield" /><span>Login</span></a>
         <div class="portal-national"><a class="portal-national-label" href={url('/national-autism-helpline')} aria-label="National Autism Helpline"><Icon name="telephone" /><span>National</span></a><a class="portal-whatsapp" href="https://wa.me/919100181181" aria-label="WhatsApp Pinnacle"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#27bb47" d="M12 1a11 11 0 0 0-9.5 16.6L1 23l5.5-1.4A11 11 0 1 0 12 1Z"/><path fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" d="M7.5 6.5c-2 4 4 10 8 8l1-2-3-1-1 1c-1.5-.7-2.3-1.5-3-3l1-1-1-2-2-.5Z"/></svg></a><a class="portal-phone" href={phone.href} data-cta="header-call">{phone.display}</a></div>
-        <a class="portal-donate" href={url('/donate')} aria-label="Donate"><Icon name="heart" /><span>Donate</span></a>
-        <a class="portal-location" href={url('/contact')} aria-label="Find a Pinnacle centre"><Icon name="pin" /></a>
+        <a class="portal-enrol" href={enrolmentUrl} aria-label="Enroll at Pinnacle" data-cta="header-enrol"><Icon name="arrow" /><span>Enroll</span></a>
+        <a class="portal-location" href={url('/centers')} aria-label="Find a Pinnacle centre"><Icon name="pin" /></a>
         <details class="portal-search"><summary aria-label="Search Pinnacle"><Icon name="search" /></summary><form action={url('/search')} method="get"><label for="portal-search-input">Search Pinnacle</label><div><input id="portal-search-input" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
         <details class="portal-directory">
           <summary aria-label="Menu"><Icon name="menu" /><span>Menu</span></summary>
           <nav class="portal-directory-panel" aria-label="Complete site navigation">
             <div class="portal-mobile-main">{[...navigation.mobileExtras,...navigation.main].map(link=><a href={url(link.url)}>{link.label}</a>)}</div>
             <div class="portal-directory-grid">{directoryGroups.map(group=><section><h2><Icon name={group.icon} />{group.title}</h2><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></section>)}</div>
-            <div class="portal-directory-actions">{quickActions.map(link=><a href={url(link.url)}>{link.label}</a>)}<a href={url('/contact')}>Find a centre</a><a href={url('/sitemap')}>Full sitemap</a><a href={url('/verify/')}>Licences, research &amp; evidence</a></div>
+            <div class="portal-directory-actions">{quickActions.map(link=><a href={url(link.url)}>{link.label}</a>)}<a href={url('/centers')}>Find a centre</a><a href={url('/sitemap')}>Full sitemap</a><a href={url('/verify/')}>Licences, research &amp; evidence</a></div>
           </nav>
         </details>
       </nav>
-      <nav class="portal-main-nav" aria-label="Main navigation">{navigation.main.map(link=><a href={url(link.url)}>{link.label}</a>)}</nav>
+      <nav class="portal-main-nav" aria-label="Main navigation">{navigation.main.map(link=><a href={url(link.url)} aria-current={link.url===currentPath?'page':undefined}>{link.label}</a>)}</nav>
     </div>
   </div>
   <nav class="portal-therapy-nav" aria-label="Therapy services"><div class="portal-container portal-therapy-list">
