@@ -10,8 +10,8 @@ export const serviceInformationPath = '/speech-therapy/service-information';
 export const speechContent: ServiceContent = {
   id:'speech', path:speechPath, label:'Speech Therapy',
   name:'Speech and language therapy for children', type:'Speech and language therapy',
-  title:'Speech Therapy for Children: Assessment & Care | Pinnacle Blooms',
-  description:'Help your child communicate in everyday life. Explore PinnacleAI, our family pathway and evidence. Arrange a FREE speech assessment. Call 9100 181 181.',
+  title:'Speech Therapy for Children Across India | Pinnacle Blooms',
+  description:'Help your child communicate in everyday life. Explore our life-first family pathway, listed Pinnacle centres and evidence you can inspect. Call 9100 181 181.',
   enquiry:{url:speechOffer.url,label:'Arrange your FREE assessment',mobileLabel:'FREE assessment'},
   assessmentOffer:speechOffer,
   citations:[

@@ -231,6 +231,20 @@ Do not redeploy or rerun the complete estate for every sentence edit. Do rerun b
 
 ## Completion gates
 
+### Bounded page-release gate
+
+Complete each page in one controlled pass:
+
+- [ ] **Freeze scope.** Record the canonical, parent promise, primary action, evidence limits and acceptance checks in `ACTIVE-PAGE-WORK-ORDER.md`. Put later ideas in the backlog; they do not reopen this release.
+- [ ] **Lock the image.** Select or generate the visual after the narrative is fixed. Confirm provenance, crop, alt text and responsive use; do not regenerate after it passes unless a concrete defect is found.
+- [ ] **Implement once.** Assemble the page, machine and social surfaces, and resolved review findings into one coherent release candidate.
+- [ ] **Run focused checks.** Test the changed page and only shared systems actually touched. Do not repeat a passing check unless code, content or a dependency changed, or a live defect appears.
+- [ ] **Deploy once.** Release the coherent candidate through the established route and preserve rollback details.
+- [ ] **Check live once.** Read back the canonical, key image, primary action, sources and schema, responsive view, and named protected routes.
+- [ ] **Record and move on.** Commit and push, write the release receipt and ledger entry, mark the work order complete and advance to the next inventory page.
+
+Reopen a completed gate only for a specific failed check, a live defect, new material evidence or an explicit scope change. Every reopened item must identify the affected file, route or response; speculative re-analysis is not a release task.
+
 A page is complete only when:
 
 - its parent and sales narrative is coherent from opening through action;

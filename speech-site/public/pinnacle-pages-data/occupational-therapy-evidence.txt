@@ -1,0 +1,29 @@
+# Occupational Therapy for Children — claims and sources
+
+Updated: 29 September 2026
+Publisher: Bharath Healthcare Laboratories Private Limited
+Brand: Pinnacle Blooms Network
+Page: https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate
+
+## Occupational therapy
+
+Claim: Occupational therapy supports participation in meaningful everyday activities.
+Source: https://wfot.org/about/about-occupational-therapy
+Scope: General professional definition; not a promise for an individual child and not an endorsement of Pinnacle.
+
+Claim: Children's everyday occupations may include self-care, education, play and social participation.
+Source: https://www.aota.org/practice/domain-and-process/occupations-everyday-activities
+Scope: General professional framework; individual assessment determines relevant goals.
+
+## Pinnacle approach and software
+
+Claim: Pinnacle's life-first programme connects abilities, goals, appropriate support, family participation, everyday practice and review to the life the child is growing toward.
+Source: https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html
+Scope: Pinnacle programme description. It does not guarantee independence or mainstream participation.
+
+Claim: PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software for children aged 0–12.
+Source: https://www.pinnacleblooms.org/verify/evidence/records/md5.html
+Scope: The software licence does not license occupational therapy, register a centre or establish an individual outcome.
+
+Full evidence register: https://www.pinnacleblooms.org/verify/
+Structured source map: https://www.pinnacleblooms.org/pinnacle-pages-data/occupational-therapy-evidence.json

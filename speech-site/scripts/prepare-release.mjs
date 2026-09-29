@@ -21,6 +21,9 @@ await fs.writeFile(path.join(out,'pinnacle-pages-html/enrolment-preview.html'),e
 const enrolment=await fs.readFile(path.join(root,'dist/enroll-autism-speech-aba-therapies-india.html'),'utf8');
 assert(enrolment.includes('index, follow, max-image-preview:large')&&enrolment.includes('data-preview="false"')&&enrolment.includes('data-api-endpoint="/api/enrolment"')&&!enrolment.includes('Design preview'));
 await fs.writeFile(path.join(out,'pinnacle-pages-html/enrolment.html'),enrolment);
+const occupational=await fs.readFile(path.join(root,'dist/best-occupational-therapy-center-india-proven-improvement-rate.html'),'utf8');
+assert(occupational.includes('index, follow, max-image-preview:large')&&occupational.includes('Occupational Therapy for Children in India')&&occupational.includes('occupational-therapy-evidence.json'));
+await fs.writeFile(path.join(out,'pinnacle-pages-html/occupational-therapy.html'),occupational);
 assert.deepEqual(await fs.readFile(path.join(out,'index.html')),before,'Verify index must be unchanged');
 const inventory={};
 async function walk(dir){for(const item of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,item.name);if(item.isDirectory())await walk(f);else{const key='/'+path.relative(out,f).replaceAll('\\','/');inventory[key]=crypto.createHash('sha256').update(await fs.readFile(f)).digest('hex').slice(0,16);}}}
@@ -28,7 +31,7 @@ for(const dir of ['pinnacle-pages-assets','pinnacle-pages-fonts','pinnacle-pages
 const base=await fs.readFile(path.join(verifyRoot,'pinnacle-route-v11.mjs'),'utf8');
 const needle='  const incoming=new URL(request.url),isVerify=';
 assert(base.includes(needle));
-let worker="import {serveSpeechEnquiry} from './speech-enquiry-handler.mjs';\nimport {serveSpeech} from './speech-handler.mjs';\nimport {serveEnrolmentApi} from './enrolment-handler.mjs';\nconst SPEECH_INVENTORY="+JSON.stringify(inventory)+";\n"+base.replace(needle,'  const enrolmentApiResponse=await serveEnrolmentApi(request,env);if(enrolmentApiResponse)return enrolmentApiResponse;\n  const speechResponse=await serveSpeech(request,env,SPEECH_INVENTORY);if(speechResponse)return speechResponse;\n  const enquiryResponse=await serveSpeechEnquiry(request,env);if(enquiryResponse)return enquiryResponse;\n'+needle);
+let worker="import {serveRootDiscovery} from './discovery-handler.mjs';\nimport {serveSpeechEnquiry} from './speech-enquiry-handler.mjs';\nimport {serveSpeech} from './speech-handler.mjs';\nimport {serveEnrolmentApi} from './enrolment-handler.mjs';\nconst SPEECH_INVENTORY="+JSON.stringify(inventory)+";\n"+base.replace(needle,'  const discoveryResponse=await serveRootDiscovery(request,env);if(discoveryResponse)return discoveryResponse;\n  const enrolmentApiResponse=await serveEnrolmentApi(request,env);if(enrolmentApiResponse)return enrolmentApiResponse;\n  const speechResponse=await serveSpeech(request,env,SPEECH_INVENTORY);if(speechResponse)return speechResponse;\n  const enquiryResponse=await serveSpeechEnquiry(request,env);if(enquiryResponse)return enquiryResponse;\n'+needle);
 worker=worker.replace("['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml']","['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml','https://www.pinnacleblooms.org/speech-therapy/sitemap.xml']");
 await fs.writeFile('deployment/pinnacle-route-v12.mjs',worker);
 await fs.writeFile('deployment/speech-inventory.json',JSON.stringify(inventory,null,2)+'\n');

@@ -1,6 +1,8 @@
 # Active page work order — Occupational Therapy
 
-29 September 2026 · Status: next managed page · Implementation not yet started
+29 September 2026 · Status: published and production-verified in release v112
+
+Completion record: the canonical page, original branded visual, shared shell, centres, call/enrolment actions, evidence map, structured data, Open Graph card, Markdown reading surface, sitemap/`llms.txt` discovery and legacy redirects are live. The production build and 46 focused checks passed; 390/768/1440 responsive review found no overflow; the live gate passed across the canonical and protected routes. Source and detailed evidence are recorded in `RELEASE-OCCUPATIONAL-THERAPY-V112-20260929.md` and `deployment/release-occupational-v112-20260929.json`.
 
 This is page 1 of the canonical sequence in `PORTAL-PAGE-INVENTORY-20260929.md`. Occupational Therapy is followed by ABA Therapy, Special Education, the Autism Therapy integration hub, Find a Centre, Child Development Assessment and the connected PinnacleAI® product knowledge graph.
 

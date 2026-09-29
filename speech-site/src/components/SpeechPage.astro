@@ -9,6 +9,8 @@ import { Image } from 'astro:assets';
 import AnalogyStories from './AnalogyStories.astro';
 import LifePath from './LifePath.astro';
 import emblem from '../assets/pinnacle-emblem-official.png';
+import communicationJourney from '../assets/speech-communication-journey-branded-20260929.png';
+import TherapyTogether from './TherapyTogether.astro';
 import { speechContent, serviceInformationPath } from '../data/speech-content';
 import shareCard from '../assets/speech-share-20260928.png';
 import firstVisit from '../assets/speech-first-visit.png';
@@ -22,8 +24,13 @@ import { steps, stepSources, proofCards } from '../data/speech';
 const { focused = false } = Astro.props;
 const content = speechContent;
 ---
-<PageLayout updatedOn="2026-09-28" enquiry={content.enquiry} path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} assessmentOffer={content.assessmentOffer} title={content.title} description={content.description} citations={content.citations} imageAlt="Pinnacle speech therapy: Be understood. Make choices. Join in. FREE speech assessment. Call 9100 181 181." imageCaption="Speech therapy for children at Pinnacle Blooms Network." shareImage={shareCard} focused={focused}>
-  <HeroSlider content={content} /><ActionStrip />
+<PageLayout updatedOn="2026-09-29" enquiry={content.enquiry} path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} assessmentOffer={content.assessmentOffer} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="A Pinnacle Blooms speech-therapy card showing an Indian mother and child using picture cards, with the message Be understood, Make choices, Join in and the phone number 9100 181 181." imageCaption="Speech therapy for children at Pinnacle Blooms Network." shareImage={shareCard} focused={focused}>
+  <HeroSlider content={content} /><ActionStrip focused />
+
+  <section class="section speech-age-journey" aria-labelledby="speech-age-journey-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">From first gestures to school participation</p><h2 id="speech-age-journey-title">Communication grows<br/><em>through everyday life.</em></h2></div><p>Around 9 months, communication may begin with shared attention, sounds and gestures. Through the early years, it can grow into words, choices, conversation, play and classroom participation. We begin with what your child can do now and what would matter next.</p></div>
+    <figure class="speech-age-visual"><Image src={communicationJourney} widths={[480,760,1100,1536]} sizes="(min-width:1100px) 1100px, calc(100vw - 36px)" width={1536} height={864} format="webp" quality={82} loading="eager" alt="An Indian mother and preschool child communicating through play, with connected scenes of a baby using gestures and a seven-year-old participating in class. The official Pinnacle emblem and evidence labels are shown in the artwork."/><figcaption>One connected communication journey—from early shared attention toward greater participation at home, in learning and at school. <a href={url('/verify/evidence/records/md5.html')}>MD-5</a> · <a href={url('/verify/evidence/records/bis.html')}>BIS scope</a> · <a href={url('/verify/evidence/cite.html')}>Citations</a>. Assessment, goals and progress remain individual.</figcaption></figure>
+  </div></section>
 
   <span class="legacy-section-anchor" id="ChildrenServices-section" aria-hidden="true"></span><section class="wrap service-fit" id="service-fit" aria-labelledby="fit-title">
     <div class="fit-heading"><p class="eyebrow">Your child. Your everyday priorities.</p><h2 id="fit-title">What would you like<br /><em>to become easier?</em></h2></div>
@@ -77,6 +84,8 @@ const content = speechContent;
     </div></details>
   </section>
 
+  <TherapyTogether current="speech" />
+
   <CentreDirectory />
 
   <SpeechResources />
@@ -97,7 +106,7 @@ const content = speechContent;
     <p class="source-note source-downloads"><a href="/pinnacle-pages-data/speech-evidence.txt">Claims and sources for this page</a> · <a href="/pinnacle-pages-data/speech-evidence.json">Download source map (JSON)</a></p>
   </div></section>
 
-  <section class="section wrap faq-section" aria-labelledby="faq-title"><div><p class="eyebrow">Before you decide</p><h2 id="faq-title">Clear answers.<br /><em>A simpler next step.</em></h2><a class="text-link" href="https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders/">Communication development · ASHA ↗</a></div><div>{content.faqs.map(f=><details><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div></section>
+  <section class="section wrap faq-section" id="questions" aria-labelledby="faq-title"><div><p class="eyebrow">Before you decide</p><h2 id="faq-title">Clear answers.<br /><em>A simpler next step.</em></h2><a class="text-link" href="https://www.asha.org/public/early-identification-of-speech-language-and-hearing-disorders/">Communication development · ASHA ↗</a></div><div>{content.faqs.map(f=><details><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div></section>
 
   <span class="legacy-section-anchor" id="admission-section" aria-hidden="true"></span><section class="final-cta" id="next-step" aria-labelledby="next-title"><div class="wrap"><div class="close-sun official-close"><Image src={emblem} width={96} height={96} format="webp" loading="lazy" alt="Pinnacle official pinwheel emblem" /></div><p class="eyebrow">Every Child Counts®</p><h2 id="next-title">Your hopes deserve<br />a clear next step.</h2><p>Tell us what you want to become easier for your child.<br />We’ll help you arrange a FREE assessment, find a centre and understand the next step.</p><div class="final-actions"><a class="button white" href={phone.href} data-cta="final-call"><Icon name="phone" />Call {phone.display}</a><a class="button light-outline" href={speechOffer.url} data-cta="final-enquiry">Arrange your FREE assessment <Icon name="arrow" /></a></div><div class="close-moments"><span><Icon name="voice" />A way to ask.</span><span><Icon name="heart" />A choice to make.</span><span><Icon name="people" />A life to take part in.</span></div><p class="final-guidance">FREE speech assessment · Free guidance, 24/7 · Ongoing therapy is priced separately.</p><a class="helpline-link" href={url('/national-autism-helpline')}>Pinnacle / BHCL National Autism Helpline →</a></div></section>
 

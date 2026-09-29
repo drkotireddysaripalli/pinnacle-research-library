@@ -10,6 +10,7 @@ const remaining=cards.filter(c=>!c.featured);
 <section class="verify-footer" id="pinnacle-evidence" aria-labelledby="verify-footer-title">
  <div class="wrap">
   <div class="verify-footer-heading"><div><p class="eyebrow">Open. Honest. Transparent. Self-critical.</p><h2 id="verify-footer-title">Your confidence.<br/><em>The evidence behind it.</em></h2></div><div><p>Explore the licences, research, identity records and publications behind Pinnacle. Each record explains its source, scope and review status.</p><a class="button outline" href="https://www.pinnacleblooms.org/verify/"><Icon name="book"/>Explore all {cards.length} evidence records</a></div></div>
+  <p class="verify-swipe-hint">Swipe through the featured evidence. Every record remains available below.</p>
   <div class="verify-card-grid">{cards.filter(c=>c.featured).map(card=><VerifyCard card={card}/>)}</div>
   <details class="verify-all-records"><summary><span>Explore {remaining.length} more records</span><span>Regulation · centre identities · research · publications</span></summary>
    {categories.map(category=>{const items=remaining.filter(c=>register.records.find(r=>r.id===c.id)?.category===category);return items.length>0&&<section class="verify-record-group" aria-label={category}><h3 class="verify-group-title">{category}<span>{items.length} records</span></h3><div class="verify-card-grid">{items.map(card=><VerifyCard card={card}/>)}</div></section>})}

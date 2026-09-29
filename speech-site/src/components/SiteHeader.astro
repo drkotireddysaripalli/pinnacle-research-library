@@ -27,7 +27,13 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
       </nav>
     </div>
   </div>
-  <nav class="portal-main-nav" aria-label="Pinnacle approach, products and evidence"><div class="portal-container portal-main-list">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-label={link.detail?`${link.label}: ${link.detail}`:link.label} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</div></nav>
+  <nav class="portal-main-nav" aria-label="Pinnacle approach, products and evidence">
+    <div class="portal-mobile-proof-links" aria-label="Evidence shortcuts">
+      <a href={url('/verify/')}><Icon name="shield" /><span><strong>Verify Pinnacle</strong><small>36 evidence records</small></span></a>
+      <a href={url('/verify/evidence/cite.html')}><Icon name="book" /><span><strong>Citations</strong><small>Quote · link · download</small></span></a>
+    </div>
+    <div class="portal-container portal-main-list">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-label={link.detail?`${link.label}: ${link.detail}`:link.label} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</div>
+  </nav>
   <nav class="portal-therapy-nav" aria-label="Therapies and complete Pinnacle navigation"><div class="portal-container portal-therapy-list">
     {navigation.therapy.map(group=><div class="portal-therapy-group"><a class="portal-therapy-title" href={url(group.url)} aria-current={group.url===currentPath?'page':undefined}>{group.label}</a><details class="portal-therapy-menu"><summary aria-label={`${group.label} menu`}><Icon name="chevron" size={15} /></summary><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>)}
     <div class="portal-therapy-group portal-about-group"><a class="portal-therapy-title" href={url('/about-pinnacle-proven-improvement-rate')} aria-current={currentPath==='/about-pinnacle-proven-improvement-rate'?'page':undefined}>About &amp; Contact</a><details class="portal-therapy-menu portal-about-menu"><summary aria-label="About and Contact menu"><Icon name="chevron" size={15} /></summary><ul>{navigation.aboutContact.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>

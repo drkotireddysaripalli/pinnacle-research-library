@@ -1,0 +1,122 @@
+{
+  "checkedAt": "2026-09-29T13:00:33.000Z",
+  "pages": [
+    {
+      "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 459730,
+      "canonical": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+      "hasPhone": true,
+      "hasSharedHeader": true,
+      "hasSharedFooter": true,
+      "hasFaq": true,
+      "hasEvidence": true
+    },
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 486670,
+      "hasPhone": true
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 232845,
+      "hasPhone": true
+    },
+    {
+      "path": "/verify/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 1022606,
+      "hasPhone": true
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 48373,
+      "hasPhone": true
+    },
+    {
+      "path": "/verify/evidence/pinnacleai-regulatory-journey.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 192997,
+      "hasPhone": true
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 87566,
+      "hasPhone": true
+    }
+  ],
+  "aliases": [
+    {
+      "path": "/occupational-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "path": "/t/occupational-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate"
+    }
+  ],
+  "discovery": [
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "bytes": 1288,
+      "hasOccupational": false,
+      "hasSpeechChild": true
+    },
+    {
+      "path": "/speech-therapy/sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "bytes": 864,
+      "hasOccupational": true
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8",
+      "bytes": 29597,
+      "hasOccupational": true,
+      "hasVerify": true
+    }
+  ],
+  "machine": [
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8",
+      "contentSignal": "search=yes, ai-input=yes",
+      "isMarkdown": true,
+      "bytes": 177104
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8",
+      "contentSignal": "search=yes, ai-input=yes",
+      "isMarkdown": true,
+      "bytes": 2107
+    },
+    {
+      "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "type": "text/markdown; charset=utf-8",
+      "contentSignal": "search=yes, ai-input=yes",
+      "isMarkdown": true,
+      "bytes": 3079
+    }
+  ]
+}
