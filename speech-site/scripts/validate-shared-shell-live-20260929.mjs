@@ -25,7 +25,12 @@ for(const path of paths){
   assert(html.includes('data-cta="header-enrol"'),path);
   assert(html.includes('tel:+919100181181'),path);
   assert(!html.includes('portal-donate')&&!html.includes('/donate'),path);
-  for(const label of ['PinnacleAI®','Verify','Research','Whitebook','News','Centres','Contact'])assert(html.includes(`>${label}</a>`),`${path}: ${label}`);
+  for(const label of ['PinnacleAI®','Verify','Research','Whitebook','News','Centres','Contact'])assert(html.includes(`class="portal-nav-label">${label}</span>`),`${path}: ${label}`);
+  for(const detail of ['Life-first paradigm shift','36 evidence records','Studies &amp; publications'])assert(html.includes(detail),`${path}: ${detail}`);
+  assert(html.includes('National Autism Helpline')&&html.includes('Free guidance · 24/7'),`${path}: helpline context`);
+  assert(html.includes('>9100 181 181</strong>'),`${path}: strong phone`);
+  assert(html.includes('Find a centre'),`${path}: centre finder`);
+  assert(html.includes('href="https://www.pinnacleblooms.org/verify/evidence/research-library.html"'),`${path}: curated research destination`);
   const headerStart=html.indexOf('<header class="portal-header"');
   const headerEnd=html.indexOf('</header>',headerStart)+'</header>'.length;
   const footerStart=html.indexOf('<footer class="portal-site-footer"');
@@ -44,13 +49,13 @@ assert.equal(new Set(headers).size,1,'Rendered shared header differs across mana
 assert.equal(new Set(footers).size,1,'Rendered Verify block and full footer differ across managed pages');
 const report={
   checkedAt:new Date().toISOString(),
-  version:101,
+  version:102,
   managedPages:paths.length,
   sharedHeaderIdentical:true,
   verifyInsideSharedFooter:true,
   sharedFooterIdentical:true,
   donateRemoved:true,
-  priorityNavigation:['PinnacleAI®','Verify','Research','Whitebook','News','Centres','Contact','Enroll'],
+  priorityNavigation:['PinnacleAI® — Life-first paradigm shift','Verify — 36 evidence records','Research — Studies & publications','Whitebook','News','Centres','Contact','Enrol at Pinnacle'],
   results
 };
 await fs.writeFile('deployment/shared-shell-production-20260929.json',JSON.stringify(report,null,2)+'\n');

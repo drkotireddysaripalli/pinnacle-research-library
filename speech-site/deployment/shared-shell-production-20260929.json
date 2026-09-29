@@ -1,56 +1,56 @@
 {
-  "checkedAt": "2026-09-29T06:10:48.935Z",
-  "version": 101,
+  "checkedAt": "2026-09-29T06:40:39.639Z",
+  "version": 102,
   "managedPages": 5,
   "sharedHeaderIdentical": true,
   "verifyInsideSharedFooter": true,
   "sharedFooterIdentical": true,
   "donateRemoved": true,
   "priorityNavigation": [
-    "PinnacleAI®",
-    "Verify",
-    "Research",
+    "PinnacleAI® — Life-first paradigm shift",
+    "Verify — 36 evidence records",
+    "Research — Studies & publications",
     "Whitebook",
     "News",
     "Centres",
     "Contact",
-    "Enroll"
+    "Enrol at Pinnacle"
   ],
   "results": [
     {
       "path": "/top-speech-therapy-center-india-proven-improvement-rate",
       "status": 200,
-      "headerSha256": "e2987c27f2f034ae93d6e86e79bcd0d891c6a5330cf9478459896a1f0a52507c",
+      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
       "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "152909ceddc2c47cf4317f55acff0f3b3acdfa5f11b8cb00d3eb2bb0e3e74b60"
+      "htmlSha256": "59f459dbd70b54049f68654ce16ab31576404a7226b37e1c1c780f2d12744432"
     },
     {
       "path": "/enroll-autism-speech-aba-therapies-india",
       "status": 200,
-      "headerSha256": "e2987c27f2f034ae93d6e86e79bcd0d891c6a5330cf9478459896a1f0a52507c",
+      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
       "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "20d3436a380398c93c9f20196521afd36664706b3544b0f1db4c20c65b0a2fdc"
+      "htmlSha256": "b7f3f59bfbeff1e13c5b2de1d732b14697341a8b4d7f01485cbf0e3d1c24a36b"
     },
     {
       "path": "/speech-therapy/service-information",
       "status": 200,
-      "headerSha256": "e2987c27f2f034ae93d6e86e79bcd0d891c6a5330cf9478459896a1f0a52507c",
+      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
       "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "db8a215e662233d74446d35f63163bda7c3bd61eff5f602ca79c914a8bfd2d90"
+      "htmlSha256": "e80d55f356f9f94819e70d85d3c8d036f7fe9472296b6a98afad628459dababd"
     },
     {
       "path": "/speech-therapy/first-visit-guide",
       "status": 200,
-      "headerSha256": "e2987c27f2f034ae93d6e86e79bcd0d891c6a5330cf9478459896a1f0a52507c",
+      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
       "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "1654c11ad3864758c0b6370d77226f2383bd8b41ca084c451c05212011a81f72"
+      "htmlSha256": "769b27ac33c843a48065e6482725cf77710d7943341f8ce01515224933cb0295"
     },
     {
       "path": "/speech-therapy/teacher-observation-guide",
       "status": 200,
-      "headerSha256": "e2987c27f2f034ae93d6e86e79bcd0d891c6a5330cf9478459896a1f0a52507c",
+      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
       "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "e57147c5742b16377fb852cc6896615e16b3d15d32ecd95b58460a7700e51ff8"
+      "htmlSha256": "6dd8d3f05d49661948c8c41501e5542816aec258d9c9ce6e3a0181cd8c66e9d8"
     }
   ]
 }

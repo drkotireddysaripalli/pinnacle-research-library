@@ -1,0 +1,70 @@
+{
+  "releasedOn": "2026-09-29",
+  "release": "header-clarity-v102",
+  "worker": "pinnacle-verify-route",
+  "versionNumber": 102,
+  "versionId": "756dce57-3a2e-4432-9ec5-f1ac47489abc",
+  "deploymentId": "456361df-9436-42d9-a6eb-b795110f1edf",
+  "trafficPercent": 100,
+  "rollback": {
+    "versionNumber": 101,
+    "versionId": "d1c072fb-f4d9-4527-bb9a-d8eb759f5c5a",
+    "deploymentId": "79f02222-d102-4edb-bf1e-05d53d7ed6da"
+  },
+  "managedRoutes": [
+    "/top-speech-therapy-center-india-proven-improvement-rate",
+    "/enroll-autism-speech-aba-therapies-india",
+    "/speech-therapy/service-information",
+    "/speech-therapy/first-visit-guide",
+    "/speech-therapy/teacher-observation-guide"
+  ],
+  "readerFacingNavigation": [
+    "PinnacleAI® — Life-first paradigm shift",
+    "Verify — 36 evidence records",
+    "Research — Studies & publications",
+    "Whitebook",
+    "News",
+    "Centres",
+    "Contact",
+    "Enrol at Pinnacle"
+  ],
+  "helpline": {
+    "label": "National Autism Helpline",
+    "context": "Free guidance · 24/7",
+    "display": "9100 181 181",
+    "telephone": "tel:+919100181181",
+    "whatsappVisible": true,
+    "centreFinderLabelled": true
+  },
+  "claimDecisions": {
+    "fourBillionUsed": false,
+    "reason": "No inspected source establishes 4 billion; existing record-volume figures have different definitions and limitations.",
+    "naked160YearClaimUsed": false,
+    "reason160": "The linked evidence page carries Pinnacle's source-bounded historical argument."
+  },
+  "liveVerification": {
+    "managedPages200AndIndexable": 5,
+    "sharedHeaderSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
+    "sharedFooterSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
+    "sharedHeaderIdentical": true,
+    "sharedFooterIdentical": true,
+    "liveMatchesRelease": true,
+    "sharedWorkerUnchanged": true,
+    "verifyAssetsMatched": 634,
+    "portalChecksPassed": 15,
+    "focusedTestsPassed": 44,
+    "w3cMessages": 0,
+    "responsiveViewports": [
+      "desktop",
+      "820x1000",
+      "390x844"
+    ],
+    "horizontalOverflow": false
+  },
+  "indexing": {
+    "indexNowSubmitted": true,
+    "updatedUrls": 5,
+    "httpStatus": 200,
+    "meaning": "Notification only; no discovery, indexing, ranking, AI-citation or conversion claim."
+  }
+}

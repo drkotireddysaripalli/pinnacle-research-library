@@ -14,16 +14,15 @@ body{color:var(--reading-ink);font-size:var(--reading-size)}
 .portal-footer .portal-measurement{font-size:.875rem;line-height:1.65}
 .directory-primary>a:not(.button),.directory-source-links a,.verify-card>a,.verify-footer-notes>a{ text-decoration:underline }
 .mobile-cta a{font-size:1rem;line-height:1.35;min-height:54px;white-space:normal}
-.portal-utility,.portal-main-nav,.portal-national .portal-phone,.portal-directory summary,.portal-therapy-title,.portal-directory-actions,.portal-mobile-main{font-size:.8125rem}
-.portal-main-nav{flex-wrap:wrap;justify-content:flex-start;gap:8px 14px}
+.portal-utility,.portal-directory summary,.portal-therapy-title,.portal-directory-actions,.portal-mobile-main{font-size:.8125rem}
 .portal-therapy-title{white-space:normal;min-width:0}
 .action-links{flex-wrap:wrap;min-width:0;gap:12px 22px}
 .portal-therapy-menu li a{font-size:.875rem;line-height:1.5}
 .portal-purpose-copy p,.portal-footer li a,.portal-footer-evidence p,.portal-community>a,.portal-contact-item a:not(.portal-footer-phone){font-size:.9375rem;line-height:1.7}
 .portal-contact-item span,.portal-policies,.portal-identity,.portal-footer-note,.portal-measurement,.portal-footer-brand figcaption,.portal-locations h3,.portal-footer .portal-brand-label{font-size:.875rem;line-height:1.65}
 .portal-footer-policies,.portal-footer-policies a,.portal-footer-identity,.portal-footer-brands span{font-size:.875rem;line-height:1.65}
-@media(max-width:760px){:root{--reading-size:1rem}.portal-utility{flex-wrap:wrap;gap:5px 10px;white-space:normal}.portal-utility a{min-height:40px}.portal-national .portal-phone{font-size:1rem}.mobile-cta{gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom))}body{padding-bottom:90px}}
-@media(max-width:380px){.portal-utility{justify-content:flex-start}.portal-mobile-main{gap:6px}.mobile-cta a{font-size:.9375rem}}
+@media(max-width:760px){:root{--reading-size:1rem}.portal-utility a{min-height:44px}.mobile-cta{gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom))}body{padding-bottom:90px}}
+@media(max-width:380px){.portal-mobile-main{gap:6px}.mobile-cta a{font-size:.9375rem}}
 
 /* Complete directory: a calm, searchable choice rather than a wall of addresses. */
 .directory-help{display:flex;align-items:center;gap:20px;padding:24px 28px;border:1px solid #dcd0df;border-radius:18px;margin:30px 0;background:#fff}

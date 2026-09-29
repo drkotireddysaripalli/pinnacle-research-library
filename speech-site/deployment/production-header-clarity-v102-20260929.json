@@ -1,0 +1,17 @@
+{
+  "id": "456361df-9436-42d9-a6eb-b795110f1edf",
+  "source": "wrangler",
+  "strategy": "percentage",
+  "author_email": "kotii@kgvpl.com",
+  "annotations": {
+    "workers/message": "Deploy reader-facing header and strong National Autism Helpline action",
+    "workers/triggered_by": "deployment"
+  },
+  "versions": [
+    {
+      "version_id": "756dce57-3a2e-4432-9ec5-f1ac47489abc",
+      "percentage": 100
+    }
+  ],
+  "created_on": "2026-09-29T06:40:27.640944Z"
+}

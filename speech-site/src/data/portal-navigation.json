@@ -4,15 +4,18 @@
   "main": [
     {
       "label": "PinnacleAI®",
+      "detail": "Life-first paradigm shift",
       "url": "/verify/evidence/pinnacle-paradigm-shift.html"
     },
     {
       "label": "Verify",
+      "detail": "36 evidence records",
       "url": "/verify/"
     },
     {
       "label": "Research",
-      "url": "/research-studies"
+      "detail": "Studies & publications",
+      "url": "/verify/evidence/research-library.html"
     },
     {
       "label": "Whitebook",

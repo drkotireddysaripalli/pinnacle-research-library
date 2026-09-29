@@ -1,12 +1,14 @@
 {
-  "checkedAt": "2026-09-29T06:14:40.097Z",
-  "checksPassed": 13,
+  "checkedAt": "2026-09-29T06:47:02.554Z",
+  "checksPassed": 15,
   "documentedLinkEntries": 168,
   "checks": [
     "Complete documented portal navigation is present",
     "All six therapy menus have native disclosure controls",
     "Header and footer navigation are server rendered",
-    "Priority header is identical across every managed public page",
+    "Reader-facing authority header is identical across every managed public page",
+    "Helpline and centre actions are explicit in every managed public header",
+    "Research navigation uses the curated evidence library",
     "Donate is removed from every managed shared header",
     "Verify block is inside the shared footer on every managed public page",
     "Verify block and full footer are identical across every managed public page",
