@@ -5,6 +5,16 @@ if(form){
  const button=document.getElementById('enrol-submit'),summary=document.getElementById('enrol-error-summary'),status=document.getElementById('enrol-status'),centre=document.getElementById('preferred-centre');
  const fields={name:'parent-name',phone:'parent-phone',email:'parent-email',service:'service-label',centre:'preferred-centre',message:'family-priority'};
  const centreIds=new Set([...centre.options].map(o=>o.value));
+ const centreCard=document.getElementById('enrol-centre-card'),centreAnnouncement=document.getElementById('enrol-centre-announcement');
+ function renderCentre(announce=false){
+  if(!centreCard)return;
+  const template=[...document.querySelectorAll('template[data-enrol-centre]')].find(t=>t.dataset.enrolCentre===centre.value);
+  centreCard.replaceChildren();centreCard.hidden=!template;
+  if(template)centreCard.append(template.content.cloneNode(true));
+  if(centreAnnouncement)centreAnnouncement.textContent=announce?(template?'Centre details shown for '+centre.options[centre.selectedIndex].textContent+'.':'We can help you find a centre.'):'';
+ }
+ centre.addEventListener('change',()=>renderCentre(true));
+ form.addEventListener('reset',()=>queueMicrotask(()=>renderCentre()));
  let pending=false,finished=false,uncertain=false;
  const controls=[...form.querySelectorAll('[data-enrol-fields]')];
  function setBusy(busy){pending=busy;form.setAttribute('aria-busy',String(busy));controls.forEach(fieldset=>{fieldset.disabled=busy||finished;});button.disabled=busy||finished||uncertain;}
@@ -42,5 +52,6 @@ if(form){
   const selected=services.has(explicit)?explicit:params.get('entry')==='speech-assessment'?'speech':'help';
   const option=form.querySelector('input[name="service"][value="'+selected+'"]');if(option)option.checked=true;
   const preferred=params.get('centre');if(preferred&&centreIds.has(preferred))centre.value=preferred;
+  renderCentre();
  }
 }

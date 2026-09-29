@@ -1,0 +1,23 @@
+---
+import {Image} from 'astro:assets';
+import type {ImageMetadata} from 'astro';
+import centres from '../data/centre-directory.json';
+import {phone} from '../data/site';
+import Icon from './Icon.astro';
+const images=import.meta.glob<{default:ImageMetadata}>('../assets/centre-directory/*.jpg',{eager:true});
+const get=(file:string)=>images['../assets/centre-directory/'+file]?.default;
+---
+<div id="enrol-centre-card" class="enrol-centre" hidden role="region" aria-label="Your selected Pinnacle centre"></div>
+<p id="enrol-centre-announcement" class="enrol-sr-only" role="status" aria-live="polite"></p>
+{centres.map(c=>{
+ const cover=c.images.find(p=>p.kind==='exterior')||c.images[0];
+ return <template data-enrol-centre={c.id}>
+  <div class="enrol-centre-heading">{c.emblem&&get(c.emblem)&&<Image src={get(c.emblem)} width={64} height={64} format="webp" alt="" loading="lazy"/>}<div><p class="eyebrow">{c.city} · {c.region}</p><h3>{c.name}</h3></div></div>
+  <address>{c.address}</address>
+  <details class="enrol-centre-explore"><summary>See centre photos, directions &amp; reviews</summary>
+  {cover&&get(cover.file)&&<figure><Image src={get(cover.file)} width={600} height={360} fit="cover" format="webp" quality={78} alt={cover.alt} loading="lazy"/><figcaption>{cover.caption}</figcaption></figure>}
+  <div class="enrol-centre-links"><a href={c.profileUrl} target="_blank" rel="noopener noreferrer">{c.profileUrl.includes('/centers/')?'Explore this centre':'View location contact details'} (new tab) ↗</a><a href={c.mapsUrl} target="_blank" rel="noopener noreferrer">View on Google Maps &amp; read reviews (new tab) ↗</a><a href={phone.href}>National team · {phone.display}</a>{c.directTelephone&&<a href={'tel:'+c.directTelephone}>Centre · {c.directTelephone}</a>}<a href={'https://wa.me/?text='+encodeURIComponent('Pinnacle Blooms Network — '+c.name+'\n'+c.profileUrl)} target="_blank" rel="noopener noreferrer">Share this centre with family ↗</a></div>
+  </details>
+  <p class="field-help">We’ll confirm current premises, services and appointment availability with you.</p>
+ </template>;
+})}

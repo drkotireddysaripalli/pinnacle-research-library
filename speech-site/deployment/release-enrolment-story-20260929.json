@@ -1,0 +1,52 @@
+{
+  "releasedOn": "2026-09-29",
+  "worker": "pinnacle-verify-route",
+  "version": "12ea6637-ca79-474c-9641-a9324d2fb29b",
+  "versionNumber": 88,
+  "deployment": "983fda0f-4e66-4502-85fb-8f900b3896f5",
+  "rollbackVersion": "8f09e142-9bda-491b-9b56-1e3160ac22a0",
+  "previewUrl": "https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment",
+  "workerSha256": "154c41dc9aa4d097b03eaf9fa8c7306b63d9a018503d6d8f97f8dafb548857d8",
+  "assetCount": 1333,
+  "preservedVerifyAssets": 634,
+  "templateAssets": 699,
+  "modules": [
+    "pinnacle-route-v12.mjs",
+    "speech-handler.mjs",
+    "speech-enquiry-handler.mjs",
+    "centre-facilities.mjs"
+  ],
+  "checks": {
+    "automatedTestsPassed": 34,
+    "w3cErrors": 0,
+    "w3cWarnings": 0,
+    "all699PublishedFilesMatched": true,
+    "sharedWorkerLogicUnchanged": true,
+    "responsiveWidths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "centreSelectionAndReset": true,
+    "invalidFormFocus": true,
+    "previewDoesNotSubmit": true,
+    "previewPostStatus": 405,
+    "physicalSafariIosTested": false,
+    "fieldPerformanceMeasured": false
+  },
+  "review": {
+    "parent": 89,
+    "sales": 89,
+    "evidence": 89,
+    "kind": "Independent AI editorial/source reviews, not conversion or user research"
+  },
+  "apiConnected": false,
+  "liveEnrolmentPreserved": true,
+  "ratingsPublished": false,
+  "remaining": [
+    "Owner-supplied enrolment API integration and accepted-receipt test before live form replacement.",
+    "Per-centre verified ratings/counts and publication rights before rating or testimonial display.",
+    "Physical Safari/iOS testing and field conversion/performance data remain unverified."
+  ]
+}

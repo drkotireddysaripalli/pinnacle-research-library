@@ -1,0 +1,18 @@
+---
+import Icon from './Icon.astro';
+import {url} from '../data/site';
+const stages=[
+ ['compass','Discover your child’s capabilities','Assessment and AbilityScore® measurement help us understand current abilities and agree where to begin.'],
+ ['plan','Set the direction together','Readiness forecasting and a child-specific plan connect priorities to everyday life.'],
+ ['people','Bring the right support together','Appropriate therapies and intervention work around your child’s needs and goals.'],
+ ['home','Make everyday moments count','Parent-guided practice helps bring developing abilities into home and daily routines.'],
+ ['track','See what is changing','Family observations and progress tracking inform review and changes to the plan.'],
+ ['loop','Reassess. Refine. Keep working.','Reassessment guides the next priorities and support as readiness develops.'],
+ ['sun','Grow toward a fuller life','Greater independence, school readiness and mainstream participation give the journey its purpose.']
+];
+---
+<section class="section wrap enrol-journey" aria-labelledby="journey-title" id="your-childs-journey">
+ <div class="enrol-section-heading"><p class="eyebrow">The PinnacleAI® life-first approach</p><h2 id="journey-title">Start with the life.<br/><em>Shape the work around it.</em></h2><p>Like a home, a child’s life is more than its individual parts. We connect the abilities being developed to what your child wants and needs to do in everyday life.</p></div>
+ <ol class="enrol-stages">{stages.map(([icon,title,body],i)=><li><div class="enrol-stage-top"><span class="enrol-step">{String(i+1).padStart(2,'0')}</span><Icon name={icon} size={30}/></div><h3>{title}</h3><p>{body}</p></li>)}</ol>
+ <div class="enrol-family-role"><Icon name="heart" size={30}/><p><strong>You belong in every stage.</strong> Your priorities, observations and questions help shape the journey. Professionals guide care decisions; PinnacleAI supports the work.</p><a href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Explore the complete approach →</a></div>
+</section>
