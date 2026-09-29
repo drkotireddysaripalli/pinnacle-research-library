@@ -1,7 +1,7 @@
 {
-  "checkedAt": "2026-09-27T07:38:56.383Z",
+  "checkedAt": "2026-09-28T12:45:54.684Z",
   "groups": 10,
-  "sourceLinks": 18,
+  "sourceLinks": 17,
   "allVisibleAndCited": true,
   "results": [
     {
@@ -46,11 +46,6 @@
     },
     {
       "url": "https://www.pinnacleblooms.org/verify/evidence/bis.pdf#page=2",
-      "status": 200,
-      "fragmentOk": true
-    },
-    {
-      "url": "https://www.pinnacleblooms.org/question-comprehension-study",
       "status": 200,
       "fragmentOk": true
     },

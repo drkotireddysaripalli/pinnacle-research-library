@@ -31,7 +31,7 @@ export async function serveSpeech(request,env,inventory){
  for(const k of ['set-cookie','age','expires','content-encoding'])headers.delete(k);
  headers.set('content-type',MIME[key.slice(key.lastIndexOf('.'))]||'application/octet-stream');
  headers.set('x-content-type-options','nosniff');headers.set('referrer-policy','strict-origin-when-cross-origin');
- headers.set('x-pinnacle-speech-release','2026-09-28');
+ headers.set('x-pinnacle-speech-release','2026-09-29');
  // Preserve search and answer retrieval signals in Cloudflare Markdown conversion.
  if(isHtml)headers.set('content-signal','search=yes, ai-input=yes');
  headers.set('cache-control',key.startsWith('/pinnacle-pages-assets/')?'public, max-age=31536000, immutable':'public, max-age=60, must-revalidate');

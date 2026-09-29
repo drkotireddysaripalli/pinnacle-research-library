@@ -2,7 +2,7 @@ import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment}
 const form=document.getElementById('pinnacle-enrolment');
 if(form){
  const preview=form.dataset.preview==='true',endpoint=form.dataset.apiEndpoint;
- const button=document.getElementById('enrol-submit'),summary=document.getElementById('enrol-error-summary'),status=document.getElementById('enrol-status'),centre=document.getElementById('preferred-centre');
+ const button=document.getElementById('enrol-submit'),summary=document.getElementById('enrol-error-summary'),status=document.getElementById('enrol-status'),centre=document.getElementById('preferred-centre'),preferences=document.getElementById('enrol-preferences');
  const fields={name:'parent-name',phone:'parent-phone',email:'parent-email',service:'service-label',centre:'preferred-centre',message:'family-priority'};
  const centreIds=new Set([...centre.options].map(o=>o.value));
  const centreCard=document.getElementById('enrol-centre-card'),centreAnnouncement=document.getElementById('enrol-centre-announcement');
@@ -14,7 +14,7 @@ if(form){
   if(centreAnnouncement)centreAnnouncement.textContent=announce?(template?'Centre details shown for '+centre.options[centre.selectedIndex].textContent+'.':'We can help you find a centre.'):'';
  }
  centre.addEventListener('change',()=>renderCentre(true));
- form.addEventListener('reset',()=>queueMicrotask(()=>renderCentre()));
+ form.addEventListener('reset',()=>queueMicrotask(()=>{renderCentre();if(preferences)preferences.open=false;}));
  let pending=false,finished=false,uncertain=false;
  const controls=[...form.querySelectorAll('[data-enrol-fields]')];
  function setBusy(busy){pending=busy;form.setAttribute('aria-busy',String(busy));controls.forEach(fieldset=>{fieldset.disabled=busy||finished;});button.disabled=busy||finished||uncertain;}
@@ -27,6 +27,7 @@ if(form){
    if(error)error.textContent=errors[name]||'';
   }
   if(summary.hidden)return;
+  if((errors.service||errors.centre)&&preferences)preferences.open=true;
   if(errors.email||errors.message)form.querySelector('.enrol-optional').open=true;
   const title=document.createElement('strong');title.textContent='Please check these details:';summary.append(title);
   const list=document.createElement('ul');for(const [field,error]of Object.entries(errors)){const li=document.createElement('li'),link=document.createElement('a');link.href='#'+fields[field];link.textContent=error;link.addEventListener('click',()=>document.getElementById(fields[field]).focus());li.append(link);list.append(li);}summary.append(list);summary.focus();
@@ -48,10 +49,11 @@ if(form){
  if(preview||approvedEndpoint(endpoint,location.origin)){
   controls.forEach(fieldset=>{fieldset.disabled=false;});button.disabled=false;
   document.getElementById('enrol-unavailable').hidden=true;
-  const params=new URLSearchParams(location.search),explicit=params.get('service');
-  const selected=services.has(explicit)?explicit:params.get('entry')==='speech-assessment'?'speech':'help';
+  const params=new URLSearchParams(location.search),explicit=params.get('service'),entrySpeech=params.get('entry')==='speech-assessment',explicitService=services.has(explicit);
+  const selected=explicitService?explicit:entrySpeech?'speech':'help';
   const option=form.querySelector('input[name="service"][value="'+selected+'"]');if(option)option.checked=true;
-  const preferred=params.get('centre');if(preferred&&centreIds.has(preferred))centre.value=preferred;
+  const preferred=params.get('centre'),explicitCentre=preferred&&centreIds.has(preferred);if(explicitCentre)centre.value=preferred;
+  if(preferences&&(explicitService||entrySpeech||explicitCentre))preferences.open=true;
   renderCentre();
  }
 }

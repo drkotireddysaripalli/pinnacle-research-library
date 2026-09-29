@@ -7,6 +7,8 @@ const report=await response.json();
 await fs.writeFile('reviews/W3C-ENROLMENT-20260929.json',JSON.stringify({checkedAt:new Date().toISOString(),status:response.status,...report},null,2));
 assert(response.ok);assert.equal(report.messages.filter(m=>m.type==='error').length,0,JSON.stringify(report.messages));
 assert(html.includes('noindex, nofollow')&&html.includes('data-preview="true"'));
+assert(html.includes('id="enrol-preferences"')&&html.includes('Choose a service or centre'));
+assert(!html.includes('id="enrol-preferences" open'));
 assert.equal((html.match(/data-enrol-centre=/g)||[]).length,62);
 const graph=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
 assert(!JSON.stringify(graph).includes('aggregateRating'));

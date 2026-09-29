@@ -14,15 +14,15 @@ Published: https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment
 
 ## Review and validation
 
-Independent parent, sales and evidence reviewers each scored the rebuild 89/100. These are AI editorial judgments, not measured conversion performance or actual family research. All actionable release findings were addressed: visible call wording, collapsible centre media, preserving form state across external exploration, exact legal-entity evidence destination and clearer first-stage wording.
+Independent editorial reviews scored the rebuild 90/100 from the parent perspective, 91/100 for warm sales traffic, 87/100 for cold sales traffic and 92/100 for evidence/SEO readiness. These are AI editorial judgments, not measured conversion performance or actual family research. All actionable release findings were addressed: visible call wording, progressive disclosure of optional preferences, a shorter mobile route to the required fields, preserving form state across external exploration, exact legal-entity evidence destination and clearer first-stage wording.
 
-34 automated form/routing/measurement tests pass. W3C Nu reports zero errors and zero warnings for the final enrolment HTML. Browser checks covered 320, 390, 768 and 1440px; no horizontal overflow was observed. Centre selection, photo disclosure, reset, invalid-input focus and non-submitting preview acknowledgement were checked. Actual Safari/iOS devices, assistive-technology sessions and field Core Web Vitals were not tested in this release.
+34 Node tests pass; the full suite records 40 automated checks and 15 production checks. W3C Nu reports zero errors and zero warnings for the final enrolment HTML. Browser checks covered 320, 390, 768 and 1440px; no horizontal overflow was observed. Centre selection, photo disclosure, progressive disclosure, query-driven service/centre preselection, reset, invalid-input focus and non-submitting preview acknowledgement were checked. Actual Safari/iOS devices, assistive-technology sessions and field Core Web Vitals were not tested in this release.
 
 All 699 published template assets/documents match the build. All 634 Verify assets match the preserved source. Verify, evidence register, FSC PDF, PinnacleAI story, helpline and robots match pre-release bytes. Speech content is unchanged; Astro renamed its shared stylesheet while retaining the same content hash. Existing enrolment still works at its original route. Payment responds normally; its origin-generated body varies between requests. Shared Worker logic and bindings are unchanged.
 
-Cloudflare version 88: `12ea6637-ca79-474c-9641-a9324d2fb29b`.
-Deployment: `983fda0f-4e66-4502-85fb-8f900b3896f5`.
-Rollback: version 87, `8f09e142-9bda-491b-9b56-1e3160ac22a0`.
+Cloudflare version 89: `6da71d90-adc8-4daa-b160-5865ddcf6eb5`.
+Deployment: `2d7bbf58-a1ea-401e-b0b8-dd40c8df4ad1`.
+Rollback: version 88, `12ea6637-ca79-474c-9641-a9324d2fb29b`; deployment `983fda0f-4e66-4502-85fb-8f900b3896f5`.
 
 ## Work-order disposition
 

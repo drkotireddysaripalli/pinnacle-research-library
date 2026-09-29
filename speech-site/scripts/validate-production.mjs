@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';import crypto from 'node:crypto';import assert
 const base='https://www.pinnacleblooms.org',canonical='/top-speech-therapy-center-india-proven-improvement-rate',checks=[];
 const record=(name,ok,details)=>{checks.push({name,ok,details});assert(ok,name)};
 const r=await fetch(base+canonical),html=await r.text();await fs.writeFile('deployment/production-speech.html',html);
-record('Canonical speech response',r.status===200&&r.headers.get('x-pinnacle-speech-release')==='2026-09-28');record('Indexable with retained canonical',html.includes('index, follow, max-image-preview:large')&&html.includes('rel="canonical" href="'+base+canonical+'"')&&!html.includes('class="preview-note"'));
+record('Canonical speech response',r.status===200&&r.headers.get('x-pinnacle-speech-release')==='2026-09-29');record('Indexable with retained canonical',html.includes('index, follow, max-image-preview:large')&&html.includes('rel="canonical" href="'+base+canonical+'"')&&!html.includes('class="preview-note"'));
 record('Approved free offer and removed captions',html.includes('<del>₹25,999</del>')&&html.includes('Arrange your FREE assessment')&&!html.includes('AI-generated')&&!html.includes('Confirm the fee'));
 const graph=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];const assessment=graph.find(n=>n['@id']===base+canonical+'#assessment'),service=graph.find(n=>n['@id']===base+canonical+'#service');record('Assessment-only zero-price offer',assessment.offers.price===0&&!service.offers);
 const inventory=JSON.parse(await fs.readFile('deployment/speech-inventory.json','utf8'));

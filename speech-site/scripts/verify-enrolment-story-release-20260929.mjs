@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 const base='https://www.pinnacleblooms.org',url=base+'/pinnacle-pages-preview/enrolment';
+const releaseDir=process.argv[2]||'release-enrolment-story-20260929';
 const response=await fetch(url),html=await response.text();
 assert.equal(response.status,200);
 assert(html.includes('Your child’s life')&&html.includes('data-preview="true"'));
@@ -18,7 +19,7 @@ assert(preserved.every(p=>p.status===200));
 assert(preserved.filter(p=>!['/enroll','/payonline','/top-speech-therapy-center-india-proven-improvement-rate'].includes(p.path)).every(p=>p.sameBytes));
 // Astro renamed the shared CSS chunk; the CSS content hash and all speech copy are unchanged.
 const oldSpeech=await fs.readFile('release-enrolment-20260928/pinnacle-pages-html/speech.html','utf8');
-const newSpeech=await fs.readFile('release-enrolment-story-20260929/pinnacle-pages-html/speech.html','utf8');
+const newSpeech=await fs.readFile(releaseDir+'/pinnacle-pages-html/speech.html','utf8');
 assert.equal(newSpeech,oldSpeech.replace('/speech-life-campaign.C4rRFkeu.css','/PageLayout.C4rRFkeu.css'));
 const results={checkedAt:new Date().toISOString(),url,status:response.status,postStatus:post.status,previewNoindex:true,previewNoStore:true,connectionsBlocked:true,og:{url:imageUrl,bytes:imageBytes,type:image.headers.get('content-type')},preserved};
 await fs.writeFile('deployment/enrolment-story-production-20260929.json',JSON.stringify(results,null,2));

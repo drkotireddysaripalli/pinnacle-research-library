@@ -1,21 +1,18 @@
 {
+  "releasedOn": "2026-09-29",
   "worker": "pinnacle-verify-route",
-  "version": "8f09e142-9bda-491b-9b56-1e3160ac22a0",
-  "versionNumber": 87,
-  "deployment": "c15a2009-3bf8-43a1-b89a-69fcaaf69fc3",
-  "releasedOn": "2026-09-28",
-  "canonical": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
-  "rollbackVersion": "e5e0574b-e2de-468e-9b5e-f15967e62249",
-  "modules": [
-    "pinnacle-route-v12.mjs",
-    "speech-handler.mjs",
-    "speech-enquiry-handler.mjs",
-    "centre-facilities.mjs"
-  ],
-  "workerSha256": "95833cc3ec35d1b33db621eaa8d13cd1b81bc3a4dac3b7dff365bf4bea3f2e15",
-  "assetCount": 1221,
+  "version": "6da71d90-adc8-4daa-b160-5865ddcf6eb5",
+  "versionNumber": 89,
+  "deployment": "2d7bbf58-a1ea-401e-b0b8-dd40c8df4ad1",
+  "rollbackVersion": "12ea6637-ca79-474c-9641-a9324d2fb29b",
+  "rollbackDeployment": "983fda0f-4e66-4502-85fb-8f900b3896f5",
+  "previewUrl": "https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment",
+  "workerSha256": "738b4d7352b1f6b7558530f9ffcd642950868319d91b52e95b8f460c09cc31e0",
+  "speechHandlerSha256": "6119e7cfe93e8f4214fecfb3957ebfe39e153a7d0a9bbcafcc2ef0641b9fd2ff",
+  "assetCount": 1333,
   "preservedVerifyAssets": 634,
-  "speechAssets": 587,
+  "templateAssets": 699,
+  "canonical": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
   "bindings": [
     {
       "name": "ASSETS",
@@ -53,50 +50,56 @@
     "featured": 8,
     "expandable": 28
   },
-  "validation": {
+  "modules": [
+    "pinnacle-route-v12.mjs",
+    "speech-handler.mjs",
+    "speech-enquiry-handler.mjs",
+    "centre-facilities.mjs"
+  ],
+  "checks": {
+    "automatedTestsPassed": 40,
+    "productionChecksPassed": 15,
     "w3cErrors": 0,
-    "w3cMessages": 0,
-    "htmlDocuments": 5,
-    "productionFilesMatched": 587,
-    "sharedWorkerUnchanged": true,
-    "viewportsChecked": [
-      320,
-      360,
-      390,
-      768,
-      1024,
-      1440
-    ],
-    "liveCentreSelection": "Anna Nagar selected correctly on existing origin enquiry form; no submission",
-    "physicalSafariOrIosTested": false,
-    "enrolmentPreviewViewportsChecked": [
+    "w3cWarnings": 0,
+    "all699PublishedFilesMatched": true,
+    "sharedWorkerLogicUnchanged": true,
+    "responsiveWidths": [
       320,
       390,
       768,
       1440
     ],
-    "enrolmentPreviewPostStatus": 405
+    "centreSelectionAndReset": true,
+    "progressiveDisclosure": true,
+    "campaignPreselection": true,
+    "invalidFormFocus": true,
+    "previewDoesNotSubmit": true,
+    "previewPostStatus": 405,
+    "physicalSafariIosTested": false,
+    "fieldPerformanceMeasured": false
   },
-  "revision": "Shared enrolment preview, proposed POST boundary, service-specific template actions, research status and guide measurement",
-  "measurement": {
-    "directoryCallPlacements": 3,
-    "verifiedEnquiryDestinations": 59,
-    "centreOrQueryValuesExported": false,
-    "testsPassed": 34,
-    "liveGoogleAnalyticsEventReceiptVerified": false
+  "review": {
+    "parent": 90,
+    "salesWarmTraffic": 91,
+    "salesColdTraffic": 87,
+    "evidence": 92,
+    "kind": "Independent AI editorial/source reviews, not conversion or user research"
   },
+  "apiConnected": false,
+  "liveEnrolmentPreserved": true,
+  "ratingsPublished": false,
   "enrolment": {
-    "previewUrl": "https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment",
-    "routeId": "813b27a610824301acee958f485f4778",
-    "routePattern": "www.pinnacleblooms.org/pinnacle-pages-preview/enrolment*",
     "mode": "non-submitting noindex preview",
     "requiredFields": [
       "name",
       "phone"
     ],
     "locationPreferences": 62,
-    "apiConnected": false,
-    "liveEnrolmentPreserved": true,
     "contract": "ENROLMENT-API-CONTRACT.md"
-  }
+  },
+  "remaining": [
+    "Owner-supplied enrolment API integration and accepted-receipt test before live form replacement.",
+    "Per-centre verified ratings/counts and publication rights before rating or testimonial display.",
+    "Physical Safari/iOS testing and field conversion/performance data remain unverified."
+  ]
 }

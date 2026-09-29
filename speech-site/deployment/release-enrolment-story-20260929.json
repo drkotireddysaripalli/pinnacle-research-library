@@ -1,15 +1,55 @@
 {
   "releasedOn": "2026-09-29",
   "worker": "pinnacle-verify-route",
-  "version": "12ea6637-ca79-474c-9641-a9324d2fb29b",
-  "versionNumber": 88,
-  "deployment": "983fda0f-4e66-4502-85fb-8f900b3896f5",
-  "rollbackVersion": "8f09e142-9bda-491b-9b56-1e3160ac22a0",
+  "version": "6da71d90-adc8-4daa-b160-5865ddcf6eb5",
+  "versionNumber": 89,
+  "deployment": "2d7bbf58-a1ea-401e-b0b8-dd40c8df4ad1",
+  "rollbackVersion": "12ea6637-ca79-474c-9641-a9324d2fb29b",
+  "rollbackDeployment": "983fda0f-4e66-4502-85fb-8f900b3896f5",
   "previewUrl": "https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment",
-  "workerSha256": "154c41dc9aa4d097b03eaf9fa8c7306b63d9a018503d6d8f97f8dafb548857d8",
+  "workerSha256": "738b4d7352b1f6b7558530f9ffcd642950868319d91b52e95b8f460c09cc31e0",
+  "speechHandlerSha256": "6119e7cfe93e8f4214fecfb3957ebfe39e153a7d0a9bbcafcc2ef0641b9fd2ff",
   "assetCount": 1333,
   "preservedVerifyAssets": 634,
   "templateAssets": 699,
+  "canonical": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "PINNACLE_ASK",
+      "type": "service",
+      "service": "pinnacle-ask",
+      "environment": "production"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ],
+  "assetConfig": {
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "serve_directly": false,
+    "raw_run_worker_first": true,
+    "base_path": "/"
+  },
+  "directory": {
+    "locations": 62,
+    "canonicalProfiles": 60,
+    "matchedEnquiryChoices": 59,
+    "emblems": 57,
+    "photographedLocations": 52,
+    "photographs": 138,
+    "verifiedDistinctBranchPhones": 0
+  },
+  "verifyCards": {
+    "total": 36,
+    "featured": 8,
+    "expandable": 28
+  },
   "modules": [
     "pinnacle-route-v12.mjs",
     "speech-handler.mjs",
@@ -17,7 +57,8 @@
     "centre-facilities.mjs"
   ],
   "checks": {
-    "automatedTestsPassed": 34,
+    "automatedTestsPassed": 40,
+    "productionChecksPassed": 15,
     "w3cErrors": 0,
     "w3cWarnings": 0,
     "all699PublishedFilesMatched": true,
@@ -29,6 +70,8 @@
       1440
     ],
     "centreSelectionAndReset": true,
+    "progressiveDisclosure": true,
+    "campaignPreselection": true,
     "invalidFormFocus": true,
     "previewDoesNotSubmit": true,
     "previewPostStatus": 405,
@@ -36,14 +79,24 @@
     "fieldPerformanceMeasured": false
   },
   "review": {
-    "parent": 89,
-    "sales": 89,
-    "evidence": 89,
+    "parent": 90,
+    "salesWarmTraffic": 91,
+    "salesColdTraffic": 87,
+    "evidence": 92,
     "kind": "Independent AI editorial/source reviews, not conversion or user research"
   },
   "apiConnected": false,
   "liveEnrolmentPreserved": true,
   "ratingsPublished": false,
+  "enrolment": {
+    "mode": "non-submitting noindex preview",
+    "requiredFields": [
+      "name",
+      "phone"
+    ],
+    "locationPreferences": 62,
+    "contract": "ENROLMENT-API-CONTRACT.md"
+  },
   "remaining": [
     "Owner-supplied enrolment API integration and accepted-receipt test before live form replacement.",
     "Per-centre verified ratings/counts and publication rights before rating or testimonial display.",
