@@ -25,8 +25,17 @@ for(const path of paths){
   assert(html.includes('data-cta="header-enrol"'),path);
   assert(html.includes('tel:+919100181181'),path);
   assert(!html.includes('portal-donate')&&!html.includes('/donate'),path);
-  for(const label of ['PinnacleAI®','Verify','Research','Whitebook','News','Centres','Contact'])assert(html.includes(`class="portal-nav-label">${label}</span>`),`${path}: ${label}`);
-  for(const detail of ['Life-first paradigm shift','36 evidence records','Studies &amp; publications'])assert(html.includes(detail),`${path}: ${detail}`);
+  let previousAuthorityIndex=-1;
+  for(const label of ['Verify','PinnacleAI®','Research','AbilityScore®','7 Readiness Indexes','Self-Sufficient','Mainstream','Paradigm Shift']){
+    const authorityIndex=html.indexOf(`class="portal-nav-label">${label}</span>`);
+    assert(authorityIndex>previousAuthorityIndex,`${path}: authority order ${label}`);
+    previousAuthorityIndex=authorityIndex;
+  }
+  for(const detail of ['Regulated developmental support','Understand present abilities','Discuss the next priorities','Everyday independence','School &amp; community participation','Life first. Therapy serves it.','36 evidence records','Studies &amp; publications'])assert(html.includes(detail),`${path}: ${detail}`);
+  for(const label of ['Autism Therapy','Speech Therapy','Occupational Therapy','ABA Therapy','Special Education'])assert(html.includes(`class="portal-therapy-title"`)&&html.includes(`>${label}</a>`),`${path}: ${label}`);
+  assert((html.match(/class="portal-therapy-menu"/g)||[]).length===5,`${path}: five priority therapy menus`);
+  assert((html.match(/pinnacle-blooms-network-lockup/g)||[]).length>=2,`${path}: updated shared logo`);
+  for(const label of ['Recognition register','Government appreciation · source letters','Awards &amp; nominations · documented stage','Citation library &amp; downloads'])assert(html.includes(label),`${path}: ${label}`);
   assert(html.includes('National Autism Helpline')&&html.includes('Free guidance · 24/7'),`${path}: helpline context`);
   assert(html.includes('>9100 181 181</strong>'),`${path}: strong phone`);
   assert(html.includes('Find a centre'),`${path}: centre finder`);
@@ -49,13 +58,14 @@ assert.equal(new Set(headers).size,1,'Rendered shared header differs across mana
 assert.equal(new Set(footers).size,1,'Rendered Verify block and full footer differ across managed pages');
 const report={
   checkedAt:new Date().toISOString(),
-  version:102,
+  version:103,
   managedPages:paths.length,
   sharedHeaderIdentical:true,
   verifyInsideSharedFooter:true,
   sharedFooterIdentical:true,
   donateRemoved:true,
-  priorityNavigation:['PinnacleAI® — Life-first paradigm shift','Verify — 36 evidence records','Research — Studies & publications','Whitebook','News','Centres','Contact','Enrol at Pinnacle'],
+  priorityNavigation:['Verify — 36 evidence records','PinnacleAI® — Regulated developmental support','Research — Studies & publications','AbilityScore® — Understand present abilities','7 Readiness Indexes — Discuss the next priorities','Self-Sufficient — Everyday independence','Mainstream — School & community participation','Paradigm Shift — Life first. Therapy serves it.'],
+  priorityTherapies:['Autism Therapy','Speech Therapy','Occupational Therapy','ABA Therapy','Special Education'],
   results
 };
 await fs.writeFile('deployment/shared-shell-production-20260929.json',JSON.stringify(report,null,2)+'\n');

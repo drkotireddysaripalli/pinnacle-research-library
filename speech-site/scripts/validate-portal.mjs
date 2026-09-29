@@ -16,9 +16,16 @@ const ids=new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
 function full(u){return u.startsWith('/')?'https://www.pinnacleblooms.org'+u:u;}
 const links=[...nav.main,...nav.mobileExtras,...nav.therapy.flatMap(x=>[{url:x.url},...x.links]),...nav.footerColumns.flat().flatMap(x=>x.links),...nav.community,...nav.locations,...nav.legal];
 check('Complete documented portal navigation is present',links.every(x=>hrefs.has(full(x.url))));
-check('All six therapy menus have native disclosure controls',(html.match(/class="portal-therapy-menu"/g)||[]).length===6);
+check('Five priority therapy menus have native disclosure controls',(html.match(/class="portal-therapy-menu"/g)||[]).length===5);
 check('Header and footer navigation are server rendered',html.includes('aria-label="Complete site navigation"')&&html.includes('aria-label="Research Studies"'));
-check('Reader-facing authority header is identical across every managed public page',managedHtml.every(page=>['PinnacleAI®','Verify','Research','Whitebook','News','Centres','Contact'].every(label=>page.includes(`class="portal-nav-label">${label}</span>`))&&['Life-first paradigm shift','36 evidence records','Studies &amp; publications'].every(detail=>page.includes(detail))&&page.includes('data-cta="header-enrol"')));
+const priorityLabels=['Verify','PinnacleAI®','Research','AbilityScore®','7 Readiness Indexes','Self-Sufficient','Mainstream','Paradigm Shift'];
+const priorityDetails=['Regulated developmental support','Understand present abilities','Discuss the next priorities','Everyday independence','School &amp; community participation','Life first. Therapy serves it.','36 evidence records','Studies &amp; publications'];
+check('Authority strip follows the proof-to-purpose narrative order',nav.main.map(link=>link.label).join('|')===priorityLabels.join('|'));
+check('Reader-facing authority header is identical across every managed public page',managedHtml.every(page=>priorityLabels.every(label=>page.includes(`class="portal-nav-label">${label}</span>`))&&priorityDetails.every(detail=>page.includes(detail))&&page.includes('data-cta="header-enrol"')));
+check('Priority therapy order and labels are exact',nav.therapy.map(group=>group.label).join('|')==='Autism Therapy|Speech Therapy|Occupational Therapy|ABA Therapy|Special Education');
+check('Legacy Behavioral label is removed from priority therapy navigation',!nav.therapy.some(group=>group.label==='Behavioral'));
+check('Updated Pinnacle Blooms Network lockup is shared by header and footer',managedHtml.every(page=>(page.match(/pinnacle-blooms-network-lockup/g)||[]).length>=2));
+check('Recognition, awards and citation destinations are preserved',managedHtml.every(page=>['Recognition register','Government appreciation · source letters','Awards &amp; nominations · documented stage','Citation library &amp; downloads'].every(label=>page.includes(label))));
 check('Helpline and centre actions are explicit in every managed public header',managedHtml.every(page=>page.includes('National Autism Helpline')&&page.includes('Free guidance · 24/7')&&page.includes('data-cta="header-call"')&&page.includes('>9100 181 181</strong>')&&page.includes('Find a centre')));
 check('Research navigation uses the curated evidence library',managedHtml.every(page=>page.includes('href="https://www.pinnacleblooms.org/verify/evidence/research-library.html"')));
 check('Donate is removed from every managed shared header',managedHtml.every(page=>!page.includes('class="portal-donate"')&&!page.includes('href="https://www.pinnacleblooms.org/donate"')));

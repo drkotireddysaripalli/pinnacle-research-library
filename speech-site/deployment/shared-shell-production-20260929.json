@@ -1,56 +1,63 @@
 {
-  "checkedAt": "2026-09-29T06:40:39.639Z",
-  "version": 102,
+  "checkedAt": "2026-09-29T07:30:05.067Z",
+  "version": 103,
   "managedPages": 5,
   "sharedHeaderIdentical": true,
   "verifyInsideSharedFooter": true,
   "sharedFooterIdentical": true,
   "donateRemoved": true,
   "priorityNavigation": [
-    "PinnacleAI® — Life-first paradigm shift",
     "Verify — 36 evidence records",
+    "PinnacleAI® — Regulated developmental support",
     "Research — Studies & publications",
-    "Whitebook",
-    "News",
-    "Centres",
-    "Contact",
-    "Enrol at Pinnacle"
+    "AbilityScore® — Understand present abilities",
+    "7 Readiness Indexes — Discuss the next priorities",
+    "Self-Sufficient — Everyday independence",
+    "Mainstream — School & community participation",
+    "Paradigm Shift — Life first. Therapy serves it."
+  ],
+  "priorityTherapies": [
+    "Autism Therapy",
+    "Speech Therapy",
+    "Occupational Therapy",
+    "ABA Therapy",
+    "Special Education"
   ],
   "results": [
     {
       "path": "/top-speech-therapy-center-india-proven-improvement-rate",
       "status": 200,
-      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
-      "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "59f459dbd70b54049f68654ce16ab31576404a7226b37e1c1c780f2d12744432"
+      "headerSha256": "a7ac58a263bd2aab1eb9efc364644fa4ea86c5d55786290600fe463735f388fa",
+      "footerSha256": "5525ef001ab9b7de4f79f41036474ab5d4d10b792e6d74931dff456f12d70aad",
+      "htmlSha256": "cee0ac6e455f74e330a4e06caf1bbe49966f159a766a486723ad603a12a22a80"
     },
     {
       "path": "/enroll-autism-speech-aba-therapies-india",
       "status": 200,
-      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
-      "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "b7f3f59bfbeff1e13c5b2de1d732b14697341a8b4d7f01485cbf0e3d1c24a36b"
+      "headerSha256": "a7ac58a263bd2aab1eb9efc364644fa4ea86c5d55786290600fe463735f388fa",
+      "footerSha256": "5525ef001ab9b7de4f79f41036474ab5d4d10b792e6d74931dff456f12d70aad",
+      "htmlSha256": "93992658752bc6f60b3bad8d74dfd27160c459df8a3567c7627a7ea2397d2906"
     },
     {
       "path": "/speech-therapy/service-information",
       "status": 200,
-      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
-      "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "e80d55f356f9f94819e70d85d3c8d036f7fe9472296b6a98afad628459dababd"
+      "headerSha256": "a7ac58a263bd2aab1eb9efc364644fa4ea86c5d55786290600fe463735f388fa",
+      "footerSha256": "5525ef001ab9b7de4f79f41036474ab5d4d10b792e6d74931dff456f12d70aad",
+      "htmlSha256": "bc8efb9df747ee0f3fee6d6820db6e3502d0e6fd983eef7a98fc769aa4534b71"
     },
     {
       "path": "/speech-therapy/first-visit-guide",
       "status": 200,
-      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
-      "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "769b27ac33c843a48065e6482725cf77710d7943341f8ce01515224933cb0295"
+      "headerSha256": "a7ac58a263bd2aab1eb9efc364644fa4ea86c5d55786290600fe463735f388fa",
+      "footerSha256": "5525ef001ab9b7de4f79f41036474ab5d4d10b792e6d74931dff456f12d70aad",
+      "htmlSha256": "62886ba2237c804e5a4890a70dc146a9a29a9c07fc4de297197497d009919e83"
     },
     {
       "path": "/speech-therapy/teacher-observation-guide",
       "status": 200,
-      "headerSha256": "3827158042a08c8b6e68e4839efaeea91ed721957bc757d9ed36aec352120f73",
-      "footerSha256": "e0ed17cdfa388c28ca23e616a429754cce684fe55a10d754a75fa2a782ae7fa3",
-      "htmlSha256": "6dd8d3f05d49661948c8c41501e5542816aec258d9c9ce6e3a0181cd8c66e9d8"
+      "headerSha256": "a7ac58a263bd2aab1eb9efc364644fa4ea86c5d55786290600fe463735f388fa",
+      "footerSha256": "5525ef001ab9b7de4f79f41036474ab5d4d10b792e6d74931dff456f12d70aad",
+      "htmlSha256": "64b16d79ac1688220d189118d0bd8a5ac1b601a0822024e22094d2cd23e57858"
     }
   ]
 }

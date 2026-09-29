@@ -1,5 +1,12 @@
 # Prototype asset sources
 
+## Updated Pinnacle Blooms Network lockup — 29 September 2026
+
+- `src/assets/pinnacle-blooms-network-lockup.png` is the approved emblem-left, two-line `Pinnacle / Blooms Network®` lockup used in the shared header and footer.
+- Source: `C:/Users/Siri Palace/Documents/Codex/2026-07-25/pinnacle-strip-2-frame-1-the/work/investor-update-deck/assets/pinnacle-blooms-network-lockup.png`.
+- The 650 × 242 PNG is a pixel-identical crop of `C:/Users/Siri Palace/Documents/Codex/Pinnacle_Brand_System/pinnacle-official-header-source.jpg`, region x=0, y=0, width=650, height=242, as specified by `official-brand-assets.md`.
+- SHA-256: `35EB365F1E23F188442182E7D3A4887DFBEF94C14A0B5ED0A833D89F4A42B4E2`. The source is preserved proportionally; Astro creates responsive delivery derivatives.
+
 ## Sales rebuild — 27 September 2026
 
 - `src/assets/speech-life-campaign.png` is new AI-generated, fictional campaign artwork: an Indian mother and child communicating during play, with an aspirational school-participation vignette. Created with the built-in image-generation tool on 27 September 2026. It is not a patient photograph, testimonial or treatment result. The page retains descriptive alt text. Repeated visible AI-image captions were removed at the owner’s explicit request on 27 September 2026.

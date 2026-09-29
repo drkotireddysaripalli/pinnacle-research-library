@@ -17,7 +17,7 @@ check('No empty links', !/href="(?:#|)"/.test(html));
 check('Dated service information linked', html.includes('href="/speech-therapy/service-information"'));
 check('Confirmed assessment offer replaces conflicting price', html.includes('<del>₹25,999</del>') && html.includes('FREE') && !html.includes('Confirm the fee') && !html.includes('₹2,599'));
 check('Service-fit and offer precede explanation', html.indexOf('id="assessment-start"') < html.indexOf('id="everyday-communication"'));
-check('Official logos used', html.includes('Official Pinnacle logo') && html.includes('company emblem'));
+check('Official logos used', html.includes('alt="Pinnacle Blooms Network"') && html.includes('company emblem'));
 check('Review changes the next decision',html.includes('Keep the goal. Adjust the practice.'));
 check('Live enrolment destination used', html.includes('href="https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"'));
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);

@@ -1,0 +1,99 @@
+{
+  "checkedAt": "2026-09-29T07:31:32.699Z",
+  "baselineVersion": 102,
+  "productionVersion": 103,
+  "managedPagesChanged": [
+    "/top-speech-therapy-center-india-proven-improvement-rate",
+    "/enroll-autism-speech-aba-therapies-india",
+    "/speech-therapy/service-information",
+    "/speech-therapy/first-visit-guide",
+    "/speech-therapy/teacher-observation-guide"
+  ],
+  "preservedPathsUnchanged": [
+    "/verify/",
+    "/verify/evidence/evidence.json",
+    "/verify/evidence/fsc.pdf",
+    "/verify/evidence/pinnacleai-regulatory-journey.html",
+    "/national-autism-helpline",
+    "/robots.txt"
+  ],
+  "results": [
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bodySha256": "cee0ac6e455f74e330a4e06caf1bbe49966f159a766a486723ad603a12a22a80",
+      "bytes": 470271
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bodySha256": "93992658752bc6f60b3bad8d74dfd27160c459df8a3567c7627a7ea2397d2906",
+      "bytes": 220836
+    },
+    {
+      "path": "/speech-therapy/service-information",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bodySha256": "bc8efb9df747ee0f3fee6d6820db6e3502d0e6fd983eef7a98fc769aa4534b71",
+      "bytes": 90555
+    },
+    {
+      "path": "/speech-therapy/first-visit-guide",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bodySha256": "62886ba2237c804e5a4890a70dc146a9a29a9c07fc4de297197497d009919e83",
+      "bytes": 91224
+    },
+    {
+      "path": "/speech-therapy/teacher-observation-guide",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bodySha256": "64b16d79ac1688220d189118d0bd8a5ac1b601a0822024e22094d2cd23e57858",
+      "bytes": 91241
+    },
+    {
+      "path": "/verify/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bodySha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107",
+      "bytes": 1022245
+    },
+    {
+      "path": "/verify/evidence/evidence.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bodySha256": "ede8ed9a215741e87001c9e1731356ddda2091fc3ef988a0588be2340f7f3133",
+      "bytes": 89649
+    },
+    {
+      "path": "/verify/evidence/fsc.pdf",
+      "status": 200,
+      "contentType": "application/pdf",
+      "bodySha256": "84664753b59ec604a2a55c501b9786efecbdded76bfb0d9be48ca732c06a909a",
+      "bytes": 204419
+    },
+    {
+      "path": "/verify/evidence/pinnacleai-regulatory-journey.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bodySha256": "f32bdde0da98dac6fc5cd4d0e8fdc3d95b5ecc881983ae6f891d94033a9e171c",
+      "bytes": 192636
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bodySha256": "cdf081a88fbdea6739bf07afb34d38923e45209aca2e2960bdc17f61b8fe1691",
+      "bytes": 87205
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "contentType": "text/plain; charset=utf-8",
+      "bodySha256": "913584563d7d60828167c6d7afe8862d2362d3a99b373c6dbe4ccd39369ae46a",
+      "bytes": 427
+    }
+  ]
+}

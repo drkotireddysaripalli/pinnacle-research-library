@@ -1,0 +1,75 @@
+{
+  "releasedOn": "2026-09-29",
+  "release": "authority-navigation-v103",
+  "worker": "pinnacle-verify-route",
+  "versionNumber": 103,
+  "versionId": "066a8173-2e78-4629-b3a4-a57c29df3135",
+  "deploymentId": "b158e49f-da05-42c5-a68e-3d96eb73d902",
+  "trafficPercent": 100,
+  "rollback": {
+    "versionNumber": 102,
+    "versionId": "756dce57-3a2e-4432-9ec5-f1ac47489abc",
+    "deploymentId": "456361df-9436-42d9-a6eb-b795110f1edf"
+  },
+  "managedRoutes": [
+    "/top-speech-therapy-center-india-proven-improvement-rate",
+    "/enroll-autism-speech-aba-therapies-india",
+    "/speech-therapy/service-information",
+    "/speech-therapy/first-visit-guide",
+    "/speech-therapy/teacher-observation-guide"
+  ],
+  "authorityNarrative": [
+    "Verify — 36 evidence records",
+    "PinnacleAI® — Regulated developmental support",
+    "Research — Studies & publications",
+    "AbilityScore® — Understand present abilities",
+    "7 Readiness Indexes — Discuss the next priorities",
+    "Self-Sufficient — Everyday independence",
+    "Mainstream — School & community participation",
+    "Paradigm Shift — Life first. Therapy serves it."
+  ],
+  "priorityTherapies": [
+    "Autism Therapy",
+    "Speech Therapy",
+    "Occupational Therapy",
+    "ABA Therapy",
+    "Special Education"
+  ],
+  "navigationDecisions": {
+    "logo": "Updated Pinnacle Blooms Network two-line registered lockup in the shared header and footer",
+    "fullSiteDirectoryRetained": true,
+    "legacyRecognitionPreserved": true,
+    "behaviouralTherapyDeduplicatedIntoABA": true,
+    "sevenReadinessIndexesRegisteredMarkUsed": false,
+    "reason": "No verified registration basis was supplied for a registered mark on the collective 7 Readiness Indexes label."
+  },
+  "verification": {
+    "managedPages200AndIndexable": 5,
+    "sharedHeaderSha256": "a7ac58a263bd2aab1eb9efc364644fa4ea86c5d55786290600fe463735f388fa",
+    "sharedFooterSha256": "5525ef001ab9b7de4f79f41036474ab5d4d10b792e6d74931dff456f12d70aad",
+    "sharedHeaderIdentical": true,
+    "sharedFooterIdentical": true,
+    "portalChecksPassed": 20,
+    "focusedTestsPassed": 45,
+    "responsiveWidths": [320, 390, 601, 768, 901, 1024, 1440],
+    "horizontalOverflow": false,
+    "controlsInsideViewport": true,
+    "breakpointOverlap": false,
+    "mobileMenuObscuredByFixedCta": false,
+    "preservedPathsUnchanged": 6
+  },
+  "preservedRoutes": [
+    "/verify/",
+    "/verify/evidence/evidence.json",
+    "/verify/evidence/fsc.pdf",
+    "/verify/evidence/pinnacleai-regulatory-journey.html",
+    "/national-autism-helpline",
+    "/robots.txt"
+  ],
+  "indexing": {
+    "indexNowSubmitted": true,
+    "updatedUrls": 5,
+    "httpStatus": 200,
+    "meaning": "Notification only; no discovery, indexing, ranking, AI citation or conversion claim."
+  }
+}

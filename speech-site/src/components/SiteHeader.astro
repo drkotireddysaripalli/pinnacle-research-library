@@ -1,21 +1,21 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../assets/pinnacle-logo.jpg';
+import logo from '../assets/pinnacle-blooms-network-lockup.png';
 import { phone, url } from '../data/site';
 import navigation from '../data/portal-navigation.json';
 import Icon from './Icon.astro';
 const { currentPath } = Astro.props;
-const directoryGroups = navigation.footerColumns.flat().filter(g => g.links.length > 1);
+const priorityDirectoryTitles = new Set(['Therapy Services','Evidence, citations & recognition']);
+const directoryGroups = navigation.footerColumns.flat().filter(g => g.links.length > 1 && !priorityDirectoryTitles.has(g.title));
 const quickActions = navigation.footerColumns.flat().filter(g => g.links.length === 1).map(g=>g.links[0]);
 const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
 ---
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="portal-header">
   <div class="portal-top portal-container">
-    <a class="portal-brand" href={url('/')} aria-label="Pinnacle Blooms Network home"><Image src={logo} width={459} alt="Pinnacle Blooms Network" format="webp" loading="eager" /></a>
+    <a class="portal-brand" href={url('/')} aria-label="Pinnacle Blooms Network home"><Image src={logo} width={650} height={242} alt="Pinnacle Blooms Network" format="webp" loading="eager" /></a>
     <div class="portal-header-right">
       <nav class="portal-utility" aria-label="Quick links">
-        <a class="portal-login" href={url('/epass')} aria-label="Login"><Icon name="shield" /><span>Login</span></a>
         <div class="portal-national" role="group" aria-label="National Autism Helpline contact options">
           <a class="portal-national-label" href={url('/national-autism-helpline')} aria-label="About the National Autism Helpline"><Icon name="telephone" /><span><strong>National Autism Helpline</strong><small>Free guidance · 24/7</small></span></a>
           <a class="portal-phone" href={phone.href} aria-label={`Call the National Autism Helpline at ${phone.display}`} data-cta="header-call"><small>Call</small><strong>{phone.display}</strong></a>
@@ -27,15 +27,19 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
         <details class="portal-directory">
           <summary aria-label="Menu"><Icon name="menu" /><span>Menu</span></summary>
           <nav class="portal-directory-panel" aria-label="Complete site navigation">
-            <div class="portal-mobile-main">{[...navigation.mobileExtras,...navigation.main].map(link=><a href={url(link.url)}><span>{link.label}</span>{link.detail&&<small>{link.detail}</small>}</a>)}</div>
+            <div class="portal-priority-menu">
+              <section><h2><Icon name="people" />Therapies</h2><div>{navigation.therapy.map(link=><a href={url(link.url)}>{link.label}</a>)}</div></section>
+              <section><h2><Icon name="compass" />Pinnacle approach &amp; evidence</h2><div>{navigation.main.map(link=><a href={url(link.url)}><span>{link.label}</span>{link.detail&&<small>{link.detail}</small>}</a>)}</div></section>
+              <section><h2><Icon name="arrow" />Start here</h2><div>{navigation.mobileExtras.map(link=><a href={url(link.url)}>{link.label}</a>)}</div></section>
+            </div>
             <div class="portal-directory-grid">{directoryGroups.map(group=><section><h2><Icon name={group.icon} />{group.title}</h2><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></section>)}</div>
             <div class="portal-directory-actions">{quickActions.map(link=><a href={url(link.url)}>{link.label}</a>)}<a href={url('/centers')}>Find a centre</a><a href={url('/sitemap')}>Full sitemap</a><a href={url('/verify/')}>Licences, research &amp; evidence</a></div>
           </nav>
         </details>
       </nav>
-      <nav class="portal-main-nav" aria-label="Main navigation">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-label={link.detail?`${link.label}: ${link.detail}`:link.label} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</nav>
     </div>
   </div>
+  <nav class="portal-main-nav" aria-label="Pinnacle approach, products and evidence"><div class="portal-container portal-main-list">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-label={link.detail?`${link.label}: ${link.detail}`:link.label} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</div></nav>
   <nav class="portal-therapy-nav" aria-label="Therapy services"><div class="portal-container portal-therapy-list">
     {navigation.therapy.map(group=><div class="portal-therapy-group"><a class="portal-therapy-title" href={url(group.url)} aria-current={group.url===currentPath?'page':undefined}>{group.label}</a><details class="portal-therapy-menu"><summary aria-label={`${group.label} menu`}><Icon name="chevron" size={15} /></summary><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>)}
   </div></nav>
@@ -44,7 +48,8 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
   const header=document.querySelector('.portal-header');
   if(header){
     const menus=[...header.querySelectorAll<HTMLDetailsElement>('details')];
-    menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false;});}));
+    const syncMenuState=()=>document.body.classList.toggle('portal-header-menu-open',menus.some(menu=>menu.open));
+    menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false;});queueMicrotask(syncMenuState);}));
     document.addEventListener('click',event=>{if(!header.contains(event.target as Node))menus.forEach(menu=>menu.open=false);});
     header.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=menus.find(menu=>menu.open);if(open){open.open=false;open.querySelector('summary')?.focus();}}});
     header.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>menus.forEach(menu=>menu.open=false)));
@@ -53,5 +58,6 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
       group.addEventListener('pointerover',event=>{if(!(event.target as Element).closest('summary')&&menu&&matchMedia('(hover:hover) and (pointer:fine)').matches)menu.open=true;});
       group.addEventListener('pointerleave',()=>{if(menu&&!group.contains(document.activeElement))menu.open=false;});
     });
+    syncMenuState();
   }
 </script>

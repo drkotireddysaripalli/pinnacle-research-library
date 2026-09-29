@@ -1,0 +1,500 @@
+{
+  "checkedAt": "2026-09-29T07:32:14.070Z",
+  "route": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+  "results": [
+    {
+      "width": 320,
+      "innerWidth": 320,
+      "scrollWidth": 320,
+      "logo": {
+        "x": 47.5,
+        "right": 272.5,
+        "top": 12,
+        "bottom": 95.765625,
+        "width": 225,
+        "height": 83.765625
+      },
+      "utility": {
+        "x": 15,
+        "right": 305,
+        "top": 100.765625,
+        "bottom": 209.765625,
+        "width": 290,
+        "height": 109
+      },
+      "national": {
+        "x": 15,
+        "right": 305,
+        "top": 108.765625,
+        "bottom": 154.765625,
+        "width": 290,
+        "height": 46
+      },
+      "phoneText": "CALL 9100 181 181",
+      "whatsapp": {
+        "x": 264,
+        "right": 304,
+        "top": 109.765625,
+        "bottom": 153.765625,
+        "width": 40,
+        "height": 44
+      },
+      "visibleTools": [
+        {
+          "class": "portal-enrol",
+          "x": 15,
+          "right": 136,
+          "width": 121
+        },
+        {
+          "class": "portal-location",
+          "x": 139,
+          "right": 211,
+          "width": 72
+        },
+        {
+          "class": "portal-search",
+          "x": 214,
+          "right": 258,
+          "width": 44
+        },
+        {
+          "class": "portal-directory",
+          "x": 261,
+          "right": 305,
+          "width": 44
+        }
+      ],
+      "authorityDisplay": "none",
+      "authorityGrid": "repeat(8, minmax(0px, 1fr))",
+      "therapyScroll": 726,
+      "therapyClient": 320
+    },
+    {
+      "width": 390,
+      "innerWidth": 390,
+      "scrollWidth": 390,
+      "logo": {
+        "x": 67.5,
+        "right": 322.5,
+        "top": 12,
+        "bottom": 106.9375,
+        "width": 255,
+        "height": 94.9375
+      },
+      "utility": {
+        "x": 15,
+        "right": 375,
+        "top": 111.9375,
+        "bottom": 222.9375,
+        "width": 360,
+        "height": 111
+      },
+      "national": {
+        "x": 15,
+        "right": 375,
+        "top": 119.9375,
+        "bottom": 165.9375,
+        "width": 360,
+        "height": 46
+      },
+      "phoneText": "CALL 9100 181 181",
+      "whatsapp": {
+        "x": 330,
+        "right": 374,
+        "top": 120.9375,
+        "bottom": 164.9375,
+        "width": 44,
+        "height": 44
+      },
+      "visibleTools": [
+        {
+          "class": "portal-enrol",
+          "x": 15,
+          "right": 136,
+          "width": 121
+        },
+        {
+          "class": "portal-location",
+          "x": 143,
+          "right": 255,
+          "width": 112
+        },
+        {
+          "class": "portal-search",
+          "x": 262,
+          "right": 306,
+          "width": 44
+        },
+        {
+          "class": "portal-directory",
+          "x": 313,
+          "right": 375,
+          "width": 62
+        }
+      ],
+      "authorityDisplay": "none",
+      "authorityGrid": "repeat(8, minmax(0px, 1fr))",
+      "therapyScroll": 726,
+      "therapyClient": 390,
+      "openMenu": {
+        "headerZ": "140",
+        "menu": {
+          "top": 229.9375,
+          "bottom": 949.9375,
+          "height": 720
+        },
+        "cta": {
+          "top": 0,
+          "bottom": 0,
+          "height": 0,
+          "z": "100"
+        }
+      }
+    },
+    {
+      "width": 601,
+      "innerWidth": 601,
+      "scrollWidth": 601,
+      "logo": {
+        "x": 180.5,
+        "right": 420.5,
+        "top": 13,
+        "bottom": 102.34375,
+        "width": 240,
+        "height": 89.34375
+      },
+      "utility": {
+        "x": 20,
+        "right": 581,
+        "top": 108.34375,
+        "bottom": 219.34375,
+        "width": 561,
+        "height": 111
+      },
+      "national": {
+        "x": 20,
+        "right": 581,
+        "top": 116.34375,
+        "bottom": 162.34375,
+        "width": 561,
+        "height": 46
+      },
+      "phoneText": "CALL 9100 181 181",
+      "whatsapp": {
+        "x": 534,
+        "right": 580,
+        "top": 117.34375,
+        "bottom": 161.34375,
+        "width": 46,
+        "height": 44
+      },
+      "visibleTools": [
+        {
+          "class": "portal-enrol",
+          "x": 20,
+          "right": 172.46875,
+          "width": 152.46875
+        },
+        {
+          "class": "portal-location",
+          "x": 237.5,
+          "right": 344.515625,
+          "width": 107.015625
+        },
+        {
+          "class": "portal-search",
+          "x": 409.546875,
+          "right": 453.546875,
+          "width": 44
+        },
+        {
+          "class": "portal-directory",
+          "x": 518.578125,
+          "right": 581,
+          "width": 62.421875
+        }
+      ],
+      "authorityDisplay": "none",
+      "authorityGrid": "repeat(8, minmax(0px, 1fr))",
+      "therapyScroll": 561,
+      "therapyClient": 561
+    },
+    {
+      "width": 768,
+      "innerWidth": 768,
+      "scrollWidth": 768,
+      "logo": {
+        "x": 20,
+        "right": 255,
+        "top": 19.25,
+        "bottom": 106.734375,
+        "width": 235,
+        "height": 87.484375
+      },
+      "utility": {
+        "x": 358.09375,
+        "right": 748,
+        "top": 4.5,
+        "bottom": 121.5,
+        "width": 389.90625,
+        "height": 117
+      },
+      "national": {
+        "x": 413.75,
+        "right": 748,
+        "top": 12.5,
+        "bottom": 64.5,
+        "width": 334.25,
+        "height": 52
+      },
+      "phoneText": "CALL 9100 181 181",
+      "whatsapp": {
+        "x": 701,
+        "right": 747,
+        "top": 13.5,
+        "bottom": 63.5,
+        "width": 46,
+        "height": 50
+      },
+      "visibleTools": [
+        {
+          "class": "portal-enrol",
+          "x": 358.09375,
+          "right": 510.5625,
+          "width": 152.46875
+        },
+        {
+          "class": "portal-location",
+          "x": 518.5625,
+          "right": 625.578125,
+          "width": 107.015625
+        },
+        {
+          "class": "portal-search",
+          "x": 633.578125,
+          "right": 677.578125,
+          "width": 44
+        },
+        {
+          "class": "portal-directory",
+          "x": 685.578125,
+          "right": 748,
+          "width": 62.421875
+        }
+      ],
+      "authorityDisplay": "none",
+      "authorityGrid": "repeat(8, minmax(0px, 1fr))",
+      "therapyScroll": 728,
+      "therapyClient": 728
+    },
+    {
+      "width": 901,
+      "innerWidth": 901,
+      "scrollWidth": 901,
+      "logo": {
+        "x": 20,
+        "right": 250,
+        "top": 25.1875,
+        "bottom": 110.8125,
+        "width": 230,
+        "height": 85.625
+      },
+      "utility": {
+        "x": 269.328125,
+        "right": 881,
+        "top": 35,
+        "bottom": 101,
+        "width": 611.671875,
+        "height": 66
+      },
+      "national": {
+        "x": 269.328125,
+        "right": 603.578125,
+        "top": 42,
+        "bottom": 94,
+        "width": 334.25,
+        "height": 52
+      },
+      "phoneText": "CALL 9100 181 181",
+      "whatsapp": {
+        "x": 556.578125,
+        "right": 602.578125,
+        "top": 43,
+        "bottom": 93,
+        "width": 46,
+        "height": 50
+      },
+      "visibleTools": [
+        {
+          "class": "portal-enrol",
+          "x": 609.578125,
+          "right": 712.578125,
+          "width": 103
+        },
+        {
+          "class": "portal-location",
+          "x": 718.578125,
+          "right": 762.578125,
+          "width": 44
+        },
+        {
+          "class": "portal-search",
+          "x": 768.578125,
+          "right": 812.578125,
+          "width": 44
+        },
+        {
+          "class": "portal-directory",
+          "x": 818.578125,
+          "right": 881,
+          "width": 62.421875
+        }
+      ],
+      "authorityDisplay": "block",
+      "authorityGrid": "215.25px 215.25px 215.25px 215.25px",
+      "therapyScroll": 861,
+      "therapyClient": 861
+    },
+    {
+      "width": 1024,
+      "innerWidth": 1024,
+      "scrollWidth": 1024,
+      "logo": {
+        "x": 20,
+        "right": 250,
+        "top": 25.1875,
+        "bottom": 110.8125,
+        "width": 230,
+        "height": 85.625
+      },
+      "utility": {
+        "x": 392.328125,
+        "right": 1004,
+        "top": 35,
+        "bottom": 101,
+        "width": 611.671875,
+        "height": 66
+      },
+      "national": {
+        "x": 392.328125,
+        "right": 726.578125,
+        "top": 42,
+        "bottom": 94,
+        "width": 334.25,
+        "height": 52
+      },
+      "phoneText": "CALL 9100 181 181",
+      "whatsapp": {
+        "x": 679.578125,
+        "right": 725.578125,
+        "top": 43,
+        "bottom": 93,
+        "width": 46,
+        "height": 50
+      },
+      "visibleTools": [
+        {
+          "class": "portal-enrol",
+          "x": 732.578125,
+          "right": 835.578125,
+          "width": 103
+        },
+        {
+          "class": "portal-location",
+          "x": 841.578125,
+          "right": 885.578125,
+          "width": 44
+        },
+        {
+          "class": "portal-search",
+          "x": 891.578125,
+          "right": 935.578125,
+          "width": 44
+        },
+        {
+          "class": "portal-directory",
+          "x": 941.578125,
+          "right": 1004,
+          "width": 62.421875
+        }
+      ],
+      "authorityDisplay": "block",
+      "authorityGrid": "246px 246px 246px 246px",
+      "therapyScroll": 984,
+      "therapyClient": 984
+    },
+    {
+      "width": 1440,
+      "innerWidth": 1440,
+      "scrollWidth": 1440,
+      "logo": {
+        "x": 135,
+        "right": 465,
+        "top": 6.5625,
+        "bottom": 129.421875,
+        "width": 330,
+        "height": 122.859375
+      },
+      "utility": {
+        "x": 524.703125,
+        "right": 1305,
+        "top": 35,
+        "bottom": 101,
+        "width": 780.296875,
+        "height": 66
+      },
+      "national": {
+        "x": 524.703125,
+        "right": 897.09375,
+        "top": 42,
+        "bottom": 94,
+        "width": 372.390625,
+        "height": 52
+      },
+      "phoneText": "CALL 9100 181 181",
+      "whatsapp": {
+        "x": 850.09375,
+        "right": 896.09375,
+        "top": 43,
+        "bottom": 93,
+        "width": 46,
+        "height": 50
+      },
+      "visibleTools": [
+        {
+          "class": "portal-enrol",
+          "x": 905.09375,
+          "right": 1061.5625,
+          "width": 156.46875
+        },
+        {
+          "class": "portal-location",
+          "x": 1069.5625,
+          "right": 1179.578125,
+          "width": 110.015625
+        },
+        {
+          "class": "portal-search",
+          "x": 1187.578125,
+          "right": 1231.578125,
+          "width": 44
+        },
+        {
+          "class": "portal-directory",
+          "x": 1239.578125,
+          "right": 1305,
+          "width": 65.421875
+        }
+      ],
+      "authorityDisplay": "block",
+      "authorityGrid": "146.25px 146.25px 146.25px 146.25px 146.25px 146.25px 146.25px 146.25px",
+      "therapyScroll": 1170,
+      "therapyClient": 1170
+    }
+  ],
+  "noHorizontalOverflow": true,
+  "phonePreserved": true,
+  "controlsInsideViewport": true,
+  "breakpointOverlapFree": true
+}

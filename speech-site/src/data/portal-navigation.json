@@ -3,14 +3,14 @@
   "reviewedOn": "2026-09-29",
   "main": [
     {
-      "label": "PinnacleAI®",
-      "detail": "Life-first paradigm shift",
-      "url": "/verify/evidence/pinnacle-paradigm-shift.html"
-    },
-    {
       "label": "Verify",
       "detail": "36 evidence records",
       "url": "/verify/"
+    },
+    {
+      "label": "PinnacleAI®",
+      "detail": "Regulated developmental support",
+      "url": "/verify/evidence/pinnacleai-regulatory-journey.html"
     },
     {
       "label": "Research",
@@ -18,20 +18,29 @@
       "url": "/verify/evidence/research-library.html"
     },
     {
-      "label": "Whitebook",
-      "url": "/global-research-whitebook"
+      "label": "AbilityScore®",
+      "detail": "Understand present abilities",
+      "url": "/verify/guides/abilityscore.html"
     },
     {
-      "label": "News",
-      "url": "/autism-speech-aba-news"
+      "label": "7 Readiness Indexes",
+      "detail": "Discuss the next priorities",
+      "url": "/verify/guides/abilityscore.html#read-the-profile"
     },
     {
-      "label": "Centres",
-      "url": "/centers"
+      "label": "Self-Sufficient",
+      "detail": "Everyday independence",
+      "url": "/verify/#section-your-child-s-path-toward-self-sufficiency-and-mainstream-life"
     },
     {
-      "label": "Contact",
-      "url": "/contact-national-autism-helpline-24-7"
+      "label": "Mainstream",
+      "detail": "School & community participation",
+      "url": "/verify/evidence/pinnacle-paradigm-shift.html#paradigm-opening-child-life-from-minute-one"
+    },
+    {
+      "label": "Paradigm Shift",
+      "detail": "Life first. Therapy serves it.",
+      "url": "/verify/evidence/pinnacle-paradigm-shift.html"
     }
   ],
   "mobileExtras": [
@@ -40,7 +49,7 @@
       "url": "/epass"
     },
     {
-      "label": "Enroll",
+      "label": "Enrol at Pinnacle",
       "url": "/enroll-autism-speech-aba-therapies-india"
     },
     {
@@ -88,48 +97,6 @@
       ]
     },
     {
-      "label": "Occupational",
-      "url": "/best-occupational-therapy-center-india-proven-improvement-rate",
-      "links": [
-        {
-          "label": "What",
-          "url": "/occupational-therapy#what-section"
-        },
-        {
-          "label": "Why",
-          "url": "/occupational-therapy#why-section"
-        },
-        {
-          "label": "Importance",
-          "url": "/occupational-therapy#Importance-section"
-        },
-        {
-          "label": "Advantages",
-          "url": "/occupational-therapy#Advantages-section"
-        },
-        {
-          "label": "Children Services",
-          "url": "/occupational-therapy#ChildrenServices-section"
-        },
-        {
-          "label": "Assessment",
-          "url": "/occupational-therapy#assessment-section"
-        },
-        {
-          "label": "Admission",
-          "url": "/occupational-therapy#admission-section"
-        },
-        {
-          "label": "Procedure",
-          "url": "/occupational-therapy#procedure-section"
-        },
-        {
-          "label": "Cost / fee",
-          "url": "/occupational-therapy#Cost-section"
-        }
-      ]
-    },
-    {
       "label": "Speech Therapy",
       "url": "/top-speech-therapy-center-india-proven-improvement-rate",
       "links": [
@@ -172,37 +139,75 @@
       ]
     },
     {
-      "label": "Psychological",
-      "url": "/child-psychological-counseling",
+      "label": "Occupational Therapy",
+      "url": "/best-occupational-therapy-center-india-proven-improvement-rate",
       "links": [
         {
           "label": "What",
-          "url": "/child-psychological-counseling#what-section"
+          "url": "/occupational-therapy#what-section"
         },
         {
           "label": "Why",
-          "url": "/child-psychological-counseling#why-section"
+          "url": "/occupational-therapy#why-section"
         },
         {
-          "label": "Who can avail",
-          "url": "/child-psychological-counseling#who-avail-section"
+          "label": "Importance",
+          "url": "/occupational-therapy#Importance-section"
         },
         {
           "label": "Advantages",
-          "url": "/child-psychological-counseling#Advantages-section"
+          "url": "/occupational-therapy#Advantages-section"
         },
         {
-          "label": "Services",
-          "url": "/child-psychological-counseling#ChildrenServices-section"
+          "label": "Children Services",
+          "url": "/occupational-therapy#ChildrenServices-section"
         },
         {
-          "label": "Fee / cost",
-          "url": "/child-psychological-counseling#Cost-section"
+          "label": "Assessment",
+          "url": "/occupational-therapy#assessment-section"
+        },
+        {
+          "label": "Admission",
+          "url": "/occupational-therapy#admission-section"
+        },
+        {
+          "label": "Procedure",
+          "url": "/occupational-therapy#procedure-section"
+        },
+        {
+          "label": "Cost / fee",
+          "url": "/occupational-therapy#Cost-section"
         }
       ]
     },
     {
-      "label": "Special Ed",
+      "label": "ABA Therapy",
+      "url": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "links": [
+        {
+          "label": "What",
+          "url": "/aba-therapy#what-section"
+        },
+        {
+          "label": "Why",
+          "url": "/aba-therapy#why-section"
+        },
+        {
+          "label": "Intensive Behavioral Intervention",
+          "url": "/aba-therapy#Advantages-section"
+        },
+        {
+          "label": "Importance",
+          "url": "/aba-therapy#ChildrenServices-section"
+        },
+        {
+          "label": "services",
+          "url": "/aba-therapy#adultservices-section"
+        }
+      ]
+    },
+    {
+      "label": "Special Education",
       "url": "/best-special-education-center-call-9100181181",
       "links": [
         {
@@ -232,32 +237,6 @@
         {
           "label": "Fee",
           "url": "/special-education#Cost-section"
-        }
-      ]
-    },
-    {
-      "label": "Behavioral",
-      "url": "/best-aba-therapy-center-india-proven-improvement-rate",
-      "links": [
-        {
-          "label": "What",
-          "url": "/aba-therapy#what-section"
-        },
-        {
-          "label": "Why",
-          "url": "/aba-therapy#why-section"
-        },
-        {
-          "label": "Intensive Behavioral Intervention",
-          "url": "/aba-therapy#Advantages-section"
-        },
-        {
-          "label": "Importance",
-          "url": "/aba-therapy#ChildrenServices-section"
-        },
-        {
-          "label": "services",
-          "url": "/aba-therapy#adultservices-section"
         }
       ]
     }
@@ -482,10 +461,6 @@
             "url": "/music-therapy"
           },
           {
-            "label": "Behavioral Therapy",
-            "url": "/best-aba-therapy-center-india-proven-improvement-rate"
-          },
-          {
             "label": "Group Teaching",
             "url": "/group-teaching"
           },
@@ -552,7 +527,7 @@
             "url": "https://www.youtube.com/watch?v=OHWXU5cyrv8&list=PL0lwT9W0zVpgER0w710_PSETVXo_UcNap"
           },
           {
-            "label": "Behavioral",
+            "label": "Behaviour support videos",
             "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpiek5-R7o90GMIcVSz0A-uM"
           },
           {
@@ -580,6 +555,40 @@
       }
     ],
     [
+      {
+        "title": "Evidence, citations & recognition",
+        "links": [
+          {
+            "label": "Verify · 36 evidence records",
+            "url": "/verify/"
+          },
+          {
+            "label": "PinnacleAI® regulatory journey",
+            "url": "/verify/evidence/pinnacleai-regulatory-journey.html"
+          },
+          {
+            "label": "Citation library & downloads",
+            "url": "/verify/evidence/cite.html"
+          },
+          {
+            "label": "Recognition register",
+            "url": "/verify/evidence/recognition-register.html"
+          },
+          {
+            "label": "Government appreciation · source letters",
+            "url": "/verify/evidence/records/appreciations.html"
+          },
+          {
+            "label": "Awards & nominations · documented stage",
+            "url": "/verify/evidence/records/awards.html"
+          },
+          {
+            "label": "Research library",
+            "url": "/verify/evidence/research-library.html"
+          }
+        ],
+        "icon": "award"
+      },
       {
         "title": "Franchise Opportunity",
         "links": [
