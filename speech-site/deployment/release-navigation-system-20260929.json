@@ -56,15 +56,31 @@
     "controlsInsideViewport": true,
     "breakpointOverlap": false,
     "mobileMenuObscuredByFixedCta": false,
-    "preservedPathsUnchanged": 6
+    "preservedPathsUnchanged": 5,
+    "robotsTxtRepaired": true
   },
   "preservedRoutes": [
     "/verify/",
     "/verify/evidence/evidence.json",
     "/verify/evidence/fsc.pdf",
     "/verify/evidence/pinnacleai-regulatory-journey.html",
-    "/national-autism-helpline",
-    "/robots.txt"
+    "/national-autism-helpline"
+  ],
+  "intentionalRepairs": [
+    {
+      "path": "/robots.txt",
+      "before": {
+        "contentType": "image/*",
+        "bodySha256": "485a0b4d48c098a5981b507b53773ae95215f1a62a1d07eb7aea4d14e72e9c0f",
+        "bytes": 139
+      },
+      "after": {
+        "contentType": "text/plain; charset=utf-8",
+        "bodySha256": "913584563d7d60828167c6d7afe8862d2362d3a99b373c6dbe4ccd39369ae46a",
+        "bytes": 427
+      },
+      "reason": "Restored crawler directives as plain text while retaining the Verify, helpline, Ask and speech sitemap declarations."
+    }
   ],
   "indexing": {
     "indexNowSubmitted": true,

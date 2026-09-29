@@ -1,0 +1,13 @@
+
+User-agent: *
+Disallow: /api
+Disallow: /assessmentlead
+Disallow: /viewinvoice
+
+Sitemap: https://www.pinnacleblooms.org/sitemap.xml
+
+# Pinnacle verification evidence
+Sitemap: https://www.pinnacleblooms.org/verify/sitemap.xml
+Sitemap: https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml
+Sitemap: https://pinnacleblooms.org/ask/sitemap.xml
+Sitemap: https://www.pinnacleblooms.org/speech-therapy/sitemap.xml

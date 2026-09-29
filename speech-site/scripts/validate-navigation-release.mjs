@@ -7,6 +7,7 @@ const origin = 'https://www.pinnacleblooms.org';
 const baselinePath = path.resolve(process.argv[2] || 'deployment/production-before-navigation-v103-20260929.json');
 const outputPath = path.resolve(process.argv[3] || 'deployment/production-navigation-v103-20260929.json');
 const expectedVersion = Number(process.argv[4] || 103);
+const expectedRobotsPath = path.resolve(process.argv[5] || 'scripts/fixtures/expected-robots-v103.txt');
 const managedPaths = new Set([
   '/top-speech-therapy-center-india-proven-improvement-rate',
   '/enroll-autism-speech-aba-therapies-india',
@@ -16,8 +17,8 @@ const managedPaths = new Set([
 ]);
 
 const baseline = JSON.parse(await fs.readFile(baselinePath, 'utf8'));
-const trustedRouteSnapshot = JSON.parse(await fs.readFile('deployment/shared-routes-after.json', 'utf8'));
-const trustedRobots = trustedRouteSnapshot.find(({path: routePath}) => routePath === '/robots.txt');
+const expectedRobots = await fs.readFile(expectedRobotsPath);
+const expectedRobotsSha256 = crypto.createHash('sha256').update(expectedRobots).digest('hex');
 const results = [];
 
 for (const previous of baseline.results) {
@@ -34,8 +35,8 @@ for (const previous of baseline.results) {
   if (managedPaths.has(previous.path)) {
     assert.notEqual(current.bodySha256, previous.bodySha256, `${previous.path} must contain the new shared shell`);
   } else if (previous.path === '/robots.txt') {
-    assert(trustedRobots, 'Trusted robots snapshot is required');
-    assert.equal(current.bodySha256, trustedRobots.sha256, '/robots.txt changed from the trusted pre-release route snapshot');
+    assert.equal(current.bodySha256, expectedRobotsSha256, '/robots.txt changed from the committed release fixture');
+    assert.deepEqual(body, expectedRobots, '/robots.txt content changed from the committed release fixture');
     assert.match(current.contentType || '', /^text\/plain/i, '/robots.txt must be plain text');
     assert(body.toString('utf8').includes('https://www.pinnacleblooms.org/speech-therapy/sitemap.xml'), 'Speech sitemap must remain in robots.txt');
   } else {
@@ -50,7 +51,12 @@ const report = {
   baselineVersion: baseline.productionVersion,
   productionVersion: expectedVersion,
   managedPagesChanged: [...managedPaths],
-  preservedPathsUnchanged: results.filter(({path}) => !managedPaths.has(path)).map(({path}) => path),
+  preservedPathsUnchanged: results.filter(({path}) => !managedPaths.has(path) && path !== '/robots.txt').map(({path}) => path),
+  intentionalRepairs: results.filter(({path}) => path === '/robots.txt').map((current) => ({
+    path: current.path,
+    reason: 'Restored crawler directives as text/plain and retained the Verify, helpline, Ask and speech sitemap declarations.',
+    current
+  })),
   results
 };
 await fs.writeFile(outputPath, JSON.stringify(report, null, 2) + '\n');
