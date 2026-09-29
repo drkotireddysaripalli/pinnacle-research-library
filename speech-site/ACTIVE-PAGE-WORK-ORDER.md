@@ -8,7 +8,7 @@ Completed managed releases now include Speech Therapy, Enrolment, Occupational T
 
 - Canonical: `https://www.pinnacleblooms.org/centers`
 - Permanent consolidation: `/centers/`, `/Centres`, `/centres`, `/locations` and case/trailing-slash variants resolve to the canonical while individual legacy centre profiles remain origin-owned.
-- Title: `Find a Pinnacle Centre Near You | 62 Published Listings`
+- Title: `Find a Pinnacle Blooms Centre | Locations, Maps & Contact`
 - Parent promise: find a published Pinnacle location, compare the available address and profile evidence, and begin with one clear national or local next step.
 - Primary conversion: call `9100 181 181`.
 - Secondary conversion: search the directory, choose a centre, open its profile or map, share it with family, or start enrolment.
