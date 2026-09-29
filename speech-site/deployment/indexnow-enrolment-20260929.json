@@ -1,0 +1,28 @@
+{
+  "submittedAt": "2026-09-29T04:11:12.435Z",
+  "rootKeyResponseStatus": 200,
+  "canonicalResponseStatus": 200,
+  "urlList": [
+    "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+  ],
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "httpStatus": 200,
+  "response": "",
+  "attempts": [
+    {
+      "submittedAt": "2026-09-29T04:10:43.305Z",
+      "scope": "verify-subpath-key",
+      "httpStatus": 422,
+      "response": "{\"errorCode\":\"InvalidRequestParameters\",\"message\":\"One or more URLs are not related to your site verified through the keylocation parameter. Please verify URLs before submitting.\",\"details\":null}",
+      "outcome": "rejected because the key location did not cover the root-level enrolment URL"
+    },
+    {
+      "submittedAt": "2026-09-29T04:11:12.436Z",
+      "scope": "verified-root-key",
+      "httpStatus": 200,
+      "response": "",
+      "outcome": "notification accepted"
+    }
+  ],
+  "meaning": "URL notification received; this confirms submission only, not discovery, indexing, ranking, AI citation or conversion."
+}

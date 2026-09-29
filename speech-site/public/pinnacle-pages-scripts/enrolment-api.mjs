@@ -1,5 +1,5 @@
-// Proposed boundary for the forthcoming PinnacleAI Cloudflare API.
-// No endpoint is configured or contacted by the design preview.
+// Public form contract. Cloudflare translates this deliberately small envelope
+// to the existing PinnacleAI enrolment workflow without exposing that service.
 export const services = new Set(['help','speech','occupational','aba','education','other']);
 export function validateEnrolment(values, centreIds) {
  const errors={};
@@ -18,17 +18,17 @@ export function makePayload(values, requestId) {
 }
 export function approvedEndpoint(endpoint, origin) {
  if(typeof endpoint!=='string'||!endpoint)return null;
- try{const u=new URL(endpoint,origin);return u.origin===origin&&u.pathname.startsWith('/api/')&&!u.search&&!u.hash&&!u.username&&!u.password?u.href:null;}catch{return null;}
+ try{const u=new URL(endpoint,origin);return u.origin===origin&&u.pathname==='/api/enrolment'&&!u.search&&!u.hash&&!u.username&&!u.password?u.href:null;}catch{return null;}
 }
 export async function submitEnrolment(endpoint, payload, {origin,fetchImpl=fetch,timeoutMs=15000}={}) {
  const target=approvedEndpoint(endpoint,origin);
  if(!target)return {state:'unavailable'};
  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),timeoutMs);
  try{
-  const response=await fetchImpl(target,{method:'POST',headers:{'content-type':'application/json','accept':'application/json','idempotency-key':payload.requestId},credentials:'same-origin',cache:'no-store',redirect:'error',referrerPolicy:'no-referrer',signal:controller.signal,body:JSON.stringify(payload)});
+  const response=await fetchImpl(target,{method:'POST',headers:{'content-type':'application/json','accept':'application/json','idempotency-key':payload.requestId},credentials:'omit',cache:'no-store',redirect:'error',referrerPolicy:'no-referrer',signal:controller.signal,body:JSON.stringify(payload)});
   const json=await response.json();
-  // HTTP 200 alone is not acceptance. This proposed envelope must be implemented
-  // by PinnacleAI or adapted here against its supplied API contract before launch.
+  // HTTP success alone is not acceptance. The same-origin adapter emits this
+  // envelope only after the existing PinnacleAI endpoint returns its exact true.
   if(response.ok&&json?.status==='accepted')return {state:'accepted'};
   if([400,422,429].includes(response.status)&&json?.status==='rejected')return {state:'rejected'};
   return {state:'unknown'};

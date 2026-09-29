@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-09-29T04:08:08.966Z",
+  "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+  "liveStatus": 200,
+  "liveHtmlSha256": "af738b0cd12516d3a7bdf47c67eeb16ea31a3b2f8240e102cb60d3a00cdc908e",
+  "liveMatchesRelease": true,
+  "previewNoindex": true,
+  "previewNoStore": true,
+  "aliases301": 3,
+  "apiGetStatus": 405,
+  "apiInvalidStatus": 422,
+  "invalidRequestReachedUpstream": false,
+  "sitemapLinked": true,
+  "llmsLinked": true,
+  "preserved": [
+    {
+      "path": "/verify/",
+      "status": 200,
+      "sameBytes": true
+    },
+    {
+      "path": "/verify/evidence/evidence.json",
+      "status": 200,
+      "sameBytes": true
+    },
+    {
+      "path": "/verify/evidence/fsc.pdf",
+      "status": 200,
+      "sameBytes": true
+    },
+    {
+      "path": "/verify/evidence/pinnacleai-regulatory-journey.html",
+      "status": 200,
+      "sameBytes": true
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "sameBytes": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sameBytes": true
+    }
+  ],
+  "dynamicOrigin": [
+    {
+      "path": "/payonline",
+      "status": 302
+    }
+  ]
+}

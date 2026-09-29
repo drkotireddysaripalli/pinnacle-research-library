@@ -9,7 +9,7 @@ const canonical = 'https://www.pinnacleblooms.org/top-speech-therapy-center-indi
 const checks = [];
 function check(name, condition) { assert.ok(condition, name); checks.push(name); }
 check('One persistent H1', [...html.matchAll(/<h1\b/g)].length === 1);
-check('Preview remains noindex', /name="robots" content="noindex, nofollow"/.test(html));
+check('Production page remains indexable', /name="robots" content="index, follow, max-image-preview:large"/.test(html));
 check('Existing service canonical retained', html.includes('rel="canonical" href="'+canonical+'"'));
 check('Nine explanatory cards are in initial HTML', [...html.matchAll(/class="stack-card /g)].length === 9);
 check('All phone links use the international number', [...html.matchAll(/href="(tel:[^"]+)"/g)].every(m => m[1] === 'tel:+919100181181'));
@@ -19,7 +19,7 @@ check('Confirmed assessment offer replaces conflicting price', html.includes('<d
 check('Service-fit and offer precede explanation', html.indexOf('id="assessment-start"') < html.indexOf('id="everyday-communication"'));
 check('Official logos used', html.includes('Official Pinnacle logo') && html.includes('company emblem'));
 check('Review changes the next decision',html.includes('Keep the goal. Adjust the practice.'));
-check('Existing enrolment destination used', html.includes('href="https://www.pinnacleblooms.org/enroll"'));
+check('Live enrolment destination used', html.includes('href="https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"'));
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
 check('Unique HTML IDs', new Set(ids).size === ids.length);
 check('Every fragment link has a target', [...html.matchAll(/href="#([^"]+)"/g)].every(m => ids.includes(m[1])));
