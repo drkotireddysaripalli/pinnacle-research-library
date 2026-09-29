@@ -21,10 +21,8 @@ assert(live.body.includes('id="speech-assessment-enquiry"')&&!live.body.includes
 for(const alias of ['/enroll/',canonical+'/']){const result=await get(alias+'?service=speech');assert.equal(result.response.status,301);assert.equal(result.response.headers.get('location'),origin+canonical+'?service=speech');}
 const simpleAlias=await get('/enroll');assert.equal(simpleAlias.response.status,301);assert.equal(simpleAlias.response.headers.get('location'),origin+canonical);
 
-const previewExpected=await fs.readFile(`${release}/pinnacle-pages-html/enrolment-preview.html`);
 const preview=await get('/pinnacle-pages-preview/enrolment');
-assert.equal(preview.response.status,200);assert.equal(sha(preview.bytes),sha(previewExpected));
-assert.match(preview.response.headers.get('x-robots-tag')||'',/noindex/);assert.equal(preview.response.headers.get('cache-control'),'no-store');
+assert.equal(preview.response.status,301);assert.equal(preview.response.headers.get('location'),origin+canonical);
 assert.equal((await get('/pinnacle-pages-preview/enrolment',{method:'POST',body:'blocked'})).response.status,405);
 
 assert.equal((await get('/api/enrolment')).response.status,405);
@@ -42,6 +40,6 @@ for(const path of preservePaths){const old=before.find(item=>item.path===path);a
 assert(preserved.every(item=>item.status===200&&item.sameBytes));
 const payonline=await get('/payonline');assert([200,302].includes(payonline.response.status));
 
-const report={checkedAt:new Date().toISOString(),canonical:origin+canonical,liveStatus:live.response.status,liveHtmlSha256:sha(live.bytes),liveMatchesRelease:true,previewNoindex:true,previewNoStore:true,aliases301:3,apiGetStatus:405,apiInvalidStatus:422,invalidRequestReachedUpstream:false,sitemapLinked:true,llmsLinked:true,preserved,dynamicOrigin:[{path:'/payonline',status:payonline.response.status}]};
+const report={checkedAt:new Date().toISOString(),canonical:origin+canonical,liveStatus:live.response.status,liveHtmlSha256:sha(live.bytes),liveMatchesRelease:true,retiredPreviewRedirectStatus:preview.response.status,retiredPreviewLocation:preview.response.headers.get('location'),aliases301:4,apiGetStatus:405,apiInvalidStatus:422,invalidRequestReachedUpstream:false,sitemapLinked:true,llmsLinked:true,preserved,dynamicOrigin:[{path:'/payonline',status:payonline.response.status}]};
 await fs.writeFile('deployment/enrolment-live-production-20260929.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

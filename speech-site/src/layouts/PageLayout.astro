@@ -10,6 +10,7 @@ import '../styles/readability.css';
 const { title, description, path, label, serviceName, shareImage, serviceType, assessmentOffer, citations = [], imageAlt, imageCaption, documentOnly = false, focused = false, enquiry, publishedOn, updatedOn, breadcrumbParent, previewOnly = false } = Astro.props;
 const canonical = url(path);
 const speechDocument=path==='/top-speech-therapy-center-india-proven-improvement-rate'||path.startsWith('/speech-therapy/');
+const enrolmentDocument=path==='/enroll-autism-speech-aba-therapies-india'||path==='/pinnacle-pages-preview/enrolment';
 const contactAction=enquiry||(speechDocument?{url:speechOffer.url,mobileLabel:'FREE assessment'}:{url:url('/enroll-autism-speech-aba-therapies-india'),mobileLabel:'Arrange a visit'});
 const parentCrumb=breadcrumbParent||(documentOnly&&path.startsWith('/speech-therapy/')?{name:'Speech Therapy',path:'/top-speech-therapy-center-india-proven-improvement-rate'}:null);
 const crumbs=[{name:'Home',item:origin+'/'},...(parentCrumb?[{name:parentCrumb.name,item:url(parentCrumb.path)}]:[]),{name:label,item:canonical}];
@@ -37,7 +38,7 @@ const schema = {'@context':'https://schema.org','@graph':[
   <meta property="og:image:type" content="image/webp" /><meta property="og:image" content={imageUrl} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={imageAlt} />
   <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={imageUrl} /><meta name="twitter:image:alt" content={imageAlt} />
   <meta name="theme-color" content="#8f2879" /><script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\\u003c')} />
-</head><body class:list={{'focused-campaign':focused}} data-page-variant={focused ? 'focused' : 'service'}>
+</head><body class:list={{'focused-campaign':focused,'enrolment-page':enrolmentDocument}} data-page-variant={focused ? 'focused' : 'service'}>
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
   <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={phone.href} data-cta="mobile-call">Call {phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>

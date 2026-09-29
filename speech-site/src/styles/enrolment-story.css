@@ -1,4 +1,23 @@
 /* Life-first enrolment narrative; shared portal tokens and form behaviour remain. */
+.enrolment-page,.enrolment-page main{background:#fff}
+.enrolment-page .portal-footer{background:#fff;color:#302638;border-top:1px solid #e7dde7}
+.enrolment-page .portal-footer-art{background-image:none}
+.enrolment-page .portal-footer a{color:#65225b}
+.enrolment-page .portal-footer a:hover{color:#8f2879}
+.enrolment-page .portal-footer a:focus-visible,.enrolment-page .portal-footer summary:focus-visible{outline-color:#15234a}
+.enrolment-page .portal-footer h2,.enrolment-page .portal-footer h3,.enrolment-page .portal-footer-group h3 a,.enrolment-page .portal-community>a{color:#15234a}
+.enrolment-page .portal-purpose-copy p+p,.enrolment-page .portal-contact-item span,.enrolment-page .portal-footer-evidence p,.enrolment-page .portal-footer-identity,.enrolment-page .portal-footer-note{color:#665e69}
+.enrolment-page .portal-contact-item .portal-footer-phone{color:#15234a}
+.enrolment-page .portal-footer-group,.enrolment-page .portal-community>a,.enrolment-page .portal-footer-policies{border-color:#e2d7e5}
+.enrolment-page .portal-footer-policies a{border-color:#d5c6d9}
+.enrolment-page .portal-footer-brands img{border:1px solid #e2d7e5}
+.enrolment-page .portal-review-link{background:#f8eff6;color:#542366!important;border:1px solid #ddc9e0}
+.enrolment-page .portal-footer .portal-measurement{color:#302638;border-color:#d5c6d9}
+.enrolment-page .portal-footer .portal-measurement summary{color:#15234a}
+.enrolment-page .portal-footer .portal-measurement p{color:#665e69}
+.enrolment-page .portal-footer .portal-measurement button{color:#652579;border:1px solid #cdb5d1}
+.enrolment-page .footer-group-toggle{color:#652579;border-color:#cdb5d1}
+.enrolment-page .footer-group-toggle:focus-visible{outline-color:#15234a}
 .enrol-hero{grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:2rem;padding-top:3.4rem;padding-bottom:2.8rem}
 .enrol-hero h1{font-size:clamp(2.35rem,3.5vw,3.7rem);line-height:1.13;letter-spacing:-.04em;color:#15234a}
 .enrol-hero h1 em{display:block;margin-top:.4rem;font-size:.82em;line-height:1.2}

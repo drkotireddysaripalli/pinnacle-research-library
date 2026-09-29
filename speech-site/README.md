@@ -1,6 +1,6 @@
 # Pinnacle shared pages — speech and enrolment
 
-**Latest v91:** [Enrolment story preview](https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment) now opens with a life-first family decision story, keeps the short form immediately after the promise, then explains why families choose Pinnacle, the PinnacleAI® paradigm shift and the seven-stage pathway. Three existing Pinnacle visuals now carry the story at the points where they help: home and car analogies establish the whole-life purpose, and the family-practice scene shows transfer into everyday life. Responsive image variants, descriptive alt text, explicit dimensions and lazy loading preserve speed and machine readability. The preview uses the shared portal shell, progressive optional preferences, 62 grouped locations and a prepared Cloudflare POST boundary. It cannot submit; existing live enrolment is preserved pending the owner-supplied API. See [29 September release details](RELEASE-ENROLMENT-STORY-20260929.md), the [active deployment manifest](deployment/release.json) and the [proposed API contract](ENROLMENT-API-CONTRACT.md). The bounded v91 check passed 28 relevant tests, W3C validation, responsive browser review at 390/768/1440px and exact production-byte verification while all stable Verify, FSC, helpline, robots and speech resources remained unchanged.
+**Latest v99:** [Enrol at Pinnacle](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india) is the canonical live life-first enrolment page. It combines the short form, the family decision narrative, PinnacleAI® paradigm shift, seven-stage pathway, 62 grouped centre choices, relevant Verify evidence and responsive Pinnacle imagery. The form posts to the same-origin `/api/enrolment` Cloudflare boundary, which validates and allowlists the request before using the `PINNACLE_LEGACY` service binding. The retired preview URL redirects permanently to the canonical page. The page and its full portal footer now use a luminous white canvas; the change is scoped to enrolment. See [final release details](RELEASE-ENROLMENT-FINAL-20260929.md) and the [API contract](ENROLMENT-API-CONTRACT.md).
 
 **Updated 28 September 2026:** [Speech therapy for children](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate). The established canonical URL is retained. See [current directory and readability release](RELEASE-DIRECTORY-20260928.md) and [deployment manifest](deployment/release.json).
 
@@ -42,11 +42,20 @@ Ordinary builds are noindex previews. `/speech-campaign.html` remains a comparis
 
 ## Release preservation
 
-Build the production edition, then run `node scripts/prepare-release.mjs <new-output-directory> <verify-source-directory>`. The second argument points to the current sibling `verify-site` or local `pinnacle-verify-fsc` directory. The preparation step copies its complete `dist`, adds only released template resources and the explicitly noindex enrolment preview and generates the route source. Deploy all four modules: `pinnacle-route-v12.mjs`, `speech-handler.mjs`, `speech-enquiry-handler.mjs` and `centre-facilities.mjs`. It never replaces the homepage with speech HTML. Return the local preview to an ordinary build afterward.
+Build and stage a production release from source:
 
-The new enrolment route is guarded to rewrite only the exact GET request with `entry=speech-assessment`. The known origin form and v42 bundle are required; an unknown origin is returned unchanged. Untagged enrolment, private requests and other methods remain with the origin. Keep the edited public bundle, its provenance receipt and the entry handler together. The existing server contract is unchanged. A future origin bundle/form update must be reviewed before updating the guard. Route and analytics-injection rollback details are in the current release report.
+```text
+npm ci
+$env:PINNACLE_RELEASE='production'
+npm run build
+node scripts/test-enrolment.mjs dist
+node scripts/prepare-release.mjs release-current ..\pinnacle-verify-fsc
+node scripts/audit-enrolment-metadata.mjs release-current
+node scripts/prepare-worker-upload.mjs release-current .worker-upload-current
+npx wrangler deploy --dry-run -c .worker-upload-current/wrangler.jsonc --outdir dryrun-worker-current
+```
 
-**The shared Worker now requires the union of Verify and speech assets. Never redeploy only the old v11 Worker or only Verify assets.** Read [deployment instructions and rollback](RELEASE-20260927.md) before updating shared hosting. Keep all three existing bindings and `run_worker_first: true`.
+`prepare-release.mjs` copies the complete current Verify build, adds the released speech and enrolment resources, generates the asset inventory and rebuilds `deployment/pinnacle-route-v12.mjs`. `prepare-worker-upload.mjs` then creates an isolated, disposable upload directory containing exactly the five Worker modules and its generated configuration. Deploy from that generated configuration only after its dry run reports four additional modules. It preserves `ASSETS`, `PINNACLE_LEGACY`, `PINNACLE_ASK` and `run_worker_first: true`; existing secrets remain managed in Cloudflare and are not stored here. Run `npm run clean` after release. Never deploy an old Verify Worker, a partial asset directory or the cluttered source `deployment/` directory directly.
 
 ## Verification
 
