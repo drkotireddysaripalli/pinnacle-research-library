@@ -18,9 +18,9 @@ const slides = [{image:content.image.source,alt:content.image.alt,caption:conten
       <ol class="hero-mechanism" aria-label="Everyday goals">{content.hero.moments.map(moment=><li><Icon name={moment.icon} size={22} />{moment.label}</li>)}</ol>
       {content.assessmentOffer && <div class="hero-assessment-offer"><span>{content.assessmentOffer.name}</span><AssessmentOffer compact /></div>}
       <div class="hero-actions"><a class="button primary" href={phone.href} data-cta="hero-call"><Icon name="phone" />Call {phone.display}</a><a class="button outline" href={content.enquiry.url} data-cta="hero-assessment">{content.enquiry.label} <Icon name="arrow" /></a></div>
-      <p class="guidance-note">Our team confirms your assessment appointment. Ongoing therapy is priced separately.</p>
+      <p class="guidance-note">{content.guidanceNote || 'Our team confirms your assessment appointment. Ongoing therapy is priced separately.'}</p>
       <div class="hero-evidence"><Icon name="shield" size={18} /><span>PinnacleAI software: <a href={url('/verify/evidence/records/md5.html')}>MD-5 licence</a> · <a href={url('/verify/evidence/bis.pdf#page=2')}>BIS scope</a></span></div>
-      <a class="hero-discover" href="#first-visit">See what to expect at your first visit <span aria-hidden="true">↓</span></a>
+      <a class="hero-discover" href={content.discover?.href || '#first-visit'}>{content.discover?.label || 'See what to expect at your first visit'} <span aria-hidden="true">↓</span></a>
     </div>
     <div class="hero-visual" data-carousel role="region" aria-roledescription="carousel" aria-label={content.label+' in everyday life'}>
       {slides.map((slide, index) => <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label={(index+1)+' of '+slides.length} hidden={index!==0}>

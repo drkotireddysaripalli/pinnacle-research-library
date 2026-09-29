@@ -1,8 +1,56 @@
-import fs from 'node:fs/promises';import assert from 'node:assert/strict';import crypto from 'node:crypto';
-const before=await fs.readFile('deployment/live-before-20260928/exact-pinnacle-route-v12.mjs','utf8'),after=await fs.readFile('deployment/pinnacle-route-v12.mjs','utf8');
-const shared=s=>s.replace(/^import \{serveSpeechEnquiry\}[^\n]*\n/m,'').replace(/^import \{serveSpeech\}[^\n]*\n/m,'').replace(/^import \{serveEnrolmentApi\}[^\n]*\n/m,'').replace(/^const SPEECH_INVENTORY=[^\n]*\n/m,'').replace('  const enrolmentApiResponse=await serveEnrolmentApi(request,env);if(enrolmentApiResponse)return enrolmentApiResponse;\n','').replace('  const enquiryResponse=await serveSpeechEnquiry(request,env);if(enquiryResponse)return enquiryResponse;\n','').replace('  const speechResponse=await serveSpeech(request,env,SPEECH_INVENTORY);if(speechResponse)return speechResponse;\n','');
-assert.equal(shared(after),shared(before),'Existing shared Worker code must remain identical');
-const inventory=JSON.parse(after.match(/const STATIC_FILES = (\{[^\n]+\})/)[1]);
-const stage=process.argv[2]||'../.cloudflare-static-assets-private/speech-stage-20260928/files';let count=0;
-for(const [p,hash]of Object.entries(inventory)){const bytes=await fs.readFile(stage+p);assert.equal(crypto.createHash('sha256').update(bytes).digest('hex').slice(0,16),hash,p);count++;}
-console.log(JSON.stringify({sharedWorkerUnchanged:true,verifyAssetsMatched:count}));
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
+
+const workerPath='deployment/pinnacle-route-v12.mjs';
+const worker=await fs.readFile(workerPath,'utf8');
+const release=path.resolve(process.argv[2]||'release-special-education-v116-20260929');
+
+function parseInventory(name){
+  const match=worker.match(new RegExp(`const ${name} ?= ?(\\{[^\\n]+\\});`));
+  assert(match,`${name} must be embedded in the Worker`);
+  return JSON.parse(match[1]);
+}
+
+async function verifyInventory(name,inventory){
+  let count=0;
+  for(const [publicPath,expected] of Object.entries(inventory)){
+    const file=path.join(release,...publicPath.split('/').filter(Boolean));
+    const bytes=await fs.readFile(file);
+    const actual=crypto.createHash('sha256').update(bytes).digest('hex').slice(0,16);
+    assert.equal(actual,expected,`${name}: ${publicPath}`);
+    count++;
+  }
+  return count;
+}
+
+const staticFiles=parseInventory('STATIC_FILES');
+const speechInventory=parseInventory('SPEECH_INVENTORY');
+const staticCount=await verifyInventory('STATIC_FILES',staticFiles);
+const speechCount=await verifyInventory('SPEECH_INVENTORY',speechInventory);
+
+for(const required of [
+  '/pinnacle-pages-html/special-education.html',
+  '/pinnacle-pages-data/special-education-machine.md',
+  '/pinnacle-pages-data/special-education-evidence.json',
+  '/pinnacle-pages-data/special-education-evidence.txt'
+]) assert(required in speechInventory,`Missing Special Education release asset: ${required}`);
+
+assert(worker.includes("import {serveRootDiscovery} from './discovery-handler.mjs';"),'Root discovery handler must remain connected');
+assert(worker.includes('serveRootDiscovery(request,env)'),'Root discovery must run in the request path');
+assert(worker.includes('serveSpeech(request,env,SPEECH_INVENTORY)'),'Managed therapy routes must remain connected');
+assert(worker.includes('serveEnrolmentApi(request,env)'),'Enrolment API route must remain connected');
+assert(worker.includes('serveSpeechEnquiry(request,env)'),'Speech enquiry route must remain connected');
+
+const socialImages=Object.keys(speechInventory).filter(key=>/special-education-share-20260929.*\.jpg$/.test(key));
+assert.equal(socialImages.length,1,'Exactly one Special Education social image must ship');
+
+console.log(JSON.stringify({
+  release:path.basename(release),
+  workerSha256:crypto.createHash('sha256').update(worker).digest('hex'),
+  staticAssetsMatched:staticCount,
+  managedAssetsMatched:speechCount,
+  specialEducationAssetsVerified:5,
+  sharedRouteContract:true
+},null,2));

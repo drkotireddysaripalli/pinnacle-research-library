@@ -1,0 +1,106 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import HeroSlider from './HeroSlider.astro';
+import ActionStrip from './ActionStrip.astro';
+import Icon from './Icon.astro';
+import LifePath from './LifePath.astro';
+import TherapyTogether from './TherapyTogether.astro';
+import CentreDirectory from './CentreDirectory.astro';
+import EvidenceLinks from './EvidenceLinks.astro';
+import { Image } from 'astro:assets';
+import emblem from '../assets/pinnacle-emblem-official.png';
+import learningCycle from '../assets/special-education-learning-cycle-20260929.png';
+import shareCard from '../assets/special-education-share-20260929.jpg';
+import { specialEducationContent as content, specialEducationEnquiry } from '../data/special-education-content';
+import { proofCards } from '../data/speech';
+import { phone, url } from '../data/site';
+
+const conversationLens = [
+  ['book','The learning moment','What is the child being asked to understand, communicate or do?'],
+  ['sun','Strengths and interests','What already makes engagement, attention or participation easier?'],
+  ['voice','Communication access','How does the child understand instructions, ask for help and show choices?'],
+  ['home','Activity and environment','Do the steps, materials, pace, sensory conditions or setting create a barrier?'],
+  ['people','Family and teacher knowledge','What do the adults who know the child notice across everyday settings?'],
+  ['compass','A useful direction','What change would make learning or participation more possible in daily life?']
+];
+const exampleSteps = [
+  ['Begin with the real moment','A child stops when a multi-step activity becomes difficult.'],
+  ['Understand access','Look at the instruction, communication, sequence, material, environment and support already available.'],
+  ['Agree a useful goal','The child can ask “help”, request the next step or use a visual sequence to continue.'],
+  ['Adapt the teaching','Break the activity into accessible steps and choose a response method the child can use.'],
+  ['Practise where it matters','Use the agreed support in a suitable home or classroom activity when appropriate.'],
+  ['Review participation','Notice what the child did, the support still needed and whether the ability transferred.'],
+  ['Correct the plan','Continue, adapt, connect another professional or change the goal as review indicates.']
+];
+const disciplines = [
+  ['book','Special educator','Adapts teaching, learning materials, activities and support around the educational need.'],
+  ['voice','Speech and communication','Supports ways to understand, express, ask, answer and participate when indicated.'],
+  ['home','Occupational therapy','Considers activities, materials, routines, sensory-motor access and environments.'],
+  ['heart','Behavioural support','Helps understand patterns and build useful, respectful participation abilities.'],
+  ['people','Family and teacher','Bring priorities and observations from the child’s everyday learning settings.'],
+  ['shield','Relevant professionals','Contribute health, psychological or other expertise when the child-specific need indicates it.']
+];
+---
+<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms Special Education: learning, communication and participation connected to the child’s life. Call 9100 181 181." imageCaption="Special education support connected to learning access, participation and the child’s wider life at Pinnacle Blooms Network." shareImage={shareCard} publishedOn="2026-09-29" updatedOn="2026-09-29" enquiry={content.enquiry}>
+  <HeroSlider content={content} /><ActionStrip focused firstLabel="First conversation" firstHref="#first-conversation" />
+
+  <section class="section wrap service-fit special-fit" id="service-fit" aria-labelledby="special-fit-title">
+    <div class="fit-heading"><p class="eyebrow">Start with the learner, the moment and the life ahead</p><h2 id="special-fit-title">Where should learning<br/><em>become more possible?</em></h2></div>
+    <p class="occupational-intro">Special education is more than finishing a worksheet. It helps make teaching and learning accessible to the individual child—and connects a developing ability with communication, school participation and everyday life.</p>
+    <div class="concern-grid special-concern-grid">{content.concerns.map(concern=><article><span class="concern-icon"><Icon name={concern.icon} size={30}/></span><h3>{concern.title}</h3><p>{concern.copy}</p></article>)}</div>
+    <aside class="special-direct-answer"><Icon name="book" size={36}/><div><p class="eyebrow">A direct answer</p><h3>What is special education support?</h3><p>It is child-specific educational support. A professional may adapt teaching, communication, materials, activities, pace or the learning environment so the child can access learning and participate. Assessment guides what is appropriate.</p></div><a href="https://www.unesco.org/en/inclusion-education">Read UNESCO on removing barriers to learning ↗</a></aside>
+    <p class="source-note">UNESCO and UNICEF explain inclusive education and access to learning; they do not endorse Pinnacle or establish a particular professional’s credentials.</p>
+    <div class="assessment-route"><a href="#first-conversation"><Icon name="clock"/>First conversation</a><a href="#learning-example"><Icon name="people"/>See one learning example</a><a href="#centres"><Icon name="pin"/>Find a centre</a></div>
+  </section>
+
+  <section class="section aba-first special-first" id="first-conversation" aria-labelledby="special-first-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">Bring one learning moment</p><h2 id="special-first-title">We listen for what matters.<br/><em>Then examine access and participation.</em></h2></div><p>You do not need to choose a therapy before you call. Tell us what your child is trying to understand, communicate or do—and what you would like to become more possible at home, in learning or at school.</p></div>
+    <div class="aba-lens-grid">{conversationLens.map(([icon,title,text])=><article><span><Icon name={icon} size={27}/></span><h3>{title}</h3><p>{text}</p></article>)}</div>
+    <div class="technology-bridge"><Icon name="shield" size={30}/><p><strong>A clear boundary.</strong> A centre appointment is not school admission or placement. The team confirms the suitable professional, service availability, appointment and current fees before you travel.</p></div>
+    <div class="aba-first-actions"><a class="button primary" href={phone.href}><Icon name="phone"/>Call {phone.display}</a><a class="button outline" href={specialEducationEnquiry}>Arrange a first conversation <Icon name="arrow"/></a></div>
+  </div></section>
+
+  <section class="section wrap difference special-difference" id="pinnacle-difference" aria-labelledby="special-difference-title">
+    <div class="story-heading"><p class="eyebrow">Seven connected stages · One life in view</p><h2 id="special-difference-title">Do not stop at completing the task.<br/><em>Build the ability the child can use.</em></h2><p>A brick matters because it helps form a home. A lesson, activity or teaching technique gains its direction from the life your child is growing toward. That direction helps organise what to understand, what to teach, who to involve, where to practise and what to review.</p></div>
+    <p class="life-purpose-line">The life we work toward: <strong>growing self-sufficiency · mainstream participation · a wonderful life.</strong></p>
+    <LifePath pathway={content.pathway}/>
+    <div class="special-paradigm-links"><a class="text-link" href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Read the documented life-first approach <Icon name="arrow"/></a><EvidenceLinks group="practice" label="See how goals, practice and feedback connect"/></div>
+    <p class="source-note">This is Pinnacle’s programme direction. “Toward” describes the purpose of planning and review; it is not a guarantee of independence, school admission, mainstream inclusion or a particular result.</p>
+  </section>
+
+  <section class="section occupational-example special-example" id="learning-example" aria-labelledby="special-example-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">One learning example · Access before pressure</p><h2 id="special-example-title">A difficult activity.<br/><em>A useful way to ask for help.</em></h2></div><p>The aim is not to make a child perform a task for appearance. The aim is to make learning accessible, develop a useful ability and help the child participate with appropriate support.</p></div>
+    <figure class="occupational-story special-story"><Image src={learningCycle} widths={[480,800,1200,1680]} sizes="(min-width:1360px) 1280px, calc(100vw - 36px)" width={1680} height={945} format="webp" quality={82} loading="lazy" decoding="async" alt="A special educator breaks a learning activity into accessible steps, an Indian child practises with family, participates in class and the adults review the next step."/><figcaption>Understand the barrier. Adapt the teaching. Practise meaningfully. Review what the child can use.</figcaption></figure>
+    <ol class="aba-cycle special-cycle">{exampleSteps.map(([title,text],i)=><li><span>{i+1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol>
+  </div></section>
+
+  <section class="section wrap occupational-family special-family" id="family-school" aria-labelledby="special-family-title"><div><p class="eyebrow">Family and teacher knowledge belongs in the plan</p><h2 id="special-family-title">The learning session sees one moment.<br/><em>You see the rest of the day.</em></h2><p>Parents, caregivers and teachers can show the team where learning becomes possible, where it breaks down and what support the child still needs. Those observations help review the next step without turning home into a test or blaming the family.</p><EvidenceLinks group="practice" label="How family observations shape the next step"/></div><div class="occupational-family-cards"><article><Icon name="home"/><h3>At home</h3><p>Use manageable moments that fit family life and the agreed educational direction.</p></article><article><Icon name="book"/><h3>At school</h3><p>With appropriate consent, share useful observations about instructions, activities and participation.</p></article><article><Icon name="loop"/><h3>Back in review</h3><p>Use what happened to refine the goal, teaching, material, environment or support.</p></article></div></section>
+
+  <section class="section wrap aba-team special-team" id="integrated-support" aria-labelledby="special-team-title">
+    <div class="split-heading"><div><p class="eyebrow">One child. Distinct contributions. One shared direction.</p><h2 id="special-team-title">Learning access may connect<br/><em>with a larger picture.</em></h2></div><p>The child-specific need determines which people and supports are relevant. Every child does not need every therapy, and one discipline should not silently replace another.</p></div>
+    <div class="aba-discipline-grid">{disciplines.map(([icon,title,text])=><article><span><Icon name={icon} size={28}/></span><h3>{title}</h3><p>{text}</p></article>)}</div>
+  </section>
+
+  <section class="section aba-review special-review" id="measurement-and-review" aria-labelledby="special-review-title"><div class="wrap aba-review-grid">
+    <div><p class="eyebrow">Measurement with the child’s life still in view</p><h2 id="special-review-title">PinnacleAI supports review.<br/><em>People remain responsible for education and care.</em></h2><p>PinnacleAI GPT-OS v1.0.0 supports developmental ability measurement, readiness tracking, progress forecasting and adaptive plan support within its licensed non-diagnostic scope for children aged 0–12. Educators are among its intended users; professionals and families interpret the information and make decisions.</p><div class="aba-proof-links"><a href={url('/verify/evidence/records/md5.html')}>Inspect the MD-5 licensed scope ↗</a><a href={url('/verify/evidence/records/bis.html')}>Inspect the BIS schedule and limits ↗</a><a href={url('/verify/evidence/research-library.html')}>Inspect research status and methods ↗</a></div></div>
+    <aside class="aba-observation"><Icon name="loop" size={34}/><p class="eyebrow">Bring these questions into review</p><h3>Is the child accessing and using the learning?</h3><ul><li>What could the child understand or do?</li><li>What helped the child communicate or participate?</li><li>Which instruction, material or environment worked?</li><li>What support was still needed?</li><li>Did the ability appear in another relevant setting?</li><li>What should the team change next?</li></ul></aside>
+  </div></section>
+
+  <TherapyTogether current="education" />
+
+  <section class="section evidence-section" id="evidence" aria-labelledby="special-evidence-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">Confidence you can inspect</p><h2 id="special-evidence-title">Hope with direction.<br/><em>Claims with a visible source trail.</em></h2></div><p>Pinnacle publishes source documents, status labels and limits. Licences define the software and management-system scope; they do not certify a special educator, school admission or an individual educational outcome.</p></div>
+    <div class="evidence-cards">{proofCards.map(card=><article><span class="proof-icon"><Icon name={card.title.startsWith('Class')?'shield':card.title.startsWith('BIS')?'plan':'book'} size={35}/></span><span class="card-tag">{card.tag}</span><h3>{card.title}</h3><p>{card.text}</p><span class="record-reference">{card.ref}</span><a class="text-link" href={url(card.link)}>{card.label} <Icon name="arrow"/></a></article>)}</div>
+    <div class="aba-source-grid special-source-grid"><article><h3>Remove barriers to learning</h3><p>UNESCO describes inclusion as identifying and removing barriers across curriculum, pedagogy and teaching.</p><a href="https://www.unesco.org/en/inclusion-education">UNESCO inclusion in education ↗</a></article><article><h3>Learning and participation together</h3><p>UNICEF describes inclusive education as real learning opportunities and children learning together.</p><a href="https://www.unicef.org/education/inclusive-education">UNICEF inclusive education ↗</a></article><article><h3>Ask about professional registration</h3><p>RCI publishes its recognized rehabilitation-professional categories and Central Rehabilitation Register pathway. Families can ask for the professional’s current qualification and registration where applicable.</p><a href="https://rehabcouncil.nic.in/categories-u-s-19/">Rehabilitation Council of India ↗</a></article></div>
+    <div class="special-provider-check"><Icon name="shield" size={34}/><div><p class="eyebrow">Four questions before you choose</p><h3>Ask what the professional will understand, teach and review.</h3><ol><li>What qualification and current registration applies to this professional?</li><li>What child-specific learning or participation goal are we agreeing?</li><li>How will family and teacher observations be used?</li><li>When will we review progress and adjust the plan?</li></ol></div></div>
+    <div class="aba-transparency"><a href={url('/verify/')}><Icon name="shield"/>Verify evidence library</a><a href={url('/verify/evidence/records/appreciations.html')}><Icon name="book"/>Government source letters</a><a href={url('/verify/evidence/records/awards.html')}><Icon name="sun"/>Awards and stage records</a><a href={url('/verify/evidence/cite.html')}><Icon name="link"/>Cite Pinnacle sources</a></div>
+    <p class="source-note">External education sources explain applicable principles and do not endorse Pinnacle. Government letters retain their stated context; they are not presented as educational or clinical endorsement. Award and nomination records retain their documented stage.</p>
+    <p class="source-note source-downloads"><a href="/pinnacle-pages-data/special-education-evidence.txt">Claims and sources for this page</a> · <a href="/pinnacle-pages-data/special-education-evidence.json">Download source map (JSON)</a></p>
+  </div></section>
+
+  <CentreDirectory pagePath={content.path} enquiryTarget={specialEducationEnquiry}/>
+
+  <section class="section wrap faq-section" id="questions" aria-labelledby="special-faq-title"><div><p class="eyebrow">Before you decide</p><h2 id="special-faq-title">Clear answers.<br/><em>A child-specific first step.</em></h2><a class="text-link" href="https://www.unicef.org/education/inclusive-education">Inclusive education · UNICEF ↗</a></div><div>{content.faqs.map(f=><details><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div></section>
+
+  <section class="final-cta" id="next-step" aria-labelledby="special-next-title"><div class="wrap"><div class="close-sun official-close"><Image src={emblem} width={96} height={96} format="webp" loading="lazy" alt="Pinnacle official pinwheel emblem"/></div><p class="eyebrow">Every Child Counts®</p><h2 id="special-next-title">Start with one learning moment<br/>you want to become more possible.</h2><p>Tell us what your child is trying to understand, communicate or do.<br/>We’ll help you find a suitable centre and first professional conversation.</p><div class="final-actions"><a class="button white" href={phone.href}><Icon name="phone"/>Call {phone.display}</a><a class="button light-outline" href={specialEducationEnquiry}>Start a conversation <Icon name="arrow"/></a></div><div class="close-moments"><span><Icon name="book"/>A lesson to access.</span><span><Icon name="voice"/>A way to ask for help.</span><span><Icon name="people"/>A life to take part in.</span></div><p class="final-guidance">Free guidance, 24/7 · Service, professional, appointment and fees confirmed by the team.</p><a class="helpline-link" href={url('/national-autism-helpline')}>Pinnacle / BHCL National Autism Helpline →</a></div></section>
+</PageLayout>

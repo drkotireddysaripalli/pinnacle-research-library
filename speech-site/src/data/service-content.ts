@@ -11,6 +11,8 @@ export interface ServiceContent {
   description: string;
   citations: string[];
   enquiry: {url: string; label: string; mobileLabel: string};
+  guidanceNote?: string;
+  discover?: {label:string; href:string};
   assessmentOffer?: { name: string; price: number; priceCurrency: string; url: string };
   image: { source: ImageMetadata; alt: string; caption: string };
   hero: { heading: string; emphasis: string; lead: string; copy: string; moments: {icon:string;label:string}[] };

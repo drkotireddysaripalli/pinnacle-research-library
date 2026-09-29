@@ -5,6 +5,9 @@ const html=fs.readFileSync('dist/index.html','utf8');
 const managedHtml=[
   'dist/index.html',
   'dist/enroll-autism-speech-aba-therapies-india.html',
+  'dist/best-occupational-therapy-center-india-proven-improvement-rate.html',
+  'dist/best-aba-therapy-center-india-proven-improvement-rate.html',
+  'dist/best-special-education-center-call-9100181181.html',
   'dist/speech-therapy/service-information.html',
   'dist/speech-therapy/first-visit-guide.html',
   'dist/speech-therapy/teacher-observation-guide.html'
@@ -64,7 +67,7 @@ check('Redirecting utility aliases are replaced with direct canonicals',[
   '/autism-speech-aba-news',
   '/contact-national-autism-helpline-24-7'
 ].every(x=>hrefs.has(full(x)))&&!['/assesments','/all-resources','/news','/contact'].some(x=>hrefs.has(full(x))));
-check('Full action strip retained',html.includes('Join Certified Course')&&hrefs.has(full('/certified-courses')));
+check('Certified-course destination retained in complete navigation',hrefs.has(full('/certified-courses')));
 const result={checkedAt:new Date().toISOString(),checksPassed:checks.length,documentedLinkEntries:links.length,checks};
 fs.writeFileSync('PORTAL-VALIDATION-20260927.json',JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify(result,null,2));

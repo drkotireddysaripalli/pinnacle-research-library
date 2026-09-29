@@ -1,0 +1,35 @@
+{
+  "recordedAt": "2026-09-29T15:33:55.5133231Z",
+  "worker": "pinnacle-verify-route",
+  "routes": [
+    {
+      "id": "8e46eff32c3540eaa86ba28adf35bdbf",
+      "pattern": "www.pinnacleblooms.org/best-special-education-center-call-9100181181*",
+      "script": "pinnacle-verify-route",
+      "state": "reassigned-from-pinnacle-centre-search-repair"
+    },
+    {
+      "id": "ef129cbd0cef406e869bcf735cac91e8",
+      "pattern": "www.pinnacleblooms.org/special-education*",
+      "script": "pinnacle-verify-route",
+      "state": "created"
+    },
+    {
+      "id": "eeb54961fc4542a08ac74bb6c13fa97f",
+      "pattern": "www.pinnacleblooms.org/Special-Education*",
+      "script": "pinnacle-verify-route",
+      "state": "created"
+    },
+    {
+      "id": "23221001bed245eb8411bddcbd3a9ea7",
+      "pattern": "www.pinnacleblooms.org/t/special-education*",
+      "script": "pinnacle-verify-route",
+      "state": "created"
+    }
+  ],
+  "rollback": {
+    "routeId": "8e46eff32c3540eaa86ba28adf35bdbf",
+    "pattern": "www.pinnacleblooms.org/best-special-education-center-call-9100181181*",
+    "priorScript": "pinnacle-centre-search-repair"
+  }
+}

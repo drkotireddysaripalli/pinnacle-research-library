@@ -1,5 +1,13 @@
 # Prototype asset sources
 
+## Special Education life-first release — 29 September 2026
+
+- `src/assets/special-education-life-journey-20260929.png` is original, text-free campaign artwork generated with the built-in image-generation tool. It shows an Indian child moving through supported learning, family participation and school-life moments on a luminous white Pinnacle pathway. It is illustrative brand storytelling, not a patient photograph, testimonial or promised outcome. Original generated source: `C:/Users/Siri Palace/.codex/generated_images/01a0cbfd-d6a8-7662-8cf4-95c3a0f1361f/exec-4e5afe27-74cc-408f-9d01-65954b818888.png`.
+- `src/assets/special-education-learning-cycle-20260929.png` is original, text-free explanatory artwork generated with the built-in image-generation tool. It connects a special educator, family, classroom participation, communication supports and everyday-life practice through the established vivid Pinnacle pathway. It does not depict a verified Pinnacle child, centre or professional. Original generated source: `C:/Users/Siri Palace/.codex/generated_images/01a0cbfd-d6a8-7662-8cf4-95c3a0f1361f/exec-a0799d6b-eda8-47b7-b163-be0ddfabd174.png`.
+- Creative direction for both images: luminous white background; Indian child and family; soft photographic vignettes; deep navy, teal, vivid red, purple, cyan, pink, yellow and green accents; learning access and participation remain the visual purpose; no generated words, seals, certificates, regulator logos, claims or ratings.
+- `src/assets/special-education-share-20260929.jpg` is the exact 1200 × 630 social-share derivative produced by `scripts/build-special-education-social-card.py`. The script composes the life-journey artwork with the approved first-party Pinnacle Blooms Network lockup and manually typeset page title, Verify scope summary and `9100 181 181`. The wording is real rendered typography, not image-generated text.
+- Astro supplies responsive WebP variants of the two on-page illustrations. Page copy, citations, lifecycle labels and claim boundaries remain semantic HTML; the image alternative text describes the visual purpose without treating the artwork as clinical evidence.
+
 ## Updated Pinnacle Blooms Network lockup — 29 September 2026
 
 - `src/assets/pinnacle-blooms-network-lockup.png` is the approved emblem-left, two-line `Pinnacle / Blooms Network®` lockup used in the shared header and footer.

@@ -1,8 +1,8 @@
 ---
 import { actions, url } from '../data/site';
-const { focused = false } = Astro.props;
+const { focused = false, firstLabel = 'First assessment', firstHref = '#assessment-start' } = Astro.props;
 const choices = focused ? [
-  ['First assessment','#assessment-start'],
+  [firstLabel,firstHref],
   ['Find a centre','#centres'],
   ['Verify the evidence','#pinnacle-evidence'],
   ['Citations','/verify/evidence/cite.html'],

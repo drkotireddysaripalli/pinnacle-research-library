@@ -8,7 +8,8 @@ const routes=[
  {path:'/speech-therapy/teacher-observation-guide',asset:'/pinnacle-pages-html/teacher-observation-guide.html'},
  {path:'/enroll-autism-speech-aba-therapies-india',asset:'/pinnacle-pages-html/enrolment.html'},
  {path:'/best-occupational-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/occupational-therapy.html'},
- {path:'/best-aba-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/aba-therapy.html'}
+ {path:'/best-aba-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/aba-therapy.html'},
+ {path:'/best-special-education-center-call-9100181181',asset:'/pinnacle-pages-html/special-education.html'}
 ];
 const inventory=JSON.parse(await readFile(new URL('../deployment/speech-inventory.json',import.meta.url)));
 const sha=b=>createHash('sha256').update(b).digest('hex');

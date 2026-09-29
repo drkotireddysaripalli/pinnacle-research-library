@@ -11,6 +11,7 @@ const MANAGED_SECTION=`
 - [Speech therapy for children](${PUBLIC}/top-speech-therapy-center-india-proven-improvement-rate): everyday communication, professional assessment, family-guided practice, review and listed centres.
 - [Occupational therapy for children](${PUBLIC}/best-occupational-therapy-center-india-proven-improvement-rate): everyday routines, play, learning, self-care and participation connected to assessment and review.
 - [ABA therapy and behavioural support for children](${PUBLIC}/best-aba-therapy-center-india-proven-improvement-rate): respectful, function-led support for communication, routines, safety and everyday participation, connected to family knowledge and review.
+- [Special education support for children](${PUBLIC}/best-special-education-center-call-9100181181): child-specific teaching for learning access, communication, classroom participation and abilities used in everyday life.
 - [Enrol at Pinnacle](${PUBLIC}/enroll-autism-speech-aba-therapies-india): a minimal family enquiry; the team confirms service, centre, professional, appointment and fees.
 - [Find a Pinnacle centre](${PUBLIC}/top-speech-therapy-center-india-proven-improvement-rate#centres): listed locations, centre pages, directions and contact options.
 - [Pinnacle / BHCL National Autism Helpline](${PUBLIC}/national-autism-helpline): 9100 181 181; free guidance and appointment enquiries, 24/7.

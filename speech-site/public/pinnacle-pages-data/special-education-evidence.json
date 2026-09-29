@@ -1,0 +1,58 @@
+{
+  "page": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+  "title": "Special Education Support for Children in India | Pinnacle Blooms",
+  "checkedOn": "2026-09-29",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "telephone": "+919100181181",
+  "claims": [
+    {
+      "topic": "Inclusion and barriers to learning",
+      "pageStatement": "Inclusive education identifies and removes barriers across curricula, pedagogy and teaching so learners can access education.",
+      "source": "https://www.unesco.org/en/inclusion-education",
+      "boundary": "General education principle. UNESCO does not endorse Pinnacle or establish a professional's credentials."
+    },
+    {
+      "topic": "Learning and participation",
+      "pageStatement": "Inclusive education supports real learning opportunities and children learning together.",
+      "source": "https://www.unicef.org/education/inclusive-education",
+      "boundary": "General education principle. UNICEF does not endorse Pinnacle or prove an individual outcome."
+    },
+    {
+      "topic": "Professional registration categories",
+      "pageStatement": "RCI publishes recognized rehabilitation-professional categories and the Central Rehabilitation Register pathway.",
+      "source": "https://rehabcouncil.nic.in/categories-u-s-19/",
+      "boundary": "The page encourages families to ask about the individual professional. It does not claim that every Pinnacle special educator or centre has a particular registration."
+    },
+    {
+      "topic": "Life-first programme direction",
+      "pageStatement": "Learning abilities, goals, appropriate people, everyday practice and review are connected to a direction toward growing self-sufficiency and participation.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "boundary": "Pinnacle programme description. It does not guarantee independence, school admission, mainstream inclusion or an individual result."
+    },
+    {
+      "topic": "PinnacleAI licensed scope",
+      "pageStatement": "PinnacleAI GPT-OS v1.0.0 supports developmental ability measurement, readiness tracking, progress forecasting and adaptive plan support within a non-diagnostic scope for children aged 0–12.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "boundary": "The licence defines software scope. It is not a special-education licence, educator credential, school approval, diagnosis or outcome guarantee."
+    },
+    {
+      "topic": "BIS schedule",
+      "pageStatement": "The BIS schedule names developmental mapping, planning, everyday practice, tracking and correction modules.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "boundary": "Scope and management-system evidence. It does not establish special-education effectiveness, school placement or an individual result."
+    },
+    {
+      "topic": "Research status",
+      "pageStatement": "Pinnacle publishes a research library with source and status labels.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "boundary": "Company and operator research includes varied cohorts and statuses. It is not generalized to every service, centre or child."
+    },
+    {
+      "topic": "Centre directory",
+      "pageStatement": "Published centre identities, addresses, maps and selected images are provided with a dated source trail.",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html",
+      "boundary": "The directory does not establish current special-education availability, professional credentials, fees or appointment capacity. Confirm before travel."
+    }
+  ]
+}
