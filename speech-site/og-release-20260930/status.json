@@ -1,0 +1,12 @@
+{
+  "date": "2026-09-30",
+  "state": "deployed-and-verified",
+  "generator": "Owner-approved OpenAI Images API fallback",
+  "model": "gpt-image-2",
+  "version": "a52bab91-9687-449f-a522-1eae02693dbd",
+  "deployment": "06126284-a4cf-4a72-8e6c-5ad552f83e62",
+  "imagesVerified": 5,
+  "htmlPagesVerifiedUnchanged": 9,
+  "routesCount": 138,
+  "routeFingerprint": "bd36ae4f"
+}

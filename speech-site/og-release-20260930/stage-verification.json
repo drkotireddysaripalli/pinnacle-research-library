@@ -1,0 +1,20 @@
+{
+  "scope": "Five JPEG files and their five cache-validator digests only",
+  "baseVersion": "a137c1ed-3d73-4549-ba65-f393844bc834",
+  "assetFiles": 1449,
+  "changedFiles": [
+    "pinnacle-pages-assets/aba-therapy-pinnacle-creative-20260929.B3UKn4Ar_Z2rl2Lz.jpg",
+    "pinnacle-pages-assets/autism-therapy-share-20260929.BfhWtQ-h_Z1ptTnY.jpg",
+    "pinnacle-pages-assets/centres-share-20260929.Bd4OZeub_Z28l7HB.jpg",
+    "pinnacle-pages-assets/occupational-therapy-pinnacle-creative-20260929.DkAtvr8l_Z1VfRGA.jpg",
+    "pinnacle-pages-assets/special-education-share-20260929.B9Bhm8He_Z2fsHbP.jpg"
+  ],
+  "unchangedFiles": 1444,
+  "unchangedHandlerModules": 5,
+  "htmlChanged": false,
+  "routesChanged": false,
+  "workerBefore": "ef30aab3b70ff0b9e1e50ac1f86e271805b2e84e67f9677e7e51825879f2f583",
+  "workerAfter": "71d31f1abc545f0371f5068e3aed429164053a6ff270d347b2d0ae10446ac5de",
+  "release": "release-og-v120-20260930",
+  "stage": ".worker-upload-og-v120"
+}

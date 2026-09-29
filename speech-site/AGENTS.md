@@ -26,4 +26,11 @@ Use public evidence for claims. MD-5 is non-diagnostic developmental-support sof
 
 Retain the established Sintony typography and vivid Pinnacle palette. Keep the page readable on a 320 px viewport. Use selected source-backed facts and clear actions; avoid repetitive explanations and disclaimer-heavy blocks.
 
+## Standing image standard — owner instruction, 30 September 2026
+
+- Depicted Pinnacle therapists wear full-sleeve white professional coats with the approved Pinnacle Blooms Network emblem and name; this attire must not imply that therapists are medical doctors.
+- Use tasteful PinnacleAI background frames and verified BIS/licence references as designed brand/evidence panels. Do not fabricate certificate facsimiles, regulator seals, endorsements or professional qualifications.
+- Make typography, font size, vivid Pinnacle colours, clothing and expressions communicate hope, confidence and growing capability. Keep the child/family story dominant and `9100 181 181` prominent and readable at social-preview size.
+- Generate complete branded creatives through the approved image-generation workflow. Preserve official logo references; avoid generic photos with pasted text boxes or a dense wall of credentials.
+
 No child or family personal data, free-text concerns, query strings or advertising identifiers belong in general analytics. A call-link click is not a connected call; an enquiry-link click is not an accepted enquiry.
