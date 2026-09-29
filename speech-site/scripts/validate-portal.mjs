@@ -14,20 +14,21 @@ function check(name,value){assert(value,name);checks.push(name);}
 const hrefs=new Set([...html.matchAll(/href="([^"]+)"/g)].map(m=>m[1].replaceAll('&amp;','&')));
 const ids=new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]));
 function full(u){return u.startsWith('/')?'https://www.pinnacleblooms.org'+u:u;}
-const links=[...nav.main,...nav.mobileExtras,...nav.therapy.flatMap(x=>[{url:x.url},...x.links]),...nav.footerColumns.flat().flatMap(x=>x.links),...nav.community,...nav.locations,...nav.legal];
+const links=[...nav.main,...nav.mobileExtras,...nav.aboutContact,...nav.therapy.flatMap(x=>[{url:x.url},...x.links]),...nav.footerColumns.flat().flatMap(x=>x.links),...nav.community,...nav.locations,...nav.legal];
 check('Complete documented portal navigation is present',links.every(x=>hrefs.has(full(x.url))));
 check('Five priority therapy menus have native disclosure controls',(html.match(/class="portal-therapy-menu"/g)||[]).length===5);
 check('Header and footer navigation are server rendered',html.includes('aria-label="Complete site navigation"')&&html.includes('aria-label="Research Studies"'));
-const priorityLabels=['Verify','Citations','PinnacleAI®','Research','AbilityScore®','7 Readiness Indexes','Self-Sufficient','Mainstream','160-Year Challenge'];
-const priorityDetails=['Regulated developmental support','Understand present abilities','Discuss the next priorities','Everyday independence','School &amp; community participation','The PinnacleAI® paradigm shift','36 evidence records','Quote, link &amp; download','Studies &amp; publications'];
+const priorityLabels=['Verify','PinnacleAI®','Research','AbilityScore®','7 Readiness Indexes','Self-Sufficient','Mainstream','160Yrs Paradigm Shift','Citations'];
+const priorityDetails=['4 Billion DataPoints for 900Million Children','CDSCO, BIS, India Certified SaMD','Study Journals &amp; Publications','Proven 0 - 1000 Universal Metric','Your Child Life As it could be','Growing everyday independence','School &amp; community participation','Life-first child development','Quote · link · download'];
 check('Authority strip follows the proof-to-purpose narrative order',nav.main.map(link=>link.label).join('|')===priorityLabels.join('|'));
 check('Reader-facing authority header is identical across every managed public page',managedHtml.every(page=>priorityLabels.every(label=>page.includes(`class="portal-nav-label">${label}</span>`))&&priorityDetails.every(detail=>page.includes(detail))&&page.includes('data-cta="header-enrol"')));
 check('Priority therapy order and labels are exact',nav.therapy.map(group=>group.label).join('|')==='Autism Therapy|Speech Therapy|Occupational Therapy|ABA Therapy|Special Education');
 check('Legacy Behavioral label is removed from priority therapy navigation',!nav.therapy.some(group=>group.label==='Behavioral'));
 check('Updated Pinnacle Blooms Network lockup is shared by header and footer',managedHtml.every(page=>(page.match(/pinnacle-blooms-network-lockup/g)||[]).length>=2));
 check('Recognition, awards and citation destinations are preserved',managedHtml.every(page=>['Recognition register','Government appreciation · source letters','Awards &amp; nominations · documented stage','Citation library &amp; downloads'].every(label=>page.includes(label))));
-check('Helpline and centre actions are explicit in every managed public header',managedHtml.every(page=>page.includes('National Autism Helpline')&&page.includes('Free guidance · 24/7')&&page.includes('data-cta="header-call"')&&page.includes('>9100 181 181</strong><small>Call For Your Child</small>')&&page.includes('Find a centre')));
-check('More is the final primary-menu option',managedHtml.every(page=>page.indexOf('>Special Education</a>')<page.indexOf('class="portal-more-trigger"')&&page.includes('<span>More</span>')));
+check('Helpline number is strong, vertically centred and has no redundant support line',managedHtml.every(page=>page.includes('National Autism Helpline')&&page.includes('Free guidance · 24/7')&&page.includes('data-cta="header-call"')&&page.includes('>9100 181 181</strong></a>')&&!page.includes('Call For Your Child')&&page.includes('Find a centre')));
+check('About and Contact is visible and More remains the final primary-menu option',managedHtml.every(page=>page.indexOf('>About &amp; Contact</a>')<page.indexOf('class="portal-more-trigger"')&&page.includes('<span>More</span>')&&page.includes('aria-label="About and Contact menu"')));
+check('About and Contact routes are available in both direct and complete navigation',managedHtml.every(page=>['About Pinnacle Blooms Network','Bharath Healthcare Laboratories Private Limited','Leadership','Recognition','Awards','Contact'].every(label=>page.includes(label))));
 check('Complete menu has a touch-accessible close control',managedHtml.every(page=>page.includes('class="portal-menu-close"')&&page.includes('Close <span aria-hidden="true">×</span>')));
 check('Citation library is promoted in the authority strip and complete menu',managedHtml.every(page=>(page.match(/href="https:\/\/www\.pinnacleblooms\.org\/verify\/evidence\/cite\.html"/g)||[]).length>=2));
 check('Unverified registered marks are not asserted',nav.main.some(link=>link.label==='Verify')&&nav.main.some(link=>link.label==='7 Readiness Indexes')&&!nav.main.some(link=>link.label==='Verify®'||link.label==='7 Readiness Indexes®'));

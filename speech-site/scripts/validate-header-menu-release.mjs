@@ -5,12 +5,12 @@ import path from 'node:path';
 
 const origin = 'https://www.pinnacleblooms.org';
 const baselinePath = path.resolve(
-  process.argv[2] || 'deployment/production-before-header-menu-v104-20260929.json'
+  process.argv[2] || 'deployment/production-before-authority-copy-v105-20260929.json'
 );
 const outputPath = path.resolve(
-  process.argv[3] || 'deployment/production-header-menu-v104-20260929.json'
+  process.argv[3] || 'deployment/production-authority-copy-v105-20260929.json'
 );
-const expectedVersion = Number(process.argv[4] || 104);
+const expectedVersion = Number(process.argv[4] || 105);
 const managedPaths = new Set([
   '/top-speech-therapy-center-india-proven-improvement-rate',
   '/enroll-autism-speech-aba-therapies-india',
@@ -34,10 +34,10 @@ for (const previous of baseline.results) {
   };
   assert.equal(current.status, 200, `${previous.path} must return 200`);
   if (managedPaths.has(previous.path)) {
-    assert.notEqual(current.bodySha256, previous.bodySha256, `${previous.path} must contain the v104 shared shell`);
+    assert.notEqual(current.bodySha256, previous.bodySha256, `${previous.path} must contain the current shared shell`);
   } else {
-    assert.equal(current.bodySha256, previous.bodySha256, `${previous.path} changed outside the v104 release scope`);
-    assert.equal(current.bytes, previous.bytes, `${previous.path} byte length changed outside the v104 release scope`);
+    assert.equal(current.bodySha256, previous.bodySha256, `${previous.path} changed outside the current release scope`);
+    assert.equal(current.bytes, previous.bytes, `${previous.path} byte length changed outside the current release scope`);
   }
   results.push(current);
 }

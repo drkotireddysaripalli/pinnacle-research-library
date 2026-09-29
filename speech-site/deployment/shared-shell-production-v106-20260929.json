@@ -1,0 +1,65 @@
+{
+  "checkedAt": "2026-09-29T09:33:47.201Z",
+  "version": 106,
+  "managedPages": 5,
+  "sharedHeaderIdentical": true,
+  "verifyInsideSharedFooter": true,
+  "sharedFooterIdentical": true,
+  "donateRemoved": true,
+  "priorityNavigation": [
+    "Verify — 4 Billion DataPoints for 900Million Children",
+    "PinnacleAI® — CDSCO, BIS, India Certified SaMD",
+    "Research — Study Journals & Publications",
+    "AbilityScore® — Proven 0 - 1000 Universal Metric",
+    "7 Readiness Indexes — Your Child Life As it could be",
+    "Self-Sufficient — Growing everyday independence",
+    "Mainstream — School & community participation",
+    "160Yrs Paradigm Shift — Life-first child development",
+    "Citations — Quote · link · download"
+  ],
+  "priorityTherapies": [
+    "Autism Therapy",
+    "Speech Therapy",
+    "Occupational Therapy",
+    "ABA Therapy",
+    "Special Education"
+  ],
+  "aboutContactVisible": true,
+  "results": [
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "headerSha256": "02fffed0189a74d1b470d5634ed64a1ba9f1d2162629a854a3aca6395bbd56c6",
+      "footerSha256": "430efafcca40d5f828b5f4ed124170c64d7b5de0572e4d2114e629b9a99dcef1",
+      "htmlSha256": "e875fc8fc21d8dcd9f42b5018546d0786478d5d44f3dd1bd2e2e107ca9c619db"
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "headerSha256": "02fffed0189a74d1b470d5634ed64a1ba9f1d2162629a854a3aca6395bbd56c6",
+      "footerSha256": "430efafcca40d5f828b5f4ed124170c64d7b5de0572e4d2114e629b9a99dcef1",
+      "htmlSha256": "e4f132ebea0de5365ed43a09515d2d49fa335b6a00815a1efa07e8cda04c7760"
+    },
+    {
+      "path": "/speech-therapy/service-information",
+      "status": 200,
+      "headerSha256": "02fffed0189a74d1b470d5634ed64a1ba9f1d2162629a854a3aca6395bbd56c6",
+      "footerSha256": "430efafcca40d5f828b5f4ed124170c64d7b5de0572e4d2114e629b9a99dcef1",
+      "htmlSha256": "ba6f145e1a964c98bca6a56892c2abb1a5b54c5984452a00d3c1137e74e3b559"
+    },
+    {
+      "path": "/speech-therapy/first-visit-guide",
+      "status": 200,
+      "headerSha256": "02fffed0189a74d1b470d5634ed64a1ba9f1d2162629a854a3aca6395bbd56c6",
+      "footerSha256": "430efafcca40d5f828b5f4ed124170c64d7b5de0572e4d2114e629b9a99dcef1",
+      "htmlSha256": "1b21ce092dd3222e591e6e3588e551574e61c469f3e8c3a7689c7cac0d519c0e"
+    },
+    {
+      "path": "/speech-therapy/teacher-observation-guide",
+      "status": 200,
+      "headerSha256": "02fffed0189a74d1b470d5634ed64a1ba9f1d2162629a854a3aca6395bbd56c6",
+      "footerSha256": "430efafcca40d5f828b5f4ed124170c64d7b5de0572e4d2114e629b9a99dcef1",
+      "htmlSha256": "840ddd1dbebf14b69b647e056760a3f38c22e896ce23dac563605f27f757acca"
+    }
+  ]
+}

@@ -4,9 +4,9 @@ import path from 'node:path';
 
 const origin = 'https://www.pinnacleblooms.org';
 const outputPath = path.resolve(
-  process.argv[2] || 'deployment/production-before-header-menu-v104-20260929.json'
+  process.argv[2] || 'deployment/production-before-authority-copy-v105-20260929.json'
 );
-const productionVersion = Number(process.argv[3] || 103);
+const productionVersion = Number(process.argv[3] || 104);
 const paths = [
   '/top-speech-therapy-center-india-proven-improvement-rate',
   '/enroll-autism-speech-aba-therapies-india',

@@ -26,20 +26,21 @@ for(const path of paths){
   assert(html.includes('tel:+919100181181'),path);
   assert(!html.includes('portal-donate')&&!html.includes('/donate'),path);
   let previousAuthorityIndex=-1;
-  for(const label of ['Verify','Citations','PinnacleAI®','Research','AbilityScore®','7 Readiness Indexes','Self-Sufficient','Mainstream','160-Year Challenge']){
+  for(const label of ['Verify','PinnacleAI®','Research','AbilityScore®','7 Readiness Indexes','Self-Sufficient','Mainstream','160Yrs Paradigm Shift','Citations']){
     const authorityIndex=html.indexOf(`class="portal-nav-label">${label}</span>`);
     assert(authorityIndex>previousAuthorityIndex,`${path}: authority order ${label}`);
     previousAuthorityIndex=authorityIndex;
   }
-  for(const detail of ['Regulated developmental support','Understand present abilities','Discuss the next priorities','Everyday independence','School &amp; community participation','The PinnacleAI® paradigm shift','36 evidence records','Quote, link &amp; download','Studies &amp; publications'])assert(html.includes(detail),`${path}: ${detail}`);
+  for(const detail of ['4 Billion DataPoints for 900Million Children','CDSCO, BIS, India Certified SaMD','Study Journals &amp; Publications','Proven 0 - 1000 Universal Metric','Your Child Life As it could be','Growing everyday independence','School &amp; community participation','Life-first child development','Quote · link · download'])assert(html.includes(detail),`${path}: ${detail}`);
   for(const label of ['Autism Therapy','Speech Therapy','Occupational Therapy','ABA Therapy','Special Education'])assert(html.includes(`class="portal-therapy-title"`)&&html.includes(`>${label}</a>`),`${path}: ${label}`);
   assert((html.match(/class="portal-therapy-menu"/g)||[]).length===5,`${path}: five priority therapy menus`);
   assert((html.match(/pinnacle-blooms-network-lockup/g)||[]).length>=2,`${path}: updated shared logo`);
   for(const label of ['Recognition register','Government appreciation · source letters','Awards &amp; nominations · documented stage','Citation library &amp; downloads'])assert(html.includes(label),`${path}: ${label}`);
   assert(html.includes('National Autism Helpline')&&html.includes('Free guidance · 24/7'),`${path}: helpline context`);
   assert(html.includes('>9100 181 181</strong>'),`${path}: strong phone`);
-  assert(html.includes('<small>Call For Your Child</small>'),`${path}: child-focused phone support`);
+  assert(html.includes('>9100 181 181</strong></a>')&&!html.includes('Call For Your Child'),`${path}: centred number without redundant support line`);
   assert(html.includes('Find a centre'),`${path}: centre finder`);
+  assert(html.indexOf('>About &amp; Contact</a>')<html.indexOf('class="portal-more-trigger"')&&html.includes('aria-label="About and Contact menu"'),`${path}: About and Contact before More`);
   assert(html.includes('class="portal-more-trigger"')&&html.includes('<span>More</span>'),`${path}: final More trigger`);
   assert(html.includes('class="portal-menu-close"'),`${path}: touch-accessible menu close control`);
   assert((html.match(/href="https:\/\/www\.pinnacleblooms\.org\/verify\/evidence\/cite\.html"/g)||[]).length>=2,`${path}: citations promoted`);
@@ -63,15 +64,16 @@ assert.equal(new Set(headers).size,1,'Rendered shared header differs across mana
 assert.equal(new Set(footers).size,1,'Rendered Verify block and full footer differ across managed pages');
 const report={
   checkedAt:new Date().toISOString(),
-  version:104,
+  version:106,
   managedPages:paths.length,
   sharedHeaderIdentical:true,
   verifyInsideSharedFooter:true,
   sharedFooterIdentical:true,
   donateRemoved:true,
-  priorityNavigation:['Verify — 36 evidence records','Citations — Quote, link & download','PinnacleAI® — Regulated developmental support','Research — Studies & publications','AbilityScore® — Understand present abilities','7 Readiness Indexes — Discuss the next priorities','Self-Sufficient — Everyday independence','Mainstream — School & community participation','160-Year Challenge — The PinnacleAI® paradigm shift'],
+  priorityNavigation:['Verify — 4 Billion DataPoints for 900Million Children','PinnacleAI® — CDSCO, BIS, India Certified SaMD','Research — Study Journals & Publications','AbilityScore® — Proven 0 - 1000 Universal Metric','7 Readiness Indexes — Your Child Life As it could be','Self-Sufficient — Growing everyday independence','Mainstream — School & community participation','160Yrs Paradigm Shift — Life-first child development','Citations — Quote · link · download'],
   priorityTherapies:['Autism Therapy','Speech Therapy','Occupational Therapy','ABA Therapy','Special Education'],
+  aboutContactVisible:true,
   results
 };
-await fs.writeFile('deployment/shared-shell-production-20260929.json',JSON.stringify(report,null,2)+'\n');
+await fs.writeFile('deployment/shared-shell-production-v106-20260929.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));

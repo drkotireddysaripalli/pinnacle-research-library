@@ -4,48 +4,48 @@
   "main": [
     {
       "label": "Verify",
-      "detail": "36 evidence records",
-      "url": "/verify/"
-    },
-    {
-      "label": "Citations",
-      "detail": "Quote, link & download",
-      "url": "/verify/evidence/cite.html"
+      "detail": "4 Billion DataPoints for 900Million Children",
+      "url": "/verify/evidence/scale-and-mission.html"
     },
     {
       "label": "PinnacleAI®",
-      "detail": "Regulated developmental support",
-      "url": "/verify/evidence/pinnacleai-regulatory-journey.html"
+      "detail": "CDSCO, BIS, India Certified SaMD",
+      "url": "/verify/evidence/pinnacleai-regulatory-journey.html#section-a-documented-foundation-for-the-next-chapter"
     },
     {
       "label": "Research",
-      "detail": "Studies & publications",
+      "detail": "Study Journals & Publications",
       "url": "/verify/evidence/research-library.html"
     },
     {
       "label": "AbilityScore®",
-      "detail": "Understand present abilities",
-      "url": "/verify/guides/abilityscore.html"
+      "detail": "Proven 0 - 1000 Universal Metric",
+      "url": "/verify/guides/abilityscore.html#compare-over-time"
     },
     {
       "label": "7 Readiness Indexes",
-      "detail": "Discuss the next priorities",
-      "url": "/verify/guides/abilityscore.html#read-the-profile"
+      "detail": "Your Child Life As it could be",
+      "url": "/verify/#report-explorer"
     },
     {
       "label": "Self-Sufficient",
-      "detail": "Everyday independence",
-      "url": "/verify/#section-your-child-s-path-toward-self-sufficiency-and-mainstream-life"
+      "detail": "Growing everyday independence",
+      "url": "/verify/evidence/pinnacle-paradigm-shift.html#paradigm-opening-child-life-before-therapy"
     },
     {
       "label": "Mainstream",
       "detail": "School & community participation",
-      "url": "/verify/evidence/pinnacle-paradigm-shift.html#paradigm-opening-child-life-from-minute-one"
+      "url": "/verify/evidence/pinnacle-paradigm-shift.html#the-skill-and-the-life"
     },
     {
-      "label": "160-Year Challenge",
-      "detail": "The PinnacleAI® paradigm shift",
+      "label": "160Yrs Paradigm Shift",
+      "detail": "Life-first child development",
       "url": "/verify/evidence/pinnacle-paradigm-shift.html#the-historical-challenge"
+    },
+    {
+      "label": "Citations",
+      "detail": "Quote · link · download",
+      "url": "/verify/evidence/cite.html"
     }
   ],
   "mobileExtras": [
@@ -60,6 +60,52 @@
     {
       "label": "Franchise",
       "url": "/franchises"
+    }
+  ],
+  "aboutContact": [
+    {
+      "label": "About Pinnacle Blooms Network",
+      "url": "/about-pinnacle-proven-improvement-rate"
+    },
+    {
+      "label": "Vision, mission & values",
+      "url": "/about-pinnacle-proven-improvement-rate#Vision-section"
+    },
+    {
+      "label": "Bharath Healthcare Laboratories Private Limited",
+      "url": "/about-pinnacle-proven-improvement-rate#BHCL-section"
+    },
+    {
+      "label": "Koti Group of Technological Ventures",
+      "url": "/about-pinnacle-proven-improvement-rate#KGV-section"
+    },
+    {
+      "label": "Leadership",
+      "url": "/leadership"
+    },
+    {
+      "label": "Centres",
+      "url": "/centers"
+    },
+    {
+      "label": "Recognition",
+      "url": "/verify/evidence/recognition-register.html"
+    },
+    {
+      "label": "Awards",
+      "url": "/verify/evidence/records/awards.html"
+    },
+    {
+      "label": "News",
+      "url": "/autism-speech-aba-news"
+    },
+    {
+      "label": "Careers",
+      "url": "/careers"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact-national-autism-helpline-24-7"
     }
   ],
   "therapy": [

@@ -1,0 +1,83 @@
+{
+  "releasedOn": "2026-09-29",
+  "release": "exact-authority-copy-v106",
+  "worker": "pinnacle-verify-route",
+  "versionNumber": 106,
+  "versionId": "0beccce9-a7fa-4cc2-8233-ea0c382f3c27",
+  "deploymentId": "264410d0-05e4-468a-b1ed-becdcef0ec9f",
+  "trafficPercent": 100,
+  "rollback": {
+    "versionNumber": 105,
+    "versionId": "053866fe-8882-4faa-a224-0779c050ee79",
+    "deploymentId": "93a2d5b6-410e-4950-bdd3-f4cf23a72078"
+  },
+  "managedRoutes": [
+    "/top-speech-therapy-center-india-proven-improvement-rate",
+    "/enroll-autism-speech-aba-therapies-india",
+    "/speech-therapy/service-information",
+    "/speech-therapy/first-visit-guide",
+    "/speech-therapy/teacher-observation-guide"
+  ],
+  "authorityNarrative": [
+    "Verify — 4 Billion DataPoints for 900Million Children",
+    "PinnacleAI® — CDSCO, BIS, India Certified SaMD",
+    "Research — Study Journals & Publications",
+    "AbilityScore® — Proven 0 - 1000 Universal Metric",
+    "7 Readiness Indexes — Your Child Life As it could be",
+    "Self-Sufficient — Growing everyday independence",
+    "Mainstream — School & community participation",
+    "160Yrs Paradigm Shift — Life-first child development",
+    "Citations — Quote · link · download"
+  ],
+  "copyDecision": {
+    "source": "Owner-supplied visible copy",
+    "literalPunctuationPreserved": true,
+    "scopeAndLimitationsDestination": "/verify/evidence/scale-and-mission.html"
+  },
+  "helplinePresentation": {
+    "title": "National Autism Helpline",
+    "guidance": "Free guidance · 24/7",
+    "displayNumber": "9100 181 181",
+    "telephone": "+919100181181",
+    "verticalCenterDeltaPixels": 0,
+    "supportLineRemoved": true
+  },
+  "menu": {
+    "visibleBeforeMore": "About & Contact",
+    "finalPrimaryItem": "More",
+    "internalScrollbar": false,
+    "closeMethods": ["Close button", "Outside click", "Escape"],
+    "desktopOpenMethods": ["Fine-pointer hover", "Click"],
+    "touchOpenMethod": "Tap"
+  },
+  "verification": {
+    "managedPages200AndIndexable": 5,
+    "sharedHeaderSha256": "02fffed0189a74d1b470d5634ed64a1ba9f1d2162629a854a3aca6395bbd56c6",
+    "sharedFooterSha256": "430efafcca40d5f828b5f4ed124170c64d7b5de0572e4d2114e629b9a99dcef1",
+    "sharedHeaderIdentical": true,
+    "sharedFooterIdentical": true,
+    "portalChecksPassed": 26,
+    "nodeTestsPassed": 44,
+    "preservedPathsUnchanged": 7,
+    "machineHtmlMatchesStagedBuild": true,
+    "machineMarkdownDelivered": true,
+    "structuredDataRetained": true
+  },
+  "preservedRoutes": [
+    "/",
+    "/verify/",
+    "/verify/evidence/evidence.json",
+    "/verify/evidence/fsc.pdf",
+    "/verify/evidence/pinnacleai-regulatory-journey.html",
+    "/national-autism-helpline",
+    "/robots.txt"
+  ],
+  "cloudflareBindingsPreserved": ["ASSETS", "PINNACLE_LEGACY", "PINNACLE_ASK"],
+  "indexing": {
+    "indexNowSubmitted": true,
+    "submittedAt": "2026-09-29T09:33:57.188Z",
+    "updatedUrls": 5,
+    "httpStatus": 200,
+    "meaning": "Notification only; no discovery, indexing, ranking, AI citation or conversion claim."
+  }
+}
