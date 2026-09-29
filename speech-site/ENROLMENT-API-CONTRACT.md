@@ -5,7 +5,7 @@
 - Canonical page: `https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india`
 - Simple alias: `https://www.pinnacleblooms.org/enroll`
 - Browser endpoint: same-origin `POST /api/enrolment`
-- Existing PinnacleAI workflow: `POST https://mirracle.pinnacleblooms.org/api/gl/swfs`, contacted only by the Cloudflare Worker
+- Existing PinnacleAI workflow: `POST https://mirracle.pinnacleblooms.org/api/gl/swfs`, contacted only by the Cloudflare Worker through the `PINNACLE_LEGACY` service binding to the existing `pbn-planetscale` Worker
 
 The public form asks only for a name and contact number. Service, centre, email and a short note are optional. It does not collect a child’s name, date of birth, diagnosis, medical file, advertising identifier or URL query values as personal data.
 
@@ -25,6 +25,8 @@ The browser sends JSON with an `Idempotency-Key` header matching `requestId`:
 ```
 
 Cloudflare enforces the exact host, path, method, JSON content type, production origin, 16 KiB body limit, field limits and allowlists before contacting PinnacleAI. Personal details are not added to URLs, analytics or Worker logs, and responses use `Cache-Control: no-store`.
+
+The server-side adapter calls the existing `pbn-planetscale` Worker through a Cloudflare service binding. This avoids sending a Worker subrequest back through the public `mirracle.pinnacleblooms.org/api/gl/*` route, which Cloudflare rejected with an empty HTTP 405 even though a direct external POST to the same endpoint was accepted.
 
 ## Translation to the existing PinnacleAI workflow
 

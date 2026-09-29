@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "pinnacle-verify-route",
+  "account_id": "862998def1cd610fdb86b8e5c1d6ed4d",
+  "main": "./live-enrolment-upload-20260929-v4/pinnacle-route-v12.mjs",
+  "compatibility_date": "2026-09-18",
+  "no_bundle": true,
+  "find_additional_modules": true,
+  "rules": [
+    {
+      "type": "ESModule",
+      "globs": [
+        "speech-handler.mjs",
+        "speech-enquiry-handler.mjs",
+        "centre-facilities.mjs",
+        "enrolment-handler.mjs"
+      ],
+      "fallthrough": true
+    }
+  ],
+  "workers_dev": false,
+  "assets": {
+    "directory": "../release-enrolment-live-20260929-v4",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "not_found_handling": "none",
+    "run_worker_first": true
+  },
+  "services": [
+    {
+      "binding": "PINNACLE_LEGACY",
+      "service": "pbn-planetscale"
+    },
+    {
+      "binding": "PINNACLE_ASK",
+      "service": "pinnacle-ask",
+      "environment": "production"
+    }
+  ]
+}

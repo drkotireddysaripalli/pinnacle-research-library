@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "releasedOn": "2026-09-29",
+  "status": "live",
+  "canonicalUrl": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+  "worker": {
+    "name": "pinnacle-verify-route",
+    "versionNumber": 97,
+    "versionId": "96b9b322-41ad-4d07-b44f-06f5df1f649e",
+    "deploymentId": "ca1ef8b5-497f-426b-be73-87e65cd5408d",
+    "trafficPercent": 100,
+    "rollbackVersionNumber": 96,
+    "rollbackVersionId": "5a2c8546-5a83-443c-bd4e-f16de09a8f8e"
+  },
+  "upstream": {
+    "method": "POST",
+    "publicUrl": "https://mirracle.pinnacleblooms.org/api/gl/swfs",
+    "owningWorker": "pbn-planetscale",
+    "serviceBinding": "PINNACLE_LEGACY",
+    "preRepairWorkerSubrequestStatus": 405,
+    "postRepairPublicAdapterStatus": 202,
+    "postRepairPublicAdapterBody": {"status": "accepted"}
+  },
+  "presentation": {
+    "contentCanvas": "white",
+    "enrolmentContentGradientRemoved": true,
+    "sharedPortalFooterPreserved": true,
+    "serviceAndCentreChoiceExpandedInitially": true,
+    "displayedCentreChoices": 62
+  },
+  "release": {
+    "directory": "release-enrolment-live-20260929-v4",
+    "fileCount": 1345,
+    "bytes": 142322308,
+    "liveHtmlSha256": "809e3036fe0d5d7af18b2b3e6bb426ee874a4155ad1d318be61ff13298534717"
+  },
+  "checks": {
+    "combinedTestsPassed": 46,
+    "combinedTestsFailed": 0,
+    "focusedEnrolmentTestsPassed": 18,
+    "liveMatchesRelease": true,
+    "metadataDescriptionLength": 144,
+    "jsonLdScripts": 1,
+    "missingImageAltAttributes": 0,
+    "syntheticRecordLabel": "SYNTHETIC DO NOT CALL",
+    "syntheticRecordContainedFamilyOrChildData": false,
+    "additionalValidSyntheticTestRequired": false,
+    "indexNowRootKeyStatus": 200,
+    "indexNowSubmissionStatus": 200,
+    "preservedByteIdentical": [
+      "/verify/",
+      "/verify/evidence/evidence.json",
+      "/verify/evidence/fsc.pdf",
+      "/verify/evidence/pinnacleai-regulatory-journey.html",
+      "/national-autism-helpline",
+      "/robots.txt"
+    ]
+  }
+}

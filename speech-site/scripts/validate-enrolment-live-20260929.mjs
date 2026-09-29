@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 
 const origin='https://www.pinnacleblooms.org';
 const canonical='/enroll-autism-speech-aba-therapies-india';
-const release='release-enrolment-live-20260929';
+const release=process.argv[2]||'release-enrolment-live-20260929';
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 async function get(path,options={}){const response=await fetch(origin+path,{redirect:'manual',headers:{'cache-control':'no-cache',...(options.headers||{})},...options});const bytes=Buffer.from(await response.arrayBuffer());return {response,bytes,body:bytes.toString('utf8')};}
 

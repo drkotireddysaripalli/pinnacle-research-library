@@ -88,8 +88,16 @@ export async function serveEnrolmentApi(request,env,{fetchImpl=fetch,timeoutMs=1
  if(!validatePublicEnrolment(body))return response(422,'rejected');
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
  try{
-  const upstream=await fetchImpl(ENROLMENT_UPSTREAM,{method:'POST',headers:{'content-type':'application/json','accept':'text/plain, application/json','idempotency-key':body.requestId},body:JSON.stringify(toLegacyEnrolment(body)),cache:'no-store',redirect:'error',signal:controller.signal});
+  const upstreamOptions={method:'POST',headers:{'content-type':'application/json','accept':'text/plain, application/json'},body:JSON.stringify(toLegacyEnrolment(body)),signal:controller.signal};
+  // The legacy API is served by another Worker in this account. A direct
+  // service binding keeps the POST inside Cloudflare and avoids a routed
+  // Worker-to-Worker subrequest being rejected with an empty HTTP 405.
+  const upstream=env?.PINNACLE_LEGACY?.fetch
+   ?await env.PINNACLE_LEGACY.fetch(new Request(ENROLMENT_UPSTREAM,upstreamOptions))
+   :await fetchImpl(ENROLMENT_UPSTREAM,upstreamOptions);
   const answer=(await upstream.text()).trim().toLowerCase();
-  return upstream.ok&&answer==='true'?response(202,'accepted'):response(502,'unknown');
- }catch{return response(502,'unknown');}finally{clearTimeout(timer);}
+  if(upstream.ok&&answer==='true')return response(202,'accepted');
+  console.warn('enrolment-upstream-unconfirmed',{status:upstream.status,contentType:upstream.headers.get('content-type')||'',answerKind:answer==='false'?'false':answer?'other':'empty',answerLength:answer.length});
+  return response(502,'unknown');
+ }catch(error){console.warn('enrolment-upstream-error',{name:error?.name||'Error',message:error?.message||'unknown'});return response(502,'unknown');}finally{clearTimeout(timer);}
 }
