@@ -2,6 +2,8 @@
 
 29 September 2026 · Status: next managed page · Implementation not yet started
 
+This is page 1 of the canonical sequence in `PORTAL-PAGE-INVENTORY-20260929.md`. Occupational Therapy is followed by ABA Therapy, Special Education, the Autism Therapy integration hub, Find a Centre, Child Development Assessment and the connected PinnacleAI® product knowledge graph.
+
 ## Established destination
 
 - Page: Occupational Therapy for children

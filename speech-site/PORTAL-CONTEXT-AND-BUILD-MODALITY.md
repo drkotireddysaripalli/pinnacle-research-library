@@ -14,10 +14,11 @@ For a new page or material page revision, read in this order:
 
 1. `AGENTS.md` for execution ownership and claim boundaries.
 2. This document for the portal-wide experience and working modality.
-3. `ACTIVE-PAGE-WORK-ORDER.md` for the one page currently being built.
-4. The current shared components, typed content contracts and relevant evidence records.
-5. The exact original sources supporting claims used on that page.
-6. Historical standards or release receipts only when the active work depends on them.
+3. `PORTAL-PAGE-INVENTORY-20260929.md` for the canonical therapy, centre and PinnacleAI® sequence and URL roles.
+4. `ACTIVE-PAGE-WORK-ORDER.md` for the one page currently being built.
+5. The current shared components, typed content contracts and relevant evidence records.
+6. The exact original sources supporting claims used on that page.
+7. Historical standards or release receipts only when the active work depends on them.
 
 The conversation history remains useful evidence of intent. Current decisions committed in these files govern implementation when old exploratory wording conflicts with a later settled decision.
 
@@ -249,6 +250,7 @@ A page is complete only when:
 Load these only when the active work needs their detail:
 
 - `LIFE-FIRST-THERAPY-PAGE-SYSTEM-20260927.md` — the organising principle and reusable therapy blocks.
+- `PORTAL-PAGE-INVENTORY-20260929.md` — the canonical build sequence, page roles and cross-link graph.
 - `FINAL-NARRATIVE-AND-PAGE-STANDARD-20260927.md` — detailed Speech Therapy narrative, visual, search and commercial reasoning.
 - `IMPLEMENTATION-WORK-ORDER-20260928.md` — detailed 16-package implementation and release example.
 - `RELEASE-PAYMENT-CANONICAL-V108-20260929.md` — current shared-shell production state.
