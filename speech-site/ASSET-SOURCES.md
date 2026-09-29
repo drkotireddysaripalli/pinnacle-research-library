@@ -1,5 +1,13 @@
 # Prototype asset sources
 
+## Find a Pinnacle centre directory — 29 September 2026
+
+- The `/centers` hero and directory use owner-supplied photographs and centre emblems recorded in `src/data/centre-directory.json` and `reviews/CENTRE-MEDIA-RELEASE-20260928.json`. No generated patient or clinical scene is used on the directory page.
+- Hero photographs are sourced from the dated centre-media set: Jaya Nagar exterior (`jayanagar-exterior-41.jpg`), Gurunanak Road interior (`gurunanak-interior-1-2.jpg`), Jagadamba interior (`jagadamba-interior-34-1.jpg`) and Suchitra exterior (`suchitra-exterior-0.jpg`). Captions and alternative text identify only the photographed location and visible space.
+- `src/assets/centres-share-20260929.jpg` is a 1200 × 630 social card composed by `scripts/build-centres-social-card.py` from three of those real centre photographs, the approved Pinnacle Blooms Network lockup and manually typeset directory copy. It does not state a rating, outcome or centre-specific registration status.
+- The page states exact dated coverage: 62 published listings, 62 map links, 60 centre-specific profiles, 52 photo-backed listings and 57 emblem-backed listings, checked 28 September 2026. A map link is treated as directions, not as proof of a matched Google Business Profile.
+- Ten listings have no released premises photograph; five have no released emblem. Cards use a restrained placeholder where needed. The duplicated Attapur/Himayatnagar source image remains a media-reconciliation flag and is not used as page-wide proof.
+
 ## Autism Therapy life-first integration hub — 29 September 2026
 
 - `src/assets/autism-life-journey-20260929.png` is original, text-free campaign artwork generated with the built-in image-generation tool. It follows one Indian child and family through communication, a home routine, learning and inclusive participation on a luminous Pinnacle pathway. Original generated source: `C:/Users/Siri Palace/.codex/generated_images/01a0cbfd-d6a8-7662-8cf4-95c3a0f1361f/exec-f65bc94f-cbc9-4c32-b923-4af4dfc636ed.png`.

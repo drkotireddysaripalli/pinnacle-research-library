@@ -10,7 +10,8 @@ const routes=[
  {path:'/best-occupational-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/occupational-therapy.html'},
  {path:'/best-aba-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/aba-therapy.html'},
  {path:'/best-special-education-center-call-9100181181',asset:'/pinnacle-pages-html/special-education.html'},
-  {path:'/autism-therapy',asset:'/pinnacle-pages-html/autism-therapy.html'}
+ {path:'/autism-therapy',asset:'/pinnacle-pages-html/autism-therapy.html'},
+ {path:'/centers',asset:'/pinnacle-pages-html/centers.html'}
 ];
 const inventory=JSON.parse(await readFile(new URL('../deployment/speech-inventory.json',import.meta.url)));
 const sha=b=>createHash('sha256').update(b).digest('hex');

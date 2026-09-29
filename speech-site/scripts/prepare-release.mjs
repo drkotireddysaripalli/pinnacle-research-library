@@ -33,6 +33,9 @@ await fs.writeFile(path.join(out,'pinnacle-pages-html/special-education.html'),s
 const autismTherapy=await fs.readFile(path.join(root,'dist/autism-therapy.html'),'utf8');
 assert(autismTherapy.includes('index, follow, max-image-preview:large')&&autismTherapy.includes('Autism Therapy &amp; Developmental Support for Children')&&autismTherapy.includes('autism-therapy-evidence.json')&&autismTherapy.includes('Autism therapy is not one fixed programme'));
 await fs.writeFile(path.join(out,'pinnacle-pages-html/autism-therapy.html'),autismTherapy);
+const centers=await fs.readFile(path.join(root,'dist/centers.html'),'utf8');
+assert(centers.includes('index, follow, max-image-preview:large')&&centers.includes('Find a Pinnacle Blooms Centre')&&centers.includes('centers-evidence.json')&&centers.includes('Browse every published listing by state or region'));
+await fs.writeFile(path.join(out,'pinnacle-pages-html/centers.html'),centers);
 assert.deepEqual(await fs.readFile(path.join(out,'index.html')),before,'Verify index must be unchanged');
 const inventory={};
 async function walk(dir){for(const item of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,item.name);if(item.isDirectory())await walk(f);else{const key='/'+path.relative(out,f).replaceAll('\\','/');inventory[key]=crypto.createHash('sha256').update(await fs.readFile(f)).digest('hex').slice(0,16);}}}

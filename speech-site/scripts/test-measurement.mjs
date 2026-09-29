@@ -68,13 +68,14 @@ test('public speech guides measure their exact canonical without visitor query v
  }
  const preview=harness({path:'/pinnacle-pages-preview/enrolment'});preview.choose('accepted');assert.equal(preview.events().length,0);
 });
-test('managed therapy pages use service-specific groups and accept only their own enquiry service',()=>{
+test('managed therapy pages and centre directory use their own groups and enquiry service',()=>{
  const pages=[
   ['/top-speech-therapy-center-india-proven-improvement-rate','speech_therapy','speech'],
   ['/best-occupational-therapy-center-india-proven-improvement-rate','occupational_therapy','occupational'],
   ['/best-aba-therapy-center-india-proven-improvement-rate','aba_therapy','aba'],
   ['/best-special-education-center-call-9100181181','special_education','education'],
-  ['/autism-therapy','autism_therapy','autism']
+  ['/autism-therapy','autism_therapy','autism'],
+  ['/centers','centre_directory','centres']
  ];
  for(const [path,group,service] of pages){
   const h=harness({path});h.choose('accepted');
@@ -83,4 +84,10 @@ test('managed therapy pages use service-specific groups and accept only their ow
   assert.deepEqual(h.events().map(e=>e[1]),['page_view','enquiry_link_click']);
   assert.equal(h.events()[0][2].page_group,group);
  }
+});
+test('centre directory actions stay coarse and never export centre names, hashes or search terms',()=>{
+ const h=harness({path:'/centers'});h.choose('accepted');
+ for(const placement of ['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation'])h.click(placement,'https://www.pinnacleblooms.org/centers#centre-suchitra');
+ const events=h.events().filter(event=>event[1]==='centre_directory_action');assert.equal(events.length,7);
+ const serialized=JSON.stringify(events);for(const privateValue of ['suchitra','centre-suchitra','private-child-detail'])assert(!serialized.includes(privateValue));
 });

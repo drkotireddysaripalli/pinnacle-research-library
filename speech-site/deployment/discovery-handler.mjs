@@ -14,7 +14,7 @@ const MANAGED_SECTION=`
 - [Special education support for children](${PUBLIC}/best-special-education-center-call-9100181181): child-specific teaching for learning access, communication, classroom participation and abilities used in everyday life.
 - [Autism therapy and developmental support for children](${PUBLIC}/autism-therapy): child-specific coordination for communication, routines, learning, play and participation, with relevant professional contributions selected by assessment.
 - [Enrol at Pinnacle](${PUBLIC}/enroll-autism-speech-aba-therapies-india): a minimal family enquiry; the team confirms service, centre, professional, appointment and fees.
-- [Find a Pinnacle centre](${PUBLIC}/top-speech-therapy-center-india-proven-improvement-rate#centres): listed locations, centre pages, directions and contact options.
+- [Find a Pinnacle centre](${PUBLIC}/centers): 62 published listings with sourced addresses, map links, selected photographs, centre preferences and national guidance. Confirm service, professional and appointment availability before travelling.
 - [Pinnacle / BHCL National Autism Helpline](${PUBLIC}/national-autism-helpline): 9100 181 181; free guidance and appointment enquiries, 24/7.
 - [Service reading guide](${PUBLIC}/speech-therapy/llms.txt): therapy pages, evidence boundaries and machine-readable sources.
 `;
@@ -33,6 +33,13 @@ export async function serveRootDiscovery(request,env){
   if(!body.includes('## Service and next-step pages'))body=body.trimEnd()+MANAGED_SECTION;
   const headers=cleaned(source.headers,'text/plain; charset=utf-8');headers.set('content-signal','search=yes, ai-input=yes');headers.set('x-robots-tag','index, follow');
   return new Response(request.method==='HEAD'?null:body+'\n',{status:200,headers});
+ }
+ if(u.pathname==='/sitemaps/centres.xml'){
+  if(!env.ASSETS)return null;
+  const source=await env.ASSETS.fetch(new Request('https://assets.local/pinnacle-pages-data/centres-sitemap.xml',{method:request.method}));
+  if(source.status!==200)return null;
+  const headers=cleaned(source.headers,'application/xml; charset=utf-8');headers.set('x-robots-tag','index, follow');
+  return new Response(request.method==='HEAD'?null:source.body,{status:200,headers});
  }
  if(u.pathname!=='/sitemap.xml')return null;
  const entries=ROOT_SITEMAPS.map(path=>'  <sitemap><loc>'+PUBLIC+path+'</loc></sitemap>').join('\n');

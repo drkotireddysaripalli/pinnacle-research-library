@@ -1,0 +1,124 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import ActionStrip from './ActionStrip.astro';
+import CentreDirectory from './CentreDirectory.astro';
+import TherapyTogether from './TherapyTogether.astro';
+import EvidenceLinks from './EvidenceLinks.astro';
+import Icon from './Icon.astro';
+import { Image } from 'astro:assets';
+import centres from '../data/centre-directory.json';
+import { centresContent as content, centreCount, centreRegionCount, centrePhotoCount, centreMapCount, centreEnquiry } from '../data/centres-content';
+import { phone, url } from '../data/site';
+import shareCard from '../assets/centres-share-20260929.jpg';
+import suchitraExterior from '../assets/centre-directory/suchitra-exterior-0.jpg';
+import jayanagarExterior from '../assets/centre-directory/jayanagar-exterior-41.jpg';
+import gurunanakInterior from '../assets/centre-directory/gurunanak-interior-1-2.jpg';
+import jagadambaInterior from '../assets/centre-directory/jagadamba-interior-34-1.jpg';
+import emblem from '../assets/pinnacle-emblem-official.png';
+
+const regions = [...new Set(centres.map(centre => centre.region))]
+  .map(region => ({region, count: centres.filter(centre => centre.region === region).length}))
+  .sort((a,b) => b.count-a.count);
+const visitChecks = [
+  ['pin','Confirm the exact centre','Use the sourced address and Google Maps link, then confirm that the centre is the one you intend to visit.'],
+  ['people','Confirm the professional','Ask which professional is suitable, what qualification applies and whether current registration is required.'],
+  ['plan','Confirm the service and fee','Service availability, appointment timing and fees can differ by centre and date. Get the current details before travelling.'],
+  ['heart','Share one family priority','Bring one everyday moment you want to understand or make more possible. You do not need to choose a therapy first.']
+];
+const directoryProof = [
+  {value:String(centreCount),label:'published listings',copy:'Each entry includes a sourced address and national contact route.'},
+  {value:String(centreRegionCount),label:'states or regions',copy:'Search by location and confirm the most suitable centre before travelling.'},
+  {value:String(centreMapCount),label:'map links',copy:'Open the external map destination for directions and current public place information.'},
+  {value:String(centrePhotoCount),label:'photo-backed listings',copy:'Selected centre photographs are shown where sourced media is available.'}
+];
+---
+<PageLayout
+  path={content.path}
+  label={content.label}
+  serviceName={content.name}
+  serviceType={content.type}
+  title={content.title}
+  description={content.description}
+  citations={content.citations}
+  faqs={content.faqs}
+  pageType="CollectionPage"
+  includeService={false}
+  imageAlt={`Find a Pinnacle Blooms centre: ${centreCount} published locations with addresses, maps, selected centre photographs and national guidance on 9100 181 181.`}
+  imageCaption="Find a Pinnacle Blooms centre using a dated directory of sourced addresses, map links and selected location photographs."
+  shareImage={shareCard}
+  publishedOn="2026-09-29"
+  updatedOn="2026-09-29"
+  enquiry={{url:centreEnquiry,label:'Start my family’s first conversation',mobileLabel:'Start conversation'}}
+>
+  <section class="centre-hero" aria-labelledby="centre-hero-title"><div class="wrap centre-hero-grid">
+    <div class="centre-hero-copy">
+      <p class="eyebrow">Pinnacle Blooms Network · Published centre directory</p>
+      <h1 id="centre-hero-title">Find a Pinnacle centre near you.<br/><em>Begin closer to home.</em></h1>
+      <p class="centre-hero-lead">Choose a real place to begin the conversation—then confirm the service, professional and appointment that fit your child.</p>
+      <p>Search {centreCount} published locations, see selected centre spaces, open directions or ask the national Pinnacle team to help. Start with what you want to become more possible in your child’s everyday life. You do not need to assemble the plan alone.</p>
+      <div class="centre-hero-actions"><a class="button primary" href="#centres"><Icon name="search"/>Search all {centreCount} locations</a><a class="button outline" href={phone.href} data-cta="hero-call"><Icon name="phone"/>Call {phone.display}</a></div>
+      <p class="centre-hero-note">Free guidance, 24/7 · Confirm the centre, service, professional, appointment and current fee before visiting.</p>
+    </div>
+    <div class="centre-hero-visual" role="group" aria-label="Photographs from published Pinnacle centre locations">
+      <figure class="centre-photo centre-photo-main"><Image src={jayanagarExterior} widths={[520,760,1040]} sizes="(min-width:1000px) 42vw, calc(100vw - 36px)" width={900} height={560} fit="cover" format="webp" quality={82} alt="Street-facing Pinnacle Blooms Network centre entrance at Jaya Nagar, Bengaluru."/><figcaption>Jaya Nagar · Bengaluru</figcaption></figure>
+      <figure class="centre-photo centre-photo-small"><Image src={gurunanakInterior} widths={[300,480]} sizes="(min-width:1000px) 19vw, 44vw" width={520} height={420} fit="cover" format="webp" quality={80} alt="Colourful activity space inside Pinnacle Gurunanak Road, Vijayawada."/><figcaption>Gurunanak Road · Vijayawada</figcaption></figure>
+      <figure class="centre-photo centre-photo-small"><Image src={jagadambaInterior} widths={[300,480]} sizes="(min-width:1000px) 19vw, 44vw" width={520} height={420} fit="cover" format="webp" quality={80} alt="Colourful activity room inside Pinnacle Jagadamba, Visakhapatnam."/><figcaption>Jagadamba · Visakhapatnam</figcaption></figure>
+      <div class="centre-hero-badge"><Image src={emblem} width={62} height={62} format="webp" alt="Pinnacle official pinwheel emblem"/><span><strong>{centreCount} published listings</strong><small>checked 28 Sep 2026</small></span></div>
+    </div>
+  </div></section>
+
+  <ActionStrip focused firstLabel="Search centres" firstHref="#centres" />
+
+  <CentreDirectory pagePath={content.path} enquiryTarget={centreEnquiry} directoryPage />
+
+  <section class="section wrap centre-overview" aria-labelledby="centre-overview-title">
+    <div class="split-heading"><div><p class="eyebrow">A directory you can use</p><h2 id="centre-overview-title">Location first.<br/><em>Confirmation before travel.</em></h2></div><p>This page gives families a single national directory. It keeps published place information, maps, photographs, enrolment choices and evidence together while making the limits clear.</p></div>
+    <div class="centre-proof-grid">{directoryProof.map(item=><article><strong>{item.value}</strong><h3>{item.label}</h3><p>{item.copy}</p></article>)}</div>
+    <div class="centre-region-row" role="group" aria-label="Published locations by region">{regions.map(item=><span><strong>{item.count}</strong>{item.region}</span>)}</div>
+    <p class="source-note">Directory entries were checked against published Pinnacle contact, enquiry and centre sources on 28 September 2026. Counts describe this dated directory; they do not by themselves prove current service availability, staffing, registration or ownership structure.</p>
+  </section>
+
+  <section class="section centre-visit" id="before-you-visit" aria-labelledby="centre-visit-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">Before you travel</p><h2 id="centre-visit-title">One short call can make<br/><em>the first visit clearer.</em></h2></div><p>The address gets you to a place. A confirmed conversation helps get your family to the appropriate next step.</p></div>
+    <div class="centre-visit-grid">{visitChecks.map(([icon,title,copy],index)=><article><span>{index+1}</span><Icon name={icon} size={31}/><h3>{title}</h3><p>{copy}</p></article>)}</div>
+    <div class="centre-callout"><div><p class="eyebrow">Pinnacle / BHCL National Autism Helpline</p><h3>Tell us the city and the everyday moment that matters.</h3><p>The team can help identify a suitable centre and first conversation. It is a Pinnacle-operated guidance and appointment-enquiry line, not a government, emergency or diagnostic service.</p></div><a class="button primary" href={phone.href} data-cta="directory-national-call"><Icon name="phone"/>Call {phone.display}</a><a class="text-link" href={url('/national-autism-helpline')}>How the helpline works <Icon name="arrow"/></a></div>
+  </div></section>
+
+  <section class="section wrap centre-direction" id="life-first-direction" aria-labelledby="centre-direction-title">
+    <div class="centre-direction-copy"><p class="eyebrow">The centre is where the conversation begins</p><h2 id="centre-direction-title">A nearby room matters.<br/><em>Your child’s whole life matters most.</em></h2><p>A centre gives your family a place to meet, observe, assess and practise. Pinnacle’s life-first direction asks a larger question: what should become more possible for this child in communication, daily routines, learning, school, family and community life?</p><p>That direction helps determine which abilities to understand, which goals to choose, which professional contributions are relevant, what can be practised in everyday life and what the team should review next.</p><div class="centre-direction-links"><a href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Read the documented paradigm shift ↗</a><EvidenceLinks group="practice" label="See how practice and feedback connect"/></div></div>
+    <figure class="centre-direction-photo"><Image src={suchitraExterior} widths={[520,780,1040]} sizes="(min-width:900px) 44vw, calc(100vw - 36px)" width={860} height={720} fit="cover" format="webp" quality={82} loading="lazy" decoding="async" alt="Building and Pinnacle signage at the Suchitra, Kompally centre in Hyderabad."/><figcaption>A centre is a real place to meet. The child’s life remains the direction for the work.</figcaption></figure>
+  </section>
+
+  <TherapyTogether current="" />
+
+  <section class="section centre-evidence" id="directory-evidence" aria-labelledby="centre-evidence-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">Place information with visible sources and limits</p><h2 id="centre-evidence-title">See where the detail came from.<br/><em>Know what still needs confirmation.</em></h2></div><p>Pinnacle publishes a dated centre directory and centre-identity reference. Use them to inspect the listing, then confirm the current service and appointment with the team.</p></div>
+    <div class="centre-evidence-grid">
+      <article><Icon name="pin" size={34}/><h3>Published location record</h3><p>Each entry carries the sourced address, map destination, national contact and last-checked date available to this directory.</p><a href="/pinnacle-pages-data/centre-directory.json">Download the dated directory (JSON) ↗</a></article>
+      <article><Icon name="shield" size={34}/><h3>Centre identity reference</h3><p>Inspect how centre names and registration references are recorded, with scope and limitations kept visible.</p><a href={url('/verify/evidence/centre-entity-reference.html')}>Inspect centre evidence ↗</a></article>
+      <article><Icon name="book" size={34}/><h3>PinnacleAI® scope</h3><p>The licensed software record supports developmental measurement and planning functions; it does not register every centre or guarantee an individual result.</p><a href={url('/verify/evidence/records/md5.html')}>Inspect the MD-5 scope ↗</a></article>
+      <article><Icon name="people" size={34}/><h3>People still make the decision</h3><p>Families and qualified professionals decide the suitable next step. A directory entry, map link or software record does not replace assessment.</p><a href={url('/verify/')}>Explore the Verify evidence library ↗</a></article>
+    </div>
+    <div class="centre-boundary"><Icon name="check" size={30}/><p><strong>What this page can establish:</strong> the published centre name, dated address source, map link, selected photographs and national contact route. <strong>What it cannot establish alone:</strong> today’s opening hours, rating, ownership model, professional availability, service scope, fee, appointment or outcome.</p></div>
+    <p class="source-note source-downloads"><a href="/pinnacle-pages-data/centers-evidence.txt">Claims and sources for this page</a> · <a href="/pinnacle-pages-data/centers-evidence.json">Download source map (JSON)</a></p>
+  </div></section>
+
+  <section class="section wrap faq-section" id="questions" aria-labelledby="centre-faq-title"><div><p class="eyebrow">Before you choose</p><h2 id="centre-faq-title">Practical answers.<br/><em>A confirmed next step.</em></h2><a class="text-link" href="#centres">Return to the centre search <Icon name="arrow"/></a></div><div>{content.faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></section>
+
+  <section class="final-cta centre-final" id="next-step" aria-labelledby="centre-next-title"><div class="wrap"><div class="close-sun official-close"><Image src={emblem} width={96} height={96} format="webp" loading="lazy" alt="Pinnacle official pinwheel emblem"/></div><p class="eyebrow">Every Child Counts®</p><h2 id="centre-next-title">Find the place.<br/>Begin with your child’s life.</h2><p>Choose a published centre or tell us your city and one everyday moment you want to make more possible.<br/>We’ll help arrange a suitable first conversation.</p><div class="final-actions"><a class="button white" href={phone.href} data-cta="final-call"><Icon name="phone"/>Call {phone.display}</a><a class="button light-outline" href={centreEnquiry} data-cta="final-enquiry">Start my family’s conversation <Icon name="arrow"/></a></div><p class="final-guidance">Free guidance, 24/7 · Appointment, service, professional and current fees are confirmed by the team.</p></div></section>
+</PageLayout>
+
+<style>
+  .centre-hero{padding:58px 0 68px;background:radial-gradient(circle at 77% 24%,#e7faf5 0 13%,transparent 36%),radial-gradient(circle at 20% 90%,#fae8f6 0 8%,transparent 33%),#fff}
+  .centre-hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(520px,1.1fr);gap:54px;align-items:center}
+  .centre-hero h1{margin:10px 0 22px;font-size:clamp(2.8rem,5vw,5rem);line-height:.99;letter-spacing:-.045em;color:#14274e}.centre-hero h1 em{display:block;color:#8f2879;font-style:normal}
+  .centre-hero-lead{margin:0 0 14px;font-size:clamp(1.24rem,2vw,1.56rem);font-weight:700;line-height:1.42;color:#08796e}.centre-hero-copy>p:not(.eyebrow):not(.centre-hero-lead):not(.centre-hero-note){max-width:690px;font-size:1.08rem;line-height:1.75;color:#2a3552}
+  .centre-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}.centre-hero-actions .button{min-height:56px}.centre-hero-note{margin:16px 0 0;font-size:.92rem;line-height:1.6;color:#655b69}
+  .centre-hero-visual{position:relative;display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:290px 220px;gap:16px;min-width:0}.centre-photo{position:relative;margin:0;border-radius:28px;overflow:hidden;background:#eef5f3;box-shadow:0 18px 46px #14274e20}.centre-photo img{width:100%;height:100%;object-fit:cover}.centre-photo-main{grid-column:1/-1}.centre-photo figcaption{position:absolute;left:12px;bottom:12px;padding:7px 11px;border-radius:999px;background:#fffef0e8;color:#14274e;font-size:.75rem;font-weight:700;box-shadow:0 4px 16px #14274e1c}.centre-hero-badge{position:absolute;left:-26px;top:235px;display:flex;align-items:center;gap:12px;padding:12px 16px;border:1px solid #d8cad9;border-radius:19px;background:#fff;box-shadow:0 14px 34px #401b3e20}.centre-hero-badge img{width:52px;height:52px}.centre-hero-badge span{display:flex;flex-direction:column;color:#14274e}.centre-hero-badge strong{font-size:1rem}.centre-hero-badge small{font-size:.75rem;color:#6a5f6a}
+  .centre-overview{padding-bottom:28px}.centre-proof-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:30px 0}.centre-proof-grid article{padding:24px;border:1px solid #ded4e0;border-radius:20px;background:#fff;box-shadow:0 8px 26px #40204408}.centre-proof-grid strong{display:block;font-size:2.3rem;line-height:1;color:#8f2879}.centre-proof-grid h3{margin:8px 0;color:#14274e;font-size:1rem}.centre-proof-grid p{margin:0;color:#625867;font-size:.9rem;line-height:1.6}.centre-region-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}.centre-region-row span{display:flex;align-items:center;gap:7px;padding:9px 13px;border-radius:999px;background:#eff9f6;color:#0b665f;font-size:.86rem}.centre-region-row strong{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#008f83;color:#fff}
+  .centre-visit{background:#f8fbff}.centre-visit-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:30px}.centre-visit-grid article{position:relative;min-width:0;padding:28px 22px;border-top:5px solid #8f2879;border-radius:18px;background:#fff;box-shadow:0 9px 28px #14274e0c}.centre-visit-grid article>span{position:absolute;right:18px;top:16px;font-size:2.3rem;font-weight:700;color:#e7dce8}.centre-visit-grid svg{color:#008f83}.centre-visit-grid h3{margin:18px 0 8px;color:#14274e;font-size:1.1rem}.centre-visit-grid p{margin:0;color:#5f5663;line-height:1.68}.centre-callout{display:grid;grid-template-columns:1fr auto auto;gap:20px;align-items:center;margin-top:28px;padding:27px 30px;border-radius:22px;background:linear-gradient(110deg,#fff2f8,#effbf8);border:1px solid #e1d6e2}.centre-callout h3{margin:3px 0 8px;color:#14274e}.centre-callout p{margin:0;line-height:1.65}.centre-callout .button{white-space:nowrap}
+  .centre-direction{display:grid;grid-template-columns:1.03fr .97fr;gap:52px;align-items:center}.centre-direction-copy>p:not(.eyebrow){font-size:1.05rem;line-height:1.78;color:#2a3552}.centre-direction h2{margin:8px 0 22px}.centre-direction-photo{margin:0;border-radius:28px;overflow:hidden;background:#eee;box-shadow:0 20px 50px #14274e18}.centre-direction-photo img{width:100%;max-height:590px;object-fit:cover}.centre-direction-photo figcaption{padding:15px 18px;background:#fff;color:#5f5663;font-size:.84rem;line-height:1.55}.centre-direction-links{display:flex;gap:16px;flex-wrap:wrap;margin-top:24px}.centre-direction-links>a,.centre-direction-links :global(a){color:#8f2879;font-weight:700;text-underline-offset:4px}
+  .centre-evidence{background:#f9f5fa}.centre-evidence-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;margin-top:30px}.centre-evidence-grid article{padding:25px;border:1px solid #dfd4e0;border-radius:20px;background:#fff}.centre-evidence-grid svg{color:#008f83}.centre-evidence-grid h3{margin:18px 0 8px;color:#14274e}.centre-evidence-grid p{margin:0 0 16px;line-height:1.65;color:#605764}.centre-evidence-grid a{color:#8f2879;font-weight:700;text-underline-offset:4px}.centre-boundary{display:flex;gap:16px;align-items:flex-start;margin-top:24px;padding:20px 22px;border-left:5px solid #008f83;background:#fff;color:#24324e}.centre-boundary svg{flex:none;color:#008f83}.centre-boundary p{margin:0;line-height:1.7}.centre-final{background:linear-gradient(130deg,#7b246c,#e3115e 60%,#008f83)}
+  @media(max-width:1100px){.centre-hero-grid{grid-template-columns:1fr;gap:36px}.centre-hero-visual{max-width:780px;margin-inline:auto;width:100%}.centre-proof-grid,.centre-visit-grid,.centre-evidence-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.centre-callout{grid-template-columns:1fr auto}.centre-callout .text-link{grid-column:1/-1}.centre-direction{grid-template-columns:1fr}.centre-direction-photo{max-width:780px}}
+  @media(max-width:680px){.centre-hero{padding:34px 0 45px}.centre-hero h1{font-size:clamp(2.45rem,12vw,3.55rem)}.centre-hero-actions{display:grid}.centre-hero-actions .button{width:100%;justify-content:center}.centre-hero-visual{grid-template-rows:235px 175px;gap:10px}.centre-photo{border-radius:20px}.centre-photo figcaption{font-size:.68rem}.centre-hero-badge{left:10px;top:203px;padding:8px 11px}.centre-hero-badge img{width:38px;height:38px}.centre-proof-grid,.centre-visit-grid,.centre-evidence-grid{grid-template-columns:1fr}.centre-region-row{gap:8px}.centre-region-row span{font-size:.77rem;padding:7px 10px}.centre-callout{grid-template-columns:1fr}.centre-callout .button{width:100%;justify-content:center}.centre-direction{gap:28px}.centre-direction-photo img{max-height:420px}.centre-boundary{padding:18px 17px}}
+</style>
