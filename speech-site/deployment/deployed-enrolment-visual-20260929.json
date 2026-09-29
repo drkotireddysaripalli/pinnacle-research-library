@@ -1,0 +1,16 @@
+{
+  "id": "1876dbd9-6434-479a-9cda-2363192a220a",
+  "created_on": "2026-09-29T03:35:30.167213Z",
+  "source": "wrangler",
+  "strategy": "percentage",
+  "versions": [
+    {
+      "version_id": "216165e3-3297-41ca-8209-20bc13287601",
+      "percentage": 100
+    }
+  ],
+  "annotations": {
+    "workers/message": "Enrolment visual narrative: Pinnacle home, journey and everyday-practice imagery",
+    "workers/triggered_by": "deployment"
+  }
+}

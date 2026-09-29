@@ -2,6 +2,21 @@
 
 Published: https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment
 
+## Visual narrative revision — v91
+
+- Added three existing Pinnacle visuals to the completed story: the home and car analogies before the seven-stage pathway, plus the guided everyday-practice scene beside the practical example.
+- Kept the existing mother-and-child hero and avoided a carousel or decorative image repetition. The form remains visually quiet and focused on the next step.
+- Tightened the narrative sequence to move from the family's desired life direction, to the short form, to reasons for choosing Pinnacle, to the paradigm shift, the seven stages, family participation and everyday-life transfer.
+- Moved the historical source note after the pathway so source context supports the explanation without interrupting the parent-facing sales story.
+- Published responsive WebP variants with descriptive alt text, intrinsic dimensions, lazy loading and asynchronous decoding for the three inserted visuals.
+- Added the brand close: `SELF-SUFFICIENT · MAINSTREAM · WONDERFUL LIFE · POSSIBLE.`
+
+The final page passed the focused 28-test suite and W3C validation with zero errors or warnings. Browser review at 390, 768 and 1440px found no horizontal overflow or broken images. The production HTML exactly matches the staged 218,394-byte file; the three selected live image resources respond as WebP; the preview remains `noindex`, `no-store` and rejects POST with HTTP 405. Verify, its evidence register, the FSC, the PinnacleAI regulatory story, the national helpline, robots and the speech page remain byte-identical to the pre-release capture. Existing `/enroll` and `/payonline` origin pages respond normally and are intentionally checked by status because their origin-generated HTML varies between requests.
+
+Cloudflare version 91: `216165e3-3297-41ca-8209-20bc13287601`.
+Deployment: `1876dbd9-6434-479a-9cda-2363192a220a`, serving 100% of production traffic.
+Rollback: version 90, `0959fff6-9c25-4e80-97fe-41906b413aaf`; deployment `1d4e649c-e5c3-462b-ac88-7a106d1ac5b7`.
+
 ## Completed
 
 - Rebuilt the page around the child's life, Pinnacle's seven-stage approach and the family's involvement in decisions.
