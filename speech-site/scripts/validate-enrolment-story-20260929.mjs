@@ -9,6 +9,8 @@ assert(response.ok);assert.equal(report.messages.filter(m=>m.type==='error').len
 assert(html.includes('noindex, nofollow')&&html.includes('data-preview="true"'));
 assert(html.includes('id="enrol-preferences"')&&html.includes('Choose a service or centre'));
 assert(!html.includes('id="enrol-preferences" open'));
+assert(html.indexOf('id="enrolment-form"')<html.indexOf('id="why-pinnacle-title"'));
+assert(html.includes('self-sufficient, mainstream-included life')&&html.includes('The PinnacleAI® paradigm shift'));
 assert.equal((html.match(/data-enrol-centre=/g)||[]).length,62);
 const graph=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]);
 assert(!JSON.stringify(graph).includes('aggregateRating'));

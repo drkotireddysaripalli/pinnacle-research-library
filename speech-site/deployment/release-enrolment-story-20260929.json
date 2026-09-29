@@ -1,13 +1,13 @@
 {
   "releasedOn": "2026-09-29",
   "worker": "pinnacle-verify-route",
-  "version": "6da71d90-adc8-4daa-b160-5865ddcf6eb5",
-  "versionNumber": 89,
-  "deployment": "2d7bbf58-a1ea-401e-b0b8-dd40c8df4ad1",
-  "rollbackVersion": "12ea6637-ca79-474c-9641-a9324d2fb29b",
-  "rollbackDeployment": "983fda0f-4e66-4502-85fb-8f900b3896f5",
+  "version": "0959fff6-9c25-4e80-97fe-41906b413aaf",
+  "versionNumber": 90,
+  "deployment": "1d4e649c-e5c3-462b-ac88-7a106d1ac5b7",
+  "rollbackVersion": "6da71d90-adc8-4daa-b160-5865ddcf6eb5",
+  "rollbackDeployment": "2d7bbf58-a1ea-401e-b0b8-dd40c8df4ad1",
   "previewUrl": "https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment",
-  "workerSha256": "738b4d7352b1f6b7558530f9ffcd642950868319d91b52e95b8f460c09cc31e0",
+  "workerSha256": "eb8f6cb3f95d9e512ead2676c93488d660b62f24c4a43310e54b3028ee58b121",
   "speechHandlerSha256": "6119e7cfe93e8f4214fecfb3957ebfe39e153a7d0a9bbcafcc2ef0641b9fd2ff",
   "assetCount": 1333,
   "preservedVerifyAssets": 634,
@@ -58,6 +58,7 @@
   ],
   "checks": {
     "automatedTestsPassed": 40,
+    "enrolmentStoryChecksPassed": 14,
     "productionChecksPassed": 15,
     "w3cErrors": 0,
     "w3cWarnings": 0,
@@ -90,6 +91,7 @@
   "ratingsPublished": false,
   "enrolment": {
     "mode": "non-submitting noindex preview",
+    "narrative": "life-first family decision story with the form followed by the reasons-to-choose-Pinnacle block, PinnacleAI paradigm shift, seven-stage pathway and source-bound historical context",
     "requiredFields": [
       "name",
       "phone"

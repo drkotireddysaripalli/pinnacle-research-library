@@ -1,11 +1,27 @@
 {
-  "checkedAt": "2026-09-29T01:54:13.836Z",
+  "checkedAt": "2026-09-29T02:40:20.568Z",
   "url": "https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment",
   "status": 200,
+  "pageBytes": 215925,
+  "pageSha256": "2e15649898496869d35599d76ab4bf3bbf4abc9657f21c731d725761d76d727d",
+  "matchesCheckedInBuild": true,
   "postStatus": 405,
   "previewNoindex": true,
   "previewNoStore": true,
   "connectionsBlocked": true,
+  "worker": "pinnacle-verify-route",
+  "version": "0959fff6-9c25-4e80-97fe-41906b413aaf",
+  "versionNumber": 90,
+  "deployment": "1d4e649c-e5c3-462b-ac88-7a106d1ac5b7",
+  "rollbackVersion": "6da71d90-adc8-4daa-b160-5865ddcf6eb5",
+  "rollbackDeployment": "2d7bbf58-a1ea-401e-b0b8-dd40c8df4ad1",
+  "productionTrafficPercent": 100,
+  "enrolmentStoryChecksPassed": 14,
+  "productionChecksPassed": 15,
+  "templateAssetsChecked": 699,
+  "templateAssetFailures": 0,
+  "preservedVerifyAssets": 634,
+  "sharedWorkerLogicUnchanged": true,
   "og": {
     "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/enrolment-family-journey-20260929.BQ9_Hb2u_1KwD7.webp",
     "bytes": 118660,
@@ -40,7 +56,7 @@
     {
       "path": "/enroll",
       "status": 200,
-      "sameBytes": true
+      "sameBytes": false
     },
     {
       "path": "/payonline",

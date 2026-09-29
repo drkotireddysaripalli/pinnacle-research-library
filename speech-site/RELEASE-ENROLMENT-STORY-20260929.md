@@ -5,6 +5,9 @@ Published: https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment
 ## Completed
 
 - Rebuilt the page around the child's life, Pinnacle's seven-stage approach and the family's involvement in decisions.
+- Reordered the decision flow so the short first-step form comes immediately after the promise, followed by “A direction you understand. A journey you help shape.” and three concrete reasons to choose Pinnacle.
+- Strengthened the life-first sales story: every therapy serves the child's growing independence, learning, communication and mainstream participation, with the family in charge of priorities and review.
+- Added the PinnacleAI® paradigm-shift explanation and retained the bricks/home analogy. Historical context is explicitly attributed to Pinnacle's published analysis and linked to its source instead of presented as an unsupported universal claim.
 - Added three reasons to choose Pinnacle, an everyday-goal example, practical first-visit answers and four claim-specific evidence cards.
 - Integrated the new family-journey illustration, responsive WebP variants, image descriptions and 1200×630 social metadata image (118,660 bytes).
 - Retained the shared Sintony typography, portal header, full footer, 36-record evidence section and national call links.
@@ -16,13 +19,13 @@ Published: https://www.pinnacleblooms.org/pinnacle-pages-preview/enrolment
 
 Independent editorial reviews scored the rebuild 90/100 from the parent perspective, 91/100 for warm sales traffic, 87/100 for cold sales traffic and 92/100 for evidence/SEO readiness. These are AI editorial judgments, not measured conversion performance or actual family research. All actionable release findings were addressed: visible call wording, progressive disclosure of optional preferences, a shorter mobile route to the required fields, preserving form state across external exploration, exact legal-entity evidence destination and clearer first-stage wording.
 
-34 Node tests pass; the full suite records 40 automated checks and 15 production checks. W3C Nu reports zero errors and zero warnings for the final enrolment HTML. Browser checks covered 320, 390, 768 and 1440px; no horizontal overflow was observed. Centre selection, photo disclosure, progressive disclosure, query-driven service/centre preselection, reset, invalid-input focus and non-submitting preview acknowledgement were checked. Actual Safari/iOS devices, assistive-technology sessions and field Core Web Vitals were not tested in this release.
+The release suite records 40 automated checks, 14 dedicated enrolment-story checks and 15 production checks. W3C Nu reports zero errors and zero warnings for the final enrolment HTML. Browser checks covered 320, 390, 768 and 1440px; no horizontal overflow was observed. Centre selection, photo disclosure, progressive disclosure, query-driven service/centre preselection, reset, invalid-input focus and non-submitting preview acknowledgement were checked. Actual Safari/iOS devices, assistive-technology sessions and field Core Web Vitals were not tested in this release.
 
 All 699 published template assets/documents match the build. All 634 Verify assets match the preserved source. Verify, evidence register, FSC PDF, PinnacleAI story, helpline and robots match pre-release bytes. Speech content is unchanged; Astro renamed its shared stylesheet while retaining the same content hash. Existing enrolment still works at its original route. Payment responds normally; its origin-generated body varies between requests. Shared Worker logic and bindings are unchanged.
 
-Cloudflare version 89: `6da71d90-adc8-4daa-b160-5865ddcf6eb5`.
-Deployment: `2d7bbf58-a1ea-401e-b0b8-dd40c8df4ad1`.
-Rollback: version 88, `12ea6637-ca79-474c-9641-a9324d2fb29b`; deployment `983fda0f-4e66-4502-85fb-8f900b3896f5`.
+Cloudflare version 90: `0959fff6-9c25-4e80-97fe-41906b413aaf`.
+Deployment: `1d4e649c-e5c3-462b-ac88-7a106d1ac5b7`, serving 100% of production traffic.
+Rollback: version 89, `6da71d90-adc8-4daa-b160-5865ddcf6eb5`; deployment `2d7bbf58-a1ea-401e-b0b8-dd40c8df4ad1`.
 
 ## Work-order disposition
 
