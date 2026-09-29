@@ -1,5 +1,15 @@
 # Therapy page development and independent review
 
+## Required context loading
+
+Before building or materially revising a managed portal page, read:
+
+1. `PORTAL-CONTEXT-AND-BUILD-MODALITY.md` for the settled outcome, narrative, visual, evidence, machine and release system.
+2. `ACTIVE-PAGE-WORK-ORDER.md` for the page currently being built.
+3. Only the deeper standards, source records and historical receipts required by that active work.
+
+The conversation history remains useful context, but committed current decisions supersede abandoned exploration. Preserve the depth that produced the released pages. Reduce usage by avoiding irrelevant history and unchanged checks, not by simplifying the outcome or replacing the page with a generic template.
+
 The main agent in the owner's current task retains code, build and release ownership. Independent agents may research and review read-only. Do not delegate source edits, public submissions, browser control or deployment to reviewers.
 
 For every substantial therapy-page change:
