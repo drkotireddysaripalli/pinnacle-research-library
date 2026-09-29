@@ -1,0 +1,43 @@
+ABA Therapy for Children in India — claims and sources
+Checked: 29 September 2026
+Canonical: https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate
+
+1. ABA definition
+Source: https://www.bacb.com/about-behavior-analysis/
+Use: educational definition of behaviour analysis and ABA.
+Limit: no BACB endorsement of Pinnacle and no statement about an individual professional's credentials.
+
+2. Functional assessment and measurable support
+Source: https://www.nice.org.uk/guidance/cg170/chapter/recommendations
+Use: consider triggers, patterns, needs, consequences, communication, health, environment, quality-of-life-linked outcomes, before-and-after measurement and agreement across relevant people.
+Limit: general clinical guidance; not Pinnacle accreditation or outcome proof.
+
+3. Child- and family-centred safeguards
+Source: https://www.aap.org/en/patient-care/autism/considerations-for-prescribing-recommending-common-supports-and-services-for-children-on-the-autism-spectrum/
+Use: individualized, developmentally appropriate, strength-based and family-centred support; avoid aversive or traumatic practices.
+Limit: practice principles; no AAP endorsement of Pinnacle.
+
+4. Participation and life direction
+Sources: https://www.who.int/news-room/fact-sheets/detail/rehabilitation and https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html
+Use: connect support with functioning, participation and the child's life direction.
+Limit: no guarantee of independence, school entry, mainstream inclusion or a wonderful life.
+
+5. PinnacleAI GPT-OS v1.0.0
+Source: https://www.pinnacleblooms.org/verify/evidence/records/md5.html
+Use: non-diagnostic developmental-support Class B SaMD; ability measurement, readiness tracking, progress forecasting and adaptive plan support.
+Limit: software scope only. It is not an ABA licence, diagnosis, centre registration, clinical endorsement or outcome guarantee.
+
+6. BIS schedule
+Source: https://www.pinnacleblooms.org/verify/evidence/records/bis.html
+Use: source-linked scope for named software modules and quality management.
+Limit: does not establish ABA effectiveness or an individual result.
+
+7. Research and centres
+Sources: https://www.pinnacleblooms.org/verify/evidence/research-library.html and https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html
+Use: inspect study statuses, centre identities, addresses and maps.
+Limit: confirm current ABA service, professional, appointment and fees with the national team before travel.
+
+Operator: Bharath Healthcare Laboratories Private Limited
+Brand: Pinnacle Blooms Network
+National number: 9100 181 181 / tel:+919100181181
+Structured source map: https://www.pinnacleblooms.org/pinnacle-pages-data/aba-therapy-evidence.json

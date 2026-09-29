@@ -2,25 +2,30 @@
 (() => {
   const id = 'G-H9CLX1WJ7R';
   const origin = 'https://www.pinnacleblooms.org';
-  const path = '/top-speech-therapy-center-india-proven-improvement-rate';
+  const pages = {
+    '/top-speech-therapy-center-india-proven-improvement-rate': {title:'Pinnacle Speech Therapy',group:'speech_therapy',service:'speech'},
+    '/best-occupational-therapy-center-india-proven-improvement-rate': {title:'Pinnacle Occupational Therapy',group:'occupational_therapy',service:'occupational'},
+    '/best-aba-therapy-center-india-proven-improvement-rate': {title:'Pinnacle ABA Therapy',group:'aba_therapy',service:'aba'}
+  };
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
-  const pagePath = Object.hasOwn(documents,location.pathname)?location.pathname:path;
+  const pagePath = location.pathname;
   const canonical = origin + pagePath;
-  const pageTitle = documents[pagePath] || 'Pinnacle Speech Therapy';
-  const routes = new Set([path, '/speech-therapy', ...Object.keys(documents)]);
+  const pageConfig = pages[pagePath] || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
+  const pageTitle = pageConfig?.title || document.title;
+  const pageGroup = pageConfig?.group || 'managed_page';
+  const routes = new Set([...Object.keys(pages), ...Object.keys(documents)]);
   const key = 'pinnacle-speech-analytics-v1';
   const variant = document.body?.dataset.pageVariant === 'focused' ? 'focused' : 'service';
   const lifetime = 180 * 86400000;
   const panel = document.querySelector('[data-speech-measurement]');
   const status = document.querySelector('[data-measurement-status]');
   if (!panel || !status) return;
-  const production = location.origin === origin && routes.has(location.pathname);
+  const production = location.origin === origin && routes.has(location.pathname) && !!pageConfig;
   const blocked = navigator.globalPrivacyControl === true;
   const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry']);
   const enquiryPlacements = new Set(['header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','mobile-assessment','centre-enquiry']);
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
-  const centreEnquiryUrls = new Set(centreIds.map(centre=>origin+'/enroll-autism-speech-aba-therapies-india?entry=speech-assessment&centre='+centre+'#speech-assessment-enquiry'));
   let enabled = false, loaded = false;
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {
@@ -55,7 +60,7 @@
     const script=document.createElement('script');
     script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;
     document.head.append(script);
-    send('page_view',{page_group:'speech_therapy',schema_version:1});
+    send('page_view',{page_group:pageGroup,schema_version:2});
   };
   const choose = (value, persist = true) => {
     if (!['accepted','declined'].includes(value)) return;
@@ -87,8 +92,17 @@
     const link=event.target?.closest?.('a[data-cta]');
     if (!link) return;
     const placement=link.dataset.cta,href=link.getAttribute('href');
-    if (callPlacements.has(placement) && href==='tel:+919100181181') send('phone_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'national_helpline_9100181181'});
-    const validEnquiry=(placement==='header-enrol'&&href===origin+'/enroll-autism-speech-aba-therapies-india')||href===origin+'/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry'||(placement==='centre-enquiry'&&centreEnquiryUrls.has(href));
-    if (enquiryPlacements.has(placement) && validEnquiry) send('enquiry_link_click',{schema_version:1,page_group:'speech_therapy',link_placement:placement,destination:'existing_enrolment_form'});
+    if (callPlacements.has(placement) && href==='tel:+919100181181') send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'national_helpline_9100181181'});
+    let validEnquiry=false;
+    try {
+      const destination=new URL(href,origin),keys=[...destination.searchParams.keys()];
+      const knownKeys=keys.every(key=>['entry','service','centre'].includes(key));
+      const validCentre=!destination.searchParams.has('centre')||centreIds.includes(destination.searchParams.get('centre'));
+      const service=destination.searchParams.get('service'),entry=destination.searchParams.get('entry');
+      const validService=!service||service===pageConfig?.service;
+      const validEntry=!entry||(pageConfig?.service==='speech'&&entry==='speech-assessment');
+      validEnquiry=destination.origin===origin&&destination.pathname==='/enroll-autism-speech-aba-therapies-india'&&knownKeys&&validCentre&&validService&&validEntry;
+    } catch {}
+    if (enquiryPlacements.has(placement) && validEnquiry) send('enquiry_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'existing_enrolment_form'});
   });
 })();

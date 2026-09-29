@@ -2,6 +2,7 @@
 export const SPEECH_CANONICAL='/top-speech-therapy-center-india-proven-improvement-rate';
 export const ENROLMENT_CANONICAL='/enroll-autism-speech-aba-therapies-india';
 export const OCCUPATIONAL_CANONICAL='/best-occupational-therapy-center-india-proven-improvement-rate';
+export const ABA_CANONICAL='/best-aba-therapy-center-india-proven-improvement-rate';
 const DOCUMENT='/speech-therapy/service-information';
 const ENROLMENT_PREVIEW='/pinnacle-pages-preview/enrolment';
 const GUIDES=['first-visit-guide','teacher-observation-guide'];
@@ -12,13 +13,14 @@ export async function serveSpeech(request,env,inventory){
  const enrolment=u.pathname===ENROLMENT_CANONICAL||u.pathname==='/enroll'||u.pathname==='/enroll/';
  if(u.hostname==='www.pinnacleblooms.org'&&(preview||enrolment)&&!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{allow:'GET, HEAD','cache-control':'no-store','x-robots-tag':preview?'noindex, nofollow':'index, follow'}});
  if(u.hostname!=='www.pinnacleblooms.org'||!['GET','HEAD'].includes(request.method)||request.headers.has('authorization'))return null;
- const aliases=new Map([['/speech-therapy',SPEECH_CANONICAL],['/speech-therapy/',SPEECH_CANONICAL],[SPEECH_CANONICAL+'/',SPEECH_CANONICAL],['/occupational-therapy',OCCUPATIONAL_CANONICAL],['/occupational-therapy/',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy/',OCCUPATIONAL_CANONICAL],[OCCUPATIONAL_CANONICAL+'/',OCCUPATIONAL_CANONICAL],['/enroll',ENROLMENT_CANONICAL],['/enroll/',ENROLMENT_CANONICAL],[ENROLMENT_CANONICAL+'/',ENROLMENT_CANONICAL],[ENROLMENT_PREVIEW,ENROLMENT_CANONICAL],[DOCUMENT+'/',DOCUMENT],[DOCUMENT+'.html',DOCUMENT]]);
+ const aliases=new Map([['/speech-therapy',SPEECH_CANONICAL],['/speech-therapy/',SPEECH_CANONICAL],[SPEECH_CANONICAL+'/',SPEECH_CANONICAL],['/occupational-therapy',OCCUPATIONAL_CANONICAL],['/occupational-therapy/',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy/',OCCUPATIONAL_CANONICAL],[OCCUPATIONAL_CANONICAL+'/',OCCUPATIONAL_CANONICAL],['/aba-therapy',ABA_CANONICAL],['/aba-therapy/',ABA_CANONICAL],['/t/aba-therapy',ABA_CANONICAL],['/t/aba-therapy/',ABA_CANONICAL],[ABA_CANONICAL+'/',ABA_CANONICAL],['/enroll',ENROLMENT_CANONICAL],['/enroll/',ENROLMENT_CANONICAL],[ENROLMENT_CANONICAL+'/',ENROLMENT_CANONICAL],[ENROLMENT_PREVIEW,ENROLMENT_CANONICAL],[DOCUMENT+'/',DOCUMENT],[DOCUMENT+'.html',DOCUMENT]]);
  for(const guide of GUIDES)for(const suffix of ['/', '.html'])aliases.set('/speech-therapy/'+guide+suffix,'/speech-therapy/'+guide);
  if(aliases.has(u.pathname)){u.pathname=aliases.get(u.pathname);return new Response(null,{status:301,headers:{location:u.href,'cache-control':'public, max-age=300'}});}
  let key=u.pathname;
  if(preview)key='/pinnacle-pages-html/enrolment-preview.html';
  else if(key===ENROLMENT_CANONICAL)key='/pinnacle-pages-html/enrolment.html';
  else if(key===OCCUPATIONAL_CANONICAL)key='/pinnacle-pages-html/occupational-therapy.html';
+ else if(key===ABA_CANONICAL)key='/pinnacle-pages-html/aba-therapy.html';
  else if(key===SPEECH_CANONICAL)key='/pinnacle-pages-html/speech.html';
  else if(key===DOCUMENT)key='/pinnacle-pages-html/service-information.html';
  else if(GUIDES.some(g=>key==='/speech-therapy/'+g))key='/pinnacle-pages-html/'+key.split('/').pop()+'.html';
@@ -28,6 +30,7 @@ export async function serveSpeech(request,env,inventory){
  const wantsMarkdown=/\btext\/markdown\b/i.test(request.headers.get('accept')||'');
  if(wantsMarkdown&&key==='/pinnacle-pages-html/enrolment.html')key='/pinnacle-pages-data/enrolment-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/occupational-therapy.html')key='/pinnacle-pages-data/occupational-therapy-machine.md';
+ else if(wantsMarkdown&&key==='/pinnacle-pages-html/aba-therapy.html')key='/pinnacle-pages-data/aba-therapy-machine.md';
  if(!Object.hasOwn(inventory,key))return null;
  const isHtml=key.endsWith('.html');
  const isMachineDocument=key.endsWith('.md');

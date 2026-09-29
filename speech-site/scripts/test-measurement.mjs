@@ -4,7 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 const source = fs.readFileSync('public/pinnacle-pages-scripts/speech-measurement.js','utf8');
 const key='pinnacle-speech-analytics-v1';
-function harness({origin='https://www.pinnacleblooms.org',path='/speech-therapy',gpc=false,saved,storageThrows=false,variant='service'}={}){
+function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service'}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
@@ -12,7 +12,7 @@ function harness({origin='https://www.pinnacleblooms.org',path='/speech-therapy'
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
- vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON});
+ vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
  return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 test('no analytics before consent; valid consent sends only fixed CTA fields',()=>{
@@ -35,7 +35,7 @@ test('all verified centre links are measured after consent without exporting cen
  for(const placement of ['directory-national-call','centre-national-call','centre-enquiry'])h.click(placement,'tel:+919100181181');
  assert.equal(h.events().filter(x=>x[1]==='enquiry_link_click').length,59);
  assert.equal(h.events().filter(x=>x[1]==='phone_link_click').length,3);
- const count=h.events().length;h.click('centre-enquiry',href('unverified'));h.click('centre-enquiry',href('annanagar')+'&name=private');h.click('centre-enquiry',href('annanagar').replace('www.pinnacleblooms.org','evil.example'));
+ const count=h.events().length;h.click('centre-enquiry',href('unverified'));h.click('centre-enquiry',href('annanagar').replace('#','&name=private#'));h.click('centre-enquiry',href('annanagar').replace('www.pinnacleblooms.org','evil.example'));
  assert.equal(h.events().length,count);assert(!JSON.stringify(h.events()).includes('centre='));assert(!JSON.stringify(h.events()).includes('annanagar'));
  h.choose('declined');h.click('centre-enquiry',href('annanagar'));assert.equal(h.events().length,count);
 });
@@ -67,4 +67,18 @@ test('public speech guides measure their exact canonical without visitor query v
   assert(!JSON.stringify(h.events()).includes('private-child-detail'));
  }
  const preview=harness({path:'/pinnacle-pages-preview/enrolment'});preview.choose('accepted');assert.equal(preview.events().length,0);
+});
+test('managed therapy pages use service-specific groups and accept only their own enquiry service',()=>{
+ const pages=[
+  ['/top-speech-therapy-center-india-proven-improvement-rate','speech_therapy','speech'],
+  ['/best-occupational-therapy-center-india-proven-improvement-rate','occupational_therapy','occupational'],
+  ['/best-aba-therapy-center-india-proven-improvement-rate','aba_therapy','aba']
+ ];
+ for(const [path,group,service] of pages){
+  const h=harness({path});h.choose('accepted');
+  h.click('hero-assessment',`https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=${service}`);
+  h.click('hero-assessment','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=wrong');
+  assert.deepEqual(h.events().map(e=>e[1]),['page_view','enquiry_link_click']);
+  assert.equal(h.events()[0][2].page_group,group);
+ }
 });

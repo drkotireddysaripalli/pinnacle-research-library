@@ -7,14 +7,17 @@ const routes=[
  {path:'/speech-therapy/first-visit-guide',asset:'/pinnacle-pages-html/first-visit-guide.html'},
  {path:'/speech-therapy/teacher-observation-guide',asset:'/pinnacle-pages-html/teacher-observation-guide.html'},
  {path:'/enroll-autism-speech-aba-therapies-india',asset:'/pinnacle-pages-html/enrolment.html'},
- {path:'/best-occupational-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/occupational-therapy.html'}
+ {path:'/best-occupational-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/occupational-therapy.html'},
+ {path:'/best-aba-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/aba-therapy.html'}
 ];
 const inventory=JSON.parse(await readFile(new URL('../deployment/speech-inventory.json',import.meta.url)));
 const sha=b=>createHash('sha256').update(b).digest('hex');
+const withoutCloudflareBeacon=html=>html.replace(/<script type="module" src="https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js[^>]*><\/script>\s*/,'');
 const results=await Promise.all(routes.map(async ({path,asset})=>{
  const [h,m]=await Promise.all([fetch(origin+path,{headers:{accept:'text/html'}}),fetch(origin+path,{headers:{accept:'text/markdown'}})]);
  const [html,md]=await Promise.all([h.text(),m.text()]);
- const result={path,asset,htmlStatus:h.status,htmlType:h.headers.get('content-type'),htmlSha256:sha(html),htmlMatchesStagedBuild:sha(html).slice(0,16)===inventory[asset],markdownStatus:m.status,markdownType:m.headers.get('content-type'),vary:m.headers.get('vary'),contentSignal:m.headers.get('content-signal'),markdownBytes:Buffer.byteLength(md),htmlBytes:Buffer.byteLength(html),structuredDataRetained:md.includes('schema.org')&&md.includes('@graph'),hasOrganization:md.includes('Bharath Healthcare'),hasTelephone:md.includes('9100181181'),isActuallyMarkdown:!md.startsWith('<!DOCTYPE')};
+ const normalizedHtml=withoutCloudflareBeacon(html);
+ const result={path,asset,htmlStatus:h.status,htmlType:h.headers.get('content-type'),htmlSha256:sha(html),normalizedHtmlSha256:sha(normalizedHtml),htmlMatchesStagedBuild:sha(normalizedHtml).slice(0,16)===inventory[asset],markdownStatus:m.status,markdownType:m.headers.get('content-type'),vary:m.headers.get('vary'),contentSignal:m.headers.get('content-signal'),markdownBytes:Buffer.byteLength(md),htmlBytes:Buffer.byteLength(html),hasOrganization:md.includes('Bharath Healthcare'),hasTelephone:md.includes('9100181181'),isActuallyMarkdown:!md.startsWith('<!DOCTYPE')};
  await writeFile(new URL('../reviews/machine-response-'+path.split('/').pop()+'.md',import.meta.url),md);
  return result;
 }));

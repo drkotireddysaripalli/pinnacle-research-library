@@ -1,0 +1,106 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import HeroSlider from './HeroSlider.astro';
+import ActionStrip from './ActionStrip.astro';
+import Icon from './Icon.astro';
+import TherapyTogether from './TherapyTogether.astro';
+import CentreDirectory from './CentreDirectory.astro';
+import EvidenceLinks from './EvidenceLinks.astro';
+import { Image } from 'astro:assets';
+import emblem from '../assets/pinnacle-emblem-official.png';
+import communicationJourney from '../assets/aba-communication-choice-participation-20260929.png';
+import abaCreative from '../assets/aba-therapy-pinnacle-creative-20260929.png';
+import { abaContent as content, abaEnquiry } from '../data/aba-content';
+import { proofCards } from '../data/speech';
+import { phone, url } from '../data/site';
+
+const assessmentLens = [
+  ['voice','Communication','How the child expresses needs, refusal, discomfort, help or a break.'],
+  ['heart','Health and wellbeing','Whether pain, sleep, anxiety or another health need may require appropriate review.'],
+  ['home','Environment','Noise, sensory demands, predictability, task demands, routines and available choices.'],
+  ['people','People and patterns','What happens before, during and after the moment across relevant settings.'],
+  ['sun','Strengths and interests','What the child already does successfully and what helps engagement.'],
+  ['book','Family and school knowledge','What parents, caregivers and teachers notice in everyday life.']
+];
+const exampleSteps = [
+  ['See the whole moment','A busy transition is difficult; the child moves away or shows distress.'],
+  ['Understand before acting','Consider communication, predictability, sensory context, task demands and what already helps.'],
+  ['Agree a useful goal','The child can communicate “break”, “help” or “not yet” through an appropriate method.'],
+  ['Support respectfully','Adjust the environment, teach the communication and practise a predictable transition.'],
+  ['Carry it into life','Use the agreed support at home or school when relevant and manageable.'],
+  ['Review what changed','Is communication easier to use and respect? Is participation more comfortable? What support remains?'],
+  ['Correct the plan','Continue, adapt, reduce, refer, pause or complete support as professional review indicates.']
+];
+const disciplines = [
+  ['heart','ABA / behavioural support','Understand observable patterns and develop useful, acceptable alternatives.'],
+  ['voice','Speech and communication','Support ways to express needs, preferences, choices and ideas.'],
+  ['home','Occupational therapy','Consider routines, activities, sensory-motor access and environments.'],
+  ['book','Special education','Support learning access, classroom participation and educational abilities.'],
+  ['people','Family and school','Contribute priorities and observations from the child’s daily life.'],
+  ['shield','Relevant health professionals','Examine medical or mental-health factors when indicated.']
+];
+---
+<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms ABA Therapy story: understand the moment and build abilities for communication, choice, routines and everyday participation." imageCaption="Respectful ABA and behavioural support connected to the child’s everyday life at Pinnacle Blooms Network." shareImage={abaCreative} publishedOn="2026-09-29" updatedOn="2026-09-29" enquiry={content.enquiry}>
+  <HeroSlider content={content} /><ActionStrip focused />
+
+  <section class="section occupational-brand-story aba-brand-story" aria-label="Pinnacle ABA Therapy from communication and routines to participation">
+    <div class="wrap"><figure><Image src={abaCreative} widths={[640,960,1280,1680]} sizes="(min-width:1360px) 1280px, calc(100vw - 28px)" width={1680} height={945} format="webp" quality={84} loading="eager" decoding="async" fetchpriority="high" alt="Pinnacle Blooms ABA Therapy pathway connecting communication, choice, routines and participation, with the contact number 9100 181 181 and links to MD-5, Class B SaMD, BIS IS 23485 and Pinnacle Verify."/><figcaption>Understand the moment, build a useful ability and keep everyday participation in view.</figcaption></figure></div>
+  </section>
+
+  <section class="section wrap service-fit aba-fit" id="service-fit" aria-labelledby="aba-fit-title">
+    <div class="fit-heading"><p class="eyebrow">Start with the need, context and child</p><h2 id="aba-fit-title">What might this moment<br/><em>be communicating?</em></h2></div>
+    <p class="aba-intro">Behaviour is not a character judgement. It can reflect communication, discomfort, a difficult demand, sensory or environmental conditions, a change in routine, a learned pattern or several factors together. Appropriate support begins by understanding the whole picture.</p>
+    <div class="concern-grid">{content.concerns.map(concern=><article><span class="concern-icon"><Icon name={concern.icon} size={30}/></span><h3>{concern.title}</h3><p>{concern.copy}</p></article>)}</div>
+    <aside class="aba-direct-answer"><Icon name="book" size={34}/><div><p class="eyebrow">A direct answer</p><h3>What is ABA therapy for children?</h3><p>Applied Behavior Analysis, also written Applied Behaviour Analysis, uses careful observation and learning principles to understand behaviour and support useful abilities. Goals should matter in the child’s life, respect communication and preferences, and be reviewed where the ability is needed.</p></div><a href="https://www.bacb.com/about-behavior-analysis/">Read the BACB educational definition ↗</a></aside>
+    <p class="source-note">The BACB source defines behaviour analysis; it does not endorse Pinnacle or establish a professional’s credentials. Individual assessment and professional judgement guide whether behavioural support is appropriate.</p>
+    <div class="assessment-route"><a href="#first-visit"><Icon name="clock"/>First conversation</a><a href="#everyday-example"><Icon name="people"/>See one example</a><a href="#centres"><Icon name="pin"/>Find a centre</a></div>
+  </section>
+
+  <section class="section aba-first" id="first-visit" aria-labelledby="aba-first-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">Bring one everyday moment</p><h2 id="aba-first-title">We will listen first.<br/><em>Then examine the whole picture.</em></h2></div><p>You do not need to arrive knowing which therapy to choose. Tell us what happened, what your child may have needed and what you hope can become more workable. A suitable professional can help determine the next step.</p></div>
+    <div class="aba-lens-grid">{assessmentLens.map(([icon,title,text])=><article><span><Icon name={icon} size={27}/></span><h3>{title}</h3><p>{text}</p></article>)}</div>
+    <div class="technology-bridge"><Icon name="shield" size={30}/><p><strong>A safety boundary.</strong> Behavioural support should not replace assessment of pain, health, mental-health, communication, sensory or environmental factors. Relevant professionals should be involved when indicated. <a href="https://www.nice.org.uk/guidance/cg170/chapter/recommendations">Read NICE recommendations 1.4.7–1.4.9 ↗</a></p></div>
+    <div class="aba-first-actions"><a class="button primary" href={phone.href}><Icon name="phone"/>Call {phone.display}</a><a class="button outline" href={abaEnquiry}>Arrange a first conversation <Icon name="arrow"/></a></div>
+  </div></section>
+
+  <section class="section wrap difference aba-difference" id="pinnacle-difference" aria-labelledby="aba-difference-title">
+    <div class="story-heading"><p class="eyebrow">Seven connected stages · One life in view</p><h2 id="aba-difference-title">Do not stop at changing a behaviour.<br/><em>Build toward the life it serves.</em></h2><p>A brick gains meaning because it helps form a home. In the same way, a technique or individual goal gains direction from the life your child is growing toward. That direction helps organise what to understand, what to teach, who to involve, where to practise and what to review.</p></div>
+    <p class="life-purpose-line">The life we work toward: <strong>growing self-sufficiency · mainstream participation · a wonderful life.</strong></p>
+    <ol class="aba-stage-grid">{content.pathway.stages.map(([icon,title,text],i)=><li><span class="aba-stage-icon"><b>{i+1}</b><Icon name={icon} size={29}/></span><h3>{title}</h3><p>{text}</p></li>)}</ol>
+    <div class="aba-paradigm-links"><a class="text-link" href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Read the documented life-first approach <Icon name="arrow"/></a><EvidenceLinks group="practice" label="See how goals, practice and feedback connect"/></div>
+    <p class="source-note">This is Pinnacle’s documented programme direction. “Toward” describes the purpose of planning and review; it is not a guarantee of independence, school entry, inclusion or a particular outcome.</p>
+  </section>
+
+  <section class="section aba-example" id="everyday-example" aria-labelledby="aba-example-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">One respectful example · Communication before compliance</p><h2 id="aba-example-title">A difficult transition.<br/><em>A useful way to say “break”.</em></h2></div><p>The aim is not to make a child appear compliant. The aim is to understand the moment, support communication and make participation safer, more comfortable and more meaningful.</p></div>
+    <figure class="aba-story"><Image src={communicationJourney} widths={[480,800,1200,1680]} sizes="(min-width:1360px) 1280px, calc(100vw - 36px)" width={1680} height={945} format="webp" quality={82} loading="lazy" decoding="async" alt="An Indian child communicates a need using a picture with a professional, while his mother observes, then chooses to rejoin a learning activity with another child."/><figcaption>Illustrative process: the child communicates a need, the adult responds and the team reviews participation. This is not an individual treatment plan or promised result.</figcaption></figure>
+    <ol class="aba-cycle">{exampleSteps.map(([title,text],i)=><li><span>{i+1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol>
+  </div></section>
+
+  <section class="section wrap aba-team" id="integrated-support" aria-labelledby="aba-team-title">
+    <div class="split-heading"><div><p class="eyebrow">One child. Distinct contributions. One shared direction.</p><h2 id="aba-team-title">Behaviour may be one part<br/><em>of a larger picture.</em></h2></div><p>The child-specific plan determines which professionals and supports are relevant. Every child does not need every therapy, and one discipline should not silently take the place of another.</p></div>
+    <div class="aba-discipline-grid">{disciplines.map(([icon,title,text])=><article><span><Icon name={icon} size={28}/></span><h3>{title}</h3><p>{text}</p></article>)}</div>
+  </section>
+
+  <section class="section aba-review" id="measurement-and-review" aria-labelledby="aba-review-title"><div class="wrap aba-review-grid">
+    <div><p class="eyebrow">Measurement with the child’s life still in view</p><h2 id="aba-review-title">PinnacleAI supports review.<br/><em>People remain responsible for care.</em></h2><p>PinnacleAI GPT-OS v1.0.0 supports developmental ability measurement, readiness tracking, progress forecasting and adaptive plan support within its licensed non-diagnostic scope. Professionals and families interpret the information and make care decisions.</p><div class="aba-proof-links"><a href={url('/verify/evidence/records/md5.html')}>Inspect the MD-5 licensed scope ↗</a><a href={url('/verify/evidence/records/bis.html')}>Inspect the BIS schedule and limits ↗</a><a href={url('/verify/evidence/research-library.html')}>Inspect research status and methods ↗</a></div></div>
+    <aside class="aba-observation"><Icon name="loop" size={34}/><p class="eyebrow">Bring these questions into review</p><h3>Your child’s voice and your family’s knowledge belong here.</h3><ul><li>What mattered to the child?</li><li>How did the child communicate choice, refusal or discomfort?</li><li>What happened more easily?</li><li>What support was still needed?</li><li>Did it work in another relevant setting?</li><li>What should the team change next?</li></ul></aside>
+  </div></section>
+
+  <TherapyTogether current="aba" />
+
+  <section class="section evidence-section" id="evidence" aria-labelledby="aba-evidence-title"><div class="wrap">
+    <div class="split-heading"><div><p class="eyebrow">Confidence you can inspect</p><h2 id="aba-evidence-title">A persuasive story.<br/><em>A visible evidence trail.</em></h2></div><p>Pinnacle publishes source documents, status labels and limits. Licences define the software and management-system scope; they do not certify ABA outcomes or guarantee what will happen for an individual child.</p></div>
+    <div class="evidence-cards">{proofCards.map(card=><article><span class="proof-icon"><Icon name={card.title.startsWith('Class')?'shield':card.title.startsWith('BIS')?'plan':'book'} size={35}/></span><span class="card-tag">{card.tag}</span><h3>{card.title}</h3><p>{card.text}</p><span class="record-reference">{card.ref}</span><a class="text-link" href={url(card.link)}>{card.label} <Icon name="arrow"/></a></article>)}</div>
+    <div class="aba-source-grid"><article><h3>Functional, measurable support</h3><p>NICE describes functional assessment, environmental factors, quality-of-life-linked outcomes, before-and-after measurement and agreement across the people involved.</p><a href="https://www.nice.org.uk/guidance/cg170/chapter/recommendations">NICE CG170 recommendations ↗</a></article><article><h3>Child and family-centred safeguards</h3><p>The American Academy of Pediatrics describes individualized, strength-based, family-centred support and avoiding aversive or traumatic practices.</p><a href="https://www.aap.org/en/patient-care/autism/considerations-for-prescribing-recommending-common-supports-and-services-for-children-on-the-autism-spectrum/">AAP considerations ↗</a></article><article><h3>Independence and participation</h3><p>WHO describes rehabilitation as person- and family-centred support for functioning, independence and participation in education and community life.</p><a href="https://www.who.int/news-room/fact-sheets/detail/rehabilitation">World Health Organization ↗</a></article></div>
+    <div class="aba-transparency"><a href={url('/verify/')}><Icon name="shield"/>Verify evidence library</a><a href={url('/verify/evidence/records/appreciations.html')}><Icon name="book"/>Government source letters</a><a href={url('/verify/evidence/records/awards.html')}><Icon name="sun"/>Awards and stage records</a><a href={url('/verify/evidence/cite.html')}><Icon name="link"/>Cite Pinnacle sources</a></div>
+    <p class="source-note">External guidance explains applicable principles and does not endorse Pinnacle. Government letters retain their stated context; they are not presented as regulatory or clinical endorsement. Award and nomination records retain their documented stage.</p>
+    <p class="source-note source-downloads"><a href="/pinnacle-pages-data/aba-therapy-evidence.txt">Claims and sources for this page</a> · <a href="/pinnacle-pages-data/aba-therapy-evidence.json">Download source map (JSON)</a></p>
+  </div></section>
+
+  <CentreDirectory pagePath={content.path} enquiryTarget={abaEnquiry}/>
+
+  <section class="section wrap faq-section" id="questions" aria-labelledby="aba-faq-title"><div><p class="eyebrow">Before you decide</p><h2 id="aba-faq-title">Clear answers.<br/><em>A respectful first step.</em></h2><a class="text-link" href="https://www.nice.org.uk/guidance/cg170/chapter/recommendations">Functional assessment and support · NICE ↗</a></div><div>{content.faqs.map(f=><details><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div></section>
+
+  <section class="final-cta" id="next-step" aria-labelledby="aba-next-title"><div class="wrap"><div class="close-sun official-close"><Image src={emblem} width={96} height={96} format="webp" loading="lazy" alt="Pinnacle official pinwheel emblem"/></div><p class="eyebrow">Every Child Counts®</p><h2 id="aba-next-title">Start with one everyday moment<br/>you want to understand.</h2><p>Tell us what is happening and what you hope can become more workable.<br/>We’ll help you find a suitable centre and first professional conversation.</p><div class="final-actions"><a class="button white" href={phone.href}><Icon name="phone"/>Call {phone.display}</a><a class="button light-outline" href={abaEnquiry}>Start a conversation <Icon name="arrow"/></a></div><div class="close-moments"><span><Icon name="voice"/>A need to communicate.</span><span><Icon name="home"/>A routine to navigate.</span><span><Icon name="people"/>A life to take part in.</span></div><p class="final-guidance">Free guidance, 24/7 · Service, professional, appointment and fees confirmed by the team.</p><a class="helpline-link" href={url('/national-autism-helpline')}>Pinnacle / BHCL National Autism Helpline →</a></div></section>
+</PageLayout>

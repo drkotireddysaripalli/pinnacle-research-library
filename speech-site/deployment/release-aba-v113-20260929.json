@@ -1,0 +1,56 @@
+{
+  "releasedAt": "2026-09-29T13:40:26.643Z",
+  "canonical": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+  "worker": "pinnacle-verify-route",
+  "versionId": "f7bc9cc8-874d-400d-9268-54de72013ede",
+  "deploymentId": "178f79d5-dec8-4934-9b8f-aa6e352bedc8",
+  "rollbackVersionId": "e2bdc8ce-bb5b-4df4-b515-03273f9c70e1",
+  "releaseDirectory": "release-portal-aba-v113-final-20260929",
+  "workerSourceSha256": "d8bfc0ad229f8a47c160c8aa19464f2373a8e146a78d2d4d25a804e450190424",
+  "assetInventoryCount": 757,
+  "releaseUnionFileCount": 1393,
+  "routes": [
+    {
+      "id": "d0ff46cd329c40be866cee92f1001609",
+      "pattern": "www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate*"
+    },
+    {
+      "id": "bdfeb33ce8bf4f16aeee8d98c834fa9f",
+      "pattern": "www.pinnacleblooms.org/aba-therapy*"
+    },
+    {
+      "id": "c731a3ea787b437aa6236aba3ad74656",
+      "pattern": "www.pinnacleblooms.org/t/aba-therapy*"
+    },
+    {
+      "id": "cd40f205759b42a1a8d75b6254d12ef7",
+      "pattern": "www.pinnacleblooms.org/aba-therapy"
+    }
+  ],
+  "redirectRule": {
+    "rulesetId": "cfec803096ba4d5d9479e338c8f4ed3f",
+    "rulesetVersion": 30,
+    "ruleId": "3467c3c66e2549aa8178937e9aed4b85",
+    "status": 301,
+    "preservesQuery": true
+  },
+  "checks": {
+    "build": "passed",
+    "focusedTests": "54/54 passed",
+    "responsiveWidths": [390, 768, 1440],
+    "horizontalOverflow": false,
+    "liveGate": "passed",
+    "machineDelivery": "7/7 managed HTML routes match staged builds after removing only Cloudflare's injected Web Analytics beacon",
+    "openGraphImage": "HTTP 200 image/jpeg; 1200 x 630",
+    "indexNow": "HTTP 200; submission only",
+    "googleSearchConsole": "The signed-in account exposed only the /verify/ URL-prefix property, which does not cover the ABA canonical; no direct URL Inspection submission was made."
+  },
+  "receipts": [
+    "deployment/aba-live-20260929.json",
+    "deployment/indexnow-aba-v113-20260929.json",
+    "deployment/aba-routes-v113-20260929.json",
+    "reviews/CLOUDFLARE-MACHINE-FINAL-20260928.json",
+    "audits/local-responsive-shell-audit-aba-v113.json"
+  ],
+  "meaning": "Publication, route behavior, responsive rendering, machine retrieval, source delivery and IndexNow submission are verified. This receipt does not claim discovery, indexing, ranking, AI citation, calls or enrolment."
+}
