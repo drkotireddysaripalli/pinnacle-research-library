@@ -121,6 +121,7 @@ The immediate next build is Occupational Therapy, followed by Autism Therapy, AB
 
 ## Source of truth
 
+- Public source release: https://github.com/drkotireddysaripalli/pinnacle-research-library/commit/f524e559d76541f93cf8737725b7bf434c21721f
 - API contract: `ENROLMENT-API-CONTRACT.md`
 - Live adapter: `deployment/enrolment-handler.mjs`
 - Release configuration: `deployment/wrangler-enrolment-live-20260929.jsonc`

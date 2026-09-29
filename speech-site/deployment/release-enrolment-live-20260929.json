@@ -253,5 +253,10 @@
     }
   ],
   "priorityMethod": "Editorial build-priority score based on search intent, conversion value, enrolment proximity and reusable implementation readiness; not a traffic or revenue forecast.",
-  "immediateNextBuild": "Occupational Therapy"
+  "immediateNextBuild": "Occupational Therapy",
+  "sourceCode": {
+    "repository": "https://github.com/drkotireddysaripalli/pinnacle-research-library",
+    "releaseCommit": "f524e559d76541f93cf8737725b7bf434c21721f",
+    "rawApiCapturesPublished": false
+  }
 }
