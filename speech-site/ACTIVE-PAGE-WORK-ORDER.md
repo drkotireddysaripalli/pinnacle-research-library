@@ -1,5 +1,7 @@
 # Active page work order · v134 closed; eight prepared centres next
 
+**CURRENT UNION / COMMON LINKS V134A:** nine section/destination corrections made once in shared navigation/footer source and released across all 29 pages. Source `b23811c` pushed before Worker `8a412c3a-2531-40c3-a677-0b8ba40faa7d` at 100%. All 29 accepted bodies, 155 routes, bindings and 12 protected controls remain; public replacement anchors/contact and Chrome/Edge menu checks passed. Shared design remains v133. Receipt: `RELEASE-NAVIGATION-V134A-20261001.md`.
+
 **COMPLETED V133:** shared header/footer/Verify hierarchy and source-context/call-path update across all 25 managed pages. Source `73d6385` pushed before Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` at 100%. All accepted bodies, 155 routes and four bindings remain; 25 owned HTML/common shells, seven stylesheets, 12 protected controls, 15 local/15 production responsive cases and representative Nu HTML check passed. Receipt: `RELEASE-SHARED-SHELL-V133-20261001.md`.
 
 **COMPLETED V134:** Nandyala, Ongole, Tirupati and Srikakulam. Source `4e522993ffc9305a81de110474a54f8131e15e75` pushed before Worker `a094769b-0528-4577-b832-b0a6a1544c21` served 100%. All 29 public shells, 25 prior accepted bodies, 25 changed assets/exports, 12 protected controls and 28 production responsive cases passed. Exactly four existing centre routes changed; 151 others and all bindings remain. IndexNow four-URL batch returned 200. External Nu returned 429 without a result. Receipt: `RELEASE-CENTRE-BATCH-V134-20261001.md`.

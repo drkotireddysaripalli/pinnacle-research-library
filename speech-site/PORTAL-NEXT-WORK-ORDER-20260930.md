@@ -1,6 +1,6 @@
 # Whole-portal continuation work order
 
-The live delivery ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. This file orders work after **served union v134 / 29 managed public pages, using common shell v133**. The full private URL register and public aggregate/navigation registers cover the wider estate; a sitemap entry does not automatically need a rebuild or prove indexing. Preserve the outcome, design depth, shared shell and source discipline in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
+The live delivery ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. This file orders work after **served union v134a / 29 managed public pages, using v133 design and corrected common links**. The full private URL register and public aggregate/navigation registers cover the wider estate; a sitemap entry does not automatically need a rebuild or prove indexing. Preserve the outcome, design depth, shared shell and source discipline in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
 
 ## 1. Finish the bounded priority portfolio
 
@@ -21,6 +21,8 @@ Completed v130: Assessment on `/speech-aba-autism-assessments`, the factual shar
 **Nine local profiles are complete. Remaining: 51 standalone profiles plus two contact-page sections.** Source-prepared next eight: **Miryalaguda, Nallagandla, Kakinada, Nellore, Attapur, Karimnagar, Himayat Nagar and Santosh Nagar**. Exact contracts are in `reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`. This order reflects available sources/media, not measured search demand. Preserve all four different dated HFR states and certificate-backed versus workbook-only source levels; parameterise the generator before implementation. No new page in this next batch is built yet.
 
 Specific field/media conditions are in `reviews/CENTRE-SOURCE-CONDITIONS-20261001.json`: six postcode-field differences, Gachibowli’s different HFR premises, Gajuwaka’s missing enquiry mapping, and image exclusions. Kadapa can use an illustration-led page without a premises gallery. Gajuwaka can use explicit call-only/general enquiry; postcode can remain omitted when unresolved. Duplicate Attapur/Himayat imagery is excluded pending attribution. Tirupati/Srikakulam exclusions remain future asset-reuse conditions, not blockers for their released pages. Useful independent work continues.
+
+Next common centre-source edit also fixes the body identity citation from absent `/verify/#organization` to proven `/verify/#chapter-identity`; v134a corrected the shared footer separately. This remaining body-link defect is recorded in `reviews/CENTRE-BATCH-V135-WORK-ORDER-20261001.md` and is not represented as a completed v134a body change.
 
 Each next page retains its exact URL, branch address/Maps/media, national phone and selected-centre enquiry, with a unique useful family example and local arrival questions. Use the common renderer without relabelling another branch’s poster. Freeze each source contract; create a complete original branded creative directly through the built-in ChatGPT tool; implement, perform one consolidated focused validation, source-push, full-union deploy, exact route and public readback. Unknown current operating/service/staffing/hours/fees/access/rating facts remain current-team confirmation steps. A dated HFR or workbook status is not current operation or an outcome.
 
@@ -93,4 +95,4 @@ Items with a specific external fact/access/rights condition remain attached to t
 - Review narrative, claims and acquisition read-only, then perform one consolidated fix pass. Build and test at meaningful boundaries; repeat only affected checks after a new change or failure.
 - Preserve the existing full-union Worker route set and bindings. Commit/push before publication. Keep a rollback and public verification receipt. Routine stage artifacts are ignored; do not confuse local previews with released URLs.
 
-Current front door: `PORTAL-DELIVERY-MAP-20261001.md`. Current union: `RELEASE-CENTRE-BATCH-V134-20261001.md`; common source: `RELEASE-SHARED-SHELL-V133-20261001.md`. Eight prepared centres are the next implementation package; the common shell is complete.
+Current front door: `PORTAL-DELIVERY-MAP-20261001.md`. Current union/common links: `RELEASE-NAVIGATION-V134A-20261001.md`; latest centre bodies: `RELEASE-CENTRE-BATCH-V134-20261001.md`; shared design: `RELEASE-SHARED-SHELL-V133-20261001.md`. Eight prepared centres are the next implementation package.

@@ -4,9 +4,11 @@ import assert from 'node:assert/strict';
 
 // Reconcile a release against the saved population. No network crawl or submission.
 const base='https://www.pinnacleblooms.org',stamp='20260930';
-const receiptPath=process.argv[2]||'deployment/centre-batch-live-v134-20261001.json';
-const portfolioRelease=process.argv[3]||'v134';
+const receiptPath=process.argv[2]||'deployment/navigation-public-v134a-20261001.json';
+const portfolioRelease=process.argv[3]||'v134a';
 const expectedManaged=Number(process.argv[4]||29);
+const commonShellRelease=process.argv[5]||'v134a';
+const centreContentRelease=process.argv[6]||'v134';
 const preparedSourcePath='reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json';
 const preparedSources=JSON.parse(await fs.readFile(preparedSourcePath,'utf8'));
 const prepared=new Map(preparedSources.contracts.map(row=>[row.id,row]));
@@ -24,7 +26,7 @@ assert.equal(inventory.checkedAt,summary.checkedAt,'Keep the dated population ob
 const updatedAt=new Date().toISOString();
 for(const row of inventory.rows){const parsed=new URL(row.url);if(parsed.origin===base&&!parsed.search&&!parsed.hash&&managed.has(parsed.pathname)){
  row.state='released_managed_'+portfolioRelease+'_portfolio';row.releaseEvidence=receiptPath;row.canonicalVerified=true;
- row.nextCondition='Preserve accepted body and common v133 shell; observe actual discovery, citation and calls. Reopen only for a concrete defect, evidence change or explicit useful example package.';
+ row.nextCondition='Preserve accepted body and common '+commonShellRelease+' shell; observe actual discovery, citation and calls. Reopen only for a concrete defect, evidence change or explicit useful example package.';
 }}
 inventory.releaseStateUpdatedAt=updatedAt;inventory.releaseEvidence=receiptPath;
 const csv=rows=>{const keys=[...new Set(rows.flatMap(row=>Object.keys(row)))];const quote=value=>'"'+String(Array.isArray(value)?value.join(' | '):value??'').replaceAll('"','""')+'"';return[keys.map(quote).join(','),...rows.map(row=>keys.map(key=>quote(row[key])).join(','))].join('\n')+'\n';};
@@ -40,11 +42,12 @@ const listed=new Set(inventory.rows.map(row=>row.url));
 const navRows=occurrences.map(row=>{const absolute=new URL(row.url,base),lookup=new URL(absolute);lookup.hash='';const internal=['www.pinnacleblooms.org','pinnacleblooms.org'].includes(absolute.hostname);const isManaged=internal&&managed.has(absolute.pathname);return{...row,absoluteUrl:absolute.href,internal,pagePath:internal?absolute.pathname:'',hasFragment:!!absolute.hash,sitemapListedExactUrl:listed.has(lookup.href),state:row.section==='headerFormAction'?'retained_get_search_utility':isManaged?'released_managed_page; fragment_not_rechecked_here':['tel:','mailto:'].includes(absolute.protocol)?'retained_contact_utility':internal&&absolute.pathname.startsWith('/verify/')?'retained_evidence_link':internal?'retained_legacy_destination; role_and_fragment_review_pending':'retained_external_destination; identity_review_as_needed',nextCondition:row.section==='headerFormAction'?'Preserve existing GET search function; search-result parameters are not new page canonicals.':isManaged?'Preserve approved page; validate anchor only when affected by edits.':internal?'Verify exact destination role/content/anchor in its source before edits; absence from sitemap alone is not a defect.':'Preserve useful official/contact/platform role; do not imply platform endorsement.'};});
 for(const family of summary.families){const rows=inventory.rows.filter(row=>row.family===family.family);family.states=Object.fromEntries([...new Set(rows.map(row=>row.state))].map(state=>[state,rows.filter(row=>row.state===state).length]));}
 summary.releaseStateUpdatedAt=updatedAt;summary.releaseEvidence=receiptPath;
-summary.releaseStateMethod='Release and navigation states reconciled from '+portfolioRelease+' public readback; common shell remains v133. Dated sitemap population retained; no estate recrawl.';
+summary.releaseStateMethod='Release and navigation states reconciled from '+portfolioRelease+' public readback; common design v133, navigation corrections '+commonShellRelease+'. Centre content '+centreContentRelease+'. Dated sitemap population retained; no estate recrawl.';
 summary.managedPublicPages=managed.size;
 summary.centreRebuildsReleased=[...managed].filter(path=>path.startsWith('/centers/')).length;
 summary.remainingStandaloneCentreRebuilds=60-summary.centreRebuildsReleased;
-summary.sharedShellRelease='v133';
+summary.sharedShellRelease=commonShellRelease;
+summary.sharedShellDesignRelease='v133';
 summary.currentPortfolioRelease=portfolioRelease;
 summary.nextSourcePreparedCentres=[...prepared.keys()];
 summary.navigationOccurrences=navRows.length;summary.navigationUniqueAbsoluteHrefs=new Set(navRows.map(row=>row.absoluteUrl)).size;summary.navigationInternalPagePaths=new Set(navRows.filter(row=>row.internal).map(row=>row.pagePath)).size;
@@ -61,9 +64,9 @@ const privateByUrl=new Map(inventory.rows.map(row=>[row.url,row]));
 for(const centre of centres){
  const url=new URL(centre.existing_profile_url);
  const released=!url.hash&&managed.has(url.pathname);
- centre.shared_shell_release=released?'v133; public common-shell readback passed in '+portfolioRelease:'retained origin; migrate on individual page release';
+ centre.shared_shell_release=released?commonShellRelease+'; v133 design; public common-shell readback passed':'retained origin; migrate on individual page release';
  if(currentCentrePages.has(centre.id)){
-  centre.state='REBUILT_RELEASED_'+portfolioRelease.toUpperCase()+'; PUBLIC_READBACK_PASSED';
+  centre.state='REBUILT_RELEASED_'+centreContentRelease.toUpperCase()+'; PUBLIC_READBACK_PASSED';
   centre.next_condition='Preserve exact canonical, individual branded creative, eligible matched media, dated HFR source, selected enquiry and common shell. Confirm current appointments/professionals/fees/access through team; observe search/citation/calls separately. Receipt: '+receiptPath;
  }else if(!released&&prepared.has(centre.id)){
   const source=prepared.get(centre.id);
@@ -80,7 +83,7 @@ for(const centre of centres){
 await fs.writeFile(centresPath,csv(centres));
 const ledger=await fs.readFile('PORTAL-PAGE-LEDGER-AND-SITEMAP-'+stamp+'.md','utf8');
 const queue=[];
-for(const line of ledger.split(/\r?\n/)){if(!/^\| (REF-|A-\d|B-\d|CENTRE-|GUIDE-)/.test(line))continue;const[id,canonical,audienceJob,contentState,nextCondition]=line.split('|').slice(1,-1).map(value=>value.trim());const pathname=canonical.replaceAll('`','');assert(managed.has(pathname),'Published ledger route absent from live release: '+pathname);queue.push({id,url:base+pathname,family:id.startsWith('CENTRE-')?'centres':id.startsWith('GUIDE-')?'guides':id.startsWith('B-')?'pinnacleai':'services',state:'PUBLISHED; PUBLIC_READBACK_PASSED',content_state:contentState,shell_state:'COMMON_V133',priority:0,audience_job:audienceJob,next_condition:nextCondition,release_evidence:receiptPath});}
+for(const line of ledger.split(/\r?\n/)){if(!/^\| (REF-|A-\d|B-\d|CENTRE-|GUIDE-)/.test(line))continue;const[id,canonical,audienceJob,contentState,nextCondition]=line.split('|').slice(1,-1).map(value=>value.trim());const pathname=canonical.replaceAll('`','');assert(managed.has(pathname),'Published ledger route absent from live release: '+pathname);queue.push({id,url:base+pathname,family:id.startsWith('CENTRE-')?'centres':id.startsWith('GUIDE-')?'guides':id.startsWith('B-')?'pinnacleai':'services',state:'PUBLISHED; PUBLIC_READBACK_PASSED',content_state:contentState,shell_state:'COMMON_'+commonShellRelease.toUpperCase(),priority:0,audience_job:audienceJob,next_condition:nextCondition,release_evidence:receiptPath});}
 assert.equal(queue.length,expectedManaged,'Exact managed page ledger completeness');
 for(const centre of centres){const url=new URL(centre.existing_profile_url);if(!url.hash&&managed.has(url.pathname))continue;const sourcePrepared=prepared.has(centre.id);queue.push({id:'CENTRE-'+centre.id,url:centre.existing_profile_url,family:'centres',state:url.hash?'SECTION_ONLY_DESTINATION_DECISION':sourcePrepared?'SOURCE_PREPARED; NOT_BUILT':conditions.has(centre.id)?centre.state:'QUEUED_FOR_BRANCH_REVIEW',content_state:centre.state,shell_state:centre.shared_shell_release,priority:sourcePrepared?1:url.hash?2:3,audience_job:'Find '+centre.name+'; confirm the current branch and useful first conversation',next_condition:centre.next_condition,release_evidence:sourcePrepared?preparedSourcePath:conditions.has(centre.id)?'reviews/CENTRE-SOURCE-CONDITIONS-20261001.json':''});}
 assert.equal(queue.length,82);assert.equal(new Set(queue.map(row=>row.url)).size,82);

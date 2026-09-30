@@ -1,6 +1,6 @@
 # Pinnacle portal page ledger and delivery sitemap
 
-1 October 2026 · v134 served union, v133 common shell; sitemap population observed 30 September
+1 October 2026 · v134a served union, v133 design with shared navigation corrections; sitemap population observed 30 September
 
 This is the operational ledger for the **17 priority destinations** in `PORTAL-PAGE-INVENTORY-20260929.md`: two reference pages, six parent-demand pages and nine PinnacleAI product pages. It distinguishes a live URL from a page that has passed editorial review. It does not count every legacy, centre-profile, Verify or Ask page in the wider domain.
 
@@ -16,7 +16,9 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | Additional rebuilt local centres | 9 | Suchitra v131; four centres v132; Nandyala, Ongole, Tirupati and Srikakulam v134. |
 | Total managed public HTML routes in v134 | 29 | Seventeen priority pages, three guides and nine centres. Preview and shell/test index are excluded. |
 
-**Latest served union:** v134 is public across all 29 managed pages. Source `4e52299` was pushed before Worker `a094769b-0528-4577-b832-b0a6a1544c21` began serving 100%. Four new centre pages, 25 changed assets/exports, all 29 owned HTML/common shells and 28 production responsive runs passed. The 25 prior accepted main bodies and 12 protected controls remain unchanged. Exactly four existing centre routes were retargeted; the other 151 and all four bindings remain. One material four-URL IndexNow batch returned 200. External Nu returned 429, with no validation result. See `RELEASE-CENTRE-BATCH-V134-20261001.md`.
+**Latest served union:** v134a fixes nine common navigation/footer destinations across all 29 managed pages, preserving all 29 accepted main bodies. Source `b23811ce3fef5b517deb6ad6a51e36b8f2e3c3bc` was pushed before Worker `8a412c3a-2531-40c3-a677-0b8ba40faa7d` served 100%. All 29 public owned HTML/common shells, 12 protected controls and eight replacement anchors plus the general contact destination passed. Four local and four production Chrome/Edge cases passed. All 155 routes and bindings remain unchanged. No repeated IndexNow notification. See `RELEASE-NAVIGATION-V134A-20261001.md`.
+
+**Latest centre bodies:** v134 published Nandyala, Ongole, Tirupati and Srikakulam. Source `4e52299` was pushed before Worker `a094769b-0528-4577-b832-b0a6a1544c21` began serving 100% at that release. Four new pages, 25 changed assets/exports, all 29 shells and 28 production responsive runs passed. The 25 prior accepted main bodies and 12 protected controls remained unchanged. Exactly four existing centre routes were retargeted; the other 151 and all bindings remained. One material four-URL IndexNow batch returned 200. External Nu returned 429 without a validation result. See `RELEASE-CENTRE-BATCH-V134-20261001.md`.
 
 **Latest common-shell source release:** v133 was published across the original 25 managed pages and is now reused by all 29 in v134. Source `73d6385` was pushed before its Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` served 100% at that release. All 25 owned HTML/common shells matched, accepted main bodies and 12 protected controls remained unchanged, seven stylesheets matched and 15 production responsive runs passed. All 155 routes and four bindings remained unchanged. Native footer/Verify disclosures work without JavaScript. No repeated IndexNow notification for that navigation-only change. See `RELEASE-SHARED-SHELL-V133-20261001.md`.
 
@@ -30,7 +32,7 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 
 ## Page-by-page route and work ledger
 
-All 29 rows below use the common v133 header/footer in the live v134 union; their accepted main bodies keep the separately recorded content releases.
+All 29 rows below use the common v133 design with v134a navigation/footer corrections in the live v134a union; their accepted main bodies keep the separately recorded content releases.
 
 | ID | Canonical URL | Audience job | Current state | Next meaningful work |
 |---|---|---|---|---|
@@ -136,14 +138,14 @@ Every full-register URL has a stable ID, sitemap source, family, work state, can
 
 Nine centre profiles are complete. **51 standalone centre rebuilds** remain, plus **two section-only destinations**. Eight next contracts are prepared: Miryalaguda, Nallagandla, Kakinada, Nellore, Attapur, Karimnagar, Himayat Nagar and Santosh Nagar. Kadapa has an illustration-led alternative. Exact address/postcode/enquiry/media conditions remain attached to affected centres. Source-readiness ordering is not a measured search-demand ranking. Search, AI citation and connected-call/enrolment results remain separate work.
 
-## Current delivery continuation · v134
+## Current delivery continuation · v134a
 
-The existing 59,082-URL snapshot is retained with its 30 September population timestamp. Release states, source evidence and the centre queue are reconciled from the v134 public checks without repeating the whole crawl. Current managed count 29, rebuilt centre count 9, standalone remaining 51, contact sections 2. The shared source release remains v133. Current navigation counts are 256 occurrences / 216 unique absolute hrefs / 119 internal paths; the earlier 249/213/117 observation is historical. Eight source-prepared contracts and route-specific conditions are reconciled into the saved population and the 82-row public delivery queue.
+The existing 59,082-URL snapshot is retained with its 30 September population timestamp. Release states, source evidence and the centre queue are reconciled from v134a public checks without repeating the whole crawl. Current managed count 29, rebuilt centre count 9, standalone remaining 51, contact sections 2. Common design remains v133; current common links are v134a. Navigation counts are 256 occurrences / 215 unique absolute hrefs / 118 internal paths. Earlier 256/216/119 and 249/213/117 observations are historical. Eight prepared contracts and precise conditions are reconciled into the saved population and the 82-row queue.
 
 Next source-prepared eight: **Miryalaguda, Nallagandla, Kakinada, Nellore, Attapur, Karimnagar, Himayat Nagar and Santosh Nagar** in `reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`. Their exact HFR states and source levels must replace any generator assumption of Approved/certificate copy. Kadapa, Gachibowli, Gajuwaka and postcode/media alternatives are recorded separately. Source-readiness order is not a measured query-demand ranking.
 
 Common-shell density/call-context is complete in v133. Useful product examples, staff/bot sitemap variability, Ads-consent ownership, legacy/core source/search roles, multilingual FAQ/Ask/child-story eligibility and relevant off-page authority remain in `PORTAL-NEXT-WORK-ORDER-20260930.md`. Eligible investigations can proceed alongside centre implementation. Published, submitted, indexed, cited, connected call and accepted enquiry are separate states.
 
-## Current navigation and complete delivery map · v134
+## Current navigation and complete delivery map · v134a
 
-The source-collected navigation register contains **256 occurrences / 216 distinct absolute destinations / 119 same-domain paths**. It includes footer overview links, header source context and the GET search action; these are not counts of every repeated DOM anchor. The complete current work map is `PORTAL-DELIVERY-MAP-20261001.md`. Common-shell density/context/call-path work is released in v133 and retained in v134; specific product examples and private decision aids remain pending. Next implementation: eight prepared centre contracts. The delivery queue remains 82 rows: 29 published + 51 pending standalone + two sections.
+The source-collected navigation register contains **256 occurrences / 215 distinct absolute destinations / 118 same-domain paths**. The original 119-path audit returned all pages but found nine missing recorded fragments. The common-source v134a corrections passed public target checks; the original audit remains dated evidence. Collection counts changed because obsolete ABA fragments now use the exact canonical and an existing contact destination. The complete work map is `PORTAL-DELIVERY-MAP-20261001.md`. Common density/context design is v133, links are v134a; specific product examples and private decision aids remain pending. Next implementation: eight prepared centre contracts. The delivery queue remains 82 rows: 29 published + 51 pending standalone + two sections.

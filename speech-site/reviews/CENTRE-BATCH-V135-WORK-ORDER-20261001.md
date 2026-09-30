@@ -29,6 +29,10 @@ All eight source flags are ACTIVE. Current operation/service availability is not
 
 The existing centre-contract helper assumes Approved and certificate copy. Replace that assumption with brief-specific status and source level. Support nullable certificate date/page for workbook-only records. Preserve Query Resolved exactly; do not interpret it as Approved. Existing nine published centres must keep their accepted content, source meanings and social versions.
 
+First code location: `src/data/centre-detail-content.ts`, the shared `facilityScope`, `facilityDisplay` and `facilityRecord` construction. Exports in `scripts/build-centre-detail-machine.mjs` must read those actual fields. Add meaningful cases for certificate-backed Approved, workbook-only Submitted, Query Raised and Query Resolved, retaining INACTIVE/current-operation distinctions.
+
+One concrete source-link correction belongs in that same next package: the centre contracts still use `/verify/#organization` for their body identity source. The bounded audit proved that anchor absent; use the proven `/verify/#chapter-identity`. The v134a common footer already uses it. This is a justified body-link correction across the eight generated centre contracts, not a redesign; verify the changed link while retaining other accepted narrative. Suchitra uses its separate source contract.
+
 Use the actual source data in visible proof, JSON/text/Markdown, LocalBusiness facts and focused checks. The change belongs in the common centre source/generator, not eight duplicated page implementations. A future header/footer change belongs in its shared files and is rebuilt across every managed page.
 
 ## Narrative sequence for each page

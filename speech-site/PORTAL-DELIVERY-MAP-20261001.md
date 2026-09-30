@@ -1,10 +1,10 @@
 # Pinnacle portal — complete delivery map
 
-1 October 2026 · v134 live, common shell v133 · Main owner builds and releases; independent reviewers read only
+1 October 2026 · v134a live, v133 design with common navigation corrections · Main owner builds and releases; independent reviewers read only
 
 ## Current position
 
-**29 managed public pages are live: 17 priority pages, three decision guides and nine centre pages.** The common header and common footer, with Verify inside the footer, use the shared v133 source across those pages. The current served union is v134. The exact 29 destinations and their individual remaining conditions are in `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. Their accepted narratives stay intact; a new improvement needs a concrete audience job or verified defect.
+**29 managed public pages are live: 17 priority pages, three decision guides and nine centre pages.** The common header and common footer, with Verify inside the footer, retain the v133 design and use the v134a navigation corrections across those pages. The current served union is v134a; the four newest centre bodies are v134. The exact 29 destinations and their individual remaining conditions are in `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. Their accepted narratives stay intact; a new improvement needs a concrete audience job or verified defect.
 
 The 62-entry centre register contains 60 standalone profiles and two contact-page sections. Nine profiles have been rebuilt. **51 standalone profiles remain: eight source-prepared next, then 43 further profiles.** Kadapa has a documented illustration-led alternative among the latter. Jubilee Hills and USA remain section-only decisions, not invented new URLs.
 
@@ -14,7 +14,7 @@ The wider sitemap register retains its **30 September** observation: 23 sitemap 
 
 | Order | Page group / destination | State | Work and completion gate |
 |---|---|---|---|
-| 1 | Common header/footer/Verify | **v133 complete; used by all 29** | Shared source, mobile authority links and native disclosures; current v134 readback confirms all 29 shells and retains the 25 prior accepted bodies. |
+| 1 | Common header/footer/Verify | **v133 design / v134a links; all 29** | Shared source, mobile authority links and native disclosures. The 119-destination audit found nine missing fragments; all nine shared links are corrected and publicly checked. All 29 accepted bodies remain. |
 | 2 | Nandyala | **v134 released** | Exact canonical, second-floor arrival, getting-ready example, matched premises, original poster, selected enquiry and source exports passed production checks. |
 | 2 | Ongole | **v134 released** | Exact canonical, family-table choice/communication example, frontage/interior, original poster and sourced page package passed production checks. |
 | 2 | Tirupati | **v134 released** | Exact canonical, picture-book example, textual arrival and eligible interior. Google-watermarked exterior remains excluded for possible future reuse. |
@@ -73,11 +73,14 @@ Root sitemap and robots-advertised children are the existing discovery graph. `/
 - `reviews/CENTRE-PAGE-CONTINUATION-QUEUE-20260930.csv`: all 62 location records, current sources and route-specific conditions.
 - `reviews/PORTAL-DELIVERY-QUEUE-20261001.csv`: generated 82-row execution view: 29 managed pages plus 51 pending profiles and two section decisions. It derives from the detailed page and centre ledgers; it is not a second factual source.
 - `reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`: eight next source/media/HFR/enquiry contracts, not built.
+- `reviews/CENTRE-BATCH-V135-WORK-ORDER-20261001.md`: complete individual narrative/creative/implementation/release requirements, including actual HFR source handling and the remaining centre-body identity-anchor correction.
 - `reviews/CENTRE-SOURCE-CONDITIONS-20261001.json`: exact field/media conditions and useful alternatives for other centres.
 - `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`: retained preparation history for the four centres now released in v134.
 - `PORTAL-NEXT-WORK-ORDER-20260930.md`: ordered wider implementation and investigation packages.
 - `reviews/WHOLE-PORTAL-SITEMAP-SUMMARY-20260930.json`: dated population plus current release-state reconciliation.
 - `reviews/PORTAL-NAVIGATION-REGISTER-20260930.csv`: complete source-collected menu/card/direct/overview/context/search destinations, including their origins and conditions.
+- `reviews/PORTAL-NAVIGATION-DESTINATION-AUDIT-20261001.json`: original bounded audit of 119 paths and 54 fragments; nine missing section links, no HTTP failures.
+- `RELEASE-NAVIGATION-V134A-20261001.md`: the nine common-source corrections and verified current union. Current navigation collection is 256 occurrences / 215 distinct destinations / 118 same-domain paths.
 - Ignored `audits/whole-portal-register-20260930/whole-route-register.{json,csv}`: 59,082 exact URL records; private raw inventory, not published child-associated data.
 - Workspace `work/verify-visibility/QUEUE.md`: canonical off-page authority ledger; publication and indexing/citation/endorsement states remain separate.
 
