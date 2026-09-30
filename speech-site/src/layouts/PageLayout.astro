@@ -7,6 +7,7 @@ import { origin, url, phone } from '../data/site';
 import '../styles/page.css';
 import '../styles/portal-shell.css';
 import '../styles/readability.css';
+import '../styles/shared-shell.css';
 const { title, description, socialTitle = title, socialDescription = description, path, label, serviceName, shareImage, shareVersion, serviceType, serviceAreaServed = 'India', assessmentOffer, citations = [], faqs = [], imageAlt, imageCaption, documentOnly = false, includeService = true, pageType = 'WebPage', focused = false, enquiry, publishedOn, updatedOn, breadcrumbParent, previewOnly = false, primaryEntityId, entityGraph = [] } = Astro.props;
 const canonical = url(path);
 const speechDocument=path==='/top-speech-therapy-center-india-proven-improvement-rate'||path.startsWith('/speech-therapy/');

@@ -1,0 +1,13 @@
+# Common header/footer v133 — bounded implementation
+
+1 October 2026. Main owner edits/releases; independent review is read-only. Applies to all25managed pages through actual common components and PageLayout. No accepted page-body redesign, new centre routes, intake/consent changes or image generation in this package.
+
+Changes: compact desktop/tablet logo band and nine-label coloured authority rail; approved full descriptions remain in More. Mobile phone and directVerify/Citations retained, with the seven other authority labels in a compact swipeable rail. Source context separates the900million mission population and Pinnacle’s historical philosophy from dated report findings. Exact owner-approved4B/160Yrslabels are retained; no new efficacy/exclusivity/independent-audit claim.
+
+Native footer disclosure for multi-link groups, locations and community at all widths; explicit heading-overview links retained. Single actions, operator/phone/email and policy links stay visible. Eight featured Verify cards retain icon/value/title/status/read-record link; long scope and dated review text expand natively. All36evidence records and every menu/policy/source destination remain server-rendered. Replace repeated second evidence introduction with a clear first-conversation/call row. No disclosure requires JavaScript.
+
+Source consistency condition: live Verify scale-and-mission page uses400billionaggregateestimate while common owner navigation says4Billion. This design package does not select a new figure or modify either calculation. Retain numeric wording and link its source; source-level reconciliation stays in the ledger.900million is mission reach, not recorded service volume.160years is Pinnacle’s historical framing for life-first purpose, not an independently established failure of every provider.
+
+Acceptance: all25main body bytes and previous shell href destinations retained, all36records and eightfeatured cards present, identical common shell, nooverflow at320/390/768/1024/1440, keyboard/touch More/footer/scope disclosures and no-JS footer access, prominentphone/centres/enrol, selectedform/consent protected. Measure actual before/after header/footer heights; scores are designjudgments, not conversion evidence. Buildonceafterfix, focusedchecks, sourcecommit/push, fullunion/bindings/155routes unchanged, publicownedHTML/assets and protectedbyte readback. No unchangedURL IndexNow batch for a navigation-only release. Rollbackv132ac200e7a-3c20-4d22-a39c-5201aa42d615.
+
+Next centre contracts remain prepared in NEXT-CENTRE-BATCH-SOURCES-20261001.md; no four-centre implementation claim in this shell release.

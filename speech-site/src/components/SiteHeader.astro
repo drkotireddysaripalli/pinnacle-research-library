@@ -33,6 +33,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
       <a href={url('/verify/evidence/cite.html')}><Icon name="book" /><span><strong>Citations</strong><small>Quote · link · download</small></span></a>
     </div>
     <div class="portal-container portal-main-list">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-label={link.detail?`${link.label}: ${link.detail}`:link.label} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</div>
+    <p class="portal-authority-context">Your child’s life gives the work its direction. <a href={url('/verify/evidence/scale-and-mission.html')}>Read the figures, sources and 900-million mission.</a></p>
   </nav>
   <nav class="portal-therapy-nav" aria-label="Therapies and complete Pinnacle navigation"><button class="portal-mobile-menu-trigger" type="button" aria-controls="portal-complete-directory" aria-expanded="false"><Icon name="menu" size={18} />More</button><div class="portal-container portal-therapy-list">
     {navigation.therapy.map(group=><div class="portal-therapy-group"><a class="portal-therapy-title" href={url(group.url)} aria-current={group.url===currentPath?'page':undefined}>{group.label}</a><details class="portal-therapy-menu"><summary aria-label={`${group.label} menu`}><Icon name="chevron" size={15} /></summary><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>)}
@@ -47,6 +48,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
           <section><h2><Icon name="arrow" />Start here</h2><div>{navigation.mobileExtras.map(link=><a href={url(link.url)}>{link.label}</a>)}</div></section>
           <section class="portal-about-priority"><h2><Icon name="heart" />About &amp; Contact</h2><div>{navigation.aboutContact.map(link=><a href={url(link.url)}>{link.label}</a>)}</div></section>
         </div>
+        <div class="portal-source-context"><p><strong>Purpose, scale and evidence.</strong> Pinnacle’s mission is to empower 900 million children, parents and families. The child’s own life remains the starting point for the plan and review.</p><p><a href={url('/verify/evidence/scale-and-mission.html')}>Explore counting definitions and dated report findings →</a></p><p><a href={url('/verify/evidence/pinnacle-paradigm-shift.html#the-historical-challenge')}>Read Pinnacle’s historical case for putting life first →</a></p></div>
         <div class="portal-directory-grid">{directoryGroups.map(group=><section><h2><Icon name={group.icon} />{group.title}</h2><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></section>)}</div>
         <div class="portal-directory-actions">{quickActions.map(link=><a href={url(link.url)}>{link.label}</a>)}<a href={url('/centers')}>Find a centre</a><a href={url('/sitemap')}>Full sitemap</a><a href={url('/verify/')}>Licences, research &amp; evidence</a></div>
       </div>
