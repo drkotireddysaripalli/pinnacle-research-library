@@ -1,16 +1,16 @@
 # Whole-portal continuation work order
 
-The live delivery ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. This file orders the next work after the Assessment candidate; it is not a claim that every sitemap entry deserves a new page or is indexed. Preserve the outcome, design depth, shared shell and exact source discipline in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
+The live delivery ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. This file orders the next work after the released Assessment page; it is not a claim that every sitemap entry deserves a new page or is indexed. Preserve the outcome, design depth, shared shell and exact source discipline in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
 
 ## 1. Finish the bounded priority portfolio
 
-Release Assessment at its existing `/speech-aba-autism-assessments` canonical, the two factual shared-header details, and the named Autism/Enrolment compatibility fixes. Completion requires source push, full-union deployment, public body/image/export checks and the recorded rollback. Then all 17 priority destinations are managed, plus the three speech guides. Keep the 20-route list in the ledger exact.
+Completed v130: Assessment on `/speech-aba-autism-assessments`, the two factual shared-header details and the named Autism/Enrolment compatibility fixes. Source push, full-union deployment, public body/image/export checks and rollback are recorded. All 17 priority destinations are managed, plus three speech guides. Keep the 20-route list in the ledger exact.
 
 ## 2. Centre identity and useful local pages
 
 `reviews/CENTRE-PAGE-CONTINUATION-QUEUE-20260930.csv` seeds all 62 published directory entries with their current source and missing-fact questions. A directory entry is not confirmation of a specialist service, staffing, hours, review score or current business listing.
 
-1. Reconcile the 62 directory entries with the 61 entries in `/sitemaps/centres.xml`: identify the actual absent/duplicate/canonical difference before choosing a repair.
+1. Reconcile the 62 directory entries with the 61 entries in `/sitemaps/centres.xml`: completed reconciliation: 60 standalone profile URLs plus two contact-page fragments (Jubilee Hills and USA). The sitemap has those 60 profiles plus /centers. Check the two section-only destinations before proposing any new standalone page.
 2. Check each branch's legal/brand identity, complete address, national number, current branch number, map/Google Business identity, current opening hours, appointment route, individually available services and professional roles. Retain accurate existing profiles and URLs.
 3. Match consent-cleared first-party exterior, interior, emblem and video assets to the correct branch. Keep real place images distinct from illustrative campaigns.
 4. Choose the first rebuild from verified audience demand and sufficiently complete branch facts; available assets are a preparation signal, not evidence of search demand. Use Search Console/GBP state and current ownership before editing a branch handled by another active source.

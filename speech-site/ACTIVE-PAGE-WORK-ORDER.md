@@ -1,6 +1,6 @@
 # Active page work order — Child Development Assessment
 
-30 September 2026 · Candidate v130. Baseline v129: source/receipt HEAD fab29f9; Worker 4cb916cd-5683-4ea9-829d-82ccf3f812da. The owner in this task edits, builds and deploys; reviewers are read-only. Completed Autism and product contracts remain in their v127 and v129 receipts.
+30 September 2026 · v130 released. Receipt: RELEASE-ASSESSMENT-V130-20260930.md. Baseline v129: source/receipt HEAD fab29f9; Worker 4cb916cd-5683-4ea9-829d-82ccf3f812da. The owner in this task edits, builds and deploys; reviewers are read-only. Completed Autism and product contracts remain in their v127 and v129 receipts.
 
 ## Page contract
 
@@ -25,3 +25,7 @@
 One consolidated pass → production build → focused content/shared-shell/routing/privacy/enrolment checks → visual and interaction checks at 320/390/768/1024/1440 → source commit/push → full Verify + portal union stage and Worker dry run → inspect deployment/bindings/triggers → deploy without --route → public HTML/assets/social/export/discovery/protected controls → one justified Assessment IndexNow event → receipt/ledger commit/push.
 
 Assessment already occurs once in /sitemaps/core.xml; retain that single sitemap placement. Add root/service reading-guide links. Preserve Verify, FSC, helpline, origin and product routes. Real phone connection, clinical review, CRM acceptance, indexing, AI citation, field speed and physical Safari/iOS results are separate observations.
+
+## Current disposition
+
+Assessment and the named shared corrections are released. The next bounded package is centre identity and sitemap reconciliation, defined in PORTAL-NEXT-WORK-ORDER-20260930.md and the 62-entry continuation queue. Keep this completed Assessment contract as a reusable record until the next selected page brief replaces it.

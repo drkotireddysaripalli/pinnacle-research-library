@@ -1,0 +1,11 @@
+{
+  "submittedAt": "2026-09-30T16:42:50.032Z",
+  "rootKeyResponseStatus": 200,
+  "urlList": [
+    "https://www.pinnacleblooms.org/speech-aba-autism-assessments"
+  ],
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "httpStatus": 200,
+  "response": "",
+  "meaning": "Updated URL notification received; this confirms submission only, not discovery, indexing, ranking, AI citation or conversion."
+}

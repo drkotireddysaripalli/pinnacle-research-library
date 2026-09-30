@@ -1,0 +1,130 @@
+{
+  "checkedAt": "2026-09-30T16:40:49.557Z",
+  "sourceCommit": "850968e2ae4e758594c810e8c4eb9c6f7ad3cd87",
+  "canonical": "/speech-aba-autism-assessments",
+  "results": [
+    {
+      "path": "/speech-aba-autism-assessments?release=assessment-v130",
+      "status": 200,
+      "sha256": "e37e08db92630058f29078c9d910ba26421fdea25302e79925112374a91ecd2c",
+      "bytes": 493376
+    },
+    {
+      "path": "/pinnacle-pages-data/assessment-evidence.json",
+      "status": 200,
+      "sha256": "0dd6769cabd73f589ee6da516c82cb4e2151113e77e29565359dfe22aca94877",
+      "bytes": 10539
+    },
+    {
+      "path": "/pinnacle-pages-data/assessment-evidence.txt",
+      "status": 200,
+      "sha256": "fbf02e904e9699c82bccfdf6e4130a7482bea2b0ba4e918a41d076eebdfe2e2b",
+      "bytes": 7910
+    },
+    {
+      "path": "/pinnacle-pages-data/assessment-machine.md",
+      "status": 200,
+      "sha256": "cb6cc5c52390b609f759481815b34a0c2f4aff72f920fae4b6b7a304d967fe6a",
+      "bytes": 8642
+    },
+    {
+      "path": "/pinnacle-pages-assets/assessment-social-20260930.0Ie-IXOo_Z1SPQhv.jpg?v=assessment-v130-20260930",
+      "status": 200,
+      "sha256": "6fcb881044587d69d4d40979bec6524683faa0a12e473a5613a6d1171405e052",
+      "bytes": 198642
+    },
+    {
+      "path": "/pinnacle-pages-assets/assessment-hero-20260930.CpWVY69J_Z1qlW6E.webp",
+      "status": 200,
+      "sha256": "add04b74c13d98c6ccb9d3353df44581d8f4e7a988661a63f1600169549cac07",
+      "bytes": 201144
+    },
+    {
+      "path": "/pinnacle-pages-scripts/enrolment.js",
+      "status": 200,
+      "sha256": "aa491fa7a6c93a793357b1de9b2bbe4aeac02a227a0e1ee03d625da4a90689ff",
+      "bytes": 6755
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india?entry=speech-assessment",
+      "status": 200,
+      "sha256": "94bb3e287ee40e6f3ca20f0047bdb01840872bdaf5fbf4b47fb05bd0b72d638c",
+      "bytes": 236615
+    },
+    {
+      "path": "/autism-therapy",
+      "status": 200,
+      "sha256": "8d7b6039213a083f67f3039520e7b2b25c40f5bf236a2e9765df702db68c9956",
+      "bytes": 525788
+    }
+  ],
+  "markdown": true,
+  "head": true,
+  "alias": true,
+  "rootReadingGuide": true,
+  "serviceReadingGuide": true,
+  "singleCoreSitemapEntry": true,
+  "noDuplicateServiceSitemapEntry": true,
+  "protectedResults": [
+    {
+      "path": "/verify/",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107"
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "51d3e37a4fd98bdb1c2d4269f8ae541fcffa960533221515e825c94942dfb399"
+    },
+    {
+      "path": "/verify/evidence/fsc.pdf",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "84664753b59ec604a2a55c501b9786efecbdded76bfb0d9be48ca732c06a909a"
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "cdf081a88fbdea6739bf07afb34d38923e45209aca2e2960bdc17f61b8fe1691"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "09d9b8df2131083e9d288d9cffd20f027db2d4db5906de2a85103f09e069891f"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "b7c18595209c559155176b6578808dc5e8fc4b92086b5ee5ba413d877fb149be"
+    },
+    {
+      "path": "/sitemaps/core.xml",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "5b0b440763b06410aa6da7f4b15b202a2112210df8be2a19c370c6e425c19440"
+    },
+    {
+      "path": "/pinnacle-ai-innovations-revolutionizing-autism-history",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "bc90a5175b34b609024406937504d871268d1fd688c30e6924791791d9a18eca"
+    },
+    {
+      "path": "/abilityscore-global-study",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "7876accea994a748da9108d2ff3fc3b0161f88bc7991dfdcf5d7742621999038"
+    },
+    {
+      "path": "/therapeuticai-effectiveness-study",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "e5d42e55d684717498ee5b5455e52e89002e5b10779b352ff08d03bb70128fe4"
+    }
+  ]
+}
