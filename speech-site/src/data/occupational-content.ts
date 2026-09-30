@@ -12,6 +12,8 @@ export const occupationalContent: ServiceContent = {
   title:'Occupational Therapy for Children in India | Pinnacle Blooms',
   description:'Explore occupational therapy for everyday routines, play, learning, self-care and participation. Find a Pinnacle centre or call 9100 181 181.',
   enquiry:{url:occupationalEnquiry,label:'Arrange a first conversation',mobileLabel:'Start a conversation'},
+  guidanceNote:'Our team confirms the centre, occupational-therapy professional, appointment and fees before you visit.',
+  discover:{label:'See how the first conversation works',href:'#first-conversation'},
   citations:[
     '/verify/','/verify/evidence/pinnacle-paradigm-shift.html','/verify/evidence/pinnacleai-regulatory-journey.html',
     '/verify/evidence/records/md5.html','/verify/evidence/records/bis.html','/verify/evidence/records/fsc.html',
@@ -22,7 +24,7 @@ export const occupationalContent: ServiceContent = {
     'https://www.who.int/news-room/fact-sheets/detail/rehabilitation'
   ]),
   image:{source:everydayLife,alt:'An Indian family and an occupational-therapy professional connect a child’s practice with dressing, play and school participation.',caption:'Everyday routines, family participation and growing independence.'},
-  hero:{heading:'Help everyday activities',emphasis:'become everyday abilities.',lead:'Getting ready. Playing. Learning. Joining in.',copy:'We start with what your child wants and needs to do in daily life, then connect assessment, occupational therapy, family-guided practice and review around those priorities.',moments:[{icon:'home',label:'Manage routines'},{icon:'heart',label:'Play and choose'},{icon:'book',label:'Take part in school'}]},
+  hero:{heading:'Start with one daily activity.',emphasis:'Build toward more of life.',lead:'Getting ready. Playing. Learning. Joining in.',copy:'Your child’s growing self-sufficiency and participation give the work its direction. We look at what helps today, connect occupational therapy with family-guided practice, and review what changes in real life.',moments:[{icon:'home',label:'Manage routines'},{icon:'heart',label:'Play and choose'},{icon:'book',label:'Take part in school'}]},
   pathway:{stages:careStages,image:schoolbagJourney,alt:'An Indian child practises packing a school bag with professional and family guidance, then carries it while joining another child at school.',caption:'A useful ability is practised, observed and carried into everyday participation.'},
   concerns:[
     {icon:'home',title:'Daily routines',copy:'Dressing, eating, washing, packing or moving through a routine can become clearer goals for growing participation.'},

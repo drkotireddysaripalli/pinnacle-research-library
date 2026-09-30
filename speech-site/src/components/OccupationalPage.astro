@@ -11,19 +11,25 @@ import { Image } from 'astro:assets';
 import emblem from '../assets/pinnacle-emblem-official.png';
 import schoolbagJourney from '../assets/occupational-schoolbag-journey-20260929.png';
 import occupationalCreative from '../assets/occupational-therapy-pinnacle-creative-20260929.png';
+import lifeInView from '../assets/occupational-life-in-view-20260930.png';
+import firstConversation from '../assets/occupational-first-conversation-20260930.png';
 import { occupationalContent as content, occupationalEnquiry } from '../data/occupational-content';
 import { proofCards } from '../data/speech';
 import { phone, url } from '../data/site';
 ---
-<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms occupational therapy story connecting therapy, home, learning and school participation, with the phone number 9100 181 181." imageCaption="Occupational therapy for everyday activities and growing independence at Pinnacle Blooms Network." shareImage={occupationalCreative} publishedOn="2026-09-29" updatedOn="2026-09-29" enquiry={content.enquiry}>
+<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms Occupational Therapy poster: a child fastens a schoolbag with family encouragement; Everyday skills. A life that grows. Call 9100 181 181." imageCaption="Occupational therapy for everyday activities and growing participation at Pinnacle Blooms Network." shareImage={occupationalCreative} publishedOn="2026-09-29" updatedOn="2026-09-30" enquiry={content.enquiry}>
   <HeroSlider content={content} /><ActionStrip focused />
 
-  <section class="section occupational-brand-story" aria-label="Occupational therapy from clinic practice to everyday participation">
-    <div class="wrap">
-      <figure>
-        <Image src={occupationalCreative} widths={[640,960,1280,1680]} sizes="(min-width:1360px) 1280px, calc(100vw - 28px)" width={1680} height={945} format="webp" quality={84} loading="eager" decoding="async" fetchpriority="high" alt="Pinnacle Blooms occupational therapy pathway from professional support through home routines to school participation, with the words Everyday activities, growing independence and the contact number 9100 181 181."/>
-        <figcaption>Professional support, family-guided practice and review connected to the everyday life the child is growing toward.</figcaption>
-      </figure>
+  <section class="section occupational-brand-story" aria-labelledby="ot-life-title">
+    <div class="wrap occupational-life-grid">
+      <div class="occupational-life-copy">
+        <p class="eyebrow">The activity is a step. Your child’s life is the direction.</p>
+        <h2 id="ot-life-title">A schoolbag is<br/><em>never just a schoolbag.</em></h2>
+        <p>Fastening it can lead to managing a morning, joining friends and taking part in learning. Your family tells us which moments matter. We assess what helps, choose suitable support and review whether the ability carries into everyday life.</p>
+        <div class="occupational-life-actions"><a class="button primary" href={phone.href}><Icon name="phone"/>Call {phone.display}</a><a class="text-link" href="#everyday-participation">See an everyday example <Icon name="arrow"/></a></div>
+        <div class="occupational-life-proof"><span><Icon name="shield" size={21}/>PinnacleAI GPT-OS is licensed as non-diagnostic Class B software.</span><a href={url('/verify/evidence/records/md5.html')}>MD-5 scope</a><a href={url('/verify/evidence/records/bis.html')}>BIS record</a><a href={url('/verify/evidence/cite.html')}>Cite the evidence</a></div>
+      </div>
+      <figure class="occupational-life-art"><div class="occupational-life-photo"><Image src={lifeInView} widths={[480,760,1100,1536]} sizes="(min-width:1100px) 58vw, calc(100vw - 36px)" width={1920} height={1088} format="webp" quality={82} loading="lazy" decoding="async" alt="Illustrated journey from fastening a schoolbag at home to joining another child in play and taking part in learning."/><div class="occupational-image-brand"><Image src={emblem} width={52} height={52} format="webp" alt="Pinnacle Blooms Network emblem"/><strong>Pinnacle Blooms<br/>Network</strong></div></div><figcaption><strong>One child. One life in view.</strong><span><Icon name="home"/>At home</span><span><Icon name="people"/>With friends</span><span><Icon name="book"/>In learning</span></figcaption></figure>
     </div>
   </section>
 
@@ -37,7 +43,7 @@ import { phone, url } from '../data/site';
 
   <section class="section occupational-first" id="first-conversation" aria-labelledby="ot-first-title"><div class="wrap occupational-first-grid">
     <div><p class="eyebrow">Begin with participation, not a label</p><h2 id="ot-first-title">Bring one everyday moment.<br/><em>We’ll help find the starting point.</em></h2><p>Tell us about an activity that matters: getting dressed, using a spoon, joining play, writing, packing a school bag or moving through a routine. The occupational therapist considers the child, the activity and the environment before discussing suitable next steps.</p><ul class="occupational-checks"><li><Icon name="heart"/><span><strong>Your priorities</strong>What your child and family want daily life to make possible.</span></li><li><Icon name="measure"/><span><strong>Professional assessment</strong>Observation, conversation and appropriate tools chosen by the therapist.</span></li><li><Icon name="compass"/><span><strong>A clear next step</strong>Goals, possible support, centre, appointment and fees explained before you decide.</span></li></ul><div class="occupational-actions"><a class="button primary" href={occupationalEnquiry}>Arrange a first conversation <Icon name="arrow"/></a><a class="button outline" href={phone.href}><Icon name="phone"/>Call {phone.display}</a></div></div>
-    <aside class="occupational-definition"><Icon name="home" size={38}/><p class="eyebrow">A direct answer</p><h3>What is occupational therapy for children?</h3><p>It is professional support for a child’s participation in meaningful everyday activities. The work may address the activity, the abilities involved, the environment or a combination—based on individual assessment.</p><a href="https://wfot.org/about/about-occupational-therapy">Read the current WFOT definition →</a></aside>
+    <div class="occupational-first-side"><figure class="occupational-first-art"><div class="occupational-first-photo"><Image src={firstConversation} widths={[480,720,960]} sizes="(min-width:961px) 34vw, calc(100vw - 36px)" width={1536} height={1024} format="webp" quality={80} loading="lazy" decoding="async" alt="Illustration of a mother and Pinnacle professional watching a child fasten a jacket while familiar objects for everyday activities sit nearby."/><div class="occupational-first-note"><Icon name="heart" size={25}/><strong>Your child.<br/>Your priorities.<br/><em>A shared starting point.</em></strong></div></div><figcaption>Begin with a real activity your family cares about.</figcaption></figure><aside class="occupational-definition"><Icon name="home" size={38}/><p class="eyebrow">A direct answer</p><h3>What is occupational therapy for children?</h3><p>It is professional support for a child’s participation in meaningful everyday activities. The work may address the activity, the abilities involved, the environment or a combination—based on individual assessment.</p><a href="https://wfot.org/about/about-occupational-therapy">Read the current WFOT definition →</a></aside></div>
   </div></section>
 
   <section class="section wrap difference" id="pinnacle-difference" aria-labelledby="ot-difference-title">
