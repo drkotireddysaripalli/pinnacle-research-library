@@ -5,10 +5,13 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "parentMoment": "“It worked in the session. Why is it still hard outside?”",
+  "lifeDecision": "Where did the skill work, what support was present, where did it not transfer and what should change next?",
+  "familyDiscussion": "A professional explanation of what the different observations mean for the plan.",
   "directAnswer": "The BIS scope names a Clinical Tracking/Correction Fusion module. Pinnacle’s method describes activity ratings and relevant input from authorised roles. It helps people ask what is working and what to change; it is not automatic clinical correction without human oversight.",
   "lifePurpose": "A child’s progress should be understood in the places where the skill matters, including when it is not transferring as hoped.",
   "illustrativeExample": {
-    "title": "A request works in therapy, but not in the playground.",
+    "title": "A request works in therapy, but not yet in the school playground.",
     "description": "Illustrative example only. The child makes a request in a familiar room; outdoors, the same approach is hard to use.",
     "steps": [
       {
@@ -36,6 +39,26 @@
     "The professional explains whether to continue, adapt, pause or refer."
   ],
   "limit": "The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private.",
+  "claimSourceMap": [
+    {
+      "statement": "Where did the skill work, what support was present, where did it not transfer and what should change next?",
+      "kind": "programme explanation",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "limit": "Named module/quality scope; not a clinical effectiveness result."
+    },
+    {
+      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "kind": "regulatory scope",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "statement": "The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private.",
+      "kind": "claim boundary",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html",
+      "limit": "Product architecture and examples; contradictory completed-validation claims are not adopted here."
+    }
+  ],
   "sources": [
     {
       "id": "workflow",

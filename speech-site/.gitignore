@@ -16,8 +16,7 @@ deployment/visual-upload-worker-*/
 deployment/current-origin-enrolment-*.html
 deployment/enrolment-api-test-*
 /.worker-upload-*/
-/dryrun-worker-*/
-/dryrun-pinnacleai-wave-*/
+/dryrun-*/
 /scripts/__pycache__/
 *.py[cod]
 /reviews/*.log

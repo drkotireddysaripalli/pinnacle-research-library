@@ -1,0 +1,62 @@
+---
+import Icon from './Icon.astro';
+import {readinessViews} from '../data/pinnacleai-editorial';
+import {url} from '../data/site';
+const {slug}=Astro.props;
+---
+
+{slug==='abilityscore' && <div class="wave2-insight wave2-ability">
+  <div class="wave2-insight-head"><Icon name="measure" size={34}/><h3>From an observed ability to a useful next goal</h3></div>
+  <ol class="wave2-insight-flow">
+    <li><strong>What the child does</strong><p>Shows a choice for a favourite toy, perhaps through a look, gesture or sound. Record the help and setting too.</p></li>
+    <li><strong>What the professional interprets</strong><p>A suitable assessment contributes a structured ability picture. The 0–1000 display is read with age, context and separate readiness views.</p></li>
+    <li><strong>What the family can discuss</strong><p>Choose a way to make that request understood at home and, if relevant, in another setting. Review its real use later.</p></li>
+  </ol><p class="wave2-insight-note">The score does not diagnose a condition or describe a child's worth. <a href={url('/verify/evidence/records/methodology.html')}>Read the method and limits ↗</a></p>
+</div>}
+
+{slug==='seven-readiness-indexes' && <div class="wave2-insight wave2-readiness">
+  <div class="wave2-insight-head"><Icon name="compass" size={34}/><h3>Seven views. Choose the ones that help this child now.</h3></div>
+  <p>For an invitation to join classroom group play, Speech and Mainstream Inclusion might be immediately useful; School or Motor may add context. A professional interprets the current report version and the child's situation.</p>
+  <div class="wave2-lenses">{readinessViews.map((view,i)=><article><span>{String(i+1).padStart(2,'0')}</span><Icon name={view.icon} size={25}/><h4>{view.name}</h4><strong>{view.question}</strong><p>{view.example}</p></article>)}</div>
+  <p class="wave2-insight-note">These are BIS-named software views, not seven diagnoses or a school-placement decision. “Study IQ” is the printed area name, not a stand-alone IQ test. <a href={url('/verify/evidence/records/bis.html')}>Inspect the named-module schedule ↗</a></p>
+</div>}
+
+{slug==='personal-development-kernel' && <div class="wave2-insight wave2-pdk">
+  <div class="wave2-insight-head"><Icon name="plan" size={34}/><h3>Keep the support and setting with the observation.</h3></div>
+  <div class="wave2-context-pair"><article><h4>At home</h4><p>The child puts on shoes with a picture sequence and a calm place to sit.</p></article><article><h4>At school</h4><p>A busy doorway and different timing change what support the child needs.</p></article></div>
+  <div class="wave2-decision-arrow"><Icon name="people"/><p><strong>Authorised review:</strong> the family and professional discuss what should be kept, adjusted or tried in the other setting. School input is included only when appropriate and consented.</p></div>
+  <p class="wave2-insight-note">This explains the documented child-specific record concept. It does not imply that a school automatically sees a child's record. <a href={url('/verify/evidence/records/dossier.html')}>Inspect the described record scope ↗</a></p>
+</div>}
+
+{slug==='prognose' && <div class="wave2-insight wave2-prognose">
+  <div class="wave2-insight-head"><Icon name="track" size={34}/><h3>A forecast earns trust by meeting a checkpoint.</h3></div>
+  <div class="wave2-forecast"><article><h4>Starting picture</h4><p>What the child enjoys, can do and needs help with at the playground.</p></article><article><h4>Possible next step</h4><p>Try one comfortable way to initiate or accept an invitation.</p></article><article><h4>Observe in life</h4><p>Did it work with these people, support and conditions?</p></article></div>
+  <div class="wave2-branch"><p><strong>If it helps:</strong> keep learning from it.</p><p><strong>If it does not:</strong> the professional and family revise the support or the goal.</p></div>
+  <p class="wave2-insight-note">A planning estimate is not a validated prediction for an individual child. The public external-validation record remains a protocol. <a href={url('/verify/evidence/records/external-validation.html')}>Check its status ↗</a></p>
+</div>}
+
+{slug==='therapeuticai' && <div class="wave2-insight wave2-therapeutic">
+  <div class="wave2-insight-head"><Icon name="heart" size={34}/><h3>Why this activity, for this child, now?</h3></div>
+  <ol class="wave2-insight-flow"><li><strong>Child's purpose</strong><p>Join a game by asking for help with the play box.</p></li><li><strong>Professional choice</strong><p>Select a comfortable communication or motor support that serves that moment.</p></li><li><strong>Guided use</strong><p>Try the activity in the session and in an agreed natural opportunity.</p></li><li><strong>Response</strong><p>Notice whether the child can use it, enjoys it and needs a change.</p></li></ol>
+  <p class="wave2-insight-note">The software organises the activity pathway; it does not independently prescribe care. <a href={url('/verify/evidence/records/bis.html')}>See the BIS named-module scope ↗</a></p>
+</div>}
+
+{slug==='everyday-therapy' && <div class="wave2-insight wave2-everyday">
+  <div class="wave2-insight-head"><Icon name="home" size={34}/><h3>A small family meal example</h3></div>
+  <div class="wave2-routine"><article><h4>Agree one step</h4><p>With the professional, choose an accessible way for the child to take part, such as choosing a cup.</p></article><article><h4>Keep it ordinary</h4><p>Offer the choice during a real meal. Notice comfort and preference; do not turn the whole routine into a test.</p></article><article><h4>Tell the team</h4><p>Share what happened, what help was needed and whether the child wanted to try again.</p></article></div>
+  <p class="wave2-insight-note">The source describes guided everyday practice and a version-specific look-ahead. It is not a demand that parents provide formal therapy. <a href={url('/verify/#how-pinnacleai-works')}>Inspect the workflow ↗</a></p>
+</div>}
+
+{slug==='fusion-module' && <div class="wave2-insight wave2-fusion">
+  <div class="wave2-insight-head"><Icon name="people" size={34}/><h3>One skill can look different in three places.</h3></div>
+  <div class="wave2-context-three"><article><h4>Therapy room</h4><p>The child requests a turn with familiar cues.</p></article><article><h4>At home</h4><p>The family notices the request appears during play, with less prompting.</p></article><article><h4>School playground, if shared</h4><p>The teacher may notice that the outdoor request is harder to use, with consent and relevant access.</p></article></div>
+  <div class="wave2-decision-arrow"><Icon name="loop"/><p><strong>The useful result:</strong> a professional review decides whether to practise in another setting, change the support or gather more observations, and explains why to the family.</p></div>
+  <p class="wave2-insight-note">This is an explanatory scenario, not a claim of automatic teacher data sharing or autonomous treatment changes. <a href={url('/verify/evidence/records/dossier.html')}>See the source boundary ↗</a></p>
+</div>}
+
+{slug==='reassess-review-repeat' && <div class="wave2-insight wave2-reassess">
+  <div class="wave2-insight-head"><Icon name="loop" size={34}/><h3>Compare the same life task with the support in view.</h3></div>
+  <div class="wave2-compare"><article><h4>Earlier</h4><p>Bag packing needed a full picture sequence and adult prompts at home.</p></article><article><h4>Now</h4><p>Most steps happen at home with less help; the busy school arrival remains difficult.</p></article></div>
+  <div class="wave2-choices"><p><strong>Keep</strong> support that works.</p><p><strong>Adjust</strong> the school transition.</p><p><strong>Recheck</strong> whether the change transfers.</p></div>
+  <p class="wave2-insight-note">Progress, no change and new difficulty all deserve an honest review. No fixed timetable or outcome is promised. <a href={url('/verify/evidence/records/methodology.html')}>Inspect the methods ↗</a></p>
+</div>}

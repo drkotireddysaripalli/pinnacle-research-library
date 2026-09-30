@@ -5,11 +5,14 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "parentMoment": "“It works at home. Why does the same routine feel different at school?”",
+  "lifeDecision": "What changed between the two settings, who may contribute an observation and what adjustment should the professional consider?",
+  "familyDiscussion": "A discussion that remembers the support and setting, rather than a bare can-or-cannot label.",
   "directAnswer": "The PDK is described in Pinnacle’s methods as an organising layer for child-specific measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.",
   "lifePurpose": "Continuity matters when a child’s team needs to see what was tried, where it worked, where it did not and what the family wants to change.",
   "illustrativeExample": {
     "title": "A routine works at home but not yet at school.",
-    "description": "Illustrative example only. The family sees a child put on shoes with a picture sequence; the teacher sees a different difficulty before outdoor play.",
+    "description": "Illustrative example only. The family sees a child put on shoes with a picture sequence; the teacher sees a different need at a busy school doorway.",
     "steps": [
       {
         "title": "Record with context",
@@ -36,6 +39,26 @@
     "The professional uses the record to review the plan; families can question and correct their observations."
   ],
   "limit": "The PDK name describes an internal architecture layer in the source methods. It is not a claim of a stand-alone regulatory approval, a public child dossier or automatic clinical judgement. Child records remain private.",
+  "claimSourceMap": [
+    {
+      "statement": "What changed between the two settings, who may contribute an observation and what adjustment should the professional consider?",
+      "kind": "programme explanation",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html",
+      "limit": "Product architecture and examples; contradictory completed-validation claims are not adopted here."
+    },
+    {
+      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "kind": "regulatory scope",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "statement": "The PDK name describes an internal architecture layer in the source methods. It is not a claim of a stand-alone regulatory approval, a public child dossier or automatic clinical judgement. Child records remain private.",
+      "kind": "claim boundary",
+      "source": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    }
+  ],
   "sources": [
     {
       "id": "workflow",

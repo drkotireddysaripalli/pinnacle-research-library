@@ -1,10 +1,18 @@
 # TherapeuticAI® | Connect a Child’s Goal to Guided Therapy
 Canonical: https://www.pinnacleblooms.org/therapeuticai
 
-> The BIS schedule describes Everyday Therapy delivered through TherapeuticAI and an adaptive therapy-plan support function. Professional assessment and family priorities determine what is suitable. The software supports selection, delivery and tracking; it does not independently prescribe treatment.
+> Give every activity a reason in your child’s life.
 
-## Why this matters
-Speech, occupational, behavioural and educational contributions may each be useful when they serve a particular child’s daily participation; no fixed combination is assumed.
+Opening a play box can be the beginning of a shared game. TherapeuticAI® helps the care team organise activities around a professionally chosen goal, then see whether the child can use that skill beyond the session.
+
+## The family question
+“My child wants to play together. Why is this activity in the plan?”
+
+## What this page helps decide
+Which activity fits the child’s goal and comfort, who chose it, and what would count as useful change in ordinary life?
+
+## What the module does
+The BIS schedule describes Everyday Therapy delivered through TherapeuticAI and an adaptive therapy-plan support function. Professional assessment and family priorities determine what is suitable. The software supports selection, delivery and tracking; it does not independently prescribe treatment.
 
 ## One illustrative everyday moment
 From requesting help to joining play.
@@ -14,10 +22,15 @@ Illustrative example only. A child wants help opening a play box so a shared gam
 3. **Practise with meaning:** The technique is used in the session and an agreed natural moment, rather than repeated for a score alone.
 4. **Review response:** Family and therapist discuss what the child used, what support remained and whether to adapt.
 
+## Claim and source map
+- **programme explanation:** Which activity fits the child’s goal and comfort, who chose it, and what would count as useful change in ordinary life? [Source](https://www.pinnacleblooms.org/verify/evidence/records/bis.html). Named module/quality scope; not a clinical effectiveness result.
+- **regulatory scope:** PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. [Source](https://www.pinnacleblooms.org/verify/evidence/records/md5.html). Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
+- **claim boundary:** A BIS licence and module name do not certify an individual therapist, establish treatment effectiveness or mean every therapy is appropriate for every child. [Source](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works). Describes a workflow; not proof that every step produces a specific result.
+
 ## Boundary
 A BIS licence and module name do not certify an individual therapist, establish treatment effectiveness or mean every therapy is appropriate for every child.
 
-## Sources
+## Further sources
 - [Documented PinnacleAI workflow](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works): Describes a workflow; not proof that every step produces a specific result.
 - [BIS named-module and quality-system scope](https://www.pinnacleblooms.org/verify/evidence/records/bis.html): Named module/quality scope; not a clinical effectiveness result.
 - [Indian Form MD-5 software scope](https://www.pinnacleblooms.org/verify/evidence/records/md5.html): Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.

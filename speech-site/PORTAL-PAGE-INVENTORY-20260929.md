@@ -2,6 +2,8 @@
 
 29 September 2026 · Canonical plan for the next managed pages
 
+**30 September current-state note:** The priority-zero bullets below are the original build-time audit, not a current open-defect list. The six checked aliases `/pinnacle-ai`, `/ability-score`, `/centres`, `/locations`, `/t/occupational-therapy` and `/t/aba-therapy` now 301 to retained canonicals; `/pinnacleai/sitemap.xml` lists all nine product pages. The readiness page has a live title and H1. The nine-product v128 release is being editorially corrected in source. See `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md` for exact page states and remaining work.
+
 ## Decision
 
 The proposed inventory is the correct first portfolio. It must be built as one connected parent journey and one connected entity graph, not as a batch of independent keyword pages.

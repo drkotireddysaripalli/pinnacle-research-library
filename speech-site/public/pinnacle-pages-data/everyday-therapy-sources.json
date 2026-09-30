@@ -5,6 +5,9 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "parentMoment": "“Can we help at home without making every meal a lesson?”",
+  "lifeDecision": "What manageable activity fits this routine, how will the child show comfort or choice, and what should the family tell the team?",
+  "familyDiscussion": "A simple, agreed action for a real routine and permission to report what did or did not work.",
   "directAnswer": "Pinnacle’s documented Everyday Therapy workflow links goal-specific activities to family practice and feedback. The source method describes a four-day look-ahead in one version; the actual plan and pace should be selected for the child rather than treated as a fixed daily quota.",
   "lifePurpose": "Home is not a second clinic. The family helps a skill become useful in ordinary life without carrying the professional’s responsibility alone.",
   "illustrativeExample": {
@@ -36,6 +39,26 @@
     "Feedback tells the team to continue, adapt, pause or change the approach."
   ],
   "limit": "The described programme does not mean all children receive the same number of techniques or that parents must deliver therapy themselves. No particular improvement or schedule is guaranteed.",
+  "claimSourceMap": [
+    {
+      "statement": "What manageable activity fits this routine, how will the child show comfort or choice, and what should the family tell the team?",
+      "kind": "programme explanation",
+      "source": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    },
+    {
+      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "kind": "regulatory scope",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "statement": "The described programme does not mean all children receive the same number of techniques or that parents must deliver therapy themselves. No particular improvement or schedule is guaranteed.",
+      "kind": "claim boundary",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+    }
+  ],
   "sources": [
     {
       "id": "workflow",

@@ -135,3 +135,19 @@ The ten PNGs below were created in this Codex conversation with the built-in Cha
 | `pinnacleai-fusion-social-20260930.png` | Observations joined to professional review | `138343e3d84e21eeeab41c31984313e2b1d082c6a03391b8b12711ac7341b941` |
 | `pinnacleai-reassess-social-20260930.png` | Review, revise and repeat | `a7a1b497003fb3f8f4bb39088a8f97350ba4e9da5fb5b8170845e55a21ad35a6` |
 | `pinnacleai-life-path-20260930.png` | Illustrative everyday-life scene shared by worked examples | `66c69e90c53623499037fc44422d08b4a93e3cc880bbd84c410d26615f605875` |
+
+### Editorial correction · one in-page scene per product page
+
+These nine complete, distinct scenes were generated in the current Codex conversation with the built-in ChatGPT image tool using the first-party Pinnacle lockup as reference. Originals remain in `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/`; the checked-in copies below are the source for responsive WebP delivery. They depict **illustrative**, not actual, child stories or measured results. The social posters above remain the OG/share assets; the scenes below carry the on-page narrative without duplicating a baked-in headline or telephone number.
+
+| Checked-in scene | Narrative moment | Original generated file | SHA-256 |
+|---|---|---|---|
+| `pinnacleai-editorial-20260930.png` | Child/family life pathway and professional guidance | `exec-f555b687-a298-4d41-9ea4-c9c264edd815.png` | `c1d4cf62def3defe8b080abc91e9abf8711678a43455ea51551891496303550a` |
+| `abilityscore-editorial-20260930.png` | Toy choice, observed ability and next goal | `exec-f5babad0-1ab6-4844-9a04-fadf4d459b1a.png` | `14ba0d9297b3f59400f6698f2ec26c755f0916ed19dd92bcef17fdafa6707de4` |
+| `readiness-editorial-20260930.png` | Peer invitation through seven visual lenses | `exec-73044a56-a8c6-4d2e-ae06-cac84789e53c.png` | `ab23abd7ea74150a49943fcb5c99eb5087696e8cb6fb23e392ec88f2c18a8603` |
+| `pdk-editorial-20260930.png` | Shoes at home and school, then human review | `exec-ccc62d11-bf9b-4b0f-a6e2-86d93b3803e0.png` | `44374330c037b1eb9c64cfc1c640a81d13f00bebba7a45b291ad45639a1faf51` |
+| `prognose-editorial-20260930.png` | Playground invitation and revisable next step | `exec-7f25fa2c-35f9-4409-a8d2-c6241fdb824a.png` | `94887170a3b6643fde64416daad529c39b90c2c07f3df35757f20de8492607e7` |
+| `therapeuticai-editorial-20260930.png` | Play-box goal, professional choice and peer use | `exec-0104dc37-a430-4653-856c-3fad6411a33b.png` | `97f53dec1517c9ea377d5beba9f68535781c1c4e9bfa6e3c715c1dfdfb333dc0` |
+| `everyday-editorial-20260930.png` | Family-guided mealtime participation | `exec-f1a141a9-de1b-4207-92b8-fa8bffa19b8e.png` | `17fb8783e8c3f8a3f7e605cfac575da159874561aadb877c74b4ab1589dd2a73` |
+| `fusion-editorial-20260930.png` | Therapy, home and consented-school observations | `exec-783cccc7-1335-4911-aae6-b312398981f0.png` | `54ca69d5b21e4a8f8b25008babeb7d4a2631846b1d6cbdcb06b7acbffdb60164` |
+| `reassess-editorial-20260930.png` | Home/school bag-packing comparison and review | `exec-ab290792-1077-4e75-8e0e-d8853b01777d.png` | `13122cf841fe03c093cc50cb2c9b095240f4e09aa3be0213d5bdd0042b149087` |

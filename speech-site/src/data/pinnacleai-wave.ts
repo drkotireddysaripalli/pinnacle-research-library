@@ -16,7 +16,7 @@ export const waveSources = {
 export const pinnacleWave = [
   {
     slug:'pinnacleai', short:'PinnacleAI®', label:'PinnacleAI® system', title:'PinnacleAI® | A Life-First Child Development System',
-    description:'Understand PinnacleAI GPT-OS: AbilityScore, seven Readiness Indexes, child-specific planning, guided everyday therapy, feedback and reassessment—with source-linked limits.',
+    description:'See how PinnacleAI connects a child’s everyday goal to assessment, relevant support, home practice and review. Explore each module and its Verify source.',
     eyebrow:'One child · One life to take part in', headline:'Your child’s life sets the direction. PinnacleAI helps keep the work connected.',
     lead:'What would your child like to communicate, do, learn and enjoy with more confidence? Begin there. Understand current abilities, choose meaningful goals with professionals, practise in real life, listen to the people who know the child and keep reviewing the next step.',
     direct:'PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.',
@@ -38,7 +38,7 @@ export const pinnacleWave = [
   },
   {
     slug:'abilityscore', short:'AbilityScore®', label:'AbilityScore®', title:'AbilityScore® | Understand Abilities, Plan for Everyday Life',
-    description:'Learn how PinnacleAI AbilityScore records a developmental starting picture, why the displayed 0–1000 measure is not a diagnosis, and how professionals review it with family goals.',
+    description:'AbilityScore helps a professional discuss what a child can do now and which everyday goal may come next. See a toy-choice example, 0–1000 limits and sources.',
     eyebrow:'Start with what your child can do', headline:'Measure the starting picture. Keep your child bigger than any score.',
     lead:'You notice what your child understands, chooses, tries and enjoys. AbilityScore gives the care team a structured way to discuss current abilities and change over time, so the next goal can serve a real moment in life.',
     direct:'AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.',
@@ -60,7 +60,7 @@ export const pinnacleWave = [
   },
   {
     slug:'seven-readiness-indexes', short:'7 Readiness Indexes', label:'Seven Readiness Indexes', title:'Seven Readiness Indexes | A Fuller View of Your Child’s Next Step',
-    description:'Explore PinnacleAI’s seven named Readiness Indexes for speech, motor, school, study/IQ, behaviour, self-sufficiency and mainstream inclusion, with their limits and source record.',
+    description:'Explore seven PinnacleAI Readiness views through a child’s peer-play goal. See what each view can help discuss, its limits and the BIS source.',
     eyebrow:'Seven views · One child', headline:'See different kinds of readiness without reducing your child to one label.',
     lead:'A child may be ready to do one thing with less support while another part of life still needs a different approach. Seven separate views help a team ask better questions about communication, movement, learning, routines and participation.',
     direct:'The BIS record names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes. These are separate software views that support discussion and planning; they do not certify school entry, intelligence, social worth or future independence.',
@@ -82,14 +82,14 @@ export const pinnacleWave = [
   },
   {
     slug:'personal-development-kernel', short:'Personal Development Kernel', label:'Personal Development Kernel', title:'Personal Development Kernel | Keep Your Child’s Context Connected',
-    description:'See how PinnacleAI’s child-specific developmental record can connect relevant abilities, goals, environments and reviewed activity responses without replacing human judgement.',
+    description:'See how PinnacleAI’s Personal Development Kernel keeps a child’s home and school context available for authorised professional review.',
     eyebrow:'Continuity for a real child', headline:'Your child’s story should not reset at every appointment.',
     lead:'What helps at home may be different from what helps at school. The Personal Development Kernel, or PDK, is the child-specific record concept that keeps relevant observations, priorities and responses available for authorised review.',
     direct:'The PDK is described in Pinnacle’s methods as an organising layer for child-specific measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.',
     purpose:'Continuity matters when a child’s team needs to see what was tried, where it worked, where it did not and what the family wants to change.',
     question:'How does one observation stay useful over time?',
     exampleTitle:'A routine works at home but not yet at school.',
-    exampleLead:'Illustrative example only. The family sees a child put on shoes with a picture sequence; the teacher sees a different difficulty before outdoor play.',
+    exampleLead:'Illustrative example only. The family sees a child put on shoes with a picture sequence; the teacher sees a different need at a busy school doorway.',
     example:[['Record with context','Document the support, setting and child response rather than a bare “can/cannot” label.'],['Respect access','Share relevant school observations only through appropriate consent and authorised roles.'],['Compare settings','The team sees what transfers and what needs an environmental adjustment.'],['Use it in review','A professional changes the next support and records why.']],
     mechanismTitle:'One child-specific record can connect facts that otherwise drift apart.',
     mechanism:['Inputs are selected because they matter to the child and the agreed goal.','Context includes the setting and help provided, not only the activity result.','The professional uses the record to review the plan; families can question and correct their observations.'],
@@ -104,7 +104,7 @@ export const pinnacleWave = [
   },
   {
     slug:'prognose', short:'Prognose', label:'Prognose', title:'Prognose | A Revisable Forecast for Child-Specific Planning',
-    description:'Understand how PinnacleAI’s Prognose module connects a developmental starting picture to revisable goals and review checkpoints without promising a child’s trajectory.',
+    description:'Prognose supports a revisable next goal and checkpoint. Follow a playground example and see how observation can change the plan.',
     eyebrow:'A forecast is a question to test', headline:'Plan ahead. Keep listening to what your child actually does.',
     lead:'A useful plan looks forward, but it also leaves room for surprise. Prognose supports progress forecasting and a child-specific planning conversation; each estimate needs to be checked against later observation and professional judgement.',
     direct:'Prognose is the named forecasting function in the PinnacleAI/BIS module map. It can support goal selection and checkpoints based on assessed information. It does not foretell a child’s future, prescribe a fixed therapy dose or guarantee a score by a date.',
@@ -126,7 +126,7 @@ export const pinnacleWave = [
   },
   {
     slug:'therapeuticai', short:'TherapeuticAI®', label:'TherapeuticAI®', title:'TherapeuticAI® | Connect a Child’s Goal to Guided Therapy',
-    description:'See how PinnacleAI TherapeuticAI supports professional selection of suitable activities, links them to everyday goals and brings observations back to review.',
+    description:'TherapeuticAI connects a child’s life goal to professionally chosen activity, guided use and response review. Follow one play-box example.',
     eyebrow:'The right activity has a reason', headline:'Therapy should serve the life your child is growing into.',
     lead:'A technique may help a child practise a skill. The important question is why that skill matters to the child and how it will become useful beyond the session. TherapeuticAI helps organise suitable activities around professionally chosen goals.',
     direct:'The BIS schedule describes Everyday Therapy delivered through TherapeuticAI and an adaptive therapy-plan support function. Professional assessment and family priorities determine what is suitable. The software supports selection, delivery and tracking; it does not independently prescribe treatment.',
@@ -148,7 +148,7 @@ export const pinnacleWave = [
   },
   {
     slug:'everyday-therapy', short:'Everyday Therapy™', label:'Everyday Therapy™', title:'Everyday Therapy™ | Carry Meaningful Practice into Real Life',
-    description:'See how PinnacleAI Everyday Therapy connects agreed activities with manageable home and school moments, family guidance, observation and professional review.',
+    description:'Everyday Therapy brings one professionally guided step into an ordinary family routine. See a mealtime example and how observations return to review.',
     eyebrow:'Life happens between appointments', headline:'Make the day itself part of the child’s opportunity to grow.',
     lead:'A child learns in play, mealtime, getting dressed, travel, school and conversation. Everyday Therapy brings agreed, manageable practice into those moments with family guidance and professional review.',
     direct:'Pinnacle’s documented Everyday Therapy workflow links goal-specific activities to family practice and feedback. The source method describes a four-day look-ahead in one version; the actual plan and pace should be selected for the child rather than treated as a fixed daily quota.',
@@ -170,13 +170,13 @@ export const pinnacleWave = [
   },
   {
     slug:'fusion-module', short:'Fusion', label:'Fusion tracking and correction', title:'Fusion | Bring Family, School and Clinical Observations into Review',
-    description:'Learn how PinnacleAI Fusion collects relevant authorised observations from daily life and therapy so professionals can track progress and correct a child-specific plan.',
+    description:'Fusion brings relevant therapy, home and consented school observations into human review, so the child’s next support can change with evidence.',
     eyebrow:'You see more than a session can see', headline:'Bring the child’s whole day into the next decision.',
     lead:'A professional sees a child at an appointment. Parents, caregivers and teachers may see a different picture in meals, play and learning. Fusion is the tracking-and-correction part of the system that helps relevant observations return to professional review.',
     direct:'The BIS scope names a Clinical Tracking/Correction Fusion module. Pinnacle’s method describes activity ratings and relevant input from authorised roles. It helps people ask what is working and what to change; it is not automatic clinical correction without human oversight.',
     purpose:'A child’s progress should be understood in the places where the skill matters, including when it is not transferring as hoped.',
     question:'How does a family observation become a better next step?',
-    exampleTitle:'A request works in therapy, but not in the playground.',
+    exampleTitle:'A request works in therapy, but not yet in the school playground.',
     exampleLead:'Illustrative example only. The child makes a request in a familiar room; outdoors, the same approach is hard to use.',
     example:[['Notice the difference','The family reports the setting, support and child’s response without blaming anyone.'],['Bring relevant voices','A therapist and, with consent, a teacher may add what they observed. Not every child needs every rater role.'],['Review the reason','The professional considers noise, timing, communication method, motivation and comfort.'],['Correct the plan','A different cue or environment may be tried, then checked again in real life.']],
     mechanismTitle:'Feedback closes the loop when it changes an accountable decision.',
@@ -192,7 +192,7 @@ export const pinnacleWave = [
   },
   {
     slug:'reassess-review-repeat', short:'Reassess · Review · Repeat', label:'Reassess, Review and Repeat', title:'Reassess, Review and Repeat | Keep the Child’s Plan Accountable',
-    description:'Understand PinnacleAI’s review loop: reassess abilities, compare everyday participation, make a human decision and adapt support toward meaningful life goals.',
+    description:'Reassess, Review and Repeat compares a child’s everyday skill over time and helps the family and team decide what to keep or change.',
     eyebrow:'A plan is allowed to change', headline:'Keep what helps. Change what does not. Keep your child’s life in view.',
     lead:'A new ability may appear, a support may stop helping or a setting may change. Reassessment gives the child’s team a reason to compare today with the starting picture and choose the next step with the family.',
     direct:'Pinnacle’s documented workflow describes periodic reassessment, updated AbilityScore and Readiness views, and plan correction. The methods preprint discusses monthly review in one programme; the right schedule for a child is a professional decision, not a universal promise.',

@@ -5,6 +5,9 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "parentMoment": "“What could we try next, and how will we know if it fits?”",
+  "lifeDecision": "Which starting information supports this tentative goal, what will be observed and when should the team reconsider?",
+  "familyDiscussion": "A revisable plan with an understood checkpoint, not a predicted date for independence.",
   "directAnswer": "Prognose is the named forecasting function in the PinnacleAI/BIS module map. It can support goal selection and checkpoints based on assessed information. It does not foretell a child’s future, prescribe a fixed therapy dose or guarantee a score by a date.",
   "lifePurpose": "The forecast matters only if it helps the team choose a meaningful next step and notice early when the plan needs to change.",
   "illustrativeExample": {
@@ -36,6 +39,26 @@
     "New information can strengthen, narrow or overturn the estimate."
   ],
   "limit": "Current public Verify records do not establish a completed external predictive-validation result. A forecast is decision support, not an independently proven prediction for an individual child.",
+  "claimSourceMap": [
+    {
+      "statement": "Which starting information supports this tentative goal, what will be observed and when should the team reconsider?",
+      "kind": "programme explanation",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "limit": "Named module/quality scope; not a clinical effectiveness result."
+    },
+    {
+      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "kind": "regulatory scope",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "statement": "Current public Verify records do not establish a completed external predictive-validation result. A forecast is decision support, not an independently proven prediction for an individual child.",
+      "kind": "claim boundary",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html",
+      "limit": "The public record labels this a protocol, not completed comparator results."
+    }
+  ],
   "sources": [
     {
       "id": "workflow",

@@ -18,9 +18,12 @@ for(const route of PINNACLEAI_PATHS){
  const html=await response.text();
  const canonical=html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
  const social=html.match(/<meta property="og:image" content="([^"]+)"/i)?.[1];
+ const hero=html.match(/<figure class="wave2-hero-art">\s*<img[^>]*\bsrc="([^"]+)"/i)?.[1];
  assert.equal(canonical,origin+route,route+' canonical');
  assert(social?.startsWith(origin+'/pinnacle-pages-assets/'),route+' social image');
+ assert(hero?.startsWith('/pinnacle-pages-assets/'),route+' editorial image');
  assert(html.includes('portal-header')&&html.includes('portal-footer'),route+' shared shell');
+ assert.equal((html.match(/<main\b/g)||[]).length,1,route+' one main');
  assert(html.includes('tel:+919100181181'),route+' call');
  assert(html.includes('application/ld+json'),route+' schema');
  const imagePath=new URL(social).pathname;
@@ -30,6 +33,11 @@ for(const route of PINNACLEAI_PATHS){
  assert.equal(imageResponse.status,200,route+' social HTTP');
  assert.equal(imageResponse.headers.get('content-type'),'image/jpeg',route+' social MIME');
  assert.equal(sha(image),sha(stagedImage),route+' social bytes');
+ const heroResponse=await get(origin+hero);
+ const heroImage=Buffer.from(await heroResponse.arrayBuffer());
+ assert.equal(heroResponse.status,200,route+' editorial HTTP');
+ assert(heroResponse.headers.get('content-type')?.includes('image/webp'),route+' editorial MIME');
+ assert.equal(sha(heroImage),sha(await readFile(path.join(staged,hero.slice(1)))),route+' editorial bytes');
  const slug=route.slice(1);
  const exports=[];
  for(const extension of ['json','txt']){
@@ -38,6 +46,10 @@ for(const route of PINNACLEAI_PATHS){
   const bytes=Buffer.from(await source.arrayBuffer());
   assert.equal(source.status,200,asset);
   assert.equal(sha(bytes),sha(await readFile(path.join(staged,asset.slice(1)))),asset+' bytes');
+  if(extension==='json'){
+   const sourceMap=JSON.parse(bytes.toString('utf8'));
+   assert(Array.isArray(sourceMap.claimSourceMap)&&sourceMap.claimSourceMap.length>=3,asset+' claim/source map');
+  }
   exports.push(asset);
  }
  const markdown=await get(origin+route,{headers:{accept:'text/markdown'}});
@@ -45,7 +57,7 @@ for(const route of PINNACLEAI_PATHS){
  assert.equal(markdown.status,200,route+' Markdown');
  assert(markdown.headers.get('content-type')?.includes('text/markdown'),route+' Markdown MIME');
  assert.equal(sha(md),sha(await readFile(path.join(staged,'pinnacle-pages-data',slug+'-reading.md'))),route+' Markdown bytes');
- pages.push({route,status:response.status,canonical,social:imagePath,socialBytes:image.length,socialSha256:sha(image),exports,markdownBytes:md.length});
+ pages.push({route,status:response.status,canonical,social:imagePath,socialBytes:image.length,socialSha256:sha(image),editorial:hero,editorialBytes:heroImage.length,editorialSha256:sha(heroImage),exports,markdownBytes:md.length});
 }
 assert.equal(new Set(pages.map(page=>page.social)).size,PINNACLEAI_PATHS.length,'distinct social images');
 

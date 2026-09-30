@@ -1,6 +1,10 @@
 AbilityScore® | Understand Abilities, Plan for Everyday Life
 https://www.pinnacleblooms.org/abilityscore
 
+Parent moment: “I can see my child asking for the toy. How do we help others understand?”
+Decision this page explains: What ability is already present, what help made it possible, and which everyday goal should the team work on next?
+Family discussion: An explained starting picture and questions to take into the plan, not a diagnosis or a verdict about your child.
+
 Direct answer: AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.
 Life purpose: The important question is not “How high is the number?” It is “What can the child use in everyday life, with what support, and what should become more possible next?”
 Boundary: AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.
@@ -13,6 +17,11 @@ Illustrative example only. A parent notices a child wants a favourite toy but ne
 4. Compare use over time: Later assessment considers whether the skill is becoming more usable, not merely whether a number moved.
 
 Claim/source links:
+- What ability is already present, what help made it possible, and which everyday goal should the team work on next? → https://www.pinnacleblooms.org/verify/evidence/records/methodology.html (programme explanation; Methods and preliminary results must not be presented as completed independent validation.)
+- PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
+- AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available. → https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html (claim boundary; The public record labels this a protocol, not completed comparator results.)
+
+Further sources:
 - Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
 - Methodology preprint and limitations: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html — Methods and preliminary results must not be presented as completed independent validation.
 - External validation protocol status: https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html — The public record labels this a protocol, not completed comparator results.

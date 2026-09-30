@@ -1,10 +1,18 @@
 # Reassess, Review and Repeat | Keep the Child’s Plan Accountable
 Canonical: https://www.pinnacleblooms.org/reassess-review-repeat
 
-> Pinnacle’s documented workflow describes periodic reassessment, updated AbilityScore and Readiness views, and plan correction. The methods preprint discusses monthly review in one programme; the right schedule for a child is a professional decision, not a universal promise.
+> Keep what helps. Change what does not. Check again.
 
-## Why this matters
-Review asks whether a skill is becoming useful in life and whether the child’s comfort, goals and context still fit the plan.
+Your child can pack a bag at home with less help, but a busy school arrival may still need support. Reassess, Review and Repeat helps the team compare change in context and decide with you whether to continue, adapt or choose a different goal.
+
+## The family question
+“What changed, and what still needs a better approach?”
+
+## What this page helps decide
+How does today compare with the earlier observation, including setting and support, and which decision follows?
+
+## What the module does
+Pinnacle’s documented workflow describes periodic reassessment, updated AbilityScore and Readiness views, and plan correction. The methods preprint discusses monthly review in one programme; the right schedule for a child is a professional decision, not a universal promise.
 
 ## One illustrative everyday moment
 The child can now pack a bag—with one important exception.
@@ -14,10 +22,15 @@ Illustrative example only. At home the child completes most steps, while a busy 
 3. **Make a real decision:** The team may keep a useful support, change a cue, address the setting or choose a new goal.
 4. **Check again:** Later measurement and observation test whether that decision helped.
 
+## Claim and source map
+- **programme explanation:** How does today compare with the earlier observation, including setting and support, and which decision follows? [Source](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html). Methods and preliminary results must not be presented as completed independent validation.
+- **regulatory scope:** PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. [Source](https://www.pinnacleblooms.org/verify/evidence/records/md5.html). Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
+- **claim boundary:** Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome. [Source](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works). Describes a workflow; not proof that every step produces a specific result.
+
 ## Boundary
 Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome.
 
-## Sources
+## Further sources
 - [Documented PinnacleAI workflow](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works): Describes a workflow; not proof that every step produces a specific result.
 - [Methodology preprint and limitations](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html): Methods and preliminary results must not be presented as completed independent validation.
 - [BIS named-module and quality-system scope](https://www.pinnacleblooms.org/verify/evidence/records/bis.html): Named module/quality scope; not a clinical effectiveness result.

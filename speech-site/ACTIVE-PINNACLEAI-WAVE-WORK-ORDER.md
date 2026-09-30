@@ -2,6 +2,14 @@
 
 30 September 2026 · Nine pages, one reviewed build and release. Prior Autism Therapy v127 work remains in its receipt.
 
+## Reopened editorial correction · 30 September, after v128
+
+The owner rejected the nine-page batch presentation: repeated layouts, borrowed or mismatched interior images, poor first-screen visual storytelling, thin module-specific persuasion and excessive repeated proof panels. The v128 technical publication remains live; it is **not** the accepted quality finish. Current source correction is underway and unreleased. The bounded portal ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`.
+
+This correction keeps all nine canonicals, working schema/OG/sitemap/reading-aid routes and the common header/footer. It replaces the in-page social cards with nine purpose-made child/family scenes; retains the complete social cards as share images; moves an everyday decision into the first story block; explains each module with a distinct HTML visual; keeps the full seven-stage pathway on the overview and a compact linked context on module pages; places two relevant proof links beside the claim and the full source list behind an optional detail. It repairs the dark-on-purple closing heading and records a claim-to-source map in the machine exports. Illustrative scenes are not child outcome evidence.
+
+Release gate: source-backed editorial review, 320/390/768/1440 responsive and semantic checks, commit/push, full Verify+portal Worker deployment without changing route scope, live read-back and a new receipt. The next managed page after this correction is Child Development Assessment on its existing origin canonical; do not call the correction released until those gates pass.
+
 ## Outcome and audience
 
 A parent should understand how a desired everyday life directs measurement, professional planning, practice at home and school, observation, correction and reassessment. A professional or investor should be able to inspect each module's function and evidence status. Every page answers one module-specific question, shows the whole ecosystem in miniature and links to adjacent module, therapy, centre, enrolment and source pages. The product does not diagnose or guarantee an outcome.

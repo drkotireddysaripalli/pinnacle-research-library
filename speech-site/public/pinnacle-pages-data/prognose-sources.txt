@@ -1,6 +1,10 @@
 Prognose | A Revisable Forecast for Child-Specific Planning
 https://www.pinnacleblooms.org/prognose
 
+Parent moment: “What could we try next, and how will we know if it fits?”
+Decision this page explains: Which starting information supports this tentative goal, what will be observed and when should the team reconsider?
+Family discussion: A revisable plan with an understood checkpoint, not a predicted date for independence.
+
 Direct answer: Prognose is the named forecasting function in the PinnacleAI/BIS module map. It can support goal selection and checkpoints based on assessed information. It does not foretell a child’s future, prescribe a fixed therapy dose or guarantee a score by a date.
 Life purpose: The forecast matters only if it helps the team choose a meaningful next step and notice early when the plan needs to change.
 Boundary: Current public Verify records do not establish a completed external predictive-validation result. A forecast is decision support, not an independently proven prediction for an individual child.
@@ -13,6 +17,11 @@ Illustrative example only. A child wants to join a familiar game with another ch
 4. Revise the estimate: If the child responds differently than forecast, the team changes support or timing instead of blaming the child.
 
 Claim/source links:
+- Which starting information supports this tentative goal, what will be observed and when should the team reconsider? → https://www.pinnacleblooms.org/verify/evidence/records/bis.html (programme explanation; Named module/quality scope; not a clinical effectiveness result.)
+- PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
+- Current public Verify records do not establish a completed external predictive-validation result. A forecast is decision support, not an independently proven prediction for an individual child. → https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html (claim boundary; The public record labels this a protocol, not completed comparator results.)
+
+Further sources:
 - Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
 - BIS named-module and quality-system scope: https://www.pinnacleblooms.org/verify/evidence/records/bis.html — Named module/quality scope; not a clinical effectiveness result.
 - External validation protocol status: https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html — The public record labels this a protocol, not completed comparator results.

@@ -1,6 +1,10 @@
 Reassess, Review and Repeat | Keep the Child’s Plan Accountable
 https://www.pinnacleblooms.org/reassess-review-repeat
 
+Parent moment: “What changed, and what still needs a better approach?”
+Decision this page explains: How does today compare with the earlier observation, including setting and support, and which decision follows?
+Family discussion: A reasoned review of progress, no change or a new need, with the next decision explained.
+
 Direct answer: Pinnacle’s documented workflow describes periodic reassessment, updated AbilityScore and Readiness views, and plan correction. The methods preprint discusses monthly review in one programme; the right schedule for a child is a professional decision, not a universal promise.
 Life purpose: Review asks whether a skill is becoming useful in life and whether the child’s comfort, goals and context still fit the plan.
 Boundary: Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome.
@@ -13,6 +17,11 @@ Illustrative example only. At home the child completes most steps, while a busy 
 4. Check again: Later measurement and observation test whether that decision helped.
 
 Claim/source links:
+- How does today compare with the earlier observation, including setting and support, and which decision follows? → https://www.pinnacleblooms.org/verify/evidence/records/methodology.html (programme explanation; Methods and preliminary results must not be presented as completed independent validation.)
+- PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
+- Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome. → https://www.pinnacleblooms.org/verify/#how-pinnacleai-works (claim boundary; Describes a workflow; not proof that every step produces a specific result.)
+
+Further sources:
 - Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
 - Methodology preprint and limitations: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html — Methods and preliminary results must not be presented as completed independent validation.
 - BIS named-module and quality-system scope: https://www.pinnacleblooms.org/verify/evidence/records/bis.html — Named module/quality scope; not a clinical effectiveness result.

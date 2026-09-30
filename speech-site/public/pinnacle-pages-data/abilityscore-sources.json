@@ -5,6 +5,9 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "parentMoment": "“I can see my child asking for the toy. How do we help others understand?”",
+  "lifeDecision": "What ability is already present, what help made it possible, and which everyday goal should the team work on next?",
+  "familyDiscussion": "An explained starting picture and questions to take into the plan, not a diagnosis or a verdict about your child.",
   "directAnswer": "AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.",
   "lifePurpose": "The important question is not “How high is the number?” It is “What can the child use in everyday life, with what support, and what should become more possible next?”",
   "illustrativeExample": {
@@ -36,6 +39,26 @@
     "The next assessment and everyday observations can reveal change, no change or a new need for support."
   ],
   "limit": "AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.",
+  "claimSourceMap": [
+    {
+      "statement": "What ability is already present, what help made it possible, and which everyday goal should the team work on next?",
+      "kind": "programme explanation",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+    },
+    {
+      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "kind": "regulatory scope",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "statement": "AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.",
+      "kind": "claim boundary",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html",
+      "limit": "The public record labels this a protocol, not completed comparator results."
+    }
+  ],
   "sources": [
     {
       "id": "workflow",

@@ -1,6 +1,10 @@
 PinnacleAI® | A Life-First Child Development System
 https://www.pinnacleblooms.org/pinnacleai
 
+Parent moment: “I want my child to join the morning, not simply finish more exercises.”
+Decision this page explains: Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal.
+Family discussion: A clearer first conversation about your child’s strengths, priorities and a suitable next professional review.
+
 Direct answer: PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.
 Life purpose: A score is useful only when it helps people understand what to do next for the child’s everyday life. The life goal determines what to observe, which support to choose and what to review.
 Boundary: The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ.
@@ -13,6 +17,11 @@ This is an illustrative example, not a patient result. The family names one desi
 4. Observe and correct: Family, teacher and clinicians share relevant observations with consent; the plan changes when evidence from life requires it.
 
 Claim/source links:
+- Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal. → https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html (programme explanation; Programme purpose; not a guarantee of a child outcome.)
+- PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
+- The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (claim boundary; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
+
+Further sources:
 - Life-first programme direction: https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html — Programme purpose; not a guarantee of a child outcome.
 - Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
 - Indian Form MD-5 software scope: https://www.pinnacleblooms.org/verify/evidence/records/md5.html — Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.

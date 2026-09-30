@@ -1,10 +1,18 @@
 # AbilityScore® | Understand Abilities, Plan for Everyday Life
 Canonical: https://www.pinnacleblooms.org/abilityscore
 
-> AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.
+> See what your child can do. Decide what to make possible next.
 
-## Why this matters
-The important question is not “How high is the number?” It is “What can the child use in everyday life, with what support, and what should become more possible next?”
+Maybe your child wants a toy and has a way of showing it that others miss. AbilityScore® helps a professional organise a starting picture of abilities so your family can discuss a useful next goal. Your child is always more than the displayed number.
+
+## The family question
+“I can see my child asking for the toy. How do we help others understand?”
+
+## What this page helps decide
+What ability is already present, what help made it possible, and which everyday goal should the team work on next?
+
+## What the module does
+AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.
 
 ## One illustrative everyday moment
 A request at home becomes a useful goal.
@@ -14,10 +22,15 @@ Illustrative example only. A parent notices a child wants a favourite toy but ne
 3. **Choose a goal:** The team agrees on an accessible way for the child to make the choice at home and, if relevant, in another setting.
 4. **Compare use over time:** Later assessment considers whether the skill is becoming more usable, not merely whether a number moved.
 
+## Claim and source map
+- **programme explanation:** What ability is already present, what help made it possible, and which everyday goal should the team work on next? [Source](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html). Methods and preliminary results must not be presented as completed independent validation.
+- **regulatory scope:** PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. [Source](https://www.pinnacleblooms.org/verify/evidence/records/md5.html). Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
+- **claim boundary:** AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available. [Source](https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html). The public record labels this a protocol, not completed comparator results.
+
 ## Boundary
 AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.
 
-## Sources
+## Further sources
 - [Documented PinnacleAI workflow](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works): Describes a workflow; not proof that every step produces a specific result.
 - [Methodology preprint and limitations](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html): Methods and preliminary results must not be presented as completed independent validation.
 - [External validation protocol status](https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html): The public record labels this a protocol, not completed comparator results.

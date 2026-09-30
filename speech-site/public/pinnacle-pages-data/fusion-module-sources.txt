@@ -1,11 +1,15 @@
 Fusion | Bring Family, School and Clinical Observations into Review
 https://www.pinnacleblooms.org/fusion-module
 
+Parent moment: “It worked in the session. Why is it still hard outside?”
+Decision this page explains: Where did the skill work, what support was present, where did it not transfer and what should change next?
+Family discussion: A professional explanation of what the different observations mean for the plan.
+
 Direct answer: The BIS scope names a Clinical Tracking/Correction Fusion module. Pinnacle’s method describes activity ratings and relevant input from authorised roles. It helps people ask what is working and what to change; it is not automatic clinical correction without human oversight.
 Life purpose: A child’s progress should be understood in the places where the skill matters, including when it is not transferring as hoped.
 Boundary: The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private.
 
-Illustrative example: A request works in therapy, but not in the playground.
+Illustrative example: A request works in therapy, but not yet in the school playground.
 Illustrative example only. The child makes a request in a familiar room; outdoors, the same approach is hard to use.
 1. Notice the difference: The family reports the setting, support and child’s response without blaming anyone.
 2. Bring relevant voices: A therapist and, with consent, a teacher may add what they observed. Not every child needs every rater role.
@@ -13,6 +17,11 @@ Illustrative example only. The child makes a request in a familiar room; outdoor
 4. Correct the plan: A different cue or environment may be tried, then checked again in real life.
 
 Claim/source links:
+- Where did the skill work, what support was present, where did it not transfer and what should change next? → https://www.pinnacleblooms.org/verify/evidence/records/bis.html (programme explanation; Named module/quality scope; not a clinical effectiveness result.)
+- PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
+- The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private. → https://www.pinnacleblooms.org/verify/evidence/records/dossier.html (claim boundary; Product architecture and examples; contradictory completed-validation claims are not adopted here.)
+
+Further sources:
 - Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
 - BIS named-module and quality-system scope: https://www.pinnacleblooms.org/verify/evidence/records/bis.html — Named module/quality scope; not a clinical effectiveness result.
 - Reviewed product evidence dossier: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html — Product architecture and examples; contradictory completed-validation claims are not adopted here.

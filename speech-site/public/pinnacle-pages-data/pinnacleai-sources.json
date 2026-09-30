@@ -5,6 +5,9 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "parentMoment": "“I want my child to join the morning, not simply finish more exercises.”",
+  "lifeDecision": "Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal.",
+  "familyDiscussion": "A clearer first conversation about your child’s strengths, priorities and a suitable next professional review.",
   "directAnswer": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.",
   "lifePurpose": "A score is useful only when it helps people understand what to do next for the child’s everyday life. The life goal determines what to observe, which support to choose and what to review.",
   "illustrativeExample": {
@@ -37,6 +40,26 @@
     "Fusion brings observations back into review; reassessment compares change, no change or decline and helps correct the next step."
   ],
   "limit": "The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ.",
+  "claimSourceMap": [
+    {
+      "statement": "Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal.",
+      "kind": "programme explanation",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "limit": "Programme purpose; not a guarantee of a child outcome."
+    },
+    {
+      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "kind": "regulatory scope",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "statement": "The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ.",
+      "kind": "claim boundary",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    }
+  ],
   "sources": [
     {
       "id": "model",

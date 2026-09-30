@@ -5,6 +5,9 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "parentMoment": "“What changed, and what still needs a better approach?”",
+  "lifeDecision": "How does today compare with the earlier observation, including setting and support, and which decision follows?",
+  "familyDiscussion": "A reasoned review of progress, no change or a new need, with the next decision explained.",
   "directAnswer": "Pinnacle’s documented workflow describes periodic reassessment, updated AbilityScore and Readiness views, and plan correction. The methods preprint discusses monthly review in one programme; the right schedule for a child is a professional decision, not a universal promise.",
   "lifePurpose": "Review asks whether a skill is becoming useful in life and whether the child’s comfort, goals and context still fit the plan.",
   "illustrativeExample": {
@@ -36,6 +39,26 @@
     "The child and family remain active partners in deciding what matters next."
   ],
   "limit": "Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome.",
+  "claimSourceMap": [
+    {
+      "statement": "How does today compare with the earlier observation, including setting and support, and which decision follows?",
+      "kind": "programme explanation",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+    },
+    {
+      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "kind": "regulatory scope",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "statement": "Repeated reassessment does not guarantee a child will become independent or receive school placement. A score change alone is not proof of a particular life outcome.",
+      "kind": "claim boundary",
+      "source": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    }
+  ],
   "sources": [
     {
       "id": "workflow",

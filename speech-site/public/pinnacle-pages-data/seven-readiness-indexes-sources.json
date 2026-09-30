@@ -5,6 +5,9 @@
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "parentMoment": "“My child wants to join the group. Which support would actually help?”",
+  "lifeDecision": "Which of the seven views matters for this goal now, what was observed and what practical support should be tried?",
+  "familyDiscussion": "A more specific discussion of the child’s strengths, context and next opportunity, with each view interpreted by the team.",
   "directAnswer": "The BIS record names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes. These are separate software views that support discussion and planning; they do not certify school entry, intelligence, social worth or future independence.",
   "lifePurpose": "Readiness is useful when it points to a meaningful next opportunity in the child’s life and the support needed to try it.",
   "illustrativeExample": {
@@ -36,6 +39,26 @@
     "Self Sufficiency Index and Mainstream Inclusion Index keep daily independence and participation visible as directions for review."
   ],
   "limit": "The names are those printed in the BIS schedule. They should not be read as a formal school admission decision or a promise of mainstream placement. Report versions have used different display scales; use the current report and professional explanation.",
+  "claimSourceMap": [
+    {
+      "statement": "Which of the seven views matters for this goal now, what was observed and what practical support should be tried?",
+      "kind": "programme explanation",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "limit": "Named module/quality scope; not a clinical effectiveness result."
+    },
+    {
+      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
+      "kind": "regulatory scope",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "statement": "The names are those printed in the BIS schedule. They should not be read as a formal school admission decision or a promise of mainstream placement. Report versions have used different display scales; use the current report and professional explanation.",
+      "kind": "claim boundary",
+      "source": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    }
+  ],
   "sources": [
     {
       "id": "workflow",
