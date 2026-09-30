@@ -25,8 +25,9 @@
   if (!panel || !status) return;
   const production = location.origin === origin && routes.has(location.pathname) && !!pageConfig;
   const blocked = navigator.globalPrivacyControl === true;
-  const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry']);
-  const enquiryPlacements = new Set(['header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','mobile-assessment','centre-enquiry']);
+  const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call']);
+  const enquiryPlacements = new Set(['header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','mobile-assessment','centre-enquiry','ot-final-enrol']);
+  const occupationalNavigation = new Set(['ot-hero-centres','ot-final-centres']);
   const directoryPlacements = new Set(['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation']);
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
@@ -99,6 +100,8 @@
     if (directoryPlacements.has(placement)) send('centre_directory_action',{schema_version:2,page_group:pageGroup,action:placement.replace('centre-','')});
     if (!href) return;
     if (callPlacements.has(placement) && href==='tel:+919100181181') send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'national_helpline_9100181181'});
+    if (pageGroup==='occupational_therapy' && (occupationalNavigation.has(placement)||placement==='mobile-assessment') && href==='#centres') send('centre_section_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'published_centre_directory'});
+    if (pageGroup==='occupational_therapy' && placement==='ot-share-whatsapp' && href.startsWith('https://wa.me/?text=')) send('page_share_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'whatsapp_share'});
     let validEnquiry=false;
     try {
       const destination=new URL(href,origin),keys=[...destination.searchParams.keys()];

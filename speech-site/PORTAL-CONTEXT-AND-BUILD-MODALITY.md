@@ -115,7 +115,7 @@ The stages are a coherent explanation of the journey. They are not a promise tha
 
 ## Shared shell contract
 
-The v108 shared shell is the current foundation:
+The v124 shared shell is the current published foundation; the active OT corrective release updates its common navigation once for all managed pages:
 
 - `src/data/portal-navigation.json` is the common navigation source.
 - `src/layouts/PageLayout.astro` renders `SiteHeader.astro` and `SiteFooter.astro`.

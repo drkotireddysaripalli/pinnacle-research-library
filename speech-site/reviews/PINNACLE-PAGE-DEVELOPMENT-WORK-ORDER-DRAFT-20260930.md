@@ -1,6 +1,20 @@
-# Draft for owner review — Pinnacle page development work order
+# Pinnacle page development guide — 100-point acceptance standard
 
-30 September 2026 · Applies to the next managed therapy, assessment and PinnacleAI pages. This is a review and execution guide, not a new production release. Keep `ACTIVE-PAGE-WORK-ORDER.md` as the one active implementation destination until this draft is accepted.
+30 September 2026 · Accepted implementation guide for managed therapy, assessment and PinnacleAI pages. It defines what a 100-point page must **demonstrate**; a score is not a claim of clinical success, ranking or calls. `ACTIVE-PAGE-WORK-ORDER.md` remains the one current implementation destination.
+
+## The 100-point gate — score observable evidence, not enthusiasm
+
+| Criterion | Points | Evidence required for full credit |
+|---|---:|---|
+| Family recognition and usefulness | 20 | A parent can identify their own everyday concern in the first screen, understand who OT may help, and complete a real three-task comprehension check without coaching. |
+| Service mechanism and life-first difference | 20 | The service-specific activity, individual assessment, family role, connected seven-stage path and professional review are visible in ordinary HTML, understandable on phone, and clinically reviewed. |
+| First step and handoff | 15 | The prominent 9100 181 181 link works; free telephone guidance and paid visit boundaries are plain; the call team can accurately explain and hand off the current OT pathway. |
+| Trust and accountable sources | 15 | Exact organisation/device/study claims link to records with scope limits; dates and source owners are current; people and local OT service claims have their own verified operational sources. |
+| Local decision | 15 | Each promoted OT location has a dated service/professional/appointment/fee record and a truthful route from centre choice to a confirmed visit. General listings remain clearly general. |
+| Conversion, accessibility and distribution | 15 | Real rendered actions have consent-safe analytics; answered calls, visits and enrolment are measured separately; mobile/tablet/desktop access, metadata, canonical, social preview, crawlability and production read-back pass. |
+| **Total** | **100** | Full credit requires all six evidence sets. Unknown operational data earns no invented points. |
+
+**Current OT baseline:** the 80/100 editorial review below records the pre-correction page. This implementation batch addresses the early story, connected stages, review creative, shared navigation and actual CTA measurement. It cannot by itself earn the unobserved centre roster, call-team read-back, family tasks, real iPhone/Safari or downstream conversion points. Record those as open operational gates after publication. The guide is 100-point complete; the page is not declared a measured 100 without that evidence.
 
 ## 1. Outcome and governing idea
 
@@ -206,7 +220,7 @@ Recommended order, adapted to each service rather than copied verbatim:
 
 **Gate:** source, production, rollback, public assets and measurement vocabulary agree; the user is told what was published and what remains an observed-outcome question.
 
-## 5. Specific OT correction order after this draft is accepted
+## 5. Specific OT correction order and release status
 
 | Priority | Work package | Exact acceptance result |
 |---|---|---|
@@ -215,7 +229,7 @@ Recommended order, adapted to each service rather than copied verbatim:
 | P1 | Tighten the common header at phone/tablet widths, shorten OT's process-led hero, and move a concise Pinnacle difference statement closer to it without burying the early call. | Parent task test can explain why the service is life-first, see the human scene sooner and reach all header links; all ten managed pages show the same header/footer after one build. |
 | P1 | Connect the seven visible stages and the PinnacleAI support loop as accessible HTML/CSS diagrams. | The mobile stage seven is not orphaned; each stage and the human decision role is clear without opening a disclosure or reading tiny image text. |
 | P1 | Validate actual GSC status, social previews, real iOS/Safari, screen reader and mobile Core Web Vitals. | Baseline and defects recorded; no claim of index/rank/AI citation/field speed without observed evidence. |
-| P2 | Decide whether a distinct review illustration or OT parent takeaway improves comprehension; decide clean canonical, centre-directory presentation and shared 4B wording after their source/baseline checks. | New asset has a measured narrative purpose; any migration is one controlled map with preserved links; no unsupported figure is added to OT proof. |
+| P2 | Place the new review illustration and test comprehension; decide clean canonical, centre-directory presentation and shared 4B wording after their source/baseline checks. | New asset depicts the family observation → professional review loop with approved Pinnacle identity and human-readable HTML; any migration is one controlled map with preserved links; no unsupported figure is added to OT proof. |
 
 ## 6. What not to do
 
@@ -226,13 +240,14 @@ Recommended order, adapted to each service rather than copied verbatim:
 - Do not change a shared header/footer inside one page component or assume this managed shell controls Verify, helpline and legacy origin pages.
 - Do not spend a new development cycle on old reports, repeated validations or image regeneration when the next real bottleneck is centre access, measurement or first-call operations.
 
-## 7. Review, approval and context cleanup sequence
+## 7. Execution and context cleanup sequence
 
-1. Review this draft for the **order and acceptance results**, especially whether the first corrective batch should pair the measurement repair with the dated OT service register. Revise the draft once using concrete feedback.
-2. When accepted, make this the current operating standard and update `ACTIVE-PAGE-WORK-ORDER.md` to one next destination. The currently named next new page is Child Development Assessment at the established `/speech-aba-autism-assessments` canonical; do not create a competing URL.
-3. Refresh only stale *current-state pointers*: `README.md` still contains older managed-page counts and `PORTAL-CONTEXT-AND-BUILD-MODALITY.md` still calls the OT revision upcoming/v108 current. Expand the shared-shell regression from five to ten routes. Reconcile the hardcoded evidence count against the actual Verify source.
-4. Keep historical release receipts, regulatory originals, claim ledgers and approved creative sources as audit history. Delete only disposable build/upload directories through the existing bounded cleanup script. Do not erase source evidence to save context.
-5. Keep one concise active-context document and this accepted work order; treat exploratory drafts as historical. Read-only reviewers end when their review is delivered. Do not create parallel owner threads or schedules for the same codebase.
+1. Complete the OT corrective code and source assets in the common managed site. Run focused content, measurement, visual, accessibility, shared-shell and protected-route checks. Commit and push that exact source **before** deploying, as the owner requested.
+2. Deploy the full union Worker with preserved routes and bindings, verify the public build once, save its version and release receipt, then commit and push the receipt. Keep the dated OT service register, connected-call reporting, family tasks and real Safari/assistive checks open until observed.
+3. Keep Child Development Assessment as the next new page at the established `/speech-aba-autism-assessments` canonical; do not create a competing URL.
+4. Keep the refreshed `README.md` and `PORTAL-CONTEXT-AND-BUILD-MODALITY.md` current after each release. The shared-shell regression now covers ten managed routes. Reconcile the displayed 36-record Verify count against its source register whenever that register changes.
+5. Keep historical release receipts, regulatory originals, claim ledgers and approved creative sources as audit history. Delete only disposable build/upload directories through the existing bounded cleanup script. Do not erase source evidence to save context.
+6. Keep one concise active-context document and this guide; treat exploratory drafts as historical. Read-only reviewers end when their review is delivered. Do not create parallel owner threads or schedules for the same codebase.
 
 ## References used for current platform expectations
 

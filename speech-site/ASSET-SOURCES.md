@@ -84,6 +84,11 @@ User-supplied archive: `Koti Group - Bharath Healthcare - Pinnacle Amblems and L
 
 Current FREE speech-assessment offer is owner-confirmed on27September2026; earlier price-confirmation wording is superseded for this campaign.
 
+## Occupational review illustration — 30 September 2026
+
+- `src/assets/occupational-observe-review-20260930.png`: created in this Codex thread with the built-in ChatGPT image-generation tool, then edited once with the official `pinnacle-blooms-network-lockup.png` reference for the therapist's full-sleeve white professional coat. Final source: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-933559df-53de-4663-9be7-6d68cab3d7ec.png`.
+- Purpose: show a fictional Indian mother observing her child's everyday task at home and later discussing the observation with an OT while the child plays nearby. The image illustrates the family-to-professional review loop; it is not a documented patient or staff photograph. No medical credential, certificate or outcome appears inside the artwork. HTML carries the caption, full explanation and source links.
+
 ## Portal restoration — 27 September 2026
 
 `src/assets/portal-footer-shapes.png` is the existing first-party footer artwork from https://www.pinnacleblooms.org/images/footer-shapes.png, retrieved for the authorised site restoration. Astro generates its WebP delivery derivative. Navigation is recorded in src/data/portal-navigation.json from the existing homepage, with intentional corrections documented in PORTAL-RESTORATION-20260927.md.

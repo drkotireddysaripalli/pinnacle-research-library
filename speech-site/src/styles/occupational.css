@@ -12,6 +12,8 @@
 .ot-hero-actions .primary{font-weight:800;box-shadow:0 12px 28px #e4115e24}
 .ot-hero-help{max-width:65ch;color:#334a65;font-size:.86rem;line-height:1.65;margin:0}
 .ot-hero-help a{display:inline;color:#075f73;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.ot-hero-direction{display:flex;align-items:flex-start;gap:15px;margin-top:28px;padding:20px 24px;border-left:5px solid #008f89;border-radius:0 20px 20px 0;background:#f1fbfa;color:#173955}
+.ot-hero-direction>svg{flex:none;color:#008f89;margin-top:3px}.ot-hero-direction p{margin:0;font-size:clamp(.92rem,1vw,1.04rem);line-height:1.7}.ot-hero-direction strong{color:#0b4771}
 .ot-hero-art{position:relative;margin:0;min-width:0;aspect-ratio:1.04;overflow:hidden;border-radius:44% 11% 24% 13%;background:#f8fbff;box-shadow:0 26px 70px #142f591b}
 .ot-hero-art>img{display:block;width:100%;height:100%;object-fit:cover;object-position:78% center}
 .ot-image-signature{position:absolute;left:clamp(10px,2vw,24px);bottom:clamp(10px,2vw,24px);display:flex;align-items:center;gap:9px;padding:9px 15px 9px 9px;border:1px solid #dfe7ec;border-radius:18px;background:#fffffff2;color:#152e55;box-shadow:0 8px 22px #0d285022;font-size:clamp(.72rem,.9vw,.88rem);line-height:1.35}
@@ -108,6 +110,8 @@
 .ot-stage-peek li:nth-child(2){border-color:#e4115e}.ot-stage-peek li:nth-child(3){border-color:#e59115}.ot-stage-peek li:nth-child(4){border-color:#d6ad00}.ot-stage-peek li:nth-child(5){border-color:#008f89}.ot-stage-peek li:nth-child(6){border-color:#2265a7}.ot-stage-peek li:nth-child(7){border-color:#6947a1}
 .ot-stage-peek span{display:block;margin-bottom:7px;color:#8f2879;font-size:1.25rem;font-weight:800}
 .ot-stage-peek strong{display:block;color:#102b53;font-size:.79rem;line-height:1.4}
+.ot-stage-peek li:not(:last-child):after{content:'›';position:absolute;right:-10px;top:50%;z-index:2;color:#8f2879;font-size:1.55rem;font-weight:800;line-height:1;transform:translateY(-50%)}
+.ot-stage-step{display:flex!important;align-items:center;gap:5px;min-height:28px;margin:0 0 7px!important;color:#8f2879}.ot-stage-step b{font-size:1.15rem}.ot-stage-step svg{width:19px;height:19px}
 .ot-stage-disclosure{border:1px solid #d9d0e0;border-radius:23px;background:#fff;box-shadow:0 12px 40px #10264c0a}
 .ot-stage-disclosure summary{display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;padding:22px 26px;list-style:none}
 .ot-stage-disclosure summary::-webkit-details-marker{display:none}
@@ -130,6 +134,10 @@
 .ot-review-questions span{font-size:1.35rem;font-weight:800;color:#8f2879}
 .ot-review-questions h3{font-size:1.05rem;line-height:1.38;color:#0b2b56;margin:8px 0}
 .ot-review-questions p{font-size:.85rem;line-height:1.6;color:#40546d;margin:0}
+.ot-review-art{max-width:940px;margin:0 auto 27px;overflow:hidden;border-radius:30px 80px 30px 30px;background:#fff;box-shadow:0 20px 50px #10264c16}
+.ot-review-art>img{display:block;width:100%;height:auto}
+.ot-review-art figcaption{display:flex;align-items:center;gap:10px;padding:12px 18px;color:#173955;background:#fff;font-size:.88rem;line-height:1.5;font-weight:700}
+.ot-review-art figcaption img{width:35px;height:35px;object-fit:contain;flex:none}
 .ot-review-bottom{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px}
 .ot-team,.ot-technology{padding:clamp(23px,3vw,36px);border-radius:24px;background:#fff;border:1px solid #d9e5f0}
 .ot-team h3,.ot-technology h3{font-size:clamp(1.25rem,1.8vw,1.8rem);line-height:1.3;color:#0d2b55;margin:0 0 12px}
@@ -165,7 +173,7 @@
 @media(max-width:1100px){
   .ot-route-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .ot-call-steps,.ot-goal-cycle,.ot-review-questions,.ot-stage-disclosure ol{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .ot-stage-peek{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .ot-stage-peek{grid-template-columns:repeat(7,minmax(0,1fr))}
 }
 @media(max-width:900px){
   .ot-hero-grid,.ot-answer-grid,.ot-goal-grid,.ot-life-grid,.ot-first-heading,.ot-review-heading{grid-template-columns:1fr}
@@ -175,6 +183,8 @@
   .ot-answer-grid{gap:28px}
   .ot-definition-card{max-width:680px}
   .ot-proof-grid{grid-template-columns:1fr 1fr}
+  .ot-stage-peek{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .ot-stage-peek li:nth-child(4):after{display:none}
 }
 @media(max-width:680px){
   .ot-hero{padding:28px 0 42px}
@@ -183,7 +193,9 @@
   .ot-hero-copy>p:not(.eyebrow):not(.ot-hero-help){font-size:.93rem;line-height:1.68}
   .ot-hero-actions{margin:18px 0 13px}
   .ot-hero-actions .button{width:100%;justify-content:center;min-height:54px}
+  .ot-hero-actions .outline{display:none}
   .ot-hero-help{font-size:.79rem}
+  .ot-hero-direction{margin-top:18px;padding:14px 15px;gap:9px}.ot-hero-direction>svg{width:23px;height:23px}.ot-hero-direction p{font-size:.86rem;line-height:1.58}
   .ot-hero-art{aspect-ratio:1.12;border-radius:26px 54px 26px 26px}
   .ot-image-signature{padding:6px 9px 6px 6px;border-radius:12px;font-size:.7rem}
   .ot-image-signature img{width:27px;height:27px}
@@ -201,7 +213,13 @@
   .ot-purpose{padding:15px;gap:10px}.ot-purpose img{width:39px;height:39px}.ot-purpose p{font-size:.92rem}
   .ot-stage-disclosure summary{padding:17px}
   .ot-stage-disclosure ol{padding:0 14px 17px}
-  .ot-stage-peek{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ot-stage-peek{display:block;position:relative;margin-left:9px;padding-left:25px;border-left:3px solid #d4b4d2}
+  .ot-stage-peek li{margin:0 0 8px;padding:11px 14px;border-top-width:3px;border-radius:9px 14px 14px 9px}
+  .ot-stage-peek li:before{content:'';position:absolute;left:-34px;top:17px;width:13px;height:13px;border-radius:50%;background:#8f2879;border:3px solid #fff;box-shadow:0 0 0 2px #d4b4d2}
+  .ot-stage-peek li:not(:last-child):after{display:none}
+  .ot-stage-step{display:inline-flex!important;min-height:0;margin:0 8px 0 0!important;vertical-align:middle}
+  .ot-stage-peek strong{display:inline;color:#102b53;font-size:.91rem}
+  .ot-review-art{border-radius:22px 44px 22px 22px}.ot-review-art figcaption{font-size:.78rem;padding:9px 12px}
   .ot-stage-disclosure>p{padding:0 17px 18px}
   .ot-team nav{grid-template-columns:1fr}
   .ot-final .final-actions .button{width:100%;justify-content:center}

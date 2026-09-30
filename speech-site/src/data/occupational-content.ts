@@ -44,7 +44,7 @@ export const occupationalContent: ServiceContent = {
     'https://www.aota.org/practice/domain-and-process/occupations-everyday-activities'
   ]),
   image:{source:earlyPlay,alt:'A young child explores a colourful stacking toy with their father nearby at home.',caption:'Begin with the activity your child wants to join.'},
-  hero:{heading:'that begins with everyday life.',emphasis:'The child’s life gives every step its direction.',lead:'Play. Mealtimes. Getting dressed. Learning with others.',copy:'Tell us one activity you would like your child to manage or enjoy with more confidence.',moments:[{icon:'heart',label:'Play'},{icon:'home',label:'Daily routines'},{icon:'book',label:'Learning'}]},
+  hero:{heading:'More ways to take part in everyday life.',emphasis:'The child’s life gives every step its direction.',lead:'Play, mealtimes, dressing and learning with others can all matter.',copy:'Tell us one moment you would like your child to enjoy or manage more confidently.',moments:[{icon:'heart',label:'Play'},{icon:'home',label:'Daily routines'},{icon:'book',label:'Learning'}]},
   pathway:{stages:occupationalStages,image:lifeInView,alt:'Illustrated family and school moments: a child manages a bag, joins a friend and takes part in learning.',caption:'One child’s wider life guides the steps we choose and review.'},
   concerns:occupationalRoutes.map(route=>({icon:route.icon,title:route.title,copy:route.short})),
   faqs:[

@@ -60,7 +60,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
     const syncMenuState=()=>document.body.classList.toggle('portal-header-menu-open',menus.some(menu=>menu.open));
     menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false;});queueMicrotask(syncMenuState);}));
     document.addEventListener('click',event=>{const target=event.target as Node;if(header.querySelector('.portal-mobile-menu-trigger')?.contains(target))return;menus.forEach(menu=>{if(menu.open&&!menu.contains(target))menu.open=false;});});
-    document.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=menus.find(menu=>menu.open);if(open){const compact=header.querySelector<HTMLElement>('.portal-mobile-menu-trigger');const target=open.classList.contains('portal-directory')&&matchMedia('(max-width:380px)').matches?compact:open.querySelector<HTMLElement>('summary');target?.focus({preventScroll:true});open.open=false;}}});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=menus.find(menu=>menu.open);if(open){const compact=header.querySelector<HTMLElement>('.portal-mobile-menu-trigger');const target=open.classList.contains('portal-directory')&&matchMedia('(max-width:900px)').matches?compact:open.querySelector<HTMLElement>('summary');target?.focus({preventScroll:true});open.open=false;}}});
     header.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>menus.forEach(menu=>menu.open=false)));
     const canHoverMenu=()=>matchMedia('(min-width: 901px) and (hover:hover) and (pointer:fine)').matches;
     header.querySelectorAll('.portal-therapy-group').forEach(group=>{
@@ -82,7 +82,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
       directory.addEventListener('focusout',event=>{if(!directory.contains(event.relatedTarget as Node))directory.open=false;});
       directory.addEventListener('toggle',()=>{if(!directory.open)openedByHover=false;});
       trigger?.addEventListener('click',event=>{if(canHover()&&openedByHover){event.preventDefault();openedByHover=false;}});
-      close?.addEventListener('click',()=>{directory.open=false;(matchMedia('(max-width:380px)').matches?compact:trigger)?.focus({preventScroll:true});});
+      close?.addEventListener('click',()=>{directory.open=false;(matchMedia('(max-width:900px)').matches?compact:trigger)?.focus({preventScroll:true});});
     }
     syncMenuState();
   }

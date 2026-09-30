@@ -10,6 +10,11 @@ const releaseMarker=process.argv[4]||`shared-shell-v${expectedVersion}-20260929`
 const paths=[
   '/top-speech-therapy-center-india-proven-improvement-rate',
   '/enroll-autism-speech-aba-therapies-india',
+  '/best-occupational-therapy-center-india-proven-improvement-rate',
+  '/best-aba-therapy-center-india-proven-improvement-rate',
+  '/best-special-education-center-call-9100181181',
+  '/autism-therapy',
+  '/centers',
   '/speech-therapy/service-information',
   '/speech-therapy/first-visit-guide',
   '/speech-therapy/teacher-observation-guide'

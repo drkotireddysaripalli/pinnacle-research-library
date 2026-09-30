@@ -31,7 +31,7 @@ const widths = [320, 390, 768, 1024, 1440];
       await page.screenshot({path:path.join('audits','occupational-'+mode+(channel==='chrome'?'':'-'+channel)+'-hero-'+width+'-20260930.png')});
     }
     let compactMenu = null;
-    if (width === 320) {
+    if (width === 320 || width === 390 || width === 768) {
       const button = page.locator('.portal-mobile-menu-trigger');
       await button.click();
       const opened = await page.locator('.portal-directory').evaluate(node => node.open);
@@ -46,6 +46,9 @@ const widths = [320, 390, 768, 1024, 1440];
       await page.screenshot({path:path.join('audits','occupational-'+mode+'-mealtime-'+width+'-20260930.png')});
       await page.locator('.ot-stage-peek').scrollIntoViewIfNeeded();
       await page.screenshot({path:path.join('audits','occupational-'+mode+'-path-'+width+'-20260930.png')});
+      await page.locator('.ot-review-art').scrollIntoViewIfNeeded();
+      await page.waitForFunction(() => Boolean(document.querySelector('.ot-review-art>img')?.naturalWidth), null, {timeout:10000});
+      await page.screenshot({path:path.join('audits','occupational-'+mode+'-review-'+width+'-20260930.png')});
     }
     await page.locator('.ot-first-art').scrollIntoViewIfNeeded();
     await page.waitForFunction(() => Boolean(document.querySelector('.ot-first-art img')?.naturalWidth), null, {timeout:10000});
@@ -91,5 +94,5 @@ const widths = [320, 390, 768, 1024, 1440];
   const output = 'deployment/occupational-responsive-'+mode+(channel==='chrome'?'':'-'+channel)+'-20260930.json';
   fs.writeFileSync(output,JSON.stringify(report,null,2)+'\n');
   console.log(JSON.stringify({output,results},null,2));
-  if (results.some(result => result.documentWidth > result.viewport || !result.heroImageLoaded || !result.firstConversationImageLoaded || !result.footer || !result.verifyFooter || result.callHref !== 'tel:+919100181181' || result.centreCount !== 62 || result.faq !== 8 || result.faqSchema !== 8 || result.serviceAreaServed || result.duplicateIds.length || result.missingLocalAnchors.length || result.sevenVisibleStages !== 7 || !result.stageDisclosureKeyboard || result.pageErrors.length || result.helplineClipped || (result.width===320 && (result.headingBottom>result.stickyCallTop || result.leadTop>=result.stickyCallTop || !result.compactMenu?.opened || result.compactMenu?.expanded!=='true' || !result.compactMenu?.closed || !result.compactMenu?.focusRestored)))) process.exitCode = 1;
+  if (results.some(result => result.documentWidth > result.viewport || !result.heroImageLoaded || !result.firstConversationImageLoaded || !result.footer || !result.verifyFooter || result.callHref !== 'tel:+919100181181' || result.centreCount !== 62 || result.faq !== 8 || result.faqSchema !== 8 || result.serviceAreaServed || result.duplicateIds.length || result.missingLocalAnchors.length || result.sevenVisibleStages !== 7 || !result.stageDisclosureKeyboard || result.pageErrors.length || result.helplineClipped || (result.width<=768 && (!result.compactMenu?.opened || result.compactMenu?.expanded!=='true' || !result.compactMenu?.closed || !result.compactMenu?.focusRestored)) || (result.width===320 && (result.headingBottom>result.stickyCallTop || result.leadTop>=result.stickyCallTop)))) process.exitCode = 1;
 })().catch(error => { console.error(error); process.exitCode = 1; });

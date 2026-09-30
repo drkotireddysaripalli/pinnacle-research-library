@@ -194,3 +194,29 @@
   .portal-mobile-menu-trigger:focus-visible{outline:3px solid #e4115e;outline-offset:-3px}
   .portal-therapy-list{flex:1;min-width:0;width:auto;padding-inline:0}
 }
+
+/* A single shared navigation treatment for every managed page: keep proof in view,
+   put the full destination list behind a clearly labelled menu, and avoid stacked
+   desktop rows at tablet widths. */
+@media(min-width:901px) and (max-width:1100px){
+  .portal-main-list{grid-template-columns:repeat(9,minmax(0,1fr))}
+  .portal-main-nav a{min-height:105px;padding:10px 7px}
+  .portal-nav-label{font-size:11px}.portal-nav-detail{font-size:10px;line-height:1.35}
+  .portal-therapy-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.35fr) minmax(0,.95fr) minmax(0,1.05fr) minmax(0,1.15fr) minmax(0,.65fr)}
+  .portal-directory{grid-column:auto}
+}
+@media(max-width:900px){
+  .portal-mobile-menu-trigger{display:flex;flex:0 0 78px;align-items:center;justify-content:center;gap:4px;min-height:50px;padding:0 8px;border:0;border-right:1px solid #e6dce8;background:#fff;color:#8f2879;font:700 11px Sintony,Arial,sans-serif;text-transform:uppercase;cursor:pointer}
+  .portal-mobile-menu-trigger:focus-visible{outline:3px solid #e4115e;outline-offset:-3px}
+  .portal-therapy-nav{display:flex;align-items:stretch;overflow:hidden}
+  .portal-therapy-list{display:flex;flex:1;min-width:0;width:auto;max-width:none;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;padding:0 12px;scrollbar-width:none}
+  .portal-therapy-group,.portal-directory{flex:0 0 auto;min-width:auto;min-height:50px;scroll-snap-align:start}
+  .portal-therapy-title,.portal-more-trigger{min-height:50px;white-space:nowrap}
+  .portal-directory[open]>.portal-directory-panel{position:fixed;inset:0;z-index:260;width:100%;height:100dvh;max-height:100dvh;overflow-y:auto;overscroll-behavior:contain;padding:22px 18px;background:#fff}
+}
+@media(max-width:600px){
+  .portal-main-list{display:none}
+  .portal-therapy-nav{display:flex}
+  .portal-mobile-menu-trigger{flex-basis:70px;min-height:48px;font-size:10px}
+  .portal-therapy-list{flex:1;min-width:0;width:auto;padding-inline:0}
+}
