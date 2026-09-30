@@ -22,6 +22,8 @@ For a new page or material page revision, read in this order:
 
 The conversation history remains useful evidence of intent. Current decisions committed in these files govern implementation when old exploratory wording conflicts with a later settled decision.
 
+For the next material Occupational Therapy revision, `OCCUPATIONAL-THERAPY-CANONICAL-NARRATIVE-20260930.md` records the owner-accepted parent, sales, clinical, evidence, search, social and measurement narrative. It is a narrative commitment, not a live release; `ACTIVE-PAGE-WORK-ORDER.md` still controls the one page currently in implementation.
+
 Do not reread every historical release note, repeat every earlier audit or reconstruct settled design decisions for each page. Do not reduce the page to a generic template or thin prompt merely to save usage.
 
 ## The non-negotiable outcome
