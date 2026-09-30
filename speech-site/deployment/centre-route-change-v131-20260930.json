@@ -1,0 +1,60 @@
+{
+  "beforeCount": 155,
+  "afterCount": 155,
+  "removed": [],
+  "changed": [
+    {
+      "before": {
+        "id": "4b82e595879d49fcbc40f28ee46f6885",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india*",
+        "script": "pinnacle-centre-search-repair"
+      },
+      "after": {
+        "id": "4b82e595879d49fcbc40f28ee46f6885",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    }
+  ],
+  "added": [],
+  "current": {
+    "id": "47e8c1b7-e01c-4a35-9f5c-479ed2c51735",
+    "source": "api",
+    "strategy": "percentage",
+    "author_email": "kotii@kgvpl.com",
+    "annotations": {
+      "workers/message": "V131: Suchitra centre, real premises and source-led visit path",
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "75019b39-bfbb-49e6-a3bb-d6e0c3863cde",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-30T17:40:24.921191Z"
+  },
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "PINNACLE_ASK",
+      "type": "service",
+      "service": "pinnacle-ask",
+      "environment": "production"
+    },
+    {
+      "name": "PINNACLE_LEGACY",
+      "type": "service",
+      "service": "pbn-planetscale",
+      "environment": "production"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ]
+}

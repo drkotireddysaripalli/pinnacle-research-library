@@ -4,6 +4,8 @@ import crypto from 'node:crypto';
 import {suchitraPath} from '../src/data/suchitra-content.ts';
 const origin='https://www.pinnacleblooms.org',release='release-suchitra-v131-final-20260930';
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const knownAdsTags=['<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"></script>','<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js"></script>'];
+function ownedHtml(text){return knownAdsTags.reduce((html,tag)=>html.replace(tag,''),text);}
 const controls=['/verify/','/verify/evidence/records/fsc.html','/verify/evidence/fsc.pdf','/national-autism-helpline','/robots.txt','/sitemap.xml','/sitemaps/core.xml','/pinnacle-ai-innovations-revolutionizing-autism-history','/abilityscore-global-study','/therapeuticai-effectiveness-study','/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india','/centers/best-autism-speech-aba-occupational-therapy-center-nizampet-hyderabad-telangana-india'];
 async function get(path,opts={}){const r=await fetch(origin+path,{redirect:'manual',...opts,headers:{'cache-control':'no-cache',...(opts.headers||{})}});const bytes=Buffer.from(await r.arrayBuffer());return {r,bytes,text:bytes.toString('utf8')};}
 const baseline='deployment/suchitra-protected-before-v131-20260930.json';
@@ -26,7 +28,12 @@ const alias=await get(suchitraPath+'/?campaign=checked');assert.equal(alias.r.st
 const sitemap=await get('/sitemaps/centres.xml');assert.equal(sitemap.r.status,200);assert.equal(sitemap.text.split('<loc>'+origin+suchitraPath+'</loc>').length-1,1);assert(sitemap.text.includes('<loc>'+origin+suchitraPath+'</loc><lastmod>2026-09-30</lastmod>'));
 const llms=await get('/llms.txt');assert.equal(llms.r.status,200);assert(llms.text.includes(origin+suchitraPath));
 const previous=JSON.parse(await fs.readFile(baseline,'utf8')),protectedResults=[];
-for(const old of previous.results){const o=await get(old.path);assert.equal(o.r.status,old.status,old.path);assert.equal(sha(o.bytes),old.sha256,old.path);protectedResults.push({path:old.path,status:o.r.status,unchanged:true,sha256:sha(o.bytes)});}
+for(const old of previous.results){
+ const o=await get(old.path);assert.equal(o.r.status,old.status,old.path);
+ if(old.status===404){protectedResults.push({path:old.path,status:o.r.status,unchangedStatus:true,unchangedBytes:sha(o.bytes)===old.sha256,scope:'Unlisted404path, not a valid centre profile; no page-content preservation claim.',sha256:sha(o.bytes)});continue;}
+ assert.equal(sha(o.bytes),old.sha256,old.path);protectedResults.push({path:old.path,status:o.r.status,unchanged:true,sha256:sha(o.bytes)});
+}
+const adjacent=await get('/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india');assert.equal(adjacent.r.status,200);assert(adjacent.text.includes('Nizampet'));assert(adjacent.text.includes('tel:+919100181181'));
 const mapping={
  '/top-speech-therapy-center-india-proven-improvement-rate':'speech',
  '/enroll-autism-speech-aba-therapies-india':'enrolment',
@@ -40,9 +47,9 @@ const mapping={
 };
 const shells=[];let firstHeader,firstFooter;
 for(const [path,file]of Object.entries(mapping)){
- const o=await get(path);assert.equal(o.r.status,200,path);assert.equal(sha(o.bytes),sha(await fs.readFile(release+'/pinnacle-pages-html/'+file+'.html')),path);
+ const o=await get(path);assert.equal(o.r.status,200,path);assert.equal(sha(Buffer.from(ownedHtml(o.text))),sha(await fs.readFile(release+'/pinnacle-pages-html/'+file+'.html')),path);
  const header=o.text.match(/<header\b[\s\S]*?<\/header>/)[0].replace(/ aria-current="page"/g,'').replace(/ is-current/g,'');
  const footer=o.text.match(/<footer\b[\s\S]*?<\/footer>/)[0];assert(footer.includes('verify-footer'));
- firstHeader??=header;firstFooter??=footer;assert.equal(header,firstHeader,path+'header');assert.equal(footer,firstFooter,path+'footer');shells.push({path,status:200,stagedHtmlMatched:true,commonHeader:true,commonFooter:true});
+ firstHeader??=header;firstFooter??=footer;assert.equal(header,firstHeader,path+'header');assert.equal(footer,firstFooter,path+'footer');shells.push({path,status:200,ownedStagedHtmlMatched:true,knownExternalAdsTags:knownAdsTags.filter(tag=>o.text.includes(tag)).length,commonHeader:true,commonFooter:true});
 }
-const output='deployment/suchitra-live-v131-20260930.json';await fs.writeFile(output,JSON.stringify({checkedAt:new Date().toISOString(),canonical:suchitraPath,results,markdown:true,head:true,queryPreservingAlias:true,singleCentreSitemapEntry:true,rootReadingAid:true,protectedResults,shells},null,2)+'\n');console.log(JSON.stringify({output,matchedAssets:results.length,protectedUnchanged:protectedResults.length,matchedSharedPages:shells.length}));
+const output='deployment/suchitra-live-v131-20260930.json';await fs.writeFile(output,JSON.stringify({checkedAt:new Date().toISOString(),canonical:suchitraPath,results,markdown:true,head:true,queryPreservingAlias:true,singleCentreSitemapEntry:true,rootReadingAid:true,protectedResults,correctNizampetProfile:{path:'/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india',status:200,currentCentreAndPhone:true,historicalByteComparison:false},shells},null,2)+'\n');console.log(JSON.stringify({output,matchedAssets:results.length,protectedBytesUnchanged:protectedResults.filter(x=>x.unchanged).length,unlisted404StatusPreserved:true,correctAdjacentCentre200:true,matchedSharedPages:shells.length}));

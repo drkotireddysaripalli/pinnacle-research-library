@@ -25,6 +25,8 @@ The conversation history remains useful evidence of intent. Current decisions co
 
 Occupational Therapy's life-first correction was released in Worker v125; the ABA Therapy page and shared mobile menu in v126; and the Autism Therapy integration hub in v127. Their dated receipts and practical reviews are in this project. The accepted future-page operating standard is `PINNACLE-PAGE-CREATION-WORK-ORDER.md`. The nine PinnacleAI product narratives and images were corrected in v129. Child Development Assessment and the named cross-therapy/header corrections are released in v130. `ACTIVE-PAGE-WORK-ORDER.md` retains the completed Assessment contract; `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md` and `PORTAL-NEXT-WORK-ORDER-20260930.md` define the 20-route current portfolio and the next local/search-estate work.
 
+Current continuation, 30 September: Suchitra v131 is released, making **21 managed public pages**. `ACTIVE-PAGE-WORK-ORDER.md` retains the completed Suchitra contract. The full sitemap register and navigation register distinguish released pages, retained legacy sources and exact next conditions; the remaining centre population is **59 standalone profiles plus two contact-page sections**. The older 20-route statement above describes v130 history.
+
 Do not reread every historical release note, repeat every earlier audit or reconstruct settled design decisions for each page. Do not reduce the page to a generic template or thin prompt merely to save usage.
 
 ## The non-negotiable outcome

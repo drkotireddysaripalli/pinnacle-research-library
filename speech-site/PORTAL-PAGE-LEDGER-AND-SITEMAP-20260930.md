@@ -1,6 +1,6 @@
 # Pinnacle portal page ledger and delivery sitemap
 
-30 September 2026 · Current bounded portfolio and next decisions
+30 September 2026 · v131 portfolio and whole-estate continuation
 
 This is the operational ledger for the **17 priority destinations** in `PORTAL-PAGE-INVENTORY-20260929.md`: two reference pages, six parent-demand pages and nine PinnacleAI product pages. It distinguishes a live URL from a page that has passed editorial review. It does not count every legacy, centre-profile, Verify or Ask page in the wider domain.
 
@@ -13,9 +13,12 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | Published product pages corrected in v129 | 9 | The nine live pages now use distinct module stories, original illustrations and revised source maps. |
 | Planned managed page not built | 0 | Initial 17-destination portfolio is released; wider local/search-estate work remains. |
 | Additional managed decision guides | 3 | Speech first-visit, teacher-observation and service-information pages; outside the 17-page priority denominator. |
-| Total managed public HTML routes in v130 | 20 | Seventeen priority pages plus the three guides. Preview and shell/test index are excluded. |
+| Additional rebuilt local centre | 1 | Suchitra, published and checked in v131. |
+| Total managed public HTML routes in v131 | 21 | Seventeen priority pages, three guides and Suchitra. Preview and shell/test index are excluded. |
 
-**Latest release:** Assessment v130 is public on its retained canonical. Source `850968e` was pushed before Worker `ec9b68b7-40e6-40bd-91ba-a387983e2c8c` served 100%. Its new HTML, images and exports matched the stage; all 20 common shells and ten unchanged controls passed readback. The two shared-header details and three named cross-therapy fixes are released. See `RELEASE-ASSESSMENT-V130-20260930.md`.
+**Latest release:** Suchitra v131 is public on its established canonical. Source `55aeccb` was pushed before Worker `75019b39-bfbb-49e6-a3bb-d6e0c3863cde` served 100%. Seven changed HTML/assets/exports, all 21 common shells and 11 valid protected controls passed public readback. The 155-route comparison found only the intended Suchitra retargeting; the other 154 records remain unchanged. See `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`.
+
+**Prior Assessment release:** v130 is public on its retained canonical. Source `850968e` was pushed before Worker `ec9b68b7-40e6-40bd-91ba-a387983e2c8c` served 100%. Its new HTML, images and exports matched the stage; all 20 common shells and ten unchanged controls passed readback. The two shared-header details and three named cross-therapy fixes are released. See `RELEASE-ASSESSMENT-V130-20260930.md`.
 
 **Prior product correction:** nine new editorial scenes, a distinct overview, eight module-specific examples, readable mobile hero hierarchy and compact proof layout are live. Source `8330346` was pushed before the full-union Worker release. Worker `4cb916cd-5683-4ea9-829d-82ccf3f812da` serves 100%; all nine public pages, nine illustrations, nine share images, 27 source/reading exports, 11 aliases and protected routes passed read-back. The v128 rollback version is `3e047f76-9b82-468a-b139-8102cebedb11`. See `RELEASE-PINNACLEAI-CORRECTION-V129-20260930.md`. The correction kept every canonical and the shared header/footer source intact.
 
@@ -40,6 +43,7 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | B-07 | `/everyday-therapy` | Manageable family-guided daily practice | **v129 live, checked** | Preserve a manageable routine and therapist responsibility. |
 | B-08 | `/fusion-module` | Relevant observations into human review | **v129 live, checked** | School input remains conditional on consent and current access workflow. |
 | B-09 | `/reassess-review-repeat` | Longitudinal comparison and next decision | **v129 live, checked** | Keep setting/support comparison and individual outcome boundaries. |
+| CENTRE-suchitra | `/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india` | Locate this branch and arrange a useful first conversation | **v131 live, checked** | Preserve sourced identity/gallery and exact HFR status; confirm current professional, appointment, fees and accessibility through enquiry. Observe actual discovery/call outcomes. |
 
 ## Public discovery sitemap and source graph
 
@@ -57,8 +61,8 @@ These are **sitemap entries, not confirmed indexed pages or unique URLs**. All 1
 |---|---:|---|
 | `/sitemaps/core.xml` | 45 | Confirm current core canonicals, including the Assessment URL, helpline and competing service pages. |
 | `/sitemaps/centres.xml` | 61 | 60 standalone profiles + /centers. Two directory entries use contact-page fragments (Jubilee Hills/USA); establish standalone destination and branch facts before a new page. |
-| `/sitemaps/staff.xml` | 251 | Confirm current public personnel profiles, consent and role accuracy. |
-| `/sitemaps/bots.xml` | 727 | Review distinct search value, canonical status and Ask/AI page overlap. |
+| `/sitemaps/staff.xml` | 251 at 18:11 UTC; 978 at 18:03 UTC | The staff/bot population varies between observations. Establish actual source/cache behavior and entity roles before changes; this is not a count of verified practitioners. |
+| `/sitemaps/bots.xml` | 978 at 18:11 UTC; 727 at 18:03 UTC | Current bot file includes the 251 staff-file URLs. Inspect the actual generator/cache source, then distinct value, evidence and canonical role. |
 | `/sitemaps/miracles.xml` | 10,000 | Audit child privacy, consent, unique value and index eligibility before amplification. |
 | `/sitemaps/faq-en.xml` | 659 | Sample and reconcile factual, canonical and quality status of English FAQs. |
 | `/sitemaps/faq-te.xml` | 659 | Check Telugu naturalness and translated-answer parity. |
@@ -93,6 +97,17 @@ The full Verify/off-page contribution ledger remains in `work/verify-visibility/
 - `PORTAL-NEXT-WORK-ORDER-20260930.md`: full ordered work beyond the initial portfolio, with sitemap-family acceptance and operational conditions.
 - `reviews/CENTRE-PAGE-CONTINUATION-QUEUE-20260930.csv`: all 62 published entries, current source/destination/media and exact local-page next conditions.
 - `reviews/CENTRE-SITEMAP-RECONCILIATION-20260930.json`: 60 standalone profiles, two source-page fragments, no unmatched extra sitemap profile.
-- `RELEASE-ASSESSMENT-V130-20260930.md`: latest deployment, rollback, source and public verification.
+- `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`: latest deployment, rollback, source and public verification.
+- `reviews/WHOLE-PORTAL-SITEMAP-SUMMARY-20260930.json`: refreshed sitemap documents, distinct counts, source-family states and limits.
+- `reviews/PORTAL-NAVIGATION-REGISTER-20260930.csv`: menu/footer/Verify/contact/external targets with origin and next condition.
+- `audits/whole-portal-register-20260930/whole-route-register.csv` and `.json`: private full URL register, excluded from public Git; sitemap-only observation, not a mass page review.
 
-Next executable package: verify current centre identities and one sufficiently complete branch brief, using actual source/route ownership. Ranking, AI citation and connected-call/enrolment results remain measurement work; the initial page portfolio being published does not complete that wider purpose.
+## Full register refresh · 18:11 UTC, 30 September
+
+All **23 sitemap documents** (two indexes and 21 URL sets) returned HTTP 200. At **18:11:47 UTC**, the 21 URL sets contain **59,339 loc occurrences**, representing **59,082 distinct exact URLs**, with **257 cross-sitemap overlaps** and no duplicate loc within an individual URL set: 251 staff/bot overlaps and six core/service overlaps. At **18:03:07 UTC**, the total was **59,815 occurrences / 733 overlaps**: staff.xml had 978 URLs and bots.xml had 727. In the second observation staff.xml had 251 and bots.xml had 978. The combined distinct population remains 978. These are dated source observations, not indexed-page counts or verified personnel. Source/cache variability is queued for investigation. Cross-sitemap membership alone is not an error; no redirect, removal or resubmission follows from the count. All **21 managed public pages** appear in the fetched sitemap estate.
+
+The navigation register covers **249 metadata/card/direct-link occurrences**, **213 distinct absolute hrefs**, and **117 same-domain page paths**, including the 36 footer evidence records and contact utilities. Section origins and exact fragments are retained. A URL absent from a sitemap is not automatically an error or a page to submit.
+
+Every full-register URL has a stable ID, sitemap source, family, work state, canonical-verification flag, source-ownership condition, release-evidence reference where applicable and exact next condition. Legacy, staff, FAQ, bots and Ask bodies were not fetched by this inventory. Raw child-associated route lists remain local in the ignored audit folder; the public summary contains aggregate counts only.
+
+Suchitra is complete. **59 standalone centre rebuilds** remain, plus **two section-only destinations**. The next prepared branch order is Dilsukhnagar, Gurunanak Road/Vijayawada, South Extension/New Delhi and Ananthapuram; Kurnool follows after matching its exterior photograph to the current address. This is source-readiness ordering, not a measured search-demand ranking. Ranking, AI citation and connected-call/enrolment results remain separate work.

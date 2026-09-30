@@ -1,0 +1,71 @@
+{
+  "release": "v131",
+  "recordedAt": "2026-09-30T18:23:26.618Z",
+  "publishedAt": "2026-09-30T17:40:24.921191Z",
+  "sourceCommit": "55aeccbb0682a98f3e84f813111d6ff4b8bb183b",
+  "sourcePushedBeforeRelease": true,
+  "worker": "pinnacle-verify-route",
+  "workerVersion": "75019b39-bfbb-49e6-a3bb-d6e0c3863cde",
+  "deployment": "47e8c1b7-e01c-4a35-9f5c-479ed2c51735",
+  "trafficPercent": 100,
+  "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+  "managedPublicPages": 21,
+  "routeIntegrity": {
+    "before": 155,
+    "after": 155,
+    "changed": [
+      "4b82e595879d49fcbc40f28ee46f6885"
+    ],
+    "added": 0,
+    "removed": 0,
+    "otherUnchanged": 154
+  },
+  "rollback": {
+    "workerVersion": "ec9b68b7-40e6-40bd-91ba-a387983e2c8c",
+    "routeId": "4b82e595879d49fcbc40f28ee46f6885",
+    "priorScript": "pinnacle-centre-search-repair"
+  },
+  "checks": {
+    "buildOutputs": 23,
+    "focusedTestsPassed": 69,
+    "portalChecksPassed": 29,
+    "matchedAssets": 7,
+    "matchedManagedShells": 21,
+    "protectedExactByteControls": 11,
+    "localResponsiveRuns": 7,
+    "productionResponsiveRuns": 7,
+    "newNuConformancePass": false
+  },
+  "commonShellDesignChanged": false,
+  "previous20OwnedBodiesMatched": true,
+  "existingExternalAdsTags": [
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "exactTags": 2
+    },
+    {
+      "path": "/speech-therapy/service-information",
+      "exactTags": 2
+    }
+  ],
+  "externalAdsConsentVerified": false,
+  "indexnow": {
+    "submittedAt": "2026-09-30T17:41:43.866Z",
+    "httpStatus": 200,
+    "urlCount": 1,
+    "state": "submitted_only"
+  },
+  "evidence": [
+    "RELEASE-SUCHITRA-CENTRE-V131-20260930.md",
+    "deployment/suchitra-live-v131-20260930.json",
+    "deployment/centre-route-change-v131-20260930.json",
+    "deployment/suchitra-responsive-live-v131-20260930.json",
+    "deployment/suchitra-nu-v131-20260930.json",
+    "deployment/indexnow-suchitra-v131-20260930.json"
+  ],
+  "limits": [
+    "Unlisted Nizampet path retains 404 status only; correct JNTU canonical returned 200 without a historical body comparison.",
+    "W3C Nu returned 429; physical Safari/iOS/Firefox and field CWV not established.",
+    "No actual production enquiry, connected call, accepted CRM delivery, indexing, ranking or AI citation established."
+  ]
+}
