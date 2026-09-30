@@ -1,0 +1,19 @@
+{
+  "submittedAt": "2026-09-30T13:15:06.638Z",
+  "rootKeyResponseStatus": 200,
+  "urlList": [
+    "https://www.pinnacleblooms.org/pinnacleai",
+    "https://www.pinnacleblooms.org/abilityscore",
+    "https://www.pinnacleblooms.org/seven-readiness-indexes",
+    "https://www.pinnacleblooms.org/personal-development-kernel",
+    "https://www.pinnacleblooms.org/prognose",
+    "https://www.pinnacleblooms.org/therapeuticai",
+    "https://www.pinnacleblooms.org/everyday-therapy",
+    "https://www.pinnacleblooms.org/fusion-module",
+    "https://www.pinnacleblooms.org/reassess-review-repeat"
+  ],
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "httpStatus": 200,
+  "response": "",
+  "meaning": "Updated URL notification received; this confirms submission only, not discovery, indexing, ranking, AI citation or conversion."
+}
