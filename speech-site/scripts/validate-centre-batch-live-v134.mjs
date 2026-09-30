@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 import {centreDetails} from '../src/data/centre-detail-content.ts';
 import {suchitraPath} from '../src/data/suchitra-content.ts';
-const origin='https://www.pinnacleblooms.org',release='release-centre-batch-v134-final-20261001';
+const origin='https://www.pinnacleblooms.org',release=process.argv[2]||'release-centre-batch-v134-final-20261001';
 const batch=centreDetails.filter(page=>page.releaseLabel.startsWith('centre-v134'));
 const previousShells=JSON.parse(await fs.readFile('deployment/shared-shell-live-v133-20261001.json','utf8')).shells;
 const acceptedMain=text=>text.match(/<main\b[^>]*>[\s\S]*?<\/main>/)[0];
@@ -48,5 +48,5 @@ for(const [path,file]of Object.entries(mapping)){
  const header=o.text.match(/<header\b[\s\S]*?<\/header>/)[0].replace(/ aria-current="page"/g,'').replace(/ is-current/g,'');const footer=o.text.match(/<footer\b[\s\S]*?<\/footer>/)[0];assert(footer.includes('verify-footer'));
  firstHeader??=header;firstFooter??=footer;assert.equal(header,firstHeader,path+' header');assert.equal(footer,firstFooter,path+' footer');if(previousShells.some(row=>row.path===path)){const old=await fs.readFile('release-shared-shell-v133-20261001/pinnacle-pages-html/'+file+'.html','utf8');assert.equal(sha(acceptedMain(o.text)),sha(acceptedMain(old)),path+' accepted body unchanged');}shells.push({path,status:200,ownedStagedHtmlMatched:true,knownExternalAdsTags:knownAdsTags.filter(tag=>o.text.includes(tag)).length,commonHeader:true,commonFooter:true});
 }
-const output='deployment/centre-batch-live-v134-20261001.json';await fs.writeFile(output,JSON.stringify({checkedAt:new Date().toISOString(),pages,matches,protectedResults,shells,suchitraOwnedCookieFixed:true,singleCentreSitemapEntries:true,rootReadingAid:true,advertisingConsentVerified:false},null,2)+'\n');
+const output=process.argv[3]||'deployment/centre-batch-live-v134-20261001.json';await fs.writeFile(output,JSON.stringify({checkedAt:new Date().toISOString(),pages,matches,protectedResults,shells,suchitraOwnedCookieFixed:true,singleCentreSitemapEntries:true,rootReadingAid:true,advertisingConsentVerified:false},null,2)+'\n');
 console.log(JSON.stringify({output,newPages:pages.length,matchedAssets:matches.length,protectedUnchanged:protectedResults.length,matchedSharedPages:shells.length,suchitraOwnedCookieFixed:true}));

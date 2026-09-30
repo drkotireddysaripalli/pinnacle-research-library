@@ -1,0 +1,14 @@
+{
+  "submittedAt": "2026-09-30T21:05:33.561Z",
+  "rootKeyResponseStatus": 200,
+  "urlList": [
+    "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+    "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+    "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+    "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india"
+  ],
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "httpStatus": 200,
+  "response": "",
+  "meaning": "Updated URL notification received; this confirms submission only, not discovery, indexing, ranking, AI citation or conversion."
+}

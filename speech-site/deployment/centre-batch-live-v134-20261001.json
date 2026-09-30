@@ -1,0 +1,555 @@
+{
+  "checkedAt": "2026-09-30T21:04:52.711Z",
+  "pages": [
+    {
+      "id": "nandyala",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "markdown": true,
+      "head": true,
+      "queryPreservingAlias": true,
+      "ownedAnalyticsCookie": true,
+      "socialBytes": 210576
+    },
+    {
+      "id": "ongole",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "markdown": true,
+      "head": true,
+      "queryPreservingAlias": true,
+      "ownedAnalyticsCookie": true,
+      "socialBytes": 198062
+    },
+    {
+      "id": "tirupati",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "markdown": true,
+      "head": true,
+      "queryPreservingAlias": true,
+      "ownedAnalyticsCookie": true,
+      "socialBytes": 192850
+    },
+    {
+      "id": "srikakulam",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "markdown": true,
+      "head": true,
+      "queryPreservingAlias": true,
+      "ownedAnalyticsCookie": true,
+      "socialBytes": 203373
+    }
+  ],
+  "matches": [
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india?release=centre-v134",
+      "status": 200,
+      "bytes": 156007,
+      "ownedHtml": true,
+      "sha256": "0c95f18b13aa6fe77e291a6b4d00965b23e14265f4d9a3de741b600d38fce841",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/nandyala-evidence.json",
+      "status": 200,
+      "bytes": 11061,
+      "ownedHtml": false,
+      "sha256": "40c4c3d04e0c9171aac020b641d15fb6b219de88daab9ec4a2dca6936dcd824a",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/nandyala-evidence.txt",
+      "status": 200,
+      "bytes": 7801,
+      "ownedHtml": false,
+      "sha256": "b768d7f396588894c17c073ec7e5ca8d3201fdab4bad0e7720fa366d029ee782",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/nandyala-machine.md",
+      "status": 200,
+      "bytes": 8544,
+      "ownedHtml": false,
+      "sha256": "fcfcbf47e217a622ca23755bb9ef3eab2cf426b296d8b841756513bff14b20bf",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-assets/nandyala-social-20261001.BuRhtKA6_ZlPUY1.jpg?v=centre-v134-nandyala-20261001",
+      "status": 200,
+      "bytes": 210576,
+      "ownedHtml": false,
+      "sha256": "c58f3e9be6085c13308dbe4562d11f2d8cac5b1d0598e08c37fc7a80cf6c17c6",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-assets/nandyala-interior-17-1.CWQQs4GU_ZCG1FM.webp",
+      "status": 200,
+      "bytes": 246794,
+      "ownedHtml": false,
+      "sha256": "8fe3563f66da4f92291a33b6d1f07236b060bb209b30d38bdfdef9777fd5190f",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india?release=centre-v134",
+      "status": 200,
+      "bytes": 155068,
+      "ownedHtml": true,
+      "sha256": "9d053009c6c28abff674c4c63f57df25e7ff0b933f31dbeeb103f8fa90b25412",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/ongole-evidence.json",
+      "status": 200,
+      "bytes": 10933,
+      "ownedHtml": false,
+      "sha256": "ccb1f83dce1550c2ebe75196ce6d075c8740b0bf72e792ca052ddf67ec04d247",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/ongole-evidence.txt",
+      "status": 200,
+      "bytes": 7826,
+      "ownedHtml": false,
+      "sha256": "53f4a7878cb246c77b91739d6cc3fba3d7ab29fbcafdab57beaa0b2b36b14cac",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/ongole-machine.md",
+      "status": 200,
+      "bytes": 8595,
+      "ownedHtml": false,
+      "sha256": "9ffbe9903207d4810081e363f00f99b0f20623edbc76ba2c6a20fe8841bd6956",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-assets/ongole-social-20261001.C6HJoIAE_2wl4HJ.jpg?v=centre-v134-ongole-20261001",
+      "status": 200,
+      "bytes": 198062,
+      "ownedHtml": false,
+      "sha256": "a1838b7a73732a777dd0b4a9d1619c88eab3ac3a2ea0793dd84f0ff17cfd0800",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-assets/ongole-exterior-37.D8yFgy40_4iVQj.webp",
+      "status": 200,
+      "bytes": 93386,
+      "ownedHtml": false,
+      "sha256": "5b0896cbde6b9b7a1c2475cfdd8c789c2e93d7d66fe9aa77f938e64b10a57999",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india?release=centre-v134",
+      "status": 200,
+      "bytes": 153701,
+      "ownedHtml": true,
+      "sha256": "289481dfdb9b844256c2fd1d0c43f9f8de1859a093b63bc9a24c5d1e116f5ba8",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/tirupati-evidence.json",
+      "status": 200,
+      "bytes": 10779,
+      "ownedHtml": false,
+      "sha256": "a4691d3db7cde97811854bbb0db1434721cada99f56fe17def0cfee923aee575",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/tirupati-evidence.txt",
+      "status": 200,
+      "bytes": 7819,
+      "ownedHtml": false,
+      "sha256": "1a4ed865a5c08955b817e74b49cf7b26e9c91d6e503e7b22f16a8eae06a25ce9",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/tirupati-machine.md",
+      "status": 200,
+      "bytes": 8601,
+      "ownedHtml": false,
+      "sha256": "95352eddba21947368979455252beea5492f322804890b4e8dd45a95b5ec7e36",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-assets/tirupati-social-20261001.eqRNhOsf_Z1T7OsX.jpg?v=centre-v134-tirupati-20261001",
+      "status": 200,
+      "bytes": 192850,
+      "ownedHtml": false,
+      "sha256": "384dba5c042dc71a5eb2f527ac0f2bc352c1f9b218753cd93ec77397e2158b2d",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-assets/tirupati-interior-4-1.q-JHXmAC_2dI2GJ.webp",
+      "status": 200,
+      "bytes": 204240,
+      "ownedHtml": false,
+      "sha256": "28b2d228846e27ffa92647be7b56743b7c70067dc1e1b4ca6451d9bc2a7c919c",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india?release=centre-v134",
+      "status": 200,
+      "bytes": 156161,
+      "ownedHtml": true,
+      "sha256": "c5c14bca018430f217ba7839240a292c220948ba4b062cd8a8b2943864000ade",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/srikakulam-evidence.json",
+      "status": 200,
+      "bytes": 11057,
+      "ownedHtml": false,
+      "sha256": "440877e68031f1b61b971812a328e5491c9ba45a7d5c4e5ff11156e11b79676a",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/srikakulam-evidence.txt",
+      "status": 200,
+      "bytes": 7787,
+      "ownedHtml": false,
+      "sha256": "8d83471d979c99ee3dadf4707c20183ca62b5b3193944f5273e788305eed77e9",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-data/srikakulam-machine.md",
+      "status": 200,
+      "bytes": 8538,
+      "ownedHtml": false,
+      "sha256": "5ba6424432217bd6d5c576f906cfc90917cbb76e42300f5fab5fc16ae2f71e5e",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-assets/srikakulam-social-20261001.C2dpTmF__Z232ALb.jpg?v=centre-v134-srikakulam-20261001",
+      "status": 200,
+      "bytes": 203373,
+      "ownedHtml": false,
+      "sha256": "7b3a7f871f176f6453a34c0e08aba543a054754484d0b8b9bc7d81109cc16aa8",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-assets/srikakulam-interior-7-0.DWJoJZhH_20MuUz.webp",
+      "status": 200,
+      "bytes": 75532,
+      "ownedHtml": false,
+      "sha256": "17845d3833a4b08bf233d368b857f78650fadb4b1e43bfbb3c6b1e8b03cac355",
+      "knownExternalAdsTags": 0
+    },
+    {
+      "path": "/pinnacle-pages-scripts/speech-measurement.js",
+      "status": 200,
+      "bytes": 11178,
+      "ownedHtml": false,
+      "sha256": "f17efd9e30e04d87f4029a06294db356716b20a89367f17155a5c2a8e7ae7634",
+      "knownExternalAdsTags": 0
+    }
+  ],
+  "protectedResults": [
+    {
+      "path": "/verify/",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107"
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "51d3e37a4fd98bdb1c2d4269f8ae541fcffa960533221515e825c94942dfb399"
+    },
+    {
+      "path": "/verify/evidence/fsc.pdf",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "84664753b59ec604a2a55c501b9786efecbdded76bfb0d9be48ca732c06a909a"
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "cdf081a88fbdea6739bf07afb34d38923e45209aca2e2960bdc17f61b8fe1691"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "09d9b8df2131083e9d288d9cffd20f027db2d4db5906de2a85103f09e069891f"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "b7c18595209c559155176b6578808dc5e8fc4b92086b5ee5ba413d877fb149be"
+    },
+    {
+      "path": "/sitemaps/core.xml",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "5b0b440763b06410aa6da7f4b15b202a2112210df8be2a19c370c6e425c19440"
+    },
+    {
+      "path": "/pinnacle-ai-innovations-revolutionizing-autism-history",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "aef68ca805349c6147bed80cc49572a70097e441860d272f0027b64dcd586642"
+    },
+    {
+      "path": "/abilityscore-global-study",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "7876accea994a748da9108d2ff3fc3b0161f88bc7991dfdcf5d7742621999038"
+    },
+    {
+      "path": "/therapeuticai-effectiveness-study",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "e5d42e55d684717498ee5b5455e52e89002e5b10779b352ff08d03bb70128fe4"
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "a4e76e03108671eb482424b6eecf97925d17078a5df8141047f315fd53d1af18"
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "status": 200,
+      "unchanged": true,
+      "sha256": "e4c070d0cefaa608fb890a2e37818e79a24437119c0ad2488e61c07d1573d58f"
+    }
+  ],
+  "shells": [
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 2,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/best-special-education-center-call-9100181181",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/autism-therapy",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/speech-aba-autism-assessments",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/speech-therapy/service-information",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 2,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/speech-therapy/first-visit-guide",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/speech-therapy/teacher-observation-guide",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/pinnacleai",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/abilityscore",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/seven-readiness-indexes",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/personal-development-kernel",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/prognose",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/therapeuticai",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/everyday-therapy",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/fusion-module",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/reassess-review-repeat",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "status": 200,
+      "ownedStagedHtmlMatched": true,
+      "knownExternalAdsTags": 0,
+      "commonHeader": true,
+      "commonFooter": true
+    }
+  ],
+  "suchitraOwnedCookieFixed": true,
+  "singleCentreSitemapEntries": true,
+  "rootReadingAid": true,
+  "advertisingConsentVerified": false
+}

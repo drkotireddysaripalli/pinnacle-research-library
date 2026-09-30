@@ -1,0 +1,103 @@
+{
+  "checkedAt": "2026-09-30T21:04:26.059Z",
+  "deployment": {
+    "id": "0e6e4531-d393-4874-900c-9c7477c20df2",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "kotii@kgvpl.com",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "a094769b-0528-4577-b832-b0a6a1544c21",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-30T20:59:10.616782Z"
+  },
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "environment": "production",
+      "name": "PINNACLE_ASK",
+      "service": "pinnacle-ask",
+      "type": "service"
+    },
+    {
+      "environment": "production",
+      "name": "PINNACLE_LEGACY",
+      "service": "pbn-planetscale",
+      "type": "service"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ],
+  "success": true,
+  "routeCount": 155,
+  "changedRoutes": [
+    {
+      "before": {
+        "id": "caac092863c54ffaa9b5885b9362c7b7",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      "after": {
+        "id": "caac092863c54ffaa9b5885b9362c7b7",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    },
+    {
+      "before": {
+        "id": "c1ca57ce63bf45acbb76899c4469cc27",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      "after": {
+        "id": "c1ca57ce63bf45acbb76899c4469cc27",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    },
+    {
+      "before": {
+        "id": "ce311bc84ad6415da1ef737a20aadd8f",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      "after": {
+        "id": "ce311bc84ad6415da1ef737a20aadd8f",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    },
+    {
+      "before": {
+        "id": "9b09a7cbd8f3482da73517912ef93ee6",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      "after": {
+        "id": "9b09a7cbd8f3482da73517912ef93ee6",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    }
+  ],
+  "unchangedRoutes": 151,
+  "bindingsUnchanged": true
+}

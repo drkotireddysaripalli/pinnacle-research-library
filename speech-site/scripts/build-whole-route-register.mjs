@@ -63,7 +63,7 @@ function collect(value, section) {
 for (const [section, content] of Object.entries(navigation)) if (Array.isArray(content)) collect(content, section);
 for (const card of cards) navOccurrences.push({ url: `/verify/evidence/records/${card.id}.html`, label: card.title, section: 'verifyFooterCards' });
 for (const [url, label] of [
-  ['/', 'Home'], ['/verify/', 'Verify evidence hub'], ['/verify/#organization', 'Organisation source identity'], ['/verify/evidence/cite.html', 'Citations and downloads'],
+  ['/', 'Home'], ['/verify/', 'Verify evidence hub'], ['/verify/#chapter-identity', 'Organisation source identity'], ['/verify/evidence/cite.html', 'Citations and downloads'],
   ['/verify/evidence/pinnacleai-regulatory-journey.html', 'PinnacleAI regulatory journey'],
   ['/national-autism-helpline', 'National Autism Helpline'], ['/centers', 'Find a centre'], ['/sitemap', 'Human sitemap'],
   ['tel:+919100181181', 'National phone'], ['https://wa.me/919100181181', 'WhatsApp'], ['mailto:care@pinnacleblooms.org', 'Care email'],

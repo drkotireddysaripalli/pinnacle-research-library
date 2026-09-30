@@ -1,6 +1,6 @@
 # Pinnacle portal page ledger and delivery sitemap
 
-1 October 2026 · v133 common shell; sitemap population observed 30 September
+1 October 2026 · v134 served union, v133 common shell; sitemap population observed 30 September
 
 This is the operational ledger for the **17 priority destinations** in `PORTAL-PAGE-INVENTORY-20260929.md`: two reference pages, six parent-demand pages and nine PinnacleAI product pages. It distinguishes a live URL from a page that has passed editorial review. It does not count every legacy, centre-profile, Verify or Ask page in the wider domain.
 
@@ -13,10 +13,12 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | Published product pages corrected in v129 | 9 | The nine live pages now use distinct module stories, original illustrations and revised source maps. |
 | Planned managed page not built | 0 | Initial 17-destination portfolio is released; wider local/search-estate work remains. |
 | Additional managed decision guides | 3 | Speech first-visit, teacher-observation and service-information pages; outside the 17-page priority denominator. |
-| Additional rebuilt local centres | 5 | Suchitra v131; Dilsukhnagar, Vijayawada, South Extension and Ananthapuram v132. |
-| Total managed public HTML routes in v133 | 25 | Seventeen priority pages, three guides and five centres. Preview and shell/test index are excluded. |
+| Additional rebuilt local centres | 9 | Suchitra v131; four centres v132; Nandyala, Ongole, Tirupati and Srikakulam v134. |
+| Total managed public HTML routes in v134 | 29 | Seventeen priority pages, three guides and nine centres. Preview and shell/test index are excluded. |
 
-**Latest common-shell release:** v133 is public across all 25 managed pages. Source `73d6385` was pushed before Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` at 100%. All 25 owned HTML/common shells matched, all accepted main bodies and 12 protected controls remained unchanged, seven stylesheets matched and 15 production responsive runs passed. All 155 routes and four bindings remain unchanged. Native footer/Verify disclosures work without JavaScript. No repeated IndexNow notification for this navigation-only change. See `RELEASE-SHARED-SHELL-V133-20261001.md`.
+**Latest served union:** v134 is public across all 29 managed pages. Source `4e52299` was pushed before Worker `a094769b-0528-4577-b832-b0a6a1544c21` began serving 100%. Four new centre pages, 25 changed assets/exports, all 29 owned HTML/common shells and 28 production responsive runs passed. The 25 prior accepted main bodies and 12 protected controls remain unchanged. Exactly four existing centre routes were retargeted; the other 151 and all four bindings remain. One material four-URL IndexNow batch returned 200. External Nu returned 429, with no validation result. See `RELEASE-CENTRE-BATCH-V134-20261001.md`.
+
+**Latest common-shell source release:** v133 was published across the original 25 managed pages and is now reused by all 29 in v134. Source `73d6385` was pushed before its Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` served 100% at that release. All 25 owned HTML/common shells matched, accepted main bodies and 12 protected controls remained unchanged, seven stylesheets matched and 15 production responsive runs passed. All 155 routes and four bindings remained unchanged. Native footer/Verify disclosures work without JavaScript. No repeated IndexNow notification for that navigation-only change. See `RELEASE-SHARED-SHELL-V133-20261001.md`.
 
 **Prior centre release:** Four centre pages v132 are public on their retained canonicals. Source `fe3130f` was pushed before Worker `ac200e7a-3c20-4d22-a39c-5201aa42d615` at 100%. Twenty-five changed public assets/exports and 25 shared shells matched the stage;12protected controls retained bytes. All28production responsive runs passed. Exactly four existing routes were retargeted; the other 151 remain unchanged. The centre sitemap retains 61 URLs with four new dated lastmods. One four-URL IndexNow batch returned200. See `RELEASE-CENTRE-BATCH-V132-20261001.md`.
 
@@ -24,11 +26,11 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 
 **Prior Assessment release:** v130 is public on its retained canonical. Source `850968e` was pushed before Worker `ec9b68b7-40e6-40bd-91ba-a387983e2c8c` served 100%. Its new HTML, images and exports matched the stage; all 20 common shells and ten unchanged controls passed readback. The two shared-header details and three named cross-therapy fixes are released. See `RELEASE-ASSESSMENT-V130-20260930.md`.
 
-**Prior product correction:** nine new editorial scenes, a distinct overview, eight module-specific examples, readable mobile hero hierarchy and compact proof layout are live. Source `8330346` was pushed before the full-union Worker release. Worker `4cb916cd-5683-4ea9-829d-82ccf3f812da` serves 100%; all nine public pages, nine illustrations, nine share images, 27 source/reading exports, 11 aliases and protected routes passed read-back. The v128 rollback version is `3e047f76-9b82-468a-b139-8102cebedb11`. See `RELEASE-PINNACLEAI-CORRECTION-V129-20260930.md`. The correction kept every canonical and the shared header/footer source intact.
+**Prior product correction:** nine new editorial scenes, a distinct overview, eight module-specific examples, readable mobile hero hierarchy and compact proof layout are live. Source `8330346` was pushed before the full-union Worker release. Worker `4cb916cd-5683-4ea9-829d-82ccf3f812da` served 100% at that release; all nine public pages, nine illustrations, nine share images, 27 source/reading exports, 11 aliases and protected routes passed read-back. The v128 rollback version is `3e047f76-9b82-468a-b139-8102cebedb11`. See `RELEASE-PINNACLEAI-CORRECTION-V129-20260930.md`. The correction kept every canonical and the shared header/footer source intact.
 
 ## Page-by-page route and work ledger
 
-All 25 rows below use the live v133 common header/footer; their accepted main bodies keep the separately recorded content releases.
+All 29 rows below use the common v133 header/footer in the live v134 union; their accepted main bodies keep the separately recorded content releases.
 
 | ID | Canonical URL | Audience job | Current state | Next meaningful work |
 |---|---|---|---|---|
@@ -57,6 +59,10 @@ All 25 rows below use the live v133 common header/footer; their accepted main bo
 | CENTRE-gurunanak | `/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india` | Vijayawada arrival and life-first visit preparation | **v132 live, checked** | Coordinate directions are not matched GBP identity; no released exterior. Confirm second-floor access and appointments. |
 | CENTRE-delhi | `/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india` | South Extension published location and enquiry | **v132 live, checked; current operation unverified** | WorkbookINACTIVE and datedHFRApproved retained distinctly. Confirm current operation/appointments before travelling; frontage steps and coordinate directions retained. |
 | CENTRE-ananthapuram | `/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india` | Ashoknagar arrival and participation-led conversation | **v132 live, checked** | Preserve established canonical spelling; exact local enquiry and source trail. CCTV photograph excluded; current appointments/access confirmed separately. |
+| CENTRE-nandyala | `/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india` | Second-floor arrival and getting-ready family example | **v134 live, checked** | Preserve exact sources, matched premises, original poster and selected enquiry; current appointments/professionals/fees/access and actual discovery/calls remain separate. |
+| CENTRE-ongole | `/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india` | Sundaraiah Bhavan Road arrival and family-table communication/choice | **v134 live, checked** | Preserve dated HFR and source scope; family-table example is not a feeding/swallowing-service claim. Confirm current visit arrangements. |
+| CENTRE-tirupati | `/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india` | Air Bypass Road arrival and shared picture-book participation | **v134 live, checked** | Preserve eligible interior and textual arrival; no released entrance image. Google-watermarked exterior stays excluded; confirm current appointments/access. |
+| CENTRE-srikakulam | `/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india` | Sana Street arrival and drawing-to-shared-learning example | **v134 live, checked** | Preserve HFR certificate pages 79–80 and matched premises; clinical real-child photo remains excluded without matched consent. Confirm appointments/access. |
 
 ## Public discovery sitemap and source graph
 
@@ -110,31 +116,34 @@ The full Verify/off-page contribution ledger remains in `work/verify-visibility/
 - `PORTAL-NEXT-WORK-ORDER-20260930.md`: full ordered work beyond the initial portfolio, with sitemap-family acceptance and operational conditions.
 - `reviews/CENTRE-PAGE-CONTINUATION-QUEUE-20260930.csv`: all 62 published entries, current source/destination/media and exact local-page next conditions.
 - `reviews/CENTRE-SITEMAP-RECONCILIATION-20260930.json`: 60 standalone profiles, two source-page fragments, no unmatched extra sitemap profile.
-- `RELEASE-CENTRE-BATCH-V132-20261001.md`: latest four-centre deployment, rollback, source and public verification.
+- `RELEASE-CENTRE-BATCH-V134-20261001.md`: current four-centre deployment, rollback, source and public verification.
+- `RELEASE-CENTRE-BATCH-V132-20261001.md`: prior four-centre deployment history.
 - `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`: prior local-centre release.
-- `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`: next four branch contracts and image-specific conditions.
+- `reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`: next eight exact branch contracts and image-specific conditions; not built.
+- `reviews/CENTRE-SOURCE-CONDITIONS-20261001.json`: field conflicts and eligible alternatives for other branches.
+- `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`: preparation history for the four now released in v134.
 - `reviews/WHOLE-PORTAL-SITEMAP-SUMMARY-20260930.json`: refreshed sitemap documents, distinct counts, source-family states and limits.
 - `reviews/PORTAL-NAVIGATION-REGISTER-20260930.csv`: menu/footer/Verify/contact/external targets with origin and next condition.
 - `audits/whole-portal-register-20260930/whole-route-register.csv` and `.json`: private full URL register, excluded from public Git; sitemap-only observation, not a mass page review.
 
 ## Full register refresh · 18:11 UTC, 30 September
 
-All **23 sitemap documents** (two indexes and 21 URL sets) returned HTTP 200. At **18:11:47 UTC**, the 21 URL sets contain **59,339 loc occurrences**, representing **59,082 distinct exact URLs**, with **257 cross-sitemap overlaps** and no duplicate loc within an individual URL set: 251 staff/bot overlaps and six core/service overlaps. At **18:03:07 UTC**, the total was **59,815 occurrences / 733 overlaps**: staff.xml had 978 URLs and bots.xml had 727. In the second observation staff.xml had 251 and bots.xml had 978. The combined distinct population remains 978. These are dated source observations, not indexed-page counts or verified personnel. Source/cache variability is queued for investigation. Cross-sitemap membership alone is not an error; no redirect, removal or resubmission follows from the count. The **21 managed public pages at that pre-v132 observation** appeared in the fetched estate; current release-state reconciliation covers all **25** managed routes.
+All **23 sitemap documents** (two indexes and 21 URL sets) returned HTTP 200. At **18:11:47 UTC**, the 21 URL sets contain **59,339 loc occurrences**, representing **59,082 distinct exact URLs**, with **257 cross-sitemap overlaps** and no duplicate loc within an individual URL set: 251 staff/bot overlaps and six core/service overlaps. At **18:03:07 UTC**, the total was **59,815 occurrences / 733 overlaps**: staff.xml had 978 URLs and bots.xml had 727. In the second observation staff.xml had 251 and bots.xml had 978. The combined distinct population remains 978. These are dated source observations, not indexed-page counts or verified personnel. Source/cache variability is queued for investigation. Cross-sitemap membership alone is not an error; no redirect, removal or resubmission follows from the count. The **21 managed public pages at that pre-v132 observation** appeared in the fetched estate; current release-state reconciliation covers all **29** managed routes.
 
 The navigation register covers **249 metadata/card/direct-link occurrences**, **213 distinct absolute hrefs**, and **117 same-domain page paths**, including the 36 footer evidence records and contact utilities. Section origins and exact fragments are retained. A URL absent from a sitemap is not automatically an error or a page to submit.
 
 Every full-register URL has a stable ID, sitemap source, family, work state, canonical-verification flag, source-ownership condition, release-evidence reference where applicable and exact next condition. Legacy, staff, FAQ, bots and Ask bodies were not fetched by this inventory. Raw child-associated route lists remain local in the ignored audit folder; the public summary contains aggregate counts only.
 
-Five centre profiles are complete. **55 standalone centre rebuilds** remain, plus **two section-only destinations**. The next prepared batch is Nandyala, Ongole, Tirupati and Srikakulam; Kurnool retains its exterior/address condition. Source-readiness ordering is not a measured search-demand ranking. Search, AI citation and connected-call/enrolment results remain separate work.
+Nine centre profiles are complete. **51 standalone centre rebuilds** remain, plus **two section-only destinations**. Eight next contracts are prepared: Miryalaguda, Nallagandla, Kakinada, Nellore, Attapur, Karimnagar, Himayat Nagar and Santosh Nagar. Kadapa has an illustration-led alternative. Exact address/postcode/enquiry/media conditions remain attached to affected centres. Source-readiness ordering is not a measured search-demand ranking. Search, AI citation and connected-call/enrolment results remain separate work.
 
-## Current delivery continuation · v133
+## Current delivery continuation · v134
 
-The existing 59,082-URL snapshot is retained with its 30 September population timestamp. Its release states, source evidence and centre queue were updated from v132 body releases and the v133 common-shell public checks without repeating the whole crawl. Current managed count 25, rebuilt centre count 5, standalone remaining 55, contact sections 2. The navigation register retains 249 occurrences / 213 unique absolute hrefs / 117 internal paths; current managed-destination states were reconciled.
+The existing 59,082-URL snapshot is retained with its 30 September population timestamp. Release states, source evidence and the centre queue are reconciled from the v134 public checks without repeating the whole crawl. Current managed count 29, rebuilt centre count 9, standalone remaining 51, contact sections 2. The shared source release remains v133. Current navigation counts are 256 occurrences / 216 unique absolute hrefs / 119 internal paths; the earlier 249/213/117 observation is historical. Eight source-prepared contracts and route-specific conditions are reconciled into the saved population and the 82-row public delivery queue.
 
-Next source-prepared four: **Nandyala, Ongole, Tirupati and Srikakulam**. Their canonical/source/HFR/enquiry contracts and precise media exclusions are in `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`. Source-readiness order is not a measured query-demand ranking. Kurnool exterior/address and Jagadamba/Warangal postcode conflicts remain attached to their own rows.
+Next source-prepared eight: **Miryalaguda, Nallagandla, Kakinada, Nellore, Attapur, Karimnagar, Himayat Nagar and Santosh Nagar** in `reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`. Their exact HFR states and source levels must replace any generator assumption of Approved/certificate copy. Kadapa, Gachibowli, Gajuwaka and postcode/media alternatives are recorded separately. Source-readiness order is not a measured query-demand ranking.
 
-Targeted common-shell density/call-context and useful product examples, actual staff/bot sitemap variability, Ads-consent ownership, legacy/core source/search roles, multilingualFAQ/Ask/child-story eligibility and relevant off-page authority remain in `PORTAL-NEXT-WORK-ORDER-20260930.md`. Published, submitted, indexed, cited, connected call and accepted enquiry are separate states.
+Common-shell density/call-context is complete in v133. Useful product examples, staff/bot sitemap variability, Ads-consent ownership, legacy/core source/search roles, multilingual FAQ/Ask/child-story eligibility and relevant off-page authority remain in `PORTAL-NEXT-WORK-ORDER-20260930.md`. Eligible investigations can proceed alongside centre implementation. Published, submitted, indexed, cited, connected call and accepted enquiry are separate states.
 
-## Current navigation and complete delivery map · v133
+## Current navigation and complete delivery map · v134
 
-The source-collected navigation register now contains **256 occurrences / 216 distinct absolute destinations / 119 same-domain paths**. It includes footer overview links, header source context and the GET search action; these are not counts of every repeated DOM anchor. Historical 249/213/117 observations above are retained as history. The complete current work map is `PORTAL-DELIVERY-MAP-20261001.md`. Common-shell density/context/call-path work is released in v133; specific product examples and private decision aids remain pending. Next implementation: the four prepared centre contracts.
+The source-collected navigation register contains **256 occurrences / 216 distinct absolute destinations / 119 same-domain paths**. It includes footer overview links, header source context and the GET search action; these are not counts of every repeated DOM anchor. The complete current work map is `PORTAL-DELIVERY-MAP-20261001.md`. Common-shell density/context/call-path work is released in v133 and retained in v134; specific product examples and private decision aids remain pending. Next implementation: eight prepared centre contracts. The delivery queue remains 82 rows: 29 published + 51 pending standalone + two sections.

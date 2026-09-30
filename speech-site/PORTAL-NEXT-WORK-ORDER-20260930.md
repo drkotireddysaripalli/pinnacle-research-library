@@ -1,10 +1,10 @@
 # Whole-portal continuation work order
 
-The live delivery ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. This file orders work after **shared-shell v133 / 25 managed public pages**. The full private URL register and public aggregate/navigation registers cover the wider estate; a sitemap entry does not automatically need a rebuild or prove indexing. Preserve the outcome, design depth, shared shell and source discipline in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
+The live delivery ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. This file orders work after **served union v134 / 29 managed public pages, using common shell v133**. The full private URL register and public aggregate/navigation registers cover the wider estate; a sitemap entry does not automatically need a rebuild or prove indexing. Preserve the outcome, design depth, shared shell and source discipline in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
 
 ## 1. Finish the bounded priority portfolio
 
-Completed v130: Assessment on `/speech-aba-autism-assessments`, the two factual shared-header details and the named Autism/Enrolment compatibility fixes. Completed v131: the retained Suchitra centre canonical, real media, original branded creative, local enquiry, evidence exports and protected-route release. Completed v132: Dilsukhnagar, Vijayawada, South Extension and Ananthapuram with four original branded posters and the actual owned analytics-cookie correction. All **17 priority destinations + three guides + five centres = 25** managed public pages are live. Their source push, full-union deployment, public checks and rollback are recorded.
+Completed v130: Assessment on `/speech-aba-autism-assessments`, the factual shared-header details and named Autism/Enrolment compatibility fixes. Completed v131: Suchitra. Completed v132: Dilsukhnagar, Vijayawada, South Extension and Ananthapuram. Completed v133: common header/footer/Verify hierarchy. Completed v134: Nandyala, Ongole, Tirupati and Srikakulam, with four complete original posters and individual family/arrival narratives. All **17 priority destinations + three guides + nine centres = 29** managed public pages are live. Source push, full-union deployment, public checks and rollback are recorded.
 
 ## 2. Centre identity and useful local pages
 
@@ -18,7 +18,9 @@ Completed v130: Assessment on `/speech-aba-autism-assessments`, the two factual 
 6. Use only substantiated LocalBusiness/Place facts. Add a branch's exact public review link; no invented aggregate rating or network-wide 4.8 claim. Connect national enquiry/phone, centre preference, maps, WhatsApp/share, citation and accessible gallery.
 7. Release a few complete location pages through the same owner, common shell and exact handlers. Verify existing per-centre Worker/proxy behavior and keep all other routes intact.
 
-**Five local profiles are complete. Remaining: 55 standalone profiles plus two contact-page sections.** Source-prepared next four: **Nandyala, Ongole, Tirupati and Srikakulam**. Exact source/media/HFR/enquiry contracts are in `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`. This order reflects available sources/media, not measured search demand. Kurnool exterior/address, Jagadamba/Warangal postcode and any current operating-status conditions remain attached to affected rows. Tirupati’s Google-watermarked exterior and Srikakulam’s real-child photo are image-specific exclusions; eligible source/media work can proceed independently.
+**Nine local profiles are complete. Remaining: 51 standalone profiles plus two contact-page sections.** Source-prepared next eight: **Miryalaguda, Nallagandla, Kakinada, Nellore, Attapur, Karimnagar, Himayat Nagar and Santosh Nagar**. Exact contracts are in `reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`. This order reflects available sources/media, not measured search demand. Preserve all four different dated HFR states and certificate-backed versus workbook-only source levels; parameterise the generator before implementation. No new page in this next batch is built yet.
+
+Specific field/media conditions are in `reviews/CENTRE-SOURCE-CONDITIONS-20261001.json`: six postcode-field differences, Gachibowli’s different HFR premises, Gajuwaka’s missing enquiry mapping, and image exclusions. Kadapa can use an illustration-led page without a premises gallery. Gajuwaka can use explicit call-only/general enquiry; postcode can remain omitted when unresolved. Duplicate Attapur/Himayat imagery is excluded pending attribution. Tirupati/Srikakulam exclusions remain future asset-reuse conditions, not blockers for their released pages. Useful independent work continues.
 
 Each next page retains its exact URL, branch address/Maps/media, national phone and selected-centre enquiry, with a unique useful family example and local arrival questions. Use the common renderer without relabelling another branch’s poster. Freeze each source contract; create a complete original branded creative directly through the built-in ChatGPT tool; implement, perform one consolidated focused validation, source-push, full-union deploy, exact route and public readback. Unknown current operating/service/staffing/hours/fees/access/rating facts remain current-team confirmation steps. A dated HFR or workbook status is not current operation or an outcome.
 
@@ -72,7 +74,8 @@ At a material release make one justified IndexNow submission, then observe Googl
 |---|---|---|
 | 1 · DONE | Suchitra release and full register | Source-first release; 21 public shells; 155-route protection; exact receipt; every sitemap URL and navigation destination has a state/next condition. |
 | 2 · DONE V132 | Four individually useful centre pages | Dilsukhnagar, Vijayawada, South Extension and Ananthapuram contracts, unique useful content/media, complete social creative, source/HTML/schema agreement, selected enquiry, exact handlers and public readback;25 managed shells, 12 protected controls and 28 production responsive runs passed. |
-| 3 · SOURCE-PREPARED / CONTINUE | Remaining 55 profiles, plus two section decisions | Next four Nandyala/Ongole/Tirupati/Srikakulam; advance source-ready centres; attach exact conflicts to affected IDs. No universal staffing/service/rating claims or thin city variants. |
+| 2b · DONE V134 | Four more individual centre pages | Nandyala, Ongole, Tirupati and Srikakulam; 29 public shells, 25 prior bodies unchanged, 12 protected controls, 28 production responsive cases and exact four-route release passed. |
+| 3 · SOURCE-PREPARED / CONTINUE | Remaining 51 profiles, plus two section decisions | Eight prepared contracts; individual narrative/poster/source attention, actual HFR states and eligible media. Kadapa illustration-led alternative and field/routing conditions stay precise. No universal staffing/service/rating claims or thin city variants. |
 | 4 · INVESTIGATE | Staff/bot sitemap population and shared Ads injection | Identify actual source/cache/measurement ownership; reproduce the named defect once and fix in that source with scoped protection checks. |
 | 5a · DONE V133 | Common-shell density, source context and call path | Common files changed once; all 25 owned HTML/common shells and unchanged bodies passed; 155 routes/bindings retained. |
 | 5b · PENDING | Concrete product/guide examples and private decision aids | Distinct useful examples with explicit illustrative status; preserve accepted therapy bodies and source boundaries. |
@@ -81,7 +84,7 @@ At a material release make one justified IndexNow submission, then observe Googl
 | 8 · ONGOING | Relevant off-page authority and discovery | Meaningful eligible placement with exact affiliation/context/source URL, saved public URL and verification; pending routes remain pending. |
 | 9 · OBSERVE | Business and search outcomes | Actual crawl/index/query/citation/referral, connected calls, accepted enquiries, visits and enrolments reported separately from code release. |
 
-Items with a specific external fact/access/rights condition remain attached to their route; independent packages keep progressing. Receipt formatting and repeated unchanged checks must not delay the next implementation.
+Items with a specific external fact/access/rights condition remain attached to their route; independent packages keep progressing. Eligible source/cache, measurement, search and authority investigations can run alongside sequential centre implementation. Receipt formatting and repeated unchanged checks must not delay the next implementation.
 
 ## Reuse and verification discipline
 
@@ -90,4 +93,4 @@ Items with a specific external fact/access/rights condition remain attached to t
 - Review narrative, claims and acquisition read-only, then perform one consolidated fix pass. Build and test at meaningful boundaries; repeat only affected checks after a new change or failure.
 - Preserve the existing full-union Worker route set and bindings. Commit/push before publication. Keep a rollback and public verification receipt. Routine stage artifacts are ignored; do not confuse local previews with released URLs.
 
-Current front door: `PORTAL-DELIVERY-MAP-20261001.md`. Latest common release: `RELEASE-SHARED-SHELL-V133-20261001.md`. Four prepared centres remain the next implementation package; the common shell is complete.
+Current front door: `PORTAL-DELIVERY-MAP-20261001.md`. Current union: `RELEASE-CENTRE-BATCH-V134-20261001.md`; common source: `RELEASE-SHARED-SHELL-V133-20261001.md`. Eight prepared centres are the next implementation package; the common shell is complete.

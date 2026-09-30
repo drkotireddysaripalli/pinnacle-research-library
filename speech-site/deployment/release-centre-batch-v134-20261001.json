@@ -1,0 +1,84 @@
+{
+  "release": "v134",
+  "publishedAt": "2026-09-30T20:59:10.616782Z",
+  "sourceCommit": "4e522993ffc9305a81de110474a54f8131e15e75",
+  "sourcePushedBeforeDeploy": true,
+  "worker": "pinnacle-verify-route",
+  "versionId": "a094769b-0528-4577-b832-b0a6a1544c21",
+  "deploymentId": "0e6e4531-d393-4874-900c-9c7477c20df2",
+  "trafficPercent": 100,
+  "sharedShellRelease": "v133",
+  "publicManagedPages": 29,
+  "newCentres": 4,
+  "rebuiltCentres": 9,
+  "pendingStandaloneCentres": 51,
+  "sectionOnlyEntries": 2,
+  "routeCount": 155,
+  "intendedRouteChanges": 4,
+  "otherRoutesUnchanged": 151,
+  "bindingsUnchanged": true,
+  "union": {
+    "stage": "release-centre-batch-v134-final-20261001",
+    "sha256": "ce40a0a68094edad66ea4f570e689103a3227f8db29162669446d7184e05d47f",
+    "verifyAssets": 634,
+    "managedAssets": 1161
+  },
+  "checks": {
+    "productionBuildOutputs": 31,
+    "commonPortalChecks": 29,
+    "focusedChecks": 108,
+    "localResponsiveCases": 28,
+    "productionResponsiveCases": 28,
+    "selectedEnquiryChecks": 4,
+    "noEnquirySubmitted": true,
+    "publicOwnedHtmlMatched": 29,
+    "oldAcceptedMainBodiesUnchanged": 25,
+    "protectedControlsUnchanged": 12,
+    "matchedNewAssetsAndExports": 25,
+    "externalNuStatus": 429,
+    "externalNuValidationResult": null,
+    "indexNowUrls": 4,
+    "indexNowStatus": 200
+  },
+  "rollback": {
+    "workerVersionId": "817b8b8a-5e8f-478f-b2a9-68345dbe9195",
+    "routeTargets": [
+      {
+        "id": "caac092863c54ffaa9b5885b9362c7b7",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      {
+        "id": "c1ca57ce63bf45acbb76899c4469cc27",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      {
+        "id": "ce311bc84ad6415da1ef737a20aadd8f",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      {
+        "id": "9b09a7cbd8f3482da73517912ef93ee6",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      }
+    ],
+    "condition": "Restore these four existing script assignments to pinnacle-centre-search-repair and deploy v133. Do not remove routes or bindings."
+  },
+  "receipts": [
+    "deployment/centre-batch-live-v134-20261001.json",
+    "deployment/centre-batch-responsive-local-v134-20261001.json",
+    "deployment/centre-batch-responsive-live-v134-20261001.json",
+    "deployment/centre-cloudflare-after-v134-20261001.json",
+    "deployment/centre-route-baseline-v134-20261001.json",
+    "deployment/centre-batch-focused-v134-20261001.json",
+    "deployment/indexnow-centre-batch-v134-20261001.json",
+    "deployment/centre-nu-v134-20261001.json"
+  ],
+  "meaning": "Published and notified; indexing/ranking/referrals/AI citations/connected calls/accepted enquiries/enrolments not inferred."
+}

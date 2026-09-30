@@ -1,5 +1,7 @@
 # Next four centre pages — prepared source contracts
 
+**Historical preparation, now released in v134:** all four are public and verified; see `RELEASE-CENTRE-BATCH-V134-20261001.md`. The original state below describes preparation before implementation. Current next eight contracts are in `NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`.
+
 1 October 2026. **Prepared, not built or deployed:** Nandyala, Ongole, Tirupati and Srikakulam. Source-readiness order; no measured search-demand ranking. A read-only reviewer checked the four existing profiles once: HTTP 200, exact self-canonical, national phone and address/postcode schema. All four have workbook ACTIVE markers, certificate copies and a recorded Approved facility-register check on 19 September 2026. Those dated records do not establish current staffing, services, appointments, hours or outcomes.
 
 ## Exact destinations and location sources

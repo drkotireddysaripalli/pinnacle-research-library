@@ -1,12 +1,12 @@
 # Pinnacle portal — complete delivery map
 
-1 October 2026 · v133 live · Main owner builds and releases; independent reviewers read only
+1 October 2026 · v134 live, common shell v133 · Main owner builds and releases; independent reviewers read only
 
 ## Current position
 
-**25 managed public pages are live: 17 priority pages, three decision guides and five centre pages.** The common header and common footer, with Verify inside the footer, are released across those pages. The exact 25 destinations and their individual remaining conditions are in `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. Their accepted narratives stay intact; a new improvement needs a concrete audience job or verified defect.
+**29 managed public pages are live: 17 priority pages, three decision guides and nine centre pages.** The common header and common footer, with Verify inside the footer, use the shared v133 source across those pages. The current served union is v134. The exact 29 destinations and their individual remaining conditions are in `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. Their accepted narratives stay intact; a new improvement needs a concrete audience job or verified defect.
 
-The 62-entry centre register contains 60 standalone profiles and two contact-page sections. Five profiles have been rebuilt. **55 standalone profiles remain: four source-prepared next, then 51 further profiles.** Jubilee Hills and USA remain section-only decisions, not invented new URLs.
+The 62-entry centre register contains 60 standalone profiles and two contact-page sections. Nine profiles have been rebuilt. **51 standalone profiles remain: eight source-prepared next, then 43 further profiles.** Kadapa has a documented illustration-led alternative among the latter. Jubilee Hills and USA remain section-only decisions, not invented new URLs.
 
 The wider sitemap register retains its **30 September** observation: 23 sitemap documents, 21 URL sets and **59,082 distinct exact URLs**. That inventory assigns a work state and next condition to every URL; it does not assert each body was reviewed, indexed or needs rebuilding. Raw child-associated route lists remain private. This update reconciles release/navigation states without repeating the estate crawl.
 
@@ -14,12 +14,13 @@ The wider sitemap register retains its **30 September** observation: 23 sitemap 
 
 | Order | Page group / destination | State | Work and completion gate |
 |---|---|---|---|
-| 1 | Common header/footer/Verify | **v133 complete** | Shared source, 25 accepted bodies retained, mobile authority links, native disclosures, source-first release, 155 routes/bindings unchanged and public readback. |
-| 2 | Nandyala | **Source prepared** | Exact existing canonical; second-floor arrival, matched premises, individual family example, complete original branded creative, selected-centre enquiry, evidence/FAQ/social/reading exports. |
-| 2 | Ongole | **Source prepared** | Exact existing canonical; identifiable frontage and arrival, useful first conversation, eligible interior, original creative and full sourced page package. |
-| 2 | Tirupati | **Source prepared** | Exact existing canonical; textual arrival and eligible interior. Exclude Google-watermarked exterior pending reuse provenance; no need to stop eligible content. |
-| 2 | Srikakulam | **Source prepared** | Exact existing canonical; floor/entrance confirmation, premises and useful life-first example. Exclude clinical real-child photo without matched consent. |
-| 3 | Other 51 centre profiles | **Queued by branch** | Use the 62-row source register; confirm identity/address/contact/maps/media/current operation before adding facts. Kurnool address/signage and Jagadamba/Warangal postcodes remain route-specific conditions. |
+| 1 | Common header/footer/Verify | **v133 complete; used by all 29** | Shared source, mobile authority links and native disclosures; current v134 readback confirms all 29 shells and retains the 25 prior accepted bodies. |
+| 2 | Nandyala | **v134 released** | Exact canonical, second-floor arrival, getting-ready example, matched premises, original poster, selected enquiry and source exports passed production checks. |
+| 2 | Ongole | **v134 released** | Exact canonical, family-table choice/communication example, frontage/interior, original poster and sourced page package passed production checks. |
+| 2 | Tirupati | **v134 released** | Exact canonical, picture-book example, textual arrival and eligible interior. Google-watermarked exterior remains excluded for possible future reuse. |
+| 2 | Srikakulam | **v134 released** | Exact canonical, drawing/shared-learning example and matched premises. Clinical real-child photo remains excluded without matched consent. |
+| 3 | Miryalaguda / Nallagandla / Kakinada / Nellore / Attapur / Karimnagar / Himayat Nagar / Santosh Nagar | **Source prepared; not built** | Eight exact contracts and selected media are in the v135 source file. Preserve Approved, Submitted, Query Raised and Query Resolved distinctly. Adapt the generator for workbook-only records before building. |
+| 3 | Other 43 centre profiles | **Queued by branch** | Keep exact source conditions in each row. Kadapa can use an illustration-led page; Gajuwaka can use call-only/general enquiry. Gachibowli premises/HFR relationship, postcode differences and image exclusions do not stop unaffected content. |
 | 3 | Jubilee Hills / USA contact sections | **Destination decision** | Establish current place facts and audience need before a standalone canonical. Preserve the existing section links meanwhile. |
 | 4 | AbilityScore / seven readiness indexes | **Published; concrete examples pending** | Explain an explicitly illustrative starting picture and separate readiness views without fabricated patient scores, universal cutoffs or outcome precision. |
 | 4 | PDK / Prognose / TherapeuticAI | **Published; concrete examples pending** | One child goal across two settings; revisable checkpoints; human-selected activity. Create a distinct useful example for each module, using existing shared presentation. |
@@ -37,12 +38,14 @@ The wider sitemap register retains its **30 September** observation: 23 sitemap 
 | 10 | Off-page authority and discovery | **Ongoing destination ledger** | Eligible relevant public citations/placements, disclosed affiliation and contextual evidence links. Save public URL, verification, discovery/index/citation state and exact next condition. |
 | 10 | Search and business outcomes | **Observe separately** | Google/Bing discovery/index/query state, AI citations/referrals, consented call clicks, connected calls, accepted enquiries, visits and enrolments. Record what the actual systems establish. |
 
+Centre implementation is sequential; eligible source/cache, measurement, search and authority investigations can run alongside it. The order does not require completing all 51 centre profiles before visibility work.
+
 ## Sitemap families and exact review boundary
 
 | Family | Dated listing observation | Work policy |
 |---|---:|---|
 | Core | 45 | Individual role/source/search register; retain existing URLs until a justified decision. |
-| Centres | 61 sitemap entries, including directory | 60 profiles; five rebuilt / 55 pending. Two section-only directory entries sit outside those 60. |
+| Centres | 61 sitemap entries, including directory | 60 profiles; nine rebuilt / 51 pending. Two section-only directory entries sit outside those 60. Existing URLs were rebuilt; the population did not grow. |
 | Staff / bots | Combined distinct population 978 | Two observations vary: 251/978 and 978/727. Source/cache cause remains unresolved; these are not verified practitioner totals. |
 | Child stories / miracles | 10,000 | Private consent, privacy, claim and usefulness sampling before distribution. |
 | FAQ English/Telugu/Hindi/Kannada/Marathi/Tamil/Malayalam | 659 in each | Factual baseline and language-specific parity/value before expansion. |
@@ -66,14 +69,16 @@ Root sitemap and robots-advertised children are the existing discovery graph. `/
 
 ## Where the complete records live
 
-- `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`: all 25 managed destinations, their audience jobs, body release and next condition.
+- `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`: all 29 managed destinations, their audience jobs, body release and next condition.
 - `reviews/CENTRE-PAGE-CONTINUATION-QUEUE-20260930.csv`: all 62 location records, current sources and route-specific conditions.
-- `reviews/PORTAL-DELIVERY-QUEUE-20261001.csv`: generated 82-row execution view: 25 managed pages plus 55 pending profiles and two section decisions. It derives from the detailed page and centre ledgers; it is not a second factual source.
-- `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`: four prepared source/media/HFR/enquiry contracts.
+- `reviews/PORTAL-DELIVERY-QUEUE-20261001.csv`: generated 82-row execution view: 29 managed pages plus 51 pending profiles and two section decisions. It derives from the detailed page and centre ledgers; it is not a second factual source.
+- `reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`: eight next source/media/HFR/enquiry contracts, not built.
+- `reviews/CENTRE-SOURCE-CONDITIONS-20261001.json`: exact field/media conditions and useful alternatives for other centres.
+- `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`: retained preparation history for the four centres now released in v134.
 - `PORTAL-NEXT-WORK-ORDER-20260930.md`: ordered wider implementation and investigation packages.
 - `reviews/WHOLE-PORTAL-SITEMAP-SUMMARY-20260930.json`: dated population plus current release-state reconciliation.
 - `reviews/PORTAL-NAVIGATION-REGISTER-20260930.csv`: complete source-collected menu/card/direct/overview/context/search destinations, including their origins and conditions.
 - Ignored `audits/whole-portal-register-20260930/whole-route-register.{json,csv}`: 59,082 exact URL records; private raw inventory, not published child-associated data.
 - Workspace `work/verify-visibility/QUEUE.md`: canonical off-page authority ledger; publication and indexing/citation/endorsement states remain separate.
 
-**Next implementation package is the four prepared centres.** Common shell is closed; product examples and wider estate investigations remain separate executable work. No completed page is reopened for a cosmetic score or an unchanged pending state.
+**Next implementation package is the eight prepared centres, delivered with individual narrative and creative attention.** Common shell is closed; product examples and wider estate investigations remain separate executable work. No completed page is reopened for a cosmetic score or an unchanged pending state.

@@ -1,0 +1,9 @@
+{
+  "checkedAt": "2026-09-30T21:08:21.683Z",
+  "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+  "status": 429,
+  "state": "EXTERNAL_VALIDATOR_RATE_LIMITED",
+  "errorCount": null,
+  "messageCount": null,
+  "meaning": "Live Nu request was rate-limited; no validation result received. Production page contracts and browser checks passed separately. Retry with a later meaningful release, not unchanged polling."
+}

@@ -1,0 +1,231 @@
+{
+  "checkedAt": "2026-09-30T21:25:40.919Z",
+  "phase": "local",
+  "acceptedBodiesUnchanged": 29,
+  "bodies": [
+    {
+      "file": "aba-therapy.html",
+      "acceptedMainSha256": "1d678c7812d06f31bb87cbd959c69cd82820d92e5e8eaa5a89cd4244ca27243e",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "abilityscore.html",
+      "acceptedMainSha256": "ea0314d26abacc0338d551ff6b9deb0d87b9c4fad0bbd3884eeffd61dcee02ca",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "ananthapuram.html",
+      "acceptedMainSha256": "336a16708a777bd689eae997039e37b9d460c5388dfa119484c6eb739249bade",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "assessment.html",
+      "acceptedMainSha256": "1ccdbb4c6c6c286d9a008cd2586fb596a16dbfd8e858701795b4953039badffb",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "autism-therapy.html",
+      "acceptedMainSha256": "41f9bbe03fcd4b8b696f7c59e1174c4c88f4146186b6ce1a59c07f12e4590999",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "centers.html",
+      "acceptedMainSha256": "58c53642094d9dd0e378b98c35e02a3f065d71fe2d1ee82a9e7fe2025690db5c",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "delhi.html",
+      "acceptedMainSha256": "697afe3eff2b499cec759713648b8e4bd417d9825e627449345930044c78a05f",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "dilsukhnagar.html",
+      "acceptedMainSha256": "9b852d07b7a4b2171e7cbcb9f71bd12e36fca37c614e61c333239066344e6074",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "enrolment.html",
+      "acceptedMainSha256": "8a197dc92718972cf4de05acf53f94fdf9b9e90c4f86a1721d06dc53df201902",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "everyday-therapy.html",
+      "acceptedMainSha256": "ba3225d374c50627f2d2e1c50e615df090c27ffe680b45daccd03fcbee14a442",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "first-visit-guide.html",
+      "acceptedMainSha256": "b8d3747fa838a9dc422cef7ca78a2ed62e1fd6fbdcd84e61df6c59bc0a5fb23f",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "fusion-module.html",
+      "acceptedMainSha256": "fae0a85362c448debfcfa61b7aafb5dc94a824cef368d20e857ffbaeae5d3907",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "gurunanak.html",
+      "acceptedMainSha256": "ef4ba9c8e7a38876bc39f2fe893c421a0d9d936fb59262a1e92e5f2663fe0ccc",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "nandyala.html",
+      "acceptedMainSha256": "5e5cfd058e03dc2afcc45b7d3a0bcc013261471f2e56b6cb29c1a9268598fb4f",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "occupational-therapy.html",
+      "acceptedMainSha256": "d5c9bdfcb5a6152a30cd4a6550695ceb51a7627bfde96eca208bf939f54b2cc6",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "ongole.html",
+      "acceptedMainSha256": "68baa54c34bceaa7147f6bbdfc30c6dce3ed222dcc0bf1c3a6710e554a4a1871",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "personal-development-kernel.html",
+      "acceptedMainSha256": "8d7b9773b53ce02d629d19c0a239edd7687a36773b90dfbb115f482918c856a2",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "pinnacleai.html",
+      "acceptedMainSha256": "1f5dbc6c7a6c4ae1d318e6e7071504341f7a11d39b529c1ccf399f8a07b294e7",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "prognose.html",
+      "acceptedMainSha256": "adc07dc89a21a751425e660a5fba85fe56165e690f2288fa85cfc10e7deaf00f",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "reassess-review-repeat.html",
+      "acceptedMainSha256": "e4f132a22d54c064ba1243ec01707e9d8e991ab392f845174f9a2f91ad4d618a",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "service-information.html",
+      "acceptedMainSha256": "65468352074bc13805a0adf059060f421a46e50ab4eee3eb8d187cc953f8e908",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "seven-readiness-indexes.html",
+      "acceptedMainSha256": "cda07f4b29bfbe5f6963878991244dc93552cfdfb8821a0900c09d69c0a3125e",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "special-education.html",
+      "acceptedMainSha256": "a0fed95302f39fa876e1032792af5544f005734f4f7de8be0973e74b5c8d7f9d",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "speech.html",
+      "acceptedMainSha256": "1000ba8e5d5becc84f0e2a1aa06d59e6b8affb264ec15f3e804b9c256748f3c4",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "srikakulam.html",
+      "acceptedMainSha256": "d275d7897b6cf6144e45bdf6c97e2449a12f6bcc12bf1a3c78a7fa2f5ae73977",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "suchitra.html",
+      "acceptedMainSha256": "6f4ffca34c1e0c8927537c587f18b7214d0ec727db208060ba0c1fe7366b466f",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "teacher-observation-guide.html",
+      "acceptedMainSha256": "f405a6297e61a68d3547c5eaf628624d20fd5c9aa9374420efb8e675edd35cc8",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "therapeuticai.html",
+      "acceptedMainSha256": "ae70c9c10a5989877b52e4912dc9eee5ac716b5ab5b27e6e4d0ee6b13bb12d00",
+      "nineSharedLinksCorrected": true
+    },
+    {
+      "file": "tirupati.html",
+      "acceptedMainSha256": "36775c13a1575ed917c12fce4830e420dcf819dedb9afbd1b04bc20b8ee51a17",
+      "nineSharedLinksCorrected": true
+    }
+  ],
+  "replacements": [
+    [
+      "/aba-therapy#what-section",
+      "/best-aba-therapy-center-india-proven-improvement-rate#service-fit"
+    ],
+    [
+      "/aba-therapy#why-section",
+      "/best-aba-therapy-center-india-proven-improvement-rate#pinnacle-difference"
+    ],
+    [
+      "/aba-therapy#Advantages-section",
+      "/best-aba-therapy-center-india-proven-improvement-rate#everyday-example"
+    ],
+    [
+      "/aba-therapy#ChildrenServices-section",
+      "/best-aba-therapy-center-india-proven-improvement-rate#integrated-support"
+    ],
+    [
+      "/aba-therapy#adultservices-section",
+      "/contact-national-autism-helpline-24-7"
+    ],
+    [
+      "/contact-national-autism-helpline-24-7#vijayawada",
+      "/contact-national-autism-helpline-24-7#Vijayawada"
+    ],
+    [
+      "/contact-national-autism-helpline-24-7#vanasthalipuram",
+      "/contact-national-autism-helpline-24-7#Vanasthalipuram"
+    ],
+    [
+      "/contact-national-autism-helpline-24-7#gachibowli",
+      "/contact-national-autism-helpline-24-7#Gachibowli"
+    ],
+    [
+      "/verify/#organization",
+      "/verify/#chapter-identity"
+    ]
+  ],
+  "cases": [
+    {
+      "channel": "chrome",
+      "width": 390,
+      "overflow": 0,
+      "phone": "tel:+919100181181",
+      "records": 36,
+      "pageErrors": 0,
+      "menuOpenAndEscape": true
+    },
+    {
+      "channel": "chrome",
+      "width": 1440,
+      "overflow": 0,
+      "phone": "tel:+919100181181",
+      "records": 36,
+      "pageErrors": 0,
+      "menuOpenAndEscape": true
+    },
+    {
+      "channel": "msedge",
+      "width": 390,
+      "overflow": 0,
+      "phone": "tel:+919100181181",
+      "records": 36,
+      "pageErrors": 0,
+      "menuOpenAndEscape": true
+    },
+    {
+      "channel": "msedge",
+      "width": 1440,
+      "overflow": 0,
+      "phone": "tel:+919100181181",
+      "records": 36,
+      "pageErrors": 0,
+      "menuOpenAndEscape": true
+    }
+  ],
+  "targetChecks": [],
+  "cssChanged": false,
+  "noEnquirySubmitted": true
+}
