@@ -1,0 +1,104 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PinnacleWaveDiagram from './PinnacleWaveDiagram.astro';
+import Icon from './Icon.astro';
+import { Image } from 'astro:assets';
+import { pinnacleWave, waveSources } from '../data/pinnacleai-wave';
+import { phone, url } from '../data/site';
+import social from '../assets/pinnacleai-ecosystem-social-20260930.png';
+import abilitySocial from '../assets/pinnacleai-abilityscore-social-20260930.png';
+import readinessSocial from '../assets/pinnacleai-readiness-social-20260930.png';
+import pdkSocial from '../assets/pinnacleai-pdk-social-20260930.png';
+import prognoseSocial from '../assets/pinnacleai-prognose-social-20260930.png';
+import therapeuticSocial from '../assets/pinnacleai-therapeuticai-social-20260930.png';
+import everydaySocial from '../assets/pinnacleai-everyday-social-20260930.png';
+import fusionSocial from '../assets/pinnacleai-fusion-social-20260930.png';
+import reassessSocial from '../assets/pinnacleai-reassess-social-20260930.png';
+import lifePath from '../assets/pinnacleai-life-path-20260930.png';
+import speechLife from '../assets/speech-communication-journey-9m-7y-20260929.png';
+import autismLife from '../assets/autism-integrated-support-20260929.png';
+import everydayLife from '../assets/enrolment-family-life-path-20260929.png';
+import feedbackLife from '../assets/autism-first-conversation-20260930.png';
+import reviewLife from '../assets/speech-observe-adjust-20260928.png';
+import '../styles/pinnacleai-wave.css';
+
+const {page}=Astro.props;
+const index=pinnacleWave.findIndex(item=>item.slug===page.slug);
+const isOverview=page.slug==='pinnacleai';
+const path='/'+page.slug;
+const sources=page.sourceKeys.map(key=>({key,href:url(waveSources[key])}));
+const sourceLabels={model:'Life-first programme direction',workflow:'How PinnacleAI works · report examples',md5:'Form MD-5 · licensed software scope',bis:'BIS record · named modules',fsc:'Free Sale Certificate · export boundary',research:'Research library · publication status',methods:'Methodology preprint and limits',dossier:'Reviewed product dossier and examples',validation:'External validation protocol status',scale:'Scale, units and assurance boundary',studies:'Study portfolio and limitations',citation:'Citation library'};
+const sourceNotes={model:'Why a child’s everyday life sets goals and review.',workflow:'The documented measurement, practice and feedback sequence.',md5:'Class B, non-diagnostic software for ages 0–12.',bis:'The printed product and module scope, not an individual result.',fsc:'Indian marketability and export subject to importing-country law.',research:'Preprints, protocols and other publication types are distinguished.',methods:'The described methodology and what remains preliminary.',dossier:'Child-specific record and professional oversight; see the status limits.',validation:'Planned comparator study; completed results are not established in the public record.',scale:'Dated service, registration, record and centre counts with distinct units.',studies:'Cohort and study-design limits for research claims.',citation:'Stable references and citation downloads.'};
+const directSource={pinnacleai:'md5',abilityscore:'methods','seven-readiness-indexes':'bis','personal-development-kernel':'dossier',prognose:'bis',therapeuticai:'bis','everyday-therapy':'workflow','fusion-module':'bis','reassess-review-repeat':'methods'}[page.slug];
+const callPrompt={pinnacleai:'Tell us one everyday moment you want to make more possible.',abilityscore:'Ask what a suitable assessment would actually measure for your child.','seven-readiness-indexes':'Ask which readiness view matters for your child’s current goal.','personal-development-kernel':'Ask how family observations enter an authorised review.',prognose:'Ask when a forecast would be checked against real life.',therapeuticai:'Ask who would choose each activity and why.','everyday-therapy':'Ask for one manageable activity that fits a daily routine.','fusion-module':'Ask how home and school observations could change the plan.','reassess-review-repeat':'Ask what would lead the team to continue or change support.'}[page.slug];
+const ecosystem=[
+  {slug:'abilityscore',icon:'measure',detail:'Understand present abilities'},
+  {slug:'seven-readiness-indexes',icon:'compass',detail:'Discuss seven readiness views'},
+  {slug:'personal-development-kernel',icon:'plan',detail:'Keep child-specific context'},
+  {slug:'prognose',icon:'track',detail:'Forecast and plan provisionally'},
+  {slug:'therapeuticai',icon:'heart',detail:'Connect goals to suitable support'},
+  {slug:'everyday-therapy',icon:'home',detail:'Use skills in everyday life'},
+  {slug:'fusion-module',icon:'people',detail:'Bring observations into review'},
+  {slug:'reassess-review-repeat',icon:'loop',detail:'Reassess and correct'}
+];
+const stages=[
+  ['01','Identify capabilities','AbilityScore® and professional assessment'],
+  ['02','Forecast readiness','Child-specific, revisable plan'],
+  ['03','Choose relevant support','Integrated therapies when indicated'],
+  ['04','Practise in life','Parent-guided everyday opportunities'],
+  ['05','Track and correct','Observations across relevant settings'],
+  ['06','Reassess and repeat','Compare and adapt with the team'],
+  ['07','Keep the life goal in view','Growing independence and participation']
+];
+const socialBySlug={pinnacleai:social,abilityscore:abilitySocial,'seven-readiness-indexes':readinessSocial,'personal-development-kernel':pdkSocial,prognose:prognoseSocial,therapeuticai:therapeuticSocial,'everyday-therapy':everydaySocial,'fusion-module':fusionSocial,'reassess-review-repeat':reassessSocial};
+const storyArtBySlug={
+  pinnacleai:lifePath, abilityscore:speechLife, 'seven-readiness-indexes':lifePath,
+  'personal-development-kernel':lifePath, prognose:lifePath, therapeuticai:autismLife,
+  'everyday-therapy':everydayLife, 'fusion-module':feedbackLife, 'reassess-review-repeat':reviewLife
+};
+const art=socialBySlug[page.slug];
+const storyArt=storyArtBySlug[page.slug];
+const imageAlt=isOverview?'Illustrative PinnacleAI creative showing a family, child, professional guidance and colourful everyday-development pathway with the Pinnacle Blooms Network identity and 9100 181 181.':`Illustrative child and family moments connecting ${page.short} to everyday development and participation.`;
+const canonical=url(path);
+const productId=url('/pinnacleai')+'#software';
+const entityId=canonical+(isOverview?'#software':'#module');
+const entityGraph=isOverview?[{'@type':'SoftwareApplication','@id':entityId,name:'PinnacleAI GPT-OS',alternateName:'PinnacleAI®',url:canonical,softwareVersion:'1.0.0',applicationCategory:'HealthApplication',description:page.direct,manufacturer:{'@id':url('/verify/#organization')},brand:{'@id':url('/verify/#pinnacle-brand')},audience:{'@type':'Audience',audienceType:'Families and professionals supporting children aged 0–12'},citation:sources.map(s=>s.href)}]:[{'@type':'DefinedTerm','@id':entityId,name:page.label,url:canonical,description:page.direct,subjectOf:sources.map(s=>s.href),isPartOf:{'@id':productId}}];
+const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].includes(page.slug)?undefined:'2026-09-30';
+const prev=pinnacleWave[(index-1+pinnacleWave.length)%pinnacleWave.length];
+const next=pinnacleWave[(index+1)%pinnacleWave.length];
+---
+<PageLayout path={path} label={page.label} title={page.title} description={page.description} socialTitle={page.title} socialDescription={page.description} shareImage={art} shareVersion="2026-09-30-pinnacleai-wave" imageAlt={`${page.short} · Pinnacle Blooms Network life-first creative with 9100 181 181.`} imageCaption={`${page.short} · child-centred PinnacleAI illustrated creative.`} includeService={false} primaryEntityId={entityId} entityGraph={entityGraph} citations={sources.map(s=>s.href)} faqs={page.faqs} publishedOn={firstPublished} updatedOn="2026-09-30" breadcrumbParent={isOverview?null:{name:'PinnacleAI®',path:'/pinnacleai'}}>
+  <div class="wave-page" data-wave-module={page.slug}>
+    <section class="wave-hero" aria-labelledby="wave-title"><div class="wave-wrap wave-hero-grid">
+      <div class="wave-hero-copy"><p class="wave-eyebrow"><Icon name="sun" size={22}/>{page.eyebrow}</p><h1 id="wave-title">{!isOverview&&<span class="wave-h1-product">{page.short}</span>}{page.headline}</h1><p class="wave-lead">{page.lead}</p><div class="wave-hero-actions"><a class="wave-button wave-button-primary" href={phone.href} data-cta="pinnacleai-call"><Icon name="phone"/>Call {phone.display}</a><a class="wave-button wave-button-light" href={url('/enroll-autism-speech-aba-therapies-india')} data-cta="pinnacleai-enrol">Begin a conversation <Icon name="arrow"/></a></div><p class="wave-hero-note">{callPrompt} Pinnacle/BHCL confirms the suitable visit, professional and fees.</p></div>
+      <figure class="wave-hero-art"><Image src={art} widths={[480,800,1200,1700]} sizes="(min-width: 990px) 48vw, 100vw" format="webp" quality={82} loading="eager" decoding="async" alt={imageAlt}/><figcaption>{isOverview?'A child’s life connects every part of the system.':page.purpose}</figcaption></figure>
+    </div></section>
+
+    <nav class="wave-in-page wave-wrap" aria-label="On this PinnacleAI page"><a href="#what-it-does">What it does</a><a href="#ecosystem">Whole system</a><a href="#worked-example">A life moment</a><a href="#sources">Sources</a><a href="#questions">Questions</a></nav>
+
+    <section class="wave-section wave-wrap wave-direct" id="what-it-does" aria-labelledby="wave-direct-title"><div><p class="wave-kicker">A direct answer</p><h2 id="wave-direct-title">{page.short}: what does it do?</h2><p class="wave-large">{page.direct}</p><div class="wave-direct-sources"><a class="wave-inline-link" href={url(waveSources[directSource])}>Source for this function · {sourceLabels[directSource]} <Icon name="arrow" size={18}/></a><a class="wave-inline-link" href={url('/verify/evidence/records/md5.html')}>Licensed non-diagnostic scope <Icon name="arrow" size={18}/></a></div></div><aside><Icon name="heart" size={32}/><h3>The reason behind the module</h3><p>{page.purpose}</p></aside></section>
+
+    <section class="wave-section wave-system" id="ecosystem" aria-labelledby="wave-ecosystem-title"><div class="wave-wrap"><div class="wave-section-head"><p class="wave-kicker">One ecosystem · one child</p><h2 id="wave-ecosystem-title">{isOverview?'The child’s life is the architecture.':`${page.short} has a place in the whole.`}</h2><p>The stack is connected, but it is not the outcome. It helps the family and professionals keep the child’s own goals, preferences and daily participation in view.</p></div><PinnacleWaveDiagram slug={page.slug}/>
+      {isOverview?<nav class="wave-ecosystem-nav" aria-label="Explore every PinnacleAI module"><a class="active" href={url('/pinnacleai')} aria-current="page"><span class="wave-module-icon"><Icon name="sun"/></span><strong>Whole system</strong><small>Start with the life goal</small></a>{ecosystem.map(item=>{const target=pinnacleWave.find(p=>p.slug===item.slug);return <a href={url('/'+item.slug)}><span class="wave-module-icon"><Icon name={item.icon}/></span><strong>{target.short}</strong><small>{item.detail}</small></a>})}</nav>
+      :<div class="wave-compact-system"><nav aria-label="This module and neighbouring steps"><a href={url('/'+prev.slug)}><small>Previous</small><strong>{prev.short}</strong></a><a href={url(path)} aria-current="page"><small>This page</small><strong>{page.short}</strong></a><a href={url('/'+next.slug)}><small>Next</small><strong>{next.short}</strong></a></nav><details><summary>Explore the whole PinnacleAI system</summary><div class="wave-ecosystem-nav">{pinnacleWave.map(item=><a href={url('/'+item.slug)} aria-current={item.slug===page.slug?'page':undefined}><span class="wave-module-icon"><Icon name="compass"/></span><strong>{item.short}</strong><small>{item.purpose}</small></a>)}</div></details></div>}
+      <p class="wave-ecosystem-source"><a href={url('/verify/#how-pinnacleai-works')}>Inspect the documented workflow and report examples ↗</a></p></div></section>
+
+    <section class="wave-section wave-wrap wave-mechanism" id="how-it-works" aria-labelledby="wave-mechanism-title"><div class="wave-section-head"><p class="wave-kicker">How this part earns its place</p><h2 id="wave-mechanism-title">{page.mechanismTitle}</h2><p>{page.question}</p></div><ol>{page.mechanism.map((point,i)=><li><span>{String(i+1).padStart(2,'0')}</span><p>{point}</p></li>)}</ol><div class="wave-boundary"><Icon name="shield" size={27}/><p><strong>Keep the claim in scope.</strong> {page.limit}</p></div></section>
+
+    <section class="wave-section wave-example-section" id="worked-example" aria-labelledby="wave-example-title"><div class="wave-wrap"><div class="wave-section-head"><p class="wave-kicker">One everyday moment · an illustration</p><h2 id="wave-example-title">{page.exampleTitle}</h2><p>{page.exampleLead}</p></div><figure class="wave-story-art"><Image src={storyArt} widths={[480,800,1200,1680]} sizes="(min-width:1300px) 1200px, calc(100vw - 28px)" format="webp" quality={78} loading="lazy" decoding="async" alt={`Illustrated family and child-development moments showing ${page.short} in everyday life.`}/></figure><ol class="wave-example-path">{page.example.map(([title,copy],i)=><li><span class="wave-step-count">{String(i+1).padStart(2,'0')}</span><h3>{title}</h3><p>{copy}</p></li>)}</ol><p class="wave-example-finish"><Icon name="compass" size={28}/>{page.takeaway}</p></div></section>
+
+    <section class="wave-section wave-wrap wave-life-steps" aria-labelledby="wave-stages-title"><div class="wave-section-head"><p class="wave-kicker">The parent-facing path</p><h2 id="wave-stages-title">Seven stages. Always one life in view.</h2><p>These are a way to understand the journey, not a fixed treatment protocol or promise that every child follows the same route.</p></div><ol>{stages.map(([number,title,note])=><li><span>{number}</span><h3>{title}</h3><p>{note}</p></li>)}</ol></section>
+
+    {isOverview&&<section class="wave-section wave-scale" aria-labelledby="wave-scale-title"><div class="wave-wrap"><div class="wave-section-head"><p class="wave-kicker">Scale you can inspect</p><h2 id="wave-scale-title">Work documented. Units defined. Outcomes kept separate.</h2><p>At the 17 July 2026 cutoff, the public assurance map reports distinct operational measures. They show activity and system scale, not proof that every child improved.</p></div><div class="wave-scale-grid"><article><strong>31,052,382</strong><span>defined services</span><p>Includes assessments, screenings and parent training under the report’s definition.</p></article><article><strong>792,614</strong><span>beneficiary/family registrations</span><p>Not a count of children with proven improvement.</p></article><article><strong>2.7B+</strong><span>structured records and events</span><p>Not deduplicated clinical examples or outcomes.</p></article></div><a class="wave-inline-link" href={url('/verify/evidence/scale-and-mission.html')}>Read the dates, definitions and assurance limits <Icon name="arrow" size={18}/></a></div></section>}
+
+    <section class="wave-section wave-therapies" id="in-real-life" aria-labelledby="wave-therapies-title"><div class="wave-wrap"><div class="wave-section-head"><p class="wave-kicker">People and places matter</p><h2 id="wave-therapies-title">Software supports the team. The child’s life shapes the care.</h2><p>Depending on assessment, the team may connect communication, everyday participation, behaviour, learning and family or school support. No child needs every therapy by default.</p></div><div class="wave-therapy-links"><a href={url('/autism-therapy')}><Icon name="people"/><strong>Autism support</strong><small>Coordinate relevant contributions</small></a><a href={url('/top-speech-therapy-center-india-proven-improvement-rate')}><Icon name="voice"/><strong>Speech therapy</strong><small>Understand and express</small></a><a href={url('/best-occupational-therapy-center-india-proven-improvement-rate')}><Icon name="home"/><strong>Occupational therapy</strong><small>Take part in daily routines</small></a><a href={url('/best-aba-therapy-center-india-proven-improvement-rate')}><Icon name="heart"/><strong>Behavioural support</strong><small>Support meaningful change</small></a><a href={url('/best-special-education-center-call-9100181181')}><Icon name="book"/><strong>Special education</strong><small>Access learning and school</small></a></div></div></section>
+
+    <section class="wave-section wave-wrap wave-proof" id="sources" aria-labelledby="wave-sources-title"><div class="wave-section-head"><p class="wave-kicker">Inspect what supports each statement</p><h2 id="wave-sources-title">Evidence belongs beside the story.</h2><p>Pinnacle Blooms Network is the brand; Bharath Healthcare Laboratories Private Limited is the legal licence holder and operator. Different sources establish different things.</p></div><div class="wave-source-grid">{sources.map(source=><article><Icon name={source.key==='md5'||source.key==='bis'?'shield':'book'} size={28}/><h3>{sourceLabels[source.key]}</h3><p>{sourceNotes[source.key]}</p><a href={source.href}>Inspect this source <Icon name="arrow" size={17}/></a></article>)}</div><div class="wave-proof-rails"><p><strong>Regulatory scope:</strong> MD-5 records Class B non-diagnostic developmental-support software for ages 0–12. The BIS schedule names software modules and quality-system scope. Neither proves a result for an individual child.</p><p><strong>Research status:</strong> A preprint is a preprint and a protocol is a plan for validation. The current public external-validation record has not established completed comparator results.</p><p><strong>Indian export status:</strong> The issued FSC supports Indian marketability and export subject to the importing country’s law; it is not a foreign registration. <a href={url('/verify/evidence/records/fsc.html')}>Inspect the FSC ↗</a></p></div><div class="wave-downloads"><a href={`/pinnacle-pages-data/${page.slug}-sources.json`}>Source map JSON</a><a href={`/pinnacle-pages-data/${page.slug}-sources.txt`}>Plain-text source map</a><a href={`/pinnacle-pages-data/${page.slug}-reading.md`}>Markdown reading aid</a><a href={url('/verify/evidence/cite.html')}>Citations and downloads</a></div></section>
+
+    <section class="wave-section wave-questions" id="questions" aria-labelledby="wave-questions-title"><div class="wave-wrap wave-questions-grid"><div><p class="wave-kicker">Before you decide</p><h2 id="wave-questions-title">Good questions make the next step clearer.</h2><p>Ask what this module means for your child’s particular goal, what the current source proves and what the professional will review next.</p></div><div>{page.faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>
+
+    <nav class="wave-adjacent wave-wrap" aria-label="Continue through the PinnacleAI system"><a href={url('/'+prev.slug)}><Icon name="arrow" size={20}/><span>Earlier in the system<strong>{prev.short}</strong></span></a><a href={url('/'+next.slug)}><span>Continue to<strong>{next.short}</strong></span><Icon name="arrow" size={20}/></a></nav>
+
+    <section class="wave-close" id="next-step" aria-labelledby="wave-close-title"><div class="wave-wrap"><p class="wave-kicker">Every Child Counts®</p><h2 id="wave-close-title">Start with one moment you want to make more possible.</h2><p>Tell Pinnacle what your child enjoys, what feels difficult and what your family hopes to understand. The team can help check a suitable professional and centre before you decide.</p><div class="wave-hero-actions"><a class="wave-button wave-button-white" href={phone.href} data-cta="pinnacleai-close-call"><Icon name="phone"/>Call {phone.display}</a><a class="wave-button wave-button-outline" href={url('/centers')}>Find a centre <Icon name="arrow"/></a><a class="wave-button wave-button-outline" href={url('/enroll-autism-speech-aba-therapies-india')}>Begin enrolment <Icon name="arrow"/></a></div><small>Guidance call: 9100 181 181. A visit and any service fees are confirmed by the team. PinnacleAI does not diagnose or guarantee an outcome.</small></div></section>
+  </div>
+</PageLayout>

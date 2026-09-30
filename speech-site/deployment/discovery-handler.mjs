@@ -3,7 +3,7 @@ const CHILD_SITEMAP=PUBLIC+'/speech-therapy/sitemap.xml';
 const ROOT_SITEMAPS=[
  '/sitemaps/core.xml','/sitemaps/centres.xml','/sitemaps/staff.xml','/sitemaps/bots.xml','/sitemaps/miracles.xml',
  '/sitemaps/faq-en.xml','/sitemaps/faq-te.xml','/sitemaps/faq-hi.xml','/sitemaps/faq-kn.xml','/sitemaps/faq-mr.xml','/sitemaps/faq-ta.xml','/sitemaps/faq-ml.xml',
- '/verify/sitemap.xml','/speech-therapy/sitemap.xml'
+ '/verify/sitemap.xml','/speech-therapy/sitemap.xml','/pinnacleai/sitemap.xml'
 ];
 const MANAGED_SECTION=`
 
@@ -17,6 +17,18 @@ const MANAGED_SECTION=`
 - [Find a Pinnacle centre](${PUBLIC}/centers): 62 published listings with sourced addresses, map links, selected photographs, centre preferences and national guidance. Confirm service, professional and appointment availability before travelling.
 - [Pinnacle / BHCL National Autism Helpline](${PUBLIC}/national-autism-helpline): 9100 181 181; free guidance and appointment enquiries, 24/7.
 - [Service reading guide](${PUBLIC}/speech-therapy/llms.txt): therapy pages, evidence boundaries and machine-readable sources.
+
+## PinnacleAI product and module pages
+- [PinnacleAI ecosystem](${PUBLIC}/pinnacleai): child-centred overview, licensed non-diagnostic scope, documented scale and the connected system.
+- [AbilityScore](${PUBLIC}/abilityscore): developmental ability starting picture with a 0–1000 display and professional interpretation.
+- [Seven Readiness Indexes](${PUBLIC}/seven-readiness-indexes): seven separate planning views and their boundaries.
+- [Personal Development Kernel](${PUBLIC}/personal-development-kernel): child-specific context and authorised review.
+- [Prognose](${PUBLIC}/prognose): revisable forecasting and goal checkpoints.
+- [TherapeuticAI](${PUBLIC}/therapeuticai): professionally chosen support connected to everyday goals.
+- [Everyday Therapy](${PUBLIC}/everyday-therapy): guided practice in natural family and school moments.
+- [Fusion](${PUBLIC}/fusion-module): relevant observations and plan correction.
+- [Reassess, review and repeat](${PUBLIC}/reassess-review-repeat): compare change and adapt the plan.
+- [PinnacleAI reading guide](${PUBLIC}/pinnacleai/llms.txt): module source maps and evidence limits.
 `;
 
 function cleaned(headers,type){const out=new Headers(headers);for(const name of ['content-length','content-encoding','etag','last-modified','age','expires'])out.delete(name);out.set('content-type',type);out.set('cache-control','public, max-age=300');out.set('x-content-type-options','nosniff');return out;}

@@ -1,5 +1,7 @@
 # Active page work order — Autism Therapy integration hub
 
+**Current wave:** [PinnacleAI connected product wave](ACTIVE-PINNACLEAI-WAVE-WORK-ORDER.md) supersedes this completed Autism Therapy v127 contract as the active build. This file remains the prior release record.
+
 30 September 2026 · **v127 released**. The source, public page and release checks are recorded in [the v127 receipt](RELEASE-AUTISM-THERAPY-V127-20260930.md). The earlier ABA contract is retained in [its v126 receipt](RELEASE-ABA-THERAPY-V126-20260930.md). The user asked for a full all-therapies review **after** the therapy pages are complete. The implementation owner keeps page, code, build and deployment ownership; reviewers are read-only.
 
 ## One-page contract

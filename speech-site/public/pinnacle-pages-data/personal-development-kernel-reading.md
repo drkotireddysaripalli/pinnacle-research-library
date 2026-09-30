@@ -1,0 +1,36 @@
+# Personal Development Kernel | Keep Your Child’s Context Connected
+Canonical: https://www.pinnacleblooms.org/personal-development-kernel
+
+> The PDK is described in Pinnacle’s methods as an organising layer for child-specific measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.
+
+## Why this matters
+Continuity matters when a child’s team needs to see what was tried, where it worked, where it did not and what the family wants to change.
+
+## One illustrative everyday moment
+A routine works at home but not yet at school.
+Illustrative example only. The family sees a child put on shoes with a picture sequence; the teacher sees a different difficulty before outdoor play.
+1. **Record with context:** Document the support, setting and child response rather than a bare “can/cannot” label.
+2. **Respect access:** Share relevant school observations only through appropriate consent and authorised roles.
+3. **Compare settings:** The team sees what transfers and what needs an environmental adjustment.
+4. **Use it in review:** A professional changes the next support and records why.
+
+## Boundary
+The PDK name describes an internal architecture layer in the source methods. It is not a claim of a stand-alone regulatory approval, a public child dossier or automatic clinical judgement. Child records remain private.
+
+## Sources
+- [Documented PinnacleAI workflow](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works): Describes a workflow; not proof that every step produces a specific result.
+- [Reviewed product evidence dossier](https://www.pinnacleblooms.org/verify/evidence/records/dossier.html): Product architecture and examples; contradictory completed-validation claims are not adopted here.
+- [Methodology preprint and limitations](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html): Methods and preliminary results must not be presented as completed independent validation.
+- [Indian Form MD-5 software scope](https://www.pinnacleblooms.org/verify/evidence/records/md5.html): Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
+
+## Continue through PinnacleAI
+- [PinnacleAI®](https://www.pinnacleblooms.org/pinnacleai)
+- [AbilityScore®](https://www.pinnacleblooms.org/abilityscore)
+- [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes)
+- [Prognose](https://www.pinnacleblooms.org/prognose)
+- [TherapeuticAI®](https://www.pinnacleblooms.org/therapeuticai)
+- [Everyday Therapy™](https://www.pinnacleblooms.org/everyday-therapy)
+- [Fusion](https://www.pinnacleblooms.org/fusion-module)
+- [Reassess · Review · Repeat](https://www.pinnacleblooms.org/reassess-review-repeat)
+
+Call 9100 181 181 or [find a centre](https://www.pinnacleblooms.org/centers). A visit, professional and fees are confirmed by the team. PinnacleAI is non-diagnostic and individual outcomes are not guaranteed.

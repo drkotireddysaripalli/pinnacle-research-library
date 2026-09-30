@@ -1,0 +1,113 @@
+{
+  "title": "Seven Readiness Indexes | A Fuller View of Your Child’s Next Step",
+  "url": "https://www.pinnacleblooms.org/seven-readiness-indexes",
+  "updated": "2026-09-30",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "directAnswer": "The BIS record names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes. These are separate software views that support discussion and planning; they do not certify school entry, intelligence, social worth or future independence.",
+  "lifePurpose": "Readiness is useful when it points to a meaningful next opportunity in the child’s life and the support needed to try it.",
+  "illustrativeExample": {
+    "title": "A classroom goal has more than one doorway.",
+    "description": "Illustrative example only. A child enjoys group play but needs help asking a peer to join.",
+    "steps": [
+      {
+        "title": "Notice strengths",
+        "description": "The child may already follow a routine and enjoy peers."
+      },
+      {
+        "title": "Look at relevant views",
+        "description": "Communication and school participation might matter here; the other views remain context rather than automatic targets."
+      },
+      {
+        "title": "Choose suitable support",
+        "description": "A professional and family agree on an accessible invitation method and what the school can do."
+      },
+      {
+        "title": "Review in real life",
+        "description": "The team asks whether the child could join and enjoy play, not whether an index alone improved."
+      }
+    ],
+    "status": "Fictional explanatory example; not a patient story or observed result."
+  },
+  "mechanism": [
+    "School Readiness and Speech Readiness consider relevant abilities for learning access and communication.",
+    "Motor Readiness, Study IQ Readiness and Behavior Readiness are named report areas, not claims of an IQ test or a behaviour diagnosis.",
+    "Self Sufficiency Index and Mainstream Inclusion Index keep daily independence and participation visible as directions for review."
+  ],
+  "limit": "The names are those printed in the BIS schedule. They should not be read as a formal school admission decision or a promise of mainstream placement. Report versions have used different display scales; use the current report and professional explanation.",
+  "sources": [
+    {
+      "id": "workflow",
+      "name": "Documented PinnacleAI workflow",
+      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    },
+    {
+      "id": "bis",
+      "name": "BIS named-module and quality-system scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "limit": "Named module/quality scope; not a clinical effectiveness result."
+    },
+    {
+      "id": "methods",
+      "name": "Methodology preprint and limitations",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+    },
+    {
+      "id": "md5",
+      "name": "Indian Form MD-5 software scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    }
+  ],
+  "relatedPages": [
+    {
+      "name": "PinnacleAI®",
+      "url": "https://www.pinnacleblooms.org/pinnacleai"
+    },
+    {
+      "name": "AbilityScore®",
+      "url": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "name": "Personal Development Kernel",
+      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
+    },
+    {
+      "name": "Prognose",
+      "url": "https://www.pinnacleblooms.org/prognose"
+    },
+    {
+      "name": "TherapeuticAI®",
+      "url": "https://www.pinnacleblooms.org/therapeuticai"
+    },
+    {
+      "name": "Everyday Therapy™",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "name": "Fusion",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "name": "Reassess · Review · Repeat",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    }
+  ],
+  "questions": [
+    {
+      "question": "What are the seven PinnacleAI Readiness Indexes?",
+      "answer": "The BIS schedule names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes."
+    },
+    {
+      "question": "Does a School Readiness Index guarantee admission?",
+      "answer": "No. It is a planning and review view, not a school admission decision or guarantee."
+    },
+    {
+      "question": "Does Study IQ Readiness mean PinnacleAI provides an IQ diagnosis?",
+      "answer": "No. It is the name of a software report area. The licensed device is non-diagnostic."
+    }
+  ]
+}

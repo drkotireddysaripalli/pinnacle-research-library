@@ -1,0 +1,119 @@
+{
+  "title": "AbilityScore® | Understand Abilities, Plan for Everyday Life",
+  "url": "https://www.pinnacleblooms.org/abilityscore",
+  "updated": "2026-09-30",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "directAnswer": "AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.",
+  "lifePurpose": "The important question is not “How high is the number?” It is “What can the child use in everyday life, with what support, and what should become more possible next?”",
+  "illustrativeExample": {
+    "title": "A request at home becomes a useful goal.",
+    "description": "Illustrative example only. A parent notices a child wants a favourite toy but needs help communicating the choice.",
+    "steps": [
+      {
+        "title": "Observe a real moment",
+        "description": "Record what the child already does to indicate a choice and what support makes it understandable."
+      },
+      {
+        "title": "Assess appropriately",
+        "description": "A professional uses suitable measures to describe the relevant abilities; a caregiver questionnaire is not automatically the clinical score."
+      },
+      {
+        "title": "Choose a goal",
+        "description": "The team agrees on an accessible way for the child to make the choice at home and, if relevant, in another setting."
+      },
+      {
+        "title": "Compare use over time",
+        "description": "Later assessment considers whether the skill is becoming more usable, not merely whether a number moved."
+      }
+    ],
+    "status": "Fictional explanatory example; not a patient story or observed result."
+  },
+  "mechanism": [
+    "The display summarises assessed abilities on a 0–1000 scale; its meaning depends on the instrument, age band and professional interpretation.",
+    "Seven Readiness Indexes remain distinct views; they are not substitutes for a child’s goals or an outcome guarantee.",
+    "The next assessment and everyday observations can reveal change, no change or a new need for support."
+  ],
+  "limit": "AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.",
+  "sources": [
+    {
+      "id": "workflow",
+      "name": "Documented PinnacleAI workflow",
+      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    },
+    {
+      "id": "methods",
+      "name": "Methodology preprint and limitations",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+    },
+    {
+      "id": "validation",
+      "name": "External validation protocol status",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html",
+      "limit": "The public record labels this a protocol, not completed comparator results."
+    },
+    {
+      "id": "md5",
+      "name": "Indian Form MD-5 software scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "id": "research",
+      "name": "Research library and publication status",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "limit": "Publication types and study limitations must be read separately."
+    }
+  ],
+  "relatedPages": [
+    {
+      "name": "PinnacleAI®",
+      "url": "https://www.pinnacleblooms.org/pinnacleai"
+    },
+    {
+      "name": "7 Readiness Indexes",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
+    },
+    {
+      "name": "Personal Development Kernel",
+      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
+    },
+    {
+      "name": "Prognose",
+      "url": "https://www.pinnacleblooms.org/prognose"
+    },
+    {
+      "name": "TherapeuticAI®",
+      "url": "https://www.pinnacleblooms.org/therapeuticai"
+    },
+    {
+      "name": "Everyday Therapy™",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "name": "Fusion",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "name": "Reassess · Review · Repeat",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    }
+  ],
+  "questions": [
+    {
+      "question": "What does an AbilityScore of 0–1000 mean?",
+      "answer": "It is the displayed scale for a structured developmental ability measure. A clinician must interpret the current assessment and the child’s age and context; a single number does not describe the child’s whole life."
+    },
+    {
+      "question": "Is AbilityScore an autism or IQ test?",
+      "answer": "No. The licensed software is non-diagnostic, and the score is not presented as an autism diagnosis or a stand-alone IQ result."
+    },
+    {
+      "question": "Can a parent complete the clinical score alone?",
+      "answer": "The current Verify description distinguishes the clinician-administered, clinically governed AbilityScore from family questionnaires and observations. Families still contribute essential context."
+    }
+  ]
+}

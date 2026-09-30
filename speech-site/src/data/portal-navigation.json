@@ -10,7 +10,7 @@
     {
       "label": "PinnacleAI®",
       "detail": "CDSCO, BIS, India Certified SaMD",
-      "url": "/verify/evidence/pinnacleai-regulatory-journey.html#section-a-documented-foundation-for-the-next-chapter"
+      "url": "/pinnacleai"
     },
     {
       "label": "Research",
@@ -20,12 +20,12 @@
     {
       "label": "AbilityScore®",
       "detail": "Proven 0 - 1000 Universal Metric",
-      "url": "/verify/guides/abilityscore.html#compare-over-time"
+      "url": "/abilityscore"
     },
     {
       "label": "7 Readiness Indexes",
       "detail": "Your Child Life As it could be",
-      "url": "/verify/#report-explorer"
+      "url": "/seven-readiness-indexes"
     },
     {
       "label": "Self-Sufficient",
@@ -302,6 +302,21 @@
   ],
   "footerColumns": [
     [
+      {
+        "title": "PinnacleAI ecosystem",
+        "links": [
+          {"label":"PinnacleAI · whole system","url":"/pinnacleai"},
+          {"label":"AbilityScore · developmental starting picture","url":"/abilityscore"},
+          {"label":"Seven Readiness Indexes","url":"/seven-readiness-indexes"},
+          {"label":"Personal Development Kernel","url":"/personal-development-kernel"},
+          {"label":"Prognose · revisable forecast","url":"/prognose"},
+          {"label":"TherapeuticAI · suitable activities","url":"/therapeuticai"},
+          {"label":"Everyday Therapy · home and school","url":"/everyday-therapy"},
+          {"label":"Fusion · tracking and correction","url":"/fusion-module"},
+          {"label":"Reassess, review and repeat","url":"/reassess-review-repeat"}
+        ],
+        "icon": "loop"
+      },
       {
         "title": "About Us",
         "links": [

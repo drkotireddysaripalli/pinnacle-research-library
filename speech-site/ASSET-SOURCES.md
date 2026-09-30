@@ -118,3 +118,20 @@ The new hero, first-conversation and pathway scenes build responsive WebP varian
 ## Portal restoration — 27 September 2026
 
 `src/assets/portal-footer-shapes.png` is the existing first-party footer artwork from https://www.pinnacleblooms.org/images/footer-shapes.png, retrieved for the authorised site restoration. Astro generates its WebP delivery derivative. Navigation is recorded in src/data/portal-navigation.json from the existing homepage, with intentional corrections documented in PORTAL-RESTORATION-20260927.md.
+
+## PinnacleAI product wave — 30 September 2026
+
+The ten PNGs below were created in this Codex conversation with the built-in ChatGPT image-generation tool, without a local API key. The nine social creatives were generated as complete Pinnacle-branded compositions with their module-specific message and `9100 181 181` inside the creative; the site makes individual 1200 × 630 social JPEGs and responsive WebP hero variants from them. `pinnacleai-life-path` is the text-free illustrative story scene. The child, family and professional scenes are fictional illustrations of possible everyday participation, not photographs or outcome evidence. The professional white coat is a brand cue, not a claim of physician credentials. The approved first-party Pinnacle lockup guided the prompts; the exact site logo remains an independent first-party asset in the shared shell. Regulatory claims, scope and limitations are carried by visible HTML and source links rather than by badges inside these images.
+
+| Checked-in PNG in `src/assets` | Purpose | SHA-256 |
+|---|---|---|
+| `pinnacleai-ecosystem-social-20260930.png` | Nine-module life-first ecosystem overview | `55df6df77301cd2b2895ab5f2bd0aefef2edb02483f274a8d45c8e32ba392822` |
+| `pinnacleai-abilityscore-social-20260930.png` | AbilityScore measurement and the child's lived goals | `acc419d9d310b9d636ae2661a02cd35237ea397b49a96f72a17e27db4adc943c` |
+| `pinnacleai-readiness-social-20260930.png` | Seven readiness lenses and participation | `7b4b4721a91e912cb4fa0f17aab2630ca9bf16f4ed8c888e10f54f13add23543` |
+| `pinnacleai-pdk-social-20260930.png` | Child-specific development plan | `7a94a9a2f49bbafb395475961770c0b835a9cd50b95e54df65588eb02d5f729b` |
+| `pinnacleai-prognose-social-20260930.png` | Forecasting as a planning aid | `89fc9275aac9251e67417a4d9b0eaa37624f0ac549de81124c88a1ae192c58c1` |
+| `pinnacleai-therapeuticai-social-20260930.png` | Integrated support selected for a child's goal | `76f7191f307308b2e26d1d8c0a8d70a78d76d643233fe20849b9724601a8318f` |
+| `pinnacleai-everyday-social-20260930.png` | Family-guided home practice | `a4ae3fd523f77f488f39d2da0360c9ff72dc53e14c315d23f186848a3b05f875` |
+| `pinnacleai-fusion-social-20260930.png` | Observations joined to professional review | `138343e3d84e21eeeab41c31984313e2b1d082c6a03391b8b12711ac7341b941` |
+| `pinnacleai-reassess-social-20260930.png` | Review, revise and repeat | `a7a1b497003fb3f8f4bb39088a8f97350ba4e9da5fb5b8170845e55a21ad35a6` |
+| `pinnacleai-life-path-20260930.png` | Illustrative everyday-life scene shared by worked examples | `66c69e90c53623499037fc44422d08b4a93e3cc880bbd84c410d26615f605875` |

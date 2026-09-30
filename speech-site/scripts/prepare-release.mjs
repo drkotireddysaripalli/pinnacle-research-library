@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
+import {pinnacleWave} from '../src/data/pinnacleai-wave.ts';
 const root=process.cwd(),parent=path.dirname(root),out=path.resolve(process.argv[2]||path.join(root,'release-union'));
 const verifyRoot=process.argv[3]?path.resolve(process.argv[3]):await fs.access(path.join(parent,'verify-site/dist')).then(()=>path.join(parent,'verify-site')).catch(()=>path.join(parent,'pinnacle-verify-fsc'));
 await fs.mkdir(out,{recursive:false});
@@ -36,6 +37,11 @@ await fs.writeFile(path.join(out,'pinnacle-pages-html/autism-therapy.html'),auti
 const centers=await fs.readFile(path.join(root,'dist/centers.html'),'utf8');
 assert(centers.includes('index, follow, max-image-preview:large')&&centers.includes('Find a Pinnacle Blooms Centre')&&centers.includes('centers-evidence.json')&&centers.includes('Browse every published listing by state or region'));
 await fs.writeFile(path.join(out,'pinnacle-pages-html/centers.html'),centers);
+for(const page of pinnacleWave){
+ const pageHtml=await fs.readFile(path.join(root,'dist',page.slug+'.html'),'utf8');
+ assert(pageHtml.includes('index, follow, max-image-preview:large')&&pageHtml.includes(page.title)&&pageHtml.includes('application/ld+json')&&pageHtml.includes('id="worked-example"'));
+ await fs.writeFile(path.join(out,'pinnacle-pages-html',page.slug+'.html'),pageHtml);
+}
 assert.deepEqual(await fs.readFile(path.join(out,'index.html')),before,'Verify index must be unchanged');
 const inventory={};
 async function walk(dir){for(const item of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,item.name);if(item.isDirectory())await walk(f);else{const key='/'+path.relative(out,f).replaceAll('\\','/');inventory[key]=crypto.createHash('sha256').update(await fs.readFile(f)).digest('hex').slice(0,16);}}}
@@ -44,7 +50,7 @@ const base=await fs.readFile(path.join(verifyRoot,'pinnacle-route-v11.mjs'),'utf
 const needle='  const incoming=new URL(request.url),isVerify=';
 assert(base.includes(needle));
 let worker="import {serveRootDiscovery} from './discovery-handler.mjs';\nimport {serveSpeechEnquiry} from './speech-enquiry-handler.mjs';\nimport {serveSpeech} from './speech-handler.mjs';\nimport {serveEnrolmentApi} from './enrolment-handler.mjs';\nconst SPEECH_INVENTORY="+JSON.stringify(inventory)+";\n"+base.replace(needle,'  const discoveryResponse=await serveRootDiscovery(request,env);if(discoveryResponse)return discoveryResponse;\n  const enrolmentApiResponse=await serveEnrolmentApi(request,env);if(enrolmentApiResponse)return enrolmentApiResponse;\n  const speechResponse=await serveSpeech(request,env,SPEECH_INVENTORY);if(speechResponse)return speechResponse;\n  const enquiryResponse=await serveSpeechEnquiry(request,env);if(enquiryResponse)return enquiryResponse;\n'+needle);
-worker=worker.replace("['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml']","['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml','https://www.pinnacleblooms.org/speech-therapy/sitemap.xml']");
+worker=worker.replace("['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml']","['https://www.pinnacleblooms.org/national-autism-helpline/sitemap.xml','https://pinnacleblooms.org/ask/sitemap.xml','https://www.pinnacleblooms.org/speech-therapy/sitemap.xml','https://www.pinnacleblooms.org/pinnacleai/sitemap.xml']");
 await fs.writeFile('deployment/pinnacle-route-v12.mjs',worker);
 await fs.writeFile('deployment/speech-inventory.json',JSON.stringify(inventory,null,2)+'\n');
 console.log(JSON.stringify({out,newAssets:Object.keys(inventory).length,verifyIndexPreserved:true,baseWorkerSha256:crypto.createHash('sha256').update(base).digest('hex'),workerSha256:crypto.createHash('sha256').update(worker).digest('hex')}));

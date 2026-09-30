@@ -1,5 +1,6 @@
 import {writeFile,readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
+import {PINNACLEAI_PATHS} from '../deployment/speech-handler.mjs';
 const origin='https://www.pinnacleblooms.org';
 const routes=[
  {path:'/top-speech-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/speech.html'},
@@ -11,7 +12,8 @@ const routes=[
  {path:'/best-aba-therapy-center-india-proven-improvement-rate',asset:'/pinnacle-pages-html/aba-therapy.html'},
  {path:'/best-special-education-center-call-9100181181',asset:'/pinnacle-pages-html/special-education.html'},
  {path:'/autism-therapy',asset:'/pinnacle-pages-html/autism-therapy.html'},
- {path:'/centers',asset:'/pinnacle-pages-html/centers.html'}
+ {path:'/centers',asset:'/pinnacle-pages-html/centers.html'},
+ ...PINNACLEAI_PATHS.map(path=>({path,asset:'/pinnacle-pages-html/'+path.slice(1)+'.html'}))
 ];
 const inventory=JSON.parse(await readFile(new URL('../deployment/speech-inventory.json',import.meta.url)));
 const sha=b=>createHash('sha256').update(b).digest('hex');

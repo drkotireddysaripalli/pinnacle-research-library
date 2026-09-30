@@ -1,0 +1,113 @@
+{
+  "title": "Personal Development Kernel | Keep Your Child’s Context Connected",
+  "url": "https://www.pinnacleblooms.org/personal-development-kernel",
+  "updated": "2026-09-30",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "directAnswer": "The PDK is described in Pinnacle’s methods as an organising layer for child-specific measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.",
+  "lifePurpose": "Continuity matters when a child’s team needs to see what was tried, where it worked, where it did not and what the family wants to change.",
+  "illustrativeExample": {
+    "title": "A routine works at home but not yet at school.",
+    "description": "Illustrative example only. The family sees a child put on shoes with a picture sequence; the teacher sees a different difficulty before outdoor play.",
+    "steps": [
+      {
+        "title": "Record with context",
+        "description": "Document the support, setting and child response rather than a bare “can/cannot” label."
+      },
+      {
+        "title": "Respect access",
+        "description": "Share relevant school observations only through appropriate consent and authorised roles."
+      },
+      {
+        "title": "Compare settings",
+        "description": "The team sees what transfers and what needs an environmental adjustment."
+      },
+      {
+        "title": "Use it in review",
+        "description": "A professional changes the next support and records why."
+      }
+    ],
+    "status": "Fictional explanatory example; not a patient story or observed result."
+  },
+  "mechanism": [
+    "Inputs are selected because they matter to the child and the agreed goal.",
+    "Context includes the setting and help provided, not only the activity result.",
+    "The professional uses the record to review the plan; families can question and correct their observations."
+  ],
+  "limit": "The PDK name describes an internal architecture layer in the source methods. It is not a claim of a stand-alone regulatory approval, a public child dossier or automatic clinical judgement. Child records remain private.",
+  "sources": [
+    {
+      "id": "workflow",
+      "name": "Documented PinnacleAI workflow",
+      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    },
+    {
+      "id": "dossier",
+      "name": "Reviewed product evidence dossier",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html",
+      "limit": "Product architecture and examples; contradictory completed-validation claims are not adopted here."
+    },
+    {
+      "id": "methods",
+      "name": "Methodology preprint and limitations",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+    },
+    {
+      "id": "md5",
+      "name": "Indian Form MD-5 software scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    }
+  ],
+  "relatedPages": [
+    {
+      "name": "PinnacleAI®",
+      "url": "https://www.pinnacleblooms.org/pinnacleai"
+    },
+    {
+      "name": "AbilityScore®",
+      "url": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "name": "7 Readiness Indexes",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
+    },
+    {
+      "name": "Prognose",
+      "url": "https://www.pinnacleblooms.org/prognose"
+    },
+    {
+      "name": "TherapeuticAI®",
+      "url": "https://www.pinnacleblooms.org/therapeuticai"
+    },
+    {
+      "name": "Everyday Therapy™",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "name": "Fusion",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "name": "Reassess · Review · Repeat",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    }
+  ],
+  "questions": [
+    {
+      "question": "What is the Personal Development Kernel?",
+      "answer": "It is Pinnacle’s child-specific record concept for keeping relevant assessed abilities, goals, settings and responses connected over time for authorised professional review."
+    },
+    {
+      "question": "Does the PDK decide therapy for my child by itself?",
+      "answer": "No. The record supports a professional and family discussion; it does not replace human judgement or consent."
+    },
+    {
+      "question": "Are children’s individual records public on Verify?",
+      "answer": "No. Verify publishes evidence about methods and scope, not private child records."
+    }
+  ]
+}

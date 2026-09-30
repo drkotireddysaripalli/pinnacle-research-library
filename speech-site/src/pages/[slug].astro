@@ -1,0 +1,7 @@
+---
+import PinnacleWavePage from '../components/PinnacleWavePage.astro';
+import {pinnacleWave} from '../data/pinnacleai-wave';
+export function getStaticPaths(){return pinnacleWave.map(page=>({params:{slug:page.slug},props:{page}}));}
+const {page}=Astro.props;
+---
+<PinnacleWavePage page={page}/>

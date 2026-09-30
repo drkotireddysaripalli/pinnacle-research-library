@@ -1,0 +1,119 @@
+{
+  "title": "TherapeuticAI® | Connect a Child’s Goal to Guided Therapy",
+  "url": "https://www.pinnacleblooms.org/therapeuticai",
+  "updated": "2026-09-30",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "directAnswer": "The BIS schedule describes Everyday Therapy delivered through TherapeuticAI and an adaptive therapy-plan support function. Professional assessment and family priorities determine what is suitable. The software supports selection, delivery and tracking; it does not independently prescribe treatment.",
+  "lifePurpose": "Speech, occupational, behavioural and educational contributions may each be useful when they serve a particular child’s daily participation; no fixed combination is assumed.",
+  "illustrativeExample": {
+    "title": "From requesting help to joining play.",
+    "description": "Illustrative example only. A child wants help opening a play box so a shared game can begin.",
+    "steps": [
+      {
+        "title": "Name the life moment",
+        "description": "The child’s wish to join play gives the activity its purpose."
+      },
+      {
+        "title": "Select with judgement",
+        "description": "A relevant professional chooses an accessible communication or motor support and checks comfort and preference."
+      },
+      {
+        "title": "Practise with meaning",
+        "description": "The technique is used in the session and an agreed natural moment, rather than repeated for a score alone."
+      },
+      {
+        "title": "Review response",
+        "description": "Family and therapist discuss what the child used, what support remained and whether to adapt."
+      }
+    ],
+    "status": "Fictional explanatory example; not a patient story or observed result."
+  },
+  "mechanism": [
+    "A real-life goal determines what ability matters.",
+    "Qualified professionals select appropriate support and coordinate with family and other disciplines as relevant.",
+    "Observed response returns through Fusion and later reassessment."
+  ],
+  "limit": "A BIS licence and module name do not certify an individual therapist, establish treatment effectiveness or mean every therapy is appropriate for every child.",
+  "sources": [
+    {
+      "id": "workflow",
+      "name": "Documented PinnacleAI workflow",
+      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    },
+    {
+      "id": "bis",
+      "name": "BIS named-module and quality-system scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "limit": "Named module/quality scope; not a clinical effectiveness result."
+    },
+    {
+      "id": "md5",
+      "name": "Indian Form MD-5 software scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    },
+    {
+      "id": "model",
+      "name": "Life-first programme direction",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "limit": "Programme purpose; not a guarantee of a child outcome."
+    },
+    {
+      "id": "research",
+      "name": "Research library and publication status",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "limit": "Publication types and study limitations must be read separately."
+    }
+  ],
+  "relatedPages": [
+    {
+      "name": "PinnacleAI®",
+      "url": "https://www.pinnacleblooms.org/pinnacleai"
+    },
+    {
+      "name": "AbilityScore®",
+      "url": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "name": "7 Readiness Indexes",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
+    },
+    {
+      "name": "Personal Development Kernel",
+      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
+    },
+    {
+      "name": "Prognose",
+      "url": "https://www.pinnacleblooms.org/prognose"
+    },
+    {
+      "name": "Everyday Therapy™",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "name": "Fusion",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "name": "Reassess · Review · Repeat",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Does TherapeuticAI replace my child’s therapist?",
+      "answer": "No. It supports a professionally selected, family-informed plan; clinicians and families remain responsible for care decisions."
+    },
+    {
+      "question": "Must my child receive speech, occupational, ABA and special education together?",
+      "answer": "No. Suitable disciplines and activities depend on assessment, family priorities and the child’s needs."
+    },
+    {
+      "question": "Does the BIS record prove an activity will work?",
+      "answer": "No. It documents the product and quality-system scope, not an individual clinical result."
+    }
+  ]
+}

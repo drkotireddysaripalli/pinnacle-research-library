@@ -1,0 +1,19 @@
+---
+import Icon from './Icon.astro';
+const {slug}=Astro.props;
+const readiness=['School','Speech','Motor','Study IQ','Behavior','Self Sufficiency','Mainstream Inclusion'];
+const diagrams={
+  pinnacleai:{title:'The connected PinnacleAI ecosystem',center:'Child, family and desired everyday life',nodes:[['measure','Observe abilities'],['compass','Discuss readiness'],['plan','Set child-specific goals'],['heart','Practise with guidance'],['people','Listen across settings'],['loop','Reassess and adapt']]},
+  abilityscore:{title:'From observation to a useful starting picture',center:'One child · more than a number',nodes:[['home','What happens in daily life'],['measure','Clinician-governed assessment'],['plan','AbilityScore display'],['people','Family and professional interpretation']]},
+  'personal-development-kernel':{title:'Relevant context around one child',center:'Permissioned child-specific record',nodes:[['measure','Assessed abilities'],['heart','Child and family priorities'],['home','Home and school context'],['track','Activity response'],['shield','Authorised review']]},
+  prognose:{title:'A revisable path with checkpoints',center:'A meaningful next goal',nodes:[['measure','Starting picture'],['compass','Forecast as estimate'],['plan','Professional plan'],['track','Observed checkpoint'],['loop','Revise when needed']]},
+  therapeuticai:{title:'An activity has a reason',center:'Child’s everyday goal',nodes:[['people','Professional selection'],['heart','Suitable activity'],['home','Use beyond the session'],['track','Observe response'],['loop','Adapt the plan']]},
+  'everyday-therapy':{title:'Practice travels with the child',center:'One manageable skill',nodes:[['people','Professional guidance'],['home','Family routine'],['heart','Play and participation'],['book','Relevant school use'],['loop','Bring observations back']]},
+  'fusion-module':{title:'Different observations, one informed review',center:'Professional and family decision',nodes:[['home','Family observation'],['people','Therapist observation'],['book','Teacher input when consented'],['track','What changed and where'],['loop','Correct the next step']]},
+  'reassess-review-repeat':{title:'Compare, decide and learn again',center:'Child’s everyday participation',nodes:[['measure','Reassess'],['track','Compare honestly'],['heart','Hear the family'],['plan','Continue or change'],['loop','Check the decision']]}
+};
+const diagram=diagrams[slug];
+---
+{slug==='seven-readiness-indexes' ?
+  <figure class="wave-diagram wave-readiness" data-module={slug} aria-labelledby="wave-diagram-title"><figcaption id="wave-diagram-title">Seven named Readiness views · questions for a professional discussion</figcaption><div class="wave-readiness-orbit"><div class="wave-diagram-core"><Icon name="heart" size={34}/><strong>One child</strong><span>Goals and context stay central</span></div><ol>{readiness.map((name,i)=><li><span>{String(i+1).padStart(2,'0')}</span><strong>{name}</strong><small>Readiness view</small></li>)}</ol></div><p>These views inform planning. None alone is a diagnosis, school-placement decision or promise of independence.</p></figure>
+  : <figure class="wave-diagram" data-module={slug} aria-labelledby="wave-diagram-title"><figcaption id="wave-diagram-title">{diagram.title}</figcaption><div class="wave-orbit"><div class="wave-diagram-core"><Icon name="heart" size={34}/><strong>{diagram.center}</strong></div><ol>{diagram.nodes.map(([icon,label],i)=><li><span class="wave-orbit-number">{String(i+1).padStart(2,'0')}</span><Icon name={icon} size={27}/><strong>{label}</strong></li>)}</ol></div><p>Each step invites the team to ask what happened in real life and whether the next step should change.</p></figure>}

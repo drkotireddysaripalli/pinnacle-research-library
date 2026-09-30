@@ -1,0 +1,20 @@
+# PinnacleAI® product and module pages
+
+> Reading aid for the public, source-linked PinnacleAI pages. It does not guarantee AI ingestion, citation or endorsement.
+
+- [PinnacleAI®](https://www.pinnacleblooms.org/pinnacleai): Understand PinnacleAI GPT-OS: AbilityScore, seven Readiness Indexes, child-specific planning, guided everyday therapy, feedback and reassessment—with source-linked limits. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/pinnacleai-sources.json).
+- [AbilityScore®](https://www.pinnacleblooms.org/abilityscore): Learn how PinnacleAI AbilityScore records a developmental starting picture, why the displayed 0–1000 measure is not a diagnosis, and how professionals review it with family goals. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/abilityscore-sources.json).
+- [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes): Explore PinnacleAI’s seven named Readiness Indexes for speech, motor, school, study/IQ, behaviour, self-sufficiency and mainstream inclusion, with their limits and source record. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/seven-readiness-indexes-sources.json).
+- [Personal Development Kernel](https://www.pinnacleblooms.org/personal-development-kernel): See how PinnacleAI’s child-specific developmental record can connect relevant abilities, goals, environments and reviewed activity responses without replacing human judgement. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/personal-development-kernel-sources.json).
+- [Prognose](https://www.pinnacleblooms.org/prognose): Understand how PinnacleAI’s Prognose module connects a developmental starting picture to revisable goals and review checkpoints without promising a child’s trajectory. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/prognose-sources.json).
+- [TherapeuticAI®](https://www.pinnacleblooms.org/therapeuticai): See how PinnacleAI TherapeuticAI supports professional selection of suitable activities, links them to everyday goals and brings observations back to review. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/therapeuticai-sources.json).
+- [Everyday Therapy™](https://www.pinnacleblooms.org/everyday-therapy): See how PinnacleAI Everyday Therapy connects agreed activities with manageable home and school moments, family guidance, observation and professional review. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/everyday-therapy-sources.json).
+- [Fusion](https://www.pinnacleblooms.org/fusion-module): Learn how PinnacleAI Fusion collects relevant authorised observations from daily life and therapy so professionals can track progress and correct a child-specific plan. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/fusion-module-sources.json).
+- [Reassess · Review · Repeat](https://www.pinnacleblooms.org/reassess-review-repeat): Understand PinnacleAI’s review loop: reassess abilities, compare everyday participation, make a human decision and adapt support toward meaningful life goals. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/reassess-review-repeat-sources.json).
+
+PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software under the Indian MD-5 scope for ages 0–12. Operator: Bharath Healthcare Laboratories Private Limited; brand: Pinnacle Blooms Network. The seven-stage family journey is an explanation of programme direction, not a guaranteed outcome.
+
+- [Original licence and limits](https://www.pinnacleblooms.org/verify/evidence/records/md5.html)
+- [BIS named-module schedule](https://www.pinnacleblooms.org/verify/evidence/records/bis.html)
+- [Research and publication status](https://www.pinnacleblooms.org/verify/evidence/research-library.html)
+- [Citations](https://www.pinnacleblooms.org/verify/evidence/cite.html)

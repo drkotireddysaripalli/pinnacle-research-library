@@ -1,0 +1,22 @@
+Fusion | Bring Family, School and Clinical Observations into Review
+https://www.pinnacleblooms.org/fusion-module
+
+Direct answer: The BIS scope names a Clinical Tracking/Correction Fusion module. Pinnacle’s method describes activity ratings and relevant input from authorised roles. It helps people ask what is working and what to change; it is not automatic clinical correction without human oversight.
+Life purpose: A child’s progress should be understood in the places where the skill matters, including when it is not transferring as hoped.
+Boundary: The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private.
+
+Illustrative example: A request works in therapy, but not in the playground.
+Illustrative example only. The child makes a request in a familiar room; outdoors, the same approach is hard to use.
+1. Notice the difference: The family reports the setting, support and child’s response without blaming anyone.
+2. Bring relevant voices: A therapist and, with consent, a teacher may add what they observed. Not every child needs every rater role.
+3. Review the reason: The professional considers noise, timing, communication method, motivation and comfort.
+4. Correct the plan: A different cue or environment may be tried, then checked again in real life.
+
+Claim/source links:
+- Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
+- BIS named-module and quality-system scope: https://www.pinnacleblooms.org/verify/evidence/records/bis.html — Named module/quality scope; not a clinical effectiveness result.
+- Reviewed product evidence dossier: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html — Product architecture and examples; contradictory completed-validation claims are not adopted here.
+- Methodology preprint and limitations: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html — Methods and preliminary results must not be presented as completed independent validation.
+- Indian Form MD-5 software scope: https://www.pinnacleblooms.org/verify/evidence/records/md5.html — Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
+
+Operator: Bharath Healthcare Laboratories Private Limited. Brand: Pinnacle Blooms Network. Phone: 9100 181 181 (tel:+919100181181).

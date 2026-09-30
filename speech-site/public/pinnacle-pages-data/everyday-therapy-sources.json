@@ -1,0 +1,113 @@
+{
+  "title": "Everyday Therapy™ | Carry Meaningful Practice into Real Life",
+  "url": "https://www.pinnacleblooms.org/everyday-therapy",
+  "updated": "2026-09-30",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "directAnswer": "Pinnacle’s documented Everyday Therapy workflow links goal-specific activities to family practice and feedback. The source method describes a four-day look-ahead in one version; the actual plan and pace should be selected for the child rather than treated as a fixed daily quota.",
+  "lifePurpose": "Home is not a second clinic. The family helps a skill become useful in ordinary life without carrying the professional’s responsibility alone.",
+  "illustrativeExample": {
+    "title": "Getting ready to eat together.",
+    "description": "Illustrative example only. A child wants to take part in a family meal but finds one step difficult.",
+    "steps": [
+      {
+        "title": "Choose one moment",
+        "description": "The family and professional agree on a small, worthwhile participation goal."
+      },
+      {
+        "title": "Demonstrate an approach",
+        "description": "The professional explains an accessible cue, adaptation or activity and checks that it suits the child."
+      },
+      {
+        "title": "Try it in normal life",
+        "description": "The family uses it briefly in a natural mealtime when appropriate; comfort and consent matter."
+      },
+      {
+        "title": "Bring back observations",
+        "description": "What worked, what felt hard and what the child preferred guide the next review."
+      }
+    ],
+    "status": "Fictional explanatory example; not a patient story or observed result."
+  },
+  "mechanism": [
+    "Goals and professional selection determine the activity.",
+    "Family-guided use helps test whether it transfers to daily life.",
+    "Feedback tells the team to continue, adapt, pause or change the approach."
+  ],
+  "limit": "The described programme does not mean all children receive the same number of techniques or that parents must deliver therapy themselves. No particular improvement or schedule is guaranteed.",
+  "sources": [
+    {
+      "id": "workflow",
+      "name": "Documented PinnacleAI workflow",
+      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    },
+    {
+      "id": "methods",
+      "name": "Methodology preprint and limitations",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+    },
+    {
+      "id": "bis",
+      "name": "BIS named-module and quality-system scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "limit": "Named module/quality scope; not a clinical effectiveness result."
+    },
+    {
+      "id": "model",
+      "name": "Life-first programme direction",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "limit": "Programme purpose; not a guarantee of a child outcome."
+    }
+  ],
+  "relatedPages": [
+    {
+      "name": "PinnacleAI®",
+      "url": "https://www.pinnacleblooms.org/pinnacleai"
+    },
+    {
+      "name": "AbilityScore®",
+      "url": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "name": "7 Readiness Indexes",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
+    },
+    {
+      "name": "Personal Development Kernel",
+      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
+    },
+    {
+      "name": "Prognose",
+      "url": "https://www.pinnacleblooms.org/prognose"
+    },
+    {
+      "name": "TherapeuticAI®",
+      "url": "https://www.pinnacleblooms.org/therapeuticai"
+    },
+    {
+      "name": "Fusion",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "name": "Reassess · Review · Repeat",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Is Everyday Therapy homework for parents?",
+      "answer": "It is guided use of suitable skills in natural moments. Families should agree on manageable practice with the professional; they are not responsible for replacing therapy."
+    },
+    {
+      "question": "Does every child receive the same daily activities?",
+      "answer": "No. The child-specific plan determines relevant activities and their frequency. A source description of a four-day look-ahead is not a universal prescription."
+    },
+    {
+      "question": "What if an activity is uncomfortable or does not help?",
+      "answer": "Share that observation with the professional. The plan should be reviewed and adapted rather than continued mechanically."
+    }
+  ]
+}

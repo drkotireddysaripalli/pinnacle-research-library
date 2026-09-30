@@ -1,0 +1,113 @@
+{
+  "title": "Prognose | A Revisable Forecast for Child-Specific Planning",
+  "url": "https://www.pinnacleblooms.org/prognose",
+  "updated": "2026-09-30",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "brand": "Pinnacle Blooms Network",
+  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
+  "directAnswer": "Prognose is the named forecasting function in the PinnacleAI/BIS module map. It can support goal selection and checkpoints based on assessed information. It does not foretell a child’s future, prescribe a fixed therapy dose or guarantee a score by a date.",
+  "lifePurpose": "The forecast matters only if it helps the team choose a meaningful next step and notice early when the plan needs to change.",
+  "illustrativeExample": {
+    "title": "Preparing for a playground invitation.",
+    "description": "Illustrative example only. A child wants to join a familiar game with another child.",
+    "steps": [
+      {
+        "title": "Describe now",
+        "description": "The team understands the child’s communication, motor access, preferences and environment."
+      },
+      {
+        "title": "Set a testable next step",
+        "description": "A short goal might be a comfortable way to initiate or accept one invitation."
+      },
+      {
+        "title": "Choose checkpoints",
+        "description": "Family and professionals agree what they will observe in relevant real settings."
+      },
+      {
+        "title": "Revise the estimate",
+        "description": "If the child responds differently than forecast, the team changes support or timing instead of blaming the child."
+      }
+    ],
+    "status": "Fictional explanatory example; not a patient story or observed result."
+  },
+  "mechanism": [
+    "Starting measures and goals inform a possible path.",
+    "The plan names what to observe and when to review it.",
+    "New information can strengthen, narrow or overturn the estimate."
+  ],
+  "limit": "Current public Verify records do not establish a completed external predictive-validation result. A forecast is decision support, not an independently proven prediction for an individual child.",
+  "sources": [
+    {
+      "id": "workflow",
+      "name": "Documented PinnacleAI workflow",
+      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
+      "limit": "Describes a workflow; not proof that every step produces a specific result."
+    },
+    {
+      "id": "bis",
+      "name": "BIS named-module and quality-system scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "limit": "Named module/quality scope; not a clinical effectiveness result."
+    },
+    {
+      "id": "validation",
+      "name": "External validation protocol status",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html",
+      "limit": "The public record labels this a protocol, not completed comparator results."
+    },
+    {
+      "id": "md5",
+      "name": "Indian Form MD-5 software scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+    }
+  ],
+  "relatedPages": [
+    {
+      "name": "PinnacleAI®",
+      "url": "https://www.pinnacleblooms.org/pinnacleai"
+    },
+    {
+      "name": "AbilityScore®",
+      "url": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "name": "7 Readiness Indexes",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
+    },
+    {
+      "name": "Personal Development Kernel",
+      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
+    },
+    {
+      "name": "TherapeuticAI®",
+      "url": "https://www.pinnacleblooms.org/therapeuticai"
+    },
+    {
+      "name": "Everyday Therapy™",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "name": "Fusion",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "name": "Reassess · Review · Repeat",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Can Prognose predict when my child will be independent?",
+      "answer": "No. It supports a revisable planning estimate; no individual endpoint or date can be guaranteed."
+    },
+    {
+      "question": "Who changes the plan if the forecast is wrong?",
+      "answer": "The responsible professional reviews new assessment and everyday observations with the family and adjusts the plan as appropriate."
+    },
+    {
+      "question": "Is the forecast a diagnosis?",
+      "answer": "No. PinnacleAI is licensed as non-diagnostic developmental-support software."
+    }
+  ]
+}
