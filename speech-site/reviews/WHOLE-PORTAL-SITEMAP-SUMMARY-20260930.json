@@ -7,7 +7,7 @@
   "duplicateLocOccurrences": 257,
   "duplicateWithinDocuments": 0,
   "overlapAcrossDocuments": 257,
-  "managedPublicPages": 45,
+  "managedPublicPages": 48,
   "centreDirectoryEntries": 62,
   "centreRebuildsReleased": 9,
   "remainingStandaloneCentreRebuilds": 51,
@@ -301,7 +301,7 @@
       "uniqueExactUrlsAssignedThisWorkFamily": 61,
       "uniqueExactUrlsListedByFamilySitemaps": 61,
       "states": {
-        "released_managed_v135_portfolio": 10,
+        "released_managed_v136_portfolio": 10,
         "PUBLISHED_DIRECTORY_ENTRY; LOCAL_REBUILD_NOT_STARTED": 31,
         "SOURCE_PREPARED; NOT_BUILT": 8,
         "POSTCODE_FIELD_RECONCILIATION; ELIGIBLE_WORK_CAN_CONTINUE": 6,
@@ -318,8 +318,8 @@
       "uniqueExactUrlsAssignedThisWorkFamily": 39,
       "uniqueExactUrlsListedByFamilySitemaps": 45,
       "states": {
-        "retained_pending_content_verification": 27,
-        "released_managed_v135_portfolio": 12
+        "retained_pending_content_verification": 25,
+        "released_managed_v136_portfolio": 14
       },
       "nextCondition": "Inspect current body, user job, source and backlinks/Search Console before preserve/repair/merge/redirect decisions."
     },
@@ -400,7 +400,7 @@
       "uniqueExactUrlsAssignedThisWorkFamily": 9,
       "uniqueExactUrlsListedByFamilySitemaps": 9,
       "states": {
-        "released_managed_v135_portfolio": 9
+        "released_managed_v136_portfolio": 9
       },
       "nextCondition": "Preserve released therapy/guide purpose and canonical; review only material facts, a concrete defect or audience evidence."
     },
@@ -418,7 +418,7 @@
       "uniqueExactUrlsAssignedThisWorkFamily": 9,
       "uniqueExactUrlsListedByFamilySitemaps": 9,
       "states": {
-        "released_managed_v135_portfolio": 9
+        "released_managed_v136_portfolio": 9
       },
       "nextCondition": "Preserve distinct released module narrative and evidence; implement concrete reviewed example only where a specific audience gap exists."
     },
@@ -448,12 +448,12 @@
     "No submission, noindex, redirect, removal or production code deployment performed by this register."
   ],
   "populationObservations": "reviews/SITEMAP-POPULATION-OBSERVATIONS-20260930.json",
-  "releaseStateUpdatedAt": "2026-09-30T22:48:03.143Z",
-  "releaseEvidence": "deployment/policy-life-public-v135-20261001.json",
-  "releaseStateMethod": "Release and navigation states reconciled from v135 public readback; common design v133, navigation corrections v135. Centre content v134. Dated sitemap population retained; no estate recrawl.",
+  "releaseStateUpdatedAt": "2026-09-30T23:45:24.515Z",
+  "releaseEvidence": "deployment/institutional-public-v136-20261001.json",
+  "releaseStateMethod": "Release and navigation states reconciled from v136 public readback; common design v133, navigation corrections v135. Centre content v134. Dated sitemap population retained; no estate recrawl.",
   "navigationRegisterMethod": "Source metadata, 36 cards, shared direct links, footer overview links and header source-context/form-action origins; not every repeated rendered DOM href.",
   "sharedShellRelease": "v135",
-  "currentPortfolioRelease": "v135",
+  "currentPortfolioRelease": "v136",
   "nextSourcePreparedCentres": [
     "miryalaguda",
     "nallagandla",
@@ -466,16 +466,22 @@
   ],
   "sharedShellDesignRelease": "v133",
   "snapshotManagedPages": 21,
-  "managedPagesAbsentFromFetchedSitemapsScope": "Only the 21 managed pages at the dated 30 September observation; not the later 45-page release.",
+  "managedPagesAbsentFromFetchedSitemapsScope": "Only the 21 managed pages at the dated 30 September observation; not the later 48-page release.",
   "currentManagedRelease": {
-    "version": "v135",
-    "pages": 45,
-    "readback": "deployment/policy-life-public-v135-20261001.json",
+    "version": "v136",
+    "pages": 48,
+    "readback": "deployment/institutional-public-v136-20261001.json",
     "newChild": "https://www.pinnacleblooms.org/pinnacle-pages-data/public-documents-sitemap.xml",
     "newLifeUrls": [
       "https://www.pinnacleblooms.org/self-sufficient",
       "https://www.pinnacleblooms.org/mainstream"
     ],
-    "populationRecrawled": false
+    "populationRecrawled": false,
+    "publicDocumentCanonicals": 19,
+    "newInstitutionalUrls": [
+      "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+      "https://www.pinnacleblooms.org/leadership",
+      "https://www.pinnacleblooms.org/pinnacle-global-autism-framework"
+    ]
   }
 }

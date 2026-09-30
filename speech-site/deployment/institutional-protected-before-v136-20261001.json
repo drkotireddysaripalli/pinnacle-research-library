@@ -98,6 +98,41 @@
       "location": null,
       "sha256": "003e7410ba6e8693ada00efa27a2c0dab6937acbacbaa7f10c7d8ebc2624e447",
       "bytes": 332526
+    },
+    {
+      "path": "/leadership/dr-koti-reddy-saripalli",
+      "status": 200,
+      "location": null,
+      "sha256": "bd3f2b2130dcb676ddca64ba1d28342de728f14bad5d7f10e721efe036b0206d",
+      "bytes": 335004
+    },
+    {
+      "path": "/leadership/dr-sreeja-reddy-saripalli",
+      "status": 200,
+      "location": null,
+      "sha256": "16ac72d414b47cd215634d576d37d7d977430b74becadcb6af2730352ddd6eb3",
+      "bytes": 335911
+    },
+    {
+      "path": "/Leadership/Prudhvi-Matsa",
+      "status": 200,
+      "location": null,
+      "sha256": "a3d8f8f2d8397f34d1306110de1adb0456fcc323a73189d524510fb45ac47368",
+      "bytes": 334967
+    },
+    {
+      "path": "/Leadership/Maheshwari",
+      "status": 200,
+      "location": null,
+      "sha256": "631b7196a3461624757d5b08a1854666b592667d8287b7462865e16cf12dd80c",
+      "bytes": 335037
+    },
+    {
+      "path": "/Leadership/Shoban-Kumar",
+      "status": 200,
+      "location": null,
+      "sha256": "c0b4d4e4789d8eebf8726f5701ba2d0e076705f0c7f31c091f4d2816cbe64dd6",
+      "bytes": 335031
     }
   ],
   "oldSitemapLocs": [

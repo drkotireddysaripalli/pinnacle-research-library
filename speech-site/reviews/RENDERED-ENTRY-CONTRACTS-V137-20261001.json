@@ -1,0 +1,230 @@
+{
+  "preparedAt": "2026-09-30T23:40:19.209116+00:00",
+  "method": "One isolated fresh Chrome headless context per public GET. Scripts allowed, all methods other than GET/HEAD blocked. No control clicked/submitted; existing browser sessions untouched. Request query strings and headers excluded from request evidence.",
+  "entries": [
+    {
+      "name": "epass-rendered",
+      "requestedUrl": "https://www.pinnacleblooms.org/epass",
+      "finalUrl": "https://www.pinnacleblooms.org/epass",
+      "checkedAt": "2026-09-30T23:38:44.540Z",
+      "status": 200,
+      "networkIdle": true,
+      "visibleForms": [
+        {
+          "action": "/search",
+          "method": "get",
+          "fields": [
+            {
+              "tag": "input",
+              "type": "text",
+              "name": "q"
+            },
+            {
+              "tag": "button",
+              "type": "submit",
+              "name": null
+            }
+          ]
+        }
+      ],
+      "hasVisibleAccountField": false,
+      "visibleH1": false,
+      "hasRenderedSearchResults": false,
+      "blockedRequestCount": 7,
+      "blockedPaths": [
+        {
+          "method": "POST",
+          "host": "www.google.com",
+          "path": "/rmkt/collect/10810823199/",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "www.google.com",
+          "path": "/ccm/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "ad.doubleclick.net",
+          "path": "/ccm/s/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "analytics.google.com",
+          "path": "/g/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "stats.g.doubleclick.net",
+          "path": "/g/collect",
+          "resourceType": "ping"
+        },
+        {
+          "method": "POST",
+          "host": "www.google.com",
+          "path": "/g/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "www.pinnacleblooms.org",
+          "path": "/cdn-cgi/rum",
+          "resourceType": "xhr"
+        }
+      ],
+      "screenshot": "epass-rendered.png"
+    },
+    {
+      "name": "payonline-rendered",
+      "requestedUrl": "https://www.pinnacleblooms.org/payonline",
+      "finalUrl": "https://www.pinnacleblooms.org/epass?landing=PayOnline",
+      "checkedAt": "2026-09-30T23:38:47.244Z",
+      "status": 200,
+      "networkIdle": true,
+      "visibleForms": [
+        {
+          "action": "/search",
+          "method": "get",
+          "fields": [
+            {
+              "tag": "input",
+              "type": "text",
+              "name": "q"
+            },
+            {
+              "tag": "button",
+              "type": "submit",
+              "name": null
+            }
+          ]
+        }
+      ],
+      "hasVisibleAccountField": false,
+      "visibleH1": false,
+      "hasRenderedSearchResults": false,
+      "blockedRequestCount": 7,
+      "blockedPaths": [
+        {
+          "method": "POST",
+          "host": "www.google.com",
+          "path": "/rmkt/collect/10810823199/",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "www.google.com",
+          "path": "/ccm/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "ad.doubleclick.net",
+          "path": "/ccm/s/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "analytics.google.com",
+          "path": "/g/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "stats.g.doubleclick.net",
+          "path": "/g/collect",
+          "resourceType": "ping"
+        },
+        {
+          "method": "POST",
+          "host": "www.google.com",
+          "path": "/g/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "www.pinnacleblooms.org",
+          "path": "/cdn-cgi/rum",
+          "resourceType": "xhr"
+        }
+      ],
+      "screenshot": "payonline-rendered.png"
+    },
+    {
+      "name": "search-speech-rendered",
+      "requestedUrl": "https://www.pinnacleblooms.org/search?q=speech",
+      "finalUrl": "https://www.pinnacleblooms.org/search?q=speech",
+      "checkedAt": "2026-09-30T23:38:52.098Z",
+      "status": 200,
+      "networkIdle": true,
+      "visibleForms": [
+        {
+          "action": "/search",
+          "method": "get",
+          "fields": [
+            {
+              "tag": "input",
+              "type": "text",
+              "name": null
+            },
+            {
+              "tag": "button",
+              "type": "submit",
+              "name": null
+            }
+          ]
+        },
+        {
+          "action": null,
+          "method": "get",
+          "fields": [
+            {
+              "tag": "input",
+              "type": "text",
+              "name": "search"
+            }
+          ]
+        }
+      ],
+      "hasVisibleAccountField": false,
+      "visibleH1": false,
+      "hasRenderedSearchResults": true,
+      "blockedRequestCount": 5,
+      "blockedPaths": [
+        {
+          "method": "POST",
+          "host": "www.google.com",
+          "path": "/rmkt/collect/10810823199/",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "www.google.com",
+          "path": "/ccm/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "ad.doubleclick.net",
+          "path": "/ccm/s/collect",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "mirracle.user.com",
+          "path": "/api/v2/user-chatping/",
+          "resourceType": "fetch"
+        },
+        {
+          "method": "POST",
+          "host": "www.pinnacleblooms.org",
+          "path": "/cdn-cgi/rum",
+          "resourceType": "xhr"
+        }
+      ],
+      "screenshot": "search-speech-rendered.png"
+    }
+  ]
+}

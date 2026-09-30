@@ -1,0 +1,24 @@
+{
+  "ok": true,
+  "created": [
+    {
+      "id": "434d8fb048cb4ac78e12c7e37a84311b",
+      "pattern": "www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate*",
+      "script": "pinnacle-verify-route",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "e87a8b67c6a04945aa8cef35303096de",
+      "pattern": "www.pinnacleblooms.org/leadership*",
+      "script": "pinnacle-verify-route",
+      "request_limit_fail_open": false
+    },
+    {
+      "id": "51f684cf80a34c789e76ba204b52bee0",
+      "pattern": "www.pinnacleblooms.org/pinnacle-global-autism-framework*",
+      "script": "pinnacle-verify-route",
+      "request_limit_fail_open": false
+    }
+  ],
+  "at": "2026-09-30T23:39:04.130Z"
+}

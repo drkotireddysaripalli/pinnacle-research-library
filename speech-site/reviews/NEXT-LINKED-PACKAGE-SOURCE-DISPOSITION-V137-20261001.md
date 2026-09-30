@@ -28,3 +28,6 @@ Both staff GETs were one-year Cloudflare HIT responses; do not treat them as a f
 2. Preserve ePASS/PayOnline, investigate the real entry contract and Books host delivery; implement only safe source-backed presentation with working behavior.
 3. Staff master + one representative profile after the explicit refresh/media/handling conditions above.
 4. Continue the finite research, service, resource and general-page packages. Keep the prepared centre work separate; Ask and private child-associated sitemap populations remain outside this package.
+
+
+Current rendered follow-up: fresh isolated Chrome GETs with scripts show no account/payment controls at ePASS/PayOnline; all nonGET/HEAD requests blocked and no account/OTP/payment attempt. The existing /search?q=speech DOES render GoogleCSE results and native service shortcuts. Keep its q/query/CSE behavior. Receipt: reviews/RENDERED-ENTRY-CONTRACTS-V137-20261001.json. This is public rendered retrieval proof, not submitted-login/payment or telemetry/chat proof.

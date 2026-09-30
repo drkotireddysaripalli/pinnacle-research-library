@@ -1,10 +1,10 @@
 # Pinnacle portal page ledger and delivery sitemap
 
-1 October 2026 · v135 served union; common v133 design retained; sitemap population observed 30 September
+1 October 2026 · v136 served union; common v133 design retained; sitemap population observed 30 September
 
-**CURRENT V135 — RELEASED:** v135 publishes 14 policy presentations and two distinct life-outcome pages, with the common header/footer on all 45 managed pages. Source 13df204 was pushed before Worker c6fecfac-2d7a-4983-80b8-f3cf26b7279a served 100% at 2026-09-30T22:39:00.686543Z. All 45 owned public HTML/common shells, 60 production responsive cases, 58 source/reading exports and 14 protected controls passed. Epass has only its origin-generated last-modified timestamp normalised against the saved page. All 155 previous routes and four bindings remain; 16 prefix triggers were added with exact public-page handlers. One 16-URL IndexNow notification returned 200. Presentation release retains original policy words/punctuation/order and printed dates; it does not settle the separately recorded legal source decisions.
+**CURRENT V136 — RELEASED:** About Pinnacle, Leadership and the Global Framework are published, bringing the managed portfolio to **48 pages**. Source `91b40de` was pushed before Worker `fc9c7698-890d-4026-93b2-7efe5f153f60` served 100%; the three triggers were enabled at 2026-09-30T23:39:04.130Z (1 October, 05:09 IST). All 48 owned HTML pages/common shells, 45 unchanged prior main bodies, 21 production Chrome/Edge responsive cases, nine new source/reading exports, three social cards and 19 protected controls passed. All 171 prior route assignments and four bindings remain; exactly three new prefix triggers were added. One three-URL IndexNow notification returned 200. Header/footer design remains v133 with v135 navigation; Verify remains inside the common footer. Receipt: `RELEASE-INSTITUTIONAL-V136-20261001.md`.
 
-**Work map:** 60 named linked page/entry items; 16 presentation items released, 44 packages remaining. Each remaining family has source/delivery requirements in PORTAL-LINKED-PAGE-WORK-ORDER-20261001.md. The 98-row generated execution view is 45 managed routes plus 51 pending centres and 2 section decisions. These are distinct scopes. The historical 59,082-URL observation keeps its 30 September timestamp. The eight prepared centre contracts/poster prompts are checkpointed, not discarded or deployed. Next independent source/narrative work: About/Leadership/framework; then staff, research, remaining services, resources and general navigation. Legal clauses, actual login/payment behaviour and books billing retain explicit decision/contract dependencies.
+**Work map:** The frozen 60-item linked page/entry register now has **19 released presentations and 41 remaining items**. The generated execution view has 101 rows: 48 managed routes, 51 pending standalone centres and two section decisions. The historical 59,082-URL inventory retains its 30 September timestamp; no estate recrawl. Login/payment/Books and staff directory/profile sources are prepared in `reviews/NEXT-LINKED-PACKAGE-SOURCE-DISPOSITION-V137-20261001.md`. Next: preserve and investigate the operational entries, then staff master plus representative profile, research, remaining services, resources and general navigation. Eight centre contracts/prompts remain checkpointed; no centre was released in v136.
 
 
 This ledger includes the original **17 priority destinations** in `PORTAL-PAGE-INVENTORY-20260929.md`: two reference pages, six parent-demand pages and nine PinnacleAI product pages. It distinguishes a live URL from a page that has passed editorial review. It does not count every legacy, centre-profile, Verify or Ask page in the wider domain.
@@ -21,13 +21,14 @@ This ledger includes the original **17 priority destinations** in `PORTAL-PAGE-I
 | Additional rebuilt local centres | 9 | Suchitra v131; four centres v132; Nandyala, Ongole, Tirupati and Srikakulam v134. |
 | Additional policy presentations | 14 | Original words/order/printed revisions retained; legal decisions separate. |
 | Additional life-outcome pages | 2 | Self-Sufficient and Mainstream. |
-| Total managed public HTML routes in v135 | 45 |17 priority +3 guides +9 centres +14 policies +2 life pages. Previews excluded. |
+| Additional organisation/framework pages | 3 | About Pinnacle, Leadership and Global Framework, released in v136. |
+| Total managed public HTML routes in v136 | 48 | 17 priority + 3 guides + 9 centres + 14 policies + 2 life pages + 3 organisation/framework pages. Previews excluded. |
 
 **Prior served union v134a:** v134a fixes nine common navigation/footer destinations across all 29 managed pages, preserving all 29 accepted main bodies. Source `b23811ce3fef5b517deb6ad6a51e36b8f2e3c3bc` was pushed before Worker `8a412c3a-2531-40c3-a677-0b8ba40faa7d` served 100%. All 29 public owned HTML/common shells, 12 protected controls and eight replacement anchors plus the general contact destination passed. Four local and four production Chrome/Edge cases passed. All 155 routes and bindings remain unchanged. No repeated IndexNow notification. See `RELEASE-NAVIGATION-V134A-20261001.md`.
 
 **Latest centre bodies:** v134 published Nandyala, Ongole, Tirupati and Srikakulam. Source `4e52299` was pushed before Worker `a094769b-0528-4577-b832-b0a6a1544c21` began serving 100% at that release. Four new pages, 25 changed assets/exports, all 29 shells and 28 production responsive runs passed. The 25 prior accepted main bodies and 12 protected controls remained unchanged. Exactly four existing centre routes were retargeted; the other 151 and all bindings remained. One material four-URL IndexNow batch returned 200. External Nu returned 429 without a validation result. See `RELEASE-CENTRE-BATCH-V134-20261001.md`.
 
-**Latest common-shell source release:** v133 was published across the original 25 managed pages and is now reused by all 29 in v134. Source `73d6385` was pushed before its Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` served 100% at that release. All 25 owned HTML/common shells matched, accepted main bodies and 12 protected controls remained unchanged, seven stylesheets matched and 15 production responsive runs passed. All 155 routes and four bindings remained unchanged. Native footer/Verify disclosures work without JavaScript. No repeated IndexNow notification for that navigation-only change. See `RELEASE-SHARED-SHELL-V133-20261001.md`.
+**Latest common-shell source release:** v133 was published across the original 25 managed pages and is now reused by all 48 in v136. Source `73d6385` was pushed before its Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` served 100% at that release. All 25 owned HTML/common shells matched, accepted main bodies and 12 protected controls remained unchanged, seven stylesheets matched and 15 production responsive runs passed. All 155 routes and four bindings remained unchanged. Native footer/Verify disclosures work without JavaScript. No repeated IndexNow notification for that navigation-only change. See `RELEASE-SHARED-SHELL-V133-20261001.md`.
 
 **Prior centre release:** Four centre pages v132 are public on their retained canonicals. Source `fe3130f` was pushed before Worker `ac200e7a-3c20-4d22-a39c-5201aa42d615` at 100%. Twenty-five changed public assets/exports and 25 shared shells matched the stage;12protected controls retained bytes. All 28 production responsive runs passed. Exactly four existing routes were retargeted; the other 151 remain unchanged. The centre sitemap retains 61 URLs with four new dated lastmods. One four-URL IndexNow batch returned 200. See `RELEASE-CENTRE-BATCH-V132-20261001.md`.
 
@@ -39,7 +40,7 @@ This ledger includes the original **17 priority destinations** in `PORTAL-PAGE-I
 
 ## Page-by-page route and work ledger
 
-All 45 released rows use the common v133 design and current v135 navigation/footer. Prior main bodies:21byte-identical;8generic centres correct only the visible identity citation href. Structured-data identity IDs remain intact.
+All 48 released rows use the common v133 design and current v135 navigation/footer. All 45 prior main bodies are byte-identical to v135.
 
 | ID | Canonical URL | Audience job | Current state | Next meaningful work |
 |---|---|---|---|---|
@@ -93,6 +94,15 @@ All 45 released rows use the common v133 design and current v135 navigation/foot
 | POLICY-14 | /ethics-charter | Read Ethics Charter with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
 | LIFE-01 | /self-sufficient | Understand everyday growing independence and start a first conversation | v135 published and checked | Preserve specific example, seven stages, original branded creative and evidence; observe audience/call outcomes. |
 | LIFE-02 | /mainstream | Understand belonging, participation and relevant support | v135 published and checked | Preserve distinct family/peer/school example, seven stages, original creative and evidence; observe audience/call outcomes. |
+
+
+### Organisation and framework additions · v136
+
+| ID | Canonical URL | Audience job | Current state | Next meaningful work |
+|---|---|---|---|---|
+| IDENTITY-01 | /about-pinnacle-proven-improvement-rate | Understand family purpose, brand/operator identity and evidence | v136 published and checked | Preserve six anchors, distinct purpose and company/source scope; observe real discovery/calls. |
+| IDENTITY-02 | /leadership | Meet published leaders and follow original research/editorial credits | v136 published and checked | Preserve exact person/profile/source facts; changes require current role/publication evidence. |
+| IDENTITY-03 | /pinnacle-global-autism-framework | Understand life-first support, sevenstages and original report | v136 published and checked | Preserve purpose, family agency, practical example, legacyfragments and datedreport/status scope. |
 
 ## Public discovery sitemap and source graph
 
