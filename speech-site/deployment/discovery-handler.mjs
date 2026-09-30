@@ -33,6 +33,11 @@ const MANAGED_SECTION=`
 - [Growing independence](https://www.pinnacleblooms.org/self-sufficient): everyday self-sufficiency as the purpose for goals, support, family practice and review.
 - [Mainstream participation](https://www.pinnacleblooms.org/mainstream): meaningful school, play, family and community participation, suitable support and review.
 
+## Organisation, people and framework
+- [About Pinnacle](https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate): life-first purpose, family participation, brand/operator identity and inspectable evidence.
+- [Published leadership](https://www.pinnacleblooms.org/leadership): sourced adult profile portraits and roles; separate research, editorial and parent-book credits.
+- [Pinnacle Global Autism Framework](https://www.pinnacleblooms.org/pinnacle-global-autism-framework): the life purpose determines goals, relevant support, practice and review; seven stages, an illustrative example and the original report citation.
+
 ## PinnacleAI product and module pages
 - [PinnacleAI ecosystem](${PUBLIC}/pinnacleai): child-centred overview, licensed non-diagnostic scope, documented scale and the connected system.
 - [AbilityScore](${PUBLIC}/abilityscore): developmental ability starting picture with a 0–1000 display and professional interpretation.

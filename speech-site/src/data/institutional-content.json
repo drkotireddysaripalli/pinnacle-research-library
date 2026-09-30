@@ -1,0 +1,463 @@
+[
+  {
+    "slug": "about",
+    "kind": "about",
+    "path": "/about-pinnacle-proven-improvement-rate",
+    "label": "About Pinnacle",
+    "title": "About Pinnacle Blooms Network | Child Development & Life-First Support",
+    "description": "Meet Pinnacle Blooms Network and its Bharath Healthcare operator. Explore the life-first purpose, integrated support, public evidence and your family’s next step. Call 9100 181 181.",
+    "eyebrow": "About Pinnacle Blooms Network",
+    "headline": "Your child’s life.",
+    "accent": "Our shared purpose.",
+    "lead": "Being understood. Joining a family routine. Learning, playing and belonging. These are the possibilities families come to us for. At Pinnacle, a self-sufficient, mainstream-included life gives assessment, therapy, practice and review their direction.",
+    "directAnswer": "Pinnacle Blooms Network is a child-development brand operated by Bharath Healthcare Laboratories Private Limited. Its life-first approach connects relevant professional support, family-guided everyday practice and review around the abilities and participation that matter in a child’s life.",
+    "imageAlt": "Complete Pinnacle-branded illustrative poster with a mother, father and child, professional support, everyday-life icons and 9100 181 181.",
+    "jump": [
+      {
+        "id": "service-section",
+        "label": "How we support families"
+      },
+      {
+        "id": "Vision-section",
+        "label": "Our purpose"
+      },
+      {
+        "id": "BHCL-section",
+        "label": "Who operates Pinnacle"
+      },
+      {
+        "id": "evidence",
+        "label": "Public evidence"
+      }
+    ],
+    "priorities": [
+      {
+        "icon": "voice",
+        "title": "Communication with a purpose",
+        "text": "Making a choice, asking for help or being understood by someone who matters."
+      },
+      {
+        "icon": "home",
+        "title": "More participation in routines",
+        "text": "Getting ready, enjoying a meal or taking a useful part in a familiar day."
+      },
+      {
+        "icon": "book",
+        "title": "Learning and relationships",
+        "text": "Joining a task, shared play or a school activity with suitable support."
+      },
+      {
+        "icon": "loop",
+        "title": "A next step you understand",
+        "text": "An explained starting picture, manageable practice and useful review."
+      }
+    ],
+    "values": [
+      {
+        "icon": "people",
+        "title": "Your family helps shape the work",
+        "text": "You bring the knowledge of your child’s day. Understand the priorities, question their fit and help shape review."
+      },
+      {
+        "icon": "compass",
+        "title": "Relevant support for this child",
+        "text": "Professional contributions follow the child-specific priorities. The starting point is not a fixed bundle of therapies."
+      },
+      {
+        "icon": "track",
+        "title": "Keep everyday life in view",
+        "text": "Ask what became useful outside a session, which support helped and what should change next."
+      },
+      {
+        "icon": "shield",
+        "title": "Be open about the evidence",
+        "text": "Make original records and their scope available so families and professionals can inspect the basis of a statement."
+      }
+    ],
+    "sources": [
+      {
+        "id": "identity",
+        "title": "Pinnacle brand and legal operator",
+        "url": "https://www.pinnacleblooms.org/verify/#chapter-identity",
+        "meaning": "Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. The public register separates company identity, device scope, research and other records."
+      },
+      {
+        "id": "purpose",
+        "title": "The life-first PinnacleAI approach",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+        "meaning": "The child’s self-sufficient, mainstream-included life determines abilities, goals, methods, people, practice and review."
+      },
+      {
+        "id": "md5",
+        "title": "MD-5 manufacturing licence",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+        "meaning": "The original licence and annexure describe PinnacleAI GPT-OS v1.0.0 as Class B non-diagnostic developmental-support software for ages 0–12."
+      },
+      {
+        "id": "bis",
+        "title": "BIS licence and printed scope",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+        "meaning": "Read the named software and quality-system scope beside the original document. The scope is separate from an individual professional’s credentials or child outcome."
+      },
+      {
+        "id": "research",
+        "title": "Research, authorship and publication status",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+        "meaning": "Original works, methods, protocols and publication records show authors, versions, findings and limitations. Different kinds of evidence answer different questions."
+      },
+      {
+        "id": "history",
+        "title": "Corporate identity and incorporation trail",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/records/pan.html",
+        "meaning": "The public corporate PAN record gives the incorporation date as 22 November 2016."
+      },
+      {
+        "id": "mca",
+        "title": "Historic company-name change",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/records/mca.html",
+        "meaning": "The name-change certificate dated 18 May 2017 connects Bharath Diagnostics Labs Private Limited with Bharath Healthcare Laboratories Private Limited."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is Pinnacle Blooms Network?",
+        "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+      },
+      {
+        "question": "What gives Pinnacle’s work its direction?",
+        "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+      },
+      {
+        "question": "Does every child need all the therapies?",
+        "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+      },
+      {
+        "question": "How is my family involved?",
+        "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+      },
+      {
+        "question": "What can I inspect before choosing Pinnacle?",
+        "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+      },
+      {
+        "question": "How do I start a conversation?",
+        "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+      }
+    ],
+    "updatedOn": "2026-10-01"
+  },
+  {
+    "slug": "leadership",
+    "kind": "leadership",
+    "path": "/leadership",
+    "label": "Leadership",
+    "title": "Pinnacle Leadership | People, Purpose & Public Evidence",
+    "description": "Meet Pinnacle’s published leadership and explore the public research, editorial and company-source trail. A life-first purpose connects family priorities and professional support. Call 9100 181 181.",
+    "eyebrow": "Pinnacle leadership · people and accountability",
+    "headline": "People. Purpose.",
+    "accent": "Responsibility.",
+    "lead": "A family needs more than a name above the door. You should understand who leads the organisation, what the work is for and where to inspect its evidence. Our shared direction starts with your child’s self-sufficient, mainstream-included life.",
+    "directAnswer": "Pinnacle’s published leadership includes Koti Reddy Saripalli, Sreeja Reddy Saripalli, Prudhvi Masta, Maheshwari and Shoban Kumar. The published leadership sources describe group, corporate, public-relations and behavioural-support roles. Research authorship and editorial/book credits have their own public source trail.",
+    "imageAlt": "Pinnacle-branded illustrative family and professional scene with People, Purpose, Responsibility, public-evidence icons and 9100 181 181. Actual leaders appear separately in sourced profile portraits.",
+    "jump": [
+      {
+        "id": "people",
+        "label": "Meet the leadership"
+      },
+      {
+        "id": "credits",
+        "label": "Research and writing"
+      },
+      {
+        "id": "responsibility",
+        "label": "What it means for families"
+      },
+      {
+        "id": "evidence",
+        "label": "Inspect sources"
+      }
+    ],
+    "people": [
+      {
+        "id": "koti",
+        "name": "Koti Reddy Saripalli",
+        "role": "Founder Chairman · Kotii Group",
+        "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli",
+        "photo": "leadership-person-koti.jpg",
+        "credit": "Research authorship",
+        "creditText": "Pinnacle’s research catalogue links his authored methodology, protocols, preprints and framework report with their individual publication status.",
+        "creditUrl": "https://www.pinnacleblooms.org/verify/evidence/research-library.html#koti-reddy-saripalli",
+        "portraitSource": "published individual profile"
+      },
+      {
+        "id": "sreeja",
+        "name": "Sreeja Reddy Saripalli",
+        "role": "Founder Chief Executive Officer · Bharath HealthCare",
+        "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli",
+        "photo": "leadership-person-sreeja.png",
+        "credit": "Parent-facing writing and editorial work",
+        "creditText": "The catalogue credits her as editor of the framework report. The books record identifies her parent handbooks and The Voice of the Unheard separately.",
+        "creditUrl": "https://www.pinnacleblooms.org/verify/evidence/research-library.html#sreeja-reddy-saripalli",
+        "portraitSource": "published individual profile"
+      },
+      {
+        "id": "prudhvi",
+        "name": "Prudhvi Masta",
+        "role": "Director · Bharath HealthCare P LIMITED",
+        "profile": "https://www.pinnacleblooms.org/Leadership/Prudhvi-Matsa",
+        "photo": "leadership-person-prudhvi.jpg",
+        "portraitSource": "published leadership index"
+      },
+      {
+        "id": "maheshwari",
+        "name": "Maheshwari",
+        "role": "Director Public Relations · Bharath HealthCare P LIMITED",
+        "profile": "https://www.pinnacleblooms.org/Leadership/Maheshwari",
+        "photo": "leadership-person-maheshwari.png",
+        "portraitSource": "published leadership index"
+      },
+      {
+        "id": "shoban",
+        "name": "Shoban Kumar",
+        "role": "Chief Behavioral Therapist · Pinnacle Blooms Network",
+        "profile": "https://www.pinnacleblooms.org/Leadership/Shoban-Kumar",
+        "photo": "leadership-person-shoban.png",
+        "portraitSource": "published leadership index"
+      }
+    ],
+    "values": [
+      {
+        "icon": "heart",
+        "title": "A clear purpose",
+        "text": "Communication, independence, learning and participation give the support a direction you can discuss."
+      },
+      {
+        "icon": "people",
+        "title": "The right people for the work",
+        "text": "The receiving team confirms the relevant professional and centre. Corporate leadership and your child’s care-team appointment have different roles."
+      },
+      {
+        "icon": "book",
+        "title": "Credits you can follow",
+        "text": "Find the author, editor, version and publication status attached to a specific work."
+      },
+      {
+        "icon": "shield",
+        "title": "A source behind the statement",
+        "text": "Original company, software and publication records explain what each kind of evidence establishes."
+      }
+    ],
+    "sources": [
+      {
+        "id": "identity",
+        "title": "Pinnacle brand and legal operator",
+        "url": "https://www.pinnacleblooms.org/verify/#chapter-identity",
+        "meaning": "Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. The public register separates company identity, device scope, research and other records."
+      },
+      {
+        "id": "purpose",
+        "title": "The life-first PinnacleAI approach",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+        "meaning": "The child’s self-sufficient, mainstream-included life determines abilities, goals, methods, people, practice and review."
+      },
+      {
+        "id": "research",
+        "title": "Research, authorship and publication status",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+        "meaning": "Original works, methods, protocols and publication records show authors, versions, findings and limitations. Different kinds of evidence answer different questions."
+      },
+      {
+        "id": "books",
+        "title": "Sreeja’s parent-facing books",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/records/books.html",
+        "meaning": "Read the printed publisher, ISBN and publication details recorded for the handbooks; the book and research-editor credits remain distinct."
+      },
+      {
+        "id": "pgaf",
+        "title": "Pinnacle Global Autism Framework report",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/publications/zenodo-15487405.html",
+        "meaning": "Institution-authored report, 22 May 2025, version 1.0. Koti Reddy Saripalli is credited as author and Sreeja Reddy Saripalli as editor. DOI 10.5281/zenodo.15487405; independent peer-review was not established in the current catalogue."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who appears on Pinnacle’s leadership page?",
+        "answer": "The published leadership includes Koti Reddy Saripalli, Sreeja Reddy Saripalli, Prudhvi Masta, Maheshwari and Shoban Kumar. The page links their existing individual profile destinations."
+      },
+      {
+        "question": "What role is published for Koti Reddy Saripalli?",
+        "answer": "His individual profile publishes Founder Chairman, Kotii Group. The Verify research catalogue separately identifies his authored works and their publication status."
+      },
+      {
+        "question": "What role is published for Sreeja Reddy Saripalli?",
+        "answer": "Her individual profile publishes Founder Chief Executive Officer of Bharath HealthCare. Her parent-facing book credits and framework-editor credit are recorded separately in Verify."
+      },
+      {
+        "question": "Where can I read the research and editorial credits?",
+        "answer": "The Verify research library provides Koti and Sreeja Person sections and individual publication records. The framework report credits Koti as author and Sreeja as editor; the books record describes the parent-facing titles."
+      },
+      {
+        "question": "Does a leadership title identify my child’s treating professional?",
+        "answer": "No. The receiving team confirms the relevant care professional, their service and centre before the appointment. You can ask who will assess or support your child and what the visit includes."
+      },
+      {
+        "question": "Who should my family contact first?",
+        "answer": "Call 9100 181 181 or use the existing enquiry page to describe your child’s everyday priority. The team can help identify an appropriate professional, centre and next-step conversation."
+      }
+    ],
+    "updatedOn": "2026-10-01"
+  },
+  {
+    "slug": "framework",
+    "kind": "framework",
+    "path": "/pinnacle-global-autism-framework",
+    "label": "Pinnacle Global Autism Framework",
+    "title": "Pinnacle Global Autism Framework | Life-First Child Development",
+    "description": "See how Pinnacle’s framework connects abilities, meaningful goals, relevant therapies, everyday practice and review toward growing independence and participation. Original report and sources included.",
+    "eyebrow": "Pinnacle Global Autism Framework",
+    "headline": "One child.",
+    "accent": "One life-first direction.",
+    "lead": "“I want my child to ask for help, join in and take more of a part in everyday life.” Start there. The framework gives assessment, relevant therapies, family practice and review a shared purpose that makes sense in your child’s day.",
+    "directAnswer": "The Pinnacle Global Autism Framework is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. The purpose determines what abilities to understand, which goals and professional contributions matter, what practice fits everyday life and how observations shape the next review.",
+    "imageAlt": "Complete Pinnacle Global Framework creative with family and professional vignettes, a life-to-review diagram, seven numbered stages and 9100 181 181.",
+    "jump": [
+      {
+        "id": "framework-meaning",
+        "label": "What the framework means"
+      },
+      {
+        "id": "everyday-example",
+        "label": "One everyday priority"
+      },
+      {
+        "id": "seven-stages",
+        "label": "The seven stages"
+      },
+      {
+        "id": "family-role",
+        "label": "Your family’s role"
+      },
+      {
+        "id": "publication",
+        "label": "Original report"
+      }
+    ],
+    "example": [
+      {
+        "title": "A life moment comes first",
+        "text": "The family wants the child to take part in a classroom activity and ask for help when needed. Describe the child’s interests, communication and present support."
+      },
+      {
+        "title": "Understand what would help",
+        "text": "A suitable professional considers the relevant abilities and context. With consent, useful teacher observations can add the classroom perspective."
+      },
+      {
+        "title": "Choose relevant people and methods",
+        "text": "Agree a meaningful communication step, the support involved and a manageable opportunity to practise at home or in learning. No fixed therapy bundle is assumed."
+      },
+      {
+        "title": "Review usefulness in real life",
+        "text": "Discuss whether the child could communicate a need, how comfortable participation felt, which help worked and what should change next."
+      }
+    ],
+    "values": [
+      {
+        "icon": "voice",
+        "title": "Describe what you want to open up",
+        "text": "Bring an everyday moment, an interest and the support your child already uses."
+      },
+      {
+        "icon": "compass",
+        "title": "Understand and question the goal",
+        "text": "Ask why a priority matters, how it serves your child’s life and what a useful next step could look like."
+      },
+      {
+        "icon": "home",
+        "title": "Make practice fit your day",
+        "text": "Agree manageable, guided opportunities. Family participation is informed and supported, rather than another burden."
+      },
+      {
+        "icon": "loop",
+        "title": "Help shape the next review",
+        "text": "Bring your observations and the child’s response back to the professional. Keep useful support, adapt what needs to change and review again."
+      }
+    ],
+    "sources": [
+      {
+        "id": "purpose",
+        "title": "The life-first PinnacleAI approach",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+        "meaning": "The child’s self-sufficient, mainstream-included life determines abilities, goals, methods, people, practice and review."
+      },
+      {
+        "id": "pgaf",
+        "title": "Pinnacle Global Autism Framework report",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/publications/zenodo-15487405.html",
+        "meaning": "Institution-authored report, 22 May 2025, version 1.0. Koti Reddy Saripalli is credited as author and Sreeja Reddy Saripalli as editor. DOI 10.5281/zenodo.15487405; independent peer-review was not established in the current catalogue."
+      },
+      {
+        "id": "agency",
+        "title": "Family agency in goals and review",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html#human-agency-in-goals",
+        "meaning": "The current public explanation describes family knowledge, questioning goals and informed participation with professional governance."
+      },
+      {
+        "id": "feedback",
+        "title": "Feedback that informs the next day",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html#feedback-that-informs-the-next-day",
+        "meaning": "Meaningful observations inform the human discussion about support and the next step."
+      },
+      {
+        "id": "md5",
+        "title": "MD-5 manufacturing licence",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+        "meaning": "The original licence and annexure describe PinnacleAI GPT-OS v1.0.0 as Class B non-diagnostic developmental-support software for ages 0–12."
+      },
+      {
+        "id": "bis",
+        "title": "BIS licence and printed scope",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+        "meaning": "Read the named software and quality-system scope beside the original document. The scope is separate from an individual professional’s credentials or child outcome."
+      },
+      {
+        "id": "methodology",
+        "title": "AbilityScore methodology preprint",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+        "meaning": "Version 3.0, 9 April 2026: methodology and preliminary psychometric work. Read the developmental index in context with suitable professional judgement."
+      },
+      {
+        "id": "validation",
+        "title": "External-validation protocol",
+        "url": "https://www.pinnacleblooms.org/verify/evidence/publications/zenodo-19482476.html",
+        "meaning": "Version 2.1, 9 April 2026: planned comparator and retest research. A research protocol describes proposed work; it is separate from completed validation findings."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is the Pinnacle Global Autism Framework?",
+        "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+      },
+      {
+        "question": "What is the starting point for a family?",
+        "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+      },
+      {
+        "question": "How do the therapies fit together?",
+        "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+      },
+      {
+        "question": "How can parents shape the work?",
+        "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+      },
+      {
+        "question": "Where is the original framework report?",
+        "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+      },
+      {
+        "question": "How do I explore this for my child?",
+        "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+      }
+    ],
+    "updatedOn": "2026-10-01"
+  }
+]

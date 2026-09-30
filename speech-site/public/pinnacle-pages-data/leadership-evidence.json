@@ -1,0 +1,163 @@
+{
+  "slug": "leadership",
+  "kind": "leadership",
+  "path": "/leadership",
+  "label": "Leadership",
+  "title": "Pinnacle Leadership | People, Purpose & Public Evidence",
+  "description": "Meet Pinnacle’s published leadership and explore the public research, editorial and company-source trail. A life-first purpose connects family priorities and professional support. Call 9100 181 181.",
+  "eyebrow": "Pinnacle leadership · people and accountability",
+  "headline": "People. Purpose.",
+  "accent": "Responsibility.",
+  "lead": "A family needs more than a name above the door. You should understand who leads the organisation, what the work is for and where to inspect its evidence. Our shared direction starts with your child’s self-sufficient, mainstream-included life.",
+  "directAnswer": "Pinnacle’s published leadership includes Koti Reddy Saripalli, Sreeja Reddy Saripalli, Prudhvi Masta, Maheshwari and Shoban Kumar. The published leadership sources describe group, corporate, public-relations and behavioural-support roles. Research authorship and editorial/book credits have their own public source trail.",
+  "imageAlt": "Pinnacle-branded illustrative family and professional scene with People, Purpose, Responsibility, public-evidence icons and 9100 181 181. Actual leaders appear separately in sourced profile portraits.",
+  "jump": [
+    {
+      "id": "people",
+      "label": "Meet the leadership"
+    },
+    {
+      "id": "credits",
+      "label": "Research and writing"
+    },
+    {
+      "id": "responsibility",
+      "label": "What it means for families"
+    },
+    {
+      "id": "evidence",
+      "label": "Inspect sources"
+    }
+  ],
+  "people": [
+    {
+      "id": "koti",
+      "name": "Koti Reddy Saripalli",
+      "role": "Founder Chairman · Kotii Group",
+      "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli",
+      "photo": "leadership-person-koti.jpg",
+      "credit": "Research authorship",
+      "creditText": "Pinnacle’s research catalogue links his authored methodology, protocols, preprints and framework report with their individual publication status.",
+      "creditUrl": "https://www.pinnacleblooms.org/verify/evidence/research-library.html#koti-reddy-saripalli",
+      "portraitSource": "published individual profile"
+    },
+    {
+      "id": "sreeja",
+      "name": "Sreeja Reddy Saripalli",
+      "role": "Founder Chief Executive Officer · Bharath HealthCare",
+      "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli",
+      "photo": "leadership-person-sreeja.png",
+      "credit": "Parent-facing writing and editorial work",
+      "creditText": "The catalogue credits her as editor of the framework report. The books record identifies her parent handbooks and The Voice of the Unheard separately.",
+      "creditUrl": "https://www.pinnacleblooms.org/verify/evidence/research-library.html#sreeja-reddy-saripalli",
+      "portraitSource": "published individual profile"
+    },
+    {
+      "id": "prudhvi",
+      "name": "Prudhvi Masta",
+      "role": "Director · Bharath HealthCare P LIMITED",
+      "profile": "https://www.pinnacleblooms.org/Leadership/Prudhvi-Matsa",
+      "photo": "leadership-person-prudhvi.jpg",
+      "portraitSource": "published leadership index"
+    },
+    {
+      "id": "maheshwari",
+      "name": "Maheshwari",
+      "role": "Director Public Relations · Bharath HealthCare P LIMITED",
+      "profile": "https://www.pinnacleblooms.org/Leadership/Maheshwari",
+      "photo": "leadership-person-maheshwari.png",
+      "portraitSource": "published leadership index"
+    },
+    {
+      "id": "shoban",
+      "name": "Shoban Kumar",
+      "role": "Chief Behavioral Therapist · Pinnacle Blooms Network",
+      "profile": "https://www.pinnacleblooms.org/Leadership/Shoban-Kumar",
+      "photo": "leadership-person-shoban.png",
+      "portraitSource": "published leadership index"
+    }
+  ],
+  "values": [
+    {
+      "icon": "heart",
+      "title": "A clear purpose",
+      "text": "Communication, independence, learning and participation give the support a direction you can discuss."
+    },
+    {
+      "icon": "people",
+      "title": "The right people for the work",
+      "text": "The receiving team confirms the relevant professional and centre. Corporate leadership and your child’s care-team appointment have different roles."
+    },
+    {
+      "icon": "book",
+      "title": "Credits you can follow",
+      "text": "Find the author, editor, version and publication status attached to a specific work."
+    },
+    {
+      "icon": "shield",
+      "title": "A source behind the statement",
+      "text": "Original company, software and publication records explain what each kind of evidence establishes."
+    }
+  ],
+  "sources": [
+    {
+      "id": "identity",
+      "title": "Pinnacle brand and legal operator",
+      "url": "https://www.pinnacleblooms.org/verify/#chapter-identity",
+      "meaning": "Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited. The public register separates company identity, device scope, research and other records."
+    },
+    {
+      "id": "purpose",
+      "title": "The life-first PinnacleAI approach",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "meaning": "The child’s self-sufficient, mainstream-included life determines abilities, goals, methods, people, practice and review."
+    },
+    {
+      "id": "research",
+      "title": "Research, authorship and publication status",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "meaning": "Original works, methods, protocols and publication records show authors, versions, findings and limitations. Different kinds of evidence answer different questions."
+    },
+    {
+      "id": "books",
+      "title": "Sreeja’s parent-facing books",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/books.html",
+      "meaning": "Read the printed publisher, ISBN and publication details recorded for the handbooks; the book and research-editor credits remain distinct."
+    },
+    {
+      "id": "pgaf",
+      "title": "Pinnacle Global Autism Framework report",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/publications/zenodo-15487405.html",
+      "meaning": "Institution-authored report, 22 May 2025, version 1.0. Koti Reddy Saripalli is credited as author and Sreeja Reddy Saripalli as editor. DOI 10.5281/zenodo.15487405; independent peer-review was not established in the current catalogue."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Who appears on Pinnacle’s leadership page?",
+      "answer": "The published leadership includes Koti Reddy Saripalli, Sreeja Reddy Saripalli, Prudhvi Masta, Maheshwari and Shoban Kumar. The page links their existing individual profile destinations."
+    },
+    {
+      "question": "What role is published for Koti Reddy Saripalli?",
+      "answer": "His individual profile publishes Founder Chairman, Kotii Group. The Verify research catalogue separately identifies his authored works and their publication status."
+    },
+    {
+      "question": "What role is published for Sreeja Reddy Saripalli?",
+      "answer": "Her individual profile publishes Founder Chief Executive Officer of Bharath HealthCare. Her parent-facing book credits and framework-editor credit are recorded separately in Verify."
+    },
+    {
+      "question": "Where can I read the research and editorial credits?",
+      "answer": "The Verify research library provides Koti and Sreeja Person sections and individual publication records. The framework report credits Koti as author and Sreeja as editor; the books record describes the parent-facing titles."
+    },
+    {
+      "question": "Does a leadership title identify my child’s treating professional?",
+      "answer": "No. The receiving team confirms the relevant care professional, their service and centre before the appointment. You can ask who will assess or support your child and what the visit includes."
+    },
+    {
+      "question": "Who should my family contact first?",
+      "answer": "Call 9100 181 181 or use the existing enquiry page to describe your child’s everyday priority. The team can help identify an appropriate professional, centre and next-step conversation."
+    }
+  ],
+  "updatedOn": "2026-10-01",
+  "url": "https://www.pinnacleblooms.org/leadership",
+  "scope": "Public programme, identity and source explanation. Illustrative creative; published leadership roles follow the published leadership sources."
+}

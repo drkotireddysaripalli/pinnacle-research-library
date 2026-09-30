@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';
 import {serveSpeech,PUBLIC_DOCUMENT_ROUTES} from '../deployment/speech-handler.mjs';
 const origin='https://www.pinnacleblooms.org';
 for(const[path,id]of Object.entries(PUBLIC_DOCUMENT_ROUTES)){
- const md=id+(['self-sufficient','mainstream'].includes(id)?'-machine.md':'-policy.md');
+ const md=id+(['self-sufficient','mainstream','about','leadership','framework'].includes(id)?'-machine.md':'-policy.md');
  const inv={['/pinnacle-pages-html/'+id+'.html']:'public',['/pinnacle-pages-data/'+md]:'reading'};
  const env={ASSETS:{fetch:async r=>new Response(r.method==='HEAD'?null:r.url.endsWith('.md')?'# reading':'public')}};
  test(id+': exact public document, Markdown, HEAD and query-preserving alias',async()=>{

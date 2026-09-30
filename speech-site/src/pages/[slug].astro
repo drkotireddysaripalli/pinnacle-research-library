@@ -3,7 +3,9 @@ import PinnacleWaveExperience from '../components/PinnacleWaveExperience.astro';
 import {pinnacleWave} from '../data/pinnacleai-wave';
 import PolicyPage from '../components/PolicyPage.astro';
 import policies from '../data/policy-content.json';
-export function getStaticPaths(){return [...pinnacleWave.map(page=>({params:{slug:page.slug},props:{page,policy:false}})),...policies.map(page=>({params:{slug:page.slug},props:{page,policy:true}}))];}
-const {page,policy}=Astro.props;
+import institutional from '../data/institutional-content.json';
+import InstitutionalPage from '../components/InstitutionalPage.astro';
+export function getStaticPaths(){return [...pinnacleWave.map(page=>({params:{slug:page.slug},props:{page,kind:'wave'}})),...policies.map(page=>({params:{slug:page.slug},props:{page,kind:'policy'}})),...institutional.map(page=>({params:{slug:page.slug},props:{page,kind:'institutional'}}))];}
+const {page,kind}=Astro.props;
 ---
-{policy?<PolicyPage page={page}/>:<PinnacleWaveExperience page={page}/>}
+{kind==='policy'?<PolicyPage page={page}/>:kind==='institutional'?<InstitutionalPage page={page}/>:<PinnacleWaveExperience page={page}/>}

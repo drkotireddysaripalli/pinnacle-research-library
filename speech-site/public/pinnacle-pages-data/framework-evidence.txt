@@ -1,0 +1,89 @@
+Pinnacle Global Autism Framework | Life-First Child Development
+
+https://www.pinnacleblooms.org/pinnacle-global-autism-framework
+
+“I want my child to ask for help, join in and take more of a part in everyday life.” Start there. The framework gives assessment, relevant therapies, family practice and review a shared purpose that makes sense in your child’s day.
+
+The Pinnacle Global Autism Framework is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. The purpose determines what abilities to understand, which goals and professional contributions matter, what practice fits everyday life and how observations shape the next review.
+
+1. A life moment comes first — The family wants the child to take part in a classroom activity and ask for help when needed. Describe the child’s interests, communication and present support.
+
+2. Understand what would help — A suitable professional considers the relevant abilities and context. With consent, useful teacher observations can add the classroom perspective.
+
+3. Choose relevant people and methods — Agree a meaningful communication step, the support involved and a manageable opportunity to practise at home or in learning. No fixed therapy bundle is assumed.
+
+4. Review usefulness in real life — Discuss whether the child could communicate a need, how comfortable participation felt, which help worked and what should change next.
+
+Describe what you want to open up — Bring an everyday moment, an interest and the support your child already uses.
+
+Understand and question the goal — Ask why a priority matters, how it serves your child’s life and what a useful next step could look like.
+
+Make practice fit your day — Agree manageable, guided opportunities. Family participation is informed and supported, rather than another burden.
+
+Help shape the next review — Bring your observations and the child’s response back to the professional. Keep useful support, adapt what needs to change and review again.
+
+1. Understand abilities — Start with strengths, everyday observations and suitable assessment. Read AbilityScore with the child’s age, context and skills. https://www.pinnacleblooms.org/abilityscore
+
+2. Plan for readiness — Discuss what you want to make possible and agree useful priorities. Readiness views support professional judgement. https://www.pinnacleblooms.org/seven-readiness-indexes
+
+3. Choose relevant support — Bring in the therapies, educational support or health review that fit this child. Every child does not need every service. https://www.pinnacleblooms.org/autism-therapy
+
+4. Practise in everyday life — Use manageable, guided practice in meaningful routines. Family participation connects the work with daily life. https://www.pinnacleblooms.org/everyday-therapy
+
+5. Track and correct — Bring relevant observations back into review. Ask what became useful, what support remains and what needs to change. https://www.pinnacleblooms.org/fusion-module
+
+6. Reassess and repeat — Compare abilities and context over time. Continue, adapt or complete support according to the child’s needs. https://www.pinnacleblooms.org/reassess-review-repeat
+
+7. Grow independence and participation — Keep self-sufficiency, learning, relationships and mainstream participation in view. Progress is individual. https://www.pinnacleblooms.org/pinnacleai
+
+What is the Pinnacle Global Autism Framework?
+It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review.
+
+What is the starting point for a family?
+Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion.
+
+How do the therapies fit together?
+Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy.
+
+How can parents shape the work?
+Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision.
+
+Where is the original framework report?
+The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue.
+
+How do I explore this for my child?
+Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees.
+
+Sources
+
+The life-first PinnacleAI approach
+https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html
+The child’s self-sufficient, mainstream-included life determines abilities, goals, methods, people, practice and review.
+
+Pinnacle Global Autism Framework report
+https://www.pinnacleblooms.org/verify/evidence/publications/zenodo-15487405.html
+Institution-authored report, 22 May 2025, version 1.0. Koti Reddy Saripalli is credited as author and Sreeja Reddy Saripalli as editor. DOI 10.5281/zenodo.15487405; independent peer-review was not established in the current catalogue.
+
+Family agency in goals and review
+https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html#human-agency-in-goals
+The current public explanation describes family knowledge, questioning goals and informed participation with professional governance.
+
+Feedback that informs the next day
+https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html#feedback-that-informs-the-next-day
+Meaningful observations inform the human discussion about support and the next step.
+
+MD-5 manufacturing licence
+https://www.pinnacleblooms.org/verify/evidence/records/md5.html
+The original licence and annexure describe PinnacleAI GPT-OS v1.0.0 as Class B non-diagnostic developmental-support software for ages 0–12.
+
+BIS licence and printed scope
+https://www.pinnacleblooms.org/verify/evidence/records/bis.html
+Read the named software and quality-system scope beside the original document. The scope is separate from an individual professional’s credentials or child outcome.
+
+AbilityScore methodology preprint
+https://www.pinnacleblooms.org/verify/evidence/records/methodology.html
+Version 3.0, 9 April 2026: methodology and preliminary psychometric work. Read the developmental index in context with suitable professional judgement.
+
+External-validation protocol
+https://www.pinnacleblooms.org/verify/evidence/publications/zenodo-19482476.html
+Version 2.1, 9 April 2026: planned comparator and retest research. A research protocol describes proposed work; it is separate from completed validation findings.

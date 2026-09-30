@@ -1,0 +1,320 @@
+{
+  "contract_version": "about-v136-source-20261001",
+  "inspection_completed_utc": "2026-10-01T04:41:12.680763+05:30",
+  "scope": "Read-only inspection of the current About page, the existing Verify page and its linked evidence JSON. No linked target route, issuer registry, image binary, credential original or API was fetched.",
+  "storage": {
+    "directory": "audits\\about-v136-source-20261001",
+    "ignored_by_existing_rule": "audits/",
+    "product_edits": false
+  },
+  "sources": [
+    {
+      "file": "about-live.html",
+      "url": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+      "http_status": 200,
+      "bytes": 339477,
+      "sha256": "524cb8c5e592b190d1d8637d1b22676dfa4ac184a7fd938c0ff5ea0176a15248"
+    },
+    {
+      "file": "verify-live.html",
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "http_status": 200,
+      "bytes": 1022245,
+      "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107"
+    },
+    {
+      "file": "verify-evidence.json",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/evidence.json",
+      "http_status": 200,
+      "bytes": 89649,
+      "sha256": "ede8ed9a215741e87001c9e1731356ddda2091fc3ef988a0588be2340f7f3133"
+    }
+  ],
+  "canonical": {
+    "about": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+    "verify": "https://www.pinnacleblooms.org/verify/",
+    "about_source_title": "About - #1 Autism Therapy Centers in Delhi, Hyderabad, Beng",
+    "about_og_url": "http://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+    "hold": "The source title contains an unverified #1 claim. og:url uses HTTP and should be aligned to the HTTPS canonical if the new page owns this metadata."
+  },
+  "brand_and_operator": {
+    "safe_relationship": "Pinnacle Blooms Network is the public-facing brand; Bharath Healthcare Laboratories Private Limited is the legal entity identified by Verify.",
+    "exact_verify_excerpt": "Pinnacle Blooms Network is a brand of Bharath Healthcare Laboratories Private Limited.",
+    "verify_source": "https://www.pinnacleblooms.org/verify/#chapter-identity",
+    "exact_about_excerpt": "Pinnacle Blooms Network unit of Bharath Healthcare Laboratories Pvt. Ltd.",
+    "about_source_location": "Legacy footer",
+    "CIN": "U74999TG2016PTC113063",
+    "LEI": "894500OJYBVC18BUDN89",
+    "registry_boundary": "Verify records a GLEIF check on 15 September 2026. It reports entity ACTIVE and LEI ISSUED at that check; this pass did not independently query GLEIF or MCA."
+  },
+  "kotii_group": {
+    "about_section": "KGV-section",
+    "exact_section_name": "Kotii Group of Ventures P LIMITED",
+    "footer_link_label": "Kotii Group of Technological Ventures R&D P LIMITED",
+    "existing_footer_destination": "/about#KGV-section",
+    "source_purpose": "A separate group mission section describes research-led technology solutions for people and businesses.",
+    "safe_editorial_treatment": "Present the named group context only as the relationship stated by the current About page, or retain its existing section/link.",
+    "held_relationships": [
+      "Legal parent company",
+      "Subsidiary or holding-company structure",
+      "Ownership or shareholding percentages",
+      "Current group entity registration",
+      "Current leadership roles"
+    ],
+    "boundary": "Neither the inspected About page nor the Verify identity statement and evidence JSON establishes these specific corporate relationships. Verify contains no Kotii string."
+  },
+  "audience_and_purpose": {
+    "primary_audience": "Parents and families considering developmental support for their child.",
+    "source_backed_purpose": "Family skills and intervention support; children using abilities in everyday life, growing independence and mainstream participation.",
+    "about_sections": [
+      "Vision",
+      "Mission",
+      "Values",
+      "Bharath Healthcare Labs",
+      "Kotii Group of Ventures P LIMITED"
+    ],
+    "values_boundary": "Values is presented as an image in the origin; the image binary was not inspected. No individual value terms are certified by this source pass.",
+    "current_verify_description": "A seven-stage pathway connects ability measurement, child-specific planning, integrated support, parent-guided practice and review toward participation and growing independence.",
+    "outcome_boundary": "The Verify profile explicitly keeps plans and outcomes individual. Purpose and direction do not guarantee school entry, cure or independence.",
+    "population_boundary": "900 million is described by Verify as the mission population, not people already served."
+  },
+  "documented_history": [
+    {
+      "fact": "The corporate PAN record reports incorporation on 22 November 2016.",
+      "source_record": "pan",
+      "source_url": "https://www.pinnacleblooms.org/verify/evidence/records/pan.html",
+      "review_stage": "Original reviewed",
+      "boundary": "This is a reviewed corporate-document statement; current tax compliance and live PAN status were not confirmed."
+    },
+    {
+      "fact": "The name-change certificate dated 18 May 2017 connects Bharath Diagnostics Labs Private Limited to Bharath Healthcare Laboratories Private Limited.",
+      "source_record": "mca",
+      "source_url": "https://www.pinnacleblooms.org/verify/evidence/records/mca.html",
+      "review_stage": "Original reviewed",
+      "boundary": "The certificate documents a historic identity event. Fresh MCA records are required for current officers, filings and compliance."
+    },
+    {
+      "fact": "The identity record reports a company-name and CIN match in GLEIF, checked 15 September 2026.",
+      "source_record": "lei",
+      "source_url": "https://www.pinnacleblooms.org/verify/evidence/records/lei.html",
+      "review_stage": "Registry record matched",
+      "boundary": "Dated Verify finding, not a fresh independent registry verification in this pass."
+    }
+  ],
+  "recognition_and_awards": {
+    "appreciation_fact": "Verify reports inspection of seven signed appreciation, acknowledgement and recommendation instruments, with authors and dates in its register.",
+    "appreciation_source": "https://www.pinnacleblooms.org/verify/evidence/records/appreciations.html",
+    "appreciation_boundary": "These do not establish a licence, procurement contract, signed MoU or clinical endorsement. Two Telangana letters are undated on their face.",
+    "award_fact": "The award source establishes nomination or submission material and an achievement docket.",
+    "award_source": "https://www.pinnacleblooms.org/verify/evidence/records/awards.html",
+    "award_winner_status": "Not established in the reviewed record.",
+    "national_reference_ids": [
+      "5050061",
+      "5050246",
+      "5050330"
+    ],
+    "ids_boundary": "Handout-reported nomination references; no issuer winner decision checked.",
+    "msme_file_boundary": "The file labelled MSME Award was reviewed as a Udyam registration, not an award.",
+    "safe_use": "Omit award-win claims until a specific issuer winner decision or award certificate is inspected."
+  },
+  "anchor_contract": {
+    "local_anchor_ids": [
+      "service-section",
+      "Vision-section",
+      "Mission-section",
+      "Values-section",
+      "BHCL-section",
+      "KGV-section"
+    ],
+    "related_links_destination": "#service-section",
+    "footer_alias_pattern": "/about#<existing-section-id>",
+    "existing_local_navigation": [
+      {
+        "label": "Vision",
+        "href": "#Vision-section"
+      },
+      {
+        "label": "Mission",
+        "href": "#Mission-section"
+      },
+      {
+        "label": "Values",
+        "href": "#Values-section"
+      },
+      {
+        "label": "Bharath Healthcare Labs",
+        "href": "#BHCL-section"
+      },
+      {
+        "label": "Kotii Group of Ventures P LIMITED",
+        "href": "#KGV-section"
+      }
+    ],
+    "boundary": "The /about alias target was not fetched in this pass."
+  },
+  "actions": {
+    "links": [
+      {
+        "label": "National",
+        "href": "tel:9100181181",
+        "absolute": "tel:9100181181"
+      },
+      {
+        "label": "Opens a new window",
+        "href": "https://wa.me/919100181181",
+        "absolute": "https://wa.me/919100181181"
+      },
+      {
+        "label": "+91 9100 181 181",
+        "href": "tel:9100181181",
+        "absolute": "tel:9100181181"
+      },
+      {
+        "label": "Take Assessment",
+        "href": "/assesments",
+        "absolute": "https://www.pinnacleblooms.org/assesments"
+      },
+      {
+        "label": "Enroll My Kid",
+        "href": "/enroll",
+        "absolute": "https://www.pinnacleblooms.org/enroll"
+      },
+      {
+        "label": "Pay Online",
+        "href": "/payonline",
+        "absolute": "https://www.pinnacleblooms.org/payonline"
+      },
+      {
+        "label": "Join Certified Course",
+        "href": "/contact",
+        "absolute": "https://www.pinnacleblooms.org/contact"
+      },
+      {
+        "label": "Apply Franchise",
+        "href": "/franchise-autism-therapy-center",
+        "absolute": "https://www.pinnacleblooms.org/franchise-autism-therapy-center"
+      },
+      {
+        "label": "Download Resources",
+        "href": "/all-resources",
+        "absolute": "https://www.pinnacleblooms.org/all-resources"
+      },
+      {
+        "label": "More...",
+        "href": "/sitemap",
+        "absolute": "https://www.pinnacleblooms.org/sitemap"
+      },
+      {
+        "label": "(+91) 9100 181 181",
+        "href": "tel:9100181181",
+        "absolute": "tel:9100181181"
+      },
+      {
+        "label": "care@pinnacleblooms.org",
+        "href": "mailto:care@pinnacleblooms.org",
+        "absolute": "mailto:care@pinnacleblooms.org"
+      },
+      {
+        "label": "Leadership",
+        "href": "/leadership",
+        "absolute": "https://www.pinnacleblooms.org/leadership"
+      }
+    ],
+    "page_specific_lead_form": "Absent from captured About HTML.",
+    "native_search_form": {
+      "action": "/search",
+      "method": "get",
+      "query_field": "q"
+    },
+    "agreement_controls": "Legacy confirmation overlay contains Yes, Agreed and cancel buttons; it is not an assessment/enquiry intake form.",
+    "submission_boundary": "No forms submitted. No route reachability, live acceptance or backend behaviour claimed."
+  },
+  "image_references": {
+    "owner_approved_master": {
+      "path": "C:/Users/Siri Palace/Documents/Codex/Pinnacle_Brand_System/pinnacle-world-master-reference.png",
+      "exists": true,
+      "approval_basis": "Owner-provided persistent campaign instruction.",
+      "inspection_boundary": "Binary not visually inspected in this source-only pass."
+    },
+    "existing_origin_refs": [
+      {
+        "ref": "/media/image/Pinnacle-blooms-Logo.jpg",
+        "role": "Legacy logo"
+      },
+      {
+        "ref": "https://www.pinnacleblooms.org//Images/pinnacle-logo9.jpg",
+        "role": "Legacy logo; double slash in current source"
+      },
+      {
+        "ref": "/media/image/our-values.png",
+        "role": "Legacy values illustration"
+      },
+      {
+        "ref": "/images/sign.png",
+        "role": "Repeated signature-style decoration; do not infer a credential"
+      },
+      {
+        "ref": "/images/Slider-images/speech-slide-1.jpg",
+        "role": "Origin speech carousel background"
+      },
+      {
+        "ref": "/images/Slider-images/speech-slide-2.jpg",
+        "role": "Origin speech carousel background"
+      },
+      {
+        "ref": "/images/Slider-images/speech-slide-3.jpg",
+        "role": "Origin speech carousel background"
+      },
+      {
+        "ref": "/images/Slider-images/speech-slide-4.jpg",
+        "role": "Origin speech carousel background"
+      },
+      {
+        "ref": "https://www.pinnacleblooms.org/media/image/pinnacle-emblem-500.jpg",
+        "role": "Origin Open Graph and Twitter preview"
+      },
+      {
+        "ref": "/verify/images/pinnacle-logo.webp",
+        "role": "Verify brand logo"
+      }
+    ],
+    "boundary": "An existing reference establishes current usage, not newly verified rights, approval for a new campaign, image availability or factual media endorsement. Media-logo carousel is not evidence of awards or endorsement."
+  },
+  "schema_source_holds": {
+    "file": "about-schema-summary.json",
+    "legacy_identity_conflicts": [
+      "Pinnacle Autism Therapy Organization",
+      "Indian Council for Child Development MedicalOrganization",
+      "National Autism Network India GovernmentService"
+    ],
+    "invalid_jsonld_scripts": 1,
+    "safe_direction": "Use the clear current Verify brand/legal entity relationship when writing new identity metadata; do not treat inherited global JSON-LD as claim evidence."
+  },
+  "held_or_unverified_claims": [
+    "Kotii legal parent, shareholding or subsidiary relationship",
+    "16+ years of this legal entity or an exact founding date for the Pinnacle brand",
+    "Award wins",
+    "World #1, world only, largest or global superiority",
+    "Granted patents",
+    "Guaranteed cure, school admission or independence",
+    "Legacy 97%+, 100+ centres and 70+ country footer claims without their specific reviewed evidence and qualifiers",
+    "Media logos as endorsement",
+    "Current corporate officers, tax compliance or current MCA filing status"
+  ],
+  "source_review_dates": {
+    "evidence_source_reviewed": "2026-09-15",
+    "evidence_conclusions_updated": "2026-09-24",
+    "meaning": "Inspected originals and dated registry findings have distinct scopes; review does not imply issuer endorsement or fresh issuer confirmation."
+  },
+  "memory_use": {
+    "purpose": "Located established identity and evidence-boundary conventions, then refreshed current page sources. No final fact relies solely on memory.",
+    "citations": [
+      "MEMORY.md:358-362",
+      "MEMORY.md:478-480"
+    ],
+    "rollout_ids": [
+      "01a0c7b8-0c6f-7963-9f8c-4160fcd9b038",
+      "01a0c718-b8b5-7bf2-9d48-50969058e23e"
+    ]
+  }
+}

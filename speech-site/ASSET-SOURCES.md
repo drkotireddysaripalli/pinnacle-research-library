@@ -178,3 +178,8 @@ Real premises media are pre-matched directory files in `reviews/NEXT-CENTRE-BATC
 ## Life outcome creatives · 1 October 2026
 
 Self-Sufficient and Mainstream each use a complete original poster generated through the direct built-in ChatGPT image tool with the official lockup and accepted Speech poster references. No API-key route or pasted text composite. Exact prompts/original names and review disposition: reviews/LIFE-OUTCOMES-CREATIVE-PROMPTS-20261001.json. Source assets: src/assets/self-sufficient-social-20261001.png and src/assets/mainstream-social-20261001.png. Fictional Indian families/professional, full-sleeve branded coat, readable national phone and quiet named-software scope. No observed beneficiary outcome or real staff qualification claimed. Astro provides responsive WebP and1200×630JPEG sharing variants.
+
+
+## Institutional creatives and leadership portraits · v136 · 1 October2026
+
+About, Leadership and Global Framework each use a complete original branded English poster generated through the built-in ChatGPT image tool with the official lockup and approved Speech creative references. No API-key route or pasted-text substitute. The family/professional scenes are fictional; actual adult leadership portraits appear separately. Prompts: reviews/INSTITUTIONAL-CREATIVE-PROMPTS-V136-20261001.json. Astro creates responsive WebP and1200×630social JPEG variants. Exact five first-party portrait URLs, file hashes, dimensions and owner-authorised existing-website reuse are in reviews/LEADERSHIP-PORTRAIT-SOURCES-V136-20261001.json. All five portrait pixels were inspected; they are retained without synthetic identity changes. No credentials or actual beneficiary outcomes inferred.

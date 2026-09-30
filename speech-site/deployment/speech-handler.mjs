@@ -19,7 +19,7 @@ export const CENTRE_DETAIL_ROUTES={
  '/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india':'tirupati',
  '/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india':'srikakulam'
 };
-export const PUBLIC_DOCUMENT_ROUTES={"/privacy-policy":"privacy-policy","/terms-of-use":"terms-of-use","/terms-of-service":"terms-of-service","/cookie-policy":"cookie-policy","/copyright-and-intellectual":"copyright-and-intellectual","/age-restriction-policy":"age-restriction-policy","/contact-information":"contact-information","/disclaimer-and-limitations-of-liabilities":"disclaimer-and-limitations-of-liabilities","/endorsement-and-testimonial":"endorsement-and-testimonial","/governing-and-jurisdiction":"governing-and-jurisdiction","/third-party-inegration":"third-party-inegration","/refund-policy":"refund-policy","/staff-declaration":"staff-declaration","/ethics-charter":"ethics-charter","/self-sufficient":"self-sufficient","/mainstream":"mainstream"};
+export const PUBLIC_DOCUMENT_ROUTES={"/privacy-policy":"privacy-policy","/terms-of-use":"terms-of-use","/terms-of-service":"terms-of-service","/cookie-policy":"cookie-policy","/copyright-and-intellectual":"copyright-and-intellectual","/age-restriction-policy":"age-restriction-policy","/contact-information":"contact-information","/disclaimer-and-limitations-of-liabilities":"disclaimer-and-limitations-of-liabilities","/endorsement-and-testimonial":"endorsement-and-testimonial","/governing-and-jurisdiction":"governing-and-jurisdiction","/third-party-inegration":"third-party-inegration","/refund-policy":"refund-policy","/staff-declaration":"staff-declaration","/ethics-charter":"ethics-charter","/self-sufficient":"self-sufficient","/mainstream":"mainstream","/about-pinnacle-proven-improvement-rate":"about","/leadership":"leadership","/pinnacle-global-autism-framework":"framework"};
 export const PINNACLEAI_PATHS=['/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat'];
 const DOCUMENT='/speech-therapy/service-information';
 const ENROLMENT_PREVIEW='/pinnacle-pages-preview/enrolment';
@@ -70,7 +70,7 @@ export async function serveSpeech(request,env,inventory){
  else if(key==='/pinnacleai/llms.txt')key='/pinnacle-pages-data/pinnacleai-llms.txt';
  else if(!/^\/pinnacle-pages-(?:assets|fonts|scripts|data)\//.test(key))return null;
  const wantsMarkdown=acceptsMarkdown(request.headers.get('accept')||'');
- if(wantsMarkdown&&Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,u.pathname))key='/pinnacle-pages-data/'+PUBLIC_DOCUMENT_ROUTES[u.pathname]+(['self-sufficient','mainstream'].includes(PUBLIC_DOCUMENT_ROUTES[u.pathname])?'-machine.md':'-policy.md');
+ if(wantsMarkdown&&Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,u.pathname))key='/pinnacle-pages-data/'+PUBLIC_DOCUMENT_ROUTES[u.pathname]+(['self-sufficient','mainstream','about','leadership','framework'].includes(PUBLIC_DOCUMENT_ROUTES[u.pathname])?'-machine.md':'-policy.md');
  if(wantsMarkdown&&key==='/pinnacle-pages-html/enrolment.html')key='/pinnacle-pages-data/enrolment-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/occupational-therapy.html')key='/pinnacle-pages-data/occupational-therapy-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/aba-therapy.html')key='/pinnacle-pages-data/aba-therapy-machine.md';
