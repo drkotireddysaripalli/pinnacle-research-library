@@ -1,6 +1,6 @@
 # Occupational Therapy — canonical narrative and release contract
 
-30 September 2026 · Owner-accepted direction · **Narrative committed; page revision not yet implemented or deployed**
+30 September 2026 · Consolidated narrative after parent, sales, clinical, evidence and search review · **Narrative locked for the build; page revision not yet implemented or deployed**
 
 This is the source for the next material revision of the managed Occupational Therapy page. It consolidates the owner’s life-first purpose, the parent/family, acquisition, clinical/evidence and search reviews, and the page’s existing visual and machine-reading system. It does not supersede `ACTIVE-PAGE-WORK-ORDER.md`, whose next active destination is Child Development Assessment. When Occupational Therapy becomes the active implementation, use this file to write that bounded work order and resolve the release gates below.
 
@@ -8,9 +8,9 @@ Current canonical: `https://www.pinnacleblooms.org/best-occupational-therapy-cen
 
 ## One promise and one next step
 
-**One everyday goal, shared by the child’s family and occupational therapist, practised where life happens, then observed and reviewed.** The child’s growing self-sufficiency, participation with others and a wonderful life give the work its direction. The family remains informed and involved; the therapist assesses and decides care; PinnacleAI® supports non-diagnostic measurement and review.
+**Your child’s life is the goal. Occupational therapy is one way to work toward it.** Start with one everyday activity, understand what makes participation possible, choose a meaningful goal, practise where life happens, observe what changes and keep correcting the plan. The child’s growing self-sufficiency, inclusion in family, learning and community, and wonderful life give every decision its direction. The family remains informed and involved; the therapist assesses and decides care; PinnacleAI® supports non-diagnostic measurement and review.
 
-Primary action: **Call 9100 181 181** (`tel:+919100181181`) with one activity the family wants to make easier. Secondary action: find a suitable centre. Enrolment follows when the family is ready. The phone conversation must help check an appropriate OT professional, centre, current availability, appointment and fee information; none is invented or implied to be confirmed by a click.
+Primary action: **Call 9100 181 181** (`tel:+919100181181`) with one activity the family wants to make easier. The call must deliver a useful next step: someone listens, helps identify the right professional conversation and explains how the centre, current availability, visit and fees will be confirmed. Secondary action: find a suitable centre. Enrolment follows when the family is ready. None of those operational facts is invented or implied to be confirmed by a click.
 
 Write in Pinnacle’s direct `you`/`we` voice. Start with the family’s day, explain the first practical step, then unfold the distinctive system and evidence. Do not make the visitor study a protocol before they can decide to call. Keep the parent’s desired life outcome greater than any score, therapy technique or software module. Growing independence and mainstream participation may include accommodations and support; they are directions, never guaranteed endpoints.
 
@@ -20,23 +20,23 @@ Write in Pinnacle’s direct `you`/`we` voice. Start with the family’s day, ex
 
 **Eyebrow:** Pinnacle Blooms Network® · Occupational Therapy for children
 
-**H1:** Occupational therapy that begins with your child’s everyday life.
+**H1:** Occupational therapy for children that begins with everyday life.
 
-**Lead:** Play. Mealtimes. Getting dressed. Learning with others. The moments that matter are different for every child.
+**Lead:** Play. Mealtimes. Getting dressed. Learning with others. The moments that matter are different for every child—and they can become meaningful goals.
 
-**Body:** Tell us one activity you would like your child to manage or enjoy with more confidence. At Pinnacle, growing self-sufficiency and participation shape what we understand, which goals we choose and how we review the work together.
+**Body:** Tell us one activity you would like your child to manage or enjoy with more confidence. At Pinnacle, your child’s growing self-sufficiency and place in family, school and community life shape what we understand, which goals we choose and how we review the work together.
 
-**Primary action:** Call 9100 181 181. **Secondary action:** Find a Pinnacle centre. **Utility line:** Tell us the activity; we will help check the suitable OT support, centre, appointment and fees before you decide.
+**Primary action:** Call 9100 181 181. **Secondary action:** Find a Pinnacle centre. **Utility line:** Tell us the moment that matters. We will explain the suitable first conversation and help confirm the centre, visit and fees before you decide.
 
-Use a luminous mother/family–child visual across a genuine daily-life moment. Keep real HTML for every essential word and button. On a 320–390 px phone, the H1, a meaningful part of the lead and the call action must appear promptly beneath the compact shared navigation.
+Use a luminous family–child visual showing a child taking part in an ordinary moment rather than passively receiving therapy. The child is the hero; parents and the professional offer support without taking over. Keep real HTML for every essential word and button. On a 320–390 px phone, the H1, a meaningful part of the lead and the call action must appear promptly beneath the compact shared navigation. A small link to the life-first method may follow the CTA; do not lead with a certificate collage.
 
 ### 2. Recognition: let the family find its own moment
 
 **H2:** What would you like to become easier in your child’s day?
 
-**Body:** For a younger child, it may be reaching for a toy, joining a meal or finding a comfortable way to play. For another child, it may be dressing, drawing, using learning materials or taking part in a busy school routine. Begin with what you notice; a diagnosis is not required to make the first call.
+**Body:** For a younger child, it may be reaching for a toy, joining a meal or finding a comfortable way to play. For another child, it may be dressing, drawing, using learning materials or taking part in a busy school routine. Your child is more than a label or a checklist. Begin with what you notice; a diagnosis is not required to make the first call.
 
-Use five accessible, single-column-on-mobile activity routes: **play and exploration; meals and self-care; dressing and daily routines; hand use and learning; sensory comfort and participation**. Each route gives one concrete example and opens its short answer. Mention autism, ADHD or developmental delay only as possible contexts for an individual assessment; a label alone does not establish OT suitability. Never describe a child as “suffering from” a condition.
+Use five accessible, single-column-on-mobile activity routes with a concrete line each: **Play and exploration:** reach, handle and share familiar play materials. **Meals and self-care:** join family mealtimes or use everyday utensils. **Dressing and routines:** take part in fasteners, shoes, grooming or transitions. **Hand use and learning:** draw, handle learning materials or write when developmentally appropriate. **Sensory comfort and participation:** understand how noise, touch, movement or a busy setting affects the activity. Each route opens a short, honest answer. Mention autism, ADHD or developmental delay only as possible contexts for an individual assessment; a label alone does not establish OT suitability. Never describe a child as “suffering from” a condition.
 
 ### 3. The service answer: what an OT actually does
 
@@ -44,23 +44,23 @@ Use five accessible, single-column-on-mobile activity routes: **play and explora
 
 **Direct answer:** A child’s occupational therapist looks at the child, the activity and the surroundings together. They observe what helps or gets in the way, choose a meaningful goal with the family, then use suitable practice, adaptations and review to support participation in everyday life.
 
-**Follow-through:** That may mean changing a task’s steps, the materials, the environment or the support a child receives. The assessment determines which approach is appropriate. Keep the definition aligned to [WFOT](https://wfot.org/about/about-occupational-therapy) and [AOTA](https://www.aota.org/practice/domain-and-process/occupations-everyday-activities); these professional references do not endorse Pinnacle or prove Pinnacle outcomes.
+**Follow-through:** That may mean changing a task’s steps, the materials, the environment or the support a child receives. The assessment determines which approach is appropriate. The family should be able to answer, in plain words, *what are we working toward and why?* Keep the definition aligned to [WFOT](https://wfot.org/about/about-occupational-therapy) and [AOTA](https://www.aota.org/practice/domain-and-process/occupations-everyday-activities); these professional references do not endorse Pinnacle or prove Pinnacle outcomes.
 
 ### 4. First call and first visit: make the next step concrete
 
 **H2:** What happens when you contact us?
 
-**Body:** Tell us which everyday activity matters most to your family. We will help check the appropriate Pinnacle centre, current occupational-therapy availability, appointment details and fees before you choose a visit. At the first professional conversation, an OT listens to your priorities, observes your child through age-appropriate activities and discusses a useful starting goal with you.
+**Body:** Tell us which everyday activity matters most to your family. Our guidance team will listen, explain how to identify a suitable OT conversation and help check the centre, current availability, appointment details and fees before you choose a visit. At the first professional conversation, an OT listens to your priorities, observes your child through age-appropriate activities and discusses a useful starting goal with you. You should leave knowing what the team proposes to understand or try next—and why it matters in your child’s day.
 
-Show four human-sized steps: **tell us the moment → check who and where → meet the OT → agree a first goal**. State when any fee is confirmed and what the family may bring, without inventing a fixed price, visit duration, diagnosis or booking guarantee. Link the operator’s existing National Autism Helpline only as a separate guidance route, with its exact telephone-availability scope.
+Show four human-sized steps: **tell us the moment → check who and where → meet the OT → agree a first goal**. The operator has confirmed free telephone guidance and 24/7 telephone availability; if stated here, say **“Free guidance by phone, 24/7”** and link to the [Pinnacle/BHCL helpline](https://www.pinnacleblooms.org/national-autism-helpline). Do not imply toll-free calling, 24/7 OT appointments or free assessment/therapy. State when any fee is confirmed and what the family may bring, without inventing a fixed price, visit duration, diagnosis or booking guarantee.
 
 ### 5. Show a goal travelling into life
 
 **H2:** One goal should matter beyond the therapy room.
 
-**Featured example:** A family wants their child to join mealtime more comfortably. The OT may look at how the child sits, handles a spoon, follows the sequence and responds to the setting. Together they choose a manageable next step, try it in familiar meals and bring the family’s observations back into review.
+**Featured example:** A family wants their child to join mealtime more comfortably. The OT may look at how the child sits, handles a spoon, follows the sequence and responds to the setting. Together they choose a manageable next step, try it in familiar meals and bring the family’s observations back into review. A spoon is more than a grip exercise when it helps a child take part in a family meal.
 
-**Other possible goals:** For another child, the meaningful moment may be getting dressed or joining play; for another, packing a schoolbag and participating in the morning routine. The specific support and measures follow individual assessment. These are examples of possible goals, not actual patient stories or typical or promised results.
+**Two shorter visual examples:** **Getting ready:** the useful goal may be taking part in dressing, fasteners or transitions, with the support that child needs. **Joining play or learning:** the useful goal may be reaching, handling materials, playing with another child or participating in a school morning. The specific support and measures follow individual assessment. These are examples of possible goals, not actual patient stories or typical or promised results.
 
 Use three organic, age-varied visual moments rather than making the schoolbag the only child story. Mother, father or caregiver and child remain the human focus. Generated therapeutic scenes are illustrative; real centres use correctly matched, permission-cleared photos. Depicted Pinnacle professionals wear full-sleeve white professional coats with the approved emblem/name, without implying medical-doctor status. Keep official logo and exact copy as design/HTML elements rather than fabricated text inside imagery.
 
@@ -68,21 +68,21 @@ Use three organic, age-varied visual moments rather than making the schoolbag th
 
 **H2:** The activity is a step. Your child’s life gives it direction.
 
-**Body:** At Pinnacle, the wider life your child is growing toward determines which abilities we understand, which goals matter, who helps, what your family can practise and what we review next. An exercise earns its place when it serves a meaningful activity beyond the therapy room.
+**Body:** At Pinnacle, the starting question is not “which exercise should we repeat?” It is “what should this child be able to do in their own life?” If the goal is joining a family meal, that purpose guides which abilities we look at, what the OT assesses, whether another professional is needed, what the family can practise and what we check next. An exercise earns its place when it serves the child’s wider life.
 
-**Family promise:** You help choose what matters; the professional team shapes suitable care around that goal. We ask how an ability works where your child lives, plays and learns, and change course when that connection is missing.
+**Family promise:** You help choose what matters; the professional team shapes suitable care around that goal. We ask how an ability works where your child lives, plays and learns, and change course when that connection is missing. This is Pinnacle’s life-first paradigm shift in action: **the child’s desired life determines the abilities, goals, methods, people, practice and review**, rather than being reduced to a score or a collection of therapy techniques.
 
-Show the established seven parent-facing stages as **one compact flowing visual**: **understand capabilities/AbilityScore® → consider readiness and plan → suitable integrated support → guided everyday practice → track and correct → reassess and repeat → work toward growing independence and participation**. This visual explains the journey; it is not a new clinical protocol or a promise that every child reaches the same endpoint. Link the [documented paradigm shift](https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html). Do not claim every earlier practitioner or 160 years of work ignored life outcomes.
+Show the established seven parent-facing stages as **one compact flowing visual**, with plain labels and an OT-specific note at each step: **1. Understand capabilities** (AbilityScore® can help record a starting picture) → **2. Look ahead and plan** (readiness views and family priorities help choose the goal) → **3. Give suitable integrated support** (OT and other disciplines only when indicated) → **4. Practise in everyday life** (family-guided, manageable moments) → **5. Track and correct** (notice whether participation changes) → **6. Reassess and repeat** (keep the next step responsive to the child) → **7. Work toward growing independence and mainstream participation** (with appropriate supports). The life purpose sits visibly above the entire path; no stage or metric replaces it. This is an explanation of the journey, not a new clinical protocol or a promise that every child reaches the same endpoint. Link the [documented paradigm shift](https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html). Do not claim every earlier practitioner or 160 years of work ignored life outcomes.
 
 ### 7. Review progress and connect the right people
 
 **H2:** How will we know whether the goal is helping in real life?
 
-**Body:** You and the OT can name a starting point, agree what participation would look like, notice what support your child needs at home or school, and review what changed. If something is not carrying into daily life, the team can reconsider the activity, environment, method or goal with you. Your observations matter without making you responsible for clinical decisions.
+**Body:** You and the OT can name a starting point and agree what participation would look like. Then ask four useful questions: **What did your child do? Where did it happen? What support was needed? What should change next?** If an ability is not carrying into daily life, the team can reconsider the activity, environment, method or goal with you. Your observations matter without making you responsible for clinical decisions or turning home practice into a test of the parent.
 
 **Connected team:** Some child-specific goals may also benefit from speech therapy, behavioural support or special education. Those professionals contribute when the assessment and goal indicate them, not because every child must take every therapy.
 
-**Where technology fits:** PinnacleAI GPT-OS® is licensed as non-diagnostic developmental-support software. It is designed to support ability mapping, readiness tracking, progress forecasting and plan support; the OT and other qualified professionals decide care with the family. Link the exact [MD-5 record](https://www.pinnacleblooms.org/verify/evidence/records/md5.html). Explain AbilityScore® and the seven Readiness Indexes only as supports to the conversation, never the definition of the child or the outcome.
+**Where technology fits:** AbilityScore® can help form a structured starting picture. The seven Readiness Indexes can focus discussion about different areas of readiness. PinnacleAI GPT-OS® is licensed as non-diagnostic developmental-support software designed to support ability mapping, readiness tracking, progress forecasting and plan support. The OT and other qualified professionals interpret that information and decide care with the family. A number never defines the child or the life the family is working toward. Link the exact [MD-5 record](https://www.pinnacleblooms.org/verify/evidence/records/md5.html), with product details available deeper in Verify.
 
 ### 8. People, place and inspectable proof
 
@@ -92,7 +92,7 @@ Show the established seven parent-facing stages as **one compact flowing visual*
 
 For each relevant centre, show its true name and address, real exterior/interior images where rights and identity are checked, profile and directions, genuine local number if known, the national number and a dated source. Link the matching Google Business Profile and Bing Places identity only when verified. A map is directions, not an endorsement. Do not imply all 62 published directory listings provide OT or have the same hours, rating or registration.
 
-**Evidence invitation:** We publish the records behind our organisation, technology and research claims so you can inspect them. In a short, quiet evidence shelf, connect the precise [claim-to-report map](https://www.pinnacleblooms.org/verify/evidence/assurance-map.html), [MD-5 software scope](https://www.pinnacleblooms.org/verify/evidence/records/md5.html), [BIS software scope](https://www.pinnacleblooms.org/verify/evidence/records/bis.html) and [research library](https://www.pinnacleblooms.org/verify/evidence/research-library.html). The FSC belongs in the broader Verify gateway rather than the parent’s OT sales argument. Licences and certificates establish their printed scopes, not a child’s future result or the credentials of an OT.
+**Evidence invitation:** We publish the records behind our organisation, technology and research claims so you can inspect them. Use three restrained, source-linked proof cards beside this decision point: **Documented work:** a practitioner’s dated factual-findings report recorded 31M+ defined services, including therapies, assessments, screenings and parent training, as at 17 July 2026; see the [counting rules and report scope](https://www.pinnacleblooms.org/verify/evidence/assurance-map.html). **Licensed support technology:** PinnacleAI GPT-OS v1.0.0 is listed as non-diagnostic Class B developmental-support software on [Form MD-5](https://www.pinnacleblooms.org/verify/evidence/records/md5.html); the [BIS record](https://www.pinnacleblooms.org/verify/evidence/records/bis.html) describes its stated software scope. **Open research trail:** explore the [research library](https://www.pinnacleblooms.org/verify/evidence/research-library.html), with each work’s actual publication status. The FSC belongs in the broader Verify gateway rather than the parent’s OT sales argument. None of these records certifies an OT, proves a particular child’s therapy result or replaces local-care facts.
 
 Use genuine consented family stories or current centre reviews only when their provenance, permission, centre, rating count and date are confirmed. No fabricated testimonial, stock family presented as a patient, or blanket 4.8+ claim.
 
@@ -100,11 +100,50 @@ Use genuine consented family stories or current centre reviews only when their p
 
 **H2:** Start with one moment that matters.
 
-**Body:** Call **9100 181 181** and tell us the activity you would like to make easier for your child. We will help check the suitable centre, occupational therapist, appointment and fees, then explain the next step before you decide.
+**Body:** Call **9100 181 181** and tell us the activity you would like to make easier for your child. We will listen, help check the suitable centre, occupational therapist, appointment and fees, then explain the next step before you decide. Your child’s wider life remains the reason for every step we take together.
 
 **Actions:** Call (`tel:+919100181181`) · Find a centre · Begin the established enrolment journey · Share this page with family. The existing shared Verify gateway and full portal footer remain part of the footer, not a second main sales story.
 
-Visible, brief FAQs should answer: what OT supports; dressing, play, hand use and sensory participation; diagnosis versus first conversation; what to expect at the first visit; how goals are chosen and reviewed; whether another therapy may help; current OT availability and fees; and PinnacleAI’s limited role. Every FAQ answer must match its structured data. Do not promise a fixed therapy frequency or duration without individual assessment.
+Use the following visible, brief FAQs, updating operational answers only after the call team and centres confirm their process:
+
+1. **What can occupational therapy help my child do?** OT can support participation in meaningful activities such as play, self-care, hand use, learning and routines. A professional assessment identifies what is suitable for your child.
+2. **Can I ask about OT for an autistic child, a child with ADHD or developmental delay?** Yes. Tell us the everyday activity you are concerned about. A diagnosis can provide context, but it does not automatically determine whether OT or any particular method is appropriate.
+3. **Can OT address sensory difficulties?** An OT can consider how a child experiences touch, movement, sound or other features of an activity or setting, then assess whether changes or support may help participation.
+4. **What happens at the first visit?** The professional listens to your priorities, learns about daily routines, observes your child in age-appropriate activities and explains a suitable next step. The centre confirms the appointment details and fees before you visit.
+5. **How will we know whether therapy is helping?** Agree on an observable activity goal and a starting point, then review what your child does in daily life, where it works, what support is needed and what should change.
+6. **Will my child need speech, behavioural support or special education too?** Only when the individual assessment and shared goal indicate that another professional may contribute. Every child does not need every therapy.
+7. **Which Pinnacle centre has an OT and what will it cost?** Availability and fees can change by location. Use the directory to choose a centre, then call **9100 181 181** to help confirm the current professional, appointment and price before you travel.
+8. **Does PinnacleAI decide my child’s care?** No. Its licensed non-diagnostic scope supports measurement, readiness and planning information. Qualified professionals and your family use that information to discuss care and review progress.
+
+Every displayed FAQ answer must match its structured data. Do not promise a fixed therapy frequency or duration without individual assessment. Place the final call action immediately after these answers rather than creating a second long conclusion.
+
+## How the story should feel on the page
+
+The page follows **parent question → direct answer → a child’s everyday example → Pinnacle’s specific mechanism → inspectable proof → useful next action**. The visitor hears Pinnacle speaking to *them* in clear `you`/`we` language, not a third-party essay or a technical catalogue. Use one short schoolbag or spoon analogy at its relevant moment; do not repeat home/car/brick metaphors across the page.
+
+| Moment | Visual and interaction | Mobile requirement |
+|---|---|---|
+| Hero and first call | Bright, branded family/child scene; Sintony heading; clear national number; a calm path toward home, play and school | Compact common header; full-size CTA and readable lead in the first view |
+| Concern routes | Five distinct, purposeful icons and brief answers for play, meals, dressing, hand use and sensory participation | One column or comfortable horizontal route; no 163 px text cards |
+| First conversation | A parent, child and OT at a familiar activity; professional wears full-sleeve white Pinnacle coat with actual emblem/name | The four next steps remain text and keyboard/touch usable |
+| Goal journey | Three soft-edged, age-varied moments depicting children roughly from nine months through the early school years; one featured mealtime example, dressing and play/school alternatives | Preserve faces and the child’s activity when cropped; no claim relies on generated image text; artwork ages are illustrative, not a service-age restriction |
+| Pinnacle difference | One flowing seven-stage pathway with the life outcome visibly governing every stage | Plain labels remain legible without pinching or horizontal scroll |
+| Centre and proof | Real, correctly matched centre fronts/interiors and emblem; small proof cards linking exact sources | Centre, call, availability state and directions remain easy to find |
+| Close and sharing | Strong call action and a family-share control; OG creative uses the official emblem and readable `9100 181 181` | Actual WhatsApp/iOS/Android preview and share fallback are tested |
+
+The colour system stays luminous white with deep navy body copy, vivid Pinnacle purple/pink, teal and restrained red accents. Make typography, spacing and icons signal a premium, hopeful service; avoid a page-wide gradient, dense certificate wall or generic stock grid. Evidence should feel close and inspectable, not defensive or dominant. Reuse the existing approved page assets and shared components when they already carry a narrative job; create new artwork only for a missing moment.
+
+## Stakeholder acceptance questions
+
+| Perspective | Question the built page must answer |
+|---|---|
+| Mother, father, family and caregiver | “Is my child’s everyday life understood, and do I know exactly what to do next?” |
+| Child and occupational therapist | “Is the goal meaningful, individually assessed, clinically appropriate and carried into real participation?” |
+| Pinnacle sales and centre team | “Can we make the first call useful, confirm a real service and follow the family through visit and enrolment?” |
+| PinnacleAI and brand owners | “Does the child’s desired life—not a metric or a technique—govern the full seven-stage pathway?” |
+| Evidence and regulatory reviewers | “Does every exceptional claim link to the original source, date, status and precise scope?” |
+| Search, AEO and AI readers | “Can a reader or crawler extract a direct, source-linked answer to the parent’s question without image text or a script?” |
+| Design, accessibility and engineering | “Is it vivid, fast, usable from 320 px through desktop, and still part of the common header/footer system?” |
 
 ## Search, social and machine-readable package
 
