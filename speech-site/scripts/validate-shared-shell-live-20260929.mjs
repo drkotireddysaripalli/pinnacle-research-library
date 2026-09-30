@@ -2,6 +2,7 @@ import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import path from 'node:path';
+import {PINNACLEAI_PATHS} from '../deployment/speech-handler.mjs';
 
 const origin='https://www.pinnacleblooms.org';
 const expectedVersion=Number(process.argv[2]||106);
@@ -17,7 +18,8 @@ const paths=[
   '/centers',
   '/speech-therapy/service-information',
   '/speech-therapy/first-visit-guide',
-  '/speech-therapy/teacher-observation-guide'
+  '/speech-therapy/teacher-observation-guide',
+  ...PINNACLEAI_PATHS
 ];
 const sha=value=>crypto.createHash('sha256').update(value).digest('hex');
 const results=[];
