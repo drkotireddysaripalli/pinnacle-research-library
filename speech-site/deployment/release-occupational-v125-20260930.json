@@ -1,0 +1,35 @@
+{
+  "releasedAt": "2026-09-30T05:32:25.214277Z",
+  "canonical": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+  "sourceCommitPushedBeforeDeployment": "15bf3ed",
+  "worker": "pinnacle-verify-route",
+  "versionId": "46a23d19-cd92-436c-9201-029e7b7e7815",
+  "deploymentId": "a7737241-35b9-4204-a38d-7df05237fd63",
+  "trafficPercent": 100,
+  "immediateRollbackVersionId": "83328294-bd66-44a4-ae6e-64acced0b29e",
+  "workerSourceSha256": "95055769ea57069ec62810d19c6228196880f5f6d0e31894b3b47a372d541681",
+  "verifyAssetCount": 634,
+  "managedAssetCount": 829,
+  "checks": {
+    "productionBuild": "12 pages",
+    "focusedTests": "37 route, discovery and measurement; 18 enrolment; 29 portal checks passed",
+    "bindings": ["ASSETS", "PINNACLE_LEGACY", "PINNACLE_ASK"],
+    "modules": 5,
+    "managedSharedShells": "10 of 10 identical header and footer",
+    "managedHtml": "10 of 10 matched staged build after exact delivery-layer beacon and existing Speech Google Ads insertion were normalised",
+    "liveRoutes": "OT canonical 200; two aliases 301; Verify, FSC, regulatory journey and helpline 200",
+    "responsive": "Chrome local and live, Edge local at 320, 390, 768, 1024 and 1440 px passed",
+    "htmlValidity": "W3C Nu zero errors and zero warnings",
+    "socialPosterSha256": "d6fce9fb1970e6f3d5628d980672c2ce20e813f5cbd7eaf899a83792eb439399",
+    "indexNow": "One updated OT canonical accepted HTTP 200; submission only"
+  },
+  "receipts": [
+    "deployment/occupational-live-v125-20260930.json",
+    "deployment/occupational-responsive-live-v125-20260930.json",
+    "deployment/shared-shell-live-v125-20260930.json",
+    "deployment/machine-live-v125-20260930.json",
+    "deployment/occupational-w3c-v125-20260930.json",
+    "deployment/indexnow-occupational-v125-20260930.json"
+  ],
+  "remaining": "Centre-specific OT availability and fees, call-team handoff, family task tests, iPhone/Safari and assistive use, field performance, indexing/ranking/AI citations and connected-call-to-enrolment outcomes need observed evidence."
+}

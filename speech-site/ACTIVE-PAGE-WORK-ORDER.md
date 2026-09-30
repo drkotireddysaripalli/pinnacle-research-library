@@ -1,8 +1,8 @@
-# Active page work order — Occupational Therapy life-first revision
+# Active page work order — Child Development Assessment next
 
-30 September 2026 · The published Occupational Therapy baseline is Worker v124. A focused corrective release is active before Child Development Assessment. The accepted 100-point guide is `reviews/PINNACLE-PAGE-DEVELOPMENT-WORK-ORDER-DRAFT-20260930.md`.
+30 September 2026 · Occupational Therapy's corrective release is published and verified as Worker v125. Child Development Assessment is the next new page. The accepted 100-point guide is `reviews/PINNACLE-PAGE-DEVELOPMENT-WORK-ORDER-DRAFT-20260930.md`.
 
-## Active corrective release — exact order
+## Completed OT corrective release — exact delivered scope
 
 1. Keep the OT canonical and 301 aliases; make the first screen benefit-led and keep the call visible. State free 24/7 telephone guidance accurately.
 2. Add the approved, branded mother-child/OT review illustration with HTML caption and responsive WebP delivery. Make all seven life-first stages a connected, accessible path, while keeping detailed notes in the disclosure.
@@ -11,6 +11,8 @@
 5. Update page-specific machine reading and asset provenance, build the complete Verify + managed-page union, run focused and visual checks, **commit and push source first**, then deploy through the existing Cloudflare Worker with the full trigger and binding set.
 6. Read back production canonical/aliases, shared routes, Verify/FSC/helpline, social image and machine outputs; save version/rollback receipt and commit/push that receipt. Send a single IndexNow notice only for the materially changed OT canonical.
 7. Keep dated OT centre staffing, appointments and fees; call-team read-back; real family tasks; iOS/Safari; field speed and connected-call/visit outcomes as open measured gates. Do not fill them from page copy.
+
+Code was committed and pushed as `15bf3ed` before deployment. Worker version `46a23d19-cd92-436c-9201-029e7b7e7815` is live at 100% traffic. Ten shared shells match, the OT canonical and two aliases pass, 10/10 managed HTML routes match staged source after removing only observed delivery-layer script inserts, responsive Chrome/Edge checks pass, W3C Nu reports zero errors/warnings, and one changed OT URL was notified to IndexNow. See `RELEASE-OCCUPATIONAL-THERAPY-V125-20260930.md` and its receipts. Publication does not establish ranking, AI citations, answered calls or visits.
 
 ## Occupational Therapy release scope
 
