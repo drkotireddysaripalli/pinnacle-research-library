@@ -1,0 +1,31 @@
+{
+  "releasedAt": "2026-09-30T03:44:12.235Z",
+  "canonical": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+  "worker": "pinnacle-verify-route",
+  "versionId": "83328294-bd66-44a4-ae6e-64acced0b29e",
+  "deploymentId": "b24e3f2b-a3e1-4440-b5c4-2c796290e090",
+  "trafficPercent": 100,
+  "immediateRollbackVersionId": "d9274e62-0d98-4909-8118-2c22c1d2515b",
+  "preRevisionVersionId": "e25e507a-97d1-49f9-9049-00b1df706b61",
+  "workerSourceSha256": "a357268e6215a5e1fef3afb1c0d94b4be62fa5c9d98cb0471208e41bf9223a96",
+  "verifyAssetCount": 634,
+  "managedAssetCount": 822,
+  "socialPosterSha256": "d6fce9fb1970e6f3d5628d980672c2ce20e813f5cbd7eaf899a83792eb439399",
+  "checks": {
+    "productionBuild": "12 pages built",
+    "sharedRelease": "Verify index preserved; 634 Verify and 822 managed asset hashes matched; five Worker modules and three required bindings present",
+    "liveRoutes": "Canonical and seven protected pages returned 200; two OT aliases returned 301; child sitemap, llms.txt, Markdown and evidence exports available",
+    "responsive": "Chrome and Edge at 320, 390, 768, 1024 and 1440 pixels passed page, image, anchor, call, FAQ and keyboard checks",
+    "htmlValidity": "W3C Nu zero errors and zero warnings",
+    "social": "Open Graph and Twitter share the fresh URL; live JPEG bytes match the reviewed poster SHA-256",
+    "indexNow": "One canonical notification accepted with HTTP 200; submission only"
+  },
+  "receipts": [
+    "deployment/occupational-responsive-live-20260930.json",
+    "deployment/occupational-responsive-live-msedge-20260930.json",
+    "deployment/occupational-social-v124-20260930.json",
+    "deployment/occupational-w3c-20260930.json",
+    "deployment/indexnow-occupational-v123-20260930.json"
+  ],
+  "meaning": "Publication and technical delivery are verified. Indexing of revised content, ranking, AI citation, social-platform cache refresh, connected calls, walk-ins and enrolment are not established."
+}

@@ -1,12 +1,12 @@
 ---
 import { actions, url } from '../data/site';
-const { focused = false, firstLabel = 'First assessment', firstHref = '#assessment-start' } = Astro.props;
+const { focused = false, firstLabel = 'First assessment', firstHref = '#assessment-start', evidenceHref = '#pinnacle-evidence', enrolHref = '/enroll-autism-speech-aba-therapies-india' } = Astro.props;
 const choices = focused ? [
   [firstLabel,firstHref],
   ['Find a centre','#centres'],
-  ['Verify the evidence','#pinnacle-evidence'],
+  ['Verify the evidence',evidenceHref],
   ['Citations','/verify/evidence/cite.html'],
-  ['Enrol at Pinnacle','/enroll-autism-speech-aba-therapies-india']
+  ['Enrol at Pinnacle',enrolHref]
 ] : actions;
 ---
 <nav class="action-strip" aria-label="I’m here to"><div class="wrap"><strong>I’m here to</strong><div class="action-links">{choices.map(([label,path]) => <a href={path.startsWith('#') ? path : url(path)}>{label}</a>)}</div></div></nav>

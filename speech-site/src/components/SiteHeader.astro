@@ -34,10 +34,10 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
     </div>
     <div class="portal-container portal-main-list">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-label={link.detail?`${link.label}: ${link.detail}`:link.label} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</div>
   </nav>
-  <nav class="portal-therapy-nav" aria-label="Therapies and complete Pinnacle navigation"><div class="portal-container portal-therapy-list">
+  <nav class="portal-therapy-nav" aria-label="Therapies and complete Pinnacle navigation"><button class="portal-mobile-menu-trigger" type="button" aria-controls="portal-complete-directory" aria-expanded="false"><Icon name="menu" size={18} />More</button><div class="portal-container portal-therapy-list">
     {navigation.therapy.map(group=><div class="portal-therapy-group"><a class="portal-therapy-title" href={url(group.url)} aria-current={group.url===currentPath?'page':undefined}>{group.label}</a><details class="portal-therapy-menu"><summary aria-label={`${group.label} menu`}><Icon name="chevron" size={15} /></summary><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>)}
     <div class="portal-therapy-group portal-about-group"><a class="portal-therapy-title" href={url('/about-pinnacle-proven-improvement-rate')} aria-current={currentPath==='/about-pinnacle-proven-improvement-rate'?'page':undefined}>About &amp; Contact</a><details class="portal-therapy-menu portal-about-menu"><summary aria-label="About and Contact menu"><Icon name="chevron" size={15} /></summary><ul>{navigation.aboutContact.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>
-    <details class="portal-directory">
+    <details class="portal-directory" id="portal-complete-directory">
       <summary class="portal-more-trigger" aria-label="More Pinnacle navigation"><span>More</span><Icon name="menu" /></summary>
       <div class="portal-directory-panel" role="navigation" aria-label="Complete site navigation">
         <div class="portal-directory-toolbar"><strong>Explore Pinnacle</strong><button class="portal-menu-close" type="button" aria-label="Close complete site navigation">Close <span aria-hidden="true">×</span></button></div>
@@ -59,8 +59,8 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
     const menus=[...header.querySelectorAll<HTMLDetailsElement>('details')];
     const syncMenuState=()=>document.body.classList.toggle('portal-header-menu-open',menus.some(menu=>menu.open));
     menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false;});queueMicrotask(syncMenuState);}));
-    document.addEventListener('click',event=>menus.forEach(menu=>{if(menu.open&&!menu.contains(event.target as Node))menu.open=false;}));
-    document.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=menus.find(menu=>menu.open);if(open){open.querySelector<HTMLElement>('summary')?.focus({preventScroll:true});open.open=false;}}});
+    document.addEventListener('click',event=>{const target=event.target as Node;if(header.querySelector('.portal-mobile-menu-trigger')?.contains(target))return;menus.forEach(menu=>{if(menu.open&&!menu.contains(target))menu.open=false;});});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'){const open=menus.find(menu=>menu.open);if(open){const compact=header.querySelector<HTMLElement>('.portal-mobile-menu-trigger');const target=open.classList.contains('portal-directory')&&matchMedia('(max-width:380px)').matches?compact:open.querySelector<HTMLElement>('summary');target?.focus({preventScroll:true});open.open=false;}}});
     header.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>menus.forEach(menu=>menu.open=false)));
     const canHoverMenu=()=>matchMedia('(min-width: 901px) and (hover:hover) and (pointer:fine)').matches;
     header.querySelectorAll('.portal-therapy-group').forEach(group=>{
@@ -70,6 +70,9 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
     });
     const directory=header.querySelector<HTMLDetailsElement>('.portal-directory');
     if(directory){
+      const compact=header.querySelector<HTMLButtonElement>('.portal-mobile-menu-trigger');
+      compact?.addEventListener('click',()=>{directory.open=!directory.open;});
+      directory.addEventListener('toggle',()=>compact?.setAttribute('aria-expanded',String(directory.open)));
       const canHover=canHoverMenu;
       const trigger=directory.querySelector<HTMLElement>('.portal-more-trigger');
       const close=directory.querySelector<HTMLButtonElement>('.portal-menu-close');
@@ -79,7 +82,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
       directory.addEventListener('focusout',event=>{if(!directory.contains(event.relatedTarget as Node))directory.open=false;});
       directory.addEventListener('toggle',()=>{if(!directory.open)openedByHover=false;});
       trigger?.addEventListener('click',event=>{if(canHover()&&openedByHover){event.preventDefault();openedByHover=false;}});
-      close?.addEventListener('click',()=>{directory.open=false;trigger?.focus({preventScroll:true});});
+      close?.addEventListener('click',()=>{directory.open=false;(matchMedia('(max-width:380px)').matches?compact:trigger)?.focus({preventScroll:true});});
     }
     syncMenuState();
   }

@@ -7,7 +7,7 @@ import { origin, url, phone } from '../data/site';
 import '../styles/page.css';
 import '../styles/portal-shell.css';
 import '../styles/readability.css';
-const { title, description, path, label, serviceName, shareImage, serviceType, assessmentOffer, citations = [], faqs = [], imageAlt, imageCaption, documentOnly = false, includeService = true, pageType = 'WebPage', focused = false, enquiry, publishedOn, updatedOn, breadcrumbParent, previewOnly = false } = Astro.props;
+const { title, description, socialTitle = title, socialDescription = description, path, label, serviceName, shareImage, shareVersion, serviceType, serviceAreaServed = 'India', assessmentOffer, citations = [], faqs = [], imageAlt, imageCaption, documentOnly = false, includeService = true, pageType = 'WebPage', focused = false, enquiry, publishedOn, updatedOn, breadcrumbParent, previewOnly = false } = Astro.props;
 const canonical = url(path);
 const speechDocument=path==='/top-speech-therapy-center-india-proven-improvement-rate'||path.startsWith('/speech-therapy/');
 const enrolmentDocument=path==='/enroll-autism-speech-aba-therapies-india'||path==='/pinnacle-pages-preview/enrolment';
@@ -15,7 +15,7 @@ const contactAction=enquiry||(speechDocument?{url:speechOffer.url,mobileLabel:'F
 const parentCrumb=breadcrumbParent||(documentOnly&&path.startsWith('/speech-therapy/')?{name:'Speech Therapy',path:'/top-speech-therapy-center-india-proven-improvement-rate'}:null);
 const crumbs=[{name:'Home',item:origin+'/'},...(parentCrumb?[{name:parentCrumb.name,item:url(parentCrumb.path)}]:[]),{name:label,item:canonical}];
 const share = await getImage({src: shareImage, width:1200, height:630, fit:'cover', format:'jpg', quality:88});
-const imageUrl = url(share.src);
+const imageUrl = url(share.src) + (shareVersion ? `?v=${encodeURIComponent(shareVersion)}` : '');
 const isProduction = import.meta.env.PINNACLE_RELEASE === 'production' && !focused && !previewOnly;
 const normalizedFaqs=faqs.filter((item:any)=>item?.question&&item?.answer).map((item:any)=>({question:String(item.question),answer:String(item.answer)}));
 const schema = {'@context':'https://schema.org','@graph':[
@@ -24,7 +24,7 @@ const schema = {'@context':'https://schema.org','@graph':[
   {'@type':'Brand','@id':url('/verify/#pinnacle-brand'),name:'Pinnacle Blooms Network',url:origin+'/'},
   {'@type':pageType,'@id':canonical+'#page',url:canonical,name:title,description,inLanguage:'en-IN',...(publishedOn?{datePublished:publishedOn}:{}),...(updatedOn?{dateModified:updatedOn}:{}),isPartOf:{'@id':origin+'/#website'},...(!documentOnly&&includeService ? {mainEntity:{'@id':canonical+'#service'}} : {}),...(normalizedFaqs.length?{hasPart:{'@id':canonical+'#faq'}}:{}),publisher:{'@id':url('/verify/#organization')},primaryImageOfPage:{'@id':canonical+'#image'},citation:citations},
   {'@type':'ImageObject','@id':canonical+'#image',contentUrl:imageUrl,width:1200,height:630,caption:imageCaption},
-  ...(!documentOnly&&includeService ? [{'@type':'Service','@id':canonical+'#service',name:serviceName,serviceType,url:canonical,areaServed:{'@type':'Country',name:'India'},audience:{'@type':'Audience',audienceType:'Parents, families and caregivers of children'},availableChannel:{'@type':'ServiceChannel',serviceUrl:canonical,servicePhone:{'@type':'ContactPoint',telephone:'+919100181181'}},provider:{'@id':url('/verify/#organization')},brand:{'@id':url('/verify/#pinnacle-brand')}}] : []),
+  ...(!documentOnly&&includeService ? [{'@type':'Service','@id':canonical+'#service',name:serviceName,serviceType,url:canonical,...(serviceAreaServed?{areaServed:{'@type':'Country',name:serviceAreaServed}}:{}),audience:{'@type':'Audience',audienceType:'Parents, families and caregivers of children'},availableChannel:{'@type':'ServiceChannel',serviceUrl:canonical,servicePhone:{'@type':'ContactPoint',telephone:'+919100181181',contactType:'service enquiries'}},provider:{'@id':url('/verify/#organization')},brand:{'@id':url('/verify/#pinnacle-brand')}}] : []),
   ...(!documentOnly && assessmentOffer ? [{'@type':'Service','@id':canonical+'#assessment',name:assessmentOffer.name,url:canonical+'#assessment-start',provider:{'@id':url('/verify/#organization')},brand:{'@id':url('/verify/#pinnacle-brand')},offers:{'@type':'Offer',name:assessmentOffer.name,price:assessmentOffer.price,priceCurrency:assessmentOffer.priceCurrency,url:assessmentOffer.url,itemOffered:{'@id':canonical+'#assessment'}}}] : []),
   ...(normalizedFaqs.length?[{'@type':'FAQPage','@id':canonical+'#faq',url:canonical+'#questions',isPartOf:{'@id':canonical+'#page'},mainEntity:normalizedFaqs.map((item:any)=>({'@type':'Question',name:item.question,acceptedAnswer:{'@type':'Answer',text:item.answer}}))}]:[]),
   {'@type':'BreadcrumbList',itemListElement:crumbs.map((crumb,i)=>({'@type':'ListItem',position:i+1,...crumb}))}
@@ -36,9 +36,9 @@ const schema = {'@context':'https://schema.org','@graph':[
   <link rel="canonical" href={canonical} /><link rel="image_src" href={imageUrl} /><link rel="icon" href={url('/verify/favicon.png')} />
   <link rel="preload" href="/pinnacle-pages-fonts/sintony-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/pinnacle-pages-fonts/sintony-latin-bold.woff2" as="font" type="font/woff2" crossorigin />
-  <meta property="og:type" content="website" /><meta property="og:locale" content="en_IN" /><meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:url" content={canonical} /><meta property="og:site_name" content="Pinnacle Blooms Network" />
+  <meta property="og:type" content="website" /><meta property="og:locale" content="en_IN" /><meta property="og:title" content={socialTitle} /><meta property="og:description" content={socialDescription} /><meta property="og:url" content={canonical} /><meta property="og:site_name" content="Pinnacle Blooms Network" />
   <meta property="og:image" content={imageUrl} /><meta property="og:image:secure_url" content={imageUrl} /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={imageAlt} />
-  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:url" content={canonical} /><meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} /><meta name="twitter:image" content={imageUrl} /><meta name="twitter:image:alt" content={imageAlt} />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:url" content={canonical} /><meta name="twitter:title" content={socialTitle} /><meta name="twitter:description" content={socialDescription} /><meta name="twitter:image" content={imageUrl} /><meta name="twitter:image:alt" content={imageAlt} />
   <meta name="theme-color" content="#8f2879" /><script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\\u003c')} />
 </head><body class:list={{'focused-campaign':focused,'enrolment-page':enrolmentDocument}} data-page-variant={focused ? 'focused' : 'service'}>
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}

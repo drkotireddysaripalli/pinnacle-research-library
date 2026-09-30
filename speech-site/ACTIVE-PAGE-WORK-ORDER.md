@@ -1,4 +1,19 @@
-# Active page work order — Find a Centre complete; Child Development Assessment next
+# Active page work order — Occupational Therapy life-first revision
+
+30 September 2026 · Occupational Therapy revision published and verified in Worker v124. Child Development Assessment is the next active page.
+
+## Occupational Therapy release scope
+
+- Canonical retained: `https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate`; the two existing OT aliases keep their 301 mapping. A clean-slug migration is a separate decision after a Search Console baseline.
+- Parent promise: begin with one everyday activity, then connect professional assessment, a meaningful goal, family-guided practice and review to the child’s growing self-sufficiency and participation in family, school and community life.
+- Primary action: call `9100 181 181` (`tel:+919100181181`) for free staffed telephone guidance, 24/7. The team helps confirm the suitable OT professional, centre, visit and fees; telephone guidance does not mean free therapy or a 24/7 appointment.
+- Secondary actions: find a published centre, begin the service-prefilled enrolment journey, share the page and inspect exact Verify sources.
+- Proof scope: the dated 31,052,382 defined-service count is network service volume, not OT outcomes; MD-5 and BIS describe non-diagnostic software scope, not OT credentials or child results; the research library preserves publication status. No 97% or exclusive-world claim appears in this release.
+- Service availability: the 62-location directory is an identity and navigation source, not a verified OT roster. The page asks callers to confirm local professional, appointment and fees.
+- Presentation: retain the common header and 36-record Verify/footer system, approved OT social poster, official emblems, Sintony and luminous Pinnacle palette. Show play, a first professional conversation, mealtime and a whole-life pathway with seven visible stage labels; keep detailed stage notes accessible by disclosure.
+- Release result: eight visible FAQs match JSON-LD; 320/390/768/1024/1440 checks passed for overflow, anchors, images, calls and keyboard disclosure. Public OG bytes match the reviewed ChatGPT poster through a fresh versioned URL. The canonical, two 301 aliases, child sitemap, Markdown, Verify, FSC and helpline routes were read back. See `RELEASE-OCCUPATIONAL-THERAPY-V124-20260930.md` for the exact receipt and remaining real-world measurement conditions.
+
+## Prior completed destination — Find a Centre
 
 29 September 2026 · Find a Centre status: published, verified and preserved
 

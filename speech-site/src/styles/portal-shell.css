@@ -25,6 +25,7 @@
 .portal-search form>div{display:flex;gap:8px}.portal-search input{width:100%;min-width:0;padding:10px;border:1px solid #8f2879;border-radius:3px;font-size:16px}.portal-search button{padding:8px 14px;color:#fff;background:#8f2879;border:0}
 .portal-main-nav{border-top:1px solid #eee5ef;border-bottom:1px solid #ddd;background:#fff;font-size:10px;line-height:1.25}
 .portal-mobile-proof-links{display:none}
+.portal-mobile-menu-trigger{display:none}
 .portal-main-list{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));align-items:stretch}
 .portal-main-nav a{--portal-nav-accent:#8f2879;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0;min-height:72px;padding:10px 11px;color:#31213d;text-transform:none;border-left:1px solid #eee5ef;box-shadow:inset 0 -4px var(--portal-nav-accent)}.portal-main-nav a:last-child{border-right:1px solid #eee5ef}.portal-main-nav a:hover,.portal-main-nav a:focus-visible{text-decoration:none;color:#6b215f;background:#fbf7fc}.portal-main-nav a[aria-current=page]{color:#6b215f;background:#fbf4fc;font-weight:700}.portal-main-nav a:nth-child(1){--portal-nav-accent:#e4115e}.portal-main-nav a:nth-child(2){--portal-nav-accent:#7435aa}.portal-main-nav a:nth-child(3){--portal-nav-accent:#2f7a44}.portal-main-nav a:nth-child(4){--portal-nav-accent:#009f83}.portal-main-nav a:nth-child(5){--portal-nav-accent:#0a8dcc}.portal-main-nav a:nth-child(6){--portal-nav-accent:#efb51d}.portal-main-nav a:nth-child(7){--portal-nav-accent:#ef476f}.portal-main-nav a:nth-child(8){--portal-nav-accent:#8f2879}
 .portal-nav-label{font-weight:700;font-size:11px;line-height:1.25;text-transform:uppercase}.portal-nav-detail{display:block;margin-top:4px;color:#6d6171;font-size:9.5px;line-height:1.35;text-transform:none;letter-spacing:0}.portal-main-nav a:hover .portal-nav-detail,.portal-main-nav a:focus-visible .portal-nav-detail{color:#4f3d53}
@@ -155,4 +156,41 @@
   .portal-footer-columns{display:flex;flex-direction:column}
   .portal-footer-purpose{order:-1}
   .portal-footer-policies{max-height:190px;overflow:auto;padding-right:8px;scrollbar-width:thin}
+}
+
+/* Keep the shared navigation useful without taking the first phone screen. */
+@media(max-width:600px){
+  .portal-top{display:grid;grid-template-columns:minmax(0,1fr) 136px;grid-template-rows:58px 56px;gap:0 2px;align-items:center;padding:4px 0 5px}
+  .portal-brand{grid-column:1;grid-row:1;width:154px;max-width:100%}
+  .portal-header-right{grid-column:2;grid-row:1;display:block;align-self:center;width:136px}
+  .portal-utility{display:flex;align-items:center;justify-content:flex-end;width:136px;min-height:44px;height:44px;gap:2px;padding:0}
+  .portal-utility>a,.portal-utility summary{width:44px;min-width:44px;min-height:44px;padding:0}
+  .portal-enrol,.portal-location,.portal-search summary{border-radius:10px}
+  .portal-enrol,.portal-location{flex-direction:column;gap:0}
+  .portal-enrol::after{content:'Enrol';font-size:8px;line-height:1.1}
+  .portal-location::after{content:'Centres';font-size:8px;line-height:1.1}
+  .portal-enrol svg,.portal-location svg{width:17px;height:17px}
+  .portal-enrol span,.portal-location span{display:none}
+  .portal-national{position:absolute;left:0;right:0;top:62px;width:100%;height:56px;box-sizing:border-box}
+  .portal-national a{min-height:54px}
+  .portal-national-label{flex:1;overflow:visible;white-space:normal}
+  .portal-main-nav .portal-mobile-proof-links>a{min-height:46px;flex-direction:row;padding:4px 7px;gap:6px}
+  .portal-mobile-proof-links svg{width:18px;height:18px}
+  .portal-mobile-proof-links strong{font-size:10px}
+  .portal-mobile-proof-links small{font-size:8.5px}
+  .portal-therapy-group,.portal-directory{min-height:48px}
+  .portal-therapy-title,.portal-more-trigger{min-height:48px}
+}
+@media(max-width:380px){
+  .portal-national-label{gap:0;padding-inline:7px}
+  .portal-national-label>svg{display:none}
+  .portal-national-label strong{font-size:10.5px;line-height:1.2}
+  .portal-national-label small{font-size:9px;line-height:1.25}
+  .portal-phone strong{font-size:14px}
+  .portal-national .portal-phone{padding-inline:7px}
+  .portal-main-list{display:none}
+  .portal-therapy-nav{display:flex;align-items:stretch}
+  .portal-mobile-menu-trigger{display:flex;flex:0 0 70px;align-items:center;justify-content:center;gap:3px;min-height:48px;padding:0 5px;border:0;border-right:1px solid #e6dce8;background:#fff;color:#8f2879;font:700 10px Sintony,Arial,sans-serif;text-transform:uppercase;cursor:pointer}
+  .portal-mobile-menu-trigger:focus-visible{outline:3px solid #e4115e;outline-offset:-3px}
+  .portal-therapy-list{flex:1;min-width:0;width:auto;padding-inline:0}
 }
