@@ -30,12 +30,12 @@
     {
       "label": "Self-Sufficient",
       "detail": "Growing everyday independence",
-      "url": "/verify/evidence/pinnacle-paradigm-shift.html#paradigm-opening-child-life-before-therapy"
+      "url": "/self-sufficient"
     },
     {
       "label": "Mainstream",
       "detail": "School & community participation",
-      "url": "/verify/evidence/pinnacle-paradigm-shift.html#the-skill-and-the-life"
+      "url": "/mainstream"
     },
     {
       "label": "160Yrs Paradigm Shift",
@@ -305,15 +305,50 @@
       {
         "title": "PinnacleAI ecosystem",
         "links": [
-          {"label":"PinnacleAI · whole system","url":"/pinnacleai"},
-          {"label":"AbilityScore · developmental starting picture","url":"/abilityscore"},
-          {"label":"Seven Readiness Indexes","url":"/seven-readiness-indexes"},
-          {"label":"Personal Development Kernel","url":"/personal-development-kernel"},
-          {"label":"Prognose · revisable forecast","url":"/prognose"},
-          {"label":"TherapeuticAI · suitable activities","url":"/therapeuticai"},
-          {"label":"Everyday Therapy · home and school","url":"/everyday-therapy"},
-          {"label":"Fusion · tracking and correction","url":"/fusion-module"},
-          {"label":"Reassess, review and repeat","url":"/reassess-review-repeat"}
+          {
+            "label": "PinnacleAI · whole system",
+            "url": "/pinnacleai"
+          },
+          {
+            "label": "AbilityScore · developmental starting picture",
+            "url": "/abilityscore"
+          },
+          {
+            "label": "Seven Readiness Indexes",
+            "url": "/seven-readiness-indexes"
+          },
+          {
+            "label": "Personal Development Kernel",
+            "url": "/personal-development-kernel"
+          },
+          {
+            "label": "Prognose · revisable forecast",
+            "url": "/prognose"
+          },
+          {
+            "label": "TherapeuticAI · suitable activities",
+            "url": "/therapeuticai"
+          },
+          {
+            "label": "Everyday Therapy · home and school",
+            "url": "/everyday-therapy"
+          },
+          {
+            "label": "Fusion · tracking and correction",
+            "url": "/fusion-module"
+          },
+          {
+            "label": "Reassess, review and repeat",
+            "url": "/reassess-review-repeat"
+          },
+          {
+            "label": "Self-Sufficient · everyday independence",
+            "url": "/self-sufficient"
+          },
+          {
+            "label": "Mainstream · participation and inclusion",
+            "url": "/mainstream"
+          }
         ],
         "icon": "loop"
       },

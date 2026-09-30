@@ -3,7 +3,7 @@ const CHILD_SITEMAP=PUBLIC+'/speech-therapy/sitemap.xml';
 const ROOT_SITEMAPS=[
  '/sitemaps/core.xml','/sitemaps/centres.xml','/sitemaps/staff.xml','/sitemaps/bots.xml','/sitemaps/miracles.xml',
  '/sitemaps/faq-en.xml','/sitemaps/faq-te.xml','/sitemaps/faq-hi.xml','/sitemaps/faq-kn.xml','/sitemaps/faq-mr.xml','/sitemaps/faq-ta.xml','/sitemaps/faq-ml.xml',
- '/verify/sitemap.xml','/speech-therapy/sitemap.xml','/pinnacleai/sitemap.xml'
+ '/verify/sitemap.xml','/speech-therapy/sitemap.xml','/pinnacleai/sitemap.xml','/pinnacle-pages-data/public-documents-sitemap.xml'
 ];
 const MANAGED_SECTION=`
 
@@ -27,6 +27,11 @@ const MANAGED_SECTION=`
 - [Find a Pinnacle centre](${PUBLIC}/centers): 62 published listings with sourced addresses, map links, selected photographs, centre preferences and national guidance. Confirm service, professional and appointment availability before travelling.
 - [Pinnacle / BHCL National Autism Helpline](${PUBLIC}/national-autism-helpline): 9100 181 181; free guidance and appointment enquiries, 24/7.
 - [Service reading guide](${PUBLIC}/speech-therapy/llms.txt): therapy pages, evidence boundaries and machine-readable sources.
+
+## Policies and life-outcome pages
+- [Policies and governance](https://www.pinnacleblooms.org/privacy-policy): existing privacy and related policy documents, printed revisions and preserved wording.
+- [Growing independence](https://www.pinnacleblooms.org/self-sufficient): everyday self-sufficiency as the purpose for goals, support, family practice and review.
+- [Mainstream participation](https://www.pinnacleblooms.org/mainstream): meaningful school, play, family and community participation, suitable support and review.
 
 ## PinnacleAI product and module pages
 - [PinnacleAI ecosystem](${PUBLIC}/pinnacleai): child-centred overview, licensed non-diagnostic scope, documented scale and the connected system.

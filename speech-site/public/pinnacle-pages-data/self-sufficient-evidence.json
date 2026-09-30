@@ -1,0 +1,168 @@
+{
+  "url": "https://www.pinnacleblooms.org/self-sufficient",
+  "title": "Growing Independence for Your Child | Pinnacle Blooms Network",
+  "description": "Make everyday independence the purpose of your child’s support. Explore Pinnacle’s life-first approach, family participation, meaningful goals and review. Call 9100 181 181.",
+  "updatedOn": "2026-10-01",
+  "scope": "Parent-facing programme-purpose explanation. Illustrative examples; no guaranteed child outcomes.",
+  "directAnswer": "Growing self-sufficiency means taking a greater part in everyday life with the support that fits your child. It includes making choices, communicating needs, managing routines and knowing when to ask for help. A useful plan starts with the life you want to make possible, then chooses the relevant goals, people, methods and review.",
+  "activities": [
+    {
+      "icon": "voice",
+      "title": "Make a choice",
+      "text": "Express a preference in a way other people can understand: a look, gesture, picture, sound or words."
+    },
+    {
+      "icon": "home",
+      "title": "Join a routine",
+      "text": "Take part in getting dressed, eating, organising belongings or another moment that matters at home."
+    },
+    {
+      "icon": "people",
+      "title": "Ask for useful help",
+      "text": "Communicate when help is needed and remain involved in the activity. Independence can include support."
+    },
+    {
+      "icon": "book",
+      "title": "Take part beyond home",
+      "text": "Discuss a meaningful next step in learning, play or the community, with the right people and surroundings."
+    }
+  ],
+  "example": {
+    "title": "The outing gives putting on shoes a purpose.",
+    "question": "“My child wants to come outside with us. How can they take more of a part in getting ready?”",
+    "steps": [
+      {
+        "title": "Start with the life moment",
+        "text": "The family wants to go outside together. Describe what your child enjoys, what they already do and the help they use."
+      },
+      {
+        "title": "Understand the useful starting point",
+        "text": "A suitable professional considers communication, movement, comfort and the steps of the routine. A score is read with the child’s context."
+      },
+      {
+        "title": "Choose support that serves the goal",
+        "text": "Agree a manageable part of getting ready and relevant professional support. The family receives guidance that fits a real outing routine."
+      },
+      {
+        "title": "Review what became useful",
+        "text": "Discuss participation, the help involved and what happened with different people or settings. Continue or adjust the next step together."
+      }
+    ]
+  },
+  "review": [
+    {
+      "title": "What did they take part in?",
+      "text": "Look at the meaningful activity, the choice they made and their comfort."
+    },
+    {
+      "title": "What support made it possible?",
+      "text": "Notice useful prompts, people, tools and surroundings. Needing support does not erase participation."
+    },
+    {
+      "title": "What should change next?",
+      "text": "Bring observations into professional review. Goals and methods can change as abilities and circumstances change."
+    }
+  ],
+  "stages": [
+    {
+      "icon": "measure",
+      "title": "Understand abilities",
+      "text": "Start with strengths, everyday observations and suitable assessment. Read AbilityScore with the child’s age, context and skills.",
+      "path": "/abilityscore"
+    },
+    {
+      "icon": "compass",
+      "title": "Plan for readiness",
+      "text": "Discuss what you want to make possible and agree useful priorities. Readiness views support professional judgement.",
+      "path": "/seven-readiness-indexes"
+    },
+    {
+      "icon": "people",
+      "title": "Choose relevant support",
+      "text": "Bring in the therapies, educational support or health review that fit this child. Every child does not need every service.",
+      "path": "/autism-therapy"
+    },
+    {
+      "icon": "home",
+      "title": "Practise in everyday life",
+      "text": "Use manageable, guided practice in meaningful routines. Family participation connects the work with daily life.",
+      "path": "/everyday-therapy"
+    },
+    {
+      "icon": "track",
+      "title": "Track and correct",
+      "text": "Bring relevant observations back into review. Ask what became useful, what support remains and what needs to change.",
+      "path": "/fusion-module"
+    },
+    {
+      "icon": "loop",
+      "title": "Reassess and repeat",
+      "text": "Compare abilities and context over time. Continue, adapt or complete support according to the child’s needs.",
+      "path": "/reassess-review-repeat"
+    },
+    {
+      "icon": "sun",
+      "title": "Grow independence and participation",
+      "text": "Keep self-sufficiency, learning, relationships and mainstream participation in view. Progress is individual.",
+      "path": "/pinnacleai"
+    }
+  ],
+  "questions": [
+    {
+      "question": "What does self-sufficiency mean for a child?",
+      "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+    },
+    {
+      "question": "Does my child have to do everything without help?",
+      "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+    },
+    {
+      "question": "How does Pinnacle start?",
+      "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+    },
+    {
+      "question": "Does every child need all the therapies?",
+      "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+    },
+    {
+      "question": "Do PinnacleAI or the licences guarantee independence?",
+      "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+    },
+    {
+      "question": "What is the next step for my family?",
+      "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+    }
+  ],
+  "sources": [
+    {
+      "id": "purpose",
+      "title": "Pinnacle’s life-first approach",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "meaning": "The child’s self-sufficient, mainstream-included life sets the direction for abilities, goals, methods, people, everyday practice and review. This is the programme purpose; outcomes are individual."
+    },
+    {
+      "id": "bis",
+      "title": "BIS licence · named software scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/bis.pdf#page=2",
+      "meaning": "The scope schedule names Self Sufficiency and Mainstream Inclusion within the software system. A named module is distinct from a demonstrated child outcome or school admission."
+    },
+    {
+      "id": "md5",
+      "title": "MD-5 licence · intended use",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/md5.pdf#page=1",
+      "meaning": "PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software for children aged 0–12. The licence describes the device’s scope, not a guaranteed result."
+    },
+    {
+      "id": "research",
+      "title": "Research and methods library",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "meaning": "Inspect each study’s question, version and publication status. Methodology, research protocols and completed findings have different meanings."
+    },
+    {
+      "id": "identity",
+      "title": "Pinnacle and Bharath Healthcare identity",
+      "url": "https://www.pinnacleblooms.org/verify/#chapter-identity",
+      "meaning": "Pinnacle Blooms Network is the brand operated by Bharath Healthcare Laboratories Private Limited."
+    }
+  ]
+}

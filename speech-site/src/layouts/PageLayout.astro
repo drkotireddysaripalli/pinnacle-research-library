@@ -15,7 +15,7 @@ const enrolmentDocument=path==='/enroll-autism-speech-aba-therapies-india'||path
 const contactAction=enquiry||(speechDocument?{url:speechOffer.url,mobileLabel:'FREE assessment'}:{url:url('/enroll-autism-speech-aba-therapies-india'),mobileLabel:'Arrange a visit'});
 const parentCrumb=breadcrumbParent||(documentOnly&&path.startsWith('/speech-therapy/')?{name:'Speech Therapy',path:'/top-speech-therapy-center-india-proven-improvement-rate'}:null);
 const crumbs=[{name:'Home',item:origin+'/'},...(parentCrumb?[{name:parentCrumb.name,item:url(parentCrumb.path)}]:[]),{name:label,item:canonical}];
-const share = await getImage({src: shareImage, width:1200, height:630, fit:'cover', format:'jpg', quality:88});
+const share = await getImage({src: shareImage, width:1200, height:630, fit:Astro.props.shareFit||'cover', format:'jpg', quality:88});
 const imageUrl = url(share.src) + (shareVersion ? `?v=${encodeURIComponent(shareVersion)}` : '');
 const isProduction = import.meta.env.PINNACLE_RELEASE === 'production' && !focused && !previewOnly;
 const normalizedFaqs=faqs.filter((item:any)=>item?.question&&item?.answer).map((item:any)=>({question:String(item.question),answer:String(item.answer)}));

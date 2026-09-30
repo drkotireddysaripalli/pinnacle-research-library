@@ -19,6 +19,7 @@ export const CENTRE_DETAIL_ROUTES={
  '/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india':'tirupati',
  '/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india':'srikakulam'
 };
+export const PUBLIC_DOCUMENT_ROUTES={"/privacy-policy":"privacy-policy","/terms-of-use":"terms-of-use","/terms-of-service":"terms-of-service","/cookie-policy":"cookie-policy","/copyright-and-intellectual":"copyright-and-intellectual","/age-restriction-policy":"age-restriction-policy","/contact-information":"contact-information","/disclaimer-and-limitations-of-liabilities":"disclaimer-and-limitations-of-liabilities","/endorsement-and-testimonial":"endorsement-and-testimonial","/governing-and-jurisdiction":"governing-and-jurisdiction","/third-party-inegration":"third-party-inegration","/refund-policy":"refund-policy","/staff-declaration":"staff-declaration","/ethics-charter":"ethics-charter","/self-sufficient":"self-sufficient","/mainstream":"mainstream"};
 export const PINNACLEAI_PATHS=['/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat'];
 const DOCUMENT='/speech-therapy/service-information';
 const ENROLMENT_PREVIEW='/pinnacle-pages-preview/enrolment';
@@ -34,14 +35,16 @@ export async function serveSpeech(request,env,inventory){
  // Preserve session/private handling on the five exact migrated centre routes.
  // Known analytics and Cloudflare challenge cookies carry no page-personalisation input here.
  const centrePath=u.pathname.endsWith('/')?u.pathname.slice(0,-1):u.pathname;
- if(Object.hasOwn(CENTRE_DETAIL_ROUTES,centrePath)&&(request.headers.has('range')||/\bno-transform\b/i.test(request.headers.get('cache-control')||'')))return null;
- if(Object.hasOwn(CENTRE_DETAIL_ROUTES,centrePath)&&request.headers.has('cookie')){
+ const managedDocument=Object.hasOwn(CENTRE_DETAIL_ROUTES,centrePath)||Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,centrePath);
+ if(managedDocument&&(request.headers.has('range')||/\bno-transform\b/i.test(request.headers.get('cache-control')||'')))return null;
+ if(managedDocument&&request.headers.has('cookie')){
   const names=(request.headers.get('cookie')||'').split(';').map(cookie=>cookie.trim().split('=')[0]).filter(Boolean);
   if(names.some(name=>!/^((?:_ga|ps_ga)(?:_[A-Za-z0-9]+)?|_gid|_gat(?:_gtag_.+)?|__cf_bm|cf_clearance)$/.test(name)))return null;
  }
  const aliases=new Map([['/speech-therapy',SPEECH_CANONICAL],['/speech-therapy/',SPEECH_CANONICAL],[SPEECH_CANONICAL+'/',SPEECH_CANONICAL],['/occupational-therapy',OCCUPATIONAL_CANONICAL],['/occupational-therapy/',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy/',OCCUPATIONAL_CANONICAL],[OCCUPATIONAL_CANONICAL+'/',OCCUPATIONAL_CANONICAL],['/aba-therapy',ABA_CANONICAL],['/aba-therapy/',ABA_CANONICAL],['/t/aba-therapy',ABA_CANONICAL],['/t/aba-therapy/',ABA_CANONICAL],[ABA_CANONICAL+'/',ABA_CANONICAL],['/special-education',SPECIAL_EDUCATION_CANONICAL],['/special-education/',SPECIAL_EDUCATION_CANONICAL],['/Special-Education',SPECIAL_EDUCATION_CANONICAL],['/Special-Education/',SPECIAL_EDUCATION_CANONICAL],['/t/special-education',SPECIAL_EDUCATION_CANONICAL],['/t/special-education/',SPECIAL_EDUCATION_CANONICAL],[SPECIAL_EDUCATION_CANONICAL+'/',SPECIAL_EDUCATION_CANONICAL],[AUTISM_CANONICAL+'/',AUTISM_CANONICAL],[ASSESSMENT_CANONICAL+'/',ASSESSMENT_CANONICAL],['/t/autism-therapy',AUTISM_CANONICAL],['/t/autism-therapy/',AUTISM_CANONICAL],[CENTERS_CANONICAL+'/',CENTERS_CANONICAL],['/Centers',CENTERS_CANONICAL],['/Centers/',CENTERS_CANONICAL],['/centres',CENTERS_CANONICAL],['/centres/',CENTERS_CANONICAL],['/Centres',CENTERS_CANONICAL],['/Centres/',CENTERS_CANONICAL],['/locations',CENTERS_CANONICAL],['/locations/',CENTERS_CANONICAL],['/Locations',CENTERS_CANONICAL],['/Locations/',CENTERS_CANONICAL],['/enroll',ENROLMENT_CANONICAL],['/enroll/',ENROLMENT_CANONICAL],[ENROLMENT_CANONICAL+'/',ENROLMENT_CANONICAL],[ENROLMENT_PREVIEW,ENROLMENT_CANONICAL],[DOCUMENT+'/',DOCUMENT],[DOCUMENT+'.html',DOCUMENT]]);
  for(const product of PINNACLEAI_PATHS)aliases.set(product+'/',product);
  for(const centre of Object.keys(CENTRE_DETAIL_ROUTES))aliases.set(centre+'/',centre);
+ for(const document of Object.keys(PUBLIC_DOCUMENT_ROUTES))aliases.set(document+'/',document);
  aliases.set('/pinnacle-ai','/pinnacleai');aliases.set('/pinnacle-ai/','/pinnacleai');
  aliases.set('/ability-score','/abilityscore');aliases.set('/ability-score/','/abilityscore');
  for(const guide of GUIDES)for(const suffix of ['/', '.html'])aliases.set('/speech-therapy/'+guide+suffix,'/speech-therapy/'+guide);
@@ -56,6 +59,7 @@ export async function serveSpeech(request,env,inventory){
  else if(key===ASSESSMENT_CANONICAL)key='/pinnacle-pages-html/assessment.html';
  else if(key===CENTERS_CANONICAL)key='/pinnacle-pages-html/centers.html';
  else if(Object.hasOwn(CENTRE_DETAIL_ROUTES,key))key='/pinnacle-pages-html/'+CENTRE_DETAIL_ROUTES[key]+'.html';
+ else if(Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,key))key='/pinnacle-pages-html/'+PUBLIC_DOCUMENT_ROUTES[key]+'.html';
  else if(PINNACLEAI_PATHS.includes(key))key='/pinnacle-pages-html/'+key.slice(1)+'.html';
  else if(key===SPEECH_CANONICAL)key='/pinnacle-pages-html/speech.html';
  else if(key===DOCUMENT)key='/pinnacle-pages-html/service-information.html';
@@ -66,6 +70,7 @@ export async function serveSpeech(request,env,inventory){
  else if(key==='/pinnacleai/llms.txt')key='/pinnacle-pages-data/pinnacleai-llms.txt';
  else if(!/^\/pinnacle-pages-(?:assets|fonts|scripts|data)\//.test(key))return null;
  const wantsMarkdown=acceptsMarkdown(request.headers.get('accept')||'');
+ if(wantsMarkdown&&Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,u.pathname))key='/pinnacle-pages-data/'+PUBLIC_DOCUMENT_ROUTES[u.pathname]+(['self-sufficient','mainstream'].includes(PUBLIC_DOCUMENT_ROUTES[u.pathname])?'-machine.md':'-policy.md');
  if(wantsMarkdown&&key==='/pinnacle-pages-html/enrolment.html')key='/pinnacle-pages-data/enrolment-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/occupational-therapy.html')key='/pinnacle-pages-data/occupational-therapy-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/aba-therapy.html')key='/pinnacle-pages-data/aba-therapy-machine.md';

@@ -1,0 +1,204 @@
+{
+  "deployments": {
+    "deployments": [
+      {
+        "id": "728e07ed-5f1f-43cf-a4bb-51ee914f54f3",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "8a412c3a-2531-40c3-a677-0b8ba40faa7d",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T21:29:18.174332Z"
+      },
+      {
+        "id": "0e6e4531-d393-4874-900c-9c7477c20df2",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "a094769b-0528-4577-b832-b0a6a1544c21",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T20:59:10.616782Z"
+      },
+      {
+        "id": "2af5cee2-a9c8-4549-9d0b-e7c8a6c8bf34",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "817b8b8a-5e8f-478f-b2a9-68345dbe9195",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T20:21:34.391867Z"
+      },
+      {
+        "id": "5b1a1f19-45c7-4a75-a851-4884f4277065",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "ac200e7a-3c20-4d22-a39c-5201aa42d615",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T19:23:07.522362Z"
+      },
+      {
+        "id": "47e8c1b7-e01c-4a35-9f5c-479ed2c51735",
+        "source": "api",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/message": "V131: Suchitra centre, real premises and source-led visit path",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "75019b39-bfbb-49e6-a3bb-d6e0c3863cde",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T17:40:24.921191Z"
+      },
+      {
+        "id": "8eb37dfa-2baa-4be8-924d-c802ed4f05e1",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "75019b39-bfbb-49e6-a3bb-d6e0c3863cde",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T17:38:27.263497Z"
+      },
+      {
+        "id": "ba8bc4c2-17e2-434f-ad62-1128e53cc6f8",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/message": "V130: child assessment and common evidence/enquiry alignment",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "ec9b68b7-40e6-40bd-91ba-a387983e2c8c",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T16:38:12.224485Z"
+      },
+      {
+        "id": "ed8ad0e9-c84b-49c1-8237-0e52817dbfe1",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "ec9b68b7-40e6-40bd-91ba-a387983e2c8c",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T16:36:55.211867Z"
+      },
+      {
+        "id": "d1b1ccd3-7fc6-4481-b5b8-25e4c63c113a",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/message": "V129: PinnacleAI nine-page editorial correction",
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "4cb916cd-5683-4ea9-829d-82ccf3f812da",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T15:20:26.416369Z"
+      },
+      {
+        "id": "00b154ca-ba43-44b0-8ae8-8096236e8804",
+        "source": "wrangler",
+        "strategy": "percentage",
+        "author_email": "kotii@kgvpl.com",
+        "annotations": {
+          "workers/triggered_by": "deployment"
+        },
+        "versions": [
+          {
+            "version_id": "4cb916cd-5683-4ea9-829d-82ccf3f812da",
+            "percentage": 100
+          }
+        ],
+        "created_on": "2026-09-30T15:19:47.879875Z"
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "type": "assets",
+      "name": "ASSETS"
+    },
+    {
+      "type": "service",
+      "name": "PINNACLE_ASK",
+      "service": "pinnacle-ask",
+      "environment": "production"
+    },
+    {
+      "type": "service",
+      "name": "PINNACLE_LEGACY",
+      "service": "pbn-planetscale",
+      "environment": "production"
+    },
+    {
+      "type": "secret_text",
+      "name": "SITES_BYPASS_TOKEN"
+    }
+  ],
+  "ok": [
+    true,
+    true,
+    true
+  ],
+  "routesFile": "deployment/policy-routes-before-v135-20261001.json",
+  "totalRoutes": 155,
+  "freshServerSideComparison": {
+    "count": 155,
+    "unchanged": true,
+    "changed": [],
+    "extra": []
+  }
+}

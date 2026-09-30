@@ -2,6 +2,31 @@ import directory from './centre-directory.json' with {type:'json'};
 import {assessmentContent} from './assessment-content.ts';
 
 const origin='https://www.pinnacleblooms.org';
+export type FacilityPortalStatus='Approved'|'Submitted'|'Query Raised'|'Query Resolved';
+export type FacilitySourceBrief={
+ hfr:string;
+ certificateDate:string|null;
+ certificatePage:number|string|null;
+ sourceFlag?:string;
+ registryStatus?:FacilityPortalStatus;
+ registrySourceLevel?:'Workbook plus certificate copy'|'Workbook-listed';
+ registryCheckedOn?:string;
+};
+export function describeFacilityEvidence(brief:FacilitySourceBrief){
+ const status=brief.registryStatus||'Approved';
+ const checkedOn=brief.registryCheckedOn||'2026-09-19';
+ const certificateBacked=brief.certificateDate!==null&&brief.certificatePage!==null;
+ const sourceLevel=brief.registrySourceLevel||(certificateBacked?'Workbook plus certificate copy':'Workbook-listed');
+ if(sourceLevel==='Workbook plus certificate copy'&&!certificateBacked)throw new Error('Certificate-backed source requires date and bundle page: '+brief.hfr);
+ const checkedDate=checkedOn==='2026-09-19'?'19 September 2026':checkedOn;
+ const operatingNote=brief.sourceFlag==='INACTIVE'?' The source workbook flags this published location INACTIVE; current operation and appointments are not verified by this page. Confirm with the receiving team before travelling.':'';
+ const certificateScope=certificateBacked?`Workbook plus certificate copy dated ${brief.certificateDate}, recognition bundle p${brief.certificatePage}.`:'Workbook-listed facility identifier; no certificate copy is included in this source trail.';
+ const facilityScope=`${certificateScope} The recorded authenticated dashboard check was ${status} on ${checkedDate}; this is a facility-register status, distinct from current operation, therapy availability and individual outcomes.`+operatingNote;
+ const certificateDisplay=certificateBacked?`A certificate copy dated ${brief.certificateDate} is available in the source trail;`:'The source trail records the identifier without a certificate copy;';
+ const facilityDisplay=`Facility identifier ${brief.hfr}. ${certificateDisplay} the recorded portal check showed ${status} on ${checkedDate}. Confirm current appointments and available services with the team.`+operatingNote;
+ const facilityRecord={identifier:brief.hfr,sourceLevel,certificateDate:brief.certificateDate,certificateBundlePage:brief.certificatePage,recordedPortalStatus:status,portalCheckedOn:checkedOn,sourceWorkbookFlag:brief.sourceFlag||null,currentOperationVerified:false,currentServiceAvailabilityVerified:false};
+ return {facilityScope,facilityDisplay,facilityRecord};
+}
 const briefs=[
  {
   id:'dilsukhnagar',label:'Dilsukhnagar',city:'Hyderabad',region:'Telangana',postcode:'500060',
@@ -127,15 +152,13 @@ const briefs=[
 export const centreDetails=briefs.map(brief=>{
  const branch=directory.find(c=>c.id===brief.id);if(!branch)throw new Error('Missing sourced centre '+brief.id);
  const address=`${brief.street}, ${brief.city}, ${brief.region} ${brief.postcode}, India`;
- const operatingNote=brief.sourceFlag==='INACTIVE'?' The source workbook flags this published location INACTIVE; current operation and appointments are not verified by this page. Confirm with the receiving team before travelling.':'';
- const facilityScope=`Workbook plus certificate copy dated ${brief.certificateDate}, recognition bundle p${brief.certificatePage}. The recorded authenticated dashboard check was Approved on 19 September 2026; this is a facility-register status, distinct from current operation, therapy availability and individual outcomes.`+operatingNote;
- const facilityDisplay=`Facility identifier ${brief.hfr}. A certificate copy dated ${brief.certificateDate} is available in the source trail; the recorded portal check showed Approved on 19 September 2026. Confirm current appointments and available services with the team.`+operatingNote;
+ const {facilityScope,facilityDisplay,facilityRecord}=describeFacilityEvidence(brief);
  const sources=[
   {id:'location',name:'Published '+brief.label+' contact and location',url:branch.sourceUrl,scope:'First-party address, landmarks and national contact. Appointment and access arrangements are confirmed separately.'},
   {id:'maps',name:'Existing '+brief.label+' directions',url:branch.mapsUrl,scope:brief.arrival},
   {id:'hfr',name:'Facility-source trail · '+brief.hfr,url:origin+'/verify/evidence/hfr-register.html#hfr-'+brief.hfr,scope:facilityScope,displayScope:facilityDisplay},
   {id:'purpose',name:'Pinnacle’s life-first direction',url:origin+'/verify/evidence/pinnacle-paradigm-shift.html',scope:'Purpose and mechanism: the child’s self-sufficient, mainstream-included life shapes abilities, goals, methods, people, everyday practice and review. Individual outcomes are not guaranteed.'},
-  {id:'identity',name:'Brand and legal operator evidence',url:origin+'/verify/#organization',scope:'Pinnacle Blooms Network is the brand; Bharath Healthcare Laboratories Private Limited is the legal operator.'},
+  {id:'identity',name:'Brand and legal operator evidence',url:origin+'/verify/#chapter-identity',scope:'Pinnacle Blooms Network is the brand; Bharath Healthcare Laboratories Private Limited is the legal operator.'},
   {id:'md5',name:'Original MD-5 licence',url:origin+'/verify/evidence/md5.pdf#page=1',scope:'PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software for children aged 0–12. It is not a therapist credential or an outcome guarantee.'},
   {id:'bis',name:'Original BIS licence and scope',url:origin+'/verify/evidence/bis.pdf#page=2',scope:'Named software and quality-system scope; not approval of every centre, therapy or child outcome.'}
  ];
@@ -145,7 +168,7 @@ export const centreDetails=briefs.map(brief=>{
   enquiry:origin+'/enroll-autism-speech-aba-therapies-india?service=help&centre='+brief.id,
   direct:`Pinnacle Blooms Network’s ${brief.label} centre is published at ${address}. Call 9100 181 181 to discuss your child’s everyday priorities and confirm the suitable professional, available service, appointment and fee before visiting.`,
   shareFile:brief.id+'-social-20261001.png',releaseLabel:brief.releaseLabel||'centre-v132-'+brief.id+'-20261001',callMotivation:({nandyala:'Tell us which part of getting ready matters most. Bring your observations and ask about a suitable next step for your child in Nandyala.',ongole:'You already know moments that matter to your child. Bring one of them to the conversation and ask what an Ongole visit would include.',tirupati:'Start with what your child enjoys and what you want it to make possible. Ask about a suitable first conversation and professional in Tirupati.',srikakulam:'An interest at home can be the beginning of a useful learning goal. Tell us what your child enjoys and ask about a suitable first visit in Srikakulam.'} as Record<string,string>)[brief.id],sources,stages:assessmentContent.stages,
-  facilityRecord:{identifier:brief.hfr,sourceLevel:'Workbook plus certificate copy',certificateDate:brief.certificateDate,certificateBundlePage:brief.certificatePage,recordedPortalStatus:'Approved',portalCheckedOn:'2026-09-19',sourceWorkbookFlag:brief.sourceFlag||null,currentOperationVerified:false,currentServiceAvailabilityVerified:false},
+  facilityRecord,
   faqs:[
    {question:'Where is Pinnacle Blooms '+brief.label+'?',answer:'The published address is '+address+'. '+brief.arrival},
    {question:'How do I contact this centre?',answer:'Call 9100 181 181 or send an enquiry with '+brief.label+' selected. This is Pinnacle’s national guidance and enquiry number; no separately verified direct branch number is listed here.'},

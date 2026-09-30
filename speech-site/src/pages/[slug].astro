@@ -1,7 +1,9 @@
 ---
 import PinnacleWaveExperience from '../components/PinnacleWaveExperience.astro';
 import {pinnacleWave} from '../data/pinnacleai-wave';
-export function getStaticPaths(){return pinnacleWave.map(page=>({params:{slug:page.slug},props:{page}}));}
-const {page}=Astro.props;
+import PolicyPage from '../components/PolicyPage.astro';
+import policies from '../data/policy-content.json';
+export function getStaticPaths(){return [...pinnacleWave.map(page=>({params:{slug:page.slug},props:{page,policy:false}})),...policies.map(page=>({params:{slug:page.slug},props:{page,policy:true}}))];}
+const {page,policy}=Astro.props;
 ---
-<PinnacleWaveExperience page={page}/>
+{policy?<PolicyPage page={page}/>:<PinnacleWaveExperience page={page}/>}
