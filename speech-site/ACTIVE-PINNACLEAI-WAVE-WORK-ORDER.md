@@ -4,11 +4,11 @@
 
 ## Reopened editorial correction · 30 September, after v128
 
-The owner rejected the nine-page batch presentation: repeated layouts, borrowed or mismatched interior images, poor first-screen visual storytelling, thin module-specific persuasion and excessive repeated proof panels. The v128 technical publication remains live; it is **not** the accepted quality finish. Current source correction is underway and unreleased. The bounded portal ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`.
+The owner rejected the nine-page batch presentation: repeated layouts, borrowed or mismatched interior images, poor first-screen visual storytelling, thin module-specific persuasion and excessive repeated proof panels. The v128 publication was technically sound but lacked the accepted quality finish. The corrective v129 release is now live and verified; the bounded portal ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`.
 
 This correction keeps all nine canonicals, working schema/OG/sitemap/reading-aid routes and the common header/footer. It replaces the in-page social cards with nine purpose-made child/family scenes; retains the complete social cards as share images; moves an everyday decision into the first story block; explains each module with a distinct HTML visual; keeps the full seven-stage pathway on the overview and a compact linked context on module pages; places two relevant proof links beside the claim and the full source list behind an optional detail. It repairs the dark-on-purple closing heading and records a claim-to-source map in the machine exports. Illustrative scenes are not child outcome evidence.
 
-Release gate: source-backed editorial review, 320/390/768/1440 responsive and semantic checks, commit/push, full Verify+portal Worker deployment without changing route scope, live read-back and a new receipt. The next managed page after this correction is Child Development Assessment on its existing origin canonical; do not call the correction released until those gates pass.
+Release gate met: source-backed editorial review, 320/390/768/1440 responsive and semantic checks, commit/push, full Verify+portal Worker deployment without changing route scope, live read-back and a new receipt. The next managed page is Child Development Assessment on its existing origin canonical.
 
 ## Outcome and audience
 
@@ -54,6 +54,8 @@ Nine non-duplicate pages have unique direct answers, worked examples, visual exp
 
 ## Release disposition — 30 September 2026
 
-The nine-page wave is published in Worker version `3e047f76-9b82-468a-b139-8102cebedb11` at 100% traffic. The pages, two named aliases, product sitemap, reading guide, source maps, nine distinct social images and shared shell passed live read-back. The route triggers and deployed assets are recorded in `RELEASE-PINNACLEAI-WAVE-V128-20260930.md`. The first wave version `f5d4a13f-4a59-4465-9d5a-bdbcedbb0f4a` is the immediate prior version; v127 `ddd4aea5-caa8-4fde-b2c4-f4f064463ce7` is the prior stable therapy release.
+The editorial correction is published as v129 in Worker version `4cb916cd-5683-4ea9-829d-82ccf3f812da` at 100% traffic. Source commit `8330346` was pushed before deployment. Nine revised pages, their distinct editorial images and social JPEGs, their source exports, aliases, sitemap and protected controls passed public read-back. The new receipt is `RELEASE-PINNACLEAI-CORRECTION-V129-20260930.md`; v128 below remains the rollback baseline. The external W3C Nu service returned HTTP 429 on the fresh final attempt, so no fresh v129 Nu pass is claimed.
+
+The prior nine-page wave was published in Worker version `3e047f76-9b82-468a-b139-8102cebedb11` at 100% before the correction. The pages, two named aliases, product sitemap, reading guide, source maps, nine distinct social images and shared shell passed its live read-back. Its route triggers and deployed assets are recorded in `RELEASE-PINNACLEAI-WAVE-V128-20260930.md`. The first wave version `f5d4a13f-4a59-4465-9d5a-bdbcedbb0f4a` preceded that version; v127 `ddd4aea5-caa8-4fde-b2c4-f4f064463ce7` is the prior stable therapy release.
 
 IndexNow accepted one notification containing the nine newly published/rebuilt canonicals. This is a submission event; search discovery, indexing, rankings, answer-engine citations, calls and admissions require subsequent observation. The older `/pinnacle-ai-innovations-revolutionizing-autism-history` origin page still needs a distinct-content/backlink review before a redirect decision; it was not silently captured in this release.
