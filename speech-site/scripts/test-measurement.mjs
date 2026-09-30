@@ -146,3 +146,15 @@ test('assessment calls and generic enquiries are consented fixed events',()=>{
  const path='/speech-aba-autism-assessments',call='tel:+919100181181',enquiry='https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help';
  for(const opts of [{},{gpc:true}]){const h=harness({path,...opts});h.click('hero-call',call);assert.equal(h.events().length,0);h.choose('accepted');h.click('hero-call',call);h.click('hero-assessment',enquiry);if(opts.gpc){assert.equal(h.events().length,0);continue;}assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','enquiry_link_click']);const text=JSON.stringify(h.events());assert(!text.includes('private-child-detail')&&!text.includes('secret')&&!text.includes('service=help'));assert(h.events().every(event=>event[2].page_group==='developmental_assessment'));h.choose('declined');h.click('final-call',call);assert.equal(h.events().length,3);}
 });
+
+test('centre-detail events omit the branch identity and query values under consent and GPC',()=>{
+ const path='/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india';
+ for(const opts of [{},{gpc:true}]){
+  const h=harness({path,...opts});h.click('hero-call','tel:+919100181181');assert.equal(h.events().length,0);
+  h.choose('accepted');h.click('hero-call','tel:+919100181181');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra');h.click('centre-share','https://www.pinnacleblooms.org'+path);
+  if(opts.gpc){assert.equal(h.events().length,0);continue;}
+  assert(h.events().length>=3);const body=JSON.stringify(h.events());for(const value of ['suchitra','centre=','service=','private-child-detail','secret'])assert(!body.includes(value));
+  assert(h.events().every(event=>event[2].page_location==='https://www.pinnacleblooms.org/centers'));
+  const count=h.events().length;h.choose('declined');h.click('final-call','tel:+919100181181');assert.equal(h.events().length,count);
+ }
+});

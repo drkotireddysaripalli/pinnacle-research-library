@@ -8,6 +8,7 @@ const ROOT_SITEMAPS=[
 const MANAGED_SECTION=`
 
 ## Service and next-step pages
+- [Suchitra, Hyderabad centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india): sourced location and real premises photos, published professional profiles, visit questions and life-first support. Confirm the appointment, professional and fees.
 - [Child development assessment](${PUBLIC}/speech-aba-autism-assessments): family priorities, present abilities, suitable professional assessment and a life-first next-step conversation. Fees, service and appointment are confirmed by the team.
 - [Speech therapy for children](${PUBLIC}/top-speech-therapy-center-india-proven-improvement-rate): everyday communication, professional assessment, family-guided practice, review and listed centres.
 - [Occupational therapy for children](${PUBLIC}/best-occupational-therapy-center-india-proven-improvement-rate): everyday routines, play, learning, self-care and participation connected to assessment and review.

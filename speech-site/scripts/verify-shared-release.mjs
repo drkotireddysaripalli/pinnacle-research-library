@@ -39,6 +39,10 @@ for(const required of [
   '/pinnacle-pages-data/assessment-machine.md',
   '/pinnacle-pages-data/assessment-evidence.json',
   '/pinnacle-pages-data/assessment-evidence.txt'
+  ,'/pinnacle-pages-html/suchitra.html'
+  ,'/pinnacle-pages-data/suchitra-machine.md'
+  ,'/pinnacle-pages-data/suchitra-evidence.json'
+  ,'/pinnacle-pages-data/suchitra-evidence.txt'
 ]) assert(required in speechInventory,`Missing Special Education release asset: ${required}`);
 
 assert(worker.includes("import {serveRootDiscovery} from './discovery-handler.mjs';"),'Root discovery handler must remain connected');

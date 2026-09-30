@@ -40,6 +40,9 @@ await fs.writeFile(path.join(out,'pinnacle-pages-html/assessment.html'),assessme
 const centers=await fs.readFile(path.join(root,'dist/centers.html'),'utf8');
 assert(centers.includes('index, follow, max-image-preview:large')&&centers.includes('Find a Pinnacle Blooms Centre')&&centers.includes('centers-evidence.json')&&centers.includes('Browse every published listing by state or region'));
 await fs.writeFile(path.join(out,'pinnacle-pages-html/centers.html'),centers);
+const suchitra=await fs.readFile(path.join(root,'dist/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india.html'),'utf8');
+assert(suchitra.includes('index, follow, max-image-preview:large')&&suchitra.includes('suchitra-evidence.json')&&suchitra.includes('Query Raised'));
+await fs.writeFile(path.join(out,'pinnacle-pages-html/suchitra.html'),suchitra);
 for(const page of pinnacleWave){
  const pageHtml=await fs.readFile(path.join(root,'dist',page.slug+'.html'),'utf8');
  assert(pageHtml.includes('index, follow, max-image-preview:large')&&pageHtml.includes(page.title)&&pageHtml.includes('application/ld+json')&&pageHtml.includes('id="worked-example"'));

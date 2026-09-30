@@ -7,6 +7,7 @@ export const SPECIAL_EDUCATION_CANONICAL='/best-special-education-center-call-91
 export const AUTISM_CANONICAL='/autism-therapy';
 export const ASSESSMENT_CANONICAL='/speech-aba-autism-assessments';
 export const CENTERS_CANONICAL='/centers';
+export const SUCHITRA_CANONICAL='/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india';
 export const PINNACLEAI_PATHS=['/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat'];
 const DOCUMENT='/speech-therapy/service-information';
 const ENROLMENT_PREVIEW='/pinnacle-pages-preview/enrolment';
@@ -19,8 +20,15 @@ export async function serveSpeech(request,env,inventory){
  const enrolment=u.pathname===ENROLMENT_CANONICAL||u.pathname==='/enroll'||u.pathname==='/enroll/';
  if(u.hostname==='www.pinnacleblooms.org'&&(preview||enrolment)&&!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{allow:'GET, HEAD','cache-control':'no-store','x-robots-tag':preview?'noindex, nofollow':'index, follow'}});
  if(u.hostname!=='www.pinnacleblooms.org'||!['GET','HEAD'].includes(request.method)||request.headers.has('authorization'))return null;
+ // Preserve session/private handling when migrating the old Suchitra repair route.
+ // Known analytics and Cloudflare challenge cookies carry no page-personalisation input here.
+ if([SUCHITRA_CANONICAL,SUCHITRA_CANONICAL+'/'].includes(u.pathname)&&request.headers.has('cookie')){
+  const names=(request.headers.get('cookie')||'').split(';').map(cookie=>cookie.trim().split('=')[0]).filter(Boolean);
+  if(names.some(name=>!/^(_ga(?:_[A-Za-z0-9]+)?|_gid|_gat(?:_gtag_.+)?|__cf_bm|cf_clearance)$/.test(name)))return null;
+ }
  const aliases=new Map([['/speech-therapy',SPEECH_CANONICAL],['/speech-therapy/',SPEECH_CANONICAL],[SPEECH_CANONICAL+'/',SPEECH_CANONICAL],['/occupational-therapy',OCCUPATIONAL_CANONICAL],['/occupational-therapy/',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy/',OCCUPATIONAL_CANONICAL],[OCCUPATIONAL_CANONICAL+'/',OCCUPATIONAL_CANONICAL],['/aba-therapy',ABA_CANONICAL],['/aba-therapy/',ABA_CANONICAL],['/t/aba-therapy',ABA_CANONICAL],['/t/aba-therapy/',ABA_CANONICAL],[ABA_CANONICAL+'/',ABA_CANONICAL],['/special-education',SPECIAL_EDUCATION_CANONICAL],['/special-education/',SPECIAL_EDUCATION_CANONICAL],['/Special-Education',SPECIAL_EDUCATION_CANONICAL],['/Special-Education/',SPECIAL_EDUCATION_CANONICAL],['/t/special-education',SPECIAL_EDUCATION_CANONICAL],['/t/special-education/',SPECIAL_EDUCATION_CANONICAL],[SPECIAL_EDUCATION_CANONICAL+'/',SPECIAL_EDUCATION_CANONICAL],[AUTISM_CANONICAL+'/',AUTISM_CANONICAL],[ASSESSMENT_CANONICAL+'/',ASSESSMENT_CANONICAL],['/t/autism-therapy',AUTISM_CANONICAL],['/t/autism-therapy/',AUTISM_CANONICAL],[CENTERS_CANONICAL+'/',CENTERS_CANONICAL],['/Centers',CENTERS_CANONICAL],['/Centers/',CENTERS_CANONICAL],['/centres',CENTERS_CANONICAL],['/centres/',CENTERS_CANONICAL],['/Centres',CENTERS_CANONICAL],['/Centres/',CENTERS_CANONICAL],['/locations',CENTERS_CANONICAL],['/locations/',CENTERS_CANONICAL],['/Locations',CENTERS_CANONICAL],['/Locations/',CENTERS_CANONICAL],['/enroll',ENROLMENT_CANONICAL],['/enroll/',ENROLMENT_CANONICAL],[ENROLMENT_CANONICAL+'/',ENROLMENT_CANONICAL],[ENROLMENT_PREVIEW,ENROLMENT_CANONICAL],[DOCUMENT+'/',DOCUMENT],[DOCUMENT+'.html',DOCUMENT]]);
  for(const product of PINNACLEAI_PATHS)aliases.set(product+'/',product);
+ aliases.set(SUCHITRA_CANONICAL+'/',SUCHITRA_CANONICAL);
  aliases.set('/pinnacle-ai','/pinnacleai');aliases.set('/pinnacle-ai/','/pinnacleai');
  aliases.set('/ability-score','/abilityscore');aliases.set('/ability-score/','/abilityscore');
  for(const guide of GUIDES)for(const suffix of ['/', '.html'])aliases.set('/speech-therapy/'+guide+suffix,'/speech-therapy/'+guide);
@@ -34,6 +42,7 @@ export async function serveSpeech(request,env,inventory){
  else if(key===AUTISM_CANONICAL)key='/pinnacle-pages-html/autism-therapy.html';
  else if(key===ASSESSMENT_CANONICAL)key='/pinnacle-pages-html/assessment.html';
  else if(key===CENTERS_CANONICAL)key='/pinnacle-pages-html/centers.html';
+ else if(key===SUCHITRA_CANONICAL)key='/pinnacle-pages-html/suchitra.html';
  else if(PINNACLEAI_PATHS.includes(key))key='/pinnacle-pages-html/'+key.slice(1)+'.html';
  else if(key===SPEECH_CANONICAL)key='/pinnacle-pages-html/speech.html';
  else if(key===DOCUMENT)key='/pinnacle-pages-html/service-information.html';
@@ -51,6 +60,7 @@ export async function serveSpeech(request,env,inventory){
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/autism-therapy.html')key='/pinnacle-pages-data/autism-therapy-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/assessment.html')key='/pinnacle-pages-data/assessment-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/centers.html')key='/pinnacle-pages-data/centers-machine.md';
+ else if(wantsMarkdown&&key==='/pinnacle-pages-html/suchitra.html')key='/pinnacle-pages-data/suchitra-machine.md';
  else if(wantsMarkdown&&key.startsWith('/pinnacle-pages-html/')&&PINNACLEAI_PATHS.some(path=>key==='/pinnacle-pages-html/'+path.slice(1)+'.html'))key=key.replace('/pinnacle-pages-html/','/pinnacle-pages-data/').replace('.html','-reading.md');
  if(!Object.hasOwn(inventory,key))return null;
  const isHtml=key.endsWith('.html');

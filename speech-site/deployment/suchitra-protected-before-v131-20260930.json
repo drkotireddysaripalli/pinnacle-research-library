@@ -1,0 +1,77 @@
+{
+  "checkedAt": "2026-09-30T17:35:45.622Z",
+  "results": [
+    {
+      "path": "/verify/",
+      "status": 200,
+      "bytes": 1022245,
+      "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107"
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "bytes": 48012,
+      "sha256": "51d3e37a4fd98bdb1c2d4269f8ae541fcffa960533221515e825c94942dfb399"
+    },
+    {
+      "path": "/verify/evidence/fsc.pdf",
+      "status": 200,
+      "bytes": 204419,
+      "sha256": "84664753b59ec604a2a55c501b9786efecbdded76bfb0d9be48ca732c06a909a"
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "bytes": 87205,
+      "sha256": "cdf081a88fbdea6739bf07afb34d38923e45209aca2e2960bdc17f61b8fe1691"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 490,
+      "sha256": "09d9b8df2131083e9d288d9cffd20f027db2d4db5906de2a85103f09e069891f"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 1374,
+      "sha256": "b7c18595209c559155176b6578808dc5e8fc4b92086b5ee5ba413d877fb149be"
+    },
+    {
+      "path": "/sitemaps/core.xml",
+      "status": 200,
+      "bytes": 3695,
+      "sha256": "5b0b440763b06410aa6da7f4b15b202a2112210df8be2a19c370c6e425c19440"
+    },
+    {
+      "path": "/pinnacle-ai-innovations-revolutionizing-autism-history",
+      "status": 200,
+      "bytes": 504111,
+      "sha256": "aef68ca805349c6147bed80cc49572a70097e441860d272f0027b64dcd586642"
+    },
+    {
+      "path": "/abilityscore-global-study",
+      "status": 200,
+      "bytes": 392895,
+      "sha256": "7876accea994a748da9108d2ff3fc3b0161f88bc7991dfdcf5d7742621999038"
+    },
+    {
+      "path": "/therapeuticai-effectiveness-study",
+      "status": 200,
+      "bytes": 387971,
+      "sha256": "e5d42e55d684717498ee5b5455e52e89002e5b10779b352ff08d03bb70128fe4"
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "status": 200,
+      "bytes": 1057013,
+      "sha256": "a4e76e03108671eb482424b6eecf97925d17078a5df8141047f315fd53d1af18"
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nizampet-hyderabad-telangana-india",
+      "status": 404,
+      "bytes": 312134,
+      "sha256": "72f7be0a2c01ef5fdaecdd600102854acdbe45f1b4aeb7c479cbb39668ffb418"
+    }
+  ]
+}

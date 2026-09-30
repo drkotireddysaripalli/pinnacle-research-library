@@ -10,6 +10,7 @@ const managedHtml=[
   'dist/best-special-education-center-call-9100181181.html',
   'dist/autism-therapy.html',
   'dist/centers.html',
+  'dist/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india.html',
   'dist/speech-aba-autism-assessments.html',
   ...['pinnacleai','abilityscore','seven-readiness-indexes','personal-development-kernel','prognose','therapeuticai','everyday-therapy','fusion-module','reassess-review-repeat'].map(slug=>'dist/'+slug+'.html'),
   'dist/speech-therapy/service-information.html',

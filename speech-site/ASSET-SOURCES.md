@@ -158,3 +158,8 @@ Two original fictional campaign scenes generated through the direct built-in Cha
 
 - src/assets/assessment-social-20260930.png — complete generated poster; original exec-149c987d-e5b4-410d-ad49-3c699046223e.png. SHA-256 70ddd9998772539c54bca0060f48f8401db1954d8fab8565667f35d390c584f8. Astro produces its 1200×630 JPEG; typography is part of the original creative.
 - src/assets/assessment-hero-20260930.png — original exec-d861780c-7182-408b-947a-2dc43653c9b2.png. SHA-256 9848e99dedc3ec07607e906be1323bcc6936b07d9552a5673213d8fa5e35a5f9. Responsive Astro WebP variants; essential headline and explanation remain HTML.
+
+## Suchitra centre creative · 30 September 2026
+
+- src/assets/suchitra-social-20260930.png: complete branded poster generated with the built-in ChatGPT image tool using official lockup and approved Speech poster references. Original generated file exec-583f4d7b-aeb2-4dc7-8ba6-571978e0cb54.png in the calling task's generated_images directory. No API-key route used. Fictional family/professional; no real beneficiary or Suchitra room/result implied. Prompt retained in reviews/SUCHITRA-CREATIVE-PROMPT-20260930.md. Astro produces the1200×630share JPEG and responsive WebP.
+- Existing Suchitra exterior-0/interior-5-1/interior-5-2 and profile-9: reused authorised, source-matched premises photos/emblem from CENTRE-MEDIA-RELEASE-20260928.json. Three distinct photographs; interior-3 is a duplicate and was not counted. No new capture date or unchanged-equipment claim.

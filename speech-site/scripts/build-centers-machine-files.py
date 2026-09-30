@@ -4,6 +4,7 @@ import json
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = json.loads((ROOT / 'src' / 'data' / 'centre-directory.json').read_text(encoding='utf-8'))
+RELEASES = json.loads((ROOT / 'src' / 'data' / 'centre-page-releases.json').read_text(encoding='utf-8'))
 PUBLIC = ROOT / 'public' / 'pinnacle-pages-data'
 CANONICAL = 'https://www.pinnacleblooms.org/centers'
 CHECKED = '2026-09-28'
@@ -166,7 +167,9 @@ profile_urls = sorted({item['profileUrl'] for item in DATA if '/centers/' in ite
 sitemap_urls = [CANONICAL, *profile_urls]
 sitemap = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for item in sitemap_urls:
-    sitemap.append(f'  <url><loc>{item}</loc></url>')
+    modified = RELEASES.get(item, {}).get('modifiedOn')
+    lastmod = f'<lastmod>{modified}</lastmod>' if modified else ''
+    sitemap.append(f'  <url><loc>{item}</loc>{lastmod}</url>')
 sitemap.append('</urlset>')
 (PUBLIC / 'centres-sitemap.xml').write_text('\n'.join(sitemap) + '\n', encoding='utf-8')
 print(json.dumps({'statistics': stats, 'sitemapUrls': len(sitemap_urls), 'files': ['centers-evidence.json', 'centers-evidence.txt', 'centers-machine.md', 'centres-sitemap.xml']}))

@@ -10,10 +10,11 @@
     '/autism-therapy': {title:'Pinnacle Autism Therapy',group:'autism_therapy',service:'autism'},
     '/speech-aba-autism-assessments': {title:'Pinnacle Child Development Assessment',group:'developmental_assessment',service:'help'},
     '/centers': {title:'Find a Pinnacle Centre',group:'centre_directory',service:'centres'}
+    ,'/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india': {title:'Pinnacle Centre',group:'centre_detail',service:'help',measurementPath:'/centers'}
   };
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   const pagePath = location.pathname;
-  const canonical = origin + pagePath;
+  const canonical = origin + (pages[pagePath]?.measurementPath || pagePath);
   const pageConfig = pages[pagePath] || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
   const pageTitle = pageConfig?.title || document.title;
   const pageGroup = pageConfig?.group || 'managed_page';
