@@ -65,6 +65,14 @@ for(const route of ['/pinnacleai/sitemap.xml','/pinnacleai/llms.txt','/sitemap.x
  if(route==='/sitemap.xml')assert(body.includes(origin+'/pinnacleai/sitemap.xml'),'product sitemap in root');
  discovery.push({route,status:response.status,contentType:response.headers.get('content-type')});
 }
-const receipt={checkedAt:new Date().toISOString(),pages,aliases,discovery,meaning:'Public delivery, source and social bytes verified; search indexing and AI citation are separate observations.'};
+const originControls=[];
+for(const route of ['/abilityscore-global-study','/therapeuticai-effectiveness-study','/pinnacle-ai-innovations-revolutionizing-autism-history']){
+ const response=await get(origin+route);
+ const html=await response.text();
+ assert.equal(response.status,200,route+' origin page');
+ assert(!html.includes('wave-page'),route+' must not be replaced by product wave');
+ originControls.push({route,status:response.status,managedWave:false});
+}
+const receipt={checkedAt:new Date().toISOString(),pages,aliases,discovery,originControls,meaning:'Public delivery, source and social bytes verified; search indexing and AI citation are separate observations.'};
 await writeFile(output,JSON.stringify(receipt,null,2)+'\n');
-console.log(JSON.stringify({pages:pages.length,aliases:aliases.length,discovery:discovery.length,status:'passed',output}));
+console.log(JSON.stringify({pages:pages.length,aliases:aliases.length,discovery:discovery.length,originControls:originControls.length,status:'passed',output}));
