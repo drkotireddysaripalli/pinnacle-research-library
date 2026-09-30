@@ -1,0 +1,59 @@
+{
+  "publishedAt": "2026-09-30T20:21:34.391867Z",
+  "sourceCommit": "73d6385f21666c173f5b2f6daa9f9d9ab6cee140",
+  "repository": "https://github.com/drkotireddysaripalli/pinnacle-research-library",
+  "worker": "pinnacle-verify-route",
+  "versionId": "817b8b8a-5e8f-478f-b2a9-68345dbe9195",
+  "deploymentId": "2af5cee2-a9c8-4549-9d0b-e7c8a6c8bf34",
+  "percentage": 100,
+  "managedPublicPages": 25,
+  "acceptedMainBodiesUnchanged": 25,
+  "verifyAssetsMatched": 634,
+  "managedAssetsMatched": 1063,
+  "unionWorkerSha256": "e28c871b1f41686b9a4ecc60afa62d67d1c5172eb3a3ef345ce47675097d1340",
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "environment": "production",
+      "name": "PINNACLE_ASK",
+      "service": "pinnacle-ask",
+      "type": "service"
+    },
+    {
+      "environment": "production",
+      "name": "PINNACLE_LEGACY",
+      "service": "pbn-planetscale",
+      "type": "service"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ],
+  "routeCountBefore": 155,
+  "routeCountAfter": 155,
+  "routeChanges": 0,
+  "rollback": {
+    "versionId": "ac200e7a-3c20-4d22-a39c-5201aa42d615",
+    "routeChangesRequired": 0
+  },
+  "receipts": [
+    "shared-shell-live-v133-20261001.json",
+    "shared-shell-responsive-local-v133-20261001.json",
+    "shared-shell-responsive-live-v133-20261001.json",
+    "shared-shell-cloudflare-after-v133-20261001.json",
+    "shared-shell-protected-before-v133-20261001.json",
+    "shared-shell-nu-v133-20261001.json"
+  ],
+  "noIndexNowRepeat": true,
+  "noEnquirySubmitted": true,
+  "nextImplementation": [
+    "nandyala",
+    "ongole",
+    "tirupati",
+    "srikakulam"
+  ]
+}

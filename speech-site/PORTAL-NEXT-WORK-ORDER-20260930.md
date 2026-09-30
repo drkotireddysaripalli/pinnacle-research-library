@@ -1,6 +1,6 @@
 # Whole-portal continuation work order
 
-The live delivery ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. This file orders work after **four-centre v132 / 25 managed public pages**. The full private URL register and public aggregate/navigation registers cover the wider estate; a sitemap entry does not automatically need a rebuild or prove indexing. Preserve the outcome, design depth, shared shell and source discipline in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
+The live delivery ledger is `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. This file orders work after **shared-shell v133 / 25 managed public pages**. The full private URL register and public aggregate/navigation registers cover the wider estate; a sitemap entry does not automatically need a rebuild or prove indexing. Preserve the outcome, design depth, shared shell and source discipline in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
 
 ## 1. Finish the bounded priority portfolio
 
@@ -56,7 +56,7 @@ The full refresh observed **59,082 distinct exact URLs** across 21 URL sets. Sta
 
 Use real recurring questions to choose new guides: first visit, suitable assessment, service selection, review and everyday practice. Add verified clinician/team and clinical-governance facts when current names, roles and registrations are available. Never turn illustrative imagery into a testimonial, an assessment score into a diagnosis, or a licence into a guaranteed outcome.
 
-Carry the independent desktop-audit findings into a single targeted improvement package in the next targeted shared-shell package: compact the tall shared header and repeated footer proof while retaining every approved mobile/desktop menu target and the Verify footer; add clearly labelled illustrative AbilityScore/readiness examples, a PDK example across two settings, qualitative Prognose checkpoints and a human-selected TherapeuticAI activity. Add useful private print/checklist aids for first visit, teacher observations, routine/Fusion and Reassess where those aids answer a real decision. No fabricated patient scores, cutoffs, predicted precision or outcomes. Preserve accepted therapy bodies. The earlier 81–85 editorial scores are judgments from a desktop review, not measured conversions, clinical sign-off or a 100-point completion certificate.
+Completed v133: common-shell density/context/call-path changes across all 25 managed pages, with accepted bodies and routes preserved. The remaining product/example package is separate: clearly labelled illustrative AbilityScore/readiness examples, a PDK example across two settings, qualitative Prognose checkpoints and a human-selected TherapeuticAI activity. Add useful private print/checklist aids for first visit, teacher observations, routine/Fusion and Reassess only where they answer a real decision. No fabricated patient scores, cutoffs, predicted precision or outcomes. Preserve accepted therapy bodies. Editorial scores are judgments, not measured conversions or clinical sign-off.
 
 ## 6. Authority and acquisition operations
 
@@ -74,7 +74,8 @@ At a material release make one justified IndexNow submission, then observe Googl
 | 2 · DONE V132 | Four individually useful centre pages | Dilsukhnagar, Vijayawada, South Extension and Ananthapuram contracts, unique useful content/media, complete social creative, source/HTML/schema agreement, selected enquiry, exact handlers and public readback;25 managed shells, 12 protected controls and 28 production responsive runs passed. |
 | 3 · SOURCE-PREPARED / CONTINUE | Remaining 55 profiles, plus two section decisions | Next four Nandyala/Ongole/Tirupati/Srikakulam; advance source-ready centres; attach exact conflicts to affected IDs. No universal staffing/service/rating claims or thin city variants. |
 | 4 · INVESTIGATE | Staff/bot sitemap population and shared Ads injection | Identify actual source/cache/measurement ownership; reproduce the named defect once and fix in that source with scoped protection checks. |
-| 5 · NEXT SHARED PACKAGE | Shared shell density and concrete product/guide examples | One common source change, all managed pages rebuilt; mobile parity and core controls preserved. No separate header/footer copies. |
+| 5a · DONE V133 | Common-shell density, source context and call path | Common files changed once; all 25 owned HTML/common shells and unchanged bodies passed; 155 routes/bindings retained. |
+| 5b · PENDING | Concrete product/guide examples and private decision aids | Distinct useful examples with explicit illustrative status; preserve accepted therapy bodies and source boundaries. |
 | 6 · SOURCE/SEARCH REVIEW | Legacy core, studies and extra service/institutional URLs | Per-URL audience/source/backlink/search role and retain/repair/consolidate decision before a URL change. |
 | 7 · SAMPLE-LED QUALITY | Ask, bots, multilingual FAQ, staff and child-story eligibility | Representative source/privacy/quality review and actual-owner corrections; no mass generation, blanket noindex or indiscriminate promotion. |
 | 8 · ONGOING | Relevant off-page authority and discovery | Meaningful eligible placement with exact affiliation/context/source URL, saved public URL and verification; pending routes remain pending. |
@@ -88,3 +89,5 @@ Items with a specific external fact/access/rights condition remain attached to t
 - Keep original illustration files/provenance, complete generated posters and essential HTML wording. Match dimensions, responsive crops, Sintony typography and vivid Pinnacle palette to the page job.
 - Review narrative, claims and acquisition read-only, then perform one consolidated fix pass. Build and test at meaningful boundaries; repeat only affected checks after a new change or failure.
 - Preserve the existing full-union Worker route set and bindings. Commit/push before publication. Keep a rollback and public verification receipt. Routine stage artifacts are ignored; do not confuse local previews with released URLs.
+
+Current front door: `PORTAL-DELIVERY-MAP-20261001.md`. Latest common release: `RELEASE-SHARED-SHELL-V133-20261001.md`. Four prepared centres remain the next implementation package; the common shell is complete.

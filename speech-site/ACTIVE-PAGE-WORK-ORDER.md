@@ -1,10 +1,12 @@
-# Active page work order · v132 closed; continuation ready
+# Active page work order · v133 closed; four prepared centres next
 
-**COMPLETED V132:** 1 October 2026, Dilsukhnagar, Gurunanak Road/Vijayawada, South Extension/New Delhi and Ananthapuram. Frozen contracts and release gates: `reviews/CENTRE-BATCH-V132-WORK-ORDER-20261001.md`. Four complete original branded posters generated directly in ChatGPT; one reusable centre renderer and branch-specific content. Preserve all accepted bodies/common shell and migrate only four exact existing centre triggers. One concrete shared-handler fix adds the actual owned `ps_ga` analytics cookies while preserving session/auth bypasses.
+**COMPLETED V133:** shared header/footer/Verify hierarchy and source-context/call-path update across all 25 managed pages. Source `73d6385` pushed before Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` at 100%. All accepted bodies, 155 routes and four bindings remain; 25 owned HTML/common shells, seven stylesheets, 12 protected controls, 15 local/15 production responsive cases and representative Nu HTML check passed. Receipt: `RELEASE-SHARED-SHELL-V133-20261001.md`.
 
-**RELEASED:** sourcefe3130f, Workerac200e7a-3c20-4d22-a39c-5201aa42d615 at100%, four intended retargets/151other routes unchanged.25shared shells/12protected controls/28production responsive runs passed. Receipt `RELEASE-CENTRE-BATCH-V132-20261001.md`. Do not reopen passed gates without a concrete defect/material change.
+**NEXT IMPLEMENTATION:** Nandyala, Ongole, Tirupati and Srikakulam, exact prepared source/media/HFR/enquiry contracts in `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`. Use the common centre renderer and v133 shell; write distinct everyday examples, create complete original branded posters through the built-in ChatGPT image tool, add source/FAQ/social/reading packages, review once, push before full-union deploy and verify exact routes/public output. They are source-prepared, not built or deployed.
 
-**NEXT:** common-shell density/context/call-path package from the ordered work order, plus source-prepared Nandyala/Ongole/Tirupati/Srikakulam. Branch contracts and image-specific exclusions: `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`.55remainingstandalonecentres+2contactsections.
+**FULL REGISTER:** 25 managed public pages, five rebuilt centres, 55 standalone profiles remaining plus two section decisions. Full work map: `PORTAL-DELIVERY-MAP-20261001.md`; page ledger: `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`; wider packages: `PORTAL-NEXT-WORK-ORDER-20260930.md`. Product examples/decision aids, source/cache/Ads attribution, legacy roles, FAQ/Ask/privacy eligibility and off-page authority stay separate. Do not reopen unchanged passed gates.
+
+**PRIOR V132 COMPLETE:** Dilsukhnagar, Gurunanak Road/Vijayawada, South Extension/New Delhi and Ananthapuram, source `fe3130f`, Worker `ac200e7a-3c20-4d22-a39c-5201aa42d615`. Receipt `RELEASE-CENTRE-BATCH-V132-20261001.md`.
 
 ## Completed Suchitra contract · retained history
 
@@ -40,6 +42,6 @@ One H1/canonical, eight matching FAQ answers, seven stages, exact LocalBusiness 
 
 ## Remaining register
 
-Next individual centres use62-entry continuation queue and current branch sources. Full legacy/FAQ/staff/Ask/privacy/canonical and authority work stays in PORTAL-NEXT-WORK-ORDER-20260930.md. Independent desktop audit suggestions about shell height/repeated proof and tangible AbilityScore/Prognose/TherapeuticAI examples await prioritized findings; no score-driven redesign in this release.
+Next individual centres use62-entry continuation queue and current branch sources. Full legacy/FAQ/staff/Ask/privacy/canonical and authority work stays in PORTAL-NEXT-WORK-ORDER-20260930.md. The common-shell package is now released in v133. Tangible AbilityScore/Prognose/TherapeuticAI examples remain a separately scoped next improvement; no score-driven redesign.
 
-Next source-prepared batch: Dilsukhnagar, Gurunanak Road/Vijayawada, South Extension/New Delhi and Ananthapuram. Freeze each branch's exact canonical/source/media/enquiry/HFR contract before implementation; use the accepted Suchitra structure and shared components while preserving branch-specific useful content. Kurnool has a concrete exterior/address match condition. The full inventory is recorded in the private whole-route register and public aggregate/navigation summary; no legacy canonical or index policy was changed merely to complete an inventory.
+Next prepared contracts are Nandyala, Ongole, Tirupati and Srikakulam in `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`. The v132 four-centre batch is complete.

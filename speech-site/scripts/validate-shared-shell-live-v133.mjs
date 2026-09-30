@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import crypto from 'node:crypto';
 const origin='https://www.pinnacleblooms.org',release='release-shared-shell-v133-20261001';
-const local=JSON.parse(await fs.readFile('deployment/shared-shell-local-v133-20261001.json','utf8'));
+const local=JSON.parse(await fs.readFile('deployment/shared-shell-responsive-local-v133-20261001.json','utf8'));
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex');
 const knownAdsTags=['<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"></script>','<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js"></script>'];
 const owned=text=>knownAdsTags.reduce((value,tag)=>value.replace(tag,''),text);

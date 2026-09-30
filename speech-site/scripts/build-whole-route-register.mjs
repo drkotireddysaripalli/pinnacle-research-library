@@ -45,7 +45,7 @@ while (queue.length) {
 }
 
 const readJSON = async p => JSON.parse(await fs.readFile(p, 'utf8'));
-const releaseReceipt = process.argv[2] || 'deployment/centre-batch-live-v132-20261001.json';
+const releaseReceipt = process.argv[2] || 'deployment/shared-shell-live-v133-20261001.json';
 const release = await readJSON(releaseReceipt);
 const managed = new Set(release.shells.map(row => row.path));
 const centresData = await readJSON('src/data/centre-directory.json');
@@ -69,6 +69,15 @@ for (const [url, label] of [
   ['tel:+919100181181', 'National phone'], ['https://wa.me/919100181181', 'WhatsApp'], ['mailto:care@pinnacleblooms.org', 'Care email'],
   ['https://www.bhclpl.org', 'Legal operator website'], ['https://www.trustpilot.com/review/pinnacleblooms.org', 'Trustpilot review destination']
 ]) navOccurrences.push({ url, label, section: 'sharedShellDirectLinks' });
+for (const [url,label,section] of [
+  ['/research-studies','Explore Research Studies','footerHeadingOverview'],
+  ['https://www.youtube.com/channel/UCAAuGmvPSBRiCnDlEcXYwEQ','Explore Pinnacle TV','footerHeadingOverview'],
+  ['/franchises','Explore Franchise Opportunity','footerHeadingOverview'],
+  ['/search','GET search form','headerFormAction'],
+  ['/verify/evidence/scale-and-mission.html','Figures, sources and mission','headerAuthorityContext'],
+  ['/verify/evidence/scale-and-mission.html','Counting definitions and dated findings','headerMoreContext'],
+  ['/verify/evidence/pinnacle-paradigm-shift.html#the-historical-challenge','Pinnacle historical case','headerMoreContext']
+]) navOccurrences.push({url,label,section});
 
 const sourceFamily = source => {
   const p = new URL(source).pathname;

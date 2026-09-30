@@ -1,6 +1,6 @@
 # Pinnacle portal page ledger and delivery sitemap
 
-1 October 2026 · v132 portfolio; sitemap population observed 30 September
+1 October 2026 · v133 common shell; sitemap population observed 30 September
 
 This is the operational ledger for the **17 priority destinations** in `PORTAL-PAGE-INVENTORY-20260929.md`: two reference pages, six parent-demand pages and nine PinnacleAI product pages. It distinguishes a live URL from a page that has passed editorial review. It does not count every legacy, centre-profile, Verify or Ask page in the wider domain.
 
@@ -14,9 +14,11 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | Planned managed page not built | 0 | Initial 17-destination portfolio is released; wider local/search-estate work remains. |
 | Additional managed decision guides | 3 | Speech first-visit, teacher-observation and service-information pages; outside the 17-page priority denominator. |
 | Additional rebuilt local centres | 5 | Suchitra v131; Dilsukhnagar, Vijayawada, South Extension and Ananthapuram v132. |
-| Total managed public HTML routes in v132 | 25 | Seventeen priority pages, three guides and five centres. Preview and shell/test index are excluded. |
+| Total managed public HTML routes in v133 | 25 | Seventeen priority pages, three guides and five centres. Preview and shell/test index are excluded. |
 
-**Latest release:** Four centre pages v132 are public on their retained canonicals. Source `fe3130f` was pushed before Worker `ac200e7a-3c20-4d22-a39c-5201aa42d615` at 100%. Twenty-five changed public assets/exports and 25 shared shells matched the stage;12protected controls retained bytes. All28production responsive runs passed. Exactly four existing routes were retargeted; the other 151 remain unchanged. The centre sitemap retains 61 URLs with four new dated lastmods. One four-URL IndexNow batch returned200. See `RELEASE-CENTRE-BATCH-V132-20261001.md`.
+**Latest common-shell release:** v133 is public across all 25 managed pages. Source `73d6385` was pushed before Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` at 100%. All 25 owned HTML/common shells matched, all accepted main bodies and 12 protected controls remained unchanged, seven stylesheets matched and 15 production responsive runs passed. All 155 routes and four bindings remain unchanged. Native footer/Verify disclosures work without JavaScript. No repeated IndexNow notification for this navigation-only change. See `RELEASE-SHARED-SHELL-V133-20261001.md`.
+
+**Prior centre release:** Four centre pages v132 are public on their retained canonicals. Source `fe3130f` was pushed before Worker `ac200e7a-3c20-4d22-a39c-5201aa42d615` at 100%. Twenty-five changed public assets/exports and 25 shared shells matched the stage;12protected controls retained bytes. All28production responsive runs passed. Exactly four existing routes were retargeted; the other 151 remain unchanged. The centre sitemap retains 61 URLs with four new dated lastmods. One four-URL IndexNow batch returned200. See `RELEASE-CENTRE-BATCH-V132-20261001.md`.
 
 **Prior release:** Suchitra v131 is public on its established canonical. Source `55aeccb` was pushed before Worker `75019b39-bfbb-49e6-a3bb-d6e0c3863cde` served 100%. Seven changed HTML/assets/exports, all 21 common shells and 11 valid protected controls passed public readback. The 155-route comparison found only the intended Suchitra retargeting; the other 154 records remain unchanged. See `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`.
 
@@ -25,6 +27,8 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 **Prior product correction:** nine new editorial scenes, a distinct overview, eight module-specific examples, readable mobile hero hierarchy and compact proof layout are live. Source `8330346` was pushed before the full-union Worker release. Worker `4cb916cd-5683-4ea9-829d-82ccf3f812da` serves 100%; all nine public pages, nine illustrations, nine share images, 27 source/reading exports, 11 aliases and protected routes passed read-back. The v128 rollback version is `3e047f76-9b82-468a-b139-8102cebedb11`. See `RELEASE-PINNACLEAI-CORRECTION-V129-20260930.md`. The correction kept every canonical and the shared header/footer source intact.
 
 ## Page-by-page route and work ledger
+
+All 25 rows below use the live v133 common header/footer; their accepted main bodies keep the separately recorded content releases.
 
 | ID | Canonical URL | Audience job | Current state | Next meaningful work |
 |---|---|---|---|---|
@@ -45,8 +49,10 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | B-07 | `/everyday-therapy` | Manageable family-guided daily practice | **v129 live, checked** | Preserve a manageable routine and therapist responsibility. |
 | B-08 | `/fusion-module` | Relevant observations into human review | **v129 live, checked** | School input remains conditional on consent and current access workflow. |
 | B-09 | `/reassess-review-repeat` | Longitudinal comparison and next decision | **v129 live, checked** | Keep setting/support comparison and individual outcome boundaries. |
+| GUIDE-01 | `/speech-therapy/first-visit-guide` | Prepare a useful first visit | Managed, published guide | Preserve the practical checklist; update only for a verified visit-process change. |
+| GUIDE-02 | `/speech-therapy/teacher-observation-guide` | Bring useful family/teacher observations | Managed, published guide | Preserve consent and useful everyday observations; add a print aid only for a real audience need. |
+| GUIDE-03 | `/speech-therapy/service-information` | Read service facts and scope | Managed, published source guide | Keep offer, professional, appointment and regulatory scope aligned with visible service copy. |
 | CENTRE-suchitra | `/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india` | Locate this branch and arrange a useful first conversation | **v131 live, checked** | Preserve sourced identity/gallery and exact HFR status; confirm current professional, appointment, fees and accessibility through enquiry. Observe actual discovery/call outcomes. |
-
 | CENTRE-dilsukhnagar | `/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india` | Chaitanyapuri address, branch photos and useful family conversation | **v132 live, checked** | Preserve exact source and selected enquiry; current appointments/services/access and actual discovery/calls remain separate. |
 | CENTRE-gurunanak | `/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india` | Vijayawada arrival and life-first visit preparation | **v132 live, checked** | Coordinate directions are not matched GBP identity; no released exterior. Confirm second-floor access and appointments. |
 | CENTRE-delhi | `/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india` | South Extension published location and enquiry | **v132 live, checked; current operation unverified** | WorkbookINACTIVE and datedHFRApproved retained distinctly. Confirm current operation/appointments before travelling; frontage steps and coordinate directions retained. |
@@ -113,7 +119,7 @@ The full Verify/off-page contribution ledger remains in `work/verify-visibility/
 
 ## Full register refresh · 18:11 UTC, 30 September
 
-All **23 sitemap documents** (two indexes and 21 URL sets) returned HTTP 200. At **18:11:47 UTC**, the 21 URL sets contain **59,339 loc occurrences**, representing **59,082 distinct exact URLs**, with **257 cross-sitemap overlaps** and no duplicate loc within an individual URL set: 251 staff/bot overlaps and six core/service overlaps. At **18:03:07 UTC**, the total was **59,815 occurrences / 733 overlaps**: staff.xml had 978 URLs and bots.xml had 727. In the second observation staff.xml had 251 and bots.xml had 978. The combined distinct population remains 978. These are dated source observations, not indexed-page counts or verified personnel. Source/cache variability is queued for investigation. Cross-sitemap membership alone is not an error; no redirect, removal or resubmission follows from the count. All **21 managed public pages** appear in the fetched sitemap estate.
+All **23 sitemap documents** (two indexes and 21 URL sets) returned HTTP 200. At **18:11:47 UTC**, the 21 URL sets contain **59,339 loc occurrences**, representing **59,082 distinct exact URLs**, with **257 cross-sitemap overlaps** and no duplicate loc within an individual URL set: 251 staff/bot overlaps and six core/service overlaps. At **18:03:07 UTC**, the total was **59,815 occurrences / 733 overlaps**: staff.xml had 978 URLs and bots.xml had 727. In the second observation staff.xml had 251 and bots.xml had 978. The combined distinct population remains 978. These are dated source observations, not indexed-page counts or verified personnel. Source/cache variability is queued for investigation. Cross-sitemap membership alone is not an error; no redirect, removal or resubmission follows from the count. The **21 managed public pages at that pre-v132 observation** appeared in the fetched estate; current release-state reconciliation covers all **25** managed routes.
 
 The navigation register covers **249 metadata/card/direct-link occurrences**, **213 distinct absolute hrefs**, and **117 same-domain page paths**, including the 36 footer evidence records and contact utilities. Section origins and exact fragments are retained. A URL absent from a sitemap is not automatically an error or a page to submit.
 
@@ -121,10 +127,14 @@ Every full-register URL has a stable ID, sitemap source, family, work state, can
 
 Five centre profiles are complete. **55 standalone centre rebuilds** remain, plus **two section-only destinations**. The next prepared batch is Nandyala, Ongole, Tirupati and Srikakulam; Kurnool retains its exterior/address condition. Source-readiness ordering is not a measured search-demand ranking. Search, AI citation and connected-call/enrolment results remain separate work.
 
-## Current delivery continuation · v132
+## Current delivery continuation · v133
 
-The existing 59,082-URL snapshot is retained with its 30 September population timestamp. Its release states, source evidence and centre queue were updated from the v132 live checks without repeating the whole crawl. Current managed count 25, rebuilt centre count 5, standalone remaining 55, contact sections 2. The navigation register retains 249 occurrences / 213 unique absolute hrefs / 117 internal paths; current managed-destination states were reconciled.
+The existing 59,082-URL snapshot is retained with its 30 September population timestamp. Its release states, source evidence and centre queue were updated from v132 body releases and the v133 common-shell public checks without repeating the whole crawl. Current managed count 25, rebuilt centre count 5, standalone remaining 55, contact sections 2. The navigation register retains 249 occurrences / 213 unique absolute hrefs / 117 internal paths; current managed-destination states were reconciled.
 
 Next source-prepared four: **Nandyala, Ongole, Tirupati and Srikakulam**. Their canonical/source/HFR/enquiry contracts and precise media exclusions are in `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`. Source-readiness order is not a measured query-demand ranking. Kurnool exterior/address and Jagadamba/Warangal postcode conflicts remain attached to their own rows.
 
 Targeted common-shell density/call-context and useful product examples, actual staff/bot sitemap variability, Ads-consent ownership, legacy/core source/search roles, multilingualFAQ/Ask/child-story eligibility and relevant off-page authority remain in `PORTAL-NEXT-WORK-ORDER-20260930.md`. Published, submitted, indexed, cited, connected call and accepted enquiry are separate states.
+
+## Current navigation and complete delivery map · v133
+
+The source-collected navigation register now contains **256 occurrences / 216 distinct absolute destinations / 119 same-domain paths**. It includes footer overview links, header source context and the GET search action; these are not counts of every repeated DOM anchor. Historical 249/213/117 observations above are retained as history. The complete current work map is `PORTAL-DELIVERY-MAP-20261001.md`. Common-shell density/context/call-path work is released in v133; specific product examples and private decision aids remain pending. Next implementation: the four prepared centre contracts.
