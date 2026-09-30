@@ -1,0 +1,102 @@
+{
+  "checkedAt": "2026-09-30T11:11:35.367Z",
+  "canonical": "/autism-therapy",
+  "workerVersion": "ddd4aea5-caa8-4fde-b2c4-f4f064463ce7",
+  "managedPages": 10,
+  "sharedHeaderHash": "fc1838e101d060c5a82bebdeebb410851a694a3d6b6c7a60a17356aa7e00a3d0",
+  "sharedFooterHash": "2a9b78f5972b2cd850157d73b6f64732c0d86ad0db8d2b6e5a1976c78f436ad3",
+  "aliases": [
+    {
+      "path": "/autism-therapy/",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/autism-therapy"
+    },
+    {
+      "path": "/t/autism-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/autism-therapy"
+    },
+    {
+      "path": "/t/autism-therapy/",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/autism-therapy"
+    }
+  ],
+  "exact": [
+    {
+      "path": "/pinnacle-pages-data/autism-therapy-evidence.json",
+      "status": 200,
+      "sha256": "de148284d8ec11450d3e6267f079fdf887002cdfe88145718d1d72cd488c1d43",
+      "matchesStaged": true
+    },
+    {
+      "path": "/pinnacle-pages-data/autism-therapy-evidence.txt",
+      "status": 200,
+      "sha256": "c9a01ddef5ec0768a109d87d922df25382c51dbe3f1a086f3c55a10c0d28ea0d",
+      "matchesStaged": true
+    },
+    {
+      "path": "/pinnacle-pages-data/autism-therapy-machine.md",
+      "status": 200,
+      "sha256": "8e61bfaddd9bd6c7dd690b7e5340eeb99a3455945e23313de31548e243adf9a6",
+      "matchesStaged": true
+    },
+    {
+      "path": "/pinnacle-pages-data/speech-sitemap.xml",
+      "status": 200,
+      "sha256": "e1baa613ffab2229fa4dfbb4ca90d677d31e6186579903d8c87d452ff47abb66",
+      "matchesStaged": true
+    }
+  ],
+  "og": {
+    "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/autism-social-integrated-20260930.C6jQ_GL4_1Iyawt.jpg?v=2026-09-30-autism-life-first",
+    "status": 200,
+    "bytes": 205909,
+    "sha256": "f43fd2b2f09c947f3d2edf01ef872d83ab843dae3119f8ba76d7c8a32d80bc17",
+    "matchesStaged": true
+  },
+  "faqCount": 15,
+  "serviceAreaServed": false,
+  "markdown": {
+    "status": 200,
+    "type": "text/markdown; charset=utf-8",
+    "contentSignal": "search=yes, ai-input=yes"
+  },
+  "protectedResults": [
+    {
+      "path": "/verify/",
+      "status": 200,
+      "hasAutism": false
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "hasAutism": false
+    },
+    {
+      "path": "/verify/evidence/pinnacleai-regulatory-journey.html",
+      "status": 200,
+      "hasAutism": false
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "hasAutism": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "hasAutism": false
+    },
+    {
+      "path": "/speech-therapy/sitemap.xml",
+      "status": 200,
+      "hasAutism": true
+    },
+    {
+      "path": "/llms.txt",
+      "status": 200,
+      "hasAutism": true
+    }
+  ]
+}

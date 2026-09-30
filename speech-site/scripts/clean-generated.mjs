@@ -20,7 +20,7 @@ async function remove(target){
 for(const name of ['.astro','dist'])await remove(path.join(root,name));
 for(const item of await fs.readdir(root,{withFileTypes:true})){
   if(item.isDirectory()&&item.name.startsWith('release-')&&!(keepReleaseCurrent&&item.name==='release-current'))await remove(path.join(root,item.name));
-  if(item.isDirectory()&&(item.name.startsWith('.worker-upload-')||item.name.startsWith('dryrun-worker-')))await remove(path.join(root,item.name));
+  if(item.isDirectory()&&(item.name.startsWith('.worker-upload-')||item.name.startsWith('dryrun-worker-')||item.name.startsWith('dryrun-autism-')))await remove(path.join(root,item.name));
   if(item.isFile()&&(item.name.startsWith('Pinnacle-')&&item.name.endsWith('.zip')||item.name==='BEFORE-REVIEW-index.astro.txt'))await remove(path.join(root,item.name));
 }
 

@@ -1,6 +1,6 @@
 # Active page work order — Autism Therapy integration hub
 
-30 September 2026 · v127 candidate. The earlier ABA contract is retained in [its v126 release receipt](RELEASE-ABA-THERAPY-V126-20260930.md). The user selected Autism Therapy next and asked for a full all-therapies review **after** the therapy pages are complete. The implementation owner keeps page, code, build and deployment ownership; reviewers are read-only.
+30 September 2026 · **v127 released**. The source, public page and release checks are recorded in [the v127 receipt](RELEASE-AUTISM-THERAPY-V127-20260930.md). The earlier ABA contract is retained in [its v126 receipt](RELEASE-ABA-THERAPY-V126-20260930.md). The user asked for a full all-therapies review **after** the therapy pages are complete. The implementation owner keeps page, code, build and deployment ownership; reviewers are read-only.
 
 ## One-page contract
 
