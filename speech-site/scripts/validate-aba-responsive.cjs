@@ -4,6 +4,7 @@ const path = require('node:path');
 
 const origin = process.env.ABA_ORIGIN || 'http://127.0.0.1:4328';
 const channel = process.env.ABA_BROWSER || 'chrome';
+const mode = origin.startsWith('https://') ? 'live' : 'local';
 const canonical = '/best-aba-therapy-center-india-proven-improvement-rate';
 const widths = [320,390,768,1024,1440];
 
@@ -19,7 +20,7 @@ const widths = [320,390,768,1024,1440];
     await page.evaluate(()=>document.fonts.ready);
     await page.waitForFunction(()=>Boolean(document.querySelector('.hero-slide img')?.naturalWidth));
     const firstScreen=await page.evaluate(()=>({headingBottom:Math.round(document.querySelector('.hero-copy h1').getBoundingClientRect().bottom),stickyTop:Math.round(document.querySelector('.mobile-cta').getBoundingClientRect().top),heroCallTop:Math.round(document.querySelector('.hero-actions [data-cta="hero-call"]').getBoundingClientRect().top)}));
-    if([320,390,1440].includes(width)) await page.screenshot({path:path.join('audits',`aba-hero-${width}-20260930.png`)});
+    if([320,390,1440].includes(width)) await page.screenshot({path:path.join('audits',`aba-${mode}-hero-${width}-20260930.png`)});
     let menu=null;
     if(width<=768){
       const trigger=page.locator('.portal-mobile-menu-trigger');
@@ -28,7 +29,7 @@ const widths = [320,390,768,1024,1440];
       menu={opened:await page.locator('.portal-directory').evaluate(el=>el.open),expanded:await trigger.getAttribute('aria-expanded')};
       if(width===390){
         menu.firstSection=await page.locator('.portal-priority-menu section').evaluateAll(sections=>sections.slice().sort((a,b)=>a.getBoundingClientRect().top-b.getBoundingClientRect().top)[0]?.querySelector('h2')?.textContent?.trim());
-        await page.screenshot({path:path.join('audits','aba-menu-390-20260930.png')});
+        await page.screenshot({path:path.join('audits',`aba-${mode}-menu-390-20260930.png`)});
       }
       await page.locator('.portal-menu-close').click();
       menu.closed=!(await page.locator('.portal-directory').evaluate(el=>el.open));
@@ -37,7 +38,7 @@ const widths = [320,390,768,1024,1440];
       for(const [selector,name] of [['.aba-story','example'],['.aba-stage-grid','stages'],['.aba-review-art','review']]){
         await page.locator(selector).scrollIntoViewIfNeeded();
         if(selector!=='.aba-stage-grid') await page.waitForFunction(s=>Boolean(document.querySelector(s+' img')?.naturalWidth),selector);
-        await page.screenshot({path:path.join('audits',`aba-${name}-${width}-20260930.png`)});
+        await page.screenshot({path:path.join('audits',`aba-${mode}-${name}-${width}-20260930.png`)});
       }
     }
     for(const selector of ['.aba-story img','.aba-review-art>img']){
@@ -76,7 +77,7 @@ const widths = [320,390,768,1024,1440];
     await page.close();
   }
   await browser.close();
-  const output='deployment/aba-responsive-local-20260930.json';
+  const output=`deployment/aba-responsive-${mode}${channel==='chrome'?'':'-'+channel}-20260930.json`;
   fs.writeFileSync(output,JSON.stringify({checkedAt:new Date().toISOString(),origin,channel,results},null,2)+'\n');
   console.log(JSON.stringify({output,results},null,2));
   if(results.some(r=>r.documentWidth>r.viewport||!r.heroImageLoaded||!r.exampleImageLoaded||!r.reviewImageLoaded||!r.header||!r.footer||!r.verifyFooter||r.callHref!=='tel:+919100181181'||r.firstCallHref!=='tel:+919100181181'||r.centreCount!==62||!r.centreNotice||r.faqVisible!==11||r.faqSchema!==11||r.serviceAreaServed||r.stages!==7||r.duplicateIds.length||r.missingAnchors.length||!r.lensKeyboard||r.errors.length||(r.width<=768&&(!r.menu?.opened||r.menu?.expanded!=='true'||!r.menu?.closed))||(r.width===390&&r.menu?.firstSection!=='Therapies')))process.exitCode=1;

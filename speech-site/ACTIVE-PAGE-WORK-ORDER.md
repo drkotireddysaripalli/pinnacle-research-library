@@ -1,6 +1,6 @@
 # Active page work order — ABA therapy and behavioural support
 
-30 September 2026 · The user moved the active implementation from the proposed assessment page to ABA. The assessment brief is preserved in `reviews/ASSESSMENT-PAGE-BRIEF-PRESERVED-20260930.md`. Apply the reusable `PINNACLE-PAGE-CREATION-WORK-ORDER.md` and `PORTAL-CONTEXT-AND-BUILD-MODALITY.md` to this release.
+30 September 2026 · **Released as v126.** The user moved the active implementation from the proposed assessment page to ABA. The assessment brief is preserved in `reviews/ASSESSMENT-PAGE-BRIEF-PRESERVED-20260930.md`. This file records the page contract fulfilled by the [v126 receipt](RELEASE-ABA-THERAPY-V126-20260930.md); apply the reusable `PINNACLE-PAGE-CREATION-WORK-ORDER.md` and `PORTAL-CONTEXT-AND-BUILD-MODALITY.md` to the next page.
 
 ## One-page contract
 

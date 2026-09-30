@@ -23,7 +23,7 @@ For a new page or material page revision, read in this order:
 
 The conversation history remains useful evidence of intent. Current decisions committed in these files govern implementation when old exploratory wording conflicts with a later settled decision.
 
-The Occupational Therapy narrative in `OCCUPATIONAL-THERAPY-CANONICAL-NARRATIVE-20260930.md` was implemented in Worker v125. Its current practical review is `reviews/OCCUPATIONAL-THERAPY-V125-PRACTICAL-REVIEW-20260930.md`; the accepted future-page operating standard is `PINNACLE-PAGE-CREATION-WORK-ORDER.md`. `ACTIVE-PAGE-WORK-ORDER.md` now controls Child Development Assessment as the next page.
+Occupational Therapy's life-first correction was released in Worker v125; the ABA Therapy page and shared mobile menu were released in v126. Their dated reviews are in `reviews/`. The accepted future-page operating standard is `PINNACLE-PAGE-CREATION-WORK-ORDER.md`. `ACTIVE-PAGE-WORK-ORDER.md` records the completed ABA page contract; the proposed Child Development Assessment brief is preserved in `reviews/ASSESSMENT-PAGE-BRIEF-PRESERVED-20260930.md` for selection as the next page.
 
 Do not reread every historical release note, repeat every earlier audit or reconstruct settled design decisions for each page. Do not reduce the page to a generic template or thin prompt merely to save usage.
 
@@ -116,7 +116,7 @@ The stages are a coherent explanation of the journey. They are not a promise tha
 
 ## Shared shell contract
 
-The v125 shared shell is the current published foundation. Its compact phone/tablet navigation was changed once in the common sources and verified across all ten managed pages:
+The v126 shared shell is the current published foundation. Its compact phone/tablet navigation and mobile More-panel section order were changed once in the common sources and verified across all ten managed pages:
 
 - `src/data/portal-navigation.json` is the common navigation source.
 - `src/layouts/PageLayout.astro` renders `SiteHeader.astro` and `SiteFooter.astro`.
