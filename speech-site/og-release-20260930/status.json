@@ -3,10 +3,10 @@
   "state": "deployed-and-verified",
   "generator": "Owner-approved OpenAI Images API fallback",
   "model": "gpt-image-2",
-  "version": "a52bab91-9687-449f-a522-1eae02693dbd",
-  "deployment": "06126284-a4cf-4a72-8e6c-5ad552f83e62",
+  "version": "36021fa6-7a41-4726-a147-0f4a48a8e6d1",
+  "deployment": "41565e69-a53a-4ebc-ada0-16cb4b08144a",
   "imagesVerified": 5,
   "htmlPagesVerifiedUnchanged": 9,
-  "routesCount": 138,
-  "routeFingerprint": "bd36ae4f"
+  "changedFiles": 5,
+  "unchangedAssetFiles": 1444
 }
