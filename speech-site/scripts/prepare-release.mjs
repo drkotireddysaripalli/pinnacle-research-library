@@ -3,6 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 import {pinnacleWave} from '../src/data/pinnacleai-wave.ts';
+import {centreDetails} from '../src/data/centre-detail-content.ts';
 const root=process.cwd(),parent=path.dirname(root),out=path.resolve(process.argv[2]||path.join(root,'release-union'));
 const verifyRoot=process.argv[3]?path.resolve(process.argv[3]):await fs.access(path.join(parent,'verify-site/dist')).then(()=>path.join(parent,'verify-site')).catch(()=>path.join(parent,'pinnacle-verify-fsc'));
 await fs.mkdir(out,{recursive:false});
@@ -43,6 +44,11 @@ await fs.writeFile(path.join(out,'pinnacle-pages-html/centers.html'),centers);
 const suchitra=await fs.readFile(path.join(root,'dist/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india.html'),'utf8');
 assert(suchitra.includes('index, follow, max-image-preview:large')&&suchitra.includes('suchitra-evidence.json')&&suchitra.includes('Query Raised'));
 await fs.writeFile(path.join(out,'pinnacle-pages-html/suchitra.html'),suchitra);
+for(const page of centreDetails){
+ const centreHtml=await fs.readFile(path.join(root,'dist',page.path+'.html'),'utf8');
+ assert(centreHtml.includes('index, follow, max-image-preview:large')&&centreHtml.includes(page.id+'-evidence.json')&&centreHtml.includes(page.hfr));
+ await fs.writeFile(path.join(out,'pinnacle-pages-html',page.id+'.html'),centreHtml);
+}
 for(const page of pinnacleWave){
  const pageHtml=await fs.readFile(path.join(root,'dist',page.slug+'.html'),'utf8');
  assert(pageHtml.includes('index, follow, max-image-preview:large')&&pageHtml.includes(page.title)&&pageHtml.includes('application/ld+json')&&pageHtml.includes('id="worked-example"'));

@@ -1,0 +1,107 @@
+{
+  "checkedAt": "2026-09-30T19:19:39.245Z",
+  "results": [
+    {
+      "path": "/verify/",
+      "status": 200,
+      "bytes": 1022245,
+      "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107"
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "bytes": 48012,
+      "sha256": "51d3e37a4fd98bdb1c2d4269f8ae541fcffa960533221515e825c94942dfb399"
+    },
+    {
+      "path": "/verify/evidence/fsc.pdf",
+      "status": 200,
+      "bytes": 204419,
+      "sha256": "84664753b59ec604a2a55c501b9786efecbdded76bfb0d9be48ca732c06a909a"
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "bytes": 87205,
+      "sha256": "cdf081a88fbdea6739bf07afb34d38923e45209aca2e2960bdc17f61b8fe1691"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 490,
+      "sha256": "09d9b8df2131083e9d288d9cffd20f027db2d4db5906de2a85103f09e069891f"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 1374,
+      "sha256": "b7c18595209c559155176b6578808dc5e8fc4b92086b5ee5ba413d877fb149be"
+    },
+    {
+      "path": "/sitemaps/core.xml",
+      "status": 200,
+      "bytes": 3695,
+      "sha256": "5b0b440763b06410aa6da7f4b15b202a2112210df8be2a19c370c6e425c19440"
+    },
+    {
+      "path": "/pinnacle-ai-innovations-revolutionizing-autism-history",
+      "status": 200,
+      "bytes": 504111,
+      "sha256": "aef68ca805349c6147bed80cc49572a70097e441860d272f0027b64dcd586642"
+    },
+    {
+      "path": "/abilityscore-global-study",
+      "status": 200,
+      "bytes": 392895,
+      "sha256": "7876accea994a748da9108d2ff3fc3b0161f88bc7991dfdcf5d7742621999038"
+    },
+    {
+      "path": "/therapeuticai-effectiveness-study",
+      "status": 200,
+      "bytes": 387971,
+      "sha256": "e5d42e55d684717498ee5b5455e52e89002e5b10779b352ff08d03bb70128fe4"
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "status": 200,
+      "bytes": 1057013,
+      "sha256": "a4e76e03108671eb482424b6eecf97925d17078a5df8141047f315fd53d1af18"
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "status": 200,
+      "bytes": 417507,
+      "sha256": "e4c070d0cefaa608fb890a2e37818e79a24437119c0ad2488e61c07d1573d58f"
+    }
+  ],
+  "planned": [
+    {
+      "id": "dilsukhnagar",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "status": 200,
+      "bytes": 461890,
+      "sha256": "9ea3ab68e6d0e065e20deedb70b2d78d54d11fd82ad17583fa8367a1436b9abd"
+    },
+    {
+      "id": "gurunanak",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "status": 200,
+      "bytes": 438061,
+      "sha256": "df35191f4ed8234df685144ba35c4f63ce816ae45998959f53f8051a788d8a3b"
+    },
+    {
+      "id": "delhi",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "status": 200,
+      "bytes": 1692774,
+      "sha256": "2b04a6c2ebe33164ac670664269e83ca06f71d8d79a711839f6defbb710394bf"
+    },
+    {
+      "id": "ananthapuram",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "status": 200,
+      "bytes": 422831,
+      "sha256": "512b1e363b11ae3c1372f50fd453d43925fac7b42cd83d90990505d0cc92fd2c"
+    }
+  ]
+}

@@ -9,6 +9,10 @@ const MANAGED_SECTION=`
 
 ## Service and next-step pages
 - [Suchitra, Hyderabad centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india): sourced location and real premises photos, published professional profiles, visit questions and life-first support. Confirm the appointment, professional and fees.
+- [Dilsukhnagar, Hyderabad centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india): Chaitanyapuri directions, real photos, family choice example and dated facility trail.
+- [Gurunanak Road, Vijayawada centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india): second-floor directions, real interiors and an illustrative getting-ready journey.
+- [South Extension, New Delhi centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india): E17 location and access questions, real frontage and first-play conversation.
+- [Ananthapuram centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india): Ashoknagar directions, real premises photos and an everyday participation example. For all centres confirm current professional, service, appointment and fees.
 - [Child development assessment](${PUBLIC}/speech-aba-autism-assessments): family priorities, present abilities, suitable professional assessment and a life-first next-step conversation. Fees, service and appointment are confirmed by the team.
 - [Speech therapy for children](${PUBLIC}/top-speech-therapy-center-india-proven-improvement-rate): everyday communication, professional assessment, family-guided practice, review and listed centres.
 - [Occupational therapy for children](${PUBLIC}/best-occupational-therapy-center-india-proven-improvement-rate): everyday routines, play, learning, self-care and participation connected to assessment and review.

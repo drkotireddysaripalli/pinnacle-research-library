@@ -1,4 +1,8 @@
-# Active page work order · Suchitra centre v131
+# Active page work order · four-centre batch v132
+
+**CURRENT:** 1 October 2026, Dilsukhnagar, Gurunanak Road/Vijayawada, South Extension/New Delhi and Ananthapuram. Frozen contracts and release gates: `reviews/CENTRE-BATCH-V132-WORK-ORDER-20261001.md`. Four complete original branded posters generated directly in ChatGPT; one reusable centre renderer and branch-specific content. Preserve all accepted bodies/common shell and migrate only four exact existing centre triggers. One concrete shared-handler fix adds the actual owned `ps_ga` analytics cookies while preserving session/auth bypasses.
+
+## Completed Suchitra contract · retained history
 
 **COMPLETED AND RELEASED:** source `55aeccb`; Worker `75019b39-bfbb-49e6-a3bb-d6e0c3863cde` at 100%. Public source/image/export, 21 shared shells, 11 protected byte controls and seven production responsive runs passed. Receipt: `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`. Do not reopen passed gates without a concrete defect or material source change.
 

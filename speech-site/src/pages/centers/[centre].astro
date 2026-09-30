@@ -1,0 +1,7 @@
+---
+import {centreDetails} from '../../data/centre-detail-content';
+import CentreDetailPage from '../../components/CentreDetailPage.astro';
+export function getStaticPaths(){return centreDetails.map(page=>({params:{centre:page.path.split('/').pop()},props:{id:page.id}}));}
+const {id}=Astro.props;
+---
+<CentreDetailPage id={id}/>

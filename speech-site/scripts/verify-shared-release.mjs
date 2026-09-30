@@ -43,6 +43,7 @@ for(const required of [
   ,'/pinnacle-pages-data/suchitra-machine.md'
   ,'/pinnacle-pages-data/suchitra-evidence.json'
   ,'/pinnacle-pages-data/suchitra-evidence.txt'
+  ,...['dilsukhnagar','gurunanak','delhi','ananthapuram'].flatMap(id=>['/pinnacle-pages-html/'+id+'.html','/pinnacle-pages-data/'+id+'-machine.md','/pinnacle-pages-data/'+id+'-evidence.json','/pinnacle-pages-data/'+id+'-evidence.txt'])
 ]) assert(required in speechInventory,`Missing Special Education release asset: ${required}`);
 
 assert(worker.includes("import {serveRootDiscovery} from './discovery-handler.mjs';"),'Root discovery handler must remain connected');

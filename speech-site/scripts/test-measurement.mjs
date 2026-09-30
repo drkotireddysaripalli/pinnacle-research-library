@@ -148,13 +148,15 @@ test('assessment calls and generic enquiries are consented fixed events',()=>{
 });
 
 test('centre-detail events omit the branch identity and query values under consent and GPC',()=>{
- const path='/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india';
+ for(const [id,slug] of [['suchitra','suchitra-hyderabad-telangana-india'],['dilsukhnagar','dilsukhnagar-hyderabad-telangana-india'],['gurunanak','gurunanak-road-vijayawada-ap-india'],['delhi','south-extension-newdelhi-india'],['ananthapuram','anathapuram-ap-india']]){
+ const path='/centers/best-autism-speech-aba-occupational-therapy-center-'+slug;
  for(const opts of [{},{gpc:true}]){
   const h=harness({path,...opts});h.click('hero-call','tel:+919100181181');assert.equal(h.events().length,0);
-  h.choose('accepted');h.click('hero-call','tel:+919100181181');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra');h.click('centre-share','https://www.pinnacleblooms.org'+path);
+  h.choose('accepted');h.click('hero-call','tel:+919100181181');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre='+id);h.click('centre-share','https://www.pinnacleblooms.org'+path);
   if(opts.gpc){assert.equal(h.events().length,0);continue;}
-  assert(h.events().length>=3);const body=JSON.stringify(h.events());for(const value of ['suchitra','centre=','service=','private-child-detail','secret'])assert(!body.includes(value));
+  assert(h.events().length>=3);const body=JSON.stringify(h.events());for(const value of [id,slug,'centre=','service=','private-child-detail','secret'])assert(!body.includes(value));
   assert(h.events().every(event=>event[2].page_location==='https://www.pinnacleblooms.org/centers'));
   const count=h.events().length;h.choose('declined');h.click('final-call','tel:+919100181181');assert.equal(h.events().length,count);
+ }
  }
 });
