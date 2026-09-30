@@ -1,44 +1,33 @@
-# Active page work order — ABA therapy and behavioural support
+# Active page work order — Autism Therapy integration hub
 
-30 September 2026 · **Released as v126.** The user moved the active implementation from the proposed assessment page to ABA. The assessment brief is preserved in `reviews/ASSESSMENT-PAGE-BRIEF-PRESERVED-20260930.md`. This file records the page contract fulfilled by the [v126 receipt](RELEASE-ABA-THERAPY-V126-20260930.md); apply the reusable `PINNACLE-PAGE-CREATION-WORK-ORDER.md` and `PORTAL-CONTEXT-AND-BUILD-MODALITY.md` to the next page.
+30 September 2026 · v127 candidate. The earlier ABA contract is retained in [its v126 release receipt](RELEASE-ABA-THERAPY-V126-20260930.md). The user selected Autism Therapy next and asked for a full all-therapies review **after** the therapy pages are complete. The implementation owner keeps page, code, build and deployment ownership; reviewers are read-only.
 
 ## One-page contract
 
-| Decision | ABA release answer |
+| Decision | Autism integration answer |
 |---|---|
-| Canonical | Retain the live `/best-aba-therapy-center-india-proven-improvement-rate` URL and existing permanent aliases. The historical slug is not evidence for an outcome rate or a “best” ranking. Do not change URL equity without a Search Console/backlink migration case. |
-| Parent question | “What may be happening in this everyday moment, and can my child be heard, make choices and participate more comfortably?” |
-| Promise | A suitable professional can explore communication, health, comfort and context with the family, decide whether behavioural support fits, connect a useful goal to everyday life, and review the response. Growing self-sufficiency and mainstream participation are the care direction, never a promised result. |
-| Primary action | `tel:+919100181181` for free staffed telephone guidance 24/7. The receiving team can help check a suitable professional, centre, appointment and current fees. Ordinary call charges may apply; a visit or therapy is separately priced. |
-| Secondary actions | Read one worked example, inspect claims beside their sources, select a published network centre, start service-prefilled enrolment, and share the page. Selecting a centre is not a booking. |
-| Evidence | BACB for an educational ABA definition; NICE for functional assessment and quality-of-life-linked review; AAP for family-centred safeguards; WHO for participation; Verify for Pinnacle's documented programme and the separate MD-5/BIS software scope. Neither regulatory source licenses ABA therapy or certifies a therapist. The 97% claim remains held off this service page. |
-| Operational fact | The 62 locations are a published network directory, not an ABA-service roster. Centre-by-centre service, professional, fee and appointment information remains call-to-check. No patient result, review rating or professional credential is invented. |
-| Shared boundary | `PageLayout.astro` mounts the one shared header and footer. This ABA release reorders sections in the shared mobile More menu, placing therapies ahead of the longer evidence list. The optional directory notice and coarse measurement allowlist are also shared-source changes; rebuild and check all managed routes. Preserve Verify, FSC, helpline, other managed pages, origin routing and Worker triggers. |
+| Canonical and intent | Keep `/autism-therapy` as the child-specific integration hub and its existing true aliases. It answers “Which supports could help my autistic child take part in more everyday life, and where do we begin?” The competing old `top-autism-therapy-services...` origin page is a separate search-estate conflict; assess its Search Console/backlink equity before rewriting or redirecting it. |
+| Parent promise | Start with the child’s strengths, preferences and one everyday moment. Growing self-sufficiency and mainstream participation set the direction, while assessment and professional judgement select all **relevant** therapies, school/family supports and health referrals. No fixed four-therapy bundle or guaranteed endpoint. |
+| First action | Call `tel:+919100181181`. The family describes one moment, Pinnacle helps check a suitable professional, centre, visit availability and current fees, then the family chooses the next step. Telephone guidance is free and staffed 24/7; appointments and therapy are separate. The owner’s team owns live call/enrolment operations. |
+| Proof and limits | WHO and NICE explain individualised, integrated support; CDC separates diagnosis from screening. Pinnacle’s programme direction is documented at Verify. MD-5/BIS are non-diagnostic software and quality-scope records, not autism-therapy approval, therapist credentials or an outcome promise. The 97% claim is held off this page. |
+| Local choice | The published 62-location network directory is **not** a confirmed autism-service specialist roster. The receiving team confirms service, professional, fee and appointment at the chosen centre. Structured data does not assert India-wide autism-service availability. |
+| Shared boundary | `PageLayout.astro` mounts the one common `SiteHeader.astro` and `SiteFooter.astro`, including the Verify gateway. This release changes Autism content and fixed coarse measurement placements; the shared header/footer source and all protected Verify/helpline/origin routes stay intact. |
 
-## Narrative contract and acceptance
+## Narrative and creative acceptance
 
-| Block | Family decision it answers | Visible answer and supporting treatment |
-|---|---|---|
-| Hero | “Is this about my child and can I act now?” | Everyday transition, request for a break, play/class participation; hopeful child-and-family illustration; immediate sticky and hero call to 9100 181 181; no outcome promise. |
-| Direct answer | “What is ABA?” | Plain educational definition, child and family goal, professional judgement, BACB source and its non-endorsement limit. |
-| Recognisable concerns | “Could this relate to what we see?” | Communication, transitions, learning/play and safety, with icons and no diagnosis-by-page. |
-| First conversation | “What happens if I call?” | Three steps: describe one moment, check the right starting point, decide together. An optional professional lens covers communication, health, environment, patterns, strengths and family/school information. Free-phone versus paid-visit boundary stays visible. |
-| Worked example | “What would support look like in real life?” | A child signals a need for a break; adults understand the context, agree a useful goal, adapt the environment and review comfort/participation. Four visible steps and a distinct family-child-professional image; no invented patient case. |
-| Why Pinnacle | “What changes beyond a technique?” | The child's life determines the purpose. Seven visible, connected stages run from understanding abilities to participation, with AbilityScore® and readiness as conditional decision support, not autonomous care or a unified metric. Link the documented paradigm and family-feedback source. |
-| Integrated people | “Who does what?” | Conditional roles of ABA, speech, occupational therapy, special education, family/school and relevant health professionals. Every child does not require every therapy. |
-| Review and evidence | “Can I trust the plan and technology?” | Family observations and child choices are reviewed; show MD-5, BIS and research status next to their exact limits. Professional sources explain principles without implying institutional endorsement. |
-| Centre decision and close | “Where can we go?” | Search the published locations with a prominent non-roster notice; answer eleven real FAQs; call, centre, enrolment and share actions lead to a human next step. |
+1. Hero: recognise communication, routines, learning, play and participation. Say no therapy choice is required before calling. Keep a readable phone action in the first phone screen.
+2. Direct answer: autism therapy is not one fixed programme. Begin with the everyday life the child wants to take part in and select relevant therapies, family/school supports and health referrals.
+3. First call: three visible decisions — share one moment, check a suitable next step, decide together. A longer professional lens is available through a keyboard-operable disclosure.
+4. Pinnacle difference: the child’s life chooses the goal, and only then the methods and people. The four therapy cards link to their distinct pages; no card implies every child needs it.
+5. Seven parent-facing stages: abilities/AbilityScore®, readiness and plan, relevant integrated support, family everyday practice, track and correct, reassess and repeat, and direction toward growing independence and participation. The seventh stage is a purpose, not a guarantee.
+6. Worked school morning: conditional speech, occupational, special-education and behavioural contributions, manageable family practice and teacher/family feedback. The example is not a patient story or a prescription.
+7. Trust: autism-specific MD-5/BIS/research cards beside scope limits, WHO/NICE/RCI context without endorsement, JSON/text/Markdown source map, 15 visible FAQs matching schema.
+8. Decision: honest centre notice, call, enrolment, internal therapy links, shared Verify footer and a complete 1200 × 630 social poster.
 
-## Creative contract
+Artwork is original fictional campaign art: a child-led hero choice, an attentive first conversation, selected life-path possibilities and one **complete generated social poster** with brand, service message, Verify address and `9100 181 181`. The existing school-morning image remains useful. Exact source paths and hashes are in `ASSET-SOURCES.md`. The page keeps all essential answers and claims in HTML.
 
-Four new assets were made with the built-in ChatGPT image-generation tool in this Codex task. The mother, capable child, full-sleeve white-coat professional and luminous pathway carry the emotion; official emblem assets in HTML carry exact site identity. The hero image recognises a child making a choice. The transition scene shows a break request and participation with peers. The review scene shows family observation reaching a professional. The distinct 1200×630 social poster includes the service name, communication/choice/participation message, Pinnacle Blooms Network identity and phone. See `ASSET-SOURCES.md`; social text is repeated in crawlable HTML. None portrays an actual patient, employee or verified outcome.
+## Release sequence and external checks
 
-The typography and colour palette must be inspected at 320/390 mobile, 768/1024 tablet and 1440 desktop; the image shape, heading, call, menu, seven stages, directory and footer must remain legible. Inspect the final 1200×630 image bytes and alt text, not just its metadata.
+Production build → focused route, content, privacy, shared-shell, responsive and HTML checks → source commit/push → stage the full Verify plus managed-page union → Worker dry run and binding/trigger review → Cloudflare deploy without `--route` → live canonical, alias, image bytes, JSON/text/Markdown, child sitemap and protected-route readback → one material IndexNow notification → release receipt commit/push → bounded cleanup.
 
-## Search, answer, measurement and release gates
-
-One title/H1/description and indexable canonical must answer ABA-intent plainly. The JSON-LD Service, FAQ (eleven visible answers), ImageObject, organisation/brand, breadcrumb and WebPage must match the page. The revised source map, text export, Markdown reading aid, child sitemap and relevant internal links must publish together. IndexNow is a discovery notification only. Crawl, indexing, ranking, AI citation, call connection and enrolment are separate observed states.
-
-CTA placements are coarse allowlisted identifiers only. Check call, centre, WhatsApp/share and service-prefilled enrolment actions with analytics consent enabled/disabled and Global Privacy Control. Never send child/family information or URL query strings into general analytics. Do not create dummy patient submissions.
-
-**Release sequence:** production build → responsive/visual/metadata/evidence/route/privacy tests → source commit and push → complete Verify + managed-page union stage and Worker dry run → deploy without `--route` override → production byte/routing/read-back → one material IndexNow submission → receipt commit and push. Record the current Worker version and rollback before mutation. The external gates after page publication are actual ABA-service availability, clinician review, real family comprehension, live-device/field speed and answered-call/visit/enrolment measurement. Do not award those gates without observations.
+After publication, real family comprehension, named clinical review, centre-specific staffing and availability, field Core Web Vitals, social-client preview, search indexing/AI citations and answered-call/visit/enrolment results remain separate observations. The later all-therapies review will compare shared navigation, cross-links, legacy competing pages and the full family journey across speech, occupational, ABA, special education and this autism hub.

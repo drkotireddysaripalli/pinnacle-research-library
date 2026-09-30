@@ -1,6 +1,6 @@
 {
   "edition": "2026-09-30",
-  "scope": "Four earlier OG replacements retain their reviewed URLs; ABA now builds directly from its 30 September source creative.",
+  "scope": "Three earlier OG replacements retain their reviewed URLs; ABA and Autism now build directly from their 30 September source creatives.",
   "assets": [
     {
       "id": "occupational",
@@ -24,19 +24,6 @@
       "width": 1200,
       "height": 630,
       "bytes": 254396,
-      "generator": "OpenAI Images API via approved skill CLI",
-      "model": "gpt-image-2"
-    },
-    {
-      "id": "autism",
-      "page": "/autism-therapy",
-      "target": "pinnacle-pages-assets/autism-therapy-share-20260929.BfhWtQ-h_Z1ptTnY.jpg",
-      "replacement": "images/autism.jpg",
-      "original": "revised-originals/autism.png",
-      "sha256": "c81c73fd169ecae3c3f557f340a8bd233e2988dfc00d29620ec95820ec7241b2",
-      "width": 1200,
-      "height": 630,
-      "bytes": 217328,
       "generator": "OpenAI Images API via approved skill CLI",
       "model": "gpt-image-2"
     },

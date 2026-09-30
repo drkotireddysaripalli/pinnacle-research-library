@@ -1,25 +1,25 @@
 import type { ServiceContent } from './service-content';
-import hero from '../assets/autism-life-journey-20260929.png';
-import pathway from '../assets/autism-integrated-support-20260929.png';
+import hero from '../assets/autism-hero-life-first-20260930.png';
+import pathway from '../assets/autism-selected-path-20260930.png';
 import { autismTherapyPath, url } from './site';
 
 export const autismEnquiry=url('/enroll-autism-speech-aba-therapies-india?service=autism');
 
 const stages = [
   ['measure','Understand strengths, abilities and support needs','Begin with what the child already does, prefers and communicates, alongside the moments that need support.'],
-  ['compass','Agree an everyday-life direction','Choose priorities with the family around communication, routines, learning, play, safety and participation.'],
-  ['people','Select relevant contributions','Bring in only the professionals and supports indicated by the child-specific picture.'],
-  ['plan','Build one connected plan','Give goals, methods, people and review points one shared direction rather than separate therapy lists.'],
+  ['compass','Forecast readiness and agree a child-specific plan','Choose everyday priorities with the family and use readiness information alongside professional judgement.'],
+  ['people','Bring in the support this child needs','Select relevant therapies, educational support or health review; no fixed bundle is required.'],
   ['home','Practise in meaningful moments','Use manageable, agreed supports in suitable home, school and community routines.'],
-  ['track','Track, review and correct','Ask what the child could use, where it worked, what support remained and what should change.'],
-  ['loop','Reassess and continue','Update the plan as abilities, needs, contexts and participation change.']
+  ['track','Track progress and correct the plan','Ask what the child could use, where it worked, what support remained and what should change.'],
+  ['loop','Reassess and repeat as needed','Update abilities, readiness and the plan as the child’s life and circumstances change.'],
+  ['sun','Work toward growing independence and participation','Keep school readiness, self-sufficiency and mainstream inclusion as directions shaped by the individual child.']
 ];
 
 export const autismTherapyContent: ServiceContent = {
   id:'autism-therapy', path:autismTherapyPath, label:'Autism Therapy',
   name:'Autism therapy and developmental support for children', type:'Child-specific coordinated developmental support',
   title:'Autism Therapy & Developmental Support for Children | Pinnacle Blooms',
-  description:'Child-specific autism support for communication, routines, learning, play and participation. Explore the life-first pathway, find a centre or call 9100 181 181.',
+  description:'Autism therapy for children: understand your child’s strengths, choose the relevant support and build toward everyday independence and participation. Call 9100 181 181.',
   enquiry:{url:autismEnquiry,label:'Start my child’s first conversation',mobileLabel:'First conversation'},
   guidanceNote:'Free guidance, 24/7. You do not need to choose a therapy before you call.',
   discover:{label:'See how the connected pathway works',href:'#pinnacle-difference'},
@@ -35,15 +35,15 @@ export const autismTherapyContent: ServiceContent = {
     'https://www.cdc.gov/autism/diagnosis/index.html',
     'https://rehabcouncil.nic.in/norms-guidelines/'
   ]),
-  image:{source:hero,alt:'An Indian child communicates and plays with family, manages an everyday routine, participates in class and plays with peers, linked by a colourful developmental pathway.',caption:'See the whole child. Connect support with communication, routines, learning, play and participation.'},
+  image:{source:hero,alt:'An Indian child makes a picture-card choice while his mother and a child-development professional listen; a colourful path connects home and participation with peers.',caption:'Begin with one child and one everyday goal; select only the support that fits.'},
   hero:{
     heading:'See your whole child.',
     emphasis:'Build abilities for everyday life.',
     lead:'Communicate. Manage daily routines. Learn. Play. Take part.',
-    copy:'Autism can affect different children in different ways. Tell us what your child enjoys, what feels difficult and what you want to become more possible. We bring family knowledge, child-specific assessment and the right professional contributions into one life-first direction.',
+    copy:'You do not need to choose a therapy before you call. Tell us what your child enjoys and one moment you want to make more possible. Together, we can identify a suitable first professional step and connect only the support your child needs to a life-first direction.',
     moments:[{icon:'voice',label:'Communicate needs and choices'},{icon:'home',label:'Navigate everyday routines'},{icon:'people',label:'Learn, play and participate'}]
   },
-  pathway:{stages,image:pathway,alt:'An Indian child and family at the centre of connected communication, daily-routine, learning and participation support, with the child joining peers.',caption:'Distinct professional contributions, family-guided practice and review connected to one child-specific direction.'},
+  pathway:{stages,image:pathway,alt:'An Indian child, mother and child-development professional consider one goal; a luminous path shows possible communication, home-routine and peer-play moments.',caption:'The child’s goal guides which contributions are relevant. The family and professionals review what becomes usable in life.'},
   concerns:[
     {icon:'voice',title:'Communication',copy:'Understanding, expressing needs, making choices, asking for help and sharing ideas may need an accessible communication approach.'},
     {icon:'home',title:'Everyday routines',copy:'Dressing, eating, sleep, transitions, hygiene or preparing for school may need child-specific support and environmental changes.'},

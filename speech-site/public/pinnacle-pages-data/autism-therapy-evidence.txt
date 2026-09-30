@@ -1,5 +1,5 @@
 Autism Therapy and Developmental Support for Children — claims and sources
-Checked: 29 September 2026
+Checked: 30 September 2026
 Canonical: https://www.pinnacleblooms.org/autism-therapy
 
 1. Autism diversity and individual support
@@ -9,7 +9,7 @@ Limit: no WHO endorsement of Pinnacle and no determination of an individual plan
 
 2. Individual and multidisciplinary planning
 Sources: https://www.nice.org.uk/guidance/cg170/chapter/Recommendations and https://www.nice.org.uk/guidance/cg128/chapter/Recommendations
-Use: consider strengths, communication, health, daily living, sensory conditions, learning, environment and family context.
+Use: consider strengths, communication, health, daily living, sensory conditions, learning, environment and family context; select only relevant contributions rather than a fixed therapy bundle.
 Limit: no compulsory therapy bundle and no proof of an individual outcome.
 
 3. Diagnosis boundary
@@ -19,7 +19,7 @@ Limit: a call, form or PinnacleAI record does not diagnose autism.
 
 4. Pinnacle life-first direction
 Source: https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html
-Use: connect abilities, goals, relevant people, everyday practice and review with the child’s wider life.
+Use: connect abilities, readiness, goals, relevant people, everyday practice, tracking, correction and reassessment with the child’s wider life.
 Limit: no guarantee of speech, independence, school admission, mainstream inclusion or a particular result.
 
 5. PinnacleAI regulatory scope

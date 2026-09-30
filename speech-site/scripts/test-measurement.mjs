@@ -121,6 +121,20 @@ test('rendered ABA actions emit only coarse consented events',()=>{
  const count=h.events().length;h.choose('declined');for(const [placement,href] of links)h.click(placement,href);assert.equal(h.events().length,count);
  const blocked=harness({path:'/best-aba-therapy-center-india-proven-improvement-rate',gpc:true});blocked.choose('accepted');for(const [placement,href] of links)blocked.click(placement,href);assert.equal(blocked.events().length,0);
 });
+test('rendered Autism first-call actions emit only coarse consented events',()=>{
+ const html=fs.readFileSync('dist/autism-therapy.html','utf8');
+ const links=[...html.matchAll(/<a\b[^>]*>/g)].map(([tag])=>[tag.match(/\bdata-cta="(autism-[^"]+)"/)?.[1],tag.match(/\bhref="([^"]+)"/)?.[1]]).filter(([placement,href])=>placement&&href).map(([placement,href])=>[placement,href.replaceAll('&amp;','&')]);
+ const placements=new Set(links.map(([placement])=>placement));
+ for(const expected of ['autism-first-call','autism-first-enquiry'])assert(placements.has(expected),`Autism action ${expected} is absent from rendered HTML`);
+ const h=harness({path:'/autism-therapy'});
+ for(const [placement,href] of links)h.click(placement,href);
+ assert.equal(h.events().length,0);
+ h.choose('accepted');for(const [placement,href] of links)h.click(placement,href);
+ assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','enquiry_link_click']);
+ const serialized=JSON.stringify(h.events());for(const privateValue of ['centre=','service=','text=','private-child-detail'])assert(!serialized.includes(privateValue));
+ const count=h.events().length;h.choose('declined');for(const [placement,href] of links)h.click(placement,href);assert.equal(h.events().length,count);
+ const blocked=harness({path:'/autism-therapy',gpc:true});blocked.choose('accepted');for(const [placement,href] of links)blocked.click(placement,href);assert.equal(blocked.events().length,0);
+});
 test('centre directory actions stay coarse and never export centre names, hashes or search terms',()=>{
  const h=harness({path:'/centers'});h.choose('accepted');
  for(const placement of ['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation'])h.click(placement,'https://www.pinnacleblooms.org/centers#centre-suchitra');

@@ -9,12 +9,17 @@ import CentreDirectory from './CentreDirectory.astro';
 import EvidenceLinks from './EvidenceLinks.astro';
 import { Image } from 'astro:assets';
 import emblem from '../assets/pinnacle-emblem-official.png';
-import integratedSupport from '../assets/autism-integrated-support-20260929.png';
+import firstConversation from '../assets/autism-first-conversation-20260930.png';
 import schoolMorning from '../assets/autism-school-morning-20260929.png';
-import shareCard from '../assets/autism-therapy-share-20260929.jpg';
+import shareCard from '../assets/autism-social-integrated-20260930.png';
 import { autismTherapyContent as content, autismEnquiry } from '../data/autism-therapy-content';
-import { proofCards } from '../data/speech';
 import { phone, url } from '../data/site';
+
+const proofCards = [
+  {tag:'Licensed software scope',title:'Class B · MD-5',text:'PinnacleAI GPT-OS v1.0.0 is licensed as non-diagnostic developmental-support software for children aged 0–12. This is software scope, not an autism-therapy result.',ref:'MFG/MD/2026/000248',link:'/verify/evidence/records/md5.html',label:'Read the licence and scope'},
+  {tag:'Named software and quality scope',title:'BIS · IS 23485:2019',text:'The BIS record names the documented device and modules. It does not certify an individual therapist or guarantee how a child will progress.',ref:'MD/L-2026029599 · schedule',link:'/verify/evidence/records/bis.html',label:'Read the BIS record and limits'},
+  {tag:'Research source trail',title:'Methods. Findings. Context.',text:'Explore Pinnacle’s original publications and source records with their study design, cohort, publication status and limits visible.',ref:'Original sources · publication status',link:'/verify/evidence/research-library.html',label:'Explore the research library'}
+];
 
 const conversationLens = [
   ['sun','Strengths and interests','What does your child enjoy, seek out, understand and already do?'],
@@ -24,25 +29,30 @@ const conversationLens = [
   ['heart','Comfort and health','Could pain, sleep, feeding, hearing, anxiety, sensory conditions or another health need matter?'],
   ['people','Family priorities','What change would make daily life more possible for your child and family?']
 ];
+const firstCallSteps = [
+  ['people','Tell us one moment','Share what your child enjoys, what is difficult and what you want to make more possible.'],
+  ['shield','Check a suitable next step','The team can check the relevant professional, centre, visit availability and current fees.'],
+  ['compass','Decide together','After the options are explained, your family chooses whether and how to continue.']
+];
 const disciplines = [
-  ['voice','Speech and communication','Needs, choices, ideas, understanding and interaction through an accessible method.'],
-  ['home','Occupational therapy','Everyday routines, play, self-care, sensory-motor access and participation.'],
-  ['heart','ABA / behavioural support','Understand patterns and develop useful, acceptable alternatives when indicated.'],
-  ['book','Special Education','Learning access, educational abilities and classroom participation.'],
+  ['voice','Speech and communication','Needs, choices, ideas, understanding and interaction through an accessible method.','/top-speech-therapy-center-india-proven-improvement-rate'],
+  ['home','Occupational therapy','Everyday routines, play, self-care, sensory-motor access and participation.','/best-occupational-therapy-center-india-proven-improvement-rate'],
+  ['heart','ABA / behavioural support','Understand patterns and develop useful, acceptable alternatives when indicated.','/best-aba-therapy-center-india-proven-improvement-rate'],
+  ['book','Special Education','Learning access, educational abilities and classroom participation.','/best-special-education-center-call-9100181181'],
   ['people','Family and school','Priorities and observations from the child’s daily settings, shared with consent.'],
   ['shield','Relevant health professionals','Hearing, pain, sleep, feeding, mental health or other factors when indicated.']
 ];
 const morningSteps = [
   ['Start with the family’s goal','Getting ready for school becomes more understandable and manageable.'],
-  ['Make communication accessible','The child can ask for help, make a choice or request a break through a suitable method.'],
-  ['Look at the activity and environment','Dressing, packing, sensory demands, timing and the physical setting are considered.'],
-  ['Make the sequence easier to use','Visual, spoken or hands-on support may help the child understand what comes next.'],
-  ['Understand transitions respectfully','Predictability, communication and acceptable alternatives are considered before changing behaviour.'],
+  ['Make communication accessible','When relevant, speech and communication support helps the child ask for help, choose or request a break through a suitable method.'],
+  ['Look at the activity and environment','When relevant, occupational support considers dressing, packing, sensory demands and the physical setting.'],
+  ['Make learning accessible','When relevant, special-education support helps the child understand the sequence and join a classroom activity.'],
+  ['Understand transitions respectfully','Behavioural support, when indicated, considers predictability, communication and acceptable alternatives before changing behaviour.'],
   ['Practise only what is manageable','The family uses agreed support in natural moments without turning home into a clinic.'],
   ['Review and correct','The team asks what the child could use, where it worked and how much support remained.']
 ];
 ---
-<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms autism support connects communication, routines, learning, play and participation around the child and family. Call 9100 181 181." imageCaption="Child-specific autism support connected to everyday life at Pinnacle Blooms Network." shareImage={shareCard} publishedOn="2026-09-29" updatedOn="2026-09-29" enquiry={content.enquiry}>
+<PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} serviceAreaServed={null} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms Autism Therapy: one child, one life-first direction, with relevant support and 9100 181 181." imageCaption="A family-led, child-specific direction for communication, routines, learning and participation." shareImage={shareCard} shareVersion="2026-09-30-autism-life-first" publishedOn="2026-09-29" updatedOn="2026-09-30" enquiry={content.enquiry}>
   <HeroSlider content={content} />
   <ActionStrip focused firstLabel="First conversation" firstHref="#first-conversation" />
 
@@ -50,22 +60,24 @@ const morningSteps = [
     <div class="fit-heading"><p class="eyebrow">Begin with your child—not a therapy list</p><h2 id="autism-fit-title">What would you like<br/><em>to become more possible?</em></h2></div>
     <p class="occupational-intro">Different children experience autism differently. Start with your child’s strengths, preferences and everyday life, then understand where support may help.</p>
     <div class="concern-grid">{content.concerns.map(concern=><article><span class="concern-icon"><Icon name={concern.icon} size={30}/></span><h3>{concern.title}</h3><p>{concern.copy}</p></article>)}</div>
-    <aside class="aba-direct-answer autism-direct-answer"><Icon name="compass" size={36}/><div><p class="eyebrow">A direct answer</p><h3>Autism therapy is not one fixed programme.</h3><p>Depending on assessment, a child may benefit from support for communication, play, learning, everyday routines, sensory-motor participation or behaviours affecting daily life. Relevant goals and professionals should be chosen for the individual child with the family. Every autistic child does not need every therapy.</p></div><a href="https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders">Read the WHO autism fact sheet ↗</a></aside>
+    <aside class="aba-direct-answer autism-direct-answer"><Icon name="compass" size={36}/><div><p class="eyebrow">A direct answer</p><h3>Autism therapy is not one fixed programme.</h3><p>We start with the everyday life your child wants to take part in. Depending on assessment, we bring together only the therapies, family and school supports, and health referrals that fit. Communication, play, learning, routines, sensory-motor participation and behaviour may each matter differently. Every autistic child does not need every therapy.</p></div><a href="https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders">Read the WHO autism fact sheet ↗</a></aside>
     <p class="source-note">WHO describes autism as diverse and support needs as individual and evolving. WHO does not endorse Pinnacle or determine an individual child’s plan.</p>
     <div class="assessment-route"><a href="#first-conversation"><Icon name="clock"/>First conversation</a><a href="#everyday-example"><Icon name="people"/>See one connected example</a><a href="#centres"><Icon name="pin"/>Find a centre</a></div>
   </section>
 
   <section class="section aba-first autism-first" id="first-conversation" aria-labelledby="autism-first-title"><div class="wrap">
     <div class="split-heading"><div><p class="eyebrow">Bring one everyday moment</p><h2 id="autism-first-title">You do not need to assemble<br/><em>the team alone.</em></h2></div><p>Tell us what your child enjoys, what feels difficult and what you hope can become more possible. We listen first, consider the wider picture and help identify a suitable professional next step.</p></div>
-    <div class="aba-lens-grid">{conversationLens.map(([icon,title,text])=><article><span><Icon name={icon} size={27}/></span><h3>{title}</h3><p>{text}</p></article>)}</div>
+    <ol class="aba-first-steps">{firstCallSteps.map(([icon,title,text],i)=><li><span>{i+1}</span><Icon name={icon} size={26}/><h3>{title}</h3><p>{text}</p></li>)}</ol>
+    <div class="aba-first-actions"><a class="button primary" href={phone.href} data-cta="autism-first-call"><Icon name="phone"/>Call {phone.display}</a><a class="button outline" href={autismEnquiry} data-cta="autism-first-enquiry">Start my child’s first conversation <Icon name="arrow"/></a></div>
+    <figure class="autism-first-visual"><Image src={firstConversation} widths={[480,800,1200,1680]} sizes="(min-width:1360px) 1280px, calc(100vw - 36px)" width={1732} height={918} format="webp" quality={80} loading="lazy" decoding="async" alt="An Indian child uses a picture card to share a choice with his mother and a child-development professional; home, school and play moments appear along a colourful pathway."/><figcaption>One family observation can start a useful conversation. A professional helps decide what to understand next.</figcaption></figure>
+    <details class="autism-lens-details"><summary>What might a professional want to understand?</summary><div class="aba-lens-grid">{conversationLens.map(([icon,title,text])=><article><span><Icon name={icon} size={27}/></span><h3>{title}</h3><p>{text}</p></article>)}</div></details>
     <div class="technology-bridge"><Icon name="shield" size={30}/><p><strong>A clear boundary.</strong> A call, online form or PinnacleAI record does not diagnose autism. Diagnosis requires an appropriately qualified diagnostic pathway. Sudden changes, loss of abilities, pain or health concerns need appropriate medical or qualified professional review.</p></div>
-    <div class="aba-first-actions"><a class="button primary" href={phone.href}><Icon name="phone"/>Call {phone.display}</a><a class="button outline" href={autismEnquiry}>Start my child’s first conversation <Icon name="arrow"/></a></div>
   </div></section>
 
   <section class="section wrap difference autism-difference" id="pinnacle-difference" aria-labelledby="autism-difference-title">
-    <div class="story-heading"><p class="eyebrow">Pinnacle’s life-first direction</p><h2 id="autism-difference-title">Four therapies do not make one plan.<br/><em>One shared direction does.</em></h2><p>Bricks matter because they form the home a family will live in. Therapy techniques matter because they help a child communicate, learn, participate and do more in everyday life. Your child’s life gives each relevant contribution its purpose.</p></div>
+    <div class="story-heading"><p class="eyebrow">Pinnacle’s life-first direction</p><h2 id="autism-difference-title">Your child’s life sets the direction.<br/><em>The right support follows.</em></h2><p>Bricks matter because they form the home a family will live in. Likewise, a therapy technique matters when it helps your child communicate, learn, participate or do more in everyday life. We choose the relevant contributions around that purpose; there is no compulsory four-therapy bundle.</p></div>
     <p class="life-purpose-line">The life we work toward: <strong>growing self-sufficiency · mainstream participation · a wonderful life.</strong></p>
-    <div class="aba-discipline-grid autism-disciplines">{disciplines.map(([icon,title,text])=><article><span><Icon name={icon} size={28}/></span><h3>{title}</h3><p>{text}</p></article>)}</div>
+    <div class="aba-discipline-grid autism-disciplines">{disciplines.map(([icon,title,text,href])=><article><span><Icon name={icon} size={28}/></span><h3>{title}</h3><p>{text}</p>{href&&<a class="text-link" href={url(href)}>How this support can help <Icon name="arrow" size={16}/></a>}</article>)}</div>
     <p class="autism-selection-note"><strong>A child may need one contribution, several or a different route.</strong> Assessment determines relevance. Pinnacle does not prescribe every therapy to every child.</p>
     <LifePath pathway={content.pathway}/>
     <div class="special-paradigm-links"><a class="text-link" href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Read the documented life-first approach <Icon name="arrow"/></a><EvidenceLinks group="practice" label="See how goals, practice and feedback connect"/></div>
@@ -97,7 +109,7 @@ const morningSteps = [
     <p class="source-note source-downloads"><a href="/pinnacle-pages-data/autism-therapy-evidence.txt">Claims and sources for this page</a> · <a href="/pinnacle-pages-data/autism-therapy-evidence.json">Download source map (JSON)</a></p>
   </div></section>
 
-  <CentreDirectory pagePath={content.path} enquiryTarget={autismEnquiry}/>
+  <CentreDirectory pagePath={content.path} enquiryTarget={autismEnquiry} serviceNotice="These 62 entries are published Pinnacle network locations, not a confirmed autism-therapy specialist roster. Call 9100 181 181 to check the suitable professional, current service, appointment and fees at a particular centre before travelling."/>
 
   <section class="section wrap faq-section" id="questions" aria-labelledby="autism-faq-title"><div><p class="eyebrow">Before you decide</p><h2 id="autism-faq-title">Clear answers.<br/><em>A child-specific first step.</em></h2><a class="text-link" href="https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders">Autism and individual support · WHO ↗</a></div><div>{content.faqs.map(f=><details><summary>{f.question}<span aria-hidden="true">+</span></summary><p>{f.answer}</p></details>)}</div></section>
 
@@ -107,6 +119,13 @@ const morningSteps = [
 <style>
   .autism-selection-note{max-width:980px;margin:28px auto 34px;padding:20px 24px;border-left:5px solid #008f83;background:#f2fcfa;color:#14274e;font-size:1.04rem;line-height:1.72}
   .autism-direct-answer{border-top-color:#008f83}
+  .autism-first-visual{margin:30px 0 38px;overflow:hidden;border-radius:32px;background:#f4fbfa;box-shadow:0 20px 54px rgba(13,40,78,.12)}
+  .autism-first-visual img{display:block;width:100%;height:auto;aspect-ratio:1732/918;object-fit:cover}
+  .autism-first-visual figcaption{padding:13px 22px 16px;color:#214162;font-size:.94rem;line-height:1.5;background:#fff}
+  .autism-lens-details{margin:0 0 26px;padding:0 18px;border:1px solid #dcece8;border-radius:18px;background:#fff}
+  .autism-lens-details summary{padding:18px 4px;color:#14274e;font-weight:700;cursor:pointer}
+  .autism-lens-details .aba-lens-grid{margin:4px 0 18px}
+  .autism-disciplines .text-link{display:inline-flex;align-items:center;gap:5px;margin-top:12px;font-size:.94rem}
   .autism-story img{background:#fff}
-  @media(max-width:760px){.autism-selection-note{margin:20px 0 26px;padding:17px 18px}.autism-disciplines{margin-top:24px}}
+  @media(max-width:760px){.autism-selection-note{margin:20px 0 26px;padding:17px 18px}.autism-disciplines{margin-top:24px}.autism-first-visual{margin:22px 0 28px;border-radius:22px}.autism-first-visual img{aspect-ratio:4/3;object-position:63% center}.autism-first-visual figcaption{padding:12px 16px 15px}}
 </style>
