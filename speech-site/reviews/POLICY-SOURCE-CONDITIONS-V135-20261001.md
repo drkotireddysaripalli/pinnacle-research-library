@@ -1,6 +1,6 @@
 # Policy source decisions retained for review
 
-The presentation rebuild preserves all existing legal-body words, tables, authored image references and printed revisions. It does not establish legal approval, enforceability, regulatory compliance or functioning account/reporting/payment services. Source captures are in ignored audits/policy-source-v135-20261001. Fourteen main-host pages are candidates; the separate books billing destination retains its host.
+The presentation rebuild preserves all existing legal-body words, tables, authored image references and printed revisions. It does not establish legal approval, enforceability, regulatory compliance or functioning account/reporting/payment services. Source captures are in ignored audits/policy-source-v135-20261001. Fourteen main-host presentations are released in v135; legal source decisions remain open; the separate books billing destination retains its host.
 
 ## Substantive decisions requiring the owner’s legal/operational review
 

@@ -1,0 +1,44 @@
+{
+  "at": "2026-09-30T22:48:02.853Z",
+  "release": "v135",
+  "sourceCommit": "13df204",
+  "stage": "release-policy-life-v135-ready-20261001",
+  "workerVersion": "c6fecfac-2d7a-4983-80b8-f3cf26b7279a",
+  "deploymentId": "94949768-33c2-4ad7-a08e-5aa166c1199a",
+  "publishedAt": "2026-09-30T22:39:00.686543Z",
+  "percentage": 100,
+  "managedPages": 45,
+  "newPolicyPresentations": 14,
+  "newLifePages": 2,
+  "priorBodyChecks": {
+    "unchanged": 21,
+    "identityHrefOnly": 8
+  },
+  "routes": {
+    "before": 155,
+    "after": 171,
+    "unchangedPrior": 155,
+    "newExactHandlers": 16
+  },
+  "bindingsUnchanged": 4,
+  "verifyAssets": 634,
+  "managedInventoryAssets": 1222,
+  "workerSha256": "f54b65ca0478b5bd320281c8af33b9e5660db12df41af776f5db68947ec20cbc",
+  "rollback": {
+    "workerVersion": "8a412c3a-2531-40c3-a677-0b8ba40faa7d",
+    "removeOnlyCreatedRouteIds": "deployment/policy-life-routes-created-v135-20261001.json"
+  },
+  "receipts": [
+    "policy-life-responsive-local-v135-20261001.json",
+    "policy-life-responsive-live-v135-20261001.json",
+    "policy-life-public-v135-20261001.json",
+    "policy-life-exports-v135-20261001.json",
+    "policy-life-cloudflare-before-v135-20261001.json",
+    "policy-life-cloudflare-after-v135-20261001.json",
+    "indexnow-policy-life-v135-20261001.json"
+  ],
+  "legalWordingApproved": false,
+  "authOrPaymentSubmitted": false,
+  "physicalIOSTested": false,
+  "indexingOrRankOrCitationsEstablished": false
+}

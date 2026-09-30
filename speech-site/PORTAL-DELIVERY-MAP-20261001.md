@@ -1,20 +1,26 @@
 # Pinnacle portal — complete delivery map
 
-1 October 2026 · v134a live, v133 design with common navigation corrections · Main owner builds and releases; independent reviewers read only
+1 October 2026 · v135 live, v133 common design retained · Main owner builds and releases; independent reviewers read only
 
 ## Current position
 
-**29 managed public pages are live: 17 priority pages, three decision guides and nine centre pages.** The common header and common footer, with Verify inside the footer, retain the v133 design and use the v134a navigation corrections across those pages. The current served union is v134a; the four newest centre bodies are v134. The exact 29 destinations and their individual remaining conditions are in `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. Their accepted narratives stay intact; a new improvement needs a concrete audience job or verified defect.
+**CURRENT V135 — RELEASED:** v135 publishes 14 policy presentations and two distinct life-outcome pages, with the common header/footer on all 45 managed pages. Source 13df204 was pushed before Worker c6fecfac-2d7a-4983-80b8-f3cf26b7279a served 100% at 2026-09-30T22:39:00.686543Z. All 45 owned public HTML/common shells, 60 production responsive cases, 58 source/reading exports and 14 protected controls passed. Epass has only its origin-generated last-modified timestamp normalised against the saved page. All 155 previous routes and four bindings remain; 16 prefix triggers were added with exact public-page handlers. One 16-URL IndexNow notification returned 200. Presentation release retains original policy words/punctuation/order and printed dates; it does not settle the separately recorded legal source decisions.
 
-The 62-entry centre register contains 60 standalone profiles and two contact-page sections. Nine profiles have been rebuilt. **51 standalone profiles remain: eight source-prepared next, then 43 further profiles.** Kadapa has a documented illustration-led alternative among the latter. Jubilee Hills and USA remain section-only decisions, not invented new URLs.
+**Work map:** 60 named linked page/entry items; 16 presentation items released, 44 packages remaining. Each remaining family has source/delivery requirements in PORTAL-LINKED-PAGE-WORK-ORDER-20261001.md. The 98-row generated execution view is 45 managed routes plus 51 pending centres and 2 section decisions. These are distinct scopes. The historical 59,082-URL observation keeps its 30 September timestamp. The eight prepared centre contracts/poster prompts are checkpointed, not discarded or deployed. Next independent source/narrative work: About/Leadership/framework; then staff, research, remaining services, resources and general navigation. Legal clauses, actual login/payment behaviour and books billing retain explicit decision/contract dependencies.
+
+### Prior v134a position and retained centre/source register
+
+**At v134a, 29 managed public pages were live: 17 priority pages, three decision guides and nine centre pages.** The common header and common footer, with Verify inside the footer, retain the v133 design and use the v134a navigation corrections across those pages. At that release the served union was v134a; the four newest centre bodies were v134. Those 29 destinations remain within the current 45-route ledger in `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`. Their accepted narratives stay intact; a new improvement needs a concrete audience job or verified defect.
+
+The 62-entry centre register contains 60 standalone profiles and two contact-page sections. Nine profiles have been rebuilt. **51 standalone profiles remain: eight source-prepared and checkpointed, plus 43 further profiles.** Kadapa has a documented illustration-led alternative among the latter. Jubilee Hills and USA remain section-only decisions, not invented new URLs.
 
 The wider sitemap register retains its **30 September** observation: 23 sitemap documents, 21 URL sets and **59,082 distinct exact URLs**. That inventory assigns a work state and next condition to every URL; it does not assert each body was reviewed, indexed or needs rebuilding. Raw child-associated route lists remain private. This update reconciles release/navigation states without repeating the estate crawl.
 
-## Page work in execution order
+## Retained page/centre requirements
 
 | Order | Page group / destination | State | Work and completion gate |
 |---|---|---|---|
-| 1 | Common header/footer/Verify | **v133 design / v134a links; all 29** | Shared source, mobile authority links and native disclosures. The 119-destination audit found nine missing fragments; all nine shared links are corrected and publicly checked. All 29 accepted bodies remain. |
+| 1 | Common header/footer/Verify | **v133 design / v135 links; all 45** | Shared source, mobile authority links and native disclosures. The 119-destination audit found nine missing fragments; all nine shared links are corrected and publicly checked. All 29 accepted bodies remain. |
 | 2 | Nandyala | **v134 released** | Exact canonical, second-floor arrival, getting-ready example, matched premises, original poster, selected enquiry and source exports passed production checks. |
 | 2 | Ongole | **v134 released** | Exact canonical, family-table choice/communication example, frontage/interior, original poster and sourced page package passed production checks. |
 | 2 | Tirupati | **v134 released** | Exact canonical, picture-book example, textual arrival and eligible interior. Google-watermarked exterior remains excluded for possible future reuse. |
@@ -69,9 +75,9 @@ Root sitemap and robots-advertised children are the existing discovery graph. `/
 
 ## Where the complete records live
 
-- `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`: all 29 managed destinations, their audience jobs, body release and next condition.
+- `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`: all 45 managed destinations, their audience jobs, body release and next condition.
 - `reviews/CENTRE-PAGE-CONTINUATION-QUEUE-20260930.csv`: all 62 location records, current sources and route-specific conditions.
-- `reviews/PORTAL-DELIVERY-QUEUE-20261001.csv`: generated 82-row execution view: 29 managed pages plus 51 pending profiles and two section decisions. It derives from the detailed page and centre ledgers; it is not a second factual source.
+- `reviews/PORTAL-DELIVERY-QUEUE-20261001.csv`: generated98-row execution view:45 managed pages plus 51 pending profiles and two section decisions. It derives from the detailed page and centre ledgers; it is not a second factual source.
 - `reviews/NEXT-CENTRE-BATCH-SOURCES-V135-20261001.json`: eight next source/media/HFR/enquiry contracts, not built.
 - `reviews/CENTRE-BATCH-V135-WORK-ORDER-20261001.md`: complete individual narrative/creative/implementation/release requirements, including actual HFR source handling and the remaining centre-body identity-anchor correction.
 - `reviews/CENTRE-SOURCE-CONDITIONS-20261001.json`: exact field/media conditions and useful alternatives for other centres.
@@ -80,8 +86,14 @@ Root sitemap and robots-advertised children are the existing discovery graph. `/
 - `reviews/WHOLE-PORTAL-SITEMAP-SUMMARY-20260930.json`: dated population plus current release-state reconciliation.
 - `reviews/PORTAL-NAVIGATION-REGISTER-20260930.csv`: complete source-collected menu/card/direct/overview/context/search destinations, including their origins and conditions.
 - `reviews/PORTAL-NAVIGATION-DESTINATION-AUDIT-20261001.json`: original bounded audit of 119 paths and 54 fragments; nine missing section links, no HTTP failures.
-- `RELEASE-NAVIGATION-V134A-20261001.md`: the nine common-source corrections and verified current union. Current navigation collection is 256 occurrences / 215 distinct destinations / 118 same-domain paths.
+- `RELEASE-NAVIGATION-V134A-20261001.md`: the nine common-source corrections and verified current union. Current navigation collection is 258 occurrences / 215 distinct destinations / 120 same-domain paths.
 - Ignored `audits/whole-portal-register-20260930/whole-route-register.{json,csv}`: 59,082 exact URL records; private raw inventory, not published child-associated data.
 - Workspace `work/verify-visibility/QUEUE.md`: canonical off-page authority ledger; publication and indexing/citation/endorsement states remain separate.
 
-**Next implementation package is the eight prepared centres, delivered with individual narrative and creative attention.** Common shell is closed; product examples and wider estate investigations remain separate executable work. No completed page is reopened for a cosmetic score or an unchanged pending state.
+**Next independent package:About/Leadership/framework source contracts and distinct audience narratives. Eight prepared centres retain their checkpoint and individual creative/source requirements.** Common shell is closed; product examples and wider estate investigations remain separate executable work. No completed page is reopened for a cosmetic score or an unchanged pending state.
+
+## Published v135 and current source of truth
+
+v135 publishes 14 policy presentations and two distinct life-outcome pages, with the common header/footer on all 45 managed pages. Source 13df204 was pushed before Worker c6fecfac-2d7a-4983-80b8-f3cf26b7279a served 100% at 2026-09-30T22:39:00.686543Z. All 45 owned public HTML/common shells, 60 production responsive cases, 58 source/reading exports and 14 protected controls passed. Epass has only its origin-generated last-modified timestamp normalised against the saved page. All 155 previous routes and four bindings remain; 16 prefix triggers were added with exact public-page handlers. One 16-URL IndexNow notification returned 200. Presentation release retains original policy words/punctuation/order and printed dates; it does not settle the separately recorded legal source decisions.
+
+Exact finite60work:PORTAL-LINKED-PAGE-WORK-ORDER-20261001.md; register:reviews/LINKED-PAGE-WORK-REGISTER-60-20261001.json; release:RELEASE-POLICY-LIFE-V135-20261001.md. Legacy references to29/82 describe earlier releases. Current portfolio45/execution98/linked16released44remaining supersede those counts without changing the dated wider sitemap population.

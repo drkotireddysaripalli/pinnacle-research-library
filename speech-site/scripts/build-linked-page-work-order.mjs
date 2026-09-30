@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import policies from '../src/data/policy-content.json' with {type:'json'};
 const origin='https://www.pinnacleblooms.org',released=process.argv.includes('--released');
 function parse(text){const rows=[],cells=[];let cell='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}else if(c===','&&!quoted){cells.push(cell);cell='';}else if(c==='\n'&&!quoted){cells.push(cell.replace(/\r$/,''));rows.push(cells.splice(0));cell='';}else cell+=c;}const keys=rows.shift();return rows.filter(r=>r.length===keys.length).map(r=>Object.fromEntries(keys.map((k,i)=>[k,r[i]])));}
-const nav=parse(await fs.readFile('reviews/PORTAL-NAVIGATION-REGISTER-20260930.csv','utf8'));
+const nav=parse(await fs.readFile('reviews/LINKED-PAGE-NAVIGATION-BASELINE-20261001.csv','utf8'));
 const legacy=new Map(nav.filter(r=>r.state.startsWith('retained_legacy')&&r.pagePath!=='/ask/'&&r.pagePath!=='/national-autism-helpline').map(r=>[r.pagePath,{path:r.pagePath,label:r.label}]));
 legacy.set('/terms-of-service',{path:'/terms-of-service',label:'Terms of Service'});assert.equal(legacy.size,56);
 const policy=new Set(policies.map(p=>p.path));

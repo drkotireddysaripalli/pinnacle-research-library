@@ -1,0 +1,311 @@
+{
+  "at": "2026-09-30T22:43:02.116Z",
+  "rows": [
+    {
+      "path": "/pinnacle-pages-data/privacy-policy-policy.md",
+      "sha256": "5c5e9fb1d07071d62ffa32ca792ddf268a88dd61cd55159fce0226e10053b2c8",
+      "bytes": 7232
+    },
+    {
+      "path": "/pinnacle-pages-data/terms-of-use-policy.md",
+      "sha256": "a59d0c5ca44994965febba0655321daf68b6ebd04d8c1c68a9ce3b46294b8dfb",
+      "bytes": 17062
+    },
+    {
+      "path": "/pinnacle-pages-data/terms-of-use-policy-source.json",
+      "sha256": "6f30e4e8bb0bac8ee9b0a69c19f8d67369d0dde51a207d922932381079e9354d",
+      "bytes": 17536
+    },
+    {
+      "path": "/pinnacle-pages-data/privacy-policy-policy-source.json",
+      "sha256": "8618d3c83a0157c90aa9dd24808cf42ae7740fffff4f6fc608de4aa7deda0a35",
+      "bytes": 7740
+    },
+    {
+      "path": "/pinnacle-pages-data/terms-of-service-policy.md",
+      "sha256": "104ddfc5054bdc1a2d792eed9ccb362f22b31559b4454f492c5c032d741263db",
+      "bytes": 23152
+    },
+    {
+      "path": "/pinnacle-pages-data/cookie-policy-policy.md",
+      "sha256": "af8f891b93a6af58727e4be5c7e55b3601a631c7a87f5acdf378bec0be19afff",
+      "bytes": 5185
+    },
+    {
+      "path": "/pinnacle-pages-data/terms-of-service-policy-source.json",
+      "sha256": "5beabecb66188790fa543513451cbe6af5ab09e507ad1d63a37413932ad29060",
+      "bytes": 23632
+    },
+    {
+      "path": "/pinnacle-pages-data/copyright-and-intellectual-policy.md",
+      "sha256": "bcbd9295d37b1c27b24104fe645502c8f9375dc378a1f9633685f5e0c99ebf98",
+      "bytes": 19185
+    },
+    {
+      "path": "/pinnacle-pages-data/cookie-policy-policy-source.json",
+      "sha256": "76019996e6f2d98e047886c69f7583c6c233cd7163190a2d805a4090f5a616d3",
+      "bytes": 5692
+    },
+    {
+      "path": "/pinnacle-pages-data/age-restriction-policy-policy.md",
+      "sha256": "8e6ebfa5a35d9d87335c3ff1008fdea33731bc1ff5c642c8ad7ceec54c54bce5",
+      "bytes": 4128
+    },
+    {
+      "path": "/pinnacle-pages-data/copyright-and-intellectual-policy-source.json",
+      "sha256": "3125e6493ada0140312dc9911795fee98b91f18bc95eb5bc042e8fe2bc276e10",
+      "bytes": 19721
+    },
+    {
+      "path": "/pinnacle-pages-data/contact-information-policy.md",
+      "sha256": "c66c28ded0656d56c09b9b7eba67fb0386c61a774d9efa009728ae94a11052bf",
+      "bytes": 1277
+    },
+    {
+      "path": "/pinnacle-pages-data/age-restriction-policy-policy-source.json",
+      "sha256": "4fcb67b22857600516a577b3d382eb1e19970c03a327f11c223764b272b50446",
+      "bytes": 4602
+    },
+    {
+      "path": "/pinnacle-pages-data/disclaimer-and-limitations-of-liabilities-policy.md",
+      "sha256": "160f5917488e65d9769709ca53f7fab31ba342377f7114e85b138da2959c2380",
+      "bytes": 10029
+    },
+    {
+      "path": "/pinnacle-pages-data/contact-information-policy-source.json",
+      "sha256": "92904cc7a13925ef29767039443e42f1322f6a65dbae7479c3238a09256848c6",
+      "bytes": 1742
+    },
+    {
+      "path": "/pinnacle-pages-data/disclaimer-and-limitations-of-liabilities-policy-source.json",
+      "sha256": "031581b2f269b0dd4ad9afb9193deb23c45e3e052c2901e0ce3879c4f0eeba29",
+      "bytes": 10526
+    },
+    {
+      "path": "/pinnacle-pages-data/endorsement-and-testimonial-policy.md",
+      "sha256": "68daa893640aa3e02e34949c3fd66d97a43c8732ac061a8d49e3510fed420060",
+      "bytes": 4108
+    },
+    {
+      "path": "/pinnacle-pages-data/governing-and-jurisdiction-policy.md",
+      "sha256": "18cda3da4cc6dc0adf19cb7d01fdbba321b99b82f4b5430b664bc04c467a389d",
+      "bytes": 6462
+    },
+    {
+      "path": "/pinnacle-pages-data/endorsement-and-testimonial-policy-source.json",
+      "sha256": "48e31dcef113c382dd1e66b4612bbdadfe400f030b8346bba80f15c682579832",
+      "bytes": 4587
+    },
+    {
+      "path": "/pinnacle-pages-data/third-party-inegration-policy.md",
+      "sha256": "297110fd0dcbbbf062f502a65e2406de2da00358bfea8de171f4b82803f840c1",
+      "bytes": 4178
+    },
+    {
+      "path": "/pinnacle-pages-data/governing-and-jurisdiction-policy-source.json",
+      "sha256": "53ea7a2e95e0d7e0119a8be49fc200cac6b570c7acffe85bcfa3d62852930bf4",
+      "bytes": 6942
+    },
+    {
+      "path": "/pinnacle-pages-data/refund-policy-policy.md",
+      "sha256": "368ce39298ced741991bbcc983c72c990d6c7b4eb013826c50e6a0061ce47cd1",
+      "bytes": 6898
+    },
+    {
+      "path": "/pinnacle-pages-data/third-party-inegration-policy-source.json",
+      "sha256": "498d391ff0ac384a44febcae449d0e39593873962603334abbcebc7accf380f0",
+      "bytes": 4652
+    },
+    {
+      "path": "/pinnacle-pages-data/staff-declaration-policy.md",
+      "sha256": "3ec0ac130f1fbc5124368cf1e31344f755845fdbe33d022abb38a76cd23cccc0",
+      "bytes": 45951
+    },
+    {
+      "path": "/pinnacle-pages-data/refund-policy-policy-source.json",
+      "sha256": "9cd2e7e9220533f33a002a1738d616d0541c735bb45d22b467485001350c25e0",
+      "bytes": 7365
+    },
+    {
+      "path": "/pinnacle-pages-data/ethics-charter-policy.md",
+      "sha256": "4767866c641749900895fd8788055cfd5c9ddfc6ef061dff407807a6319e88eb",
+      "bytes": 54526
+    },
+    {
+      "path": "/pinnacle-pages-data/staff-declaration-policy-source.json",
+      "sha256": "e944a1a94364f2931eb6506b096dc1372db95a8a4245541fee4bd732de02ad83",
+      "bytes": 46452
+    },
+    {
+      "path": "/pinnacle-pages-data/ethics-charter-policy-source.json",
+      "sha256": "508045d555652b5013511279d3f97274ef31c1f9c9a3efdd691fbdf9b349253a",
+      "bytes": 55024
+    },
+    {
+      "path": "/pinnacle-pages-data/mainstream-machine.md",
+      "sha256": "4fef787af840a12bb1bf8eb03834631ac57ce78e989d767a20c6b7c79761f3a1",
+      "bytes": 5384
+    },
+    {
+      "path": "/pinnacle-pages-data/mainstream-evidence.json",
+      "sha256": "c437b90d578eff9f9b042aeb104cf05070d48f5481f39e98bd4a531790969d2a",
+      "bytes": 8762
+    },
+    {
+      "path": "/pinnacle-pages-data/mainstream-evidence.txt",
+      "sha256": "b4697e192a0e6c24e5c311475e63a4a3f6a123dc09414d1f2c588cfc659b65de",
+      "bytes": 5382
+    },
+    {
+      "path": "/pinnacle-pages-data/self-sufficient-machine.md",
+      "sha256": "772de9c73d52dce5eb7ea3c78e665be766413e906db7ba63d975c61973eba72e",
+      "bytes": 5345
+    },
+    {
+      "path": "/pinnacle-pages-data/self-sufficient-evidence.json",
+      "sha256": "3497757c1de92614ec369fcd57a2bd79981ad444d62457953b28d16bae5b3447",
+      "bytes": 8547
+    },
+    {
+      "path": "/pinnacle-pages-data/self-sufficient-evidence.txt",
+      "sha256": "0bc3d1bdc09947e4d36dab7e02f6526b898d4b0095d1ddbc476fb0ad826fb5a3",
+      "bytes": 5343
+    },
+    {
+      "path": "/pinnacle-pages-data/dilsukhnagar-evidence.json",
+      "sha256": "5d3727f92f4c6e555ba0a7d8ec77101d5ebc9d8720e6a3967885d6c873a28b86",
+      "bytes": 11027
+    },
+    {
+      "path": "/pinnacle-pages-data/dilsukhnagar-evidence.txt",
+      "sha256": "a0ed0b2f822b861bf5284699cf80e588ef93994ac1a18720a663f973b5bf63b0",
+      "bytes": 7864
+    },
+    {
+      "path": "/pinnacle-pages-data/dilsukhnagar-machine.md",
+      "sha256": "6aff809aa04e53d444476cd662d62f2b0b89db2f2ea5b4d8665098028e010205",
+      "bytes": 8608
+    },
+    {
+      "path": "/pinnacle-pages-data/gurunanak-evidence.json",
+      "sha256": "c8602508ab31be87d2e9f5db5842275c60fad315e76bf548be1a215b9a64de5e",
+      "bytes": 10923
+    },
+    {
+      "path": "/pinnacle-pages-data/gurunanak-evidence.txt",
+      "sha256": "4b0e6266fa2c4a77528e55e79837463e48c18fee26a1ab2092cb54a4dd851fcc",
+      "bytes": 7779
+    },
+    {
+      "path": "/pinnacle-pages-data/gurunanak-machine.md",
+      "sha256": "258369a4e6bca1ef4a81b8428b480fb70d7b0075c40968168ed3af79be941d7c",
+      "bytes": 8524
+    },
+    {
+      "path": "/pinnacle-pages-data/delhi-evidence.json",
+      "sha256": "fb5d20ffd78e1979a401df5906b9e005b1251a3f3f5b122ea19644cf6768e6ad",
+      "bytes": 11537
+    },
+    {
+      "path": "/pinnacle-pages-data/delhi-evidence.txt",
+      "sha256": "1f19227e2086dbcbe121c2a3fd0a469b1ba1d1604f405c9aced21030f41ce7ee",
+      "bytes": 8205
+    },
+    {
+      "path": "/pinnacle-pages-data/delhi-machine.md",
+      "sha256": "172d30e76b38b407891ad2ed06534147f9a8fb6f2a785337aed2587c32fc3a63",
+      "bytes": 8999
+    },
+    {
+      "path": "/pinnacle-pages-data/ananthapuram-evidence.json",
+      "sha256": "060a0b009505c3a6460dbde505cd94c2c42373729c608a569cb78a38123a14a3",
+      "bytes": 10938
+    },
+    {
+      "path": "/pinnacle-pages-data/ananthapuram-evidence.txt",
+      "sha256": "8e8a5ae4e7746bc262fe1e816b76ff13bd730bc9fa46cac593c2e2ae8561535e",
+      "bytes": 7830
+    },
+    {
+      "path": "/pinnacle-pages-data/ananthapuram-machine.md",
+      "sha256": "bdd63d9af15d760e596d022fe9bcf1df9de3d37868e4c38c31702e73212092ec",
+      "bytes": 8601
+    },
+    {
+      "path": "/pinnacle-pages-data/nandyala-evidence.json",
+      "sha256": "70c7a2557c01fe7fd4ee4657a9c28697d017181e948475cfd22896b32d4bbc05",
+      "bytes": 11065
+    },
+    {
+      "path": "/pinnacle-pages-data/nandyala-evidence.txt",
+      "sha256": "c9d051ac669a6ff2640166c4a407340e65abd4ac9f9dc322757f00819a927b1f",
+      "bytes": 7805
+    },
+    {
+      "path": "/pinnacle-pages-data/nandyala-machine.md",
+      "sha256": "c85a6c6573fbf24f08318f3437356872db2fed5a2d514103ef1328504e7735cf",
+      "bytes": 8548
+    },
+    {
+      "path": "/pinnacle-pages-data/ongole-evidence.json",
+      "sha256": "ee58d0a8ce0ca01c6df6e53dd15b1660731712aa77d56d4f4295e207784e4091",
+      "bytes": 10937
+    },
+    {
+      "path": "/pinnacle-pages-data/ongole-evidence.txt",
+      "sha256": "be054787eccb83732b4c8508f2b7568f486899407bb2569f86e188990e3a7003",
+      "bytes": 7830
+    },
+    {
+      "path": "/pinnacle-pages-data/ongole-machine.md",
+      "sha256": "b25b0ed1a61db3e9362c71d9da1830ad746e3bda73026813b548ee70931a47b9",
+      "bytes": 8599
+    },
+    {
+      "path": "/pinnacle-pages-data/tirupati-evidence.json",
+      "sha256": "4f02fd1a1308a673799f56d03610294f9b35cccb653bfdcf42f04508f7ff357b",
+      "bytes": 10783
+    },
+    {
+      "path": "/pinnacle-pages-data/tirupati-machine.md",
+      "sha256": "a3c5152f384499e4d9ded3a3135ecd3e6ac90421995b49e743f4710323abe0cd",
+      "bytes": 8605
+    },
+    {
+      "path": "/pinnacle-pages-data/srikakulam-evidence.json",
+      "sha256": "bb44b47e5817f049bb8580b64bcd8135af1ff2c394138938cd3f0cfe216e1923",
+      "bytes": 11061
+    },
+    {
+      "path": "/pinnacle-pages-data/srikakulam-evidence.txt",
+      "sha256": "6bf03cdd210a66119e83ed2acee6eba663c30757847286b4100a25e00c5e8fb8",
+      "bytes": 7791
+    },
+    {
+      "path": "/pinnacle-pages-data/tirupati-evidence.txt",
+      "sha256": "c82d35989a882de9acad8bd91c09e8440701f0e95e27cee8fc3cf29e8409c2f1",
+      "bytes": 7823
+    },
+    {
+      "path": "/pinnacle-pages-data/srikakulam-machine.md",
+      "sha256": "37b1a3b986eb239b3daed0ffc3135adbf998187f293493a400170d043824561e",
+      "bytes": 8542
+    }
+  ],
+  "cards": [
+    {
+      "id": "mainstream",
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/mainstream-social-20261001.B3oCKDOv_1voxbu.jpg?v=life-v135-mainstream-20261001",
+      "width": 1200,
+      "height": 630,
+      "sha256": "045ba92eaab24a02d2c0ca092911a8ac8ec3a3323b1a45a87d964ae4b8a6ad9f"
+    },
+    {
+      "id": "self-sufficient",
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/self-sufficient-social-20261001.D-eIhbkO_yEASW.jpg?v=life-v135-self-sufficient-20261001",
+      "width": 1200,
+      "height": 630,
+      "sha256": "099c17eff951225b8cafe5ea9ff8b7d4fc9ae2b5341a62e9879a81b75e9786f4"
+    }
+  ]
+}

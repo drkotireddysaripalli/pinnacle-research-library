@@ -1,8 +1,13 @@
 # Pinnacle portal page ledger and delivery sitemap
 
-1 October 2026 · v134a served union, v133 design with shared navigation corrections; sitemap population observed 30 September
+1 October 2026 · v135 served union; common v133 design retained; sitemap population observed 30 September
 
-This is the operational ledger for the **17 priority destinations** in `PORTAL-PAGE-INVENTORY-20260929.md`: two reference pages, six parent-demand pages and nine PinnacleAI product pages. It distinguishes a live URL from a page that has passed editorial review. It does not count every legacy, centre-profile, Verify or Ask page in the wider domain.
+**CURRENT V135 — RELEASED:** v135 publishes 14 policy presentations and two distinct life-outcome pages, with the common header/footer on all 45 managed pages. Source 13df204 was pushed before Worker c6fecfac-2d7a-4983-80b8-f3cf26b7279a served 100% at 2026-09-30T22:39:00.686543Z. All 45 owned public HTML/common shells, 60 production responsive cases, 58 source/reading exports and 14 protected controls passed. Epass has only its origin-generated last-modified timestamp normalised against the saved page. All 155 previous routes and four bindings remain; 16 prefix triggers were added with exact public-page handlers. One 16-URL IndexNow notification returned 200. Presentation release retains original policy words/punctuation/order and printed dates; it does not settle the separately recorded legal source decisions.
+
+**Work map:** 60 named linked page/entry items; 16 presentation items released, 44 packages remaining. Each remaining family has source/delivery requirements in PORTAL-LINKED-PAGE-WORK-ORDER-20261001.md. The 98-row generated execution view is 45 managed routes plus 51 pending centres and 2 section decisions. These are distinct scopes. The historical 59,082-URL observation keeps its 30 September timestamp. The eight prepared centre contracts/poster prompts are checkpointed, not discarded or deployed. Next independent source/narrative work: About/Leadership/framework; then staff, research, remaining services, resources and general navigation. Legal clauses, actual login/payment behaviour and books billing retain explicit decision/contract dependencies.
+
+
+This ledger includes the original **17 priority destinations** in `PORTAL-PAGE-INVENTORY-20260929.md`: two reference pages, six parent-demand pages and nine PinnacleAI product pages. It distinguishes a live URL from a page that has passed editorial review. It does not count every legacy, centre-profile, Verify or Ask page in the wider domain.
 
 ## Exact bounded status
 
@@ -14,15 +19,17 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | Planned managed page not built | 0 | Initial 17-destination portfolio is released; wider local/search-estate work remains. |
 | Additional managed decision guides | 3 | Speech first-visit, teacher-observation and service-information pages; outside the 17-page priority denominator. |
 | Additional rebuilt local centres | 9 | Suchitra v131; four centres v132; Nandyala, Ongole, Tirupati and Srikakulam v134. |
-| Total managed public HTML routes in v134 | 29 | Seventeen priority pages, three guides and nine centres. Preview and shell/test index are excluded. |
+| Additional policy presentations | 14 | Original words/order/printed revisions retained; legal decisions separate. |
+| Additional life-outcome pages | 2 | Self-Sufficient and Mainstream. |
+| Total managed public HTML routes in v135 | 45 |17 priority +3 guides +9 centres +14 policies +2 life pages. Previews excluded. |
 
-**Latest served union:** v134a fixes nine common navigation/footer destinations across all 29 managed pages, preserving all 29 accepted main bodies. Source `b23811ce3fef5b517deb6ad6a51e36b8f2e3c3bc` was pushed before Worker `8a412c3a-2531-40c3-a677-0b8ba40faa7d` served 100%. All 29 public owned HTML/common shells, 12 protected controls and eight replacement anchors plus the general contact destination passed. Four local and four production Chrome/Edge cases passed. All 155 routes and bindings remain unchanged. No repeated IndexNow notification. See `RELEASE-NAVIGATION-V134A-20261001.md`.
+**Prior served union v134a:** v134a fixes nine common navigation/footer destinations across all 29 managed pages, preserving all 29 accepted main bodies. Source `b23811ce3fef5b517deb6ad6a51e36b8f2e3c3bc` was pushed before Worker `8a412c3a-2531-40c3-a677-0b8ba40faa7d` served 100%. All 29 public owned HTML/common shells, 12 protected controls and eight replacement anchors plus the general contact destination passed. Four local and four production Chrome/Edge cases passed. All 155 routes and bindings remain unchanged. No repeated IndexNow notification. See `RELEASE-NAVIGATION-V134A-20261001.md`.
 
 **Latest centre bodies:** v134 published Nandyala, Ongole, Tirupati and Srikakulam. Source `4e52299` was pushed before Worker `a094769b-0528-4577-b832-b0a6a1544c21` began serving 100% at that release. Four new pages, 25 changed assets/exports, all 29 shells and 28 production responsive runs passed. The 25 prior accepted main bodies and 12 protected controls remained unchanged. Exactly four existing centre routes were retargeted; the other 151 and all bindings remained. One material four-URL IndexNow batch returned 200. External Nu returned 429 without a validation result. See `RELEASE-CENTRE-BATCH-V134-20261001.md`.
 
 **Latest common-shell source release:** v133 was published across the original 25 managed pages and is now reused by all 29 in v134. Source `73d6385` was pushed before its Worker `817b8b8a-5e8f-478f-b2a9-68345dbe9195` served 100% at that release. All 25 owned HTML/common shells matched, accepted main bodies and 12 protected controls remained unchanged, seven stylesheets matched and 15 production responsive runs passed. All 155 routes and four bindings remained unchanged. Native footer/Verify disclosures work without JavaScript. No repeated IndexNow notification for that navigation-only change. See `RELEASE-SHARED-SHELL-V133-20261001.md`.
 
-**Prior centre release:** Four centre pages v132 are public on their retained canonicals. Source `fe3130f` was pushed before Worker `ac200e7a-3c20-4d22-a39c-5201aa42d615` at 100%. Twenty-five changed public assets/exports and 25 shared shells matched the stage;12protected controls retained bytes. All28production responsive runs passed. Exactly four existing routes were retargeted; the other 151 remain unchanged. The centre sitemap retains 61 URLs with four new dated lastmods. One four-URL IndexNow batch returned200. See `RELEASE-CENTRE-BATCH-V132-20261001.md`.
+**Prior centre release:** Four centre pages v132 are public on their retained canonicals. Source `fe3130f` was pushed before Worker `ac200e7a-3c20-4d22-a39c-5201aa42d615` at 100%. Twenty-five changed public assets/exports and 25 shared shells matched the stage;12protected controls retained bytes. All 28 production responsive runs passed. Exactly four existing routes were retargeted; the other 151 remain unchanged. The centre sitemap retains 61 URLs with four new dated lastmods. One four-URL IndexNow batch returned 200. See `RELEASE-CENTRE-BATCH-V132-20261001.md`.
 
 **Prior release:** Suchitra v131 is public on its established canonical. Source `55aeccb` was pushed before Worker `75019b39-bfbb-49e6-a3bb-d6e0c3863cde` served 100%. Seven changed HTML/assets/exports, all 21 common shells and 11 valid protected controls passed public readback. The 155-route comparison found only the intended Suchitra retargeting; the other 154 records remain unchanged. See `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`.
 
@@ -32,7 +39,7 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 
 ## Page-by-page route and work ledger
 
-All 29 rows below use the common v133 design with v134a navigation/footer corrections in the live v134a union; their accepted main bodies keep the separately recorded content releases.
+All 45 released rows use the common v133 design and current v135 navigation/footer. Prior main bodies:21byte-identical;8generic centres correct only the visible identity citation href. Structured-data identity IDs remain intact.
 
 | ID | Canonical URL | Audience job | Current state | Next meaningful work |
 |---|---|---|---|---|
@@ -65,6 +72,27 @@ All 29 rows below use the common v133 design with v134a navigation/footer correc
 | CENTRE-ongole | `/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india` | Sundaraiah Bhavan Road arrival and family-table communication/choice | **v134 live, checked** | Preserve dated HFR and source scope; family-table example is not a feeding/swallowing-service claim. Confirm current visit arrangements. |
 | CENTRE-tirupati | `/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india` | Air Bypass Road arrival and shared picture-book participation | **v134 live, checked** | Preserve eligible interior and textual arrival; no released entrance image. Google-watermarked exterior stays excluded; confirm current appointments/access. |
 | CENTRE-srikakulam | `/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india` | Sana Street arrival and drawing-to-shared-learning example | **v134 live, checked** | Preserve HFR certificate pages 79–80 and matched premises; clinical real-child photo remains excluded without matched consent. Confirm appointments/access. |
+
+### Policy and life additions · v135
+
+| ID | Canonical URL | Audience job | Current state | Next meaningful work |
+|---|---|---|---|---|
+| POLICY-01 | /privacy-policy | Read Privacy Policy with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-02 | /terms-of-use | Read Terms of Use with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-03 | /terms-of-service | Read Terms of Service with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-04 | /cookie-policy | Read Cookie Policy with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-05 | /copyright-and-intellectual | Read Copyright & Intellectual Property with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-06 | /age-restriction-policy | Read Age Restriction Policy with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-07 | /contact-information | Read Contact Information with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-08 | /disclaimer-and-limitations-of-liabilities | Read Disclaimer & Limitations of Liabilities with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-09 | /endorsement-and-testimonial | Read Endorsement & Testimonials with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-10 | /governing-and-jurisdiction | Read Governing Law & Jurisdiction with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-11 | /third-party-inegration | Read Third-Party Integration Policy with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-12 | /refund-policy | Read Refund Policy with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-13 | /staff-declaration | Read Staff Conduct & HR Compliance Charter with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| POLICY-14 | /ethics-charter | Read Ethics Charter with accessible sections and source-preserving text | v135 presentation released; legal source decisions open | Resolve only the exact source conditions with owner/legal decisions; see reviews/POLICY-SOURCE-CONDITIONS-V135-20261001.md. |
+| LIFE-01 | /self-sufficient | Understand everyday growing independence and start a first conversation | v135 published and checked | Preserve specific example, seven stages, original branded creative and evidence; observe audience/call outcomes. |
+| LIFE-02 | /mainstream | Understand belonging, participation and relevant support | v135 published and checked | Preserve distinct family/peer/school example, seven stages, original creative and evidence; observe audience/call outcomes. |
 
 ## Public discovery sitemap and source graph
 
@@ -130,7 +158,7 @@ The full Verify/off-page contribution ledger remains in `work/verify-visibility/
 
 ## Full register refresh · 18:11 UTC, 30 September
 
-All **23 sitemap documents** (two indexes and 21 URL sets) returned HTTP 200. At **18:11:47 UTC**, the 21 URL sets contain **59,339 loc occurrences**, representing **59,082 distinct exact URLs**, with **257 cross-sitemap overlaps** and no duplicate loc within an individual URL set: 251 staff/bot overlaps and six core/service overlaps. At **18:03:07 UTC**, the total was **59,815 occurrences / 733 overlaps**: staff.xml had 978 URLs and bots.xml had 727. In the second observation staff.xml had 251 and bots.xml had 978. The combined distinct population remains 978. These are dated source observations, not indexed-page counts or verified personnel. Source/cache variability is queued for investigation. Cross-sitemap membership alone is not an error; no redirect, removal or resubmission follows from the count. The **21 managed public pages at that pre-v132 observation** appeared in the fetched estate; current release-state reconciliation covers all **29** managed routes.
+All **23 sitemap documents** (two indexes and 21 URL sets) returned HTTP 200. At **18:11:47 UTC**, the 21 URL sets contain **59,339 loc occurrences**, representing **59,082 distinct exact URLs**, with **257 cross-sitemap overlaps** and no duplicate loc within an individual URL set: 251 staff/bot overlaps and six core/service overlaps. At **18:03:07 UTC**, the total was **59,815 occurrences / 733 overlaps**: staff.xml had 978 URLs and bots.xml had 727. In the second observation staff.xml had 251 and bots.xml had 978. The combined distinct population remains 978. These are dated source observations, not indexed-page counts or verified personnel. Source/cache variability is queued for investigation. Cross-sitemap membership alone is not an error; no redirect, removal or resubmission follows from the count. The **21 managed public pages at that pre-v132 observation** appeared in the fetched estate; current release-state reconciliation covers all **45** managed routes.
 
 The navigation register covers **249 metadata/card/direct-link occurrences**, **213 distinct absolute hrefs**, and **117 same-domain page paths**, including the 36 footer evidence records and contact utilities. Section origins and exact fragments are retained. A URL absent from a sitemap is not automatically an error or a page to submit.
 
@@ -138,7 +166,7 @@ Every full-register URL has a stable ID, sitemap source, family, work state, can
 
 Nine centre profiles are complete. **51 standalone centre rebuilds** remain, plus **two section-only destinations**. Eight next contracts are prepared: Miryalaguda, Nallagandla, Kakinada, Nellore, Attapur, Karimnagar, Himayat Nagar and Santosh Nagar. Kadapa has an illustration-led alternative. Exact address/postcode/enquiry/media conditions remain attached to affected centres. Source-readiness ordering is not a measured search-demand ranking. Search, AI citation and connected-call/enrolment results remain separate work.
 
-## Current delivery continuation · v134a
+## Historical delivery continuation · v134a
 
 The existing 59,082-URL snapshot is retained with its 30 September population timestamp. Release states, source evidence and the centre queue are reconciled from v134a public checks without repeating the whole crawl. Current managed count 29, rebuilt centre count 9, standalone remaining 51, contact sections 2. Common design remains v133; current common links are v134a. Navigation counts are 256 occurrences / 215 unique absolute hrefs / 118 internal paths. Earlier 256/216/119 and 249/213/117 observations are historical. Eight prepared contracts and precise conditions are reconciled into the saved population and the 82-row queue.
 
@@ -146,6 +174,14 @@ Next source-prepared eight: **Miryalaguda, Nallagandla, Kakinada, Nellore, Attap
 
 Common-shell density/call-context is complete in v133. Useful product examples, staff/bot sitemap variability, Ads-consent ownership, legacy/core source/search roles, multilingual FAQ/Ask/child-story eligibility and relevant off-page authority remain in `PORTAL-NEXT-WORK-ORDER-20260930.md`. Eligible investigations can proceed alongside centre implementation. Published, submitted, indexed, cited, connected call and accepted enquiry are separate states.
 
-## Current navigation and complete delivery map · v134a
+## Historical navigation and delivery map · v134a
 
 The source-collected navigation register contains **256 occurrences / 215 distinct absolute destinations / 118 same-domain paths**. The original 119-path audit returned all pages but found nine missing recorded fragments. The common-source v134a corrections passed public target checks; the original audit remains dated evidence. Collection counts changed because obsolete ABA fragments now use the exact canonical and an existing contact destination. The complete work map is `PORTAL-DELIVERY-MAP-20261001.md`. Common density/context design is v133, links are v134a; specific product examples and private decision aids remain pending. Next implementation: eight prepared centre contracts. The delivery queue remains 82 rows: 29 published + 51 pending standalone + two sections.
+
+## Current complete work map · v135
+
+**CURRENT V135 — RELEASED:** v135 publishes 14 policy presentations and two distinct life-outcome pages, with the common header/footer on all 45 managed pages. Source 13df204 was pushed before Worker c6fecfac-2d7a-4983-80b8-f3cf26b7279a served 100% at 2026-09-30T22:39:00.686543Z. All 45 owned public HTML/common shells, 60 production responsive cases, 58 source/reading exports and 14 protected controls passed. Epass has only its origin-generated last-modified timestamp normalised against the saved page. All 155 previous routes and four bindings remain; 16 prefix triggers were added with exact public-page handlers. One 16-URL IndexNow notification returned 200. Presentation release retains original policy words/punctuation/order and printed dates; it does not settle the separately recorded legal source decisions.
+
+**Work map:** 60 named linked page/entry items; 16 presentation items released, 44 packages remaining. Each remaining family has source/delivery requirements in PORTAL-LINKED-PAGE-WORK-ORDER-20261001.md. The 98-row generated execution view is 45 managed routes plus 51 pending centres and 2 section decisions. These are distinct scopes. The historical 59,082-URL observation keeps its 30 September timestamp. The eight prepared centre contracts/poster prompts are checkpointed, not discarded or deployed. Next independent source/narrative work: About/Leadership/framework; then staff, research, remaining services, resources and general navigation. Legal clauses, actual login/payment behaviour and books billing retain explicit decision/contract dependencies.
+
+Public discovery child https://www.pinnacleblooms.org/pinnacle-pages-data/public-documents-sitemap.xml contains 16 canonical URLs. Root sitemap keeps every prior child. The two new life URLs are not silently added to the historical 59,082-URL observation.

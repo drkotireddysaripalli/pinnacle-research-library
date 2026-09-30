@@ -52,7 +52,7 @@ const newPages=await limited(Object.entries(PUBLIC_DOCUMENT_ROUTES),async([path,
  return {id,path,markdown:true,head:true,queryPreservingAlias:true,publicAnalyticsCookie:true};
 });
 const previous=JSON.parse(await fs.readFile(beforeFile,'utf8'));
-const protectedRows=await limited(previous.rows,async row=>{const o=await get(row.path);assert.equal(o.r.status,row.status,row.path);assert.equal(o.r.headers.get('location'),row.location,row.path);assert.equal(sha(o.bytes),row.sha256,row.path+' protected bytes');return {...row,unchanged:true};});
+const protectedRows=await limited(previous.rows,async row=>{const o=await get(row.path);assert.equal(o.r.status,row.status,row.path);assert.equal(o.r.headers.get('location'),row.location,row.path);if(row.path==='/epass'){const baseline=await fs.readFile('audits/navigation-scope-v135-20261001/epass.html','utf8');const normalise=text=>text.replace(/<meta http-equiv="last-modified" content="[^"]+"\s*\/>/,'');assert.equal(sha(normalise(o.text)),sha(normalise(baseline)),'epass saved origin response apart from dynamic timestamp');return {...row,unchangedExceptOriginTimestamp:true,comparisonSource:'audits/navigation-scope-v135-20261001/epass.html',normalisedSha256:sha(normalise(o.text))};}assert.equal(sha(o.bytes),row.sha256,row.path+' protected bytes');return {...row,unchanged:true};});
 const sitemap=await get('/sitemap.xml');assert.equal(sitemap.r.status,200);
 for(const url of previous.oldSitemapLocs)assert(sitemap.text.includes('<loc>'+url+'</loc>'),url+' retained child');
 assert(sitemap.text.includes(origin+'/pinnacle-pages-data/public-documents-sitemap.xml'));
