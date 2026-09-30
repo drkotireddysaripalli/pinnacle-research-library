@@ -151,3 +151,10 @@ These nine complete, distinct scenes were generated in the current Codex convers
 | `everyday-editorial-20260930.png` | Family-guided mealtime participation | `exec-f1a141a9-de1b-4207-92b8-fa8bffa19b8e.png` | `17fb8783e8c3f8a3f7e605cfac575da159874561aadb877c74b4ab1589dd2a73` |
 | `fusion-editorial-20260930.png` | Therapy, home and consented-school observations | `exec-783cccc7-1335-4911-aae6-b312398981f0.png` | `54ca69d5b21e4a8f8b25008babeb7d4a2631846b1d6cbdcb06b7acbffdb60164` |
 | `reassess-editorial-20260930.png` | Home/school bag-packing comparison and review | `exec-ab290792-1077-4e75-8e0e-d8853b01777d.png` | `13122cf841fe03c093cc50cb2c9b095240f4e09aa3be0213d5bdd0042b149087` |
+
+## Assessment page originals — 30 September 2026
+
+Two original fictional campaign scenes generated through the direct built-in ChatGPT image tool, using the official Pinnacle Blooms lockup and accepted speech social poster as reference. No API-key route was used. The full-sleeve professional coat has the brand emblem; it does not establish medical qualification. No patient outcome is depicted as observed evidence.
+
+- src/assets/assessment-social-20260930.png — complete generated poster; original exec-149c987d-e5b4-410d-ad49-3c699046223e.png. SHA-256 70ddd9998772539c54bca0060f48f8401db1954d8fab8565667f35d390c584f8. Astro produces its 1200×630 JPEG; typography is part of the original creative.
+- src/assets/assessment-hero-20260930.png — original exec-d861780c-7182-408b-947a-2dc43653c9b2.png. SHA-256 9848e99dedc3ec07607e906be1323bcc6936b07d9552a5673213d8fa5e35a5f9. Responsive Astro WebP variants; essential headline and explanation remain HTML.

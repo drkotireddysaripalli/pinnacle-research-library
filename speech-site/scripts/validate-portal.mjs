@@ -8,6 +8,10 @@ const managedHtml=[
   'dist/best-occupational-therapy-center-india-proven-improvement-rate.html',
   'dist/best-aba-therapy-center-india-proven-improvement-rate.html',
   'dist/best-special-education-center-call-9100181181.html',
+  'dist/autism-therapy.html',
+  'dist/centers.html',
+  'dist/speech-aba-autism-assessments.html',
+  ...['pinnacleai','abilityscore','seven-readiness-indexes','personal-development-kernel','prognose','therapeuticai','everyday-therapy','fusion-module','reassess-review-repeat'].map(slug=>'dist/'+slug+'.html'),
   'dist/speech-therapy/service-information.html',
   'dist/speech-therapy/first-visit-guide.html',
   'dist/speech-therapy/teacher-observation-guide.html'
@@ -22,7 +26,7 @@ check('Complete documented portal navigation is present',links.every(x=>hrefs.ha
 check('Five priority therapy menus have native disclosure controls',(html.match(/class="portal-therapy-menu"/g)||[]).length===5);
 check('Header and footer navigation are server rendered',html.includes('aria-label="Complete site navigation"')&&html.includes('aria-label="Research Studies"'));
 const priorityLabels=['Verify','PinnacleAI®','Research','AbilityScore®','7 Readiness Indexes','Self-Sufficient','Mainstream','160Yrs Paradigm Shift','Citations'];
-const priorityDetails=['4 Billion DataPoints for 900Million Children','CDSCO, BIS, India Certified SaMD','Study Journals &amp; Publications','Proven 0 - 1000 Universal Metric','Your Child Life As it could be','Growing everyday independence','School &amp; community participation','Life-first child development','Quote · link · download'];
+const priorityDetails=['4 Billion DataPoints for 900Million Children','Class B SaMD · MD-5 licence &amp; BIS scope','Study Journals &amp; Publications','0–1000 developmental ability scale','Your Child Life As it could be','Growing everyday independence','School &amp; community participation','Life-first child development','Quote · link · download'];
 check('Authority strip follows the proof-to-purpose narrative order',nav.main.map(link=>link.label).join('|')===priorityLabels.join('|'));
 check('Reader-facing authority header is identical across every managed public page',managedHtml.every(page=>priorityLabels.every(label=>page.includes(`class="portal-nav-label">${label}</span>`))&&priorityDetails.every(detail=>page.includes(detail))&&page.includes('data-cta="header-enrol"')));
 check('Priority therapy order and labels are exact',nav.therapy.map(group=>group.label).join('|')==='Autism Therapy|Speech Therapy|Occupational Therapy|ABA Therapy|Special Education');

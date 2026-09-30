@@ -39,7 +39,7 @@ export const autismTherapyContent: ServiceContent = {
   hero:{
     heading:'See your whole child.',
     emphasis:'Build abilities for everyday life.',
-    lead:'Communicate. Manage daily routines. Learn. Play. Take part.',
+    lead:'Only the support that fits your child. One life-first direction.',
     copy:'You do not need to choose a therapy before you call. Tell us what your child enjoys and one moment you want to make more possible. Together, we can identify a suitable first professional step and connect only the support your child needs to a life-first direction.',
     moments:[{icon:'voice',label:'Communicate needs and choices'},{icon:'home',label:'Navigate everyday routines'},{icon:'people',label:'Learn, play and participate'}]
   },

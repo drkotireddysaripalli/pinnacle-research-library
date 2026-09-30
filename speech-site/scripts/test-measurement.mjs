@@ -141,3 +141,8 @@ test('centre directory actions stay coarse and never export centre names, hashes
  const events=h.events().filter(event=>event[1]==='centre_directory_action');assert.equal(events.length,7);
  const serialized=JSON.stringify(events);for(const privateValue of ['suchitra','centre-suchitra','private-child-detail'])assert(!serialized.includes(privateValue));
 });
+
+test('assessment calls and generic enquiries are consented fixed events',()=>{
+ const path='/speech-aba-autism-assessments',call='tel:+919100181181',enquiry='https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help';
+ for(const opts of [{},{gpc:true}]){const h=harness({path,...opts});h.click('hero-call',call);assert.equal(h.events().length,0);h.choose('accepted');h.click('hero-call',call);h.click('hero-assessment',enquiry);if(opts.gpc){assert.equal(h.events().length,0);continue;}assert.deepEqual(h.events().map(event=>event[1]),['page_view','phone_link_click','enquiry_link_click']);const text=JSON.stringify(h.events());assert(!text.includes('private-child-detail')&&!text.includes('secret')&&!text.includes('service=help'));assert(h.events().every(event=>event[2].page_group==='developmental_assessment'));h.choose('declined');h.click('final-call',call);assert.equal(h.events().length,3);}
+});

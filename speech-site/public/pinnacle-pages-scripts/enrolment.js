@@ -54,6 +54,17 @@ if(form){
   const option=form.querySelector('input[name="service"][value="'+selected+'"]');if(option)option.checked=true;
   const preferred=params.get('centre'),explicitCentre=preferred&&centreIds.has(preferred);if(explicitCentre)centre.value=preferred;
   if(preferences&&(explicitService||entrySpeech||explicitCentre))preferences.open=true;
+  const offer=document.getElementById('enrol-speech-offer'),heading=document.getElementById('request-title'),intro=document.querySelector('.enrol-form-intro');
+  const defaultHeading=heading?.innerHTML,defaultIntro=intro?.textContent,defaultAction=button.textContent;
+  function renderOffer(){
+   const active=entrySpeech&&form.querySelector('[name="service"]:checked')?.value==='speech';
+   if(offer)offer.hidden=!active;
+   if(heading){if(active)heading.textContent='Start your child’s FREE speech assessment.';else heading.innerHTML=defaultHeading;}
+   if(intro)intro.textContent=active?'Your name and number are enough. The team will confirm your speech and language assessment appointment with you.':defaultIntro;
+   if(!finished&&!pending&&!uncertain)button.textContent=active?(preview?'Check form preview':'Request my FREE speech assessment'):defaultAction;
+  }
+  form.querySelectorAll('[name="service"]').forEach(option=>option.addEventListener('change',renderOffer));
+  renderOffer();
   renderCentre();
  }
 }

@@ -34,7 +34,11 @@ for(const required of [
   '/pinnacle-pages-html/special-education.html',
   '/pinnacle-pages-data/special-education-machine.md',
   '/pinnacle-pages-data/special-education-evidence.json',
-  '/pinnacle-pages-data/special-education-evidence.txt'
+  '/pinnacle-pages-data/special-education-evidence.txt',
+  '/pinnacle-pages-html/assessment.html',
+  '/pinnacle-pages-data/assessment-machine.md',
+  '/pinnacle-pages-data/assessment-evidence.json',
+  '/pinnacle-pages-data/assessment-evidence.txt'
 ]) assert(required in speechInventory,`Missing Special Education release asset: ${required}`);
 
 assert(worker.includes("import {serveRootDiscovery} from './discovery-handler.mjs';"),'Root discovery handler must remain connected');

@@ -1,39 +1,27 @@
-# Active page work order — Autism Therapy integration hub
+# Active page work order — Child Development Assessment
 
-**Current wave:** [PinnacleAI connected product wave](ACTIVE-PINNACLEAI-WAVE-WORK-ORDER.md) supersedes this completed Autism Therapy v127 contract as the active build. This file remains the prior release record.
+30 September 2026 · Candidate v130. Baseline v129: source/receipt HEAD fab29f9; Worker 4cb916cd-5683-4ea9-829d-82ccf3f812da. The owner in this task edits, builds and deploys; reviewers are read-only. Completed Autism and product contracts remain in their v127 and v129 receipts.
 
-30 September 2026 · **v127 released**. The source, public page and release checks are recorded in [the v127 receipt](RELEASE-AUTISM-THERAPY-V127-20260930.md). The earlier ABA contract is retained in [its v126 receipt](RELEASE-ABA-THERAPY-V126-20260930.md). The user asked for a full all-therapies review **after** the therapy pages are complete. The implementation owner keeps page, code, build and deployment ownership; reviewers are read-only.
+## Page contract
 
-## One-page contract
+- Keep existing /speech-aba-autism-assessments canonical. Replace legacy content with the managed page; no competing assessment URL.
+- Family job: understand present abilities and a suitable next step for the child’s everyday life. Growing self-sufficiency and mainstream participation determine assessment, goals, support, practice and review.
+- First-screen action: call tel:+919100181181 or begin a generic family conversation. Free staffed 24/7 telephone guidance is separate from assessment fees and appointment availability.
+- Narrative: recognition → useful starting picture → life-first purpose → illustrative play example → seven connected stages → AbilityScore with human interpretation → first visit → relevant therapies → source proof → centre choice → FAQs → call.
+- Distinguish developmental-support assessment, screening and medical diagnosis. General service age, format, instruments, duration, fees, professional and included outputs are confirmed by the receiving team. Software intended-use age range does not establish a centre’s assessment service.
+- AbilityScore: 0–1000 developmental scale. Methodology is a preprint; external-validation record is a protocol. MD-5/BIS have named software/quality scope, not guaranteed outcome or therapist accreditation.
+- Original branded hero and complete generated social poster: official logo, full-sleeve branded professional coat, luminous white and organic family scenes. Use the direct built-in image service; no API-key fallback or pasted text composite.
+- Published centre directory is not an assessment specialist roster. Keep real centre/map/share/citation actions and require service and appointment confirmation.
 
-| Decision | Autism integration answer |
-|---|---|
-| Canonical and intent | Keep `/autism-therapy` as the child-specific integration hub and its existing true aliases. It answers “Which supports could help my autistic child take part in more everyday life, and where do we begin?” The competing old `top-autism-therapy-services...` origin page is a separate search-estate conflict; assess its Search Console/backlink equity before rewriting or redirecting it. |
-| Parent promise | Start with the child’s strengths, preferences and one everyday moment. Growing self-sufficiency and mainstream participation set the direction, while assessment and professional judgement select all **relevant** therapies, school/family supports and health referrals. No fixed four-therapy bundle or guaranteed endpoint. |
-| First action | Call `tel:+919100181181`. The family describes one moment, Pinnacle helps check a suitable professional, centre, visit availability and current fees, then the family chooses the next step. Telephone guidance is free and staffed 24/7; appointments and therapy are separate. The owner’s team owns live call/enrolment operations. |
-| Proof and limits | WHO and NICE explain individualised, integrated support; CDC separates diagnosis from screening. Pinnacle’s programme direction is documented at Verify. MD-5/BIS are non-diagnostic software and quality-scope records, not autism-therapy approval, therapist credentials or an outcome promise. The 97% claim is held off this page. |
-| Local choice | The published 62-location network directory is **not** a confirmed autism-service specialist roster. The receiving team confirms service, professional, fee and appointment at the chosen centre. Structured data does not assert India-wide autism-service availability. |
-| Shared boundary | `PageLayout.astro` mounts the one common `SiteHeader.astro` and `SiteFooter.astro`, including the Verify gateway. This release changes Autism content and fixed coarse measurement placements; the shared header/footer source and all protected Verify/helpline/origin routes stay intact. |
+## Shared candidate corrections
 
-## Narrative and creative acceptance
+1. Common navigation: replace “CDSCO, BIS, India Certified SaMD” with “Class B SaMD · MD-5 licence & BIS scope”, and “Proven 0 - 1000 Universal Metric” with “0–1000 developmental ability scale”. Update matching documentation and checks. Keep menu identities/order and all other owner-approved details. One rebuild updates every managed header; Verify remains within the common footer.
+2. Restore seven historical Autism fragment IDs without removing current IDs.
+3. Carry confirmed FREE speech-assessment context into managed Enrolment for its speech entry. Preserve API/payload and generic entry. Other assessments and therapy remain separately priced.
+4. Remove Autism hub closing self-link and place the child-specific-support cue in the short hero lead.
 
-1. Hero: recognise communication, routines, learning, play and participation. Say no therapy choice is required before calling. Keep a readable phone action in the first phone screen.
-2. Direct answer: autism therapy is not one fixed programme. Begin with the everyday life the child wants to take part in and select relevant therapies, family/school supports and health referrals.
-3. First call: three visible decisions — share one moment, check a suitable next step, decide together. A longer professional lens is available through a keyboard-operable disclosure.
-4. Pinnacle difference: the child’s life chooses the goal, and only then the methods and people. The four therapy cards link to their distinct pages; no card implies every child needs it.
-5. Seven parent-facing stages: abilities/AbilityScore®, readiness and plan, relevant integrated support, family everyday practice, track and correct, reassess and repeat, and direction toward growing independence and participation. The seventh stage is a purpose, not a guarantee.
-6. Worked school morning: conditional speech, occupational, special-education and behavioural contributions, manageable family practice and teacher/family feedback. The example is not a patient story or a prescription.
-7. Trust: autism-specific MD-5/BIS/research cards beside scope limits, WHO/NICE/RCI context without endorsement, JSON/text/Markdown source map, 15 visible FAQs matching schema.
-8. Decision: honest centre notice, call, enrolment, internal therapy links, shared Verify footer and a complete 1200 × 630 social poster.
+## Release boundary
 
-Artwork is original fictional campaign art: a child-led hero choice, an attentive first conversation, selected life-path possibilities and one **complete generated social poster** with brand, service message, Verify address and `9100 181 181`. The existing school-morning image remains useful. Exact source paths and hashes are in `ASSET-SOURCES.md`. The page keeps all essential answers and claims in HTML.
+One consolidated pass → production build → focused content/shared-shell/routing/privacy/enrolment checks → visual and interaction checks at 320/390/768/1024/1440 → source commit/push → full Verify + portal union stage and Worker dry run → inspect deployment/bindings/triggers → deploy without --route → public HTML/assets/social/export/discovery/protected controls → one justified Assessment IndexNow event → receipt/ledger commit/push.
 
-## Release sequence and external checks
-
-Production build → focused route, content, privacy, shared-shell, responsive and HTML checks → source commit/push → stage the full Verify plus managed-page union → Worker dry run and binding/trigger review → Cloudflare deploy without `--route` → live canonical, alias, image bytes, JSON/text/Markdown, child sitemap and protected-route readback → one material IndexNow notification → release receipt commit/push → bounded cleanup.
-
-After publication, real family comprehension, named clinical review, centre-specific staffing and availability, field Core Web Vitals, social-client preview, search indexing/AI citations and answered-call/visit/enrolment results remain separate observations. The later all-therapies review will compare shared navigation, cross-links, legacy competing pages and the full family journey across speech, occupational, ABA, special education and this autism hub.
-
-## Whole-therapy review completed
-
-The [30 September end-to-end review](reviews/THERAPY-ESTATE-END-TO-END-20260930.md) compared all five live managed therapy pages. Their distinct service roles, conditional Autism integration, cross-links, source-backed actions and shared shell are in place. The next bounded correction batch is: (1) restore seven legacy Autism section targets; (2) carry the confirmed FREE speech-assessment context through the enrolment entry; and (3) remove the Autism hub self-link and improve the first-screen integration cue. A compact shared-mobile-header design and the two competing origin autism URLs are separate decisions; inspect Search Console/backlinks before migrating those older URLs. Do not repeat unchanged image, source or schema work.
+Assessment already occurs once in /sitemaps/core.xml; retain that single sitemap placement. Add root/service reading-guide links. Preserve Verify, FSC, helpline, origin and product routes. Real phone connection, clinical review, CRM acceptance, indexing, AI citation, field speed and physical Safari/iOS results are separate observations.

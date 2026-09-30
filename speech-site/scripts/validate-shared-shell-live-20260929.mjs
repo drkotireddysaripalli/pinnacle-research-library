@@ -15,6 +15,7 @@ const paths=[
   '/best-aba-therapy-center-india-proven-improvement-rate',
   '/best-special-education-center-call-9100181181',
   '/autism-therapy',
+  '/speech-aba-autism-assessments',
   '/centers',
   '/speech-therapy/service-information',
   '/speech-therapy/first-visit-guide',
@@ -42,7 +43,7 @@ for(const path of paths){
     assert(authorityIndex>previousAuthorityIndex,`${path}: authority order ${label}`);
     previousAuthorityIndex=authorityIndex;
   }
-  for(const detail of ['4 Billion DataPoints for 900Million Children','CDSCO, BIS, India Certified SaMD','Study Journals &amp; Publications','Proven 0 - 1000 Universal Metric','Your Child Life As it could be','Growing everyday independence','School &amp; community participation','Life-first child development','Quote · link · download'])assert(html.includes(detail),`${path}: ${detail}`);
+  for(const detail of ['4 Billion DataPoints for 900Million Children','Class B SaMD · MD-5 licence &amp; BIS scope','Study Journals &amp; Publications','0–1000 developmental ability scale','Your Child Life As it could be','Growing everyday independence','School &amp; community participation','Life-first child development','Quote · link · download'])assert(html.includes(detail),`${path}: ${detail}`);
   for(const label of ['Autism Therapy','Speech Therapy','Occupational Therapy','ABA Therapy','Special Education'])assert(html.includes(`class="portal-therapy-title"`)&&html.includes(`>${label}</a>`),`${path}: ${label}`);
   assert((html.match(/class="portal-therapy-menu"/g)||[]).length===5,`${path}: five priority therapy menus`);
   assert((html.match(/pinnacle-blooms-network-lockup/g)||[]).length>=2,`${path}: updated shared logo`);
@@ -92,7 +93,7 @@ const report={
   verifyInsideSharedFooter:true,
   sharedFooterIdentical:true,
   donateRemoved:true,
-  priorityNavigation:['Verify — 4 Billion DataPoints for 900Million Children','PinnacleAI® — CDSCO, BIS, India Certified SaMD','Research — Study Journals & Publications','AbilityScore® — Proven 0 - 1000 Universal Metric','7 Readiness Indexes — Your Child Life As it could be','Self-Sufficient — Growing everyday independence','Mainstream — School & community participation','160Yrs Paradigm Shift — Life-first child development','Citations — Quote · link · download'],
+  priorityNavigation:['Verify — 4 Billion DataPoints for 900Million Children','PinnacleAI® — Class B SaMD · MD-5 licence &amp; BIS scope','Research — Study Journals & Publications','AbilityScore® — 0–1000 developmental ability scale','7 Readiness Indexes — Your Child Life As it could be','Self-Sufficient — Growing everyday independence','Mainstream — School & community participation','160Yrs Paradigm Shift — Life-first child development','Citations — Quote · link · download'],
   priorityTherapies:['Autism Therapy','Speech Therapy','Occupational Therapy','ABA Therapy','Special Education'],
   aboutContactVisible:true,
   results

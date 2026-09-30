@@ -34,6 +34,9 @@ await fs.writeFile(path.join(out,'pinnacle-pages-html/special-education.html'),s
 const autismTherapy=await fs.readFile(path.join(root,'dist/autism-therapy.html'),'utf8');
 assert(autismTherapy.includes('index, follow, max-image-preview:large')&&autismTherapy.includes('Autism Therapy &amp; Developmental Support for Children')&&autismTherapy.includes('autism-therapy-evidence.json')&&autismTherapy.includes('Autism therapy is not one fixed programme'));
 await fs.writeFile(path.join(out,'pinnacle-pages-html/autism-therapy.html'),autismTherapy);
+const assessment=await fs.readFile(path.join(root,'dist/speech-aba-autism-assessments.html'),'utf8');
+assert(assessment.includes('index, follow, max-image-preview:large')&&assessment.includes('Child Development Assessment')&&assessment.includes('assessment-evidence.json'));
+await fs.writeFile(path.join(out,'pinnacle-pages-html/assessment.html'),assessment);
 const centers=await fs.readFile(path.join(root,'dist/centers.html'),'utf8');
 assert(centers.includes('index, follow, max-image-preview:large')&&centers.includes('Find a Pinnacle Blooms Centre')&&centers.includes('centers-evidence.json')&&centers.includes('Browse every published listing by state or region'));
 await fs.writeFile(path.join(out,'pinnacle-pages-html/centers.html'),centers);

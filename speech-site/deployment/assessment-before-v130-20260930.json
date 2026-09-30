@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-09-30T16:23:44.772Z",
+  "deployment": {
+    "id": "d1b1ccd3-7fc6-4481-b5b8-25e4c63c113a",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "kotii@kgvpl.com",
+    "annotations": {
+      "workers/message": "V129: PinnacleAI nine-page editorial correction",
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "4cb916cd-5683-4ea9-829d-82ccf3f812da",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-09-30T15:20:26.416369Z"
+  },
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "environment": "production",
+      "name": "PINNACLE_ASK",
+      "service": "pinnacle-ask",
+      "type": "service"
+    },
+    {
+      "environment": "production",
+      "name": "PINNACLE_LEGACY",
+      "service": "pbn-planetscale",
+      "type": "service"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ],
+  "zone": "8b13f18e0589996b5d6512552372b434"
+}
