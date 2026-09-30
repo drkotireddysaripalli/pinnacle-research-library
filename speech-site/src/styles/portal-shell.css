@@ -220,3 +220,10 @@
   .portal-mobile-menu-trigger{flex-basis:70px;min-height:48px;font-size:10px}
   .portal-therapy-list{flex:1;min-width:0;width:auto;padding-inline:0}
 }
+/* In the shared mobile menu, put therapies and the useful next step before the longer evidence list. */
+@media(max-width:900px){
+  .portal-priority-menu section:nth-child(2){order:0}
+  .portal-priority-menu section:nth-child(3){order:1}
+  .portal-priority-menu section:first-child{order:2}
+  .portal-priority-menu .portal-about-priority{order:3}
+}

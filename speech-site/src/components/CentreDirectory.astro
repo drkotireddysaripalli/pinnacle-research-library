@@ -5,7 +5,7 @@ import centres from '../data/centre-directory.json';
 import Icon from './Icon.astro';
 import {phone,url,speechPath} from '../data/site';
 import {speechOffer} from '../data/speech-offer';
-const {pagePath=speechPath,enquiryTarget=speechOffer.url,directoryPage=false}=Astro.props;
+const {pagePath=speechPath,enquiryTarget=speechOffer.url,directoryPage=false,serviceNotice=''}=Astro.props;
 const images=import.meta.glob<{default:ImageMetadata}>('../assets/centre-directory/*.jpg',{eager:true});
 const get=(file:string)=>images['../assets/centre-directory/'+file]?.default;
 const largeImages=Object.fromEntries(await Promise.all(centres.flatMap(c=>c.images).map(async p=>[p.file,(await getImage({src:get(p.file),width:1000,format:'webp',quality:82})).src])));
@@ -17,6 +17,7 @@ const list={'@context':'https://schema.org','@type':'ItemList','@id':canonical+'
 ---
 <section class="section wrap centre-directory" id="centres" aria-labelledby="centres-title" data-directory-page={directoryPage?'true':'false'}>
  <div class="split-heading"><div><p class="eyebrow">{directoryPage?'Search the national directory':'A real place. A team to meet.'}</p><h2 id="centres-title">{directoryPage?'Choose by centre, city, state or postcode.':'Find your Pinnacle centre.'}<br/><em>{directoryPage?'See the place. Confirm the next step.':'Take the next step, closer to home.'}</em></h2></div><p>{directoryPage?'Search every published listing, open directions, see selected photographs and choose a centre preference. The national team confirms the suitable service, professional and appointment before you visit.':'Explore our locations, see the spaces and share a centre with your family. We’ll help you confirm the right professional and appointment before you visit.'}</p></div>
+ {serviceNotice&&<p class="directory-service-notice"><Icon name="shield" size={24}/><span>{serviceNotice}</span></p>}
  <div class="directory-help"><Icon name="phone"/><div><strong>One number. Help finding your centre.</strong><a href={phone.href} data-cta="directory-national-call">National team · {phone.display}</a></div><a href={url('/national-autism-helpline')}>National Autism Helpline →</a></div>
  <div class="directory-controls" hidden><label for="centre-search">Search centre, city or postcode<input type="search" id="centre-search" placeholder="Try Suchitra, Bengaluru or 500067" autocomplete="off"/></label><label for="centre-region">State / region<select id="centre-region"><option value="all">All regions</option>{regions.map(r=><option>{r}</option>)}</select></label><button type="button" class="button outline" id="centre-reset">Reset</button></div>
  {directoryPage&&<details class="directory-index"><summary>Browse every published listing by state or region</summary><div>{regionGroups.map(group=><section><h3>{group.region} <span>{group.centres.length}</span></h3><ul>{group.centres.map(centre=><li><a href={'#centre-'+centre.id}>{centre.name}</a></li>)}</ul></section>)}</div></details>}

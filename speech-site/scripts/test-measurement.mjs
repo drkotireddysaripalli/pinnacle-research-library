@@ -103,6 +103,24 @@ test('rendered occupational actions emit coarse consented events and no private 
  const count=h.events().length;h.choose('declined');for(const [placement,href] of links)h.click(placement,href);assert.equal(h.events().length,count);
  const blocked=harness({path:'/best-occupational-therapy-center-india-proven-improvement-rate',gpc:true});blocked.choose('accepted');for(const [placement,href] of links)blocked.click(placement,href);assert.equal(blocked.events().length,0);
 });
+test('rendered ABA actions emit only coarse consented events',()=>{
+ const html=fs.readFileSync('dist/best-aba-therapy-center-india-proven-improvement-rate.html','utf8');
+ const links=[...html.matchAll(/<a\b[^>]*>/g)].map(([tag])=>[tag.match(/\bdata-cta="(aba-[^"]+)"/)?.[1],tag.match(/\bhref="([^"]+)"/)?.[1]]).filter(([placement,href])=>placement&&href).map(([placement,href])=>[placement,href.replaceAll('&amp;','&')]);
+ const placements=new Set(links.map(([placement])=>placement));
+ for(const expected of ['aba-first-call','aba-first-centres','aba-final-call','aba-final-centres','aba-final-enrol','aba-share-whatsapp'])assert(placements.has(expected),`ABA action ${expected} is absent from rendered HTML`);
+ const h=harness({path:'/best-aba-therapy-center-india-proven-improvement-rate'});
+ for(const [placement,href] of links)h.click(placement,href);
+ assert.equal(h.events().length,0);
+ h.choose('accepted');for(const [placement,href] of links)h.click(placement,href);
+ const names=h.events().map(event=>event[1]);
+ assert.equal(names.filter(name=>name==='phone_link_click').length,2);
+ assert.equal(names.filter(name=>name==='enquiry_link_click').length,1);
+ assert.equal(names.filter(name=>name==='centre_section_click').length,2);
+ assert.equal(names.filter(name=>name==='page_share_click').length,1);
+ const serialized=JSON.stringify(h.events());for(const privateValue of ['centre=','service=','text=','private-child-detail'])assert(!serialized.includes(privateValue));
+ const count=h.events().length;h.choose('declined');for(const [placement,href] of links)h.click(placement,href);assert.equal(h.events().length,count);
+ const blocked=harness({path:'/best-aba-therapy-center-india-proven-improvement-rate',gpc:true});blocked.choose('accepted');for(const [placement,href] of links)blocked.click(placement,href);assert.equal(blocked.events().length,0);
+});
 test('centre directory actions stay coarse and never export centre names, hashes or search terms',()=>{
  const h=harness({path:'/centers'});h.choose('accepted');
  for(const placement of ['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation'])h.click(placement,'https://www.pinnacleblooms.org/centers#centre-suchitra');

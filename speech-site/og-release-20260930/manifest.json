@@ -1,6 +1,6 @@
 {
   "edition": "2026-09-30",
-  "scope": "Five OG images only; existing image URLs retained.",
+  "scope": "Four earlier OG replacements retain their reviewed URLs; ABA now builds directly from its 30 September source creative.",
   "assets": [
     {
       "id": "occupational",
@@ -13,19 +13,6 @@
       "height": 630,
       "bytes": 155793,
       "generator": "ChatGPT built-in image generation in Codex"
-    },
-    {
-      "id": "aba",
-      "page": "/best-aba-therapy-center-india-proven-improvement-rate",
-      "target": "pinnacle-pages-assets/aba-therapy-pinnacle-creative-20260929.B3UKn4Ar_Z2rl2Lz.jpg",
-      "replacement": "images/aba.jpg",
-      "original": "revised-originals/aba.png",
-      "sha256": "74bfe4ef386f4aa0e8f6be14b52a4a852710169cc72ab291d0023a568418edcd",
-      "width": 1200,
-      "height": 630,
-      "bytes": 223868,
-      "generator": "OpenAI Images API via approved skill CLI",
-      "model": "gpt-image-2"
     },
     {
       "id": "special-education",

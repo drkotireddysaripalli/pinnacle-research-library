@@ -2,7 +2,7 @@
 
 Canonical: https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate
 
-Pinnacle describes ABA and behavioural support as one possible part of a child-specific, family-guided plan. The page begins with the child’s everyday life: communicating needs, making choices, moving through routines, learning, playing and participating with appropriate support.
+Pinnacle describes ABA and behavioural support as one possible part of a child-specific, family-guided plan. The page begins with the child’s everyday life: communicating needs, making choices, moving through routines, learning, playing and participating with appropriate support. A family can call 9100 181 181 for free staffed telephone guidance 24/7; visits and therapy have separately confirmed fees.
 
 ## Direct answer
 
@@ -28,7 +28,11 @@ PinnacleAI GPT-OS v1.0.0 is licensed as non-diagnostic developmental-support Cla
 
 ## Begin
 
-Call 9100 181 181 (tel:+919100181181), browse the dated centre directory or use the enrolment page. Service and professional availability differ by centre; the team confirms the suitable centre, professional, appointment and fees before travel.
+Call 9100 181 181 (tel:+919100181181), browse the dated centre directory or use the enrolment page. First describe an everyday moment and what matters to the child and family; the team helps check a suitable professional, location, appointment and current fees. The directory is a network location list, not a verified ABA-service roster. Service and professional availability differ by centre and should be confirmed before travel.
+
+## Related support when appropriate
+
+The child-specific plan may connect behavioural support with [speech and communication](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate), [occupational therapy](https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate), [special education](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181) or the [autism support overview](https://www.pinnacleblooms.org/autism-therapy). Every child does not need every service.
 
 ## Sources
 
