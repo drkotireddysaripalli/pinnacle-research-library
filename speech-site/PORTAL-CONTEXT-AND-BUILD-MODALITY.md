@@ -15,14 +15,15 @@ For a new page or material page revision, read in this order:
 1. `AGENTS.md` for execution ownership and claim boundaries.
 2. This document for the portal-wide experience and working modality.
 3. `PORTAL-PAGE-INVENTORY-20260929.md` for the canonical therapy, centre and PinnacleAI® sequence and URL roles.
-4. `ACTIVE-PAGE-WORK-ORDER.md` for the one page currently being built.
-5. The current shared components, typed content contracts and relevant evidence records.
-6. The exact original sources supporting claims used on that page.
-7. Historical standards or release receipts only when the active work depends on them.
+4. `PINNACLE-PAGE-CREATION-WORK-ORDER.md` for the reusable page brief, production sequence and 100-point rubric.
+5. `ACTIVE-PAGE-WORK-ORDER.md` for the one page currently being built.
+6. The current shared components, typed content contracts and relevant evidence records.
+7. The exact original sources supporting claims used on that page.
+8. Historical standards or release receipts only when the active work depends on them.
 
 The conversation history remains useful evidence of intent. Current decisions committed in these files govern implementation when old exploratory wording conflicts with a later settled decision.
 
-For the next material Occupational Therapy revision, `OCCUPATIONAL-THERAPY-CANONICAL-NARRATIVE-20260930.md` records the owner-accepted parent, sales, clinical, evidence, search, social and measurement narrative. It is a narrative commitment, not a live release; `ACTIVE-PAGE-WORK-ORDER.md` still controls the one page currently in implementation.
+The Occupational Therapy narrative in `OCCUPATIONAL-THERAPY-CANONICAL-NARRATIVE-20260930.md` was implemented in Worker v125. Its current practical review is `reviews/OCCUPATIONAL-THERAPY-V125-PRACTICAL-REVIEW-20260930.md`; the accepted future-page operating standard is `PINNACLE-PAGE-CREATION-WORK-ORDER.md`. `ACTIVE-PAGE-WORK-ORDER.md` now controls Child Development Assessment as the next page.
 
 Do not reread every historical release note, repeat every earlier audit or reconstruct settled design decisions for each page. Do not reduce the page to a generic template or thin prompt merely to save usage.
 
@@ -224,8 +225,8 @@ For each page:
 6. Resolve review findings in one consolidated implementation pass where possible.
 7. Validate the changed page and any genuinely affected shared systems.
 8. Review mobile, tablet and desktop after the meaningful implementation is assembled.
-9. Deploy once the release candidate is coherent, then verify production at the required boundaries.
-10. Save source, release evidence, rollback information and the visibility ledger.
+9. Commit and push the reviewed source, then deploy the coherent release candidate once and verify production at the required boundaries.
+10. Save release evidence, rollback information and the visibility ledger; commit and push the receipt.
 
 The main task retains code, build, browser, submission and deployment ownership. Review agents remain read-only. Use them when independent review materially improves the result; do not create arbitrary agent or task-count quotas.
 
@@ -241,9 +242,10 @@ Complete each page in one controlled pass:
 - [ ] **Lock the image.** Select or generate the visual after the narrative is fixed. Confirm provenance, crop, alt text and responsive use; do not regenerate after it passes unless a concrete defect is found.
 - [ ] **Implement once.** Assemble the page, machine and social surfaces, and resolved review findings into one coherent release candidate.
 - [ ] **Run focused checks.** Test the changed page and only shared systems actually touched. Do not repeat a passing check unless code, content or a dependency changed, or a live defect appears.
-- [ ] **Deploy once.** Release the coherent candidate through the established route and preserve rollback details.
+- [ ] **Save reviewed source first.** Commit and push the exact candidate after the checks pass, before production deployment.
+- [ ] **Deploy once.** Release that candidate through the established full-union Cloudflare route and preserve rollback details.
 - [ ] **Check live once.** Read back the canonical, key image, primary action, sources and schema, responsive view, and named protected routes.
-- [ ] **Record and move on.** Commit and push, write the release receipt and ledger entry, mark the work order complete and advance to the next inventory page.
+- [ ] **Record and move on.** Write the release receipt and ledger entry, commit and push the receipt, mark the work order complete and advance to the next inventory page.
 
 Reopen a completed gate only for a specific failed check, a live defect, new material evidence or an explicit scope change. Every reopened item must identify the affected file, route or response; speculative re-analysis is not a release task.
 
@@ -269,7 +271,8 @@ Load these only when the active work needs their detail:
 - `PORTAL-PAGE-INVENTORY-20260929.md` — the canonical build sequence, page roles and cross-link graph.
 - `FINAL-NARRATIVE-AND-PAGE-STANDARD-20260927.md` — detailed Speech Therapy narrative, visual, search and commercial reasoning.
 - `IMPLEMENTATION-WORK-ORDER-20260928.md` — detailed 16-package implementation and release example.
-- `RELEASE-PAYMENT-CANONICAL-V108-20260929.md` — current shared-shell production state.
+- `RELEASE-OCCUPATIONAL-THERAPY-V125-20260930.md` — current managed shared-shell production state and rollback receipt.
+- `PINNACLE-PAGE-CREATION-WORK-ORDER.md` — canonical reusable brief, release steps and review rubric; read this before the active page order.
 - `/verify/` and its evidence records — current public proof and citation trail.
 
 This is the operating compression of the proven work. It preserves the outcome while preventing superseded exploration and unchanged verification from consuming every future build.

@@ -1,82 +1,37 @@
-# Active page work order — Child Development Assessment next
+# Active page work order — Child Development Assessment
 
-30 September 2026 · Occupational Therapy's corrective release is published and verified as Worker v125. Child Development Assessment is the next new page. The accepted 100-point guide is `reviews/PINNACLE-PAGE-DEVELOPMENT-WORK-ORDER-DRAFT-20260930.md`.
+30 September 2026 · **Next managed page; implementation has not started in this work order.** The canonical reusable process is [Pinnacle page creation work order](PINNACLE-PAGE-CREATION-WORK-ORDER.md). Read [portal context](PORTAL-CONTEXT-AND-BUILD-MODALITY.md) and [page inventory](PORTAL-PAGE-INVENTORY-20260929.md) first. Keep this file for one active page only; put completed work in release receipts.
 
-## Completed OT corrective release — exact delivered scope
+## Last completed baseline
 
-1. Keep the OT canonical and 301 aliases; make the first screen benefit-led and keep the call visible. State free 24/7 telephone guidance accurately.
-2. Add the approved, branded mother-child/OT review illustration with HTML caption and responsive WebP delivery. Make all seven life-first stages a connected, accessible path, while keeping detailed notes in the disclosure.
-3. Compact navigation in the **common header/CSS** so phone and tablet users see the Verify/Citations links, a visible complete-menu trigger and more page content; preserve every destination. Rebuild all managed routes and confirm the same header/footer output.
-4. Add OT's real rendered phone, centre, enrolment and WhatsApp placements to the shared fixed analytics vocabulary; test consent on/off, GPC and that no child, query or centre value is exported.
-5. Update page-specific machine reading and asset provenance, build the complete Verify + managed-page union, run focused and visual checks, **commit and push source first**, then deploy through the existing Cloudflare Worker with the full trigger and binding set.
-6. Read back production canonical/aliases, shared routes, Verify/FSC/helpline, social image and machine outputs; save version/rollback receipt and commit/push that receipt. Send a single IndexNow notice only for the materially changed OT canonical.
-7. Keep dated OT centre staffing, appointments and fees; call-team read-back; real family tasks; iOS/Safari; field speed and connected-call/visit outcomes as open measured gates. Do not fill them from page copy.
+Occupational Therapy's v125 correction is live. Source was committed/pushed as `15bf3ed` before deployment; Worker `46a23d19-cd92-436c-9201-029e7b7e7815` reached 100% traffic. The common compact header and Verify-containing footer matched across ten managed routes. See the [v125 release receipt](RELEASE-OCCUPATIONAL-THERAPY-V125-20260930.md) and [current 88/100 page-owned, 79/100 operational OT review](reviews/OCCUPATIONAL-THERAPY-V125-PRACTICAL-REVIEW-20260930.md). The old OT/centre active-order detail is preserved in [dated history](reviews/ARCHIVE-ACTIVE-PAGE-WORK-ORDER-OT-AND-CENTRES-20260930.md); do not treat its older version receipts as current.
 
-Code was committed and pushed as `15bf3ed` before deployment. Worker version `46a23d19-cd92-436c-9201-029e7b7e7815` is live at 100% traffic. Ten shared shells match, the OT canonical and two aliases pass, 10/10 managed HTML routes match staged source after removing only observed delivery-layer script inserts, responsive Chrome/Edge checks pass, W3C Nu reports zero errors/warnings, and one changed OT URL was notified to IndexNow. See `RELEASE-OCCUPATIONAL-THERAPY-V125-20260930.md` and its receipts. Publication does not establish ranking, AI citations, answered calls or visits.
+## Page contract to complete before design or code
 
-## Occupational Therapy release scope
+| Decision | Current direction or exact open fact |
+|---|---|
+| Canonical | Reconcile the established `/speech-aba-autism-assessments` route and aliases; do not create a competing assessment URL. Inspect current origin/live route and Search Console/backlink baseline before changing URL ownership. |
+| Parent question | “Where do we begin, what does my child's current participation tell us, and what happens next?” Start with the family's everyday concern rather than an inventory of tests. |
+| Promise | A professional and family can understand current abilities and priorities, agree a useful next step and keep reviewing progress toward growing self-sufficiency and mainstream participation. Do not imply diagnosis, certainty, a standardised result or that every child needs all therapies. |
+| Primary action | `9100 181 181` (`tel:+919100181181`) for free staffed telephone guidance; explain what the receiving team can check. Do not imply a free assessment or instant booked appointment without a confirmed offer. |
+| Secondary actions | Choose a real centre, understand the first visit, continue to service-prefilled enrolment where appropriate, share and inspect Verify sources. Centre choice does not itself book an appointment. |
+| Evidence | Confirm current original sources and permitted wording for AbilityScore®, seven Readiness Indexes, professional observation, family priorities, PinnacleAI® non-diagnostic support, and any licence/study/volume figure used. Keep product and professional claims separate. |
+| Operational facts | Confirm actual assessment format, eligible ages, service/location availability, professional role, fees, appointment handoff and any report/output timing before stating specifics. Unknowns remain call-to-check. |
+| Creative | Storyboard a family recognition scene, a first professional conversation, an intelligible life-first pathway and a distinct social poster. Reuse official brand assets; generate only scenes with a real narrative job, then inspect mobile/social crops and provenance. |
+| Search and measurement | Record one indexable intent, title/H1/meta, canonical/aliases, schema matching visible facts, sitemap/internal links, exact source exports, OG image, real CTA IDs and privacy-safe consent tests. Record submission/crawl/index/rank/call outcomes separately. |
+| Release boundary | Reuse `PageLayout.astro`, the common header/footer/Verify gateway and the full Verify + managed-page Worker route. If a shared file changes, rebuild and verify all managed pages and protected routes. Commit/push reviewed source **before** deployment, then verify live and commit/push the receipt. |
 
-- Canonical retained: `https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate`; the two existing OT aliases keep their 301 mapping. A clean-slug migration is a separate decision after a Search Console baseline.
-- Parent promise: begin with one everyday activity, then connect professional assessment, a meaningful goal, family-guided practice and review to the child’s growing self-sufficiency and participation in family, school and community life.
-- Primary action: call `9100 181 181` (`tel:+919100181181`) for free staffed telephone guidance, 24/7. The team helps confirm the suitable OT professional, centre, visit and fees; telephone guidance does not mean free therapy or a 24/7 appointment.
-- Secondary actions: find a published centre, begin the service-prefilled enrolment journey, share the page and inspect exact Verify sources.
-- Proof scope: the dated 31,052,382 defined-service count is network service volume, not OT outcomes; MD-5 and BIS describe non-diagnostic software scope, not OT credentials or child results; the research library preserves publication status. No 97% or exclusive-world claim appears in this release.
-- Service availability: the 62-location directory is an identity and navigation source, not a verified OT roster. The page asks callers to confirm local professional, appointment and fees.
-- Presentation: retain the common header and 36-record Verify/footer system, approved OT social poster, official emblems, Sintony and luminous Pinnacle palette. Show play, a first professional conversation, mealtime and a whole-life pathway with seven visible stage labels; keep detailed stage notes accessible by disclosure.
-- Release result: eight visible FAQs match JSON-LD; 320/390/768/1024/1440 checks passed for overflow, anchors, images, calls and keyboard disclosure. Public OG bytes match the reviewed ChatGPT poster through a fresh versioned URL. The canonical, two 301 aliases, child sitemap, Markdown, Verify, FSC and helpline routes were read back. See `RELEASE-OCCUPATIONAL-THERAPY-V124-20260930.md` for the exact receipt and remaining real-world measurement conditions.
+## Narrative and design acceptance
 
-## Prior completed destination — Find a Centre
+1. A parent recognizes a daily-life concern and finds the first call on the first phone screen.
+2. The page plainly distinguishes developmental assessment, professional observation and a medical diagnosis. It explains what a family may learn and who helps interpret it, without promising a score or an outcome.
+3. The family sees how their priorities, the child's capabilities, AbilityScore®/readiness support, suitable professional decisions, everyday practice and review relate to the child's desired life. Technology supports decisions; it does not replace people.
+4. One realistic example follows an observation through the first conversation, an agreed next step and later review. No invented patient case or testimonial.
+5. The visual system uses approved Pinnacle colour, Sintony, emblem, relevant icons and human scenes; the content remains accessible HTML and useful without the artwork.
+6. Exact Verify links appear by exact factual claims. Centre and fee statements have dated operational owners. FAQ answers address real first-step decisions rather than padding schema.
+7. Call, centre, enrolment and sharing actions work as represented and are measured only in coarse consent-safe terms.
+8. Mobile, tablet, desktop, keyboard, relevant browser/real-device and social previews are inspected; field speed and search outcomes are recorded only when observed.
 
-29 September 2026 · Find a Centre status: published, verified and preserved
+## Open facts and score gates
 
-Completed managed releases now include Speech Therapy, Enrolment, Occupational Therapy, ABA Therapy, Special Education, the integrated Autism Therapy hub and the national centre directory. Every managed page uses the common responsive header, authority navigation, 36-record Verify gateway and complete portal footer.
-
-## Completed destination
-
-- Canonical: `https://www.pinnacleblooms.org/centers`
-- Permanent consolidation: `/centers/`, `/Centres`, `/centres`, `/locations` and case/trailing-slash variants resolve to the canonical while individual legacy centre profiles remain origin-owned.
-- Title: `Find a Pinnacle Blooms Centre | Locations, Maps & Contact`
-- Parent promise: find a published Pinnacle location, compare the available address and profile evidence, and begin with one clear national or local next step.
-- Primary conversion: call `9100 181 181`.
-- Secondary conversion: search the directory, choose a centre, open its profile or map, share it with family, or start enrolment.
-
-## Delivered directory and evidence contract
-
-1. Publishes 62 unique centre listings across Telangana, Andhra Pradesh, Karnataka, Delhi, Tamil Nadu and the United States.
-2. Uses real centre names, addresses, maps and profile links from the dated source inventory; unverified branch phone numbers, ratings, hours, coordinates and service availability are not invented.
-3. Shows 52 photo-backed listings and 57 centre emblems, with a clear fallback where source media is unavailable.
-4. Keeps `9100 181 181` as the national continuity number and explains that selecting a centre records a preference rather than confirming an appointment.
-5. Provides call, enrolment-choice, centre-profile, map, WhatsApp, share, copy-link, citation and vCard actions where supported by the source record.
-6. Provides search, regional navigation and progressive disclosure while keeping all 62 listings in indexable HTML.
-7. Connects centre choice to the life-first pathway, therapy pages, the National Autism Helpline and the Verify evidence hub.
-8. Publishes citation-ready JSON, text and Markdown exports, a dedicated centre sitemap, root sitemap and `llms.txt` discovery.
-9. Includes a real-centre 1200 × 630 Open Graph image and descriptive image alternatives.
-10. Includes CollectionPage, ItemList, BreadcrumbList, FAQPage, Organization, Brand, WebSite and ImageObject structured data matching the visible page.
-
-## Claim and privacy boundaries
-
-- The directory reports 62 published listings; it does not claim that every listing is a currently verified Google Business Profile or that every branch has the same services, hours, ratings or registration status.
-- HFR or other branch credentials are used only when a current centre-level source supports them.
-- Private facility identifiers are excluded from HTML and public machine-readable exports.
-- Map links establish directions, not independent Google verification or endorsement.
-- PinnacleAI GPT-OS remains non-diagnostic developmental-support Class B SaMD for children aged 0–12. Its regulatory status does not prove an individual therapy result.
-
-## Completed release gate
-
-- Production build and 36 focused route, discovery, privacy and measurement checks passed.
-- Live responsive checks at 320, 390, 768, 1024 and 1440 pixels passed without horizontal overflow, broken required images or duplicate IDs.
-- W3C Nu returned zero errors and zero warnings for the live canonical.
-- Ten managed HTML routes match staged builds after normalising only Cloudflare's injected analytics beacon.
-- Compatible requests receive valid Markdown with `Vary: Accept` and `Content-Signal: search=yes, ai-input=yes`.
-- Evidence JSON/text/Markdown, directory JSON, root and centre sitemaps, root and child `llms.txt` files, and the social image are public.
-- Cloudflare Worker version `9494ca5e-9a2a-4dde-b07c-126dcf1e3911`, deployment `e9025157-4fb9-4f3a-af6f-8ef60a0ae5d4`, is live at 100%.
-- IndexNow accepted one material publication notification. This records submission, not discovery, indexing, ranking, AI citation or conversion.
-
-## Next active destination — Child Development Assessment
-
-- Retain and reconcile the established canonical `/speech-aba-autism-assessments`; do not create a competing assessment URL.
-- Answer the parent's first decision question: what should we understand about the child's current abilities, everyday participation and next useful step?
-- Explain the assessment pathway without implying diagnosis, certainty or a standardised outcome for every child.
-- Connect AbilityScore®, the seven readiness indexes, professional observation, family priorities and a clear review plan using only the current documented versions.
-- Lead to the national number, centre choice and enrolment while keeping the form short.
-- Reuse the common shell, Verify gateway, machine-reading package and release pipeline. Build one complete narrative, validate once at meaningful boundaries, deploy once, preserve source and then advance.
+Before copy or schema asserts them, obtain the assessment operations source and current Verify records. A named clinical reviewer, real-family comprehension tasks, real iPhone/Safari and downstream answered-call/visit measurements earn points in the [100-point rubric](PINNACLE-PAGE-CREATION-WORK-ORDER.md#100-point-review-rubric--score-only-demonstrated-facts) only when observed. Do not pad the new page with an old therapy's stats or copy. The next implementation pass should finish this contract, build one coherent page, review it, and release it once.

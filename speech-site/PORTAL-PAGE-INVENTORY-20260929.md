@@ -167,4 +167,4 @@ No page exists merely to repeat a keyword with a different city, condition or ad
 
 Build and validate one complete release candidate at a time. After a material page release, update the shared navigation where appropriate, sitemap, social image, machine-readable exports, evidence/source map, analytics events and visibility ledger. Submit the changed canonical once through the applicable search/indexing route. Then measure discovery, indexing, ranking, AI citation, referral and conversion separately.
 
-This inventory is now the default portal sequence. `ACTIVE-PAGE-WORK-ORDER.md` continues to define the one page currently in implementation, beginning with Occupational Therapy.
+This inventory is the default portal sequence. Occupational Therapy's v125 correction is complete; `ACTIVE-PAGE-WORK-ORDER.md` now defines Child Development Assessment as the next page. Use `PINNACLE-PAGE-CREATION-WORK-ORDER.md` for its reusable brief and release gates.

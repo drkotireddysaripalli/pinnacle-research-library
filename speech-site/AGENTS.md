@@ -5,8 +5,10 @@
 Before building or materially revising a managed portal page, read:
 
 1. `PORTAL-CONTEXT-AND-BUILD-MODALITY.md` for the settled outcome, narrative, visual, evidence, machine and release system.
-2. `ACTIVE-PAGE-WORK-ORDER.md` for the page currently being built.
-3. Only the deeper standards, source records and historical receipts required by that active work.
+2. `PORTAL-PAGE-INVENTORY-20260929.md` for the canonical URL and build sequence.
+3. `PINNACLE-PAGE-CREATION-WORK-ORDER.md` for the reusable page brief, release steps and 100-point review rubric.
+4. `ACTIVE-PAGE-WORK-ORDER.md` for the one page currently being built.
+5. Only the source records and historical receipts required by that active work.
 
 The conversation history remains useful context, but committed current decisions supersede abandoned exploration. Preserve the depth that produced the released pages. Reduce usage by avoiding irrelevant history and unchanged checks, not by simplifying the outcome or replacing the page with a generic template.
 
