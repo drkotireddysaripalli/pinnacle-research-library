@@ -1,6 +1,10 @@
-# Active page work order · four-centre batch v132
+# Active page work order · v132 closed; continuation ready
 
-**CURRENT:** 1 October 2026, Dilsukhnagar, Gurunanak Road/Vijayawada, South Extension/New Delhi and Ananthapuram. Frozen contracts and release gates: `reviews/CENTRE-BATCH-V132-WORK-ORDER-20261001.md`. Four complete original branded posters generated directly in ChatGPT; one reusable centre renderer and branch-specific content. Preserve all accepted bodies/common shell and migrate only four exact existing centre triggers. One concrete shared-handler fix adds the actual owned `ps_ga` analytics cookies while preserving session/auth bypasses.
+**COMPLETED V132:** 1 October 2026, Dilsukhnagar, Gurunanak Road/Vijayawada, South Extension/New Delhi and Ananthapuram. Frozen contracts and release gates: `reviews/CENTRE-BATCH-V132-WORK-ORDER-20261001.md`. Four complete original branded posters generated directly in ChatGPT; one reusable centre renderer and branch-specific content. Preserve all accepted bodies/common shell and migrate only four exact existing centre triggers. One concrete shared-handler fix adds the actual owned `ps_ga` analytics cookies while preserving session/auth bypasses.
+
+**RELEASED:** sourcefe3130f, Workerac200e7a-3c20-4d22-a39c-5201aa42d615 at100%, four intended retargets/151other routes unchanged.25shared shells/12protected controls/28production responsive runs passed. Receipt `RELEASE-CENTRE-BATCH-V132-20261001.md`. Do not reopen passed gates without a concrete defect/material change.
+
+**NEXT:** common-shell density/context/call-path package from the ordered work order, plus source-prepared Nandyala/Ongole/Tirupati/Srikakulam. Branch contracts and image-specific exclusions: `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`.55remainingstandalonecentres+2contactsections.
 
 ## Completed Suchitra contract · retained history
 

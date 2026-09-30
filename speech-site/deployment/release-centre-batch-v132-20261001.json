@@ -1,0 +1,76 @@
+{
+  "publishedAt": "2026-09-30T19:23:07.522362Z",
+  "sourceCommit": "fe3130f80b77fd15bd9cd15e14c2c3c4d8ef7fce",
+  "repository": "https://github.com/drkotireddysaripalli/pinnacle-research-library",
+  "worker": "pinnacle-verify-route",
+  "versionId": "ac200e7a-3c20-4d22-a39c-5201aa42d615",
+  "deploymentId": "5b1a1f19-45c7-4a75-a851-4884f4277065",
+  "percentage": 100,
+  "verifyAssetsMatched": 634,
+  "managedAssetsMatched": 1063,
+  "baseWorkerSha256": "0ba020a76679e1de99a8bd5aeb7ef3e2deb37be3e2a63854955598f9e2d9627a",
+  "unionWorkerSha256": "5e2ee82c943d8dae5144d822324e8f52969077b936cfd18df804cb5e4d387c46",
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "environment": "production",
+      "name": "PINNACLE_ASK",
+      "service": "pinnacle-ask",
+      "type": "service"
+    },
+    {
+      "environment": "production",
+      "name": "PINNACLE_LEGACY",
+      "service": "pbn-planetscale",
+      "type": "service"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ],
+  "routeCountBefore": 155,
+  "routeCountAfter": 155,
+  "intendedRouteChanges": 4,
+  "otherRoutesUnchanged": 151,
+  "rollback": {
+    "versionId": "75019b39-bfbb-49e6-a3bb-d6e0c3863cde",
+    "restoreRoutes": [
+      {
+        "id": "e38da6cd797a428486b40c496fc95631",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      {
+        "id": "2bf904f0b80641a5807372245d5446ee",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      {
+        "id": "02550ea34e8346c6aadff6796e3fd129",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      {
+        "id": "fa508fb3f3c54f3995a653e6c241a05a",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      }
+    ]
+  },
+  "receipts": [
+    "centre-batch-live-v132-20261001.json",
+    "centre-batch-responsive-local-v132-20261001.json",
+    "centre-batch-responsive-live-v132-20261001.json",
+    "centre-route-change-v132-20261001.json",
+    "indexnow-centre-batch-v132-20261001.json",
+    "centre-batch-nu-v132-20261001.json"
+  ]
+}

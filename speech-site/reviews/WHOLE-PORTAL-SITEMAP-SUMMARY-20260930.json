@@ -7,10 +7,10 @@
   "duplicateLocOccurrences": 257,
   "duplicateWithinDocuments": 0,
   "overlapAcrossDocuments": 257,
-  "managedPublicPages": 21,
+  "managedPublicPages": 25,
   "centreDirectoryEntries": 62,
-  "centreRebuildsReleased": 1,
-  "remainingStandaloneCentreRebuilds": 59,
+  "centreRebuildsReleased": 5,
+  "remainingStandaloneCentreRebuilds": 55,
   "contactFragmentEntries": 2,
   "navigationOccurrences": 249,
   "navigationUniqueAbsoluteHrefs": 213,
@@ -301,8 +301,8 @@
       "uniqueExactUrlsAssignedThisWorkFamily": 61,
       "uniqueExactUrlsListedByFamilySitemaps": 61,
       "states": {
-        "released_managed_v131_portfolio": 2,
-        "retained_pending_content_verification": 59
+        "released_managed_v132_portfolio": 6,
+        "retained_pending_content_verification": 55
       },
       "nextCondition": "Match branch address, Google identity, photos and enquiry choice; migrate one reviewed exact canonical in the common system. Confirm current operational facts separately."
     },
@@ -312,7 +312,7 @@
       "uniqueExactUrlsListedByFamilySitemaps": 45,
       "states": {
         "retained_pending_content_verification": 38,
-        "released_managed_v131_portfolio": 1
+        "released_managed_v132_portfolio": 1
       },
       "nextCondition": "Inspect current body, user job, source and backlinks/Search Console before preserve/repair/merge/redirect decisions."
     },
@@ -393,7 +393,7 @@
       "uniqueExactUrlsAssignedThisWorkFamily": 9,
       "uniqueExactUrlsListedByFamilySitemaps": 9,
       "states": {
-        "released_managed_v131_portfolio": 9
+        "released_managed_v132_portfolio": 9
       },
       "nextCondition": "Preserve released therapy/guide purpose and canonical; review only material facts, a concrete defect or audience evidence."
     },
@@ -411,7 +411,7 @@
       "uniqueExactUrlsAssignedThisWorkFamily": 9,
       "uniqueExactUrlsListedByFamilySitemaps": 9,
       "states": {
-        "released_managed_v131_portfolio": 9
+        "released_managed_v132_portfolio": 9
       },
       "nextCondition": "Preserve distinct released module narrative and evidence; implement concrete reviewed example only where a specific audience gap exists."
     },
@@ -440,5 +440,8 @@
     "Raw URL inventory stays in ignored audits directory; only aggregate summary and known public navigation are checked in.",
     "No submission, noindex, redirect, removal or production code deployment performed by this register."
   ],
-  "populationObservations": "reviews/SITEMAP-POPULATION-OBSERVATIONS-20260930.json"
+  "populationObservations": "reviews/SITEMAP-POPULATION-OBSERVATIONS-20260930.json",
+  "releaseStateUpdatedAt": "2026-09-30T19:25:33.668Z",
+  "releaseEvidence": "deployment/centre-batch-live-v132-20261001.json",
+  "releaseStateMethod": "Managed states updated from v132 live readback; sitemap population retains the dated checkedAt observation. No repeat whole-estate crawl."
 }

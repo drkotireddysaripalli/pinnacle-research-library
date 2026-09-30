@@ -1,3 +1,5 @@
+**CLOSED AS V132, 1October2026:** all four pages released. See `RELEASE-CENTRE-BATCH-V132-20261001.md` and final review disposition for excluded media and New Delhi workbookINACTIVE qualification. This file preserves the earlier preparation; current next batch is `NEXT-CENTRE-BATCH-SOURCES-20261001.md`.
+
 # Next centre batch · source-prepared, not rebuilt
 
 30 September 2026. Independent read-only source review checked five exact self-canonicals (HTTP 200), first-party location records, existing Maps/review destinations, released media and dated HFR source entries. This order reflects source/media readiness, not measured query demand. Current national contact for all five: **9100 181 181**, `tel:+919100181181`; no independently verified separate branch phone. Current hours, professional assignment/qualifications, available services, fees, accessibility and ratings are not established by this preparation.

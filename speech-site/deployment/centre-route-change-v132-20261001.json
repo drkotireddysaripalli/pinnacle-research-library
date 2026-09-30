@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-09-30T19:25:39.432Z",
+  "beforeCount": 155,
+  "afterCount": 155,
+  "added": [],
+  "removed": [],
+  "changes": [
+    {
+      "before": {
+        "id": "e38da6cd797a428486b40c496fc95631",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      "after": {
+        "id": "e38da6cd797a428486b40c496fc95631",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    },
+    {
+      "before": {
+        "id": "2bf904f0b80641a5807372245d5446ee",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      "after": {
+        "id": "2bf904f0b80641a5807372245d5446ee",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    },
+    {
+      "before": {
+        "id": "02550ea34e8346c6aadff6796e3fd129",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      "after": {
+        "id": "02550ea34e8346c6aadff6796e3fd129",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    },
+    {
+      "before": {
+        "id": "fa508fb3f3c54f3995a653e6c241a05a",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india*",
+        "script": "pinnacle-centre-search-repair",
+        "request_limit_fail_open": false
+      },
+      "after": {
+        "id": "fa508fb3f3c54f3995a653e6c241a05a",
+        "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india*",
+        "script": "pinnacle-verify-route",
+        "request_limit_fail_open": false
+      }
+    }
+  ],
+  "otherRoutesUnchanged": 151
+}

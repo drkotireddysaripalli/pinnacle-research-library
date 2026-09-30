@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 // Read sitemap documents only. Do not fetch individual child, staff or Ask pages,
 // submit URLs, alter index eligibility, or publish the raw estate URL inventory.
 const base = 'https://www.pinnacleblooms.org';
-const stamp = '20260930';
+const stamp = process.argv[3] || new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()).replaceAll('-','');
 const privateDir = path.resolve('audits', `whole-portal-register-${stamp}`);
 await fs.mkdir(privateDir, { recursive: true });
 const checkedAt = new Date().toISOString();
@@ -45,7 +45,8 @@ while (queue.length) {
 }
 
 const readJSON = async p => JSON.parse(await fs.readFile(p, 'utf8'));
-const release = await readJSON(`deployment/suchitra-live-v131-${stamp}.json`);
+const releaseReceipt = process.argv[2] || 'deployment/centre-batch-live-v132-20261001.json';
+const release = await readJSON(releaseReceipt);
 const managed = new Set(release.shells.map(row => row.path));
 const centresData = await readJSON('src/data/centre-directory.json');
 const centres = Array.isArray(centresData) ? centresData : (centresData.centres || centresData.centers || centresData.items);
@@ -99,7 +100,7 @@ const rows = [...pages.values()].map(row => {
   const family = familyOf(row.sitemapSources);
   const isManaged = parsed.origin === base && !parsed.search && !parsed.hash && managed.has(parsed.pathname);
   const centre = centres.find(c => c.profileUrl === row.url);
-  return { ...row, id: centre ? `CENTRE-${centre.id}` : `URL-${sha(row.url).slice(0, 12)}`, family, state: isManaged ? 'released_managed_v131_portfolio' : ['miracles', 'ask'].includes(family) ? 'retained_pending_private_eligibility_review' : family === 'verify' ? 'retained_evidence_source' : family === 'helpline' ? 'retained_separate_service_source' : 'retained_pending_content_verification', canonicalVerified: isManaged, individualPageFetchedThisInventory: false, sourceOwner: isManaged ? 'current portal implementation owner' : family === 'verify' ? 'Verify source in current owner workspace' : 'actual legacy/service source; confirm before edit', releaseEvidence: isManaged ? `deployment/suchitra-live-v131-${stamp}.json` : '', nextCondition: isManaged ? 'Preserve release; observe actual discovery/citation/call outcomes; reopen only for a concrete defect or evidence change.' : nextByFamily[family] || defaults(family) };
+  return { ...row, id: centre ? `CENTRE-${centre.id}` : `URL-${sha(row.url).slice(0, 12)}`, family, state: isManaged ? 'released_managed_portfolio' : ['miracles', 'ask'].includes(family) ? 'retained_pending_private_eligibility_review' : family === 'verify' ? 'retained_evidence_source' : family === 'helpline' ? 'retained_separate_service_source' : 'retained_pending_content_verification', canonicalVerified: isManaged, individualPageFetchedThisInventory: false, sourceOwner: isManaged ? 'current portal implementation owner' : family === 'verify' ? 'Verify source in current owner workspace' : 'actual legacy/service source; confirm before edit', releaseEvidence: isManaged ? releaseReceipt : '', nextCondition: isManaged ? 'Preserve release; observe actual discovery/citation/call outcomes; reopen only for a concrete defect or evidence change.' : nextByFamily[family] || defaults(family) };
 }).sort((a, b) => a.family.localeCompare(b.family) || a.url.localeCompare(b.url));
 const rowByUrl = new Map(rows.map(row => [row.url, row]));
 const navRows = navOccurrences.map(row => {
@@ -123,8 +124,10 @@ const summary = {
   uniqueExactSitemapUrls: rows.length, duplicateLocOccurrences: documents.filter(d => d.kind === 'urlset').reduce((sum, d) => sum + (d.locEntries || 0), 0) - rows.length,
   duplicateWithinDocuments: documents.filter(d => d.kind === 'urlset').reduce((sum, d) => sum + (d.repeatedLocsWithinDocument || 0), 0),
   overlapAcrossDocuments: documents.filter(d => d.kind === 'urlset').reduce((sum, d) => sum + (d.uniqueExactLocs || 0), 0) - rows.length,
-  managedPublicPages: managed.size, centreDirectoryEntries: centres.length, centreRebuildsReleased: 1,
-  remainingStandaloneCentreRebuilds: 59, contactFragmentEntries: 2,
+  managedPublicPages: managed.size, centreDirectoryEntries: centres.length,
+  centreRebuildsReleased: centres.filter(c=>!new URL(c.profileUrl).hash&&managed.has(new URL(c.profileUrl).pathname)).length,
+  remainingStandaloneCentreRebuilds: centres.filter(c=>!new URL(c.profileUrl).hash&&!managed.has(new URL(c.profileUrl).pathname)).length,
+  contactFragmentEntries: centres.filter(c=>new URL(c.profileUrl).hash).length,
   navigationOccurrences: navRows.length, navigationUniqueAbsoluteHrefs: new Set(navRows.map(r => r.absoluteUrl)).size,
   navigationInternalPagePaths: new Set(navRows.filter(r => r.internal).map(r => r.pagePath)).size,
   managedPagesAbsentFromFetchedSitemaps: [...managed].filter(p => !rows.some(r => r.canonicalVerified && new URL(r.url).pathname === p)),

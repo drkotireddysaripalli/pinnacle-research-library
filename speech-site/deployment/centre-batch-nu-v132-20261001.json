@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-09-30T19:29:18.166Z",
+  "representative": "gurunanak",
+  "endpoint": "https://validator.w3.org/nu/?out=json&doc=https%3A%2F%2Fwww.pinnacleblooms.org%2Fcenters%2Fbest-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+  "httpStatus": 200,
+  "result": {
+    "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+    "version": "26.9.30",
+    "messages": [
+      {
+        "type": "info",
+        "lastLine": 2,
+        "lastColumn": 32981,
+        "firstColumn": 32937,
+        "subType": "warning",
+        "message": "Consider using the “h1” element as a top-level heading only — or else use the “headingoffset” attribute (otherwise, all “h1” elements are treated as top-level headings by many screen readers and other tools).",
+        "extract": "uiries</p><h1 id=\"local-title\" data-astro-cid-rdjbpmzn>Everyd",
+        "hiliteStart": 10,
+        "hiliteLength": 45
+      },
+      {
+        "type": "info",
+        "lastLine": 2,
+        "lastColumn": 32451,
+        "firstColumn": 32400,
+        "subType": "warning",
+        "message": "Article lacks heading. Consider using “h2”-“h6” elements to add identifying headings to all articles.",
+        "extract": "id=\"main\"><article class=\"local-page\" data-astro-cid-rdjbpmzn><secti",
+        "hiliteStart": 10,
+        "hiliteLength": 52
+      }
+    ],
+    "language": "en"
+  },
+  "freshConformancePass": true
+}

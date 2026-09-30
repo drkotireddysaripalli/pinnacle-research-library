@@ -1,6 +1,6 @@
 # Pinnacle portal page ledger and delivery sitemap
 
-30 September 2026 · v131 portfolio and whole-estate continuation
+1 October 2026 · v132 portfolio; sitemap population observed 30 September
 
 This is the operational ledger for the **17 priority destinations** in `PORTAL-PAGE-INVENTORY-20260929.md`: two reference pages, six parent-demand pages and nine PinnacleAI product pages. It distinguishes a live URL from a page that has passed editorial review. It does not count every legacy, centre-profile, Verify or Ask page in the wider domain.
 
@@ -13,10 +13,12 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | Published product pages corrected in v129 | 9 | The nine live pages now use distinct module stories, original illustrations and revised source maps. |
 | Planned managed page not built | 0 | Initial 17-destination portfolio is released; wider local/search-estate work remains. |
 | Additional managed decision guides | 3 | Speech first-visit, teacher-observation and service-information pages; outside the 17-page priority denominator. |
-| Additional rebuilt local centre | 1 | Suchitra, published and checked in v131. |
-| Total managed public HTML routes in v131 | 21 | Seventeen priority pages, three guides and Suchitra. Preview and shell/test index are excluded. |
+| Additional rebuilt local centres | 5 | Suchitra v131; Dilsukhnagar, Vijayawada, South Extension and Ananthapuram v132. |
+| Total managed public HTML routes in v132 | 25 | Seventeen priority pages, three guides and five centres. Preview and shell/test index are excluded. |
 
-**Latest release:** Suchitra v131 is public on its established canonical. Source `55aeccb` was pushed before Worker `75019b39-bfbb-49e6-a3bb-d6e0c3863cde` served 100%. Seven changed HTML/assets/exports, all 21 common shells and 11 valid protected controls passed public readback. The 155-route comparison found only the intended Suchitra retargeting; the other 154 records remain unchanged. See `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`.
+**Latest release:** Four centre pages v132 are public on their retained canonicals. Source `fe3130f` was pushed before Worker `ac200e7a-3c20-4d22-a39c-5201aa42d615` at 100%. Twenty-five changed public assets/exports and 25 shared shells matched the stage;12protected controls retained bytes. All28production responsive runs passed. Exactly four existing routes were retargeted; the other 151 remain unchanged. The centre sitemap retains 61 URLs with four new dated lastmods. One four-URL IndexNow batch returned200. See `RELEASE-CENTRE-BATCH-V132-20261001.md`.
+
+**Prior release:** Suchitra v131 is public on its established canonical. Source `55aeccb` was pushed before Worker `75019b39-bfbb-49e6-a3bb-d6e0c3863cde` served 100%. Seven changed HTML/assets/exports, all 21 common shells and 11 valid protected controls passed public readback. The 155-route comparison found only the intended Suchitra retargeting; the other 154 records remain unchanged. See `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`.
 
 **Prior Assessment release:** v130 is public on its retained canonical. Source `850968e` was pushed before Worker `ec9b68b7-40e6-40bd-91ba-a387983e2c8c` served 100%. Its new HTML, images and exports matched the stage; all 20 common shells and ten unchanged controls passed readback. The two shared-header details and three named cross-therapy fixes are released. See `RELEASE-ASSESSMENT-V130-20260930.md`.
 
@@ -44,6 +46,11 @@ This is the operational ledger for the **17 priority destinations** in `PORTAL-P
 | B-08 | `/fusion-module` | Relevant observations into human review | **v129 live, checked** | School input remains conditional on consent and current access workflow. |
 | B-09 | `/reassess-review-repeat` | Longitudinal comparison and next decision | **v129 live, checked** | Keep setting/support comparison and individual outcome boundaries. |
 | CENTRE-suchitra | `/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india` | Locate this branch and arrange a useful first conversation | **v131 live, checked** | Preserve sourced identity/gallery and exact HFR status; confirm current professional, appointment, fees and accessibility through enquiry. Observe actual discovery/call outcomes. |
+
+| CENTRE-dilsukhnagar | `/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india` | Chaitanyapuri address, branch photos and useful family conversation | **v132 live, checked** | Preserve exact source and selected enquiry; current appointments/services/access and actual discovery/calls remain separate. |
+| CENTRE-gurunanak | `/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india` | Vijayawada arrival and life-first visit preparation | **v132 live, checked** | Coordinate directions are not matched GBP identity; no released exterior. Confirm second-floor access and appointments. |
+| CENTRE-delhi | `/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india` | South Extension published location and enquiry | **v132 live, checked; current operation unverified** | WorkbookINACTIVE and datedHFRApproved retained distinctly. Confirm current operation/appointments before travelling; frontage steps and coordinate directions retained. |
+| CENTRE-ananthapuram | `/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india` | Ashoknagar arrival and participation-led conversation | **v132 live, checked** | Preserve established canonical spelling; exact local enquiry and source trail. CCTV photograph excluded; current appointments/access confirmed separately. |
 
 ## Public discovery sitemap and source graph
 
@@ -97,7 +104,9 @@ The full Verify/off-page contribution ledger remains in `work/verify-visibility/
 - `PORTAL-NEXT-WORK-ORDER-20260930.md`: full ordered work beyond the initial portfolio, with sitemap-family acceptance and operational conditions.
 - `reviews/CENTRE-PAGE-CONTINUATION-QUEUE-20260930.csv`: all 62 published entries, current source/destination/media and exact local-page next conditions.
 - `reviews/CENTRE-SITEMAP-RECONCILIATION-20260930.json`: 60 standalone profiles, two source-page fragments, no unmatched extra sitemap profile.
-- `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`: latest deployment, rollback, source and public verification.
+- `RELEASE-CENTRE-BATCH-V132-20261001.md`: latest four-centre deployment, rollback, source and public verification.
+- `RELEASE-SUCHITRA-CENTRE-V131-20260930.md`: prior local-centre release.
+- `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`: next four branch contracts and image-specific conditions.
 - `reviews/WHOLE-PORTAL-SITEMAP-SUMMARY-20260930.json`: refreshed sitemap documents, distinct counts, source-family states and limits.
 - `reviews/PORTAL-NAVIGATION-REGISTER-20260930.csv`: menu/footer/Verify/contact/external targets with origin and next condition.
 - `audits/whole-portal-register-20260930/whole-route-register.csv` and `.json`: private full URL register, excluded from public Git; sitemap-only observation, not a mass page review.
@@ -110,4 +119,12 @@ The navigation register covers **249 metadata/card/direct-link occurrences**, **
 
 Every full-register URL has a stable ID, sitemap source, family, work state, canonical-verification flag, source-ownership condition, release-evidence reference where applicable and exact next condition. Legacy, staff, FAQ, bots and Ask bodies were not fetched by this inventory. Raw child-associated route lists remain local in the ignored audit folder; the public summary contains aggregate counts only.
 
-Suchitra is complete. **59 standalone centre rebuilds** remain, plus **two section-only destinations**. The next prepared branch order is Dilsukhnagar, Gurunanak Road/Vijayawada, South Extension/New Delhi and Ananthapuram; Kurnool follows after matching its exterior photograph to the current address. This is source-readiness ordering, not a measured search-demand ranking. Ranking, AI citation and connected-call/enrolment results remain separate work.
+Five centre profiles are complete. **55 standalone centre rebuilds** remain, plus **two section-only destinations**. The next prepared batch is Nandyala, Ongole, Tirupati and Srikakulam; Kurnool retains its exterior/address condition. Source-readiness ordering is not a measured search-demand ranking. Search, AI citation and connected-call/enrolment results remain separate work.
+
+## Current delivery continuation · v132
+
+The existing 59,082-URL snapshot is retained with its 30 September population timestamp. Its release states, source evidence and centre queue were updated from the v132 live checks without repeating the whole crawl. Current managed count 25, rebuilt centre count 5, standalone remaining 55, contact sections 2. The navigation register retains 249 occurrences / 213 unique absolute hrefs / 117 internal paths; current managed-destination states were reconciled.
+
+Next source-prepared four: **Nandyala, Ongole, Tirupati and Srikakulam**. Their canonical/source/HFR/enquiry contracts and precise media exclusions are in `reviews/NEXT-CENTRE-BATCH-SOURCES-20261001.md`. Source-readiness order is not a measured query-demand ranking. Kurnool exterior/address and Jagadamba/Warangal postcode conflicts remain attached to their own rows.
+
+Targeted common-shell density/call-context and useful product examples, actual staff/bot sitemap variability, Ads-consent ownership, legacy/core source/search roles, multilingualFAQ/Ask/child-story eligibility and relevant off-page authority remain in `PORTAL-NEXT-WORK-ORDER-20260930.md`. Published, submitted, indexed, cited, connected call and accepted enquiry are separate states.
