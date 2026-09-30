@@ -21,7 +21,7 @@ The in-page images are illustrative, not documented patient outcomes. Nine compl
 - Focused enrolment contract tests: **18/18** passed. Metadata audit found no missing image alt, invented review schema or JobPosting schema on the unchanged enrolment page.
 - Public read-back: **nine** canonical HTML pages and Markdown variants HTTP 200; nine share JPEGs and nine new editorial WebPs matched staged SHA-256 bytes; nine JSON and nine text source maps matched staged bytes and the JSON carried claim/source mappings. **Eleven** alias redirects, **eight** discovery/protected controls (including root/product sitemaps, Verify, FSC and helpline), and **three** separate origin pages passed. Saved receipt: `deployment/pinnacleai-correction-live-20260930.json`.
 - The W3C Nu service returned HTTP **429** on a fresh final local request. A pre-heading-fix pass had zero errors with article-heading warnings; the heading structure was corrected and the final browser/DOM checks passed. A fresh Nu zero-warning result is **not** claimed.
-- The live root sitemap index returned HTTP 200 with **15 child sitemaps**. Product sitemap lists all nine canonicals. The complete child-file inventory and the centre-sitemap 404 discrepancy are documented in `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`.
+- The live root sitemap index returned HTTP 200 with **15 child sitemaps**. Product sitemap lists all nine canonicals. Robots also advertises a separate one-URL helpline sitemap and an Ask index with five children and 43,288 `<loc>` entries; these are entries, not indexed-page counts. The complete family inventory and the centre-sitemap 404 discrepancy are documented in `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md`.
 
 ## Discovery and next work
 

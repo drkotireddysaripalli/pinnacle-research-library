@@ -69,6 +69,8 @@ These are **sitemap entries, not confirmed indexed pages or unique URLs**. All 1
 | `/speech-therapy/sitemap.xml` | 9 | Preserve managed service canonicals and guide value. |
 | `/pinnacleai/sitemap.xml` | 9 | Preserve the nine corrected product canonicals and source exports. |
 
+`/robots.txt` also advertises two **additional** sitemap roots outside that 15-child index. `/national-autism-helpline/sitemap.xml` returned HTTP 200 with one canonical URL; retain its distinct service ownership and measure actual search/call results. The apex `/ask/sitemap.xml` returned HTTP 200 and lists five child sitemaps (`sitemap-0.xml` through `sitemap-4.xml`), all HTTP 200, with 10,000, 10,000, 10,000, 10,000 and 3,288 `<loc>` entries respectively. These **43,288 entries are not 43,288 indexed pages**. A sample-based Ask indexability, duplicate, quality and privacy audit is the next evidence gate before any mass canonical or noindex change.
+
 ## Ordered remaining work after the nine-page correction
 
 | Priority | Work package | Completion condition |
@@ -80,6 +82,6 @@ These are **sitemap entries, not confirmed indexed pages or unique URLs**. All 1
 | 5 | Legacy search-estate convergence | Assess competing autism/service/product-origin pages and `/ask` duplicates using content, source status, backlinks and Search Console before canonical/redirect/noindex decisions. Remove unsupported claims and protect private child data through the appropriate incident workflow. |
 | 6 | Decision guides and governance | Publish focused first-visit/service guides only for recurring audience questions; add verified professional/team and clinical-governance facts. Do not create thin keyword variants. |
 | 7 | Visibility and conversion measurement | At material release, make one justified indexing notification. Then separately observe crawler discovery, indexing, query visibility, AI citation, call clicks, connected calls, accepted leads, appointments and enrolments. Use existing Search Console/Bing/Ahrefs and call/CRM owners; do not infer commercial results from a 200 response. |
-| 8 | Whole-domain sitemap eligibility | Audit the 15 live child files by audience value, canonical/index status, factual quality and child privacy, prioritising `miracles`, `bots`, staff, FAQs and centre identity. Repair only verified defects in their actual owner source; the `<loc>` count is not an SEO success metric. |
+| 8 | Whole-domain sitemap eligibility | Audit the 15 indexed child files and the two additional robots-advertised roots by audience value, canonical/index status, factual quality and child privacy, prioritising Ask's five children, `miracles`, `bots`, staff, FAQs and centre identity. Repair only verified defects in their actual owner source; the `<loc>` count is not an SEO success metric. |
 
 The full Verify/off-page contribution ledger remains in `work/verify-visibility/QUEUE.md` at the workspace root; this document is the **portal page** sitemap, not a replacement for its destination-by-destination backlink ledger.
