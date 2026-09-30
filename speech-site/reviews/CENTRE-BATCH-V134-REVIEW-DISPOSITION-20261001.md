@@ -1,0 +1,7 @@
+# v134 review disposition
+
+Read-only source and technical reviews found one source correction: retain ACTIVE workbook markers for all four new briefs in their exports while keeping currentOperationVerified/currentServiceAvailabilityVerified false. Corrected once, rebuilt and the33centre contract/route tests passed. The previous75unaffected focused tests passed; combined108checks. An old hardcodedv132OG assertion now checks each record’s exact declared release version; fresh-share protection and exclusions remain.
+
+No other source/technical blockers reported. Exact canonicals, branch addresses/postcodes, phone, map/write-review destinations, selected-enquiry IDs, HFR/date/bundle/19Sepstatus and eligible media match the prepared brief. Old centre closing-copy/OG values and25acceptedmainbodies remain. Independent narrative review supplied distinct family jobs and call motivation; root integrated the useful parts while keeping Tirupati’s picture-book narrative and Srikakulam’s shared-learning example aligned with their creatives.
+
+All four complete original posters were generated directly with the built-in ChatGPT tool and visually inspected. Local28Chrome/Edgecases passed, including8FAQs/sevenstages, phone/enquiry, sources, share/citation, disclosures and gallery loading. Mobile/desktop hero, story and gallery screenshots inspected; no unnecessary page-body redesign or repeated full-estate crawl. PhysicaliOS/Safari/Firefox and real call/CRM outcomes remain outside this release’s evidence.

@@ -13,7 +13,11 @@ export const CENTRE_DETAIL_ROUTES={
  '/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india':'dilsukhnagar',
  '/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india':'gurunanak',
  '/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india':'delhi',
- '/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india':'ananthapuram'
+ '/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india':'ananthapuram',
+ '/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india':'nandyala',
+ '/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india':'ongole',
+ '/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india':'tirupati',
+ '/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india':'srikakulam'
 };
 export const PINNACLEAI_PATHS=['/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat'];
 const DOCUMENT='/speech-therapy/service-information';

@@ -62,6 +62,66 @@ const briefs=[
   photos:[{file:'ananthapuram-exterior-19.jpg',title:'Recognise the building',alt:'Published Ananthapuram exterior photograph with Pinnacle signage.'},{file:'ananthapuram-interior-47-1.jpg',title:'Inside the centre',alt:'Published small-room interior view from Pinnacle Ananthapuram.'}],
   review:'https://g.page/r/CftPqlkpCzqlEAI/review',hfr:'IN2810053167',certificateDate:'2026-04-14',certificatePage:93,
   localQuestion:'Where is Pinnacle Ananthapuram in Ashoknagar?',localAnswer:'The published centre is on 2nd Cross Road, opposite SIU Church and beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur 515001. Use the linked directions and confirm the appointment address and entrance with the team before travelling.'
+ },
+ {
+  id:'nandyala',sourceFlag:'ACTIVE',label:'Nandyala',city:'Nandyala',region:'Andhra Pradesh',postcode:'518501',
+  street:'Second Floor, Padmavati Nagar Road, above Domino’s, beside GSR Hospital, Srinivasa Nagar',
+  headline:'Ready for the day.',headlineAccent:'More room for life.',
+  lead:'Getting dressed. Putting on shoes. Going out together. Bring one everyday moment you want your child to take part in—and start a useful first conversation in Nandyala.',
+  landmark:'Above Domino’s, beside GSR Hospital · Find us',
+  arrival:'The published centre is on the second floor on Padmavati Nagar Road, above Domino’s and beside GSR Hospital. Use the existing directions and confirm the entrance, floor access and appointment address before travelling.',
+  exampleTitle:'Getting ready can be a step toward greater independence.',
+  exampleQuestion:'“My child wants to come outside with us. How can putting on shoes become something they take part in?”',
+  exampleSteps:[['Start with what your child can do.','Describe how your child chooses shoes, sits, reaches or asks for help. The starting picture includes the support that makes the moment possible.'],['Choose an everyday priority.','Agree a meaningful part of getting ready. Communication, movement, sensory comfort or sequencing support follows that individual goal.'],['Make the idea work at home.','Ask for a manageable opportunity during a real outing routine, with clear guidance on what to offer and what to notice.'],['Review the help and participation.','Bring back what happened. Discuss what your child took part in, what help still mattered and which next step would be useful.']],
+  hero:'nandyala-interior-17-1.jpg',exterior:'nandyala-exterior-33.jpg',emblem:'nandyala-profile-1.jpg',
+  photos:[{file:'nandyala-exterior-33.jpg',title:'Recognise the building',alt:'Published Nandyala building photograph with Pinnacle centre signage.'},{file:'nandyala-interior-17-1.jpg',title:'Inside the centre',alt:'Published first-party photograph of an interior room at Pinnacle Nandyala.'},{file:'nandyala-interior-17-2.jpg',title:'Another interior view',alt:'Another published premises photograph matched to Pinnacle Nandyala.'}],
+  review:'https://g.page/r/CTf5y3e6J9gOEAI/review',hfr:'IN2810065160',certificateDate:'2026-05-08',certificatePage:73,
+  localQuestion:'How do we find the Nandyala entrance?',localAnswer:'The published address is on the second floor above Domino’s, beside GSR Hospital on Padmavati Nagar Road. The gallery includes a building photograph. Confirm the entrance, floor access and appointment address with the receiving team before travelling.',releaseLabel:'centre-v134-nandyala-20261001'
+ },
+ {
+  id:'ongole',sourceFlag:'ACTIVE',label:'Ongole',city:'Ongole',region:'Andhra Pradesh',postcode:'523001',
+  street:'Sundaraiah Bhavan Road, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram',
+  headline:'A little more participation.',headlineAccent:'A life with more possibilities.',
+  lead:'Choosing a snack. Asking for help. Sharing a meal. Start with the everyday possibility you want to open up for your child, and ask about a first conversation in Ongole.',
+  landmark:'Sundaraiah Bhavan Road, near Gummadi Chest Hospital · Find us',
+  arrival:'Use the published address on Sundaraiah Bhavan Road near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram. The gallery includes a frontage photograph; confirm the exact appointment address, entrance and access arrangements before travelling.',
+  exampleTitle:'A family meal can give the work a direction.',
+  exampleQuestion:'“My child has a favourite snack. How can choosing it and joining us become easier?”',
+  exampleSteps:[['Recognise a useful starting point.','Describe how your child chooses, reaches, communicates or stays with the family during a familiar meal. Include what already helps.'],['Choose a meaningful next step.','Discuss one way your child could participate more. Relevant communication, daily-routine or sensory support follows the goal; no compulsory therapy bundle is assumed.'],['Keep practice familiar.','Ask for a suitable, manageable idea for your own family routine. Comfort, choice and the child’s participation guide what you try.'],['Bring real observations into review.','Discuss what happened with familiar food, people and support. The family and professional decide whether to keep, adapt or reconsider the next step.']],
+  hero:'ongole-exterior-37.jpg',exterior:'ongole-exterior-37.jpg',emblem:'ongole-profile-15.jpg',
+  photos:[{file:'ongole-exterior-37.jpg',title:'Frontage and arrival',alt:'Published first-party frontage photograph of the Pinnacle Ongole centre.'},{file:'ongole-interior-13-2.jpg',title:'Inside the centre',alt:'Published premises photograph matched to Pinnacle Ongole.'}],
+  review:'https://g.page/r/CQjVSY0Cz3EtEAE/review',hfr:'IN2810050814',certificateDate:'2026-03-09',certificatePage:89,
+  localQuestion:'Which landmark helps us find Pinnacle Ongole?',localAnswer:'The published location is on Sundaraiah Bhavan Road near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole 523001. Use the frontage photograph and existing directions, then confirm the appointment address and entrance with the team.',releaseLabel:'centre-v134-ongole-20261001'
+ },
+ {
+  id:'tirupati',sourceFlag:'ACTIVE',label:'Tirupati',city:'Tirupati',region:'Andhra Pradesh',postcode:'517502',
+  street:'Air Bypass Road, near ICICI Bank, Shanthi Nagar, New Balaji Colony',
+  headline:'Curiosity today.',headlineAccent:'More ways to join in.',
+  lead:'Looking at a picture. Sharing an interest. Joining a familiar activity. Tell us what your child enjoys and what you want to make possible, then ask about a first visit in Tirupati.',
+  landmark:'Air Bypass Road, near ICICI Bank · Find us',
+  arrival:'The published location is on Air Bypass Road near ICICI Bank, Shanthi Nagar, New Balaji Colony. The released gallery shows an interior, without an entrance photograph. Confirm the exact building, entrance, floor and appointment arrangements before travelling.',
+  exampleTitle:'An interest in pictures can open a shared moment.',
+  exampleQuestion:'“My child loves this picture book. What could help us enjoy it together?”',
+  exampleSteps:[['Notice the interest and ability.','Share how your child looks, points, turns a page, makes a sound or brings someone into the activity. Communication takes more than one form.'],['Give the work an everyday purpose.','Choose a meaningful shared moment. Relevant communication, attention, movement or learning support follows the child’s own starting picture.'],['Try an idea the family can use.','Ask for suitable guidance during a short, enjoyable activity at home. The idea should fit your child and family rather than becoming another lesson to finish.'],['Review connection and participation.','Bring observations from different people or familiar books. Decide with the professional which support helps and what to adjust next.']],
+  hero:'tirupati-interior-4-1.jpg',exterior:null,emblem:'tirupati-profile-8.jpg',
+  photos:[{file:'tirupati-interior-4-1.jpg',title:'Inside the centre',alt:'Published first-party interior photograph of Pinnacle Tirupati.'}],
+  review:'https://g.page/r/CRwGxQipR6QJEAI/review',hfr:'IN2810065148',certificateDate:'2026-05-10',certificatePage:71,
+  localQuestion:'Can I see the Tirupati entrance before travelling?',localAnswer:'The released gallery contains an interior photograph, not a verified reusable entrance photograph. Use the published Air Bypass Road address near ICICI Bank and ask the team for current arrival, entrance and floor instructions.',releaseLabel:'centre-v134-tirupati-20261001'
+ },
+ {
+  id:'srikakulam',sourceFlag:'ACTIVE',label:'Srikakulam',city:'Srikakulam',region:'Andhra Pradesh',postcode:'532001',
+  street:'Above Indian Bank, Sana Street, Rama Laxmana Road, Illisipuram, Meher Nager',
+  headline:'Make a choice.',headlineAccent:'Take part in more of life.',
+  lead:'Choosing a game. Taking a turn. Joining family time. Bring the everyday moment that matters to your child, and ask about a useful first conversation in Srikakulam.',
+  landmark:'Above Indian Bank, Sana Street · Find us',
+  arrival:'The published centre is above Indian Bank on Sana Street, Rama Laxmana Road, Illisipuram, Meher Nager. Use the matched building photograph and directions; confirm the entrance, floor access and appointment address with the team.',
+  exampleTitle:'An interest at home can shape a useful learning goal.',
+  exampleQuestion:'“My child enjoys drawing at home. What could help them join a short activity with another person?”',
+  exampleSteps:[['Begin with your child’s interest.','Describe what your child enjoys, how they choose materials and what helps them stay involved. Notice communication, movement, comfort and support.'],['Define useful participation.','Discuss a suitable next step, such as sharing a choice or joining part of an activity. Relevant support follows that everyday purpose.'],['Connect family and learning settings.','Ask for manageable guidance. With your consent, relevant teacher observations can add another perspective.'],['Review the experience.','Discuss participation, comfort and the support involved before deciding whether to continue or adjust the plan.']],
+  hero:'srikakulam-interior-7-0.jpg',exterior:'srikakulam-exterior-50.jpg',emblem:'srikakulam-profile-10.jpg',
+  photos:[{file:'srikakulam-exterior-50.jpg',title:'Recognise the building',alt:'Published first-party building photograph with Pinnacle Srikakulam signage.'},{file:'srikakulam-interior-7-0.jpg',title:'Inside the centre',alt:'Published premises photograph matched to Pinnacle Srikakulam.'},{file:'srikakulam-interior-7-1.jpg',title:'Another room view',alt:'Another published interior photograph matched to Pinnacle Srikakulam.'}],
+  review:'https://g.page/r/CfJdk9tbQh35EBM/review',hfr:'IN2810039040',certificateDate:'2026-03-11',certificatePage:'79–80',
+  localQuestion:'Where is the Srikakulam centre above Indian Bank?',localAnswer:'The published location is above Indian Bank on Sana Street, Rama Laxmana Road, Illisipuram, Meher Nager, Srikakulam 532001. The gallery includes a matched building photograph. Confirm the entrance, floor access and appointment address before travelling.',releaseLabel:'centre-v134-srikakulam-20261001'
  }
 ];
 export const centreDetails=briefs.map(brief=>{
@@ -84,7 +144,7 @@ export const centreDetails=briefs.map(brief=>{
   description:`Explore Pinnacle Blooms ${brief.label}: real centre photos, directions, life-first support, visit questions and dated evidence. Call 9100 181 181.`,
   enquiry:origin+'/enroll-autism-speech-aba-therapies-india?service=help&centre='+brief.id,
   direct:`Pinnacle Blooms Network’s ${brief.label} centre is published at ${address}. Call 9100 181 181 to discuss your child’s everyday priorities and confirm the suitable professional, available service, appointment and fee before visiting.`,
-  shareFile:brief.id+'-social-20261001.png',sources,stages:assessmentContent.stages,
+  shareFile:brief.id+'-social-20261001.png',releaseLabel:brief.releaseLabel||'centre-v132-'+brief.id+'-20261001',callMotivation:({nandyala:'Tell us which part of getting ready matters most. Bring your observations and ask about a suitable next step for your child in Nandyala.',ongole:'You already know moments that matter to your child. Bring one of them to the conversation and ask what an Ongole visit would include.',tirupati:'Start with what your child enjoys and what you want it to make possible. Ask about a suitable first conversation and professional in Tirupati.',srikakulam:'An interest at home can be the beginning of a useful learning goal. Tell us what your child enjoys and ask about a suitable first visit in Srikakulam.'} as Record<string,string>)[brief.id],sources,stages:assessmentContent.stages,
   facilityRecord:{identifier:brief.hfr,sourceLevel:'Workbook plus certificate copy',certificateDate:brief.certificateDate,certificateBundlePage:brief.certificatePage,recordedPortalStatus:'Approved',portalCheckedOn:'2026-09-19',sourceWorkbookFlag:brief.sourceFlag||null,currentOperationVerified:false,currentServiceAvailabilityVerified:false},
   faqs:[
    {question:'Where is Pinnacle Blooms '+brief.label+'?',answer:'The published address is '+address+'. '+brief.arrival},
