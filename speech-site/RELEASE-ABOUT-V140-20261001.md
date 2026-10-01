@@ -10,4 +10,4 @@ Production build passed; seven focused local Chrome/Edge cases passed at320/390/
 
 ## Release closure
 
-Pending reviewed-source push, complete-union deployment,177route/fourbinding preservation, current public bytes/exports/assets, focused production checks and single changed-URL notification. Rollback is Special EducationV139 Worker220251ff-f8c1-41cb-9b96-658c96ef5829.
+Published after source commit9579462 was pushed. Worker a2c80185-c279-4451-9b89-ac3ee53d633d serves100%, deployment193ca79f-85c1-495f-9f18-fe6bbd2c188d at2026-10-01T01:22:13.853579Z. All177route assignments and fourbindings remain. All48published page bytes,47unchanged bodies, changedAbout exports/assets/requestvariants and protected controls passed; seven productionChrome/Edge responsive cases passed. IndexNow single changedAboutURL returned200; notification is not proof of indexing/ranking/citation. Receipts: deployment/page-correction-v140-live-20261001.json; deployment/institutional-responsive-live-v140-20261001.json; deployment/about-cloudflare-v140-20261001.json; deployment/indexnow-about-v140-20261001.json. Rollback: V139 Worker220251ff-f8c1-41cb-9b96-658c96ef5829.

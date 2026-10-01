@@ -1,0 +1,359 @@
+{
+  "at": "2026-10-01T01:25:41.797Z",
+  "stage": "release-about-v140b-20261001",
+  "prior": "release-special-education-v139-20261001",
+  "changed": [
+    "about"
+  ],
+  "total": 48,
+  "unchangedBodies": 47,
+  "commonShellsPreserved": true,
+  "verifyIndexPreserved": true,
+  "runtimePreserved": true,
+  "pages": [
+    {
+      "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "matched": true
+    },
+    {
+      "path": "/abilityscore",
+      "matched": true
+    },
+    {
+      "path": "/about-pinnacle-proven-improvement-rate",
+      "matched": true
+    },
+    {
+      "path": "/age-restriction-policy",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/speech-aba-autism-assessments",
+      "matched": true
+    },
+    {
+      "path": "/autism-therapy",
+      "matched": true
+    },
+    {
+      "path": "/centers",
+      "matched": true
+    },
+    {
+      "path": "/contact-information",
+      "matched": true
+    },
+    {
+      "path": "/cookie-policy",
+      "matched": true
+    },
+    {
+      "path": "/copyright-and-intellectual",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "matched": true
+    },
+    {
+      "path": "/disclaimer-and-limitations-of-liabilities",
+      "matched": true
+    },
+    {
+      "path": "/endorsement-and-testimonial",
+      "matched": true
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "matched": true
+    },
+    {
+      "path": "/ethics-charter",
+      "matched": true
+    },
+    {
+      "path": "/everyday-therapy",
+      "matched": true
+    },
+    {
+      "path": "/speech-therapy/first-visit-guide",
+      "matched": true
+    },
+    {
+      "path": "/pinnacle-global-autism-framework",
+      "matched": true
+    },
+    {
+      "path": "/fusion-module",
+      "matched": true
+    },
+    {
+      "path": "/governing-and-jurisdiction",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/leadership",
+      "matched": true
+    },
+    {
+      "path": "/mainstream",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/personal-development-kernel",
+      "matched": true
+    },
+    {
+      "path": "/pinnacleai",
+      "matched": true
+    },
+    {
+      "path": "/privacy-policy",
+      "matched": true
+    },
+    {
+      "path": "/prognose",
+      "matched": true
+    },
+    {
+      "path": "/reassess-review-repeat",
+      "matched": true
+    },
+    {
+      "path": "/refund-policy",
+      "matched": true
+    },
+    {
+      "path": "/self-sufficient",
+      "matched": true
+    },
+    {
+      "path": "/speech-therapy/service-information",
+      "matched": true
+    },
+    {
+      "path": "/seven-readiness-indexes",
+      "matched": true
+    },
+    {
+      "path": "/best-special-education-center-call-9100181181",
+      "matched": true
+    },
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/staff-declaration",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "matched": true
+    },
+    {
+      "path": "/speech-therapy/teacher-observation-guide",
+      "matched": true
+    },
+    {
+      "path": "/terms-of-service",
+      "matched": true
+    },
+    {
+      "path": "/terms-of-use",
+      "matched": true
+    },
+    {
+      "path": "/therapeuticai",
+      "matched": true
+    },
+    {
+      "path": "/third-party-inegration",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "matched": true
+    }
+  ],
+  "changedDelivery": [
+    {
+      "path": "/about-pinnacle-proven-improvement-rate",
+      "cookie": true,
+      "credentialRangeNoTransform": true,
+      "markdown": true,
+      "head": true,
+      "assets": [
+        {
+          "path": "/pinnacle-pages-assets/about-social-20261001.DrokjyfS_1dGdQ.jpg",
+          "bytes": 209690,
+          "sha256": "aa1d156934073876df6fab9d7553f8e5b2b46df4331660a3e1438898bd222a25"
+        },
+        {
+          "path": "/pinnacle-pages-fonts/sintony-latin.woff2",
+          "bytes": 8548,
+          "sha256": "bbd80981dfc0174f878b36a16f2df70fb71f52d418aedcc654d3020ff8e3faa1"
+        },
+        {
+          "path": "/pinnacle-pages-fonts/sintony-latin-bold.woff2",
+          "bytes": 8348,
+          "sha256": "62d9677e1cab571817f6eba7b4049477a251e1321112e78595cff375409f32c2"
+        },
+        {
+          "path": "/pinnacle-pages-assets/_slug_.V-qVxao5.css",
+          "bytes": 26335,
+          "sha256": "8c8790093c4a735a5d56708d95f1f3958982af44737111a0d0bb6289a9d517cb"
+        },
+        {
+          "path": "/pinnacle-pages-assets/life-outcomes.DXsMYuJL.css",
+          "bytes": 5502,
+          "sha256": "44965f4d2467b9908fa4e079bedcafcca3fa8356854d0e75a9d53cb0a1ad0ba4"
+        },
+        {
+          "path": "/pinnacle-pages-assets/PageLayout.1shxJPAp.css",
+          "bytes": 133146,
+          "sha256": "554d6ec47bfa2804ca0adf9f40e034093754477df83908ed4815589cee6a7bae"
+        },
+        {
+          "path": "/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_Z2nTFgn.webp",
+          "bytes": 9390,
+          "sha256": "9fdc3732f5f17f575eb02c06426939b47594b79c590335cd59c157e50e17f3fb"
+        },
+        {
+          "path": "/pinnacle-pages-assets/about-social-20261001.DrokjyfS_2w15rz.webp",
+          "bytes": 115142,
+          "sha256": "2553ad40f7204801cd80649781429b8206521fb859165d04bbb6512e73a00370"
+        },
+        {
+          "path": "/pinnacle-pages-assets/about-family-continuity-20261001.Bh94wiMo_Z1UKm3J.webp",
+          "bytes": 230642,
+          "sha256": "cd17461c95efb1998af26c957032c00d25fc76ba090499774258828fa4c811fd"
+        },
+        {
+          "path": "/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1bmU3I.webp",
+          "bytes": 4226,
+          "sha256": "25697ebf831810c022ac18d07edbb28662d2dc261a87f18ab872a9cc067d2036"
+        },
+        {
+          "path": "/pinnacle-pages-assets/bhcl-emblem-official.BOaEeIEj_ZCvf9T.webp",
+          "bytes": 8160,
+          "sha256": "fff8b7bae0d220a6f80eab4b1d4eda04e664b334817c1f237224da13562824ac"
+        },
+        {
+          "path": "/pinnacle-pages-scripts/speech-measurement.js",
+          "bytes": 11178,
+          "sha256": "f17efd9e30e04d87f4029a06294db356716b20a89367f17155a5c2a8e7ae7634"
+        },
+        {
+          "path": "/pinnacle-pages-data/about-evidence.json",
+          "bytes": 12260,
+          "sha256": "d8e56e421af7272a658051160c9207197390fcbdf42daf3723b3bb4927a715b2"
+        },
+        {
+          "path": "/pinnacle-pages-data/about-evidence.txt",
+          "bytes": 8389,
+          "sha256": "2182e4c1c8428fe08cdebd85dfda308837c9a1fb25205dd6c22a5b3d69cce918"
+        },
+        {
+          "path": "/pinnacle-pages-data/about-machine.md",
+          "bytes": 8391,
+          "sha256": "211761e4fbb77d40f2790568fd58a6847aff97c04dc6d3bb093817e799dc7c92"
+        }
+      ]
+    }
+  ],
+  "protected": [
+    {
+      "path": "/verify/",
+      "unchanged": true
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "unchanged": true
+    },
+    {
+      "path": "/verify/evidence/fsc.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "/national-autism-helpline",
+      "unchanged": true
+    },
+    {
+      "path": "/robots.txt",
+      "unchanged": true
+    },
+    {
+      "path": "/sitemaps/core.xml",
+      "unchanged": true
+    },
+    {
+      "path": "/pinnacle-ai-innovations-revolutionizing-autism-history",
+      "unchanged": true
+    },
+    {
+      "path": "/abilityscore-global-study",
+      "unchanged": true
+    },
+    {
+      "path": "/therapeuticai-effectiveness-study",
+      "unchanged": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "unchanged": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "unchanged": true
+    },
+    {
+      "path": "/epass",
+      "unchanged": true
+    },
+    {
+      "path": "/payonline",
+      "unchanged": true
+    },
+    {
+      "path": "https://books.pinnacleblooms.org/payment-and-billing",
+      "unchanged": true
+    },
+    {
+      "path": "/leadership/dr-koti-reddy-saripalli",
+      "unchanged": true
+    },
+    {
+      "path": "/leadership/dr-sreeja-reddy-saripalli",
+      "unchanged": true
+    }
+  ]
+}

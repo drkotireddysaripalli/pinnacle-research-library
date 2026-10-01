@@ -4,9 +4,9 @@
   "sourceCommit": "1f30b9d",
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
-    "completed": 3,
     "keep": 15,
-    "queued": 30
+    "completed": 4,
+    "queued": 29
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -36,14 +36,18 @@
       "id": "about",
       "name": "About Pinnacle",
       "url": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
-      "state": "queued",
+      "state": "completed",
       "kind": "substantial",
       "tasks": [
         "Explain the continuing family experience: first contact→starting picture→relevant people→guided practice→observations/review.",
         "Map everyday concerns to existing service pages; preserve verified brand/operator and reconciled institutional dates.",
         "Add one fitting inline continuity scene, update matching exports, check and release."
       ],
-      "sequence": 4
+      "sequence": 4,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-ABOUT-V140-20261001.md",
+      "sourceCommit": "9579462",
+      "workerVersion": "a2c80185-c279-4451-9b89-ac3ee53d633d"
     },
     {
       "id": "age-restriction-policy",

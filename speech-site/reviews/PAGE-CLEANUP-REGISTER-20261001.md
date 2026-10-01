@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15keep,3completed,30remaining.** LeadershipV137, FrameworkV138 and Special EducationV139 are published and verified. Next: About.
+**15 keep, 4 completed, 29 remaining.** Leadership V137, Framework V138, Special Education V139 and About V140 are published and verified. Next: Assessment.
 
 ## Initial decision
 
@@ -72,7 +72,9 @@ Canonical: [/best-special-education-center-call-9100181181](https://www.pinnacle
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 4. About Pinnacle · substantial
+### 4. About Pinnacle · COMPLETED V140
+
+Closure: [About release](../RELEASE-ABOUT-V140-20261001.md). The task below is its accepted contract.
 
 Canonical: [/about-pinnacle-proven-improvement-rate](https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate)
 

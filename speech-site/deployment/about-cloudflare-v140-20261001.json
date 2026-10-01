@@ -1,0 +1,43 @@
+{
+  "deployments": [
+    {
+      "id": "193ca79f-85c1-495f-9f18-fe6bbd2c188d",
+      "source": "wrangler",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "a2c80185-c279-4451-9b89-ac3ee53d633d",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-10-01T01:22:13.853579Z"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "PINNACLE_ASK",
+      "type": "service",
+      "service": "pinnacle-ask"
+    },
+    {
+      "name": "PINNACLE_LEGACY",
+      "type": "service",
+      "service": "pbn-planetscale"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ],
+  "routeCount": 177,
+  "routeChanges": [],
+  "missing": []
+}
