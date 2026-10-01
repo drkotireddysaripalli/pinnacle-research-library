@@ -1,6 +1,6 @@
 # Speech Therapy — execution checklist and working note
 
-**Date:** 1 October 2026 · **Owner:** main agent in this thread · **State:** work list saved; implementation below remains pending.
+**Date:** 1 October 2026 · **Owner:** main agent in this thread · **State:** managed Speech revision V160 published and verified. ST-01–15 completed in the managed scope; LG-01–05 remain source-access follow-ups.
 
 This is the actionable checklist for the agreed Speech Therapy revision. It consolidates `SPEECH-REVIEW-AND-WORK-ORDER-20261001.md` and `SPEECH-DISCOVERY-AND-LINKING-ADDENDUM-20261001.md`; those files retain the full narrative, creative briefs, verified resource URLs and research rationale. Follow `PINNACLE-PAGE-CREATION-WORK-ORDER.md` for the governing quality standard.
 
@@ -10,7 +10,7 @@ Build the agreed revision. Do not reopen the settled narrative, repeat the compl
 
 **Outcome:** a parent recognises their communication concern, understands how Pinnacle's work serves their child's self-sufficient and mainstream-included life, sees a concrete mechanism and relevant proof, and has a clear reason to call **9100 181 181**, choose a centre or arrange the existing FREE assessment. The page speaks as Pinnacle, directly to the family.
 
-**First implementation action:** assemble the final speech copy/section map in the existing content files, then implement the Speech-only ActionStrip treatment. Continue through the bounded tasks below; assemble the candidate before the consolidated review.
+**Resume state:** managed work is released. Do not rebuild or retest the completed candidate. Continue only a listed external-source follow-up when its editor/source becomes available, or the next owner-selected page. Release: `RELEASE-SPEECH-V160-20261001.md`.
 
 ### Fixed foundation
 
@@ -83,17 +83,17 @@ Check normal text contrast against the actual background at least 4.5:1 and qual
 
 ### Final design acceptance, added to ST-12/ST-13
 
-- [ ] Main promise, family benefit, concrete mechanism, selected proof and next step are easier to find than in the saved baseline.
-- [ ] New visuals explain something specific and remain meaningful at actual phone/tablet/desktop sizes; no tiny poster copy substitutes for page text.
-- [ ] Repeated explanations/catalogues have been merged; centres/resources/deeper technology do not overwhelm the first useful decision path.
-- [ ] Typography, icon style, contrast, link recognition and spacing feel consistent; common files remain on the approved baseline.
-- [ ] Source fidelity, access to useful detail and existing good performance are retained. Report actual lab/functional results; confirm lead improvement only from subsequent observed outcomes.
+- [x] Main promise, family benefit, concrete mechanism, selected proof and next step are easier to find than in the saved baseline.
+- [x] New visuals explain something specific and remain meaningful at actual phone/tablet/desktop sizes; no tiny poster copy substitutes for page text.
+- [x] Repeated explanations/catalogues have been merged; centres/resources/deeper technology do not overwhelm the first useful decision path.
+- [x] Typography, icon style, contrast, link recognition and spacing feel consistent; common files remain on the approved baseline.
+- [x] Source fidelity, access to useful detail and existing good performance are retained. Report actual lab/functional results; confirm lead improvement only from subsequent observed outcomes.
 
 ## A. Build the Speech page candidate
 
 ### ST-01 — Reorder and finish the speech-specific narrative
 
-- [ ] Edit `src/components/SpeechPage.astro`, `src/data/speech-content.ts` and `src/data/speech.ts` as appropriate.
+- [x] Edit `src/components/SpeechPage.astro`, `src/data/speech-content.ts` and `src/data/speech.ts` as appropriate.
 - Keep this reading sequence: hero → useful navigation → family communication priorities → life-first difference/one short analogy → concrete speech example → seven-stage PinnacleAI path → first visit/fees → relevant other therapies → full proof → compact centres → resources/FAQs → clear close → unchanged common footer.
 - Use the existing toy-box asking-for-help example earlier. Show the selected communication method, support, observed use with one adult, transfer to another person/setting and the next review decision. Keep it clearly illustrative.
 - Integrate the age-range artwork into the concern explanation; remove repeated purpose paragraphs and repetitive second analogy where they add no new decision.
@@ -101,7 +101,7 @@ Check normal text contrast against the actual background at least 4.5:1 and qual
 
 ### ST-02 — Make “I'm here to” visibly actionable
 
-- [ ] Update the Speech instance of `ActionStrip.astro` through explicit props and an opt-in style variant.
+- [x] Update the Speech instance of `ActionStrip.astro` through explicit props and an opt-in style variant.
 - Use outlined anchor link-buttons with icon, descriptive label and directional arrow: first visit, centre, speech evidence, citations and FREE assessment.
 - Target `#first-visit`, `#centres`, page-specific `#evidence`, the existing citation URL and `speechOffer.url` respectively. Preserve `entry=speech-assessment` and its enquiry fragment.
 - Keep the pink band and approved palette; use 16–18 px readable labels, at least 48 px touch targets, visible keyboard focus, wrapping tablet layout and two-column phone treatment as space permits. The telephone remains the stronger primary action.
@@ -109,7 +109,7 @@ Check normal text contrast against the actual background at least 4.5:1 and qual
 
 ### ST-03 — Make PinnacleAI tangible through the speech example
 
-- [ ] Rework the existing seven-stage and optional technical sections in `SpeechPage.astro` / `speech.ts`; do not add a duplicate technology chapter.
+- [x] Rework the existing seven-stage and optional technical sections in `SpeechPage.astro` / `speech.ts`; do not add a duplicate technology chapter.
 - Carry the asking-for-help example through current ability → useful next goal/readiness → suitable professionals/therapies → everyday practice → observation → correction/reassessment → participation.
 - Keep every family-facing stage label visible. Render the connected diagram in accessible HTML/SVG, with a readable stacked phone order and optional technical detail.
 - Add selective links to `/pinnacleai`, `/abilityscore`, `/seven-readiness-indexes`, `/everyday-therapy` and `/fusion-module`, alongside the precise Verify source where relevant. Preserve the distinction between seven family stages and optional nine technology explanations.
@@ -117,22 +117,22 @@ Check normal text contrast against the actual background at least 4.5:1 and qual
 
 ### ST-04 — Improve first-visit value, fee clarity and tablet layout
 
-- [ ] Keep the approved assessment offer: listed value ₹25,999 struck through, FREE assessment, about one hour as currently stated, written-report arrangement and appointment confirmation.
+- [x] Keep the approved assessment offer: listed value ₹25,999 struck through, FREE assessment, about one hour as currently stated, written-report arrangement and appointment confirmation.
 - Explain what the assessment helps the family decide; make assessment versus ongoing therapy fees easy to find with a stable section target. Use actual approved tariff data if available; otherwise explain how the applicable ongoing charges are confirmed without inventing a price range.
 - Reflow the tablet first-visit facts so three narrow cells are not squeezed into half a page. Preserve readable type.
 - **Done when:** inclusions, next step and fee boundary are immediately clear; the 768 px layout has usable line lengths; all assessment CTAs retain the Speech entry context.
 
 ### ST-05 — Bring the right proof forward
 
-- [ ] Put a compact proof preview near the demonstrated value and the full speech evidence before the long centre directory.
+- [x] Put a compact proof preview near the demonstrated value and the full speech evidence before the long centre directory.
 - Link selected claims to original MD-5/BIS records, relevant research, organisation identity and existing citations. Keep each record's actual scope and publication status with the relevant fact.
 - Improve the existing service-facts provenance where a prior-edition hash currently points only to today's changing page: use a durable archived source or a current attributable source.
 - **Done when:** readers can inspect the specific source for each selected fact; evidence is encountered before a long directory; no new clinical result is inferred from a software licence or service count.
 
 ### ST-06 — Produce and integrate the two specified creatives
 
-- [ ] Create the complete branded **first conversation** creative: family/child/professional, child choice, clear priorities and a useful next step.
-- [ ] Create the complete branded **asking → everyday use → review** creative, with visual continuity across the three scenes.
+- [x] Create the complete branded **first conversation** creative: family/child/professional, child choice, clear priorities and a useful next step.
+- [x] Create the complete branded **asking → everyday use → review** creative, with visual continuity across the three scenes.
 - Use the approved emblem/name, full-sleeve white professional coat, vivid Pinnacle colours and tasteful PinnacleAI/source-backed evidence panels; do not fabricate regulator seals or certificates. Preserve official logo references and the family-centred tone.
 - Keep the good hero and approved OG poster. Provide purposeful phone crops/compositions, responsive derivatives, explicit dimensions, sensible file sizes, appropriate loading priority, useful alt text and adjacent HTML explaining the important message.
 - Update `ASSET-SOURCES.md` with the actual tool, source references and final assets. If generation fails, record the exact failure and retain the approved existing asset; do not silently substitute another workflow or count the creative as done.
@@ -140,14 +140,14 @@ Check normal text contrast against the actual background at least 4.5:1 and qual
 
 ### ST-07 — Make centre choice compact and useful
 
-- [ ] Add an opt-in compact service-page presentation to `CentreDirectory.astro` if required; preserve its default standalone presentation.
+- [x] Add an opt-in compact service-page presentation to `CentreDirectory.astro` if required; preserve its default standalone presentation.
 - Show centre/name/location, relevant contact and selection first; make richer authentic photographs/gallery/details expandable. Preserve all 62 published searchable/crawlable destinations and existing Maps/share/citation actions.
 - Retain national number `9100 181 181`, genuine local contacts where recorded and selected-centre context in the enquiry. Keep service availability wording accurate; directory inclusion alone is not a verified current Speech roster.
 - **Done when:** the initial directory no longer overwhelms the service story, every published centre remains accessible, and selecting a centre reaches the existing enquiry correctly.
 
 ### ST-08 — Add government-owned parent resources
 
-- [ ] Add the six approved cards from section 6 of the discovery addendum: AIISH, NHM/RBSK, NIDCD milestones, CDC milestones, CDC hearing and NHS early learning.
+- [x] Add the six approved cards from section 6 of the discovery addendum: AIISH, NHM/RBSK, NIDCD milestones, CDC milestones, CDC hearing and NHS early learning.
 - Use the exact verified URLs and institution/country labels; each card has a useful short summary and appropriate icon. Desktop/tablet/phone layout follows the available width without tiny text.
 - Replace the existing private ASHA general-guidance links appropriately. Do not substitute an unrelated milestone source for the Communication Bill of Rights: revise/remove that reference accurately while keeping the narrative's respect for communication choice.
 - Keep relevant inline government citations beside general-guidance claims. Keep Pinnacle's original Verify/research evidence separate and intact.
@@ -155,7 +155,7 @@ Check normal text contrast against the actual background at least 4.5:1 and qual
 
 ### ST-09 — Complete SEO, answers, sharing and readable exports
 
-- [ ] Retain the indexed canonical, national title and working OG poster; align description, social text and image alt with the final visible story.
+- [x] Retain the indexed canonical, national title and working OG poster; align description, social text and image alt with the final visible story.
 - Make speech support, first visit, fees, family role, progress review and centre choice direct HTML answers under clear headings. Update visible FAQs and matching structured data together.
 - Synchronise changed evidence JSON/TXT, service facts, reading aids, source dates and child-sitemap lastmod. Keep stable anchors and appropriate structured-data identities.
 - Add a page-level family share action using native share with copy-link/WhatsApp fallback. Preserve centre-level sharing.
@@ -165,16 +165,16 @@ Check normal text contrast against the actual background at least 4.5:1 and qual
 
 ### ST-10 — Add four contextual inbound pathways
 
-- [ ] `EnrolmentPage.astro`: add “Understand the speech pathway” beside the Speech offer; retain its enquiry and offer-details actions.
-- [ ] `pinnacleai-wave.ts` / `PinnacleWaveExperience.astro`: add an AbilityScore example link to Speech `#everyday-communication` through page-specific data.
-- [ ] Add the Seven Readiness communication example link to the relevant retained Speech stage/example target.
-- [ ] Add the Fusion home/other-person communication review link to Speech `#everyday-communication`.
+- [x] `EnrolmentPage.astro`: add “Understand the speech pathway” beside the Speech offer; retain its enquiry and offer-details actions.
+- [x] `pinnacleai-wave.ts` / `PinnacleWaveExperience.astro`: add an AbilityScore example link to Speech `#everyday-communication` through page-specific data.
+- [x] Add the Seven Readiness communication example link to the relevant retained Speech stage/example target.
+- [x] Add the Fusion home/other-person communication review link to Speech `#everyday-communication`.
 - Preserve existing inbound body links from OT, ABA, Autism, centre service cards and speech guides, and existing outward therapy links in `TherapyTogether.astro`.
 - **Done when:** the four relevant main-body paths work, existing paths remain, and unrelated modules do not acquire a generic repeated link row. Common navigation/footer links do not count as these contextual links.
 
 ## C. Resolve the bounded legacy-source dependencies
 
-These are required tracked follow-ups, not reasons to restart the managed Speech build. Their editable sources were not found in the reviewed Astro tree. Locate the actual source/editor once, then make the specific small change. If genuinely unavailable, record the source owner/access gate and retain the task as pending; do not report the full link programme complete.
+These are required tracked follow-ups, not reasons to restart the managed Speech build. Their editable sources were not found in the reviewed Astro tree. All six public routes were checked as ASP.NET-origin pages on 1 October; a targeted workspace search found no actual origin views/CMS editor. The next condition is that specific source/editor access, not another broad search. Locate the actual source/editor once, then make the specific small change. If genuinely unavailable, record the source owner/access gate and retain the task as pending; do not report the full link programme complete.
 
 - [ ] **LG-01:** `/c/speech-delay-therapy` — improve the early route into Speech/first visit; reconcile the selected claims used in that bridge with current Verify evidence. Preserve the condition guide's useful purpose and existing later therapy link.
 - [ ] **LG-02:** `/assessments/speech-and-language-evaluation-assessment` — connect the assessment decision to the current Speech assessment offer and first-visit explanation.
@@ -188,39 +188,39 @@ These are required tracked follow-ups, not reasons to restart the managed Speech
 
 ### ST-11 — Review the actual measurement integration once
 
-- [ ] Trace the externally injected Google Ads configuration behind the saved Lighthouse cookie finding; compare its consent timing/settings with `public/pinnacle-pages-scripts/speech-measurement.js`.
+- [x] Trace the externally injected Google Ads configuration behind the saved Lighthouse cookie finding; compare its consent timing/settings with `public/pinnacle-pages-scripts/speech-measurement.js`.
 - Correct a confirmed defect in its actual integration with scoped checks; preserve legitimate measurement. If no defect is established, document the finding without changing tags solely to raise the score.
 - Verify existing coarse call-click, assessment, section and centre-choice events as applicable. Do not send a fake patient lead or collect child concerns/form contents in analytics.
 - **Done when:** actual findings have a disposition and useful actions are measured appropriately. A tap, received call, visit and admission remain distinct states.
 
 ### ST-12 — Consolidate independent review
 
-- [ ] Review the assembled candidate against family understanding, sales/lead generation, speech/professional relevance, life-first PinnacleAI purpose, evidence, brand/design and search/retrieval requirements.
+- [x] Review the assembled candidate against family understanding, sales/lead generation, speech/professional relevance, life-first PinnacleAI purpose, evidence, brand/design and search/retrieval requirements.
 - Give read-only reviewers the candidate and these acceptance criteria. Consolidate concrete findings into one correction pass; do not launch repeated open-ended scores or new frameworks.
 - **Done when:** material findings are resolved or explicitly recorded with their consequence. Any editorial score is labelled as editorial judgement, not real parent research or business performance.
 
 ### ST-13 — Run the focused final validation
 
-- [ ] Inspect 320/390 px phones, 768/1024 px tablets and 1440 px desktop: readable type/crops, no horizontal overflow, first-visit layout, touch/focus, stage disclosures, resources, centre choice, call/enquiry and share actions.
-- [ ] Use existing build, Playwright/axe and page checks; include alternate engines for changed interactions. Check anchors, canonical/aliases, FAQ/schema parity, OG bytes, source links and changed reading exports.
-- [ ] Confirm common-header/footer baseline remains intact. Check adjacent pages affected by component props/defaults and inbound-link edits.
-- [ ] Run one final mobile/desktop Lighthouse pair after material visual changes. Repeat only failed or changed checks. Record emulated/engine coverage accurately; no claim of physical iPhone/Safari testing unless performed.
+- [x] Inspect 320/390 px phones, 768/1024 px tablets and 1440 px desktop: readable type/crops, no horizontal overflow, first-visit layout, touch/focus, stage disclosures, resources, centre choice, call/enquiry and share actions.
+- [x] Use existing build, Playwright/axe and page checks; include alternate engines for changed interactions. Check anchors, canonical/aliases, FAQ/schema parity, OG bytes, source links and changed reading exports.
+- [x] Confirm common-header/footer baseline remains intact. Check adjacent pages affected by component props/defaults and inbound-link edits.
+- [x] Run one final mobile/desktop Lighthouse pair after material visual changes. Repeat only failed or changed checks. Record emulated/engine coverage accurately; no claim of physical iPhone/Safari testing unless performed.
 - **Done when:** candidate build and relevant checks pass, material visual/functional defects are resolved and evidence is saved.
 
 ### ST-14 — Commit, publish and verify the actual release
 
-- [ ] Commit and push reviewed product source before activation; inspect the diff for accidental common-shell/unrelated edits.
-- [ ] Read the current established release recipe; confirm live Worker version/rollback, full route set and bindings at the release boundary. The last recorded union is V159; do not assume it is still current if another authorised release intervened.
-- [ ] Build/stage the complete preserved union and deploy through the existing Cloudflare route. Never use a narrow Wrangler `--route` override.
-- [ ] Read back revised Speech, four managed inbound pages, changed assets/exports and canonical/alias behaviour. Verify protected Verify/FSC/helpline/application routes through existing focused guards.
-- [ ] Save exact commit, Worker/deployment/rollback IDs, production read-back and unresolved dependencies in one release receipt. Close only temporary tools/processes created for this work; retain approved assets, source and useful release evidence.
+- [x] Commit and push reviewed product source before activation; inspect the diff for accidental common-shell/unrelated edits.
+- [x] Read the current established release recipe; confirm live Worker version/rollback, full route set and bindings at the release boundary. The last recorded union is V159; do not assume it is still current if another authorised release intervened.
+- [x] Build/stage the complete preserved union and deploy through the existing Cloudflare route. Never use a narrow Wrangler `--route` override.
+- [x] Read back revised Speech, four managed inbound pages, changed assets/exports and canonical/alias behaviour. Verify protected Verify/FSC/helpline/application routes through existing focused guards.
+- [x] Save exact commit, Worker/deployment/rollback IDs, production read-back and unresolved dependencies in one release receipt. Close only temporary tools/processes created for this work; retain approved assets, source and useful release evidence.
 - **Done when:** pushed source and public production match, declared checks pass and unrelated routes/bindings remain intact.
 
 ### ST-15 — Notify discovery and close the package honestly
 
-- [ ] Update lastmod for materially changed pages and notify their canonical URLs once through the existing IndexNow route. Record acceptance separately from indexing. Do not repeatedly resubmit unchanged sitemaps/URLs.
-- [ ] Save the release boundary against the existing GSC/Bing/GA4 baseline; record current crawl/index state where warranted by the release.
-- [ ] Update this checklist, active work order and page ledger with completed work and the precise status of each legacy dependency. Mark complete only with the corresponding implementation/release evidence.
+- [x] Update lastmod for materially changed pages and notify their canonical URLs once through the existing IndexNow route. Record acceptance separately from indexing. Do not repeatedly resubmit unchanged sitemaps/URLs.
+- [x] Save the release boundary against the existing GSC/Bing/GA4 baseline; record current crawl/index state where warranted by the release.
+- [x] Update this checklist, active work order and page ledger with completed work and the precise status of each legacy dependency. Mark complete only with the corresponding implementation/release evidence.
 - **Done when:** the release has a durable receipt and clear next measurement condition; no claim of rankings, citations or leads is inferred from publication.
 
 ## E. After publication — measured follow-up
@@ -238,3 +238,15 @@ Reporting reminder: the main Speech baseline is 311 impressions / 3 clicks; the 
 | 2026-10-01 | Checklist created; research already complete; product tasks pending | Start ST-01/ST-02 when execution resumes. Existing review and discovery receipts are the input, not tasks to repeat. |
 
 For each completed task append its source/commit/check/release reference and tick only its actual completed scope. Keep new ideas in the backlog so this page reaches production without reopening settled decisions.
+
+## V160 completion evidence · 1 October 2026
+
+- ST-01–10: source commits 63e89f3 and c9a75ec; complete native ChatGPT creatives and all specified managed contextual links are live. Source and derivative provenance is in ASSET-SOURCES.md.
+- ST-11: exact external wrapper identified and corrected separately, commit 2acf07c. Ordered denied defaults precede loading; generic cookieless Ads remains. Unsupported phone-conversion helper is held pending a distinct advertising-measurement opt-in/withdrawal flow. Real telephone links and consent-gated call-click analytics remain. Candidate and production anonymous/decline/accept/GPC checks passed without _gcl_* or test_cookie creation.
+- ST-12–13: one consolidated read-only review/correction pass; 116 unit tests, type/build, Chromium/axe, Edge, and Linux CI Firefox/WebKit passed. Five-width focused layout/interaction receipt saved. CI 36867862965 passed. Final production Lighthouse: mobile 99/100/100/100, desktop 100/100/92/100 (performance/accessibility/best practices/SEO). Desktop diagnostic Google image is blocked by the existing CSP; no security relaxation solely for the score. No physical iPhone test or business-outcome proof inferred.
+- ST-14: V160 Worker cda60a8e-fbe5-448d-940d-76cab390dbf0, deployment 44cd9c8d-ed88-456a-87ef-7a5c323c691f; source pushed before activation. 50 managed pages, 26 assets/exports and 15 protected routes passed final read-back. 44 unrelated bodies and common baseline retained; route fingerprint 39051a49.
+- ST-15: six changed canonicals accepted by IndexNow (HTTP 200); new edition tied to the existing GSC/Bing/GA4 baseline. No fresh ranking/indexing/AI-citation result inferred.
+- LG-01–05: pending actual ASP.NET origin views/CMS editor; all six existing routes retained.
+- Post-publication: 28 settled-day comparison, actual answer-engine observations and earned-link activity remain future measured work. No new automation created.
+
+Canonical receipts: deployment/speech-v160-release-20261001.json and deployment/ads-consent-v2-release-20261001.json. Temporary main-owned preview on port 4342 was closed; the owner's preview was left alone.

@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-01T13:31:35.255Z",
+  "sourceCommit": "c9a75ec2c2495bfe15d17640eb4a93d625ee11c8",
+  "initialContentCommit": "63e89f33a7207a133dd967e3de21ade40023582f",
+  "ci": {
+    "run": 36867862965,
+    "conclusion": "success",
+    "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36867862965"
+  },
+  "workerVersion": "cda60a8e-fbe5-448d-940d-76cab390dbf0",
+  "deploymentId": "44cd9c8d-ed88-456a-87ef-7a5c323c691f",
+  "activatedAt": "2026-10-01T13:23:36.174176Z",
+  "rollbackVersion": "58f7fabb-cc45-4f15-a2bb-f9bda99885e6",
+  "stage": "release-speech-v160-20261001",
+  "commonBaseline": "pinnacle-common-shell-baseline-v159-20261001",
+  "routeFingerprint": "39051a49",
+  "routes": 180,
+  "assigned": 81,
+  "bindings": [
+    "ASSETS",
+    "PINNACLE_ASK",
+    "PINNACLE_LEGACY",
+    "SITES_BYPASS_TOKEN"
+  ],
+  "liveReceipt": "deployment/speech-v160-live-20261001.json",
+  "speedReceipt": "deployment/speech-v160-lighthouse-20261001.json",
+  "indexNowReceipt": "deployment/indexnow-speech-v160-20261001.json",
+  "measurementCorrection": "deployment/ads-consent-v2-release-20261001.json"
+}

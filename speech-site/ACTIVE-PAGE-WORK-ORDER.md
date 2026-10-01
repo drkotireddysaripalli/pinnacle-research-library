@@ -2,13 +2,17 @@
 
 ## Current owner priority · 1 October 2026
 
-**Execution entry point:** `reviews/QUALITY-PASS-20261001/SPEECH-EXECUTION-CHECKLIST-20261001.md` is the owner's requested concrete to-do note. Resume from ST-01/ST-02, using the completed review and discovery findings. It lists exact work, file scope, completion checks, managed inbound links, bounded legacy dependencies and release steps. All product tasks remain pending until their implementation and release evidence is recorded; do not repeat the completed research or redesign the common shell.
+**Speech Therapy V160 is published and verified.** The agreed narrative, complete branded native ChatGPT creatives, action buttons, seven-stage communication example, offer/first visit, selected proof, compact 62-centre choice, government guidance, matching metadata/reading exports and four managed inbound links are live. The common header and complete footer remain exactly on the approved V159 baseline.
 
-The checklist now includes the owner's visual-value constraint: integrate and edit instead of accumulating sections; preserve the approved palette/Sintony/common shell; use purposeful complete branded creatives, readable phone compositions, consistent icons, stronger body typography and precise selected evidence. Its final design acceptance is part of ST-12/ST-13, not a separate design restart.
+Completed work and precise follow-ups are in `reviews/QUALITY-PASS-20261001/SPEECH-EXECUTION-CHECKLIST-20261001.md`; release proof is `RELEASE-SPEECH-V160-20261001.md`. Do not repeat the completed whole-page audit, creative generation or toolchain setup.
 
-Owner-selected current review: **Speech Therapy**, following the common-shell baseline. Live/source/phone/tablet/desktop inspection, a GSC baseline and one mobile/desktop Lighthouse pair are complete. `reviews/QUALITY-PASS-20261001/SPEECH-REVIEW-AND-WORK-ORDER-20261001.md` contains the proposed bounded revision: obvious action links, earlier speech example and proof, concise speech-specific narrative, selected branded creative upgrades and a compact service-page centre presentation. This is a review proposal; no product code or deployment was changed. Keep the tagged common header and complete footer fixed.
+**Remaining bounded dependencies:** LG-01–05 need the actual ASP.NET origin views/CMS content editor for six selected legacy pages. A targeted search did not identify it. The separate Ads wrapper's pre-choice-cookie defect is corrected; its phone-conversion helper remains withheld until a distinct advertising-measurement opt-in with withdrawal exists. Telephone actions and consent-gated coarse call-click analytics remain. Measured ranking/citation/call/admission improvement requires subsequent reporting.
 
-Owner expansion: `reviews/QUALITY-PASS-20261001/SPEECH-DISCOVERY-AND-LINKING-ADDENDUM-20261001.md` adds inbound/outbound contextual links, the speech-specific PinnacleAI module block, government-owned parent resources, competitor presentation observations and prioritisation from actual GSC/Bing/GA4 data. `SPEECH-DISCOVERY-RESEARCH-20261001.json` saves the bounded reporting receipt. Preserve distinct useful legacy pages and language versions; do not blanket-redirect them to Speech or mistake an outgoing government citation for an earned backlink.
+Current union `release-speech-v160-20261001`, main Worker `cda60a8e-fbe5-448d-940d-76cab390dbf0`, deployment `44cd9c8d-ed88-456a-87ef-7a5c323c691f`. Rollback is V159 Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6`. The six-route Ads wrapper is separately versioned as `2fa26689-51f7-4a04-a835-a69d2627b15f`; its receipt preserves its own rollback.
+
+**Next previously queued individual page: PinnacleAI overview (baseline 68/100).** Its finite task file remains the next input; no new implementation was started during the Speech release. The owner's new priority always takes precedence.
+
+## Prior completed foundation
 
 V159 is published and closed: the owner requested a mobile-menu check while accepting desktop. More now starts at the top, groups longer lists, includes all desktop therapy-section and shared-footer destinations, and restores focus correctly across resizing. Desktop menu geometry and the complete shared footer are unchanged. All 50 pages passed live read-back; Chromium, Firefox and WebKit CI passed. Current union `release-shared-shell-v159-20261001`, Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6` at 100%; V158 is rollback. See `RELEASE-SHARED-MOBILE-MENU-V159-20261001.md`.
 
@@ -28,7 +32,7 @@ Complete the quality pass on already-produced individual pages in ascending base
 - `PORTAL-QUALITY-PASS-20261001.md`: pass procedure and owner priority.
 - `reviews/QUALITY-PASS-20261001/queue.json` and `queue.md`: original 133-page baseline, current dispositions and two additional managed documents. Keep baseline scores unchanged. Package editorial judgments, lab checks, indexing, AI citation and business results are distinct.
 - `QUALITY-TOOLCHAIN.md`: accepted build, browser, accessibility and Lighthouse commands. Reopen setup only for a concrete blocking defect.
-- `RELEASE-POLICIES-V153-20261001.md`: latest accepted release. Earlier bounded releases remain in their separate receipts and Git history; do not consume that chronology on each page.
+- `RELEASE-SPEECH-V160-20261001.md`: latest managed page release; `RELEASE-POLICIES-V153-20261001.md` remains the policy foundation. Earlier bounded releases remain in their separate receipts and Git history; do not consume that chronology on each page.
 
 ## Ownership and execution
 
@@ -36,7 +40,7 @@ Main owns all code, creative, browser, Git and deployment. Agents provide bounde
 
 Set one finite narrative/creative/implementation contract, assemble the candidate, consolidate actionable review findings and check it at meaningful boundaries. Repeat only affected failed or changed checks; broaden for a real shared-system change. Preserve authentic identities, claim sources and the child-specific non-diagnostic scope. Record editorial readiness separately from unobserved family comprehension, effectiveness, connected calls, visits and admissions.
 
-Commit/push accepted code before activation. Deploy the complete preserved union; retain all route assignments and bindings, read back production and save one concise receipt. Notify materially changed canonicals once. Never use a narrow Wrangler `--route` override. Current union is `release-shared-shell-v159-20261001`; Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6` at 100%, 180 zone routes / 81 Worker assignments / four bindings. V158 Worker `baca2d9f-4e65-48c2-ad80-499cc976e3d7` is the rollback predecessor. After each release advance the ledger, keep needed rollback/source evidence and close tool-owned browsers/servers.
+Commit/push accepted code before activation. Deploy the complete preserved union; retain all route assignments and bindings, read back production and save one concise receipt. Notify materially changed canonicals once. Never use a narrow Wrangler `--route` override. Current union is `release-speech-v160-20261001`; Worker `cda60a8e-fbe5-448d-940d-76cab390dbf0` at 100%, 180 zone routes / 81 main Worker assignments / four bindings. V159 Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6` is the rollback predecessor. After each release advance the ledger, keep needed rollback/source evidence and close tool-owned browsers/servers.
 
 Save one bounded account-usage checkpoint pair when available; label account-wide readings honestly when concurrent work prevents project attribution. Do not poll balances during implementation or let repeated tooling review displace page completion.
 

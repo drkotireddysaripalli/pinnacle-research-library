@@ -1,0 +1,150 @@
+{
+  "at": "2026-10-01T13:30:01.983Z",
+  "id": "speech",
+  "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+  "kind": "simulated lab measurements, not field Core Web Vitals",
+  "reports": [
+    {
+      "device": "mobile",
+      "lighthouseVersion": "13.5.0",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "finalUrl": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 1371.607,
+        "lcpMs": 1821.607,
+        "tbtMs": 13.5,
+        "cls": 0,
+        "speedIndexMs": 1371.607
+      },
+      "targets": {
+        "performance": 90,
+        "lcpMs": 2500,
+        "tbtMs": 200,
+        "cls": 0.1
+      },
+      "targetWarnings": [],
+      "warnings": [],
+      "findings": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "displayValue": "1.4 s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "displayValue": "1.8 s"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "displayValue": "3.3 s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "displayValue": "Est savings of 12 KiB",
+          "savingsMs": 300
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "displayValue": "Est savings of 62 KiB",
+          "savingsMs": 0
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "displayValue": "Est savings of 1 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "displayValue": "Est savings of 8 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree"
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "displayValue": "Est savings of 300 ms"
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "lighthouseVersion": "13.5.0",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "finalUrl": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 92,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 348.20629999999994,
+        "lcpMs": 419.6214999999999,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 348.20629999999994
+      },
+      "targets": {
+        "performance": 90,
+        "lcpMs": 2500,
+        "tbtMs": 200,
+        "cls": 0.1
+      },
+      "targetWarnings": [],
+      "warnings": [],
+      "findings": [
+        {
+          "id": "errors-in-console",
+          "title": "Browser errors were logged to the console"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "displayValue": "Est savings of 18 KiB",
+          "savingsMs": 40
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "displayValue": "Est savings of 59 KiB",
+          "savingsMs": 0
+        },
+        {
+          "id": "inspector-issues",
+          "title": "Issues were logged in the `Issues` panel in Chrome Devtools"
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "displayValue": "Est savings of 1 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "displayValue": "Est savings of 16 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree"
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "at": "2026-10-01T13:23:42.665Z",
+  "id": "speech",
+  "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+  "kind": "simulated lab measurements, not field Core Web Vitals",
+  "reports": [
+    {
+      "device": "mobile",
+      "lighthouseVersion": "13.5.0",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "finalUrl": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 77,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 1569.9560000000001,
+        "lcpMs": 2019.9560000000001,
+        "tbtMs": 68.5,
+        "cls": 0,
+        "speedIndexMs": 1656.3898255699153
+      },
+      "targets": {
+        "performance": 90,
+        "lcpMs": 2500,
+        "tbtMs": 200,
+        "cls": 0.1
+      },
+      "targetWarnings": [],
+      "warnings": [],
+      "findings": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "displayValue": "1.6 s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "displayValue": "2.0 s"
+        },
+        {
+          "id": "total-blocking-time",
+          "title": "Total Blocking Time",
+          "displayValue": "70 ms"
+        },
+        {
+          "id": "max-potential-fid",
+          "title": "Max Potential First Input Delay",
+          "displayValue": "160 ms"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "displayValue": "3.6 s"
+        },
+        {
+          "id": "third-party-cookies",
+          "title": "Uses third-party cookies",
+          "displayValue": "1 cookie found"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "displayValue": "Est savings of 11 KiB",
+          "savingsMs": 300
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "displayValue": "Est savings of 55 KiB",
+          "savingsMs": 0
+        },
+        {
+          "id": "inspector-issues",
+          "title": "Issues were logged in the `Issues` panel in Chrome Devtools"
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "displayValue": "Est savings of 2 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "displayValue": "Est savings of 8 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree"
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "displayValue": "Est savings of 290 ms"
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "lighthouseVersion": "13.5.0",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "finalUrl": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 77,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 405.99530000000004,
+        "lcpMs": 477.2191,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 405.99530000000004
+      },
+      "targets": {
+        "performance": 90,
+        "lcpMs": 2500,
+        "tbtMs": 200,
+        "cls": 0.1
+      },
+      "targetWarnings": [],
+      "warnings": [],
+      "findings": [
+        {
+          "id": "third-party-cookies",
+          "title": "Uses third-party cookies",
+          "displayValue": "2 cookies found"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "displayValue": "Est savings of 18 KiB",
+          "savingsMs": 40
+        },
+        {
+          "id": "unused-javascript",
+          "title": "Reduce unused JavaScript",
+          "displayValue": "Est savings of 54 KiB",
+          "savingsMs": 0
+        },
+        {
+          "id": "inspector-issues",
+          "title": "Issues were logged in the `Issues` panel in Chrome Devtools"
+        },
+        {
+          "id": "cache-insight",
+          "title": "Use efficient cache lifetimes",
+          "displayValue": "Est savings of 2 KiB"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "displayValue": "Est savings of 16 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree"
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests"
+        }
+      ]
+    }
+  ]
+}

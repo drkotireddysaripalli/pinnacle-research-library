@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "pinnacleai",
+  "current": "speech",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -1102,14 +1102,15 @@
       "label": "Speech Therapy",
       "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
       "baselineScore": 77,
-      "state": "review-pending",
+      "state": "completed-managed-scope",
       "baselineGap": "A long page plus broad centre content makes the most useful decision loop harder to skim. The visual sequence is mixed; actual receiving-team comprehension, professional availability and a confirmed appointment are unobserved.",
       "task": "Place the toy-box observation-to-adjustment example in one complete branded inline creative near the first decision, shorten repeated explanation and give the receiving team a written offer/centre/professional confirmation checklist.",
       "sourceCondition": "Most programme support is first-party; no child-specific result, present professional roster or realised enquiry outcome established.",
       "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "pageOwnedDisposition": "Life-first narrative, two complete branded creatives, earlier actions and concrete communication example, seven stages, proof, first visit, compact centres, six government resources, FAQs/exports and four contextual inbound links deployed and verified. Common V159 shell retained. External legacy bridges need source access. Realised search/business outcomes unobserved.",
+      "release": "RELEASE-SPEECH-V160-20261001.md",
+      "reviewedOn": "2026-10-01T13:32:26.296Z",
+      "scoreScope": "No repeated numeric score invented from automated checks; original baseline retained."
     },
     {
       "order": 66,
@@ -2224,5 +2225,7 @@
     "centresAndStaff": "after individual pages",
     "delhi": "completed and set aside",
     "nextContract": "reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md"
-  }
+  },
+  "currentDisposition": "Managed V160 release closed; precise external/measurement follow-ups tracked",
+  "nextCandidate": "pinnacleai"
 }

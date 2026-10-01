@@ -1,6 +1,6 @@
 # Produced-page quality pass — ascending baseline score
 
-133 pages. Current page: pinnacleai. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
+133 pages. Current page: speech (V160 managed release closed). Next previously queued individual page: pinnacleai. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
 
 | Order | Page | Baseline /100 | Reviewed /100 | Pass state |
 |---:|---|---:|---:|---|
@@ -68,7 +68,7 @@
 | 62 | [September handout · Current source narrative](https://www.pinnacleblooms.org/verify/evidence/records/september-handout.html) | 76 | — | review-pending |
 | 63 | [Tasks with a purpose. Participation in view.](https://www.pinnacleblooms.org/verify/evidence/paradigm/07-skills-with-a-purpose.html) | 76 | — | review-pending |
 | 64 | [Pinnacle Global Autism Framework](https://www.pinnacleblooms.org/pinnacle-global-autism-framework) | 77 | — | review-pending |
-| 65 | [Speech Therapy](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate) | 77 | — | review-pending |
+| 65 | [Speech Therapy](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate) | 77 | — (no repeat score) | completed-managed-scope · V160 |
 | 66 | [AbilityScore Guide — English](https://www.pinnacleblooms.org/verify/guides/abilityscore.html) | 78 | — | review-pending |
 | 67 | [AbilityScore Guide — Hindi](https://www.pinnacleblooms.org/verify/guides/hi/abilityscore.html) | 78 | — | review-pending |
 | 68 | [AbilityScore Guide — Telugu](https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html) | 78 | — | review-pending |
