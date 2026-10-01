@@ -20,6 +20,11 @@ export async function checkSharedShell(page){
   await expect(page.locator('nav.portal-community>a')).toHaveCount(8);
   await expect(page.locator('footer a[href$="/policies"]')).toHaveCount(1);
   const width=page.viewportSize().width;
+  if(width<=620){
+    const cards=await page.locator('.verify-card').evaluateAll(nodes=>nodes.slice(0,2).map(e=>{const r=e.getBoundingClientRect();return {left:r.left,right:r.right,width:r.width};}));
+    expect(cards[0].width).toBeGreaterThanOrEqual(260);
+    expect(cards[1].left-cards[0].right).toBeGreaterThanOrEqual(10);
+  }
   if(width>600)for(const list of await page.locator('nav.portal-footer-group ul').all())await expect(list).toBeVisible();
   else {
     for(const list of await page.locator('nav.portal-footer-group ul').all())await expect(list).toBeVisible();

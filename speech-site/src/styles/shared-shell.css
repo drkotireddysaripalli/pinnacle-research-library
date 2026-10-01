@@ -38,7 +38,6 @@ main figcaption a{text-decoration:underline;text-underline-offset:.15em}
 }
 @media(max-width:620px){
   .shared-rail-evidence{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}
-  .verify-card-grid{grid-auto-columns:minmax(0, min(84vw,100%))}
 }
 @media(max-width:600px){
   .portal-top{grid-template-rows:58px 64px}
