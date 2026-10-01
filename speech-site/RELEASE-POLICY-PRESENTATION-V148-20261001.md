@@ -15,3 +15,23 @@ The finite presentation task can close for Privacy, Terms of Service, Age Restri
 ## Release
 
 Public deployment/read-back will be recorded below. Rollback: FusionV147 Workerd417e3a8-0b83-450c-aa91-433bb427c4c4.
+
+### Published closure
+
+Shared policy presentation is live for all 14 pages, including structured source-preserving reading exports. Five finite presentation rows are closed; nine source decisions are recorded separately. Seven live responsive cases passed. The separate Books host matched its historical captured content after the origin timestamp and Cloudflare analytics script were normalised.
+
+Source 15c0482 was pushed before publication. Worker faddf8d8-daf8-4807-a2d4-6149a9f6f27f serves 100%, deployment 94b0cc5d-aa0b-4cee-bb0e-aa78d2ef2d9c at 2026-10-01T02:02:54.745757Z; all 177 route assignments and four bindings remain. 48 published page checks, 34 unchanged main bodies, changed page request variants/assets/exports and protected controls passed. See deployment/page-correction-v148-live-20261001.json and deployment/policy-cloudflare-v148-20261001.json. IndexNow receipt records notification only; no indexing, ranking, AI citation or conversion is inferred.
+
+### Exact remaining source decisions
+
+- terms-of-use: Confirm the intended agreement title and scope, the contracting party where Muscle-UP appears, and the intended opt-out recipient care@pinnaclblooms.org.
+- cookie-policy: Confirm whether the defined Site covers Pinnacle Clinics, Pinnacle Blooms or both, and approve consent wording that matches the actual controls.
+- copyright-and-intellectual: Confirm the duplicate clauses 19.1/19.2 and provide the designated Copyright Agent name or role and working contact.
+- contact-information: Confirm the usable mailing address, office/team hours and Saturday schedule; telephone guidance hours must not be substituted for office hours.
+- endorsement-and-testimonial: Confirm the intended meaning of clause 5.2 on wilful defamatory actions and the material-connection disclosure instruction.
+- third-party-inegration: Confirm the identity, version and accessible location of the referenced Security Policy and Data Protection Policy.
+- refund-policy: Confirm the intended refund email and reconcile section 4 written exceptions with sections 9 and 19.
+- staff-declaration: Confirm the operative edition, issuer/approval/creator, L4/L5 mapping and edition-specific 344-skills and 21-million-service references.
+- ethics-charter: Confirm implemented reporting routes and deadlines, which programmes/badges are implemented or planned, and the operative edition/date for the 19-million-service reference.
+
+These are source decisions, not uncompleted presentation work. Do not silently invent an officer, recipient, policy version, implemented reporting route or contract term.

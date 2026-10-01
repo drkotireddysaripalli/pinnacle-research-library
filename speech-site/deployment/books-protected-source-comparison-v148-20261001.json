@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-01T02:09:04.702Z",
+  "url": "https://books.pinnacleblooms.org/payment-and-billing",
+  "comparisonSource": "audits/operational-source-v137-20261001/books-payment-and-billing.html",
+  "originalSourceSha256": "fdc03eb0239902efe9990593e4ec08d9dbc2aff8ce7e6fb7e21f4b55184efbc0",
+  "currentSha256": "0c76784c11e72853dcdfdcce41b882341434a53731b7698563cc443ea57a68d3",
+  "normalisedSha256": "9a09d736d2ceb628929b4b753c05cfa2801bc6810d5f169e8fa563cf9548ebec",
+  "normalisations": [
+    "Origin last-modified meta timestamp",
+    "Cloudflare analytics beacon script"
+  ],
+  "meaning": "Historical captured policy, navigation and markup match current source after these two infrastructure-only fields are removed; no Books route, Worker handler or payment contract changed."
+}

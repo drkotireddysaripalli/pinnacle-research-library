@@ -5,8 +5,9 @@
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
     "keep": 15,
-    "completed": 11,
-    "queued": 22
+    "completed": 16,
+    "queued": 8,
+    "source-pending": 9
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -57,12 +58,16 @@
       "id": "age-restriction-policy",
       "name": "Age Restriction Policy",
       "url": "https://www.pinnacleblooms.org/age-restriction-policy",
-      "state": "queued",
+      "state": "completed",
       "kind": "minor policy",
       "tasks": [
         "Apply shared clause-heading semantics; retain guardian access, management, consent and eligibility provisions."
       ],
-      "sequence": 17
+      "sequence": 17,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f"
     },
     {
       "id": "ananthapuram",
@@ -116,38 +121,56 @@
       "id": "contact-information",
       "name": "Contact Information",
       "url": "https://www.pinnacleblooms.org/contact-information",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "contact clarity",
       "tasks": [
         "Apply shared clause-heading semantics and remove/source-qualify the unsupported World's#1 assertion.",
         "Confirm the usable mailing address and label the team covered by printed business hours separately from the national phone guidance."
       ],
-      "sequence": 18
+      "sequence": 18,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm the usable mailing address, office/team hours and Saturday schedule; telephone guidance hours must not be substituted for office hours.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "cookie-policy",
       "name": "Cookie Policy",
       "url": "https://www.pinnacleblooms.org/cookie-policy",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "source mismatch",
       "tasks": [
         "Apply shared clause-heading semantics and repair truncated 'third partie'.",
         "Resolve the defined PinnacleClinics site and align consent language with actual controls using the intended approved scope."
       ],
-      "sequence": 15
+      "sequence": 15,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm whether the defined Site covers Pinnacle Clinics, Pinnacle Blooms or both, and approve consent wording that matches the actual controls.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "copyright-and-intellectual",
       "name": "Copyright & Intellectual Property",
       "url": "https://www.pinnacleblooms.org/copyright-and-intellectual",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "policy references",
       "tasks": [
         "Apply shared clause-heading semantics.",
         "Reconcile repeated19.1/19.2 and Section20's21.1 numbering while retaining rights/licensing and IDs.",
         "Identify the promised designated Copyright Agent; do not invent a person or legal role."
       ],
-      "sequence": 16
+      "sequence": 16,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm the duplicate clauses 19.1/19.2 and provide the designated Copyright Agent name or role and working contact.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "delhi",
@@ -179,24 +202,34 @@
       "id": "disclaimer-and-limitations-of-liabilities",
       "name": "Disclaimer & Limitations",
       "url": "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities",
-      "state": "queued",
+      "state": "completed",
       "kind": "minor policy",
       "tasks": [
         "Apply shared clause-heading semantics; retain emergency advice, liability, relationship, no-guarantee and jurisdiction provisions."
       ],
-      "sequence": 19
+      "sequence": 19,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f"
     },
     {
       "id": "endorsement-and-testimonial",
       "name": "Endorsement & Testimonials",
       "url": "https://www.pinnacleblooms.org/endorsement-and-testimonial",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "ambiguous policy",
       "tasks": [
         "Apply shared clause-heading semantics and definite spelling correction.",
         "Resolve5.2 'wilful defamatory actions' and the intended material-connection wording from the intended policy source."
       ],
-      "sequence": 20
+      "sequence": 20,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm the intended meaning of clause 5.2 on wilful defamatory actions and the material-connection disclosure instruction.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "enrolment",
@@ -211,14 +244,20 @@
       "id": "ethics-charter",
       "name": "Ethics Charter",
       "url": "https://www.pinnacleblooms.org/ethics-charter",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "operational claims",
       "tasks": [
         "Remove/source-qualify unsupported global-first claims.",
         "Confirm reporting workflow and response commitments; distinguish implemented from planned badges/programmes.",
         "Identify the source edition/date behind19M+records, then retain its verified historical context; retrieval time is not an edition date. Keep accessible tables."
       ],
-      "sequence": 25
+      "sequence": 25,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm implemented reporting routes and deadlines, which programmes/badges are implemented or planned, and the operative edition/date for the 19-million-service reference.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "everyday-therapy",
@@ -274,13 +313,17 @@
       "id": "governing-and-jurisdiction",
       "name": "Governing Law & Jurisdiction",
       "url": "https://www.pinnacleblooms.org/governing-and-jurisdiction",
-      "state": "queued",
+      "state": "completed",
       "kind": "minor policy",
       "tasks": [
         "Apply shared clause-heading semantics; remove the accidental 'implications.l laws.' tail.",
         "Preserve the governing-law/court/waiver provisions and anchor IDs."
       ],
-      "sequence": 21
+      "sequence": 21,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f"
     },
     {
       "id": "gurunanak",
@@ -387,13 +430,17 @@
       "id": "privacy-policy",
       "name": "Privacy Policy",
       "url": "https://www.pinnacleblooms.org/privacy-policy",
-      "state": "queued",
+      "state": "completed",
       "kind": "minor policy",
       "tasks": [
         "Apply shared clause-heading semantics: H2 top-level, H3 genuine subsections, retaining words, IDs and TOC.",
         "Correct definite spelling errors without changing consent, retention, rights or waiver terms."
       ],
-      "sequence": 12
+      "sequence": 12,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f"
     },
     {
       "id": "prognose",
@@ -417,13 +464,19 @@
       "id": "refund-policy",
       "name": "Refund Policy",
       "url": "https://www.pinnacleblooms.org/refund-policy",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "policy conflict",
       "tasks": [
         "Apply shared clause-heading semantics and definite typo correction.",
         "Reconcile the two request/contact emails and written-exception versus absolute-clause wording using the intended source; preserve conditions until resolved."
       ],
-      "sequence": 23
+      "sequence": 23,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm the intended refund email and reconcile section 4 written exceptions with sections 9 and 19.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "self-sufficient",
@@ -501,14 +554,20 @@
       "id": "staff-declaration",
       "name": "Staff Conduct Charter",
       "url": "https://www.pinnacleblooms.org/staff-declaration",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "source conflict",
       "tasks": [
         "Fix malformed www.pinnacleblooms.or.",
         "Replace edition/approval placeholders only with verified metadata; reconcile L4/L5 penalty references from the intended edition.",
         "Resolve source edition/creator for344skills/21M sessions; keep existing accessible tables."
       ],
-      "sequence": 24
+      "sequence": 24,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm the operative edition, issuer/approval/creator, L4/L5 mapping and edition-specific 344-skills and 21-million-service references.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "suchitra",
@@ -540,24 +599,34 @@
       "id": "terms-of-service",
       "name": "Terms of Service",
       "url": "https://www.pinnacleblooms.org/terms-of-service",
-      "state": "queued",
+      "state": "completed",
       "kind": "minor policy",
       "tasks": [
         "Apply shared clause-heading semantics; preserve all47 clause words, working navigation and printed revision."
       ],
-      "sequence": 14
+      "sequence": 14,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f"
     },
     {
       "id": "terms-of-use",
       "name": "Terms of Use",
       "url": "https://www.pinnacleblooms.org/terms-of-use",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "source mismatch",
       "tasks": [
         "Repair duplicated Roman VI numbering without changing anchor IDs.",
         "Resolve the actual intended agreement before replacing unrelated mobile-site, nutritional-supplement and Muscle-UP Nutrition template material; confirm the body-title 'Terms of Service' and the apparent opt-out email typo care@pinnaclblooms.org against the intended source."
       ],
-      "sequence": 13
+      "sequence": 13,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm the intended agreement title and scope, the contracting party where Muscle-UP appears, and the intended opt-out recipient care@pinnaclblooms.org.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "therapeuticai",
@@ -572,13 +641,19 @@
       "id": "third-party-inegration",
       "name": "Third-Party Integration",
       "url": "https://www.pinnacleblooms.org/third-party-inegration",
-      "state": "queued",
+      "state": "source-pending",
       "kind": "policy references",
       "tasks": [
         "Apply shared clause-heading semantics; retain established canonical spelling.",
         "Supply a legitimate destination/contact for named Security and Data Protection policies; do not invent/expose internal documents."
       ],
-      "sequence": 22
+      "sequence": 22,
+      "presentationCompletedOn": "2026-10-01",
+      "sourceCommit": "15c0482",
+      "workerVersion": "faddf8d8-daf8-4807-a2d4-6149a9f6f27f",
+      "receipt": "RELEASE-POLICY-PRESENTATION-V148-20261001.md",
+      "sourceDecision": "Confirm the identity, version and accessible location of the referenced Security Policy and Data Protection Policy.",
+      "nextCondition": "A confirmed source or operating decision for the named point, followed by one bounded source revision; no repeat presentation cleanup."
     },
     {
       "id": "tirupati",

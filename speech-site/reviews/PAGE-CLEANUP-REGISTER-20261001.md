@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 11 completed, 22 remaining.** Latest closure: Fusion V147. Next: Privacy Policy.
+**15 keep, 16 completed, 8 executable tasks remaining, 9 source decisions pending.** V148 presentation is live on all 14 policy pages. Next: Dilsukhnagar Centre; the shared source fix will close the eight centre voice rows.
 
 ## Initial decision
 
@@ -168,7 +168,9 @@ Canonical: [/fusion-module](https://www.pinnacleblooms.org/fusion-module)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 12. Privacy Policy · minor policy
+### 12. Privacy Policy · COMPLETED V148
+
+Closure: [Release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md). The task below is the accepted contract.
 
 Canonical: [/privacy-policy](https://www.pinnacleblooms.org/privacy-policy)
 
@@ -177,7 +179,13 @@ Canonical: [/privacy-policy](https://www.pinnacleblooms.org/privacy-policy)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 13. Terms of Use · source mismatch
+### 13. Terms of Use · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm the intended agreement title and scope, the contracting party where Muscle-UP appears, and the intended opt-out recipient care@pinnaclblooms.org.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/terms-of-use](https://www.pinnacleblooms.org/terms-of-use)
 
@@ -186,7 +194,9 @@ Canonical: [/terms-of-use](https://www.pinnacleblooms.org/terms-of-use)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 14. Terms of Service · minor policy
+### 14. Terms of Service · COMPLETED V148
+
+Closure: [Release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md). The task below is the accepted contract.
 
 Canonical: [/terms-of-service](https://www.pinnacleblooms.org/terms-of-service)
 
@@ -194,7 +204,13 @@ Canonical: [/terms-of-service](https://www.pinnacleblooms.org/terms-of-service)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 15. Cookie Policy · source mismatch
+### 15. Cookie Policy · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm whether the defined Site covers Pinnacle Clinics, Pinnacle Blooms or both, and approve consent wording that matches the actual controls.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/cookie-policy](https://www.pinnacleblooms.org/cookie-policy)
 
@@ -203,7 +219,13 @@ Canonical: [/cookie-policy](https://www.pinnacleblooms.org/cookie-policy)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 16. Copyright & Intellectual Property · policy references
+### 16. Copyright & Intellectual Property · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm the duplicate clauses 19.1/19.2 and provide the designated Copyright Agent name or role and working contact.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/copyright-and-intellectual](https://www.pinnacleblooms.org/copyright-and-intellectual)
 
@@ -213,7 +235,9 @@ Canonical: [/copyright-and-intellectual](https://www.pinnacleblooms.org/copyrigh
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 17. Age Restriction Policy · minor policy
+### 17. Age Restriction Policy · COMPLETED V148
+
+Closure: [Release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md). The task below is the accepted contract.
 
 Canonical: [/age-restriction-policy](https://www.pinnacleblooms.org/age-restriction-policy)
 
@@ -221,7 +245,13 @@ Canonical: [/age-restriction-policy](https://www.pinnacleblooms.org/age-restrict
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 18. Contact Information · contact clarity
+### 18. Contact Information · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm the usable mailing address, office/team hours and Saturday schedule; telephone guidance hours must not be substituted for office hours.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/contact-information](https://www.pinnacleblooms.org/contact-information)
 
@@ -230,7 +260,9 @@ Canonical: [/contact-information](https://www.pinnacleblooms.org/contact-informa
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 19. Disclaimer & Limitations · minor policy
+### 19. Disclaimer & Limitations · COMPLETED V148
+
+Closure: [Release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md). The task below is the accepted contract.
 
 Canonical: [/disclaimer-and-limitations-of-liabilities](https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities)
 
@@ -238,7 +270,13 @@ Canonical: [/disclaimer-and-limitations-of-liabilities](https://www.pinnaclebloo
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 20. Endorsement & Testimonials · ambiguous policy
+### 20. Endorsement & Testimonials · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm the intended meaning of clause 5.2 on wilful defamatory actions and the material-connection disclosure instruction.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/endorsement-and-testimonial](https://www.pinnacleblooms.org/endorsement-and-testimonial)
 
@@ -247,7 +285,9 @@ Canonical: [/endorsement-and-testimonial](https://www.pinnacleblooms.org/endorse
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 21. Governing Law & Jurisdiction · minor policy
+### 21. Governing Law & Jurisdiction · COMPLETED V148
+
+Closure: [Release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md). The task below is the accepted contract.
 
 Canonical: [/governing-and-jurisdiction](https://www.pinnacleblooms.org/governing-and-jurisdiction)
 
@@ -256,7 +296,13 @@ Canonical: [/governing-and-jurisdiction](https://www.pinnacleblooms.org/governin
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 22. Third-Party Integration · policy references
+### 22. Third-Party Integration · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm the identity, version and accessible location of the referenced Security Policy and Data Protection Policy.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/third-party-inegration](https://www.pinnacleblooms.org/third-party-inegration)
 
@@ -265,7 +311,13 @@ Canonical: [/third-party-inegration](https://www.pinnacleblooms.org/third-party-
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 23. Refund Policy · policy conflict
+### 23. Refund Policy · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm the intended refund email and reconcile section 4 written exceptions with sections 9 and 19.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/refund-policy](https://www.pinnacleblooms.org/refund-policy)
 
@@ -274,7 +326,13 @@ Canonical: [/refund-policy](https://www.pinnacleblooms.org/refund-policy)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 24. Staff Conduct Charter · source conflict
+### 24. Staff Conduct Charter · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm the operative edition, issuer/approval/creator, L4/L5 mapping and edition-specific 344-skills and 21-million-service references.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/staff-declaration](https://www.pinnacleblooms.org/staff-declaration)
 
@@ -284,7 +342,13 @@ Canonical: [/staff-declaration](https://www.pinnacleblooms.org/staff-declaration
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 25. Ethics Charter · operational claims
+### 25. Ethics Charter · PRESENTATION COMPLETE · SOURCE DECISION PENDING
+
+Presentation: [V148 release receipt](../RELEASE-POLICY-PRESENTATION-V148-20261001.md).
+
+Remaining source decision: Confirm implemented reporting routes and deadlines, which programmes/badges are implemented or planned, and the operative edition/date for the 19-million-service reference.
+
+The original task is retained below; do not repeat its completed formatting pass.
 
 Canonical: [/ethics-charter](https://www.pinnacleblooms.org/ethics-charter)
 

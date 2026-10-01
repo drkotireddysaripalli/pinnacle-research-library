@@ -1,0 +1,24 @@
+{
+  "submittedAt": "2026-10-01T02:10:05.336Z",
+  "rootKeyResponseStatus": 200,
+  "urlList": [
+    "https://www.pinnacleblooms.org/privacy-policy",
+    "https://www.pinnacleblooms.org/terms-of-use",
+    "https://www.pinnacleblooms.org/terms-of-service",
+    "https://www.pinnacleblooms.org/cookie-policy",
+    "https://www.pinnacleblooms.org/copyright-and-intellectual",
+    "https://www.pinnacleblooms.org/age-restriction-policy",
+    "https://www.pinnacleblooms.org/contact-information",
+    "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities",
+    "https://www.pinnacleblooms.org/endorsement-and-testimonial",
+    "https://www.pinnacleblooms.org/governing-and-jurisdiction",
+    "https://www.pinnacleblooms.org/third-party-inegration",
+    "https://www.pinnacleblooms.org/refund-policy",
+    "https://www.pinnacleblooms.org/staff-declaration",
+    "https://www.pinnacleblooms.org/ethics-charter"
+  ],
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "httpStatus": 200,
+  "response": "",
+  "meaning": "Updated URL notification received; this confirms submission only, not discovery, indexing, ranking, AI citation or conversion."
+}

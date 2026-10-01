@@ -1,5 +1,7 @@
 # Active page work order · sequential page corrections
 
+**LATEST CLOSED — V148:** Shared policy presentation is live for all 14 pages, including structured source-preserving reading exports. Five finite presentation rows are closed; nine source decisions are recorded separately. Seven live responsive cases passed. The separate Books host matched its historical captured content after the origin timestamp and Cloudflare analytics script were normalised. Source 15c0482; Worker faddf8d8-daf8-4807-a2d4-6149a9f6f27f; all 177 routes and four bindings retained. Receipt: RELEASE-POLICY-PRESENTATION-V148-20261001.md.
+
 **LATEST CLOSED — V147:** Fusion automatic-change question now answers directly; visible/schema/JSON/text/Markdown and per-page date/lastmod verified live. Human review scope retained. Source 89e9ede; Worker d417e3a8-0b83-450c-aa91-433bb427c4c4; all177routes/fourbindings retained. Receipt: RELEASE-FUSION-VOICE-V147-20261001.md.
 
 **LATEST CLOSED — V146:** PDK direct record-concept definition published with matching sources/text/Markdown and per-page date/lastmod; internal architecture and human judgement scope retained. Source 1198c79; Worker 8f7b0550-4d9d-4f2c-98a9-76ce79818d9b; all177routes/fourbindings retained. Receipt: RELEASE-PDK-VOICE-V146-20261001.md.
@@ -16,7 +18,7 @@
 
 **CURRENT SEQUENCE:** follow `reviews/PAGE-CLEANUP-REGISTER-20261001.md` and its48row JSON.15 accepted bodies stay intact; Leadership, Framework, Special Education and About are completed;29 bounded corrections remain. Finish one page task and its release before the next. Shared-source defects are fixed once and verified for their affected rows. Source-gated policy decisions remain precise pending conditions while independent work proceeds.
 
-**NOW — Privacy Policy:** Apply shared clause-heading semantics: H2 top-level, H3 genuine subsections, retaining words, IDs and TOC. Correct definite spelling errors without changing consent, retention, rights or waiver terms.
+**NOW — eight centre voice rows, starting with Dilsukhnagar Centre:** Fix the direct introduction, arrival instructions and matching FAQs once in the common centre source; retain local examples, media, maps and evidence. Nine policy source decisions stay recorded separately.
 
 **ABOUT V140 CLOSED:** source9579462, Workera2c80185-c279-4451-9b89-ac3ee53d633d;177routes/fourbindings,48pagehashes/47unchangedbodies and seven focused production cases pass. Five family-journey steps, five service routes and original complete branded creative published. IndexNow singleURL200. Receipt `RELEASE-ABOUT-V140-20261001.md`.
 
