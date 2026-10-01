@@ -54,7 +54,7 @@
     "/pinnacle-pages-html/third-party-inegration.html",
     "/pinnacle-pages-html/tirupati.html"
   ],
-  "htmlChange": "Remove redundant common helpline and centre-link aria-labels only",
+  "htmlChange": "Remove the common helpline override; match centre aria-label to visible text while retaining its mobile icon name",
   "unchangedUnionFiles": 1879,
   "runtimeChange": "Allow existing Cloudflare auto-injected beacon host in public HTML script-src; strict preview preserved",
   "otherRuntimeModulesRetained": 4,

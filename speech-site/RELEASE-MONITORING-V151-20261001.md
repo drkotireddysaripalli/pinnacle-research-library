@@ -4,7 +4,7 @@
 
 Lighthouse confirmed that the already-enabled Cloudflare Web Analytics beacon was injected into managed HTML but blocked by its Content Security Policy. The common public HTML handler now permits only its trusted script host, `https://static.cloudflareinsights.com`. Automatic injection sends performance beacons to the existing same-origin endpoint; no external collector permission or duplicate script is added. Preview pages retain their stricter policy and search exclusion.
 
-The common helpline link's overriding accessible name omitted its visible “Free guidance · 24/7” text. The final desktop check also found that “Find a Pinnacle centre” failed to include the exact visible phrase “Find a centre.” Removing the two redundant attributes lets the visible wording supply both names. These changes are made once in `SiteHeader.astro` and reflected across48 accepted public HTML files. Links, visible wording, layout and footer are retained. The exact label/name rule now runs alongside the normal axe check.
+The common helpline link's overriding accessible name omitted its visible “Free guidance · 24/7” text. The final desktop check also found that “Find a Pinnacle centre” failed to include the exact visible phrase “Find a centre.” The helpline override is removed. The centre label now exactly matches its visible wording and remains available when the compact mobile layout hides its text. These changes are made once in `SiteHeader.astro` and reflected across48 accepted public HTML files. Links, visible wording, layout and footer are retained. The exact label/name rule now runs alongside the normal axe check.
 
 ## Reusable toolkit
 
@@ -14,7 +14,7 @@ Before this correction, live OT and enrolment each scored97mobile/100desktop per
 
 ## Frozen release boundary
 
-Final candidate `release-monitoring-v151a-20261001`, paired upload `.worker-upload-monitoring-v151a-20261001`, derived from V150's accepted stage/upload. Exactly48 public HTML files lose two attributes;1,879 other union files remain byte-identical. Four other runtime modules are unchanged. `speech-handler.mjs` adds one script host; the complete Worker inventory changes only48 HTML hashes. Existing asset/media/evidence/Verify files, route logic, enquiry acceptance and bindings are retained. Compared with the interim V151 publication, V151a changes only the centre link's attribute and associated48 HTML hashes.
+Final candidate `release-monitoring-v151a-20261001`, paired upload `.worker-upload-monitoring-v151a-20261001`, derived from V150's accepted stage/upload. Exactly48 public HTML files remove the helpline override and shorten the centre label;1,879 other union files remain byte-identical. Four other runtime modules are unchanged. `speech-handler.mjs` adds one script host; the complete Worker inventory changes only48 HTML hashes. Existing asset/media/evidence/Verify files, route logic, enquiry acceptance and bindings are retained. Compared with the interim V151 publication, V151a changes only the centre link's attribute and associated48 HTML hashes.
 
 Rollback: V150 Worker `2ea18faa-90c4-442c-b6d0-6f8758315373`, stage `release-measurement-v150b-20261001`, paired upload `.worker-upload-measurement-v150b-20261001`. Before release:177 zone routes,78 assigned to this Worker, four bindings, fingerprint `ced794a6`. Upload through `wrangler versions upload`, with no route flag, then set the new version to100% through the established API. Source must be pushed first.
 

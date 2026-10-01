@@ -13,6 +13,7 @@ test('usable public page, shared shell, source and call paths',async({page},test
   expect(response?.headers()['x-robots-tag'] || '').not.toMatch(/noindex/i);
   await expect(page.locator('main h1')).toHaveCount(1);
   await expect(page.locator('.portal-header')).toBeVisible();
+  await expect(page.locator('.portal-location')).toHaveAccessibleName('Find a centre');
   await expect(page.locator('footer')).toBeVisible();
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href','https://www.pinnacleblooms.org'+expectedCanonical);
   await expect(page.locator('meta[name="description"]')).toHaveAttribute('content',/.{40,}/);

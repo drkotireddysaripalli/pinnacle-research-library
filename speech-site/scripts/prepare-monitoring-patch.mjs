@@ -28,13 +28,13 @@ assert(inventoryMatch, 'Existing complete Worker inventory required');
 const inventory = JSON.parse(inventoryMatch[1]);
 const html = Object.keys(inventory).filter(p => p.startsWith('/pinnacle-pages-html/') && p.endsWith('.html') && !p.includes('preview'));
 assert.equal(html.length, 48, 'Only the currently accepted 48-page portfolio');
-const removed = [' aria-label="About the National Autism Helpline"', ' aria-label="Find a Pinnacle centre"'];
+const attributes = [[' aria-label="About the National Autism Helpline"', ''], [' aria-label="Find a Pinnacle centre"', ' aria-label="Find a centre"']];
 for (const file of html) {
   const body = await fs.readFile(path.join(prior, file), 'utf8');
   let corrected = body;
-  for (const attribute of removed) {
+  for (const [attribute, replacement] of attributes) {
     assert.equal(corrected.split(attribute).length, 2, file + ': one instance of each shared label expected');
-    corrected = corrected.replace(attribute, '');
+    corrected = corrected.replace(attribute, replacement);
   }
   await fs.writeFile(path.join(next, file), corrected);
   inventory[file] = sha(corrected).slice(0, 16);
@@ -74,7 +74,7 @@ for (const file of ['discovery-handler.mjs', 'speech-enquiry-handler.mjs', 'cent
   assert.equal(sha(await fs.readFile(path.join(priorUpload, file))), sha(await fs.readFile(path.join(nextUpload, file))), file + ' runtime retained');
 }
 const receipt = {at: new Date().toISOString(), prior: names[0], priorUpload: names[1], stage: names[2], upload: names[3],
-  changedHtml: html, htmlChange: 'Remove redundant common helpline and centre-link aria-labels only', unchangedUnionFiles: unchanged,
+  changedHtml: html, htmlChange: 'Remove the common helpline override; match centre aria-label to visible text while retaining its mobile icon name', unchangedUnionFiles: unchanged,
   runtimeChange: 'Allow existing Cloudflare auto-injected beacon host in public HTML script-src; strict preview preserved',
   otherRuntimeModulesRetained: 4, verifyAssetsRetained: true, routingAndBindingsChange: false};
 await fs.writeFile('deployment/monitoring-v151-staged-20261001.json', JSON.stringify(receipt, null, 2) + '\n');

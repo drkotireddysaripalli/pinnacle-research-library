@@ -22,7 +22,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
           <a class="portal-whatsapp" href="https://wa.me/919100181181" aria-label="WhatsApp Pinnacle at 9100 181 181"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#27bb47" d="M12 1a11 11 0 0 0-9.5 16.6L1 23l5.5-1.4A11 11 0 1 0 12 1Z"/><path fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" d="M7.5 6.5c-2 4 4 10 8 8l1-2-3-1-1 1c-1.5-.7-2.3-1.5-3-3l1-1-1-2-2-.5Z"/></svg><span>WhatsApp</span></a>
         </div>
         <a class="portal-enrol" href={enrolmentUrl} aria-label="Enrol at Pinnacle" data-cta="header-enrol"><Icon name="arrow" /><span>Enrol at Pinnacle</span></a>
-        <a class="portal-location" href={url('/centers')}><Icon name="pin" /><span>Find a centre</span></a>
+        <a class="portal-location" href={url('/centers')} aria-label="Find a centre"><Icon name="pin" /><span>Find a centre</span></a>
         <details class="portal-search"><summary aria-label="Search Pinnacle"><Icon name="search" /></summary><form action={url('/search')} method="get"><label for="portal-search-input">Search Pinnacle</label><div><input id="portal-search-input" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
       </nav>
     </div>
