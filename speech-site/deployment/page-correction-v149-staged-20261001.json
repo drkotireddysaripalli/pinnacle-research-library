@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-01T02:13:15.000Z",
+  "stage": "release-centre-voice-v149-20261001",
+  "prior": "release-policy-v148b-20261001",
+  "changed": [
+    "dilsukhnagar",
+    "gurunanak",
+    "delhi",
+    "ananthapuram",
+    "nandyala",
+    "ongole",
+    "tirupati",
+    "srikakulam"
+  ],
+  "total": 48,
+  "unchangedBodies": 40,
+  "commonShellsPreserved": true,
+  "verifyIndexPreserved": true,
+  "runtimePreserved": true
+}
