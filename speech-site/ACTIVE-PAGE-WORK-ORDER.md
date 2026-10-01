@@ -2,6 +2,33 @@
 
 **OWNER PRIORITY — 1 October 2026:** Resume the existing page-creation work under `PINNACLE-PAGE-CREATION-WORK-ORDER.md` and the linked-page sequence. Verify/Astro migration and presentation redevelopment are **deferred, not started**; the complete proposal is saved in `VERIFY-ASTRO-MIGRATION-DEFERRED-WORK-ORDER-20261001.md`. The next recorded creation package is Our Team (`/staff`) plus the source-identified representative profile, retaining its explicit source/refresh conditions. Research, remaining services and resources follow. Do not activate the deferred Verify package while working through this sequence.
 
+## Active creation contract — Our Team and representative profile
+
+**State: contract resumed; implementation and release pending.** The existing source preparation is retained. Do not count this contract or a source capture as a released page. Keep the frozen linked inventory and its completion ledger unchanged until publication.
+
+| Contract | Our Team | Representative profile |
+|---|---|---|
+| Public destination | `/staff` | `/staff/manikonda-kalyani/42082`, retaining mixed-case compatibility |
+| Visitor question | Who can help my family, and how do I find or discuss the suitable support? | Who is this person, what is their discipline, and how do I arrange the appropriate next conversation? |
+| Opening | **Meet our team. Begin with what matters for your child.** We start with the life your child is growing toward, then connect suitable professional contributions to the capabilities, everyday practice and review that serve that direction. | **Manikonda Kalyani · Speech Therapist.** Supported identity first, then a concise explanation of speech therapy's contribution using the accepted service content. No invented personal biography. |
+| Narrative blocks | Purpose and coordinated contributions; useful discipline routes; find a person; authentic source-backed cards; what to discuss when calling; contextual approach/evidence links | Name/role/portrait and supported date; discipline's everyday contribution; relation to family participation and review; national call/enquiry and team/service routes |
+| Main action | `tel:+919100181181`, displayed as **9100 181 181**; established enrolment and centre routes | Same national call and established enquiry route, with no inferred personal phone or guaranteed individual appointment |
+| Directory interaction | Name/role search, reset, result count and useful empty state; all records available without JavaScript | Retained return-to-directory and service/centre navigation |
+| Visuals | Authentic portraits in the existing identity context; relevant accepted explanatory artwork only if it adds a distinct narrative job. New English campaign/social creative follows the master built-in image-tool contract. | Authentic source portrait; no generated impersonation or fictional personal outcome |
+| Schema | CollectionPage + ItemList matching the rendered records | ProfilePage + source-bounded Person; no Physician, degree or verified badge inferred from a role |
+
+### Source and delivery contract to implement
+
+- The saved fixture has 234 public name/role/profile records; it is not an active HR headcount. Preserve original profile links, including profiles not rebuilt in this package.
+- Use the existing legacy source binding for the narrow public directory/profile presentation so source updates continue to appear. Extract only allow-listed fields. If the source structure is unmatched, retain the original source response instead of publishing an incomplete directory.
+- Preserve non-public methods, authenticated/private variants and other profile routes through the existing origin contract. Do not reconstruct the legacy inline enquiry form; use the established managed enrolment page.
+- The representative source supports name, Speech Therapist role, portrait and “Empowering since Oct 2024.” It does not substantiate qualifications, a verified badge or a current centre assignment. Retain genuine source links without turning them into additional personnel claims.
+- Resolve authentic portrait delivery narrowly: existing public image host or an eligible asset route, with MIME/decoding/identity checks and an appropriate package-specific CSP. Do not widen all managed pages' image policy unnecessarily.
+- Shared header/footer/menu changes go into their existing common files once. Preserve Verify/FSC/helpline/application routes while this page package is built.
+- Match visible content, source/reading exports, title/description, social image and canonical; test filtering/no-JS, keyboard, responsive reading and source fallback. Review the actual narrative and visual result against the master before commit, deployment and public read-back.
+
+Source checkpoint: `reviews/NEXT-LINKED-PACKAGE-SOURCE-DISPOSITION-V137-20261001.md` and the ignored `audits/staff-v137-source-20261001/README.md`. Source/media/qualification limits stay explicit in the contract; keep parent-facing prose direct and useful rather than filling it with audit commentary.
+
 **LATEST CLOSED — V149:** Eight centre copy rows are complete through one common source correction. Owned introductions, arrival answers and contact/service FAQs match HTML, schema and reading exports. All eight source contracts and five local/five live responsive cases passed; Delhi remains guarded. The finite cleanup register has no remaining executable rows. Source e306c08; Worker aee4718b-97e9-4a8b-b46b-af4e7dc43269; all 177 routes and four bindings retained. Receipt: RELEASE-CENTRE-VOICE-V149-20261001.md.
 
 **LATEST CLOSED — V148:** Shared policy presentation is live for all 14 pages, including structured source-preserving reading exports. Five finite presentation rows are closed; nine source decisions are recorded separately. Seven live responsive cases passed. The separate Books host matched its historical captured content after the origin timestamp and Cloudflare analytics script were normalised. Source 15c0482; Worker faddf8d8-daf8-4807-a2d4-6149a9f6f27f; all 177 routes and four bindings retained. Receipt: RELEASE-POLICY-PRESENTATION-V148-20261001.md.
