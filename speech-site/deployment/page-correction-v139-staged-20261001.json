@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-01T01:09:59.931Z",
+  "stage": "release-special-education-v139-20261001",
+  "prior": "release-framework-v138-20261001",
+  "changed": [
+    "special-education"
+  ],
+  "total": 48,
+  "unchangedBodies": 47,
+  "commonShellsPreserved": true,
+  "verifyIndexPreserved": true,
+  "runtimePreserved": true
+}

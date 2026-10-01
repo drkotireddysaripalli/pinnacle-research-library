@@ -1,19 +1,12 @@
 import type { ServiceContent } from './service-content';
+import {specialEducationStages} from './special-education-stages';
 import lifeJourney from '../assets/special-education-life-journey-20260929.png';
 import learningCycle from '../assets/special-education-learning-cycle-20260929.png';
 import { specialEducationPath, url } from './site';
 
 export const specialEducationEnquiry = url('/enroll-autism-speech-aba-therapies-india?service=education');
 
-const learningStages = [
-  ['measure','Understand abilities and access','Notice what the child understands, communicates and can do, and where the activity, material or environment creates a barrier.'],
-  ['compass','Agree a direction that matters','Connect a learning priority to communication, everyday participation, school routines and growing independence.'],
-  ['people','Bring the right people together','Choose the special educator and any other relevant professional support around the child-specific need.'],
-  ['book','Teach in an accessible way','Adapt the instruction, communication, material, activity, pace or environment so the child can engage and learn.'],
-  ['home','Practise in meaningful moments','When appropriate, connect the developing ability with manageable moments at home, school and everyday life.'],
-  ['track','Review what the child can use','Bring family and teacher observations into review: what worked, where it worked and what support was still needed.'],
-  ['loop','Reassess, adjust and continue','Change the goal, teaching approach, support or environment as the child’s needs and participation change.']
-];
+const learningStages = specialEducationStages;
 
 export const specialEducationContent: ServiceContent = {
   id:'special-education', path:specialEducationPath, label:'Special Education',

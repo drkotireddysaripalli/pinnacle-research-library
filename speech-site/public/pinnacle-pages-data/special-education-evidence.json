@@ -54,5 +54,43 @@
       "source": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html",
       "boundary": "The directory does not establish current special-education availability, professional credentials, fees or appointment capacity. Confirm before travel."
     }
+  ],
+  "updatedOn": "2026-10-01",
+  "lifecycle": [
+    {
+      "stage": 1,
+      "title": "Understand abilities",
+      "text": "We start with your child’s strengths, interests, communication and learning access. Where AbilityScore® is used, we read its measurement alongside age, context, suitable assessment and your observations."
+    },
+    {
+      "stage": 2,
+      "title": "Plan for readiness",
+      "text": "Together, we choose meaningful learning and participation priorities. Readiness views, revisable forecasts and professional judgement help shape a child-specific plan, with clear goals, suitable support and a point to review."
+    },
+    {
+      "stage": 3,
+      "title": "Choose relevant support",
+      "text": "We adapt teaching, communication, materials, pace and the environment around the agreed goal. Speech, occupational or behavioural support joins when a suitable assessment indicates a role. The child’s needs determine the relevant contributions."
+    },
+    {
+      "stage": 4,
+      "title": "Practise in everyday life",
+      "text": "We agree manageable ways to use developing abilities in familiar routines. Your family’s guided practice connects learning with daily life; teachers can contribute in suitable settings with your consent."
+    },
+    {
+      "stage": 5,
+      "title": "Track and correct",
+      "text": "We bring family, educator and relevant teacher observations into review: what your child could use, where it worked and what help remained. We adjust the teaching, materials, environment or support when needed."
+    },
+    {
+      "stage": 6,
+      "title": "Reassess and repeat",
+      "text": "We reassess abilities, learning access and the help still needed. With your family, the professional decides whether to continue, adapt, reduce, pause, refer or complete support as appropriate."
+    },
+    {
+      "stage": 7,
+      "title": "Grow independence and participation",
+      "text": "We work toward greater self-sufficiency, school readiness, meaningful mainstream participation and a wonderful life. Your child’s progress is individual, and useful support and adaptations can remain part of independence."
+    }
   ]
 }

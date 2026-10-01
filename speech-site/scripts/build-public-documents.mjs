@@ -3,9 +3,12 @@ import crypto from 'node:crypto';
 import policies from '../src/data/policy-content.json' with {type:'json'};
 import {lifePages} from '../src/data/life-outcomes.ts';
 import institutional from '../src/data/institutional-content.json' with {type:'json'};
+import {specialEducationStages} from '../src/data/special-education-stages.ts';
 import {assessmentContent} from '../src/data/assessment-content.ts';
 const origin='https://www.pinnacleblooms.org',dir='public/pinnacle-pages-data';
 await fs.mkdir(dir,{recursive:true});
+const specialFile=dir+'/special-education-evidence.json',specialRecord=JSON.parse(await fs.readFile(specialFile,'utf8'));specialRecord.updatedOn='2026-10-01';specialRecord.lifecycle=specialEducationStages.map(([icon,title,text],i)=>({stage:i+1,title,text}));await fs.writeFile(specialFile,JSON.stringify(specialRecord,null,2)+'\n');
+for(const suffix of ['-evidence.txt','-machine.md']){const file=dir+'/special-education'+suffix;let text=await fs.readFile(file,'utf8');text=text.replace(/\n\n## The seven-stage Pinnacle lifecycle[\s\S]*$/,'');text+='\n\n## The seven-stage Pinnacle lifecycle\n\n'+specialEducationStages.map(([icon,title,body],i)=>(i+1)+'. '+title+' — '+body).join('\n\n')+'\n';await fs.writeFile(file,text);}
 for(const page of policies){
  const source={url:origin+page.path,title:page.label,sourceUrl:page.sourceUrl,sourceRetrievedAt:page.sourceRetrievedAt,sourceHtmlSha256:page.sourceHtmlSha256,policyTextSha256:page.policyTextSha256,printedRevision:page.printedRevision,legalApprovalVerified:false,presentation:'Existing policy text preserved; typography, navigation and semantic headings changed.',text:page.text};
  await fs.writeFile(dir+'/'+page.slug+'-policy-source.json',JSON.stringify(source,null,2)+'\n');

@@ -42,3 +42,20 @@ Call 9100 181 181 (tel:+919100181181), browse the dated centre directory or use 
 - RCI professional categories: https://rehabcouncil.nic.in/categories-u-s-19/
 
 Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited.
+
+
+## The seven-stage Pinnacle lifecycle
+
+1. Understand abilities — We start with your child’s strengths, interests, communication and learning access. Where AbilityScore® is used, we read its measurement alongside age, context, suitable assessment and your observations.
+
+2. Plan for readiness — Together, we choose meaningful learning and participation priorities. Readiness views, revisable forecasts and professional judgement help shape a child-specific plan, with clear goals, suitable support and a point to review.
+
+3. Choose relevant support — We adapt teaching, communication, materials, pace and the environment around the agreed goal. Speech, occupational or behavioural support joins when a suitable assessment indicates a role. The child’s needs determine the relevant contributions.
+
+4. Practise in everyday life — We agree manageable ways to use developing abilities in familiar routines. Your family’s guided practice connects learning with daily life; teachers can contribute in suitable settings with your consent.
+
+5. Track and correct — We bring family, educator and relevant teacher observations into review: what your child could use, where it worked and what help remained. We adjust the teaching, materials, environment or support when needed.
+
+6. Reassess and repeat — We reassess abilities, learning access and the help still needed. With your family, the professional decides whether to continue, adapt, reduce, pause, refer or complete support as appropriate.
+
+7. Grow independence and participation — We work toward greater self-sufficiency, school readiness, meaningful mainstream participation and a wonderful life. Your child’s progress is individual, and useful support and adaptations can remain part of independence.
