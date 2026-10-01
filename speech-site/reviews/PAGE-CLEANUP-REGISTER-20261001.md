@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 10 completed, 23 remaining.** Latest closure: Personal Development Kernel V146. Next: Fusion.
+**15 keep, 11 completed, 22 remaining.** Latest closure: Fusion V147. Next: Privacy Policy.
 
 ## Initial decision
 
@@ -156,7 +156,9 @@ Canonical: [/personal-development-kernel](https://www.pinnacleblooms.org/persona
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 11. Fusion · copy
+### 11. Fusion · COMPLETED V147
+
+Closure: [Release receipt](../RELEASE-FUSION-VOICE-V147-20261001.md). The task below is the accepted contract.
 
 Canonical: [/fusion-module](https://www.pinnacleblooms.org/fusion-module)
 

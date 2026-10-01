@@ -1,5 +1,7 @@
 # Active page work order · sequential page corrections
 
+**LATEST CLOSED — V147:** Fusion automatic-change question now answers directly; visible/schema/JSON/text/Markdown and per-page date/lastmod verified live. Human review scope retained. Source 89e9ede; Worker d417e3a8-0b83-450c-aa91-433bb427c4c4; all177routes/fourbindings retained. Receipt: RELEASE-FUSION-VOICE-V147-20261001.md.
+
 **LATEST CLOSED — V146:** PDK direct record-concept definition published with matching sources/text/Markdown and per-page date/lastmod; internal architecture and human judgement scope retained. Source 1198c79; Worker 8f7b0550-4d9d-4f2c-98a9-76ce79818d9b; all177routes/fourbindings retained. Receipt: RELEASE-PDK-VOICE-V146-20261001.md.
 
 **LATEST CLOSED — V145:** Direct clinician-administered answer and matching FAQ/schema/reading copies published; current live page and updated source/lastmod verified without repeating unchanged layout tests. Source 0368467; Worker cc709f3c-14ca-427e-913a-a4408f5bd636; all177routes/fourbindings retained. Receipt: RELEASE-ABILITYSCORE-VOICE-V145-20261001.md.
@@ -14,7 +16,7 @@
 
 **CURRENT SEQUENCE:** follow `reviews/PAGE-CLEANUP-REGISTER-20261001.md` and its48row JSON.15 accepted bodies stay intact; Leadership, Framework, Special Education and About are completed;29 bounded corrections remain. Finish one page task and its release before the next. Shared-source defects are fixed once and verified for their affected rows. Source-gated policy decisions remain precise pending conditions while independent work proceeds.
 
-**NOW — Fusion:** Answer automatic therapy change directly: professionals review the response and discuss appropriate changes with the family. Keep consent, authorised roles and non-automatic decision boundaries; retain the three-setting example. Regenerate matching FAQ/schema/exports; read back the changed answer.
+**NOW — Privacy Policy:** Apply shared clause-heading semantics: H2 top-level, H3 genuine subsections, retaining words, IDs and TOC. Correct definite spelling errors without changing consent, retention, rights or waiver terms.
 
 **ABOUT V140 CLOSED:** source9579462, Workera2c80185-c279-4451-9b89-ac3ee53d633d;177routes/fourbindings,48pagehashes/47unchangedbodies and seven focused production cases pass. Five family-journey steps, five service routes and original complete branded creative published. IndexNow singleURL200. Receipt `RELEASE-ABOUT-V140-20261001.md`.
 

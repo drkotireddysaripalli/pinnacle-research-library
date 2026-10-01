@@ -5,8 +5,8 @@
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
     "keep": 15,
-    "completed": 10,
-    "queued": 23
+    "completed": 11,
+    "queued": 22
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -257,14 +257,18 @@
       "id": "fusion-module",
       "name": "Fusion",
       "url": "https://www.pinnacleblooms.org/fusion-module",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Answer automatic therapy change directly: professionals review the response and discuss appropriate changes with the family.",
         "Keep consent, authorised roles and non-automatic decision boundaries; retain the three-setting example.",
         "Regenerate matching FAQ/schema/exports; read back the changed answer."
       ],
-      "sequence": 11
+      "sequence": 11,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-FUSION-VOICE-V147-20261001.md",
+      "sourceCommit": "89e9ede",
+      "workerVersion": "d417e3a8-0b83-450c-aa91-433bb427c4c4"
     },
     {
       "id": "governing-and-jurisdiction",
