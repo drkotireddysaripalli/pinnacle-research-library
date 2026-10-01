@@ -31,3 +31,11 @@ All48 public HTML bodies and monitoring policies match the candidate; nine contr
 Interim V151 OT Lighthouse: mobile97performance,100accessibility,100best-practices,100SEO; desktop100in all four categories. Mobile LCP2364ms, desktop547ms, TBT0 and CLS0. Blocked-script findings are absent. The experimental desktop name rule found the separate centre-link label, now corrected in V151a and added to the reusable smoke check. Full interim reports remain in ignored `audits/lighthouse/occupational-production-2026-10-01T06-22-20-221Z`.
 
 The [GitHub quality run for the source](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36824260504) succeeded, including the new Firefox/WebKit engine checks on Linux. Documentation-only commits are excluded from future quality runs. Physical-device tests and future real-user performance/outcomes remain separate.
+
+### Final V151a closure
+
+Source `91fc6e7ddeac3ce2c8cdedbae112b7af97d851c5` was pushed before Worker `da4cbe4f-7135-4a50-94b2-607e5cda5051` served100%; deployment `3ca150a2-ea95-4936-bf8e-96c44990a3df`, created2026-10-01T06:28:23.808946Z. The centre action keeps its exact “Find a centre” accessible name at compact widths where the visible text is hidden. The initially proposed removal was caught by the local320/390checks before upload; the corrected version passed all four local and all four production widths, including the explicit experimental name rule. The failed candidate was never released.
+
+All48 final public bodies/policies, nine controls and two actual204beacons passed. The177routes/78assignments/fourbindings and fingerprint `ced794a6` remain. The final OT Lighthouse reports return97mobile/100desktop performance and100SEO/accessibility/best-practices on both, mobile LCP2349ms, desktop583ms, CLS0, TBT0. Both accessible-name findings and both blocked-beacon findings are absent. Final full reports: `audits/lighthouse/occupational-production-2026-10-01T06-28-26-758Z`; compact evidence: `deployment/monitoring-v151-speed-20261001.json`.
+
+Final-source CI: [Portal quality](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36824875159) completed successfully, including Chromium, Firefox and WebKit checks. Source checks execute on Windows and Linux; WebKit is an engine test, not a physical Safari/iOS result.

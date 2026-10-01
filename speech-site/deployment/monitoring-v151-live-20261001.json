@@ -1,12 +1,7 @@
 {
-  "at": "2026-10-01T06:22:18.951Z",
-  "stage": "release-monitoring-v151-20261001",
+  "at": "2026-10-01T06:29:00.674Z",
+  "stage": "release-monitoring-v151a-20261001",
   "pages": [
-    {
-      "path": "/abilityscore",
-      "matched": true,
-      "monitoringPolicy": true
-    },
     {
       "path": "/age-restriction-policy",
       "matched": true,
@@ -14,6 +9,11 @@
     },
     {
       "path": "/about-pinnacle-proven-improvement-rate",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
+      "path": "/abilityscore",
       "matched": true,
       "monitoringPolicy": true
     },
@@ -33,12 +33,12 @@
       "monitoringPolicy": true
     },
     {
-      "path": "/autism-therapy",
+      "path": "/centers",
       "matched": true,
       "monitoringPolicy": true
     },
     {
-      "path": "/centers",
+      "path": "/autism-therapy",
       "matched": true,
       "monitoringPolicy": true
     },
@@ -78,17 +78,27 @@
       "monitoringPolicy": true
     },
     {
-      "path": "/ethics-charter",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
       "path": "/everyday-therapy",
       "matched": true,
       "monitoringPolicy": true
     },
     {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
       "path": "/speech-therapy/first-visit-guide",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
+      "path": "/ethics-charter",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
+      "path": "/governing-and-jurisdiction",
       "matched": true,
       "monitoringPolicy": true
     },
@@ -103,27 +113,7 @@
       "monitoringPolicy": true
     },
     {
-      "path": "/governing-and-jurisdiction",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
-      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
       "path": "/leadership",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
-      "path": "/mainstream",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
-      "path": "/enroll-autism-speech-aba-therapies-india",
       "matched": true,
       "monitoringPolicy": true
     },
@@ -133,17 +123,17 @@
       "monitoringPolicy": true
     },
     {
+      "path": "/mainstream",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
       "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
-      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
-      "path": "/personal-development-kernel",
       "matched": true,
       "monitoringPolicy": true
     },
@@ -158,7 +148,22 @@
       "monitoringPolicy": true
     },
     {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
+      "path": "/personal-development-kernel",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
       "path": "/prognose",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
+      "path": "/reassess-review-repeat",
       "matched": true,
       "monitoringPolicy": true
     },
@@ -178,6 +183,11 @@
       "monitoringPolicy": true
     },
     {
+      "path": "/best-special-education-center-call-9100181181",
+      "matched": true,
+      "monitoringPolicy": true
+    },
+    {
       "path": "/seven-readiness-indexes",
       "matched": true,
       "monitoringPolicy": true
@@ -193,11 +203,6 @@
       "monitoringPolicy": true
     },
     {
-      "path": "/reassess-review-repeat",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
       "path": "/staff-declaration",
       "matched": true,
       "monitoringPolicy": true
@@ -209,11 +214,6 @@
     },
     {
       "path": "/speech-therapy/teacher-observation-guide",
-      "matched": true,
-      "monitoringPolicy": true
-    },
-    {
-      "path": "/best-special-education-center-call-9100181181",
       "matched": true,
       "monitoringPolicy": true
     },
