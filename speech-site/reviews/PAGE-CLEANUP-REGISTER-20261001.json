@@ -4,9 +4,9 @@
   "sourceCommit": "1f30b9d",
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
-    "completed": 2,
+    "completed": 3,
     "keep": 15,
-    "queued": 31
+    "queued": 30
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -436,14 +436,16 @@
       "id": "special-education",
       "name": "Special Education",
       "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
-      "state": "queued",
+      "state": "completed",
       "kind": "substantial",
       "tasks": [
         "Restore the agreed seven-stage lifecycle: abilities/AbilityScore; readiness/plan; relevant integrated support; guided everyday practice; track/correct; reassess; independence/participation.",
         "Keep its useful learning-access example, conditional roles and accepted artwork; distinguish its teaching loop from the common lifecycle.",
         "Regenerate reading/evidence outputs; check visible stages/schema/links and release."
       ],
-      "sequence": 3
+      "sequence": 3,
+      "receipt": "RELEASE-SPECIAL-EDUCATION-V139-20261001.md",
+      "completedAt": "2026-10-01T01:12:24.203Z"
     },
     {
       "id": "speech",

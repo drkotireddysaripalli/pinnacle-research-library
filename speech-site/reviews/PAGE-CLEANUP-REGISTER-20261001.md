@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15keep,2completed,31remaining.** LeadershipV137 and FrameworkV138 are published and verified. Next: Special Education.
+**15keep,3completed,30remaining.** LeadershipV137, FrameworkV138 and Special EducationV139 are published and verified. Next: About.
 
 ## Initial decision
 
@@ -60,7 +60,9 @@ Canonical: [/pinnacle-global-autism-framework](https://www.pinnacleblooms.org/pi
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 3. Special Education · substantial
+### 3. Special Education · COMPLETED V139
+
+Closure: [Special Education release](../RELEASE-SPECIAL-EDUCATION-V139-20261001.md). The following task is retained as its accepted contract.
 
 Canonical: [/best-special-education-center-call-9100181181](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181)
 
