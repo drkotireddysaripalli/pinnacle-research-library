@@ -61,7 +61,7 @@ const entityGraph=isOverview?[{'@type':'SoftwareApplication','@id':entityId,name
 const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].includes(page.slug)?undefined:'2026-09-30';
 ---
 
-<PageLayout path={path} label={page.label} title={page.title} description={page.description} socialTitle={page.title} socialDescription={page.description} shareImage={socialBySlug[page.slug]} shareVersion="2026-09-30-pinnacleai-editorial" imageAlt={`${page.short} · Pinnacle Blooms Network life-first creative with 9100 181 181.`} imageCaption={`${page.short} · PinnacleAI illustrated social creative.`} includeService={false} primaryEntityId={entityId} entityGraph={entityGraph} citations={sources.map(source=>source.href)} faqs={page.faqs} publishedOn={firstPublished} updatedOn="2026-09-30" breadcrumbParent={isOverview?null:{name:'PinnacleAI®',path:'/pinnacleai'}}>
+<PageLayout path={path} label={page.label} title={page.title} description={page.description} socialTitle={page.title} socialDescription={page.description} shareImage={socialBySlug[page.slug]} shareVersion="2026-09-30-pinnacleai-editorial" imageAlt={`${page.short} · Pinnacle Blooms Network life-first creative with 9100 181 181.`} imageCaption={`${page.short} · PinnacleAI illustrated social creative.`} includeService={false} primaryEntityId={entityId} entityGraph={entityGraph} citations={sources.map(source=>source.href)} faqs={page.faqs} publishedOn={firstPublished} updatedOn={page.updatedOn||'2026-09-30'} breadcrumbParent={isOverview?null:{name:'PinnacleAI®',path:'/pinnacleai'}}>
   <div class="wave2" data-wave-module={page.slug}>
     <section class="wave2-hero" aria-labelledby="wave2-title">
       <div class="wave2-wrap wave2-hero-grid">

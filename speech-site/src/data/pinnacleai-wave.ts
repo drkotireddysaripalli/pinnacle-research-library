@@ -37,7 +37,7 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'abilityscore', short:'AbilityScore®', label:'AbilityScore®', title:'AbilityScore® | Understand Abilities, Plan for Everyday Life',
+    slug:'abilityscore', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'AbilityScore®', label:'AbilityScore®', title:'AbilityScore® | Understand Abilities, Plan for Everyday Life',
     description:'AbilityScore helps a professional discuss what a child can do now and which everyday goal may come next. See a toy-choice example, 0–1000 limits and sources.',
     eyebrow:'Start with what your child can do', headline:'Measure the starting picture. Keep your child bigger than any score.',
     lead:'You notice what your child understands, chooses, tries and enjoys. AbilityScore gives the care team a structured way to discuss current abilities and change over time, so the next goal can serve a real moment in life.',
@@ -55,7 +55,7 @@ export const pinnacleWave = [
     faqs:[
       {question:'What does an AbilityScore of 0–1000 mean?',answer:'It is the displayed scale for a structured developmental ability measure. A clinician must interpret the current assessment and the child’s age and context; a single number does not describe the child’s whole life.'},
       {question:'Is AbilityScore an autism or IQ test?',answer:'No. The licensed software is non-diagnostic, and the score is not presented as an autism diagnosis or a stand-alone IQ result.'},
-      {question:'Can a parent complete the clinical score alone?',answer:'The current Verify description distinguishes the clinician-administered, clinically governed AbilityScore from family questionnaires and observations. Families still contribute essential context.'}
+      {question:'Can a parent complete the clinical score alone?',answer:'No. AbilityScore is clinician-administered and clinically governed. Family questionnaires and everyday observations contribute essential context; they do not replace clinical administration or let a parent complete the clinical score alone.'}
     ]
   },
   {

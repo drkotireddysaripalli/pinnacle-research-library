@@ -1,7 +1,7 @@
 {
   "title": "AbilityScore® | Understand Abilities, Plan for Everyday Life",
   "url": "https://www.pinnacleblooms.org/abilityscore",
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
@@ -136,7 +136,7 @@
     },
     {
       "question": "Can a parent complete the clinical score alone?",
-      "answer": "The current Verify description distinguishes the clinician-administered, clinically governed AbilityScore from family questionnaires and observations. Families still contribute essential context."
+      "answer": "No. AbilityScore is clinician-administered and clinically governed. Family questionnaires and everyday observations contribute essential context; they do not replace clinical administration or let a parent complete the clinical score alone."
     }
   ]
 }

@@ -30,6 +30,14 @@ Illustrative example only. A parent notices a child wants a favourite toy but ne
 ## Boundary
 AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.
 
+## Questions
+### What does an AbilityScore of 0–1000 mean?
+It is the displayed scale for a structured developmental ability measure. A clinician must interpret the current assessment and the child’s age and context; a single number does not describe the child’s whole life.
+### Is AbilityScore an autism or IQ test?
+No. The licensed software is non-diagnostic, and the score is not presented as an autism diagnosis or a stand-alone IQ result.
+### Can a parent complete the clinical score alone?
+No. AbilityScore is clinician-administered and clinically governed. Family questionnaires and everyday observations contribute essential context; they do not replace clinical administration or let a parent complete the clinical score alone.
+
 ## Further sources
 - [Documented PinnacleAI workflow](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works): Describes a workflow; not proof that every step produces a specific result.
 - [Methodology preprint and limitations](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html): Methods and preliminary results must not be presented as completed independent validation.

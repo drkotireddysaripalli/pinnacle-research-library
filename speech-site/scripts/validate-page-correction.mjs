@@ -23,10 +23,10 @@ if(mode==='live'){
  receipt.pages=await limited(pages,async p=>{const o=await get(p.path);assert.equal(o.r.status,200,p.path);assert.equal(sha(owned(o.text)),sha(p.html),p.path+' published bytes');return{path:p.path,matched:true};});
  const cookie='unknown=fixture; _gcl_au=fixture; __Host-appgarden-visitor=fixture';
  receipt.changedDelivery=await limited(pages.filter(p=>changed.includes(p.id)),async p=>{for(const headers of [{cookie},{cookie,authorization:'Bearer fixture',range:'bytes=0-1','cache-control':'no-transform'}]){const o=await get(p.path,{headers});assert.equal(o.r.status,200);assert.equal(sha(owned(o.text)),sha(p.html));assert(o.r.headers.get('cache-control').includes('private, no-store'));}
- const md=await get(p.path,{headers:{cookie,accept:'text/markdown'}});assert.equal(md.r.status,200);const machinePath='/pinnacle-pages-data/'+p.id+'-machine.md';assert.equal(sha(md.bytes),sha(await fs.readFile(stage+machinePath)));
+ const md=await get(p.path,{headers:{cookie,accept:'text/markdown'}});assert.equal(md.r.status,200);const exportNames=(await fs.readdir(stage+'/pinnacle-pages-data')).filter(f=>f.startsWith(p.id+'-')&&/(?:evidence\.(json|txt)|machine\.md|sources\.(json|txt)|reading\.md|policy-source\.json|policy\.md)$/.test(f));const machinePath='/pinnacle-pages-data/'+exportNames.find(f=>f.endsWith('.md'));assert(exportNames.length>=2,'Matching document exports required');assert.equal(sha(md.bytes),sha(await fs.readFile(stage+machinePath)));
  const head=await get(p.path,{method:'HEAD',headers:{cookie}});assert.equal(head.r.status,200);assert.equal(head.bytes.length,0);
  const paths=new Set([...p.html.matchAll(/(?:src|href|content)="(\/pinnacle-pages-(?:assets|fonts|scripts|data)\/[^"?]+|https:\/\/www.pinnacleblooms.org\/pinnacle-pages-assets\/[^"?]+)(?:\?[^"]*)?"/g)].map(m=>new URL(m[1],origin).pathname));
- for(const suffix of ['-evidence.json','-evidence.txt','-machine.md'])paths.add('/pinnacle-pages-data/'+p.id+suffix);
+ for(const name of exportNames)paths.add('/pinnacle-pages-data/'+name);
  const assets=await limited([...paths],async path=>{const a=await get(path);assert.equal(a.r.status,200,path);assert.equal(sha(a.bytes),sha(await fs.readFile(stage+path)),path);return{path,bytes:a.bytes.length,sha256:sha(a.bytes)};});
  return{path:p.path,cookie:true,credentialRangeNoTransform:true,markdown:true,head:true,assets};});
  const before=JSON.parse(await fs.readFile('deployment/voice-delivery-protected-before-v137-20261001.json','utf8'));
