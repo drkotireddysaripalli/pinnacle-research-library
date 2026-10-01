@@ -5,8 +5,8 @@
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
     "keep": 15,
-    "completed": 7,
-    "queued": 26
+    "completed": 8,
+    "queued": 25
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -502,14 +502,18 @@
       "id": "suchitra",
       "name": "Suchitra Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "substantial",
       "tasks": [
         "Develop its joining-play question through interests/strengths, family choice, relevant support, practice, observation and review decision.",
         "Replace detached 'centre is listed' introductory/arrival/FAQ copy with direct Pinnacle voice.",
         "Retain real local photos, Suchitra/Suchitra II distinction and Query Raised source status; update exports, check and release."
       ],
-      "sequence": 8
+      "sequence": 8,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-SUCHITRA-CLEANUP-V144-20261001.md",
+      "sourceCommit": "bc9cfc9",
+      "workerVersion": "2e3a60fc-c16b-4272-b298-7d536a58c9bf"
     },
     {
       "id": "teacher-observation-guide",

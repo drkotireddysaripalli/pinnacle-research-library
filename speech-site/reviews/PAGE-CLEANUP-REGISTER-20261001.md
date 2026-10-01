@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 7 completed, 26 remaining.** Latest closure: Mainstream V143. Next: Suchitra Centre.
+**15 keep, 8 completed, 25 remaining.** Latest closure: Suchitra Centre V144. Next: AbilityScore.
 
 ## Initial decision
 
@@ -120,7 +120,9 @@ Canonical: [/mainstream](https://www.pinnacleblooms.org/mainstream)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 8. Suchitra Centre · substantial
+### 8. Suchitra Centre · COMPLETED V144
+
+Closure: [Release receipt](../RELEASE-SUCHITRA-CLEANUP-V144-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india)
 
