@@ -1,6 +1,6 @@
 # Public-page cookie routing correction — v136b
 
-1 October 2026 · Prepared; production read-back pending
+1 October 2026 · Published, verified and source pushed
 
 ## Reproduced defect
 
@@ -21,4 +21,12 @@ The source navigation audit found no old equivalents in the links to released de
 - Rollback: restore Worker `fc9c7698-890d-4026-93b2-7efe5f153f60` at 100%; retain all route assignments and assets.
 - No unchanged URL resubmission to IndexNow or search consoles.
 
-Production and actual-browser verification will be appended after deployment.
+## Production result
+
+Source `a17723c` was pushed before Worker `36c56835-166a-44d4-a750-7943328020a5` reached 100% in deployment `db03ca9f-19a9-4a9b-979f-ca66dcb97833` at 2026-09-30T23:59:56.617699Z (1 October, 05:29 IST). All 174 route assignments and all four bindings are unchanged. Wrangler reported no updated assets to upload.
+
+All 48 released HTML pages matched the accepted V136 bytes with the reproduced cookie-name combination, including the common header and Verify inside the common footer. Five representative public documents also passed visitor-cookie HEAD, Markdown and query-preserving alias checks. Nineteen protected controls match the prior receipt; only the already documented dynamic ePASS timestamp is normalised. Live receipt: `deployment/public-cookie-live-v136b-20261001.json`; configuration receipt: `deployment/public-cookie-cloudflare-after-v136b-20261001.json`.
+
+The same existing Chrome profile that initially showed legacy About now displays current About, Self-Sufficient and Leadership. The Self-Sufficient link initially reused an older browser-cached not-found page; a normal refresh fetched the correct released page. Leadership was reached through the common menu and showed its current title, H1, header and Verify footer. A saved anonymous/read-only check is not a substitute for a returning browser check; this regression is now part of the reusable page release work order.
+
+No content, image, shared navigation, API or discovery submission changed. Page counts remain 48 managed presentations and 19 of 60 linked work items released, with 41 remaining. The unrelated pending destinations retain their existing source/operational conditions.

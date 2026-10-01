@@ -1,4 +1,6 @@
-# Active page work order · v136closed; operational/staff contracts next
+# Active page work order · v136 content / v136b runtime closed; operational/staff contracts next
+
+**Completed correction:** [v136b public-cookie routing](RELEASE-PUBLIC-COOKIE-V136B-20261001.md) is deployed and verified. The same existing Chrome profile now receives the rebuilt About, Self-Sufficient and Leadership pages. All 48 released HTML pages match with the observed cookie combination; 19 protected controls, all 174 route assignments and four bindings remain. The source navigation and 44 managed fragments were correct. No page rebuild, new artwork, new routes or repeated indexing notification was needed. Continue the current work map below.
 
 **CURRENT V136 — RELEASED:** About Pinnacle, Leadership and the Global Framework are published, bringing the managed portfolio to **48 pages**. Source `91b40de` was pushed before Worker `fc9c7698-890d-4026-93b2-7efe5f153f60` served 100%; the three triggers were enabled at 2026-09-30T23:39:04.130Z (1 October, 05:09 IST). All 48 owned HTML pages/common shells, 45 unchanged prior main bodies, 21 production Chrome/Edge responsive cases, nine new source/reading exports, three social cards and 19 protected controls passed. All 171 prior route assignments and four bindings remain; exactly three new prefix triggers were added. One three-URL IndexNow notification returned 200. Header/footer design remains v133 with v135 navigation; Verify remains inside the common footer. Receipt: `RELEASE-INSTITUTIONAL-V136-20261001.md`.
 

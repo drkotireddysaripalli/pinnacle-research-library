@@ -105,6 +105,8 @@ For each block, record: visitor question; one-line answer; feeling/decision it s
 4. Save the Worker version, rollback, production results, material discovery notification and remaining outcome conditions in a dated receipt; commit and push that receipt. Remove only disposable build/upload directories through the existing bounded cleanup process.
 5. Recheck Search Console/Bing and real call/visit outcomes at a meaningful interval. Do not repeat submissions, validations or image generation while the state is unchanged.
 
+**Returning-visitor delivery gate:** when public routing or its cookie handling changes, check both a clean visitor and the existing browser profile that reproduced the issue. Confirm the released title/H1/common shell after following a real menu link. Check the observed cookie-name combination using dummy values, GET/HEAD/Markdown and an exact query-preserving alias; retain unknown/session/Authorization and adjacent/private/application behaviour. Never log live cookie values. Distinguish a browser-cached old page from a fresh server response. Anonymous HTTP or fresh-profile responsive checks alone do not establish delivery for returning visitors.
+
 **Release gate:** source, production, public assets, routing and measurement vocabulary agree. The user gets a clear delivered-versus-unobserved report.
 
 ## 100-point review rubric — score only demonstrated facts

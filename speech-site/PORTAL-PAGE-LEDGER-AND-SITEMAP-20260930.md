@@ -1,6 +1,8 @@
 # Pinnacle portal page ledger and delivery sitemap
 
-1 October 2026 · v136 served union; common v133 design retained; sitemap population observed 30 September
+1 October 2026 · v136 page content / v136b corrected runtime; common v133 design retained; sitemap population observed 30 September
+
+**Runtime correction:** [v136b](RELEASE-PUBLIC-COOKIE-V136B-20261001.md) fixes the returning visitor cookie fallback that served legacy public pages. All 48 accepted HTML pages/common shells match with the observed cookie combination; existing Chrome About, Self-Sufficient and Leadership navigation passed. All 174 routes, four bindings and 19 protected controls remain. Content and counts below are unchanged; previous anonymous checks alone did not establish returning-visitor delivery.
 
 **CURRENT V136 — RELEASED:** About Pinnacle, Leadership and the Global Framework are published, bringing the managed portfolio to **48 pages**. Source `91b40de` was pushed before Worker `fc9c7698-890d-4026-93b2-7efe5f153f60` served 100%; the three triggers were enabled at 2026-09-30T23:39:04.130Z (1 October, 05:09 IST). All 48 owned HTML pages/common shells, 45 unchanged prior main bodies, 21 production Chrome/Edge responsive cases, nine new source/reading exports, three social cards and 19 protected controls passed. All 171 prior route assignments and four bindings remain; exactly three new prefix triggers were added. One three-URL IndexNow notification returned 200. Header/footer design remains v133 with v135 navigation; Verify remains inside the common footer. Receipt: `RELEASE-INSTITUTIONAL-V136-20261001.md`.
 
