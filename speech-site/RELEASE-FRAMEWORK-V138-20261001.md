@@ -15,3 +15,10 @@ Production build passed. Seven focused local Chrome/Edge responsive cases passed
 ## Release and closure
 
 Pending until reviewed source is pushed, full union deployed without route override,177routes/fourbindings preserved, changed public HTML/asset/export bytes and seven focused production cases read back. Rollback is V137 Worker13ffcc50-281e-4e7d-b7d3-116eff26c1c7. One materially changed Framework URL may be notified through IndexNow after publication; indexing/ranking/AI citations remain separate.
+
+
+### Published closure · 1October2026
+
+Source `a42a5c4` was pushed before Worker `565cacdd-4864-458a-a400-61dfcf56519a` became active at100% (deployment0984cb1b-68ed-4a82-89e6-51847e8a5061). All177route assignments and four bindings remain; no new route. The48published page hashes,47unchanged accepted bodies, changed cookie/credential/Markdown/HEAD cases, source/reading/asset hashes,16protected controls and prior retirement behavior passed. Seven focused production Chrome/Edge responsive cases passed. Evidence: `deployment/page-correction-v138-live-20261001.json`, `deployment/institutional-responsive-live-v138-20261001.json`, `deployment/framework-cloudflare-v138-20261001.json`.
+
+IndexNow accepted the single materially changed Framework URL with HTTP200; receipt `deployment/indexnow-framework-v138-20261001.json`. This is notification acceptance, not proof of indexing or AI citation. Framework’s stated correction is closed; the next bounded row is Special Education. Source/runtime images are committed; unrelated accepted pages and application routes are retained.

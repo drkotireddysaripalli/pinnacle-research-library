@@ -1,6 +1,10 @@
 # Released page cleanup register · 1 October 2026
 
-## Decision
+## Current progress
+
+**15keep,2completed,31remaining.** LeadershipV137 and FrameworkV138 are published and verified. Next: Special Education.
+
+## Initial decision
 
 **48 pages inspected: 15 keep, Leadership completed, 32 queued corrections.** The32 include7 substantial narrative/example tasks,11 small voice tasks and14 policy/contact tasks. This is a finite correction list, not permission to rebuild every page.
 
@@ -44,7 +48,9 @@ A source/contract/operational gate is recorded precisely and does not stop indep
 
 ## Pages needing cleanup — one finite task per page
 
-### 2. Global Autism Framework · substantial
+### 2. Global Autism Framework · COMPLETED V138
+
+Closure: [Framework release](../RELEASE-FRAMEWORK-V138-20261001.md). The following task is retained as its accepted contract.
 
 Canonical: [/pinnacle-global-autism-framework](https://www.pinnacleblooms.org/pinnacle-global-autism-framework)
 

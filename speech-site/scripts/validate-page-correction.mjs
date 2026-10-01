@@ -18,7 +18,7 @@ assert.equal(sha(await fs.readFile(stage+'/index.html')),sha(await fs.readFile(p
 assert.equal(sha(await fs.readFile('.worker-upload-'+stage.replace(/^release-/, '')+'/speech-handler.mjs')),sha(await fs.readFile('.worker-upload-'+prior.replace(/^release-/, '')+'/speech-handler.mjs')),'Runtime boundary unchanged');
 const receipt={at:new Date().toISOString(),stage,prior,changed,total:pages.length,unchangedBodies:pages.length-changed.length,commonShellsPreserved:true,verifyIndexPreserved:true,runtimePreserved:true};
 async function limited(list,fn){let i=0;const out=[];await Promise.all(Array.from({length:4},async()=>{while(i<list.length){const j=i++;out[j]=await fn(list[j]);}}));return out;}
-async function get(path,options={}){const r=await fetch(origin+path,{redirect:'manual',...options}),bytes=Buffer.from(await r.arrayBuffer());return{r,bytes,text:bytes.toString('utf8')};}
+async function get(path,options={}){const r=await fetch(new URL(path,origin),{redirect:'manual',...options}),bytes=Buffer.from(await r.arrayBuffer());return{r,bytes,text:bytes.toString('utf8')};}
 if(mode==='live'){
  receipt.pages=await limited(pages,async p=>{const o=await get(p.path);assert.equal(o.r.status,200,p.path);assert.equal(sha(owned(o.text)),sha(p.html),p.path+' published bytes');return{path:p.path,matched:true};});
  const cookie='unknown=fixture; _gcl_au=fixture; __Host-appgarden-visitor=fixture';

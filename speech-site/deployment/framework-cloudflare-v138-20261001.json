@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-01T01:04:32.982Z",
+  "latest": {
+    "id": "0984cb1b-68ed-4a82-89e6-51847e8a5061",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "kotii@kgvpl.com",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "565cacdd-4864-458a-a400-61dfcf56519a",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-01T01:04:02.524163Z"
+  },
+  "count": 177,
+  "changed": [],
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "PINNACLE_ASK",
+      "type": "service",
+      "service": "pinnacle-ask",
+      "environment": "production"
+    },
+    {
+      "name": "PINNACLE_LEGACY",
+      "type": "service",
+      "service": "pbn-planetscale",
+      "environment": "production"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ]
+}
