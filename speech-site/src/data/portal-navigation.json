@@ -5,46 +5,55 @@
     {
       "label": "Verify",
       "detail": "4 Billion DataPoints for 900Million Children",
+      "detailLines": ["4 Billion DataPoints for", "900Million Children"],
       "url": "/verify/evidence/scale-and-mission.html"
     },
     {
       "label": "PinnacleAI®",
-      "detail": "Class B SaMD · MD-5 licence & BIS scope",
+      "detail": "CDSCO, BIS, India Certified SaMD",
+      "detailLines": ["CDSCO, BIS, India", "Certified SaMD"],
       "url": "/pinnacleai"
     },
     {
       "label": "Research",
       "detail": "Study Journals & Publications",
+      "detailLines": ["Study Journals", "& Publications"],
       "url": "/verify/evidence/research-library.html"
     },
     {
       "label": "AbilityScore®",
-      "detail": "0–1000 developmental ability scale",
+      "detail": "Proven 0 - 1000 Universal Metric",
+      "detailLines": ["Proven 0 - 1000", "Universal Metric"],
       "url": "/abilityscore"
     },
     {
       "label": "7 Readiness Indexes",
       "detail": "Your Child Life As it could be",
+      "detailLines": ["Your Child Life", "As it could be"],
       "url": "/seven-readiness-indexes"
     },
     {
       "label": "Self-Sufficient",
       "detail": "Growing everyday independence",
+      "detailLines": ["Growing everyday", "independence"],
       "url": "/self-sufficient"
     },
     {
       "label": "Mainstream",
       "detail": "School & community participation",
+      "detailLines": ["School & community", "participation"],
       "url": "/mainstream"
     },
     {
       "label": "160Yrs Paradigm Shift",
       "detail": "Life-first child development",
+      "detailLines": ["Life-first child", "development"],
       "url": "/verify/evidence/pinnacle-paradigm-shift.html#the-historical-challenge"
     },
     {
       "label": "Citations",
       "detail": "Quote · link · download",
+      "detailLines": ["Quote · link · download"],
       "url": "/verify/evidence/cite.html"
     }
   ],

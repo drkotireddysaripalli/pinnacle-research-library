@@ -1,0 +1,15 @@
+{
+  "authoritySource": "Owner's exact wording; original source commit 6e6a5373, restored by V154",
+  "main": [
+    {"label":"Verify","lines":["4 Billion DataPoints for","900Million Children"]},
+    {"label":"PinnacleAI®","lines":["CDSCO, BIS, India","Certified SaMD"]},
+    {"label":"Research","lines":["Study Journals","& Publications"]},
+    {"label":"AbilityScore®","lines":["Proven 0 - 1000","Universal Metric"]},
+    {"label":"7 Readiness Indexes","lines":["Your Child Life","As it could be"]},
+    {"label":"Self-Sufficient","lines":["Growing everyday","independence"]},
+    {"label":"Mainstream","lines":["School & community","participation"]},
+    {"label":"160Yrs Paradigm Shift","lines":["Life-first child","development"]},
+    {"label":"Citations","lines":["Quote · link · download"]}
+  ],
+  "desktop": {"authorityTitlesVisible":9,"authoritySubtextsVisible":9,"evidenceCardsVisible":36,"evidenceDescriptionsVisible":36,"footerNavigationExpanded":true,"locationsExpanded":true,"communityExpanded":true,"unapprovedContextBlock":false}
+}

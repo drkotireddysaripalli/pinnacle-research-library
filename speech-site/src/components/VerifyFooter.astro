@@ -4,17 +4,12 @@ import register from '../data/verify-register.json';
 import VerifyCard from './VerifyCard.astro';
 import Icon from './Icon.astro';
 if(cards.length!==register.records.length||new Set(cards.map(c=>c.id)).size!==cards.length||register.records.some(r=>!cards.some(c=>c.id===r.id)))throw new Error('Verify cards and evidence register must match exactly');
-const categories=[...new Set(register.records.map(r=>r.category))];
-const remaining=cards.filter(c=>!c.featured);
 ---
 <section class="verify-footer" id="pinnacle-evidence" aria-labelledby="verify-footer-title">
  <div class="wrap">
   <div class="verify-footer-heading"><div><p class="eyebrow">Open. Honest. Transparent. Self-critical.</p><h2 id="verify-footer-title">Your confidence.<br/><em>The evidence behind it.</em></h2></div><div><p>Explore the licences, research, identity records and publications behind Pinnacle. Each record explains its source, scope and review status.</p><a class="button outline" href="https://www.pinnacleblooms.org/verify/"><Icon name="book"/>Explore all {cards.length} evidence records</a></div></div>
-  <p class="verify-swipe-hint">Swipe through the featured evidence. Every record remains available below.</p>
-  <div class="verify-card-grid">{cards.filter(c=>c.featured).map(card=><VerifyCard card={card}/>)}</div>
-  <details class="verify-all-records"><summary><span>Explore {remaining.length} more records</span><span>Regulation · centre identities · research · publications</span></summary>
-   {categories.map(category=>{const items=remaining.filter(c=>register.records.find(r=>r.id===c.id)?.category===category);return items.length>0&&<section class="verify-record-group" aria-label={category}><h3 class="verify-group-title">{category}<span>{items.length} records</span></h3><div class="verify-card-grid">{items.map(card=><VerifyCard card={card}/>)}</div></section>})}
-  </details>
-  <div class="verify-footer-notes"><details class="verify-review-dates"><summary>Source dates and review scope</summary><p>Register conclusions: 24 September 2026. Sources checked for this page: 28 September 2026. Document review is separate from current issuer verification; printed validity dates do not confirm present status.</p></details><a href="https://www.pinnacleblooms.org/verify/evidence/cite.html">Cite Pinnacle sources · BibTeX, RIS, JSON and plain text →</a><a href="https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html">PinnacleAI® purpose, regulatory journey and Free Sale Certificate →</a></div>
+  <p class="verify-swipe-hint">Swipe through all {cards.length} evidence records.</p>
+  <div class="verify-card-grid">{cards.map(card=><VerifyCard card={card}/>)}</div>
+  <div class="verify-footer-notes"><details open class="verify-review-dates"><summary>Source dates and review scope</summary><p>Register conclusions: 24 September 2026. Sources checked for this page: 28 September 2026. Document review is separate from current issuer verification; printed validity dates do not confirm present status.</p></details><a href="https://www.pinnacleblooms.org/verify/evidence/cite.html">Cite Pinnacle sources · BibTeX, RIS, JSON and plain text →</a><a href="https://www.pinnacleblooms.org/verify/evidence/pinnacleai-regulatory-journey.html">PinnacleAI® purpose, regulatory journey and Free Sale Certificate →</a></div>
  </div>
 </section>

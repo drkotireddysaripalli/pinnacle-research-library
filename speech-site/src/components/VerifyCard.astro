@@ -6,7 +6,7 @@ const { card }=Astro.props;
   <span class="verify-card-icon"><Icon name={card.icon} size={28}/></span>
   <p class="verify-card-value">{card.value}</p>
   <h3>{card.title}</h3>
-  <details class="verify-card-scope"><summary>Scope and source</summary><p class="verify-card-copy">{card.description}</p></details>
+  <p class="verify-card-copy">{card.description}</p>
   <p class="verify-card-status">{card.displayStatus}</p>
   <a href={`https://www.pinnacleblooms.org/verify/evidence/records/${card.id}.html`}>Read the {card.title.toLowerCase()} record <span aria-hidden="true">↗</span></a>
 </article>

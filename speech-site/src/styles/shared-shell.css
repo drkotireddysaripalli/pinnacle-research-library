@@ -1,17 +1,15 @@
-/* Shared hierarchy: navigation stays complete; detail opens when useful. */
+/* Owner-approved shared authority row and complete visible footer. */
 .portal-top{min-height:96px;grid-template-columns:260px minmax(0,1fr);gap:24px}
 .portal-brand{width:260px}
 .portal-main-list{align-items:stretch}
-.portal-main-list>a{min-height:52px;padding:10px 11px;position:relative}
-.portal-main-list .portal-nav-label{font-size:12px;line-height:1.4}
-.portal-main-list .portal-nav-detail{display:none}
-.portal-authority-context{margin:0;padding:7px 16px;text-align:center;background:#fff;color:#514656;font-size:12px;line-height:1.5}
-.portal-authority-context a{display:inline;min-height:0;padding:0;border:0;box-shadow:none;color:#76226b;text-decoration:underline;font-weight:700}
+.portal-main-list>a{min-height:100px;padding:12px 11px;position:relative}
+.portal-main-list .portal-nav-label{font-size:13px;line-height:1.4}
+.portal-main-list .portal-nav-detail{display:block;font-size:12px;line-height:1.5;margin-top:6px;color:#514656;font-weight:600}
+.portal-nav-detail>span,.portal-mobile-proof-links small>span{display:block}
+@media(min-width:1101px){.portal-main-list{grid-template-columns:minmax(176px,1.25fr) repeat(8,minmax(0,1fr))}}
+main figcaption a{text-decoration:underline;text-underline-offset:.15em}
 .portal-therapy-group,.portal-directory,.portal-more-trigger{min-height:52px}
 .portal-therapy-title,.portal-more-trigger{min-height:52px;padding-block:10px}
-.portal-source-context{margin:22px 0 0;padding:16px;border:1px solid #e6dce8;border-radius:14px;color:#302638;background:#fcf8fc}
-.portal-source-context p{font-size:14px;line-height:1.6;margin:0 0 10px}
-.portal-source-context a{color:#76226b;font-weight:700;text-decoration:underline}
 .verify-footer{padding:48px 0}
 .verify-footer-heading{gap:28px;margin-bottom:24px}
 .verify-card-grid{gap:14px}
@@ -30,7 +28,7 @@
 .verify-review-dates{flex:1;color:#514656;font-size:.875rem;line-height:1.7}
 .verify-review-dates>summary{min-height:44px;cursor:pointer;padding-block:8px;font-weight:700}
 .portal-footer-evidence .portal-footer-start{display:inline-flex;align-items:center;gap:8px;font-size:24px;font-weight:700;text-decoration:none;color:#fff;min-height:48px;margin-right:20px}
-.portal-footer-art{padding:38px 0 30px}
+.portal-footer-art{padding:60px 0 35px}
 .portal-footer-evidence{margin:0 0 28px;gap:28px}
 .portal-footer-evidence h2{font-size:20px;font-weight:700;text-transform:none;line-height:1.4}
 .portal-footer-evidence p{font-size:14px;line-height:1.7}
@@ -41,7 +39,7 @@
 .portal-contact-item{margin:18px 0}
 .portal-contact-item .portal-footer-phone{font-size:26px;font-weight:700;line-height:1.4}
 .portal-contact-item a,.portal-contact-item span{font-size:13px;line-height:1.6}
-.portal-footer-group{margin-bottom:8px;padding:0;border-top:1px solid #ba7abc}
+.portal-footer-group{margin-bottom:24px;padding:0;border-top:1px solid #ba7abc}
 .portal-footer-group>summary{display:flex;align-items:center;gap:8px;min-height:52px;padding:12px 0;color:#fff;font-size:14px;font-weight:700;line-height:1.5;cursor:pointer;list-style:none}
 .portal-footer-group>summary::-webkit-details-marker{display:none}
 .portal-footer-group>summary>svg:last-child{margin-left:auto;transition:transform .15s}
