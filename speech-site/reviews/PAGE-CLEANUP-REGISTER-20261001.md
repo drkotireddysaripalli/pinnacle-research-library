@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 6 completed, 27 remaining.** Latest closure: Self-Sufficient V142. Next: Mainstream.
+**15 keep, 7 completed, 26 remaining.** Latest closure: Mainstream V143. Next: Suchitra Centre.
 
 ## Initial decision
 
@@ -108,7 +108,9 @@ Canonical: [/self-sufficient](https://www.pinnacleblooms.org/self-sufficient)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 7. Mainstream · substantial
+### 7. Mainstream · COMPLETED V143
+
+Closure: [Release receipt](../RELEASE-MAINSTREAM-V143-20261001.md). The task below is the accepted contract.
 
 Canonical: [/mainstream](https://www.pinnacleblooms.org/mainstream)
 
