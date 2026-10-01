@@ -8,7 +8,8 @@ await fs.writeFile(folder+'/queue.md',[
  '# Produced-page quality pass — ascending baseline score','',
  `${pass.scope.pages} pages. Current page: ${pass.current}. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.`,
  '','| Order | Page | Baseline /100 | Reviewed /100 | Pass state |','|---:|---|---:|---:|---|',
- ...pass.rows.map(row=>`| ${row.order} | [${row.label.replaceAll('|','/')}](${row.url}) | ${row.baselineScore} | ${row.currentScore??'—'} | ${row.state} |`),
+ ...pass.rows.map(row=>`| ${row.order} | [${row.label.replaceAll('|','/')}](${row.url}) | ${row.baselineScore} | ${row.currentScore??(row.packageScore?row.packageScore+' (package)':'—')} | ${row.state} |`),
+ '',...(pass.additionalPages?.length?['## Added during the pass','',...pass.additionalPages.map(page=>`- [${page.label}](${page.url}) — ${page.state}; package editorial score ${page.packageScore}/100.`)]:[]),
  '','Exact finite tasks, source conditions and release dispositions are in queue.json. The original audit remains intact.',''
 ].join('\n'));
 console.log(JSON.stringify({current:pass.current,counts:pass.rows.reduce((out,row)=>(out[row.state]=(out[row.state]||0)+1,out),{})}));

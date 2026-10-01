@@ -1,0 +1,68 @@
+{
+  "at": "2026-10-01T10:04:54.533Z",
+  "sitemap": {
+    "siteUrl": "https://www.pinnacleblooms.org/",
+    "attempted": 1,
+    "submitted": 1,
+    "failed": 0,
+    "results": [
+      {
+        "sitemapUrl": "https://www.pinnacleblooms.org/pinnacle-pages-data/public-documents-sitemap.xml",
+        "accepted": true,
+        "confirmed": true,
+        "lastSubmitted": "2026-10-01T10:03:21.344Z",
+        "isPending": true,
+        "isSitemapsIndex": false,
+        "warnings": "0",
+        "errors": "0"
+      }
+    ],
+    "message": "Submitted 1 of 1 sitemap(s) to Search Console for https://www.pinnacleblooms.org/. Submitting queues a download; it does not index the URLs.",
+    "actions": [
+      "Re-check list_sitemaps in a few hours: warnings, errors and indexed counts appear only after Google has downloaded the sitemap."
+    ]
+  },
+  "inspection": {
+    "siteUrl": "https://www.pinnacleblooms.org/",
+    "count": 3,
+    "succeeded": 3,
+    "failed": 0,
+    "skipped": 0,
+    "quotaExhausted": false,
+    "quota": {
+      "count": 5,
+      "limit": 2000,
+      "remaining": 1995
+    },
+    "results": [
+      {
+        "url": "https://www.pinnacleblooms.org/policies",
+        "verdict": "NEUTRAL",
+        "coverageState": "URL is unknown to Google",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "lastCrawlTime": null
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/privacy-policy",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-10-01T00:08:50Z"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/payment-and-billing",
+        "verdict": "PASS",
+        "coverageState": "Submitted and indexed",
+        "indexingState": "INDEXING_ALLOWED",
+        "lastCrawlTime": "2026-09-20T16:23:57Z"
+      }
+    ]
+  },
+  "bingReporting": {
+    "siteUrl": "https://www.pinnacleblooms.org/",
+    "notConfigured": true,
+    "hint": "No Bing Webmaster Tools API key is configured for this property in GSC Wizard. Add your Bing Webmaster API key on the connected Google account in the GSC Wizard app to enable Bing data.",
+    "dataSource": "bing"
+  },
+  "meaning": "Notification, sitemap submission and old indexed editions are distinct from crawling the newly published policies, ranking, AI citation or conversions."
+}

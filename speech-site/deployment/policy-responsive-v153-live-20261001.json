@@ -1,0 +1,1179 @@
+{
+  "at": "2026-10-01T10:02:50.008Z",
+  "cases": 6,
+  "runs": [
+    {
+      "id": "policies",
+      "width": 390,
+      "facts": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missing": [],
+        "header": true,
+        "footer": true,
+        "hub": true,
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://www.pinnacleblooms.org/#website",
+                "url": "https://www.pinnacleblooms.org/",
+                "name": "Pinnacle Blooms Network",
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                }
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://www.pinnacleblooms.org/verify/#organization",
+                "name": "Bharath Healthcare Laboratories Private Limited",
+                "legalName": "Bharath Healthcare Laboratories Private Limited",
+                "alternateName": "BHCL",
+                "url": "https://www.pinnacleblooms.org/",
+                "telephone": "+919100181181",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+919100181181",
+                  "contactType": "customer support",
+                  "url": "https://www.pinnacleblooms.org/national-autism-helpline"
+                },
+                "brand": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+                }
+              },
+              {
+                "@type": "Brand",
+                "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand",
+                "name": "Pinnacle Blooms Network",
+                "url": "https://www.pinnacleblooms.org/"
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://www.pinnacleblooms.org/policies#page",
+                "url": "https://www.pinnacleblooms.org/policies",
+                "name": "Policies & Your Rights | Pinnacle Blooms Network",
+                "description": "Find Pinnacle’s 15 policies on care, payments, privacy, children, website use and ethical conduct. Contact our team or named privacy grievance officer.",
+                "inLanguage": "en-IN",
+                "dateModified": "2026-10-01",
+                "isPartOf": {
+                  "@id": "https://www.pinnacleblooms.org/#website"
+                },
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                },
+                "primaryImageOfPage": {
+                  "@id": "https://www.pinnacleblooms.org/policies#image"
+                },
+                "citation": []
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://www.pinnacleblooms.org/policies#image",
+                "contentUrl": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1hRdGa.jpg",
+                "width": 1200,
+                "height": 630
+              },
+              {
+                "@type": "CollectionPage",
+                "@id": "https://www.pinnacleblooms.org/policies#collection",
+                "name": "Pinnacle policies and your rights",
+                "url": "https://www.pinnacleblooms.org/policies",
+                "dateModified": "2026-10-01",
+                "hasPart": [
+                  {
+                    "@type": "WebPage",
+                    "name": "Privacy Policy",
+                    "url": "https://www.pinnacleblooms.org/privacy-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Website Terms of Use",
+                    "url": "https://www.pinnacleblooms.org/terms-of-use"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Service Terms",
+                    "url": "https://www.pinnacleblooms.org/terms-of-service"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Cookie & Website Technology Policy",
+                    "url": "https://www.pinnacleblooms.org/cookie-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Copyright & Intellectual Property",
+                    "url": "https://www.pinnacleblooms.org/copyright-and-intellectual"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Children, Guardians & Account Eligibility",
+                    "url": "https://www.pinnacleblooms.org/age-restriction-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Contact & Grievance Information",
+                    "url": "https://www.pinnacleblooms.org/contact-information"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Information, Care & Liability Boundaries",
+                    "url": "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Reviews, Testimonials & Publication Consent",
+                    "url": "https://www.pinnacleblooms.org/endorsement-and-testimonial"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Applicable Law & Dispute Resolution",
+                    "url": "https://www.pinnacleblooms.org/governing-and-jurisdiction"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "External Services & Third-Party Integration",
+                    "url": "https://www.pinnacleblooms.org/third-party-inegration"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Refund & Cancellation Policy",
+                    "url": "https://www.pinnacleblooms.org/refund-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Staff Conduct & Care Standards",
+                    "url": "https://www.pinnacleblooms.org/staff-declaration"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Ethics Charter",
+                    "url": "https://www.pinnacleblooms.org/ethics-charter"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Payment & Billing",
+                    "url": "https://www.pinnacleblooms.org/payment-and-billing"
+                  }
+                ]
+              },
+              {
+                "@type": "ItemList",
+                "@id": "https://www.pinnacleblooms.org/policies#list",
+                "numberOfItems": 15,
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Privacy Policy",
+                    "url": "https://www.pinnacleblooms.org/privacy-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Website Terms of Use",
+                    "url": "https://www.pinnacleblooms.org/terms-of-use"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Service Terms",
+                    "url": "https://www.pinnacleblooms.org/terms-of-service"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Cookie & Website Technology Policy",
+                    "url": "https://www.pinnacleblooms.org/cookie-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "Copyright & Intellectual Property",
+                    "url": "https://www.pinnacleblooms.org/copyright-and-intellectual"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "name": "Children, Guardians & Account Eligibility",
+                    "url": "https://www.pinnacleblooms.org/age-restriction-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "name": "Contact & Grievance Information",
+                    "url": "https://www.pinnacleblooms.org/contact-information"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "name": "Information, Care & Liability Boundaries",
+                    "url": "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "name": "Reviews, Testimonials & Publication Consent",
+                    "url": "https://www.pinnacleblooms.org/endorsement-and-testimonial"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "name": "Applicable Law & Dispute Resolution",
+                    "url": "https://www.pinnacleblooms.org/governing-and-jurisdiction"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "name": "External Services & Third-Party Integration",
+                    "url": "https://www.pinnacleblooms.org/third-party-inegration"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "name": "Refund & Cancellation Policy",
+                    "url": "https://www.pinnacleblooms.org/refund-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "name": "Staff Conduct & Care Standards",
+                    "url": "https://www.pinnacleblooms.org/staff-declaration"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "name": "Ethics Charter",
+                    "url": "https://www.pinnacleblooms.org/ethics-charter"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 15,
+                    "name": "Payment & Billing",
+                    "url": "https://www.pinnacleblooms.org/payment-and-billing"
+                  }
+                ]
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.pinnacleblooms.org/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Policies",
+                    "item": "https://www.pinnacleblooms.org/policies"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "violations": [],
+      "errors": []
+    },
+    {
+      "id": "policies",
+      "width": 768,
+      "facts": {
+        "width": 768,
+        "scroll": 768,
+        "h1": 1,
+        "duplicateIds": [],
+        "missing": [],
+        "header": true,
+        "footer": true,
+        "hub": true,
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://www.pinnacleblooms.org/#website",
+                "url": "https://www.pinnacleblooms.org/",
+                "name": "Pinnacle Blooms Network",
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                }
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://www.pinnacleblooms.org/verify/#organization",
+                "name": "Bharath Healthcare Laboratories Private Limited",
+                "legalName": "Bharath Healthcare Laboratories Private Limited",
+                "alternateName": "BHCL",
+                "url": "https://www.pinnacleblooms.org/",
+                "telephone": "+919100181181",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+919100181181",
+                  "contactType": "customer support",
+                  "url": "https://www.pinnacleblooms.org/national-autism-helpline"
+                },
+                "brand": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+                }
+              },
+              {
+                "@type": "Brand",
+                "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand",
+                "name": "Pinnacle Blooms Network",
+                "url": "https://www.pinnacleblooms.org/"
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://www.pinnacleblooms.org/policies#page",
+                "url": "https://www.pinnacleblooms.org/policies",
+                "name": "Policies & Your Rights | Pinnacle Blooms Network",
+                "description": "Find Pinnacle’s 15 policies on care, payments, privacy, children, website use and ethical conduct. Contact our team or named privacy grievance officer.",
+                "inLanguage": "en-IN",
+                "dateModified": "2026-10-01",
+                "isPartOf": {
+                  "@id": "https://www.pinnacleblooms.org/#website"
+                },
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                },
+                "primaryImageOfPage": {
+                  "@id": "https://www.pinnacleblooms.org/policies#image"
+                },
+                "citation": []
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://www.pinnacleblooms.org/policies#image",
+                "contentUrl": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1hRdGa.jpg",
+                "width": 1200,
+                "height": 630
+              },
+              {
+                "@type": "CollectionPage",
+                "@id": "https://www.pinnacleblooms.org/policies#collection",
+                "name": "Pinnacle policies and your rights",
+                "url": "https://www.pinnacleblooms.org/policies",
+                "dateModified": "2026-10-01",
+                "hasPart": [
+                  {
+                    "@type": "WebPage",
+                    "name": "Privacy Policy",
+                    "url": "https://www.pinnacleblooms.org/privacy-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Website Terms of Use",
+                    "url": "https://www.pinnacleblooms.org/terms-of-use"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Service Terms",
+                    "url": "https://www.pinnacleblooms.org/terms-of-service"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Cookie & Website Technology Policy",
+                    "url": "https://www.pinnacleblooms.org/cookie-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Copyright & Intellectual Property",
+                    "url": "https://www.pinnacleblooms.org/copyright-and-intellectual"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Children, Guardians & Account Eligibility",
+                    "url": "https://www.pinnacleblooms.org/age-restriction-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Contact & Grievance Information",
+                    "url": "https://www.pinnacleblooms.org/contact-information"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Information, Care & Liability Boundaries",
+                    "url": "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Reviews, Testimonials & Publication Consent",
+                    "url": "https://www.pinnacleblooms.org/endorsement-and-testimonial"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Applicable Law & Dispute Resolution",
+                    "url": "https://www.pinnacleblooms.org/governing-and-jurisdiction"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "External Services & Third-Party Integration",
+                    "url": "https://www.pinnacleblooms.org/third-party-inegration"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Refund & Cancellation Policy",
+                    "url": "https://www.pinnacleblooms.org/refund-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Staff Conduct & Care Standards",
+                    "url": "https://www.pinnacleblooms.org/staff-declaration"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Ethics Charter",
+                    "url": "https://www.pinnacleblooms.org/ethics-charter"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Payment & Billing",
+                    "url": "https://www.pinnacleblooms.org/payment-and-billing"
+                  }
+                ]
+              },
+              {
+                "@type": "ItemList",
+                "@id": "https://www.pinnacleblooms.org/policies#list",
+                "numberOfItems": 15,
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Privacy Policy",
+                    "url": "https://www.pinnacleblooms.org/privacy-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Website Terms of Use",
+                    "url": "https://www.pinnacleblooms.org/terms-of-use"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Service Terms",
+                    "url": "https://www.pinnacleblooms.org/terms-of-service"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Cookie & Website Technology Policy",
+                    "url": "https://www.pinnacleblooms.org/cookie-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "Copyright & Intellectual Property",
+                    "url": "https://www.pinnacleblooms.org/copyright-and-intellectual"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "name": "Children, Guardians & Account Eligibility",
+                    "url": "https://www.pinnacleblooms.org/age-restriction-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "name": "Contact & Grievance Information",
+                    "url": "https://www.pinnacleblooms.org/contact-information"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "name": "Information, Care & Liability Boundaries",
+                    "url": "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "name": "Reviews, Testimonials & Publication Consent",
+                    "url": "https://www.pinnacleblooms.org/endorsement-and-testimonial"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "name": "Applicable Law & Dispute Resolution",
+                    "url": "https://www.pinnacleblooms.org/governing-and-jurisdiction"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "name": "External Services & Third-Party Integration",
+                    "url": "https://www.pinnacleblooms.org/third-party-inegration"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "name": "Refund & Cancellation Policy",
+                    "url": "https://www.pinnacleblooms.org/refund-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "name": "Staff Conduct & Care Standards",
+                    "url": "https://www.pinnacleblooms.org/staff-declaration"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "name": "Ethics Charter",
+                    "url": "https://www.pinnacleblooms.org/ethics-charter"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 15,
+                    "name": "Payment & Billing",
+                    "url": "https://www.pinnacleblooms.org/payment-and-billing"
+                  }
+                ]
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.pinnacleblooms.org/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Policies",
+                    "item": "https://www.pinnacleblooms.org/policies"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "violations": [],
+      "errors": []
+    },
+    {
+      "id": "policies",
+      "width": 1440,
+      "facts": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicateIds": [],
+        "missing": [],
+        "header": true,
+        "footer": true,
+        "hub": true,
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://www.pinnacleblooms.org/#website",
+                "url": "https://www.pinnacleblooms.org/",
+                "name": "Pinnacle Blooms Network",
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                }
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://www.pinnacleblooms.org/verify/#organization",
+                "name": "Bharath Healthcare Laboratories Private Limited",
+                "legalName": "Bharath Healthcare Laboratories Private Limited",
+                "alternateName": "BHCL",
+                "url": "https://www.pinnacleblooms.org/",
+                "telephone": "+919100181181",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+919100181181",
+                  "contactType": "customer support",
+                  "url": "https://www.pinnacleblooms.org/national-autism-helpline"
+                },
+                "brand": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+                }
+              },
+              {
+                "@type": "Brand",
+                "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand",
+                "name": "Pinnacle Blooms Network",
+                "url": "https://www.pinnacleblooms.org/"
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://www.pinnacleblooms.org/policies#page",
+                "url": "https://www.pinnacleblooms.org/policies",
+                "name": "Policies & Your Rights | Pinnacle Blooms Network",
+                "description": "Find Pinnacle’s 15 policies on care, payments, privacy, children, website use and ethical conduct. Contact our team or named privacy grievance officer.",
+                "inLanguage": "en-IN",
+                "dateModified": "2026-10-01",
+                "isPartOf": {
+                  "@id": "https://www.pinnacleblooms.org/#website"
+                },
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                },
+                "primaryImageOfPage": {
+                  "@id": "https://www.pinnacleblooms.org/policies#image"
+                },
+                "citation": []
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://www.pinnacleblooms.org/policies#image",
+                "contentUrl": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1hRdGa.jpg",
+                "width": 1200,
+                "height": 630
+              },
+              {
+                "@type": "CollectionPage",
+                "@id": "https://www.pinnacleblooms.org/policies#collection",
+                "name": "Pinnacle policies and your rights",
+                "url": "https://www.pinnacleblooms.org/policies",
+                "dateModified": "2026-10-01",
+                "hasPart": [
+                  {
+                    "@type": "WebPage",
+                    "name": "Privacy Policy",
+                    "url": "https://www.pinnacleblooms.org/privacy-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Website Terms of Use",
+                    "url": "https://www.pinnacleblooms.org/terms-of-use"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Service Terms",
+                    "url": "https://www.pinnacleblooms.org/terms-of-service"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Cookie & Website Technology Policy",
+                    "url": "https://www.pinnacleblooms.org/cookie-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Copyright & Intellectual Property",
+                    "url": "https://www.pinnacleblooms.org/copyright-and-intellectual"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Children, Guardians & Account Eligibility",
+                    "url": "https://www.pinnacleblooms.org/age-restriction-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Contact & Grievance Information",
+                    "url": "https://www.pinnacleblooms.org/contact-information"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Information, Care & Liability Boundaries",
+                    "url": "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Reviews, Testimonials & Publication Consent",
+                    "url": "https://www.pinnacleblooms.org/endorsement-and-testimonial"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Applicable Law & Dispute Resolution",
+                    "url": "https://www.pinnacleblooms.org/governing-and-jurisdiction"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "External Services & Third-Party Integration",
+                    "url": "https://www.pinnacleblooms.org/third-party-inegration"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Refund & Cancellation Policy",
+                    "url": "https://www.pinnacleblooms.org/refund-policy"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Staff Conduct & Care Standards",
+                    "url": "https://www.pinnacleblooms.org/staff-declaration"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Ethics Charter",
+                    "url": "https://www.pinnacleblooms.org/ethics-charter"
+                  },
+                  {
+                    "@type": "WebPage",
+                    "name": "Payment & Billing",
+                    "url": "https://www.pinnacleblooms.org/payment-and-billing"
+                  }
+                ]
+              },
+              {
+                "@type": "ItemList",
+                "@id": "https://www.pinnacleblooms.org/policies#list",
+                "numberOfItems": 15,
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Privacy Policy",
+                    "url": "https://www.pinnacleblooms.org/privacy-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Website Terms of Use",
+                    "url": "https://www.pinnacleblooms.org/terms-of-use"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Service Terms",
+                    "url": "https://www.pinnacleblooms.org/terms-of-service"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Cookie & Website Technology Policy",
+                    "url": "https://www.pinnacleblooms.org/cookie-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "Copyright & Intellectual Property",
+                    "url": "https://www.pinnacleblooms.org/copyright-and-intellectual"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "name": "Children, Guardians & Account Eligibility",
+                    "url": "https://www.pinnacleblooms.org/age-restriction-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "name": "Contact & Grievance Information",
+                    "url": "https://www.pinnacleblooms.org/contact-information"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "name": "Information, Care & Liability Boundaries",
+                    "url": "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "name": "Reviews, Testimonials & Publication Consent",
+                    "url": "https://www.pinnacleblooms.org/endorsement-and-testimonial"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "name": "Applicable Law & Dispute Resolution",
+                    "url": "https://www.pinnacleblooms.org/governing-and-jurisdiction"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "name": "External Services & Third-Party Integration",
+                    "url": "https://www.pinnacleblooms.org/third-party-inegration"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "name": "Refund & Cancellation Policy",
+                    "url": "https://www.pinnacleblooms.org/refund-policy"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "name": "Staff Conduct & Care Standards",
+                    "url": "https://www.pinnacleblooms.org/staff-declaration"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "name": "Ethics Charter",
+                    "url": "https://www.pinnacleblooms.org/ethics-charter"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 15,
+                    "name": "Payment & Billing",
+                    "url": "https://www.pinnacleblooms.org/payment-and-billing"
+                  }
+                ]
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.pinnacleblooms.org/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Policies",
+                    "item": "https://www.pinnacleblooms.org/policies"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "violations": [],
+      "errors": []
+    },
+    {
+      "id": "privacy-policy",
+      "width": 390,
+      "facts": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missing": [],
+        "header": true,
+        "footer": true,
+        "hub": true,
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://www.pinnacleblooms.org/#website",
+                "url": "https://www.pinnacleblooms.org/",
+                "name": "Pinnacle Blooms Network",
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                }
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://www.pinnacleblooms.org/verify/#organization",
+                "name": "Bharath Healthcare Laboratories Private Limited",
+                "legalName": "Bharath Healthcare Laboratories Private Limited",
+                "alternateName": "BHCL",
+                "url": "https://www.pinnacleblooms.org/",
+                "telephone": "+919100181181",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+919100181181",
+                  "contactType": "customer support",
+                  "url": "https://www.pinnacleblooms.org/national-autism-helpline"
+                },
+                "brand": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+                }
+              },
+              {
+                "@type": "Brand",
+                "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand",
+                "name": "Pinnacle Blooms Network",
+                "url": "https://www.pinnacleblooms.org/"
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://www.pinnacleblooms.org/privacy-policy#page",
+                "url": "https://www.pinnacleblooms.org/privacy-policy",
+                "name": "Privacy Policy | Pinnacle Blooms Network",
+                "description": "Understand what information is used, why it is needed and how to contact our privacy grievance officer.",
+                "inLanguage": "en-IN",
+                "dateModified": "2026-10-01",
+                "isPartOf": {
+                  "@id": "https://www.pinnacleblooms.org/#website"
+                },
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                },
+                "primaryImageOfPage": {
+                  "@id": "https://www.pinnacleblooms.org/privacy-policy#image"
+                },
+                "citation": [
+                  "https://emb.mes.gov.in/Common/help/gsr3_10511.pdf",
+                  "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+                  "https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf",
+                  "https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf"
+                ]
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://www.pinnacleblooms.org/privacy-policy#image",
+                "contentUrl": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1hRdGa.jpg",
+                "width": 1200,
+                "height": 630,
+                "caption": "Privacy Policy"
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.pinnacleblooms.org/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Policies",
+                    "item": "https://www.pinnacleblooms.org/policies"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Privacy Policy",
+                    "item": "https://www.pinnacleblooms.org/privacy-policy"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "violations": [],
+      "errors": []
+    },
+    {
+      "id": "refund-policy",
+      "width": 390,
+      "facts": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missing": [],
+        "header": true,
+        "footer": true,
+        "hub": true,
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://www.pinnacleblooms.org/#website",
+                "url": "https://www.pinnacleblooms.org/",
+                "name": "Pinnacle Blooms Network",
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                }
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://www.pinnacleblooms.org/verify/#organization",
+                "name": "Bharath Healthcare Laboratories Private Limited",
+                "legalName": "Bharath Healthcare Laboratories Private Limited",
+                "alternateName": "BHCL",
+                "url": "https://www.pinnacleblooms.org/",
+                "telephone": "+919100181181",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+919100181181",
+                  "contactType": "customer support",
+                  "url": "https://www.pinnacleblooms.org/national-autism-helpline"
+                },
+                "brand": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+                }
+              },
+              {
+                "@type": "Brand",
+                "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand",
+                "name": "Pinnacle Blooms Network",
+                "url": "https://www.pinnacleblooms.org/"
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://www.pinnacleblooms.org/refund-policy#page",
+                "url": "https://www.pinnacleblooms.org/refund-policy",
+                "name": "Refund & Cancellation Policy | Pinnacle Blooms Network",
+                "description": "Check the booking conditions before payment and request review of a cancellation, unused service or billing error.",
+                "inLanguage": "en-IN",
+                "dateModified": "2026-10-01",
+                "isPartOf": {
+                  "@id": "https://www.pinnacleblooms.org/#website"
+                },
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                },
+                "primaryImageOfPage": {
+                  "@id": "https://www.pinnacleblooms.org/refund-policy#image"
+                },
+                "citation": [
+                  "https://www.indiacode.nic.in/indiacode/bitstream/123456789/15256/1/eng201935.pdf",
+                  "https://consumeraffairs.gov.in/public/upload/files/E%20commerce%20rules_1732703966.pdf"
+                ]
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://www.pinnacleblooms.org/refund-policy#image",
+                "contentUrl": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1hRdGa.jpg",
+                "width": 1200,
+                "height": 630,
+                "caption": "Refund & Cancellation Policy"
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.pinnacleblooms.org/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Policies",
+                    "item": "https://www.pinnacleblooms.org/policies"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Refund & Cancellation Policy",
+                    "item": "https://www.pinnacleblooms.org/refund-policy"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "violations": [],
+      "errors": []
+    },
+    {
+      "id": "cookie-policy",
+      "width": 390,
+      "facts": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missing": [],
+        "header": true,
+        "footer": true,
+        "hub": true,
+        "schema": [
+          {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://www.pinnacleblooms.org/#website",
+                "url": "https://www.pinnacleblooms.org/",
+                "name": "Pinnacle Blooms Network",
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                }
+              },
+              {
+                "@type": "Organization",
+                "@id": "https://www.pinnacleblooms.org/verify/#organization",
+                "name": "Bharath Healthcare Laboratories Private Limited",
+                "legalName": "Bharath Healthcare Laboratories Private Limited",
+                "alternateName": "BHCL",
+                "url": "https://www.pinnacleblooms.org/",
+                "telephone": "+919100181181",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+919100181181",
+                  "contactType": "customer support",
+                  "url": "https://www.pinnacleblooms.org/national-autism-helpline"
+                },
+                "brand": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+                }
+              },
+              {
+                "@type": "Brand",
+                "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand",
+                "name": "Pinnacle Blooms Network",
+                "url": "https://www.pinnacleblooms.org/"
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://www.pinnacleblooms.org/cookie-policy#page",
+                "url": "https://www.pinnacleblooms.org/cookie-policy",
+                "name": "Cookie & Website Technology Policy | Pinnacle Blooms Network",
+                "description": "How managed pages use optional analytics preferences, technical services and browser storage.",
+                "inLanguage": "en-IN",
+                "dateModified": "2026-10-01",
+                "isPartOf": {
+                  "@id": "https://www.pinnacleblooms.org/#website"
+                },
+                "publisher": {
+                  "@id": "https://www.pinnacleblooms.org/verify/#organization"
+                },
+                "primaryImageOfPage": {
+                  "@id": "https://www.pinnacleblooms.org/cookie-policy#image"
+                },
+                "citation": [
+                  "https://emb.mes.gov.in/Common/help/gsr3_10511.pdf",
+                  "https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf",
+                  "https://www.meity.gov.in/static/uploads/2025/11/c56ceae6c383460ca69577428d36828b.pdf",
+                  "https://www.meity.gov.in/static/uploads/2025/11/53450e6e5dc0bfa85ebd78686cadad39.pdf"
+                ]
+              },
+              {
+                "@type": "ImageObject",
+                "@id": "https://www.pinnacleblooms.org/cookie-policy#image",
+                "contentUrl": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1hRdGa.jpg",
+                "width": 1200,
+                "height": 630,
+                "caption": "Cookie & Website Technology Policy"
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://www.pinnacleblooms.org/"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Policies",
+                    "item": "https://www.pinnacleblooms.org/policies"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Cookie & Website Technology Policy",
+                    "item": "https://www.pinnacleblooms.org/cookie-policy"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "violations": [],
+      "errors": []
+    }
+  ],
+  "physicalDevices": false,
+  "passed": true
+}

@@ -7,8 +7,9 @@ Owner instruction, 1 October 2026. Use `PINNACLE-PAGE-CREATION-WORK-ORDER.md`; p
 - 133 produced public HTML pages: 48 managed portal pages, 84 Verify pages and the helpline. Aliases, reading exports, retired previews and unbuilt inventory are not extra pages.
 - Begin with `reviews/PAGE-WORK-ORDER-AUDIT-20261001/scores.json`, which inspected the accepted V149 content. V151a retains all 48 managed main bodies; its technical improvements do not justify inventing new content scores.
 - Keep ascending baseline score order. Ties retain the published audit order. A score is an editorial assessment adapted to the page's job, not a search-engine rating or proof of conversions.
-- The lowest 12 policy rows need operative source/scope decisions. Save each exact condition and do useful source-preserving presentation work where applicable; do not invent replacement legal commitments or repeatedly ask the same unanswered question. Continue to the next executable page.
-- First executable page: Delhi / South Extension, 60/100. Its job is status, guidance and alternatives before travel. Current operation, appointment availability and closure are not established by an INACTIVE workbook flag.
+- The owner's subsequent instruction authorised the coherent current policy edition. Fourteen baseline policy rows are resolved by Policies V153, with a directory and newly managed Billing policy added outside the original 133-page baseline. The package editorial score is 88/100; it is not fifteen independent page ratings.
+- Delhi / South Extension is complete at 80/100 (baseline 60) and set aside. Its job remains status, guidance and alternatives before travel; operation and appointment availability are not established by the workbook flag.
+- Remaining centres and staff follow individual pages, per the owner. Tirupati's unfinished draft is saved in its named Git stash. The next individual page is PinnacleAI, baseline 68/100, with a finite five-task contract in `reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md`.
 - Include Verify's page-specific review and native-code corrections. Its separate Astro migration remains deferred. Keep all original evidence, stable URLs, records, files, citations, hashes and source scopes intact.
 
 ## One page's complete pass

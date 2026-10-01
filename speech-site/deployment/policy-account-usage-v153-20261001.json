@@ -1,0 +1,21 @@
+{
+  "scope": "Account-wide upload/closure checkpoints; concurrent work prevents attributing the change to this policy package. The first checkpoint was after implementation and is not a complete package-start balance.",
+  "first": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ordinaryUsageAllowed\":true,\"rateLimits\":{\"limitId\":\"codex\",\"limitName\":null,\"normalModelSlug\":null,\"primary\":{\"usedPercent\":65,\"windowDurationMins\":10080,\"resetsAt\":1791319342},\"secondary\":null,\"credits\":{\"hasCredits\":true,\"unlimited\":false,\"balance\":\"64994.7534600000\"},\"individualLimit\":null,\"spendControlReached\":false,\"planType\":\"promax\",\"rateLimitReachedType\":null},\"rateLimitsByLimitId\":{\"codex\":{\"limitId\":\"codex\",\"limitName\":null,\"normalModelSlug\":null,\"primary\":{\"usedPercent\":65,\"windowDurationMins\":10080,\"resetsAt\":1791319342},\"secondary\":null,\"credits\":{\"hasCredits\":true,\"unlimited\":false,\"balance\":\"64994.7534600000\"},\"individualLimit\":null,\"spendControlReached\":false,\"planType\":\"promax\",\"rateLimitReachedType\":null}},\"rateLimitResetCredits\":{\"availableCount\":1,\"credits\":[{\"id\":\"RateLimitResetCredit_d60f88f4789481919901ffcda25da65b\",\"resetType\":\"codexRateLimits\",\"status\":\"available\",\"grantedAt\":1790707564,\"expiresAt\":1793299564,\"title\":\"Full reset\",\"description\":\"Thanks for using Codex! You've been granted one free rate limit reset.\"}]},\"accountId\":\"085d3b3b-3d9c-4f3f-852c-86ef8307b858\",\"rateLimitUpsell\":null}"
+      }
+    ],
+    "isError": false
+  },
+  "closure": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ordinaryUsageAllowed\":true,\"rateLimits\":{\"limitId\":\"codex\",\"limitName\":null,\"normalModelSlug\":null,\"primary\":{\"usedPercent\":65,\"windowDurationMins\":10080,\"resetsAt\":1791319342},\"secondary\":null,\"credits\":{\"hasCredits\":true,\"unlimited\":false,\"balance\":\"64994.7534600000\"},\"individualLimit\":null,\"spendControlReached\":false,\"planType\":\"promax\",\"rateLimitReachedType\":null},\"rateLimitsByLimitId\":{\"codex\":{\"limitId\":\"codex\",\"limitName\":null,\"normalModelSlug\":null,\"primary\":{\"usedPercent\":65,\"windowDurationMins\":10080,\"resetsAt\":1791319342},\"secondary\":null,\"credits\":{\"hasCredits\":true,\"unlimited\":false,\"balance\":\"64994.7534600000\"},\"individualLimit\":null,\"spendControlReached\":false,\"planType\":\"promax\",\"rateLimitReachedType\":null}},\"rateLimitResetCredits\":{\"availableCount\":1,\"credits\":[{\"id\":\"RateLimitResetCredit_d60f88f4789481919901ffcda25da65b\",\"resetType\":\"codexRateLimits\",\"status\":\"available\",\"grantedAt\":1790707564,\"expiresAt\":1793299564,\"title\":\"Full reset\",\"description\":\"Thanks for using Codex! You've been granted one free rate limit reset.\"}]},\"accountId\":\"085d3b3b-3d9c-4f3f-852c-86ef8307b858\",\"rateLimitUpsell\":null}"
+      }
+    ],
+    "isError": false
+  }
+}

@@ -1,40 +1,40 @@
 # Produced-page quality pass — ascending baseline score
 
-133 pages. Current page: tirupati. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
+133 pages. Current page: pinnacleai. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
 
 | Order | Page | Baseline /100 | Reviewed /100 | Pass state |
 |---:|---|---:|---:|---|
-| 1 | [Terms of Use](https://www.pinnacleblooms.org/terms-of-use) | 30 | — | source-decision |
-| 2 | [Refund Policy](https://www.pinnacleblooms.org/refund-policy) | 44 | — | source-decision |
-| 3 | [Cookie Policy](https://www.pinnacleblooms.org/cookie-policy) | 46 | — | source-decision |
-| 4 | [Staff Conduct & HR Charter](https://www.pinnacleblooms.org/staff-declaration) | 47 | — | source-decision |
-| 5 | [Copyright & Intellectual Property](https://www.pinnacleblooms.org/copyright-and-intellectual) | 50 | — | source-decision |
-| 6 | [Ethics Charter](https://www.pinnacleblooms.org/ethics-charter) | 51 | — | source-decision |
-| 7 | [Contact Information](https://www.pinnacleblooms.org/contact-information) | 52 | — | source-decision |
-| 8 | [Third-Party Integration Policy](https://www.pinnacleblooms.org/third-party-inegration) | 52 | — | source-decision |
-| 9 | [Endorsement & Testimonials](https://www.pinnacleblooms.org/endorsement-and-testimonial) | 55 | — | source-decision |
-| 10 | [Disclaimer & Liability](https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities) | 57 | — | source-decision |
-| 11 | [Governing Law & Jurisdiction](https://www.pinnacleblooms.org/governing-and-jurisdiction) | 59 | — | source-decision |
-| 12 | [Terms of Service](https://www.pinnacleblooms.org/terms-of-service) | 59 | — | source-decision |
+| 1 | [Terms of Use](https://www.pinnacleblooms.org/terms-of-use) | 30 | 88 (package) | completed |
+| 2 | [Refund Policy](https://www.pinnacleblooms.org/refund-policy) | 44 | 88 (package) | completed |
+| 3 | [Cookie Policy](https://www.pinnacleblooms.org/cookie-policy) | 46 | 88 (package) | completed |
+| 4 | [Staff Conduct & HR Charter](https://www.pinnacleblooms.org/staff-declaration) | 47 | 88 (package) | completed |
+| 5 | [Copyright & Intellectual Property](https://www.pinnacleblooms.org/copyright-and-intellectual) | 50 | 88 (package) | completed |
+| 6 | [Ethics Charter](https://www.pinnacleblooms.org/ethics-charter) | 51 | 88 (package) | completed |
+| 7 | [Contact Information](https://www.pinnacleblooms.org/contact-information) | 52 | 88 (package) | completed |
+| 8 | [Third-Party Integration Policy](https://www.pinnacleblooms.org/third-party-inegration) | 52 | 88 (package) | completed |
+| 9 | [Endorsement & Testimonials](https://www.pinnacleblooms.org/endorsement-and-testimonial) | 55 | 88 (package) | completed |
+| 10 | [Disclaimer & Liability](https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities) | 57 | 88 (package) | completed |
+| 11 | [Governing Law & Jurisdiction](https://www.pinnacleblooms.org/governing-and-jurisdiction) | 59 | 88 (package) | completed |
+| 12 | [Terms of Service](https://www.pinnacleblooms.org/terms-of-service) | 59 | 88 (package) | completed |
 | 13 | [Delhi / South Extension Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india) | 60 | 80 | completed |
-| 14 | [Privacy Policy](https://www.pinnacleblooms.org/privacy-policy) | 60 | — | source-decision |
-| 15 | [Age Restriction Policy](https://www.pinnacleblooms.org/age-restriction-policy) | 65 | — | source-decision |
-| 16 | [Tirupati Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india) | 67 | — | in-progress |
+| 14 | [Privacy Policy](https://www.pinnacleblooms.org/privacy-policy) | 60 | 88 (package) | completed |
+| 15 | [Age Restriction Policy](https://www.pinnacleblooms.org/age-restriction-policy) | 65 | 88 (package) | completed |
+| 16 | [Tirupati Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india) | 67 | — | deferred-after-individuals |
 | 17 | [PinnacleAI](https://www.pinnacleblooms.org/pinnacleai) | 68 | — | review-pending |
 | 18 | [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes) | 69 | — | review-pending |
-| 19 | [Gurunanak / Vijayawada Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india) | 69 | — | review-pending |
-| 20 | [Ongole Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india) | 69 | — | review-pending |
+| 19 | [Gurunanak / Vijayawada Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india) | 69 | — | deferred-after-individuals |
+| 20 | [Ongole Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india) | 69 | — | deferred-after-individuals |
 | 21 | [AbilityScore](https://www.pinnacleblooms.org/abilityscore) | 70 | — | review-pending |
-| 22 | [Ananthapuram Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india) | 70 | — | review-pending |
+| 22 | [Ananthapuram Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india) | 70 | — | deferred-after-individuals |
 | 23 | [Autism Mothers Handbook — English](https://www.pinnacleblooms.org/verify/evidence/publications/autism-mothers-handbook-english.html) | 70 | — | review-pending |
 | 24 | [Autism Mothers Handbook — Telugu](https://www.pinnacleblooms.org/verify/evidence/publications/autism-mothers-handbook-telugu.html) | 70 | — | review-pending |
-| 25 | [Dilsukhnagar Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india) | 70 | — | review-pending |
+| 25 | [Dilsukhnagar Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india) | 70 | — | deferred-after-individuals |
 | 26 | [Everyday Therapy](https://www.pinnacleblooms.org/everyday-therapy) | 70 | — | review-pending |
-| 27 | [Nandyala Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india) | 70 | — | review-pending |
+| 27 | [Nandyala Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india) | 70 | — | deferred-after-individuals |
 | 28 | [Occupational Therapy](https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate) | 70 | — | review-pending |
 | 29 | [Personal Development Kernel](https://www.pinnacleblooms.org/personal-development-kernel) | 70 | — | review-pending |
 | 30 | [Prognose](https://www.pinnacleblooms.org/prognose) | 70 | — | review-pending |
-| 31 | [Srikakulam Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india) | 70 | — | review-pending |
+| 31 | [Srikakulam Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india) | 70 | — | deferred-after-individuals |
 | 32 | [TherapeuticAI](https://www.pinnacleblooms.org/therapeuticai) | 70 | — | review-pending |
 | 33 | [Voice of the Unheard](https://www.pinnacleblooms.org/verify/evidence/publications/voice-of-the-unheard.html) | 70 | — | review-pending |
 | 34 | [ABA Therapy](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate) | 71 | — | review-pending |
@@ -44,7 +44,7 @@
 | 38 | [About Pinnacle](https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate) | 72 | — | review-pending |
 | 39 | [Autism Therapy](https://www.pinnacleblooms.org/autism-therapy) | 72 | — | review-pending |
 | 40 | [Enrolment](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india) | 72 | — | review-pending |
-| 41 | [Find a Pinnacle Centre](https://www.pinnacleblooms.org/centers) | 72 | — | review-pending |
+| 41 | [Find a Pinnacle Centre](https://www.pinnacleblooms.org/centers) | 72 | — | deferred-after-individuals |
 | 42 | [Reassess, Review, Repeat](https://www.pinnacleblooms.org/reassess-review-repeat) | 72 | — | review-pending |
 | 43 | [Scale & Mission Story](https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html) | 72 | — | review-pending |
 | 44 | [Leadership](https://www.pinnacleblooms.org/leadership) | 73 | — | review-pending |
@@ -58,7 +58,7 @@
 | 52 | [Global Research Whitebook · Historical edition](https://www.pinnacleblooms.org/verify/evidence/records/whitebook.html) | 75 | — | review-pending |
 | 53 | [PinnacleAI® walkthrough · Developmental architecture](https://www.pinnacleblooms.org/verify/evidence/records/sovereign-walkthrough.html) | 75 | — | review-pending |
 | 54 | [Speech Assessment & Service Information](https://www.pinnacleblooms.org/speech-therapy/service-information) | 75 | — | review-pending |
-| 55 | [Suchitra Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india) | 75 | — | review-pending |
+| 55 | [Suchitra Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india) | 75 | — | deferred-after-individuals |
 | 56 | [A plan that evolves. Eight views to review.](https://www.pinnacleblooms.org/verify/evidence/paradigm/08-review-and-reassess.html) | 76 | — | review-pending |
 | 57 | [Awards & nominations · Evidence of stage](https://www.pinnacleblooms.org/verify/evidence/records/awards.html) | 76 | — | review-pending |
 | 58 | [Close the feedback loop. Review. Correct. Repeat.](https://www.pinnacleblooms.org/verify/evidence/paradigm/06-feedback-that-shapes-care.html) | 76 | — | review-pending |
@@ -137,5 +137,10 @@
 | 131 | [MD-5 · Class B manufacturing licence](https://www.pinnacleblooms.org/verify/evidence/records/md5.html) | 91 | — | review-pending |
 | 132 | [Citation Library](https://www.pinnacleblooms.org/verify/evidence/cite.html) | 92 | — | review-pending |
 | 133 | [FSC · Free Sale Certificate for export](https://www.pinnacleblooms.org/verify/evidence/records/fsc.html) | 92 | — | review-pending |
+
+## Added during the pass
+
+- [Policies and your rights](https://www.pinnacleblooms.org/policies) — completed; package editorial score 88/100.
+- [Payment and Billing](https://www.pinnacleblooms.org/payment-and-billing) — completed; package editorial score 88/100.
 
 Exact finite tasks, source conditions and release dispositions are in queue.json. The original audit remains intact.

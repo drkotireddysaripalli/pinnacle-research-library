@@ -1,0 +1,729 @@
+{
+  "at": "2026-10-01T10:02:34.678Z",
+  "mode": "live",
+  "pages": 50,
+  "policies": 15,
+  "commonFooter": true,
+  "nonPolicyBodiesRetained": 34,
+  "verifyUnionRetained": true,
+  "published": [
+    {
+      "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "matched": true
+    },
+    {
+      "path": "/abilityscore",
+      "matched": true
+    },
+    {
+      "path": "/about-pinnacle-proven-improvement-rate",
+      "matched": true
+    },
+    {
+      "path": "/age-restriction-policy",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/speech-aba-autism-assessments",
+      "matched": true
+    },
+    {
+      "path": "/autism-therapy",
+      "matched": true
+    },
+    {
+      "path": "/centers",
+      "matched": true
+    },
+    {
+      "path": "/contact-information",
+      "matched": true
+    },
+    {
+      "path": "/cookie-policy",
+      "matched": true
+    },
+    {
+      "path": "/copyright-and-intellectual",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "matched": true
+    },
+    {
+      "path": "/disclaimer-and-limitations-of-liabilities",
+      "matched": true
+    },
+    {
+      "path": "/endorsement-and-testimonial",
+      "matched": true
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "matched": true
+    },
+    {
+      "path": "/ethics-charter",
+      "matched": true
+    },
+    {
+      "path": "/everyday-therapy",
+      "matched": true
+    },
+    {
+      "path": "/speech-therapy/first-visit-guide",
+      "matched": true
+    },
+    {
+      "path": "/pinnacle-global-autism-framework",
+      "matched": true
+    },
+    {
+      "path": "/fusion-module",
+      "matched": true
+    },
+    {
+      "path": "/governing-and-jurisdiction",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/leadership",
+      "matched": true
+    },
+    {
+      "path": "/mainstream",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/payment-and-billing",
+      "matched": true
+    },
+    {
+      "path": "/personal-development-kernel",
+      "matched": true
+    },
+    {
+      "path": "/pinnacleai",
+      "matched": true
+    },
+    {
+      "path": "/policies",
+      "matched": true
+    },
+    {
+      "path": "/privacy-policy",
+      "matched": true
+    },
+    {
+      "path": "/prognose",
+      "matched": true
+    },
+    {
+      "path": "/reassess-review-repeat",
+      "matched": true
+    },
+    {
+      "path": "/refund-policy",
+      "matched": true
+    },
+    {
+      "path": "/self-sufficient",
+      "matched": true
+    },
+    {
+      "path": "/speech-therapy/service-information",
+      "matched": true
+    },
+    {
+      "path": "/seven-readiness-indexes",
+      "matched": true
+    },
+    {
+      "path": "/best-special-education-center-call-9100181181",
+      "matched": true
+    },
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "matched": true
+    },
+    {
+      "path": "/staff-declaration",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "matched": true
+    },
+    {
+      "path": "/speech-therapy/teacher-observation-guide",
+      "matched": true
+    },
+    {
+      "path": "/terms-of-service",
+      "matched": true
+    },
+    {
+      "path": "/terms-of-use",
+      "matched": true
+    },
+    {
+      "path": "/therapeuticai",
+      "matched": true
+    },
+    {
+      "path": "/third-party-inegration",
+      "matched": true
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "matched": true
+    }
+  ],
+  "policyDelivery": [
+    {
+      "path": "/age-restriction-policy",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/contact-information",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/cookie-policy",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/copyright-and-intellectual",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/disclaimer-and-limitations-of-liabilities",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/endorsement-and-testimonial",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/ethics-charter",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/governing-and-jurisdiction",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/payment-and-billing",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/policies",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/privacy-policy",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/refund-policy",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/staff-declaration",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/terms-of-service",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/terms-of-use",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    },
+    {
+      "path": "/third-party-inegration",
+      "cookie": true,
+      "credentialsRange": true,
+      "markdown": true,
+      "head": true,
+      "alias": true
+    }
+  ],
+  "assets": [
+    {
+      "path": "/pinnacle-pages-data/public-documents-sitemap.xml",
+      "bytes": 2245,
+      "sha256": "23a32a257485120ff57a1c915c8f0ce86bfdb0f5d9915bdadddf71cdc1e01f41"
+    },
+    {
+      "path": "/pinnacle-pages-data/privacy-policy-policy-source.json",
+      "bytes": 22910,
+      "sha256": "1ea23a4155b2122fc4d2c91a6006ed4bb50d74c474a7be0af0ed6791e72fa09d"
+    },
+    {
+      "path": "/pinnacle-pages-data/privacy-policy-policy.md",
+      "bytes": 7276,
+      "sha256": "2bffd68906f89ae4548c8e04ae31be4b940f8e35795af1d816e99d432e22025a"
+    },
+    {
+      "path": "/pinnacle-pages-data/terms-of-use-policy-source.json",
+      "bytes": 23264,
+      "sha256": "2363b0a79e5faad603d6603f2134c21fed8435b73c66d2da58d46836f1ee5f51"
+    },
+    {
+      "path": "/pinnacle-pages-data/terms-of-use-policy.md",
+      "bytes": 2869,
+      "sha256": "c4b9ec2fcb8ec83bc85d08f4d0711143a4114578d2687ce9712c1580d4a11995"
+    },
+    {
+      "path": "/pinnacle-pages-data/terms-of-service-policy-source.json",
+      "bytes": 30784,
+      "sha256": "7d8b05e3d170ba241db83690f2ec615ae43d39969c0f64b29d34f8a5ed59b542"
+    },
+    {
+      "path": "/pinnacle-pages-data/terms-of-service-policy.md",
+      "bytes": 3384,
+      "sha256": "1eaf4ca568a034c885c28b357a31bab94682d14908d865a9142a6166e6c53e5f"
+    },
+    {
+      "path": "/pinnacle-pages-data/cookie-policy-policy-source.json",
+      "bytes": 12647,
+      "sha256": "ce8cabf07dcd2f0789d2c6ccbf924316ae47bde37ad74700d4666abc4f2f146f"
+    },
+    {
+      "path": "/pinnacle-pages-data/cookie-policy-policy.md",
+      "bytes": 3134,
+      "sha256": "2c2a1a1ac2ebcdfcb0fadc37d41025f8aa436c0633f6381493511cf8193c59a9"
+    },
+    {
+      "path": "/pinnacle-pages-data/copyright-and-intellectual-policy-source.json",
+      "bytes": 25011,
+      "sha256": "280a62d52a48fd9d9b1671b4f82c54ec0b8dea5215da64b51d7a0cd4725f1ea3"
+    },
+    {
+      "path": "/pinnacle-pages-data/copyright-and-intellectual-policy.md",
+      "bytes": 2643,
+      "sha256": "6876d550ec13eece39b8a129a9b5008f7d55d55dc9a3a4c159bfb31659ebeaa9"
+    },
+    {
+      "path": "/pinnacle-pages-data/age-restriction-policy-policy-source.json",
+      "bytes": 10683,
+      "sha256": "11f949736fa5a69e325dc907bd177d17589f5967a28da92c121cff3907dc570c"
+    },
+    {
+      "path": "/pinnacle-pages-data/age-restriction-policy-policy.md",
+      "bytes": 2699,
+      "sha256": "fe6d325ccd164ed5f9fd55839359649387c3f0ddbff91920de8378a5e4db4850"
+    },
+    {
+      "path": "/pinnacle-pages-data/contact-information-policy-source.json",
+      "bytes": 8229,
+      "sha256": "d0b32324657ccd96cf8db90c4c2e8f5adeccd3a0d792515584dece5c66028fe5"
+    },
+    {
+      "path": "/pinnacle-pages-data/contact-information-policy.md",
+      "bytes": 3038,
+      "sha256": "1c138dabba9035a4a3f0277beedbcacaceb52440d710e29d26fadb3c3454f564"
+    },
+    {
+      "path": "/pinnacle-pages-data/disclaimer-and-limitations-of-liabilities-policy-source.json",
+      "bytes": 16429,
+      "sha256": "ce750fd3a8c3fab1a2e785761a00cb6c7ed9f168eb70a8e175efaa81c609f52f"
+    },
+    {
+      "path": "/pinnacle-pages-data/disclaimer-and-limitations-of-liabilities-policy.md",
+      "bytes": 2882,
+      "sha256": "3d8e79031637984b6ff861ebcbdf22fb036719cfffa1eb2acefb125070a1bf2d"
+    },
+    {
+      "path": "/pinnacle-pages-data/endorsement-and-testimonial-policy-source.json",
+      "bytes": 10909,
+      "sha256": "a656cb8a57755cf18ec8a50689bdb226ebbf4d9996898aaf9b79422a0319e34d"
+    },
+    {
+      "path": "/pinnacle-pages-data/endorsement-and-testimonial-policy.md",
+      "bytes": 2740,
+      "sha256": "b9df59078646a96f16c5d876cb74bdfc7b91b6e90e0ea56b55928d638e3b3fec"
+    },
+    {
+      "path": "/pinnacle-pages-data/governing-and-jurisdiction-policy-source.json",
+      "bytes": 12297,
+      "sha256": "3b915119e1de43f11910e680ea244b6c728574c02ab291761a89ac641fb20cfb"
+    },
+    {
+      "path": "/pinnacle-pages-data/governing-and-jurisdiction-policy.md",
+      "bytes": 2519,
+      "sha256": "f9bf98a0ab99ae6f85ba434fcb5b8598f99d41f8b864fe7be3ff04ccf832b3b4"
+    },
+    {
+      "path": "/pinnacle-pages-data/third-party-inegration-policy-source.json",
+      "bytes": 9724,
+      "sha256": "5df88ab0bc2766818c028f472e79060aec5df72e276dc18e9b1f8f2460a8a7a8"
+    },
+    {
+      "path": "/pinnacle-pages-data/third-party-inegration-policy.md",
+      "bytes": 2480,
+      "sha256": "0abd79459f0fa41af1f470237faf60b1f9445bcae6ea996876b16440d4916ec6"
+    },
+    {
+      "path": "/pinnacle-pages-data/refund-policy-policy-source.json",
+      "bytes": 14706,
+      "sha256": "bcf36cfe33afba2600a6698052f4bc42eccab72568313f5bdd6cf526eb270793"
+    },
+    {
+      "path": "/pinnacle-pages-data/refund-policy-policy.md",
+      "bytes": 3495,
+      "sha256": "ec31bbdb957cc3b37337179c044a2435d7c7fe1f516937328a0f6ef9e93a5975"
+    },
+    {
+      "path": "/pinnacle-pages-data/staff-declaration-policy-source.json",
+      "bytes": 52793,
+      "sha256": "dea436708de41e2538156a76e0ecab533bac81a796121104988cbd40187b94b9"
+    },
+    {
+      "path": "/pinnacle-pages-data/staff-declaration-policy.md",
+      "bytes": 3115,
+      "sha256": "be642f9b996fa5ce998cf5f03236e237a17ef3d2a04e6886aff95bde51a45b76"
+    },
+    {
+      "path": "/pinnacle-pages-data/ethics-charter-policy-source.json",
+      "bytes": 61238,
+      "sha256": "529d607e4b8a1b51b1bf2a3b96941efb83ab50ced7bac903228adfb53cdb5e84"
+    },
+    {
+      "path": "/pinnacle-pages-data/ethics-charter-policy.md",
+      "bytes": 2941,
+      "sha256": "a7f9c70d65a07dbcc0369ac6708e2753e7bd3548c96f1cbe42a253bf052b084d"
+    },
+    {
+      "path": "/pinnacle-pages-data/payment-and-billing-policy-source.json",
+      "bytes": 5899,
+      "sha256": "9eedff05828fed61fb2d58cc048ae10a666c6998d825db934b4208bed526fc57"
+    },
+    {
+      "path": "/pinnacle-pages-data/payment-and-billing-policy.md",
+      "bytes": 2668,
+      "sha256": "2c296f33e14899119d702ccf634c7b5aee1627752751754736dc65d1e0316508"
+    },
+    {
+      "path": "/pinnacle-pages-data/policies-policy-source.json",
+      "bytes": 5116,
+      "sha256": "84c8b81c24057b51a006e47528f44f28436be19c7c7ab4be5b064fa9af7f7bc0"
+    },
+    {
+      "path": "/pinnacle-pages-data/policies-policy.md",
+      "bytes": 3428,
+      "sha256": "d411e20f731e615430a8d7bb96574f5c47e4c11256220c8bf0e094d075d10164"
+    },
+    {
+      "path": "/pinnacle-pages-scripts/speech-measurement.js",
+      "bytes": 13233,
+      "sha256": "80611b66ff66c36f63620c54e25d48e3650a972b2e02d1620be6c0b01aded621"
+    },
+    {
+      "path": "/pinnacle-pages-assets/_slug_.Ccj-VPFH.css",
+      "bytes": 22440,
+      "sha256": "4cfe7db6d39524ce24637970fd5a0ad73316f5bd518dc41c7d34c75cccb54720"
+    },
+    {
+      "path": "/pinnacle-pages-assets/policy-pages.CUXs_PhU.css",
+      "bytes": 8068,
+      "sha256": "112d35f7e521f29421f0e4c20fcfce31058421d24c55a8351a32fd18974d5df5"
+    },
+    {
+      "path": "/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1hRdGa.jpg",
+      "bytes": 23278,
+      "sha256": "3a792fe9abac0030b7c93b51541eb60aed6dd8bb21f665bee819b7a270d6c37e"
+    },
+    {
+      "path": "/pinnacle-pages-fonts/sintony-latin.woff2",
+      "bytes": 8548,
+      "sha256": "bbd80981dfc0174f878b36a16f2df70fb71f52d418aedcc654d3020ff8e3faa1"
+    },
+    {
+      "path": "/pinnacle-pages-fonts/sintony-latin-bold.woff2",
+      "bytes": 8348,
+      "sha256": "62d9677e1cab571817f6eba7b4049477a251e1321112e78595cff375409f32c2"
+    },
+    {
+      "path": "/pinnacle-pages-assets/life-outcomes.Bc48Lf4t.css",
+      "bytes": 5968,
+      "sha256": "f86edbadec106d55d362115a7fbafb67fd95c7d0433d19c88033e36684c1835c"
+    },
+    {
+      "path": "/pinnacle-pages-assets/PageLayout.1shxJPAp.css",
+      "bytes": 133146,
+      "sha256": "554d6ec47bfa2804ca0adf9f40e034093754477df83908ed4815589cee6a7bae"
+    },
+    {
+      "path": "/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_Z2nTFgn.webp",
+      "bytes": 9390,
+      "sha256": "9fdc3732f5f17f575eb02c06426939b47594b79c590335cd59c157e50e17f3fb"
+    },
+    {
+      "path": "/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_1bmU3I.webp",
+      "bytes": 4226,
+      "sha256": "25697ebf831810c022ac18d07edbb28662d2dc261a87f18ab872a9cc067d2036"
+    },
+    {
+      "path": "/pinnacle-pages-assets/bhcl-emblem-official.BOaEeIEj_ZCvf9T.webp",
+      "bytes": 8160,
+      "sha256": "fff8b7bae0d220a6f80eab4b1d4eda04e664b334817c1f237224da13562824ac"
+    }
+  ],
+  "books": [
+    {
+      "suffix": "",
+      "method": "GET",
+      "credentials": false,
+      "status": 301
+    },
+    {
+      "suffix": "",
+      "method": "GET",
+      "credentials": true,
+      "status": 301
+    },
+    {
+      "suffix": "",
+      "method": "GET",
+      "credentials": true,
+      "status": 301
+    },
+    {
+      "suffix": "",
+      "method": "HEAD",
+      "credentials": false,
+      "status": 301
+    },
+    {
+      "suffix": "",
+      "method": "HEAD",
+      "credentials": true,
+      "status": 301
+    },
+    {
+      "suffix": "",
+      "method": "HEAD",
+      "credentials": true,
+      "status": 301
+    },
+    {
+      "suffix": "/",
+      "method": "GET",
+      "credentials": false,
+      "status": 301
+    },
+    {
+      "suffix": "/",
+      "method": "GET",
+      "credentials": true,
+      "status": 301
+    },
+    {
+      "suffix": "/",
+      "method": "GET",
+      "credentials": true,
+      "status": 301
+    },
+    {
+      "suffix": "/",
+      "method": "HEAD",
+      "credentials": false,
+      "status": 301
+    },
+    {
+      "suffix": "/",
+      "method": "HEAD",
+      "credentials": true,
+      "status": 301
+    },
+    {
+      "suffix": "/",
+      "method": "HEAD",
+      "credentials": true,
+      "status": 301
+    }
+  ],
+  "protected": [
+    {
+      "path": "/verify/",
+      "status": 200,
+      "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/verify/evidence/records/fsc.html",
+      "status": 200,
+      "sha256": "51d3e37a4fd98bdb1c2d4269f8ae541fcffa960533221515e825c94942dfb399",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/verify/evidence/fsc.pdf",
+      "status": 200,
+      "sha256": "84664753b59ec604a2a55c501b9786efecbdded76bfb0d9be48ca732c06a909a",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/national-autism-helpline",
+      "status": 200,
+      "sha256": "cdf081a88fbdea6739bf07afb34d38923e45209aca2e2960bdc17f61b8fe1691",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "sha256": "09d9b8df2131083e9d288d9cffd20f027db2d4db5906de2a85103f09e069891f",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/sitemaps/core.xml",
+      "status": 200,
+      "sha256": "5b0b440763b06410aa6da7f4b15b202a2112210df8be2a19c370c6e425c19440",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/pinnacle-ai-innovations-revolutionizing-autism-history",
+      "status": 200,
+      "sha256": "d87e2fa8c44a60719aea6bb97aa268828b5645d1705c212ce9de5b59590e246a",
+      "reviewedExternal": true
+    },
+    {
+      "path": "/abilityscore-global-study",
+      "status": 200,
+      "sha256": "7876accea994a748da9108d2ff3fc3b0161f88bc7991dfdcf5d7742621999038",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/therapeuticai-effectiveness-study",
+      "status": 200,
+      "sha256": "e5d42e55d684717498ee5b5455e52e89002e5b10779b352ff08d03bb70128fe4",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "status": 200,
+      "sha256": "a4e76e03108671eb482424b6eecf97925d17078a5df8141047f315fd53d1af18",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "status": 200,
+      "sha256": "e4c070d0cefaa608fb890a2e37818e79a24437119c0ad2488e61c07d1573d58f",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/epass",
+      "status": 200,
+      "sha256": "5ce514068651a1101a1567da2c997baff002f8a16cd3d3e5cc70b4ef877ee091",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/payonline",
+      "status": 302,
+      "sha256": "2bce0e177926b794e004f5302190973f7d5965aa82ab9117b20e712039f96c98",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/leadership/dr-koti-reddy-saripalli",
+      "status": 200,
+      "sha256": "bd3f2b2130dcb676ddca64ba1d28342de728f14bad5d7f10e721efe036b0206d",
+      "reviewedExternal": false
+    },
+    {
+      "path": "/leadership/dr-sreeja-reddy-saripalli",
+      "status": 200,
+      "sha256": "16ac72d414b47cd215634d576d37d7d977430b74becadcb6af2730352ddd6eb3",
+      "reviewedExternal": false
+    }
+  ]
+}

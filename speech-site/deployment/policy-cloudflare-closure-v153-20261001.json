@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-01T10:07:09.746Z",
+  "deployment": "3e13e260-cabc-4c2e-8b27-108f76cc3cf3",
+  "versions": [
+    {
+      "version_id": "825643e6-61c1-4d57-bfd5-9cdb083a5b13",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 180,
+  "workerRoutes": 81,
+  "passed": true
+}
