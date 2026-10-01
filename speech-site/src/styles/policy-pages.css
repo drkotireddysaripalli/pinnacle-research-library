@@ -7,3 +7,5 @@
 .policy-layout>*{min-width:0}.policy-document>section{min-width:0}
 
 .policy-table-region{max-width:100%;overflow-x:auto;margin:22px 0;border-radius:8px}.policy-table-region table{display:table;overflow:visible;width:100%;margin:0}.policy-table-region td,.policy-table-region th{min-width:120px;overflow-wrap:normal;word-break:normal}.policy-table-region:focus-visible{outline:3px solid #126fa0;outline-offset:4px}
+
+.policy-navigation li[data-level="3"]{margin-left:16px}.policy-navigation li[data-level="4"]{margin-left:28px}.policy-navigation li[data-level="5"],.policy-navigation li[data-level="6"]{margin-left:36px}

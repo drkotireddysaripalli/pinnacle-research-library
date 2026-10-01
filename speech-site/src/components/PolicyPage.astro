@@ -2,15 +2,16 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import Icon from './Icon.astro';
 import lockup from '../assets/pinnacle-blooms-network-lockup.png';
-import policies from '../data/policy-content.json';
+import policies,{presentPolicy} from '../data/policy-presentation';
 import '../styles/policy-pages.css';
 import {url} from '../data/site';
-const {page}=Astro.props;
+const {page:original}=Astro.props;
+const page=presentPolicy(original);
 ---
 <PageLayout title={page.title} description={page.description} path={page.path} label={page.label} shareImage={lockup} shareFit="contain" imageAlt="Pinnacle Blooms Network official emblem and wordmark" imageCaption={page.label} includeService={false} documentOnly={true} enquiry={{url:url('/contact-information'),mobileLabel:'Contact information'}} citations={[page.sourceUrl]}>
  <section class="wrap policy-hero"><p class="eyebrow">Pinnacle Blooms Network · policies and governance</p><h1>{page.label}</h1><p>Read the policy and find the section you need. Related policies and contact information are available below.</p>{page.printedRevision&&<p class="policy-version">Revision printed in the policy: <strong>{page.printedRevision}</strong></p>}</section>
  <div class="wrap policy-layout">
-  <aside class="policy-navigation" aria-label="Policy navigation">{page.toc.length>0&&<details open={page.toc.length<=25}><summary>On this page</summary><ol>{page.toc.map(section=><li><a href={'#'+section.id}>{section.title}</a></li>)}</ol></details>}<a class="policy-contact" href={url('/contact-information')}><Icon name="mail"/>Contact information</a><a class="policy-contact" href={url('/privacy-policy')}><Icon name="shield"/>Privacy policy</a></aside>
+  <aside class="policy-navigation" aria-label="Policy navigation">{page.toc.length>0&&<details open={page.toc.length<=25}><summary>On this page</summary><ol>{page.toc.map(section=><li data-level={section.level}><a href={'#'+section.id}>{section.title}</a></li>)}</ol></details>}<a class="policy-contact" href={url('/contact-information')}><Icon name="mail"/>Contact information</a><a class="policy-contact" href={url('/privacy-policy')}><Icon name="shield"/>Privacy policy</a></aside>
   <article class="policy-document" id={page.sourceBodyId||undefined} aria-label={page.label} set:html={page.html}/>
  </div>
  <section class="wrap section policy-related"><p class="eyebrow">Policies and governance</p><h2>Read the related documents.</h2><nav aria-label="Related policies">{policies.filter(policy=>policy.slug!==page.slug).map(policy=><a href={url(policy.path)}>{policy.label} <Icon name="arrow" size={19}/></a>)}<a href="https://books.pinnacleblooms.org/payment-and-billing">Payment and billing <Icon name="arrow" size={19}/></a></nav><div class="policy-reading"><a href={url('/pinnacle-pages-data/'+page.slug+'-policy.md')}>Plain reading version</a><a href={url('/pinnacle-pages-data/'+page.slug+'-policy-source.json')}>Policy source and revision record</a></div></section>

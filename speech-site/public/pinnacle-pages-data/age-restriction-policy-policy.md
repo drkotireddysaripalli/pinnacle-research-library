@@ -4,4 +4,81 @@ Canonical: https://www.pinnacleblooms.org/age-restriction-policy
 
 Revision printed in the original: 01-10-2026
 
-LAST REVISION: 01-10-2026 Age Restriction Policy - Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. Section 1: Introduction 1.1. Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle") is operated by Bharath HealthCare Laboratories P LIMITED ("Company") and provides specialized Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services. 1.2. This Age Restriction Policy outlines the age requirements for users accessing and using the Pinnacle services ("Services"). Section 2: Minimum Age Requirement 2.1. Users must be at least [18] years old to access and use the Pinnacle Services. 2.2. The Services are intended for parents or legal guardians seeking Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services for minors. Section 3: Parental Consent 3.1. For users under the age of [18], parental or legal guardian consent is required to access and use the Services. 3.2. The parent or legal guardian providing consent is responsible for ensuring compliance with this Age Restriction Policy. Section 4: Account Creation 4.1. Users are required to install Pinnacle application, Login to Pinnacle application with their secured OTP delivered over their whatsapp account from Pinnacle Blooms Network official handle to access certain features of the Services. 4.2. Users under the age of [18] must have their account created and managed by a parent or legal guardian. Section 5: Verification of Age 5.1. Pinnacle may use age verification methods to ensure compliance with this Age Restriction Policy. 5.2. Users may be required to provide proof of age, such as a government-issued ID, if there is a reasonable belief that the user is under the age of [18]. In the form of verifying Aadhaar Card, Ration Card, PAN Card, Government Issued Identity. Section 6: Non-Compliance 6.1. Users who do not meet the minimum age requirement or fail to provide parental consent shall not be permitted to use the Services. 6.2. If it is discovered that a user provided false age information, their access to the Services may be terminated. Section 7: Content and Services Suitable for Minors 7.1. Pinnacle may offer content and services that are suitable for minors. 7.2. Parents or legal guardians are responsible for monitoring their child's use of the Services to ensure appropriate access to content and services. Section 8: Disabling Accounts 8.1. If it is discovered that a user under the age of [18] created an account without parental consent, the account may be disabled until appropriate consent is obtained. Section 9: Reporting Unauthorized Access 9.1. Parents or legal guardians who discover that their child accessed the Services without their consent should immediately notify Pinnacle to disable the account. Section 10: Liability 10.1. Pinnacle shall not be liable for any unauthorized access or use of the Services by minors. 10.2. Parents or legal guardians are responsible for their child's use of the Services and compliance with this Age Restriction Policy. Section 11: Compliance with Applicable Laws 11.1. Pinnacle adhere to all applicable laws and regulations related to age restrictions and data privacy concerning minors. Section 12: Changes to Policy 12.1. The Company reserves the right to modify this Age Restriction Policy at any time. Any changes will be communicated to users. Section 13: Acceptance of Terms 13.1. By using the Services, users agree to comply with the terms and conditions outlined in this Age Restriction Policy. Section 14: Governing Law 14.1. This Age Restriction Policy shall be governed by and construed in accordance with the laws of India. Any dispute arising out of or in connection with this policy shall be referred to and finally resolved by the courts of India. Section 15: Contact Information 15.1. If you have any questions or concerns regarding this Age Restriction Policy, please contact us using the information provided in the Contact Information section.
+LAST REVISION: 01-10-2026
+
+## Age Restriction Policy - Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd.
+
+## Section 1: Introduction
+
+ 1.1. Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle") is operated by Bharath HealthCare Laboratories P LIMITED ("Company") and provides specialized Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services.
+
+ 1.2. This Age Restriction Policy outlines the age requirements for users accessing and using the Pinnacle services ("Services").
+
+## Section 2: Minimum Age Requirement
+
+ 2.1. Users must be at least [18] years old to access and use the Pinnacle Services.
+
+ 2.2. The Services are intended for parents or legal guardians seeking Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services for minors.
+
+## Section 3: Parental Consent
+
+ 3.1. For users under the age of [18], parental or legal guardian consent is required to access and use the Services.
+
+ 3.2. The parent or legal guardian providing consent is responsible for ensuring compliance with this Age Restriction Policy.
+
+## Section 4: Account Creation
+
+ 4.1. Users are required to install Pinnacle application, Login to Pinnacle application with their secured OTP delivered over their whatsapp account from Pinnacle Blooms Network official handle to access certain features of the Services.
+
+ 4.2. Users under the age of [18] must have their account created and managed by a parent or legal guardian.
+
+## Section 5: Verification of Age
+
+ 5.1. Pinnacle may use age verification methods to ensure compliance with this Age Restriction Policy.
+
+ 5.2. Users may be required to provide proof of age, such as a government-issued ID, if there is a reasonable belief that the user is under the age of [18]. In the form of verifying Aadhaar Card, Ration Card, PAN Card, Government Issued Identity.
+
+## Section 6: Non-Compliance
+
+ 6.1. Users who do not meet the minimum age requirement or fail to provide parental consent shall not be permitted to use the Services.
+
+ 6.2. If it is discovered that a user provided false age information, their access to the Services may be terminated.
+
+## Section 7: Content and Services Suitable for Minors
+
+ 7.1. Pinnacle may offer content and services that are suitable for minors.
+
+ 7.2. Parents or legal guardians are responsible for monitoring their child's use of the Services to ensure appropriate access to content and services.
+
+## Section 8: Disabling Accounts
+
+ 8.1. If it is discovered that a user under the age of [18] created an account without parental consent, the account may be disabled until appropriate consent is obtained.
+
+## Section 9: Reporting Unauthorized Access
+
+ 9.1. Parents or legal guardians who discover that their child accessed the Services without their consent should immediately notify Pinnacle to disable the account.
+
+## Section 10: Liability
+
+ 10.1. Pinnacle shall not be liable for any unauthorized access or use of the Services by minors. 10.2. Parents or legal guardians are responsible for their child's use of the Services and compliance with this Age Restriction Policy.
+
+## Section 11: Compliance with Applicable Laws
+
+ 11.1. Pinnacle adhere to all applicable laws and regulations related to age restrictions and data privacy concerning minors.
+
+## Section 12: Changes to Policy
+
+ 12.1. The Company reserves the right to modify this Age Restriction Policy at any time. Any changes will be communicated to users.
+
+## Section 13: Acceptance of Terms
+
+ 13.1. By using the Services, users agree to comply with the terms and conditions outlined in this Age Restriction Policy.
+
+## Section 14: Governing Law
+
+ 14.1. This Age Restriction Policy shall be governed by and construed in accordance with the laws of India. Any dispute arising out of or in connection with this policy shall be referred to and finally resolved by the courts of India.
+
+## Section 15: Contact Information
+
+ 15.1. If you have any questions or concerns regarding this Age Restriction Policy, please contact us using the information provided in the [Contact Information](/contact-information) section.
+

@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
-import policies from '../src/data/policy-content.json' with {type:'json'};
+import policies from '../src/data/policy-presentation.ts';
 import {lifePages} from '../src/data/life-outcomes.ts';
 import institutional from '../src/data/institutional-content.json' with {type:'json'};
 import {specialEducationStages} from '../src/data/special-education-stages.ts';
@@ -10,9 +10,9 @@ await fs.mkdir(dir,{recursive:true});
 const specialFile=dir+'/special-education-evidence.json',specialRecord=JSON.parse(await fs.readFile(specialFile,'utf8'));specialRecord.updatedOn='2026-10-01';specialRecord.lifecycle=specialEducationStages.map(([icon,title,text],i)=>({stage:i+1,title,text}));await fs.writeFile(specialFile,JSON.stringify(specialRecord,null,2)+'\n');
 for(const suffix of ['-evidence.txt','-machine.md']){const file=dir+'/special-education'+suffix;let text=await fs.readFile(file,'utf8');text=text.replace(/\n\n## The seven-stage Pinnacle lifecycle[\s\S]*$/,'');text+='\n\n## The seven-stage Pinnacle lifecycle\n\n'+specialEducationStages.map(([icon,title,body],i)=>(i+1)+'. '+title+' — '+body).join('\n\n')+'\n';await fs.writeFile(file,text);}
 for(const page of policies){
- const source={url:origin+page.path,title:page.label,sourceUrl:page.sourceUrl,sourceRetrievedAt:page.sourceRetrievedAt,sourceHtmlSha256:page.sourceHtmlSha256,policyTextSha256:page.policyTextSha256,printedRevision:page.printedRevision,legalApprovalVerified:false,presentation:'Existing policy text preserved; typography, navigation and semantic headings changed.',text:page.text};
+ const source={url:origin+page.path,title:page.label,sourceUrl:page.sourceUrl,sourceRetrievedAt:page.sourceRetrievedAt,sourceHtmlSha256:page.sourceHtmlSha256,policyTextSha256:page.policyTextSha256,printedRevision:page.printedRevision,legalApprovalVerified:false,presentation:'Original source text and provenance retained; the current presentation contains the individually listed heading, marker, typo and reference corrections.',text:page.originalText,presentationVersion:page.presentationVersion,presentationChanges:page.changes,presentationText:page.presentationText,presentationTextSha256:crypto.createHash('sha256').update(page.presentationText).digest('hex'),presentationHtmlSha256:crypto.createHash('sha256').update(page.html).digest('hex')};
  await fs.writeFile(dir+'/'+page.slug+'-policy-source.json',JSON.stringify(source,null,2)+'\n');
- await fs.writeFile(dir+'/'+page.slug+'-policy.md','# '+page.label+'\n\nCanonical: '+source.url+'\n\n'+(page.printedRevision?'Revision printed in the original: '+page.printedRevision+'\n\n':'')+page.text+'\n');
+ await fs.writeFile(dir+'/'+page.slug+'-policy.md','# '+page.label+'\n\nCanonical: '+source.url+'\n\n'+(page.printedRevision?'Revision printed in the original: '+page.printedRevision+'\n\n':'')+page.markdown+'\n');
 }
 for(const page of lifePages){
  const record={url:origin+page.path,title:page.title,description:page.description,updatedOn:page.updatedOn,scope:'Parent-facing programme-purpose explanation. Illustrative examples; no guaranteed child outcomes.',directAnswer:page.answer,activities:page.activities,example:{title:page.exampleTitle,question:page.exampleQuestion,steps:page.example,...(page.exampleArt?{art:page.exampleArt,alt:page.exampleArtAlt,caption:page.exampleCaption,scope:page.exampleScope}:{})},review:page.review,stages:page.stages,questions:page.faqs,sources:page.sources};

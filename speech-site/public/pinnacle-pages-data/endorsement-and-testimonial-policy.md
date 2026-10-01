@@ -4,4 +4,81 @@ Canonical: https://www.pinnacleblooms.org/endorsement-and-testimonial
 
 Revision printed in the original: 01-10-2026
 
-LAST REVISION: 01-10-2026 Endorsement and Testimonials Policy - Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. Section 1: Introduction 1.1. Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle") is operated by Bharath HealthCare Laboratories P LIMITED ("Company") and provides specialized Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services. 1.2. This Endorsement and Testimonials Policy outlines the guidelines for the use of endorsements and testimonials regarding the Pinnacle services ("Services"). Section 2: Endorsements and Testimonials 2.1. Endorsements and testimonials are statements, reviews, feedbacks or recommendations by individuals who have used the Pinnacle Services. 2.2. Endorsements and testimonials may be provided voluntarily by users who wish to share their experiences with Pinnacle. Section 3: Disclosure of Material Connection 3.1. Any individual with material connection to the Pinnacle, Company can also provide an endorsement or testimonial. 3.2. Material connections include, but are not limited to, being an employee, contractor, or affiliate of the Clinics. Section 4: Truthfulness and Accuracy 4.1. Endorsements and testimonials must reflect the honest opinions, findings, beliefs, or experiences of the individuals providing them. 4.2. Testimonials must be based on the actual use of or participation in the Pinnacle Services and accurately represent the user's experience. Section 5: Verification of Testimonials 5.1. Pinnacle may verify the authenticity of testimonials to ensure they are from genuine users of the Services. 5.2. Users providing false or misleading testimonials may have their testimonials removed and face further wilful defamatory actions. Section 6: Use of Testimonials 6.1. Pinnacle may use endorsements and testimonials on their website, social media channels, marketing materials, and other promotional content. 6.2. Testimonials may be edited for clarity, grammar, and length, but the essence of the original testimonial will be retained. Section 7: Identification of Users 7.1. Endorsements and testimonials may be published with the user's name, initials, or other identifying information unless requested otherwise by the user. Section 8: Consent for Use 8.1. By providing an endorsement or testimonial, users grant Pinnacle and the Company permission to use their testimonials in accordance with this policy. 8.2. Users retain the right to request the removal of their testimonial at any time. Section 9: Non-Compensatory Testimonials 9.1. Testimonials must be non-compensatory, meaning users should not receive any payment or incentives in exchange for their testimonials. Section 10: Disclaimer 10.1. Endorsements and testimonials are individual opinions and may not reflect the views or opinions of the Pinancle or the Company as a whole. Section 11: Compliance with Applicable Laws 11.1. Pinnacle adhere to all applicable laws and regulations regarding endorsements and testimonials. Section 12: Changes to Policy 12.1. Pinnacle reserves the right to modify this Endorsement and Testimonials Policy at any time. Without prior communication to users. Section 13: Acceptance of Terms 13.1. By providing an endorsement or testimonial, users agree to comply with the terms and conditions outlined in this policy. Section 14: Governing Law 14.1. This Endorsement and Testimonials Policy shall be governed by and construed in accordance with the laws of India. Any dispute arising out of or in connection with this policy shall be referred to courts of Hyderabad Jurisdiction. By agreeing to this policy, individuals, organizations, or any other parties hereby forfeit their right to challenge this decision. Section 15: Contact Information 15.1. If you have any questions or concerns regarding this Endorsement and Testimonials Policy, please contact us using the information provided in the Contact Information section.
+LAST REVISION: 01-10-2026
+
+## Endorsement and Testimonials Policy - Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd.
+
+## Section 1: Introduction
+
+ 1.1. Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle") is operated by Bharath HealthCare Laboratories P LIMITED ("Company") and provides specialized Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services.
+
+ 1.2. This Endorsement and Testimonials Policy outlines the guidelines for the use of endorsements and testimonials regarding the Pinnacle services ("Services").
+
+## Section 2: Endorsements and Testimonials
+
+ 2.1. Endorsements and testimonials are statements, reviews, feedbacks or recommendations by individuals who have used the Pinnacle Services.
+
+ 2.2. Endorsements and testimonials may be provided voluntarily by users who wish to share their experiences with Pinnacle.
+
+## Section 3: Disclosure of Material Connection
+
+ 3.1. Any individual with material connection to the Pinnacle, Company can also provide an endorsement or testimonial.
+
+ 3.2. Material connections include, but are not limited to, being an employee, contractor, or affiliate of the Clinics.
+
+## Section 4: Truthfulness and Accuracy
+
+ 4.1. Endorsements and testimonials must reflect the honest opinions, findings, beliefs, or experiences of the individuals providing them.
+
+ 4.2. Testimonials must be based on the actual use of or participation in the Pinnacle Services and accurately represent the user's experience.
+
+## Section 5: Verification of Testimonials
+
+ 5.1. Pinnacle may verify the authenticity of testimonials to ensure they are from genuine users of the Services.
+
+ 5.2. Users providing false or misleading testimonials may have their testimonials removed and face further wilful defamatory actions.
+
+## Section 6: Use of Testimonials
+
+ 6.1. Pinnacle may use endorsements and testimonials on their website, social media channels, marketing materials, and other promotional content.
+
+ 6.2. Testimonials may be edited for clarity, grammar, and length, but the essence of the original testimonial will be retained.
+
+## Section 7: Identification of Users
+
+ 7.1. Endorsements and testimonials may be published with the user's name, initials, or other identifying information unless requested otherwise by the user.
+
+## Section 8: Consent for Use
+
+ 8.1. By providing an endorsement or testimonial, users grant Pinnacle and the Company permission to use their testimonials in accordance with this policy.
+
+ 8.2. Users retain the right to request the removal of their testimonial at any time.
+
+## Section 9: Non-Compensatory Testimonials
+
+ 9.1. Testimonials must be non-compensatory, meaning users should not receive any payment or incentives in exchange for their testimonials.
+
+## Section 10: Disclaimer
+
+ 10.1. Endorsements and testimonials are individual opinions and may not reflect the views or opinions of the Pinnacle or the Company as a whole.
+
+## Section 11: Compliance with Applicable Laws
+
+ 11.1. Pinnacle adhere to all applicable laws and regulations regarding endorsements and testimonials.
+
+## Section 12: Changes to Policy
+
+ 12.1. Pinnacle reserves the right to modify this Endorsement and Testimonials Policy at any time. Without prior communication to users.
+
+## Section 13: Acceptance of Terms
+
+ 13.1. By providing an endorsement or testimonial, users agree to comply with the terms and conditions outlined in this policy.
+
+## Section 14: Governing Law
+
+ 14.1. This Endorsement and Testimonials Policy shall be governed by and construed in accordance with the laws of India. Any dispute arising out of or in connection with this policy shall be referred to courts of Hyderabad Jurisdiction. By agreeing to this policy, individuals, organizations, or any other parties hereby forfeit their right to challenge this decision.
+
+## Section 15: Contact Information
+
+ 15.1. If you have any questions or concerns regarding this Endorsement and Testimonials Policy, please contact us using the information provided in the [Contact Information](/contact-information) section.
+

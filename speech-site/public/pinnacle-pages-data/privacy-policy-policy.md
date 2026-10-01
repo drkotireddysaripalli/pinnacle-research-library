@@ -2,4 +2,88 @@
 
 Canonical: https://www.pinnacleblooms.org/privacy-policy
 
-PRIVACY POLICY - Pinnacle Blooms Network unit of Bharath Healthcare Laboratories Pvt. Ltd. Pinnacle Blooms Network, a specialized unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle"), is managed and operated by Bharath HealthCare Laboratories P LIMITED ("Company"). We offer a range of specialized Multi-Sensory, Multi-Disciplinary, and Integrated Autism Therapy Services ("Services"). Upholding the privacy and security of your personal information is of paramount importance to us. This Privacy Policy serves as a comprehensive guide detailing how we collect, utilize, disclose, and safeguard your personal information across various platforms including our website ("Site"), mobile application ("App"), and in-person consultations. By engaging with our Site, App, or any of our Services, you are affirming that you have thoroughly read, understood, and consented to the terms laid out in this Privacy Policy. ## 1. Information Collection 1.1. We collect personal information directly from you when you use our services, interact with our Site, App, Co-Workers, or communicate with us. The personal information collected may include, but is not limited to: - Your name, contact details, whatsapp account, telegram account, postal address, and email address. - Health-related information and medical history provided during appointments and consultations. - Payment and transaction details if you make a purchase through the Site. 1.2. Additionally, we may collect certain non-personal information automatically when you access the Site, such as IP addresses, browser type, operating system, and usage data. This information is used to enhance your user experience and improve the functionality of the Site. ## 2. Use of Information 2.1. The personal information collected is used for the following explicit purposes: - Providing Pinnacle Services with utmost care and accuracy. - Facilitating payment processing and issuing receipts for services purchased, maintaining full financial transparency. - Responding to your inquiries, requests, and feedback promptly and efficiently. - Sending appointment reminders and important updates related to our services, ensuring your convenience and satisfaction. - Improving the quality of our services and the functionality of the Site through continuous enhancement and innovation. - Complying with all legal obligations and regulations to ensure data privacy and protection. 2.2. The Company expressly reserves the unilateral right to utilize your personal information for objectives divergent from those initially disclosed, either in strict compliance with applicable legal mandates or as expressly permitted by statutory provisions, or upon securing your unequivocal, informed consent. ## 3. Information Sharing 3.1. We respect the confidentiality of your personal information and limit its sharing to a select group of trusted entities and professionals for specific purposes, including: - Administrative, Supportive healthcare, therapy professionals and staff at Pinancle directly involved in providing services to you, ensuring top-notch medical attention. - Third-party service providers engaged to assist in appointment scheduling, payment processing, and other necessary support services. - Legal and regulatory authorities, but only when required by law or to protect our rights and interests. 3.2. We will never sell, trade, or rent your personal information to third parties for marketing purposes or any unauthorized use. ## 4. Data Security 4.1. We take your data security very seriously and have implemented stringent technical and organizational measures to safeguard your personal information from unauthorized access, use, disclosure, alteration, or destruction. 4.2. Despite our efforts, no data transmission over the internet or electronic storage system can be guaranteed to be 100% secure. However, we continually monitor and update our security practices to stay ahead of emerging threats. ## 5. Retention of Information 5.1. We will retain your personal information for only as long as necessary to fulfill the explicit purposes for which it was collected, as required by law, and to comply with our legal obligations. 5.2. Should you wish to have your personal information permanently removed from our records, please contact us, and we will expedite the process. Refer our Contact Information section. ## 6. Third-Party Links & Ads 6.1. The Site may contain links to third-party websites or advertisements. However, we are not responsible for the privacy practices or content of such third-party websites. We recommend reviewing the privacy policies of these websites before providing any personal information to them. ## 7. International Users 7.1. Pinnacle Site, App and Services are operated from India. By using our services and accessing the Site, App from outside India, you acknowledge and expressly consent to the transfer and processing of your personal information in India. Refer overall policies of Pinnacle as the most comprehensive amongst the policies would triump. ## 8. Children's Privacy 8.1 Refer our Age Restriction Policy ## 9. Changes to the Privacy Policy 9.1. We reserve the right to modify, update, or change this Privacy Policy at any time without prior notice. By continuing to use Pinnacle Service you agree for the updated terms of this Privacy Policy, By continuing to use Pinnacle Services, You forefiet your right to challenge this decision. We encourage you to review this Privacy Policy periodically. ## 10. Contact Information If you have any questions, concerns, or requests related to this Privacy Policy or the use of your personal information, please contact us at: You can refer our Contact Information section for updated contact info. ## 11. Language Versions 11.1. In the event of any discrepancy or inconsistency between translations of this Privacy Policy in different languages, the English version shall prevail. ## 12. Privacy Policy Acknowledgment 12.1. By accessing and utilizing the Site, Application, and associated services, you hereby affirm that you have meticulously read, comprehensively understood, and unequivocally consent to the terms stipulated in this Privacy Policy. Furthermore, you irrevocably forfeit any and all rights to challenge or dispute the validity or enforceability of any provision within this Privacy Policy ## 13. Entire Agreement 13.1. This Privacy Policy represents the complete and exclusive agreement between you and Pinnacle, with respect to the subject matter herein. This Policy supersedes all prior or contemporaneous understandings, communications, and proposals, whether verbal, written, or electronic, between you and Pinnacle concerning the collection, use, disclosure, and protection of your personal information. At Pinnacle, we strive to protect your privacy diligently and transparently. This Privacy Policy reflects our unwavering commitment to your data privacy and security. If you have any questions or concerns, please do not hesitate to contact us by refering our Contact Information section. Thank you for entrusting us with life empowering therapeutic needs for your kids.
+## PRIVACY POLICY - Pinnacle Blooms Network unit of Bharath Healthcare Laboratories Pvt. Ltd.
+
+ Pinnacle Blooms Network, a specialized unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle"), is managed and operated by Bharath HealthCare Laboratories P LIMITED ("Company"). We offer a range of specialized Multi-Sensory, Multi-Disciplinary, and Integrated Autism Therapy Services ("Services"). Upholding the privacy and security of your personal information is of paramount importance to us. This Privacy Policy serves as a comprehensive guide detailing how we collect, utilize, disclose, and safeguard your personal information across various platforms including our website ("Site"), mobile application ("App"), and in-person consultations. By engaging with our Site, App, or any of our Services, you are affirming that you have thoroughly read, understood, and consented to the terms laid out in this Privacy Policy.
+
+## 1. Information Collection
+
+ 1.1. We collect personal information directly from you when you use our services, interact with our Site, App, Co-Workers, or communicate with us. The personal information collected may include, but is not limited to:
+
+ - Your name, contact details, whatsapp account, telegram account, postal address, and email address.
+
+ - Health-related information and medical history provided during appointments and consultations.
+
+ - Payment and transaction details if you make a purchase through the Site.
+
+ 1.2. Additionally, we may collect certain non-personal information automatically when you access the Site, such as IP addresses, browser type, operating system, and usage data. This information is used to enhance your user experience and improve the functionality of the Site.
+
+## 2. Use of Information
+
+ 2.1. The personal information collected is used for the following explicit purposes:
+
+ - Providing Pinnacle Services with utmost care and accuracy.
+ - Facilitating payment processing and issuing receipts for services purchased, maintaining full financial transparency.
+ - Responding to your inquiries, requests, and feedback promptly and efficiently.
+ - Sending appointment reminders and important updates related to our services, ensuring your convenience and satisfaction.
+ - Improving the quality of our services and the functionality of the Site through continuous enhancement and innovation.
+ - Complying with all legal obligations and regulations to ensure data privacy and protection.
+
+ 2.2. The Company expressly reserves the unilateral right to utilize your personal information for objectives divergent from those initially disclosed, either in strict compliance with applicable legal mandates or as expressly permitted by statutory provisions, or upon securing your unequivocal, informed consent.
+
+## 3. Information Sharing
+
+ 3.1. We respect the confidentiality of your personal information and limit its sharing to a select group of trusted entities and professionals for specific purposes, including:
+
+ - Administrative, Supportive healthcare, therapy professionals and staff at Pinnacle directly involved in providing services to you, ensuring top-notch medical attention.
+ - Third-party service providers engaged to assist in appointment scheduling, payment processing, and other necessary support services.
+ - Legal and regulatory authorities, but only when required by law or to protect our rights and interests.
+
+ 3.2. We will never sell, trade, or rent your personal information to third parties for marketing purposes or any unauthorized use.
+
+## 4. Data Security
+
+ 4.1. We take your data security very seriously and have implemented stringent technical and organizational measures to safeguard your personal information from unauthorized access, use, disclosure, alteration, or destruction.
+
+ 4.2. Despite our efforts, no data transmission over the internet or electronic storage system can be guaranteed to be 100% secure. However, we continually monitor and update our security practices to stay ahead of emerging threats.
+
+## 5. Retention of Information
+
+ 5.1. We will retain your personal information for only as long as necessary to fulfill the explicit purposes for which it was collected, as required by law, and to comply with our legal obligations.
+
+ 5.2. Should you wish to have your personal information permanently removed from our records, please contact us, and we will expedite the process. Refer our [Contact Information](/contact-information) section.
+
+## 6. Third-Party Links & Ads
+
+ 6.1. The Site may contain links to third-party websites or advertisements. However, we are not responsible for the privacy practices or content of such third-party websites. We recommend reviewing the privacy policies of these websites before providing any personal information to them.
+
+## 7. International Users
+
+ 7.1. Pinnacle Site, App and Services are operated from India. By using our services and accessing the Site, App from outside India, you acknowledge and expressly consent to the transfer and processing of your personal information in India. Refer overall policies of Pinnacle as the most comprehensive amongst the policies would triumph.
+
+## 8. Children's Privacy
+
+ 8.1 Refer our [Age Restriction Policy](/age-restriction-policy)
+
+## 9. Changes to the Privacy Policy
+
+ 9.1. We reserve the right to modify, update, or change this Privacy Policy at any time without prior notice. By continuing to use Pinnacle Service you agree for the updated terms of this Privacy Policy, By continuing to use Pinnacle Services, You forfeit your right to challenge this decision. We encourage you to review this Privacy Policy periodically.
+
+## 10. Contact Information
+
+ If you have any questions, concerns, or requests related to this Privacy Policy or the use of your personal information, please contact us at: You can refer our [Contact Information](/contact-information) section for updated contact info.
+
+## 11. Language Versions
+
+ 11.1. In the event of any discrepancy or inconsistency between translations of this Privacy Policy in different languages, the English version shall prevail.
+
+## 12. Privacy Policy Acknowledgment
+
+ 12.1. By accessing and utilizing the Site, Application, and associated services, you hereby affirm that you have meticulously read, comprehensively understood, and unequivocally consent to the terms stipulated in this Privacy Policy. Furthermore, you irrevocably forfeit any and all rights to challenge or dispute the validity or enforceability of any provision within this Privacy Policy
+
+## 13. Entire Agreement
+
+ 13.1. This Privacy Policy represents the complete and exclusive agreement between you and Pinnacle, with respect to the subject matter herein. This Policy supersedes all prior or contemporaneous understandings, communications, and proposals, whether verbal, written, or electronic, between you and Pinnacle concerning the collection, use, disclosure, and protection of your personal information.
+
+ At Pinnacle, we strive to protect your privacy diligently and transparently. This Privacy Policy reflects our unwavering commitment to your data privacy and security. If you have any questions or concerns, please do not hesitate to contact us by referring our [Contact Information](/contact-information) section. Thank you for entrusting us with life empowering therapeutic needs for your kids.
+
