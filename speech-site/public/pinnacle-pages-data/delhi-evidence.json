@@ -1,5 +1,5 @@
 {
-  "title": "Pinnacle Blooms South Extension, New Delhi | Child Development & Therapy Enquiries",
+  "title": "Pinnacle Blooms Delhi | South Extension Status & Guidance",
   "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
   "updated": "2026-10-01",
   "brand": "Pinnacle Blooms Network",
@@ -11,9 +11,8 @@
     "scope": "National guidance and appointment enquiries"
   },
   "maps": "https://goo.gl/maps/7eMDzw9YRNREBqS7A",
-  "googleReviewDestination": "https://g.page/r/CfNm4B-rnAt1EBM/review",
   "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=delhi",
-  "directAnswer": "For South Extension, New Delhi enquiries, call 9100 181 181 to discuss your child’s everyday priorities. Confirm current operation, a suitable professional, available service, appointment and fee before travelling. The address for this location is Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India.",
+  "directAnswer": "Call 9100 181 181 before travelling to South Extension. Our source workbook marks this location INACTIVE; its dated facility-register approval does not confirm current operation or appointments. Ask our national team to check the current position and discuss available options for your child. The recorded location address is Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India.",
   "example": {
     "status": "Illustrative process, not a patient outcome",
     "question": "“My child brings me a toy. What could help us enjoy more moments together?”",
@@ -81,6 +80,14 @@
     }
   ],
   "questions": [
+    {
+      "question": "Can I book a South Extension visit from this page?",
+      "answer": "A South Extension visit is not confirmed here. Our source workbook marks this location INACTIVE, while its dated facility-register record is a different status. Call 9100 181 181 and ask us to confirm current operation, suitable support, the professional, appointment, fees and entrance access before travelling."
+    },
+    {
+      "question": "What can Delhi families do now?",
+      "answer": "Call our national guidance team on 9100 181 181, tell us your child’s everyday priorities and ask about the options currently available. You can explore our centre directory and relevant therapy information. Confirm the actual location, service and appointment before arranging travel; this page does not promise a Delhi appointment or remote therapy."
+    },
     {
       "question": "Where is Pinnacle Blooms South Extension, New Delhi?",
       "answer": "The address for this location is Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India. Confirm current operation and your appointment with us before travelling. For South Extension enquiries, use the E17, Main Market, South Extension–1 address near AIIMS. Confirm current operation and your appointment before travelling. The frontage photograph shows steps; tell us what entrance and access arrangements your family needs."
@@ -170,7 +177,7 @@
     "currentOperationVerified": false,
     "currentServiceAvailabilityVerified": false
   },
-  "operationalBoundary": "The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. No current branch hours, direct local phone or review rating are inferred.",
+  "operationalBoundary": "Call before travelling. A dated Approved facility record is separate from current operation. The receiving team must confirm the actual location, suitable service, professional, appointment, fees and entrance access. No Delhi appointment, closure or remote therapy is promised.",
   "media": {
     "premises": [
       {
@@ -183,5 +190,28 @@
       }
     ],
     "campaign": "Generated fictional family/professional campaign scene; not an actual branch room, named practitioner or patient outcome."
-  }
+  },
+  "recordedGoogleReviewDestination": "https://g.page/r/CfNm4B-rnAt1EBM/review",
+  "locationStatus": {
+    "sourceWorkbookFlag": "INACTIVE",
+    "currentOperationVerified": false,
+    "currentAppointmentVerified": false,
+    "closureVerified": false,
+    "facilityRegisterStatus": "Approved",
+    "facilityCertificateDate": "2026-03-15"
+  },
+  "nextOptions": [
+    {
+      "label": "Call before travelling",
+      "url": "tel:+919100181181"
+    },
+    {
+      "label": "Explore our centre directory",
+      "url": "https://www.pinnacleblooms.org/centers"
+    },
+    {
+      "label": "Ask about available options",
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=delhi"
+    }
+  ]
 }

@@ -61,8 +61,8 @@ const briefs=[
  {
   id:'delhi',label:'South Extension, New Delhi',city:'New Delhi',region:'Delhi',postcode:'110049',
   street:'Ground, E17, Main Market, South Extension–1, near AIIMS',
-  headline:'A clearer first step.',headlineAccent:'More room for your child to grow.',
-  lead:'A shared look. A request. A moment of play together. Tell us what you notice and what you hope to make possible—then ask about a first conversation in South Extension.',
+  headline:'Looking for Pinnacle in Delhi?',headlineAccent:'Call before you travel.',
+  lead:'Start with the life you want your child to grow toward. Our national team can discuss your priorities and check the next available option. A visit at South Extension is not confirmed by this page.',
   landmark:'E17, Main Market, South Extension–1 · Find us',
   arrival:'For South Extension enquiries, use the E17, Main Market, South Extension–1 address near AIIMS. Confirm current operation and your appointment before travelling. The frontage photograph shows steps; tell us what entrance and access arrangements your family needs.',
   exampleTitle:'Start with one shared moment of play.',
@@ -163,15 +163,15 @@ export const centreDetails=briefs.map(brief=>{
   {id:'bis',name:'Original BIS licence and scope',url:origin+'/verify/evidence/bis.pdf#page=2',scope:'Named software and quality-system scope; not approval of every centre, therapy or child outcome.'}
  ];
  return {...brief,branch,path:new URL(branch.profileUrl).pathname,address,updatedOn:'2026-10-01',
-  title:`Pinnacle Blooms ${brief.label} | Child Development & Therapy Enquiries`,
-  description:`Explore Pinnacle Blooms ${brief.label}: real centre photos, directions, life-first support, visit questions and dated evidence. Call 9100 181 181.`,
+  title:brief.sourceFlag==='INACTIVE'?'Pinnacle Blooms Delhi | South Extension Status & Guidance':`Pinnacle Blooms ${brief.label} | Child Development & Therapy Enquiries`,
+  description:brief.sourceFlag==='INACTIVE'?'Looking for Pinnacle in Delhi? Check South Extension status before travelling. Call 9100 181 181 for guidance and discuss available options.':`Explore Pinnacle Blooms ${brief.label}: real centre photos, directions, life-first support, visit questions and dated evidence. Call 9100 181 181.`,
   enquiry:origin+'/enroll-autism-speech-aba-therapies-india?service=help&centre='+brief.id,
   direct:brief.sourceFlag==='INACTIVE'
-   ? `For ${brief.label} enquiries, call 9100 181 181 to discuss your child’s everyday priorities. Confirm current operation, a suitable professional, available service, appointment and fee before travelling. The address for this location is ${address}.`
+   ? `Call 9100 181 181 before travelling to South Extension. Our source workbook marks this location INACTIVE; its dated facility-register approval does not confirm current operation or appointments. Ask our national team to check the current position and discuss available options for your child. The recorded location address is ${address}.`
    : `Find Pinnacle Blooms Network’s ${brief.label} centre at ${address}. Call 9100 181 181 to discuss your child’s everyday priorities and confirm the suitable professional, available service, appointment and fee before visiting.`,
-  shareFile:brief.id+'-social-20261001.png',releaseLabel:brief.releaseLabel||'centre-v132-'+brief.id+'-20261001',callMotivation:({nandyala:'Tell us which part of getting ready matters most. Bring your observations and ask about a suitable next step for your child in Nandyala.',ongole:'You already know moments that matter to your child. Bring one of them to the conversation and ask what an Ongole visit would include.',tirupati:'Start with what your child enjoys and what you want it to make possible. Ask about a suitable first conversation and professional in Tirupati.',srikakulam:'An interest at home can be the beginning of a useful learning goal. Tell us what your child enjoys and ask about a suitable first visit in Srikakulam.'} as Record<string,string>)[brief.id],sources,stages:assessmentContent.stages,
+  shareFile:brief.id==='delhi'?'delhi-status-social-20261001.png':brief.id+'-social-20261001.png',releaseLabel:brief.id==='delhi'?'delhi-status-v152-20261001':brief.releaseLabel||'centre-v132-'+brief.id+'-20261001',callMotivation:({nandyala:'Tell us which part of getting ready matters most. Bring your observations and ask about a suitable next step for your child in Nandyala.',ongole:'You already know moments that matter to your child. Bring one of them to the conversation and ask what an Ongole visit would include.',tirupati:'Start with what your child enjoys and what you want it to make possible. Ask about a suitable first conversation and professional in Tirupati.',srikakulam:'An interest at home can be the beginning of a useful learning goal. Tell us what your child enjoys and ask about a suitable first visit in Srikakulam.'} as Record<string,string>)[brief.id],sources,stages:assessmentContent.stages,
   facilityRecord,
-  faqs:[
+  faqs:[...(brief.sourceFlag==='INACTIVE'?[{question:'Can I book a South Extension visit from this page?',answer:'A South Extension visit is not confirmed here. Our source workbook marks this location INACTIVE, while its dated facility-register record is a different status. Call 9100 181 181 and ask us to confirm current operation, suitable support, the professional, appointment, fees and entrance access before travelling.'},{question:'What can Delhi families do now?',answer:'Call our national guidance team on 9100 181 181, tell us your child’s everyday priorities and ask about the options currently available. You can explore our centre directory and relevant therapy information. Confirm the actual location, service and appointment before arranging travel; this page does not promise a Delhi appointment or remote therapy.'}]:[]),
    {question:'Where is Pinnacle Blooms '+brief.label+'?',answer:brief.sourceFlag==='INACTIVE'
     ? 'The address for this location is '+address+'. Confirm current operation and your appointment with us before travelling. '+brief.arrival
     : 'Find us at '+address+'. '+brief.arrival},

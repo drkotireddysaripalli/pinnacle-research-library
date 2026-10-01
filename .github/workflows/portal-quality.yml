@@ -28,9 +28,18 @@ jobs:
           cache-dependency-path: speech-site/package-lock.json
       - run: npm ci
       - run: npx playwright install --with-deps chromium firefox webkit
-      - run: npm run check:page -- occupational
+      - name: Select the current page acceptance contract
+        run: |
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          import {activeQualityPage,pageContracts} from './scripts/page-quality-contracts.mjs';
+          const page=pageContracts[activeQualityPage];
+          if(!page)throw Error('Unknown page acceptance contract');
+          fs.appendFileSync(process.env.GITHUB_ENV,`PAGE_KIND=${activeQualityPage}\nPAGE_PATH=${page.path}\nCANONICAL_PATH=${page.canonical}\n`);
+          JS
+      - run: npm run check:page -- "$PAGE_KIND"
       - run: npx playwright test --project=firefox --project=webkit
-      - run: npm run check:speed -- occupational
+      - run: npm run check:speed -- "$PAGE_KIND"
         if: github.event_name == 'workflow_dispatch' && inputs.speed
       - uses: actions/upload-artifact@v4
         if: failure() || (github.event_name == 'workflow_dispatch' && inputs.speed)

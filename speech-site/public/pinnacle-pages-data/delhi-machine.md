@@ -1,14 +1,20 @@
-# Pinnacle Blooms South Extension, New Delhi | Child Development & Therapy Enquiries
+# Pinnacle Blooms Delhi | South Extension Status & Guidance
 Canonical: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india
 Updated: 2026-10-01
 
-For South Extension, New Delhi enquiries, call 9100 181 181 to discuss your child’s everyday priorities. Confirm current operation, a suitable professional, available service, appointment and fee before travelling. The address for this location is Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India.
+Call 9100 181 181 before travelling to South Extension. Our source workbook marks this location INACTIVE; its dated facility-register approval does not confirm current operation or appointments. Ask our national team to check the current position and discuss available options for your child. The recorded location address is Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India.
 
-## Location and visit
+## Location status and next options
+Source workbook: INACTIVE. Current operation, closure and appointments are unconfirmed.
+- [Call before travelling](tel:+919100181181)
+- [Explore our centre directory](https://www.pinnacleblooms.org/centers)
+- [Ask about available options](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=delhi)
+
+## Recorded location
 Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India
-[Directions](https://goo.gl/maps/7eMDzw9YRNREBqS7A) · [Contact](tel:+919100181181)
+[Recorded map](https://goo.gl/maps/7eMDzw9YRNREBqS7A) · [Contact](tel:+919100181181)
 For South Extension enquiries, use the E17, Main Market, South Extension–1 address near AIIMS. Confirm current operation and your appointment before travelling. The frontage photograph shows steps; tell us what entrance and access arrangements your family needs.
-The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. No current branch hours, direct local phone or review rating are inferred.
+Call before travelling. A dated Approved facility record is separate from current operation. The receiving team must confirm the actual location, suitable service, professional, appointment, fees and entrance access. No Delhi appointment, closure or remote therapy is promised.
 
 ## Life-first direction
 The child’s self-sufficient, mainstream-included life shapes the abilities to understand, goals, people, methods, everyday practice and review. Progress remains individual.
@@ -31,6 +37,12 @@ Start with one shared moment of play.
 7. **[Grow independence and participation](https://www.pinnacleblooms.org/pinnacleai)** — Keep self-sufficiency, learning, relationships and mainstream participation in view. Progress is individual.
 
 ## Questions
+### Can I book a South Extension visit from this page?
+A South Extension visit is not confirmed here. Our source workbook marks this location INACTIVE, while its dated facility-register record is a different status. Call 9100 181 181 and ask us to confirm current operation, suitable support, the professional, appointment, fees and entrance access before travelling.
+
+### What can Delhi families do now?
+Call our national guidance team on 9100 181 181, tell us your child’s everyday priorities and ask about the options currently available. You can explore our centre directory and relevant therapy information. Confirm the actual location, service and appointment before arranging travel; this page does not promise a Delhi appointment or remote therapy.
+
 ### Where is Pinnacle Blooms South Extension, New Delhi?
 The address for this location is Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India. Confirm current operation and your appointment with us before travelling. For South Extension enquiries, use the E17, Main Market, South Extension–1 address near AIIMS. Confirm current operation and your appointment before travelling. The frontage photograph shows steps; tell us what entrance and access arrangements your family needs.
 
@@ -65,4 +77,4 @@ Workbook plus certificate copy dated 2026-03-15, recognition bundle p68. The rec
 - [Original BIS licence and scope](https://www.pinnacleblooms.org/verify/evidence/bis.pdf#page=2): Named software and quality-system scope; not approval of every centre, therapy or child outcome.
 
 ## Next step
-Call [9100 181 181](tel:+919100181181) or [ask about this centre](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=delhi).
+Call [9100 181 181](tel:+919100181181) or [ask about available options](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=delhi).

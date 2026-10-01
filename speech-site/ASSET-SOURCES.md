@@ -190,6 +190,10 @@ About, Leadership and Global Framework each use a complete original branded Engl
 
 V137 removed the three retired non-founder portrait source files from current builds; the above V136 five-portrait statement is a dated provenance receipt, not the current two-person leadership roster.
 
+## Delhi status and guidance creative · v152 · 1 October 2026
+
+`src/assets/delhi-status-social-20261001.png` is a complete branded edit generated through the built-in ChatGPT image tool, using the accepted `delhi-social-20261001.png` as its reference. Original output: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-4ccd0a12-fb1e-496a-a6d0-e2ae20736354.png`. The final headline is “Looking for Pinnacle in Delhi? Call before you travel.” with “SOUTH EXTENSION · STATUS & GUIDANCE”, the accurate 9100 181 181 phone, official identity, full-sleeve branded professional and quiet MD-5/BIS software-scope panel. It was generated as one creative and visually inspected. The illustrative family scene does not establish an available Delhi appointment. The original creative remains retained; Astro produces responsive derivatives and the 1200×630 sharing image. No API-key route was used.
+
 ## About family-continuity creative · v140 · 1October2026
 
 `src/assets/about-family-continuity-20261001.png` is a complete original1536×1024English creative made through the built-in ChatGPT image tool. Exact prompt: sibling `.prompt.txt`. Approved wordmark and Framework social poster were visual references. Original: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-f8f50201-a611-4557-a4af-e42260a0e769.png`. Family conversation, child play, supported home routine and review were generated with the design/typography/branding together. Fictional campaign scenes, no real outcome claim or synthetic founder identity. Full-sleeve branded professional coats, correct national phone and quiet named-software scope panels inspected. Responsive WebP derivatives supplement the unchanged About hero/social image. Complete family journey is also HTML and reading data; no API-key route or pasted-text substitute.
