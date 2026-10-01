@@ -1,4 +1,12 @@
-# Active page work order · v137 owned voice and public delivery correction
+# Active page work order · sequential page corrections
+
+**CURRENT SEQUENCE:** follow `reviews/PAGE-CLEANUP-REGISTER-20261001.md` and its48row JSON.15 accepted bodies stay intact; Leadership is completed in V137;32 bounded corrections remain. Finish one page task and its release before the next. Shared-source defects are fixed once and verified for their affected rows. Source-gated policy decisions remain precise pending conditions while independent work proceeds.
+
+**NOW — FRAMEWORK V138:** replace the generic classroom/help sketch with a complete illustrative six-part example: strengths/preferences and family choice; recognisable help cue; conditional professional contributions; manageable home/classroom practice; explicit illustrative observation; possible agreed human review decision. Add one original complete branded inline creative through the built-in ChatGPT image tool; keep the approved hero, seven-stage lifecycle, report/source status, existing anchors and shared shell. Essential image meaning must also be accessible HTML. Update JSON/text/Markdown; local focused review; push, preserve union/triggers/bindings, deploy, public read-back and close. Avoid fresh broad research or another unchanged estate audit.
+
+**V137 CLOSED:** source1f30b9d pushed; Worker13ffcc50-281e-4e7d-b7d3-116eff26c1c7 at100%; all48 public request-variant checks,13 retiredURL checks,16 protected controls and21 live responsive cases passed.174original route assignments preserved with3narrow additions; total177. IndexNow tenURL notification accepted200. See `RELEASE-VOICE-DELIVERY-V137-20261001.md`. Managed Search Console URL/child-sitemap inspection is unfinished, not reported as completed.
+
+## Retained original correction contract
 
 **CURRENT AUTHORISED WORK:** restore the full agreed consortium, life-first/sales narrative, page-specific creative and end-to-end delivery mandate in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`; correct Leadership to Koti Reddy Saripalli and Sreeja Reddy Saripalli only; retire the three removed profiles and their known owned portrait URLs; ensure exact managed public pages do not fall back to old origin presentations because of cookies, Authorization, Range or no-transform. Preserve application/private routes and accepted page bodies except the Leadership correction and the detached About group wording. One implementation/deployment owner.
 

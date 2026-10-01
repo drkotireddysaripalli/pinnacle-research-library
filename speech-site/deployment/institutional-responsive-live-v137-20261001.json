@@ -1,0 +1,1625 @@
+{
+  "at": "2026-10-01T00:48:19.697Z",
+  "origin": "https://www.pinnacleblooms.org",
+  "runs": [
+    {
+      "id": "about",
+      "channel": "chrome",
+      "width": 320,
+      "checks": {
+        "width": 320,
+        "scroll": 320,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/about-social-20261001.DrokjyfS_1dGdQ.jpg?v=institutional-v136-about-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [],
+        "aboutAnchors": true,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "about",
+      "channel": "chrome",
+      "width": 390,
+      "checks": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/about-social-20261001.DrokjyfS_1dGdQ.jpg?v=institutional-v136-about-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [],
+        "aboutAnchors": true,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "about",
+      "channel": "chrome",
+      "width": 768,
+      "checks": {
+        "width": 768,
+        "scroll": 768,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/about-social-20261001.DrokjyfS_1dGdQ.jpg?v=institutional-v136-about-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [],
+        "aboutAnchors": true,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "about",
+      "channel": "chrome",
+      "width": 1024,
+      "checks": {
+        "width": 1024,
+        "scroll": 1024,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/about-social-20261001.DrokjyfS_1dGdQ.jpg?v=institutional-v136-about-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [],
+        "aboutAnchors": true,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "about",
+      "channel": "chrome",
+      "width": 1440,
+      "checks": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/about-social-20261001.DrokjyfS_1dGdQ.jpg?v=institutional-v136-about-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [],
+        "aboutAnchors": true,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "leadership",
+      "channel": "chrome",
+      "width": 320,
+      "checks": {
+        "width": 320,
+        "scroll": 320,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/leadership",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/leadership-social-20261001.DZZtP5iX_Z1POCxs.jpg?v=institutional-v136-leadership-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [
+          {
+            "name": "Koti Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli"
+          },
+          {
+            "name": "Sreeja Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli"
+          }
+        ],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "leadership",
+      "channel": "chrome",
+      "width": 390,
+      "checks": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/leadership",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/leadership-social-20261001.DZZtP5iX_Z1POCxs.jpg?v=institutional-v136-leadership-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [
+          {
+            "name": "Koti Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli"
+          },
+          {
+            "name": "Sreeja Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli"
+          }
+        ],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "leadership",
+      "channel": "chrome",
+      "width": 768,
+      "checks": {
+        "width": 768,
+        "scroll": 768,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/leadership",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/leadership-social-20261001.DZZtP5iX_Z1POCxs.jpg?v=institutional-v136-leadership-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [
+          {
+            "name": "Koti Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli"
+          },
+          {
+            "name": "Sreeja Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli"
+          }
+        ],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "leadership",
+      "channel": "chrome",
+      "width": 1024,
+      "checks": {
+        "width": 1024,
+        "scroll": 1024,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/leadership",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/leadership-social-20261001.DZZtP5iX_Z1POCxs.jpg?v=institutional-v136-leadership-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [
+          {
+            "name": "Koti Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli"
+          },
+          {
+            "name": "Sreeja Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli"
+          }
+        ],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "leadership",
+      "channel": "chrome",
+      "width": 1440,
+      "checks": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/leadership",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/leadership-social-20261001.DZZtP5iX_Z1POCxs.jpg?v=institutional-v136-leadership-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [
+          {
+            "name": "Koti Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli"
+          },
+          {
+            "name": "Sreeja Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli"
+          }
+        ],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "framework",
+      "channel": "chrome",
+      "width": 320,
+      "checks": {
+        "width": 320,
+        "scroll": 320,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/pinnacle-global-autism-framework",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/framework-social-20261001.DimlpKtx_Z1F3Tad.jpg?v=institutional-v136-framework-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "stages": 7,
+        "people": [],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "framework",
+      "channel": "chrome",
+      "width": 390,
+      "checks": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/pinnacle-global-autism-framework",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/framework-social-20261001.DimlpKtx_Z1F3Tad.jpg?v=institutional-v136-framework-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "stages": 7,
+        "people": [],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "framework",
+      "channel": "chrome",
+      "width": 768,
+      "checks": {
+        "width": 768,
+        "scroll": 768,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/pinnacle-global-autism-framework",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/framework-social-20261001.DimlpKtx_Z1F3Tad.jpg?v=institutional-v136-framework-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "stages": 7,
+        "people": [],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "framework",
+      "channel": "chrome",
+      "width": 1024,
+      "checks": {
+        "width": 1024,
+        "scroll": 1024,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/pinnacle-global-autism-framework",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/framework-social-20261001.DimlpKtx_Z1F3Tad.jpg?v=institutional-v136-framework-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "stages": 7,
+        "people": [],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "framework",
+      "channel": "chrome",
+      "width": 1440,
+      "checks": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/pinnacle-global-autism-framework",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/framework-social-20261001.DimlpKtx_Z1F3Tad.jpg?v=institutional-v136-framework-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "stages": 7,
+        "people": [],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "about",
+      "channel": "msedge",
+      "width": 390,
+      "checks": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/about-social-20261001.DrokjyfS_1dGdQ.jpg?v=institutional-v136-about-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [],
+        "aboutAnchors": true,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "about",
+      "channel": "msedge",
+      "width": 1440,
+      "checks": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/about-social-20261001.DrokjyfS_1dGdQ.jpg?v=institutional-v136-about-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is Pinnacle Blooms Network?",
+            "answer": "Pinnacle Blooms Network is the child-development brand operated by Bharath Healthcare Laboratories Private Limited. The public Verify register identifies the brand, operator and the separate scopes of its records."
+          },
+          {
+            "question": "What gives Pinnacle’s work its direction?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. Communication, routines, learning and participation help the family and suitable professionals choose useful goals, relevant support, everyday practice and review."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. The child-specific priorities and suitable professional assessment guide the relevant contributions. Speech, occupational, behavioural and educational support can play different roles."
+          },
+          {
+            "question": "How is my family involved?",
+            "answer": "Your family describes everyday priorities, understands and questions the plan, receives guidance for manageable practice, and brings observations into review with the relevant professional."
+          },
+          {
+            "question": "What can I inspect before choosing Pinnacle?",
+            "answer": "The Verify portal links original company and regulatory records, research methods and publication sources with their scope. You can also read the therapy explanations and use the centre directory before discussing a visit."
+          },
+          {
+            "question": "How do I start a conversation?",
+            "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [],
+        "aboutAnchors": true,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "leadership",
+      "channel": "msedge",
+      "width": 390,
+      "checks": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/leadership",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/leadership-social-20261001.DZZtP5iX_Z1POCxs.jpg?v=institutional-v136-leadership-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [
+          {
+            "name": "Koti Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli"
+          },
+          {
+            "name": "Sreeja Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli"
+          }
+        ],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "leadership",
+      "channel": "msedge",
+      "width": 1440,
+      "checks": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/leadership",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/leadership-social-20261001.DZZtP5iX_Z1POCxs.jpg?v=institutional-v136-leadership-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "Who are Pinnacle’s leaders?",
+            "answer": "Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records."
+          },
+          {
+            "question": "What is Koti Reddy Saripalli’s role and contribution?",
+            "answer": "Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status."
+          },
+          {
+            "question": "What is Sreeja Reddy Saripalli’s role and contribution?",
+            "answer": "Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify."
+          },
+          {
+            "question": "What gives Pinnacle’s work its purpose?",
+            "answer": "The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities."
+          },
+          {
+            "question": "Where can I read the original research and books?",
+            "answer": "Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor."
+          },
+          {
+            "question": "How can my family take the first step?",
+            "answer": "Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees."
+          }
+        ],
+        "stages": 0,
+        "people": [
+          {
+            "name": "Koti Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli"
+          },
+          {
+            "name": "Sreeja Reddy Saripalli",
+            "profile": "https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli"
+          }
+        ],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "framework",
+      "channel": "msedge",
+      "width": 390,
+      "checks": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/pinnacle-global-autism-framework",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/framework-social-20261001.DimlpKtx_Z1F3Tad.jpg?v=institutional-v136-framework-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "stages": 7,
+        "people": [],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    },
+    {
+      "id": "framework",
+      "channel": "msedge",
+      "width": 1440,
+      "checks": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicateIds": [],
+        "missingAnchors": [],
+        "canonical": "https://www.pinnacleblooms.org/pinnacle-global-autism-framework",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/framework-social-20261001.DimlpKtx_Z1F3Tad.jpg?v=institutional-v136-framework-20261001",
+        "header": true,
+        "footer": true,
+        "phone": "tel:+919100181181",
+        "faqs": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What is the Pinnacle Global Autism Framework?",
+            "answer": "It is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. That purpose guides abilities, goals, relevant people and methods, everyday practice and review."
+          },
+          {
+            "question": "What is the starting point for a family?",
+            "answer": "Start with one meaningful everyday possibility, such as being understood, asking for help, joining an activity or taking part in a routine. Present abilities and context guide the next assessment and support discussion."
+          },
+          {
+            "question": "How do the therapies fit together?",
+            "answer": "Relevant speech, occupational, behavioural and educational contributions follow the child-specific priorities. The framework keeps the everyday life purpose in view; it does not assume every child needs every therapy."
+          },
+          {
+            "question": "How can parents shape the work?",
+            "answer": "Describe the child’s day, understand and question priorities, agree manageable guided practice and bring observations into professional review. The child’s response and useful support can change the next decision."
+          },
+          {
+            "question": "Where is the original framework report?",
+            "answer": "The public publication record links DOI 10.5281/zenodo.15487405, an institution-authored report dated 22 May 2025, version 1.0. It credits Koti Reddy Saripalli as author and Sreeja Reddy Saripalli as editor. Independent peer-review was not established in the current catalogue."
+          },
+          {
+            "question": "How do I explore this for my child?",
+            "answer": "Call 9100 181 181 with one everyday priority, read the relevant therapy explanation or send a short enquiry. The team confirms the suitable professional, centre, appointment, service and fees."
+          }
+        ],
+        "stages": 7,
+        "people": [],
+        "aboutAnchors": false,
+        "bodyForms": 0
+      },
+      "errors": []
+    }
+  ],
+  "physicalIOS": false,
+  "submissions": 0
+}
