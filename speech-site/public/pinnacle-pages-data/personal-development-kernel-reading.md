@@ -12,7 +12,7 @@ Shoes may go on smoothly at home with a picture sequence, then feel harder at a 
 What changed between the two settings, who may contribute an observation and what adjustment should the professional consider?
 
 ## What the module does
-The PDK is described in Pinnacle’s methods as an organising layer for child-specific measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.
+The PDK is Pinnacle’s child-specific record concept for organising measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.
 
 ## One illustrative everyday moment
 A routine works at home but not yet at school.

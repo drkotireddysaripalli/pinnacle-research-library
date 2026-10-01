@@ -81,11 +81,11 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'personal-development-kernel', short:'Personal Development Kernel', label:'Personal Development Kernel', title:'Personal Development Kernel | Keep Your Child’s Context Connected',
+    slug:'personal-development-kernel', updatedOn:'2026-10-01', short:'Personal Development Kernel', label:'Personal Development Kernel', title:'Personal Development Kernel | Keep Your Child’s Context Connected',
     description:'See how PinnacleAI’s Personal Development Kernel keeps a child’s home and school context available for authorised professional review.',
     eyebrow:'Continuity for a real child', headline:'Your child’s story should not reset at every appointment.',
     lead:'What helps at home may be different from what helps at school. The Personal Development Kernel, or PDK, is the child-specific record concept that keeps relevant observations, priorities and responses available for authorised review.',
-    direct:'The PDK is described in Pinnacle’s methods as an organising layer for child-specific measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.',
+    direct:'The PDK is Pinnacle’s child-specific record concept for organising measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.',
     purpose:'Continuity matters when a child’s team needs to see what was tried, where it worked, where it did not and what the family wants to change.',
     question:'How does one observation stay useful over time?',
     exampleTitle:'A routine works at home but not yet at school.',

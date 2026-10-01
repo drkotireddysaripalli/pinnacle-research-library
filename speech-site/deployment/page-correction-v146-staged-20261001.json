@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-01T01:48:27.496Z",
+  "stage": "release-pdk-v146-20261001",
+  "prior": "release-abilityscore-v145-20261001",
+  "changed": [
+    "personal-development-kernel"
+  ],
+  "total": 48,
+  "unchangedBodies": 47,
+  "commonShellsPreserved": true,
+  "verifyIndexPreserved": true,
+  "runtimePreserved": true
+}
