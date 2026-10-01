@@ -1,4 +1,12 @@
-# Active page work order · v136 content / v136b runtime closed; operational/staff contracts next
+# Active page work order · v137 owned voice and public delivery correction
+
+**CURRENT AUTHORISED WORK:** restore the full agreed consortium, life-first/sales narrative, page-specific creative and end-to-end delivery mandate in `PINNACLE-PAGE-CREATION-WORK-ORDER.md`; correct Leadership to Koti Reddy Saripalli and Sreeja Reddy Saripalli only; retire the three removed profiles and their known owned portrait URLs; ensure exact managed public pages do not fall back to old origin presentations because of cookies, Authorization, Range or no-transform. Preserve application/private routes and accepted page bodies except the Leadership correction and the detached About group wording. One implementation/deployment owner.
+
+**Leadership contract:** our own Pinnacle voice; actual roles and portraits; substantive distinct research and parent-writing/editorial contributions; life-first purpose and family next step; original source links; prominent 9100 181 181. No new credentials or personal quotes. Shared header/footer remain common files; this body correction does not fork them. All 48 existing presentations remain the release boundary.
+
+**Quality follow-through:** the About, Framework, Self-Sufficient and Mainstream pages require the distinct deeper inline examples/visual work recorded in `reviews/PAGE-NARRATIVE-GAPS-V137-20261001.md`. Their publication count is not a quality acceptance. Do not call those improvements complete in this correction. Existing policy/operational fact contracts remain separately tracked.
+
+## Prior completed runtime and portfolio state
 
 **Completed correction:** [v136b public-cookie routing](RELEASE-PUBLIC-COOKIE-V136B-20261001.md) is deployed and verified. The same existing Chrome profile now receives the rebuilt About, Self-Sufficient and Leadership pages. All 48 released HTML pages match with the observed cookie combination; 19 protected controls, all 174 route assignments and four bindings remain. The source navigation and 44 managed fragments were correct. No page rebuild, new artwork, new routes or repeated indexing notification was needed. Continue the current work map below.
 

@@ -26,24 +26,19 @@ const ENROLMENT_PREVIEW='/pinnacle-pages-preview/enrolment';
 const GUIDES=['first-visit-guide','teacher-observation-guide'];
 const MIME={'.mjs':'text/javascript; charset=utf-8','.vcf':'text/vcard; charset=utf-8','.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.txt':'text/plain; charset=utf-8','.md':'text/markdown; charset=utf-8','.xml':'application/xml; charset=utf-8','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.woff2':'font/woff2'};
 function acceptsMarkdown(value=''){return value.split(',').some(entry=>{const [type,...parameters]=entry.trim().split(';');if(type.toLowerCase()!=='text/markdown')return false;const quality=parameters.map(parameter=>parameter.trim()).find(parameter=>parameter.toLowerCase().startsWith('q='));return quality?Number(quality.slice(2))>0:true;});}
+// Exact retired public profiles/assets. Other leadership and image paths keep origin handling.
+export function isRetiredLeadershipPath(path){let decoded;try{decoded=decodeURIComponent(path);}catch{return false;}return /^\/leadership\/(?:prudhvi-(?:matsa|masta)|maheshwari|(?:shoban|sobhan)-kumar)\/?$/i.test(decoded)||/^\/images\/leadershipimages\/(?:prudhvi|maheshwari|shoban|sobhan)_big_image\.(?:jpe?g|png)$/i.test(decoded);}
 export async function serveSpeech(request,env,inventory){
  const u=new URL(request.url);
  const preview=u.pathname===ENROLMENT_PREVIEW;
  const enrolment=u.pathname===ENROLMENT_CANONICAL||u.pathname==='/enroll'||u.pathname==='/enroll/';
  if(u.hostname==='www.pinnacleblooms.org'&&(preview||enrolment)&&!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{allow:'GET, HEAD','cache-control':'no-store','x-robots-tag':preview?'noindex, nofollow':'index, follow'}});
- if(u.hostname!=='www.pinnacleblooms.org'||!['GET','HEAD'].includes(request.method)||request.headers.has('authorization'))return null;
- // These exact routes are public presentations. Advertising and visitor cookies must
- // not send returning visitors to the superseded origin page. Unknown/session cookies
- // still retain origin handling; a recognised visitor-cookie response is never cached.
- const centrePath=u.pathname.endsWith('/')?u.pathname.slice(0,-1):u.pathname;
- const managedDocument=Object.hasOwn(CENTRE_DETAIL_ROUTES,centrePath)||Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,centrePath);
- if(managedDocument&&(request.headers.has('range')||/\bno-transform\b/i.test(request.headers.get('cache-control')||'')))return null;
- let publicVisitorCookie=false;
- if(managedDocument&&request.headers.has('cookie')){
-  const names=(request.headers.get('cookie')||'').split(';').map(cookie=>cookie.trim().split('=')[0]).filter(Boolean);
-  if(names.some(name=>!/^((?:_ga|ps_ga)(?:_[A-Za-z0-9]+)?|_gid|_gat(?:_gtag_.+)?|_gcl_au|__cf_bm|cf_clearance|__Host-appgarden-visitor)$/.test(name)))return null;
-  publicVisitorCookie=names.includes('__Host-appgarden-visitor');
- }
+ if(u.hostname!=='www.pinnacleblooms.org'||!['GET','HEAD'].includes(request.method))return null;
+ // Only recognised public routes are handled below. Never forward cookies/credentials
+ // to ASSETS or vary the public presentation based on them; never cache such responses.
+ const privateResponse=request.headers.has('cookie')||request.headers.has('authorization');
+ if(isRetiredLeadershipPath(u.pathname))return new Response(request.method==='HEAD'?null:'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Profile no longer available | Pinnacle Blooms Network</title><main><h1>This profile is no longer available.</h1><p><a href="/leadership">Meet Pinnacle’s leadership</a></p></main></html>',{status:410,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store','x-robots-tag':'noindex, noarchive','x-content-type-options':'nosniff'}});
+ if(/^\/leadership\/?$/i.test(u.pathname)&&u.pathname!=='/leadership'){u.pathname='/leadership';return new Response(null,{status:301,headers:{location:u.href,'cache-control':privateResponse?'private, no-store':'public, max-age=0, must-revalidate'}});}
  const aliases=new Map([['/speech-therapy',SPEECH_CANONICAL],['/speech-therapy/',SPEECH_CANONICAL],[SPEECH_CANONICAL+'/',SPEECH_CANONICAL],['/occupational-therapy',OCCUPATIONAL_CANONICAL],['/occupational-therapy/',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy/',OCCUPATIONAL_CANONICAL],[OCCUPATIONAL_CANONICAL+'/',OCCUPATIONAL_CANONICAL],['/aba-therapy',ABA_CANONICAL],['/aba-therapy/',ABA_CANONICAL],['/t/aba-therapy',ABA_CANONICAL],['/t/aba-therapy/',ABA_CANONICAL],[ABA_CANONICAL+'/',ABA_CANONICAL],['/special-education',SPECIAL_EDUCATION_CANONICAL],['/special-education/',SPECIAL_EDUCATION_CANONICAL],['/Special-Education',SPECIAL_EDUCATION_CANONICAL],['/Special-Education/',SPECIAL_EDUCATION_CANONICAL],['/t/special-education',SPECIAL_EDUCATION_CANONICAL],['/t/special-education/',SPECIAL_EDUCATION_CANONICAL],[SPECIAL_EDUCATION_CANONICAL+'/',SPECIAL_EDUCATION_CANONICAL],[AUTISM_CANONICAL+'/',AUTISM_CANONICAL],[ASSESSMENT_CANONICAL+'/',ASSESSMENT_CANONICAL],['/t/autism-therapy',AUTISM_CANONICAL],['/t/autism-therapy/',AUTISM_CANONICAL],[CENTERS_CANONICAL+'/',CENTERS_CANONICAL],['/Centers',CENTERS_CANONICAL],['/Centers/',CENTERS_CANONICAL],['/centres',CENTERS_CANONICAL],['/centres/',CENTERS_CANONICAL],['/Centres',CENTERS_CANONICAL],['/Centres/',CENTERS_CANONICAL],['/locations',CENTERS_CANONICAL],['/locations/',CENTERS_CANONICAL],['/Locations',CENTERS_CANONICAL],['/Locations/',CENTERS_CANONICAL],['/enroll',ENROLMENT_CANONICAL],['/enroll/',ENROLMENT_CANONICAL],[ENROLMENT_CANONICAL+'/',ENROLMENT_CANONICAL],[ENROLMENT_PREVIEW,ENROLMENT_CANONICAL],[DOCUMENT+'/',DOCUMENT],[DOCUMENT+'.html',DOCUMENT]]);
  for(const product of PINNACLEAI_PATHS)aliases.set(product+'/',product);
  for(const centre of Object.keys(CENTRE_DETAIL_ROUTES))aliases.set(centre+'/',centre);
@@ -51,7 +46,7 @@ export async function serveSpeech(request,env,inventory){
  aliases.set('/pinnacle-ai','/pinnacleai');aliases.set('/pinnacle-ai/','/pinnacleai');
  aliases.set('/ability-score','/abilityscore');aliases.set('/ability-score/','/abilityscore');
  for(const guide of GUIDES)for(const suffix of ['/', '.html'])aliases.set('/speech-therapy/'+guide+suffix,'/speech-therapy/'+guide);
- if(aliases.has(u.pathname)){u.pathname=aliases.get(u.pathname);return new Response(null,{status:301,headers:{location:u.href,'cache-control':'public, max-age=300'}});}
+ if(aliases.has(u.pathname)){u.pathname=aliases.get(u.pathname);return new Response(null,{status:301,headers:{location:u.href,'cache-control':privateResponse?'private, no-store':'public, max-age=0, must-revalidate'}});}
  let key=u.pathname;
  if(preview)key='/pinnacle-pages-html/enrolment-preview.html';
  else if(key===ENROLMENT_CANONICAL)key='/pinnacle-pages-html/enrolment.html';
@@ -86,7 +81,6 @@ export async function serveSpeech(request,env,inventory){
  if(!Object.hasOwn(inventory,key))return null;
  const isHtml=key.endsWith('.html');
  const isMachineDocument=key.endsWith('.md');
- if(isHtml&&!preview&&(request.headers.has('range')||/\bno-transform\b/i.test(request.headers.get('cache-control')||'')))return null;
  if(!env.ASSETS)return new Response('Temporarily unavailable',{status:503,headers:{'cache-control':'no-store'}});
  // Serve complete small assets; ignoring Range also prevents mixing bytes across releases.
  const source=await env.ASSETS.fetch(new Request('https://assets.local'+key,{method:request.method}));
@@ -98,11 +92,12 @@ export async function serveSpeech(request,env,inventory){
  headers.set('x-pinnacle-speech-release','2026-09-29');
  // Preserve search and answer retrieval signals in Cloudflare Markdown conversion.
  if(isHtml||isMachineDocument)headers.set('content-signal','search=yes, ai-input=yes');
- headers.set('cache-control',publicVisitorCookie?'private, no-store':key.startsWith('/pinnacle-pages-assets/')?'public, max-age=31536000, immutable':'public, max-age=60, must-revalidate');
+ headers.set('cache-control',privateResponse?'private, no-store':key.startsWith('/pinnacle-pages-assets/')?'public, max-age=31536000, immutable':(isHtml||isMachineDocument)?'public, max-age=0, must-revalidate':'public, max-age=60, must-revalidate');
+ if(/\bno-transform\b/i.test(request.headers.get('cache-control')||''))headers.append('cache-control','no-transform');
  const etag='"speech-'+inventory[key]+'"';headers.set('etag',etag);
  if(isHtml){headers.set('vary','Accept');headers.set('x-robots-tag','index, follow, max-image-preview:large');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(isMachineDocument){headers.set('vary','Accept');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');}
  if(preview){headers.set('x-robots-tag','noindex, nofollow, nosnippet');headers.set('cache-control','no-store');headers.set('content-signal','search=no, ai-input=no');headers.set('referrer-policy','no-referrer');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; upgrade-insecure-requests");}
- if(!preview&&!publicVisitorCookie&&request.headers.get('if-none-match')===etag){headers.delete('content-length');return new Response(null,{status:304,headers});}
+ if(!preview&&!privateResponse&&request.headers.get('if-none-match')===etag){headers.delete('content-length');return new Response(null,{status:304,headers});}
  return new Response(request.method==='HEAD'?null:source.body,{status:source.status,headers});
 }

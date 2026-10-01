@@ -21,7 +21,7 @@ For a new page or material page revision, read in this order:
 7. The exact original sources supporting claims used on that page.
 8. Historical standards or release receipts only when the active work depends on them.
 
-The conversation history remains useful evidence of intent. Current decisions committed in these files govern implementation when old exploratory wording conflicts with a later settled decision.
+The conversation history remains useful evidence of intent. Current decisions committed in these files govern implementation when old exploratory wording conflicts with a later settled decision. The 1 October expansion of `PINNACLE-PAGE-CREATION-WORK-ORDER.md` explicitly restores the full consortium, owned voice, page-specific narrative, complete branded English creatives, commercial outcomes and search/distribution acceptance. It governs all page kinds; the inventory alone is not a page brief.
 
 Occupational Therapy's life-first correction was released in Worker v125; the ABA Therapy page and shared mobile menu in v126; and the Autism Therapy integration hub in v127. Their dated receipts and practical reviews are in this project. The accepted future-page operating standard is `PINNACLE-PAGE-CREATION-WORK-ORDER.md`. The nine PinnacleAI product narratives and images were corrected in v129. Child Development Assessment and the named cross-therapy/header corrections are released in v130. `ACTIVE-PAGE-WORK-ORDER.md` retains the completed Assessment contract; `PORTAL-PAGE-LEDGER-AND-SITEMAP-20260930.md` and `PORTAL-NEXT-WORK-ORDER-20260930.md` define the 20-route current portfolio and the next local/search-estate work.
 
@@ -269,9 +269,9 @@ A page is complete only when:
 
 Load these only when the active work needs their detail:
 
-- `LIFE-FIRST-THERAPY-PAGE-SYSTEM-20260927.md` — the organising principle and reusable therapy blocks.
+- `../../pinnacle-page-template-20260926/LIFE-FIRST-THERAPY-PAGE-SYSTEM-20260927.md` — the organising principle and reusable therapy blocks.
 - `PORTAL-PAGE-INVENTORY-20260929.md` — the canonical build sequence, page roles and cross-link graph.
-- `FINAL-NARRATIVE-AND-PAGE-STANDARD-20260927.md` — detailed Speech Therapy narrative, visual, search and commercial reasoning.
+- `../../pinnacle-page-template-20260926/FINAL-NARRATIVE-AND-PAGE-STANDARD-20260927.md` — detailed Speech Therapy narrative, visual, search and commercial reasoning.
 - `IMPLEMENTATION-WORK-ORDER-20260928.md` — detailed 16-package implementation and release example.
 - `RELEASE-OCCUPATIONAL-THERAPY-V125-20260930.md` — current managed shared-shell production state and rollback receipt.
 - `PINNACLE-PAGE-CREATION-WORK-ORDER.md` — canonical reusable brief, release steps and review rubric; read this before the active page order.

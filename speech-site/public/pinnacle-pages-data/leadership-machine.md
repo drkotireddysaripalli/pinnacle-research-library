@@ -1,62 +1,56 @@
-# Pinnacle Leadership | People, Purpose & Public Evidence
+# Pinnacle Leadership | Koti Reddy & Sreeja Reddy Saripalli
 
 https://www.pinnacleblooms.org/leadership
 
-A family needs more than a name above the door. You should understand who leads the organisation, what the work is for and where to inspect its evidence. Our shared direction starts with your child’s self-sufficient, mainstream-included life.
+A child being understood. Taking part in a family routine. Learning, making choices and belonging. At Pinnacle, these life possibilities give our work its direction. Meet Koti Reddy Saripalli and Sreeja Reddy Saripalli, and explore the research, writing and leadership behind that purpose.
 
-Pinnacle’s published leadership includes Koti Reddy Saripalli, Sreeja Reddy Saripalli, Prudhvi Masta, Maheshwari and Shoban Kumar. The published leadership sources describe group, corporate, public-relations and behavioural-support roles. Research authorship and editorial/book credits have their own public source trail.
+Our leadership brings together Koti Reddy Saripalli, Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli, Founder Chief Executive Officer of Bharath HealthCare. At Pinnacle, the child’s self-sufficient, mainstream-included life gives assessment, relevant therapies, everyday practice and review their purpose from the start.
 
 Koti Reddy Saripalli
 Founder Chairman · Kotii Group
 https://www.pinnacleblooms.org/leadership/dr-koti-reddy-saripalli
+Life first. Every part of the work has a purpose.
+Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. His research authorship includes methodology, protocols and preprints that explain and examine the relationship between capabilities, child-development support and participation in everyday life.
+Explore his work to understand how the life a child is growing toward gives goals, people, methods and review their direction. Each original work carries its own authors, version and publication status.
 Research authorship
-Pinnacle’s research catalogue links his authored methodology, protocols, preprints and framework report with their individual publication status.
+Koti authored the Pinnacle Global Autism Framework report and the DOI-linked works identified in our research library. He is also a coauthor of the AbilityScore and childhood-participation protocols. Follow each original work and its publication status.
 https://www.pinnacleblooms.org/verify/evidence/research-library.html#koti-reddy-saripalli
 
 Sreeja Reddy Saripalli
 Founder Chief Executive Officer · Bharath HealthCare
 https://www.pinnacleblooms.org/leadership/dr-sreeja-reddy-saripalli
+The family’s understanding belongs at the centre.
+Sreeja is Founder Chief Executive Officer of Bharath HealthCare. Her work also includes parent-facing handbooks, The Voice of the Unheard and the editorial credit on the Pinnacle Global Autism Framework report.
+Her books and editorial contribution bring a family-facing dimension to the Pinnacle story. Explore the writing alongside our practical explanations of priorities, everyday practice and review.
 Parent-facing writing and editorial work
-The catalogue credits her as editor of the framework report. The books record identifies her parent handbooks and The Voice of the Unheard separately.
+Sreeja is the author of the parent handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. Our books record preserves the publisher, ISBN and publication details; the editorial credit has its own report source.
 https://www.pinnacleblooms.org/verify/evidence/research-library.html#sreeja-reddy-saripalli
 
-Prudhvi Masta
-Director · Bharath HealthCare P LIMITED
-https://www.pinnacleblooms.org/Leadership/Prudhvi-Matsa
+Start with the life you want to open up — Tell us about being understood, getting ready, learning or joining in. That everyday priority gives the first conversation a meaningful direction.
 
-Maheshwari
-Director Public Relations · Bharath HealthCare P LIMITED
-https://www.pinnacleblooms.org/Leadership/Maheshwari
+Bring your family into the decisions — Understand the starting picture, ask why a goal matters and help choose manageable practice. Your observations belong in review.
 
-Shoban Kumar
-Chief Behavioral Therapist · Pinnacle Blooms Network
-https://www.pinnacleblooms.org/Leadership/Shoban-Kumar
+Keep the work connected to the day — Assessment, suitable professional support and practice have a shared reason: what becomes useful in your child’s life. Review helps decide what to continue or change.
 
-A clear purpose — Communication, independence, learning and participation give the support a direction you can discuss.
+Inspect the foundation of our story — Read the original company, software and publication records in Verify. Follow the specific evidence behind a statement and the people credited for the work.
 
-The right people for the work — The receiving team confirms the relevant professional and centre. Corporate leadership and your child’s care-team appointment have different roles.
+Who are Pinnacle’s leaders?
+Koti Reddy Saripalli is Founder Chairman of Kotii Group, and Sreeja Reddy Saripalli is Founder Chief Executive Officer of Bharath HealthCare. Their research, editorial and book contributions are linked to the original records.
 
-Credits you can follow — Find the author, editor, version and publication status attached to a specific work.
+What is Koti Reddy Saripalli’s role and contribution?
+Koti is Founder Chairman of Kotii Group and author of the Pinnacle Global Autism Framework report. The Verify research library links his authored methodology, protocols and preprints, and coauthored AbilityScore and childhood-participation protocols, with their individual publication status.
 
-A source behind the statement — Original company, software and publication records explain what each kind of evidence establishes.
+What is Sreeja Reddy Saripalli’s role and contribution?
+Sreeja is Founder Chief Executive Officer of Bharath HealthCare, author of parent-facing handbooks and The Voice of the Unheard, and editor of the Pinnacle Global Autism Framework report. You can inspect the distinct book and editorial credits in Verify.
 
-Who appears on Pinnacle’s leadership page?
-The published leadership includes Koti Reddy Saripalli, Sreeja Reddy Saripalli, Prudhvi Masta, Maheshwari and Shoban Kumar. The page links their existing individual profile destinations.
+What gives Pinnacle’s work its purpose?
+The child’s self-sufficient, mainstream-included life is the purpose from the start. It determines the abilities to understand, meaningful goals, relevant people and methods, everyday practice, observation and review. Your family helps shape those priorities.
 
-What role is published for Koti Reddy Saripalli?
-His individual profile publishes Founder Chairman, Kotii Group. The Verify research catalogue separately identifies his authored works and their publication status.
+Where can I read the original research and books?
+Our Verify research library links individual works and their authors, versions and publication status. The books record links the parent-facing titles and their publication details; the framework report records Koti as author and Sreeja as editor.
 
-What role is published for Sreeja Reddy Saripalli?
-Her individual profile publishes Founder Chief Executive Officer of Bharath HealthCare. Her parent-facing book credits and framework-editor credit are recorded separately in Verify.
-
-Where can I read the research and editorial credits?
-The Verify research library provides Koti and Sreeja Person sections and individual publication records. The framework report credits Koti as author and Sreeja as editor; the books record describes the parent-facing titles.
-
-Does a leadership title identify my child’s treating professional?
-No. The receiving team confirms the relevant care professional, their service and centre before the appointment. You can ask who will assess or support your child and what the visit includes.
-
-Who should my family contact first?
-Call 9100 181 181 or use the existing enquiry page to describe your child’s everyday priority. The team can help identify an appropriate professional, centre and next-step conversation.
+How can my family take the first step?
+Call 9100 181 181 or send an enquiry. Share one everyday priority that matters to your child. The team helps clarify the suitable professional, centre and next conversation, including the appointment and fees.
 
 Sources
 

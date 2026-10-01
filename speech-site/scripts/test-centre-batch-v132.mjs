@@ -27,7 +27,7 @@ for(const p of centreDetails){
   for(const [method,headers,expected]of [['GET',{},'branch'],['GET',{accept:'text/markdown'},'# branch'],['HEAD',{},''],['GET',{cookie:'ps_ga=public; ps_ga_ABC=public; __cf_bm=challenge'},'branch']]){const r=await serveSpeech(new Request(origin+p.path,{method,headers}),env,inv);assert.equal(r.status,200);assert.equal(await r.text(),expected);assert.equal(r.headers.get('vary'),'Accept');}
   const alias=await serveSpeech(new Request(origin+p.path+'/?campaign=one'),env,inv);assert.equal(alias.status,301);assert.equal(alias.headers.get('location'),origin+p.path+'?campaign=one');
   for(const suffix of ['/private','-other'])assert.equal(await serveSpeech(new Request(origin+p.path+suffix),env,inv),null);
-  for(const headers of [{authorization:'fixture'},{cookie:'session=fixture'},{cookie:'unknown=fixture'},{cookie:'CF_Authorization=fixture'},{range:'bytes=0-1'},{accept:'text/markdown',range:'bytes=0-1'},{'cache-control':'no-transform'}])assert.equal(await serveSpeech(new Request(origin+p.path,{headers}),env,inv),null);
+  for(const headers of [{authorization:'fixture'},{cookie:'session=fixture'},{cookie:'unknown=fixture'},{cookie:'CF_Authorization=fixture'},{range:'bytes=0-1'},{accept:'text/markdown',range:'bytes=0-1'},{'cache-control':'no-transform'}])assert.equal((await serveSpeech(new Request(origin+p.path,{headers}),env,inv)).status,200);
   assert.equal(await serveSpeech(new Request(origin+p.path,{method:'POST'}),env,inv),null);
  });
 }

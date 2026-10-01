@@ -4,3 +4,4 @@
 
 .fragment-alias{display:block;height:0;scroll-margin-top:20px}.institutional-research-aliases{margin-bottom:24px}
 @media(max-width:760px){.life-stages.institutional-stages{grid-template-columns:1fr}.life-stages.institutional-stages li:last-child{grid-column:auto}}
+.institutional-people.institutional-founders{grid-template-columns:repeat(2,minmax(0,1fr))}.institutional-founders h3{font-size:1.6rem}.institutional-founders h4{font-size:1.14rem;line-height:1.6;color:#8e247e;margin:20px 0 14px}.institutional-founders article p{margin:16px 0;line-height:1.8}.institutional-founders a+a{margin-top:16px}.institutional-book-link{margin-top:22px}@media(max-width:650px){.institutional-people.institutional-founders{grid-template-columns:minmax(0,1fr)}.institutional-founders h3{font-size:1.35rem}}
