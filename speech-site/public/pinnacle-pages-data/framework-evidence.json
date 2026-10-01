@@ -35,20 +35,46 @@
   ],
   "example": [
     {
-      "title": "A life moment comes first",
-      "text": "The family wants the child to take part in a classroom activity and ask for help when needed. Describe the child’s interests, communication and present support."
+      "icon": "heart",
+      "title": "Start with what your child enjoys",
+      "text": "Imagine a child who loves colourful blocks and already points to a favourite colour. Their family wants them to join a short shared activity and ask for help comfortably. Together, we choose that useful life moment as the priority, with room for the child’s preferences and a break.",
+      "path": "/self-sufficient",
+      "linkLabel": "How everyday independence gives the work purpose"
     },
     {
-      "title": "Understand what would help",
-      "text": "A suitable professional considers the relevant abilities and context. With consent, useful teacher observations can add the classroom perspective."
+      "icon": "voice",
+      "title": "Agree a useful way to ask for help",
+      "text": "The family and suitable professional explore a help gesture, picture or word the child can recognise and use. The starting picture includes communication, present abilities and the setting. Where AbilityScore® contributes, its measurement is read with professional judgement and context.",
+      "path": "/abilityscore",
+      "linkLabel": "Understand the starting picture"
     },
     {
-      "title": "Choose relevant people and methods",
-      "text": "Agree a meaningful communication step, the support involved and a manageable opportunity to practise at home or in learning. No fixed therapy bundle is assumed."
+      "icon": "people",
+      "title": "Bring in the people the goal needs",
+      "text": "Speech support may help make the request usable. Occupational support may matter if materials or sensory access make joining difficult. An educator or consenting teacher can make the invitation accessible. Behavioural support can contribute when relevant, while respecting a request for a break or a decision to decline. The goal selects the contributions; there is no fixed therapy bundle.",
+      "path": "/autism-therapy",
+      "linkLabel": "See how the relevant therapies work together"
     },
     {
-      "title": "Review usefulness in real life",
-      "text": "Discuss whether the child could communicate a need, how comfortable participation felt, which help worked and what should change next."
+      "icon": "home",
+      "title": "Practise where life happens",
+      "text": "In this example, the family agrees a manageable block-building opportunity with one familiar adult at home. With consent and the teacher’s agreement, a similar opportunity may be tried in a small classroom group. The help cue remains available. Practice should fit the child’s comfort and the family’s day, rather than turn every moment into a lesson.",
+      "path": "/everyday-therapy",
+      "linkLabel": "Carry useful practice into daily life"
+    },
+    {
+      "icon": "track",
+      "title": "Notice what changes with the setting",
+      "text": "An illustrative observation: the child asks for help after one reminder with a parent at home, but does not use the same cue in a noisy group. The family and teacher bring both observations to review, including comfort, interest and the help offered. This difference gives the team something specific to understand; a session-only success would miss it.",
+      "path": "/fusion-module",
+      "linkLabel": "Bring observations from different settings together"
+    },
+    {
+      "icon": "loop",
+      "title": "Choose the next step together",
+      "text": "The family, relevant professional and consenting teacher consider keeping the familiar help cue and, where possible, offering a quieter setting or a shorter group opportunity. They discuss offering less help when the child is comfortable, while retaining useful support. At the next agreed review, they compare comfort and help requests across settings, then decide what to keep or change.",
+      "path": "/reassess-review-repeat",
+      "linkLabel": "Make review a decision about the child’s life"
     }
   ],
   "values": [
@@ -150,6 +176,9 @@
     }
   ],
   "updatedOn": "2026-10-01",
+  "exampleIntro": "A familiar interest can open a meaningful next step. Here is an illustrative example of how your family and the relevant people can connect one priority with home, learning and review. The purpose is greater independence and participation in the child’s life.",
+  "exampleCaption": "One everyday goal connects family choice, useful support, practice across settings and the next review.",
+  "exampleScope": "This illustrative example explains planning and review; it is not a recorded child outcome. Your family, child and suitable professionals shape the actual priorities, support and next step.",
   "url": "https://www.pinnacleblooms.org/pinnacle-global-autism-framework",
   "stages": [
     {

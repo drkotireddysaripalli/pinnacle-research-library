@@ -158,7 +158,7 @@ Canonical: [/privacy-policy](https://www.pinnacleblooms.org/privacy-policy)
 Canonical: [/terms-of-use](https://www.pinnacleblooms.org/terms-of-use)
 
 - Repair duplicated Roman VI numbering without changing anchor IDs.
-- Resolve the actual intended agreement before replacing unrelated mobile-site, nutritional-supplement and Muscle-UP Nutrition template material.
+- Resolve the actual intended agreement before replacing unrelated mobile-site, nutritional-supplement and Muscle-UP Nutrition template material; confirm the body-title 'Terms of Service' and the apparent opt-out email typo care@pinnaclblooms.org against the intended source.
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
@@ -266,7 +266,7 @@ Canonical: [/ethics-charter](https://www.pinnacleblooms.org/ethics-charter)
 
 - Remove/source-qualify unsupported global-first claims.
 - Confirm reporting workflow and response commitments; distinguish implemented from planned badges/programmes.
-- Retain dated historical volume as dated rather than overwriting with current network counts; keep accessible tables.
+- Identify the source edition/date behind19M+records, then retain its verified historical context; retrieval time is not an edition date. Keep accessible tables.
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 

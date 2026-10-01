@@ -6,13 +6,21 @@ https://www.pinnacleblooms.org/pinnacle-global-autism-framework
 
 The Pinnacle Global Autism Framework is Pinnacle’s documented approach to organising child-development support around a self-sufficient, mainstream-included life. The purpose determines what abilities to understand, which goals and professional contributions matter, what practice fits everyday life and how observations shape the next review.
 
-1. A life moment comes first — The family wants the child to take part in a classroom activity and ask for help when needed. Describe the child’s interests, communication and present support.
+A familiar interest can open a meaningful next step. Here is an illustrative example of how your family and the relevant people can connect one priority with home, learning and review. The purpose is greater independence and participation in the child’s life.
 
-2. Understand what would help — A suitable professional considers the relevant abilities and context. With consent, useful teacher observations can add the classroom perspective.
+1. Start with what your child enjoys — Imagine a child who loves colourful blocks and already points to a favourite colour. Their family wants them to join a short shared activity and ask for help comfortably. Together, we choose that useful life moment as the priority, with room for the child’s preferences and a break.
 
-3. Choose relevant people and methods — Agree a meaningful communication step, the support involved and a manageable opportunity to practise at home or in learning. No fixed therapy bundle is assumed.
+2. Agree a useful way to ask for help — The family and suitable professional explore a help gesture, picture or word the child can recognise and use. The starting picture includes communication, present abilities and the setting. Where AbilityScore® contributes, its measurement is read with professional judgement and context.
 
-4. Review usefulness in real life — Discuss whether the child could communicate a need, how comfortable participation felt, which help worked and what should change next.
+3. Bring in the people the goal needs — Speech support may help make the request usable. Occupational support may matter if materials or sensory access make joining difficult. An educator or consenting teacher can make the invitation accessible. Behavioural support can contribute when relevant, while respecting a request for a break or a decision to decline. The goal selects the contributions; there is no fixed therapy bundle.
+
+4. Practise where life happens — In this example, the family agrees a manageable block-building opportunity with one familiar adult at home. With consent and the teacher’s agreement, a similar opportunity may be tried in a small classroom group. The help cue remains available. Practice should fit the child’s comfort and the family’s day, rather than turn every moment into a lesson.
+
+5. Notice what changes with the setting — An illustrative observation: the child asks for help after one reminder with a parent at home, but does not use the same cue in a noisy group. The family and teacher bring both observations to review, including comfort, interest and the help offered. This difference gives the team something specific to understand; a session-only success would miss it.
+
+6. Choose the next step together — The family, relevant professional and consenting teacher consider keeping the familiar help cue and, where possible, offering a quieter setting or a shorter group opportunity. They discuss offering less help when the child is comfortable, while retaining useful support. At the next agreed review, they compare comfort and help requests across settings, then decide what to keep or change.
+
+This illustrative example explains planning and review; it is not a recorded child outcome. Your family, child and suitable professionals shape the actual priorities, support and next step.
 
 Describe what you want to open up — Bring an everyday moment, an interest and the support your child already uses.
 
