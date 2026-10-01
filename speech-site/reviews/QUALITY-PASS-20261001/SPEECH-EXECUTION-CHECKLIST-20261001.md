@@ -32,6 +32,63 @@ Build the agreed revision. Do not reopen the settled narrative, repeat the compl
 
 These completed research items are not implementation or outcome checks. Refresh only changed facts or a specific release dependency; do not rerun them as a ritual before editing.
 
+## Design contract — more value with a clearer page
+
+**Owner clarification, 1 October:** the work must strengthen imaging, branding, emotion, factual/scientific value, icons and typography without degrading the page through clutter. Apply these rules to ST-01 through ST-13. This is an execution constraint, not another audit or new workstream.
+
+### Editing rules
+
+1. **Every addition earns its place.** Identify the family question, new information or action it enables. Merge/remove repetitions where a new visual or explanation does the same job better. Never append every recommendation as a separate full-height section.
+2. **One clear dominant message per block.** Give it a useful heading, short answer, appropriate visual and next action. Keep deeper detail in accessible disclosures or specific linked pages. The life-first purpose, service meaning, offer, relevant evidence and key limitations must remain understandable without opening everything.
+3. **Make the first useful path shorter.** A family should encounter its communication concern, a concrete reason to choose Pinnacle and a call/assessment action earlier than in the saved baseline. Preserve useful depth without treating minimum word count, screen count or image count as quality.
+4. **Separate explanatory jobs.** The same communication example carries the human story and PinnacleAI explanation; do not reproduce it in two full chapters. Keep the seven family stages visible and optional nine technology explanations subordinate.
+5. **Give proof a hierarchy.** Use two or three selected early source-backed reasons, then concise speech-specific evidence before the directory. Reuse the complete common footer for its broader institution/evidence catalogue; avoid duplicating that catalogue in the page body. Full source access remains available.
+6. **Keep practical resources compact.** Six government-resource cards get a helpful title, institution/country, short purpose and clear link. Do not turn each into an article or attach institutional logo/badge walls. A clear call/assessment route follows the main decision blocks; repeated actions must not interrupt every small paragraph.
+
+### Creative direction
+
+| Visual job | Treatment | What the family should understand |
+| --- | --- | --- |
+| Immediate hope and recognition | Retain the approved mother/child hero and existing strong OG poster; preserve their organic shapes and branded presentation. | My child's communication and life matter here; there is a clear next step. |
+| Confidence in the first visit | Generate the complete branded family/professional creative in ST-06, with the child actively choosing/playing and the parent involved. | The first visit helps us understand the starting point and meaningful priorities. |
+| Understand how speech becomes useful | Generate ST-06's connected asking → everyday use → review creative. Use the same family/child continuity, deliberate composition and short integrated creative copy. | A skill gains value when it helps my child with real people and activities. |
+| Understand PinnacleAI's contribution | Use the accessible stage diagram with visible family questions, consistent icons and a review/correction return path. | Measurement, planning, practice and feedback serve the life goal and inform human decisions. |
+| Recognise the actual centre | Reuse real centre photographs/emblems with compact selection and optional gallery. | I can recognise the place and contact the relevant team. |
+
+- Generate complete English-language posters/creatives using the built-in ChatGPT image tool with official brand references. Do not make a generic scene and patch a headline over it as a substitute for the agreed creative. Essential page explanations, headings and actions also remain real HTML for reflow, accessibility and retrieval.
+- Use the approved Pinnacle Blooms Network emblem/name, professional attire and tasteful PinnacleAI frames. Where an evidence panel is useful, give one accurate source-backed cue; do not fill the background with licences, medals, regulatory seals or invented certificates.
+- Show warm, capable, active children and engaged parents/professionals; no pity, fear, false before/after story or implication that an illustrative scene documents an actual beneficiary.
+- Art-direct the mobile version: faces, interaction, visual sequence and short copy must survive at the displayed width. Crop only if the intended meaning survives; otherwise use a purposeful portrait/stacked composition. Do not shrink a wide multi-scene poster until every face and label becomes tiny.
+- Preserve generous white space and the accepted page palette. Bright brand accents establish hierarchy; large gradients behind body copy, alternating loud banners and repeated decorative glows are not required.
+
+### Typography and icons — Speech body only
+
+The current source already uses Sintony and an accepted purple/pink/ink palette with supporting cyan/green/yellow accents. Retain that identity and the approved imagery. Do not introduce an unrelated palette, new font family or global style reset. Inspect actual computed colours and contrast when implementing rather than assuming an old brand note describes the current page.
+
+| Element | Implementation direction |
+| --- | --- |
+| Main promise and section headings | Preserve the recognisable hierarchy; give each heading a clear meaning. For new/reworked section headings, start around 30–36 px on phones and 40–52 px on desktop, adapting to actual wraps. Keep the already-approved hero proportions unless a specific defect requires adjustment. |
+| Main paragraphs | Start from 17–18 px with roughly 1.55–1.7 line-height; use comfortable line lengths, around 55–70 characters in wide prose areas. These are design starting points, not a reason to shrink existing readable text. |
+| Action/link labels | Use the ST-02 16–18 px treatment and useful spacing. Inline links have a visible link cue; action anchors have consistent bounded treatment and focus states. Keep 9100 181 181 prominent. |
+| Eyebrows, captions and evidence details | Keep useful copy legible, normally 14–16 px. Do not place an essential explanation, qualification or action in faint miniature text or long all-caps labels. |
+| Icons | Reuse the existing `Icon.astro` SVG system: communication, family, home, measurement, review, centre and call. Keep stroke/size consistent, around 20–24 px with labels and 28–32 px for a block marker. Use icons where they improve recognition; no icon-only navigation, unrelated emoji set or icon beside every sentence. |
+
+Check normal text contrast against the actual background at least 4.5:1 and qualifying large text at least 3:1 under [WCAG contrast guidance](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html). Check text reflow/zoom and the 320 px layout against [WCAG reflow guidance](https://www.w3.org/WAI/WCAG22/Understanding/reflow.html). Apply changes through Speech-scoped styles/variants; the approved common header/footer remain fixed.
+
+### Scientific value and speed
+
+- Make the reasoning inspectable: the everyday goal, starting observation, support used, what happened with different people/settings and what is reviewed next. This provides explanatory value beyond another statistic or credential panel.
+- Keep exact evidence records close to claims. Research has its actual method/status/population; licences have their device scope. Do not present a hypothetical child's score graph, progress curve or improvement percentage as observed data. A visual diagram may explain the mechanism without inventing results.
+- Keep core information in HTML and the existing static architecture. Use responsive compressed image derivatives with dimensions; prioritise the actual hero/LCP image, lazy-load below-fold scenes/galleries and avoid loading desktop and mobile alternatives together. No new animation library or heavy carousel is needed. See [LCP optimisation guidance](https://web.dev/articles/optimize-lcp).
+
+### Final design acceptance, added to ST-12/ST-13
+
+- [ ] Main promise, family benefit, concrete mechanism, selected proof and next step are easier to find than in the saved baseline.
+- [ ] New visuals explain something specific and remain meaningful at actual phone/tablet/desktop sizes; no tiny poster copy substitutes for page text.
+- [ ] Repeated explanations/catalogues have been merged; centres/resources/deeper technology do not overwhelm the first useful decision path.
+- [ ] Typography, icon style, contrast, link recognition and spacing feel consistent; common files remain on the approved baseline.
+- [ ] Source fidelity, access to useful detail and existing good performance are retained. Report actual lab/functional results; confirm lead improvement only from subsequent observed outcomes.
+
 ## A. Build the Speech page candidate
 
 ### ST-01 — Reorder and finish the speech-specific narrative
