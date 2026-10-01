@@ -1,0 +1,127 @@
+/* Speech-only body revision. The approved common header/footer are intentionally untouched. */
+.speech-revision .speech-actions .action-links a{white-space:normal;min-width:0}
+.speech-revision .speech-actions .action-links a>span:first-of-type{min-width:0;overflow-wrap:break-word}
+.speech-revision .visit-story-art{width:100%;padding-bottom:0}
+.speech-revision .example-scenes li::after{display:none}
+.speech-revision{--speech-accent:#8f2879}
+.speech-revision .section{padding-block:64px}
+.speech-revision .story-heading{max-width:900px;margin-bottom:30px}
+.speech-revision .story-heading p,.speech-revision .speech-purpose p{max-width:70ch}
+.speech-revision p{line-height:1.65}
+.speech-revision h2{font-size:clamp(30px,3.6vw,48px);line-height:1.2}
+.speech-revision .source-note,.speech-revision figcaption{font-size:14px;line-height:1.6;color:#665e69}
+.speech-revision a:focus-visible,.speech-revision button:focus-visible,.speech-revision summary:focus-visible{outline:3px solid #65225b;outline-offset:4px}
+.speech-revision .speech-actions .wrap{display:block;padding-block:20px}
+.speech-revision .speech-actions .wrap>strong{display:block;margin-bottom:12px;font-size:18px}
+.speech-revision .speech-actions .action-links{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.speech-revision .speech-actions .action-links a{display:flex;align-items:center;justify-content:flex-start;gap:10px;border:1px solid #d69ac7;border-radius:10px;padding:12px;font-size:16px;line-height:1.4;background:#fff;color:#65225b;min-height:56px;text-decoration:none}
+.speech-revision .speech-actions .action-links a>svg{flex:none}
+.speech-revision .speech-actions .action-links a>span:last-child{margin-left:auto}
+.speech-revision .speech-actions .action-links a:hover{border-color:#65225b;background:#fff7fb}
+.speech-revision .service-fit{padding-top:52px;padding-bottom:48px}
+.speech-revision .speech-age-detail{margin-top:24px;border:1px solid #e7dde7;border-radius:14px;padding:18px}
+.speech-revision summary{cursor:pointer}
+.speech-revision .speech-age-detail summary{font-size:18px;font-weight:700;color:#65225b;display:flex;gap:12px;justify-content:space-between;align-items:center}
+.speech-revision .speech-age-detail[open] summary{margin-bottom:16px}
+.speech-revision .speech-purpose{background:#fff7fb}
+.speech-revision .speech-purpose-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:48px;align-items:center}
+.speech-revision .speech-purpose h2{margin-top:10px;margin-bottom:20px}
+.speech-revision .speech-home-analogy{background:#fff;border:1px solid #e7dde7;border-radius:48px 16px 48px 16px;padding:32px}
+.speech-revision .speech-home-analogy>svg{color:#8f2879}
+.speech-revision .speech-home-analogy h3{font-size:26px;line-height:1.35;margin:18px 0 12px}
+.speech-revision .speech-home-analogy>strong{display:block;color:#65225b;font-size:20px;line-height:1.4;margin-top:16px}
+.speech-revision .speech-proof-preview{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.speech-revision .speech-proof-preview a{display:flex;align-items:flex-start;gap:12px;background:#fff;padding:18px;border:1px solid #e7dde7;border-radius:12px;font-size:15px;line-height:1.5;text-decoration:none}
+.speech-revision .speech-proof-preview svg{flex:none}
+.speech-revision .speech-proof-preview strong{display:block;font-size:17px;margin-bottom:6px}
+.speech-revision .speech-example-grid{display:grid;grid-template-columns:minmax(0,0.95fr) minmax(0,1.05fr);gap:36px;align-items:start}
+.speech-revision .speech-example-creative{margin:0;position:sticky;top:24px}
+.speech-revision .speech-example-creative img{width:100%;height:auto;display:block;border-radius:28px}
+.speech-revision .speech-example-creative figcaption{margin-top:12px}
+.speech-revision .worked-example{display:block;margin:0}
+.speech-revision .example-goal{padding:16px 20px;margin-bottom:12px;border-radius:16px}
+.speech-revision .example-goal .spoken-goal{font-size:26px;gap:12px}
+.speech-revision .example-goal p{font-size:16px;margin-bottom:0}
+.speech-revision .example-scenes{display:grid;grid-template-columns:1fr;gap:12px;counter-reset:none}
+.speech-revision .example-scenes li{padding:18px 20px;border-radius:16px;min-height:0}
+.speech-revision .example-scenes .example-scene-icon{float:right;margin:0 0 8px 10px}
+.speech-revision .example-scenes h3{font-size:22px;margin:8px 0}
+.speech-revision .example-scenes p{font-size:16px;margin:0}
+.speech-revision .example-scenes .example-step{font-size:14px;letter-spacing:0;text-transform:none}
+.speech-revision .technology-bridge{margin-top:28px}
+.speech-revision .speech-pathway{background:#fff7fb}
+.speech-revision .speech-stages{list-style:none;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.speech-revision .speech-stages li{background:#fff;border:1px solid #e7dde7;border-top:4px solid #8f2879;border-radius:18px;padding:22px;display:flex;flex-direction:column}
+.speech-revision .speech-stages li:nth-child(even){border-top-color:#16849a}
+.speech-revision .speech-stage-top{display:flex;justify-content:space-between;color:#8f2879;align-items:center;margin-bottom:16px}
+.speech-revision .speech-stage-top span{font-size:26px;font-weight:700}
+.speech-revision .speech-stages h3{font-size:22px;line-height:1.3;margin:0 0 12px}
+.speech-revision .speech-stages .speech-stage-question{color:#65225b;font-weight:700;font-size:17px}
+.speech-revision .speech-stages p{font-size:16px}
+.speech-revision .speech-stages a{margin-top:auto;font-size:16px;padding-top:12px;text-underline-offset:4px}
+.speech-revision .speech-review-loop{display:flex;gap:16px;padding:22px;background:#fff;border:2px dashed #b5d6c0;border-radius:16px;margin:20px 0}
+.speech-revision .speech-review-loop svg{flex:none;color:#327546}
+.speech-revision .speech-review-loop p{margin:0}
+.speech-revision .speech-section-actions{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin:24px 0}
+.speech-revision .visit-story{align-items:center}
+.speech-revision .visit-story-art img{width:100%;height:auto;object-fit:contain}
+.speech-revision .speech-fees{display:flex;gap:18px;background:#fff7fb;border:1px solid #e7dde7;border-radius:16px;padding:24px;margin:24px 0}
+.speech-revision .speech-fees>svg{flex:none;color:#8f2879}
+.speech-revision .speech-fees h3{font-size:23px;margin:0 0 10px}
+.speech-revision .speech-fees p{margin:0}
+.speech-revision .evidence-cards article{padding:26px}
+.speech-revision .research-detail{margin-top:16px}
+.speech-revision .speech-government{margin-top:38px}
+.speech-revision .speech-government>h3{font-size:28px;line-height:1.3}
+.speech-revision .speech-government-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:24px 0}
+.speech-revision .speech-government-grid>a{background:#fff;border:1px solid #e7dde7;border-radius:16px;padding:24px;text-decoration:none;color:#302638;display:flex;flex-direction:column}
+.speech-revision .speech-government-grid svg{color:#8f2879;margin-bottom:14px}
+.speech-revision .speech-resource-owner{font-size:14px;color:#665e69}
+.speech-revision .speech-government-grid h4{font-size:21px;line-height:1.35;margin:12px 0}
+.speech-revision .speech-government-grid p{font-size:16px}
+.speech-revision .speech-government-grid strong{color:#65225b;font-size:16px;margin-top:auto;padding-top:8px;text-decoration:underline;text-underline-offset:4px}
+.speech-revision .speech-share{padding-block:24px 48px}
+.speech-revision .speech-share h2{font-size:28px}
+.speech-revision .speech-share-actions{display:flex;gap:12px;flex-wrap:wrap}
+.speech-revision .speech-share-actions a,.speech-revision .speech-share-actions button{border:1px solid #bd98b7;background:#fff;color:#65225b;border-radius:10px;padding:12px 18px;font:inherit;font-size:16px;min-height:48px;text-decoration:none;cursor:pointer}
+.speech-revision .directory-card.compact-card{display:flex;flex-direction:column;padding:20px}
+.speech-revision .compact-card .directory-card-heading{order:0}
+.speech-revision .compact-card .directory-national{order:1}
+.speech-revision .compact-card>a{order:2}
+.speech-revision .compact-card .directory-primary{order:3}
+.speech-revision .compact-card .directory-gallery,.speech-revision .compact-card .compact-centre-details{order:4}
+.speech-revision .compact-card .directory-share{order:5}
+.speech-revision .compact-centre-details{margin-top:16px;border-top:1px solid #e7dde7;padding-top:14px}
+.speech-revision .compact-centre-details summary{font-weight:700;color:#65225b;min-height:44px}
+.speech-revision .compact-card .directory-primary{gap:10px}
+.speech-revision .compact-card .directory-selection-note{font-size:14px;line-height:1.5}
+.speech-revision .compact-card .directory-cover{margin-top:12px}
+@media(max-width:1099px){
+.speech-revision .speech-actions .action-links{grid-template-columns:repeat(3,minmax(0,1fr))}
+.speech-revision .speech-stages{grid-template-columns:repeat(2,minmax(0,1fr))}
+.speech-revision .visit-story{grid-template-columns:1fr}
+.speech-revision .visit-story-art{max-width:850px;justify-self:center;margin-top:12px}
+.speech-revision .speech-example-grid{gap:22px}
+}
+@media(max-width:899px){
+.speech-revision .speech-purpose-grid,.speech-revision .speech-example-grid{grid-template-columns:1fr}
+.speech-revision .speech-example-creative{position:static;max-width:580px;margin:auto}
+.speech-revision .speech-proof-preview{grid-template-columns:1fr}
+.speech-revision .speech-government-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:600px){
+.speech-revision .section{padding-block:44px}
+.speech-revision .speech-actions .action-links{grid-template-columns:repeat(2,minmax(0,1fr))}
+.speech-revision .speech-actions .action-links a{font-size:16px;padding:10px;gap:8px}
+.speech-revision .speech-actions .action-links a:last-child{grid-column:1/-1}
+.speech-revision .speech-stages,.speech-revision .speech-government-grid{grid-template-columns:1fr}
+.speech-revision .speech-stages li{padding:20px}
+.speech-revision .speech-home-analogy{padding:24px}
+.speech-revision .speech-home-analogy h3{font-size:24px}
+.speech-revision .speech-fees{padding:20px;gap:12px}
+.speech-revision .speech-fees>svg{width:24px}
+.speech-revision .speech-fees h3{font-size:22px}
+.speech-revision .visit-facts{grid-template-columns:1fr}
+.speech-revision .speech-section-actions .button{white-space:normal}
+.speech-revision .speech-share-actions>*{width:100%;text-align:center}
+}

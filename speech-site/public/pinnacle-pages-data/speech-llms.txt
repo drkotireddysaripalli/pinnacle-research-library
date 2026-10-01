@@ -2,7 +2,7 @@
 
 > Public reading guide for speech therapy and its evidence. This file is a navigation aid; it does not guarantee indexing or AI citation.
 
-- [Speech therapy for children](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate): communication in everyday life, professional assessment, the seven-stage family pathway, guided practice and review.
+- [Speech therapy for children](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate): Updated 1 October 2026: family communication priorities, an illustrative asking-for-help goal, seven connected PinnacleAI stages, the first visit and fees, specific evidence, centre choice and government-owned family guidance.
 - [Occupational therapy for children](https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate): begin with one meaningful activity in play, meals, dressing or learning; see a first-call pathway, an everyday goal example, seven life-first stages, family review questions, centre choices and dated claim sources.
 - [ABA therapy and behavioural support for children](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate): respectful, function-led support for communication, routines, safety and participation. The page connects assessment, family and school observations, multidisciplinary contributions, everyday practice and review without promising a particular outcome.
 - [Special education support for children](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181): child-specific teaching for learning access, communication and classroom participation, connected to family and teacher knowledge, multidisciplinary support and regular review. The page does not promise school admission, mainstream placement or a particular outcome.
@@ -27,3 +27,11 @@ Operator: Bharath Healthcare Laboratories Private Limited. Brand: Pinnacle Bloom
 - [Autism therapy and developmental support](https://www.pinnacleblooms.org/autism-therapy): the national child-specific integration hub for communication, routines, learning, play and participation. It explains why every child does not need every therapy, shows the seven-stage life-first pathway and links each material claim to sources and limits.
 
 - [Child development assessment](https://www.pinnacleblooms.org/speech-aba-autism-assessments): family priorities, abilities, seven life-first stages, non-diagnostic software scope and centre choices. General assessment fees and appointment are confirmed with the team. [Source map](https://www.pinnacleblooms.org/pinnacle-pages-data/assessment-evidence.json). [Reading copy](https://www.pinnacleblooms.org/pinnacle-pages-data/assessment-machine.md). This canonical is listed once in the core sitemap.
+
+## Speech page decisions and resources
+
+The child’s self-sufficient, mainstream-included life sets the direction. The same everyday communication goal is followed from assessment to family practice and review. The example is illustrative, not patient outcome data. All seven family-stage labels remain visible; optional technical detail describes nine explanations, not nine clinical stages.
+
+- [First visit and fees](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#first-visit): FREE speech assessment, listed value INR 25,999; approximately one hour depending on the child; written-report timing and appointment confirmed by the team. Ongoing therapy is priced separately.
+- [Government-owned guidance](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#government-resources): AIISH, NHM/RBSK, NIDCD, CDC and NHS. General information, not institutional endorsements of Pinnacle.
+- [Cite original Pinnacle sources](https://www.pinnacleblooms.org/verify/evidence/cite.html).

@@ -6,11 +6,11 @@ import AssessmentOffer from '../../components/AssessmentOffer.astro';
 import { speechContent, serviceInformationPath } from '../../data/speech-content';
 import { url, phone } from '../../data/site';
 ---
-<PageLayout updatedOn="2026-09-28" path={serviceInformationPath} label="Speech service information" title="Speech Assessment & Service Information | Pinnacle Blooms" description="Dated source record for Pinnacle speech assessment duration, written reports, parent review and the FREE speech assessment offer. Updated 28 September 2026." shareImage={speechContent.image.source} imageAlt={speechContent.image.alt} imageCaption={speechContent.image.caption} citations={[url('/speech-aba-autism-assessments'),url('/assessments/pinnacle-special-speech-and-language-assessment')]} documentOnly>
+<PageLayout updatedOn="2026-10-01" path={serviceInformationPath} label="Speech service information" title="Speech Assessment & Service Information | Pinnacle Blooms" description="Dated source record for Pinnacle speech assessment duration, written reports, parent review and the FREE speech assessment offer. Updated 1 October 2026." shareImage={speechContent.image.source} imageAlt={speechContent.image.alt} imageCaption={speechContent.image.caption} citations={[url('/speech-aba-autism-assessments'),url('/assessments/pinnacle-special-speech-and-language-assessment')]} documentOnly>
   <article class="wrap service-record section">
     <p class="eyebrow">Pinnacle Blooms Network · Service information</p>
     <h1>What to expect from<br /><em>a speech assessment.</em></h1>
-    <p class="record-intro">Pinnacle’s speech assessment and service information, updated on <time datetime={facts.updatedOn}>28 September 2026</time>. Start with a FREE speech and language assessment. Call us to arrange an appointment at your preferred centre.</p>
+    <p class="record-intro">Pinnacle’s speech assessment and service information, updated on <time datetime={facts.updatedOn}>1 October 2026</time>. Start with a FREE speech and language assessment. Call us to arrange an appointment at your preferred centre.</p>
     <dl class="service-facts">
       <div id="assessment"><dt>Assessment process</dt><dd>{facts.process}</dd></div>
       <div id="duration"><dt>Approximate duration</dt><dd>{facts.assessmentDuration}</dd></div>
@@ -22,7 +22,7 @@ import { url, phone } from '../../data/site';
     <p>Bring relevant reports you already have, your questions and examples of communication at home or school. We’ll explain what else to bring, who will conduct the assessment, their qualifications, report timing, suitable next steps and fees for any ongoing therapy.</p>
     <div class="record-actions"><a class="button primary" href={phone.href}>Call {phone.display}</a><a class="button outline" href={speechOffer.url}>Arrange your FREE assessment</a></div>
     <h2 id="provenance">Sources and record history</h2>
-    <p>The assessment process, approximate duration, report and parent-review details are based on Pinnacle’s speech-service guide, reviewed on 27 September 2026. Your centre will explain the arrangements for your child’s appointment.</p>
+    <p>The assessment process, approximate duration, report and parent-review details are based on Pinnacle’s speech-service guide, reviewed on 27 September 2026. The <a href="/pinnacle-pages-data/speech-service-information-20260928.json">preserved 28 September service-information edition</a> provides a stable copy of the published details. This source link was updated on 1 October 2026; it does not represent a new clinical or availability check. Your centre will explain the arrangements for your child’s appointment.</p>
     <p>Pinnacle confirmed the current FREE speech assessment offer and its ₹25,999 listed value on 27 September 2026. This offer supersedes earlier price information for this campaign.</p>
     <p><a href="/pinnacle-pages-data/speech-service-information.json">Download the dated source record (JSON)</a> · <a href="/pinnacle-pages-data/speech-service-information.txt">Read the plain-text record</a></p>
     <p><a class="text-link" href={url(speechContent.path)}>Back to speech therapy →</a> · <a href={url('/verify/')}>Explore Pinnacle Verify →</a></p>

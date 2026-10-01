@@ -1,4 +1,5 @@
 ---
+import {speechModuleExamples} from "../data/speech-resources";
 import PageLayout from '../layouts/PageLayout.astro';
 import PinnacleModuleScene from './PinnacleModuleScene.astro';
 import Icon from './Icon.astro';
@@ -58,6 +59,7 @@ const canonical=url(path);
 const productId=url('/pinnacleai')+'#software';
 const entityId=canonical+(isOverview?'#software':'#module');
 const entityGraph=isOverview?[{'@type':'SoftwareApplication','@id':entityId,name:'PinnacleAI GPT-OS',alternateName:'PinnacleAI®',url:canonical,softwareVersion:'1.0.0',applicationCategory:'HealthApplication',description:page.direct,manufacturer:{'@id':url('/verify/#organization')},brand:{'@id':url('/verify/#pinnacle-brand')},audience:{'@type':'Audience',audienceType:'Families and professionals supporting children aged 0–12'},citation:sources.map(source=>source.href)}]:[{'@type':'DefinedTerm','@id':entityId,name:page.label,url:canonical,description:page.direct,subjectOf:sources.map(source=>source.href),isPartOf:{'@id':productId}}];
+const speechExampleLink=speechModuleExamples[page.slug];
 const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].includes(page.slug)?undefined:'2026-09-30';
 ---
 
@@ -106,7 +108,7 @@ const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].
 
       <section class="wave2-section wave2-module-explain" id="what-it-does" aria-labelledby="wave2-answer-title"><div class="wave2-wrap wave2-explain-grid"><div><p class="wave2-kicker">The plain answer</p><h2 id="wave2-answer-title">What {page.short} contributes</h2><p class="wave2-answer">{page.direct}</p><p>{page.purpose}</p><a class="wave2-text-link" href={focusSources[0].href}>Check the source for this function <Icon name="arrow" size={18}/></a></div><aside><span class="wave2-aside-icon"><Icon name={moduleIcons[page.slug]} size={30}/></span><h3>What your family can take into the next conversation</h3><p>{editorial.familyResult}</p><strong>{editorial.callQuestion}</strong></aside></div></section>
 
-      <section class="wave2-section wave2-process" aria-labelledby="wave2-process-title"><div class="wave2-wrap"><div class="wave2-section-title"><p class="wave2-kicker">How the decision becomes useful</p><h2 id="wave2-process-title">{page.mechanismTitle}</h2><p>{page.question}</p></div><ol>{page.example.map(([title,copy],i)=><li><span>{String(i+1).padStart(2,'0')}</span><div><h3>{title}</h3><p>{copy}</p></div></li>)}</ol><p class="wave2-takeaway"><Icon name="heart" size={28}/>{page.takeaway}</p></div></section>
+      <section class="wave2-section wave2-process" aria-labelledby="wave2-process-title"><div class="wave2-wrap"><div class="wave2-section-title"><p class="wave2-kicker">How the decision becomes useful</p><h2 id="wave2-process-title">{page.mechanismTitle}</h2><p>{page.question}</p></div><ol>{page.example.map(([title,copy],i)=><li><span>{String(i+1).padStart(2,'0')}</span><div><h3>{title}</h3><p>{copy}</p></div></li>)}</ol>{speechExampleLink&&<p><a class="wave2-text-link" href={'/top-speech-therapy-center-india-proven-improvement-rate#'+speechExampleLink.fragment}>{speechExampleLink.label} →</a></p>}<p class="wave2-takeaway"><Icon name="heart" size={28}/>{page.takeaway}</p></div></section>
 
       <section class="wave2-section wave2-context" aria-labelledby="wave2-context-title"><div class="wave2-wrap wave2-context-grid"><div><p class="wave2-kicker">Its place in the whole</p><h2 id="wave2-context-title">{editorial.stage}. A child’s life remains the purpose.</h2><p>AbilityScore®, the seven Readiness views, child-specific planning, professionally guided activity, everyday practice, family observations and reassessment can work together when they are relevant to the child. <a href={url('/pinnacleai')}>See the complete seven-stage journey ↗</a></p></div><nav aria-label="Continue through the PinnacleAI system"><a href={url('/'+previous.slug)}><small>Previous part</small><strong>{previous.short}</strong></a><a href={url('/'+next.slug)}><small>Next part</small><strong>{next.short}</strong></a><a href={url(serviceLink.href)}><small>Connected care</small><strong>{serviceLink.label}</strong></a></nav></div></section>
     </>}

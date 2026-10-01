@@ -1,5 +1,4 @@
-import { speechOffer } from './speech-offer';
-export const speechServiceFacts = {
+{
   "title": "Pinnacle speech-service information",
   "url": "https://www.pinnacleblooms.org/speech-therapy/service-information",
   "checkedOn": "2026-09-27",
@@ -13,9 +12,10 @@ export const speechServiceFacts = {
   "feeStatus": "Speech and language assessment: listed value INR 25999, current offer FREE. Ongoing therapy is priced separately.",
   "sources": [
     {
-      "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/speech-service-information-20260928.json",
-      "retrievedOn": "2026-10-01",
-      "scope": "Preserved 28 September Pinnacle service-information edition: assessment process, duration, report, parent review and confirmed offer. The historical capture hash within that edition identifies an earlier private capture, not the current live page."
+      "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "retrievedOn": "2026-09-27",
+      "scope": "Previous edition: assessment process, duration, report and session structure",
+      "archivedSha256": "6d3837ea17f54046c5abdfc3adb564eb85d6dea48be3a79def66ac25e33b5dc9"
     }
   ],
   "phone": "+919100181181",
@@ -30,9 +30,6 @@ export const speechServiceFacts = {
     "scope": "Assessment only; ongoing therapy is priced separately."
   },
   "offerHistory": "Current offer and listed value confirmed by Pinnacle on 27 September 2026; supersedes earlier campaign price information.",
-  "updatedOn": "2026-10-01",
+  "updatedOn": "2026-09-28",
   "appointmentConfirmation": "The team contacts the family to confirm the centre and appointment. An enquiry is not a confirmed appointment."
-};
-speechServiceFacts.assessmentOffer.bookingUrl=speechOffer.url;
-speechServiceFacts.assessmentOffer.price=speechOffer.price;
-speechServiceFacts.assessmentOffer.listedValue=speechOffer.listedValue;
+}

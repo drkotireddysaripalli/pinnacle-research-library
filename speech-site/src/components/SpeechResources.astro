@@ -1,5 +1,7 @@
 ---
 import Icon from './Icon.astro';
+import {governmentSpeechResources} from '../data/speech-resources';
+const {governmentResources=false}=Astro.props;
 ---
 <section class="section wrap family-resources" id="family-resources" aria-labelledby="resources-title">
   <div class="story-heading"><p class="eyebrow">Useful before and between visits</p><h2 id="resources-title">Bring what you notice.<br/><em>Build the picture together.</em></h2><p>A few familiar examples can make your conversation more useful. Read, print or share these guides with your family and your child’s teacher.</p></div>
@@ -7,4 +9,5 @@ import Icon from './Icon.astro';
     <a href="/speech-therapy/first-visit-guide"><Icon name="book" size={34}/><h3>Your first-visit guide</h3><p>What to bring, what to ask and what to confirm before you arrive.</p><strong>Open the family guide →</strong></a>
     <a href="/speech-therapy/teacher-observation-guide"><Icon name="people" size={34}/><h3>Home and classroom observations</h3><p>Capture the situation, communication and support that made a difference.</p><strong>Open the observation guide →</strong></a>
   </div>
+  {governmentResources&&<div class="speech-government" id="government-resources"><h3>Public guidance for the questions families ask.</h3><p>These government-owned resources offer general information alongside your conversation with a professional.</p><div class="speech-government-grid">{governmentSpeechResources.map(resource=><a href={resource.href}><Icon name={resource.icon} size={28}/><span class="speech-resource-owner">{resource.institution}</span><h4>{resource.name}</h4><p>{resource.text}</p><strong>Read the guidance ↗</strong></a>)}</div><p class="source-note">Independent public guidance. Linking a resource does not imply that the institution endorses Pinnacle. Milestone checklists do not replace assessment.</p></div>}
 </section>

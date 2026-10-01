@@ -37,7 +37,7 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'abilityscore', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'AbilityScore®', label:'AbilityScore®', title:'AbilityScore® | Understand Abilities, Plan for Everyday Life',
+    slug:'abilityscore', updatedOn:'2026-10-01', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'AbilityScore®', label:'AbilityScore®', title:'AbilityScore® | Understand Abilities, Plan for Everyday Life',
     description:'AbilityScore helps a professional discuss what a child can do now and which everyday goal may come next. See a toy-choice example, 0–1000 limits and sources.',
     eyebrow:'Start with what your child can do', headline:'Measure the starting picture. Keep your child bigger than any score.',
     lead:'You notice what your child understands, chooses, tries and enjoys. AbilityScore gives the care team a structured way to discuss current abilities and change over time, so the next goal can serve a real moment in life.',
@@ -59,7 +59,7 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'seven-readiness-indexes', short:'7 Readiness Indexes', label:'Seven Readiness Indexes', title:'Seven Readiness Indexes | A Fuller View of Your Child’s Next Step',
+    slug:'seven-readiness-indexes', updatedOn:'2026-10-01', short:'7 Readiness Indexes', label:'Seven Readiness Indexes', title:'Seven Readiness Indexes | A Fuller View of Your Child’s Next Step',
     description:'Explore seven PinnacleAI Readiness views through a child’s peer-play goal. See what each view can help discuss, its limits and the BIS source.',
     eyebrow:'Seven views · One child', headline:'See different kinds of readiness without reducing your child to one label.',
     lead:'A child may be ready to do one thing with less support while another part of life still needs a different approach. Seven separate views help a team ask better questions about communication, movement, learning, routines and participation.',

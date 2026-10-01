@@ -1,12 +1,13 @@
 ---
 import { actions, url } from '../data/site';
-const { focused = false, firstLabel = 'First assessment', firstHref = '#assessment-start', evidenceHref = '#pinnacle-evidence', enrolHref = '/enroll-autism-speech-aba-therapies-india' } = Astro.props;
+import Icon from './Icon.astro';
+const { focused = false, speechActions = false, firstLabel = 'First assessment', firstHref = '#assessment-start', evidenceHref = '#pinnacle-evidence', enrolHref = '/enroll-autism-speech-aba-therapies-india' } = Astro.props;
 const choices = focused ? [
   [firstLabel,firstHref],
   ['Find a centre','#centres'],
   ['Verify the evidence',evidenceHref],
   ['Citations','/verify/evidence/cite.html'],
-  ['Enrol at Pinnacle',enrolHref]
+  [speechActions ? 'FREE assessment' : 'Enrol at Pinnacle',enrolHref]
 ] : actions;
 ---
-<nav class="action-strip" aria-label="I’m here to"><div class="wrap"><strong>I’m here to</strong><div class="action-links">{choices.map(([label,path]) => <a href={path.startsWith('#') ? path : url(path)}>{label}</a>)}</div></div></nav>
+<nav class:list={['action-strip',{'speech-actions':speechActions}]} aria-label="I’m here to"><div class="wrap"><strong>I’m here to</strong><div class="action-links">{choices.map(([label,path],i) => <a href={path.startsWith('#') ? path : url(path)}>{speechActions&&<Icon name={['people','pin','shield','book','plan'][i]} size={22}/>}<span>{label}</span>{speechActions&&<span aria-hidden="true">→</span>}</a>)}</div></div></nav>

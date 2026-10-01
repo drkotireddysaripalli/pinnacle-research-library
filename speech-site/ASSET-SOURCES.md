@@ -197,3 +197,14 @@ V137 removed the three retired non-founder portrait source files from current bu
 ## About family-continuity creative · v140 · 1October2026
 
 `src/assets/about-family-continuity-20261001.png` is a complete original1536×1024English creative made through the built-in ChatGPT image tool. Exact prompt: sibling `.prompt.txt`. Approved wordmark and Framework social poster were visual references. Original: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-f8f50201-a611-4557-a4af-e42260a0e769.png`. Family conversation, child play, supported home routine and review were generated with the design/typography/branding together. Fictional campaign scenes, no real outcome claim or synthetic founder identity. Full-sleeve branded professional coats, correct national phone and quiet named-software scope panels inspected. Responsive WebP derivatives supplement the unchanged About hero/social image. Complete family journey is also HTML and reading data; no API-key route or pasted-text substitute.
+
+## Speech narrative creatives · v160 · 1 October 2026
+
+Final first-visit asset is the built-in edit output `exec-7bb4e501-b862-4e13-8220-b45b51d8b6a3.png` in the same generated-images directory. It corrects only the background BIS wording to “BIS • IS 23485:2019”; the original composition remains. Original and corrected generated outputs are retained.
+
+Both original English creatives were generated as complete branded compositions using the built-in ChatGPT image-generation tool in this session. No external API-key route, separately composited text, invented certificates or documented patient outcome is involved. Exact generator model/version and billing were not exposed by the tool.
+
+- `src/assets/speech-first-visit-branded-20261001.png`: landscape 1536 × 1024; mother, father, active preschool child and full-sleeve branded professional; first-visit confidence, FREE assessment and 9100 181 181. Original output: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-d90b5625-4b25-4ed8-aabb-dc73c41cb162.png`.
+- `src/assets/speech-everyday-review-branded-20261001.png`: portrait 1122 × 1402; one asking-for-help example across family practice and review; a phone-oriented composition. Original output: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-dee5f8b2-9934-4e0e-889d-c5232aa40096.png`.
+
+References: the official `pinnacle-blooms-network-lockup.png` and accepted `speech-share-20260928.png`; both inspected before generation. Prompts are saved under `reviews/QUALITY-PASS-20261001/` with matching creative names. Outputs visually inspected; illustrative scenes, accurate phone and quiet named-software scope panels. Original generated files retained. Astro supplies responsive WebP derivatives with dimensions; all essential meaning remains in HTML. Existing Speech hero and approved OG poster remain unchanged.

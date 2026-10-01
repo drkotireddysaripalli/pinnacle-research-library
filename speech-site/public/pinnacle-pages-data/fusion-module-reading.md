@@ -56,3 +56,5 @@ School and other external observations should be shared only through appropriate
 - [Reassess · Review · Repeat](https://www.pinnacleblooms.org/reassess-review-repeat)
 
 Call 9100 181 181 or [find a centre](https://www.pinnacleblooms.org/centers). A visit, professional and fees are confirmed by the team. PinnacleAI is non-diagnostic and individual outcomes are not guaranteed.
+
+[Follow a speech goal from family observation to the next decision](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#everyday-communication)

@@ -1,3 +1,4 @@
+import {speechModuleExamples} from '../src/data/speech-resources.ts';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {pinnacleWave,waveSources} from '../src/data/pinnacleai-wave.ts';
@@ -12,6 +13,8 @@ const claimKeys={pinnacleai:['model','md5'],abilityscore:['methods','validation'
 for(const page of pinnacleWave){
   const href=origin+'/'+page.slug;
   const editorial=pinnacleEditorial[page.slug];
+  const speechLink=speechModuleExamples[page.slug];
+  const speechUrl=speechLink?origin+'/top-speech-therapy-center-india-proven-improvement-rate#'+speechLink.fragment:null;
   const sources=page.sourceKeys.map(key=>({id:key,name:sourceName[key],url:origin+waveSources[key],limit:sourceLimit[key]}));
   const claims=[
     {statement:editorial.decision,kind:'programme explanation',source:origin+waveSources[claimKeys[page.slug][0]],limit:sourceLimit[claimKeys[page.slug][0]]},
@@ -19,10 +22,13 @@ for(const page of pinnacleWave){
     {statement:page.limit,kind:'claim boundary',source:origin+waveSources[claimKeys[page.slug][1]],limit:sourceLimit[claimKeys[page.slug][1]]}
   ];
   const record={title:page.title,url:href,updated:page.updatedOn||'2026-09-30',operator:'Bharath Healthcare Laboratories Private Limited',brand:'Pinnacle Blooms Network',software:'PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12',parentMoment:editorial.moment,lifeDecision:editorial.decision,familyDiscussion:editorial.familyResult,directAnswer:page.direct,lifePurpose:page.purpose,illustrativeExample:{title:page.exampleTitle,description:page.exampleLead,steps:page.example.map(([title,description])=>({title,description})),status:'Fictional explanatory example; not a patient story or observed result.'},mechanism:page.mechanism,limit:page.limit,claimSourceMap:claims,sources,relatedPages:pinnacleWave.filter(item=>item.slug!==page.slug).map(item=>({name:item.short,url:origin+'/'+item.slug})),questions:page.faqs};
+  if(speechLink)record.relatedPages.push({name:speechLink.label,url:speechUrl});
   await fs.writeFile(path.join(data,`${page.slug}-sources.json`),JSON.stringify(record,null,2)+'\n');
   const text=[page.title,href,'',`Parent moment: ${editorial.moment}`,`Decision this page explains: ${editorial.decision}`,`Family discussion: ${editorial.familyResult}`,'',`Direct answer: ${page.direct}`,`Life purpose: ${page.purpose}`,`Boundary: ${page.limit}`,'','Illustrative example: '+page.exampleTitle,page.exampleLead,...page.example.map(([title,description],i)=>`${i+1}. ${title}: ${description}`),'','Claim/source links:',...claims.map(claim=>`- ${claim.statement} → ${claim.source} (${claim.kind}; ${claim.limit})`),...(page.includeReadingFaqs?['','Questions:',...page.faqs.map(f=>f.question+'\n'+f.answer)]:[]),'','Further sources:',...sources.map(source=>`- ${source.name}: ${source.url} — ${source.limit}`),'','Operator: Bharath Healthcare Laboratories Private Limited. Brand: Pinnacle Blooms Network. Phone: 9100 181 181 (tel:+919100181181).'];
+  if(speechLink)text.push('',speechLink.label+': '+speechUrl);
   await fs.writeFile(path.join(data,`${page.slug}-sources.txt`),text.join('\n')+'\n');
   const md=[`# ${page.title}`,`Canonical: ${href}`,'',`> ${editorial.opening}`,'',editorial.lead,'',`## The family question`,editorial.moment,'',`## What this page helps decide`,editorial.decision,'',`## What the module does`,page.direct,'',`## One illustrative everyday moment`,page.exampleTitle,page.exampleLead,...page.example.map(([title,description],i)=>`${i+1}. **${title}:** ${description}`),'',`## Claim and source map`,...claims.map(claim=>`- **${claim.kind}:** ${claim.statement} [Source](${claim.source}). ${claim.limit}`),'',`## Boundary`,page.limit,...(page.includeReadingFaqs?['','## Questions',...page.faqs.map(f=>'### '+f.question+'\n'+f.answer)]:[]),'',`## Further sources`,...sources.map(source=>`- [${source.name}](${source.url}): ${source.limit}`),'',`## Continue through PinnacleAI`,...pinnacleWave.filter(item=>item.slug!==page.slug).map(item=>`- [${item.short}](${origin}/${item.slug})`),'',`Call 9100 181 181 or [find a centre](${origin}/centers). A visit, professional and fees are confirmed by the team. PinnacleAI is non-diagnostic and individual outcomes are not guaranteed.`];
+  if(speechLink)md.push('','['+speechLink.label+']('+speechUrl+')');
   await fs.writeFile(path.join(data,`${page.slug}-reading.md`),md.join('\n')+'\n');
 }
 const xml='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+pinnacleWave.map(page=>`  <url><loc>${origin}/${page.slug}</loc><lastmod>${page.updatedOn||'2026-09-30'}</lastmod></url>`).join('\n')+'\n</urlset>\n';

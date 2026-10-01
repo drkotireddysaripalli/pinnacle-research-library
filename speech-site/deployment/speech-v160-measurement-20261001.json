@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-01T13:14:20.229Z",
+  "phase": "V159 before release",
+  "events": [
+    {
+      "host": "www.googletagmanager.com",
+      "path": "/gtag/js",
+      "id": "AW-10810823199"
+    },
+    {
+      "host": "www.pinnacleblooms.org",
+      "path": "/pinnacle-pages-scripts/google-ads-call.js",
+      "id": null
+    },
+    {
+      "host": "googleads.g.doubleclick.net",
+      "path": "/pagead/viewthroughconversion/10810823199/",
+      "id": null
+    },
+    {
+      "host": "ad.doubleclick.net",
+      "path": "/ccm/s/collect",
+      "id": null
+    },
+    {
+      "host": "www.googleadservices.com",
+      "path": "/pagead/conversion/10810823199/wcm",
+      "id": null
+    }
+  ],
+  "before": {
+    "cookies": [
+      {
+        "name": "_gcl_au",
+        "domain": ".pinnacleblooms.org"
+      },
+      {
+        "name": "test_cookie",
+        "domain": ".doubleclick.net"
+      }
+    ],
+    "commands": [
+      [
+        "config",
+        "AW-10810823199"
+      ],
+      [
+        "config",
+        "AW-10810823199/VNUcCMSy3YobEJ-kgKMo",
+        {
+          "phone_conversion_number": "9100181181"
+        }
+      ]
+    ]
+  },
+  "after": {
+    "cookies": [
+      {
+        "name": "_gcl_au",
+        "domain": ".pinnacleblooms.org"
+      },
+      {
+        "name": "test_cookie",
+        "domain": ".doubleclick.net"
+      }
+    ],
+    "commands": [
+      [
+        "config",
+        "AW-10810823199"
+      ],
+      [
+        "config",
+        "AW-10810823199/VNUcCMSy3YobEJ-kgKMo",
+        {
+          "phone_conversion_number": "9100181181"
+        }
+      ]
+    ]
+  },
+  "declineAvailable": true,
+  "scope": "One clean anonymous browser observation; cookie names only, no personal details, no form submission, no Ads click or conversion."
+}

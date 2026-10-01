@@ -1,5 +1,5 @@
 {
-  "updatedOn": "2026-09-28",
+  "updatedOn": "2026-10-01",
   "page": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
   "publisher": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
@@ -16,7 +16,7 @@
       ]
     },
     "measurement": {
-      "section": "assessment-start",
+      "section": "first-visit",
       "claim": "We bring professional assessment, AbilityScore® measurement and your observations together to understand the starting point and agree meaningful goals.",
       "links": [
         {
@@ -146,6 +146,42 @@
           "label": "Free Sale Certificate · 23 September 2026",
           "url": "/verify/evidence/records/fsc.html",
           "kind": "Export-purpose certificate; not foreign market authorisation"
+        }
+      ]
+    },
+    "guidance": {
+      "section": "government-resources",
+      "claim": "Government-owned resources provide general communication, development, hearing and early-intervention guidance. They are not endorsements of Pinnacle or substitutes for an individual assessment.",
+      "links": [
+        {
+          "label": "AIISH communication skills",
+          "url": "https://aiishmysore.in/public/Improving-Communication-Skills-in-Children",
+          "kind": "Government of India institution · public guidance"
+        },
+        {
+          "label": "NHM Rashtriya Bal Swasthya Karyakram",
+          "url": "https://nhm.gov.in/index1.php?lang=1&level=0&lid=773&linkid=499",
+          "kind": "Government of India programme information"
+        },
+        {
+          "label": "NIDCD speech and language milestones",
+          "url": "https://www.nidcd.nih.gov/health/speech-and-language",
+          "kind": "US NIH institute · public guidance"
+        },
+        {
+          "label": "CDC developmental milestones",
+          "url": "https://www.cdc.gov/act-early/milestones/",
+          "kind": "US government · birth to five milestone guidance"
+        },
+        {
+          "label": "CDC hearing loss in children",
+          "url": "https://www.cdc.gov/hearing-loss-children/about/index.html",
+          "kind": "US government · public guidance"
+        },
+        {
+          "label": "NHS early learning and development",
+          "url": "https://www.nhs.uk/best-start-in-life/early-learning-development/",
+          "kind": "UK public health service · family guidance"
         }
       ]
     }

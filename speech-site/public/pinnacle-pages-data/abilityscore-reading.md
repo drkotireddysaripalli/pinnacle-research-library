@@ -56,3 +56,5 @@ No. AbilityScore is clinician-administered and clinically governed. Family quest
 - [Reassess · Review · Repeat](https://www.pinnacleblooms.org/reassess-review-repeat)
 
 Call 9100 181 181 or [find a centre](https://www.pinnacleblooms.org/centers). A visit, professional and fees are confirmed by the team. PinnacleAI is non-diagnostic and individual outcomes are not guaranteed.
+
+[See how a communication goal shapes speech therapy](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#everyday-communication)
