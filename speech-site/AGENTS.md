@@ -20,6 +20,8 @@ The owner-approved Speech/Occupational Therapy presentation is fixed. Use the co
 
 V157 applies the owner's explicit responsive follow-up in `shared-shell.css` and common components: Enrol at the right, readable phone rails, a properly isolated compact menu, initially expanded footer links and usable evidence controls. Preserve these responsive fixes together with the selected desktop design. Judge the footer's initial state and actual interactions; do not open everything in a test before asserting the initial mobile experience.
 
+V158 removes the separate mobile header arrow/counter row at the owner's request: the nine cards already scroll, including Citations. Keep the clearer mobile Search icon/caption and existing Enrol control. Footer evidence controls remain separate and unchanged.
+
 For every substantial therapy-page change:
 
 1. Establish the visitor's concern, a clear first step and the source-backed service facts.

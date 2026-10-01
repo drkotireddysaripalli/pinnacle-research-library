@@ -41,10 +41,14 @@ export async function checkSharedShell(page){
   const search=await page.locator('.portal-search').boundingBox();
   expect(enrol.x).toBeGreaterThan(search.x);
   if(width<=900){
-    const next=page.getByRole('button',{name:'Next pinnacle links',exact:true});
     const rail=page.locator('#portal-authority-rail');
-    await next.click();
+    await rail.hover();await page.mouse.wheel(2000,0);
     await expect.poll(()=>rail.evaluate(e=>e.scrollLeft)).toBeGreaterThan(40);
+    await expect(rail.locator('a').last()).toBeInViewport();
+    await expect(page.locator('.shared-rail-authority')).toHaveCount(0);
+    const search=page.locator('.portal-search>summary');
+    await search.click();await expect(page.locator('#portal-search-input')).toBeVisible();
+    await page.keyboard.press('Escape');await expect(search).toBeFocused();
     await expect(page.locator('.portal-therapy-menu').first()).toBeHidden();
     const menu=page.locator('.portal-mobile-menu-trigger');
     await menu.click();

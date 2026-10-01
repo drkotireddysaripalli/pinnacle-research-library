@@ -4,7 +4,6 @@ import logo from '../assets/pinnacle-blooms-network-lockup.png';
 import { phone, url } from '../data/site';
 import navigation from '../data/portal-navigation.json';
 import Icon from './Icon.astro';
-import ScrollRailControls from './ScrollRailControls.astro';
 const { currentPath } = Astro.props;
 const priorityDirectoryTitles = new Set(['About Us','Therapy Services','Evidence, citations & recognition']);
 const directoryGroups = navigation.footerColumns.flat().filter(g => g.links.length > 1 && !priorityDirectoryTitles.has(g.title));
@@ -23,14 +22,13 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
           <a class="portal-whatsapp" href="https://wa.me/919100181181" aria-label="WhatsApp Pinnacle at 9100 181 181"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#27bb47" d="M12 1a11 11 0 0 0-9.5 16.6L1 23l5.5-1.4A11 11 0 1 0 12 1Z"/><path fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" d="M7.5 6.5c-2 4 4 10 8 8l1-2-3-1-1 1c-1.5-.7-2.3-1.5-3-3l1-1-1-2-2-.5Z"/></svg><span>WhatsApp</span></a>
         </div>
         <a class="portal-location" href={url('/centers')} aria-label="Find a centre"><Icon name="pin" /><span>Find a centre</span></a>
-        <details class="portal-search"><summary aria-label="Search Pinnacle"><Icon name="search" /></summary><form action={url('/search')} method="get"><label for="portal-search-input">Search Pinnacle</label><div><input id="portal-search-input" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
+        <details class="portal-search"><summary aria-label="Search Pinnacle"><Icon name="search" /><span class="portal-search-caption">Search</span></summary><form action={url('/search')} method="get"><label for="portal-search-input">Search Pinnacle</label><div><input id="portal-search-input" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
         <a class="portal-enrol" href={enrolmentUrl} aria-label="Enrol at Pinnacle" data-cta="header-enrol"><Icon name="arrow" /><span>Enrol at Pinnacle</span></a>
       </nav>
     </div>
   </div>
   <nav class="portal-main-nav" aria-label="Pinnacle approach, products and evidence">
     <div class="portal-container portal-main-list" id="portal-authority-rail">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{' '}{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</div>
-    <ScrollRailControls target="portal-authority-rail" label="Pinnacle links" count={navigation.main.length} kind="authority" shortcut={{label:'Citations',href:url('/verify/evidence/cite.html')}} />
   </nav>
   <nav class="portal-therapy-nav" aria-label="Therapies and complete Pinnacle navigation"><button class="portal-mobile-menu-trigger" type="button" aria-controls="portal-complete-directory" aria-expanded="false"><Icon name="menu" size={18} />More</button><div class="portal-container portal-therapy-list">
     {navigation.therapy.map(group=><div class="portal-therapy-group"><a class="portal-therapy-title" href={url(group.url)} aria-current={group.url===currentPath?'page':undefined}>{group.label}</a><details class="portal-therapy-menu"><summary aria-label={`${group.label} menu`}><Icon name="chevron" size={15} /></summary><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>)}

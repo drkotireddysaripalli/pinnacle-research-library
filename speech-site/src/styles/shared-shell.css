@@ -1,6 +1,7 @@
 /* Owner-selected Speech/OT desktop reference stays in portal-shell.css and
    readability.css. V157: explicit owner-requested phone/tablet corrections. */
 main figcaption a{text-decoration:underline;text-underline-offset:.15em}
+.portal-search-caption{display:none}
 
 .shared-rail-controls{display:none}
 .shared-rail-controls[hidden]{display:none!important}
@@ -9,7 +10,6 @@ main figcaption a{text-decoration:underline;text-underline-offset:.15em}
 .shared-rail-controls button:focus-visible{outline:3px solid #c6084c;outline-offset:2px}
 .shared-rail-controls>span{font-size:12px;line-height:1.4;text-align:center;color:#514656}
 .shared-rail-controls [data-rail-position]{display:block;font-weight:700}
-.portal-main-nav .shared-rail-controls>a{flex:0 0 auto;min-height:44px;padding:8px 4px;font-size:12px;font-weight:700;box-shadow:none;border:0;color:#6b215f;text-decoration:underline}
 
 @media(min-width:901px) and (max-width:1100px){
   .portal-main-list{grid-template-columns:repeat(9,minmax(0,1fr))}
@@ -23,7 +23,6 @@ main figcaption a{text-decoration:underline;text-underline-offset:.15em}
   .portal-main-nav:after{display:none}
   .portal-main-nav .portal-main-list>a{flex-basis:180px;min-height:90px;padding:10px 12px}
   .portal-nav-label,.portal-nav-detail{font-size:12px;line-height:1.45}
-  .shared-rail-authority{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:4px 15px;border-bottom:1px solid #e6dce8}
   .portal-therapy-menu{display:none}
   .portal-therapy-title{font-size:13px;white-space:nowrap}
   .portal-mobile-menu-trigger{font-size:12px;flex-basis:80px}
@@ -40,6 +39,10 @@ main figcaption a{text-decoration:underline;text-underline-offset:.15em}
   .shared-rail-evidence{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}
 }
 @media(max-width:600px){
+  .portal-search summary{flex-direction:column;gap:1px;border:1px solid #d9b9d2;border-radius:10px;background:#fff4f8;color:#6b215f}
+  .portal-search summary svg{width:20px;height:20px;stroke-width:2}
+  .portal-search-caption{display:block;font-size:11px;line-height:1.35;text-transform:none}
+  .portal-search[open] summary{background:#8f2879;color:#fff;border-color:#8f2879}
   .portal-top{grid-template-rows:58px 64px}
   .portal-national{height:64px}
   .portal-national a{min-height:62px}
