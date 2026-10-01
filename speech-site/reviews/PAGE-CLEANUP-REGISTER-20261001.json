@@ -5,8 +5,8 @@
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
     "keep": 15,
-    "completed": 4,
-    "queued": 29
+    "completed": 5,
+    "queued": 28
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -77,14 +77,18 @@
       "id": "assessment",
       "name": "Child Development Assessment",
       "url": "https://www.pinnacleblooms.org/speech-aba-autism-assessments",
-      "state": "queued",
+      "state": "completed",
       "kind": "substantial",
       "tasks": [
         "Complete the invitation-to-play sketch with a clearly illustrative observation→professional interpretation→next decision.",
         "Show how context changes the next choice in an accessible inline board; do not invent an actual score, result or universally supplied deliverable.",
         "Use existing suitable imagery where it explains the job; update exports, check and release."
       ],
-      "sequence": 5
+      "sequence": 5,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-ASSESSMENT-V141-20261001.md",
+      "sourceCommit": "892f127",
+      "workerVersion": "b7ad5854-54fc-4882-833d-881ddd8c9d12"
     },
     {
       "id": "autism-therapy",

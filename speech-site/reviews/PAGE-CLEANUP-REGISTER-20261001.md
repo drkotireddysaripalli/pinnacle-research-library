@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 4 completed, 29 remaining.** Leadership V137, Framework V138, Special Education V139 and About V140 are published and verified. Next: Assessment.
+**15 keep, 5 completed, 28 remaining.** Latest closure: Child Development Assessment V141. Next: Self-Sufficient.
 
 ## Initial decision
 
@@ -84,7 +84,9 @@ Canonical: [/about-pinnacle-proven-improvement-rate](https://www.pinnacleblooms.
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 5. Child Development Assessment · substantial
+### 5. Child Development Assessment · COMPLETED V141
+
+Closure: [Release receipt](../RELEASE-ASSESSMENT-V141-20261001.md). The task below is the accepted contract.
 
 Canonical: [/speech-aba-autism-assessments](https://www.pinnacleblooms.org/speech-aba-autism-assessments)
 

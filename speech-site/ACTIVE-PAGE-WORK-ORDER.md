@@ -1,8 +1,10 @@
 # Active page work order · sequential page corrections
 
+**LATEST CLOSED — V141:** Five-step contextual ability and review example, approved inline play scene and matching exports published; five local and five production responsive cases passed. Source 892f127; Worker b7ad5854-54fc-4882-833d-881ddd8c9d12; all177routes/fourbindings retained. Receipt: RELEASE-ASSESSMENT-V141-20261001.md.
+
 **CURRENT SEQUENCE:** follow `reviews/PAGE-CLEANUP-REGISTER-20261001.md` and its48row JSON.15 accepted bodies stay intact; Leadership, Framework, Special Education and About are completed;29 bounded corrections remain. Finish one page task and its release before the next. Shared-source defects are fixed once and verified for their affected rows. Source-gated policy decisions remain precise pending conditions while independent work proceeds.
 
-**NOW — ASSESSMENT V141:** expand the existing joining-a-game sketch to a five-step worked example: existing strength and support → interpretation in context → family/professional choice → relevant opportunity → observed-use review decision. Reuse the approved AbilityScore play scene, retain current first-visit/source/FAQ/lifecycle/phone, and mirror the example into JSON/text/Markdown. One focused changed-section check, push, union release, live read-back, close.
+**NOW — Self-Sufficient:** Complete the shoe/outings example with family/child choice, useful help or adaptation, two settings and one illustrative review decision. Build a practical participation-and-support board and use a fitting approved inline scene; generate only if the specific job is unmet. Keep independence compatible with useful tools/help; update exports, check and release.
 
 **ABOUT V140 CLOSED:** source9579462, Workera2c80185-c279-4451-9b89-ac3ee53d633d;177routes/fourbindings,48pagehashes/47unchangedbodies and seven focused production cases pass. Five family-journey steps, five service routes and original complete branded creative published. IndexNow singleURL200. Receipt `RELEASE-ABOUT-V140-20261001.md`.
 
