@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 5 completed, 28 remaining.** Latest closure: Child Development Assessment V141. Next: Self-Sufficient.
+**15 keep, 6 completed, 27 remaining.** Latest closure: Self-Sufficient V142. Next: Mainstream.
 
 ## Initial decision
 
@@ -96,7 +96,9 @@ Canonical: [/speech-aba-autism-assessments](https://www.pinnacleblooms.org/speec
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 6. Self-Sufficient · substantial
+### 6. Self-Sufficient · COMPLETED V142
+
+Closure: [Release receipt](../RELEASE-SELF-SUFFICIENT-V142-20261001.md). The task below is the accepted contract.
 
 Canonical: [/self-sufficient](https://www.pinnacleblooms.org/self-sufficient)
 

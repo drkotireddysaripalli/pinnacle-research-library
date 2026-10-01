@@ -5,8 +5,8 @@
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
     "keep": 15,
-    "completed": 5,
-    "queued": 28
+    "completed": 6,
+    "queued": 27
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -413,14 +413,18 @@
       "id": "self-sufficient",
       "name": "Self-Sufficient",
       "url": "https://www.pinnacleblooms.org/self-sufficient",
-      "state": "queued",
+      "state": "completed",
       "kind": "substantial",
       "tasks": [
         "Complete the shoe/outings example with family/child choice, useful help or adaptation, two settings and one illustrative review decision.",
         "Build a practical participation-and-support board and use a fitting approved inline scene; generate only if the specific job is unmet.",
         "Keep independence compatible with useful tools/help; update exports, check and release."
       ],
-      "sequence": 6
+      "sequence": 6,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-SELF-SUFFICIENT-V142-20261001.md",
+      "sourceCommit": "fe7616f",
+      "workerVersion": "a4ab8dbf-58b4-4d76-94e7-0d0613e83a35"
     },
     {
       "id": "service-information",
