@@ -1,96 +1,35 @@
-# Disclaimer & Limitations of Liabilities
+# Information, Care & Liability Boundaries
 
 Canonical: https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities
+Effective: 1 October 2026
+Version: 2026-10-01.1
+Operator: Bharath Healthcare Laboratories Private Limited
 
-Revision printed in the original: 01-10-2026
+## Information and decisions
 
-LAST REVISION: 01-10-2026
+Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited (BHCL). In these policies, “we”, “us” and “our” mean BHCL in its operation of Pinnacle Blooms Network.
 
-## Disclaimer and Limitation of Liability - Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd.
+Website content provides information about our approach, services and evidence. It does not replace individual assessment, consent or professional advice. A diagnosis, an eligibility decision or a care plan cannot be determined from a public page alone.
 
-## Section 1: Introduction
+## Software and regulatory scope
 
- 1.1. Welcome to the Disclaimer and Limitation of Liability of Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle"), operated by Bharath HealthCare Laboratories P LIMITED ("Company").
+PinnacleAI GPT-OS v1.0.0 is non-diagnostic Class B developmental-support software. MD-5, BIS and FSC records have their printed scopes; they do not establish a therapist’s qualification, an individual centre’s current service availability, guaranteed effectiveness or a foreign marketing authorisation. Read the originals and their scope in [Verify](/verify/).
 
- 1.2. This Disclaimer and Limitation of Liability outlines the terms and conditions governing the use of the Pinnacle Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy & Allied Services ("Services") and disclaims liability for any damages or losses arising from the use of the Services.
+## Outcomes, examples and evidence
 
-## Section 2: General Disclaimer
+We work toward growing self-sufficiency and participation. Goals, suitable support and progress remain individual. Illustrative scenes explain a process; they are not patient outcomes. A service-volume count, study finding, testimonial and child-specific result are different forms of evidence and must be read with their definitions and dates.
 
- 2.1. The information, content, and materials provided by Pinnacle are for general informational purposes only. Pinnacle do not offer medical advice, diagnosis, or treatment. Users should consult qualified healthcare professionals for any medical concerns.
+## Availability and external systems
 
-## Section 3: No Medical Professional-Patient Relationship
+Confirm current appointments, fees, location and access with the receiving team. Information may change or need correction. External maps, search engines, platforms and applications are controlled by their respective providers. Public guidance and website services are not emergency services.
 
- 3.1. The use of Pinnacle Services does not establish a medical professional-patient relationship between the user and any healthcare provider affiliated with Pinnacle.
+## Responsibility and concerns
 
-## Section 4: Accuracy of Information
+No statement here excludes liability that cannot lawfully be excluded, waives statutory remedies or turns a complaint into acceptance of poor service. Specific disputes are assessed under the applicable agreement and law.
 
- 4.1. Pinnacle make reasonable efforts to ensure the accuracy and completeness of information provided. However, Pinnacle do not warrant the accuracy, reliability, or completeness of the content.
+Email [care@pinnacleblooms.org](mailto:care@pinnacleblooms.org) with the subject “Information or service concern”, a way to contact you and the information needed to understand your request. You can call [9100 181 181](tel:+919100181181) for guidance. Do not send passwords, OTPs, full card details or unnecessary child records.
 
-## Section 5: Non-Endorsement
+Nothing in this policy removes a right, remedy, complaint route or protection that applicable law gives you. Booking-specific written terms must be disclosed before you agree; they cannot override mandatory law.
 
- 5.1. Pinnacle do not endorse or recommend any specific healthcare provider, treatment, product, or service mentioned on the platform.
-
-## Section 6: Use at Your Own Risk
-
- 6.1. By accessing or using the Pinnacle Services, each user expressly, unambiguously, and unequivocally acknowledges and agrees that they are doing so entirely at their own risk. To the fullest extent permitted by applicable law, Pinnacle, its affiliates, officers, directors, employees, agents, and licensors shall not be liable for any direct, indirect, incidental, consequential, special, punitive, or exemplary damages or losses of any kind, including but not limited to loss of profits, revenue, data, or other intangibles, whether based on contract, tort, strict liability, negligence, or any other legal theory, arising out of or in connection with the use of, or inability to use, the Services. This limitation of liability applies even if Pinnacle has been expressly advised of the possibility of such damages or losses. By agreeing to these terms, users hereby forfeit any and all rights to challenge or dispute this limitation of liability.
-
-## Section 7: No Warranty
-
- 7.1. Pinnacle provides the Services on an "as is" and "as available" basis, without any representations, warranties, covenants, or guarantees of any kind, either express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, or non-infringement. By accessing or using the Services, each user expressly, unambiguously, and unequivocally acknowledges and agrees that they assume all risks, both known and unknown, associated with the use of the Services, and that Pinnacle shall not be liable for any losses or damages arising from such use. By agreeing to these terms, users hereby forfeit any and all rights to challenge or dispute this limitation of liability.
-
-## Section 8: Limitation of Liability
-
- 8.1. To the maximum extent permitted by applicable law, the Company, its affiliates, and their respective directors, officers, employees, or agents shall not be liable for any direct, indirect, punitive, incidental, special, consequential, or exemplary damages, including without limitation damages for loss of profits, goodwill, data, or other intangible losses. This limitation applies to any claim arising from or related to the use or inability to use Pinnacle Services, whether based on warranty, contract, tort, or any other legal theory, and whether or not the Company has been advised of the possibility of such damages. By accessing or using the Pinnacle Services, each user expressly, unambiguously, and unequivocally acknowledges and agrees to this limitation of liability, and hereby forfeits any and all rights to challenge or dispute this limitation.
-
-## Section 9: Indemnification
-
- 9.1. Users expressly, unambiguously, and unequivocally agree to indemnify, defend, and hold harmless the Company, its affiliates, and their respective directors, officers, employees, and agents from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) that arise directly or indirectly from the user's violation of these terms and conditions, or from any activities or actions conducted by the user in connection with the use of the Services. This indemnification obligation will survive the termination or expiration of these terms and conditions and the user's use of the Services.
-
-## Section 10: Third-Party Content
-
- 10.1. Pinnacle may include content provided by third parties, which may not necessarily reflect the views of the Pinnacle. Pinnacle shall not be responsible for the accuracy or legality of such content.
-
-## Section 11: Medical Emergencies
-
- 11.1. In the case of medical emergencies or urgent situations requiring immediate attention, users are strongly advised to seek prompt medical care by contacting their local emergency services or qualified healthcare provider. The Services provided by the Company are not a substitute for emergency medical treatment, and the Company shall not be held liable for any outcomes resulting from the failure to seek appropriate medical attention in emergency or urgent situations.
-
-## Section 12: User Responsibility
-
- 12.1. Users expressly, unambiguously, and unequivocally acknowledge and agree that they are solely responsible for the use of the Services and for any decisions made based on the information provided through the Services. Pinnacle shall not be liable, under any circumstances, for any consequences, damages, or losses, whether direct or indirect, arising from the user's actions or decisions based on the use of the Services. By using the Services, users hereby forfeit any and all rights to challenge or dispute this limitation of liability.
-
-## Section 13: No Guarantee of Results
-
- 13.1. Pinnacle expressly disclaim any and all guarantees, warranties, or representations regarding the results or outcomes of any treatments, procedures, or therapies mentioned or discussed on the platform. Users expressly, unambiguously, and unequivocally acknowledge and agree that they assume all risks associated with the use of any treatments, procedures, or therapies based on the information provided through the Services. The Clinics shall not be liable for any consequences, whether favorable or adverse, arising from the user's reliance on such information.
-
-## Section 14: Website, Pinnacle App Availability
-
- 14.1. Pinnacle strive to provide uninterrupted access to the platform. However, Pinnacle do not guarantee continuous availability or uninterrupted access.
-
-## Section 15: User Accounts
-
- 15.1. Users are responsible for maintaining the confidentiality of their account information, including login credentials. Pinnacle shall not be liable for unauthorized access to user accounts.
-
-## Section 16: No Legal or Financial Advice
-
- 16.1. Pinnacle do not provide legal or financial advice. Users seeking such advice should consult qualified professionals.
-
-## Section 17: Changes to Services
-
- 17.1. Pinnacle reserves the unilateral right, at its sole discretion, to modify, suspend, or discontinue any part or all of the Services at any time, without prior notice or liability. Users expressly, unambiguously, and unequivocally acknowledge and agree that they assume all risks and potential consequences associated with such modifications, suspensions, or discontinuations. By using the Services, users hereby forfeit any and all rights to challenge or dispute Pinnacle's exercise of these rights.
-
-## Section 18: Change in Disclaimer
-
- 18.1. The Company reserves the unilateral right, at its sole discretion, to modify, amend, or revise the Disclaimer and Limitation of Liability sections at any time, without prior notice or liability to users. Users expressly, unambiguously, and unequivocally acknowledge and agree that by continuing to use the Services after any such modifications, they accept and are bound by the modified terms. Users hereby forfeit any and all rights to challenge or dispute the Company's exercise of this right.
-
-## Section 19: Acceptance of Terms
-
- 19.1. By accessing or using Pinnacle Services, you expressly, unambiguously, and unequivocally acknowledge and agree to comply with the terms and conditions outlined in the Disclaimer and Limitation of Liability. Your continued use of the Services constitutes your acceptance of any modifications, amendments, or revisions to these terms. By using the Services, you hereby forfeit any and all rights to challenge or dispute the terms contained in the Disclaimer and Limitation of Liability.
-
-## Section 20: Governing Law
-
- 20.1. The Disclaimer and Limitation of Liability shall be governed by and construed in accordance with the laws of India, without regard to its conflict of law principles. Any dispute, controversy, or claim arising out of or in connection with this policy shall be exclusively referred to and finally resolved by the competent courts of India. By accessing or using the Services, users expressly, unambiguously, and unequivocally consent to the exclusive jurisdiction and venue of the courts of India for any such disputes, and hereby forfeit any and all rights to challenge or dispute this jurisdiction and venue.
-
-## Section 21: Contact Information
-
- 21.1. If you have any questions or concerns regarding the Disclaimer and Limitation of Liability, please contact us using the information provided in the [Contact Information](/contact-information) section.
+This edition is effective from 1 October 2026. It replaces the previous public website wording for this subject. Material changes will be dated here. It does not retrospectively introduce charges or remove rights under an existing agreement.
 

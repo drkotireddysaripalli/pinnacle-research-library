@@ -1,127 +1,45 @@
-# Refund Policy
+# Refund & Cancellation Policy
 
 Canonical: https://www.pinnacleblooms.org/refund-policy
+Effective: 1 October 2026
+Version: 2026-10-01.1
+Operator: Bharath Healthcare Laboratories Private Limited
 
-Revision printed in the original: 01-10-2026
+## What applies to your booking
 
-LAST REVISION: 01-10-2026
+Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited (BHCL). In these policies, “we”, “us” and “our” mean BHCL in its operation of Pinnacle Blooms Network.
 
-## REFUND POLICY - Pinnacle Blooms Network unit of Bharath Healthcare Laboratories Pvt. Ltd.
+The written booking or programme terms supplied before payment explain cancellation, rescheduling, unused-session, transfer and refund conditions for that service. This policy provides the common review principles. An exception agreed in writing by an authorised representative is assessed with those terms and applicable law.
 
-## Bharath HealthCare Laboratories P LIMITED
- Suchitra, Hyderabad, TS, 500067
- India
+## Completed and unused services
 
- This Refund Policy outlines the terms and conditions governing refunds for products and services purchased from Pinnacle Blooms Network unit of Bharath Healthcare Laboratories Pvt. Ltd. ("Pinnacle") operated by Bharath HealthCare Laboratories P LIMITED ("Company") and provides specialized Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy & Allied Services ("Services").
+Fees for services properly provided are not ordinarily refundable solely because you later change your mind. Unused prepaid services, cancellations or a change in availability must be reviewed under the conditions disclosed before payment and applicable law. We do not introduce an undisclosed retrospective cancellation penalty or promise a universal cooling-off period.
 
-## 1. General Refund Policy
+## When to ask for billing or service review
 
- 1.1. Definition of Health Seekers: For the purposes of this policy, "health seekers" refers to Kids, Parents, Families any individual or entity availing the services or products offered by Pinnacle.
+- A duplicate, incorrect, unauthorised or failed-payment charge.
 
- 1.2. We, at Pinnacle, are dedicated to providing the highest standard, Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services to our health seekers / customers.
+- A service paid for but not provided, or a cancellation by the provider.
 
- 1.3. Due to the nature of medical services and our commitment to patient safety, we do not offer refunds for therapy consultations, treatments, or any other therapy and allied services provided by Pinnacle. All sales are final, and no refunds will be provided.
+- A material difference between the agreed service and what was provided.
 
- 1.4. By availing our Services or purchasing any products from Pinnacle, you acknowledge and agree to the terms of this Refund Policy, thereby giving your informed consent to the no-refund policy.
+- An applicable written exception, refund entitlement or statutory remedy.
 
- 1.5 By continuing to avail our services, You agree to accept as-is and never to challenge this Refund Policy
+“No refund” wording must not be used to defeat mandatory rights or avoid reviewing a deficient service or billing error. Where cancellation charges apply under relevant online-sale rules, the provider’s cancellation obligations must also be considered.
 
-## 2. Digital Products and Merchandise
+## Make a request
 
- 2.1. Pinnacle may offer digital products or merchandise for sale, such as health-related e-books, educational materials, or promotional items.
+Email [care@pinnacleblooms.org](mailto:care@pinnacleblooms.org) with the subject “Refund or cancellation review”, a way to contact you and the information needed to understand your request. You can call [9100 181 181](tel:+919100181181) for guidance. Do not send passwords, OTPs, full card details or unnecessary child records.
 
- 2.2. All sales of digital products and merchandise are final, and we do not offer refunds for these items.
+Include the invoice or booking reference, payment date and amount, service concerned, reason and requested resolution. A redacted receipt may help; do not email full card or account credentials. Keep the request and response. We will explain the applicable terms and decision in writing. Accepted refunds follow the authorised payment route within a reasonable period under applicable requirements; this page does not invent a fixed bank-settlement time.
 
- 2.3. Before purchasing any digital product or merchandise, please review all product details and specifications to make an informed decision.
+## Complaints, related terms and updates
 
-## 3. Physical Products (Material, Therapy Equipment, Medical Devices, etc.)
+Applicable online transaction complaint requirements include acknowledgement within 48 hours and redress within one month where the E-Commerce Rules apply. If a response does not resolve the issue, ask for escalation through [Contact and Grievance Information](/contact-information). Statutory complaint and dispute rights remain available.
 
- 3.1. In some cases, Pinnacle may provide medical devices, or other physical products as part of the treatment plan.
+[Payment and Billing](/payment-and-billing) · [Service Terms](/terms-of-service)
 
- 3.2. Due to patient safety and regulatory compliance, we do not accept returns or offer refunds for prescription medications, medical devices, or any other physical products dispensed or provided by Pinnacle.
+Nothing in this policy removes a right, remedy, complaint route or protection that applicable law gives you. Booking-specific written terms must be disclosed before you agree; they cannot override mandatory law.
 
- 3.3. If you have any concerns about the medical device prescribed or provided during your visit, please contact our customer support team within 24 hours to discuss the matter further. You can find this in our [Contact Information](/contact-information) section.
-
-## 4. Refund Exceptions
-
- No Exceptions: Any exceptions to this policy must be in writing and signed by an authorized representative of the Company. However, no service or product is explicitly mentioned as eligible for a refund in this policy.
-
-## 5. No Refund for Partial Usage
-
- 5.1. Finality: If you have utilized a portion of a service or product offered by Pinnacle, no refund will be provided for the unused portion.
-
-## 6. Refund Request Procedure
-
- 6.1. Contact: Despite our no-refund policy, if you believe that a refund is warranted, please contact our customer support team at [9100 181 181](tel:+919100181181) or care@pinnacleblooms.org.
-
- 6.2. Details: Provide the necessary details, such as the date of purchase, the service or product for which you are requesting a refund, and the reason for your request.
-
- 6.3. Final Decision: Our customer support team will review your request; The decision of the customer support team is final and binding. By continuing to avail our services, You forfeit your right to challenge this decision.
-
-## 7. Change in Treatment Plan
-
- 7.1. If there is a change in your therapy plan or medical condition during the course of your therapy services, resulting in a modification of services or products, no refund will be provided.
-
-## 8. Refund Processing Timeframe
-
- 8.1 Not Applicable: Since no refunds are provided, there is no processing timeframe involved for refunds.
-
-## 9. Refund Reversals
-
- 9.1. Not Applicable: Refund reversals do not apply as no refunds are granted under any circumstances.
-
-## 10. No Refunds for Insurance Payments
-
- 10.1. Finality: If you have made payments for our services through insurance coverage, no refunds will be processed for any amount paid.
-
-## 11. Feedback
-
- 11.1. Contact: If you have any concerns or feedback regarding your experience at our Clinics, please let us know, and we will do our best to address your concerns promptly.
-
-## 12. Currency and Taxes
-
- 12.1. Not Applicable: Since no refunds are provided, currency and taxes do not apply to the refund policy.
-
-## 13. Non-Transferability of Refunds
-
- 13.1. Not Applicable: Since no refunds are provided, the non-transferability of refunds does not apply.
-
-## 14. No Guarantee of Results
-
- 14.1. Disclaimer: Pinnacle strives to provide the best possible Services to our health seekers. However, we do not guarantee specific results or outcomes from the services or products offered.
-
-## 15. Contact Information
-
- If you have any questions or concerns about this Refund Policy or need further clarification, please contact us at:
-
- Pinnacle Blooms Network unit of
- Bharath HealthCare Laboratories P LIMITED
- Suchitra, Hyderabad, TS, 500067
- India
- Email: [care@pinnacleclinics.org]
- Phone: [[9100 181 181](tel:+919100181181)]
-
-## 16. Modification or Discontinuation of Refund Policy
-
- 16.1. The Company reserves the right to modify, update, or discontinue this Refund Policy at any time without prior notice.
-
- 16.2. By continuing to avail our services after any modifications to the Refund Policy, you agree to be bound by the revised terms.
-
-## 17. Language Versions
-
- 17.1. In the event of any discrepancy or inconsistency between translations of this Refund Policy in different languages, the English version shall prevail.
-
-## 18. Refund Policy Acknowledgment
-
- 18.1. By using our services and making any purchase from Pinnacle, you acknowledge that you have read, understood, and agreed to this Refund Policy.
-
-## 19. No Refund Policy in Contractual Agreements
-
- 19.1. If you have entered into any contractual agreement with Pinnacle that includes provisions for refunds, this Refund Policy shall supersede any such contractual clauses, and no refunds will be provided.
-
-## 20. Entire Agreement
-
- 20.1. This Refund Policy constitutes the entire agreement between you and Pinnacle concerning the subject matter herein and supersedes all prior or contemporaneous communications and proposals, whether electronic, oral, or written.
-
- Please be advised that this Refund Policy clearly outlines that no refunds will be provided for any services or products offered by Pinnacle, regardless of the circumstances. By using our services or purchasing products from our Clinics, you acknowledge and agree to these terms.
+This edition is effective from 1 October 2026. It replaces the previous public website wording for this subject. Material changes will be dated here. It does not retrospectively introduce charges or remove rights under an existing agreement.
 

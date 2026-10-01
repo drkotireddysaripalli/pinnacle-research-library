@@ -34,3 +34,14 @@ test('uppercase leadership index converges; exact retired profiles/portraits410;
  for(const path of ['/Images/LeadershipImages/prudhvi_big_image.jpeg','/Images/leadershipimages/maheshwari_big_image.png','/Images/LeadershipImages/shoban_big_image.jpeg','/leadership/%6daheshwari','/leadership/Prudhvi%2dMatsa','/Images/LeadershipImages/%6daheshwari_big_image.png'])assert.equal((await serveSpeech(new Request(origin+path),env,inv)).status,410);
  for(const path of ['/leadership/dr-koti-reddy-saripalli','/leadership/dr-sreeja-reddy-saripalli','/leadership/private','/Images/LeadershipImages/koti_1000.jpg','/epass','/payonline','/api/sendotp'])assert.equal(await serveSpeech(new Request(origin+path,{headers:{cookie:'session=fixture',authorization:'fixture'}}),env,inv),null);
 });
+
+test('Books public billing policy converges; private and payment neighbours retain their existing handler',async()=>{
+ const env={ASSETS:{fetch:async()=>new Response('current')}};
+ for(const path of ['/payment-and-billing','/payment-and-billing/'])for(const method of ['GET','HEAD'])for(const headers of [{},{cookie:'session=fixture'},{authorization:'fixture'}]){
+  const r=await serveSpeech(new Request('https://books.pinnacleblooms.org'+path,{method,headers}),env,{});
+  assert.equal(r.status,301);assert.equal(r.headers.get('location'),'https://www.pinnacleblooms.org/payment-and-billing');
+  assert.equal(r.headers.get('cache-control'),headers.cookie||headers.authorization?'private, no-store':'public, max-age=0, must-revalidate');
+ }
+ for(const path of ['/payment-and-billing/private','/epass','/payonline','/api/payment','/login'])assert.equal(await serveSpeech(new Request('https://books.pinnacleblooms.org'+path),env,{}),null);
+ assert.equal(await serveSpeech(new Request('https://books.pinnacleblooms.org/payment-and-billing',{method:'POST'}),env,{}),null);
+});

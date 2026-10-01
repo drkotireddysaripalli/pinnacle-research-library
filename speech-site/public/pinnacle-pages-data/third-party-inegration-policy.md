@@ -1,90 +1,33 @@
-# Third-Party Integration Policy
+# External Services & Third-Party Integration
 
 Canonical: https://www.pinnacleblooms.org/third-party-inegration
+Effective: 1 October 2026
+Version: 2026-10-01.1
+Operator: Bharath Healthcare Laboratories Private Limited
 
-Revision printed in the original: 30-09-2026
+## External services
 
-LAST REVISION: 30-09-2026
+Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited (BHCL). In these policies, “we”, “us” and “our” mean BHCL in its operation of Pinnacle Blooms Network.
 
-## Third-Party Integration Policy - Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd.
+Our pages may link to or use services for delivery, security, performance, optional measurement, communications, maps, publications, social sharing, accounts or payments. An external link is not a blanket endorsement, regulator approval or guarantee of the provider’s service.
 
-## Section 1: Introduction
+## Information and permission
 
- 1.1. Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle") is operated by Bharath HealthCare Laboratories P LIMITED ("Company") and provides specialized Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services.
+Only information relevant to the authorised task should be shared with a provider. Personal information remains subject to the purpose, consent, confidentiality and safeguards explained in our [Privacy Policy](/privacy-policy). An integration is not permission to repurpose identifiable child information for public marketing.
 
- 1.2. This Third-Party Integration Policy outlines the guidelines for integrating third-party services and applications with the Pinnacle services ("Services").
+## Your choice of destination
 
-## Section 2: Third-Party Integrations
+A map or WhatsApp link can open an external service. Check the destination and avoid putting sensitive clinical details into public shares. External platforms may set their own cookies, require their own account and apply their own terms. See [Cookie Policy](/cookie-policy) for the scope of our managed-page preferences.
 
- 2.1. Third-party integrations refer to the incorporation of external services, applications, or platforms into the Pinnacle Services.
+## Payments and private applications
 
- 2.2. Pinnacle may offer certain third-party integrations to enhance user experience and provide additional features.
+Follow the current invoice or authorised payment instructions and check the payee. Do not assume a public link confirms a working checkout, recurring debit or successful payment. Private account and payment routes keep their existing access controls. See [Payment and Billing](/payment-and-billing).
 
-## Section 3: Approval of Integrations
+## Report a problem
 
- 3.1. The integration of third-party services with the Pinnacle Services requires approval from the Company.
+Email [care@pinnacleblooms.org](mailto:care@pinnacleblooms.org) with the subject “External link or integration concern”, a way to contact you and the information needed to understand your request. You can call [9100 181 181](tel:+919100181181) for guidance. Do not send passwords, OTPs, full card details or unnecessary child records.
 
- 3.2. The Company will assess the compatibility, security, and relevance of the proposed integration before granting approval.
+Include the exact page and destination, the time and a brief description. Do not send credentials.
 
-## Section 4: Security and Data Privacy
-
- 4.1. Third-party integrations must comply with the Pinnacle Security Policy and Data Protection Policy.
-
- 4.2. The Company shall not be held responsible for any data breaches or security incidents arising from third-party integrations.
-
-## Section 5: Functionality and Compatibility
-
- 5.1. Third-party integrations must add value and enhance the functionality of the Pinnacle Services.
-
- 5.2. The Company reserves the right to reject integrations that may cause conflicts or compatibility issues.
-
-## Section 6: User Consent
-
- 6.1. Users must provide explicit consent before third-party services access their data or information through integrations.
-
- 6.2. Pinnacle shall provide clear information about the data shared with the third-party integration and obtain user consent.
-
-## Section 7: Liability and Indemnification
-
- 7.1. Pinnacle shall not be liable for any issues, damages, or losses caused by third-party integrations.
-
- 7.2. Third-party integration providers must indemnify and hold the Pinnacle harmless from any claims arising from their integration.
-
-## Section 8: Removal of Integrations
-
- 8.1. The Company reserves the right to remove or disable any third-party integration at its discretion.
-
- 8.2. The Clinics may revoke integration approval if the third-party service violates this policy or poses a security risk.
-
-## Section 9: User Support
-
- 9.1. Users should direct any support or troubleshooting requests related to third-party integrations to the respective integration providers.
-
- 9.2. Pinnacle may offer general guidance on integration usage but are not responsible for third-party service issues.
-
-## Section 10: Disclaimer
-
- 10.1. Pinnacle do not endorse or guarantee the performance, reliability, or security of third-party integrations.
-
- 10.2. Users are encouraged to review the terms and conditions of the integration providers before granting access.
-
-## Section 11: Compliance with Applicable Laws
-
- 11.1. Third-party integrations must adhere to all applicable laws, regulations, and industry standards.
-
-## Section 12: Changes to Policy
-
- 12.1. The Company reserves the right to modify this Third-Party Integration Policy at any time. Any changes will be communicated to users.
-
-## Section 13: Acceptance of Terms
-
- 13.1. By using third-party integrations with the Pinnacle Services, users agree to comply with the terms and conditions outlined in this policy.
-
-## Section 14: Governing Law
-
- 14.1. This Third-Party Integration Policy shall be governed by and construed in accordance with the laws of India and shall fall under the jurisdiction of Hyderabad. By agreeing to this policy, individuals, organizations, or any other parties hereby forfeit their right to challenge this decision.
-
-## Section 15: Contact Information
-
- 15.1. If you have any questions or concerns regarding this Third-Party Integration Policy, please contact us using the information provided in the [Contact Information](/contact-information) section.
+This edition is effective from 1 October 2026. It replaces the previous public website wording for this subject. Material changes will be dated here. It does not retrospectively introduce charges or remove rights under an existing agreement.
 

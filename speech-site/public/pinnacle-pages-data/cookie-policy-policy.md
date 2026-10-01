@@ -1,70 +1,39 @@
-# Cookie Policy
+# Cookie & Website Technology Policy
 
 Canonical: https://www.pinnacleblooms.org/cookie-policy
+Effective: 1 October 2026
+Version: 2026-10-01.1
+Operator: Bharath Healthcare Laboratories Private Limited
 
-## COOKIE POLICY - Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd.
+## Scope and purpose
 
- At Pinnacle Blooms Network, a specialized unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle"), managed and operated by Bharath HealthCare Laboratories P LIMITED ("Company"), we are committed to optimizing your digital experience. To achieve this, we employ cookies and analogous technologies on our website, accessible at https://www.pinnacleclinics.org ("Site"), as well as on our smartphone application ("App"). These technologies serve to enrich your user experience, facilitate performance analytics, and deliver pertinent content. This Cookie Policy elucidates the mechanisms by which we utilize these technologies and outlines the conditions under which you consent to their deployment upon interacting with our Site and App.
+Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited (BHCL). In these policies, “we”, “us” and “our” mean BHCL in its operation of Pinnacle Blooms Network.
 
-## 1. What are Cookies?
+This notice describes the managed Pinnacle pages that display “Optional analytics preferences” in their common footer. Legacy pages and separate account or billing applications may use additional technologies; this is not a claim that every application has an identical cookie inventory.
 
- 1.1. Cookies are small text files stored on your computer or mobile device when you visit a website or use an App. They are widely used to ensure websites, Apps function properly, improve site, app performance, and provide a personalized browsing experience.
+## Technologies on managed pages
 
-## 2. Types of Cookies We Use
+- Preference storage: pinnacle-speech-analytics-v1 in local storage records your optional analytics choice and timestamp, with a 180-day choice lifetime.
 
- 2.1.
+- Optional Google Analytics: after permission, prefixed ps_ga cookies support coarse page and call/enquiry-link measurement. The configured lifetime is 180 days; these events exclude form text, query parameters and advertising identifiers.
 
-### Essential Cookies:
+- Cloudflare performance and security: delivery and performance services support the website. Cloudflare Web Analytics uses a separate performance beacon; it is distinct from the optional Google Analytics switch.
 
- These cookies are necessary for the basic functioning of the Site. They enable core website features, such as page navigation and access to secure areas of the Site. Without these cookies, certain services and functions may not be available.
+- Advertising and external services: some delivered pages include existing Google advertising infrastructure. The footer analytics control is not a universal switch for every legacy advertising or application technology. External destinations apply their own controls.
 
- 2.2.
+## Your choices
 
-### Analytical Cookies:
+Optional managed-page analytics stays off until you choose “Allow analytics”. Use the footer’s “Optional analytics preferences” to keep it off or withdraw permission. The script honours Global Privacy Control by keeping this optional analytics off. Call and enquiry links remain usable when analytics is off.
 
-These cookies help us understand how visitors interact with the Site, allowing us to improve its performance and user experience. We use analytical cookies to track anonymous data, such as the number of visitors, the pages visited, and the sources of website traffic.
+[Open this page’s analytics preferences](#website-preferences). You can also inspect, block or delete cookies and local storage in your browser. Browser controls may affect account or payment features.
 
- 2.3.
+## Measurement and privacy
 
-### Functional Cookies:
+A measured phone-link click is not an answered call, booking or admission. Managed measurement uses a fixed event vocabulary and does not send child intake fields. Do not place child or clinical information in public URL parameters or social posts. See our [Privacy Policy](/privacy-policy) for personal-information requests.
 
- These cookies enable the Site to remember your preferences and settings, providing a more personalized experience. For example, they may remember your preferred language or region.
+## Questions and updates
 
-## 3. How We Use Cookies
+Email [care@pinnacleblooms.org](mailto:care@pinnacleblooms.org) with the subject “Website privacy or cookie query”, a way to contact you and the information needed to understand your request. You can call [9100 181 181](tel:+919100181181) for guidance. Do not send passwords, OTPs, full card details or unnecessary child records.
 
- 3.1. We use cookies for the following purposes:
-
- - To authenticate your access to secure areas of the Site, ensuring data security.
- - To analyze website traffic and user behavior, helping us improve our services and content.
- - To remember your preferences and settings, enhancing your browsing experience.
-
-## 4. Your Consent
-
- 4.1. By continuing to use the Site, App, you consent to the use of cookies as described in this Cookie Policy. If you do not agree with the use of cookies, you may disable them in your browser settings or refrain from using the Site.
-
- 4.2. Please note that disabling certain cookies may impact the functionality and performance of the Site, and some features may not work as intended.
-
-## 5. Managing Cookies
-
- 5.1. You can control and manage cookies through your browser settings. Most web browsers allow you to delete or block cookies, as well as configure cookie settings for individual websites.
-
-## 6. Third-Party Cookies
-
- 6.1. While we strive to control the cookies used on our Site and App directly, it is important to note that third-party cookies may also be deployed. These third-party cookies are not under our direct control and may serve various purposes. By using our Site and App, you acknowledge the possibility of encountering third-party cookies and consent to their use as governed by the respective third-party cookie policies. For more details on how these cookies function and for what purposes they may be used, please refer to the privacy policies of the respective third parties.
-
-## 7. Cookies Used for Marketing
-
- 7.1. While our primary use of cookies is not for marketing, remarketing, or targeted advertising, it is possible that cookies may be used for such purposes by third-party services integrated into our Site or App. By using our Site and App, you acknowledge and consent to the potential use of cookies for marketing purposes as governed by the respective third-party policies. We recommend reviewing the privacy and cookie policies of these third parties for more information.
-
-## 8. Cookie Duration
-
- 8.1. The duration for which cookies are stored on your device varies based on the type of cookie. Session cookies are temporary and will be deleted once you close your browser, while persistent cookies remain on your device for a set period.
-
-## 9. Use of Cookies for Website Analytics
-
- 9.1. We use analytical cookies for website analytics to gather anonymous data about website usage, such as the number of visitors and popular pages. This data helps us enhance user experience and improve our Site.
-
-## 10. Changes to Cookie Usage
-
- 10.1. We expressly reserve the unilateral right to amend, update, or modify this Cookie Policy at our sole discretion, at any time and without prior notice. Any such changes will be published on our Site and App, and the "Last Updated" timestamp at the top of this policy will be adjusted to reflect the most recent modifications. By continuing to use our Site and App subsequent to any changes, you irrevocably forfeit any and all rights to challenge or dispute such changes. We strongly encourage you to review this Cookie Policy on a regular basis to stay informed about how we use cookies.
+This edition is effective from 1 October 2026. It replaces the previous public website wording for this subject. Material changes will be dated here. It does not retrospectively introduce charges or remove rights under an existing agreement.
 

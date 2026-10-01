@@ -1,84 +1,33 @@
-# Endorsement & Testimonials
+# Reviews, Testimonials & Publication Consent
 
 Canonical: https://www.pinnacleblooms.org/endorsement-and-testimonial
+Effective: 1 October 2026
+Version: 2026-10-01.1
+Operator: Bharath Healthcare Laboratories Private Limited
 
-Revision printed in the original: 01-10-2026
+## Honest feedback
 
-LAST REVISION: 01-10-2026
+Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited (BHCL). In these policies, “we”, “us” and “our” mean BHCL in its operation of Pinnacle Blooms Network.
 
-## Endorsement and Testimonials Policy - Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd.
+Reviews and testimonials should reflect a person’s actual experience. We do not require a favourable review as a condition of care. A negative review or complaint should not be suppressed merely because it is critical. External platforms apply their own review rules.
 
-## Section 1: Introduction
+## Connections and incentives
 
- 1.1. Pinnacle Blooms Network unit of Bharath HealthCare Laboratories Pvt. Ltd. ("Pinnacle") is operated by Bharath HealthCare Laboratories P LIMITED ("Company") and provides specialized Multi-Sensory, Multi-Disciplinary, Integrated Autism Therapy Services.
+A staff, partner, paid, gifted or other material relationship must be disclosed when relevant. We do not present an incentivised statement as independent endorsement. Do not manufacture reviews or imply that an institution endorses Pinnacle because a profile, citation or licence exists.
 
- 1.2. This Endorsement and Testimonials Policy outlines the guidelines for the use of endorsements and testimonials regarding the Pinnacle services ("Services").
+## Identifiable stories and child images
 
-## Section 2: Endorsements and Testimonials
+A child’s image, voice, identifiable story or clinical details require a separate and informed publication choice by the person with appropriate authority. The proposed use, channels and context should be explained. Declining publicity does not mean declining care. Publicity consent cannot authorise publication prohibited by law; raw clinical records and sensitive health information must not be published. De-identification must not be assumed from omitting a name alone.
 
- 2.1. Endorsements and testimonials are statements, reviews, feedbacks or recommendations by individuals who have used the Pinnacle Services.
+## Editing and withdrawal
 
- 2.2. Endorsements and testimonials may be provided voluntarily by users who wish to share their experiences with Pinnacle.
+Editing should preserve meaning and context. We must not turn one family’s experience into a guaranteed outcome. You may ask us to stop a consent-based future use or remove content we control. We will explain any practical or lawful limit; copies, shares or independent reviews on third-party platforms may require their own removal process.
 
-## Section 3: Disclosure of Material Connection
+Email [care@pinnacleblooms.org](mailto:care@pinnacleblooms.org) with the subject “Publication consent or removal request”, a way to contact you and the information needed to understand your request. You can call [9100 181 181](tel:+919100181181) for guidance. Do not send passwords, OTPs, full card details or unnecessary child records.
 
- 3.1. Any individual with material connection to the Pinnacle, Company can also provide an endorsement or testimonial.
+## Updates
 
- 3.2. Material connections include, but are not limited to, being an employee, contractor, or affiliate of the Clinics.
+This edition is effective from 1 October 2026. It replaces the previous public website wording for this subject. Material changes will be dated here. It does not retrospectively introduce charges or remove rights under an existing agreement.
 
-## Section 4: Truthfulness and Accuracy
-
- 4.1. Endorsements and testimonials must reflect the honest opinions, findings, beliefs, or experiences of the individuals providing them.
-
- 4.2. Testimonials must be based on the actual use of or participation in the Pinnacle Services and accurately represent the user's experience.
-
-## Section 5: Verification of Testimonials
-
- 5.1. Pinnacle may verify the authenticity of testimonials to ensure they are from genuine users of the Services.
-
- 5.2. Users providing false or misleading testimonials may have their testimonials removed and face further wilful defamatory actions.
-
-## Section 6: Use of Testimonials
-
- 6.1. Pinnacle may use endorsements and testimonials on their website, social media channels, marketing materials, and other promotional content.
-
- 6.2. Testimonials may be edited for clarity, grammar, and length, but the essence of the original testimonial will be retained.
-
-## Section 7: Identification of Users
-
- 7.1. Endorsements and testimonials may be published with the user's name, initials, or other identifying information unless requested otherwise by the user.
-
-## Section 8: Consent for Use
-
- 8.1. By providing an endorsement or testimonial, users grant Pinnacle and the Company permission to use their testimonials in accordance with this policy.
-
- 8.2. Users retain the right to request the removal of their testimonial at any time.
-
-## Section 9: Non-Compensatory Testimonials
-
- 9.1. Testimonials must be non-compensatory, meaning users should not receive any payment or incentives in exchange for their testimonials.
-
-## Section 10: Disclaimer
-
- 10.1. Endorsements and testimonials are individual opinions and may not reflect the views or opinions of the Pinnacle or the Company as a whole.
-
-## Section 11: Compliance with Applicable Laws
-
- 11.1. Pinnacle adhere to all applicable laws and regulations regarding endorsements and testimonials.
-
-## Section 12: Changes to Policy
-
- 12.1. Pinnacle reserves the right to modify this Endorsement and Testimonials Policy at any time. Without prior communication to users.
-
-## Section 13: Acceptance of Terms
-
- 13.1. By providing an endorsement or testimonial, users agree to comply with the terms and conditions outlined in this policy.
-
-## Section 14: Governing Law
-
- 14.1. This Endorsement and Testimonials Policy shall be governed by and construed in accordance with the laws of India. Any dispute arising out of or in connection with this policy shall be referred to courts of Hyderabad Jurisdiction. By agreeing to this policy, individuals, organizations, or any other parties hereby forfeit their right to challenge this decision.
-
-## Section 15: Contact Information
-
- 15.1. If you have any questions or concerns regarding this Endorsement and Testimonials Policy, please contact us using the information provided in the [Contact Information](/contact-information) section.
+Nothing in this policy removes a right, remedy, complaint route or protection that applicable law gives you. Booking-specific written terms must be disclosed before you agree; they cannot override mandatory law.
 

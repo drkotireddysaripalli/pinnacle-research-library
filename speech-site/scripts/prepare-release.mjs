@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import {pinnacleWave} from '../src/data/pinnacleai-wave.ts';
 import {centreDetails} from '../src/data/centre-detail-content.ts';
 import {lifePages} from '../src/data/life-outcomes.ts';
-import policies from '../src/data/policy-content.json' with {type:'json'};
+import policies from '../src/data/policy-presentation.ts';
 import institutional from '../src/data/institutional-content.json' with {type:'json'};
 const root=process.cwd(),parent=path.dirname(root),out=path.resolve(process.argv[2]||path.join(root,'release-union'));
 const verifyRoot=process.argv[3]?path.resolve(process.argv[3]):await fs.access(path.join(parent,'verify-site/dist')).then(()=>path.join(parent,'verify-site')).catch(()=>path.join(parent,'pinnacle-verify-fsc'));
@@ -58,6 +58,7 @@ for(const page of pinnacleWave){
  await fs.writeFile(path.join(out,'pinnacle-pages-html',page.slug+'.html'),pageHtml);
 }
 for(const page of [...policies,...lifePages,...institutional]){const text=await fs.readFile(path.join(root,'dist',page.slug+'.html'),'utf8');assert(text.includes('index, follow, max-image-preview:large')&&text.includes(page.title));await fs.writeFile(path.join(out,'pinnacle-pages-html',page.slug+'.html'),text);}
+await fs.copyFile(path.join(root,'dist/policies.html'),path.join(out,'pinnacle-pages-html/policies.html'));
 assert.deepEqual(await fs.readFile(path.join(out,'index.html')),before,'Verify index must be unchanged');
 const inventory={};
 async function walk(dir){for(const item of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,item.name);if(item.isDirectory())await walk(f);else{const key='/'+path.relative(out,f).replaceAll('\\','/');inventory[key]=crypto.createHash('sha256').update(await fs.readFile(f)).digest('hex').slice(0,16);}}}

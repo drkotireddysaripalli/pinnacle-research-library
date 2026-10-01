@@ -7,11 +7,15 @@ const ROOT_SITEMAPS=[
 ];
 const MANAGED_SECTION=`
 
+## Policies and rights
+- [All policies](${PUBLIC}/policies): fifteen dated policies covering care, payment, privacy, children, website use and ethical conduct.
+- [Payment and billing](${PUBLIC}/payment-and-billing): disclosed transaction terms, payment confirmation and billing-review route.
+
 ## Service and next-step pages
 - [Suchitra, Hyderabad centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india): sourced location and real premises photos, published professional profiles, visit questions and life-first support. Confirm the appointment, professional and fees.
 - [Dilsukhnagar, Hyderabad centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india): Chaitanyapuri directions, real photos, family choice example and dated facility trail.
 - [Gurunanak Road, Vijayawada centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india): second-floor directions, real interiors and an illustrative getting-ready journey.
-- [South Extension, New Delhi centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india): E17 location and access questions, real frontage and first-play conversation.
+- [South Extension, New Delhi centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india): E17 recorded location, call-before-travel status, real frontage and available-options guidance; current operation is not established.
 - [Ananthapuram centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india): Ashoknagar directions, real premises photos and an everyday participation example. For all centres confirm current professional, service, appointment and fees.
 - [Nandyala centre](${PUBLIC}/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india): second-floor arrival above Domino’s, real premises photos and an illustrative getting-ready goal.
 - [Ongole centre](${PUBLIC}/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india): frontage near Gummadi Chest Hospital, real premises and a family-table choice example.

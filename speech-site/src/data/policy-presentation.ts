@@ -1,4 +1,5 @@
 import sourcePolicies from './policy-content.json' with {type:'json'};
+import {currentPolicyVersions} from './policy-current.ts';
 import {parseFragment,serialize} from 'parse5';
 
 const basic=new Set(['privacy-policy','terms-of-service','cookie-policy','copyright-and-intellectual','age-restriction-policy','contact-information','disclaimer-and-limitations-of-liabilities','endorsement-and-testimonial','governing-and-jurisdiction','third-party-inegration','refund-policy']);
@@ -20,6 +21,12 @@ const children=(n:Node)=>n.childNodes||[];
 const plain=(n:Node):string=>n.nodeName==='#text'?n.value:children(n).map(plain).join('');
 function walk(n:Node,fn:(n:Node)=>void){fn(n);for(const child of children(n))walk(child,fn);}
 const blocks=new Set(['p','div','section','article','blockquote','address']);
+function plainReading(n:Node):string{
+ if(n.nodeName==='#text')return n.value;
+ if(n.nodeName==='#comment'||['script','style'].includes(n.tagName))return '';
+ const body=children(n).map(plainReading).join('');
+ return blocks.has(n.tagName)||/^h[1-6]$/.test(n.tagName||'')||['li','ul','ol','br','tr'].includes(n.tagName)?'\n'+body+'\n':body;
+}
 function reading(n:Node):string{
  if(n.nodeName==='#text')return n.value.replace(/\s+/g,' ');
  if(n.nodeName==='#comment'||['script','style'].includes(n.tagName))return '';
@@ -40,7 +47,13 @@ function reading(n:Node):string{
  if(['ul','ol'].includes(n.tagName))return '\n'+body+'\n';
  return blocks.has(n.tagName)?'\n\n'+body.trim()+'\n\n':body;
 }
-export function presentPolicy(page:typeof sourcePolicies[number]){
+export function presentPolicy(page:any):any{
+ const current=currentPolicyVersions.find(policy=>policy.slug===page.slug);
+ if(current){
+  const document=parseFragment(current.html),markdown=reading(document).replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim()+'\n';
+  return {...page,...current,historicalPrintedRevision:page.historicalPrintedRevision??page.printedRevision??null,text:plainReading(document).replace(/\s+/g,' ').trim(),originalText:page.originalText??page.text??null,markdown,presentationText:markdown,presentationVersion:current.version,
+   changes:['New owner-authorised policy edition for the Pinnacle/BHCL website and services','Prior source retained as historical provenance; current wording replaces it prospectively']};
+ }
  const document=parseFragment(page.html),changes:string[]=[];
  function cleanMarkers(parent:Node){
   const nodes=children(parent);for(let i=nodes.length-1;i>=0;i--){const n=nodes[i];cleanMarkers(n);let next=i+1;while(next<nodes.length&&nodes[next].nodeName==='#text'&&!nodes[next].value.trim())next++;
@@ -76,5 +89,5 @@ export function presentPolicy(page:typeof sourcePolicies[number]){
  const markdown=reading(document).replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim()+'\n';
  return {...page,html:serialize(document),toc,originalText:page.text,markdown,presentationText:markdown,presentationVersion:'2026-10-01-v148',changes:[...new Set(changes)]};
 }
-export const policies=sourcePolicies.map(presentPolicy);
+export const policies=currentPolicyVersions.map(current=>presentPolicy(sourcePolicies.find(policy=>policy.slug===current.slug)||{slug:current.slug,sourceUrl:null,sourceRetrievedAt:null,sourceHtmlSha256:null,policyTextSha256:null,text:null}));
 export default policies;

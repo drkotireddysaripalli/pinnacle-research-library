@@ -1,0 +1,30 @@
+import fs from 'node:fs/promises';
+import crypto from 'node:crypto';
+import assert from 'node:assert/strict';
+const mode=process.argv[2]||'staged',stage='release-policies-v153-20261001',origin='https://www.pinnacleblooms.org';
+const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
+const owned=t=>t.replace('<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"></script>','').replace('<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js"></script>','');
+const footer=t=>t.match(/<footer\b[\s\S]*?<\/footer>/)[0];
+const contract=JSON.parse(await fs.readFile('deployment/policy-wave-v153-staged-20261001.json','utf8'));
+const files=(await fs.readdir(stage+'/pinnacle-pages-html')).filter(f=>f.endsWith('.html')&&!f.includes('preview'));
+assert.equal(files.length,50);const pages=[];let common;
+for(const file of files){const html=await fs.readFile(stage+'/pinnacle-pages-html/'+file,'utf8');common??=footer(html);assert.equal(footer(html),common);assert(/href="(?:https:\/\/www\.pinnacleblooms\.org)?\/policies"/.test(html));assert(html.includes('index, follow, max-image-preview:large'));pages.push({id:file.slice(0,-5),html,path:new URL(html.match(/rel="canonical" href="([^"]+)"/)[1]).pathname});}
+const policyPages=pages.filter(p=>contract.changed.includes('pinnacle-pages-data/'+p.id+'-policy.md'));assert.equal(policyPages.length,16);
+const receipt={at:new Date().toISOString(),mode,pages:50,policies:15,commonFooter:true,nonPolicyBodiesRetained:contract.retainedBodies,verifyUnionRetained:contract.verifyUnionRetained};
+async function limited(list,fn){let i=0;const out=[];await Promise.all(Array.from({length:4},async()=>{while(i<list.length){const j=i++;out[j]=await fn(list[j]);}}));return out;}
+async function get(path,options={}){const r=await fetch(new URL(path,origin),{redirect:'manual',...options}),bytes=Buffer.from(await r.arrayBuffer());return{r,bytes,text:bytes.toString('utf8')};}
+if(mode==='live'){
+ receipt.published=await limited(pages,async p=>{const o=await get(p.path);assert.equal(o.r.status,200,p.path);assert.equal(sha(owned(o.text)),sha(p.html),p.path+' owned bytes');return{path:p.path,matched:true};});
+ const cookie='unknown=fixture; _gcl_au=fixture; __Host-appgarden-visitor=fixture';
+ receipt.policyDelivery=await limited(policyPages,async p=>{for(const headers of [{cookie},{cookie,authorization:'Bearer fixture',range:'bytes=0-1','cache-control':'no-transform'}]){const o=await get(p.path,{headers});assert.equal(o.r.status,200,p.path);assert.equal(sha(owned(o.text)),sha(p.html));assert(o.r.headers.get('cache-control').includes('private, no-store'));}const machine='/pinnacle-pages-data/'+p.id+'-policy.md';const md=await get(p.path,{headers:{cookie,accept:'text/markdown'}});assert.equal(md.r.status,200);assert.equal(sha(md.bytes),sha(await fs.readFile(stage+machine)));const head=await get(p.path,{method:'HEAD',headers:{cookie}});assert.equal(head.r.status,200);assert.equal(head.bytes.length,0);const alias=await get(p.path+'/',{headers:{cookie}});assert.equal(alias.r.status,301);assert.equal(alias.r.headers.get('location'),origin+p.path);return{path:p.path,cookie:true,credentialsRange:true,markdown:true,head:true,alias:true};});
+ const assetPaths=new Set(['pinnacle-pages-data/public-documents-sitemap.xml',...contract.changed.filter(p=>!p.includes('-html/')),...contract.added.filter(p=>!p.includes('-html/'))]);
+ for(const p of policyPages)for(const m of p.html.matchAll(/(?:src|href|content)="(\/pinnacle-pages-(?:assets|fonts|scripts|data)\/[^"?]+|https:\/\/www.pinnacleblooms.org\/pinnacle-pages-assets\/[^"?]+)(?:\?[^"]*)?"/g))assetPaths.add(new URL(m[1],origin).pathname.slice(1));
+ receipt.assets=await limited([...assetPaths],async file=>{const o=await get('/'+file);assert.equal(o.r.status,200,file);assert.equal(sha(o.bytes),sha(await fs.readFile(stage+'/'+file)),file);return{path:'/'+file,bytes:o.bytes.length,sha256:sha(o.bytes)};});
+ receipt.books=[];for(const suffix of ['','/'])for(const method of ['GET','HEAD'])for(const headers of [{},{cookie},{authorization:'Bearer fixture'}]){const o=await get('https://books.pinnacleblooms.org/payment-and-billing'+suffix,{method,headers});assert.equal(o.r.status,301);assert.equal(o.r.headers.get('location'),origin+'/payment-and-billing');if(headers.cookie||headers.authorization)assert.equal(o.r.headers.get('cache-control'),'private, no-store');receipt.books.push({suffix,method,credentials:!!(headers.cookie||headers.authorization),status:301});}
+ const before=JSON.parse(await fs.readFile('deployment/voice-delivery-protected-before-v137-20261001.json','utf8'));
+ const external=JSON.parse(await fs.readFile('deployment/protected-external-source-v152-20261001.json','utf8'));
+ receipt.protected=await limited(before.rows.filter(r=>!r.path.startsWith('https://books.')),async row=>{const o=await get(row.path);assert.equal(o.r.status,row.status,row.path);assert.equal(o.r.headers.get('location'),row.location,row.path);const reviewed=external.rows.find(x=>x.path===row.path);const actual=row.path==='/epass'?sha(o.text.replace(/<meta http-equiv="last-modified" content="[^"]+"\s*\/>/,'')):sha(o.bytes);assert.equal(actual,reviewed?.currentSha256||(row.path==='/epass'?row.normalisedSha256:row.sha256),row.path+' protected representation');return{path:row.path,status:row.status,sha256:actual,reviewedExternal:!!reviewed};});
+ for(const path of ['/Leadership/Maheshwari','/leadership/Prudhvi%2dMatsa','/Images/LeadershipImages/shoban_big_image.png'])assert.equal((await get(path)).r.status,410);
+ for(const path of ['/llms.txt','/sitemap.xml']){const o=await get(path);assert.equal(o.r.status,200);assert(o.text.includes('/policies')||path==='/sitemap.xml'&&o.text.includes('/public-documents-sitemap.xml'));}
+}else assert.equal(mode,'staged');
+const output='deployment/policy-release-v153-'+mode+'-20261001.json';await fs.writeFile(output,JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({mode,output,pages:50,policyDocuments:16,passed:true}));

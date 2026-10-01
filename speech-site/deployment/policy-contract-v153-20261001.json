@@ -1,0 +1,113 @@
+{
+  "at": "2026-10-01T09:57:51.380Z",
+  "policies": [
+    {
+      "id": "privacy-policy",
+      "sections": 8,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "d68d321d272d637cb051d104bf00d662bff80e2f88907b99900d102f2adc800d"
+    },
+    {
+      "id": "terms-of-use",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "1605ac1e9f919b2c09d025f5fa8c082bd86066f9776d65b5e9c75eccf3616e98"
+    },
+    {
+      "id": "terms-of-service",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "a3c967a3ae287afa6ed4047c4a8cd70b3960acaf294d086ded76484b83318e75"
+    },
+    {
+      "id": "cookie-policy",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "9677a5329c8d1e4f5d2f93f58b8e760b4ad697ae74f8bde12414cda4b05855d2"
+    },
+    {
+      "id": "copyright-and-intellectual",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "09567996ad052a188d00ce552b23707b2eaaf5637ac869445fc214e481c05cb9"
+    },
+    {
+      "id": "age-restriction-policy",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "958a95bf015a078d96e8cdbd5b78046ad92ddaac478b959ff3f6f75e5117d14d"
+    },
+    {
+      "id": "contact-information",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "9295c9e1f52693ae75254314b8c51cecc0f3937f4bb03094bfc0aac1201496c4"
+    },
+    {
+      "id": "disclaimer-and-limitations-of-liabilities",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "505da3eb95f4f0d5e17ca88c554c742332bcc78b14fcf73b347ffe9e8575cdb9"
+    },
+    {
+      "id": "endorsement-and-testimonial",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "f0b7bc7e61093c8e284f42a3918e30fc2feb41d73eccd99d92d0cdadeb5e4880"
+    },
+    {
+      "id": "governing-and-jurisdiction",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "1980b9b08eb46882cd1b068b55eb4a73efdb583a9c23ec8fa240f18a53d02864"
+    },
+    {
+      "id": "third-party-inegration",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "7639ca456c963462df2c32350173fb836c92a7b16d3eb21e01beec58d7d51cf7"
+    },
+    {
+      "id": "refund-policy",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "6d77ce28f3bcb1ff0647b0587c2189f98f8ca058332e212eec244e0ef18b649b"
+    },
+    {
+      "id": "staff-declaration",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "28f709a50f80947b515f97585a4e0b118bde124b61d6ab4c626ee673540609ec"
+    },
+    {
+      "id": "ethics-charter",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": true,
+      "currentSha256": "d0b711e16db092a00bcd17e38a44398cb606dd589a50b65702ce6b21408cd901"
+    },
+    {
+      "id": "payment-and-billing",
+      "sections": 5,
+      "version": "2026-10-01.1",
+      "historicalSourceRetained": false,
+      "currentSha256": "0c2c9d1cf609375f8126fd38ad8953f8057ed061d4aeb3eba15320579379121d"
+    }
+  ],
+  "hub": true,
+  "priorWordingsHistorical": true,
+  "passed": true
+}
