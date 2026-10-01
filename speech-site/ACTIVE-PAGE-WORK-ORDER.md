@@ -4,6 +4,16 @@
 
 **OWNER PRIORITY — 1 October 2026:** Resume the existing page-creation work under `PINNACLE-PAGE-CREATION-WORK-ORDER.md` and the linked-page sequence. Verify/Astro migration and presentation redevelopment are **deferred, not started**; the complete proposal is saved in `VERIFY-ASTRO-MIGRATION-DEFERRED-WORK-ORDER-20261001.md`. The next recorded creation package is Our Team (`/staff`) plus the source-identified representative profile, retaining its explicit source/refresh conditions. Research, remaining services and resources follow. Do not activate the deferred Verify package while working through this sequence.
 
+## Delivery and usage discipline — apply to the next package
+
+- Proceed with the Our Team and representative-profile contract below. The accepted V151a toolkit is closed; reopen setup only for a concrete defect that blocks this package. Keep Verify migration and unrelated improvements in their existing backlog.
+- Use the governing page work order, compact project context, this active contract and the exact relevant sources. Retrieve older history only to resolve a named question; do not repeat whole-estate inventories or settled narrative reviews.
+- Retain the complete agreed narrative, branding, evidence and conversion standard. Reuse the common shell and accepted assets; authentic staff portraits must not be replaced with generated identities.
+- Finish one coherent narrative/creative/implementation candidate before acceptance. Read-only reviewers receive bounded page material and distinct questions; combine actionable findings into one repair pass where possible.
+- Run the consolidated page acceptance once. Re-run only changed or failed checks; expand coverage when a shared component, route, source contract or global asset actually changes. Run speed checks at a meaningful layout/image/font boundary, not each copy edit.
+- Save one account-usage checkpoint at package start and one at closure when available. Record elapsed time, created/updated pages, new creatives and any repeated gate with its concrete reason. Account-wide balance changes are not attributable page costs when concurrent work is active; label them accordingly. Do not poll balances during implementation.
+- Commit and push the accepted source, deploy through the established full-union route, verify the required public boundaries and save one concise receipt. Advance to the next recorded inventory package after closure; reopen only for a failed check, observed defect, material source change or owner scope change.
+
 ## Active creation contract — Our Team and representative profile
 
 **State: contract resumed; implementation and release pending.** The existing source preparation is retained. Do not count this contract or a source capture as a released page. Keep the frozen linked inventory and its completion ledger unchanged until publication.
