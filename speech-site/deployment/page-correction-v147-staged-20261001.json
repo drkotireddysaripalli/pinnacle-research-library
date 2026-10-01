@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-01T01:50:27.453Z",
+  "stage": "release-fusion-v147-20261001",
+  "prior": "release-pdk-v146-20261001",
+  "changed": [
+    "fusion-module"
+  ],
+  "total": 48,
+  "unchangedBodies": 47,
+  "commonShellsPreserved": true,
+  "verifyIndexPreserved": true,
+  "runtimePreserved": true
+}

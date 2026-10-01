@@ -1,7 +1,7 @@
 {
   "title": "Fusion | Bring Family, School and Clinical Observations into Review",
   "url": "https://www.pinnacleblooms.org/fusion-module",
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
@@ -132,7 +132,7 @@
     },
     {
       "question": "Does the system change therapy automatically?",
-      "answer": "The public description keeps people in charge. Professionals review the child’s response and explain appropriate changes with the family."
+      "answer": "No. Professionals review the child’s response and explain appropriate changes with the family."
     },
     {
       "question": "Will school information be shared without permission?",

@@ -21,6 +21,14 @@ Claim/source links:
 - PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
 - The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private. → https://www.pinnacleblooms.org/verify/evidence/records/dossier.html (claim boundary; Product architecture and examples; contradictory completed-validation claims are not adopted here.)
 
+Questions:
+What is PinnacleAI Fusion?
+Fusion is the named clinical tracking and correction module. It helps relevant observations return to the child-specific professional review.
+Does the system change therapy automatically?
+No. Professionals review the child’s response and explain appropriate changes with the family.
+Will school information be shared without permission?
+School and other external observations should be shared only through appropriate consent and authorised roles.
+
 Further sources:
 - Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
 - BIS named-module and quality-system scope: https://www.pinnacleblooms.org/verify/evidence/records/bis.html — Named module/quality scope; not a clinical effectiveness result.

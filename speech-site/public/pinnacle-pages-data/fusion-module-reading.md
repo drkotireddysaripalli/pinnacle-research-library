@@ -30,6 +30,14 @@ Illustrative example only. The child makes a request in a familiar room; outdoor
 ## Boundary
 The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private.
 
+## Questions
+### What is PinnacleAI Fusion?
+Fusion is the named clinical tracking and correction module. It helps relevant observations return to the child-specific professional review.
+### Does the system change therapy automatically?
+No. Professionals review the child’s response and explain appropriate changes with the family.
+### Will school information be shared without permission?
+School and other external observations should be shared only through appropriate consent and authorised roles.
+
 ## Further sources
 - [Documented PinnacleAI workflow](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works): Describes a workflow; not proof that every step produces a specific result.
 - [BIS named-module and quality-system scope](https://www.pinnacleblooms.org/verify/evidence/records/bis.html): Named module/quality scope; not a clinical effectiveness result.

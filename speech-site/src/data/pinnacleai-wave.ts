@@ -169,7 +169,7 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'fusion-module', short:'Fusion', label:'Fusion tracking and correction', title:'Fusion | Bring Family, School and Clinical Observations into Review',
+    slug:'fusion-module', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'Fusion', label:'Fusion tracking and correction', title:'Fusion | Bring Family, School and Clinical Observations into Review',
     description:'Fusion brings relevant therapy, home and consented school observations into human review, so the child’s next support can change with evidence.',
     eyebrow:'You see more than a session can see', headline:'Bring the child’s whole day into the next decision.',
     lead:'A professional sees a child at an appointment. Parents, caregivers and teachers may see a different picture in meals, play and learning. Fusion is the tracking-and-correction part of the system that helps relevant observations return to professional review.',
@@ -186,7 +186,7 @@ export const pinnacleWave = [
     sourceKeys:['workflow','bis','dossier','methods','md5'],
     faqs:[
       {question:'What is PinnacleAI Fusion?',answer:'Fusion is the named clinical tracking and correction module. It helps relevant observations return to the child-specific professional review.'},
-      {question:'Does the system change therapy automatically?',answer:'The public description keeps people in charge. Professionals review the child’s response and explain appropriate changes with the family.'},
+      {question:'Does the system change therapy automatically?',answer:'No. Professionals review the child’s response and explain appropriate changes with the family.'},
       {question:'Will school information be shared without permission?',answer:'School and other external observations should be shared only through appropriate consent and authorised roles.'}
     ]
   },
