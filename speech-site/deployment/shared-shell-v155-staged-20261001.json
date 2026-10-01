@@ -1,0 +1,320 @@
+{
+  "at": "2026-10-01T11:01:05.931Z",
+  "prior": "release-policies-v153-20261001",
+  "priorUpload": ".worker-upload-policies-v153-20261001",
+  "stage": "release-shared-shell-v155-20261001",
+  "upload": ".worker-upload-shared-shell-v155-20261001",
+  "rows": [
+    {
+      "file": "pinnacle-pages-html/aba-therapy.html",
+      "canonical": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "mainSha256": "1d678c7812d06f31bb87cbd959c69cd82820d92e5e8eaa5a89cd4244ca27243e"
+    },
+    {
+      "file": "pinnacle-pages-html/abilityscore.html",
+      "canonical": "/abilityscore",
+      "mainSha256": "9a23038f8fbc164c13b68cfec176c8e7f1dda6d7bc6f5ed1cc31581c67d7c545"
+    },
+    {
+      "file": "pinnacle-pages-html/about.html",
+      "canonical": "/about-pinnacle-proven-improvement-rate",
+      "mainSha256": "c934e0d8e8bcea3b2ec5ef3ee15fc0676360c42bdcd61c0337aa581a00c15815"
+    },
+    {
+      "file": "pinnacle-pages-html/age-restriction-policy.html",
+      "canonical": "/age-restriction-policy",
+      "mainSha256": "eea7b097dd20c0bc49a48fdfc697c876dea0f2619463824d9e596a580bc10421"
+    },
+    {
+      "file": "pinnacle-pages-html/ananthapuram.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "mainSha256": "db30aef7fafa6172fa9184fc08b6008b4dfa7ea81fcc75cf361d9131bfa79c20"
+    },
+    {
+      "file": "pinnacle-pages-html/assessment.html",
+      "canonical": "/speech-aba-autism-assessments",
+      "mainSha256": "d364aca996964d2d8d22851f15c5b85afd95ef21eac625eb0c8374e72b54536e"
+    },
+    {
+      "file": "pinnacle-pages-html/autism-therapy.html",
+      "canonical": "/autism-therapy",
+      "mainSha256": "41f9bbe03fcd4b8b696f7c59e1174c4c88f4146186b6ce1a59c07f12e4590999"
+    },
+    {
+      "file": "pinnacle-pages-html/centers.html",
+      "canonical": "/centers",
+      "mainSha256": "58c53642094d9dd0e378b98c35e02a3f065d71fe2d1ee82a9e7fe2025690db5c"
+    },
+    {
+      "file": "pinnacle-pages-html/contact-information.html",
+      "canonical": "/contact-information",
+      "mainSha256": "8a964fc425feb2381e66dff57b35a170dd871438cc5c259fb741acf551fc94f5"
+    },
+    {
+      "file": "pinnacle-pages-html/cookie-policy.html",
+      "canonical": "/cookie-policy",
+      "mainSha256": "23b56ddaee9684df90b47b19b234e50e2802ee4d51adc93706b6ee26ac1443b7"
+    },
+    {
+      "file": "pinnacle-pages-html/copyright-and-intellectual.html",
+      "canonical": "/copyright-and-intellectual",
+      "mainSha256": "9a16af5bc2827711e2604a8608fb1d32dd030d88289054a2712f8455a23713ed"
+    },
+    {
+      "file": "pinnacle-pages-html/delhi.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "mainSha256": "6cc4590f6ac9e4eedb961b7190cf6c679277ffdb88a92c35a933e7c78c0baee2"
+    },
+    {
+      "file": "pinnacle-pages-html/dilsukhnagar.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "mainSha256": "a35d7892f7fb6c7d9bf2743f684b35384fc2bd51088ce1438a5a15d78205aefd"
+    },
+    {
+      "file": "pinnacle-pages-html/disclaimer-and-limitations-of-liabilities.html",
+      "canonical": "/disclaimer-and-limitations-of-liabilities",
+      "mainSha256": "2c7e9ea7b033a4cf77f82f11a1c924be73a34f6c5f6ef5e74dd7c67877c7e00d"
+    },
+    {
+      "file": "pinnacle-pages-html/endorsement-and-testimonial.html",
+      "canonical": "/endorsement-and-testimonial",
+      "mainSha256": "3e977377b7c461c59a6aea4a123a00016c3fd98d73d4dc8350a2456e8661f464"
+    },
+    {
+      "file": "pinnacle-pages-html/enrolment.html",
+      "canonical": "/enroll-autism-speech-aba-therapies-india",
+      "mainSha256": "8a197dc92718972cf4de05acf53f94fdf9b9e90c4f86a1721d06dc53df201902"
+    },
+    {
+      "file": "pinnacle-pages-html/ethics-charter.html",
+      "canonical": "/ethics-charter",
+      "mainSha256": "f8b8107279adffbcf9efeea4540b062ecb0bbeda4d99b1f06a07789c1a6c122b"
+    },
+    {
+      "file": "pinnacle-pages-html/everyday-therapy.html",
+      "canonical": "/everyday-therapy",
+      "mainSha256": "ba3225d374c50627f2d2e1c50e615df090c27ffe680b45daccd03fcbee14a442"
+    },
+    {
+      "file": "pinnacle-pages-html/first-visit-guide.html",
+      "canonical": "/speech-therapy/first-visit-guide",
+      "mainSha256": "b8d3747fa838a9dc422cef7ca78a2ed62e1fd6fbdcd84e61df6c59bc0a5fb23f"
+    },
+    {
+      "file": "pinnacle-pages-html/framework.html",
+      "canonical": "/pinnacle-global-autism-framework",
+      "mainSha256": "8e092b04c07891b435e0c7397ef3a4888253644d65aaa0e580e175b5e17900e0"
+    },
+    {
+      "file": "pinnacle-pages-html/fusion-module.html",
+      "canonical": "/fusion-module",
+      "mainSha256": "01b5175a1b16aeb61ad634cc8bbbd82c99bfba9d3ad4862de60f55d6dcb06c65"
+    },
+    {
+      "file": "pinnacle-pages-html/governing-and-jurisdiction.html",
+      "canonical": "/governing-and-jurisdiction",
+      "mainSha256": "92971bbf9a98bd6a6d955f9ea381ad9d34be9185c1021a661a694fda2f27db61"
+    },
+    {
+      "file": "pinnacle-pages-html/gurunanak.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "mainSha256": "33668a9670c62556148359963c548ec99895e4f34816d8abb0a6346e914335d9"
+    },
+    {
+      "file": "pinnacle-pages-html/leadership.html",
+      "canonical": "/leadership",
+      "mainSha256": "a5d6d3dbdb91ba8e670f689bde008934975cb8582587257e2b731ca6423a9755"
+    },
+    {
+      "file": "pinnacle-pages-html/mainstream.html",
+      "canonical": "/mainstream",
+      "mainSha256": "43a2ea9a8f38695eb648b027a6d2dfcd12b176404af9502c4b76101b38afa244"
+    },
+    {
+      "file": "pinnacle-pages-html/nandyala.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "mainSha256": "89d455652632d3ff43b6131f67b25688d6b72a96dab873d6b409c5207ae5a6db"
+    },
+    {
+      "file": "pinnacle-pages-html/occupational-therapy.html",
+      "canonical": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "mainSha256": "d5c9bdfcb5a6152a30cd4a6550695ceb51a7627bfde96eca208bf939f54b2cc6"
+    },
+    {
+      "file": "pinnacle-pages-html/ongole.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "mainSha256": "badd55541bc337f702820c48a921acb653b5652047e55bda9126db3826614d88"
+    },
+    {
+      "file": "pinnacle-pages-html/payment-and-billing.html",
+      "canonical": "/payment-and-billing",
+      "mainSha256": "aaff9355665fbd1c8be2017002bc3232cf1409e376515122c84617f930294626"
+    },
+    {
+      "file": "pinnacle-pages-html/personal-development-kernel.html",
+      "canonical": "/personal-development-kernel",
+      "mainSha256": "c777f16dba9cb160112b3582f653ce9a25dcd8fcf5948933e1d966b14d021614"
+    },
+    {
+      "file": "pinnacle-pages-html/pinnacleai.html",
+      "canonical": "/pinnacleai",
+      "mainSha256": "1f5dbc6c7a6c4ae1d318e6e7071504341f7a11d39b529c1ccf399f8a07b294e7"
+    },
+    {
+      "file": "pinnacle-pages-html/policies.html",
+      "canonical": "/policies",
+      "mainSha256": "9c56d238ed703f0350c3a1d3b4a01d5812230558ea7d3490d06801cc0365020e"
+    },
+    {
+      "file": "pinnacle-pages-html/privacy-policy.html",
+      "canonical": "/privacy-policy",
+      "mainSha256": "ddfef51f086be4a56b44e9491b0a8597f9b92624f29d68363dc1551844da1030"
+    },
+    {
+      "file": "pinnacle-pages-html/prognose.html",
+      "canonical": "/prognose",
+      "mainSha256": "adc07dc89a21a751425e660a5fba85fe56165e690f2288fa85cfc10e7deaf00f"
+    },
+    {
+      "file": "pinnacle-pages-html/reassess-review-repeat.html",
+      "canonical": "/reassess-review-repeat",
+      "mainSha256": "e4f132a22d54c064ba1243ec01707e9d8e991ab392f845174f9a2f91ad4d618a"
+    },
+    {
+      "file": "pinnacle-pages-html/refund-policy.html",
+      "canonical": "/refund-policy",
+      "mainSha256": "6745e8d8af323b9ccba2733f3facc29ab3f08b3b5601c447e336df927c37077b"
+    },
+    {
+      "file": "pinnacle-pages-html/self-sufficient.html",
+      "canonical": "/self-sufficient",
+      "mainSha256": "c0fc01aa8358517ddd89d03307fe210c56bf42ac9ceb951a3e8ca0592b11a106"
+    },
+    {
+      "file": "pinnacle-pages-html/service-information.html",
+      "canonical": "/speech-therapy/service-information",
+      "mainSha256": "65468352074bc13805a0adf059060f421a46e50ab4eee3eb8d187cc953f8e908"
+    },
+    {
+      "file": "pinnacle-pages-html/seven-readiness-indexes.html",
+      "canonical": "/seven-readiness-indexes",
+      "mainSha256": "cda07f4b29bfbe5f6963878991244dc93552cfdfb8821a0900c09d69c0a3125e"
+    },
+    {
+      "file": "pinnacle-pages-html/special-education.html",
+      "canonical": "/best-special-education-center-call-9100181181",
+      "mainSha256": "a4c6898c3f0af8dc6958c0e79b124b7a2484035ec07c56cc372e7535a3ffbf0a"
+    },
+    {
+      "file": "pinnacle-pages-html/speech.html",
+      "canonical": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "mainSha256": "1000ba8e5d5becc84f0e2a1aa06d59e6b8affb264ec15f3e804b9c256748f3c4"
+    },
+    {
+      "file": "pinnacle-pages-html/srikakulam.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "mainSha256": "2a0201ef84c3feea98f50ca6d5f60ac1f776f24a6defdb66864884ce262e2086"
+    },
+    {
+      "file": "pinnacle-pages-html/staff-declaration.html",
+      "canonical": "/staff-declaration",
+      "mainSha256": "89c2dc985539ec539029fad8c9326a8a883340afb51e85c07217a4c6a1502f47"
+    },
+    {
+      "file": "pinnacle-pages-html/suchitra.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "mainSha256": "bfc94f0782e8733c9cfee280beaab93c6891ba44d6a200093ac8be0867d4be4a"
+    },
+    {
+      "file": "pinnacle-pages-html/teacher-observation-guide.html",
+      "canonical": "/speech-therapy/teacher-observation-guide",
+      "mainSha256": "f405a6297e61a68d3547c5eaf628624d20fd5c9aa9374420efb8e675edd35cc8"
+    },
+    {
+      "file": "pinnacle-pages-html/terms-of-service.html",
+      "canonical": "/terms-of-service",
+      "mainSha256": "837396b616a381120dd827ecbf2223b466dc738c6d50310c59c085811b2c10a0"
+    },
+    {
+      "file": "pinnacle-pages-html/terms-of-use.html",
+      "canonical": "/terms-of-use",
+      "mainSha256": "0861c6ab77b1f8336f0923accd5ea3ef6cc865145b98398abd902655d2b32e7c"
+    },
+    {
+      "file": "pinnacle-pages-html/therapeuticai.html",
+      "canonical": "/therapeuticai",
+      "mainSha256": "ae70c9c10a5989877b52e4912dc9eee5ac716b5ab5b27e6e4d0ee6b13bb12d00"
+    },
+    {
+      "file": "pinnacle-pages-html/third-party-inegration.html",
+      "canonical": "/third-party-inegration",
+      "mainSha256": "dccff61f0c13cad9009249b73bc94cc41662a8cc7b095b79cf102dced22c14bb"
+    },
+    {
+      "file": "pinnacle-pages-html/tirupati.html",
+      "canonical": "/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "mainSha256": "e4a2e8a8a76440cdb829011df9a28dfc4cf79ca470b2458a54f73aae0dbb9a76"
+    }
+  ],
+  "changed": [
+    "pinnacle-pages-html/aba-therapy.html",
+    "pinnacle-pages-html/abilityscore.html",
+    "pinnacle-pages-html/about.html",
+    "pinnacle-pages-html/age-restriction-policy.html",
+    "pinnacle-pages-html/ananthapuram.html",
+    "pinnacle-pages-html/assessment.html",
+    "pinnacle-pages-html/autism-therapy.html",
+    "pinnacle-pages-html/centers.html",
+    "pinnacle-pages-html/contact-information.html",
+    "pinnacle-pages-html/cookie-policy.html",
+    "pinnacle-pages-html/copyright-and-intellectual.html",
+    "pinnacle-pages-html/delhi.html",
+    "pinnacle-pages-html/dilsukhnagar.html",
+    "pinnacle-pages-html/disclaimer-and-limitations-of-liabilities.html",
+    "pinnacle-pages-html/endorsement-and-testimonial.html",
+    "pinnacle-pages-html/enrolment.html",
+    "pinnacle-pages-html/ethics-charter.html",
+    "pinnacle-pages-html/everyday-therapy.html",
+    "pinnacle-pages-html/first-visit-guide.html",
+    "pinnacle-pages-html/framework.html",
+    "pinnacle-pages-html/fusion-module.html",
+    "pinnacle-pages-html/governing-and-jurisdiction.html",
+    "pinnacle-pages-html/gurunanak.html",
+    "pinnacle-pages-html/leadership.html",
+    "pinnacle-pages-html/mainstream.html",
+    "pinnacle-pages-html/nandyala.html",
+    "pinnacle-pages-html/occupational-therapy.html",
+    "pinnacle-pages-html/ongole.html",
+    "pinnacle-pages-html/payment-and-billing.html",
+    "pinnacle-pages-html/personal-development-kernel.html",
+    "pinnacle-pages-html/pinnacleai.html",
+    "pinnacle-pages-html/policies.html",
+    "pinnacle-pages-html/privacy-policy.html",
+    "pinnacle-pages-html/prognose.html",
+    "pinnacle-pages-html/reassess-review-repeat.html",
+    "pinnacle-pages-html/refund-policy.html",
+    "pinnacle-pages-html/self-sufficient.html",
+    "pinnacle-pages-html/service-information.html",
+    "pinnacle-pages-html/seven-readiness-indexes.html",
+    "pinnacle-pages-html/special-education.html",
+    "pinnacle-pages-html/speech.html",
+    "pinnacle-pages-html/srikakulam.html",
+    "pinnacle-pages-html/staff-declaration.html",
+    "pinnacle-pages-html/suchitra.html",
+    "pinnacle-pages-html/teacher-observation-guide.html",
+    "pinnacle-pages-html/terms-of-service.html",
+    "pinnacle-pages-html/terms-of-use.html",
+    "pinnacle-pages-html/therapeuticai.html",
+    "pinnacle-pages-html/third-party-inegration.html",
+    "pinnacle-pages-html/tirupati.html"
+  ],
+  "added": [
+    "pinnacle-pages-assets/PageLayout.Iq1DIbQE.css"
+  ],
+  "retainedFiles": 1892,
+  "mainBodiesRetained": 50,
+  "runtimeRetained": true,
+  "verifyRetained": true,
+  "commonHeaderSha256": "c7f6d1653e434eef4083263dd94347652877494a317071fdd79608752ac79676",
+  "commonFooterSha256": "831ca849aba3318ef96eab5eaeb865460e1b5f3b86481c9b7729982576e7b8ac"
+}

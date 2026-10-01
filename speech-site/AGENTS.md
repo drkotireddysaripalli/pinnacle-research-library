@@ -14,6 +14,10 @@ The conversation history remains useful context, but committed current decisions
 
 The main agent in the owner's current task retains code, build and release ownership. Independent agents may research and review read-only. Do not delegate source edits, public submissions, browser control or deployment to reviewers.
 
+## Settled common header and footer
+
+The owner-approved Speech/Occupational Therapy presentation is fixed. Use the common navigation data, SiteHeader, SiteFooter (including VerifyFooter), portal-shell.css and readability.css. Do not compact, rewrite or hide their authority subtexts, fonts, colours, navigation lists or evidence descriptions during individual page work. Change that presentation only in response to a direct owner instruction. Keep current working URLs and policy additions. The independent wording and historical visual fixture is `tests/fixtures/shared-authority-owner-approved.json`; the browser acceptance suite enforces it. A shared change must rebuild and verify every managed page while retaining its main content and unrelated routes.
+
 For every substantial therapy-page change:
 
 1. Establish the visitor's concern, a clear first step and the source-backed service facts.

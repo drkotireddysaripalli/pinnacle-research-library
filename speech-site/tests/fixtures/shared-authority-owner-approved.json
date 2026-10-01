@@ -1,15 +1,89 @@
 {
   "authoritySource": "Owner's exact wording; original source commit 6e6a5373, restored by V154",
   "main": [
-    {"label":"Verify","lines":["4 Billion DataPoints for","900Million Children"]},
-    {"label":"PinnacleAI®","lines":["CDSCO, BIS, India","Certified SaMD"]},
-    {"label":"Research","lines":["Study Journals","& Publications"]},
-    {"label":"AbilityScore®","lines":["Proven 0 - 1000","Universal Metric"]},
-    {"label":"7 Readiness Indexes","lines":["Your Child Life","As it could be"]},
-    {"label":"Self-Sufficient","lines":["Growing everyday","independence"]},
-    {"label":"Mainstream","lines":["School & community","participation"]},
-    {"label":"160Yrs Paradigm Shift","lines":["Life-first child","development"]},
-    {"label":"Citations","lines":["Quote · link · download"]}
+    {
+      "label": "Verify",
+      "lines": [
+        "4 Billion DataPoints for",
+        "900Million Children"
+      ]
+    },
+    {
+      "label": "PinnacleAI®",
+      "lines": [
+        "CDSCO, BIS, India",
+        "Certified SaMD"
+      ]
+    },
+    {
+      "label": "Research",
+      "lines": [
+        "Study Journals",
+        "& Publications"
+      ]
+    },
+    {
+      "label": "AbilityScore®",
+      "lines": [
+        "Proven 0 - 1000",
+        "Universal Metric"
+      ]
+    },
+    {
+      "label": "7 Readiness Indexes",
+      "lines": [
+        "Your Child Life",
+        "As it could be"
+      ]
+    },
+    {
+      "label": "Self-Sufficient",
+      "lines": [
+        "Growing everyday",
+        "independence"
+      ]
+    },
+    {
+      "label": "Mainstream",
+      "lines": [
+        "School & community",
+        "participation"
+      ]
+    },
+    {
+      "label": "160Yrs Paradigm Shift",
+      "lines": [
+        "Life-first child",
+        "development"
+      ]
+    },
+    {
+      "label": "Citations",
+      "lines": [
+        "Quote · link · download"
+      ]
+    }
   ],
-  "desktop": {"authorityTitlesVisible":9,"authoritySubtextsVisible":9,"evidenceCardsVisible":36,"evidenceDescriptionsVisible":36,"footerNavigationExpanded":true,"locationsExpanded":true,"communityExpanded":true,"unapprovedContextBlock":false}
+  "desktop": {
+    "authorityTitlesVisible": 9,
+    "authoritySubtextsVisible": 9,
+    "evidenceCardsVisible": 36,
+    "evidenceDescriptionsVisible": 36,
+    "footerNavigationExpanded": true,
+    "locationsExpanded": true,
+    "communityExpanded": true,
+    "unapprovedContextBlock": false,
+    "typography": {
+      "topHeight": 132,
+      "brandWidth": 330,
+      "labelSize": 13,
+      "detailSize": 12,
+      "cardIcon": 48,
+      "cardValueSize": 24,
+      "cardTitleSize": 18,
+      "cardCopySize": 16,
+      "footerColumns": 4
+    }
+  },
+  "visualSource": "b1aa7055ddbfd8d540f4225614b1e32ec26d13f6 (Speech/OT, 29 September 2026)"
 }

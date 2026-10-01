@@ -1,5 +1,11 @@
 # V154 · restore the agreed common header and footer
 
+## Owner correction and V155 execution
+
+V154/source ceca853 was uploaded as Worker version feaa9e73-6074-4fa1-9a5d-20fa6382ad7f but never activated. The owner rejected its remaining compact typography and approximate layout. Recover the actual Speech/OT visual source b1aa7055ddbfd8d540f4225614b1e32ec26d13f6, rather than inventing replacement measurements. V155 removes the later common design overrides, restores nav/h3 footer markup and the original Verify card typography, and retains later working destination, policy and mobile-control fixes. All36 visible cards is the owner's current extension; that historical source itself originally featured8 with remaining records in a disclosure.
+
+Desktop1440 acceptance freezes top132px/logo330px, label13px/subtext12px, icons48px, card value24px/title18px/copy16px and four footer columns. All nine mobile authority destinations remain in the swipeable rail; mobile footer groups use the original accessible toggle controls. These checks run inside the existing browser CI, not just a one-off local script. All50 managed main bodies must remain byte-identical to V153.
+
 Owner report: missing desktop Verify/PinnacleAI subtexts, visually emptied footer and an unapproved sentence/link between authority row and therapy menu. This correction takes priority over the pending PinnacleAI overview.
 
 ## Exact cause
@@ -18,4 +24,4 @@ Owner report: missing desktop Verify/PinnacleAI subtexts, visually emptied foote
 
 `tests/fixtures/shared-authority-owner-approved.json` freezes the independently recorded owner wording and visibility requirements. Tests must enforce computed visible text, expanded footer links and cards—not merely source counts. Do not rewrite the fixed shell during a page build, reduce it as a speed optimisation, or move its subtexts into More. Changes to that settled presentation require a direct owner request. A newly released page may update an appropriate destination while preserving the agreed presentation and all retained links.
 
-Inspect desktop1440/1024 and phone/tablet320/390/768. Confirm no page overflow, keyboard/mobile menu control, decoded brand images and shared-shell accessibility. An existing speech-caption link distinction found by the focused audit is repaired with a shared underline style; the page body text remains exact. Native disclosures can still be closed by a reader; they must start expanded. Original129/133/153 evidence, Verify codebase and deferred-centre draft stay intact. No new image generation, indexing resubmission or unrelated page narrative work is needed for this restoration.
+Inspect desktop1440/1024 and phone/tablet320/390/768. Confirm no page overflow, keyboard/mobile menu control, decoded brand images and shared-shell accessibility. An existing speech-caption link distinction found by the focused audit is repaired with a shared underline style; the page body text remains exact. Desktop footer lists remain visible; phone readers can expand the original section controls. Original129/133/153 evidence, Verify codebase and deferred-centre draft stay intact. No new image generation, indexing resubmission or unrelated page narrative work is needed for this restoration.

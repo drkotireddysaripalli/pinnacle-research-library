@@ -1,5 +1,6 @@
 import {test,expect} from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
+import {checkSharedShell} from './shared-shell-contract.mjs';
 
 const route=process.env.PAGE_PATH || '/best-occupational-therapy-center-india-proven-improvement-rate';
 const expectedCanonical=process.env.CANONICAL_PATH || route;
@@ -22,6 +23,7 @@ test('usable public page, shared shell, source and call paths',async({page},test
   expect(await page.locator('a[href="tel:+919100181181"]').count()).toBeGreaterThan(0);
   expect(await page.locator('.portal-header a[href*="/verify"]').count()).toBeGreaterThan(0);
   expect(await page.locator('footer a[href*="/verify"]').count()).toBeGreaterThan(0);
+  await checkSharedShell(page);
   const imageErrors=await page.locator('main img').evaluateAll(nodes=>nodes.filter(n=>!n.hasAttribute('alt')||!n.getAttribute('width')||!n.getAttribute('height')).length);
   expect(imageErrors).toBe(0);
   // Decode only images already in view; lazy images are covered by each page's visual contract.
