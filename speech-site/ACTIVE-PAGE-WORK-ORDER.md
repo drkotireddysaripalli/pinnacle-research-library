@@ -1,5 +1,7 @@
 # Active page work order · sequential page corrections
 
+**LATEST CLOSED — V145:** Direct clinician-administered answer and matching FAQ/schema/reading copies published; current live page and updated source/lastmod verified without repeating unchanged layout tests. Source 0368467; Worker cc709f3c-14ca-427e-913a-a4408f5bd636; all177routes/fourbindings retained. Receipt: RELEASE-ABILITYSCORE-VOICE-V145-20261001.md.
+
 **LATEST CLOSED — V144:** Six-step joining-play example with existing branded Suchitra creative, owned arrival voice and matching outputs live; five local/five production cases passed. Source bc9cfc9; Worker 2e3a60fc-c16b-4272-b298-7d536a58c9bf; all177routes/fourbindings retained. Receipt: RELEASE-SUCHITRA-CLEANUP-V144-20261001.md.
 
 **LATEST CLOSED — V143:** Four-step accessible drawing/peer opportunity and human review example, approved inline learning scene and matching exports live; five local/five production cases passed. Source f2e04dc; Worker 3f591ef3-07dd-4659-bc72-d9e909a7c5db; all177routes/fourbindings retained. Receipt: RELEASE-MAINSTREAM-V143-20261001.md.
@@ -10,7 +12,7 @@
 
 **CURRENT SEQUENCE:** follow `reviews/PAGE-CLEANUP-REGISTER-20261001.md` and its48row JSON.15 accepted bodies stay intact; Leadership, Framework, Special Education and About are completed;29 bounded corrections remain. Finish one page task and its release before the next. Shared-source defects are fixed once and verified for their affected rows. Source-gated policy decisions remain precise pending conditions while independent work proceeds.
 
-**NOW — AbilityScore:** Answer 'Can a parent complete the clinical score alone?' directly in Pinnacle voice. Keep clinician administration/governance distinct from family observations and preserve questionnaire/validation boundaries. Regenerate matching FAQ/schema/exports; read back the changed answer.
+**NOW — Personal Development Kernel:** Define our child-specific record concept directly; replace 'The PDK is described in Pinnacle’s methods…'. Retain documented architecture status, authorised access and human decisions; keep the home/school scenario. Regenerate matching outputs; read back the changed definition.
 
 **ABOUT V140 CLOSED:** source9579462, Workera2c80185-c279-4451-9b89-ac3ee53d633d;177routes/fourbindings,48pagehashes/47unchangedbodies and seven focused production cases pass. Five family-journey steps, five service routes and original complete branded creative published. IndexNow singleURL200. Receipt `RELEASE-ABOUT-V140-20261001.md`.
 

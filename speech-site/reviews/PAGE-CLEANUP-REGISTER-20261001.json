@@ -5,8 +5,8 @@
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
     "keep": 15,
-    "completed": 8,
-    "queued": 25
+    "completed": 9,
+    "queued": 24
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -23,14 +23,18 @@
       "id": "abilityscore",
       "name": "AbilityScore",
       "url": "https://www.pinnacleblooms.org/abilityscore",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Answer 'Can a parent complete the clinical score alone?' directly in Pinnacle voice.",
         "Keep clinician administration/governance distinct from family observations and preserve questionnaire/validation boundaries.",
         "Regenerate matching FAQ/schema/exports; read back the changed answer."
       ],
-      "sequence": 9
+      "sequence": 9,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-ABILITYSCORE-VOICE-V145-20261001.md",
+      "sourceCommit": "0368467",
+      "workerVersion": "cc709f3c-14ca-427e-913a-a4408f5bd636"
     },
     {
       "id": "about",

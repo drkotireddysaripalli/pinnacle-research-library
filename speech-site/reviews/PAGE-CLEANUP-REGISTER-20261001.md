@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 8 completed, 25 remaining.** Latest closure: Suchitra Centre V144. Next: AbilityScore.
+**15 keep, 9 completed, 24 remaining.** Latest closure: AbilityScore V145. Next: Personal Development Kernel.
 
 ## Initial decision
 
@@ -132,7 +132,9 @@ Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-suchitra
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 9. AbilityScore · copy
+### 9. AbilityScore · COMPLETED V145
+
+Closure: [Release receipt](../RELEASE-ABILITYSCORE-VOICE-V145-20261001.md). The task below is the accepted contract.
 
 Canonical: [/abilityscore](https://www.pinnacleblooms.org/abilityscore)
 
