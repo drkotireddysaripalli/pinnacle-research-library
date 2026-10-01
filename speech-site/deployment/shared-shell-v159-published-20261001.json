@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-01T12:08:03.667Z",
+  "sourceCommit": "571f30e68bfb719ed5138b4d0d5c5c76d06f6ae1",
+  "ciRun": 36859515413,
+  "version": "58f7fabb-cc45-4f15-a2bb-f9bda99885e6",
+  "deploymentId": "f137db56-b62d-42a5-9fd3-b4aaf24df3e7",
+  "publishedAt": "2026-10-01T12:08:02.296633Z",
+  "percentage": 100,
+  "rollbackVersion": "baca2d9f-4e65-48c2-ad80-499cc976e3d7",
+  "routes": 180,
+  "assignments": 81,
+  "routeFingerprint": "1a917340",
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "PINNACLE_ASK",
+      "type": "service",
+      "service": "pinnacle-ask",
+      "environment": "production"
+    },
+    {
+      "name": "PINNACLE_LEGACY",
+      "type": "service",
+      "service": "pbn-planetscale",
+      "environment": "production"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ]
+}
