@@ -2,7 +2,7 @@
 (() => {
   const id = 'G-H9CLX1WJ7R'; // Existing approved evidence stream; enhanced measurement is off.
   const canonical = 'https://www.pinnacleblooms.org/national-autism-helpline';
-  const storageKey = 'pinnacle-helpline-analytics-choice-v1';
+  const storageKey = 'pinnacle-helpline-measurement-choice-v2';
   const lifetime = 180 * 86400000;
   const placements = new Set(['nav','hero','concerns','first_call','telugu','service_reference','closing','mobile_sticky']);
   const panel = document.querySelector('[data-analytics-panel]');
@@ -34,6 +34,8 @@
     if (loaded) { window.gtag('consent', 'update', { analytics_storage: 'granted' }); return; }
     loaded = true;
     window.gtag('consent', 'default', { analytics_storage: 'granted', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    window.gtag('set', 'ads_data_redaction', true);
+    window.gtag('set', 'url_passthrough', false);
     window.gtag('js', new Date());
     window.gtag('config', id, {
       send_page_view: false, allow_google_signals: false, allow_ad_personalization_signals: false,
@@ -41,6 +43,11 @@
       cookie_flags: 'SameSite=Lax;Secure', cookie_expires: lifetime / 1000, cookie_update: false,
       page_location: canonical, page_title: 'Pinnacle National Autism Helpline', page_referrer: '', ignore_referrer: true,
       campaign_id: '', campaign_source: '', campaign_medium: '', campaign_name: '', campaign_term: '', campaign_content: ''
+    });
+    // Ads base tag only: no conversion event and no personalized advertising.
+    window.gtag('config', 'AW-10810823199', {
+      allow_ad_personalization_signals: false, restricted_data_processing: true,
+      page_location: canonical, page_title: 'Pinnacle National Autism Helpline', page_referrer: ''
     });
     const script = document.createElement('script');
     script.async = true;
@@ -52,14 +59,14 @@
     if (!['accepted','declined'].includes(value)) return;
     try { localStorage.setItem(storageKey, JSON.stringify({ value, at: Date.now() })); } catch {}
     if (value === 'accepted' && !blocked) {
-      try { start(); tell('Optional analytics allowed. You can turn it off here at any time.'); }
+      try { start(); tell('Optional measurement allowed. You can turn it off here at any time.'); }
       catch { enabled = false; tell('Analytics is unavailable. You can still call as usual.'); }
     } else {
       enabled = false;
       window['ga-disable-' + id] = true;
       if (loaded) { try { window.gtag('consent','update',{ analytics_storage:'denied' }); } catch {} }
       clearCookies();
-      tell(blocked ? 'Optional analytics is off because Global Privacy Control is enabled.' : 'Optional analytics is off. You can call as usual.');
+      tell(blocked ? 'Optional measurement is off because Global Privacy Control is enabled.' : 'Optional measurement is off. You can call as usual.');
     }
   };
   document.querySelectorAll('[data-analytics-choice]').forEach(button => {
@@ -71,8 +78,8 @@
   try { saved = JSON.parse(localStorage.getItem(storageKey)); } catch {}
   if (blocked) choose('declined');
   else if (saved && Number.isFinite(saved.at) && saved.at <= Date.now() && Date.now() - saved.at < lifetime) {
-    if (saved.value === 'accepted') { try { start(); tell('Optional analytics allowed. You can turn it off here at any time.'); } catch { enabled = false; } }
-    else if (saved.value === 'declined') tell('Optional analytics is off. You can call as usual.');
+    if (saved.value === 'accepted') { try { start(); tell('Optional measurement allowed. You can turn it off here at any time.'); } catch { enabled = false; } }
+    else if (saved.value === 'declined') tell('Optional measurement is off. You can call as usual.');
   }
   // One bubbling click listener also covers keyboard activation; never intercept dialing.
   document.addEventListener('click', event => {

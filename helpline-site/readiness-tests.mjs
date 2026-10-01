@@ -24,16 +24,18 @@ await check('POST is refused without collecting a form', async () => { const r=a
 await check('ETag validator returns 304 without a body', async () => { const r=await worker.fetch(request('',{headers:{'If-None-Match':'W/'+HELPLINE_ETAG}})); assert.equal(r.status,304); assert.equal(await r.text(),''); });
 await check('Query parameters do not change or enter page output', async () => {const r=await worker.fetch(request('?test_private_marker=do-not-reflect')); assert.equal(await r.text(),HELPLINE_HTML); });
 await check('Single URL sitemap supports GET and HEAD', async () => { const r=await worker.fetch(request('/sitemap.xml')); assert.equal(r.status,200); assert.match(r.headers.get('content-type'),/application\/xml/); const xml=await r.text(); assert.equal((xml.match(/<loc>/g)||[]).length,1); assert.ok(xml.includes('<loc>'+CANONICAL_URL+'</loc>')); const head=await worker.fetch(request('/sitemap.xml',{method:'HEAD'})); assert.equal(head.status,200); assert.equal(await head.text(),''); });
-await check('CSP narrowly permits the existing Cloudflare beacon and its same-origin receiver', async () => {
+await check('CSP permits only the deployed measurement endpoints and existing Cloudflare beacon', async () => {
   const r=await worker.fetch(request()); const csp=r.headers.get('content-security-policy');
-  assert.match(csp,/(?:^|;\s*)img-src 'self'(?:;|$)/); assert.match(csp,/(?:^|;\s*)font-src 'self'(?:;|$)/);
+  assert.match(csp,/(?:^|;\s*)img-src 'self' /); assert.match(csp,/(?:^|;\s*)font-src 'self'(?:;|$)/);
   assert.match(csp,/default-src 'none'/); assert.doesNotMatch(csp,/\*|unsafe-eval|script-src[^;]*unsafe-inline/);
   const directives=Object.fromEntries(csp.split(';').map(d=>d.trim().split(/\s+/)).filter(d=>d[0]).map(([name,...values])=>[name,values]));
-  assert.equal(directives['script-src'].length,5);
+  assert.deepEqual(directives['img-src'],["'self'",'https://www.googletagmanager.com','https://www.googleadservices.com','https://googleads.g.doubleclick.net','https://pagead2.googlesyndication.com','https://www.google.com','https://www.google.co.in']);
+  assert.deepEqual(directives['frame-src'],['https://www.googletagmanager.com']);
+  assert.equal(directives['script-src'].length,7);
   assert.match(directives['script-src'][0],/^'sha256-[A-Za-z0-9+/]+=*'$/);
   assert.match(directives['script-src'][1],/^'sha256-[A-Za-z0-9+/]+=*'$/);
-  assert.deepEqual(directives['script-src'].slice(2),['https://www.googletagmanager.com/gtag/js','https://static.cloudflareinsights.com/beacon.min.js','https://static.cloudflareinsights.com/beacon.min.js/']);
-  assert.deepEqual(directives['connect-src'],['https://www.pinnacleblooms.org/cdn-cgi/rum','https://www.google-analytics.com/g/collect','https://region1.google-analytics.com/g/collect']);
+  assert.deepEqual(directives['script-src'].slice(2),['https://www.googletagmanager.com/gtag/','https://www.googleadservices.com/pagead/','https://www.google.com/pagead/','https://static.cloudflareinsights.com/beacon.min.js','https://static.cloudflareinsights.com/beacon.min.js/']);
+  assert.deepEqual(directives['connect-src'],['https://www.pinnacleblooms.org/cdn-cgi/rum','https://www.google-analytics.com/g/collect','https://region1.google-analytics.com/g/collect','https://www.googletagmanager.com','https://www.googleadservices.com','https://googleads.g.doubleclick.net','https://pagead2.googlesyndication.com','https://www.google.com','https://www.google.co.in','https://ad.doubleclick.net']);
   for(const name of ['default-src','base-uri','form-action','frame-ancestors'])assert.deepEqual(directives[name],["'none'"]);
   const cached=await worker.fetch(request('',{headers:{'If-None-Match':HELPLINE_ETAG}}));
   assert.equal(cached.headers.get('content-security-policy'),csp);
