@@ -25,7 +25,7 @@ import therapeuticHero from '../assets/therapeuticai-editorial-20260930.png';
 import everydayHero from '../assets/everyday-editorial-20260930.png';
 import fusionHero from '../assets/fusion-editorial-20260930.png';
 import reassessHero from '../assets/reassess-editorial-20260930.png';
-import lifePath from '../assets/pinnacleai-life-path-20260930.png';
+import PinnacleOverviewBody from './PinnacleOverviewBody.astro';
 import '../styles/pinnacleai-experience.css';
 
 const {page}=Astro.props;
@@ -40,7 +40,7 @@ const heroBySlug={pinnacleai:overviewHero,abilityscore:abilityHero,'seven-readin
 const moduleIcons={pinnacleai:'sun',abilityscore:'measure','seven-readiness-indexes':'compass','personal-development-kernel':'plan',prognose:'track',therapeuticai:'heart','everyday-therapy':'home','fusion-module':'people','reassess-review-repeat':'loop'};
 const sourceLabels={model:'Life-first programme direction',workflow:'Documented PinnacleAI workflow',md5:'Indian MD-5 licence · software scope',bis:'BIS named modules and scope',fsc:'Free Sale Certificate · export scope',research:'Research library and status',methods:'Methodology preprint and limits',dossier:'Product evidence dossier',validation:'External validation protocol status',scale:'Defined scale and mission',studies:'Study portfolio and limitations',citation:'Citation library'};
 const sourceNotes={model:'The everyday-life direction that shapes goals and review.',workflow:'The documented measurement, practice and feedback sequence.',md5:'Class B non-diagnostic developmental-support software for ages 0–12.',bis:'Named software modules, not an individual clinical outcome.',fsc:'Indian marketability and export subject to the importing country’s law.',research:'Publication types and their review status.',methods:'The published method and preliminary psychometric limits.',dossier:'Versioned product examples; private child records are not public.',validation:'A protocol, not a completed independent comparator result.',scale:'Dated and separately defined service, registration and record counts.',studies:'Study types, cohorts and limitations.',citation:'Stable citation and download references.'};
-const nearSources={pinnacleai:['model','md5'],abilityscore:['methods','validation'],'seven-readiness-indexes':['bis','workflow'],'personal-development-kernel':['dossier','workflow'],prognose:['bis','validation'],therapeuticai:['bis','workflow'],'everyday-therapy':['workflow','methods'],'fusion-module':['bis','dossier'],'reassess-review-repeat':['methods','workflow']};
+const nearSources={pinnacleai:['model','md5','bis','research'],abilityscore:['methods','validation'],'seven-readiness-indexes':['bis','workflow'],'personal-development-kernel':['dossier','workflow'],prognose:['bis','validation'],therapeuticai:['bis','workflow'],'everyday-therapy':['workflow','methods'],'fusion-module':['bis','dossier'],'reassess-review-repeat':['methods','workflow']};
 const activeSources=nearSources[page.slug as keyof typeof nearSources];
 const sources=page.sourceKeys.map(key=>({key,href:url(waveSources[key as keyof typeof waveSources]),label:sourceLabels[key as keyof typeof sourceLabels],note:sourceNotes[key as keyof typeof sourceNotes]}));
 const focusSources=activeSources.map(key=>({key,href:url(waveSources[key as keyof typeof waveSources]),label:sourceLabels[key as keyof typeof sourceLabels],note:sourceNotes[key as keyof typeof sourceNotes]}));
@@ -63,7 +63,7 @@ const speechExampleLink=speechModuleExamples[page.slug];
 const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].includes(page.slug)?undefined:'2026-09-30';
 ---
 
-<PageLayout path={path} label={page.label} title={page.title} description={page.description} socialTitle={page.title} socialDescription={page.description} shareImage={socialBySlug[page.slug]} shareVersion="2026-09-30-pinnacleai-editorial" imageAlt={`${page.short} · Pinnacle Blooms Network life-first creative with 9100 181 181.`} imageCaption={`${page.short} · PinnacleAI illustrated social creative.`} includeService={false} primaryEntityId={entityId} entityGraph={entityGraph} citations={sources.map(source=>source.href)} faqs={page.faqs} publishedOn={firstPublished} updatedOn={page.updatedOn||'2026-09-30'} breadcrumbParent={isOverview?null:{name:'PinnacleAI®',path:'/pinnacleai'}}>
+<PageLayout path={path} label={page.label} title={page.title} description={page.description} socialTitle={page.title} socialDescription={page.description} shareImage={socialBySlug[page.slug]} shareVersion={isOverview?"2026-10-01-pinnacleai-v161":"2026-09-30-pinnacleai-editorial"} imageAlt={`${page.short} · Pinnacle Blooms Network life-first creative with 9100 181 181.`} imageCaption={`${page.short} · PinnacleAI illustrated social creative.`} includeService={false} primaryEntityId={entityId} entityGraph={entityGraph} citations={sources.map(source=>source.href)} faqs={page.faqs} publishedOn={firstPublished} updatedOn={page.updatedOn||'2026-09-30'} breadcrumbParent={isOverview?null:{name:'PinnacleAI®',path:'/pinnacleai'}}>
   <div class="wave2" data-wave-module={page.slug}>
     <section class="wave2-hero" aria-labelledby="wave2-title">
       <div class="wave2-wrap wave2-hero-grid">
@@ -71,34 +71,21 @@ const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].
           <p class="wave2-kicker"><Icon name={moduleIcons[page.slug]} size={22}/>{page.eyebrow}</p>
           <h1 id="wave2-title"><span>{page.short}</span>{editorial.opening}</h1>
         </div>
-        <figure class="wave2-hero-art"><Image src={heroBySlug[page.slug]} widths={[480,800,1200,1600]} sizes="(min-width: 900px) 48vw, 100vw" format="webp" quality={81} loading="eager" decoding="async" alt={editorial.imageAlt}/></figure>
+        {!isOverview&&<figure class="wave2-hero-art"><Image src={heroBySlug[page.slug]} widths={[480,800,1200,1600]} sizes="(min-width: 900px) 48vw, 100vw" format="webp" quality={81} loading="eager" decoding="async" alt={editorial.imageAlt}/></figure>}
         <div class="wave2-hero-detail">
           <p class="wave2-lead">{editorial.lead}</p>
           <p class="wave2-parent-voice">{editorial.moment}</p>
-          <div class="wave2-actions"><a class="wave2-button wave2-primary" href={phone.href} data-cta="pinnacleai-call"><Icon name="phone"/>Call {phone.display}</a><a class="wave2-button wave2-secondary" href={url('/centers')}>Find a centre <Icon name="arrow"/></a></div>
-          <p class="wave2-help">{editorial.callQuestion} The team can confirm a suitable professional, centre, visit and fees.</p>
+          <div class="wave2-actions"><a class="wave2-button wave2-primary" href={phone.href} data-cta="pinnacleai-call"><Icon name="phone"/>Call {phone.display}</a>{isOverview?<a class="wave2-button wave2-secondary" href={url('/enroll-autism-speech-aba-therapies-india')} data-cta="final-enquiry">Ask about a first visit <Icon name="arrow"/></a>:<a class="wave2-button wave2-secondary" href={url('/centers')}>Find a centre <Icon name="arrow"/></a>}</div>
+          <p class="wave2-help">{editorial.callQuestion} {isOverview?"Telephone guidance is free. We’ll explain the professional, centre, first visit and fees before you decide.":"The team can confirm a suitable professional, centre, visit and fees."}</p>{isOverview&&<a class="wave2-text-link" href={url('/centers')}><Icon name="pin" size={18}/>Find a Pinnacle centre <Icon name="arrow" size={18}/></a>}
         </div>
+        {isOverview&&<figure class="wave2-hero-art"><Image src={heroBySlug[page.slug]} widths={[480,800,1200,1600]} sizes="(min-width: 900px) 48vw, 100vw" format="webp" quality={81} loading="eager" decoding="async" alt={editorial.imageAlt}/></figure>}
       </div>
     </section>
 
-    <nav class="wave2-jump wave2-wrap" aria-label="On this page"><a href="#worked-example">{isOverview?'Follow one child’s day':'See a life moment'}</a><a href="#what-it-does">{isOverview?'The whole system':'What this module does'}</a><a href="#sources">Check the evidence</a><a href="#next-step">Take a next step</a></nav>
+    <nav class="wave2-jump wave2-wrap" aria-label="On this page"><a href="#worked-example">{isOverview?'See the everyday example':'See a life moment'}</a><a href="#what-it-does">{isOverview?'How the parts work together':'What this module does'}</a><a href="#sources">Check the evidence</a><a href="#next-step">Take a next step</a></nav>
 
     {isOverview ? <>
-      <section class="wave2-section wave2-story" id="worked-example" aria-labelledby="wave2-example-title"><div class="wave2-wrap">
-        <div class="wave2-section-title"><p class="wave2-kicker">One child, one school morning</p><h2 id="wave2-example-title">{page.exampleTitle}</h2><p>{page.exampleLead}</p></div>
-        <div class="wave2-story-grid"><figure><Image src={lifePath} widths={[560,900,1300]} sizes="(min-width: 900px) 51vw, 100vw" format="webp" quality={78} loading="lazy" decoding="async" alt="Illustrated child and family pathway connecting home, professional guidance, play and school participation."/></figure><div class="wave2-story-copy"><p class="wave2-emphasis">{editorial.decision}</p><ol>{page.example.map(([title,copy],i)=><li><span>{String(i+1).padStart(2,'0')}</span><div><h3>{title}</h3><p>{copy}</p></div></li>)}</ol></div></div>
-        <p class="wave2-caption">An illustrative explanation of the life-first approach; it is not an individual child outcome.</p>
-      </div></section>
-
-      <section class="wave2-section wave2-overview" id="what-it-does" aria-labelledby="wave2-system-title"><div class="wave2-wrap">
-        <div class="wave2-section-title"><p class="wave2-kicker">The PinnacleAI® system</p><h2 id="wave2-system-title">The life goal gives every part of the system its job.</h2><p>{page.purpose} <a href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Read the documented life-first direction ↗</a></p></div>
-        <div class="wave2-system-intro"><strong>Understand → plan → guide → practise → listen → correct</strong><p>PinnacleAI GPT-OS is licensed in India as Class B non-diagnostic developmental-support software for ages 0–12. It supports the family and qualified professionals; it does not make a child's care decisions alone. <a href={url('/verify/evidence/records/md5.html')}>Inspect the MD-5 scope ↗</a></p></div>
-        <div class="wave2-module-map">{pinnacleWave.filter(item=>item.slug!=='pinnacleai').map((item,i)=><a href={url('/'+item.slug)}><span class="wave2-map-index">{String(i+1).padStart(2,'0')}</span><Icon name={moduleIcons[item.slug]} size={27}/><strong>{item.short}</strong><small>{pinnacleEditorial[item.slug as keyof typeof pinnacleEditorial].stage}</small><Icon name="arrow" size={18}/></a>)}</div>
-      </div></section>
-
-      <section class="wave2-section wave2-stages" aria-labelledby="wave2-stages-title"><div class="wave2-wrap"><div class="wave2-section-title"><p class="wave2-kicker">A parent-facing pathway</p><h2 id="wave2-stages-title">Seven stages. One life in view.</h2><p>The stages explain the direction of care. A professional and family choose what fits the child; the path is not a fixed protocol or guaranteed endpoint.</p></div><ol>{stages.map(([number,title,note])=><li><span>{number}</span><h3>{title}</h3><p>{note}</p></li>)}</ol></div></section>
-
-      <section class="wave2-section wave2-scale" aria-labelledby="wave2-scale-title"><div class="wave2-wrap"><div class="wave2-section-title"><p class="wave2-kicker">Proof with units attached</p><h2 id="wave2-scale-title">A large body of work, open to inspection.</h2><p>The public assurance map reports separate operational measures at a 17 July 2026 cutoff. These are activity and system-scale measures, not a count of children with proven improvement.</p></div><div class="wave2-scale-grid"><article><strong>31,052,382</strong><h3>Defined services</h3></article><article><strong>792,614</strong><h3>Beneficiary/family registrations</h3></article><article><strong>2.7B+</strong><h3>Structured records and events</h3></article></div><a href={url('/verify/evidence/scale-and-mission.html')}>Read the dates, units and assurance limits ↗</a></div></section>
+      <PinnacleOverviewBody page={page}/>
     </> : <>
       <section class="wave2-section wave2-module-story" id="worked-example" aria-labelledby="wave2-example-title"><div class="wave2-wrap">
         <div class="wave2-section-title"><p class="wave2-kicker">A moment in a child’s day</p><h2 id="wave2-example-title">{page.exampleTitle}</h2><p>{page.exampleLead}</p></div>
@@ -121,6 +108,6 @@ const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].
 
     <section class="wave2-section wave2-faq" id="questions" aria-labelledby="wave2-faq-title"><div class="wave2-wrap wave2-faq-grid"><div><p class="wave2-kicker">Ask us before you decide</p><h2 id="wave2-faq-title">Questions a careful family would ask.</h2><p>Bring your own goal and the observations you already have. A qualified professional can explain what is relevant for your child.</p></div><div>{page.faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>
 
-    <section class="wave2-close" id="next-step" aria-labelledby="wave2-close-title"><div class="wave2-wrap"><p class="wave2-kicker">Every Child Counts®</p><h2 id="wave2-close-title">Start with your child’s next life moment.</h2><p>{editorial.callQuestion} Pinnacle can help confirm the suitable professional, centre, visit and fees before you choose how to proceed.</p><div class="wave2-actions"><a class="wave2-button wave2-close-call" href={phone.href} data-cta="pinnacleai-close-call"><Icon name="phone"/>Call {phone.display}</a><a class="wave2-button wave2-close-enrol" href={url('/enroll-autism-speech-aba-therapies-india')}>Begin enrolment <Icon name="arrow"/></a></div><small>Guidance by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited. No individual outcome is guaranteed.</small></div></section>
+    <section class="wave2-close" id="next-step" aria-labelledby="wave2-close-title"><div class="wave2-wrap"><p class="wave2-kicker">Every Child Counts®</p><h2 id="wave2-close-title">{isOverview?"What would you like to become easier for your child?":"Start with your child’s next life moment."}</h2><p>{isOverview?"Tell us about one thing at home or school. We’ll help you understand the next step.":editorial.callQuestion} Pinnacle can help confirm the suitable professional, centre, visit and fees before you choose how to proceed.</p><div class="wave2-actions"><a class="wave2-button wave2-close-call" href={phone.href} data-cta="pinnacleai-close-call"><Icon name="phone"/>Call {phone.display}</a><a class="wave2-button wave2-close-enrol" href={url('/enroll-autism-speech-aba-therapies-india')} data-cta={isOverview?"final-enquiry":undefined}>{isOverview?"Ask about a first visit":"Begin enrolment"} <Icon name="arrow"/></a></div><small>Guidance by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited. No individual outcome is guaranteed.</small></div></section>
   </div>
 </PageLayout>

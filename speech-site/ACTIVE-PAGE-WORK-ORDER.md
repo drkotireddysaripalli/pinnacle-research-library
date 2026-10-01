@@ -2,6 +2,8 @@
 
 ## Current owner priority · 1 October 2026
 
+**PinnacleAI overview V161 is in implementation.** Five-task contract: direct family invitation and early call; complete blocks/help example; connected module inputs, outputs and feedback; first-conversation/centre choice with existing coarse actions; matching visible FAQs, schema, source maps and reading exports. Retain the approved hero/social poster and shared shell V159; create one complete branded explanatory creative. Main owns all edits and release. Read-only evidence and family/sales reviews precede the single acceptance pass. See reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md.
+
 **Speech Therapy V160 is published and verified.** The agreed narrative, complete branded native ChatGPT creatives, action buttons, seven-stage communication example, offer/first visit, selected proof, compact 62-centre choice, government guidance, matching metadata/reading exports and four managed inbound links are live. The common header and complete footer remain exactly on the approved V159 baseline.
 
 Completed work and precise follow-ups are in `reviews/QUALITY-PASS-20261001/SPEECH-EXECUTION-CHECKLIST-20261001.md`; release proof is `RELEASE-SPEECH-V160-20261001.md`. Do not repeat the completed whole-page audit, creative generation or toolchain setup.

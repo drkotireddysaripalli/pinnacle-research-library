@@ -1,48 +1,59 @@
 {
-  "title": "PinnacleAI® | A Life-First Child Development System",
+  "title": "PinnacleAI® | Child Development, Everyday Life & Family Support",
   "url": "https://www.pinnacleblooms.org/pinnacleai",
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
-  "parentMoment": "“I want my child to join the morning, not simply finish more exercises.”",
-  "lifeDecision": "Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal.",
-  "familyDiscussion": "A clearer first conversation about your child’s strengths, priorities and a suitable next professional review.",
+  "parentMoment": "“I want my child to ask for help and feel part of what is happening.”",
+  "lifeDecision": "Your child’s self-sufficient, mainstream-included life sets the direction. Your family and qualified professionals choose the abilities, goals, support and practice to work on, then review what is becoming useful in daily life.",
+  "familyDiscussion": "A first conversation about your child’s strengths, one everyday priority and the professional and centre suitable for a next visit.",
   "directAnswer": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.",
-  "lifePurpose": "A score is useful only when it helps people understand what to do next for the child’s everyday life. The life goal determines what to observe, which support to choose and what to review.",
+  "lifePurpose": "Your child’s self-sufficient, mainstream-included life is the purpose: doing more with growing independence and taking part at home, school and in the community. That purpose shapes the abilities, goals, methods, people, practice and review.",
   "illustrativeExample": {
-    "title": "Imagine joining the school morning with more confidence.",
-    "description": "This is an illustrative example, not a patient result. The family names one desired moment; relevant professionals decide which measures and supports fit.",
+    "title": "A little request. A bigger part in life.",
+    "description": "Imagine a child who enjoys building with blocks. Their family wants an accessible way for them to ask for help and join a comfortable shared activity. This is an illustrative planning example.",
     "steps": [
       {
-        "title": "Listen first",
-        "description": "A family describes the child’s strengths, preferences and what makes the morning hard or possible."
+        "title": "Begin with a strength",
+        "description": "The child chooses a favourite block with a gesture or picture. The family explains what the child enjoys and which shared activity they would like to make easier."
       },
       {
-        "title": "Build a starting picture",
-        "description": "A clinician-governed assessment and relevant Readiness views help identify abilities and support needs."
+        "title": "Agree a useful next goal",
+        "description": "Assessment and professional discussion help identify an accessible help request. The family understands what is being worked on, why, and which support makes it possible."
       },
       {
-        "title": "Choose and practise",
-        "description": "The team connects suitable therapy and manageable everyday activities to that goal, at the centre and beyond."
+        "title": "Choose the right contributions",
+        "description": "The responsible professional selects suitable communication, movement or learning support. The goal guides the team; every child does not need every therapy."
       },
       {
-        "title": "Observe and correct",
-        "description": "Family, teacher and clinicians share relevant observations with consent; the plan changes when evidence from life requires it."
+        "title": "Practise where life happens",
+        "description": "A familiar adult offers manageable block play at home. With consent and the teacher’s agreement, a similar opportunity may fit a comfortable classroom activity. The child can pause or decline."
+      },
+      {
+        "title": "Notice what made it possible",
+        "description": "Was the request understood? Which cue helped? Did noise, group size or comfort affect joining in? Family and professional observations give these details a place in review."
+      },
+      {
+        "title": "Change something specific",
+        "description": "If asking is comfortable at home but harder in a noisy group, consider a quieter opportunity, a clearer cue or different support. Record why the plan changes; compare the next observations and reassess as appropriate."
       }
     ],
     "status": "Fictional explanatory example; not a patient story or observed result."
   },
   "mechanism": [
-    "AbilityScore® and seven Readiness Indexes describe a starting picture and areas to discuss.",
-    "The Personal Development Kernel carries relevant child-specific context into a revisable forecast and plan.",
-    "TherapeuticAI® and Everyday Therapy™ connect professional choices to suitable activities and family-guided practice.",
-    "Fusion brings observations back into review; reassessment compares change, no change or decline and helps correct the next step."
+    "AbilityScore® and seven Readiness Indexes: relevant assessment and context → an explained starting picture.",
+    "Personal Development Kernel: starting picture, family priorities and setting → child-specific context for authorised review.",
+    "Prognose: child context and a meaningful goal → a revisable plan and checkpoint.",
+    "TherapeuticAI®: professionally selected goals → suitable guided activities.",
+    "Everyday Therapy™: agreed guidance → manageable practice in everyday routines.",
+    "Fusion: consented observations from relevant settings → information for family and professional review.",
+    "Review and reassessment: assessment plus everyday observations → continue, change the cue, environment or support, or reconsider the goal. The next decision returns to the child’s context and plan."
   ],
   "limit": "The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ.",
   "claimSourceMap": [
     {
-      "statement": "Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal.",
+      "statement": "Your child’s self-sufficient, mainstream-included life sets the direction. Your family and qualified professionals choose the abilities, goals, support and practice to work on, then review what is becoming useful in daily life.",
       "kind": "programme explanation",
       "source": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
       "limit": "Programme purpose; not a guarantee of a child outcome."
@@ -96,6 +107,12 @@
       "name": "Dated scale and unit definitions",
       "url": "https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html",
       "limit": "Service, registration and record counts have different units; not proven child outcomes."
+    },
+    {
+      "id": "citation",
+      "name": "Citation library",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html",
+      "limit": "Source exports aid citation; they do not establish endorsement."
     }
   ],
   "relatedPages": [
@@ -138,12 +155,166 @@
       "answer": "PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software documented on an Indian Form MD-5 licence for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support."
     },
     {
+      "question": "How do the PinnacleAI parts work together?",
+      "answer": "AbilityScore and the seven Readiness Indexes inform a starting picture. The Personal Development Kernel brings child context into a revisable Prognose plan. Professionals choose suitable TherapeuticAI activities and Everyday Therapy practice. Fusion brings consented observations into review and reassessment, which can change the child’s next plan."
+    },
+    {
+      "question": "How does an everyday priority become a plan?",
+      "answer": "For example, a child who enjoys blocks may need an accessible way to ask for help and join shared play. The family and professional agree a suitable request, choose support, consider manageable practice and review where the request is understood. A quieter setting or clearer cue may become the next adjustment. This is an illustrative example, not an observed patient result."
+    },
+    {
+      "question": "What is my family’s role?",
+      "answer": "You help choose priorities, explain what your child enjoys, agree manageable guided practice and share observations. You can question the plan and discuss what needs to change. Relevant school observations are included with appropriate consent. Qualified professionals remain responsible for clinical decisions."
+    },
+    {
+      "question": "Does every child need every therapy?",
+      "answer": "No. The responsible professionals recommend the contributions relevant to the child’s assessed abilities, priorities and needs. Speech therapy, occupational therapy, behavioural support and special education can work together where appropriate; the family discusses the proposed plan and reviews it with the team."
+    },
+    {
+      "question": "What happens when I call or send an enquiry?",
+      "answer": "Tell us one everyday priority. Our team can explain the suitable professional and centre, what a first visit involves, appointment availability and fees. Telephone guidance is free. Assessment and therapy fees are confirmed separately before you decide. Sending the form starts an enquiry, not a confirmed appointment or admission."
+    },
+    {
       "question": "Does PinnacleAI diagnose autism or replace a clinician?",
       "answer": "No. The licensed software is non-diagnostic. A suitable qualified professional evaluates the child, chooses relevant supports and reviews decisions with the family."
     },
     {
       "question": "Does PinnacleAI guarantee mainstream school or independence?",
       "answer": "No. Growing self-sufficiency and participation set the direction; individual outcomes depend on the child and context and cannot be promised."
+    }
+  ],
+  "architecture": [
+    {
+      "icon": "measure",
+      "title": "Understand the starting picture",
+      "input": "Relevant assessment and your family’s observations",
+      "output": "An explained picture of abilities and readiness",
+      "links": [
+        {
+          "name": "AbilityScore®",
+          "url": "https://www.pinnacleblooms.org/abilityscore"
+        },
+        {
+          "name": "7 Readiness Indexes",
+          "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
+        }
+      ]
+    },
+    {
+      "icon": "plan",
+      "title": "Keep your child’s context together",
+      "input": "Strengths, priorities, support and setting",
+      "output": "Child-specific context for authorised review",
+      "links": [
+        {
+          "name": "Personal Development Kernel",
+          "url": "https://www.pinnacleblooms.org/personal-development-kernel"
+        }
+      ]
+    },
+    {
+      "icon": "compass",
+      "title": "Agree a plan you can revisit",
+      "input": "Child context and a meaningful everyday goal",
+      "output": "A revisable plan with a checkpoint",
+      "links": [
+        {
+          "name": "Prognose",
+          "url": "https://www.pinnacleblooms.org/prognose"
+        }
+      ]
+    },
+    {
+      "icon": "heart",
+      "title": "Choose purposeful support",
+      "input": "Goals selected with qualified professionals",
+      "output": "Suitable guided activities and therapy contributions",
+      "links": [
+        {
+          "name": "TherapeuticAI®",
+          "url": "https://www.pinnacleblooms.org/therapeuticai"
+        }
+      ]
+    },
+    {
+      "icon": "home",
+      "title": "Bring practice into ordinary moments",
+      "input": "Guidance your family understands and agrees to",
+      "output": "Manageable practice in everyday routines",
+      "links": [
+        {
+          "name": "Everyday Therapy™",
+          "url": "https://www.pinnacleblooms.org/everyday-therapy"
+        }
+      ]
+    },
+    {
+      "icon": "people",
+      "title": "Bring observations back",
+      "input": "Consented observations from relevant settings",
+      "output": "Information for family and professional review",
+      "links": [
+        {
+          "name": "Fusion",
+          "url": "https://www.pinnacleblooms.org/fusion-module"
+        }
+      ]
+    },
+    {
+      "icon": "loop",
+      "title": "Review, adjust and reassess",
+      "input": "Assessment together with everyday observations",
+      "output": "Continue, change support or reconsider the goal",
+      "links": [
+        {
+          "name": "Reassess · Review · Repeat",
+          "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+        }
+      ]
+    }
+  ],
+  "firstConversation": [
+    {
+      "title": "Tell us what matters",
+      "description": "Share one everyday priority and what your child already enjoys or can do. You do not need the name of a therapy to begin."
+    },
+    {
+      "title": "Understand the next visit",
+      "description": "We help identify a suitable centre and professional, explain the first visit, and confirm availability and fees."
+    },
+    {
+      "title": "Decide with clarity",
+      "description": "Ask your questions before choosing how to proceed. Telephone guidance is free; assessment and therapy arrangements are confirmed separately."
+    }
+  ],
+  "familyStages": [
+    {
+      "title": "Understand abilities",
+      "description": "Start with capabilities and a professionally explained AbilityScore® assessment."
+    },
+    {
+      "title": "Discuss readiness",
+      "description": "Use relevant Readiness views to agree a child-specific, revisable goal and plan."
+    },
+    {
+      "title": "Choose relevant help",
+      "description": "Connect suitable multi-sensory, multidisciplinary therapy contributions to that goal."
+    },
+    {
+      "title": "Practise in daily life",
+      "description": "Agree manageable, guided opportunities at home and in other relevant settings."
+    },
+    {
+      "title": "Track and correct",
+      "description": "Review what is changing, what is not, and which support or setting needs to change."
+    },
+    {
+      "title": "Reassess and repeat",
+      "description": "Compare the new starting picture and decide what the next plan should contain."
+    },
+    {
+      "title": "Keep life as the purpose",
+      "description": "Work toward growing independence, school readiness and mainstream participation."
     }
   ]
 }

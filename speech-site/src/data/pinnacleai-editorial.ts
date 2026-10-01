@@ -2,12 +2,12 @@
 // while each must answer a different family decision in its own words.
 export const pinnacleEditorial = {
   pinnacleai: {
-    opening: 'One child. One life. Every part of care working toward it.',
-    lead: 'Picture a school morning your child can take part in with growing confidence. PinnacleAI helps your family and care team begin with that life moment, understand today’s abilities, choose useful support, practise in everyday settings and change course when life tells you to.',
-    moment: '“I want my child to join the morning, not simply finish more exercises.”',
-    decision: 'Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal.',
-    familyResult: 'A clearer first conversation about your child’s strengths, priorities and a suitable next professional review.',
-    callQuestion: 'Tell us one everyday moment you want to make more possible.',
+    opening: 'Your child’s life comes first. We build the work around it.',
+    lead: 'Asking for help. Making a choice. Joining a classroom activity comfortably. We bring assessment, professional guidance, everyday practice and review around what matters for your child—so the work has a clear purpose from the start.',
+    moment: '“I want my child to ask for help and feel part of what is happening.”',
+    decision: 'Your child’s self-sufficient, mainstream-included life sets the direction. Your family and qualified professionals choose the abilities, goals, support and practice to work on, then review what is becoming useful in daily life.',
+    familyResult: 'A first conversation about your child’s strengths, one everyday priority and the professional and centre suitable for a next visit.',
+    callQuestion: 'Tell us what you would like to become easier for your child.',
     imageAlt: 'Illustrated Indian child and family with a Pinnacle professional and a colourful pathway through home, play and school.',
     stage: 'Whole life pathway',
   },

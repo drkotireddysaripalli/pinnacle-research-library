@@ -1,0 +1,79 @@
+---
+import {Image} from 'astro:assets';
+import Icon from './Icon.astro';
+import {url,specialEducationPath} from '../data/site';
+import {overviewArchitecture,overviewFirstVisit,overviewFamilyStages} from '../data/pinnacleai-overview';
+import journey from '../assets/pinnacleai-help-journey-20261001.png';
+const {page}=Astro.props;
+const therapies=[
+  ['voice','Communication','Speech therapy','/top-speech-therapy-center-india-proven-improvement-rate'],
+  ['home','Everyday activities','Occupational therapy','/best-occupational-therapy-center-india-proven-improvement-rate'],
+  ['people','Understanding behaviour','ABA therapy','/best-aba-therapy-center-india-proven-improvement-rate'],
+  ['book','Learning and participation','Special education',specialEducationPath],
+];
+---
+<section class="overview-first wave2-wrap" id="first-visit" aria-labelledby="overview-first-title">
+  <div><p class="wave2-kicker">Let’s make the first step simple</p><h2 id="overview-first-title">A conversation about your child. A next step you understand.</h2></div>
+  <ol>{overviewFirstVisit.map(([title,copy],i)=><li><span>{String(i+1).padStart(2,'0')}</span><h3>{title}</h3><p>{copy}</p></li>)}</ol>
+  <div class="overview-next"><a class="wave2-button wave2-secondary" data-cta="final-enquiry" href={url('/enroll-autism-speech-aba-therapies-india')}>Ask about a first visit <Icon name="arrow"/></a><p>The form starts an enquiry. Our team confirms the appointment with you.</p></div>
+</section>
+
+<section class="wave2-section overview-story" id="worked-example" aria-labelledby="wave2-example-title"><div class="wave2-wrap">
+  <div class="wave2-section-title"><p class="wave2-kicker"><Icon name="voice"/>From asking for help to joining in</p><h2 id="wave2-example-title">{page.exampleTitle}</h2><p>{page.exampleLead}</p></div>
+  <div class="overview-story-grid">
+    <figure><Image src={journey} widths={[400,640,960,1200]} sizes="(min-width: 1000px) 42vw, (min-width: 700px) 600px, 100vw" format="webp" quality={82} loading="lazy" decoding="async" alt="PinnacleAI illustration: a child asks for help with blocks, joins a shared activity and has family and professional support reviewed; call 9100 181 181."/><figcaption>An illustrative explanation of a plan and its review, not a documented child outcome.</figcaption></figure>
+    <ol>{page.example.map(([title,copy],i)=><li><span>{String(i+1).padStart(2,'0')}</span><div><h3>{title}</h3><p>{copy}</p></div></li>)}</ol>
+  </div>
+  <p class="overview-principle"><Icon name="compass" size={30}/><span><strong>The activity is one part. Your child’s life gives it a purpose.</strong> {page.purpose}</span></p>
+  <a class="wave2-text-link" href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Explore the PinnacleAI paradigm shift <Icon name="arrow"/></a>
+</div></section>
+
+<section class="wave2-section overview-system" id="what-it-does" aria-labelledby="wave2-system-title"><div class="wave2-wrap">
+  <div class="wave2-section-title"><p class="wave2-kicker">The system behind the everyday moment</p><h2 id="wave2-system-title">See what each part contributes—and what comes back for review.</h2><p>Your family helps set priorities. Qualified professionals interpret assessments and make clinical decisions. PinnacleAI supports the information and workflow around them.</p></div>
+  <ol class="overview-architecture">{overviewArchitecture.map((part,i)=><li>
+    <div class="overview-node"><span>{String(i+1).padStart(2,'0')}</span><Icon name={part.icon} size={27}/></div>
+    <div class="overview-part"><h3>{part.title}</h3><div class="overview-io"><p><small>Starts with</small>{part.input}</p><Icon name="arrow" size={24}/><p><small>Helps provide</small>{part.output}</p></div><div class="overview-module-links">{part.links.map(([label,slug])=><a href={url('/'+slug)}>{label} <Icon name="arrow" size={17}/></a>)}</div></div>
+  </li>)}</ol>
+  <p class="overview-feedback"><Icon name="loop" size={30}/><span><strong>People review the evidence. The next decision returns to your child’s context and plan.</strong> Review can mean continuing, changing the cue or environment, adjusting support, or reconsidering a goal.</span></p>
+  <div class="overview-scope"><Icon name="shield" size={27}/><div><h3>The licensed software, in plain language</h3><p>{page.direct}</p><a href={url('/verify/evidence/records/md5.html')}>MD-5 licence and scope ↗</a><a href={url('/verify/evidence/records/bis.html')}>BIS named modules and scope ↗</a><a href={url('/verify/#how-pinnacleai-works')}>Documented workflow ↗</a></div></div>
+</div></section>
+
+<section class="wave2-section overview-family" id="family-journey" aria-labelledby="overview-family-title"><div class="wave2-wrap">
+  <div class="wave2-section-title"><p class="wave2-kicker">Your family belongs in the process</p><h2 id="overview-family-title">Seven stages you can understand, question and help shape.</h2><p>Explain what your child enjoys. Agree what practice fits your day. Bring observations into review. The stages keep the direction visible; your child’s needs determine the route and pace.</p></div>
+  <ol>{overviewFamilyStages.map(([title,copy],i)=><li><details><summary><span>{String(i+1).padStart(2,'0')}</span><h3>{title}</h3><Icon name="chevron" size={18}/></summary><p>{copy}</p></details></li>)}</ol>
+  <div class="overview-therapy-heading"><h3>Different contributions. A shared purpose.</h3><p>Where appropriate, the team brings these disciplines together around your child’s goals. Explore the part that matters to your family.</p></div>
+  <div class="overview-therapies">{therapies.map(([icon,goal,title,href])=><a href={url(href)}><Icon name={icon} size={28}/><small>{goal}</small><strong>{title}</strong><Icon name="arrow" size={20}/></a>)}</div>
+  <a class="wave2-text-link" href={url('/autism-therapy')}>See how integrated autism support brings the contributions together <Icon name="arrow"/></a>
+</div></section>
+
+<section class="wave2-section wave2-scale" aria-labelledby="wave2-scale-title"><div class="wave2-wrap">
+  <div class="wave2-section-title"><p class="wave2-kicker">Our work, with its sources</p><h2 id="wave2-scale-title">Experience you can examine for yourself.</h2><p>The public assurance map reports these separate operational measures at 17 July 2026.</p></div>
+  <div class="wave2-scale-grid"><article><strong>31,052,382</strong><h3>Defined services</h3></article><article><strong>792,614</strong><h3>Beneficiary/family registrations</h3></article><article><strong>2.7B+</strong><h3>Structured records and events</h3></article></div>
+  <p>These describe activity and system scale. They are not a count of children with proven improvement.</p><a href={url('/verify/evidence/scale-and-mission.html')}>Read the dates, units and assurance basis ↗</a>
+</div></section>
+
+<style>
+  .overview-first{padding-block:38px 56px}.overview-first h2{font-size:clamp(1.55rem,2.4vw,2.3rem);line-height:1.2;max-width:790px;margin:0 0 24px}
+  .overview-first ol,.overview-family ol{padding:0;list-style:none;display:grid;gap:18px;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .overview-first li{border-top:3px solid #00868b;padding:20px 0 0}.overview-first li:nth-child(2){border-color:#a826ac}.overview-first li:nth-child(3){border-color:#e42462}
+  .overview-first li>span{font-size:.86rem;font-weight:800;color:#006c73}.overview-first h3{font-size:1.1rem;line-height:1.3;margin:8px 0}.overview-first p,.overview-story p,.overview-family p,.overview-system p{color:#344b65}
+  .overview-next{display:flex;flex-wrap:wrap;align-items:center;gap:14px 25px;margin-top:24px}.overview-next p{max-width:480px;font-size:.94rem;margin:0}
+  .overview-story{background:#fffafc}.overview-story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(25px,4vw,60px);align-items:start}
+  .overview-story figure{margin:0;max-width:600px}.overview-story figure img{width:100%;height:auto;border-radius:40px 14px 40px 14px;display:block}.overview-story figcaption{font-size:.87rem;color:#415771;margin-top:12px;line-height:1.5}
+  .overview-story ol{list-style:none;padding:0;margin:0}.overview-story li{display:flex;gap:16px;margin-bottom:23px}.overview-story li>span{flex:0 0 36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#f1e7f8;color:#74228d;font-size:.88rem;font-weight:800}.overview-story li:nth-child(2n)>span{background:#e2f4f3;color:#006b70}
+  .overview-story h3{font-size:1.1rem;line-height:1.3;margin:3px 0 8px}.overview-story li p{margin:0;font-size:1rem;line-height:1.6}
+  .overview-principle,.overview-feedback{display:flex;gap:15px;border-radius:18px;padding:24px;background:#eaf7f6;margin:30px 0 14px}.overview-principle svg,.overview-feedback svg{flex-shrink:0;color:#007a7d}.overview-principle strong,.overview-feedback strong{display:block;color:#173f61;margin-bottom:8px}
+  .overview-architecture{padding:0;list-style:none;margin:32px 0 0}.overview-architecture>li{display:grid;grid-template-columns:70px 1fr;gap:24px;position:relative;padding-bottom:26px}
+  .overview-architecture>li:not(:last-child)::after{content:"";position:absolute;width:3px;background:#00999b;left:34px;top:70px;bottom:0}
+  .overview-node{width:70px;height:70px;border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;background:#e9f7f6;color:#006d71}.overview-node span{font-size:.75rem;font-weight:800}
+  .overview-architecture>li:nth-child(2n) .overview-node{background:#f4e9fa;color:#85239c}.overview-part{border:1px solid #dce5ed;border-radius:20px;padding:22px 26px;background:#fff}.overview-part h3{font-size:1.2rem;line-height:1.3;margin:0 0 15px}
+  .overview-io{display:grid;grid-template-columns:1fr 28px 1fr;gap:18px;align-items:center}.overview-io p{margin:0;font-size:1rem;line-height:1.5}.overview-io small{display:block;font-weight:800;font-size:.79rem;color:#006b70;margin-bottom:5px}.overview-io svg{color:#008084}
+  .overview-module-links{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:17px}.overview-module-links a{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:.97rem;min-height:44px;text-underline-offset:4px}
+  .overview-scope{display:flex;gap:18px;padding:24px;border-left:4px solid #96249d;background:#f9f5fc;margin-top:24px;border-radius:0 20px 20px 0}.overview-scope>svg{flex-shrink:0;color:#85239c}.overview-scope h3{font-size:1.1rem;margin:0 0 10px}.overview-scope p{margin:0 0 8px}.overview-scope a{display:inline-block;margin:8px 20px 0 0;font-weight:800;font-size:.92rem}
+  .overview-family{background:#f7fafc}.overview-family ol{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.overview-family li{background:#fff;border:1px solid #dde6ee;border-radius:14px}.overview-family summary{display:flex;align-items:center;gap:12px;cursor:pointer;padding:17px;list-style:none}.overview-family summary::-webkit-details-marker{display:none}.overview-family summary>span{font-weight:800;font-size:.87rem;color:#74228d}.overview-family h3{font-size:1rem;line-height:1.35;margin:0;flex:1}.overview-family details>p{margin:0;padding:0 18px 20px;font-size:1rem}.overview-family details[open] summary>svg{transform:rotate(90deg)}
+  .overview-therapy-heading{margin-top:42px;max-width:780px}.overview-therapy-heading h3{font-size:1.5rem}.overview-therapies{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px;margin:22px 0 12px}
+  .overview-therapies a{border-radius:18px;background:#fff;border:1px solid #dbe5eb;padding:22px 18px;text-decoration:none;display:flex;flex-direction:column;align-items:start;gap:12px;min-width:0;color:#74228d}.overview-therapies a:nth-child(2n){color:#006c73}.overview-therapies a>small{color:#3f536f;font-size:.87rem}.overview-therapies a>strong{font-size:1.08rem;line-height:1.35}.overview-therapies a:hover{border-color:currentColor}.overview-therapies a>svg:last-child{margin-top:auto}
+  @media(max-width:999px){.overview-story-grid{grid-template-columns:1fr}.overview-story figure{margin-inline:auto}.overview-therapies{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:650px){.overview-first ol,.overview-family ol{grid-template-columns:1fr}.overview-first{padding-block:30px 42px}.overview-first li{padding-top:15px}.overview-story figure img{border-radius:22px 8px 22px 8px}.overview-story li{gap:12px}.overview-architecture>li{grid-template-columns:42px 1fr;gap:12px;padding-bottom:20px}.overview-node{width:42px;height:60px;border-radius:12px}.overview-node svg{width:23px}.overview-architecture>li:not(:last-child)::after{left:20px;top:60px}.overview-part{padding:17px 15px}.overview-part h3{font-size:1.05rem}.overview-io{grid-template-columns:1fr;gap:10px}.overview-io>svg{transform:rotate(90deg);width:19px;height:19px}.overview-io p{font-size:.94rem}.overview-module-links a{font-size:.94rem;overflow-wrap:anywhere}.overview-scope{padding:20px 16px;gap:12px}.overview-scope>svg{width:22px}.overview-principle,.overview-feedback{padding:20px 17px;gap:12px}.overview-principle>svg,.overview-feedback>svg{width:24px}.overview-next .wave2-button{width:100%;justify-content:center}.overview-therapies{gap:10px}.overview-therapies a{padding:18px 12px}.overview-therapies a>strong{font-size:.99rem}}
+  @media(max-width:850px){:global(.wave2[data-wave-module="pinnacleai"] .wave2-hero-grid){grid-template-areas:'heading' 'detail' 'art'}:global(.wave2[data-wave-module="pinnacleai"] .wave2-help){font-size:.92rem}:global(.wave2[data-wave-module="pinnacleai"] .wave2-hero-art){margin-top:12px}}
+</style>

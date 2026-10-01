@@ -1,25 +1,68 @@
-PinnacleAI® | A Life-First Child Development System
+PinnacleAI® | Child Development, Everyday Life & Family Support
 https://www.pinnacleblooms.org/pinnacleai
 
-Parent moment: “I want my child to join the morning, not simply finish more exercises.”
-Decision this page explains: Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal.
-Family discussion: A clearer first conversation about your child’s strengths, priorities and a suitable next professional review.
+Parent moment: “I want my child to ask for help and feel part of what is happening.”
+Decision this page explains: Your child’s self-sufficient, mainstream-included life sets the direction. Your family and qualified professionals choose the abilities, goals, support and practice to work on, then review what is becoming useful in daily life.
+Family discussion: A first conversation about your child’s strengths, one everyday priority and the professional and centre suitable for a next visit.
 
 Direct answer: PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.
-Life purpose: A score is useful only when it helps people understand what to do next for the child’s everyday life. The life goal determines what to observe, which support to choose and what to review.
+Life purpose: Your child’s self-sufficient, mainstream-included life is the purpose: doing more with growing independence and taking part at home, school and in the community. That purpose shapes the abilities, goals, methods, people, practice and review.
 Boundary: The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ.
 
-Illustrative example: Imagine joining the school morning with more confidence.
-This is an illustrative example, not a patient result. The family names one desired moment; relevant professionals decide which measures and supports fit.
-1. Listen first: A family describes the child’s strengths, preferences and what makes the morning hard or possible.
-2. Build a starting picture: A clinician-governed assessment and relevant Readiness views help identify abilities and support needs.
-3. Choose and practise: The team connects suitable therapy and manageable everyday activities to that goal, at the centre and beyond.
-4. Observe and correct: Family, teacher and clinicians share relevant observations with consent; the plan changes when evidence from life requires it.
+Illustrative example: A little request. A bigger part in life.
+Imagine a child who enjoys building with blocks. Their family wants an accessible way for them to ask for help and join a comfortable shared activity. This is an illustrative planning example.
+1. Begin with a strength: The child chooses a favourite block with a gesture or picture. The family explains what the child enjoys and which shared activity they would like to make easier.
+2. Agree a useful next goal: Assessment and professional discussion help identify an accessible help request. The family understands what is being worked on, why, and which support makes it possible.
+3. Choose the right contributions: The responsible professional selects suitable communication, movement or learning support. The goal guides the team; every child does not need every therapy.
+4. Practise where life happens: A familiar adult offers manageable block play at home. With consent and the teacher’s agreement, a similar opportunity may fit a comfortable classroom activity. The child can pause or decline.
+5. Notice what made it possible: Was the request understood? Which cue helped? Did noise, group size or comfort affect joining in? Family and professional observations give these details a place in review.
+6. Change something specific: If asking is comfortable at home but harder in a noisy group, consider a quieter opportunity, a clearer cue or different support. Record why the plan changes; compare the next observations and reassess as appropriate.
+
+Connected system:
+AbilityScore® and seven Readiness Indexes: relevant assessment and context → an explained starting picture.
+Personal Development Kernel: starting picture, family priorities and setting → child-specific context for authorised review.
+Prognose: child context and a meaningful goal → a revisable plan and checkpoint.
+TherapeuticAI®: professionally selected goals → suitable guided activities.
+Everyday Therapy™: agreed guidance → manageable practice in everyday routines.
+Fusion: consented observations from relevant settings → information for family and professional review.
+Review and reassessment: assessment plus everyday observations → continue, change the cue, environment or support, or reconsider the goal. The next decision returns to the child’s context and plan.
+
+Seven family stages:
+Understand abilities: Start with capabilities and a professionally explained AbilityScore® assessment.
+Discuss readiness: Use relevant Readiness views to agree a child-specific, revisable goal and plan.
+Choose relevant help: Connect suitable multi-sensory, multidisciplinary therapy contributions to that goal.
+Practise in daily life: Agree manageable, guided opportunities at home and in other relevant settings.
+Track and correct: Review what is changing, what is not, and which support or setting needs to change.
+Reassess and repeat: Compare the new starting picture and decide what the next plan should contain.
+Keep life as the purpose: Work toward growing independence, school readiness and mainstream participation.
+
+Your first conversation:
+Tell us what matters: Share one everyday priority and what your child already enjoys or can do. You do not need the name of a therapy to begin.
+Understand the next visit: We help identify a suitable centre and professional, explain the first visit, and confirm availability and fees.
+Decide with clarity: Ask your questions before choosing how to proceed. Telephone guidance is free; assessment and therapy arrangements are confirmed separately.
 
 Claim/source links:
-- Start with the life your child wants to take part in. Then ask what needs to be understood, who can help and how you will know whether the plan is serving that goal. → https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html (programme explanation; Programme purpose; not a guarantee of a child outcome.)
+- Your child’s self-sufficient, mainstream-included life sets the direction. Your family and qualified professionals choose the abilities, goals, support and practice to work on, then review what is becoming useful in daily life. → https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html (programme explanation; Programme purpose; not a guarantee of a child outcome.)
 - PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
 - The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (claim boundary; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
+
+Questions:
+What is PinnacleAI?
+PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software documented on an Indian Form MD-5 licence for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support.
+How do the PinnacleAI parts work together?
+AbilityScore and the seven Readiness Indexes inform a starting picture. The Personal Development Kernel brings child context into a revisable Prognose plan. Professionals choose suitable TherapeuticAI activities and Everyday Therapy practice. Fusion brings consented observations into review and reassessment, which can change the child’s next plan.
+How does an everyday priority become a plan?
+For example, a child who enjoys blocks may need an accessible way to ask for help and join shared play. The family and professional agree a suitable request, choose support, consider manageable practice and review where the request is understood. A quieter setting or clearer cue may become the next adjustment. This is an illustrative example, not an observed patient result.
+What is my family’s role?
+You help choose priorities, explain what your child enjoys, agree manageable guided practice and share observations. You can question the plan and discuss what needs to change. Relevant school observations are included with appropriate consent. Qualified professionals remain responsible for clinical decisions.
+Does every child need every therapy?
+No. The responsible professionals recommend the contributions relevant to the child’s assessed abilities, priorities and needs. Speech therapy, occupational therapy, behavioural support and special education can work together where appropriate; the family discusses the proposed plan and reviews it with the team.
+What happens when I call or send an enquiry?
+Tell us one everyday priority. Our team can explain the suitable professional and centre, what a first visit involves, appointment availability and fees. Telephone guidance is free. Assessment and therapy fees are confirmed separately before you decide. Sending the form starts an enquiry, not a confirmed appointment or admission.
+Does PinnacleAI diagnose autism or replace a clinician?
+No. The licensed software is non-diagnostic. A suitable qualified professional evaluates the child, chooses relevant supports and reviews decisions with the family.
+Does PinnacleAI guarantee mainstream school or independence?
+No. Growing self-sufficiency and participation set the direction; individual outcomes depend on the child and context and cannot be promised.
 
 Further sources:
 - Life-first programme direction: https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html — Programme purpose; not a guarantee of a child outcome.
@@ -28,5 +71,6 @@ Further sources:
 - BIS named-module and quality-system scope: https://www.pinnacleblooms.org/verify/evidence/records/bis.html — Named module/quality scope; not a clinical effectiveness result.
 - Research library and publication status: https://www.pinnacleblooms.org/verify/evidence/research-library.html — Publication types and study limitations must be read separately.
 - Dated scale and unit definitions: https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html — Service, registration and record counts have different units; not proven child outcomes.
+- Citation library: https://www.pinnacleblooms.org/verify/evidence/cite.html — Source exports aid citation; they do not establish endorsement.
 
 Operator: Bharath Healthcare Laboratories Private Limited. Brand: Pinnacle Blooms Network. Phone: 9100 181 181 (tel:+919100181181).

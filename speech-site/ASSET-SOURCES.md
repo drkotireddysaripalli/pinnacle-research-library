@@ -208,3 +208,8 @@ Both original English creatives were generated as complete branded compositions 
 - `src/assets/speech-everyday-review-branded-20261001.png`: portrait 1122 × 1402; one asking-for-help example across family practice and review; a phone-oriented composition. Original output: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-dee5f8b2-9934-4e0e-889d-c5232aa40096.png`.
 
 References: the official `pinnacle-blooms-network-lockup.png` and accepted `speech-share-20260928.png`; both inspected before generation. Prompts are saved under `reviews/QUALITY-PASS-20261001/` with matching creative names. Outputs visually inspected; illustrative scenes, accurate phone and quiet named-software scope panels. Original generated files retained. Astro supplies responsive WebP derivatives with dimensions; all essential meaning remains in HTML. Existing Speech hero and approved OG poster remain unchanged.
+
+## PinnacleAI overview V161 · 1 October 2026
+- `src/assets/pinnacleai-help-journey-20261001.png`: generated with the built-in ChatGPT session image tool, using the approved Pinnacle emblem and existing PinnacleAI hero as brand references. Complete English campaign creative; no external API key route. Original retained at the session generated_images path, exec-4526a8ae-c521-4948-9bfa-18dfa42cff76.png.
+- Visible caption identifies the illustration as an explanatory plan/review example, not an observed patient outcome. Text, phone, logo, ages and professional-coat presentation visually inspected.
+- Existing PinnacleAI hero and approved social poster retained unchanged.
