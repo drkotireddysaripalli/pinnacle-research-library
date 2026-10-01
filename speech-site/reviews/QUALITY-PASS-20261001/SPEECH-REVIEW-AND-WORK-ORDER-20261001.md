@@ -4,6 +4,8 @@
 
 Canonical: https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate
 
+Execution entry point: `SPEECH-EXECUTION-CHECKLIST-20261001.md` converts this review and its discovery addendum into task IDs, file scopes, completion checks and release steps. Use that checklist to work and record progress; this document retains the rationale and narrative contract.
+
 Governing standard: `PINNACLE-PAGE-CREATION-WORK-ORDER.md`. Shared baseline: `pinnacle-common-shell-baseline-v159-20261001`, documented in `COMMON-SHELL-BASELINE.md`.
 
 ## Decision

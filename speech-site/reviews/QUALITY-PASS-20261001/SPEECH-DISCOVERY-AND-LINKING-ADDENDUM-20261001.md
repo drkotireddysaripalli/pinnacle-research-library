@@ -2,6 +2,8 @@
 
 1 October 2026. Extends `SPEECH-REVIEW-AND-WORK-ORDER-20261001.md` under the governing `PINNACLE-PAGE-CREATION-WORK-ORDER.md`.
 
+Execution entry point: `SPEECH-EXECUTION-CHECKLIST-20261001.md`. Keep this addendum as the research, exact source URLs and link rationale; update the checklist as implementation proceeds.
+
 **Disposition:** research and implementation specification complete; product implementation and deployment pending. This pass changes documentation only. The tagged V159 common header and complete footer remain fixed. Main owns code, creative, browser, Git and deployment; reviewers supplied bounded read-only source research.
 
 ## 1. Outcome and scope
