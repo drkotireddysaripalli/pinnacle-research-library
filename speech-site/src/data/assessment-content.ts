@@ -8,6 +8,15 @@ export const assessmentContent={
   emphasis:'Choose a clearer next step for life.',
   lead:'Communication. Play. Daily routines. Learning. Start with what your child can do and what you want to make more possible.',
   direct:'A child development assessment brings family priorities, professional observation and suitable measures together to understand present abilities and support needs. The aim is an explained starting picture and a useful next-step discussion—not a score on its own.',
+  exampleIntro:'Assessment can connect the family’s question with a relevant ability and an explained next step. This example shows that reasoning; it is not a patient story or a prescription.',
+  exampleCaption:'Notice a strength. Understand the support. Choose a useful next opportunity.',
+  example:[
+    ['people','Begin with the family’s moment','“My child enjoys playing near other children. How can we help them invite someone to join?”'],
+    ['measure','Notice one usable ability','In this illustration, the child offers a favourite toy to a familiar adult during comfortable play at home, after the adult holds out a hand. There is a starting ability to build on, and the person, setting and cue matter.'],
+    ['compass','Interpret the ability in context','A professional considers this supported way of beginning shared play alongside the child’s age, interests, communication, comfort and family observations. They discuss what it could mean for inviting a play partner and what still needs to be understood.'],
+    ['plan','Choose the next opportunity together','For this example, the family chooses a brief opportunity with a familiar, willing play partner and the same favourite toy, if appropriate for the child. With the professional, they agree an accessible gesture, picture or word to explore, while respecting the child’s choice to join or pause.'],
+    ['track','Review what became useful','Review asks whether the child used an invitation, with whom and where, how comfortable the moment was, and what help remained. If it worked only with the original adult and cue, that context stays visible while the family and professional decide whether to continue or adapt the next opportunity.']
+  ],
   sources:[
     {id:'purpose',name:'Pinnacle’s documented life-first approach',url:'https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html',scope:'Growing self-sufficiency and mainstream participation set the programme direction. They are individual goals, not guaranteed outcomes.'},
     {id:'methods',name:'AbilityScore methodology preprint',url:'https://zenodo.org/records/19482123',scope:'Describes the 0–1000 developmental index and preliminary psychometric work. A preprint is not completed independent validation.'},

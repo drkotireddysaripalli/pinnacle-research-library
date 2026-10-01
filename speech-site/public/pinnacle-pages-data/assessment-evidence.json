@@ -1,7 +1,7 @@
 {
   "title": "Child Development Assessment | Pinnacle Blooms Network",
   "canonical": "https://www.pinnacleblooms.org/speech-aba-autism-assessments",
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "phone": {
@@ -177,6 +177,38 @@
       "answer": "The everyday life your child is growing toward gives assessment a purpose. Present abilities help the family and professional choose relevant goals, support and manageable practice. Review asks whether those abilities become useful at home, in learning and with other people. No particular result or timetable is guaranteed."
     }
   ],
+  "example": {
+    "title": "Joining a game. A small question with a life purpose.",
+    "intro": "Assessment can connect the family’s question with a relevant ability and an explained next step. This example shows that reasoning; it is not a patient story or a prescription.",
+    "caption": "Notice a strength. Understand the support. Choose a useful next opportunity.",
+    "steps": [
+      {
+        "icon": "people",
+        "title": "Begin with the family’s moment",
+        "text": "“My child enjoys playing near other children. How can we help them invite someone to join?”"
+      },
+      {
+        "icon": "measure",
+        "title": "Notice one usable ability",
+        "text": "In this illustration, the child offers a favourite toy to a familiar adult during comfortable play at home, after the adult holds out a hand. There is a starting ability to build on, and the person, setting and cue matter."
+      },
+      {
+        "icon": "compass",
+        "title": "Interpret the ability in context",
+        "text": "A professional considers this supported way of beginning shared play alongside the child’s age, interests, communication, comfort and family observations. They discuss what it could mean for inviting a play partner and what still needs to be understood."
+      },
+      {
+        "icon": "plan",
+        "title": "Choose the next opportunity together",
+        "text": "For this example, the family chooses a brief opportunity with a familiar, willing play partner and the same favourite toy, if appropriate for the child. With the professional, they agree an accessible gesture, picture or word to explore, while respecting the child’s choice to join or pause."
+      },
+      {
+        "icon": "track",
+        "title": "Review what became useful",
+        "text": "Review asks whether the child used an invitation, with whom and where, how comfortable the moment was, and what help remained. If it worked only with the original adult and cue, that context stays visible while the family and professional decide whether to continue or adapt the next opportunity."
+      }
+    ]
+  },
   "serviceBoundary": "General assessment fees, ages, professional, format, included outputs and appointment are confirmed by the receiving team. The FREE speech-assessment offer has a separate scope.",
   "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help",
   "illustrationStatus": "Fictional explanatory campaign scenes, not identifiable patient stories or observed outcome evidence."
