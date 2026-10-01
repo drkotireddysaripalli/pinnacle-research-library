@@ -15,3 +15,9 @@ Delhi retains its INACTIVE workbook flag and explicit current-operation confirma
 - A separate read-only review accepted the exact source diff and built outputs.
 
 Rollback: policy V148 Worker faddf8d8-daf8-4807-a2d4-6149a9f6f27f. Release stage: release-centre-voice-v149-20261001. Public read-back and current Cloudflare metadata will be recorded below.
+
+### Published closure
+
+Eight centre copy rows are complete through one common source correction. Owned introductions, arrival answers and contact/service FAQs match HTML, schema and reading exports. All eight source contracts and five local/five live responsive cases passed; Delhi remains guarded. The finite cleanup register has no remaining executable rows.
+
+Source e306c08 was pushed before publication. Worker aee4718b-97e9-4a8b-b46b-af4e7dc43269 serves 100%, deployment 7b4696ca-3e93-4839-bbac-81c063da5d44 at 2026-10-01T02:15:29.16727Z; all 177 route assignments and four bindings remain. 48 published page checks, 40 unchanged main bodies, changed page request variants/assets/exports and protected controls passed. See deployment/page-correction-v149-live-20261001.json and deployment/centre-voice-cloudflare-v149-20261001.json. IndexNow receipt records notification only; no indexing, ranking, AI citation or conversion is inferred.

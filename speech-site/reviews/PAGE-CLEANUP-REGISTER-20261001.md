@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 16 completed, 8 executable tasks remaining, 9 source decisions pending.** V148 presentation is live on all 14 policy pages. Next: Dilsukhnagar Centre; the shared source fix will close the eight centre voice rows.
+**15 keep, 24 completed, 0 executable tasks remaining, 9 source decisions pending.** Latest closure: Dilsukhnagar Centre, Gurunanak Road, Vijayawada Centre, South Extension, New Delhi Centre, Ananthapuram Centre, Nandyala Centre, Ongole Centre, Tirupati Centre, Srikakulam Centre V149. Next: no further executable cleanup.
 
 ## Initial decision
 
@@ -358,7 +358,9 @@ Canonical: [/ethics-charter](https://www.pinnacleblooms.org/ethics-charter)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 26. Dilsukhnagar Centre · copy
+### 26. Dilsukhnagar Centre · COMPLETED V149
+
+Closure: [Release receipt](../RELEASE-CENTRE-VOICE-V149-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india)
 
@@ -368,7 +370,9 @@ Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhn
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 27. Gurunanak Road, Vijayawada Centre · copy
+### 27. Gurunanak Road, Vijayawada Centre · COMPLETED V149
+
+Closure: [Release receipt](../RELEASE-CENTRE-VOICE-V149-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india)
 
@@ -378,7 +382,9 @@ Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-gurunana
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 28. South Extension, New Delhi Centre · copy
+### 28. South Extension, New Delhi Centre · COMPLETED V149
+
+Closure: [Release receipt](../RELEASE-CENTRE-VOICE-V149-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india)
 
@@ -388,7 +394,9 @@ Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-south-ex
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 29. Ananthapuram Centre · copy
+### 29. Ananthapuram Centre · COMPLETED V149
+
+Closure: [Release receipt](../RELEASE-CENTRE-VOICE-V149-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india)
 
@@ -398,7 +406,9 @@ Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-anathapu
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 30. Nandyala Centre · copy
+### 30. Nandyala Centre · COMPLETED V149
+
+Closure: [Release receipt](../RELEASE-CENTRE-VOICE-V149-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india)
 
@@ -408,7 +418,9 @@ Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-nandyala
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 31. Ongole Centre · copy
+### 31. Ongole Centre · COMPLETED V149
+
+Closure: [Release receipt](../RELEASE-CENTRE-VOICE-V149-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india)
 
@@ -418,7 +430,9 @@ Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-ongole-a
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 32. Tirupati Centre · copy
+### 32. Tirupati Centre · COMPLETED V149
+
+Closure: [Release receipt](../RELEASE-CENTRE-VOICE-V149-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india)
 
@@ -428,7 +442,9 @@ Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-tirupati
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 33. Srikakulam Centre · copy
+### 33. Srikakulam Centre · COMPLETED V149
+
+Closure: [Release receipt](../RELEASE-CENTRE-VOICE-V149-20261001.md). The task below is the accepted contract.
 
 Canonical: [/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india)
 

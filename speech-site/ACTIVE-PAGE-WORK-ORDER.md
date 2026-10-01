@@ -1,5 +1,7 @@
 # Active page work order · sequential page corrections
 
+**LATEST CLOSED — V149:** Eight centre copy rows are complete through one common source correction. Owned introductions, arrival answers and contact/service FAQs match HTML, schema and reading exports. All eight source contracts and five local/five live responsive cases passed; Delhi remains guarded. The finite cleanup register has no remaining executable rows. Source e306c08; Worker aee4718b-97e9-4a8b-b46b-af4e7dc43269; all 177 routes and four bindings retained. Receipt: RELEASE-CENTRE-VOICE-V149-20261001.md.
+
 **LATEST CLOSED — V148:** Shared policy presentation is live for all 14 pages, including structured source-preserving reading exports. Five finite presentation rows are closed; nine source decisions are recorded separately. Seven live responsive cases passed. The separate Books host matched its historical captured content after the origin timestamp and Cloudflare analytics script were normalised. Source 15c0482; Worker faddf8d8-daf8-4807-a2d4-6149a9f6f27f; all 177 routes and four bindings retained. Receipt: RELEASE-POLICY-PRESENTATION-V148-20261001.md.
 
 **LATEST CLOSED — V147:** Fusion automatic-change question now answers directly; visible/schema/JSON/text/Markdown and per-page date/lastmod verified live. Human review scope retained. Source 89e9ede; Worker d417e3a8-0b83-450c-aa91-433bb427c4c4; all177routes/fourbindings retained. Receipt: RELEASE-FUSION-VOICE-V147-20261001.md.
@@ -16,9 +18,9 @@
 
 **LATEST CLOSED — V141:** Five-step contextual ability and review example, approved inline play scene and matching exports published; five local and five production responsive cases passed. Source 892f127; Worker b7ad5854-54fc-4882-833d-881ddd8c9d12; all177routes/fourbindings retained. Receipt: RELEASE-ASSESSMENT-V141-20261001.md.
 
-**CURRENT SEQUENCE:** follow `reviews/PAGE-CLEANUP-REGISTER-20261001.md` and its48row JSON.15 accepted bodies stay intact; Leadership, Framework, Special Education and About are completed;29 bounded corrections remain. Finish one page task and its release before the next. Shared-source defects are fixed once and verified for their affected rows. Source-gated policy decisions remain precise pending conditions while independent work proceeds.
+**CURRENT SEQUENCE:** The finite 48-page cleanup is closed for all independently executable work: 15 keep, 24 completed, zero queued, nine source decisions pending. The nine have their V148 presentation fixes live; resume only when their precise source conditions change. Next creation package in the existing linked-page work order is Our Team plus one source-identified representative profile, followed by research, remaining services and resources. Retain the 60-item inventory (19 released presentations, 41 remaining); cleanup corrections do not increase that count.
 
-**NOW — eight centre voice rows, starting with Dilsukhnagar Centre:** Fix the direct introduction, arrival instructions and matching FAQs once in the common centre source; retain local examples, media, maps and evidence. Nine policy source decisions stay recorded separately.
+**NOW — independent cleanup complete:** 9 pages retain precise source decisions; continue the existing new-page inventory.
 
 **ABOUT V140 CLOSED:** source9579462, Workera2c80185-c279-4451-9b89-ac3ee53d633d;177routes/fourbindings,48pagehashes/47unchangedbodies and seven focused production cases pass. Five family-journey steps, five service routes and original complete branded creative published. IndexNow singleURL200. Receipt `RELEASE-ABOUT-V140-20261001.md`.
 

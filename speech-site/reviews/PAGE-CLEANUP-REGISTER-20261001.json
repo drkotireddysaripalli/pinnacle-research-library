@@ -5,8 +5,8 @@
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
     "keep": 15,
-    "completed": 16,
-    "queued": 8,
+    "completed": 24,
+    "queued": 0,
     "source-pending": 9
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
@@ -73,14 +73,18 @@
       "id": "ananthapuram",
       "name": "Ananthapuram Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Replace 'centre is published at' and affected arrival/FAQ commentary with direct Pinnacle voice.",
         "Preserve turn-taking, Ashoknagar/SIU Church/BABY Hospital and real premises; retain canonical spelling.",
         "Make the shared generator correction once for these eight pages, with a distinct guarded Delhi introduction; regenerate location outputs and verify each changed introduction."
       ],
-      "sequence": 29
+      "sequence": 29,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-CENTRE-VOICE-V149-20261001.md",
+      "sourceCommit": "e306c08",
+      "workerVersion": "aee4718b-97e9-4a8b-b46b-af4e7dc43269"
     },
     {
       "id": "assessment",
@@ -176,27 +180,35 @@
       "id": "delhi",
       "name": "South Extension, New Delhi Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Replace 'centre is published at' and affected arrival/FAQ commentary with direct Pinnacle voice.",
         "Preserve shared play, E17, entrance warning and confirmation-before-travel gate; retain workbook INACTIVE versus dated approval.",
         "Make the shared generator correction once for these eight pages, with a distinct guarded Delhi introduction; regenerate location outputs and verify each changed introduction."
       ],
-      "sequence": 28
+      "sequence": 28,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-CENTRE-VOICE-V149-20261001.md",
+      "sourceCommit": "e306c08",
+      "workerVersion": "aee4718b-97e9-4a8b-b46b-af4e7dc43269"
     },
     {
       "id": "dilsukhnagar",
       "name": "Dilsukhnagar Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Replace 'centre is published at' and affected arrival/FAQ commentary with direct Pinnacle voice.",
         "Preserve favourite-toy choice, Chaitanyapuri/Vijeta Classic Empire and matched premises.",
         "Make the shared generator correction once for these eight pages, with a distinct guarded Delhi introduction; regenerate location outputs and verify each changed introduction."
       ],
-      "sequence": 26
+      "sequence": 26,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-CENTRE-VOICE-V149-20261001.md",
+      "sourceCommit": "e306c08",
+      "workerVersion": "aee4718b-97e9-4a8b-b46b-af4e7dc43269"
     },
     {
       "id": "disclaimer-and-limitations-of-liabilities",
@@ -329,14 +341,18 @@
       "id": "gurunanak",
       "name": "Gurunanak Road, Vijayawada Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Replace 'centre is published at' and affected arrival/FAQ commentary with direct Pinnacle voice.",
         "Preserve schoolbag example, second floor/McDonald’s and real interiors.",
         "Make the shared generator correction once for these eight pages, with a distinct guarded Delhi introduction; regenerate location outputs and verify each changed introduction."
       ],
-      "sequence": 27
+      "sequence": 27,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-CENTRE-VOICE-V149-20261001.md",
+      "sourceCommit": "e306c08",
+      "workerVersion": "aee4718b-97e9-4a8b-b46b-af4e7dc43269"
     },
     {
       "id": "leadership",
@@ -369,14 +385,18 @@
       "id": "nandyala",
       "name": "Nandyala Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Replace 'centre is published at' and affected arrival/FAQ commentary with direct Pinnacle voice.",
         "Preserve shoe example, second floor/above Domino’s/beside GSR Hospital and real photos.",
         "Make the shared generator correction once for these eight pages, with a distinct guarded Delhi introduction; regenerate location outputs and verify each changed introduction."
       ],
-      "sequence": 30
+      "sequence": 30,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-CENTRE-VOICE-V149-20261001.md",
+      "sourceCommit": "e306c08",
+      "workerVersion": "aee4718b-97e9-4a8b-b46b-af4e7dc43269"
     },
     {
       "id": "occupational-therapy",
@@ -391,14 +411,18 @@
       "id": "ongole",
       "name": "Ongole Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Replace 'centre is published at' and affected arrival/FAQ commentary with direct Pinnacle voice.",
         "Preserve meal/snack choice, Gummadi Chest Hospital and real premises.",
         "Make the shared generator correction once for these eight pages, with a distinct guarded Delhi introduction; regenerate location outputs and verify each changed introduction."
       ],
-      "sequence": 31
+      "sequence": 31,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-CENTRE-VOICE-V149-20261001.md",
+      "sourceCommit": "e306c08",
+      "workerVersion": "aee4718b-97e9-4a8b-b46b-af4e7dc43269"
     },
     {
       "id": "personal-development-kernel",
@@ -541,14 +565,18 @@
       "id": "srikakulam",
       "name": "Srikakulam Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Replace 'centre is published at' and affected arrival/FAQ commentary with direct Pinnacle voice.",
         "Preserve drawing/shared learning, above Indian Bank and matched premises.",
         "Make the shared generator correction once for these eight pages, with a distinct guarded Delhi introduction; regenerate location outputs and verify each changed introduction."
       ],
-      "sequence": 33
+      "sequence": 33,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-CENTRE-VOICE-V149-20261001.md",
+      "sourceCommit": "e306c08",
+      "workerVersion": "aee4718b-97e9-4a8b-b46b-af4e7dc43269"
     },
     {
       "id": "staff-declaration",
@@ -659,14 +687,18 @@
       "id": "tirupati",
       "name": "Tirupati Centre",
       "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Replace 'centre is published at' and affected arrival/FAQ commentary with direct Pinnacle voice.",
         "Preserve shared book, Air Bypass Road/ICICI Bank and real interior; retain unavailable exterior-source note.",
         "Make the shared generator correction once for these eight pages, with a distinct guarded Delhi introduction; regenerate location outputs and verify each changed introduction."
       ],
-      "sequence": 32
+      "sequence": 32,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-CENTRE-VOICE-V149-20261001.md",
+      "sourceCommit": "e306c08",
+      "workerVersion": "aee4718b-97e9-4a8b-b46b-af4e7dc43269"
     }
   ]
 }
