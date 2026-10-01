@@ -37,3 +37,7 @@ Pending source commit, CI and release. Append exact evidence here after success.
 ## CI correction before activation
 
 Initial CI 36902914245 passed types/build/116 unit checks and three browser profiles, but found 7px horizontal overflow at320px while fallback fonts were in use. Reproduced locally by blocking WOFF2: lifecycle grid width327px on a320px viewport. Corrected only the new lifecycle grid with zero-minimum fractional tracks, min-width:0 and wrapping for its labels. The same no-fonts check now reports320px and is retained in the focused acceptance script. Shared shell untouched. Initial uploaded version594a814e-a7c1-4d9a-9107-1bd2ef9db774 was never activated; release uses the corrected candidate after CI.
+
+## CI infrastructure correction
+
+Corrected-source CI36903928048 timed out before tests: the Ubuntu runner's Azure package mirror stalled while installing browser dependencies. The website candidate did not fail a test in this run. The workflow now replaces that runner mirror with Ubuntu's HTTPS archive and bounds apt network requests and the browser-install step. Package signature verification, all browser projects and page assertions remain intact. This changes only the ephemeral CI environment; page assets and Cloudflare runtime remain the corrected948f15f candidate.
