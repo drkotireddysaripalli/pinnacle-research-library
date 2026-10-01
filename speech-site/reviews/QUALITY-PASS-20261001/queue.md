@@ -20,7 +20,7 @@
 | 14 | [Privacy Policy](https://www.pinnacleblooms.org/privacy-policy) | 60 | 88 (package) | completed |
 | 15 | [Age Restriction Policy](https://www.pinnacleblooms.org/age-restriction-policy) | 65 | 88 (package) | completed |
 | 16 | [Tirupati Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india) | 67 | — | deferred-after-individuals |
-| 17 | [PinnacleAI](https://www.pinnacleblooms.org/pinnacleai) | 68 | 85 | completed |
+| 17 | [PinnacleAI](https://www.pinnacleblooms.org/pinnacleai) | 68 | 85 (V161 score; V162 released) | completed |
 | 18 | [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes) | 69 | — | review-pending |
 | 19 | [Gurunanak / Vijayawada Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india) | 69 | — | deferred-after-individuals |
 | 20 | [Ongole Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india) | 69 | — | deferred-after-individuals |

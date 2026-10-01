@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-01T18:24:27.53Z",
+  "source": "948f15f93dabbc5005adbdd76d4d4375418a6308",
+  "releaseCommit": "9379b54b820993f741edb5dd07b4d9f17443e0ee",
+  "ci": {
+    "id": 36906709925,
+    "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36906709925",
+    "status": "success",
+    "engines": [
+      "Chromium",
+      "Firefox",
+      "WebKit"
+    ],
+    "localEdge": "passed",
+    "initialMobileFinding": "Fallback-font lifecycle overflow corrected",
+    "infraCorrection": "Ubuntu HTTPS archive and bounded apt requests after stalled CI mirror"
+  },
+  "worker": "pinnacle-verify-route",
+  "version": "6e08f069-1216-42e2-b9d9-3bfcb6f34c8e",
+  "deployment": "05c75050-48d6-4b85-933f-c76309de62d7",
+  "activatedAt": "2026-10-01T18:26:03.763574Z",
+  "percentage": 100,
+  "rollback": "ceb81d16-f19c-4b79-9659-a03e81f72815",
+  "stage": "release-pinnacleai-v162-20261001",
+  "routeCount": 180,
+  "assignedRoutes": 81,
+  "routeFingerprint": "1a917340",
+  "bindings": [
+    "ASSETS",
+    "PINNACLE_ASK",
+    "PINNACLE_LEGACY",
+    "SITES_BYPASS_TOKEN"
+  ],
+  "sharedShellBaseline": "pinnacle-common-shell-baseline-v159-20261001",
+  "changedManagedPages": 1,
+  "unchangedManagedPages": 49,
+  "newNativeCreatives": 4,
+  "receipts": [
+    "pinnacleai-v162-staged-20261001.json",
+    "pinnacleai-v162-responsive-20261001.json",
+    "pinnacleai-v162-live-20261001.json",
+    "pinnacleai-v162-consent-20261001.json",
+    "pinnacleai-v162-lighthouse-20261001.json",
+    "indexnow-pinnacleai-v162-20261001.json"
+  ],
+  "indexNow": {
+    "httpStatus": 200,
+    "urls": 1,
+    "at": "2026-10-01T18:26:44.724Z",
+    "priorNotificationAt": "2026-10-01T18:23:53.874Z",
+    "correctionReason": "Preview indexing directives replaced by production index/follow"
+  },
+  "noLeadSubmitted": true,
+  "limits": [
+    "No physical iOS device test",
+    "No fresh GSC URL inspection; previous receipt describes indexed predecessor, not V162 crawl",
+    "IndexNow acceptance is not indexing or ranking",
+    "No AI citation or connected-call/admission lift established"
+  ],
+  "releaseGuardCommit": "9379b54b820993f741edb5dd07b4d9f17443e0ee",
+  "initialActivation": {
+    "version": "23066562-0587-4bbf-bac4-0be69528a7c1",
+    "at": "2026-10-01T18:23:18.795331Z",
+    "issue": "Preview-mode noindex/nofollow",
+    "corrected": true,
+    "acceptedRollback": false
+  },
+  "performance": [
+    {
+      "device": "mobile",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 1698.574,
+        "lcpMs": 2651.648,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 1698.574
+      },
+      "targetWarnings": [
+        "lcpMs exceeds target or is unavailable"
+      ]
+    },
+    {
+      "device": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 480.2304,
+        "lcpMs": 607.3828,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 480.2304
+      },
+      "targetWarnings": []
+    }
+  ]
+}

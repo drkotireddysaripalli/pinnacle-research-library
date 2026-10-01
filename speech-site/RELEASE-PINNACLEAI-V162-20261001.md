@@ -1,6 +1,6 @@
 # PinnacleAI Paradigm Shift V162
 
-1 October 2026. Candidate accepted locally; production activation pending.
+1 October 2026. Published and verified; final production activation18:26:03UTC.
 
 ## Implemented scope
 
@@ -32,7 +32,22 @@ Commit and push before activation. Upload a Worker version without route overrid
 
 ## Activation and production results
 
-Pending source commit, CI and release. Append exact evidence here after success.
+Page source948f15f93dabbc5005adbdd76d4d4375418a6308 and pipeline correctionfb23d75c03aaea1a2f226b3b66613b2f7b86d53e were pushed; [CI36905961282](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36905961282) passed types/build/116units/four Chromium profiles plus Firefox and WebKit. Local Edge passed. Release indexing guards are checked in as9379b54b820993f741edb5dd07b4d9f17443e0ee; they do not change the application source that passed production-mode CI.
+
+Final Worker `6e08f069-1216-42e2-b9d9-3bfcb6f34c8e` at100%; deployment `05c75050-48d6-4b85-933f-c76309de62d7`, activated18:26:03.763574UTC. Routes180/81, sorted fingerprint1a917340 and all four bindings retained. All50 managed HTML pages,22 changed/new files and15 protected routes passed. OG JPEG bytes, canonical/query redirect, HEAD, credential/cookie variants and Markdown pass. Declined analytics and GPC retain contact/module links without optional measurement requests or cookies. No test lead or call submitted.
+
+| Final production Lighthouse lab | Performance | Accessibility | Best Practices | SEO | LCP | CLS |
+|---|---:|---:|---:|---:|---:|---:|
+| Mobile |96|100|100|100|2.65s|0|
+| Desktop |100|100|100|100|0.61s|0|
+
+Lighthouse13.5 simulated measurements, not field Core Web Vitals. Mobile LCP is0.15s above the preferred2.5s target; performance is above90. No further visual or common-font redesign is included merely to chase a lab score.
+
+IndexNow accepted the corrected /pinnacleai notification with HTTP200 at18:26:44UTC. No duplicate GSC inspection/request was made. The previous GSC receipt concerns the indexed predecessor; V162 crawl, ranking, AI citations and connected calls/visits/admissions remain observational follow-up. Final durable receipt: deployment/pinnacleai-v162-release-20261001.json.
+
+### Preview-mode release error and correction
+
+The first activation at18:23:18UTC used a local preview-mode rebuild and carried noindex/nofollow, although CI had correctly tested the production-mode build. Production Lighthouse exposed the mismatch. Rebuilt with PINNACLE_RELEASE=production, added staging rejection of preview metadata and public HTTP/HTML indexing checks, checked in the guards and activated the corrected artifact at18:26:03UTC. Application content, shared shell and routing were unchanged by the correction. The earlier artifact is not an accepted rollback. The initial IndexNow receipt is retained as indexnow-pinnacleai-v162-initial-20261001.json; the second notification is justified by the material indexing-directive correction. Final live indexing checks and SEO100 supersede the first SEO69 result.
 
 ## CI correction before activation
 
@@ -41,3 +56,5 @@ Initial CI 36902914245 passed types/build/116 unit checks and three browser prof
 ## CI infrastructure correction
 
 Corrected-source CI36903928048 timed out before tests: the Ubuntu runner's Azure package mirror stalled while installing browser dependencies. The website candidate did not fail a test in this run. The workflow now replaces that runner mirror with Ubuntu's HTTPS archive and bounds apt network requests and the browser-install step. Package signature verification, all browser projects and page assertions remain intact. This changes only the ephemeral CI environment; page assets and Cloudflare runtime remain the corrected948f15f candidate.
+
+Final guard-source CI [36906709925](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36906709925) also passed all page checks, Firefox and WebKit for9379b54. Source and release checks are complete. Tool-owned helper scripts were removed; source artwork, accepted prompts, screenshots, audit evidence and rollback union retained.

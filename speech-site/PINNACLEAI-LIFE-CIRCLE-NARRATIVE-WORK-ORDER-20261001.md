@@ -1,7 +1,7 @@
 # PinnacleAI® Paradigm Shift — your child's self-sufficient, mainstream-included life
 
 1 October 2026. Owner-directed narrative and V162 implementation contract after the V161 walkthrough.
-Status: implemented and locally accepted; commit, CI, production activation and read-back are recorded in RELEASE-PINNACLEAI-V162-20261001.md. Earlier walkthrough findings below describe the V161 predecessor.
+Status: implemented, checked in, published and verified as V162; exact commits, CI, production activation, live read-back and performance are recorded in RELEASE-PINNACLEAI-V162-20261001.md. Earlier walkthrough findings below describe the V161 predecessor. Retain the explicit Paradigm Shift proposition and shared-shell baseline in follow-on pages.
 Governing standard: PINNACLE-PAGE-CREATION-WORK-ORDER.md. This is the next page-specific brief, not a replacement for the full standard.
 
 ## 1. The job of the page
