@@ -1,0 +1,31 @@
+name: Portal quality
+on:
+  pull_request:
+    paths: ['speech-site/**', '.github/workflows/portal-quality.yml']
+  push:
+    paths: ['speech-site/**', '.github/workflows/portal-quality.yml']
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: speech-site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: speech-site/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run check:page -- occupational
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: portal-quality-findings
+          path: speech-site/audits/
+          retention-days: 7

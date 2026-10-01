@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-01T05:56:32.946Z",
+  "prior": "release-centre-voice-v149-20261001",
+  "stage": "release-measurement-v150b-20261001",
+  "upload": ".worker-upload-measurement-v150b-20261001",
+  "changed": [
+    {
+      "path": "/pinnacle-pages-scripts/speech-measurement.js",
+      "previousSha256": "f17efd9e30e04d87f4029a06294db356716b20a89367f17155a5c2a8e7ae7634",
+      "sha256": "72d9be0c1ad85f355b5eda0b2833ba4f46ca123e57e995b1dcf0bfd43eb8c495"
+    },
+    {
+      "path": "/pinnacle-pages-scripts/enrolment.js",
+      "previousSha256": "aa491fa7a6c93a793357b1de9b2bbe4aeac02a227a0e1ee03d625da4a90689ff",
+      "sha256": "1ae904a9c69fb298d82641fee90453953fad6ebbe27db8e1d33013977119f2d6"
+    },
+    {
+      "path": "/pinnacle-pages-html/occupational-therapy.html",
+      "change": "Only stylesheet URL changed; all content/header/footer retained"
+    },
+    {
+      "path": "/pinnacle-pages-assets/occupational-contrast-d0f5dd440102.css",
+      "change": "Only .ot-final-guidance opacity .93 -> 1",
+      "sha256": "d0f5dd4401029514771f51202d5a1ea528f93c2ac4bdbcbed416d5c5b4d6dd90"
+    }
+  ],
+  "unchangedUnionFiles": 1923,
+  "htmlContentAndVerifyPreserved": true,
+  "runtimeModulesPreserved": true,
+  "workerChange": "Two script hashes, occupational stylesheet link hash and new contrast stylesheet only",
+  "sourceShellChangesExcluded": true
+}

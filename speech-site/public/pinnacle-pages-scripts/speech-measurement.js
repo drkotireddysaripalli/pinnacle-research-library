@@ -16,6 +16,19 @@
     ,'/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india': {title:'Pinnacle Centre',group:'centre_detail',service:'help',measurementPath:'/centers'}
     ,'/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india': {title:'Pinnacle Centre',group:'centre_detail',service:'help',measurementPath:'/centers'}
   };
+  // Exact released public routes. The route-contract test detects future omissions.
+  pages['/enroll-autism-speech-aba-therapies-india'] = {title:'Enrol at Pinnacle',group:'enrolment',service:'help'};
+  for (const place of ['nandyala','ongole','tirupati','srikakulam']) {
+    pages['/centers/best-autism-speech-aba-occupational-therapy-center-'+place+'-ap-india'] = {title:'Pinnacle Centre',group:'centre_detail',service:'help',measurementPath:'/centers'};
+  }
+  for (const path of ['/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat']) {
+    pages[path] = {title:'PinnacleAI',group:'pinnacleai',service:'help'};
+  }
+  for (const path of ['/self-sufficient','/mainstream']) pages[path] = {title:'Your Child’s Life at Pinnacle',group:'life_participation',service:'help'};
+  for (const path of ['/about-pinnacle-proven-improvement-rate','/leadership','/pinnacle-global-autism-framework']) pages[path] = {title:'Pinnacle Blooms Network',group:'organisation',service:'help'};
+  for (const path of ['/privacy-policy','/terms-of-use','/terms-of-service','/cookie-policy','/copyright-and-intellectual','/age-restriction-policy','/contact-information','/disclaimer-and-limitations-of-liabilities','/endorsement-and-testimonial','/governing-and-jurisdiction','/third-party-inegration','/refund-policy','/staff-declaration','/ethics-charter']) {
+    pages[path] = {title:'Pinnacle Public Information',group:'public_information',service:'help'};
+  }
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   const pagePath = location.pathname;
   const canonical = origin + (pages[pagePath]?.measurementPath || pagePath);
@@ -31,8 +44,8 @@
   if (!panel || !status) return;
   const production = location.origin === origin && routes.has(location.pathname) && !!pageConfig;
   const blocked = navigator.globalPrivacyControl === true;
-  const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call','aba-first-call','aba-final-call','autism-first-call']);
-  const enquiryPlacements = new Set(['header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','mobile-assessment','centre-enquiry','ot-final-enrol','aba-final-enrol','autism-first-enquiry']);
+  const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call','aba-first-call','aba-final-call','autism-first-call','family-journey-call','example-call','pinnacleai-call','pinnacleai-close-call']);
+  const enquiryPlacements = new Set(['header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','final-assessment','mobile-assessment','centre-enquiry','ot-final-enrol','aba-final-enrol','autism-first-enquiry']);
   const occupationalNavigation = new Set(['ot-hero-centres','ot-final-centres']);
   const abaNavigation = new Set(['aba-first-centres','aba-final-centres']);
   const directoryPlacements = new Set(['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation']);
@@ -100,6 +113,12 @@
     if (saved && Number.isFinite(saved.at) && saved.at<=Date.now() && Date.now()-saved.at<lifetime) choose(saved.value, false);
   }
   // Fixed event vocabulary only. Query strings, visitor text and form data never enter this module.
+  let acceptanceRecorded = false;
+  document.addEventListener('pinnacle:enquiry-accepted', () => {
+    if (pageGroup !== 'enrolment' || acceptanceRecorded || !production || !enabled || blocked) return;
+    acceptanceRecorded = true;
+    send('enquiry_accepted',{schema_version:2,page_group:'enrolment',destination:'existing_enrolment_workflow'});
+  });
   document.addEventListener('click',event=>{
     const link=event.target?.closest?.('[data-cta]');
     if (!link) return;

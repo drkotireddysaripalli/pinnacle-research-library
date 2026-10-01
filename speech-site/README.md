@@ -1,5 +1,7 @@
 # Pinnacle managed pages — shared therapy and enrolment system
 
+**Current engineering/reporting continuation, 1 October:** [Reusable quality toolkit](QUALITY-TOOLCHAIN.md) now provides pinned source diagnostics, Playwright/axe checks and a bounded page command. [Growth and migration order](GROWTH-AND-MIGRATION-OPERATING-ORDER.md) keeps main legacy retirement first, Ask/Supabase next and materials last. [V150 measurement release](RELEASE-MEASUREMENT-V150-20261001.md) records the accepted-enquiry signal, current managed-route coverage and one OT contrast correction.
+
 **Current page correction sequence:** [all48page register](reviews/PAGE-CLEANUP-REGISTER-20261001.md), with15accepted bodies kept and precise bounded tasks for the rest. LeadershipV137 and FrameworkV138 are released and verified. [Active work order](ACTIVE-PAGE-WORK-ORDER.md) identifies the one next task; the following release notes retain historical context.
 
 **Latest runtime correction, 1 October 2026:** [v136b cookie routing fix](RELEASE-PUBLIC-COOKIE-V136B-20261001.md) is live. Returning visitors with the observed advertising/visitor cookies now receive the current public pages; all 48 released HTML pages, the actual Chrome About/Self-Sufficient/Leadership journey and 19 protected controls passed. Worker `36c56835-166a-44d4-a750-7943328020a5` serves 100%; all 174 routes and four bindings remain. The V136 page bodies and common header/footer are retained.

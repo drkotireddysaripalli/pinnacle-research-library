@@ -4,6 +4,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 const source = fs.readFileSync('public/pinnacle-pages-scripts/speech-measurement.js','utf8');
 const key='pinnacle-speech-analytics-v1';
+const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
 function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service'}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
@@ -13,7 +14,7 @@ function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-ther
  const store=new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
- return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 test('no analytics before consent; valid consent sends only fixed CTA fields',()=>{
  const h=harness();h.click('hero-call','tel:+919100181181');assert.equal(h.scripts.length,0);assert.equal(h.events().length,0);
@@ -21,6 +22,32 @@ test('no analytics before consent; valid consent sends only fixed CTA fields',()
  assert.deepEqual(h.events().map(x=>x[1]),['page_view','phone_link_click','enquiry_link_click','enquiry_link_click']);
  const serialized=JSON.stringify(h.win.dataLayer);assert.ok(!serialized.includes('private-child-detail'));assert.ok(!serialized.includes('gclid'));assert.ok(!serialized.includes('secret'));
  assert.ok(h.events().every(x=>x[2].page_referrer===''&&!x[2].page_location.includes('?')));
+});
+
+test('accepted enquiries send one fixed consented event on the enrolment route only',()=>{
+ const h=harness({path:canonicalEnrolment});h.accepted();assert.equal(h.events().length,0);
+ h.choose('accepted');h.accepted();h.accepted();
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','enquiry_accepted']);
+ assert.equal(h.events()[1][2].page_group,'enrolment');
+ assert.equal(h.events()[1][2].destination,'existing_enrolment_workflow');
+ assert.equal(h.events()[1][2].page_location,'https://www.pinnacleblooms.org'+canonicalEnrolment);
+ const text=JSON.stringify(h.events());for(const excluded of ['private-child-detail','requestId','contact','phone','centre=','service=','gclid'])assert(!text.includes(excluded));
+ for(const opts of [{path:canonicalEnrolment,gpc:true},{path:'/pinnacle-pages-preview/enrolment'},{path:canonicalEnrolment,origin:'http://127.0.0.1:4340'},{path:'/autism-therapy'}]){
+  const b=harness(opts);b.choose('accepted');b.accepted();assert(!b.events().some(e=>e[1]==='enquiry_accepted'));
+ }
+ const declined=harness({path:canonicalEnrolment});declined.choose('accepted');declined.choose('declined');declined.accepted();assert(!declined.events().some(e=>e[1]==='enquiry_accepted'));
+});
+
+test('every current managed public route has a coarse measurement configuration',async()=>{
+ const routes=await import('../deployment/speech-handler.mjs');
+ const paths=[routes.ENROLMENT_CANONICAL,routes.SPEECH_CANONICAL,routes.OCCUPATIONAL_CANONICAL,routes.ABA_CANONICAL,routes.SPECIAL_EDUCATION_CANONICAL,routes.AUTISM_CANONICAL,routes.ASSESSMENT_CANONICAL,routes.CENTERS_CANONICAL,...Object.keys(routes.CENTRE_DETAIL_ROUTES),...Object.keys(routes.PUBLIC_DOCUMENT_ROUTES),...routes.PINNACLEAI_PATHS];
+ for(const path of paths){const h=harness({path});h.choose('accepted');h.click('footer-call','tel:+919100181181');assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click'],path);assert(!JSON.stringify(h.events()).includes('private-child-detail'));}
+});
+
+test('new life and PinnacleAI placements record only the national call destination',()=>{
+ for(const path of ['/self-sufficient','/mainstream','/pinnacleai'])for(const placement of ['family-journey-call','example-call','pinnacleai-call','pinnacleai-close-call']){
+  const h=harness({path});h.choose('accepted');h.click(placement,'tel:+919100181181');assert.equal(h.events()[1][1],'phone_link_click');
+ }
 });
 test('unknown destinations and placements are ignored without blocking navigation',()=>{
  const h=harness();h.choose('accepted');h.click('hero-call','tel:+911234');h.click('not-approved','tel:+919100181181');h.click('hero-assessment','https://evil.example/enroll');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll?name=private');assert.equal(h.events().length,1);

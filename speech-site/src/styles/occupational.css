@@ -163,7 +163,7 @@
 .ot-faq>div:first-child>p:not(.eyebrow){font-size:.95rem;line-height:1.7;color:#3d5068}
 .ot-final>div>p:not(.eyebrow):not(.ot-final-guidance){max-width:830px;margin-inline:auto}
 .ot-final .final-actions{flex-wrap:wrap}
-.ot-final-guidance{font-size:.82rem!important;line-height:1.6!important;color:#fff!important;opacity:.93;margin-top:23px}
+.ot-final-guidance{font-size:.82rem!important;line-height:1.6!important;color:#fff!important;opacity:1;margin-top:23px}
 .ot-share-actions{display:flex;justify-content:center;align-items:center;gap:12px 20px;flex-wrap:wrap;margin:22px auto 12px}
 .ot-share-actions a,.ot-share-actions button{font:inherit;font-size:.88rem;font-weight:700;color:#fff;text-decoration:underline;text-underline-offset:4px;background:transparent;border:0;cursor:pointer;padding:7px}
 .ot-share-actions a:hover,.ot-share-actions button:hover{color:#fff4ad}

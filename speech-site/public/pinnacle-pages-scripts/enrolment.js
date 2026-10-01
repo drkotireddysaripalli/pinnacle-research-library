@@ -39,7 +39,7 @@ if(form){
   if(!approvedEndpoint(endpoint,location.origin)||!crypto.randomUUID){status.textContent='The form is unavailable. Please call 9100 181 181.';status.focus();return;}
   const payload=makePayload(data,crypto.randomUUID());setBusy(true);status.textContent='Sending your request…';
   const result=await submitEnrolment(endpoint,payload,{origin:location.origin});
-  if(result.state==='accepted'){finished=true;form.reset();status.textContent='Thank you. Your request has been received. The Pinnacle team will contact you to arrange the next step. Your appointment will be confirmed with you.';button.textContent='Request received';}
+  if(result.state==='accepted'){finished=true;document.dispatchEvent(new Event('pinnacle:enquiry-accepted'));form.reset();status.textContent='Thank you. Your request has been received. The Pinnacle team will contact you to arrange the next step. Your appointment will be confirmed with you.';button.textContent='Request received';}
   else if(result.state==='rejected'){status.textContent='Your request was not accepted. Your details are still here. Please check them and try again, or call 9100 181 181.';}
   else {uncertain=true;status.textContent='We could not confirm whether your request was received. Please call 9100 181 181 before sending another request. Your details are still here.';button.textContent='Please call to confirm';}
   setBusy(false);status.focus();
