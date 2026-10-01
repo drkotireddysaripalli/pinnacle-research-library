@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "speech",
+  "current": "pinnacleai",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -334,14 +334,14 @@
       "label": "PinnacleAI",
       "url": "https://www.pinnacleblooms.org/pinnacleai",
       "baselineScore": 68,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "The eight equal module cards do not explain connected inputs, outputs and feedback authority. The example is generic, and the two scene images lack a complete branded explanatory composition; life-path vignettes do not maintain one coherent child journey and include non-branded review uniforms.",
       "task": "Replace the equal-card overview with a connected architecture and one complete morning example: input, professional decision, home/school observation, changed plan and reassessment. Generate the matching full English branded inline creative with a coherent young-child journey and branded full-sleeve professionals.",
-      "sourceCondition": "Licences and programme description do not prove whole-system effectiveness or individual benefit; real discovery/traffic/AI-citation outcomes unobserved.",
-      "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "sourceCondition": "Scope remains non-diagnostic. Published delivery verified; indexed predecessor confirmed, V161 crawl/ranking/citation and connected-call/admission gains unobserved.",
+      "currentScore": 85,
+      "pageOwnedDisposition": "V161: complete everyday example, native branded creative, connected architecture, family stages, early call/enquiry and matching exports. Two independent source/family-sales reviews; editorial85, not business outcome.",
+      "release": "RELEASE-PINNACLEAI-V161-20261001.md",
+      "reviewedOn": "2026-10-01"
     },
     {
       "order": 18,
@@ -2224,8 +2224,8 @@
     "policyPackage": "completed",
     "centresAndStaff": "after individual pages",
     "delhi": "completed and set aside",
-    "nextContract": "reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md"
+    "nextContract": null
   },
-  "currentDisposition": "Managed V160 release closed; precise external/measurement follow-ups tracked",
-  "nextCandidate": "pinnacleai"
+  "currentDisposition": "V161 released and verified; next eligible individual page ready for its finite contract",
+  "nextCandidate": "seven-readiness-indexes"
 }

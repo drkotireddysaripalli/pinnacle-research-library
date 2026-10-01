@@ -19,3 +19,6 @@ A family should understand how Pinnacle connects the purpose of a self-sufficien
 `src/data/pinnacleai-editorial.ts`, overview record in `src/data/pinnacleai-wave.ts`, overview branch of `src/components/PinnacleWaveExperience.astro`, `src/styles/pinnacleai-experience.css`, `scripts/build-pinnacleai-machine.mjs` and the existing claim/source registry. Shared header/footer changes, if genuinely needed, belong in the common files and one common release; do not redesign them for this page.
 
 Keep the canonical `/pinnacleai`, all accepted module paths, Verify/FSC/helpline and application handling. The acceptance receipt must distinguish page-owned clarity/delivery from unobserved independent whole-system effectiveness, family comprehension, indexing of the new edition, AI citations, connected calls, visits and admissions. Additional ideas go into the backlog after these five tasks are resolved.
+
+## Closed in V161 · 1 October 2026
+All five finite items delivered. Complete new native ChatGPT creative used rather than relabelling the Framework illustration. Source, family/sales review, all browser engines and production receipt are in PINNACLEAI-REVIEW-V161-20261001.md and ../../RELEASE-PINNACLEAI-V161-20261001.md (release record at site root). Original baseline68 retained; bounded editorial review85/100, no business-outcome score.

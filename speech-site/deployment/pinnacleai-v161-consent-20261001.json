@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-01T13:56:03.698Z",
+  "rows": [
+    {
+      "state": "declined",
+      "optionalMeasurementRequests": [],
+      "measurementCookies": [],
+      "callAndEnquiryLinks": true,
+      "moduleLinks": 8,
+      "noLeadSubmitted": true
+    },
+    {
+      "state": "gpc",
+      "optionalMeasurementRequests": [],
+      "measurementCookies": [],
+      "callAndEnquiryLinks": true,
+      "moduleLinks": 8,
+      "noLeadSubmitted": true
+    }
+  ]
+}

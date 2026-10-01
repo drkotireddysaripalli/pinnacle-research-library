@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-01T13:53:19.208Z",
+  "gsc": {
+    "siteUrl": "https://www.pinnacleblooms.org/",
+    "inspectionUrl": "https://www.pinnacleblooms.org/pinnacleai",
+    "verdict": "PASS",
+    "coverageState": "Submitted and indexed",
+    "robotsTxtState": "ALLOWED",
+    "indexingState": "INDEXING_ALLOWED",
+    "lastCrawlTime": "2026-10-01T00:08:44Z",
+    "pageFetchState": "SUCCESSFUL",
+    "crawledAs": "MOBILE",
+    "referringUrls": [
+      "https://www.pinnacleblooms.org/ethics-charter"
+    ]
+  },
+  "meaning": "Indexed predecessor confirmed. Last crawl precedes V161; this is not evidence the new page edition has been crawled or ranked."
+}

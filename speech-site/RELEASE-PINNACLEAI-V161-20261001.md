@@ -1,6 +1,6 @@
 # PinnacleAI overview V161
 
-1 October 2026. Candidate accepted locally; activation pending.
+1 October 2026. Published and verified.
 
 ## What changes
 
@@ -21,3 +21,22 @@ Predecessor and rollback: cda60a8e-fbe5-448d-940d-76cab390dbf0 (V160), deploymen
 Fresh preflight: 180 zone routes,81 main assignments, fingerprint39051a49. Bindings ASSETS,PINNACLE_ASK,PINNACLE_LEGACY,SITES_BYPASS_TOKEN retained. Separate Ads wrapper untouched.
 
 Commit/push, CI engine result, activation, live parity, IndexNow and production Lighthouse will be recorded below.
+
+## Activation and verification
+
+Published at 13:55:05 UTC after source commit `847b45cc85bfddcf1d32e8e69300bfd9e902f0d2` was pushed and [CI 36871807911](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36871807911) passed. Chromium, Firefox, WebKit and local Edge passed. No physical iOS device result is claimed.
+
+Worker `ceb81d16-f19c-4b79-9659-a03e81f72815` at100%; deployment `095f4c66-1670-462e-9db7-8442c57ed50b`. Routes remain180/81, fingerprint39051a49; all four bindings retained. V160 is rollback.
+
+Production read-back: all50 managed HTML pages match the union, ten assets/exports match,15 protected routes unchanged, canonical trailing-slash redirect/query retention, cookie/authorization/HEAD variants, Markdown and OG JPEG bytes pass. Common header/footer unchanged. Declined analytics and Global Privacy Control retain contact/module links with no optional measurement requests or measurement cookies. No lead or call submitted.
+
+| Production Lighthouse lab | Performance | Accessibility | Best Practices | SEO | LCP | CLS |
+|---|---:|---:|---:|---:|---:|---:|
+| Mobile |99|100|100|100|1.82s|0|
+| Desktop |100|100|100|100|0.58s|0|
+
+Simulated Lighthouse13.5.0 measurements, not field Core Web Vitals.
+
+Google URL Inspection reports the existing canonical Submitted and indexed, mobile crawl at00:08:44UTC before this release. No claim that Google has crawled V161. One IndexNow notification was accepted HTTP200 at13:55:38UTC; no duplicate Google request was made. Citation/ranking/call/admission gains need later reporting.
+
+Durable receipt: deployment/pinnacleai-v161-release-20261001.json. Tool-owned preview/browser processes closed; retained original artwork, source, audit evidence and rollback union. Next eligible individual page is Seven Readiness Indexes, original baseline69/100.

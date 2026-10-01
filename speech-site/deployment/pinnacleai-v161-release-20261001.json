@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-01T13:56:57.347Z",
+  "source": "847b45cc85bfddcf1d32e8e69300bfd9e902f0d2",
+  "ci": {
+    "id": 36871807911,
+    "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36871807911",
+    "status": "success",
+    "engines": [
+      "Chromium",
+      "Firefox",
+      "WebKit"
+    ],
+    "localEdge": "passed"
+  },
+  "worker": "pinnacle-verify-route",
+  "version": "ceb81d16-f19c-4b79-9659-a03e81f72815",
+  "deployment": "095f4c66-1670-462e-9db7-8442c57ed50b",
+  "activatedAt": "2026-10-01T13:55:05.342586Z",
+  "percentage": 100,
+  "rollback": "cda60a8e-fbe5-448d-940d-76cab390dbf0",
+  "stage": "release-pinnacleai-v161-20261001",
+  "routeCount": 180,
+  "assignedRoutes": 81,
+  "routeFingerprint": "39051a49",
+  "bindings": [
+    "ASSETS",
+    "PINNACLE_ASK",
+    "PINNACLE_LEGACY",
+    "SITES_BYPASS_TOKEN"
+  ],
+  "sharedShellBaseline": "pinnacle-common-shell-baseline-v159-20261001",
+  "changedManagedPages": 1,
+  "unchangedManagedPages": 49,
+  "receipts": [
+    "pinnacleai-v161-staged-20261001.json",
+    "pinnacleai-v161-responsive-20261001.json",
+    "pinnacleai-v161-live-20261001.json",
+    "pinnacleai-v161-consent-20261001.json",
+    "pinnacleai-v161-lighthouse-20261001.json",
+    "pinnacleai-v161-search-baseline-20261001.json",
+    "indexnow-pinnacleai-v161-20261001.json"
+  ],
+  "noLeadSubmitted": true,
+  "limits": [
+    "No physical iOS device test",
+    "GSC indexed predecessor; revised-edition crawl unobserved",
+    "IndexNow acceptance is not indexing or ranking",
+    "No AI citation or connected-call/admission lift established"
+  ]
+}

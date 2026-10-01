@@ -2,7 +2,9 @@
 
 ## Current owner priority · 1 October 2026
 
-**PinnacleAI overview V161 is in implementation.** Five-task contract: direct family invitation and early call; complete blocks/help example; connected module inputs, outputs and feedback; first-conversation/centre choice with existing coarse actions; matching visible FAQs, schema, source maps and reading exports. Retain the approved hero/social poster and shared shell V159; create one complete branded explanatory creative. Main owns all edits and release. Read-only evidence and family/sales reviews precede the single acceptance pass. See reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md.
+**PinnacleAI overview V161 is published and verified.** The five-task narrative/creative/architecture/contact/machine contract is complete. Main-owned source847b45c and CI36871807911 passed; all50 live pages and protected routes match. Production Lighthouse mobile99/100/100/100, desktop100/100/100/100. GSC predecessor indexed; revised-edition crawl and business lift remain unobserved. See RELEASE-PINNACLEAI-V161-20261001.md.
+
+**Next eligible individual page: Seven Readiness Indexes (original baseline69/100).** Use its existing queue task, the full work order and accepted shell; do not reopen the completed Speech/PinnacleAI whole-page passes.
 
 **Speech Therapy V160 is published and verified.** The agreed narrative, complete branded native ChatGPT creatives, action buttons, seven-stage communication example, offer/first visit, selected proof, compact 62-centre choice, government guidance, matching metadata/reading exports and four managed inbound links are live. The common header and complete footer remain exactly on the approved V159 baseline.
 
@@ -12,7 +14,7 @@ Completed work and precise follow-ups are in `reviews/QUALITY-PASS-20261001/SPEE
 
 Current union `release-speech-v160-20261001`, main Worker `cda60a8e-fbe5-448d-940d-76cab390dbf0`, deployment `44cd9c8d-ed88-456a-87ef-7a5c323c691f`. Rollback is V159 Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6`. The six-route Ads wrapper is separately versioned as `2fa26689-51f7-4a04-a835-a69d2627b15f`; its receipt preserves its own rollback.
 
-**Next previously queued individual page: PinnacleAI overview (baseline 68/100).** Its finite task file remains the next input; no new implementation was started during the Speech release. The owner's new priority always takes precedence.
+PinnacleAI followed Speech and is now closed in V161 as recorded above. The owner’s new priority always takes precedence.
 
 ## Prior completed foundation
 
@@ -42,7 +44,7 @@ Main owns all code, creative, browser, Git and deployment. Agents provide bounde
 
 Set one finite narrative/creative/implementation contract, assemble the candidate, consolidate actionable review findings and check it at meaningful boundaries. Repeat only affected failed or changed checks; broaden for a real shared-system change. Preserve authentic identities, claim sources and the child-specific non-diagnostic scope. Record editorial readiness separately from unobserved family comprehension, effectiveness, connected calls, visits and admissions.
 
-Commit/push accepted code before activation. Deploy the complete preserved union; retain all route assignments and bindings, read back production and save one concise receipt. Notify materially changed canonicals once. Never use a narrow Wrangler `--route` override. Current union is `release-speech-v160-20261001`; Worker `cda60a8e-fbe5-448d-940d-76cab390dbf0` at 100%, 180 zone routes / 81 main Worker assignments / four bindings. V159 Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6` is the rollback predecessor. After each release advance the ledger, keep needed rollback/source evidence and close tool-owned browsers/servers.
+Commit/push accepted code before activation. Deploy the complete preserved union; retain all route assignments and bindings, read back production and save one concise receipt. Notify materially changed canonicals once. Never use a narrow Wrangler `--route` override. Current union is `release-pinnacleai-v161-20261001`; Worker `ceb81d16-f19c-4b79-9659-a03e81f72815` at 100%, 180 zone routes / 81 main Worker assignments / four bindings. V160 Worker `cda60a8e-fbe5-448d-940d-76cab390dbf0` is the rollback predecessor. After each release advance the ledger, keep needed rollback/source evidence and close tool-owned browsers/servers.
 
 Save one bounded account-usage checkpoint pair when available; label account-wide readings honestly when concurrent work prevents project attribution. Do not poll balances during implementation or let repeated tooling review displace page completion.
 
