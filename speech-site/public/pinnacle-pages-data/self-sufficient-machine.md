@@ -4,10 +4,13 @@ https://www.pinnacleblooms.org/self-sufficient
 Growing self-sufficiency means taking a greater part in everyday life with the support that fits your child. It includes making choices, communicating needs, managing routines and knowing when to ask for help. A useful plan starts with the life you want to make possible, then chooses the relevant goals, people, methods and review.
 
 The outing gives putting on shoes a purpose.
-1. Start with the life moment — The family wants to go outside together. Describe what your child enjoys, what they already do and the help they use.
-2. Understand the useful starting point — A suitable professional considers communication, movement, comfort and the steps of the routine. A score is read with the child’s context.
-3. Choose support that serves the goal — Agree a manageable part of getting ready and relevant professional support. The family receives guidance that fits a real outing routine.
-4. Review what became useful — Discuss participation, the help involved and what happened with different people or settings. Continue or adjust the next step together.
+“My child wants to come outside with us. How can they take more of a part in getting ready?”
+Useful help and familiar cues can stay with a child across home and learning routines.
+1. Choose a useful part of getting ready — In this example, a child enjoys going outside, points to their blue shoes and can press a fastening closed when an adult holds the shoe. The family chooses a useful next step with the child: take more of a part in putting on shoes for an outing they want to join. Asking for help remains part of the goal.
+2. Find the support that makes it possible — A suitable professional and the family look at communication, movement, shoe fit, comfort and the place where the routine happens. For this example, they agree to try a stable seat, an opened fastening and a familiar help gesture. These are choices to review for this child, rather than instructions that every family must follow.
+3. Notice the difference between settings — The family offers a manageable opportunity at home when the child chooses to get ready. With consent and the teacher’s agreement, the same familiar cues can be available on a nursery bench. An illustrative observation: at home the child puts a foot into the shoe and closes the fastening with help; during a busy nursery transition, they ask the adult to do it. The amount of help and the surroundings both matter.
+4. Keep useful help and change what gets in the way — In this illustrative review, the family, relevant professional and consenting teacher agree to keep the help gesture and opened fastening, and make a seated opportunity available before the busy transition. They agree when to review the child’s chosen participation, comfort and remaining help in both settings. The child can pause or decline. Useful support stays available; independence is not measured by removing every form of help.
+This is an illustrative planning example, not a recorded child outcome. Your child’s choices, your family and suitable professionals shape the actual goal, adaptations and review.
 
 1. Understand abilities — Start with strengths, everyday observations and suitable assessment. Read AbilityScore with the child’s age, context and skills. https://www.pinnacleblooms.org/abilityscore
 2. Plan for readiness — Discuss what you want to make possible and agree useful priorities. Readiness views support professional judgement. https://www.pinnacleblooms.org/seven-readiness-indexes

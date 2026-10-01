@@ -1,0 +1,370 @@
+{
+  "at": "2026-10-01T01:34:29.225Z",
+  "id": "self-sufficient",
+  "origin": "http://127.0.0.1:4338",
+  "selector": "#everyday-example",
+  "runs": [
+    {
+      "channel": "chrome",
+      "width": 320,
+      "facts": {
+        "width": 320,
+        "scroll": 320,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/self-sufficient",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "imageWidths": [
+          320
+        ]
+      },
+      "errors": []
+    },
+    {
+      "channel": "chrome",
+      "width": 390,
+      "facts": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/self-sufficient",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "imageWidths": [
+          389
+        ]
+      },
+      "errors": []
+    },
+    {
+      "channel": "chrome",
+      "width": 768,
+      "facts": {
+        "width": 768,
+        "scroll": 768,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/self-sufficient",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "imageWidths": [
+          768
+        ]
+      },
+      "errors": []
+    },
+    {
+      "channel": "chrome",
+      "width": 1440,
+      "facts": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/self-sufficient",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "imageWidths": [
+          1000
+        ]
+      },
+      "errors": []
+    },
+    {
+      "channel": "msedge",
+      "width": 390,
+      "facts": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/self-sufficient",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does self-sufficiency mean for a child?",
+            "answer": "It means growing participation in everyday choices and routines with appropriate support. Communication, self-care, learning and asking for help can all contribute. The meaning and goals are individual to the child."
+          },
+          {
+            "question": "Does my child have to do everything without help?",
+            "answer": "No. Useful support, adaptations and asking for help can be part of independence. The family and professional discuss which activities matter, what the child can do and what support helps."
+          },
+          {
+            "question": "How does Pinnacle start?",
+            "answer": "Start with one everyday moment you want to make more possible. Discuss present abilities, a suitable assessment, meaningful priorities, the people and support involved, family practice and how progress would be reviewed."
+          },
+          {
+            "question": "Does every child need all the therapies?",
+            "answer": "No. Assessment and the child-specific priorities guide the relevant professional contributions. Speech, occupational, behavioural or educational support may play different roles; a fixed bundle is not assumed."
+          },
+          {
+            "question": "Do PinnacleAI or the licences guarantee independence?",
+            "answer": "No. PinnacleAI GPT-OS is licensed non-diagnostic developmental-support software. MD-5 and BIS describe their printed scopes. They do not guarantee a child’s independence, school admission or outcome."
+          },
+          {
+            "question": "What is the next step for my family?",
+            "answer": "Call 9100 181 181 to describe one meaningful everyday priority, or send a short enquiry. The receiving team confirms the appropriate professional, centre, appointment, service and fees before a visit."
+          }
+        ],
+        "imageWidths": [
+          389
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "physicalIOS": false,
+  "passed": true
+}
