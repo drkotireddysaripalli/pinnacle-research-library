@@ -38,12 +38,17 @@ try{
   }
   assert.deepEqual(errors,[]);rows.push({width,...result,faqSchemaMatches:true,keyboardDisclosure:true,imagesDecoded:true,errors});await page.close();
  }
+ const fallback=await browser.newPage({viewport:{width:320,height:568}});
+ await fallback.route('**/*.woff2',route=>route.abort());
+ await fallback.goto(origin+'/pinnacleai',{waitUntil:'load'});
+ assert.equal(await fallback.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth+1),true,'320px fallback fonts must not widen the lifecycle grid');
+ await fallback.close();
  const json=JSON.parse(await fs.readFile('dist/pinnacle-pages-data/pinnacleai-sources.json','utf8'));
  assert.equal(json.paradigmShift,overviewDefinition);assert.equal(json.outcomeChapters.length,2);assert.equal(json.researchNotes.length,2);
  for(const suffix of ['sources.txt','reading.md']){
   const text=await fs.readFile('dist/pinnacle-pages-data/pinnacleai-'+suffix,'utf8');assert(text.includes(overviewDefinition));
   for(const p of overviewOutcomes)assert(text.includes(p.answer));
  }
- await fs.writeFile('deployment/pinnacleai-v162-responsive-20261001.json',JSON.stringify({at:new Date().toISOString(),rows,exportsMatch:true,noLeadSubmitted:true},null,2)+'\n');
+ await fs.writeFile('deployment/pinnacleai-v162-responsive-20261001.json',JSON.stringify({at:new Date().toISOString(),rows,fallbackFonts320:true,exportsMatch:true,noLeadSubmitted:true},null,2)+'\n');
  console.log(JSON.stringify({passed:true,widths:rows.map(r=>r.width),architecture:7,stages:7,faqs:10,exportsMatch:true,imagesDecoded:true}));
 }finally{if(browser)await browser.close();if(server.exitCode===null)server.kill();}

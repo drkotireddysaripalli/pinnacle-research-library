@@ -33,3 +33,7 @@ Commit and push before activation. Upload a Worker version without route overrid
 ## Activation and production results
 
 Pending source commit, CI and release. Append exact evidence here after success.
+
+## CI correction before activation
+
+Initial CI 36902914245 passed types/build/116 unit checks and three browser profiles, but found 7px horizontal overflow at320px while fallback fonts were in use. Reproduced locally by blocking WOFF2: lifecycle grid width327px on a320px viewport. Corrected only the new lifecycle grid with zero-minimum fractional tracks, min-width:0 and wrapping for its labels. The same no-fonts check now reports320px and is retained in the focused acceptance script. Shared shell untouched. Initial uploaded version594a814e-a7c1-4d9a-9107-1bd2ef9db774 was never activated; release uses the corrected candidate after CI.
