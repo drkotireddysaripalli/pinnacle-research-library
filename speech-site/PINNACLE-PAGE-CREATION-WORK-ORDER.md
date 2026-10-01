@@ -158,6 +158,8 @@ For each block, record: visitor question; one-line answer; feeling/decision it s
 
 ## 4. Build once in the shared managed system
 
+**Owner deferral, 1 October 2026:** The Verify/Astro migration, common-shell integration and page redevelopment discussed below are deferred until the owner returns to that package. Its reuse-first scope, page families, creative contract, preservation requirements, revised estimates and resume condition are recorded in `VERIFY-ASTRO-MIGRATION-DEFERRED-WORK-ORDER-20261001.md`. Continue the existing page-creation work now. The following earlier Verify integration mechanism is historical planning, not an instruction to begin a separate shell bridge or full generator rewrite. Common header/footer fixes for actively managed pages still belong in their common source files.
+
 **Owner clarification, 1 October 2026:** the actual `/verify/` page and its Paradigm Shift, PinnacleAI story, research and citation HTML pages must also display the common Pinnacle header and footer. Putting links to those destinations into the managed-page header/footer does not fulfil this requirement. Verify retains its separate evidence/content builder, records, public URLs and machine exports; the shared shell must be rendered from the same common component sources at the union build boundary, with no handwritten second header/footer. This integration is required work, not a claim that the currently published Verify pages already inherit the managed shell.
 
 - `src/layouts/PageLayout.astro` mounts `src/components/SiteHeader.astro` and `src/components/SiteFooter.astro`. Navigation lives in `src/data/portal-navigation.json`; shared styling is in `src/styles/portal-shell.css`. The Verify gateway is part of the **common footer**.
