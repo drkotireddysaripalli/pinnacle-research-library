@@ -118,6 +118,8 @@ The stages are a coherent explanation of the journey. They are not a promise tha
 
 ## Shared shell contract
 
+V158 refines the owner's mobile choice: keep the nine authority cards in the native scroller without a separate arrow/count row. Search has a visible caption and stronger icon; Enrol is retained. The footer's 36-record controls remain. This supersedes V157's extra mobile header control row only.
+
 V157 is the owner's explicit responsive follow-up to that desktop reference. Preserve its rightmost Enrol link, readable phone authority rail and direct Citations access, one-row tablet layout, isolated compact More menu, initially expanded footer groups, ordinary policy scrolling and mobile evidence controls. These common changes were released across all 50 managed pages on 1 October, retaining their main content. They are not permission for later individual-page work to redesign the shared shell.
 
 V155 restores the agreed Speech/Occupational Therapy desktop presentation from source b1aa7055ddbfd8d540f4225614b1e32ec26d13f6 after the owner rejected the later V133 compact redesign. The original typography, authority subtexts and nav-based desktop footer are fixed. Current working URLs, policy additions and accessible mobile controls remain. All36 evidence cards are now visible; the old baseline originally featured8 and disclosed the remainder. This common correction was rebuilt and verified across all50 managed pages. The compact phone/tablet More controls derive from v126:

@@ -2,6 +2,8 @@
 
 ## Current owner priority · 1 October 2026
 
+V158 is published: the owner removed the redundant mobile header arrow/counter row and requested a clearer Search icon. All nine full authority links retain native scrolling; Enrol and the footer are unchanged. Current union is `release-shared-shell-v158-20261001`, Worker `baca2d9f-4e65-48c2-ad80-499cc976e3d7` at 100%; V157 is rollback. All 50 pages passed live read-back. See `RELEASE-SHARED-HEADER-V158-20261001.md`.
+
 V157 is published and closed: the selected desktop shell is retained, Enrol is at the right, tablet wrapping and mobile readability/menu focus are corrected, footer groups start expanded, policies scroll normally and evidence rails have controls. All 50 managed pages passed live read-back and retained their main bodies. See `RELEASE-SHARED-SHELL-V157-20261001.md`. No individual-page redesign was part of this correction.
 
 The intervening owner-requested common-header/footer restoration is released as V156. The owner confirmed the later Occupational Therapy nine-tile header. Original Speech/OT typography, natural subtitle wrapping and visible desktop footer navigation are recovered in shared files; all50 main bodies are retained. V155's forced subtitle breaks are superseded. Preserve this settled shell during the remaining page quality pass. Its independent wording/visual fixture runs in the browser acceptance suite.
