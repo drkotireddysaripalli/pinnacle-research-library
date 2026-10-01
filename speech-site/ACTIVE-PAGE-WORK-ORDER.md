@@ -2,7 +2,7 @@
 
 ## Current owner priority · 1 October 2026
 
-V157 is the bounded owner-requested phone/tablet follow-up: keep the selected desktop shell, move Enrol right, correct tablet wrapping and mobile readability/menu focus, expand footer groups initially, remove nested policy scrolling and add evidence-rail controls. See `RELEASE-SHARED-SHELL-V157-20261001.md` for candidate checks and release state. No individual-page redesign is part of this correction.
+V157 is published and closed: the selected desktop shell is retained, Enrol is at the right, tablet wrapping and mobile readability/menu focus are corrected, footer groups start expanded, policies scroll normally and evidence rails have controls. All 50 managed pages passed live read-back and retained their main bodies. See `RELEASE-SHARED-SHELL-V157-20261001.md`. No individual-page redesign was part of this correction.
 
 The intervening owner-requested common-header/footer restoration is released as V156. The owner confirmed the later Occupational Therapy nine-tile header. Original Speech/OT typography, natural subtitle wrapping and visible desktop footer navigation are recovered in shared files; all50 main bodies are retained. V155's forced subtitle breaks are superseded. Preserve this settled shell during the remaining page quality pass. Its independent wording/visual fixture runs in the browser acceptance suite.
 
@@ -24,7 +24,7 @@ Main owns all code, creative, browser, Git and deployment. Agents provide bounde
 
 Set one finite narrative/creative/implementation contract, assemble the candidate, consolidate actionable review findings and check it at meaningful boundaries. Repeat only affected failed or changed checks; broaden for a real shared-system change. Preserve authentic identities, claim sources and the child-specific non-diagnostic scope. Record editorial readiness separately from unobserved family comprehension, effectiveness, connected calls, visits and admissions.
 
-Commit/push accepted code before activation. Deploy the complete preserved union; retain all route assignments and bindings, read back production and save one concise receipt. Notify materially changed canonicals once. Never use a narrow Wrangler `--route` override. Current union is `release-policies-v153-20261001`; Worker `825643e6-61c1-4d57-bfd5-9cdb083a5b13` at 100%, 180 zone routes / 81 Worker assignments / four bindings. Delhi V152 is the rollback predecessor. After each release advance the ledger, keep needed rollback/source evidence and close tool-owned browsers/servers.
+Commit/push accepted code before activation. Deploy the complete preserved union; retain all route assignments and bindings, read back production and save one concise receipt. Notify materially changed canonicals once. Never use a narrow Wrangler `--route` override. Current union is `release-shared-shell-v157-20261001`; Worker `cd8b3cbd-8e22-4a47-b8ae-9d7cdcae3df4` at 100%, 180 zone routes / 81 Worker assignments / four bindings. V156 Worker `2bfae56e-90e7-44c2-833e-20cda9b573a0` is the rollback predecessor. After each release advance the ledger, keep needed rollback/source evidence and close tool-owned browsers/servers.
 
 Save one bounded account-usage checkpoint pair when available; label account-wide readings honestly when concurrent work prevents project attribution. Do not poll balances during implementation or let repeated tooling review displace page completion.
 

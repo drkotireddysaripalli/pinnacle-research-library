@@ -22,6 +22,10 @@ The owner requested a responsive correction after selecting the later Speech/Occ
 
 ## Deployment state
 
-Candidate prepared; production activation and final CI receipt pending. Pre-release Worker is `2bfae56e-90e7-44c2-833e-20cda9b573a0` at 100% and is the rollback version. Preserve all 180 zone routes, 81 Worker assignments, route fingerprint `1a917340` and the four existing bindings.
+Published 1 October 2026 at 17:13:34 IST. Worker `cd8b3cbd-8e22-4a47-b8ae-9d7cdcae3df4` serves 100%, deployment `7f6ded20-8cef-424c-b90f-8daa7819bad6`. Rollback is `2bfae56e-90e7-44c2-833e-20cda9b573a0`. All 180 zone routes, 81 Worker assignments, route fingerprint `1a917340` and the four bindings were retained.
+
+Final source `563c3f2c9fb467f4fa850dedda621c93b9060a8f` was committed and pushed before activation. [CI run 36856846546](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36856846546) passed types, production build, 116 unit tests, policy contracts, four Chromium sizes, Firefox and WebKit. Local Edge checks also passed. The screenshot review caught an over-narrow evidence-card width in the initial candidate; that rule was removed, a spacing assertion added, and affected checks rerun. The superseded uploaded version was never activated, and its unused local CSS candidate was removed.
+
+Live read-back matched all 50 staged HTML files and the new CSS asset. All 50 main bodies remained identical; 15 protected representations, five representative cookie/credential deliveries, retired-profile 410s and Books billing 301 were retained. Live Chrome checks at 390, 1024 and 1440 px passed. The deployed header/footer were visually inspected after publication. Evidence is in the `deployment/shared-shell-v157-*` receipts and actual browser screenshots under ignored `audits/`.
 
 This changes shared presentation and interaction. Page narratives, enquiry APIs, original evidence, public identities, sitemaps and separate legacy routes are unchanged. Browser emulation is not physical iOS/Android device testing. No indexing resubmission is justified by this navigation-only correction.

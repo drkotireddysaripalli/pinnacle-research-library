@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-01T11:41:11.839Z",
+  "currentDeployment": "5e776806-f672-4d3d-a1dc-a6bd96509260",
+  "currentVersions": [
+    {
+      "version_id": "2bfae56e-90e7-44c2-833e-20cda9b573a0",
+      "percentage": 100
+    }
+  ],
+  "candidate": "cd8b3cbd-8e22-4a47-b8ae-9d7cdcae3df4",
+  "routeCount": 180,
+  "workerAssignments": 81,
+  "fingerprint": "1a917340",
+  "bindings": [
+    {
+      "type": "assets",
+      "name": "ASSETS"
+    },
+    {
+      "type": "service",
+      "name": "PINNACLE_ASK",
+      "service": "pinnacle-ask",
+      "environment": "production"
+    },
+    {
+      "type": "service",
+      "name": "PINNACLE_LEGACY",
+      "service": "pbn-planetscale",
+      "environment": "production"
+    },
+    {
+      "type": "secret_text",
+      "name": "SITES_BYPASS_TOKEN"
+    }
+  ]
+}

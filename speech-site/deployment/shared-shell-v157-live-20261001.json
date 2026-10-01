@@ -1,0 +1,95 @@
+{
+  "at": "2026-10-01T11:44:00.301Z",
+  "phase": "live",
+  "passed": true,
+  "physicalDevices": false,
+  "runs": [
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": 390,
+      "headerHeight": 330,
+      "authorityCount": 9,
+      "authorityRows": 1,
+      "headerSizes": {
+        "caption": "11px",
+        "phone": 18,
+        "detail": 12
+      },
+      "enrolRight": 375,
+      "utilityRight": 375,
+      "allFooterGroupsInitiallyOpen": true,
+      "policiesOverflow": "visible",
+      "typography": {
+        "topHeight": 131,
+        "brandWidth": 154,
+        "labelSize": 12,
+        "detailSize": 12,
+        "cardIcon": 48,
+        "cardValueSize": 24,
+        "cardTitleSize": 20,
+        "cardCopySize": 16,
+        "footerColumns": 1
+      },
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "overflow": 1024,
+      "headerHeight": 315.59375,
+      "authorityCount": 9,
+      "authorityRows": 1,
+      "headerSizes": {
+        "caption": "11px",
+        "phone": 16,
+        "detail": 12
+      },
+      "enrolRight": 1004,
+      "utilityRight": 1004,
+      "allFooterGroupsInitiallyOpen": true,
+      "policiesOverflow": "visible",
+      "typography": {
+        "topHeight": 132,
+        "brandWidth": 230,
+        "labelSize": 12,
+        "detailSize": 12,
+        "cardIcon": 48,
+        "cardValueSize": 24,
+        "cardTitleSize": 18,
+        "cardCopySize": 16,
+        "footerColumns": 4
+      },
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "overflow": 1440,
+      "headerHeight": 303,
+      "authorityCount": 9,
+      "authorityRows": 1,
+      "headerSizes": {
+        "caption": "11px",
+        "phone": 18,
+        "detail": 12
+      },
+      "enrolRight": 1305,
+      "utilityRight": 1305,
+      "allFooterGroupsInitiallyOpen": true,
+      "policiesOverflow": "visible",
+      "typography": {
+        "topHeight": 132,
+        "brandWidth": 330,
+        "labelSize": 13,
+        "detailSize": 12,
+        "cardIcon": 48,
+        "cardValueSize": 24,
+        "cardTitleSize": 18,
+        "cardCopySize": 16,
+        "footerColumns": 4
+      },
+      "errors": []
+    }
+  ]
+}

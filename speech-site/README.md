@@ -1,5 +1,7 @@
 # Pinnacle managed pages — shared therapy and enrolment system
 
+**Current common shell, 1 October:** [V157 responsive correction](RELEASE-SHARED-SHELL-V157-20261001.md) is live across all 50 managed pages. It preserves the owner-selected Speech/OT desktop header/footer, places Enrol at the far right and corrects mobile/tablet navigation, footer visibility and evidence controls. All 50 main bodies and protected routes remain unchanged; source, CI, live and rollback evidence are recorded in the release receipt.
+
 **1 October performance/toolkit continuation:** [V151 common monitoring correction](RELEASE-MONITORING-V151-20261001.md) restores the existing Cloudflare performance beacon and the helpline link's visible accessible name across the accepted portfolio. [Quality toolchain](QUALITY-TOOLCHAIN.md) includes pinned Lighthouse, bounded speed commands, stronger image/indexability checks and Linux Firefox/WebKit coverage. Publication status is recorded in the V151 receipt.
 
 **Current engineering/reporting continuation, 1 October:** [Reusable quality toolkit](QUALITY-TOOLCHAIN.md) now provides pinned source diagnostics, Playwright/axe checks and a bounded page command. [Growth and migration order](GROWTH-AND-MIGRATION-OPERATING-ORDER.md) keeps main legacy retirement first, Ask/Supabase next and materials last. [V150 measurement release](RELEASE-MEASUREMENT-V150-20261001.md) records the accepted-enquiry signal, current managed-route coverage and one OT contrast correction.

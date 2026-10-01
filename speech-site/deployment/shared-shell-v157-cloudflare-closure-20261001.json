@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-01T11:44:00.562Z",
+  "deployment": "7f6ded20-8cef-424c-b90f-8daa7819bad6",
+  "createdOn": "2026-10-01T11:43:34.662481Z",
+  "versions": [
+    {
+      "version_id": "cd8b3cbd-8e22-4a47-b8ae-9d7cdcae3df4",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 180,
+  "workerAssignments": 81,
+  "routeFingerprint": "1a917340",
+  "passed": true
+}
