@@ -213,3 +213,16 @@ References: the official `pinnacle-blooms-network-lockup.png` and accepted `spee
 - `src/assets/pinnacleai-help-journey-20261001.png`: generated with the built-in ChatGPT session image tool, using the approved Pinnacle emblem and existing PinnacleAI hero as brand references. Complete English campaign creative; no external API key route. Original retained at the session generated_images path, exec-4526a8ae-c521-4948-9bfa-18dfa42cff76.png.
 - Visible caption identifies the illustration as an explanatory plan/review example, not an observed patient outcome. Text, phone, logo, ages and professional-coat presentation visually inspected.
 - Existing PinnacleAI hero and approved social poster retained unchanged.
+
+## PinnacleAI Paradigm Shift V162 · 1 October 2026
+
+Four complete English branded creatives were generated with the built-in ChatGPT session image-generation tool. No external API-key route or separately pasted text. Exact prompts: PINNACLEAI-V162-CREATIVE-PROMPTS.md. The approved Pinnacle creative was the brand reference. Fictional Indian family scenes, full-sleeve branded professional coats, luminous white and vivid pathway palette, legible national telephone and integrated branding were visually inspected. The images do not depict documented beneficiaries. Exact generator model/version and billing were not exposed by the tool.
+
+Original directory: C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/.
+
+- src/assets/pinnacleai-circle-v162.png: 1254 × 1254; exec-85f069da-d03d-49a5-8f67-a7d71278f836.png. Family at the centre of seven stages, life purpose explicit.
+- src/assets/pinnacleai-home-v162.png: 1536 × 1024; exec-689e25a4-3f11-488c-8e2d-11aaa041705e.png. Professional guidance, home practice and family review.
+- src/assets/pinnacleai-self-v162.png: 1536 × 1024; exec-7c0a3842-8335-4d3e-9c29-acebd641357a.png. Choice, useful support and everyday capability.
+- src/assets/pinnacleai-mainstream-v162.png: 1536 × 1024; exec-a1d09fed-d624-4dd1-825f-a6daa6d438c2.png. Final native edit of exec-982ce66f-633e-4dc8-8bc4-cb381ec26ba1.png correcting one small classroom poster to Understand / Support / Include. Original and corrected outputs retained.
+
+Astro supplies responsive WebP with dimensions. The whole square circle remains uncropped on mobile, accompanied by seven readable HTML labels; this replaces the planned separate portrait variant without duplicating meaning. Existing approved 1200 × 630 sharing poster retained. Actual redacted MD-5 and BIS preview files are reused separately from /verify/images/sources/ and linked to their originals; no certificate is generated. All essential explanations, headings, source meanings and calls are HTML.

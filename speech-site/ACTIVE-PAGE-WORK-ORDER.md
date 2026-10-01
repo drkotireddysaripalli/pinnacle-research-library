@@ -2,9 +2,11 @@
 
 ## Current owner priority · 1 October 2026
 
+**Current request: PinnacleAI Paradigm Shift V162 implementation.** The circular lifecycle, seven-stage HTML mechanism, prominent original source documents, connected therapy contributions and substantial Every Home / Every Parent, Self-Sufficient and Mainstream chapters are implemented with four new complete native ChatGPT creatives. Five-width responsive acceptance, types, build, unit, Chromium, Edge and WebKit checks passed. Source check-in, CI and production release are next. The accepted common header and complete footer remain fixed. Contract: `PINNACLEAI-LIFE-CIRCLE-NARRATIVE-WORK-ORDER-20261001.md`; release receipt: `RELEASE-PINNACLEAI-V162-20261001.md`.
+
 **PinnacleAI overview V161 is published and verified.** The five-task narrative/creative/architecture/contact/machine contract is complete. Main-owned source847b45c and CI36871807911 passed; all50 live pages and protected routes match. Production Lighthouse mobile99/100/100/100, desktop100/100/100/100. GSC predecessor indexed; revised-edition crawl and business lift remain unobserved. See RELEASE-PINNACLEAI-V161-20261001.md.
 
-**Next eligible individual page: Seven Readiness Indexes (original baseline69/100).** Use its existing queue task, the full work order and accepted shell; do not reopen the completed Speech/PinnacleAI whole-page passes.
+**Next queued individual page after the current owner-directed PinnacleAI review: Seven Readiness Indexes (original baseline69/100).** Use its existing queue task, the full work order and accepted shell. Do not repeat completed checks without a relevant change.
 
 **Speech Therapy V160 is published and verified.** The agreed narrative, complete branded native ChatGPT creatives, action buttons, seven-stage communication example, offer/first visit, selected proof, compact 62-centre choice, government guidance, matching metadata/reading exports and four managed inbound links are live. The common header and complete footer remain exactly on the approved V159 baseline.
 

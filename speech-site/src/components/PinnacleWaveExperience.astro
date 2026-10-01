@@ -16,7 +16,7 @@ import therapeuticSocial from '../assets/pinnacleai-therapeuticai-social-2026093
 import everydaySocial from '../assets/pinnacleai-everyday-social-20260930.png';
 import fusionSocial from '../assets/pinnacleai-fusion-social-20260930.png';
 import reassessSocial from '../assets/pinnacleai-reassess-social-20260930.png';
-import overviewHero from '../assets/pinnacleai-editorial-20260930.png';
+import overviewHero from '../assets/pinnacleai-circle-v162.png';
 import abilityHero from '../assets/abilityscore-editorial-20260930.png';
 import readinessHero from '../assets/readiness-editorial-20260930.png';
 import pdkHero from '../assets/pdk-editorial-20260930.png';
@@ -63,13 +63,13 @@ const speechExampleLink=speechModuleExamples[page.slug];
 const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].includes(page.slug)?undefined:'2026-09-30';
 ---
 
-<PageLayout path={path} label={page.label} title={page.title} description={page.description} socialTitle={page.title} socialDescription={page.description} shareImage={socialBySlug[page.slug]} shareVersion={isOverview?"2026-10-01-pinnacleai-v161":"2026-09-30-pinnacleai-editorial"} imageAlt={`${page.short} · Pinnacle Blooms Network life-first creative with 9100 181 181.`} imageCaption={`${page.short} · PinnacleAI illustrated social creative.`} includeService={false} primaryEntityId={entityId} entityGraph={entityGraph} citations={sources.map(source=>source.href)} faqs={page.faqs} publishedOn={firstPublished} updatedOn={page.updatedOn||'2026-09-30'} breadcrumbParent={isOverview?null:{name:'PinnacleAI®',path:'/pinnacleai'}}>
+<PageLayout path={path} label={page.label} title={page.title} description={page.description} socialTitle={page.title} socialDescription={page.description} shareImage={socialBySlug[page.slug]} shareVersion={isOverview?"2026-10-01-pinnacleai-v162":"2026-09-30-pinnacleai-editorial"} imageAlt={`${page.short} · Pinnacle Blooms Network life-first creative with 9100 181 181.`} imageCaption={`${page.short} · PinnacleAI illustrated social creative.`} includeService={false} primaryEntityId={entityId} entityGraph={entityGraph} citations={sources.map(source=>source.href)} faqs={page.faqs} publishedOn={firstPublished} updatedOn={page.updatedOn||'2026-09-30'} breadcrumbParent={isOverview?null:{name:'PinnacleAI®',path:'/pinnacleai'}}>
   <div class="wave2" data-wave-module={page.slug}>
     <section class="wave2-hero" aria-labelledby="wave2-title">
       <div class="wave2-wrap wave2-hero-grid">
         <div class="wave2-hero-heading">
           <p class="wave2-kicker"><Icon name={moduleIcons[page.slug]} size={22}/>{page.eyebrow}</p>
-          <h1 id="wave2-title"><span>{page.short}</span>{editorial.opening}</h1>
+          <h1 id="wave2-title"><span>{isOverview?"PinnacleAI® Paradigm Shift":page.short}</span>{editorial.opening}</h1>
         </div>
         {!isOverview&&<figure class="wave2-hero-art"><Image src={heroBySlug[page.slug]} widths={[480,800,1200,1600]} sizes="(min-width: 900px) 48vw, 100vw" format="webp" quality={81} loading="eager" decoding="async" alt={editorial.imageAlt}/></figure>}
         <div class="wave2-hero-detail">
@@ -82,7 +82,7 @@ const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].
       </div>
     </section>
 
-    <nav class="wave2-jump wave2-wrap" aria-label="On this page"><a href="#worked-example">{isOverview?'See the everyday example':'See a life moment'}</a><a href="#what-it-does">{isOverview?'How the parts work together':'What this module does'}</a><a href="#sources">Check the evidence</a><a href="#next-step">Take a next step</a></nav>
+    {isOverview ? <nav class="wave2-jump wave2-wrap" aria-label="On this page">{isOverview&&<a href="#paradigm-shift">The Paradigm Shift</a>}<a href="#what-it-does">{isOverview?'The PinnacleAI mechanism':'What this module does'}</a>{isOverview&&<><a href="#family-journey">Every home. Every parent.</a><a href="#self-sufficient">Self-Sufficient</a><a href="#mainstream">Mainstream Included</a></>}<a href="#worked-example">See the example</a><a href="#sources">Verify the evidence</a><a href="#next-step">Begin with Pinnacle</a></nav> : <nav class="wave2-jump wave2-wrap" aria-label="On this page"><a href="#worked-example">See a life moment</a><a href="#what-it-does">What this module does</a><a href="#sources">Check the evidence</a><a href="#next-step">Take a next step</a></nav>}
 
     {isOverview ? <>
       <PinnacleOverviewBody page={page}/>
@@ -100,14 +100,14 @@ const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].
       <section class="wave2-section wave2-context" aria-labelledby="wave2-context-title"><div class="wave2-wrap wave2-context-grid"><div><p class="wave2-kicker">Its place in the whole</p><h2 id="wave2-context-title">{editorial.stage}. A child’s life remains the purpose.</h2><p>AbilityScore®, the seven Readiness views, child-specific planning, professionally guided activity, everyday practice, family observations and reassessment can work together when they are relevant to the child. <a href={url('/pinnacleai')}>See the complete seven-stage journey ↗</a></p></div><nav aria-label="Continue through the PinnacleAI system"><a href={url('/'+previous.slug)}><small>Previous part</small><strong>{previous.short}</strong></a><a href={url('/'+next.slug)}><small>Next part</small><strong>{next.short}</strong></a><a href={url(serviceLink.href)}><small>Connected care</small><strong>{serviceLink.label}</strong></a></nav></div></section>
     </>}
 
-    <section class="wave2-section wave2-proof" id="sources" aria-labelledby="wave2-proof-title"><div class="wave2-wrap"><div class="wave2-section-title"><p class="wave2-kicker">Source-linked confidence</p><h2 id="wave2-proof-title">Know what the evidence actually establishes.</h2><p>Pinnacle Blooms Network is the brand. Bharath Healthcare Laboratories Private Limited is the legal licence holder and operator. Different records answer different questions.</p></div>
+    {!isOverview&&<section class="wave2-section wave2-proof" id="sources" aria-labelledby="wave2-proof-title"><div class="wave2-wrap"><div class="wave2-section-title"><p class="wave2-kicker">Source-linked confidence</p><h2 id="wave2-proof-title">Know what the evidence actually establishes.</h2><p>Pinnacle Blooms Network is the brand. Bharath Healthcare Laboratories Private Limited is the legal licence holder and operator. Different records answer different questions.</p></div>
       <div class="wave2-proof-grid">{focusSources.map(source=><article><Icon name={source.key==='md5'||source.key==='bis'?'shield':'book'} size={28}/><h3>{source.label}</h3><p>{source.note}</p><a href={source.href}>Inspect the original record <Icon name="arrow" size={18}/></a></article>)}</div>
       <p class="wave2-limit"><Icon name="shield" size={24}/><span><strong>Evidence boundary:</strong> {page.limit}</span></p>
       <details class="wave2-all-sources"><summary>Open all sources and citation downloads</summary><ul>{sources.map(source=><li><a href={source.href}>{source.label}</a> — {source.note}</li>)}</ul><div><a href={`/pinnacle-pages-data/${page.slug}-sources.json`}>JSON source map</a><a href={`/pinnacle-pages-data/${page.slug}-sources.txt`}>Plain text</a><a href={`/pinnacle-pages-data/${page.slug}-reading.md`}>Markdown reading aid</a><a href={url('/verify/evidence/cite.html')}>Citation library</a></div></details>
-    </div></section>
+    </div></section>}
 
     <section class="wave2-section wave2-faq" id="questions" aria-labelledby="wave2-faq-title"><div class="wave2-wrap wave2-faq-grid"><div><p class="wave2-kicker">Ask us before you decide</p><h2 id="wave2-faq-title">Questions a careful family would ask.</h2><p>Bring your own goal and the observations you already have. A qualified professional can explain what is relevant for your child.</p></div><div>{page.faqs.map(faq=><details><summary>{faq.question}<span aria-hidden="true">+</span></summary><p>{faq.answer}</p></details>)}</div></div></section>
 
-    <section class="wave2-close" id="next-step" aria-labelledby="wave2-close-title"><div class="wave2-wrap"><p class="wave2-kicker">Every Child Counts®</p><h2 id="wave2-close-title">{isOverview?"What would you like to become easier for your child?":"Start with your child’s next life moment."}</h2><p>{isOverview?"Tell us about one thing at home or school. We’ll help you understand the next step.":editorial.callQuestion} Pinnacle can help confirm the suitable professional, centre, visit and fees before you choose how to proceed.</p><div class="wave2-actions"><a class="wave2-button wave2-close-call" href={phone.href} data-cta="pinnacleai-close-call"><Icon name="phone"/>Call {phone.display}</a><a class="wave2-button wave2-close-enrol" href={url('/enroll-autism-speech-aba-therapies-india')} data-cta={isOverview?"final-enquiry":undefined}>{isOverview?"Ask about a first visit":"Begin enrolment"} <Icon name="arrow"/></a></div><small>Guidance by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited. No individual outcome is guaranteed.</small></div></section>
+    <section class="wave2-close" id="next-step" aria-labelledby="wave2-close-title"><div class="wave2-wrap"><p class="wave2-kicker">Every Child Counts®</p><h2 id="wave2-close-title">{isOverview?"Your child’s life is the purpose. Let’s begin.":"Start with your child’s next life moment."}</h2><p>{isOverview?"Start the conversation about your child’s self-sufficient, mainstream-included life. Call our team or ask about a first visit.":editorial.callQuestion} Pinnacle can help confirm the suitable professional, centre, visit and fees before you choose how to proceed.</p><div class="wave2-actions"><a class="wave2-button wave2-close-call" href={phone.href} data-cta="pinnacleai-close-call"><Icon name="phone"/>Call {phone.display}</a><a class="wave2-button wave2-close-enrol" href={url('/enroll-autism-speech-aba-therapies-india')} data-cta={isOverview?"final-enquiry":undefined}>{isOverview?"Ask about a first visit":"Begin enrolment"} <Icon name="arrow"/></a></div><small>Guidance by Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited. No individual outcome is guaranteed.</small></div></section>
   </div>
 </PageLayout>

@@ -2,14 +2,14 @@
 // while each must answer a different family decision in its own words.
 export const pinnacleEditorial = {
   pinnacleai: {
-    opening: 'Your child’s life comes first. We build the work around it.',
-    lead: 'Asking for help. Making a choice. Joining a classroom activity comfortably. We bring assessment, professional guidance, everyday practice and review around what matters for your child—so the work has a clear purpose from the start.',
-    moment: '“I want my child to ask for help and feel part of what is happening.”',
-    decision: 'Your child’s self-sufficient, mainstream-included life sets the direction. Your family and qualified professionals choose the abilities, goals, support and practice to work on, then review what is becoming useful in daily life.',
-    familyResult: 'A first conversation about your child’s strengths, one everyday priority and the professional and centre suitable for a next visit.',
-    callQuestion: 'Tell us what you would like to become easier for your child.',
-    imageAlt: 'Illustrated Indian child and family with a Pinnacle professional and a colourful pathway through home, play and school.',
-    stage: 'Whole life pathway',
+    opening: 'Your child’s self-sufficient, mainstream-included life. The purpose, from the beginning.',
+    lead: 'That purpose determines what we measure, the goals we choose, the therapies and people we bring together, what continues at home, and what we track, correct and reassess. Your family helps shape the journey with clarity.',
+    moment: 'The child and family at the centre. The whole PinnacleAI® system working towards that life.',
+    decision: 'Your child’s self-sufficient, mainstream-included life determines the abilities, goals, suitable methods, people, practice and review from the beginning.',
+    familyResult: 'An explained starting picture, meaningful priorities, a proposed plan, guided practice and a review decision with qualified professionals.',
+    callQuestion: 'Begin your child’s journey with Pinnacle.',
+    imageAlt: 'PinnacleAI Paradigm Shift: child and family at the centre of a seven-stage circle—abilities, plan, therapies, everyday practice, tracking, reassessment and independence and inclusion.',
+    stage: 'Self-Sufficient. Mainstream Included. The purpose from the beginning.',
   },
   abilityscore: {
     opening: 'See what your child can do. Decide what to make possible next.',

@@ -1,18 +1,18 @@
 {
-  "title": "PinnacleAI® | Child Development, Everyday Life & Family Support",
+  "title": "PinnacleAI® Paradigm Shift | Self-Sufficient, Mainstream-Included Life",
   "url": "https://www.pinnacleblooms.org/pinnacleai",
   "updated": "2026-10-01",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
-  "parentMoment": "“I want my child to ask for help and feel part of what is happening.”",
-  "lifeDecision": "Your child’s self-sufficient, mainstream-included life sets the direction. Your family and qualified professionals choose the abilities, goals, support and practice to work on, then review what is becoming useful in daily life.",
-  "familyDiscussion": "A first conversation about your child’s strengths, one everyday priority and the professional and centre suitable for a next visit.",
+  "parentMoment": "The child and family at the centre. The whole PinnacleAI® system working towards that life.",
+  "lifeDecision": "Your child’s self-sufficient, mainstream-included life determines the abilities, goals, suitable methods, people, practice and review from the beginning.",
+  "familyDiscussion": "An explained starting picture, meaningful priorities, a proposed plan, guided practice and a review decision with qualified professionals.",
   "directAnswer": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.",
   "lifePurpose": "Your child’s self-sufficient, mainstream-included life is the purpose: doing more with growing independence and taking part at home, school and in the community. That purpose shapes the abilities, goals, methods, people, practice and review.",
   "illustrativeExample": {
-    "title": "A little request. A bigger part in life.",
-    "description": "Imagine a child who enjoys building with blocks. Their family wants an accessible way for them to ask for help and join a comfortable shared activity. This is an illustrative planning example.",
+    "title": "A classroom goal. A connected plan. A decision that changes.",
+    "description": "Illustrative example: a child enjoys building with blocks. Their family wants them to communicate a help request and take part in a comfortable classroom activity. Follow how that life purpose guides the work.",
     "steps": [
       {
         "title": "Begin with a strength",
@@ -53,7 +53,7 @@
   "limit": "The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ.",
   "claimSourceMap": [
     {
-      "statement": "Your child’s self-sufficient, mainstream-included life sets the direction. Your family and qualified professionals choose the abilities, goals, support and practice to work on, then review what is becoming useful in daily life.",
+      "statement": "Your child’s self-sufficient, mainstream-included life determines the abilities, goals, suitable methods, people, practice and review from the beginning.",
       "kind": "programme explanation",
       "source": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
       "limit": "Programme purpose; not a guarantee of a child outcome."
@@ -97,10 +97,40 @@
       "limit": "Named module/quality scope; not a clinical effectiveness result."
     },
     {
+      "id": "fsc",
+      "name": "Issued Free Sale Certificate",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/fsc.html",
+      "limit": "Indian marketability and export subject to importing-country law; not foreign approval."
+    },
+    {
       "id": "research",
       "name": "Research library and publication status",
       "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
       "limit": "Publication types and study limitations must be read separately."
+    },
+    {
+      "id": "methods",
+      "name": "Methodology preprint and limitations",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+    },
+    {
+      "id": "dossier",
+      "name": "Reviewed product evidence dossier",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html",
+      "limit": "Product architecture and examples; contradictory completed-validation claims are not adopted here."
+    },
+    {
+      "id": "validation",
+      "name": "External validation protocol status",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html",
+      "limit": "The public record labels this a protocol, not completed comparator results."
+    },
+    {
+      "id": "studies",
+      "name": "Study portfolio and cohort limitations",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/study-portfolio.html",
+      "limit": "Company study portfolio; cohort-bound findings are not individual guarantees."
     },
     {
       "id": "scale",
@@ -113,6 +143,12 @@
       "name": "Citation library",
       "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html",
       "limit": "Source exports aid citation; they do not establish endorsement."
+    },
+    {
+      "id": "assurance",
+      "name": "Independent reports and dated UDIN verification",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/assurance-map.html",
+      "limit": "Specified institutional figures; not individual outcomes."
     }
   ],
   "relatedPages": [
@@ -147,9 +183,25 @@
     {
       "name": "Reassess · Review · Repeat",
       "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    },
+    {
+      "name": "Self-Sufficient",
+      "url": "https://www.pinnacleblooms.org/self-sufficient"
+    },
+    {
+      "name": "Mainstream Included",
+      "url": "https://www.pinnacleblooms.org/mainstream"
     }
   ],
   "questions": [
+    {
+      "question": "What is the PinnacleAI Paradigm Shift?",
+      "answer": "The PinnacleAI Paradigm Shift begins with the child’s self-sufficient, mainstream-included life as the purpose. That purpose determines the abilities to understand, goals to choose, therapies and people to involve, everyday practice, tracking, correction and reassessment. The family helps shape the journey with qualified professionals."
+    },
+    {
+      "question": "How does Everyday Therapy connect home and the professional team?",
+      "answer": "A professional demonstrates suitable practice and explains its purpose. Your family agrees what fits familiar routines, notices the child’s response and shares relevant observations. Everyday Therapy and Fusion connect this practice and information to professional review; the team can change support, the setting or the next goal."
+    },
     {
       "question": "What is PinnacleAI?",
       "answer": "PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software documented on an Indian Form MD-5 licence for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support."
@@ -185,10 +237,15 @@
   ],
   "architecture": [
     {
+      "id": "measure-abilities",
       "icon": "measure",
-      "title": "Understand the starting picture",
-      "input": "Relevant assessment and your family’s observations",
-      "output": "An explained picture of abilities and readiness",
+      "title": "AbilityScore® + Readiness",
+      "meaning": "Understand the child. Make the starting picture clear.",
+      "input": "Relevant assessment, strengths and family observations",
+      "output": "An explained picture of abilities and relevant readiness",
+      "family": "Understand what was assessed and why it matters for your child’s life.",
+      "proof": "MD-5: ability measurement and readiness tracking",
+      "source": "/verify/evidence/records/md5.html",
       "links": [
         {
           "name": "AbilityScore®",
@@ -201,10 +258,15 @@
       ]
     },
     {
+      "id": "child-context",
       "icon": "plan",
-      "title": "Keep your child’s context together",
-      "input": "Strengths, priorities, support and setting",
-      "output": "Child-specific context for authorised review",
+      "title": "Personal Development Kernel",
+      "meaning": "Keep this child’s story connected.",
+      "input": "Abilities, family priorities, environment and support",
+      "output": "Child-specific context available to authorised professionals",
+      "family": "Bring the details that matter into the next discussion.",
+      "proof": "Product dossier: context and access model",
+      "source": "/verify/evidence/records/dossier.html",
       "links": [
         {
           "name": "Personal Development Kernel",
@@ -213,10 +275,15 @@
       ]
     },
     {
+      "id": "child-plan",
       "icon": "compass",
-      "title": "Agree a plan you can revisit",
-      "input": "Child context and a meaningful everyday goal",
-      "output": "A revisable plan with a checkpoint",
+      "title": "Prognose",
+      "meaning": "Plan towards the life purpose. Set a point for review.",
+      "input": "The child’s context and a meaningful participation goal",
+      "output": "A revisable forecast and child-specific planning discussion",
+      "family": "Understand the priority, proposed support and review point.",
+      "proof": "MD-5: progress forecasting and adaptive plan support",
+      "source": "/verify/evidence/records/md5.html",
       "links": [
         {
           "name": "Prognose",
@@ -225,10 +292,15 @@
       ]
     },
     {
+      "id": "integrated-support",
       "icon": "heart",
-      "title": "Choose purposeful support",
-      "input": "Goals selected with qualified professionals",
-      "output": "Suitable guided activities and therapy contributions",
+      "title": "TherapeuticAI® + integrated therapies",
+      "meaning": "Give each activity a reason in your child’s life.",
+      "input": "Goals selected with the family and relevant professionals",
+      "output": "Suitable activities and multi-disciplinary contributions",
+      "family": "See why the recommended therapies belong in this child’s plan.",
+      "proof": "BIS schedule: named therapeutic software modules",
+      "source": "/verify/evidence/records/bis.html",
       "links": [
         {
           "name": "TherapeuticAI®",
@@ -237,10 +309,15 @@
       ]
     },
     {
+      "id": "everyday-practice",
       "icon": "home",
-      "title": "Bring practice into ordinary moments",
-      "input": "Guidance your family understands and agrees to",
-      "output": "Manageable practice in everyday routines",
+      "title": "Everyday Therapy™",
+      "meaning": "Bring guided practice into the child’s everyday world.",
+      "input": "Professional demonstration and practice your family agrees to",
+      "output": "Purposeful opportunities within familiar routines",
+      "family": "Know what to try, what support helps and what to share with the team.",
+      "proof": "BIS schedule: Everyday Therapy through TherapeuticAI",
+      "source": "/verify/evidence/records/bis.html",
       "links": [
         {
           "name": "Everyday Therapy™",
@@ -249,10 +326,15 @@
       ]
     },
     {
-      "icon": "people",
-      "title": "Bring observations back",
-      "input": "Consented observations from relevant settings",
-      "output": "Information for family and professional review",
+      "id": "track-correct",
+      "icon": "track",
+      "title": "Fusion",
+      "meaning": "Track. Review. Correct—with the people who know the child.",
+      "input": "Consented family, caregiver and professional observations",
+      "output": "Context for a specific professional review and adjustment",
+      "family": "Bring what you notice into the decision about what changes next.",
+      "proof": "BIS schedule: tracking and correction across contributors",
+      "source": "/verify/evidence/records/bis.html",
       "links": [
         {
           "name": "Fusion",
@@ -261,10 +343,15 @@
       ]
     },
     {
+      "id": "review-repeat",
       "icon": "loop",
-      "title": "Review, adjust and reassess",
-      "input": "Assessment together with everyday observations",
-      "output": "Continue, change support or reconsider the goal",
+      "title": "Reassess. Adjust. Repeat.",
+      "meaning": "Let the child’s changing abilities shape the next decision.",
+      "input": "Reassessment alongside what happens in relevant settings",
+      "output": "Continue, adapt, reduce support or reconsider the goal",
+      "family": "Understand the next plan and the reasons behind it.",
+      "proof": "Documented measurement, review and feedback workflow",
+      "source": "/verify/#how-pinnacleai-works",
       "links": [
         {
           "name": "Reassess · Review · Repeat",
@@ -275,46 +362,163 @@
   ],
   "firstConversation": [
     {
-      "title": "Tell us what matters",
-      "description": "Share one everyday priority and what your child already enjoys or can do. You do not need the name of a therapy to begin."
+      "title": "Tell us about your child",
+      "description": "Call 9100 181 181 or send an enquiry. Share your child’s age, your location, what they enjoy and the change you want help working towards. You do not need to choose a therapy or software module first."
     },
     {
-      "title": "Understand the next visit",
-      "description": "We help identify a suitable centre and professional, explain the first visit, and confirm availability and fees."
+      "title": "Understand the suitable next step",
+      "description": "Our team discusses the appropriate professional and centre, what the first visit involves, appointment availability and fees. Bring existing reports if you have them."
     },
     {
-      "title": "Decide with clarity",
-      "description": "Ask your questions before choosing how to proceed. Telephone guidance is free; assessment and therapy arrangements are confirmed separately."
+      "title": "Choose with clarity",
+      "description": "Ask about the proposed assessment, family involvement and review. Telephone guidance is free; assessment and therapy arrangements are explained separately. Your appointment is confirmed with you."
     }
   ],
   "familyStages": [
     {
-      "title": "Understand abilities",
-      "description": "Start with capabilities and a professionally explained AbilityScore® assessment."
+      "title": "Measure abilities",
+      "description": "AbilityScore®"
     },
     {
-      "title": "Discuss readiness",
-      "description": "Use relevant Readiness views to agree a child-specific, revisable goal and plan."
+      "title": "Readiness & plan",
+      "description": "Readiness · PDK · Prognose"
     },
     {
-      "title": "Choose relevant help",
-      "description": "Connect suitable multi-sensory, multidisciplinary therapy contributions to that goal."
+      "title": "Integrated therapies",
+      "description": "TherapeuticAI® · professionals"
     },
     {
-      "title": "Practise in daily life",
-      "description": "Agree manageable, guided opportunities at home and in other relevant settings."
+      "title": "Everyday Therapy",
+      "description": "Family-guided practice"
     },
     {
-      "title": "Track and correct",
-      "description": "Review what is changing, what is not, and which support or setting needs to change."
+      "title": "Track & correct",
+      "description": "Fusion"
     },
     {
-      "title": "Reassess and repeat",
-      "description": "Compare the new starting picture and decide what the next plan should contain."
+      "title": "Reassess & review",
+      "description": "Revisit the next step"
     },
     {
-      "title": "Keep life as the purpose",
-      "description": "Work toward growing independence, school readiness and mainstream participation."
+      "title": "Independence & inclusion",
+      "description": "The purpose at every stage"
+    }
+  ],
+  "paradigmShift": "The PinnacleAI® Paradigm Shift begins with the child’s self-sufficient, mainstream-included life as the purpose. That purpose determines the abilities to understand, goals to choose, therapies and people to involve, everyday practice, tracking, correction and reassessment. The family helps shape the journey with qualified professionals.",
+  "familyPractice": [
+    {
+      "title": "Demonstrate",
+      "description": "Your professional explains the purpose and demonstrates suitable practice."
+    },
+    {
+      "title": "Fit it to your family",
+      "description": "Agree a manageable opportunity within play, a meal or another familiar routine."
+    },
+    {
+      "title": "Notice what helps",
+      "description": "Your child’s choices, comfort and the support that helps all matter."
+    },
+    {
+      "title": "Bring it into review",
+      "description": "Your observations help the professional decide what to keep or change."
+    }
+  ],
+  "outcomeChapters": [
+    {
+      "id": "self-sufficient",
+      "icon": "sun",
+      "kicker": "Self-Sufficient",
+      "title": "The life we are working towards. Starting today.",
+      "answer": "Self-sufficiency gives the work a purpose: growing ability to communicate, make choices, act and direct one’s own life. We connect that purpose to suitable assessment, practice and review, with useful support and adaptations.",
+      "items": [
+        [
+          "Choose",
+          "Express a preference and have it understood."
+        ],
+        [
+          "Take part",
+          "Do more within a familiar routine."
+        ],
+        [
+          "Use support",
+          "Ask for help or use an adaptation effectively."
+        ],
+        [
+          "Carry it into life",
+          "Use the ability with another person or in another setting."
+        ]
+      ],
+      "review": "Review the support needed, comfort and use in different settings—not a score alone.",
+      "link": "/self-sufficient",
+      "linkLabel": "Explore Self-Sufficient",
+      "proof": "Self Sufficiency Readiness is named in the BIS schedule."
+    },
+    {
+      "id": "mainstream",
+      "icon": "people",
+      "kicker": "Mainstream Included",
+      "title": "Learning. Belonging. Participating in the world.",
+      "answer": "Mainstream inclusion is part of the purpose from the beginning. The plan connects abilities, readiness, family, professionals and relevant school or community support to meaningful participation.",
+      "items": [
+        [
+          "Join in",
+          "Access a shared activity in a way that works for the child."
+        ],
+        [
+          "Communicate",
+          "Be understood by another adult or child."
+        ],
+        [
+          "Learn together",
+          "Take part in a suitable classroom routine or learning activity."
+        ],
+        [
+          "Belong",
+          "Review comfort, readiness and the environment’s support."
+        ]
+      ],
+      "review": "Family ↔ professionals ↔ teacher or setting, with appropriate consent. Readiness guides support; admission is decided by the school.",
+      "link": "/mainstream",
+      "linkLabel": "Explore Mainstream Inclusion",
+      "proof": "School and Mainstream Inclusion Readiness are named in the BIS schedule."
+    }
+  ],
+  "definedScale": [
+    {
+      "value": "31M+",
+      "label": "Defined services",
+      "detail": "Independently assured floor; includes therapy, assessments, screenings and parent training.",
+      "href": "/verify/evidence/assurance-map.html"
+    },
+    {
+      "value": "792,614",
+      "label": "Beneficiary / family registrations",
+      "detail": "Separate SRS 4400 factual finding at 17 July 2026.",
+      "href": "/verify/evidence/assurance-map.html"
+    },
+    {
+      "value": "2.7B+",
+      "label": "Structured records and events",
+      "detail": "Separate SRS 4400 finding at 17 July 2026; read the counting definition.",
+      "href": "/verify/evidence/scale-and-mission.html"
+    }
+  ],
+  "researchNotes": [
+    {
+      "title": "Research into scoring consistency",
+      "headline": "r = 0.91 · ICC = 0.88",
+      "text": "Our Technical Monograph v3.0 reports preliminary agreement between raters in routine Pinnacle operations. These describe scoring consistency; they are not a percentage of children improving. A separate paired-rating sample size is not stated. The company-funded monograph is a preprint; controlled external validation remains a separate research step.",
+      "href": "/verify/evidence/publications/zenodo-19482123.pdf#page=5",
+      "label": "Read Table 4 in the monograph",
+      "context": "/verify/evidence/records/methodology.html"
+    },
+    {
+      "title": "Studying practice between visits",
+      "headline": "60 families · 6 months",
+      "text": "A company-reported observational study of children aged 3–10 examined home-practice logs alongside centre assessments. It reported a mean 152.72-point AbilityScore increase. There was no control group, and the association between practice volume and score gain was not statistically significant (r = 0.136; p = 0.3018). It supports studying observations together, rather than assuming more practice predicts a result. Independent journal peer review is not established.",
+      "href": "/parent-led-generalization",
+      "label": "Read the family-practice study",
+      "context": "/verify/evidence/study-index.html"
     }
   ]
 }

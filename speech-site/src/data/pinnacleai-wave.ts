@@ -15,15 +15,15 @@ export const waveSources = {
 
 export const pinnacleWave = [
   {
-    slug:'pinnacleai', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'PinnacleAI®', label:'PinnacleAI® system', title:'PinnacleAI® | Child Development, Everyday Life & Family Support',
-    description:'Your child’s life comes first. Explore PinnacleAI assessment, guided therapy, home practice and review, with licence sources. Call Pinnacle on 9100 181 181.',
-    eyebrow:'Pinnacle Blooms Network · Life first', headline:'Your child’s life comes first. We build the work around it.',
-    lead:'Asking for help. Making a choice. Joining a classroom activity comfortably. We bring assessment, professional guidance, everyday practice and review around what matters for your child—so the work has a clear purpose from the start.',
+    slug:'pinnacleai', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'PinnacleAI®', label:'PinnacleAI® system', title:'PinnacleAI® Paradigm Shift | Self-Sufficient, Mainstream-Included Life',
+    description:'Explore the PinnacleAI Paradigm Shift: measurement, integrated therapies, family practice and review towards a self-sufficient, mainstream-included life. 9100 181 181.',
+    eyebrow:'Pinnacle Blooms Network · The whole system. One purpose.', headline:'Your child’s self-sufficient, mainstream-included life. The purpose, from the beginning.',
+    lead:'That purpose determines what we measure, the goals we choose, the therapies and people we bring together, what continues at home, and what we track, correct and reassess. Your family helps shape the journey with clarity.',
     direct:'PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.',
     purpose:'Your child’s self-sufficient, mainstream-included life is the purpose: doing more with growing independence and taking part at home, school and in the community. That purpose shapes the abilities, goals, methods, people, practice and review.',
     question:'How does one everyday goal move through the whole system?',
-    exampleTitle:'A little request. A bigger part in life.',
-    exampleLead:'Imagine a child who enjoys building with blocks. Their family wants an accessible way for them to ask for help and join a comfortable shared activity. This is an illustrative planning example.',
+    exampleTitle:'A classroom goal. A connected plan. A decision that changes.',
+    exampleLead:'Illustrative example: a child enjoys building with blocks. Their family wants them to communicate a help request and take part in a comfortable classroom activity. Follow how that life purpose guides the work.',
     example:[
       ['Begin with a strength','The child chooses a favourite block with a gesture or picture. The family explains what the child enjoys and which shared activity they would like to make easier.'],
       ['Agree a useful next goal','Assessment and professional discussion help identify an accessible help request. The family understands what is being worked on, why, and which support makes it possible.'],
@@ -32,12 +32,14 @@ export const pinnacleWave = [
       ['Notice what made it possible','Was the request understood? Which cue helped? Did noise, group size or comfort affect joining in? Family and professional observations give these details a place in review.'],
       ['Change something specific','If asking is comfortable at home but harder in a noisy group, consider a quieter opportunity, a clearer cue or different support. Record why the plan changes; compare the next observations and reassess as appropriate.']
     ],
-    mechanismTitle:'One life-first loop, with human decisions at every turn.',
+    mechanismTitle:'The PinnacleAI® mechanism: the whole system working towards the child’s life.',
     mechanism:['AbilityScore® and seven Readiness Indexes: relevant assessment and context → an explained starting picture.','Personal Development Kernel: starting picture, family priorities and setting → child-specific context for authorised review.','Prognose: child context and a meaningful goal → a revisable plan and checkpoint.','TherapeuticAI®: professionally selected goals → suitable guided activities.','Everyday Therapy™: agreed guidance → manageable practice in everyday routines.','Fusion: consented observations from relevant settings → information for family and professional review.','Review and reassessment: assessment plus everyday observations → continue, change the cue, environment or support, or reconsider the goal. The next decision returns to the child’s context and plan.'],
     limit:'The device is non-diagnostic. A licence, a software forecast or a network count does not prove what will happen for one child. Every child’s route, pace and needs differ.',
     takeaway:'The destination remains growing independence and participation. The technology helps people see whether the work is serving that direction.',
-    sourceKeys:['model','workflow','md5','bis','research','scale','citation'],
+    sourceKeys:['model','workflow','md5','bis','fsc','research','methods','dossier','validation','studies','scale','citation'],
     faqs:[
+      {question:'What is the PinnacleAI Paradigm Shift?',answer:'The PinnacleAI Paradigm Shift begins with the child’s self-sufficient, mainstream-included life as the purpose. That purpose determines the abilities to understand, goals to choose, therapies and people to involve, everyday practice, tracking, correction and reassessment. The family helps shape the journey with qualified professionals.'},
+      {question:'How does Everyday Therapy connect home and the professional team?',answer:'A professional demonstrates suitable practice and explains its purpose. Your family agrees what fits familiar routines, notices the child’s response and shares relevant observations. Everyday Therapy and Fusion connect this practice and information to professional review; the team can change support, the setting or the next goal.'},
       {question:'What is PinnacleAI?',answer:'PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software documented on an Indian Form MD-5 licence for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support.'},
       {question:'How do the PinnacleAI parts work together?',answer:'AbilityScore and the seven Readiness Indexes inform a starting picture. The Personal Development Kernel brings child context into a revisable Prognose plan. Professionals choose suitable TherapeuticAI activities and Everyday Therapy practice. Fusion brings consented observations into review and reassessment, which can change the child’s next plan.'},
       {question:'How does an everyday priority become a plan?',answer:'For example, a child who enjoys blocks may need an accessible way to ask for help and join shared play. The family and professional agree a suitable request, choose support, consider manageable practice and review where the request is understood. A quieter setting or clearer cue may become the next adjustment. This is an illustrative example, not an observed patient result.'},
