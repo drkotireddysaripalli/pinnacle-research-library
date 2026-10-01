@@ -10,6 +10,8 @@ Governing standard: `PINNACLE-PAGE-CREATION-WORK-ORDER.md`. Shared baseline: `pi
 
 Improve the existing Speech Therapy experience in one bounded pass. It already contains the parent promise, seven stages, home/car analogies, an illustrative speech example, family participation, first-visit offer, searchable centres, source links and call actions. Preserve that foundation. The strongest improvement is to make the reasons to choose Pinnacle easier to recognise, earlier to encounter and more concrete in speech and everyday life.
 
+**Owner expansion, 1 October:** make Speech Therapy part of a deliberate network of contextual links; give PinnacleAI a concrete speech-specific explanation; use GSC/Bing and observed competing content to prioritise unmet intent; include only government-owned organisations in the external parent-resource block. The executable additions, actual discovery data and resource shortlist are in `SPEECH-DISCOVERY-AND-LINKING-ADDENDUM-20261001.md`. This extends this work order; it does not replace the agreed narrative or authorise a common-shell redesign.
+
 The common header and complete footer, including Verify, are fixed. Page-body changes must not alter their typography, navigation, authority subtitles, cards, responsive behaviour or placement.
 
 ## Inspection evidence
@@ -86,6 +88,8 @@ Keep one coherent Pinnacle voice: “we”, “with you”, “your child”. De
 | 13. Common footer | Entire accepted footer including Verify/citations | No change. | Reuse the tagged baseline. |
 
 The objective is a complete story with a shorter route to understanding and action. Preserve useful detail through structure and disclosure; do not shrink body text or strip the page into a generic landing page to reduce scroll length.
+
+Resource-block amendment: add the curated government-owned India/international guidance specified in the discovery addendum. Replace the existing private ASHA general-guidance links with relevant government sources or remove the redundant reference; do not relabel a government resource as supporting a claim it does not contain. Pinnacle's original Verify evidence and citation trail remain distinct from external parent guidance.
 
 ## 3. Creative jobs
 

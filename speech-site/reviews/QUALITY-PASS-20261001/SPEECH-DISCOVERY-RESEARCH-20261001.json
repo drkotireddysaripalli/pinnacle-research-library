@@ -1,0 +1,226 @@
+{
+  "capturedOn": "2026-10-01",
+  "scope": "Read-only Speech Therapy discovery research; no product release or indexing submission",
+  "google": {
+    "siteUrl": "https://www.pinnacleblooms.org/",
+    "range": {
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-28"
+    },
+    "dataSource": "api",
+    "queryRegex": "(?i)(speech|language delay|late talk|stammer|stutter)",
+    "returnedQueryPageRows": 3252,
+    "hasMore": false,
+    "distinctUrls": 298,
+    "selectedPageAggregates": [
+      {
+        "page": "https://www.pinnacleblooms.org/c/speech-delay-therapy",
+        "clicks": 2,
+        "impressions": 2345,
+        "queryRows": 280,
+        "position": 33.97228144989339
+      },
+      {
+        "page": "https://www.pinnacleblooms.org/faq/tamil/speech-therapy-attend",
+        "clicks": 0,
+        "impressions": 971,
+        "queryRows": 93,
+        "position": 9.236869207003089
+      },
+      {
+        "page": "https://www.pinnacleblooms.org/assessments/speech-and-language-evaluation-assessment",
+        "clicks": 0,
+        "impressions": 487,
+        "queryRows": 43,
+        "position": 60.634496919917865
+      },
+      {
+        "page": "https://www.pinnacleblooms.org/faq/english/speech-therapy/online-speech-therapy-therapist",
+        "clicks": 4,
+        "impressions": 384,
+        "queryRows": 43,
+        "position": 11.372395833333334
+      },
+      {
+        "page": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+        "clicks": 0,
+        "impressions": 114,
+        "queryRows": 27,
+        "position": 19.210526315789473
+      }
+    ],
+    "selectedQueryPageRows": [
+      {
+        "keys": [
+          "online speech therapy",
+          "https://www.pinnacleblooms.org/faq/english/speech-therapy/online-speech-therapy-therapist"
+        ],
+        "clicks": 0,
+        "impressions": 69,
+        "ctr": 0,
+        "position": 12.46376811594203
+      },
+      {
+        "keys": [
+          "speech and language evaluation",
+          "https://www.pinnacleblooms.org/assessments/speech-and-language-evaluation-assessment"
+        ],
+        "clicks": 0,
+        "impressions": 74,
+        "ctr": 0,
+        "position": 69.39189189189189
+      },
+      {
+        "keys": [
+          "speech delay",
+          "https://www.pinnacleblooms.org/c/speech-delay-therapy"
+        ],
+        "clicks": 0,
+        "impressions": 269,
+        "ctr": 0,
+        "position": 17.490706319702603
+      },
+      {
+        "keys": [
+          "speech delay therapy",
+          "https://www.pinnacleblooms.org/c/speech-delay-therapy"
+        ],
+        "clicks": 0,
+        "impressions": 601,
+        "ctr": 0,
+        "position": 48.54076539101497
+      },
+      {
+        "keys": [
+          "speech therapy cost in hyderabad",
+          "https://www.pinnacleblooms.org/"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 3.15
+      },
+      {
+        "keys": [
+          "speech therapy cost in hyderabad",
+          "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate"
+        ],
+        "clicks": 0,
+        "impressions": 44,
+        "ctr": 0,
+        "position": 13.590909090909092
+      },
+      {
+        "keys": [
+          "speech therapy near me",
+          "https://www.pinnacleblooms.org/"
+        ],
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 9.05
+      },
+      {
+        "keys": [
+          "speech therapy near me",
+          "https://www.pinnacleblooms.org/faq/english/speech-therapy/online-speech-therapy-therapist"
+        ],
+        "clicks": 0,
+        "impressions": 1,
+        "ctr": 0,
+        "position": 1
+      },
+      {
+        "keys": [
+          "speech therapy near me",
+          "https://www.pinnacleblooms.org/faq/tamil/speech-therapy-attend"
+        ],
+        "clicks": 0,
+        "impressions": 579,
+        "ctr": 0,
+        "position": 9.233160621761659
+      }
+    ],
+    "notes": [
+      "Aggregates sum disclosed query-page rows matching the regex; not complete page totals and not unique searchers.",
+      "The same query may count an impression for multiple page URLs. Multiple URLs do not prove harmful cannibalisation.",
+      "Existing unfiltered main-page baseline is 311 impressions and 3 clicks. Filtered rows here are 114 impressions and 0 clicks; do not replace the unfiltered baseline."
+    ]
+  },
+  "bing": {
+    "siteUrl": "https://pinnacleblooms.org/",
+    "range": {
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-28"
+    },
+    "dataSource": "bing",
+    "returnedPageRows": 243,
+    "selectedPages": [
+      {
+        "page": "https://www.pinnacleblooms.org/a/pragmatic-language-skills-checklist",
+        "clicks": 16,
+        "impressions": 238,
+        "ctr": 6.722689075630252,
+        "position": 4.310924369747899
+      },
+      {
+        "page": "https://www.pinnacleblooms.org/m/communication-speech-developmental-delay-6-9-months",
+        "clicks": 4,
+        "impressions": 77,
+        "ctr": 5.194805194805195,
+        "position": 5.246753246753247
+      }
+    ],
+    "speechCanonicalPresent": false,
+    "notes": [
+      "Main canonical absent from returned page rows does not prove not indexed.",
+      "Some supplied Bing query rows have clicks greater than impressions and CTR above 100%; do not use those for CTR optimisation or forecasts until reconciled."
+    ]
+  },
+  "ga4": {
+    "siteUrl": "https://www.pinnacleblooms.org/",
+    "propertyId": "properties/361649365",
+    "dataSource": "ga4-api",
+    "timeZone": "Asia/Calcutta",
+    "range": {
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-28"
+    },
+    "comparisonRange": null,
+    "hasComparison": false,
+    "dimension": "sourceMedium",
+    "metrics": [
+      "sessions",
+      "activeUsers",
+      "keyEvents"
+    ],
+    "rowCount": 2,
+    "totalRows": 2,
+    "rows": [
+      {
+        "key": "(direct) / (none)",
+        "sessions": 75,
+        "prevSessions": 0,
+        "activeUsers": 74,
+        "prevActiveUsers": 0,
+        "keyEvents": 1,
+        "prevKeyEvents": 0
+      },
+      {
+        "key": "google / organic",
+        "sessions": 11,
+        "prevSessions": 0,
+        "activeUsers": 6,
+        "prevActiveUsers": 0,
+        "keyEvents": 0,
+        "prevKeyEvents": 0
+      }
+    ],
+    "notes": [
+      "Exact speech landing-page filter. No named AI referral source appears in these returned rows.",
+      "Direct sessions may include unattributed traffic. Do not infer zero AI exposure.",
+      "KeyEvents are not identified here; do not label them answered calls or admissions.",
+      "Google Analytics sessions and Search Console clicks differ in attribution, reporting scope and time zone; not a reconciliation test."
+    ]
+  }
+}
