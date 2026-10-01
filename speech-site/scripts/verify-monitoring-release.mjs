@@ -58,6 +58,7 @@ try {
     assert([200, 204].includes(response.status()), 'Same-origin Cloudflare performance beacon accepted');
     assert.deepEqual(errors, [], 'No console errors after the policy correction');
     assert.equal(await page.locator('.portal-national-label').getAttribute('aria-label'), null);
+    assert.equal(await page.locator('.portal-location').getAttribute('aria-label'), null);
     record.monitoring.push({path: route, beaconStatus: response.status(), sameOrigin: true, consoleErrors: 0, visibleAccessibleName: true});
     await page.close();
   }

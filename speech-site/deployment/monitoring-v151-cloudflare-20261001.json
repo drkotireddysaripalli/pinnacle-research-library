@@ -1,0 +1,75 @@
+{
+  "at": "2026-10-01T06:22:28.644Z",
+  "before": {
+    "routes": 177,
+    "owned": 78,
+    "routeFingerprint": "ced794a6",
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "PINNACLE_ASK",
+        "type": "service",
+        "service": "pinnacle-ask",
+        "environment": "production"
+      },
+      {
+        "name": "PINNACLE_LEGACY",
+        "type": "service",
+        "service": "pbn-planetscale",
+        "environment": "production"
+      },
+      {
+        "name": "SITES_BYPASS_TOKEN",
+        "type": "secret_text"
+      }
+    ],
+    "current": [
+      {
+        "version_id": "2ea18faa-90c4-442c-b6d0-6f8758315373",
+        "percentage": 100
+      }
+    ]
+  },
+  "after": {
+    "routes": 177,
+    "owned": 78,
+    "routeFingerprint": "ced794a6",
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "PINNACLE_ASK",
+        "type": "service",
+        "service": "pinnacle-ask",
+        "environment": "production"
+      },
+      {
+        "name": "PINNACLE_LEGACY",
+        "type": "service",
+        "service": "pbn-planetscale",
+        "environment": "production"
+      },
+      {
+        "name": "SITES_BYPASS_TOKEN",
+        "type": "secret_text"
+      }
+    ],
+    "deployment": {
+      "id": "bc69d438-c98c-4de5-a2b5-6e6dd6aa6a02",
+      "created": "2026-10-01T06:21:45.048493Z",
+      "versions": [
+        {
+          "version_id": "f139550b-cd3b-479e-8ce2-c2f1c8335513",
+          "percentage": 100
+        }
+      ]
+    }
+  },
+  "routesRetained": true,
+  "bindingsRetained": true
+}

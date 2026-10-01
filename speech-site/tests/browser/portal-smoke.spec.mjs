@@ -43,5 +43,7 @@ test('usable public page, shared shell, source and call paths',async({page},test
   const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
   await testInfo.attach('accessibility-findings',{body:JSON.stringify(audit.violations,null,2),contentType:'application/json'});
   expect(audit.violations.filter(v=>['serious','critical'].includes(v.impact)).map(v=>({id:v.id,nodes:v.nodes.length}))).toEqual([]);
+  const names=await new AxeBuilder({page}).withRules(['label-content-name-mismatch']).analyze();
+  expect(names.violations.map(v=>({id:v.id,nodes:v.nodes.length}))).toEqual([]);
   expect(errors).toEqual([]);
 });

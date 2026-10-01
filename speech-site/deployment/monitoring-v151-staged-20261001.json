@@ -1,9 +1,9 @@
 {
-  "at": "2026-10-01T06:17:14.957Z",
+  "at": "2026-10-01T06:25:36.338Z",
   "prior": "release-measurement-v150b-20261001",
   "priorUpload": ".worker-upload-measurement-v150b-20261001",
-  "stage": "release-monitoring-v151-20261001",
-  "upload": ".worker-upload-monitoring-v151-20261001",
+  "stage": "release-monitoring-v151a-20261001",
+  "upload": ".worker-upload-monitoring-v151a-20261001",
   "changedHtml": [
     "/pinnacle-pages-html/aba-therapy.html",
     "/pinnacle-pages-html/abilityscore.html",
@@ -54,7 +54,7 @@
     "/pinnacle-pages-html/third-party-inegration.html",
     "/pinnacle-pages-html/tirupati.html"
   ],
-  "htmlChange": "Remove one redundant shared helpline aria-label only",
+  "htmlChange": "Remove redundant common helpline and centre-link aria-labels only",
   "unchangedUnionFiles": 1879,
   "runtimeChange": "Allow existing Cloudflare auto-injected beacon host in public HTML script-src; strict preview preserved",
   "otherRuntimeModulesRetained": 4,
