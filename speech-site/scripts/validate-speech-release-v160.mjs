@@ -3,7 +3,7 @@ import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 const c=JSON.parse(await fs.readFile('deployment/speech-v160-staged-20261001.json','utf8'));
 const origin='https://www.pinnacleblooms.org',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
-const owned=t=>t.replace('<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"></script>','').replace('<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js"></script>','');
+const owned=t=>t.replace('<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"></script>','').replace('<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js"></script>','').replace('<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js?v=2"></script>','');
 async function get(path,options={}){const r=await fetch(new URL(path,origin),{redirect:'manual',signal:AbortSignal.timeout(45000),...options}),bytes=Buffer.from(await r.arrayBuffer());return{r,bytes,text:bytes.toString('utf8')};}
 async function limited(list,fn){let i=0;const out=[];await Promise.all(Array.from({length:4},async()=>{while(i<list.length){const j=i++;out[j]=await fn(list[j]);}}));return out;}
 const rows=(await fs.readdir(c.stage+'/pinnacle-pages-html')).filter(x=>x.endsWith('.html')&&!x.includes('preview'));
@@ -29,10 +29,12 @@ const canonical='/top-speech-therapy-center-india-proven-improvement-rate';
 receipt.aliases=await limited(['/speech-therapy','/speech-therapy/',canonical+'/'],async path=>{const o=await get(path+'?utm_source=release-check');assert.equal(o.r.status,301);assert.equal(o.r.headers.get('location'),origin+canonical+'?utm_source=release-check');return{path,status:301};});
 const before=JSON.parse(await fs.readFile('deployment/voice-delivery-protected-before-v137-20261001.json','utf8'));
 const external=JSON.parse(await fs.readFile('deployment/protected-external-source-v152-20261001.json','utf8'));
+const externalReviewed=JSON.parse(await fs.readFile('deployment/protected-external-source-v160-20261001.json','utf8'));
 receipt.protected=await limited(before.rows.filter(r=>!r.path.startsWith('https://books.')),async row=>{
  const o=await get(row.path);assert.equal(o.r.status,row.status,row.path);assert.equal(o.r.headers.get('location'),row.location,row.path);
- const reviewed=external.rows.find(x=>x.path===row.path),actual=row.path==='/epass'?sha(o.text.replace(/<meta http-equiv="last-modified" content="[^"]+"\s*\/>/,'')):sha(o.bytes);
- assert.equal(actual,reviewed?.currentSha256||(row.path==='/epass'?row.normalisedSha256:row.sha256),row.path+' protected');return{path:row.path,status:row.status,unchanged:true};
+ const reviewed=external.rows.find(x=>x.path===row.path),hasDatedMeta=row.path==='/epass'||row.path===externalReviewed.path,actual=hasDatedMeta?sha(o.text.replace(/<meta http-equiv="last-modified" content="[^"]+"\s*\/>/,'')):sha(o.bytes);
+ const expected=row.path===externalReviewed.path?externalReviewed.normalisedSha256:reviewed?.currentSha256||(row.path==='/epass'?row.normalisedSha256:row.sha256);
+ assert.equal(actual,expected,row.path+' protected');return{path:row.path,status:row.status,unchanged:true,...(hasDatedMeta?{normalisation:'Only server-rendered last-modified meta excluded'}:{})};
 });
 const books=await get('https://books.pinnacleblooms.org/payment-and-billing');assert.equal(books.r.status,301);assert.equal(books.r.headers.get('location'),origin+'/payment-and-billing');
 for(const path of ['/Leadership/Maheshwari','/leadership/Prudhvi%2dMatsa','/Images/LeadershipImages/shoban_big_image.png'])assert.equal((await get(path)).r.status,410);
