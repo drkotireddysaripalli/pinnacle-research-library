@@ -18,6 +18,10 @@
         "label": "How we support families"
       },
       {
+        "id": "family-journey",
+        "label": "Your family’s journey"
+      },
+      {
         "id": "Vision-section",
         "label": "Our purpose"
       },
@@ -144,7 +148,83 @@
         "answer": "Call 9100 181 181 or send an enquiry. Describe one meaningful everyday priority. The receiving team confirms the appropriate professional, centre, assessment or service, appointment and fees."
       }
     ],
-    "updatedOn": "2026-10-01"
+    "updatedOn": "2026-10-01",
+    "journey": [
+      {
+        "icon": "voice",
+        "title": "Tell us the moment that matters",
+        "text": "Start with your child’s day: being understood, getting ready, enjoying a meal, learning or joining in. Share what your child enjoys and what you want to make more possible. The first conversation helps clarify a suitable professional, centre and next step.",
+        "path": "/enroll-autism-speech-aba-therapies-india?service=help",
+        "linkLabel": "Start a first conversation"
+      },
+      {
+        "icon": "measure",
+        "title": "Understand the starting picture together",
+        "text": "A suitable professional considers present strengths, communication, abilities and context through the relevant assessment. Your observations help explain what happens at home and in other settings. Ask what the information means for the life moment you chose, and which next priority is useful.",
+        "path": "/speech-aba-autism-assessments",
+        "linkLabel": "Explore child-development assessment"
+      },
+      {
+        "icon": "people",
+        "title": "Bring the relevant people around the goal",
+        "text": "Communication, daily activities, comfort and learning can need different contributions. We connect the relevant professional support with the child-specific priorities. Your family can ask why each contribution matters and how it helps beyond a session.",
+        "path": "/autism-therapy",
+        "linkLabel": "See how the therapies contribute together"
+      },
+      {
+        "icon": "home",
+        "title": "Carry useful practice into your day",
+        "text": "We agree manageable guided practice that fits your family’s day and your child’s comfort, with useful support and room to ask for a break or decline. Where relevant, a teacher contributes with consent and agreement. Your knowledge of what works in real life belongs in the journey.",
+        "path": "/everyday-therapy",
+        "linkLabel": "Understand family-guided everyday practice"
+      },
+      {
+        "icon": "loop",
+        "title": "Keep reviewing what becomes useful",
+        "text": "Bring observations from home and, where agreed, learning settings into review: what your child could use, what help remained and how participation felt. The family and relevant professional use that information to keep, adapt, reduce, pause, refer or complete support as appropriate. Human decisions keep the next step connected to your child’s life.",
+        "path": "/reassess-review-repeat",
+        "linkLabel": "How review shapes the next step"
+      }
+    ],
+    "concerns": [
+      {
+        "icon": "voice",
+        "title": "Being understood",
+        "text": "Explore speech and communication support when expressing needs, understanding or joining a conversation is the priority.",
+        "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+        "linkLabel": "Speech therapy"
+      },
+      {
+        "icon": "home",
+        "title": "Everyday activities",
+        "text": "Explore occupational support for participating in routines, play, mealtimes and daily activities, with attention to the task and environment.",
+        "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+        "linkLabel": "Occupational therapy"
+      },
+      {
+        "icon": "heart",
+        "title": "Comfort and transitions",
+        "text": "Explore behavioural support around a meaningful activity, communication, comfort and the help a child needs to take part.",
+        "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+        "linkLabel": "ABA / behavioural support"
+      },
+      {
+        "icon": "book",
+        "title": "Learning and classroom access",
+        "text": "Explore child-specific educational support that can adapt communication, materials, teaching and the learning environment.",
+        "path": "/best-special-education-center-call-9100181181",
+        "linkLabel": "Special education"
+      },
+      {
+        "icon": "people",
+        "title": "Several parts of the day",
+        "text": "Explore how relevant speech, occupational, behavioural and educational contributions can serve one child’s independence and participation.",
+        "path": "/autism-therapy",
+        "linkLabel": "Integrated autism support"
+      }
+    ],
+    "journeyIntro": "The child’s self-sufficient, mainstream-included life gives the journey its purpose from the first conversation. Here is how your priorities, suitable professional support and everyday observations stay connected as you take the next step.",
+    "journeyCaption": "First conversation, meaningful goals, guided everyday practice and review belong to the same family journey."
   },
   {
     "slug": "leadership",

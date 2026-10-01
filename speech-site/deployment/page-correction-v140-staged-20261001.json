@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-01T01:20:58.877Z",
+  "stage": "release-about-v140b-20261001",
+  "prior": "release-special-education-v139-20261001",
+  "changed": [
+    "about"
+  ],
+  "total": 48,
+  "unchangedBodies": 47,
+  "commonShellsPreserved": true,
+  "verifyIndexPreserved": true,
+  "runtimePreserved": true
+}
