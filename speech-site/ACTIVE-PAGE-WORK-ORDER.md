@@ -2,6 +2,8 @@
 
 ## Current owner priority · 1 October 2026
 
+Owner-selected current review: **Speech Therapy**, following the common-shell baseline. Live/source/phone/tablet/desktop inspection, a GSC baseline and one mobile/desktop Lighthouse pair are complete. `reviews/QUALITY-PASS-20261001/SPEECH-REVIEW-AND-WORK-ORDER-20261001.md` contains the proposed bounded revision: obvious action links, earlier speech example and proof, concise speech-specific narrative, selected branded creative upgrades and a compact service-page centre presentation. This is a review proposal; no product code or deployment was changed. Keep the tagged common header and complete footer fixed.
+
 V159 is published and closed: the owner requested a mobile-menu check while accepting desktop. More now starts at the top, groups longer lists, includes all desktop therapy-section and shared-footer destinations, and restores focus correctly across resizing. Desktop menu geometry and the complete shared footer are unchanged. All 50 pages passed live read-back; Chromium, Firefox and WebKit CI passed. Current union `release-shared-shell-v159-20261001`, Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6` at 100%; V158 is rollback. See `RELEASE-SHARED-MOBILE-MENU-V159-20261001.md`.
 
 V158 is published: the owner removed the redundant mobile header arrow/counter row and requested a clearer Search icon. All nine full authority links retain native scrolling; Enrol and the footer are unchanged. Current union is `release-shared-shell-v158-20261001`, Worker `baca2d9f-4e65-48c2-ad80-499cc976e3d7` at 100%; V157 is rollback. All 50 pages passed live read-back. See `RELEASE-SHARED-HEADER-V158-20261001.md`.
@@ -12,7 +14,7 @@ The intervening owner-requested common-header/footer restoration is released as 
 
 Complete the quality pass on already-produced individual pages in ascending baseline score. The owner prioritised the policy package, then deferred remaining centres and staff until individual pages are complete. Delhi is closed and set aside. Policies V153 is published and closed: fifteen current policies plus one hub, named Privacy Grievance Officer Mr. Gokul Krishna Rao, coherent reading exports and shared footer. These supersede the prior operative policy source holds.
 
-**Next individual page: PinnacleAI overview, baseline 68/100.** Bounded source review is complete; implementation is pending. Follow `reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md`: direct family invitation, one complete planning/review example, connected module architecture, early call/enquiry action and matching evidence/reading/metadata. No additional page or layout expansion until that coherent candidate reaches acceptance.
+**Previously queued next individual page: PinnacleAI overview, baseline 68/100.** The owner's Speech Therapy review above takes current priority. PinnacleAI's bounded source review remains available; implementation is pending. Follow `reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md` when that page resumes: direct family invitation, one complete planning/review example, connected module architecture, early call/enquiry action and matching evidence/reading/metadata.
 
 ## Governing material
 
