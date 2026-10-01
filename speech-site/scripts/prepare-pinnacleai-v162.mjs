@@ -11,6 +11,8 @@ await fs.mkdir(nextUpload,{recursive:true});await fs.cp(priorUpload,nextUpload,{
 const changed=[],added=[];
 for(const [id,source]of Object.entries(pages)){
  const html=await fs.readFile('dist/'+source,'utf8'),old=await fs.readFile(prior+'/pinnacle-pages-html/'+id+'.html','utf8');
+ const robots=html.match(/<meta\s+name="robots"\s+content="([^"]+)"/i)?.[1];
+ assert(robots&&/\bindex\b/.test(robots)&&!/noindex|nofollow/i.test(robots),id+' must be a production build; set PINNACLE_RELEASE=production');
  for(const tag of ['header','footer'])assert.equal(html.match(new RegExp('<'+tag+'\\b[\\s\\S]*?</'+tag+'>'))[0],old.match(new RegExp('<'+tag+'\\b[\\s\\S]*?</'+tag+'>'))[0],id+' common '+tag);
  const dest='pinnacle-pages-html/'+id+'.html';await fs.writeFile(next+'/'+dest,html);changed.push(dest);
 }

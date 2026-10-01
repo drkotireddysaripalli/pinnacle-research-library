@@ -11,6 +11,8 @@ const receipt={at:new Date().toISOString(),stage:c.stage};
 receipt.pages=await limited(rows,async file=>{
  const html=await fs.readFile(c.stage+'/pinnacle-pages-html/'+file,'utf8'),path=new URL(html.match(/rel="canonical" href="([^"]+)"/)[1]).pathname;
  const live=await get(path);assert.equal(live.r.status,200,path);assert.equal(sha(owned(live.text)),sha(html),path+' public owned HTML');
+ assert(!/noindex|nofollow/i.test(live.text.match(/<meta\s+name="robots"\s+content="([^"]+)"/i)?.[1]||''),path+' public indexing metadata');
+ assert(!/noindex/i.test(live.r.headers.get('x-robots-tag')||''),path+' HTTP indexing header');
  return{path,matched:true};
 });
 const cookie='unknown=fixture; _gcl_au=fixture';
