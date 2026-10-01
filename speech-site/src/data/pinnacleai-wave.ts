@@ -37,7 +37,7 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'abilityscore', updatedOn:'2026-10-01', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'AbilityScore®', label:'AbilityScore®', title:'AbilityScore® | Understand Abilities, Plan for Everyday Life',
+    slug:'abilityscore', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'AbilityScore®', label:'AbilityScore®', title:'AbilityScore® | Understand Abilities, Plan for Everyday Life',
     description:'AbilityScore helps a professional discuss what a child can do now and which everyday goal may come next. See a toy-choice example, 0–1000 limits and sources.',
     eyebrow:'Start with what your child can do', headline:'Measure the starting picture. Keep your child bigger than any score.',
     lead:'You notice what your child understands, chooses, tries and enjoys. AbilityScore gives the care team a structured way to discuss current abilities and change over time, so the next goal can serve a real moment in life.',
