@@ -22,6 +22,8 @@ V157 applies the owner's explicit responsive follow-up in `shared-shell.css` and
 
 V158 removes the separate mobile header arrow/counter row at the owner's request: the nine cards already scroll, including Citations. Keep the clearer mobile Search icon/caption and existing Enrol control. Footer evidence controls remain separate and unchanged.
 
+V159 groups the compact More directory and restores the desktop therapy subsections and footer destinations there. Opening More starts at the top; Therapies and Start here start expanded. Preserve the separate therapy page links and section disclosures, visible-opener focus restoration, and unchanged desktop presentation. All destinations stay in the server-rendered HTML.
+
 For every substantial therapy-page change:
 
 1. Establish the visitor's concern, a clear first step and the source-backed service facts.

@@ -62,6 +62,21 @@ export async function checkSharedShell(page){
     await page.keyboard.press('Shift+Tab');
     expect(await panel.evaluate(e=>e.contains(document.activeElement))).toBe(true);
     await page.keyboard.press('Tab');await expect(close).toBeFocused();
+    const destinations=await panel.locator('a').evaluateAll(nodes=>nodes.map(a=>a.href));
+    const therapyDestinations=await page.locator('.portal-therapy-menu a').evaluateAll(nodes=>nodes.map(a=>a.href));
+    expect(therapyDestinations.every(href=>destinations.includes(href))).toBe(true);
+    const therapy=panel.locator('.portal-compact-therapy').nth(1);
+    await therapy.locator('summary').click();
+    await expect(therapy.locator('li a').first()).toBeVisible();
+    await expect(panel).toHaveAttribute('aria-modal','true');
+    const about=panel.locator('.portal-about-priority .portal-menu-group-toggle');
+    await about.click();await expect(about).toHaveAttribute('aria-expanded','true');
+    await panel.evaluate(e=>e.scrollTop=e.scrollHeight);
+    await close.click();await menu.click();
+    await expect(panel).toHaveAttribute('aria-modal','true');
+    await expect.poll(()=>panel.evaluate(e=>e.scrollTop)).toBe(0);
+    await expect(therapy).not.toHaveAttribute('open','');
+    await expect(about).toHaveAttribute('aria-expanded','false');
     await page.keyboard.press('Escape');await expect(menu).toBeFocused();
     await expect(page.locator('main')).not.toHaveAttribute('inert','');
   }

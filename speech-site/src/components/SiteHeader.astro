@@ -9,6 +9,9 @@ const priorityDirectoryTitles = new Set(['About Us','Therapy Services','Evidence
 const directoryGroups = navigation.footerColumns.flat().filter(g => g.links.length > 1 && !priorityDirectoryTitles.has(g.title));
 const quickActions = navigation.footerColumns.flat().filter(g => g.links.length === 1).map(g=>g.links[0]);
 const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
+const directoryUrls=new Set([...navigation.main,...navigation.therapy,...navigation.mobileExtras,...navigation.aboutContact,...directoryGroups.flatMap(g=>g.links),...quickActions].map(link=>link.url));
+['/centers','/sitemap','/verify/'].forEach(path=>directoryUrls.add(path));
+const compactAdditionalGroups=navigation.footerColumns.flat().filter(group=>priorityDirectoryTitles.has(group.title)).map(group=>({...group,links:group.links.filter(link=>!directoryUrls.has(link.url))})).filter(group=>group.links.length);
 ---
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="portal-header">
@@ -39,11 +42,11 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
         <div class="portal-directory-toolbar"><strong>Explore Pinnacle</strong><button class="portal-menu-close" type="button" aria-label="Close complete site navigation">Close <span aria-hidden="true">×</span></button></div>
         <div class="portal-priority-menu">
           <section><h2><Icon name="compass" />Pinnacle approach &amp; evidence</h2><div>{navigation.main.map(link=><a href={url(link.url)}><span>{link.label}</span>{link.detail&&<small>{link.detail}</small>}</a>)}</div></section>
-          <section><h2><Icon name="people" />Therapies</h2><div>{navigation.therapy.map(link=><a href={url(link.url)}>{link.label}</a>)}</div></section>
-          <section><h2><Icon name="arrow" />Start here</h2><div>{navigation.mobileExtras.map(link=><a href={url(link.url)}>{link.label}</a>)}</div></section>
+          <section data-menu-initial-open><h2><Icon name="people" />Therapies</h2><div>{navigation.therapy.map(link=><div class="portal-directory-therapy"><a href={url(link.url)}>{link.label}</a><details class="portal-compact-therapy"><summary aria-label={`${link.label} sections`}><Icon name="chevron" size={18}/></summary><ul>{link.links.map(child=><li><a href={url(child.url)}>{child.label}</a></li>)}</ul></details></div>)}</div></section>
+          <section data-menu-initial-open><h2><Icon name="arrow" />Start here</h2><div>{navigation.mobileExtras.map(link=><a href={url(link.url)}>{link.label}</a>)}</div></section>
           <section class="portal-about-priority"><h2><Icon name="heart" />About &amp; Contact</h2><div>{navigation.aboutContact.map(link=><a href={url(link.url)}>{link.label}</a>)}</div></section>
         </div>
-        <div class="portal-directory-grid">{directoryGroups.map(group=><section><h2><Icon name={group.icon} />{group.title}</h2><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></section>)}</div>
+        <div class="portal-directory-grid">{compactAdditionalGroups.map(group=><section class="portal-compact-additional"><h2><Icon name={group.icon}/>{group.title}</h2><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></section>)}{directoryGroups.map(group=><section><h2><Icon name={group.icon} />{group.title}</h2><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></section>)}</div>
         <div class="portal-directory-actions">{quickActions.map(link=><a href={url(link.url)}>{link.label}</a>)}<a href={url('/centers')}>Find a centre</a><a href={url('/sitemap')}>Full sitemap</a><a href={url('/verify/')}>Licences, research &amp; evidence</a></div>
       </div>
     </details>
@@ -52,7 +55,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
 <script>
   const header=document.querySelector('.portal-header');
   if(header){
-    const menus=[...header.querySelectorAll<HTMLDetailsElement>('details')];
+    const menus=[...header.querySelectorAll<HTMLDetailsElement>('.portal-utility>details,.portal-therapy-group>details,.portal-therapy-list>.portal-directory')];
     const syncMenuState=()=>document.body.classList.toggle('portal-header-menu-open',menus.some(menu=>menu.open));
     menus.forEach(menu=>menu.addEventListener('toggle',()=>{if(menu.open)menus.forEach(other=>{if(other!==menu)other.open=false;});queueMicrotask(syncMenuState);}));
     document.addEventListener('click',event=>{const target=event.target as Node;if(header.querySelector('.portal-mobile-menu-trigger')?.contains(target))return;menus.forEach(menu=>{if(menu.open&&!menu.contains(target))menu.open=false;});});
@@ -83,6 +86,24 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
       // there, then return to the actual opener when the menu closes.
       const panel=directory.querySelector<HTMLElement>('.portal-directory-panel');
       const compactViewport=matchMedia('(max-width:900px)');
+      // Progressive enhancement: the full source links remain in HTML. On
+      // compact screens, group the long directory without changing desktop DOM.
+      const groups=[...panel?.querySelectorAll<HTMLElement>('.portal-priority-menu>section,.portal-directory-grid>section')||[]].map((section,index)=>{
+        const heading=section.querySelector<HTMLElement>('h2')!,content=heading.nextElementSibling as HTMLElement;
+        const children=[...heading.childNodes],button=document.createElement('button'),indicator=document.createElement('span');
+        button.type='button';button.className='portal-menu-group-toggle';
+        content.id||=`portal-menu-section-${index}`;content.dataset.compactMenuContent='';
+        button.setAttribute('aria-controls',content.id);indicator.setAttribute('aria-hidden','true');indicator.className='portal-menu-group-indicator';
+        const setOpen=(open:boolean)=>{content.hidden=!open;button.setAttribute('aria-expanded',String(open));indicator.textContent=open?'−':'+';};
+        button.addEventListener('click',()=>setOpen(content.hidden));
+        const configure=()=>{
+          if(compactViewport.matches){button.replaceChildren(...children,indicator);heading.replaceChildren(button);setOpen(section.hasAttribute('data-menu-initial-open'));}
+          else{heading.replaceChildren(...children);content.hidden=false;}
+        };
+        configure();return{section,configure,setOpen};
+      });
+      compactViewport.addEventListener('change',()=>groups.forEach(group=>group.configure()));
+      panel?.querySelectorAll<HTMLDetailsElement>('.portal-compact-therapy').forEach(child=>child.addEventListener('toggle',()=>{if(child.open)panel.querySelectorAll<HTMLDetailsElement>('.portal-compact-therapy').forEach(other=>{if(other!==child)other.open=false;});}));
       let isolated:HTMLElement[]=[],opener:HTMLElement|null=null,modal=false;
       const syncModal=()=>{
         if(!panel)return;
@@ -92,6 +113,9 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
         document.documentElement.classList.toggle('portal-directory-modal-open',next);
         if(next){
           opener??=compact||trigger||null;
+          groups.forEach(group=>group.setOpen(group.section.hasAttribute('data-menu-initial-open')));
+          panel.querySelectorAll<HTMLDetailsElement>('.portal-compact-therapy').forEach(child=>child.open=false);
+          panel.scrollTop=0;
           panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');
           let branch:HTMLElement=panel;
           while(branch.parentElement){
@@ -103,7 +127,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
         }else{
           isolated.forEach(element=>element.inert=false);isolated=[];
           panel.setAttribute('role','navigation');panel.removeAttribute('aria-modal');
-          if(!directory.open&&opener?.isConnected)opener.focus({preventScroll:true});
+          if(!directory.open){const restore=opener?.isConnected&&opener.getClientRects().length?opener:compactViewport.matches?compact:trigger;restore?.focus({preventScroll:true});}
           opener=null;
         }
       };
@@ -111,7 +135,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
       compactViewport.addEventListener('change',()=>{directory.open=false;syncModal();});
       panel?.addEventListener('keydown',event=>{
         if(!modal||event.key!=='Tab')return;
-        const targets=[...panel.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),[tabindex="0"]')].filter(element=>element.getClientRects().length);
+        const targets=[...panel.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),summary,input:not([disabled]),[tabindex="0"]')].filter(element=>element.getClientRects().length);
         const first=targets[0],last=targets.at(-1);
         if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
         else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}

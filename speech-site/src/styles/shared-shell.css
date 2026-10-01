@@ -2,6 +2,8 @@
    readability.css. V157: explicit owner-requested phone/tablet corrections. */
 main figcaption a{text-decoration:underline;text-underline-offset:.15em}
 .portal-search-caption{display:none}
+.portal-directory-therapy{display:contents}
+.portal-compact-therapy,.portal-compact-additional{display:none}
 
 .shared-rail-controls{display:none}
 .shared-rail-controls[hidden]{display:none!important}
@@ -20,6 +22,24 @@ main figcaption a{text-decoration:underline;text-underline-offset:.15em}
   .portal-therapy-title{font-size:12px;line-height:1.4}
 }
 @media(max-width:900px){
+  .portal-directory-panel [data-compact-menu-content][hidden]{display:none!important}
+  .portal-menu-group-toggle{display:flex;align-items:center;gap:8px;width:100%;min-height:48px;padding:10px 0;border:0;background:none;color:inherit;font:inherit;text-transform:inherit;text-align:left;cursor:pointer}
+  .portal-menu-group-indicator{margin-left:auto;font-size:22px;line-height:1}
+  .portal-directory-panel h2:has(.portal-menu-group-toggle){margin:0;border-bottom:1px solid #eadfea}
+  .portal-priority-menu,.portal-directory-grid{gap:12px 24px;align-items:start}
+  .portal-priority-menu{margin-bottom:12px;padding-bottom:12px}
+  .portal-priority-menu section>div,.portal-directory-grid section>ul{padding-top:6px}
+  .portal-compact-additional{display:block}
+  .portal-directory-therapy{display:grid;grid-template-columns:minmax(0,1fr) 44px;position:relative;align-items:start;column-gap:4px}
+  .portal-directory-therapy>a{grid-column:1;grid-row:1;justify-content:center;min-height:48px}
+  .portal-compact-therapy{display:contents}
+  .portal-compact-therapy summary{display:flex;grid-column:2;grid-row:1;align-items:center;justify-content:center;width:44px;min-height:48px;border:0;background:#faf5fa;color:#8f2879;border-radius:7px;cursor:pointer;list-style:none}
+  .portal-compact-therapy summary::-webkit-details-marker{display:none}
+  .portal-compact-therapy[open] summary svg{transform:rotate(90deg)}
+  .portal-compact-therapy ul{grid-column:1/-1;list-style:none;margin:2px 0 10px;padding:0 12px;border-left:3px solid #8f2879;background:#faf5fa}
+  .portal-compact-therapy:not([open])>ul{display:none}
+  .portal-compact-therapy a{font-size:14px;line-height:1.5;padding:10px 0}
+  .portal-menu-group-toggle:focus-visible,.portal-compact-therapy summary:focus-visible{outline:3px solid #08796e;outline-offset:2px}
   .portal-main-nav:after{display:none}
   .portal-main-nav .portal-main-list>a{flex-basis:180px;min-height:90px;padding:10px 12px}
   .portal-nav-label,.portal-nav-detail{font-size:12px;line-height:1.45}
