@@ -42,7 +42,9 @@ export async function checkSharedShell(page){
   expect(enrol.x).toBeGreaterThan(search.x);
   if(width<=900){
     const rail=page.locator('#portal-authority-rail');
-    await rail.hover();await page.mouse.wheel(2000,0);
+    // Native focus must reveal the final link even without the removed arrows.
+    // Mobile WebKit does not expose a mouse-wheel input in Playwright.
+    await rail.locator('a').last().focus();
     await expect.poll(()=>rail.evaluate(e=>e.scrollLeft)).toBeGreaterThan(40);
     await expect(rail.locator('a').last()).toBeInViewport();
     await expect(page.locator('.shared-rail-authority')).toHaveCount(0);
