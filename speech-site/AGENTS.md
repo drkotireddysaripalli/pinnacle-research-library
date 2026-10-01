@@ -16,6 +16,8 @@ The main agent in the owner's current task retains code, build and release owner
 
 ## Settled common header and footer
 
+The owner requested a Git baseline on 1 October 2026. Annotated tag `pinnacle-common-shell-baseline-v159-20261001` is the approved common-file recovery point. Read `COMMON-SHELL-BASELINE.md` before any shared-shell change. Individual-page work must reuse these components; do not replace, fork or redesign them. A later explicit owner-directed shared change may supersede this baseline through its own coherent release and review.
+
 The owner-approved Speech/Occupational Therapy presentation is fixed. Use the common navigation data, SiteHeader, SiteFooter (including VerifyFooter), portal-shell.css and readability.css. Do not compact, rewrite or hide their authority subtexts, fonts, colours, navigation lists or evidence descriptions during individual page work. Change that presentation only in response to a direct owner instruction. Keep current working URLs and policy additions. The independent wording and historical visual fixture is `tests/fixtures/shared-authority-owner-approved.json`; the browser acceptance suite enforces it. A shared change must rebuild and verify every managed page while retaining its main content and unrelated routes.
 
 V157 applies the owner's explicit responsive follow-up in `shared-shell.css` and common components: Enrol at the right, readable phone rails, a properly isolated compact menu, initially expanded footer links and usable evidence controls. Preserve these responsive fixes together with the selected desktop design. Judge the footer's initial state and actual interactions; do not open everything in a test before asserting the initial mobile experience.

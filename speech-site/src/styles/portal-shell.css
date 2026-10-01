@@ -1,3 +1,5 @@
+/* Approved common-shell baseline: pinnacle-common-shell-baseline-v159-20261001.
+   Preserve the accepted desktop presentation. See COMMON-SHELL-BASELINE.md. */
 /* Shared portal chrome, matched to the existing Pinnacle homepage. */
 .portal-container{width:min(1170px,calc(100% - 40px));margin-inline:auto}
 .portal-header{position:relative;z-index:40;border-top:2px solid #652579;background:#fff;color:#8f2879;font-family:Sintony,Arial,sans-serif}
