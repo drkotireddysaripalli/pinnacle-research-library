@@ -1,0 +1,110 @@
+{
+  "before": {
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "PINNACLE_ASK",
+        "type": "service",
+        "service": "pinnacle-ask",
+        "environment": "production"
+      },
+      {
+        "name": "PINNACLE_LEGACY",
+        "type": "service",
+        "service": "pbn-planetscale",
+        "environment": "production"
+      },
+      {
+        "name": "SITES_BYPASS_TOKEN",
+        "type": "secret_text"
+      }
+    ],
+    "deployment": {
+      "id": "3ca150a2-ea95-4936-bf8e-96c44990a3df",
+      "source": "api",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "V151a: complete shared accessible names with compact centre icon label",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "da4cbe4f-7135-4a50-94b2-607e5cda5051",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-10-01T06:28:23.808946Z"
+    },
+    "routeSummary": {
+      "count": 177,
+      "owned": 78,
+      "patternScriptFingerprint": "c04c968a",
+      "delhi": [
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india*",
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india*",
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india*",
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india*",
+        "www.pinnacleblooms.org/centers*",
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india*",
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india*",
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india*",
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india*",
+        "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india*"
+      ]
+    }
+  },
+  "after": {
+    "deployment": {
+      "id": "f430de9d-aeff-4451-bf2c-3d63c6fc4231",
+      "source": "api",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "V152: Delhi location status, family guidance and truthful alternatives",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "9b6777ff-0664-4609-883f-de6dfa41190b",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-10-01T09:33:38.075144Z"
+    },
+    "bindings": [
+      {
+        "name": "ASSETS",
+        "type": "assets"
+      },
+      {
+        "name": "PINNACLE_ASK",
+        "type": "service",
+        "service": "pinnacle-ask",
+        "environment": "production"
+      },
+      {
+        "name": "PINNACLE_LEGACY",
+        "type": "service",
+        "service": "pbn-planetscale",
+        "environment": "production"
+      },
+      {
+        "name": "SITES_BYPASS_TOKEN",
+        "type": "secret_text"
+      }
+    ],
+    "routeSummary": {
+      "count": 177,
+      "owned": 78,
+      "patternScriptFingerprint": "c04c968a"
+    }
+  },
+  "sourceCommit": "d6e05e6",
+  "uploadedVersion": "9b6777ff-0664-4609-883f-de6dfa41190b",
+  "rollback": "da4cbe4f-7135-4a50-94b2-607e5cda5051",
+  "triggersChanged": false
+}

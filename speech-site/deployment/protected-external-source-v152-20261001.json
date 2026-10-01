@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-01T09:38:00Z",
+  "reason": "A legacy ASP.NET passthrough representation changed since the 00:38 UTC protected-source capture. Product runtime and routes are unchanged. The prior body was not saved, so this review does not assert that the difference is only its timestamp or that its content is unchanged.",
+  "runtimeUnchangedReceipt": "deployment/page-quality-delhi-v152-staged-20261001.json",
+  "routeFingerprint": "c04c968a",
+  "rows": [
+    {
+      "path": "/pinnacle-ai-innovations-revolutionizing-autism-history",
+      "priorSha256": "6a795e59ea02fd0257358f1fb206679b3198b9b06290da28b934933f30429e9b",
+      "currentSha256": "d87e2fa8c44a60719aea6bb97aa268828b5645d1705c212ce9de5b59590e246a",
+      "status": 200,
+      "bytes": 504111,
+      "lastModifiedMeta": "2026-10-01T08:26:29.426027+00:00",
+      "contentUnchangedVerified": false,
+      "disposition": "Preserve existing passthrough. Record the current external source representation and retain exact status/hash checks; do not rewrite or claim preservation of its unknown previous content.",
+      "snapshot": "audits/protected-innovations-v152.html",
+      "historicalBodyUnavailable": true,
+      "contentDeltaUnknown": true,
+      "contentType": "text/html; charset=utf-8",
+      "canonical": "https://www.pinnacleblooms.org/pinnacle-ai-innovations-revolutionizing-autism-history",
+      "h1": "Miracle, Pinnacle - Innovations, Specialties"
+    }
+  ]
+}
