@@ -18,6 +18,8 @@ The main agent in the owner's current task retains code, build and release owner
 
 The owner-approved Speech/Occupational Therapy presentation is fixed. Use the common navigation data, SiteHeader, SiteFooter (including VerifyFooter), portal-shell.css and readability.css. Do not compact, rewrite or hide their authority subtexts, fonts, colours, navigation lists or evidence descriptions during individual page work. Change that presentation only in response to a direct owner instruction. Keep current working URLs and policy additions. The independent wording and historical visual fixture is `tests/fixtures/shared-authority-owner-approved.json`; the browser acceptance suite enforces it. A shared change must rebuild and verify every managed page while retaining its main content and unrelated routes.
 
+V157 applies the owner's explicit responsive follow-up in `shared-shell.css` and common components: Enrol at the right, readable phone rails, a properly isolated compact menu, initially expanded footer links and usable evidence controls. Preserve these responsive fixes together with the selected desktop design. Judge the footer's initial state and actual interactions; do not open everything in a test before asserting the initial mobile experience.
+
 For every substantial therapy-page change:
 
 1. Establish the visitor's concern, a clear first step and the source-backed service facts.

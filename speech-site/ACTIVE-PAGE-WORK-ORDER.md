@@ -2,6 +2,8 @@
 
 ## Current owner priority · 1 October 2026
 
+V157 is the bounded owner-requested phone/tablet follow-up: keep the selected desktop shell, move Enrol right, correct tablet wrapping and mobile readability/menu focus, expand footer groups initially, remove nested policy scrolling and add evidence-rail controls. See `RELEASE-SHARED-SHELL-V157-20261001.md` for candidate checks and release state. No individual-page redesign is part of this correction.
+
 The intervening owner-requested common-header/footer restoration is released as V156. The owner confirmed the later Occupational Therapy nine-tile header. Original Speech/OT typography, natural subtitle wrapping and visible desktop footer navigation are recovered in shared files; all50 main bodies are retained. V155's forced subtitle breaks are superseded. Preserve this settled shell during the remaining page quality pass. Its independent wording/visual fixture runs in the browser acceptance suite.
 
 Complete the quality pass on already-produced individual pages in ascending baseline score. The owner prioritised the policy package, then deferred remaining centres and staff until individual pages are complete. Delhi is closed and set aside. Policies V153 is published and closed: fifteen current policies plus one hub, named Privacy Grievance Officer Mr. Gokul Krishna Rao, coherent reading exports and shared footer. These supersede the prior operative policy source holds.

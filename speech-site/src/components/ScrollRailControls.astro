@@ -1,0 +1,38 @@
+---
+const {target,label,count,kind,shortcut}=Astro.props;
+---
+<div class:list={['shared-rail-controls',`shared-rail-${kind}`]} data-scroll-rail={target} hidden>
+  <button type="button" data-rail-direction="-1" aria-label={`Previous ${label.toLowerCase()}`} aria-controls={target}>←</button>
+  <span>{label} <span data-rail-position aria-live="polite">1 of {count}</span></span>
+  {shortcut&&<a href={shortcut.href}>{shortcut.label}</a>}
+  <button type="button" data-rail-direction="1" aria-label={`Next ${label.toLowerCase()}`} aria-controls={target}>→</button>
+</div>
+<script>
+  for(const controls of document.querySelectorAll<HTMLElement>('[data-scroll-rail]')){
+    const rail=document.getElementById(controls.dataset.scrollRail||'');if(!rail)continue;
+    const items=[...rail.children] as HTMLElement[];
+    const previous=controls.querySelector<HTMLButtonElement>('[data-rail-direction="-1"]');
+    const next=controls.querySelector<HTMLButtonElement>('[data-rail-direction="1"]');
+    const position=controls.querySelector<HTMLElement>('[data-rail-position]');
+    let active=0,queued=false;
+    const update=()=>{
+      const bounds=rail.getBoundingClientRect();
+      const first=items.findIndex(item=>item.getBoundingClientRect().right>bounds.left+20);
+      active=Math.max(0,first);
+      if(previous)previous.disabled=rail.scrollLeft<=1;
+      if(next)next.disabled=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-2;
+      const last=items.findLastIndex(item=>item.getBoundingClientRect().left<bounds.right-20);
+      if(position)position.textContent=(last>active?`${active+1}–${last+1}`:String(active+1))+` of ${items.length}`;
+      controls.hidden=rail.scrollWidth<=rail.clientWidth+2;
+      queued=false;
+    };
+    controls.querySelectorAll<HTMLButtonElement>('button').forEach(button=>button.addEventListener('click',()=>{
+      const step=Math.max(1,Math.floor(rail.clientWidth/(items[0]?.getBoundingClientRect().width||1)));
+      const item=items[Math.max(0,Math.min(items.length-1,active+Number(button.dataset.railDirection)*step))];
+      const delta=item.getBoundingClientRect().left-rail.getBoundingClientRect().left;
+      rail.scrollBy({left:delta,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});
+    }));
+    rail.addEventListener('scroll',()=>{if(!queued){queued=true;requestAnimationFrame(update);}}, {passive:true});
+    new ResizeObserver(update).observe(rail);update();
+  }
+</script>

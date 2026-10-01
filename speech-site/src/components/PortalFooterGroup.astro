@@ -7,15 +7,16 @@ const listId='footer-links-'+group.title.toLowerCase().replace(/[^a-z0-9]+/g,'-'
 const headingUrl=single?group.links[0].url:({'Research Studies':'/research-studies','Pinnacle TV':'https://www.youtube.com/channel/UCAAuGmvPSBRiCnDlEcXYwEQ','Franchise Opportunity':'/franchises'} as Record<string,string>)[group.title];
 ---
 <nav class="portal-footer-group" aria-label={group.title}>
-  <h3><Icon name={group.icon} size={18}/>{headingUrl?<a href={url(headingUrl)}>{group.title}</a>:group.title}{!single&&<button type="button" class="footer-group-toggle" hidden aria-label={'Show '+group.title+' links'} aria-controls={listId} aria-expanded="true">+</button>}</h3>
+  <h3><Icon name={group.icon} size={18}/>{headingUrl?<a href={url(headingUrl)}>{group.title}</a>:group.title}{!single&&<button type="button" class="footer-group-toggle" hidden data-group-title={group.title} aria-label={'Hide '+group.title+' links'} aria-controls={listId} aria-expanded="true">−</button>}</h3>
   {!single&&<ul id={listId}>{group.links.map((link:{label:string,url:string})=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul>}
 </nav>
 <script>
  const mobile=matchMedia('(max-width:600px)');
  for(const button of document.querySelectorAll<HTMLButtonElement>('.footer-group-toggle')){
   const list=document.getElementById(button.getAttribute('aria-controls')||'');if(!list)continue;
-  const display=()=>{button.hidden=!mobile.matches;list.hidden=mobile.matches;button.setAttribute('aria-expanded',String(!list.hidden));button.textContent=list.hidden?'+':'−';};
+  const sync=()=>{button.setAttribute('aria-expanded',String(!list.hidden));button.setAttribute('aria-label',(list.hidden?'Show ':'Hide ')+button.dataset.groupTitle+' links');button.textContent=list.hidden?'+':'−';};
+  const display=()=>{button.hidden=!mobile.matches;list.hidden=false;sync();};
   display();mobile.addEventListener('change',display);
-  button.addEventListener('click',()=>{list.hidden=!list.hidden;button.setAttribute('aria-expanded',String(!list.hidden));button.textContent=list.hidden?'+':'−';});
+  button.addEventListener('click',()=>{list.hidden=!list.hidden;sync();});
  }
 </script>

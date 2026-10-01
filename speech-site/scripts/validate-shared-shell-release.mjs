@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
 const origin='https://www.pinnacleblooms.org';
-const contract=JSON.parse(await fs.readFile('deployment/shared-shell-v156-staged-20261001.json','utf8'));
+const contract=JSON.parse(await fs.readFile('deployment/shared-shell-v157-staged-20261001.json','utf8'));
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const ads=['<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"></script>','<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js"></script>'];
 const owned=t=>ads.reduce((value,tag)=>value.replace(tag,''),t);
@@ -36,5 +36,5 @@ receipt.protected=await limited(before.rows.filter(r=>!r.path.startsWith('https:
 for(const path of ['/Leadership/Maheshwari','/leadership/Prudhvi%2dMatsa','/Images/LeadershipImages/shoban_big_image.png'])assert.equal((await get(path)).r.status,410);
 const books=await get('https://books.pinnacleblooms.org/payment-and-billing');assert.equal(books.r.status,301);assert.equal(books.r.headers.get('location'),origin+'/payment-and-billing');
 receipt.booksBillingRetained=true;receipt.retiredProfilesRetained=true;receipt.noEnquirySubmitted=true;receipt.noIndexingRepeat=true;
-await fs.writeFile('deployment/shared-shell-v156-live-release-20261001.json',JSON.stringify(receipt,null,2)+'\n');
+await fs.writeFile('deployment/shared-shell-v157-live-release-20261001.json',JSON.stringify(receipt,null,2)+'\n');
 console.log(JSON.stringify({pages:receipt.pages.length,assets:receipt.assets.length,protected:receipt.protected.length,deliveryVariants:receipt.delivery.length,passed:true}));

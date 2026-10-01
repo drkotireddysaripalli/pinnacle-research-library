@@ -21,11 +21,38 @@ export async function checkSharedShell(page){
   await expect(page.locator('footer a[href$="/policies"]')).toHaveCount(1);
   const width=page.viewportSize().width;
   if(width>600)for(const list of await page.locator('nav.portal-footer-group ul').all())await expect(list).toBeVisible();
-  else for(const toggle of await page.locator('.footer-group-toggle').all()){
+  else {
+    for(const list of await page.locator('nav.portal-footer-group ul').all())await expect(list).toBeVisible();
+    const toggle=page.locator('.footer-group-toggle').first();
     await expect(toggle).toBeVisible();
     const list=page.locator('#'+await toggle.getAttribute('aria-controls'));
-    await toggle.click();await expect(list).toBeVisible();
+    await expect(list).toBeVisible();
+    await expect(toggle).toHaveAttribute('aria-label',/^Hide /);
     await toggle.click();await expect(list).toBeHidden();
+    await expect(toggle).toHaveAttribute('aria-label',/^Show /);
+    await toggle.click();await expect(list).toBeVisible();
+  }
+  const enrol=await page.locator('.portal-enrol').boundingBox();
+  const search=await page.locator('.portal-search').boundingBox();
+  expect(enrol.x).toBeGreaterThan(search.x);
+  if(width<=900){
+    const next=page.getByRole('button',{name:'Next pinnacle links',exact:true});
+    const rail=page.locator('#portal-authority-rail');
+    await next.click();
+    await expect.poll(()=>rail.evaluate(e=>e.scrollLeft)).toBeGreaterThan(40);
+    await expect(page.locator('.portal-therapy-menu').first()).toBeHidden();
+    const menu=page.locator('.portal-mobile-menu-trigger');
+    await menu.click();
+    const panel=page.locator('.portal-directory-panel');
+    await expect(panel).toHaveAttribute('aria-modal','true');
+    await expect(page.locator('main')).toHaveAttribute('inert','');
+    const close=page.locator('.portal-menu-close');
+    await expect(close).toBeFocused();
+    await page.keyboard.press('Shift+Tab');
+    expect(await panel.evaluate(e=>e.contains(document.activeElement))).toBe(true);
+    await page.keyboard.press('Tab');await expect(close).toBeFocused();
+    await page.keyboard.press('Escape');await expect(menu).toBeFocused();
+    await expect(page.locator('main')).not.toHaveAttribute('inert','');
   }
   if(width===1440){
     await page.evaluate(()=>document.fonts.ready);

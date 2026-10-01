@@ -4,6 +4,7 @@ import logo from '../assets/pinnacle-blooms-network-lockup.png';
 import { phone, url } from '../data/site';
 import navigation from '../data/portal-navigation.json';
 import Icon from './Icon.astro';
+import ScrollRailControls from './ScrollRailControls.astro';
 const { currentPath } = Astro.props;
 const priorityDirectoryTitles = new Set(['About Us','Therapy Services','Evidence, citations & recognition']);
 const directoryGroups = navigation.footerColumns.flat().filter(g => g.links.length > 1 && !priorityDirectoryTitles.has(g.title));
@@ -21,18 +22,15 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
           <a class="portal-phone" href={phone.href} aria-label={`Call the National Autism Helpline at ${phone.display}`} data-cta="header-call"><strong>{phone.display}</strong></a>
           <a class="portal-whatsapp" href="https://wa.me/919100181181" aria-label="WhatsApp Pinnacle at 9100 181 181"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#27bb47" d="M12 1a11 11 0 0 0-9.5 16.6L1 23l5.5-1.4A11 11 0 1 0 12 1Z"/><path fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" d="M7.5 6.5c-2 4 4 10 8 8l1-2-3-1-1 1c-1.5-.7-2.3-1.5-3-3l1-1-1-2-2-.5Z"/></svg><span>WhatsApp</span></a>
         </div>
-        <a class="portal-enrol" href={enrolmentUrl} aria-label="Enrol at Pinnacle" data-cta="header-enrol"><Icon name="arrow" /><span>Enrol at Pinnacle</span></a>
         <a class="portal-location" href={url('/centers')} aria-label="Find a centre"><Icon name="pin" /><span>Find a centre</span></a>
         <details class="portal-search"><summary aria-label="Search Pinnacle"><Icon name="search" /></summary><form action={url('/search')} method="get"><label for="portal-search-input">Search Pinnacle</label><div><input id="portal-search-input" name="q" type="search" required /><button type="submit">Search</button></div></form></details>
+        <a class="portal-enrol" href={enrolmentUrl} aria-label="Enrol at Pinnacle" data-cta="header-enrol"><Icon name="arrow" /><span>Enrol at Pinnacle</span></a>
       </nav>
     </div>
   </div>
   <nav class="portal-main-nav" aria-label="Pinnacle approach, products and evidence">
-    <div class="portal-mobile-proof-links">
-      <a href={url('/verify/')}><Icon name="shield" /><span><strong>{navigation.main[0].label}</strong><small>{navigation.main[0].detailLines.map(line=><span>{line}</span>)}</small></span></a>
-      <a href={url('/verify/evidence/cite.html')}><Icon name="book" /><span><strong>Citations</strong><small>Quote · link · download</small></span></a>
-    </div>
-    <div class="portal-container portal-main-list">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{' '}{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</div>
+    <div class="portal-container portal-main-list" id="portal-authority-rail">{navigation.main.map(link=><a class:list={{'portal-main-feature':link.detail}} href={url(link.url)} aria-current={link.url===currentPath?'page':undefined}><span class="portal-nav-label">{link.label}</span>{' '}{link.detail&&<small class="portal-nav-detail">{link.detail}</small>}</a>)}</div>
+    <ScrollRailControls target="portal-authority-rail" label="Pinnacle links" count={navigation.main.length} kind="authority" shortcut={{label:'Citations',href:url('/verify/evidence/cite.html')}} />
   </nav>
   <nav class="portal-therapy-nav" aria-label="Therapies and complete Pinnacle navigation"><button class="portal-mobile-menu-trigger" type="button" aria-controls="portal-complete-directory" aria-expanded="false"><Icon name="menu" size={18} />More</button><div class="portal-container portal-therapy-list">
     {navigation.therapy.map(group=><div class="portal-therapy-group"><a class="portal-therapy-title" href={url(group.url)} aria-current={group.url===currentPath?'page':undefined}>{group.label}</a><details class="portal-therapy-menu"><summary aria-label={`${group.label} menu`}><Icon name="chevron" size={15} /></summary><ul>{group.links.map(link=><li><a href={url(link.url)}>{link.label}</a></li>)}</ul></details></div>)}
@@ -71,7 +69,7 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
     const directory=header.querySelector<HTMLDetailsElement>('.portal-directory');
     if(directory){
       const compact=header.querySelector<HTMLButtonElement>('.portal-mobile-menu-trigger');
-      compact?.addEventListener('click',()=>{directory.open=!directory.open;});
+      compact?.addEventListener('click',()=>{if(!directory.open)opener=compact;directory.open=!directory.open;});
       directory.addEventListener('toggle',()=>compact?.setAttribute('aria-expanded',String(directory.open)));
       const canHover=canHoverMenu;
       const trigger=directory.querySelector<HTMLElement>('.portal-more-trigger');
@@ -79,10 +77,47 @@ const enrolmentUrl=url('/enroll-autism-speech-aba-therapies-india');
       let openedByHover=false;
       directory.addEventListener('pointerenter',()=>{if(canHover()&&!directory.open){openedByHover=true;directory.open=true;}});
       directory.addEventListener('pointerleave',()=>{if(canHover()&&!directory.contains(document.activeElement)){openedByHover=false;directory.open=false;}});
-      directory.addEventListener('focusout',event=>{if(!directory.contains(event.relatedTarget as Node))directory.open=false;});
+      directory.addEventListener('focusout',event=>{if(matchMedia('(min-width:901px)').matches&&!directory.contains(event.relatedTarget as Node))directory.open=false;});
       directory.addEventListener('toggle',()=>{if(!directory.open)openedByHover=false;});
-      trigger?.addEventListener('click',event=>{if(canHover()&&openedByHover){event.preventDefault();openedByHover=false;}});
+      trigger?.addEventListener('click',event=>{if(!directory.open&&matchMedia('(max-width:900px)').matches)opener=trigger;if(canHover()&&openedByHover){event.preventDefault();openedByHover=false;}});
       close?.addEventListener('click',()=>{directory.open=false;(matchMedia('(max-width:900px)').matches?compact:trigger)?.focus({preventScroll:true});});
+      // The compact menu fills the viewport. Keep its keyboard and scroll context
+      // there, then return to the actual opener when the menu closes.
+      const panel=directory.querySelector<HTMLElement>('.portal-directory-panel');
+      const compactViewport=matchMedia('(max-width:900px)');
+      let isolated:HTMLElement[]=[],opener:HTMLElement|null=null,modal=false;
+      const syncModal=()=>{
+        if(!panel)return;
+        const next=directory.open&&compactViewport.matches;
+        if(next===modal)return;
+        modal=next;
+        document.documentElement.classList.toggle('portal-directory-modal-open',next);
+        if(next){
+          opener??=compact||trigger||null;
+          panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');
+          let branch:HTMLElement=panel;
+          while(branch.parentElement){
+            for(const sibling of branch.parentElement.children){if(sibling!==branch&&sibling instanceof HTMLElement&&!sibling.inert){sibling.inert=true;isolated.push(sibling);}}
+            if(branch.parentElement===document.body)break;
+            branch=branch.parentElement;
+          }
+          close?.focus({preventScroll:true});
+        }else{
+          isolated.forEach(element=>element.inert=false);isolated=[];
+          panel.setAttribute('role','navigation');panel.removeAttribute('aria-modal');
+          if(!directory.open&&opener?.isConnected)opener.focus({preventScroll:true});
+          opener=null;
+        }
+      };
+      directory.addEventListener('toggle',syncModal);
+      compactViewport.addEventListener('change',()=>{directory.open=false;syncModal();});
+      panel?.addEventListener('keydown',event=>{
+        if(!modal||event.key!=='Tab')return;
+        const targets=[...panel.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input:not([disabled]),[tabindex="0"]')].filter(element=>element.getClientRects().length);
+        const first=targets[0],last=targets.at(-1);
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last?.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first?.focus();}
+      });
     }
     syncMenuState();
   }
