@@ -2,6 +2,8 @@
 
 ## Current owner priority · 1 October 2026
 
+The intervening owner-requested common-header/footer restoration is released as V155. Original Speech/OT typography and visible desktop navigation are recovered in shared files; all50 main bodies are retained. Preserve this settled shell during the remaining page quality pass. Its independent wording/visual fixture runs in the browser acceptance suite.
+
 Complete the quality pass on already-produced individual pages in ascending baseline score. The owner prioritised the policy package, then deferred remaining centres and staff until individual pages are complete. Delhi is closed and set aside. Policies V153 is published and closed: fifteen current policies plus one hub, named Privacy Grievance Officer Mr. Gokul Krishna Rao, coherent reading exports and shared footer. These supersede the prior operative policy source holds.
 
 **Next individual page: PinnacleAI overview, baseline 68/100.** Bounded source review is complete; implementation is pending. Follow `reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md`: direct family invitation, one complete planning/review example, connected module architecture, early call/enquiry action and matching evidence/reading/metadata. No additional page or layout expansion until that coherent candidate reaches acceptance.

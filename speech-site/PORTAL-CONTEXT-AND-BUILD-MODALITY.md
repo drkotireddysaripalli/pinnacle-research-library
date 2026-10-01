@@ -118,7 +118,9 @@ The stages are a coherent explanation of the journey. They are not a promise tha
 
 ## Shared shell contract
 
-The v126 shared shell is the current published foundation. Its compact phone/tablet navigation and mobile More-panel section order were changed once in the common sources and verified across all ten managed pages:
+V155 restores the agreed Speech/Occupational Therapy desktop presentation from source b1aa7055ddbfd8d540f4225614b1e32ec26d13f6 after the owner rejected the later V133 compact redesign. The original typography, authority subtexts and nav-based desktop footer are fixed. Current working URLs, policy additions and accessible mobile controls remain. All36 evidence cards are now visible; the old baseline originally featured8 and disclosed the remainder. This common correction was rebuilt and verified across all50 managed pages. The compact phone/tablet More controls derive from v126:
+
+The owner explicitly confirmed the later Occupational Therapy nine-tile design on1October. V156 recovers the original natural subtitle wrapping after V155's added line breaks changed the visual flow. Use the owner's supplied30September Speech screenshot927c24cd as the direct reference, not an inferred acceptance of a Git commit. Tests preserve visible copy and historical sizing without dictating new line breaks.
 
 - `src/data/portal-navigation.json` is the common navigation source.
 - `src/layouts/PageLayout.astro` renders `SiteHeader.astro` and `SiteFooter.astro`.

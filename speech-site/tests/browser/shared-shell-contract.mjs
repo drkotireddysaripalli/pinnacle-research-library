@@ -9,7 +9,8 @@ export async function checkSharedShell(page){
   for(let i=0;i<locked.main.length;i++){
     const item=authority.nth(i);
     await expect(item.locator('.portal-nav-label')).toHaveText(locked.main[i].label);
-    await expect(item.locator('.portal-nav-detail>span')).toHaveText(locked.main[i].lines);
+    await expect(item.locator('.portal-nav-detail')).toHaveText(locked.main[i].lines.join(' '));
+    await expect(item.locator('.portal-nav-detail>span')).toHaveCount(0);
     await expect(item.locator('.portal-nav-detail')).toBeVisible();
   }
   await expect(page.locator('.portal-authority-context,.portal-source-context')).toHaveCount(0);

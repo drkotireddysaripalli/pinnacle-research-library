@@ -1,4 +1,4 @@
 /* Preserve the approved Speech/OT design in portal-shell.css and readability.css.
    Shared fixes below must not override typography, spacing or shell layout. */
-.portal-nav-detail>span,.portal-mobile-proof-links small>span{display:block}
+.portal-mobile-proof-links small>span{display:block}
 main figcaption a{text-decoration:underline;text-underline-offset:.15em}
