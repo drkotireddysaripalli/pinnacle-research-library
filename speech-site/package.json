@@ -11,10 +11,11 @@
     "preview": "astro preview --host 127.0.0.1",
     "postbuild": "node scripts/apply-og-replacements.mjs",
     "check:types": "astro check --minimumSeverity error",
-    "test:unit": "node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs scripts/test-release-20260928.mjs scripts/test-enrolment.mjs scripts/test-discovery-handler.mjs scripts/test-public-documents.mjs",
+    "test:unit": "node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs scripts/test-release-20260928.mjs scripts/test-enrolment.mjs scripts/test-discovery-handler.mjs scripts/test-public-documents.mjs scripts/test-monitoring-boundary.mjs",
     "test:browser": "playwright test --project=phone-320 --project=phone-390 --project=tablet-768 --project=desktop-1440",
     "test:engines": "playwright test --project=firefox --project=webkit --project=edge",
-    "check:page": "node scripts/check-page.mjs"
+    "check:page": "node scripts/check-page.mjs",
+    "check:speed": "node scripts/check-speed.mjs"
   },
   "dependencies": {
     "astro": "7.3.5",
@@ -24,6 +25,7 @@
     "@astrojs/check": "0.9.10",
     "@axe-core/playwright": "4.13.0",
     "@playwright/test": "1.63.0",
+    "lighthouse": "13.5.0",
     "typescript": "5.9.3"
   }
 }

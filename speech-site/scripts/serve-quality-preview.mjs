@@ -19,6 +19,6 @@ const server=http.createServer(async(req,res)=>{
     res.end(req.method==='HEAD'?undefined:bytes);
   }catch{res.writeHead(404);res.end();}
 });
-server.listen(4340,'127.0.0.1');
+server.listen(Number(process.env.QUALITY_PREVIEW_PORT || 4340),'127.0.0.1');
 process.on('SIGTERM',()=>server.close());
 process.on('SIGINT',()=>server.close());

@@ -1,5 +1,11 @@
 name: Portal quality
 on:
+  workflow_dispatch:
+    inputs:
+      speed:
+        description: 'Save mobile and desktop Lighthouse lab reports'
+        type: boolean
+        default: false
   pull_request:
     paths: ['speech-site/**', '.github/workflows/portal-quality.yml']
   push:
@@ -21,10 +27,13 @@ jobs:
           cache: npm
           cache-dependency-path: speech-site/package-lock.json
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps chromium firefox webkit
       - run: npm run check:page -- occupational
+      - run: npx playwright test --project=firefox --project=webkit
+      - run: npm run check:speed -- occupational
+        if: github.event_name == 'workflow_dispatch' && inputs.speed
       - uses: actions/upload-artifact@v4
-        if: failure()
+        if: failure() || (github.event_name == 'workflow_dispatch' && inputs.speed)
         with:
           name: portal-quality-findings
           path: speech-site/audits/

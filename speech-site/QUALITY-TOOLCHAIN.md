@@ -7,7 +7,7 @@
 1. Read the compact current context, governing work order and the active page contract. Keep one page package active.
 2. Reuse the common header, complete menu, footer and Verify proof components. Write the page-specific Pinnacle narrative and generate the approved complete branded creatives.
 3. Finish the page and its source, share, machine and conversion package before running acceptance.
-4. Run `npm run check:page -- occupational` (or speech, enrolment, aba, autism). This performs source typing, one production build, the six focused unit suites and phone/tablet/desktop smoke plus axe checks. Playwright manages an isolated loopback test preview, leaving the owner's Astro preview running. Run the established specialised page/source contract when its content changes.
+4. Run `npm run check:page -- occupational` (or speech, enrolment, aba, autism). This performs source typing, one production build, the focused unit suites and phone/tablet/desktop smoke plus axe checks. Playwright manages an isolated loopback test preview, leaving the owner's Astro preview running. Run the established specialised page/source contract when its content changes.
 5. Repair actual findings and repeat only failed/changed checks, using `test:unit` or `test:browser` directly instead of rebuilding unchanged work.
 6. Use `npm run test:engines` for Firefox/WebKit/installed Edge when shared layout or interaction changes warrant it. These are engine/emulation tests, not proof of physical iPhone testing.
 7. Commit/push source, stage the complete union, verify protected routing/accepted bodies, deploy through the established Cloudflare route and read back production once. Explicit release and rollback identifiers are mandatory.
@@ -16,7 +16,7 @@ Supported commands use project-local exact dependency versions in package-lock.j
 
 ## What these checks establish
 
-The reusable browser test checks one H1, description/canonical/share metadata, JSON-LD parsing, image alternatives/dimensions, viewport overflow, common header/footer evidence links, the national telephone action, compact-menu operation/focus and automatically detectable serious/critical accessibility findings. Retained specialised tests still validate narrative stages, exact claims, source/schema/export agreement, images, offers and delivery boundaries.
+The reusable browser test checks HTTP 200, a useful title and production indexability, one H1, description/canonical/share metadata, JSON-LD parsing, image alternatives/dimensions and visible-image decoding, viewport overflow, common header/footer evidence links, the national telephone action, compact-menu operation/focus and automatically detectable serious/critical accessibility findings. Retained specialised tests still validate narrative stages, exact claims, source/schema/export agreement, all relevant lazy images, offers and delivery boundaries.
 
 They do not establish clinical efficacy, external endorsement, ranking, AI citation, connected calls, appointments, visits or admissions. Independent editorial reviews and an actual visual inspection remain part of substantial page work.
 
@@ -26,7 +26,33 @@ They do not establish clinical efficacy, external endorsement, ranking, AI citat
 
 The 1 October acceptance passed Chromium at 320, 390, 768 and 1440 pixels, plus installed Edge and WebKit emulation. Firefox downloaded successfully but its executable could not start on this Windows host (`spawn UNKNOWN`); Firefox is not claimed as passed. Its project remains available for a working host. The quality check found and corrected the OT closing guidance's white-text opacity; no serious/critical axe findings remained in the successful cases.
 
-Lighthouse remains a targeted lab check for changed fonts/layout/assets, with existing local report tooling. The trial LHCI dependency introduced high-severity transitive advisories and was removed. No public report upload or new paid service was enabled. Field Core Web Vitals and the commercial outcomes remain separately observed.
+Lighthouse 13.5.0 is now pinned directly in this project; dependency audit has zero reported advisories. The trial LHCI wrapper was removed because its dependency tree introduced advisories. The speed runner uses an isolated Playwright browser; this Windows host can launch its headless shell, while the full Chromium executable returned `spawn UNKNOWN`. It never attaches to the owner's browser or profile.
+
+### Targeted speed commands
+
+```text
+npm run check:speed -- occupational
+npm run check:speed -- occupational --production
+npm run check:speed -- enrolment --production
+```
+
+The local command expects a completed production build and serves it on an isolated loopback port 4341. `--origin http://127.0.0.1:4338` selects an existing preview. Each command makes one mobile and one desktop simulated lab run, saves HTML/JSON plus a compact summary in ignored `audits/lighthouse`, and closes only the browser/server it started. `--enforce` makes the documented lab targets fail the command; otherwise genuine findings are reported without turning network variability into a fictitious defect. Targets: performance at least90, LCP at most2500ms, TBT at most200ms and CLS at most0.1. TBT does not measure field INP.
+
+Use this at a substantial page/layout/image/font boundary and after a relevant repair, not after every copy edit. GitHub Actions repeats the normal page check and Firefox/WebKit engine checks on Linux; a manual `speed` input also saves Lighthouse reports. Installed Edge remains a local engine check. None of these establish physical iPhone/iPad/Android coverage.
+
+## Verified Cloudflare use · 1 October 2026
+
+The zone is Enterprise. HTTP/2, HTTP/3, Brotli, Early Hints, HTTPS enforcement, lossless Polish and Speed Brain are enabled. An existing automatic Web Analytics ruleset is enabled. Live HTML includes its beacon and Speculation-Rules header. These settings are not proof that each feature benefits every Worker response; notably Cloudflare documents that Speed Brain does not prefetch Worker routes. Do not enable Rocket Loader or indiscriminate HTML/API caching to achieve a feature count.
+
+Cloudflare Observatory Mumbai tests completed for OT and enrolment: both97mobile/100desktop, mobile LCP2425/2433ms respectively, CLS0 and TBT0. Local Lighthouse live runs also returned97/100. These are dated synthetic results; future real-user LCP/INP/CLS remain separate. The shared public policy correction permits the existing auto-injected monitoring script; its collector remains same-origin. No manual second beacon is added, and preview policy stays strict. Cloudflare Web Analytics records page/referrer/performance information and documents that query strings are not logged.
+
+GSC Wizard's IndexNow configuration and the public key file are verified. Its CrUX history is not configured because it requires a separate Google CrUX API key. This optional report does not block page creation or the existing Cloudflare measurement path. Google AI Search uses ordinary crawl/index/snippet eligibility, helpful text, internal links and visible-content-matching schema; no special AI schema or extra text file guarantees inclusion. Existing reading/citation exports remain useful access aids.
+
+Official references: [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/), [Cloudflare monitoring CSP/privacy](https://developers.cloudflare.com/web-analytics/faq/), [Speed Brain limits](https://developers.cloudflare.com/speed/optimization/content/speed-brain/), [Google AI features](https://developers.google.com/search/docs/appearance/ai-features).
+
+## Next package and bounded acceptance
+
+Continue the accepted `/staff` directory plus representative profile contract. Register those routes in `scripts/page-quality-contracts.mjs` when implemented and add one focused source/behaviour suite for allow-listed public fields, unmatched-source fallback, no-JS completeness, filtering/reset/count, authentic portraits and profile compatibility. Reuse the current frozen estate and shared shell; no recrawl or new generic tool package is needed to begin. Main legacy retirement precedes Ask/Supabase and materials.
 
 ## Migration order
 

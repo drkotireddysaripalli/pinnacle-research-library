@@ -1,14 +1,8 @@
 import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
+import {pageContracts as contracts} from './page-quality-contracts.mjs';
 
 const id=process.argv[2]||'occupational';
-const contracts={
-  occupational:{path:'/best-occupational-therapy-center-india-proven-improvement-rate',canonical:'/best-occupational-therapy-center-india-proven-improvement-rate'},
-  speech:{path:'/',canonical:'/top-speech-therapy-center-india-proven-improvement-rate'},
-  enrolment:{path:'/enrolment',canonical:'/enroll-autism-speech-aba-therapies-india'},
-  aba:{path:'/best-aba-therapy-center-india-proven-improvement-rate',canonical:'/best-aba-therapy-center-india-proven-improvement-rate'},
-  autism:{path:'/autism-therapy',canonical:'/autism-therapy'}
-};
 if(!contracts[id])throw Error('Choose a registered page: '+Object.keys(contracts).join(', '));
 const config=contracts[id],completed=[];
 const npm=process.env.npm_execpath;
