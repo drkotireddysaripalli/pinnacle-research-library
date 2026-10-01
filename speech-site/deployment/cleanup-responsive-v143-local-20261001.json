@@ -1,0 +1,370 @@
+{
+  "at": "2026-10-01T01:37:57.504Z",
+  "id": "mainstream",
+  "origin": "http://127.0.0.1:4338",
+  "selector": "#everyday-example",
+  "runs": [
+    {
+      "channel": "chrome",
+      "width": 320,
+      "facts": {
+        "width": 320,
+        "scroll": 320,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/mainstream",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "imageWidths": [
+          320
+        ]
+      },
+      "errors": []
+    },
+    {
+      "channel": "chrome",
+      "width": 390,
+      "facts": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/mainstream",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "imageWidths": [
+          389
+        ]
+      },
+      "errors": []
+    },
+    {
+      "channel": "chrome",
+      "width": 768,
+      "facts": {
+        "width": 768,
+        "scroll": 768,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/mainstream",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "imageWidths": [
+          768
+        ]
+      },
+      "errors": []
+    },
+    {
+      "channel": "chrome",
+      "width": 1440,
+      "facts": {
+        "width": 1440,
+        "scroll": 1440,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/mainstream",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "imageWidths": [
+          1000
+        ]
+      },
+      "errors": []
+    },
+    {
+      "channel": "msedge",
+      "width": 390,
+      "facts": {
+        "width": 390,
+        "scroll": 390,
+        "h1": 1,
+        "duplicates": [],
+        "missing": [],
+        "canonical": "https://www.pinnacleblooms.org/mainstream",
+        "header": true,
+        "footer": true,
+        "phone": true,
+        "items": 4,
+        "visibleFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "schemaFaq": [
+          {
+            "question": "What does mainstream participation mean?",
+            "answer": "It means meaningful participation in ordinary family, school, play and community life with appropriate support and access. Goals, settings and support differ for each child."
+          },
+          {
+            "question": "Is mainstream inclusion the same as school admission?",
+            "answer": "No. Admission is one event. Participation also involves learning access, communicating needs, relationships, comfort and suitable support. A school and family make placement decisions using relevant professional advice and the child’s circumstances."
+          },
+          {
+            "question": "How do the seven Readiness Indexes help?",
+            "answer": "Pinnacle’s separate readiness views support conversations about developmental priorities, including school, self-sufficiency and mainstream participation. They are read with abilities, context and professional judgement; they are not an automatic placement decision."
+          },
+          {
+            "question": "Can the family and school work together?",
+            "answer": "Yes. Relevant family observations and, with your consent, teacher observations can help guide meaningful priorities and review. Ask how information will be shared and who will use it."
+          },
+          {
+            "question": "Does Pinnacle guarantee mainstream admission or an outcome?",
+            "answer": "No. The programme works toward meaningful participation with child-specific support. The software’s regulatory scope and research records do not guarantee admission, independence or an individual outcome."
+          },
+          {
+            "question": "How can we start?",
+            "answer": "Call 9100 181 181 with one part of school, play or community life you want to make more possible. The team can help confirm a suitable professional, centre, service, appointment and fee before a visit."
+          }
+        ],
+        "imageWidths": [
+          389
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "physicalIOS": false,
+  "passed": true
+}
