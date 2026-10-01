@@ -43,10 +43,11 @@ test('usable public page, shared shell, source and call paths',async({page},test
     await expect(menu).toHaveAttribute('aria-expanded','false');
     await expect(menu).toBeFocused();
   }
-  const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
+  // One scan covers both WCAG and the visible-label rule. Repeating the whole
+  // expanded footer audit caused a WebKit timeout without a page defect.
+  const audit=await new AxeBuilder({page}).options({rules:{'label-content-name-mismatch':{enabled:true}}}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();
   await testInfo.attach('accessibility-findings',{body:JSON.stringify(audit.violations,null,2),contentType:'application/json'});
   expect(audit.violations.filter(v=>['serious','critical'].includes(v.impact)).map(v=>({id:v.id,nodes:v.nodes.length}))).toEqual([]);
-  const names=await new AxeBuilder({page}).withRules(['label-content-name-mismatch']).analyze();
-  expect(names.violations.map(v=>({id:v.id,nodes:v.nodes.length}))).toEqual([]);
+  expect(audit.violations.filter(v=>v.id==='label-content-name-mismatch').map(v=>({id:v.id,nodes:v.nodes.length}))).toEqual([]);
   expect(errors).toEqual([]);
 });
