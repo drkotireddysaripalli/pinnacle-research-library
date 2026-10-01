@@ -5,8 +5,8 @@
   "scope": "48 released managed pages; no whole-estate recrawl",
   "counts": {
     "keep": 15,
-    "completed": 9,
-    "queued": 24
+    "completed": 10,
+    "queued": 23
   },
   "executionRule": "One bounded page task: review task, implement only its accepted correction, regenerate matching outputs, one focused local check, push before full-union release, live read-back, close. Shared defects are fixed once in common source. Do not reopen accepted pages without a new defect.",
   "rows": [
@@ -357,14 +357,18 @@
       "id": "personal-development-kernel",
       "name": "Personal Development Kernel",
       "url": "https://www.pinnacleblooms.org/personal-development-kernel",
-      "state": "queued",
+      "state": "completed",
       "kind": "copy",
       "tasks": [
         "Define our child-specific record concept directly; replace 'The PDK is described in Pinnacle’s methods…'.",
         "Retain documented architecture status, authorised access and human decisions; keep the home/school scenario.",
         "Regenerate matching outputs; read back the changed definition."
       ],
-      "sequence": 10
+      "sequence": 10,
+      "completedOn": "2026-10-01",
+      "receipt": "RELEASE-PDK-VOICE-V146-20261001.md",
+      "sourceCommit": "1198c79",
+      "workerVersion": "8f7b0550-4d9d-4f2c-98a9-76ce79818d9b"
     },
     {
       "id": "pinnacleai",

@@ -2,7 +2,7 @@
 
 ## Current progress
 
-**15 keep, 9 completed, 24 remaining.** Latest closure: AbilityScore V145. Next: Personal Development Kernel.
+**15 keep, 10 completed, 23 remaining.** Latest closure: Personal Development Kernel V146. Next: Fusion.
 
 ## Initial decision
 
@@ -144,7 +144,9 @@ Canonical: [/abilityscore](https://www.pinnacleblooms.org/abilityscore)
 
 **Acceptance:** the stated defect is gone, relevant retained facts/anchors/common shell remain, matching outputs agree, source is pushed and the public changed block is read back. A recorded source gate remains pending rather than being declared passed.
 
-### 10. Personal Development Kernel · copy
+### 10. Personal Development Kernel · COMPLETED V146
+
+Closure: [Release receipt](../RELEASE-PDK-VOICE-V146-20261001.md). The task below is the accepted contract.
 
 Canonical: [/personal-development-kernel](https://www.pinnacleblooms.org/personal-development-kernel)
 
