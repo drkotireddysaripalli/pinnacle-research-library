@@ -1,0 +1,974 @@
+{
+  "at": "2026-10-02T22:53:34.001Z",
+  "routes": [
+    {
+      "id": "9694866cd48945c3b9fed2d409b0e340",
+      "pattern": "*.pinnacleblooms.org/api/log*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "eee196b651594ef68120ba6dc2333b93",
+      "pattern": "*.pinnacleblooms.org/api/testmessagesrun*",
+      "script": "pbnmessagestest"
+    },
+    {
+      "id": "c7fe2d9d47164c5d930ac427632d98d0",
+      "pattern": "*alpha.pinnacleblooms.org/*",
+      "script": "pinnaclemay2025worker"
+    },
+    {
+      "id": "dbd4ea1d941f48ffb427114a2a133323",
+      "pattern": "*interventions.pinnacleblooms.org/*",
+      "script": "materials-mobile-desktop-tracker"
+    },
+    {
+      "id": "e262c246b4ae49bc8f01f480afd53137",
+      "pattern": "*materials.pinnacleblooms.org/*",
+      "script": "materials-mobile-desktop-tracker"
+    },
+    {
+      "id": "994687f6824142d0b68b21cd815cbf2d",
+      "pattern": "*mirracle.pinnacleblooms.org/api/d1sendotp*",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "d2cd2063d9ab487598d72ba85d639730",
+      "pattern": "*mirracle.pinnacleblooms.org/api/d1validateotp*",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "c6d6bdc45ef8426683ee8d3ed9b3fa25",
+      "pattern": "*mirracle.pinnacleblooms.org/api/scoketapisql*",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "ab6ec94c591c41eb85f4b88673245279",
+      "pattern": "*mirracle.pinnacleblooms.org/ws*",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "7ef6b059c0c945d6a238a32fce25fb78",
+      "pattern": "*pediatricians.pinnacleblooms.org/*",
+      "script": "materials-mobile-desktop-tracker"
+    },
+    {
+      "id": "db061e57682e484b9e8a79444f95ef23",
+      "pattern": "*pinnacleblooms.org/api/aipinnacle/*",
+      "script": "testai"
+    },
+    {
+      "id": "0769deb24e2d4adc8293f1143bf30be8",
+      "pattern": "*pinnacleblooms.org/api/datacreation*",
+      "script": "pbn"
+    },
+    {
+      "id": "d0b9700cd3774d73876a48cf3b8e6e27",
+      "pattern": "*pinnacleblooms.org/api/getactivities*",
+      "script": "pbn"
+    },
+    {
+      "id": "ac29fd214a51402abb3f6a37c3a1ede1",
+      "pattern": "*pinnacleblooms.org/api/getassessmentbooking*",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "7f54bac267f44f9a9175dfcad7a8d74a",
+      "pattern": "*pinnacleblooms.org/api/getblob*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "f2b3934e3e10459aafac486da96cfef1",
+      "pattern": "*pinnacleblooms.org/api/getusers*",
+      "script": "pbn"
+    },
+    {
+      "id": "5053580f3fda4cb7a97c10d31f8285fd",
+      "pattern": "*pinnacleblooms.org/api/getwidgetdata*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "72e83c9946de445d9407a0d6ec52f541",
+      "pattern": "*pinnacleblooms.org/api/gl/*",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "df50b20509824fe79bc5f06e12a33589",
+      "pattern": "*pinnacleblooms.org/api/sdetails*",
+      "script": "pbn"
+    },
+    {
+      "id": "5934f7808d1b4fcb911fe74073a847c6",
+      "pattern": "*pinnacleblooms.org/api/sendaward*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "add834f8540545d38e3bdccc4068e088",
+      "pattern": "*pinnacleblooms.org/api/sendotp*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "1037ba9e6ba54234a1efb41d8502c92b",
+      "pattern": "*pinnacleblooms.org/api/socket*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "787862680dc64a0bb96a2aaed937905a",
+      "pattern": "*pinnacleblooms.org/api/storeexception*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "ef5d471ec1cd4441be68ddd938d1aa83",
+      "pattern": "*pinnacleblooms.org/api/synccontacts*",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "5ca0427d5df942418a4e3e6c9ffac4b0",
+      "pattern": "*pinnacleblooms.org/api/syncdata*",
+      "script": "pbn"
+    },
+    {
+      "id": "1d63ae0393404c5aa78b661265147c34",
+      "pattern": "*pinnacleblooms.org/api/validateotp*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "8ac5163fc0ed407d931f37164162fca3",
+      "pattern": "*pinnacleblooms.org/ws*",
+      "script": "pbn-socket"
+    },
+    {
+      "id": "391e65b712374618a73777fcb8f5f5b7",
+      "pattern": "*www.pinnacleblooms.org/api/gl/getbankverification*",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "1a6eb086a0a34fff823e85b4fb60a9f2",
+      "pattern": "books.pinnacleblooms.org/payment-and-billing*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "edb7e838ed934aa9b267ab9c7dabed32",
+      "pattern": "https://mirracle.pinnacleblooms.org/.well-known/assetlinks.json",
+      "script": "pbn-planetscale"
+    },
+    {
+      "id": "d95f3413fa1c4a17a511aa00d1c90f9f",
+      "pattern": "pinnacleblooms.org/9eccddfeede58a1e7db0a8a2aa8286ab.txt*",
+      "script": "pinnacle-indexnow-root-key"
+    },
+    {
+      "id": "c1a5dc562917410993301d47a3491c30",
+      "pattern": "pinnacleblooms.org/ask*",
+      "script": "pinnacle-ask"
+    },
+    {
+      "id": "9a1388b080c140ae80fd0a2619b71807",
+      "pattern": "speech100-staging.pinnacleblooms.org/*",
+      "script": "pinnacleai-speech100-staging"
+    },
+    {
+      "id": "3007aeeef56843b69ba00a9a42d61e35",
+      "pattern": "speech100.pinnacleblooms.org/*",
+      "script": "pinnacleai-speech100-public"
+    },
+    {
+      "id": "2b31cb5cb2994628a4a66730fefcdf47",
+      "pattern": "www.pinnacleblooms.org/",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "e6b13fc9e3a64e63a3113cc6bbc97acf",
+      "pattern": "www.pinnacleblooms.org/.well-known/agent-card.json*",
+      "script": "pinnacle-indexnow-root-key"
+    },
+    {
+      "id": "91946c91928943f2a29ffbe56ccf095e",
+      "pattern": "www.pinnacleblooms.org/.well-known/mcp.json*",
+      "script": "pinnacle-indexnow-root-key"
+    },
+    {
+      "id": "db5743184d604822934e1d4b511a3833",
+      "pattern": "www.pinnacleblooms.org/.well-known/security.txt*",
+      "script": "pinnacle-indexnow-root-key"
+    },
+    {
+      "id": "babf236c14c74ddba57e5dd58e1cd2c5",
+      "pattern": "www.pinnacleblooms.org/.well-known/tdmrep.json*",
+      "script": "pinnacle-indexnow-root-key"
+    },
+    {
+      "id": "53c22aa83a494acfa5fc77875f94e10a",
+      "pattern": "www.pinnacleblooms.org/9eccddfeede58a1e7db0a8a2aa8286ab.txt*",
+      "script": "pinnacle-indexnow-root-key"
+    },
+    {
+      "id": "9b8289ca58c44116afec497037db6e5f",
+      "pattern": "www.pinnacleblooms.org/aba-therapy",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "3a18c7aa5f3e494588699d6e2162697d",
+      "pattern": "www.pinnacleblooms.org/aba-therapy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2c669476623b45528b91fcbbbb7db16b",
+      "pattern": "www.pinnacleblooms.org/ability-score*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "883caa4d80024a06a6864c573cbf0c50",
+      "pattern": "www.pinnacleblooms.org/abilityscore*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "434d8fb048cb4ac78e12c7e37a84311b",
+      "pattern": "www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "9a5d33612698466f981b1b00f9dd6c2f",
+      "pattern": "www.pinnacleblooms.org/age-restriction-policy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2b1c965b96174b7a9d1a419535250666",
+      "pattern": "www.pinnacleblooms.org/api/enrolment*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "98b1c7b686884122a0e2eb3fefd49f13",
+      "pattern": "www.pinnacleblooms.org/autism-therapy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "c9f353b67af24bf186955cd49a312420",
+      "pattern": "www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "4dc652a7ea8843c78481566d32ce0afe",
+      "pattern": "www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2d16df2352ee41a7ae46f0d481c1f822",
+      "pattern": "www.pinnacleblooms.org/best-special-education-center-call-9100181181*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "f4254714d509466f81d4fa742b71a967",
+      "pattern": "www.pinnacleblooms.org/books",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "5d816013120f43279fd796beb1530430",
+      "pattern": "www.pinnacleblooms.org/books/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2657dc3dfe0b4962ae8865064374781c",
+      "pattern": "www.pinnacleblooms.org/centers*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "cc731ed5152f480f8b0df375739cb315",
+      "pattern": "www.pinnacleblooms.org/Centers*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "e38da6cd797a428486b40c496fc95631",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "f77b96dc6ca34793917da61f16cb4c19",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "2b2588e56a314f9d892f64ce60af5b0a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0d7cdb94d17346b8b29740bc3ffd3a70",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "d1ec76f2164646349bcf468a1321be23",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "10a01d4963134ea1ace0f4caed2157e4",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-california-usa*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0818f56ba69549e28c3fcc4c18540682",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "fa508fb3f3c54f3995a653e6c241a05a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "d45d64db3ba74be5b826120c0a9d37e4",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "e678d3a5c2724a9390e6c8c8fc08a3b3",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "a9f5f26af9c942879c85775ba2b03d55",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "7d532311636d4f7386f56702199c1ae1",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-greenville-california-usa*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0ec2fd46a2a443909c819bd2ead5099d",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-greenville-south-carolina-usa*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "02550ea34e8346c6aadff6796e3fd129",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "20a0909d1e5b4ee099e6f92228deeb7e",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "5da09802ac894186ab4d9f76b33adf3c",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "895ad31ec13c4f1d93f1c54a37c3e9b5",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "b1e64d6707904e588de744468765719a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "a20f2e206c5a46b9b3175c3c1b4f3687",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "b51edce912cf4d2ba1642d58f3c6a2c8",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "b30dcb8ad12247dfb29e530eb5e19547",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "398e08d46d8c4235b972e8c4178b288a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "16050bbf88ee4c389aaf5f76c5b298d2",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "d09d691e557f4a2e87ef5492e2853868",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "9d785b936458400e8ef98f485b886fb1",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "3c4fdef325c1408e9cb186720239606e",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "bdec686aab344028af881039c8d66ff8",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "7b6d0c2ba8cd475f9335cac284d2fdda",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "fe2108f56ceb4c7a94b11ceb598b1b11",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "49152b845fd44c77b5789a483a41ecbe",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "145527279cf14f94bd4c093317129b38",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "1139d79dc9bb4d559621e1d97055a20f",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "36cec75e975d49c4a9a2d028cc131cc9",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "4964cff954454c299b22a2b041e72754",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0bc4abbe8e994318bdb867b389c57704",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "5dee8e65e5174286a9d262584d9e1185",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "d84c3000640d473fac46004abd73c513",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "c223fa4d9e494caab3fe968eb43a8a96",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "1b076e4202ac4e7fa9dad95ce5880f0f",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "e31a448a8ce342a485f0da93ff68c76c",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "ed51b4b3aa054be28e5b39c9485b9b00",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "4456151f5e484bb299598d6357fae119",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "c1ca57ce63bf45acbb76899c4469cc27",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "07032033afaf4b9f9e0d46385546f2b7",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "24716acac58449c984a73337c4779075",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "caac092863c54ffaa9b5885b9362c7b7",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2d5326fe800a417fb9f4be5b0c69326e",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "abaa748b3e414c308c57dbf09015dc76",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "9b24dc9b06e14159ba5eac633e22dc57",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0c99c79b31d043fd93ad7b1f65bd754a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "2bf904f0b80641a5807372245d5446ee",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "ce311bc84ad6415da1ef737a20aadd8f",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "21b1972d86ed4f089fb4586536537c49",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "4b82e595879d49fcbc40f28ee46f6885",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "682e346f85e04c37a003307d1b8633bd",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "9b09a7cbd8f3482da73517912ef93ee6",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "57b107c1af9940959a0629b217a1f2f7",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "87e8e200f6434717bcb170958c351e39",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "be50546201ee4930b861d4f099b9d1f5",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "70c252127a2b4a6490500b3196e0cf50",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "198d47f10b0946a9a4df23c5c3f42030",
+      "pattern": "www.pinnacleblooms.org/centres*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "6fd29a449fe34f50849bf7eb6d4d6121",
+      "pattern": "www.pinnacleblooms.org/Centres*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "b992331c9d234be6aaca0713d157a4bf",
+      "pattern": "www.pinnacleblooms.org/contact-information*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2e5ea1686a8740c6aad89c46fe2c67f6",
+      "pattern": "www.pinnacleblooms.org/cookie-policy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "3d083f1008c24e8194fdadf8fa7b4bcb",
+      "pattern": "www.pinnacleblooms.org/copyright-and-intellectual*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "474d8f67e80344b6adebe65de811017d",
+      "pattern": "www.pinnacleblooms.org/d/DownloadInvoice/*",
+      "script": "pinnacle-invoice-privacy"
+    },
+    {
+      "id": "d05438e9e2d146c4bafacdef465ae378",
+      "pattern": "www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2ad741678a4e4365a4d671f66e2b6b9d",
+      "pattern": "www.pinnacleblooms.org/endorsement-and-testimonial*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "b4498a987eef47f2aa811af6592a6b9f",
+      "pattern": "www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "9d4a86a81b6c4ac78da52b9866379a1f",
+      "pattern": "www.pinnacleblooms.org/enroll/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "d5ba6d81315440b5b146f7ca9ca4738a",
+      "pattern": "www.pinnacleblooms.org/ethics-charter*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "e2407f16bf3844dea02e9c15769b7cb0",
+      "pattern": "www.pinnacleblooms.org/everyday-therapy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "932dcae42a7c4a6caecbc0835259e71c",
+      "pattern": "www.pinnacleblooms.org/fusion-module*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "5805829840b74149b73873869a0edf68",
+      "pattern": "www.pinnacleblooms.org/governing-and-jurisdiction*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "c070550c35014654b7ca0e0cbef8b58b",
+      "pattern": "www.pinnacleblooms.org/Images/leadershipimages/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "c71d0e6aee0c416795400f4bd6989989",
+      "pattern": "www.pinnacleblooms.org/Images/LeadershipImages/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "e87a8b67c6a04945aa8cef35303096de",
+      "pattern": "www.pinnacleblooms.org/leadership*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "357d4f978d86421d8efd31999fbd4ee4",
+      "pattern": "www.pinnacleblooms.org/Leadership*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "9dda4cbffb7e4ccab3c697f3a01ec18c",
+      "pattern": "www.pinnacleblooms.org/llms-full.txt*",
+      "script": "pinnacle-indexnow-root-key"
+    },
+    {
+      "id": "42505e5965f5433bb56776ac7e4bdd36",
+      "pattern": "www.pinnacleblooms.org/llms.txt",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "ab6524b5d8c1469db32d4af5dbcf109c",
+      "pattern": "www.pinnacleblooms.org/locations*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "328627aab13941f6b90fb9d32d6a4107",
+      "pattern": "www.pinnacleblooms.org/Locations*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "e25d845b3084487692931f58f769dc56",
+      "pattern": "www.pinnacleblooms.org/mainstream*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "014c4eb47fcc422b80c254fd93f96670",
+      "pattern": "www.pinnacleblooms.org/national-autism-helpline*",
+      "script": "pinnacle-helpline"
+    },
+    {
+      "id": "10946ab3ee2f4954a460fdf8d4c40500",
+      "pattern": "www.pinnacleblooms.org/occupational-therapy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "b1d5fd47bbfb4f7ab43abfb737e12a82",
+      "pattern": "www.pinnacleblooms.org/payment-and-billing*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "f6c1c7bb64124c4195d1e435894ccdbc",
+      "pattern": "www.pinnacleblooms.org/personal-development-kernel*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "de6cf51bd1304e6a825222dd3092f108",
+      "pattern": "www.pinnacleblooms.org/pinnacle-ai*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "51f684cf80a34c789e76ba204b52bee0",
+      "pattern": "www.pinnacleblooms.org/pinnacle-global-autism-framework*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "82841d24d3294fd0b0b5e272af3ec30d",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-assets/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "cb19edf1e50a48ba99cb920e3b102dd3",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-data/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "5facfa4f269c410996cb5e77ba0c03f6",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-fonts/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "b4de82e724714ca8bfa4febaa25015ae",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-preview/enrolment*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "5ef1570509be40f295fe7d0b8a207402",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-scripts/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "8d0c1066b7134f4280b8c92dc35c859a",
+      "pattern": "www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js*",
+      "script": "pinnacle-google-ads-call-measurement"
+    },
+    {
+      "id": "29596728ea3849d8a33eafc7cf3ad27a",
+      "pattern": "www.pinnacleblooms.org/pinnacleai*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "8d5de1a653b440dfbca8e20d4523f98b",
+      "pattern": "www.pinnacleblooms.org/policies*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "816f60c4f3ff4f09ae9d6c430be973a1",
+      "pattern": "www.pinnacleblooms.org/privacy-policy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "bffee99803514762bcd80d5e7b7f3bb6",
+      "pattern": "www.pinnacleblooms.org/prognose*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2dce5f5a19504467816267d691592c92",
+      "pattern": "www.pinnacleblooms.org/reassess-review-repeat*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "6483872d85cf4e56aec74baeb605b271",
+      "pattern": "www.pinnacleblooms.org/refund-policy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "53a122c81f494153be6cf684f1886da2",
+      "pattern": "www.pinnacleblooms.org/robots.txt",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "1713db3867734d53bc0d4ae902b2a42d",
+      "pattern": "www.pinnacleblooms.org/self-sufficient*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "7d8e2acbd9a84a8fb080fe35b7d24ac3",
+      "pattern": "www.pinnacleblooms.org/seven-readiness-indexes*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "728d43600eb148ceb3ad7b3d8462478a",
+      "pattern": "www.pinnacleblooms.org/shop",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "0c14e54830ef491bbf11cc214491b664",
+      "pattern": "www.pinnacleblooms.org/shop/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "c4520c69a84f4bdd845d925513a89579",
+      "pattern": "www.pinnacleblooms.org/sitemap.xml",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "82603941b1fa4e6797b10f37ef460caf",
+      "pattern": "www.pinnacleblooms.org/sitemaps/*",
+      "script": "pinnacle-root-sitemap"
+    },
+    {
+      "id": "0177bb6a7a424e038834b29013ccbae8",
+      "pattern": "www.pinnacleblooms.org/sitemaps/centres.xml",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "dd31d8566ada4daba88b765d37e86840",
+      "pattern": "www.pinnacleblooms.org/special-education*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "09738085aa8c4f909202a67647c9ac89",
+      "pattern": "www.pinnacleblooms.org/Special-Education*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "f7ccd4b40e5947fb914736ec8ba6abab",
+      "pattern": "www.pinnacleblooms.org/speech-aba-autism-assessments*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "0edef736abf84657ab33aa392c2fa8e9",
+      "pattern": "www.pinnacleblooms.org/speech-therapy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "0dd30e9cd5b7463a8bfab6130bdb3754",
+      "pattern": "www.pinnacleblooms.org/speech-therapy/service-information*",
+      "script": "pinnacle-google-ads-call-measurement"
+    },
+    {
+      "id": "83ef756f0df0417ba6e7986a27666d6f",
+      "pattern": "www.pinnacleblooms.org/staff-declaration*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "bd9886be82974aa5ac64dbf2754e8abf",
+      "pattern": "www.pinnacleblooms.org/t/aba-therapy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "150001ba65b24aadbbd01941ccedac63",
+      "pattern": "www.pinnacleblooms.org/t/autism-therapy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "9b5cf9c9cd2e4dc98b01bb73b6b26652",
+      "pattern": "www.pinnacleblooms.org/t/occupational-therapy*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "163ba453183e4581b768ed7d75b191d0",
+      "pattern": "www.pinnacleblooms.org/t/special-education*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "0549b63c829740639960e608d82e48b4",
+      "pattern": "www.pinnacleblooms.org/terms-of-service*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "aef67240b28f46b9a1cad6f290158049",
+      "pattern": "www.pinnacleblooms.org/terms-of-use*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "cd510700929044788746ee9c6d6f2c89",
+      "pattern": "www.pinnacleblooms.org/therapeuticai*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "e199d87142cd41e88671f2871ea20c6a",
+      "pattern": "www.pinnacleblooms.org/third-party-inegration*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "42cf657c36a74d5d8b0f15edf6ed8f4e",
+      "pattern": "www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate*",
+      "script": "pinnacle-google-ads-call-measurement"
+    },
+    {
+      "id": "c0d1a25a2d2d473b8d83b296eb8aaafa",
+      "pattern": "www.pinnacleblooms.org/verify",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "2c1cc23cf8bd44b0be7577ea8797e2d7",
+      "pattern": "www.pinnacleblooms.org/verify/*",
+      "script": "pinnacle-verify-route"
+    },
+    {
+      "id": "f0c4e660be6947eeb9ff6c3ba9308030",
+      "pattern": "www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html*",
+      "script": "pinnacle-google-ads-call-measurement"
+    },
+    {
+      "id": "423ccba28fbd47e8a4bfd2afb26e978e",
+      "pattern": "www.pinnacleblooms.org/verify/guides/abilityscore.html*",
+      "script": "pinnacle-google-ads-call-measurement"
+    },
+    {
+      "id": "a7e50caa230e4eb4bfc2ebb97dc713e8",
+      "pattern": "www.pinnacleblooms.org/verify/guides/everyday-practice.html*",
+      "script": "pinnacle-google-ads-call-measurement"
+    }
+  ],
+  "bindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets",
+      "service": null,
+      "environment": null
+    },
+    {
+      "name": "PINNACLE_ASK",
+      "type": "service",
+      "service": "pinnacle-ask",
+      "environment": "production"
+    },
+    {
+      "name": "PINNACLE_LEGACY",
+      "type": "service",
+      "service": "pbn-planetscale",
+      "environment": "production"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text",
+      "service": null,
+      "environment": null
+    }
+  ],
+  "deployment": {
+    "id": "7c45210f-031a-4641-87bb-25fdb8eebc27",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "kotii@kgvpl.com",
+    "annotations": {
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "3d088473-f2d9-4906-8460-6a0f24e0d1dc",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-02T22:52:50.411836Z"
+  },
+  "rollback": [
+    {
+      "version_id": "566997b3-0387-45f3-8da5-dd826396045b",
+      "percentage": 100
+    }
+  ],
+  "existingRoutesPreserved": true
+}

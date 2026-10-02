@@ -1,0 +1,33 @@
+{
+  "at": "2026-10-02T22:47:19.065Z",
+  "previousStage": "release-books-ga4-20261003",
+  "stage": "release-books-play-20261003",
+  "upload": ".worker-upload-books-play-20261003",
+  "changedPages": [
+    "pinnacle-pages-html/book-edition-hi-speech-101.html",
+    "pinnacle-pages-html/book-edition-hi-ot-101.html",
+    "pinnacle-pages-html/book-edition-hi-aba-101.html",
+    "pinnacle-pages-html/book-edition-hi-special-education-101.html",
+    "pinnacle-pages-html/book-edition-te-speech-101.html",
+    "pinnacle-pages-html/book-edition-te-ot-101.html",
+    "pinnacle-pages-html/book-edition-te-aba-101.html",
+    "pinnacle-pages-html/book-edition-te-special-education-101.html",
+    "pinnacle-pages-html/book-hi-speech-101.html",
+    "pinnacle-pages-html/book-hi-ot-101.html",
+    "pinnacle-pages-html/book-hi-aba-101.html",
+    "pinnacle-pages-html/book-hi-special-education-101.html",
+    "pinnacle-pages-html/book-te-speech-101.html",
+    "pinnacle-pages-html/book-te-ot-101.html",
+    "pinnacle-pages-html/book-te-aba-101.html",
+    "pinnacle-pages-html/book-te-special-education-101.html",
+    "pinnacle-pages-html/book-speech-communication-101-my-message-matters.html",
+    "pinnacle-pages-html/book-occupational-therapy-101-i-belong-in-everyday-life.html",
+    "pinnacle-pages-html/book-aba-parent-education-101-understanding-everyday-behaviour.html",
+    "pinnacle-pages-html/book-special-education-101-learning-through-everyday-play.html"
+  ],
+  "addedAssets": [],
+  "unchangedFiles": 2125,
+  "totalFiles": 2145,
+  "structuredDataPreserved": true,
+  "workerSha256": "b47ebdf7776b25af5038db1cf2b57b6ad396446efb5af04c9999c80a01701e86"
+}

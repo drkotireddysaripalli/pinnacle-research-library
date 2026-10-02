@@ -1,0 +1,128 @@
+{
+  "at": "2026-10-02T22:46:07.486Z",
+  "linkedPages": 20,
+  "uniqueEditions": 12,
+  "checkedBookRoutes": 81,
+  "links": [
+    {
+      "route": "/books/editions/hi/speech-101",
+      "id": "fEgVEgAAQBAJ",
+      "name": "book-edition-hi-speech-101",
+      "sha256": "b48ddd043b8e35f10376e7400d1a5f97a301691398b28f9a71a07960272ca914"
+    },
+    {
+      "route": "/books/editions/hi/ot-101",
+      "id": "dEgVEgAAQBAJ",
+      "name": "book-edition-hi-ot-101",
+      "sha256": "0be46cab7c6b5317233357f1ae9315ca8486b4c7b80e859c2d0a749bdefb665f"
+    },
+    {
+      "route": "/books/editions/hi/aba-101",
+      "id": "ckgVEgAAQBAJ",
+      "name": "book-edition-hi-aba-101",
+      "sha256": "7adbc563bf1ad9d624b31a6d09f295426dd0ec8c02479326a1c4e4a6f3552192"
+    },
+    {
+      "route": "/books/editions/hi/special-education-101",
+      "id": "ekgVEgAAQBAJ",
+      "name": "book-edition-hi-special-education-101",
+      "sha256": "3fc65d2df846c4bcc02d8d47985074926f1c6f5d291e486daca02fa11366e06c"
+    },
+    {
+      "route": "/books/editions/te/speech-101",
+      "id": "akgVEgAAQBAJ",
+      "name": "book-edition-te-speech-101",
+      "sha256": "c0ad31de002f44eb9e90c658130c3d8e2766a398ebd4f7001f170c0501fe14f1"
+    },
+    {
+      "route": "/books/editions/te/ot-101",
+      "id": "aEgVEgAAQBAJ",
+      "name": "book-edition-te-ot-101",
+      "sha256": "bb128b087cc8b1aded1cf85749d6a477e338ffd71e724d8194b2b4a661e1b232"
+    },
+    {
+      "route": "/books/editions/te/aba-101",
+      "id": "fkgVEgAAQBAJ",
+      "name": "book-edition-te-aba-101",
+      "sha256": "d5db6a87221fb4469e0dcef9856809a275bd880b73e11825cacd1cd79ad78e80"
+    },
+    {
+      "route": "/books/editions/te/special-education-101",
+      "id": "gEgVEgAAQBAJ",
+      "name": "book-edition-te-special-education-101",
+      "sha256": "d38faabcb92d79f478ef45fe952d71fc279dffe91e6f3e900ab1275aa1573ed3"
+    },
+    {
+      "route": "/books/hi/speech-101",
+      "id": "fEgVEgAAQBAJ",
+      "name": "book-hi-speech-101",
+      "sha256": "daf1af46348cec5cd147828357e4e98ea0ae9f207e3406d2a20ff263db50c917"
+    },
+    {
+      "route": "/books/hi/ot-101",
+      "id": "dEgVEgAAQBAJ",
+      "name": "book-hi-ot-101",
+      "sha256": "3e23a1b824f9939f0955eaba599e94dbee696fc067a87e4b725afe5bfccf1483"
+    },
+    {
+      "route": "/books/hi/aba-101",
+      "id": "ckgVEgAAQBAJ",
+      "name": "book-hi-aba-101",
+      "sha256": "a93c3f5d98369021ffb78e71ad8040ca988cc567e66de7ceb2eb9db258293b8a"
+    },
+    {
+      "route": "/books/hi/special-education-101",
+      "id": "ekgVEgAAQBAJ",
+      "name": "book-hi-special-education-101",
+      "sha256": "bc57f6fb91e74122ac5a484e2102714c6742d1ed867a79d2043b39f56b63f662"
+    },
+    {
+      "route": "/books/te/speech-101",
+      "id": "akgVEgAAQBAJ",
+      "name": "book-te-speech-101",
+      "sha256": "062e150292a0932f2e2d0e125975882878ee7765f6765261294d2ee8cc4a2a38"
+    },
+    {
+      "route": "/books/te/ot-101",
+      "id": "aEgVEgAAQBAJ",
+      "name": "book-te-ot-101",
+      "sha256": "29d72958ce84d771b4cbb7d6467882f87f3650de33808fc408d8a5b4b962493d"
+    },
+    {
+      "route": "/books/te/aba-101",
+      "id": "fkgVEgAAQBAJ",
+      "name": "book-te-aba-101",
+      "sha256": "4cdd81f290e4f7d1b62542d1dceac8a90b4821b4bfd2a8b243041bae21fa40f9"
+    },
+    {
+      "route": "/books/te/special-education-101",
+      "id": "gEgVEgAAQBAJ",
+      "name": "book-te-special-education-101",
+      "sha256": "991e3c362960e91ccf9d4bc161fecbb3e1b63bc73cc597d759ebf46395086038"
+    },
+    {
+      "route": "/books/speech-communication-101-my-message-matters",
+      "id": "gkgVEgAAQBAJ",
+      "name": "book-speech-communication-101-my-message-matters",
+      "sha256": "a226b1a48e2cd36ce34401e74b573234ace5d6a0052a5a4f14d3e6134cf4c9a0"
+    },
+    {
+      "route": "/books/occupational-therapy-101-i-belong-in-everyday-life",
+      "id": "cEgVEgAAQBAJ",
+      "name": "book-occupational-therapy-101-i-belong-in-everyday-life",
+      "sha256": "a28ffecf82a2330a7abc7c32fd4a760f4a709445caffa962a2a1702bcbd8e726"
+    },
+    {
+      "route": "/books/aba-parent-education-101-understanding-everyday-behaviour",
+      "id": "bEgVEgAAQBAJ",
+      "name": "book-aba-parent-education-101-understanding-everyday-behaviour",
+      "sha256": "76f48aa20232bb42fbe1e3a42fe1823062e599cb06e4acffd5263a8efc5646b4"
+    },
+    {
+      "route": "/books/special-education-101-learning-through-everyday-play",
+      "id": "bkgVEgAAQBAJ",
+      "name": "book-special-education-101-learning-through-everyday-play",
+      "sha256": "3d7fab0d77fe15ec37b72de4759119e7c3fd2bb9d4e5c50e2933878d0e7399e0"
+    }
+  ]
+}
