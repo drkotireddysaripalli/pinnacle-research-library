@@ -13,7 +13,7 @@ const calls=[];
 const env={ASSETS:{fetch:async r=>{calls.push({url:r.url,method:r.method});return new Response(r.method==='HEAD'?null:'<a href="/enroll">Speech page</a>',{headers:{'content-type':'text/html'}});}}};
 test('shop and existing book routes retain exact mapping and isolate Shopify connectivity',async()=>{
  const stock={...inventory,...Object.fromEntries(Object.values(BOOK_ROUTES).map(id=>['/pinnacle-pages-html/'+id+'.html',id]))};
- assert.equal(Object.keys(BOOK_ROUTES).length,59);
+ assert.equal(Object.keys(BOOK_ROUTES).length,81);
  for(const [path,id] of Object.entries(BOOK_ROUTES))for(const method of ['GET','HEAD']){
   const response=await serveSpeech(request(path,{method}),env,stock);
   assert.equal(response.status,200);assert.equal(calls.at(-1).url,'https://assets.local/pinnacle-pages-html/'+id+'.html');
@@ -57,4 +57,11 @@ test('assessment exact route, HEAD, Markdown and trailing alias preserve adjacen
  for(const path of [assessment+'/private',assessment+'-other','/assessmentlead'])assert.equal(await serveSpeech(request(path),env,inventory),null);
  for(const headers of [{authorization:'Bearer fixture'},{range:'bytes=0-5'},{'cache-control':'no-transform'}])assert.equal((await serveSpeech(request(assessment,{headers}),env,inventory)).status,200);
  assert.equal(await serveSpeech(request(assessment,{method:'POST',body:'fixture'}),env,inventory),null);
+});
+
+test('book PDF previews serve PDF MIME for browser readers on GET and HEAD',async()=>{
+ const path='/pinnacle-pages-assets/books-languages-20261002/hi/speech-sample.pdf';
+ const sampleInventory={...inventory,[path]:'sample-pdf'};
+ const sampleEnv={ASSETS:{fetch:async r=>new Response(r.method==='HEAD'?null:'%PDF-fixture',{headers:{'content-type':'application/octet-stream'}})}};
+ for(const method of ['GET','HEAD']){const response=await serveSpeech(request(path,{method}),sampleEnv,sampleInventory);assert.equal(response.status,200);assert.equal(response.headers.get('content-type'),'application/pdf');assert.equal(response.headers.get('x-content-type-options'),'nosniff');assert.equal(await response.text(),method==='HEAD'?'':'%PDF-fixture');}
 });

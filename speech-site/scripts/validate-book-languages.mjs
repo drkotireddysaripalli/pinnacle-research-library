@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import editions from '../src/data/book-locales.json' with {type:'json'};
 import strings from '../src/data/book-cart-locales.json' with {type:'json'};
+import presentations from '../src/data/book-merchant-editions.json' with {type:'json'};
 import {BOOK_ROUTES} from '../deployment/speech-handler.mjs';
 const origin='https://www.pinnacleblooms.org';
 assert.equal(editions.length,22);assert.equal(new Set(editions.map(b=>b.sku)).size,22);
@@ -22,5 +23,9 @@ for(const book of editions){
 }
 for(const locale of ['hi','te']){const html=fs.readFileSync('dist/books/'+locale+'.html','utf8');assert(html.includes('id="singles"')&&html.includes('id="pairs"'));}
 for(const font of ['anek-devanagari','anek-telugu'])assert(fs.statSync('public/pinnacle-pages-fonts/'+font+'.woff2').size>10000);
-assert.equal((fs.readFileSync('public/pinnacle-pages-data/books-sitemap.xml','utf8').match(/<loc>/g)||[]).length,59);
+assert.equal((fs.readFileSync('public/pinnacle-pages-data/books-sitemap.xml','utf8').match(/<loc>/g)||[]).length,81);
 console.log('PASS:22 native offers,2 hubs,locale cart copy,hreflang,prices,assets,contact routes and private-file boundary.');
+
+for(const p of presentations){const b=editions.find(b=>b.sku===p.sku),html=fs.readFileSync('dist'+p.path+'.html','utf8');assert(b);assert(html.includes('<html lang="en-IN"'));assert(html.includes('rel="canonical" href="'+origin+p.path+'"'));const graph=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];const product=graph.find(n=>n['@id']===origin+p.path+'#product');assert.equal(product.inLanguage,b.language);assert.equal(product.offers.price,b.price);assert.equal(product.sku,b.sku);assert.equal(product.offers.availability,'https://schema.org/'+(b.available?'InStock':'OutOfStock'));assert(html.includes(p.edition_label));assert.equal(html.includes('data-book-sku="'+b.sku+'"'),b.available);assert(BOOK_ROUTES[p.path]);for(const member of p.included_books)assert(html.includes(member.sample_url));}
+const nativeFeed=fs.readFileSync('public/pinnacle-pages-data/books-native-editions-merchant-feed.xml','utf8');assert.equal((nativeFeed.match(/<item>/g)||[]).length,22);assert.equal((nativeFeed.match(/<g:excluded_destination>Shopping_ads/g)||[]).length,22);for(const p of presentations){assert(nativeFeed.includes(origin+p.path));assert(nativeFeed.includes('<g:id>'+p.sku+'</g:id>'));}
+console.log('PASS:22 English purchase pages clearly identify native file language and match the free-listings feed.');

@@ -6,6 +6,7 @@ import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import books from '../src/data/book-catalog.json' with {type:'json'};
 import languageBooks from '../src/data/book-locales.json' with {type:'json'};
+import merchantEditions from '../src/data/book-merchant-editions.json' with {type:'json'};
 const root=path.resolve(import.meta.dirname,'..');
 const origin='https://www.pinnacleblooms.org';
 const assets=path.join(root,'public/pinnacle-pages-assets/books-20261002');
@@ -25,7 +26,7 @@ for(const pair of books.filter(b=>b.bookCount===2&&b.formatCode==='PDF')){
  await fs.copyFile(target,path.join(root,'src/assets/books',pair.assetId+'.jpg'));
 }
 await fs.copyFile(path.join(assets,'four-book-collection.png'),path.join(assets,'collection.png'));
-const routes={'/shop':'shop-index','/books':'books-index','/books/hi':'books-hi-index','/books/te':'books-te-index',...Object.fromEntries(languageBooks.map(b=>[b.path,'book-'+b.locale+'-'+b.slug])),...Object.fromEntries(books.map(b=>[b.path,'book-'+b.slug]))};
+const routes={'/shop':'shop-index','/books':'books-index','/books/hi':'books-hi-index','/books/te':'books-te-index',...Object.fromEntries(merchantEditions.map(b=>[b.path,'book-edition-'+b.locale+'-'+b.slug])),...Object.fromEntries(languageBooks.map(b=>[b.path,'book-'+b.locale+'-'+b.slug])),...Object.fromEntries(books.map(b=>[b.path,'book-'+b.slug]))};
 const handler=path.join(root,'deployment/speech-handler.mjs');
 const previous=await fs.readFile(handler,'utf8');
 assert(previous.startsWith('export const BOOK_ROUTES='));
@@ -37,3 +38,7 @@ const items=books.map(b=>'<item>'+Object.entries({id:b.sku,link:origin+b.path,im
 await fs.writeFile(path.join(root,'public/pinnacle-pages-data/books-merchant-feed.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0"><channel><title>Pinnacle 101 Parent Visual Library</title><link>'+origin+'/books</link><description>Four books, eleven combinations and three formats. PDF ebooks are available. Printed editions are out of stock.</description>'+items.join('\n')+'</channel></rss>\n');
 await fs.writeFile(path.join(root,'public/pinnacle-pages-data/books-sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Object.keys(routes).map(p=>'<url><loc>'+origin+p+'</loc></url>').join('')+'</urlset>\n');
 console.log(JSON.stringify({offers:books.length,routes:Object.keys(routes).length,pairImages:6,ebookOrdersEnabled:true}));
+
+const nativeItems=merchantEditions.map(p=>{const b=languageBooks.find(v=>v.sku===p.sku);assert(b);return '<item>'+Object.entries({id:b.sku,link:origin+p.path,image_link:origin+b.front,availability:b.available?'in_stock':'out_of_stock',price:b.price.toFixed(2)+' INR',condition:'new',brand:'Pinnacle Blooms Network',google_product_category:'Media > Books',product_type:'Books > Parent Education > '+p.edition_label+' > PDF ebook',identifier_exists:'no',included_destination:'Free_listings',excluded_destination:'Shopping_ads',...(b.bookCount>1?{is_bundle:'yes'}:{})}).map(([k,v])=>el(k,v)).join('')+structured('structured_title',p.title)+structured('structured_description',p.description+'\n'+p.delivery_copy_when_enabled)+(b.back?el('additional_image_link',origin+b.back):'')+'</item>';});
+assert.equal(nativeItems.length,22);
+await fs.writeFile(path.join(root,'public/pinnacle-pages-data/books-native-editions-merchant-feed.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0"><channel><title>Pinnacle 101 Hindi and Telugu PDF editions</title><link>'+origin+'/books</link><description>English product information for Hindi and Telugu PDF editions. Free listings only.</description>'+nativeItems.join('\n')+'</channel></rss>\n');

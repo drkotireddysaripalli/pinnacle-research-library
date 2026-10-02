@@ -3,9 +3,10 @@ import '../styles/book-cart.css';
 import translations from '../data/book-cart-locales.json';
 const locale = ['hi','te'].includes(Astro.props.locale) ? Astro.props.locale : 'en';
 const strings = {...translations.en,...translations[locale]};
-const routes = translations.routes[locale];
+const routes = {...translations.routes[locale],...(Astro.props.samplesPath?{samples:Astro.props.samplesPath}:{}),...(Astro.props.collectionPath?{compareCollections:Astro.props.collectionPath,collections:Astro.props.collectionPath}:{})};
 import books from '../data/book-catalog.json';
 import languageBooks from '../data/book-locales.json';
+import merchantEditions from '../data/book-merchant-editions.json';
 import presentation from '../data/shop-presentation.json';
 const singles = books.filter(book => !book.physical && !book.bundle);
 const cartCatalogue = Object.fromEntries(books.filter(book => !book.physical).map(book => [book.sku, {
@@ -20,6 +21,7 @@ const cartCatalogue = Object.fromEntries(books.filter(book => !book.physical).ma
   })
 }]));
 Object.assign(cartCatalogue,Object.fromEntries(languageBooks.filter(book=>book.available).map(book=>[book.sku,{title:book.title+' · '+book.languageName,path:book.path,price:book.price,editionPaths:[book.path],books:book.members.map(member=>({sku:member.sku,title:member.title+' · '+book.languageName,discipline:member.discipline,cover:member.front,sample:member.sample}))}])));
+if(locale==='en')for(const edition of merchantEditions){const entry=cartCatalogue[edition.sku];if(entry){entry.title=edition.title;entry.path=edition.path;entry.editionPaths=[edition.path];entry.books=edition.included_books.map(member=>({sku:member.sku,title:member.title_english+' · '+edition.edition_label,discipline:member.discipline_english,cover:member.cover_url,sample:member.sample_url}));}}
 ---
 <div class:list={["pbn-commerce","pbn-commerce-lang-"+locale]} data-book-commerce data-cart-locale={locale} data-cart-strings={JSON.stringify(strings)} data-cart-collections={routes.compareCollections} data-cart-catalogue={JSON.stringify(cartCatalogue)}>
   <nav class="pbn-commerce-nav" aria-label={strings.navAria}>

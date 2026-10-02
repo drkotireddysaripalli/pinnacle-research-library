@@ -21,3 +21,8 @@ for(const locale of ['hi','te'])test(`native ${locale} books preserve language, 
  await page.locator('.pbn-native-library img').evaluate(img=>img.decode());
  await page.locator('.pbn-native-library').screenshot({path:`audits/books-languages/${info.project.name}-${locale}-library.png`});
 });
+
+for(const locale of ['hi','te'])test(`English purchase information preserves the ${locale} book edition`,async({page},info)=>{
+ test.skip(process.env.PAGE_PATH!=='/shop','Bookshop acceptance only');
+ await page.goto(`/books/editions/${locale}/speech-101`);await expect(page.locator('.pbn-commerce-nav a').nth(3)).toHaveAttribute('href','#preview');await expect(page.locator('html')).toHaveAttribute('lang','en-IN');await expect(page.locator('h1')).toHaveCount(1);await expect(page.locator('.pbn-native-offer')).toContainText(locale==='hi'?'Hindi edition':'Telugu edition');await expect(page.locator('.pbn-native-actions a').last()).toHaveAttribute('href',`/books/${locale}/speech-101`);await page.locator('.pbn-native-product img').first().evaluate(img=>img.decode());expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);await fs.mkdir('audits/books-languages',{recursive:true});await page.locator('.pbn-native-product').screenshot({path:`audits/books-languages/${info.project.name}-${locale}-english-purchase.png`});await page.locator('[data-cart-open]').click();await expect(page.locator('dialog')).toBeVisible();await expect(page.locator('[data-cart-checkout]')).toHaveText('Continue to secure checkout →');
+});

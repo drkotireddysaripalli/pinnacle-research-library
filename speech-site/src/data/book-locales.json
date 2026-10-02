@@ -161,7 +161,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/speech-front.jpg",
     "back": "/pinnacle-pages-assets/books-languages-20261002/hi/speech-back.jpg",
     "englishPath": "/books/speech-communication-101-my-message-matters",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -220,7 +220,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362089538"
   },
   {
     "locale": "hi",
@@ -384,7 +385,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/ot-front.jpg",
     "back": "/pinnacle-pages-assets/books-languages-20261002/hi/ot-back.jpg",
     "englishPath": "/books/occupational-therapy-101-i-belong-in-everyday-life",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -443,7 +444,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362187842"
   },
   {
     "locale": "hi",
@@ -607,7 +609,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/aba-front.jpg",
     "back": "/pinnacle-pages-assets/books-languages-20261002/hi/aba-back.jpg",
     "englishPath": "/books/aba-parent-education-101-understanding-everyday-behaviour",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -666,7 +668,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362286146"
   },
   {
     "locale": "hi",
@@ -830,7 +833,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/special-education-front.jpg",
     "back": "/pinnacle-pages-assets/books-languages-20261002/hi/special-education-back.jpg",
     "englishPath": "/books/special-education-101-learning-through-everyday-play",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -889,7 +892,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362384450"
   },
   {
     "locale": "hi",
@@ -1190,7 +1194,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/speech-ot-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-speech-occupational-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -1249,7 +1253,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362482754"
   },
   {
     "locale": "hi",
@@ -1550,7 +1555,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/speech-aba-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-speech-behaviour-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -1609,7 +1614,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362581058"
   },
   {
     "locale": "hi",
@@ -1910,7 +1916,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/speech-special-education-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-speech-learning-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -1969,7 +1975,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362679362"
   },
   {
     "locale": "hi",
@@ -2270,7 +2277,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/ot-aba-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-occupational-behaviour-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -2329,7 +2336,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362777666"
   },
   {
     "locale": "hi",
@@ -2630,7 +2638,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/ot-special-education-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-occupational-learning-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -2689,7 +2697,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298362908738"
   },
   {
     "locale": "hi",
@@ -2990,7 +2999,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/aba-special-education-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-behaviour-learning-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -3049,7 +3058,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363007042"
   },
   {
     "locale": "hi",
@@ -3624,7 +3634,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/hi/speech-ot-aba-special-education-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-four-book-pdf-collection",
-    "available": false,
+    "available": true,
     "authors": [
       "डॉ. कोटि रेड्डी सरिपल्ली",
       "डॉ. श्रीजा रेड्डी सरिपल्ली"
@@ -3683,7 +3693,8 @@
         "question": "क्या छपी हुई किताब मँगवा सकते हैं?",
         "answer": "सॉफ्टकवर और हार्डबाउंड अभी स्टॉक में नहीं हैं। उपलब्धता की जानकारी के लिए 9100 181 181 पर कॉल करें।"
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363105346"
   },
   {
     "locale": "te",
@@ -3847,7 +3858,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/speech-front.jpg",
     "back": "/pinnacle-pages-assets/books-languages-20261002/te/speech-back.jpg",
     "englishPath": "/books/speech-communication-101-my-message-matters",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -3906,7 +3917,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363203650"
   },
   {
     "locale": "te",
@@ -4070,7 +4082,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/ot-front.jpg",
     "back": "/pinnacle-pages-assets/books-languages-20261002/te/ot-back.jpg",
     "englishPath": "/books/occupational-therapy-101-i-belong-in-everyday-life",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -4129,7 +4141,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363301954"
   },
   {
     "locale": "te",
@@ -4293,7 +4306,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/aba-front.jpg",
     "back": "/pinnacle-pages-assets/books-languages-20261002/te/aba-back.jpg",
     "englishPath": "/books/aba-parent-education-101-understanding-everyday-behaviour",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -4352,7 +4365,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363400258"
   },
   {
     "locale": "te",
@@ -4516,7 +4530,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/special-education-front.jpg",
     "back": "/pinnacle-pages-assets/books-languages-20261002/te/special-education-back.jpg",
     "englishPath": "/books/special-education-101-learning-through-everyday-play",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -4575,7 +4589,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363498562"
   },
   {
     "locale": "te",
@@ -4876,7 +4891,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/speech-ot-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-speech-occupational-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -4935,7 +4950,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363596866"
   },
   {
     "locale": "te",
@@ -5236,7 +5252,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/speech-aba-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-speech-behaviour-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -5295,7 +5311,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363695170"
   },
   {
     "locale": "te",
@@ -5596,7 +5613,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/speech-special-education-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-speech-learning-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -5655,7 +5672,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363793474"
   },
   {
     "locale": "te",
@@ -5956,7 +5974,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/ot-aba-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-occupational-behaviour-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -6015,7 +6033,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363891778"
   },
   {
     "locale": "te",
@@ -6316,7 +6335,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/ot-special-education-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-occupational-learning-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -6375,7 +6394,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298363990082"
   },
   {
     "locale": "te",
@@ -6676,7 +6696,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/aba-special-education-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-behaviour-learning-pdf-pair",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -6735,7 +6755,8 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298364088386"
   },
   {
     "locale": "te",
@@ -7310,7 +7331,7 @@
     "front": "/pinnacle-pages-assets/books-languages-20261002/te/four-book-101.jpg",
     "back": null,
     "englishPath": "/books/pinnacle-101-four-book-pdf-collection",
-    "available": false,
+    "available": true,
     "authors": [
       "డా. కోటి రెడ్డి సరిపల్లి",
       "డా. శ్రీజా రెడ్డి సరిపల్లి"
@@ -7369,6 +7390,7 @@
         "question": "ముద్రిత పుస్తకాన్ని ఆర్డర్ చేయవచ్చా?",
         "answer": "సాఫ్ట్‌కవర్, హార్డ్‌బౌండ్ ప్రస్తుతం స్టాక్‌లో లేవు. అందుబాటు గురించి 9100 181 181కు కాల్ చేయండి."
       }
-    ]
+    ],
+    "shopifyVariantId": "gid://shopify/ProductVariant/45298364186690"
   }
 ]

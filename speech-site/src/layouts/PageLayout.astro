@@ -12,9 +12,10 @@ const { title, description, socialTitle = title, socialDescription = description
 const canonical = url(path);
 const contentLanguage = Astro.props.contentLanguage || 'en-IN';
 const languageAlternates = Astro.props.languageAlternates || [];
+const nativeContact = contentLanguage === 'hi-IN' ? {call:'कॉल करें',visit:'मिलने का समय लें',label:'पिनैकल से संपर्क करें'} : contentLanguage === 'te-IN' ? {call:'కాల్ చేయండి',visit:'సందర్శనకు సమయం',label:'పినాకిల్‌ను సంప్రదించండి'} : null;
 const speechDocument=path==='/top-speech-therapy-center-india-proven-improvement-rate'||path.startsWith('/speech-therapy/');
 const enrolmentDocument=path==='/enroll-autism-speech-aba-therapies-india'||path==='/pinnacle-pages-preview/enrolment';
-const contactAction=enquiry||(speechDocument?{url:speechOffer.url,mobileLabel:'FREE assessment'}:{url:url('/enroll-autism-speech-aba-therapies-india'),mobileLabel:'Arrange a visit'});
+const contactAction=enquiry||(speechDocument?{url:speechOffer.url,mobileLabel:'FREE assessment'}:{url:url('/enroll-autism-speech-aba-therapies-india'),mobileLabel:nativeContact?.visit || 'Arrange a visit'});
 const parentCrumb=breadcrumbParent||(documentOnly&&path.startsWith('/speech-therapy/')?{name:'Speech Therapy',path:'/top-speech-therapy-center-india-proven-improvement-rate'}:null);
 const crumbs=[{name:'Home',item:origin+'/'},...(parentCrumb?[{name:parentCrumb.name,item:url(parentCrumb.path)}]:[]),{name:label,item:canonical}];
 const share = Astro.props.shareStatic ? {src:Astro.props.shareStatic} : await getImage({src: shareImage, width:1200, height:630, fit:Astro.props.shareFit||'cover', format:'jpg', quality:88});
@@ -48,6 +49,6 @@ const schema = {'@context':'https://schema.org','@graph':[
 </head><body class:list={{'focused-campaign':focused,'enrolment-page':enrolmentDocument}} data-page-variant={focused ? 'focused' : 'service'}>
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
-  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={phone.href} data-cta="mobile-call">Call {phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>
+  <nav class="mobile-cta" aria-label={nativeContact?.label || "Contact Pinnacle"}><a href={phone.href} data-cta="mobile-call">{nativeContact?.call || "Call"} {phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>
   <script is:inline src="/pinnacle-pages-scripts/speech-measurement.js" defer></script>
 </body></html>
