@@ -13,7 +13,7 @@ const calls=[];
 const env={ASSETS:{fetch:async r=>{calls.push({url:r.url,method:r.method});return new Response(r.method==='HEAD'?null:'<a href="/enroll">Speech page</a>',{headers:{'content-type':'text/html'}});}}};
 test('shop and existing book routes retain exact mapping and isolate Shopify connectivity',async()=>{
  const stock={...inventory,...Object.fromEntries(Object.values(BOOK_ROUTES).map(id=>['/pinnacle-pages-html/'+id+'.html',id]))};
- assert.equal(Object.keys(BOOK_ROUTES).length,35);
+ assert.equal(Object.keys(BOOK_ROUTES).length,59);
  for(const [path,id] of Object.entries(BOOK_ROUTES))for(const method of ['GET','HEAD']){
   const response=await serveSpeech(request(path,{method}),env,stock);
   assert.equal(response.status,200);assert.equal(calls.at(-1).url,'https://assets.local/pinnacle-pages-html/'+id+'.html');

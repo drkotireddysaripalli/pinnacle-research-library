@@ -1,6 +1,11 @@
 ---
 import '../styles/book-cart.css';
+import translations from '../data/book-cart-locales.json';
+const locale = ['hi','te'].includes(Astro.props.locale) ? Astro.props.locale : 'en';
+const strings = {...translations.en,...translations[locale]};
+const routes = translations.routes[locale];
 import books from '../data/book-catalog.json';
+import languageBooks from '../data/book-locales.json';
 import presentation from '../data/shop-presentation.json';
 const singles = books.filter(book => !book.physical && !book.bundle);
 const cartCatalogue = Object.fromEntries(books.filter(book => !book.physical).map(book => [book.sku, {
@@ -14,57 +19,59 @@ const cartCatalogue = Object.fromEntries(books.filter(book => !book.physical).ma
     return { sku: member.sku, title: member.title, discipline: member.discipline, cover: '/pinnacle-pages-assets/shop-20261002/' + visual.asset, sample: visual.sample_url };
   })
 }]));
+Object.assign(cartCatalogue,Object.fromEntries(languageBooks.filter(book=>book.available).map(book=>[book.sku,{title:book.title+' · '+book.languageName,path:book.path,price:book.price,editionPaths:[book.path],books:book.members.map(member=>({sku:member.sku,title:member.title+' · '+book.languageName,discipline:member.discipline,cover:member.front,sample:member.sample}))}])));
 ---
-<div class="pbn-commerce" data-book-commerce data-cart-catalogue={JSON.stringify(cartCatalogue)}>
-  <nav class="pbn-commerce-nav" aria-label="Book shop navigation">
-    <a href="/shop">Pinnacle Bookshop</a><a href="/shop#pbn-books">Books</a><a href="/shop#pbn-collections">Collections</a><a href="/shop#pbn-look-inside">Free samples</a>
-    <button type="button" data-cart-open>Book bag <span data-cart-count>0</span></button>
+<div class:list={["pbn-commerce","pbn-commerce-lang-"+locale]} data-book-commerce data-cart-locale={locale} data-cart-strings={JSON.stringify(strings)} data-cart-collections={routes.compareCollections} data-cart-catalogue={JSON.stringify(cartCatalogue)}>
+  <nav class="pbn-commerce-nav" aria-label={strings.navAria}>
+    <a href={routes.shop}>{strings.navShop}</a><a href={routes.books}>{strings.navBooks}</a><a href={routes.collections}>{strings.navCollections}</a><a href={routes.samples}>{strings.navSamples}</a>
+    <button type="button" data-cart-open>{strings.bookBag} <span data-cart-count>0</span></button>
   </nav>
   <dialog class="pbn-cart" aria-labelledby="pbn-cart-title">
     <header class="pbn-cart-heading">
-      <div><p class="pbn-cart-eyebrow">Pinnacle Blooms Network · Bookshop</p><h2 id="pbn-cart-title">A little reading. A world to share.</h2></div>
-      <button type="button" data-cart-close aria-label="Close book bag">×</button>
+      <div><p class="pbn-cart-eyebrow">{strings.brandEyebrow}</p><h2 id="pbn-cart-title">{strings.bagHeadline}</h2></div>
+      <button type="button" data-cart-close aria-label={strings.closeBagAria}>×</button>
     </header>
     <div class="pbn-cart-layout">
-      <section class="pbn-cart-selection" aria-label="Your book bag">
-        <p class="pbn-cart-intro">Your book bag, ready for your next everyday moment together.</p>
+      <section class="pbn-cart-selection" aria-label={strings.selectionAria}>
+        <p class="pbn-cart-intro">{strings.bagIntro}</p>
         <div data-cart-items></div>
         <div class="pbn-cart-reassurance">
-          <span>Full-colour illustrated PDFs</span><span>45 pages in each complete book</span><span>Read on phone, tablet or computer</span>
+          <span>{strings.reassuranceColour}</span><span>{strings.reassurancePages}</span><span>{strings.reassuranceDevices}</span>
         </div>
         <section class="pbn-cart-reading" aria-labelledby="pbn-cart-reading-title">
-          <p class="pbn-cart-eyebrow">Made for reading together</p>
-          <h3 id="pbn-cart-reading-title">One page. One useful conversation.</h3>
-          <p>Each volume brings 31 picture-led learning pages into familiar moments: communicating, playing, joining routines and understanding behaviour. An adult guides the reading and chooses what suits the child.</p>
-          <p class="pbn-cart-authors">By Dr. Koti Reddy Saripalli &amp; Dr. Sreeja Reddy Saripalli.<br/><a href="/leadership" target="_blank" rel="noopener">Meet the authors ↗</a></p>
+          <p class="pbn-cart-eyebrow">{strings.readingEyebrow}</p>
+          <h3 id="pbn-cart-reading-title">{strings.readingHeadline}</h3>
+          <p>{strings.readingDescription}</p>
+          <p class="pbn-cart-authors">{strings.authors}<br/><a href="/leadership" target="_blank" rel="noopener">{strings.meetAuthors}</a></p>
         </section>
       </section>
-      <aside class="pbn-cart-summary" aria-label="Order summary and delivery">
+      <aside class="pbn-cart-summary" aria-label={strings.summaryAria}>
         <div class="pbn-cart-bottom">
-          <p class="pbn-cart-total-label">Your total <strong data-cart-total>₹0</strong></p>
-          <p class="pbn-cart-note" data-cart-file-count>Select a book to begin.</p>
-          <a class="pbn-cart-checkout" data-cart-checkout hidden>Continue to secure checkout →</a>
+          <p class="pbn-cart-total-label">{strings.yourTotal} <strong data-cart-total>₹0</strong></p>
+          <p class="pbn-cart-note" data-cart-file-count>{strings.selectBook}</p>
+          <a class="pbn-cart-checkout" data-cart-checkout hidden>{strings.checkout}</a>
           <p class="pbn-cart-message" role="status" aria-live="polite" data-cart-message></p>
           <div class="pbn-cart-delivery">
-            <h3>Your books, by email.</h3>
-            <ol><li>Enter your email at checkout.</li><li>Complete your payment.</li><li>Open the download links in your email.</li></ol>
-            <p>Complete PDF ebooks. No shipping charge or printed copy.</p>
+            <h3>{strings.deliveryHeadline}</h3>
+            <ol><li>{strings.deliveryStepEmail}</li><li>{strings.deliveryStepPay}</li><li>{strings.deliveryStepDownload}</li></ol>
+            <p>{strings.deliveryNote}</p>
           </div>
-          <a class="pbn-cart-support" href="tel:+919100181181"><span>Need help choosing or downloading?</span><strong>Call 9100 181 181 ↗</strong></a>
+          <a class="pbn-cart-support" href="tel:+919100181181"><span>{strings.supportQuestion}</span><strong>{strings.supportCall}</strong></a>
           <a class="pbn-cart-email" href="mailto:care@pinnacleblooms.org">care@pinnacleblooms.org</a><br />
-          <a class="pbn-cart-email" href="https://wa.me/919100181181?text=Hello%20Pinnacle%2C%20I%20would%20like%20help%20choosing%20a%20book%20or%20collection." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp book support (opens in a new tab)">WhatsApp book support ↗</a>
+          <a class="pbn-cart-email" href={'https://wa.me/919100181181?text='+encodeURIComponent(strings.whatsappMessage)} target="_blank" rel="noopener noreferrer" aria-label={strings.whatsappAria}>{strings.whatsappSupport}</a>
         </div>
       </aside>
       <section class="pbn-cart-proof" aria-labelledby="pbn-cart-proof-title">
-        <div class="pbn-cart-proof-intro"><p class="pbn-cart-eyebrow">Know the organisation behind the books</p><h3 id="pbn-cart-proof-title">Our evidence. Open to you.</h3><p>Explore the original records and documented scope through Pinnacle Verify.</p><a href="/verify/" target="_blank" rel="noopener">Explore Pinnacle Verify ↗</a></div>
+        <div class="pbn-cart-proof-intro"><p class="pbn-cart-eyebrow">{strings.evidenceEyebrow}</p><h3 id="pbn-cart-proof-title">{strings.evidenceHeadline}</h3><p>{strings.evidenceDescription}</p><a href="/verify/" target="_blank" rel="noopener">{strings.evidenceExplore}</a></div>
         <div class="pbn-cart-proof-links">
-          <a href="/verify/evidence/records/md5.html" target="_blank" rel="noopener"><span class="pbn-cart-proof-tag">PinnacleAI® · MD-5</span><strong>Software manufacturing licence</strong><span>MFG/MD/2026/000248<br/>Telangana Drugs Control Administration</span><span class="pbn-cart-proof-action">Read the licence &amp; its scope ↗</span></a>
-          <a href="/verify/evidence/records/bis.html" target="_blank" rel="noopener"><span class="pbn-cart-proof-tag">BIS · Quality management</span><strong>Quality-system record</strong><span>MD/L-2026029599<br/>IS 23485:2019</span><span class="pbn-cart-proof-action">Read the certificate &amp; its scope ↗</span></a>
+          <a href="/verify/evidence/records/md5.html" target="_blank" rel="noopener"><span class="pbn-cart-proof-tag">PinnacleAI® · MD-5</span><strong>{strings.licenceTitle}</strong><span>MFG/MD/2026/000248<br/>{strings.licenceAuthority}</span><span class="pbn-cart-proof-action">{strings.licenceAction}</span></a>
+          <a href="/verify/evidence/records/bis.html" target="_blank" rel="noopener"><span class="pbn-cart-proof-tag">{strings.qualityTag}</span><strong>{strings.qualityTitle}</strong><span>MD/L-2026029599<br/>IS 23485:2019</span><span class="pbn-cart-proof-action">{strings.qualityAction}</span></a>
         </div>
-        <p class="pbn-cart-scope">These records cover the named PinnacleAI software and quality-system scopes. The books are educational resources; the records do not certify a book or guarantee a child’s outcome.</p>
+        <p class="pbn-cart-scope">{strings.scope}</p>
       </section>
     </div>
   </dialog>
   <p class="pbn-commerce-status" role="status" aria-live="polite" data-shop-status></p>
 </div>
+<style>.pbn-commerce-lang-hi,.pbn-commerce-lang-hi :is(h2,h3,p,a,button,span,strong,li){font-family:AnekHindi,sans-serif}.pbn-commerce-lang-te,.pbn-commerce-lang-te :is(h2,h3,p,a,button,span,strong,li){font-family:AnekTelugu,sans-serif}</style>
 <script is:inline src="/pinnacle-pages-scripts/book-commerce.js" defer></script>

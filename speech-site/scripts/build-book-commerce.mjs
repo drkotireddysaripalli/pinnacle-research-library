@@ -5,6 +5,7 @@ import path from 'node:path';
 import assert from 'node:assert/strict';
 import sharp from 'sharp';
 import books from '../src/data/book-catalog.json' with {type:'json'};
+import languageBooks from '../src/data/book-locales.json' with {type:'json'};
 const root=path.resolve(import.meta.dirname,'..');
 const origin='https://www.pinnacleblooms.org';
 const assets=path.join(root,'public/pinnacle-pages-assets/books-20261002');
@@ -24,7 +25,7 @@ for(const pair of books.filter(b=>b.bookCount===2&&b.formatCode==='PDF')){
  await fs.copyFile(target,path.join(root,'src/assets/books',pair.assetId+'.jpg'));
 }
 await fs.copyFile(path.join(assets,'four-book-collection.png'),path.join(assets,'collection.png'));
-const routes={'/shop':'shop-index','/books':'books-index',...Object.fromEntries(books.map(b=>[b.path,'book-'+b.slug]))};
+const routes={'/shop':'shop-index','/books':'books-index','/books/hi':'books-hi-index','/books/te':'books-te-index',...Object.fromEntries(languageBooks.map(b=>[b.path,'book-'+b.locale+'-'+b.slug])),...Object.fromEntries(books.map(b=>[b.path,'book-'+b.slug]))};
 const handler=path.join(root,'deployment/speech-handler.mjs');
 const previous=await fs.readFile(handler,'utf8');
 assert(previous.startsWith('export const BOOK_ROUTES='));

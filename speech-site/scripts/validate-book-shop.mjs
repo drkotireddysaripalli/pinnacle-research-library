@@ -25,3 +25,5 @@ const feed=fs.readFileSync('public/pinnacle-pages-data/books-merchant-feed.xml',
 assert.equal((feed.match(/<g:availability>in_stock/g)||[]).length,11);
 assert.equal((feed.match(/<g:availability>out_of_stock/g)||[]).length,22);
 console.log('PASS: shop,33 editions,11 purchasable PDFs,22 unavailable print editions, samples and feed.');
+
+await import('./validate-book-languages.mjs');

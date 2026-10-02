@@ -1,7 +1,9 @@
 ---
+import BookLanguageNav from '../../components/BookLanguageNav.astro';
 import BookCart from '../../components/BookCart.astro';
 import PageLayout from '../../layouts/PageLayout.astro';
 import books from '../../data/book-catalog.json';
+import nativeBooks from '../../data/book-locales.json';
 import type { ImageMetadata } from 'astro';
 import '../../styles/book-pages.css';
 export function getStaticPaths(){return books.map(book=>({params:{slug:book.slug},props:{book}}));}
@@ -25,8 +27,8 @@ const money=(value:number)=>'₹'+value.toLocaleString('en-IN');
 const title=book.bundle?book.feedTitle:book.title+' — '+book.discipline+' — '+book.format;
 const graph=[{'@type':book.bundle?'Product':['Book','Product'],'@id':origin+book.path+'#product',name:title,description:book.shortDescription,url:origin+book.path,sku:book.sku,brand:{'@id':origin+'/verify/#pinnacle-brand'},image:[origin+book.front,...(book.back?[origin+book.back]:[])],...(book.bundle?{}:{inLanguage:'en-IN',bookFormat:'https://schema.org/'+(!book.physical?'EBook':book.sku.endsWith('-PB')?'Paperback':'Hardcover'),author:book.authors.map(name=>({'@type':'Person',name,url:origin+'/leadership'})),publisher:{'@type':'Organization',name:'Pinnacle Blooms Network',url:origin+'/books'}}),offers:{'@type':'Offer',price:book.price,priceCurrency:'INR',availability:'https://schema.org/'+(book.acceptOrders?'InStock':'OutOfStock'),itemCondition:'https://schema.org/NewCondition',url:origin+book.path}}];
 ---
-<PageLayout title={title+' | Pinnacle Blooms Network'} description={book.shortDescription} path={book.path} label={book.title} shareImage={covers[book.assetId]} shareFit="contain" imageAlt={book.coverAlt} includeService={false} documentOnly={true} primaryEntityId={origin+book.path+'#product'} entityGraph={graph} breadcrumbParent={{name:'Parent books',path:'/books'}}>
- <BookCart />
+<PageLayout title={title+' | Pinnacle Blooms Network'} description={book.shortDescription} path={book.path} label={book.title} shareImage={covers[book.assetId]} languageAlternates={book.physical?[]:[{language:'en-IN',path:book.path},...nativeBooks.filter(b=>b.englishPath===book.path).map(b=>({language:b.language,path:b.path})),{language:'x-default',path:book.path}]} shareFit="contain" imageAlt={book.coverAlt} includeService={false} documentOnly={true} primaryEntityId={origin+book.path+'#product'} entityGraph={graph} breadcrumbParent={{name:'Parent books',path:'/books'}}>
+ <BookCart /><BookLanguageNav englishPath={ebook.path}/>
  <article class="pbn-book-page">
   <div class="wrap pbn-book-crumb"><a href="/books">← All Pinnacle 101 books</a></div>
   <section class="wrap pbn-book-hero">
