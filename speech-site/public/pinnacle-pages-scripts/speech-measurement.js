@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const id = 'G-H9CLX1WJ7R';
+  const id = 'G-2BYLRLFRDJ';
   const origin = 'https://www.pinnacleblooms.org';
   const pages = {
     '/top-speech-therapy-center-india-proven-improvement-rate': {title:'Pinnacle Speech Therapy',group:'speech_therapy',service:'speech'},
@@ -29,17 +29,19 @@
   for (const path of ['/policies','/payment-and-billing','/privacy-policy','/terms-of-use','/terms-of-service','/cookie-policy','/copyright-and-intellectual','/age-restriction-policy','/contact-information','/disclaimer-and-limitations-of-liabilities','/endorsement-and-testimonial','/governing-and-jurisdiction','/third-party-inegration','/refund-policy','/staff-declaration','/ethics-charter']) {
     pages[path] = {title:'Pinnacle Public Information',group:'public_information',service:'help'};
   }
+  // Only known catalogue paths enter the route allowlist; restrict their URL shape as well.
+  const isBookPath = path => typeof path === 'string' && /^\/books\/(?:[a-z0-9-]+|(?:hi|te)\/[a-z0-9-]+|editions\/(?:hi|te)\/[a-z0-9-]+)$/.test(path);
   let commerceCatalogue = {};
   try {
     const raw = JSON.parse(document.querySelector('[data-book-commerce]')?.dataset?.cartCatalogue || '{}');
     commerceCatalogue = Object.fromEntries(Object.entries(raw).filter(([sku, item]) =>
       /^PBN-[A-Z0-9-]+$/.test(sku) && item && typeof item.title === 'string' &&
-      /^\/books\/[a-z0-9-]+$/.test(item.path) && Number.isFinite(item.price) && item.price >= 0
+      isBookPath(item.path) && Number.isFinite(item.price) && item.price >= 0
     ));
   } catch {}
   if (Object.keys(commerceCatalogue).length) {
-    const bookPaths = ['/shop', '/books', ...Object.values(commerceCatalogue).flatMap(item =>
-      [item.path, ...(Array.isArray(item.editionPaths) ? item.editionPaths.filter(path => /^\/books\/[a-z0-9-]+$/.test(path)) : [])])];
+    const bookPaths = ['/shop', '/books', '/books/hi', '/books/te', ...Object.values(commerceCatalogue).flatMap(item =>
+      [item.path, ...(Array.isArray(item.editionPaths) ? item.editionPaths.filter(isBookPath) : [])])];
     for (const path of bookPaths) pages[path] = {title:'Pinnacle Bookshop',group:'bookshop',service:'help'};
   }
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};

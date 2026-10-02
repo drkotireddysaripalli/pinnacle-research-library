@@ -223,3 +223,45 @@ test('product views and sample clicks are measured once consent is present',()=>
  const print=harness({path:commerceFixture[commerceLine.sku].editionPaths[1],commerceCatalogue:commerceFixture});print.choose('accepted');
  assert.deepEqual(print.events().map(e=>e[1]),['page_view']);
 });
+
+
+test('authorized GA4 main stream receives one page view after repeated acceptance',()=>{
+ const h=harness();h.choose('accepted');h.choose('accepted');
+ assert.equal(h.scripts.length,1);
+ assert.equal(h.scripts[0].src,'https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ');
+ assert.equal(h.events().filter(e=>e[1]==='page_view').length,1);
+ assert(h.events().every(e=>e[2].send_to==='G-2BYLRLFRDJ'));
+ const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config');
+ assert.equal(config[1],'G-2BYLRLFRDJ');assert.equal(config[2].send_page_view,false);
+});
+
+test('all native and English purchase book routes receive consented commerce events',()=>{
+ const native=JSON.parse(fs.readFileSync('src/data/book-locales.json','utf8'));
+ const merchant=JSON.parse(fs.readFileSync('src/data/book-merchant-editions.json','utf8'));
+ for(const entry of [...native,...merchant.map(item=>({...native.find(book=>book.sku===item.sku),...item}))]){
+  const catalogue={[entry.sku]:{title:entry.title,path:entry.path,price:entry.price,editionPaths:[entry.path]}};
+  const line={sku:entry.sku,quantity:1,price:entry.price};
+  const h=harness({path:entry.path,commerceCatalogue:catalogue});
+  h.commerce('add_to_cart',[line]);assert.equal(h.events().length,0,entry.path);
+  h.choose('accepted');h.commerce('add_to_cart',[line]);
+  assert.deepEqual(h.events().map(e=>e[1]),['page_view','view_item','add_to_cart'],entry.path);
+  assert(h.events().every(e=>e[2].send_to==='G-2BYLRLFRDJ'&&e[2].page_location==='https://www.pinnacleblooms.org'+entry.path),entry.path);
+  assert(!JSON.stringify(h.events()).includes('private-child-detail'));
+  h.choose('declined');h.commerce('begin_checkout',[line]);assert.equal(h.events().length,3,entry.path);
+  const g=harness({path:entry.path,commerceCatalogue:catalogue,gpc:true});g.choose('accepted');g.commerce('add_to_cart',[line]);assert.equal(g.events().length,0,entry.path);
+ }
+ for(const path of ['/books/hi','/books/te']){
+  const h=harness({path,commerceCatalogue:commerceFixture});h.choose('accepted');h.commerce('add_to_cart',[commerceLine]);
+  assert.deepEqual(h.events().map(e=>e[1]),['page_view','add_to_cart'],path);
+ }
+});
+
+test('native route expansion rejects unknown paths and malformed catalogue destinations',()=>{
+ for(const path of ['/books/hi/unpublished','/books/te/unpublished','/books/editions/hi/unpublished','/books/editions/te/unpublished','/books/fr/speech-101']){
+  const h=harness({path,commerceCatalogue:commerceFixture});h.choose('accepted');h.commerce('add_to_cart',[commerceLine]);assert.equal(h.events().length,0,path);
+ }
+ for(const path of ['https://evil.example/books/hi/speech-101','/books/fr/speech-101','/books/hi/speech-101?name=private','/books/hi/speech-101#private','/books/hi/../speech-101','/books/editions/te/unknown/nested']){
+  const catalogue={[commerceLine.sku]:{...commerceFixture[commerceLine.sku],path,editionPaths:[path]}};
+  const h=harness({path,commerceCatalogue:catalogue});h.choose('accepted');h.commerce('add_to_cart',[commerceLine]);assert.equal(h.events().length,0,path);
+ }
+});
