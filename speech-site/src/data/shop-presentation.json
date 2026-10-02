@@ -1,0 +1,122 @@
+{
+  "books": [
+    {
+      "handle": "speech-communication-101-my-message-matters",
+      "title": "My Message Matters",
+      "discipline": "Speech & Communication 101",
+      "goal": "Help every message be heard.",
+      "copy": "Follow gestures, sounds, words and pictures. Find everyday ways to connect.",
+      "label": "Communication",
+      "asset": "pbn-speech-cover.webp",
+      "fallback_url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters",
+      "sample_url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/book-samples-sales-v2-20261002/speech-sample.pdf",
+      "price": "\u20b9799",
+      "key": "speech"
+    },
+    {
+      "handle": "occupational-therapy-101-i-belong-in-everyday-life",
+      "title": "I Belong in Everyday Life",
+      "discipline": "Occupational Therapy 101",
+      "goal": "Make everyday routines more welcoming.",
+      "copy": "Explore comfort, movement, play and participation in familiar family routines.",
+      "label": "Everyday participation",
+      "asset": "pbn-ot-cover.webp",
+      "fallback_url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life",
+      "sample_url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/book-samples-sales-v2-20261002/ot-sample.pdf",
+      "price": "\u20b9799",
+      "key": "ot"
+    },
+    {
+      "handle": "aba-parent-education-101-understanding-everyday-behaviour",
+      "title": "Understanding Everyday Behaviour",
+      "discipline": "ABA Parent Education 101",
+      "goal": "Understand the need behind behaviour.",
+      "copy": "Notice context, offer choices and build more supportive everyday responses.",
+      "label": "Understanding behaviour",
+      "asset": "pbn-aba-cover.webp",
+      "fallback_url": "https://www.pinnacleblooms.org/books/aba-parent-education-101-understanding-everyday-behaviour",
+      "sample_url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/book-samples-sales-v2-20261002/aba-sample.pdf",
+      "price": "\u20b9799",
+      "key": "aba"
+    },
+    {
+      "handle": "special-education-101-learning-through-everyday-play",
+      "title": "Learning Through Everyday Play",
+      "discipline": "Special Education 101",
+      "goal": "Make room for playful learning.",
+      "copy": "Bring curiosity, choice and early learning into games you already enjoy.",
+      "label": "Early learning",
+      "asset": "pbn-special-education-cover.webp",
+      "fallback_url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play",
+      "sample_url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/book-samples-sales-v2-20261002/special-education-sample.pdf",
+      "price": "\u20b9799",
+      "key": "special-education"
+    }
+  ],
+  "pairs": [
+    {
+      "handle": "pinnacle-101-speech-occupational-pair",
+      "title": "Communication & Everyday Participation \u2014 Two-Book Collection",
+      "label": "Communication + Everyday participation",
+      "members": [
+        0,
+        1
+      ],
+      "fallback_url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-occupational-pdf-pair"
+    },
+    {
+      "handle": "pinnacle-101-speech-behaviour-pair",
+      "title": "Communication & Understanding Behaviour \u2014 Two-Book Collection",
+      "label": "Communication + Understanding behaviour",
+      "members": [
+        0,
+        2
+      ],
+      "fallback_url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-behaviour-pdf-pair"
+    },
+    {
+      "handle": "pinnacle-101-speech-learning-pair",
+      "title": "Communication & Learning Through Play \u2014 Two-Book Collection",
+      "label": "Communication + Early learning",
+      "members": [
+        0,
+        3
+      ],
+      "fallback_url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-learning-pdf-pair"
+    },
+    {
+      "handle": "pinnacle-101-occupational-behaviour-pair",
+      "title": "Everyday Participation & Understanding Behaviour \u2014 Two-Book Collection",
+      "label": "Everyday participation + Understanding behaviour",
+      "members": [
+        1,
+        2
+      ],
+      "fallback_url": "https://www.pinnacleblooms.org/books/pinnacle-101-occupational-behaviour-pdf-pair"
+    },
+    {
+      "handle": "pinnacle-101-occupational-learning-pair",
+      "title": "Everyday Participation & Early Learning \u2014 Two-Book Collection",
+      "label": "Everyday participation + Early learning",
+      "members": [
+        1,
+        3
+      ],
+      "fallback_url": "https://www.pinnacleblooms.org/books/pinnacle-101-occupational-learning-pdf-pair"
+    },
+    {
+      "handle": "pinnacle-101-behaviour-learning-pair",
+      "title": "Understanding Behaviour & Early Learning \u2014 Two-Book Collection",
+      "label": "Understanding behaviour + Early learning",
+      "members": [
+        2,
+        3
+      ],
+      "fallback_url": "https://www.pinnacleblooms.org/books/pinnacle-101-behaviour-learning-pdf-pair"
+    }
+  ],
+  "collection": {
+    "handle": "pinnacle-101-four-book-collection",
+    "fallback_url": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-pdf-collection"
+  }
+}

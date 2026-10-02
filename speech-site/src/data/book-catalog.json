@@ -10,9 +10,9 @@
     "format": "PDF ebook",
     "physical": false,
     "price": 799,
-    "availability": "out_of_stock",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The PDF edition is prepared. Online purchase and delivery are not yet available. Orders are closed.",
+    "availability": "in_stock",
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Understand the message. Make room for the next one.",
     "shortDescription": "Pinnacle Blooms Network’s Speech & Communication 101 parent guide: 31 illustrated pages on gestures, words, AAC, choices and everyday family communication.",
     "description": "My Message Matters is the Speech & Communication 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore everyday communication through gestures, sounds, words, pictures and established augmentative and alternative communication (AAC).\n\nExplore familiar play, real choices, comfortable response time, shared books, family languages and useful messages such as help, stop, more and finished. The emphasis is on responding to meaning and keeping communication available, including established augmentative and alternative communication (AAC).\n\nFor parents and caregivers looking for speech and language support ideas to discuss and share in everyday routines, including families supporting a child with speech delay or different communication needs.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
@@ -188,7 +188,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -200,7 +200,7 @@
       },
       {
         "question": "Can I order this edition now?",
-        "answer": "The PDF edition is prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive your complete PDF download links by email after successful payment. No printed copy is included."
       }
     ],
     "links": [
@@ -240,9 +240,10 @@
       "PBN-SP-101-EN-PDF"
     ],
     "assetId": "speech",
-    "acceptOrders": false,
+    "acceptOrders": true,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "shopifyVariantId": "45295972646978"
   },
   {
     "slug": "speech-communication-101-my-message-matters-softcover",
@@ -433,7 +434,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -678,7 +679,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -745,9 +746,9 @@
     "format": "PDF ebook",
     "physical": false,
     "price": 799,
-    "availability": "out_of_stock",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The PDF edition is prepared. Online purchase and delivery are not yet available. Orders are closed.",
+    "availability": "in_stock",
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Small changes. More ways to join in.",
     "shortDescription": "Pinnacle Blooms Network’s Occupational Therapy 101 parent guide: 31 illustrated pages on accessible play, dressing, washing, comfort and everyday participation.",
     "description": "I Belong in Everyday Life is the Occupational Therapy 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore comfortable access, meaningful everyday roles and different ways for a child to take part.\n\nExplore comfortable access, suitable play materials, stable setups, dressing choices, washing steps, mealtime roles and supported breaks. Notice the child’s preferences, offer practical help and adjust the surroundings before adding demands.\n\nFor parents and caregivers seeking practical ways to support play, dressing, washing and daily routines, including families navigating sensory preferences, motor differences or developmental support needs.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
@@ -923,7 +924,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -935,7 +936,7 @@
       },
       {
         "question": "Can I order this edition now?",
-        "answer": "The PDF edition is prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive your complete PDF download links by email after successful payment. No printed copy is included."
       }
     ],
     "links": [
@@ -975,9 +976,10 @@
       "PBN-OT-101-EN-PDF"
     ],
     "assetId": "occupational",
-    "acceptOrders": false,
+    "acceptOrders": true,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "shopifyVariantId": "45295972745282"
   },
   {
     "slug": "occupational-therapy-101-i-belong-in-everyday-life-softcover",
@@ -1168,7 +1170,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -1413,7 +1415,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -1480,9 +1482,9 @@
     "format": "PDF ebook",
     "physical": false,
     "price": 799,
-    "availability": "out_of_stock",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The PDF edition is prepared. Online purchase and delivery are not yet available. Orders are closed.",
+    "availability": "in_stock",
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Understand the moment. Find a helpful response.",
     "shortDescription": "Pinnacle Blooms Network’s ABA Parent Education 101 guide: 31 illustrated pages on understanding behaviour through comfort, communication, choices and support.",
     "description": "Understanding Everyday Behaviour is the ABA Parent Education 101 illustrated guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages help adults notice communication, comfort, choices and the surrounding situation before deciding how to respond.\n\nExplore genuine choices, useful cues, manageable transitions, response time, supported breaks and ways to ask what would help. The pages welcome the child’s perspective and show practical ways to offer support without turning every moment into a test.\n\nFor parents and caregivers seeking a thoughtful introduction to supportive responses, everyday observations and manageable routines, including families supporting autistic children or children with different developmental needs.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
@@ -1658,7 +1660,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -1670,7 +1672,7 @@
       },
       {
         "question": "Can I order this edition now?",
-        "answer": "The PDF edition is prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive your complete PDF download links by email after successful payment. No printed copy is included."
       }
     ],
     "links": [
@@ -1710,9 +1712,10 @@
       "PBN-ABA-101-EN-PDF"
     ],
     "assetId": "behaviour",
-    "acceptOrders": false,
+    "acceptOrders": true,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "shopifyVariantId": "45295972843586"
   },
   {
     "slug": "aba-parent-education-101-understanding-everyday-behaviour-softcover",
@@ -1903,7 +1906,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -2148,7 +2151,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -2215,9 +2218,9 @@
     "format": "PDF ebook",
     "physical": false,
     "price": 799,
-    "availability": "out_of_stock",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The PDF edition is prepared. Online purchase and delivery are not yet available. Orders are closed.",
+    "availability": "in_stock",
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Follow their curiosity. Make learning feel possible.",
     "shortDescription": "Pinnacle Blooms Network’s Special Education 101 guide: 31 illustrated pages on accessible early learning through play, stories, matching, shapes and creative choices.",
     "description": "Learning Through Everyday Play is the Special Education 101 illustrated parent and educator guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore accessible early learning through familiar objects, stories, choices and shared play.\n\nShare accessible ideas for cause and effect, matching, position, simple quantities, shapes, patterns, pretend play, books and making marks. Welcome watching, choosing, directing and trying, with suitable materials and adult support.\n\nFor parents, caregivers and educators looking for inclusive early-learning ideas, including families supporting a child with developmental delay or different learning and participation needs.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
@@ -2393,7 +2396,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -2405,7 +2408,7 @@
       },
       {
         "question": "Can I order this edition now?",
-        "answer": "The PDF edition is prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive your complete PDF download links by email after successful payment. No printed copy is included."
       }
     ],
     "links": [
@@ -2445,9 +2448,10 @@
       "PBN-SE-101-EN-PDF"
     ],
     "assetId": "learning",
-    "acceptOrders": false,
+    "acceptOrders": true,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "shopifyVariantId": "45295972941890"
   },
   {
     "slug": "special-education-101-learning-through-everyday-play-softcover",
@@ -2638,7 +2642,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -2883,7 +2887,7 @@
       },
       {
         "question": "How much does the book cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I buy a printed copy now?",
@@ -2974,11 +2978,11 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
-        "answer": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive the complete PDF books as separate download links by email after successful payment. Printed editions remain out of stock."
       }
     ],
     "links": [
@@ -3026,12 +3030,13 @@
     "assetId": "pair-speech-occupational",
     "physical": false,
     "price": 1399,
-    "availability": "out_of_stock",
-    "acceptOrders": false,
+    "availability": "in_stock",
+    "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
+    "shopifyVariantId": "45295973040194"
   },
   {
     "slug": "pinnacle-101-speech-occupational-softcover-pair",
@@ -3068,7 +3073,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -3162,7 +3167,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -3256,11 +3261,11 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
-        "answer": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive the complete PDF books as separate download links by email after successful payment. Printed editions remain out of stock."
       }
     ],
     "links": [
@@ -3308,12 +3313,13 @@
     "assetId": "pair-speech-behaviour",
     "physical": false,
     "price": 1399,
-    "availability": "out_of_stock",
-    "acceptOrders": false,
+    "availability": "in_stock",
+    "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
+    "shopifyVariantId": "45295973466178"
   },
   {
     "slug": "pinnacle-101-speech-behaviour-softcover-pair",
@@ -3350,7 +3356,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -3444,7 +3450,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -3538,11 +3544,11 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
-        "answer": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive the complete PDF books as separate download links by email after successful payment. Printed editions remain out of stock."
       }
     ],
     "links": [
@@ -3590,12 +3596,13 @@
     "assetId": "pair-speech-learning",
     "physical": false,
     "price": 1399,
-    "availability": "out_of_stock",
-    "acceptOrders": false,
+    "availability": "in_stock",
+    "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
+    "shopifyVariantId": "45295973564482"
   },
   {
     "slug": "pinnacle-101-speech-learning-softcover-pair",
@@ -3632,7 +3639,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -3726,7 +3733,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -3820,11 +3827,11 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
-        "answer": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive the complete PDF books as separate download links by email after successful payment. Printed editions remain out of stock."
       }
     ],
     "links": [
@@ -3872,12 +3879,13 @@
     "assetId": "pair-occupational-behaviour",
     "physical": false,
     "price": 1399,
-    "availability": "out_of_stock",
-    "acceptOrders": false,
+    "availability": "in_stock",
+    "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
+    "shopifyVariantId": "45295973662786"
   },
   {
     "slug": "pinnacle-101-occupational-behaviour-softcover-pair",
@@ -3914,7 +3922,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -4008,7 +4016,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -4102,11 +4110,11 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
-        "answer": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive the complete PDF books as separate download links by email after successful payment. Printed editions remain out of stock."
       }
     ],
     "links": [
@@ -4154,12 +4162,13 @@
     "assetId": "pair-occupational-learning",
     "physical": false,
     "price": 1399,
-    "availability": "out_of_stock",
-    "acceptOrders": false,
+    "availability": "in_stock",
+    "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
+    "shopifyVariantId": "45295973761090"
   },
   {
     "slug": "pinnacle-101-occupational-learning-softcover-pair",
@@ -4196,7 +4205,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -4290,7 +4299,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -4384,11 +4393,11 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
-        "answer": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive the complete PDF books as separate download links by email after successful payment. Printed editions remain out of stock."
       }
     ],
     "links": [
@@ -4436,12 +4445,13 @@
     "assetId": "pair-behaviour-learning",
     "physical": false,
     "price": 1399,
-    "availability": "out_of_stock",
-    "acceptOrders": false,
+    "availability": "in_stock",
+    "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The 2 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
+    "shopifyVariantId": "45295973859394"
   },
   {
     "slug": "pinnacle-101-behaviour-learning-softcover-pair",
@@ -4478,7 +4488,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -4572,7 +4582,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -4642,9 +4652,9 @@
     "format": "Four separate PDF files",
     "physical": false,
     "price": 2499,
-    "availability": "out_of_stock",
-    "statusText": "Currently unavailable",
-    "statusDetail": "The 4 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed.",
+    "availability": "in_stock",
+    "statusText": "Available as a PDF ebook",
+    "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Communication. Participation. Understanding. Learning.",
     "shortDescription": "Four illustrated English PDF ebooks from Pinnacle Blooms Network, covering everyday communication, participation, understanding behaviour and accessible early learning. All four Pinnacle 101 volumes in one collection.",
     "description": "The Pinnacle 101 Parent Visual Library four-book PDF collection brings together “My Message Matters”, “I Belong in Everyday Life”, “Understanding Everyday Behaviour” and “Learning Through Everyday Play”, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli.\n\nExplore communication, participation in family routines, thoughtful observation of behaviour and accessible learning through play. Select the perspective relevant to the moment, without having to follow the books in a fixed order.\n\n4 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The set contains 124 distinct core learning pages; the same nine PinnacleAI and Verify pages appear in each volume.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
@@ -4668,11 +4678,11 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
-        "answer": "The 4 PDF editions are prepared. Online purchase and delivery are not yet available. Orders are closed."
+        "answer": "Receive the complete PDF books as separate download links by email after successful payment. Printed editions remain out of stock."
       }
     ],
     "links": [
@@ -4710,9 +4720,10 @@
       "PBN-SE-101-EN-PDF"
     ],
     "assetId": "collection",
-    "acceptOrders": false,
+    "acceptOrders": true,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "shopifyVariantId": "45295974285378"
   },
   {
     "slug": "pinnacle-101-four-book-softcover-collection",
@@ -4751,7 +4762,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",
@@ -4834,7 +4845,7 @@
       },
       {
         "question": "How much does the collection cost?",
-        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. Every offer is currently unavailable and orders are closed."
+        "answer": "The PDF and full-colour softcover editions are ₹799 per book, ₹1,399 per two-book pair and ₹2,499 for all four. Premium hardbound editions are ₹1,699 per book, ₹2,999 per pair and ₹5,499 for all four. PDF ebooks are available online. Printed editions are currently out of stock."
       },
       {
         "question": "Can I order this collection now?",

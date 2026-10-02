@@ -1,0 +1,67 @@
+---
+import '../styles/book-cart.css';
+import books from '../data/book-catalog.json';
+import presentation from '../data/shop-presentation.json';
+const singles = books.filter(book => !book.physical && !book.bundle);
+const cartCatalogue = Object.fromEntries(books.filter(book => !book.physical).map(book => [book.sku, {
+  title: book.title,
+  path: book.path,
+  books: book.includesSkus.map(sku => {
+    const member = singles.find(item => item.sku === sku)!;
+    const visual = presentation.books.find(item => item.fallback_url.endsWith(member.path))!;
+    return { sku: member.sku, title: member.title, discipline: member.discipline, cover: '/pinnacle-pages-assets/shop-20261002/' + visual.asset, sample: visual.sample_url };
+  })
+}]));
+---
+<div class="pbn-commerce" data-book-commerce data-cart-catalogue={JSON.stringify(cartCatalogue)}>
+  <nav class="pbn-commerce-nav" aria-label="Book shop navigation">
+    <a href="/shop">Pinnacle Bookshop</a><a href="/shop#pbn-books">Books</a><a href="/shop#pbn-collections">Collections</a><a href="/shop#pbn-look-inside">Free samples</a>
+    <button type="button" data-cart-open>Book bag <span data-cart-count>0</span></button>
+  </nav>
+  <dialog class="pbn-cart" aria-labelledby="pbn-cart-title">
+    <header class="pbn-cart-heading">
+      <div><p class="pbn-cart-eyebrow">Pinnacle Blooms Network · Bookshop</p><h2 id="pbn-cart-title">A little reading. A world to share.</h2></div>
+      <button type="button" data-cart-close aria-label="Close book bag">×</button>
+    </header>
+    <div class="pbn-cart-layout">
+      <section class="pbn-cart-selection" aria-label="Your book bag">
+        <p class="pbn-cart-intro">Your book bag, ready for your next everyday moment together.</p>
+        <div data-cart-items></div>
+        <div class="pbn-cart-reassurance">
+          <span>Full-colour illustrated PDFs</span><span>45 pages in each complete book</span><span>Read on phone, tablet or computer</span>
+        </div>
+        <section class="pbn-cart-reading" aria-labelledby="pbn-cart-reading-title">
+          <p class="pbn-cart-eyebrow">Made for reading together</p>
+          <h3 id="pbn-cart-reading-title">One page. One useful conversation.</h3>
+          <p>Each volume brings 31 picture-led learning pages into familiar moments: communicating, playing, joining routines and understanding behaviour. An adult guides the reading and chooses what suits the child.</p>
+          <p class="pbn-cart-authors">By Dr. Koti Reddy Saripalli &amp; Dr. Sreeja Reddy Saripalli.<br/><a href="/leadership" target="_blank" rel="noopener">Meet the authors ↗</a></p>
+        </section>
+      </section>
+      <aside class="pbn-cart-summary" aria-label="Order summary and delivery">
+        <div class="pbn-cart-bottom">
+          <p class="pbn-cart-total-label">Your total <strong data-cart-total>₹0</strong></p>
+          <p class="pbn-cart-note" data-cart-file-count>Select a book to begin.</p>
+          <a class="pbn-cart-checkout" data-cart-checkout hidden>Continue to secure checkout →</a>
+          <p class="pbn-cart-message" role="status" aria-live="polite" data-cart-message></p>
+          <div class="pbn-cart-delivery">
+            <h3>Your books, by email.</h3>
+            <ol><li>Enter your email at checkout.</li><li>Complete your payment.</li><li>Open the download links in your email.</li></ol>
+            <p>Complete PDF ebooks. No shipping charge or printed copy.</p>
+          </div>
+          <a class="pbn-cart-support" href="tel:+919100181181"><span>Need help choosing or downloading?</span><strong>Call 9100 181 181 ↗</strong></a>
+          <a class="pbn-cart-email" href="mailto:care@pinnacleblooms.org">care@pinnacleblooms.org</a>
+        </div>
+      </aside>
+      <section class="pbn-cart-proof" aria-labelledby="pbn-cart-proof-title">
+        <div class="pbn-cart-proof-intro"><p class="pbn-cart-eyebrow">Know the organisation behind the books</p><h3 id="pbn-cart-proof-title">Our evidence. Open to you.</h3><p>Explore the original records and documented scope through Pinnacle Verify.</p><a href="/verify/" target="_blank" rel="noopener">Explore Pinnacle Verify ↗</a></div>
+        <div class="pbn-cart-proof-links">
+          <a href="/verify/evidence/records/md5.html" target="_blank" rel="noopener"><span class="pbn-cart-proof-tag">PinnacleAI® · MD-5</span><strong>Software manufacturing licence</strong><span>MFG/MD/2026/000248<br/>Telangana Drugs Control Administration</span><span class="pbn-cart-proof-action">Read the licence &amp; its scope ↗</span></a>
+          <a href="/verify/evidence/records/bis.html" target="_blank" rel="noopener"><span class="pbn-cart-proof-tag">BIS · Quality management</span><strong>Quality-system record</strong><span>MD/L-2026029599<br/>IS 23485:2019</span><span class="pbn-cart-proof-action">Read the certificate &amp; its scope ↗</span></a>
+        </div>
+        <p class="pbn-cart-scope">These records cover the named PinnacleAI software and quality-system scopes. The books are educational resources; the records do not certify a book or guarantee a child’s outcome.</p>
+      </section>
+    </div>
+  </dialog>
+  <p class="pbn-commerce-status" role="status" aria-live="polite" data-shop-status></p>
+</div>
+<script is:inline src="/pinnacle-pages-scripts/book-commerce.js" defer></script>

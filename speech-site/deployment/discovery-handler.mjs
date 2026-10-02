@@ -8,6 +8,7 @@ const ROOT_SITEMAPS=[
 const MANAGED_SECTION=`
 
 ## Pinnacle parent books
+- [Pinnacle Bookshop](${PUBLIC}/shop): browse four illustrated books, six ebook pairs, the complete collection and free six-page samples.
 - [Pinnacle 101 Parent Visual Library](${PUBLIC}/books): four illustrated parent guides in PDF, softcover and hardbound editions. Listed prices and current availability are shown for each edition.
 
 ## Policies and rights

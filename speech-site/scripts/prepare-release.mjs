@@ -61,6 +61,7 @@ for(const page of pinnacleWave){
 for(const page of [...policies,...lifePages,...institutional]){const text=await fs.readFile(path.join(root,'dist',page.slug+'.html'),'utf8');assert(text.includes('index, follow, max-image-preview:large')&&text.includes(page.title));await fs.writeFile(path.join(out,'pinnacle-pages-html',page.slug+'.html'),text);}
 await fs.copyFile(path.join(root,'dist/policies.html'),path.join(out,'pinnacle-pages-html/policies.html'));
 assert.deepEqual(await fs.readFile(path.join(out,'index.html')),before,'Verify index must be unchanged');
+await fs.copyFile(path.join(root,'dist/shop.html'),path.join(out,'pinnacle-pages-html/shop-index.html'));
 await fs.copyFile(path.join(root,'dist/books.html'),path.join(out,'pinnacle-pages-html/books-index.html'));
 for(const book of books){const html=await fs.readFile(path.join(root,'dist',book.path.slice(1)+'.html'),'utf8');assert(html.includes(book.sku)&&html.includes('index, follow, max-image-preview:large'));await fs.writeFile(path.join(out,'pinnacle-pages-html','book-'+book.slug+'.html'),html);}
 const inventory={};
