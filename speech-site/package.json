@@ -15,6 +15,7 @@
     "test:browser": "playwright test --project=phone-320 --project=phone-390 --project=tablet-768 --project=desktop-1440",
     "test:engines": "playwright test --project=firefox --project=webkit --project=edge",
     "test:devices": "node scripts/test-testingbot.mjs",
+    "test:cloud-browsers": "node scripts/test-testingbot.mjs --desktop",
     "check:page": "node scripts/check-page.mjs",
     "check:speed": "node scripts/check-speed.mjs"
   },

@@ -1,8 +1,9 @@
-// Unattended real-device smoke checks. No patient data, calls or lead submissions.
+// Unattended physical-device and hosted desktop-browser checks. No leads or calls.
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
 
 const target = new URL(process.env.TESTINGBOT_URL || 'https://www.pinnacleblooms.org/pinnacleai');
 if (target.protocol !== 'https:' || target.hostname !== 'www.pinnacleblooms.org' || target.search) throw new Error('Use a public canonical Pinnacle URL without query parameters');
@@ -24,17 +25,37 @@ async function request(url,method='GET',body,timeout=45000){
 }
 const api=(suffix,method,body)=>request('https://api.testingbot.com/v1'+suffix,method,body);
 const account=await api('/user');
-const report={startedAt:new Date().toISOString(),target:target.href,account:{plan:account.plan,seconds:account.seconds,maxPhysical:account.max_concurrent_mobile},sessions:[],noLeadSubmitted:true,noCallInitiated:true};
+const desktop=process.argv.includes('--desktop');
+const report={startedAt:new Date().toISOString(),mode:desktop?'hosted-desktop':'physical-mobile',target:target.href,account:{plan:account.plan,seconds:account.seconds,maxDesktop:account.max_concurrent,maxPhysical:account.max_concurrent_mobile},sessions:[],noLeadSubmitted:true,noCallInitiated:true};
+report.runnerSha256=createHash('sha256').update(await fs.readFile(new URL(import.meta.url))).digest('hex');
+const delivered=await fetch(target,{signal:AbortSignal.timeout(30000)});
+if(!delivered.ok)throw new Error('Target returned HTTP '+delivered.status);
+report.delivery={url:delivered.url,htmlSha256:createHash('sha256').update(await delivered.text()).digest('hex'),etag:delivered.headers.get('etag'),checkedAt:new Date().toISOString()};
 const out='audits/testingbot/'+report.startedAt.replace(/[:.]/g,'-');
 await fs.mkdir(out,{recursive:true});
 const save=()=>fs.writeFile(out+'/report.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({account:report.account,report:out+'/report.json'}));
-const choices=process.env.TESTINGBOT_DEVICE_IDS?.split(',').map(Number)||[22,29];
-const devices=await api('/devices/available');
+// Pin the release matrix to catalogue versions; update deliberately when coverage changes.
+const desktopMatrix=[
+  {id:'safari',name:'Safari',browserName:'safari',platform_name:'TAHOE',version:'26',catalogueId:7613},
+  {id:'chrome',name:'Chrome',browserName:'chrome',platform_name:'WIN11',version:'153',catalogueId:31412},
+  {id:'edge',name:'Edge',browserName:'MicrosoftEdge',platform_name:'WIN11',version:'153',catalogueId:31502},
+  {id:'firefox',name:'Firefox',browserName:'firefox',platform_name:'WIN11',version:'155',catalogueId:31556}
+];
+let choices,devices;
+if(desktop){
+  choices=process.env.TESTINGBOT_BROWSERS?.split(',').map(s=>s.trim())||desktopMatrix.map(d=>d.id);
+  if(!choices.length || choices.some(id=>!desktopMatrix.some(d=>d.id===id)))throw new Error('Unknown TESTINGBOT_BROWSERS entry');
+  const catalogue=await api('/browsers');
+  devices=desktopMatrix.filter(d=>catalogue.some(c=>Number(c.browser_id)===d.catalogueId && c.platform===d.platform_name && c.version===d.version));
+}else{
+  choices=process.env.TESTINGBOT_DEVICE_IDS?.split(',').map(Number)||[22,29];
+  devices=await api('/devices/available');
+}
 for(const id of choices){
   const device=devices.find(d=>d.id===id);
-  if(!device){report.sessions.push({deviceId:id,status:'unavailable'});continue;}
-  const row={device:{id:device.id,name:device.name,platform:device.platform_name,version:device.version},status:'starting',checks:[],screenshots:[]};
+  if(!device){report.sessions.push({requestedId:id,status:'unavailable'});continue;}
+  const row={kind:report.mode,device:{id:device.id,name:device.name,platform:device.platform_name,version:device.version},status:'starting',checks:[],screenshots:[]};
   report.sessions.push(row);await save();
   let sessionId;
   const wd=async(suffix,method='GET',body)=>{
@@ -61,21 +82,45 @@ for(const id of choices){
     await fs.writeFile(out+'/'+file,Buffer.from(bytes,'base64'));row.screenshots.push(file);
   };
   try{
-    console.log('Starting physical '+device.name+' '+device.version);
-    const created=await request('https://hub.testingbot.com/wd/hub/session','POST',{capabilities:{alwaysMatch:{platformName:device.platform_name,browserName:device.platform_name==='iOS'?'safari':'chrome','appium:automationName':device.platform_name==='iOS'?'XCUITest':'UiAutomator2','appium:deviceName':device.name,'appium:platformVersion':device.version,'appium:newCommandTimeout':60,'tb:options':{realDevice:true,name:'Pinnacle API smoke '+target.pathname,build:'pinnacle-api-'+report.startedAt,maxduration:300,idleTimeout:60,recordVideo:true}}}},150000);
+    console.log('Starting '+report.mode+' '+device.name+' '+device.version);
+    const browserOptions=desktop?{browserName:device.browserName,browserVersion:device.version}:{browserName:device.platform_name==='iOS'?'safari':'chrome','appium:automationName':device.platform_name==='iOS'?'XCUITest':'UiAutomator2','appium:deviceName':device.name,'appium:platformVersion':device.version,'appium:newCommandTimeout':60};
+    const created=await request('https://hub.testingbot.com/wd/hub/session','POST',{capabilities:{alwaysMatch:{platformName:device.platform_name,...browserOptions,'tb:options':{...(desktop?{'screen-resolution':'1920x1080'}:{realDevice:true}),name:'Pinnacle '+device.name+' '+target.pathname,build:'pinnacle-api-'+report.startedAt,maxduration:300,idleTimeout:60,recordVideo:true}}}},150000);
     sessionId=created.value?.sessionId || created.sessionId;
     if(!sessionId)throw new Error('No WebDriver session ID returned');
     row.sessionId=sessionId;row.status='running';await save();
+    const caps=created.value?.capabilities||{};
+    row.actualBrowser={name:caps.browserName,version:caps.browserVersion,platform:caps.platformName};
     await wd('/timeouts','POST',{pageLoad:45000,script:15000,implicit:3000});
+    if(desktop)await wd('/window/rect','POST',{width:1440,height:1000});
     await wd('/url','POST',{url:target.href});
-    row.document=await evaluate("return {title:document.title,url:location.href,ua:navigator.userAgent,width:innerWidth,canonical:document.querySelector('link[rel=canonical]')?.href,h1:document.querySelector('h1')?.innerText}");
+    if(desktop){
+      const viewport=await evaluate('return {width:innerWidth,height:innerHeight}');
+      await wd('/window/rect','POST',{width:1440+(1440-viewport.width),height:1000+(900-viewport.height)});
+    }
+    await evaluate('return document.fonts.ready.then(()=>true)');
+    row.document=await evaluate("return {title:document.title,url:location.href,ua:navigator.userAgent,width:innerWidth,height:innerHeight,dpr:devicePixelRatio,screen:{width:screen.width,height:screen.height},canonical:document.querySelector('link[rel=canonical]')?.href,h1:document.querySelector('h1')?.innerText}");
     await screenshot('header');
+    if(desktop){
+      await check('Requested desktop browser and CSS viewport',async()=>{
+        const normal=name=>String(name||'').toLowerCase().replace('microsoft','');
+        const platformOK=desktop && (device.platform_name==='WIN11'?/windows/i:/mac/i).test(row.actualBrowser.platform||'');
+        return platformOK && normal(row.actualBrowser.name)===normal(device.browserName) && String(row.actualBrowser.version).split('.')[0]===device.version && row.document.width===1440 && Math.abs(row.document.height-900)<=1;
+      });
+      await check('Desktop navigation controls',async()=>!await visible('.portal-mobile-menu-trigger') && await visible('.portal-therapy-menu'));
+    }
     await check('Canonical and main heading',async()=>row.document.canonical===target.href && !!row.document.h1);
     await check('No horizontal page overflow',()=>evaluate('return document.documentElement.scrollWidth<=innerWidth+1'));
     await check('Nine authority destinations with visible subtexts',()=>evaluate("return document.querySelectorAll('.portal-main-list>a').length===9 && [...document.querySelectorAll('.portal-nav-detail')].every(e=>e.getBoundingClientRect().height>0)"));
     await check('Call destination',()=>evaluate("return !!document.querySelector('main a[href=\"tel:+919100181181\"]')"));
-    await check('Mobile menu opens and closes',async()=>{
-      if(!await visible('.portal-mobile-menu-trigger'))return visible('.portal-therapy-menu');
+    await check('Navigation menu opens and closes',async()=>{
+      if(!await visible('.portal-mobile-menu-trigger')){
+        // Desktop menus open on pointerenter. Clicking after moving in would close them.
+        const trigger=await wd('/element','POST',{using:'css selector',value:'.portal-therapy-menu summary'});
+        await wd('/actions','POST',{actions:[{type:'pointer',id:'desktop-mouse',parameters:{pointerType:'mouse'},actions:[{type:'pointerMove',duration:200,origin:trigger,x:0,y:0}]}]});
+        const open=await evaluate("const m=document.querySelector('.portal-therapy-menu');return m.open && m.querySelector('ul').getBoundingClientRect().height>0");
+        await screenshot('menu');await click('h1');
+        return open && await evaluate("return !document.querySelector('.portal-therapy-menu').open");
+      }
       await click('.portal-mobile-menu-trigger');
       const open=await evaluate("return document.querySelector('.portal-directory-panel').getAttribute('aria-modal')==='true' && document.querySelector('main').hasAttribute('inert')");
       await screenshot('menu');await click('.portal-menu-close');
@@ -128,7 +173,7 @@ for(const id of choices){
   if(row.status==='session-not-started' && /trial|upgrade|subscription|credit|not allowed/i.test(row.error||''))break;
 }
 report.finishedAt=new Date().toISOString();
-const end=await api('/user');report.secondsRemaining=end.seconds;report.physicalSessionsStillRunning=end.current_physical_concurrency;
+const end=await api('/user');report.secondsRemaining=end.seconds;report.physicalSessionsStillRunning=end.current_physical_concurrency;report.desktopSessionsStillRunning=end.current_vm_concurrency;
 await save();
 console.log(JSON.stringify({report:out+'/report.json',sessions:report.sessions.map(r=>({device:r.device?.name,status:r.status})),secondsRemaining:report.secondsRemaining}));
 if(report.sessions.some(r=>r.status!=='passed'))process.exitCode=1;

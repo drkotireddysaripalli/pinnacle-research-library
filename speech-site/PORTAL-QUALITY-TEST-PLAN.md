@@ -177,3 +177,13 @@ This audit completes the plan and gap inventory. It does not mark the implementa
 - Local: `package.json`, `playwright.config.mjs`, `.github/workflows/portal-quality.yml` in the repository root, `scripts/check-page.mjs`, `scripts/check-speed.mjs`, `scripts/page-quality-contracts.mjs`, `scripts/test-testingbot.mjs`, `scripts/validate-pinnacleai-v162.mjs`, `tests/browser/portal-smoke.spec.mjs`, `tests/browser/shared-shell-contract.mjs`, `tests/fixtures/shared-authority-owner-approved.json`, and the dated physical-device receipt.
 
 Two independent read-only agent reviews informed the gap inventory: automation/coverage and visual/family-conversion. They were not physical-device operators, real parents or clinical/accessibility signatories.
+
+## 7. Desktop browser matrix and reporting integration — 2 October addition
+
+`npm run test:cloud-browsers` now reuses the TestingBot runner for actual Safari/macOS and Chrome/Edge/Firefox on Windows 11. Versions are pinned and checked against the provider catalogue. The runner asserts returned browser family/major version, OS family, desktop controls and measured 1440 × 900 CSS viewport; the requested 1920 × 1080 display size is a separate value. See `deployment/testingbot-browser-matrix-20261002.md` for execution status rather than treating configuration as a pass.
+
+The core release matrix is the existing physical iPhone/Safari and Android/Chrome pair plus these four desktop combinations. Add iPad Safari for shared navigation/footer/layout changes, older supported Safari for browser-sensitive changes, and additional Android hardware/browsers when actual traffic or a reported defect justifies them. Broad width coverage stays in the fast local suite. Do not multiply all page URLs by all browsers, widths and hardware on every edit.
+
+GSC Wizard supplies settled Search Console device traffic, GA4 device data and the release/QA timeline annotation. Test results and search/business data meet at canonical page URL, dated receipt and release identity. It does not execute TestingBot tests, and its exposed GA4 report tool currently lacks browser/OS dimensions. Keep the default browser diversity until actual GA4 technology data supports an adjustment. A QA annotation is not a ranking event or indexing submission.
+
+Automation commands, scope, credential handling and connector procedure are in `TESTINGBOT-DEVICE-TESTING.md`. Candidate binding, visual baselines, broader physical gestures and CI device scheduling in the implementation table remain open; the desktop addition does not silently close those gaps.
