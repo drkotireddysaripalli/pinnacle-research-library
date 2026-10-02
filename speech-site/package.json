@@ -11,7 +11,7 @@
     "preview": "astro preview --host 127.0.0.1",
     "postbuild": "node scripts/apply-og-replacements.mjs",
     "check:types": "astro check --minimumSeverity error",
-    "test:unit": "node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs scripts/test-release-20260928.mjs scripts/test-enrolment.mjs scripts/test-discovery-handler.mjs scripts/test-public-documents.mjs scripts/test-monitoring-boundary.mjs",
+    "test:unit": "node --test scripts/test-measurement.mjs scripts/test-speech-route.mjs scripts/test-release-20260928.mjs scripts/test-enrolment.mjs scripts/test-discovery-handler.mjs scripts/test-public-documents.mjs scripts/test-monitoring-boundary.mjs scripts/test-shopify-physical-feed.mjs",
     "test:browser": "playwright test --project=phone-320 --project=phone-390 --project=tablet-768 --project=desktop-1440",
     "test:engines": "playwright test --project=firefox --project=webkit --project=edge",
     "test:devices": "node scripts/test-testingbot.mjs",
