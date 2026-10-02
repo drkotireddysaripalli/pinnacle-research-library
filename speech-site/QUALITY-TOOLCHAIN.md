@@ -52,10 +52,10 @@ Official references: [Lighthouse](https://developer.chrome.com/docs/lighthouse/o
 
 ## Next package and bounded acceptance
 
-Continue the accepted `/staff` directory plus representative profile contract. Register those routes in `scripts/page-quality-contracts.mjs` when implemented and add one focused source/behaviour suite for allow-listed public fields, unmatched-source fallback, no-JS completeness, filtering/reset/count, authentic portraits and profile compatibility. Reuse the current frozen estate and shared shell; no recrawl or new generic tool package is needed to begin. Main legacy retirement precedes Ask/Supabase and materials.
+`ACTIVE-PAGE-WORK-ORDER.md` is the sole current priority and release pointer. Staff and remaining centre work are deferred until the individual-page pass is complete. When staff work resumes, register those routes in `scripts/page-quality-contracts.mjs` and add one focused source/behaviour suite for allow-listed public fields, unmatched-source fallback, no-JS completeness, filtering/reset/count, authentic portraits and profile compatibility. Reuse the current frozen estate and shared shell; no recrawl or new generic tool package is needed to begin. Main legacy retirement precedes Ask/Supabase and materials.
 
 ## Migration order
 
 Complete and replace the main portal's legacy URL estate first. Preserve every valid URL through a reviewed equivalent page or appropriate redirect; use exact route disposition, source-backed page-family templates and per-page quality contracts rather than redirecting everything to a homepage. Preserve protected operational endpoints. Integrate Ask from the existing Supabase corpus only after the main legacy migration; materials.pinnacleblooms.org comes last.
 
-The historical full estate inventory is reused and refreshed at migration boundaries; it is not recrawled for every page change. The currently accepted staff directory plus representative profile package stays first in the active creation queue. Search demand informs the next centre/service package instead of derailing the active contract.
+The historical full estate inventory is reused and refreshed at migration boundaries; it is not recrawled for every page change. This technical guide does not set the next page or override the owner's current priority. Search demand informs later centre/service packages instead of derailing the active contract. The 2 October workflow audit is recorded in `reviews/WORKFLOW-AUDIT-20261002.md`; the governing execution rules are in `AGENTS.md`.

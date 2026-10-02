@@ -14,6 +14,19 @@ The conversation history remains useful context, but committed current decisions
 
 The main agent in the owner's current task retains code, build and release ownership. Independent agents may research and review read-only. Do not delegate source edits, public submissions, browser control or deployment to reviewers.
 
+## Execution discipline after the V163 acceptance failure · 2 October 2026
+
+- Keep one page or bounded repair active and one implementation/release owner. Normally use one independent reviewer with the combined family, commercial, evidence and rendered-page checklist. Add another only for a named independent issue that materially needs it; do not create a separate agent for each persona or ask reviewers to spawn reviewers.
+- Reviewers inspect one identified revision, sources or rendered captures and return concrete findings, locations and uncertainty. The owner resolves them in one consolidated fix list. Reopen only affected findings after a change; repeated opinion scores or repeated approvals are not progress.
+- Existing completed reviewers are historical work, not an active team. Do not reactivate them without a specific bounded task or reload all their old reports. Do not archive threads or discard useful evidence just to reduce a displayed count.
+- `ACTIVE-PAGE-WORK-ORDER.md` alone names the current page, next queued page and live release. Other work orders describe requirements or historical work, not competing priorities. Keep the full governing page standard; a smaller review team does not justify thinner narrative, weaker creatives, claims without sources or missing search/conversion work.
+- Complete the candidate before acceptance. Use one local production build per source revision and the independent CI build; reuse unchanged assets and completed evidence. Repeat a test only after a relevant change, a failed check, or a distinct production/device boundary.
+- Inspect the rendered changed sections, including the section immediately after the hero, at phone/tablet/desktop sizes. Element counts, HTTP success, image decoding, no overflow and Lighthouse scores do not establish visual acceptance. Preserve approved common-shell checks and the V163 readable-card regression.
+- A release needs the exact source revision, declared test scope, inspected screenshots, preserved routes/shared shell, deployment ID and production read-back. Keep automated, visual, physical-device and business evidence separate. Do not claim a test was run from its configuration, a comprehensive pass from a narrow check, or real family feedback from an AI persona.
+- Stop a loop when the same question or action recurs without new evidence. State the exact unresolved defect or external condition, select one diagnostic that can distinguish the cause, and continue independent useful work. Do not expand the review committee or reopen the entire agreed narrative.
+
+Audit and bounded remaining toolchain improvements: `reviews/WORKFLOW-AUDIT-20261002.md`.
+
 ## Settled common header and footer
 
 The owner requested a Git baseline on 1 October 2026. Annotated tag `pinnacle-common-shell-baseline-v159-20261001` is the approved common-file recovery point. Read `COMMON-SHELL-BASELINE.md` before any shared-shell change. Individual-page work must reuse these components; do not replace, fork or redesign them. A later explicit owner-directed shared change may supersede this baseline through its own coherent release and review.

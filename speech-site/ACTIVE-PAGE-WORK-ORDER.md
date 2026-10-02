@@ -16,7 +16,7 @@ Completed work and precise follow-ups are in `reviews/QUALITY-PASS-20261001/SPEE
 
 **Remaining bounded dependencies:** LG-01–05 need the actual ASP.NET origin views/CMS content editor for six selected legacy pages. A targeted search did not identify it. The separate Ads wrapper's pre-choice-cookie defect is corrected; its phone-conversion helper remains withheld until a distinct advertising-measurement opt-in with withdrawal exists. Telephone actions and consent-gated coarse call-click analytics remain. Measured ranking/citation/call/admission improvement requires subsequent reporting.
 
-Current union `release-speech-v160-20261001`, main Worker `cda60a8e-fbe5-448d-940d-76cab390dbf0`, deployment `44cd9c8d-ed88-456a-87ef-7a5c323c691f`. Rollback is V159 Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6`. The six-route Ads wrapper is separately versioned as `2fa26689-51f7-4a04-a835-a69d2627b15f`; its receipt preserves its own rollback.
+Historical V160 release: union `release-speech-v160-20261001`, main Worker `cda60a8e-fbe5-448d-940d-76cab390dbf0`, deployment `44cd9c8d-ed88-456a-87ef-7a5c323c691f`. Its rollback was V159 Worker `58f7fabb-cc45-4f15-a2bb-f9bda99885e6`. The six-route Ads wrapper is separately versioned as `2fa26689-51f7-4a04-a835-a69d2627b15f`; its receipt preserves its own rollback. The current main Worker is V163 above.
 
 PinnacleAI followed Speech and is now closed in V161 as recorded above. The owner’s new priority always takes precedence.
 
@@ -32,7 +32,7 @@ The intervening owner-requested common-header/footer restoration is released as 
 
 Complete the quality pass on already-produced individual pages in ascending baseline score. The owner prioritised the policy package, then deferred remaining centres and staff until individual pages are complete. Delhi is closed and set aside. Policies V153 is published and closed: fifteen current policies plus one hub, named Privacy Grievance Officer Mr. Gokul Krishna Rao, coherent reading exports and shared footer. These supersede the prior operative policy source holds.
 
-**Previously queued next individual page: PinnacleAI overview, baseline 68/100.** The owner's Speech Therapy review above takes current priority. PinnacleAI's bounded source review remains available; implementation is pending. Follow `reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md` when that page resumes: direct family invitation, one complete planning/review example, connected module architecture, early call/enquiry action and matching evidence/reading/metadata.
+**Historical PinnacleAI overview queue, baseline 68/100:** implementation subsequently shipped in V161/V162 and its lifecycle rendering was corrected in V163. The earlier `reviews/QUALITY-PASS-20261001/PINNACLEAI-FINITE-TASKS.md` is retained evidence, not a fresh pending implementation order. The next individual page remains Seven Readiness Indexes above unless the owner redirects.
 
 ## Governing material
 

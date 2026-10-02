@@ -2,6 +2,8 @@
 
 29 September 2026 · Authoritative operating context for the managed Pinnacle portal pages
 
+Current-state rule, 2 October 2026: `ACTIVE-PAGE-WORK-ORDER.md` alone identifies the active/next page, current union and deployed version. Dated continuation and release descriptions below are historical context, not current queue instructions or live page counts. Use `AGENTS.md` for the bounded review and acceptance discipline added after V163; preserve the full narrative and creative requirements here.
+
 ## Why this document exists
 
 The released Speech Therapy and Enrolment experiences were produced through a deep, multidisciplinary process. Their quality must not be traded away merely to reduce Codex usage. Efficiency comes from retaining the decisions that matter, discarding superseded exploration and avoiding repeated work on unchanged systems.
