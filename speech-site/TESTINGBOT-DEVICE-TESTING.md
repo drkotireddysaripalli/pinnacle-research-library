@@ -39,6 +39,8 @@ This is a bounded interaction check, not a ranking, conversion, comprehensive ac
 
 ## Efficient release use
 
+The full cross-device, visual, typography, accessibility and release coverage plan is [PORTAL-QUALITY-TEST-PLAN.md](PORTAL-QUALITY-TEST-PLAN.md). This runner currently implements only its bounded phone smoke subset; its existence is not evidence that the complete matrix or release gate is active.
+
 Run the local suite first. Use this small physical-device matrix after meaningful mobile interaction changes and before major releases; add iPad/other hardware only when the changed feature warrants it. Re-run failed cases after a relevant fix rather than repeating the whole portal. Keep live-device results attached to the exact released URL and version being reviewed.
 
 Official references: [mobile web](https://testingbot.com/support/web-automate/mobile), [physical capabilities](https://testingbot.com/features/automation/appium), [devices API](https://testingbot.com/support/api/devices), [test results](https://testingbot.com/support/api/tests).

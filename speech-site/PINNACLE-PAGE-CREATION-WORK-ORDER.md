@@ -191,6 +191,8 @@ For each block, record: visitor question; one-line answer; feeling/decision it s
 
 ## 7. Access, performance and real-family checks
 
+The operational coverage matrix, visual/typography acceptance, device selection, reviewer responsibilities and implementation gaps are maintained in [PORTAL-QUALITY-TEST-PLAN.md](PORTAL-QUALITY-TEST-PLAN.md). Apply its change-based test scope; a configured tool or narrow smoke-test pass is not whole-page acceptance. Required checks that have not run stay explicitly open.
+
 - Check 320/390 mobile, 768/1024 tablet and 1440 desktop; Chrome/Edge and a real iPhone/Safari when available. Exercise keyboard, screen reader, reduced motion, zoom, text spacing, focus, disclosure and sticky controls. [WCAG 2.2](https://www.w3.org/WAI/WCAG22/quickref/) guides accessibility; a W3C validator pass is not conformance.
 - Record field Core Web Vitals when available (LCP, INP, CLS); use lab tests to diagnose, not to claim field speed. Check hero loading, crop, overflow, readability and directory scanning. Do not delete useful crawlable locations solely to lower page length.
 - Ask real families to identify the service's everyday value, find out what the first call means and locate a suitable centre. Observe confusion and intent. AI editorial review is not a substitute for their answers or named clinical review.
