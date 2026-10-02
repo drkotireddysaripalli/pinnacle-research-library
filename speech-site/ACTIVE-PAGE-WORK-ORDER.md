@@ -1,5 +1,7 @@
 # Active page work order
 
+**Owner follow-up: six-page sales samples.** Preserve the cover and two learning pages; replace the earlier rear-cover sample page with a book purchase/QR page, followed by Pinnacle credentials/Verify and a four-book collection/pricing page. Use native clickable PDF links, real QR encodings, full-sleeve branded illustrative scenes and exact official logo. Publish final samples at /pinnacle-pages-assets/book-samples-sales-v2-20261002/; keep paid masters private and ordering unavailable until checkout activation.
+
 **Current bounded book expansion · 2 October 2026.** Add four free four-page samples, six two-book combinations and a hardbound four-book set. Publish 33 distinct format/combination offers with PDF/softcover pricing ₹799 / ₹1,399 / ₹2,499 and hardbound pricing ₹1,699 / ₹2,999 / ₹5,499 (single / pair / four). Preserve all14 existing IDs/URLs, the common shell,182 routes/four bindings and unavailable ordering. Only sample PDFs are public; paid masters remain private. Scope: index, book PDPs, feed/sitemap and sample assets. Shopify purchase activation depends on a new owner account, Razorpay connection and digital fulfilment. Focused checks: catalogue/feed/rendered prices, membership/formats, sample links/pages and changed sections at phone/tablet/desktop.
 
 

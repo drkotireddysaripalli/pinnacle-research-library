@@ -12,6 +12,6 @@ Visual browser boundary: current browser was being used for owner onboarding. Th
 
 Release scope: only /books and its edition/collection content, additive public sample/cover assets, book XML feed/sitemap and the existing exact-book route map. Preserve the complete Verify/managed-page union,182 routes and four bindings. Before receipt: deployment/books-expansion-cloudflare-before-20261002.json. Rollback:1e838dfd-4648-468d-b70b-4591461ef911.
 
-Activation and live-readback IDs will be recorded after source CI and release.
+Published source d8aae33ff4dfd13e56a53b2910f0db0aeaca55e3 after CI36977829881 passed. Worker4622d9f4-61a2-438a-bf07-cedf72f58d84 is active at100%. All182 routes/fourbindings preserved. Native Chrome confirmed the live index,33 offer links withupdatedprices,4 samplelinks and thedownloadresponse; desktophero screenshot inspected. Public urllib checks returned403 and were not retried. Exact receipt: deployment/books-expansion-live-readback-20261002.json. The owner subsequently requested replacing thefourpage samples withsixpage sales previews.
 
 Remaining commerce setup: create the owner Shopify store, select a paid plan, connect the owner Razorpay account, import11 products/33 variants, attach private files through Digital Products, configure book-specific delivery/refund policies, and test fulfilment before enabling digital orders. Printed editions stay unavailable. Merchant approval and customer purchase readiness remain separate.

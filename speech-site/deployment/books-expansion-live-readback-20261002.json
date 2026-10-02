@@ -1,0 +1,36 @@
+{
+  "verified_at": "2026-10-02T07:30:00.305030+00:00",
+  "source": "d8aae33ff4dfd13e56a53b2910f0db0aeaca55e3",
+  "version": "4622d9f4-61a2-438a-bf07-cedf72f58d84",
+  "deployment": {
+    "id": "ab7ea25c-7844-4e88-b8f9-7b8df0722898",
+    "source": "wrangler",
+    "strategy": "percentage",
+    "author_email": "kotii@kgvpl.com",
+    "annotations": {
+      "workers/message": "Publish four free previews and33 Pinnacle book offers; source d8aae33; CI36977829881 passed",
+      "workers/triggered_by": "deployment"
+    },
+    "versions": [
+      {
+        "version_id": "4622d9f4-61a2-438a-bf07-cedf72f58d84",
+        "percentage": 100
+      }
+    ],
+    "created_on": "2026-10-02T07:21:20.682072Z"
+  },
+  "live_native_chrome_index_readback": {
+    "url": "https://www.pinnacleblooms.org/books",
+    "all33_offer_links_and_prices_visible": true,
+    "free_sample_links": 4,
+    "desktop_hero_screenshot_inspected": true,
+    "sample_download_dialog_opened": true
+  },
+  "http_readback": "urllib returned403; did not retry, spoof user agent, use cookies or change protections",
+  "phone_tablet_browser_visuals": "not performed; isolated local preview policy check unavailable",
+  "routes_preserved": 182,
+  "bindings_preserved": 4,
+  "checkout_live": false,
+  "merchant_updated_feed_import": "not yet confirmed",
+  "superseding_user_request": "Extend samples to6pages withbuyQR,proofandcollectionpages"
+}
