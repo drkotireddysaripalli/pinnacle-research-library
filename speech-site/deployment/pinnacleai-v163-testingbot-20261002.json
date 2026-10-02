@@ -1,0 +1,669 @@
+{
+  "worker": "cbe18ac1-884a-45d5-bab3-21614e997b3b",
+  "source": "db6f76159b5f01f3912bbb0ed5acb594ab146447",
+  "screenshotReview": "Inspected Safari, Chrome and physical iPhone lifecycle-card images: readable and correctly arranged.",
+  "runs": [
+    {
+      "report": "audits/testingbot/2026-10-02T02-34-48-912Z/report.json",
+      "startedAt": "2026-10-02T02:34:48.912Z",
+      "finishedAt": "2026-10-02T02:36:59.844Z",
+      "target": "https://www.pinnacleblooms.org/pinnacleai",
+      "delivery": {
+        "url": "https://www.pinnacleblooms.org/pinnacleai",
+        "htmlSha256": "2f3410ed8e661d03fd3499db606e8f820a5625509d836230856654909268ae6b",
+        "etag": null,
+        "checkedAt": "2026-10-02T02:34:48.963Z"
+      },
+      "noLeadSubmitted": true,
+      "noCallInitiated": true,
+      "sessions": [
+        {
+          "kind": "hosted-desktop",
+          "device": {
+            "id": "safari",
+            "name": "Safari",
+            "platform": "TAHOE",
+            "version": "26"
+          },
+          "actualBrowser": {
+            "name": "Safari",
+            "version": "26.3.1",
+            "platform": "macOS"
+          },
+          "status": "passed",
+          "checks": [
+            {
+              "name": "Requested desktop browser and CSS viewport",
+              "passed": true
+            },
+            {
+              "name": "Desktop navigation controls",
+              "passed": true
+            },
+            {
+              "name": "Canonical and main heading",
+              "passed": true
+            },
+            {
+              "name": "No horizontal page overflow",
+              "passed": true
+            },
+            {
+              "name": "Nine authority destinations with visible subtexts",
+              "passed": true
+            },
+            {
+              "name": "Call destination",
+              "passed": true
+            },
+            {
+              "name": "Navigation menu opens and closes",
+              "passed": true
+            },
+            {
+              "name": "Authority rail reaches Citations",
+              "passed": true
+            },
+            {
+              "name": "Seven stages and ten visible FAQ questions",
+              "passed": true
+            },
+            {
+              "name": "Lifecycle cards fill section and remain readable",
+              "passed": true
+            },
+            {
+              "name": "FAQ disclosure works",
+              "passed": true
+            },
+            {
+              "name": "Lifecycle image loaded",
+              "passed": true
+            },
+            {
+              "name": "Verify footer cards and policy link",
+              "passed": true
+            },
+            {
+              "name": "Optional analytics decline control and cookies",
+              "passed": true
+            },
+            {
+              "name": "Enrolment destination opens without submitting",
+              "passed": true
+            }
+          ],
+          "lifecycleGeometry": {
+            "passed": true,
+            "cards": [
+              {
+                "x": 73,
+                "height": 162,
+                "headingLines": 1,
+                "y": 1161.5,
+                "width": 175.140625,
+                "link": {
+                  "y": 1161.5,
+                  "x": 73,
+                  "width": 175.140625,
+                  "height": 162
+                },
+                "copyLines": 1,
+                "textWidth": 151.140625
+              },
+              {
+                "x": 257.140625,
+                "height": 162,
+                "headingLines": 1,
+                "y": 1161.5,
+                "width": 175.140625,
+                "link": {
+                  "y": 1161.5,
+                  "x": 257.140625,
+                  "width": 175.140625,
+                  "height": 162
+                },
+                "copyLines": 2,
+                "textWidth": 151.140625
+              },
+              {
+                "x": 441.28125,
+                "height": 162,
+                "headingLines": 1,
+                "y": 1161.5,
+                "width": 175.140625,
+                "link": {
+                  "y": 1161.5,
+                  "x": 441.28125,
+                  "width": 175.140625,
+                  "height": 162
+                },
+                "copyLines": 2,
+                "textWidth": 151.140625
+              },
+              {
+                "x": 625.421875,
+                "height": 162,
+                "headingLines": 1,
+                "y": 1161.5,
+                "width": 175.140625,
+                "link": {
+                  "y": 1161.5,
+                  "x": 625.421875,
+                  "width": 175.140625,
+                  "height": 162
+                },
+                "copyLines": 1,
+                "textWidth": 151.140625
+              },
+              {
+                "x": 809.5625,
+                "height": 162,
+                "headingLines": 1,
+                "y": 1161.5,
+                "width": 175.140625,
+                "link": {
+                  "y": 1161.5,
+                  "x": 809.5625,
+                  "width": 175.140625,
+                  "height": 162
+                },
+                "copyLines": 1,
+                "textWidth": 151.140625
+              },
+              {
+                "x": 993.703125,
+                "height": 162,
+                "headingLines": 1,
+                "y": 1161.5,
+                "width": 175.140625,
+                "link": {
+                  "y": 1161.5,
+                  "x": 993.703125,
+                  "width": 175.140625,
+                  "height": 162
+                },
+                "copyLines": 1,
+                "textWidth": 151.140625
+              },
+              {
+                "x": 1177.84375,
+                "height": 162,
+                "headingLines": 2,
+                "y": 1161.5,
+                "width": 175.140625,
+                "link": {
+                  "y": 1161.5,
+                  "x": 1177.84375,
+                  "width": 175.140625,
+                  "height": 162
+                },
+                "copyLines": 2,
+                "textWidth": 151.140625
+              }
+            ],
+            "columns": 7,
+            "nav": {
+              "y": 1143.5,
+              "x": 73,
+              "width": 1280,
+              "height": 210
+            },
+            "failures": [],
+            "list": {
+              "y": 1161.5,
+              "x": 73,
+              "width": 1280,
+              "height": 162
+            },
+            "viewport": 1440
+          },
+          "screenshots": [
+            "safari-header.png",
+            "safari-menu.png",
+            "safari-lifecycle-cards.png",
+            "safari-lifecycle.png",
+            "safari-footer.png"
+          ],
+          "sessionClosed": true,
+          "resultRecorded": true,
+          "providerTestId": 53267453,
+          "providerSuccess": true
+        },
+        {
+          "kind": "hosted-desktop",
+          "device": {
+            "id": "chrome",
+            "name": "Chrome",
+            "platform": "WIN11",
+            "version": "153"
+          },
+          "actualBrowser": {
+            "name": "chrome",
+            "version": "153.0.8010.37",
+            "platform": "windows"
+          },
+          "status": "passed",
+          "checks": [
+            {
+              "name": "Requested desktop browser and CSS viewport",
+              "passed": true
+            },
+            {
+              "name": "Desktop navigation controls",
+              "passed": true
+            },
+            {
+              "name": "Canonical and main heading",
+              "passed": true
+            },
+            {
+              "name": "No horizontal page overflow",
+              "passed": true
+            },
+            {
+              "name": "Nine authority destinations with visible subtexts",
+              "passed": true
+            },
+            {
+              "name": "Call destination",
+              "passed": true
+            },
+            {
+              "name": "Navigation menu opens and closes",
+              "passed": true
+            },
+            {
+              "name": "Authority rail reaches Citations",
+              "passed": true
+            },
+            {
+              "name": "Seven stages and ten visible FAQ questions",
+              "passed": true
+            },
+            {
+              "name": "Lifecycle cards fill section and remain readable",
+              "passed": true
+            },
+            {
+              "name": "FAQ disclosure works",
+              "passed": true
+            },
+            {
+              "name": "Lifecycle image loaded",
+              "passed": true
+            },
+            {
+              "name": "Verify footer cards and policy link",
+              "passed": true
+            },
+            {
+              "name": "Optional analytics decline control and cookies",
+              "passed": true
+            },
+            {
+              "name": "Enrolment destination opens without submitting",
+              "passed": true
+            }
+          ],
+          "lifecycleGeometry": {
+            "cards": [
+              {
+                "copyLines": 1,
+                "headingLines": 1,
+                "height": 164.5,
+                "link": {
+                  "height": 164.5,
+                  "width": 175.140625,
+                  "x": 72.5,
+                  "y": 1165.328125
+                },
+                "textWidth": 151.140625,
+                "width": 175.140625,
+                "x": 72.5,
+                "y": 1165.328125
+              },
+              {
+                "copyLines": 2,
+                "headingLines": 1,
+                "height": 164.5,
+                "link": {
+                  "height": 164.5,
+                  "width": 175.140625,
+                  "x": 256.640625,
+                  "y": 1165.328125
+                },
+                "textWidth": 151.140625,
+                "width": 175.140625,
+                "x": 256.640625,
+                "y": 1165.328125
+              },
+              {
+                "copyLines": 2,
+                "headingLines": 1,
+                "height": 164.5,
+                "link": {
+                  "height": 164.5,
+                  "width": 175.140625,
+                  "x": 440.78125,
+                  "y": 1165.328125
+                },
+                "textWidth": 151.140625,
+                "width": 175.140625,
+                "x": 440.78125,
+                "y": 1165.328125
+              },
+              {
+                "copyLines": 1,
+                "headingLines": 1,
+                "height": 164.5,
+                "link": {
+                  "height": 164.5,
+                  "width": 175.140625,
+                  "x": 624.921875,
+                  "y": 1165.328125
+                },
+                "textWidth": 151.140625,
+                "width": 175.140625,
+                "x": 624.921875,
+                "y": 1165.328125
+              },
+              {
+                "copyLines": 1,
+                "headingLines": 1,
+                "height": 164.5,
+                "link": {
+                  "height": 164.5,
+                  "width": 175.140625,
+                  "x": 809.0625,
+                  "y": 1165.328125
+                },
+                "textWidth": 151.140625,
+                "width": 175.140625,
+                "x": 809.0625,
+                "y": 1165.328125
+              },
+              {
+                "copyLines": 1,
+                "headingLines": 1,
+                "height": 164.5,
+                "link": {
+                  "height": 164.5,
+                  "width": 175.140625,
+                  "x": 993.203125,
+                  "y": 1165.328125
+                },
+                "textWidth": 151.140625,
+                "width": 175.140625,
+                "x": 993.203125,
+                "y": 1165.328125
+              },
+              {
+                "copyLines": 2,
+                "headingLines": 2,
+                "height": 164.5,
+                "link": {
+                  "height": 164.5,
+                  "width": 175.140625,
+                  "x": 1177.34375,
+                  "y": 1165.328125
+                },
+                "textWidth": 151.140625,
+                "width": 175.140625,
+                "x": 1177.34375,
+                "y": 1165.328125
+              }
+            ],
+            "columns": 7,
+            "failures": [],
+            "list": {
+              "height": 164.5,
+              "width": 1280,
+              "x": 72.5,
+              "y": 1165.328125
+            },
+            "nav": {
+              "height": 212.5,
+              "width": 1280,
+              "x": 72.5,
+              "y": 1147.328125
+            },
+            "passed": true,
+            "viewport": 1440
+          },
+          "screenshots": [
+            "chrome-header.png",
+            "chrome-menu.png",
+            "chrome-lifecycle-cards.png",
+            "chrome-lifecycle.png",
+            "chrome-footer.png"
+          ],
+          "sessionClosed": true,
+          "resultRecorded": true,
+          "providerTestId": 53267480,
+          "providerSuccess": true
+        }
+      ]
+    },
+    {
+      "report": "audits/testingbot/2026-10-02T02-34-49-149Z/report.json",
+      "startedAt": "2026-10-02T02:34:49.149Z",
+      "finishedAt": "2026-10-02T02:35:49.619Z",
+      "target": "https://www.pinnacleblooms.org/pinnacleai",
+      "delivery": {
+        "url": "https://www.pinnacleblooms.org/pinnacleai",
+        "htmlSha256": "2f3410ed8e661d03fd3499db606e8f820a5625509d836230856654909268ae6b",
+        "etag": null,
+        "checkedAt": "2026-10-02T02:34:49.189Z"
+      },
+      "noLeadSubmitted": true,
+      "noCallInitiated": true,
+      "sessions": [
+        {
+          "kind": "physical-mobile",
+          "device": {
+            "id": 5,
+            "name": "iPhone XR",
+            "platform": "iOS",
+            "version": "18.7"
+          },
+          "actualBrowser": {
+            "name": "safari",
+            "platform": "iOS"
+          },
+          "status": "passed",
+          "checks": [
+            {
+              "name": "Canonical and main heading",
+              "passed": true
+            },
+            {
+              "name": "No horizontal page overflow",
+              "passed": true
+            },
+            {
+              "name": "Nine authority destinations with visible subtexts",
+              "passed": true
+            },
+            {
+              "name": "Call destination",
+              "passed": true
+            },
+            {
+              "name": "Navigation menu opens and closes",
+              "passed": true
+            },
+            {
+              "name": "Authority rail reaches Citations",
+              "passed": true
+            },
+            {
+              "name": "Seven stages and ten visible FAQ questions",
+              "passed": true
+            },
+            {
+              "name": "Lifecycle cards fill section and remain readable",
+              "passed": true
+            },
+            {
+              "name": "FAQ disclosure works",
+              "passed": true
+            },
+            {
+              "name": "Lifecycle image loaded",
+              "passed": true
+            },
+            {
+              "name": "Verify footer cards and policy link",
+              "passed": true
+            },
+            {
+              "name": "Optional analytics decline control and cookies",
+              "passed": true
+            },
+            {
+              "name": "Enrolment destination opens without submitting",
+              "passed": true
+            }
+          ],
+          "lifecycleGeometry": {
+            "passed": true,
+            "failures": [],
+            "viewport": 414,
+            "columns": 2,
+            "nav": {
+              "x": 14,
+              "y": 1551,
+              "width": 386,
+              "height": 569
+            },
+            "list": {
+              "x": 14,
+              "y": 1569,
+              "width": 386,
+              "height": 521
+            },
+            "cards": [
+              {
+                "x": 14,
+                "y": 1569,
+                "width": 188.5,
+                "height": 133,
+                "link": {
+                  "x": 14,
+                  "y": 1569,
+                  "width": 188.5,
+                  "height": 133
+                },
+                "headingLines": 1,
+                "copyLines": 1,
+                "textWidth": 162.5
+              },
+              {
+                "x": 211.5,
+                "y": 1569,
+                "width": 188.5,
+                "height": 133,
+                "link": {
+                  "x": 211.5,
+                  "y": 1569,
+                  "width": 188.5,
+                  "height": 133
+                },
+                "headingLines": 1,
+                "copyLines": 2,
+                "textWidth": 162.5
+              },
+              {
+                "x": 14,
+                "y": 1711,
+                "width": 188.5,
+                "height": 133,
+                "link": {
+                  "x": 14,
+                  "y": 1711,
+                  "width": 188.5,
+                  "height": 133
+                },
+                "headingLines": 1,
+                "copyLines": 2,
+                "textWidth": 162.5
+              },
+              {
+                "x": 211.5,
+                "y": 1711,
+                "width": 188.5,
+                "height": 133,
+                "link": {
+                  "x": 211.5,
+                  "y": 1711,
+                  "width": 188.5,
+                  "height": 133
+                },
+                "headingLines": 1,
+                "copyLines": 1,
+                "textWidth": 162.5
+              },
+              {
+                "x": 14,
+                "y": 1853,
+                "width": 188.5,
+                "height": 114,
+                "link": {
+                  "x": 14,
+                  "y": 1853,
+                  "width": 188.5,
+                  "height": 114
+                },
+                "headingLines": 1,
+                "copyLines": 1,
+                "textWidth": 162.5
+              },
+              {
+                "x": 211.5,
+                "y": 1853,
+                "width": 188.5,
+                "height": 114,
+                "link": {
+                  "x": 211.5,
+                  "y": 1853,
+                  "width": 188.5,
+                  "height": 114
+                },
+                "headingLines": 1,
+                "copyLines": 1,
+                "textWidth": 162.5
+              },
+              {
+                "x": 14,
+                "y": 1976,
+                "width": 386,
+                "height": 114,
+                "link": {
+                  "x": 14,
+                  "y": 1976,
+                  "width": 386,
+                  "height": 114
+                },
+                "headingLines": 1,
+                "copyLines": 1,
+                "textWidth": 360
+              }
+            ]
+          },
+          "screenshots": [
+            "5-header.png",
+            "5-menu.png",
+            "5-lifecycle-cards.png",
+            "5-lifecycle.png",
+            "5-footer.png"
+          ],
+          "sessionClosed": true,
+          "resultRecorded": true,
+          "providerTestId": 53267423,
+          "providerSuccess": true
+        }
+      ]
+    }
+  ]
+}
