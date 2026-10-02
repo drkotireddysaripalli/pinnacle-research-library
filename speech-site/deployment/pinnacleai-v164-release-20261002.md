@@ -21,6 +21,17 @@ One numbered seven-stage family lifecycle remains. Named software components hav
 - The shared header/footer and other 49 managed pages are preserved byte-for-byte by the union staging guard. Runtime routing and protected endpoints remain outside this page change.
 - The previously observed tablet menu-spacing concern remains a separate common-header task; this release does not claim to repair it.
 
-Status: candidate validated locally; awaiting source check-in, CI, upload and public read-back. Rollback predecessor: V163 Worker `cbe18ac1-884a-45d5-bab3-21614e997b3b`.
+## Published and verified
+
+- Published 2 October 2026 at 03:45:40 UTC (09:15:40 IST), 100% traffic.
+- Application source `9f6130dd666a138043f790bd3998656b9e11a11c` was committed and pushed before activation. [CI 36961331033](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/36961331033) passed build/types/unit/Chromium and Firefox/WebKit checks before activation. Local WebKit and installed Edge also passed (4 tests).
+- Worker version `503426b1-3352-4476-82ba-455a88f7a147`; deployment `e54accb7-ae60-49d4-89c6-a8965ac5f2a9`. Union `release-pinnacleai-v164-20261002`.
+- Public read-back matched all 50 managed pages, six changed supporting files and 15 protected routes; canonical/301 alias, OG JPEG bytes, indexing headers, cookie/credential variants and Markdown delivery passed. Other 49 pages retain their predecessor bytes.
+- All 180 zone routes, 81 main-Worker assignments and four bindings match the preflight snapshot. Rollback: V163 Worker `cbe18ac1-884a-45d5-bab3-21614e997b3b`.
+- Actual physical iPhone 13 / iOS 18.5 Safari: 14/14 targeted checks passed. Hosted macOS Safari 26.3.1 at 1440 CSS px: 16/16 passed. Both verify module card geometry and opening a module disclosure, early-example order, readable lifecycle cards, nine authority links, footer, call destination and enrolment navigation. The actual opened-module screenshots were inspected; both sessions closed and provider results were saved.
+- Lighthouse on the local production-mode candidate: mobile 96/100/100/100; desktop 100/100/100/100 (performance/accessibility/best practices/SEO). Mobile LCP 2.797s exceeds the 2.5s target; TBT and CLS are zero. This is a lab result, not field Core Web Vitals or an all-device visual certificate.
+- One changed-URL IndexNow notification was accepted with HTTP 200 at 03:46:26 UTC. This establishes submission only.
+
+Receipts: `pinnacleai-v164-responsive-20261002.json`, `pinnacleai-v164-staged-20261002.json`, `pinnacleai-v164-live-20261002.json`, `pinnacleai-v164-cloudflare-before-20261002.json`, `pinnacleai-v164-cloudflare-20261002.json`, `pinnacleai-v164-testingbot-20261002.json`, `pinnacleai-v164-lighthouse-local-20261002.json`, `indexnow-pinnacleai-v164-20261002.json`.
 
 These checks establish the recorded page behaviour. Indexing, ranking, AI citation, connected calls and admissions require subsequent evidence.

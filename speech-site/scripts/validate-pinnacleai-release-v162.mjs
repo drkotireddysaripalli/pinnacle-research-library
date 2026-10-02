@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
-const c=JSON.parse(await fs.readFile('deployment/pinnacleai-v162-staged-20261001.json','utf8'));
+const c=JSON.parse(await fs.readFile(process.argv[2]||'deployment/pinnacleai-v162-staged-20261001.json','utf8'));
 const origin='https://www.pinnacleblooms.org',sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const owned=t=>t.replace('<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"></script>','').replace('<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js"></script>','').replace('<script src="https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js?v=2"></script>','');
 async function get(path,options={}){const r=await fetch(new URL(path,origin),{redirect:'manual',signal:AbortSignal.timeout(45000),...options}),bytes=Buffer.from(await r.arrayBuffer());return{r,bytes,text:bytes.toString('utf8')};}
@@ -41,4 +41,4 @@ receipt.protected=await limited(before.rows.filter(r=>!r.path.startsWith('https:
 const books=await get('https://books.pinnacleblooms.org/payment-and-billing');assert.equal(books.r.status,301);assert.equal(books.r.headers.get('location'),origin+'/payment-and-billing');
 for(const path of ['/Leadership/Maheshwari','/leadership/Prudhvi%2dMatsa','/Images/LeadershipImages/shoban_big_image.png'])assert.equal((await get(path)).r.status,410);
 receipt.booksBillingRetained=true;receipt.retiredProfilesRetained=true;receipt.noEnquirySubmitted=true;
-await fs.writeFile('deployment/pinnacleai-v162-live-20261001.json',JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({passed:true,pages:receipt.pages.length,files:receipt.files.length,protected:receipt.protected.length}));
+await fs.writeFile(process.argv[3]||'deployment/pinnacleai-v162-live-20261001.json',JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({passed:true,pages:receipt.pages.length,files:receipt.files.length,protected:receipt.protected.length}));

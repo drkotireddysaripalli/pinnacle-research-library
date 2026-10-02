@@ -1,0 +1,131 @@
+{
+  "at": "2026-10-02T03:42:39.231Z",
+  "id": "pinnacleai",
+  "url": "http://127.0.0.1:4338/pinnacleai",
+  "kind": "simulated lab measurements, not field Core Web Vitals",
+  "reports": [
+    {
+      "device": "mobile",
+      "lighthouseVersion": "13.5.0",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "finalUrl": "http://127.0.0.1:4338/pinnacleai",
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 1361.03,
+        "lcpMs": 2797.0600000000004,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 1361.03
+      },
+      "targets": {
+        "performance": 90,
+        "lcpMs": 2500,
+        "tbtMs": 200,
+        "cls": 0.1
+      },
+      "targetWarnings": [
+        "lcpMs exceeds target or is unavailable"
+      ],
+      "warnings": [],
+      "findings": [
+        {
+          "id": "first-contentful-paint",
+          "title": "First Contentful Paint",
+          "displayValue": "1.4 s"
+        },
+        {
+          "id": "largest-contentful-paint",
+          "title": "Largest Contentful Paint",
+          "displayValue": "2.8 s"
+        },
+        {
+          "id": "interactive",
+          "title": "Time to Interactive",
+          "displayValue": "2.8 s"
+        },
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "displayValue": "Est savings of 18 KiB",
+          "savingsMs": 0
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "displayValue": "Est savings of 147 KiB"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree"
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "displayValue": "Est savings of 400 ms"
+        }
+      ]
+    },
+    {
+      "device": "desktop",
+      "lighthouseVersion": "13.5.0",
+      "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+      "finalUrl": "http://127.0.0.1:4338/pinnacleai",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 372.5603,
+        "lcpMs": 585.1206,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 372.5603
+      },
+      "targets": {
+        "performance": 90,
+        "lcpMs": 2500,
+        "tbtMs": 200,
+        "cls": 0.1
+      },
+      "targetWarnings": [],
+      "warnings": [],
+      "findings": [
+        {
+          "id": "unused-css-rules",
+          "title": "Reduce unused CSS",
+          "displayValue": "Est savings of 21 KiB",
+          "savingsMs": 10
+        },
+        {
+          "id": "forced-reflow-insight",
+          "title": "Forced reflow"
+        },
+        {
+          "id": "image-delivery-insight",
+          "title": "Improve image delivery",
+          "displayValue": "Est savings of 95 KiB"
+        },
+        {
+          "id": "lcp-discovery-insight",
+          "title": "LCP request discovery"
+        },
+        {
+          "id": "network-dependency-tree-insight",
+          "title": "Network dependency tree"
+        },
+        {
+          "id": "render-blocking-insight",
+          "title": "Render-blocking requests",
+          "displayValue": "Est savings of 120 ms"
+        }
+      ]
+    }
+  ]
+}

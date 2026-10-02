@@ -133,6 +133,14 @@ for(const id of choices){
       return evaluate("const rail=document.getElementById('portal-authority-rail'),a=rail.querySelector('a:last-child'),r=a.getBoundingClientRect();return rail.scrollLeft>0 && r.left<innerWidth && r.right<=innerWidth+1");
     });
     if(target.pathname==='/pinnacleai'){
+      await check('PinnacleAI product story and usable module cards',async()=>{
+        row.productStory=await evaluate("const example=document.getElementById('worked-example'),system=document.getElementById('what-it-does'),cards=[...document.querySelectorAll('.overview-architecture>li')];return {exampleBeforeSystem:!!(example.compareDocumentPosition(system)&Node.DOCUMENT_POSITION_FOLLOWING),cards:cards.map(e=>{const r=e.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}}),viewport:innerWidth,disclosures:document.querySelectorAll('.overview-module-detail').length}");
+        const x=row.productStory;
+        if(!x.exampleBeforeSystem||x.disclosures!==7||x.cards.length!==7||x.cards.some(c=>c.width<Math.min(240,x.viewport-40)||c.left<0||c.right>x.viewport+1))return false;
+        await click('.overview-module-detail summary');
+        const open=await evaluate("return document.querySelector('.overview-module-detail').open && document.querySelector('.overview-io').getBoundingClientRect().height>0");
+        await screenshot('product-module-open');await click('.overview-module-detail summary');return open;
+      });
       await check('Seven stages and ten visible FAQ questions',()=>evaluate("return document.querySelectorAll('.overview-lifecycle li').length===7 && document.querySelectorAll('.wave2-faq details').length===10"));
       await check('Lifecycle cards fill section and remain readable',async()=>{
         row.lifecycleGeometry=await evaluate('return ('+measurePinnacleLifecycle.toString()+')()');
