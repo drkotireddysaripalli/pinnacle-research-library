@@ -1,5 +1,7 @@
 # Active page work order
 
+**Current bounded book expansion · 2 October 2026.** Add four free four-page samples, six two-book combinations and a hardbound four-book set. Publish 33 distinct format/combination offers with PDF/softcover pricing ₹799 / ₹1,399 / ₹2,499 and hardbound pricing ₹1,699 / ₹2,999 / ₹5,499 (single / pair / four). Preserve all14 existing IDs/URLs, the common shell,182 routes/four bindings and unavailable ordering. Only sample PDFs are public; paid masters remain private. Scope: index, book PDPs, feed/sitemap and sample assets. Shopify purchase activation depends on a new owner account, Razorpay connection and digital fulfilment. Focused checks: catalogue/feed/rendered prices, membership/formats, sample links/pages and changed sections at phone/tablet/desktop.
+
 
 **Book catalogue addition is published (2 October 2026).** `/books` and 14 edition/collection pages are live on Worker `1e838dfd-4648-468d-b70b-4591461ef911`; source `43db202`, CI `36973472701` passed. Existing 180 routes/four bindings are preserved, with two book routes added. Merchant Center imported all 14 offers without feed issues; all remain unavailable for ordering. Preserve this additive catalogue in future releases. Full receipt: `RELEASE-BOOK-CATALOGUE-20261002.md`. The V164 page work below remains the underlying page baseline.
 ## Current owner priority · 2 October 2026
