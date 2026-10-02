@@ -8,4 +8,13 @@ Release additions: exact `/books` and `/books/*` route assignments; 15 managed H
 
 Validation: production Astro build passed; Astro reported zero type errors; 28 existing route/discovery tests passed. One independent source reviewer checked 14 SKUs/prices/statuses and additive route handling; their sole responsive image-width finding was fixed. Main inspected the actual Chrome desktop book hero, pricing selector, disabled purchase control and following content. Dedicated phone/tablet visual confirmation is not yet recorded. Google processing and approval are separate from deployment and feed submission.
 
-Production version, source revision, live read-back and Merchant Center result will be appended after execution.
+## Published — 2 October 2026
+
+- Source: `43db202ca98cc259cddf1e68ec67336e190a5872` (tree identical to locally tested `52ffa5d`). GitHub app saved it to main; Portal quality run `36973472701` passed before activation.
+- Worker: `1e838dfd-4648-468d-b70b-4591461ef911`, 100%; deployment `5f646584-7f39-4235-bdb6-af611f16b06c`.
+- All 180 prior routes and four bindings preserved. Added only `www.pinnacleblooms.org/books` and `www.pinnacleblooms.org/books/*`. Receipt: `deployment/books-cloudflare-after-20261002.json`.
+- Live browser read-back: `/books` rendered the four covers, all edition links, approved prices and unavailable ordering status. The public XML contained all 14 exact SKU IDs.
+- Merchant Center account `9634043`, source `10755858618`, **Pinnacle 101 Books — English — India**: India, English, free listings only, daily URL fetch. Google displayed **14 total updated products, 14 new products added, all attribute names recognized, no issues found**. Google product review/serving is separate and not yet confirmed; the product dashboard had not populated at this read-back.
+- All nine physical and five digital offers remain out of stock/unavailable: physical stock is zero; PDF checkout/delivery is not active. Paid book PDFs are not public assets.
+- Rollback Worker: `503426b1-3352-4476-82ba-455a88f7a147`; remove only the two newly added book routes if rolling back this catalogue.
+- Blinkit brand is under review; its product-request UI is locked until approval. Nine physical listing records are prepared locally; no Blinkit products submitted.

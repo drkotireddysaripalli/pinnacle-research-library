@@ -1,5 +1,7 @@
 # Active page work order
 
+
+**Book catalogue addition is published (2 October 2026).** `/books` and 14 edition/collection pages are live on Worker `1e838dfd-4648-468d-b70b-4591461ef911`; source `43db202`, CI `36973472701` passed. Existing 180 routes/four bindings are preserved, with two book routes added. Merchant Center imported all 14 offers without feed issues; all remain unavailable for ordering. Preserve this additive catalogue in future releases. Full receipt: `RELEASE-BOOK-CATALOGUE-20261002.md`. The V164 page work below remains the underlying page baseline.
 ## Current owner priority · 2 October 2026
 
 **V164 is published and verified.** PinnacleAI product-centred story, editable Figma desktop/phone compositions, compact module architecture and source/reading exports are live. Source `9f6130d`, CI `36961331033` passed before activation; Worker `503426b1-3352-4476-82ba-455a88f7a147`. All 50 managed pages and 15 protected routes match the release; 180 routes/four bindings preserved. Physical iPhone13 Safari 14/14 and hosted Safari 16/16 checks passed, with module screenshots inspected. IndexNow accepted the changed URL. Local lab mobile96/desktop100; mobile LCP2.797s and the separately recorded shared tablet-menu spacing concern remain follow-ups. Full receipt below is authoritative.
