@@ -5,3 +5,5 @@ Four six-page public sample PDFs replace the four-page downloads on all 33 offer
 Ebook prices are visible in the library hero: one ₹799, any pair ₹1,399, all four ₹2,499. Individual offer pages show relevant two-book and complete collections immediately after the hero. Physical stock remains zero. Online checkout is not represented as active before payment and delivery are configured.
 
 Production build and 33-page sample/link checks passed. Deployment must preserve all 182 existing routes and four bindings. Cloudflare version activation follows source CI. Desktop public readback is pending; new phone/tablet visual checks are not claimed.
+
+Published at 100% on Worker 2696f9e5-6b10-4fb2-9749-100c450e629f from source 1ad31a6081d33e4128d2f76eecc200db60068bba. CI 36982611076 succeeded. After-readback preserved 182 routes and all four bindings. Native Chrome confirmed the public library prices, six-page samples, and ebook pair/complete-collection offers on the exact Speech PDP. Merchant Center processed 33 offers,19new,no feed errors; all33 currently not showing while review/availability remains pending.
