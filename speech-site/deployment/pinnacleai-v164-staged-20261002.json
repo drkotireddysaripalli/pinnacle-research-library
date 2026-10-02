@@ -1,0 +1,24 @@
+{
+  "at": "2026-10-02T03:42:04.319Z",
+  "prior": "release-pinnacleai-v163-20261002",
+  "priorUpload": ".worker-upload-pinnacleai-v163-20261002",
+  "stage": "release-pinnacleai-v164-20261002",
+  "upload": ".worker-upload-pinnacleai-v164-20261002",
+  "pages": {
+    "pinnacleai": "pinnacleai.html"
+  },
+  "changed": [
+    "pinnacle-pages-html/pinnacleai.html",
+    "pinnacle-pages-data/pinnacleai-sources.json",
+    "pinnacle-pages-data/pinnacleai-sources.txt",
+    "pinnacle-pages-data/pinnacleai-reading.md",
+    "pinnacle-pages-data/pinnacleai-sitemap.xml",
+    "pinnacle-pages-data/pinnacleai-llms.txt"
+  ],
+  "added": [
+    "pinnacle-pages-assets/_slug_.D_KNVJCf.css"
+  ],
+  "unchangedUnionFiles": 1975,
+  "runtimeRoutingUnchanged": true,
+  "commonShellsUnchanged": true
+}

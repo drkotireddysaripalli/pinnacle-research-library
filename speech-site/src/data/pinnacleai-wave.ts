@@ -15,15 +15,15 @@ export const waveSources = {
 
 export const pinnacleWave = [
   {
-    slug:'pinnacleai', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'PinnacleAI®', label:'PinnacleAI® system', title:'PinnacleAI® Paradigm Shift | Self-Sufficient, Mainstream-Included Life',
-    description:'Explore the PinnacleAI Paradigm Shift: measurement, integrated therapies, family practice and review towards a self-sufficient, mainstream-included life. 9100 181 181.',
-    eyebrow:'Pinnacle Blooms Network · The whole system. One purpose.', headline:'Your child’s self-sufficient, mainstream-included life. The purpose, from the beginning.',
-    lead:'That purpose determines what we measure, the goals we choose, the therapies and people we bring together, what continues at home, and what we track, correct and reassess. Your family helps shape the journey with clarity.',
+    slug:'pinnacleai', updatedOn:'2026-10-02', includeReadingFaqs:true, short:'PinnacleAI®', label:'PinnacleAI® system', title:'PinnacleAI® | Abilities, Therapies & Everyday Life',
+    description:'Discover PinnacleAI: ability measurement, child-specific planning, integrated therapies and family practice towards self-sufficiency and inclusion. 9100 181 181.',
+    eyebrow:'Pinnacle Blooms Network · The whole system. One purpose.', headline:'One system. Your child’s whole life.',
+    lead:'Your child’s self-sufficient, mainstream-included life is the purpose from the beginning. PinnacleAI® brings ability measurement, a child-specific plan, integrated therapies, everyday practice and review into one system built around that purpose.',
     direct:'PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.',
     purpose:'Your child’s self-sufficient, mainstream-included life is the purpose: doing more with growing independence and taking part at home, school and in the community. That purpose shapes the abilities, goals, methods, people, practice and review.',
     question:'How does one everyday goal move through the whole system?',
-    exampleTitle:'A classroom goal. A connected plan. A decision that changes.',
-    exampleLead:'Illustrative example: a child enjoys building with blocks. Their family wants them to communicate a help request and take part in a comfortable classroom activity. Follow how that life purpose guides the work.',
+    exampleTitle:'“I want my child to ask for help—and join in.”',
+    exampleLead:'Imagine a child who loves building with blocks. Their family wants that enjoyment to become shared play at home and school. Here is how PinnacleAI connects that priority to a plan people can act on. This is an illustrative example, not a patient result.',
     example:[
       ['Begin with a strength','The child chooses a favourite block with a gesture or picture. The family explains what the child enjoys and which shared activity they would like to make easier.'],
       ['Agree a useful next goal','Assessment and professional discussion help identify an accessible help request. The family understands what is being worked on, why, and which support makes it possible.'],

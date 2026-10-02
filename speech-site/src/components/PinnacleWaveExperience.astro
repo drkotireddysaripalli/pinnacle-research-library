@@ -69,7 +69,7 @@ const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].
       <div class="wave2-wrap wave2-hero-grid">
         <div class="wave2-hero-heading">
           <p class="wave2-kicker"><Icon name={moduleIcons[page.slug]} size={22}/>{page.eyebrow}</p>
-          <h1 id="wave2-title"><span>{isOverview?"PinnacleAI® Paradigm Shift":page.short}</span>{editorial.opening}</h1>
+          <h1 id="wave2-title"><span>{page.short}</span>{editorial.opening}</h1>
         </div>
         {!isOverview&&<figure class="wave2-hero-art"><Image src={heroBySlug[page.slug]} widths={[480,800,1200,1600]} sizes="(min-width: 900px) 48vw, 100vw" format="webp" quality={81} loading="eager" decoding="async" alt={editorial.imageAlt}/></figure>}
         <div class="wave2-hero-detail">
@@ -82,7 +82,7 @@ const firstPublished=['abilityscore','seven-readiness-indexes','therapeuticai'].
       </div>
     </section>
 
-    {isOverview ? <nav class="wave2-jump wave2-wrap" aria-label="On this page">{isOverview&&<a href="#paradigm-shift">The Paradigm Shift</a>}<a href="#what-it-does">{isOverview?'The PinnacleAI mechanism':'What this module does'}</a>{isOverview&&<><a href="#family-journey">Every home. Every parent.</a><a href="#self-sufficient">Self-Sufficient</a><a href="#mainstream">Mainstream Included</a></>}<a href="#worked-example">See the example</a><a href="#sources">Verify the evidence</a><a href="#next-step">Begin with Pinnacle</a></nav> : <nav class="wave2-jump wave2-wrap" aria-label="On this page"><a href="#worked-example">See a life moment</a><a href="#what-it-does">What this module does</a><a href="#sources">Check the evidence</a><a href="#next-step">Take a next step</a></nav>}
+    {isOverview ? <nav class="wave2-jump wave2-wrap" aria-label="On this page"><a href="#worked-example">PinnacleAI in a child’s day</a><a href="#what-it-does">Inside the system</a><a href="#therapies">Integrated therapies</a><a href="#family-journey">Every home. Every parent.</a><a href="#self-sufficient">Self-Sufficient</a><a href="#mainstream">Mainstream Included</a><a href="#sources">Verify the evidence</a><a href="#next-step">Begin with Pinnacle</a></nav> : <nav class="wave2-jump wave2-wrap" aria-label="On this page"><a href="#worked-example">See a life moment</a><a href="#what-it-does">What this module does</a><a href="#sources">Check the evidence</a><a href="#next-step">Take a next step</a></nav>}
 
     {isOverview ? <>
       <PinnacleOverviewBody page={page}/>

@@ -2,7 +2,7 @@
 
 > Reading aid for the public, source-linked PinnacleAI pages. It does not guarantee AI ingestion, citation or endorsement.
 
-- [PinnacleAI®](https://www.pinnacleblooms.org/pinnacleai): Explore the PinnacleAI Paradigm Shift: measurement, integrated therapies, family practice and review towards a self-sufficient, mainstream-included life. 9100 181 181. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/pinnacleai-sources.json).
+- [PinnacleAI®](https://www.pinnacleblooms.org/pinnacleai): Discover PinnacleAI: ability measurement, child-specific planning, integrated therapies and family practice towards self-sufficiency and inclusion. 9100 181 181. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/pinnacleai-sources.json).
 - [AbilityScore®](https://www.pinnacleblooms.org/abilityscore): AbilityScore helps a professional discuss what a child can do now and which everyday goal may come next. See a toy-choice example, 0–1000 limits and sources. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/abilityscore-sources.json).
 - [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes): Explore seven PinnacleAI Readiness views through a child’s peer-play goal. See what each view can help discuss, its limits and the BIS source. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/seven-readiness-indexes-sources.json).
 - [Personal Development Kernel](https://www.pinnacleblooms.org/personal-development-kernel): See how PinnacleAI’s Personal Development Kernel keeps a child’s home and school context available for authorised professional review. [Sources](https://www.pinnacleblooms.org/pinnacle-pages-data/personal-development-kernel-sources.json).

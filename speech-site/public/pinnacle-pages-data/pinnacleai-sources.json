@@ -1,18 +1,18 @@
 {
-  "title": "PinnacleAI® Paradigm Shift | Self-Sufficient, Mainstream-Included Life",
+  "title": "PinnacleAI® | Abilities, Therapies & Everyday Life",
   "url": "https://www.pinnacleblooms.org/pinnacleai",
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
-  "parentMoment": "The child and family at the centre. The whole PinnacleAI® system working towards that life.",
+  "parentMoment": "Understand the starting point. Know why each step matters. Help shape what happens next.",
   "lifeDecision": "Your child’s self-sufficient, mainstream-included life determines the abilities, goals, suitable methods, people, practice and review from the beginning.",
   "familyDiscussion": "An explained starting picture, meaningful priorities, a proposed plan, guided practice and a review decision with qualified professionals.",
   "directAnswer": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.",
   "lifePurpose": "Your child’s self-sufficient, mainstream-included life is the purpose: doing more with growing independence and taking part at home, school and in the community. That purpose shapes the abilities, goals, methods, people, practice and review.",
   "illustrativeExample": {
-    "title": "A classroom goal. A connected plan. A decision that changes.",
-    "description": "Illustrative example: a child enjoys building with blocks. Their family wants them to communicate a help request and take part in a comfortable classroom activity. Follow how that life purpose guides the work.",
+    "title": "“I want my child to ask for help—and join in.”",
+    "description": "Imagine a child who loves building with blocks. Their family wants that enjoyment to become shared play at home and school. Here is how PinnacleAI connects that priority to a plan people can act on. This is an illustrative example, not a patient result.",
     "steps": [
       {
         "title": "Begin with a strength",
@@ -185,11 +185,11 @@
       "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
     },
     {
-      "name": "Self-Sufficient",
+      "name": "PinnacleAI® → Self-Sufficient",
       "url": "https://www.pinnacleblooms.org/self-sufficient"
     },
     {
-      "name": "Mainstream Included",
+      "name": "PinnacleAI® → Mainstream Included",
       "url": "https://www.pinnacleblooms.org/mainstream"
     }
   ],
@@ -427,9 +427,9 @@
     {
       "id": "self-sufficient",
       "icon": "sun",
-      "kicker": "Self-Sufficient",
-      "title": "The life we are working towards. Starting today.",
-      "answer": "Self-sufficiency gives the work a purpose: growing ability to communicate, make choices, act and direct one’s own life. We connect that purpose to suitable assessment, practice and review, with useful support and adaptations.",
+      "kicker": "PinnacleAI® → Self-Sufficient",
+      "title": "More choice. More ability. More of their own life.",
+      "answer": "PinnacleAI keeps self-sufficiency in the plan from the start. AbilityScore and readiness views inform the next goal; guided practice makes it relevant to daily routines; Fusion and reassessment bring real-world use back into review. The aim is growing ability to communicate, choose, act and direct one’s life—with useful support and adaptations.",
       "items": [
         [
           "Choose",
@@ -456,9 +456,9 @@
     {
       "id": "mainstream",
       "icon": "people",
-      "kicker": "Mainstream Included",
-      "title": "Learning. Belonging. Participating in the world.",
-      "answer": "Mainstream inclusion is part of the purpose from the beginning. The plan connects abilities, readiness, family, professionals and relevant school or community support to meaningful participation.",
+      "kicker": "PinnacleAI® → Mainstream Included",
+      "title": "A place to learn. People to belong with.",
+      "answer": "PinnacleAI connects the child’s abilities and readiness with a meaningful participation goal. The family and professionals can plan relevant support, include school observations with consent and review what helps the child take part. Mainstream inclusion gives the work its direction from the beginning.",
       "items": [
         [
           "Join in",

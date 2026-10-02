@@ -2,9 +2,9 @@
 // while each must answer a different family decision in its own words.
 export const pinnacleEditorial = {
   pinnacleai: {
-    opening: 'Your child’s self-sufficient, mainstream-included life. The purpose, from the beginning.',
-    lead: 'That purpose determines what we measure, the goals we choose, the therapies and people we bring together, what continues at home, and what we track, correct and reassess. Your family helps shape the journey with clarity.',
-    moment: 'The child and family at the centre. The whole PinnacleAI® system working towards that life.',
+    opening: 'One system. Your child’s whole life.',
+    lead: 'Your child’s self-sufficient, mainstream-included life is the purpose from the beginning. PinnacleAI® brings ability measurement, a child-specific plan, integrated therapies, everyday practice and review into one system built around that purpose.',
+    moment: 'Understand the starting point. Know why each step matters. Help shape what happens next.',
     decision: 'Your child’s self-sufficient, mainstream-included life determines the abilities, goals, suitable methods, people, practice and review from the beginning.',
     familyResult: 'An explained starting picture, meaningful priorities, a proposed plan, guided practice and a review decision with qualified professionals.',
     callQuestion: 'Begin your child’s journey with Pinnacle.',

@@ -1,12 +1,12 @@
-# PinnacleAI® Paradigm Shift | Self-Sufficient, Mainstream-Included Life
+# PinnacleAI® | Abilities, Therapies & Everyday Life
 Canonical: https://www.pinnacleblooms.org/pinnacleai
 
-> Your child’s self-sufficient, mainstream-included life. The purpose, from the beginning.
+> One system. Your child’s whole life.
 
-That purpose determines what we measure, the goals we choose, the therapies and people we bring together, what continues at home, and what we track, correct and reassess. Your family helps shape the journey with clarity.
+Your child’s self-sufficient, mainstream-included life is the purpose from the beginning. PinnacleAI® brings ability measurement, a child-specific plan, integrated therapies, everyday practice and review into one system built around that purpose.
 
 ## The family question
-The child and family at the centre. The whole PinnacleAI® system working towards that life.
+Understand the starting point. Know why each step matters. Help shape what happens next.
 
 ## What this page helps decide
 Your child’s self-sufficient, mainstream-included life determines the abilities, goals, suitable methods, people, practice and review from the beginning.
@@ -15,8 +15,8 @@ Your child’s self-sufficient, mainstream-included life determines the abilitie
 PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. It supports ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. Families and qualified professionals make care decisions.
 
 ## One illustrative everyday moment
-A classroom goal. A connected plan. A decision that changes.
-Illustrative example: a child enjoys building with blocks. Their family wants them to communicate a help request and take part in a comfortable classroom activity. Follow how that life purpose guides the work.
+“I want my child to ask for help—and join in.”
+Imagine a child who loves building with blocks. Their family wants that enjoyment to become shared play at home and school. Here is how PinnacleAI connects that priority to a plan people can act on. This is an illustrative example, not a patient result.
 1. **Begin with a strength:** The child chooses a favourite block with a gesture or picture. The family explains what the child enjoys and which shared activity they would like to make easier.
 2. **Agree a useful next goal:** Assessment and professional discussion help identify an accessible help request. The family understands what is being worked on, why, and which support makes it possible.
 3. **Choose the right contributions:** The responsible professional selects suitable communication, movement or learning support. The goal guides the team; every child does not need every therapy.
@@ -113,26 +113,26 @@ The PinnacleAI® Paradigm Shift begins with the child’s self-sufficient, mains
 - **Notice what helps:** Your child’s choices, comfort and the support that helps all matter.
 - **Bring it into review:** Your observations help the professional decide what to keep or change.
 
-## Self-Sufficient
-The life we are working towards. Starting today.
-Self-sufficiency gives the work a purpose: growing ability to communicate, make choices, act and direct one’s own life. We connect that purpose to suitable assessment, practice and review, with useful support and adaptations.
+## PinnacleAI® → Self-Sufficient
+More choice. More ability. More of their own life.
+PinnacleAI keeps self-sufficiency in the plan from the start. AbilityScore and readiness views inform the next goal; guided practice makes it relevant to daily routines; Fusion and reassessment bring real-world use back into review. The aim is growing ability to communicate, choose, act and direct one’s life—with useful support and adaptations.
 - **Choose:** Express a preference and have it understood.
 - **Take part:** Do more within a familiar routine.
 - **Use support:** Ask for help or use an adaptation effectively.
 - **Carry it into life:** Use the ability with another person or in another setting.
 Review the support needed, comfort and use in different settings—not a score alone.
 Self Sufficiency Readiness is named in the BIS schedule.
-[Explore Self-Sufficient](https://www.pinnacleblooms.org/self-sufficient)
-## Mainstream Included
-Learning. Belonging. Participating in the world.
-Mainstream inclusion is part of the purpose from the beginning. The plan connects abilities, readiness, family, professionals and relevant school or community support to meaningful participation.
+[Explore PinnacleAI® → Self-Sufficient](https://www.pinnacleblooms.org/self-sufficient)
+## PinnacleAI® → Mainstream Included
+A place to learn. People to belong with.
+PinnacleAI connects the child’s abilities and readiness with a meaningful participation goal. The family and professionals can plan relevant support, include school observations with consent and review what helps the child take part. Mainstream inclusion gives the work its direction from the beginning.
 - **Join in:** Access a shared activity in a way that works for the child.
 - **Communicate:** Be understood by another adult or child.
 - **Learn together:** Take part in a suitable classroom routine or learning activity.
 - **Belong:** Review comfort, readiness and the environment’s support.
 Family ↔ professionals ↔ teacher or setting, with appropriate consent. Readiness guides support; admission is decided by the school.
 School and Mainstream Inclusion Readiness are named in the BIS schedule.
-[Explore Mainstream Included](https://www.pinnacleblooms.org/mainstream)
+[Explore PinnacleAI® → Mainstream Included](https://www.pinnacleblooms.org/mainstream)
 
 ## Defined scale
 - **31M+ Defined services:** Independently assured floor; includes therapy, assessments, screenings and parent training. [Source](https://www.pinnacleblooms.org/verify/evidence/assurance-map.html)
