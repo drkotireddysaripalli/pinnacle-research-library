@@ -5,16 +5,16 @@ import assert from 'node:assert/strict';
 const source = fs.readFileSync('public/pinnacle-pages-scripts/speech-measurement.js','utf8');
 const key='pinnacle-speech-analytics-v1';
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service'}={}){
+function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service',commerceCatalogue={}}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
- const doc={body:{dataset:{pageVariant:variant}},querySelector:s=>s==='[data-speech-measurement]'?panel:status,querySelectorAll:()=>choices,createElement:()=>({}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>listeners[event]=fn};
+ const doc={body:{dataset:{pageVariant:variant}},querySelector:s=>s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>listeners[event]=fn};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
- return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 test('no analytics before consent; valid consent sends only fixed CTA fields',()=>{
  const h=harness();h.click('hero-call','tel:+919100181181');assert.equal(h.scripts.length,0);assert.equal(h.events().length,0);
@@ -186,4 +186,40 @@ test('centre-detail events omit the branch identity and query values under conse
   const count=h.events().length;h.choose('declined');h.click('final-call','tel:+919100181181');assert.equal(h.events().length,count);
  }
  }
+});
+
+const commerceFixture = {
+ 'PBN-SP-101-EN-PDF': {title:'My Message Matters',path:'/books/speech-communication-101-my-message-matters',price:799,
+   editionPaths:['/books/speech-communication-101-my-message-matters','/books/speech-communication-101-my-message-matters-softcover'],
+   books:[{sku:'PBN-SP-101-EN-PDF',title:'My Message Matters',sample:'/pinnacle-pages-assets/book-samples-sales-v2-20261002/speech-sample.pdf'}]}
+};
+const commerceLine = {sku:'PBN-SP-101-EN-PDF',quantity:1,price:799};
+test('book ecommerce respects consent, withdrawal, GPC and production routes',()=>{
+ const h=harness({path:'/shop',commerceCatalogue:commerceFixture});
+ h.commerce('add_to_cart',[commerceLine]);assert.equal(h.events().length,0);
+ h.choose('accepted');h.commerce('add_to_cart',[commerceLine]);
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','add_to_cart']);
+ h.choose('declined');h.commerce('begin_checkout',[commerceLine]);assert.equal(h.events().length,2);
+ for(const opts of [{path:'/shop',gpc:true},{path:'/shop',origin:'http://127.0.0.1:4322'},{path:'/books/unknown'}]){
+   const b=harness({...opts,commerceCatalogue:commerceFixture});b.choose('accepted');b.commerce('add_to_cart',[commerceLine]);assert.equal(b.events().length,0);
+ }
+ const prior=harness({path:'/shop',commerceCatalogue:commerceFixture,saved:{value:'accepted',at:Date.now()}});
+ assert.equal(prior.events().length,0);
+});
+test('book ecommerce reconstructs public item fields and rejects unsupported payloads',()=>{
+ const h=harness({path:'/shop',commerceCatalogue:commerceFixture});h.choose('accepted');
+ h.commerce('begin_checkout',[{...commerceLine,email:'private@example.test',checkoutUrl:'secret-checkout'}],{phone:'private-phone'});
+ const payload=h.events()[1][2];assert.equal(payload.currency,'INR');assert.equal(payload.value,799);assert.equal(payload.items[0].item_id,commerceLine.sku);
+ assert(!JSON.stringify(payload).includes('private'));assert(!JSON.stringify(payload).includes('secret'));assert(!JSON.stringify(payload).includes('?'));
+ for(const [name,items] of [['purchase',[commerceLine]],['add_to_cart',[{...commerceLine,sku:'UNKNOWN'}]],['add_to_cart',[{...commerceLine,quantity:-1}]],['add_to_cart',[{...commerceLine,price:Infinity}]],['add_to_cart',[{...commerceLine,price:800}]]])h.commerce(name,items);
+ assert.equal(h.events().length,2);
+});
+test('product views and sample clicks are measured once consent is present',()=>{
+ const h=harness({path:commerceFixture[commerceLine.sku].path,commerceCatalogue:commerceFixture});h.choose('accepted');h.choose('accepted');
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','view_item']);
+ h.click('sample',commerceFixture[commerceLine.sku].books[0].sample);
+ assert.equal(h.events().at(-1)[1],'sample_preview');
+ h.click('sample',commerceFixture[commerceLine.sku].books[0].sample+'?name=private');assert.equal(h.events().length,3);
+ const print=harness({path:commerceFixture[commerceLine.sku].editionPaths[1],commerceCatalogue:commerceFixture});print.choose('accepted');
+ assert.deepEqual(print.events().map(e=>e[1]),['page_view']);
 });

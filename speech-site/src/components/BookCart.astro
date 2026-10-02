@@ -6,6 +6,8 @@ const singles = books.filter(book => !book.physical && !book.bundle);
 const cartCatalogue = Object.fromEntries(books.filter(book => !book.physical).map(book => [book.sku, {
   title: book.title,
   path: book.path,
+  price: book.price,
+  editionPaths: books.filter(item => item.groupKey === book.groupKey).map(item => item.path),
   books: book.includesSkus.map(sku => {
     const member = singles.find(item => item.sku === sku)!;
     const visual = presentation.books.find(item => item.fallback_url.endsWith(member.path))!;

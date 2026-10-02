@@ -75,7 +75,15 @@
       } catch { message.textContent='Your checkout link could not load. Please refresh your book bag.'; }
     }
   }
-  function open(button) { opener=button; if(!dialog.open)dialog.showModal(); }
+  function measure(name, lines = cart?.lines.nodes || []) {
+    try {
+      if (!lines.length || lines.some(line => line.cost.totalAmount.currencyCode !== 'INR')) return;
+      document.dispatchEvent(new CustomEvent('pinnacle:commerce', {detail:{name,items:lines.map(line => ({
+        sku:line.merchandise.sku,quantity:line.quantity,price:Number(line.cost.totalAmount.amount)/line.quantity
+      }))}}));
+    } catch {}
+  }
+  function open(button) { opener=button; if(!dialog.open){dialog.showModal();measure('view_cart');} }
   root.querySelector('[data-cart-open]').addEventListener('click',e=>{render();open(e.currentTarget);});
   root.querySelector('[data-cart-close]').addEventListener('click',()=>dialog.close());
   dialog.addEventListener('close',()=>opener?.focus());
@@ -93,9 +101,12 @@
     if(!variant?.availableForSale || variant.requiresShipping) return;
     busy=true; button.disabled=true; message.textContent='';
     try {
-      if (cart?.lines.nodes.some(line=>line.merchandise.id===variant.id)) {render();message.textContent='This ebook or collection is already in your bag.';}
+      const existing = cart?.lines.nodes.some(line=>line.merchandise.id===variant.id);
+      if (existing) {render();message.textContent='This ebook or collection is already in your bag.';}
       else if (cart) await change(`mutation Add($id:ID!,$lines:[CartLineInput!]!){cartLinesAdd(cartId:$id,lines:$lines){cart{${fields}} userErrors{message} warnings{code message}}}`,{id:cart.id,lines:[{merchandiseId:variant.id,quantity:1}]},'cartLinesAdd');
       else await change(`mutation Create($input:CartInput!){cartCreate(input:$input){cart{${fields}} userErrors{message} warnings{code message}}}`,{input:{lines:[{merchandiseId:variant.id,quantity:1}],buyerIdentity:{countryCode:'IN'}}},'cartCreate');
+      const added = !existing && cart?.lines.nodes.find(line=>line.merchandise.id===variant.id);
+      if (added) measure('add_to_cart', [added]);
       open(button);
     } catch(e) {status.textContent=e.message;message.textContent=e.message;}
     finally {busy=false;button.disabled=false;}
@@ -104,13 +115,16 @@
     if(e.target.closest('.pbn-cart-compare')) { dialog.close(); return; }
     const button=e.target.closest('[data-remove-line]'); if(!button || busy || !cart)return;
     busy=true;button.disabled=true;message.textContent='';
-    try {await change(`mutation Remove($id:ID!,$lines:[ID!]!){cartLinesRemove(cartId:$id,lineIds:$lines){cart{${fields}} userErrors{message} warnings{code message}}}`,{id:cart.id,lines:[button.dataset.removeLine]},'cartLinesRemove');}
+    const removed = cart.lines.nodes.find(line=>line.id===button.dataset.removeLine);
+    try {await change(`mutation Remove($id:ID!,$lines:[ID!]!){cartLinesRemove(cartId:$id,lineIds:$lines){cart{${fields}} userErrors{message} warnings{code message}}}`,{id:cart.id,lines:[button.dataset.removeLine]},'cartLinesRemove');
+      if (removed && !cart.lines.nodes.some(line=>line.id===removed.id)) measure('remove_from_cart', [removed]);
+    }
     catch(e){message.textContent=e.message;} finally{busy=false;if(button.isConnected)button.disabled=false;}
   });
   // Revalidate the cart immediately before redirect so stale or unavailable items cannot be silently purchased.
   checkout.addEventListener('click',async e=>{
     e.preventDefault(); if(busy||!cart)return;busy=true;message.textContent='Checking your book bag…';
-    try {const data=await api(`query Cart($id:ID!){cart(id:$id){${fields}}}`,{id:cart.id});cart=data.cart;render();if(!cart?.totalQuantity){remember(null);message.textContent='Your book bag has expired. Please add your books again.';return;}if(!checkout.hidden)location.assign(checkout.href);}
+    try {const data=await api(`query Cart($id:ID!){cart(id:$id){${fields}}}`,{id:cart.id});cart=data.cart;render();if(!cart?.totalQuantity){remember(null);message.textContent='Your book bag has expired. Please add your books again.';return;}if(!checkout.hidden){measure('begin_checkout');location.assign(checkout.href);}}
     catch(e){message.textContent=e.message;}finally{busy=false;}
   });
   async function init(){
