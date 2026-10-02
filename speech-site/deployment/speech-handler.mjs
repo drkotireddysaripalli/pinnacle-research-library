@@ -1,3 +1,4 @@
+export const BOOK_ROUTES={"/books": "books-index", "/books/speech-communication-101-my-message-matters": "book-speech-communication-101-my-message-matters", "/books/speech-communication-101-my-message-matters-softcover": "book-speech-communication-101-my-message-matters-softcover", "/books/speech-communication-101-my-message-matters-hardbound": "book-speech-communication-101-my-message-matters-hardbound", "/books/occupational-therapy-101-i-belong-in-everyday-life": "book-occupational-therapy-101-i-belong-in-everyday-life", "/books/occupational-therapy-101-i-belong-in-everyday-life-softcover": "book-occupational-therapy-101-i-belong-in-everyday-life-softcover", "/books/occupational-therapy-101-i-belong-in-everyday-life-hardbound": "book-occupational-therapy-101-i-belong-in-everyday-life-hardbound", "/books/aba-parent-education-101-understanding-everyday-behaviour": "book-aba-parent-education-101-understanding-everyday-behaviour", "/books/aba-parent-education-101-understanding-everyday-behaviour-softcover": "book-aba-parent-education-101-understanding-everyday-behaviour-softcover", "/books/aba-parent-education-101-understanding-everyday-behaviour-hardbound": "book-aba-parent-education-101-understanding-everyday-behaviour-hardbound", "/books/special-education-101-learning-through-everyday-play": "book-special-education-101-learning-through-everyday-play", "/books/special-education-101-learning-through-everyday-play-softcover": "book-special-education-101-learning-through-everyday-play-softcover", "/books/special-education-101-learning-through-everyday-play-hardbound": "book-special-education-101-learning-through-everyday-play-hardbound", "/books/pinnacle-101-four-book-pdf-collection": "book-pinnacle-101-four-book-pdf-collection", "/books/pinnacle-101-four-book-softcover-collection": "book-pinnacle-101-four-book-softcover-collection"};
 // Exact public speech routes only. Returning null preserves the existing Worker/origin path.
 export const SPEECH_CANONICAL='/top-speech-therapy-center-india-proven-improvement-rate';
 export const ENROLMENT_CANONICAL='/enroll-autism-speech-aba-therapies-india';
@@ -44,6 +45,7 @@ export async function serveSpeech(request,env,inventory){
  for(const product of PINNACLEAI_PATHS)aliases.set(product+'/',product);
  for(const centre of Object.keys(CENTRE_DETAIL_ROUTES))aliases.set(centre+'/',centre);
  for(const document of Object.keys(PUBLIC_DOCUMENT_ROUTES))aliases.set(document+'/',document);
+ for(const book of Object.keys(BOOK_ROUTES))aliases.set(book+'/',book);
  aliases.set('/pinnacle-ai','/pinnacleai');aliases.set('/pinnacle-ai/','/pinnacleai');
  aliases.set('/ability-score','/abilityscore');aliases.set('/ability-score/','/abilityscore');
  for(const guide of GUIDES)for(const suffix of ['/', '.html'])aliases.set('/speech-therapy/'+guide+suffix,'/speech-therapy/'+guide);
@@ -58,6 +60,8 @@ export async function serveSpeech(request,env,inventory){
  else if(key===ASSESSMENT_CANONICAL)key='/pinnacle-pages-html/assessment.html';
  else if(key===CENTERS_CANONICAL)key='/pinnacle-pages-html/centers.html';
  else if(Object.hasOwn(CENTRE_DETAIL_ROUTES,key))key='/pinnacle-pages-html/'+CENTRE_DETAIL_ROUTES[key]+'.html';
+ else if(Object.hasOwn(BOOK_ROUTES,key))key='/pinnacle-pages-html/'+BOOK_ROUTES[key]+'.html';
+ else if(key==='/books/sitemap.xml')key='/pinnacle-pages-data/books-sitemap.xml';
  else if(Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,key))key='/pinnacle-pages-html/'+PUBLIC_DOCUMENT_ROUTES[key]+'.html';
  else if(PINNACLEAI_PATHS.includes(key))key='/pinnacle-pages-html/'+key.slice(1)+'.html';
  else if(key===SPEECH_CANONICAL)key='/pinnacle-pages-html/speech.html';

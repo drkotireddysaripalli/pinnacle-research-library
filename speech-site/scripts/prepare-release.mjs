@@ -1,3 +1,4 @@
+import books from '../src/data/book-catalog.json' with {type:'json'};
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
@@ -60,6 +61,8 @@ for(const page of pinnacleWave){
 for(const page of [...policies,...lifePages,...institutional]){const text=await fs.readFile(path.join(root,'dist',page.slug+'.html'),'utf8');assert(text.includes('index, follow, max-image-preview:large')&&text.includes(page.title));await fs.writeFile(path.join(out,'pinnacle-pages-html',page.slug+'.html'),text);}
 await fs.copyFile(path.join(root,'dist/policies.html'),path.join(out,'pinnacle-pages-html/policies.html'));
 assert.deepEqual(await fs.readFile(path.join(out,'index.html')),before,'Verify index must be unchanged');
+await fs.copyFile(path.join(root,'dist/books.html'),path.join(out,'pinnacle-pages-html/books-index.html'));
+for(const book of books){const html=await fs.readFile(path.join(root,'dist',book.path.slice(1)+'.html'),'utf8');assert(html.includes(book.sku)&&html.includes('index, follow, max-image-preview:large'));await fs.writeFile(path.join(out,'pinnacle-pages-html','book-'+book.slug+'.html'),html);}
 const inventory={};
 async function walk(dir){for(const item of await fs.readdir(dir,{withFileTypes:true})){const f=path.join(dir,item.name);if(item.isDirectory())await walk(f);else{const key='/'+path.relative(out,f).replaceAll('\\','/');inventory[key]=crypto.createHash('sha256').update(await fs.readFile(f)).digest('hex').slice(0,16);}}}
 for(const dir of ['pinnacle-pages-assets','pinnacle-pages-fonts','pinnacle-pages-scripts','pinnacle-pages-data','pinnacle-pages-html'])await walk(path.join(out,dir));

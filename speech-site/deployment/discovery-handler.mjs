@@ -1,11 +1,14 @@
 const PUBLIC='https://www.pinnacleblooms.org';
 const CHILD_SITEMAP=PUBLIC+'/speech-therapy/sitemap.xml';
 const ROOT_SITEMAPS=[
- '/sitemaps/core.xml','/sitemaps/centres.xml','/sitemaps/staff.xml','/sitemaps/bots.xml','/sitemaps/miracles.xml',
+ '/books/sitemap.xml','/sitemaps/core.xml','/sitemaps/centres.xml','/sitemaps/staff.xml','/sitemaps/bots.xml','/sitemaps/miracles.xml',
  '/sitemaps/faq-en.xml','/sitemaps/faq-te.xml','/sitemaps/faq-hi.xml','/sitemaps/faq-kn.xml','/sitemaps/faq-mr.xml','/sitemaps/faq-ta.xml','/sitemaps/faq-ml.xml',
  '/verify/sitemap.xml','/speech-therapy/sitemap.xml','/pinnacleai/sitemap.xml','/pinnacle-pages-data/public-documents-sitemap.xml'
 ];
 const MANAGED_SECTION=`
+
+## Pinnacle parent books
+- [Pinnacle 101 Parent Visual Library](${PUBLIC}/books): four illustrated parent guides in PDF, softcover and hardbound editions. Listed prices and current availability are shown for each edition.
 
 ## Policies and rights
 - [All policies](${PUBLIC}/policies): fifteen dated policies covering care, payment, privacy, children, website use and ethical conduct.

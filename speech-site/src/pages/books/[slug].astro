@@ -1,0 +1,38 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import books from '../../data/book-catalog.json';
+import speech from '../../assets/books/speech.png';
+import occupational from '../../assets/books/occupational.png';
+import behaviour from '../../assets/books/behaviour.png';
+import learning from '../../assets/books/learning.png';
+import collection from '../../assets/books/collection.png';
+import '../../styles/book-pages.css';
+export function getStaticPaths(){return books.map(book=>({params:{slug:book.slug},props:{book}}));}
+const {book}=Astro.props;
+const origin='https://www.pinnacleblooms.org';
+const covers={speech,occupational,behaviour,learning,collection};
+const siblings=books.filter(x=>x.bookKey===book.bookKey);
+const related=books.filter(x=>!x.physical&&!x.bundle&&x.bookKey!==book.bookKey);
+const money=(value:number)=>'₹'+value.toLocaleString('en-IN');
+const title=book.bundle?book.feedTitle:book.title+' — '+book.discipline+' — '+book.format;
+const graph=[{'@type':book.bundle?'Product':['Book','Product'],'@id':origin+book.path+'#product',name:title,description:book.shortDescription,url:origin+book.path,sku:book.sku,brand:{'@id':origin+'/verify/#pinnacle-brand'},image:[origin+book.front,...(book.back?[origin+book.back]:[])],...(book.bundle?{}:{inLanguage:'en-IN',bookFormat:'https://schema.org/'+(!book.physical?'EBook':book.sku.endsWith('-PB')?'Paperback':'Hardcover'),author:book.authors.map(name=>({'@type':'Person',name,url:origin+'/leadership'})),publisher:{'@type':'Organization',name:'Pinnacle Blooms Network',url:origin+'/books'}}),offers:{'@type':'Offer',price:book.price,priceCurrency:'INR',availability:'https://schema.org/OutOfStock',itemCondition:'https://schema.org/NewCondition',url:origin+book.path}}];
+---
+<PageLayout title={title+' | Pinnacle Blooms Network'} description={book.shortDescription} path={book.path} label={book.title} shareImage={covers[book.bookKey]} shareFit="contain" imageAlt={book.coverAlt} includeService={false} documentOnly={true} primaryEntityId={origin+book.path+'#product'} entityGraph={graph} breadcrumbParent={{name:'Parent books',path:'/books'}}>
+ <article class="pbn-book-page">
+  <div class="wrap pbn-book-crumb"><a href="/books">← All Pinnacle 101 books</a></div>
+  <section class="wrap pbn-book-hero">
+   <div class="pbn-book-art"><img src={book.front} alt={book.coverAlt} width={book.bundle?1600:1492} height={book.bundle?1160:1054} fetchpriority="high" /><p>{book.bundle?'Four-book collection':'Front cover · '+book.discipline}</p></div>
+   <div class="pbn-book-intro"><p class="eyebrow">Pinnacle Blooms Network · {book.discipline}</p><h1>{book.title}</h1><p class="pbn-book-subtitle">{book.subtitle}</p><p class="pbn-book-hook">{book.hook}</p><p class="pbn-book-authors">By {book.authors.join(' & ')}</p>
+    <nav class="pbn-book-formats" aria-label="Choose book format">{siblings.map(x=><a href={x.path} aria-current={x.sku===book.sku?'page':undefined}>{x.format}<strong>{money(x.price)}</strong></a>)}</nav>
+    <div class="pbn-book-offer"><p class="pbn-book-format">{book.format} · English</p><p class="pbn-book-price">{money(book.price)} <span>INR</span></p><button disabled>{book.statusText}</button><p>{book.statusDetail}</p><p class="pbn-book-sku">Product ID: {book.sku}</p></div>
+    <a class="pbn-book-more" href="#inside">Explore what’s inside ↓</a>
+   </div>
+  </section>
+  <section id="inside" class="wrap pbn-book-section"><p class="eyebrow">Small moments. Useful possibilities.</p><h2>{book.bundle?'Four perspectives on everyday life.':'A picture-led guide for everyday life.'}</h2><div class="pbn-book-description">{book.description.split('\n\n').map(p=><p>{p}</p>)}</div><ul class="pbn-book-features">{book.features.map(p=><li>{p}</li>)}</ul></section>
+  {!book.bundle&&<section class="wrap pbn-book-section"><div class="pbn-book-section-heading"><div><p class="eyebrow">31 illustrated learning pages</p><h2>Find a useful place to begin.</h2><p>101 identifies the introductory volume. Choose pages for the child’s interests, comfort and access.</p></div></div><ol class="pbn-book-contents">{book.contents.map(p=><li>{p.title}</li>)}</ol></section>}
+  {book.back&&<section class="wrap pbn-book-section pbn-book-back"><div><p class="eyebrow">Meet the book</p><h2>A clear purpose.<br/>A colourful way to share it.</h2><p>Full-colour landscape artwork, with an adult guiding the reading and selecting suitable ideas. The same nine-page PinnacleAI and Verify information section accompanies each volume.</p><p>Software licences and company evidence describe their named scopes. They do not certify this book or promise an individual outcome.</p><a href="/leadership">About the authors and Pinnacle’s leadership →</a></div><img src={book.back} alt={'Rear cover of '+book.title} width="1492" height="1054" loading="lazy" /></section>}
+  {book.faqs.length>0&&<section class="wrap pbn-book-section pbn-book-faq"><p class="eyebrow">Before you choose</p><h2>Questions families ask.</h2>{book.faqs.map(q=><details><summary>{q.question}</summary><p>{q.answer}</p></details>)}</section>}
+  <section class="wrap pbn-book-section"><h2>{book.bundle?'The four books in this collection.':'Explore the other 101 books.'}</h2><div class="pbn-book-related">{related.map(x=><a href={book.bundle&&book.physical?x.path+'-softcover':x.path}><img src={x.front} alt={x.coverAlt} width="1492" height="1054" loading="lazy" /><h3>{x.title}</h3><p>{x.discipline}</p></a>)}</div></section>
+  <section class="wrap pbn-book-section pbn-book-help"><div><p class="eyebrow">Connected to Pinnacle</p><h2>Explore the people, ideas and evidence.</h2><ul>{book.links.map(x=><li><a href={x.url}>{x.label}</a></li>)}</ul></div><div><h3>Book and edition enquiries</h3><p>Call <a href="tel:+919100181181">9100 181 181</a> or email <a href="mailto:care@pinnacleblooms.org">care@pinnacleblooms.org</a>.</p><p>Orders are currently closed. Book editions do not include therapy sessions, assessments or software access.</p><a href="/payment-and-billing">Payment information</a> · <a href="/refund-policy">Refund policy</a> · <a href="/privacy-policy">Privacy</a></div></section>
+ </article>
+</PageLayout>
