@@ -1,5 +1,9 @@
 # TestingBot desktop matrix and GSC Wizard connection — 2 October 2026
 
+## Acceptance correction — lifecycle defect missed
+
+The owner subsequently reported the seven lifecycle cards collapsed into narrow vertical columns below the hero. The 14 checks below passed but did not test that section's layout; screenshots covered the hero art rather than the HTML lifecycle cards. The general visual-acceptance conclusion was therefore incomplete and must not be treated as page approval. V163 isolates the conflicting CSS and adds a readable-width/row/text-wrapping contract, first verified to fail against this broken production version. See `pinnacleai-v163-release-20261002.md` for the correction and current result.
+
 ## Completed
 
 Extended the existing API runner to hosted desktop browsers, executed it against https://www.pinnacleblooms.org/pinnacleai, visually inspected 16 section/state screenshots and connected the QA milestone to the existing GSC Wizard property timeline.
@@ -77,4 +81,3 @@ Credentials and signed provider download links are absent from committed files.
 - [TestingBot browser catalogue API](https://testingbot.com/support/api/devices)
 - [Selenium browser, platform and screen capabilities](https://testingbot.com/support/web-automate/selenium/test-options)
 - [GSC Wizard MCP integration](https://mcp.gscwizard.com/)
-

@@ -4,6 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
+import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 
 const target = new URL(process.env.TESTINGBOT_URL || 'https://www.pinnacleblooms.org/pinnacleai');
 if (target.protocol !== 'https:' || target.hostname !== 'www.pinnacleblooms.org' || target.search) throw new Error('Use a public canonical Pinnacle URL without query parameters');
@@ -132,7 +133,14 @@ for(const id of choices){
       return evaluate("const rail=document.getElementById('portal-authority-rail'),a=rail.querySelector('a:last-child'),r=a.getBoundingClientRect();return rail.scrollLeft>0 && r.left<innerWidth && r.right<=innerWidth+1");
     });
     if(target.pathname==='/pinnacleai'){
-      await check('Seven stages and ten visible FAQ questions',()=>evaluate("return document.querySelectorAll('.life-stages li').length===7 && document.querySelectorAll('.wave2-faq details').length===10"));
+      await check('Seven stages and ten visible FAQ questions',()=>evaluate("return document.querySelectorAll('.overview-lifecycle li').length===7 && document.querySelectorAll('.wave2-faq details').length===10"));
+      await check('Lifecycle cards fill section and remain readable',async()=>{
+        row.lifecycleGeometry=await evaluate('return ('+measurePinnacleLifecycle.toString()+')()');
+        await evaluate("document.querySelector('nav[aria-label=\"The PinnacleAI circle in seven readable stages\"]').scrollIntoView({block:'center',behavior:'instant'});return true");
+        await screenshot('lifecycle-cards');
+        if(!row.lifecycleGeometry.passed)throw new Error(row.lifecycleGeometry.failures.join('; '));
+        return true;
+      });
       await check('FAQ disclosure works',async()=>{await click('.wave2-faq details summary');return evaluate("return document.querySelector('.wave2-faq details').open");});
       await evaluate("document.querySelector('.wave2-hero-art').scrollIntoView({block:'center',behavior:'instant'});return true");
       await screenshot('lifecycle');

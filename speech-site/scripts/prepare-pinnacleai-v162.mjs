@@ -2,8 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
-const prior='release-pinnacleai-v161-20261001',priorUpload='.worker-upload-pinnacleai-v161-20261001';
-const next='release-pinnacleai-v162-20261001',nextUpload='.worker-upload-pinnacleai-v162-20261001';
+const [prior='release-pinnacleai-v161-20261001',priorUpload='.worker-upload-pinnacleai-v161-20261001',next='release-pinnacleai-v162-20261001',nextUpload='.worker-upload-pinnacleai-v162-20261001',receiptFile='deployment/pinnacleai-v162-staged-20261001.json']=process.argv.slice(2);
+for(const dir of [prior,priorUpload,next,nextUpload]){const rel=path.relative(process.cwd(),path.resolve(dir));assert(rel&&!rel.startsWith('..')&&!path.isAbsolute(rel),'Workspace-only staging');}
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const pages={pinnacleai:'pinnacleai.html'};
 await fs.mkdir(next,{recursive:true});await fs.cp(prior,next,{recursive:true});
@@ -36,4 +36,4 @@ let unchanged=0;for(const file of await files(prior)){if(changed.includes(file))
 for(const file of ['speech-handler.mjs','discovery-handler.mjs','speech-enquiry-handler.mjs','centre-facilities.mjs','enrolment-handler.mjs'])assert.equal(sha(await fs.readFile(priorUpload+'/'+file)),sha(await fs.readFile(nextUpload+'/'+file)),file);
 assert.equal(worker.replace(/const SPEECH_INVENTORY ?= ?(\{[^\n]+\});/,'INVENTORY'),(await fs.readFile(priorUpload+'/pinnacle-route-v12.mjs','utf8')).replace(/const SPEECH_INVENTORY ?= ?(\{[^\n]+\});/,'INVENTORY'));
 const receipt={at:new Date().toISOString(),prior,priorUpload,stage:next,upload:nextUpload,pages,changed,added,unchangedUnionFiles:unchanged,runtimeRoutingUnchanged:true,commonShellsUnchanged:true};
-await fs.writeFile('deployment/pinnacleai-v162-staged-20261001.json',JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({changed:changed.length,added:added.length,unchanged,stage:next}));
+await fs.writeFile(receiptFile,JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify({changed:changed.length,added:added.length,unchanged,stage:next}));
