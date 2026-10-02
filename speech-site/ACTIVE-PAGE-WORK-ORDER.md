@@ -1,3 +1,5 @@
+**Current bounded follow-up · 3 October 2026.** Add the already-live Google Play purchase route to the 12 single ebook editions and eight native-edition English-detail pages. Keep Shopify PDF/collection checkout primary and distinguish Google Play reading access. Use the verified 12 store IDs; exclude collections and printed editions. No price, stock, feed, structured-data, common-shell or route changes. Acceptance: all20correct links, no links on57noneligible offers, clear native copy, changed purchase sections at phone/tablet/desktop, exact-source CI, preserved complete union/routes/bindings and production readback.
+
 <!-- Latest bookshop release: /shop and rich shared book cart live, 2 October 2026. Source 2487f49dc124d04348df483f2b27c270f97befd1; CI 36998721356 passed; Worker 03b72433-fee0-4374-9f7f-21febc56ab77. Paid capture and download email remain unverified. See deployment/shop-launch-release-20261002.md. -->
 # Active page work order
 
