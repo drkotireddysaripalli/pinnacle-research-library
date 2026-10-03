@@ -2,7 +2,9 @@
 
 3 October 2026. Owner: this task. Current state is recorded immediately below; the subsequent preparation notes are historical.
 
-## Current state: activation and native-browser fixes
+## Current state: Google and WhatsApp verified; account entry live
+
+- Current Ask release: `f70df7b3-a6a1-437b-83bf-47d209cb6f13`, source `a1b413aea8d1ee6941dd9741332d08b6d9ce228e`, CI `37113005303` succeeded. The shared Ask navigation now exposes Account across home, topics and answers. The v6 page-cache namespace prevents older cached HTML from hiding it. Seven production checks passed; actual owner session still showed Account connected and WhatsApp number verified after release. Receipt: `deployment/ask-account-entry-v6-20261003.json`.
 
 - Final runtime repair is live as `7a7301ef-186d-4dd7-b055-bf65c3bfc4f1`; CI run `37111659722` succeeded. The owner received the real WhatsApp code, entered it, and confirmed completion. Ask displayed “You’re connected” and “WhatsApp number verified.” A focused server query confirmed all six conditions: confirmed email, confirmed phone, Google identity on the same user, WATI receipt, receipt matching the current phone, and receipt matching its confirmation timestamp. No phone, email or user identifier is included in the public receipt. `deployment/ask-identity-production-checks-20261003.json` records that completed flow.
 - Supabase Google and Phone are enabled. The signed Send SMS hook is enabled at the exact Ask endpoint. Six-digit codes expire after 360 seconds; phone confirmation is enabled and fixed test codes remain empty. The exact Ask callback is saved; IRWFA Site URL and existing returns are preserved.
@@ -10,7 +12,7 @@
 - Actual Chrome Google callback completed. The native POST failure was caused by `no-referrer`; `strict-origin` fixes it while retaining origin and CSRF checks. Hosted Chrome also reached Google through the native form. Commit `0608d1d`.
 - The real phone request reached the signed hook, but Cloudflare rejected the request option `redirect: error` before WATI could be called. Local workerd reproduced the same error. Changed to `manual`, with non-2xx responses rejected and no credential forwarding. A new test runs the actual signed hook in Cloudflare's runtime using synthetic data and no external messages.
 - Runtime repair and provider support are committed as `03d1577`. Sixteen auth/runtime tests and the Ask build pass; type check reports zero errors. Auth/runtime tests now run in Ask CI. See `deployment/ask-identity-providers-runtime-20261003.json` for promotion state. The real owner flow is now verified separately from those automated checks.
-- A modest Account link is prepared in the shared Ask navigation following actual verification. Inspected at 320, 768 and 1440px with no overflow and a 44px target; desktop keyboard Tab reaches it. This is an Ask navigation change, not a redesign of SiteHeader or SiteFooter. Public answers, sitemaps, citations and machine exports remain accessible. Account pages remain private/no-store/noindex with no analytics or JSON-LD. Publication is recorded in the account-entry release receipt.
+- The Account link is live in the shared Ask navigation following actual verification. Inspected at 320, 768 and 1440px with no overflow and a 44px target; desktop keyboard Tab reaches it. This is an Ask navigation change, not a redesign of SiteHeader or SiteFooter. Public answers, sitemaps, citations and machine exports remain accessible. Account pages remain private/no-store/noindex with no analytics or JSON-LD. Publication is recorded in the account-entry release receipt.
 
 ### Apple, Microsoft and X: prepared code, external setup pending
 
@@ -20,9 +22,9 @@ All provider applications use `https://lyjwsaiqvgwyautowhlx.supabase.co/auth/v1/
 
 | Provider | Inspected state | Next condition |
 | --- | --- | --- |
-| Apple | Signed in as BHCL Account Holder; existing paid membership; Supabase disabled/empty | Apple blocks Certificates, Identifiers & Profiles until its updated Developer Program License Agreement is accepted. Exact agreement is open for the owner; then inspect Services ID, Team, signing setup and secret renewal. No agreement accepted by the agent. |
+| Apple | Owner accepted updated agreement; BHCL Account Holder is signed in; Supabase disabled/empty | Existing keys are APNs only and no Services ID exists. Separate Pinnacle Ask App ID `org.pinnacleblooms.ask`, with Sign in with Apple as primary capability, is prepared at Register pending final activation confirmation. Existing BHCL app IDs remain untouched. Next: web Services ID, exact callback/domain, dedicated signing key and a six-month secret renewal arrangement. |
 | Microsoft | MFA completed; Supabase disabled/empty; care account lists only Sri Venkateswara University directory | Owner identifies the Pinnacle/BHCL account or directory. Do not create a Pinnacle app under the unrelated university directory. Then inspect Entra app, audience, callback, email and xms_edov claims, and secret value. |
-| X | Existing Pinnacle Blooms app 28323414; Supabase disabled/empty | Reuse saved OAuth client secret securely. Add Supabase callback while preserving existing homepage callback; enable email request and policy links. The portal only offers secret regeneration, which was not used. |
+| X | Existing Pinnacle Blooms app 28323414; owner entered and saved client secret in Supabase; provider remains disabled | Exact Supabase callback, email request, BHCL organisation and policy links prepared at Save. Existing homepage callback, OAuth 1 posting/DM permissions and confidential-client type preserved. Final activation confirmation pending. No secret regenerated. |
 
 Google consent branding currently names the shared IRWFA application; resolve this deliberately without interrupting IRWFA. Preserve existing X posting/DM integrations. No provider credential is fabricated, regenerated or published. Email one-time-code sign-in is the recommended later fallback after sender delivery is configured. Additional social providers do not themselves produce SEO rankings or AI citations.
 
