@@ -1,12 +1,13 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import operatorEmblem from '../assets/bhcl-emblem-official.png';
 import AskNavigation from '../components/ask/AskNavigation.astro';
 import {ASK,SITE,contact} from '../lib/ask/content';
 import '../styles/page.css';import '../styles/portal-shell.css';import '../styles/readability.css';import '../styles/shared-shell.css';import '../styles/ask.css';
 const {title,description,canonical=ASK,lang='en',robots='index, follow, max-image-preview:large',image=ASK+'/og/default.png',imageAlt=title,type='WebPage',schema=[],alternates=[],q='',crumbs=[],publication}=Astro.props;
 const graph={'@context':'https://schema.org','@graph':[
- {'@type':'Organization','@id':SITE+'/verify/#organization',name:'Bharath Healthcare Laboratories Private Limited',url:SITE,brand:{'@id':SITE+'/verify/#pinnacle-brand'},telephone:'+919100181181'},
+ {'@type':'Organization','@id':SITE+'/verify/#organization',name:'Bharath Healthcare Laboratories Private Limited',url:SITE,logo:new URL(operatorEmblem.src,ASK).href,brand:{'@id':SITE+'/verify/#pinnacle-brand'},telephone:'+919100181181'},
  {'@type':'Brand','@id':SITE+'/verify/#pinnacle-brand',name:'Pinnacle Blooms Network'},
  {'@type':'WebSite','@id':ASK+'#website',url:ASK,name:'Ask Pinnacle',publisher:{'@id':SITE+'/verify/#organization'},inLanguage:['en','te']},
  {'@type':type,'@id':canonical+'#page',url:canonical,name:title,description,inLanguage:lang,isPartOf:{'@id':ASK+'#website'},publisher:{'@id':SITE+'/verify/#organization'},...(publication||{})},

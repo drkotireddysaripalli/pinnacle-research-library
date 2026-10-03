@@ -2,7 +2,7 @@ export const ASK='https://pinnacleblooms.org/ask';
 export const SITE='https://www.pinnacleblooms.org';
 export const contact={phone:'9100 181 181',tel:'tel:+919100181181',enrol:SITE+'/enroll-autism-speech-aba-therapies-india',centres:SITE+'/centers'};
 export const dimensions=[
- ['conditions','Conditions','condition','Understand a condition and the questions families ask.','heart'],
+ ['conditions','Child development conditions','condition','Explore questions about autism, ADHD, speech delay and other developmental conditions, with explanations, source links and practical next steps.','heart'],
  ['behaviours','Everyday behaviours','phenomenon','Understand experiences at home, school and in the community.','people'],
  ['skills','Skills','skill','Communication, play, learning and everyday skills.','spark'],
  ['abilities','Abilities','ability','Strengths that support a child’s growing independence.','chart'],
