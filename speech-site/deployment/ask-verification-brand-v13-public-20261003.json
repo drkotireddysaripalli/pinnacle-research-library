@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-03T13:20:12.206Z",
+  "origin": "https://pinnacleblooms.org",
+  "scope": "Anonymous HTTP and OAuth start; completed browser login recorded separately",
+  "checks": [
+    {
+      "name": "anonymous private session",
+      "status": 200,
+      "profile": null,
+      "noStore": true,
+      "noindex": true,
+      "csrf": true
+    },
+    {
+      "name": "public content and registration markup",
+      "path": "/ask",
+      "status": 200,
+      "sharedHTML": true,
+      "googleOnly": true,
+      "hash": "2c20942e1309199157c9c1685e4c6bd426cc7ca3350be16faf193032c00e063f"
+    },
+    {
+      "name": "public stylesheet delivery",
+      "path": "/ask/_assets/_..l0vjZdGL.css",
+      "status": 200,
+      "bytes": 154427,
+      "hash": "8f23310e87b013ff9f99a53a05462c845e3b7dff95a908499244a84f972fc037"
+    },
+    {
+      "name": "public content and registration markup",
+      "path": "/ask/lens/entity%3Atherapy_modality/ot",
+      "status": 200,
+      "sharedHTML": true,
+      "googleOnly": true,
+      "hash": "3ba9c1dfd5377cae223a38cae2d5d83c1a54714052422de5d92131bb0e523302"
+    },
+    {
+      "name": "public content and registration markup",
+      "path": "/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "sharedHTML": true,
+      "googleOnly": true,
+      "hash": "c36ec26c1163bfa386d97cf9364e8354826a310510014134aafe5ff02ffbb64d"
+    },
+    {
+      "name": "Google PKCE start and old account redirect",
+      "returnPreserved": true,
+      "googleReached": true
+    },
+    {
+      "name": "invalid CSRF rejected; future provider starts hidden and disabled",
+      "pass": true
+    },
+    {
+      "name": "public machine exports and topic sitemap",
+      "pass": true,
+      "topicURLs": 478
+    }
+  ]
+}

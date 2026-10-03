@@ -23,6 +23,17 @@ for(const path of ['/ask','/ask/lens/entity%3Atherapy_modality/ot','/ask/what-ha
  if(path.includes('what-happens-during')){assert.match(html,/rel="alternate" type="text\/markdown"/);assert.match(html,/rel="alternate" type="application\/json"/);assert(graph.some(g=>g.mainEntity?.['@type']==='Question'&&g.mainEntity.acceptedAnswer?.text));}
  const withCookie=await read(path,{headers:{cookie}});assert.equal(withCookie.headers.get('set-cookie'),null);assert.equal(await withCookie.text(),html,'Session cookie must not personalise public HTML');
  checks.push({name:'public content and registration markup',path,status:200,sharedHTML:true,googleOnly:true,hash:createHash('sha256').update(html).digest('hex')});
+ if(path==='/ask'){
+  const links=[...html.matchAll(/<link\b[^>]*>/g)].map(m=>m[0]).filter(tag=>/\brel=["']stylesheet["']/.test(tag));
+  assert(links.length>0,'Public HTML must reference a stylesheet');
+  for(const tag of links){
+   const href=tag.match(/\bhref=["']([^"']+)["']/)?.[1];assert(href,'Stylesheet href missing');
+   const asset=new URL(href,origin);assert.equal(asset.origin,origin);assert(asset.pathname.startsWith('/ask/_assets/'));
+   const css=await read(asset.pathname+asset.search);assert.equal(css.status,200,'Stylesheet must be publicly served');assert.match(css.headers.get('content-type')||'',/^text\/css\b/);
+   const bytes=Buffer.from(await css.arrayBuffer());assert(bytes.length>1000,'Stylesheet must not be an empty or error response');
+   checks.push({name:'public stylesheet delivery',path:asset.pathname,status:200,bytes:bytes.length,hash:createHash('sha256').update(bytes).digest('hex')});
+  }
+ }
 }
 const returnTo='/ask/lens/entity%3Atherapy_modality/ot?page=2';
 const account=await read('/ask/account?returnTo='+encodeURIComponent(returnTo));assert.equal(account.status,303);assert.equal(account.headers.get('location'),returnTo);assert.match(account.headers.get('cache-control'),/no-store/);

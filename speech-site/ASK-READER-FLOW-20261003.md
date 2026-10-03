@@ -1,6 +1,15 @@
 # Ask reader flow — 3 October 2026
 
-## Current release — live 3 October 2026
+## Current visual update — v13, live 3 October 2026
+
+- Owner requested the complete Pinnacle Blooms Network logo and a purple verification badge on Get Verified. Both are deployed in shared Ask components, source `7bfb50cbc6f28323faa7bfa6abef2fdab3ea592f`, Worker `42826e5d-7583-4d8c-a75b-10cc75f1b4ee`.
+- Full official lockup replaces the emblem-only popup asset. The optimized embedded WebP is 11,502 bytes, 464 px wide and rendered at up to 232 px. The decorative purple badge appears beside the popup title and in the highlighted profile action. Actual profile verification stays grey until server confirmation.
+- Build and CI run `37125226823` passed both jobs. Independent source review found no layout/accessibility blocker. Live Chrome screenshots inspected at desktop, 320x640 and 390x844; the logo clears the close button, the purple badge is legible and the profile action opens the modal. No authentication logic changed or fresh OTP sent for this visual update.
+- Initial production CSS delivery returned 500 and rendered unstyled. The owner task rolled back to v12, verified the candidate stylesheet bytes, then promoted the same candidate after refreshing the protected portal baseline (another task had deployed the main portal). Final public CSS is HTTP 200, 154,427 bytes, with exact source SHA256 match. Record: `deployment/ask-verification-brand-v13-recovery-20261003.json` and its CSS/public receipts. All 185 routes and then-current portal/MCP deployments were preserved.
+- Final private screenshots: `ask-private/ask-verification-v13-desktop-20261003.png`, `ask-verification-v13-phone320-20261003.png`, `ask-verification-v13-phone390-20261003.png`, and `ask-profile-v13-phone390-20261003.png`. Normal browser viewport restored; live popup left open for the owner.
+- Google branding-review timing and the fresh-OTP testing limitation below remain unchanged.
+
+## Previous functional release — v12, 3 October 2026
 
 - Source `0e9de497174cbe2b5eb53d721f39dabfe6e6a33c`, Ask Worker `1b4751c4-700d-42cc-b5b5-9184005560b3`. This is the final v12 profile release. Historical receipts below record earlier milestones.
 - The dedicated Ask Google identity is working in real Chrome sessions: both an existing WhatsApp-verified account and an unverified Pinnacle account signed in and returned to the same topic. Existing verified account displayed the magenta badge; the unverified account displayed a grey badge.
