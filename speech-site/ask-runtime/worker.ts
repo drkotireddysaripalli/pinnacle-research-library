@@ -24,7 +24,7 @@ export default {async fetch(request:Request,env:any,ctx:ExecutionContext){
  if(path==='/ask/sitemap-topics.xml'){const items=await rpc(env,'ask_indexing_enabled')?await rpc(env,'ask_portal_topic_sitemap'):[];return new Response('<?xml version='+String.fromCharCode(34)+'1.0'+String.fromCharCode(34)+' encoding='+String.fromCharCode(34)+'UTF-8'+String.fromCharCode(34)+'?><urlset xmlns='+String.fromCharCode(34)+'http://www.sitemaps.org/schemas/sitemap/0.9'+String.fromCharCode(34)+'>'+items.map((a:any)=>'<url><loc>'+ASK+'/'+xml(a.slug)+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});}
  if(path==='/ask/sitemap-navigation.xml'){
  const enabled=await rpc(env,'ask_indexing_enabled');
- const paths=enabled?['','/lens','/conditions','/behaviours','/skills','/abilities','/domains','/ages','/life-skills','/assessments','/readiness','/therapies','/techniques','/people','/standards-icf','/standards-icd','/dataset','/what-is-pinnacle-blooms-network','/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child']:[];
+ const paths=enabled?['','/lens','/conditions','/behaviours','/skills','/abilities','/domains','/ages','/life-skills','/assessments','/readiness','/therapies','/techniques','/people','/standards-icf','/standards-icd','/dataset']:[];
  return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+paths.map(p=>'<url><loc>'+ASK+p+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
  }
  const exportMatch=path.match(/^\/ask\/([\w-]+)\.(md|json)$/);
