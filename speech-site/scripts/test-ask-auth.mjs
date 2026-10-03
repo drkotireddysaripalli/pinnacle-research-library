@@ -34,6 +34,14 @@ test('anonymous session response is private, contains CSRF and never a token or 
  const body=await r.json();assert.deepEqual(Object.keys(body).sort(),['csrf','profile']);assert.equal(body.profile,null);assert.match(body.csrf,/^[0-9a-f-]{36}$/);
  assert.equal((await action(new Request('https://pinnacleblooms.org/ask/auth/session',{method:'POST'}),authEnv,'session')).status,405);
 });
+test('cancelled or missing OAuth return cannot unlock a reader or redirect outside Ask',async()=>{
+ const authEnv={ASK_AUTH_ENABLED:'true',SUPABASE_URL:'https://synthetic.supabase.co',ASK_AUTH_PUBLISHABLE_KEY:'synthetic-key',ASK_AUTH_RATE_LIMIT:rate};
+ for(const suffix of ['', '?error=access_denied', '?error=server_error']){
+  const r=await action(new Request('https://pinnacleblooms.org/ask/auth/callback'+suffix),authEnv,'callback');
+  assert.equal(r.status,303);assert.equal(r.headers.get('location'),'/ask/account?status=sign-in');assert.match(r.headers.get('cache-control'),/no-store/);
+  assert.doesNotMatch(r.headers.get('set-cookie')||'',/pinnacle-ask-session=/);
+ }
+});
 test('phone requires explicit E.164 country code',()=>{
  assert.equal(phoneNumber('+91 9100 181 181'),'+919100181181');
  for(const bad of ['9100181181','+0123456789','<script>','+1','+919100181181&x=1'])assert.equal(phoneNumber(bad),null);

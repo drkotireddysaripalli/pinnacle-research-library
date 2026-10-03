@@ -34,3 +34,11 @@ Source: https://developers.google.com/search/docs/appearance/structured-data/pay
 
 ## Release receipt
 Live and verified: Ask Worker 136f6b1f-d8a3-450b-b616-60af225ad07f, source bb2861fa39cdbf9c25bcb36dce19bbfb8220768c. CI 37119531935 passed both jobs. All 185 exact routes and current main/MCP versions were preserved. Actual native Chrome Google sign-in, original-answer return, photo/name display, logout, browser-back and signed-in topic navigation passed. Phone 320px, tablet 768px and desktop views were inspected for this flow. Supabase records one Ask reader from the approved owner test, with its existing WATI receipt preserved. No physical-device or Safari testing is claimed for this bounded change. Public, browser and guarded release receipts are saved under deployment/ask-google-reader-*.json.
+
+## 3 October follow-up: Pinnacle branding and discoverability
+- Desktop sign-in is a white two-column panel: official Pinnacle Blooms Network emblem/wordmark and Ask purpose at left; Google sign-in and privacy at right. Mobile stacks the same content with compact spacing.
+- Google button uses the official image from https://developers.google.com/static/identity/images/g-logo.png (retrieved 3 October 2026), not a redrawn Google mark.
+- Failed/cancelled callbacks return to the same Ask reading gate; no session is created from an error. Back navigation revalidates before unlocking. Unit test added; 20 tests pass.
+- Every answer now advertises its complete Markdown and JSON representations with rel=alternate, and its visible question, direct answer and supplied citations are mapped into the page graph. This is schema.org descriptive markup, not a promise of Google Q&A rich results.
+- Registration-wall markup and public SSR content remain consistent for all user agents. Overlay/profile UI use data-nosnippet. Full text, sources, canonicals, language links, sitemaps and MCP remain available.
+- Google account chooser branding is controlled by its Google Cloud project. The existing login belongs to IRWFA. A separate existing PinnacleAsk project (gen-lang-client-0074123614) has no auth configuration. A Pinnacle brand form is prepared; Google's API Services User Data Policy acceptance is pending owner confirmation. Do not change IRWFA branding or claim the Google chooser is already Pinnacle-branded.

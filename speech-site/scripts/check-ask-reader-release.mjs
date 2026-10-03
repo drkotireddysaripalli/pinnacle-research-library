@@ -18,6 +18,7 @@ for(const path of ['/ask','/ask/lens/entity%3Atherapy_modality/ot','/ask/what-ha
  assert.doesNotMatch(html,/action="\/ask\/auth\/(apple|x|azure|phone|verify)"/);
  const graph=[...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);
  assert(graph.some(g=>g.hasPart?.cssSelector==='.ask-registration-content'));
+ if(path.includes('what-happens-during')){assert.match(html,/rel="alternate" type="text\/markdown"/);assert.match(html,/rel="alternate" type="application\/json"/);assert(graph.some(g=>g.mainEntity?.['@type']==='Question'&&g.mainEntity.acceptedAnswer?.text));}
  const withCookie=await read(path,{headers:{cookie}});assert.equal(withCookie.headers.get('set-cookie'),null);assert.equal(await withCookie.text(),html,'Session cookie must not personalise public HTML');
  checks.push({name:'public content and registration markup',path,status:200,sharedHTML:true,googleOnly:true,hash:createHash('sha256').update(html).digest('hex')});
 }

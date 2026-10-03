@@ -51,8 +51,10 @@ try{
 Astro.response.headers.set('X-Robots-Tag',robots);Astro.response.headers.set('Cache-Control',mode==='search'||['missing','unavailable'].includes(mode)?'private, no-store':'public, max-age=0, s-maxage=300');
 Astro.response.headers.set('Referrer-Policy','strict-origin');
 const crumbs=[{name:'Ask Pinnacle',url:ASK},...(path?[{name:mode==='answer'?a.title:title.replace(' | Ask Pinnacle',''),url:canonical}]:[])];
+const answerEntity=a?{'@type':'Question','@id':canonical+'#question',name:a.h1||a.title,acceptedAnswer:{'@type':'Answer',text:a.summary||a.meta_description||a.title,url:canonical+'#explanation'},inLanguage:lang}:undefined;
+const answerSources=a&&Array.isArray(a.authority_links)?a.authority_links.map(s=>s.url||s.href).filter(s=>/^https?:\/\//.test(s||'')):[];
 ---
-<AskLayout title={title} description={intro} canonical={canonical} lang={lang} robots={robots} schema={schema} alternates={alternates} q={q} crumbs={crumbs} type={mode==='answer'?'MedicalWebPage':mode==='home'?'WebPage':'CollectionPage'} image={mode==='answer'?ASK+'/'+a.slug+'.png':ASK+'/og/default.png'} publication={a?{datePublished:a.published_at,lastReviewed:a.last_reviewed_at}:undefined}>
+<AskLayout title={title} description={intro} canonical={canonical} lang={lang} robots={robots} schema={schema} alternates={alternates} q={q} crumbs={crumbs} type={mode==='answer'?'MedicalWebPage':mode==='home'?'WebPage':'CollectionPage'} image={mode==='answer'?ASK+'/'+a.slug+'.png':ASK+'/og/default.png'} publication={a?{datePublished:a.published_at,lastReviewed:a.last_reviewed_at,mainEntity:answerEntity,...(answerSources.length?{citation:answerSources}:{})}:undefined}>
  {mode==='home'&&<AskHome lang={lang}/>}
  {['directory','collection','guide'].includes(mode)&&<AskListing title={title.replace(' | Ask Pinnacle','')} intro={intro} data={data} mode={mode==='directory'?'directory':'collection'} canonical={canonical.split('?')[0]} page={page} lang={lang} guide={guide}/>}
  {mode==='answer'&&<AskAnswer answer={a}/>}
