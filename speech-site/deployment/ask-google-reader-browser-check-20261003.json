@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-03T11:33:48.877Z",
+  "release": "136f6b1f-d8a3-450b-b616-60af225ad07f",
+  "browser": "Native Chrome on the owner's computer",
+  "checks": {
+    "anonymousGoogleOnlyOverlay": true,
+    "actualGoogleSignInCompleted": true,
+    "returnedToOriginalAnswer": true,
+    "serverValidatedGoogleNameAndAvatarDisplayed": true,
+    "logoutMenuOperable": true,
+    "logoutRestoresOverlayOnSameAnswer": true,
+    "browserBackAfterLogoutRemainsGated": true,
+    "secondSignInAndTopicNavigationPersistsProfile": true,
+    "profileAt320And768NoHorizontalOverflow": true,
+    "anonymousModalAt320NoHorizontalOverflow": true,
+    "desktopProfileAndOverlayVisuallyInspected": true,
+    "registeredAskReadersAfterTest": 1,
+    "existingWatiReceiptCountPreserved": 1
+  },
+  "scope": "Focused Google reading flow. No OTP, new social provider or lead submission. No physical-device or Safari claim.",
+  "remainingBrandingDetail": "Existing shared Google consent application still uses the IRWFA display name. App settings were preserved.",
+  "privateScreenshots": [
+    "ask-private/ask-google-overlay-live-20261003.png",
+    "ask-private/ask-google-profile-live-20261003.png"
+  ],
+  "ci": {
+    "run": 37119531935,
+    "askBuild": "success",
+    "portalChecks": "success"
+  },
+  "automated": {
+    "authRuntimeTests": 19,
+    "passed": 19,
+    "typeErrors": 0
+  }
+}

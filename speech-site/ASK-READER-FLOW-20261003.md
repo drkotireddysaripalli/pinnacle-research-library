@@ -33,4 +33,4 @@ This is a registration gate for the reading interface over intentionally public 
 Source: https://developers.google.com/search/docs/appearance/structured-data/paywalled-content
 
 ## Release receipt
-Pending the single current build/release and public/browser read-back.
+Live and verified: Ask Worker 136f6b1f-d8a3-450b-b616-60af225ad07f, source bb2861fa39cdbf9c25bcb36dce19bbfb8220768c. CI 37119531935 passed both jobs. All 185 exact routes and current main/MCP versions were preserved. Actual native Chrome Google sign-in, original-answer return, photo/name display, logout, browser-back and signed-in topic navigation passed. Phone 320px, tablet 768px and desktop views were inspected for this flow. Supabase records one Ask reader from the approved owner test, with its existing WATI receipt preserved. No physical-device or Safari testing is claimed for this bounded change. Public, browser and guarded release receipts are saved under deployment/ask-google-reader-*.json.
