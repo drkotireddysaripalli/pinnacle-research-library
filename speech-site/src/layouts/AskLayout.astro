@@ -5,6 +5,7 @@ import operatorEmblem from '../assets/bhcl-emblem-official.png';
 import regularFontUrl from '../../public/pinnacle-pages-fonts/sintony-latin.woff2?url';
 import measurementUrl from '../../public/pinnacle-pages-scripts/speech-measurement.js?url';
 import AskNavigation from '../components/ask/AskNavigation.astro';
+import AskGate from '../components/ask/AskGate.astro';
 import {ASK,SITE,contact} from '../lib/ask/content';
 import '../styles/page.css';import '../styles/portal-shell.css';import '../styles/readability.css';import '../styles/shared-shell.css';import '../styles/ask.css';
 const {title,description,canonical=ASK,lang='en',robots='index, follow, max-image-preview:large',image=ASK+'/og/default.png',imageAlt=title,type='WebPage',schema=[],alternates=[],q='',crumbs=[],publication,privatePage=false}=Astro.props;
@@ -12,7 +13,7 @@ const graph={'@context':'https://schema.org','@graph':[
  {'@type':'Organization','@id':SITE+'/verify/#organization',name:'Bharath Healthcare Laboratories Private Limited',url:SITE,logo:new URL(operatorEmblem.src,ASK).href,brand:{'@id':SITE+'/verify/#pinnacle-brand'},telephone:'+919100181181'},
  {'@type':'Brand','@id':SITE+'/verify/#pinnacle-brand',name:'Pinnacle Blooms Network'},
  {'@type':'WebSite','@id':ASK+'#website',url:ASK,name:'Ask Pinnacle',publisher:{'@id':SITE+'/verify/#organization'},inLanguage:['en','te']},
- {'@type':type,'@id':canonical+'#page',url:canonical,name:title,description,inLanguage:lang,isPartOf:{'@id':ASK+'#website'},publisher:{'@id':SITE+'/verify/#organization'},...(publication||{})},
+ {'@type':type,'@id':canonical+'#page',url:canonical,name:title,description,inLanguage:lang,isPartOf:{'@id':ASK+'#website'},publisher:{'@id':SITE+'/verify/#organization'},isAccessibleForFree:false,hasPart:{'@type':'WebPageElement',isAccessibleForFree:false,cssSelector:'.ask-registration-content'},...(publication||{})},
  ...(crumbs.length?[{'@type':'BreadcrumbList',itemListElement:crumbs.map((c,i)=>({'@type':'ListItem',position:i+1,name:c.name,item:c.url}))}]:[]),...schema]};
 ---
 <!doctype html><html lang={lang==='te'?'te':'en-IN'}><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title}</title><meta name="description" content={description}/><meta name="robots" content={robots}/><link rel="canonical" href={canonical}/><link rel="icon" href={SITE+'/verify/favicon.png'}/>
@@ -20,7 +21,7 @@ const graph={'@context':'https://schema.org','@graph':[
  {!privatePage&&<script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\u003c')}/>}
  <link rel="preload" href={regularFontUrl} as="font" type="font/woff2" crossorigin/>
 </head><body class="ask-page" data-page-variant="ask" data-shared-shell="v159">
- <SiteHeader currentPath="/ask"/><AskNavigation q={q} lang={lang}/><main id="main"><slot/></main><SiteFooter/>
+ {!privatePage&&<AskGate/>}<SiteHeader currentPath="/ask"/><AskNavigation q={q} lang={lang}/><main id="main" class="ask-registration-content"><slot/></main><SiteFooter/>
  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={contact.tel} data-cta="mobile-call">Call {contact.phone}</a><a href={contact.enrol} data-cta="mobile-assessment">Arrange a visit</a></nav>
  <script is:inline define:vars={{measurementUrl,privatePage}}>if(!privatePage&&!/^\/ask\/(?:account|auth)(?:\/|$)/.test(location.pathname))import(measurementUrl);</script>
  <script>

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Webhook} from 'standardwebhooks';
-import {safeReturn,phoneNumber,hasSupportedIdentity,registrationComplete,context,csrf,validPost,applyHeaders,action,enabledProviders,OAUTH_PROVIDERS} from '../src/lib/ask/auth.mjs';
+import {safeReturn,phoneNumber,hasSupportedIdentity,registrationComplete,googleProfile,registerReader,context,csrf,validPost,applyHeaders,action,enabledProviders,OAUTH_PROVIDERS} from '../src/lib/ask/auth.mjs';
 import {watiHook} from '../src/lib/ask/wati-hook.mjs';
 const user={id:'00000000-0000-4000-8000-000000000001',email:'example@example.invalid',email_confirmed_at:'2026-10-03',identities:[{provider:'google'}]};
 const rate={limit:async()=>({success:true})};
@@ -11,7 +11,28 @@ const payload={user,sms:{phone:'+919999999998',otp:'123456'}};
 function signed(body=payload,timestamp=new Date()){const raw=JSON.stringify(body),id='synthetic-event';return new Request('https://pinnacleblooms.org/ask/auth/whatsapp-hook',{method:'POST',headers:{'webhook-id':id,'webhook-timestamp':String(Math.floor(timestamp.getTime()/1000)),'webhook-signature':new Webhook(secret).sign(id,timestamp,raw)},body:raw});}
 test('returns only an internal public Ask path',()=>{
  assert.equal(safeReturn('/ask/autism'),'/ask/autism');
- for(const bad of ['https://evil.invalid','//evil.invalid','/ask/../account','/ask/%2e%2e/account','/ask/auth/callback','/ask/account','/ask/search','/ask?token=x','/ask/%2f%2fevil.invalid','/ask/x#y','/ask/\\evil','%'])assert.equal(safeReturn(bad),'/ask',bad);
+ for(const path of ['/ask/lens/entity%3Atherapy_modality/ot','/ask/conditions?page=2','/ask/search?q=speech+delay','/ask/te/search?q=%E0%B0%A4','/ask/autism#sources'])assert.equal(safeReturn(path),path);
+ for(const bad of ['https://evil.invalid','//evil.invalid','/ask/../account','/ask/%2e%2e/account','/ask/auth/callback','/ask/account','/ask?token=x','/ask/%2f%2fevil.invalid','/ask/x#<script>','/ask/\\evil','%','/ask/auth%3fcallback','/ask?redirect_to=https://evil.invalid','/ask/lens/entity%253Atherapy/ot'])assert.equal(safeReturn(bad),'/ask',bad);
+});
+test('reader profile uses a verified Google identity and a restricted avatar host',()=>{
+ assert.equal(googleProfile({...user,identities:[{provider:'apple'}],user_metadata:{provider:'google'}}),null);
+ assert.equal(googleProfile({...user,email_confirmed_at:null}),null);
+ const good={...user,identities:[{provider:'google',identity_data:{full_name:'Reader',avatar_url:'https://lh3.googleusercontent.com/example'}}],user_metadata:{full_name:'Untrusted override'}};
+ assert.deepEqual(googleProfile(good),{name:'Reader',avatar:'https://lh3.googleusercontent.com/example'});
+ for(const avatar of ['javascript:alert(1)','https://evil.invalid/a','https://googleusercontent.com.evil.invalid/a','http://lh3.googleusercontent.com/a','https://name:secret@lh3.googleusercontent.com/a']){
+  assert.equal(googleProfile({...good,identities:[{provider:'google',identity_data:{avatar_url:avatar}}]}).avatar,null);
+ }
+});
+test('Ask registry marker stays server-owned and is recorded only once',async()=>{
+ assert.equal(await registerReader({}, {...user,app_metadata:{ask_reader:{registered_at:'2026-10-03'}}}),true);
+ assert.equal(await registerReader({}, {...user,user_metadata:{ask_reader:{registered_at:'2026-10-03'}}}),false);
+});
+test('anonymous session response is private, contains CSRF and never a token or profile',async()=>{
+ const authEnv={ASK_AUTH_ENABLED:'true',SUPABASE_URL:'https://synthetic.supabase.co',ASK_AUTH_PUBLISHABLE_KEY:'synthetic-key',ASK_AUTH_RATE_LIMIT:rate};
+ const r=await action(new Request('https://pinnacleblooms.org/ask/auth/session'),authEnv,'session');
+ assert.equal(r.status,200);assert.match(r.headers.get('cache-control'),/no-store/);assert.equal(r.headers.get('x-robots-tag'),'noindex, nofollow');
+ const body=await r.json();assert.deepEqual(Object.keys(body).sort(),['csrf','profile']);assert.equal(body.profile,null);assert.match(body.csrf,/^[0-9a-f-]{36}$/);
+ assert.equal((await action(new Request('https://pinnacleblooms.org/ask/auth/session',{method:'POST'}),authEnv,'session')).status,405);
 });
 test('phone requires explicit E.164 country code',()=>{
  assert.equal(phoneNumber('+91 9100 181 181'),'+919100181181');

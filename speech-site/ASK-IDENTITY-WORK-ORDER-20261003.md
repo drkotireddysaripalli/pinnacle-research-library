@@ -2,7 +2,11 @@
 
 3 October 2026. Owner: this task. Current state is recorded immediately below; the subsequent preparation notes are historical.
 
-## Current state: Google and WhatsApp verified; Apple and X enabled and live
+## Superseded reading flow
+
+The owner's later instruction replaces the custom account/WhatsApp journey with a Google-only overlay and profile/logout on Ask itself. See [the active reader contract](ASK-READER-FLOW-20261003.md). The provider configuration and earlier receipts below remain historical evidence, not the current reading UI.
+
+## Previous state: Google and WhatsApp verified; Apple and X enabled and live
 
 - **Owner-requested cross-check, 3 October, 16:23-16:29 IST:** Google's confirmed email/phone and matching server-owned WATI receipt are intact. No completed Apple or X identity was found. Supabase logs establish the prior Apple failure precisely as `400: OAuth state has expired`; it reached the callback after its temporary request expired. A fresh native Apple flow was opened and awaits the owner's password/iPhone completion. All three provider starts, private account headers, invalid-CSRF rejection (403), unsigned-hook rejection (401), and six representative public-route/export/sitemap checks passed. No OTP or lead was sent. All 185 route mappings still match. Ask and MCP versions remain as expected. The main portal has a separate later deployment `e5f160d7-5a95-4b2c-aa5c-8c6c09ce1f6d` at 16:00:47 IST, which this check did not alter or roll back. See `deployment/ask-final-crosscheck-20261003.json` and its linked proof files. This is not an end-to-end Apple/X pass.
 

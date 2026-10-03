@@ -49,7 +49,7 @@ try{
  if(mode==='missing'){Astro.response.status=404;title='Answer not found | Ask Pinnacle';intro='Try another question or explore our published topics.';robots='noindex, follow';}
 }catch(error){console.error('Ask public lookup unavailable',error instanceof Error?error.message:'lookup error');mode='unavailable';Astro.response.status=503;title='Ask is temporarily unavailable';intro='Please try again shortly or call the Pinnacle team.';robots='noindex, follow';Astro.response.headers.set('Retry-After','60');}
 Astro.response.headers.set('X-Robots-Tag',robots);Astro.response.headers.set('Cache-Control',mode==='search'||['missing','unavailable'].includes(mode)?'private, no-store':'public, max-age=0, s-maxage=300');
-Astro.response.headers.set('Referrer-Policy','no-referrer');
+Astro.response.headers.set('Referrer-Policy','strict-origin');
 const crumbs=[{name:'Ask Pinnacle',url:ASK},...(path?[{name:mode==='answer'?a.title:title.replace(' | Ask Pinnacle',''),url:canonical}]:[])];
 ---
 <AskLayout title={title} description={intro} canonical={canonical} lang={lang} robots={robots} schema={schema} alternates={alternates} q={q} crumbs={crumbs} type={mode==='answer'?'MedicalWebPage':mode==='home'?'WebPage':'CollectionPage'} image={mode==='answer'?ASK+'/'+a.slug+'.png':ASK+'/og/default.png'} publication={a?{datePublished:a.published_at,lastReviewed:a.last_reviewed_at}:undefined}>

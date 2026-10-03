@@ -7,8 +7,32 @@ export const ACCOUNT='/ask/account';
 // Matches the approved WATI code_template_pbn_v3 expiry; Supabase must use 360s at activation.
 export const OTP_EXPIRY_SECONDS=360;
 export function safeReturn(value){
- if(typeof value!=='string'||value.length>350)return '/ask';
- try{const p=decodeURIComponent(value);if(!/^\/ask(?:\/[a-zA-Z0-9_-]+)*$/.test(p)||/^\/ask\/(?:auth|account|search)(?:\/|$)/.test(p))return '/ask';return p;}catch{return '/ask';}
+ if(typeof value!=='string'||value.length>700||!value.startsWith('/ask')||/[\\\x00-\x20\x7f]/.test(value))return '/ask';
+ try{
+  const rawPath=value.split(/[?#]/)[0],decoded=decodeURIComponent(rawPath);
+  if(!/^\/ask(?:\/[a-zA-Z0-9_:-]+)*$/.test(decoded)||/%(?:2f|5c)/i.test(rawPath)||/^\/ask\/(?:auth|account)(?:\/|$)/.test(decoded))return '/ask';
+  const u=new URL(value,'https://pinnacleblooms.org');
+  if(u.origin!=='https://pinnacleblooms.org')return '/ask';
+  for(const [key,v] of u.searchParams)if(!(key==='page'&&/^[1-9][0-9]{0,3}$/.test(v))&&!(key==='q'&&/^\/ask\/(?:te\/)?search$/.test(decoded)&&v.length<=200))return '/ask';
+  if(u.hash&&!/^#[a-zA-Z0-9_-]+$/.test(u.hash))return '/ask';
+  return u.pathname+u.search+u.hash;
+ }catch{return '/ask';}
+}
+export function googleProfile(user){
+ if(!user?.email||!user.email_confirmed_at||user.is_anonymous)return null;
+ const identity=user.identities?.find(i=>i.provider==='google');if(!identity)return null;
+ const data=identity.identity_data||{};let avatar=null;
+ try{const u=new URL(data.avatar_url||data.picture);if(u.protocol==='https:'&&!u.username&&!u.password&&(u.hostname==='googleusercontent.com'||u.hostname.endsWith('.googleusercontent.com')))avatar=u.href;}catch{}
+ return {name:String(data.full_name||data.name||'Ask reader').slice(0,100),avatar};
+}
+// An app-specific, server-owned marker identifies Ask readers in the existing
+// Supabase user registry. It grants no IRWFA entitlement and stores no reading history.
+export async function registerReader(env,user){
+ if(user.app_metadata?.ask_reader?.registered_at)return true;
+ if(!env.ASK_AUTH_SECRET_KEY)return false;
+ const admin=createClient(env.SUPABASE_URL,env.ASK_AUTH_SECRET_KEY,{auth:{persistSession:false,autoRefreshToken:false},global:{fetch:(input,init)=>fetch(input,{...init,signal:AbortSignal.timeout(8000)})}});
+ const {error}=await admin.auth.admin.updateUserById(user.id,{app_metadata:{ask_reader:{provider:'google',registered_at:new Date().toISOString()}}});
+ return !error;
 }
 export function phoneNumber(value){const v=String(value||'').replace(/[ ()-]/g,'');return /^\+[1-9][0-9]{7,14}$/.test(v)?v:null;}
 export const OAUTH_PROVIDERS=Object.freeze({google:{label:'Google',scopes:'openid email profile'},apple:{label:'Apple'},azure:{label:'Microsoft',scopes:'email'},x:{label:'X'}});
@@ -37,12 +61,23 @@ export async function action(request,env,kind){
  const c=context(request,env);
  const back=code=>c.redirect(ACCOUNT+'?status='+code);
  if(!c.auth)return c.reply('Account sign-in is not available yet. You can read Ask or call 9100 181 181.',503);
+ if(kind==='session'){
+  if(request.method!=='GET')return c.reply('Method not allowed',405);
+  const {data:{user},error}=await c.auth.auth.getUser();
+  if(error&&error.name!=='AuthSessionMissingError'&&!(error.status>=400&&error.status<500))return c.reply('Sign-in service is temporarily unavailable.',503);
+  const profile=googleProfile(user);
+  if(profile&&!await registerReader(env,user))return c.reply('Your registration could not be saved. Please try again.',503);
+  c.headers.set('content-type','application/json; charset=utf-8');
+  return c.reply(JSON.stringify({profile,csrf:csrf(c)}));
+ }
  if(kind==='callback'){
   if(request.method!=='GET')return c.reply('Method not allowed',405);
   const code=c.url.searchParams.get('code');if(!code||code.length>2048)return back('sign-in');
   const {data,error}=await c.auth.auth.exchangeCodeForSession(code);
-  if(error||!hasSupportedIdentity(data.user)){await c.auth.auth.signOut({scope:'local'});return back('sign-in');}
-  return c.redirect(ACCOUNT);
+  if(error||!googleProfile(data.user)){await c.auth.auth.signOut({scope:'local'});return back('sign-in');}
+  if(!await registerReader(env,data.user))return back('registration');
+  const returnTo=safeReturn(c.cookies.get('pinnacle-ask-return'));c.set('pinnacle-ask-return','',{maxAge:0});
+  return c.redirect(returnTo);
  }
  if(request.method!=='POST')return c.reply('Method not allowed',405);
  if(!request.headers.get('content-type')?.startsWith('application/x-www-form-urlencoded'))return c.reply('Unsupported request',415);
@@ -55,7 +90,7 @@ export async function action(request,env,kind){
   const {data,error}=await c.auth.auth.signInWithOAuth({provider:kind,options:{redirectTo:c.url.origin+'/ask/auth/callback',skipBrowserRedirect:true,...(OAUTH_PROVIDERS[kind].scopes?{scopes:OAUTH_PROVIDERS[kind].scopes}:{})}});
   return error||!data.url?back('sign-in'):c.redirect(data.url);
  }
- if(kind==='logout'){await c.auth.auth.signOut({scope:'local'});for(const name of ['pinnacle-ask-phone','pinnacle-ask-return','pinnacle-ask-csrf'])c.set(name,'',{maxAge:0});return c.redirect('/ask');}
+ if(kind==='logout'){const {error}=await c.auth.auth.signOut({scope:'local'});if(error)return c.reply('Sign out could not be completed. Please try again.',503);for(const name of ['pinnacle-ask-phone','pinnacle-ask-return','pinnacle-ask-csrf'])c.set(name,'',{maxAge:0});const target=new URL(safeReturn(form.get('returnTo')),c.url.origin);target.searchParams.set('ask_signin','signed-out');return c.redirect(target.pathname+target.search+target.hash);}
  const {data:{user},error}=await c.auth.auth.getUser();
  if(error||!hasSupportedIdentity(user))return back('sign-in');
  if(await limited(env,kind+':'+user.id))return back('wait');
