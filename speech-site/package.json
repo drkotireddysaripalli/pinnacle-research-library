@@ -19,14 +19,19 @@
     "check:page": "node scripts/check-page.mjs",
     "check:speed": "node scripts/check-speed.mjs",
     "build:ask": "astro build --config astro.ask.config.mjs",
-    "preview:ask": "astro preview --config astro.ask.config.mjs --host 127.0.0.1 --port 4330"
+    "preview:ask": "astro preview --config astro.ask.config.mjs --host 127.0.0.1 --port 4330",
+    "test:ask-auth": "node --test scripts/test-ask-auth.mjs",
+    "check:ask-account": "node scripts/check-ask-account.mjs"
   },
   "dependencies": {
     "@astrojs/cloudflare": "14.3.3",
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.117.2",
     "astro": "7.3.5",
     "marked": "18.0.14",
     "parse5": "8.0.1",
     "sanitize-html": "2.18.0",
+    "standardwebhooks": "1.1.1",
     "wrangler": "4.147.0"
   },
   "devDependencies": {

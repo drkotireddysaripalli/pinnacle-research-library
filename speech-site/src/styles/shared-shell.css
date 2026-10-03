@@ -56,6 +56,8 @@ main figcaption a{text-decoration:underline;text-underline-offset:.15em}
 }
 @media(min-width:601px) and (max-width:900px){
   .portal-utility{grid-template-columns:repeat(3,auto)}
+  /* The compact rail hides submenu arrows; retain visible space between titles. */
+  .portal-therapy-title{padding-inline:12px}
 }
 @media(max-width:620px){
   .shared-rail-evidence{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}

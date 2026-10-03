@@ -1,4 +1,10 @@
-# Delivered: Ask Astro migration — 3 October 2026
+# Active: Ask identity and acquisition — 3 October 2026
+
+Owner has added Google/email and WATI WhatsApp verification, supplied pinnacle.wati.io and the local Logos folder, and reaffirmed search/AI discovery, reputation, branding and 9100 181 181 leads as the outcome. Current bounded contract: ASK-IDENTITY-WORK-ORDER-20261003.md. Preserve public Ask delivery below. No unrelated page or database retirement is part of this authentication package.
+
+Identity source is prepared and locally checked (11 unit tests and five rendered HTTP/privacy checks). WATI still opens login; actual provider flow is not verified or deployed. The observed tablet therapy-label spacing is corrected in the common stylesheet, prepared for a coherent main-portal plus Ask release. See the current contract for precise activation gates and settings; do not claim prepared changes are live.
+
+## Delivered: Ask Astro migration — 3 October 2026
 
 Ask migration is delivered at https://pinnacleblooms.org/ask. Source4e34495; Worker2dd39a2f-4f2b-43a9-80b5-a1ab7b3800f1. User authorised complete implementation and Ask-only production release. Governing contract: ASK-ASTRO-MIGRATION-WORK-ORDER-20261003.md. Build/validation status: ASK-ASTRO-RELEASE-20261003.md. PinnacleAI scholar/Figma work remains held for the owner's diagram. Historical work orders below are retained as history, not concurrent execution instructions.
 

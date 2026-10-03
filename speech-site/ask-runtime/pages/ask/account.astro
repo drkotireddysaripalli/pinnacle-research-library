@@ -1,0 +1,60 @@
+---
+import {env} from 'cloudflare:workers';
+import AskLayout from '../../../src/layouts/AskLayout.astro';
+import Icon from '../../../src/components/Icon.astro';
+import {context,csrf,safeReturn,hasGoogle,registrationComplete,phoneConfirmed,applyHeaders} from '../../../src/lib/ask/auth.mjs';
+const c=context(Astro.request,env);
+const result=c.auth?await c.auth.auth.getUser():null;
+const user=result?.data?.user;
+const connected=hasGoogle(user),complete=registrationComplete(user);
+const token=csrf(c);
+applyHeaders(Astro.response.headers,c.headers);
+const pending=c.cookies.get('pinnacle-ask-phone');
+const returnTo=safeReturn(Astro.url.searchParams.get('returnTo')||c.cookies.get('pinnacle-ask-return'));
+const messages={
+ 'sign-in':'Please connect your Google account to continue.',
+ 'wait':'Please wait a minute before trying again.',
+ 'phone-format':'Enter your WhatsApp number with its country code and confirm that we may send your verification code.',
+ 'phone-unavailable':'WhatsApp verification is temporarily unavailable. Your Google account remains connected.',
+ 'phone-send':'We could not send a code. Check your number or try again shortly.',
+ 'code-sent':'Your code has been accepted for sending to WhatsApp. Enter it below when it arrives.',
+ 'code-invalid':'That code could not be verified. Check the code and try again, or request a new one.',
+ 'verification-record':'Your phone code was verified, but we could not save the WhatsApp verification record. Please try again shortly.',
+ 'verified':'Your Google account and WhatsApp number are connected.'
+};
+const statusKey=Astro.url.searchParams.get('status')||'';
+const status=(!c.auth||(statusKey==='verified'&&!complete)||(statusKey==='code-sent'&&(!connected||!pending))||(statusKey==='verification-record'&&!phoneConfirmed(user)))?'':messages[statusKey]||'';
+---
+<AskLayout title="Your Ask Pinnacle account" description="Connect your Google account and verify your WhatsApp number with Pinnacle Blooms Network." canonical="https://pinnacleblooms.org/ask/account" robots="noindex, nofollow" privatePage={true}>
+<section class="ask-wrap ask-section ask-account">
+ <div><p class="ask-eyebrow">ASK PINNACLE · YOUR ACCOUNT</p><h1>A clearer next step.<br/>A way to stay connected.</h1><p class="ask-lead">Your questions matter. Connect your Google account and verify the WhatsApp number you use, so your details stay together.</p>
+ <div class="ask-account-purpose"><Icon name="heart"/><h2>Your child’s everyday life gives the conversation its purpose.</h2><p>Bring the questions that matter to your family. Talk with Pinnacle about the right service, a nearby centre and how to begin.</p><a class="ask-button" href="tel:+919100181181">Call 9100 181 181</a><p><a href="/ask">Keep exploring public answers →</a></p></div>
+ </div>
+ <div class="ask-account-card"><p class="ask-eyebrow">TWO SIMPLE STEPS</p><h2>{complete?'You’re connected.':'Connect with Pinnacle.'}</h2>
+ {status&&<p class="ask-account-status" role="status">{status}</p>}
+ {!c.auth&&<p>Account sign-in is not available yet. You can keep reading Ask and contact the Pinnacle team directly.</p>}
+ <section class="ask-account-step"><span class="ask-account-number">1</span><div><h3>Connect your Google account</h3>{connected?<p>{user.email}<br/><strong>Google account connected</strong></p>:<><p>Use your own account. We never ask for your Google password.</p><form method="post" action="/ask/auth/google"><input type="hidden" name="csrf" value={token}/><input type="hidden" name="returnTo" value={returnTo}/><button type="submit" class="ask-button" disabled={!c.auth}>Continue with Google</button></form></>}</div></section>
+ <section class="ask-account-step"><span class="ask-account-number">2</span><div><h3>Verify your WhatsApp number</h3>{complete?<p><strong>{user.phone?.startsWith('+')?user.phone:'+'+user.phone}</strong><br/>WhatsApp number verified</p>:connected&&env.ASK_WHATSAPP_ENABLED==='true'?<>
+ <form method="post" action="/ask/auth/phone"><input type="hidden" name="csrf" value={token}/><label for="ask-phone">WhatsApp number, including country code</label><input id="ask-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="24" placeholder="+91" required value={pending||''}/><label class="ask-account-consent"><input type="checkbox" name="verificationConsent" value="yes" required/><span>Send a verification code to my WhatsApp number.</span></label><button class="ask-button ask-button-outline" type="submit">{pending?'Send another code':'Send verification code'}</button></form>
+ {pending&&<form method="post" action="/ask/auth/verify" class="ask-code-form"><input type="hidden" name="csrf" value={token}/><label for="ask-code">Code from WhatsApp</label><input id="ask-code" name="token" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,10}" minlength="6" maxlength="10" required/><button class="ask-button" type="submit">Verify my number</button></form>}
+ </>:<p>{connected?'WhatsApp verification is temporarily unavailable. You can still call us directly.':'After connecting Google, enter the code we send to your WhatsApp number.'}</p>}</div></section>
+ {complete&&<a class="ask-button" href={returnTo}>Return to Ask →</a>}
+ {connected&&<form method="post" action="/ask/auth/logout"><input type="hidden" name="csrf" value={token}/><button type="submit" class="ask-account-signout">Sign out</button></form>}
+ <p class="ask-small">This account is for adults. Verification is separate from enrolment and does not subscribe you to marketing. <a href="https://www.pinnacleblooms.org/privacy-policy">Read our privacy policy</a>.</p>
+ </div>
+</section>
+</AskLayout>
+<style>
+.ask-account{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.9fr);gap:56px;align-items:start}
+.ask-account-purpose{margin-top:32px;padding:26px;border-left:5px solid #009fa8;background:#f5fbfa;border-radius:0 16px 16px 0}.ask-account-purpose h2{font-size:25px!important}
+.ask-account-card{padding:30px;border:1px solid #dfd5e5;border-top:5px solid #8f2879;border-radius:16px;box-shadow:0 12px 32px #2328530a;min-width:0}
+.ask-account-step{display:flex;gap:14px;padding-block:22px;border-top:1px solid #e4e4eb}.ask-account-step>div{min-width:0;flex:1}.ask-account-step p{overflow-wrap:anywhere}
+.ask-account-number{display:grid;place-items:center;background:#8f2879;color:white;width:32px;height:32px;border-radius:50%;flex-shrink:0;font-weight:700}
+.ask-account h3{font-size:21px!important}.ask-account label{display:block;font-size:15px;font-weight:700;margin:12px 0 8px}.ask-account input:not([type=hidden]):not([type=checkbox]){width:100%;min-height:48px;padding:12px;border:1px solid #877b98;border-radius:8px;font:inherit;font-size:18px;background:#fff;color:#213653}
+.ask-account .ask-account-consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;line-height:1.6}.ask-account-consent input{width:20px;height:20px;flex-shrink:0;margin-top:3px;accent-color:#8f2879}
+.ask-account button{cursor:pointer;font-family:inherit}.ask-account .ask-button{margin-top:10px}.ask-code-form{margin-top:22px}.ask-account-status{padding:14px;border-left:4px solid #00848e;background:#f2fbfa}
+.ask-account button:disabled{cursor:not-allowed;opacity:.7}
+.ask-account-signout{background:white;border:0;color:#842478;padding:14px 0;text-decoration:underline;font-size:16px;margin-block:16px}
+@media(max-width:800px){.ask-account{grid-template-columns:1fr;gap:28px}.ask-account-card{padding:24px}.ask-account-purpose{padding:22px}}
+@media(max-width:400px){.ask-account-card{padding:18px}.ask-account-step{gap:10px}.ask-account .ask-button{width:100%;white-space:normal;text-align:center}}
+</style>
