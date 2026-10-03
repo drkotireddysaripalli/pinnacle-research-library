@@ -1,0 +1,95 @@
+{
+  "at": "2026-10-03T03:12:25.072Z",
+  "items": [
+    {
+      "path": "/ask",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": null,
+      "bytes": 154083,
+      "sha256": "759c5ad4eb2d4e32cc295ccc0c590dca56a7a41799a5ab7c6f42bf0494bc6f6f",
+      "title": "Ask Pinnacle — the Child Development Kośa"
+    },
+    {
+      "path": "/ask/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": "HIT",
+      "bytes": 154083,
+      "sha256": "759c5ad4eb2d4e32cc295ccc0c590dca56a7a41799a5ab7c6f42bf0494bc6f6f",
+      "title": "Ask Pinnacle — the Child Development Kośa"
+    },
+    {
+      "path": "/ask/search?q=speech+delay",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": null,
+      "bytes": 120330,
+      "sha256": "e06ab7ad9ec0eb6f206534399a5df5a23707e20516642ae933126e6dc794021b",
+      "title": "Search the Child Development Kośa — Ask Pinnacle",
+      "answerLinks": [
+        "https://pinnacleblooms.org/ask/conditions",
+        "https://pinnacleblooms.org/ask/home",
+        "https://pinnacleblooms.org/ask/materials",
+        "https://pinnacleblooms.org/ask/skills",
+        "https://pinnacleblooms.org/ask/how-to",
+        "https://pinnacleblooms.org/ask/abilityscore",
+        "https://pinnacleblooms.org/ask/compare",
+        "https://pinnacleblooms.org/ask/myths",
+        "https://pinnacleblooms.org/ask/assessments",
+        "https://pinnacleblooms.org/ask/code"
+      ]
+    },
+    {
+      "path": "/ask/what-is-abilityscore-and-how-does-it-help-my-child",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": null,
+      "bytes": 118589,
+      "sha256": "af8caad5d1a284996360c2e276553dee160f73961cee9019225de58d5a0199ce",
+      "title": "What Is AbilityScore® &amp; How It Helps Your Child"
+    },
+    {
+      "path": "/ask/lens/condition/autism",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": null,
+      "bytes": 113004,
+      "sha256": "628590cabe9df03ef973f2c8d56e264a5c3e51abafefe64ed432ea27151c6e39",
+      "title": "Autism Spectrum — Ask Pinnacle"
+    },
+    {
+      "path": "/ask/te",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "cache": null,
+      "bytes": 158085,
+      "sha256": "5fe8eb33e57ad4b73a3f8743ad0570750c52357a11862709e1ece85f408bfb0e",
+      "title": "Ask Pinnacle — the Child Development Kośa"
+    },
+    {
+      "path": "/ask/sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "cache": null,
+      "bytes": 694,
+      "sha256": "27ebb906ffb0735861f81b58fc066ef30205fdd599549e66bda523c7865b2a8b"
+    },
+    {
+      "path": "/ask/m.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8",
+      "cache": null,
+      "bytes": 1670,
+      "sha256": "e32f112deec39ffec1ec25b880213109390854d783d859477e4a4ebaa43c3011"
+    },
+    {
+      "path": "/ask/logo.png",
+      "status": 200,
+      "type": "image/png",
+      "cache": null,
+      "bytes": 16236,
+      "sha256": "65e3b04a828783ab593e7770f27b508a18181c5e587f2d9460a75e7cfe536d39"
+    }
+  ]
+}

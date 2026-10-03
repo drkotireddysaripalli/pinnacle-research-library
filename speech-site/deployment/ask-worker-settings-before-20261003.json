@@ -1,0 +1,29 @@
+{
+  "bindings": [
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    }
+  ],
+  "compatibility_date": "2025-06-01"
+}

@@ -15,6 +15,10 @@ const [routes,settings,deployments]=await Promise.all([get('/zones/'+zones[0].id
 const latest=(deployments.deployments||deployments).sort((a,b)=>b.created_on.localeCompare(a.created_on))[0];
 const bindings=settings.bindings.map(({name,type,service,environment})=>({name,type,service:service||null,environment:environment||null})).sort((a,b)=>a.name.localeCompare(b.name));
 const report={at:new Date().toISOString(),worker:config.name,zoneId:zones[0].id,routes:routes.map(({id,pattern,script})=>({id,pattern,script:script||null})).sort((a,b)=>a.pattern.localeCompare(b.pattern)),bindings,deployment:latest};
+// Both hosts are required: an apex-only check previously missed a public www 404.
+for(const [pattern,script] of [['pinnacleblooms.org/ask*','pinnacle-ask'],['www.pinnacleblooms.org/ask*','pinnacle-verify-route']]){
+ assert(report.routes.some(r=>r.pattern===pattern&&r.script===script),'Required separate Ask route is missing: '+pattern);
+}
 if(beforeFile){const before=JSON.parse(await fs.readFile(beforeFile,'utf8'));assert.deepEqual(report.routes,before.routes,'Zone routes changed');assert.deepEqual(report.bindings,before.bindings,'Worker bindings changed');assert(latest.versions.some(v=>v.version_id===expectedVersion&&v.percentage===100),'Expected version must serve 100%');report.routesAndBindingsUnchanged=true;report.rollback=before.deployment.versions;}
 await fs.writeFile(output,JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({output,routes:routes.length,assigned:routes.filter(r=>r.script===config.name).length,bindings:bindings.length,deployment:latest,verified:!!beforeFile}));

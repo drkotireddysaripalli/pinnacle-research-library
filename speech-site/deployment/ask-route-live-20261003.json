@@ -1,0 +1,148 @@
+{
+  "at": "2026-10-03T03:14:57.789Z",
+  "passed": 19,
+  "checks": [
+    {
+      "path": "/ask",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 154083,
+      "title": "Ask Pinnacle — the Child Development Kośa"
+    },
+    {
+      "path": "/ask/",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask/",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 154083,
+      "title": "Ask Pinnacle — the Child Development Kośa"
+    },
+    {
+      "path": "/ask/search?q=speech+delay",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask/search?q=speech+delay",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 120330,
+      "title": "Search the Child Development Kośa — Ask Pinnacle"
+    },
+    {
+      "path": "/ask/what-is-abilityscore-and-how-does-it-help-my-child",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask/what-is-abilityscore-and-how-does-it-help-my-child",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 118589,
+      "title": "What Is AbilityScore® &amp; How It Helps Your Child"
+    },
+    {
+      "path": "/ask/lens/condition/autism",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask/lens/condition/autism",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 113004,
+      "title": "Autism Spectrum — Ask Pinnacle"
+    },
+    {
+      "path": "/ask/te",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask/te",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "bytes": 158085,
+      "title": "Ask Pinnacle — the Child Development Kośa"
+    },
+    {
+      "path": "/ask/sitemap.xml",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask/sitemap.xml",
+      "status": 200,
+      "type": "application/xml; charset=utf-8",
+      "bytes": 694
+    },
+    {
+      "path": "/ask/m.js",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask/m.js",
+      "status": 200,
+      "type": "text/javascript; charset=utf-8",
+      "bytes": 1670
+    },
+    {
+      "path": "/ask/logo.png",
+      "redirectStatus": 308,
+      "location": "https://pinnacleblooms.org/ask/logo.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 16236
+    },
+    {
+      "path": "/ask",
+      "method": "HEAD",
+      "status": 308,
+      "location": "https://pinnacleblooms.org/ask"
+    },
+    {
+      "path": "/ask/",
+      "method": "HEAD",
+      "status": 308,
+      "location": "https://pinnacleblooms.org/ask/"
+    },
+    {
+      "path": "/ask/search?q=speech%20delay&source=route-check",
+      "method": "HEAD",
+      "status": 308,
+      "location": "https://pinnacleblooms.org/ask/search?q=speech%20delay&source=route-check"
+    },
+    {
+      "path": "/ask/what-is-abilityscore-and-how-does-it-help-my-child",
+      "method": "HEAD",
+      "status": 308,
+      "location": "https://pinnacleblooms.org/ask/what-is-abilityscore-and-how-does-it-help-my-child"
+    },
+    {
+      "variant": "cookie",
+      "status": 308
+    },
+    {
+      "path": "/verify/",
+      "status": 200,
+      "location": null,
+      "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107",
+      "preserved": true
+    },
+    {
+      "path": "/pinnacleai",
+      "status": 200,
+      "location": null,
+      "sha256": "e95dade31cb69ae7e7d84a98abe6a59429e6d08ec8e9a24ae68e7decb0786945",
+      "preserved": true
+    },
+    {
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "location": null,
+      "sha256": "862af7408b7412a976f7ddc382444bf70c0869f02de4322cca1bd753f21961cf",
+      "preserved": true
+    },
+    {
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "location": null,
+      "sha256": "98855fcf9517b11ca142b1de96fba596fe27f455ce22f28b0577ed16f87a13ef",
+      "preserved": true
+    },
+    {
+      "path": "/asked",
+      "status": 404,
+      "location": null,
+      "sha256": "67f8bee2b0e642795af702c880158b346e4fb05705db893630ede86aa915d876",
+      "preserved": true
+    }
+  ],
+  "scope": "Host routing, representative app resources, HEAD/query/cookie variants, four protected page hashes and adjacent legacy 404. Search results and UI require separate functional review."
+}

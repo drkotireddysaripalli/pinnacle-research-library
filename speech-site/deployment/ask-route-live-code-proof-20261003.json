@@ -1,0 +1,6 @@
+{
+  "at": "2026-10-03T03:11:35.144Z",
+  "status": 200,
+  "sha256": "f06f4278aedf5732d6db908f025510e5fb202cf9a2f366877bbca91cd8e9fe17",
+  "redirectSnippet": "quest));\n  }\n  if(incoming.hostname==='www.pinnacleblooms.org'&&(incoming.pathname==='/ask'||incoming.pathname.startsWith('/ask/'))&&['GET','HEAD'].includes(request.method))return Response.redirect('https://pinnacleblooms.org'+incoming.pathname+incoming.search,308);\n  if(incoming.hostname==='www.pinnacleblooms.org'&&(incoming.pathname==='/abilityscore'||incoming.pathname=="
+}
