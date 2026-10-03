@@ -158,10 +158,21 @@
   });
   document.addEventListener('click',event=>{
     if (pageGroup === 'bookshop') {
-      const href = event.target?.closest?.('a[href]')?.getAttribute('href');
+      const contactLink = event.target?.closest?.('a[href]');
+      const href = contactLink?.getAttribute('href');
       if (href) {
+        if (href === 'tel:+919100181181') {
+          const placement = contactLink.dataset?.cta;
+          send('phone_link_click', {schema_version:2,page_group:'bookshop',link_placement:callPlacements.has(placement)?placement:'bookshop-contact',destination:'national_helpline_9100181181'});
+          return;
+        }
         try {
-          const destination = new URL(href, origin).href;
+          const target = new URL(href, origin);
+          if (target.origin === 'https://wa.me' && target.pathname === '/919100181181' && !target.username && !target.password) {
+            send('whatsapp_link_click', {schema_version:3,page_group:'bookshop',link_placement:'bookshop-contact',destination:'national_helpline_9100181181'});
+            return;
+          }
+          const destination = target.href;
           const sample = Object.values(commerceCatalogue).flatMap(item => Array.isArray(item.books) ? item.books : [])
             .find(book => typeof book.sample === 'string' && new URL(book.sample, origin).href === destination);
           if (sample) send('sample_preview', {schema_version:3,page_group:'bookshop',item_id:sample.sku,item_name:sample.title});

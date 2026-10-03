@@ -8,6 +8,45 @@ const QUERY = `query Books($after:String) @inContext(country:IN){products(first:
 const retailerIdFor = (_product, variant) => String(variant.id);
 const escapeXml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const tag = (name, value) => `<g:${name}>${escapeXml(value)}</g:${name}>`;
+// Reviewed, format-neutral inside-page previews; keep campaigns and unreviewed future media out.
+// Product IDs preserve each edition's language and exact constituent-book scope.
+const REVIEWED_BOOK_GALLERY = Object.freeze({
+  "8423887863874": ["en/speech-sample-1.jpg", "en/speech-sample-2.jpg"],
+  "8423887896642": ["en/ot-sample-1.jpg", "en/ot-sample-2.jpg"],
+  "8423887929410": ["en/aba-sample-1.jpg", "en/aba-sample-2.jpg"],
+  "8423887962178": ["en/special-education-sample-1.jpg", "en/special-education-sample-2.jpg"],
+  "8423888027714": ["en/speech-sample-1.jpg", "en/speech-sample-2.jpg", "en/ot-sample-1.jpg", "en/ot-sample-2.jpg"],
+  "8423888060482": ["en/speech-sample-1.jpg", "en/speech-sample-2.jpg", "en/aba-sample-1.jpg", "en/aba-sample-2.jpg"],
+  "8423888093250": ["en/speech-sample-1.jpg", "en/speech-sample-2.jpg", "en/special-education-sample-1.jpg", "en/special-education-sample-2.jpg"],
+  "8423888126018": ["en/ot-sample-1.jpg", "en/ot-sample-2.jpg", "en/aba-sample-1.jpg", "en/aba-sample-2.jpg"],
+  "8423888158786": ["en/ot-sample-1.jpg", "en/ot-sample-2.jpg", "en/special-education-sample-1.jpg", "en/special-education-sample-2.jpg"],
+  "8423888191554": ["en/aba-sample-1.jpg", "en/aba-sample-2.jpg", "en/special-education-sample-1.jpg", "en/special-education-sample-2.jpg"],
+  "8423888257090": ["en/speech-sample-1.jpg", "en/speech-sample-2.jpg", "en/ot-sample-1.jpg", "en/ot-sample-2.jpg", "en/aba-sample-1.jpg", "en/aba-sample-2.jpg", "en/special-education-sample-1.jpg", "en/special-education-sample-2.jpg"],
+  "8424123170882": ["hi/speech-sample-1.png", "hi/speech-sample-2.png"],
+  "8424123203650": ["hi/ot-sample-1.png", "hi/ot-sample-2.png"],
+  "8424123236418": ["hi/aba-sample-1.png", "hi/aba-sample-2.png"],
+  "8424123269186": ["hi/special-education-sample-1.png", "hi/special-education-sample-2.png"],
+  "8424123301954": ["hi/speech-sample-1.png", "hi/speech-sample-2.png", "hi/ot-sample-1.png", "hi/ot-sample-2.png"],
+  "8424123334722": ["hi/speech-sample-1.png", "hi/speech-sample-2.png", "hi/aba-sample-1.png", "hi/aba-sample-2.png"],
+  "8424123367490": ["hi/speech-sample-1.png", "hi/speech-sample-2.png", "hi/special-education-sample-1.png", "hi/special-education-sample-2.png"],
+  "8424123400258": ["hi/ot-sample-1.png", "hi/ot-sample-2.png", "hi/aba-sample-1.png", "hi/aba-sample-2.png"],
+  "8424123465794": ["hi/ot-sample-1.png", "hi/ot-sample-2.png", "hi/special-education-sample-1.png", "hi/special-education-sample-2.png"],
+  "8424123498562": ["hi/aba-sample-1.png", "hi/aba-sample-2.png", "hi/special-education-sample-1.png", "hi/special-education-sample-2.png"],
+  "8424123531330": ["hi/speech-sample-1.png", "hi/speech-sample-2.png", "hi/ot-sample-1.png", "hi/ot-sample-2.png", "hi/aba-sample-1.png", "hi/aba-sample-2.png", "hi/special-education-sample-1.png", "hi/special-education-sample-2.png"],
+  "8424123564098": ["te/speech-sample-1.png", "te/speech-sample-2.png"],
+  "8424123596866": ["te/ot-sample-1.png", "te/ot-sample-2.png"],
+  "8424123629634": ["te/aba-sample-1.png", "te/aba-sample-2.png"],
+  "8424123662402": ["te/special-education-sample-1.png", "te/special-education-sample-2.png"],
+  "8424123695170": ["te/speech-sample-1.png", "te/speech-sample-2.png", "te/ot-sample-1.png", "te/ot-sample-2.png"],
+  "8424123727938": ["te/speech-sample-1.png", "te/speech-sample-2.png", "te/aba-sample-1.png", "te/aba-sample-2.png"],
+  "8424123760706": ["te/speech-sample-1.png", "te/speech-sample-2.png", "te/special-education-sample-1.png", "te/special-education-sample-2.png"],
+  "8424123793474": ["te/ot-sample-1.png", "te/ot-sample-2.png", "te/aba-sample-1.png", "te/aba-sample-2.png"],
+  "8424123826242": ["te/ot-sample-1.png", "te/ot-sample-2.png", "te/special-education-sample-1.png", "te/special-education-sample-2.png"],
+  "8424123859010": ["te/aba-sample-1.png", "te/aba-sample-2.png", "te/special-education-sample-1.png", "te/special-education-sample-2.png"],
+  "8424123891778": ["te/speech-sample-1.png", "te/speech-sample-2.png", "te/ot-sample-1.png", "te/ot-sample-2.png", "te/aba-sample-1.png", "te/aba-sample-2.png", "te/special-education-sample-1.png", "te/special-education-sample-2.png"],
+});
+const reviewedImageLinks = product => (REVIEWED_BOOK_GALLERY[String(product.id)] || [])
+  .map(path => tag('additional_image_link', 'https://www.pinnacleblooms.org/pinnacle-pages-assets/book-gallery-20261003/' + path)).join('');
 function plain(value) {
   return String(value || '').replace(/<script\b[^>]*>[\s\S]*?<\/script>|<style\b[^>]*>[\s\S]*?<\/style>/gi,' ')
     .replace(/<[^>]*>/g,' ').replace(/&(?:amp|lt|gt|quot|apos|nbsp);/g, e => ({'&amp;':'&','&lt;':'<','&gt;':'>','&quot;':'"','&apos;':"'",'&nbsp;':' '}[e]))
@@ -33,7 +72,7 @@ export function physicalFeedXml(products, currency, idFor) {
       if (!plain(product.title) || !plain(variant.title) || !plain(paragraph) || !plain(product.vendor)) throw Error('Missing product copy');
       const fields = {id,item_group_id:String(product.id),title,description,product_type:product.product_type,link:`${STORE}/products/${product.handle}?variant=${variant.id}`,image_link:image.href,
         availability:variant.available?'in stock':'out of stock',price:`${Number(variant.price).toFixed(2)} ${currency}`,condition:'new',brand:plain(product.vendor)};
-      rows.push('<item>'+Object.entries(fields).map(([key,value])=>tag(key,value)).join('')+'</item>');
+      rows.push('<item>'+Object.entries(fields).map(([key,value])=>tag(key,value)).join('')+reviewedImageLinks(product)+'</item>');
     }
   }
   if (!rows.length) throw Error('Refuse empty feed');

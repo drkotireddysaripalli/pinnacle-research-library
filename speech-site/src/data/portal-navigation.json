@@ -59,6 +59,10 @@
   ],
   "mobileExtras": [
     {
+      "label": "Books & Shop",
+      "url": "/shop"
+    },
+    {
       "label": "Login",
       "url": "/epass"
     },
@@ -764,6 +768,10 @@
       {
         "title": "Resources & Portals",
         "links": [
+          {
+            "label": "Books & Shop",
+            "url": "/shop"
+          },
           {
             "label": "Pinnacle Materials",
             "url": "https://materials.pinnacleblooms.org/"

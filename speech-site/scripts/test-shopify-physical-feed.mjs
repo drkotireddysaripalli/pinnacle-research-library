@@ -42,3 +42,21 @@ test('feed follows cursor pages and rejects incomplete variants or mixed currenc
  const mixed=apiFixture();mixed.data.products.nodes[0].variants.nodes.push({...mixed.data.products.nodes[0].variants.nodes[1],id:'gid://shopify/ProductVariant/13',price:{amount:'10.00',currencyCode:'USD'}});
  for(const data of [incomplete,mixed]){const r=await serveShopifyPhysicalFeed(request,{fetcher:async()=>json(data),cache:null});assert.equal(r.status,503);}
 });
+
+// Known reviewed previews are bounded independently of arbitrary storefront media.
+test('reviewed preview links follow the known language and constituent set, keeping primary media and ebook exclusion',()=>{
+ const english={...fixture(),id:8423887863874};
+ english.images.push({src:'https://cdn.shopify.com/promotional-campaign.png'});
+ const en=physicalFeedXml([english],'INR',idFor);
+ assert.equal((en.match(/<g:additional_image_link>/g)||[]).length,2);
+ assert(en.includes('/en/speech-sample-1.jpg'));assert(en.includes('/en/speech-sample-2.jpg'));
+ assert(en.includes('<g:image_link>https://cdn.shopify.com/book.jpg</g:image_link>'));
+ assert(!en.includes('promotional-campaign'));assert(!en.includes('<g:id>11</g:id>'));
+ const telugu={...fixture(),id:8424123891778};
+ const te=physicalFeedXml([telugu],'INR',idFor);
+ const links=[...te.matchAll(/<g:additional_image_link>([^<]+)<\/g:additional_image_link>/g)].map(m=>m[1]);
+ assert.equal(links.length,8);assert.equal(new Set(links).size,8);
+ for(const key of ['speech','ot','aba','special-education'])for(const n of [1,2])assert(links.some(u=>u.endsWith(`/te/${key}-sample-${n}.png`)));
+ const unknown=physicalFeedXml([fixture()],'INR',idFor);assert(!unknown.includes('additional_image_link'));
+ assert(te.includes('<g:availability>out of stock</g:availability>'));
+});
