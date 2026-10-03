@@ -1,0 +1,16 @@
+{
+  "startedAt": "2026-10-03T19:44:09.007812+00:00",
+  "endpoint": "https://api.indexnow.org/indexnow",
+  "host": "pinnacleblooms.org",
+  "manifest": "ask-answer-all-indexnow-20261004.json",
+  "offset": 30000,
+  "count": 10000,
+  "urlSha256": "5aacae03fa66cf109ce508f192e93bfccdfab073397016f4fe6ac22c1fb31a76",
+  "keyVerified": true,
+  "status": "accepted",
+  "httpStatus": 200,
+  "response": "",
+  "retryAfter": null,
+  "completedAt": "2026-10-03T19:44:11.348279+00:00",
+  "meaning": "Notification receipt only; not proof of crawling, indexing, ranking or AI citation."
+}
