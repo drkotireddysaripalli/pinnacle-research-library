@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-03T10:15:00.512Z",
+  "provider": "apple",
+  "status": "enabled-and-live",
+  "clientId": "org.pinnacleblooms.ask.web",
+  "callback": "https://lyjwsaiqvgwyautowhlx.supabase.co/auth/v1/callback",
+  "askReturn": "https://pinnacleblooms.org/ask/auth/callback",
+  "emailRequired": true,
+  "keySuppliedByOwner": true,
+  "localSignatureVerified": true,
+  "privateKeyCommitted": false,
+  "clientSecretCommitted": false,
+  "issuedAt": "2026-10-03T10:10:56.000Z",
+  "expiresAt": "2027-04-01T10:10:56.000Z",
+  "renewBy": "2027-03-02T10:10:56.000Z",
+  "renewal": "Renew server OAuth client secret using the securely retained existing Apple signing key; update Supabase Apple provider before renewBy. No reminder automation was created.",
+  "oauthRedirect": {
+    "status": 302,
+    "host": "appleid.apple.com",
+    "clientIdExact": true,
+    "callbackExact": true,
+    "responseMode": "form_post",
+    "scopes": "email name"
+  },
+  "actualAppleCallback": "awaiting owner personal Apple sign-in",
+  "nativeAppleScreen": "Pinnacle Ask Web password/iPhone sign-in",
+  "releaseVersion": "67f1801d-09d1-44e4-ac57-1dfbb675c812"
+}
