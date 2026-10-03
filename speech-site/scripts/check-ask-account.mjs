@@ -14,7 +14,7 @@ for(const suffix of ['', '?status=verified', '?status=code-sent']){
  assert.equal(r.headers.get('referrer-policy'),'strict-origin');
  assert.match(r.headers.get('set-cookie')||'',/HttpOnly/);
  assert.match(html,/Account sign-in is not available yet/);
- assert.doesNotMatch(html,/Your Google account and WhatsApp number are connected\.|Your code has been accepted for sending/);
+ assert.doesNotMatch(html,/Your (?:Google )?account and WhatsApp number are connected\.|Your code has been accepted for sending/);
  assert.doesNotMatch(html,/<script[^>]+type="application\/ld\+json"/);
  assert.match(html,/tel:\+919100181181/);
  checks.push({path:'/ask/account'+suffix,status:r.status,result:'pass',scope:'private headers, disabled state, no false verification, call link'});

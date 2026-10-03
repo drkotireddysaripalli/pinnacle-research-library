@@ -1,6 +1,34 @@
 # Ask identity and acquisition integration
 
-3 October 2026. Owner: this task. Current public Ask release remains 2dd39a2f-4f2b-43a9-80b5-a1ab7b3800f1.
+3 October 2026. Owner: this task. Current state is recorded immediately below; the subsequent preparation notes are historical.
+
+## Current state: activation and native-browser fixes
+
+- Final runtime repair is live as `7a7301ef-186d-4dd7-b055-bf65c3bfc4f1`; CI run `37111659722` succeeded. The owner received the real WhatsApp code, entered it, and confirmed completion. Ask displayed “You’re connected” and “WhatsApp number verified.” A focused server query confirmed all six conditions: confirmed email, confirmed phone, Google identity on the same user, WATI receipt, receipt matching the current phone, and receipt matching its confirmation timestamp. No phone, email or user identifier is included in the public receipt. `deployment/ask-identity-production-checks-20261003.json` records that completed flow.
+- Supabase Google and Phone are enabled. The signed Send SMS hook is enabled at the exact Ask endpoint. Six-digit codes expire after 360 seconds; phone confirmation is enabled and fixed test codes remain empty. The exact Ask callback is saved; IRWFA Site URL and existing returns are preserved.
+- Common menu spacing is deployed to both main and Ask. Main version `c12d101b-99e5-4caa-9c60-cce30a56c8f3`; MCP version `5fc3a111-be9d-401e-9856-674534594d5e`. All 185 zone routes are preserved.
+- Actual Chrome Google callback completed. The native POST failure was caused by `no-referrer`; `strict-origin` fixes it while retaining origin and CSRF checks. Hosted Chrome also reached Google through the native form. Commit `0608d1d`.
+- The real phone request reached the signed hook, but Cloudflare rejected the request option `redirect: error` before WATI could be called. Local workerd reproduced the same error. Changed to `manual`, with non-2xx responses rejected and no credential forwarding. A new test runs the actual signed hook in Cloudflare's runtime using synthetic data and no external messages.
+- Runtime repair and provider support are committed as `03d1577`. Sixteen auth/runtime tests and the Ask build pass; type check reports zero errors. Auth/runtime tests now run in Ask CI. See `deployment/ask-identity-providers-runtime-20261003.json` for promotion state. The real owner flow is now verified separately from those automated checks.
+- A modest Account link is prepared in the shared Ask navigation following actual verification. Inspected at 320, 768 and 1440px with no overflow and a 44px target; desktop keyboard Tab reaches it. This is an Ask navigation change, not a redesign of SiteHeader or SiteFooter. Public answers, sitemaps, citations and machine exports remain accessible. Account pages remain private/no-store/noindex with no analytics or JSON-LD. Publication is recorded in the account-entry release receipt.
+
+### Apple, Microsoft and X: prepared code, external setup pending
+
+The account code supports Google, Apple, Microsoft (`azure`) and X OAuth 2.0 (`x`), behind an explicit provider allowlist. Only enabled providers receive buttons or start OAuth; default remains Google. Confirmed email, trusted identity, PKCE and the same-user signed WhatsApp receipt remain required. Apple private relay email is accepted. Microsoft requests the email scope; X uses Supabase's own scopes.
+
+All provider applications use `https://lyjwsaiqvgwyautowhlx.supabase.co/auth/v1/callback`.
+
+| Provider | Inspected state | Next condition |
+| --- | --- | --- |
+| Apple | Signed in as BHCL Account Holder; existing paid membership; Supabase disabled/empty | Apple blocks Certificates, Identifiers & Profiles until its updated Developer Program License Agreement is accepted. Exact agreement is open for the owner; then inspect Services ID, Team, signing setup and secret renewal. No agreement accepted by the agent. |
+| Microsoft | MFA completed; Supabase disabled/empty; care account lists only Sri Venkateswara University directory | Owner identifies the Pinnacle/BHCL account or directory. Do not create a Pinnacle app under the unrelated university directory. Then inspect Entra app, audience, callback, email and xms_edov claims, and secret value. |
+| X | Existing Pinnacle Blooms app 28323414; Supabase disabled/empty | Reuse saved OAuth client secret securely. Add Supabase callback while preserving existing homepage callback; enable email request and policy links. The portal only offers secret regeneration, which was not used. |
+
+Google consent branding currently names the shared IRWFA application; resolve this deliberately without interrupting IRWFA. Preserve existing X posting/DM integrations. No provider credential is fabricated, regenerated or published. Email one-time-code sign-in is the recommended later fallback after sender delivery is configured. Additional social providers do not themselves produce SEO rankings or AI citations.
+
+Provider references: [Apple](https://supabase.com/docs/guides/auth/social-login/auth-apple), [Microsoft](https://supabase.com/docs/guides/auth/social-login/auth-azure), [X](https://supabase.com/docs/guides/auth/social-login/auth-twitter).
+
+## Historical preparation record
 
 ## Outcome
 Useful, source-linked answers build Pinnacle recognition and lead families to 9100 181 181, centres and enrolment. Preserve public crawlable answers, citations, machine exports and the common header/footer. Add a deliberate account journey with Google sign-in and WhatsApp verification on the same identity. Registration must never imply a clinical assessment, enrolment, marketing consent or guaranteed outcome.
