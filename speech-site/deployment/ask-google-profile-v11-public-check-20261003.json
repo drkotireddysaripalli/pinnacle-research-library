@@ -1,0 +1,53 @@
+{
+  "at": "2026-10-03T12:53:52.538Z",
+  "origin": "https://pinnacleblooms.org",
+  "scope": "Anonymous HTTP and OAuth start; completed browser login recorded separately",
+  "checks": [
+    {
+      "name": "anonymous private session",
+      "status": 200,
+      "profile": null,
+      "noStore": true,
+      "noindex": true,
+      "csrf": true
+    },
+    {
+      "name": "public content and registration markup",
+      "path": "/ask",
+      "status": 200,
+      "sharedHTML": true,
+      "googleOnly": true,
+      "hash": "45d014db19f6c21e1f57992fef08eb7316ed1fdfe9f525925add73184dba36a1"
+    },
+    {
+      "name": "public content and registration markup",
+      "path": "/ask/lens/entity%3Atherapy_modality/ot",
+      "status": 200,
+      "sharedHTML": true,
+      "googleOnly": true,
+      "hash": "f22b97b0b19ab662412cc10475cf3977ee685abde2b1bdf983adf6be06e3da8d"
+    },
+    {
+      "name": "public content and registration markup",
+      "path": "/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "sharedHTML": true,
+      "googleOnly": true,
+      "hash": "5aaa00f2f34934af143d01e7536e7d227134d11a7ff5aa76cfc75252efc1538b"
+    },
+    {
+      "name": "Google PKCE start and old account redirect",
+      "returnPreserved": true,
+      "googleReached": true
+    },
+    {
+      "name": "invalid CSRF rejected; future provider starts hidden and disabled",
+      "pass": true
+    },
+    {
+      "name": "public machine exports and topic sitemap",
+      "pass": true,
+      "topicURLs": 478
+    }
+  ]
+}

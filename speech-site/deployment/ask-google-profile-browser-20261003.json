@@ -1,0 +1,55 @@
+{
+  "at": "2026-10-03T13:03:00Z",
+  "origin": "https://pinnacleblooms.org",
+  "sourceCommit": "0e9de497174cbe2b5eb53d721f39dabfe6e6a33c",
+  "liveWorker": "1b4751c4-700d-42cc-b5b5-9184005560b3",
+  "browser": "Native connected Chrome; responsive viewport emulation",
+  "realGoogleLogin": {
+    "dedicatedAskClient": true,
+    "returnedToSameTopic": true,
+    "verifiedAccountShowsMagentaTick": true,
+    "unverifiedAccountShowsGreyTick": true,
+    "logoutRestoresGate": true,
+    "observedOn": "v9; authentication code unchanged in v10-v12"
+  },
+  "profileActions": {
+    "getVerifiedOpensInPage": true,
+    "cancelClosesWithoutBadgeOrContact": true,
+    "unverifiedCallRequiresVerification": true,
+    "unverifiedWhatsAppRequiresVerification": true,
+    "freshOtpSentThisPass": false,
+    "actualCallOrContactMessageSent": false
+  },
+  "finalVisuals": [
+    {"viewport": "320x640", "horizontalOverflow": false, "profileTopUncovered": true, "profileBottomUncovered": true, "profileBounds": {"left":16,"top":16,"width":288,"height":536}, "screenshot": "ask-private/ask-profile-v12-phone320-20261003.png"},
+    {"viewport": "390x844", "horizontalOverflow": false, "profileBounds": {"left":24,"top":16,"width":350,"height":508.75}, "screenshot": "ask-private/ask-profile-v12-phone390-20261003.png"},
+    {"viewport": "390x844", "component": "WhatsApp modal", "officialEmblemLoaded": true, "screenshot": "ask-private/ask-verification-v12-phone390-20261003.png"},
+    {"viewport": "768x1024", "horizontalOverflow": false, "modalEmblemNaturalWidth":104, "screenshot": "ask-private/ask-verification-v12-tablet768-20261003.png"},
+    {"viewport": "768x1024", "component": "profile", "screenshot": "ask-private/ask-profile-v12-tablet768-20261003.png"},
+    {"viewport": "desktop", "horizontalOverflow": false, "screenshot": "ask-private/ask-profile-v12-desktop-20261003.png"}
+  ],
+  "googleBranding": {
+    "editorGrantApprovedAndSaved": true,
+    "project": "gen-lang-client-0074123614",
+    "verifiedDomainOwnerNowHasProjectAccess": true,
+    "reverificationAttemptedAfterGrant": true,
+    "brandingPublished": false,
+    "status": "Google still reports homepage ownership not synchronized and asks to allow 24 hours before retrying",
+    "retryNotBefore": "2026-10-04T12:55:00Z"
+  },
+  "checks": {
+    "focusedTests":28,
+    "ciRun":37124549904,
+    "ciAskBuild":"success",
+    "ciChecks":"success",
+    "publicReceipt":"ask-google-profile-v12-public-check-20261003.json",
+    "exactRoutesPreserved":185,
+    "sharedHeaderFooterEdited":false
+  },
+  "limits": [
+    "No physical-device or Safari OAuth test is claimed.",
+    "Earlier actual WATI delivery and owner verification confirm the backend and existing receipt; a fresh OTP entry through this new modal was not completed in this pass.",
+    "Google app branding is saved but not yet published; registration itself works.",
+    "Crawlable exports and registration markup do not prove indexing, ranking or AI citation."
+  ]
+}

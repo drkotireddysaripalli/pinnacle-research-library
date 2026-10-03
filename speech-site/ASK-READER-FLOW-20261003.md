@@ -1,5 +1,17 @@
 # Ask reader flow — 3 October 2026
 
+## Current release — live 3 October 2026
+
+- Source `0e9de497174cbe2b5eb53d721f39dabfe6e6a33c`, Ask Worker `1b4751c4-700d-42cc-b5b5-9184005560b3`. This is the final v12 profile release. Historical receipts below record earlier milestones.
+- The dedicated Ask Google identity is working in real Chrome sessions: both an existing WhatsApp-verified account and an unverified Pinnacle account signed in and returned to the same topic. Existing verified account displayed the magenta badge; the unverified account displayed a grey badge.
+- Get Verified opens the branded WhatsApp modal in place. Cancel closes it without granting verification or launching a contact action. Profile Call and WhatsApp each open verification first for an unverified account. Logout restores the reading gate on the same page.
+- Final native Chrome visual inspection: 320x640 and 390x844 phone viewports, 768x1024 tablet viewport, and desktop. The profile is above the shared header and clear of the fixed contact bar; the official 104x104 emblem is embedded as a 4,850-byte WebP in the verification modal. No horizontal overflow in the checked views. These are responsive browser checks, not physical-device or Safari OAuth claims.
+- 28 auth/runtime/controller tests passed, typecheck previously reported zero errors in 115 files, and the final Ask build passed. Public production check `deployment/ask-google-profile-v12-public-check-20261003.json` passed for home, topic, answer, auth isolation, public exports and 478 topic sitemap URLs.
+- No fresh OTP was sent through the new modal during this browser pass. The earlier real WATI delivery/owner verification and the retained server receipt are verified backend evidence; fresh code entry through this new modal remains a separate end-to-end check.
+- All 185 route mappings remained exact. This release did not edit the shared header/footer or change the then-current portal/MCP deployments. The portal had independently advanced to `1926a18f-5845-4948-a069-4a05a7e321a0` before v12; the release preserved it.
+- Google Cloud confirmed the owner-approved Editor grant to `pinnacleblooms@gmail.com` on PinnacleAsk only. The verified domain owner can now access the saved name and emblem. Reverification was attempted once after this material change; Google still reports homepage ownership not synchronized and instructs waiting 24 hours before retrying. Branding is **not yet shown to users**. Do not retry unchanged before 4 October 2026, 12:55 UTC. Existing Google sign-in works independently of this branding publication gate.
+- Final screenshots and account-specific evidence are kept in ignored `ask-private/`; public release receipts contain no user tokens or profile data. Keep the existing IRWFA client, secret, callbacks and entitlements unchanged.
+
 ## Current owner instruction
 One Google sign-in overlay on Ask pages. Sign in, continue on the same answer or topic, show the Google profile in Ask navigation, and allow logout. No separate account journey or provider chooser. The owner's later 3 October instruction adds optional WhatsApp verification inside a modal reached from the profile. It is not required for reading. Profile Call/WhatsApp actions require it; existing page contact CTAs remain direct. Shared SiteHeader and SiteFooter remain unchanged. The earlier identity work order is historical except for its account-security and provider-maintenance notes.
 
@@ -28,11 +40,11 @@ order by raw_app_meta_data->'ask_reader'->>'registered_at' desc;
 5. Commit source, upload then promote Ask only. Preserve exact 185 routes and current main portal/MCP deployments. Save rollback/candidate/public read-back.
 
 ## Limits
-This is a registration gate for the reading interface over intentionally public content and exports, not access control for confidential material. Crawling, indexing, ranking and AI citation remain separate outcomes. Google OAuth currently uses the pre-existing shared IRWFA consent application; rebranding or separating that application is a separate deliberate change.
+This is a registration gate for the reading interface over intentionally public content and exports, not access control for confidential material. Crawling, indexing, ranking and AI citation remain separate outcomes. Ask now uses its dedicated Google client for the official Google button; the pre-existing IRWFA client and Supabase configuration remain intact.
 
 Source: https://developers.google.com/search/docs/appearance/structured-data/paywalled-content
 
-## Release receipt
+## Initial release receipt (historical)
 Live and verified: Ask Worker 136f6b1f-d8a3-450b-b616-60af225ad07f, source bb2861fa39cdbf9c25bcb36dce19bbfb8220768c. CI 37119531935 passed both jobs. All 185 exact routes and current main/MCP versions were preserved. Actual native Chrome Google sign-in, original-answer return, photo/name display, logout, browser-back and signed-in topic navigation passed. Phone 320px, tablet 768px and desktop views were inspected for this flow. Supabase records one Ask reader from the approved owner test, with its existing WATI receipt preserved. No physical-device or Safari testing is claimed for this bounded change. Public, browser and guarded release receipts are saved under deployment/ask-google-reader-*.json.
 
 ## 3 October follow-up: Pinnacle branding and discoverability
