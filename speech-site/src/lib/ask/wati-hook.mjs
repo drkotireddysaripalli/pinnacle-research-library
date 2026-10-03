@@ -21,7 +21,11 @@ export async function watiHook(request,env,fetcher=fetch){
  try{
   const response=await fetcher(url,{method:'POST',redirect:'error',signal:AbortSignal.timeout(3500),headers:{authorization:'Bearer '+env.WATI_API_TOKEN,'content-type':'application/json'},body:JSON.stringify({template_name:env.WATI_TEMPLATE_NAME,broadcast_name:'ask_account_verification',channel_number:env.WATI_CHANNEL_NUMBER,parameters:names.map(name=>({name,value:otp}))})});
   const data=await response.json().catch(()=>null);
-  if(!response.ok||data?.result!==true)return failure(502,'The code could not be sent. Please try again shortly.');
+  if(!response.ok||data?.result!==true){
+   // Diagnostic codes only: never log the payload, contact, OTP, token or raw body.
+   console.warn('ask_delivery_rejected',JSON.stringify({status:response.status,resultType:typeof data?.result,result:data?.result===true,fields:Object.keys(data||{}).slice(0,12),code:typeof data?.code==='number'?data.code:null}));
+   return failure(502,'The code could not be sent. Please try again shortly.');
+  }
   return Response.json({},{headers:AUTH_HEADERS});
- }catch{return failure(502,'Verification delivery is temporarily unavailable');}
+ }catch(error){console.warn('ask_delivery_transport',error?.name==='TimeoutError'?'timeout':'network');return failure(502,'Verification delivery is temporarily unavailable');}
 }
