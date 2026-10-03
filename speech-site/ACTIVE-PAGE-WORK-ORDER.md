@@ -2,7 +2,7 @@
 
 Owner has added Google/email and WATI WhatsApp verification, supplied pinnacle.wati.io and the local Logos folder, and reaffirmed search/AI discovery, reputation, branding and 9100 181 181 leads as the outcome. Current bounded contract: ASK-IDENTITY-WORK-ORDER-20261003.md. Preserve public Ask delivery below. No unrelated page or database retirement is part of this authentication package.
 
-Identity source is prepared and locally checked (11 unit tests and five rendered HTTP/privacy checks). WATI still opens login; actual provider flow is not verified or deployed. The observed tablet therapy-label spacing is corrected in the common stylesheet, prepared for a coherent main-portal plus Ask release. See the current contract for precise activation gates and settings; do not claim prepared changes are live.
+Identity source is prepared and locally checked (11 unit tests and five rendered HTTP/privacy checks). WATI is signed in: connected sender 9100 181 181, approved six-minute Authentication template code_template_pbn_v3, existing credential verified through its API. Supabase migration 20261003074425 isolates IRWFA notifications from new Ask identities while retaining all six existing accounts. Owner hook-secret creation and one owner-controlled test number are pending; actual provider flow is not verified or deployed. The observed tablet therapy-label spacing is corrected in the common stylesheet, prepared for a coherent main-portal plus Ask release. See the current contract for precise activation gates and settings; do not claim prepared changes are live.
 
 ## Delivered: Ask Astro migration — 3 October 2026
 

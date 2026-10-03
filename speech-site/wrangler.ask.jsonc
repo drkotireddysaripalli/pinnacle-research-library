@@ -23,9 +23,20 @@
       "bucket_name": "pinnacle-ask-og"
     }
   ],
+  "ratelimits": [{
+    "name": "ASK_AUTH_RATE_LIMIT",
+    "namespace_id": "202610030531",
+    "simple": {"limit": 8, "period": 60}
+  }],
   "vars": {
     "ASK_BASE": "/ask",
-    "CANONICAL_ORIGIN": "https://pinnacleblooms.org"
+    "CANONICAL_ORIGIN": "https://pinnacleblooms.org",
+    "ASK_AUTH_ENABLED": "false",
+    "ASK_WHATSAPP_ENABLED": "false",
+    "WATI_TENANT_ID": "531",
+    "WATI_CHANNEL_NUMBER": "919100181181",
+    "WATI_TEMPLATE_NAME": "code_template_pbn_v3",
+    "WATI_OTP_PARAMETER_NAMES": "[\"1\"]"
   },
   "observability": {
     "enabled": false

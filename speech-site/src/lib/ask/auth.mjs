@@ -2,6 +2,8 @@ import {createServerClient,parseCookieHeader,serializeCookieHeader} from '@supab
 import {createClient} from '@supabase/supabase-js';
 export const AUTH_HEADERS={'cache-control':'private, no-store, max-age=0','cdn-cache-control':'no-store','cloudflare-cdn-cache-control':'no-store','x-robots-tag':'noindex, nofollow','referrer-policy':'no-referrer','x-content-type-options':'nosniff'};
 export const ACCOUNT='/ask/account';
+// Matches the approved WATI code_template_pbn_v3 expiry; Supabase must use 360s at activation.
+export const OTP_EXPIRY_SECONDS=360;
 export function safeReturn(value){
  if(typeof value!=='string'||value.length>350)return '/ask';
  try{const p=decodeURIComponent(value);if(!/^\/ask(?:\/[a-zA-Z0-9_-]+)*$/.test(p)||/^\/ask\/(?:auth|account|search)(?:\/|$)/.test(p))return '/ask';return p;}catch{return '/ask';}
@@ -57,7 +59,7 @@ export async function action(request,env,kind){
   const phone=phoneNumber(form.get('phone'));if(!phone||form.get('verificationConsent')!=='yes')return back('phone-format');
   const {error}=await c.auth.auth.updateUser({phone});
   if(error)return back(error.status===429?'wait':'phone-send');
-  c.set('pinnacle-ask-phone',phone,{maxAge:600});return back('code-sent');
+  c.set('pinnacle-ask-phone',phone,{maxAge:OTP_EXPIRY_SECONDS});return back('code-sent');
  }
  if(kind==='verify'){
   if(env.ASK_WHATSAPP_ENABLED!=='true'||!env.ASK_AUTH_SECRET_KEY)return back('phone-unavailable');

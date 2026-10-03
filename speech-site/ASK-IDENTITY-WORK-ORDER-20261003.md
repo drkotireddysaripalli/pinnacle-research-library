@@ -16,8 +16,9 @@ Useful, source-linked answers build Pinnacle recognition and lead families to 91
 ## Current inspected state
 - Ask content and its search/taxonomy are already in Supabase IRWFA (lyjwsaiqvgwyautowhlx), healthy. Cloudflare serves/caches it. No PlanetScale connection in the Ask Worker or current Ask repository layer.
 - Google enabled; phone disabled. Site URL and only two allowed returns belong to members.irwfa.org. A separate speech staging project is not Ask production.
-- WATI tenant 531 at pinnacle.wati.io opens login. Google account popup cannot be completed through browser input; owner asked to finish sign-in. No WATI token/template/sender has been inspected or configured yet.
-- Existing authenticated policies inspected without reading members or private messages. Broad notifications-read policy needs scope review before cross-application identity is expanded. Do not edit unrelated IRWFA policies opportunistically.
+- WATI owner sign-in completed. Tenant 531 uses https://live-mt-server.wati.io/531 and connected sender +91 9100 181 181. Existing API credential successfully listed templates; no new WATI credential was created. Approved English Authentication template code_template_pbn_v3 has parameter 1, a Copy code button and six-minute expiry. Sender-specific template lookup also confirmed approval.
+- Supabase has six existing Google accounts, no stored/confirmed/pending phones and no MFA factors. No existing Auth hook. Phone provider remains disabled and actual OTP expiry remains 60 seconds until coordinated activation sets 360 seconds. Existing site URL and returns belong to members.irwfa.org.
+- Existing authenticated policies were reviewed without reading private member/messages content. Migration 20261003074425 now scopes notifications to existing IRWFA accounts or admins. All six accounts retain their entitlement; a synthetic new authenticated identity cannot read notifications or the private entitlement table. Unrelated policies were preserved. See supabase/ASK-IDENTITY-ACCESS-NOTES.md.
 
 ## Architecture decision
 Use Supabase as Ask's single data/identity store and Cloudflare as the delivery/security layer. They perform different jobs, so removing either is not database deduplication. PlanetScale retirement requires a separate actual dependency/data inventory; Ask has no demonstrated PlanetScale dependency. No database is deleted, copied or shut down in this package.
@@ -61,9 +62,9 @@ The 768px visual inspection found therapy labels touching even though the docume
 | SUPABASE_SMS_HOOK_SECRET | Server-side signature verification secret for this hook |
 
 ## Exact remaining work
-1. Complete WATI owner sign-in (requested once). Read the account's actual API endpoint, approved Authentication template, sender and parameter mapping. Do not guess or substitute a marketing template.
-2. Resolve shared-project access scope before exposing new Ask signups: the existing authenticated notifications policy has a broad read expression. Preserve IRWFA's users and functions; do not widen access or silently modify its unrelated policies.
-3. Confirm existing phone/MFA use before setting the project-wide Send SMS hook; the current Google-only hook must not interrupt another application's delivery path. Preserve the IRWFA Site URL and allowlisted callbacks, adding the exact Ask callback only.
+1. Owner credential handoff: the Supabase Add Send SMS hook panel has HTTPS URL https://pinnacleblooms.org/ask/auth/whatsapp-hook and Enable OFF. Owner must Generate secret and Create hook, leaving it OFF. Do not paste the secret into chat. Browser credential-creation rule requires this owner action; existing WATI/Supabase credentials are already available privately.
+2. Preserve IRWFA Site URL and existing returns. Add only https://pinnacleblooms.org/ask/auth/callback. Configure OTP expiry to 360 seconds with six digits and the signed HTTPS delivery hook; coordinate phone-provider enablement after the endpoint/secrets are staged. No existing phone/MFA delivery path was found.
+3. Keep the account entry point unadvertised while testing. The test WhatsApp destination must be an owner-controlled number different from +91 9100 181 181; requested once and awaiting reply.
 4. Set server-side secrets and rate-limit binding through the established deployment route. Confirm the real signed Supabase payload supplies sms.phone and the WATI response contract agrees with the implementation.
 5. Exercise Google callback and one owner-authorized WhatsApp destination: delivery, same-user-ID completion, expired/invalid code, resend limits and logout. No real user list or third-party test messages.
 6. Commit configuration references, release both shared-style targets with rollback and all routes/bindings preserved, verify actual account and public pages, then expose the account entry point. Do not submit private account routes for indexing.
@@ -72,4 +73,11 @@ The 768px visual inspection found therapy labels touching even though the docume
 The audit reports an existing http-cache-semantics advisory through the current Astro/Cloudflare toolchain. The suggested automated major downgrade is not applied. Account routes explicitly bypass caches. Review the vendor patch separately; a passing account check does not resolve the upstream advisory.
 
 ## State
-Prepared in source and locally checked. Authentication is not configured, advertised or deployed. No WATI message, user signup, database migration, provider setting change, database retirement or route mutation was performed in this identity package. The already-delivered public Ask release remains active.
+Prepared in source and locally checked. WATI settings and existing keys are confirmed; the narrow notification-access migration is live and verified. Authentication is not activated, advertised or deployed. No WATI message, user signup, provider-setting save, database retirement or route mutation was performed. The already-delivered public Ask release remains active.
+
+## 3 October WATI follow-through
+- Code now uses the approved template, sender and explicit parameter mapping; pending-code cookie expires after 360 seconds. Both feature flags remain false in the checked-in configuration.
+- Cloudflare rate limiter is configured for eight requests per key per 60 seconds, with distinct operation/user/phone keys. This is a per-location limit, not a global send cap. Keep Supabase's central OTP/rate controls; inspect their current values at activation.
+- Candidate rebuilt after these changes: 11 focused unit tests and five rendered disabled-state/privacy checks passed. Actual delivery, Google callback and same-user verification remain untested.
+- Release runner now requires a unique release ID: node scripts/release-ask.mjs prepare ask-identity-release-20261003, then upload/promote with that same ID. Separate receipts and private snapshots preserve earlier rollback evidence. Never run prepare again with an already-used ID.
+- The new private entitlement table intentionally has no client RLS policies or table privileges. Supabase advisor reports only an informational no-policy notice for this new object; its purpose is default denial. This is not a whole-project security clearance.
