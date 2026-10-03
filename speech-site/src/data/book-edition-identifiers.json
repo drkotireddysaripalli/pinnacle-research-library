@@ -1,0 +1,2086 @@
+{
+  "schemaVersion": 1,
+  "preparedAt": "2026-10-03T11:44:58.118199+00:00",
+  "policy": {
+    "identifiersAreEditionSpecific": true,
+    "ggkeyIsNotISBN": true,
+    "kdpISBNIsNotIndependentPrintBarcode": true,
+    "unknownASINsRemainNull": true,
+    "printStockRemainsZero": true
+  },
+  "sources": [
+    "revised-reader-release-20261003/native-variant-delivery-map.json",
+    "catalogue-status-20261003/catalogue-99-format-variants.csv",
+    "launch-closure-20261003/google-play-catalogue-live-readback.json",
+    "marketplaces/google-play-12-identifiers.json",
+    "marketplaces/google-play-21-collections/assigned-identifiers.json",
+    "marketplaces/google-play-21-collections/collection-field-map.json",
+    "marketplaces/kdp-draft-progress.json"
+  ],
+  "offers": [
+    {
+      "sku": "PBN-SP-101-EN-PDF",
+      "title": "My Message Matters",
+      "locale": "en",
+      "bookCount": 1,
+      "bookKeys": [
+        "speech"
+      ],
+      "websitePath": "/books/speech-communication-101-my-message-matters",
+      "shopify": {
+        "productId": "8423887863874",
+        "handle": "speech-communication-101-my-message-matters",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/speech-communication-101-my-message-matters",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-101-EN-PDF",
+            "variantId": "45295972646978",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-101-EN-PB",
+            "variantId": "45295972679746",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-101-EN-HB",
+            "variantId": "45295972712514",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:X8NHL89TZJN",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=gkgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": [
+        {
+          "editionScope": "KDP paperback only",
+          "isbn13": "9798178590706",
+          "interiorPages": 44,
+          "trim": "8.5 x 11 inches",
+          "publicationStatus": "Draft; publication not confirmed by source",
+          "asin": null,
+          "source": "marketplaces/kdp-draft-progress.json",
+          "sourceObservedAt": "2026-10-03T08:35:32.824477+00:00",
+          "useAsIndependentShopifyOrMerchantBarcode": false
+        }
+      ]
+    },
+    {
+      "sku": "PBN-OT-101-EN-PDF",
+      "title": "I Belong in Everyday Life",
+      "locale": "en",
+      "bookCount": 1,
+      "bookKeys": [
+        "ot"
+      ],
+      "websitePath": "/books/occupational-therapy-101-i-belong-in-everyday-life",
+      "shopify": {
+        "productId": "8423887896642",
+        "handle": "occupational-therapy-101-i-belong-in-everyday-life",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/occupational-therapy-101-i-belong-in-everyday-life",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-101-EN-PDF",
+            "variantId": "45295972745282",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-101-EN-PB",
+            "variantId": "45295972778050",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-101-EN-HB",
+            "variantId": "45295972810818",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:EX0FHCS8D01",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=cEgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": [
+        {
+          "editionScope": "KDP paperback only",
+          "isbn13": "9798178588741",
+          "interiorPages": 44,
+          "trim": "8.5 x 11 inches",
+          "publicationStatus": "Draft; publication not confirmed by source",
+          "asin": null,
+          "source": "marketplaces/kdp-draft-progress.json",
+          "sourceObservedAt": "2026-10-03T08:35:32.824477+00:00",
+          "useAsIndependentShopifyOrMerchantBarcode": false
+        }
+      ]
+    },
+    {
+      "sku": "PBN-ABA-101-EN-PDF",
+      "title": "Understanding Everyday Behaviour",
+      "locale": "en",
+      "bookCount": 1,
+      "bookKeys": [
+        "aba"
+      ],
+      "websitePath": "/books/aba-parent-education-101-understanding-everyday-behaviour",
+      "shopify": {
+        "productId": "8423887929410",
+        "handle": "aba-parent-education-101-understanding-everyday-behaviour",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/aba-parent-education-101-understanding-everyday-behaviour",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-ABA-101-EN-PDF",
+            "variantId": "45295972843586",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-ABA-101-EN-PB",
+            "variantId": "45295972876354",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-ABA-101-EN-HB",
+            "variantId": "45295972909122",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:J1S14BGCDUG",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=bEgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SE-101-EN-PDF",
+      "title": "Learning Through Everyday Play",
+      "locale": "en",
+      "bookCount": 1,
+      "bookKeys": [
+        "special-education"
+      ],
+      "websitePath": "/books/special-education-101-learning-through-everyday-play",
+      "shopify": {
+        "productId": "8423887962178",
+        "handle": "special-education-101-learning-through-everyday-play",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/special-education-101-learning-through-everyday-play",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SE-101-EN-PDF",
+            "variantId": "45295972941890",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SE-101-EN-PB",
+            "variantId": "45295972974658",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SE-101-EN-HB",
+            "variantId": "45295973007426",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:HD1T3ZHXRKN",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=bkgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-OT-101-EN-PDF-SET2",
+      "title": "Communication & Everyday Participation — Two-Book Collection",
+      "locale": "en",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "ot"
+      ],
+      "websitePath": "/books/pinnacle-101-speech-occupational-pdf-pair",
+      "shopify": {
+        "productId": "8423888027714",
+        "handle": "pinnacle-101-speech-occupational-pair",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-speech-occupational-pair",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-OT-101-EN-PDF-SET2",
+            "variantId": "45295973040194",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-OT-101-EN-PB-SET2",
+            "variantId": "45295973072962",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-OT-101-EN-HB-SET2",
+            "variantId": "45295973105730",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:H34ATQQBF4A",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=YbkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-ABA-101-EN-PDF-SET2",
+      "title": "Communication & Understanding Behaviour — Two-Book Collection",
+      "locale": "en",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "aba"
+      ],
+      "websitePath": "/books/pinnacle-101-speech-behaviour-pdf-pair",
+      "shopify": {
+        "productId": "8423888060482",
+        "handle": "pinnacle-101-speech-behaviour-pair",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-speech-behaviour-pair",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-ABA-101-EN-PDF-SET2",
+            "variantId": "45295973466178",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-ABA-101-EN-PB-SET2",
+            "variantId": "45295973498946",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-ABA-101-EN-HB-SET2",
+            "variantId": "45295973531714",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:TKAZB1G46G1",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=pLkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-SE-101-EN-PDF-SET2",
+      "title": "Communication & Learning Through Play — Two-Book Collection",
+      "locale": "en",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "special-education"
+      ],
+      "websitePath": "/books/pinnacle-101-speech-learning-pdf-pair",
+      "shopify": {
+        "productId": "8423888093250",
+        "handle": "pinnacle-101-speech-learning-pair",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-speech-learning-pair",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-SE-101-EN-PDF-SET2",
+            "variantId": "45295973564482",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-SE-101-EN-PB-SET2",
+            "variantId": "45295973597250",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-SE-101-EN-HB-SET2",
+            "variantId": "45295973630018",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:YLW96Q2K6XQ",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=prkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-OT-ABA-101-EN-PDF-SET2",
+      "title": "Everyday Participation & Understanding Behaviour — Two-Book Collection",
+      "locale": "en",
+      "bookCount": 2,
+      "bookKeys": [
+        "ot",
+        "aba"
+      ],
+      "websitePath": "/books/pinnacle-101-occupational-behaviour-pdf-pair",
+      "shopify": {
+        "productId": "8423888126018",
+        "handle": "pinnacle-101-occupational-behaviour-pair",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-occupational-behaviour-pair",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-ABA-101-EN-PDF-SET2",
+            "variantId": "45295973662786",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-ABA-101-EN-PB-SET2",
+            "variantId": "45295973695554",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-ABA-101-EN-HB-SET2",
+            "variantId": "45295973728322",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:YULH5K662LA",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=krkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-OT-SE-101-EN-PDF-SET2",
+      "title": "Everyday Participation & Early Learning — Two-Book Collection",
+      "locale": "en",
+      "bookCount": 2,
+      "bookKeys": [
+        "ot",
+        "special-education"
+      ],
+      "websitePath": "/books/pinnacle-101-occupational-learning-pdf-pair",
+      "shopify": {
+        "productId": "8423888158786",
+        "handle": "pinnacle-101-occupational-learning-pair",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-occupational-learning-pair",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-SE-101-EN-PDF-SET2",
+            "variantId": "45295973761090",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-SE-101-EN-PB-SET2",
+            "variantId": "45295973793858",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-SE-101-EN-HB-SET2",
+            "variantId": "45295973826626",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:TRPB8X8SAHC",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=q7kVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-ABA-SE-101-EN-PDF-SET2",
+      "title": "Understanding Behaviour & Early Learning — Two-Book Collection",
+      "locale": "en",
+      "bookCount": 2,
+      "bookKeys": [
+        "aba",
+        "special-education"
+      ],
+      "websitePath": "/books/pinnacle-101-behaviour-learning-pdf-pair",
+      "shopify": {
+        "productId": "8423888191554",
+        "handle": "pinnacle-101-behaviour-learning-pair",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-behaviour-learning-pair",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-ABA-SE-101-EN-PDF-SET2",
+            "variantId": "45295973859394",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-ABA-SE-101-EN-PB-SET2",
+            "variantId": "45295973892162",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-ABA-SE-101-EN-HB-SET2",
+            "variantId": "45295973924930",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:ARPURXR9THF",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=t7kVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-101-EN-PDF-SET4",
+      "title": "Four books. Everyday possibilities.",
+      "locale": "en",
+      "bookCount": 4,
+      "bookKeys": [
+        "speech",
+        "ot",
+        "aba",
+        "special-education"
+      ],
+      "websitePath": "/books/pinnacle-101-four-book-pdf-collection",
+      "shopify": {
+        "productId": "8423888257090",
+        "handle": "pinnacle-101-four-book-collection",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-four-book-collection",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-101-EN-PDF-SET4",
+            "variantId": "45295974285378",
+            "priceINR": 2499,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-101-EN-PB-SET4",
+            "variantId": "45295974318146",
+            "priceINR": 2499,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-101-EN-HB-SET4",
+            "variantId": "45295974350914",
+            "priceINR": 5499,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:AZSG4WX568Q",
+        "storefrontUrl": null,
+        "status": "Needs action",
+        "storefrontLinkVerified": false,
+        "pageCount": 187,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 2499,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-101-HI-PDF",
+      "title": "मेरी बात मायने रखती है",
+      "locale": "hi",
+      "bookCount": 1,
+      "bookKeys": [
+        "speech"
+      ],
+      "websitePath": "/books/hi/speech-101",
+      "shopify": {
+        "productId": "8424123170882",
+        "handle": "pinnacle-speech-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-101-HI-PDF",
+            "variantId": "45298362089538",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-101-HI-PB",
+            "variantId": "45298362122306",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-101-HI-HB",
+            "variantId": "45298362155074",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:0CE7P9QLGA9",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=fEgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-OT-101-HI-PDF",
+      "title": "रोज़मर्रा की ज़िंदगी में मेरी भी जगह",
+      "locale": "hi",
+      "bookCount": 1,
+      "bookKeys": [
+        "ot"
+      ],
+      "websitePath": "/books/hi/ot-101",
+      "shopify": {
+        "productId": "8424123203650",
+        "handle": "pinnacle-ot-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-101-HI-PDF",
+            "variantId": "45298362187842",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-101-HI-PB",
+            "variantId": "45298362220610",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-101-HI-HB",
+            "variantId": "45298362253378",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:9L2YQHCKB67",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=dEgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-ABA-101-HI-PDF",
+      "title": "रोज़ के व्यवहार को समझें",
+      "locale": "hi",
+      "bookCount": 1,
+      "bookKeys": [
+        "aba"
+      ],
+      "websitePath": "/books/hi/aba-101",
+      "shopify": {
+        "productId": "8424123236418",
+        "handle": "pinnacle-aba-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-aba-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-ABA-101-HI-PDF",
+            "variantId": "45298362286146",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-ABA-101-HI-PB",
+            "variantId": "45298362318914",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-ABA-101-HI-HB",
+            "variantId": "45298362351682",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:H1LU20AALZ2",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=ckgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SE-101-HI-PDF",
+      "title": "रोज़ के खेल में सीखें",
+      "locale": "hi",
+      "bookCount": 1,
+      "bookKeys": [
+        "special-education"
+      ],
+      "websitePath": "/books/hi/special-education-101",
+      "shopify": {
+        "productId": "8424123269186",
+        "handle": "pinnacle-special-education-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-special-education-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SE-101-HI-PDF",
+            "variantId": "45298362384450",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SE-101-HI-PB",
+            "variantId": "45298362417218",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SE-101-HI-HB",
+            "variantId": "45298362449986",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:C9SKAZATKBD",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=ekgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-OT-101-HI-PDF-SET2",
+      "title": "Pinnacle 101 हिंदी जोड़ी: संवाद + रोज़मर्रा की भागीदारी",
+      "locale": "hi",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "ot"
+      ],
+      "websitePath": "/books/hi/speech-ot-101",
+      "shopify": {
+        "productId": "8424123301954",
+        "handle": "pinnacle-speech-ot-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-ot-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-OT-101-HI-PDF-SET2",
+            "variantId": "45298362482754",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-OT-101-HI-PB-SET2",
+            "variantId": "45298362515522",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-OT-101-HI-HB-SET2",
+            "variantId": "45298362548290",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:J3P375LGPRD",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=jbkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-ABA-101-HI-PDF-SET2",
+      "title": "Pinnacle 101 हिंदी जोड़ी: संवाद + व्यवहार की समझ",
+      "locale": "hi",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "aba"
+      ],
+      "websitePath": "/books/hi/speech-aba-101",
+      "shopify": {
+        "productId": "8424123334722",
+        "handle": "pinnacle-speech-aba-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-aba-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-ABA-101-HI-PDF-SET2",
+            "variantId": "45298362581058",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-ABA-101-HI-PB-SET2",
+            "variantId": "45298362613826",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-ABA-101-HI-HB-SET2",
+            "variantId": "45298362646594",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:E0FYS636PNJ",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=qLkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-SE-101-HI-PDF-SET2",
+      "title": "Pinnacle 101 हिंदी जोड़ी: संवाद + खेल से सीखना",
+      "locale": "hi",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "special-education"
+      ],
+      "websitePath": "/books/hi/speech-special-education-101",
+      "shopify": {
+        "productId": "8424123367490",
+        "handle": "pinnacle-speech-special-education-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-special-education-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-SE-101-HI-PDF-SET2",
+            "variantId": "45298362679362",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-SE-101-HI-PB-SET2",
+            "variantId": "45298362712130",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-SE-101-HI-HB-SET2",
+            "variantId": "45298362744898",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:TZS0LWDNP8C",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=nbkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-OT-ABA-101-HI-PDF-SET2",
+      "title": "Pinnacle 101 हिंदी जोड़ी: रोज़मर्रा की भागीदारी + व्यवहार की समझ",
+      "locale": "hi",
+      "bookCount": 2,
+      "bookKeys": [
+        "ot",
+        "aba"
+      ],
+      "websitePath": "/books/hi/ot-aba-101",
+      "shopify": {
+        "productId": "8424123400258",
+        "handle": "pinnacle-ot-aba-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-aba-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-ABA-101-HI-PDF-SET2",
+            "variantId": "45298362777666",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-ABA-101-HI-PB-SET2",
+            "variantId": "45298362810434",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-ABA-101-HI-HB-SET2",
+            "variantId": "45298362843202",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:K46JSS3YXSY",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=ubkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-OT-SE-101-HI-PDF-SET2",
+      "title": "Pinnacle 101 हिंदी जोड़ी: रोज़मर्रा की भागीदारी + खेल से सीखना",
+      "locale": "hi",
+      "bookCount": 2,
+      "bookKeys": [
+        "ot",
+        "special-education"
+      ],
+      "websitePath": "/books/hi/ot-special-education-101",
+      "shopify": {
+        "productId": "8424123465794",
+        "handle": "pinnacle-ot-special-education-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-special-education-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-SE-101-HI-PDF-SET2",
+            "variantId": "45298362908738",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-SE-101-HI-PB-SET2",
+            "variantId": "45298362941506",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-SE-101-HI-HB-SET2",
+            "variantId": "45298362974274",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:EWR5AKYQYXC",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=sbkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-ABA-SE-101-HI-PDF-SET2",
+      "title": "Pinnacle 101 हिंदी जोड़ी: व्यवहार की समझ + खेल से सीखना",
+      "locale": "hi",
+      "bookCount": 2,
+      "bookKeys": [
+        "aba",
+        "special-education"
+      ],
+      "websitePath": "/books/hi/aba-special-education-101",
+      "shopify": {
+        "productId": "8424123498562",
+        "handle": "pinnacle-aba-special-education-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-aba-special-education-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-ABA-SE-101-HI-PDF-SET2",
+            "variantId": "45298363007042",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-ABA-SE-101-HI-PB-SET2",
+            "variantId": "45298363039810",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-ABA-SE-101-HI-HB-SET2",
+            "variantId": "45298363072578",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:YWRNTKE7EX4",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=tbkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-101-HI-PDF-SET4",
+      "title": "Pinnacle 101 हिंदी संपूर्ण संग्रह | चार चित्रप्रधान ईबुक",
+      "locale": "hi",
+      "bookCount": 4,
+      "bookKeys": [
+        "speech",
+        "ot",
+        "aba",
+        "special-education"
+      ],
+      "websitePath": "/books/hi/speech-ot-aba-special-education-101",
+      "shopify": {
+        "productId": "8424123531330",
+        "handle": "pinnacle-speech-ot-aba-special-education-101-hi",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-ot-aba-special-education-101-hi",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-101-HI-PDF-SET4",
+            "variantId": "45298363105346",
+            "priceINR": 2499,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-101-HI-PB-SET4",
+            "variantId": "45298363138114",
+            "priceINR": 2499,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-101-HI-HB-SET4",
+            "variantId": "45298363170882",
+            "priceINR": 5499,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:23PKQ5406R8",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=irkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 187,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 2499,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-101-TE-PDF",
+      "title": "నా సందేశం ముఖ్యం",
+      "locale": "te",
+      "bookCount": 1,
+      "bookKeys": [
+        "speech"
+      ],
+      "websitePath": "/books/te/speech-101",
+      "shopify": {
+        "productId": "8424123564098",
+        "handle": "pinnacle-speech-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-101-TE-PDF",
+            "variantId": "45298363203650",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-101-TE-PB",
+            "variantId": "45298363236418",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-101-TE-HB",
+            "variantId": "45298363269186",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:AWTSWND2Y23",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=akgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-OT-101-TE-PDF",
+      "title": "రోజువారీ జీవితంలో నేనూ భాగమే",
+      "locale": "te",
+      "bookCount": 1,
+      "bookKeys": [
+        "ot"
+      ],
+      "websitePath": "/books/te/ot-101",
+      "shopify": {
+        "productId": "8424123596866",
+        "handle": "pinnacle-ot-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-101-TE-PDF",
+            "variantId": "45298363301954",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-101-TE-PB",
+            "variantId": "45298363334722",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-101-TE-HB",
+            "variantId": "45298363367490",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:80NG5GTHWY5",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=aEgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-ABA-101-TE-PDF",
+      "title": "రోజువారీ ప్రవర్తనను అర్థం చేసుకుందాం",
+      "locale": "te",
+      "bookCount": 1,
+      "bookKeys": [
+        "aba"
+      ],
+      "websitePath": "/books/te/aba-101",
+      "shopify": {
+        "productId": "8424123629634",
+        "handle": "pinnacle-aba-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-aba-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-ABA-101-TE-PDF",
+            "variantId": "45298363400258",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-ABA-101-TE-PB",
+            "variantId": "45298363433026",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-ABA-101-TE-HB",
+            "variantId": "45298363465794",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:LDWAUGSDZFX",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=fkgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SE-101-TE-PDF",
+      "title": "రోజూ ఆడుతూ నేర్చుకుందాం",
+      "locale": "te",
+      "bookCount": 1,
+      "bookKeys": [
+        "special-education"
+      ],
+      "websitePath": "/books/te/special-education-101",
+      "shopify": {
+        "productId": "8424123662402",
+        "handle": "pinnacle-special-education-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-special-education-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SE-101-TE-PDF",
+            "variantId": "45298363498562",
+            "priceINR": 799,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SE-101-TE-PB",
+            "variantId": "45298363531330",
+            "priceINR": 799,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SE-101-TE-HB",
+            "variantId": "45298363564098",
+            "priceINR": 1699,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:Y4Z4XYPXY27",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=gEgVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 46,
+        "delivery": "Single complete ebook",
+        "priceINR": 799,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-OT-101-TE-PDF-SET2",
+      "title": "సంభాషణ, రోజువారీ భాగస్వామ్యం — రెండు పుస్తకాల కలెక్షన్",
+      "locale": "te",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "ot"
+      ],
+      "websitePath": "/books/te/speech-ot-101",
+      "shopify": {
+        "productId": "8424123695170",
+        "handle": "pinnacle-speech-ot-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-ot-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-OT-101-TE-PDF-SET2",
+            "variantId": "45298363596866",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-OT-101-TE-PB-SET2",
+            "variantId": "45298363629634",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-OT-101-TE-HB-SET2",
+            "variantId": "45298363662402",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:6ZU2E6UZTCC",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=kLkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-ABA-101-TE-PDF-SET2",
+      "title": "సంభాషణ, ప్రవర్తన అవగాహన — రెండు పుస్తకాల కలెక్షన్",
+      "locale": "te",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "aba"
+      ],
+      "websitePath": "/books/te/speech-aba-101",
+      "shopify": {
+        "productId": "8424123727938",
+        "handle": "pinnacle-speech-aba-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-aba-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-ABA-101-TE-PDF-SET2",
+            "variantId": "45298363695170",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-ABA-101-TE-PB-SET2",
+            "variantId": "45298363727938",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-ABA-101-TE-HB-SET2",
+            "variantId": "45298363760706",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:ELWSPQJ3PX9",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=rbkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-SP-SE-101-TE-PDF-SET2",
+      "title": "సంభాషణ, ఆట ద్వారా అభ్యాసం — రెండు పుస్తకాల కలెక్షన్",
+      "locale": "te",
+      "bookCount": 2,
+      "bookKeys": [
+        "speech",
+        "special-education"
+      ],
+      "websitePath": "/books/te/speech-special-education-101",
+      "shopify": {
+        "productId": "8424123760706",
+        "handle": "pinnacle-speech-special-education-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-special-education-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-SP-SE-101-TE-PDF-SET2",
+            "variantId": "45298363793474",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-SP-SE-101-TE-PB-SET2",
+            "variantId": "45298363826242",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-SP-SE-101-TE-HB-SET2",
+            "variantId": "45298363859010",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:B0H1AC2ZH1T",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=srkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-OT-ABA-101-TE-PDF-SET2",
+      "title": "రోజువారీ భాగస్వామ్యం, ప్రవర్తన అవగాహన — రెండు పుస్తకాల కలెక్షన్",
+      "locale": "te",
+      "bookCount": 2,
+      "bookKeys": [
+        "ot",
+        "aba"
+      ],
+      "websitePath": "/books/te/ot-aba-101",
+      "shopify": {
+        "productId": "8424123793474",
+        "handle": "pinnacle-ot-aba-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-aba-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-ABA-101-TE-PDF-SET2",
+            "variantId": "45298363891778",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-ABA-101-TE-PB-SET2",
+            "variantId": "45298363924546",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-ABA-101-TE-HB-SET2",
+            "variantId": "45298363957314",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:EUL1NKPPJL2",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=lbkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-OT-SE-101-TE-PDF-SET2",
+      "title": "రోజువారీ భాగస్వామ్యం, తొలిదశ అభ్యాసం — రెండు పుస్తకాల కలెక్షన్",
+      "locale": "te",
+      "bookCount": 2,
+      "bookKeys": [
+        "ot",
+        "special-education"
+      ],
+      "websitePath": "/books/te/ot-special-education-101",
+      "shopify": {
+        "productId": "8424123826242",
+        "handle": "pinnacle-ot-special-education-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-special-education-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-OT-SE-101-TE-PDF-SET2",
+            "variantId": "45298363990082",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-OT-SE-101-TE-PB-SET2",
+            "variantId": "45298364022850",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-OT-SE-101-TE-HB-SET2",
+            "variantId": "45298364055618",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:AKAFU10LPGL",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=obkVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-ABA-SE-101-TE-PDF-SET2",
+      "title": "ప్రవర్తన అవగాహన, తొలిదశ అభ్యాసం — రెండు పుస్తకాల కలెక్షన్",
+      "locale": "te",
+      "bookCount": 2,
+      "bookKeys": [
+        "aba",
+        "special-education"
+      ],
+      "websitePath": "/books/te/aba-special-education-101",
+      "shopify": {
+        "productId": "8424123859010",
+        "handle": "pinnacle-aba-special-education-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-aba-special-education-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-ABA-SE-101-TE-PDF-SET2",
+            "variantId": "45298364088386",
+            "priceINR": 1399,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-ABA-SE-101-TE-PB-SET2",
+            "variantId": "45298364121154",
+            "priceINR": 1399,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-ABA-SE-101-TE-HB-SET2",
+            "variantId": "45298364153922",
+            "priceINR": 2999,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:7CZZ82891NT",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=r7kVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 95,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 1399,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    },
+    {
+      "sku": "PBN-101-TE-PDF-SET4",
+      "title": "పినాకిల్ 101 తెలుగు చిత్రపుస్తకాల గ్రంథాలయం — నాలుగు పుస్తకాల కలెక్షన్",
+      "locale": "te",
+      "bookCount": 4,
+      "bookKeys": [
+        "speech",
+        "ot",
+        "aba",
+        "special-education"
+      ],
+      "websitePath": "/books/te/four-book-101",
+      "shopify": {
+        "productId": "8424123891778",
+        "handle": "pinnacle-four-book-101-te",
+        "productUrl": "https://pinnacleblooms.myshopify.com/products/pinnacle-four-book-101-te",
+        "digitalDelivery": "Separate complete PDF files, one per constituent book",
+        "revisedFilePagesPerBook": 46,
+        "replacementVerificationRequired": true,
+        "variants": [
+          {
+            "format": "Ebook",
+            "sku": "PBN-101-TE-PDF-SET4",
+            "variantId": "45298364186690",
+            "priceINR": 2499,
+            "stockPolicy": "in_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Paperback",
+            "sku": "PBN-101-TE-PB-SET4",
+            "variantId": "45298364219458",
+            "priceINR": 2499,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          },
+          {
+            "format": "Hardbound",
+            "sku": "PBN-101-TE-HB-SET4",
+            "variantId": "45298364252226",
+            "priceINR": 5499,
+            "stockPolicy": "out_of_stock",
+            "isbn13": null,
+            "gtin": null,
+            "asin": null
+          }
+        ]
+      },
+      "googlePlay": {
+        "identifier": "GGKEY:PZUJY6BFACG",
+        "storefrontUrl": "https://play.google.com/store/books/details?id=l7kVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
+        "pageCount": 187,
+        "delivery": "One combined collection volume, including three collection opening pages",
+        "priceINR": 2499,
+        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+      },
+      "kdpPaperbackEditions": []
+    }
+  ]
+}
