@@ -8,7 +8,7 @@ const {answer:a}=Astro.props;
 const faq=Array.isArray(a.faq)?a.faq.filter(x=>x.q&&x.a):[];
 const sources=(Array.isArray(a.authority_links)?a.authority_links:[]).filter(x=>/^https?:\/\//.test(x.url||x.href||''));
 const reading=answerReading(a.answer_md||'');const context=answerContext(a);const citation=answerCitation(a);
-const navigation=answerNavigation(a);const lensGroups=[...new Set(navigation.links.map(x=>x.group))];
+const navigation=answerNavigation(a);const lensGroups=[...new Set<string>(navigation.links.map(x=>x.group))];
 const card=a.canonical+'.png';const te=a.lang==='te';
 const date=(s:string)=>s&&Number.isFinite(Date.parse(s))?new Date(s).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}):'';
 const sourceScope=(s:any)=>{try{return new URL(s.url||s.href).pathname.replace(/\/+$/,'')?'Source reference':'Organisation website · further reading';}catch{return 'Source reference'}};
