@@ -1,11 +1,10 @@
 ---
-import {Image} from 'astro:assets';
-import emblem from '../../assets/pinnacle-emblem-official.png';
+import emblem from '../../assets/pinnacle-profile-emblem';
 import Icon from '../Icon.astro';
 ---
 <dialog id="ask-whatsapp-verification" aria-labelledby="ask-verification-title" data-nosnippet>
  <button class="ask-verification-close" type="button" data-ask-verification-cancel aria-label="Close verification">×</button>
- <Image src={emblem} width={52} height={52} alt="Pinnacle Blooms Network" format="webp"/>
+ <img src={emblem} width="52" height="52" alt="Pinnacle Blooms Network"/>
  <h2 id="ask-verification-title">Get Verified</h2>
  <p class="ask-verification-intro">Your number. Your Pinnacle connection.</p>
  <p>Verify your WhatsApp number to add the magenta tick to your name and connect with Pinnacle from your profile.</p>
