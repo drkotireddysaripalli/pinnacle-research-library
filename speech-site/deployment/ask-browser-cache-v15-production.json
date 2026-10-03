@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-03T14:44:06.315Z",
+  "base": "https://pinnacleblooms.org",
+  "results": [
+    {
+      "path": "/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "cacheControl": "public, max-age=0, s-maxage=300",
+      "cacheStatus": null,
+      "age": null
+    },
+    {
+      "path": "/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "cacheControl": "public, max-age=0, s-maxage=300",
+      "cacheStatus": "HIT",
+      "age": "0"
+    },
+    {
+      "path": "/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "cacheControl": "public, max-age=0, s-maxage=300",
+      "cacheStatus": "HIT",
+      "age": "0"
+    },
+    {
+      "path": "/ask/auth/session",
+      "status": 200,
+      "cacheControl": "private, no-store, max-age=0",
+      "cacheStatus": null,
+      "age": null
+    }
+  ],
+  "passed": true
+}

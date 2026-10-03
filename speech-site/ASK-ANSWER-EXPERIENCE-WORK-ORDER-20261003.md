@@ -62,3 +62,7 @@ Visible groups are also represented as ItemList structured data and in the Markd
 ## Local review scope
 
 Final source built with build:ask. Four representative answers cover English OT, AbilityScore, Telugu and institutional content; public taxonomy links, HTML/OG identity, full Markdown body, unique anchors, FAQ and ItemList parity, deduplicated same-language reading paths, service-prefilled enrolment and missing-answer 404 are checked. Visual review covers the actual changed hero, reading paths, citation area and verification Cancel text at phone/tablet/desktop widths. Browser emulation is not a physical-device result.
+
+## Published outcome
+
+The shared answer template and public Supabase relationship retrieval are live. Final source `bea21a1`, Ask Worker `c57ef23a-0baf-47f7-a61e-eb26b2376ef3`; see `deployment/ASK-ANSWER-RELEASE-20261003.md`. A production Cache API hit was found to inherit twelve-hour browser caching; the Worker now reapplies browser revalidation after the hit while retaining five-minute edge caching. A regression first failed on the former state, then passed on the candidate and production, including private-session no-store. An unrelated main-portal deployment was detected and preserved before promotion. No common-shell edit or route reduction.

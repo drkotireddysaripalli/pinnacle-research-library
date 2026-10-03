@@ -1,0 +1,215 @@
+{
+  "at": "2026-10-03T14:27:10.723Z",
+  "base": "https://pinnacleblooms.org",
+  "results": [
+    {
+      "path": "/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "outlineLinks": 5,
+      "faqs": 4,
+      "ogPreserved": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions.png",
+      "uniqueIds": true,
+      "taxonomyLinks": 10,
+      "completeTextExport": true,
+      "htmlExplanationCharacters": 3220,
+      "readingPaths": 5,
+      "relatedQuestions": 33
+    },
+    {
+      "path": "/ask/what-is-the-abilityscore-and-how-is-it-calculated",
+      "status": 200,
+      "outlineLinks": 4,
+      "faqs": 2,
+      "ogPreserved": "https://pinnacleblooms.org/ask/what-is-the-abilityscore-and-how-is-it-calculated.png",
+      "uniqueIds": true,
+      "taxonomyLinks": 13,
+      "completeTextExport": true,
+      "htmlExplanationCharacters": 1872,
+      "readingPaths": 3,
+      "relatedQuestions": 5
+    },
+    {
+      "path": "/ask/are-there-successful-adults-who-grew-up-with-cerebral-palsy-te",
+      "status": 200,
+      "outlineLinks": 5,
+      "faqs": 3,
+      "ogPreserved": "https://pinnacleblooms.org/ask/are-there-successful-adults-who-grew-up-with-cerebral-palsy-te.png",
+      "uniqueIds": true,
+      "taxonomyLinks": 9,
+      "completeTextExport": true,
+      "htmlExplanationCharacters": 3876,
+      "readingPaths": 5,
+      "relatedQuestions": 52
+    },
+    {
+      "path": "/ask/what-is-pinnacle-blooms-network",
+      "status": 200,
+      "outlineLinks": 4,
+      "faqs": 5,
+      "ogPreserved": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network.png",
+      "uniqueIds": true,
+      "taxonomyLinks": 0,
+      "completeTextExport": true,
+      "htmlExplanationCharacters": 1579,
+      "readingPaths": 0,
+      "relatedQuestions": 0
+    }
+  ],
+  "destinations": [
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacleai",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/pinnacleai"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abilityscore",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/seven-readiness-indexes"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/self-sufficient",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/self-sufficient"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/mainstream",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/mainstream"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/everyday-therapy",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/fusion-module",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/ot",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/stakeholder/parent",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/domain/adaptive",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/intent/support",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/lifecycle/plan",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/route/occupational-therapy",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/empowerment/early_clarity",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/entity%3Asystem/sys_abilityscore_what",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/stakeholder/asha_phc",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/stakeholder/doctor",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/intent/definition",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/lifecycle/screen",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/route/book-assessment",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/language/en",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/sdg/3",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/te/lens/entity%3Acondition/cerebral-palsy",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/te/lens/stakeholder/parent",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/te/lens/domain/adaptive",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/te/lens/intent/support",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/te/lens/lifecycle/plan",
+      "status": 200,
+      "kind": "public-taxonomy"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/te/lens/route/occupational-therapy",
+      "status": 200,
+      "kind": "public-taxonomy"
+    }
+  ]
+}

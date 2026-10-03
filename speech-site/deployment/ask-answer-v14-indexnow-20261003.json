@@ -1,0 +1,44 @@
+{
+  "siteUrl": "sc-domain:pinnacleblooms.org",
+  "batchId": "1b1ed66b-1c78-4e21-823a-cdf76c91174a",
+  "submitted": 4,
+  "failed": 0,
+  "attempted": 4,
+  "pendingKeyValidation": false,
+  "outcome": "submitted",
+  "keyFile": [
+    {
+      "host": "pinnacleblooms.org",
+      "url": null,
+      "verified": true,
+      "error": null
+    }
+  ],
+  "submissions": [
+    {
+      "url": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-the-abilityscore-and-how-is-it-calculated",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/are-there-successful-adults-who-grew-up-with-cerebral-palsy-te",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    }
+  ],
+  "message": "4 of 4 URL(s) sent were accepted by IndexNow."
+}
