@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import crypto from 'node:crypto';
+const baseline=path.resolve(process.argv[2]),out=path.resolve(process.argv[3]);
+let source=await fs.readFile(path.join(baseline,'index.js'),'utf8');
+if(crypto.createHash('sha256').update(source).digest('hex')!=='937464e51b3adc868f766af76db0096395097a4623c6251176310566d4445262')throw Error('Unexpected MCP baseline');
+const old='https://cache.pinnacle-ask.internal/v1/';
+if(source.split(old).length!==2)throw Error('Expected one cache namespace');
+source=source.replace(old,'https://cache.pinnacle-ask.internal/v20261003/');
+await fs.mkdir(out,{recursive:true});await fs.writeFile(path.join(out,'index.js'),source);await fs.copyFile(path.join(baseline,'modules.json'),path.join(out,'modules.json'));
+console.log(JSON.stringify({sha256:crypto.createHash('sha256').update(source).digest('hex')}));

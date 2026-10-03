@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-03T04:24:09.478Z",
+  "routeCountBefore": 185,
+  "workers": [
+    {
+      "name": "pinnacle-ask",
+      "rollbackVersions": [
+        {
+          "version_id": "fb81311a-220c-4c40-8801-e3ce20858d14",
+          "percentage": 100
+        }
+      ],
+      "version": [
+        {
+          "version_id": "1aef7f2e-7b2c-4b65-be98-d125b39e6e4b",
+          "percentage": 100
+        }
+      ],
+      "uploadedId": "pinnacle-ask",
+      "bindingsPreserved": true,
+      "codeSha256": "b43a5ed356f50a79964d0fcfbb500cdb6c16a3d0412720ea84da0d6c1d065353"
+    }
+  ],
+  "routesPreserved": true,
+  "portalWorkerPreserved": true,
+  "routeCountAfter": 185
+}
