@@ -1,20 +1,26 @@
 ---
-import editions from '../data/book-play-editions.json';
-interface Props { bookKey: string; locale?: string; contentLocale?: string; }
-const {bookKey, locale='en', contentLocale=locale}=Astro.props;
-const aliases: Record<string,string>={occupational:'ot',behaviour:'aba',learning:'special-education'};
-const key=aliases[bookKey]||bookKey;
-const id=(editions as Record<string,Record<string,string>>)[locale]?.[key];
+import registry from '../data/book-edition-identifiers.json';
+interface Props { sku: string; locale?: string; contentLocale?: string; }
+const {sku, locale='en', contentLocale=locale}=Astro.props;
+const edition=registry.offers.find(book=>book.sku===sku);
+const play=edition?.googlePlay;
+const url=play?.status==='Live on Google Play'&&play.storefrontLinkVerified?play.storefrontUrl:null;
 const copy: Record<string,{label:string;detail:string}>={
   en:{label:'Buy on Google Play Books',detail:'Read this edition in Google Play Books. For a downloadable PDF, choose the Pinnacle bag option above.'},
   hi:{label:'Google Play Books पर खरीदें',detail:'यह संस्करण Google Play Books में पढ़ें। डाउनलोड करने योग्य PDF के लिए ऊपर Pinnacle बैग का विकल्प चुनें।'},
   te:{label:'Google Play Books‌లో కొనండి',detail:'ఈ పుస్తకాన్ని Google Play Books‌లో చదవండి. డౌన్‌లోడ్ చేసుకునే PDF కోసం పైనున్న Pinnacle బ్యాగ్ ఎంపికను ఉపయోగించండి.'}
 };
 const text=copy[contentLocale]||copy.en;
+const collectionDetail: Record<string,string>={
+ en:`One combined ${play?.pageCount}-page Google Play volume. The Pinnacle bag option provides ${edition?.bookCount} separately downloadable PDF books.`,
+ hi:`Google Play पर ${play?.pageCount} पृष्ठों का एक संयुक्त खंड। Pinnacle बैग विकल्प में ${edition?.bookCount} अलग-अलग डाउनलोड करने योग्य PDF पुस्तकें मिलती हैं।`,
+ te:`Google Playలో ${play?.pageCount} పేజీల ఒక సంయుక్త సంపుటి. Pinnacle బ్యాగ్ ఎంపికలో ${edition?.bookCount} విడిగా డౌన్‌లోడ్ చేసుకునే PDF పుస్తకాలు అందుతాయి.`
+};
+const detail=(edition?.bookCount||0)>1?(collectionDetail[contentLocale]||collectionDetail.en):text.detail;
 ---
-{id&&<aside class="pbn-play-purchase" aria-label={text.label}>
-  <a href={'https://play.google.com/store/books/details?id='+id} target="_blank" rel="noopener noreferrer">{text.label}<span aria-hidden="true"> ↗</span></a>
-  <p>{text.detail}</p>
+{url&&<aside class="pbn-play-purchase" aria-label={text.label}>
+  <a href={url} target="_blank" rel="noopener noreferrer">{text.label}<span aria-hidden="true"> ↗</span></a>
+  <p>{detail}</p>
 </aside>}
 <style>
  .pbn-play-purchase{margin:1rem 0;padding:1rem 1.125rem;border:1px solid #ddd3ea;border-radius:1rem;background:#faf8fd;max-width:100%;box-sizing:border-box}
