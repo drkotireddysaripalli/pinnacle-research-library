@@ -81,3 +81,11 @@ Prepared in source and locally checked. WATI settings and existing keys are conf
 - Candidate rebuilt after these changes: 11 focused unit tests and five rendered disabled-state/privacy checks passed. Actual delivery, Google callback and same-user verification remain untested.
 - Release runner now requires a unique release ID: node scripts/release-ask.mjs prepare ask-identity-release-20261003, then upload/promote with that same ID. Separate receipts and private snapshots preserve earlier rollback evidence. Never run prepare again with an already-used ID.
 - The new private entitlement table intentionally has no client RLS policies or table privileges. Supabase advisor reports only an informational no-policy notice for this new object; its purpose is default denial. This is not a whole-project security clearance.
+
+## Owner-approved activation candidate · 3 October 2026
+- Owner created the disabled signed hook, supplied their own test destination and explicitly approved activation plus a verification test. The exact Ask callback is now saved; IRWFA Site URL and its two return URLs are preserved.
+- The two runtime flags are enabled only for the unadvertised account verification release. Public account promotion still waits for actual Google and WhatsApp completion.
+- Four existing credentials are staged as Cloudflare secrets on an unpromoted version. The staging script verifies unchanged code, assets and pre-existing bindings before recording the new candidate ID.
+- The legacy portal validator now reads the independent owner-approved header fixture; it no longer contradicts the restored header. All 29 portal checks pass.
+- Main and Ask builds are prepared from the shared tablet-spacing fix. No header wording, footer content or existing route is redesigned.
+- Remaining: commit and CI, guarded Ask/main promotion, enable the prepared hook and six-minute phone provider, perform the one real verification flow, then record production evidence and actual state. Do not label OTP delivery as phone verification.
