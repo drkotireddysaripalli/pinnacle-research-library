@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-  const id = 'G-H9CLX1WJ7R';
+  const id = 'G-2BYLRLFRDJ';
   const origin = 'https://www.pinnacleblooms.org';
   const pages = {
     '/top-speech-therapy-center-india-proven-improvement-rate': {title:'Pinnacle Speech Therapy',group:'speech_therapy',service:'speech'},
@@ -29,6 +29,21 @@
   for (const path of ['/policies','/payment-and-billing','/privacy-policy','/terms-of-use','/terms-of-service','/cookie-policy','/copyright-and-intellectual','/age-restriction-policy','/contact-information','/disclaimer-and-limitations-of-liabilities','/endorsement-and-testimonial','/governing-and-jurisdiction','/third-party-inegration','/refund-policy','/staff-declaration','/ethics-charter']) {
     pages[path] = {title:'Pinnacle Public Information',group:'public_information',service:'help'};
   }
+  // Only known catalogue paths enter the route allowlist; restrict their URL shape as well.
+  const isBookPath = path => typeof path === 'string' && /^\/books\/(?:[a-z0-9-]+|(?:hi|te)\/[a-z0-9-]+|editions\/(?:hi|te)\/[a-z0-9-]+)$/.test(path);
+  let commerceCatalogue = {};
+  try {
+    const raw = JSON.parse(document.querySelector('[data-book-commerce]')?.dataset?.cartCatalogue || '{}');
+    commerceCatalogue = Object.fromEntries(Object.entries(raw).filter(([sku, item]) =>
+      /^PBN-[A-Z0-9-]+$/.test(sku) && item && typeof item.title === 'string' &&
+      isBookPath(item.path) && Number.isFinite(item.price) && item.price >= 0
+    ));
+  } catch {}
+  if (Object.keys(commerceCatalogue).length) {
+    const bookPaths = ['/shop', '/books', '/books/hi', '/books/te', ...Object.values(commerceCatalogue).flatMap(item =>
+      [item.path, ...(Array.isArray(item.editionPaths) ? item.editionPaths.filter(isBookPath) : [])])];
+    for (const path of bookPaths) pages[path] = {title:'Pinnacle Bookshop',group:'bookshop',service:'help'};
+  }
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   const pagePath = location.pathname;
   const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !/^\/ask\/(?:te\/)?search$/.test(pagePath) && document.body?.dataset.pageVariant === 'ask';
@@ -37,12 +52,16 @@
   const pageTitle = pageConfig?.title || document.title;
   const pageGroup = pageConfig?.group || 'managed_page';
   const routes = new Set([...Object.keys(pages), ...Object.keys(documents)]);
-  const key = 'pinnacle-speech-analytics-v1';
+  const key = pageGroup === 'bookshop' ? 'pinnacle-book-analytics-v1' : 'pinnacle-speech-analytics-v1';
   const variant = document.body?.dataset.pageVariant === 'focused' ? 'focused' : 'service';
   const lifetime = 180 * 86400000;
   const panel = document.querySelector('[data-speech-measurement]');
   const status = document.querySelector('[data-measurement-status]');
   if (!panel || !status) return;
+  if (pageGroup === 'bookshop') {
+    const copy = panel.querySelector?.('p');
+    if (copy) copy.textContent = 'With your permission, Google Analytics measures book views, sample clicks, book-bag changes, checkout starts and contact-link clicks. A checkout start is not a completed purchase. We exclude customer details, query parameters and checkout links. Advertising personalisation is off.';
+  }
   const production = isAsk || (location.origin === origin && routes.has(location.pathname) && !!pageConfig);
   if (isAsk) routes.add('/ask');
   const blocked = navigator.globalPrivacyControl === true;
@@ -59,6 +78,20 @@
     if (!production || !enabled || blocked) return;
     try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:canonical, page_title:pageTitle, page_referrer:'', send_to:id}); } catch {}
   };
+  const commerceNames = new Set(['view_item','view_cart','add_to_cart','remove_from_cart','begin_checkout']);
+  const sendCommerce = (name, lines) => {
+    if (pageGroup !== 'bookshop' || !commerceNames.has(name) || !Array.isArray(lines) || !lines.length || lines.length > 50) return;
+    const items = [];
+    for (const line of lines) {
+      const entry = line && Object.hasOwn(commerceCatalogue, line.sku) ? commerceCatalogue[line.sku] : null;
+      if (!entry || !Number.isInteger(line.quantity) || line.quantity < 1 || line.quantity > 50 ||
+          !Number.isFinite(line.price) || line.price < 0 || line.price > entry.price) return;
+      items.push({item_id:line.sku,item_name:entry.title,item_brand:'Pinnacle Blooms Network',item_category:'Books',item_variant:'PDF',price:line.price,quantity:line.quantity});
+    }
+    const value = Math.round(items.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100) / 100;
+    send(name, {schema_version:3,page_group:'bookshop',currency:'INR',value,items,transport_type:'beacon'});
+  };
+  document.addEventListener('pinnacle:commerce', event => sendCommerce(event.detail?.name, event.detail?.items));
   const clearCookies = () => {
     for (const cookie of document.cookie.split(';')) {
       const name = cookie.trim().split('=')[0];
@@ -88,6 +121,8 @@
     script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;
     document.head.append(script);
     send('page_view',{page_group:pageGroup,schema_version:2});
+    const viewed = Object.entries(commerceCatalogue).find(([, item]) => item.path === pagePath);
+    if (viewed) sendCommerce('view_item', [{sku:viewed[0],quantity:1,price:viewed[1].price}]);
   };
   const choose = (value, persist = true) => {
     if (!['accepted','declined'].includes(value)) return;
@@ -122,6 +157,17 @@
     send('enquiry_accepted',{schema_version:2,page_group:'enrolment',destination:'existing_enrolment_workflow'});
   });
   document.addEventListener('click',event=>{
+    if (pageGroup === 'bookshop') {
+      const href = event.target?.closest?.('a[href]')?.getAttribute('href');
+      if (href) {
+        try {
+          const destination = new URL(href, origin).href;
+          const sample = Object.values(commerceCatalogue).flatMap(item => Array.isArray(item.books) ? item.books : [])
+            .find(book => typeof book.sample === 'string' && new URL(book.sample, origin).href === destination);
+          if (sample) send('sample_preview', {schema_version:3,page_group:'bookshop',item_id:sample.sku,item_name:sample.title});
+        } catch {}
+      }
+    }
     const link=event.target?.closest?.('[data-cta]');
     if (!link) return;
     const placement=link.dataset.cta,href=link.getAttribute('href');

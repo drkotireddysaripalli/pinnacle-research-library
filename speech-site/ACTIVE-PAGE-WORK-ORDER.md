@@ -1,3 +1,10 @@
+**Current bounded release · 3 October 2026.** Refresh book metadata and helpline/Verify purchase links across existing catalogue pages. Preserve current delivered45-page Shopify specifications, all prices/identifiers/stock and the newer Ask/shared-tablet release. Revised46-page reader delivery is a separate pending Shopify attachment change. Historical work records follow.
+
+**Completed bounded follow-up · 3 October 2026.** Add the already-live Google Play purchase route to the 12 single ebook editions and eight native-edition English-detail pages. Keep Shopify PDF/collection checkout primary and distinguish Google Play reading access. Use the verified 12 store IDs; exclude collections and printed editions. No price, stock, feed, structured-data, common-shell or route changes. Acceptance: all20correct links, no links on57noneligible offers, clear native copy, changed purchase sections at phone/tablet/desktop, exact-source CI, preserved complete union/routes/bindings and production readback.
+
+Release: source `c6733bf4374daaf6ae6e21c574812a138d54b3b7`, CI `37074363744` passed, Cloudflare `3d088473-f2d9-4906-8460-6a0f24e0d1dc`; all20production pages verified. Current union `release-books-play-20261003`, 184routes/fourbindings preserved. See `deployment/books-play-release-20261003.md`.
+
+<!-- Latest bookshop release: /shop and rich shared book cart live, 2 October 2026. Source 2487f49dc124d04348df483f2b27c270f97befd1; CI 36998721356 passed; Worker 03b72433-fee0-4374-9f7f-21febc56ab77. Paid capture and download email remain unverified. See deployment/shop-launch-release-20261002.md. -->
 # Active: Ask identity and acquisition — 3 October 2026
 
 Owner has added Google/email and WATI WhatsApp verification, supplied pinnacle.wati.io and the local Logos folder, and reaffirmed search/AI discovery, reputation, branding and 9100 181 181 leads as the outcome. Current bounded contract: ASK-IDENTITY-WORK-ORDER-20261003.md. Preserve public Ask delivery below. No unrelated page or database retirement is part of this authentication package.
@@ -11,6 +18,11 @@ Ask migration is delivered at https://pinnacleblooms.org/ask. Source4e34495; Wor
 ---
 
 # Active page work order
+
+**Current bounded multilingual commerce release · 2 October 2026.** Add four complete Hindi and four complete Telugu Anek-font editions, eight free six-page sales samples, 22 language-specific single/pair/full-set offers and two native-language hubs. Preserve English IDs, prices, private full manuscripts, zero physical inventory, existing main-domain routing and the shared shell. Native pages use their own canonical, language metadata, reciprocal language links, useful excerpts and direct call/WhatsApp support. Publish purchasable status only after correct-language Shopify files are attached and verified. Submit new canonicals once after release. No paid ads, invented stock, guarantees or regulator endorsement.
+
+**Current bounded commerce release · 2 October 2026.** Publish `/shop` as the Pinnacle bookstore within the existing site, using the already approved Horizon-derived original design and real book artwork. Keep the 33 `/books/...` URLs, catalogue IDs, prices, six-page samples and shared shell. Connect Shopify tokenless Storefront API catalogue/cart/hosted checkout; keep physical stock at zero and paid PDF masters private. Parent promise: choose practical picture-led reading by everyday goal, preview before buying, receive the correct complete ebooks after payment. No new clinical/regulatory claims. Scope: new shop page, page-local book navigation/cart, catalogue/feed availability only when verified, exact shop routes and Shopify-only commerce CSP. Acceptance: source/API SKU-price mapping, single/pair/all-four cart contents, automatic-download attachments, phone/tablet/desktop changed sections, protected route/binding preservation and exact-source CI before release. Payment settlement is separate from storefront readiness.
+
 
 **Owner follow-up: six-page sales samples.** Preserve the cover and two learning pages; replace the earlier rear-cover sample page with a book purchase/QR page, followed by Pinnacle credentials/Verify and a four-book collection/pricing page. Use native clickable PDF links, real QR encodings, full-sleeve branded illustrative scenes and exact official logo. Publish final samples at /pinnacle-pages-assets/book-samples-sales-v2-20261002/; keep paid masters private and ordering unavailable until checkout activation.
 

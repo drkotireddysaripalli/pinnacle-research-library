@@ -1,0 +1,453 @@
+{
+  "data": {
+    "products": {
+      "nodes": [
+        {
+          "id": "gid://shopify/Product/8423887863874",
+          "handle": "speech-communication-101-my-message-matters",
+          "title": "Speech & Communication 101: My Message Matters",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295972646978",
+                "sku": "PBN-SP-101-EN-PDF",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "799.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295972679746",
+                "sku": "PBN-SP-101-EN-PB",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "799.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295972712514",
+                "sku": "PBN-SP-101-EN-HB",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1699.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423887896642",
+          "handle": "occupational-therapy-101-i-belong-in-everyday-life",
+          "title": "Occupational Therapy 101: I Belong in Everyday Life",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295972745282",
+                "sku": "PBN-OT-101-EN-PDF",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "799.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295972778050",
+                "sku": "PBN-OT-101-EN-PB",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "799.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295972810818",
+                "sku": "PBN-OT-101-EN-HB",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1699.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423887929410",
+          "handle": "aba-parent-education-101-understanding-everyday-behaviour",
+          "title": "ABA Parent Education 101: Understanding Everyday Behaviour",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295972843586",
+                "sku": "PBN-ABA-101-EN-PDF",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "799.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295972876354",
+                "sku": "PBN-ABA-101-EN-PB",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "799.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295972909122",
+                "sku": "PBN-ABA-101-EN-HB",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1699.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423887962178",
+          "handle": "special-education-101-learning-through-everyday-play",
+          "title": "Special Education 101: Learning Through Everyday Play",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295972941890",
+                "sku": "PBN-SE-101-EN-PDF",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "799.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295972974658",
+                "sku": "PBN-SE-101-EN-PB",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "799.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973007426",
+                "sku": "PBN-SE-101-EN-HB",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1699.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423888027714",
+          "handle": "pinnacle-101-speech-occupational-pair",
+          "title": "Communication & Everyday Participation \u2014 Two-Book Collection",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295973040194",
+                "sku": "PBN-SP-OT-101-EN-PDF-SET2",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973072962",
+                "sku": "PBN-SP-OT-101-EN-PB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973105730",
+                "sku": "PBN-SP-OT-101-EN-HB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "2999.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423888060482",
+          "handle": "pinnacle-101-speech-behaviour-pair",
+          "title": "Communication & Understanding Behaviour \u2014 Two-Book Collection",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295973466178",
+                "sku": "PBN-SP-ABA-101-EN-PDF-SET2",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973498946",
+                "sku": "PBN-SP-ABA-101-EN-PB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973531714",
+                "sku": "PBN-SP-ABA-101-EN-HB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "2999.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423888093250",
+          "handle": "pinnacle-101-speech-learning-pair",
+          "title": "Communication & Learning Through Play \u2014 Two-Book Collection",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295973564482",
+                "sku": "PBN-SP-SE-101-EN-PDF-SET2",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973597250",
+                "sku": "PBN-SP-SE-101-EN-PB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973630018",
+                "sku": "PBN-SP-SE-101-EN-HB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "2999.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423888126018",
+          "handle": "pinnacle-101-occupational-behaviour-pair",
+          "title": "Everyday Participation & Understanding Behaviour \u2014 Two-Book Collection",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295973662786",
+                "sku": "PBN-OT-ABA-101-EN-PDF-SET2",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973695554",
+                "sku": "PBN-OT-ABA-101-EN-PB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973728322",
+                "sku": "PBN-OT-ABA-101-EN-HB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "2999.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423888158786",
+          "handle": "pinnacle-101-occupational-learning-pair",
+          "title": "Everyday Participation & Early Learning \u2014 Two-Book Collection",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295973761090",
+                "sku": "PBN-OT-SE-101-EN-PDF-SET2",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973793858",
+                "sku": "PBN-OT-SE-101-EN-PB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973826626",
+                "sku": "PBN-OT-SE-101-EN-HB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "2999.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423888191554",
+          "handle": "pinnacle-101-behaviour-learning-pair",
+          "title": "Understanding Behaviour & Early Learning \u2014 Two-Book Collection",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295973859394",
+                "sku": "PBN-ABA-SE-101-EN-PDF-SET2",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973892162",
+                "sku": "PBN-ABA-SE-101-EN-PB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "1399.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295973924930",
+                "sku": "PBN-ABA-SE-101-EN-HB-SET2",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "2999.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "gid://shopify/Product/8423888257090",
+          "handle": "pinnacle-101-four-book-collection",
+          "title": "Pinnacle 101 Parent Visual Library \u2014 Four-Book Collection",
+          "availableForSale": true,
+          "variants": {
+            "nodes": [
+              {
+                "id": "gid://shopify/ProductVariant/45295974285378",
+                "sku": "PBN-101-EN-PDF-SET4",
+                "availableForSale": true,
+                "requiresShipping": false,
+                "price": {
+                  "amount": "2499.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295974318146",
+                "sku": "PBN-101-EN-PB-SET4",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "2499.0",
+                  "currencyCode": "INR"
+                }
+              },
+              {
+                "id": "gid://shopify/ProductVariant/45295974350914",
+                "sku": "PBN-101-EN-HB-SET4",
+                "availableForSale": false,
+                "requiresShipping": true,
+                "price": {
+                  "amount": "5499.0",
+                  "currencyCode": "INR"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "extensions": {
+    "cost": {
+      "requestedQueryCost": 31
+    }
+  }
+}

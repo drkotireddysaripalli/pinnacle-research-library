@@ -1,5 +1,6 @@
 // Local build locations and their unchanged public canonical paths.
 export const pageContracts = {
+  shop:{path:'/shop',canonical:'/shop',static:'scripts/validate-book-shop.mjs'},
   ask: {path:'/ask',canonical:'https://pinnacleblooms.org/ask'},
   pinnacleai:{path:'/pinnacleai',canonical:'/pinnacleai'},
   occupational: {path: '/best-occupational-therapy-center-india-proven-improvement-rate', canonical: '/best-occupational-therapy-center-india-proven-improvement-rate'},
@@ -11,4 +12,4 @@ export const pageContracts = {
   ,policies:{path:'/policies',canonical:'/policies',static:'scripts/validate-current-policies.mjs'}
 };
 // CI follows the page currently in acceptance; change this only when the next page candidate is ready.
-export const activeQualityPage='pinnacleai';
+export const activeQualityPage='shop';

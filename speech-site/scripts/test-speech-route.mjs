@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {BOOK_ROUTES} from '../deployment/speech-handler.mjs';
 import {serveSpeech,ASSESSMENT_CANONICAL as assessment,SPEECH_CANONICAL as canonical,ENROLMENT_CANONICAL as enrolment,OCCUPATIONAL_CANONICAL as occupational,ABA_CANONICAL as aba,SPECIAL_EDUCATION_CANONICAL as specialEducation,AUTISM_CANONICAL as autism,CENTERS_CANONICAL as centers,PINNACLEAI_PATHS} from '../deployment/speech-handler.mjs';
 const inventory={'/pinnacle-pages-html/speech.html':'abc','/pinnacle-pages-html/enrolment.html':'enrol','/pinnacle-pages-html/occupational-therapy.html':'ot','/pinnacle-pages-html/aba-therapy.html':'aba','/pinnacle-pages-html/special-education.html':'special','/pinnacle-pages-html/autism-therapy.html':'autism','/pinnacle-pages-html/centers.html':'centers','/pinnacle-pages-html/service-information.html':'def','/pinnacle-pages-assets/app.abc.css':'ghi','/pinnacle-pages-assets/share.abc.jpg':'jpg','/pinnacle-pages-scripts/speech-measurement.js':'jkl','/pinnacle-pages-data/speech-sitemap.xml':'mno','/pinnacle-pages-data/enrolment-machine.md':'enrol-md','/pinnacle-pages-data/occupational-therapy-machine.md':'ot-md','/pinnacle-pages-data/aba-therapy-machine.md':'aba-md','/pinnacle-pages-data/special-education-machine.md':'special-md','/pinnacle-pages-data/autism-therapy-machine.md':'autism-md','/pinnacle-pages-data/centers-machine.md':'centers-md'};
 inventory['/pinnacle-pages-html/assessment.html']='assessment-html';
@@ -10,6 +11,21 @@ inventory['/pinnacle-pages-data/pinnacleai-llms.txt']='product-guide';
 const request=(path,options)=>new Request('https://www.pinnacleblooms.org'+path,options);
 const calls=[];
 const env={ASSETS:{fetch:async r=>{calls.push({url:r.url,method:r.method});return new Response(r.method==='HEAD'?null:'<a href="/enroll">Speech page</a>',{headers:{'content-type':'text/html'}});}}};
+test('shop and existing book routes retain exact mapping and isolate Shopify connectivity',async()=>{
+ const stock={...inventory,...Object.fromEntries(Object.values(BOOK_ROUTES).map(id=>['/pinnacle-pages-html/'+id+'.html',id]))};
+ assert.equal(Object.keys(BOOK_ROUTES).length,81);
+ for(const [path,id] of Object.entries(BOOK_ROUTES))for(const method of ['GET','HEAD']){
+  const response=await serveSpeech(request(path,{method}),env,stock);
+  assert.equal(response.status,200);assert.equal(calls.at(-1).url,'https://assets.local/pinnacle-pages-html/'+id+'.html');
+  assert(response.headers.get('content-security-policy').includes('https://pinnacleblooms.myshopify.com'));
+  if(method==='HEAD')assert.equal(await response.text(),'');
+ }
+ const alias=await serveSpeech(request('/shop/?ref=sample'),env,stock);assert.equal(alias.status,301);assert.equal(alias.headers.get('location'),'https://www.pinnacleblooms.org/shop?ref=sample');
+ for(const headers of [{cookie:'fixture=1'},{authorization:'Bearer fixture'}])assert.equal((await serveSpeech(request('/shop',{headers}),env,stock)).headers.get('cache-control'),'private, no-store');
+ assert(!(await serveSpeech(request(canonical),env,stock)).headers.get('content-security-policy').includes('myshopify.com'));
+ assert.equal(await serveSpeech(request('/shop-other'),env,stock),null);
+ assert.equal((await serveSpeech(request('/shop'),{ASSETS:{fetch:async()=>new Response('missing',{status:404})}},stock)).status,503);
+});
 test('canonical serves exact asset; links are never Verify-prefixed',async()=>{const r=await serveSpeech(request(canonical+'?utm_source=review'),env,inventory);assert.equal(r.status,200);assert((await r.text()).includes('href="/enroll"'));assert.equal(calls.at(-1).url,'https://assets.local/pinnacle-pages-html/speech.html');assert(r.headers.get('link').includes(canonical+'>'));assert.equal(r.headers.get('vary'),'Accept');});
 test('GET and HEAD aliases preserve query and converge on existing canonical',async()=>{for(const method of ['GET','HEAD'])for(const p of ['/speech-therapy','/speech-therapy/',canonical+'/']){const r=await serveSpeech(request(p+'?utm_source=x',{method}),env,inventory);assert.equal(r.status,301);assert.equal(r.headers.get('location'),'https://www.pinnacleblooms.org'+canonical+'?utm_source=x');}});
 test('HEAD returns metadata without body',async()=>{const r=await serveSpeech(request(canonical,{method:'HEAD'}),env,inventory);assert.equal(await r.text(),'');assert.equal(r.headers.get('x-robots-tag'),'index, follow, max-image-preview:large');});
@@ -41,4 +57,11 @@ test('assessment exact route, HEAD, Markdown and trailing alias preserve adjacen
  for(const path of [assessment+'/private',assessment+'-other','/assessmentlead'])assert.equal(await serveSpeech(request(path),env,inventory),null);
  for(const headers of [{authorization:'Bearer fixture'},{range:'bytes=0-5'},{'cache-control':'no-transform'}])assert.equal((await serveSpeech(request(assessment,{headers}),env,inventory)).status,200);
  assert.equal(await serveSpeech(request(assessment,{method:'POST',body:'fixture'}),env,inventory),null);
+});
+
+test('book PDF previews serve PDF MIME for browser readers on GET and HEAD',async()=>{
+ const path='/pinnacle-pages-assets/books-languages-20261002/hi/speech-sample.pdf';
+ const sampleInventory={...inventory,[path]:'sample-pdf'};
+ const sampleEnv={ASSETS:{fetch:async r=>new Response(r.method==='HEAD'?null:'%PDF-fixture',{headers:{'content-type':'application/octet-stream'}})}};
+ for(const method of ['GET','HEAD']){const response=await serveSpeech(request(path,{method}),sampleEnv,sampleInventory);assert.equal(response.status,200);assert.equal(response.headers.get('content-type'),'application/pdf');assert.equal(response.headers.get('x-content-type-options'),'nosniff');assert.equal(await response.text(),method==='HEAD'?'':'%PDF-fixture');}
 });

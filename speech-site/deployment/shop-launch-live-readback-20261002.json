@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/shop",
+    "status": 200,
+    "bytes": 140060,
+    "sha256": "6d5a11283e770ac28029e1a89fe0c66b2639eb2352e880c8465d0b736e2dda4d",
+    "cartEvidence": true,
+    "ebookOffers": 11
+  },
+  {
+    "path": "/books",
+    "status": 200,
+    "bytes": 140110,
+    "sha256": "e2eb08f4a20f77c131cdb543e8451f35efe9d0d455288bc69cab56891f81014f",
+    "cartEvidence": true
+  },
+  {
+    "path": "/books/speech-communication-101-my-message-matters",
+    "status": 200,
+    "bytes": 138645,
+    "sha256": "5a27da5058e8d61243fa2e1a2ff5ee8c86118c99513fa89f07f2aa42645fe7cc",
+    "cartEvidence": true
+  },
+  {
+    "path": "/books/pinnacle-101-four-book-pdf-collection",
+    "status": 200,
+    "bytes": 130939,
+    "sha256": "eff2a393ad413f5c7e0704eb2e6721752dcf9040907ffa9938b63bef05f6851e",
+    "cartEvidence": true
+  },
+  {
+    "path": "/pinnacle-pages-scripts/book-commerce.js",
+    "status": 200,
+    "bytes": 9877,
+    "sha256": "99fc6d5f41bd04e92f591b6ebf1644b023986529a53b39ee8b902f220c20c16d"
+  },
+  {
+    "path": "/pinnacle-pages-data/books-merchant-feed.xml",
+    "status": 200,
+    "bytes": 78002,
+    "sha256": "ca7b623a0a39370c1dc532337f4df32d8b6e712f02aecae2c1101719d6b9d761",
+    "pdfInStock": 11,
+    "physicalOutOfStock": 22
+  },
+  {
+    "path": "/verify/",
+    "status": 200,
+    "bytes": 1019444,
+    "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107"
+  }
+]

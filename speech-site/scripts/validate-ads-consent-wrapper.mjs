@@ -30,8 +30,8 @@ try{
   if(mode==='gpc')assert.equal(events.length,0,'GPC optional network');
   if(mode==='allowed'){
    assert(commands.some(c=>c[0]==='consent'&&c[2].analytics_storage==='granted'),'Analytics choice still works');
-   assert(commands.some(c=>c[0]==='config'&&c[1]==='G-H9CLX1WJ7R'),'Owned Analytics config retained');
-   assert(events.some(e=>e.id==='G-H9CLX1WJ7R'),'Owned Analytics loader retained');
+   assert(commands.some(c=>c[0]==='config'&&c[1]==='G-2BYLRLFRDJ'),'Owned Analytics config retained');
+   assert(events.some(e=>e.id==='G-2BYLRLFRDJ'),'Owned Analytics loader retained');
   }
   assert(await page.locator('a[href="tel:+919100181181"]').count()>0);
   results.push({mode,cookies,commands,events,telephoneRetained:true,passed:true});await context.close();

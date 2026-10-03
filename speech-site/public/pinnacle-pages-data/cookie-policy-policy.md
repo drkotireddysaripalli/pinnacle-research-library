@@ -13,9 +13,9 @@ This notice describes the managed Pinnacle pages that display “Optional analyt
 
 ## Technologies on managed pages
 
-- Preference storage: pinnacle-speech-analytics-v1 in local storage records your optional analytics choice and timestamp, with a 180-day choice lifetime.
+- Preference storage: pinnacle-speech-analytics-v1 records your optional service-page analytics choice; pinnacle-book-analytics-v1 separately records your bookshop analytics choice. Both store a timestamp in local storage with a 180-day choice lifetime.
 
-- Optional Google Analytics: after permission, prefixed ps_ga cookies support coarse page and call/enquiry-link measurement. The configured lifetime is 180 days; these events exclude form text, query parameters and advertising identifiers.
+- Optional Google Analytics: after permission, prefixed ps_ga cookies support coarse page and call/enquiry-link measurement. On bookshop pages, separate permission enables book views, sample clicks, book-bag changes and checkout starts; a checkout start is not a purchase. The configured lifetime is 180 days; these events exclude form text, query parameters and advertising identifiers.
 
 - Cloudflare performance and security: delivery and performance services support the website. Cloudflare Web Analytics uses a separate performance beacon; it is distinct from the optional Google Analytics switch.
 
