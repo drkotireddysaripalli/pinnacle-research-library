@@ -45,6 +45,7 @@ test('only supported providers with confirmed email satisfy the identity gate',(
  }
  assert.equal(hasSupportedIdentity({...user,identities:[{provider:'github'}]}),false);
  assert.deepEqual(enabledProviders({}),['google']);
+ assert.deepEqual(enabledProviders({ASK_OAUTH_PROVIDERS:'google,x'}),['google','x']);
  assert.deepEqual(enabledProviders({ASK_OAUTH_PROVIDERS:'google,apple,azure,x,github,google'}),['google','apple','azure','x']);
 });
 test('enabled OAuth routes preserve PKCE and use each providers scopes',async()=>{
@@ -62,6 +63,7 @@ test('enabled OAuth routes preserve PKCE and use each providers scopes',async()=
   assert.match(result.headers.get('set-cookie'),/pinnacle-ask-session-code-verifier/);
  }
  assert.equal((await action(request('apple'),{...authEnv,ASK_OAUTH_PROVIDERS:'google'},'apple')).status,503);
+ assert.equal((await action(request('x'),{...authEnv,ASK_OAUTH_PROVIDERS:'google'},'x')).status,503);
 });
 test('multiple cookies survive response headers and no-store is explicit',()=>{
  const c=context(new Request('https://pinnacleblooms.org/ask/account'),{});c.set('one','1');c.set('two','2');

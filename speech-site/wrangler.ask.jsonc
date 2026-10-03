@@ -32,6 +32,7 @@
     "ASK_BASE": "/ask",
     "CANONICAL_ORIGIN": "https://pinnacleblooms.org",
     "ASK_AUTH_ENABLED": "true",
+    "ASK_OAUTH_PROVIDERS": "google,x",
     "ASK_WHATSAPP_ENABLED": "true",
     "WATI_TENANT_ID": "531",
     "WATI_CHANNEL_NUMBER": "919100181181",
