@@ -1,13 +1,42 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {Webhook} from 'standardwebhooks';
-import {safeReturn,phoneNumber,hasSupportedIdentity,registrationComplete,googleProfile,registerReader,context,csrf,validPost,applyHeaders,action,enabledProviders,OAUTH_PROVIDERS} from '../src/lib/ask/auth.mjs';
+import {safeReturn,phoneNumber,hasSupportedIdentity,registrationComplete,googleProfile,registerReader,context,csrf,validPost,applyHeaders,action,enabledProviders,OAUTH_PROVIDERS,hashNonce,validGoogleNonce,googleCredentialMatches} from '../src/lib/ask/auth.mjs';
 import {watiHook} from '../src/lib/ask/wati-hook.mjs';
 const user={id:'00000000-0000-4000-8000-000000000001',email:'example@example.invalid',email_confirmed_at:'2026-10-03',identities:[{provider:'google'}]};
 const rate={limit:async()=>({success:true})};
 const secret='whsec_'+Buffer.alloc(32,7).toString('base64');
 const env={ASK_WHATSAPP_ENABLED:'true',WATI_TENANT_ID:'531',WATI_API_TOKEN:'synthetic-test-token',WATI_TEMPLATE_NAME:'synthetic_authentication',WATI_CHANNEL_NUMBER:'919999999999',WATI_OTP_PARAMETER_NAMES:'["1"]',SUPABASE_SMS_HOOK_SECRET:secret,ASK_AUTH_RATE_LIMIT:rate};
 const payload={user,sms:{phone:'+919999999998',otp:'123456'}};
+const askClient='123456-synthetic.apps.googleusercontent.com';
+const authEnv={ASK_AUTH_ENABLED:'true',SUPABASE_URL:'https://synthetic.supabase.co',ASK_AUTH_PUBLISHABLE_KEY:'synthetic-key',ASK_AUTH_RATE_LIMIT:rate,ASK_GOOGLE_CLIENT_ID:askClient};
+test('Google challenge is short-lived, private and shared only as a hash',async()=>{
+ const r=await action(new Request('https://pinnacleblooms.org/ask/auth/session'),authEnv,'session');const body=await r.json();
+ const raw=decodeURIComponent(r.headers.getSetCookie().find(x=>x.startsWith('pinnacle-ask-google-nonce=')).split(';')[0].split('=')[1]);
+ assert.ok(validGoogleNonce(raw));assert.equal(body.google.clientId,askClient);assert.equal(body.google.nonce,await hashNonce(raw));assert.notEqual(body.google.nonce,raw);
+ assert.match(r.headers.getSetCookie().find(x=>x.startsWith('pinnacle-ask-google-nonce=')),/HttpOnly/);assert.match(r.headers.get('cache-control'),/no-store/);
+ assert.equal(validGoogleNonce(raw,Number(raw.split('.')[0])+600001),false);assert.equal(validGoogleNonce(raw,Number(raw.split('.')[0])-1),false);
+ const second=await action(new Request('https://pinnacleblooms.org/ask/auth/session',{headers:{cookie:'pinnacle-ask-google-nonce='+raw}}),authEnv,'session');assert.equal((await second.json()).google.nonce,body.google.nonce);
+});
+test('Google credential preflight binds audience, issuer, expiry and nonce before Supabase verification',async()=>{
+ const raw=Date.now()+'.'+crypto.randomUUID()+crypto.randomUUID();const claims={aud:askClient,iss:'https://accounts.google.com',exp:Math.floor(Date.now()/1000)+300,nonce:await hashNonce(raw)};
+ const jwt=p=>'e30.'+Buffer.from(JSON.stringify(p)).toString('base64url')+'.synthetic';
+ assert.equal(await googleCredentialMatches(jwt(claims),askClient,raw),true);
+ for(const change of [{aud:'other.apps.googleusercontent.com'},{azp:'another-client'},{iss:'https://evil.invalid'},{exp:1},{nonce:'wrong'}])assert.equal(await googleCredentialMatches(jwt({...claims,...change}),askClient,raw),false);
+ assert.equal(await googleCredentialMatches(jwt(claims),askClient,undefined),false);assert.equal(await googleCredentialMatches('bad',askClient,raw),false);
+});
+test('invalid or stale Google ID tokens cannot unlock or leave Ask; CSRF remains required',async()=>{
+ const csrfToken=crypto.randomUUID();const make=(origin='https://pinnacleblooms.org')=>new Request('https://pinnacleblooms.org/ask/auth/google-id-token',{method:'POST',headers:{origin,'content-type':'application/x-www-form-urlencoded',cookie:'pinnacle-ask-csrf='+csrfToken},body:new URLSearchParams({csrf:csrfToken,credential:'invalid',returnTo:'/ask/lens/entity%3Atherapy_modality/ot'})});
+ assert.equal((await action(make('https://evil.invalid'),authEnv,'google-id-token')).status,403);
+ const r=await action(make(),authEnv,'google-id-token');assert.equal(r.status,303);assert.equal(r.headers.get('location'),'/ask/lens/entity%3Atherapy_modality/ot?ask_signin=sign-in');assert.doesNotMatch(r.headers.get('set-cookie'),/pinnacle-ask-session=/);assert.match(r.headers.get('set-cookie'),/Max-Age=0/);
+});
+test('verification and profile contact require the signed-in server identity, with private JSON failures',async()=>{
+ const token=crypto.randomUUID();
+ for(const kind of ['phone','verify','contact']){
+  const r=await action(new Request('https://pinnacleblooms.org/ask/auth/'+kind,{method:'POST',headers:{origin:'https://pinnacleblooms.org',accept:'application/json','content-type':'application/x-www-form-urlencoded',cookie:'pinnacle-ask-csrf='+token},body:new URLSearchParams({csrf:token,mode:'call',phone:'+919999999999',verificationConsent:'yes',token:'123456'})}),authEnv,kind);
+  assert.equal(r.status,400);assert.deepEqual(await r.json(),{status:'sign-in'});assert.match(r.headers.get('cache-control'),/no-store/);assert.equal(r.headers.get('location'),null);
+ }
+});
 function signed(body=payload,timestamp=new Date()){const raw=JSON.stringify(body),id='synthetic-event';return new Request('https://pinnacleblooms.org/ask/auth/whatsapp-hook',{method:'POST',headers:{'webhook-id':id,'webhook-timestamp':String(Math.floor(timestamp.getTime()/1000)),'webhook-signature':new Webhook(secret).sign(id,timestamp,raw)},body:raw});}
 test('returns only an internal public Ask path',()=>{
  assert.equal(safeReturn('/ask/autism'),'/ask/autism');

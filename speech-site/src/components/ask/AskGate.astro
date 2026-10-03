@@ -16,12 +16,13 @@ import googleMark from '../../assets/google-sign-in-g-official.png';
   <h3>Sign in to keep reading.</h3>
   <p id="ask-gate-description">Use your Google account to continue.<br/>No additional form.</p>
   <form method="post" action="/ask/auth/google" data-ask-google-form>
-   <input type="hidden" name="csrf" value=""/><input type="hidden" name="returnTo" value="/ask"/>
+   <input type="hidden" name="csrf" value=""/><input type="hidden" name="returnTo" value="/ask"/><input type="hidden" name="credential" value=""/>
    <button type="submit" class="ask-google-button" disabled>
     <Image src={googleMark} width={20} height={20} alt="" loading="eager"/>
     Continue with Google
    </button>
   </form>
+  <div data-ask-google-button hidden></div>
   <p class="ask-gate-status" role="status" data-ask-gate-status>Checking your sign-in…</p>
   <button type="button" class="ask-gate-retry" data-ask-session-retry hidden>Try again</button>
   <p class="ask-gate-privacy">Google shares your name, email and photo for your Ask reader profile.</p>
