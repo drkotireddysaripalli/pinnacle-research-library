@@ -2,42 +2,43 @@
 import {env} from 'cloudflare:workers';
 import AskLayout from '../../../src/layouts/AskLayout.astro';
 import Icon from '../../../src/components/Icon.astro';
-import {context,csrf,safeReturn,hasGoogle,registrationComplete,phoneConfirmed,applyHeaders} from '../../../src/lib/ask/auth.mjs';
+import {context,csrf,safeReturn,hasSupportedIdentity,registrationComplete,phoneConfirmed,applyHeaders,enabledProviders,OAUTH_PROVIDERS} from '../../../src/lib/ask/auth.mjs';
 const c=context(Astro.request,env);
 const result=c.auth?await c.auth.auth.getUser():null;
 const user=result?.data?.user;
-const connected=hasGoogle(user),complete=registrationComplete(user);
+const connected=hasSupportedIdentity(user),complete=registrationComplete(user);
+const providers=enabledProviders(env);
 const token=csrf(c);
 applyHeaders(Astro.response.headers,c.headers);
 const pending=c.cookies.get('pinnacle-ask-phone');
 const returnTo=safeReturn(Astro.url.searchParams.get('returnTo')||c.cookies.get('pinnacle-ask-return'));
 const messages={
- 'sign-in':'Please connect your Google account to continue.',
+ 'sign-in':'Please connect your account to continue.',
  'wait':'Please wait a minute before trying again.',
  'phone-format':'Enter your WhatsApp number with its country code and confirm that we may send your verification code.',
- 'phone-unavailable':'WhatsApp verification is temporarily unavailable. Your Google account remains connected.',
+ 'phone-unavailable':'WhatsApp verification is temporarily unavailable. Your account remains connected.',
  'phone-send':'We could not send a code. Check your number or try again shortly.',
  'code-sent':'Your code has been accepted for sending to WhatsApp. Enter it below when it arrives.',
  'code-invalid':'That code could not be verified. Check the code and try again, or request a new one.',
  'verification-record':'Your phone code was verified, but we could not save the WhatsApp verification record. Please try again shortly.',
- 'verified':'Your Google account and WhatsApp number are connected.'
+ 'verified':'Your account and WhatsApp number are connected.'
 };
 const statusKey=Astro.url.searchParams.get('status')||'';
 const status=(!c.auth||(statusKey==='verified'&&!complete)||(statusKey==='code-sent'&&(!connected||!pending))||(statusKey==='verification-record'&&!phoneConfirmed(user)))?'':messages[statusKey]||'';
 ---
-<AskLayout title="Your Ask Pinnacle account" description="Connect your Google account and verify your WhatsApp number with Pinnacle Blooms Network." canonical="https://pinnacleblooms.org/ask/account" robots="noindex, nofollow" privatePage={true}>
+<AskLayout title="Your Ask Pinnacle account" description="Connect your account and verify your WhatsApp number with Pinnacle Blooms Network." canonical="https://pinnacleblooms.org/ask/account" robots="noindex, nofollow" privatePage={true}>
 <section class="ask-wrap ask-section ask-account">
- <div><p class="ask-eyebrow">ASK PINNACLE · YOUR ACCOUNT</p><h1>A clearer next step.<br/>A way to stay connected.</h1><p class="ask-lead">Your questions matter. Connect your Google account and verify the WhatsApp number you use, so your details stay together.</p>
+ <div><p class="ask-eyebrow">ASK PINNACLE · YOUR ACCOUNT</p><h1>A clearer next step.<br/>A way to stay connected.</h1><p class="ask-lead">Your questions matter. Connect your account and verify the WhatsApp number you use, so your details stay together.</p>
  <div class="ask-account-purpose"><Icon name="heart"/><h2>Your child’s everyday life gives the conversation its purpose.</h2><p>Bring the questions that matter to your family. Talk with Pinnacle about the right service, a nearby centre and how to begin.</p><a class="ask-button" href="tel:+919100181181">Call 9100 181 181</a><p><a href="/ask">Keep exploring public answers →</a></p></div>
  </div>
  <div class="ask-account-card"><p class="ask-eyebrow">TWO SIMPLE STEPS</p><h2>{complete?'You’re connected.':'Connect with Pinnacle.'}</h2>
  {status&&<p class="ask-account-status" role="status">{status}</p>}
  {!c.auth&&<p>Account sign-in is not available yet. You can keep reading Ask and contact the Pinnacle team directly.</p>}
- <section class="ask-account-step"><span class="ask-account-number">1</span><div><h3>Connect your Google account</h3>{connected?<p>{user.email}<br/><strong>Google account connected</strong></p>:<><p>Use your own account. We never ask for your Google password.</p><form method="post" action="/ask/auth/google"><input type="hidden" name="csrf" value={token}/><input type="hidden" name="returnTo" value={returnTo}/><button type="submit" class="ask-button" disabled={!c.auth}>Continue with Google</button></form></>}</div></section>
+ <section class="ask-account-step"><span class="ask-account-number">1</span><div><h3>Connect your account</h3>{connected?<p>{user.email}<br/><strong>Account connected</strong></p>:<><p>Use your own account. We never ask for your sign-in password.</p>{providers.map(provider=><form method="post" action={`/ask/auth/${provider}`}><input type="hidden" name="csrf" value={token}/><input type="hidden" name="returnTo" value={returnTo}/><button type="submit" class="ask-button" disabled={!c.auth}>Continue with {OAUTH_PROVIDERS[provider].label}</button></form>)}</>}</div></section>
  <section class="ask-account-step"><span class="ask-account-number">2</span><div><h3>Verify your WhatsApp number</h3>{complete?<p><strong>{user.phone?.startsWith('+')?user.phone:'+'+user.phone}</strong><br/>WhatsApp number verified</p>:connected&&env.ASK_WHATSAPP_ENABLED==='true'?<>
  <form method="post" action="/ask/auth/phone"><input type="hidden" name="csrf" value={token}/><label for="ask-phone">WhatsApp number, including country code</label><input id="ask-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="24" placeholder="+91" required value={pending||''}/><label class="ask-account-consent"><input type="checkbox" name="verificationConsent" value="yes" required/><span>Send a verification code to my WhatsApp number.</span></label><button class="ask-button ask-button-outline" type="submit">{pending?'Send another code':'Send verification code'}</button></form>
  {pending&&<form method="post" action="/ask/auth/verify" class="ask-code-form"><input type="hidden" name="csrf" value={token}/><label for="ask-code">Code from WhatsApp</label><input id="ask-code" name="token" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6,10}" minlength="6" maxlength="10" required/><button class="ask-button" type="submit">Verify my number</button></form>}
- </>:<p>{connected?'WhatsApp verification is temporarily unavailable. You can still call us directly.':'After connecting Google, enter the code we send to your WhatsApp number.'}</p>}</div></section>
+ </>:<p>{connected?'WhatsApp verification is temporarily unavailable. You can still call us directly.':'After signing in, enter the code we send to your WhatsApp number.'}</p>}</div></section>
  {complete&&<a class="ask-button" href={returnTo}>Return to Ask →</a>}
  {connected&&<form method="post" action="/ask/auth/logout"><input type="hidden" name="csrf" value={token}/><button type="submit" class="ask-account-signout">Sign out</button></form>}
  <p class="ask-small">This account is for adults. Verification is separate from enrolment and does not subscribe you to marketing. <a href="https://www.pinnacleblooms.org/privacy-policy">Read our privacy policy</a>.</p>

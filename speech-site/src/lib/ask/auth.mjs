@@ -11,8 +11,10 @@ export function safeReturn(value){
  try{const p=decodeURIComponent(value);if(!/^\/ask(?:\/[a-zA-Z0-9_-]+)*$/.test(p)||/^\/ask\/(?:auth|account|search)(?:\/|$)/.test(p))return '/ask';return p;}catch{return '/ask';}
 }
 export function phoneNumber(value){const v=String(value||'').replace(/[ ()-]/g,'');return /^\+[1-9][0-9]{7,14}$/.test(v)?v:null;}
-export function hasGoogle(user){return !!user?.email&&!!user.email_confirmed_at&&!user.is_anonymous&&user.identities?.some(i=>i.provider==='google');}
-export function phoneConfirmed(user){return hasGoogle(user)&&!!user.phone&&!!user.phone_confirmed_at;}
+export const OAUTH_PROVIDERS=Object.freeze({google:{label:'Google',scopes:'openid email profile'},apple:{label:'Apple'},azure:{label:'Microsoft',scopes:'email'},x:{label:'X'}});
+export function enabledProviders(env){return String(env.ASK_OAUTH_PROVIDERS||'google').split(',').map(p=>p.trim()).filter((p,i,a)=>Object.hasOwn(OAUTH_PROVIDERS,p)&&a.indexOf(p)===i);}
+export function hasSupportedIdentity(user){return !!user?.email&&!!user.email_confirmed_at&&!user.is_anonymous&&!!user.identities?.some(i=>Object.hasOwn(OAUTH_PROVIDERS,i.provider));}
+export function phoneConfirmed(user){return hasSupportedIdentity(user)&&!!user.phone&&!!user.phone_confirmed_at;}
 export function registrationComplete(user){const receipt=user?.app_metadata?.ask_whatsapp;return phoneConfirmed(user)&&receipt?.provider==='wati'&&receipt?.phone===user.phone&&receipt?.confirmed_at===user.phone_confirmed_at;}
 export function configured(env){return env.ASK_AUTH_ENABLED==='true'&&!!env.SUPABASE_URL&&!!env.ASK_AUTH_PUBLISHABLE_KEY&&!!env.ASK_AUTH_RATE_LIMIT;}
 export function applyHeaders(target,source){for(const [key,value] of source)if(key!=='set-cookie')target.set(key,value);for(const cookie of source.getSetCookie())target.append('set-cookie',cookie);}
@@ -39,22 +41,23 @@ export async function action(request,env,kind){
   if(request.method!=='GET')return c.reply('Method not allowed',405);
   const code=c.url.searchParams.get('code');if(!code||code.length>2048)return back('sign-in');
   const {data,error}=await c.auth.auth.exchangeCodeForSession(code);
-  if(error||!hasGoogle(data.user)){await c.auth.auth.signOut({scope:'local'});return back('sign-in');}
+  if(error||!hasSupportedIdentity(data.user)){await c.auth.auth.signOut({scope:'local'});return back('sign-in');}
   return c.redirect(ACCOUNT);
  }
  if(request.method!=='POST')return c.reply('Method not allowed',405);
  if(!request.headers.get('content-type')?.startsWith('application/x-www-form-urlencoded'))return c.reply('Unsupported request',415);
  const text=await request.text();if(text.length>4096)return c.reply('Request too large',413);
  const form=new URLSearchParams(text);if(!validPost(c,form))return c.reply('Please reopen the account page and try again.',403);
- if(kind==='google'){
-  if(await limited(env,'google:'+request.headers.get('cf-connecting-ip')))return back('wait');
+ if(Object.hasOwn(OAUTH_PROVIDERS,kind)){
+  if(!enabledProviders(env).includes(kind))return c.reply('This sign-in option is not available yet.',503);
+  if(await limited(env,'oauth:'+request.headers.get('cf-connecting-ip')))return back('wait');
   c.set('pinnacle-ask-return',safeReturn(form.get('returnTo')),{maxAge:1800});
-  const {data,error}=await c.auth.auth.signInWithOAuth({provider:'google',options:{redirectTo:c.url.origin+'/ask/auth/callback',skipBrowserRedirect:true,scopes:'openid email profile'}});
+  const {data,error}=await c.auth.auth.signInWithOAuth({provider:kind,options:{redirectTo:c.url.origin+'/ask/auth/callback',skipBrowserRedirect:true,...(OAUTH_PROVIDERS[kind].scopes?{scopes:OAUTH_PROVIDERS[kind].scopes}:{})}});
   return error||!data.url?back('sign-in'):c.redirect(data.url);
  }
  if(kind==='logout'){await c.auth.auth.signOut({scope:'local'});for(const name of ['pinnacle-ask-phone','pinnacle-ask-return','pinnacle-ask-csrf'])c.set(name,'',{maxAge:0});return c.redirect('/ask');}
  const {data:{user},error}=await c.auth.auth.getUser();
- if(error||!hasGoogle(user))return back('sign-in');
+ if(error||!hasSupportedIdentity(user))return back('sign-in');
  if(await limited(env,kind+':'+user.id))return back('wait');
  if(kind==='phone'){
   if(env.ASK_WHATSAPP_ENABLED!=='true'||!env.ASK_AUTH_SECRET_KEY)return back('phone-unavailable');

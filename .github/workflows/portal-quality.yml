@@ -27,6 +27,7 @@ jobs:
           cache: npm
           cache-dependency-path: speech-site/package-lock.json
       - run: npm ci
+      - run: npm run test:ask-auth
       - run: npm run build:ask
   checks:
     runs-on: ubuntu-latest
