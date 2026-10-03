@@ -1,11 +1,12 @@
 ---
-import emblem from '../../assets/pinnacle-profile-emblem';
+import logo from '../../assets/pinnacle-profile-logo';
+import AskVerificationBadge from './AskVerificationBadge.astro';
 import Icon from '../Icon.astro';
 ---
 <dialog id="ask-whatsapp-verification" aria-labelledby="ask-verification-title" data-nosnippet>
  <button class="ask-verification-close" type="button" data-ask-verification-cancel aria-label="Close verification">×</button>
- <img src={emblem} width="52" height="52" alt="Pinnacle Blooms Network"/>
- <h2 id="ask-verification-title">Get Verified</h2>
+ <img class="ask-verification-logo" src={logo} width="464" height="173" alt="Pinnacle Blooms Network"/>
+ <h2 id="ask-verification-title">Get Verified<AskVerificationBadge size={32}/></h2>
  <p class="ask-verification-intro">Your number. Your Pinnacle connection.</p>
  <p>Verify your WhatsApp number to add the magenta tick to your name and connect with Pinnacle from your profile.</p>
  <form data-ask-phone-form>
@@ -26,6 +27,8 @@ import Icon from '../Icon.astro';
  <p class="ask-verification-hint">The tick confirms your WhatsApp number is verified.</p>
 </dialog>
 <style>
+ #ask-whatsapp-verification>.ask-verification-logo{width:232px;max-width:calc(100% - 48px);height:auto;margin:0 0 24px}
+ #ask-verification-title{display:flex;align-items:center;gap:10px}#ask-verification-title svg{flex-shrink:0}
  #ask-whatsapp-verification{position:fixed;inset:0;margin:auto;width:min(460px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;padding:32px;border:1px solid #dfd5e5;border-radius:28px;background:white;color:#213653;box-shadow:0 20px 80px #162c5533;font:inherit;z-index:2147483647}
  #ask-whatsapp-verification::backdrop{background:#18234080;backdrop-filter:blur(3px)}#ask-whatsapp-verification [hidden]{display:none!important}#ask-whatsapp-verification>img{display:block;margin-bottom:14px}#ask-whatsapp-verification h2{font-size:30px;line-height:1.2;color:#8f2879;margin:0 0 10px}#ask-whatsapp-verification p{font-size:15px;line-height:1.6;margin:0 0 18px}.ask-verification-intro{font-weight:700}.ask-verification-close{position:absolute;right:16px;top:14px;width:40px;height:40px;border:0;border-radius:50%;font-size:28px;background:#f8f3f8;color:#344860;cursor:pointer}#ask-whatsapp-verification label{display:block;font-weight:700;font-size:14px;margin:20px 0 9px}#ask-whatsapp-verification input{box-sizing:border-box;width:100%;min-height:52px;border:1px solid #9b9faa;border-radius:10px;background:white;color:#213653;padding:12px;font:inherit;font-size:18px}#ask-whatsapp-code{letter-spacing:.3em;text-align:center}#ask-whatsapp-verification .ask-verification-hint{font-size:12px;line-height:1.6;color:#536176;margin:10px 0 16px}.ask-verification-primary{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:50px;border:0;border-radius:25px;background:#9b287f;color:white;font:inherit;font-size:15px;font-weight:700;cursor:pointer}.ask-verification-primary:disabled{opacity:.6;cursor:wait}.ask-verification-change{background:none;border:0;color:#842478;text-decoration:underline;font:inherit;font-size:13px;min-height:44px;cursor:pointer}.ask-verification-status{color:#842478;font-weight:600}.ask-verification-status:empty{display:none}.ask-verification-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;font-size:13px}.ask-verification-bottom a{color:#842478}.ask-verification-bottom button{background:transparent;border:1px solid #b9adbf;border-radius:22px;color:#344860;font:inherit;padding:10px 24px;min-height:44px;cursor:pointer}#ask-whatsapp-verification :focus-visible{outline:3px solid #00a8b4;outline-offset:3px}@media(max-width:380px){#ask-whatsapp-verification{padding:24px}#ask-whatsapp-verification h2{font-size:27px}}
 </style>
