@@ -156,6 +156,7 @@ for(const id of choices){
       await check('Lifecycle image loaded',()=>evaluate("return [...document.querySelectorAll('.wave2-hero-art img')].every(e=>e.complete && e.naturalWidth>0)"));
     }
     if(isAsk){
+      await check('Both approved Sintony weights loaded',()=>evaluate("return document.fonts.check('400 16px Sintony') && document.fonts.check('700 16px Sintony')"));
       await check('Answer text and source section remain readable',()=>evaluate("const p=document.querySelector('#explanation'),s=document.querySelector('#sources');return !!p && p.innerText.length>200 && p.getBoundingClientRect().width>=Math.min(280,innerWidth-48) && !!s"));
       await check('Answer FAQ disclosure opens',async()=>{await click('.ask-faq details summary');return evaluate("return document.querySelector('.ask-faq details').open");});
       await evaluate("document.getElementById('explanation').scrollIntoView({block:'start',behavior:'instant'});return true");

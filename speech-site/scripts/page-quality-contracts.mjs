@@ -1,5 +1,6 @@
 // Local build locations and their unchanged public canonical paths.
 export const pageContracts = {
+  ask: {path:'/ask',canonical:'https://pinnacleblooms.org/ask'},
   pinnacleai:{path:'/pinnacleai',canonical:'/pinnacleai'},
   occupational: {path: '/best-occupational-therapy-center-india-proven-improvement-rate', canonical: '/best-occupational-therapy-center-india-proven-improvement-rate'},
   speech: {path: '/', canonical: '/top-speech-therapy-center-india-proven-improvement-rate'},
