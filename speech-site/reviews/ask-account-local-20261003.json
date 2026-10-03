@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-10-03T09:19:44.170Z",
+  "base": "http://127.0.0.1:4330",
+  "mode": "local authentication-disabled candidate",
+  "checks": [
+    {
+      "path": "/ask/account",
+      "status": 200,
+      "result": "pass",
+      "scope": "private headers, disabled state, no false verification, call link"
+    },
+    {
+      "path": "/ask/account?status=verified",
+      "status": 200,
+      "result": "pass",
+      "scope": "private headers, disabled state, no false verification, call link"
+    },
+    {
+      "path": "/ask/account?status=code-sent",
+      "status": 200,
+      "result": "pass",
+      "scope": "private headers, disabled state, no false verification, call link"
+    },
+    {
+      "path": "/ask/auth/google",
+      "method": "POST",
+      "status": 503,
+      "result": "pass",
+      "scope": "disabled endpoint fails closed"
+    },
+    {
+      "path": "/ask/auth/google",
+      "method": "POST",
+      "status": 403,
+      "result": "pass",
+      "scope": "cross-origin form rejected and not cached"
+    }
+  ],
+  "providerDeliveryTested": false
+}

@@ -14,8 +14,8 @@
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Understand the message. Make room for the next one.",
-    "shortDescription": "Pinnacle Blooms Network’s Speech & Communication 101 parent guide: 31 illustrated pages on gestures, words, AAC, choices and everyday family communication.",
-    "description": "My Message Matters is the Speech & Communication 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore everyday communication through gestures, sounds, words, pictures and established augmentative and alternative communication (AAC).\n\nExplore familiar play, real choices, comfortable response time, shared books, family languages and useful messages such as help, stop, more and finished. The emphasis is on responding to meaning and keeping communication available, including established augmentative and alternative communication (AAC).\n\nFor parents and caregivers looking for speech and language support ideas to discuss and share in everyday routines, including families supporting a child with speech delay or different communication needs.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "shortDescription": "Pinnacle Blooms Network’s 45-page Speech & Communication 101 parent guide to gestures, words, AAC and everyday communication. Preview My Message Matters.",
+    "description": "My Message Matters is the Speech & Communication 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore everyday communication through gestures, sounds, words, pictures and established augmentative and alternative communication (AAC).\n\nExplore familiar play, real choices, comfortable response time, shared books, family languages and useful messages such as help, stop, more and finished. The emphasis is on responding to meaning and keeping communication available, including established augmentative and alternative communication (AAC).\n\nFor parents exploring child development and Pinnacle speech therapy support, including families raising autistic children or children with ADHD, speech delay or developmental delay. Share ideas for gestures, words, pictures and everyday communication at the child’s pace.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages on communication in ordinary family routines.",
       "Welcome gestures, sounds, speech, pictures and established AAC.",
@@ -213,12 +213,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -243,7 +247,10 @@
     "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "shopifyVariantId": "45295972646978"
+    "shopifyVariantId": "45295972646978",
+    "seoTitle": "Speech & Communication 101 Parent Book | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s 45-page Speech & Communication 101 parent guide to gestures, words, AAC and everyday communication. Preview My Message Matters.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "speech-communication-101-my-message-matters-softcover",
@@ -261,7 +268,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Understand the message. Make room for the next one.",
     "shortDescription": "Pinnacle Blooms Network’s Speech & Communication 101 parent guide: 31 illustrated pages on gestures, words, AAC, choices and everyday family communication.",
-    "description": "My Message Matters is the Speech & Communication 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore everyday communication through gestures, sounds, words, pictures and established augmentative and alternative communication (AAC).\n\nExplore familiar play, real choices, comfortable response time, shared books, family languages and useful messages such as help, stop, more and finished. The emphasis is on responding to meaning and keeping communication available, including established augmentative and alternative communication (AAC).\n\nFor parents and caregivers looking for speech and language support ideas to discuss and share in everyday routines, including families supporting a child with speech delay or different communication needs.\n\n1 printed full-colour softcover book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "My Message Matters is the Speech & Communication 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore everyday communication through gestures, sounds, words, pictures and established augmentative and alternative communication (AAC).\n\nExplore familiar play, real choices, comfortable response time, shared books, family languages and useful messages such as help, stop, more and finished. The emphasis is on responding to meaning and keeping communication available, including established augmentative and alternative communication (AAC).\n\nFor parents exploring child development and Pinnacle speech therapy support, including families raising autistic children or children with ADHD, speech delay or developmental delay. Share ideas for gestures, words, pictures and everyday communication at the child’s pace.\n\n1 printed full-colour softcover book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages on communication in ordinary family routines.",
       "Welcome gestures, sounds, speech, pictures and established AAC.",
@@ -459,12 +466,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -488,7 +499,9 @@
     "assetId": "speech",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "Speech & Communication 101 Parent Book | Full-colour softcover | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s Speech & Communication 101 parent guide: 31 illustrated pages on gestures, words, AAC, choices and everyday family communication. Full-colour softcover is currently out of stock."
   },
   {
     "slug": "speech-communication-101-my-message-matters-hardbound",
@@ -506,7 +519,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Understand the message. Make room for the next one.",
     "shortDescription": "Pinnacle Blooms Network’s Speech & Communication 101 parent guide: 31 illustrated pages on gestures, words, AAC, choices and everyday family communication.",
-    "description": "My Message Matters is the Speech & Communication 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore everyday communication through gestures, sounds, words, pictures and established augmentative and alternative communication (AAC).\n\nExplore familiar play, real choices, comfortable response time, shared books, family languages and useful messages such as help, stop, more and finished. The emphasis is on responding to meaning and keeping communication available, including established augmentative and alternative communication (AAC).\n\nFor parents and caregivers looking for speech and language support ideas to discuss and share in everyday routines, including families supporting a child with speech delay or different communication needs.\n\n1 printed full-colour hardbound book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "My Message Matters is the Speech & Communication 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore everyday communication through gestures, sounds, words, pictures and established augmentative and alternative communication (AAC).\n\nExplore familiar play, real choices, comfortable response time, shared books, family languages and useful messages such as help, stop, more and finished. The emphasis is on responding to meaning and keeping communication available, including established augmentative and alternative communication (AAC).\n\nFor parents exploring child development and Pinnacle speech therapy support, including families raising autistic children or children with ADHD, speech delay or developmental delay. Share ideas for gestures, words, pictures and everyday communication at the child’s pace.\n\n1 printed full-colour hardbound book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages on communication in ordinary family routines.",
       "Welcome gestures, sounds, speech, pictures and established AAC.",
@@ -704,12 +717,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -733,7 +750,9 @@
     "assetId": "speech",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "Speech & Communication 101 Parent Book | Premium full-colour hardbound | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s Speech & Communication 101 parent guide: 31 illustrated pages on gestures, words, AAC, choices and everyday family communication. Premium full-colour hardbound is currently out of stock."
   },
   {
     "slug": "occupational-therapy-101-i-belong-in-everyday-life",
@@ -750,8 +769,8 @@
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Small changes. More ways to join in.",
-    "shortDescription": "Pinnacle Blooms Network’s Occupational Therapy 101 parent guide: 31 illustrated pages on accessible play, dressing, washing, comfort and everyday participation.",
-    "description": "I Belong in Everyday Life is the Occupational Therapy 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore comfortable access, meaningful everyday roles and different ways for a child to take part.\n\nExplore comfortable access, suitable play materials, stable setups, dressing choices, washing steps, mealtime roles and supported breaks. Notice the child’s preferences, offer practical help and adjust the surroundings before adding demands.\n\nFor parents and caregivers seeking practical ways to support play, dressing, washing and daily routines, including families navigating sensory preferences, motor differences or developmental support needs.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "shortDescription": "Pinnacle Blooms Network’s Occupational Therapy 101 parent guide: 45 pages on play, self-care and sensory comfort. Preview I Belong in Everyday Life.",
+    "description": "I Belong in Everyday Life is the Occupational Therapy 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore comfortable access, meaningful everyday roles and different ways for a child to take part.\n\nExplore comfortable access, suitable play materials, stable setups, dressing choices, washing steps, mealtime roles and supported breaks. Notice the child’s preferences, offer practical help and adjust the surroundings before adding demands.\n\nFor parents exploring Pinnacle occupational therapy and child development, including families raising autistic children or children with ADHD or developmental delay. Choose everyday play, self-care and sensory-comfort ideas around the child’s interests and access.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages on participation in everyday routines.",
       "Explore play, books, dressing, washing and useful family roles.",
@@ -949,12 +968,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -979,7 +1002,10 @@
     "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "shopifyVariantId": "45295972745282"
+    "shopifyVariantId": "45295972745282",
+    "seoTitle": "Occupational Therapy 101 Parent Book | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s Occupational Therapy 101 parent guide: 45 pages on play, self-care and sensory comfort. Preview I Belong in Everyday Life.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "occupational-therapy-101-i-belong-in-everyday-life-softcover",
@@ -997,7 +1023,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Small changes. More ways to join in.",
     "shortDescription": "Pinnacle Blooms Network’s Occupational Therapy 101 parent guide: 31 illustrated pages on accessible play, dressing, washing, comfort and everyday participation.",
-    "description": "I Belong in Everyday Life is the Occupational Therapy 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore comfortable access, meaningful everyday roles and different ways for a child to take part.\n\nExplore comfortable access, suitable play materials, stable setups, dressing choices, washing steps, mealtime roles and supported breaks. Notice the child’s preferences, offer practical help and adjust the surroundings before adding demands.\n\nFor parents and caregivers seeking practical ways to support play, dressing, washing and daily routines, including families navigating sensory preferences, motor differences or developmental support needs.\n\n1 printed full-colour softcover book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "I Belong in Everyday Life is the Occupational Therapy 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore comfortable access, meaningful everyday roles and different ways for a child to take part.\n\nExplore comfortable access, suitable play materials, stable setups, dressing choices, washing steps, mealtime roles and supported breaks. Notice the child’s preferences, offer practical help and adjust the surroundings before adding demands.\n\nFor parents exploring Pinnacle occupational therapy and child development, including families raising autistic children or children with ADHD or developmental delay. Choose everyday play, self-care and sensory-comfort ideas around the child’s interests and access.\n\n1 printed full-colour softcover book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages on participation in everyday routines.",
       "Explore play, books, dressing, washing and useful family roles.",
@@ -1195,12 +1221,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -1224,7 +1254,9 @@
     "assetId": "occupational",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "Occupational Therapy 101 Parent Book | Full-colour softcover | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s Occupational Therapy 101 parent guide: 31 illustrated pages on accessible play, dressing, washing, comfort and everyday participation. Full-colour softcover is currently out of stock."
   },
   {
     "slug": "occupational-therapy-101-i-belong-in-everyday-life-hardbound",
@@ -1242,7 +1274,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Small changes. More ways to join in.",
     "shortDescription": "Pinnacle Blooms Network’s Occupational Therapy 101 parent guide: 31 illustrated pages on accessible play, dressing, washing, comfort and everyday participation.",
-    "description": "I Belong in Everyday Life is the Occupational Therapy 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore comfortable access, meaningful everyday roles and different ways for a child to take part.\n\nExplore comfortable access, suitable play materials, stable setups, dressing choices, washing steps, mealtime roles and supported breaks. Notice the child’s preferences, offer practical help and adjust the surroundings before adding demands.\n\nFor parents and caregivers seeking practical ways to support play, dressing, washing and daily routines, including families navigating sensory preferences, motor differences or developmental support needs.\n\n1 printed full-colour hardbound book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "I Belong in Everyday Life is the Occupational Therapy 101 illustrated parent guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore comfortable access, meaningful everyday roles and different ways for a child to take part.\n\nExplore comfortable access, suitable play materials, stable setups, dressing choices, washing steps, mealtime roles and supported breaks. Notice the child’s preferences, offer practical help and adjust the surroundings before adding demands.\n\nFor parents exploring Pinnacle occupational therapy and child development, including families raising autistic children or children with ADHD or developmental delay. Choose everyday play, self-care and sensory-comfort ideas around the child’s interests and access.\n\n1 printed full-colour hardbound book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages on participation in everyday routines.",
       "Explore play, books, dressing, washing and useful family roles.",
@@ -1440,12 +1472,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -1469,7 +1505,9 @@
     "assetId": "occupational",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "Occupational Therapy 101 Parent Book | Premium full-colour hardbound | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s Occupational Therapy 101 parent guide: 31 illustrated pages on accessible play, dressing, washing, comfort and everyday participation. Premium full-colour hardbound is currently out of stock."
   },
   {
     "slug": "aba-parent-education-101-understanding-everyday-behaviour",
@@ -1486,8 +1524,8 @@
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Understand the moment. Find a helpful response.",
-    "shortDescription": "Pinnacle Blooms Network’s ABA Parent Education 101 guide: 31 illustrated pages on understanding behaviour through comfort, communication, choices and support.",
-    "description": "Understanding Everyday Behaviour is the ABA Parent Education 101 illustrated guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages help adults notice communication, comfort, choices and the surrounding situation before deciding how to respond.\n\nExplore genuine choices, useful cues, manageable transitions, response time, supported breaks and ways to ask what would help. The pages welcome the child’s perspective and show practical ways to offer support without turning every moment into a test.\n\nFor parents and caregivers seeking a thoughtful introduction to supportive responses, everyday observations and manageable routines, including families supporting autistic children or children with different developmental needs.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "shortDescription": "Pinnacle Blooms Network’s 45-page ABA Parent Education 101 guide to communication, comfort and choices. Preview Understanding Everyday Behaviour.",
+    "description": "Understanding Everyday Behaviour is the ABA Parent Education 101 illustrated guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages help adults notice communication, comfort, choices and the surrounding situation before deciding how to respond.\n\nExplore genuine choices, useful cues, manageable transitions, response time, supported breaks and ways to ask what would help. The pages welcome the child’s perspective and show practical ways to offer support without turning every moment into a test.\n\nFor families exploring Pinnacle ABA therapy and child development, including parents of autistic children or children with ADHD. Learn to notice communication, comfort and context before choosing a supportive response to everyday behaviour.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages for thoughtful observation and support.",
       "Explore comfort, communication, choices and changes of plan.",
@@ -1685,12 +1723,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -1715,7 +1757,10 @@
     "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "shopifyVariantId": "45295972843586"
+    "shopifyVariantId": "45295972843586",
+    "seoTitle": "ABA Parent Education 101 Book | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s 45-page ABA Parent Education 101 guide to communication, comfort and choices. Preview Understanding Everyday Behaviour.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "aba-parent-education-101-understanding-everyday-behaviour-softcover",
@@ -1733,7 +1778,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Understand the moment. Find a helpful response.",
     "shortDescription": "Pinnacle Blooms Network’s ABA Parent Education 101 guide: 31 illustrated pages on understanding behaviour through comfort, communication, choices and support.",
-    "description": "Understanding Everyday Behaviour is the ABA Parent Education 101 illustrated guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages help adults notice communication, comfort, choices and the surrounding situation before deciding how to respond.\n\nExplore genuine choices, useful cues, manageable transitions, response time, supported breaks and ways to ask what would help. The pages welcome the child’s perspective and show practical ways to offer support without turning every moment into a test.\n\nFor parents and caregivers seeking a thoughtful introduction to supportive responses, everyday observations and manageable routines, including families supporting autistic children or children with different developmental needs.\n\n1 printed full-colour softcover book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Understanding Everyday Behaviour is the ABA Parent Education 101 illustrated guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages help adults notice communication, comfort, choices and the surrounding situation before deciding how to respond.\n\nExplore genuine choices, useful cues, manageable transitions, response time, supported breaks and ways to ask what would help. The pages welcome the child’s perspective and show practical ways to offer support without turning every moment into a test.\n\nFor families exploring Pinnacle ABA therapy and child development, including parents of autistic children or children with ADHD. Learn to notice communication, comfort and context before choosing a supportive response to everyday behaviour.\n\n1 printed full-colour softcover book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages for thoughtful observation and support.",
       "Explore comfort, communication, choices and changes of plan.",
@@ -1931,12 +1976,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -1960,7 +2009,9 @@
     "assetId": "behaviour",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "ABA Parent Education 101 Book | Full-colour softcover | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s ABA Parent Education 101 guide: 31 illustrated pages on understanding behaviour through comfort, communication, choices and support. Full-colour softcover is currently out of stock."
   },
   {
     "slug": "aba-parent-education-101-understanding-everyday-behaviour-hardbound",
@@ -1978,7 +2029,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Understand the moment. Find a helpful response.",
     "shortDescription": "Pinnacle Blooms Network’s ABA Parent Education 101 guide: 31 illustrated pages on understanding behaviour through comfort, communication, choices and support.",
-    "description": "Understanding Everyday Behaviour is the ABA Parent Education 101 illustrated guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages help adults notice communication, comfort, choices and the surrounding situation before deciding how to respond.\n\nExplore genuine choices, useful cues, manageable transitions, response time, supported breaks and ways to ask what would help. The pages welcome the child’s perspective and show practical ways to offer support without turning every moment into a test.\n\nFor parents and caregivers seeking a thoughtful introduction to supportive responses, everyday observations and manageable routines, including families supporting autistic children or children with different developmental needs.\n\n1 printed full-colour hardbound book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Understanding Everyday Behaviour is the ABA Parent Education 101 illustrated guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages help adults notice communication, comfort, choices and the surrounding situation before deciding how to respond.\n\nExplore genuine choices, useful cues, manageable transitions, response time, supported breaks and ways to ask what would help. The pages welcome the child’s perspective and show practical ways to offer support without turning every moment into a test.\n\nFor families exploring Pinnacle ABA therapy and child development, including parents of autistic children or children with ADHD. Learn to notice communication, comfort and context before choosing a supportive response to everyday behaviour.\n\n1 printed full-colour hardbound book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages for thoughtful observation and support.",
       "Explore comfort, communication, choices and changes of plan.",
@@ -2176,12 +2227,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -2205,7 +2260,9 @@
     "assetId": "behaviour",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "ABA Parent Education 101 Book | Premium full-colour hardbound | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s ABA Parent Education 101 guide: 31 illustrated pages on understanding behaviour through comfort, communication, choices and support. Premium full-colour hardbound is currently out of stock."
   },
   {
     "slug": "special-education-101-learning-through-everyday-play",
@@ -2222,8 +2279,8 @@
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Follow their curiosity. Make learning feel possible.",
-    "shortDescription": "Pinnacle Blooms Network’s Special Education 101 guide: 31 illustrated pages on accessible early learning through play, stories, matching, shapes and creative choices.",
-    "description": "Learning Through Everyday Play is the Special Education 101 illustrated parent and educator guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore accessible early learning through familiar objects, stories, choices and shared play.\n\nShare accessible ideas for cause and effect, matching, position, simple quantities, shapes, patterns, pretend play, books and making marks. Welcome watching, choosing, directing and trying, with suitable materials and adult support.\n\nFor parents, caregivers and educators looking for inclusive early-learning ideas, including families supporting a child with developmental delay or different learning and participation needs.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "shortDescription": "Pinnacle Blooms Network’s 45-page Special Education 101 parent guide to stories, matching and inclusive play. Preview Learning Through Everyday Play.",
+    "description": "Learning Through Everyday Play is the Special Education 101 illustrated parent and educator guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore accessible early learning through familiar objects, stories, choices and shared play.\n\nShare accessible ideas for cause and effect, matching, position, simple quantities, shapes, patterns, pretend play, books and making marks. Welcome watching, choosing, directing and trying, with suitable materials and adult support.\n\nFor families exploring Pinnacle special education and child development, including children with autism, ADHD, speech delay or developmental delay. Share accessible play and early-learning ideas, with room for different ways to communicate and participate.\n\nOne separately readable English PDF ebook. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages about accessible early learning through play.",
       "Explore matching, shapes, patterns, position and simple quantities.",
@@ -2421,12 +2478,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -2451,7 +2512,10 @@
     "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "shopifyVariantId": "45295972941890"
+    "shopifyVariantId": "45295972941890",
+    "seoTitle": "Special Education 101 Parent Book | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s 45-page Special Education 101 parent guide to stories, matching and inclusive play. Preview Learning Through Everyday Play.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "special-education-101-learning-through-everyday-play-softcover",
@@ -2469,7 +2533,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Follow their curiosity. Make learning feel possible.",
     "shortDescription": "Pinnacle Blooms Network’s Special Education 101 guide: 31 illustrated pages on accessible early learning through play, stories, matching, shapes and creative choices.",
-    "description": "Learning Through Everyday Play is the Special Education 101 illustrated parent and educator guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore accessible early learning through familiar objects, stories, choices and shared play.\n\nShare accessible ideas for cause and effect, matching, position, simple quantities, shapes, patterns, pretend play, books and making marks. Welcome watching, choosing, directing and trying, with suitable materials and adult support.\n\nFor parents, caregivers and educators looking for inclusive early-learning ideas, including families supporting a child with developmental delay or different learning and participation needs.\n\n1 printed full-colour softcover book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Learning Through Everyday Play is the Special Education 101 illustrated parent and educator guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore accessible early learning through familiar objects, stories, choices and shared play.\n\nShare accessible ideas for cause and effect, matching, position, simple quantities, shapes, patterns, pretend play, books and making marks. Welcome watching, choosing, directing and trying, with suitable materials and adult support.\n\nFor families exploring Pinnacle special education and child development, including children with autism, ADHD, speech delay or developmental delay. Share accessible play and early-learning ideas, with room for different ways to communicate and participate.\n\n1 printed full-colour softcover book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages about accessible early learning through play.",
       "Explore matching, shapes, patterns, position and simple quantities.",
@@ -2667,12 +2731,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -2696,7 +2764,9 @@
     "assetId": "learning",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "Special Education 101 Parent Book | Full-colour softcover | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s Special Education 101 guide: 31 illustrated pages on accessible early learning through play, stories, matching, shapes and creative choices. Full-colour softcover is currently out of stock."
   },
   {
     "slug": "special-education-101-learning-through-everyday-play-hardbound",
@@ -2714,7 +2784,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Follow their curiosity. Make learning feel possible.",
     "shortDescription": "Pinnacle Blooms Network’s Special Education 101 guide: 31 illustrated pages on accessible early learning through play, stories, matching, shapes and creative choices.",
-    "description": "Learning Through Everyday Play is the Special Education 101 illustrated parent and educator guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore accessible early learning through familiar objects, stories, choices and shared play.\n\nShare accessible ideas for cause and effect, matching, position, simple quantities, shapes, patterns, pretend play, books and making marks. Welcome watching, choosing, directing and trying, with suitable materials and adult support.\n\nFor parents, caregivers and educators looking for inclusive early-learning ideas, including families supporting a child with developmental delay or different learning and participation needs.\n\n1 printed full-colour hardbound book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Learning Through Everyday Play is the Special Education 101 illustrated parent and educator guide from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli. Its 31 core pages explore accessible early learning through familiar objects, stories, choices and shared play.\n\nShare accessible ideas for cause and effect, matching, position, simple quantities, shapes, patterns, pretend play, books and making marks. Welcome watching, choosing, directing and trying, with suitable materials and adult support.\n\nFor families exploring Pinnacle special education and child development, including children with autism, ADHD, speech delay or developmental delay. Share accessible play and early-learning ideas, with room for different ways to communicate and participate.\n\n1 printed full-colour hardbound book. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. 101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "31 picture-led pages about accessible early learning through play.",
       "Explore matching, shapes, patterns, position and simple quantities.",
@@ -2912,12 +2982,16 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
         "url": "https://www.pinnacleblooms.org/leadership",
         "label": "Meet Koti Reddy and Sreeja Reddy Saripalli"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -2941,7 +3015,9 @@
     "assetId": "learning",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "Special Education 101 Parent Book | Premium full-colour hardbound | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network’s Special Education 101 guide: 31 illustrated pages on accessible early learning through play, stories, matching, shapes and creative choices. Premium full-colour hardbound is currently out of stock."
   },
   {
     "slug": "pinnacle-101-speech-occupational-pdf-pair",
@@ -2954,7 +3030,7 @@
     "format": "Two separate PDF files",
     "hook": "Explore messages and participation in the same family routines.",
     "shortDescription": "Pinnacle Blooms Network two-book PDF collection: My Message Matters and I Belong in Everyday Life. Use the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.",
-    "description": "Communication & Everyday Participation — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “I Belong in Everyday Life”.\n\nUse the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Everyday Participation — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “I Belong in Everyday Life”.\n\nUse the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Occupational Therapy 101: I Belong in Everyday Life",
@@ -2995,7 +3071,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3005,6 +3081,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
         "label": "Occupational therapy for children at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3036,7 +3116,10 @@
     "priceCurrency": "INR",
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
-    "shopifyVariantId": "45295973040194"
+    "shopifyVariantId": "45295973040194",
+    "seoTitle": "Communication & Everyday Participation — Two-Book Collection | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book PDF collection: My Message Matters and I Belong in Everyday Life. Use the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "pinnacle-101-speech-occupational-softcover-pair",
@@ -3049,7 +3132,7 @@
     "format": "Two printed full-colour softcover books",
     "hook": "Explore messages and participation in the same family routines.",
     "shortDescription": "Pinnacle Blooms Network two-book softcover collection: My Message Matters and I Belong in Everyday Life. Use the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.",
-    "description": "Communication & Everyday Participation — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “I Belong in Everyday Life”.\n\nUse the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Everyday Participation — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “I Belong in Everyday Life”.\n\nUse the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Occupational Therapy 101: I Belong in Everyday Life",
@@ -3090,7 +3173,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3100,6 +3183,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
         "label": "Occupational therapy for children at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3130,7 +3217,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Communication & Everyday Participation — Two-Book Collection | Two printed full-colour softcover books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book softcover collection: My Message Matters and I Belong in Everyday Life. Use the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide."
   },
   {
     "slug": "pinnacle-101-speech-occupational-hardbound-pair",
@@ -3143,7 +3232,7 @@
     "format": "Two printed full-colour hardbound books",
     "hook": "Explore messages and participation in the same family routines.",
     "shortDescription": "Pinnacle Blooms Network two-book hardbound collection: My Message Matters and I Belong in Everyday Life. Use the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.",
-    "description": "Communication & Everyday Participation — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “I Belong in Everyday Life”.\n\nUse the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Everyday Participation — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “I Belong in Everyday Life”.\n\nUse the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Occupational Therapy 101: I Belong in Everyday Life",
@@ -3184,7 +3273,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3194,6 +3283,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
         "label": "Occupational therapy for children at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3224,7 +3317,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Communication & Everyday Participation — Two-Book Collection | Two printed full-colour hardbound books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book hardbound collection: My Message Matters and I Belong in Everyday Life. Use the communication guide to notice gestures, words, pictures and useful messages, then explore play, dressing, washing and comfortable participation with the occupational therapy guide."
   },
   {
     "slug": "pinnacle-101-speech-behaviour-pdf-pair",
@@ -3237,7 +3332,7 @@
     "format": "Two separate PDF files",
     "hook": "Read the message. Notice the situation.",
     "shortDescription": "Pinnacle Blooms Network two-book PDF collection: My Message Matters and Understanding Everyday Behaviour. Bring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.",
-    "description": "Communication & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Understanding Everyday Behaviour”.\n\nBring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Understanding Everyday Behaviour”.\n\nBring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "ABA Parent Education 101: Understanding Everyday Behaviour",
@@ -3278,7 +3373,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3288,6 +3383,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
         "label": "ABA therapy at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3319,7 +3418,10 @@
     "priceCurrency": "INR",
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
-    "shopifyVariantId": "45295973466178"
+    "shopifyVariantId": "45295973466178",
+    "seoTitle": "Communication & Understanding Behaviour — Two-Book Collection | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book PDF collection: My Message Matters and Understanding Everyday Behaviour. Bring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "pinnacle-101-speech-behaviour-softcover-pair",
@@ -3332,7 +3434,7 @@
     "format": "Two printed full-colour softcover books",
     "hook": "Read the message. Notice the situation.",
     "shortDescription": "Pinnacle Blooms Network two-book softcover collection: My Message Matters and Understanding Everyday Behaviour. Bring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.",
-    "description": "Communication & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Understanding Everyday Behaviour”.\n\nBring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Understanding Everyday Behaviour”.\n\nBring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "ABA Parent Education 101: Understanding Everyday Behaviour",
@@ -3373,7 +3475,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3383,6 +3485,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
         "label": "ABA therapy at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3413,7 +3519,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Communication & Understanding Behaviour — Two-Book Collection | Two printed full-colour softcover books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book softcover collection: My Message Matters and Understanding Everyday Behaviour. Bring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break."
   },
   {
     "slug": "pinnacle-101-speech-behaviour-hardbound-pair",
@@ -3426,7 +3534,7 @@
     "format": "Two printed full-colour hardbound books",
     "hook": "Read the message. Notice the situation.",
     "shortDescription": "Pinnacle Blooms Network two-book hardbound collection: My Message Matters and Understanding Everyday Behaviour. Bring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.",
-    "description": "Communication & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Understanding Everyday Behaviour”.\n\nBring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Understanding Everyday Behaviour”.\n\nBring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "ABA Parent Education 101: Understanding Everyday Behaviour",
@@ -3467,7 +3575,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3477,6 +3585,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
         "label": "ABA therapy at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3507,7 +3619,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Communication & Understanding Behaviour — Two-Book Collection | Two printed full-colour hardbound books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book hardbound collection: My Message Matters and Understanding Everyday Behaviour. Bring together everyday communication ideas and thoughtful observation of behaviour. Explore requests, choices and response time alongside comfort, changes of plan, refusal and access to help or a break."
   },
   {
     "slug": "pinnacle-101-speech-learning-pdf-pair",
@@ -3520,7 +3634,7 @@
     "format": "Two separate PDF files",
     "hook": "Share messages. Explore ideas together.",
     "shortDescription": "Pinnacle Blooms Network two-book PDF collection: My Message Matters and Learning Through Everyday Play. Pair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.",
-    "description": "Communication & Learning Through Play — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Learning Through Everyday Play”.\n\nPair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Learning Through Play — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Learning Through Everyday Play”.\n\nPair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Special Education 101: Learning Through Everyday Play",
@@ -3561,7 +3675,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3571,6 +3685,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3602,7 +3720,10 @@
     "priceCurrency": "INR",
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
-    "shopifyVariantId": "45295973564482"
+    "shopifyVariantId": "45295973564482",
+    "seoTitle": "Communication & Learning Through Play — Two-Book Collection | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book PDF collection: My Message Matters and Learning Through Everyday Play. Pair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "pinnacle-101-speech-learning-softcover-pair",
@@ -3615,7 +3736,7 @@
     "format": "Two printed full-colour softcover books",
     "hook": "Share messages. Explore ideas together.",
     "shortDescription": "Pinnacle Blooms Network two-book softcover collection: My Message Matters and Learning Through Everyday Play. Pair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.",
-    "description": "Communication & Learning Through Play — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Learning Through Everyday Play”.\n\nPair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Learning Through Play — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Learning Through Everyday Play”.\n\nPair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Special Education 101: Learning Through Everyday Play",
@@ -3656,7 +3777,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3666,6 +3787,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3696,7 +3821,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Communication & Learning Through Play — Two-Book Collection | Two printed full-colour softcover books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book softcover collection: My Message Matters and Learning Through Everyday Play. Pair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation."
   },
   {
     "slug": "pinnacle-101-speech-learning-hardbound-pair",
@@ -3709,7 +3836,7 @@
     "format": "Two printed full-colour hardbound books",
     "hook": "Share messages. Explore ideas together.",
     "shortDescription": "Pinnacle Blooms Network two-book hardbound collection: My Message Matters and Learning Through Everyday Play. Pair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.",
-    "description": "Communication & Learning Through Play — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Learning Through Everyday Play”.\n\nPair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Communication & Learning Through Play — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “My Message Matters” and “Learning Through Everyday Play”.\n\nPair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Special Education 101: Learning Through Everyday Play",
@@ -3750,7 +3877,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3760,6 +3887,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3790,7 +3921,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Communication & Learning Through Play — Two-Book Collection | Two printed full-colour hardbound books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book hardbound collection: My Message Matters and Learning Through Everyday Play. Pair everyday communication with accessible early learning. Explore shared books, family languages and choices alongside matching, shapes, patterns, pretend play and creative participation."
   },
   {
     "slug": "pinnacle-101-occupational-behaviour-pdf-pair",
@@ -3803,7 +3936,7 @@
     "format": "Two separate PDF files",
     "hook": "Make room for comfort, choice and participation.",
     "shortDescription": "Pinnacle Blooms Network two-book PDF collection: I Belong in Everyday Life and Understanding Everyday Behaviour. Read everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.",
-    "description": "Everyday Participation & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Understanding Everyday Behaviour”.\n\nRead everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Everyday Participation & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Understanding Everyday Behaviour”.\n\nRead everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Occupational Therapy 101: I Belong in Everyday Life",
       "ABA Parent Education 101: Understanding Everyday Behaviour",
@@ -3844,7 +3977,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3854,6 +3987,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
         "label": "ABA therapy at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3885,7 +4022,10 @@
     "priceCurrency": "INR",
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
-    "shopifyVariantId": "45295973662786"
+    "shopifyVariantId": "45295973662786",
+    "seoTitle": "Everyday Participation & Understanding Behaviour — Two-Book Collection | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book PDF collection: I Belong in Everyday Life and Understanding Everyday Behaviour. Read everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "pinnacle-101-occupational-behaviour-softcover-pair",
@@ -3898,7 +4038,7 @@
     "format": "Two printed full-colour softcover books",
     "hook": "Make room for comfort, choice and participation.",
     "shortDescription": "Pinnacle Blooms Network two-book softcover collection: I Belong in Everyday Life and Understanding Everyday Behaviour. Read everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.",
-    "description": "Everyday Participation & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Understanding Everyday Behaviour”.\n\nRead everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Everyday Participation & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Understanding Everyday Behaviour”.\n\nRead everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Occupational Therapy 101: I Belong in Everyday Life",
       "ABA Parent Education 101: Understanding Everyday Behaviour",
@@ -3939,7 +4079,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -3949,6 +4089,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
         "label": "ABA therapy at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -3979,7 +4123,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Everyday Participation & Understanding Behaviour — Two-Book Collection | Two printed full-colour softcover books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book softcover collection: I Belong in Everyday Life and Understanding Everyday Behaviour. Read everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks."
   },
   {
     "slug": "pinnacle-101-occupational-behaviour-hardbound-pair",
@@ -3992,7 +4138,7 @@
     "format": "Two printed full-colour hardbound books",
     "hook": "Make room for comfort, choice and participation.",
     "shortDescription": "Pinnacle Blooms Network two-book hardbound collection: I Belong in Everyday Life and Understanding Everyday Behaviour. Read everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.",
-    "description": "Everyday Participation & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Understanding Everyday Behaviour”.\n\nRead everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Everyday Participation & Understanding Behaviour — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Understanding Everyday Behaviour”.\n\nRead everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Occupational Therapy 101: I Belong in Everyday Life",
       "ABA Parent Education 101: Understanding Everyday Behaviour",
@@ -4033,7 +4179,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -4043,6 +4189,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
         "label": "ABA therapy at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4073,7 +4223,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Everyday Participation & Understanding Behaviour — Two-Book Collection | Two printed full-colour hardbound books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book hardbound collection: I Belong in Everyday Life and Understanding Everyday Behaviour. Read everyday participation alongside thoughtful observation of behaviour. Explore play, dressing and washing together with comfort, changing plans, refusal and the availability of help and breaks."
   },
   {
     "slug": "pinnacle-101-occupational-learning-pdf-pair",
@@ -4086,7 +4238,7 @@
     "format": "Two separate PDF files",
     "hook": "Everyday routines meet playful exploration.",
     "shortDescription": "Pinnacle Blooms Network two-book PDF collection: I Belong in Everyday Life and Learning Through Everyday Play. Connect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.",
-    "description": "Everyday Participation & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Learning Through Everyday Play”.\n\nConnect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Everyday Participation & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Learning Through Everyday Play”.\n\nConnect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Occupational Therapy 101: I Belong in Everyday Life",
       "Special Education 101: Learning Through Everyday Play",
@@ -4127,7 +4279,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -4137,6 +4289,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4168,7 +4324,10 @@
     "priceCurrency": "INR",
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
-    "shopifyVariantId": "45295973761090"
+    "shopifyVariantId": "45295973761090",
+    "seoTitle": "Everyday Participation & Early Learning — Two-Book Collection | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book PDF collection: I Belong in Everyday Life and Learning Through Everyday Play. Connect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "pinnacle-101-occupational-learning-softcover-pair",
@@ -4181,7 +4340,7 @@
     "format": "Two printed full-colour softcover books",
     "hook": "Everyday routines meet playful exploration.",
     "shortDescription": "Pinnacle Blooms Network two-book softcover collection: I Belong in Everyday Life and Learning Through Everyday Play. Connect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.",
-    "description": "Everyday Participation & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Learning Through Everyday Play”.\n\nConnect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Everyday Participation & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Learning Through Everyday Play”.\n\nConnect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Occupational Therapy 101: I Belong in Everyday Life",
       "Special Education 101: Learning Through Everyday Play",
@@ -4222,7 +4381,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -4232,6 +4391,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4262,7 +4425,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Everyday Participation & Early Learning — Two-Book Collection | Two printed full-colour softcover books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book softcover collection: I Belong in Everyday Life and Learning Through Everyday Play. Connect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices."
   },
   {
     "slug": "pinnacle-101-occupational-learning-hardbound-pair",
@@ -4275,7 +4440,7 @@
     "format": "Two printed full-colour hardbound books",
     "hook": "Everyday routines meet playful exploration.",
     "shortDescription": "Pinnacle Blooms Network two-book hardbound collection: I Belong in Everyday Life and Learning Through Everyday Play. Connect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.",
-    "description": "Everyday Participation & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Learning Through Everyday Play”.\n\nConnect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Everyday Participation & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “I Belong in Everyday Life” and “Learning Through Everyday Play”.\n\nConnect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Occupational Therapy 101: I Belong in Everyday Life",
       "Special Education 101: Learning Through Everyday Play",
@@ -4316,7 +4481,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -4326,6 +4491,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4356,7 +4525,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Everyday Participation & Early Learning — Two-Book Collection | Two printed full-colour hardbound books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book hardbound collection: I Belong in Everyday Life and Learning Through Everyday Play. Connect participation in family routines with accessible early learning. Explore comfortable play, useful roles and practical access alongside matching, shapes, stories, patterns and creative choices."
   },
   {
     "slug": "pinnacle-101-behaviour-learning-pdf-pair",
@@ -4369,7 +4540,7 @@
     "format": "Two separate PDF files",
     "hook": "Notice what matters. Make learning approachable.",
     "shortDescription": "Pinnacle Blooms Network two-book PDF collection: Understanding Everyday Behaviour and Learning Through Everyday Play. Pair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.",
-    "description": "Understanding Behaviour & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “Understanding Everyday Behaviour” and “Learning Through Everyday Play”.\n\nPair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Understanding Behaviour & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “Understanding Everyday Behaviour” and “Learning Through Everyday Play”.\n\nPair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "ABA Parent Education 101: Understanding Everyday Behaviour",
       "Special Education 101: Learning Through Everyday Play",
@@ -4410,7 +4581,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -4420,6 +4591,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4451,7 +4626,10 @@
     "priceCurrency": "INR",
     "statusText": "Available as a PDF ebook",
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
-    "shopifyVariantId": "45295973859394"
+    "shopifyVariantId": "45295973859394",
+    "seoTitle": "Understanding Behaviour & Early Learning — Two-Book Collection | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book PDF collection: Understanding Everyday Behaviour and Learning Through Everyday Play. Pair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "pinnacle-101-behaviour-learning-softcover-pair",
@@ -4464,7 +4642,7 @@
     "format": "Two printed full-colour softcover books",
     "hook": "Notice what matters. Make learning approachable.",
     "shortDescription": "Pinnacle Blooms Network two-book softcover collection: Understanding Everyday Behaviour and Learning Through Everyday Play. Pair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.",
-    "description": "Understanding Behaviour & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “Understanding Everyday Behaviour” and “Learning Through Everyday Play”.\n\nPair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Understanding Behaviour & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “Understanding Everyday Behaviour” and “Learning Through Everyday Play”.\n\nPair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "ABA Parent Education 101: Understanding Everyday Behaviour",
       "Special Education 101: Learning Through Everyday Play",
@@ -4505,7 +4683,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -4515,6 +4693,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4545,7 +4727,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Understanding Behaviour & Early Learning — Two-Book Collection | Two printed full-colour softcover books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book softcover collection: Understanding Everyday Behaviour and Learning Through Everyday Play. Pair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute."
   },
   {
     "slug": "pinnacle-101-behaviour-learning-hardbound-pair",
@@ -4558,7 +4742,7 @@
     "format": "Two printed full-colour hardbound books",
     "hook": "Notice what matters. Make learning approachable.",
     "shortDescription": "Pinnacle Blooms Network two-book hardbound collection: Understanding Everyday Behaviour and Learning Through Everyday Play. Pair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.",
-    "description": "Understanding Behaviour & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “Understanding Everyday Behaviour” and “Learning Through Everyday Play”.\n\nPair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "Understanding Behaviour & Early Learning — Two-Book Collection from Pinnacle Blooms Network, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli, includes “Understanding Everyday Behaviour” and “Learning Through Everyday Play”.\n\nPair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n2 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The shared PinnacleAI and Verify section appears in both books; the pair contains 62 distinct core learning pages.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "ABA Parent Education 101: Understanding Everyday Behaviour",
       "Special Education 101: Learning Through Everyday Play",
@@ -4599,7 +4783,7 @@
         "label": "How PinnacleAI connects abilities and everyday life"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
       },
       {
@@ -4609,6 +4793,10 @@
       {
         "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
         "label": "Special education support at Pinnacle"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4639,7 +4827,9 @@
     "stockQuantity": 0,
     "priceCurrency": "INR",
     "statusText": "Out of stock",
-    "statusDetail": "Printed copies are not yet available. Orders are closed."
+    "statusDetail": "Printed copies are not yet available. Orders are closed.",
+    "seoTitle": "Understanding Behaviour & Early Learning — Two-Book Collection | Two printed full-colour hardbound books | Pinnacle Blooms Network",
+    "seoDescription": "Pinnacle Blooms Network two-book hardbound collection: Understanding Everyday Behaviour and Learning Through Everyday Play. Pair supportive observation with learning through play. Explore communication, comfort, choices and changes of plan alongside shared stories, matching, shapes and different ways to contribute."
   },
   {
     "slug": "pinnacle-101-four-book-pdf-collection",
@@ -4657,7 +4847,7 @@
     "statusDetail": "Receive your complete PDF download links by email after successful payment. No printed copy is included.",
     "hook": "Communication. Participation. Understanding. Learning.",
     "shortDescription": "Four illustrated English PDF ebooks from Pinnacle Blooms Network, covering everyday communication, participation, understanding behaviour and accessible early learning. All four Pinnacle 101 volumes in one collection.",
-    "description": "The Pinnacle 101 Parent Visual Library four-book PDF collection brings together “My Message Matters”, “I Belong in Everyday Life”, “Understanding Everyday Behaviour” and “Learning Through Everyday Play”, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli.\n\nExplore communication, participation in family routines, thoughtful observation of behaviour and accessible learning through play. Select the perspective relevant to the moment, without having to follow the books in a fixed order.\n\n4 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The set contains 124 distinct core learning pages; the same nine PinnacleAI and Verify pages appear in each volume.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "The Pinnacle 101 Parent Visual Library four-book PDF collection brings together “My Message Matters”, “I Belong in Everyday Life”, “Understanding Everyday Behaviour” and “Learning Through Everyday Play”, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli.\n\nExplore communication, participation in family routines, thoughtful observation of behaviour and accessible learning through play. Select the perspective relevant to the moment, without having to follow the books in a fixed order.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n4 separate, independently readable English PDF ebooks; no merged file is required. Each PDF contains 45 file pages, including 31 core learning pages, nine shared PinnacleAI and Verify information pages, one discipline-specific service page, two covers and two blank pages. The set contains 124 distinct core learning pages; the same nine PinnacleAI and Verify pages appear in each volume.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Occupational Therapy 101: I Belong in Everyday Life",
@@ -4691,8 +4881,12 @@
         "label": "Explore PinnacleAI"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4723,7 +4917,10 @@
     "acceptOrders": true,
     "stockQuantity": 0,
     "priceCurrency": "INR",
-    "shopifyVariantId": "45295974285378"
+    "shopifyVariantId": "45295974285378",
+    "seoTitle": "Four books. Everyday possibilities. | PDF | Pinnacle Blooms Network",
+    "seoDescription": "Four illustrated English PDF ebooks from Pinnacle Blooms Network, covering everyday communication, participation, understanding behaviour and accessible early learning. All four Pinnacle 101 volumes in one collection.",
+    "filePagesPerBook": 45
   },
   {
     "slug": "pinnacle-101-four-book-softcover-collection",
@@ -4741,7 +4938,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Communication. Participation. Understanding. Learning.",
     "shortDescription": "Four illustrated full-colour softcover books from Pinnacle Blooms Network, covering everyday communication, participation, understanding behaviour and accessible early learning. All four Pinnacle 101 volumes in one collection.",
-    "description": "The Pinnacle 101 Parent Visual Library four-book softcover collection brings together “My Message Matters”, “I Belong in Everyday Life”, “Understanding Everyday Behaviour” and “Learning Through Everyday Play”, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli.\n\nExplore communication, participation in family routines, thoughtful observation of behaviour and accessible learning through play. Select the perspective relevant to the moment, without having to follow the books in a fixed order.\n\n4 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The set contains 124 distinct core learning pages; the same nine PinnacleAI and Verify pages appear in each volume.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "The Pinnacle 101 Parent Visual Library four-book softcover collection brings together “My Message Matters”, “I Belong in Everyday Life”, “Understanding Everyday Behaviour” and “Learning Through Everyday Play”, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli.\n\nExplore communication, participation in family routines, thoughtful observation of behaviour and accessible learning through play. Select the perspective relevant to the moment, without having to follow the books in a fixed order.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n4 printed full-colour softcover books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The set contains 124 distinct core learning pages; the same nine PinnacleAI and Verify pages appear in each volume.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Occupational Therapy 101: I Belong in Everyday Life",
@@ -4775,8 +4972,12 @@
         "label": "Explore PinnacleAI"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4806,7 +5007,9 @@
     "assetId": "collection",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "Four books. Everyday possibilities. | Four printed full-colour softcover books | Pinnacle Blooms Network",
+    "seoDescription": "Four illustrated full-colour softcover books from Pinnacle Blooms Network, covering everyday communication, participation, understanding behaviour and accessible early learning. All four Pinnacle 101 volumes in one collection."
   },
   {
     "slug": "pinnacle-101-four-book-hardbound-collection",
@@ -4824,7 +5027,7 @@
     "statusDetail": "Printed copies are not yet available. Orders are closed.",
     "hook": "Communication. Participation. Understanding. Learning.",
     "shortDescription": "Four illustrated full-colour hardbound books from Pinnacle Blooms Network, covering everyday communication, participation, understanding behaviour and accessible early learning. All four Pinnacle 101 volumes in one collection.",
-    "description": "The Pinnacle 101 Parent Visual Library four-book hardbound collection brings together “My Message Matters”, “I Belong in Everyday Life”, “Understanding Everyday Behaviour” and “Learning Through Everyday Play”, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli.\n\nExplore communication, participation in family routines, thoughtful observation of behaviour and accessible learning through play. Select the perspective relevant to the moment, without having to follow the books in a fixed order.\n\n4 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The set contains 124 distinct core learning pages; the same nine PinnacleAI and Verify pages appear in each volume.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
+    "description": "The Pinnacle 101 Parent Visual Library four-book hardbound collection brings together “My Message Matters”, “I Belong in Everyday Life”, “Understanding Everyday Behaviour” and “Learning Through Everyday Play”, by Dr. Koti Reddy Saripalli and Dr. Sreeja Reddy Saripalli.\n\nExplore communication, participation in family routines, thoughtful observation of behaviour and accessible learning through play. Select the perspective relevant to the moment, without having to follow the books in a fixed order.\n\nPublished by Pinnacle Blooms Network for parents, caregivers and educators exploring child development. Families supporting children with autism, ADHD, speech delay or developmental delay can select the relevant communication, participation, behaviour or learning ideas and discuss individual needs with their professional team.\n\n4 printed full-colour hardbound books. Printed stock is unavailable; final physical production and print specifications are pending. Each volume has 31 core learning pages and the shared nine-page PinnacleAI and Verify section. A final printed interior page count is not yet assigned. The set contains 124 distinct core learning pages; the same nine PinnacleAI and Verify pages appear in each volume.\n\n101 is an introductory volume label, not a count of activities. Designed for parents, caregivers and educators selecting ideas to suit the child’s development, comfort, preferences and access. General educational information; the offer does not include therapy sessions, assessments or software access.",
     "features": [
       "Speech & Communication 101: My Message Matters",
       "Occupational Therapy 101: I Belong in Everyday Life",
@@ -4858,8 +5061,12 @@
         "label": "Explore PinnacleAI"
       },
       {
-        "url": "https://www.pinnacleblooms.org/verify/",
+        "url": "https://www.pinnacleblooms.org/verify",
         "label": "Pinnacle Verify: records and evidence"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "label": "Pinnacle National Autism Helpline · 9100 181 181"
       }
     ],
     "authors": [
@@ -4889,6 +5096,8 @@
     "assetId": "collection",
     "acceptOrders": false,
     "stockQuantity": 0,
-    "priceCurrency": "INR"
+    "priceCurrency": "INR",
+    "seoTitle": "Four books. Everyday possibilities. | Four printed full-colour hardbound books | Pinnacle Blooms Network",
+    "seoDescription": "Four illustrated full-colour hardbound books from Pinnacle Blooms Network, covering everyday communication, participation, understanding behaviour and accessible early learning. All four Pinnacle 101 volumes in one collection."
   }
 ]

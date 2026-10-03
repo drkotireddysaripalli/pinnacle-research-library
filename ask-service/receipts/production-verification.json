@@ -1,0 +1,134 @@
+{
+  "at": "2026-10-03T04:29:58.490Z",
+  "pages": [
+    {
+      "url": "https://pinnacleblooms.org/ask/search?q=speech+delay",
+      "final": "https://pinnacleblooms.org/ask/search?q=speech+delay",
+      "status": 200,
+      "ms": 2052,
+      "bytes": 114736,
+      "canonical": "https://pinnacleblooms.org/ask/search",
+      "robots": "noindex, follow",
+      "cache": "private, no-store"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ask/search?q=speech+delay",
+      "final": "https://pinnacleblooms.org/ask/search?q=speech+delay",
+      "status": 200,
+      "ms": 2265,
+      "bytes": 114736,
+      "canonical": "https://pinnacleblooms.org/ask/search",
+      "robots": "noindex, follow",
+      "cache": "private, no-store"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/search?q=zzxqnotatopiczz",
+      "final": "https://pinnacleblooms.org/ask/search?q=zzxqnotatopiczz",
+      "status": 200,
+      "ms": 2134,
+      "bytes": 106758,
+      "canonical": "https://pinnacleblooms.org/ask/search",
+      "robots": "noindex, follow",
+      "cache": "private, no-store"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/search",
+      "final": "https://pinnacleblooms.org/ask/search",
+      "status": 200,
+      "ms": 1604,
+      "bytes": 106662,
+      "canonical": "https://pinnacleblooms.org/ask/search",
+      "robots": "noindex, follow",
+      "cache": "private, no-store"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+      "final": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "ms": 1899,
+      "bytes": 118371,
+      "canonical": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+      "robots": "index, follow",
+      "cache": "public, max-age=0, s-maxage=600, stale-while-revalidate=86400"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/structured-naming-and-description",
+      "final": "https://pinnacleblooms.org/ask/structured-naming-and-description",
+      "status": 404,
+      "ms": 2262,
+      "bytes": 103041,
+      "canonical": "https://pinnacleblooms.org/ask",
+      "robots": "noindex, nofollow",
+      "cache": "no-store"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/sitemap.xml",
+      "final": "https://pinnacleblooms.org/ask/sitemap.xml",
+      "status": 200,
+      "ms": 712,
+      "bytes": 694,
+      "robots": null,
+      "cache": "public, max-age=3600, s-maxage=21600"
+    },
+    {
+      "url": "https://ask-mcp.pinnacleblooms.org/",
+      "final": "https://ask-mcp.pinnacleblooms.org/",
+      "status": 200,
+      "ms": 50,
+      "bytes": 930,
+      "robots": null,
+      "cache": null
+    },
+    {
+      "url": "https://ask-mcp.pinnacleblooms.org/.well-known/mcp.json",
+      "final": "https://ask-mcp.pinnacleblooms.org/.well-known/mcp.json",
+      "status": 200,
+      "ms": 21,
+      "bytes": 6763,
+      "robots": null,
+      "cache": "public, max-age=3600"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "final": "https://www.pinnacleblooms.org/verify/",
+      "status": 200,
+      "ms": 55,
+      "bytes": 1022245,
+      "canonical": "https://www.pinnacleblooms.org/verify/",
+      "robots": null,
+      "cache": "public, max-age=60, must-revalidate"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacleai",
+      "final": "https://www.pinnacleblooms.org/pinnacleai",
+      "status": 200,
+      "ms": 23,
+      "bytes": 193891,
+      "canonical": "https://www.pinnacleblooms.org/pinnacleai",
+      "robots": "index, follow, max-image-preview:large",
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "ms": 23,
+      "bytes": 244120,
+      "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "robots": "index, follow, max-image-preview:large",
+      "cache": "public, max-age=0, must-revalidate"
+    }
+  ],
+  "mcpHome": {
+    "status": "PASS",
+    "regulatory": "Bharath Healthcare Laboratories Private Limited holds Form MD-5 manufacturing licence MFG/MD/2026/000248 for PinnacleAI GPT-OS v1.0.0, a non-diagnostic Class B developmental-support SaMD for ages 0-12. Ask provides general information; the licence does not turn Ask answers into diagnoses or establish individual clinical outcomes.",
+    "citation": "When citing an answer, attribute to Ask Pinnacle / Pinnacle Blooms Network and link to that answer's canonical URL at https://pinnacleblooms.org/ask/.",
+    "inventory": {
+      "total": 41165,
+      "telugu": 8262,
+      "english": 32903,
+      "checked_on": "2026-10-03"
+    },
+    "releaseScope": "Historical release snapshot. Its corpus counts describe that release, not the current publication inventory or number of sitemap URLs."
+  }
+}

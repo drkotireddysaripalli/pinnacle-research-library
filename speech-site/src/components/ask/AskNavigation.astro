@@ -1,0 +1,9 @@
+---
+import Icon from '../Icon.astro';const {q='',lang='en'}=Astro.props;
+---
+<nav class="ask-nav" aria-label="Ask navigation"><div class="ask-nav-inner"><a class="ask-wordmark" href="/ask"><Icon name="book"/>Ask Pinnacle</a><form class="ask-search-form" action="/ask/search" method="get" role="search"><label class="ask-sr" for="ask-query">Search published answers</label><input id="ask-query" name="q" type="search" value={q} maxlength="200" placeholder={lang==='te'?'మీ ప్రశ్నను వెతకండి':'What would you like to understand?'}/><button type="submit" aria-label="Search answers"><Icon name="search"/></button></form><a href="/ask/lens" class="ask-nav-browse">Browse topics →</a><a href="/ask/account" class="ask-nav-account"><Icon name="people" size={20}/>Account</a></div></nav>
+<style>
+.ask-sr{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.ask-nav-account{display:inline-flex;align-items:center;gap:7px;min-height:44px;font-size:14px;font-weight:700;white-space:nowrap}
+@media(max-width:760px){.ask-nav-account{order:0;margin-left:auto}.ask-nav-browse{order:3}}
+</style>

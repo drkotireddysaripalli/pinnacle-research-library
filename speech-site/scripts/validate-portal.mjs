@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import nav from '../src/data/portal-navigation.json' with {type:'json'};
+import approvedAuthority from '../tests/fixtures/shared-authority-owner-approved.json' with {type:'json'};
 const html=fs.readFileSync('dist/index.html','utf8');
 const managedHtml=[
   'dist/index.html',
@@ -30,8 +31,8 @@ const links=[...nav.main,...nav.mobileExtras,...nav.aboutContact,...nav.therapy.
 check('Complete documented portal navigation is present',links.every(x=>hrefs.has(full(x.url))));
 check('Five priority therapy menus have native disclosure controls',(html.match(/class="portal-therapy-menu"/g)||[]).length===5);
 check('Header and footer navigation are server rendered',html.includes('aria-label="Complete site navigation"')&&html.includes('aria-label="Research Studies"'));
-const priorityLabels=['Verify','PinnacleAI®','Research','AbilityScore®','7 Readiness Indexes','Self-Sufficient','Mainstream','160Yrs Paradigm Shift','Citations'];
-const priorityDetails=['4 Billion DataPoints for 900Million Children','Class B SaMD · MD-5 licence &amp; BIS scope','Study Journals &amp; Publications','0–1000 developmental ability scale','Your Child Life As it could be','Growing everyday independence','School &amp; community participation','Life-first child development','Quote · link · download'];
+const priorityLabels=approvedAuthority.main.map(item=>item.label);
+const priorityDetails=approvedAuthority.main.map(item=>item.lines.join(' ').replaceAll('&','&amp;'));
 check('Authority strip follows the proof-to-purpose narrative order',nav.main.map(link=>link.label).join('|')===priorityLabels.join('|'));
 check('Reader-facing authority header is identical across every managed public page',managedHtml.every(page=>priorityLabels.every(label=>page.includes(`class="portal-nav-label">${label}</span>`))&&priorityDetails.every(detail=>page.includes(detail))&&page.includes('data-cta="header-enrol"')));
 check('Priority therapy order and labels are exact',nav.therapy.map(group=>group.label).join('|')==='Autism Therapy|Speech Therapy|Occupational Therapy|ABA Therapy|Special Education');

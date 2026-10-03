@@ -1,0 +1,63 @@
+---
+import {env} from 'cloudflare:workers';
+import AskLayout from '../../../src/layouts/AskLayout.astro';
+import AskHome from '../../../src/components/ask/AskHome.astro';
+import AskListing from '../../../src/components/ask/AskListing.astro';
+import AskAnswer from '../../../src/components/ask/AskAnswer.astro';
+import AnswerCards from '../../../src/components/ask/AnswerCards.astro';
+import AskContact from '../../../src/components/ask/AskContact.astro';
+import {ASK,SITE,dimensions,guides,pretty} from '../../../src/lib/ask/content';
+import {answer,directory,collection,search,rpc} from '../../../src/lib/ask/repository';
+import {institution} from '../../../src/lib/ask/overrides';
+let invalidPath=false;
+let path=(Astro.params.path||'').replace(/\/+$/,'').split('/').map(segment=>{
+ try { const decoded=decodeURIComponent(segment); if(/[\/\\\x00-\x1f\x7f]/.test(decoded))invalidPath=true; return decoded; }
+ catch { invalidPath=true; return segment; }
+}).join('/');
+let lang=path==='te'||path.startsWith('te/')?'te':'en';
+if(lang==='te')path=path.replace(/^te\/?/,'');if(path.endsWith('-te'))lang='te';
+const page=Math.min(2000,Math.max(1,Number.parseInt(Astro.url.searchParams.get('page')||'1')||1));
+const q=path==='search'?(Astro.url.searchParams.get('q')||'').trim().slice(0,200):'';
+let mode='home',title='Ask Pinnacle | Child development questions, answers & guidance',intro='Clear explanations about child development, therapies and everyday life. Explore questions, sources and next steps with Pinnacle Blooms Network.';
+let a:any=null,data:any={items:[]},guide:any=null,schema:any[]=[],alternates:any[]=[];
+let canonical=ASK+(path?'/'+path:'');if(lang==='te'&&!path.endsWith('-te'))canonical=ASK+'/te'+(path?'/'+path:'');
+let robots='index, follow, max-image-preview:large';
+try{
+ if(invalidPath){mode='missing'}
+ else if(!path){mode='home'}
+ else if(path==='search'){mode='search';title='Search published answers | Ask Pinnacle';intro='Find an explanation for the question on your mind.';robots='noindex, follow';data.items=q.length>=2?await search(env,q):[];}
+ else if(path==='dataset'){mode='dataset';title='Read, share & cite Ask Pinnacle';intro='Public answers, source links and ways to retrieve them.'}
+ else if(path==='lens'){mode='lenses';title='Explore questions from different perspectives | Ask Pinnacle';intro='Choose the view that helps you ask a more useful question.';data=await rpc(env,'ask_portal_catalogue');}
+ else {
+ const dim=dimensions.find(d=>d.slug===path);
+ if(dim){mode='directory';title=dim.title+' | Ask Pinnacle';intro=dim.description;const key=dim.slug==='life-skills'?'lifeskills':dim.slug;data=await directory(env,['people','standards-icf','standards-icd'].includes(key)?dim.kind:'dimension:'+key,lang,page);}
+ else if(guides[path]){mode='guide';guide=guides[path];title=guide.title+' | Ask Pinnacle';intro=guide.intro;data=guide.value?await collection(env,guide.kind,guide.value,lang,page):{items:[],total:0};if(!data.total&&guide.question){data.items=await search(env,guide.question);data.total=data.items.length;}}
+ else if(path.startsWith('lens/')){
+ const parts=path.split('/');if(parts.length<2||parts.length>3)mode='missing';
+ else if(parts.length===2){mode='directory';title=pretty(parts[1])+' | Ask Pinnacle';intro='Explore published answers grouped by '+pretty(parts[1]).toLowerCase()+'.';data=await directory(env,parts[1],lang,page);if(!data.total)mode='missing';}
+ else{mode='collection';title=pretty(parts[2])+' | Ask Pinnacle';intro='Explore explanations, everyday questions and next steps connected with '+pretty(parts[2]).toLowerCase()+'.';data=await collection(env,parts[1],parts[2],parts[1]==='language'&&['en','te'].includes(parts[2])?parts[2]:lang,page);if(!data.total)mode='missing';}
+ }else if(!path.includes('/')){
+ a=lang==='en'?institution(path):null;a=a||await answer(env,path,lang);
+ if(a){a.resources=await rpc(env,'ask_portal_references',{p_slugs:[...(a.related_materials||[]),...(a.related_techniques||[])].map(x=>x.slug).filter(Boolean),p_lang:a.lang});mode='answer';title=a.meta_title||a.title;intro=a.meta_description||a.summary||a.title;canonical=a.canonical;robots=a.meta_robots;lang=a.lang;alternates=(a.alternates||[]).filter(x=>x.indexable);const faqs=Array.isArray(a.faq)?a.faq.filter(f=>f.q&&f.a):[];if(faqs.length)schema.push({'@type':'FAQPage','@id':canonical+'#faq',mainEntity:faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))});}
+ else{mode='collection';data=await collection(env,'topic',path,lang,page);title=pretty(path)+' | Ask Pinnacle';intro='Explore the questions families and professionals ask about '+pretty(path).toLowerCase()+'.';if(!data.total)mode='missing';}
+ }else mode='missing';
+ }
+ if(['collection','guide'].includes(mode)&&!data.indexable)robots='noindex, follow';
+ if(mode==='directory'&&!data.total)robots='noindex, follow';
+ const indexing=mode==='lenses'?data.indexing_enabled:await rpc(env,'ask_indexing_enabled'); if(!indexing)robots='noindex, nofollow';
+ if(page>1){canonical+='?page='+page;robots='noindex, follow';}
+ if(mode==='missing'){Astro.response.status=404;title='Answer not found | Ask Pinnacle';intro='Try another question or explore our published topics.';robots='noindex, follow';}
+}catch(error){console.error('Ask public lookup unavailable',error instanceof Error?error.message:'lookup error');mode='unavailable';Astro.response.status=503;title='Ask is temporarily unavailable';intro='Please try again shortly or call the Pinnacle team.';robots='noindex, follow';Astro.response.headers.set('Retry-After','60');}
+Astro.response.headers.set('X-Robots-Tag',robots);Astro.response.headers.set('Cache-Control',mode==='search'||['missing','unavailable'].includes(mode)?'private, no-store':'public, max-age=0, s-maxage=300');
+Astro.response.headers.set('Referrer-Policy','no-referrer');
+const crumbs=[{name:'Ask Pinnacle',url:ASK},...(path?[{name:mode==='answer'?a.title:title.replace(' | Ask Pinnacle',''),url:canonical}]:[])];
+---
+<AskLayout title={title} description={intro} canonical={canonical} lang={lang} robots={robots} schema={schema} alternates={alternates} q={q} crumbs={crumbs} type={mode==='answer'?'MedicalWebPage':mode==='home'?'WebPage':'CollectionPage'} image={mode==='answer'?ASK+'/'+a.slug+'.png':ASK+'/og/default.png'} publication={a?{datePublished:a.published_at,lastReviewed:a.last_reviewed_at}:undefined}>
+ {mode==='home'&&<AskHome lang={lang}/>}
+ {['directory','collection','guide'].includes(mode)&&<AskListing title={title.replace(' | Ask Pinnacle','')} intro={intro} data={data} mode={mode==='directory'?'directory':'collection'} canonical={canonical.split('?')[0]} page={page} lang={lang} guide={guide}/>}
+ {mode==='answer'&&<AskAnswer answer={a}/>}
+ {mode==='search'&&<><section class="ask-wrap ask-section"><p class="ask-eyebrow">ASK PINNACLE · SEARCH</p><h1>{q?'Answers for “'+q+'”':'What would you like to understand?'}</h1><p class="ask-lead">{q.length>=2?data.items.length?'Explore the matching published answers below.':'No matching answers found. Try a shorter phrase, condition or skill.':'Enter at least two characters in the search box above.'}</p><AnswerCards items={data.items}/><p><a href={ASK+'/lens'}>Browse topics instead →</a></p></section><AskContact/></>}
+ {mode==='lenses'&&<section class="ask-wrap ask-section"><p class="ask-eyebrow">DIFFERENT VIEWS. CONNECTED ANSWERS.</p><h1>Explore what matters to you.</h1><p class="ask-lead">{intro}</p><div class="ask-topic-grid">{(data.lenses||[]).map(l=><a class="ask-topic-card" href={ASK+'/lens/'+encodeURIComponent(l.kind)}><h2>{pretty(l.kind)}</h2><p>{l.total.toLocaleString('en-IN')} published answers connected with this perspective.</p><span class="ask-read">Browse questions →</span></a>)}</div><p><a href={ASK+'/te'} lang="te">తెలుగు ప్రశ్నలను చూడండి →</a></p></section>}
+ {mode==='dataset'&&<section class="ask-wrap ask-section ask-prose"><p class="ask-eyebrow">PUBLIC KNOWLEDGE · TRACEABLE SOURCES</p><h1>Read. Share. Cite.</h1><p class="ask-lead">Ask connects questions about child development with published explanations, related questions and the available source references.</p><h2>For families and professionals</h2><p>Read an answer in full, follow its sources and bring questions to an appropriately qualified professional. Each answer has a stable address, a copy-citation button and a plain-text version.</p><h2>For researchers and machine readers</h2><ul><li><a href={ASK+'/llms.txt'}>Reading guide</a> and <a href={ASK+'/llms-full.txt'}>extended route guide</a>.</li><li><a href={ASK+'/sitemap.xml'}>Indexable public URL sitemap</a>.</li><li>Append <code>.md</code> or <code>.json</code> to an answer’s canonical address to retrieve its public explanation, metadata and source links.</li><li><a href="https://ask-mcp.pinnacleblooms.org/mcp">Public Ask MCP endpoint</a> for supported retrieval clients.</li></ul><h2>Source and rights</h2><p>Ask is published by Pinnacle Blooms Network, operated by Bharath Healthcare Laboratories Private Limited. Source references belong to their respective publishers. Public reading access does not assign an open-data licence or establish independent validation of every answer.</p><p><a href={SITE+'/verify/evidence/cite.html'}>Cite Pinnacle’s research and regulatory evidence →</a></p><h2>A useful citation</h2><p>Pinnacle Blooms Network. “Answer title.” Ask Pinnacle. Publication or recorded update date, where shown. Canonical answer URL. Your access date.</p></section>}
+ {['missing','unavailable'].includes(mode)&&<section class="ask-wrap ask-section"><p class="ask-eyebrow">{mode==='missing'?'404 · ANSWER NOT FOUND':'503 · PLEASE TRY AGAIN'}</p><h1>{title.replace(' | Ask Pinnacle','')}</h1><p class="ask-lead">{intro}</p><a class="ask-button" href={ASK}>Explore Ask Pinnacle →</a><p><a href="tel:+919100181181">Call 9100 181 181</a></p></section>}
+</AskLayout>

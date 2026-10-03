@@ -1,0 +1,351 @@
+{
+  "at": "2026-10-03T05:32:41.220Z",
+  "base": "http://127.0.0.1:4330",
+  "results": [
+    {
+      "route": "/ask",
+      "status": 200,
+      "ms": 1702,
+      "bytes": 119687,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask"
+    },
+    {
+      "route": "/ask/behaviours",
+      "status": 200,
+      "ms": 4812,
+      "bytes": 131007,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/behaviours"
+    },
+    {
+      "route": "/ask/conditions",
+      "status": 200,
+      "ms": 4841,
+      "bytes": 130948,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/conditions"
+    },
+    {
+      "route": "/ask/skills",
+      "status": 200,
+      "ms": 4847,
+      "bytes": 129740,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/skills"
+    },
+    {
+      "route": "/ask/ages",
+      "status": 200,
+      "ms": 813,
+      "bytes": 112695,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/ages"
+    },
+    {
+      "route": "/ask/life-skills",
+      "status": 200,
+      "ms": 872,
+      "bytes": 113107,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/life-skills"
+    },
+    {
+      "route": "/ask/domains",
+      "status": 200,
+      "ms": 916,
+      "bytes": 110646,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/domains"
+    },
+    {
+      "route": "/ask/abilities",
+      "status": 200,
+      "ms": 1009,
+      "bytes": 129699,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/abilities"
+    },
+    {
+      "route": "/ask/readiness",
+      "status": 200,
+      "ms": 664,
+      "bytes": 110603,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/readiness"
+    },
+    {
+      "route": "/ask/assessments",
+      "status": 200,
+      "ms": 680,
+      "bytes": 128374,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/assessments"
+    },
+    {
+      "route": "/ask/techniques",
+      "status": 200,
+      "ms": 1521,
+      "bytes": 122502,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/techniques"
+    },
+    {
+      "route": "/ask/therapies",
+      "status": 200,
+      "ms": 1588,
+      "bytes": 127471,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/therapies"
+    },
+    {
+      "route": "/ask/lens",
+      "status": 200,
+      "ms": 980,
+      "bytes": 110019,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/lens"
+    },
+    {
+      "route": "/ask/standards-icd",
+      "status": 200,
+      "ms": 999,
+      "bytes": 109971,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/standards-icd"
+    },
+    {
+      "route": "/ask/standards-icf",
+      "status": 200,
+      "ms": 1012,
+      "bytes": 129102,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/standards-icf"
+    },
+    {
+      "route": "/ask/people",
+      "status": 200,
+      "ms": 1907,
+      "bytes": 115975,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/people"
+    },
+    {
+      "route": "/ask/lens/condition",
+      "status": 200,
+      "ms": 662,
+      "bytes": 112102,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/lens/condition"
+    },
+    {
+      "route": "/ask/lens/condition/autism",
+      "status": 200,
+      "ms": 871,
+      "bytes": 125175,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/lens/condition/autism"
+    },
+    {
+      "route": "/ask/autism",
+      "status": 200,
+      "ms": 1095,
+      "bytes": 127484,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/autism"
+    },
+    {
+      "route": "/ask/abilityscore",
+      "status": 200,
+      "ms": 2732,
+      "bytes": 118233,
+      "robots": "noindex, follow",
+      "canonical": "https://pinnacleblooms.org/ask/abilityscore"
+    },
+    {
+      "route": "/ask/materials",
+      "status": 200,
+      "ms": 833,
+      "bytes": 124615,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/materials"
+    },
+    {
+      "route": "/ask/myths",
+      "status": 200,
+      "ms": 850,
+      "bytes": 123062,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/myths"
+    },
+    {
+      "route": "/ask/how-to",
+      "status": 200,
+      "ms": 866,
+      "bytes": 124167,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/how-to"
+    },
+    {
+      "route": "/ask/compare",
+      "status": 200,
+      "ms": 975,
+      "bytes": 119613,
+      "robots": "noindex, follow",
+      "canonical": "https://pinnacleblooms.org/ask/compare"
+    },
+    {
+      "route": "/ask/te",
+      "status": 200,
+      "ms": 13,
+      "bytes": 120046,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/te"
+    },
+    {
+      "route": "/ask/access/financial",
+      "status": 200,
+      "ms": 607,
+      "bytes": 116501,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/access/financial"
+    },
+    {
+      "route": "/ask/access/legal",
+      "status": 200,
+      "ms": 679,
+      "bytes": 116403,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/access/legal"
+    },
+    {
+      "route": "/ask/parents/wellbeing",
+      "status": 200,
+      "ms": 696,
+      "bytes": 119433,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/parents/wellbeing"
+    },
+    {
+      "route": "/ask/dataset",
+      "status": 200,
+      "ms": 20,
+      "bytes": 107659,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/dataset"
+    },
+    {
+      "route": "/ask/what-is-pinnacle-blooms-network",
+      "status": 200,
+      "ms": 473,
+      "bytes": 117141,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network"
+    },
+    {
+      "route": "/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child",
+      "status": 200,
+      "ms": 487,
+      "bytes": 117757,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child"
+    },
+    {
+      "route": "/ask/te/conditions",
+      "status": 200,
+      "ms": 620,
+      "bytes": 131142,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/te/conditions"
+    },
+    {
+      "route": "/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "ms": 467,
+      "bytes": 122331,
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions"
+    },
+    {
+      "route": "/ask/search?q=occupational%20therapy",
+      "status": 200,
+      "ms": 554,
+      "bytes": 117225,
+      "robots": "noindex, follow",
+      "canonical": "https://pinnacleblooms.org/ask/search"
+    },
+    {
+      "route": "/ask/lens/condition/zz-no-such-value-93",
+      "status": 404,
+      "ms": 613,
+      "bytes": 106335,
+      "robots": "noindex, follow",
+      "canonical": "https://pinnacleblooms.org/ask/lens/condition/zz-no-such-value-93"
+    },
+    {
+      "route": "/ask/zz-no-such-answer-93",
+      "status": 404,
+      "ms": 1080,
+      "bytes": 106265,
+      "robots": "noindex, follow",
+      "canonical": "https://pinnacleblooms.org/ask/zz-no-such-answer-93"
+    },
+    {
+      "route": "/ask/what-happens-during-occupational-therapy-sessions.md",
+      "status": 200,
+      "ms": 10,
+      "bytes": 4333,
+      "robots": "noindex, follow",
+      "canonical": null
+    },
+    {
+      "route": "/ask/llms.txt",
+      "status": 200,
+      "ms": 18,
+      "bytes": 629,
+      "robots": null,
+      "canonical": null
+    },
+    {
+      "route": "/ask/llms-full.txt",
+      "status": 200,
+      "ms": 19,
+      "bytes": 1017,
+      "robots": null,
+      "canonical": null
+    },
+    {
+      "route": "/ask/what-happens-during-occupational-therapy-sessions.json",
+      "status": 200,
+      "ms": 24,
+      "bytes": 7552,
+      "robots": "noindex, follow",
+      "canonical": null
+    },
+    {
+      "route": "/ask/robots.txt",
+      "status": 200,
+      "ms": 5,
+      "bytes": 100,
+      "robots": null,
+      "canonical": null
+    },
+    {
+      "route": "/ask/sitemap-navigation.xml",
+      "status": 200,
+      "ms": 11,
+      "bytes": 1344,
+      "robots": null,
+      "canonical": null
+    },
+    {
+      "route": "/ask/sitemap.xml",
+      "status": 200,
+      "ms": 2152,
+      "bytes": 572,
+      "robots": null,
+      "canonical": null
+    }
+  ],
+  "failures": []
+}

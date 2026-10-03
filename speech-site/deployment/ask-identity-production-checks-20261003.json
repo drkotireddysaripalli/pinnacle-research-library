@@ -1,0 +1,57 @@
+{
+  "at": "2026-10-03T09:07:23.823Z",
+  "sourceCommit": "03d1577e83dd6fbb51876c1c39ec8cf4d5143d08",
+  "workerVersion": "7a7301ef-186d-4dd7-b055-bf65c3bfc4f1",
+  "results": [
+    {
+      "path": "/ask/account",
+      "status": 200,
+      "private": true,
+      "noFalseVerification": true,
+      "unconfiguredProvidersHidden": true
+    },
+    {
+      "path": "/ask/account?status=verified",
+      "status": 200,
+      "private": true,
+      "noFalseVerification": true,
+      "unconfiguredProvidersHidden": true
+    },
+    {
+      "path": "/ask/account?status=code-sent",
+      "status": 200,
+      "private": true,
+      "noFalseVerification": true,
+      "unconfiguredProvidersHidden": true
+    },
+    {
+      "path": "/ask",
+      "status": 200
+    },
+    {
+      "path": "/ask/auth/google",
+      "scope": "cross-origin rejected without initiating account",
+      "status": 403
+    }
+  ],
+  "googleBrowser": "Actual owner Google callback completed in Chrome",
+  "whatsappDelivery": "Owner confirmed receipt and successfully entered the real six-digit WhatsApp code",
+  "sameUserVerification": "Verified in live UI and server",
+  "ci": {
+    "id": 37111659722,
+    "conclusion": "success"
+  },
+  "focusedTests": 16,
+  "typeErrors": 0,
+  "ownerVerification": {
+    "at": "2026-10-03T09:20:01.006Z",
+    "liveUi": "Account connected; WhatsApp number verified",
+    "emailConfirmed": true,
+    "phoneConfirmed": true,
+    "googleIdentitySameUser": true,
+    "watiReceipt": true,
+    "receiptMatchesCurrentPhone": true,
+    "receiptMatchesConfirmation": true,
+    "privateContactValuesOmitted": true
+  }
+}

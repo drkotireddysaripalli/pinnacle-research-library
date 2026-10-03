@@ -1,0 +1,29 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import operatorEmblem from '../assets/bhcl-emblem-official.png';
+import regularFontUrl from '../../public/pinnacle-pages-fonts/sintony-latin.woff2?url';
+import measurementUrl from '../../public/pinnacle-pages-scripts/speech-measurement.js?url';
+import AskNavigation from '../components/ask/AskNavigation.astro';
+import {ASK,SITE,contact} from '../lib/ask/content';
+import '../styles/page.css';import '../styles/portal-shell.css';import '../styles/readability.css';import '../styles/shared-shell.css';import '../styles/ask.css';
+const {title,description,canonical=ASK,lang='en',robots='index, follow, max-image-preview:large',image=ASK+'/og/default.png',imageAlt=title,type='WebPage',schema=[],alternates=[],q='',crumbs=[],publication,privatePage=false}=Astro.props;
+const graph={'@context':'https://schema.org','@graph':[
+ {'@type':'Organization','@id':SITE+'/verify/#organization',name:'Bharath Healthcare Laboratories Private Limited',url:SITE,logo:new URL(operatorEmblem.src,ASK).href,brand:{'@id':SITE+'/verify/#pinnacle-brand'},telephone:'+919100181181'},
+ {'@type':'Brand','@id':SITE+'/verify/#pinnacle-brand',name:'Pinnacle Blooms Network'},
+ {'@type':'WebSite','@id':ASK+'#website',url:ASK,name:'Ask Pinnacle',publisher:{'@id':SITE+'/verify/#organization'},inLanguage:['en','te']},
+ {'@type':type,'@id':canonical+'#page',url:canonical,name:title,description,inLanguage:lang,isPartOf:{'@id':ASK+'#website'},publisher:{'@id':SITE+'/verify/#organization'},...(publication||{})},
+ ...(crumbs.length?[{'@type':'BreadcrumbList',itemListElement:crumbs.map((c,i)=>({'@type':'ListItem',position:i+1,name:c.name,item:c.url}))}]:[]),...schema]};
+---
+<!doctype html><html lang={lang==='te'?'te':'en-IN'}><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title}</title><meta name="description" content={description}/><meta name="robots" content={robots}/><link rel="canonical" href={canonical}/><link rel="icon" href={SITE+'/verify/favicon.png'}/>
+ {alternates.map(a=><link rel="alternate" hreflang={a.lang||a.code} href={a.href}/>)}<meta property="og:type" content={type==='MedicalWebPage'?'article':'website'}/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:site_name" content="Ask Pinnacle · Pinnacle Blooms Network"/><meta property="og:image" content={image}/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image:alt" content={imageAlt}/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/><meta name="twitter:image" content={image}/><meta name="twitter:image:alt" content={imageAlt}/><meta name="theme-color" content="#8f2879"/>
+ {!privatePage&&<script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\u003c')}/>}
+ <link rel="preload" href={regularFontUrl} as="font" type="font/woff2" crossorigin/>
+</head><body class="ask-page" data-page-variant="ask" data-shared-shell="v159">
+ <SiteHeader currentPath="/ask"/><AskNavigation q={q} lang={lang}/><main id="main"><slot/></main><SiteFooter/>
+ <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={contact.tel} data-cta="mobile-call">Call {contact.phone}</a><a href={contact.enrol} data-cta="mobile-assessment">Arrange a visit</a></nav>
+ <script is:inline define:vars={{measurementUrl,privatePage}}>if(!privatePage&&!/^\/ask\/(?:account|auth)(?:\/|$)/.test(location.pathname))import(measurementUrl);</script>
+ <script>
+ document.addEventListener('click',async(event)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-ask-share]');if(!button)return;const canonical=document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href||location.href;const mode=button.dataset.askShare;const text=mode==='citation'?document.title+'. Ask Pinnacle, Pinnacle Blooms Network. '+canonical:canonical;try{if(mode==='native'&&navigator.share)await navigator.share({title:document.title,url:canonical});else{await navigator.clipboard.writeText(text);const status=document.querySelector('[data-ask-share-status]');if(status)status.textContent=mode==='citation'?'Citation copied.':'Link copied.'}}catch(error){if((error as Error).name!=='AbortError'){const status=document.querySelector('[data-ask-share-status]');if(status)status.textContent='Copy this page address from your browser to share it.'}}});
+ </script>
+</body></html>

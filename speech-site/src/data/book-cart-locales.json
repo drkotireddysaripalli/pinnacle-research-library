@@ -67,7 +67,8 @@
     "expiredBag": "Your book bag has expired. Please add your books again.",
     "currentlyUnavailable": "Currently unavailable",
     "shopUnavailableShort": "Shop temporarily unavailable",
-    "cartUpdateFailed": "Your book bag could not be updated. Please try again or contact book support."
+    "cartUpdateFailed": "Your book bag could not be updated. Please try again or contact book support.",
+    "helplineLabel": "National Autism Helpline ↗"
   },
   "hi": {
     "navAria": "पुस्तक दुकान नेविगेशन",
@@ -137,7 +138,8 @@
     "expiredBag": "आपके ईबुक बैग का समय समाप्त हो गया है। पुस्तकें फिर से जोड़ें।",
     "currentlyUnavailable": "अभी उपलब्ध नहीं",
     "shopUnavailableShort": "दुकान अभी उपलब्ध नहीं",
-    "cartUpdateFailed": "ईबुक बैग अपडेट नहीं हो पाया। फिर कोशिश करें या पुस्तक सहायता से संपर्क करें।"
+    "cartUpdateFailed": "ईबुक बैग अपडेट नहीं हो पाया। फिर कोशिश करें या पुस्तक सहायता से संपर्क करें।",
+    "helplineLabel": "राष्ट्रीय ऑटिज़्म हेल्पलाइन ↗"
   },
   "te": {
     "navAria": "పుస్తకాల దుకాణం మార్గాలు",
@@ -207,7 +209,8 @@
     "expiredBag": "మీ పుస్తకాల బ్యాగ్ గడువు ముగిసింది. పుస్తకాలను మళ్లీ చేర్చండి.",
     "currentlyUnavailable": "ప్రస్తుతం అందుబాటులో లేదు",
     "shopUnavailableShort": "దుకాణం తాత్కాలికంగా అందుబాటులో లేదు",
-    "cartUpdateFailed": "పుస్తకాల బ్యాగ్‌ను అప్‌డేట్ చేయలేకపోయాం. మళ్లీ ప్రయత్నించండి లేదా పుస్తకాల సహాయ బృందాన్ని సంప్రదించండి."
+    "cartUpdateFailed": "పుస్తకాల బ్యాగ్‌ను అప్‌డేట్ చేయలేకపోయాం. మళ్లీ ప్రయత్నించండి లేదా పుస్తకాల సహాయ బృందాన్ని సంప్రదించండి.",
+    "helplineLabel": "జాతీయ ఆటిజం హెల్ప్‌లైన్ ↗"
   },
   "routes": {
     "en": {

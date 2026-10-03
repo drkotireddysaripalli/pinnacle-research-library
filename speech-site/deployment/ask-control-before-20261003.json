@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/verify/",
+    "status": 200,
+    "location": null,
+    "sha256": "98dcb976cb633b9427224bc987da24e91a7eebcef90067f8f6aad02702e41107"
+  },
+  {
+    "path": "/pinnacleai",
+    "status": 200,
+    "location": null,
+    "sha256": "e95dade31cb69ae7e7d84a98abe6a59429e6d08ec8e9a24ae68e7decb0786945"
+  },
+  {
+    "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+    "status": 200,
+    "location": null,
+    "sha256": "862af7408b7412a976f7ddc382444bf70c0869f02de4322cca1bd753f21961cf"
+  },
+  {
+    "path": "/enroll-autism-speech-aba-therapies-india",
+    "status": 200,
+    "location": null,
+    "sha256": "98855fcf9517b11ca142b1de96fba596fe27f455ce22f28b0577ed16f87a13ef"
+  },
+  {
+    "path": "/asked",
+    "status": 404,
+    "location": null,
+    "sha256": "67f8bee2b0e642795af702c880158b346e4fb05705db893630ede86aa915d876"
+  }
+]

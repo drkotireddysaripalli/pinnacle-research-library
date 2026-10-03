@@ -1,0 +1,566 @@
+{
+  "at": "2026-10-03T06:01:11.164Z",
+  "initialAudit": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "contextRange": {
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-30"
+    },
+    "auditedCount": 3,
+    "skipped": [],
+    "summary": {
+      "total_pages": 3,
+      "total_issues": 6,
+      "by_severity": {
+        "critical": 0,
+        "high": 0,
+        "medium": 3,
+        "low": 3,
+        "info": 0
+      },
+      "indexable_pages": 3,
+      "non_indexable_pages": 0
+    },
+    "pages": [
+      {
+        "url": "https://pinnacleblooms.org/ask/conditions",
+        "finalUrl": "https://pinnacleblooms.org/ask/conditions",
+        "statusCode": 200,
+        "redirected": false,
+        "redirectChain": [],
+        "responseTimeMs": 700,
+        "impressions": 0,
+        "clicks": 0,
+        "indexable": true,
+        "indexabilityStatus": "Indexable",
+        "title": "Conditions | Ask Pinnacle",
+        "titleLength": 25,
+        "metaDescriptionLength": 54,
+        "metaKeywords": null,
+        "h1Count": 1,
+        "h3Count": 53,
+        "h4Count": 0,
+        "h5Count": 0,
+        "h6Count": 0,
+        "wordCount": 2927,
+        "canonicalUrl": "https://pinnacleblooms.org/ask/conditions",
+        "canonicalIsSelf": true,
+        "noindex": false,
+        "internalLinks": 53,
+        "externalLinks": 412,
+        "imagesMissingAlt": 0,
+        "imagesCount": 3,
+        "hasStructuredData": true,
+        "structuredDataTypes": [
+          "Brand",
+          "BreadcrumbList",
+          "CollectionPage",
+          "ListItem",
+          "Organization",
+          "WebSite"
+        ],
+        "schemaIssues": [
+          {
+            "type": "Organization",
+            "level": "error",
+            "field": "logo",
+            "message": "Organization is missing required field \"logo\""
+          }
+        ],
+        "hasViewport": true,
+        "faviconPresent": true,
+        "lang": "en-IN",
+        "hreflangCount": 0,
+        "bodyBytes": 131309,
+        "contentEncoding": "br",
+        "issues": [
+          {
+            "id": "title-short",
+            "category": "meta",
+            "severity": "low",
+            "message": "Title is only 25 chars"
+          },
+          {
+            "id": "meta-short",
+            "category": "meta",
+            "severity": "low",
+            "message": "Meta description is only 54 chars"
+          },
+          {
+            "id": "schema-organization-missing-logo",
+            "category": "structured-data",
+            "severity": "medium",
+            "message": "Organization is missing required field \"logo\""
+          }
+        ]
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask",
+        "finalUrl": "https://pinnacleblooms.org/ask",
+        "statusCode": 200,
+        "redirected": false,
+        "redirectChain": [],
+        "responseTimeMs": 48,
+        "impressions": 0,
+        "clicks": 0,
+        "indexable": true,
+        "indexabilityStatus": "Indexable",
+        "title": "Ask Pinnacle | Child development questions, answers & guidance",
+        "titleLength": 62,
+        "metaDescriptionLength": 144,
+        "metaKeywords": null,
+        "h1Count": 1,
+        "h3Count": 72,
+        "h4Count": 0,
+        "h5Count": 0,
+        "h6Count": 0,
+        "wordCount": 2907,
+        "canonicalUrl": "https://pinnacleblooms.org/ask",
+        "canonicalIsSelf": true,
+        "noindex": false,
+        "internalLinks": 24,
+        "externalLinks": 414,
+        "imagesMissingAlt": 0,
+        "imagesCount": 4,
+        "hasStructuredData": true,
+        "structuredDataTypes": [
+          "Brand",
+          "BreadcrumbList",
+          "ListItem",
+          "Organization",
+          "WebPage",
+          "WebSite"
+        ],
+        "schemaIssues": [
+          {
+            "type": "Organization",
+            "level": "error",
+            "field": "logo",
+            "message": "Organization is missing required field \"logo\""
+          }
+        ],
+        "hasViewport": true,
+        "faviconPresent": true,
+        "lang": "en-IN",
+        "hreflangCount": 0,
+        "bodyBytes": 120048,
+        "contentEncoding": "br",
+        "issues": [
+          {
+            "id": "title-long",
+            "category": "meta",
+            "severity": "low",
+            "message": "Title is 62 chars (over ~60 may truncate)"
+          },
+          {
+            "id": "schema-organization-missing-logo",
+            "category": "structured-data",
+            "severity": "medium",
+            "message": "Organization is missing required field \"logo\""
+          }
+        ]
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+        "finalUrl": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+        "statusCode": 200,
+        "redirected": false,
+        "redirectChain": [],
+        "responseTimeMs": 395,
+        "impressions": 7,
+        "clicks": 0,
+        "indexable": true,
+        "indexabilityStatus": "Indexable",
+        "title": "What Happens in Occupational Therapy Sessions?",
+        "titleLength": 46,
+        "metaDescriptionLength": 155,
+        "metaKeywords": null,
+        "h1Count": 1,
+        "h3Count": 59,
+        "h4Count": 0,
+        "h5Count": 0,
+        "h6Count": 0,
+        "wordCount": 3481,
+        "canonicalUrl": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+        "canonicalIsSelf": true,
+        "noindex": false,
+        "internalLinks": 18,
+        "externalLinks": 421,
+        "imagesMissingAlt": 0,
+        "imagesCount": 3,
+        "hasStructuredData": true,
+        "structuredDataTypes": [
+          "Answer",
+          "Brand",
+          "BreadcrumbList",
+          "FAQPage",
+          "ListItem",
+          "MedicalWebPage",
+          "Organization",
+          "Question",
+          "WebSite"
+        ],
+        "schemaIssues": [
+          {
+            "type": "Organization",
+            "level": "error",
+            "field": "logo",
+            "message": "Organization is missing required field \"logo\""
+          }
+        ],
+        "hasViewport": true,
+        "faviconPresent": true,
+        "lang": "en-IN",
+        "hreflangCount": 1,
+        "bodyBytes": 122660,
+        "contentEncoding": "br",
+        "issues": [
+          {
+            "id": "schema-organization-missing-logo",
+            "category": "structured-data",
+            "severity": "medium",
+            "message": "Organization is missing required field \"logo\""
+          }
+        ]
+      }
+    ],
+    "dataSource": "api"
+  },
+  "finalAudit": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "contextRange": {
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-30"
+    },
+    "auditedCount": 2,
+    "skipped": [],
+    "summary": {
+      "total_pages": 2,
+      "total_issues": 1,
+      "by_severity": {
+        "critical": 0,
+        "high": 0,
+        "medium": 0,
+        "low": 1,
+        "info": 0
+      },
+      "indexable_pages": 2,
+      "non_indexable_pages": 0
+    },
+    "pages": [
+      {
+        "url": "https://pinnacleblooms.org/ask",
+        "finalUrl": "https://pinnacleblooms.org/ask",
+        "statusCode": 200,
+        "redirected": false,
+        "redirectChain": [],
+        "responseTimeMs": 192,
+        "impressions": 0,
+        "clicks": 0,
+        "indexable": true,
+        "indexabilityStatus": "Indexable",
+        "title": "Ask Pinnacle | Child development questions, answers & guidance",
+        "titleLength": 62,
+        "metaDescriptionLength": 144,
+        "metaKeywords": null,
+        "h1Count": 1,
+        "h3Count": 72,
+        "h4Count": 0,
+        "h5Count": 0,
+        "h6Count": 0,
+        "wordCount": 2920,
+        "canonicalUrl": "https://pinnacleblooms.org/ask",
+        "canonicalIsSelf": true,
+        "noindex": false,
+        "internalLinks": 24,
+        "externalLinks": 414,
+        "imagesMissingAlt": 0,
+        "imagesCount": 4,
+        "hasStructuredData": true,
+        "structuredDataTypes": [
+          "Brand",
+          "BreadcrumbList",
+          "ListItem",
+          "Organization",
+          "WebPage",
+          "WebSite"
+        ],
+        "schemaIssues": [],
+        "hasViewport": true,
+        "faviconPresent": true,
+        "lang": "en-IN",
+        "hreflangCount": 0,
+        "bodyBytes": 120238,
+        "contentEncoding": "br",
+        "issues": [
+          {
+            "id": "title-long",
+            "category": "meta",
+            "severity": "low",
+            "message": "Title is 62 chars (over ~60 may truncate)"
+          }
+        ]
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/conditions",
+        "finalUrl": "https://pinnacleblooms.org/ask/conditions",
+        "statusCode": 200,
+        "redirected": false,
+        "redirectChain": [],
+        "responseTimeMs": 1327,
+        "impressions": 0,
+        "clicks": 0,
+        "indexable": true,
+        "indexabilityStatus": "Indexable",
+        "title": "Child development conditions | Ask Pinnacle",
+        "titleLength": 43,
+        "metaDescriptionLength": 144,
+        "metaKeywords": null,
+        "h1Count": 1,
+        "h3Count": 53,
+        "h4Count": 0,
+        "h5Count": 0,
+        "h6Count": 0,
+        "wordCount": 2942,
+        "canonicalUrl": "https://pinnacleblooms.org/ask/conditions",
+        "canonicalIsSelf": true,
+        "noindex": false,
+        "internalLinks": 53,
+        "externalLinks": 412,
+        "imagesMissingAlt": 0,
+        "imagesCount": 3,
+        "hasStructuredData": true,
+        "structuredDataTypes": [
+          "Brand",
+          "BreadcrumbList",
+          "CollectionPage",
+          "ListItem",
+          "Organization",
+          "WebSite"
+        ],
+        "schemaIssues": [],
+        "hasViewport": true,
+        "faviconPresent": true,
+        "lang": "en-IN",
+        "hreflangCount": 0,
+        "bodyBytes": 131985,
+        "contentEncoding": "br",
+        "issues": []
+      }
+    ],
+    "dataSource": "api"
+  },
+  "indexnow": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "batchId": "913d3a44-3765-4bf6-9a8f-8ad835c0907b",
+    "submitted": 30,
+    "failed": 0,
+    "attempted": 30,
+    "pendingKeyValidation": false,
+    "outcome": "submitted",
+    "keyFile": [
+      {
+        "host": "pinnacleblooms.org",
+        "url": null,
+        "verified": true,
+        "error": null
+      }
+    ],
+    "submissions": [
+      {
+        "url": "https://pinnacleblooms.org/ask",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/conditions",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/behaviours",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/skills",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/abilities",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/domains",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/ages",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/life-skills",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/assessments",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/readiness",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/therapies",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/techniques",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/people",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/standards-icf",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/standards-icd",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/lens",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/autism",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/abilityscore",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/how-to",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/materials",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/myths",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/compare",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/parents/wellbeing",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/access/financial",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/access/legal",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/dataset",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/te",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      }
+    ],
+    "message": "30 of 30 URL(s) sent were accepted by IndexNow."
+  },
+  "annotation": {
+    "annotation": {
+      "id": "21e47263-4971-4963-9179-20ad8ff87a74",
+      "scope": "property",
+      "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+      "event_date": "2026-10-03",
+      "label": "Ask migrated to common Astro portal",
+      "description": "Ask home, public-answer template, topic/lens directories, practical guidance, Telugu entry, search and machine outputs released on preserved apex canonicals. Source 1ce502c; Worker 486e9da4-a2c9-493e-91ca-4d7f76d66012. Supabase retained; all 185 route assignments and main portal/MCP deployments preserved. 43 route checks and 14 asset/privacy checks passed. Call links to 9100 181 181, shared full Verify footer. Separate from earlier same-day alias repair; ranking, traffic, conversions and AI citations not yet attributable.",
+      "category": "site_update",
+      "color": null,
+      "created_at": "2026-10-03T05:59:50.753463+00:00"
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "deployments": [
+    {
+      "id": "1314aae3-5231-4e8e-b764-d2d99407e73d",
+      "source": "wrangler",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "Make verified-network mobile call action immediately visible; preserve v58 routes, bindings and measurement",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "5dfcafb0-38fb-4751-87f4-87e7423cc4bd",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-09-30T05:00:27.377797Z"
+    },
+    {
+      "id": "d334983f-6025-4f58-a754-514622859bbc",
+      "source": "wrangler",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "Repair Google Ads website-call CSP; preserve v57 source and bindings",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "338c32af-a53c-4336-a0b0-a7aabc3ac545",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-09-30T04:30:38.622017Z"
+    },
+    {
+      "id": "b50bd071-64aa-4081-892c-cfa22e6f79d4",
+      "source": "wrangler",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "Add Google Ads website-call measurement for 9100181181; preserve live Worker",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "addb35be-43ce-4a58-8a31-680392df17df",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-09-30T04:18:21.677866Z"
+    },
+    {
+      "id": "334b7135-07f9-4e10-a22b-33deb386f5a0",
+      "source": "api",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "Publish canonical National Autism Helpline navigation from Ask; 18 preview requests pass; no routing or phone changes",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "f6b72599-f269-4d4a-bd83-7267f8b5f8b6",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-09-23T09:46:06.680254Z"
+    },
+    {
+      "id": "e0580faf-1efc-451e-8d40-d9ce5f1c25df",
+      "source": "api",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "Two verified network overviews: factual copy, metadata, FAQ schema; preview exact-match validated",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "c82446ce-856f-44cb-bfd6-ce912ebc7bb0",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-09-23T09:25:52.748447Z"
+    },
+    {
+      "id": "2965187f-cda2-474b-a32d-86d7fc365d79",
+      "source": "api",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "Publish source-backed network overview; validated exact preview HTML and 14 scoped checks",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "db009824-dd87-4e5b-b8cc-391b7e9b05e2",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-09-23T09:21:55.649424Z"
+    },
+    {
+      "id": "bc30bff4-c84c-4f5e-8c94-fda21f155ee3",
+      "source": "api",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/message": "Validated Ask route existence and published translation selection; preserve settings and WASM",
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "8e51d71b-6e74-4734-804c-db154315e2a1",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-09-22T11:21:46.378029Z"
+    },
+    {
+      "id": "e1946c8d-83c8-4e6f-8c37-46e2501a89a9",
+      "source": "wrangler",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "934ca040-d947-4df4-bd9f-8ddc762d06f5",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-07-01T12:04:19.99806Z"
+    },
+    {
+      "id": "5677caf0-4020-41e2-b1d6-ec19d487b8d1",
+      "source": "wrangler",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "d28e5522-be33-4bca-8843-3ff97029b0b8",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-07-01T11:34:20.551144Z"
+    },
+    {
+      "id": "54477205-16c0-4a9c-b5e3-78ed0ade1828",
+      "source": "wrangler",
+      "strategy": "percentage",
+      "author_email": "kotii@kgvpl.com",
+      "annotations": {
+        "workers/triggered_by": "deployment"
+      },
+      "versions": [
+        {
+          "version_id": "2e66d19d-ab0a-4eab-b857-5b35c7ca13ea",
+          "percentage": 100
+        }
+      ],
+      "created_on": "2026-06-16T12:21:19.704288Z"
+    }
+  ]
+}
