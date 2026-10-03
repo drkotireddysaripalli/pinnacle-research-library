@@ -15,7 +15,8 @@
     "marketplaces/google-play-12-identifiers.json",
     "marketplaces/google-play-21-collections/assigned-identifiers.json",
     "marketplaces/google-play-21-collections/collection-field-map.json",
-    "marketplaces/kdp-draft-progress.json"
+    "marketplaces/kdp-draft-progress.json",
+    "launch-closure-20261003/google-play-all-33-live-20261003.json"
   ],
   "offers": [
     {
@@ -712,13 +713,13 @@
       },
       "googlePlay": {
         "identifier": "GGKEY:AZSG4WX568Q",
-        "storefrontUrl": null,
-        "status": "Needs action",
-        "storefrontLinkVerified": false,
+        "storefrontUrl": "https://play.google.com/store/books/details?id=m7kVEgAAQBAJ",
+        "status": "Live on Google Play",
+        "storefrontLinkVerified": true,
         "pageCount": 187,
         "delivery": "One combined collection volume, including three collection opening pages",
         "priceINR": 2499,
-        "sourceObservedAt": "2026-10-03T11:57:52.019Z"
+        "sourceObservedAt": "2026-10-03T14:13:00.430Z"
       },
       "kdpPaperbackEditions": []
     },
