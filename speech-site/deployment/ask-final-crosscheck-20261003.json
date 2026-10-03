@@ -1,0 +1,71 @@
+{
+  "at": "2026-10-03T10:58:11.412Z",
+  "scope": "Ask authentication and representative public-route cross-check",
+  "googleAndWhatsApp": {
+    "confirmedEmail": true,
+    "confirmedPhone": true,
+    "matchingServerWatiReceipt": true,
+    "newOtpSent": false
+  },
+  "apple": {
+    "providerEnabled": true,
+    "liveButton": true,
+    "nativeRedirectToApple": true,
+    "completedIdentityFound": false,
+    "previousAttemptError": "400: OAuth state has expired",
+    "newAttempt": "Fresh native Apple sign-in opened; owner completion requested"
+  },
+  "x": {
+    "providerEnabled": true,
+    "liveButton": true,
+    "redirectVerified": true,
+    "completedIdentityFound": false
+  },
+  "microsoft": {
+    "providerEnabled": false,
+    "status": "Pinnacle/BHCL directory still required"
+  },
+  "publicChecks": [
+    {
+      "url": "https://pinnacleblooms.org/ask",
+      "status": 200,
+      "selfCanonical": true,
+      "indexable": true,
+      "accountLink": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/ot",
+      "status": 200,
+      "indexable": true,
+      "accountLink": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions",
+      "status": 200,
+      "selfCanonical": true,
+      "indexable": true,
+      "accountLink": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-happens-during-occupational-therapy-sessions.json",
+      "status": 200,
+      "validJSON": true,
+      "canonicalToHtml": true,
+      "noindex": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/sitemap-topics.xml",
+      "status": 200,
+      "urlCount": 478
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ask",
+      "status": 308,
+      "location": "https://pinnacleblooms.org/ask"
+    }
+  ],
+  "routeProof": "deployment/ask-provider-route-crosscheck-20261003.json",
+  "boundaryProof": "deployment/ask-auth-boundary-crosscheck-20261003.json",
+  "providerProof": "deployment/ask-all-provider-crosscheck-20261003.json",
+  "credentialsOutsideGit": true
+}
