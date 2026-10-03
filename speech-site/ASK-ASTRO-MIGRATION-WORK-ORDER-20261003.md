@@ -1,6 +1,6 @@
 # Ask Pinnacle → shared Astro portal: verified architecture and page work order
 
-3 October 2026. Owner-directed scope: understand the existing Ask design; preserve its answer corpus and interconnected discovery routes; bring its page families into the current Pinnacle codebase and the approved common header/footer. **Status: architecture inspected and work order prepared; Astro migration not yet built or deployed.** The preceding search/MCP repairs are live and recorded separately in ../ask-service/README.md.
+3 October 2026. Owner-directed scope: understand the existing Ask design; preserve its answer corpus and interconnected discovery routes; bring its page families into the current Pinnacle codebase and the approved common header/footer. **Status: implemented and delivered live on 3 October 2026.** See ASK-ASTRO-RELEASE-20261003.md for source, production version, test scope and limits. The architecture findings below preserve the pre-migration baseline. The preceding search/MCP repairs are live and recorded separately in ../ask-service/README.md.
 
 ## 1. Decision and intended outcome
 

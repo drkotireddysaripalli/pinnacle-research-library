@@ -1,0 +1,85 @@
+{
+  "at": "2026-10-03T05:53:41.351Z",
+  "base": "https://pinnacleblooms.org",
+  "results": [
+    {
+      "path": "/ask?q=ask-private-cache-probe-20261003",
+      "status": 200,
+      "ms": 96,
+      "bytes": 119687
+    },
+    {
+      "path": "/ask",
+      "status": 200,
+      "ms": 30,
+      "bytes": 119687
+    },
+    {
+      "path": "/ask/search?q=speech",
+      "status": 200,
+      "ms": 502,
+      "bytes": 118045
+    },
+    {
+      "path": "/ask/te/search?q=speech",
+      "status": 200,
+      "ms": 490,
+      "bytes": 118076
+    },
+    {
+      "path": "/ask/te/conditions",
+      "status": 200,
+      "ms": 20,
+      "bytes": 131142
+    },
+    {
+      "path": "/ask/lens/entity%3Atherapy_modality/ot",
+      "status": 200,
+      "ms": 647,
+      "bytes": 126455
+    },
+    {
+      "path": "/ask/are-there-successful-adults-who-grew-up-with-cerebral-palsy-te",
+      "status": 200,
+      "ms": 929,
+      "bytes": 136031
+    },
+    {
+      "path": "/ask/sitemap-topics.xml",
+      "status": 200,
+      "ms": 821,
+      "bytes": 33742
+    },
+    {
+      "path": "/ask/what-happens-during-occupational-therapy-sessions.json",
+      "status": 200,
+      "ms": 17,
+      "bytes": 7520
+    },
+    {
+      "image": "/ask/_image?href=%2Fask%2F_assets%2Fpinnacle-blooms-network-lockup.CUnZranx.png&w=650&h=242&f=webp",
+      "status": 200,
+      "bytes": 11756
+    },
+    {
+      "image": "/ask/_image?href=%2Fask%2F_assets%2Fautism-first-conversation-20260930.xy6gpg86.png&w=680&h=357&q=82&f=webp",
+      "status": 200,
+      "bytes": 39882
+    },
+    {
+      "path": "/ask/og/default.png",
+      "status": 200,
+      "bytes": 67336
+    },
+    {
+      "path": "/ask/what-happens-during-occupational-therapy-sessions.png",
+      "status": 200,
+      "bytes": 78556
+    },
+    {
+      "path": "/ask/f/te-sans400.woff2",
+      "status": 200,
+      "bytes": 35760
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-# Current owner-directed work: Ask Astro migration — 3 October 2026
+# Delivered: Ask Astro migration — 3 October 2026
 
-User authorised complete implementation and Ask-only production release. Governing contract: ASK-ASTRO-MIGRATION-WORK-ORDER-20261003.md. Build/validation status: ASK-ASTRO-RELEASE-20261003.md. PinnacleAI scholar/Figma work remains held for the owner's diagram. Historical work orders below are retained as history, not concurrent execution instructions.
+Ask migration is delivered at https://pinnacleblooms.org/ask. Source4e34495; Worker2dd39a2f-4f2b-43a9-80b5-a1ab7b3800f1. User authorised complete implementation and Ask-only production release. Governing contract: ASK-ASTRO-MIGRATION-WORK-ORDER-20261003.md. Build/validation status: ASK-ASTRO-RELEASE-20261003.md. PinnacleAI scholar/Figma work remains held for the owner's diagram. Historical work orders below are retained as history, not concurrent execution instructions.
 
 ---
 
