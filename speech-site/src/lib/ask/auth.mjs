@@ -1,6 +1,8 @@
 import {createServerClient,parseCookieHeader,serializeCookieHeader} from '@supabase/ssr';
 import {createClient} from '@supabase/supabase-js';
-export const AUTH_HEADERS={'cache-control':'private, no-store, max-age=0','cdn-cache-control':'no-store','cloudflare-cdn-cache-control':'no-store','x-robots-tag':'noindex, nofollow','referrer-policy':'no-referrer','x-content-type-options':'nosniff'};
+// Keep paths/codes out of referrers while retaining the Origin on native POST forms.
+// no-referrer makes browsers send Origin: null, which correctly fails the CSRF guard.
+export const AUTH_HEADERS={'cache-control':'private, no-store, max-age=0','cdn-cache-control':'no-store','cloudflare-cdn-cache-control':'no-store','x-robots-tag':'noindex, nofollow','referrer-policy':'strict-origin','x-content-type-options':'nosniff'};
 export const ACCOUNT='/ask/account';
 // Matches the approved WATI code_template_pbn_v3 expiry; Supabase must use 360s at activation.
 export const OTP_EXPIRY_SECONDS=360;

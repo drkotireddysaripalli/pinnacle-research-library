@@ -38,6 +38,7 @@ test('CSRF token requires same origin and same cookie',()=>{
 });
 test('multiple cookies survive response headers and no-store is explicit',()=>{
  const c=context(new Request('https://pinnacleblooms.org/ask/account'),{});c.set('one','1');c.set('two','2');
+ assert.equal(c.headers.get('referrer-policy'),'strict-origin');
  const out=new Headers();applyHeaders(out,c.headers);assert.equal(out.getSetCookie().length,2);assert.match(out.get('cache-control'),/no-store/);
  assert.equal(c.redirect('/ask').headers.getSetCookie().length,2);
 });

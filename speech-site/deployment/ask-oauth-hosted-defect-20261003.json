@@ -1,0 +1,14 @@
+{
+  "at": "2026-10-03T08:37:40.467Z",
+  "scope": "Public account layout and Google redirect only; no identity, OTP or lead submitted",
+  "screenshots": [
+    "reviews/ask-account-hosted-1440-20261003.png",
+    "reviews/ask-account-hosted-768-20261003.png",
+    "reviews/ask-account-hosted-390-20261003.png",
+    "reviews/ask-google-hosted-redirect-20261003.png"
+  ],
+  "sessionId": "9ab7b584222f-630ffc61d3de-026201b72af9-179101666352-03812292",
+  "destination": "https://pinnacleblooms.org/ask/auth/google",
+  "title": "",
+  "reachedGoogle": false
+}

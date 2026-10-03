@@ -11,7 +11,7 @@ for(const suffix of ['', '?status=verified', '?status=code-sent']){
  assert.equal(r.status,200);
  for(const name of ['cache-control','cdn-cache-control','cloudflare-cdn-cache-control'])assert.match(r.headers.get(name)||'',/no-store/);
  assert.equal(r.headers.get('x-robots-tag'),'noindex, nofollow');
- assert.equal(r.headers.get('referrer-policy'),'no-referrer');
+ assert.equal(r.headers.get('referrer-policy'),'strict-origin');
  assert.match(r.headers.get('set-cookie')||'',/HttpOnly/);
  assert.match(html,/Account sign-in is not available yet/);
  assert.doesNotMatch(html,/Your Google account and WhatsApp number are connected\.|Your code has been accepted for sending/);
