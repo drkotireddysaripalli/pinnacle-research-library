@@ -27,6 +27,17 @@ const graph={'@context':'https://schema.org','@graph':[
  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={contact.tel} data-cta="mobile-call">Call {contact.phone}</a><a href={contact.enrol} data-cta="mobile-assessment">Arrange a visit</a></nav>
  <script is:inline define:vars={{measurementUrl,privatePage}}>if(!privatePage&&!/^\/ask\/(?:account|auth)(?:\/|$)/.test(location.pathname))import(measurementUrl);</script>
  <script>
- document.addEventListener('click',async(event)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-ask-share]');if(!button)return;const canonical=document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href||location.href;const mode=button.dataset.askShare;const text=mode==='citation'?document.title+'. Ask Pinnacle, Pinnacle Blooms Network. '+canonical:canonical;try{if(mode==='native'&&navigator.share)await navigator.share({title:document.title,url:canonical});else{await navigator.clipboard.writeText(text);const status=document.querySelector('[data-ask-share-status]');if(status)status.textContent=mode==='citation'?'Citation copied.':'Link copied.'}}catch(error){if((error as Error).name!=='AbortError'){const status=document.querySelector('[data-ask-share-status]');if(status)status.textContent='Copy this page address from your browser to share it.'}}});
+ document.addEventListener('click',async(event)=>{
+  const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-ask-share]');if(!button)return;
+  const canonical=document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href||location.href;
+  const mode=button.dataset.askShare;const title=document.querySelector('h1')?.textContent?.trim()||document.title;
+  const citation=document.querySelector('[data-ask-citation]')?.textContent?.trim()||title+'. Ask Pinnacle, Pinnacle Blooms Network. '+canonical;
+  const accessed=new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
+  const text=mode==='citation'?citation+' Accessed '+accessed+'.':canonical;
+  const status=document.querySelector('[data-ask-share-status]');
+  try{if(mode==='native'&&navigator.share)await navigator.share({title,url:canonical});
+   else{await navigator.clipboard.writeText(text);if(status)status.textContent=mode==='citation'?'Citation copied, including your access date.':'Link copied.'}
+  }catch(error){if((error as Error).name!=='AbortError'&&status)status.textContent=mode==='citation'?'Select and copy the citation shown below.':'Copy this page address from your browser to share it.'}
+ });
  </script>
 </body></html>

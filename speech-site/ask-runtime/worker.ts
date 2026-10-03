@@ -3,6 +3,7 @@ import legacy from '../../ask-service/worker/index.js';
 import {answer,rpc} from '../src/lib/ask/repository';
 import {institution} from '../src/lib/ask/overrides';
 import {ASK} from '../src/lib/ask/content';
+import {answerNavigation} from '../src/lib/ask/answer-presentation';
 import {AUTH_HEADERS} from '../src/lib/ask/auth.mjs';
 const xml=(s:any)=>String(s??'').replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]!));
 const textHeaders={'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=300','x-content-type-options':'nosniff'};
@@ -35,12 +36,13 @@ export default {async fetch(request:Request,env:any,ctx:ExecutionContext){
  }
  const exportMatch=path.match(/^\/ask\/([\w-]+)\.(md|json)$/);
  if(exportMatch){const slug=exportMatch[1];const a=institution(slug)||await answer(env,slug,slug.endsWith('-te')?'te':'en');if(!a)return new Response('Answer not found',{status:404,headers:{...textHeaders,'x-robots-tag':'noindex'}});
- const body=exportMatch[2]==='json'?JSON.stringify(a):'# '+a.title+'\n\nCanonical: '+a.canonical+'\nPublisher: Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited\n\n'+(a.summary||'')+'\n\n'+a.answer_md+'\n\n## Sources\n'+(a.authority_links||[]).map((s:any)=>'- '+(s.label||s.title||'Source')+': '+s.url).join('\n');
+ const nav=answerNavigation(a);
+ const body=exportMatch[2]==='json'?JSON.stringify(a):'# '+a.title+'\n\nCanonical: '+a.canonical+'\nPublisher: Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited\n\n'+(a.summary||'')+'\n\n'+a.answer_md+'\n\n## Sources\n'+(a.authority_links||[]).map((s:any)=>'- '+(s.label||s.title||'Source')+': '+(s.url||s.href)).join('\n')+'\n\n## Connected topics and perspectives\n'+[...nav.topics,...nav.links].map(x=>'- '+x.label+': '+x.url).join('\n')+'\n\n## Related question paths\n'+(a.reading_paths||[]).map((g:any)=>'\n### '+g.label+'\n'+g.items.map((x:any)=>'- '+x.title+': '+ASK+'/'+x.slug).join('\n')).join('\n');
  return new Response(body,{headers:{...textHeaders,'content-type':exportMatch[2]==='json'?'application/json; charset=utf-8':'text/markdown; charset=utf-8','x-robots-tag':'noindex, follow','link':'<'+a.canonical+'>; rel="canonical"'}});
  }
  if(/^\/ask\/(?:og\/|f\/)/.test(path)||/\.(svg|png|woff2|js|xsl)$/.test(path))return legacy.fetch(request,env,ctx);
  const cacheable=!/^\/ask\/(?:te\/)?search$/.test(path)&&request.method==='GET'&&[...url.searchParams].every(([key,value])=>key==='page'&&/^[1-9][0-9]{0,3}$/.test(value));
- const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261003-v13-google-profile');
+ const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261003-v14-monochrome-reading-paths');
  const cacheKey=new Request(cacheURL);const cache=(caches as any).default;
  if(cacheable){const saved=await cache.match(cacheKey);if(saved)return saved;}
  const response=await handle(request,env,ctx);const headers=new Headers(response.headers);headers.set('x-pinnacle-ask-release','astro-20261003-google-identity');headers.set('x-content-type-options','nosniff');headers.set('referrer-policy','strict-origin');headers.set('cross-origin-opener-policy','same-origin-allow-popups');

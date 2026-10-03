@@ -23,10 +23,12 @@ import Icon from '../Icon.astro';
   <button type="button" class="ask-verification-change" data-ask-phone-change>Change number or request a new code</button>
  </form>
  <p class="ask-verification-status" data-ask-verification-status role="status" aria-live="polite"></p>
- <div class="ask-verification-bottom"><a href="https://www.pinnacleblooms.org/privacy-policy">Privacy</a><button type="button" data-ask-verification-cancel>Cancel</button></div>
+ <div class="ask-verification-bottom"><a href="https://www.pinnacleblooms.org/privacy-policy">Privacy</a><button class="ask-verification-text-action" type="button" data-ask-verification-cancel>Cancel</button></div>
  <p class="ask-verification-hint">The tick confirms your WhatsApp number is verified.</p>
 </dialog>
 <style>
+ #ask-whatsapp-verification .ask-verification-bottom{justify-content:flex-start;gap:24px}
+ #ask-whatsapp-verification .ask-verification-text-action{border:0;border-radius:0;padding:10px 0;background:none;color:#842478;text-decoration:underline;text-underline-offset:.22em}
  #ask-whatsapp-verification>.ask-verification-logo{width:232px;max-width:calc(100% - 48px);height:auto;margin:0 0 24px}
  #ask-verification-title{display:flex;align-items:center;gap:10px}#ask-verification-title svg{flex-shrink:0}
  #ask-whatsapp-verification{position:fixed;inset:0;margin:auto;width:min(460px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;padding:32px;border:1px solid #dfd5e5;border-radius:28px;background:white;color:#213653;box-shadow:0 20px 80px #162c5533;font:inherit;z-index:2147483647}

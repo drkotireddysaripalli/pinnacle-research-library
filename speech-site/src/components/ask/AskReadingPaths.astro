@@ -1,0 +1,18 @@
+---
+import {safeAskLink} from '../../lib/ask/content';
+import Icon from '../Icon.astro';
+const {answer,topic}=Astro.props;
+const groups=(Array.isArray(answer.reading_paths)?answer.reading_paths:[]).map(g=>({...g,items:(Array.isArray(g.items)?g.items:[]).filter(x=>safeAskLink(x.slug)&&x.slug!==answer.slug)})).filter(g=>g.items.length);
+---
+{groups.length>0&&<section id="related-questions" class="ask-reading-paths" aria-labelledby="ask-reading-paths-title">
+ <p class="ask-eyebrow">YOUR QUESTION CONNECTS TO A BIGGER PICTURE</p>
+ <h2 id="ask-reading-paths-title">What would you like to understand next?</h2>
+ <p>Explore {topic?.label||'this subject'} from the angle that matters to you. Each question opens its full answer, references and connected topics.</p>
+ <nav class="ask-path-index" aria-label="Choose a question pathway">{groups.map(g=><a href={'#questions-'+g.key}>{g.label}<Icon name="arrow" size={16}/></a>)}</nav>
+ <div class="ask-question-path-grid">{groups.map((g,i)=><section id={'questions-'+g.key} class="ask-question-path">
+  <header><span class="ask-path-number">{String(i+1).padStart(2,'0')}</span><h3>{g.label}</h3></header>
+  <ul>{g.items.slice(0,3).map(x=><li><a href={safeAskLink(x.slug)}>{x.title}<span aria-hidden="true">↗</span></a></li>)}</ul>
+  {g.items.length>3&&<details><summary>More questions in this path <span aria-hidden="true">+</span></summary><ul>{g.items.slice(3).map(x=><li><a href={safeAskLink(x.slug)}>{x.title}<span aria-hidden="true">↗</span></a></li>)}</ul></details>}
+ </section>)}</div>
+ {topic&&<p class="ask-all-questions"><a href={topic.url}>Explore every question about {topic.label} <Icon name="arrow" size={18}/></a></p>}
+</section>}

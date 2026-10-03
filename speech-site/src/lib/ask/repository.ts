@@ -2,7 +2,7 @@ export async function rpc(env:any,name:string,body:any={}){
  if(!env.SUPABASE_URL||!env.SUPABASE_KEY)throw new Error('Public content connection is unavailable');
  const cacheable=name!=='ask_public_search';
  const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(name+JSON.stringify(body)));
- const key=new Request('https://pinnacleblooms.org/ask/__rpc/astro-20261003-v2/'+Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join(''));
+ const key=new Request('https://pinnacleblooms.org/ask/__rpc/astro-20261003-v3-reading-paths/'+Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join(''));
  const cache=cacheable?(caches as any).default:null;
  if(cache){const saved=await cache.match(key);if(saved)return saved.json();}
  const response=await fetch(env.SUPABASE_URL+'/rest/v1/rpc/'+name,{method:'POST',headers:{apikey:env.SUPABASE_KEY,authorization:'Bearer '+env.SUPABASE_KEY,'content-type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(9000)});
