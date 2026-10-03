@@ -27,6 +27,8 @@ for(const pair of books.filter(b=>b.bookCount===2&&b.formatCode==='PDF')){
 }
 await fs.copyFile(path.join(assets,'four-book-collection.png'),path.join(assets,'collection.png'));
 const routes={'/shop':'shop-index','/books':'books-index','/books/hi':'books-hi-index','/books/te':'books-te-index',...Object.fromEntries(merchantEditions.map(b=>[b.path,'book-edition-'+b.locale+'-'+b.slug])),...Object.fromEntries(languageBooks.map(b=>[b.path,'book-'+b.locale+'-'+b.slug])),...Object.fromEntries(books.map(b=>[b.path,'book-'+b.slug]))};
+// Keep the public Hindi OT URL stable while isolating its asset-delivery recovery.
+routes['/books/hi/ot-101']='book-hi-ot-101-20261003';
 const handler=path.join(root,'deployment/speech-handler.mjs');
 const previous=await fs.readFile(handler,'utf8');
 assert(previous.startsWith('export const BOOK_ROUTES='));
