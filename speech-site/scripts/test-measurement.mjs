@@ -16,6 +16,23 @@ function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-ther
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
  return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
+test('bookshop direct contact links count once after consent without exporting WhatsApp text',()=>{
+ const commerceCatalogue={'PBN-SP-101-EN-PDF':{title:'My Message Matters',path:'/books/speech-communication-101-my-message-matters',price:799}};
+ const h=harness({path:'/shop',commerceCatalogue});
+ const whatsapp='https://wa.me/919100181181?text=private-child-name&source=private-value';
+ h.click(undefined,'tel:+919100181181');h.click(undefined,whatsapp);assert.equal(h.events().length,0);
+ h.choose('accepted');h.click(undefined,'tel:+919100181181');h.click('footer-call','tel:+919100181181');h.click(undefined,whatsapp);
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click','phone_link_click','whatsapp_link_click']);
+ assert.equal(h.events()[1][2].link_placement,'bookshop-contact');assert.equal(h.events()[2][2].link_placement,'footer-call');
+ const serialized=JSON.stringify(h.events());for(const value of ['private-child','private-value','?text=','purchase','enquiry_accepted'])assert(!serialized.includes(value));
+ const count=h.events().length;
+ for(const href of ['tel:+919999999999','https://wa.me/919999999999','https://wa.me.example.org/919100181181','https://wa.me@evil.example/919100181181','http://wa.me/919100181181','https://private@wa.me/919100181181'])h.click(undefined,href);
+ assert.equal(h.events().length,count);
+ h.choose('declined');h.click(undefined,whatsapp);h.click(undefined,'tel:+919100181181');assert.equal(h.events().length,count);
+ for(const options of [{gpc:true},{origin:'http://127.0.0.1:4326'},{path:'/not-in-the-catalogue'}]){
+  const blocked=harness({path:'/shop',commerceCatalogue,...options});blocked.choose('accepted');blocked.click(undefined,whatsapp);blocked.click(undefined,'tel:+919100181181');assert.equal(blocked.events().length,0);
+ }
+});
 test('Ask consented calls stay coarse and exclude the question slug and search query',()=>{
  const h=harness({origin:'https://pinnacleblooms.org',path:'/ask/a-private-child-concern',variant:'ask'});
  assert.equal(h.events().length,0);h.choose('accepted');h.click('ask-answer-call','tel:+919100181181');
