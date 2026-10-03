@@ -1,0 +1,33 @@
+{
+  "name": "pinnacle-ask",
+  "main": "ask-runtime/worker.ts",
+  "compatibility_date": "2026-10-03",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "binding": "ASSETS",
+    "run_worker_first": [
+      "/ask/*"
+    ]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "KOSA_CACHE",
+      "id": "d4401f15f2d04e399c3fdf617f7a529c"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "OG_BUCKET",
+      "bucket_name": "pinnacle-ask-og"
+    }
+  ],
+  "vars": {
+    "ASK_BASE": "/ask",
+    "CANONICAL_ORIGIN": "https://pinnacleblooms.org"
+  },
+  "observability": {
+    "enabled": false
+  }
+}

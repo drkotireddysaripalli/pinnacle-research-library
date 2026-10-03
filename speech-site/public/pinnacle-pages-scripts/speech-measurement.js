@@ -31,8 +31,9 @@
   }
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   const pagePath = location.pathname;
-  const canonical = origin + (pages[pagePath]?.measurementPath || pagePath);
-  const pageConfig = pages[pagePath] || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
+  const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !/^\/ask\/(?:te\/)?search$/.test(pagePath) && document.body?.dataset.pageVariant === 'ask';
+  const canonical = isAsk ? 'https://pinnacleblooms.org/ask' : origin + (pages[pagePath]?.measurementPath || pagePath);
+  const pageConfig = pages[pagePath] || (isAsk ? {title:'Ask Pinnacle',group:'ask',service:'help'} : null) || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
   const pageTitle = pageConfig?.title || document.title;
   const pageGroup = pageConfig?.group || 'managed_page';
   const routes = new Set([...Object.keys(pages), ...Object.keys(documents)]);
@@ -42,9 +43,10 @@
   const panel = document.querySelector('[data-speech-measurement]');
   const status = document.querySelector('[data-measurement-status]');
   if (!panel || !status) return;
-  const production = location.origin === origin && routes.has(location.pathname) && !!pageConfig;
+  const production = isAsk || (location.origin === origin && routes.has(location.pathname) && !!pageConfig);
+  if (isAsk) routes.add('/ask');
   const blocked = navigator.globalPrivacyControl === true;
-  const callPlacements = new Set(['header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call','aba-first-call','aba-final-call','autism-first-call','family-journey-call','example-call','pinnacleai-call','pinnacleai-close-call']);
+  const callPlacements = new Set(['ask-call','ask-answer-call','header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call','aba-first-call','aba-final-call','autism-first-call','family-journey-call','example-call','pinnacleai-call','pinnacleai-close-call']);
   const enquiryPlacements = new Set(['header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','final-assessment','mobile-assessment','centre-enquiry','ot-final-enrol','aba-final-enrol','autism-first-enquiry']);
   const occupationalNavigation = new Set(['ot-hero-centres','ot-final-centres']);
   const abaNavigation = new Set(['aba-first-centres','aba-final-centres']);
@@ -61,7 +63,7 @@
     for (const cookie of document.cookie.split(';')) {
       const name = cookie.trim().split('=')[0];
       if (!name.startsWith('ps_ga')) continue;
-      for (const route of routes) for (const domain of ['', 'www.pinnacleblooms.org']) {
+      for (const route of routes) for (const domain of ['', 'www.pinnacleblooms.org', 'pinnacleblooms.org']) {
         document.cookie = name + '=; Max-Age=0; path=' + route + ';' + (domain ? ' domain=' + domain + ';' : '') + ' SameSite=Lax; Secure';
       }
     }
@@ -78,7 +80,7 @@
     window.gtag('js',new Date());
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
-      cookie_prefix:'ps',cookie_path:location.pathname,cookie_domain:'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
+      cookie_prefix:'ps',cookie_path:isAsk?'/ask':location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
       page_location:canonical,page_title:pageTitle,page_referrer:'',ignore_referrer:true,
       campaign_id:'',campaign_source:'',campaign_medium:'',campaign_name:'',campaign_term:'',campaign_content:''
     });

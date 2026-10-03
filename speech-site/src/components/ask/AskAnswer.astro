@@ -1,0 +1,29 @@
+---
+import {ASK,SITE,therapyLinks,contact} from '../../lib/ask/content';
+import {renderMarkdown} from '../../lib/ask/markdown';
+import AnswerCards from './AnswerCards.astro';import AskContact from './AskContact.astro';import Icon from '../Icon.astro';
+const {answer:a}=Astro.props;
+const faq=Array.isArray(a.faq)?a.faq.filter(x=>x.q&&x.a):[];
+const sources=(Array.isArray(a.authority_links)?a.authority_links:[]).filter(x=>/^https?:\/\//.test(x.url||x.href||''));
+const therapies=therapyLinks.filter(t=>t.terms.test(a.title+' '+(a.entity?.name||''))).slice(0,3);
+const date=(s:string)=>s?new Date(s).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}):'';
+---
+<article class="ask-wrap ask-article">
+ <nav class="ask-breadcrumb" aria-label="Breadcrumb"><a href={ASK}>Ask Pinnacle</a>{a.parent?.key&&<><span>›</span><a href={ASK+'/'+(a.parent.key==='lifeskills'?'life-skills':a.parent.key)}>{a.parent.label}</a></>}</nav>
+ <div class="ask-article-title"><p class="ask-eyebrow">{a.lang==='te'?'మీ ప్రశ్నకు సమాధానం':'YOUR QUESTION. A CLEARER NEXT STEP.'}</p><h1>{a.h1||a.title}</h1>{a.summary&&<div class="ask-direct-answer answer-summary"><p>{a.summary}</p></div>}<div class="ask-meta"><span>Pinnacle Blooms Network</span>{a.content_updated_at&&<span>Page updated {date(a.content_updated_at)}</span>}{a.published_at&&<span>Published {date(a.published_at)}</span>}{a.last_reviewed_at&&<span>Content record updated {date(a.last_reviewed_at)}</span>}</div>
+ {(a.alternates||[]).length>1&&<nav class="ask-chips" aria-label="Read this answer in another language">{a.alternates.map(x=><a href={x.href} lang={x.lang}>{x.lang==='te'?'తెలుగులో చదవండి':'Read in English'}</a>)}</nav>}
+ </div>
+ <div class="ask-reading-layout"><div class="ask-reading-main">
+ <nav class="ask-chips" aria-label="On this page"><a href="#explanation">The explanation</a>{sources.length>0&&<a href="#sources">Sources</a>}{faq.length>0&&<a href="#answer-questions">More questions</a>}<a href="#ask-next-step">Talk to Pinnacle</a></nav>
+ <div id="explanation" class="ask-prose" set:html={renderMarkdown(a.answer_md||'')}/>
+ {(a.what_to_watch||a.everyday_tip)&&<div class="ask-practical">{a.what_to_watch&&<section><Icon name="compass"/><h2>What to notice</h2><p>{a.what_to_watch}</p></section>}{a.everyday_tip&&<section><Icon name="home"/><h2>In everyday life</h2><p>{a.everyday_tip}</p></section>}</div>}
+ {faq.length>0&&<section id="answer-questions" class="ask-faq"><h2>Questions families ask</h2>{faq.map(f=><details><summary>{f.q}</summary><div class="ask-prose" set:html={renderMarkdown(f.a)}/></details>)}</section>}
+ <section id="sources" class="ask-sources"><p class="ask-eyebrow">READ · CHECK · SHARE</p><h2>Sources & further reading</h2>{sources.length?<ul>{sources.map(s=><li><a href={s.url||s.href} rel="noopener">{s.label||s.title||s.name||s.url}</a></li>)}</ul>:<p>This answer’s source information is included in the explanation where available.</p>}<p class="ask-small">References are those supplied with this answer. A general organisation website is a route to further reading, rather than evidence of an independent review of this page.</p>{a.editorial?.developed_by&&<p class="ask-small">Content attribution in the source record: {a.editorial.developed_by}.</p>}{a.editorial?.reviewed_by&&<p class="ask-small">Recorded reviewer: {a.editorial.reviewed_by}{a.editorial.reviewed_at&&' · '+date(a.editorial.reviewed_at)}.</p>}<p><a href={SITE+'/verify/'}>Pinnacle’s regulatory and research evidence →</a></p>
+ <div class="ask-share"><button type="button" data-ask-share="native"><Icon name="send"/>Share</button><a href={'https://wa.me/?text='+encodeURIComponent(a.title+' '+a.canonical)} rel="noopener">WhatsApp</a><button type="button" data-ask-share="citation">Copy citation</button><a href={a.canonical+'.md'}>Text version</a><a href={a.canonical+'.json'}>Structured version</a></div><p role="status" aria-live="polite" data-ask-share-status></p>
+ </section></div>
+ <aside class="ask-reading-aside"><div class="ask-aside-card"><Icon name="heart"/><h2>Your child’s next step matters.</h2><p>Bring your questions. Talk about what you see at home and what you want your child to be able to do.</p><a class="ask-button" href={contact.tel} data-cta="ask-answer-call">Call {contact.phone}</a><a href={contact.centres}>Find a Pinnacle centre →</a></div>
+ <div class="ask-aside-card ask-aside-evidence"><Icon name="shield"/><h2>Understanding. Purpose. Evidence.</h2><p>See how PinnacleAI® brings measurement, practice and review together around your child’s life.</p><a href={SITE+'/pinnacleai'}>Explore PinnacleAI® →</a>{therapies.map(t=><a href={SITE+t.url}>{t.title} at Pinnacle →</a>)}<a href={SITE+'/verify/evidence/claim-ledger.html'}>Check the claim & source ledger →</a></div></aside></div>
+ {a.resources?.length>0&&<section class="ask-section"><h2>Related techniques &amp; materials</h2><AnswerCards items={a.resources}/></section>}
+ {a.related?.length>0&&<section class="ask-section"><p class="ask-eyebrow">KEEP EXPLORING</p><h2>Your next question may be here.</h2><AnswerCards items={a.related.slice(0,12)}/></section>}
+ <p class="ask-small">General information supports a conversation with an appropriately qualified professional. Advice, goals and support depend on the individual child.</p>
+</article><AskContact/>

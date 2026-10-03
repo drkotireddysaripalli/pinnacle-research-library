@@ -16,6 +16,14 @@ function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-ther
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
  return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
+test('Ask consented calls stay coarse and exclude the question slug and search query',()=>{
+ const h=harness({origin:'https://pinnacleblooms.org',path:'/ask/a-private-child-concern',variant:'ask'});
+ assert.equal(h.events().length,0);h.choose('accepted');h.click('ask-answer-call','tel:+919100181181');
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click']);
+ const data=JSON.stringify(h.events());assert(!data.includes('private-child'));assert(!data.includes('gclid'));assert(h.events().every(e=>e[2].page_location==='https://pinnacleblooms.org/ask'));
+ for(const path of ['/ask/search','/ask/te/search','/unrelated']){const b=harness({origin:'https://pinnacleblooms.org',path,variant:'ask'});b.choose('accepted');assert.equal(b.events().length,0);}
+ const blocked=harness({origin:'https://pinnacleblooms.org',path:'/ask',variant:'ask',gpc:true});blocked.choose('accepted');assert.equal(blocked.events().length,0);
+});
 test('no analytics before consent; valid consent sends only fixed CTA fields',()=>{
  const h=harness();h.click('hero-call','tel:+919100181181');assert.equal(h.scripts.length,0);assert.equal(h.events().length,0);
  h.choose('accepted');assert.equal(h.scripts.length,1);h.click('hero-call','tel:+919100181181');h.click('hero-assessment','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry');h.click('header-enrol','https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india');

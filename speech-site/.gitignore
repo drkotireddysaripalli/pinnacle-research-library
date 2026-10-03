@@ -1,4 +1,10 @@
 node_modules/
+dist-ask/
+ask-audit-local.json
+.wrangler/
+.dev.vars*
+ask-runtime/.dev.vars*
+ask-private/
 dist/
 .astro/
 reference/

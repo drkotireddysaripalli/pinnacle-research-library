@@ -1,0 +1,52 @@
+{
+  "phase": "prepare",
+  "sourceCommit": "eb887a6ec4a57c3b5bcd08d5cdc56feb405eb9da",
+  "at": "2026-10-03T05:42:29.137Z",
+  "routeCount": 185,
+  "rollback": [
+    {
+      "version_id": "1aef7f2e-7b2c-4b65-be98-d125b39e6e4b",
+      "percentage": 100
+    }
+  ],
+  "protected": {
+    "portal": [
+      {
+        "version_id": "3d088473-f2d9-4906-8460-6a0f24e0d1dc",
+        "percentage": 100
+      }
+    ],
+    "mcp": [
+      {
+        "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+        "percentage": 100
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    }
+  ]
+}

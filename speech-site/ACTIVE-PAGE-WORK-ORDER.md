@@ -1,3 +1,9 @@
+# Current owner-directed work: Ask Astro migration — 3 October 2026
+
+User authorised complete implementation and Ask-only production release. Governing contract: ASK-ASTRO-MIGRATION-WORK-ORDER-20261003.md. Build/validation status: ASK-ASTRO-RELEASE-20261003.md. PinnacleAI scholar/Figma work remains held for the owner's diagram. Historical work orders below are retained as history, not concurrent execution instructions.
+
+---
+
 # Active page work order
 
 **Owner follow-up: six-page sales samples.** Preserve the cover and two learning pages; replace the earlier rear-cover sample page with a book purchase/QR page, followed by Pinnacle credentials/Verify and a four-book collection/pricing page. Use native clickable PDF links, real QR encodings, full-sleeve branded illustrative scenes and exact official logo. Publish final samples at /pinnacle-pages-assets/book-samples-sales-v2-20261002/; keep paid masters private and ordering unavailable until checkout activation.
