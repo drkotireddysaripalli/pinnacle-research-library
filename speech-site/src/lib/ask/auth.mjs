@@ -55,11 +55,35 @@ export function context(request,env){
  return {request,url,headers,auth,cookies,set,redirect:(to)=>{const h=new Headers(headers);h.set('location',to);return new Response(null,{status:303,headers:h});},reply:(body,status=200)=>new Response(body,{status,headers})};
 }
 export function csrf(c){let token=c.cookies.get('pinnacle-ask-csrf');if(!/^[0-9a-f-]{36}$/.test(token||'')){token=crypto.randomUUID();c.set('pinnacle-ask-csrf',token,{maxAge:3600});}return token;}
+const GOOGLE_NONCE_COOKIE='pinnacle-ask-google-nonce';
+export const googleClientId=env=>/^[0-9]+-[a-z0-9]+\.apps\.googleusercontent\.com$/.test(env.ASK_GOOGLE_CLIENT_ID||'')?env.ASK_GOOGLE_CLIENT_ID:null;
+export function validGoogleNonce(value,now=Date.now()){
+ if(!/^\d{13}\.[0-9a-f-]{72}$/.test(value||''))return false;
+ const age=now-Number(value.split('.')[0]);return age>=0&&age<600000;
+}
+export async function hashNonce(value){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value)))].map(n=>n.toString(16).padStart(2,'0')).join('');}
+async function googleConfiguration(c,env){
+ const clientId=googleClientId(env);if(!clientId)return null;
+ let nonce=c.cookies.get(GOOGLE_NONCE_COOKIE);
+ // Reuse a current challenge across tabs; expired/consumed attempts explicitly retry.
+ if(!validGoogleNonce(nonce)){nonce=Date.now()+'.'+crypto.randomUUID()+crypto.randomUUID();c.set(GOOGLE_NONCE_COOKIE,nonce,{maxAge:600});}
+ return {clientId,nonce:await hashNonce(nonce)};
+}
+export async function googleCredentialMatches(token,clientId,nonce){
+ // This preflight binds the intended audience/challenge. Supabase verifies the signature.
+ if(!clientId||!validGoogleNonce(nonce)||typeof token!=='string'||token.length>12000)return false;
+ try{const parts=token.split('.');if(parts.length!==3)return false;const p=JSON.parse(atob(parts[1].replace(/-/g,'+').replace(/_/g,'/')));
+ return p.aud===clientId&&(!p.azp||p.azp===clientId)&&['accounts.google.com','https://accounts.google.com'].includes(p.iss)&&p.nonce===await hashNonce(nonce)&&Number(p.exp)*1000>Date.now();
+ }catch{return false;}
+}
 export function validPost(c,form){return c.request.method==='POST'&&c.request.headers.get('origin')===c.url.origin&&!!c.cookies.get('pinnacle-ask-csrf')&&form.get('csrf')===c.cookies.get('pinnacle-ask-csrf');}
 export async function limited(env,key){if(!env.ASK_AUTH_RATE_LIMIT)return true;return !(await env.ASK_AUTH_RATE_LIMIT.limit({key})).success;}
 export async function action(request,env,kind){
  const c=context(request,env);
- const back=code=>c.redirect(ACCOUNT+'?status='+code);
+ const back=code=>{
+  if(request.headers.get('accept')==='application/json'){c.headers.set('content-type','application/json; charset=utf-8');return c.reply(JSON.stringify({status:code}),['code-sent','verified'].includes(code)?200:code==='wait'?429:400);}
+  return c.redirect(ACCOUNT+'?status='+code);
+ };
  if(!c.auth)return c.reply('Account sign-in is not available yet. You can read Ask or call 9100 181 181.',503);
  if(kind==='session'){
   if(request.method!=='GET')return c.reply('Method not allowed',405);
@@ -68,7 +92,7 @@ export async function action(request,env,kind){
   const profile=googleProfile(user);
   if(profile&&!await registerReader(env,user))return c.reply('Your registration could not be saved. Please try again.',503);
   c.headers.set('content-type','application/json; charset=utf-8');
-  return c.reply(JSON.stringify({profile,csrf:csrf(c)}));
+  return c.reply(JSON.stringify({profile:profile?{...profile,whatsappVerified:registrationComplete(user)}:null,csrf:csrf(c),...(!profile&&googleClientId(env)?{google:await googleConfiguration(c,env)}:{})}));
  }
  if(kind==='callback'){
   if(request.method!=='GET')return c.reply('Method not allowed',405);
@@ -81,8 +105,21 @@ export async function action(request,env,kind){
  }
  if(request.method!=='POST')return c.reply('Method not allowed',405);
  if(!request.headers.get('content-type')?.startsWith('application/x-www-form-urlencoded'))return c.reply('Unsupported request',415);
- const text=await request.text();if(text.length>4096)return c.reply('Request too large',413);
+ const text=await request.text();if(text.length>(kind==='google-id-token'?16384:4096))return c.reply('Request too large',413);
  const form=new URLSearchParams(text);if(!validPost(c,form))return c.reply('Please reopen the account page and try again.',403);
+ if(kind==='google-id-token'){
+  const returnTo=safeReturn(form.get('returnTo'));
+  const retry=code=>{const u=new URL(returnTo,c.url.origin);u.searchParams.set('ask_signin',code);return c.redirect(u.pathname+u.search+u.hash);};
+  if(!enabledProviders(env).includes('google')||!googleClientId(env))return c.reply('This sign-in option is not available yet.',503);
+  if(await limited(env,'oauth:'+request.headers.get('cf-connecting-ip')))return retry('wait');
+  const token=form.get('credential'),nonce=c.cookies.get(GOOGLE_NONCE_COOKIE);
+  c.set(GOOGLE_NONCE_COOKIE,'',{maxAge:0});
+  if(!await googleCredentialMatches(token,googleClientId(env),nonce))return retry('sign-in');
+  const {data,error}=await c.auth.auth.signInWithIdToken({provider:'google',token,nonce});
+  if(error||!googleProfile(data.user)){await c.auth.auth.signOut({scope:'local'});return retry('sign-in');}
+  if(!await registerReader(env,data.user))return retry('registration');
+  return c.redirect(returnTo);
+ }
  if(Object.hasOwn(OAUTH_PROVIDERS,kind)){
   if(!enabledProviders(env).includes(kind))return c.reply('This sign-in option is not available yet.',503);
   if(await limited(env,'oauth:'+request.headers.get('cf-connecting-ip')))return back('wait');
@@ -90,10 +127,16 @@ export async function action(request,env,kind){
   const {data,error}=await c.auth.auth.signInWithOAuth({provider:kind,options:{redirectTo:c.url.origin+'/ask/auth/callback',skipBrowserRedirect:true,...(OAUTH_PROVIDERS[kind].scopes?{scopes:OAUTH_PROVIDERS[kind].scopes}:{})}});
   return error||!data.url?back('sign-in'):c.redirect(data.url);
  }
- if(kind==='logout'){const {error}=await c.auth.auth.signOut({scope:'local'});if(error)return c.reply('Sign out could not be completed. Please try again.',503);for(const name of ['pinnacle-ask-phone','pinnacle-ask-return','pinnacle-ask-csrf'])c.set(name,'',{maxAge:0});const target=new URL(safeReturn(form.get('returnTo')),c.url.origin);target.searchParams.set('ask_signin','signed-out');return c.redirect(target.pathname+target.search+target.hash);}
+ if(kind==='logout'){const {error}=await c.auth.auth.signOut({scope:'local'});if(error)return c.reply('Sign out could not be completed. Please try again.',503);for(const name of ['pinnacle-ask-phone','pinnacle-ask-return','pinnacle-ask-csrf',GOOGLE_NONCE_COOKIE])c.set(name,'',{maxAge:0});const target=new URL(safeReturn(form.get('returnTo')),c.url.origin);target.searchParams.set('ask_signin','signed-out');return c.redirect(target.pathname+target.search+target.hash);}
  const {data:{user},error}=await c.auth.auth.getUser();
  if(error||!hasSupportedIdentity(user))return back('sign-in');
  if(await limited(env,kind+':'+user.id))return back('wait');
+ if(kind==='contact'){
+  if(!googleProfile(user)||!registrationComplete(user))return back('verification-required');
+  const mode=form.get('mode');if(!['call','whatsapp'].includes(mode))return back('invalid-contact');
+  c.headers.set('content-type','application/json; charset=utf-8');
+  return c.reply(JSON.stringify({url:mode==='call'?'tel:+919100181181':'https://wa.me/919100181181'}));
+ }
  if(kind==='phone'){
   if(env.ASK_WHATSAPP_ENABLED!=='true'||!env.ASK_AUTH_SECRET_KEY)return back('phone-unavailable');
   const phone=phoneNumber(form.get('phone'));if(!phone||form.get('verificationConsent')!=='yes')return back('phone-format');

@@ -9,11 +9,13 @@ const read=async(path,options={})=>fetch(origin+path,{redirect:'manual',signal:A
 const session=await read('/ask/auth/session');assert.equal(session.status,200);
 for(const h of ['cache-control','cdn-cache-control','cloudflare-cdn-cache-control'])assert.match(session.headers.get(h),/no-store/);
 assert.equal(session.headers.get('x-robots-tag'),'noindex, nofollow');
-const state=await session.json();assert.equal(state.profile,null);assert.match(state.csrf,/^[0-9a-f-]{36}$/);assert.deepEqual(Object.keys(state).sort(),['csrf','profile']);
+const state=await session.json();assert.equal(state.profile,null);assert.match(state.csrf,/^[0-9a-f-]{36}$/);assert.deepEqual(Object.keys(state).sort(),state.google?['csrf','google','profile']:['csrf','profile']);
+if(state.google){assert.equal(state.google.clientId,'562897376075-uk7a8vqmudls29rl46l96r6e5n92kn3o.apps.googleusercontent.com');assert.match(state.google.nonce,/^[a-f0-9]{64}$/);}
 const cookie=session.headers.getSetCookie().map(c=>c.split(';')[0]).join('; ');
 checks.push({name:'anonymous private session',status:200,profile:null,noStore:true,noindex:true,csrf:true});
 for(const path of ['/ask','/ask/lens/entity%3Atherapy_modality/ot','/ask/what-happens-during-occupational-therapy-sessions']){
- const r=await read(path),html=await r.text();assert.equal(r.status,200);assert.match(r.headers.get('x-pinnacle-ask-release'),/google-gate/);assert.equal(r.headers.get('referrer-policy'),'strict-origin');assert.equal(r.headers.get('set-cookie'),null);
+ const r=await read(path),html=await r.text();assert.equal(r.status,200);assert.match(r.headers.get('x-pinnacle-ask-release'),/google-(gate|identity)/);assert.equal(r.headers.get('referrer-policy'),'strict-origin');assert.equal(r.headers.get('set-cookie'),null);
+ if(state.google){assert.equal(r.headers.get('cross-origin-opener-policy'),'same-origin-allow-popups');assert.doesNotMatch(html,new RegExp(state.google.nonce));assert.match(html,/data-ask-google-button/);assert.match(html,/id="ask-whatsapp-verification"/);}
  assert.match(html,/id="ask-reader-gate"/);assert.match(html,/class="ask-registration-content"/);assert.match(html,/action="\/ask\/auth\/google"/);assert.match(html,/data-ask-profile/);assert.match(html,/isAccessibleForFree":false/);
  assert.doesNotMatch(html,/action="\/ask\/auth\/(apple|x|azure|phone|verify)"/);
  const graph=[...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/gs)].flatMap(m=>JSON.parse(m[1])['@graph']||[]);
