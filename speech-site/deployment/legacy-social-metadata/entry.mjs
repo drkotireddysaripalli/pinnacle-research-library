@@ -1,0 +1,109 @@
+// Shared legacy metadata repair. The Astro portal, Ask and other route owners
+// remain independent. Stream the unchanged body; inspect only a bounded head.
+export const RELEASE = 'legacy-social-https-20261004';
+export const HEAD_LIMIT = 64 * 1024;
+const encoder = new TextEncoder();
+
+export function isEligible(request) {
+  const url = new URL(request.url);
+  return request.method === 'GET' && url.protocol === 'https:' &&
+    url.hostname === 'www.pinnacleblooms.org' &&
+    (url.pathname === '/faq' || url.pathname.startsWith('/faq/') ||
+      ['/physiotherapy', '/physiotherapy/'].includes(url.pathname)) &&
+    !request.headers.has('authorization') && !request.headers.has('range');
+}
+
+function concatenate(parts) {
+  const bytes = new Uint8Array(parts.reduce((n, part) => n + part.length, 0));
+  let offset = 0;
+  for (const part of parts) { bytes.set(part, offset); offset += part.length; }
+  return bytes;
+}
+
+function resumedBody(parts, reader) {
+  return new ReadableStream({
+    async pull(controller) {
+      if (parts.length) { controller.enqueue(parts.shift()); return; }
+      try {
+        const {done, value} = await reader.read();
+        if (done) { reader.releaseLock(); controller.close(); }
+        else controller.enqueue(value);
+      } catch (error) { reader.releaseLock(); controller.error(error); }
+    },
+    async cancel(reason) { try { await reader.cancel(reason); } finally { reader.releaseLock(); } }
+  });
+}
+
+async function repairHead(head, request) {
+  const canonical = [], social = [], robots = [];
+  // A parsing pass makes attribute order, casing, entities and comments safe.
+  await new HTMLRewriter()
+    .on('head > link', {element(el) {
+      if ((el.getAttribute('rel') || '').toLowerCase().split(/\s+/).includes('canonical')) canonical.push(el.getAttribute('href'));
+    }})
+    .on('head > meta', {element(el) {
+      if ((el.getAttribute('property') || '').toLowerCase() === 'og:url') social.push(el.getAttribute('content'));
+      if (['robots', 'googlebot'].includes((el.getAttribute('name') || '').toLowerCase())) robots.push(el.getAttribute('content') || '');
+    }})
+    .transform(new Response(head)).text();
+  if (canonical.length !== 1 || social.length !== 1 || robots.some(v => /noindex/i.test(v))) return null;
+  const target = canonical[0], previous = social[0];
+  let parsed;
+  try { parsed = new URL(target); } catch { return null; }
+  const requestUrl = new URL(request.url);
+  if (parsed.protocol !== 'https:' || parsed.hostname !== 'www.pinnacleblooms.org' ||
+      parsed.port || parsed.username || parsed.password || parsed.search || parsed.hash ||
+      parsed.pathname.replace(/\/$/, '') !== requestUrl.pathname.replace(/\/$/, '') ||
+      previous !== target.replace(/^https:/, 'http:')) return null;
+  return new HTMLRewriter().on('head > meta', {element(el) {
+    if ((el.getAttribute('property') || '').toLowerCase() === 'og:url' && el.getAttribute('content') === previous) el.setAttribute('content', target);
+  }}).transform(new Response(head)).text();
+}
+
+export async function transform(request, response) {
+  if (!isEligible(request) || response.status !== 200 || !response.body ||
+      !/^text\/html(?:\s*;|$)/i.test(response.headers.get('content-type') || '') ||
+      /charset\s*=\s*(?!utf-8(?:\s|;|$))/i.test(response.headers.get('content-type') || '') ||
+      response.headers.has('set-cookie') || /noindex/i.test(response.headers.get('x-robots-tag') || '') ||
+      /no-store|no-transform/i.test(response.headers.get('cache-control') || '')) return response;
+
+  const reader = response.body.getReader(), parts = [];
+  let size = 0, headEnd = 0, combined;
+  while (size < HEAD_LIMIT) {
+    const {done, value} = await reader.read();
+    if (done) break;
+    parts.push(value); size += value.length;
+    combined = concatenate(parts);
+    const probe = new TextDecoder().decode(combined.subarray(0, HEAD_LIMIT));
+    const close = /<\/head\s*>/i.exec(probe);
+    if (close) { headEnd = encoder.encode(probe.slice(0, close.index + close[0].length)).length; break; }
+  }
+  let replacement = null;
+  const hasBom = combined?.[0] === 0xef && combined?.[1] === 0xbb && combined?.[2] === 0xbf;
+  if (headEnd && !hasBom) {
+    try {
+      const head = new TextDecoder('utf-8', {fatal: true}).decode(combined.subarray(0, headEnd));
+      replacement = await repairHead(head, request);
+    } catch { /* Unknown or malformed head: preserve the origin response. */ }
+  }
+  const headers = new Headers(response.headers);
+  let output = parts;
+  if (replacement !== null) {
+    output = [encoder.encode(replacement), combined.subarray(headEnd)];
+    // Keep origin privacy/cache/cookie semantics; never introduce shared caching.
+    for (const name of ['content-length', 'content-encoding', 'etag', 'last-modified', 'content-md5', 'digest']) headers.delete(name);
+    headers.set('x-pinnacle-social-metadata', RELEASE);
+  }
+  return new Response(resumedBody(output, reader), {status: response.status, statusText: response.statusText, headers});
+}
+
+export async function handle(request, fetcher = fetch) {
+  if (!isEligible(request)) return fetcher(request);
+  const headers = new Headers(request.headers);
+  // An origin validator could otherwise restore a cached pre-repair head via 304.
+  headers.delete('if-none-match'); headers.delete('if-modified-since');
+  const upstream = new Request(request, {headers});
+  return transform(request, await fetcher(upstream));
+}
+
+export default {fetch: request => handle(request)};
