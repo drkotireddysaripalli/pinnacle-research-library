@@ -37,3 +37,13 @@ Receipt folder: `work/pinnacle-growth-system/annanagar-20261004` in the primary 
 The 1.60 MB original document was investigated: approximately 1.19 million characters belong to the existing article-card section. That section is retained. The repaired candidate is approximately 1.59 MB; this is not a meaningful speed gain or field Core Web Vitals proof. Separate shared-template payload work needs to preserve article discovery and content.
 
 Publication, indexing, rankings, AI citations and qualified enquiries remain separate outcomes. Final release evidence is appended after actual deployment.
+
+## Verified production release
+
+- Source `e02eeeb8f657b33acdf26fe9be9437afe0e42aee`; [CI successful](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37213453726).
+- Centre Worker `96e2f73a-9e5c-44c4-b6b1-dd2a9163808e`; deployment `719cece3-b581-4c4f-baf7-812ce4ec6934`; added route `7d8af4782c524a428ca6ba25358a0cff`.
+- 87 focused tests passed. Five public request variants, 11 protected destinations and13 linked pages passed. Actual source modules match uploaded bytes; all193 old routes/bindings/otherWorker versions preserved, total194 routes.
+- Candidate Chromium/WebKit and live Chromium checks at320/390/768/1024/1440px; live mobile and desktop screenshots inspected. Matching3 visible/schema FAQs; correct centre enquiry without submission. Screaming Frog confirms HTTP200, Indexable and self-canonical.
+- IndexNow accepted1 changed URL with verified key, batch `f76a7b95-b21e-416d-80b4-bc07a61c564b`; GSC property annotation `2014adaa-71bf-4d8a-aea5-fa711122e290`.
+- Single mobile Lighthouse sample: performance61/accessibility78/SEO92; LCP3.70s, TBT707.5ms, CLS0, transfer4.48MB. These scores describe the whole inherited page under lab conditions with analytics blocked. Findings identify existing article/image/script and accessibility work, recorded under `WEB-LEGACY-CENTRE-PERFORMANCE`. No speed uplift or complete optimisation claimed.
+- Completed action and detailed evidence: `annanagar-release-receipt-20261004.json`. No new Ahrefs spend or prospect correspondence.

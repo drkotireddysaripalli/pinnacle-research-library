@@ -1,8 +1,8 @@
-# Active bounded regional improvement — Anna Nagar — 4 October 2026
+# Delivered bounded regional improvement — Anna Nagar — 4 October 2026
 
 Queue `WEB-ANNA-NAGAR`; action `4d4523d7-68bf-46d1-9a6e-851f35d1c13d`. Replace the 554-character heading with a readable local parent journey, call and Anna Nagar-selected enquiry; connect the existing map, useful therapy/Ask/Verify resources and matching FAQ. Correct the exact centre structured identity that mixed Anna Nagar with Begumpet II and a Suchitra review. Contract: `deployment/centre-search-repair/RELEASE-ANNANAGAR-20261004.md`.
 
-Keep the child’s self-sufficient, mainstream-included life as the purpose. Preserve shared header/footer, existing centre media and all other routes/bindings; add only the exact Anna Nagar route to the current centre Worker. No claims of current staff availability, free assessment or guaranteed outcomes. The 1.60 MB source was traced principally to its existing article-card section; retain that section in this bounded repair. Candidate engine/viewport checks and actual enquiry selection passed. Activation and public evidence follow committed source.
+Keep the child’s self-sufficient, mainstream-included life as the purpose. Preserve shared header/footer, existing centre media and all other routes/bindings; add only the exact Anna Nagar route to the current centre Worker. No claims of current staff availability, free assessment or guaranteed outcomes. The 1.60 MB source was traced principally to its existing article-card section; retain that section in this bounded repair. Candidate engine/viewport checks and actual enquiry selection passed. Published source `e02eeeb`, Worker `96e2f73a-9e5c-44c4-b6b1-dd2a9163808e`; CI and live checks passed. All193 old routes retained,1 added. See the Anna Nagar release receipt. Legacy performance/accessibility follow-up is explicitly queued; this is not whole-page certification.
 
 ---
 
