@@ -1,4 +1,6 @@
-# Shared legacy social metadata correction — 4 October 2026
+# Shared legacy metadata and FAQ payload repairs — 4 October 2026
+
+Current scope includes the initial metadata correction below and the separately verified fingerprinted FAQ debug removal in `RELEASE-PAYLOAD-20261004.md`. The page body now differs only by that exact nonfunctional script payload where its fingerprint matches; the original metadata-only receipt remains historical.
 
 Action: `WEB-LEGACY-SOCIAL-METADATA` / `12008ab6-e97c-46fb-bc41-8a84860e1523`.
 

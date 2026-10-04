@@ -1,8 +1,11 @@
 // Shared legacy metadata repair. The Astro portal, Ask and other route owners
-// remain independent. Stream the unchanged body; inspect only a bounded head.
+// remain independent. Inspect a bounded head; separately filter a known invalid
+// FAQ debug payload while streaming all remaining content unchanged.
+import {reduceKnownLegacyPayload} from './payload.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 const encoder = new TextEncoder();
+const transformedResponses = new WeakSet();
 
 export function isEligible(request) {
   const url = new URL(request.url);
@@ -94,7 +97,9 @@ export async function transform(request, response) {
     for (const name of ['content-length', 'content-encoding', 'etag', 'last-modified', 'content-md5', 'digest']) headers.delete(name);
     headers.set('x-pinnacle-social-metadata', RELEASE);
   }
-  return new Response(resumedBody(output, reader), {status: response.status, statusText: response.statusText, headers});
+  const result = new Response(resumedBody(output, reader), {status: response.status, statusText: response.statusText, headers});
+  if (replacement !== null) transformedResponses.add(result);
+  return result;
 }
 
 export async function handle(request, fetcher = fetch) {
@@ -103,7 +108,8 @@ export async function handle(request, fetcher = fetch) {
   // An origin validator could otherwise restore a cached pre-repair head via 304.
   headers.delete('if-none-match'); headers.delete('if-modified-since');
   const upstream = new Request(request, {headers});
-  return transform(request, await fetcher(upstream));
+  const response = await transform(request, await fetcher(upstream));
+  return transformedResponses.has(response) ? reduceKnownLegacyPayload(request, response) : response;
 }
 
 export default {fetch: request => handle(request)};
