@@ -24,3 +24,7 @@ One read-only reviewer confirmed the 20/22 scope, exact locale/subject identity 
 Production build passed; 333 unit tests passed. Built metadata and WebPage descriptions match the intended values for all 20 pages. Captured live-source candidates change only the intended summaries; body hashes, product records and links match the baseline for every page. No visual layout change, new image generation, purchase or enquiry submission is involved. After publication verify the same 20 public pages, request variants, 14 protected destinations and Cloudflare module/binding/route state. Run only the changed-URL crawl, one IndexNow batch and one GSC annotation.
 
 This is a search/social description correction. Search engines choose whether to use the supplied snippet; no indexing, ranking, click or sales gain is implied by publishing it.
+
+## Published result
+
+Source `5e04a09a1eed6578ef7748e5950408b364a2472c`; main version `f2faed3d-619d-4b2c-9c84-9a7defd57560`; exact-source CI successful. All 20 public pages, four request variants and 14 protected responses passed. All 194 routes/four bindings and other Worker versions preserved; 18 deployed module hashes verified. Screaming Frog confirms 20 unique summaries, HTTP 200, indexable and self-canonical. IndexNow accepted all 20 with key validation; GSC annotation `4e7ff823-22b3-48a7-b88b-1bff838573ad`. See the adjacent release receipt and delivered-URL list.

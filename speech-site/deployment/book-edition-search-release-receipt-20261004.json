@@ -1,0 +1,80 @@
+{
+  "item_id": "COMMERCE-DESCRIPTIONS",
+  "action_id": "5a01e0eb-c8e5-49b3-aa43-ce293d1f5207",
+  "outcome": "deployed",
+  "verified": true,
+  "at": "2026-10-04T18:30:22.932799+00:00",
+  "summary": "Published distinct subject-specific English search/social/WebPage descriptions for 20 Hindi/Telugu PDF single and paired editions. Source pushed;333 tests/exact-source CI passed;all20 live pages and4 request variants verified. Visible bodies, product records, catalogue and feeds unchanged;194 routes/four main bindings and14 protected destinations preserved. Screaming Frog confirms20 unique,indexable,self-canonical pages;IndexNow accepted20 changed URLs and GSC annotation saved. No ranking,AI citation,click or sales gain claimed.",
+  "commit": "5e04a09a1eed6578ef7748e5950408b364a2472c",
+  "deployment": "f2faed3d-619d-4b2c-9c84-9a7defd57560",
+  "deployment_id": "2f125d70-05ff-4c1b-b033-37604ebf15ee",
+  "public_url": "https://www.pinnacleblooms.org/books/editions/hi/speech-101",
+  "public_urls": [
+    "https://www.pinnacleblooms.org/books/editions/hi/speech-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/ot-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/aba-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/special-education-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/speech-ot-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/speech-aba-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/speech-special-education-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/ot-aba-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/ot-special-education-101",
+    "https://www.pinnacleblooms.org/books/editions/hi/aba-special-education-101",
+    "https://www.pinnacleblooms.org/books/editions/te/speech-101",
+    "https://www.pinnacleblooms.org/books/editions/te/ot-101",
+    "https://www.pinnacleblooms.org/books/editions/te/aba-101",
+    "https://www.pinnacleblooms.org/books/editions/te/special-education-101",
+    "https://www.pinnacleblooms.org/books/editions/te/speech-ot-101",
+    "https://www.pinnacleblooms.org/books/editions/te/speech-aba-101",
+    "https://www.pinnacleblooms.org/books/editions/te/speech-special-education-101",
+    "https://www.pinnacleblooms.org/books/editions/te/ot-aba-101",
+    "https://www.pinnacleblooms.org/books/editions/te/ot-special-education-101",
+    "https://www.pinnacleblooms.org/books/editions/te/aba-special-education-101"
+  ],
+  "rollback": [
+    {
+      "version_id": "d334d820-ac6e-45c6-90e3-70db6519c9b3",
+      "percentage": 100
+    }
+  ],
+  "proof": {
+    "ci": {
+      "id": 37224323558,
+      "sha": "5e04a09a1eed6578ef7748e5950408b364a2472c",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37224323558"
+    },
+    "production_build": "build.log",
+    "tests": 333,
+    "live_edition_pages": 20,
+    "request_variants": 4,
+    "protected_responses": 14,
+    "runtime_modules_verified": 18,
+    "routes_retained": 194,
+    "main_bindings_retained": 4,
+    "other_worker_versions_retained": true,
+    "visible_body_hashes_unchanged": true,
+    "Product_Book_Offer_schema_unchanged": true,
+    "canonical_and_language_links_unchanged": true,
+    "catalogue_source_and_Merchant_feeds_unchanged": true,
+    "screaming_frog": {
+      "checked": 20,
+      "http_200": 20,
+      "indexable": 20,
+      "self_canonical": 20,
+      "distinct_descriptions": 20,
+      "min_length": 144,
+      "max_length": 159
+    },
+    "indexnow_batch": "c26ac23f-fc2f-499c-a9ff-6880b61cae21",
+    "indexnow_submitted": 20,
+    "indexnow_key_validated": true,
+    "gsc_annotation": "4e7ff823-22b3-48a7-b88b-1bff838573ad",
+    "ahrefs_units": 0,
+    "new_external_emails": 0,
+    "new_paid_tools": 0,
+    "evidence_directory": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\book-descriptions-20261004"
+  },
+  "next_condition": "Use settled existing tracker/search data to assess the changed pages. No repeated unchanged crawl or IndexNow submission; subsequent summaries require actual new source changes."
+}
