@@ -67,6 +67,30 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
       const head=await run({},'/physiotherapy',{method:'HEAD'});assert.equal(head.body,'');assert.equal(forwarded.method,'HEAD');
       const post=await run({},'/faq',{method:'POST',body:'fixture'});assert.equal(post.body,html());assert.equal(forwarded.method,'POST');
     });
+    await t.test('linked physiotherapy aliases redirect to canonical with exact query retained',async()=>{
+      for(const path of ['/physio-therapy','/physio-therapy/','/physio-therapy?utm_source=site&x=%2F']){
+        const {r,body}=await run({},path,{redirect:'manual'});
+        assert.equal(r.status,301);assert.equal(body,'');assert.equal(r.headers.get('location'),origin+'/physiotherapy'+new URL(origin+path).search);
+      }
+      const {r}=await run({},'/physio-therapy',{method:'HEAD',redirect:'manual'});assert.equal(r.status,301);
+    });
+    await t.test('alias redirect preserves unknown paths and protected request behavior',async()=>{
+      for(const [path,options]of [['/physio-therapy-other',{}],['/physio-therapy/subpage',{}],['/physio-therapy',{method:'POST',body:'retain'}],['/physio-therapy',{headers:{authorization:'Bearer fixture'}}],['/physio-therapy',{headers:{range:'bytes=0-10'}}]]){
+        const {r,body}=await run({},path,options);assert.equal(r.status,200);assert.equal(body,html());assert.equal(r.headers.get('location'),null);
+      }
+    });
+    const servicesPath='/top-autism-therapy-services-india-proven-improvement-rate';
+    const serviceHtml=()=>html(servicesPath).replaceAll('www.pinnacleblooms.org','books.pinnacleblooms.org').replace('</main>','<a href="/physio-therapy">Movement</a><a href="/physio-therapy/#why-section">Why</a><a href="/physio-therapy?from=services#why-section">More</a><a href="/physio-therapy-other">Unchanged</a></main>');
+    await t.test('services hub repairs only known host identity and existing physiotherapy hrefs',async()=>{
+      const input=serviceHtml();const {r,body}=await run({body:input,chunk:7},servicesPath);
+      assert.equal(body,input.replace('content="http://books.pinnacleblooms.org','content="https://www.pinnacleblooms.org').replace('href="https://books.pinnacleblooms.org','href="https://www.pinnacleblooms.org').replace('href="/physio-therapy"','href="/physiotherapy"').replace('href="/physio-therapy/#','href="/physiotherapy#').replace('href="/physio-therapy?','href="/physiotherapy?'));
+      assert.equal(r.headers.get('x-pinnacle-legacy-payload'),null);
+    });
+    await t.test('services ignores unrecognised canonical and protected responses',async()=>{
+      for(const f of [{body:serviceHtml().replaceAll('books.pinnacleblooms.org','unknown.pinnacleblooms.org')},{body:serviceHtml(),status:500},{body:serviceHtml(),headers:{'cache-control':'no-store'}},{body:serviceHtml(),headers:{'set-cookie':'session=fixture'}}]){
+        const {body,r}=await run(f,servicesPath);assert.equal(body,f.body);assert.equal(r.headers.get('x-pinnacle-social-metadata'),null);
+      }
+    });
     if(process.env.LEGACY_SOCIAL_FIXTURE) await t.test('captured live origin changes only the intended metadata value',async()=>{
       const input=await fs.readFile(process.env.LEGACY_SOCIAL_FIXTURE,'utf8');const {body}=await run({body:input});assert.equal(body,input.replace('content="http://www.pinnacleblooms.org/physiotherapy"','content="https://www.pinnacleblooms.org/physiotherapy"'));
     });

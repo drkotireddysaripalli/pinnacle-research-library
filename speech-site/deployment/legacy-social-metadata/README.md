@@ -1,5 +1,7 @@
 # Shared legacy metadata and FAQ payload repairs — 4 October 2026
 
+The discovery extension in `RELEASE-DISCOVERY-20261004.md` reconciles the existing `/physio-therapy` menu alias with `/physiotherapy` and the exact services hub's misplaced books-host identity. It adds two tightly admitted route families, preserving the original repairs below. Use its fresh-baseline release helper rather than rerunning a historical first-deployment script.
+
 Current scope includes the initial metadata correction below and the separately verified fingerprinted FAQ debug removal in `RELEASE-PAYLOAD-20261004.md`. The page body now differs only by that exact nonfunctional script payload where its fingerprint matches; the original metadata-only receipt remains historical.
 
 Action: `WEB-LEGACY-SOCIAL-METADATA` / `12008ab6-e97c-46fb-bc41-8a84860e1523`.

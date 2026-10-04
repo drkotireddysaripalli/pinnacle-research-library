@@ -2,6 +2,7 @@
 // remain independent. Inspect a bounded head; separately filter a known invalid
 // FAQ debug payload while streaming all remaining content unchanged.
 import {reduceKnownLegacyPayload} from './payload.mjs';
+import {SERVICES_PATH, SERVICES_URL, physiotherapyRedirect, repairServiceLinks} from './discovery.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 const encoder = new TextEncoder();
@@ -12,7 +13,7 @@ export function isEligible(request) {
   return request.method === 'GET' && url.protocol === 'https:' &&
     url.hostname === 'www.pinnacleblooms.org' &&
     (url.pathname === '/faq' || url.pathname.startsWith('/faq/') ||
-      ['/physiotherapy', '/physiotherapy/'].includes(url.pathname)) &&
+      ['/physiotherapy', '/physiotherapy/', SERVICES_PATH, SERVICES_PATH + '/'].includes(url.pathname)) &&
     !request.headers.has('authorization') && !request.headers.has('range');
 }
 
@@ -51,9 +52,22 @@ async function repairHead(head, request) {
     .transform(new Response(head)).text();
   if (canonical.length !== 1 || social.length !== 1 || robots.some(v => /noindex/i.test(v))) return null;
   const target = canonical[0], previous = social[0];
+  const requestUrl = new URL(request.url);
+  // This public service hub incorrectly inherits the books subdomain identity.
+  // Require the exact observed pair; all other canonical choices pass through.
+  if (requestUrl.pathname.replace(/\/$/, '') === SERVICES_PATH &&
+      target === 'https://books.pinnacleblooms.org' + SERVICES_PATH &&
+      previous === 'http://books.pinnacleblooms.org' + SERVICES_PATH) {
+    return new HTMLRewriter()
+      .on('head > link', {element(el) {
+        if ((el.getAttribute('rel') || '').toLowerCase().split(/\s+/).includes('canonical')) el.setAttribute('href', SERVICES_URL);
+      }})
+      .on('head > meta', {element(el) {
+        if ((el.getAttribute('property') || '').toLowerCase() === 'og:url') el.setAttribute('content', SERVICES_URL);
+      }}).transform(new Response(head)).text();
+  }
   let parsed;
   try { parsed = new URL(target); } catch { return null; }
-  const requestUrl = new URL(request.url);
   if (parsed.protocol !== 'https:' || parsed.hostname !== 'www.pinnacleblooms.org' ||
       parsed.port || parsed.username || parsed.password || parsed.search || parsed.hash ||
       parsed.pathname.replace(/\/$/, '') !== requestUrl.pathname.replace(/\/$/, '') ||
@@ -103,13 +117,15 @@ export async function transform(request, response) {
 }
 
 export async function handle(request, fetcher = fetch) {
+  const redirect = physiotherapyRedirect(request);
+  if (redirect) return redirect;
   if (!isEligible(request)) return fetcher(request);
   const headers = new Headers(request.headers);
   // An origin validator could otherwise restore a cached pre-repair head via 304.
   headers.delete('if-none-match'); headers.delete('if-modified-since');
   const upstream = new Request(request, {headers});
   const response = await transform(request, await fetcher(upstream));
-  return transformedResponses.has(response) ? reduceKnownLegacyPayload(request, response) : response;
+  return transformedResponses.has(response) ? repairServiceLinks(request, reduceKnownLegacyPayload(request, response)) : response;
 }
 
 export default {fetch: request => handle(request)};
