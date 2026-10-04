@@ -1,4 +1,4 @@
-# Active bounded regional improvement — LB Nagar — 4 October 2026
+# Delivered bounded regional improvement — LB Nagar — 4 October 2026
 
 Queue `WEB-HYDERABAD-NEXT`; action `eadf7e32-19ba-4078-b028-09bd8757046c`. Saved September data: LB Nagar 3,737 impressions / 25 clicks (0.67%); Suchitra 4,352 / 36 (0.83%). Live comparison confirms Suchitra already has the new Astro family narrative and centre-selected enquiry. LB Nagar still has a generic long introduction and `/enroll` links. Improve only LB Nagar's introduction/search description and local enquiry path using its established legacy Worker.
 
@@ -7,6 +7,8 @@ Queue `WEB-HYDERABAD-NEXT`; action `eadf7e32-19ba-4078-b028-09bd8757046c`. Saved
 - Exact identity: facility 3062523145, K Square, 3rd floor, New Siri Nagar Colony, LB Nagar. No verified separate local telephone. No new current service/hours/fees claims, free assessment offer or outcome guarantee.
 - Preserve header/footer, photos, emblem, team, reviews, all other page sections, Suchitra/Kukatpally improvements, current main portal `688e7809-d9e9-4506-a916-b69c03dc166e`, all 185 routes and bindings. Baseline/rollback centre Worker `715eb80f-36f3-48e1-854f-38edb54256c8`.
 - Acceptance: exact guarded transformation, meaningful request/cache tests, actual local enquiry selection without submission, phone/tablet/desktop visual review, live public/link/route checks, commit then activation and release receipt. No claimed ranking or qualified-call gains before settled measurement.
+
+**Published and visually verified:** source `0809332`, centre Worker `aef61521-6d56-4ed2-9a92-a09a9a635648`, deployment `94d4f199-877f-45cc-b7ce-77cdaa23c3bc`. Four responsive widths, exact centre enquiry selection, five live variants, 12 destinations and eight protected pages passed. All 185 routes retained. IndexNow accepted the changed URL once; GSC annotation saved. Encoding issue in first activation was rolled back and repaired before completion. See `deployment/centre-search-repair/RELEASE-LBNAGAR-20261004.md`. Next work comes from the ranked queue.
 
 ---
 
