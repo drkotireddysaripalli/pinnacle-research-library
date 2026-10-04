@@ -1,3 +1,15 @@
+## Active bounded regional improvement — Kukatpally — 4 October 2026
+
+Action `aa7d91f4-3e79-46c9-a4d5-9a996823f455`, queue `WEB-KUKATPALLY`. Improve the existing local introduction and enquiry journey at `/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india`. This is a bounded legacy-page improvement, not a full Astro migration or a common-shell redesign.
+
+- Audience/outcome: a family searching for speech support in Kukatpally understands the life purpose, relevant therapies, how to start, exact location and who to contact at 9100 181 181.
+- Narrative: communication moments → child's self-sufficient/mainstream life → call/centre-selected enquiry → directions → family questions and home/school review → integrated therapies → Ask/Verify evidence.
+- Identity: facility 3062523056, Vivekananda Nagar; centre slug `kukatpally`; no verified separate branch telephone. Appointment/professional/fees are confirmed by the team; no new service/hours/offer or outcome guarantee.
+- Preserve current common/legacy navigation, footer, emblem, photos, reviews, team and videos outside the replaced introduction. New styling is isolated under one section ID. Existing photographs serve the place; no new campaign creative is needed for this repair.
+- Source/release: exact current `pinnacle-centre-search-repair` Worker v11 baseline `dd7b8619-cbce-4db8-99cb-5e13f3ce6351`; preserve every other centre and all 185 zone routes. Main portal stays `e53a1016-15ab-462b-b005-b996261db856`.
+- Acceptance: guarded transformation, no alteration outside intro/four search metadata fields and clean canonical, selected speech/centre in enrolment with no submission, keyboard/readable actions and phone/tablet/desktop visual inspection, protected-route checks, committed source and active deployment/public receipt. Search/lead gains are measured later, never inferred from release.
+- Existing next regional task: compare LB Nagar/Suchitra; measurement priority remains in the ranked growth queue. PinnacleAI scholarly/Figma work stays held for the owner's diagram. The sections below are previous work, not additional active scope.
+
 ## Delivered Ask-only work · answer experience · 3 October 2026
 
 Bounded scope: `ASK-ANSWER-EXPERIENCE-WORK-ORDER-20261003.md`. Improve the shared answer template, sources, exact topic/service connections, seven-stage PinnacleAI links, citations and the existing per-answer QR image; style Cancel as text beside Privacy. The three new campaign images were rejected and will not be published. Preserve the current sign-in/profile implementation, common header/footer, all Ask routes and the independently managed portal/book/MCP releases. PinnacleAI scholarly/Figma work remains held for the owner's diagram. Earlier notes below are history or independent workstreams, not additional Ask scope.
