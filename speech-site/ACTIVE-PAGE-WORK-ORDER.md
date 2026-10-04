@@ -1,3 +1,16 @@
+# Active bounded regional improvement — Labbipet — 4 October 2026
+
+Queue `WEB-ANDHRA-NEXT`; action `4f760f67-bd08-45b3-8b39-b4e431fc1bcb`. Saved 2–29 September data: Labbipet 2,148 impressions / 15 clicks (0.70%); Guntur 2,177 / 27 (1.24%). Actual pages inspected: both retain a generic promotional introduction, but Guntur already has practical parent questions; Labbipet lacks those and a centre-selected first step. Saved query sample includes ABA/autism, not sufficient to assign all impressions to those terms.
+
+- Intent and voice: a Labbipet/Vijayawada family can relate everyday communication, routines and participation to the whole-life PinnacleAI purpose, understand the first conversation and contact the correct centre.
+- Blocks: everyday priority and immediate call/enquiry → life purpose → exact Temple Street directions → illustrative help/break goal through support, home and review → relevant therapies → practical FAQ/Ask/Verify/PinnacleAI and first-conversation planner. No claimed child case.
+- Identity/source: directory checked 28 September and current page agree on facility 3062523180, Door 39-9-7 Temple Street, Labbipet 520007. Maps uses the saved exact-centre link. No verified separate local phone; use 9100 181 181. Staff, appointments, availability and fees are confirmed by the team, not inferred from the directory.
+- Visual: reuse scoped typography, icons, three-stage layout and existing correct centre emblem/photos. No common shell edit, synthetic centre photography or new image generation.
+- Boundary: only the existing introduction, keywords, title/descriptions, clean canonical and exact Labbipet address postcode in the centre Worker. Reconcile the old structured postcode 520010 to its own Temple Street streetAddress and directory value 520007; preserve unrelated schema. Keep main portal `ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4`, every other centre module, all 185 routes/bindings, Ask/auth and Verify. Centre rollback `aef61521-6d56-4ed2-9a92-a09a9a635648`.
+- Acceptance: exact source/fingerprint guard; scope/cache tests; matching visible FAQ/schema; real selected enquiry without submission; phone/tablet/desktop screenshots including below introduction; once-committed source and CI; upload/activation/live route/content proofs; one material IndexNow notification and GSC annotation. No inferred rankings, AI citations or qualified-call gains.
+
+---
+
 # Delivered bounded regional improvement — LB Nagar — 4 October 2026
 
 Queue `WEB-HYDERABAD-NEXT`; action `eadf7e32-19ba-4078-b028-09bd8757046c`. Saved September data: LB Nagar 3,737 impressions / 25 clicks (0.67%); Suchitra 4,352 / 36 (0.83%). Live comparison confirms Suchitra already has the new Astro family narrative and centre-selected enquiry. LB Nagar still has a generic long introduction and `/enroll` links. Improve only LB Nagar's introduction/search description and local enquiry path using its established legacy Worker.

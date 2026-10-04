@@ -3,7 +3,7 @@
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
 const [mode,output]=process.argv.slice(2);assert(['upload','deploy','verify'].includes(mode)&&path.isAbsolute(output));
 const here=path.dirname(fileURLToPath(import.meta.url)),account='862998def1cd610fdb86b8e5c1d6ed4d',worker='pinnacle-centre-search-repair';
-const baseline='715eb80f-36f3-48e1-854f-38edb54256c8',portalBaseline='688e7809-d9e9-4506-a916-b69c03dc166e';
+const baseline='aef61521-6d56-4ed2-9a92-a09a9a635648',portalBaseline='ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4';
 const base='/accounts/'+account+'/workers/scripts/'+worker;
 const token=(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)?.[1];assert(token);
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
@@ -26,9 +26,9 @@ if(mode==='upload'){
  const live=await(await raw(base+'/content/v2')).formData();const parts=[...live].filter(([,v])=>typeof v!=='string');
  assert.equal(parts.length,captured.modules.length,'Unexpected current module count');
  for(const [key,value]of parts){const recorded=captured.modules.find(m=>m.name===(value.name||key));assert(recorded,'Unexpected current source module');assert.equal(sha(Buffer.from(await value.arrayBuffer())),recorded.sha256,'Current source changed since baseline capture');}
- for(const name of ['legacy-v11.mjs','kukatpally.mjs'])assert.equal(sha(await fs.readFile(path.join(here,name))),captured.modules.find(m=>m.name===name)?.sha256,'Protected module changed');
- const modules=await Promise.all(['entry.mjs','legacy-v11.mjs','kukatpally.mjs','lbnagar.mjs'].map(async name=>({name,bytes:await fs.readFile(path.join(here,name))})));
- const metadata={main_module:'entry.mjs',compatibility_date:state.settings.compatibility_date,compatibility_flags:state.settings.compatibility_flags||[],bindings:[],annotations:{'workers/message':'LB Nagar: local family journey, centre-selected enquiry, directions and source links; existing modules retained'}};
+ for(const name of ['legacy-v11.mjs','kukatpally.mjs','lbnagar.mjs'])assert.equal(sha(await fs.readFile(path.join(here,name))),captured.modules.find(m=>m.name===name)?.sha256,'Protected module changed');
+ const modules=await Promise.all(['entry.mjs','legacy-v11.mjs','kukatpally.mjs','lbnagar.mjs','labbipet.mjs'].map(async name=>({name,bytes:await fs.readFile(path.join(here,name))})));
+ const metadata={main_module:'entry.mjs',compatibility_date:state.settings.compatibility_date,compatibility_flags:state.settings.compatibility_flags||[],bindings:[],annotations:{'workers/message':'Labbipet: local family journey, centre-selected enquiry, directions and source links; existing modules retained'}};
  for(const key of ['placement','tail_consumers','logpush'])if(state.settings[key]!==undefined)metadata[key]=state.settings[key];
  const form=new FormData();form.set('metadata',JSON.stringify(metadata));for(const {name,bytes}of modules)form.set(name,new Blob([bytes],{type:'application/javascript+module'}),name);
  await save('cloudflare-before.json',state);

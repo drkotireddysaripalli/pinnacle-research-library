@@ -25,3 +25,7 @@ This is a bounded legacy introduction repair, not a complete centre-page migrati
 ## LB Nagar follow-up — 4 October 2026
 
 The exact LB Nagar introduction now has its own guarded module, `lbnagar.mjs`, dispatched by `entry.mjs`. Kukatpally and the original legacy module are retained unchanged. See `RELEASE-LBNAGAR-20261004.md` for the current source/release contract and receipt. The release helper now targets the captured post-Kukatpally baseline `715eb80f-36f3-48e1-854f-38edb54256c8` and current main portal `688e7809-d9e9-4506-a916-b69c03dc166e`, with an explicit pre-edit `baseline.json` module manifest. Historical Kukatpally release details above remain historical.
+
+## Labbipet follow-up — 4 October 2026
+
+`labbipet.mjs` adds the separately guarded Temple Street family journey. Source/acceptance boundary: `RELEASE-LABBIPET-20261004.md`. The current helper baseline is centre Worker `aef61521-6d56-4ed2-9a92-a09a9a635648` and main portal `ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4`. Previous release sections are historical. Protect the exact legacy, Kukatpally and LB Nagar modules when uploading.
