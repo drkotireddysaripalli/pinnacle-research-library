@@ -1,3 +1,4 @@
+import {serveSeva} from './seva-handler.mjs';
 import {serveFirstConversation} from './first-conversation-handler.mjs';
 import {serveBookAttribution} from './book-attribution-handler.mjs';
 import {FIRST_CONVERSATION_LINK} from './first-conversation-links.mjs';
@@ -34,6 +35,7 @@ function acceptsMarkdown(value=''){return value.split(',').some(entry=>{const [t
 // Exact retired public profiles/assets. Other leadership and image paths keep origin handling.
 export function isRetiredLeadershipPath(path){let decoded;try{decoded=decodeURIComponent(path);}catch{return false;}return /^\/leadership\/(?:prudhvi-(?:matsa|masta)|maheshwari|(?:shoban|sobhan)-kumar)\/?$/i.test(decoded)||/^\/images\/leadershipimages\/(?:prudhvi|maheshwari|shoban|sobhan)_big_image\.(?:jpe?g|png)$/i.test(decoded);}
 export async function serveSpeech(request,env,inventory){
+ const seva=serveSeva(request);if(seva)return seva;
  const attribution=serveBookAttribution(request);if(attribution)return attribution;
  const resource=serveFirstConversation(request);if(resource)return resource;
  const physicalFeed=await serveShopifyPhysicalFeed(request);if(physicalFeed)return physicalFeed;

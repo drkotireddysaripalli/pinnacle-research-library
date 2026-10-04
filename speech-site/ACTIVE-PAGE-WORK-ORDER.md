@@ -1,3 +1,12 @@
+# Active bounded restoration — Pinnacle SEVA — 4 October 2026
+
+Queue WEB-SEVA; action deb2d4a3-d88e-4bb1-8ff1-5859315e4665. Canonical `/seva` restores the documented financial-access programme destination used in two existing references. The source decision, block contract, exact route boundary and acceptance scope are in `deployment/SEVA-RESTORATION-20261004.md`.
+
+Purpose: help a family facing cost barriers understand SEVA, ask the current support/eligibility questions and contact 9100 181 181. Keep the child's self-sufficient, mainstream-included life as the direction of care. Existing publication describes a subsidised-access model; no present subsidy, slot, price, centre availability or free-therapy entitlement is asserted.
+
+Main Worker baseline ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4. Reuse the existing common-shell source and branded family artwork. Preserve all 185 existing routes and bindings, add only four exact SEVA routes. Next work returns to the ranked growth queue after public verification.
+
+---
 # Delivered bounded regional improvement — Labbipet — 4 October 2026
 
 Queue `WEB-ANDHRA-NEXT`; action `4f760f67-bd08-45b3-8b39-b4e431fc1bcb`. Saved 2–29 September data: Labbipet 2,148 impressions / 15 clicks (0.70%); Guntur 2,177 / 27 (1.24%). Actual pages inspected: both retain a generic promotional introduction, but Guntur already has practical parent questions; Labbipet lacks those and a centre-selected first step. Saved query sample includes ABA/autism, not sufficient to assign all impressions to those terms.
