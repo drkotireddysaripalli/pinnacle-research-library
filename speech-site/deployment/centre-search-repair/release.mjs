@@ -3,7 +3,7 @@
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
 const [mode,output]=process.argv.slice(2);assert(['upload','deploy','verify'].includes(mode)&&path.isAbsolute(output));
 const here=path.dirname(fileURLToPath(import.meta.url)),account='862998def1cd610fdb86b8e5c1d6ed4d',worker='pinnacle-centre-search-repair';
-const baseline='aef61521-6d56-4ed2-9a92-a09a9a635648',portalBaseline='ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4';
+const baseline='feef0856-9d55-4040-b490-5432fc1fb6ba',portalBaseline='ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4';
 const base='/accounts/'+account+'/workers/scripts/'+worker;
 const token=(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)?.[1];assert(token);
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');

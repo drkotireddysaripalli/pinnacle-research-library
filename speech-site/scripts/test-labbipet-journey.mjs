@@ -24,11 +24,20 @@ for(const request of [new Request(LABBIPET_URL,{method:'POST',body:'do not submi
 
 test('parent-facing punctuation and brand marks are intact UTF-8',()=>{assert(LABBIPET_MARKUP.includes('child\u2019s'));assert(LABBIPET_MARKUP.includes('PinnacleAI\u00ae'));assert(!/[\u00c2\u00c3\u00e2][\u0080-\u00ff\u2000-\u2122]/.test(LABBIPET_MARKUP));});
 
-const localSchema={"@context":"https://schema.org","@type":"LocalBusiness","@id":LABBIPET_URL,url:LABBIPET_URL,address:{"@type":"PostalAddress",streetAddress:"Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007",postalCode:"520010"}};
+const localSchema={"@context":"https://schema.org","@type":"LocalBusiness","@id":LABBIPET_URL,url:LABBIPET_URL,image:'https://www.pinnacleblooms.org/Images/ProfileImages/3062523180.jpg',address:{"@type":"PostalAddress",streetAddress:"Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007",postalCode:"520010"}};
 const script=data=>'<script type="application/ld+json">'+JSON.stringify(data)+'</script>';
 test('only the exact Labbipet entity and Temple Street postcode reconcile',()=>{
  const expected=script({...localSchema,address:{...localSchema.address,postalCode:'520007'}});
  assert.equal(alignLabbipetPostalCode(script(localSchema)),expected);
  assert.equal(alignLabbipetPostalCode(expected),expected);
  for(const other of [{...localSchema,'@id':LABBIPET_URL+'-other'},{...localSchema,address:{...localSchema.address,streetAddress:'Other centre'}},{...localSchema,'@type':'Organization'}])assert.equal(alignLabbipetPostalCode(script(other)),script(other));
+});
+
+test('returning and campaign visitor legacy schema alias is the same exact centre',()=>{
+ const legacyUrl=LABBIPET_URL.replace('vijayawada','vijyawada');
+ const fromOrigin={...localSchema,'@id':legacyUrl,url:legacyUrl,mainEntityOfPage:{'@id':legacyUrl}};
+ const expected={...localSchema,mainEntityOfPage:{'@id':LABBIPET_URL},address:{...localSchema.address,postalCode:'520007'}};
+ assert.equal(alignLabbipetPostalCode(script(fromOrigin)),script(expected));
+ const wrong={...fromOrigin,image:'https://www.pinnacleblooms.org/Images/ProfileImages/other.jpg'};
+ assert.equal(alignLabbipetPostalCode(script(wrong)),script(wrong));
 });

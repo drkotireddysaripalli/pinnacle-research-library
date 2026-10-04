@@ -63,8 +63,10 @@ export function isLabbipetRequest(request){
 export function alignLabbipetPostalCode(html){
  return html.replace(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g,(block,json)=>{
   let data;try{data=JSON.parse(json);}catch{return block;}
-  if(data['@type']!=='LocalBusiness'||data['@id']!==LABBIPET_URL||data.url!==LABBIPET_URL)return block;
-  return block.replace(/("streetAddress":\s*"Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007"[^{}]*?"postalCode":\s*")520010(")/g,'$1520007$2');
+  const oldUrl=LABBIPET_URL.replace('vijayawada','vijyawada');
+  if(data['@type']!=='LocalBusiness'||![LABBIPET_URL,oldUrl].includes(data['@id'])||data.url!==data['@id'])return block;
+  if(data.image!=='https://www.pinnacleblooms.org/Images/ProfileImages/3062523180.jpg')return block;
+  return block.replaceAll(oldUrl,LABBIPET_URL).replace(/("streetAddress":\s*"Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007"[^{}]*?"postalCode":\s*")520010(")/g,'$1520007$2');
  });
 }
 export function reviseLabbipetHtml(html){

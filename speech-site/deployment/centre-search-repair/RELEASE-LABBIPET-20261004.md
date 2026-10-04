@@ -30,3 +30,7 @@ Receipt directory: `work/pinnacle-growth-system/labbipet-20261004` in the primar
 - One independent read-only review accepted the bounded repair after correcting “an Labbipet” to “a Labbipet”. Postcode discrepancy inspected and narrowly repaired. No source holds or common shell altered.
 
 Source commit, independent CI, activation, public checks and discovery receipt are added below after the actual release. Publication does not establish ranking, AI citations, qualified calls, visits or enrolment.
+
+## Production variant correction
+
+First source `49b3783` passed CI and activated `feef0856-9d55-4040-b490-5432fc1fb6ba`. All five responsive live captures passed. The production cookie/campaign check then showed the origin emits the same facility under a misspelled `labbipet-vijyawada` LocalBusiness ID/URL. The visible journey passed, but the postcode guard correctly refused that unrecognised identity. Added only that exact observed alias, with an additional facility-image guard, and normalised its graph URLs to the canonical before aligning the seven Temple Street postcodes. Separate unit regression and all public variants must pass before closing. Initial release receipts remain preserved; corrective helper baseline is the first activated version.
