@@ -7,9 +7,9 @@ on:
         type: boolean
         default: false
   pull_request:
-    paths: ['speech-site/src/**', 'speech-site/ask-runtime/**', 'speech-site/wrangler.ask.jsonc', 'speech-site/public/**', 'speech-site/scripts/**', 'speech-site/tests/**', 'speech-site/deployment/*.mjs', 'speech-site/*config*', 'speech-site/package*.json', 'speech-site/.npmrc', 'speech-site/.nvmrc', '.github/workflows/portal-quality.yml']
+    paths: ['speech-site/src/**', 'speech-site/ask-runtime/**', 'speech-site/wrangler.ask.jsonc', 'speech-site/public/**', 'speech-site/scripts/**', 'speech-site/tests/**', 'speech-site/deployment/**/*.mjs', 'speech-site/*config*', 'speech-site/package*.json', 'speech-site/.npmrc', 'speech-site/.nvmrc', '.github/workflows/portal-quality.yml']
   push:
-    paths: ['speech-site/src/**', 'speech-site/ask-runtime/**', 'speech-site/wrangler.ask.jsonc', 'speech-site/public/**', 'speech-site/scripts/**', 'speech-site/tests/**', 'speech-site/deployment/*.mjs', 'speech-site/*config*', 'speech-site/package*.json', 'speech-site/.npmrc', 'speech-site/.nvmrc', '.github/workflows/portal-quality.yml']
+    paths: ['speech-site/src/**', 'speech-site/ask-runtime/**', 'speech-site/wrangler.ask.jsonc', 'speech-site/public/**', 'speech-site/scripts/**', 'speech-site/tests/**', 'speech-site/deployment/**/*.mjs', 'speech-site/*config*', 'speech-site/package*.json', 'speech-site/.npmrc', 'speech-site/.nvmrc', '.github/workflows/portal-quality.yml']
 permissions:
   contents: read
 jobs:

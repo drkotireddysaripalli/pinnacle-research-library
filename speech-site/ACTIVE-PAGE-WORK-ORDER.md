@@ -1,3 +1,15 @@
+# Active bounded regional improvement — LB Nagar — 4 October 2026
+
+Queue `WEB-HYDERABAD-NEXT`; action `eadf7e32-19ba-4078-b028-09bd8757046c`. Saved September data: LB Nagar 3,737 impressions / 25 clicks (0.67%); Suchitra 4,352 / 36 (0.83%). Live comparison confirms Suchitra already has the new Astro family narrative and centre-selected enquiry. LB Nagar still has a generic long introduction and `/enroll` links. Improve only LB Nagar's introduction/search description and local enquiry path using its established legacy Worker.
+
+- Audience/outcome: families considering autism/speech and related child-development support in LB Nagar can connect everyday life goals to the PinnacleAI approach, call 9100 181 181 and send an enquiry with LB Nagar selected.
+- Narrative: everyday goals → child's self-sufficient, mainstream-included life → call/local enquiry → exact directions → understand/plan/practise/review → therapies → practical FAQ/Ask/Verify and free conversation planner.
+- Exact identity: facility 3062523145, K Square, 3rd floor, New Siri Nagar Colony, LB Nagar. No verified separate local telephone. No new current service/hours/fees claims, free assessment offer or outcome guarantee.
+- Preserve header/footer, photos, emblem, team, reviews, all other page sections, Suchitra/Kukatpally improvements, current main portal `688e7809-d9e9-4506-a916-b69c03dc166e`, all 185 routes and bindings. Baseline/rollback centre Worker `715eb80f-36f3-48e1-854f-38edb54256c8`.
+- Acceptance: exact guarded transformation, meaningful request/cache tests, actual local enquiry selection without submission, phone/tablet/desktop visual review, live public/link/route checks, commit then activation and release receipt. No claimed ranking or qualified-call gains before settled measurement.
+
+---
+
 # Delivered bounded publication — First Conversation — 4 October 2026
 
 Publish the supplied original free one-page planning resource and useful HTML companion. Exact contract and preservation boundary: `RELEASE-FIRST-CONVERSATION-20261004.md`. No common-shell redesign, Ask/auth change, paid catalogue mutation or outreach. Published and verified: source `c04265f`, Worker `688e7809-d9e9-4506-a916-b69c03dc166e`; exact original PDF bytes match. See `RELEASE-FIRST-CONVERSATION-RECEIPT-20261004.md`. This publication is complete; subsequent work follows the existing ranked growth queue. PinnacleAI scholarly/Figma work remains held for the owner diagram. Completed work below is historical.

@@ -21,3 +21,7 @@ Public URL: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupa
 Use `release.mjs upload|deploy|verify <absolute receipt directory>` with existing local Wrangler authentication. The helper never changes routes or bindings. Review `release-upload.json` before `deploy`; commit/push the exact source before activation. The saved receipt directory is `work/pinnacle-growth-system/kukatpally-20261004` under the main workspace. Final commit/version/public verification are recorded in the release receipt after deployment.
 
 This is a bounded legacy introduction repair, not a complete centre-page migration or certification of all historic content. GSC's 2–29 September baseline is 3,799 impressions and 26 clicks (0.68% CTR). Publication is not evidence of increased rankings, AI citations or qualified calls.
+
+## LB Nagar follow-up — 4 October 2026
+
+The exact LB Nagar introduction now has its own guarded module, `lbnagar.mjs`, dispatched by `entry.mjs`. Kukatpally and the original legacy module are retained unchanged. See `RELEASE-LBNAGAR-20261004.md` for the current source/release contract and receipt. The release helper now targets the captured post-Kukatpally baseline `715eb80f-36f3-48e1-854f-38edb54256c8` and current main portal `688e7809-d9e9-4506-a916-b69c03dc166e`, with an explicit pre-edit `baseline.json` module manifest. Historical Kukatpally release details above remain historical.

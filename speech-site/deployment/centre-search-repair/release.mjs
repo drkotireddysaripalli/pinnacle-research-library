@@ -3,7 +3,7 @@
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import crypto from 'node:crypto';import {fileURLToPath} from 'node:url';
 const [mode,output]=process.argv.slice(2);assert(['upload','deploy','verify'].includes(mode)&&path.isAbsolute(output));
 const here=path.dirname(fileURLToPath(import.meta.url)),account='862998def1cd610fdb86b8e5c1d6ed4d',worker='pinnacle-centre-search-repair';
-const baseline='dd7b8619-cbce-4db8-99cb-5e13f3ce6351',portalBaseline='e53a1016-15ab-462b-b005-b996261db856';
+const baseline='715eb80f-36f3-48e1-854f-38edb54256c8',portalBaseline='688e7809-d9e9-4506-a916-b69c03dc166e';
 const base='/accounts/'+account+'/workers/scripts/'+worker;
 const token=(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)?.[1];assert(token);
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
@@ -19,18 +19,16 @@ const state=await snapshot();assert.deepEqual(state.portal.versions,[{version_id
 const save=(name,data)=>fs.writeFile(path.join(output,name),JSON.stringify(data,null,2)+'\n');
 if(mode==='upload'){
  assert.deepEqual(state.deployment.versions,[{version_id:baseline,percentage:100}],'Centre worker changed; reconcile');assert.deepEqual(state.settings.bindings,[]);
- // content/v2 returns the latest uploaded source, even before activation.
- // Reconcile our recorded inactive upload rather than mistaking it for live code.
+ // Refuse a stale source upload: compare every current module with the captured
+ // pre-edit source, including its name and exact bytes. Never mutate routes.
+ const captured=JSON.parse(await fs.readFile(path.join(output,'baseline.json'),'utf8'));
+ assert.deepEqual(captured.workers[worker].deployment.versions,[{version_id:baseline,percentage:100}]);
  const live=await(await raw(base+'/content/v2')).formData();const parts=[...live].filter(([,v])=>typeof v!=='string');
- if(parts.length===1){
-  assert.equal(sha(Buffer.from(await parts[0][1].arrayBuffer())),sha(await fs.readFile(path.join(here,'legacy-v11.mjs'))),'Legacy baseline differs');
- }else{
-  const prior=JSON.parse(await fs.readFile(path.join(output,'release-upload.json'),'utf8'));assert.equal(parts.length,prior.modules.length);
-  for(const [key,value]of parts){const recorded=prior.modules.find(m=>m.name===(value.name||key));assert(recorded,'Unexpected uploaded module');assert.equal(sha(Buffer.from(await value.arrayBuffer())),recorded.sha256,'Unrecorded source upload');}
-  assert.equal(prior.modules.find(m=>m.name==='legacy-v11.mjs')?.sha256,sha(await fs.readFile(path.join(here,'legacy-v11.mjs'))),'Legacy baseline differs');
- }
- const modules=await Promise.all(['entry.mjs','legacy-v11.mjs','kukatpally.mjs'].map(async name=>({name,bytes:await fs.readFile(path.join(here,name))})));
- const metadata={main_module:'entry.mjs',compatibility_date:state.settings.compatibility_date,compatibility_flags:state.settings.compatibility_flags||[],bindings:[],annotations:{'workers/message':'Kukatpally: parent goals, clear enquiry, directions and source links; exact legacy worker retained'}};
+ assert.equal(parts.length,captured.modules.length,'Unexpected current module count');
+ for(const [key,value]of parts){const recorded=captured.modules.find(m=>m.name===(value.name||key));assert(recorded,'Unexpected current source module');assert.equal(sha(Buffer.from(await value.arrayBuffer())),recorded.sha256,'Current source changed since baseline capture');}
+ for(const name of ['legacy-v11.mjs','kukatpally.mjs'])assert.equal(sha(await fs.readFile(path.join(here,name))),captured.modules.find(m=>m.name===name)?.sha256,'Protected module changed');
+ const modules=await Promise.all(['entry.mjs','legacy-v11.mjs','kukatpally.mjs','lbnagar.mjs'].map(async name=>({name,bytes:await fs.readFile(path.join(here,name))})));
+ const metadata={main_module:'entry.mjs',compatibility_date:state.settings.compatibility_date,compatibility_flags:state.settings.compatibility_flags||[],bindings:[],annotations:{'workers/message':'LB Nagar: local family journey, centre-selected enquiry, directions and source links; existing modules retained'}};
  for(const key of ['placement','tail_consumers','logpush'])if(state.settings[key]!==undefined)metadata[key]=state.settings[key];
  const form=new FormData();form.set('metadata',JSON.stringify(metadata));for(const {name,bytes}of modules)form.set(name,new Blob([bytes],{type:'application/javascript+module'}),name);
  await save('cloudflare-before.json',state);
