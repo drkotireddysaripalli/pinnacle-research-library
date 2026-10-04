@@ -230,6 +230,7 @@ const registerMeta={
 for(const [file,[name,desc]] of Object.entries(registerMeta)){
  const p='evidence/'+file,url=absolute(p),crumbs=[['Verify Pinnacle','/'],[name.split(' | ')[0],'/'+p]];
  let html=read(p).replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g,'');
+ html=html.replaceAll('href="../index.html','href="/');
  html=html.replace(/<head>[\s\S]*?<\/head>/,head(name,desc,url,[website,{'@type':'WebPage',name,url,description:desc,inLanguage:'en-IN',dateModified:date,breadcrumb:{'@id':url+'#breadcrumb'},isPartOf:{'@id':website['@id']}},breadcrumb(crumbs,url)]));
  if(!html.includes('class="breadcrumbs"')) html=html.replace(/(<main[^>]*>)/,'$1'+crumbsHTML(crumbs));
  write(p,html);
