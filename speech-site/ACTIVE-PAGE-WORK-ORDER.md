@@ -1,10 +1,12 @@
-# Active bounded restoration — Pinnacle SEVA — 4 October 2026
+# Delivered bounded restoration — Pinnacle SEVA — 4 October 2026
 
 Queue WEB-SEVA; action deb2d4a3-d88e-4bb1-8ff1-5859315e4665. Canonical `/seva` restores the documented financial-access programme destination used in two existing references. The source decision, block contract, exact route boundary and acceptance scope are in `deployment/SEVA-RESTORATION-20261004.md`.
 
 Purpose: help a family facing cost barriers understand SEVA, ask the current support/eligibility questions and contact 9100 181 181. Keep the child's self-sufficient, mainstream-included life as the direction of care. Existing publication describes a subsidised-access model; no present subsidy, slot, price, centre availability or free-therapy entitlement is asserted.
 
-Main Worker baseline ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4. Reuse the existing common-shell source and branded family artwork. Preserve all 185 existing routes and bindings, add only four exact SEVA routes. Next work returns to the ranked growth queue after public verification.
+Main Worker baseline ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4. Reused the existing common-shell source and branded family artwork. All 185 existing routes and four bindings preserved; four additive SEVA routes support clean URLs, aliases, assets and campaign queries, with explicit origin pass-through for unowned neighbouring paths.
+
+**Published and verified:** https://www.pinnacleblooms.org/seva. Runtime source `c4a0df3405203a0e5b1da7ed5b13d20704e5604f`; active Worker `78b37416-df98-43e4-aac6-d7d11ee573a8`; deployment `f8dd94f0-aa42-4562-bcb7-f354a91661d0`. Production build and exact-source CI passed, 38 focused tests, Chromium/WebKit at five widths, live desktop/mobile and existing-profile campaign URL inspected. Thirteen assets match live hashes and thirteen article destinations return 200. Screaming Frog confirms indexable/self-canonical. IndexNow accepted once, GSC tracker/annotation and both existing Pitchbox reference records updated. No new backlink, ranking or qualified-call gain is claimed. See `deployment/seva-release-receipt-20261004.json`, including the documented legacy font-order comparison limit. Next work returns to the ranked growth queue.
 
 ---
 # Delivered bounded regional improvement — Labbipet — 4 October 2026
