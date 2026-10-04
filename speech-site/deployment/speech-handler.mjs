@@ -101,10 +101,18 @@ export async function serveSpeech(request,env,inventory){
  if(isHtml||isMachineDocument)headers.set('content-signal','search=yes, ai-input=yes');
  headers.set('cache-control',privateResponse?'private, no-store':key.startsWith('/pinnacle-pages-assets/')?'public, max-age=31536000, immutable':(isHtml||isMachineDocument)?'public, max-age=0, must-revalidate':'public, max-age=60, must-revalidate');
  if(/\bno-transform\b/i.test(request.headers.get('cache-control')||''))headers.append('cache-control','no-transform');
- const etag='"speech-'+inventory[key]+'"';headers.set('etag',etag);
+ // Compatibility repair for the three existing immutable library-page assets.
+ // The Astro template also emits the corrected destination on future builds.
+ const collectionAction=isHtml&&/^\/books\/pinnacle-101-four-book-(?:pdf|softcover|hardbound)-collection$/.test(u.pathname);
+ const etag='"speech-'+inventory[key]+(collectionAction?'-collection-links-20261004':'')+'"';headers.set('etag',etag);
  if(isHtml){headers.set('vary','Accept');headers.set('x-robots-tag','index, follow, max-image-preview:large');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com"+(Object.hasOwn(BOOK_ROUTES,u.pathname)?" https://pinnacleblooms.myshopify.com":"")+"; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(isMachineDocument){headers.set('vary','Accept');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');}
  if(preview){headers.set('x-robots-tag','noindex, nofollow, nosnippet');headers.set('cache-control','no-store');headers.set('content-signal','search=no, ai-input=no');headers.set('referrer-policy','no-referrer');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(!preview&&!privateResponse&&request.headers.get('if-none-match')===etag){headers.delete('content-length');return new Response(null,{status:304,headers});}
- return new Response(request.method==='HEAD'?null:source.body,{status:source.status,headers});
+ let body=request.method==='HEAD'?null:source.body;
+ if(collectionAction){
+  for(const name of ['content-length','content-md5','digest','content-digest','repr-digest'])headers.delete(name);
+  if(body)body=(await source.text()).replace('<a href="#collections">Explore the complete collection ↓</a>','<a href="/books#collections">Compare all collections and formats →</a>');
+ }
+ return new Response(body,{status:source.status,headers});
 }
