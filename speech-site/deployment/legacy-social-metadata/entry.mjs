@@ -3,6 +3,7 @@
 // FAQ debug payload while streaming all remaining content unchanged.
 import {reduceKnownLegacyPayload} from './payload.mjs';
 import {SERVICES_PATH, SERVICES_URL, physiotherapyRedirect, repairServiceLinks} from './discovery.mjs';
+import {repairKnownLegacySchema} from './schema.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 const encoder = new TextEncoder();
@@ -125,7 +126,7 @@ export async function handle(request, fetcher = fetch) {
   headers.delete('if-none-match'); headers.delete('if-modified-since');
   const upstream = new Request(request, {headers});
   const response = await transform(request, await fetcher(upstream));
-  return transformedResponses.has(response) ? repairServiceLinks(request, reduceKnownLegacyPayload(request, response)) : response;
+  return transformedResponses.has(response) ? repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response))) : response;
 }
 
 export default {fetch: request => handle(request)};

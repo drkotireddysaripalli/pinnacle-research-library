@@ -1,5 +1,7 @@
 # Shared legacy metadata and FAQ payload repairs — 4 October 2026
 
+The latest bounded extension is `RELEASE-SCHEMA-20261004.md`: exact schema.org term spellings in guarded legacy JSON-LD. It retains the routes, prior metadata/payload/discovery repairs and all visible content. Use `release-schema.mjs` for this release; historical release helpers must not be rerun against a newer baseline.
+
 The discovery extension in `RELEASE-DISCOVERY-20261004.md` reconciles the existing `/physio-therapy` menu alias with `/physiotherapy` and the exact services hub's misplaced books-host identity. It adds two tightly admitted route families, preserving the original repairs below. Use its fresh-baseline release helper rather than rerunning a historical first-deployment script.
 
 Current scope includes the initial metadata correction below and the separately verified fingerprinted FAQ debug removal in `RELEASE-PAYLOAD-20261004.md`. The page body now differs only by that exact nonfunctional script payload where its fingerprint matches; the original metadata-only receipt remains historical.

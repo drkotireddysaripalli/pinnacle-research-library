@@ -1,0 +1,81 @@
+// Correct two observed schema.org term spellings in legacy JSON-LD only.
+// No claim, entity identity, text, navigation or commerce record is rewritten.
+export const SCHEMA_LIMIT = 256 * 1024;
+
+export function repairSchemaText(text) {
+  if (text.length > SCHEMA_LIMIT) return text;
+  try {
+    JSON.parse(text); // Syntax validation only: never reserialize numeric values.
+    const tokens=[...text.matchAll(/"(?:\\[\s\S]|[^"\\])*"|[{}\[\]:,]|-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?|true|false|null/g)];
+    let index=0, safe=true;
+    const schemaContext=node=>node?.kind==='string' && /^https?:\/\/schema\.org\/?$/.test(node.value);
+    function read() {
+      const token=tokens[index++], raw=token[0];
+      if(raw==='{' || raw==='[') {
+        const node={kind:raw==='{'?'object':'array',properties:new Map(),children:[]};
+        const close=raw==='{'?'}':']';
+        while(tokens[index][0]!==close) {
+          if(raw==='{') {
+            const key=tokens[index++],name=JSON.parse(key[0]);index++; // colon
+            const value=read();
+            if(node.properties.has(name)) safe=false; // Ambiguous duplicate keys bypass.
+            node.properties.set(name,{key,value});node.children.push(value);
+          } else node.children.push(read());
+          if(tokens[index][0]===',') index++;
+        }
+        index++;return node;
+      }
+      return {kind:raw.startsWith('"')?'string':'primitive',value:raw.startsWith('"')?JSON.parse(raw):raw,token};
+    }
+    const tree=read(),roots=tree.kind==='array'?tree.children:[tree];
+    if(!roots.every(root=>root.kind==='object' && schemaContext(root.properties.get('@context')?.value))) return text;
+    const patches=[];
+    function visit(node) {
+      if(node.kind==='object') {
+        const props=node.properties,context=props.get('@context');
+        if(context && !schemaContext(context.value)) safe=false;
+        const type=props.get('@type')?.value;
+        if(type?.kind==='string' && type.value==='Webpage') patches.push({token:type.token,value:'"WebPage"'});
+        const old=props.get('xPath');
+        if(type?.value==='SpeakableSpecification' && old?.value.kind==='array' &&
+            old.value.children.every(child=>child.kind==='string') && !props.has('xpath')) patches.push({token:old.key,value:'"xpath"'});
+      }
+      for(const child of node.children||[]) visit(child);
+    }
+    visit(tree);
+    if(!safe) return text;
+    // Splice only identified string tokens; all other bytes (including large
+    // integers, whitespace, escapes and clinical/identity values) stay exact.
+    for(const patch of patches.sort((a,b)=>b.token.index-a.token.index)) text=text.slice(0,patch.token.index)+patch.value+text.slice(patch.token.index+patch.token[0].length);
+    return text;
+  } catch { return text; }
+}
+
+class LegacySchemaScript {
+  element(element) {
+    this.pass = (element.getAttribute('type') || '').trim().toLowerCase() !== 'application/ld+json';
+    this.buffer = '';
+  }
+  text(chunk) {
+    if (this.pass) return;
+    this.buffer += chunk.text;
+    if (this.buffer.length > SCHEMA_LIMIT) {
+      chunk.replace(this.buffer, {html: true});
+      this.buffer = ''; this.pass = true;
+    } else if (!chunk.lastInTextNode) chunk.remove();
+    else {
+      chunk.replace(repairSchemaText(this.buffer), {html: true});
+      this.buffer = '';
+    }
+  }
+}
+
+export function repairKnownLegacySchema(response) {
+  // Entry's private WeakSet establishes the public-response/canonical guards.
+  // An origin header can never opt a response into this transform.
+  const headers = new Headers(response.headers);
+  for (const name of ['content-length', 'content-encoding', 'etag', 'last-modified', 'content-md5', 'digest']) headers.delete(name);
+  headers.set('x-pinnacle-legacy-schema', 'schema-term-spelling-20261004');
+  return new HTMLRewriter().on('script:not([src])', new LegacySchemaScript())
+    .transform(new Response(response.body, {status: response.status, statusText: response.statusText, headers}));
+}
