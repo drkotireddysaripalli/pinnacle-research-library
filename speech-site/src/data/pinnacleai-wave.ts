@@ -1,3 +1,4 @@
+import {readinessContent} from './readiness-content.ts';
 export const waveSources = {
   model: '/verify/evidence/pinnacle-paradigm-shift.html',
   workflow: '/verify/#how-pinnacleai-works',
@@ -73,26 +74,22 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'seven-readiness-indexes', updatedOn:'2026-10-01', short:'7 Readiness Indexes', label:'Seven Readiness Indexes', title:'Seven Readiness Indexes | A Fuller View of Your Child’s Next Step',
-    description:'Explore seven PinnacleAI Readiness views through a child’s peer-play goal. See what each view can help discuss, its limits and the BIS source.',
+    slug:'seven-readiness-indexes', updatedOn:readinessContent.updated, includeReadingFaqs:true, short:'7 Readiness Indexes', label:'Seven Readiness Indexes', title:readinessContent.title,
+    description:readinessContent.description,
     eyebrow:'Seven views · One child', headline:'See different kinds of readiness without reducing your child to one label.',
     lead:'A child may be ready to do one thing with less support while another part of life still needs a different approach. Seven separate views help a team ask better questions about communication, movement, learning, routines and participation.',
-    direct:'The BIS record names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes. These are separate software views that support discussion and planning; they do not certify school entry, intelligence, social worth or future independence.',
-    purpose:'Readiness is useful when it points to a meaningful next opportunity in the child’s life and the support needed to try it.',
+    direct:readinessContent.direct,
+    purpose:readinessContent.purpose,
     question:'Why look at seven views instead of one broad judgement?',
-    exampleTitle:'A classroom goal has more than one doorway.',
-    exampleLead:'Illustrative example only. A child enjoys group play but needs help asking a peer to join.',
-    example:[['Notice strengths','The child may already follow a routine and enjoy peers.'],['Look at relevant views','Communication and school participation might matter here; the other views remain context rather than automatic targets.'],['Choose suitable support','A professional and family agree on an accessible invitation method and what the school can do.'],['Review in real life','The team asks whether the child could join and enjoy play, not whether an index alone improved.']],
+    exampleTitle:readinessContent.example.title,
+    exampleLead:readinessContent.example.intro,
+    example:readinessContent.example.steps,
     mechanismTitle:'The seven named views can guide a question, not dictate a child’s future.',
     mechanism:['School Readiness and Speech Readiness consider relevant abilities for learning access and communication.','Motor Readiness, Study IQ Readiness and Behavior Readiness are named report areas, not claims of an IQ test or a behaviour diagnosis.','Self Sufficiency Index and Mainstream Inclusion Index keep daily independence and participation visible as directions for review.'],
     limit:'The names are those printed in the BIS schedule. They should not be read as a formal school admission decision or a promise of mainstream placement. Report versions have used different display scales; use the current report and professional explanation.',
     takeaway:'Ask which view matters for your child’s current goal, what was actually assessed and how the next step will be reviewed.',
-    sourceKeys:['workflow','bis','methods','md5'],
-    faqs:[
-      {question:'What are the seven PinnacleAI Readiness Indexes?',answer:'The BIS schedule names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes.'},
-      {question:'Does a School Readiness Index guarantee admission?',answer:'No. It is a planning and review view, not a school admission decision or guarantee.'},
-      {question:'Does Study IQ Readiness mean PinnacleAI provides an IQ diagnosis?',answer:'No. It is the name of a software report area. The licensed device is non-diagnostic.'}
-    ]
+    sourceKeys:['workflow','bis','dossier','methods','md5'],
+    faqs:readinessContent.faqs
   },
   {
     slug:'personal-development-kernel', updatedOn:'2026-10-01', short:'Personal Development Kernel', label:'Personal Development Kernel', title:'Personal Development Kernel | Keep Your Child’s Context Connected',

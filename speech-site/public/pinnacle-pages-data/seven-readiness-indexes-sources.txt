@@ -1,32 +1,130 @@
-Seven Readiness Indexes | A Fuller View of Your Child’s Next Step
-https://www.pinnacleblooms.org/seven-readiness-indexes
+7 Readiness Indexes | Your Child’s Next Step | PinnacleAI®
+Canonical: https://www.pinnacleblooms.org/seven-readiness-indexes
+Updated: 2026-10-05
 
-Parent moment: “My child wants to join the group. Which support would actually help?”
-Decision this page explains: Which of the seven views matters for this goal now, what was observed and what practical support should be tried?
-Family discussion: A more specific discussion of the child’s strengths, context and next opportunity, with each view interpreted by the team.
+Understand today. Make the next possibility clearer.
 
-Direct answer: The BIS record names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes. These are separate software views that support discussion and planning; they do not certify school entry, intelligence, social worth or future independence.
-Life purpose: Readiness is useful when it points to a meaningful next opportunity in the child’s life and the support needed to try it.
-Boundary: The names are those printed in the BIS schedule. They should not be read as a formal school admission decision or a promise of mainstream placement. Report versions have used different display scales; use the current report and professional explanation.
+Your child’s self-sufficient, mainstream-included life is our purpose from the beginning. PinnacleAI® connects seven readiness views with your child’s abilities, your family’s priorities and professional judgement—so the next goal has a clear reason in your child’s life.
 
-Illustrative example: A classroom goal has more than one doorway.
-Illustrative example only. A child enjoys group play but needs help asking a peer to join.
-1. Notice strengths: The child may already follow a routine and enjoy peers.
-2. Look at relevant views: Communication and school participation might matter here; the other views remain context rather than automatic targets.
-3. Choose suitable support: A professional and family agree on an accessible invitation method and what the school can do.
-4. Review in real life: The team asks whether the child could join and enjoy play, not whether an index alone improved.
+What the seven readiness indexes do
+PinnacleAI’s Seven Readiness Indexes are separate software views for School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion. They help a professional interpret relevant abilities and support needs when planning and reviewing a child’s next everyday opportunity.
+Readiness becomes useful when your family understands what the child can do, the support that helps, the opportunity to work toward and how the team will review it. The child’s life gives the measurements their direction.
 
-Claim/source links:
-- Which of the seven views matters for this goal now, what was observed and what practical support should be tried? → https://www.pinnacleblooms.org/verify/evidence/records/bis.html (programme explanation; Named module/quality scope; not a clinical effectiveness result.)
-- PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
-- The names are those printed in the BIS schedule. They should not be read as a formal school admission decision or a promise of mainstream placement. Report versions have used different display scales; use the current report and professional explanation. → https://www.pinnacleblooms.org/verify/#how-pinnacleai-works (claim boundary; Describes a workflow; not proof that every step produces a specific result.)
+Seven readiness areas
+School Readiness
+What helps my child take part in the school day?
+Consider the abilities and support needed to enter and sustain a learning environment.
+Everyday example: Joining a short group activity, moving between familiar routines or asking an adult for help.
+Discuss with your professional: Which classroom opportunity fits now? What communication, sensory, learning or environmental support would make it accessible?
+[Explore learning support](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181)
+Speech Readiness
+How can my child be understood by another person?
+Consider functional communication in the next environment, including the communication methods the child uses.
+Everyday example: Making a choice, asking for a turn or telling someone that help or a break is needed.
+Discuss with your professional: Can the message be understood at home and in the next setting? Would speech, a gesture, a picture or another suitable aid help?
+[Explore speech therapy](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate)
+Motor Readiness
+What helps my child move, reach and take part?
+Consider how gross and fine movement support participation and self-care.
+Everyday example: Reaching a play surface, handling a toy, managing a spoon or taking part in dressing.
+Discuss with your professional: What can the child already do? Would a different position, tool, environment or professionally guided activity make participation easier?
+[Explore occupational therapy](https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate)
+Study IQ Readiness
+What helps my child understand and learn the next step?
+The dossier describes attention, sequencing and comprehension in relation to structured learning. “Study IQ” is the name printed in the BIS schedule.
+Everyday example: Following a short picture sequence, understanding a familiar instruction or learning through a shared activity.
+Discuss with your professional: What helps understanding: a demonstration, fewer steps, a visual cue, more time or a different activity? This view is not a stand-alone IQ test.
+[See everyday learning opportunities](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181)
+Behavior Readiness
+What helps my child feel comfortable enough to participate?
+Consider regulation in group settings and the conditions or support that make participation possible.
+Everyday example: Moving from one activity to another, communicating discomfort or choosing a manageable break.
+Discuss with your professional: What is the child communicating? How can the setting, predictability, choices or appropriate support help?
+[Explore behavioural support](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate)
+Self Sufficiency Index
+What can become more of my child’s own everyday life?
+Consider participation and independence in meaningful activities of daily living.
+Everyday example: Choosing clothes, taking part in a meal, managing part of a routine or asking for useful help.
+Discuss with your professional: Which part does the child do now, with what support? What next step matters to the child and family? Adaptations can remain part of independence.
+[Explore Self-Sufficient](https://www.pinnacleblooms.org/self-sufficient)
+Mainstream Inclusion Index
+What helps my child learn, play and belong with others?
+Consider participation in an inclusive setting and the support that remains useful.
+Everyday example: Joining peers in play, taking part in a classroom activity or participating in a family or community occasion.
+Discuss with your professional: What opportunity is meaningful, what does the setting need to provide, and how will the child’s comfort and participation be reviewed? Inclusion is not a reward earned by a score.
+[Explore Mainstream Inclusion](https://www.pinnacleblooms.org/mainstream)
 
-Further sources:
-- Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
-- BIS named-module and quality-system scope: https://www.pinnacleblooms.org/verify/evidence/records/bis.html — Named module/quality scope; not a clinical effectiveness result.
-- Methodology preprint and limitations: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html — Methods and preliminary results must not be presented as completed independent validation.
-- Indian Form MD-5 software scope: https://www.pinnacleblooms.org/verify/evidence/records/md5.html — Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
+Names follow the BIS schedule. Conceptual roles follow Evidence Dossier v2.0-M Chapter 10, pp. 43–44. Family examples are explanations, not scoring criteria.
 
-Operator: Bharath Healthcare Laboratories Private Limited. Brand: Pinnacle Blooms Network. Phone: 9100 181 181 (tel:+919100181181).
+“My child wants to join the game.”
+One goal can bring several views together. This illustrative planning example shows the conversation, not an actual child’s report or an observed outcome.
+1. Start with the life the family wants: The family wants their child to join a short building game with a familiar peer. The child enjoys blocks and chooses when to take part.
+2. Understand strengths and context: The child already points to a preferred block. A calm space and familiar adult help. The professional asks about communication, access to the activity and comfort in a group.
+3. Choose the relevant readiness views: Speech and Mainstream Inclusion help frame communication and participation. School, Motor or Behavior may add useful context. Every view does not become an automatic therapy target.
+4. Agree a specific next opportunity: Practise an accessible way to request a turn—such as a word, gesture or picture—with an appropriate professional. Agree how the adult and peer will respond and how the child can request a break.
+5. Make it usable at home and school: Try a short, comfortable opportunity in familiar play. With the family’s consent, the teacher can use the same helpful cue. The child’s choice and enjoyment matter alongside taking a turn.
+6. Bring the real experience back into review: Notice what happened, with whom, in which setting and with what help. The professional and family decide whether to continue, adapt the activity, change support or reassess. A rising number alone cannot make that decision.
 
-See communication readiness in the speech pathway: https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#speech-stage-2
+Reading the current report
+Ask which version and scale are being used, what was assessed, what help and setting were recorded, what the next goal means and when it will be reviewed. Different report editions have used different scales; no universal readiness threshold is given here.
+- Inputs: Relevant assessment, family priorities, observations and the support or setting.
+- Interpretation: A professional explains the current report and which readiness views matter.
+- Next opportunity: Agree a meaningful goal, suitable people and methods, and manageable practice.
+- Review: Bring everyday use and comfort back into the next decision.
+[Report-format guide](https://www.pinnacleblooms.org/verify/#report-explorer)
+
+Seven family stages — distinct from the seven readiness areas
+1. [Understand abilities](https://www.pinnacleblooms.org/abilityscore): Identify capabilities and discuss AbilityScore® in context.
+2. [Readiness + a child-specific plan](https://www.pinnacleblooms.org/personal-development-kernel): Use relevant views to choose the next opportunity and support.
+3. [Bring the right help together](https://www.pinnacleblooms.org/therapeuticai): Choose suitable integrated therapies and professional guidance.
+4. [Practise in everyday life](https://www.pinnacleblooms.org/everyday-therapy): Help your child use the step in familiar home and school moments.
+5. [Track + correct](https://www.pinnacleblooms.org/fusion-module): Use observations from different settings to adjust support.
+6. [Reassess + review](https://www.pinnacleblooms.org/reassess-review-repeat): Revisit abilities and readiness as the child and context change.
+7. [Growing independence + inclusion](https://www.pinnacleblooms.org/mainstream): Keep the child’s self-sufficient, mainstream-included life in view throughout.
+
+Appropriate therapy contributions
+- [Speech therapy](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate): Connect a communication goal with a way to ask, choose, share or be understood.
+- [Occupational therapy](https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate): Connect movement, access and daily routines with useful participation.
+- [ABA / behavioural support](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate): Understand the context of behaviour and plan suitable communication and support.
+- [Special education](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181): Connect learning, accessible instructions and the environment with classroom participation.
+[Integrated autism support](https://www.pinnacleblooms.org/autism-therapy)
+
+Evidence and sources
+- BIS · IS 23485:2019 · MD/L-2026029599: The BIS management-system licence schedule names the readiness modules within its specified software scope. It establishes that scope, not a guaranteed result for a child. [Inspect the record](https://www.pinnacleblooms.org/verify/evidence/records/bis.html).
+- Form MD-5 · Class B · MFG/MD/2026/000248: PinnacleAI GPT-OS v1.0.0 is licensed as non-diagnostic developmental-support software for children aged 0–12, including ability measurement and readiness tracking. [Inspect the record](https://www.pinnacleblooms.org/verify/evidence/records/md5.html).
+- Product evidence dossier · Chapter 10: The public dossier record identifies the controlled source. Chapter 10 (v2.0-M, pp. 43–44) explains the seven readiness areas. These examples explain the concepts, not proprietary formulas or thresholds. [Inspect the record](https://www.pinnacleblooms.org/verify/evidence/records/dossier.html).
+- Defined network services · 31M+: 31,052,382 cumulative services were recorded as at 17 July 2026, including assessments, screenings and parent training. The SRS 4400 findings identify the definition and date. This is network activity, not a readiness success rate. [Inspect the record](https://www.pinnacleblooms.org/verify/evidence/assurance-map.html).
+
+Claim/source map
+- Seven named readiness modules: https://www.pinnacleblooms.org/verify/evidence/records/bis.html. Module names and management-system scope; not effectiveness.
+- Conceptual roles of the readiness areas: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html. Controlled source identified through its public record; family examples are not scoring rules.
+- Read the current report version and scale with a professional: https://www.pinnacleblooms.org/verify/#report-explorer. Different report editions use different scales; no conversion or threshold is inferred.
+- Class B non-diagnostic developmental-support software for ages 0–12: https://www.pinnacleblooms.org/verify/evidence/records/md5.html. Indian manufacturing licence for PinnacleAI GPT-OS v1.0.0, MFG/MD/2026/000248.
+- 31,052,382 cumulative defined services as at 17 July 2026: https://www.pinnacleblooms.org/verify/evidence/assurance-map.html. SRS 4400 factual findings; institutional volume, including assessments, screenings and parent training, not outcomes.
+
+Questions
+What are the seven PinnacleAI Readiness Indexes?
+The BIS schedule names School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index and Mainstream Inclusion Index. They are separate software views used with professional interpretation to support planning and review.
+How are readiness indexes different from AbilityScore®?
+AbilityScore® contributes a composite starting picture of developmental abilities. Readiness views focus the discussion on a relevant opportunity, such as communication in a new setting or participation at school. The team interprets both with the child’s context and actual observations.
+Does every child need all seven indexes or all four therapies?
+A professional decides what is appropriate to assess and discuss. The family’s priority, the child’s abilities, comfort and context determine the relevant views and support. The seven areas do not prescribe a fixed package of therapies.
+Does a School Readiness Index guarantee admission?
+No. It helps a professional and family discuss relevant abilities and support. The school makes its admission decisions, and meaningful inclusion also depends on the environment and appropriate support.
+Is Study IQ Readiness an IQ test or a diagnosis?
+No. Study IQ is the area name printed in the BIS schedule. The dossier relates it to attention, sequencing and comprehension for learning. PinnacleAI is licensed as non-diagnostic developmental-support software.
+How should I interpret a readiness number?
+Ask which report version and display scale are being used, what information informed the view, what support or setting was recorded and what it means for the next goal. Compare like-for-like information with a professional; there is no universal pass mark published on this page.
+Can our family and teacher help with the review?
+Yes. Share relevant observations about what the child does, the setting, comfort and support that helped. School observations can contribute with appropriate consent and access. The professional uses them to interpret and review the plan.
+How do we begin, and is the first call free?
+Call 9100 181 181 to discuss your child’s current goal and ask about a suitable assessment and professional. Telephone guidance is free. The team explains the centre, visit arrangements and any assessment or therapy fees before you decide.
+
+Begin with Pinnacle
+Call 9100 181 181 (tel:+919100181181). Telephone guidance is free. The team confirms the suitable professional, centre, assessment and fees before you decide.
+[Plan a first visit](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india) · [Find a centre](https://www.pinnacleblooms.org/centers) · [First-conversation planning sheet](https://www.pinnacleblooms.org/books/resources/first-conversation)
+
+Suggested citation
+Pinnacle Blooms Network. 7 Readiness Indexes: Your Child’s Next Step. Updated 5 October 2026. Bharath Healthcare Laboratories Private Limited. https://www.pinnacleblooms.org/seven-readiness-indexes
+
+PinnacleAI is non-diagnostic. An index is not a school admission decision or guarantee of independence.

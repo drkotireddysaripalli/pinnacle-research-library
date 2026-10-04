@@ -1,140 +1,340 @@
 {
-  "title": "Seven Readiness Indexes | A Fuller View of Your Child’s Next Step",
+  "title": "7 Readiness Indexes | Your Child’s Next Step | PinnacleAI®",
   "url": "https://www.pinnacleblooms.org/seven-readiness-indexes",
-  "updated": "2026-10-01",
-  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "updated": "2026-10-05",
   "brand": "Pinnacle Blooms Network",
-  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
-  "parentMoment": "“My child wants to join the group. Which support would actually help?”",
-  "lifeDecision": "Which of the seven views matters for this goal now, what was observed and what practical support should be tried?",
-  "familyDiscussion": "A more specific discussion of the child’s strengths, context and next opportunity, with each view interpreted by the team.",
-  "directAnswer": "The BIS record names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes. These are separate software views that support discussion and planning; they do not certify school entry, intelligence, social worth or future independence.",
-  "lifePurpose": "Readiness is useful when it points to a meaningful next opportunity in the child’s life and the support needed to try it.",
-  "illustrativeExample": {
-    "title": "A classroom goal has more than one doorway.",
-    "description": "Illustrative example only. A child enjoys group play but needs help asking a peer to join.",
-    "steps": [
-      {
-        "title": "Notice strengths",
-        "description": "The child may already follow a routine and enjoy peers."
-      },
-      {
-        "title": "Look at relevant views",
-        "description": "Communication and school participation might matter here; the other views remain context rather than automatic targets."
-      },
-      {
-        "title": "Choose suitable support",
-        "description": "A professional and family agree on an accessible invitation method and what the school can do."
-      },
-      {
-        "title": "Review in real life",
-        "description": "The team asks whether the child could join and enjoy play, not whether an index alone improved."
-      }
-    ],
-    "status": "Fictional explanatory example; not a patient story or observed result."
-  },
-  "mechanism": [
-    "School Readiness and Speech Readiness consider relevant abilities for learning access and communication.",
-    "Motor Readiness, Study IQ Readiness and Behavior Readiness are named report areas, not claims of an IQ test or a behaviour diagnosis.",
-    "Self Sufficiency Index and Mainstream Inclusion Index keep daily independence and participation visible as directions for review."
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "phone": "9100 181 181",
+  "directAnswer": "PinnacleAI’s Seven Readiness Indexes are separate software views for School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion. They help a professional interpret relevant abilities and support needs when planning and reviewing a child’s next everyday opportunity.",
+  "lifePurpose": "Readiness becomes useful when your family understands what the child can do, the support that helps, the opportunity to work toward and how the team will review it. The child’s life gives the measurements their direction.",
+  "readinessAreas": [
+    {
+      "id": "school-readiness",
+      "name": "School Readiness",
+      "icon": "book",
+      "colour": "#6730a2",
+      "question": "What helps my child take part in the school day?",
+      "meaning": "Consider the abilities and support needed to enter and sustain a learning environment.",
+      "moment": "Joining a short group activity, moving between familiar routines or asking an adult for help.",
+      "discuss": "Which classroom opportunity fits now? What communication, sensory, learning or environmental support would make it accessible?",
+      "link": "/best-special-education-center-call-9100181181",
+      "linkLabel": "Explore learning support",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes#school-readiness",
+      "relatedPage": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181"
+    },
+    {
+      "id": "speech-readiness",
+      "name": "Speech Readiness",
+      "icon": "voice",
+      "colour": "#ab1576",
+      "question": "How can my child be understood by another person?",
+      "meaning": "Consider functional communication in the next environment, including the communication methods the child uses.",
+      "moment": "Making a choice, asking for a turn or telling someone that help or a break is needed.",
+      "discuss": "Can the message be understood at home and in the next setting? Would speech, a gesture, a picture or another suitable aid help?",
+      "link": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "linkLabel": "Explore speech therapy",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes#speech-readiness",
+      "relatedPage": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "id": "motor-readiness",
+      "name": "Motor Readiness",
+      "icon": "compass",
+      "colour": "#007c91",
+      "question": "What helps my child move, reach and take part?",
+      "meaning": "Consider how gross and fine movement support participation and self-care.",
+      "moment": "Reaching a play surface, handling a toy, managing a spoon or taking part in dressing.",
+      "discuss": "What can the child already do? Would a different position, tool, environment or professionally guided activity make participation easier?",
+      "link": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "linkLabel": "Explore occupational therapy",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes#motor-readiness",
+      "relatedPage": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "id": "study-iq-readiness",
+      "name": "Study IQ Readiness",
+      "icon": "sun",
+      "colour": "#98630c",
+      "question": "What helps my child understand and learn the next step?",
+      "meaning": "The dossier describes attention, sequencing and comprehension in relation to structured learning. “Study IQ” is the name printed in the BIS schedule.",
+      "moment": "Following a short picture sequence, understanding a familiar instruction or learning through a shared activity.",
+      "discuss": "What helps understanding: a demonstration, fewer steps, a visual cue, more time or a different activity? This view is not a stand-alone IQ test.",
+      "link": "/best-special-education-center-call-9100181181",
+      "linkLabel": "See everyday learning opportunities",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes#study-iq-readiness",
+      "relatedPage": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181"
+    },
+    {
+      "id": "behavior-readiness",
+      "name": "Behavior Readiness",
+      "icon": "heart",
+      "colour": "#9f3073",
+      "question": "What helps my child feel comfortable enough to participate?",
+      "meaning": "Consider regulation in group settings and the conditions or support that make participation possible.",
+      "moment": "Moving from one activity to another, communicating discomfort or choosing a manageable break.",
+      "discuss": "What is the child communicating? How can the setting, predictability, choices or appropriate support help?",
+      "link": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "linkLabel": "Explore behavioural support",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes#behavior-readiness",
+      "relatedPage": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "id": "self-sufficiency-readiness",
+      "name": "Self Sufficiency Index",
+      "icon": "home",
+      "colour": "#267338",
+      "question": "What can become more of my child’s own everyday life?",
+      "meaning": "Consider participation and independence in meaningful activities of daily living.",
+      "moment": "Choosing clothes, taking part in a meal, managing part of a routine or asking for useful help.",
+      "discuss": "Which part does the child do now, with what support? What next step matters to the child and family? Adaptations can remain part of independence.",
+      "link": "/self-sufficient",
+      "linkLabel": "Explore Self-Sufficient",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes#self-sufficiency-readiness",
+      "relatedPage": "https://www.pinnacleblooms.org/self-sufficient"
+    },
+    {
+      "id": "mainstream-inclusion-readiness",
+      "name": "Mainstream Inclusion Index",
+      "icon": "people",
+      "colour": "#007879",
+      "question": "What helps my child learn, play and belong with others?",
+      "meaning": "Consider participation in an inclusive setting and the support that remains useful.",
+      "moment": "Joining peers in play, taking part in a classroom activity or participating in a family or community occasion.",
+      "discuss": "What opportunity is meaningful, what does the setting need to provide, and how will the child’s comfort and participation be reviewed? Inclusion is not a reward earned by a score.",
+      "link": "/mainstream",
+      "linkLabel": "Explore Mainstream Inclusion",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes#mainstream-inclusion-readiness",
+      "relatedPage": "https://www.pinnacleblooms.org/mainstream"
+    }
   ],
-  "limit": "The names are those printed in the BIS schedule. They should not be read as a formal school admission decision or a promise of mainstream placement. Report versions have used different display scales; use the current report and professional explanation.",
+  "illustrativeExample": {
+    "title": "“My child wants to join the game.”",
+    "intro": "One goal can bring several views together. This illustrative planning example shows the conversation, not an actual child’s report or an observed outcome.",
+    "steps": [
+      [
+        "Start with the life the family wants",
+        "The family wants their child to join a short building game with a familiar peer. The child enjoys blocks and chooses when to take part."
+      ],
+      [
+        "Understand strengths and context",
+        "The child already points to a preferred block. A calm space and familiar adult help. The professional asks about communication, access to the activity and comfort in a group."
+      ],
+      [
+        "Choose the relevant readiness views",
+        "Speech and Mainstream Inclusion help frame communication and participation. School, Motor or Behavior may add useful context. Every view does not become an automatic therapy target."
+      ],
+      [
+        "Agree a specific next opportunity",
+        "Practise an accessible way to request a turn—such as a word, gesture or picture—with an appropriate professional. Agree how the adult and peer will respond and how the child can request a break."
+      ],
+      [
+        "Make it usable at home and school",
+        "Try a short, comfortable opportunity in familiar play. With the family’s consent, the teacher can use the same helpful cue. The child’s choice and enjoyment matter alongside taking a turn."
+      ],
+      [
+        "Bring the real experience back into review",
+        "Notice what happened, with whom, in which setting and with what help. The professional and family decide whether to continue, adapt the activity, change support or reassess. A rising number alone cannot make that decision."
+      ]
+    ],
+    "status": "Explanatory example; not a patient report or measured result."
+  },
+  "reportDiscussion": [
+    [
+      "Inputs",
+      "Relevant assessment, family priorities, observations and the support or setting."
+    ],
+    [
+      "Interpretation",
+      "A professional explains the current report and which readiness views matter."
+    ],
+    [
+      "Next opportunity",
+      "Agree a meaningful goal, suitable people and methods, and manageable practice."
+    ],
+    [
+      "Review",
+      "Bring everyday use and comfort back into the next decision."
+    ]
+  ],
+  "familyLifecycle": [
+    {
+      "title": "Understand abilities",
+      "detail": "Identify capabilities and discuss AbilityScore® in context.",
+      "href": "/abilityscore",
+      "icon": "measure",
+      "url": "https://www.pinnacleblooms.org/abilityscore"
+    },
+    {
+      "title": "Readiness + a child-specific plan",
+      "detail": "Use relevant views to choose the next opportunity and support.",
+      "href": "/personal-development-kernel",
+      "icon": "compass",
+      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
+    },
+    {
+      "title": "Bring the right help together",
+      "detail": "Choose suitable integrated therapies and professional guidance.",
+      "href": "/therapeuticai",
+      "icon": "people",
+      "url": "https://www.pinnacleblooms.org/therapeuticai"
+    },
+    {
+      "title": "Practise in everyday life",
+      "detail": "Help your child use the step in familiar home and school moments.",
+      "href": "/everyday-therapy",
+      "icon": "home",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "title": "Track + correct",
+      "detail": "Use observations from different settings to adjust support.",
+      "href": "/fusion-module",
+      "icon": "track",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "title": "Reassess + review",
+      "detail": "Revisit abilities and readiness as the child and context change.",
+      "href": "/reassess-review-repeat",
+      "icon": "loop",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    },
+    {
+      "title": "Growing independence + inclusion",
+      "detail": "Keep the child’s self-sufficient, mainstream-included life in view throughout.",
+      "href": "/mainstream",
+      "icon": "sun",
+      "url": "https://www.pinnacleblooms.org/mainstream"
+    }
+  ],
+  "relatedTherapies": [
+    {
+      "title": "Speech therapy",
+      "icon": "voice",
+      "detail": "Connect a communication goal with a way to ask, choose, share or be understood.",
+      "href": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "title": "Occupational therapy",
+      "icon": "home",
+      "detail": "Connect movement, access and daily routines with useful participation.",
+      "href": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "title": "ABA / behavioural support",
+      "icon": "heart",
+      "detail": "Understand the context of behaviour and plan suitable communication and support.",
+      "href": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "title": "Special education",
+      "icon": "book",
+      "detail": "Connect learning, accessible instructions and the environment with classroom participation.",
+      "href": "/best-special-education-center-call-9100181181",
+      "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181"
+    }
+  ],
   "claimSourceMap": [
     {
-      "statement": "Which of the seven views matters for this goal now, what was observed and what practical support should be tried?",
-      "kind": "programme explanation",
+      "statement": "Seven named readiness modules",
       "source": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
-      "limit": "Named module/quality scope; not a clinical effectiveness result."
+      "scope": "Module names and management-system scope; not effectiveness."
     },
     {
-      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
-      "kind": "regulatory scope",
+      "statement": "Conceptual roles of the readiness areas",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html",
+      "locator": "Evidence Dossier v2.0-M, Chapter 10, physical PDF pages 43–44",
+      "scope": "Controlled source identified through its public record; family examples are not scoring rules."
+    },
+    {
+      "statement": "Read the current report version and scale with a professional",
+      "source": "https://www.pinnacleblooms.org/verify/#report-explorer",
+      "scope": "Different report editions use different scales; no conversion or threshold is inferred."
+    },
+    {
+      "statement": "Class B non-diagnostic developmental-support software for ages 0–12",
       "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
-      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+      "scope": "Indian manufacturing licence for PinnacleAI GPT-OS v1.0.0, MFG/MD/2026/000248."
     },
     {
-      "statement": "The names are those printed in the BIS schedule. They should not be read as a formal school admission decision or a promise of mainstream placement. Report versions have used different display scales; use the current report and professional explanation.",
-      "kind": "claim boundary",
-      "source": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
-      "limit": "Describes a workflow; not proof that every step produces a specific result."
+      "statement": "31,052,382 cumulative defined services as at 17 July 2026",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/assurance-map.html",
+      "scope": "SRS 4400 factual findings; institutional volume, including assessments, screenings and parent training, not outcomes."
     }
   ],
   "sources": [
     {
-      "id": "workflow",
-      "name": "Documented PinnacleAI workflow",
-      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
-      "limit": "Describes a workflow; not proof that every step produces a specific result."
-    },
-    {
       "id": "bis",
-      "name": "BIS named-module and quality-system scope",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
-      "limit": "Named module/quality scope; not a clinical effectiveness result."
-    },
-    {
-      "id": "methods",
-      "name": "Methodology preprint and limitations",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
-      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+      "title": "7 named readiness modules",
+      "value": "MD/L-2026029599",
+      "label": "BIS · IS 23485:2019",
+      "copy": "The BIS management-system licence schedule names the readiness modules within its specified software scope. It establishes that scope, not a guaranteed result for a child.",
+      "href": "/verify/evidence/records/bis.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
     },
     {
       "id": "md5",
-      "name": "Indian Form MD-5 software scope",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
-      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
-    }
-  ],
-  "relatedPages": [
-    {
-      "name": "PinnacleAI®",
-      "url": "https://www.pinnacleblooms.org/pinnacleai"
+      "title": "Licensed developmental-support software",
+      "value": "MFG/MD/2026/000248",
+      "label": "Form MD-5 · Class B",
+      "copy": "PinnacleAI GPT-OS v1.0.0 is licensed as non-diagnostic developmental-support software for children aged 0–12, including ability measurement and readiness tracking.",
+      "href": "/verify/evidence/records/md5.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
     },
     {
-      "name": "AbilityScore®",
-      "url": "https://www.pinnacleblooms.org/abilityscore"
+      "id": "dossier",
+      "title": "Read the conceptual explanation",
+      "value": "Chapter 10",
+      "label": "Product evidence dossier",
+      "copy": "The public dossier record identifies the controlled source. Chapter 10 (v2.0-M, pp. 43–44) explains the seven readiness areas. These examples explain the concepts, not proprietary formulas or thresholds.",
+      "href": "/verify/evidence/records/dossier.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
     },
     {
-      "name": "Personal Development Kernel",
-      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
-    },
-    {
-      "name": "Prognose",
-      "url": "https://www.pinnacleblooms.org/prognose"
-    },
-    {
-      "name": "TherapeuticAI®",
-      "url": "https://www.pinnacleblooms.org/therapeuticai"
-    },
-    {
-      "name": "Everyday Therapy™",
-      "url": "https://www.pinnacleblooms.org/everyday-therapy"
-    },
-    {
-      "name": "Fusion",
-      "url": "https://www.pinnacleblooms.org/fusion-module"
-    },
-    {
-      "name": "Reassess · Review · Repeat",
-      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
-    },
-    {
-      "name": "See communication readiness in the speech pathway",
-      "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#speech-stage-2"
+      "id": "assurance",
+      "title": "Our institutional record is open to inspection",
+      "value": "31M+",
+      "label": "Defined network services",
+      "copy": "31,052,382 cumulative services were recorded as at 17 July 2026, including assessments, screenings and parent training. The SRS 4400 findings identify the definition and date. This is network activity, not a readiness success rate.",
+      "href": "/verify/evidence/assurance-map.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/assurance-map.html"
     }
   ],
   "questions": [
     {
       "question": "What are the seven PinnacleAI Readiness Indexes?",
-      "answer": "The BIS schedule names School, Speech, Motor, Study IQ, Behavior, Self Sufficiency and Mainstream Inclusion Readiness Indexes."
+      "answer": "The BIS schedule names School Readiness, Speech Readiness, Motor Readiness, Study IQ Readiness, Behavior Readiness, Self Sufficiency Index and Mainstream Inclusion Index. They are separate software views used with professional interpretation to support planning and review."
+    },
+    {
+      "question": "How are readiness indexes different from AbilityScore®?",
+      "answer": "AbilityScore® contributes a composite starting picture of developmental abilities. Readiness views focus the discussion on a relevant opportunity, such as communication in a new setting or participation at school. The team interprets both with the child’s context and actual observations."
+    },
+    {
+      "question": "Does every child need all seven indexes or all four therapies?",
+      "answer": "A professional decides what is appropriate to assess and discuss. The family’s priority, the child’s abilities, comfort and context determine the relevant views and support. The seven areas do not prescribe a fixed package of therapies."
     },
     {
       "question": "Does a School Readiness Index guarantee admission?",
-      "answer": "No. It is a planning and review view, not a school admission decision or guarantee."
+      "answer": "No. It helps a professional and family discuss relevant abilities and support. The school makes its admission decisions, and meaningful inclusion also depends on the environment and appropriate support."
     },
     {
-      "question": "Does Study IQ Readiness mean PinnacleAI provides an IQ diagnosis?",
-      "answer": "No. It is the name of a software report area. The licensed device is non-diagnostic."
+      "question": "Is Study IQ Readiness an IQ test or a diagnosis?",
+      "answer": "No. Study IQ is the area name printed in the BIS schedule. The dossier relates it to attention, sequencing and comprehension for learning. PinnacleAI is licensed as non-diagnostic developmental-support software."
+    },
+    {
+      "question": "How should I interpret a readiness number?",
+      "answer": "Ask which report version and display scale are being used, what information informed the view, what support or setting was recorded and what it means for the next goal. Compare like-for-like information with a professional; there is no universal pass mark published on this page."
+    },
+    {
+      "question": "Can our family and teacher help with the review?",
+      "answer": "Yes. Share relevant observations about what the child does, the setting, comfort and support that helped. School observations can contribute with appropriate consent and access. The professional uses them to interpret and review the plan."
+    },
+    {
+      "question": "How do we begin, and is the first call free?",
+      "answer": "Call 9100 181 181 to discuss your child’s current goal and ask about a suitable assessment and professional. Telephone guidance is free. The team explains the centre, visit arrangements and any assessment or therapy fees before you decide."
     }
   ]
 }

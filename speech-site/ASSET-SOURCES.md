@@ -226,3 +226,7 @@ Original directory: C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7
 - src/assets/pinnacleai-mainstream-v162.png: 1536 × 1024; exec-a1d09fed-d624-4dd1-825f-a6daa6d438c2.png. Final native edit of exec-982ce66f-633e-4dc8-8bc4-cb381ec26ba1.png correcting one small classroom poster to Understand / Support / Include. Original and corrected outputs retained.
 
 Astro supplies responsive WebP with dimensions. The whole square circle remains uncropped on mobile, accompanied by seven readable HTML labels; this replaces the planned separate portrait variant without duplicating meaning. Existing approved 1200 × 630 sharing poster retained. Actual redacted MD-5 and BIS preview files are reused separately from /verify/images/sources/ and linked to their originals; no certificate is generated. All essential explanations, headings, source meanings and calls are HTML.
+
+## Seven Readiness Indexes — 5 October 2026
+
+`src/assets/readiness-possibility-20261005.png` is a complete campaign creative generated with the built-in ChatGPT session image tool, using the supplied official Pinnacle Blooms Network lockup as reference. Prompt and usage context are beside the asset in `.prompt.txt`. The family/therapist scene is illustrative, not an identified beneficiary. The full creative was generated together; no text-overlay/API-key fallback was used. Astro supplies responsive WebP derivatives and semantic alt text. The approved readiness social poster and Mainstream inline scene are retained.

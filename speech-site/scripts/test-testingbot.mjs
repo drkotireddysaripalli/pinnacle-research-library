@@ -155,6 +155,15 @@ for(const id of choices){
       await screenshot('lifecycle');
       await check('Lifecycle image loaded',()=>evaluate("return [...document.querySelectorAll('.wave2-hero-art img')].every(e=>e.complete && e.naturalWidth>0)"));
     }
+    if(target.pathname==='/seven-readiness-indexes'){
+      await check('Readiness areas and stages have usable independent widths',async()=>{
+        row.readinessGeometry=await evaluate("const cards=[...document.querySelectorAll('.ready-index,.ready-journey li')];return {areas:document.querySelectorAll('.ready-index').length,stages:document.querySelectorAll('.ready-journey li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.readinessGeometry;return r.areas===7&&r.stages===7&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#what-it-does').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('readiness-intro');
+      await evaluate("document.querySelector('#pinnacleai-journey').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('readiness-stages');
+      await check('Readiness FAQ disclosure works',async()=>{await click('.ready-faq summary');return evaluate("return document.querySelector('.ready-faq details').open && document.querySelectorAll('.ready-faq details').length===8");});
+    }
     if(isAsk){
       await check('Both approved Sintony weights loaded',()=>evaluate("return document.fonts.check('400 16px Sintony') && document.fonts.check('700 16px Sintony')"));
       await check('Answer text and source section remain readable',()=>evaluate("const p=document.querySelector('#explanation'),s=document.querySelector('#sources');return !!p && p.innerText.length>200 && p.getBoundingClientRect().width>=Math.min(280,innerWidth-48) && !!s"));
