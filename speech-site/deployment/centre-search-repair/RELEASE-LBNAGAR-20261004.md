@@ -27,8 +27,12 @@ No new creative is needed for this bounded introduction repair. Existing actual 
 
 ## Checks before activation
 
-Forty focused request/cache/source tests across LB Nagar and the existing Kukatpally repair passed. Captured real HTML comparison confirms content outside the declared boundary is identical. Candidate layout checked at 320, 390, 768 and 1440 px, with direct screenshot inspection at phone and desktop widths. The first FAQ opens with the keyboard. Real enquiry destination selects `help` and `lbnagar`; no enquiry submitted. A read-only review found and resolved the X metadata issue.
+Forty-one focused request/cache/source tests across LB Nagar and the existing Kukatpally repair passed. Captured real HTML comparison confirms content outside the declared boundary is identical. Candidate layout checked at 320, 390, 768 and 1440 px, with direct screenshot inspection at phone and desktop widths. The first FAQ opens with the keyboard. Real enquiry destination selects `help` and `lbnagar`; no enquiry submitted. A read-only review found and resolved the X metadata issue.
 
 Release helper: `node deployment/centre-search-repair/release.mjs upload|deploy|verify <absolute receipt directory>`. It checks every captured current module, unchanged legacy/Kukatpally bytes, active versions, full route map and bindings. Commit and push before activation. Publication receipt below will record exact version and public read-back; publication does not imply indexing, ranking gains, AI citations or qualified calls.
 
 Evidence: `C:/Users/Siri Palace/Documents/Codex/2026-09-15/k/work/pinnacle-growth-system/lbnagar-20261004/`.
+
+## Encoding repair during final live inspection
+
+The first activation exposed corrupted curly punctuation/brand marks in browser screenshots. An editing helper had read the UTF-8 module through Windows' default text encoding. The main agent restored the previous active version immediately, explicitly corrected the source encoding and added a Unicode regression assertion to both unit and rendered checks. The first upload/activation and rollback are retained in `superseded-encoding-*` and `encoding-rollback.json`; they are not the completed release. Final activation and read-back follow below.
