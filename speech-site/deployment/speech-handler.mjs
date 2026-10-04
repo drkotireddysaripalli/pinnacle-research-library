@@ -36,6 +36,10 @@ function acceptsMarkdown(value=''){return value.split(',').some(entry=>{const [t
 export function isRetiredLeadershipPath(path){let decoded;try{decoded=decodeURIComponent(path);}catch{return false;}return /^\/leadership\/(?:prudhvi-(?:matsa|masta)|maheshwari|(?:shoban|sobhan)-kumar)\/?$/i.test(decoded)||/^\/images\/leadershipimages\/(?:prudhvi|maheshwari|shoban|sobhan)_big_image\.(?:jpe?g|png)$/i.test(decoded);}
 export async function serveSpeech(request,env,inventory){
  const seva=serveSeva(request);if(seva)return seva;
+ // Cloudflare matches query strings in route patterns. The /seva* trigger must
+ // pass unowned neighbouring paths directly to their unchanged legacy origin.
+ const sevaScope=new URL(request.url);
+ if(sevaScope.hostname==='www.pinnacleblooms.org'&&sevaScope.pathname.startsWith('/seva'))return fetch(request);
  const attribution=serveBookAttribution(request);if(attribution)return attribution;
  const resource=serveFirstConversation(request);if(resource)return resource;
  const physicalFeed=await serveShopifyPhysicalFeed(request);if(physicalFeed)return physicalFeed;

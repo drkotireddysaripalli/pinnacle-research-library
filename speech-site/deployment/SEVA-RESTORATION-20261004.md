@@ -20,9 +20,13 @@ Cost barrier → clear first call → programme purpose with source → prioriti
 
 - Compiled page and exact hashed dependent assets carried in a small additive Worker module, like the existing First Conversation release. Existing live asset binding retained intact.
 - Main Worker baseline: ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4; 12 modules, four bindings, 185 existing zone routes. No centre or Ask Worker change.
-- New exact www routes: `/seva`, `/seva/` subtree, `/seva.html`, `/seva.md`. Historical `/seva-impact-study` and `/seva-index` remain outside them. Existing 185 routes are preserved; four additive routes make 189.
+- Four additive www routes: `/seva*`, `/seva/*`, `/seva.html`, `/seva.md`. The first handles campaign-query URLs, which Cloudflare otherwise sends past an exact route. The handler serves only enumerated SEVA documents/assets; every unowned neighbouring path passes directly to its unchanged origin, including `/seva-impact-study` and `/seva-index`. Existing 185 routes are preserved; four additive routes make 189.
 - Canonical HTML, HTML aliases, Markdown, sitemap and root reading-aid entry. Same useful public content with cookie/authorization requests using private no-store caching. Unknown adjacent paths retain origin handling.
 - One local production build; focused route/FAQ/scope tests, five widths 320–1440 in Chromium and WebKit, inspected hero/steps/life captures and keyboard FAQ. No physical-device or real-family research claim.
 - Commit/push before upload/deploy. Verify live page/assets/aliases/links, protected responses, full routes and bindings. One IndexNow notification and dated GSC annotation/tracker update after publication.
 
 Current terms and clinical outcomes remain separate from programme explanation. Restoration recovers an existing useful destination; it does not prove new backlinks, indexing, rankings, AI citations or qualified calls.
+
+## First live-check correction
+
+The initial exact `/seva` trigger served the clean canonical but not campaign-query URLs. No completion was recorded. A focused handler/pass-through test and query-capable trigger correct this Cloudflare matching behavior; unchanged visual evidence remains applicable. Cloudflare specification: https://developers.cloudflare.com/workers/configuration/routing/routes/
