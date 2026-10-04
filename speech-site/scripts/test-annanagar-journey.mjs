@@ -40,3 +40,11 @@ test('legacy WebPage agrees with canonical; existing matching map has accessible
  const other='<iframe src="https://www.google.com/maps/embed?other"></iframe>';
  const out=alignAnnaNagarIdentity(page+map+other);assert(out.includes('"url":"'+ANNANAGAR_URL+'"'));assert(out.includes('id="annanagar-centre-map"'));assert(out.includes('title="Anna Nagar centre location map"'));assert(out.endsWith(other));assert.equal(alignAnnaNagarIdentity(out),out);assert(ANNANAGAR_MARKUP.includes('href="#annanagar-centre-map"'));
 });
+
+// The origin serves a nested introduction to mobile user agents. Viewport alone is insufficient.
+test('actual mobile template gets the approved journey and retains original video',()=>{
+ const video='<div class="youtube-container" style="padding-bottom: 57%;"><iframe src="https://www.youtube.com/embed/71610XG2tPM" allowfullscreen></iframe></div>';
+ const mobile=fixture.replace(/<div class="center-about-description">[\s\S]*?<\/div>/,'<div class="center-about-description"><h1>Anna Nagar</h1><div class="pinncle-round">'+video+'<p>Original mobile introduction.</p></div></div>');
+ const out=reviseAnnaNagarHtml(mobile);assert(out?.includes(ANNANAGAR_MARKUP));assert(out.includes('data-preserved-centre-video="71610XG2tPM"'));assert(out.includes('loading="lazy"'));assert(out.includes('allowfullscreen'));assert.equal((out.match(/<iframe/g)||[]).length,1);assert.equal(reviseAnnaNagarHtml(out),out);
+ assert.equal(reviseAnnaNagarHtml(mobile.replace('71610XG2tPM','wrong000000')),null);
+});

@@ -41,3 +41,11 @@ test('returning and campaign visitor legacy schema alias is the same exact centr
  const wrong={...fromOrigin,image:'https://www.pinnacleblooms.org/Images/ProfileImages/other.jpg'};
  assert.equal(alignLabbipetPostalCode(script(wrong)),script(wrong));
 });
+
+// The origin serves a nested introduction to mobile user agents. Viewport alone is insufficient.
+test('actual mobile template gets the approved journey and retains original video',()=>{
+ const video='<div class="youtube-container" style="padding-bottom: 57%;"><iframe src="https://www.youtube.com/embed/YkcZ_lRJxNY" allowfullscreen></iframe></div>';
+ const mobile=fixture.replace(/<div class="center-about-description">[\s\S]*?<\/div>/,'<div class="center-about-description"><h1>Labbipet</h1><div class="pinncle-round">'+video+'<p>Original mobile introduction.</p></div></div>');
+ const out=reviseLabbipetHtml(mobile);assert(out?.includes(LABBIPET_MARKUP));assert(out.includes('data-preserved-centre-video="YkcZ_lRJxNY"'));assert(out.includes('loading="lazy"'));assert(out.includes('allowfullscreen'));assert.equal((out.match(/<iframe/g)||[]).length,1);assert.equal(reviseLabbipetHtml(out),out);
+ assert.equal(reviseLabbipetHtml(mobile.replace('YkcZ_lRJxNY','wrong000000')),null);
+});

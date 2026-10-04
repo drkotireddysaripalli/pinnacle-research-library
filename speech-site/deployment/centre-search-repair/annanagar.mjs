@@ -1,3 +1,4 @@
+import {replaceCentreIntroduction,optimiseCentreMediaHtml,MEDIA_RELEASE} from './centre-media.mjs';
 export const ANNANAGAR_PATH='/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india';
 export const ANNANAGAR_URL='https://www.pinnacleblooms.org'+ANNANAGAR_PATH;
 export const RELEASE='annanagar-parent-journey-20261004';
@@ -77,7 +78,7 @@ export function alignAnnaNagarIdentity(html){
 }
 
 export function reviseAnnaNagarHtml(html){
- if(html.includes('id="pinnacle-annanagar-start"'))return html;
+ if(html.includes('id="pinnacle-annanagar-start"'))return optimiseCentreMediaHtml(html,'20708282153');
  const canonical=html.match(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi)||[];
  if(canonical.length!==1||!html.includes('/Images/ProfileImages/20708282153.jpg'))return null;
  // The legacy origin echoes tracking parameters into its canonical. Accept only
@@ -85,18 +86,17 @@ export function reviseAnnaNagarHtml(html){
  let identity;try{identity=new URL(canonical[0].match(/\bhref=["']([^"']+)["']/)?.[1].replaceAll('&amp;','&'));}catch{return null;}
  if(identity.origin+identity.pathname!==ANNANAGAR_URL||identity.hash||!trackingOnly(identity))return null;
  if(/<meta\b(?=[^>]*\bname=["'](?:robots|googlebot|bingbot)["'])(?=[^>]*\bcontent=["'][^"']*(?:noindex|none))[^>]*>/i.test(html))return null;
- const blocks=[...html.matchAll(/<div class="center-about-description">([\s\S]*?)<\/div>/g)];
- if(blocks.length!==1||!blocks[0][1].includes('Anna Nagar')||!blocks[0][1].includes('<h1>')||blocks[0][1].includes('<div'))return null;
- const introChanged=alignAnnaNagarIdentity(html.replace(blocks[0][0],ANNANAGAR_MARKUP));
+ const replaced=replaceCentreIntroduction(html,'Anna Nagar',ANNANAGAR_MARKUP,'71610XG2tPM');if(replaced===null)return null;
+ const introChanged=alignAnnaNagarIdentity(replaced);
  // Change only the local introduction, matched centre identity, map anchor and metadata.
- return introChanged.replace(canonical[0],'<link rel="canonical" href="'+ANNANAGAR_URL+'">').replace(/<title>[\s\S]*?<\/title>/,'<title>'+title+'</title>')
+ return optimiseCentreMediaHtml(introChanged.replace(canonical[0],'<link rel="canonical" href="'+ANNANAGAR_URL+'">').replace(/<title>[\s\S]*?<\/title>/,'<title>'+title+'</title>')
   .replace(/<meta\b(?=[^>]*\bname="keywords")[^>]*>/,'<meta name="keywords" content="Pinnacle Anna Nagar, Chennai, child development, autism support, speech therapy, ABA support, occupational therapy, special education">')
   .replace(/<meta\b(?=[^>]*\bname="description")[^>]*>/,'<meta name="description" content="'+description+'">')
   .replace(/<meta\b(?=[^>]*\bproperty="og:url")[^>]*>/,'<meta property="og:url" content="'+ANNANAGAR_URL+'">')
   .replace(/<meta\b(?=[^>]*\bproperty="og:title")[^>]*>/,'<meta property="og:title" content="'+title+'">')
   .replace(/<meta\b(?=[^>]*\bproperty="og:description")[^>]*>/,'<meta property="og:description" content="'+description+'">')
   .replace(/<meta\b(?=[^>]*\bname="twitter:title")[^>]*>/,'<meta name="twitter:title" content="'+title+'">')
-  .replace(/<meta\b(?=[^>]*\bname="twitter:description")[^>]*>/,'<meta name="twitter:description" content="'+description+'">');
+  .replace(/<meta\b(?=[^>]*\bname="twitter:description")[^>]*>/,'<meta name="twitter:description" content="'+description+'">'),'20708282153');
 }
 export async function transformAnnaNagar(request,response){
  if(!isAnnaNagarRequest(request)||response.status!==200||!/^text\/html\b/i.test(response.headers.get('content-type')||'')||response.headers.has('set-cookie')||/private|no-store|no-transform/i.test(response.headers.get('cache-control')||'')||/noindex|none/i.test(response.headers.get('x-robots-tag')||'')||/(?:^|,)\s*(?:cookie|authorization|\*)\s*(?:,|$)/i.test(response.headers.get('vary')||''))return response;
@@ -105,7 +105,7 @@ export async function transformAnnaNagar(request,response){
  try{for(;;){const {done,value}=await reader.read();if(done)break;bytes+=value.length;if(bytes>2000000){void reader.cancel();return response;}html+=decoder.decode(value,{stream:true});}html+=decoder.decode();}catch{return response;}finally{reader.releaseLock();}
  const changed=reviseAnnaNagarHtml(html);if(changed===null)return response;
  const headers=new Headers(response.headers);for(const key of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest','accept-ranges','age'])headers.delete(key);
- headers.set('x-pinnacle-local-journey',RELEASE);
+ headers.set('x-pinnacle-local-journey',RELEASE);headers.set('x-pinnacle-centre-media',MEDIA_RELEASE);
  // Cookie-bearing visitors receive the same local journey, but their response
  // must never be promoted into shared/browser caching by this transformation.
  headers.set('cache-control',request.headers.has('cookie')?'private, no-store, max-age=0':'public, max-age=60');

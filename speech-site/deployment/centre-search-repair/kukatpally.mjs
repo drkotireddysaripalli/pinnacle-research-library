@@ -1,3 +1,4 @@
+import {replaceCentreIntroduction,optimiseCentreMediaHtml,MEDIA_RELEASE} from './centre-media.mjs';
 export const KUKATPALLY_PATH='/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india';
 export const KUKATPALLY_URL='https://www.pinnacleblooms.org'+KUKATPALLY_PATH;
 export const RELEASE='kukatpally-parent-journey-20261004';
@@ -50,7 +51,7 @@ export function isKukatpallyRequest(request){
  return u.origin==='https://www.pinnacleblooms.org'&&u.pathname===KUKATPALLY_PATH&&trackingOnly(u)&&['GET','HEAD'].includes(request.method)&&!request.headers.has('authorization')&&!request.headers.has('range')&&!request.headers.has('if-range')&&!/\bno-transform\b/i.test(request.headers.get('cache-control')||'');
 }
 export function reviseKukatpallyHtml(html){
- if(html.includes('id="pinnacle-kukatpally-start"'))return html;
+ if(html.includes('id="pinnacle-kukatpally-start"'))return optimiseCentreMediaHtml(html,'3062523056');
  const canonical=html.match(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi)||[];
  if(canonical.length!==1||!html.includes('/Images/ProfileImages/3062523056.jpg'))return null;
  // The legacy origin echoes tracking parameters into its canonical. Accept only
@@ -58,14 +59,13 @@ export function reviseKukatpallyHtml(html){
  let identity;try{identity=new URL(canonical[0].match(/\bhref=["']([^"']+)["']/)?.[1].replaceAll('&amp;','&'));}catch{return null;}
  if(identity.origin+identity.pathname!==KUKATPALLY_URL||identity.hash||!trackingOnly(identity))return null;
  if(/<meta\b(?=[^>]*\bname=["'](?:robots|googlebot|bingbot)["'])(?=[^>]*\bcontent=["'][^"']*(?:noindex|none))[^>]*>/i.test(html))return null;
- const blocks=[...html.matchAll(/<div class="center-about-description">([\s\S]*?)<\/div>/g)];
- if(blocks.length!==1||!blocks[0][1].includes('Kukatpally')||!blocks[0][1].includes('<h1>')||blocks[0][1].includes('<div'))return null;
- const introChanged=html.replace(blocks[0][0],KUKATPALLY_MARKUP);
- // The local story changes; preserve all other legacy content and assets verbatim.
- return introChanged.replace(canonical[0],'<link rel="canonical" href="'+KUKATPALLY_URL+'">').replace(/<title>[\s\S]*?<\/title>/,'<title>'+title+'</title>')
+ const replaced=replaceCentreIntroduction(html,'Kukatpally',KUKATPALLY_MARKUP,'UakQCuEIjQY');if(replaced===null)return null;
+ const introChanged=replaced;
+ // Keep other narrative content; shared media helper changes delivery, not source artwork.
+ return optimiseCentreMediaHtml(introChanged.replace(canonical[0],'<link rel="canonical" href="'+KUKATPALLY_URL+'">').replace(/<title>[\s\S]*?<\/title>/,'<title>'+title+'</title>')
   .replace(/<meta\b(?=[^>]*\bname="description")[^>]*>/,'<meta name="description" content="'+description+'">')
   .replace(/<meta\b(?=[^>]*\bproperty="og:title")[^>]*>/,'<meta property="og:title" content="'+title+'">')
-  .replace(/<meta\b(?=[^>]*\bproperty="og:description")[^>]*>/,'<meta property="og:description" content="'+description+'">');
+  .replace(/<meta\b(?=[^>]*\bproperty="og:description")[^>]*>/,'<meta property="og:description" content="'+description+'">'),'3062523056');
 }
 export async function transformKukatpally(request,response){
  if(!isKukatpallyRequest(request)||response.status!==200||!/^text\/html\b/i.test(response.headers.get('content-type')||'')||response.headers.has('set-cookie')||/private|no-store|no-transform/i.test(response.headers.get('cache-control')||'')||/noindex|none/i.test(response.headers.get('x-robots-tag')||'')||/(?:^|,)\s*(?:cookie|authorization|\*)\s*(?:,|$)/i.test(response.headers.get('vary')||''))return response;
@@ -74,7 +74,7 @@ export async function transformKukatpally(request,response){
  try{for(;;){const {done,value}=await reader.read();if(done)break;bytes+=value.length;if(bytes>2000000){void reader.cancel();return response;}html+=decoder.decode(value,{stream:true});}html+=decoder.decode();}catch{return response;}finally{reader.releaseLock();}
  const changed=reviseKukatpallyHtml(html);if(changed===null)return response;
  const headers=new Headers(response.headers);for(const key of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest','accept-ranges','age'])headers.delete(key);
- headers.set('x-pinnacle-local-journey',RELEASE);
+ headers.set('x-pinnacle-local-journey',RELEASE);headers.set('x-pinnacle-centre-media',MEDIA_RELEASE);
  // Cookie-bearing visitors receive the same local journey, but their response
  // must never be promoted into shared/browser caching by this transformation.
  headers.set('cache-control',request.headers.has('cookie')?'private, no-store, max-age=0':'public, max-age=60');

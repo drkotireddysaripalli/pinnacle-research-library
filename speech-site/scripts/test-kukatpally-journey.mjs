@@ -21,3 +21,11 @@ test('tracking query receives the same public content without dropping URL',asyn
 test('legacy tracking canonical becomes clean, functional query remains untouched',()=>{const tagged=fixture.replace('href="'+KUKATPALLY_URL+'"','href="'+KUKATPALLY_URL+'?utm_source=qa&amp;gclid=test"');const out=reviseKukatpallyHtml(tagged);assert(out.includes('<link rel="canonical" href="'+KUKATPALLY_URL+'">'));assert(out.includes(KUKATPALLY_MARKUP));assert.equal(reviseKukatpallyHtml(fixture.replace('href="'+KUKATPALLY_URL+'"','href="'+KUKATPALLY_URL+'?account=1"')),null);});
 test('functional query passes through unchanged',async()=>{const r=response();assert.equal(await handle(new Request(KUKATPALLY_URL+'?account=1'),async()=>r),r)});
 for(const request of [new Request(KUKATPALLY_URL,{method:'POST',body:'do not submit'}),new Request(KUKATPALLY_URL,{headers:{authorization:'Bearer fixture'}}),new Request(KUKATPALLY_URL,{headers:{range:'bytes=0-30'}}),new Request(KUKATPALLY_URL,{headers:{'cache-control':'no-transform'}}),new Request(KUKATPALLY_URL+'-other')])test('unsupported request passes through '+request.method+' '+request.url+' '+[...request.headers.keys()].join(','),async()=>{const r=response();const out=await handle(request,async()=>r);assert.equal(out,r)});
+
+// The origin serves a nested introduction to mobile user agents. Viewport alone is insufficient.
+test('actual mobile template gets the approved journey and retains original video',()=>{
+ const video='<div class="youtube-container" style="padding-bottom: 57%;"><iframe src="https://www.youtube.com/embed/UakQCuEIjQY" allowfullscreen></iframe></div>';
+ const mobile=fixture.replace(/<div class="center-about-description">[\s\S]*?<\/div>/,'<div class="center-about-description"><h1>Kukatpally</h1><div class="pinncle-round">'+video+'<p>Original mobile introduction.</p></div></div>');
+ const out=reviseKukatpallyHtml(mobile);assert(out?.includes(KUKATPALLY_MARKUP));assert(out.includes('data-preserved-centre-video="UakQCuEIjQY"'));assert(out.includes('loading="lazy"'));assert(out.includes('allowfullscreen'));assert.equal((out.match(/<iframe/g)||[]).length,1);assert.equal(reviseKukatpallyHtml(out),out);
+ assert.equal(reviseKukatpallyHtml(mobile.replace('UakQCuEIjQY','wrong000000')),null);
+});

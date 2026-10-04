@@ -1,3 +1,4 @@
+import {replaceCentreIntroduction,optimiseCentreMediaHtml,MEDIA_RELEASE} from './centre-media.mjs';
 export const LBNAGAR_PATH='/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india';
 export const LBNAGAR_URL='https://www.pinnacleblooms.org'+LBNAGAR_PATH;
 export const RELEASE='lbnagar-parent-journey-20261004';
@@ -59,7 +60,7 @@ export function isLBNagarRequest(request){
  return u.origin==='https://www.pinnacleblooms.org'&&u.pathname===LBNAGAR_PATH&&trackingOnly(u)&&['GET','HEAD'].includes(request.method)&&!request.headers.has('authorization')&&!request.headers.has('range')&&!request.headers.has('if-range')&&!/\bno-transform\b/i.test(request.headers.get('cache-control')||'');
 }
 export function reviseLBNagarHtml(html){
- if(html.includes('id="pinnacle-lbnagar-start"'))return html;
+ if(html.includes('id="pinnacle-lbnagar-start"'))return optimiseCentreMediaHtml(html,'3062523145');
  const canonical=html.match(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi)||[];
  if(canonical.length!==1||!html.includes('/Images/ProfileImages/3062523145.jpg'))return null;
  // The legacy origin echoes tracking parameters into its canonical. Accept only
@@ -67,16 +68,15 @@ export function reviseLBNagarHtml(html){
  let identity;try{identity=new URL(canonical[0].match(/\bhref=["']([^"']+)["']/)?.[1].replaceAll('&amp;','&'));}catch{return null;}
  if(identity.origin+identity.pathname!==LBNAGAR_URL||identity.hash||!trackingOnly(identity))return null;
  if(/<meta\b(?=[^>]*\bname=["'](?:robots|googlebot|bingbot)["'])(?=[^>]*\bcontent=["'][^"']*(?:noindex|none))[^>]*>/i.test(html))return null;
- const blocks=[...html.matchAll(/<div class="center-about-description">([\s\S]*?)<\/div>/g)];
- if(blocks.length!==1||!blocks[0][1].includes('LB Nagar')||!blocks[0][1].includes('<h1>')||blocks[0][1].includes('<div'))return null;
- const introChanged=html.replace(blocks[0][0],LBNAGAR_MARKUP);
+ const replaced=replaceCentreIntroduction(html,'LB Nagar',LBNAGAR_MARKUP,'D3qieAjsEEk');if(replaced===null)return null;
+ const introChanged=replaced;
  // The local story changes; preserve all other legacy content and assets verbatim.
- return introChanged.replace(canonical[0],'<link rel="canonical" href="'+LBNAGAR_URL+'">').replace(/<title>[\s\S]*?<\/title>/,'<title>'+title+'</title>')
+ return optimiseCentreMediaHtml(introChanged.replace(canonical[0],'<link rel="canonical" href="'+LBNAGAR_URL+'">').replace(/<title>[\s\S]*?<\/title>/,'<title>'+title+'</title>')
   .replace(/<meta\b(?=[^>]*\bname="description")[^>]*>/,'<meta name="description" content="'+description+'">')
   .replace(/<meta\b(?=[^>]*\bproperty="og:title")[^>]*>/,'<meta property="og:title" content="'+title+'">')
   .replace(/<meta\b(?=[^>]*\bproperty="og:description")[^>]*>/,'<meta property="og:description" content="'+description+'">')
   .replace(/<meta\b(?=[^>]*\bname="twitter:title")[^>]*>/,'<meta name="twitter:title" content="'+title+'">')
-  .replace(/<meta\b(?=[^>]*\bname="twitter:description")[^>]*>/,'<meta name="twitter:description" content="'+description+'">');
+  .replace(/<meta\b(?=[^>]*\bname="twitter:description")[^>]*>/,'<meta name="twitter:description" content="'+description+'">'),'3062523145');
 }
 export async function transformLBNagar(request,response){
  if(!isLBNagarRequest(request)||response.status!==200||!/^text\/html\b/i.test(response.headers.get('content-type')||'')||response.headers.has('set-cookie')||/private|no-store|no-transform/i.test(response.headers.get('cache-control')||'')||/noindex|none/i.test(response.headers.get('x-robots-tag')||'')||/(?:^|,)\s*(?:cookie|authorization|\*)\s*(?:,|$)/i.test(response.headers.get('vary')||''))return response;
@@ -85,7 +85,7 @@ export async function transformLBNagar(request,response){
  try{for(;;){const {done,value}=await reader.read();if(done)break;bytes+=value.length;if(bytes>2000000){void reader.cancel();return response;}html+=decoder.decode(value,{stream:true});}html+=decoder.decode();}catch{return response;}finally{reader.releaseLock();}
  const changed=reviseLBNagarHtml(html);if(changed===null)return response;
  const headers=new Headers(response.headers);for(const key of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest','accept-ranges','age'])headers.delete(key);
- headers.set('x-pinnacle-local-journey',RELEASE);
+ headers.set('x-pinnacle-local-journey',RELEASE);headers.set('x-pinnacle-centre-media',MEDIA_RELEASE);
  // Cookie-bearing visitors receive the same local journey, but their response
  // must never be promoted into shared/browser caching by this transformation.
  headers.set('cache-control',request.headers.has('cookie')?'private, no-store, max-age=0':'public, max-age=60');

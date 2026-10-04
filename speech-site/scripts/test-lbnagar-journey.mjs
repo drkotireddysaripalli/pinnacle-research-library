@@ -23,3 +23,11 @@ test('functional query passes through unchanged',async()=>{const r=response();as
 for(const request of [new Request(LBNAGAR_URL,{method:'POST',body:'do not submit'}),new Request(LBNAGAR_URL,{headers:{authorization:'Bearer fixture'}}),new Request(LBNAGAR_URL,{headers:{range:'bytes=0-30'}}),new Request(LBNAGAR_URL,{headers:{'cache-control':'no-transform'}}),new Request(LBNAGAR_URL+'-other')])test('unsupported request passes through '+request.method+' '+request.url+' '+[...request.headers.keys()].join(','),async()=>{const r=response();const out=await handle(request,async()=>r);assert.equal(out,r)});
 
 test('parent-facing punctuation and brand marks are intact UTF-8',()=>{assert(LBNAGAR_MARKUP.includes('child\u2019s'));assert(LBNAGAR_MARKUP.includes('PinnacleAI\u00ae'));assert(!/[\u00c2\u00c3\u00e2][\u0080-\u00ff\u2000-\u2122]/.test(LBNAGAR_MARKUP));});
+
+// The origin serves a nested introduction to mobile user agents. Viewport alone is insufficient.
+test('actual mobile template gets the approved journey and retains original video',()=>{
+ const video='<div class="youtube-container" style="padding-bottom: 57%;"><iframe src="https://www.youtube.com/embed/D3qieAjsEEk" allowfullscreen></iframe></div>';
+ const mobile=fixture.replace(/<div class="center-about-description">[\s\S]*?<\/div>/,'<div class="center-about-description"><h1>LB Nagar</h1><div class="pinncle-round">'+video+'<p>Original mobile introduction.</p></div></div>');
+ const out=reviseLBNagarHtml(mobile);assert(out?.includes(LBNAGAR_MARKUP));assert(out.includes('data-preserved-centre-video="D3qieAjsEEk"'));assert(out.includes('loading="lazy"'));assert(out.includes('allowfullscreen'));assert.equal((out.match(/<iframe/g)||[]).length,1);assert.equal(reviseLBNagarHtml(out),out);
+ assert.equal(reviseLBNagarHtml(mobile.replace('D3qieAjsEEk','wrong000000')),null);
+});

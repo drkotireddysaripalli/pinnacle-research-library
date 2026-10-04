@@ -33,3 +33,7 @@ The exact LB Nagar introduction now has its own guarded module, `lbnagar.mjs`, d
 ## Anna Nagar follow-up — 4 October 2026
 
 `annanagar.mjs` supplies the exact Anna Nagar introduction and local identity correction. Use its dedicated `release-annanagar.mjs` helper and `RELEASE-ANNANAGAR-20261004.md` contract. It loads the freshly captured baseline and adds one centre route while retaining all 193 existing zone routes. The earlier release helpers and version numbers above are historical; do not use them for this release.
+
+## Four-centre mobile and media follow-up — 4 October 2026
+
+Current contract: `RELEASE-CENTRE-PERFORMANCE-20261004.md`; helper: `release-centre-performance.mjs`. The shared `centre-media.mjs` repairs the actual nested mobile introduction for all four centres, compresses existing media through Cloudflare and deduplicates exact repeated article icons. All194 existing routes remain unchanged. Earlier viewport-only mobile claims did not test the origin's separate mobile source; see the contract's explicit correction.

@@ -47,3 +47,7 @@ Publication, indexing, rankings, AI citations and qualified enquiries remain sep
 - IndexNow accepted1 changed URL with verified key, batch `f76a7b95-b21e-416d-80b4-bc07a61c564b`; GSC property annotation `2014adaa-71bf-4d8a-aea5-fa711122e290`.
 - Single mobile Lighthouse sample: performance61/accessibility78/SEO92; LCP3.70s, TBT707.5ms, CLS0, transfer4.48MB. These scores describe the whole inherited page under lab conditions with analytics blocked. Findings identify existing article/image/script and accessibility work, recorded under `WEB-LEGACY-CENTRE-PERFORMANCE`. No speed uplift or complete optimisation claimed.
 - Completed action and detailed evidence: `annanagar-release-receipt-20261004.json`. No new Ahrefs spend or prospect correspondence.
+
+### Subsequent verification correction
+
+The next bounded performance run reproduced a separate mobile-user-agent origin template that the flat-introduction guard did not revise. The phone-width visual tests above used a desktop browser identity, and the Lighthouse61/78/92 sample evaluated the older mobile content. They do not prove the updated journey was served on mobile. `RELEASE-CENTRE-PERFORMANCE-20261004.md` records the shared four-centre correction, actual mobile-identity tests and subsequent release proof. Earlier receipts are retained as historical records.
