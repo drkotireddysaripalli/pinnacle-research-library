@@ -34,3 +34,13 @@ Source commit, independent CI, activation, public checks and discovery receipt a
 ## Production variant correction
 
 First source `49b3783` passed CI and activated `feef0856-9d55-4040-b490-5432fc1fb6ba`. All five responsive live captures passed. The production cookie/campaign check then showed the origin emits the same facility under a misspelled `labbipet-vijyawada` LocalBusiness ID/URL. The visible journey passed, but the postcode guard correctly refused that unrecognised identity. Added only that exact observed alias, with an additional facility-image guard, and normalised its graph URLs to the canonical before aligning the seven Temple Street postcodes. Separate unit regression and all public variants must pass before closing. Initial release receipts remain preserved; corrective helper baseline is the first activated version.
+
+## Verified final release
+
+- Source: `7401ccc46e8bdadf31c691af8f24264c457f044a`; [independent CI passed](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37195277021).
+- Active centre Worker: `2cbd6560-c15a-44de-9f72-77ca4280b0af`; deployment `c23b6f65-71b4-4abd-acc6-2ac3312681cf`.
+- Public read-back: five clean/cookie/tracking/HEAD/conditional variants passed, with the same journey and corrected structured identity/postcodes; ten protected routes and 13 linked destinations passed.
+- Chromium and WebKit viewport evidence retained; live Chromium at five widths inspected. The final correction changes only structured data, so unchanged visual tests were not repeated.
+- Screaming Frog: exact changed URL HTTP 200, Indexable, expected title/description/H1 and self-canonical. One IndexNow notification and GSC annotation recorded in the adjacent JSON receipt.
+- Full 185-route set, bindings, main portal and all other centre modules unchanged. No new Ahrefs units spent.
+- Completed action: `4f760f67-bd08-45b3-8b39-b4e431fc1bcb`. No ranking/AI-citation/qualified-enquiry gain inferred.

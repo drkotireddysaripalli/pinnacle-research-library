@@ -1,4 +1,4 @@
-# Active bounded regional improvement — Labbipet — 4 October 2026
+# Delivered bounded regional improvement — Labbipet — 4 October 2026
 
 Queue `WEB-ANDHRA-NEXT`; action `4f760f67-bd08-45b3-8b39-b4e431fc1bcb`. Saved 2–29 September data: Labbipet 2,148 impressions / 15 clicks (0.70%); Guntur 2,177 / 27 (1.24%). Actual pages inspected: both retain a generic promotional introduction, but Guntur already has practical parent questions; Labbipet lacks those and a centre-selected first step. Saved query sample includes ABA/autism, not sufficient to assign all impressions to those terms.
 
