@@ -37,3 +37,14 @@ Centre rollback: `96e2f73a-9e5c-44c4-b6b1-dd2a9163808e`. `entry.mjs` and `legacy
 Earlier Kukatpally/LB Nagar/Labbipet/Anna Nagar phone-width screenshots used desktop browser identities. They did not verify the separate mobile source template. The Anna Nagar Lighthouse61/78/92 sample evaluated that old mobile introduction, not the revised parent journey. Its raw report remains historical evidence; this release explicitly repairs and verifies that gap. Later scores must identify the actual served template and remain lab observations, never growth claims.
 
 Final source, deployment, public proof and measurement receipts are appended after successful activation.
+
+## Verified production outcome
+
+- Runtime source `537f6864707dd21684906b20332154fef7cde471`, pushed to main. [CI successful](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37217187698).
+- Centre Worker version `6fabd1b2-5edc-48d4-b2c1-7d321f0df8d0`; deployment `f167d6bd-a8a0-45b9-b046-b1edf95f49e9`. All194route objects, bindings and unrelated Worker versions preserved; seven live module hashes match source.
+- 101focused tests,11candidate browser/device cases,2live visual cases,20public request variants and11protected routes passed within the stated scope. Mobile user-agent content is now explicitly covered.
+- Four URL Screaming Frog check: HTTP200, Indexable and self-canonical. IndexNow accepted4 with validated key, batch `e524d167-4bc1-4aec-a020-84633de28737`; GSC annotation `7ebab4ce-c63e-4384-8a1a-61129a395573`.
+- Paired Anna Nagar mobile Lighthouse: performance72→77; accessibility78→84; SEO92→92; transferred2,299,930→1,666,772bytes (27.5% lower in this pair); LCP4.51→4.37seconds; TBT284→197ms; CLS0→0. Analytics blocked, one observation per state. LCP and inherited accessibility findings remain; this is not field-performance certification.
+- Anna Nagar's seven original full-dimension image assets total2,662,471bytes; negotiated AVIF variants total1,327,061bytes (50.2% lower). This full-set sum differs from initial-viewport Lighthouse transfer.
+- Original article card with empty video ID remains a documented separate repair; article content/destinations were preserved. Native lazy-loading does not guarantee no initial video requests.
+- Exact receipt: `centre-performance-release-receipt-20261004.json`. No ranking, AI-citation or qualified-enquiry uplift is asserted.

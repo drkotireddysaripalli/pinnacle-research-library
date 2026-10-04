@@ -1,0 +1,50 @@
+{
+  "item_id": "WEB-LEGACY-CENTRE-PERFORMANCE",
+  "action_id": "2a1637bc-1311-49d0-a190-aa4bd65b09a4",
+  "outcome": "deployed",
+  "verified": true,
+  "at": "2026-10-04T16:39:21.192930+00:00",
+  "summary": "Deployed the approved journeys to actual mobile source templates for Kukatpally, LB Nagar, Labbipet and Anna Nagar; compressed original imagery and deduplicated repeated icons. Paired Anna Nagar mobile lab: performance72→77, accessibility78→84, transfer2.30→1.67MB; SEO92 unchanged. Preserved194routes, bindings and unrelated Workers. Code pushed/CI passed;20public variants and11protected destinations passed;4URL IndexNow accepted. No ranking or lead gain claimed.",
+  "commit": "537f6864707dd21684906b20332154fef7cde471",
+  "deployment": "6fabd1b2-5edc-48d4-b2c1-7d321f0df8d0",
+  "deployment_id": "f167d6bd-a8a0-45b9-b046-b1edf95f49e9",
+  "rollback": [
+    {
+      "version_id": "96e2f73a-9e5c-44c4-b6b1-dd2a9163808e",
+      "percentage": 100
+    }
+  ],
+  "public_url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+  "public_urls": [
+    "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+    "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+    "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+    "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india"
+  ],
+  "proof": {
+    "ci": {
+      "id": 37217187698,
+      "status": "completed",
+      "conclusion": "success",
+      "commit": "537f6864707dd21684906b20332154fef7cde471",
+      "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37217187698",
+      "completedAt": "2026-10-04T16:37:37Z"
+    },
+    "focused_unit_tests": 101,
+    "local_visual_cases": 11,
+    "live_visual_cases": 2,
+    "public_variants": 20,
+    "protected_destinations": 11,
+    "cloudflare": "cloudflare-after.json",
+    "article_and_media_preservation": "candidate-proof.json",
+    "image_bytes": "image-transfer-proof.json",
+    "search_crawl": "crawl-summary.json",
+    "discovery": "discovery-receipt.json",
+    "performance": "measurement-summary.json",
+    "actual_mobile_source": "variants-before.json and public-after.json"
+  },
+  "verification_correction": "Earlier phone-sized desktop tests missed the origin mobile-user-agent template. Prior Anna Nagar Lighthouse61/78/92 tested legacy mobile content; this action repaired and directly verified it.",
+  "remaining": "Known empty-video-ID article thumbnail and inherited accessibility/render-blocking findings in FOLLOW-UP.md. Single paired lab measurement is not field Core Web Vitals.",
+  "ahrefs_new_units": 0,
+  "outreach_messages_sent": 0
+}
