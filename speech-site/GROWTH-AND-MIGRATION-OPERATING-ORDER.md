@@ -47,6 +47,8 @@ Validate plugin metrics before acting. During this setup, reported CTR values we
 
 Existing GA4 page-load, generic `enroll` and `form_submit` totals are not automatically admissions or accepted parent enquiries. Generic form events may include careers and other forms. Use the new fixed `enquiry_accepted` event and existing `phone_link_click` for the managed website layer; consent means these are an observed subset, not every contact.
 
+**4 October configuration:** both events are registered as separate GA4 key events. Call intent counts once per session; accepted requests count once per event without an invented monetary value. The legacy `enroll` and `contact_us` definitions were confirmed as page views. Use explicit event selection, never the combined key-event total, for lead reporting. Follow [the measurement contract](measurement/GA4-EVENT-CONTRACT-20261004.md), including the known 25 September QA exclusion and remaining attribution limits.
+
 No names, contact numbers, child data, free-text concerns, preferences, request IDs, query strings or advertising identifiers belong in general analytics. Field revenue/CRM attribution is a later aggregate connection with the existing receiving team, not a reason to delay a sound service page.
 
 ## Tools and acceptance
