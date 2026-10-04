@@ -12,6 +12,7 @@ The four released legacy centre journeys had working phone/enrolment links but d
 - Exact national phone targets send `phone_link_click`, representing a tap only. Existing centre-specific numbers remain untouched and are not included in this national-phone event.
 - Known enrolment destinations send `enquiry_link_click`, representing navigation only. The existing enrolment handler alone dispatches `enquiry_accepted` following actual API acceptance; it already requires consent and is unchanged by this release.
 - Event parameters contain a fixed centre placement label, generic `/centers` location/title, blank referrer and the existing GA4 destination. They exclude visitor-entered text, form fields, query parameters, ad IDs and clicked URLs.
+- GA4 property 361649365 currently registers `event_category` and `event_label`, but not `link_placement`. The bridge therefore also sends `event_category=centre_contact` and the same fixed placement as `event_label`, making centre breakdowns available through GSC Wizard's existing custom-dimension reporting. This is a bounded label, never a visitor value.
 - The module neither proves nor modifies consent behaviour of inherited legacy tags. It only governs its added contact events. Do not describe this narrow release as a site-wide consent audit or complete call attribution.
 
 ## Verification and release

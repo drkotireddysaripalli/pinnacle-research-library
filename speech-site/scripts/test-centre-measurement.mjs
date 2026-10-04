@@ -24,6 +24,7 @@ test('only consented named calls and valid enquiry handoffs; no initialization o
   h.click(origin+'/enroll-autism-speech-aba-therapies-india');
   assert.deepEqual(h.calls.map(c=>c[1]),['phone_link_click','phone_link_click','phone_link_click','enquiry_link_click','enquiry_link_click']);
   assert(h.calls.every(c=>c[0]==='event'&&c[2].send_to==='G-2BYLRLFRDJ'&&c[2].page_location===origin+'/centers'&&c[2].page_referrer===''));
+  assert(h.calls.every(c=>c[2].event_category==='centre_contact'&&c[2].event_label===c[2].link_placement));
   const text=JSON.stringify(h.calls);for(const excluded of ['child-name','secret','?','enquiry_accepted','service=','centre='])assert(!text.includes(excluded));
  }
 });

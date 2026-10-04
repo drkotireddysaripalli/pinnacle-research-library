@@ -27,6 +27,7 @@ export function centreContactMeasurement(config) {
       window.gtag('event', name, {
         schema_version:2,page_group:'centre_detail',page_variant:'service',
         link_placement:placement,destination,
+        event_category:'centre_contact',event_label:placement,
         page_location:origin + '/centers',page_title:'Pinnacle Centre',page_referrer:'',
         send_to:id,transport_type:'beacon'
       });
