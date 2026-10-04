@@ -137,5 +137,43 @@
   "ahrefs_units_used": 0,
   "prospect_emails_sent": 0,
   "new_orders": 0,
-  "new_analytics_events_transmitted": 0
+  "new_analytics_events_transmitted": 0,
+  "commerce_followup": {
+    "source_thread": "01a0f6ef-1af3-7bf0-98aa-9db53523e555",
+    "date": "2026-10-04",
+    "verification": "Commerce owner reports authenticated save, reload and reopen; not independently reread in this website task",
+    "authoritative_merchant": "9634043",
+    "authoritative_sources": [
+      {
+        "id": "10755858618",
+        "scope": "33 English"
+      },
+      {
+        "id": "10757436313",
+        "scope": "22 Hindi/Telugu"
+      }
+    ],
+    "older_manual_services": 52,
+    "shopify_app_merchant": "522637926",
+    "shopify_api_sources": [
+      "10756386792",
+      "10757076587"
+    ],
+    "change": "Only Google & YouTube Product sync changed to manual/Off",
+    "preserved": [
+      "all five app connections",
+      "Ads2990211780",
+      "GA4G-2BYLRLFRDJ",
+      "Conversion measurement On",
+      "Shipping information On"
+    ],
+    "not_proven": [
+      "removal of old API offers",
+      "unique product count underlying 1147 not-approved app count",
+      "native Google item_id reconciliation",
+      "genuine consented source/session/purchase continuity"
+    ],
+    "source_receipt": "heartbeat-20261004-0914/merchant-source-reconciliation.json",
+    "guard": "Do not reactivate automatic product sync; retain commerce ownership and current native event evidence gate."
+  }
 }

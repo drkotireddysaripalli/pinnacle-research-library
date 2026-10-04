@@ -44,3 +44,11 @@ Live Google app now shows Merchant522637926 connected, sync on, with1,147not-app
 Source `2cfac85ed5a18e287af666d52362d479534c2758`; Cloudflare version `ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4`, deployment `17b511fa-dea0-4523-b332-d6b39fb7f3dc`; rollback `688e7809-d9e9-4506-a916-b69c03dc166e`. CI run37192185115 succeeded. Ten public script checks, seven protected HTML response comparisons and the original resource-PDF hash passed. All185routes and four bindings unchanged. Google real-tag isolated check confirmed generated linker, stable book client cookie across sibling routes and withdrawal cleanup; four measurement requests intercepted, zero events transmitted. This does not test destination acceptance.
 
 GSC Wizard annotation `b6ed89dc-e531-4b9d-bc97-349a09156147` records the measurement break. Parent task stays open for the exact remaining native evidence; partial delivery is not full attribution completion.
+
+## Subsequent commerce-owner correction — 4 October 2026
+
+The commerce owner reports that only Google & YouTube **Product sync was changed to manual/Off**, then saved, reloaded and reopened to verify. This stops automatic uploads to the unintended Merchant522637926. All five app connections, Ads2990211780, GA4G-2BYLRLFRDJ and Conversion measurement On were retained; Shipping information On is unchanged. Do not reactivate automatic product sync. No website deployment is needed for this account change.
+
+Merchant9634043 retains file sources10755858618 (33English) and10757436313 (22Hindi/Telugu), plus52older manual service records. Merchant522637926 had API sources10756386792 and10757076587. The app count of1,147not-approved entries is **not verified as a count of unique products** and must not be conflated with9634043's107records. Turning sync off does not establish that old API offers were removed or that native purchase item identifiers are reconciled.
+
+Provenance: authorised commerce-thread update, receipt `heartbeat-20261004-0914/merchant-source-reconciliation.json`. The website task records this owner's verification; it did not repeat the account read or mutation. The native Shopify item-ID and genuine consented purchase-attribution evidence requirement remains open.
