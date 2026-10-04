@@ -5,17 +5,43 @@ import assert from 'node:assert/strict';
 const source = fs.readFileSync('public/pinnacle-pages-scripts/speech-measurement.js','utf8');
 const key='pinnacle-speech-analytics-v1';
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service',commerceCatalogue={}}={}){
+function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service',commerceCatalogue={},referrer=''}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
- const doc={body:{dataset:{pageVariant:variant}},querySelector:s=>s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>listeners[event]=fn};
- Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
+ const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>listeners[event]=fn};
+ Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
  return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
+test('book identity spans sibling routes and withdrawal clears its root cookies only',()=>{
+ const commerceCatalogue={'PBN-SP-101-EN-PDF':{title:'My Message Matters',path:'/books/speech-communication-101-my-message-matters',price:799}};
+ for(const path of ['/shop','/books','/books/te','/books/speech-communication-101-my-message-matters']){
+  const h=harness({path,commerceCatalogue});assert.equal(h.win.pinnacleBookAnalyticsAllowed(),false);h.choose('accepted');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+  assert.equal(config.cookie_prefix,'pbn_books');assert.equal(config.cookie_path,'/');assert.equal(h.win.pinnacleBookAnalyticsAllowed(),true);
+  h.choose('declined');assert.equal(h.win.pinnacleBookAnalyticsAllowed(),false);
+  assert(h.cookies.some(c=>c.startsWith('pbn_books_ga=;')&&c.includes('path=/;')));
+  assert(h.cookies.some(c=>c.startsWith('pbn_books_ga_2BYLRLFRDJ=;')&&c.includes('path=/;')));
+  assert(!h.cookies.some(c=>c.includes('path=/ask')||c.includes('path=/top-speech')));
+ }
+ const therapy=harness();therapy.choose('accepted');therapy.choose('declined');assert(!therapy.cookies.some(c=>c.startsWith('pbn_books')));
+ const gpc=harness({path:'/shop',commerceCatalogue,gpc:true});gpc.choose('accepted');assert.equal(gpc.win.pinnacleBookAnalyticsAllowed(),false);assert.equal(gpc.events().length,0);
+});
+
+test('book acquisition sends a known origin, never referring paths, queries or arbitrary campaigns',()=>{
+ const commerceCatalogue={'PBN-SP-101-EN-PDF':{title:'My Message Matters',path:'/books/speech-communication-101-my-message-matters',price:799}};
+ for(const [referrer,expected] of [['https://www.google.com/search?q=private-concern','https://www.google.com/'],['https://chatgpt.com/c/private-conversation','https://chatgpt.com/'],['https://bing.com/search?q=private-child','https://bing.com/'],['https://clinic-private.example/patient',''],['https://www.google.com.evil.example/?private',''],['https://private@www.google.com/search',''],['http://www.google.com/search?q=private',''],['https://www.pinnacleblooms.org/ask/private-question','']]){
+  const h=harness({path:'/shop',commerceCatalogue,referrer});h.choose('accepted');
+  assert.equal(h.events()[0][2].page_referrer,expected);
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];assert.equal(config.ignore_referrer,!expected);
+  assert(!JSON.stringify(h.win.dataLayer).includes('private'));assert.equal(config.campaign_term,'');
+ }
+ const therapy=harness({referrer:'https://www.google.com/search?q=private'});therapy.choose('accepted');assert.equal(therapy.events()[0][2].page_referrer,'');
+});
+
 test('free resource downloads need consent and carry only the fixed resource identity',()=>{
  const h=harness({path:'/books/resources/first-conversation'}),pdf='/books/resources/Pinnacle-First-Conversation-v1.pdf';
  h.click('resource-download',pdf);assert.equal(h.events().length,0);

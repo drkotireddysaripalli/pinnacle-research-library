@@ -74,7 +74,7 @@
     if (lines.length) {
       const link=element('a',t('compareCollections')); link.href=root.dataset.cartCollections || '/shop#pbn-collections'; link.className='pbn-cart-compare'; items.append(link);
       try {const url=new URL(cart.checkoutUrl);
-        if (url.protocol==='https:' && ['pinnacleblooms.myshopify.com','qg10s5-ie.myshopify.com'].includes(url.hostname)) { checkout.href=url.href; checkout.hidden=false; }
+        if (url.protocol==='https:' && !url.username && !url.password && !url.port && ['pinnacleblooms.myshopify.com','qg10s5-ie.myshopify.com'].includes(url.hostname)) { checkout.href=url.href; checkout.hidden=false; }
       } catch { message.textContent=t('checkoutMissing'); }
     }
   }
@@ -127,7 +127,20 @@
   // Revalidate the cart immediately before redirect so stale or unavailable items cannot be silently purchased.
   checkout.addEventListener('click',async e=>{
     e.preventDefault(); if(busy||!cart)return;busy=true;message.textContent=t('checkingBag');
-    try {const data=await api(`query Cart($id:ID!){cart(id:$id){${fields}}}`,{id:cart.id});cart=data.cart;render();if(!cart?.totalQuantity){remember(null);message.textContent=t('expiredBag');return;}if(!checkout.hidden){measure('begin_checkout');location.assign(checkout.href);}}
+    try {
+      const data=await api(`query Cart($id:ID!){cart(id:$id){${fields}}}`,{id:cart.id});
+      // Google's document click listener has now had the original click. Keep
+      // only its linker value before render replaces the outgoing href.
+      const linker = new URL(checkout.href).searchParams.get('_gl');
+      cart=data.cart;render();
+      if(!cart?.totalQuantity){remember(null);message.textContent=t('expiredBag');return;}
+      if(!checkout.hidden){
+        const destination=new URL(checkout.href);
+        destination.searchParams.delete('_gl');
+        if(window.pinnacleBookAnalyticsAllowed?.() && linker && linker.length<=4096 && /^[A-Za-z0-9_*~.\-]+$/.test(linker)) destination.searchParams.set('_gl',linker);
+        measure('begin_checkout');location.assign(destination.href);
+      }
+    }
     catch(e){message.textContent=e.message;}finally{busy=false;}
   });
   async function init(){

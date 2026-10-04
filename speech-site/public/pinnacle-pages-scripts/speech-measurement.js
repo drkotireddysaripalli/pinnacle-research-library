@@ -52,6 +52,15 @@
   const pageConfig = pages[pagePath] || (isAsk ? {title:'Ask Pinnacle',group:'ask',service:'help'} : null) || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
   const pageTitle = pageConfig?.title || document.title;
   const pageGroup = pageConfig?.group || 'managed_page';
+  const isBookshop = pageGroup === 'bookshop';
+  // Send only a known referring platform's origin, never its paths, search
+  // terms, visitor-entered campaign values, or private referring domains.
+  let safeReferrer = '';
+  if (isBookshop) try {
+    const ref = new URL(document.referrer);
+    const sources = new Set(['google.com','www.google.com','google.co.in','www.google.co.in','bing.com','www.bing.com','duckduckgo.com','www.duckduckgo.com','search.yahoo.com','chatgpt.com','www.perplexity.ai','perplexity.ai','gemini.google.com','claude.ai','www.facebook.com','m.facebook.com','l.facebook.com','www.instagram.com','l.instagram.com','www.linkedin.com','www.youtube.com','t.co']);
+    if (ref.protocol === 'https:' && !ref.username && !ref.password && !ref.port && sources.has(ref.hostname)) safeReferrer = ref.origin + '/';
+  } catch {}
   const routes = new Set([...Object.keys(pages), ...Object.keys(documents)]);
   const key = pageGroup === 'bookshop' ? 'pinnacle-book-analytics-v1' : 'pinnacle-speech-analytics-v1';
   const variant = document.body?.dataset.pageVariant === 'focused' ? 'focused' : 'service';
@@ -61,7 +70,7 @@
   if (!panel || !status) return;
   if (pageGroup === 'bookshop') {
     const copy = panel.querySelector?.('p');
-    if (copy) copy.textContent = 'With your permission, Google Analytics measures book views, sample clicks, book-bag changes, checkout starts and contact-link clicks. A checkout start is not a completed purchase. We exclude customer details, query parameters and checkout links. Advertising personalisation is off.';
+    if (copy) copy.textContent = 'With your permission, Google Analytics measures the book journey, including the referring search or social platform, book views, sample clicks, book-bag changes, checkout starts and contact-link clicks. It can connect that journey to our Shopify checkout. A checkout start is not a completed purchase. We exclude customer details, search terms and checkout links from our event data. Advertising personalisation is off.';
   }
   const production = isAsk || (location.origin === origin && routes.has(location.pathname) && !!pageConfig);
   if (isAsk) routes.add('/ask');
@@ -74,10 +83,12 @@
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
   let enabled = false, loaded = false;
+  // The cart asks at navigation time, so withdrawal also stops a pending handoff.
+  if (isBookshop) window.pinnacleBookAnalyticsAllowed = () => production && enabled && !navigator.globalPrivacyControl;
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {
     if (!production || !enabled || blocked) return;
-    try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:canonical, page_title:pageTitle, page_referrer:'', send_to:id}); } catch {}
+    try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:canonical, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
   };
   const commerceNames = new Set(['view_item','view_cart','add_to_cart','remove_from_cart','begin_checkout']);
   const sendCommerce = (name, lines) => {
@@ -96,8 +107,12 @@
   const clearCookies = () => {
     for (const cookie of document.cookie.split(';')) {
       const name = cookie.trim().split('=')[0];
-      if (!name.startsWith('ps_ga')) continue;
-      for (const route of routes) for (const domain of ['', 'www.pinnacleblooms.org', 'pinnacleblooms.org']) {
+      const bookCookie = name.startsWith('pbn_books_ga');
+      if (bookCookie ? !isBookshop : !name.startsWith('ps_ga')) continue;
+      // Root-scoped book cookies use their own namespace. Retire visible old
+      // book-path cookies without deleting therapy/Ask measurement cookies.
+      const cookiePaths = bookCookie ? ['/'] : isBookshop ? [...routes].filter(route => pages[route]?.group === 'bookshop') : routes;
+      for (const route of cookiePaths) for (const domain of ['', 'www.pinnacleblooms.org', 'pinnacleblooms.org']) {
         document.cookie = name + '=; Max-Age=0; path=' + route + ';' + (domain ? ' domain=' + domain + ';' : '') + ' SameSite=Lax; Secure';
       }
     }
@@ -114,8 +129,8 @@
     window.gtag('js',new Date());
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
-      cookie_prefix:'ps',cookie_path:isAsk?'/ask':location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
-      page_location:canonical,page_title:pageTitle,page_referrer:'',ignore_referrer:true,
+      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
+      page_location:canonical,page_title:pageTitle,page_referrer:safeReferrer,ignore_referrer:!safeReferrer,
       campaign_id:'',campaign_source:'',campaign_medium:'',campaign_name:'',campaign_term:'',campaign_content:''
     });
     const script=document.createElement('script');
