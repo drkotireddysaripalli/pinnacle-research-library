@@ -24,8 +24,12 @@ const state=await snapshot();guardOthers(state);const active=state.workers[worke
 const modules=['entry.mjs','legacy-v11.mjs','kukatpally.mjs','lbnagar.mjs','labbipet.mjs','annanagar.mjs','centre-media.mjs','centre-measurement.mjs'];
 if(mode==='upload'){
  assert.deepEqual(state.routes,baseline.routes,'Route drift');assert.deepEqual(active.deployment.versions,old.deployment.versions,'Centre version drift');
- const form=await(await raw(apiRoot+worker+'/content/v2')).formData(),live=[...form].filter(([,v])=>typeof v!=='string');assert.equal(live.length,baseline.modules.length);
- for(const [key,value]of live){const name=value.name||key;const found=baseline.modules.find(x=>x.name===name);assert(found,'Unexpected live module '+name);assert.equal(sha(Buffer.from(await value.arrayBuffer())),found.sha256,name+' live source drift');}
+ // content/v2 returns the newest uploaded script, including our inactive candidate.
+ // The active deployment above must still match the original rollback baseline.
+ const previousUpload=await fs.readFile(path.join(out,'release-upload.json'),'utf8').then(JSON.parse).catch(error=>{if(error.code==='ENOENT')return null;throw error;});
+ const expectedModules=previousUpload?.modules||baseline.modules;
+ const form=await(await raw(apiRoot+worker+'/content/v2')).formData(),live=[...form].filter(([,v])=>typeof v!=='string');assert.equal(live.length,expectedModules.length);
+ for(const [key,value]of live){const name=value.name||key;const found=expectedModules.find(x=>x.name===name);assert(found,'Unexpected live module '+name);assert.equal(sha(Buffer.from(await value.arrayBuffer())),found.sha256,name+' uploaded source drift');}
  for(const name of ['legacy-v11.mjs','kukatpally.mjs','lbnagar.mjs','labbipet.mjs','annanagar.mjs','centre-media.mjs'])assert.equal(sha(await fs.readFile(path.join(here,name))),baseline.modules.find(x=>x.name===name).sha256,name+' protected module drift');
  const metadata={main_module:'entry.mjs',compatibility_date:active.settings.compatibility_date,compatibility_flags:active.settings.compatibility_flags||[],bindings:active.settings.bindings,annotations:{'workers/message':'Four centres: consented call and enquiry-link events with existing Analytics tag'}};
  for(const key of ['placement','tail_consumers','logpush','observability'])if(active.settings[key]!==undefined)metadata[key]=active.settings[key];
