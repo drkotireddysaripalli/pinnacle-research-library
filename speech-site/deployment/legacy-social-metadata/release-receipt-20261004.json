@@ -1,0 +1,318 @@
+{
+  "item_id": "WEB-LEGACY-SOCIAL-METADATA",
+  "action_id": "12008ab6-e97c-46fb-bc41-8a84860e1523",
+  "completed_at": "2026-10-04T12:32:46.848528+00:00",
+  "outcome": "deployed",
+  "verified": true,
+  "summary": "Published one guarded shared HTTPS social-URL correction for the legacy FAQ family and physiotherapy page. Code pushed, CI passed, three public samples changed only og:url, protected destinations retained, all 189 existing routes and four application versions/bindings preserved. No claim of all 9996 audit URLs fixed or of ranking/lead gains.",
+  "commit": "2eb272bbc881df0b856796eda5184ef5ce6d58ba",
+  "deployment": "8f3c4f11-0ac7-48e2-b8bf-761b804780c4",
+  "worker": "pinnacle-legacy-social-metadata",
+  "worker_version": "5b62fc46-9772-4e09-8a80-0ae1115b4026",
+  "public_url": "https://www.pinnacleblooms.org/physiotherapy",
+  "proof": {
+    "public_checks": [
+      {
+        "name": "english",
+        "url": "https://www.pinnacleblooms.org/faq/english/aba-therapy/abatherapysocialskills",
+        "final": "https://www.pinnacleblooms.org/faq/english/aba-therapy/abatherapysocialskills",
+        "status": 200,
+        "bytes": 1849514,
+        "canonical": "https://www.pinnacleblooms.org/faq/english/aba-therapy/abatherapysocialskills",
+        "social": "https://www.pinnacleblooms.org/faq/english/aba-therapy/abatherapysocialskills",
+        "marker": "legacy-social-https-20261004",
+        "cache": "public, max-age=31536000",
+        "sha256": "b8859895835890bd022a3e43dce542967b9d0f795c8d648d67f9561b0750a708",
+        "onlySocialUrlChanged": true
+      },
+      {
+        "name": "hindi",
+        "url": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy/voice-tone-volume-issues-autism-speech-therapy-pinnacle-blooms",
+        "final": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy/voice-tone-volume-issues-autism-speech-therapy-pinnacle-blooms",
+        "status": 200,
+        "bytes": 2633202,
+        "canonical": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy/voice-tone-volume-issues-autism-speech-therapy-pinnacle-blooms",
+        "social": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy/voice-tone-volume-issues-autism-speech-therapy-pinnacle-blooms",
+        "marker": "legacy-social-https-20261004",
+        "cache": "public, max-age=31536000",
+        "sha256": "a1ad427f52a48443c5c03588011cfc6d81105d54fd81edeca7ad3af0c49b9e2f",
+        "onlySocialUrlChanged": true
+      },
+      {
+        "name": "physiotherapy",
+        "url": "https://www.pinnacleblooms.org/physiotherapy",
+        "final": "https://www.pinnacleblooms.org/physiotherapy",
+        "status": 200,
+        "bytes": 525342,
+        "canonical": "https://www.pinnacleblooms.org/physiotherapy",
+        "social": "https://www.pinnacleblooms.org/physiotherapy",
+        "marker": "legacy-social-https-20261004",
+        "cache": "private, max-age=5958",
+        "sha256": "2c6b649fb01110227258331059d80dbd5dd8509dfd89a6a00c19ede0324702b0",
+        "onlySocialUrlChanged": true
+      },
+      {
+        "name": "verify",
+        "url": "https://www.pinnacleblooms.org/verify/",
+        "final": "https://www.pinnacleblooms.org/verify/",
+        "status": 200,
+        "bytes": 1022245,
+        "canonical": "https://www.pinnacleblooms.org/verify/",
+        "social": "https://www.pinnacleblooms.org/verify/",
+        "marker": null,
+        "cache": "public, max-age=60, must-revalidate",
+        "sha256": "67d5db9dea668f2c2abd7e4c786d5a44908218fd7e521aac5a8f379795085ba6",
+        "unchanged": true
+      },
+      {
+        "name": "pinnacleai",
+        "url": "https://www.pinnacleblooms.org/pinnacleai",
+        "final": "https://www.pinnacleblooms.org/pinnacleai",
+        "status": 200,
+        "bytes": 194107,
+        "canonical": "https://www.pinnacleblooms.org/pinnacleai",
+        "social": "https://www.pinnacleblooms.org/pinnacleai",
+        "marker": null,
+        "cache": "public, max-age=0, must-revalidate",
+        "sha256": "36410fdfb6f1bd9a90f460bc2314db03f77917f8b4bd430f652ae23d536b09f5",
+        "unchanged": true
+      },
+      {
+        "name": "speech",
+        "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+        "final": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+        "status": 200,
+        "bytes": 551302,
+        "canonical": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+        "social": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+        "marker": null,
+        "cache": "public, max-age=0, must-revalidate",
+        "sha256": "c4bfc171a0d5db8fbb18df05a202a4657a2e0f87df862030b1a7829a67bd257c",
+        "unchanged": true
+      },
+      {
+        "name": "ask",
+        "url": "https://pinnacleblooms.org/ask",
+        "final": "https://pinnacleblooms.org/ask",
+        "status": 200,
+        "bytes": 147579,
+        "canonical": "https://pinnacleblooms.org/ask",
+        "social": "https://pinnacleblooms.org/ask",
+        "marker": null,
+        "cache": "public, max-age=0, s-maxage=300",
+        "sha256": "039e6d74054fc728af9bafbf3133aef7a14e810fe30a1d6993da4de894ded613",
+        "unchanged": true
+      },
+      {
+        "name": "ask-www",
+        "url": "https://www.pinnacleblooms.org/ask",
+        "final": "https://pinnacleblooms.org/ask",
+        "status": 200,
+        "bytes": 147579,
+        "canonical": "https://pinnacleblooms.org/ask",
+        "social": "https://pinnacleblooms.org/ask",
+        "marker": null,
+        "cache": "public, max-age=0, s-maxage=300",
+        "sha256": "039e6d74054fc728af9bafbf3133aef7a14e810fe30a1d6993da4de894ded613",
+        "unchanged": true
+      },
+      {
+        "name": "enroll",
+        "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "status": 200,
+        "bytes": 244336,
+        "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "social": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "marker": null,
+        "cache": "public, max-age=0, must-revalidate",
+        "sha256": "a4dc4ee0312cbcc491cd5ee55d93ba7c8f888b5b2b961904d1df046b7e89e9c2",
+        "unchanged": true
+      },
+      {
+        "name": "helpline",
+        "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "final": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "status": 200,
+        "bytes": 87205,
+        "canonical": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "social": "https://www.pinnacleblooms.org/national-autism-helpline",
+        "marker": null,
+        "cache": "public, max-age=300",
+        "sha256": "d28130b7fdd344b804820d26d0fbb9abe326c4432a6619f1c1c6e9f5926f842f",
+        "unchanged": true
+      },
+      {
+        "name": "books",
+        "url": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-pdf-collection",
+        "final": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-pdf-collection",
+        "status": 200,
+        "bytes": 171215,
+        "canonical": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-pdf-collection",
+        "social": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-pdf-collection",
+        "marker": null,
+        "cache": "public, max-age=0, must-revalidate",
+        "sha256": "35a4cc4cea6f7716deabbb130a89122a7b1d52539d868feaa5cf183e97547302",
+        "unchanged": true
+      },
+      {
+        "name": "seva",
+        "url": "https://www.pinnacleblooms.org/seva",
+        "final": "https://www.pinnacleblooms.org/seva",
+        "status": 200,
+        "bytes": 118972,
+        "canonical": "https://www.pinnacleblooms.org/seva",
+        "social": "https://www.pinnacleblooms.org/seva",
+        "marker": null,
+        "cache": "public, max-age=0, must-revalidate",
+        "sha256": "de7437c461c743780b1400636432cd7617320ae5550ebcbec8c03a6b540c4e50",
+        "unchanged": true
+      },
+      {
+        "name": "sitemap",
+        "url": "https://www.pinnacleblooms.org/sitemap.xml",
+        "final": "https://www.pinnacleblooms.org/sitemap.xml",
+        "status": 200,
+        "bytes": 1738,
+        "marker": null,
+        "cache": "public, max-age=300",
+        "sha256": "f41cb36512c81be8f61fdce6900821f1884481740a5184a543f320459deed261",
+        "unchanged": true
+      },
+      {
+        "name": "missing",
+        "url": "https://www.pinnacleblooms.org/physiotherapy-metadata-regression-nonexistent",
+        "final": "https://www.pinnacleblooms.org/physiotherapy-metadata-regression-nonexistent",
+        "status": 404,
+        "bytes": 311942,
+        "canonical": "https://www.pinnacleblooms.org/physiotherapy-metadata-regression-nonexistent",
+        "social": "http://www.pinnacleblooms.org/physiotherapy-metadata-regression-nonexistent",
+        "marker": null,
+        "cache": "public, max-age=31536000",
+        "sha256": "d9d6e35b0c4dcdd8d962e544493c56e33e78b26829fb16832df2c1a9da602c76",
+        "unchanged": true
+      },
+      {
+        "name": "missing-faq",
+        "url": "https://www.pinnacleblooms.org/faq/metadata-regression-nonexistent",
+        "final": "https://www.pinnacleblooms.org/faq/metadata-regression-nonexistent",
+        "status": 500,
+        "bytes": 322467,
+        "canonical": "https://www.pinnacleblooms.org/faq/metadata-regression-nonexistent",
+        "social": "http://www.pinnacleblooms.org/faq/metadata-regression-nonexistent",
+        "marker": null,
+        "cache": "private",
+        "sha256": "ac9a53e2e15d334dff0fb28706c83cccd3a42e6667597dcbd5d2bcc6f362511e",
+        "unchanged": false,
+        "exception": "Existing origin 500 error page regenerates its last-modified meta timestamp; every other normalized byte is identical. Status and HTTP social URL remain untouched."
+      }
+    ],
+    "variants": [
+      {
+        "name": "campaign",
+        "url": "https://www.pinnacleblooms.org/physiotherapy?utm_source=metadata-release-check",
+        "status": 200,
+        "cache": "private, max-age=14350",
+        "marker": null,
+        "passed": true,
+        "disposition": "Origin query-bearing canonical and social identity intentionally passed through unchanged"
+      },
+      {
+        "name": "cookie",
+        "url": "https://www.pinnacleblooms.org/faq/english/aba-therapy/abatherapysocialskills",
+        "status": 200,
+        "cache": "public, max-age=31536000",
+        "marker": "legacy-social-https-20261004",
+        "passed": true
+      },
+      {
+        "name": "conditional",
+        "url": "https://www.pinnacleblooms.org/physiotherapy",
+        "status": 200,
+        "cache": "private, max-age=5830",
+        "marker": "legacy-social-https-20261004",
+        "passed": true
+      },
+      {
+        "name": "head",
+        "url": "https://www.pinnacleblooms.org/physiotherapy",
+        "status": 200,
+        "cache": "private, max-age=5830",
+        "marker": null,
+        "passed": true
+      }
+    ],
+    "infrastructure": {
+      "at": "2026-10-04T12:28:28.653Z",
+      "existingRoutesPreserved": 189,
+      "totalRoutes": 191,
+      "existingWorkerVersionsPreserved": true,
+      "existingBindingsPreserved": true,
+      "created": [
+        {
+          "id": "6f96fbc26f014f8bae0dc239904e340f",
+          "pattern": "www.pinnacleblooms.org/faq*",
+          "script": "pinnacle-legacy-social-metadata",
+          "request_limit_fail_open": true
+        },
+        {
+          "id": "819b51ed6951470d976a763290bc5255",
+          "pattern": "www.pinnacleblooms.org/physiotherapy*",
+          "script": "pinnacle-legacy-social-metadata",
+          "request_limit_fail_open": true
+        }
+      ],
+      "workerVersion": "5b62fc46-9772-4e09-8a80-0ae1115b4026",
+      "sourceSha256": "34b6ba7d3288da4bcf197fba7974d106b12ab843b50d2591d8f3e008db7a38cc",
+      "rollback": "Delete only the two route IDs in created to restore exact origin serving. The metadata Worker has no application bindings or stored data."
+    },
+    "cloudflare_runtime_tests": {
+      "passed": 29,
+      "failed": 0,
+      "command": "node --test scripts/test-legacy-social-metadata.mjs",
+      "captured_origin_fixture_test": true,
+      "independent_review": "One BOM byte-preservation finding fixed with conservative pass-through and byte-array regression test; no source edits delegated."
+    },
+    "ci": {
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37202168536",
+      "commit": "2eb272bbc881df0b856796eda5184ef5ce6d58ba"
+    },
+    "screaming_frog": {
+      "receipt": {
+        "completedAt": "2026-10-04T12:29:27.5766906Z",
+        "input": "C:/Users/Siri Palace/Documents/Codex/2026-09-15/k/work/pinnacle-growth-system/legacy-social-20261004/crawl-urls.txt",
+        "output": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\legacy-social-20261004\\crawl\\20261004-175917",
+        "reports": [
+          "canonicals_all.csv",
+          "h1_all.csv",
+          "internal_all.csv",
+          "meta_description_all.csv",
+          "page_titles_all.csv",
+          "response_codes_all.csv"
+        ],
+        "exitCode": 0,
+        "scope": "Bounded explicit public URL list; not a full site audit or visual/browser test."
+      },
+      "verified_rows": 3,
+      "all_http200": true,
+      "all_indexable": true,
+      "all_self_canonical": true
+    },
+    "gsc_annotation": {
+      "id": "e04288a9-31f0-4217-bfd3-3e66b178d970",
+      "property": "https://www.pinnacleblooms.org/",
+      "date": "2026-10-04"
+    },
+    "evidence_directory": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\legacy-social-20261004"
+  },
+  "limits": [
+    "Guarded family-wide repair, with three live page samples; not a fresh crawl or proof that all 9996 historical Ahrefs mismatches are gone.",
+    "Only page metadata changed. Approved common header/footer, imagery, copy and all page-body HTML retained; no new visual/device certification claimed.",
+    "The origin includes campaign queries in its own canonical; those identities pass through unchanged. No canonical rewrite was authorised within this bounded repair.",
+    "The existing nonexistent-FAQ error probe still returns its original 500; its regenerated last-modified timestamp is the sole normalized body difference. This release does not repair origin error handling.",
+    "No IndexNow bulk submission, new backlink, AI citation, ranking, traffic or qualified-enquiry gain claimed. No additional Ahrefs units consumed."
+  ],
+  "next_step": "Consume the next scheduled changed audit once; inspect residual legacy families before any scope expansion. The next ranked task addresses the independently evidenced oversized legacy documents and origin stability."
+}
