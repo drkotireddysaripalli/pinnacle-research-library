@@ -2,8 +2,9 @@ import {handle as legacy} from './legacy-v11.mjs';
 import {isKukatpallyRequest,transformKukatpally} from './kukatpally.mjs';
 import {isLBNagarRequest,transformLBNagar} from './lbnagar.mjs';
 import {isLabbipetRequest,transformLabbipet} from './labbipet.mjs';
+import {isAnnaNagarRequest,transformAnnaNagar} from './annanagar.mjs';
 export async function handle(request,fetcher=fetch){
- const transform=isKukatpallyRequest(request)?transformKukatpally:isLBNagarRequest(request)?transformLBNagar:isLabbipetRequest(request)?transformLabbipet:null;
+ const transform=isKukatpallyRequest(request)?transformKukatpally:isLBNagarRequest(request)?transformLBNagar:isLabbipetRequest(request)?transformLabbipet:isAnnaNagarRequest(request)?transformAnnaNagar:null;
  if(!transform)return legacy(request,fetcher);
  const headers=new Headers(request.headers);for(const key of ['if-none-match','if-modified-since','content-length','transfer-encoding'])headers.delete(key);
  const publicRequest=new Request(request.url,{method:'GET',headers,redirect:request.redirect});

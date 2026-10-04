@@ -29,3 +29,7 @@ The exact LB Nagar introduction now has its own guarded module, `lbnagar.mjs`, d
 ## Labbipet follow-up — 4 October 2026
 
 `labbipet.mjs` adds the separately guarded Temple Street family journey. Source/acceptance boundary: `RELEASE-LABBIPET-20261004.md`. The current helper baseline is centre Worker `aef61521-6d56-4ed2-9a92-a09a9a635648` and main portal `ab2b41e5-17bf-4b84-a6ac-0ca2c25e4ce4`. Previous release sections are historical. Protect the exact legacy, Kukatpally and LB Nagar modules when uploading.
+
+## Anna Nagar follow-up — 4 October 2026
+
+`annanagar.mjs` supplies the exact Anna Nagar introduction and local identity correction. Use its dedicated `release-annanagar.mjs` helper and `RELEASE-ANNANAGAR-20261004.md` contract. It loads the freshly captured baseline and adds one centre route while retaining all 193 existing zone routes. The earlier release helpers and version numbers above are historical; do not use them for this release.
