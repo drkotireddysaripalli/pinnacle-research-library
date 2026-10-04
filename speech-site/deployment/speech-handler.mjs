@@ -1,3 +1,4 @@
+import {readingEntry,addTherapyReading,READING_RELEASE} from './therapy-reading.mjs';
 import {serveSeva} from './seva-handler.mjs';
 import {serveFirstConversation} from './first-conversation-handler.mjs';
 import {serveBookAttribution} from './book-attribution-handler.mjs';
@@ -116,12 +117,18 @@ export async function serveSpeech(request,env,inventory){
  // The Astro template also emits the corrected destination on future builds.
  const collectionAction=isHtml&&/^\/books\/pinnacle-101-four-book-(?:pdf|softcover|hardbound)-collection$/.test(u.pathname);
  const resourceLink=isHtml&&u.pathname==='/books';
- const etag='"speech-'+inventory[key]+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+'"';headers.set('etag',etag);
+ const parentReading=readingEntry(u.pathname,key);
+ const etag='"speech-'+inventory[key]+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+'"';headers.set('etag',etag);
  if(isHtml){headers.set('vary','Accept');headers.set('x-robots-tag','index, follow, max-image-preview:large');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com"+(Object.hasOwn(BOOK_ROUTES,u.pathname)?" https://pinnacleblooms.myshopify.com":"")+"; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(isMachineDocument){headers.set('vary','Accept');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');}
  if(preview){headers.set('x-robots-tag','noindex, nofollow, nosnippet');headers.set('cache-control','no-store');headers.set('content-signal','search=no, ai-input=no');headers.set('referrer-policy','no-referrer');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(!preview&&!privateResponse&&request.headers.get('if-none-match')===etag){headers.delete('content-length');return new Response(null,{status:304,headers});}
  let body=request.method==='HEAD'?null:source.body;
+ if(parentReading){
+  for(const name of ['content-length','content-md5','digest','content-digest','repr-digest','last-modified'])headers.delete(name);
+  headers.set('x-pinnacle-reading',READING_RELEASE);
+  if(body)body=addTherapyReading(await source.text(),parentReading);
+ }
  if(resourceLink){
   for(const name of ['content-length','content-md5','digest','content-digest','repr-digest'])headers.delete(name);
   if(body){let html=await source.text();if(!html.includes('data-first-conversation-link'))html=html.replace('<h3>Connect with Pinnacle</h3>','<h3>Connect with Pinnacle</h3>'+FIRST_CONVERSATION_LINK);body=html;}

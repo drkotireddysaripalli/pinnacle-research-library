@@ -1,3 +1,9 @@
+# Active bounded improvement — therapy book companions — 4 October 2026
+
+Queue `COMMERCE-CONTEXT-LINKS`; action `f2887fd0-a86b-4a54-a9bd-6c834a3b2356`. Add the matching illustrated book, free preview and English/Hindi/Telugu choices to Speech and Occupational Therapy beside relevant family-practice/review content. Retain the approved care narrative, 9100 181 181 conversion path, shared shell, current catalogue and all live routes/assets. Source and release contract: `deployment/THERAPY-READING-20261004.md`. Main baseline `78b37416-df98-43e4-aac6-d7d11ee573a8`, 194 routes. Candidate source/build/type/unit and focused browser checks passed; production verification remains the release boundary.
+
+---
+
 # Delivered bounded regional improvement — Anna Nagar — 4 October 2026
 
 Queue `WEB-ANNA-NAGAR`; action `4d4523d7-68bf-46d1-9a6e-851f35d1c13d`. Replace the 554-character heading with a readable local parent journey, call and Anna Nagar-selected enquiry; connect the existing map, useful therapy/Ask/Verify resources and matching FAQ. Correct the exact centre structured identity that mixed Anna Nagar with Begumpet II and a Suchitra review. Contract: `deployment/centre-search-repair/RELEASE-ANNANAGAR-20261004.md`.

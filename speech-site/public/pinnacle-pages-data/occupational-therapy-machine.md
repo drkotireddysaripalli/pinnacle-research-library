@@ -55,3 +55,15 @@ Page claims and sources: https://www.pinnacleblooms.org/pinnacle-pages-data/occu
 Full Verify hub: https://www.pinnacleblooms.org/verify/
 Find a centre: https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate#centres
 Begin enrolment: https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational
+
+## Bring everyday possibilities into your next OT conversation.
+
+Play, dressing and familiar routines can open up useful conversations about participation. Explore our illustrated guide, notice what feels comfortable and relevant for your child, and discuss it with your occupational therapist.
+
+I Belong in Everyday Life — Occupational Therapy 101
+
+[Read the free English sample](https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life#preview).
+
+Choose your PDF book language: [English](https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life) · [हिन्दी](https://www.pinnacleblooms.org/books/hi/ot-101) · [తెలుగు](https://www.pinnacleblooms.org/books/te/ot-101).
+
+Free samples are available; the complete books are sold separately. Use the ideas with your professional team—they support discussion and do not replace individual care.

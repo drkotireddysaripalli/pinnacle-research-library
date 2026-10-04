@@ -17,6 +17,7 @@ import firstVisit from '../assets/speech-first-visit-branded-20261001.png';
 import decisionArt from '../assets/speech-everyday-review-branded-20261001.png';
 
 import SpeechResources from './SpeechResources.astro';
+import TherapyBookCompanion from './TherapyBookCompanion.astro';
 import { speechOffer } from '../data/speech-offer';
 import CentreDirectory from './CentreDirectory.astro';
 import { phone, url, speechPath } from '../data/site';
@@ -70,6 +71,7 @@ const content = speechContent;
     <EvidenceLinks group="practice" label="Support for everyday practice and family participation" />
   </div></section>
 
+<TherapyBookCompanion kind="speech"/>
 <TherapyTogether current="speech"/>  <section class="section evidence-section" id="evidence" aria-labelledby="evidence-title"><div class="wrap"><div class="split-heading"><div><p class="eyebrow">Open. Honest. Transparent. Self-critical.</p><h2 id="evidence-title">Confidence you can<br /><em>look into.</em></h2></div><p>We make the records behind our work available to you: the software licence, its named modules and research relevant to communication. Follow a source as deeply as you wish.</p></div>
     <div class="evidence-cards">{proofCards.map((card,i)=><article><span class="proof-icon"><Icon name={['shield','plan','measure'][i]} size={35} /></span><p class="card-tag">{card.tag}</p><h3>{card.title}</h3><p>{card.text}</p><span class="record-reference">{card.ref}</span><a class="text-link" href={url(card.link)}>{card.label} ↗</a></article>)}</div>
     <p class="source-note">Software licences describe the named device and documented scope. Research findings apply to the populations and methods studied. Your child’s goals and progress are individual.</p>
