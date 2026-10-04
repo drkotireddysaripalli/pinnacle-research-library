@@ -1,3 +1,7 @@
+# Current bounded publication — First Conversation — 4 October 2026
+
+Publish the supplied original free one-page planning resource and useful HTML companion. Exact contract and preservation boundary: `RELEASE-FIRST-CONVERSATION-20261004.md`. No common-shell redesign, Ask/auth change, paid catalogue mutation or outreach. The source is ready; production receipt follows release. PinnacleAI scholarly/Figma work remains held for the owner diagram. Completed work below is historical.
+
 ## Delivered bounded regional improvement — Kukatpally — 4 October 2026
 
 Action `aa7d91f4-3e79-46c9-a4d5-9a996823f455`, queue `WEB-KUKATPALLY`. Improve the existing local introduction and enquiry journey at `/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india`. This is a bounded legacy-page improvement, not a full Astro migration or a common-shell redesign.

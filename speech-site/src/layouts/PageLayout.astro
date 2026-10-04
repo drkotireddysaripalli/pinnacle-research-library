@@ -50,5 +50,5 @@ const schema = {'@context':'https://schema.org','@graph':[
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
   <nav class="mobile-cta" aria-label={nativeContact?.label || "Contact Pinnacle"}><a href={phone.href} data-cta="mobile-call">{nativeContact?.call || "Call"} {phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>
-  <script is:inline src="/pinnacle-pages-scripts/speech-measurement.js" defer></script>
+  <script is:inline src={Astro.props.measurementScript || '/pinnacle-pages-scripts/speech-measurement.js'} defer></script>
 </body></html>

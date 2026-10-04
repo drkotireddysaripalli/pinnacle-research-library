@@ -12,7 +12,7 @@ await fs.access(path.join(release,'index.html'));
 await fs.access(path.join(release,'pinnacle-pages-html','enrolment.html'));
 await fs.mkdir(stage,{recursive:false});
 
-const modules=['pinnacle-route-v12.mjs','discovery-handler.mjs','speech-handler.mjs','speech-enquiry-handler.mjs','centre-facilities.mjs','enrolment-handler.mjs','shopify-physical-feed.mjs'];
+const modules=['pinnacle-route-v12.mjs','discovery-handler.mjs','speech-handler.mjs','speech-enquiry-handler.mjs','centre-facilities.mjs','enrolment-handler.mjs','shopify-physical-feed.mjs','first-conversation-handler.mjs','first-conversation-assets.mjs','first-conversation-links.mjs'];
 for(const name of modules)await fs.copyFile(path.join(root,'deployment',name),path.join(stage,name));
 let assets=path.relative(stage,release).replaceAll('\\','/');
 if(!assets.startsWith('.'))assets='./'+assets;

@@ -1,11 +1,14 @@
 const PUBLIC='https://www.pinnacleblooms.org';
 const CHILD_SITEMAP=PUBLIC+'/speech-therapy/sitemap.xml';
 const ROOT_SITEMAPS=[
- '/books/sitemap.xml','/sitemaps/core.xml','/sitemaps/centres.xml','/sitemaps/staff.xml','/sitemaps/bots.xml','/sitemaps/miracles.xml',
+ '/books/resources/sitemap.xml','/books/sitemap.xml','/sitemaps/core.xml','/sitemaps/centres.xml','/sitemaps/staff.xml','/sitemaps/bots.xml','/sitemaps/miracles.xml',
  '/sitemaps/faq-en.xml','/sitemaps/faq-te.xml','/sitemaps/faq-hi.xml','/sitemaps/faq-kn.xml','/sitemaps/faq-mr.xml','/sitemaps/faq-ta.xml','/sitemaps/faq-ml.xml',
  '/verify/sitemap.xml','/speech-therapy/sitemap.xml','/pinnacleai/sitemap.xml','/pinnacle-pages-data/public-documents-sitemap.xml'
 ];
 const MANAGED_SECTION=`
+
+## Free Pinnacle family resources
+- [Your first conversation](${PUBLIC}/books/resources/first-conversation): a free one-page English planning sheet for private family observations and appointment questions. No sign-in or upload is needed.
 
 ## Pinnacle parent books
 - [Pinnacle Bookshop](${PUBLIC}/shop): browse four illustrated books, six ebook pairs, the complete collection and free six-page samples.

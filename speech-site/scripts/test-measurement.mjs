@@ -16,6 +16,15 @@ function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-ther
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
  return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
+test('free resource downloads need consent and carry only the fixed resource identity',()=>{
+ const h=harness({path:'/books/resources/first-conversation'}),pdf='/books/resources/Pinnacle-First-Conversation-v1.pdf';
+ h.click('resource-download',pdf);assert.equal(h.events().length,0);
+ h.choose('accepted');h.click('resource-download',pdf);h.click('final-call','tel:+919100181181');
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','resource_download_click','phone_link_click']);
+ assert.equal(h.events()[1][2].resource_id,'first_conversation_v1');assert(!JSON.stringify(h.events()).includes('private-child-detail'));
+ h.choose('declined');const count=h.events().length;h.click('resource-download',pdf);assert.equal(h.events().length,count);
+ const g=harness({path:'/books/resources/first-conversation',gpc:true});g.choose('accepted');g.click('resource-download',pdf);assert.equal(g.events().length,0);
+});
 test('bookshop direct contact links count once after consent without exporting WhatsApp text',()=>{
  const commerceCatalogue={'PBN-SP-101-EN-PDF':{title:'My Message Matters',path:'/books/speech-communication-101-my-message-matters',price:799}};
  const h=harness({path:'/shop',commerceCatalogue});

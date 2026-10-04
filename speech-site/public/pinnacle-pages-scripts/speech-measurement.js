@@ -45,6 +45,7 @@
     for (const path of bookPaths) pages[path] = {title:'Pinnacle Bookshop',group:'bookshop',service:'help'};
   }
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
+  pages['/books/resources/first-conversation'] = {title:'Free First Conversation Planning Sheet',group:'family_resource',service:'help'};
   const pagePath = location.pathname;
   const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !/^\/ask\/(?:te\/)?search$/.test(pagePath) && document.body?.dataset.pageVariant === 'ask';
   const canonical = isAsk ? 'https://pinnacleblooms.org/ask' : origin + (pages[pagePath]?.measurementPath || pagePath);
@@ -157,6 +158,10 @@
     send('enquiry_accepted',{schema_version:2,page_group:'enrolment',destination:'existing_enrolment_workflow'});
   });
   document.addEventListener('click',event=>{
+    if (pageGroup === 'family_resource') {
+      const resourceLink=event.target?.closest?.('a[data-resource="first_conversation_v1"]');
+      if(resourceLink?.getAttribute('href') === '/books/resources/Pinnacle-First-Conversation-v1.pdf') send('resource_download_click',{schema_version:3,page_group:'family_resource',resource_id:'first_conversation_v1',format:'pdf',language:'en'});
+    }
     if (pageGroup === 'bookshop') {
       const contactLink = event.target?.closest?.('a[href]');
       const href = contactLink?.getAttribute('href');
