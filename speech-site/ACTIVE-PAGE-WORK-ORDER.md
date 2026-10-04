@@ -1,4 +1,4 @@
-## Active bounded regional improvement — Kukatpally — 4 October 2026
+## Delivered bounded regional improvement — Kukatpally — 4 October 2026
 
 Action `aa7d91f4-3e79-46c9-a4d5-9a996823f455`, queue `WEB-KUKATPALLY`. Improve the existing local introduction and enquiry journey at `/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india`. This is a bounded legacy-page improvement, not a full Astro migration or a common-shell redesign.
 
@@ -9,6 +9,8 @@ Action `aa7d91f4-3e79-46c9-a4d5-9a996823f455`, queue `WEB-KUKATPALLY`. Improve t
 - Source/release: exact current `pinnacle-centre-search-repair` Worker v11 baseline `dd7b8619-cbce-4db8-99cb-5e13f3ce6351`; preserve every other centre and all 185 zone routes. Main portal stays `e53a1016-15ab-462b-b005-b996261db856`.
 - Acceptance: guarded transformation, no alteration outside intro/four search metadata fields and clean canonical, selected speech/centre in enrolment with no submission, keyboard/readable actions and phone/tablet/desktop visual inspection, protected-route checks, committed source and active deployment/public receipt. Search/lead gains are measured later, never inferred from release.
 - Existing next regional task: compare LB Nagar/Suchitra; measurement priority remains in the ranked growth queue. PinnacleAI scholarly/Figma work stays held for the owner's diagram. The sections below are previous work, not additional active scope.
+
+**Published and verified:** runtime source `e77bffd`, Worker `715eb80f-36f3-48e1-854f-38edb54256c8`. CI passed; 20 focused tests, four responsive widths, five live variants, 11 linked destinations and eight protected pages checked. All 185 routes retained. IndexNow accepted the changed canonical; GSC annotation saved. See `deployment/centre-search-repair/RELEASE-20261004.md`. This action is complete; select subsequent work through the ranked queue.
 
 ## Delivered Ask-only work · answer experience · 3 October 2026
 
