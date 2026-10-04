@@ -19,8 +19,16 @@ const state=await snapshot();assert.deepEqual(state.portal.versions,[{version_id
 const save=(name,data)=>fs.writeFile(path.join(output,name),JSON.stringify(data,null,2)+'\n');
 if(mode==='upload'){
  assert.deepEqual(state.deployment.versions,[{version_id:baseline,percentage:100}],'Centre worker changed; reconcile');assert.deepEqual(state.settings.bindings,[]);
- const live=await(await raw(base+'/content/v2')).formData();const parts=[...live].filter(([,v])=>typeof v!=='string');assert.equal(parts.length,1);
- assert.equal(sha(Buffer.from(await parts[0][1].arrayBuffer())),sha(await fs.readFile(path.join(here,'legacy-v11.mjs'))),'Legacy baseline differs');
+ // content/v2 returns the latest uploaded source, even before activation.
+ // Reconcile our recorded inactive upload rather than mistaking it for live code.
+ const live=await(await raw(base+'/content/v2')).formData();const parts=[...live].filter(([,v])=>typeof v!=='string');
+ if(parts.length===1){
+  assert.equal(sha(Buffer.from(await parts[0][1].arrayBuffer())),sha(await fs.readFile(path.join(here,'legacy-v11.mjs'))),'Legacy baseline differs');
+ }else{
+  const prior=JSON.parse(await fs.readFile(path.join(output,'release-upload.json'),'utf8'));assert.equal(parts.length,prior.modules.length);
+  for(const [key,value]of parts){const recorded=prior.modules.find(m=>m.name===(value.name||key));assert(recorded,'Unexpected uploaded module');assert.equal(sha(Buffer.from(await value.arrayBuffer())),recorded.sha256,'Unrecorded source upload');}
+  assert.equal(prior.modules.find(m=>m.name==='legacy-v11.mjs')?.sha256,sha(await fs.readFile(path.join(here,'legacy-v11.mjs'))),'Legacy baseline differs');
+ }
  const modules=await Promise.all(['entry.mjs','legacy-v11.mjs','kukatpally.mjs'].map(async name=>({name,bytes:await fs.readFile(path.join(here,name))})));
  const metadata={main_module:'entry.mjs',compatibility_date:state.settings.compatibility_date,compatibility_flags:state.settings.compatibility_flags||[],bindings:[],annotations:{'workers/message':'Kukatpally: parent goals, clear enquiry, directions and source links; exact legacy worker retained'}};
  for(const key of ['placement','tail_consumers','logpush'])if(state.settings[key]!==undefined)metadata[key]=state.settings[key];
