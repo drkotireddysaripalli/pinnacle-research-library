@@ -1,0 +1,108 @@
+{
+  "item_id": "COMMERCE-CONTEXT-LINKS",
+  "action_id": "f2887fd0-a86b-4a54-a9bd-6c834a3b2356",
+  "outcome": "deployed",
+  "verified": true,
+  "completed_at": "2026-10-04T17:41:26.242578+00:00",
+  "summary": "Published source-built Speech and Occupational Therapy reading blocks with original branded covers, free samples and English/Hindi/Telugu choices. Code pushed; 310 tests, exact-source CI, live browser/request/crawler checks passed. All 194 routes, current assets/bindings and 14 protected responses preserved. IndexNow accepted both changed URLs; GSC annotation saved. No new backlink, ranking, sale or qualified-call gain claimed.",
+  "commit": "b7162830ac6206f7b33695f03ecd347f9a6b74da",
+  "deployment": "d334d820-ac6e-45c6-90e3-70db6519c9b3",
+  "deployment_id": "496dd217-301f-4339-acff-43833a3aa2d4",
+  "public_url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#speech-family-reading",
+  "public_urls": [
+    "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#speech-family-reading",
+    "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate#occupational-family-reading"
+  ],
+  "rollback": [
+    {
+      "version_id": "78b37416-df98-43e4-aac6-d7d11ee573a8",
+      "percentage": 100
+    }
+  ],
+  "proof": {
+    "runtime_modules_verified": 16,
+    "routes_retained": 194,
+    "main_bindings_retained": 4,
+    "other_worker_versions_unchanged": true,
+    "original_html_outside_insert_unchanged": true,
+    "tests": 310,
+    "typecheck_errors": 0,
+    "ci": {
+      "id": 37221126055,
+      "sha": "b7162830ac6206f7b33695f03ecd347f9a6b74da",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37221126055"
+    },
+    "public_checks": 13,
+    "protected_responses": 14,
+    "live_browser_checks": 10,
+    "browser_scope": "Chromium 320/390/768/1440 and WebKit 390; browser emulation, not physical devices",
+    "six_editions_and_six_sample_pdfs": "book-source-checks.json",
+    "image_optimisation": [
+      {
+        "url": "https://www.pinnacleblooms.org/cdn-cgi/image/width=400,quality=85,format=auto,onerror=redirect/pinnacle-pages-assets/books-20261002/speech-101-front-cover.png",
+        "status": 200,
+        "bytes": 45820,
+        "type": "image/webp"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/cdn-cgi/image/width=800,quality=85,format=auto,onerror=redirect/pinnacle-pages-assets/books-20261002/speech-101-front-cover.png",
+        "status": 200,
+        "bytes": 136224,
+        "type": "image/webp"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/cdn-cgi/image/width=400,quality=85,format=auto,onerror=redirect/pinnacle-pages-assets/books-20261002/ot-101-front-cover.png",
+        "status": 200,
+        "bytes": 50660,
+        "type": "image/webp"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/cdn-cgi/image/width=800,quality=85,format=auto,onerror=redirect/pinnacle-pages-assets/books-20261002/ot-101-front-cover.png",
+        "status": 200,
+        "bytes": 161398,
+        "type": "image/webp"
+      }
+    ],
+    "bounded_screaming_frog": "crawl/20261004-230859: both 200, indexable, self-canonical",
+    "indexnow": {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "7884b0f3-eef0-4a3b-84d7-214aee37913b",
+      "submitted": 2,
+      "failed": 0,
+      "attempted": 2,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "2 of 2 URL(s) sent were accepted by IndexNow."
+    },
+    "gsc_annotation": "d788e532-04d8-49ea-a63b-e315bf6b290a",
+    "evidence_directory": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\therapy-books-20261004",
+    "ahrefs_units": 0,
+    "new_outreach_sent": 0,
+    "new_paid_tools": 0
+  },
+  "next_condition": "Let settled data accumulate; later Ask book context requires inspecting its actual existing backend links. Do not resubmit unchanged URLs or recrawl this addition hourly."
+}

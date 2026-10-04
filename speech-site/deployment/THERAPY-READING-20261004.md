@@ -29,3 +29,7 @@ Release baseline: main version `78b37416-df98-43e4-aac6-d7d11ee573a8`; 194 route
 - After release, verify two pages and reading aids, request variants, 14 protected destinations and all routes/bindings. Run a bounded two-URL crawler check, then one changed-URL IndexNow submission and one GSC annotation. Attach results to the release receipt.
 
 No catalogue, stock, price, publishing, payment, Ask/authentication, common header/footer or claim changes. No purchase or customer enquiry test. Deployment does not establish indexing, ranking, sales, AI citation or qualified-enquiry improvement.
+
+## Delivered receipt
+
+Published 4 October 2026 from `b7162830ac6206f7b33695f03ecd347f9a6b74da`; main Worker `d334d820-ac6e-45c6-90e3-70db6519c9b3`. Exact-source CI successful. Ten live browser checks, 13 response/reading-aid checks and 14 unchanged protected responses passed. All 194 routes and four bindings retained, all 16 deployed modules match intended bytes. Screaming Frog returned both URLs as 200/indexable/self-canonical. IndexNow accepted both with key validation; GSC annotation `d788e532-04d8-49ea-a63b-e315bf6b290a`. Full proof is in `therapy-reading-release-receipt-20261004.json`.
