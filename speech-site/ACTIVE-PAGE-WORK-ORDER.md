@@ -1,6 +1,6 @@
-# Current bounded publication — First Conversation — 4 October 2026
+# Delivered bounded publication — First Conversation — 4 October 2026
 
-Publish the supplied original free one-page planning resource and useful HTML companion. Exact contract and preservation boundary: `RELEASE-FIRST-CONVERSATION-20261004.md`. No common-shell redesign, Ask/auth change, paid catalogue mutation or outreach. The source is ready; production receipt follows release. PinnacleAI scholarly/Figma work remains held for the owner diagram. Completed work below is historical.
+Publish the supplied original free one-page planning resource and useful HTML companion. Exact contract and preservation boundary: `RELEASE-FIRST-CONVERSATION-20261004.md`. No common-shell redesign, Ask/auth change, paid catalogue mutation or outreach. Published and verified: source `c04265f`, Worker `688e7809-d9e9-4506-a916-b69c03dc166e`; exact original PDF bytes match. See `RELEASE-FIRST-CONVERSATION-RECEIPT-20261004.md`. This publication is complete; subsequent work follows the existing ranked growth queue. PinnacleAI scholarly/Figma work remains held for the owner diagram. Completed work below is historical.
 
 ## Delivered bounded regional improvement — Kukatpally — 4 October 2026
 
