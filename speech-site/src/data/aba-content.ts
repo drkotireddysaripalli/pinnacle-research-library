@@ -20,26 +20,25 @@ export const abaContent: ServiceContent = {
     '/verify/evidence/centre-entity-reference.html'
   ].map(url).concat([
     'https://www.nice.org.uk/guidance/cg170/chapter/recommendations',
-    'https://www.aap.org/en/patient-care/autism/considerations-for-prescribing-recommending-common-supports-and-services-for-children-on-the-autism-spectrum/',
+    'https://www.cdc.gov/autism/treatment/index.html',
     'https://www.who.int/news-room/fact-sheets/detail/rehabilitation',
-    'https://www.bacb.com/about-behavior-analysis/'
   ]),
   image:{source:everydayLife,alt:'An Indian child chooses a play activity while his mother and a behavioural-support professional in a full-sleeve white Pinnacle coat listen.',caption:'Begin with the child’s communication and choices.'},
   hero:{
     heading:'Understand what is happening.',
     emphasis:'Help your child take part.',
     lead:'A busy transition. A request for a break. A moment in play or class.',
-    copy:'We ask what your child may need, agree a useful goal with you and review whether support helps in everyday life.',
+    copy:'Your child’s self-sufficient, mainstream-included life gives our work its direction. At Pinnacle, we connect behavioural support, communication, everyday practice and review around the abilities your child needs to take part.',
     moments:[{icon:'voice',label:'Be heard'},{icon:'home',label:'Make choices'},{icon:'people',label:'Take part'}]
   },
   pathway:{stages:[
-    ['measure','Understand the starting picture','A professional begins with the child’s communication, abilities, context and family observations. AbilityScore® may support the picture when used.'],
-    ['compass','Choose a meaningful direction','Together, choose a goal linked to communication, comfort, safety or participation. Readiness views may inform the discussion when relevant.'],
-    ['people','Connect suitable people and support','If behavioural support fits, the professional explains the goal, approach and any roles for other disciplines.'],
-    ['home','Practise in everyday settings','Try a manageable communication or routine support where it matters, with family and school involvement when appropriate.'],
-    ['track','Observe and adjust','Ask what the child communicates, how comfortable participation feels and what support still helps; change the plan if needed.'],
-    ['loop','Reassess and repeat','Review the child’s needs and agreed goals again as everyday life changes.'],
-    ['sun','Grow participation in life','Keep growing self-sufficiency, school readiness and mainstream participation as the direction of support—not a guaranteed result.']
+    ['measure','Understand the starting picture','Notice the child’s choices, communication and context. In our example, pointing already works for choosing blocks; a noisy transition is harder. AbilityScore® may contribute to the professional’s starting picture.'],
+    ['compass','Choose the next useful ability','Can the child request a pause in a manageable setting? Readiness and progress forecasts can inform that question. The professional and family agree the goal, suitable support and review point.'],
+    ['people','Connect the right support','The behavioural professional examines the transition; speech support may help establish an accessible request, and occupational therapy may consider the activity or environment. The child’s needs determine the combination.'],
+    ['home','Practise where life happens','Use the agreed communication support in a familiar routine. Parents and, with consent, teachers know how to recognise the request, respond and offer a manageable next choice.'],
+    ['track','Compare what actually happened','Was the pause requested with a cue or independently? Did the same support help at home and during group play? Track the setting, the child’s response and the adult help alongside the outcome.'],
+    ['loop','Change the plan and reassess','If a request works only with an adult cue, keep that help visible in the record. Adjust the next step, check comfort and review again before increasing demands or reducing support.'],
+    ['sun','Keep the whole life in view','Being heard, making choices and joining everyday life are steps toward growing self-sufficiency and mainstream participation. The direction stays clear; the route and pace remain individual.']
   ],image:communicationJourney,alt:'A child communicates a need for a pause while his mother and a white-coated professional respond, then chooses a play activity with a peer.',caption:'An illustrative process: the child communicates a choice, adults respond and the team reviews participation.'},
   concerns:[
     {icon:'voice',title:'Communicating needs',copy:'Asking for help, saying no, requesting a break or showing discomfort may need a communication method the child can use and others can respect.'},

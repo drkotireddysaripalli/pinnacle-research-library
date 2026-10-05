@@ -182,6 +182,15 @@ for(const id of choices){
       await evaluate("document.querySelector('#pinnacleai-journey').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('everyday-stages');
       await check('Everyday Therapy FAQ disclosure works',async()=>{await click('.everyday-faq summary');return evaluate("return document.querySelector('.everyday-faq details').open && document.querySelectorAll('.everyday-faq details').length===8");});
     }
+    if(target.pathname==='/best-aba-therapy-center-india-proven-improvement-rate'){
+      await check('ABA example, review choices and seven stages remain readable',async()=>{
+        row.abaGeometry=await evaluate("const cards=[...document.querySelectorAll('.aba-cycle li,.aba-stage-grid li,.aba-review-branches article')];return {steps:document.querySelectorAll('.aba-cycle li').length,stages:document.querySelectorAll('.aba-stage-grid li').length,reviews:document.querySelectorAll('.aba-review-branches article').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.abaGeometry;return r.steps===4&&r.stages===7&&r.reviews===2&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#everyday-example').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('aba-example');
+      await evaluate("document.querySelector('.aba-next-decision').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('aba-review');
+      await check('ABA FAQ disclosure works',async()=>{await click('#questions summary');return evaluate("return document.querySelector('#questions details').open && document.querySelectorAll('#questions details').length===11");});
+    }
     if(target.pathname==='/therapeuticai'){
       await check('TherapeuticAI observations, architecture and seven stages are readable',async()=>{
         row.therapeuticaiGeometry=await evaluate("const cards=[...document.querySelectorAll('.therapeuticai-observations li,.therapeuticai-architecture li,.therapeuticai-stages li,.therapeuticai-review-branches article')];return {records:document.querySelectorAll('.therapeuticai-observations li').length,stages:document.querySelectorAll('.therapeuticai-stages li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");

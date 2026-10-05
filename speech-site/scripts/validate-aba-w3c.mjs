@@ -9,7 +9,7 @@ assert.equal(response.status,200);
 const messages=(await response.json()).messages||[];
 const errors=messages.filter(message=>message.type==='error');
 const report={checkedAt:new Date().toISOString(),mode,canonical,status:response.status,errorCount:errors.length,warningCount:messages.length-errors.length,messages};
-const output=`deployment/aba-w3c-${mode}-20260930.json`;
+const output=`deployment/aba-w3c-${mode}-20261005.json`;
 await writeFile(output,JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({output,errorCount:report.errorCount,warningCount:report.warningCount,messages:errors},null,2));
 assert.equal(errors.length,0,'W3C Nu reported HTML errors');

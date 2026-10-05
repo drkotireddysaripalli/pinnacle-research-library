@@ -18,4 +18,4 @@ export const pageContracts = {
   ,policies:{path:'/policies',canonical:'/policies',static:'scripts/validate-current-policies.mjs'}
 };
 // CI follows the page currently in acceptance; change this only when the next page candidate is ready.
-export const activeQualityPage='therapeuticai';
+export const activeQualityPage='aba';
