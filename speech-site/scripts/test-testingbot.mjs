@@ -201,6 +201,16 @@ for(const id of choices){
       await evaluate("document.querySelector('#architecture').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('therapeuticai-architecture');
       await check('TherapeuticAI FAQ disclosure works',async()=>{await click('.therapeuticai-faq summary');return evaluate("return document.querySelector('.therapeuticai-faq details').open && document.querySelectorAll('.therapeuticai-faq details').length===8");});
     }
+    if(target.pathname==='/about-pinnacle-proven-improvement-rate'){
+      await check('About family observation, decisions and stages are readable',async()=>{
+        row.aboutGeometry=await evaluate("const cards=[...document.querySelectorAll('.about-observations>li,.about-stages>li,.about-review-branches article')];return {steps:document.querySelectorAll('.about-observations>li').length,stages:document.querySelectorAll('.about-stages>li').length,decisions:document.querySelectorAll('.about-review-branches article').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.aboutGeometry;return r.steps===5&&r.stages===7&&r.decisions===3&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#family-journey').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('about-journey');
+      await evaluate("document.querySelector('.about-review').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('about-review');
+      await evaluate("document.querySelector('.about-stages').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('about-stages');
+      await check('About FAQ disclosure works',async()=>{await click('#questions summary');return evaluate("return document.querySelector('#questions details').open && document.querySelectorAll('#questions details').length===8");});
+    }
     if(target.pathname==='/best-special-education-center-call-9100181181'){
       await check('Special Education learning decision and stages are readable',async()=>{
         row.specialGeometry=await evaluate("const cards=[...document.querySelectorAll('.special-cycle>li,.special-stage-grid>li,.special-review-branches article')];return {steps:document.querySelectorAll('.special-cycle>li').length,stages:document.querySelectorAll('.special-stage-grid>li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");

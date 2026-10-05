@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {serveSpeech,PUBLIC_DOCUMENT_ROUTES,isRetiredLeadershipPath} from '../deployment/speech-handler.mjs';
+import {aboutAsset,aboutHash} from '../deployment/about-assets.mjs';
 const origin='https://www.pinnacleblooms.org';
 for(const[path,id]of Object.entries(PUBLIC_DOCUMENT_ROUTES)){
  const md=id+(['self-sufficient','mainstream','about','leadership','framework'].includes(id)?'-machine.md':'-policy.md');
@@ -11,16 +12,16 @@ for(const[path,id]of Object.entries(PUBLIC_DOCUMENT_ROUTES)){
   for(const headers of [{},{cookie:'_gcl_au=fixture; __Host-appgarden-visitor=fixture; _ga=fixture'},{cookie:'session=fixture; unknown=fixture'},{cookie:'CF_Authorization=fixture'},{authorization:'Bearer fixture'},{range:'bytes=0-1'},{'cache-control':'no-transform'}]){
    for(const[method,accept,expected]of [['GET','text/html','public'],['GET','text/markdown','# reading'],['HEAD','text/html','']]){
     const r=await serveSpeech(new Request(origin+path,{method,headers:{...headers,accept}}),env,inv);
-    assert.equal(r.status,200);assert.equal(await r.text(),expected);assert.equal(r.headers.get('vary'),'Accept');
-    for(const header of ['cookie','authorization','range'])assert.equal(assetRequest.headers.has(header),false);
+    assert.equal(r.status,200);assert.equal(await r.text(),id==='about'&&method!=='HEAD'?await aboutAsset('/pinnacle-pages-'+(accept==='text/markdown'?'data/about-machine.md':'html/about.html'),'GET').text():expected);assert.equal(r.headers.get('vary'),'Accept');
+    if(id!=='about')for(const header of ['cookie','authorization','range'])assert.equal(assetRequest.headers.has(header),false);else assert.equal(assetRequest,undefined,'Compiled About must not fall back to an old asset');
     assert(r.headers.get('cache-control').includes(headers.cookie||headers.authorization?'private, no-store':'public, max-age=0, must-revalidate'));
    }
    const alias=await serveSpeech(new Request(origin+path+'/?x=one',{headers}),env,inv);assert.equal(alias.status,301);assert.equal(alias.headers.get('location'),origin+path+'?x=one');if(headers.cookie||headers.authorization)assert.equal(alias.headers.get('cache-control'),'private, no-store');
   }
  });
  test(id+': credentials never304; adjacent private/application paths preserve origin',async()=>{
-  for(const headers of [{cookie:'session=fixture'},{authorization:'fixture'}])assert.equal((await serveSpeech(new Request(origin+path,{headers:{...headers,'if-none-match':'"speech-public"'}}),env,inv)).status,200);
-  assert.equal((await serveSpeech(new Request(origin+path,{headers:{'if-none-match':'"speech-public"'}}),env,inv)).status,304);
+  for(const headers of [{cookie:'session=fixture'},{authorization:'fixture'}])assert.equal((await serveSpeech(new Request(origin+path,{headers:{...headers,'if-none-match':id==='about'?'"speech-'+aboutHash('/pinnacle-pages-html/about.html')+'"':'"speech-public"'}}),env,inv)).status,200);
+  assert.equal((await serveSpeech(new Request(origin+path,{headers:{'if-none-match':id==='about'?'"speech-'+aboutHash('/pinnacle-pages-html/about.html')+'"':'"speech-public"'}}),env,inv)).status,304);
   for(const headers of [{},{cookie:'session=fixture'},{authorization:'fixture'},{range:'bytes=0-1'}])assert.equal(await serveSpeech(new Request(origin+path+'/private',{headers}),env,inv),null);
   assert.equal(await serveSpeech(new Request(origin+path,{method:'POST'}),env,inv),null);
  });
