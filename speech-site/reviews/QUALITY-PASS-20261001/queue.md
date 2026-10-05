@@ -1,6 +1,6 @@
 # Produced-page quality pass — ascending baseline score
 
-133 pages. Current page: aba-therapy. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
+133 pages. Current page: fusion-module. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
 
 | Order | Page | Baseline /100 | Reviewed /100 | Pass state |
 |---:|---|---:|---:|---|
@@ -37,7 +37,7 @@
 | 31 | [Srikakulam Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india) | 70 | — | deferred-after-individuals |
 | 32 | [TherapeuticAI](https://www.pinnacleblooms.org/therapeuticai) | 70 | 82 | completed |
 | 33 | [Voice of the Unheard](https://www.pinnacleblooms.org/verify/evidence/publications/voice-of-the-unheard.html) | 70 | — | review-pending |
-| 34 | [ABA Therapy](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate) | 71 | — | review-pending |
+| 34 | [ABA Therapy](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate) | 71 | 82 | completed |
 | 35 | [Fusion Module](https://www.pinnacleblooms.org/fusion-module) | 71 | — | review-pending |
 | 36 | [Special Education](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181) | 71 | — | review-pending |
 | 37 | [You wanted the car. Not a box of parts.](https://www.pinnacleblooms.org/verify/evidence/paradigm/01-life-in-view.html) | 71 | — | review-pending |

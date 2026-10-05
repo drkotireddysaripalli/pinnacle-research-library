@@ -1,0 +1,2340 @@
+{
+  "item_id": "PAGE-ABA",
+  "action_id": "6cfd55f0-9474-4df4-bd87-f7516a91c511",
+  "outcome": "deployed",
+  "verified": true,
+  "at": "2026-10-05T05:50:11.009781+00:00",
+  "summary": "ABA Therapy released with concrete child/adult observations and a chosen next support step, seven linked stages, visit expectations and compact searchable centres. Approved creative retained; FAQ/schema/source/Markdown aligned, contrast and link distinction repaired. Pushed CI, physical iPhone/Safari and public checks passed;194 routes/four bindings and18 protected pages preserved. One IndexNow URL accepted.",
+  "commit": "07e189f92f844fb009eb84043be8e68b5f534c93",
+  "deployment": {
+    "at": "2026-10-05T05:45:52.229Z",
+    "commit": "07e189f92f844fb009eb84043be8e68b5f534c93",
+    "version": "4157f024-aedd-496c-a842-8679501f285e",
+    "deployment": "d7d17b07-c4b3-49d1-815f-3d565ff76fe0",
+    "rollback": [
+      {
+        "version_id": "5f75b349-827f-4fad-8a56-472c03a2da10",
+        "percentage": 100
+      }
+    ]
+  },
+  "public_url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+  "proof": {
+    "ci": {
+      "at": "2026-10-05T05:45:38.975Z",
+      "commit": "07e189f92f844fb009eb84043be8e68b5f534c93",
+      "runs": [
+        {
+          "id": 37268899052,
+          "name": "Portal quality",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37268899052"
+        }
+      ]
+    },
+    "candidate": {
+      "buildPages": 135,
+      "astroFiles": 138,
+      "typeErrors": 0,
+      "unitTests": 395,
+      "viewports": [
+        320,
+        390,
+        768,
+        1024,
+        1440
+      ],
+      "w3c": {
+        "checkedAt": "2026-10-05T05:39:43.855Z",
+        "mode": "local",
+        "canonical": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+        "status": 200,
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      },
+      "localBrowserChecks": "18 passed initially, 2 page checks repaired and passed;10 unrelated book-language/shop checks skipped",
+      "visualScreenshotsInspected": true,
+      "independentReview": "final-review.md",
+      "preReleaseScore": 80,
+      "operationalScoreAfterRelease": 82,
+      "scoreScope": "Work-order judgement, not a search/clinical rating. Missing real-family comprehension, ABA-specific staffing/fees, receiving-team acceptance and commercial results remain unearned.",
+      "images": "Existing four approved branded creatives reused; no new generation or API inference."
+    },
+    "public": {
+      "at": "2026-10-05T05:45:58.338Z",
+      "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+      "requests": [
+        {
+          "name": "normal",
+          "status": 200,
+          "sha256": "e190461d9df33999367bac0a666f0ad2aca0e3e64cbb0c0b6a61a868ffebe743",
+          "cache": "public, max-age=0, must-revalidate",
+          "etag": null
+        },
+        {
+          "name": "cookie",
+          "status": 200,
+          "sha256": "e190461d9df33999367bac0a666f0ad2aca0e3e64cbb0c0b6a61a868ffebe743",
+          "cache": "private, no-store",
+          "etag": null
+        },
+        {
+          "name": "range",
+          "status": 200,
+          "sha256": "e190461d9df33999367bac0a666f0ad2aca0e3e64cbb0c0b6a61a868ffebe743",
+          "cache": "public, max-age=0, must-revalidate",
+          "etag": null
+        },
+        {
+          "name": "crawler",
+          "status": 200,
+          "sha256": "e190461d9df33999367bac0a666f0ad2aca0e3e64cbb0c0b6a61a868ffebe743",
+          "cache": "public, max-age=0, must-revalidate",
+          "etag": null
+        }
+      ],
+      "assets": [
+        {
+          "key": "/pinnacle-pages-assets/aba-social-life-first-20260930.CiDgNFtF_ZSPTAF.jpg",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/aba-hero-life-first-20260930.HwrileLS_oMCb0.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/aba-hero-life-first-20260930.HwrileLS_Z1FFPKP.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/aba-hero-life-first-20260930.HwrileLS_YMpvQ.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/aba-hero-life-first-20260930.HwrileLS_Z27lbJC.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/pinnacle-emblem-official.EFFb0QmR_1CYFQi.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/aba-transition-choice-20260930.bQJhqvR0_Z1KcI82.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/aba-transition-choice-20260930.bQJhqvR0_Z1bA5FM.webp",
+          "status": 200,
+          "unchangedBytes": true
+        }
+      ],
+      "links": [
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/evidence/cite.html",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/evidence/cite.html"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/evidence/bis.pdf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/evidence/bis.pdf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/everyday-therapy",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/everyday-therapy"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/prognose",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/prognose"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/abilityscore",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/abilityscore"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/autism-therapy",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/autism-therapy"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/fusion-module",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/fusion-module"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/reassess-review-repeat",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/reassess-review-repeat"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/self-sufficient",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/self-sufficient"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacleai",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacleai"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mainstream",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/mainstream"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/evidence/paradigm/06-feedback-that-shapes-care.html",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/evidence/paradigm/06-feedback-that-shapes-care.html"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/evidence/research-library.html"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/aba-therapy-evidence.txt",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/aba-therapy-evidence.txt"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/aba-therapy-evidence.json",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/aba-therapy-evidence.json"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/national-autism-helpline"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=suchitra",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=suchitra"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/suchitra-interior-5-1.CaSF1Oww_9YgKE.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/suchitra-interior-5-1.CaSF1Oww_9YgKE.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/suchitra-interior-5-2.Dg1Ip0j5_1ra0Jo.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/suchitra-interior-5-2.Dg1Ip0j5_1ra0Jo.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gurunanak-interior-1-0.jV91fYp4_Z1dpQuv.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gurunanak-interior-1-0.jV91fYp4_Z1dpQuv.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/suchitra.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/suchitra.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/contact-national-autism-helpline-24-7",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/contact-national-autism-helpline-24-7"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gurunanak-interior-1-1.D2K8ZlP7_jMNA8.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gurunanak-interior-1-1.D2K8ZlP7_jMNA8.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/gurunanak.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/gurunanak.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=gurunanak",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=gurunanak"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=jayanagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=jayanagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=annanagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=annanagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/jayanagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/jayanagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/annanagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/annanagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/delhi-interior-8-2.DoYd4kyT_Z2bg4F8.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/delhi-interior-8-2.DoYd4kyT_Z2bg4F8.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=delhi",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=delhi"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=warangal",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=warangal"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/warangal-interior-0-1.CxP5DSBI_Z1iLWL1.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/warangal-interior-0-1.CxP5DSBI_Z1iLWL1.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/delhi.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/delhi.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=asraonagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=asraonagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/warangal.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/warangal.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ananthapuram-interior-47-0.DXY0cVpz_ZG4k4g.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ananthapuram-interior-47-0.DXY0cVpz_ZG4k4g.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/asraonagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/asraonagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ananthapuram-interior-47-1.DdSIFX9V_17ql7U.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ananthapuram-interior-47-1.DdSIFX9V_17ql7U.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ananthapuram-interior-47-2.DJajoIeB_1hGlcu.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ananthapuram-interior-47-2.DJajoIeB_1hGlcu.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/attapur-interior-46-0.Dw9ZjpHw_tq4V4.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/attapur-interior-46-0.Dw9ZjpHw_tq4V4.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/ananthapuram.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/ananthapuram.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=ananthapuram",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=ananthapuram"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/attapur-interior-46-2.Df2QGOqR_Z2c5a8Q.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/attapur-interior-46-2.Df2QGOqR_Z2c5a8Q.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=attapur",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=attapur"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/attapur.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/attapur.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/begumpet-interior-45-1.D-YcIH-M_2uprIc.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/begumpet-interior-45-1.D-YcIH-M_2uprIc.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=bnreddynagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=bnreddynagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/bnreddynagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/bnreddynagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=begumpet",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=begumpet"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/begumpet.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/begumpet.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/begumpet-interior-45-2.BtFUAQzK_1g2m79.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/begumpet-interior-45-2.BtFUAQzK_1g2m79.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/bhimavaram-interior-44-0.B_Y9GA3o_1jVtOF.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/bhimavaram-interior-44-0.B_Y9GA3o_1jVtOF.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=bhimavaram",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=bhimavaram"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/bhimavaram-interior-44-1.pyancqUI_Z2rOcnn.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/bhimavaram-interior-44-1.pyancqUI_Z2rOcnn.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/bhimavaram-interior-44-2.BqHb7Mwp_161aTn.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/bhimavaram-interior-44-2.BqHb7Mwp_161aTn.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/bhimavaram.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/bhimavaram.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/chandanagar-interior-43-2.DQAwFr7g_Z1TAzip.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/chandanagar-interior-43-2.DQAwFr7g_Z1TAzip.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=chandanagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=chandanagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/chandanagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/chandanagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/dilsukhnagar-interior-42-0.ZOVEzktI_ZPzypR.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/dilsukhnagar-interior-42-0.ZOVEzktI_ZPzypR.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/dilsukhnagar-interior-42-2.BemG1FXL_2wxWwg.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/dilsukhnagar-interior-42-2.BemG1FXL_2wxWwg.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=dilsukhnagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=dilsukhnagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/dilsukhnagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/dilsukhnagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/eastmarredpally-interior-41-2.t61Q_U9K_Z1DfE5B.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/eastmarredpally-interior-41-2.t61Q_U9K_Z1DfE5B.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=eastmarredpally",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=eastmarredpally"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/eastmarredpally.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/eastmarredpally.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/eluru-interior-40-1.Bh6m4_16_Z2rv35l.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/eluru-interior-40-1.Bh6m4_16_Z2rv35l.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/eluru-interior-40-2.C-odjHMl_Z1LHMmu.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/eluru-interior-40-2.C-odjHMl_Z1LHMmu.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=eluru",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=eluru"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/eluru.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/eluru.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gachibowli-interior-39-2.00hEkoRn_Z1p48mT.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gachibowli-interior-39-2.00hEkoRn_Z1p48mT.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gachibowli-interior-39-1.C9d8dWfR_ZqX2IB.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gachibowli-interior-39-1.C9d8dWfR_ZqX2IB.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=gachibowli",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=gachibowli"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gajuwaka-interior-38-0.DZZCmK0x_qLa3D.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gajuwaka-interior-38-0.DZZCmK0x_qLa3D.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gajuwaka-interior-38-2.B3hl6eS8_Z12j4Ls.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/gajuwaka-interior-38-2.B3hl6eS8_Z12j4Ls.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/gachibowli.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/gachibowli.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/gajuwaka.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/gajuwaka.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/guntur-interior-37-2.B7hTp82U_2fukhS.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/guntur-interior-37-2.B7hTp82U_2fukhS.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/guntur-interior-37-0.C5hlzycs_1b4XwO.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/guntur-interior-37-0.C5hlzycs_1b4XwO.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/guntur-interior-37-1.CbUZp3nX_ZgDpx3.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/guntur-interior-37-1.CbUZp3nX_ZgDpx3.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=guntur",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=guntur"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=habsiguda",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=habsiguda"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/guntur.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/guntur.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/habsiguda.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/habsiguda.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=hayathnagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=hayathnagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/hayathnagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/hayathnagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/himayatnagar-interior-36-2.S1mWoKSx_Wl7W7.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/himayatnagar-interior-36-2.S1mWoKSx_Wl7W7.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=himayatnagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=himayatnagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=madhapur",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=madhapur"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/himayatnagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/himayatnagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/madhapur.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/madhapur.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=hydernagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=hydernagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=indiranagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=indiranagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/hydernagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/hydernagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/jagadamba-interior-34-0.BOxQc5-M_wXq15.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/jagadamba-interior-34-0.BOxQc5-M_wXq15.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/indiranagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/indiranagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/jagadamba-interior-34-1.5jBhhqR9_2iRbnO.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/jagadamba-interior-34-1.5jBhhqR9_2iRbnO.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=jublieehills",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=jublieehills"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/jagadamba-interior-34-2.CfdIVNon_Z1FCUaG.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/jagadamba-interior-34-2.CfdIVNon_Z1FCUaG.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/jagadamba.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/jagadamba.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/jublieehills.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/jublieehills.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kachiguda",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kachiguda"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kachiguda.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kachiguda.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kadapa",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kadapa"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kadapa.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kadapa.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kakinada-interior-31-2.CPalCBsL_2apv5E.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kakinada-interior-31-2.CPalCBsL_2apv5E.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kakinada.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kakinada.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/karimnagar-interior-30-0.BVnAihT8_IjxaP.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/karimnagar-interior-30-0.BVnAihT8_IjxaP.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kakinada",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kakinada"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/karimnagar-interior-30-1.Dio_77EE_1D6gFE.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/karimnagar-interior-30-1.Dio_77EE_1D6gFE.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/karimnagar-interior-30-2.Mb5E_8bH_14u9De.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/karimnagar-interior-30-2.Mb5E_8bH_14u9De.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=karimnagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=karimnagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khajaguda-interior-29-1.BIVMNaSd_Zm7AXj.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khajaguda-interior-29-1.BIVMNaSd_Zm7AXj.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khajaguda-interior-29-2.Cg-mqMsz_Z1aiLUH.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khajaguda-interior-29-2.Cg-mqMsz_Z1aiLUH.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khajaguda-interior-29-0.D3K5txKM_Zqsjzp.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khajaguda-interior-29-0.D3K5txKM_Zqsjzp.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/karimnagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/karimnagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=khajaguda",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=khajaguda"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khammam-interior-28-1.CQq4f8oL_Z14Mudt.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khammam-interior-28-1.CQq4f8oL_Z14Mudt.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/khajaguda.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/khajaguda.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khammam-interior-28-2.BnMcPDon_Z1X0miN.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/khammam-interior-28-2.BnMcPDon_Z1X0miN.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=khammam",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=khammam"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/khammam.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/khammam.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kondapur.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kondapur.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kondapur",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kondapur"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kukatpally-interior-27-1.DsdlecyK_1RG8DJ.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kukatpally-interior-27-1.DsdlecyK_1RG8DJ.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kukatpally",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kukatpally"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kukatpally-interior-27-2.DEgtHF4T_1vBMFU.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kukatpally-interior-27-2.DEgtHF4T_1vBMFU.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kukatpally.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kukatpally.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kurnool-interior-26-1.BAjreHYk_Z1UApX.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kurnool-interior-26-1.BAjreHYk_Z1UApX.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kurnool-interior-26-2.CDxgeKFX_oc8Mr.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kurnool-interior-26-2.CDxgeKFX_oc8Mr.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kurnool",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=kurnool"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kurnool-interior-26-0.DC7yB7gB_1Yb9Mc.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/kurnool-interior-26-0.DC7yB7gB_1Yb9Mc.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/lbnagar-interior-24-1.DVoU36HB_2qdOgo.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/lbnagar-interior-24-1.DVoU36HB_2qdOgo.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kurnool.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/kurnool.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/lbnagar-interior-24-2.a2JVff5D_2nAm4C.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/lbnagar-interior-24-2.a2JVff5D_2nAm4C.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/lbnagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/lbnagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/labbipet-interior-25-0.CCd0L9Gf_Z52byc.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/labbipet-interior-25-0.CCd0L9Gf_Z52byc.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=lbnagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=lbnagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/labbipet-interior-25-1.D26_sdTz_Z29SxiF.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/labbipet-interior-25-1.D26_sdTz_Z29SxiF.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/labbipet-interior-25-2.DNVzCcm5_249FRv.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/labbipet-interior-25-2.DNVzCcm5_249FRv.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=labbipet",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=labbipet"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=mvp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=mvp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/labbipet.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/labbipet.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/mvp.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/mvp.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=madhurawada",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=madhurawada"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/mahbubnagar-interior-22-0.En615YzA_ZW6ChI.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/mahbubnagar-interior-22-0.En615YzA_ZW6ChI.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/madhurawada.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/madhurawada.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/mahbubnagar-interior-22-2.15cUmBAZ_Z1SYFFd.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/mahbubnagar-interior-22-2.15cUmBAZ_Z1SYFFd.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/mahbubnagar-interior-22-1.Ym7aQDG4_2lCe3p.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/mahbubnagar-interior-22-1.Ym7aQDG4_2lCe3p.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=mahbubnagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=mahbubnagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/mahbubnagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/mahbubnagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/marathahalli-interior-21-1.CCYzShhG_ZN91VB.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/marathahalli-interior-21-1.CCYzShhG_ZN91VB.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=marathahalli",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=marathahalli"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/marathahalli-interior-21-0.2RjZWhbJ_13IXFR.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/marathahalli-interior-21-0.2RjZWhbJ_13IXFR.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/marathahalli.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/marathahalli.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/miryalaguda-interior-20-0.BvoU-cBT_Z1t1a1V.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/miryalaguda-interior-20-0.BvoU-cBT_Z1t1a1V.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/miryalaguda-interior-20-2.DM3jsZGt_ZGl8gQ.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/miryalaguda-interior-20-2.DM3jsZGt_ZGl8gQ.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=miryalaguda",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=miryalaguda"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nad-interior-19-0.B9n4ov-6_Z1jAEPh.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nad-interior-19-0.B9n4ov-6_Z1jAEPh.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/miryalaguda.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/miryalaguda.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nad",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nad"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nad.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nad.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nad-interior-19-1.CuTZg-Rk_lIjz2.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nad-interior-19-1.CuTZg-Rk_lIjz2.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nallagandla",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nallagandla"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nallagandla-interior-18-1.BuF6wbrX_Z2p8rnR.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nallagandla-interior-18-1.BuF6wbrX_Z2p8rnR.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nallagandla.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nallagandla.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nandyala-interior-17-1.CWQQs4GU_fPUqw.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nandyala-interior-17-1.CWQQs4GU_fPUqw.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nandyala-interior-17-2.Djdo7RJd_1bBn6E.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nandyala-interior-17-2.Djdo7RJd_1bBn6E.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nandyala",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nandyala"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nellore",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nellore"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nellore.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nellore.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nandyala.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nandyala.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nizamabad",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nizamabad"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nizamabad.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nizamabad.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nizampet-interior-14-0.D0_7y9lV_1eyNBb.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/nizampet-interior-14-0.D0_7y9lV_1eyNBb.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ongole-interior-13-0.Ct_EzAfz_iI68b.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ongole-interior-13-0.Ct_EzAfz_iI68b.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nizampet",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=nizampet"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nizampet.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/nizampet.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=ongole",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=ongole"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ongole-interior-13-2.DRanNwhz_ZeFmIG.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/ongole-interior-13-2.DRanNwhz_ZeFmIG.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/ongole.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/ongole.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pragathinagar-interior-12-0.BjF-w9Rz_2d1ftl.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pragathinagar-interior-12-0.BjF-w9Rz_2d1ftl.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pragathinagar-interior-12-1.Bdv8WR8d_ZmvLSU.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pragathinagar-interior-12-1.Bdv8WR8d_ZmvLSU.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pragathinagar-interior-12-2.DL20zEzY_ZnMoMb.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/pragathinagar-interior-12-2.DL20zEzY_ZnMoMb.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=pragathinagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=pragathinagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/pragathinagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/pragathinagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/rajahmundry-interior-11-2.D3FR6-e9_8FKib.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/rajahmundry-interior-11-2.D3FR6-e9_8FKib.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/rajahmundry-interior-11-1.CYCBj7if_ZCXvbr.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/rajahmundry-interior-11-1.CYCBj7if_ZCXvbr.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/rajahmundry.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/rajahmundry.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=rajahmundry",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=rajahmundry"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/srnagar-interior-6-2.DyyGTNzr_2h2VL.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/srnagar-interior-6-2.DyyGTNzr_2h2VL.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/santoshnagar-interior-10-0.NcTU1sgm_ZJvs36.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/santoshnagar-interior-10-0.NcTU1sgm_ZJvs36.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/srnagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/srnagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=srnagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=srnagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/santoshnagar-interior-10-1.CPxmQgLm_112zb7.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/santoshnagar-interior-10-1.CPxmQgLm_112zb7.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/santoshnagar-interior-10-2.LVkofM32_2svg0y.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/santoshnagar-interior-10-2.LVkofM32_2svg0y.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=santoshnagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=santoshnagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/srikakulam-interior-7-1.CHt1rBIu_1f8VjG.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/srikakulam-interior-7-1.CHt1rBIu_1f8VjG.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/santoshnagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/santoshnagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/srikakulam-interior-7-0.DWJoJZhH_Z18zojc.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/srikakulam-interior-7-0.DWJoJZhH_Z18zojc.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/srikakulam-interior-7-2.B9JWbnip_Z1U2ado.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/srikakulam-interior-7-2.B9JWbnip_Z1U2ado.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=srikakulam",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=srikakulam"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/srikakulam.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/srikakulam.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=suchitraii",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=suchitraii"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/tirupati-interior-4-1.q-JHXmAC_5RH6F.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/tirupati-interior-4-1.q-JHXmAC_5RH6F.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/tirupati-interior-4-2.fh80yzZV_ZhEAx5.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/tirupati-interior-4-2.fh80yzZV_ZhEAx5.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/suchitraii.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/suchitraii.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=tirupati",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=tirupati"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/tirupati.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/tirupati.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/usa.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/usa.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/uppal-interior-3-0.B6ljYm46_GWfIb.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/uppal-interior-3-0.B6ljYm46_GWfIb.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=uppal",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=uppal"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/uppal-interior-3-2.CR_SvN-G_oSKfe.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/uppal-interior-3-2.CR_SvN-G_oSKfe.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/uppal-interior-3-1.Crksy8qO_juIhj.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/uppal-interior-3-1.Crksy8qO_juIhj.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/uppal.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/uppal.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=vanasthalipuram",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=vanasthalipuram"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/vidyanagar-interior-2-0.9Z8FVT6z_lNnva.webp",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-assets/vidyanagar-interior-2-0.9Z8FVT6z_lNnva.webp"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=vidyanagar",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=vidyanagar"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/vanasthalipuram.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/vanasthalipuram.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/vikrampuri.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/vikrampuri.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=vikrampuri",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=aba&centre=vikrampuri"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/vidyanagar.vcf",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-contacts/vidyanagar.vcf"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-directory.json",
+          "status": 200,
+          "final": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-directory.json"
+        }
+      ],
+      "protected": [
+        {
+          "path": "/verify/",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/verify/evidence/records/fsc.html",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/pinnacleai",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/therapeuticai",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/prognose",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/personal-development-kernel",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/seven-readiness-indexes",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/abilityscore",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/everyday-therapy",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/enroll-autism-speech-aba-therapies-india",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/national-autism-helpline",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/ask",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/shop",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/books/editions/te/ot-101",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/books/resources/first-conversation",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/seva",
+          "status": 200,
+          "unchanged": true
+        }
+      ],
+      "publicValidator": {
+        "etag": null,
+        "conditionalStatus": "not exposed by public response"
+      },
+      "metadata": {
+        "title": "ABA Therapy for Children in India | Pinnacle Blooms Network",
+        "description": "ABA and behavioural support for communication, choice and participation in everyday life. See how Pinnacle begins, find a centre and call 9100 181 181.",
+        "canonical": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/aba-social-life-first-20260930.CiDgNFtF_ZSPTAF.jpg?v=20260930-aba-life-first",
+        "h1": "ABA Therapy for children Understand what is happening.Help your child take part.",
+        "reviewBranches": 2,
+        "stages": 7,
+        "faqs": 11
+      },
+      "reusedAssetCount": 450,
+      "reuseVerification": "Local byte hashes equal the retained deployed inventory; representative bytes checked publicly below.",
+      "social": {
+        "status": 200,
+        "sha256": "9481cf3e1aa850309a8ea6881f43a9d876f981124eb24cbc07ae5de6b9955b06",
+        "width": 1200,
+        "height": 630,
+        "approvedPosterMatches": true
+      },
+      "passed": true,
+      "noCallsOrLeadsSent": true,
+      "indexingNotEstablished": true
+    },
+    "cloudflare": {
+      "routes": 194,
+      "bindings": 4,
+      "modules": 27,
+      "otherWorkersPreserved": true
+    },
+    "testingbot": [
+      {
+        "report": "audits/testingbot/2026-10-05T05-46-20-450Z/report.json",
+        "data": {
+          "startedAt": "2026-10-05T05:46:20.450Z",
+          "mode": "hosted-desktop",
+          "target": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+          "account": {
+            "plan": "Free Trial",
+            "seconds": 2350,
+            "maxDesktop": 1,
+            "maxPhysical": 1
+          },
+          "sessions": [
+            {
+              "kind": "hosted-desktop",
+              "device": {
+                "id": "safari",
+                "name": "Safari",
+                "platform": "TAHOE",
+                "version": "26"
+              },
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Requested desktop browser and CSS viewport",
+                  "passed": true
+                },
+                {
+                  "name": "Desktop navigation controls",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and main heading",
+                  "passed": true
+                },
+                {
+                  "name": "No horizontal page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Nine authority destinations with visible subtexts",
+                  "passed": true
+                },
+                {
+                  "name": "Call destination",
+                  "passed": true
+                },
+                {
+                  "name": "Navigation menu opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Authority rail reaches Citations",
+                  "passed": true
+                },
+                {
+                  "name": "ABA example, review choices and seven stages remain readable",
+                  "passed": true
+                },
+                {
+                  "name": "ABA FAQ disclosure works",
+                  "passed": true
+                },
+                {
+                  "name": "Verify footer cards and policy link",
+                  "passed": true
+                },
+                {
+                  "name": "Optional analytics decline control and cookies",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment destination opens without submitting",
+                  "passed": true
+                }
+              ],
+              "screenshots": [
+                "safari-header.png",
+                "safari-menu.png",
+                "safari-aba-example.png",
+                "safari-aba-review.png",
+                "safari-footer.png"
+              ],
+              "sessionId": "b80e7584cfd6-a93dbb7138ac-a6c2f0c9bdd7-179117925672-78628791",
+              "actualBrowser": {
+                "name": "Safari",
+                "version": "26.3.1",
+                "platform": "macOS"
+              },
+              "document": {
+                "height": 900,
+                "screen": {
+                  "width": 1920,
+                  "height": 1080
+                },
+                "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3.1 Safari/605.1.15",
+                "dpr": 1,
+                "title": "ABA Therapy for Children in India | Pinnacle Blooms Network",
+                "width": 1440,
+                "canonical": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+                "h1": "ABA Therapy for children\nUnderstand what is happening.\nHelp your child take part.",
+                "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate"
+              },
+              "abaGeometry": {
+                "stages": 7,
+                "steps": 4,
+                "reviews": 2,
+                "width": 1440,
+                "cards": [
+                  {
+                    "width": 308.75,
+                    "right": 381.75,
+                    "left": 73
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 705.5,
+                    "left": 396.75
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 1029.25,
+                    "left": 720.5
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 1353,
+                    "left": 1044.25
+                  },
+                  {
+                    "width": 595,
+                    "right": 703,
+                    "left": 108
+                  },
+                  {
+                    "width": 595,
+                    "right": 1322,
+                    "left": 727
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 381.75,
+                    "left": 73
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 705.5,
+                    "left": 396.75
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 1029.25,
+                    "left": 720.5
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 1353,
+                    "left": 1044.25
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 381.75,
+                    "left": 73
+                  },
+                  {
+                    "width": 308.75,
+                    "right": 705.5,
+                    "left": 396.75
+                  },
+                  {
+                    "width": 632.5,
+                    "right": 1353,
+                    "left": 720.5
+                  }
+                ]
+              },
+              "sessionClosed": true,
+              "resultRecorded": true,
+              "provider": {
+                "testId": 53379104,
+                "success": true,
+                "deviceName": null,
+                "durationSeconds": 29,
+                "assetsAvailable": false
+              }
+            }
+          ],
+          "noLeadSubmitted": true,
+          "noCallInitiated": true,
+          "runnerSha256": "af5bdf00a31545918b18b7cbc9524b6d4b9313d1ac205ee9eb7beb79c48eafcb",
+          "delivery": {
+            "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+            "htmlSha256": "e190461d9df33999367bac0a666f0ad2aca0e3e64cbb0c0b6a61a868ffebe743",
+            "etag": null,
+            "checkedAt": "2026-10-05T05:46:20.560Z"
+          },
+          "finishedAt": "2026-10-05T05:48:16.307Z",
+          "secondsRemaining": 2350,
+          "physicalSessionsStillRunning": 0,
+          "desktopSessionsStillRunning": 0
+        }
+      },
+      {
+        "report": "audits/testingbot/2026-10-05T05-46-20-456Z/report.json",
+        "data": {
+          "startedAt": "2026-10-05T05:46:20.456Z",
+          "mode": "physical-mobile",
+          "target": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+          "account": {
+            "plan": "Free Trial",
+            "seconds": 2350,
+            "maxDesktop": 1,
+            "maxPhysical": 1
+          },
+          "sessions": [
+            {
+              "kind": "physical-mobile",
+              "device": {
+                "id": 27,
+                "name": "iPhone 15",
+                "platform": "iOS",
+                "version": "18.0"
+              },
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Canonical and main heading",
+                  "passed": true
+                },
+                {
+                  "name": "No horizontal page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Nine authority destinations with visible subtexts",
+                  "passed": true
+                },
+                {
+                  "name": "Call destination",
+                  "passed": true
+                },
+                {
+                  "name": "Navigation menu opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Authority rail reaches Citations",
+                  "passed": true
+                },
+                {
+                  "name": "ABA example, review choices and seven stages remain readable",
+                  "passed": true
+                },
+                {
+                  "name": "ABA FAQ disclosure works",
+                  "passed": true
+                },
+                {
+                  "name": "Verify footer cards and policy link",
+                  "passed": true
+                },
+                {
+                  "name": "Optional analytics decline control and cookies",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment destination opens without submitting",
+                  "passed": true
+                }
+              ],
+              "screenshots": [
+                "27-header.png",
+                "27-menu.png",
+                "27-aba-example.png",
+                "27-aba-review.png",
+                "27-footer.png"
+              ],
+              "sessionId": "a5ae008fbdc8-01347679d3d8-d5dc65609856-179117919475-88908612",
+              "actualBrowser": {
+                "name": "safari",
+                "platform": "iOS"
+              },
+              "document": {
+                "title": "ABA Therapy for Children in India | Pinnacle Blooms Network",
+                "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+                "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+                "width": 393,
+                "height": 659,
+                "dpr": 3,
+                "screen": {
+                  "width": 393,
+                  "height": 852
+                },
+                "canonical": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+                "h1": "ABA Therapy for children\nUnderstand what is happening.\nHelp your child take part."
+              },
+              "abaGeometry": {
+                "steps": 4,
+                "stages": 7,
+                "reviews": 2,
+                "width": 393,
+                "cards": [
+                  {
+                    "width": 357,
+                    "left": 18,
+                    "right": 375
+                  },
+                  {
+                    "width": 357,
+                    "left": 18,
+                    "right": 375
+                  },
+                  {
+                    "width": 357,
+                    "left": 18,
+                    "right": 375
+                  },
+                  {
+                    "width": 357,
+                    "left": 18,
+                    "right": 375
+                  },
+                  {
+                    "width": 315,
+                    "left": 41,
+                    "right": 356
+                  },
+                  {
+                    "width": 315,
+                    "left": 41,
+                    "right": 356
+                  },
+                  {
+                    "width": 342,
+                    "left": 33,
+                    "right": 375
+                  },
+                  {
+                    "width": 342,
+                    "left": 33,
+                    "right": 375
+                  },
+                  {
+                    "width": 342,
+                    "left": 33,
+                    "right": 375
+                  },
+                  {
+                    "width": 342,
+                    "left": 33,
+                    "right": 375
+                  },
+                  {
+                    "width": 342,
+                    "left": 33,
+                    "right": 375
+                  },
+                  {
+                    "width": 342,
+                    "left": 33,
+                    "right": 375
+                  },
+                  {
+                    "width": 342,
+                    "left": 33,
+                    "right": 375
+                  }
+                ]
+              },
+              "sessionClosed": true,
+              "resultRecorded": true,
+              "provider": {
+                "testId": 53379044,
+                "success": true,
+                "deviceName": "iPhone 15",
+                "durationSeconds": 48,
+                "assetsAvailable": false
+              }
+            }
+          ],
+          "noLeadSubmitted": true,
+          "noCallInitiated": true,
+          "runnerSha256": "af5bdf00a31545918b18b7cbc9524b6d4b9313d1ac205ee9eb7beb79c48eafcb",
+          "delivery": {
+            "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+            "htmlSha256": "e190461d9df33999367bac0a666f0ad2aca0e3e64cbb0c0b6a61a868ffebe743",
+            "etag": null,
+            "checkedAt": "2026-10-05T05:46:20.695Z"
+          },
+          "finishedAt": "2026-10-05T05:47:29.997Z",
+          "secondsRemaining": 2350,
+          "physicalSessionsStillRunning": 0,
+          "desktopSessionsStillRunning": 0
+        }
+      }
+    ],
+    "lighthouse": {
+      "at": "2026-10-05T05:46:20.923Z",
+      "id": "aba",
+      "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+      "kind": "simulated lab measurements, not field Core Web Vitals",
+      "reports": [
+        {
+          "device": "mobile",
+          "lighthouseVersion": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+          "finalUrl": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+          "scores": {
+            "performance": 96,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 1935.26,
+            "lcpMs": 2583.955,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 1935.26
+          },
+          "targets": {
+            "performance": 90,
+            "lcpMs": 2500,
+            "tbtMs": 200,
+            "cls": 0.1
+          },
+          "targetWarnings": [
+            "lcpMs exceeds target or is unavailable"
+          ],
+          "warnings": [],
+          "findings": [
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "displayValue": "1.9 s"
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "displayValue": "2.6 s"
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "displayValue": "2.6 s"
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "displayValue": "Est savings of 12 KiB",
+              "savingsMs": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "displayValue": "Est savings of 4 KiB"
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "displayValue": "Est savings of 8 KiB"
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "displayValue": "Est savings of 11 KiB"
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree"
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests"
+            }
+          ]
+        },
+        {
+          "device": "desktop",
+          "lighthouseVersion": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+          "finalUrl": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 510.186,
+            "lcpMs": 562.9,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 510.186
+          },
+          "targets": {
+            "performance": 90,
+            "lcpMs": 2500,
+            "tbtMs": 200,
+            "cls": 0.1
+          },
+          "targetWarnings": [],
+          "warnings": [],
+          "findings": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "displayValue": "Est savings of 18 KiB",
+              "savingsMs": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "displayValue": "Est savings of 4 KiB"
+            },
+            {
+              "id": "forced-reflow-insight",
+              "title": "Forced reflow"
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "displayValue": "Est savings of 89 KiB"
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "displayValue": "Est savings of 10 KiB"
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree"
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests"
+            }
+          ]
+        }
+      ]
+    },
+    "screamingFrog": [
+      {
+        "Address": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+        "Status Code": "200",
+        "Indexability": "Indexable",
+        "Title 1": "ABA Therapy for Children in India | Pinnacle Blooms Network",
+        "Title 1 Length": "59",
+        "Meta Description 1": "ABA and behavioural support for communication, choice and participation in everyday life. See how Pinnacle begins, find a centre and call 9100 181 181.",
+        "Meta Description 1 Length": "151",
+        "H1-1": "ABA Therapy for children Understand what is happening. Help your child take part.",
+        "Canonical Link Element 1": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate"
+      }
+    ],
+    "indexnow": {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "cce8b079-679e-4212-ab72-44a8b02a819f",
+      "submitted": 1,
+      "failed": 0,
+      "attempted": 1,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "1 of 1 URL(s) sent were accepted by IndexNow."
+    },
+    "gscAnnotation": {
+      "annotation": {
+        "id": "282fe688-de3e-410a-a596-701bf9f14e93",
+        "scope": "property",
+        "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+        "event_date": "2026-10-05",
+        "label": "ABA page: clearer family journey and professional review",
+        "description": "Released source 07e189f: concrete illustrative transition and next decision, seven connected stages, after-call visit expectations, compact centre choice, accessible contrast, matched FAQs/Markdown/source map. Public HTML/assets and 194 routes/four bindings verified. Publication and IndexNow notification do not establish indexing, rankings or qualified enquiries.",
+        "category": "site_change",
+        "color": null,
+        "created_at": "2026-10-05T05:46:54.137519+00:00"
+      }
+    }
+  },
+  "impact": {
+    "indexing": "not established",
+    "rankings": "unmeasured",
+    "AI citations": "unmeasured",
+    "qualified calls": "unmeasured",
+    "noSyntheticCallsOrLeads": true
+  },
+  "remaining": {
+    "mobileLabLCP": "2.584 seconds; above the 2.5s lab target, not a measured field Core Web Vitals result",
+    "nextPage": "Fusion Module",
+    "holds": "PinnacleAI scholar diagram, Verify migration and centre/staff expansion retain existing holds."
+  }
+}

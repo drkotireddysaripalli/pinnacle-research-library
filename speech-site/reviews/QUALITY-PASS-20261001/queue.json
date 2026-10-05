@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "aba-therapy",
+  "current": "fusion-module",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -616,14 +616,15 @@
       "label": "ABA Therapy",
       "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
       "baselineScore": 71,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "The transition example describes a process but does not show a specific observation causing a specific change. Editorial scenes do not fully carry the requested branded English mechanism; local professional and fee decisions remain unconfirmed.",
       "task": "Rework the break-request example around one baseline, one observed response and one chosen adjustment, and generate a complete branded inline creative showing that sequence and conditional professional roles.",
       "sourceCondition": "No verified individual ABA professional or measured ABA-specific child outcome; real distribution and care outcomes are unobserved.",
-      "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "currentScore": 82,
+      "pageOwnedDisposition": "ABA Therapy released with concrete child/adult observations and a chosen next support step, seven linked stages, visit expectations and compact searchable centres. Approved creative retained; FAQ/schema/source/Markdown aligned, contrast and link distinction repaired. Pushed CI, physical iPhone/Safari and public checks passed;194 routes/four bindings and18 protected pages preserved. One IndexNow URL accepted.",
+      "release": "RELEASE-ABA-20261005.md",
+      "reviewedOn": "2026-10-05T05:50:11.009781+00:00",
+      "scoreScope": "Work-order judgement, not a search/clinical rating. Missing real-family comprehension, ABA-specific staffing/fees, receiving-team acceptance and commercial results remain unearned."
     },
     {
       "order": 35,

@@ -18,17 +18,23 @@ Source 3a5f78bcc56669279bed499aa04fc64318fda6c4; Cloudflare dbdec8c9-5ac4-4f1c-9
 
 The two English OT/Special Education pages and their /books cards now include the verified Kindle alternative. Source f4eb532d72a4fa9af498a2db292228dec2102ffb; Cloudflare5f75b349-827f-4fad-8a56-472c03a2da10. Three changed pages/four links verified;18 protected responses and194 routes/four bindings unchanged. Catalogue,99variants, PDF checkout and Google Play preserved. Proof: RELEASE-KINDLE-LINKS-20261005.md.
 
-## Next individual: ABA Therapy
+## ABA Therapy delivered
 
-Canonical: https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate
+Live: https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate
 
-Quality row34 / original baseline71. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code and deployment, one bounded read-only acceptance review.
+Source 07e189f92f844fb009eb84043be8e68b5f534c93; Cloudflare 4157f024-aedd-496c-a842-8679501f285e. Concrete illustrative transition, adult support, two review choices, seven linked stages and first-visit expectations. Existing approved creatives retained. All62 centre listings remain searchable with ABA preference carried into enrolment.395 unit checks, five widths, W3C0/0, real iPhone and hosted Safari, public read-back and one IndexNow acceptance complete.194routes/four bindings and18 protected responses preserved. Proof: RELEASE-ABA-20261005.md and deployment/aba-release-receipt-20261005.json.
 
-1. Reconcile current live/source once; preserve shared header/footer and working therapy integrations.
-2. Make the child’s communication, participation, comfort and growing independence the meaningful purpose. Explain what professionals and family do, with one clearly illustrative observation and concrete support/review choice. No invented patient result or coercive framing.
-3. Preserve useful approved creative; generate a complete branded creative only for a concrete missing narrative need, through the native image tool. Readable young-child/family/professional scenes and Pinnacle identity; no API fallback or pasted-label substitute.
-4. Align visible narrative, source scope, FAQs, schema, images, machine exports and contextual therapies/PinnacleAI/Verify connections. Keep call9100181181, enrolment and centre choice prominent.
-5. Build, focused visual/browser/accessibility checks, pushed tested source, full-route/binding/other-Worker preservation, live read-back and one changed-URL notification. Distinguish deployment from actual discovery and qualified enquiries. Record and advance the next unheld page.
+## Next individual: Fusion Module
+
+Canonical: https://www.pinnacleblooms.org/fusion-module
+
+Quality row35 / original baseline71. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code and deployment; at most one bounded read-only acceptance review.
+
+1. Reconcile current live/source once. Preserve accepted common header/footer, full route/binding union, Ask, Verify, auth, commerce and other pages.
+2. Make Fusion's role concrete: compare one illustrative child goal across home, therapy and school where appropriate/consented. Explain the observed cue, setting and adult support; choose a specific professional adjustment and state the next observation still needed.
+3. Build a clear branded input → comparison → professional decision → next-review explanation. Keep essential meaning in accessible HTML; retain useful existing creative and generate a complete native branded creative only where it has a distinct narrative job.
+4. Connect family, child, professional, PinnacleAI modules and suitable therapy pages to the shared self-sufficient/mainstream-included-life direction. Keep licensed scope, actual research status and programme possibility distinct from proven individual benefit.
+5. Align sources, FAQs, metadata, social card, reading aids and the call9100181181/enrol/centre path. Finish focused visual/browser checks, pushed tested source, exact live read-back and one material-change indexing notification. Record the practical score and precise unobserved outcomes, then advance the next unheld individual.
 
 ## Continuing boundaries
 
