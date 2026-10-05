@@ -155,8 +155,8 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'everyday-therapy', short:'Everyday Therapy™', label:'Everyday Therapy™', title:'Everyday Therapy™ | Carry Meaningful Practice into Real Life',
-    description:'Everyday Therapy brings one professionally guided step into an ordinary family routine. See a mealtime example and how observations return to review.',
+    slug:'everyday-therapy', updatedOn:'2026-10-05', short:'Everyday Therapy™', label:'Everyday Therapy™', title:'Everyday Therapy™ | Carry Meaningful Practice into Real Life',
+    description:'Guided practice, family observations and professional review: follow one table-setting goal from the child’s plan into a meaningful everyday moment.',
     eyebrow:'Life happens between appointments', headline:'Make the day itself part of the child’s opportunity to grow.',
     lead:'A child learns in play, mealtime, getting dressed, travel, school and conversation. Everyday Therapy brings agreed, manageable practice into those moments with family guidance and professional review.',
     direct:'Pinnacle’s documented Everyday Therapy workflow links goal-specific activities to family practice and feedback. The source method describes a four-day look-ahead in one version; the actual plan and pace should be selected for the child rather than treated as a fixed daily quota.',

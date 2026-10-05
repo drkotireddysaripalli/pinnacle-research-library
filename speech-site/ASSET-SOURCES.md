@@ -234,3 +234,13 @@ Astro supplies responsive WebP with dimensions. The whole square circle remains 
 ## AbilityScore — 5 October 2026
 
 `src/assets/abilityscore-possibility-20261005.png` is a complete 1536 × 1024 branded creative generated with the built-in ChatGPT session image tool, referencing the official Pinnacle Blooms Network lockup. Original: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-c62f1242-9c18-4aa7-9918-5043b479e7ad.png`. No external API-key route or separately pasted typography was used. The illustrative family and full-sleeve branded therapist scene connects Notice, Understand, Plan and Review. It is not an identified beneficiary or a measured result. Logo, phone, wording, professional clothing and pathway were visually inspected. Responsive WebP and alt text are supplied by Astro. Approved AbilityScore social poster retained for OG and contextual inline use. Model version and exact billing were not exposed.
+
+## Everyday Therapy complete creative — 5 October 2026
+
+- Asset: `src/assets/everyday-family-practice-20261005.png`, 1536×1024.
+- Generated with the native signed-in ChatGPT image-generation tool in this task; exact underlying model version not exposed. No API-key fallback and no pasted text overlay.
+- Official reference: `src/assets/pinnacle-blooms-network-lockup.png`.
+- Original output: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-ffd9a1e3-da80-4de6-834f-21e61f0c7c8f.png`.
+- Purpose: family-table participation, guided practice, observation and professional review. Illustrative family, not a patient testimony or evidence of treatment results. Visually inspected before integration.
+- Complete prompt: `reviews/everyday-family-practice-20261005.prompt.txt`.
+- Existing `pinnacleai-home-v162.png` reused for family-part block; existing approved `pinnacleai-everyday-social-20260930.png` retained for 1200×630 social image. Their original provenance remains above.

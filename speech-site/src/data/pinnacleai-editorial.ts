@@ -66,7 +66,7 @@ export const pinnacleEditorial = {
     lead: 'Your child may want to take part in a family meal. Everyday Therapy™ helps turn one suitable, professionally guided step into an ordinary opportunity at home, then brings your observations back into review. Parents remain parents, not substitute therapists.',
     moment: '“Can we help at home without making every meal a lesson?”',
     decision: 'What manageable activity fits this routine, how will the child show comfort or choice, and what should the family tell the team?',
-    familyResult: 'A simple, agreed action for a real routine and permission to report what did or did not work.',
+    familyResult: 'A simple, agreed action for a real routine and a clear way to share what did or did not work.',
     callQuestion: 'Ask for one manageable activity that fits your family’s day.',
     imageAlt: 'Illustrated family meal with a young child taking part in a small routine, following prior professional guidance.',
     stage: 'Practise in ordinary life',

@@ -173,6 +173,15 @@ for(const id of choices){
       await evaluate("document.querySelector('#pinnacleai-journey').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('abilityscore-stages');
       await check('AbilityScore FAQ disclosure works',async()=>{await click('.ability-faq summary');return evaluate("return document.querySelector('.ability-faq details').open && document.querySelectorAll('.ability-faq details').length===8");});
     }
+    if(target.pathname==='/everyday-therapy'){
+      await check('Everyday Therapy areas and stages have usable independent widths',async()=>{
+        row.everydayGeometry=await evaluate("const cards=[...document.querySelectorAll('.everyday-review-grid article,.everyday-journey li')];return {areas:document.querySelectorAll('.everyday-moments article').length,reviews:document.querySelectorAll('.everyday-review-grid article').length,stages:document.querySelectorAll('.everyday-journey li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.everydayGeometry;return r.areas===4&&r.reviews===2&&r.stages===7&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#what-it-does').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('everyday-intro');
+      await evaluate("document.querySelector('#pinnacleai-journey').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('everyday-stages');
+      await check('Everyday Therapy FAQ disclosure works',async()=>{await click('.everyday-faq summary');return evaluate("return document.querySelector('.everyday-faq details').open && document.querySelectorAll('.everyday-faq details').length===8");});
+    }
     if(isAsk){
       await check('Both approved Sintony weights loaded',()=>evaluate("return document.fonts.check('400 16px Sintony') && document.fonts.check('700 16px Sintony')"));
       await check('Answer text and source section remain readable',()=>evaluate("const p=document.querySelector('#explanation'),s=document.querySelector('#sources');return !!p && p.innerText.length>200 && p.getBoundingClientRect().width>=Math.min(280,innerWidth-48) && !!s"));
