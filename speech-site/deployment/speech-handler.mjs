@@ -1,5 +1,6 @@
 import {enrolmentAsset,enrolmentHash} from './enrolment-assets.mjs';
 import {hasHardcoverEdition,addHardcoverLinks,HARDCOVER_LINK_RELEASE} from './book-hardcover-links.mjs';
+import {hasPaperbackEdition,addPaperbackLinks,PAPERBACK_LINK_RELEASE} from './book-paperback-links.mjs';
 import {autismAsset,autismHash} from './autism-assets.mjs';
 import {aboutAsset,aboutHash} from './about-assets.mjs';
 import {specialEducationAsset,specialEducationHash} from './special-education-assets.mjs';
@@ -137,7 +138,8 @@ export async function serveSpeech(request,env,inventory){
  const editionSummary=isHtml&&editionSearchEntry(u.pathname);
  const kindleLinks=isHtml&&hasKindleEdition(u.pathname);
  const hardcoverLinks=isHtml&&hasHardcoverEdition(u.pathname);
- const etag='"speech-'+(enrolmentHash(key)||autismHash(key)||aboutHash(key)||specialEducationHash(key)||fusionHash(key)||abaHash(key)||therapeuticaiHash(key)||prognoseHash(key)||pdkHash(key)||occupationalHash(key)||everydayHash(key)||abilityscoreHash(key)||readinessHash(key)||inventory[key])+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+(editionSummary?'-'+EDITION_SEARCH_RELEASE:'')+(kindleLinks?'-'+KINDLE_LINK_RELEASE:'')+(hardcoverLinks?'-'+HARDCOVER_LINK_RELEASE:'')+'"';headers.set('etag',etag);
+ const paperbackLinks=isHtml&&hasPaperbackEdition(u.pathname);
+ const etag='"speech-'+(enrolmentHash(key)||autismHash(key)||aboutHash(key)||specialEducationHash(key)||fusionHash(key)||abaHash(key)||therapeuticaiHash(key)||prognoseHash(key)||pdkHash(key)||occupationalHash(key)||everydayHash(key)||abilityscoreHash(key)||readinessHash(key)||inventory[key])+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+(editionSummary?'-'+EDITION_SEARCH_RELEASE:'')+(kindleLinks?'-'+KINDLE_LINK_RELEASE:'')+(hardcoverLinks?'-'+HARDCOVER_LINK_RELEASE:'')+(paperbackLinks?'-'+PAPERBACK_LINK_RELEASE:'')+'"';headers.set('etag',etag);
  if(isHtml){headers.set('vary','Accept');headers.set('x-robots-tag','index, follow, max-image-preview:large');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com"+(Object.hasOwn(BOOK_ROUTES,u.pathname)?" https://pinnacleblooms.myshopify.com":"")+"; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(isMachineDocument){headers.set('vary','Accept');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');}
  if(preview){headers.set('x-robots-tag','noindex, nofollow, nosnippet');headers.set('cache-control','no-store');headers.set('content-signal','search=no, ai-input=no');headers.set('referrer-policy','no-referrer');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; upgrade-insecure-requests");}
@@ -170,6 +172,11 @@ export async function serveSpeech(request,env,inventory){
   for(const name of ['content-length','content-md5','digest','content-digest','repr-digest','last-modified'])headers.delete(name);
   headers.set('x-pinnacle-hardcover-links',HARDCOVER_LINK_RELEASE);
   if(body)body=addHardcoverLinks(typeof body==='string'?body:await new Response(body).text(),u.pathname);
+ }
+ if(paperbackLinks){
+  for(const name of ['content-length','content-md5','digest','content-digest','repr-digest','last-modified'])headers.delete(name);
+  headers.set('x-pinnacle-paperback-links',PAPERBACK_LINK_RELEASE);
+  if(body)body=addPaperbackLinks(typeof body==='string'?body:await new Response(body).text(),u.pathname);
  }
  return new Response(body,{status:source.status,headers});
 }
