@@ -42,7 +42,7 @@ export default {async fetch(request:Request,env:any,ctx:ExecutionContext){
  }
  if(/^\/ask\/(?:og\/|f\/)/.test(path)||/\.(svg|png|woff2|js|xsl)$/.test(path))return legacy.fetch(request,env,ctx);
  const cacheable=!/^\/ask\/(?:te\/)?search$/.test(path)&&request.method==='GET'&&[...url.searchParams].every(([key,value])=>key==='page'&&/^[1-9][0-9]{0,3}$/.test(value));
- const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261003-v15-browser-revalidation');
+ const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261005-v16-resource-compatibility');
  const cacheKey=new Request(cacheURL);const cache=(caches as any).default;
  // Cache API hits can inherit the zone's longer browser TTL. Reapply the page
  // policy after lookup so edge caching never makes browsers retain old releases.

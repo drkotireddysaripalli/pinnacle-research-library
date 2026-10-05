@@ -11,12 +11,18 @@ export async function rpc(env:any,name:string,body:any={}){
  if(cache)await cache.put(key,new Response(JSON.stringify(data),{headers:{'content-type':'application/json','cache-control':'public,max-age=60'}}));
  return data;
 }
+// Older published answers store resources as {count, items}; newer records
+// use arrays. Normalise at the content boundary for HTML and machine exports.
+export function resourceItems(value:any):Record<string,any>[] {
+ const items=Array.isArray(value)?value:Array.isArray(value?.items)?value.items:[];
+ return items.filter((item:any)=>item!==null&&typeof item==='object'&&!Array.isArray(item));
+}
 export async function answer(env:any,slug:string,lang='en'){
  if(!/^[a-zA-Z0-9][a-zA-Z0-9_-]{0,240}$/.test(slug))return null;
  const actual=lang==='te'&&!slug.endsWith('-te')?slug+'-te':slug;
  const a=await rpc(env,'ask_portal_answer',{p_slug:actual,p_lang:lang});
  if(!a||typeof a.slug!=='string')return null;
- return a;
+ return {...a,related_materials:resourceItems(a.related_materials),related_techniques:resourceItems(a.related_techniques)};
 }
 export const directory=(env:any,kind:string,lang='en',page=1)=>rpc(env,'ask_portal_directory',{p_kind:kind,p_lang:lang,p_page:page});
 export const collection=(env:any,kind:string,value:string,lang='en',page=1)=>rpc(env,'ask_portal_collection',{p_kind:kind,p_value:value,p_lang:lang,p_page:page});
