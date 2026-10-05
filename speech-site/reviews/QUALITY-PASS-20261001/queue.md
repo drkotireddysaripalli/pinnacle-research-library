@@ -1,6 +1,6 @@
 # Produced-page quality pass — ascending baseline score
 
-133 pages. Current page: pinnacleai. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
+133 pages. Current page: abilityscore. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
 
 | Order | Page | Baseline /100 | Reviewed /100 | Pass state |
 |---:|---|---:|---:|---|
@@ -20,8 +20,8 @@
 | 14 | [Privacy Policy](https://www.pinnacleblooms.org/privacy-policy) | 60 | 88 (package) | completed |
 | 15 | [Age Restriction Policy](https://www.pinnacleblooms.org/age-restriction-policy) | 65 | 88 (package) | completed |
 | 16 | [Tirupati Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india) | 67 | — | deferred-after-individuals |
-| 17 | [PinnacleAI](https://www.pinnacleblooms.org/pinnacleai) | 68 | 85 (V161 score; V162 released) | completed |
-| 18 | [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes) | 69 | — | review-pending |
+| 17 | [PinnacleAI](https://www.pinnacleblooms.org/pinnacleai) | 68 | 85 | completed |
+| 18 | [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes) | 69 | 90 | completed |
 | 19 | [Gurunanak / Vijayawada Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india) | 69 | — | deferred-after-individuals |
 | 20 | [Ongole Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india) | 69 | — | deferred-after-individuals |
 | 21 | [AbilityScore](https://www.pinnacleblooms.org/abilityscore) | 70 | — | review-pending |

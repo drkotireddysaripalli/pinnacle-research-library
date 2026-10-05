@@ -1,0 +1,335 @@
+{
+  "item_id": "PAGE-READINESS",
+  "action_id": "aab882d9-bcfa-479c-a99b-706553979c8b",
+  "outcome": "deployed",
+  "verified": true,
+  "completed_at": "2026-10-05T00:04:03.649920+00:00",
+  "summary": "Completed and published Seven Readiness Indexes with seven source-linked explanations, an everyday example, all PinnacleAI stages/therapy links, native branded creative, matching FAQs and reading exports. Source pushed and CI passed before activation. Real iPhone and desktop Safari checks passed; 18 live assets/30 links/12 unchanged protected pages verified; 194 routes/four bindings preserved. IndexNow accepted one changed URL; GSC annotation saved.",
+  "commit": "154e509ebcdb5a3a8eb1b48ad2538d64832430d3",
+  "deployment": "5052ce59-784e-4fc4-b6a3-2b6a0120b1bb",
+  "deployment_id": "8fe247d0-f17a-489a-8405-5b13cda8e94d",
+  "public_url": "https://www.pinnacleblooms.org/seven-readiness-indexes",
+  "rollback": [
+    {
+      "version_id": "f2faed3d-619d-4b2c-9c84-9a7defd57560",
+      "percentage": 100
+    }
+  ],
+  "proof": {
+    "ci": {
+      "id": 37245501814,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "154e509ebcdb5a3a8eb1b48ad2538d64832430d3",
+      "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37245501814"
+    },
+    "unit_tests": 354,
+    "local_viewports": [
+      320,
+      390,
+      768,
+      1024,
+      1440
+    ],
+    "local_browsers": "Chromium, installed Edge, WebKit; CI includes Firefox and WebKit",
+    "automated_critical_serious_a11y_violations": 0,
+    "testingbot": [
+      {
+        "device": {
+          "id": 22,
+          "name": "iPhone 13",
+          "platform": "iOS",
+          "version": "18.5"
+        },
+        "actualBrowser": {
+          "name": "safari",
+          "platform": "iOS"
+        },
+        "checks": 11,
+        "passed": true,
+        "providerTestId": 53367440,
+        "durationSeconds": 43,
+        "geometry": {
+          "areas": 7,
+          "stages": 7,
+          "width": 390,
+          "cards": [
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            },
+            {
+              "width": 358,
+              "left": 16,
+              "right": 374
+            }
+          ]
+        },
+        "report": "audits\\testingbot\\2026-10-04T23-59-12-978Z\\report.json"
+      },
+      {
+        "device": {
+          "id": "safari",
+          "name": "Safari",
+          "platform": "TAHOE",
+          "version": "26"
+        },
+        "actualBrowser": {
+          "name": "Safari",
+          "version": "26.3.1",
+          "platform": "macOS"
+        },
+        "checks": 13,
+        "passed": true,
+        "providerTestId": 53367461,
+        "durationSeconds": 17,
+        "geometry": {
+          "stages": 7,
+          "cards": [
+            {
+              "width": 619,
+              "right": 702,
+              "left": 83
+            },
+            {
+              "width": 619,
+              "right": 1343,
+              "left": 724
+            },
+            {
+              "width": 619,
+              "right": 702,
+              "left": 83
+            },
+            {
+              "width": 619,
+              "right": 1343,
+              "left": 724
+            },
+            {
+              "width": 619,
+              "right": 702,
+              "left": 83
+            },
+            {
+              "width": 619,
+              "right": 1343,
+              "left": 724
+            },
+            {
+              "width": 1260,
+              "right": 1343,
+              "left": 83
+            },
+            {
+              "width": 300,
+              "right": 383,
+              "left": 83
+            },
+            {
+              "width": 300,
+              "right": 703,
+              "left": 403
+            },
+            {
+              "width": 300,
+              "right": 1023,
+              "left": 723
+            },
+            {
+              "width": 300,
+              "right": 1343,
+              "left": 1043
+            },
+            {
+              "width": 300,
+              "right": 383,
+              "left": 83
+            },
+            {
+              "width": 300,
+              "right": 703,
+              "left": 403
+            },
+            {
+              "width": 620,
+              "right": 1343,
+              "left": 723
+            }
+          ],
+          "areas": 7,
+          "width": 1440
+        },
+        "report": "audits\\testingbot\\2026-10-05T00-00-34-539Z\\report.json"
+      }
+    ],
+    "lighthouse": {
+      "scope": "Local production-mode candidate before the final short subject label/FAQ-name and corner-radius adjustment; lab measurement, not field Core Web Vitals",
+      "reports": [
+        {
+          "device": "mobile",
+          "scores": {
+            "performance": 99,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 1363.619,
+            "lcpMs": 2120.4285,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 1363.619
+          }
+        },
+        {
+          "device": "desktop",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 374.3596,
+            "lcpMs": 501.5394,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 374.3596
+          }
+        }
+      ]
+    },
+    "live_assets_match": 18,
+    "live_link_destinations": 30,
+    "protected_responses_unchanged": 12,
+    "request_variants": [
+      "normal",
+      "cookie",
+      "range",
+      "crawler"
+    ],
+    "public_validator": {
+      "etag": null,
+      "conditionalStatus": "not exposed by public response"
+    },
+    "cloudflare_routes_retained": 194,
+    "main_bindings_retained": 4,
+    "other_worker_versions_unchanged": true,
+    "shared_shell_source_unchanged": true,
+    "image_generation": "Built-in ChatGPT session image generation; no API-key fallback, no text-overlay construction",
+    "visible_schema_faqs": 8,
+    "reading_exports": [
+      "JSON source map",
+      "plain text",
+      "Markdown",
+      "product child sitemap",
+      "product llms reading aid"
+    ],
+    "indexnow": {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "131aba14-1828-421c-86fa-4c06f8134f96",
+      "submitted": 1,
+      "failed": 0,
+      "attempted": 1,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/seven-readiness-indexes",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "1 of 1 URL(s) sent were accepted by IndexNow."
+    },
+    "gsc_annotation": "70636c75-9ae0-41d3-94b5-681e23aa624c",
+    "no_calls_or_intakes_submitted": true,
+    "new_ahrefs_units": 0,
+    "new_outreach": 0,
+    "review_findings_resolved": [
+      "Seven subject labels and working legacy anchors",
+      "H1 names page subject",
+      "Hero image corner avoids phone clipping",
+      "Exact visible/schema FAQ names"
+    ]
+  },
+  "not_established": [
+    "Google/Bing reindexing",
+    "Rankings",
+    "AI citations",
+    "Human conversion lift",
+    "Answered calls, qualified enquiries or admissions"
+  ],
+  "next_page": "https://www.pinnacleblooms.org/abilityscore"
+}

@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "pinnacleai",
+  "current": "abilityscore",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -351,14 +351,18 @@
       "label": "7 Readiness Indexes",
       "url": "https://www.pinnacleblooms.org/seven-readiness-indexes",
       "baselineScore": 69,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "The lens grid and group-game example do not demonstrate a particular observed result and a changed professional decision. The editorial scene does not explain the relationships as a complete branded diagram.",
       "task": "Show one group-game observation through the two relevant lenses, explicitly leave irrelevant lenses out, and illustrate the resulting human decision in a complete branded readiness diagram with scale/version context.",
       "sourceCondition": "Different report-version scales require professional explanation; module naming is not independent validity evidence; compact Markdown omits FAQs.",
-      "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "currentScore": 90,
+      "pageOwnedDisposition": "Full family narrative and seven exact source-named areas; six-step illustrative decision sequence; report-scale context; native complete creative; clear therapy/lifecycle/source links; eight FAQs in every reading export. Editorial release-readiness score, not a measured family/search/business result. Remaining: observed report/outcome studies and settled attribution, not fabricated examples.",
+      "release": {
+        "commit": "154e509ebcdb5a3a8eb1b48ad2538d64832430d3",
+        "version": "5052ce59-784e-4fc4-b6a3-2b6a0120b1bb",
+        "receipt": "deployment/readiness-release-receipt-20261005.json"
+      },
+      "reviewedOn": "2026-10-05"
     },
     {
       "order": 19,
