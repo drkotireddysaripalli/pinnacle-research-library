@@ -164,7 +164,7 @@ Family observations and progress tracking inform review and changes to the plan.
 
 Reassessment guides the next priorities and support as readiness develops.
 
-[Explore this step — Reassess. Refine. Keep working. →](https://www.pinnacleblooms.org/reassess)
+[Explore this step — Reassess. Refine. Keep working. →](https://www.pinnacleblooms.org/reassess-review-repeat)
 
 ### Grow toward a fuller life
 
