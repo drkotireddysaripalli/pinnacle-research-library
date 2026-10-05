@@ -1,3 +1,4 @@
+import {pdkContent} from './pdk-content.ts';
 // Page-owned narrative. The module pages share navigation and evidence plumbing,
 // while each must answer a different family decision in its own words.
 export const pinnacleEditorial = {
@@ -32,14 +33,13 @@ export const pinnacleEditorial = {
     stage: 'Discuss readiness for the next opportunity',
   },
   'personal-development-kernel': {
-    opening: 'Keep the helpful details of your child’s story together.',
-    lead: 'Shoes may go on smoothly at home with a picture sequence, then feel harder at a busy school doorway. The Personal Development Kernel helps authorised people keep relevant goals, supports and observations in context for the next professional review.',
-    moment: '“It works at home. Why does the same routine feel different at school?”',
-    decision: 'What changed between the two settings, who may contribute an observation and what adjustment should the professional consider?',
-    familyResult: 'A discussion that remembers the support and setting, rather than a bare can-or-cannot label.',
-    callQuestion: 'Ask how family observations enter an authorised review.',
-    imageAlt: 'Illustrated child practising shoes at home and preparing for school while a parent and Pinnacle professional review relevant context.',
-    stage: 'Keep child-specific context in view',
+    opening:pdkContent.opening, lead:pdkContent.lead,
+    moment:'“It works at home. What could help at school?”',
+    decision:'Which conditions and supports differ, what adaptation should be tried with agreement, and what will the next review compare?',
+    familyResult:'An explained next step and a record of what will be checked next, with your family’s observations kept in context.',
+    callQuestion:'Tell us one routine that feels different at home and school.',
+    imageAlt:'Illustrative family and Pinnacle therapist, linked by a PDK record pathway from relevant observations to authorised review, next support and observation again.',
+    stage:'Keep child-specific context connected',
   },
   prognose: {
     opening: 'Make a plan for tomorrow. Let today’s child revise it.',

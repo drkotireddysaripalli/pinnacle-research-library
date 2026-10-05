@@ -182,6 +182,15 @@ for(const id of choices){
       await evaluate("document.querySelector('#pinnacleai-journey').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('everyday-stages');
       await check('Everyday Therapy FAQ disclosure works',async()=>{await click('.everyday-faq summary');return evaluate("return document.querySelector('.everyday-faq details').open && document.querySelectorAll('.everyday-faq details').length===8");});
     }
+    if(target.pathname==='/personal-development-kernel'){
+      await check('PDK observations, architecture and seven stages are readable',async()=>{
+        row.pdkGeometry=await evaluate("const cards=[...document.querySelectorAll('.pdk-record,.pdk-architecture li,.pdk-stages li,.pdk-review-branches article')];return {records:document.querySelectorAll('.pdk-record').length,stages:document.querySelectorAll('.pdk-stages li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.pdkGeometry;return r.records===2&&r.stages===7&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#worked-example').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('pdk-example');
+      await evaluate("document.querySelector('#architecture').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('pdk-architecture');
+      await check('PDK FAQ disclosure works',async()=>{await click('.pdk-faq summary');return evaluate("return document.querySelector('.pdk-faq details').open && document.querySelectorAll('.pdk-faq details').length===8");});
+    }
     if(target.pathname==='/best-occupational-therapy-center-india-proven-improvement-rate'){
       await check('Occupational Therapy areas and stages have usable independent widths',async()=>{
         row.occupationalGeometry=await evaluate("const cards=[...document.querySelectorAll('.ot-goal-cycle li,.ot-other-examples article')];return {areas:document.querySelectorAll('.ot-route').length,reviews:document.querySelectorAll('.ot-other-examples article').length,stages:document.querySelectorAll('.ot-stage-peek li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");

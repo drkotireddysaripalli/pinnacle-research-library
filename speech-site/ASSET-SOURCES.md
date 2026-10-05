@@ -248,3 +248,7 @@ Astro supplies responsive WebP with dimensions. The whole square circle remains 
 ## Occupational Therapy · 5 October 2026
 
 `occupational-everyday-steps-20261005.png`: native session image generation, complete branded creative. Official logo and previous jacket scene supplied as references. Prompt/provenance: `reviews/OT-CREATIVE-20261005.md` and `OT-CREATIVE-PROMPT-20261005.txt`. Illustrative, not a beneficiary testimonial. Approved prior social poster retained.
+
+## Personal Development Kernel — 5 October 2026
+
+`src/assets/pdk-connected-story-20261005.png`: complete native session-generated branded illustrative creative; official logo and existing PDK scene references. No API-key route or pasted text overlays. Original and complete prompt: `reviews/PDK-CREATIVE-20261005.md` and `reviews/PDK-CREATIVE-PROMPT-20261005.txt`. Exact model version not exposed. Approved PDK social creative retained.

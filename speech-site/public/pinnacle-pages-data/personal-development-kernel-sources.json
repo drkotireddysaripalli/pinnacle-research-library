@@ -1,47 +1,51 @@
 {
-  "title": "Personal Development Kernel | Keep Your Child’s Context Connected",
+  "title": "Personal Development Kernel (PDK) | PinnacleAI Child Context",
   "url": "https://www.pinnacleblooms.org/personal-development-kernel",
-  "updated": "2026-10-01",
+  "updated": "2026-10-05",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
-  "parentMoment": "“It works at home. Why does the same routine feel different at school?”",
-  "lifeDecision": "What changed between the two settings, who may contribute an observation and what adjustment should the professional consider?",
-  "familyDiscussion": "A discussion that remembers the support and setting, rather than a bare can-or-cannot label.",
-  "directAnswer": "The PDK is Pinnacle’s child-specific record concept for organising measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.",
-  "lifePurpose": "Continuity matters when a child’s team needs to see what was tried, where it worked, where it did not and what the family wants to change.",
+  "parentMoment": "“It works at home. What could help at school?”",
+  "lifeDecision": "Which conditions and supports differ, what adaptation should be tried with agreement, and what will the next review compare?",
+  "familyDiscussion": "An explained next step and a record of what will be checked next, with your family’s observations kept in context.",
+  "directAnswer": "The Personal Development Kernel (PDK) is PinnacleAI’s child-specific record concept. It organises relevant assessed information, family priorities, goals, settings and responses over time to support authorised professional review. People interpret the record and decide the next support with the family.",
+  "lifePurpose": "Your child’s self-sufficient, mainstream-included life gives the work its direction. Within PinnacleAI®, PDK keeps the context behind each next step connected.",
   "illustrativeExample": {
-    "title": "A routine works at home but not yet at school.",
-    "description": "Illustrative example only. The family sees a child put on shoes with a picture sequence; the teacher sees a different need at a busy school doorway.",
+    "title": "The same child. The same shoes. Two different settings.",
+    "description": "Fictional example: a four-year-old wants to join the school day. The family’s priority is taking part in getting ready, with comfortable and useful support. These entries explain the record concept; they are not a patient report or a measured result.",
     "steps": [
       {
-        "title": "Record with context",
-        "description": "Document the support, setting and child response rather than a bare “can/cannot” label."
+        "title": "Compare the observations",
+        "description": "Home · parent observation: Familiar low seat, blue hook-and-loop shoes and a three-picture sequence. The child places one foot in the shoe and closes one strap after a pointing cue. An adult steadies the shoe and helps with the other foot. A specific supported step, with the help described. It is not a claim of independent dressing. School · appropriately shared teacher observation: Busy arrival doorway, standing, with spoken instructions and no picture sequence. The child waits while the adult puts the shoes on. The record does not yet show what the child would do with familiar support here. The conditions differ. These two observations do not establish the cause or show a loss of ability."
       },
       {
-        "title": "Respect access",
-        "description": "Share relevant school observations only through appropriate consent and authorised roles."
+        "title": "Choose a specific adaptation",
+        "description": "With the family and teacher’s agreement, the professional proposes a quieter seated arrival place, the familiar picture sequence and one consistent pointing cue. Keep help available and give the child a way to ask for help or pause."
       },
       {
-        "title": "Compare settings",
-        "description": "The team sees what transfers and what needs an environmental adjustment."
+        "title": "Keep a checkpoint",
+        "description": "At the agreed next review, compare the step the child initiates, the help provided, comfort and participation in both settings. Keep the observation date, contributor, proposed change and reason together. The school response to this adaptation is still pending."
       },
       {
-        "title": "Use it in review",
-        "description": "A professional changes the next support and records why."
+        "title": "If the adapted setting helps",
+        "description": "Record the actual step and assistance. The professional can discuss whether to keep the arrangement or explore one next step; do not label the whole routine independent."
+      },
+      {
+        "title": "If it remains difficult or uncomfortable",
+        "description": "Record what happened, pause if needed, and review the activity, support, timing or goal with the family. More repetition is not automatically the right response."
       }
     ],
     "status": "Fictional explanatory example; not a patient story or observed result."
   },
   "mechanism": [
-    "Inputs are selected because they matter to the child and the agreed goal.",
-    "Context includes the setting and help provided, not only the activity result.",
-    "The professional uses the record to review the plan; families can question and correct their observations."
+    "Relevant, permitted inputs: Assessed information, family priorities and observations shared for the care discussion. Include who observed, where, when and with what support.",
+    "A record across reviews: Keep the observation, goal, proposed adjustment and next checkpoint connected. Preserve the context behind a step, not just a can-or-cannot label.",
+    "Authorised human use: A professional interprets the information with the family, explains a next step and reviews the response. This model does not imply automatic school access."
   ],
-  "limit": "The PDK name describes an internal architecture layer in the source methods. It is not a claim of a stand-alone regulatory approval, a public child dossier or automatic clinical judgement. Child records remain private.",
+  "limit": "PDK is an internal architecture concept, not a separately approved medical device or an autonomous decision-maker. This public example contains no child data. Verify publishes evidence about the system, not individual child records. Described consent and access roles do not independently establish operational security.",
   "claimSourceMap": [
     {
-      "statement": "What changed between the two settings, who may contribute an observation and what adjustment should the professional consider?",
+      "statement": "The documented PDK architecture keeps child-specific assessed information, history, environment and responses connected for subsequent authorised review (dossier pp. 48–49; human oversight pp. 48, 52–53).",
       "kind": "programme explanation",
       "source": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html",
       "limit": "Product architecture and examples; contradictory completed-validation claims are not adopted here."
@@ -53,7 +57,7 @@
       "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
     },
     {
-      "statement": "The PDK name describes an internal architecture layer in the source methods. It is not a claim of a stand-alone regulatory approval, a public child dossier or automatic clinical judgement. Child records remain private.",
+      "statement": "PDK is an internal architecture concept, not a separately approved medical device or an autonomous decision-maker. This public example contains no child data. Verify publishes evidence about the system, not individual child records. Described consent and access roles do not independently establish operational security.",
       "kind": "claim boundary",
       "source": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
       "limit": "Describes a workflow; not proof that every step produces a specific result."
@@ -122,15 +126,176 @@
   "questions": [
     {
       "question": "What is the Personal Development Kernel?",
-      "answer": "It is Pinnacle’s child-specific record concept for keeping relevant assessed abilities, goals, settings and responses connected over time for authorised professional review."
+      "answer": "PDK is PinnacleAI’s child-specific record concept for keeping relevant assessed information, family priorities, goals, settings and responses connected over time for authorised professional review."
     },
     {
-      "question": "Does the PDK decide therapy for my child by itself?",
-      "answer": "No. The record supports a professional and family discussion; it does not replace human judgement or consent."
+      "question": "What information is useful in a PDK discussion?",
+      "answer": "Bring the child’s priority, what you observed, the setting, the help provided and what happened. Relevant assessment information and appropriately shared school observations can add context; more personal detail is not automatically more useful."
     },
     {
-      "question": "Are children’s individual records public on Verify?",
-      "answer": "No. Verify publishes evidence about methods and scope, not private child records."
+      "question": "What if a routine works at home but feels different at school?",
+      "answer": "Compare the conditions and support before interpreting the difference. In our illustrative shoes example, a professional proposes familiar pictures and a quieter seated place at school, then plans to review the actual response. The example does not establish the cause or a successful result."
+    },
+    {
+      "question": "Does PDK choose therapy without a professional?",
+      "answer": "No. PDK is a record and planning aid. A professional interprets relevant information with the family and explains the proposed support and next review. The child’s comfort, preferences and response matter."
+    },
+    {
+      "question": "Does a school automatically see my child’s record?",
+      "answer": "No automatic school access is implied. The source documents describe consent and authorised roles. Ask your care team what may be shared, for what purpose and who can see it in your child’s actual care arrangement."
+    },
+    {
+      "question": "Are children’s records public on Verify?",
+      "answer": "Verify publishes evidence about Pinnacle’s methods, licences and scope, not individual child records. The example on this page is fictional and contains no child’s personal data."
+    },
+    {
+      "question": "Is PDK a separately approved medical device?",
+      "answer": "PDK describes an internal record architecture within PinnacleAI. The MD-5 licence covers the named PinnacleAI GPT-OS v1.0.0 non-diagnostic developmental-support device for children aged 0–12; it is not a separate approval of PDK or proof of an individual outcome."
+    },
+    {
+      "question": "How do we begin with Pinnacle?",
+      "answer": "Call 9100 181 181 and tell us one everyday priority. You can ask how your observations would inform a professional discussion. We will help confirm a suitable centre, professional, first visit and fees before you decide. Telephone guidance is free."
+    }
+  ],
+  "illustrativeRecord": {
+    "title": "The same child. The same shoes. Two different settings.",
+    "intro": "Fictional example: a four-year-old wants to join the school day. The family’s priority is taking part in getting ready, with comfortable and useful support. These entries explain the record concept; they are not a patient report or a measured result.",
+    "observations": [
+      {
+        "icon": "home",
+        "setting": "Home · parent observation",
+        "context": "Familiar low seat, blue hook-and-loop shoes and a three-picture sequence.",
+        "observed": "The child places one foot in the shoe and closes one strap after a pointing cue. An adult steadies the shoe and helps with the other foot.",
+        "meaning": "A specific supported step, with the help described. It is not a claim of independent dressing."
+      },
+      {
+        "icon": "book",
+        "setting": "School · appropriately shared teacher observation",
+        "context": "Busy arrival doorway, standing, with spoken instructions and no picture sequence.",
+        "observed": "The child waits while the adult puts the shoes on. The record does not yet show what the child would do with familiar support here.",
+        "meaning": "The conditions differ. These two observations do not establish the cause or show a loss of ability."
+      }
+    ],
+    "decision": "With the family and teacher’s agreement, the professional proposes a quieter seated arrival place, the familiar picture sequence and one consistent pointing cue. Keep help available and give the child a way to ask for help or pause.",
+    "checkpoint": "At the agreed next review, compare the step the child initiates, the help provided, comfort and participation in both settings. Keep the observation date, contributor, proposed change and reason together. The school response to this adaptation is still pending.",
+    "reviews": [
+      {
+        "title": "If the adapted setting helps",
+        "text": "Record the actual step and assistance. The professional can discuss whether to keep the arrangement or explore one next step; do not label the whole routine independent."
+      },
+      {
+        "title": "If it remains difficult or uncomfortable",
+        "text": "Record what happened, pause if needed, and review the activity, support, timing or goal with the family. More repetition is not automatically the right response."
+      }
+    ]
+  },
+  "architecture": [
+    {
+      "icon": "people",
+      "title": "Relevant, permitted inputs",
+      "text": "Assessed information, family priorities and observations shared for the care discussion. Include who observed, where, when and with what support."
+    },
+    {
+      "icon": "plan",
+      "title": "A record across reviews",
+      "text": "Keep the observation, goal, proposed adjustment and next checkpoint connected. Preserve the context behind a step, not just a can-or-cannot label."
+    },
+    {
+      "icon": "compass",
+      "title": "Authorised human use",
+      "text": "A professional interprets the information with the family, explains a next step and reviews the response. This model does not imply automatic school access."
+    }
+  ],
+  "stages": [
+    {
+      "title": "Understand capabilities",
+      "text": "AbilityScore® and relevant assessment inform the starting discussion.",
+      "href": "/abilityscore",
+      "icon": "measure"
+    },
+    {
+      "title": "Readiness and a child-specific plan",
+      "text": "Combine relevant readiness views with the child’s context and priorities.",
+      "href": "/seven-readiness-indexes",
+      "icon": "compass"
+    },
+    {
+      "title": "Appropriate integrated therapies",
+      "text": "Choose professional contributions for the child’s actual goal.",
+      "href": "/autism-therapy",
+      "icon": "people"
+    },
+    {
+      "title": "Guided everyday practice",
+      "text": "Try suitable support in the child’s day, with family choice and guidance.",
+      "href": "/everyday-therapy",
+      "icon": "home"
+    },
+    {
+      "title": "Track and correct",
+      "text": "Bring the response and setting into review of the plan.",
+      "href": "/fusion-module",
+      "icon": "track"
+    },
+    {
+      "title": "Reassess and repeat",
+      "text": "Use the next review to continue, adapt, pause or change direction.",
+      "href": "/reassess-review-repeat",
+      "icon": "loop"
+    },
+    {
+      "title": "Growing independence and participation",
+      "text": "Keep useful choice, support and belonging in view throughout.",
+      "href": "/self-sufficient",
+      "icon": "sun"
+    }
+  ],
+  "therapyContributions": [
+    {
+      "name": "Occupational Therapy",
+      "text": "Activities, environment and practical adaptations for everyday participation.",
+      "href": "/best-occupational-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "Speech Therapy",
+      "text": "A comfortable way to understand, choose, communicate and ask for help.",
+      "href": "/top-speech-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "ABA Therapy",
+      "text": "Understand context and useful support for learning and participation.",
+      "href": "/best-aba-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "name": "Special Education",
+      "text": "Accessible learning steps and support in the relevant setting.",
+      "href": "/best-special-education-center-call-9100181181"
+    }
+  ],
+  "sourceDetails": [
+    {
+      "title": "The documented child-context model",
+      "label": "Company-authored architecture",
+      "text": "The Verify workflow cites dossier pp. 48–49 for persistent child context, pp. 48 and 52–53 for human oversight, and p. 54 for the described consent and authorised-role model.",
+      "href": "/verify/#how-pinnacleai-works"
+    },
+    {
+      "title": "Evidence Dossier",
+      "label": "Versioned company evidence map",
+      "text": "Read the source edition and its underlying references. A described architecture does not by itself establish current access controls or a completed clinical-validation result.",
+      "href": "/verify/evidence/records/dossier.html"
+    },
+    {
+      "title": "Methodology and feedback",
+      "label": "Preprint · preliminary evidence",
+      "text": "The method describes activity feedback feeding the PDK. Read its version, preliminary findings and limitations alongside the explanation.",
+      "href": "/verify/evidence/records/methodology.html"
+    },
+    {
+      "title": "Indian MD-5 licence",
+      "label": "MFG/MD/2026/000248",
+      "text": "PinnacleAI GPT-OS v1.0.0: Class B non-diagnostic developmental-support software for children aged 0–12. This is the named device’s scope, not a separate PDK approval or a guaranteed outcome.",
+      "href": "/verify/evidence/records/md5.html"
     }
   ]
 }

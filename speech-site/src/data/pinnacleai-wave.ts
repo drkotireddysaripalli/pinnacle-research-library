@@ -1,3 +1,4 @@
+import {pdkContent} from './pdk-content.ts';
 import {abilityContent} from './abilityscore-content.ts';
 import {readinessContent} from './readiness-content.ts';
 export const waveSources = {
@@ -89,26 +90,18 @@ export const pinnacleWave = [
     faqs:readinessContent.faqs
   },
   {
-    slug:'personal-development-kernel', updatedOn:'2026-10-01', short:'Personal Development Kernel', label:'Personal Development Kernel', title:'Personal Development Kernel | Keep Your Child’s Context Connected',
-    description:'See how PinnacleAI’s Personal Development Kernel keeps a child’s home and school context available for authorised professional review.',
-    eyebrow:'Continuity for a real child', headline:'Your child’s story should not reset at every appointment.',
-    lead:'What helps at home may be different from what helps at school. The Personal Development Kernel, or PDK, is the child-specific record concept that keeps relevant observations, priorities and responses available for authorised review.',
-    direct:'The PDK is Pinnacle’s child-specific record concept for organising measurements, goals, developmental history, environments and responses to activities. It is a record and planning aid within the broader system, not an autonomous decision-maker or a separately claimed diagnostic device.',
-    purpose:'Continuity matters when a child’s team needs to see what was tried, where it worked, where it did not and what the family wants to change.',
-    question:'How does one observation stay useful over time?',
-    exampleTitle:'A routine works at home but not yet at school.',
-    exampleLead:'Illustrative example only. The family sees a child put on shoes with a picture sequence; the teacher sees a different need at a busy school doorway.',
-    example:[['Record with context','Document the support, setting and child response rather than a bare “can/cannot” label.'],['Respect access','Share relevant school observations only through appropriate consent and authorised roles.'],['Compare settings','The team sees what transfers and what needs an environmental adjustment.'],['Use it in review','A professional changes the next support and records why.']],
-    mechanismTitle:'One child-specific record can connect facts that otherwise drift apart.',
-    mechanism:['Inputs are selected because they matter to the child and the agreed goal.','Context includes the setting and help provided, not only the activity result.','The professional uses the record to review the plan; families can question and correct their observations.'],
-    limit:'The PDK name describes an internal architecture layer in the source methods. It is not a claim of a stand-alone regulatory approval, a public child dossier or automatic clinical judgement. Child records remain private.',
-    takeaway:'Ask how family observations enter review, who can see them and how a change in the plan is explained.',
-    sourceKeys:['workflow','dossier','methods','md5'],
-    faqs:[
-      {question:'What is the Personal Development Kernel?',answer:'It is Pinnacle’s child-specific record concept for keeping relevant assessed abilities, goals, settings and responses connected over time for authorised professional review.'},
-      {question:'Does the PDK decide therapy for my child by itself?',answer:'No. The record supports a professional and family discussion; it does not replace human judgement or consent.'},
-      {question:'Are children’s individual records public on Verify?',answer:'No. Verify publishes evidence about methods and scope, not private child records.'}
-    ]
+    slug:'personal-development-kernel', updatedOn:pdkContent.updatedOn, includeReadingFaqs:true, short:'Personal Development Kernel', label:'Personal Development Kernel', title:'Personal Development Kernel (PDK) | PinnacleAI Child Context',
+    description:'How PinnacleAI connects a child’s home and school observations with professional review and the next support. Explore PDK, its sources and a practical example.',
+    eyebrow:'PinnacleAI® · Keep the context behind the next step', headline:pdkContent.opening,
+    lead:pdkContent.lead, direct:pdkContent.direct, purpose:pdkContent.purpose,
+    question:'What can the team learn when a routine feels different at home and school?',
+    exampleTitle:pdkContent.example.title, exampleLead:pdkContent.example.intro,
+    example:[['Compare the observations',pdkContent.example.observations.map(o=>o.setting+': '+o.context+' '+o.observed+' '+o.meaning).join(' ')],['Choose a specific adaptation',pdkContent.example.decision],['Keep a checkpoint',pdkContent.example.checkpoint],...pdkContent.example.reviews.map(r=>[r.title,r.text])],
+    mechanismTitle:'Useful information in. An explained next step out.',
+    mechanism:pdkContent.architecture.map(a=>a.title+': '+a.text),
+    limit:'PDK is an internal architecture concept, not a separately approved medical device or an autonomous decision-maker. This public example contains no child data. Verify publishes evidence about the system, not individual child records. Described consent and access roles do not independently establish operational security.',
+    takeaway:'Tell us one routine that feels different at home and school. Ask how a professional would use those observations to plan and review the next step.',
+    sourceKeys:['workflow','dossier','methods','md5'], faqs:pdkContent.faqs
   },
   {
     slug:'prognose', short:'Prognose', label:'Prognose', title:'Prognose | A Revisable Forecast for Child-Specific Planning',
