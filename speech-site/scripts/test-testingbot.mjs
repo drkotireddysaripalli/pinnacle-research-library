@@ -200,6 +200,15 @@ for(const id of choices){
       await evaluate("document.querySelector('#architecture').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('therapeuticai-architecture');
       await check('TherapeuticAI FAQ disclosure works',async()=>{await click('.therapeuticai-faq summary');return evaluate("return document.querySelector('.therapeuticai-faq details').open && document.querySelectorAll('.therapeuticai-faq details').length===8");});
     }
+    if(target.pathname==='/fusion-module'){
+      await check('Fusion observations, architecture and seven stages are readable',async()=>{
+        row.fusionGeometry=await evaluate("const cards=[...document.querySelectorAll('.fusion-observations article,.fusion-architecture li,.fusion-stages li,.fusion-review-branches article')];return {records:document.querySelectorAll('.fusion-observations article').length,stages:document.querySelectorAll('.fusion-stages li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.fusionGeometry;return r.records===3&&r.stages===7&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#worked-example').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('fusion-example');
+      await evaluate("document.querySelector('#architecture').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('fusion-architecture');
+      await check('Fusion FAQ disclosure works',async()=>{await click('.fusion-faq summary');return evaluate("return document.querySelector('.fusion-faq details').open && document.querySelectorAll('.fusion-faq details').length===9");});
+    }
     if(target.pathname==='/prognose'){
       await check('Prognose observations, architecture and seven stages are readable',async()=>{
         row.prognoseGeometry=await evaluate("const cards=[...document.querySelectorAll('.prognose-observations li,.prognose-architecture li,.prognose-stages li,.prognose-review-branches article')];return {records:document.querySelectorAll('.prognose-observations li').length,stages:document.querySelectorAll('.prognose-stages li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");

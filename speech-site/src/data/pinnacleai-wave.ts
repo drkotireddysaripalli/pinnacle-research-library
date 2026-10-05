@@ -153,8 +153,8 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'fusion-module', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'Fusion', label:'Fusion tracking and correction', title:'Fusion | Bring Family, School and Clinical Observations into Review',
-    description:'Fusion brings relevant therapy, home and consented school observations into human review, so the child’s next support can change with evidence.',
+    slug:'fusion-module', updatedOn:'2026-10-05', includeReadingFaqs:true, short:'Fusion', label:'Fusion tracking and correction', title:'PinnacleAI Fusion | Track Progress Across Home, Therapy & School',
+    description:'See how PinnacleAI Fusion connects home, therapy and school observations with professional review and the next support decision. Call 9100 181 181.',
     eyebrow:'You see more than a session can see', headline:'Bring the child’s whole day into the next decision.',
     lead:'A professional sees a child at an appointment. Parents, caregivers and teachers may see a different picture in meals, play and learning. Fusion is the tracking-and-correction part of the system that helps relevant observations return to professional review.',
     direct:'The BIS scope names a Clinical Tracking/Correction Fusion module. Pinnacle’s method describes activity ratings and relevant input from authorised roles. It helps people ask what is working and what to change; it is not automatic clinical correction without human oversight.',

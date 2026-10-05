@@ -1,41 +1,109 @@
-Fusion | Bring Family, School and Clinical Observations into Review
+PinnacleAI Fusion | Track Progress Across Home, Therapy & School
 https://www.pinnacleblooms.org/fusion-module
 
-Parent moment: “It worked in the session. Why is it still hard outside?”
-Decision this page explains: Where did the skill work, what support was present, where did it not transfer and what should change next?
-Family discussion: A professional explanation of what the different observations mean for the plan.
+What Fusion does
+Fusion is PinnacleAI’s tracking and correction module. It connects relevant observations from therapy, home and, where appropriate and consented, school with professional review. The useful output is a decision about what to keep, adapt, pause or investigate, followed by a clear next observation.
 
-Direct answer: The BIS scope names a Clinical Tracking/Correction Fusion module. Pinnacle’s method describes activity ratings and relevant input from authorised roles. It helps people ask what is working and what to change; it is not automatic clinical correction without human oversight.
-Life purpose: A child’s progress should be understood in the places where the skill matters, including when it is not transferring as hoped.
-Boundary: The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private.
+Purpose from the beginning
+Your child’s self-sufficient, mainstream-included life is the purpose from the beginning. Fusion helps bring the child’s everyday experience back into the next professional decision, with your family helping shape the journey.
 
-Illustrative example: A request works in therapy, but not yet in the school playground.
-Illustrative example only. The child makes a request in a familiar room; outdoors, the same approach is hard to use.
-1. Notice the difference: The family reports the setting, support and child’s response without blaming anyone.
-2. Bring relevant voices: A therapist and, with consent, a teacher may add what they observed. Not every child needs every rater role.
-3. Review the reason: The professional considers noise, timing, communication method, motivation and comfort.
-4. Correct the plan: A different cue or environment may be tried, then checked again in real life.
+One request across three settings
+Illustrative example: a five-year-old enjoys taking turns with a ball. The family wants their child to be able to ask for a turn and take part comfortably. This fictional example explains a review; it is not a patient report or a personalised therapy plan.
 
-Claim/source links:
-- Where did the skill work, what support was present, where did it not transfer and what should change next? → https://www.pinnacleblooms.org/verify/evidence/records/bis.html (programme explanation; Named module/quality scope; not a clinical effectiveness result.)
-- PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. → https://www.pinnacleblooms.org/verify/evidence/records/md5.html (regulatory scope; Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.)
-- The source paper describes several possible rater roles; that does not mean six people observe every child. Individual records and ratings remain private. → https://www.pinnacleblooms.org/verify/evidence/records/dossier.html (claim boundary; Product architecture and examples; contradictory completed-validation claims are not adopted here.)
+01 · Therapy · A request with a familiar cue.
+Setting: Quiet room; one familiar professional.
+Adult support: The adult points to the “my turn” picture before offering the ball.
+Child response: The child touches the picture and takes a turn.
+Interpretation: A supported request in this setting—not yet an independent request.
 
-Questions:
-What is PinnacleAI Fusion?
-Fusion is the named clinical tracking and correction module. It helps relevant observations return to the child-specific professional review.
-Does the system change therapy automatically?
-No. Professionals review the child’s response and explain appropriate changes with the family.
-Will school information be shared without permission?
-School and other external observations should be shared only through appropriate consent and authorised roles.
+02 · Home · The same cue still matters.
+Setting: Ball play with a parent in a familiar room.
+Adult support: The parent keeps the picture within reach and points to it.
+Child response: The child uses the picture after the reminder, then chooses another turn.
+Interpretation: The request appears with another adult, with the cue still present.
 
-Further sources:
-- Documented PinnacleAI workflow: https://www.pinnacleblooms.org/verify/#how-pinnacleai-works — Describes a workflow; not proof that every step produces a specific result.
-- BIS named-module and quality-system scope: https://www.pinnacleblooms.org/verify/evidence/records/bis.html — Named module/quality scope; not a clinical effectiveness result.
-- Reviewed product evidence dossier: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html — Product architecture and examples; contradictory completed-validation claims are not adopted here.
-- Methodology preprint and limitations: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html — Methods and preliminary results must not be presented as completed independent validation.
-- Indian Form MD-5 software scope: https://www.pinnacleblooms.org/verify/evidence/records/md5.html — Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
+03 · School, if shared · A different response in a busy space.
+Setting: Several children playing outdoors; teacher observation shared with consent.
+Adult support: The same picture is available, with an adult invitation.
+Child response: The child steps away and does not take the offered turn.
+Interpretation: The observation does not establish why. Noise, timing, comfort and support need review.
 
-Operator: Bharath Healthcare Laboratories Private Limited. Brand: Pinnacle Blooms Network. Phone: 9100 181 181 (tel:+919100181181).
+Compare context
+The picture-supported request appears in two quieter, familiar situations. It has not yet been observed without an adult cue, or in the busy playground. These are different questions; averaging them into one “success” score would lose information the next decision needs.
 
-Follow a speech goal from family observation to the next decision: https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#everyday-communication
+The professional decision
+In this example, the professional and family keep the picture cue, choose a quieter place with one familiar peer, and make a way to pause or decline available. The immediate checkpoint becomes a chosen turn with that support—not joining the larger group.
+
+Next checkpoint
+At the next agreed opportunity, note the setting, who was there, the cue offered, how the child responded and whether the child chose to continue or pause. The response to the revised support has not yet been observed.
+
+If the supported turn is comfortable
+Keep the useful support and review another relevant opportunity. A supported turn does not by itself establish independent requesting or transfer to a larger group.
+
+If the child steps away again
+Respect the pause, reduce the demand and bring the observation back. The professional can reconsider communication, comfort, the environment or the goal, and decide whether other assessment or referral is needed.
+
+The architecture
+Notice with context: Keep the activity, setting, adult support and child’s response together. A preference, a rating and an observed skill each tell a different part of the story. https://www.pinnacleblooms.org/everyday-therapy
+Compare like with like: Ask what changed between situations. A request after a prompt and a request without a prompt are not the same observation. https://www.pinnacleblooms.org/personal-development-kernel
+Make a professional decision: Explain the support to continue, adapt or pause, the reason for the choice, and what the family can notice next. https://www.pinnacleblooms.org/therapeuticai
+Check the next response: Return the new observation to review. Use it to reconsider the plan and the next reassessment with the family. https://www.pinnacleblooms.org/reassess-review-repeat
+
+Seven connected stages
+Understand capabilities: AbilityScore® measurement contributes to the starting picture: what the child can do and with what support. https://www.pinnacleblooms.org/abilityscore
+Plan a meaningful next step: Readiness views and Prognose inform a child-specific plan: the next participation goal, suitable support and a revisable forecast. https://www.pinnacleblooms.org/prognose
+Bring relevant therapies together: Agree the contribution of each professional around the same everyday goal. https://www.pinnacleblooms.org/autism-therapy
+Practise in everyday life: Use agreed opportunities at home; notice choice, comfort and the help provided. https://www.pinnacleblooms.org/everyday-therapy
+Track and correct: Fusion brings differences across observations into the next decision. https://www.pinnacleblooms.org/fusion-module#worked-example
+Reassess and repeat: Compare change over time and revise goals, support or review timing. https://www.pinnacleblooms.org/reassess-review-repeat
+Keep the child’s life in view: Work toward growing self-sufficiency and meaningful participation with others. https://www.pinnacleblooms.org/self-sufficient
+
+Relevant therapies
+Speech Therapy: Consider how a request, choice or pause can be understood by different people. https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate
+Occupational Therapy: Consider activity, sensory and environmental support for comfortable participation. https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate
+ABA & behavioural support: Understand the situation around behaviour, accessible communication and the response to support. https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate
+Special Education: Connect agreed cues and learning opportunities with classroom participation. https://www.pinnacleblooms.org/best-special-education-center-call-9100181181
+
+Evidence and citation sources
+Clinical Tracking / Correction Fusion: The BIS scope schedule names Fusion within its specified software quality-system scope. Licence MD/L-2026029599 · original licence and scope schedule. This names the function; it does not establish an individual outcome. https://www.pinnacleblooms.org/verify/evidence/records/bis.html
+Non-diagnostic developmental support: PinnacleAI GPT-OS v1.0.0 is licensed as Class B software for children aged 0–12, including readiness tracking and adaptive therapy-plan support. Manufacturing Licence MFG/MD/2026/000248 · Form MD-5 and annexure. Software scope is distinct from therapist credentials. https://www.pinnacleblooms.org/verify/evidence/records/md5.html
+How observations shape the plan: Our workflow connects everyday feedback with review and correction. Family observations contribute to professional interpretation. Read the mechanism and method with their stated versions and limitations. A workflow description is not proof of effectiveness for every child. https://www.pinnacleblooms.org/verify/evidence/paradigm/06-feedback-that-shapes-care.html
+Inspect the evidence behind the explanation: The product dossier maps the architecture and supporting records. Research publications and their status can be examined separately. The company-authored dossier is an evidence map. Original licences and primary study records govern their own claims. https://www.pinnacleblooms.org/verify/evidence/records/dossier.html
+
+Roles and access
+School or other outside input requires appropriate consent and authorised access. Ask the professional how to share observations in the current care programme; private records stay in the agreed care channel.
+
+What is the Fusion Module in PinnacleAI?
+Fusion is PinnacleAI’s tracking and correction module. It brings relevant observations from therapy, home and, where appropriate and consented, school into professional review so the team can decide what to keep, adapt, pause or investigate next.
+
+Why can a skill work in therapy but look different at home or school?
+The people, environment, timing, activity and support may differ. Fusion’s review keeps those details with the child’s response so the professional can investigate the difference instead of treating all observations as equivalent.
+
+What should a parent bring into a progress review?
+Bring one specific everyday example: what was happening, where, who was present, what support or cue was offered and how your child responded. Include the child’s choices and comfort. Share it through the agreed care channel, not in public comments.
+
+Does Fusion automatically change my child’s therapy?
+No. Relevant observations inform professional interpretation. The professional discusses appropriate changes with the family and explains what to observe next; a rating alone is not an autonomous treatment decision.
+
+Does every child need input from school or several different raters?
+No. Relevant contributors depend on the child’s circumstances. School input requires appropriate consent and authorised access; the described rater roles do not mean that every role contributes to every child’s record.
+
+What if my child does not want to continue an activity?
+The child’s choice, comfort and accessible way to pause or decline belong in the review. The professional can adapt or pause the support and reconsider the goal. Completing an activity is not the only useful information.
+
+How does Fusion connect with reassessment and the other therapies?
+Fusion connects everyday observations with the next support decision. Reassessment compares the broader ability and readiness picture over time. Speech, occupational, behavioural and educational contributions are included according to the child’s goals and professional judgement, not as a compulsory bundle.
+
+Do the licences guarantee progress for my child?
+The BIS schedule names Fusion within the software quality-system scope. MD-5 defines PinnacleAI’s non-diagnostic developmental-support intended use. These records do not guarantee an individual outcome; your child’s actual response remains central to review.
+
+How can we begin a conversation with Pinnacle?
+Call 9100 181 181, find a Pinnacle centre or use the enrolment page. Tell us one everyday activity you want to make easier. Telephone guidance is free; the team will explain the suitable professional, centre, first visit and fees before you decide.
+
+Begin with Pinnacle
+Call 9100 181 181 (tel:+919100181181). Telephone guidance is free. We explain the suitable professional, centre, first visit and fees before you decide.
+https://www.pinnacleblooms.org/centers
+https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india
+
+Publisher
+Pinnacle Blooms Network, operated by Bharath Healthcare Laboratories Private Limited.

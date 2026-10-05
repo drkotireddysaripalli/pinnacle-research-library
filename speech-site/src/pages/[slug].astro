@@ -1,5 +1,6 @@
 ---
 import PinnacleWaveExperience from '../components/PinnacleWaveExperience.astro';
+import FusionPage from '../components/FusionPage.astro';
 import TherapeuticaiPage from '../components/TherapeuticaiPage.astro';
 import PrognosePage from '../components/PrognosePage.astro';
 import PdkPage from '../components/PdkPage.astro';
@@ -12,4 +13,4 @@ import InstitutionalPage from '../components/InstitutionalPage.astro';
 export function getStaticPaths(){return [...pinnacleWave.filter(page=>!['abilityscore','everyday-therapy'].includes(page.slug)).map(page=>({params:{slug:page.slug},props:{page,kind:'wave'}})),...policies.map(page=>({params:{slug:page.slug},props:{page,kind:'policy'}})),...institutional.map(page=>({params:{slug:page.slug},props:{page,kind:'institutional'}}))];}
 const {page,kind}=Astro.props;
 ---
-{kind==='policy'?<PolicyPage page={page}/>:kind==='institutional'?<InstitutionalPage page={page}/>:page.slug==='therapeuticai'?<TherapeuticaiPage/>:page.slug==='prognose'?<PrognosePage/>:page.slug==='personal-development-kernel'?<PdkPage/>:page.slug==='seven-readiness-indexes'?<ReadinessPage/>:<PinnacleWaveExperience page={page}/>}
+{kind==='policy'?<PolicyPage page={page}/>:kind==='institutional'?<InstitutionalPage page={page}/>:page.slug==='fusion-module'?<FusionPage/>:page.slug==='therapeuticai'?<TherapeuticaiPage/>:page.slug==='prognose'?<PrognosePage/>:page.slug==='personal-development-kernel'?<PdkPage/>:page.slug==='seven-readiness-indexes'?<ReadinessPage/>:<PinnacleWaveExperience page={page}/>}
