@@ -1,9 +1,11 @@
 ---
+import {kindleForSku,kindleDetail,kindleLinkStyle} from '../../deployment/book-kindle-links.mjs';
 import registry from '../data/book-edition-identifiers.json';
 interface Props { sku: string; locale?: string; contentLocale?: string; }
 const {sku, locale='en', contentLocale=locale}=Astro.props;
 const edition=registry.offers.find(book=>book.sku===sku);
 const play=edition?.googlePlay;
+const kindle=kindleForSku(sku);
 const url=play?.status==='Live on Google Play'&&play.storefrontLinkVerified?play.storefrontUrl:null;
 const copy: Record<string,{label:string;detail:string}>={
   en:{label:'Buy on Google Play Books',detail:'Read this edition in Google Play Books. For a downloadable PDF, choose the Pinnacle bag option above.'},
@@ -21,6 +23,7 @@ const detail=(edition?.bookCount||0)>1?(collectionDetail[contentLocale]||collect
 {url&&<aside class="pbn-play-purchase" aria-label={text.label}>
   <a href={url} target="_blank" rel="noopener noreferrer">{text.label}<span aria-hidden="true"> ↗</span></a>
   <p>{detail}</p>
+  {kindle&&<p data-kindle-detail><a href={kindle.url} target="_blank" rel="noopener noreferrer" data-kindle-purchase={kindle.asin} style={kindleLinkStyle}>Buy on Amazon Kindle<span aria-hidden="true"> ↗</span></a><br/><span>{kindleDetail}</span></p>}
 </aside>}
 <style>
  .pbn-play-purchase{margin:1rem 0;padding:1rem 1.125rem;border:1px solid #ddd3ea;border-radius:1rem;background:#faf8fd;max-width:100%;box-sizing:border-box}
