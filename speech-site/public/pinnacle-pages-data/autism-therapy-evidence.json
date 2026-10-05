@@ -1,7 +1,7 @@
 {
   "page": "https://www.pinnacleblooms.org/autism-therapy",
-  "title": "Autism Therapy and Developmental Support for Children | Pinnacle Blooms",
-  "checkedOn": "2026-09-30",
+  "title": "Autism Therapy for Children · Integrated Support | Pinnacle Blooms",
+  "checkedOn": "2026-10-05",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "telephone": "+919100181181",
@@ -60,5 +60,98 @@
       "source": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html",
       "boundary": "The directory does not establish current autism-service availability, professional credentials, fees or appointment capacity. Confirm before travel."
     }
+  ],
+  "updatedOn": "2026-10-05",
+  "questions": [
+    {
+      "question": "How will we know whether the plan needs to change?",
+      "answer": "Choose a meaningful activity and agree what to observe: what your child does, which support is used, comfort and what happens in the relevant setting. Bring those observations to the agreed review. The professional and family can continue a useful support, adapt a step or setting, or reconsider the goal and relevant health needs. A supported response is not yet independent use or evidence that the ability transfers to school."
+    },
+    {
+      "question": "What is autism therapy?",
+      "answer": "Autism therapy is not one fixed programme. Depending on assessment, a child may benefit from support for communication, play, learning, everyday routines, sensory-motor participation or behaviours affecting daily life. Relevant goals and professionals should be chosen for the individual child with the family."
+    },
+    {
+      "question": "Does every autistic child need Speech, Occupational Therapy, ABA and Special Education?",
+      "answer": "No. A child may need one contribution, several or a different professional route. Individual assessment, family priorities and professional judgement determine what is relevant. Pinnacle does not prescribe every therapy to every child."
+    },
+    {
+      "question": "Do I need a diagnosis before I call?",
+      "answer": "No. You can call and describe one everyday moment you want to understand or make more possible. The team can explain a suitable first conversation and whether assessment or another professional is appropriate. The call and PinnacleAI do not diagnose autism."
+    },
+    {
+      "question": "Who can diagnose autism?",
+      "answer": "Autism diagnosis requires an appropriately qualified professional or multidisciplinary diagnostic pathway using developmental history and clinical observation. Ask who is conducting any diagnostic assessment, what qualification applies and whether current registration is required."
+    },
+    {
+      "question": "What should an assessment consider?",
+      "answer": "A child-specific assessment may consider strengths, communication, play, learning, everyday living, sensory-motor access, health, sleep, feeding, behaviour, environments and family priorities. Relevant health or diagnostic professionals should be involved when indicated."
+    },
+    {
+      "question": "How are meaningful goals chosen?",
+      "answer": "The child and family’s everyday priorities should guide goals. A useful goal connects an ability with something the child wants or needs to do in daily life and includes a clear way to review what changed and what support remains."
+    },
+    {
+      "question": "What if my child uses little or no spoken language?",
+      "answer": "Communication is broader than speech. A suitable professional can consider gestures, signs, pictures, communication devices or other accessible ways to express needs, choices, refusal, comfort and ideas."
+    },
+    {
+      "question": "Is the goal to make my child appear normal?",
+      "answer": "No. Support should build useful abilities, comfort, communication, autonomy and participation while respecting the child’s dignity and harmless differences. Forced eye contact, suppression for appearance or aversive practices are not the purpose described here."
+    },
+    {
+      "question": "Can autism therapy cure autism or guarantee independence?",
+      "answer": "No. Pinnacle does not promise a cure, speech, independence, school admission, mainstream placement, a timetable or a particular outcome. The programme direction is toward growing self-sufficiency and participation, with progress reviewed for the individual child."
+    },
+    {
+      "question": "How do parents, caregivers and teachers take part?",
+      "answer": "Families share priorities, strengths and observations. With appropriate consent and privacy safeguards, teachers may share what happens in learning and classroom routines. Manageable agreed practice can be used in natural moments without turning the family into the therapist."
+    },
+    {
+      "question": "What should happen if behaviour changes suddenly or abilities are lost?",
+      "answer": "Seek appropriate medical or qualified professional review. Sudden change or loss of abilities can require assessment of health, pain, sleep, hearing, neurological, mental-health or other factors. Behavioural or therapy support should not delay relevant healthcare."
+    },
+    {
+      "question": "What does PinnacleAI support?",
+      "answer": "PinnacleAI GPT-OS v1.0.0 is non-diagnostic developmental-support Class B Software as a Medical Device for children aged 0–12. Its documented functions include developmental ability measurement, readiness tracking, progress forecasting and adaptive therapy-plan support. People remain responsible for decisions."
+    },
+    {
+      "question": "What do the PinnacleAI licences prove?",
+      "answer": "The MD-5 and BIS records define the licensed software and management-system scope. The Free Sale Certificate records Indian marketability and export eligibility subject to importing-country law. They do not diagnose autism, credential every professional, register every centre or guarantee a child’s outcome."
+    },
+    {
+      "question": "How long will support take and what will it cost?",
+      "answer": "Duration, frequency and fees depend on the child-specific need, professional recommendation, centre and service. Ask the team to confirm the proposed next step, professional, appointment, current fees and review point before you begin."
+    },
+    {
+      "question": "Is every service available at every centre?",
+      "answer": "No. Service, professional and appointment availability can differ by location. Call 9100 181 181 or use the centre directory so the team can confirm the suitable centre before you travel."
+    }
+  ],
+  "illustrativeExample": {
+    "status": "Fictional explanation, not a patient outcome or treatment plan",
+    "steps": [
+      "1The life goalThe family wants the child to take part in getting ready for school: choose a familiar item, pack it and ask for help when needed. Participation is the purpose; finishing quickly is not the measure.",
+      "2The starting observationIn this fictional example, the child chooses a familiar bottle from two options. When asked to “get ready”, the child waits and the parent completes the packing. Choosing is an observed strength; the broad instruction and packing sequence still need to be understood.",
+      "3One agreed adjustmentAfter observing the routine, the speech and language professional and family agree a clear way to request help. The educational professional makes the next step visible: one picture for “bottle in bag”, with the actual bottle and open bag nearby. At home, the parent will offer the same picture, bottle and open bag, give the child time to try or request help, and note the assistance and comfort to discuss at review. They agree to try that one step rather than add more instructions.",
+      "4The right contribution, when neededIf reaching, gripping, clothing or sensory conditions make that step difficult, an occupational therapist considers access and the environment. If moving between activities remains difficult, suitable behavioural support examines predictability, communication and the context. Each contribution has a reason; four therapies are not prescribed automatically.",
+      "5The next checkpointAt the review agreed with the family, ask: did the child choose, begin the packing step or request help; what prompt or assistance was used; was the child comfortable? With consent, compare the same supported step at school. The response to this adjustment has not yet been observed."
+    ],
+    "nextDecisions": [
+      "A useful supported stepIf the child uses the step comfortably with the agreed help, keep that support long enough to understand when it is useful. Decide together whether and how to change the help. A prompted action is not yet independent use.",
+      "The step is still inaccessibleIf the child does not begin, revisit the instruction, communication method, objects and setting. The relevant professional and family choose one adjustment to review; simply adding more sessions does not answer what blocked participation.",
+      "Comfort or the priority changesIf the child communicates distress or the family priority changes, pause the demand and reconsider the plan. Pain, sudden change or loss of abilities calls for the appropriate health review."
+    ],
+    "notEstablished": "The response to the visible one-step packing and help-request adjustment has not yet been observed. A supported action is not independent packing or evidence of school readiness or transfer."
+  },
+  "reviewSource": "https://www.nice.org.uk/guidance/cg170/chapter/Recommendations",
+  "stages": [
+    "1Understand strengths, abilities and support needsBegin with what the child already does, prefers and communicates, alongside the moments that need support.AbilityScore®",
+    "2Forecast readiness and agree a child-specific planChoose everyday priorities with the family and use readiness information alongside professional judgement.Readiness & planning",
+    "3Bring in the support this child needsSelect relevant therapies, educational support or health review; no fixed bundle is required.Relevant intervention",
+    "4Practise in meaningful momentsUse manageable, agreed supports in suitable home, school and community routines.Everyday Therapy",
+    "5Track progress and correct the planAsk what the child could use, where it worked, what support remained and what should change.Track & correct",
+    "6Reassess and repeat as neededUpdate abilities, readiness and the plan as the child’s life and circumstances change.Reassess & review",
+    "7Work toward growing independence and participationKeep school readiness, self-sufficiency and mainstream inclusion as directions shaped by the individual child.Self-sufficient life"
   ]
 }

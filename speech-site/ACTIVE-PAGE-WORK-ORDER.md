@@ -42,7 +42,7 @@ Live: https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate
 
 Sourcecfc23c2e6f6c050935c5423f085779351876c4b7; Cloudflare91ce11f4-e4be-42ab-a060-54abbd085d70. Concrete illustrative family observation and professional adjustment, three review decisions, seven linked stages and eight matchingFAQs delivered. Existing approved creatives and common shell retained. Pushed CI, five widths, physicaliPhone/hostedSafari and public checks passed.194routes/fourbindings/23protected responses preserved. One changed-URL IndexNow acceptance and GSC annotation recorded. Mobile Lighthouse96/desktop100; mobile labLCP2.639s remains an optimisation opportunity. Proof: RELEASE-ABOUT-20261005.md and deployment/about-release-receipt-20261005.json.
 
-## Next individual: Autism Therapy
+## Active individual: Autism Therapy
 
 Canonical: https://www.pinnacleblooms.org/autism-therapy
 
@@ -65,3 +65,9 @@ The authorised combined Amazon hardcover alternatives are delivered: four verifi
 - Preserve source holds, clinical scope, branch-availability limits and paused/stopped jobs. A directory entry alone does not establish current service availability.
 - Reuse unchanged evidence and completed checks. No swarm, full hourly crawl, duplicated campaigns or synthetic customer calls/forms. Use the native signed-in ChatGPT/Codex session.
 - OT mobile lab LCP2.73s, PDK2.66s and Prognose2.74s remain recorded optimisation opportunities; they are not failed field Core Web Vitals results. Future common-performance work should use changed evidence, not repeated unchanged tests.
+
+## Autism release contract — 5 October 2026
+
+Action 2aec26fb-ff52-4449-ad1d-9e4b54316673. The family question is how the relevant therapies connect around a real daily goal. Keep the accepted recognition, first conversation, source records, centre directory and common shell. Strengthen the opening purpose; replace the generic school-morning list with a fictional observation, named professional adjustment, family role, unobserved checkpoint and three meaningful review decisions. Link all seven stages to their existing pages. Reuse the current approved hero, first-conversation, pathway, school-morning and social creatives; they already show the required scenes. Keep the example in readable HTML and all machine exports aligned. The care next step is a call to 9100 181 181 or autism-aware enrolment.
+
+Review the assembled source/candidate once with one read-only reviewer. Check five widths, FAQ/source parity, keyboard, accessibility, common shell, exact-source CI, physical iPhone and hosted Safari at the live boundary. Preserve current Cloudflare version e023ba21-32d1-45f7-a540-76b3c66055e6 as rollback and all 194 routes/four bindings, including both just-released hardcover destinations. Record one changed-URL IndexNow response and a GSC annotation. No patient/test enquiry or unchanged broad crawl.

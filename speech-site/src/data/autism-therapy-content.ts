@@ -18,8 +18,8 @@ const stages = [
 export const autismTherapyContent: ServiceContent = {
   id:'autism-therapy', path:autismTherapyPath, label:'Autism Therapy',
   name:'Autism therapy and developmental support for children', type:'Child-specific coordinated developmental support',
-  title:'Autism Therapy & Developmental Support for Children | Pinnacle Blooms',
-  description:'Autism therapy for children: understand your child’s strengths, choose the relevant support and build toward everyday independence and participation. Call 9100 181 181.',
+  title:'Autism Therapy for Children · Integrated Support | Pinnacle Blooms',
+  description:'Child-specific autism therapy: connect communication, daily routines and learning toward a self-sufficient, mainstream-included life. Call Pinnacle: 9100 181 181.',
   enquiry:{url:autismEnquiry,label:'Start my child’s first conversation',mobileLabel:'First conversation'},
   guidanceNote:'Free guidance, 24/7. You do not need to choose a therapy before you call.',
   discover:{label:'See how the connected pathway works',href:'#pinnacle-difference'},
@@ -39,8 +39,8 @@ export const autismTherapyContent: ServiceContent = {
   hero:{
     heading:'See your whole child.',
     emphasis:'Build abilities for everyday life.',
-    lead:'Only the support that fits your child. One life-first direction.',
-    copy:'You do not need to choose a therapy before you call. Tell us what your child enjoys and one moment you want to make more possible. Together, we can identify a suitable first professional step and connect only the support your child needs to a life-first direction.',
+    lead:'Your child’s self-sufficient, mainstream-included life. The purpose from the beginning.',
+    copy:'Tell us what your child enjoys and one everyday moment you want to make more possible. At Pinnacle, your family and the relevant professionals connect communication, routines, learning and participation around that purpose. You can begin with a conversation; you do not need to choose the therapies yourself.',
     moments:[{icon:'voice',label:'Communicate needs and choices'},{icon:'home',label:'Navigate everyday routines'},{icon:'people',label:'Learn, play and participate'}]
   },
   pathway:{stages,image:pathway,alt:'An Indian child, mother and child-development professional consider one goal; a luminous path shows possible communication, home-routine and peer-play moments.',caption:'The child’s goal guides which contributions are relevant. The family and professionals review what becomes usable in life.'},
@@ -53,6 +53,7 @@ export const autismTherapyContent: ServiceContent = {
     {icon:'sun',title:'Strengths and interests',copy:'What the child enjoys and already does can help shape engagement, useful goals and meaningful ways to participate.'}
   ],
   faqs:[
+    {question:'How will we know whether the plan needs to change?',answer:'Choose a meaningful activity and agree what to observe: what your child does, which support is used, comfort and what happens in the relevant setting. Bring those observations to the agreed review. The professional and family can continue a useful support, adapt a step or setting, or reconsider the goal and relevant health needs. A supported response is not yet independent use or evidence that the ability transfers to school.'},
     {question:'What is autism therapy?',answer:'Autism therapy is not one fixed programme. Depending on assessment, a child may benefit from support for communication, play, learning, everyday routines, sensory-motor participation or behaviours affecting daily life. Relevant goals and professionals should be chosen for the individual child with the family.'},
     {question:'Does every autistic child need Speech, Occupational Therapy, ABA and Special Education?',answer:'No. A child may need one contribution, several or a different professional route. Individual assessment, family priorities and professional judgement determine what is relevant. Pinnacle does not prescribe every therapy to every child.'},
     {question:'Do I need a diagnosis before I call?',answer:'No. You can call and describe one everyday moment you want to understand or make more possible. The team can explain a suitable first conversation and whether assessment or another professional is appropriate. The call and PinnacleAI do not diagnose autism.'},

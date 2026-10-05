@@ -1,38 +1,65 @@
-Autism Therapy and Developmental Support for Children — claims and sources
-Checked: 30 September 2026
-Canonical: https://www.pinnacleblooms.org/autism-therapy
+Autism Therapy for Children · Integrated Support | Pinnacle Blooms
+https://www.pinnacleblooms.org/autism-therapy
+Checked: 2026-10-05
 
-1. Autism diversity and individual support
-Source: https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders
-Use: autism is diverse; abilities and support needs vary and can change.
-Limit: no WHO endorsement of Pinnacle and no determination of an individual plan.
+Autism diversity and individual support
+Autism is diverse; abilities and needs vary and can change. Support should reflect the individual child and family.
+https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders
+WHO provides general public-health information. It does not endorse Pinnacle or determine an individual child’s plan.
 
-2. Individual and multidisciplinary planning
-Sources: https://www.nice.org.uk/guidance/cg170/chapter/Recommendations and https://www.nice.org.uk/guidance/cg128/chapter/Recommendations
-Use: consider strengths, communication, health, daily living, sensory conditions, learning, environment and family context; select only relevant contributions rather than a fixed therapy bundle.
-Limit: no compulsory therapy bundle and no proof of an individual outcome.
+Individual and multidisciplinary planning
+Assessment and support can consider communication, health, daily living, sensory conditions, learning, environment and family context. Relevant therapies and professionals are selected for the child, not assigned as a fixed bundle.
+https://www.nice.org.uk/guidance/cg170/chapter/Recommendations
+General clinical guidance. It does not prescribe a Pinnacle service bundle or prove an outcome.
 
-3. Diagnosis boundary
-Source: https://www.cdc.gov/autism/diagnosis/index.html
-Use: diagnosis relies on developmental history and qualified professional observation.
-Limit: a call, form or PinnacleAI record does not diagnose autism.
+Diagnosis boundary
+Autism diagnosis relies on developmental history and professional observation; a call or software record does not diagnose.
+https://www.cdc.gov/autism/diagnosis/index.html
+The CDC describes diagnosis generally. Families should use an appropriately qualified pathway applicable in their jurisdiction.
 
-4. Pinnacle life-first direction
-Source: https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html
-Use: connect abilities, readiness, goals, relevant people, everyday practice, tracking, correction and reassessment with the child’s wider life.
-Limit: no guarantee of speech, independence, school admission, mainstream inclusion or a particular result.
+Life-first programme direction
+Pinnacle connects abilities, readiness, child-specific goals, relevant people, everyday practice, tracking, correction and reassessment with a direction toward growing self-sufficiency and participation.
+https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html
+Pinnacle programme description. It does not guarantee speech, independence, school admission, mainstream inclusion or an individual result.
 
-5. PinnacleAI regulatory scope
-Sources: https://www.pinnacleblooms.org/verify/evidence/records/md5.html, https://www.pinnacleblooms.org/verify/evidence/records/bis.html and https://www.pinnacleblooms.org/verify/evidence/records/fsc.html
-Use: non-diagnostic developmental-support Class B SaMD for children aged 0–12, with documented measurement, readiness, forecasting and plan-support functions.
-Limit: no autism diagnosis, professional credential, centre registration, foreign approval or outcome guarantee is inferred.
+PinnacleAI licensed scope
+PinnacleAI GPT-OS v1.0.0 is non-diagnostic developmental-support Class B SaMD for children aged 0–12 and supports ability measurement, readiness tracking, progress forecasting and adaptive plan support.
+https://www.pinnacleblooms.org/verify/evidence/records/md5.html
+The licence defines software scope. It is not autism diagnosis, a therapy licence, a professional credential or an outcome guarantee.
 
-6. Research and centres
-Sources: https://www.pinnacleblooms.org/verify/evidence/research-library.html and https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html
-Use: inspect study statuses and dated centre identities, addresses and maps.
-Limit: confirm the service, professional, appointment and current fees before travel.
+BIS scope
+The BIS schedule names documented medical-device management-system and software-lifecycle scope for PinnacleAI.
+https://www.pinnacleblooms.org/verify/evidence/records/bis.html
+BIS scope does not establish effectiveness for an individual child or certify every centre and professional.
 
-Operator: Bharath Healthcare Laboratories Private Limited
-Brand: Pinnacle Blooms Network
-National number: 9100 181 181 / tel:+919100181181
-Structured source map: https://www.pinnacleblooms.org/pinnacle-pages-data/autism-therapy-evidence.json
+Free Sale Certificate
+The FSC records lawful Indian marketability and export eligibility subject to importing-country law.
+https://www.pinnacleblooms.org/verify/evidence/records/fsc.html
+The FSC is not foreign approval and does not prove an individual therapy outcome.
+
+Research status
+Pinnacle publishes a research library with source, status, population, method and limitation labels.
+https://www.pinnacleblooms.org/verify/evidence/research-library.html
+Company and operator research contains varied cohorts and publication statuses and must not be generalized to every child, centre or service.
+
+Centre directory
+Published centre identities, addresses, maps and selected photographs are provided through a dated directory.
+https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html
+The directory does not establish current autism-service availability, professional credentials, fees or appointment capacity. Confirm before travel.
+
+Illustrative example
+1The life goalThe family wants the child to take part in getting ready for school: choose a familiar item, pack it and ask for help when needed. Participation is the purpose; finishing quickly is not the measure.
+
+2The starting observationIn this fictional example, the child chooses a familiar bottle from two options. When asked to “get ready”, the child waits and the parent completes the packing. Choosing is an observed strength; the broad instruction and packing sequence still need to be understood.
+
+3One agreed adjustmentAfter observing the routine, the speech and language professional and family agree a clear way to request help. The educational professional makes the next step visible: one picture for “bottle in bag”, with the actual bottle and open bag nearby. At home, the parent will offer the same picture, bottle and open bag, give the child time to try or request help, and note the assistance and comfort to discuss at review. They agree to try that one step rather than add more instructions.
+
+4The right contribution, when neededIf reaching, gripping, clothing or sensory conditions make that step difficult, an occupational therapist considers access and the environment. If moving between activities remains difficult, suitable behavioural support examines predictability, communication and the context. Each contribution has a reason; four therapies are not prescribed automatically.
+
+5The next checkpointAt the review agreed with the family, ask: did the child choose, begin the packing step or request help; what prompt or assistance was used; was the child comfortable? With consent, compare the same supported step at school. The response to this adjustment has not yet been observed.
+A useful supported stepIf the child uses the step comfortably with the agreed help, keep that support long enough to understand when it is useful. Decide together whether and how to change the help. A prompted action is not yet independent use.
+
+The step is still inaccessibleIf the child does not begin, revisit the instruction, communication method, objects and setting. The relevant professional and family choose one adjustment to review; simply adding more sessions does not answer what blocked participation.
+
+Comfort or the priority changesIf the child communicates distress or the family priority changes, pause the demand and reconsider the plan. Pain, sudden change or loss of abilities calls for the appropriate health review.
+The response to the visible one-step packing and help-request adjustment has not yet been observed. A supported action is not independent packing or evidence of school readiness or transfer.
