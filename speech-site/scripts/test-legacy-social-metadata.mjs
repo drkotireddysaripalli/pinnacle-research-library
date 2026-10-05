@@ -26,6 +26,11 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
   }}}));
   const run=async (f={},path='/physiotherapy',options={})=>{fixture={body:html(),...f};const r=await runtime.dispatchFetch(origin+path,options);const bytes=Buffer.from(await r.arrayBuffer());return {r,bytes,body:bytes.toString('utf8')};};
   try {
+    await t.test('franchise canonical cycle is removed with one canonical and preserved content',async()=>{
+      const path='/franchise-autism-therapy-center',input=html(path).replace('http://www.pinnacleblooms.org'+path,origin+'/franchises').replaceAll(origin+path,origin+'/franchises').replace('</head>','<link rel="canonical" href="https://mobile.pinnacleblooms.org/franchises"></head>');
+      const {r,body}=await run({body:input},path);
+      assert.equal(r.status,200);assert.equal((body.match(/rel="canonical"/g)||[]).length,1);assert(body.includes('href="'+origin+path+'"'));assert(body.includes('content="'+origin+path+'"'));assert(body.includes('Approved header'));assert(body.includes('Approved footer'));
+    });
     await t.test('all newly covered public templates use the same exact correction and preserve body',async()=>{
       for(const path of ['/t/interactive-song-therapy','/mirracles/123/published-story','/allmirracles','/yoga-therapy','/teachertraining','/teacher-training']){
         const input=html(path);const {body}=await run({body:input,chunk:37},path);assert.equal(body,input.replace('content="http:','content="https:'));

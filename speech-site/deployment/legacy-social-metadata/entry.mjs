@@ -1,6 +1,8 @@
 // Shared legacy metadata repair. The Astro portal, Ask and other route owners
 // remain independent. Inspect a bounded head; separately filter a known invalid
 // FAQ debug payload while streaming all remaining content unchanged.
+import {repairFranchiseCanonical} from './franchise-canonical.mjs';
+import {staffRoute} from './staff-routes.mjs';
 import {reduceKnownLegacyPayload} from './payload.mjs';
 import {SERVICES_PATH, SERVICES_URL, physiotherapyRedirect, repairServiceLinks} from './discovery.mjs';
 import {repairKnownLegacySchema} from './schema.mjs';
@@ -123,8 +125,9 @@ export async function transform(request, response) {
 }
 
 export async function handle(request, fetcher = fetch) {
-  const redirect = physiotherapyRedirect(request);
+  const redirect = staffRoute(request) || physiotherapyRedirect(request);
   if (redirect) return redirect;
+  if (new URL(request.url).pathname === '/franchise-autism-therapy-center') return repairFranchiseCanonical(request, await fetcher(request));
   if (!isEligible(request)) return fetcher(request);
   const headers = new Headers(request.headers);
   // An origin validator could otherwise restore a cached pre-repair head via 304.
