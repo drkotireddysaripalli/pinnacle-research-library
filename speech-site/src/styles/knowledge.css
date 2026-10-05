@@ -2,5 +2,6 @@
 @media(max-width:980px){.knowledge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.knowledge-answer-grid{grid-template-columns:1fr}.knowledge-next{grid-template-columns:1fr}.knowledge-next aside{border-left:0;border-top:1px solid #d9c4e2;padding:18px 0 0}}
 @media(max-width:600px){.knowledge-main{padding:24px 16px 45px}.knowledge-grid{grid-template-columns:1fr;gap:16px}.knowledge-hero{padding:15px 0 24px}.knowledge-hero>p:not(.knowledge-kicker){font-size:17px}.knowledge-card>a{padding:20px}.knowledge-next{padding:22px}.knowledge-next h2{font-size:25px}.knowledge-answer{font-size:17px}.knowledge-hero h1{font-size:31px}.knowledge-actions a{width:100%;font-size:15px}.knowledge-next p{font-size:16px}.knowledge-section-title{font-size:25px}}
 @font-face{font-family:'Anek Telugu';src:url('../../public/pinnacle-pages-fonts/anek-telugu.woff2') format('woff2');font-display:swap;font-weight:100 800}
+.knowledge-answer a{text-decoration:underline;text-underline-offset:4px}
 @font-face{font-family:'Anek Devanagari';src:url('../../public/pinnacle-pages-fonts/anek-devanagari.woff2') format('woff2');font-display:swap;font-weight:100 800}
 html[lang=te] .knowledge-main{font-family:'Anek Telugu',sans-serif}html[lang=hi] .knowledge-main,html[lang=mr] .knowledge-main{font-family:'Anek Devanagari',sans-serif}
