@@ -1,5 +1,6 @@
 // Local build locations and their unchanged public canonical paths.
 export const pageContracts = {
+  specialEducation:{path:'/best-special-education-center-call-9100181181',canonical:'/best-special-education-center-call-9100181181'},
   fusion:{path:'/fusion-module',canonical:'/fusion-module'},
   therapeuticai:{path:'/therapeuticai',canonical:'/therapeuticai'},
   prognose:{path:'/prognose',canonical:'/prognose'},
@@ -19,4 +20,4 @@ export const pageContracts = {
   ,policies:{path:'/policies',canonical:'/policies',static:'scripts/validate-current-policies.mjs'}
 };
 // CI follows the page currently in acceptance; change this only when the next page candidate is ready.
-export const activeQualityPage='fusion';
+export const activeQualityPage='specialEducation';

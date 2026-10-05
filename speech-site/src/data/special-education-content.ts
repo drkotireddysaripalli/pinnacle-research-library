@@ -13,7 +13,7 @@ export const specialEducationContent: ServiceContent = {
   name:'Special education support for children', type:'Child-specific educational support',
   title:'Special Education Support for Children in India | Pinnacle Blooms',
   description:'Explore child-specific special education for learning access, communication and school participation. Find a Pinnacle centre or call 9100 181 181.',
-  enquiry:{url:specialEducationEnquiry,label:'Arrange a first conversation',mobileLabel:'Start a conversation'},
+  enquiry:{url:specialEducationEnquiry,label:'Begin with Pinnacle',mobileLabel:'Arrange a visit'},
   guidanceNote:'The team confirms the suitable professional, centre, appointment and current fees before you travel.',
   discover:{label:'See what to bring to the first conversation',href:'#first-conversation'},
   citations:[
@@ -31,7 +31,7 @@ export const specialEducationContent: ServiceContent = {
     heading:'Help your child access learning.',
     emphasis:'And take part in more of school and life.',
     lead:'Understand an instruction. Ask for help. Begin an activity. Learn with others.',
-    copy:'We connect child-specific teaching, family and teacher knowledge, suitable professional support and regular review around the life your child is growing toward.',
+    copy:'Your child’s self-sufficient, mainstream-included life is the purpose from the beginning. We connect child-specific teaching, family and teacher knowledge, suitable support and regular review—so learning has a direction beyond completing a task.',
     moments:[{icon:'book',label:'Access learning'},{icon:'voice',label:'Communicate during learning'},{icon:'people',label:'Participate with others'}]
   },
   pathway:{stages:learningStages,image:learningCycle,alt:'A special educator breaks a learning activity into accessible steps, an Indian child practises with family, participates in class and returns to review with the adults.',caption:'Understand the learning moment, adapt the teaching, practise where it matters and review what the child can use.'},

@@ -200,6 +200,16 @@ for(const id of choices){
       await evaluate("document.querySelector('#architecture').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('therapeuticai-architecture');
       await check('TherapeuticAI FAQ disclosure works',async()=>{await click('.therapeuticai-faq summary');return evaluate("return document.querySelector('.therapeuticai-faq details').open && document.querySelectorAll('.therapeuticai-faq details').length===8");});
     }
+    if(target.pathname==='/best-special-education-center-call-9100181181'){
+      await check('Special Education learning decision and stages are readable',async()=>{
+        row.specialGeometry=await evaluate("const cards=[...document.querySelectorAll('.special-cycle>li,.special-stage-grid>li,.special-review-branches article')];return {steps:document.querySelectorAll('.special-cycle>li').length,stages:document.querySelectorAll('.special-stage-grid>li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.specialGeometry;return r.steps===4&&r.stages===7&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#learning-example').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('special-example');
+      await evaluate("document.querySelector('.special-chosen-step').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('special-decision');
+      await evaluate("document.querySelector('.special-stage-grid').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('special-stages');
+      await check('Special Education FAQ disclosure works',async()=>{await click('#questions summary');return evaluate("return document.querySelector('#questions details').open && document.querySelectorAll('#questions details').length===12");});
+    }
     if(target.pathname==='/fusion-module'){
       await check('Fusion observations, architecture and seven stages are readable',async()=>{
         row.fusionGeometry=await evaluate("const cards=[...document.querySelectorAll('.fusion-observations article,.fusion-architecture li,.fusion-stages li,.fusion-review-branches article')];return {records:document.querySelectorAll('.fusion-observations article').length,stages:document.querySelectorAll('.fusion-stages li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");

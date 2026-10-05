@@ -1,7 +1,7 @@
 {
   "page": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
   "title": "Special Education Support for Children in India | Pinnacle Blooms",
-  "checkedOn": "2026-09-29",
+  "checkedOn": "2026-10-05",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
   "telephone": "+919100181181",
@@ -55,7 +55,7 @@
       "boundary": "The directory does not establish current special-education availability, professional credentials, fees or appointment capacity. Confirm before travel."
     }
   ],
-  "updatedOn": "2026-10-01",
+  "updatedOn": "2026-10-05",
   "lifecycle": [
     {
       "stage": 1,
@@ -92,5 +92,78 @@
       "title": "Grow independence and participation",
       "text": "We work toward greater self-sufficiency, school readiness, meaningful mainstream participation and a wonderful life. Your child’s progress is individual, and useful support and adaptations can remain part of independence."
     }
+  ],
+  "questions": [
+    {
+      "question": "What is special education support for children?",
+      "answer": "Special education is child-specific educational support. A qualified professional may adapt teaching, communication, materials, activities, pace or the learning environment so a child can access learning and participate. The approach and goals depend on individual assessment."
+    },
+    {
+      "question": "Is special education the same as tutoring?",
+      "answer": "Tutoring usually focuses on helping a learner with academic content. Special education considers how the child accesses, communicates and participates in learning, and may adapt the teaching method, material, environment and support around an individual educational need."
+    },
+    {
+      "question": "Does my child need a diagnosis before I call?",
+      "answer": "You can call and describe the learning or participation moments that concern you. The team can explain a suitable first conversation and whether assessment or another professional should be involved. The call and the PinnacleAI software do not diagnose a child."
+    },
+    {
+      "question": "What can I discuss in the first conversation?",
+      "answer": "Bring one learning moment you would like to become more possible, such as following an instruction, asking for help, beginning an activity, early reading or writing, or joining a classroom routine. Ask about the professional, approach, centre, appointment and current fees."
+    },
+    {
+      "question": "How are goals chosen?",
+      "answer": "Goals should reflect the child’s abilities, learning access, communication and the participation that matters to the child and family. The educator and family can agree what to work toward and how progress will be observed and reviewed."
+    },
+    {
+      "question": "How do parents and caregivers take part?",
+      "answer": "Families share priorities, strengths and observations from everyday life. When appropriate, they may use manageable strategies in natural routines and bring what happened back into review. Family participation is partnership, not blame or a substitute for professional work."
+    },
+    {
+      "question": "How can teachers contribute?",
+      "answer": "With appropriate consent and privacy safeguards, teachers can describe classroom activities, supports, barriers and participation. Their observations can help the family and professional understand whether an ability is being used where it matters."
+    },
+    {
+      "question": "How can special education work with speech, occupational or behavioural support?",
+      "answer": "Each discipline contributes a distinct perspective. A child-specific plan may connect educational support with communication, everyday activities, sensory-motor access or behavioural support when indicated. Every child does not need every service."
+    },
+    {
+      "question": "What does PinnacleAI support?",
+      "answer": "PinnacleAI GPT-OS v1.0.0 is non-diagnostic developmental-support software for children aged 0–12. Its licensed scope includes developmental ability measurement, readiness tracking, progress forecasting and adaptive plan support. Professionals and families remain responsible for educational and care decisions."
+    },
+    {
+      "question": "Does a PinnacleAI licence prove that special education will work for my child?",
+      "answer": "No. The MD-5 and BIS records define the licensed software and management-system scope. They do not certify a special educator, guarantee school admission, prove an individual outcome or replace professional assessment and review."
+    },
+    {
+      "question": "Is this school admission or school placement?",
+      "answer": "No. A Pinnacle centre conversation or appointment is not school admission, placement or a guarantee of mainstream inclusion. Ask the centre what educational support is available and discuss school decisions with the relevant school and professionals."
+    },
+    {
+      "question": "Is special education available at every Pinnacle centre?",
+      "answer": "Service and professional availability can differ by location. Call 9100 181 181 or use the centre directory so the team can confirm the suitable professional, centre, appointment and current fees before you travel."
+    }
+  ],
+  "illustrativeExample": {
+    "status": "Fictional explanation, not a patient outcome or treatment plan",
+    "steps": [
+      "1What the child already doesWith one familiar object and its matching picture in view, the child points to the match after the educator names it. This is an observed strength with adult support.",
+      "2Where the activity stopsWith six pictures on a worksheet and three spoken instructions together—find, circle, then put away—the child looks between the sheet and the adult and stops. The observation does not tell us why.",
+      "3The barrier to investigateThe educator first checks whether the number of choices and instruction sequence make access harder. This is a working explanation to test, not a label for the child.",
+      "4The adaptation we chooseKeep the same familiar matching goal. Present two large picture cards, say “Point to the ball” and accept pointing as the response. Offer time, help and a way to pause."
+    ],
+    "nextDecisions": [
+      "If the child chooses with this supportKeep the accessible format, record the help still needed and review the next small step with the educator. Do not assume the ability has transferred to a worksheet or classroom.",
+      "If the child pauses or turns awayRespect the pause. Revisit communication, comfort, materials and the goal with the professional; another discipline may contribute where indicated. More pressure is not the next step."
+    ],
+    "notEstablished": "The response to the two-choice, one-instruction adaptation is not yet observed. Supported matching is not an independent response or evidence of classroom transfer."
+  },
+  "stages": [
+    "1Understand abilitiesWe start with your child’s strengths, interests, communication and learning access. Where AbilityScore® is used, we read its measurement alongside age, context, suitable assessment and your observations.AbilityScore®",
+    "2Plan for readinessTogether, we choose meaningful learning and participation priorities. Readiness views, revisable forecasts and professional judgement help shape a child-specific plan, with clear goals, suitable support and a point to review.Readiness & planning",
+    "3Choose relevant supportWe adapt teaching, communication, materials, pace and the environment around the agreed goal. Speech, occupational or behavioural support joins when a suitable assessment indicates a role. The child’s needs determine the relevant contributions.TherapeuticAI®",
+    "4Practise in everyday lifeWe agree manageable ways to use developing abilities in familiar routines. Your family’s guided practice connects learning with daily life; teachers can contribute in suitable settings with your consent.Everyday Therapy",
+    "5Track and correctWe bring family, educator and relevant teacher observations into review: what your child could use, where it worked and what help remained. We adjust the teaching, materials, environment or support when needed.Fusion: track & correct",
+    "6Reassess and repeatWe reassess abilities, learning access and the help still needed. With your family, the professional decides whether to continue, adapt, reduce, pause, refer or complete support as appropriate.Reassessment",
+    "7Grow independence and participationWe work toward greater self-sufficiency, school readiness, meaningful mainstream participation and a wonderful life. Your child’s progress is individual, and useful support and adaptations can remain part of independence.Mainstream participation"
   ]
 }

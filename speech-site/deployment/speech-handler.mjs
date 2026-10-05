@@ -1,3 +1,4 @@
+import {specialEducationAsset,specialEducationHash} from './special-education-assets.mjs';
 import {fusionAsset,fusionHash} from './fusion-assets.mjs';
 import {abaAsset,abaHash} from './aba-assets.mjs';
 import {hasKindleEdition,addKindleLinks,KINDLE_LINK_RELEASE} from './book-kindle-links.mjs';
@@ -108,12 +109,12 @@ export async function serveSpeech(request,env,inventory){
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/centers.html')key='/pinnacle-pages-data/centers-machine.md';
  else if(wantsMarkdown&&Object.values(CENTRE_DETAIL_ROUTES).some(id=>key==='/pinnacle-pages-html/'+id+'.html'))key=key.replace('/pinnacle-pages-html/','/pinnacle-pages-data/').replace('.html','-machine.md');
  else if(wantsMarkdown&&key.startsWith('/pinnacle-pages-html/')&&PINNACLEAI_PATHS.some(path=>key==='/pinnacle-pages-html/'+path.slice(1)+'.html'))key=key.replace('/pinnacle-pages-html/','/pinnacle-pages-data/').replace('.html','-reading.md');
- if(!Object.hasOwn(inventory,key)&&!readinessHash(key)&&!abilityscoreHash(key)&&!everydayHash(key)&&!occupationalHash(key)&&!pdkHash(key)&&!prognoseHash(key)&&!therapeuticaiHash(key)&&!abaHash(key)&&!fusionHash(key))return null;
+ if(!Object.hasOwn(inventory,key)&&!readinessHash(key)&&!abilityscoreHash(key)&&!everydayHash(key)&&!occupationalHash(key)&&!pdkHash(key)&&!prognoseHash(key)&&!therapeuticaiHash(key)&&!abaHash(key)&&!fusionHash(key)&&!specialEducationHash(key))return null;
  const isHtml=key.endsWith('.html');
  const isMachineDocument=key.endsWith('.md');
  if(!env.ASSETS)return new Response('Temporarily unavailable',{status:503,headers:{'cache-control':'no-store'}});
  // Serve complete small assets; ignoring Range also prevents mixing bytes across releases.
- const source=fusionAsset(key,request.method)||abaAsset(key,request.method)||therapeuticaiAsset(key,request.method)||prognoseAsset(key,request.method)||pdkAsset(key,request.method)||occupationalAsset(key,request.method)||everydayAsset(key,request.method)||abilityscoreAsset(key,request.method)||readinessAsset(key,request.method)||await env.ASSETS.fetch(new Request('https://assets.local'+key,{method:request.method}));
+ const source=specialEducationAsset(key,request.method)||fusionAsset(key,request.method)||abaAsset(key,request.method)||therapeuticaiAsset(key,request.method)||prognoseAsset(key,request.method)||pdkAsset(key,request.method)||occupationalAsset(key,request.method)||everydayAsset(key,request.method)||abilityscoreAsset(key,request.method)||readinessAsset(key,request.method)||await env.ASSETS.fetch(new Request('https://assets.local'+key,{method:request.method}));
  if(![200,206,304].includes(source.status))return new Response(request.method==='HEAD'?null:'Temporarily unavailable',{status:503,headers:{'cache-control':'no-store','retry-after':'30'}});
  const headers=new Headers(source.headers);
  for(const k of ['set-cookie','age','expires','content-encoding'])headers.delete(k);
@@ -131,7 +132,7 @@ export async function serveSpeech(request,env,inventory){
  const parentReading=readingEntry(u.pathname,key);
  const editionSummary=isHtml&&editionSearchEntry(u.pathname);
  const kindleLinks=isHtml&&hasKindleEdition(u.pathname);
- const etag='"speech-'+(fusionHash(key)||abaHash(key)||therapeuticaiHash(key)||prognoseHash(key)||pdkHash(key)||occupationalHash(key)||everydayHash(key)||abilityscoreHash(key)||readinessHash(key)||inventory[key])+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+(editionSummary?'-'+EDITION_SEARCH_RELEASE:'')+(kindleLinks?'-'+KINDLE_LINK_RELEASE:'')+'"';headers.set('etag',etag);
+ const etag='"speech-'+(specialEducationHash(key)||fusionHash(key)||abaHash(key)||therapeuticaiHash(key)||prognoseHash(key)||pdkHash(key)||occupationalHash(key)||everydayHash(key)||abilityscoreHash(key)||readinessHash(key)||inventory[key])+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+(editionSummary?'-'+EDITION_SEARCH_RELEASE:'')+(kindleLinks?'-'+KINDLE_LINK_RELEASE:'')+'"';headers.set('etag',etag);
  if(isHtml){headers.set('vary','Accept');headers.set('x-robots-tag','index, follow, max-image-preview:large');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com"+(Object.hasOwn(BOOK_ROUTES,u.pathname)?" https://pinnacleblooms.myshopify.com":"")+"; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(isMachineDocument){headers.set('vary','Accept');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');}
  if(preview){headers.set('x-robots-tag','noindex, nofollow, nosnippet');headers.set('cache-control','no-store');headers.set('content-signal','search=no, ai-input=no');headers.set('referrer-policy','no-referrer');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; upgrade-insecure-requests");}
