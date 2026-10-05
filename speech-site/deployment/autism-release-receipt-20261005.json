@@ -1,0 +1,488 @@
+{
+  "item_id": "PAGE-AUTISM-THERAPY",
+  "action_id": "2aec26fb-ff52-4449-ad1d-9e4b54316673",
+  "outcome": "deployed",
+  "verified": true,
+  "at": "2026-10-05T09:13:17.608416+00:00",
+  "summary": "Autism Therapy delivered with a specific illustrative school-morning observation, relevant professional adjustment, explicit family practice and three review decisions; seven linked PinnacleAI stages and sixteen matching FAQs. Fixed the device-discovered Autism preference loss at enrolment. Source pushed, CI and live/device checks passed. All194 routes/four bindings,28 unrelated page responses and common shell preserved. One changed-URL IndexNow acceptance recorded.",
+  "commit": "d3a2ec360dcd0966d49c5c62df265383cad9a4bc",
+  "deployment": {
+    "at": "2026-10-05T09:11:22.457Z",
+    "commit": "d3a2ec360dcd0966d49c5c62df265383cad9a4bc",
+    "version": "075ab8f8-49c7-4e10-9430-ee2d873ae5a2",
+    "deployment": "482bf87e-36c0-4386-b4e6-bfb5961f05fc",
+    "rollback": [
+      {
+        "version_id": "f140b5b2-8986-4d35-8f65-13c9d53e75ca",
+        "percentage": 100
+      }
+    ]
+  },
+  "public_url": "https://www.pinnacleblooms.org/autism-therapy",
+  "proof": {
+    "ci": {
+      "at": "2026-10-05T09:11:07.837Z",
+      "commit": "d3a2ec360dcd0966d49c5c62df265383cad9a4bc",
+      "runs": [
+        {
+          "id": 37287876357,
+          "name": "Portal quality",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37287876357"
+        }
+      ]
+    },
+    "initialCI": {
+      "at": "2026-10-05T08:58:21.061Z",
+      "commit": "2cb2afe5c956df9c7213d25d8be297f2595f029e",
+      "runs": [
+        {
+          "id": 37286529918,
+          "name": "Portal quality",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37286529918"
+        }
+      ]
+    },
+    "candidate": {
+      "buildPages": 135,
+      "astroFiles": 140,
+      "typeErrors": 0,
+      "fullUnitTestsPassed": 423,
+      "finalFocusedTestsPassed": 30,
+      "widths": [
+        320,
+        390,
+        768,
+        1024,
+        1440
+      ],
+      "responsiveReport": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\autism-20261005\\local\\responsive.json",
+      "handoffResponsive": {
+        "rows": [
+          {
+            "width": 390,
+            "selected": "autism",
+            "overflow": false,
+            "noFormSubmitted": true
+          },
+          {
+            "width": 768,
+            "selected": "autism",
+            "overflow": false,
+            "noFormSubmitted": true
+          },
+          {
+            "width": 1440,
+            "selected": "autism",
+            "overflow": false,
+            "noFormSubmitted": true
+          }
+        ]
+      },
+      "w3c": {
+        "checkedAt": "2026-10-05T08:46:10.656Z",
+        "mode": "local",
+        "canonical": "https://www.pinnacleblooms.org/autism-therapy",
+        "status": 200,
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      },
+      "noReportedAxeViolations": true
+    },
+    "editorialReview": {
+      "reviewer": "One independent read-only reviewer",
+      "scope": "Owned voice, useful integrated contributions, evidence boundaries, family-practice connection and fifteen local section captures at390/768/1440px",
+      "finding": "Make the parent home-practice action explicit",
+      "resolution": "Parent now offers the same picture, bottle and open bag, gives time to try or request help and records assistance and comfort for review. The response remains unobserved in this fictional example.",
+      "finalLocalRefresh": "Five widths and thirty final focused tests passed after copy/export update; final phone example inspected by implementation owner",
+      "limitations": [
+        "Not named clinical review or real-family research",
+        "NICE current page fetch returned403; existing citation retained; WHO autism fact sheet inspected",
+        "Production and real-device evidence saved separately"
+      ]
+    },
+    "creative": {
+      "method": "Reused approved Autism hero, first-conversation, pathway, school-morning and social poster. No new image generation or separate API inference in this action.",
+      "commonHeaderFooterSourceUnchanged": true
+    },
+    "originalDevices": [
+      {
+        "report": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\ask-distribution-release-20261003\\speech-site\\audits\\testingbot\\2026-10-05T08-59-01-687Z-physical-mobile-48460\\report.json",
+        "device": {
+          "id": 27,
+          "name": "iPhone 15",
+          "platform": "iOS",
+          "version": "18.0"
+        },
+        "passedChecks": 11,
+        "failedCheck": "Autism choice is selected at enrolment without submission",
+        "resolvedBy": "Added visible Autism / integrated support radio option and browser/backend allowlist, retaining existing upstream assessment service and explicit preference message. Focused live device retest passed.",
+        "screenshots": [
+          "27-header.png",
+          "27-menu.png",
+          "27-autism-stages.png",
+          "27-autism-example.png",
+          "27-autism-decisions.png",
+          "27-footer.png"
+        ],
+        "sessionClosed": true
+      },
+      {
+        "report": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\ask-distribution-release-20261003\\speech-site\\audits\\testingbot\\2026-10-05T08-59-01-911Z-hosted-desktop-55104\\report.json",
+        "device": {
+          "id": "safari",
+          "name": "Safari",
+          "platform": "TAHOE",
+          "version": "26"
+        },
+        "passedChecks": 13,
+        "failedCheck": "Autism choice is selected at enrolment without submission",
+        "resolvedBy": "Added visible Autism / integrated support radio option and browser/backend allowlist, retaining existing upstream assessment service and explicit preference message. Focused live device retest passed.",
+        "screenshots": [
+          "safari-header.png",
+          "safari-menu.png",
+          "safari-autism-stages.png",
+          "safari-autism-example.png",
+          "safari-autism-decisions.png",
+          "safari-footer.png"
+        ],
+        "sessionClosed": true
+      }
+    ],
+    "devices": [
+      {
+        "mode": "physical-mobile",
+        "device": {
+          "id": 27,
+          "name": "iPhone 15",
+          "platform": "iOS",
+          "version": "18.0"
+        },
+        "browser": {
+          "name": "safari",
+          "platform": "iOS"
+        },
+        "checksPassed": 2,
+        "sessionClosed": true,
+        "provider": {
+          "testId": 53386454,
+          "success": true,
+          "deviceName": "iPhone 15",
+          "durationSeconds": 14,
+          "assetsAvailable": false
+        },
+        "report": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\ask-distribution-release-20261003\\speech-site\\audits\\testingbot\\2026-10-05T09-11-42-713Z-physical-mobile-14108\\report.json",
+        "screenshots": [
+          "27-autism-enrolment-fixed.png"
+        ]
+      },
+      {
+        "mode": "hosted-desktop",
+        "device": {
+          "id": "safari",
+          "name": "Safari",
+          "platform": "TAHOE",
+          "version": "26"
+        },
+        "browser": {
+          "name": "Safari",
+          "version": "26.3.1",
+          "platform": "macOS"
+        },
+        "checksPassed": 2,
+        "sessionClosed": true,
+        "provider": {
+          "testId": 53386469,
+          "success": true,
+          "deviceName": null,
+          "durationSeconds": 5,
+          "assetsAvailable": false
+        },
+        "report": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\ask-distribution-release-20261003\\speech-site\\audits\\testingbot\\2026-10-05T09-11-42-725Z-hosted-desktop-23844\\report.json",
+        "screenshots": [
+          "safari-autism-enrolment-fixed.png"
+        ]
+      }
+    ],
+    "handoffRepair": {
+      "passed": true,
+      "at": "2026-10-05T09:11:44.516Z",
+      "results": [
+        {
+          "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=autism",
+          "status": 200,
+          "sha256": "5732bfd818094d661f88ea0046c55c09b8cf7220e25db375e1a22ae1a0dcdeec"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/enrolment-api.mjs",
+          "status": 200,
+          "sha256": "394eba0b886548ee77e8192850d595a145342ddc5279db216e68301cd9c430b0"
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/autism-therapy",
+          "status": 200,
+          "sha256": "4171a1ddec387b5a1a093ebb56775fe0d7512b6bad707ad2381d5c7757a9b9b7"
+        }
+      ],
+      "controls": [
+        {
+          "path": "/books",
+          "unchanged": true
+        },
+        {
+          "path": "/books/pinnacle-101-speech-occupational-hardbound-pair",
+          "unchanged": true
+        },
+        {
+          "path": "/books/pinnacle-101-four-book-hardbound-collection",
+          "unchanged": true
+        },
+        {
+          "path": "/about-pinnacle-proven-improvement-rate",
+          "unchanged": true
+        },
+        {
+          "path": "/books/occupational-therapy-101-i-belong-in-everyday-life",
+          "unchanged": true
+        },
+        {
+          "path": "/books/special-education-101-learning-through-everyday-play",
+          "unchanged": true
+        },
+        {
+          "path": "/verify/",
+          "unchanged": true
+        },
+        {
+          "path": "/verify/evidence/records/fsc.html",
+          "unchanged": true
+        },
+        {
+          "path": "/pinnacleai",
+          "unchanged": true
+        },
+        {
+          "path": "/best-special-education-center-call-9100181181",
+          "unchanged": true
+        },
+        {
+          "path": "/leadership",
+          "unchanged": true
+        },
+        {
+          "path": "/pinnacle-global-autism-framework",
+          "unchanged": true
+        },
+        {
+          "path": "/fusion-module",
+          "unchanged": true
+        },
+        {
+          "path": "/therapeuticai",
+          "unchanged": true
+        },
+        {
+          "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+          "unchanged": true
+        },
+        {
+          "path": "/prognose",
+          "unchanged": true
+        },
+        {
+          "path": "/personal-development-kernel",
+          "unchanged": true
+        },
+        {
+          "path": "/seven-readiness-indexes",
+          "unchanged": true
+        },
+        {
+          "path": "/abilityscore",
+          "unchanged": true
+        },
+        {
+          "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+          "unchanged": true
+        },
+        {
+          "path": "/everyday-therapy",
+          "unchanged": true
+        },
+        {
+          "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+          "unchanged": true
+        },
+        {
+          "path": "/national-autism-helpline",
+          "unchanged": true
+        },
+        {
+          "path": "/ask",
+          "unchanged": true
+        },
+        {
+          "path": "/shop",
+          "unchanged": true
+        },
+        {
+          "path": "/books/editions/te/ot-101",
+          "unchanged": true
+        },
+        {
+          "path": "/books/resources/first-conversation",
+          "unchanged": true
+        },
+        {
+          "path": "/seva",
+          "unchanged": true
+        }
+      ],
+      "enrolmentOnlyAddedAutismOption": true,
+      "noLeadSubmitted": true
+    },
+    "initialDeployment": {
+      "at": "2026-10-05T08:58:38.056Z",
+      "commit": "2cb2afe5c956df9c7213d25d8be297f2595f029e",
+      "version": "f140b5b2-8986-4d35-8f65-13c9d53e75ca",
+      "deployment": "04a4cca9-acbd-43d1-9538-a1baae773600",
+      "rollback": [
+        {
+          "version_id": "e023ba21-32d1-45f7-a540-76b3c66055e6",
+          "percentage": 100
+        }
+      ]
+    },
+    "lighthouse": {
+      "report": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\ask-distribution-release-20261003\\speech-site\\audits\\lighthouse\\autism-production-2026-10-05T08-59-02-340Z\\summary.json",
+      "kind": "simulated lab measurements, not field Core Web Vitals",
+      "reports": [
+        {
+          "device": "mobile",
+          "scores": {
+            "performance": 96,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 1889.6639999999998,
+            "lcpMs": 2499.379,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 1889.6639999999998
+          },
+          "targetWarnings": []
+        },
+        {
+          "device": "desktop",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 518.5572999999999,
+            "lcpMs": 547.1376499999999,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 518.5572999999999
+          },
+          "targetWarnings": []
+        }
+      ]
+    },
+    "public": {
+      "report": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\autism-20261005\\public-verification.json",
+      "requests": 4,
+      "links": 299,
+      "assets": 9,
+      "retainedAssetHashes": 455,
+      "initialProtectedPages": 29,
+      "finalUnchangedPages": 28,
+      "metadata": {
+        "title": "Autism Therapy for Children · Integrated Support | Pinnacle Blooms",
+        "description": "Child-specific autism therapy: connect communication, daily routines and learning toward a self-sufficient, mainstream-included life. Call Pinnacle: 9100 181 181.",
+        "canonical": "https://www.pinnacleblooms.org/autism-therapy",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/autism-social-integrated-20260930.C6jQ_GL4_1Iyawt.jpg?v=2026-09-30-autism-life-first",
+        "h1": "Autism Therapy for children See your whole child.Build abilities for everyday life.",
+        "reviewBranches": 3,
+        "stages": 7,
+        "faqs": 16
+      },
+      "social": {
+        "status": 200,
+        "sha256": "f43fd2b2f09c947f3d2edf01ef872d83ab843dae3119f8ba76d7c8a32d80bc17",
+        "width": 1200,
+        "height": 630,
+        "approvedPosterMatches": true
+      }
+    },
+    "preservation": {
+      "routes": 194,
+      "mainBindings": 4,
+      "modules": 32,
+      "sourceBytesMatch": true,
+      "bindingsAndOtherVersionsPreserved": true
+    },
+    "screamingFrog": {
+      "report": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\autism-20261005\\screaming-frog\\20261005-142901\\internal_all.csv",
+      "status": 200,
+      "indexability": "Indexable",
+      "canonical": "https://www.pinnacleblooms.org/autism-therapy",
+      "h1Count": 1,
+      "canonicalNote": "HTML and HTTP declarations resolve to the same canonical."
+    },
+    "indexnow": {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "1a9622a0-0369-4e4a-b5c4-fb194e8859e5",
+      "submitted": 1,
+      "failed": 0,
+      "attempted": 1,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/autism-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "1 of 1 URL(s) sent were accepted by IndexNow."
+    },
+    "gscAnnotation": {
+      "annotation": {
+        "id": "0faeef25-a507-4fb5-8f0f-bd4acd99cbd7",
+        "scope": "property",
+        "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+        "event_date": "2026-10-05",
+        "label": "Autism Therapy: integrated family journey and review",
+        "description": "Released source 2cb2afe: specific illustrative school-morning observation, professional adjustment, explicit family practice and three review decisions; seven linked PinnacleAI stages, sixteen matched FAQs and source/Markdown exports. Clear call9100181181, Autism-aware enrolment and centre links. 194 routes/four bindings and29 protected pages preserved. Change and submission record; indexing, ranking, AI citations and qualified enquiry impact not established.",
+        "category": "site_change",
+        "color": null,
+        "created_at": "2026-10-05T08:59:46.309243+00:00"
+      }
+    }
+  },
+  "remaining": [
+    "Indexing, rankings, AI citations and additional qualified enquiries are not established by this release.",
+    "The morning example is fictional; proposed support is not a reported patient result or individual treatment plan.",
+    "Lighthouse scores are simulated lab observations, not field Core Web Vitals or universal browser coverage."
+  ]
+}
