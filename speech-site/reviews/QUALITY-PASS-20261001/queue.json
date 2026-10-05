@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "prognose",
+  "current": "therapeuticai",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -550,14 +550,15 @@
       "label": "Prognose",
       "url": "https://www.pinnacleblooms.org/prognose",
       "baselineScore": 70,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "No specific response demonstrates why a forecast or next step changes. The single editorial hero does not visualise input, forecast uncertainty, human selection and review as a complete branded composition.",
       "task": "Use one clearly illustrative playground response to show a revised checkpoint and chosen support, and create a branded diagram that makes uncertainty and professional review visible.",
       "sourceCondition": "Public record does not establish completed external predictive validation; compact Markdown omits FAQs and actual predictive/care outcomes are unobserved.",
-      "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "currentScore": 91,
+      "pageOwnedDisposition": "Prognose released with a complete branded creative, a specific illustrative child response and changed professional checkpoint, readable architecture, seven-stage links and aligned sources/FAQs/Markdown. Exact source pushed, CI and production/device checks passed;194 routes/four bindings and16 protected pages preserved. One changed URL accepted by IndexNow.",
+      "release": "RELEASE-PROGNOSE-20261005.md",
+      "reviewedOn": "2026-10-05T04:35:27.931083+00:00",
+      "scoreScope": "Editorial judgment of inspected content and renders; not clinical validation, search-engine score or actual conversion research."
     },
     {
       "order": 31,
