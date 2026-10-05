@@ -1,146 +1,304 @@
 {
-  "title": "AbilityScore® | Understand Abilities, Plan for Everyday Life",
+  "title": "AbilityScore® | Understand Your Child’s Abilities | PinnacleAI®",
   "url": "https://www.pinnacleblooms.org/abilityscore",
-  "updated": "2026-10-01",
-  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "updated": "2026-10-05",
   "brand": "Pinnacle Blooms Network",
-  "software": "PinnacleAI GPT-OS v1.0.0 · Class B non-diagnostic developmental-support software · licensed for children aged 0–12",
-  "parentMoment": "“I can see my child asking for the toy. How do we help others understand?”",
-  "lifeDecision": "What ability is already present, what help made it possible, and which everyday goal should the team work on next?",
-  "familyDiscussion": "An explained starting picture and questions to take into the plan, not a diagnosis or a verdict about your child.",
-  "directAnswer": "AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.",
-  "lifePurpose": "The important question is not “How high is the number?” It is “What can the child use in everyday life, with what support, and what should become more possible next?”",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "phone": "9100 181 181",
+  "directAnswer": "AbilityScore® is PinnacleAI’s clinician-administered composite developmental measurement, displayed on a 0–1000 scale. A professional interprets the assessment with the child’s age, support and everyday context, then discusses meaningful next steps with the family.",
+  "lifePurpose": "Your child’s self-sufficient, mainstream-included life is our purpose from the beginning. AbilityScore® helps us understand the abilities your child brings today—so the next goal, the people involved and the support we choose have a clear reason in that life.",
+  "architecture": {
+    "version": "Evidence Dossier v2.0-M, 25 July 2026",
+    "quantities": [
+      {
+        "value": "0–1000",
+        "label": "Composite display scale",
+        "icon": "measure"
+      },
+      {
+        "value": "349",
+        "label": "Skills in the described design",
+        "icon": "sun"
+      },
+      {
+        "value": "17",
+        "label": "Developmental domains",
+        "icon": "plan"
+      },
+      {
+        "value": "591",
+        "label": "Clinical observations",
+        "icon": "people"
+      }
+    ]
+  },
+  "assessmentToDecision": [
+    {
+      "title": "Understand the whole child",
+      "copy": "Bring the family’s priority, developmental history and everyday observations into the professional assessment.",
+      "icon": "people"
+    },
+    {
+      "title": "Form the assessed picture",
+      "copy": "A clinician administers the assessment. The composite sits alongside relevant abilities, support and context.",
+      "icon": "measure"
+    },
+    {
+      "title": "Explain a useful next step",
+      "copy": "The professional and family connect that picture with a meaningful goal and suitable support.",
+      "icon": "compass"
+    },
+    {
+      "title": "Review what becomes usable",
+      "copy": "Later assessment and daily observations help decide what to keep, adapt or explore next.",
+      "icon": "loop"
+    }
+  ],
+  "relatedModuleRoles": [
+    {
+      "name": "AbilityScore®",
+      "question": "What is the assessed starting picture?",
+      "copy": "A composite measurement helps organise discussion of developmental abilities and later change."
+    },
+    {
+      "name": "7 Readiness Indexes",
+      "question": "What opportunity and support should we explore?",
+      "copy": "Separate views focus the discussion on communication, school, movement, learning, everyday independence and inclusion."
+    },
+    {
+      "name": "Your child’s plan",
+      "question": "What will we actually do next?",
+      "copy": "The professional and family choose the goal, suitable people and methods, everyday practice and review."
+    }
+  ],
   "illustrativeExample": {
-    "title": "A request at home becomes a useful goal.",
-    "description": "Illustrative example only. A parent notices a child wants a favourite toy but needs help communicating the choice.",
+    "title": "“I know which toy my child wants. Will someone else understand?”",
+    "intro": "Illustrative planning example: a three-year-old chooses a favourite red car. This is an explanation of decisions, not an actual child report or a measured treatment result.",
     "steps": [
+      [
+        "Notice the ability already present",
+        "The child looks at the car, points and leads the mother toward it. She understands. A second familiar adult waits, unsure what the child means. The starting point includes a real choice and an existing way to communicate."
+      ],
+      [
+        "Bring that moment into assessment",
+        "The parent explains who understands the request, where it happens and what help is used. A clinician assesses relevant abilities and interprets the composite in that wider context. One toy choice does not generate a clinical AbilityScore."
+      ],
+      [
+        "Make a specific human decision",
+        "Together, the professional and family choose a way for the child to request the car that another person can understand: a suitable gesture, picture, word or communication aid. They agree how adults will respond, rather than choosing more words as the automatic goal."
+      ],
+      [
+        "Try the step in familiar play",
+        "An appropriate professional demonstrates the agreed approach. The family offers manageable opportunities, respects the child’s choice and notes what happened, with whom and with what help."
+      ]
+    ],
+    "reviews": [
       {
-        "title": "Observe a real moment",
-        "description": "Record what the child already does to indicate a choice and what support makes it understandable."
+        "observation": "The request is understood only after the mother supplies a cue.",
+        "decision": "Keep the goal. Review the cue, communication aid and adult response; try the agreed support with another familiar person.",
+        "check": "Can that person understand the child’s chosen way to request, with the support recorded?"
       },
       {
-        "title": "Assess appropriately",
-        "description": "A professional uses suitable measures to describe the relevant abilities; a caregiver questionnaire is not automatically the clinical score."
-      },
-      {
-        "title": "Choose a goal",
-        "description": "The team agrees on an accessible way for the child to make the choice at home and, if relevant, in another setting."
-      },
-      {
-        "title": "Compare use over time",
-        "description": "Later assessment considers whether the skill is becoming more usable, not merely whether a number moved."
+        "observation": "The request is understood by familiar people, but a busy setting makes it harder.",
+        "decision": "Preserve the useful communication method. Adjust the setting or timing before adding a harder task.",
+        "check": "Does the request become usable there, and does the child remain comfortable and willing to take part?"
       }
     ],
-    "status": "Fictional explanatory example; not a patient story or observed result."
+    "status": "Explanatory example; not a patient report or measured result."
   },
-  "mechanism": [
-    "The display summarises assessed abilities on a 0–1000 scale; its meaning depends on the instrument, age band and professional interpretation.",
-    "Seven Readiness Indexes remain distinct views; they are not substitutes for a child’s goals or an outcome guarantee.",
-    "The next assessment and everyday observations can reveal change, no change or a new need for support."
+  "reportDiscussion": [
+    [
+      "What was assessed?",
+      "Ask about the assessment version, age context and abilities that informed the report."
+    ],
+    [
+      "What support helped?",
+      "A familiar adult, communication aid, cue or calm setting can be important to the explanation."
+    ],
+    [
+      "What does this change in the plan?",
+      "Ask the team to connect the starting picture with the next everyday goal, suitable professional and practice."
+    ],
+    [
+      "What will we compare later?",
+      "Agree which real-life observations and assessment information will help judge the next decision."
+    ]
   ],
-  "limit": "AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.",
+  "familyLifecycle": [
+    {
+      "title": "Understand abilities",
+      "copy": "AbilityScore supports the assessed starting picture.",
+      "href": "#what-it-does",
+      "icon": "measure",
+      "url": "https://www.pinnacleblooms.org/abilityscore#what-it-does"
+    },
+    {
+      "title": "Discuss readiness + plan",
+      "copy": "Choose a relevant opportunity and a child-specific direction.",
+      "href": "/seven-readiness-indexes",
+      "icon": "compass",
+      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
+    },
+    {
+      "title": "Bring suitable therapies together",
+      "copy": "Select the professional contributions this goal needs.",
+      "href": "/therapeuticai",
+      "icon": "people",
+      "url": "https://www.pinnacleblooms.org/therapeuticai"
+    },
+    {
+      "title": "Carry the step into everyday life",
+      "copy": "Use manageable, professionally guided family practice.",
+      "href": "/everyday-therapy",
+      "icon": "home",
+      "url": "https://www.pinnacleblooms.org/everyday-therapy"
+    },
+    {
+      "title": "Track + correct",
+      "copy": "Bring observations across settings into a changed decision.",
+      "href": "/fusion-module",
+      "icon": "track",
+      "url": "https://www.pinnacleblooms.org/fusion-module"
+    },
+    {
+      "title": "Reassess + review",
+      "copy": "Compare appropriately and decide what should happen next.",
+      "href": "/reassess-review-repeat",
+      "icon": "loop",
+      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
+    },
+    {
+      "title": "Growing independence + inclusion",
+      "copy": "Keep the child’s self-sufficient, mainstream-included life as the purpose throughout.",
+      "href": "/self-sufficient",
+      "icon": "sun",
+      "url": "https://www.pinnacleblooms.org/self-sufficient"
+    }
+  ],
+  "relatedTherapies": [
+    {
+      "title": "Speech therapy",
+      "copy": "Connect an assessed ability with a useful way to ask, share, choose or be understood.",
+      "href": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "icon": "voice",
+      "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "title": "Occupational therapy",
+      "copy": "Connect access, movement and sensory or daily-routine support with participation.",
+      "href": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "icon": "home",
+      "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "title": "ABA / behavioural support",
+      "copy": "Understand the context of behaviour and choose suitable communication and support.",
+      "href": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "icon": "heart",
+      "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "title": "Special education",
+      "copy": "Connect learning, accessible instructions and the environment with meaningful participation.",
+      "href": "/best-special-education-center-call-9100181181",
+      "icon": "book",
+      "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181"
+    }
+  ],
   "claimSourceMap": [
     {
-      "statement": "What ability is already present, what help made it possible, and which everyday goal should the team work on next?",
-      "kind": "programme explanation",
-      "source": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
-      "limit": "Methods and preliminary results must not be presented as completed independent validation."
+      "statement": "0–1000 composite; 349 skills, 17 domains and 591 clinical observations",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html",
+      "locator": "Evidence Dossier v2.0-M, Chapter 9, physical PDF pages 40–42, 25 July 2026",
+      "scope": "Versioned design quantities. Clinician-administered and governed. Not a child outcome or independent validation finding."
     },
     {
-      "statement": "PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12.",
-      "kind": "regulatory scope",
+      "statement": "Class B non-diagnostic developmental-support software, including ability measurement",
       "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
-      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+      "scope": "Indian MD-5 MFG/MD/2026/000248; PinnacleAI GPT-OS v1.0.0, children aged 0–12."
     },
     {
-      "statement": "AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.",
-      "kind": "claim boundary",
-      "source": "https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html",
-      "limit": "The public record labels this a protocol, not completed comparator results."
+      "statement": "Developmental ability mapping (Ability Score) in the named software schedule",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html",
+      "scope": "BIS management-system scope; MD/L-2026029599, IS 23485:2019."
+    },
+    {
+      "statement": "Published methodology and external-validation protocol",
+      "source": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
+      "additionalSource": "https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html",
+      "scope": "Methods/preliminary psychometric preprint and separately published protocol. A protocol is not completed independent validation."
     }
   ],
   "sources": [
     {
-      "id": "workflow",
-      "name": "Documented PinnacleAI workflow",
-      "url": "https://www.pinnacleblooms.org/verify/#how-pinnacleai-works",
-      "limit": "Describes a workflow; not proof that every step produces a specific result."
-    },
-    {
-      "id": "methods",
-      "name": "Methodology preprint and limitations",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html",
-      "limit": "Methods and preliminary results must not be presented as completed independent validation."
-    },
-    {
-      "id": "validation",
-      "name": "External validation protocol status",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html",
-      "limit": "The public record labels this a protocol, not completed comparator results."
+      "id": "dossier",
+      "value": "0–1000",
+      "title": "Measurement design",
+      "label": "Company evidence dossier · July 2026",
+      "copy": "Chapter 9 of Evidence Dossier v2.0-M, pp. 40–42, describes the composite, clinical administration and the 349-skill, 17-domain, 591-observation architecture. These are versioned design quantities, not an outcome or independent validation result.",
+      "href": "/verify/evidence/records/dossier.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/dossier.html"
     },
     {
       "id": "md5",
-      "name": "Indian Form MD-5 software scope",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
-      "limit": "Class B, non-diagnostic software scope; not a clinical outcome or therapist credential."
+      "value": "Class B",
+      "title": "Licensed non-diagnostic software",
+      "label": "MD-5 · MFG/MD/2026/000248",
+      "copy": "The Indian licence covers PinnacleAI GPT-OS v1.0.0 as non-diagnostic developmental-support software for children aged 0–12, including ability measurement. It establishes the specified licence scope.",
+      "href": "/verify/evidence/records/md5.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html"
     },
     {
-      "id": "research",
-      "name": "Research library and publication status",
-      "url": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
-      "limit": "Publication types and study limitations must be read separately."
-    }
-  ],
-  "relatedPages": [
-    {
-      "name": "PinnacleAI®",
-      "url": "https://www.pinnacleblooms.org/pinnacleai"
+      "id": "bis",
+      "value": "IS 23485:2019",
+      "title": "Named ability-mapping module",
+      "label": "BIS · MD/L-2026029599",
+      "copy": "The management-system licence schedule names developmental ability mapping (Ability Score) within its software scope. Its scope and premises are available in the original record.",
+      "href": "/verify/evidence/records/bis.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/bis.html"
     },
     {
-      "name": "7 Readiness Indexes",
-      "url": "https://www.pinnacleblooms.org/seven-readiness-indexes"
-    },
-    {
-      "name": "Personal Development Kernel",
-      "url": "https://www.pinnacleblooms.org/personal-development-kernel"
-    },
-    {
-      "name": "Prognose",
-      "url": "https://www.pinnacleblooms.org/prognose"
-    },
-    {
-      "name": "TherapeuticAI®",
-      "url": "https://www.pinnacleblooms.org/therapeuticai"
-    },
-    {
-      "name": "Everyday Therapy™",
-      "url": "https://www.pinnacleblooms.org/everyday-therapy"
-    },
-    {
-      "name": "Fusion",
-      "url": "https://www.pinnacleblooms.org/fusion-module"
-    },
-    {
-      "name": "Reassess · Review · Repeat",
-      "url": "https://www.pinnacleblooms.org/reassess-review-repeat"
-    },
-    {
-      "name": "See how a communication goal shapes speech therapy",
-      "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#everyday-communication"
+      "id": "methods",
+      "value": "Methods preprint",
+      "title": "Inspect the method and research status",
+      "label": "DOI 10.5281/zenodo.19482123",
+      "copy": "The 9 April 2026 preprint describes construction and preliminary measurement findings. Read it alongside the separate external-validation protocol; a protocol is not a completed independent comparator study.",
+      "href": "/verify/evidence/records/methodology.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/records/methodology.html"
     }
   ],
   "questions": [
     {
       "question": "What does an AbilityScore of 0–1000 mean?",
-      "answer": "It is the displayed scale for a structured developmental ability measure. A clinician must interpret the current assessment and the child’s age and context; a single number does not describe the child’s whole life."
+      "answer": "It is the display scale for PinnacleAI’s composite developmental measurement. A clinician explains it with the assessment version, the child’s age, relevant abilities, support and everyday context. It is not a percentage of development or a stand-alone IQ result."
     },
     {
-      "question": "Is AbilityScore an autism or IQ test?",
-      "answer": "No. The licensed software is non-diagnostic, and the score is not presented as an autism diagnosis or a stand-alone IQ result."
+      "question": "Can a parent complete the clinical AbilityScore online?",
+      "answer": "No. The clinical score is clinician-administered and clinician-governed at a centre. Family questionnaires and daily observations contribute important context; they do not replace clinical administration or independently generate the clinical score."
     },
     {
-      "question": "Can a parent complete the clinical score alone?",
-      "answer": "No. AbilityScore is clinician-administered and clinically governed. Family questionnaires and everyday observations contribute essential context; they do not replace clinical administration or let a parent complete the clinical score alone."
+      "question": "How does AbilityScore help choose the next goal?",
+      "answer": "The assessed picture helps the professional and family discuss which ability and support matter for a real-life priority. They then choose a specific opportunity, suitable methods and people, and what to review. A number alone does not prescribe a goal or therapy package."
+    },
+    {
+      "question": "How is AbilityScore different from the Seven Readiness Indexes?",
+      "answer": "AbilityScore is the composite developmental measurement. The Seven Readiness Indexes are separate views for particular areas of participation and support. The professional interprets both with the child’s context and the family’s priorities."
+    },
+    {
+      "question": "What if the score and everyday observations seem different?",
+      "answer": "Bring that difference to the professional. The assessment version, setting, support and the child’s experience need to be understood together. Reassessment and review may lead to keeping useful support, adapting the plan or exploring a different need."
+    },
+    {
+      "question": "Does the score diagnose autism, ADHD or determine school admission?",
+      "answer": "No. PinnacleAI GPT-OS is licensed as non-diagnostic developmental-support software. The score does not diagnose a condition, promise independence or determine admission. Care decisions require appropriate professionals, and school decisions involve the school and relevant support."
+    },
+    {
+      "question": "What should I bring to the first conversation?",
+      "answer": "Start with one everyday moment you want to make easier, what your child already does and what help seems useful. Existing reports and relevant family observations can help the team explain the appropriate assessment, professional, centre and fees before you decide."
+    },
+    {
+      "question": "Where can I inspect the AbilityScore evidence?",
+      "answer": "The Verify portal links the methodology preprint, the company evidence dossier, the MD-5 and BIS records, and the separate external-validation protocol. The protocol describes planned validation; it should not be read as completed independent comparator findings."
     }
   ]
 }

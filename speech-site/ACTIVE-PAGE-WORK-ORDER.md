@@ -1,3 +1,21 @@
+# Active individual page — AbilityScore — 5 October 2026
+
+Canonical: `/abilityscore`. Owner resumed sequential page completion; action `bc7d55b0-953f-477d-8d5c-b597dede3919`. Main owns all code and release; one read-only combined reviewer. Baseline source `ed38c4a`, main Worker `5052ce59-784e-4fc4-b6a3-2b6a0120b1bb`.
+
+## Frozen page contract
+
+- **Visitor question:** What does this assessment tell me about my child, and how does it help choose a useful next step?
+- **Promise and direction:** Understand current capabilities and the support/context behind them. The child's self-sufficient, mainstream-included life determines the goal; AbilityScore supplies a professionally interpreted starting picture and comparison over time.
+- **Commercial narrative:** Recognisable toy-choice moment → explained measurement → a specific human decision → everyday use and a changed review decision → source-linked confidence → call/first visit/centre. Own Pinnacle voice; no generic textbook wrapper.
+- **Distinct content:** 0–1000 meaning; versioned 349 skills/17 domains/591 observations as dossier architecture; inputs/measurement/interpretation/goal flow; two contrasting observations and an explicit changed support decision; parent contribution, report questions and reassessment; relationship to seven readiness views, four therapies and seven-stage journey.
+- **Sources:** Chapter 9, Evidence Dossier v2.0-M (25 July 2026), physical pp40–42; current methodology preprint record; external-validation protocol (not completed comparator findings); MD-5 and BIS scopes. Exact sources and limits accompany technical figures. No calculator, proprietary thresholds, fabricated scores, causal success rate or private child record.
+- **Creative:** One complete new native ChatGPT branded explanatory creative; approved AbilityScore OG retained; responsive WebP and appropriate alternative text; child/family and properly branded full-sleeve professional coat. No API-key fallback or pasted-caption artwork.
+- **First action:** `tel:+919100181181`, current canonical enrolment and centre directory. Free telephone guidance; receiving team confirms professional, visit and fees. No test lead submission.
+- **Delivery:** Reuse accepted common shell unchanged. Preserve the current full asset union, every Worker binding/route, Ask/auth/Verify/helpline/commerce and newly delivered Readiness. Page-local code and matching eight FAQs/source/Markdown/sitemap/metadata. One candidate build, targeted responsive/keyboard/visual checks, independent CI, relevant physical/browser production check and once-only IndexNow notification. Source push precedes activation.
+- **Completion:** Save source/deployment/public proof, update the existing quality ledger and enqueue next eligible individual. PinnacleAI scholarly/Figma remains held for owner diagram; Verify migration and centre/staff expansion remain deferred. Indexing, real calls and admissions stay separate from page delivery.
+
+---
+
 # Delivered individual page — Seven Readiness Indexes — 5 October 2026
 
 Owner resumed sequential pending page completion. This is the next unheld page from the agreed individual-page queue. Contract: `READINESS-PAGE-WORK-ORDER-20261005.md`. Main owns implementation and release; one combined read-only review. Common shell stays fixed. PinnacleAI scholarly/Figma remains held for the owner diagram; Verify migration and remaining centre/staff work stay deferred.

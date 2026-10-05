@@ -1,60 +1,105 @@
-# AbilityScore® | Understand Abilities, Plan for Everyday Life
+# AbilityScore® | Understand Your Child’s Abilities | PinnacleAI®
 Canonical: https://www.pinnacleblooms.org/abilityscore
+Updated: 2026-10-05
 
-> See what your child can do. Decide what to make possible next.
+Your child’s self-sufficient, mainstream-included life is our purpose from the beginning. AbilityScore® helps us understand the abilities your child brings today—so the next goal, the people involved and the support we choose have a clear reason in that life.
 
-Maybe your child wants a toy and has a way of showing it that others miss. AbilityScore® helps a professional organise a starting picture of abilities so your family can discuss a useful next goal. Your child is always more than the displayed number.
+## What AbilityScore explains
+AbilityScore® is PinnacleAI’s clinician-administered composite developmental measurement, displayed on a 0–1000 scale. A professional interprets the assessment with the child’s age, support and everyday context, then discusses meaningful next steps with the family.
+You should leave an assessment understanding more than a number: what your child can do, what helps, which opportunity matters next and how the team will review it with you.
 
-## The family question
-“I can see my child asking for the toy. How do we help others understand?”
+## Measurement architecture
+Evidence Dossier v2.0-M, Chapter 9, pp. 40–42, 25 July 2026. Versioned design quantities; not an outcome or independent validation finding.
+- 0–1000: Composite display scale
+- 349: Skills in the described design
+- 17: Developmental domains
+- 591: Clinical observations
 
-## What this page helps decide
-What ability is already present, what help made it possible, and which everyday goal should the team work on next?
+## From assessment to a decision
+1. **Understand the whole child:** Bring the family’s priority, developmental history and everyday observations into the professional assessment.
+2. **Form the assessed picture:** A clinician administers the assessment. The composite sits alongside relevant abilities, support and context.
+3. **Explain a useful next step:** The professional and family connect that picture with a meaningful goal and suitable support.
+4. **Review what becomes usable:** Later assessment and daily observations help decide what to keep, adapt or explore next.
 
-## What the module does
-AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.
+## Distinct roles
+- **AbilityScore®:** What is the assessed starting picture? A composite measurement helps organise discussion of developmental abilities and later change.
+- **7 Readiness Indexes:** What opportunity and support should we explore? Separate views focus the discussion on communication, school, movement, learning, everyday independence and inclusion.
+- **Your child’s plan:** What will we actually do next? The professional and family choose the goal, suitable people and methods, everyday practice and review.
 
-## One illustrative everyday moment
-A request at home becomes a useful goal.
-Illustrative example only. A parent notices a child wants a favourite toy but needs help communicating the choice.
-1. **Observe a real moment:** Record what the child already does to indicate a choice and what support makes it understandable.
-2. **Assess appropriately:** A professional uses suitable measures to describe the relevant abilities; a caregiver questionnaire is not automatically the clinical score.
-3. **Choose a goal:** The team agrees on an accessible way for the child to make the choice at home and, if relevant, in another setting.
-4. **Compare use over time:** Later assessment considers whether the skill is becoming more usable, not merely whether a number moved.
+## “I know which toy my child wants. Will someone else understand?”
+Illustrative planning example: a three-year-old chooses a favourite red car. This is an explanation of decisions, not an actual child report or a measured treatment result.
+1. **Notice the ability already present:** The child looks at the car, points and leads the mother toward it. She understands. A second familiar adult waits, unsure what the child means. The starting point includes a real choice and an existing way to communicate.
+2. **Bring that moment into assessment:** The parent explains who understands the request, where it happens and what help is used. A clinician assesses relevant abilities and interprets the composite in that wider context. One toy choice does not generate a clinical AbilityScore.
+3. **Make a specific human decision:** Together, the professional and family choose a way for the child to request the car that another person can understand: a suitable gesture, picture, word or communication aid. They agree how adults will respond, rather than choosing more words as the automatic goal.
+4. **Try the step in familiar play:** An appropriate professional demonstrates the agreed approach. The family offers manageable opportunities, respects the child’s choice and notes what happened, with whom and with what help.
 
-## Claim and source map
-- **programme explanation:** What ability is already present, what help made it possible, and which everyday goal should the team work on next? [Source](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html). Methods and preliminary results must not be presented as completed independent validation.
-- **regulatory scope:** PinnacleAI GPT-OS v1.0.0 is licensed in India as Class B non-diagnostic developmental-support software for children aged 0–12. [Source](https://www.pinnacleblooms.org/verify/evidence/records/md5.html). Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
-- **claim boundary:** AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available. [Source](https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html). The public record labels this a protocol, not completed comparator results.
+## The review changes something specific
+### What the family notices
+The request is understood only after the mother supplies a cue.
+**What the team changes:** Keep the goal. Review the cue, communication aid and adult response; try the agreed support with another familiar person.
+**What to check next:** Can that person understand the child’s chosen way to request, with the support recorded?
+### What the family notices
+The request is understood by familiar people, but a busy setting makes it harder.
+**What the team changes:** Preserve the useful communication method. Adjust the setting or timing before adding a harder task.
+**What to check next:** Does the request become usable there, and does the child remain comfortable and willing to take part?
 
-## Boundary
-AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.
+## Understand the report
+- **What was assessed?** Ask about the assessment version, age context and abilities that informed the report.
+- **What support helped?** A familiar adult, communication aid, cue or calm setting can be important to the explanation.
+- **What does this change in the plan?** Ask the team to connect the starting picture with the next everyday goal, suitable professional and practice.
+- **What will we compare later?** Agree which real-life observations and assessment information will help judge the next decision.
+[Report-format guide](https://www.pinnacleblooms.org/verify/#report-explorer)
+
+## The seven-stage PinnacleAI family journey
+1. [Understand abilities](https://www.pinnacleblooms.org/abilityscore#what-it-does): AbilityScore supports the assessed starting picture.
+2. [Discuss readiness + plan](https://www.pinnacleblooms.org/seven-readiness-indexes): Choose a relevant opportunity and a child-specific direction.
+3. [Bring suitable therapies together](https://www.pinnacleblooms.org/therapeuticai): Select the professional contributions this goal needs.
+4. [Carry the step into everyday life](https://www.pinnacleblooms.org/everyday-therapy): Use manageable, professionally guided family practice.
+5. [Track + correct](https://www.pinnacleblooms.org/fusion-module): Bring observations across settings into a changed decision.
+6. [Reassess + review](https://www.pinnacleblooms.org/reassess-review-repeat): Compare appropriately and decide what should happen next.
+7. [Growing independence + inclusion](https://www.pinnacleblooms.org/self-sufficient): Keep the child’s self-sufficient, mainstream-included life as the purpose throughout.
+[PinnacleAI system](https://www.pinnacleblooms.org/pinnacleai) · [Mainstream Included](https://www.pinnacleblooms.org/mainstream)
+
+## Relevant therapy contributions
+- [Speech therapy](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate): Connect an assessed ability with a useful way to ask, share, choose or be understood.
+- [Occupational therapy](https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate): Connect access, movement and sensory or daily-routine support with participation.
+- [ABA / behavioural support](https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate): Understand the context of behaviour and choose suitable communication and support.
+- [Special education](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181): Connect learning, accessible instructions and the environment with meaningful participation.
+[Integrated autism support](https://www.pinnacleblooms.org/autism-therapy)
+
+## Sources
+- **Company evidence dossier · July 2026 · 0–1000:** Chapter 9 of Evidence Dossier v2.0-M, pp. 40–42, describes the composite, clinical administration and the 349-skill, 17-domain, 591-observation architecture. These are versioned design quantities, not an outcome or independent validation result. [Inspect the record](https://www.pinnacleblooms.org/verify/evidence/records/dossier.html).
+- **MD-5 · MFG/MD/2026/000248 · Class B:** The Indian licence covers PinnacleAI GPT-OS v1.0.0 as non-diagnostic developmental-support software for children aged 0–12, including ability measurement. It establishes the specified licence scope. [Inspect the record](https://www.pinnacleblooms.org/verify/evidence/records/md5.html).
+- **BIS · MD/L-2026029599 · IS 23485:2019:** The management-system licence schedule names developmental ability mapping (Ability Score) within its software scope. Its scope and premises are available in the original record. [Inspect the record](https://www.pinnacleblooms.org/verify/evidence/records/bis.html).
+- **DOI 10.5281/zenodo.19482123 · Methods preprint:** The 9 April 2026 preprint describes construction and preliminary measurement findings. Read it alongside the separate external-validation protocol; a protocol is not a completed independent comparator study. [Inspect the record](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html).
+
+## Claim/source map
+- 0–1000 composite; 349 skills, 17 domains and 591 clinical observations: https://www.pinnacleblooms.org/verify/evidence/records/dossier.html. Evidence Dossier v2.0-M, Chapter 9, physical PDF pages 40–42, 25 July 2026  Versioned design quantities. Clinician-administered and governed. Not a child outcome or independent validation finding.
+- Class B non-diagnostic developmental-support software, including ability measurement: https://www.pinnacleblooms.org/verify/evidence/records/md5.html.   Indian MD-5 MFG/MD/2026/000248; PinnacleAI GPT-OS v1.0.0, children aged 0–12.
+- Developmental ability mapping (Ability Score) in the named software schedule: https://www.pinnacleblooms.org/verify/evidence/records/bis.html.   BIS management-system scope; MD/L-2026029599, IS 23485:2019.
+- Published methodology and external-validation protocol: https://www.pinnacleblooms.org/verify/evidence/records/methodology.html.  Additional source: https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html. Methods/preliminary psychometric preprint and separately published protocol. A protocol is not completed independent validation.
 
 ## Questions
 ### What does an AbilityScore of 0–1000 mean?
-It is the displayed scale for a structured developmental ability measure. A clinician must interpret the current assessment and the child’s age and context; a single number does not describe the child’s whole life.
-### Is AbilityScore an autism or IQ test?
-No. The licensed software is non-diagnostic, and the score is not presented as an autism diagnosis or a stand-alone IQ result.
-### Can a parent complete the clinical score alone?
-No. AbilityScore is clinician-administered and clinically governed. Family questionnaires and everyday observations contribute essential context; they do not replace clinical administration or let a parent complete the clinical score alone.
+It is the display scale for PinnacleAI’s composite developmental measurement. A clinician explains it with the assessment version, the child’s age, relevant abilities, support and everyday context. It is not a percentage of development or a stand-alone IQ result.
+### Can a parent complete the clinical AbilityScore online?
+No. The clinical score is clinician-administered and clinician-governed at a centre. Family questionnaires and daily observations contribute important context; they do not replace clinical administration or independently generate the clinical score.
+### How does AbilityScore help choose the next goal?
+The assessed picture helps the professional and family discuss which ability and support matter for a real-life priority. They then choose a specific opportunity, suitable methods and people, and what to review. A number alone does not prescribe a goal or therapy package.
+### How is AbilityScore different from the Seven Readiness Indexes?
+AbilityScore is the composite developmental measurement. The Seven Readiness Indexes are separate views for particular areas of participation and support. The professional interprets both with the child’s context and the family’s priorities.
+### What if the score and everyday observations seem different?
+Bring that difference to the professional. The assessment version, setting, support and the child’s experience need to be understood together. Reassessment and review may lead to keeping useful support, adapting the plan or exploring a different need.
+### Does the score diagnose autism, ADHD or determine school admission?
+No. PinnacleAI GPT-OS is licensed as non-diagnostic developmental-support software. The score does not diagnose a condition, promise independence or determine admission. Care decisions require appropriate professionals, and school decisions involve the school and relevant support.
+### What should I bring to the first conversation?
+Start with one everyday moment you want to make easier, what your child already does and what help seems useful. Existing reports and relevant family observations can help the team explain the appropriate assessment, professional, centre and fees before you decide.
+### Where can I inspect the AbilityScore evidence?
+The Verify portal links the methodology preprint, the company evidence dossier, the MD-5 and BIS records, and the separate external-validation protocol. The protocol describes planned validation; it should not be read as completed independent comparator findings.
 
-## Further sources
-- [Documented PinnacleAI workflow](https://www.pinnacleblooms.org/verify/#how-pinnacleai-works): Describes a workflow; not proof that every step produces a specific result.
-- [Methodology preprint and limitations](https://www.pinnacleblooms.org/verify/evidence/records/methodology.html): Methods and preliminary results must not be presented as completed independent validation.
-- [External validation protocol status](https://www.pinnacleblooms.org/verify/evidence/records/external-validation.html): The public record labels this a protocol, not completed comparator results.
-- [Indian Form MD-5 software scope](https://www.pinnacleblooms.org/verify/evidence/records/md5.html): Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.
-- [Research library and publication status](https://www.pinnacleblooms.org/verify/evidence/research-library.html): Publication types and study limitations must be read separately.
+## Begin with Pinnacle
+Call 9100 181 181 (tel:+919100181181). Telephone guidance is free. The team confirms the suitable professional, centre, assessment, availability and fees before you decide.
+[Plan a first visit](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india) · [Find a centre](https://www.pinnacleblooms.org/centers) · [First-conversation planning sheet](https://www.pinnacleblooms.org/books/resources/first-conversation)
 
-## Continue through PinnacleAI
-- [PinnacleAI®](https://www.pinnacleblooms.org/pinnacleai)
-- [7 Readiness Indexes](https://www.pinnacleblooms.org/seven-readiness-indexes)
-- [Personal Development Kernel](https://www.pinnacleblooms.org/personal-development-kernel)
-- [Prognose](https://www.pinnacleblooms.org/prognose)
-- [TherapeuticAI®](https://www.pinnacleblooms.org/therapeuticai)
-- [Everyday Therapy™](https://www.pinnacleblooms.org/everyday-therapy)
-- [Fusion](https://www.pinnacleblooms.org/fusion-module)
-- [Reassess · Review · Repeat](https://www.pinnacleblooms.org/reassess-review-repeat)
-
-Call 9100 181 181 or [find a centre](https://www.pinnacleblooms.org/centers). A visit, professional and fees are confirmed by the team. PinnacleAI is non-diagnostic and individual outcomes are not guaranteed.
-
-[See how a communication goal shapes speech therapy](https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#everyday-communication)
+## Suggested citation
+Pinnacle Blooms Network. AbilityScore®: Understand Your Child’s Abilities. Updated 5 October 2026. Bharath Healthcare Laboratories Private Limited. https://www.pinnacleblooms.org/abilityscore

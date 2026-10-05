@@ -1,3 +1,4 @@
+import {abilityContent} from './abilityscore-content.ts';
 import {readinessContent} from './readiness-content.ts';
 export const waveSources = {
   model: '/verify/evidence/pinnacle-paradigm-shift.html',
@@ -52,26 +53,22 @@ export const pinnacleWave = [
     ]
   },
   {
-    slug:'abilityscore', updatedOn:'2026-10-01', includeReadingFaqs:true, short:'AbilityScore®', label:'AbilityScore®', title:'AbilityScore® | Understand Abilities, Plan for Everyday Life',
-    description:'AbilityScore helps a professional discuss what a child can do now and which everyday goal may come next. See a toy-choice example, 0–1000 limits and sources.',
+    slug:'abilityscore', updatedOn:abilityContent.updated, includeReadingFaqs:true, short:'AbilityScore®', label:'AbilityScore®', title:abilityContent.title,
+    description:abilityContent.description,
     eyebrow:'Start with what your child can do', headline:'Measure the starting picture. Keep your child bigger than any score.',
-    lead:'You notice what your child understands, chooses, tries and enjoys. AbilityScore gives the care team a structured way to discuss current abilities and change over time, so the next goal can serve a real moment in life.',
-    direct:'AbilityScore is the developmental ability-measurement component of PinnacleAI. A clinically governed assessment produces a displayed composite on a 0–1000 scale and separate Readiness views. The score is context for professional and family discussion, not a diagnosis or an intelligence label.',
-    purpose:'The important question is not “How high is the number?” It is “What can the child use in everyday life, with what support, and what should become more possible next?”',
+    lead:abilityContent.lead,
+    direct:abilityContent.direct,
+    purpose:abilityContent.purpose,
     question:'What can a starting measurement help a family see?',
-    exampleTitle:'A request at home becomes a useful goal.',
-    exampleLead:'Illustrative example only. A parent notices a child wants a favourite toy but needs help communicating the choice.',
-    example:[['Observe a real moment','Record what the child already does to indicate a choice and what support makes it understandable.'],['Assess appropriately','A professional uses suitable measures to describe the relevant abilities; a caregiver questionnaire is not automatically the clinical score.'],['Choose a goal','The team agrees on an accessible way for the child to make the choice at home and, if relevant, in another setting.'],['Compare use over time','Later assessment considers whether the skill is becoming more usable, not merely whether a number moved.']],
+    exampleTitle:abilityContent.example.title,
+    exampleLead:abilityContent.example.intro,
+    example:abilityContent.example.steps,
     mechanismTitle:'A useful score starts a conversation; it cannot finish one.',
     mechanism:['The display summarises assessed abilities on a 0–1000 scale; its meaning depends on the instrument, age band and professional interpretation.','Seven Readiness Indexes remain distinct views; they are not substitutes for a child’s goals or an outcome guarantee.','The next assessment and everyday observations can reveal change, no change or a new need for support.'],
     limit:'AbilityScore does not diagnose autism, ADHD or another condition. The published external-validation protocol is not proof that a completed independent validation result is available.',
     takeaway:'Ask what an ability means for your child’s communication, routine, learning and participation—and what the team will do next.',
-    sourceKeys:['workflow','methods','validation','md5','research'],
-    faqs:[
-      {question:'What does an AbilityScore of 0–1000 mean?',answer:'It is the displayed scale for a structured developmental ability measure. A clinician must interpret the current assessment and the child’s age and context; a single number does not describe the child’s whole life.'},
-      {question:'Is AbilityScore an autism or IQ test?',answer:'No. The licensed software is non-diagnostic, and the score is not presented as an autism diagnosis or a stand-alone IQ result.'},
-      {question:'Can a parent complete the clinical score alone?',answer:'No. AbilityScore is clinician-administered and clinically governed. Family questionnaires and everyday observations contribute essential context; they do not replace clinical administration or let a parent complete the clinical score alone.'}
-    ]
+    sourceKeys:['workflow','methods','validation','md5','bis','dossier','research'],
+    faqs:abilityContent.faqs
   },
   {
     slug:'seven-readiness-indexes', updatedOn:readinessContent.updated, includeReadingFaqs:true, short:'7 Readiness Indexes', label:'Seven Readiness Indexes', title:readinessContent.title,
