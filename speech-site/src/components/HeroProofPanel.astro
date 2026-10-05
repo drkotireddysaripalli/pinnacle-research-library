@@ -5,7 +5,7 @@ import { url } from '../data/site';
 const { compact = false } = Astro.props;
 ---
 <aside class:list={['hero-proof-panel',{'hero-proof-compact':compact}]} aria-label="Pinnacle evidence shortcuts">
-  <a class="hero-proof-brand" href={url('/verify/')} aria-label="Explore Pinnacle Verify">
+  <a class="hero-proof-brand" href={url('/verify/')}>
     <Image src={emblem} width={54} height={54} format="webp" alt="Pinnacle official pinwheel emblem" />
     <span><strong>Pinnacle Verify</strong><small>Evidence you can inspect</small></span>
   </a>
