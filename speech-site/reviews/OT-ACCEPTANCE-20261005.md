@@ -21,3 +21,7 @@ The general-method source check supports stable sitting, an adult starting the z
 - CI, hosted devices, public source/asset proof and indexing notification remain release steps until the final receipt records their actual result.
 
 No call or lead submission was triggered. The site still needs settled customer/search data to assess business impact.
+
+## Standards finding resolved before release
+
+W3C Nu found20existing body-style placement errors in the reading companion. OT now uses the same CSS in its normal head stylesheet; the shared companion accepts an optional inline-style flag and keeps the existing default for compatibility. The compatibility compiler still embeds styles for old pages. No public neighbouring page is changed by this release. A second build for this actual source correction passed,369unit tests passed, and Nu returned0errors/0warnings. The unchanged reading design and fully reachable observation were inspected at390/1440pixels. Only the affected rendering was rechecked locally; exact-source CI provides the final browser/build check.
