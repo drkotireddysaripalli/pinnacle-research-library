@@ -28,7 +28,8 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
   try {
     await t.test('franchise canonical cycle is removed with one canonical and preserved content',async()=>{
       const path='/franchise-autism-therapy-center',input=html(path).replace('http://www.pinnacleblooms.org'+path,origin+'/franchises').replaceAll(origin+path,origin+'/franchises').replace('</head>','<link rel="canonical" href="https://mobile.pinnacleblooms.org/franchises"></head>');
-      const {r,body}=await run({body:input},path);
+      const {r,body}=await run({body:input},path,{headers:{'if-none-match':'"old"','if-modified-since':'Sun, 04 Oct 2026 10:00:00 GMT'}});
+      assert(!forwarded.headers.has('if-none-match'));assert(!forwarded.headers.has('if-modified-since'));
       assert.equal(r.status,200);assert.equal((body.match(/rel="canonical"/g)||[]).length,1);assert(body.includes('href="'+origin+path+'"'));assert(body.includes('content="'+origin+path+'"'));assert(body.includes('Approved header'));assert(body.includes('Approved footer'));
     });
     await t.test('all newly covered public templates use the same exact correction and preserve body',async()=>{

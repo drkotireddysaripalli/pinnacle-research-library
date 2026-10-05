@@ -127,7 +127,11 @@ export async function transform(request, response) {
 export async function handle(request, fetcher = fetch) {
   const redirect = staffRoute(request) || physiotherapyRedirect(request);
   if (redirect) return redirect;
-  if (new URL(request.url).pathname === '/franchise-autism-therapy-center') return repairFranchiseCanonical(request, await fetcher(request));
+  if (request.method === 'GET' && new URL(request.url).origin + new URL(request.url).pathname === 'https://www.pinnacleblooms.org/franchise-autism-therapy-center' && !request.headers.has('authorization') && !request.headers.has('range')) {
+    const headers = new Headers(request.headers);
+    headers.delete('if-none-match'); headers.delete('if-modified-since');
+    return repairFranchiseCanonical(request, await fetcher(new Request(request, {headers})));
+  }
   if (!isEligible(request)) return fetcher(request);
   const headers = new Headers(request.headers);
   // An origin validator could otherwise restore a cached pre-repair head via 304.

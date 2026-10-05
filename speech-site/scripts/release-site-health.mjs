@@ -1,6 +1,6 @@
 // Exact-version, route-preserving release for the two existing legacy Workers.
 import fs from 'node:fs/promises';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';
-const mode=process.argv[2],id='site-health-shared-20261005',privateDir='ask-private/'+id,receiptPath='deployment/'+id+'.json';
+const mode=process.argv[2],id='site-health-shared-v2-20261005',privateDir='ask-private/'+id,receiptPath='deployment/'+id+'.json';
 const account='/accounts/862998def1cd610fdb86b8e5c1d6ed4d/workers/scripts/',routeAPI='/zones/8b13f18e0589996b5d6512552372b434/workers/routes';
 const changed=['pinnacle-legacy-social-metadata','pinnacle-root-sitemap'],protectedNames=['pinnacle-verify-route','pinnacle-ask','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-helpline'];
 const extraRoutes=['www.pinnacleblooms.org/staff/*','www.pinnacleblooms.org/franchise-autism-therapy-center'];
