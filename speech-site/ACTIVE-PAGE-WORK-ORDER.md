@@ -1,3 +1,11 @@
+# Everyday Therapy release completed — 5 October 2026
+
+Live: https://www.pinnacleblooms.org/everyday-therapy. Source `cfc6587`, Cloudflare version `4e97b75a-98c2-4190-ad0b-98b44ea5dffa`. Exact CI and production checks passed. Receipt: `deployment/everyday-release-receipt-20261005.json`.
+
+Next: Occupational Therapy, existing quality row28/baseline70. Main owns code/deployment, one read-only reviewer, full agreed work order. Preserve approved common header/footer and all holds. Start from this current live release; do not reimplement completed Everyday work.
+
+---
+
 # Active page — Everyday Therapy — 5 October 2026
 
 Action `72fefc41-b043-4d23-9f36-ba373874eff0`. Canonical `/everyday-therapy`. Baseline source `f80ba48`; main Worker `e07baf83-9302-4c1e-8b2e-bae404a40313`. Main owns code/deployment; one read-only source and candidate reviewer.

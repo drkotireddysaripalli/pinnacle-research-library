@@ -1,6 +1,6 @@
 # Produced-page quality pass — ascending baseline score
 
-133 pages. Current page: abilityscore. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
+133 pages. Current page: occupational-therapy. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
 
 | Order | Page | Baseline /100 | Reviewed /100 | Pass state |
 |---:|---|---:|---:|---|
@@ -29,7 +29,7 @@
 | 23 | [Autism Mothers Handbook — English](https://www.pinnacleblooms.org/verify/evidence/publications/autism-mothers-handbook-english.html) | 70 | — | review-pending |
 | 24 | [Autism Mothers Handbook — Telugu](https://www.pinnacleblooms.org/verify/evidence/publications/autism-mothers-handbook-telugu.html) | 70 | — | review-pending |
 | 25 | [Dilsukhnagar Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india) | 70 | — | deferred-after-individuals |
-| 26 | [Everyday Therapy](https://www.pinnacleblooms.org/everyday-therapy) | 70 | — | review-pending |
+| 26 | [Everyday Therapy](https://www.pinnacleblooms.org/everyday-therapy) | 70 | 92 | completed |
 | 27 | [Nandyala Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india) | 70 | — | deferred-after-individuals |
 | 28 | [Occupational Therapy](https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate) | 70 | — | review-pending |
 | 29 | [Personal Development Kernel](https://www.pinnacleblooms.org/personal-development-kernel) | 70 | — | review-pending |
