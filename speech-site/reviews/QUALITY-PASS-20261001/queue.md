@@ -1,6 +1,6 @@
 # Produced-page quality pass — ascending baseline score
 
-133 pages. Current page: personal-development-kernel. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
+133 pages. Current page: prognose. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
 
 | Order | Page | Baseline /100 | Reviewed /100 | Pass state |
 |---:|---|---:|---:|---|
@@ -32,7 +32,7 @@
 | 26 | [Everyday Therapy](https://www.pinnacleblooms.org/everyday-therapy) | 70 | 92 | completed |
 | 27 | [Nandyala Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india) | 70 | — | deferred-after-individuals |
 | 28 | [Occupational Therapy](https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate) | 70 | 92 | completed |
-| 29 | [Personal Development Kernel](https://www.pinnacleblooms.org/personal-development-kernel) | 70 | — | review-pending |
+| 29 | [Personal Development Kernel](https://www.pinnacleblooms.org/personal-development-kernel) | 70 | 89 | completed |
 | 30 | [Prognose](https://www.pinnacleblooms.org/prognose) | 70 | — | review-pending |
 | 31 | [Srikakulam Centre](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india) | 70 | — | deferred-after-individuals |
 | 32 | [TherapeuticAI](https://www.pinnacleblooms.org/therapeuticai) | 70 | — | review-pending |
