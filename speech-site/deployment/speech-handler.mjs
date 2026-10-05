@@ -1,3 +1,4 @@
+import {therapeuticaiAsset,therapeuticaiHash} from './therapeuticai-assets.mjs';
 import {prognoseAsset,prognoseHash} from './prognose-assets.mjs';
 import {pdkAsset,pdkHash} from './pdk-assets.mjs';
 import {occupationalAsset,occupationalHash} from './occupational-assets.mjs';
@@ -104,12 +105,12 @@ export async function serveSpeech(request,env,inventory){
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/centers.html')key='/pinnacle-pages-data/centers-machine.md';
  else if(wantsMarkdown&&Object.values(CENTRE_DETAIL_ROUTES).some(id=>key==='/pinnacle-pages-html/'+id+'.html'))key=key.replace('/pinnacle-pages-html/','/pinnacle-pages-data/').replace('.html','-machine.md');
  else if(wantsMarkdown&&key.startsWith('/pinnacle-pages-html/')&&PINNACLEAI_PATHS.some(path=>key==='/pinnacle-pages-html/'+path.slice(1)+'.html'))key=key.replace('/pinnacle-pages-html/','/pinnacle-pages-data/').replace('.html','-reading.md');
- if(!Object.hasOwn(inventory,key)&&!readinessHash(key)&&!abilityscoreHash(key)&&!everydayHash(key)&&!occupationalHash(key)&&!pdkHash(key)&&!prognoseHash(key))return null;
+ if(!Object.hasOwn(inventory,key)&&!readinessHash(key)&&!abilityscoreHash(key)&&!everydayHash(key)&&!occupationalHash(key)&&!pdkHash(key)&&!prognoseHash(key)&&!therapeuticaiHash(key))return null;
  const isHtml=key.endsWith('.html');
  const isMachineDocument=key.endsWith('.md');
  if(!env.ASSETS)return new Response('Temporarily unavailable',{status:503,headers:{'cache-control':'no-store'}});
  // Serve complete small assets; ignoring Range also prevents mixing bytes across releases.
- const source=prognoseAsset(key,request.method)||pdkAsset(key,request.method)||occupationalAsset(key,request.method)||everydayAsset(key,request.method)||abilityscoreAsset(key,request.method)||readinessAsset(key,request.method)||await env.ASSETS.fetch(new Request('https://assets.local'+key,{method:request.method}));
+ const source=therapeuticaiAsset(key,request.method)||prognoseAsset(key,request.method)||pdkAsset(key,request.method)||occupationalAsset(key,request.method)||everydayAsset(key,request.method)||abilityscoreAsset(key,request.method)||readinessAsset(key,request.method)||await env.ASSETS.fetch(new Request('https://assets.local'+key,{method:request.method}));
  if(![200,206,304].includes(source.status))return new Response(request.method==='HEAD'?null:'Temporarily unavailable',{status:503,headers:{'cache-control':'no-store','retry-after':'30'}});
  const headers=new Headers(source.headers);
  for(const k of ['set-cookie','age','expires','content-encoding'])headers.delete(k);
@@ -126,7 +127,7 @@ export async function serveSpeech(request,env,inventory){
  const resourceLink=isHtml&&u.pathname==='/books';
  const parentReading=readingEntry(u.pathname,key);
  const editionSummary=isHtml&&editionSearchEntry(u.pathname);
- const etag='"speech-'+(prognoseHash(key)||pdkHash(key)||occupationalHash(key)||everydayHash(key)||abilityscoreHash(key)||readinessHash(key)||inventory[key])+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+(editionSummary?'-'+EDITION_SEARCH_RELEASE:'')+'"';headers.set('etag',etag);
+ const etag='"speech-'+(therapeuticaiHash(key)||prognoseHash(key)||pdkHash(key)||occupationalHash(key)||everydayHash(key)||abilityscoreHash(key)||readinessHash(key)||inventory[key])+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+(editionSummary?'-'+EDITION_SEARCH_RELEASE:'')+'"';headers.set('etag',etag);
  if(isHtml){headers.set('vary','Accept');headers.set('x-robots-tag','index, follow, max-image-preview:large');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com"+(Object.hasOwn(BOOK_ROUTES,u.pathname)?" https://pinnacleblooms.myshopify.com":"")+"; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(isMachineDocument){headers.set('vary','Accept');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');}
  if(preview){headers.set('x-robots-tag','noindex, nofollow, nosnippet');headers.set('cache-control','no-store');headers.set('content-signal','search=no, ai-input=no');headers.set('referrer-policy','no-referrer');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'self'; upgrade-insecure-requests");}

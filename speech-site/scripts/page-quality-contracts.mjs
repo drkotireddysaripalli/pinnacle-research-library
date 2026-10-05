@@ -1,5 +1,6 @@
 // Local build locations and their unchanged public canonical paths.
 export const pageContracts = {
+  therapeuticai:{path:'/therapeuticai',canonical:'/therapeuticai'},
   prognose:{path:'/prognose',canonical:'/prognose'},
   pdk:{path:'/personal-development-kernel',canonical:'/personal-development-kernel'},
   everyday:{path:'/everyday-therapy',canonical:'/everyday-therapy'},
@@ -17,4 +18,4 @@ export const pageContracts = {
   ,policies:{path:'/policies',canonical:'/policies',static:'scripts/validate-current-policies.mjs'}
 };
 // CI follows the page currently in acceptance; change this only when the next page candidate is ready.
-export const activeQualityPage='prognose';
+export const activeQualityPage='therapeuticai';

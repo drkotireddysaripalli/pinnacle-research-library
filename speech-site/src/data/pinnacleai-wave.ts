@@ -1,3 +1,4 @@
+import {therapeuticaiContent} from './therapeuticai-content.ts';
 import {prognoseContent} from './prognose-content.ts';
 import {pdkContent} from './pdk-content.ts';
 import {abilityContent} from './abilityscore-content.ts';
@@ -118,26 +119,16 @@ export const pinnacleWave = [
     sourceKeys:['workflow','bis','validation','md5'], faqs:prognoseContent.faqs
   },
   {
-    slug:'therapeuticai', short:'TherapeuticAI®', label:'TherapeuticAI®', title:'TherapeuticAI® | Connect a Child’s Goal to Guided Therapy',
-    description:'TherapeuticAI connects a child’s life goal to professionally chosen activity, guided use and response review. Follow one play-box example.',
-    eyebrow:'The right activity has a reason', headline:'Therapy should serve the life your child is growing into.',
-    lead:'A technique may help a child practise a skill. The important question is why that skill matters to the child and how it will become useful beyond the session. TherapeuticAI helps organise suitable activities around professionally chosen goals.',
-    direct:'The BIS schedule describes Everyday Therapy delivered through TherapeuticAI and an adaptive therapy-plan support function. Professional assessment and family priorities determine what is suitable. The software supports selection, delivery and tracking; it does not independently prescribe treatment.',
-    purpose:'Speech, occupational, behavioural and educational contributions may each be useful when they serve a particular child’s daily participation; no fixed combination is assumed.',
-    question:'How does a goal become the right kind of practice?',
-    exampleTitle:'From requesting help to joining play.',
-    exampleLead:'Illustrative example only. A child wants help opening a play box so a shared game can begin.',
-    example:[['Name the life moment','The child’s wish to join play gives the activity its purpose.'],['Select with judgement','A relevant professional chooses an accessible communication or motor support and checks comfort and preference.'],['Practise with meaning','The technique is used in the session and an agreed natural moment, rather than repeated for a score alone.'],['Review response','Family and therapist discuss what the child used, what support remained and whether to adapt.']],
-    mechanismTitle:'The activity is one part of an accountable plan.',
-    mechanism:['A real-life goal determines what ability matters.','Qualified professionals select appropriate support and coordinate with family and other disciplines as relevant.','Observed response returns through Fusion and later reassessment.'],
-    limit:'A BIS licence and module name do not certify an individual therapist, establish treatment effectiveness or mean every therapy is appropriate for every child.',
-    takeaway:'Ask why each suggested activity belongs in your child’s life, who chose it and how it will be reviewed.',
-    sourceKeys:['workflow','bis','md5','model','research'],
-    faqs:[
-      {question:'Does TherapeuticAI replace my child’s therapist?',answer:'No. It supports a professionally selected, family-informed plan; clinicians and families remain responsible for care decisions.'},
-      {question:'Must my child receive speech, occupational, ABA and special education together?',answer:'No. Suitable disciplines and activities depend on assessment, family priorities and the child’s needs.'},
-      {question:'Does the BIS record prove an activity will work?',answer:'No. It documents the product and quality-system scope, not an individual clinical result.'}
-    ]
+    slug:'therapeuticai', updatedOn:'2026-10-05', readingFaqs:true, short:'TherapeuticAI®', label:'TherapeuticAI®', title:'TherapeuticAI® | Meaningful Activity & Professional Support',
+    description:'Connect a child’s everyday goal to professionally chosen activity, family guidance and review. Explore TherapeuticAI, a play-box example and source records.',
+    eyebrow:'A meaningful goal gives an activity its purpose', headline:'Every activity. A reason in your child’s life.',
+    lead:therapeuticaiContent.lead, direct:therapeuticaiContent.direct, purpose:therapeuticaiContent.purpose,
+    question:'Why this activity, this support and this next step?',exampleTitle:therapeuticaiContent.example.title,exampleLead:therapeuticaiContent.example.intro,
+    example:therapeuticaiContent.example.cards.map(c=>[c.title,c.text]),
+    mechanismTitle:'A purpose. A professional choice. Practice with feedback.',mechanism:therapeuticaiContent.architecture.map(a=>a.title+': '+a.text),
+    limit:'BIS names Everyday Therapy through TherapeuticAI within the software quality-system scope. MD-5 establishes the named non-diagnostic device intended use. Neither certifies every therapist or guarantees an activity’s result.',
+    takeaway:'Tell us one everyday moment you want to make easier. We will help you discuss a suitable next step, professional and centre.',
+    sourceKeys:['workflow','bis','md5','model','research'],faqs:therapeuticaiContent.faqs
   },
   {
     slug:'everyday-therapy', updatedOn:'2026-10-05', short:'Everyday Therapy™', label:'Everyday Therapy™', title:'Everyday Therapy™ | Carry Meaningful Practice into Real Life',
