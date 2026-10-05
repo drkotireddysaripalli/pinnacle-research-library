@@ -1,3 +1,7 @@
+# AbilityScore release completed — 5 October 2026
+
+Live: https://www.pinnacleblooms.org/abilityscore. Source `4dacb04`; exact CI and production checks passed. Receipt: `deployment/abilityscore-release-receipt-20261005.json`. Next eligible individual: Everyday Therapy, original baseline 70. Preserve the common shell and existing diagram/Verify/centre/staff holds.
+
 # Active individual page — AbilityScore — 5 October 2026
 
 Canonical: `/abilityscore`. Owner resumed sequential page completion; action `bc7d55b0-953f-477d-8d5c-b597dede3919`. Main owns all code and release; one read-only combined reviewer. Baseline source `ed38c4a`, main Worker `5052ce59-784e-4fc4-b6a3-2b6a0120b1bb`.

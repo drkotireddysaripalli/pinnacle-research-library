@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "abilityscore",
+  "current": "everyday-therapy",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -403,14 +403,15 @@
       "label": "AbilityScore",
       "url": "https://www.pinnacleblooms.org/abilityscore",
       "baselineScore": 70,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "The toy-request example stops at general assessment-to-goal logic. It does not show how a particular observation changes a professional decision; the sole editorial image is not a complete explanatory creative.",
       "task": "Show a labelled illustrative input-to-output-to-human-decision example with age/context and uncertainty, and a complete branded diagram showing how reassessment changes the next support decision.",
       "sourceCondition": "Independent comparator validation is not completed in the public record; real intake/distribution outcomes are unobserved.",
-      "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "currentScore": 90,
+      "pageOwnedDisposition": "Completed AbilityScore with a family-led assessment-to-decision narrative, complete native branded creative, two specific review branches, seven-stage lifecycle, therapy links, versioned evidence and eight matching FAQs/reading exports. Source pushed and exact CI passed before activation; iPhone/Safari checks passed; 16 live assets,30 links,13 unchanged protected pages,194 routes and four bindings verified. One changed URL accepted by IndexNow; GSC annotation saved.",
+      "release": "RELEASE-ABILITYSCORE-20261005.md",
+      "reviewedOn": "2026-10-05T00:31:03.491558+00:00",
+      "scoreScope": "Implementation-owner editorial/page-craft judgment with one independent read-only acceptance review; not a Google score, clinical validation, real-family usability result or business-outcome grade."
     },
     {
       "order": 22,
