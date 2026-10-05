@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "about",
+  "current": "autism-therapy",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -684,14 +684,15 @@
       "label": "About Pinnacle",
       "url": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
       "baselineScore": 72,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "The continuity narrative remains a general promise rather than one demonstrated observation, review and changed plan. Repeated family-purpose passages add length before institutional choices.",
       "task": "Add one compact family journey showing the named professional role, a recorded observation and a keep/adapt/refer decision, then shorten repeated purpose statements around it.",
       "sourceCondition": "Institutional facts and intended family experience do not establish service consistency or downstream family outcomes.",
       "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "pageOwnedDisposition": "About Pinnacle delivered with a concrete illustrative family observation, occupational-therapist adjustment, three review decisions and seven linked PinnacleAI stages. Eight matching FAQs, source/Markdown/social content and call/enrolment/centre journeys align. Exact source pushed and CI passed; physical iPhone, hosted Safari, five widths and public checks passed. All194 routes/four bindings and23 protected pages preserved. IndexNow accepted one changed URL.",
+      "release": "RELEASE-ABOUT-20261005.md",
+      "reviewedOn": "2026-10-05T08:00:12.885790+00:00",
+      "scoreScope": "Bounded editorial/technical acceptance; no invented post-release numeric score or measured family/business outcome."
     },
     {
       "order": 39,
@@ -2240,6 +2241,6 @@
     "delhi": "completed and set aside",
     "nextContract": null
   },
-  "currentDisposition": "Special Education published and verified on5October2026; next unheld individual is About Pinnacle, row38. Verify and centre/staff deferrals remain.",
-  "nextCandidate": "about"
+  "currentDisposition": "About Pinnacle published and verified on5October2026; next unheld individual is Autism Therapy,row39. Verify and centre/staff deferrals remain.",
+  "nextCandidate": "autism-therapy"
 }

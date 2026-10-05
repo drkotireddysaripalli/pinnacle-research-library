@@ -36,19 +36,26 @@ Live: https://www.pinnacleblooms.org/best-special-education-center-call-91001811
 
 Source 266237648cd11ee66770a5d8924bb7d88deffde6; Cloudflare 1db2fa3f-65cb-4a34-b5de-c53d969bee83. Concrete learning-access example, complete native branded creative, seven linked stages, twelve matchingFAQs, first-visit steps and service-aware enrolment delivered. Pushed CI, physicaliPhone/hostedSafari, mobile Lighthouse97/desktop100 and public checks passed.194routes/fourbindings/20protected responses preserved. Receipt: deployment/special-education-release-receipt-20261005.json; release: RELEASE-SPECIAL-EDUCATION-20261005.md.
 
-## Next individual: About Pinnacle
+## About Pinnacle delivered
 
-Canonical: https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate
+Live: https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate
 
-Quality row38 / original baseline72. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code/release; at most one bounded read-only reviewer.
+Sourcecfc23c2e6f6c050935c5423f085779351876c4b7; Cloudflare91ce11f4-e4be-42ab-a060-54abbd085d70. Concrete illustrative family observation and professional adjustment, three review decisions, seven linked stages and eight matchingFAQs delivered. Existing approved creatives and common shell retained. Pushed CI, five widths, physicaliPhone/hostedSafari and public checks passed.194routes/fourbindings/23protected responses preserved. One changed-URL IndexNow acceptance and GSC annotation recorded. Mobile Lighthouse96/desktop100; mobile labLCP2.639s remains an optimisation opportunity. Proof: RELEASE-ABOUT-20261005.md and deployment/about-release-receipt-20261005.json.
 
-1. Reconcile live source once. Preserve common shell, routing, Ask, Verify, authentication, commerce and current source holds.
-2. Explain Pinnacle from its own voice: the child’s self-sufficient, mainstream-included life; what the family can expect; how people, measurement, integrated support, everyday practice and review connect.
-3. Show one compact, explicitly illustrative family journey with a named professional role, a concrete observation and a keep/adapt/refer decision. Do not turn institutional scale into a claim of identical individual outcomes.
-4. Shorten repeated purpose statements. Keep institutional history, leadership, regulatory evidence and practical family decisions distinct and connected. Retain only the owner-approved leadership and genuine sources.
-5. Use suitable approved branding/creative. Generate a complete native creative only for an actual narrative gap. Keep the essential explanation readable in HTML, with meaningful icons/headings, mobile layout and call/enrol/centre paths.
-6. Align visible/structured FAQs, title/description, social image and machine/citation exports. Complete focused visual/browser tests, pushed exact-source CI, safe deployment and public proof; notify indexing once for a material change.
-7. Save the release receipt and advance the next unheld individual. No fabricated family results, service consistency, clinical guarantees or commercial uplift.
+## Next individual: Autism Therapy
+
+Canonical: https://www.pinnacleblooms.org/autism-therapy
+
+Quality row39 / original baseline72. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code/release; at most one bounded read-only reviewer.
+
+1. Reconcile current live source once; preserve approved common shell, all routes, Ask, Verify, authentication and commerce.
+2. Make the child's self-sufficient, mainstream-included life the purpose of relevant integrated support. Explain the distinct contribution of speech, occupational, behavioural and educational support without assuming every child needs the same combination.
+3. Show one explicitly illustrative morning priority, concrete observation, a named professional/family adjustment and the next checkpoint. State what has and has not been observed. No invented individual improvement or guaranteed outcome.
+4. Reuse approved complete branded creative where suitable; fill a genuine visual explanation gap with native session image generation. Keep core meaning in accessible HTML.
+5. Align links, FAQ/schema, social and machine exports; keep clear call9100181181, service-aware enquiry and centre journeys.
+6. Complete focused review/visual/browser tests, pushed exact-source CI, full preserved deployment, public read-back and one meaningful changed-URL notification. Record the actual remaining limits and next page.
+
+The authorised combined Amazon hardcover alternatives remain a separate small queued commerce action before the next individual page. Do not change catalogue/stock/payments or duplicate book records.
 
 ## Continuing boundaries
 
