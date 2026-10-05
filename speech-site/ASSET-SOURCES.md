@@ -244,3 +244,7 @@ Astro supplies responsive WebP with dimensions. The whole square circle remains 
 - Purpose: family-table participation, guided practice, observation and professional review. Illustrative family, not a patient testimony or evidence of treatment results. Visually inspected before integration.
 - Complete prompt: `reviews/everyday-family-practice-20261005.prompt.txt`.
 - Existing `pinnacleai-home-v162.png` reused for family-part block; existing approved `pinnacleai-everyday-social-20260930.png` retained for 1200×630 social image. Their original provenance remains above.
+
+## Occupational Therapy · 5 October 2026
+
+`occupational-everyday-steps-20261005.png`: native session image generation, complete branded creative. Official logo and previous jacket scene supplied as references. Prompt/provenance: `reviews/OT-CREATIVE-20261005.md` and `OT-CREATIVE-PROMPT-20261005.txt`. Illustrative, not a beneficiary testimonial. Approved prior social poster retained.

@@ -182,7 +182,16 @@ for(const id of choices){
       await evaluate("document.querySelector('#pinnacleai-journey').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('everyday-stages');
       await check('Everyday Therapy FAQ disclosure works',async()=>{await click('.everyday-faq summary');return evaluate("return document.querySelector('.everyday-faq details').open && document.querySelectorAll('.everyday-faq details').length===8");});
     }
-    if(isAsk){
+    if(target.pathname==='/best-occupational-therapy-center-india-proven-improvement-rate'){
+      await check('Occupational Therapy areas and stages have usable independent widths',async()=>{
+        row.occupationalGeometry=await evaluate("const cards=[...document.querySelectorAll('.ot-goal-cycle li,.ot-other-examples article')];return {areas:document.querySelectorAll('.ot-route').length,reviews:document.querySelectorAll('.ot-other-examples article').length,stages:document.querySelectorAll('.ot-stage-peek li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.occupationalGeometry;return r.areas===5&&r.reviews===2&&r.stages===7&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#goal-in-life').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('occupational-example');
+      await evaluate("document.querySelector('#pinnacle-difference').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('occupational-stages');
+      await check('Occupational Therapy FAQ disclosure works',async()=>{await click('.ot-faq summary');return evaluate("return document.querySelector('.ot-faq details').open && document.querySelectorAll('.ot-faq details').length===8");});
+    }
+      if(isAsk){
       await check('Both approved Sintony weights loaded',()=>evaluate("return document.fonts.check('400 16px Sintony') && document.fonts.check('700 16px Sintony')"));
       await check('Answer text and source section remain readable',()=>evaluate("const p=document.querySelector('#explanation'),s=document.querySelector('#sources');return !!p && p.innerText.length>200 && p.getBoundingClientRect().width>=Math.min(280,innerWidth-48) && !!s"));
       await check('Answer FAQ disclosure opens',async()=>{await click('.ask-faq details summary');return evaluate("return document.querySelector('.ask-faq details').open");});

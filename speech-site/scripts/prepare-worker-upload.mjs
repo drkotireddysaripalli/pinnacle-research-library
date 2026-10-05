@@ -12,7 +12,7 @@ await fs.access(path.join(release,'index.html'));
 await fs.access(path.join(release,'pinnacle-pages-html','enrolment.html'));
 await fs.mkdir(stage,{recursive:false});
 
-const modules=['pinnacle-route-v12.mjs','discovery-handler.mjs','speech-handler.mjs','speech-enquiry-handler.mjs','centre-facilities.mjs','enrolment-handler.mjs','shopify-physical-feed.mjs','first-conversation-handler.mjs','first-conversation-assets.mjs','first-conversation-links.mjs','book-attribution-handler.mjs','book-attribution-assets.mjs','seva-handler.mjs','seva-assets.mjs','therapy-reading.mjs','therapy-reading-content.mjs','book-edition-search.mjs','book-edition-search-content.mjs','readiness-assets.mjs','abilityscore-assets.mjs','everyday-assets.mjs'];
+const modules=['pinnacle-route-v12.mjs','discovery-handler.mjs','speech-handler.mjs','speech-enquiry-handler.mjs','centre-facilities.mjs','enrolment-handler.mjs','shopify-physical-feed.mjs','first-conversation-handler.mjs','first-conversation-assets.mjs','first-conversation-links.mjs','book-attribution-handler.mjs','book-attribution-assets.mjs','seva-handler.mjs','seva-assets.mjs','therapy-reading.mjs','therapy-reading-content.mjs','book-edition-search.mjs','book-edition-search-content.mjs','readiness-assets.mjs','abilityscore-assets.mjs','everyday-assets.mjs','occupational-assets.mjs'];
 for(const name of modules)await fs.copyFile(path.join(root,'deployment',name),path.join(stage,name));
 let assets=path.relative(stage,release).replaceAll('\\','/');
 if(!assets.startsWith('.'))assets='./'+assets;

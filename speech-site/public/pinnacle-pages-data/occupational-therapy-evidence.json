@@ -1,5 +1,5 @@
 {
-  "updatedOn": "2026-09-30",
+  "updatedOn": "2026-10-05",
   "page": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
   "publisher": "Bharath Healthcare Laboratories Private Limited",
   "brand": "Pinnacle Blooms Network",
@@ -31,7 +31,7 @@
       "scope": "Defined services include therapies, assessments, screenings and parent training; this is not a count of OT sessions, clinical effectiveness or children improved."
     },
     {
-      "claim": "PinnacleAI GPT-OS v1.0.0 is listed as Class B non-diagnostic developmental-support software on Form MD-5.",
+      "claim": "PinnacleAI GPT-OS v1.0.0 is listed as Class B non-diagnostic developmental-support software on Form MD-5. Its intended population is children aged 0–12.",
       "source": "https://www.pinnacleblooms.org/verify/evidence/records/md5.html",
       "scope": "The software manufacturing licence does not license an OT professional or centre and does not establish a child's therapy result."
     },
@@ -49,6 +49,28 @@
       "claim": "The published centre directory identifies 62 locations but does not establish OT availability at every location.",
       "source": "https://www.pinnacleblooms.org/pinnacle-pages-data/centre-directory.json",
       "scope": "Centre-specific OT roster, professional details, appointment availability and fees must be confirmed by the team."
+    },
+    {
+      "claim": "Supported sitting, an adult starting a zip and a larger zip pull are examples of dressing adaptations.",
+      "source": "https://www.ghc.nhs.uk/our-teams-and-services/children-and-young-people/physical-health/childrens-occupational-therapy/",
+      "scope": "School Readiness > Dressing > General strategies and Zips. General methods, not evidence of a Pinnacle outcome or an individual prescription."
+    },
+    {
+      "claim": "Dressing support can consider the child, task, environment, manageable steps and unhurried practice.",
+      "source": "https://www.chesterfieldroyal.nhs.uk/all-services-and-wards/childrens-occupational-therapy/getting-dressed",
+      "scope": "General NHS guidance. The page uses an explicitly illustrative jacket example; supported zip pulling is distinct from independent dressing."
     }
-  ]
+  ],
+  "illustrativeExample": {
+    "goal": "Take part in putting on a favourite jacket before joining play",
+    "startingObservation": "Child wants to try but has difficulty lining up the two zip parts while standing.",
+    "adaptation": "Comfortable supported sitting, a larger pull and an adult connecting the zip at the bottom, chosen with the OT.",
+    "practice": "Child tries pulling up the zip with needed help; unhurried, with permission to ask for help or stop.",
+    "familyObservation": "With the jacket on, seated and with an adult starting the zip, my child pulled it up using the larger pull.",
+    "reviews": [
+      "If pulling remains difficult, the OT may adjust the pull, position or amount of help.",
+      "If it works in that setting, discuss a suitable next step or familiar setting and observe support and comfort again."
+    ],
+    "scope": "Illustrative, not a patient result or individual recommendation; one supported step does not establish independent dressing."
+  }
 }

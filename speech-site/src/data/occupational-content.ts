@@ -1,5 +1,5 @@
 import type { ServiceContent } from './service-content';
-import earlyPlay from '../assets/occupational-early-play-20260930.png';
+import earlyPlay from '../assets/occupational-everyday-steps-20261005.png';
 import lifeInView from '../assets/occupational-life-in-view-20260930.png';
 import { occupationalPath, url } from './site';
 
@@ -40,10 +40,12 @@ export const occupationalContent: ServiceContent = {
     '/verify/evidence/centre-entity-reference.html',
     '/national-autism-helpline'
   ].map(url).concat([
+    'https://www.ghc.nhs.uk/our-teams-and-services/children-and-young-people/physical-health/childrens-occupational-therapy/',
+    'https://www.chesterfieldroyal.nhs.uk/all-services-and-wards/childrens-occupational-therapy/getting-dressed',
     'https://wfot.org/about/about-occupational-therapy',
     'https://www.aota.org/practice/domain-and-process/occupations-everyday-activities'
   ]),
-  image:{source:earlyPlay,alt:'A young child explores a colourful stacking toy with their father nearby at home.',caption:'Begin with the activity your child wants to join.'},
+  image:{source:earlyPlay,alt:'Pinnacle Blooms Occupational Therapy creative: a child, mother and therapist explore a jacket zip. Small everyday steps. More life to join.',caption:'Begin with the activity your child wants to join.'},
   hero:{heading:'More ways to take part in everyday life.',emphasis:'The child’s life gives every step its direction.',lead:'Play, mealtimes, dressing and learning with others can all matter.',copy:'Tell us one moment you would like your child to enjoy or manage more confidently.',moments:[{icon:'heart',label:'Play'},{icon:'home',label:'Daily routines'},{icon:'book',label:'Learning'}]},
   pathway:{stages:occupationalStages,image:lifeInView,alt:'Illustrated family and school moments: a child manages a bag, joins a friend and takes part in learning.',caption:'One child’s wider life guides the steps we choose and review.'},
   concerns:occupationalRoutes.map(route=>({icon:route.icon,title:route.title,copy:route.short})),
@@ -55,6 +57,6 @@ export const occupationalContent: ServiceContent = {
     {question:'How will we know whether therapy is helping?',answer:'Agree on an observable activity goal and a starting point, then review what your child does in daily life, where it works, what support is needed and what should change.'},
     {question:'Will my child need speech, behavioural support or special education too?',answer:'Only when the individual assessment and shared goal indicate that another professional may contribute. Every child does not need every therapy.'},
     {question:'Which Pinnacle centre has an OT and what will it cost?',answer:'Availability and fees can change by location. Use the directory to choose a centre, then call 9100 181 181 so the team can help confirm the current professional, appointment and price before you travel.'},
-    {question:'Does PinnacleAI decide my child’s care?',answer:'No. PinnacleAI GPT-OS is licensed as non-diagnostic developmental-support software. Its scope supports ability measurement, readiness tracking, progress forecasting and plan support. Qualified professionals and your family use that information to discuss care and review progress.'}
+    {question:'Does PinnacleAI decide my child’s care?',answer:'No. PinnacleAI GPT-OS is licensed as non-diagnostic developmental-support software for children aged 0–12. Its scope supports ability measurement, readiness tracking, progress forecasting and plan support. Qualified professionals and your family use that information to discuss care and review progress.'}
   ]
 };
