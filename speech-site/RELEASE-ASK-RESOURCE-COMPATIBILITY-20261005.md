@@ -23,3 +23,13 @@ GSC inspected the failing eye-contact URL as indexed, but its last successful Go
 Ahrefs'4520sitemap5xx/noindex groups overlap the failing answer group. Do not add them as independent affected pages. Other findings remain separate:746canonical URLs without incoming links,381orphans, and10not-found destinations. The10destinations are malformed translated link tokens (`L000`/`L002` and wrapped variants), not evidence that real new destination pages should be invented. Source translations need exact destination restoration; no blanket redirect or soft200.
 
 Notify IndexNow only for the materially restored URLs, once after public verification. Add one dated GSC repair annotation. Wait for subsequent natural/scheduled crawls to update Ahrefs/GSC findings; do not claim the historical audit is already cleared or that indexing/rankings/enquiries improved.
+
+## Delivered
+
+- Code commit: `8493f2287639aa9f8d92749a41bab5e1425148dd`, pushed to `main`.
+- Ask Worker version: `0e2776e7-dd56-4432-a069-307998aa5040`, promoted 5 October 2026 at 11:51:34 UTC.
+- Six representative answer pages and seven live controls passed. This is representative verification, not a new full crawl of all 4,520 URLs.
+- IndexNow accepted one batch of all 4,520 affected public/indexable answer URLs with HTTP 200 at 11:53 UTC. This is a notification receipt, not proof of indexing.
+- GSC annotation: `be035a7c-b7c3-4105-9d69-ca88af619cee`.
+- The regression is included in `test:ask-content` and the Ask CI job.
+- Remaining translated-link and canonical/orphan findings are recorded in the existing growth queue. The general automation remains paused under the owner's prior hold.

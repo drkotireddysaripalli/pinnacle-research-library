@@ -1,0 +1,207 @@
+{
+  "phase": "deployed-publicly-verified",
+  "at": "2026-10-05T11:44:35.605Z",
+  "routeCount": 194,
+  "rollback": [
+    {
+      "version_id": "c57ef23a-0baf-47f7-a61e-eb26b2376ef3",
+      "percentage": 100
+    }
+  ],
+  "protected": {
+    "portal": [
+      {
+        "version_id": "23a7f5d9-fca7-42ca-9f28-b76520386cca",
+        "percentage": 100
+      }
+    ],
+    "mcp": [
+      {
+        "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+        "percentage": 100
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "candidate": "0e2776e7-dd56-4432-a069-307998aa5040",
+  "candidateBindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "bundleSHA256": "c961d88d97b47b0bd698b85b34a8135fcd13c705e9cd51c729607cd52b246f0e",
+  "promotedAt": "2026-10-05T11:51:34.549Z",
+  "afterRouteCount": 194,
+  "protectedUnchanged": true,
+  "baselineCommit": "f261d62d226dc6ba8e096bedaa4d2ac747ed4470",
+  "sourceCommit": "8493f2287639aa9f8d92749a41bab5e1425148dd",
+  "publicVerification": "ask-resource-live-20261005.json",
+  "verifiedAt": "2026-10-05T17:24:31.372461+05:30",
+  "infrastructureVerification": "ask-resource-infrastructure-20261005.json"
+}
