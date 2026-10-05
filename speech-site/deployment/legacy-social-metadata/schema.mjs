@@ -1,3 +1,4 @@
+import {repairLegacyIdentity} from './organization.mjs';
 // Correct two observed schema.org term spellings in legacy JSON-LD only.
 // No claim, entity identity, text, navigation or commerce record is rewritten.
 export const SCHEMA_LIMIT = 256 * 1024;
@@ -56,7 +57,7 @@ class LegacySchemaScript {
     this.pass = (element.getAttribute('type') || '').trim().toLowerCase() !== 'application/ld+json';
     this.buffer = '';
   }
-  text(chunk) {
+  async text(chunk) {
     if (this.pass) return;
     this.buffer += chunk.text;
     if (this.buffer.length > SCHEMA_LIMIT) {
@@ -64,7 +65,7 @@ class LegacySchemaScript {
       this.buffer = ''; this.pass = true;
     } else if (!chunk.lastInTextNode) chunk.remove();
     else {
-      chunk.replace(repairSchemaText(this.buffer), {html: true});
+      chunk.replace(repairSchemaText(await repairLegacyIdentity(this.buffer)), {html: true});
       this.buffer = '';
     }
   }

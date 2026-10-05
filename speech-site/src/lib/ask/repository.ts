@@ -1,3 +1,4 @@
+import {repairContentLinks} from './links';
 export async function rpc(env:any,name:string,body:any={}){
  if(!env.SUPABASE_URL||!env.SUPABASE_KEY)throw new Error('Public content connection is unavailable');
  const cacheable=name!=='ask_public_search';
@@ -22,7 +23,7 @@ export async function answer(env:any,slug:string,lang='en'){
  const actual=lang==='te'&&!slug.endsWith('-te')?slug+'-te':slug;
  const a=await rpc(env,'ask_portal_answer',{p_slug:actual,p_lang:lang});
  if(!a||typeof a.slug!=='string')return null;
- return {...a,related_materials:resourceItems(a.related_materials),related_techniques:resourceItems(a.related_techniques)};
+ return {...a,answer_md:repairContentLinks(a.answer_md||''),related_materials:resourceItems(a.related_materials),related_techniques:resourceItems(a.related_techniques)};
 }
 export const directory=(env:any,kind:string,lang='en',page=1)=>rpc(env,'ask_portal_directory',{p_kind:kind,p_lang:lang,p_page:page});
 export const collection=(env:any,kind:string,value:string,lang='en',page=1)=>rpc(env,'ask_portal_collection',{p_kind:kind,p_value:value,p_lang:lang,p_page:page});

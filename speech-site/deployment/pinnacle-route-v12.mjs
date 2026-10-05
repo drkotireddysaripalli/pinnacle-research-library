@@ -1,3 +1,4 @@
+import {repairSharedNavigation} from './shared-navigation.mjs';
 import {serveRootDiscovery} from './discovery-handler.mjs';
 import {serveSpeechEnquiry} from './speech-enquiry-handler.mjs';
 import {serveSpeech} from './speech-handler.mjs';
@@ -295,7 +296,7 @@ export function isContextualAskRoute(request,rules=CONTEXTUAL_EVIDENCE_RULES){
 }
 
 
-export default {
+const portalWorker = {
  async fetch(request,env,ctx){
   const discoveryResponse=await serveRootDiscovery(request,env);if(discoveryResponse)return discoveryResponse;
   const enrolmentApiResponse=await serveEnrolmentApi(request,env);if(enrolmentApiResponse)return enrolmentApiResponse;
@@ -403,3 +404,5 @@ export async function transformReviewedHomeOrganization(request,response){
  for(const name of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest','accept-ranges'])h.delete(name);
  return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
 }
+
+export default {async fetch(request,env,ctx){return repairSharedNavigation(request,await portalWorker.fetch(request,env,ctx));}};

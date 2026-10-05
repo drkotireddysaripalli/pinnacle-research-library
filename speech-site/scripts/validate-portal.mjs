@@ -57,7 +57,7 @@ check('No duplicate HTML IDs',ids.size===[...html.matchAll(/\bid="([^"]+)"/g)].l
 check('Official Pinnacle TV channel preserved',hrefs.has('https://www.youtube.com/channel/UCAAuGmvPSBRiCnDlEcXYwEQ'));
 check('Footer portal destinations preserved',['https://materials.pinnacleblooms.org/','https://interventions.pinnacleblooms.org/','https://pediatricians.pinnacleblooms.org/'].every(x=>hrefs.has(x)));
 check('Complete navigation exposes all high-value site hubs',[
-  'https://pinnacleblooms.org/ask/',
+  'https://pinnacleblooms.org/ask',
   full('/staff'),
   full('/allmirracles'),
   full('/top-autism-therapy-services-india-proven-improvement-rate'),

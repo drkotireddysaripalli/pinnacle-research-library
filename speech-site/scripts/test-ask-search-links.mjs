@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {build} from 'esbuild';
+const load=async entry=>{const out=await build({entryPoints:[entry],bundle:true,platform:'node',format:'esm',write:false});return import('data:text/javascript;base64,'+Buffer.from(out.outputFiles[0].text).toString('base64'));};
+const {encodedAskPath,languageAlternates}=await load('src/lib/ask/seo.ts');
+const {canonicalContentLink,repairContentLinks}=await load('src/lib/ask/links.ts');
+test('canonical encoding matches links, preserving distinct path segments',()=>{assert.equal(encodedAskPath('lens/entity:condition/hearing-impairment'),'lens/entity%3Acondition/hearing-impairment');assert.equal(encodedAskPath('te/conditions'),'te/conditions');});
+test('language links require an indexable reciprocal self reference',()=>{const rows=[{lang:'en',href:'https://pinnacleblooms.org/ask/example',indexable:true},{lang:'te',href:'https://pinnacleblooms.org/ask/example-te',indexable:false}];assert.deepEqual(languageAlternates(rows,'noindex, follow',rows[1].href),[]);assert.deepEqual(languageAlternates(rows,'index, follow',rows[0].href),[]);rows[1].indexable=true;assert.equal(languageAlternates(rows,'index, follow',rows[1].href).length,3);});
+test('reviewed content links preserve external sources, parameters and medical wording',()=>{assert.equal(canonicalContentLink('https://example.gov/enroll'),'https://example.gov/enroll');assert.equal(canonicalContentLink('/enroll?service=ot#form'),'https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=ot#form');const md='Keep the explanation [hearing](/hearing-impairment) and [source](https://example.gov/research).';assert.equal(repairContentLinks(md),'Keep the explanation [hearing](https://pinnacleblooms.org/ask/hearing-impairment) and [source](https://example.gov/research).');});
