@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-05T15:26:04.721Z",
+  "syntheticSession": true,
+  "physicalDevice": false,
+  "skipped": [
+    {
+      "browser": "firefox",
+      "reason": "Installed Windows runtime failed to start: spawn UNKNOWN."
+    }
+  ],
+  "results": [
+    {
+      "browser": "chromium",
+      "width": 358,
+      "status": "passed",
+      "overflow": false,
+      "sourceLineBreaks": 27,
+      "telephone": "tel:+919100181181"
+    },
+    {
+      "browser": "webkit",
+      "width": 720,
+      "status": "passed",
+      "overflow": false,
+      "sourceLineBreaks": 27,
+      "telephone": "tel:+919100181181"
+    }
+  ]
+}

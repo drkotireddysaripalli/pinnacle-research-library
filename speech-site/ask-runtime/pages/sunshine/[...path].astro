@@ -1,0 +1,20 @@
+---
+import {env} from 'cloudflare:workers';
+import KnowledgeLayout from '../../../src/layouts/KnowledgeLayout.astro';import Pagination from '../../../src/components/knowledge/Pagination.astro';import NextStep from '../../../src/components/knowledge/NextStep.astro';import Icon from '../../../src/components/Icon.astro';
+import {data,sunshineTypes,ORIGIN,cleanPath,requestedPage,paged,pageURL,matchesSearch} from '../../../src/lib/knowledge/catalogues';
+const path=cleanPath(Astro.params.path||''),type=sunshineTypes.find(t=>t.slug===path),page=requestedPage(Astro.url.searchParams.get('page')),q=(Astro.url.searchParams.get('q')||'').trim().slice(0,200),base='/sunshine'+(path?'/'+path:'');
+let records:any[]=[],error=false;try{records=await data(env,'sunshine-index');}catch{error=true;}
+const items=records.filter(x=>(!type||x.type===type.key)&&matchesSearch(x,q)),p=paged(items,page),missing=path===null||!!path&&!type||!p.valid;
+Astro.response.status=error?503:missing?404:200;const robots=q||missing||error?'noindex, follow':'index, follow, max-image-preview:large';Astro.response.headers.set('Cache-Control',error||missing||q?'private, no-store':'public, max-age=0, s-maxage=300');Astro.response.headers.set('X-Robots-Tag',robots);
+const title=(type?type.label+' | ':'')+'Sunshine child development library | Pinnacle Blooms Network'+(page>1?' · Page '+page:''),description=(type?.intro||'Explore child development through conditions, behaviours, milestones, abilities, skills, therapy techniques, materials and assessments. Connect a question with useful support.')+(page>1?' Page '+page+' of '+p.pages+'.':'');
+const schema=[{'@type':'ItemList',name:title,itemListElement:p.items.map((x,i)=>({'@type':'ListItem',position:(page-1)*24+i+1,name:x.title,url:ORIGIN+x.url}))}];
+---
+<KnowledgeLayout title={title} description={description} path={pageURL(base,page,q)} schema={schema} crumbs={[{name:'Sunshine',url:'/sunshine'},...(type?[{name:type.label,url:base}]:[])]} reader={!missing&&!error} robots={robots} brand="Pinnacle Sunshine" searchPath="/sunshine" q={q}>
+ <header class="knowledge-hero"><p class="knowledge-kicker"><Icon name="sun"/>Pinnacle Sunshine · Understand. Connect. Act.</p><h1>{error?'The library is temporarily unavailable.':missing?'That collection was not found.':type?type.label+' in your child’s world.':'See your child’s development from every useful angle.'}</h1><p>{description}</p><div class="knowledge-actions"><a class="knowledge-primary" href="tel:+919100181181"><Icon name="phone"/>Call 9100 181 181</a><a href="/faq">Explore parent questions <Icon name="arrow"/></a></div></header>
+ {!error&&!missing&&<>
+ {!type&&!q&&<section><h2 class="knowledge-section-title">Choose the perspective that helps.</h2><div class="knowledge-grid">{sunshineTypes.map(t=><article class="knowledge-card"><a href={'/sunshine/'+t.slug}><Icon name={t.icon}/><h2>{t.label}</h2><p>{t.intro}</p><span class="knowledge-count">{records.filter(x=>x.type===t.key).length} topics</span><span class="knowledge-read">Explore <Icon name="arrow"/></span></a></article>)}</div></section>}
+ {(type||q)&&<ul class="knowledge-pills" aria-label="Knowledge perspectives">{sunshineTypes.map(t=><li><a href={'/sunshine/'+t.slug} aria-current={type?.key===t.key?'page':undefined}>{t.label}</a></li>)}</ul>}
+ <h2 class="knowledge-section-title">{q?'Results for “'+q+'”':type?'Explore '+type.label.toLowerCase():'Browse the complete library'}</h2><p>{p.total.toLocaleString('en-IN')} published topic pages.</p><ul class="knowledge-results">{p.items.map(x=><li><h2><a href={x.url}>{x.title}</a></h2><p>{x.description}</p><a href={x.url}>Explore this topic →</a></li>)}</ul><Pagination base={base} page={page} pages={p.pages} total={p.total} q={q}/><NextStep/>
+ </>}
+ {(error||missing)&&<p class="knowledge-empty"><a href="/sunshine">Return to Sunshine →</a></p>}
+</KnowledgeLayout>

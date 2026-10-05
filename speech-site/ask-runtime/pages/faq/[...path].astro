@@ -1,0 +1,57 @@
+---
+import {env} from 'cloudflare:workers';
+import KnowledgeLayout from '../../../src/layouts/KnowledgeLayout.astro';
+import Pagination from '../../../src/components/knowledge/Pagination.astro';
+import NextStep from '../../../src/components/knowledge/NextStep.astro';
+import Icon from '../../../src/components/Icon.astro';
+import {data,languages,themes,ORIGIN,faqRoute,cleanPath,requestedPage,paged,pageURL,matchesSearch,improvementQualifier,improvementLimitation} from '../../../src/lib/knowledge/catalogues';
+const raw=Astro.params.path||'',path=cleanPath(raw),page=requestedPage(Astro.url.searchParams.get('page')),q=(Astro.url.searchParams.get('q')||'').trim().slice(0,200);
+let index:any[]=[],route:any=null,answer:any=null,items:any[]=[],pagination:any={items:[],pages:1,total:0,valid:true},related:any[]=[],error=false;
+try{
+ index=await data(env,'faq-index');route=path!==null?faqRoute(index,path):null;
+ if(route?.redirect)return Astro.redirect(ORIGIN+route.redirect,301);
+ if(route?.mode==='answer'){
+  if(Astro.url.searchParams.has('page')||Astro.url.searchParams.has('q'))return Astro.redirect(ORIGIN+route.item.url,301);
+  answer=await data(env,'faq-'+route.item.language+'-'+route.item.id);
+  related=index.filter(x=>x.language===route.language&&x.category===answer.category&&x.id!==answer.id);
+  const words=new Set(answer.title.toLowerCase().split(/\W+/).filter(w=>w.length>4));
+  related.sort((a,b)=>[b,a].map(x=>x.title.toLowerCase().split(/\W+/).filter(w=>words.has(w)).length).reduce((a,b)=>a-b));related=related.slice(0,6);
+ }else if(route){items=index.filter(x=>x.language===route.language&&(!route.category||x.category===route.category)&&matchesSearch(x,q));pagination=paged(items,page);if(!pagination.valid)route=null;}
+}catch(e){error=true;console.error('FAQ source unavailable',e instanceof Error?e.message:'error');}
+const missing=!route&&!error,language=route?.language||'english',lang=languages[language]?.code||'en',theme=themes.find(x=>x.slug===route?.category),mode=q?'search':route?.mode;
+const base='/faq'+(path?'/'+path:'');
+const canonical=answer?answer.url:pageURL(base,Math.max(1,page),q);
+const title=(error?'Answers temporarily unavailable | Pinnacle Blooms Network':missing?'Answer not found | Pinnacle Blooms Network':answer?answer.metaTitle:mode==='search'?'Search Pinnacle FAQs':theme?theme.label+' questions & answers | Pinnacle Blooms Network':!path?'Child development questions & answers | Pinnacle Blooms Network':languages[language].label+' child development questions | Pinnacle Blooms Network')+(!answer&&page>1?' · Page '+page:'');
+const description=answer?.description||'Find clear answers about speech, occupational, behavioural and special education support. Explore the next step toward your child’s independence and participation.'+(!answer&&page>1?' Page '+page+' of '+pagination.pages+'.':'');
+const schema:any[]=answer?[{'@type':'FAQPage','@id':ORIGIN+base+'#answer',mainEntity:[{'@type':'Question',name:answer.title,acceptedAnswer:{'@type':'Answer',text:answer.text+(answer.hasImprovementClaim?' '+improvementQualifier+' '+improvementLimitation:''),url:ORIGIN+base+'#answer-text'}}]}]:[{'@type':'ItemList',name:title,itemListElement:pagination.items.map((x,i)=>({'@type':'ListItem',position:(page-1)*24+i+1,name:x.title,url:ORIGIN+x.url}))}];
+const robots=q||missing||error?'noindex, follow':'index, follow, max-image-preview:large';
+Astro.response.status=error?503:missing?404:200;Astro.response.headers.set('Cache-Control',error||missing||q?'private, no-store':'public, max-age=0, s-maxage=300');Astro.response.headers.set('X-Robots-Tag',robots);if(error)Astro.response.headers.set('Retry-After','60');
+const crumbs=[{name:'FAQs',url:'/faq'},...(path?[{name:answer?.title||theme?.label||languages[language].label,url:base}]:[])];
+const categoryCounts=themes.map(t=>({...t,count:index.filter(x=>x.language===language&&x.category===t.slug).length})).filter(x=>x.count);
+---
+<KnowledgeLayout title={title} description={description} path={canonical} lang={lang} schema={schema} image={answer?.image} alternates={answer?route.item.alternates:[]} crumbs={crumbs} robots={robots} reader={!missing&&!error} searchPath={'/faq/'+language} q={q}>
+ <nav class="knowledge-crumbs" aria-label="Breadcrumb">{crumbs.map((x,i)=><><a href={x.url}>{x.name}</a>{i<crumbs.length-1&&<span aria-hidden="true">/</span>}</>)}</nav>
+ {error||missing?<section class="knowledge-empty"><h1>{error?'We couldn’t load the answers just now.':'We couldn’t find that answer.'}</h1><p>{error?'Please try again shortly.':'Explore a topic or search the FAQ library.'}</p><a href="/faq">Browse the FAQs →</a><NextStep/></section>:<>
+ <header class="knowledge-hero"><p class="knowledge-kicker"><Icon name="voice"/>Pinnacle Blooms Network · Questions that matter</p><h1>{answer?answer.title:theme?theme.label+' questions. Useful next steps.':mode==='search'?'Find the answer you need.':'Your questions. Your child’s possibilities.'}</h1>
+ {!answer&&<p>Communication, learning, everyday routines, school and family life: start with what matters to your child. Explore our answers, understand the relevant support and take the next step with clarity.</p>}
+ {answer?.published&&<p class="knowledge-caption">Pinnacle FAQ library · First published <time datetime={answer.published}>{answer.published}</time></p>}
+ <ul class="knowledge-pills" aria-label="Answer languages">{(answer?route.item.alternates.map(a=>({url:a.url,label:languages[a.language].label,code:a.lang})):Object.entries(languages).map(([key,val])=>({url:'/faq/'+key,label:val.label,code:val.code}))).map(x=><li><a href={x.url} lang={x.code} aria-current={x.code===lang?'page':undefined}>{x.label}</a></li>)}</ul>
+ </header>
+ {answer?<>
+ {answer.image&&<img src={answer.image} alt={answer.title} class="knowledge-answer-hero" loading="eager" fetchpriority="high"/>}
+ <div class="knowledge-answer-grid"><article id="answer-text" class="knowledge-answer" lang={lang}><div set:html={answer.html}/>
+ {answer.hasImprovementClaim&&<aside class="knowledge-proof"><strong>How to read the improvement figure</strong><p>{improvementQualifier}</p><p>{improvementLimitation} <a href="/verify/">Read the source records, study definitions and certificates in Pinnacle Verify →</a></p></aside>}
+ {answer.video&&<a class="knowledge-video" href={'https://www.youtube.com/watch?v='+answer.video}><Icon name="video"/>Watch the published explanation →</a>}
+ </article><aside class="knowledge-aside"><h2>Make the answer useful.</h2><p>Bring the question that matters most in your child’s daily life. We’ll help you understand the relevant professional, centre and next step.</p><a href="tel:+919100181181">Call 9100 181 181 →</a><a href={'/faq/'+language+'/'+answer.category}>More questions in this topic →</a><a href="/sunshine">Explore related development topics →</a><a href="/verify/">Read our evidence and licences →</a></aside></div>
+ {related.length>0&&<section><h2 class="knowledge-section-title">Questions to explore next</h2><ul class="knowledge-results">{related.map(x=><li><h3><a href={x.url}>{x.title}</a></h3><p>{x.description}</p></li>)}</ul></section>}
+ </>:<>
+ {mode==='home'&&<section><h2 class="knowledge-section-title">Start with your question.</h2><div class="knowledge-grid">{categoryCounts.map(t=><article class="knowledge-card"><a href={'/faq/'+language+'/'+t.slug}><Icon name={t.icon}/><h2>{t.label}</h2><p>{t.purpose}</p><span class="knowledge-count">{t.count} answers</span><span class="knowledge-read">Explore questions <Icon name="arrow"/></span></a></article>)}</div></section>}
+ {mode!=='home'&&<ul class="knowledge-pills" aria-label="FAQ topics">{categoryCounts.map(t=><li><a href={'/faq/'+language+'/'+t.slug} aria-current={t.slug===route.category?'page':undefined}>{t.label}</a></li>)}</ul>}
+ <section><h2 class="knowledge-section-title">{q?'Results for “'+q+'”':theme?theme.label+' answers':'Explore the answer library'}</h2><p>{pagination.total} published answers in {languages[language].label}.</p>
+ <ul class="knowledge-results">{pagination.items.map(x=><li><h2><a href={x.url}>{x.title}</a></h2><p>{x.description}</p><a class="knowledge-read" href={x.url}>Read the answer →</a></li>)}</ul>
+ {!pagination.total&&<p>No matching answer yet. Try a shorter phrase or browse a topic above.</p>}
+ <Pagination base={base} page={page} pages={pagination.pages} total={pagination.total} q={q}/></section>
+ </>}
+ <NextStep category={answer?.category||route.category}/>
+ </>}
+</KnowledgeLayout>

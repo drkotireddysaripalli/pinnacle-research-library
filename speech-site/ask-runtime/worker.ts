@@ -5,6 +5,7 @@ import {institution} from '../src/lib/ask/overrides';
 import {ASK} from '../src/lib/ask/content';
 import {answerNavigation} from '../src/lib/ask/answer-presentation';
 import {AUTH_HEADERS} from '../src/lib/ask/auth.mjs';
+import {data as knowledgeData,languages as knowledgeLanguages,themes as knowledgeThemes,sunshineTypes,pageURL as knowledgePageURL,ORIGIN as knowledgeOrigin} from '../src/lib/knowledge/catalogues';
 const xml=(s:any)=>String(s??'').replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]!));
 const textHeaders={'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=300','x-content-type-options':'nosniff'};
 const guide='# Ask Pinnacle\n\nPublic child-development questions and answers from Pinnacle Blooms Network, operated by Bharath Healthcare Laboratories Private Limited.\n\nHome: '+ASK+'\nBrowse: '+ASK+'/lens\nSources and retrieval: '+ASK+'/dataset\nSitemap: '+ASK+'/sitemap.xml\nMCP: https://ask-mcp.pinnacleblooms.org/mcp\n\nAnswer canonicals support .md and .json public representations. Use page-level robots, publication status, sources and dates. Public information is not individual diagnosis. This reading aid is not an AI submission or an endorsement.\n';
@@ -19,10 +20,24 @@ export default {async fetch(request:Request,env:any,ctx:ExecutionContext){
  if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{Allow:'GET, HEAD'}});
  if(url.pathname.startsWith('/ask/_assets/')||url.pathname.startsWith('/ask/_image'))return handle(request,env,ctx);
  const path=url.pathname.replace(/\/+$/,'');
+ const knowledge=/^\/(?:faq|sunshine)(?:\/|$)/.test(path)||path==='/allmirracles'||path==='/allmirracles-sitemap.xml';
+ if(knowledge&&url.hostname==='pinnacleblooms.org'){url.hostname='www.pinnacleblooms.org';return Response.redirect(url.href,308);}
+ if(knowledge&&path!==url.pathname){url.pathname=path;return Response.redirect(url.href,308);}
  if(path!==url.pathname&&path.startsWith('/ask')){url.pathname=path;return Response.redirect(url.href,308);}
  if(path==='/ask/robots.txt')return new Response('User-agent: *\nAllow: /ask\nDisallow: /ask/search\nDisallow: /ask/te/search\nSitemap: '+ASK+'/sitemap.xml\n', {headers:textHeaders});
  if(['/ask/llms.txt','/ask/llms-full.txt'].includes(path))return new Response(guide+(path.endsWith('full.txt')?'\n## Route guide\n/ask/{answer-slug}: public answer, sources, related questions, text and JSON.\n/ask/{dimension}: topic directory.\n/ask/lens/{kind}/{value}: a real published collection.\n/ask/search?q=: private, non-indexable search.\n/ask/te: Telugu entry; published translations retain their own slug and canonical.\nUnknown routes return 404. Temporary content-service failures return 503.\n':''),{headers:textHeaders});
  try{
+ if(['/faq/sitemap.xml','/sunshine/sitemap.xml','/allmirracles-sitemap.xml'].includes(path)){
+  let paths:string[]=[];
+  const addPages=(base:string,count:number,size:number)=>{for(let p=1;p<=Math.max(1,Math.ceil(count/size));p++)paths.push(knowledgePageURL(base,p));};
+  if(path==='/faq/sitemap.xml'){
+   const rows=await knowledgeData(env,'faq-index');paths=rows.map((x:any)=>x.url);addPages('/faq',rows.filter((x:any)=>x.language==='english').length,24);
+   for(const language of Object.keys(knowledgeLanguages)){const subset=rows.filter((x:any)=>x.language===language);addPages('/faq/'+language,subset.length,24);for(const theme of knowledgeThemes){const n=subset.filter((x:any)=>x.category===theme.slug).length;if(n)addPages('/faq/'+language+'/'+theme.slug,n,24);}}
+  }else if(path==='/sunshine/sitemap.xml'){
+   const rows=await knowledgeData(env,'sunshine-index');addPages('/sunshine',rows.length,24);for(const type of sunshineTypes){const n=rows.filter((x:any)=>x.type===type.key).length;if(n)addPages('/sunshine/'+type.slug,n,24);}
+  }else{const manifest=await knowledgeData(env,'manifest');addPages('/allmirracles',manifest.mirraclesCount,60);}
+  return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...new Set(paths)].map(p=>'<url><loc>'+xml(knowledgeOrigin+p)+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
+ }
  if(path==='/ask/sitemap.xml'||/^\/ask\/sitemap-\d+\.xml$/.test(path)){
  const n=Number(path.match(/sitemap-(\d+)/)?.[1]||1);const data=await rpc(env,'ask_portal_sitemap',{p_page:n});
  const body=path.endsWith('/sitemap.xml')?'<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Array.from({length:Math.ceil(data.total/10000)},(_,i)=>'<sitemap><loc>'+ASK+'/sitemap-'+(i+1)+'.xml</loc></sitemap>').join('')+'<sitemap><loc>'+ASK+'/sitemap-navigation.xml</loc></sitemap><sitemap><loc>'+ASK+'/sitemap-topics.xml</loc></sitemap></sitemapindex>':'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+data.items.map((a:any)=>'<url><loc>'+ASK+'/'+xml(a.slug)+'</loc>'+(a.modified?'<lastmod>'+xml(a.modified.split('T')[0])+'</lastmod>':'')+'</url>').join('')+'</urlset>';
@@ -42,12 +57,12 @@ export default {async fetch(request:Request,env:any,ctx:ExecutionContext){
  }
  if(/^\/ask\/(?:og\/|f\/)/.test(path)||/\.(svg|png|woff2|js|xsl)$/.test(path))return legacy.fetch(request,env,ctx);
  const cacheable=!/^\/ask\/(?:te\/)?search$/.test(path)&&request.method==='GET'&&[...url.searchParams].every(([key,value])=>key==='page'&&/^[1-9][0-9]{0,3}$/.test(value));
- const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261005-v17-search-links');
+ const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261005-v18-knowledge');
  const cacheKey=new Request(cacheURL);const cache=(caches as any).default;
  // Cache API hits can inherit the zone's longer browser TTL. Reapply the page
  // policy after lookup so edge caching never makes browsers retain old releases.
  if(cacheable){const saved=await cache.match(cacheKey);if(saved){const headers=new Headers(saved.headers);headers.set('cache-control','public, max-age=0, s-maxage=300');return new Response(saved.body,{status:saved.status,headers});}}
- const response=await handle(request,env,ctx);const headers=new Headers(response.headers);headers.set('x-pinnacle-ask-release','astro-20261003-google-identity');headers.set('x-content-type-options','nosniff');headers.set('referrer-policy','strict-origin');headers.set('cross-origin-opener-policy','same-origin-allow-popups');
+ const response=await handle(request,env,ctx);const headers=new Headers(response.headers);headers.set('x-pinnacle-ask-release','astro-20261003-google-identity');if(knowledge)headers.set('x-pinnacle-knowledge-release','20261005-v1');headers.set('x-content-type-options','nosniff');headers.set('referrer-policy','strict-origin');headers.set('cross-origin-opener-policy','same-origin-allow-popups');
  const body=await response.text();
  if(response.status===200&&headers.get('content-type')?.includes('text/html')&&!body.includes('</html>'))throw new Error('Incomplete HTML render');
  const output=new Response(request.method==='HEAD'?null:body,{status:response.status,headers});

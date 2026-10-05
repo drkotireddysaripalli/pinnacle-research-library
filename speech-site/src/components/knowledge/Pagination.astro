@@ -1,0 +1,10 @@
+---
+import {pageURL} from '../../lib/knowledge/catalogues';
+const {base,page,pages,total,q=''}=Astro.props;
+const near=Array.from({length:pages},(_,i)=>i+1).filter(n=>n===1||n===pages||Math.abs(n-page)<=2);
+---
+{pages>1&&<nav class="knowledge-pagination" aria-label="Pages"><p>Page {page} of {pages} · {total.toLocaleString('en-IN')} records</p><div>
+ {page>1&&<a rel="prev" href={pageURL(base,page-1,q)}>← Previous</a>}
+ {near.map(n=><a href={pageURL(base,n,q)} aria-current={n===page?'page':undefined}>{n}</a>)}
+ {page<pages&&<a rel="next" href={pageURL(base,page+1,q)}>Next →</a>}
+ </div><details><summary>Choose any page</summary><ol class="knowledge-all-pages">{Array.from({length:pages},(_,i)=><li><a href={pageURL(base,i+1,q)}>Page {i+1}</a></li>)}</ol></details></nav>}

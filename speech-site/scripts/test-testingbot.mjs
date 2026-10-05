@@ -170,6 +170,10 @@ for(const id of choices){
       await screenshot('lifecycle');
       await check('Lifecycle image loaded',()=>evaluate("return [...document.querySelectorAll('.wave2-hero-art img')].every(e=>e.complete && e.naturalWidth>0)"));
     }
+    if(target.pathname==='/allmirracles'){
+      await check('Archive has 60 readable linked stories and crawlable pagination',()=>evaluate("const cards=[...document.querySelectorAll('.knowledge-card')];return cards.length===60 && cards.every(c=>c.clientWidth>=200 && c.querySelector('a[href^=\"/mirracles/\"]')) && !!document.querySelector('.knowledge-pagination a[href*=\"page=2\"]')"));
+      await evaluate("document.querySelector('.knowledge-grid').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('story-cards');
+    }
     if(target.pathname==='/seven-readiness-indexes'){
       await check('Readiness areas and stages have usable independent widths',async()=>{
         row.readinessGeometry=await evaluate("const cards=[...document.querySelectorAll('.ready-index,.ready-journey li')];return {areas:document.querySelectorAll('.ready-index').length,stages:document.querySelectorAll('.ready-journey li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");

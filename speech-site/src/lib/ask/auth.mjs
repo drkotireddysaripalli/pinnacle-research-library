@@ -7,13 +7,13 @@ export const ACCOUNT='/ask/account';
 // Matches the approved WATI code_template_pbn_v3 expiry; Supabase must use 360s at activation.
 export const OTP_EXPIRY_SECONDS=360;
 export function safeReturn(value){
- if(typeof value!=='string'||value.length>700||!value.startsWith('/ask')||/[\\\x00-\x20\x7f]/.test(value))return '/ask';
+ if(typeof value!=='string'||value.length>700||!/^\/(?:ask|faq|sunshine)(?:\/|[?#]|$)/.test(value)||/[\\\x00-\x20\x7f]/.test(value))return '/ask';
  try{
   const rawPath=value.split(/[?#]/)[0],decoded=decodeURIComponent(rawPath);
-  if(!/^\/ask(?:\/[a-zA-Z0-9_:-]+)*$/.test(decoded)||/%(?:2f|5c)/i.test(rawPath)||/^\/ask\/(?:auth|account)(?:\/|$)/.test(decoded))return '/ask';
+  if(!/^\/(?:ask|faq|sunshine)(?:\/[a-zA-Z0-9_:-]+)*$/.test(decoded)||/%(?:2f|5c)/i.test(rawPath)||/^\/ask\/(?:auth|account)(?:\/|$)/.test(decoded))return '/ask';
   const u=new URL(value,'https://pinnacleblooms.org');
   if(u.origin!=='https://pinnacleblooms.org')return '/ask';
-  for(const [key,v] of u.searchParams)if(!(key==='page'&&/^[1-9][0-9]{0,3}$/.test(v))&&!(key==='q'&&/^\/ask\/(?:te\/)?search$/.test(decoded)&&v.length<=200))return '/ask';
+  for(const [key,v] of u.searchParams)if(!(key==='page'&&/^[1-9][0-9]{0,3}$/.test(v))&&!(key==='q'&&(/^(?:\/ask\/(?:te\/)?search|\/faq(?:\/[a-z-]+){0,2}|\/sunshine(?:\/[a-z-]+)?)$/.test(decoded))&&v.length<=200))return '/ask';
   if(u.hash&&!/^#[a-zA-Z0-9_-]+$/.test(u.hash))return '/ask';
   return u.pathname+u.search+u.hash;
  }catch{return '/ask';}

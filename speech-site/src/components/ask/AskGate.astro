@@ -2,12 +2,13 @@
 import {Image} from 'astro:assets';
 import logo from '../../assets/pinnacle-blooms-network-lockup.png';
 import googleMark from '../../assets/google-sign-in-g-official.png';
+const {brand='Ask Pinnacle'}=Astro.props;
 ---
 <dialog id="ask-reader-gate" open aria-labelledby="ask-gate-title" aria-describedby="ask-gate-description" data-nosnippet>
  <div class="ask-gate-card">
   <div class="ask-gate-brand">
    <Image src={logo} width={300} height={112} alt="Pinnacle Blooms Network" format="webp" loading="eager" class="ask-gate-logo"/>
-   <h2 id="ask-gate-title">Ask Pinnacle</h2>
+   <h2 id="ask-gate-title">{brand}</h2>
    <p class="ask-gate-purpose">Child-development knowledge.<br/>For families everywhere.</p>
    <p class="ask-gate-audience">Questions, explanations and sources for families and professionals.</p>
    <div class="ask-gate-signature" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>

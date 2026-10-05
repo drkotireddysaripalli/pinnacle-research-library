@@ -1,0 +1,41 @@
+✔ Google challenge is short-lived, private and shared only as a hash (31.6238ms)
+✔ Google credential preflight binds audience, issuer, expiry and nonce before Supabase verification (1.6064ms)
+✔ invalid or stale Google ID tokens cannot unlock or leave Ask; CSRF remains required (3.302ms)
+✔ verification and profile contact require the signed-in server identity, with private JSON failures (3.189ms)
+✔ returns only an internal public Ask path (0.5606ms)
+✔ reader profile uses a verified Google identity and a restricted avatar host (0.2237ms)
+✔ Ask registry marker stays server-owned and is recorded only once (0.2197ms)
+✔ anonymous session response is private, contains CSRF and never a token or profile (3.6051ms)
+✔ cancelled or missing OAuth return cannot unlock a reader or redirect outside Ask (1.8189ms)
+✔ phone requires explicit E.164 country code (0.3501ms)
+✔ user metadata cannot confer Google or phone verification (0.1892ms)
+✔ CSRF token requires same origin and same cookie (0.457ms)
+✔ only supported providers with confirmed email satisfy the identity gate (0.1893ms)
+ask_delivery_rejected {"status":200,"resultType":"boolean","result":false,"fields":["result","message"],"code":null}
+ask_delivery_rejected {"status":307,"resultType":"undefined","result":false,"fields":[],"code":null}
+ask_delivery_transport network
+✔ enabled OAuth routes preserve PKCE and use each providers scopes (7.7149ms)
+✔ multiple cookies survive response headers and no-store is explicit (0.5286ms)
+✔ disabled identity routes fail closed without external calls (0.1953ms)
+✔ signed WATI hook sends the requested phone, never old user.phone (2.3258ms)
+✔ the signed WATI hook accepts confirmed identities from each supported provider (2.0606ms)
+✔ unsigned, expired and ambiguous phone payloads cannot send (1.884ms)
+✔ template mapping and limits must be configured before sending (0.794ms)
+✔ WATI HTTP200 rejection is not a successful OTP send (0.8442ms)
+✔ WATI redirects fail without forwarding credentials (0.6968ms)
+✔ provider exceptions never disclose token, phone or OTP (0.5635ms)
+✔ Every one of the 4564 public FAQs has a focused answer and a linked collection (3762.4835ms)
+✔ Pagination preserves all records and does not turn missing pages into soft 404s (2.4714ms)
+✔ Language alternatives resolve and are reciprocal; existing short slugs resolve to one canonical (261.0977ms)
+✔ Imported contact links remain usable and metadata decodes HTML entities once (4.1481ms)
+✔ Google return paths extend only to the authorised knowledge families (1.0952ms)
+✔ Sunshine promotes matched public knowledge paths, not generated cases or database-only rows (10.1116ms)
+✔ Mirracles directory retains unique numeric story destinations without UPLOADED placeholders (55.7089ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4332.5091

@@ -1,5 +1,15 @@
 # Current page work â€”5October2026
 
+## Active: site health recovery through public knowledge collections
+
+Owner instruction supersedes the earlier next-page hold for this bounded repair. Action b00562eb-206b-41f7-a710-b7cc7c077716. Target real Ahrefs errors by shared cause, with no score manipulation. Main crawl snapshot:21/100,8,562 error-bearing URLs,7,981 orphans and610 oversized pages; counts overlap and the crawl is in progress.
+
+Replace the FAQ family with focused Astro answers and paginated language/topic collections from the read-only PlanetScale export. Preserve4,564 original answer records and their original slugs across seven languages; source dates are publication dates, not clinical-review dates. Reuse Ask Google identity without changing its scopes or cookies. Sunshine becomes an Astro directory of source records matched to actual public paths; unmatched/private/generated testimonial fields are not promoted. Replace the17MB Mirracles listing with compact linked pages retaining real numeric record destinations; malformed UPLOADED placeholders are not promoted. Existing individual story and Sunshine-topic routes remain under their owners.
+
+Accept only after: original-route and GSC coverage reconciliation; every retained record linked; bounded raw HTML; visible answer/schema parity; safe authentication return paths; desktop/tablet/phone visual inspection; focused browser/auth tests; exact committed/pushed source and CI; preserved Cloudflare routes/bindings/Ask/Verify; public URL and byte checks; one appropriate changed-URL/sitemap notification. Remaining staff-directory and source-retirement decisions stay explicit. Deployment does not establish100/100; the completed Ahrefs crawl must confirm the residual errors.
+
+Approved common shell v159 remains unchanged. This chat owns code and deployment. The hourly automation remains paused. Source/report directory: work/pinnacle-growth-system/faq-sunshine-20261005.
+
 ## Prognose delivered
 
 Live: https://www.pinnacleblooms.org/prognose

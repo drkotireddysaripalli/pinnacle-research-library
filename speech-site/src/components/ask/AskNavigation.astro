@@ -1,8 +1,8 @@
 ---
-import Icon from '../Icon.astro';const {q='',lang='en'}=Astro.props;
+import Icon from '../Icon.astro';const {q='',lang='en',brand='Ask Pinnacle',home='/ask',searchPath='/ask/search',browse='/ask/lens'}=Astro.props;
 import AskVerificationBadge from './AskVerificationBadge.astro';
 ---
-<nav class="ask-nav" aria-label="Ask navigation"><div class="ask-nav-inner"><a class="ask-wordmark" href="/ask"><Icon name="book"/>Ask Pinnacle</a><form class="ask-search-form" action="/ask/search" method="get" role="search"><label class="ask-sr" for="ask-query">Search published answers</label><input id="ask-query" name="q" type="search" value={q} maxlength="200" placeholder={lang==='te'?'మీ ప్రశ్నను వెతకండి':'What would you like to understand?'}/><button type="submit" aria-label="Search answers"><Icon name="search"/></button></form><a href="/ask/lens" class="ask-nav-browse">Browse topics →</a><div class="ask-nav-identity" data-nosnippet>
+<nav class="ask-nav" aria-label={brand+' navigation'}><div class="ask-nav-inner"><a class="ask-wordmark" href={home}><Icon name="book"/>{brand}</a><form class="ask-search-form" action={searchPath} method="get" role="search"><label class="ask-sr" for="ask-query">Search published answers</label><input id="ask-query" name="q" type="search" value={q} maxlength="200" placeholder={lang==='te'?'మీ ప్రశ్నను వెతకండి':'What would you like to understand?'}/><button type="submit" aria-label="Search answers"><Icon name="search"/></button></form><a href={browse} class="ask-nav-browse">Browse topics →</a><div class="ask-nav-identity" data-nosnippet>
  <button type="button" class="ask-nav-account" data-ask-sign-in><Icon name="people" size={20}/>Sign in</button>
  <details class="ask-profile" data-ask-profile hidden>
   <summary aria-label="Your Pinnacle profile"><img data-ask-avatar width="36" height="36" alt="" referrerpolicy="no-referrer" hidden/><span class="ask-avatar-fallback" data-ask-avatar-fallback></span><span class="ask-profile-name" data-ask-profile-name></span><span class="ask-verified-badge" data-ask-verified-badge role="img" aria-label="WhatsApp number not yet verified"><Icon name="check" size={13}/></span></summary>

@@ -1,0 +1,35 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import AskNavigation from '../components/ask/AskNavigation.astro';
+import AskGate from '../components/ask/AskGate.astro';
+import AskVerification from '../components/ask/AskVerification.astro';
+import font from '../../public/pinnacle-pages-fonts/sintony-latin.woff2?url';
+import measurement from '../../public/pinnacle-pages-scripts/speech-measurement.js?url';
+import '../styles/page.css';import '../styles/portal-shell.css';import '../styles/readability.css';import '../styles/shared-shell.css';import '../styles/ask.css';import '../styles/knowledge.css';
+import {ORIGIN} from '../lib/knowledge/catalogues';
+const {title,description,path,lang='en',image:sourceImage,alternates=[],schema=[],crumbs=[],reader=true,robots='index, follow, max-image-preview:large',searchPath='/faq',q='',brand='Pinnacle Answers'}=Astro.props;
+const image=sourceImage||'https://pinnacleblooms.org/ask/og/default.png';
+const canonical=ORIGIN+path;
+const graph={'@context':'https://schema.org','@graph':[
+ {'@type':'Organization','@id':ORIGIN+'/verify/#organization',name:'Bharath Healthcare Laboratories Private Limited',url:ORIGIN,telephone:'+919100181181',brand:{'@id':ORIGIN+'/verify/#pinnacle-brand'}},
+ {'@type':'Brand','@id':ORIGIN+'/verify/#pinnacle-brand',name:'Pinnacle Blooms Network'},
+ {'@type':'WebSite','@id':ORIGIN+'/#website',url:ORIGIN,name:'Pinnacle Blooms Network',publisher:{'@id':ORIGIN+'/verify/#organization'}},
+ {'@type':'WebPage','@id':canonical+'#page',url:canonical,name:title,description,inLanguage:lang,isPartOf:{'@id':ORIGIN+'/#website'},publisher:{'@id':ORIGIN+'/verify/#organization'},...(reader?{isAccessibleForFree:false,hasPart:{'@type':'WebPageElement',isAccessibleForFree:false,cssSelector:'.ask-registration-content'}}:{isAccessibleForFree:true}),...(image?{primaryImageOfPage:{'@type':'ImageObject',url:image}}:{})},
+ {'@type':'BreadcrumbList',itemListElement:[{name:'Pinnacle Blooms Network',url:ORIGIN},...crumbs].map((c,i)=>({'@type':'ListItem',position:i+1,name:c.name,item:c.url.startsWith('/')?ORIGIN+c.url:c.url}))},...schema
+]};
+---
+<!doctype html><html lang={lang}><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title}</title><meta name="description" content={description}/><meta name="robots" content={robots}/><link rel="canonical" href={canonical}/><link rel="icon" href={ORIGIN+'/verify/favicon.png'}/><meta name="theme-color" content="#8f2879"/>
+ {alternates.map(a=><link rel="alternate" hreflang={a.lang} href={ORIGIN+a.url}/>)}
+ <meta property="og:type" content="website"/><meta property="og:site_name" content="Pinnacle Blooms Network"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta name="twitter:card" content={image?'summary_large_image':'summary'}/><meta name="twitter:title" content={title}/><meta name="twitter:description" content={description}/>
+ {image&&<><meta property="og:image" content={image}/><meta property="og:image:alt" content={title}/><meta name="twitter:image" content={image}/><meta name="twitter:image:alt" content={title}/></>}
+ <link rel="preload" href={font} as="font" type="font/woff2" crossorigin/><script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\\u003c')}/>
+ <link rel="sitemap" type="application/xml" href={ORIGIN+'/faq/sitemap.xml'}/>
+ </head><body class="ask-page knowledge-page" data-page-variant="knowledge" data-shared-shell="v159">
+ {reader&&<><AskGate brand={brand}/><AskVerification/></>}
+ <SiteHeader currentPath={path.split('?')[0]}/>
+ {reader&&<AskNavigation q={q} lang={lang} brand={brand} home={searchPath} searchPath={searchPath} browse="/sunshine"/>}
+ <main id="main" class:list={{'ask-registration-content':reader,'knowledge-main':true}}><slot/></main><SiteFooter/>
+ <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href="tel:+919100181181" data-cta="mobile-call">Call 9100 181 181</a><a href={ORIGIN+'/enroll-autism-speech-aba-therapies-india'} data-cta="mobile-assessment">Arrange a visit</a></nav>
+ <script is:inline define:vars={{measurement}}>import(measurement);</script>
+ </body></html>
