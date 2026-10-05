@@ -9,8 +9,8 @@ const origin = 'https://www.pinnacleblooms.org';
 const html = (path='/physiotherapy') => `<!doctype html><html><head><title>Parent guidance</title><meta property="og:url" content="http://www.pinnacleblooms.org${path}" /><link rel="canonical" href="${origin}${path}" /></head><body><header>Approved header</header><main>తెలుగు · 中文 · Family 🌸 <a href="tel:+919100181181">9100 181 181</a></main><footer>Approved footer</footer></body></html>`;
 
 test('only named www legacy families and GET enter the transform', () => {
-  for (const path of ['/physiotherapy','/physiotherapy/','/faq','/faq/telugu/example']) assert(isEligible(new Request(origin+path)));
-  for (const path of ['/verify/','/ask','/pinnacleai','/api/enrolment','/physiotherapy-other','/physiotherapy/data','/faq-other']) assert(!isEligible(new Request(origin+path)));
+  for (const path of ['/physiotherapy','/physiotherapy/','/faq','/faq/telugu/example','/t/interactive-song-therapy','/mirracles/123/published-story','/allmirracles','/teacher-training/']) assert(isEligible(new Request(origin+path)));
+  for (const path of ['/verify/','/ask','/pinnacleai','/api/enrolment','/physiotherapy-other','/physiotherapy/data','/faq-other','/allmirracles-other','/allmirracles/api','/t','/mirracles','/teacher-training-other']) assert(!isEligible(new Request(origin+path)));
   for (const method of ['HEAD','POST','OPTIONS']) assert(!isEligible(new Request(origin+'/physiotherapy',{method})));
   for (const url of ['https://pinnacleblooms.org/physiotherapy','http://www.pinnacleblooms.org/physiotherapy']) assert(!isEligible(new Request(url)));
 });
@@ -26,6 +26,11 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
   }}}));
   const run=async (f={},path='/physiotherapy',options={})=>{fixture={body:html(),...f};const r=await runtime.dispatchFetch(origin+path,options);const bytes=Buffer.from(await r.arrayBuffer());return {r,bytes,body:bytes.toString('utf8')};};
   try {
+    await t.test('all newly covered public templates use the same exact correction and preserve body',async()=>{
+      for(const path of ['/t/interactive-song-therapy','/mirracles/123/published-story','/allmirracles','/yoga-therapy','/therapysphere-study','/therapist-burnout-empathy','/therapeuticai-effectiveness-study','/teachertraining','/teacher-training']){
+        const input=html(path);const {body}=await run({body:input,chunk:37},path);assert.equal(body,input.replace('content="http:','content="https:'));
+      }
+    });
     await t.test('changes only one social URL; Unicode and all body bytes identical',async()=>{
       const {r,body}=await run();assert.equal(body,html().replace('content="http:','content="https:'));assert.equal(r.headers.get('cache-control'),'private, max-age=60');assert.equal(r.headers.get('vary'),'*, accept-encoding');assert.equal(r.headers.get('etag'),null);assert.equal(r.headers.get('last-modified'),null);assert(r.headers.has('x-pinnacle-social-metadata'));
     });

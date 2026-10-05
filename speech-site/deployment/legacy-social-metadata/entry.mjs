@@ -6,6 +6,9 @@ import {SERVICES_PATH, SERVICES_URL, physiotherapyRedirect, repairServiceLinks} 
 import {repairKnownLegacySchema} from './schema.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
+// Existing legacy templates with the same measured HTTP social/HTTPS canonical defect.
+export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training'];
+export const ADDITIONAL_LEGACY_ROUTES = ['www.pinnacleblooms.org/t/*', 'www.pinnacleblooms.org/mirracles/*', ...ADDITIONAL_LEGACY_PATHS.map(p => 'www.pinnacleblooms.org' + p + '*')];
 const encoder = new TextEncoder();
 const transformedResponses = new WeakSet();
 
@@ -14,6 +17,8 @@ export function isEligible(request) {
   return request.method === 'GET' && url.protocol === 'https:' &&
     url.hostname === 'www.pinnacleblooms.org' &&
     (url.pathname === '/faq' || url.pathname.startsWith('/faq/') ||
+      url.pathname.startsWith('/t/') || url.pathname.startsWith('/mirracles/') ||
+      ADDITIONAL_LEGACY_PATHS.includes(url.pathname.replace(/\/$/, '')) ||
       ['/physiotherapy', '/physiotherapy/', SERVICES_PATH, SERVICES_PATH + '/'].includes(url.pathname)) &&
     !request.headers.has('authorization') && !request.headers.has('range');
 }
