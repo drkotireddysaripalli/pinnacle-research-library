@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "enrolment",
+  "current": "Held after Enrolment — awaiting owner instruction",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -718,14 +718,14 @@
       "label": "Enrolment",
       "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
       "baselineScore": 72,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "The decision to choose Pinnacle is mostly supported by principles and repeated pathway language rather than a complete concrete review example. Receiving-team response and a confirmed visit remain unobserved.",
       "task": "Place one compact child goal, observation and adjusted-plan example before the form; publish confirmed response expectations and require the receiving team to repeat back centre, service, fee and appointment details.",
       "sourceCondition": "Current accepted enquiries, receiving-team responses, attendance and enrolment are unobserved; older machine copy points centre discovery to the speech section.",
       "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "pageOwnedDisposition": "Enrolment delivered with concrete illustrative family decisions, readable mobile service tiles, seven linked stages and nine matchingFAQs. Therapy/centre browser regression retained. Exact source pushed, CI and page checks passed; physical iPhone/Android and hosted Safari/Edge passed.194routes/fourbindings and29protected pages preserved. IndexNow accepted one changed URL. Pre-existing exact /enroll shortcut query loss remains separately held for Cloudflare access.",
+      "release": "RELEASE-ENROLMENT-20261005.md",
+      "reviewedOn": "2026-10-05T10:37:41.089345+00:00"
     },
     {
       "order": 41,
@@ -2243,5 +2243,10 @@
     "nextContract": null
   },
   "currentDisposition": "Autism Therapy published and verified on5October2026; next unheld individual is Enrolment,row40. Existing holds and deferrals remain.",
-  "nextCandidate": "enrolment"
+  "nextCandidate": "enrolment",
+  "ownerHold": {
+    "at": "2026-10-05T10:37:41.089345+00:00",
+    "reason": "Complete current task and hold for the next one",
+    "nextCandidate": "reassess-review-repeat"
+  }
 }

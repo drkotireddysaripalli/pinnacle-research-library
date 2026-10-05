@@ -1,6 +1,6 @@
 # Produced-page quality pass — ascending baseline score
 
-133 pages. Current page: autism-therapy. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
+133 pages. Current page: Held after Enrolment — awaiting owner instruction. Baselines remain the original full work-order audit. Revised scores are editorial assessments; submissions and lab checks do not establish business or search outcomes.
 
 | Order | Page | Baseline /100 | Reviewed /100 | Pass state |
 |---:|---|---:|---:|---|
@@ -42,8 +42,8 @@
 | 36 | [Special Education](https://www.pinnacleblooms.org/best-special-education-center-call-9100181181) | 71 | — | completed |
 | 37 | [You wanted the car. Not a box of parts.](https://www.pinnacleblooms.org/verify/evidence/paradigm/01-life-in-view.html) | 71 | — | review-pending |
 | 38 | [About Pinnacle](https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate) | 72 | — | completed |
-| 39 | [Autism Therapy](https://www.pinnacleblooms.org/autism-therapy) | 72 | — | review-pending |
-| 40 | [Enrolment](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india) | 72 | — | review-pending |
+| 39 | [Autism Therapy](https://www.pinnacleblooms.org/autism-therapy) | 72 | — | completed |
+| 40 | [Enrolment](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india) | 72 | — | completed |
 | 41 | [Find a Pinnacle Centre](https://www.pinnacleblooms.org/centers) | 72 | — | deferred-after-individuals |
 | 42 | [Reassess, Review, Repeat](https://www.pinnacleblooms.org/reassess-review-repeat) | 72 | — | review-pending |
 | 43 | [Scale & Mission Story](https://www.pinnacleblooms.org/verify/evidence/scale-and-mission.html) | 72 | — | review-pending |

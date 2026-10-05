@@ -1,4 +1,4 @@
-# Current page work —5October2026
+# Current page work â€”5October2026
 
 ## Prognose delivered
 
@@ -48,23 +48,13 @@ Live: https://www.pinnacleblooms.org/autism-therapy
 
 Sourced3a2ec360dcd0966d49c5c62df265383cad9a4bc; Cloudflare075ab8f8-49c7-4e10-9430-ee2d873ae5a2. Specific fictional observation, named professional adjustment, explicit family practice, future checkpoint, three review choices and seven linked stages delivered. Sixteen FAQs and source/Markdown/social records aligned. Approved artwork and common shell retained. Physical iPhone/hosted Safari found a lost Autism preference at enrolment; corrected form/browser/server allowlists using the existing backend assessment route, with both focused device retests passing. Exact-source CI, five widths and public checks passed.194 routes/four bindings/28 unrelated protected responses preserved. One IndexNow acceptance and GSC annotation recorded. See RELEASE-AUTISM-20261005.md and deployment/autism-release-receipt-20261005.json for lab performance and limits.
 
-## Next individual: Enrolment
+## Enrolment delivered; next page on owner hold
 
-Canonical: https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india
+Live: https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india
 
-Quality row40 / original baseline72. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns implementation and release; at most one short read-only reviewer.
+Source9ecebd11, Worker23a7f5d9, CI37295443216 and page-specific live/device checks passed. See RELEASE-ENROLMENT-20261005.md and its receipt for exact tests and the separate /enroll redirect exception. Readable mobile choices and permanent therapy/centre browser regression are retained.
 
-1. Reconcile the current live form and source once; preserve the working POST integration, service/centre choices, request-state handling, privacy/auth boundaries and accepted common shell.
-2. Explain why a family can begin with Pinnacle through one compact, explicitly illustrative child priority, observation, professional adjustment and next checkpoint before the form. Reuse approved imagery where useful and avoid adding an obstacle to contact.
-3. Make the actual next step clear: relevant service, centre, first conversation and confirmation of visit details. Publish response timing, fees or promises only when backed by current receiving-team evidence. Do not treat an accepted API request as an appointment or enrolment.
-4. Align FAQs/schema/social/source/Markdown and useful therapy/PinnacleAI/Verify/centre links. Keep9100181181 prominent and maintain accessible mobile form/error states. Do not submit a synthetic customer lead without a valid test destination.
-5. Complete one focused editorial/visual/functional check, exact-source CI and the established preserved-union deployment. Record live evidence, one changed-URL notification and the next unheld page.
-
-Release ownership note: the current enrolment HTML and browser API contract are compiled in deployment/autism-assets.mjs for the narrow service-preference repair. A new enrolment module must take explicit precedence in speech-handler.mjs, or update that existing owner, so the revised page actually serves. Preserve the Autism service mapping and its regression checks. Do not deploy a page hidden behind an older compiled asset.
-
-Observed mobile presentation issue for the Enrolment pass: the existing two-column service tiles split long words such as Occupational and behavioural at393px. Fix the wrapping/column rule with readable labels; retain the now-working Autism preference. Evidence: audits/testingbot/2026-10-05T09-11-42-713Z-physical-mobile-14108/27-autism-enrolment-fixed.png. This is a remaining Enrolment presentation issue, not a claim that the whole enrolment page is complete.
-
-The combined hardcover alternatives are delivered separately: RELEASE-HARDCOVER-LINKS-20261005.md. Catalogue, stock, payments and common shell remain unchanged.
+The owner instructed “complete this task and hold for the next one.” No next page is started. Reassess / quality row42 is the next eligible candidate only after a new owner instruction; centres/staff and Verify migration remain deferred. Finish the seven ecosystem follow-through items, record real access/data-dependent limits, then pause only this chat's hourly growth heartbeat.
 
 ## Continuing boundaries
 
@@ -75,12 +65,12 @@ The combined hardcover alternatives are delivered separately: RELEASE-HARDCOVER-
 - Reuse unchanged evidence and completed checks. No swarm, full hourly crawl, duplicated campaigns or synthetic customer calls/forms. Use the native signed-in ChatGPT/Codex session.
 - OT mobile lab LCP2.73s, PDK2.66s and Prognose2.74s remain recorded optimisation opportunities; they are not failed field Core Web Vitals results. Future common-performance work should use changed evidence, not repeated unchanged tests.
 
-## Completed Autism release contract — 5 October 2026
+## Completed Autism release contract â€” 5 October 2026
 
 Action 2aec26fb-ff52-4449-ad1d-9e4b54316673. The family question is how the relevant therapies connect around a real daily goal. Keep the accepted recognition, first conversation, source records, centre directory and common shell. Strengthen the opening purpose; replace the generic school-morning list with a fictional observation, named professional adjustment, family role, unobserved checkpoint and three meaningful review decisions. Link all seven stages to their existing pages. Reuse the current approved hero, first-conversation, pathway, school-morning and social creatives; they already show the required scenes. Keep the example in readable HTML and all machine exports aligned. The care next step is a call to 9100 181 181 or autism-aware enrolment.
 
 Review the assembled source/candidate once with one read-only reviewer. Check five widths, FAQ/source parity, keyboard, accessibility, common shell, exact-source CI, physical iPhone and hosted Safari at the live boundary. Preserve current Cloudflare version e023ba21-32d1-45f7-a540-76b3c66055e6 as rollback and all 194 routes/four bindings, including both just-released hardcover destinations. Record one changed-URL IndexNow response and a GSC annotation. No patient/test enquiry or unchanged broad crawl.
 
-## Active Enrolment acceptance — 5 October 2026
+## Completed Enrolment acceptance â€” 5 October 2026
 
 Action2050c49e-ecb4-4e18-a326-fb0e2f0bb37c. Preserve accepted heading, creatives, simple two-required-field form, all centre choices, API status/duplicate handling and common shell. Add one clearly illustrative water-request observation, named professional adjustment, ordinary family practice and next checkpoint alongside the form. Replace the generic lower example with three concrete possible review decisions. Link the seven existing stages and relevant therapies. Correct mobile service tiles to preserve whole words. Align visible FAQs, sources/Markdown and metadata; retain a browser regression for all service/centre handoffs and intercepted request states. No real lead submission. Reuse active version075ab8f8-49c7-4e10-9430-ee2d873ae5a2 as rollback; new enrolment asset module must precede the older Autism patch. One focused review, candidate checks, pushed CI, full-union release, real-device read-back and material URL notification.
