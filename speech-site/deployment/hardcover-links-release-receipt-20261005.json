@@ -1,0 +1,471 @@
+{
+  "item_id": "BOOK-AMAZON-HARDCOVER-LINKS",
+  "action_id": "cefc4e69-7e62-48d2-8b3c-1b745edf3766",
+  "outcome": "deployed",
+  "verified": true,
+  "at": "2026-10-05T08:20:54.848592+00:00",
+  "summary": "Published four verified combined Amazon hardcover link placements across the two existing hardbound book pages and /books. Single Amazon volumes are distinguished from separate Pinnacle sets. Pushed exact-source CI, phone/desktop presentation and live response checks passed; 194 routes, four bindings and 26 protected public pages preserved.",
+  "commit": "0d810994c47e00c01eb561211e0417e5aa788ba4",
+  "deployment": {
+    "at": "2026-10-05T08:20:17.257Z",
+    "commit": "0d810994c47e00c01eb561211e0417e5aa788ba4",
+    "version": "e023ba21-32d1-45f7-a540-76b3c66055e6",
+    "deployment": "e8effa15-9f4f-4e79-a158-99f33af8ce4a",
+    "rollback": [
+      {
+        "version_id": "91ce11f4-e4be-42ab-a060-54abbd085d70",
+        "percentage": 100
+      }
+    ]
+  },
+  "public_url": "https://www.pinnacleblooms.org/books",
+  "proof": {
+    "ci": {
+      "at": "2026-10-05T08:20:03.293Z",
+      "commit": "0d810994c47e00c01eb561211e0417e5aa788ba4",
+      "runs": [
+        {
+          "id": 37282665880,
+          "name": "Portal quality",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37282665880"
+        }
+      ]
+    },
+    "public": {
+      "at": "2026-10-05T08:20:25.888Z",
+      "pages": [
+        {
+          "path": "/books",
+          "status": 200,
+          "cookie": false,
+          "sha256": "49033bc3175ef69b2796ce502c7aaef0715ecad8d3776d675f172324d1b13d36",
+          "links": 2
+        },
+        {
+          "path": "/books",
+          "status": 200,
+          "cookie": true,
+          "sha256": "49033bc3175ef69b2796ce502c7aaef0715ecad8d3776d675f172324d1b13d36",
+          "links": 2
+        },
+        {
+          "path": "/books/pinnacle-101-speech-occupational-hardbound-pair",
+          "status": 200,
+          "cookie": false,
+          "sha256": "21d24d45a48febd2a9837ad0ec2809ed57b599088507e47b03130a566e059ffd",
+          "links": 1
+        },
+        {
+          "path": "/books/pinnacle-101-speech-occupational-hardbound-pair",
+          "status": 200,
+          "cookie": true,
+          "sha256": "21d24d45a48febd2a9837ad0ec2809ed57b599088507e47b03130a566e059ffd",
+          "links": 1
+        },
+        {
+          "path": "/books/pinnacle-101-four-book-hardbound-collection",
+          "status": 200,
+          "cookie": false,
+          "sha256": "ac8d98f70310a3b52cac1297dd399ea119e5e39c81527f02dfdfc3ebec5616de",
+          "links": 1
+        },
+        {
+          "path": "/books/pinnacle-101-four-book-hardbound-collection",
+          "status": 200,
+          "cookie": true,
+          "sha256": "ac8d98f70310a3b52cac1297dd399ea119e5e39c81527f02dfdfc3ebec5616de",
+          "links": 1
+        }
+      ],
+      "protected": [
+        {
+          "path": "/about-pinnacle-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/books/occupational-therapy-101-i-belong-in-everyday-life",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/books/special-education-101-learning-through-everyday-play",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/verify/",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/verify/evidence/records/fsc.html",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/pinnacleai",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/best-special-education-center-call-9100181181",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/leadership",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/pinnacle-global-autism-framework",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/fusion-module",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/therapeuticai",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/prognose",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/personal-development-kernel",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/seven-readiness-indexes",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/abilityscore",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/everyday-therapy",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/enroll-autism-speech-aba-therapies-india",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/national-autism-helpline",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/ask",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/shop",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/books/editions/te/ot-101",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/books/resources/first-conversation",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/seva",
+          "status": 200,
+          "unchanged": true
+        }
+      ],
+      "screens": [
+        {
+          "width": 390,
+          "path": "/books/pinnacle-101-speech-occupational-hardbound-pair",
+          "geometry": {
+            "width": 284.8125,
+            "height": 56,
+            "overflow": false
+          },
+          "screenshot": "live-390.png"
+        },
+        {
+          "width": 1440,
+          "path": "/books/pinnacle-101-four-book-hardbound-collection",
+          "geometry": {
+            "width": 555.28125,
+            "height": 44,
+            "overflow": false
+          },
+          "screenshot": "live-1440.png"
+        }
+      ],
+      "passed": true,
+      "noCatalogueOrPaymentMutation": true
+    },
+    "candidate": {
+      "at": "2026-10-05T08:13:19.809Z",
+      "sourceParity": [
+        {
+          "path": "/books",
+          "links": 2,
+          "oldContentUnchanged": true,
+          "sourceEmitsSameLinks": true
+        },
+        {
+          "path": "/books/pinnacle-101-speech-occupational-hardbound-pair",
+          "links": 1,
+          "oldContentUnchanged": true,
+          "sourceEmitsSameLinks": true
+        },
+        {
+          "path": "/books/pinnacle-101-four-book-hardbound-collection",
+          "links": 1,
+          "oldContentUnchanged": true,
+          "sourceEmitsSameLinks": true
+        }
+      ],
+      "screens": [
+        {
+          "path": "/books",
+          "asin": "B0HLYGDP86",
+          "width": 390,
+          "checks": [
+            {
+              "href": "https://www.amazon.com/dp/B0HLY917FC",
+              "width": 236.8125,
+              "height": 56,
+              "fontSize": "16px",
+              "overflow": false
+            },
+            {
+              "href": "https://www.amazon.com/dp/B0HLYGDP86",
+              "width": 284.8125,
+              "height": 56,
+              "fontSize": "16px",
+              "overflow": false
+            }
+          ],
+          "screenshot": "books-B0HLYGDP86-390.png"
+        },
+        {
+          "path": "/books",
+          "asin": "B0HLY917FC",
+          "width": 390,
+          "checks": [
+            {
+              "href": "https://www.amazon.com/dp/B0HLY917FC",
+              "width": 236.8125,
+              "height": 56,
+              "fontSize": "16px",
+              "overflow": false
+            },
+            {
+              "href": "https://www.amazon.com/dp/B0HLYGDP86",
+              "width": 284.8125,
+              "height": 56,
+              "fontSize": "16px",
+              "overflow": false
+            }
+          ],
+          "screenshot": "books-B0HLY917FC-390.png"
+        },
+        {
+          "path": "/books",
+          "asin": "B0HLYGDP86",
+          "width": 1440,
+          "checks": [
+            {
+              "href": "https://www.amazon.com/dp/B0HLY917FC",
+              "width": 328.65625,
+              "height": 44,
+              "fontSize": "16px",
+              "overflow": false
+            },
+            {
+              "href": "https://www.amazon.com/dp/B0HLYGDP86",
+              "width": 590,
+              "height": 44,
+              "fontSize": "16px",
+              "overflow": false
+            }
+          ],
+          "screenshot": "books-B0HLYGDP86-1440.png"
+        },
+        {
+          "path": "/books",
+          "asin": "B0HLY917FC",
+          "width": 1440,
+          "checks": [
+            {
+              "href": "https://www.amazon.com/dp/B0HLY917FC",
+              "width": 328.65625,
+              "height": 44,
+              "fontSize": "16px",
+              "overflow": false
+            },
+            {
+              "href": "https://www.amazon.com/dp/B0HLYGDP86",
+              "width": 590,
+              "height": 44,
+              "fontSize": "16px",
+              "overflow": false
+            }
+          ],
+          "screenshot": "books-B0HLY917FC-1440.png"
+        },
+        {
+          "path": "/books/pinnacle-101-speech-occupational-hardbound-pair",
+          "asin": "B0HLYGDP86",
+          "width": 390,
+          "checks": [
+            {
+              "href": "https://www.amazon.com/dp/B0HLYGDP86",
+              "width": 284.8125,
+              "height": 56,
+              "fontSize": "16px",
+              "overflow": false
+            }
+          ],
+          "screenshot": "pinnacle-101-speech-occupational-hardbound-pair-B0HLYGDP86-390.png"
+        },
+        {
+          "path": "/books/pinnacle-101-speech-occupational-hardbound-pair",
+          "asin": "B0HLYGDP86",
+          "width": 1440,
+          "checks": [
+            {
+              "href": "https://www.amazon.com/dp/B0HLYGDP86",
+              "width": 555.28125,
+              "height": 44,
+              "fontSize": "16px",
+              "overflow": false
+            }
+          ],
+          "screenshot": "pinnacle-101-speech-occupational-hardbound-pair-B0HLYGDP86-1440.png"
+        },
+        {
+          "path": "/books/pinnacle-101-four-book-hardbound-collection",
+          "asin": "B0HLY917FC",
+          "width": 390,
+          "checks": [
+            {
+              "href": "https://www.amazon.com/dp/B0HLY917FC",
+              "width": 284.8125,
+              "height": 56,
+              "fontSize": "16px",
+              "overflow": false
+            }
+          ],
+          "screenshot": "pinnacle-101-four-book-hardbound-collection-B0HLY917FC-390.png"
+        },
+        {
+          "path": "/books/pinnacle-101-four-book-hardbound-collection",
+          "asin": "B0HLY917FC",
+          "width": 1440,
+          "checks": [
+            {
+              "href": "https://www.amazon.com/dp/B0HLY917FC",
+              "width": 555.28125,
+              "height": 44,
+              "fontSize": "16px",
+              "overflow": false
+            }
+          ],
+          "screenshot": "pinnacle-101-four-book-hardbound-collection-B0HLY917FC-1440.png"
+        }
+      ],
+      "passed": true
+    },
+    "retailer_readback": {
+      "checkedOn": "2026-10-05",
+      "method": "Public Amazon.com pages inspected in Chrome via Codex browser; no cart or order action",
+      "entries": [
+        {
+          "url": "https://www.amazon.com/dp/B0HLYGDP86",
+          "title": "Communication & Everyday Participation - Two-Book Collection",
+          "format": "Hardcover",
+          "language": "English",
+          "pages": 96,
+          "isbn": "9798160026138",
+          "authors": [
+            "Dr. Koti Reddy Saripalli",
+            "Dr. Sreeja Reddy Saripalli"
+          ],
+          "buyNowVisible": true
+        },
+        {
+          "url": "https://www.amazon.com/dp/B0HLY917FC",
+          "title": "Four books. Everyday possibilities.",
+          "format": "Hardcover",
+          "language": "English",
+          "pages": 188,
+          "isbn": "9798160027036",
+          "authors": [
+            "Dr. Koti Reddy Saripalli",
+            "Dr. Sreeja Reddy Saripalli"
+          ],
+          "buyNowVisible": true
+        }
+      ],
+      "presentation": "Single combined hardcover volumes, landscape illustrations sideways in portrait pages; turn to read",
+      "delivery": "Public storefront location-specific; no worldwide or India shipping assertion. No prices copied to Pinnacle."
+    },
+    "preservation": {
+      "routes": 194,
+      "bindings": 4,
+      "modules": 31,
+      "source_bytes_match": true,
+      "other_worker_versions_preserved": true
+    },
+    "local_checks": {
+      "focused_tests_passed": 11,
+      "production_build_pages": 135,
+      "astro_files": 140,
+      "astro_errors": 0
+    },
+    "review": {
+      "reviewer": "/root/hardcover_acceptance",
+      "scope": "Read-only source and test-coverage review before release",
+      "material_findings": 0
+    },
+    "visual_review": "Eight candidate captures generated; four representative candidate captures and both production captures inspected. Readable links, no horizontal overflow, at least 44px link targets.",
+    "scope": "Only two existing book detail pages and their matching /books placements. No catalogue, price, stock, checkout, payment, common header/footer or other page content changes."
+  },
+  "measurement": "Published buying destinations are verified. Retailer clicks, orders, organic uplift and qualified enquiries from this release are not yet measured.",
+  "indexing": "No duplicate search submission or tracker. Existing 81-URL books tracker and content group retained."
+}

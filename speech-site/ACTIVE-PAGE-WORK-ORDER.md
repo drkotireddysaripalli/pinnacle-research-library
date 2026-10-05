@@ -55,7 +55,7 @@ Quality row39 / original baseline72. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md
 5. Align links, FAQ/schema, social and machine exports; keep clear call9100181181, service-aware enquiry and centre journeys.
 6. Complete focused review/visual/browser tests, pushed exact-source CI, full preserved deployment, public read-back and one meaningful changed-URL notification. Record the actual remaining limits and next page.
 
-The authorised combined Amazon hardcover alternatives remain a separate small queued commerce action before the next individual page. Do not change catalogue/stock/payments or duplicate book records.
+The authorised combined Amazon hardcover alternatives are delivered: four verified placements on the two existing hardbound detail pages and /books. Exact source 0d810994c47e00c01eb561211e0417e5aa788ba4; Cloudflare e023ba21-32d1-45f7-a540-76b3c66055e6. CI, phone/desktop presentation, three live pages and 26 protected responses passed. Catalogue, stock, payments and common shell remain unchanged. Proof: RELEASE-HARDCOVER-LINKS-20261005.md. Autism Therapy remains the next individual page.
 
 ## Continuing boundaries
 
