@@ -1,6 +1,6 @@
 // Public form contract. Cloudflare translates this deliberately small envelope
 // to the existing PinnacleAI enrolment workflow without exposing that service.
-export const services = new Set(['help','speech','occupational','aba','education','other']);
+export const services = new Set(['help','autism','speech','occupational','aba','education','other']);
 export function validateEnrolment(values, centreIds) {
  const errors={};
  if(typeof values.name!=='string'||!values.name.trim()||values.name.trim().length>100)errors.name='Enter your name (up to 100 characters).';

@@ -20,7 +20,7 @@ if(!previewOnly){
  const endpoint=new URL(apiEndpoint,origin);
  if(!apiEndpoint||endpoint.origin!==origin||!endpoint.pathname.startsWith('/api/')||endpoint.search||endpoint.hash||endpoint.username||endpoint.password)throw new Error('Live enrolment requires the approved same-origin Cloudflare API path.');
 }
-const services=[['help','Help me choose','compass'],['speech','Speech & language','voice'],['occupational','Occupational therapy','home'],['aba','ABA / behavioural support','heart'],['education','Special education','book'],['other','Another service','people']];
+const services=[['help','Help me choose','compass'],['autism','Autism / integrated support','people'],['speech','Speech & language','voice'],['occupational','Occupational therapy','home'],['aba','ABA / behavioural support','heart'],['education','Special education','book'],['other','Another service','people']];
 const regions=[...new Set(centres.map(c=>c.region))].sort((a,b)=>a.localeCompare(b));
 const proof=[
  ['compass','A purpose you can recognise','Your child’s everyday life gives abilities, goals, practice and review their direction.','Read the life-first approach','/verify/evidence/pinnacle-paradigm-shift.html'],

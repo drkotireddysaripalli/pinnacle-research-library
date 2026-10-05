@@ -6,6 +6,9 @@ export const ENROLMENT_UPSTREAM='https://mirracle.pinnacleblooms.org/api/gl/swfs
 const MAX_BODY_BYTES=16*1024;
 const SERVICE_MAP={
  help:'Assements - Treatments',
+ // Keep the upstream's existing assessment service; preserve the family's
+ // Autism / integrated support preference explicitly in Message below.
+ autism:'Assements - Treatments',
  speech:'Speech Therapy',
  occupational:'Occupational Therapy',
  aba:'Behavioral Modification',
@@ -13,7 +16,7 @@ const SERVICE_MAP={
  other:'Assements - Treatments'
 };
 const SERVICE_LABEL={
- help:'Help me choose',speech:'Speech & language',occupational:'Occupational therapy',
+ help:'Help me choose',autism:'Autism / integrated support',speech:'Speech & language',occupational:'Occupational therapy',
  aba:'ABA / behavioural support',education:'Special education',other:'Another service'
 };
 const CENTRE_WITHOUT_LEGACY_ID={
