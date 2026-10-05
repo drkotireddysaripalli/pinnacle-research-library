@@ -1,0 +1,46 @@
+{
+  "id": "site-health-shared-20261005",
+  "phase": "superseded-not-promoted",
+  "at": "2026-10-05T16:12:27.748Z",
+  "sourceCommit": "90dc7675cf512848dfe9b5852b18cc2b1d32f9f5",
+  "beforeRouteCount": 207,
+  "rollback": {
+    "pinnacle-legacy-social-metadata": [
+      {
+        "version_id": "5d338157-d8ca-4c50-90b5-2db2ba1cca88",
+        "percentage": 100
+      }
+    ],
+    "pinnacle-root-sitemap": [
+      {
+        "version_id": "961217ca-acc8-4df7-b6de-c6f221c1f970",
+        "percentage": 100
+      }
+    ]
+  },
+  "candidates": {
+    "pinnacle-legacy-social-metadata": {
+      "id": "6d5f6663-5272-4a7d-b413-92c4057b4508",
+      "modules": {
+        "entry.mjs": "fb78153e32d3d195e1538bab7e0c31027d1b4084ea18838f469034c90e4dc8c7",
+        "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+        "schema.mjs": "4cd11df91c25f2fbfdcebf87223d7e5724cea4aba7201e1f6ceee3d9240d0f12",
+        "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+        "organization.mjs": "e556384a4428566ea5c133f2156cca8e9b5eb749bcf06ab423f2943b41851007",
+        "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+        "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+        "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6"
+      }
+    },
+    "pinnacle-root-sitemap": {
+      "id": "aec8a658-d606-48db-8b3a-ac5e809b8ae6",
+      "modules": {
+        "index.mjs": "83afcd952db16f989f5d4b6fadea2182cdac9f42c7fa29624edf86549d126dab"
+      }
+    }
+  },
+  "promoted": [],
+  "routesAdded": [],
+  "supersededBy": "site-health-shared-v2-20261005",
+  "reason": "Conditional GET canonical regression corrected before production promotion."
+}

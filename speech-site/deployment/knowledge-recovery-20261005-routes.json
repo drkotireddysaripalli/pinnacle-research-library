@@ -1,0 +1,60 @@
+{
+  "at": "2026-10-05T15:39:39.449Z",
+  "commit": "f96b94f750b9b1e37e22bdfaedd7e896b1b8dc49",
+  "workerVersion": "b9cd2194-d853-4df9-bbd4-485fc140f723",
+  "changed": [
+    {
+      "id": "6f96fbc26f014f8bae0dc239904e340f",
+      "pattern": "www.pinnacleblooms.org/faq*",
+      "script": "pinnacle-legacy-social-metadata",
+      "previousScript": "pinnacle-legacy-social-metadata"
+    },
+    {
+      "id": "e29f79a1f32641e987d54a43bdef3c5c",
+      "pattern": "www.pinnacleblooms.org/allmirracles*",
+      "script": "pinnacle-legacy-social-metadata",
+      "previousScript": "pinnacle-legacy-social-metadata"
+    }
+  ],
+  "added": [
+    {
+      "id": "d15efafeb14b4b84bab8c1298e024f4a",
+      "pattern": "pinnacleblooms.org/faq*",
+      "script": "pinnacle-ask"
+    },
+    {
+      "id": "393370e0d6144af6baf77d055b872416",
+      "pattern": "www.pinnacleblooms.org/sunshine*",
+      "script": "pinnacle-ask"
+    },
+    {
+      "id": "319c5d71d1164f828b7c07848ad886e2",
+      "pattern": "pinnacleblooms.org/sunshine*",
+      "script": "pinnacle-ask"
+    },
+    {
+      "id": "334643bc81834714b04c4e1f510d6f80",
+      "pattern": "pinnacleblooms.org/allmirracles*",
+      "script": "pinnacle-ask"
+    },
+    {
+      "id": "94851123bf474123abb200e55e4edb77",
+      "pattern": "www.pinnacleblooms.org/ask/auth/*",
+      "script": "pinnacle-ask"
+    },
+    {
+      "id": "ea5d44e6b06e41cda8452444e0648c3e",
+      "pattern": "www.pinnacleblooms.org/ask/_assets/*",
+      "script": "pinnacle-ask"
+    },
+    {
+      "id": "956cbad54950466c99eec4d10225ecb5",
+      "pattern": "www.pinnacleblooms.org/ask/_image*",
+      "script": "pinnacle-ask"
+    }
+  ],
+  "beforeRouteCount": 200,
+  "verifiedAt": "2026-10-05T15:40:09.851Z",
+  "afterRouteCount": 207,
+  "protectedVersionsAndBindingsPreserved": true
+}

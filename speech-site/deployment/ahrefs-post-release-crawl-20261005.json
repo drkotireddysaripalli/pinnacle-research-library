@@ -1,0 +1,35 @@
+{
+  "recorded_at": "2026-10-05T16:45:41.558262+00:00",
+  "project_id": 10477823,
+  "source": "Signed-in Ahrefs UI; settings saved and read back; crawl log screenshot",
+  "old_score": 22,
+  "old_score_status": "Old crawl stopped at 22:01 IST on 5 October; not a post-release measurement",
+  "new_crawl_started_local": "2026-10-05 22:02 Asia/Kolkata",
+  "new_crawl_status": "Crawling",
+  "snapshot_local": "2026-10-05 22:05 Asia/Kolkata",
+  "snapshot": {
+    "urls_crawled": 169,
+    "scheduled": 20726,
+    "billed_pages": 102,
+    "crawl_credits_left": 436211
+  },
+  "settings": {
+    "max_pages_before": 10000,
+    "max_pages_after": 50000,
+    "remove_url_parameters_before": true,
+    "remove_url_parameters_after": false,
+    "sitemap_sources_added": [
+      "https://www.pinnacleblooms.org/faq/sitemap.xml",
+      "https://www.pinnacleblooms.org/sunshine/sitemap.xml",
+      "https://www.pinnacleblooms.org/allmirracles-sitemap.xml"
+    ],
+    "existing_sources_and_exclusions_preserved": true,
+    "existing_speed_preserved": true,
+    "main_scope_excludes_separately_managed_ask_verify": true
+  },
+  "new_crawls_started": 1,
+  "new_plan_purchase": false,
+  "proof": "deployment/ahrefs-post-release-crawl-20261005.jpg",
+  "health_100_confirmed": false,
+  "next_condition": "Read the completed crawl once and use its residual errors to select the next shared repair. No duplicate crawl or unchanged polling."
+}

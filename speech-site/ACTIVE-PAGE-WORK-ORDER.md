@@ -1,14 +1,14 @@
-# Current page work â€”5October2026
+# Current page work —5October2026
 
-## Active: site health recovery through public knowledge collections
+## Site health: bulk repair delivered; post-release crawl running
 
-Owner instruction supersedes the earlier next-page hold for this bounded repair. Action b00562eb-206b-41f7-a710-b7cc7c077716. Target real Ahrefs errors by shared cause, with no score manipulation. Main crawl snapshot:21/100,8,562 error-bearing URLs,7,981 orphans and610 oversized pages; counts overlap and the crawl is in progress.
+Owner instruction: reach a genuine100 Ahrefs Health Score through shared causes, least effort/max impact. Action `b00562eb-206b-41f7-a710-b7cc7c077716` delivered FAQ/Sunshine/Mirracles recovery, eligible retired-profile handling, franchise canonical and core sitemap fixes. Final sources `818fe1b` and `1fb2823`; exact production versions and proof are in `RELEASE-KNOWLEDGE-RECOVERY-20261005.md`.
 
-Replace the FAQ family with focused Astro answers and paginated language/topic collections from the read-only PlanetScale export. Preserve4,564 original answer records and their original slugs across seven languages; source dates are publication dates, not clinical-review dates. Reuse Ask Google identity without changing its scopes or cookies. Sunshine becomes an Astro directory of source records matched to actual public paths; unmatched/private/generated testimonial fields are not promoted. Replace the17MB Mirracles listing with compact linked pages retaining real numeric record destinations; malformed UPLOADED placeholders are not promoted. Existing individual story and Sunshine-topic routes remain under their owners.
+4,564 FAQ answers in seven languages,1,826 Sunshine public links and28,334 story destinations are retained in compact collections. Common shellv159 is unchanged. Ask Google identity is reused.209 routes/21 Ask bindings and unrelated Portal/MCP/Verify remain protected.
 
-Accept only after: original-route and GSC coverage reconciliation; every retained record linked; bounded raw HTML; visible answer/schema parity; safe authentication return paths; desktop/tablet/phone visual inspection; focused browser/auth tests; exact committed/pushed source and CI; preserved Cloudflare routes/bindings/Ask/Verify; public URL and byte checks; one appropriate changed-URL/sitemap notification. Remaining staff-directory and source-retirement decisions stay explicit. Deployment does not establish100/100; the completed Ahrefs crawl must confirm the residual errors.
+Main Ahrefs old score22; one fresh full crawl started5October22:02IST after bulk fixes. Pagination parameters are preserved and max crawl size50,000. **100 is not yet measured.** Next: read the completed crawl once; fix shared residuals. Two unresolved old404 destinations (`/ma/wil` and the ASSQ UUID route) require an evidenced source/inlink correction; no made-up redirects. Existing hourly automation remains paused; unrelated next-page work remains on hold.
 
-Approved common shell v159 remains unchanged. This chat owns code and deployment. The hourly automation remains paused. Source/report directory: work/pinnacle-growth-system/faq-sunshine-20261005.
+Final representative FAQ live Lighthouse: mobile96/100/100/100, desktop100/100/100/100.147 shared public checks,27 collection HTTP checks and final anonymous Google/readability checks passed within declared scopes. Hosted Safari consent retest passed; physical mobile unavailable and local Firefox could not launch. See the release receipt for scope and skipped coverage.
 
 ## Prognose delivered
 

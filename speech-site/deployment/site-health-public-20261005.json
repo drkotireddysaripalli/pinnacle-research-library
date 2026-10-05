@@ -1,0 +1,1376 @@
+{
+  "at": "2026-10-05T16:23:11.934Z",
+  "retiredProfilesConfigured": 1505,
+  "retiredSamplePassed": 132,
+  "currentProfileMapCount": 241,
+  "knownRetired404sNowGone": 3,
+  "protectedSamplePassed": 5,
+  "coreSitemapUrls": 47,
+  "checks": 147,
+  "passed": true,
+  "records": [
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Siraveni-Santhosh/30205",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/merapureddy-ramana/52486",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/SILSA-SEEMON/72107",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/AZMEERA-YAKUB/51423",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Shaik-Shaheen/28393",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Asma-Mubeen/56365",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/bingi-shivani/62661",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kuruva-Mahesh/9674",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Thota-Shylaja-Rani/11211",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/S-DEOGIS/53987",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Sweety-Grace-Kadali/36517",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/BHUKYA-RAMESH/56703",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/MAMIDA-MRUDULA/60433",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Rizwana-Begum/15135",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Morris-p-p-kumar-j/58387",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kotla-Venkata-Satya-Manikanta/68872",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/KATAM-SAI-KIRAN/34744",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Gurajala-Bala-Abhilash/42708",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/VENKATASURESH-CHETTI/42113",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Yakkala-siva-ramakrishnaraju/31666",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Gadikota-sivateja/40702",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Rahul-Kumar-Malik/9870",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/KOKKULA-PRAVEENA/53988",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/shaik-Ahmedunnisa/22716",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Darla-Madhavi/41546",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Yetcherla-srivalli/56778",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/karishma/40909",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/MUHSINA-MK/61729",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/SATIVADA-VENKATARAMANA/53203",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kancharla-Bindu-Tulasi/56215",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Shaik-Lathif/64039",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Bogi-Anil-Kumar/26907",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Anvesh/10364",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Neerukonda-Anusha/9906",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Talari-Rajesh/32989",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/K-madan-mohan/47581",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Pasam-Usha/25663",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Savara-Sravani/57131",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Chekka-venkata-Lakshmi-Sai-sahithi/38081",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/D-Swarna/29467",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Safoora-Majeed/68045",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/KASICHAYANULA-SOWJANYA/8695",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/kothuri-priyanka/43952",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kottapeta-Hymavathi/26067",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Satti-Ajay/46679",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/konduka-sreeja/33079",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/POtharaveni-Pranaya/11203",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Gottumukkala-satya-bhanu-vyshnavi/31670",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Gade-Shalini-Sowmya/63024",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Divya-Mekala/58296",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/patan-nouziya/58166",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Neerugatti-vinayaka/4425",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Naripogula-Dharani/14671",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/kanipeda-sowjanya/2294",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Thokala-Vijayalaxmi/58921",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Gandu-Gowri-Devi/18887",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Gotivada-Laxmi/14056",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/AVULA-JONATHAN/60491",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Dorem-Raghupathi/31514",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Chakrapu-Murali/29397",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Yerra-mallaiah/54995",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Pamidi-Shanmukhipriya/67318",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Are-Shivani/62009",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Padmanabhuni-Bangaru-Satya-Mounika/33667",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Pasupuleti-Priya/48658",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/TherapeuticAI/62095",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Divya-Dasari/29118",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Guttula-Sri-Lakshmi-Spandana/54513",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Athikam-vamshi-goud/57825",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kummari-sarada/41055",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/sidda-Nagasri/67350",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/ATHUL-KRISHNAN/39456",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Nellepalli-Gunavathi/53976",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Naresh-Kumar-pitla/71099",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Adimulka-Soumya/12157",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/chaitanya/39534",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Chaitanya/39534",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Patra-Ramadevi/33629",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/kumbha-Anusha/41877",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Srilohitha-pathi/55784",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/T-Manimala/42807",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Anasuri-Swarna-latha/18817",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Dantla-krishna-prasamsa-rama-sathyaveni/26244",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/shaik-sheher-banu-/38823",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/A-P-P-Florence/39151",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Rapaka-Sushma/4145",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Janampalli-Kalyankumar/28140",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kasa-Krupa-Mani/18771",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Neha-Gola-Singh/28199",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Anjalin-A/38776",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Mohammed-Riyaz-baba/57324",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Billa-Ravibabu/58922",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/vedasri-Allam/51742",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kaki-taruni-priya/57176",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Akula-sandhya/49070",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Aarzoo-Akbarali-y/72285",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/DILIP-KUMAR-AV/36787",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/N-Meghana/36932",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Neelam-Brahma-prasad/50843",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Valike-Bhargavi/59802",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Tammana-Vijayalakshmi/24622",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/RAHUL-PANDIAN-R/69593",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Tirunagri-Hyndhavi/26235",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kadasi-Rakesh/10445",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Medapuram-sravanthi/45503",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Shaikh-Fauzia-Fayaz-Raje/34162",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Budijaggula-Erappa/38576",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/BANOTHU-RAKESH/73753",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Bopparaju-Tanuja/55030",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Sherin-Eldhose/71969",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Mohammad-Yakub/22922",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Samudrala-Nagamani/51993",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Samyuktha-Pasunuri/47544",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Tatapudi-Sumanth/56746",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Mohammed-Suleman/71392",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Balle-sujatha/27852",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Byagari-Bhasker/14409",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/-sannapala-betty-debhora-/58321",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Komera-Pavithra/66967",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Neelam-chaithanya/42032",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/MOTHE-PRAVEEN-KUMAR/55113",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Panku-Mounika/57640",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Baddam-Madhuri/24065",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Syed-Ruksana/13719",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/kalivarapu-satya-aruna/28075",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Sogra-Khanum/1933",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Ponugoti-Vyshnavi-Devi/4922",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/M-Deepika/4805",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Sneha-Anand/1987",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Vinod-Govindu/4828",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Vijayalakshmi/4825",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/P-Priyanka/1964",
+      "status": 410,
+      "location": null,
+      "bytes": 0,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Gudaparathi-Jayaraj/4944",
+      "status": 410,
+      "location": null,
+      "bytes": 1131,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Kudikala-Venkata-Sai-Ramakrishna-Prasad/4931",
+      "status": 410,
+      "location": null,
+      "bytes": 1131,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Mohammad-Haneef/4882",
+      "status": 410,
+      "location": null,
+      "bytes": 1131,
+      "retired": "retired-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Mohammad-Farzana/45748",
+      "status": 200,
+      "location": null,
+      "bytes": 356602,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/staff/mohammad-farzana/45748"
+      ],
+      "og": [
+        "http://www.pinnacleblooms.org/staff/mohammad-farzana/45748"
+      ]
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/Sonia-honey/1954",
+      "status": 200,
+      "location": null,
+      "bytes": 352160,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/staff/sonia-honey/1954"
+      ],
+      "og": [
+        "http://www.pinnacleblooms.org/staff/sonia-honey/1954"
+      ]
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/B-Naveen-Harshavardhan/72543",
+      "status": 200,
+      "location": null,
+      "bytes": 334729,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/staff/b-naveen-harshavardhan/72543"
+      ],
+      "og": [
+        "http://www.pinnacleblooms.org/staff/b-naveen-harshavardhan/72543"
+      ]
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/staff/-B-Naveen-Harshavardhan-/72543",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/staff/B-Naveen-Harshavardhan/72543",
+      "bytes": 0,
+      "retired": "canonical-20261005",
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/franchise-autism-therapy-center",
+      "status": 200,
+      "location": null,
+      "bytes": 437466,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/franchise-autism-therapy-center"
+      ],
+      "og": [
+        "https://www.pinnacleblooms.org/franchise-autism-therapy-center"
+      ]
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/franchise-autism-therapy-center",
+      "status": 200,
+      "location": null,
+      "bytes": 437466,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/franchise-autism-therapy-center"
+      ],
+      "og": [
+        "https://www.pinnacleblooms.org/franchise-autism-therapy-center"
+      ]
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sitemaps/core.xml",
+      "status": 200,
+      "location": null,
+      "bytes": 3817,
+      "retired": null,
+      "canonical": [],
+      "og": []
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq",
+      "status": 200,
+      "location": null,
+      "bytes": 160685,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/faq"
+      ],
+      "og": [
+        "https://www.pinnacleblooms.org/faq"
+      ]
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine",
+      "status": 200,
+      "location": null,
+      "bytes": 159846,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/sunshine"
+      ],
+      "og": [
+        "https://www.pinnacleblooms.org/sunshine"
+      ]
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/allmirracles",
+      "status": 200,
+      "location": null,
+      "bytes": 207845,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/allmirracles"
+      ],
+      "og": [
+        "https://www.pinnacleblooms.org/allmirracles"
+      ]
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "status": 200,
+      "location": null,
+      "bytes": 1022245,
+      "retired": null,
+      "canonical": [
+        "https://www.pinnacleblooms.org/verify/"
+      ],
+      "og": [
+        "https://www.pinnacleblooms.org/verify/"
+      ]
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask",
+      "status": 200,
+      "location": null,
+      "bytes": 148880,
+      "retired": null,
+      "canonical": [
+        "https://pinnacleblooms.org/ask"
+      ],
+      "og": [
+        "https://pinnacleblooms.org/ask"
+      ]
+    }
+  ]
+}

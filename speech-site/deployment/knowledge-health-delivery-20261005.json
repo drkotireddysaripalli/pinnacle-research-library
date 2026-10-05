@@ -1,0 +1,37 @@
+{
+  "item_id": "WEB-FAQ-SUNSHINE-ASTRO",
+  "action_id": "b00562eb-206b-41f7-a710-b7cc7c077716",
+  "at": "2026-10-05T16:45:41.558262+00:00",
+  "outcome": "deployed",
+  "summary": "Delivered 4,564 focused FAQ answers and compact Sunshine/Mirracles collections with shared identity; deployed source-backed staff/canonical/sitemap bulk repairs, verified production and submitted changed sitemaps/URLs. Genuine100 health remains awaiting completed audit and residual repair.",
+  "verified": true,
+  "commit": "818fe1bb4b3ac30f8f380b1fab47b32c0f771fc4",
+  "additional_commit": "1fb282372e62d1bbce80bc8efbe3bb939ef463b8",
+  "deployment": {
+    "ask": "66c17f39-e6bd-441b-ba6a-3abb0049cc68",
+    "legacy": "6f6f7985-1d62-47d3-843f-52bd1edd2c20",
+    "sitemap": "a31e8e05-4af3-453b-a726-aa0b2d43703c"
+  },
+  "public_url": "https://www.pinnacleblooms.org/faq",
+  "public_urls": [
+    "https://www.pinnacleblooms.org/faq",
+    "https://www.pinnacleblooms.org/faq/english/speech-therapy/autism-speech-therapy",
+    "https://www.pinnacleblooms.org/faq/telugu",
+    "https://www.pinnacleblooms.org/sunshine",
+    "https://www.pinnacleblooms.org/sunshine/techniques",
+    "https://www.pinnacleblooms.org/allmirracles"
+  ],
+  "proof": [
+    "deployment/knowledge-public-20261005.json",
+    "deployment/site-health-public-20261005.json",
+    "deployment/knowledge-readability-public-20261005.json",
+    "deployment/knowledge-lighthouse-final-20261005.json",
+    "deployment/knowledge-readability-ci-20261005.json",
+    "deployment/knowledge-indexnow-20261005.json",
+    "deployment/site-health-indexnow-20261005.json",
+    "deployment/ahrefs-post-release-crawl-20261005.json"
+  ],
+  "health_100_confirmed": false,
+  "remaining": "Completed audit residuals and two unconfirmed legacy destinations; exact record in release note.",
+  "measurement": "Deployment, public behavior and accepted notifications verified. Indexing, rankings and qualified enquiries not inferred."
+}

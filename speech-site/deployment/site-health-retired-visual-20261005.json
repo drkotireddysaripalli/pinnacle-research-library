@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-05T16:30:48.207Z",
+  "rows": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "logo": 650,
+      "links": [
+        {
+          "text": "Browse professional profiles",
+          "href": "/staff",
+          "height": 56.59375
+        },
+        {
+          "text": "Find a centre",
+          "href": "/centers",
+          "height": 56.59375
+        },
+        {
+          "text": "Call 9100 181 181",
+          "href": "tel:+919100181181",
+          "height": 56.59375
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "logo": 650,
+      "links": [
+        {
+          "text": "Browse professional profiles",
+          "href": "/staff",
+          "height": 56.59375
+        },
+        {
+          "text": "Find a centre",
+          "href": "/centers",
+          "height": 56.59375
+        },
+        {
+          "text": "Call 9100 181 181",
+          "href": "tel:+919100181181",
+          "height": 56.59375
+        }
+      ]
+    }
+  ],
+  "passed": true
+}
