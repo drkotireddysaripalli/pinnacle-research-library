@@ -252,3 +252,6 @@ Astro supplies responsive WebP with dimensions. The whole square circle remains 
 ## Personal Development Kernel — 5 October 2026
 
 `src/assets/pdk-connected-story-20261005.png`: complete native session-generated branded illustrative creative; official logo and existing PDK scene references. No API-key route or pasted text overlays. Original and complete prompt: `reviews/PDK-CREATIVE-20261005.md` and `reviews/PDK-CREATIVE-PROMPT-20261005.txt`. Exact model version not exposed. Approved PDK social creative retained.
+
+## Prognose next-step creative — 5 October 2026
+- `src/assets/prognose-next-step-20261005.png`: complete native session image-generation tool output, no API-key fallback or later text overlays. Official lockup and approved Prognose poster supplied as references. Prompt: `reviews/PROGNOSE-CREATIVE-PROMPT-20261005.txt`. Original: `C:/Users/Siri Palace/.codex/generated_images/01a0ef6b-507a-7630-828f-7ac81852a39c/exec-a5bc2964-279f-4821-ac03-fc62819f31c6.png`. Exact model version not exposed. Illustrative young child/family and full-sleeve branded professional, four readable planning nodes, branching possible step and review loop. Phone and official identity inspected. No real patient result or invented certificate. WebP variants400/640/900/1254; full composition without crop. Existing approved1200x630 social poster retained.

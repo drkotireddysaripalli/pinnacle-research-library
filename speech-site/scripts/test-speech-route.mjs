@@ -42,6 +42,7 @@ test('nine product pages serve exact HTML and Markdown with canonical links',asy
   const before=calls.length,html=await serveSpeech(request(path),env,inventory);assert.equal(html.status,200);
   if(path==='/seven-readiness-indexes'){assert.equal(calls.length,before);assert.match(await html.text(),/7 Readiness Indexes<\/span>Understand today/);}
   else if(path==='/everyday-therapy'){assert.equal(calls.length,before);assert.match(await html.text(),/Small moments/);}
+  else if(path==='/prognose'){assert.equal(calls.length,before);assert.match(await html.text(),/prognose-observations/);}
   else if(path==='/personal-development-kernel'){assert.equal(calls.length,before);assert.match(await html.text(),/pdk-record-pair/);}
   else if(path==='/abilityscore'){assert.equal(calls.length,before);assert.match(await html.text(),/Give the next step a reason/);}
   else assert.equal(calls.at(-1).url,'https://assets.local/pinnacle-pages-html/'+path.slice(1)+'.html');
@@ -49,6 +50,7 @@ test('nine product pages serve exact HTML and Markdown with canonical links',asy
   const beforeMarkdown=calls.length,markdown=await serveSpeech(request(path,{headers:{accept:'text/markdown'}}),env,inventory);assert.equal(markdown.status,200);
   if(path==='/seven-readiness-indexes'){assert.equal(calls.length,beforeMarkdown);assert.equal(await markdown.text(),readFileSync(new URL('../public/pinnacle-pages-data/seven-readiness-indexes-reading.md',import.meta.url),'utf8'));}
   else if(path==='/everyday-therapy'){assert.equal(calls.length,beforeMarkdown);assert.equal(await markdown.text(),readFileSync(new URL('../public/pinnacle-pages-data/everyday-therapy-reading.md',import.meta.url),'utf8'));}
+  else if(path==='/prognose'){assert.equal(calls.length,beforeMarkdown);assert.equal(await markdown.text(),readFileSync(new URL('../public/pinnacle-pages-data/prognose-reading.md',import.meta.url),'utf8'));}
   else if(path==='/personal-development-kernel'){assert.equal(calls.length,beforeMarkdown);assert.equal(await markdown.text(),readFileSync(new URL('../public/pinnacle-pages-data/personal-development-kernel-reading.md',import.meta.url),'utf8'));}
   else if(path==='/abilityscore'){assert.equal(calls.length,beforeMarkdown);assert.equal(await markdown.text(),readFileSync(new URL('../public/pinnacle-pages-data/abilityscore-reading.md',import.meta.url),'utf8'));}
   else assert.equal(calls.at(-1).url,'https://assets.local/pinnacle-pages-data/'+path.slice(1)+'-reading.md');

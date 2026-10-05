@@ -1,3 +1,4 @@
+import {writePrognoseMachine} from './build-prognose-machine.mjs';
 import {pdkContent} from '../src/data/pdk-content.ts';
 import {overviewArchitecture,overviewFirstVisit,overviewFamilyStages,overviewDefinition,overviewHome,overviewOutcomes,overviewScale,overviewResearch} from '../src/data/pinnacleai-overview.ts';
 import {speechModuleExamples} from '../src/data/speech-resources.ts';
@@ -16,6 +17,7 @@ const sourceName={model:'Life-first programme direction',workflow:'Documented Pi
 const sourceLimit={model:'Programme purpose; not a guarantee of a child outcome.',workflow:'Describes a workflow; not proof that every step produces a specific result.',md5:'Class B, non-diagnostic software scope; not a clinical outcome or therapist credential.',bis:'Named module/quality scope; not a clinical effectiveness result.',fsc:'Indian marketability and export subject to importing-country law; not foreign approval.',research:'Publication types and study limitations must be read separately.',methods:'Methods and preliminary results must not be presented as completed independent validation.',dossier:'Product architecture and examples; contradictory completed-validation claims are not adopted here.',validation:'The public record labels this a protocol, not completed comparator results.',scale:'Service, registration and record counts have different units; not proven child outcomes.',studies:'Company study portfolio; cohort-bound findings are not individual guarantees.',citation:'Source exports aid citation; they do not establish endorsement.'};
 const claimKeys={pinnacleai:['model','md5'],abilityscore:['methods','validation'],'seven-readiness-indexes':['bis','workflow'],'personal-development-kernel':['dossier','workflow'],prognose:['bis','validation'],therapeuticai:['bis','workflow'],'everyday-therapy':['workflow','methods'],'fusion-module':['bis','dossier'],'reassess-review-repeat':['methods','workflow']};
 for(const page of pinnacleWave){
+  if(page.slug==='prognose'){await writePrognoseMachine(data);continue;}
   if(page.slug==='everyday-therapy'){await writeEverydayMachine(data);continue;}
   if(page.slug==='abilityscore'){await writeAbilityMachine(data);continue;}
   if(page.slug==='seven-readiness-indexes'){await writeReadinessMachine(data);continue;}

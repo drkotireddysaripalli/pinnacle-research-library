@@ -182,6 +182,15 @@ for(const id of choices){
       await evaluate("document.querySelector('#pinnacleai-journey').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('everyday-stages');
       await check('Everyday Therapy FAQ disclosure works',async()=>{await click('.everyday-faq summary');return evaluate("return document.querySelector('.everyday-faq details').open && document.querySelectorAll('.everyday-faq details').length===8");});
     }
+    if(target.pathname==='/prognose'){
+      await check('Prognose observations, architecture and seven stages are readable',async()=>{
+        row.prognoseGeometry=await evaluate("const cards=[...document.querySelectorAll('.prognose-observations li,.prognose-architecture li,.prognose-stages li,.prognose-review-branches article')];return {records:document.querySelectorAll('.prognose-observations li').length,stages:document.querySelectorAll('.prognose-stages li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");
+        const r=row.prognoseGeometry;return r.records===3&&r.stages===7&&r.cards.every(c=>c.width>180&&c.left>=0&&c.right<=r.width+1);
+      });
+      await evaluate("document.querySelector('#worked-example').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('prognose-example');
+      await evaluate("document.querySelector('#architecture').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('prognose-architecture');
+      await check('Prognose FAQ disclosure works',async()=>{await click('.prognose-faq summary');return evaluate("return document.querySelector('.prognose-faq details').open && document.querySelectorAll('.prognose-faq details').length===8");});
+    }
     if(target.pathname==='/personal-development-kernel'){
       await check('PDK observations, architecture and seven stages are readable',async()=>{
         row.pdkGeometry=await evaluate("const cards=[...document.querySelectorAll('.pdk-record,.pdk-architecture li,.pdk-stages li,.pdk-review-branches article')];return {records:document.querySelectorAll('.pdk-record').length,stages:document.querySelectorAll('.pdk-stages li').length,width:innerWidth,cards:cards.map(c=>{const r=c.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}})}");

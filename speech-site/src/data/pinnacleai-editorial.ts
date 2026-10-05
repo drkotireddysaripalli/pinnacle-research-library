@@ -1,3 +1,4 @@
+import {prognoseContent} from './prognose-content.ts';
 import {pdkContent} from './pdk-content.ts';
 // Page-owned narrative. The module pages share navigation and evidence plumbing,
 // while each must answer a different family decision in its own words.
@@ -42,14 +43,13 @@ export const pinnacleEditorial = {
     stage:'Keep child-specific context connected',
   },
   prognose: {
-    opening: 'Make a plan for tomorrow. Let today’s child revise it.',
-    lead: 'Your child wants to join a playground game. A useful forecast helps the team choose a possible next step and decide what to watch for. Prognose supports that planning conversation; later observations can change the estimate and the support.',
-    moment: '“What could we try next, and how will we know if it fits?”',
-    decision: 'Which starting information supports this tentative goal, what will be observed and when should the team reconsider?',
-    familyResult: 'A revisable plan with an understood checkpoint, not a predicted date for independence.',
-    callQuestion: 'Ask what would make the team revise a forecast.',
-    imageAlt: 'Illustrated child at a playground with family and Pinnacle professional, showing a flexible branching pathway to the next supported step.',
-    stage: 'Plan with a review point',
+    opening:'A clear next step. A plan that can change.', lead:prognoseContent.lead,
+    moment:'“What could help next, and how will we know whether it fits?”',
+    decision:'Which support and checkpoint should change after an observation differs from the initial expectation?',
+    familyResult:'An understandable possible next goal, selected support and a review that can change the plan.',
+    callQuestion:'Tell us one activity your child enjoys and what changes across settings.',
+    imageAlt:'Illustrative Pinnacle family, child and therapist choosing ball play with a planning and review pathway.',
+    stage:'Plan with room to learn',
   },
   therapeuticai: {
     opening: 'Give every activity a reason in your child’s life.',

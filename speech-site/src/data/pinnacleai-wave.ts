@@ -1,3 +1,4 @@
+import {prognoseContent} from './prognose-content.ts';
 import {pdkContent} from './pdk-content.ts';
 import {abilityContent} from './abilityscore-content.ts';
 import {readinessContent} from './readiness-content.ts';
@@ -104,26 +105,17 @@ export const pinnacleWave = [
     sourceKeys:['workflow','dossier','methods','md5'], faqs:pdkContent.faqs
   },
   {
-    slug:'prognose', short:'Prognose', label:'Prognose', title:'Prognose | A Revisable Forecast for Child-Specific Planning',
-    description:'Prognose supports a revisable next goal and checkpoint. Follow a playground example and see how observation can change the plan.',
-    eyebrow:'A forecast is a question to test', headline:'Plan ahead. Keep listening to what your child actually does.',
-    lead:'A useful plan looks forward, but it also leaves room for surprise. Prognose supports progress forecasting and a child-specific planning conversation; each estimate needs to be checked against later observation and professional judgement.',
-    direct:'Prognose is the named forecasting function in the PinnacleAI/BIS module map. It can support goal selection and checkpoints based on assessed information. It does not foretell a child’s future, prescribe a fixed therapy dose or guarantee a score by a date.',
-    purpose:'The forecast matters only if it helps the team choose a meaningful next step and notice early when the plan needs to change.',
-    question:'How can a forecast help without becoming a promise?',
-    exampleTitle:'Preparing for a playground invitation.',
-    exampleLead:'Illustrative example only. A child wants to join a familiar game with another child.',
-    example:[['Describe now','The team understands the child’s communication, motor access, preferences and environment.'],['Set a testable next step','A short goal might be a comfortable way to initiate or accept one invitation.'],['Choose checkpoints','Family and professionals agree what they will observe in relevant real settings.'],['Revise the estimate','If the child responds differently than forecast, the team changes support or timing instead of blaming the child.']],
-    mechanismTitle:'A forecast needs checkpoints and humility.',
-    mechanism:['Starting measures and goals inform a possible path.','The plan names what to observe and when to review it.','New information can strengthen, narrow or overturn the estimate.'],
-    limit:'Current public Verify records do not establish a completed external predictive-validation result. A forecast is decision support, not an independently proven prediction for an individual child.',
-    takeaway:'Ask which assumptions the forecast uses, what would change the plan and who makes that decision.',
-    sourceKeys:['workflow','bis','validation','md5'],
-    faqs:[
-      {question:'Can Prognose predict when my child will be independent?',answer:'No. It supports a revisable planning estimate; no individual endpoint or date can be guaranteed.'},
-      {question:'Who changes the plan if the forecast is wrong?',answer:'The responsible professional reviews new assessment and everyday observations with the family and adjusts the plan as appropriate.'},
-      {question:'Is the forecast a diagnosis?',answer:'No. PinnacleAI is licensed as non-diagnostic developmental-support software.'}
-    ]
+    slug:'prognose', updatedOn:'2026-10-05', includeReadingFaqs:true, short:'Prognose', label:'Prognose', title:'Prognose | PinnacleAI Progress Forecasting & Planning',
+    description:'Understand how PinnacleAI Prognose connects a possible next goal, suitable support and review. Follow a playground example and explore the original evidence.',
+    eyebrow:'Plan with room to learn', headline:'A clear next step. A plan that can change.',
+    lead:prognoseContent.lead, direct:prognoseContent.direct, purpose:prognoseContent.purpose,
+    question:'What could help next, and what would change the plan?',
+    exampleTitle:prognoseContent.example.title, exampleLead:prognoseContent.example.intro,
+    example:[...prognoseContent.example.cards.map(o=>[o.title,o.text] as [string,string]),['The revised checkpoint',prognoseContent.example.revision],['What the next review observes',prognoseContent.example.checkpoint],...prognoseContent.example.branches.map(b=>[b.title,b.text] as [string,string])],
+    mechanismTitle:'Look ahead. Build in a way to reconsider.', mechanism:prognoseContent.architecture.map(a=>a.title+': '+a.text),
+    limit:'The BIS module schedule and MD-5 intended use document the forecasting function and software scope, not accuracy for an individual child. The linked external-validation record concerns an AbilityScore protocol; completed external predictive validation for Prognose is not established here.',
+    takeaway:'Tell us one activity your child enjoys and what changes across settings. Ask what information supports the next goal and when it will be reviewed.',
+    sourceKeys:['workflow','bis','validation','md5'], faqs:prognoseContent.faqs
   },
   {
     slug:'therapeuticai', short:'TherapeuticAI®', label:'TherapeuticAI®', title:'TherapeuticAI® | Connect a Child’s Goal to Guided Therapy',
