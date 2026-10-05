@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "special-education",
+  "current": "about",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -651,14 +651,15 @@
       "label": "Special Education",
       "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
       "baselineScore": 71,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "The multi-step activity example names possible barriers and supports but lacks a particular observation and chosen adjustment. Repeated learning-cycle imagery and adjacent text do not fully satisfy the distinctive complete branded inline explanation.",
       "task": "Use one stopped activity with a named access barrier, one selected material/instruction adaptation and the next observed response, then generate the matching complete branded learning-to-participation creative.",
       "sourceCondition": "No individual educator credential/current branch availability or demonstrated learning/admission outcome supplied.",
       "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "pageOwnedDisposition": "Special Education delivered with a concrete learning observation, selected two-card instruction adaptation, next checkpoint, complete native branded creative and seven linked PinnacleAI stages. Twelve matching FAQs, source/Markdown/social content and call/education-enrolment/centre paths align. Exact source pushed and CI passed; physical iPhone, Safari, visual and live checks passed; 194 routes/four bindings and20 protected pages preserved. One changed URL accepted by IndexNow.",
+      "release": "RELEASE-SPECIAL-EDUCATION-20261005.md",
+      "reviewedOn": "2026-10-05T07:31:33.297003+00:00",
+      "scoreScope": "No post-release numeric score invented. Acceptance is bounded editorial/technical review; real user and commercial outcomes remain unmeasured."
     },
     {
       "order": 37,
@@ -2239,6 +2240,6 @@
     "delhi": "completed and set aside",
     "nextContract": null
   },
-  "currentDisposition": "V162 published and verified; next eligible individual page is Seven Readiness Indexes.",
-  "nextCandidate": "seven-readiness-indexes"
+  "currentDisposition": "Special Education published and verified on5October2026; next unheld individual is About Pinnacle, row38. Verify and centre/staff deferrals remain.",
+  "nextCandidate": "about"
 }

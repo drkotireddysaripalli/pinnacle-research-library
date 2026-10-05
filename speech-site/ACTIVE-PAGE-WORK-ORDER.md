@@ -30,18 +30,25 @@ Live: https://www.pinnacleblooms.org/fusion-module
 
 Source50cc8db86642c559fe818b1f1e9cbf8e12084a51; Cloudflare41add73b-799d-41e4-9110-27c8835a8d1c. Three-setting observation, named professional adjustment, next checkpoint, four-step HTML diagram and seven linked stages delivered. Nine matchedFAQs, source/Markdown/social content, 400unit checks, five widths, W3C0/0, physicaliPhone/hostedSafari and live read-back complete.194routes/fourbindings/19protected responses preserved. One IndexNow notification accepted. Receipt: deployment/fusion-release-receipt-20261005.json; release: RELEASE-FUSION-20261005.md.
 
-## Next individual: Special Education
+## Special Education delivered
 
-Canonical: https://www.pinnacleblooms.org/best-special-education-center-call-9100181181
+Live: https://www.pinnacleblooms.org/best-special-education-center-call-9100181181
 
-Quality row36 / original baseline71. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code and release; at most one bounded read-only review.
+Source 266237648cd11ee66770a5d8924bb7d88deffde6; Cloudflare 1db2fa3f-65cb-4a34-b5de-c53d969bee83. Concrete learning-access example, complete native branded creative, seven linked stages, twelve matchingFAQs, first-visit steps and service-aware enrolment delivered. Pushed CI, physicaliPhone/hostedSafari, mobile Lighthouse97/desktop100 and public checks passed.194routes/fourbindings/20protected responses preserved. Receipt: deployment/special-education-release-receipt-20261005.json; release: RELEASE-SPECIAL-EDUCATION-20261005.md.
 
-1. Reconcile current live/source once. Preserve the common header/footer, route/binding union, Ask, Verify, authentication, commerce and other pages.
-2. Carry one stopped learning activity through a specific observation, named access barrier, selected material or instruction adaptation and next observable checkpoint. Distinguish an illustrative explanation from an actual child outcome; do not invent success after the adjustment.
-3. Build a complete, branded learning-to-participation creative using native session image generation when a new creative is needed. It must explain the page's specific narrative, with approved emblem, colours, readable English text and professional/child context. Preserve essential meaning in accessible HTML; no photo-plus-pasted-text substitute.
-4. Connect learning to everyday independence and mainstream participation, family/teacher involvement, PinnacleAI and the other therapies. Use the source-supported professional and software scope. Keep unverified branch availability and individual credentials separate; this does not block useful page completion.
-5. Align metadata, visible/structured FAQs, social image, citation/download/reading exports and useful internal links. Keep call9100181181, enrolment and centre selection clear.
-6. Complete focused responsive/visual/browser checks, pushed exact-source CI, full-route/binding-safe release and public proof; one changed-URL notification. Save receipt, practical review and actual remaining evidence before advancing one next unheld individual.
+## Next individual: About Pinnacle
+
+Canonical: https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate
+
+Quality row38 / original baseline72. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code/release; at most one bounded read-only reviewer.
+
+1. Reconcile live source once. Preserve common shell, routing, Ask, Verify, authentication, commerce and current source holds.
+2. Explain Pinnacle from its own voice: the child’s self-sufficient, mainstream-included life; what the family can expect; how people, measurement, integrated support, everyday practice and review connect.
+3. Show one compact, explicitly illustrative family journey with a named professional role, a concrete observation and a keep/adapt/refer decision. Do not turn institutional scale into a claim of identical individual outcomes.
+4. Shorten repeated purpose statements. Keep institutional history, leadership, regulatory evidence and practical family decisions distinct and connected. Retain only the owner-approved leadership and genuine sources.
+5. Use suitable approved branding/creative. Generate a complete native creative only for an actual narrative gap. Keep the essential explanation readable in HTML, with meaningful icons/headings, mobile layout and call/enrol/centre paths.
+6. Align visible/structured FAQs, title/description, social image and machine/citation exports. Complete focused visual/browser tests, pushed exact-source CI, safe deployment and public proof; notify indexing once for a material change.
+7. Save the release receipt and advance the next unheld individual. No fabricated family results, service consistency, clinical guarantees or commercial uplift.
 
 ## Continuing boundaries
 

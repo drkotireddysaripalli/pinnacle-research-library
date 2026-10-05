@@ -1,0 +1,857 @@
+{
+  "item_id": "PAGE-SPECIAL-EDUCATION",
+  "action_id": "6246d5ee-a97a-42d2-9440-53e43b3537ab",
+  "outcome": "deployed",
+  "verified": true,
+  "at": "2026-10-05T07:31:33.297003+00:00",
+  "summary": "Special Education delivered with a concrete learning observation, selected two-card instruction adaptation, next checkpoint, complete native branded creative and seven linked PinnacleAI stages. Twelve matching FAQs, source/Markdown/social content and call/education-enrolment/centre paths align. Exact source pushed and CI passed; physical iPhone, Safari, visual and live checks passed; 194 routes/four bindings and20 protected pages preserved. One changed URL accepted by IndexNow.",
+  "commit": "266237648cd11ee66770a5d8924bb7d88deffde6",
+  "deployment": {
+    "at": "2026-10-05T07:26:14.272Z",
+    "commit": "266237648cd11ee66770a5d8924bb7d88deffde6",
+    "version": "1db2fa3f-65cb-4a34-b5de-c53d969bee83",
+    "deployment": "fee6523f-b870-4e48-b19d-8787c31f94e7",
+    "rollback": [
+      {
+        "version_id": "41add73b-799d-41e4-9110-27c8835a8d1c",
+        "percentage": 100
+      }
+    ]
+  },
+  "public_url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+  "proof": {
+    "ci": {
+      "at": "2026-10-05T07:25:57.454Z",
+      "commit": "266237648cd11ee66770a5d8924bb7d88deffde6",
+      "runs": [
+        {
+          "id": 37277301820,
+          "name": "Portal quality",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37277301820"
+        }
+      ]
+    },
+    "candidate": {
+      "buildPages": 135,
+      "astroFiles": 140,
+      "typeErrors": 0,
+      "initialUnitTestsPassed": 405,
+      "finalFocusedTestsPassed": 31,
+      "exactSourceCIPassed": true,
+      "localEdgeWebKitChecks": 2,
+      "widths": [
+        320,
+        390,
+        768,
+        1024,
+        1440
+      ],
+      "responsiveReport": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\special-education-20261005\\visual\\responsive.json",
+      "w3c": {
+        "checkedAt": "2026-10-05T07:13:44.340Z",
+        "mode": "local",
+        "canonical": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+        "status": 200,
+        "errorCount": 0,
+        "warningCount": 0,
+        "messages": []
+      }
+    },
+    "creative": {
+      "method": "Native session image generation; integrated complete English creative; no external API or pasted-text substitute",
+      "source": "src/assets/special-education-creative-20261005.png",
+      "prompt": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\special-education-20261005\\creative-prompt.txt",
+      "approvedOGRetained": true
+    },
+    "devices": {
+      "source": "Exact JSON rows emitted by the two completed TestingBot processes. Both used the same millisecond output directory; screenshot filenames have device prefixes and remain distinct.",
+      "sessions": [
+        {
+          "kind": "physical-mobile",
+          "device": {
+            "id": 27,
+            "name": "iPhone 15",
+            "platform": "iOS",
+            "version": "18.0"
+          },
+          "status": "passed",
+          "checks": [
+            {
+              "name": "Canonical and main heading",
+              "passed": true
+            },
+            {
+              "name": "No horizontal page overflow",
+              "passed": true
+            },
+            {
+              "name": "Nine authority destinations with visible subtexts",
+              "passed": true
+            },
+            {
+              "name": "Call destination",
+              "passed": true
+            },
+            {
+              "name": "Navigation menu opens and closes",
+              "passed": true
+            },
+            {
+              "name": "Authority rail reaches Citations",
+              "passed": true
+            },
+            {
+              "name": "Special Education learning decision and stages are readable",
+              "passed": true
+            },
+            {
+              "name": "Special Education FAQ disclosure works",
+              "passed": true
+            },
+            {
+              "name": "Verify footer cards and policy link",
+              "passed": true
+            },
+            {
+              "name": "Optional analytics decline control and cookies",
+              "passed": true
+            },
+            {
+              "name": "Enrolment destination opens without submitting",
+              "passed": true
+            }
+          ],
+          "screenshots": [
+            "27-header.png",
+            "27-menu.png",
+            "27-special-example.png",
+            "27-special-decision.png",
+            "27-special-stages.png",
+            "27-footer.png"
+          ],
+          "sessionId": "6989d687890a-2217d4fa591b-59938b680711-179118521645-88480855",
+          "actualBrowser": {
+            "name": "safari",
+            "platform": "iOS"
+          },
+          "document": {
+            "title": "Special Education Support for Children in India | Pinnacle Blooms",
+            "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+            "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+            "width": 393,
+            "height": 659,
+            "dpr": 3,
+            "screen": {
+              "width": 393,
+              "height": 852
+            },
+            "canonical": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+            "h1": "Special Education for children\nHelp your child access learning.\nAnd take part in more of school and life."
+          },
+          "specialGeometry": {
+            "steps": 4,
+            "stages": 7,
+            "width": 393,
+            "cards": [
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 311,
+                "left": 41,
+                "right": 352
+              },
+              {
+                "width": 311,
+                "left": 41,
+                "right": 352
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              },
+              {
+                "width": 357,
+                "left": 18,
+                "right": 375
+              }
+            ]
+          },
+          "sessionClosed": true,
+          "resultRecorded": true,
+          "provider": {
+            "testId": 53382716,
+            "success": true,
+            "deviceName": "iPhone 15",
+            "durationSeconds": 51,
+            "assetsAvailable": false
+          }
+        },
+        {
+          "kind": "hosted-desktop",
+          "device": {
+            "id": "safari",
+            "name": "Safari",
+            "platform": "TAHOE",
+            "version": "26"
+          },
+          "status": "passed",
+          "checks": [
+            {
+              "name": "Requested desktop browser and CSS viewport",
+              "passed": true
+            },
+            {
+              "name": "Desktop navigation controls",
+              "passed": true
+            },
+            {
+              "name": "Canonical and main heading",
+              "passed": true
+            },
+            {
+              "name": "No horizontal page overflow",
+              "passed": true
+            },
+            {
+              "name": "Nine authority destinations with visible subtexts",
+              "passed": true
+            },
+            {
+              "name": "Call destination",
+              "passed": true
+            },
+            {
+              "name": "Navigation menu opens and closes",
+              "passed": true
+            },
+            {
+              "name": "Authority rail reaches Citations",
+              "passed": true
+            },
+            {
+              "name": "Special Education learning decision and stages are readable",
+              "passed": true
+            },
+            {
+              "name": "Special Education FAQ disclosure works",
+              "passed": true
+            },
+            {
+              "name": "Verify footer cards and policy link",
+              "passed": true
+            },
+            {
+              "name": "Optional analytics decline control and cookies",
+              "passed": true
+            },
+            {
+              "name": "Enrolment destination opens without submitting",
+              "passed": true
+            }
+          ],
+          "screenshots": [
+            "safari-header.png",
+            "safari-menu.png",
+            "safari-special-example.png",
+            "safari-special-decision.png",
+            "safari-special-stages.png",
+            "safari-footer.png"
+          ],
+          "sessionId": "783e2ea582d9-594e4b6c7924-9fd410eb9ea0-179118527659-13675692",
+          "actualBrowser": {
+            "name": "Safari",
+            "version": "26.3.1",
+            "platform": "macOS"
+          },
+          "document": {
+            "height": 900,
+            "screen": {
+              "width": 1920,
+              "height": 1080
+            },
+            "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.3.1 Safari/605.1.15",
+            "dpr": 1,
+            "title": "Special Education Support for Children in India | Pinnacle Blooms",
+            "width": 1440,
+            "canonical": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+            "h1": "Special Education for children\nHelp your child access learning.\nAnd take part in more of school and life.",
+            "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181"
+          },
+          "specialGeometry": {
+            "stages": 7,
+            "steps": 4,
+            "width": 1440,
+            "cards": [
+              {
+                "width": 632.5,
+                "right": 705.5,
+                "left": 73
+              },
+              {
+                "width": 632.5,
+                "right": 1353,
+                "left": 720.5
+              },
+              {
+                "width": 632.5,
+                "right": 705.5,
+                "left": 73
+              },
+              {
+                "width": 632.5,
+                "right": 1353,
+                "left": 720.5
+              },
+              {
+                "width": 595,
+                "right": 701,
+                "left": 106
+              },
+              {
+                "width": 595,
+                "right": 1320,
+                "left": 725
+              },
+              {
+                "width": 412,
+                "right": 485,
+                "left": 73
+              },
+              {
+                "width": 412,
+                "right": 919,
+                "left": 507
+              },
+              {
+                "width": 412,
+                "right": 1353,
+                "left": 941
+              },
+              {
+                "width": 412,
+                "right": 485,
+                "left": 73
+              },
+              {
+                "width": 412,
+                "right": 919,
+                "left": 507
+              },
+              {
+                "width": 412,
+                "right": 1353,
+                "left": 941
+              },
+              {
+                "width": 846,
+                "right": 919,
+                "left": 73
+              }
+            ]
+          },
+          "sessionClosed": true,
+          "resultRecorded": true,
+          "provider": {
+            "testId": 53382773,
+            "success": true,
+            "deviceName": null,
+            "durationSeconds": 20,
+            "assetsAvailable": false
+          }
+        }
+      ],
+      "noCallsOrLeadsSubmitted": true
+    },
+    "visualReview": {
+      "inspected": [
+        "1440-learning-example.png",
+        "390-learning-example.png",
+        "768-pinnacle-difference.png",
+        "390-sales-hero.png",
+        "27-special-decision.png",
+        "safari-special-stages.png",
+        "27-header.png"
+      ],
+      "localFolder": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\special-education-20261005\\visual",
+      "liveFolder": "audits/testingbot/2026-10-05T07-26-41-543Z",
+      "readOnlyAcceptance": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\special-education-20261005\\acceptance-review.md",
+      "finding": "Evidence-anchor and service-preference corrections included; no remaining material page presentation blocker observed."
+    },
+    "speed": {
+      "at": "2026-10-05T07:26:42.371Z",
+      "id": "specialEducation",
+      "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+      "kind": "simulated lab measurements, not field Core Web Vitals",
+      "reports": [
+        {
+          "device": "mobile",
+          "lighthouseVersion": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+          "finalUrl": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+          "scores": {
+            "performance": 97,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 2092.783,
+            "lcpMs": 2202.467,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 2092.783
+          },
+          "targets": {
+            "performance": 90,
+            "lcpMs": 2500,
+            "tbtMs": 200,
+            "cls": 0.1
+          },
+          "targetWarnings": [],
+          "warnings": [],
+          "findings": [
+            {
+              "id": "first-contentful-paint",
+              "title": "First Contentful Paint",
+              "displayValue": "2.1 s"
+            },
+            {
+              "id": "largest-contentful-paint",
+              "title": "Largest Contentful Paint",
+              "displayValue": "2.2 s"
+            },
+            {
+              "id": "speed-index",
+              "title": "Speed Index",
+              "displayValue": "2.1 s"
+            },
+            {
+              "id": "interactive",
+              "title": "Time to Interactive",
+              "displayValue": "2.2 s"
+            },
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "displayValue": "Est savings of 12 KiB",
+              "savingsMs": 30
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "displayValue": "Est savings of 4 KiB"
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "displayValue": "Est savings of 8 KiB"
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "displayValue": "Est savings of 11 KiB"
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree"
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests"
+            }
+          ]
+        },
+        {
+          "device": "desktop",
+          "lighthouseVersion": "13.5.0",
+          "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+          "finalUrl": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+          "scores": {
+            "performance": 100,
+            "accessibility": 100,
+            "best-practices": 100,
+            "seo": 100
+          },
+          "metrics": {
+            "fcpMs": 515.8993,
+            "lcpMs": 548.0046499999999,
+            "tbtMs": 0,
+            "cls": 0,
+            "speedIndexMs": 515.8993
+          },
+          "targets": {
+            "performance": 90,
+            "lcpMs": 2500,
+            "tbtMs": 200,
+            "cls": 0.1
+          },
+          "targetWarnings": [],
+          "warnings": [],
+          "findings": [
+            {
+              "id": "unused-css-rules",
+              "title": "Reduce unused CSS",
+              "displayValue": "Est savings of 18 KiB",
+              "savingsMs": 0
+            },
+            {
+              "id": "cache-insight",
+              "title": "Use efficient cache lifetimes",
+              "displayValue": "Est savings of 4 KiB"
+            },
+            {
+              "id": "image-delivery-insight",
+              "title": "Improve image delivery",
+              "displayValue": "Est savings of 7 KiB"
+            },
+            {
+              "id": "legacy-javascript-insight",
+              "title": "Legacy JavaScript",
+              "displayValue": "Est savings of 10 KiB"
+            },
+            {
+              "id": "network-dependency-tree-insight",
+              "title": "Network dependency tree"
+            },
+            {
+              "id": "render-blocking-insight",
+              "title": "Render-blocking requests"
+            }
+          ]
+        }
+      ]
+    },
+    "screamingFrog": {
+      "Address": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+      "Status Code": "200",
+      "Indexability": "Indexable",
+      "Title 1": "Special Education Support for Children in India | Pinnacle Blooms",
+      "Meta Description 1": "Explore child-specific special education for learning access, communication and school participation. Find a Pinnacle centre or call 9100 181 181.",
+      "H1-1": "Special Education for children Help your child access learning. And take part in more of school and life.",
+      "Canonical Link Element 1": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181"
+    },
+    "public": {
+      "report": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\special-education-20261005\\public-verification.json",
+      "requests": [
+        {
+          "name": "normal",
+          "status": 200,
+          "sha256": "f5f6d2dff397d8d54e10c76a324139bcc3b9c797cf6086ac8a01ff218de3c63d",
+          "cache": "public, max-age=0, must-revalidate",
+          "etag": null
+        },
+        {
+          "name": "cookie",
+          "status": 200,
+          "sha256": "f5f6d2dff397d8d54e10c76a324139bcc3b9c797cf6086ac8a01ff218de3c63d",
+          "cache": "private, no-store",
+          "etag": null
+        },
+        {
+          "name": "range",
+          "status": 200,
+          "sha256": "f5f6d2dff397d8d54e10c76a324139bcc3b9c797cf6086ac8a01ff218de3c63d",
+          "cache": "public, max-age=0, must-revalidate",
+          "etag": null
+        },
+        {
+          "name": "crawler",
+          "status": 200,
+          "sha256": "f5f6d2dff397d8d54e10c76a324139bcc3b9c797cf6086ac8a01ff218de3c63d",
+          "cache": "public, max-age=0, must-revalidate",
+          "etag": null
+        }
+      ],
+      "internalDestinations200": 297,
+      "assets": [
+        {
+          "key": "/pinnacle-pages-assets/special-education-creative-20261005.BWfnzbSA_Z1YkJPE.webp",
+          "status": 200,
+          "bytes": 35184,
+          "type": "image/webp",
+          "sha256": "044b8ed30b8f72b01c1e2e188feaf6b2e6c429eabb8a9539fb18a8a1edb1b036"
+        },
+        {
+          "key": "/pinnacle-pages-assets/special-education-creative-20261005.BWfnzbSA_2uQmCw.webp",
+          "status": 200,
+          "bytes": 178620,
+          "type": "image/webp",
+          "sha256": "f476aec5f709fda104e55be7161111dd29f4a407c686cbbd8da9d64f58ae5797"
+        },
+        {
+          "key": "/pinnacle-pages-assets/special-education-creative-20261005.BWfnzbSA_Z1t8X44.webp",
+          "status": 200,
+          "bytes": 121580,
+          "type": "image/webp",
+          "sha256": "1d0655aae535b97db718de1466484a2ad095d0d06155acbfa62e2f37119373be"
+        },
+        {
+          "key": "/pinnacle-pages-assets/special-education-creative-20261005.BWfnzbSA_15f8xd.webp",
+          "status": 200,
+          "bytes": 70746,
+          "type": "image/webp",
+          "sha256": "ff6e27ca556a76b51de57e50ca658388c27726ff07cc81ea2cde2e4a9014526f"
+        },
+        {
+          "key": "/pinnacle-pages-assets/special-education-share-20260929.B9Bhm8He_Z2fsHbP.jpg",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/special-education-life-journey-20260929.aZQiw8BN_1ew75f.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/special-education-life-journey-20260929.aZQiw8BN_Z1yI6Ry.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/special-education-life-journey-20260929.aZQiw8BN_Z18Exf0.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/special-education-life-journey-20260929.aZQiw8BN_Z1q1HlF.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/pinnacle-emblem-official.EFFb0QmR_1CYFQi.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/pinnacle-emblem-official.EFFb0QmR_ZQLHQS.webp",
+          "status": 200,
+          "unchangedBytes": true
+        },
+        {
+          "key": "/pinnacle-pages-assets/bhcl-emblem-official.BOaEeIEj_ZCvf9T.webp",
+          "status": 200,
+          "unchangedBytes": true
+        }
+      ],
+      "social": {
+        "status": 200,
+        "sha256": "9e35a1326813b554654c2a8c7bd0713cc6c6b0f3790a0a380274e68dad8f1e47",
+        "width": 1200,
+        "height": 630,
+        "approvedPosterMatches": true
+      },
+      "protected": [
+        {
+          "path": "/verify/",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/verify/evidence/records/fsc.html",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/pinnacleai",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/fusion-module",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/therapeuticai",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/prognose",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/personal-development-kernel",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/seven-readiness-indexes",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/abilityscore",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/everyday-therapy",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/enroll-autism-speech-aba-therapies-india",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/national-autism-helpline",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/ask",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/shop",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/books/editions/te/ot-101",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/books/resources/first-conversation",
+          "status": 200,
+          "unchanged": true
+        },
+        {
+          "path": "/seva",
+          "status": 200,
+          "unchanged": true
+        }
+      ],
+      "metadata": {
+        "title": "Special Education Support for Children in India | Pinnacle Blooms",
+        "description": "Explore child-specific special education for learning access, communication and school participation. Find a Pinnacle centre or call 9100 181 181.",
+        "canonical": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+        "og": "https://www.pinnacleblooms.org/pinnacle-pages-assets/special-education-share-20260929.B9Bhm8He_Z2fsHbP.jpg",
+        "h1": "Special Education for children Help your child access learning.And take part in more of school and life.",
+        "reviewBranches": 2,
+        "stages": 7,
+        "faqs": 12
+      }
+    },
+    "preservation": {
+      "routes": 194,
+      "bindings": 4,
+      "modules": 29,
+      "protectedResponsesUnchanged": 20,
+      "otherWorkerVersionsUnchanged": true,
+      "sourceBytesMatch": true
+    },
+    "indexnow": {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "84dcca1f-3f2a-4e3a-ad52-4c2990f9fd97",
+      "submitted": 1,
+      "failed": 0,
+      "attempted": 1,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "1 of 1 URL(s) sent were accepted by IndexNow."
+    },
+    "annotation": {
+      "annotation": {
+        "id": "ea317d78-bb4c-4d9c-b875-77c9f55f6332",
+        "scope": "property",
+        "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+        "event_date": "2026-10-05",
+        "label": "Special Education: learning access and participation",
+        "description": "Special Education page released from commit266237648cd11ee66770a5d8924bb7d88deffde6; Cloudflare1db2fa3f-65cb-4a34-b5de-c53d969bee83. Concrete illustrative learning adaptation, complete branded creative, seven linked PinnacleAI stages, aligned FAQ/source/Markdown content and education enrolment routing. Shared shell,194 routes/four bindings and20 protected pages preserved. Change notification is distinct from indexing, ranking or qualified enquiries.",
+        "category": "site_change",
+        "color": null,
+        "created_at": "2026-10-05T07:27:57.847107+00:00"
+      }
+    }
+  },
+  "remaining": [
+    "Indexing, rankings, AI citations and additional qualified enquiries are not established by this release.",
+    "No new real-parent comprehension study, individual professional suitability or branch availability was inferred.",
+    "The remaining portal pages retain their own queue and source holds."
+  ],
+  "testHarnessNote": "Two concurrent TestingBot processes began in the same millisecond and shared an output directory. Both exact emitted result rows and all device-prefixed screenshots were retained. Future report paths include mode and process ID; no production page change or repeat device session was needed."
+}

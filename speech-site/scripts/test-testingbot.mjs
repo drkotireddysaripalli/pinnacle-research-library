@@ -33,7 +33,8 @@ report.runnerSha256=createHash('sha256').update(await fs.readFile(new URL(import
 const delivered=await fetch(target,{signal:AbortSignal.timeout(30000)});
 if(!delivered.ok)throw new Error('Target returned HTTP '+delivered.status);
 report.delivery={url:delivered.url,htmlSha256:createHash('sha256').update(await delivered.text()).digest('hex'),etag:delivered.headers.get('etag'),checkedAt:new Date().toISOString()};
-const out='audits/testingbot/'+report.startedAt.replace(/[:.]/g,'-');
+// Separate simultaneous physical and desktop runs even when they start in the same millisecond.
+const out='audits/testingbot/'+report.startedAt.replace(/[:.]/g,'-')+'-'+report.mode+'-'+process.pid;
 await fs.mkdir(out,{recursive:true});
 const save=()=>fs.writeFile(out+'/report.json',JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({account:report.account,report:out+'/report.json'}));
