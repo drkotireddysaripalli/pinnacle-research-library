@@ -1,6 +1,6 @@
 {
-  "phase": "promoted-awaiting-public-check",
-  "sourceCommit": "24ea0fee97ce16a8acb706b3f5e2a948d9bff374",
+  "phase": "promoted-public-verified",
+  "sourceCommit": "9b67ae9e90f0b0ab7a529e023963630f6f9e0c8b",
   "at": "2026-10-05T13:17:41.464Z",
   "routeCount": 194,
   "rollback": [
@@ -199,5 +199,8 @@
   "bundleSHA256": "fd41622a9f6ccb65f528f13ccaa7c25a0c3d4810ea4e389162abb4568a4a51b3",
   "promotedAt": "2026-10-05T13:32:31.151Z",
   "afterRouteCount": 194,
-  "protectedUnchanged": true
+  "protectedUnchanged": true,
+  "baselineCommit": "24ea0fee97ce16a8acb706b3f5e2a948d9bff374",
+  "publicProof": "deployment/ask-search-links-live-20261005.json",
+  "receiptCorrection": "Preparation recorded its baseline commit; sourceCommit identifies the actual pushed release source."
 }

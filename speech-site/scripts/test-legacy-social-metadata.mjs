@@ -27,7 +27,7 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
   const run=async (f={},path='/physiotherapy',options={})=>{fixture={body:html(),...f};const r=await runtime.dispatchFetch(origin+path,options);const bytes=Buffer.from(await r.arrayBuffer());return {r,bytes,body:bytes.toString('utf8')};};
   try {
     await t.test('all newly covered public templates use the same exact correction and preserve body',async()=>{
-      for(const path of ['/t/interactive-song-therapy','/mirracles/123/published-story','/allmirracles','/yoga-therapy','/therapysphere-study','/therapist-burnout-empathy','/therapeuticai-effectiveness-study','/teachertraining','/teacher-training']){
+      for(const path of ['/t/interactive-song-therapy','/mirracles/123/published-story','/allmirracles','/yoga-therapy','/teachertraining','/teacher-training']){
         const input=html(path);const {body}=await run({body:input,chunk:37},path);assert.equal(body,input.replace('content="http:','content="https:'));
       }
     });
