@@ -1,26 +1,26 @@
-# Current page work — 5 October 2026
+# Current page work —5October2026
 
-## Occupational Therapy delivered
+## Personal Development Kernel delivered
 
-Live: https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate
+Live: https://www.pinnacleblooms.org/personal-development-kernel
 
-Source `049f0dae0a3c3e6f234447a429b1c2ff2d6a3b09`; Cloudflare `91d540cc-7da1-4550-8780-d56a5cf7b3ab`. Exact-source CI, meaningful production/device/visual checks and one changed-URL IndexNow acceptance are complete. All 194 routes, four main bindings and fourteen protected page responses are preserved. Full receipt: `deployment/occupational-release-receipt-20261005.json`; release: `RELEASE-OCCUPATIONAL-THERAPY-20261005.md`.
+Source19190462737681886095edfce26b03455a9bcb02; Cloudflare1a1f0bd8-f2aa-40db-ae5a-32bc68e54fd3. Exact-source CI, production/device/visual checks and one changed-URL IndexNow acceptance complete.194routes/fourbindings and15protectedpage responses preserved. Full receipt: `deployment/pdk-release-receipt-20261005.json`; release: `RELEASE-PDK-20261005.md`.
 
-Seven Readiness Indexes, AbilityScore, Everyday Therapy and this OT pass are delivered. The rest of the portal is not declared complete. Historical releases and work orders remain in their dedicated files and Git history; the old accumulated active statuses in this file are superseded by this current note.
+Seven Readiness Indexes, AbilityScore, Everyday Therapy, Occupational Therapy and PDK are delivered. Remaining portal work is not declared complete. Historical work orders and releases remain in their dedicated files and Git history.
 
-## Next individual: Personal Development Kernel
+## Next individual: Prognose
 
-Canonical: https://www.pinnacleblooms.org/personal-development-kernel
+Canonical: https://www.pinnacleblooms.org/prognose
 
-Existing quality row29 / original baseline70. Follow `PINNACLE-PAGE-CREATION-WORK-ORDER.md`, the accepted page-specific narrative standards and `reviews/QUALITY-PASS-20261001/queue.json`. Main owns code and deployment; use at most one brief read-only acceptance reviewer.
+Quality row30 / original baseline70. Follow `PINNACLE-PAGE-CREATION-WORK-ORDER.md` and `reviews/QUALITY-PASS-20261001/queue.json`. Main owns code/deployment; at most one short read-only acceptance review.
 
-1. Reconcile current source and live release once. Preserve the useful existing narrative, approved header/footer and asset inventory.
-2. Show an explicitly illustrative two-setting record, the specific professional adjustment it informs and the next review. Connect the child's growing independence and participation with a comprehensible parent-facing example.
-3. Generate a complete native branded input/output creative with permitted inputs, longitudinal record and authorised use. Use real approved brand references, strong legibility and responsive placement. No API-key image fallback, invented patient result or pasted text over generated artwork.
-4. Align visible content, FAQs, source/evidence JSON, text and Markdown; retain accurate non-diagnostic scope and contextual citations. Architecture descriptions do not establish actual security implementation, completed clinical validation or guaranteed outcomes.
-5. Provide useful PinnacleAI/therapy/Verify connections, centre choice and call/enrolment routes to 9100 181 181. Avoid duplicate shared navigation or a page-local shell.
-6. One meaningful local build and focused content, image, schema, accessibility and responsive verification. Exact source pushed and CI passed before activation; preserve current complete Cloudflare routes, bindings, other Worker versions and existing assets. Inspect changed phone/tablet/desktop sections and appropriate physical/browser evidence; public read-back before completion.
-7. Notify IndexNow once for the material changed URL; save a GSC release annotation, receipt and quality disposition. Indexing, rankings, citations, visits, call intent and qualified enquiries stay separate. Advance one next eligible individual, not a batch.
+1. Reconcile latest live/source identity once; preserve useful existing narrative and the approved common shell.
+2. Use one explicitly illustrative playground response to explain why a proposed forecast/checkpoint changes, which support a professional selects and what the next observation will decide. Keep the child's self-sufficient, mainstream-included life as direction; no invented patient success or guaranteed prediction.
+3. Generate a complete native branded creative showing permitted inputs, forecast uncertainty, professional selection and review. Approved logo/young child/full-sleeve therapist, strong readability and responsive placement. No external API-key generation or pasted-text substitute.
+4. Align visible copy,FAQs,schema,JSON/text/Markdown and social/discovery metadata. Compact Markdown needs FAQs. Public sources do not establish completed external predictive validation; preserve exact scope and source holds.
+5. Connect relevant PinnacleAI modules, therapies, Verify, centre selection and9100181181/enrolment, with useful parent decisions rather than duplicate shared navigation.
+6. Build and test once at the meaningful boundary: readable phone/tablet/desktop sections, source/image/schema/accessibility tests, exact pushed CI before activation, full Cloudflare routes/bindings/other-Worker preservation and public byte/read-back proof. Reuse stable checks/assets.
+7. One changed-URL notification, GSC release annotation, receipt and quality disposition. Advance only one next eligible page. Indexing/rankings/citations/visits/intent/actual qualified calls remain distinct.
 
 ## Continuing boundaries
 
