@@ -134,6 +134,20 @@ for(const id of choices){
       await evaluate("const rail=document.getElementById('portal-authority-rail');rail.scrollLeft=rail.scrollWidth;return true");
       return evaluate("const rail=document.getElementById('portal-authority-rail'),a=rail.querySelector('a:last-child'),r=a.getBoundingClientRect();return rail.scrollLeft>0 && r.left<innerWidth && r.right<=innerWidth+1");
     });
+    if(target.pathname==='/enroll-autism-speech-aba-therapies-india'){
+      await check('Four example steps, three decisions and seven linked stages',()=>evaluate("return document.querySelectorAll('.enrol-start-steps>li').length===4 && document.querySelectorAll('.enrol-example-grid article').length===3 && document.querySelectorAll('.enrol-stage-link').length===7"));
+      await evaluate("document.querySelector('.enrol-preferences').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('enrolment-choices');
+      await check('Readable whole-word service labels',()=>evaluate("return [...document.querySelectorAll('.enrol-service-choice span')].every(n=>{const t=n.firstChild;if(!t||t.nodeType!==3)return false;return [...t.textContent.matchAll(/\\S+/g)].every(m=>{const r=document.createRange();r.setStart(t,m.index);r.setEnd(t,m.index+m[0].length);return new Set([...r.getClientRects()].map(x=>Math.round(x.top))).size<=1;});})"));
+      await evaluate("document.querySelector('.enrol-decision').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('enrolment-example');
+      await click('#enrol-submit');await check('Required details fail locally and preserve the form',()=>evaluate("return !document.querySelector('#enrol-error-summary').hidden && document.querySelector('#parent-name').getAttribute('aria-invalid')==='true' && !document.querySelector('#enrol-submit').disabled"));
+      await wd('/url','POST',{url:target.href+'?service=autism'});
+      await check('Autism preference survives incoming link',()=>evaluate("return document.querySelector('input[name=service]:checked')?.value==='autism' && !document.querySelector('#enrol-submit').disabled"));
+      const centre=await evaluate("return document.querySelector('#preferred-centre option[value]:not([value=\"\"])').value");
+      await wd('/url','POST',{url:target.href+'?service=occupational&centre='+encodeURIComponent(centre)});
+      await check('Occupational preference and centre details survive incoming link',()=>evaluate("return document.querySelector('input[name=service]:checked')?.value==='occupational' && document.querySelector('#preferred-centre').value===arguments[0] && !document.querySelector('#enrol-centre-card').hidden",centre));
+      await evaluate("document.querySelector('#enrol-centre-card').scrollIntoView({block:'start',behavior:'instant'});return true");await screenshot('enrolment-centre');
+      await wd('/url','POST',{url:target.href});
+    }
     if(target.pathname==='/pinnacleai'){
       await check('PinnacleAI product story and usable module cards',async()=>{
         row.productStory=await evaluate("const example=document.getElementById('worked-example'),system=document.getElementById('what-it-does'),cards=[...document.querySelectorAll('.overview-architecture>li')];return {exampleBeforeSystem:!!(example.compareDocumentPosition(system)&Node.DOCUMENT_POSITION_FOLLOWING),cards:cards.map(e=>{const r=e.getBoundingClientRect();return {width:r.width,left:r.left,right:r.right}}),viewport:innerWidth,disclosures:document.querySelectorAll('.overview-module-detail').length}");
