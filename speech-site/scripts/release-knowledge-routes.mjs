@@ -8,7 +8,7 @@ const token=(await fs.readFile(process.env.APPDATA+'/xdg.config/.wrangler/config
 const routesAPI='/zones/8b13f18e0589996b5d6512552372b434/workers/routes',scripts='/accounts/862998def1cd610fdb86b8e5c1d6ed4d/workers/scripts/';
 async function api(p,method='GET',body){const r=await fetch('https://api.cloudflare.com/client/v4'+p,{method,headers:{authorization:'Bearer '+token,'content-type':'application/json'},body:body?JSON.stringify(body):undefined,signal:AbortSignal.timeout(30000)});const j=await r.json();assert(r.ok&&j.success,JSON.stringify(j.errors));return j.result;}
 const changes=['www.pinnacleblooms.org/faq*','www.pinnacleblooms.org/allmirracles*'];
-const additions=['pinnacleblooms.org/faq*','www.pinnacleblooms.org/sunshine*','pinnacleblooms.org/sunshine*','pinnacleblooms.org/allmirracles*'];
+const additions=['pinnacleblooms.org/faq*','www.pinnacleblooms.org/sunshine*','pinnacleblooms.org/sunshine*','pinnacleblooms.org/allmirracles*','www.pinnacleblooms.org/ask/auth/*','www.pinnacleblooms.org/ask/_assets/*','www.pinnacleblooms.org/ask/_image*'];
 const normal=rows=>rows.map(({id,pattern,script})=>({id,pattern,script})).sort((a,b)=>a.pattern.localeCompare(b.pattern));
 const latest=x=>x.deployments.sort((a,b)=>b.created_on.localeCompare(a.created_on))[0].versions;
 const git='C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe';
@@ -28,4 +28,4 @@ if(mode==='promote-routes'){
  for(const pattern of changes){if(receipt.changed.some(x=>x.pattern===pattern))continue;const old=before.routes.find(x=>x.pattern===pattern);assert(old?.script==='pinnacle-legacy-social-metadata');await api(routesAPI+'/'+old.id,'PUT',{pattern,script:'pinnacle-ask'});receipt.changed.push({...old,previousScript:old.script});await save();}
  for(const pattern of additions){if(receipt.added.some(x=>x.pattern===pattern))continue;check(normal(await api(routesAPI)));assert(!before.routes.some(x=>x.pattern===pattern));const created=await api(routesAPI,'POST',{pattern,script:'pinnacle-ask',request_limit_fail_open:true});receipt.added.push({id:created.id,pattern:created.pattern,script:created.script});await save();}
 }
-const after=normal(await api(routesAPI));check(after);assert.equal(receipt.changed.length,2);assert.equal(receipt.added.length,4);receipt.verifiedAt=new Date().toISOString();receipt.afterRouteCount=after.length;receipt.protectedVersionsAndBindingsPreserved=true;await save();console.log(JSON.stringify(receipt));
+const after=normal(await api(routesAPI));check(after);assert.equal(receipt.changed.length,2);assert.equal(receipt.added.length,additions.length);receipt.verifiedAt=new Date().toISOString();receipt.afterRouteCount=after.length;receipt.protectedVersionsAndBindingsPreserved=true;await save();console.log(JSON.stringify(receipt));

@@ -21,7 +21,7 @@ Production build succeeds. Preview raw HTML: FAQ 160,685 bytes (legacy 3,362,779
 
 ## Release controls
 
-Check in and push the exact candidate, pass CI, upload an inactive Ask version, preserve 21 Ask bindings and the existing Portal/MCP versions. Change only the two existing FAQ/Mirracles route owners and add the four apex/www knowledge-family routes. Preserve all other original routes. Record rollback version and exact public read-back before calling this deployed. No narrowed `--route` deployment.
+Check in and push the exact candidate, pass CI, upload an inactive Ask version, preserve 21 Ask bindings and the existing Portal/MCP versions. Change only the two existing FAQ/Mirracles route owners and add four apex/www knowledge-family routes plus three specific www authentication/asset routes. The latter prevent the legacy www-to-apex redirect from breaking same-origin Google session requests and page assets. Existing public Ask canonical routing, clients, scopes and cookies stay unchanged. Preserve all other original routes (200 existing, 207 after additions). Record rollback version and exact public read-back before calling this deployed. No narrowed `--route` deployment.
 
 ## Health-score limit and next work
 
