@@ -8,19 +8,27 @@ Source 8a22ecf998513d7461d848d6223c83f1a81c5f17; released from identical speech-
 
 Seven Readiness Indexes, AbilityScore, Everyday Therapy, Occupational Therapy, PDK and Prognose are delivered. Remaining portal work is not declared complete. Historical work orders and releases remain in their dedicated files and Git history.
 
-## Next individual: TherapeuticAI
+## TherapeuticAI delivered
 
-Canonical: https://www.pinnacleblooms.org/therapeuticai
+Live: https://www.pinnacleblooms.org/therapeuticai
 
-Quality row32 / original baseline70. Follow `PINNACLE-PAGE-CREATION-WORK-ORDER.md` and `reviews/QUALITY-PASS-20261001/queue.json`. Main owns code/deployment; at most one short read-only acceptance review.
+Source 3a5f78bcc56669279bed499aa04fc64318fda6c4; Cloudflare dbdec8c9-5ac4-4f1c-9487-ccb0dce885e3. Pushed CI, local and real-device checks, public read-back, one IndexNow notification and GSC annotation complete. Full proof: RELEASE-THERAPEUTICAI-20261005.md and deployment/therapeuticai-release-receipt-20261005.json. Common shell and194 routes/four bindings preserved.
 
-1. Reconcile latest live/source identity once; preserve useful existing narrative and the approved common shell.
-2. Use one explicitly illustrative play-box input, one professional-selected communication or task support, the child's observable response and a concrete keep/change decision. Keep the child's self-sufficient, mainstream-included life as direction; no invented patient success, presumed motivation or guaranteed technique benefit.
-3. Generate a complete native branded creative showing the input, suggestion, accountable human choice and response/review. Approved logo/young child/full-sleeve therapist, strong readability and responsive placement. No external API-key generation or pasted-text substitute.
-4. Align visible copy, FAQs, schema, JSON/text/Markdown and social/discovery metadata. Keep source scope exact: software/module quality records do not establish technique effectiveness, individual professional suitability or actual field outcomes. Preserve source holds.
-5. Connect relevant PinnacleAI modules, therapies, Verify, centre selection and9100181181/enrolment, with useful parent decisions rather than duplicate shared navigation.
-6. Build and test once at the meaningful boundary: readable phone/tablet/desktop sections, source/image/schema/accessibility tests, exact pushed CI before activation, full Cloudflare routes/bindings/other-Worker preservation and public byte/read-back proof. Reuse stable checks/assets.
-7. One changed-URL notification, GSC release annotation, receipt and quality disposition. Advance only one next eligible page. Indexing/rankings/citations/visits/intent/actual qualified calls remain distinct.
+## Current bounded integration: two Kindle alternatives
+
+Add verified Amazon Kindle links for English OT (B0HLYKFDQ9) and Special Education (B0HLYFTT36) on their exact existing pages and two /books cards. Reuse retailer styling; preserve PDFs, Google Play, prices, identifiers, all99 variant joins and checkout. Commerce owns catalogue/publishing; this chat owns only page links and release. Public Amazon availability was checked5October. No new product/price/feed or purchase test.
+
+## Next individual: ABA Therapy
+
+Canonical: https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate
+
+Quality row34 / original baseline71. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code and deployment, one bounded read-only acceptance review.
+
+1. Reconcile current live/source once; preserve shared header/footer and working therapy integrations.
+2. Make the child’s communication, participation, comfort and growing independence the meaningful purpose. Explain what professionals and family do, with one clearly illustrative observation and concrete support/review choice. No invented patient result or coercive framing.
+3. Preserve useful approved creative; generate a complete branded creative only for a concrete missing narrative need, through the native image tool. Readable young-child/family/professional scenes and Pinnacle identity; no API fallback or pasted-label substitute.
+4. Align visible narrative, source scope, FAQs, schema, images, machine exports and contextual therapies/PinnacleAI/Verify connections. Keep call9100181181, enrolment and centre choice prominent.
+5. Build, focused visual/browser/accessibility checks, pushed tested source, full-route/binding/other-Worker preservation, live read-back and one changed-URL notification. Distinguish deployment from actual discovery and qualified enquiries. Record and advance the next unheld page.
 
 ## Continuing boundaries
 
