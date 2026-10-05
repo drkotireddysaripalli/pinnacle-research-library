@@ -48,8 +48,12 @@
   pages['/books/resources/first-conversation'] = {title:'Free First Conversation Planning Sheet',group:'family_resource',service:'help'};
   const pagePath = location.pathname;
   const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !/^\/ask\/(?:te\/)?search$/.test(pagePath) && document.body?.dataset.pageVariant === 'ask';
-  const canonical = isAsk ? 'https://pinnacleblooms.org/ask' : origin + (pages[pagePath]?.measurementPath || pagePath);
-  const pageConfig = pages[pagePath] || (isAsk ? {title:'Ask Pinnacle',group:'ask',service:'help'} : null) || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
+  // Knowledge families use fixed buckets: never send questions, story IDs or searches.
+  const knowledgePath = location.origin === origin && document.body?.dataset.pageVariant === 'knowledge'
+    ? pagePath.match(/^\/(faq|sunshine|allmirracles)(?:\/|$)/)?.[1] : null;
+  const knowledgeSearch = !!knowledgePath && new URL(location.href).searchParams.has('q');
+  const canonical = isAsk ? 'https://pinnacleblooms.org/ask' : origin + (knowledgePath ? '/'+knowledgePath : pages[pagePath]?.measurementPath || pagePath);
+  const pageConfig = pages[pagePath] || (knowledgePath ? {title:'Pinnacle Knowledge Library',group:'knowledge',service:'help'} : null) || (isAsk ? {title:'Ask Pinnacle',group:'ask',service:'help'} : null) || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
   const pageTitle = pageConfig?.title || document.title;
   const pageGroup = pageConfig?.group || 'managed_page';
   const isBookshop = pageGroup === 'bookshop';
@@ -72,11 +76,12 @@
     const copy = panel.querySelector?.('p');
     if (copy) copy.textContent = 'With your permission, Google Analytics measures the book journey, including the referring search or social platform, book views, sample clicks, book-bag changes, checkout starts and contact-link clicks. It can connect that journey to our Shopify checkout. A checkout start is not a completed purchase. We exclude customer details, search terms and checkout links from our event data. Advertising personalisation is off.';
   }
-  const production = isAsk || (location.origin === origin && routes.has(location.pathname) && !!pageConfig);
+  const production = isAsk || !!knowledgePath || (location.origin === origin && routes.has(location.pathname) && !!pageConfig);
   if (isAsk) routes.add('/ask');
+  if (knowledgePath) routes.add('/'+knowledgePath);
   const blocked = navigator.globalPrivacyControl === true;
-  const callPlacements = new Set(['ask-call','ask-answer-call','header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call','aba-first-call','aba-final-call','autism-first-call','family-journey-call','example-call','pinnacleai-call','pinnacleai-close-call']);
-  const enquiryPlacements = new Set(['header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','final-assessment','mobile-assessment','centre-enquiry','ot-final-enrol','aba-final-enrol','autism-first-enquiry']);
+  const callPlacements = new Set(['knowledge-call','ask-call','ask-answer-call','header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call','aba-first-call','aba-final-call','autism-first-call','family-journey-call','example-call','pinnacleai-call','pinnacleai-close-call']);
+  const enquiryPlacements = new Set(['knowledge-enrol','header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','final-assessment','mobile-assessment','centre-enquiry','ot-final-enrol','aba-final-enrol','autism-first-enquiry']);
   const occupationalNavigation = new Set(['ot-hero-centres','ot-final-centres']);
   const abaNavigation = new Set(['aba-first-centres','aba-final-centres']);
   const directoryPlacements = new Set(['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation']);
@@ -87,7 +92,7 @@
   if (isBookshop) window.pinnacleBookAnalyticsAllowed = () => production && enabled && !navigator.globalPrivacyControl;
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {
-    if (!production || !enabled || blocked) return;
+    if (!production || !enabled || blocked || knowledgeSearch) return;
     try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:canonical, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
   };
   const commerceNames = new Set(['view_item','view_cart','add_to_cart','remove_from_cart','begin_checkout']);
@@ -118,7 +123,7 @@
     }
   };
   const start = () => {
-    if (!production || blocked) return;
+    if (!production || blocked || knowledgeSearch) return;
     enabled = true;
     window['ga-disable-' + id] = false;
     window.dataLayer = window.dataLayer || [];
@@ -129,7 +134,7 @@
     window.gtag('js',new Date());
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
-      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
+      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
       page_location:canonical,page_title:pageTitle,page_referrer:safeReferrer,ignore_referrer:!safeReferrer,
       campaign_id:'',campaign_source:'',campaign_medium:'',campaign_name:'',campaign_term:'',campaign_content:''
     });
@@ -144,14 +149,14 @@
     if (!['accepted','declined'].includes(value)) return;
     if (!production) { tell('Preview: analytics is disabled. No analytics data is sent.'); return; }
     if (persist) { try { localStorage.setItem(key,JSON.stringify({value,at:Date.now()})); } catch {} }
-    if (value==='accepted' && !blocked) {
+    if (value==='accepted' && !blocked && !knowledgeSearch) {
       try { start(); tell('Optional analytics is on. Turn it off here at any time.'); }
       catch { enabled=false; tell('Analytics is unavailable. Your enquiry and call links still work.'); }
     } else {
       enabled=false;window['ga-disable-'+id]=true;
       if (loaded) { try { window.gtag('consent','update',{analytics_storage:'denied'}); } catch {} }
       clearCookies();
-      tell(blocked ? 'Analytics is off because Global Privacy Control is enabled.' : 'Optional analytics is off. Your enquiry and call links still work.');
+      tell(knowledgeSearch ? 'Your choice is saved. Analytics is disabled on search result pages.' : blocked ? 'Analytics is off because Global Privacy Control is enabled.' : 'Optional analytics is off. Your enquiry and call links still work.');
     }
   };
   panel.hidden=false;

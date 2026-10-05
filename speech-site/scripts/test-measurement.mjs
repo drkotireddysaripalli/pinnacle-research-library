@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 const source = fs.readFileSync('public/pinnacle-pages-scripts/speech-measurement.js','utf8');
 const key='pinnacle-speech-analytics-v1';
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service',commerceCatalogue={},referrer=''}={}){
+function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
@@ -13,7 +13,7 @@ function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-ther
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
- vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+'?utm_term=private-child-detail&gclid=secret'},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
+ vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
  return {win,scripts,cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 test('book identity spans sibling routes and withdrawal clears its root cookies only',()=>{
@@ -75,6 +75,23 @@ test('Ask consented calls stay coarse and exclude the question slug and search q
  const data=JSON.stringify(h.events());assert(!data.includes('private-child'));assert(!data.includes('gclid'));assert(h.events().every(e=>e[2].page_location==='https://pinnacleblooms.org/ask'));
  for(const path of ['/ask/search','/ask/te/search','/unrelated']){const b=harness({origin:'https://pinnacleblooms.org',path,variant:'ask'});b.choose('accepted');assert.equal(b.events().length,0);}
  const blocked=harness({origin:'https://pinnacleblooms.org',path:'/ask',variant:'ask',gpc:true});blocked.choose('accepted');assert.equal(blocked.events().length,0);
+});
+test('knowledge consent works with only family buckets and no sensitive content',()=>{
+ for(const path of ['/faq/english/speech-therapy/private-question','/sunshine/techniques','/allmirracles']){
+  const h=harness({path,variant:'knowledge'});
+  h.choose('declined');assert.equal(h.writes.length,1);assert.match(h.status.textContent,/analytics is off/i);assert.equal(h.events().length,0);
+  h.choose('accepted');h.click('knowledge-call','tel:+919100181181');h.click('knowledge-enrol','/enroll-autism-speech-aba-therapies-india');
+  assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click','enquiry_link_click']);
+  assert(h.events().every(e=>e[2].page_location==='https://www.pinnacleblooms.org/'+path.split('/')[1]));
+  const serialized=JSON.stringify(h.win.dataLayer);for(const value of ['private-question','private-child','gclid','techniques'])assert(!serialized.includes(value));
+  h.choose('declined');h.click('knowledge-call','tel:+919100181181');assert.equal(h.events().length,3);
+ }
+ for(const opts of [{gpc:true},{search:'?q=private-concern'}]){
+  const h=harness({path:'/faq',variant:'knowledge',...opts});h.choose('accepted');assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);assert(h.writes.length);
+ }
+ for(const opts of [{origin:'http://127.0.0.1:4330'},{path:'/faq-other'},{variant:'service'}]){
+  const h=harness({path:'/faq',variant:'knowledge',...opts});h.choose('accepted');assert.equal(h.events().length,0);assert.equal(h.writes.length,0);
+ }
 });
 test('no analytics before consent; valid consent sends only fixed CTA fields',()=>{
  const h=harness();h.click('hero-call','tel:+919100181181');assert.equal(h.scripts.length,0);assert.equal(h.events().length,0);
