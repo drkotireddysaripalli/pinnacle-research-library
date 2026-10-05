@@ -14,9 +14,9 @@ Live: https://www.pinnacleblooms.org/therapeuticai
 
 Source 3a5f78bcc56669279bed499aa04fc64318fda6c4; Cloudflare dbdec8c9-5ac4-4f1c-9487-ccb0dce885e3. Pushed CI, local and real-device checks, public read-back, one IndexNow notification and GSC annotation complete. Full proof: RELEASE-THERAPEUTICAI-20261005.md and deployment/therapeuticai-release-receipt-20261005.json. Common shell and194 routes/four bindings preserved.
 
-## Current bounded integration: two Kindle alternatives
+## Kindle alternatives delivered
 
-Add verified Amazon Kindle links for English OT (B0HLYKFDQ9) and Special Education (B0HLYFTT36) on their exact existing pages and two /books cards. Reuse retailer styling; preserve PDFs, Google Play, prices, identifiers, all99 variant joins and checkout. Commerce owns catalogue/publishing; this chat owns only page links and release. Public Amazon availability was checked5October. No new product/price/feed or purchase test.
+The two English OT/Special Education pages and their /books cards now include the verified Kindle alternative. Source f4eb532d72a4fa9af498a2db292228dec2102ffb; Cloudflare5f75b349-827f-4fad-8a56-472c03a2da10. Three changed pages/four links verified;18 protected responses and194 routes/four bindings unchanged. Catalogue,99variants, PDF checkout and Google Play preserved. Proof: RELEASE-KINDLE-LINKS-20261005.md.
 
 ## Next individual: ABA Therapy
 
