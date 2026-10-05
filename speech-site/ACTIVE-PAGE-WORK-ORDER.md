@@ -24,17 +24,24 @@ Live: https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improv
 
 Source 07e189f92f844fb009eb84043be8e68b5f534c93; Cloudflare 4157f024-aedd-496c-a842-8679501f285e. Concrete illustrative transition, adult support, two review choices, seven linked stages and first-visit expectations. Existing approved creatives retained. All62 centre listings remain searchable with ABA preference carried into enrolment.395 unit checks, five widths, W3C0/0, real iPhone and hosted Safari, public read-back and one IndexNow acceptance complete.194routes/four bindings and18 protected responses preserved. Proof: RELEASE-ABA-20261005.md and deployment/aba-release-receipt-20261005.json.
 
-## Next individual: Fusion Module
+## Fusion Module delivered
 
-Canonical: https://www.pinnacleblooms.org/fusion-module
+Live: https://www.pinnacleblooms.org/fusion-module
 
-Quality row35 / original baseline71. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code and deployment; at most one bounded read-only acceptance review.
+Source50cc8db86642c559fe818b1f1e9cbf8e12084a51; Cloudflare41add73b-799d-41e4-9110-27c8835a8d1c. Three-setting observation, named professional adjustment, next checkpoint, four-step HTML diagram and seven linked stages delivered. Nine matchedFAQs, source/Markdown/social content, 400unit checks, five widths, W3C0/0, physicaliPhone/hostedSafari and live read-back complete.194routes/fourbindings/19protected responses preserved. One IndexNow notification accepted. Receipt: deployment/fusion-release-receipt-20261005.json; release: RELEASE-FUSION-20261005.md.
 
-1. Reconcile current live/source once. Preserve accepted common header/footer, full route/binding union, Ask, Verify, auth, commerce and other pages.
-2. Make Fusion's role concrete: compare one illustrative child goal across home, therapy and school where appropriate/consented. Explain the observed cue, setting and adult support; choose a specific professional adjustment and state the next observation still needed.
-3. Build a clear branded input → comparison → professional decision → next-review explanation. Keep essential meaning in accessible HTML; retain useful existing creative and generate a complete native branded creative only where it has a distinct narrative job.
-4. Connect family, child, professional, PinnacleAI modules and suitable therapy pages to the shared self-sufficient/mainstream-included-life direction. Keep licensed scope, actual research status and programme possibility distinct from proven individual benefit.
-5. Align sources, FAQs, metadata, social card, reading aids and the call9100181181/enrol/centre path. Finish focused visual/browser checks, pushed tested source, exact live read-back and one material-change indexing notification. Record the practical score and precise unobserved outcomes, then advance the next unheld individual.
+## Next individual: Special Education
+
+Canonical: https://www.pinnacleblooms.org/best-special-education-center-call-9100181181
+
+Quality row36 / original baseline71. Follow PINNACLE-PAGE-CREATION-WORK-ORDER.md. Main owns code and release; at most one bounded read-only review.
+
+1. Reconcile current live/source once. Preserve the common header/footer, route/binding union, Ask, Verify, authentication, commerce and other pages.
+2. Carry one stopped learning activity through a specific observation, named access barrier, selected material or instruction adaptation and next observable checkpoint. Distinguish an illustrative explanation from an actual child outcome; do not invent success after the adjustment.
+3. Build a complete, branded learning-to-participation creative using native session image generation when a new creative is needed. It must explain the page's specific narrative, with approved emblem, colours, readable English text and professional/child context. Preserve essential meaning in accessible HTML; no photo-plus-pasted-text substitute.
+4. Connect learning to everyday independence and mainstream participation, family/teacher involvement, PinnacleAI and the other therapies. Use the source-supported professional and software scope. Keep unverified branch availability and individual credentials separate; this does not block useful page completion.
+5. Align metadata, visible/structured FAQs, social image, citation/download/reading exports and useful internal links. Keep call9100181181, enrolment and centre selection clear.
+6. Complete focused responsive/visual/browser checks, pushed exact-source CI, full-route/binding-safe release and public proof; one changed-URL notification. Save receipt, practical review and actual remaining evidence before advancing one next unheld individual.
 
 ## Continuing boundaries
 

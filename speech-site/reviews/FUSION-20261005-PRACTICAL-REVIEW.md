@@ -17,3 +17,7 @@ The candidate's five widths and W3C check passed. Final changed sections are rec
 ## Current source decisions
 
 The existing approved Fusion family/therapy/school image and social creative remain. The explanatory diagram is semantic HTML, preserving text for reading and search. Each of the three fictional observations distinguishes setting, adult support, response and interpretation; the actual response to the proposed revised support remains explicitly unobserved. BIS and MD-5 records support the named software function and intended use, not guaranteed child outcomes. No common header/footer or application route is redesigned.
+
+## Production closure
+
+Source50cc8db was pushed, passed CI and activated as41add73b on5October. Both remote sessions passed:11 physicaliPhone checks and13 hostedSafari checks. Their header, example, architecture and footer screenshots were inspected by the implementation owner. Public current HTML/assets/social/exports and27 destinations passed;19 protected pages and194routes/fourbindings preserved. The final consolidated local and production checks are in RELEASE-FUSION-20261005.md. IndexNow accepted the changed URL; commercial and indexing outcomes remain unobserved. The preflight numeric score has not been retroactively inflated.

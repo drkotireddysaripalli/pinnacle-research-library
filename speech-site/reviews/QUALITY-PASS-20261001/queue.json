@@ -9,7 +9,7 @@
     "helpline": 1,
     "excluded": "Aliases, previews, unbuilt inventory, and source-prepared staff routes"
   },
-  "current": "fusion-module",
+  "current": "special-education",
   "scoreMeaning": "Three independent read-only reviewer facets, resolved by implementation owner. Editorial judgments, not human user research, clinical/legal approval or search-engine scores.",
   "ordering": "Ascending original baseline among eligible individual pages; owner prioritised the policy package and deferred centres/staff until afterwards",
   "rows": [
@@ -633,14 +633,16 @@
       "label": "Fusion Module",
       "url": "https://www.pinnacleblooms.org/fusion-module",
       "baselineScore": 71,
-      "state": "review-pending",
+      "state": "completed",
       "baselineGap": "It lists possible revisions without choosing one from a particular observed response. The editorial hero and setting blocks do not make a complete branded architecture showing the feedback decision.",
       "task": "Show one three-setting observation comparison, explain why the professional selects a specific cue or setting change, and draw that input/comparison/decision/next-review chain as a complete branded inline diagram.",
       "sourceCondition": "Architecture/possible rater roles do not prove actual response time, school input or correction benefit for every child.",
       "currentScore": null,
-      "pageOwnedDisposition": null,
-      "release": null,
-      "reviewedOn": null
+      "pageOwnedDisposition": "Fusion Module released with a concrete therapy/home/school observation comparison, selected professional adjustment, next checkpoint and four-step accessible diagram. Nine matched FAQs, source/Markdown/social content and contextual PinnacleAI/therapy links align. Pushed CI, physical iPhone/Safari and public checks passed; 194 routes/four bindings and19 protected pages preserved. One changed-URL IndexNow notification accepted.",
+      "release": "RELEASE-FUSION-20261005.md",
+      "reviewedOn": "2026-10-05T06:48:26.959771+00:00",
+      "preflightScore": 63,
+      "scoreScope": "Preflight editorial assessment; not comparable to the earlier baseline because its evidence rubric withheld production, local-service and commercial outcomes. No post-release numeric score invented."
     },
     {
       "order": 36,
