@@ -74,6 +74,27 @@ test('captured physiotherapy collection becomes valid JSON with canonical identi
   for(const changed of [input.replace('Best Physio Therapy','Changed source text'),input.replaceAll('/physiotherapy','/other'),input.replaceAll('http://www.pinnacleblooms.org/physiotherapy','http://other.example/physiotherapy'),input.replace('//end bracket for mainEntityOfPage','//different comment')])assert.equal(await repairLegacyGraph(changed),changed);
 });
 
+test('two captured physiotherapy WebPage identities are canonical only in the guarded page scope',async()=>{
+  const canonical='https://www.pinnacleblooms.org/physiotherapy',origin=canonical.replace('https:','http:');
+  for(const index of [5,7]){
+    const raw=await fs.readFile(`tests/fixtures/legacy-physiotherapy-webpage-${index}.txt`,'utf8');
+    for(const query of ['', '?utm_source=release&utm_medium=email&gclid=fixture']){
+      for(const encoded of [query,query.replaceAll('&','&amp;'),query.replaceAll('&','&amp;amp;')]){
+        const input=raw.replaceAll(origin,origin+encoded),out=await repairLegacyGraph(input,canonical+query);
+        assert.equal(out,raw.replaceAll(origin,canonical));
+        assert.equal(await repairLegacyGraph(out,canonical+query),out);
+      }
+    }
+    for(const scope of [undefined,'https://www.pinnacleblooms.org/other','http://www.pinnacleblooms.org/physiotherapy','https://other.example/physiotherapy'])assert.equal(await repairLegacyGraph(raw,scope),raw);
+    const mismatch=raw.replaceAll(origin,origin+'?utm_source=other');assert.equal(await repairLegacyGraph(mismatch,canonical+'?utm_source=release'),mismatch);
+    const malformed=raw.replace(origin,'\\q');assert.equal(await repairLegacyGraph(malformed,canonical),malformed);
+    for(const query of ['?service=speech','?lang=te','?unknown=fixture']){
+      const input=raw.replaceAll(origin,origin+query);assert.equal(await repairLegacyGraph(input,canonical+query),input);
+    }
+    for(const changed of [raw.replace('Best Physio Therapy','Changed Physio Therapy').replace('Physio-Therapy','Changed Therapy'),raw.replaceAll(origin,'http://other.example/physiotherapy'),raw.replaceAll(origin,origin+'#other')])assert.equal(await repairLegacyGraph(changed,canonical),changed);
+  }
+});
+
 test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
   let fixture, chunkSize=7, sourceHeaders={};
   const bundled=await build({stdin:{contents:`import {handle} from './deployment/legacy-social-metadata/entry.mjs';export default {fetch(r,env){return handle(r,q=>env.ORIGIN.fetch(q));}}`,resolveDir:process.cwd()},bundle:true,format:'esm',platform:'browser',write:false});
@@ -105,6 +126,27 @@ test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
       const response=await runtime.dispatchFetch('https://www.pinnacleblooms.org/physiotherapy'+query),out=await response.text();
       assert(out.includes(visible));assert.equal(JSON.parse(out.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]).url,'https://www.pinnacleblooms.org/physiotherapy');
       assert(out.includes('href="https://www.pinnacleblooms.org/physiotherapy"'));assert(response.headers.has('x-pinnacle-legacy-schema'));
+    });
+    await t.test('both captured WebPage scripts retain all other bytes and source query while correcting identities',async()=>{
+      const canonical='https://www.pinnacleblooms.org/physiotherapy',origin=canonical.replace('https:','http:');
+      const query='?utm_source=release&utm_medium=email&gclid=fixture';
+      const scripts=await Promise.all([5,7].map(index=>fs.readFile(`tests/fixtures/legacy-physiotherapy-webpage-${index}.txt`,'utf8')));
+      const visible='<h1>Current clinical copy</h1><a href="tel:9100181181">Call</a><a href="/enroll?service=speech&centre=suchitra">Enrol</a><footer>Approved footer</footer>';
+      for(const campaign of ['',query]){
+        fixture=prefix.replaceAll('/physiotherapy"','/physiotherapy'+campaign.replaceAll('&','&amp;')+'"')+visible+scripts.map(raw=>'<script type="application/ld+json">'+raw.replaceAll(origin,origin+campaign.replaceAll('&','&amp;'))+'</script>').join('')+'</body></html>';
+        const out=await(await runtime.dispatchFetch(canonical+campaign)).text();
+        const expected=prefix.replace('content="http:','content="https:')+visible+scripts.map(raw=>'<script type="application/ld+json">'+raw.replaceAll(origin,canonical)+'</script>').join('')+'</body></html>';
+        assert.equal(out,expected);
+      }
+    });
+    await t.test('malformed URL tokens and clean-head functional queries preserve schema without breaking the stream',async()=>{
+      const canonical='https://www.pinnacleblooms.org/physiotherapy',origin=canonical.replace('https:','http:');
+      const raw=await fs.readFile('tests/fixtures/legacy-physiotherapy-webpage-5.txt','utf8');
+      const head=prefix.replace('content="http:','content="https:');
+      for(const [query,payload]of [['',raw.replace(origin,'\\q')],['?service=speech',raw.replaceAll(origin,origin+'?service=speech')],['?unknown=fixture',raw.replaceAll(origin,origin+'?unknown=fixture')]]){
+        fixture=head+'<h1>Preserved family guidance</h1><script type="application/ld+json">'+payload+'</script></body></html>';
+        assert.equal(await(await runtime.dispatchFetch(canonical+query)).text(),fixture);
+      }
     });
     await t.test('malformed and over-limit JSON-LD preserved byte for byte',async()=>{
       for(const text of ['{bad json}', ' '.repeat(SCHEMA_LIMIT)+raw]){

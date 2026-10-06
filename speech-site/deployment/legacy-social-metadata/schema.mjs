@@ -70,6 +70,7 @@ export function repairSchemaText(text) {
 }
 
 class LegacySchemaScript {
+  constructor(requestUrl) { this.requestUrl=requestUrl; }
   element(element) {
     this.pass = (element.getAttribute('type') || '').trim().toLowerCase() !== 'application/ld+json';
     this.buffer = '';
@@ -92,7 +93,7 @@ class LegacySchemaScript {
       this.buffer = ''; this.streaming = true;
     } else if (!chunk.lastInTextNode) chunk.remove();
     else {
-      const cleaned=await repairLegacyGraph(this.buffer);
+      const cleaned=await repairLegacyGraph(this.buffer,this.requestUrl);
       chunk.replace(cleaned===null?'':this.open+cleaned+'</script>', {html: true});
       this.buffer = '';
     }
@@ -119,7 +120,31 @@ async function repairPhysiotherapyCollection(text, normalized) {
   return JSON.stringify(data);
 }
 
-export async function repairLegacyGraph(text) {
+async function repairPhysiotherapyWebPage(text, requestUrl) {
+  const canonical='https://www.pinnacleblooms.org/physiotherapy';
+  const tracking=new Set(['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','utm_source_platform','utm_creative_format','utm_marketing_tactic','gclid','dclid','msclkid','fbclid','gbraid','wbraid']);
+  let request;
+  try { request=new URL(requestUrl); } catch { return text; }
+  if(request.origin!=='https://www.pinnacleblooms.org'||request.pathname.replace(/\/$/,'')!=='/physiotherapy')return text;
+  if(![...request.searchParams.keys()].every(key=>tracking.has(key)))return text;
+  try { JSON.parse(text); } catch { return text; }
+  const identities=[];
+  const template=text.trim().replaceAll('\r\n','\n').replace(/("(?:url|@id|id)"\s*:\s*)("(?:\\[\s\S]|[^"\\])*")/g,(_,prefix,token)=>{
+    identities.push(JSON.parse(token).replace(/&(?:amp;)+/gi,'&'));
+    return prefix+JSON.stringify(canonical.replace('https:','http:'));
+  });
+  for(const value of identities){
+    let url;try { url=new URL(value); } catch { return text; }
+    if(!['http:','https:'].includes(url.protocol)||url.hostname!=='www.pinnacleblooms.org'||url.pathname!=='/physiotherapy'||url.port||url.username||url.password||url.hash||(url.search&&url.search!==request.search))return text;
+  }
+  const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(template))),b=>b.toString(16).padStart(2,'0')).join('');
+  const counts={'a4c150bfb94f1dd5d52a9dfdf8ce60a04bddca94d456f6dc2c7494c20828de45':1,'f0e1af01086fa25851391c2cbaa1f86441c6f6494d5c0ccb91853cd06468b05b':2};
+  if(counts[digest]!==identities.length)return text;
+  // Exact observed WebPage payloads only; retain every non-identity byte.
+  return text.replace(/("(?:url|@id|id)"\s*:\s*)("(?:\\[\s\S]|[^"\\])*")/g,(_,prefix)=>prefix+JSON.stringify(canonical));
+}
+
+export async function repairLegacyGraph(text, requestUrl) {
   if(text.length>SCHEMA_LIMIT)return text;
   const normalized=text.trim().replaceAll('\r\n','\n');
   if (normalized.includes('"@type": "SpecialAnnouncement"') || normalized.includes('"@type": "CollectionPage"')) {
@@ -129,15 +154,15 @@ export async function repairLegacyGraph(text) {
     if (['3b882bc81f30917b7b7971a18ef1717777912bb505f3cfb87aed8dbe2fbbd037','7181eeec2f921b7ece2f8451f343d6e61d16e806478213dc3ec3b8c675653b02'].includes(digest)) return null;
     if(normalized.includes('"@type": "CollectionPage"'))text=await repairPhysiotherapyCollection(text,normalized);
   }
-  return repairSchemaText(await repairLegacyIdentity(text));
+  return repairPhysiotherapyWebPage(repairSchemaText(await repairLegacyIdentity(text)),requestUrl);
 }
 
-export function repairKnownLegacySchema(response) {
+export function repairKnownLegacySchema(response, requestUrl) {
   // Entry's private WeakSet establishes the public-response/canonical guards.
   // An origin header can never opt a response into this transform.
   const headers = new Headers(response.headers);
   for (const name of ['content-length', 'content-encoding', 'etag', 'last-modified', 'content-md5', 'digest']) headers.delete(name);
   headers.set('x-pinnacle-legacy-schema', 'schema-entity-types-20261006');
-  return new HTMLRewriter().on('script:not([src])', new LegacySchemaScript())
+  return new HTMLRewriter().on('script:not([src])', new LegacySchemaScript(requestUrl))
     .transform(new Response(response.body, {status: response.status, statusText: response.statusText, headers}));
 }

@@ -1,0 +1,14 @@
+
+            {
+            "@context":"http://schema.org/",
+            "@type":"WebPage",
+            "name":"Physio-Therapy",
+            "publisher": {"@type":"Organization","name":"Pinnacle"},
+            "keywords": ["Speech &amp; language pathology,  speech  therapy for kids,  speech therapist for kids near me,occupational therapy centre near me, Occupational therapy centre near me,  Occupational therapy for kids, aba therapy  aba therapy near me,  aba therapy for autism, Child psychologist near me, Best child psychologist near me, Special education centers, Special education therapist, Autism therapy,  Autism therapy centre  in Hyderabad, Hydro therapy  Hydro therapy near me,  Hydro therapy centers near me"],
+            "speakable":
+            {"@type":"SpeakableSpecification",
+            "cssSelector":[".main-content"]},
+            "url":"http://www.pinnacleblooms.org/physiotherapy",
+            "additionalType":"Product",
+            "additionalProperty":{"name":"summaryPage","url":"http://www.pinnacleblooms.org/physiotherapy"}}
+        
