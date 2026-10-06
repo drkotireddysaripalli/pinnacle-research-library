@@ -19,6 +19,7 @@ const transformedResponses = new WeakSet();
 // Attribution is still sent to the origin and remains in the visitor URL.
 // Only these known, content-neutral parameters may be removed from metadata.
 const TRACKING_PARAMETERS = new Set(['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','utm_source_platform','utm_creative_format','utm_marketing_tactic','gclid','dclid','msclkid','fbclid','gbraid','wbraid']);
+const metadataUrl = value => value.replace(/&(?:amp|#0*38|#x0*26);/gi,'&');
 
 export function isEligible(request) {
   const url = new URL(request.url);
@@ -66,7 +67,7 @@ async function repairHead(head, request) {
     }})
     .transform(new Response(head)).text();
   if (canonical.length !== 1 || social.length !== 1 || robots.some(v => /noindex/i.test(v))) return null;
-  const observedTarget = canonical[0], previous = social[0];
+  const observedTarget = metadataUrl(canonical[0]), previous = metadataUrl(social[0]);
   let target = observedTarget;
   const requestUrl = new URL(request.url);
   let parsed;
@@ -112,7 +113,7 @@ async function repairHead(head, request) {
   return new HTMLRewriter().on('head > link', {element(el) {
     if ((el.getAttribute('rel') || '').toLowerCase().split(/\s+/).includes('canonical')) el.setAttribute('href',target);
   }}).on('head > meta', {element(el) {
-    if ((el.getAttribute('property') || '').toLowerCase() === 'og:url' && el.getAttribute('content') === previous) el.setAttribute('content', target);
+    if ((el.getAttribute('property') || '').toLowerCase() === 'og:url' && metadataUrl(el.getAttribute('content') || '') === previous) el.setAttribute('content', target);
   }}).transform(new Response(head)).text();
 }
 

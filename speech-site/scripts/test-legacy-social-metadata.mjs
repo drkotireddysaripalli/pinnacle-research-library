@@ -82,7 +82,8 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
     await t.test('campaign-copied metadata is repaired across the existing families without losing attribution',async()=>{
       for(const path of ['/physiotherapy','/t/interactive-song-therapy','/skills/communication','/staff/k-anusree/4767','/top-autism-therapy-services-india-proven-improvement-rate']){
         const query='?utm_source=pitchbox&utm_medium=email&utm_campaign=parent-guide&gclid=sample';
-        const input=html(path+query), {body,r}=await run({body:input},path+query,{headers:{cookie:'consent=1'}});
+        // Match the captured ASP.NET HTML: separators are character references.
+        const input=html(path+query.replaceAll('&','&amp;')), {body,r}=await run({body:input},path+query,{headers:{cookie:'consent=1'}});
         assert(body.includes('href="'+origin+path+'"'));assert(body.includes('content="'+origin+path+'"'));
         assert.equal(body.slice(body.indexOf('<body>')),input.slice(input.indexOf('<body>')));
         assert.equal(new URL(forwarded.url).search,query);assert.equal(forwarded.headers.get('cookie'),'consent=1');
