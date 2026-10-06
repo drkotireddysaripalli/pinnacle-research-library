@@ -100,6 +100,12 @@ The owner instructed “complete this task and hold for the next one.” No next
 
 ## Continuing boundaries
 
+### Owner-requested shared search and centre repairs — delivered 6 October
+
+The shared search repair, Suchitra/Chanda Nagar media release and subsequent Suchitra speed/known-image fix are deployed. See `RELEASE-SHARED-SEARCH-20261006.md`, `RELEASE-CENTRE-MEDIA-20261006.md` and `RELEASE-CENTRE-SPEED-MEDIA-20261006.md`. Together they remove 702 retired sitemap entries, correct 31 stale sitemap slugs, advertise 4,564 canonical FAQ answers, restore exact `/Ask` compatibility, repair observed legacy social/schema defects, correct 20 dead image references on 22 pages, and show real frontage/interiors/explicit-load tours for two centres. Suchitra final mobile LCP is 2.134s in the recorded lab test. All existing routes/bindings remain preserved; current route count is 223.
+
+The broad health goal remains open: the latest completed Ahrefs crawl is 90/100 and predates the final fixes. Intermittent legacy origin 500s, two unmapped destinations, broader media/content work and measured enquiry impact remain separate commitments. Analytics is readable after credential refresh; settings/ruleset/bot-management access still returns 403. Do not resume the paused heartbeat or start unrelated held page work as part of this receipt.
+
 - Common header/footer baseline: `pinnacle-common-shell-baseline-v159-20261001`; shared fixes belong in their common files and require their own scope.
 - Keep Ask, Verify, authentication, helpline, bookshop, existing payment/catalogue records and all legacy routes working. No narrowed deployment route switch.
 - PinnacleAI scholarly/Figma diagram work awaits the owner's diagram. Verify Astro migration remains deferred. Centre/staff expansion follows individual pages; Delhi remains aside.
