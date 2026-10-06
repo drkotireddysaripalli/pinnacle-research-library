@@ -1,0 +1,237 @@
+{
+  "item_id": "WEB-HEALTH-POSTRELEASE-20261005",
+  "action_id": "59d19e1c-ec20-4f5c-8499-9c6eb9229231",
+  "at": "2026-10-06T09:58:15.243700+00:00",
+  "outcome": "deployed",
+  "verified": true,
+  "scope_complete": true,
+  "overall_health_complete": false,
+  "summary": "Shared link repair deployed: 39 restored destinations, exact /ma/wil recovery, 41 shared broken targets removed from each of 12 original Ahrefs samples; footer loading improved. Whole-site residual errors remain open.",
+  "commit": "7e80586403c9d1b372717bdf973c1b96906688e0",
+  "deployment": {
+    "pinnacle-legacy-social-metadata": "deb35181-fed0-46c1-a474-dafdc0895196",
+    "pinnacle-verify-route": "c8a94088-f27b-4e0b-be0e-df0fdc4c2797"
+  },
+  "ask_deployment": "ee53aed5-fdca-4f78-8580-9b28026a0d15",
+  "public_url": "https://www.pinnacleblooms.org/sunshine/topic/independence-and-autonomy-1646",
+  "proof": {
+    "redirects": 40,
+    "restored_topics": 39,
+    "original_ahrefs_templates": 12,
+    "targeted_broken_links_before_per_template": 41,
+    "targeted_broken_links_after_per_template": 0,
+    "protected_surfaces": 6,
+    "screaming_frog": {
+      "source": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\render-links-20261006\\screaming-frog\\20261006-152046",
+      "pages": 40,
+      "http200": 40,
+      "indexable": 40,
+      "selfCanonical": 40,
+      "h1Present": 40,
+      "missingDescriptions": 0,
+      "responseSeconds": {
+        "min": 0.014,
+        "max": 0.17
+      }
+    },
+    "public_check": "public-check.json",
+    "deployment_guard": "release.json",
+    "indexnow": "indexnow.json",
+    "gsc_sitemap": "gsc-sitemap.json"
+  },
+  "originalRoutesPreserved": 223,
+  "totalRoutes": 228,
+  "bindingsPreserved": true,
+  "devices": [
+    {
+      "mode": "ios",
+      "device": {
+        "id": 38,
+        "name": "iPhone Air",
+        "platform": "iOS",
+        "version": "26.2"
+      },
+      "status": "passed",
+      "providerDurationSeconds": 12,
+      "scope": "Suchitra frontage, call link, layout, lazy footer",
+      "width": 420
+    },
+    {
+      "mode": "android",
+      "device": {
+        "id": 46,
+        "name": "Pixel 8",
+        "platform": "Android",
+        "version": "17.0"
+      },
+      "status": "passed",
+      "providerDurationSeconds": 9,
+      "scope": "Suchitra frontage, call link, layout, lazy footer",
+      "width": 411
+    }
+  ],
+  "lighthouse": {
+    "at": "2026-10-06T09:48:29.694Z",
+    "id": "suchitra",
+    "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+    "kind": "simulated lab measurements, not field Core Web Vitals",
+    "reports": [
+      {
+        "device": "mobile",
+        "lighthouseVersion": "13.5.0",
+        "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "scores": {
+          "performance": 98,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcpMs": 1994.482,
+          "lcpMs": 1999.482,
+          "tbtMs": 0,
+          "cls": 0,
+          "speedIndexMs": 1994.482
+        },
+        "targets": {
+          "performance": 90,
+          "lcpMs": 2500,
+          "tbtMs": 200,
+          "cls": 0.1
+        },
+        "targetWarnings": [],
+        "warnings": [],
+        "findings": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "displayValue": "2.0 s"
+          },
+          {
+            "id": "largest-contentful-paint",
+            "title": "Largest Contentful Paint",
+            "displayValue": "2.0 s"
+          },
+          {
+            "id": "speed-index",
+            "title": "Speed Index",
+            "displayValue": "2.0 s"
+          },
+          {
+            "id": "interactive",
+            "title": "Time to Interactive",
+            "displayValue": "2.0 s"
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Elements with visible text labels do not have matching accessible names."
+          },
+          {
+            "id": "unused-css-rules",
+            "title": "Reduce unused CSS",
+            "displayValue": "Est savings of 15 KiB",
+            "savingsMs": 0
+          },
+          {
+            "id": "cache-insight",
+            "title": "Use efficient cache lifetimes",
+            "displayValue": "Est savings of 4 KiB"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Forced reflow"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Improve image delivery",
+            "displayValue": "Est savings of 31 KiB"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "Legacy JavaScript",
+            "displayValue": "Est savings of 11 KiB"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree"
+          }
+        ]
+      },
+      {
+        "device": "desktop",
+        "lighthouseVersion": "13.5.0",
+        "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcpMs": 513.4012,
+          "lcpMs": 554.9012,
+          "tbtMs": 0,
+          "cls": 0,
+          "speedIndexMs": 513.4012
+        },
+        "targets": {
+          "performance": 90,
+          "lcpMs": 2500,
+          "tbtMs": 200,
+          "cls": 0.1
+        },
+        "targetWarnings": [],
+        "warnings": [],
+        "findings": [
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Elements with visible text labels do not have matching accessible names."
+          },
+          {
+            "id": "cache-insight",
+            "title": "Use efficient cache lifetimes",
+            "displayValue": "Est savings of 4 KiB"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Forced reflow"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Improve image delivery",
+            "displayValue": "Est savings of 116 KiB"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "LCP request discovery"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "Legacy JavaScript",
+            "displayValue": "Est savings of 10 KiB"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree"
+          }
+        ]
+      }
+    ]
+  },
+  "resources": {
+    "ahrefsActualUnits": 50,
+    "newFullCrawls": 0,
+    "screamingFrogUrls": 40,
+    "deviceSelectorFailures": 2,
+    "reasonForRetries": "Old test selected priority=high, then a profile emblem; fixed selector to the actual local-hero-photo figure. Both failures retained.",
+    "newAgents": 0
+  },
+  "remaining": [
+    "Fresh completed Ahrefs crawl for aggregate reduction; last known main score90 with5264 error URLs predates final release.",
+    "Intermittent legacy500 cause requires matched application/edge error diagnostics; current successful probes are not a fix.",
+    "ASSQ legacy UUID lacks a verified equivalent and remains404.",
+    "Exterior/interior/video rollout beyond Suchitra and Chanda Nagar remains pending."
+  ]
+}

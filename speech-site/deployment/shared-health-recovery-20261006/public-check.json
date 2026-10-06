@@ -1,0 +1,879 @@
+{
+  "at": "2026-10-06T09:55:36.965Z",
+  "redirects": [
+    {
+      "url": "https://www.pinnacleblooms.org/abilities/independence-&-autonomy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/independence-and-autonomy-1646",
+      "ms": 62,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abilities/planning-&-organization",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/planning-and-organisation-1679",
+      "ms": 62,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/wil",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/ma/wilbarger-brush-therapy-tool",
+      "ms": 108,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abilities/play-&-imagination",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/play-and-imagination-1685",
+      "ms": 12,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-m-fun-miller-function-&-participation-scales",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/miller-function-and-participation-scales-1451",
+      "ms": 32,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abilities/restricted-interests-&-repetitive-behaviors",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/restricted-interests-and-repetitive-behaviours-1691",
+      "ms": 35,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/blog/autism-therapy-materials/party-horn-noisemakers",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/party-horn-noisemakers-3255",
+      "ms": 13,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/autism-therapy/kids-led-desk-lamp",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/kids-led-study-desk-lamp-3231",
+      "ms": 14,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abs/pinnacle-i-nepsy-ii-nepsy-ii:-a-developmental-neuropsychological-assessment",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/nepsy-ii-assessment-1453",
+      "ms": 16,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/blog/led-fishball-therapy-material",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/led-fish-ball-1172",
+      "ms": 11,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/blog/foldable-hanging-organizer-autism-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/foldable-hanging-paper-organiser-3189",
+      "ms": 12,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/blog/reversible-gift-wrapping-paper-therapy-autism",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/gift-wrapping-paper-sheets-3261",
+      "ms": 16,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapies/dyslexia-reading-overlay-strips",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/reading-overlay-strips-2942",
+      "ms": 11,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapies/kids-drum-set-musical-toy-autism-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/kids-drum-set-musical-toy-3176",
+      "ms": 12,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapeutic-tools/car-seat-cushion-safety-belt",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "ms": 12,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapies/mag-pad-autism-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/magnetic-pen-drawing-board-1185",
+      "ms": 12,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapies/swimming-ear-plugs-autism",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/swimming-ear-plugs-and-nose-clips-3252",
+      "ms": 14,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-material/cross-trainer",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/cross-trainer-equipment-1100",
+      "ms": 14,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/adi-trading-led-lattoo",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/led-spinning-top-1023",
+      "ms": 13,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/baby-silicone-teething-tubes",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/silicone-teething-tubes-3118",
+      "ms": 13,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-material/toddler-flip-flops-rainbow-design",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/toddler-flip-flops-3080",
+      "ms": 16,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/big-smile",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/big-smile-play-material-1047",
+      "ms": 13,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/chalk-gripper-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/chalk-gripper-1067",
+      "ms": 12,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/cotton-buds",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/cotton-buds-as-craft-materials-1093",
+      "ms": 14,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/kids-striped-swimsuit",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/kids-striped-swimsuit-3009",
+      "ms": 11,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/modular-plastic-storage-containers",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/modular-storage-containers-3222",
+      "ms": 11,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/drop-fantasy-puzzle-game",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/drop-fantasy-puzzle-game-1111",
+      "ms": 16,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/popping-toys",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/popping-toy-1242",
+      "ms": 11,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/oral-therapy-mouth-opener-jaw-stretcher",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/mouth-openers-and-jaw-stretchers-3131",
+      "ms": 11,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/shaped-animal-board-book-dog-autism-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/dog-shaped-animal-board-book-3233",
+      "ms": 11,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/wooden-baby-rattle",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/wooden-baby-rattle-3036",
+      "ms": 14,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-materials/straw-set-feeding",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/straws-and-feeding-3348",
+      "ms": 14,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy-tools/reusable-ice-bag",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/reusable-ice-bag-3289",
+      "ms": 16,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy/math-linking-cubes",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/math-linking-cubes-3274",
+      "ms": 12,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy/expanding-multi-pocket-organizer",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/expanding-multi-pocket-organiser-3241",
+      "ms": 13,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/therapy/building-blocks-used-in-speech-ABA-occupational-special-education-therapy",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/building-blocks-1058",
+      "ms": 15,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/skills/balance-&-hopping",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/balance-and-hopping-1838",
+      "ms": 13,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/skills/cognitive/communication-(pre-literacy)",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/communication-and-pre-literacy-1668",
+      "ms": 12,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/skills/communication-(receptive/expressive)",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/receptive-and-expressive-communication-1663",
+      "ms": 15,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/skills/sorting-&-categorization",
+      "status": 301,
+      "location": "https://www.pinnacleblooms.org/sunshine/topic/sorting-and-categorisation-1784",
+      "ms": 16,
+      "ok": true
+    }
+  ],
+  "topics": [
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/planning-and-organisation-1679",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/planning-and-organisation-1679",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 121,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/independence-and-autonomy-1646",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/independence-and-autonomy-1646",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 152,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/play-and-imagination-1685",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/play-and-imagination-1685",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 169,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/nepsy-ii-assessment-1453",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/nepsy-ii-assessment-1453",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 52,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/miller-function-and-participation-scales-1451",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/miller-function-and-participation-scales-1451",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 67,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/restricted-interests-and-repetitive-behaviours-1691",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/restricted-interests-and-repetitive-behaviours-1691",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 78,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/foldable-hanging-paper-organiser-3189",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/foldable-hanging-paper-organiser-3189",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 62,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/party-horn-noisemakers-3255",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/party-horn-noisemakers-3255",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 70,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/kids-led-study-desk-lamp-3231",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/kids-led-study-desk-lamp-3231",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 76,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 60,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/gift-wrapping-paper-sheets-3261",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/gift-wrapping-paper-sheets-3261",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 68,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/led-fish-ball-1172",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/led-fish-ball-1172",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 73,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/kids-drum-set-musical-toy-3176",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/kids-drum-set-musical-toy-3176",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 63,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/magnetic-pen-drawing-board-1185",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/magnetic-pen-drawing-board-1185",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 69,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/reading-overlay-strips-2942",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/reading-overlay-strips-2942",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 76,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/toddler-flip-flops-3080",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/toddler-flip-flops-3080",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 71,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/cross-trainer-equipment-1100",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/cross-trainer-equipment-1100",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 76,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/swimming-ear-plugs-and-nose-clips-3252",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/swimming-ear-plugs-and-nose-clips-3252",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 85,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/silicone-teething-tubes-3118",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/silicone-teething-tubes-3118",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 54,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/big-smile-play-material-1047",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/big-smile-play-material-1047",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 58,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/led-spinning-top-1023",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/led-spinning-top-1023",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 65,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/drop-fantasy-puzzle-game-1111",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/drop-fantasy-puzzle-game-1111",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 56,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/cotton-buds-as-craft-materials-1093",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/cotton-buds-as-craft-materials-1093",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 64,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/chalk-gripper-1067",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/chalk-gripper-1067",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 69,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/modular-storage-containers-3222",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/modular-storage-containers-3222",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 47,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/mouth-openers-and-jaw-stretchers-3131",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/mouth-openers-and-jaw-stretchers-3131",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 52,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/kids-striped-swimsuit-3009",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/kids-striped-swimsuit-3009",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 58,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/dog-shaped-animal-board-book-3233",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/dog-shaped-animal-board-book-3233",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 44,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/straws-and-feeding-3348",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/straws-and-feeding-3348",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 54,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/popping-toy-1242",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/popping-toy-1242",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 60,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/reusable-ice-bag-3289",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/reusable-ice-bag-3289",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 52,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/building-blocks-1058",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/building-blocks-1058",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 58,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/wooden-baby-rattle-3036",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/wooden-baby-rattle-3036",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 68,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/balance-and-hopping-1838",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/balance-and-hopping-1838",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 39,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/math-linking-cubes-3274",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/math-linking-cubes-3274",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 46,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/expanding-multi-pocket-organiser-3241",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/expanding-multi-pocket-organiser-3241",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 54,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/sorting-and-categorisation-1784",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/sorting-and-categorisation-1784",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 45,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/receptive-and-expressive-communication-1663",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/receptive-and-expressive-communication-1663",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 52,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/communication-and-pre-literacy-1668",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/communication-and-pre-literacy-1668",
+      "h1": 1,
+      "robots": "index, follow, max-image-preview:large",
+      "jsonld": 1,
+      "call": true,
+      "ms": 57,
+      "ok": true
+    }
+  ],
+  "affectedTemplates": [
+    {
+      "url": "https://www.pinnacleblooms.org/skills/climbing",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/skills/climbing",
+      "og": "https://www.pinnacleblooms.org/skills/climbing",
+      "ms": 1089,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/skills/task-speed",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/skills/task-speed",
+      "og": "https://www.pinnacleblooms.org/skills/task-speed",
+      "ms": 1157,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/smily-ball-therapy-for-autism",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/ma/smily-ball-therapy-for-autism",
+      "og": "https://www.pinnacleblooms.org/ma/smily-ball-therapy-for-autism",
+      "ms": 1265,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/skills/friendship-seeking",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/skills/friendship-seeking",
+      "og": "https://www.pinnacleblooms.org/skills/friendship-seeking",
+      "ms": 899,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/t/pretend-play-therapy",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/t/pretend-play-therapy",
+      "og": "https://www.pinnacleblooms.org/t/pretend-play-therapy",
+      "ms": 941,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/t/pencil-control-therapy",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/t/pencil-control-therapy",
+      "og": "https://www.pinnacleblooms.org/t/pencil-control-therapy",
+      "ms": 972,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/skills/communication-(expressive)",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/skills/communication-(expressive)",
+      "og": "https://www.pinnacleblooms.org/skills/communication-(expressive)",
+      "ms": 905,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/unleashing-potential-clipboard-writing-board",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/ma/unleashing-potential-clipboard-writing-board",
+      "og": "https://www.pinnacleblooms.org/ma/unleashing-potential-clipboard-writing-board",
+      "ms": 931,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/skills/attention-to-detail",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/skills/attention-to-detail",
+      "og": "https://www.pinnacleblooms.org/skills/attention-to-detail",
+      "ms": 968,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/t/simple-command-therapy",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/t/simple-command-therapy",
+      "og": "https://www.pinnacleblooms.org/t/simple-command-therapy",
+      "ms": 928,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/t/lacing-beads-therapy",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/t/lacing-beads-therapy",
+      "og": "https://www.pinnacleblooms.org/t/lacing-beads-therapy",
+      "ms": 956,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/abilities/speech-and-language-skills",
+      "status": 200,
+      "beforeBroken": 41,
+      "remainingTargetedBroken": [],
+      "canonical": "https://www.pinnacleblooms.org/abilities/speech-and-language-skills",
+      "og": "https://www.pinnacleblooms.org/abilities/speech-and-language-skills",
+      "ms": 979,
+      "ok": true
+    }
+  ],
+  "protected": [
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine",
+      "status": 200,
+      "ms": 45,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq",
+      "status": 200,
+      "ms": 41,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify",
+      "status": 200,
+      "ms": 98,
+      "ok": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask",
+      "status": 200,
+      "ms": 836,
+      "ok": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/auth/session",
+      "status": 200,
+      "ms": 18,
+      "ok": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacleai",
+      "status": 200,
+      "ms": 47,
+      "ok": true
+    }
+  ],
+  "failures": [],
+  "reusedTopicReadbackAt": "2026-10-06T09:48:28.516Z",
+  "passed": true
+}

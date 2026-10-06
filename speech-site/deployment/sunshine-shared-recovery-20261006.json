@@ -1,0 +1,206 @@
+{
+  "phase": "verified",
+  "sourceCommit": "eb7fbc4d9fe1f30b5df62142135d1a017806ed72",
+  "at": "2026-10-06T09:38:26.385Z",
+  "routeCount": 223,
+  "rollback": [
+    {
+      "version_id": "2cf7c62a-c8fe-4e78-8503-d65630d65088",
+      "percentage": 100
+    }
+  ],
+  "protected": {
+    "portal": [
+      {
+        "version_id": "1ad16c88-c6bf-415f-807a-c92c9a723062",
+        "percentage": 100
+      }
+    ],
+    "mcp": [
+      {
+        "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+        "percentage": 100
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "candidate": "ee53aed5-fdca-4f78-8580-9b28026a0d15",
+  "candidateBindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "bundleSHA256": "be459e83a3a919e712620095ec5b087dabee66dcd0dc1bab0a155716689597cb",
+  "promotedAt": "2026-10-06T09:46:52.583Z",
+  "afterRouteCount": 223,
+  "protectedUnchanged": true,
+  "publicVerifiedAt": "2026-10-06T09:55:36.965Z",
+  "publicEvidence": "RELEASE-SHARED-HEALTH-RECOVERY-20261006.md",
+  "topicsVerified": 39
+}

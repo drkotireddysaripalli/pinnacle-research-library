@@ -1,0 +1,13 @@
+{
+  "annotation": {
+    "id": "f273ce64-1d0b-4623-8c53-86c494dafb11",
+    "scope": "property",
+    "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+    "event_date": "2026-10-06",
+    "label": "Shared broken-link and Sunshine recovery deployed",
+    "description": "Committed and deployed 39 source-backed Sunshine topic destinations and exact /ma/wil backlink recovery. Shared navigation: all 12 Ahrefs samples formerly carrying the same 41 broken links now contain zero of those targets; 40 redirects verified. Screaming Frog: 40/40 destinations HTTP 200, indexable and self-canonical. 40 IndexNow submissions accepted; Sunshine sitemap resubmitted. Common footer artwork now lazy-loads. Suchitra mobile lab LCP 1999 ms, performance 98, CLS 0. These are delivered repairs, not a confirmed new whole-site Ahrefs health score or attributed leads.",
+    "category": "technical",
+    "color": null,
+    "created_at": "2026-10-06T09:56:21.176034+00:00"
+  }
+}

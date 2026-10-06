@@ -1,0 +1,260 @@
+{
+  "siteUrl": "sc-domain:pinnacleblooms.org",
+  "batchId": "f5700bc3-0f76-4db7-9ff4-54e844cc9a20",
+  "submitted": 40,
+  "failed": 0,
+  "attempted": 40,
+  "pendingKeyValidation": false,
+  "outcome": "submitted",
+  "keyFile": [
+    {
+      "host": "www.pinnacleblooms.org",
+      "url": null,
+      "verified": true,
+      "error": null
+    }
+  ],
+  "submissions": [
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/independence-and-autonomy-1646",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/planning-and-organisation-1679",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/play-and-imagination-1685",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/restricted-interests-and-repetitive-behaviours-1691",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/miller-function-and-participation-scales-1451",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/nepsy-ii-assessment-1453",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/kids-led-study-desk-lamp-3231",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/party-horn-noisemakers-3255",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/foldable-hanging-paper-organiser-3189",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/led-fish-ball-1172",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/gift-wrapping-paper-sheets-3261",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/reading-overlay-strips-2942",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/kids-drum-set-musical-toy-3176",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/magnetic-pen-drawing-board-1185",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/swimming-ear-plugs-and-nose-clips-3252",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/cross-trainer-equipment-1100",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/toddler-flip-flops-3080",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/led-spinning-top-1023",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/silicone-teething-tubes-3118",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/big-smile-play-material-1047",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/chalk-gripper-1067",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/cotton-buds-as-craft-materials-1093",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/drop-fantasy-puzzle-game-1111",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/kids-striped-swimsuit-3009",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/modular-storage-containers-3222",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/mouth-openers-and-jaw-stretchers-3131",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/popping-toy-1242",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/dog-shaped-animal-board-book-3233",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/straws-and-feeding-3348",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/wooden-baby-rattle-3036",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/reusable-ice-bag-3289",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/building-blocks-1058",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/expanding-multi-pocket-organiser-3241",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/math-linking-cubes-3274",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/balance-and-hopping-1838",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/communication-and-pre-literacy-1668",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/receptive-and-expressive-communication-1663",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/sorting-and-categorisation-1784",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/ma/wilbarger-brush-therapy-tool",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    }
+  ],
+  "message": "40 of 40 URL(s) sent were accepted by IndexNow."
+}
