@@ -1,0 +1,200 @@
+{
+        "@context": "https://schema.org",
+        "@graph": [
+        {
+        "@type": "JobPosting",
+        "title": "Admin Manager",
+        "description": "Pinnacle Blooms Network is a chain of rehabilitation facilities with a core purpose of empowering kids with special needs — bringing smiles into families. We are the torchbearers for more than 90 crore people with special needs across 238 countries.",
+        "identifier": {
+        "@type": "PropertyValue",
+        "name": "Pinnacle Blooms Network",
+        "value": "9100181181"
+        },
+        "datePosted": "2025-01-01",
+        "validThrough": "2025-12-31T00:00",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Pinnacle Blooms Network",
+        "sameAs": "https://www.pinnacleblooms.org",
+        "logo": "https://www.pinnacleblooms.org/media/image/pinnacle-blooms-logo.jpg"
+        },
+        "jobLocation": {
+        "@type": "Place",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot Number 50/A",
+        "addressLocality": "Suchitra",
+        "addressRegion": "Hyderabad",
+        "postalCode": "500067",
+        "addressCountry": "IN"
+        }
+        },
+        "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": {
+        "@type": "QuantitativeValue",
+        "value": 300000,
+        "unitText": "YEAR"
+        }
+        }
+        },
+        {
+        "@type": "JobPosting",
+        "title": "Speech Therapist",
+        "description": "Pinnacle Blooms Network is a chain of rehabilitation facilities with a core purpose of empowering kids with special needs — bringing smiles into families. We are the torchbearers for more than 90 crore people with special needs across 238 countries.",
+        "identifier": {
+        "@type": "PropertyValue",
+        "name": "Pinnacle Blooms Network",
+        "value": "9100181181"
+        },
+        "datePosted": "2025-01-01",
+        "validThrough": "2025-12-31T00:00",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Pinnacle Blooms Network",
+        "sameAs": "https://www.pinnacleblooms.org",
+        "logo": "https://www.pinnacleblooms.org/media/image/pinnacle-blooms-logo.jpg"
+        },
+        "jobLocation": {
+        "@type": "Place",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot Number 50/A",
+        "addressLocality": "Suchitra",
+        "addressRegion": "Hyderabad",
+        "postalCode": "500067",
+        "addressCountry": "IN"
+        }
+        },
+        "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": {
+        "@type": "QuantitativeValue",
+        "value": 600000,
+        "unitText": "YEAR"
+        }
+        }
+        },
+        {
+        "@type": "JobPosting",
+        "title": "Occupational Therapist",
+        "description": "Pinnacle Blooms Network is a chain of rehabilitation facilities with a core purpose of empowering kids with special needs — bringing smiles into families. We are the torchbearers for more than 90 crore people with special needs across 238 countries.",
+        "identifier": {
+        "@type": "PropertyValue",
+        "name": "Pinnacle Blooms Network",
+        "value": "9100181181"
+        },
+        "datePosted": "2025-01-01",
+        "validThrough": "2025-12-31T00:00",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Pinnacle Blooms Network",
+        "sameAs": "https://www.pinnacleblooms.org",
+        "logo": "https://www.pinnacleblooms.org/media/image/pinnacle-blooms-logo.jpg"
+        },
+        "jobLocation": {
+        "@type": "Place",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot Number 50/A",
+        "addressLocality": "Suchitra",
+        "addressRegion": "Hyderabad",
+        "postalCode": "500067",
+        "addressCountry": "IN"
+        }
+        },
+        "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": {
+        "@type": "QuantitativeValue",
+        "value": 500000,
+        "unitText": "YEAR"
+        }
+        }
+        },
+        {
+        "@type": "JobPosting",
+        "title": "Special Educator",
+        "description": "Pinnacle Blooms Network is a chain of rehabilitation facilities with a core purpose of empowering kids with special needs — bringing smiles into families. We are the torchbearers for more than 90 crore people with special needs across 238 countries.",
+        "identifier": {
+        "@type": "PropertyValue",
+        "name": "Pinnacle Blooms Network",
+        "value": "9100181181"
+        },
+        "datePosted": "2025-01-01",
+        "validThrough": "2025-12-31T00:00",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Pinnacle Blooms Network",
+        "sameAs": "https://www.pinnacleblooms.org",
+        "logo": "https://www.pinnacleblooms.org/media/image/pinnacle-blooms-logo.jpg"
+        },
+        "jobLocation": {
+        "@type": "Place",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot Number 50/A",
+        "addressLocality": "Suchitra",
+        "addressRegion": "Hyderabad",
+        "postalCode": "500067",
+        "addressCountry": "IN"
+        }
+        },
+        "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": {
+        "@type": "QuantitativeValue",
+        "value": 400000,
+        "unitText": "YEAR"
+        }
+        }
+        },
+        {
+        "@type": "JobPosting",
+        "title": "Behavioral Therapist",
+        "description": "Pinnacle Blooms Network is a chain of rehabilitation facilities with a core purpose of empowering kids with special needs — bringing smiles into families. We are the torchbearers for more than 90 crore people with special needs across 238 countries.",
+        "identifier": {
+        "@type": "PropertyValue",
+        "name": "Pinnacle Blooms Network",
+        "value": "9100181181"
+        },
+        "datePosted": "2025-01-01",
+        "validThrough": "2025-12-31T00:00",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+        "@type": "Organization",
+        "name": "Pinnacle Blooms Network",
+        "sameAs": "https://www.pinnacleblooms.org",
+        "logo": "https://www.pinnacleblooms.org/media/image/pinnacle-blooms-logo.jpg"
+        },
+        "jobLocation": {
+        "@type": "Place",
+        "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plot Number 50/A",
+        "addressLocality": "Suchitra",
+        "addressRegion": "Hyderabad",
+        "postalCode": "500067",
+        "addressCountry": "IN"
+        }
+        },
+        "baseSalary": {
+        "@type": "MonetaryAmount",
+        "currency": "INR",
+        "value": {
+        "@type": "QuantitativeValue",
+        "value": 400000,
+        "unitText": "YEAR"
+        }
+        }
+        }
+        ]
+        }

@@ -63,6 +63,17 @@ test('captured valid-but-outdated organisation is replaced only on an exact matc
   assert.notEqual(changed,text);assert.equal(await repairLegacyIdentity(changed),changed);
 });
 
+test('only the exact captured expired five-job graph is retired',async()=>{
+  const raw=await fs.readFile('tests/fixtures/legacy-expired-jobs.txt','utf8');
+  const graph=JSON.parse(raw);
+  assert.deepEqual(Object.keys(graph),['@context','@graph']);
+  assert.equal(graph['@graph'].length,5);
+  assert(graph['@graph'].every(job=>job['@type']==='JobPosting'&&job.validThrough==='2025-12-31T00:00'));
+  for(const input of [raw,'\n'+raw+'\n',raw.replaceAll('\n','\r\n')])assert.equal(await repairLegacyGraph(input),null);
+  const mixed=structuredClone(graph);mixed['@graph'].push({'@type':'Organization',name:'Preserve me'});
+  for(const changed of [raw.replaceAll('2025-12-31T00:00','2027-12-31T00:00'),raw.replace('Admin Manager','Updated Admin vacancy'),JSON.stringify(mixed),JSON.stringify(graph),raw.replace('https://schema.org','https://example.org'),raw.slice(0,-1)])assert.equal(await repairLegacyGraph(changed),changed);
+});
+
 test('captured physiotherapy collection becomes valid JSON with canonical identities and unchanged content',async()=>{
   const input=await fs.readFile('tests/fixtures/legacy-physiotherapy-collection.txt','utf8');
   const canonical='https://www.pinnacleblooms.org/physiotherapy',origin=canonical.replace('https:','http:');
@@ -116,6 +127,23 @@ test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
       assert.equal(await r.text(),fixture.replace(raw,repairSchemaText(raw)));
       assert.equal(r.headers.get('x-pinnacle-social-metadata'),null);
       assert.equal(r.headers.get('x-pinnacle-legacy-schema'),'schema-entity-types-20261006');
+    });
+    await t.test('expired shared jobs disappear while visible content, links and unrelated schema stay exact',async()=>{
+      const jobs=await fs.readFile('tests/fixtures/legacy-expired-jobs.txt','utf8');
+      const remaining='{"@context":"https://schema.org","@type":"WebPage","name":"Family guidance","identifier":90071992547409931234}';
+      const visible='<h1>Approved family guidance</h1><a href="tel:9100181181">Call Pinnacle</a><footer>Approved footer</footer>';
+      for(const route of ['/t/action-flash-therapy','/mirracles/20688927160/-Match-Learn-369172']){
+        const head='<html><head><link rel="canonical" href="https://www.pinnacleblooms.org'+route+'"><meta property="og:url" content="https://www.pinnacleblooms.org'+route+'"></head><body>';
+        const script='<script type="application/ld+json">'+jobs+'</script>';
+        fixture=head+visible+script+'<script type="application/ld+json">'+remaining+'</script></body></html>';
+        chunkSize=7;
+        const response=await runtime.dispatchFetch('https://www.pinnacleblooms.org'+route);
+        assert.equal(await response.text(),fixture.replace(script,''));
+        assert(response.headers.has('x-pinnacle-legacy-schema'));
+        sourceHeaders={'cache-control':'no-store'};
+        assert.equal(await(await runtime.dispatchFetch('https://www.pinnacleblooms.org'+route)).text(),fixture);
+        sourceHeaders={};
+      }
     });
     await t.test('captured collection in campaign response preserves query, call link and visible HTML',async()=>{
       const captured=await fs.readFile('tests/fixtures/legacy-physiotherapy-collection.txt','utf8');

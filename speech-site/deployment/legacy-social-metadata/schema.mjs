@@ -147,6 +147,13 @@ async function repairPhysiotherapyWebPage(text, requestUrl) {
 export async function repairLegacyGraph(text, requestUrl) {
   if(text.length>SCHEMA_LIMIT)return text;
   const normalized=text.trim().replaceAll('\r\n','\n');
+  if (normalized.includes('"@type": "JobPosting"')) {
+    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
+    // Exact shared five-job graph captured on therapy/story pages on 6 October.
+    // Every job expires on 31 December 2025. Retire only this obsolete payload;
+    // changed vacancies, mixed graphs and other JobPosting scripts pass through.
+    if(digest==='eee6f24856abce7f793489c5335315d223fb8d25b33260dd420a25a91f6b9ebe')return null;
+  }
   if (normalized.includes('"@type": "SpecialAnnouncement"') || normalized.includes('"@type": "CollectionPage"')) {
     const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
     // Exact malformed, expired shared COVID announcement and malformed dance
