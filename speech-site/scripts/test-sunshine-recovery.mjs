@@ -18,11 +18,11 @@ test('All 39 evidenced broken records resolve to one distinct useful topic and d
 test('Restored records are discoverable without duplicating existing identities or losing the catalogue',()=>{
  const all=sunshineRecords(records);assert.equal(new Set(all.map(x=>x.id)).size,all.length);
  for(const r of records)assert(all.some(x=>x.id===r.id));for(const r of recovered)assert(all.some(x=>x.id===r.id&&x.url===r.url));
- assert.equal(sunshineTopic('topic/unknown'),null);assert.equal(recoveryPath('/ma/wil'),null);
+ assert.equal(sunshineTopic('topic/unknown'),null);assert.equal(recoveryPath('/ma/wil'),'/ma/wilbarger-brush-therapy-tool');
 });
 test('Broken placeholders are removed, with unrelated, sensitive and external links preserved',()=>{
  assert.equal(invalidSunshineLinks.size,2);for(const p of invalidSunshineLinks)assert.equal(publicLinkTarget(p),null);
- for(const href of ['https://example.com/ma/therapy-materials/cotton-buds','/api/ma/therapy-materials/cotton-buds','/verify/documents/Example.pdf','/ma/wil'])assert.equal(publicLinkTarget(href),href);
+ for(const href of ['https://example.com/ma/therapy-materials/cotton-buds','/api/ma/therapy-materials/cotton-buds','/verify/documents/Example.pdf','/ma/unknown'])assert.equal(publicLinkTarget(href),href);
  const url='https://www.pinnacleblooms.org'+recovered[0].legacyPath;
  assert.equal(sunshineRedirect(new Request(url,{method:'POST'})),null);
  assert.equal(sunshineRedirect(new Request(url,{headers:{authorization:'Bearer test'}})),null);

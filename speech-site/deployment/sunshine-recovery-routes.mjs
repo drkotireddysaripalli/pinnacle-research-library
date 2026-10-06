@@ -1,5 +1,8 @@
 // Exact public records restored from the saved PlanetScale source.
 export const recoveryRoutes = {
+  // Podimo's published episode contains the shortened auto-link alongside the
+  // full Wilbarger destination in its YouTube redirect. Verified 6 October 2026.
+  "/ma/wil": "/ma/wilbarger-brush-therapy-tool",
   "/abilities/independence-&-autonomy": "/sunshine/topic/independence-and-autonomy-1646",
   "/abilities/planning-&-organization": "/sunshine/topic/planning-and-organisation-1679",
   "/abilities/play-&-imagination": "/sunshine/topic/play-and-imagination-1685",
