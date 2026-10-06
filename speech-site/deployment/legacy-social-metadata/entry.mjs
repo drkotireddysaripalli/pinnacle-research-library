@@ -84,9 +84,13 @@ async function repairHead(head, request) {
   const sameMirracle = /^\/mirracles\/\d+\/[^/]+\/?$/.test(requestUrl.pathname) &&
     parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '').toLowerCase();
   const sameRecordedCourse = requestUrl.pathname.replace(/\/$/,'')==='/courses/466/Afraid' && parsed.pathname==='/courses/466/afraid';
+  // Published numeric staff profiles likewise use lowercase canonical slugs.
+  // Retired profiles and recorded canonical redirects are handled before here.
+  const sameStaff = /^\/staff\/[^/]+\/\d+\/?$/.test(requestUrl.pathname) &&
+    parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '').toLowerCase();
   if (parsed.protocol !== 'https:' || parsed.hostname !== 'www.pinnacleblooms.org' ||
       parsed.port || parsed.username || parsed.password || parsed.search || parsed.hash ||
-      !(samePath || sameMirracle || sameRecordedCourse) ||
+      !(samePath || sameMirracle || sameRecordedCourse || sameStaff) ||
       ![target,target.replace(/^https:/, 'http:')].includes(previous)) return null;
   // A previously corrected social URL must not suppress the independent
   // JSON-LD repair. The same self-canonical/privacy guards still apply.

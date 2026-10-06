@@ -83,6 +83,12 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
       const head=await run({},'/physiotherapy',{method:'HEAD'});assert.equal(head.body,'');assert.equal(forwarded.method,'HEAD');
       const post=await run({},'/faq',{method:'POST',body:'fixture'});assert.equal(post.body,html());assert.equal(forwarded.method,'POST');
     });
+    await t.test('mixed-case numeric staff URLs retain their recorded lowercase identity and repair missing media',async()=>{
+      const path='/staff/K-Anusree/4767',canonical='/staff/k-anusree/4767';
+      const input=html(canonical).replace('</main>','<img src="/Images/ProfileImages/3549649944.jpg"></main>');
+      const {r,body}=await run({body:input},path);assert.equal(r.status,200);assert(body.includes('content="'+origin+canonical+'"'));assert(body.includes('data-pinnacle-brand-fallback'));assert(body.includes('Approved header'));assert(body.includes('Approved footer'));
+      for(const other of ['/staff/different-person/4767','/staff/k-anusree/999999']){const unknown=input.replaceAll(canonical,other);const result=await run({body:unknown},path);assert.equal(result.body,unknown);}
+    });
     await t.test('linked physiotherapy aliases redirect to canonical with exact query retained',async()=>{
       for(const path of ['/physio-therapy','/physio-therapy/','/physio-therapy?utm_source=site&x=%2F']){
         const {r,body}=await run({},path,{redirect:'manual'});
