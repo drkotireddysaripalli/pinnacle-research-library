@@ -20,6 +20,16 @@ test('Restored records are discoverable without duplicating existing identities 
  for(const r of records)assert(all.some(x=>x.id===r.id));for(const r of recovered)assert(all.some(x=>x.id===r.id&&x.url===r.url));
  assert.equal(sunshineTopic('topic/unknown'),null);assert.equal(recoveryPath('/ma/wil'),'/ma/wilbarger-brush-therapy-tool');
 });
+
+test('Legacy encoded ampersand attributes point straight to recovered topics',()=>{
+ for(const r of recovered.filter(r=>r.legacyPath.includes('&'))){
+  for(const entity of ['&amp;','&#38;','&#x26;']){
+   const raw='https://www.pinnacleblooms.org'+r.legacyPath.replaceAll('&',entity)+'?a=1'+entity+'b=2';
+   assert.equal(publicLinkTarget(raw),'https://www.pinnacleblooms.org'+r.url+'?a=1&b=2');
+  }
+ }
+ const external='https://example.com/path?a=1&amp;b=2';assert.equal(publicLinkTarget(external),external);
+});
 test('Broken placeholders are removed, with unrelated, sensitive and external links preserved',()=>{
  assert.equal(invalidSunshineLinks.size,2);for(const p of invalidSunshineLinks)assert.equal(publicLinkTarget(p),null);
  for(const href of ['https://example.com/ma/therapy-materials/cotton-buds','/api/ma/therapy-materials/cotton-buds','/verify/documents/Example.pdf','/ma/unknown'])assert.equal(publicLinkTarget(href),href);

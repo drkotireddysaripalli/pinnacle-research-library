@@ -4,7 +4,10 @@ import {recoveryPath,invalidSunshineLinks} from './sunshine-recovery-routes.mjs'
 // documents, downloads, authentication and arbitrary external destinations intact.
 export function publicLinkTarget(href) {
  if(typeof href!=='string'||!(/^(?:https?:\/\/(?:www\.)?pinnacleblooms\.org(?:[/?#]|$)|\/(?!\/))/.test(href)))return href;
- let url;try{url=new URL(href,'https://www.pinnacleblooms.org');}catch{return href;}
+ // HTMLRewriter exposes character references in legacy attribute values.
+ // Decode only ampersands for URL matching; untouched links retain their source.
+ const decodedHref=href.replace(/&(?:amp|#0*38|#x0*26);/gi,'&');
+ let url;try{url=new URL(decodedHref,'https://www.pinnacleblooms.org');}catch{return href;}
  if(!['pinnacleblooms.org','www.pinnacleblooms.org'].includes(url.hostname)||url.port||url.username||url.password)return href;
  let decoded;try{decoded=decodeURIComponent(url.pathname).replace(/\/$/,'');}catch{return href;}
  if(invalidSunshineLinks.has(decoded))return null;
