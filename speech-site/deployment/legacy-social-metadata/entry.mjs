@@ -16,6 +16,9 @@ export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teac
 export const ADDITIONAL_LEGACY_ROUTES = ['www.pinnacleblooms.org/t/*', 'www.pinnacleblooms.org/mirracles/*', ...ADDITIONAL_LEGACY_PATHS.map(p => 'www.pinnacleblooms.org' + p + '*')];
 const encoder = new TextEncoder();
 const transformedResponses = new WeakSet();
+// Attribution is still sent to the origin and remains in the visitor URL.
+// Only these known, content-neutral parameters may be removed from metadata.
+const TRACKING_PARAMETERS = new Set(['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','utm_source_platform','utm_creative_format','utm_marketing_tactic','gclid','dclid','msclkid','fbclid','gbraid','wbraid']);
 
 export function isEligible(request) {
   const url = new URL(request.url);
@@ -63,13 +66,24 @@ async function repairHead(head, request) {
     }})
     .transform(new Response(head)).text();
   if (canonical.length !== 1 || social.length !== 1 || robots.some(v => /noindex/i.test(v))) return null;
-  const target = canonical[0], previous = social[0];
+  const observedTarget = canonical[0], previous = social[0];
+  let target = observedTarget;
   const requestUrl = new URL(request.url);
+  let parsed;
+  try { parsed = new URL(target); } catch { return null; }
+  // The legacy origin copies the complete campaign URL into canonical and OG.
+  // Require an exact match to the request; functional/unknown queries pass through.
+  if (parsed.search) {
+    if (parsed.search !== requestUrl.search ||
+        ![...requestUrl.searchParams.keys()].every(key => TRACKING_PARAMETERS.has(key))) return null;
+    parsed.search = '';
+    target = parsed.href;
+  }
   // This public service hub incorrectly inherits the books subdomain identity.
   // Require the exact observed pair; all other canonical choices pass through.
   if (requestUrl.pathname.replace(/\/$/, '') === SERVICES_PATH &&
       target === 'https://books.pinnacleblooms.org' + SERVICES_PATH &&
-      previous === 'http://books.pinnacleblooms.org' + SERVICES_PATH) {
+      previous === observedTarget.replace(/^https:/, 'http:')) {
     return new HTMLRewriter()
       .on('head > link', {element(el) {
         if ((el.getAttribute('rel') || '').toLowerCase().split(/\s+/).includes('canonical')) el.setAttribute('href', SERVICES_URL);
@@ -78,8 +92,6 @@ async function repairHead(head, request) {
         if ((el.getAttribute('property') || '').toLowerCase() === 'og:url') el.setAttribute('content', SERVICES_URL);
       }}).transform(new Response(head)).text();
   }
-  let parsed;
-  try { parsed = new URL(target); } catch { return null; }
   const samePath = parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '');
   // The legacy numeric Mirracles routes publish lowercase canonical slugs.
   // Only that documented route family permits a case-normalized comparison.
@@ -93,11 +105,13 @@ async function repairHead(head, request) {
   if (parsed.protocol !== 'https:' || parsed.hostname !== 'www.pinnacleblooms.org' ||
       parsed.port || parsed.username || parsed.password || parsed.search || parsed.hash ||
       !(samePath || sameMirracle || sameRecordedCourse || sameStaff) ||
-      ![target,target.replace(/^https:/, 'http:')].includes(previous)) return null;
+      ![observedTarget,observedTarget.replace(/^https:/, 'http:')].includes(previous)) return null;
   // A previously corrected social URL must not suppress the independent
   // JSON-LD repair. The same self-canonical/privacy guards still apply.
-  if(previous===target)return head;
-  return new HTMLRewriter().on('head > meta', {element(el) {
+  if(previous===target&&observedTarget===target)return head;
+  return new HTMLRewriter().on('head > link', {element(el) {
+    if ((el.getAttribute('rel') || '').toLowerCase().split(/\s+/).includes('canonical')) el.setAttribute('href',target);
+  }}).on('head > meta', {element(el) {
     if ((el.getAttribute('property') || '').toLowerCase() === 'og:url' && el.getAttribute('content') === previous) el.setAttribute('content', target);
   }}).transform(new Response(head)).text();
 }

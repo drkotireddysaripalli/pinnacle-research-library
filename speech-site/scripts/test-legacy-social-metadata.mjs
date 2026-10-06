@@ -79,6 +79,23 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
       for(const path of ['/courses/466/Afraid','/courses/466/afraid']){const {body}=await run({body:input},path);assert(body.includes('content="https://www.pinnacleblooms.org/courses/466/afraid"'));assert(body.includes('data-pinnacle-brand-fallback'));assert(body.includes('href="https://www.pinnacleblooms.org/courses/466/afraid"'));}
       const {body}=await run({body:input},'/courses/999/Afraid');assert.equal(body,input);
     });
+    await t.test('campaign-copied metadata is repaired across the existing families without losing attribution',async()=>{
+      for(const path of ['/physiotherapy','/t/interactive-song-therapy','/skills/communication','/staff/k-anusree/4767','/top-autism-therapy-services-india-proven-improvement-rate']){
+        const query='?utm_source=pitchbox&utm_medium=email&utm_campaign=parent-guide&gclid=sample';
+        const input=html(path+query), {body,r}=await run({body:input},path+query,{headers:{cookie:'consent=1'}});
+        assert(body.includes('href="'+origin+path+'"'));assert(body.includes('content="'+origin+path+'"'));
+        assert.equal(body.slice(body.indexOf('<body>')),input.slice(input.indexOf('<body>')));
+        assert.equal(new URL(forwarded.url).search,query);assert.equal(forwarded.headers.get('cookie'),'consent=1');
+        assert.equal(r.headers.get('cache-control'),'private, max-age=60');
+      }
+    });
+    await t.test('unknown, functional and mismatched canonical query choices remain untouched',async()=>{
+      for(const query of ['?page=2','?q=child','?utm_source=pitchbox&page=2','?utm_custom=unknown']){
+        const input=html('/physiotherapy'+query),{body}=await run({body:input},'/physiotherapy'+query);assert.equal(body,input);
+      }
+      const input=html('/physiotherapy?utm_source=other');
+      assert.equal((await run({body:input},'/physiotherapy?utm_source=pitchbox')).body,input);
+    });
     await t.test('HEAD/POST retain origin method and body behavior',async()=>{
       const head=await run({},'/physiotherapy',{method:'HEAD'});assert.equal(head.body,'');assert.equal(forwarded.method,'HEAD');
       const post=await run({},'/faq',{method:'POST',body:'fixture'});assert.equal(post.body,html());assert.equal(forwarded.method,'POST');
