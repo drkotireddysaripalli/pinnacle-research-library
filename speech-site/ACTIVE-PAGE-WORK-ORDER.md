@@ -1,5 +1,9 @@
 # Current page work — 6 October 2026
 
+## Six-step search, reader journey and measurement delivery — active
+
+Direct instruction: complete the six recommendations and use Windsor where practically useful. Scope: five evidenced broken destinations; Suchitra and Chanda Nagar journeys; consented source attribution; Ask DEIC/AAC/WPPSI context and therapy selection; declared mobile/browser regression; bounded settled-result feedback. Full work order and source evidence are in `../../pinnacle-growth-system/six-step-release-20261006/WORK-ORDER.md`. Keep accepted common shell, auth, full route/binding/asset union and unrelated commerce intact. No new whole-site crawl or resumed general heartbeat. Actual receiving-team outcomes remain an explicit data dependency. Completion requires exact commit, deployment and public read-back.
+
 ## Authorised website-call measurement repair — deployed and verified
 
 The human approved the Ads owner sending this bounded repair on 6 October. This website thread owns source, release and verification. Add a distinct advertising call-measurement choice using the current shared footer, preserve independent analytics and ordinary calling, exclude private Ask/auth/search/API pages, and restore numbers on withdrawal. Reuse the existing conversion action; no budget, bidding, health audiences, paid clicks or test calls. Acceptance: consent/browser/callback regression, current source CI, inactive candidates, full route/binding/asset preservation and live read-back. Existing growth schedule and unrelated page work stay held.

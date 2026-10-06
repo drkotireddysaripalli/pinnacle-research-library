@@ -12,13 +12,13 @@ export function answerReading(markdown:string){
  });
  return {html,outline};
 }
-const serviceValues:Record<string,string>={speech:'speech',ot:'occupational',occupational:'occupational',aba:'aba',special_education:'education',autism:'help'};
-const entityIndex:Record<string,number>={speech:0,speech_therapy:0,speech_language_therapy:0,ot:1,occupational_therapy:1,aba:2,behaviour_therapy:2,behavior_therapy:2,special_education:3,autism:4};
+const serviceValues:Record<string,string>={speech:'speech',aac:'speech',ot:'occupational',occupational:'occupational',aba:'aba',special_education:'education',autism:'autism'};
+const entityIndex:Record<string,number>={speech:0,aac:0,speech_therapy:0,speech_language_therapy:0,ot:1,occupational_therapy:1,aba:2,behaviour_therapy:2,behavior_therapy:2,special_education:3,autism:4};
 export function answerContext(a:any){
  const e=a.entity||{};const prefix=a.lang==='te'?ASK+'/te':ASK;
  const topic=typeof e.kind==='string'&&typeof e.key==='string'&&/^[\w-]+$/.test(e.kind)&&/^[\w-]+$/.test(e.key)?{label:e.name||e.key,url:prefix+'/lens/'+encodeURIComponent('entity:'+e.kind)+'/'+encodeURIComponent(e.key)}:null;
  const exact=entityIndex[e.key];const matches=exact!==undefined?[therapyLinks[exact]]:therapyLinks.filter(t=>t.terms.test(a.title+' '+(e.name||''))).slice(0,2);
- const enrolValue=serviceValues[e.key]||({'0':'speech','1':'occupational','2':'aba','3':'education','4':'help'} as any)[therapyLinks.indexOf(matches[0])];
+ const enrolValue=serviceValues[e.key]||({'0':'speech','1':'occupational','2':'aba','3':'education','4':'autism'} as any)[therapyLinks.indexOf(matches[0])];
  const parent=dimensions.find(d=>d.slug===(a.parent?.key==='lifeskills'?'life-skills':a.parent?.key));
  return {topic,parent:parent?{label:parent.title,url:prefix+'/'+parent.slug}:null,services:matches.map(t=>({...t,url:SITE+t.url})),enrol:contact.enrol+(enrolValue?'?service='+enrolValue:'')};
 }

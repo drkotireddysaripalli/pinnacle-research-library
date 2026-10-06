@@ -5,10 +5,10 @@ export const suchitraPath=new URL(suchitra.profileUrl).pathname;
 export const suchitraEnquiry='https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra';
 export const suchitraContent={
  path:suchitraPath,
- title:'Suchitra, Hyderabad Centre | Pinnacle Blooms Network',
- description:'Explore Pinnacle Blooms Suchitra: real centre photos, directions above Mahesh Bank, therapy questions, published team profiles and a life-first approach. Call 9100 181 181.',
+ title:'Speech & Autism Therapy in Suchitra | Pinnacle Blooms',
+ description:'Looking for speech or autism support in Suchitra, Hyderabad? See our centre photos, Mahesh Bank landmark, directions and first-visit guide. Call 9100 181 181.',
  address:'Adjacent to Municipal Park and Mee Seva, above Mahesh Bank, Suchitra Circle, Bowenpally, Hyderabad, Telangana 500067, India',
- googleProfile:'https://g.page/r/CQf71jcpVLLBEAE',
+ googleProfile:'https://maps.google.com/maps?cid=13957310731181816583',
  googleReview:'https://g.page/r/CQf71jcpVLLBEBM/review',
  direct:'For your Suchitra visit, use our address above Mahesh Bank, near Municipal Park and Mee Seva at Suchitra Circle, Hyderabad. Call 9100 181 181 to discuss your child’s everyday priorities and confirm a suitable professional, service, appointment and fees before visiting.',
  exampleTitle:"An interest in building. A chance to play together.",

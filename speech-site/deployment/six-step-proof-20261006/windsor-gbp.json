@@ -1,0 +1,39 @@
+{
+  "retrievedAt": "2026-10-06",
+  "source": "Windsor native connector",
+  "data": {
+    "status": "done",
+    "job_id": "130e44b7cc91a13ccb6d268df7639247",
+    "data": [
+      {
+        "location_id": "locations/1393036749533088416",
+        "location_title": "Pinnacle Blooms Network® - Chandanagar | Autism Therapy | Speech Therapy | Occupational | ABA | Child Development Center",
+        "location_address_lines": [
+          "Above Twins Toy Store, Happy Hospital",
+          "near Fernandez Hospital"
+        ],
+        "location_address_locality": "Madeenaguda",
+        "location_address_postal_code": "500049",
+        "location_metadata_maps_uri": "https://maps.google.com/maps?cid=6267432914811534928",
+        "location_website_uri": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+        "location_open_info_status": "OPEN",
+        "location_primary_phone": "091001 81181"
+      },
+      {
+        "location_id": "locations/17679311780277453396",
+        "location_title": "Pinnacle Blooms® — Suchitra | Autism Therapy | Speech Therapy | Occupational Therapy | ABA Therapy | Child Development Center",
+        "location_address_lines": [
+          "Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle",
+          "Bowenpally, Hyderabad, Telangana 500067"
+        ],
+        "location_address_locality": "Hyderabad",
+        "location_address_postal_code": "500067",
+        "location_metadata_maps_uri": "https://maps.google.com/maps?cid=13957310731181816583",
+        "location_website_uri": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "location_open_info_status": "OPEN",
+        "location_primary_phone": "091001 81181"
+      }
+    ],
+    "total_rows": 2
+  }
+}

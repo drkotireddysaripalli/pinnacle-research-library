@@ -1,0 +1,542 @@
+{
+  "at": "2026-10-06T06:11:31.118Z",
+  "coverage": [
+    {
+      "page": "suchitra",
+      "engine": "chromium",
+      "width": 320,
+      "status": 200,
+      "metrics": {
+        "title": "Speech & Autism Therapy in Suchitra | Pinnacle Blooms",
+        "h1": [
+          "Speech and autism support in Suchitra. Your child’s everyday life gives us the direction."
+        ],
+        "width": 320,
+        "scroll": 320,
+        "brokenImages": [],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "chandanagar",
+      "engine": "chromium",
+      "width": 320,
+      "status": 200,
+      "metrics": {
+        "title": "Autism & Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms",
+        "h1": [
+          "Autism and speech support in Chanda Nagar.Begin with your child’s everyday life."
+        ],
+        "width": 320,
+        "scroll": 320,
+        "brokenImages": [],
+        "formLinks": [
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar",
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "deic",
+      "engine": "chromium",
+      "width": 320,
+      "status": 200,
+      "metrics": {
+        "title": "DEIC: Services, Age & How to Visit | Ask Pinnacle",
+        "h1": [
+          "What is a DEIC, and how can it help your child?"
+        ],
+        "width": 320,
+        "scroll": 320,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "aac",
+      "engine": "chromium",
+      "width": 320,
+      "status": 200,
+      "metrics": {
+        "title": "Aac | Ask Pinnacle",
+        "h1": [
+          "Aac"
+        ],
+        "width": 320,
+        "scroll": 320,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "suchitra",
+      "engine": "chromium",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "title": "Speech & Autism Therapy in Suchitra | Pinnacle Blooms",
+        "h1": [
+          "Speech and autism support in Suchitra. Your child’s everyday life gives us the direction."
+        ],
+        "width": 390,
+        "scroll": 390,
+        "brokenImages": [],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "chandanagar",
+      "engine": "chromium",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "title": "Autism & Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms",
+        "h1": [
+          "Autism and speech support in Chanda Nagar.Begin with your child’s everyday life."
+        ],
+        "width": 390,
+        "scroll": 390,
+        "brokenImages": [],
+        "formLinks": [
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar",
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "deic",
+      "engine": "chromium",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "title": "DEIC: Services, Age & How to Visit | Ask Pinnacle",
+        "h1": [
+          "What is a DEIC, and how can it help your child?"
+        ],
+        "width": 390,
+        "scroll": 390,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "aac",
+      "engine": "chromium",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "title": "Aac | Ask Pinnacle",
+        "h1": [
+          "Aac"
+        ],
+        "width": 390,
+        "scroll": 390,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "suchitra",
+      "engine": "chromium",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "title": "Speech & Autism Therapy in Suchitra | Pinnacle Blooms",
+        "h1": [
+          "Speech and autism support in Suchitra. Your child’s everyday life gives us the direction."
+        ],
+        "width": 768,
+        "scroll": 768,
+        "brokenImages": [],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "chandanagar",
+      "engine": "chromium",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "title": "Autism & Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms",
+        "h1": [
+          "Autism and speech support in Chanda Nagar.Begin with your child’s everyday life."
+        ],
+        "width": 768,
+        "scroll": 768,
+        "brokenImages": [],
+        "formLinks": [
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar",
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "deic",
+      "engine": "chromium",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "title": "DEIC: Services, Age & How to Visit | Ask Pinnacle",
+        "h1": [
+          "What is a DEIC, and how can it help your child?"
+        ],
+        "width": 768,
+        "scroll": 768,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "aac",
+      "engine": "chromium",
+      "width": 768,
+      "status": 200,
+      "metrics": {
+        "title": "Aac | Ask Pinnacle",
+        "h1": [
+          "Aac"
+        ],
+        "width": 768,
+        "scroll": 768,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "suchitra",
+      "engine": "chromium",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "title": "Speech & Autism Therapy in Suchitra | Pinnacle Blooms",
+        "h1": [
+          "Speech and autism support in Suchitra. Your child’s everyday life gives us the direction."
+        ],
+        "width": 1440,
+        "scroll": 1440,
+        "brokenImages": [],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "chandanagar",
+      "engine": "chromium",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "title": "Autism & Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms",
+        "h1": [
+          "Autism and speech support in Chanda Nagar.Begin with your child’s everyday life."
+        ],
+        "width": 1440,
+        "scroll": 1440,
+        "brokenImages": [],
+        "formLinks": [
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar",
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "deic",
+      "engine": "chromium",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "title": "DEIC: Services, Age & How to Visit | Ask Pinnacle",
+        "h1": [
+          "What is a DEIC, and how can it help your child?"
+        ],
+        "width": 1440,
+        "scroll": 1440,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "aac",
+      "engine": "chromium",
+      "width": 1440,
+      "status": 200,
+      "metrics": {
+        "title": "Aac | Ask Pinnacle",
+        "h1": [
+          "Aac"
+        ],
+        "width": 1440,
+        "scroll": 1440,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "suchitra",
+      "engine": "webkit",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "title": "Speech & Autism Therapy in Suchitra | Pinnacle Blooms",
+        "h1": [
+          "Speech and autism support in Suchitra. Your child’s everyday life gives us the direction."
+        ],
+        "width": 390,
+        "scroll": 390,
+        "brokenImages": [],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "chandanagar",
+      "engine": "webkit",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "title": "Autism & Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms",
+        "h1": [
+          "Autism and speech support in Chanda Nagar.Begin with your child’s everyday life."
+        ],
+        "width": 390,
+        "scroll": 384,
+        "brokenImages": [],
+        "formLinks": [
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar",
+          "/enroll-autism-speech-aba-therapies-india?service=help&centre=chandanagar"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "deic",
+      "engine": "webkit",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "title": "DEIC: Services, Age & How to Visit | Ask Pinnacle",
+        "h1": [
+          "What is a DEIC, and how can it help your child?"
+        ],
+        "width": 390,
+        "scroll": 390,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "page": "aac",
+      "engine": "webkit",
+      "width": 390,
+      "status": 200,
+      "metrics": {
+        "title": "Aac | Ask Pinnacle",
+        "h1": [
+          "Aac"
+        ],
+        "width": 390,
+        "scroll": 390,
+        "brokenImages": [
+          null,
+          null
+        ],
+        "formLinks": [
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+          "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+        ],
+        "phone": true
+      },
+      "errors": []
+    },
+    {
+      "engine": "firefox",
+      "status": "skipped",
+      "reason": "Error: browserType.launch: spawn UNKNOWN\nCall log:\n\u001b[2m  - <launching> C:\\Users\\Siri Palace\\AppData\\Local\\ms-playwright\\firefox-1543\\firefox\\firefox.exe -no-remote -headless -profile C:\\Users\\SIRIPA~1"
+    }
+  ],
+  "noSubmissions": true,
+  "noCalls": true
+}

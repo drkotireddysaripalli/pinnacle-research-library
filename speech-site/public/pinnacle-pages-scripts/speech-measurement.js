@@ -60,7 +60,10 @@
   // Send only a known referring platform's origin, never its paths, search
   // terms, visitor-entered campaign values, or private referring domains.
   let safeReferrer = '';
-  if (isBookshop) try {
+  // Keep only a recognised public platform's origin. Never send its query,
+  // private path or the medical topic being read. This also preserves source
+  // attribution for consented Ask, knowledge and therapy visits.
+  try {
     const ref = new URL(document.referrer);
     const sources = new Set(['google.com','www.google.com','google.co.in','www.google.co.in','bing.com','www.bing.com','duckduckgo.com','www.duckduckgo.com','search.yahoo.com','chatgpt.com','www.perplexity.ai','perplexity.ai','gemini.google.com','claude.ai','www.facebook.com','m.facebook.com','l.facebook.com','www.instagram.com','l.instagram.com','www.linkedin.com','www.youtube.com','t.co']);
     if (ref.protocol === 'https:' && !ref.username && !ref.password && !ref.port && sources.has(ref.hostname)) safeReferrer = ref.origin + '/';

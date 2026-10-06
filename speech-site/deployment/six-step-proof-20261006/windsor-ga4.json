@@ -1,0 +1,24 @@
+{
+  "retrievedAt": "2026-10-06",
+  "source": "Windsor native connector",
+  "request": {"property":"361649365","start":"2026-09-29","end":"2026-10-05","filter":"landing_page contains /ask"},
+  "data": {
+    "status": "done",
+    "job_id": "b46b076c28a16b99c4922ee13f93bcec",
+    "data": [
+      {
+        "date": "2026-10-01",
+        "landing_page": "/ask",
+        "session_default_channel_group": "Direct",
+        "sessions": 1
+      },
+      {
+        "date": "2026-10-03",
+        "landing_page": "/ask",
+        "session_default_channel_group": "Direct",
+        "sessions": 2
+      }
+    ],
+    "total_rows": 2
+  }
+}

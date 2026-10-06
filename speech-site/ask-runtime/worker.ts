@@ -21,6 +21,7 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  if(!['GET','HEAD'].includes(request.method))return new Response(null,{status:405,headers:{Allow:'GET, HEAD'}});
  if(url.pathname.startsWith('/ask/_assets/')||url.pathname.startsWith('/ask/_image'))return handle(request,env,ctx);
  const path=url.pathname.replace(/\/+$/,'');
+ if(path==='/sunshine-condition.xml')return Response.redirect('https://www.pinnacleblooms.org/sunshine/sitemap.xml',301);
  const knowledge=/^\/(?:faq|sunshine)(?:\/|$)/.test(path)||path==='/allmirracles'||path==='/allmirracles-sitemap.xml';
  if(knowledge&&url.hostname==='pinnacleblooms.org'){url.hostname='www.pinnacleblooms.org';return Response.redirect(url.href,308);}
  if(knowledge&&path!==url.pathname){url.pathname=path;return Response.redirect(url.href,308);}
@@ -48,6 +49,7 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  if(path==='/ask/sitemap-navigation.xml'){
  const enabled=await rpc(env,'ask_indexing_enabled');
  const paths=enabled?['','/lens','/conditions','/behaviours','/skills','/abilities','/domains','/ages','/life-skills','/assessments','/readiness','/therapies','/techniques','/people','/standards-icf','/standards-icd','/dataset','/topic-index','/dayc-2','/lens/ability/child-characteristics']:[];
+ if(enabled){const [wppsi,aac]=await Promise.all([rpc(env,'ask_portal_collection',{p_kind:'topic',p_value:'wppsi-iv',p_lang:'en',p_page:1}),rpc(env,'ask_portal_collection',{p_kind:'entity:therapy_modality',p_value:'aac',p_lang:'en',p_page:1})]);if(wppsi.total>=4)paths.push('/wppsi-iv');if(aac.indexable&&aac.total)paths.push('/lens/entity%3Atherapy_modality/aac');}
  return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+paths.map(p=>'<url><loc>'+ASK+p+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
  }
  const exportMatch=path.match(/^\/ask\/([\w-]+)\.(md|json)$/);
@@ -58,7 +60,7 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  }
  if(/^\/ask\/(?:og\/|f\/)/.test(path)||/\.(svg|png|woff2|js|xsl)$/.test(path))return legacy.fetch(request,env,ctx);
  const cacheable=!/^\/ask\/(?:te\/)?search$/.test(path)&&request.method==='GET'&&[...url.searchParams].every(([key,value])=>key==='page'&&/^[1-9][0-9]{0,3}$/.test(value));
- const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261006-v19-call-consent');
+ const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261006-v20-six-step');
  const cacheKey=new Request(cacheURL);const cache=(caches as any).default;
  // Cache API hits can inherit the zone's longer browser TTL. Reapply the page
  // policy after lookup so edge caching never makes browsers retain old releases.

@@ -1,0 +1,89 @@
+{
+  "mode": "local public-content presentation; identity UI tested separately",
+  "rows": [
+    {
+      "id": "suchitra",
+      "width": 390,
+      "overflow": 0,
+      "h1": "Speech and autism support. Here in Suchitra.",
+      "govSources": 0
+    },
+    {
+      "id": "chandanagar",
+      "width": 390,
+      "overflow": 0,
+      "h1": "Autism and speech support in Chanda Nagar.Begin with your child’s everyday life.",
+      "govSources": 0
+    },
+    {
+      "id": "deic",
+      "width": 390,
+      "overflow": 0,
+      "h1": "What is a DEIC, and how can it help your child?",
+      "govSources": 4
+    },
+    {
+      "id": "aac",
+      "width": 390,
+      "overflow": 0,
+      "h1": "Aac",
+      "govSources": 0
+    },
+    {
+      "id": "suchitra",
+      "width": 768,
+      "overflow": 0,
+      "h1": "Speech and autism support. Here in Suchitra.",
+      "govSources": 0
+    },
+    {
+      "id": "chandanagar",
+      "width": 768,
+      "overflow": 0,
+      "h1": "Autism and speech support in Chanda Nagar.Begin with your child’s everyday life.",
+      "govSources": 0
+    },
+    {
+      "id": "deic",
+      "width": 768,
+      "overflow": 0,
+      "h1": "What is a DEIC, and how can it help your child?",
+      "govSources": 4
+    },
+    {
+      "id": "aac",
+      "width": 768,
+      "overflow": 0,
+      "h1": "Aac",
+      "govSources": 0
+    },
+    {
+      "id": "suchitra",
+      "width": 1440,
+      "overflow": 0,
+      "h1": "Speech and autism support. Here in Suchitra.",
+      "govSources": 0
+    },
+    {
+      "id": "chandanagar",
+      "width": 1440,
+      "overflow": 0,
+      "h1": "Autism and speech support in Chanda Nagar.Begin with your child’s everyday life.",
+      "govSources": 0
+    },
+    {
+      "id": "deic",
+      "width": 1440,
+      "overflow": 0,
+      "h1": "What is a DEIC, and how can it help your child?",
+      "govSources": 4
+    },
+    {
+      "id": "aac",
+      "width": 1440,
+      "overflow": 0,
+      "h1": "Aac",
+      "govSources": 0
+    }
+  ]
+}

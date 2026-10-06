@@ -1,4 +1,5 @@
 import {repairContentLinks} from './links';
+import {reviewedAnswer} from './editorial';
 export async function rpc(env:any,name:string,body:any={}){
  if(!env.SUPABASE_URL||!env.SUPABASE_KEY)throw new Error('Public content connection is unavailable');
  const cacheable=name!=='ask_public_search';
@@ -21,7 +22,7 @@ export function resourceItems(value:any):Record<string,any>[] {
 export async function answer(env:any,slug:string,lang='en'){
  if(!/^[a-zA-Z0-9][a-zA-Z0-9_-]{0,240}$/.test(slug))return null;
  const actual=lang==='te'&&!slug.endsWith('-te')?slug+'-te':slug;
- const a=await rpc(env,'ask_portal_answer',{p_slug:actual,p_lang:lang});
+ const a=reviewedAnswer(await rpc(env,'ask_portal_answer',{p_slug:actual,p_lang:lang}));
  if(!a||typeof a.slug!=='string')return null;
  return {...a,answer_md:repairContentLinks(a.answer_md||''),related_materials:resourceItems(a.related_materials),related_techniques:resourceItems(a.related_techniques)};
 }

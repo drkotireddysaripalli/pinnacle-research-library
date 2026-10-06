@@ -11,6 +11,7 @@ import AskContact from '../../../src/components/ask/AskContact.astro';
 import {ASK,SITE,dimensions,guides,pretty,safeAskLink} from '../../../src/lib/ask/content';
 import {answer,directory,collection,search,rpc} from '../../../src/lib/ask/repository';
 import {institution} from '../../../src/lib/ask/overrides';
+import {askRouteAlias} from '../../../src/lib/ask/route-aliases';
 let invalidPath=false;
 let path=(Astro.params.path||'').replace(/\/+$/,'').split('/').map(segment=>{
  try { const decoded=decodeURIComponent(segment); if(/[\/\\\x00-\x1f\x7f]/.test(decoded))invalidPath=true; return decoded; }
@@ -18,6 +19,8 @@ let path=(Astro.params.path||'').replace(/\/+$/,'').split('/').map(segment=>{
 }).join('/');
 let lang=path==='te'||path.startsWith('te/')?'te':'en';
 if(lang==='te')path=path.replace(/^te\/?/,'');if(path.endsWith('-te'))lang='te';
+const alias=!invalidPath&&askRouteAlias(path,lang);
+if(alias){const next=new URL(ASK+'/'+alias);const p=Astro.url.searchParams.get('page');if(p&&/^[1-9]\d{0,3}$/.test(p))next.searchParams.set('page',p);return Astro.redirect(next.href,301);}
 const page=Math.min(2000,Math.max(1,Number.parseInt(Astro.url.searchParams.get('page')||'1')||1));
 const q=path==='search'?(Astro.url.searchParams.get('q')||'').trim().slice(0,200):'';
 let mode='home',title='Ask Pinnacle | Child development questions, answers & guidance',intro='Clear explanations about child development, therapies and everyday life. Explore questions, sources and next steps with Pinnacle Blooms Network.';
@@ -48,6 +51,8 @@ try{
  // These two established search destinations have distinct, useful published question sets.
  if(mode==='collection'&&lang==='en'&&data.total>=4){
   if(path==='dayc-2'){data.indexable=true;title='DAYC-2 assessment: age, purpose and what to expect | Ask Pinnacle';intro='Explore DAYC-2 questions about assessment age, what it measures, the assessment experience, strengths, limits and its comparison with AbilityScore.';}
+  if(path==='wppsi-iv'){data.indexable=true;title='WPPSI-IV assessment: age, purpose and what to expect | Ask Pinnacle';intro='Understand the WPPSI-IV cognitive assessment: who it is for, what happens during the assessment, its strengths and limits, and questions to discuss with a qualified professional.';}
+  if(path==='lens/entity:therapy_modality/aac'){title='AAC: communication beyond speech | Ask Pinnacle';intro='Augmentative and alternative communication (AAC): explore questions about communication tools, everyday practice, family participation and progress. Use the explanations to prepare a useful conversation with a qualified professional.';}
   if(path==='lens/ability/child-characteristics'){data.indexable=true;title='Understanding child characteristics: questions and everyday support | Ask Pinnacle';intro='Explore questions about emerging child characteristics, when to discuss support, everyday practice at home and an Everyday Therapy activity.';}
  }
  if(['collection','guide'].includes(mode)&&!data.indexable)robots='noindex, follow';

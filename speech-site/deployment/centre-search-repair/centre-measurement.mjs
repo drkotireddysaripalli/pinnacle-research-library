@@ -4,7 +4,8 @@ export const CENTRE_ROUTES = {
   '/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india': {id:'kukatpally',service:'speech'},
   '/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india': {id:'lbnagar',service:'help'},
   '/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india': {id:'labbipet',service:'help'},
-  '/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india': {id:'annanagar',service:'help'}
+  '/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india': {id:'annanagar',service:'help'},
+  '/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india': {id:'chandanagar',service:'help'}
 };
 
 export function centreContactMeasurement(config) {

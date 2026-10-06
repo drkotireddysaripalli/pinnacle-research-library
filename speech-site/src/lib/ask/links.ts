@@ -14,8 +14,11 @@ const destinations:Record<string,string>={
 export function canonicalContentLink(href:string){
  let url:URL;try{url=new URL(href,portal)}catch{return href}
  if(!['pinnacleblooms.org','www.pinnacleblooms.org'].includes(url.hostname)||url.protocol!=='https:')return href;
- const target=destinations[url.pathname];return target?target+url.search+url.hash:href;
+ const oldAsk=url.pathname.startsWith('/ask/')?url.pathname.slice(5):null;
+ const alias=oldAsk&&askRouteAlias(oldAsk);
+ const target=alias?ask+'/'+alias:destinations[url.pathname];return target?target+url.search+url.hash:href;
 }
 export function repairContentLinks(markdown:string){
  return markdown.replace(/\]\((<?)([^\s)]+)(>?)\)/g,(_,open,href,close)=>']('+open+canonicalContentLink(href.replace(/>$/,''))+close+')');
 }
+import {askRouteAlias} from './route-aliases.ts';

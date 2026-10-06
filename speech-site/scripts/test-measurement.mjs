@@ -4,6 +4,22 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 const source = fs.readFileSync('public/pinnacle-pages-scripts/speech-measurement.js','utf8');
 const key='pinnacle-speech-analytics-v1';
+test('consented public journeys retain only recognised referrer origins, never answer or search details',()=>{
+ for(const referrer of ['https://www.google.com/search?q=private-child-detail','https://www.bing.com/search?q=private','https://chatgpt.com/c/private-chat']){
+  const h=harness({origin:'https://pinnacleblooms.org',path:'/ask/private-medical-topic',variant:'ask',referrer});
+  assert.equal(h.events().length,0);h.choose('accepted');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+  assert.equal(config.page_referrer,new URL(referrer).origin+'/');assert.equal(config.ignore_referrer,false);
+  assert.equal(config.page_location,'https://pinnacleblooms.org/ask');
+  assert(!JSON.stringify(h.win.dataLayer).includes('private'));assert(!JSON.stringify(h.win.dataLayer).includes('secret'));
+ }
+});
+test('unrecognised, authenticated and private referrers remain excluded',()=>{
+ for(const referrer of ['https://private.example/child','https://google.com.evil.example/search','https://user:pass@www.google.com/search','http://www.google.com/','https://pinnacleblooms.org/ask/private','https://www.google.com:9443/']){
+  const h=harness({referrer});h.choose('accepted');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];assert.equal(config.page_referrer,'');assert.equal(config.ignore_referrer,true);
+ }
+});
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
 function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
@@ -39,7 +55,7 @@ test('book acquisition sends a known origin, never referring paths, queries or a
   const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];assert.equal(config.ignore_referrer,!expected);
   assert(!JSON.stringify(h.win.dataLayer).includes('private'));assert.equal(config.campaign_term,'');
  }
- const therapy=harness({referrer:'https://www.google.com/search?q=private'});therapy.choose('accepted');assert.equal(therapy.events()[0][2].page_referrer,'');
+ const therapy=harness({referrer:'https://www.google.com/search?q=private'});therapy.choose('accepted');assert.equal(therapy.events()[0][2].page_referrer,'https://www.google.com/');
 });
 
 test('free resource downloads need consent and carry only the fixed resource identity',()=>{
