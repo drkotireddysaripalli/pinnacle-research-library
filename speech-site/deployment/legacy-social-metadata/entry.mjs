@@ -8,6 +8,7 @@ import {SERVICES_PATH, SERVICES_URL, physiotherapyRedirect, repairServiceLinks} 
 import {repairKnownLegacySchema} from './schema.mjs';
 import {repairKnownBrokenMedia} from './media.mjs';
 import {repairPublicLinks} from '../public-link-target.mjs';
+import {sunshineRedirect} from '../sunshine-recovery-routes.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 // Existing legacy templates with the same measured HTTP social/HTTPS canonical defect.
@@ -21,7 +22,7 @@ export function isEligible(request) {
   return request.method === 'GET' && url.protocol === 'https:' &&
     url.hostname === 'www.pinnacleblooms.org' &&
     (url.pathname === '/faq' || url.pathname.startsWith('/faq/') ||
-      /^\/(?:t|c|ma|b)\/[^/]+\/?$/.test(url.pathname) || /^\/mirracles\/\d+\/[^/]+\/?$/.test(url.pathname) ||
+      /^\/(?:t|c|ma|b|m|a|abs|abilities|skills)\/[^/]+\/?$/.test(url.pathname) || /^\/mirracles\/\d+\/[^/]+\/?$/.test(url.pathname) ||
       /^\/staff\/[^/]+\/\d+\/?$/.test(url.pathname) ||
       ADDITIONAL_LEGACY_PATHS.includes(url.pathname.replace(/\/$/, '')) ||
       ['/physiotherapy', '/physiotherapy/', SERVICES_PATH, SERVICES_PATH + '/'].includes(url.pathname)) &&
@@ -142,7 +143,7 @@ export async function transform(request, response) {
 }
 
 export async function handle(request, fetcher = fetch) {
-  const redirect = staffRoute(request) || physiotherapyRedirect(request);
+  const redirect = sunshineRedirect(request) || staffRoute(request) || physiotherapyRedirect(request);
   if (redirect) return redirect;
   if (request.method === 'GET' && new URL(request.url).origin + new URL(request.url).pathname === 'https://www.pinnacleblooms.org/franchise-autism-therapy-center' && !request.headers.has('authorization') && !request.headers.has('range')) {
     const headers = new Headers(request.headers);

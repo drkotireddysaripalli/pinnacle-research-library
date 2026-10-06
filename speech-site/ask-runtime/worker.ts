@@ -7,6 +7,7 @@ import {ASK} from '../src/lib/ask/content';
 import {answerNavigation} from '../src/lib/ask/answer-presentation';
 import {AUTH_HEADERS} from '../src/lib/ask/auth.mjs';
 import {data as knowledgeData,languages as knowledgeLanguages,themes as knowledgeThemes,sunshineTypes,pageURL as knowledgePageURL,ORIGIN as knowledgeOrigin} from '../src/lib/knowledge/catalogues';
+import {sunshineRecords,recovered} from '../src/lib/knowledge/recovery.mjs';
 const xml=(s:any)=>String(s??'').replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]!));
 const textHeaders={'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=300','x-content-type-options':'nosniff'};
 const guide='# Ask Pinnacle\n\nPublic child-development questions and answers from Pinnacle Blooms Network, operated by Bharath Healthcare Laboratories Private Limited.\n\nHome: '+ASK+'\nBrowse: '+ASK+'/lens\nSources and retrieval: '+ASK+'/dataset\nSitemap: '+ASK+'/sitemap.xml\nMCP: https://ask-mcp.pinnacleblooms.org/mcp\n\nAnswer canonicals support .md and .json public representations. Use page-level robots, publication status, sources and dates. Public information is not individual diagnosis. This reading aid is not an AI submission or an endorsement.\n';
@@ -36,7 +37,7 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
    const rows=await knowledgeData(env,'faq-index');paths=rows.map((x:any)=>x.url);addPages('/faq',rows.filter((x:any)=>x.language==='english').length,24);
    for(const language of Object.keys(knowledgeLanguages)){const subset=rows.filter((x:any)=>x.language===language);addPages('/faq/'+language,subset.length,24);for(const theme of knowledgeThemes){const n=subset.filter((x:any)=>x.category===theme.slug).length;if(n)addPages('/faq/'+language+'/'+theme.slug,n,24);}}
   }else if(path==='/sunshine/sitemap.xml'){
-   const rows=await knowledgeData(env,'sunshine-index');addPages('/sunshine',rows.length,24);for(const type of sunshineTypes){const n=rows.filter((x:any)=>x.type===type.key).length;if(n)addPages('/sunshine/'+type.slug,n,24);}
+   const rows=sunshineRecords(await knowledgeData(env,'sunshine-index'));paths.push(...recovered.map(x=>x.url));addPages('/sunshine',rows.length,24);for(const type of sunshineTypes){const n=rows.filter((x:any)=>x.type===type.key).length;if(n)addPages('/sunshine/'+type.slug,n,24);}
   }else{const manifest=await knowledgeData(env,'manifest');addPages('/allmirracles',manifest.mirraclesCount,60);}
   return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...new Set(paths)].map(p=>'<url><loc>'+xml(knowledgeOrigin+p)+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
  }
@@ -60,7 +61,7 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  }
  if(/^\/ask\/(?:og\/|f\/)/.test(path)||/\.(svg|png|woff2|js|xsl)$/.test(path))return legacy.fetch(request,env,ctx);
  const cacheable=!/^\/ask\/(?:te\/)?search$/.test(path)&&request.method==='GET'&&[...url.searchParams].every(([key,value])=>key==='page'&&/^[1-9][0-9]{0,3}$/.test(value));
- const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build','astro-20261006-v20-six-step');
+ const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build',knowledge?'astro-20261006-v21-sunshine-recovery':'astro-20261006-v20-six-step');
  const cacheKey=new Request(cacheURL);const cache=(caches as any).default;
  // Cache API hits can inherit the zone's longer browser TTL. Reapply the page
  // policy after lookup so edge caching never makes browsers retain old releases.

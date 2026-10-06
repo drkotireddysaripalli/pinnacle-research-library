@@ -1,0 +1,21 @@
+---
+import Icon from '../Icon.astro';
+import NextStep from './NextStep.astro';
+import {themes,sunshineTypes} from '../../lib/knowledge/catalogues';
+import {recovered} from '../../lib/knowledge/recovery.mjs';
+const {topic}=Astro.props;
+const theme=themes.find(t=>t.slug===topic.theme),type=sunshineTypes.find(t=>t.key===topic.type);
+const related=recovered.filter(x=>x.id!==topic.id&&x.theme===topic.theme).slice(0,4);
+const materials=topic.type==='MATERIAL';
+---
+<nav class="knowledge-crumbs" aria-label="Breadcrumb"><a href="/sunshine">Sunshine</a><span aria-hidden="true">›</span><a href={'/sunshine/'+type.slug}>{type.label}</a></nav>
+<header class="knowledge-hero"><p class="knowledge-kicker"><Icon name={type.icon}/>Pinnacle Sunshine · {type.label}</p><h1>{topic.title}</h1><p>{topic.description}</p><div class="knowledge-actions"><a class="knowledge-primary" href="tel:+919100181181" data-cta="sunshine-topic-call"><Icon name="phone"/>Call 9100 181 181</a><a href="#everyday">Connect this to your child’s day <Icon name="arrow"/></a></div></header>
+<div class="knowledge-answer-grid"><article class="knowledge-answer">
+ {topic.image&&<img class="knowledge-answer-hero" src={topic.image} alt={'Pinnacle Sunshine illustration for '+topic.title.toLowerCase()} loading="lazy" decoding="async" width={topic.imageWidth} height={topic.imageHeight}/>}
+ <section id="everyday"><h2>{materials?'Start with the activity, then choose the material.':'Give the goal a place in your child’s life.'}</h2><p>{topic.example}</p></section>
+ <section><h2>A useful question to bring to the team</h2><blockquote class="knowledge-proof">{topic.question}</blockquote><p>Bring a recent example from home or school. What did your child want to do? What could they already do? Where did they need help? Your observations help us connect the discussion to a goal that matters to your family.</p></section>
+ <section><h2>Connect understanding, practice and progress.</h2><p>At Pinnacle, your child’s self-sufficient, mainstream-included life gives the plan its direction. <a href="/pinnacleai">PinnacleAI® connects measurement, a child-specific plan, integrated therapies, everyday practice and review.</a> The next step should have a clear purpose, an appropriate level of support and a way to review whether it is helping.</p><ul><li><a href={theme.path}>{theme.label}</a>: discuss the relevant professional support.</li><li><a href="/everyday-therapy">Everyday Therapy</a>: connect an agreed activity to family routines.</li><li><a href="/self-sufficient">Growing independence</a>: keep useful participation at the centre of progress.</li></ul></section>
+ {materials&&<section class="knowledge-proof"><h2>Choose for your child and the actual task.</h2><p>This is an educational material guide, not a product approval or an individual treatment prescription. Check the exact item, its age guidance and manufacturer instructions with the relevant professional. A material’s presence in a catalogue does not establish a clinical benefit.</p><a href="https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Toys">U.S. Consumer Product Safety Commission: toy safety guidance →</a>{topic.id===3394&&<p><a href="https://www.nhtsa.gov/vehicle-safety/car-seats-and-booster-seats">NHTSA: choosing and using a child car restraint →</a></p>}</section>}
+ <p class="knowledge-caption">Pinnacle Blooms Network · Updated 6 October 2026. Educational guidance for a conversation with your child’s team. <a href="/verify/">Explore Pinnacle’s published evidence and licences.</a></p>
+</article><aside class="knowledge-aside"><h2>Explore connected questions</h2>{related.map(x=><a href={x.url}>{x.title} →</a>)}<a href={'/sunshine/'+type.slug}>All {type.label.toLowerCase()} →</a><a href={'/faq/english/'+topic.theme}>Parent questions about {theme.label.toLowerCase()} →</a><a href="https://pinnacleblooms.org/ask">Ask Pinnacle →</a><a href="/centers">Find a Pinnacle centre →</a></aside></div>
+<NextStep category={topic.theme}/>

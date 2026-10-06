@@ -10,7 +10,7 @@ export function repairSharedNavigation(request,response){
  for(const key of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest'])headers.delete(key);
  headers.set('x-pinnacle-navigation','canonical-ask-20261005');
  let artwork='';
- return new HTMLRewriter().on('a[href]',{element(el){const before=el.getAttribute('href'),after=publicLinkTarget(before);if(after!==before)el.setAttribute('href',after);}})
+ return new HTMLRewriter().on('a[href]',{element(el){const before=el.getAttribute('href'),after=publicLinkTarget(before);if(after===null)el.remove();else if(after!==before)el.setAttribute('href',after);}})
   .on('style[data-pinnacle-footer-art]',{element(el){el.remove();}})
   .on('head',{element(el){el.append(FOOTER_ART_STYLE,{html:true});}})
   .on('.portal-footer[style]',{element(el){
