@@ -1,0 +1,3 @@
+[submodule "commerce-shopify"]
+	path = commerce-shopify
+	url = https://github.com/drkotireddysaripalli/pinnacle-shopify-source.git

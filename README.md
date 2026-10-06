@@ -1,5 +1,7 @@
 # Pinnacle Research Library
 
+**Portal development starts here:** [Integrated Pinnacle portal ownership and source map](PORTAL-OWNERSHIP.md). Ask, Sunshine, FAQ, Verify, Shop and Books have one website code and release owner. The dated release references below remain historical research/site records; use the current ownership guide and active work order for deployment.
+
 Research manuscripts, public supplements and a reproducible analysis of the geography of RCI-listed rehabilitation training institutions in India. The library brings together seven canonical Zenodo works and a linked bibliography of existing Academia.edu records.
 
 **Research briefing:** [A source-linked reader guide to seven works, reusable figures and study status](Pinnacle_Public_Research_Briefing.md). This is a public-facing briefing, not an eighth research paper.

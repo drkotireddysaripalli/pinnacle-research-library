@@ -1,5 +1,9 @@
 # Therapy page development and independent review
 
+## Integrated portal code ownership — 6 October 2026
+
+Read `../PORTAL-OWNERSHIP.md` for the canonical source/release map. This website thread is the single code and deployment owner for Ask, Sunshine, FAQ, Verify, Shop and Books. Reconcile changes from the Mac commerce task into this repository before release; do not maintain or deploy a parallel corporate-site checkout. Merchant/Shopify/Amazon publishing and support operations may continue in the existing commerce task, with exact website requirements/results coordinated here. Old READMEs and dated build scripts do not override the current live receipt, full asset union or active work order. Keep existing schedule holds.
+
 ## Required context loading
 
 Before building or materially revising a managed portal page, read:

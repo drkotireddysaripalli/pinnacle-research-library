@@ -1,0 +1,405 @@
+{
+  "at": "2026-10-06T03:34:45.248Z",
+  "status": "ownership_consolidated",
+  "canonicalRepository": "https://github.com/drkotireddysaripalli/pinnacle-research-library",
+  "websiteOwnerThread": "01a0ef6b-507a-7630-828f-7ac81852a39c",
+  "commerceThread": "01a0f6ef-1af3-7bf0-98aa-9db53523e555",
+  "baselineCommit": "bed73639c3e4e255caf9b15b0e18e4210f763127",
+  "sourceEntries": {
+    "ask": [
+      "speech-site/ask-runtime/worker.ts",
+      "speech-site/ask-runtime/pages/ask/[...path].astro",
+      "speech-site/src/lib/ask/auth.mjs",
+      "speech-site/astro.ask.config.mjs",
+      "speech-site/wrangler.ask.jsonc"
+    ],
+    "faq": [
+      "speech-site/ask-runtime/pages/faq/[...path].astro",
+      "speech-site/src/lib/knowledge/catalogues.ts",
+      "speech-site/scripts/build-knowledge-catalogues.mjs"
+    ],
+    "sunshine": [
+      "speech-site/ask-runtime/pages/sunshine/[...path].astro",
+      "speech-site/src/lib/knowledge/catalogues.ts"
+    ],
+    "verify": [
+      "verify-site/scripts/build-content.cjs",
+      "verify-site/dist/index.html"
+    ],
+    "shop": [
+      "speech-site/src/pages/shop.astro",
+      "speech-site/src/pages/books/index.astro",
+      "speech-site/src/components/BookCart.astro",
+      "speech-site/src/data/book-catalog.json",
+      "speech-site/src/data/book-locales.json",
+      "speech-site/src/data/book-merchant-editions.json",
+      "speech-site/public/pinnacle-pages-scripts/book-commerce.js",
+      "speech-site/scripts/build-book-commerce.mjs",
+      "speech-site/scripts/test-book-cart-links.mjs",
+      "speech-site/tests/browser/book-cart-links.spec.mjs"
+    ],
+    "shared": [
+      "speech-site/src/components/SiteHeader.astro",
+      "speech-site/src/components/SiteFooter.astro",
+      "speech-site/src/components/VerifyFooter.astro",
+      "speech-site/src/components/VernacularTypography.astro",
+      "speech-site/src/data/portal-navigation.json",
+      "speech-site/src/styles/portal-shell.css",
+      "speech-site/src/styles/readability.css",
+      "speech-site/deployment/vernacular-typography.mjs",
+      "speech-site/deployment/pinnacle-route-v12.mjs",
+      "speech-site/deployment/speech-handler.mjs"
+    ]
+  },
+  "allSourceEntriesTrackedAndPresent": true,
+  "workers": [
+    {
+      "name": "pinnacle-verify-route",
+      "versions": [
+        {
+          "version_id": "08a768e3-d753-49bb-989f-c3654e6ab599",
+          "percentage": 100
+        }
+      ],
+      "bindings": [
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "PINNACLE_ASK",
+          "type": "service",
+          "service": "pinnacle-ask"
+        },
+        {
+          "name": "PINNACLE_LEGACY",
+          "type": "service",
+          "service": "pbn-planetscale"
+        },
+        {
+          "name": "SITES_BYPASS_TOKEN",
+          "type": "secret_text"
+        }
+      ]
+    },
+    {
+      "name": "pinnacle-ask",
+      "versions": [
+        {
+          "version_id": "800a09a7-556c-4311-b07e-2ac548fd7c61",
+          "percentage": 100
+        }
+      ],
+      "bindings": [
+        {
+          "name": "ASK_AUTH_ENABLED",
+          "type": "plain_text"
+        },
+        {
+          "name": "ASK_AUTH_PUBLISHABLE_KEY",
+          "type": "secret_text"
+        },
+        {
+          "name": "ASK_AUTH_RATE_LIMIT",
+          "type": "ratelimit"
+        },
+        {
+          "name": "ASK_AUTH_SECRET_KEY",
+          "type": "secret_text"
+        },
+        {
+          "name": "ASK_BASE",
+          "type": "plain_text"
+        },
+        {
+          "name": "ASK_GOOGLE_CLIENT_ID",
+          "type": "plain_text"
+        },
+        {
+          "name": "ASK_OAUTH_PROVIDERS",
+          "type": "plain_text"
+        },
+        {
+          "name": "ASK_WHATSAPP_ENABLED",
+          "type": "plain_text"
+        },
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "CANONICAL_ORIGIN",
+          "type": "plain_text"
+        },
+        {
+          "name": "IMAGES",
+          "type": "images"
+        },
+        {
+          "name": "KOSA_CACHE",
+          "type": "kv_namespace"
+        },
+        {
+          "name": "OG_BUCKET",
+          "type": "r2_bucket"
+        },
+        {
+          "name": "SUPABASE_KEY",
+          "type": "plain_text"
+        },
+        {
+          "name": "SUPABASE_SMS_HOOK_SECRET",
+          "type": "secret_text"
+        },
+        {
+          "name": "SUPABASE_URL",
+          "type": "plain_text"
+        },
+        {
+          "name": "WATI_API_TOKEN",
+          "type": "secret_text"
+        },
+        {
+          "name": "WATI_CHANNEL_NUMBER",
+          "type": "plain_text"
+        },
+        {
+          "name": "WATI_OTP_PARAMETER_NAMES",
+          "type": "plain_text"
+        },
+        {
+          "name": "WATI_TEMPLATE_NAME",
+          "type": "plain_text"
+        },
+        {
+          "name": "WATI_TENANT_ID",
+          "type": "plain_text"
+        }
+      ]
+    },
+    {
+      "name": "pinnacle-ask-mcp",
+      "versions": [
+        {
+          "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+          "percentage": 100
+        }
+      ],
+      "bindings": [
+        {
+          "name": "ALLOWED_ORIGINS",
+          "type": "plain_text"
+        },
+        {
+          "name": "ASK_PREFIX",
+          "type": "plain_text"
+        },
+        {
+          "name": "ASSETS",
+          "type": "assets"
+        },
+        {
+          "name": "CACHE_ENABLED",
+          "type": "plain_text"
+        },
+        {
+          "name": "CANONICAL_BASE",
+          "type": "plain_text"
+        },
+        {
+          "name": "EMBEDDINGS_MODEL",
+          "type": "plain_text"
+        },
+        {
+          "name": "LOG_LEVEL",
+          "type": "plain_text"
+        },
+        {
+          "name": "QUERY_EMBEDDINGS",
+          "type": "plain_text"
+        },
+        {
+          "name": "RATE_LIMIT_RPM",
+          "type": "plain_text"
+        },
+        {
+          "name": "REQUIRE_API_KEY",
+          "type": "plain_text"
+        },
+        {
+          "name": "RPC_RETRIES",
+          "type": "plain_text"
+        },
+        {
+          "name": "RPC_TIMEOUT_MS",
+          "type": "plain_text"
+        },
+        {
+          "name": "SERVICE_NAME",
+          "type": "plain_text"
+        },
+        {
+          "name": "SERVICE_VERSION",
+          "type": "plain_text"
+        },
+        {
+          "name": "SUPABASE_PUBLISHABLE_KEY",
+          "type": "plain_text"
+        },
+        {
+          "name": "SUPABASE_URL",
+          "type": "plain_text"
+        }
+      ]
+    },
+    {
+      "name": "pinnacle-legacy-social-metadata",
+      "versions": [
+        {
+          "version_id": "2e2e6536-5b48-4ffb-b6e3-552cba878d16",
+          "percentage": 100
+        }
+      ],
+      "bindings": []
+    },
+    {
+      "name": "pinnacle-root-sitemap",
+      "versions": [
+        {
+          "version_id": "a31e8e05-4af3-453b-a726-aa0b2d43703c",
+          "percentage": 100
+        }
+      ],
+      "bindings": []
+    }
+  ],
+  "routeCount": 209,
+  "publicReadback": [
+    {
+      "path": "/ask",
+      "url": "https://pinnacleblooms.org/ask",
+      "status": 200,
+      "title": "Ask Pinnacle | Child development questions, answers &amp; guidance",
+      "canonical": "https://pinnacleblooms.org/ask",
+      "robots": "index, follow, max-image-preview:large",
+      "bytes": 154243,
+      "sha256": "32aeb6473b7487a92e7ab379545dd9b4cf70a6e5a02729b4313e2cec0a82c064"
+    },
+    {
+      "path": "/sunshine",
+      "url": "https://www.pinnacleblooms.org/sunshine",
+      "status": 200,
+      "title": "Sunshine child development library | Pinnacle Blooms Network",
+      "canonical": "https://www.pinnacleblooms.org/sunshine",
+      "robots": "index, follow, max-image-preview:large",
+      "bytes": 165209,
+      "sha256": "35013a1cd25b0edc3cac43254f065ae4e3d2af88f4769b5348ba79da22ae5eb2"
+    },
+    {
+      "path": "/faq",
+      "url": "https://www.pinnacleblooms.org/faq",
+      "status": 200,
+      "title": "Child development questions &amp; answers | Pinnacle Blooms Network",
+      "canonical": "https://www.pinnacleblooms.org/faq",
+      "robots": "index, follow, max-image-preview:large",
+      "bytes": 166048,
+      "sha256": "f6a85d8ef8ab2eae38a20d4cdd4c3a16914877f30269d8a38061f25dae0f4fd7"
+    },
+    {
+      "path": "/verify/",
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "status": 200,
+      "title": "PinnacleAI® Verify | Pinnacle Blooms Network",
+      "canonical": "https://www.pinnacleblooms.org/verify/",
+      "robots": null,
+      "bytes": 1027548,
+      "sha256": "1d133ba37fcc15cc09ebf6d2e140ed05e88de37112ff13a0f925f30a249bfdf1"
+    },
+    {
+      "path": "/shop",
+      "url": "https://www.pinnacleblooms.org/shop",
+      "status": 200,
+      "title": "Pinnacle Bookshop | Illustrated Parent Books &amp; Ebook Collections",
+      "canonical": "https://www.pinnacleblooms.org/shop",
+      "robots": "index, follow, max-image-preview:large",
+      "bytes": 183167,
+      "sha256": "7a189b23be782f2d380b01c46eec24d43606210dc9209a384f3000774d00f41a"
+    },
+    {
+      "path": "/books",
+      "url": "https://www.pinnacleblooms.org/books",
+      "status": 200,
+      "title": "Pinnacle 101 Parent Books | Speech, OT, Behaviour &amp; Learning",
+      "canonical": "https://www.pinnacleblooms.org/books",
+      "robots": "index, follow, max-image-preview:large",
+      "bytes": 189618,
+      "sha256": "1a7e84bb8eb3a38810f03aaa9246ece8a508bfe55ac8f1f16c3de17d53de2632"
+    },
+    {
+      "path": "/shop/cart",
+      "url": "https://www.pinnacleblooms.org/shop/cart",
+      "status": 200,
+      "title": "Pinnacle Bookshop | Illustrated Parent Books &amp; Ebook Collections",
+      "canonical": "https://www.pinnacleblooms.org/shop",
+      "robots": "noindex, follow",
+      "bytes": 183169,
+      "sha256": "f374fb97cb0c32f1f7680f71e45646b1721f61a41dd727c11e10c2b3fbedd66f"
+    }
+  ],
+  "behaviourChanged": false,
+  "deployedThisTask": false,
+  "testScope": "Ownership/source-presence and live version/reachability checks only. Reuse unchanged acceptance from book-cart-links-release-20261006.json and vernacular-typography-release-20261006.json. No new sign-in, checkout, physical-device or visual acceptance claimed.",
+  "macSourceHandoff": {
+    "preparedAtUtc": "2026-10-06T03:39:35.968185+00:00",
+    "status": "verified_and_checked_in_private_component",
+    "sourceFiles": 531,
+    "sourceBytes": 11162807,
+    "archiveSha256": "1d7fcddc42f6d147b667b5bb2264cbda1aab213d29f250f835fbe261f4c9f32c",
+    "manifestSha256": "c645476f0fccc6d007a8e09f87832a1179247c50351f93455660f0e9262949ae",
+    "upstreamHorizonCommit": "5acd1b6b66c02f61d3216e3adace5dd9e0404fc9",
+    "historicalThemeFiles": 499,
+    "originalDesignFiles": 22,
+    "themeSnapshotIsCurrentProduction": false,
+    "newWebsiteCodeFound": false,
+    "customFunctionOrExtensionSourceFound": false,
+    "preserveCommercialOperations": true,
+    "sourceCommit": "e4cf0342b6397d0db11592e02a4541126e7d0688",
+    "repository": "https://github.com/drkotireddysaripalli/pinnacle-shopify-source",
+    "private": true,
+    "submodulePath": "commerce-shopify",
+    "allSourceFilesHashVerifiedAfterCheckout": true,
+    "gitTransportBundleSha256": "4918da79a384548eeeadf180363bcc313be3294641be0babf48ca6a0d7e3a823",
+    "gitTransportPartsVerified": 6,
+    "temporaryPublicBranchRemoved": true,
+    "historicalGitHubObjectsPurged": false,
+    "transportOrDerivedThemeFilesAddedToPublicMain": false
+  },
+  "completedAt": "2026-10-06T03:56:43.593571+00:00",
+  "openDependencies": [
+    {
+      "id": "SHOPIFY-LIVE-THEME-SOURCE-EXPORT",
+      "ownerThread": "01a0f6ef-1af3-7bf0-98aa-9db53523e555",
+      "codeOwnerThread": "01a0ef6b-507a-7630-828f-7ac81852a39c",
+      "state": "waiting_existing_mailbox_access",
+      "publishedThemeId": "146540331074",
+      "observedAtUtc": "2026-10-06T03:47:38.848534+00:00",
+      "condition": "Existing care mailbox device verification must complete to receive the Shopify theme export. No authorised theme API session or installed CLI was established in the Mac task.",
+      "nextAction": "Obtain one fresh theme export, compare against retained private source and transfer source changes to the website owner.",
+      "due": "Immediately after existing mailbox access is restored; before any hosted-theme code change",
+      "importedHistoricalThemeMayBeDeployed": false
+    }
+  ],
+  "sourceIntakeVerification": {
+    "sourceCommit": "e4cf0342b6397d0db11592e02a4541126e7d0688",
+    "repository": "https://github.com/drkotireddysaripalli/pinnacle-shopify-source",
+    "private": true,
+    "originalSourceCommit": "823448ad1f84bb653c2fc462e7e68559e9b7496c",
+    "verifiedSourceFiles": 531,
+    "allFileHashesMatched": true,
+    "symlinks": 0,
+    "blockedFileOrTokenPatternMatches": 0,
+    "remoteMainVerified": true,
+    "deployed": false,
+    "scope": "Source integrity, explicit key/private-file pattern check and private Git read-back. No imported script executed."
+  }
+}

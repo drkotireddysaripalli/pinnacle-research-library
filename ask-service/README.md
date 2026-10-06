@@ -1,8 +1,10 @@
 # Ask service — preserved production source and 3 October 2026 repair
 
+**Current source entry:** [integrated portal ownership](../PORTAL-OWNERSHIP.md). The public Ask/FAQ/Sunshine application now starts at `speech-site/ask-runtime/worker.ts` and its Astro pages, with common code in `speech-site/src/`. This directory's legacy worker remains an imported fallback and the MCP bundle remains a separate protected service. Preserve those dependencies; the 3 October versions below are historical and must not overwrite the current runtime.
+
 This directory records the exact deployed Ask and MCP bundles, focused repair source, SQL migrations, tests and sanitised receipts. It is a recovery baseline, not the completed Astro migration. No credentials or Cloudflare binding values are committed.
 
-## Live release
+## Historical release — 3 October 2026
 
 | Service | Live version | Before this repair |
 |---|---|---|

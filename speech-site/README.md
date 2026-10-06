@@ -1,5 +1,9 @@
 # Pinnacle managed pages — shared therapy and enrolment system
 
+## Current development entry point — 6 October 2026
+
+Read [portal ownership and source map](../PORTAL-OWNERSHIP.md), then [the active work order](ACTIVE-PAGE-WORK-ORDER.md). This repository owns Ask, Sunshine, FAQ, Verify, Shop and Books, including all public shop/cart/feed code previously coordinated with the Mac commerce task. The current production reference and full-union release rules are in that guide. Earlier version numbers, module counts, asset counts and dated deployment commands below describe historical releases; they are not the current baseline. Do not deploy an old candidate or rebuild unrelated accepted pages to perform a bounded change.
+
 **Current common shell, 1 October:** [V157 responsive correction](RELEASE-SHARED-SHELL-V157-20261001.md) is live across all 50 managed pages. It preserves the owner-selected Speech/OT desktop header/footer, places Enrol at the far right and corrects mobile/tablet navigation, footer visibility and evidence controls. All 50 main bodies and protected routes remain unchanged; source, CI, live and rollback evidence are recorded in the release receipt.
 
 **1 October performance/toolkit continuation:** [V151 common monitoring correction](RELEASE-MONITORING-V151-20261001.md) restores the existing Cloudflare performance beacon and the helpline link's visible accessible name across the accepted portfolio. [Quality toolchain](QUALITY-TOOLCHAIN.md) includes pinned Lighthouse, bounded speed commands, stronger image/indexability checks and Linux Firefox/WebKit coverage. Publication status is recorded in the V151 receipt.

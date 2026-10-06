@@ -1,4 +1,10 @@
-# Current page work —5October2026
+# Current page work — 6 October 2026
+
+## Owner-directed portal and shop code consolidation — completed
+
+The owner assigned Ask, Sunshine, FAQ, Verify, Shop and Books code/release ownership to this Windows website thread on 6 October. Canonical guide: `../PORTAL-OWNERSHIP.md`. The Mac commerce task acknowledged the single website/theme code owner. Its 531 source files were transferred and hash-verified; private Shopify source `e4cf0342b6397d0db11592e02a4541126e7d0688` is pinned at `../commerce-shopify/`. Private storage preserves the supplied theme licence. Seven public entry documents and all five protected Worker versions/209 routes were checked without changing production. Receipt: `deployment/portal-ownership-20261006.json`.
+
+Marketplace/publishing/support operations continue in their existing Mac task. A fresh export of hosted Shopify theme146540331074 remains dependent on the care mailbox's existing device verification; the imported 2 October snapshot must not overwrite it. The code is retained and owned here, while that source-freshness dependency stays explicit. No unrelated next page or resumed growth schedule is implied by this takeover.
 
 ## Authorised commerce follow-through — direct PDF book bag completed
 
