@@ -1,4 +1,5 @@
 ---
+import VernacularTypography from '../components/VernacularTypography.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import AskNavigation from '../components/ask/AskNavigation.astro';
@@ -25,7 +26,7 @@ const graph={'@context':'https://schema.org','@graph':[
  {image&&<><meta property="og:image" content={image}/><meta property="og:image:alt" content={title}/><meta name="twitter:image" content={image}/><meta name="twitter:image:alt" content={title}/></>}
  <link rel="preload" href={font} as="font" type="font/woff2" crossorigin/><script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\\u003c')}/>
  <link rel="sitemap" type="application/xml" href={ORIGIN+'/faq/sitemap.xml'}/>
- </head><body class="ask-page knowledge-page" data-page-variant="knowledge" data-shared-shell="v159">
+ <VernacularTypography/></head><body class="ask-page knowledge-page" data-page-variant="knowledge" data-shared-shell="v159">
  {reader&&<><AskGate brand={brand}/><AskVerification/></>}
  <SiteHeader currentPath={path.split('?')[0]}/>
  {reader&&<AskNavigation q={q} lang={lang} brand={brand} home={searchPath} searchPath={searchPath} browse="/sunshine"/>}

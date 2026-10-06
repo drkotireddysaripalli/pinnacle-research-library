@@ -1,3 +1,4 @@
+import {applyVernacularTypography} from './vernacular-typography.mjs';
 import {repairSharedNavigation} from './shared-navigation.mjs';
 import {serveRootDiscovery} from './discovery-handler.mjs';
 import {serveSpeechEnquiry} from './speech-enquiry-handler.mjs';
@@ -405,4 +406,4 @@ export async function transformReviewedHomeOrganization(request,response){
  return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
 }
 
-export default {async fetch(request,env,ctx){return repairSharedNavigation(request,await portalWorker.fetch(request,env,ctx));}};
+export default {async fetch(request,env,ctx){return applyVernacularTypography(request,repairSharedNavigation(request,await portalWorker.fetch(request,env,ctx)));}};

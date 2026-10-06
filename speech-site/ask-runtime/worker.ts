@@ -1,3 +1,4 @@
+import {applyVernacularTypography} from '../deployment/vernacular-typography.mjs';
 import {handle} from '@astrojs/cloudflare/handler';
 import legacy from '../../ask-service/worker/index.js';
 import {answer,rpc} from '../src/lib/ask/repository';
@@ -9,7 +10,7 @@ import {data as knowledgeData,languages as knowledgeLanguages,themes as knowledg
 const xml=(s:any)=>String(s??'').replace(/[<>&"']/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[c]!));
 const textHeaders={'content-type':'text/plain; charset=utf-8','cache-control':'public, max-age=300','x-content-type-options':'nosniff'};
 const guide='# Ask Pinnacle\n\nPublic child-development questions and answers from Pinnacle Blooms Network, operated by Bharath Healthcare Laboratories Private Limited.\n\nHome: '+ASK+'\nBrowse: '+ASK+'/lens\nSources and retrieval: '+ASK+'/dataset\nSitemap: '+ASK+'/sitemap.xml\nMCP: https://ask-mcp.pinnacleblooms.org/mcp\n\nAnswer canonicals support .md and .json public representations. Use page-level robots, publication status, sources and dates. Public information is not individual diagnosis. This reading aid is not an AI submission or an endorsement.\n';
-export default {async fetch(request:Request,env:any,ctx:ExecutionContext){
+const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  const url=new URL(request.url);
  if(url.hostname==='ask.pinnacleblooms.org'){url.hostname='pinnacleblooms.org';url.pathname='/ask'+(url.pathname==='/'?'':url.pathname.startsWith('/ask')?url.pathname.slice(4):url.pathname);return Response.redirect(url.href,308);}
  // Auth routes bypass every public cache and permit the required POST handlers.
@@ -70,3 +71,5 @@ export default {async fetch(request:Request,env:any,ctx:ExecutionContext){
  return output;
  }catch(error){console.error('Ask request failed',error instanceof Error?error.message:'error');return new Response('Ask is temporarily unavailable. Please try again or call 9100 181 181.',{status:503,headers:{'content-type':'text/plain; charset=utf-8','cache-control':'no-store','retry-after':'60','x-robots-tag':'noindex'}})}
 }};
+
+export default {async fetch(request:Request,env:any,ctx:ExecutionContext){return applyVernacularTypography(request,await askWorker.fetch(request,env,ctx));}};

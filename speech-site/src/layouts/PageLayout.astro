@@ -1,4 +1,5 @@
 ---
+import VernacularTypography from '../components/VernacularTypography.astro';
 import { speechOffer } from '../data/speech-offer';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
@@ -46,7 +47,7 @@ const schema = {'@context':'https://schema.org','@graph':[
   <meta property="og:image" content={imageUrl} /><meta property="og:image:secure_url" content={imageUrl} /><meta property="og:image:type" content="image/jpeg" /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content={imageAlt} />
   <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:url" content={canonical} /><meta name="twitter:title" content={socialTitle} /><meta name="twitter:description" content={socialDescription} /><meta name="twitter:image" content={imageUrl} /><meta name="twitter:image:alt" content={imageAlt} />
   <meta name="theme-color" content="#8f2879" /><script type="application/ld+json" set:html={JSON.stringify(schema).replace(/</g,'\\u003c')} />
-</head><body class:list={{'focused-campaign':focused,'enrolment-page':enrolmentDocument}} data-page-variant={focused ? 'focused' : 'service'}>
+<VernacularTypography/></head><body class:list={{'focused-campaign':focused,'enrolment-page':enrolmentDocument}} data-page-variant={focused ? 'focused' : 'service'}>
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
   <nav class="mobile-cta" aria-label={nativeContact?.label || "Contact Pinnacle"}><a href={phone.href} data-cta="mobile-call">{nativeContact?.call || "Call"} {phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>
