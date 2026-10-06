@@ -1,0 +1,102 @@
+{
+  "actionId": "website-call-repair-20261006",
+  "status": "runtime-repair-deployed-and-verified",
+  "completedAt": "2026-10-06T04:55:14.591997+00:00",
+  "sourceCommits": {
+    "core": "05c4ca7674de0f9a181b00024a8b76c6cbef26e5",
+    "finalWrapper": "3d2cd929903d692df70b57caca8c3e4010ffff3f"
+  },
+  "runtime": {
+    "pinnacle-verify-route": "1243d4af-45f6-4af2-9ba5-5aa4211a46ea",
+    "pinnacle-ask": "0d82cf35-b143-4ed4-866e-f87abd08366f",
+    "pinnacle-google-ads-call-measurement": "3bb558bd-2575-44d4-a74c-476648ec34af"
+  },
+  "rollback": {
+    "portal": "08a768e3-d753-49bb-989f-c3654e6ab599",
+    "ask": "800a09a7-556c-4311-b07e-2ac548fd7c61",
+    "originalWrapper": "2fa26689-51f7-4a04-a835-a69d2627b15f"
+  },
+  "ci": [
+    {
+      "commit": "05c4ca7674de0f9a181b00024a8b76c6cbef26e5",
+      "at": "2026-10-06T04:39:46.952Z",
+      "runs": [
+        {
+          "id": 37414331098,
+          "name": "Portal quality",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37414331098"
+        }
+      ]
+    },
+    {
+      "commit": "3d2cd929903d692df70b57caca8c3e4010ffff3f",
+      "at": "2026-10-06T04:52:08.724Z",
+      "runs": [
+        {
+          "id": 37415101899,
+          "name": "Portal quality",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37415101899"
+        }
+      ]
+    }
+  ],
+  "preservation": {
+    "routes": 209,
+    "portalBindings": 4,
+    "askBindings": 21,
+    "wrapperBindingsUnchanged": true,
+    "portalAssetFilesReused": 2160,
+    "portalModules": 36,
+    "portalModulesUnchanged": 35,
+    "unchangedPageSemantics": 19,
+    "finalVerifySemantics": 3,
+    "commonShell": "pinnacle-common-shell-baseline-v159-20261001"
+  },
+  "verification": {
+    "staticBuildPages": 135,
+    "askBuildPassed": true,
+    "unitTestsPassed": 454,
+    "finalWrapperFocusedTestsPassed": 13,
+    "speechLiveConsentCases": 7,
+    "verifyFinalLiveConsentOrders": 2,
+    "askLiveRouteChecks": 4,
+    "visualWidths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "visualEngines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "screenshotsInspected": true,
+    "physicalCoverageFile": "website-call-proof-20261006/physical-device-coverage.json",
+    "physicalLimits": "Narrow consent-control checks on Speech iOS/Android and corrected Verify iOS; no claim of exhaustive site-wide device coverage. No real calls, paid ad clicks, form enquiries, purchases or login attempts."
+  },
+  "correctedDuringRelease": {
+    "issue": "Verify reader rewrite was mistaken for an already-installed call bootstrap, leaving the panel hidden.",
+    "fixedIn": "3d2cd929903d692df70b57caca8c3e4010ffff3f",
+    "proof": "website-call-proof-20261006/final-verify-live.json",
+    "failedPhysicalRunRetained": true
+  },
+  "publicUrls": [
+    "https://pinnacleblooms.org/ask",
+    "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+    "https://www.pinnacleblooms.org/speech-therapy/service-information",
+    "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+    "https://www.pinnacleblooms.org/verify/guides/abilityscore.html",
+    "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html"
+  ],
+  "businessOutcomeLimits": [
+    "Actual Google forwarding allocation requires an eligible visitor and was not simulated with a paid ad click.",
+    "Connected calls, qualified enquiries, walk-ins and enrolments remain separately unverified outcomes.",
+    "This Ads repair does not resolve or prove the separate GSC-versus-GA4 organic Ask coverage gap."
+  ],
+  "indexing": "No submission; measurement-only change.",
+  "automation": "Existing growth schedule remains held."
+}

@@ -1,0 +1,186 @@
+{
+  "at": "2026-10-06T04:55:14.591000+00:00",
+  "runs": [
+    {
+      "run": "call-ios",
+      "status": "incomplete-or-failed",
+      "device": "iPhone 15",
+      "platform": "iOS",
+      "reportedOS": "18.0",
+      "browser": "safari",
+      "provider": {
+        "id": 53423474,
+        "durationSeconds": 18,
+        "success": false,
+        "assetsAvailable": false
+      },
+      "sessionClosed": true,
+      "pages": [
+        {
+          "id": "speech",
+          "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+          "status": "passed",
+          "snapshot": {
+            "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+            "viewport": {
+              "width": 393,
+              "height": 659,
+              "dpr": 3
+            },
+            "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
+            "overflow": 0,
+            "phone": true,
+            "heading": "Optional advertising call measurement",
+            "status": "Call measurement is off. Calling still works.",
+            "buttons": [
+              {
+                "text": "Allow call measurement",
+                "height": 45
+              },
+              {
+                "text": "Keep call measurement off",
+                "height": 45
+              }
+            ],
+            "configured": false,
+            "adCookies": false,
+            "loaders": 0
+          },
+          "checks": {
+            "control": true,
+            "buttons": true,
+            "overflow": true,
+            "phone": true,
+            "defaultOff": true,
+            "adCookiesAbsent": true,
+            "optionalLoaderAbsent": true
+          },
+          "screenshot": "call-ios-speech.png"
+        },
+        {
+          "id": "verify",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+          "status": "failed",
+          "error": "An unknown server-side error occurred while processing the command. Original error: Consent control missing"
+        }
+      ]
+    },
+    {
+      "run": "call-android",
+      "status": "passed",
+      "device": "Pixel 8",
+      "platform": "Android",
+      "reportedOS": "17.0",
+      "browser": "chrome",
+      "provider": {
+        "id": 53423534,
+        "durationSeconds": 5,
+        "success": true,
+        "assetsAvailable": false
+      },
+      "sessionClosed": true,
+      "pages": [
+        {
+          "id": "speech",
+          "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+          "status": "passed",
+          "snapshot": {
+            "adCookies": false,
+            "buttons": [
+              {
+                "height": 44.619049072265625,
+                "text": "Allow call measurement"
+              },
+              {
+                "height": 44.619049072265625,
+                "text": "Keep call measurement off"
+              }
+            ],
+            "configured": false,
+            "heading": "Optional advertising call measurement",
+            "loaders": 0,
+            "overflow": 0,
+            "phone": true,
+            "status": "Call measurement is off. Calling still works.",
+            "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+            "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+            "viewport": {
+              "dpr": 2.625,
+              "height": 760,
+              "width": 411
+            }
+          },
+          "checks": {
+            "control": true,
+            "buttons": true,
+            "overflow": true,
+            "phone": true,
+            "defaultOff": true,
+            "adCookiesAbsent": true,
+            "optionalLoaderAbsent": true
+          },
+          "screenshot": "call-android-speech.png"
+        }
+      ]
+    },
+    {
+      "run": "call-ios-verify-final",
+      "status": "passed",
+      "device": "iPhone 17 Pro",
+      "platform": "iOS",
+      "reportedOS": "26.5",
+      "browser": "safari",
+      "provider": {
+        "id": 53423855,
+        "durationSeconds": 8,
+        "success": true,
+        "assetsAvailable": false
+      },
+      "sessionClosed": true,
+      "pages": [
+        {
+          "id": "verify",
+          "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+          "status": "passed",
+          "snapshot": {
+            "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+            "viewport": {
+              "width": 402,
+              "height": 714,
+              "dpr": 3
+            },
+            "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1",
+            "overflow": 0,
+            "phone": true,
+            "heading": "Optional advertising call measurement",
+            "status": "Call measurement is off. Calling still works.",
+            "buttons": [
+              {
+                "text": "Allow call measurement",
+                "height": 45
+              },
+              {
+                "text": "Keep call measurement off",
+                "height": 45
+              }
+            ],
+            "configured": false,
+            "adCookies": false,
+            "loaders": 0
+          },
+          "checks": {
+            "control": true,
+            "buttons": true,
+            "overflow": true,
+            "phone": true,
+            "defaultOff": true,
+            "adCookiesAbsent": true,
+            "optionalLoaderAbsent": true
+          },
+          "screenshot": "call-ios-verify-final-verify.png"
+        }
+      ]
+    }
+  ],
+  "note": "The first iOS run found the missing Verify bootstrap; its failure is retained. The corrected wrapper passed the final physical iPhone Verify retest. Speech passed the unchanged initial iOS and Android checks."
+}

@@ -1,0 +1,70 @@
+{
+  "at": "2026-10-06T04:44:43.807Z",
+  "results": [
+    {
+      "path": "/ask",
+      "status": {
+        "enabled": false,
+        "started": false
+      },
+      "loader": 0,
+      "private": false,
+      "footer": true,
+      "phone": true,
+      "title": "Ask Pinnacle | Child development questions, answers & guidance",
+      "control": true,
+      "controlHidden": false,
+      "adConfigs": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "path": "/ask/what-is-abilityscore-and-how-does-it-help-my-child",
+      "status": {
+        "enabled": false,
+        "started": false
+      },
+      "loader": 0,
+      "private": false,
+      "footer": true,
+      "phone": true,
+      "title": "What Is AbilityScore® & How It Helps Your Child",
+      "control": true,
+      "controlHidden": false,
+      "adConfigs": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "path": "/ask",
+      "status": {
+        "enabled": false,
+        "started": false
+      },
+      "loader": 0,
+      "private": false,
+      "footer": true,
+      "phone": true,
+      "title": "Ask Pinnacle | Child development questions, answers & guidance",
+      "control": true,
+      "controlHidden": false,
+      "adConfigs": 0,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "path": "/ask/te/search",
+      "status": null,
+      "loader": 0,
+      "private": true,
+      "footer": true,
+      "phone": true,
+      "title": "Search published answers | Ask Pinnacle",
+      "control": true,
+      "controlHidden": true,
+      "adConfigs": 0,
+      "errors": [],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "phase": "verified",
+  "sourceCommit": "05c4ca7674de0f9a181b00024a8b76c6cbef26e5",
+  "at": "2026-10-06T04:26:07.336Z",
+  "routeCount": 209,
+  "rollback": [
+    {
+      "version_id": "800a09a7-556c-4311-b07e-2ac548fd7c61",
+      "percentage": 100
+    }
+  ],
+  "protected": {
+    "portal": [
+      {
+        "version_id": "08a768e3-d753-49bb-989f-c3654e6ab599",
+        "percentage": 100
+      }
+    ],
+    "mcp": [
+      {
+        "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+        "percentage": 100
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "preparedAtCommit": "9f19ce81d37d4154c9714f4b0fc468310ee8507c",
+  "candidate": "0d82cf35-b143-4ed4-866e-f87abd08366f",
+  "candidateBindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "bundleSHA256": "9b454455a5f5285cbb3feb74a1fc5581c9aaf837f9f0e667dc868cfe7d1f21f0",
+  "promotedAt": "2026-10-06T04:40:51.018Z",
+  "afterRouteCount": 209,
+  "protectedUnchanged": true,
+  "publicVerifiedAt": "2026-10-06T04:44:43.807Z",
+  "publicProof": "deployment/website-call-proof-20261006/ask-live-consent.json",
+  "scopeNote": "Four anonymous public/private route checks; /ask/account redirects anonymous visitors to /ask. No new sign-in, WhatsApp verification or private account operation was tested."
+}

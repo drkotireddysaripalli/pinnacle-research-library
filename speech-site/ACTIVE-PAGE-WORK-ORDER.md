@@ -1,8 +1,10 @@
 # Current page work — 6 October 2026
 
-## Authorised website-call measurement repair — active
+## Authorised website-call measurement repair — deployed and verified
 
 The human approved the Ads owner sending this bounded repair on 6 October. This website thread owns source, release and verification. Add a distinct advertising call-measurement choice using the current shared footer, preserve independent analytics and ordinary calling, exclude private Ask/auth/search/API pages, and restore numbers on withdrawal. Reuse the existing conversion action; no budget, bidding, health audiences, paid clicks or test calls. Acceptance: consent/browser/callback regression, current source CI, inactive candidates, full route/binding/asset preservation and live read-back. Existing growth schedule and unrelated page work stay held.
+
+Completed: core `05c4ca7`, final wrapper `3d2cd92`, both pushed with successful CI. Live Portal `1243d4af-45f6-4af2-9ba5-5aa4211a46ea`, Ask `0d82cf35-b143-4ed4-866e-f87abd08366f`, wrapper `3bb558bd-2575-44d4-a74c-476648ec34af`. All 209 routes and bindings are preserved; 2,160 assets reused. Seven live Speech consent cases, two final Verify consent orders, four Ask route checks and the declared physical iOS/Android checks passed. The initial Verify bootstrap failure was corrected and its failed evidence retained. Receipt: `deployment/website-call-release-20261006.json`; detail: `RELEASE-WEBSITE-CALL-MEASUREMENT-20261006.md`. Actual qualified calls/enrolments and the separate organic measurement gap are not claimed as resolved. No next page or resumed schedule is implied.
 
 
 ## Owner-directed portal and shop code consolidation — completed

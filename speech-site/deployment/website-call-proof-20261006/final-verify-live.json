@@ -1,0 +1,141 @@
+{
+  "at": "2026-10-06T04:53:30.594Z",
+  "mode": "live-delivered-source",
+  "scope": "Three Verify documents, both consent orders, default denial and withdrawal; Google requests blocked in the two order tests to prevent QA reporting. No calls or enquiries.",
+  "pages": [
+    {
+      "path": "/verify/guides/everyday-practice.html",
+      "url": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+      "status": 200,
+      "text": "46c0caee3c2fcbf61eef5a1ab2551a8aca3ff7c099f0534284083b52315261de",
+      "title": "From assessment to everyday practice | Pinnacle",
+      "links": "abd92958bc831e9feca8362034010dac10d6274a038687e74d754dfcd72d71a2",
+      "readerAndCallScriptsSeparate": true
+    },
+    {
+      "path": "/verify/guides/abilityscore.html",
+      "url": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html",
+      "status": 200,
+      "text": "d8d20ba2431374ec98623287d9a14bceb46fbaa88e846074ee835aa8312f0a99",
+      "title": "What does my child’s AbilityScore® mean? | Pinnacle",
+      "links": "505a8d8b96075ebcca506b00d914e3694f06bc6eb96371c39ee2803d69845b0b",
+      "readerAndCallScriptsSeparate": true
+    },
+    {
+      "path": "/verify/evidence/pinnacle-paradigm-shift.html",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "status": 200,
+      "text": "e97b2cc90fe1e08da62dcb9ec3643d0921dfbd067eb51d820c158079f172f373",
+      "title": "PinnacleAI® Paradigm Shift | Your Child’s Life Is the Mission",
+      "links": "7964ca3b9f57bf8d7bd775bc37f8d760248a7f2635f858c9710fe76098b33210",
+      "readerAndCallScriptsSeparate": true
+    }
+  ],
+  "browsers": [
+    {
+      "order": "analytics-first",
+      "width": 768,
+      "defaultNoGoogle": true,
+      "state": {
+        "consent": {
+          "analytics_storage": "granted",
+          "ad_storage": "granted",
+          "ad_user_data": "granted",
+          "ad_personalization": "denied"
+        },
+        "configs": [
+          "G-H9CLX1WJ7R",
+          "AW-10810823199/VNUcCMSy3YobEJ-kgKMo"
+        ],
+        "loaders": 1
+      },
+      "withdrawn": {
+        "adConfig": false,
+        "number": true,
+        "adCookies": false
+      },
+      "style": {
+        "overflow": false,
+        "buttons": [
+          {
+            "height": 45.09375,
+            "font": "14px"
+          },
+          {
+            "height": 45.09375,
+            "font": "14px"
+          }
+        ],
+        "width": 704
+      },
+      "screenshot": "final-verify-768.png",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "order": "advertising-first",
+      "width": 1440,
+      "defaultNoGoogle": true,
+      "state": {
+        "consent": {
+          "analytics_storage": "granted",
+          "ad_storage": "granted",
+          "ad_user_data": "granted",
+          "ad_personalization": "denied"
+        },
+        "configs": [
+          "AW-10810823199/VNUcCMSy3YobEJ-kgKMo",
+          "G-H9CLX1WJ7R"
+        ],
+        "loaders": 1
+      },
+      "withdrawn": {
+        "adConfig": false,
+        "number": true,
+        "adCookies": false
+      },
+      "style": {
+        "overflow": false,
+        "buttons": [
+          {
+            "height": 45.09375,
+            "font": "14px"
+          },
+          {
+            "height": 45.09375,
+            "font": "14px"
+          }
+        ],
+        "width": 1280
+      },
+      "screenshot": "final-verify-1440.png",
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "assets": [
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js?v=3",
+      "status": 200,
+      "bytes": 11674,
+      "sha256": "c6c2055c67e218721579d9d40a99988f96dcb24294a270a82714195d14428f49"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/google-ads-call.js?module=verify-reader&v=3",
+      "status": 200,
+      "bytes": 14717,
+      "sha256": "e4dc33ac24f1594d453854f0b6763656600396a109cb911656f96e40edfc517f"
+    }
+  ],
+  "versions": {
+    "pinnacle-verify-route": "1243d4af-45f6-4af2-9ba5-5aa4211a46ea",
+    "pinnacle-ask": "0d82cf35-b143-4ed4-866e-f87abd08366f",
+    "pinnacle-google-ads-call-measurement": "3bb558bd-2575-44d4-a74c-476648ec34af"
+  },
+  "preservation": {
+    "routes": 209,
+    "wrapperBindingsUnchanged": true,
+    "portalAndAskVersionsUnchangedSinceVerifiedRelease": true
+  },
+  "passed": true
+}

@@ -1,0 +1,157 @@
+{
+  "at": "2026-10-06T04:41:36.117Z",
+  "live": true,
+  "scope": "No ad clicks, calls or enquiries; callback numbers are isolated fixtures. Actual network test uses a direct visit without ad identifiers.",
+  "cases": [
+    {
+      "mode": "default",
+      "commands": [],
+      "cookies": [],
+      "network": [],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "mode": "declined",
+      "commands": [],
+      "cookies": [],
+      "network": [],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "mode": "analytics-only",
+      "commands": [
+        {
+          "id": "G-2BYLRLFRDJ",
+          "personalization": false
+        }
+      ],
+      "cookies": [],
+      "network": [
+        {
+          "host": "www.googletagmanager.com",
+          "path": "/gtag/js",
+          "id": "G-2BYLRLFRDJ"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "mode": "gpc",
+      "commands": [],
+      "cookies": [],
+      "network": [],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "mode": "ads-only",
+      "commands": [
+        {
+          "id": "AW-10810823199/VNUcCMSy3YobEJ-kgKMo",
+          "phone": "9100 181 181",
+          "personalization": false
+        }
+      ],
+      "cookies": [
+        {
+          "name": "_gcl_au",
+          "domain": ".pinnacleblooms.org"
+        }
+      ],
+      "network": [
+        {
+          "host": "www.googletagmanager.com",
+          "path": "/gtag/js",
+          "id": "AW-10810823199"
+        },
+        {
+          "host": "www.googleadservices.com",
+          "path": "/pagead/conversion/10810823199/wcm",
+          "id": null
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "withdrawal": {
+        "restored": true,
+        "reloaded": true,
+        "noHelperOnReload": true
+      }
+    },
+    {
+      "mode": "ads-then-analytics",
+      "commands": [
+        {
+          "id": "AW-10810823199/VNUcCMSy3YobEJ-kgKMo",
+          "phone": "9100 181 181",
+          "personalization": false
+        },
+        {
+          "id": "G-2BYLRLFRDJ",
+          "personalization": false
+        }
+      ],
+      "cookies": [],
+      "network": [
+        {
+          "host": "www.googletagmanager.com",
+          "path": "/gtag/js",
+          "id": "AW-10810823199"
+        }
+      ],
+      "errors": [],
+      "passed": true,
+      "callbackFixture": {
+        "href": "tel:+12025550142",
+        "text": "+1 202 555 0142",
+        "marker": "central",
+        "local": "tel:+914012345678",
+        "before": "9100 181 181"
+      }
+    },
+    {
+      "mode": "analytics-then-ads",
+      "commands": [
+        {
+          "id": "G-2BYLRLFRDJ",
+          "personalization": false
+        },
+        {
+          "id": "AW-10810823199/VNUcCMSy3YobEJ-kgKMo",
+          "phone": "9100 181 181",
+          "personalization": false
+        }
+      ],
+      "cookies": [],
+      "network": [
+        {
+          "host": "www.googletagmanager.com",
+          "path": "/gtag/js",
+          "id": "G-2BYLRLFRDJ"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "visual": [
+    {
+      "engine": "chromium",
+      "width": 320,
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "style": {
+        "width": 320,
+        "x": 0,
+        "buttonHeight": 45.09375,
+        "font": "14px",
+        "color": "rgb(48, 38, 56)",
+        "overflow": false
+      },
+      "file": "chromium-320-speech.png",
+      "passed": true
+    }
+  ]
+}
