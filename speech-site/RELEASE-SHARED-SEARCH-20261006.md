@@ -23,4 +23,10 @@ Operational receipts: `work/pinnacle-growth-system/shared-repair-20261006/` in t
 
 ## Remaining agreed sequence
 
+## Delivered
+
+Source commit `600cc63967ea05924237bfce9e54991f06b41400` is on main and Portal quality CI passed (run 37431247290). Production portal version `50917079-d8c8-4ebb-9056-ecdec7098034`, sitemap `ebff227d-74f5-42c7-80d6-f0e12ae4b622`, legacy metadata `9eb42130-75b5-4c79-8299-ae69e8375165`. All 209 original routes and bindings were retained; 221 routes now exist. Ask route triggers include a trailing wildcard for query matching, while application logic handles only the two exact capitalised entry paths.
+
+29 public checks passed. Bots sitemap now has 281 page URLs after removing 702 approved retired entries. Seven FAQ maps each contain 652 canonical answers. GSC accepted 10 updated sitemap submissions; fetch/indexing remains Google's decision. The exact code, module hashes, public responses and GSC receipts are stored in the operational directory above. No new full Ahrefs crawl or ranking/lead improvement is claimed.
+
 Continue source-backed broken media and centre exterior/interior/walkthrough presentation, investigate the saved intermittent 500 times with available telemetry, and apply useful demand-led crosslinks. The ambiguous `/ma/wil` reference remains a source-resolution item, not a licence for an unrelated redirect. The general heartbeat remains paused.

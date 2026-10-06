@@ -16,4 +16,5 @@ test('Chanda Nagar shared transform is exact, repeatable and preserves unrelated
 test('actual captured Chanda Nagar origin accepts the bounded transform',()=>{
  const file='ask-private/six-step-release-20261006/page-6.html';if(!fs.existsSync(file))return;
  const output=reviseChandaNagarHtml(fs.readFileSync(file,'utf8'));assert(output);assert(output.includes('id="pinnacle-chandanagar-start"'));assert(!output.includes('Successfully delivered 31Million+ Therapies'));
+ assert(!output.includes('id="video-container"'),'Legacy autoplay banner must not precede the frontage');assert(!output.includes('setTimeout(loadVideo'),'No deferred autoplay');assert(output.includes('data-centre-frontage'));assert(output.includes('<template>')&&output.includes('youtube-nocookie.com/embed/rPl_kZm7LiE?rel=0'));assert.equal(reviseChandaNagarHtml(output),output);
 });

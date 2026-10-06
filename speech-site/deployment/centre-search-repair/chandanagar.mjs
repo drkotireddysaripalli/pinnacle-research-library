@@ -1,7 +1,8 @@
+import {centreTour} from './centre-tour.mjs';
 import {replaceCentreIntroduction,optimiseCentreMediaHtml,MEDIA_RELEASE} from './centre-media.mjs';
 export const CHANDANAGAR_PATH='/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india';
 export const CHANDANAGAR_URL='https://www.pinnacleblooms.org'+CHANDANAGAR_PATH;
-export const RELEASE='chandanagar-parent-journey-20261006';
+export const RELEASE='chandanagar-centre-media-20261006';
 const title='Autism &amp; Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms';
 const description='Explore autism and speech support at Pinnacle Blooms in Chanda Nagar, Hyderabad. Discuss everyday goals, suitable therapies, a first visit and fees. Call 9100 181 181.';
 const phone='<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a14 14 0 0 1-7-7l2-2-2-5Z"/></svg>';
@@ -36,6 +37,8 @@ export const CHANDANAGAR_MARKUP=`<div class="center-about-description" id="pinna
 #pinnacle-chandanagar-start .chn-evidence{padding:19px 0 0;border-top:1px solid #dbe3ed;margin-top:25px}
 @media(max-width:700px){#pinnacle-chandanagar-start{padding:24px 12px}#pinnacle-chandanagar-start .chn-lead{font-size:19px}#pinnacle-chandanagar-start .chn-steps{grid-template-columns:1fr;gap:18px}#pinnacle-chandanagar-start .chn-actions{flex-direction:column}#pinnacle-chandanagar-start .chn-button{width:100%}#pinnacle-chandanagar-start .chn-visit{padding:19px 17px}#pinnacle-chandanagar-start h2{font-size:23px}}
 @media(max-width:700px){body:has(#pinnacle-chandanagar-start){padding-bottom:76px!important}body:has(#pinnacle-chandanagar-start) .share_container{position:fixed!important;inset:auto 0 0 0!important;width:100%!important;height:54px!important;display:flex!important;border-radius:0!important}body:has(#pinnacle-chandanagar-start) .share_container>div{position:static!important;flex:1 1 0;width:auto!important;height:54px!important;border-radius:0!important;display:flex!important;align-items:center;justify-content:center}body:has(#pinnacle-chandanagar-start) .share_container a{display:flex;align-items:center;justify-content:center;width:100%;height:100%;white-space:nowrap!important;font-size:15px!important;line-height:1.2!important}body:has(#pinnacle-chandanagar-start) .share_whatsapp a::after{content:'WhatsApp';color:white;font-weight:700}body:has(#pinnacle-chandanagar-start) .share_whatsapp i{display:none}}
+body:has(#pinnacle-chandanagar-start) .center-image-container img[data-centre-frontage]{width:100%;height:auto;max-height:570px;object-fit:contain;border-radius:28px;background:#f4faf8}body:has(#pinnacle-chandanagar-start) .center-image-container .chn-photo-caption{font-size:15px;line-height:1.6;margin:12px;color:#243a57}#pinnacle-chandanagar-start .chn-interior{margin:28px 0}#pinnacle-chandanagar-start .chn-interior img{display:block;max-width:100%;height:auto;max-height:500px;margin:auto;border-radius:24px}#pinnacle-chandanagar-start .chn-interior figcaption{font-size:15px;line-height:1.6;margin:12px 0;text-align:center}@media(max-width:700px){body:has(#pinnacle-chandanagar-start) .center-image-container img[data-centre-frontage]{max-height:360px}}
+body:has(#pinnacle-chandanagar-start) .centers-home-about{margin:30px auto 0}body:has(#pinnacle-chandanagar-start) .center-image-container{width:min(100% - 32px,430px);height:auto;overflow:visible;border-radius:28px;box-shadow:none;margin:0 auto}body:has(#pinnacle-chandanagar-start) .about-section>img[src*="pinnacle-top_1900"]{display:none}
 </style>
 <p class="chn-kicker">Pinnacle Blooms Network · Chanda Nagar, Hyderabad</p>
 <h1>Autism and speech support in Chanda Nagar.<br>Begin with your child’s everyday life.</h1>
@@ -49,6 +52,7 @@ export const CHANDANAGAR_MARKUP=`<div class="center-about-description" id="pinna
 <h2>Explore how the therapies work together.</h2>
 <p>Communication, daily routines, behaviour and learning connect in a child’s life. A child-specific plan brings relevant disciplines together around those goals. Discuss the support and practitioners appropriate for your child with our Chanda Nagar team.</p>
 <nav class="chn-links" aria-label="Explore integrated support"><a href="/autism-therapy">Integrated autism support ${arrow}</a><a href="/top-speech-therapy-center-india-proven-improvement-rate">Speech therapy</a><a href="/best-occupational-therapy-center-india-proven-improvement-rate">Occupational therapy</a><a href="/best-aba-therapy-center-india-proven-improvement-rate">ABA support</a><a href="/best-special-education-center-call-9100181181">Special education</a></nav>
+<section id="chandanagar-premises"><h2>See the spaces before your visit.</h2><p>Get a feel for our published Chanda Nagar premises, then tell the team which activities, rooms or access arrangements matter for your child.</p><figure class="chn-interior"><a href="/pinnacle-pages-assets/chandanagar-interior-43-2.DQAwFr7g_1BQVmP.webp"><img src="/pinnacle-pages-assets/chandanagar-interior-43-2.DQAwFr7g_1BQVmP.webp" srcset="/pinnacle-pages-assets/chandanagar-interior-43-2.DQAwFr7g_1Msyw8.webp 360w, /pinnacle-pages-assets/chandanagar-interior-43-2.DQAwFr7g_1BQVmP.webp 600w" sizes="(max-width:700px) 90vw, 400px" width="600" height="800" loading="lazy" decoding="async" alt="Published Chanda Nagar activity-room photograph showing colourful play and therapy equipment."></a><figcaption>Inside Chanda Nagar · <a href="/pinnacle-pages-assets/chandanagar-interior-43-2.DQAwFr7g_1BQVmP.webp">Open the full interior photograph</a></figcaption></figure><h3>A walkthrough from the Pinnacle channel</h3>${centreTour({name:'Chanda Nagar',videoId:'rPl_kZm7LiE',poster:'/pinnacle-pages-assets/chandanagar-interior-43-2.DQAwFr7g_1Msyw8.webp',posterAlt:'Published Chanda Nagar activity-room photograph.',width:360,height:480})}</section>
 <div class="chn-evidence"><h2>Questions before your first visit.</h2>
 ${faq.map(({question,answer})=>`<details><summary>${question}</summary><p>${answer}</p></details>`).join('')}
 <nav class="chn-links" aria-label="Prepare for your conversation"><a href="https://pinnacleblooms.org/ask/what-happens-during-speech-and-language-therapy-sessions">What happens in a speech session?</a><a href="https://pinnacleblooms.org/ask/how-much-does-autism-or-speech-therapy-cost-in-india">Understanding therapy fees</a><a href="/books/resources/first-conversation">A free one-page conversation planner</a><a href="/verify/evidence/pinnacle-paradigm-shift.html">The PinnacleAI® paradigm shift</a><a href="/verify/">Explore licences, research and evidence</a></nav></div>
@@ -61,7 +65,7 @@ export function isChandaNagarRequest(request){
  return u.origin==='https://www.pinnacleblooms.org'&&u.pathname===CHANDANAGAR_PATH&&trackingOnly(u)&&['GET','HEAD'].includes(request.method)&&!request.headers.has('authorization')&&!request.headers.has('range')&&!request.headers.has('if-range')&&!/\bno-transform\b/i.test(request.headers.get('cache-control')||'');
 }
 export function reviseChandaNagarHtml(html){
- if(html.includes('id="pinnacle-chandanagar-start"'))return optimiseCentreMediaHtml(html,'13689513037');
+ if(html.includes('id="pinnacle-chandanagar-start"'))return chandaFrontage(optimiseCentreMediaHtml(html,'13689513037'));
  const canonical=html.match(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/gi)||[];
  if(canonical.length!==1||!html.includes('/Images/ProfileImages/13689513037.jpg'))return null;
  // The legacy origin echoes tracking parameters into its canonical. Accept only
@@ -72,12 +76,12 @@ export function reviseChandaNagarHtml(html){
  const replaced=replaceCentreIntroduction(html,'Chanda Nagar',CHANDANAGAR_MARKUP,'');if(replaced===null)return null;
  const introChanged=replaced;
  // The local story changes; preserve all other legacy content and assets verbatim.
- return optimiseCentreMediaHtml(introChanged.replace(canonical[0],'<link rel="canonical" href="'+CHANDANAGAR_URL+'">').replace(/<title>[\s\S]*?<\/title>/,'<title>'+title+'</title>')
+ return chandaFrontage(optimiseCentreMediaHtml(introChanged.replace(canonical[0],'<link rel="canonical" href="'+CHANDANAGAR_URL+'">').replace(/<title>[\s\S]*?<\/title>/,'<title>'+title+'</title>')
   .replace(/<meta\b(?=[^>]*\bname="description")[^>]*>/,'<meta name="description" content="'+description+'">')
   .replace(/<meta\b(?=[^>]*\bproperty="og:title")[^>]*>/,'<meta property="og:title" content="'+title+'">')
   .replace(/<meta\b(?=[^>]*\bproperty="og:description")[^>]*>/,'<meta property="og:description" content="'+description+'">')
   .replace(/<meta\b(?=[^>]*\bname="twitter:title")[^>]*>/,'<meta name="twitter:title" content="'+title+'">')
-  .replace(/<meta\b(?=[^>]*\bname="twitter:description")[^>]*>/,'<meta name="twitter:description" content="'+description+'">'),'13689513037');
+  .replace(/<meta\b(?=[^>]*\bname="twitter:description")[^>]*>/,'<meta name="twitter:description" content="'+description+'">'),'13689513037'));
 }
 export async function transformChandaNagar(request,response){
  if(!isChandaNagarRequest(request)||response.status!==200||!/^text\/html\b/i.test(response.headers.get('content-type')||'')||response.headers.has('set-cookie')||/private|no-store|no-transform/i.test(response.headers.get('cache-control')||'')||/noindex|none/i.test(response.headers.get('x-robots-tag')||'')||/(?:^|,)\s*(?:cookie|authorization|\*)\s*(?:,|$)/i.test(response.headers.get('vary')||''))return response;
@@ -91,4 +95,13 @@ export async function transformChandaNagar(request,response){
  // must never be promoted into shared/browser caching by this transformation.
  headers.set('cache-control',request.headers.has('cookie')?'private, no-store, max-age=0':'public, max-age=60');
  return new Response(changed,{status:response.status,statusText:response.statusText,headers});
+}
+
+function chandaFrontage(html){
+ // Replace this centre's legacy autoplay banner with the opt-in tour farther
+ // down the page. Other centre videos and all unrelated scripts are untouched.
+ return html.replace(/<section class="video-section">\s*<div class="video-block-displayed content-video-top"[^>]*>[\s\S]*?data-videoid="rPl_kZm7LiE"[\s\S]*?<\/section>/g,'')
+  .replace(/<script>\s*\/\/ Inject iframe ONLY when browser is completely idle[\s\S]*?<\/script>/g,'')
+  .replace(/<link\b(?=[^>]*href="https:\/\/(?:i\.ytimg\.com\/vi\/rPl_kZm7LiE\/hqdefault\.jpg|www\.youtube-nocookie\.com)")[^>]*>/g,'')
+  .replace(/<img\b[^>]*src=["'][^"']*\/Images\/ProfileImages\/13689513037\.jpg(?:\?[^"']*)?["'][^>]*>/gi,'<img data-centre-frontage src="/pinnacle-pages-assets/chandanagar-exterior-15.Im95dRA9_1bzp73.webp" width="382" height="510" loading="eager" fetchpriority="high" decoding="async" alt="Published Chanda Nagar building photograph, with the Pinnacle nameboard above the ground-floor shops."><p class="chn-photo-caption">Our published Chanda Nagar building photo. Confirm the current entrance and directions with our team before travelling.</p>');
 }

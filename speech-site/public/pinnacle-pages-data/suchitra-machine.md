@@ -78,5 +78,8 @@ The evidence section links to Pinnacle Verify, the MD-5 and BIS originals, and t
 
 ## Next step
 Call [9100 181 181](tel:+919100181181) or [ask about a Suchitra visit](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=suchitra).
+## Published Suchitra I walkthrough
+https://www.youtube.com/watch?v=zT2fIZWRn-c
+Published historical tour; current rooms and equipment are confirmed before a visit.
 Three distinct authorised first-party Suchitra photographs, published from the released directory. Capture date and current equipment are not inferred.
 Generated fictional family/professional scene; not an actual Suchitra room, patient or outcome.

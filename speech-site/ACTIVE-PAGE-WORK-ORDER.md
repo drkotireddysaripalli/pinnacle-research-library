@@ -1,5 +1,11 @@
 # Current page work — 6 October 2026
 
+## Shared audit repairs delivered; centre media at release acceptance
+
+The approved next website/search batch removed 702 retired sitemap entries, regenerated seven canonical FAQ maps and repaired shared legacy social/schema coverage plus the capitalised Ask entry. Source `600cc63967ea05924237bfce9e54991f06b41400`; 29 public checks and 10 GSC sitemap submissions completed. See `RELEASE-SHARED-SEARCH-20261006.md`. This does not certify Ahrefs health 100 or resolve all intermittent origin failures.
+
+Suchitra I and Chanda Nagar now have locally built exterior-first presentation, later interior photos and opt-in official centre walkthroughs. Chanda's old autoplay banner is removed. Production build, exact-transform regressions and local phone/tablet/desktop checks passed. Commit/CI, guarded promotion and production device/performance acceptance are the immediate next actions; see `RELEASE-CENTRE-MEDIA-20261006.md`.
+
 ## Six-step search, reader journey and measurement delivery — deployed and verified
 
 Direct instruction: complete the six recommendations and use Windsor where practically useful. Scope: five evidenced broken destinations; Suchitra and Chanda Nagar journeys; consented source attribution; Ask DEIC/AAC/WPPSI context and therapy selection; declared mobile/browser regression; bounded settled-result feedback. Full work order and source evidence are in `../../pinnacle-growth-system/six-step-release-20261006/WORK-ORDER.md`. Keep accepted common shell, auth, full route/binding/asset union and unrelated commerce intact. No new whole-site crawl or resumed general heartbeat. Actual receiving-team outcomes remain an explicit data dependency. Delivered through source 0203e49 with Ask source 9ca4566; see RELEASE-SIX-STEP-20261006.md and deployment/six-step-proof-20261006/RESULT.md for exact live, device, search-submission and outcome boundaries.
