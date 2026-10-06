@@ -1,0 +1,69 @@
+{
+  "item_id": "WEB-BOOK-NATIVE-404-20261005",
+  "action_id": "f2431421-8dbf-425d-b9bb-b3a11bea0dc7",
+  "outcome": "deployed",
+  "verified": true,
+  "summary": "Restored native book routes and required assets, preserved existing approved content; shared legacy entity corrections published.",
+  "commit": "56208d35a8bdf7f0a9fbeaffc668ca3dfa8c4040",
+  "deployment": "729a0f52-9f19-408d-bcf1-b50bed2cc2a3",
+  "public_url": "https://www.pinnacleblooms.org/books/hi",
+  "at": "2026-10-06T02:06:07.642429+00:00",
+  "proof": {
+    "restoredURLs": 46,
+    "screamingFrog": {
+      "urlCount": 92,
+      "okIndexable": 92,
+      "htmlPages": 91,
+      "missingTitleDescriptionH1Canonical": 0,
+      "file": "screaming-frog-final-summary.json"
+    },
+    "publicAssets": {
+      "count": 49,
+      "passed": 49,
+      "file": "public-assets-proof.json"
+    },
+    "nativeDeviceChecks": {
+      "count": 12,
+      "passed": 12,
+      "physicalAndroidAndHostedChrome": true,
+      "file": "device-coverage-complete.json"
+    },
+    "preservedExistingPublicHashes": 12,
+    "repairedHubs": 2,
+    "routeCount": 209,
+    "portalBindings": 4,
+    "CI": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37401592822",
+    "indexnow": {
+      "submitted": 46,
+      "http": 200,
+      "batchId": "d82d6200-c80f-4e52-8f12-d34ab58682d7"
+    },
+    "gsc": {
+      "sitemap": "https://www.pinnacleblooms.org/books/sitemap.xml",
+      "acceptedAt": "2026-10-06T02:02:33.843Z",
+      "pending": true
+    },
+    "sharedLegacyRepair": {
+      "commit": "84bf8dbe84a082f5949d5bfc5d03966c34c47978",
+      "version": "2e2e6536-5b48-4ffb-b6e3-552cba878d16",
+      "visibleTextPreserved": true,
+      "preexistingInvalidAnnouncementRemains": true
+    },
+    "independentBrowserReconciliation": {
+      "at": "2026-10-06T02:09:45.824813+00:00",
+      "initialIndependentObservation": "Exact Hindi/Telugu hubs showed legacy404 in remote Chrome at02:05:45UTC.",
+      "resolution": "Independent owner confirmed both native hubs and four detail pages display correctly after one normal Chrome reload, including prices, covers, enabled ebook bag buttons and original seven Amazon links. Local actual Chrome and TestingBot also show correct pages.",
+      "cause": "Not established; no cache purge succeeded and no further code mutation was needed.",
+      "activeVersion": "729a0f52-9f19-408d-bcf1-b50bed2cc2a3",
+      "sourceCommit": "56208d35a8bdf7f0a9fbeaffc668ca3dfa8c4040",
+      "evidenceThread": "01a0f6ef-1af3-7bf0-98aa-9db53523e555",
+      "evidenceRemoteFile": "native-books-source-recovery-20261006/root-public-verification.json",
+      "status": "resolved"
+    }
+  },
+  "limits": [
+    "No purchase/sign-in performed; catalogue and checkout configuration retained.",
+    "Search submission is not indexing/ranking/lead growth.",
+    "All-site health clearance remains pending a completed post-repair audit."
+  ]
+}

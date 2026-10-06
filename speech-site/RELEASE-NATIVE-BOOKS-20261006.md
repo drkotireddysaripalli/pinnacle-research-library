@@ -14,4 +14,13 @@ Upload this explicit asset manifest with the committed Worker source. Do not use
 
 ## Release state
 
-Prepared and checked; publication, final live regression results and discovery receipt will be appended after their actual completion. No search score, indexing or lead gain is inferred from deployment.
+Published and verified: source `56208d35a8bdf7f0a9fbeaffc668ca3dfa8c4040`, Cloudflare version `729a0f52-9f19-408d-bcf1-b50bed2cc2a3`. CI37401592822 passed before publication. All92 explicitURLs returned200/indexable, including all46 restored native destinations. All91HTML pages had a title, description, oneH1 and canonical; the remainingURL is XML. All49 required assets returned200 with non-HTML types.
+
+Six representative native pages passed on physical Android and hosted Windows Chrome:12page/configuration checks. The knowledge matrix separately covered8pages across6configurations:48checks. Screenshots were reviewed. These are scoped tests, not whole-site or purchase certification.
+
+Twelve protected existing outputs retained their original hashes; the two hubs now return200. All209routes/fourportalbindings and protected applications are retained. Google accepted the book sitemap at02:02:33UTC; IndexNow accepted46changedURLs withHTTP200, batch`d82d6200-c80f-4e52-8f12-d34ab58682d7`. See committed completion receipts.
+
+The shared legacy entity repair is live as`2e2e6536-5b48-4ffb-b6e3-552cba878d16` fromsource`84bf8dbe84a082f5949d5bfc5d03966c34c47978`. Known entity types/legal organisation are corrected and visible text preserved. A separate malformed COVID-era SpecialAnnouncement remains for the next shared repair. No sitewide100health, indexing, rankings or newleadgain is inferred.
+
+
+Independent commerce-browser check initially saw stale404 content at02:05:45UTC. One normal reload subsequently showed both native hubs and four product/detail pages correctly, including covers and settled enabled ebook-bag controls. Local actualChrome also confirmed the canonical Hindi hub. Cause was not established; the attempted two-URL Cloudflare purge was denied401 and is not claimed as the remedy. The successful independent reconciliation is recorded in the completion receipt. Historical14-file donor archive was retained separately; no second asset upload or needless rebuild was performed.
