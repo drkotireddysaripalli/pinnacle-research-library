@@ -1,5 +1,9 @@
 # Current page work — 6 October 2026
 
+## Current execution control — direct work only
+
+The owner explicitly stopped schedulers on 6 October. `pinnacle-hourly-growth-delivery` is deleted; the retired Windows scheduler and API gateway are disabled. Do not recreate or resume scheduled execution without an explicit human instruction about scheduling. Older heartbeat wording below is historical. The campaign canonical repair is deployed but acceptance remains open for old cached responses and one physiotherapy JSON-LD error; see the existing growth queue and `ecosystem-review-20261006/campaign-release-pending-cache.json`.
+
 ## Shared audit repairs delivered; centre media at release acceptance
 
 The approved next website/search batch removed 702 retired sitemap entries, regenerated seven canonical FAQ maps and repaired shared legacy social/schema coverage plus the capitalised Ask entry. Source `600cc63967ea05924237bfce9e54991f06b41400`; 29 public checks and 10 GSC sitemap submissions completed. See `RELEASE-SHARED-SEARCH-20261006.md`. This does not certify Ahrefs health 100 or resolve all intermittent origin failures.
@@ -21,7 +25,7 @@ Completed: core `05c4ca7`, final wrapper `3d2cd92`, both pushed with successful 
 
 The owner assigned Ask, Sunshine, FAQ, Verify, Shop and Books code/release ownership to this Windows website thread on 6 October. Canonical guide: `../PORTAL-OWNERSHIP.md`. The Mac commerce task acknowledged the single website/theme code owner. Its 531 source files were transferred and hash-verified; private Shopify source `e4cf0342b6397d0db11592e02a4541126e7d0688` is pinned at `../commerce-shopify/`. Private storage preserves the supplied theme licence. Seven public entry documents and all five protected Worker versions/209 routes were checked without changing production. Receipt: `deployment/portal-ownership-20261006.json`.
 
-Marketplace/publishing/support operations continue in their existing Mac task. A fresh export of hosted Shopify theme146540331074 remains dependent on the care mailbox's existing device verification; the imported 2 October snapshot must not overwrite it. The code is retained and owned here, while that source-freshness dependency stays explicit. No unrelated next page or resumed growth schedule is implied by this takeover.
+Marketplace/publishing/support operations continue in their existing Mac task. The original 6 October export of hosted Shopify theme146540331074 has now arrived through the existing private repository. Its archive and all 497 file hashes were verified here; private source revision `ac94d63a5fd3b6893d01103b3a61b80566cf9eca` is pinned at `../commerce-shopify/`. Use `intake/live-theme-20261006/` as the dated current source, with the 2 October tree retained as history. Receipt: `deployment/shop-theme-source-intake-20261006.json`. Source intake is complete and required no hosted theme deployment or repeat export. Continue implementation after the current guarded website repair; scheduling remains deleted.
 
 ## Authorised commerce follow-through — direct PDF book bag completed
 

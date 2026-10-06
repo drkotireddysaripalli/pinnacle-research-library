@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-06T14:50:51.609793+00:00",
+  "private_repository": "drkotireddysaripalli/pinnacle-shopify-source",
+  "private_commit": "ac94d63a5fd3b6893d01103b3a61b80566cf9eca",
+  "theme_id": "146540331074",
+  "export_date": "2026-10-06",
+  "archive_path": "intake/live-theme-20261006/theme-146540331074-export-20261006.zip",
+  "archive_bytes": 3988840,
+  "archive_sha256": "17dbf710fad98a609b95cf25cd74e14cf83b63e1e14b3ea9ce3a669f8241e71c",
+  "file_count": 497,
+  "verified_file_hashes": 497,
+  "crc_errors": 0,
+  "unsafe_paths": 0,
+  "source_bytes": 7713176,
+  "pinned_component": "commerce-shopify",
+  "runtime_changed": false,
+  "scheduled_execution": "deleted_by_owner",
+  "earlier_snapshot": "e4cf0342b6397d0db11592e02a4541126e7d0688 is historical; do not use as hosted-theme baseline.",
+  "local_source_note": "All files extracted and verified in the website task private working storage; archive remains pinned in the private Git component."
+}
