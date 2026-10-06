@@ -1,0 +1,86 @@
+{
+  "commit": "df55a031e0234a651f53bc7accbd2497ba1a3292",
+  "files": [
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/hi/aba-sample-1.png",
+      "sha256": "b5ab1cc01cfcfc134727636edd7d917cd728b87c775c5a94c42b04191654d2ca",
+      "bytes": 2318794
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/hi/aba-sample-2.png",
+      "sha256": "e04eec44b776784cf4bd4b013143d8b43fd84aad7fcf9e58edc10c4d6579c973",
+      "bytes": 2207845
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/hi/ot-sample-1.png",
+      "sha256": "0d620c95fcd60c1f6a5a3dd33e80995052a2708865b4f422c4be07b795836278",
+      "bytes": 1997423
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/hi/ot-sample-2.png",
+      "sha256": "91bd41088c33fbe7e2b3b9fb2c471df21772da78a9f5187869ac76c76ab55683",
+      "bytes": 2440869
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/hi/special-education-sample-1.png",
+      "sha256": "61f74bb87442b2e9b154bce47146756dc044c19cc7ec0b01e55633f97c69b610",
+      "bytes": 2174266
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/hi/special-education-sample-2.png",
+      "sha256": "91c484c835bfaf1557acd137bafad88cc0a7e64314078fbb6cff012c2e89392b",
+      "bytes": 2318970
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/hi/speech-sample-1.png",
+      "sha256": "3e2a92d4c197a66b3c2f6e68834f67649b10fc6bd2553952add040c0bddc356a",
+      "bytes": 2126061
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/hi/speech-sample-2.png",
+      "sha256": "68674e344c19cd95110bf91882c14373303ccd68e985f6432feef797bb7a08d5",
+      "bytes": 1996501
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/te/aba-sample-1.png",
+      "sha256": "82f0f76800a769ab673edd141db94c40f2402fdef862918bc4ef31f60fb8205f",
+      "bytes": 2421768
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/te/aba-sample-2.png",
+      "sha256": "62d29904dd5c852649fa12f9fdaa6770e540be9203434a9d1e655ce2a518c75d",
+      "bytes": 2374113
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/te/ot-sample-1.png",
+      "sha256": "2cebaccd3c322c74d8530f0ecea48ae74c802e1a38f44f3bfb9439b5b872fdc3",
+      "bytes": 2050567
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/te/ot-sample-2.png",
+      "sha256": "53431a3bd5db2b0d7ad21b7592517ba121b781159f8168770b4afd3c923a86d4",
+      "bytes": 2512881
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/te/special-education-sample-1.png",
+      "sha256": "74fa57dd274d8a826b809ea86701f16130be290d64898b51bb418dc58356517e",
+      "bytes": 2285181
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/te/special-education-sample-2.png",
+      "sha256": "934caa6c7be686a730411367c51917864c95dd363d0a5ff8cf70502e6dae8208",
+      "bytes": 2385853
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/te/speech-sample-1.png",
+      "sha256": "a7440e2bdd13916e9b634f9f6e8ee0fdce77fb92145a224d612c1a37cc9d5cd8",
+      "bytes": 2198651
+    },
+    {
+      "path": "pinnacle-pages-assets/book-gallery-20261003/te/speech-sample-2.png",
+      "sha256": "666d97ab49c03fda2d35529bf0248aa4935a8d9d5b6c4b7c05c3b591eec1e9e0",
+      "bytes": 2057788
+    }
+  ],
+  "count": 16
+}

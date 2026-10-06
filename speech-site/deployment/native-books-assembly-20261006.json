@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-06",
+  "currentSpeechAssetsPreserved": 1418,
+  "verifyAssetsPreserved": 634,
+  "nativeHtml": 47,
+  "nativeBinaries": 54,
+  "addedInventoryEntries": 103,
+  "addedDependencies": [
+    "/pinnacle-pages-assets/BookCart.BquuuMpG.css",
+    "/pinnacle-pages-assets/book-languages.B-A4FWiE.css"
+  ],
+  "unionFiles": 2157,
+  "unionBytes": 386025102,
+  "union": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\ask-distribution-release-20261003\\speech-site\\release-native-books-20261006"
+}
