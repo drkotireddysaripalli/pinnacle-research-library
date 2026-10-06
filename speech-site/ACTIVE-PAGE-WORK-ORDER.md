@@ -36,13 +36,13 @@ Published and verified: source `92455876c30e8759a83b0df7e585b143f17c569b`, porta
 Shared Anek typography is live across managed native HTML: 800 headings, 600 body, 700 controls. Portal `52ba9d40-eddb-4864-a08b-fae511f6f1f2`; Ask/FAQ `800a09a7-556c-4311-b07e-2ac548fd7c61`. Source `8726afb0789d5b7543a0ace1d3d598f3d5c4208b`. 30 local presentation checks, 8 phone-number grouping checks, and 9 physical-device page checks passed. Routes and bindings preserved. See `RELEASE-VERNACULAR-TYPOGRAPHY-20261006.md`. The existing growth schedule remains held; no unrelated page or commerce changes are included.
 
 
-## Site health: bulk repair delivered; post-release crawl running
+## Site health: bulk repair delivered; completed baseline predates final releases
 
 Owner instruction: reach a genuine100 Ahrefs Health Score through shared causes, least effort/max impact. Action `b00562eb-206b-41f7-a710-b7cc7c077716` delivered FAQ/Sunshine/Mirracles recovery, eligible retired-profile handling, franchise canonical and core sitemap fixes. Final sources `818fe1b` and `1fb2823`; exact production versions and proof are in `RELEASE-KNOWLEDGE-RECOVERY-20261005.md`.
 
 4,564 FAQ answers in seven languages,1,826 Sunshine public links and28,334 story destinations are retained in compact collections. Common shellv159 is unchanged. Ask Google identity is reused.209 routes/21 Ask bindings and unrelated Portal/MCP/Verify remain protected.
 
-Main Ahrefs old score22; one fresh full crawl started5October22:02IST after bulk fixes. Pagination parameters are preserved and max crawl size50,000. **100 is not yet measured.** Next: read the completed crawl once; fix shared residuals. Two unresolved old404 destinations (`/ma/wil` and the ASSQ UUID route) require an evidenced source/inlink correction; no made-up redirects. Existing hourly automation remains paused; unrelated next-page work remains on hold.
+The completed main crawl reports90 across53,853 internal URLs, with5,264 URLs carrying errors; completed6October08:02:36UTC. Ask96 and Verify100 are separate dated scopes. These crawls predate the final6October repairs and do not certify current clearance. `/ma/wil` is now resolved with a source-backed exact redirect; the ASSQ UUID remains source-dependent. Next: use one audit covering the final repair batch and address surviving shared causes, including matched intermittent failures. Schedulers are deleted/disabled. Ordinary next-page holds remain separate from directly authorised repair/commerce work.
 
 Final representative FAQ live Lighthouse: mobile96/100/100/100, desktop100/100/100/100.147 shared public checks,27 collection HTTP checks and final anonymous Google/readability checks passed within declared scopes. Hosted Safari consent retest passed; physical mobile unavailable and local Firefox could not launch. See the release receipt for scope and skipped coverage.
 
