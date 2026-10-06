@@ -31,7 +31,7 @@ try{
   const context=await browser.newContext({viewport:{width:1440,height:960}}),page=await context.newPage(),network=[],errors=[];
   if(mode==='gpc')await context.addInitScript(()=>Object.defineProperty(navigator,'globalPrivacyControl',{value:true}));
   page.on('pageerror',e=>errors.push(e.message));
-  page.on('request',r=>{const u=new URL(r.url());if(/googletagmanager|google-analytics|analytics.google|doubleclick|googleadservices|googlesyndication/.test(u.hostname))network.push({host:u.hostname,path:u.pathname,id:u.searchParams.get('id')});});
+  page.on('request',r=>{const u=new URL(r.url());if(/googletagmanager|google-analytics|analytics.google|gstatic|doubleclick|googleadservices|googlesyndication/.test(u.hostname))network.push({host:u.hostname,path:u.pathname,id:u.searchParams.get('id')});});
   // Only ads-only observes real Google requests; all other modes isolate QA from reporting.
   if(mode!=='ads-only')await page.route(/https:\/\/(?:[^/]*google[^/]*|[^/]*doubleclick[^/]*)\//,r=>r.fulfill({status:200,contentType:'application/javascript',body:''}));
   await candidate(page,speech);await page.goto(origin+speech,{waitUntil:'domcontentloaded'});
@@ -76,7 +76,7 @@ try{
   await page.goto(origin+path,{waitUntil:'domcontentloaded'});await page.locator('[data-ad-call-preferences]').waitFor({state:'visible'});if(path===verify)await page.locator('[data-analytics-choice="declined"]').click();await panel(page);
   const style=await page.locator('[data-ad-call-preferences]').evaluate(e=>{const box=e.getBoundingClientRect(),b=e.querySelector('button').getBoundingClientRect(),s=getComputedStyle(e);return {width:box.width,x:box.x,buttonHeight:b.height,font:s.fontSize,color:s.color,overflow:document.documentElement.scrollWidth>innerWidth+1};});
   assert(!style.overflow,engine+' '+width+' overflow');assert(style.buttonHeight>=40,'Consent button too small');
-  const file=`${engine}-${width}-${path===speech?'speech':'verify'}.png`;await page.locator('[data-ad-call-preferences]').screenshot({path:root+'/'+file});
+  const file=`${engine}-${width}-${path===speech?'speech':'verify'}.png`;await page.locator('[data-ad-call-preferences]').evaluate(e=>e.scrollIntoView({block:'start'}));await page.locator('[data-ad-call-preferences]').screenshot({path:root+'/'+file});
   result.visual.push({engine,width,path,style,file,passed:true});await context.close();if(engine!=='chromium')await engineBrowser.close();await save();
  }
  console.log(JSON.stringify({passed:true,cases:result.cases.length,visual:result.visual.length,report:root+'/report.json'}));

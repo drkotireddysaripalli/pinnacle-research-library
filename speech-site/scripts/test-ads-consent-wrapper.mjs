@@ -40,4 +40,5 @@ test('Verify reader uses the current independent consent source on the three wra
  const environment={PINNACLE_VERIFY:{fetch:async()=>new Response(withReader,{headers:{'content-type':'text/html'}})}};
  const output=await(await worker.fetch(new Request(origin+'/verify/guides/abilityscore.html'),environment)).text();
  assert(output.includes('google-ads-call.js?module=verify-reader&v=3'));assert(!output.includes('reader-extras.9c5444bd34caead9.js'));
+ assert.equal((output.match(/google-ads-call.js\?v=3/g)||[]).length,1,'The Verify reader is separate from the call bootstrap');
 });

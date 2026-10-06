@@ -82,7 +82,8 @@ async function addMeasurement(response, includeVerifyCta = false) {
   let html = await response.text();
   const additions = [];
   if (includeVerifyCta) html = html.replace(/(src=["'])\/verify\/(?:_assets\/reader-extras\.[a-f0-9]+\.js|reader-extras\.js)(["'])/g, `$1${BOOTSTRAP_PATH}?module=verify-reader&v=3$2`);
-  if (!html.includes(BOOTSTRAP_PATH) && !html.includes("data-pinnacle-ad-call-module") && !html.includes(`${GOOGLE_ADS_ID}/${GOOGLE_ADS_LABEL}`)) {
+  const hasCallBootstrap = [...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["'][^>]*>/gi)].some(match => match[1].includes(BOOTSTRAP_PATH) && !match[1].includes('module=verify-reader'));
+  if (!hasCallBootstrap && !html.includes("data-pinnacle-ad-call-module") && !html.includes(`${GOOGLE_ADS_ID}/${GOOGLE_ADS_LABEL}`)) {
     additions.push(BOOTSTRAP_MARKUP);
   }
   const addVerifyCta = includeVerifyCta && !html.includes("data-pinnacle-mobile-call-cta");
