@@ -10,7 +10,7 @@ import {repairKnownBrokenMedia} from './media.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 // Existing legacy templates with the same measured HTTP social/HTTPS canonical defect.
-export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training', '/staff', '/careers', '/dance-therapy', '/certified-courses', '/certifiedcourses', '/courses/466/Afraid'];
+export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training', '/staff', '/careers', '/dance-therapy', '/certified-courses', '/certifiedcourses', '/courses/466/Afraid', '/courses/466/afraid'];
 export const ADDITIONAL_LEGACY_ROUTES = ['www.pinnacleblooms.org/t/*', 'www.pinnacleblooms.org/mirracles/*', ...ADDITIONAL_LEGACY_PATHS.map(p => 'www.pinnacleblooms.org' + p + '*')];
 const encoder = new TextEncoder();
 const transformedResponses = new WeakSet();
@@ -83,9 +83,10 @@ async function repairHead(head, request) {
   // Only that documented route family permits a case-normalized comparison.
   const sameMirracle = /^\/mirracles\/\d+\/[^/]+\/?$/.test(requestUrl.pathname) &&
     parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '').toLowerCase();
+  const sameRecordedCourse = requestUrl.pathname.replace(/\/$/,'')==='/courses/466/Afraid' && parsed.pathname==='/courses/466/afraid';
   if (parsed.protocol !== 'https:' || parsed.hostname !== 'www.pinnacleblooms.org' ||
       parsed.port || parsed.username || parsed.password || parsed.search || parsed.hash ||
-      !(samePath || sameMirracle) ||
+      !(samePath || sameMirracle || sameRecordedCourse) ||
       ![target,target.replace(/^https:/, 'http:')].includes(previous)) return null;
   // A previously corrected social URL must not suppress the independent
   // JSON-LD repair. The same self-canonical/privacy guards still apply.

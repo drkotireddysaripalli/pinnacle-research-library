@@ -74,6 +74,11 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
     for(const [name,f] of unchanged) await t.test('pass-through: '+name,async()=>{const {body,r}=await run(f);assert.equal(body,f.body||html());assert.equal(r.headers.get('x-pinnacle-social-metadata'),null);assert.equal(r.status,f.status||200);});
     for(const headers of [{authorization:'Bearer fixture'},{range:'bytes=0-99'}]) await t.test('sensitive request bypass '+Object.keys(headers)[0],async()=>{const {body}=await run({},'/physiotherapy',{headers});assert.equal(body,html());});
     await t.test('unknown neighboring URL is untouched',async()=>{const {body}=await run({},'/physiotherapy-other');assert.equal(body,html());});
+    await t.test('captured mixed-case course identity keeps its lowercase canonical and repairs its exact image',async()=>{
+      const input=html('/courses/466/afraid').replace('</main>','<img src="/Assets/Materials/20707165343.jpg"></main>');
+      for(const path of ['/courses/466/Afraid','/courses/466/afraid']){const {body}=await run({body:input},path);assert(body.includes('content="https://www.pinnacleblooms.org/courses/466/afraid"'));assert(body.includes('data-pinnacle-brand-fallback'));assert(body.includes('href="https://www.pinnacleblooms.org/courses/466/afraid"'));}
+      const {body}=await run({body:input},'/courses/999/Afraid');assert.equal(body,input);
+    });
     await t.test('HEAD/POST retain origin method and body behavior',async()=>{
       const head=await run({},'/physiotherapy',{method:'HEAD'});assert.equal(head.body,'');assert.equal(forwarded.method,'HEAD');
       const post=await run({},'/faq',{method:'POST',body:'fixture'});assert.equal(post.body,html());assert.equal(forwarded.method,'POST');
