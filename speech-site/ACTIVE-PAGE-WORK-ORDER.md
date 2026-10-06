@@ -1,5 +1,9 @@
 # Current page work — 6 October 2026
 
+## Exact physiotherapy WebPage identities — completed and live
+
+Source `a6bd113`; successful CI `37499537094`; legacy version `46fa8ad2-f64c-47e1-a78b-db27d849b331`; deployment `828b9505-0332-47d4-803f-2631741f5017`. Two captured WebPage scripts now use canonical HTTPS/no-campaign-query self-identities. Four public before/after comparisons retain every other schema value, visible text and link. All 228 routes, bindings, the other eight legacy modules and five protected service versions are retained. The current Shop/Portal release remains unchanged. Receipt: `RELEASE-PHYSIOTHERAPY-IDENTITIES-20261006.md`. Website schedules remain stopped.
+
 ## Shared Shop checkout integrity — completed and live
 
 Runtime source ddcee0a5f9991f33d559918bd15476e94c69093b; successful CI37495775427; Portal ba536ab4-f94d-4b65-a8c6-2d270e2021ee; deployment b6a3065d-15c0-42da-8534-446548329cef. The current live bag reads all line pages,validates exact PDF variants/base INR prices/availability/non-shipping scope,and requires deliberate review after refreshed selection/quantity/total changes. Existing bag and consent handling retained. All228 routes,2,160 assets,37 other modules and six protected services preserved. EN/HI/TE actual API selections,phone/tablet/desktop captures,physical iPhone17Pro/iOS26.5 Safari,and an intercepted real checkout handoff passed; all test bags emptied. Both55-row feeds/33 PDF links and seven Amazon-linked pages preserved. No order/payment or theme publication. See RELEASE-BOOK-BAG-INTEGRITY-20261006.md and deployment/book-bag-integrity-20261006.json. The wider qualified-outcome/outreach/merchant gaps remain in the day-delivery register; schedulers stay deleted/disabled.

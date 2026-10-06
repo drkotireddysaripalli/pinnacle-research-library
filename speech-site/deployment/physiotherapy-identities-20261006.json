@@ -1,0 +1,182 @@
+{
+  "id": "physiotherapy-identities-20261006",
+  "phase": "verified-public",
+  "at": "2026-10-06T16:51:13.993Z",
+  "baseCommit": "7afce0ebdbce885916b3009aaca3d1e1fe5fa167",
+  "rollback": [
+    {
+      "version_id": "b215ba6e-d850-493f-9bf0-133f01ea7a16",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 228,
+  "moduleCount": 9,
+  "originalHashes": {
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+    "entry.mjs": "028a4217677484800409a7f7a8622b752771dff5bd357103f61d485644d1c0b7",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc"
+  },
+  "commit": "a6bd1134d84d19a631cfa64a878e3c87535e6a02",
+  "candidate": "46fa8ad2-f64c-47e1-a78b-db27d849b331",
+  "hashes": {
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+    "entry.mjs": "6a80deac1e27eccd895ceeeed590d8798a0f76a745de7f81638ece791b2215c1",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc"
+  },
+  "deployment": "828b9505-0332-47d4-803f-2631741f5017",
+  "promotedAt": "2026-10-06T17:01:26.591Z",
+  "verifiedAt": "2026-10-06T17:01:28.395Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-verify-route",
+    "pinnacle-ask",
+    "pinnacle-ask-mcp",
+    "pinnacle-centre-search-repair",
+    "pinnacle-helpline"
+  ],
+  "routesPreserved": 228,
+  "bindingsPreserved": true,
+  "publicAcceptance": {
+    "at": "2026-10-06T17:03:21.900Z",
+    "phase": "after",
+    "rows": [
+      {
+        "url": "https://www.pinnacleblooms.org/physiotherapy",
+        "status": 200,
+        "scripts": 10,
+        "webPages": [
+          {
+            "index": 5,
+            "url": "https://www.pinnacleblooms.org/physiotherapy"
+          },
+          {
+            "index": 7,
+            "url": "https://www.pinnacleblooms.org/physiotherapy",
+            "summaryUrl": "https://www.pinnacleblooms.org/physiotherapy"
+          }
+        ],
+        "collectionUrl": "https://www.pinnacleblooms.org/physiotherapy",
+        "callLinks": [
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181"
+        ],
+        "onlyIntendedChanges": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/physiotherapy?utm_source=release&utm_medium=email&utm_campaign=parent-guide",
+        "status": 200,
+        "scripts": 10,
+        "webPages": [
+          {
+            "index": 5,
+            "url": "https://www.pinnacleblooms.org/physiotherapy"
+          },
+          {
+            "index": 7,
+            "url": "https://www.pinnacleblooms.org/physiotherapy",
+            "summaryUrl": "https://www.pinnacleblooms.org/physiotherapy"
+          }
+        ],
+        "collectionUrl": "https://www.pinnacleblooms.org/physiotherapy",
+        "callLinks": [
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181"
+        ],
+        "onlyIntendedChanges": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/physiotherapy?gclid=release-fixture",
+        "status": 200,
+        "scripts": 10,
+        "webPages": [
+          {
+            "index": 5,
+            "url": "https://www.pinnacleblooms.org/physiotherapy"
+          },
+          {
+            "index": 7,
+            "url": "https://www.pinnacleblooms.org/physiotherapy",
+            "summaryUrl": "https://www.pinnacleblooms.org/physiotherapy"
+          }
+        ],
+        "collectionUrl": "https://www.pinnacleblooms.org/physiotherapy",
+        "callLinks": [
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181"
+        ],
+        "onlyIntendedChanges": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/physiotherapy?utm_source=release&msclkid=release-fixture",
+        "status": 200,
+        "scripts": 10,
+        "webPages": [
+          {
+            "index": 5,
+            "url": "https://www.pinnacleblooms.org/physiotherapy"
+          },
+          {
+            "index": 7,
+            "url": "https://www.pinnacleblooms.org/physiotherapy",
+            "summaryUrl": "https://www.pinnacleblooms.org/physiotherapy"
+          }
+        ],
+        "collectionUrl": "https://www.pinnacleblooms.org/physiotherapy",
+        "callLinks": [
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181",
+          "tel:9100181181"
+        ],
+        "onlyIntendedChanges": true
+      }
+    ]
+  },
+  "ci": {
+    "at": "2026-10-06T17:01:13.125Z",
+    "commit": "a6bd1134d84d19a631cfa64a878e3c87535e6a02",
+    "runs": [
+      {
+        "id": 37499537094,
+        "name": "Portal quality",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37499537094"
+      }
+    ]
+  },
+  "focusedTests": {
+    "passed": 57,
+    "failed": 0,
+    "skipped": 0
+  },
+  "review": "Both actionable findings fixed and confirmed resolved",
+  "schedulers": "deleted/disabled",
+  "searchNotification": "No duplicate notification",
+  "initialPublicCheck": {
+    "result": "Old response immediately after promotion",
+    "resolution": "Fresh diagnostic and final acceptance passed; no code change or cache purge",
+    "cause": "Propagation inferred, not independently established"
+  }
+}

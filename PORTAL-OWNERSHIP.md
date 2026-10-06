@@ -4,6 +4,8 @@ Owner instruction: 6 October 2026. This supersedes earlier split website/shop co
 
 ## Start here
 
+Latest legacy metadata release, 6 October 17:01 UTC: source `a6bd113`, version `46fa8ad2-f64c-47e1-a78b-db27d849b331`, deployment `828b9505-0332-47d4-803f-2631741f5017`. Exact physiotherapy WebPage identities are publicly verified across four variants. The Shop/Portal runtime listed below remains unchanged. Details: `speech-site/RELEASE-PHYSIOTHERAPY-IDENTITIES-20261006.md`.
+
 Latest runtime release, 6 October 16:34 UTC: source ddcee0a5f9991f33d559918bd15476e94c69093b; Portal ba536ab4-f94d-4b65-a8c6-2d270e2021ee. The shared book-bag integrity repair is publicly verified; 228 routes, 2,160 assets, 37 other portal modules and six protected services are retained. The older release IDs below are dated history. Details: `speech-site/RELEASE-BOOK-BAG-INTEGRITY-20261006.md`; actual baseline/rollback and public proof: `speech-site/deployment/book-bag-integrity-20261006.json`. No hosted Shopify theme publication was needed.
 
 - Canonical repository: <https://github.com/drkotireddysaripalli/pinnacle-research-library> — `main`.
