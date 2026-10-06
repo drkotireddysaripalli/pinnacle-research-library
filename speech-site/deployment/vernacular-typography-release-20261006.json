@@ -1,0 +1,295 @@
+{
+  "status": "deployed-and-verified",
+  "at": "2026-10-06T02:53:46.408238+00:00",
+  "sourceCommit": "8726afb0789d5b7543a0ace1d3d598f3d5c4208b",
+  "initialTypographySource": "7a5f4435386b74f222e8c66ecc3c12e1f57cb106",
+  "portalVersion": "52ba9d40-eddb-4864-a08b-fae511f6f1f2",
+  "askVersion": "800a09a7-556c-4311-b07e-2ac548fd7c61",
+  "portalRollback": "c7913e77-7c84-498e-9b60-7f06e4b17f35",
+  "askRollback": [
+    {
+      "version_id": "66c17f39-e6bd-441b-ba6a-3abb0049cc68",
+      "percentage": 100
+    }
+  ],
+  "routes": 209,
+  "portalModules": 36,
+  "portalBindings": 4,
+  "askBindings": 21,
+  "weights": {
+    "headings": 800,
+    "body": 600,
+    "controls": 700
+  },
+  "scripts": [
+    "Devanagari",
+    "Telugu",
+    "Tamil",
+    "Kannada",
+    "Malayalam",
+    "Bangla",
+    "Gujarati",
+    "Gurmukhi",
+    "Odia"
+  ],
+  "localPresentationChecks": {
+    "passed": 30,
+    "scope": "Isolated public HTML with candidate typography; scripts and sign-in dialog excluded from presentation-only fixtures. Does not test authentication.",
+    "widths": [
+      390,
+      768,
+      1440
+    ],
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ]
+  },
+  "localPhoneWrapChecks": {
+    "passed": 8,
+    "widths": [
+      320,
+      390
+    ],
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ]
+  },
+  "physicalChecks": [
+    {
+      "selection": "anek-android",
+      "device": "Pixel 8",
+      "platform": "Android",
+      "os": "17.0",
+      "sessionId": "1c29bc4e5f9f-9673e8421e7f-556053dd8f9b-179125409763-26821401",
+      "passed": 4,
+      "sessionClosed": true,
+      "pages": [
+        {
+          "url": "https://www.pinnacleblooms.org/books/te",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": false
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/faq/hindi",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/faq/tamil",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": true
+        }
+      ]
+    },
+    {
+      "selection": "anek-final-phone",
+      "device": "Pixel 8",
+      "platform": "Android",
+      "os": "17.0",
+      "sessionId": "8761aa8fe094-df2c8dddd005-baa0dec0753c-179125512552-97939696",
+      "passed": 1,
+      "sessionClosed": true,
+      "pages": [
+        {
+          "url": "https://www.pinnacleblooms.org/books/te",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "phoneGrouped": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": false
+        }
+      ]
+    },
+    {
+      "selection": "anek-ios",
+      "device": "iPhone 17 Pro",
+      "platform": "iOS",
+      "os": "26.5",
+      "sessionId": "7255f20ac6db-5037d45d35b6-81d6808117fd-179125415618-97008037",
+      "passed": 4,
+      "sessionClosed": true,
+      "pages": [
+        {
+          "url": "https://www.pinnacleblooms.org/books/hi",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": false
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/faq/kannada",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/faq/malayalam",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/verify/guides/te/abilityscore.html",
+          "checks": {
+            "sharedTypography": true,
+            "actualAnek": true,
+            "nativeHeadingWeight": true,
+            "title": true,
+            "oneHeading": true,
+            "content": true,
+            "canonical": true,
+            "viewport": true,
+            "horizontalOverflow": true,
+            "styles": true,
+            "visibleImages": true,
+            "helpline": true
+          },
+          "gateVisible": false
+        }
+      ]
+    }
+  ],
+  "physicalPageChecks": 9,
+  "semanticContentPreservedDocuments": 11,
+  "protectedPublicControls": 14,
+  "fontAssetsVerified": 9,
+  "portalAssetUnionFiles": 2160,
+  "newPortalAssetUploads": 0,
+  "ci": [
+    {
+      "commit": "7a5f4435386b74f222e8c66ecc3c12e1f57cb106",
+      "runs": [
+        {
+          "id": 37404240074,
+          "name": "Portal quality",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37404240074"
+        }
+      ]
+    },
+    {
+      "commit": "8726afb0789d5b7543a0ace1d3d598f3d5c4208b",
+      "runs": [
+        {
+          "id": 37405135411,
+          "name": "Portal quality",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37405135411"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Rendered HTML typography only; existing artwork and PDFs not re-typeset.",
+    "Representative templates and scripts tested; not every published URL or device.",
+    "No authentication, checkout, enquiry or telephone submission performed.",
+    "No new crawl/indexing request: content, canonical URLs and schema unchanged."
+  ]
+}
