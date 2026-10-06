@@ -1,3 +1,4 @@
+import {publicRouteAlias} from './public-route-aliases.mjs';
 import {applyVernacularTypography} from './vernacular-typography.mjs';
 import {repairSharedNavigation} from './shared-navigation.mjs';
 import {serveRootDiscovery} from './discovery-handler.mjs';
@@ -298,7 +299,8 @@ export function isContextualAskRoute(request,rules=CONTEXTUAL_EVIDENCE_RULES){
 
 
 const portalWorker = {
- async fetch(request,env,ctx){
+  async fetch(request,env,ctx){
+   const publicAlias=publicRouteAlias(request);if(publicAlias)return publicAlias;
   const discoveryResponse=await serveRootDiscovery(request,env);if(discoveryResponse)return discoveryResponse;
   const enrolmentApiResponse=await serveEnrolmentApi(request,env);if(enrolmentApiResponse)return enrolmentApiResponse;
   const speechResponse=await serveSpeech(request,env,SPEECH_INVENTORY);if(speechResponse)return speechResponse;
@@ -353,7 +355,8 @@ const portalWorker = {
    const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])h.delete(k);
    if(!h.get('cache-control')?.match(/private|no-store/i)&&!h.has('set-cookie'))h.set('cache-control','public, max-age=60');
    if(request.method==='HEAD')return new Response(null,{status:200,headers:h});
-   return new HTMLRewriter()
+    return new HTMLRewriter()
+     .on('head > meta[property="og:url"]',{element(element){if(element.getAttribute('content')==='http://www.pinnacleblooms.org/')element.setAttribute('content','https://www.pinnacleblooms.org/');}})
     .on('head',{element(element){element.append(FAVICON_LINKS+'<meta name="ahrefs-site-verification" content="bc583a48d3e574453dd16c6719ff9b935dc158da08e5473efa5446368de630bb">',{html:true});}})
     .on('script[type="application/ld+json"]',new RootEntityCorrection())
     .on('.cm-f-footer-privacylinks > ul',{element(element){element.append('<li><a href="https://www.pinnacleblooms.org/verify/">Licences, research &amp; evidence</a></li>',{html:true});if(contextualEvidenceRule(request,[HOME_EVIDENCE_RULE])&&canTransformContextResponse(response))element.append('<li><a href="https://www.pinnacleblooms.org/national-autism-helpline">National Autism Helpline — 9100 181 181</a></li>',{html:true});}})

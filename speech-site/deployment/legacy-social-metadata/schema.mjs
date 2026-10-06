@@ -65,19 +65,41 @@ class LegacySchemaScript {
   element(element) {
     this.pass = (element.getAttribute('type') || '').trim().toLowerCase() !== 'application/ld+json';
     this.buffer = '';
+    if (!this.pass) {
+      const escape = value => value.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+      this.open = '<script'+[...element.attributes].map(([key,value])=>' '+key+'="'+escape(value)+'"').join('')+'>';
+      this.streaming = false;
+      element.removeAndKeepContent();
+    }
   }
   async text(chunk) {
     if (this.pass) return;
+    if (this.streaming) {
+      if (chunk.lastInTextNode) chunk.after('</script>', {html:true});
+      return;
+    }
     this.buffer += chunk.text;
     if (this.buffer.length > SCHEMA_LIMIT) {
-      chunk.replace(this.buffer, {html: true});
-      this.buffer = ''; this.pass = true;
+      chunk.replace(this.open+this.buffer+(chunk.lastInTextNode?'</script>':''), {html: true});
+      this.buffer = ''; this.streaming = true;
     } else if (!chunk.lastInTextNode) chunk.remove();
     else {
-      chunk.replace(repairSchemaText(await repairLegacyIdentity(this.buffer)), {html: true});
+      const cleaned=await repairLegacyGraph(this.buffer);
+      chunk.replace(cleaned===null?'':this.open+cleaned+'</script>', {html: true});
       this.buffer = '';
     }
   }
+}
+
+export async function repairLegacyGraph(text) {
+  const normalized=text.trim().replaceAll('\r\n','\n');
+  if (normalized.includes('"@type": "SpecialAnnouncement"') || normalized.includes('"@type": "CollectionPage"')) {
+    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
+    // Exact malformed, expired shared COVID announcement and malformed dance
+    // collection payload captured on 6 October. Do not reassert stale claims.
+    if (['3b882bc81f30917b7b7971a18ef1717777912bb505f3cfb87aed8dbe2fbbd037','7181eeec2f921b7ece2f8451f343d6e61d16e806478213dc3ec3b8c675653b02'].includes(digest)) return null;
+  }
+  return repairSchemaText(await repairLegacyIdentity(text));
 }
 
 export function repairKnownLegacySchema(response) {

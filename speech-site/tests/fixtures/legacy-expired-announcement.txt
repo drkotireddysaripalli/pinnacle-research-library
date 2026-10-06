@@ -1,0 +1,19 @@
+
+        {
+        "@context": "https://schema.org",
+        "@type": "SpecialAnnouncement",
+        "name": "Covid19 aware therapeutic empowerment for little ones, Successful 11,20,000 therapies with 97% proven improvement",
+        "text": "Pinnacle Blooms Network - #1 Autism Therapy Centres Network with all the safety measures and precautions have successfully conducted 4 lakh + therapies by far during this COVID-19 period. We thank all our parents for their belief and confidence, Love, Affection & Support for Pinnacle Blooms Network - #1 Autism Therapy Centres Network.",
+        "datePosted": "2022-01-07T08:00",
+        "expires": "2022-12-31T23:59",
+        //"quarantineGuidelines": "https://example.org/california/shelter-in-place/",
+        //"diseasePreventionInfo": "https://example.org/california/prevention-tips/",
+        "spatialCoverage": [
+        {
+        "type": "Country",
+        "name": "India"
+        }
+
+        ]
+        }
+    

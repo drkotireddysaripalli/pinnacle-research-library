@@ -1,0 +1,18 @@
+
+            {"@context" : "http://schema.org",
+            "@type": "CollectionPage",
+            "id": "http://www.pinnacleblooms.org/dance-therapy",
+            "url": "http://www.pinnacleblooms.org/dance-therapy",
+            "description":"Best Dance Therapy Centers in Hyderabad, Delhi, Vizag, Vijayawada. Promising to do everything plausible to empower your kid to be self-sufficient, par",
+            "mainEntityOfPage": {
+            "@type": "ImageGallery",
+            "image":  [  //begin bracket for multiple entries under image
+                {"@type" : "ImageObject","url": "https://www.pinnacleblooms.org/images/seo/dance-therapy.jpeg" },
+                {"@type" : "ImageObject","url": "https://www.pinnacleblooms.org/images/seo/1.jpeg" },
+                {"@type" : "ImageObject","url": "https://www.pinnacleblooms.org/images/seo/2.jpeg" },
+                {"@type" : "ImageObject","url": "https://www.pinnacleblooms.org/images/seo/3.jpeg" }
+
+            ] //end bracket for ImageGallery > image(s)
+            } //end bracket for mainEntityOfPage
+            }
+        

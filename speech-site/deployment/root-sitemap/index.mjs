@@ -1,3 +1,5 @@
+import {retiredStaffIds,currentStaffPaths} from '../legacy-social-metadata/staff-records.mjs';
+import {faqPaths} from './faq-paths.mjs';
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
@@ -164,8 +166,22 @@ async function normalizedUrlsetSitemap(target, method, stripVolatileMetadata = f
   const entries = source.match(/<url\b[\s\S]*?<\/url>/gi) ?? [];
   const seenLocations = /* @__PURE__ */ new Set();
   const uniqueEntries = [];
-  for (const entry of entries) {
-    const location = entry.match(/<loc>([\s\S]*?)<\/loc>/i)?.[1]?.trim();
+  for (let entry of entries) {
+    let location = entry.match(/<loc>([\s\S]*?)<\/loc>/i)?.[1]?.trim();
+    // The older bots feed includes the same staff records as the dedicated
+    // staff feed. Apply the approved retirement/canonical source to both.
+    // Match page <loc> only; image:loc and all nonstaff entries are preserved.
+    const staff = location?.match(/^https?:\/\/www\.pinnacleblooms\.org\/staff\/[^/?#]+\/([1-9][0-9]*)\/?$/);
+    if (staff) {
+      if (retiredStaffIds.has(Number(staff[1]))) continue;
+      const canonical = currentStaffPaths[staff[1]];
+      if (canonical) {
+        const previous = location;
+        location = SITE_ORIGIN + canonical;
+        entry = entry.replace(/<loc>[\s\S]*?<\/loc>/i, '<loc>'+location+'</loc>');
+        if (previous !== location) entry = entry.replace(/<lastmod>[^<]*<\/lastmod>/gi, '');
+      }
+    }
     if (!location || seenLocations.has(location)) continue;
     seenLocations.add(location);
     uniqueEntries.push(stripVolatileMetadata ? entry.replace(/<lastmod>[^<]*<\/lastmod>/gi, "").replace(/<changefreq>[^<]*<\/changefreq>/gi, "").replace(/<priority>[^<]*<\/priority>/gi, "") : entry);
@@ -180,7 +196,9 @@ async function normalizedUrlsetSitemap(target, method, stripVolatileMetadata = f
 ${uniqueEntries.join("\n")}
 </urlset>
 `;
-  return xmlResponse(body, 200, method);
+  const response = xmlResponse(body, 200, method);
+  response.headers.set('x-pinnacle-sitemap-eligibility', 'staff-source-20261006');
+  return response;
 }
 __name(normalizedUrlsetSitemap, "normalizedUrlsetSitemap");
 
@@ -220,6 +238,13 @@ var index_default = {
     }
     if (pathname === "/sitemaps/core.xml") {
       return xmlResponse(coreSitemapXml(), 200, method);
+    }
+    const language=pathname.match(/^\/sitemaps\/faq-(en|te|hi|kn|mr|ta|ml)\.xml$/)?.[1];
+    if (language) {
+      const body='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+faqPaths[language].map(p=>'<url><loc>'+SITE_ORIGIN+p+'</loc></url>').join('')+'</urlset>';
+      const response=xmlResponse(body,200,method);
+      response.headers.set('x-pinnacle-sitemap-eligibility','faq-source-20261006');
+      return response;
     }
     if (pathname === "/sitemaps/bots.xml" || pathname === "/sitemaps/staff.xml") {
       return normalizedUrlsetSitemap(PROXY_TARGETS.get(pathname), method, pathname === "/sitemaps/staff.xml");

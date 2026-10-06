@@ -9,7 +9,7 @@ import {repairKnownLegacySchema} from './schema.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 // Existing legacy templates with the same measured HTTP social/HTTPS canonical defect.
-export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training'];
+export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training', '/staff', '/careers', '/dance-therapy', '/certified-courses'];
 export const ADDITIONAL_LEGACY_ROUTES = ['www.pinnacleblooms.org/t/*', 'www.pinnacleblooms.org/mirracles/*', ...ADDITIONAL_LEGACY_PATHS.map(p => 'www.pinnacleblooms.org' + p + '*')];
 const encoder = new TextEncoder();
 const transformedResponses = new WeakSet();
@@ -19,7 +19,8 @@ export function isEligible(request) {
   return request.method === 'GET' && url.protocol === 'https:' &&
     url.hostname === 'www.pinnacleblooms.org' &&
     (url.pathname === '/faq' || url.pathname.startsWith('/faq/') ||
-      url.pathname.startsWith('/t/') || url.pathname.startsWith('/mirracles/') ||
+      /^\/(?:t|c|ma|b)\/[^/]+\/?$/.test(url.pathname) || /^\/mirracles\/\d+\/[^/]+\/?$/.test(url.pathname) ||
+      /^\/staff\/[^/]+\/\d+\/?$/.test(url.pathname) ||
       ADDITIONAL_LEGACY_PATHS.includes(url.pathname.replace(/\/$/, '')) ||
       ['/physiotherapy', '/physiotherapy/', SERVICES_PATH, SERVICES_PATH + '/'].includes(url.pathname)) &&
     !request.headers.has('authorization') && !request.headers.has('range');
@@ -76,9 +77,14 @@ async function repairHead(head, request) {
   }
   let parsed;
   try { parsed = new URL(target); } catch { return null; }
+  const samePath = parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '');
+  // The legacy numeric Mirracles routes publish lowercase canonical slugs.
+  // Only that documented route family permits a case-normalized comparison.
+  const sameMirracle = /^\/mirracles\/\d+\/[^/]+\/?$/.test(requestUrl.pathname) &&
+    parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '').toLowerCase();
   if (parsed.protocol !== 'https:' || parsed.hostname !== 'www.pinnacleblooms.org' ||
       parsed.port || parsed.username || parsed.password || parsed.search || parsed.hash ||
-      parsed.pathname.replace(/\/$/, '') !== requestUrl.pathname.replace(/\/$/, '') ||
+      !(samePath || sameMirracle) ||
       ![target,target.replace(/^https:/, 'http:')].includes(previous)) return null;
   // A previously corrected social URL must not suppress the independent
   // JSON-LD repair. The same self-canonical/privacy guards still apply.

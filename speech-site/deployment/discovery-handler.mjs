@@ -3,7 +3,7 @@ const CHILD_SITEMAP=PUBLIC+'/speech-therapy/sitemap.xml';
 const ROOT_SITEMAPS=[
  '/seva/sitemap.xml',
  '/books/resources/sitemap.xml','/books/sitemap.xml','/sitemaps/core.xml','/sitemaps/centres.xml','/sitemaps/staff.xml','/sitemaps/bots.xml','/sitemaps/miracles.xml',
- '/sitemaps/faq-en.xml','/sitemaps/faq-te.xml','/sitemaps/faq-hi.xml','/sitemaps/faq-kn.xml','/sitemaps/faq-mr.xml','/sitemaps/faq-ta.xml','/sitemaps/faq-ml.xml',
+ '/faq/sitemap.xml','/sunshine/sitemap.xml','/allmirracles-sitemap.xml',
  '/verify/sitemap.xml','/speech-therapy/sitemap.xml','/pinnacleai/sitemap.xml','/pinnacle-pages-data/public-documents-sitemap.xml'
 ];
 const MANAGED_SECTION=`
