@@ -1,0 +1,144 @@
+{
+  "id": "legacy-expired-jobs-20261006",
+  "phase": "verified-public",
+  "at": "2026-10-06T17:51:35.526Z",
+  "baseCommit": "ff63915405af4816af2ac52d91bb3a668fc97db9",
+  "rollback": [
+    {
+      "version_id": "46fa8ad2-f64c-47e1-a78b-db27d849b331",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 228,
+  "moduleCount": 9,
+  "originalHashes": {
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "entry.mjs": "6a80deac1e27eccd895ceeeed590d8798a0f76a745de7f81638ece791b2215c1",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3"
+  },
+  "commit": "8759826786f0b505b311a0ae85c3da6002dedcef",
+  "candidate": "cfccd72a-9465-490c-bd8f-e3d31de24939",
+  "hashes": {
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "entry.mjs": "df0dbdc13abbf48c12c45ed4709973880ab0b3eec92e5c83c1f6a8883439acaf",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3"
+  },
+  "deployment": "a2e62b23-764e-4ae9-841d-665de11949b7",
+  "promotedAt": "2026-10-06T18:11:14.288Z",
+  "verifiedAt": "2026-10-06T18:11:15.612Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-verify-route",
+    "pinnacle-ask",
+    "pinnacle-ask-mcp",
+    "pinnacle-centre-search-repair",
+    "pinnacle-helpline"
+  ],
+  "routesPreserved": 228,
+  "bindingsPreserved": true,
+  "publicAcceptance": {
+    "at": "2026-10-06T18:11:35.054Z",
+    "rows": [
+      {
+        "url": "https://www.pinnacleblooms.org/",
+        "status": 200,
+        "target": false,
+        "schemaBefore": 7,
+        "schemaAfter": 7,
+        "expiredJobsRemoved": 0,
+        "otherSchemaUnchanged": true,
+        "visibleContentUnchanged": true,
+        "linksUnchanged": true,
+        "sha256": "17ffd1e8861337100de25639cb2a7e81af0108dddee21984ec9aebb59e7df625"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/t/action-flash-therapy",
+        "status": 200,
+        "target": true,
+        "schemaBefore": 22,
+        "schemaAfter": 21,
+        "expiredJobsRemoved": 5,
+        "otherSchemaUnchanged": true,
+        "visibleContentUnchanged": true,
+        "linksUnchanged": true,
+        "sha256": "c97bb7fecdcd5861cb7179555227002fb6ecee72a4b4f0db6730b4cd261a090c"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/faq/english/speech-therapy/choosing-speech-therapist-child-autism-pinnacle-blooms",
+        "status": 200,
+        "target": false,
+        "schemaBefore": 1,
+        "schemaAfter": 1,
+        "expiredJobsRemoved": 0,
+        "otherSchemaUnchanged": true,
+        "visibleContentUnchanged": true,
+        "linksUnchanged": true,
+        "sha256": "4c4015fcf21430af6720a2a4c39966a9b112230bf657e1b8b7de93e38b75327a"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/mirracles/20688927160/-Match-Learn-369172",
+        "status": 200,
+        "target": true,
+        "schemaBefore": 10,
+        "schemaAfter": 9,
+        "expiredJobsRemoved": 5,
+        "otherSchemaUnchanged": true,
+        "visibleContentUnchanged": true,
+        "linksUnchanged": true,
+        "sha256": "92136c9df86bfec7a098de1b7c3a9aa670dfba956e2aff6cc6220f9afb192579"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/physiotherapy",
+        "status": 200,
+        "target": true,
+        "schemaBefore": 10,
+        "schemaAfter": 9,
+        "expiredJobsRemoved": 5,
+        "otherSchemaUnchanged": true,
+        "visibleContentUnchanged": true,
+        "linksUnchanged": true,
+        "sha256": "772a154191c69ea6a01ecae2ae94d76b0099f119d620c6009253162322d4f6a4"
+      }
+    ],
+    "targets": 3,
+    "controls": 2,
+    "onlyIntendedChanges": true
+  },
+  "ci": {
+    "at": "2026-10-06T18:10:52.243Z",
+    "commit": "8759826786f0b505b311a0ae85c3da6002dedcef",
+    "runs": [
+      {
+        "id": 37506998612,
+        "name": "Portal quality",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37506998612"
+      }
+    ]
+  },
+  "focusedTests": {
+    "passed": 59,
+    "failed": 0,
+    "skipped": 0
+  },
+  "review": "One read-only review: exact hash and graph scope verified, no consequential gap; no independent test rerun",
+  "notifications": "No full crawl or duplicate search submission",
+  "schedulers": "Remain deleted/disabled",
+  "remaining": [
+    "Homepage compact job graph is outside this runtime scope",
+    "Aggregate cleared URL count awaits a completed audit covering this release",
+    "Intermittent origin 500 requires a matched failing route/time and application exception diagnostics"
+  ]
+}

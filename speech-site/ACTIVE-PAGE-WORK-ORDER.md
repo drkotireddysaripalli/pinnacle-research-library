@@ -116,6 +116,12 @@ The owner instructed “complete this task and hold for the next one.” No next
 
 ## Continuing boundaries
 
+### Shared expired-job template repair — delivered 6 October
+
+Source `8759826786f0b505b311a0ae85c3da6002dedcef`; exact-source CI 37506998612 passed. Live legacy version `cfccd72a-9465-490c-bd8f-e3d31de24939`; deployment `a2e62b23-764e-4ae9-841d-665de11949b7`. The exact obsolete five-job graph is removed from eligible guarded legacy responses. Three public families (/t/action-flash-therapy, /mirracles/20688927160/-Match-Learn-369172 and /physiotherapy) and two controls passed before/after comparison. Other schema, visible content and all links were retained; 228 routes/bindings, eight unrelated modules and all five protected service versions remain intact. The permanent schema suite is now in CI; 59 focused cases passed locally.
+
+See `RELEASE-LEGACY-EXPIRED-JOBS-20261006.md` and `deployment/legacy-expired-jobs-20261006.json`. The homepage's different compact expired-job graph belongs to another runtime and remains a specific follow-up. Aggregate issue reduction awaits a completed audit covering this version. Intermittent origin 500s require a matched failing route/time and actual application exception evidence. Schedulers remain deleted/disabled; this release proves neither rankings nor qualified enquiries.
+
 ### Owner-requested shared search and centre repairs — delivered 6 October
 
 The shared search repair, Suchitra/Chanda Nagar media release and subsequent Suchitra speed/known-image fix are deployed. See `RELEASE-SHARED-SEARCH-20261006.md`, `RELEASE-CENTRE-MEDIA-20261006.md` and `RELEASE-CENTRE-SPEED-MEDIA-20261006.md`. Together they remove 702 retired sitemap entries, correct 31 stale sitemap slugs, advertise 4,564 canonical FAQ answers, restore exact `/Ask` compatibility, repair observed legacy social/schema defects, correct 20 dead image references on 22 pages, and show real frontage/interiors/explicit-load tours for two centres. Suchitra final mobile LCP is 2.134s in the recorded lab test. All existing routes/bindings remain preserved; current route count is 223.
