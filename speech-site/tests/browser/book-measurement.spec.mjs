@@ -7,7 +7,7 @@ test('book funnel measures successful operations only after consent',async({page
  const variant={id:'gid://shopify/ProductVariant/45295972646978',sku,title:'PDF ebook',availableForSale:true,requiresShipping:false,price:{amount:'799',currencyCode:'INR'},product:{title:'My Message Matters'}};
  let lines=[],failRemove=false,tagRequests=0;
  const line={id:'fixture-line',quantity:1,merchandise:variant,cost:{totalAmount:{amount:'799',currencyCode:'INR'}}};
- const cart=()=>({id:'fixture-cart',checkoutUrl:'https://pinnacleblooms.myshopify.com/checkouts/fixture',totalQuantity:lines.length,cost:{totalAmount:{amount:String(lines.length*799),currencyCode:'INR'}},lines:{nodes:lines}});
+ const cart=()=>({id:'fixture-cart',checkoutUrl:'https://pinnacleblooms.myshopify.com/checkouts/fixture',totalQuantity:lines.length,cost:{totalAmount:{amount:String(lines.length*799),currencyCode:'INR'}},lines:{nodes:lines,pageInfo:{hasNextPage:false,endCursor:null}}});
  await page.route('https://www.googletagmanager.com/**',route=>{tagRequests++;return route.fulfill({contentType:'text/javascript',body:''});});
  await page.route(origin+'/**',async route=>{
   const url=new URL(route.request().url());
