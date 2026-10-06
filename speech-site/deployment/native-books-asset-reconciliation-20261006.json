@@ -1,0 +1,466 @@
+{
+  "at": "2026-10-06T01:55:16.175154+00:00",
+  "status": "prepared-not-published",
+  "approvedRawArtifactCommit": "4a0f1655fde09a76c04ed7a35b7cceb03d84d4cc",
+  "approvedRawArtifactSha256": "353b5769b5ac991ba922fcfbcba366c78cae45adaaa6a358df7c0fe58feea97f",
+  "assetUnion": "release-native-books-20261006",
+  "unionFiles": 2160,
+  "unionBytes": 388762641,
+  "speechInventory": 1521,
+  "verifyInventoryUnchanged": 634,
+  "reconciledInventoryHashes": 90,
+  "liveContentControlMatches": 6,
+  "purpose": "Restore Hindi and Telugu book URLs and dependencies, preserve approved transformed page and feed content, retain Verify/Ask/auth and complete routes.",
+  "changes": [
+    {
+      "path": "/pinnacle-pages-scripts/book-commerce.js",
+      "old": "4702431a0f59262e",
+      "new": "e7124ed50cf85d7c"
+    },
+    {
+      "path": "/pinnacle-pages-scripts/speech-measurement.js",
+      "old": "1bae73a08f026e71",
+      "new": "b10429c484718bcf"
+    },
+    {
+      "path": "/pinnacle-pages-data/books-merchant-feed.xml",
+      "old": "ca7b623a0a39370c",
+      "new": "41cfd915c7838911"
+    },
+    {
+      "path": "/pinnacle-pages-data/books-sitemap.xml",
+      "old": "9983d3bcf6145663",
+      "new": "6071fce5b3b2de99"
+    },
+    {
+      "path": "/pinnacle-pages-html/aba-therapy.html",
+      "old": "0a226c8ed4b261de",
+      "new": "c1640408e39cc164"
+    },
+    {
+      "path": "/pinnacle-pages-html/abilityscore.html",
+      "old": "6c3433957a036494",
+      "new": "2877245e3e5929f6"
+    },
+    {
+      "path": "/pinnacle-pages-html/about.html",
+      "old": "c0b509ecd3cb5a3b",
+      "new": "ad08ee5da14b8bad"
+    },
+    {
+      "path": "/pinnacle-pages-html/age-restriction-policy.html",
+      "old": "0f0e040c9decbbc3",
+      "new": "7c909fb3ae0d2842"
+    },
+    {
+      "path": "/pinnacle-pages-html/ananthapuram.html",
+      "old": "84e26fcddc6814ec",
+      "new": "861f6a3461433f27"
+    },
+    {
+      "path": "/pinnacle-pages-html/assessment.html",
+      "old": "7bf60cbda6c4b94c",
+      "new": "1a1b145b6cd40eef"
+    },
+    {
+      "path": "/pinnacle-pages-html/autism-therapy.html",
+      "old": "41f612f214809b96",
+      "new": "6d10cb70319933fc"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-aba-parent-education-101-understanding-everyday-behaviour-hardbound.html",
+      "old": "cd2a405b5e8b7e33",
+      "new": "e1dcedba3bc11ba5"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-aba-parent-education-101-understanding-everyday-behaviour-softcover.html",
+      "old": "2df62c8c2ca4ea43",
+      "new": "0bf12e7a2feb41bf"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-aba-parent-education-101-understanding-everyday-behaviour.html",
+      "old": "224deb2bcd2d669c",
+      "new": "164290d9587403af"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-occupational-therapy-101-i-belong-in-everyday-life-hardbound.html",
+      "old": "a308f4518212e3e7",
+      "new": "a7cc0ae680a48a7f"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-occupational-therapy-101-i-belong-in-everyday-life-softcover.html",
+      "old": "28076a0adcd56657",
+      "new": "1ce471d8366461d8"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-occupational-therapy-101-i-belong-in-everyday-life.html",
+      "old": "dbaead6770706f3b",
+      "new": "2c8c76039dd71ca3"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-behaviour-learning-hardbound-pair.html",
+      "old": "3b2514b0efcdda46",
+      "new": "4f131b1ffaeb491c"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-behaviour-learning-pdf-pair.html",
+      "old": "5cd57bb9afff8977",
+      "new": "fbfaf56c21650fb0"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-behaviour-learning-softcover-pair.html",
+      "old": "6cd3cc424810219d",
+      "new": "2ecdfb7254999905"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-four-book-hardbound-collection.html",
+      "old": "cea36bb68071a741",
+      "new": "547a957c9fe6686f"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-four-book-pdf-collection.html",
+      "old": "f73be4b3136a07c5",
+      "new": "7745bbd21630a6bf"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-four-book-softcover-collection.html",
+      "old": "ae41b22204df698f",
+      "new": "f54c969d76df42e8"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-occupational-behaviour-hardbound-pair.html",
+      "old": "6523b3cd7dca723d",
+      "new": "b9255a48b72df453"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-occupational-behaviour-pdf-pair.html",
+      "old": "59358b902dbebd14",
+      "new": "2d5a44fb6e08b317"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-occupational-behaviour-softcover-pair.html",
+      "old": "d9d7c242b528c56c",
+      "new": "ead282e88305516f"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-occupational-learning-hardbound-pair.html",
+      "old": "f77957bb6bb55fab",
+      "new": "7e5d08fe1c666a3f"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-occupational-learning-pdf-pair.html",
+      "old": "5fddd90e67fe3350",
+      "new": "9345194dbeac4cd3"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-occupational-learning-softcover-pair.html",
+      "old": "9556e498179a3b50",
+      "new": "4a5e1bba37ba5a2f"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-behaviour-hardbound-pair.html",
+      "old": "42833423c8b78003",
+      "new": "cdd050d4755c4075"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-behaviour-pdf-pair.html",
+      "old": "b09cb3a115ddd468",
+      "new": "eafcd42a9f1f665e"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-behaviour-softcover-pair.html",
+      "old": "f050f3360c83baa1",
+      "new": "82484e2a6a142c3d"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-learning-hardbound-pair.html",
+      "old": "2e896ed43a8dca44",
+      "new": "b324c736769e41cc"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-learning-pdf-pair.html",
+      "old": "d5f552fb52194d85",
+      "new": "2248fc14fe32677d"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-learning-softcover-pair.html",
+      "old": "ed7344facd9e0c19",
+      "new": "b7e1069d79e96e30"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-occupational-hardbound-pair.html",
+      "old": "c77c99af99a939b1",
+      "new": "df0b9965c3443c97"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-occupational-pdf-pair.html",
+      "old": "0fa8915ad1b259da",
+      "new": "cb334870b1fd9f5c"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-pinnacle-101-speech-occupational-softcover-pair.html",
+      "old": "bee48cc75f65e6ce",
+      "new": "389347ec0584d16e"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-special-education-101-learning-through-everyday-play-hardbound.html",
+      "old": "422b13037c1b5344",
+      "new": "f09e9357ff73e936"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-special-education-101-learning-through-everyday-play-softcover.html",
+      "old": "faa1b3151ada9afa",
+      "new": "4f2cc033e914dc18"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-special-education-101-learning-through-everyday-play.html",
+      "old": "da4bd83dbd74f1fc",
+      "new": "ea84b1e198feaad4"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-speech-communication-101-my-message-matters-hardbound.html",
+      "old": "a3065a120154ee3e",
+      "new": "7d3923debce0af18"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-speech-communication-101-my-message-matters-softcover.html",
+      "old": "c9f7b9977db8fb52",
+      "new": "f7bb9d085c315bd6"
+    },
+    {
+      "path": "/pinnacle-pages-html/book-speech-communication-101-my-message-matters.html",
+      "old": "94ed6496fcb474c7",
+      "new": "6874f10f0ef7068e"
+    },
+    {
+      "path": "/pinnacle-pages-html/books-index.html",
+      "old": "f8a40cb28355190f",
+      "new": "a9c3baa04e9d5e68"
+    },
+    {
+      "path": "/pinnacle-pages-html/centers.html",
+      "old": "01fd2bc83d3f6443",
+      "new": "07991ff3bbb5d730"
+    },
+    {
+      "path": "/pinnacle-pages-html/contact-information.html",
+      "old": "3e29dcdd666a9d1a",
+      "new": "0fef0a6b583785fc"
+    },
+    {
+      "path": "/pinnacle-pages-html/cookie-policy.html",
+      "old": "197ccc545bafca36",
+      "new": "3f30ccd75fd4f2df"
+    },
+    {
+      "path": "/pinnacle-pages-html/copyright-and-intellectual.html",
+      "old": "8d3c6592a2d5842d",
+      "new": "f2386bfa484a731d"
+    },
+    {
+      "path": "/pinnacle-pages-html/delhi.html",
+      "old": "aded6ec68eb7fe5d",
+      "new": "6a2e67ab83d17835"
+    },
+    {
+      "path": "/pinnacle-pages-html/dilsukhnagar.html",
+      "old": "a7b55dac80c1718d",
+      "new": "7cadc2ef7dd29f9b"
+    },
+    {
+      "path": "/pinnacle-pages-html/disclaimer-and-limitations-of-liabilities.html",
+      "old": "3afb07287cfdfe00",
+      "new": "e2408291a4b7466b"
+    },
+    {
+      "path": "/pinnacle-pages-html/endorsement-and-testimonial.html",
+      "old": "376117eb9e15841e",
+      "new": "3461ddf2a48c7837"
+    },
+    {
+      "path": "/pinnacle-pages-html/enrolment-preview.html",
+      "old": "b7531a81311dc517",
+      "new": "4f4770b6a36ba524"
+    },
+    {
+      "path": "/pinnacle-pages-html/enrolment.html",
+      "old": "13ae173240c2ae2f",
+      "new": "a4dc4ee0312cbcc4"
+    },
+    {
+      "path": "/pinnacle-pages-html/ethics-charter.html",
+      "old": "6f3ac45d87792bd9",
+      "new": "94c7ff76eda88410"
+    },
+    {
+      "path": "/pinnacle-pages-html/everyday-therapy.html",
+      "old": "99ece7734ed06d79",
+      "new": "dc0788cd310e47c2"
+    },
+    {
+      "path": "/pinnacle-pages-html/first-visit-guide.html",
+      "old": "13b7320afa295eaf",
+      "new": "691c8a94e4a66b07"
+    },
+    {
+      "path": "/pinnacle-pages-html/framework.html",
+      "old": "554509d9f9fcbf06",
+      "new": "a752858b0ed63dda"
+    },
+    {
+      "path": "/pinnacle-pages-html/fusion-module.html",
+      "old": "0ca4e94c9b9c0a09",
+      "new": "1da7a1ef6645c2c1"
+    },
+    {
+      "path": "/pinnacle-pages-html/governing-and-jurisdiction.html",
+      "old": "a7c2c243de183be3",
+      "new": "1dd0a2046519c23b"
+    },
+    {
+      "path": "/pinnacle-pages-html/gurunanak.html",
+      "old": "1e6f5aa68b35a536",
+      "new": "502530adc770b6d4"
+    },
+    {
+      "path": "/pinnacle-pages-html/leadership.html",
+      "old": "c5baba975bacd7f3",
+      "new": "33917c0cabf2fd6e"
+    },
+    {
+      "path": "/pinnacle-pages-html/mainstream.html",
+      "old": "6833c03c268029c6",
+      "new": "febc06d76484fffd"
+    },
+    {
+      "path": "/pinnacle-pages-html/nandyala.html",
+      "old": "82b44c7787e2c405",
+      "new": "dbb0848d29ebf0a8"
+    },
+    {
+      "path": "/pinnacle-pages-html/occupational-therapy.html",
+      "old": "ea1ed437fa8c7dc6",
+      "new": "52357ec5471db54e"
+    },
+    {
+      "path": "/pinnacle-pages-html/ongole.html",
+      "old": "28fd74c9abed2feb",
+      "new": "a5aeb6eaa8978c05"
+    },
+    {
+      "path": "/pinnacle-pages-html/payment-and-billing.html",
+      "old": "488c776bc79fc5bd",
+      "new": "bcb8d5baf913a225"
+    },
+    {
+      "path": "/pinnacle-pages-html/personal-development-kernel.html",
+      "old": "9cc1d83a4bd21ae3",
+      "new": "f1cfa0bc9e0da891"
+    },
+    {
+      "path": "/pinnacle-pages-html/pinnacleai.html",
+      "old": "10250f4dac574a9c",
+      "new": "36410fdfb6f1bd9a"
+    },
+    {
+      "path": "/pinnacle-pages-html/policies.html",
+      "old": "3030ea4e67d556b2",
+      "new": "a52d6757bf13e2ce"
+    },
+    {
+      "path": "/pinnacle-pages-html/privacy-policy.html",
+      "old": "51ed0db55145c22e",
+      "new": "cdc8aaa1cdf82a84"
+    },
+    {
+      "path": "/pinnacle-pages-html/prognose.html",
+      "old": "9c41bc345df1e315",
+      "new": "1f2fd0183322e395"
+    },
+    {
+      "path": "/pinnacle-pages-html/reassess-review-repeat.html",
+      "old": "7e4950fc80e52125",
+      "new": "5d01b9703b0ceae9"
+    },
+    {
+      "path": "/pinnacle-pages-html/refund-policy.html",
+      "old": "14fc0dad2c08e8c9",
+      "new": "5c31fd839c25512f"
+    },
+    {
+      "path": "/pinnacle-pages-html/self-sufficient.html",
+      "old": "323b24a3a06455a3",
+      "new": "08c9be4b238472a5"
+    },
+    {
+      "path": "/pinnacle-pages-html/service-information.html",
+      "old": "131c45973d91f0eb",
+      "new": "11c9e22d14751af3"
+    },
+    {
+      "path": "/pinnacle-pages-html/seven-readiness-indexes.html",
+      "old": "ed6efec0365ee6ee",
+      "new": "9747712aed1ce012"
+    },
+    {
+      "path": "/pinnacle-pages-html/shop-index.html",
+      "old": "319af6780f966a1d",
+      "new": "d54cfc5f33ead649"
+    },
+    {
+      "path": "/pinnacle-pages-html/special-education.html",
+      "old": "62bd8b75d6e9f8b3",
+      "new": "a7aa2d51fdbc377b"
+    },
+    {
+      "path": "/pinnacle-pages-html/speech.html",
+      "old": "0e399cdb140f26ce",
+      "new": "abf0dc530e736e3f"
+    },
+    {
+      "path": "/pinnacle-pages-html/srikakulam.html",
+      "old": "7167d2d0dbcdccb5",
+      "new": "c62fc92f5b86ac0a"
+    },
+    {
+      "path": "/pinnacle-pages-html/staff-declaration.html",
+      "old": "cc24fe66f6d1ec34",
+      "new": "9c56cec2a1c95218"
+    },
+    {
+      "path": "/pinnacle-pages-html/suchitra.html",
+      "old": "9e9fd7d8e63ddfdf",
+      "new": "9669d35fdf00e5ed"
+    },
+    {
+      "path": "/pinnacle-pages-html/teacher-observation-guide.html",
+      "old": "bedfb622929adbc6",
+      "new": "0de987898f259ba7"
+    },
+    {
+      "path": "/pinnacle-pages-html/terms-of-service.html",
+      "old": "426ed1372bbb1c4f",
+      "new": "0c17664731dd37d4"
+    },
+    {
+      "path": "/pinnacle-pages-html/terms-of-use.html",
+      "old": "0ee11f543cefeba4",
+      "new": "726ad92084332260"
+    },
+    {
+      "path": "/pinnacle-pages-html/therapeuticai.html",
+      "old": "815c6e3a0ab6712d",
+      "new": "892396a07b2cd2d3"
+    },
+    {
+      "path": "/pinnacle-pages-html/third-party-inegration.html",
+      "old": "338549ee563e2251",
+      "new": "ff407dd9a49d64f4"
+    },
+    {
+      "path": "/pinnacle-pages-html/tirupati.html",
+      "old": "b99726a6ba483d1e",
+      "new": "522a44956b19742e"
+    }
+  ]
+}
