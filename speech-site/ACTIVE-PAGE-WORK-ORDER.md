@@ -1,8 +1,8 @@
 # Current page work —5October2026
 
-## Authorised commerce follow-through — direct PDF book bag
+## Authorised commerce follow-through — direct PDF book bag completed
 
-One bounded release from the completed Anek baseline. Add first-party `/shop/cart` links for the existing 33 digital offers, reuse live SKU/price/availability checks, preserve existing bag items and prevent reload duplication. Restore delivery of the existing native-edition Merchant feed. All 209 routes and bindings remain. Commerce retains Merchant activation; no repeated recheck, feed fetch or indexing submission here. The growth schedule remains held. Acceptance and receipts: `RELEASE-BOOK-CART-LINKS-20261006.md`.
+Published and verified: source `92455876c30e8759a83b0df7e585b143f17c569b`, portal `08a768e3-d753-49bb-989f-c3654e6ab599`. Both feeds are200, all55 rows remain and33 PDF links work. Production and physical Safari checks passed; no order was placed. One bounded release from the completed Anek baseline. Add first-party `/shop/cart` links for the existing 33 digital offers, reuse live SKU/price/availability checks, preserve existing bag items and prevent reload duplication. Restore delivery of the existing native-edition Merchant feed. All 209 routes and bindings remain. Commerce retains Merchant activation; no repeated recheck, feed fetch or indexing submission here. The growth schedule remains held. Acceptance and receipts: `RELEASE-BOOK-CART-LINKS-20261006.md`.
 
 ## Owner-requested vernacular typography — completed 6 October 2026
 

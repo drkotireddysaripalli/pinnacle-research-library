@@ -1,0 +1,274 @@
+{
+  "completedAt": "2026-10-06T03:24:55.715888+00:00",
+  "scope": "33 existing PDF offers: first-party populated book bag and product-level Merchant links; restore native feed delivery",
+  "sourceCommit": "92455876c30e8759a83b0df7e585b143f17c569b",
+  "worker": "pinnacle-verify-route",
+  "version": "08a768e3-d753-49bb-989f-c3654e6ab599",
+  "rollback": "52ba9d40-eddb-4864-a08b-fae511f6f1f2",
+  "ci": {
+    "commit": "92455876c30e8759a83b0df7e585b143f17c569b",
+    "runs": [
+      {
+        "id": 37408245020,
+        "name": "Portal quality",
+        "status": "completed",
+        "conclusion": "success",
+        "commit": "92455876c30e8759a83b0df7e585b143f17c569b",
+        "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37408245020"
+      }
+    ]
+  },
+  "assets": {
+    "at": "2026-10-06T03:16:20.481Z",
+    "manifestFiles": 2160,
+    "uploaded": 3,
+    "deduplicated": 2157
+  },
+  "routes": 209,
+  "portalBindings": [
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "PINNACLE_ASK",
+      "type": "service"
+    },
+    {
+      "name": "PINNACLE_LEGACY",
+      "type": "service"
+    },
+    {
+      "name": "SITES_BYPASS_TOKEN",
+      "type": "secret_text"
+    }
+  ],
+  "protectedWorkerVersions": {
+    "pinnacle-ask": [
+      {
+        "version_id": "800a09a7-556c-4311-b07e-2ac548fd7c61",
+        "percentage": 100
+      }
+    ],
+    "pinnacle-ask-mcp": [
+      {
+        "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+        "percentage": 100
+      }
+    ],
+    "pinnacle-legacy-social-metadata": [
+      {
+        "version_id": "2e2e6536-5b48-4ffb-b6e3-552cba878d16",
+        "percentage": 100
+      }
+    ],
+    "pinnacle-root-sitemap": [
+      {
+        "version_id": "a31e8e05-4af3-453b-a726-aa0b2d43703c",
+        "percentage": 100
+      }
+    ]
+  },
+  "publicProof": {
+    "at": "2026-10-06T03:23:20.710Z",
+    "feeds": [
+      {
+        "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/books-merchant-feed.xml",
+        "status": 200,
+        "rows": 33,
+        "checkoutLinks": 11,
+        "sha256": "1a4a5a6cedcaa94a665aaca2936cfd96caeaf847e456a53d8b6c3a51d01f015e"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/books-native-editions-merchant-feed.xml",
+        "status": 200,
+        "rows": 22,
+        "checkoutLinks": 22,
+        "sha256": "aee36b27b027ebea8cd4de4148caf1f9474c380df345493d7da774e466b7b6f5"
+      }
+    ],
+    "protectedBookLinks": [
+      {
+        "url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.in/dp/B0HLYKFDQ9",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.in/dp/B0HLYFTT36",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-occupational-hardbound-pair",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLYGDP86",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-hardbound-collection",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLY917FC",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters-softcover",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLZPP118",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life-softcover",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLZKRV9J",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play-softcover",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLZJ9WKJ",
+        "preserved": true
+      }
+    ],
+    "cartScript": {
+      "status": 200,
+      "etag": "W/\"45b149c9e06a49f7e74ee7bac76e3115d32963b81a33af77afb41c16e08fa4c7\"",
+      "sourceMatches": true
+    },
+    "cart": {
+      "url": "https://www.pinnacleblooms.org/shop/cart?cart_sku=PBN-SP-101-TE-PDF&quantity=1",
+      "status": 200,
+      "robots": "noindex, follow",
+      "cache": "private, no-store",
+      "canonical": "https://www.pinnacleblooms.org/shop",
+      "typography": "anek-20261006"
+    }
+  },
+  "tests": {
+    "unitChecks": 4,
+    "cartScenarios": 16,
+    "localConfigurations": [
+      "Chromium 390",
+      "Chromium 1440",
+      "WebKit"
+    ],
+    "cartCaseExecutionsPassed": 48,
+    "existingAttributionChecksPassed": 21,
+    "production": {
+      "at": "2026-10-06T03:23:31.560Z",
+      "mode": "production",
+      "results": [
+        {
+          "sku": "PBN-SP-101-EN-PDF",
+          "count": 1,
+          "firstParty": true,
+          "canonicalPreserved": true,
+          "checkoutReady": true
+        },
+        {
+          "sku": "PBN-SP-101-HI-PDF",
+          "count": 2,
+          "firstParty": true,
+          "canonicalPreserved": true,
+          "checkoutReady": true
+        },
+        {
+          "sku": "PBN-SP-101-TE-PDF",
+          "count": 3,
+          "firstParty": true,
+          "canonicalPreserved": true,
+          "checkoutReady": true
+        },
+        {
+          "sku": "PBN-101-TE-PDF-SET4",
+          "count": 4,
+          "firstParty": true,
+          "canonicalPreserved": true,
+          "checkoutReady": true
+        },
+        {
+          "width": 320,
+          "viewport": 320,
+          "document": 320,
+          "dialog": 304,
+          "client": 304,
+          "scroll": 304,
+          "overflow": false
+        },
+        {
+          "width": 768,
+          "viewport": 768,
+          "document": 768,
+          "dialog": 736,
+          "client": 736,
+          "scroll": 736,
+          "overflow": false
+        },
+        {
+          "width": 1440,
+          "viewport": 1440,
+          "document": 1440,
+          "dialog": 1060,
+          "client": 1060,
+          "scroll": 1060,
+          "overflow": false
+        }
+      ],
+      "reloadAddedDuplicates": false,
+      "testBagEmptied": true,
+      "checkoutNavigation": false,
+      "ordersCreated": 0,
+      "analyticsConsent": "GPC; endpoints blocked"
+    },
+    "physicalSafari": {
+      "at": "2026-10-06T03:23:21.589Z",
+      "status": "passed",
+      "secondsBefore": 1380,
+      "noCheckoutNavigation": true,
+      "noOrder": true,
+      "device": {
+        "id": 44,
+        "name": "iPhone 17 Pro",
+        "version": "26.5",
+        "platform": "iOS"
+      },
+      "sessionId": "75bb3e33085d-48f1fa48314c-d00003ed917f-179125700924-85693628",
+      "actual": {
+        "browserName": "safari",
+        "platformName": "iOS"
+      },
+      "before": {
+        "url": "https://www.pinnacleblooms.org/shop/cart?cart_sku=PBN-SP-101-TE-PDF&quantity=1",
+        "canonical": "https://www.pinnacleblooms.org/shop",
+        "open": true,
+        "count": "1",
+        "title": "My Message Matters - Speech & Communication 101 - Telugu edition PDF ebook",
+        "price": "₹799.00",
+        "checkoutHost": "pinnacleblooms.myshopify.com",
+        "policies": [
+          "/terms-of-use",
+          "/refund-policy"
+        ],
+        "viewport": 402,
+        "overflow": 0
+      },
+      "reloadCount": 1,
+      "testBagEmptied": true,
+      "sessionClosed": true,
+      "finishedAt": "2026-10-06T03:23:52.315Z"
+    },
+    "screenshotsInspected": true
+  },
+  "commerceState": {
+    "feedRows": 55,
+    "pdfCheckoutLinks": 33,
+    "physicalOffersChanged": 0,
+    "digitalShoppingAdsExclusionsRetained": true,
+    "merchantActivation": "Commerce owner retains existing Merchant review and activation",
+    "newFeedFetches": 0,
+    "searchSubmissions": 0,
+    "ordersPlaced": 0
+  },
+  "growthAutomationResumed": false
+}

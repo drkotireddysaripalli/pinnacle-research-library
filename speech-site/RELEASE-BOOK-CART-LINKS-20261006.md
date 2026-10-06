@@ -31,3 +31,12 @@ Case folder: `work/pinnacle-growth-system/book-cart-links-20261006/`.
 This is website delivery, not Merchant acceptance or a sale. Commerce owns the existing Google recheck and feed ingestion. This release sends no new Merchant request, search submission or duplicate feed fetch.
 
 Google requirements consulted: [checkout link template](https://support.google.com/merchants/answer/13580733?hl=en-GB), [matching rendered checkout domain](https://support.google.com/merchants/answer/14994242?hl=en). A first-party populated basket is used; a direct different-domain Shopify URL is not submitted as the attribute.
+
+## Published and verified
+
+- Source commit: `92455876c30e8759a83b0df7e585b143f17c569b`. Portal production: `08a768e3-d753-49bb-989f-c3654e6ab599`; rollback: `52ba9d40-eddb-4864-a08b-fae511f6f1f2`.
+- CI `37408245020`: success. Four unit checks, 16 cart scenarios across three local configurations (48 case executions), and the existing 21 attribution checks passed. The final CI also exercises Firefox and WebKit.
+- Production EN/HI/TE/bundle, repeat navigation, existing items, and 320/768/1440 layout checks passed. Physical iPhone17Pro/iOS26.5/Safari passed; its screenshot was inspected. Both fresh validation bags were emptied; no checkout navigation or order.
+- All55 feed rows and33 PDF checkout links match released source bytes. Native feed recovered from404 to200. Seven protected Amazon book destinations verified.
+- All209 routes, four portal bindings, 36 modules and four protected Worker services reconciled; only the three declared modules changed. The shared Anek release remains.
+- Website delivery is complete. Google Merchant activation/ingestion and any subsequent sales are separate outcomes, owned by commerce.
