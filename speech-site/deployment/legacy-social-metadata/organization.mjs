@@ -4,5 +4,8 @@ export async function repairLegacyIdentity(text){
  const normalized=text.trim().replaceAll('\r\n','\n');
  if(!normalized.startsWith('{')||!normalized.includes('"@type": "Organization"'))return text;
  const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
- return digest==='204ebe91d049448a5f8ef50862790ef97f8a43c99d2756ed07fe4631c5f01bc0'?JSON.stringify(organization).replace(/</g,'\\u003c'):text;
+ // The second exact template was captured on four public routes on 6 October.
+ // It fixes the trailing comma in the first template but retains its invalid
+ // properties and outdated people/organisation graph. Unknown variants bypass.
+ return ['204ebe91d049448a5f8ef50862790ef97f8a43c99d2756ed07fe4631c5f01bc0','58b3106343e0bff97e5cd6e3236f948cad70a009fdc8145a723004bf50606afa'].includes(digest)?JSON.stringify(organization).replace(/</g,'\\u003c'):text;
 }

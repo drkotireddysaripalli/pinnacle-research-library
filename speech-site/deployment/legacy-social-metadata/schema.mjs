@@ -1,6 +1,6 @@
 import {repairLegacyIdentity} from './organization.mjs';
-// Correct two observed schema.org term spellings in legacy JSON-LD only.
-// No claim, entity identity, text, navigation or commerce record is rewritten.
+// Correct observed term spellings and named legacy entity data types only.
+// Preserve numeric tokens, visible text, navigation and commerce records.
 export const SCHEMA_LIMIT = 256 * 1024;
 
 export function repairSchemaText(text) {
@@ -40,6 +40,15 @@ export function repairSchemaText(text) {
         const old=props.get('xPath');
         if(type?.value==='SpeakableSpecification' && old?.value.kind==='array' &&
             old.value.children.every(child=>child.kind==='string') && !props.has('xpath')) patches.push({token:old.key,value:'"xpath"'});
+        const namedEntity=(key,name,entityType)=>{
+          const value=props.get(key)?.value;
+          if(value?.kind==='string'&&value.value===name)patches.push({token:value.token,value:JSON.stringify({'@type':entityType,name})});
+        };
+        if(type?.value==='Book'){
+          namedEntity('author','Dr. Sreeja Reddy Saripalli','Person');
+          namedEntity('publisher','notionpress','Organization');
+        }
+        if(['Webpage','WebPage'].includes(type?.value))namedEntity('publisher','Pinnacle','Organization');
       }
       for(const child of node.children||[]) visit(child);
     }
@@ -76,7 +85,7 @@ export function repairKnownLegacySchema(response) {
   // An origin header can never opt a response into this transform.
   const headers = new Headers(response.headers);
   for (const name of ['content-length', 'content-encoding', 'etag', 'last-modified', 'content-md5', 'digest']) headers.delete(name);
-  headers.set('x-pinnacle-legacy-schema', 'schema-term-spelling-20261004');
+  headers.set('x-pinnacle-legacy-schema', 'schema-entity-types-20261006');
   return new HTMLRewriter().on('script:not([src])', new LegacySchemaScript())
     .transform(new Response(response.body, {status: response.status, statusText: response.statusText, headers}));
 }

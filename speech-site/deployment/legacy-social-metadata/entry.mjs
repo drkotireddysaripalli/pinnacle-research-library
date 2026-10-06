@@ -79,7 +79,10 @@ async function repairHead(head, request) {
   if (parsed.protocol !== 'https:' || parsed.hostname !== 'www.pinnacleblooms.org' ||
       parsed.port || parsed.username || parsed.password || parsed.search || parsed.hash ||
       parsed.pathname.replace(/\/$/, '') !== requestUrl.pathname.replace(/\/$/, '') ||
-      previous !== target.replace(/^https:/, 'http:')) return null;
+      ![target,target.replace(/^https:/, 'http:')].includes(previous)) return null;
+  // A previously corrected social URL must not suppress the independent
+  // JSON-LD repair. The same self-canonical/privacy guards still apply.
+  if(previous===target)return head;
   return new HTMLRewriter().on('head > meta', {element(el) {
     if ((el.getAttribute('property') || '').toLowerCase() === 'og:url' && el.getAttribute('content') === previous) el.setAttribute('content', target);
   }}).transform(new Response(head)).text();
@@ -103,11 +106,12 @@ export async function transform(request, response) {
     const close = /<\/head\s*>/i.exec(probe);
     if (close) { headEnd = encoder.encode(probe.slice(0, close.index + close[0].length)).length; break; }
   }
-  let replacement = null;
+  let replacement = null, originalHead = null;
   const hasBom = combined?.[0] === 0xef && combined?.[1] === 0xbb && combined?.[2] === 0xbf;
   if (headEnd && !hasBom) {
     try {
       const head = new TextDecoder('utf-8', {fatal: true}).decode(combined.subarray(0, headEnd));
+      originalHead = head;
       replacement = await repairHead(head, request);
     } catch { /* Unknown or malformed head: preserve the origin response. */ }
   }
@@ -117,7 +121,7 @@ export async function transform(request, response) {
     output = [encoder.encode(replacement), combined.subarray(headEnd)];
     // Keep origin privacy/cache/cookie semantics; never introduce shared caching.
     for (const name of ['content-length', 'content-encoding', 'etag', 'last-modified', 'content-md5', 'digest']) headers.delete(name);
-    headers.set('x-pinnacle-social-metadata', RELEASE);
+    if(replacement!==originalHead)headers.set('x-pinnacle-social-metadata', RELEASE);
   }
   const result = new Response(resumedBody(output, reader), {status: response.status, statusText: response.statusText, headers});
   if (replacement !== null) transformedResponses.add(result);

@@ -5,6 +5,7 @@ import path from 'node:path';
 import {build} from 'esbuild';
 import {Miniflare, convertV4MiniflareOptions} from 'miniflare';
 import {repairSchemaText, SCHEMA_LIMIT} from '../deployment/legacy-social-metadata/schema.mjs';
+import {repairLegacyIdentity, organization} from '../deployment/legacy-social-metadata/organization.mjs';
 
 const sample = {'@context':'https://schema.org', '@type':'Webpage', name:'తెలుగు family', description:'The text Webpage and xPath must remain.', speakable:{'@type':'SpeakableSpecification',xPath:['/html/head/title']}};
 test('corrects only term spelling, retaining values and Unicode',()=>{
@@ -30,6 +31,22 @@ test('large numeric identifiers, decimal precision and escapes stay byte-exact',
   assert.equal(repairSchemaText(text),text.replace('"Webpage"','"WebPage"'));
 });
 
+test('known book and page entities have valid types without changing names or precision',()=>{
+  const text='{"@context":"https://schema.org","@type":"Book","author":"Dr. Sreeja Reddy Saripalli","publisher":"notionpress","identifier":9007199254740993,"name":"తెలుగు"}';
+  assert.equal(repairSchemaText(text),text.replace('"author":"Dr. Sreeja Reddy Saripalli"','"author":{"@type":"Person","name":"Dr. Sreeja Reddy Saripalli"}').replace('"publisher":"notionpress"','"publisher":{"@type":"Organization","name":"notionpress"}'));
+  const page='{"@context":"https://schema.org","@type":"WebPage","publisher":"Pinnacle"}';
+  assert.equal(JSON.parse(repairSchemaText(page)).publisher['@type'],'Organization');
+  const unknown=text.replace('Dr. Sreeja Reddy Saripalli','Unknown author').replace('notionpress','Unknown publisher');
+  assert.equal(repairSchemaText(unknown),unknown);
+});
+
+test('captured valid-but-outdated organisation is replaced only on an exact match',async()=>{
+  const text=await fs.readFile('tests/fixtures/legacy-organization-valid-outdated.txt','utf8');
+  assert.deepEqual(JSON.parse(await repairLegacyIdentity(text)),organization);
+  const changed=text.replace('Koti Reddy Saripalli','Changed source name');
+  assert.notEqual(changed,text);assert.equal(await repairLegacyIdentity(changed),changed);
+});
+
 test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
   let fixture, chunkSize=7, sourceHeaders={};
   const bundled=await build({stdin:{contents:`import {handle} from './deployment/legacy-social-metadata/entry.mjs';export default {fetch(r,env){return handle(r,q=>env.ORIGIN.fetch(q));}}`,resolveDir:process.cwd()},bundle:true,format:'esm',platform:'browser',write:false});
@@ -44,6 +61,13 @@ test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
     await t.test('chunked content keeps rendered HTML and unrelated JavaScript intact',async()=>{
       fixture=original;const r=await runtime.dispatchFetch('https://www.pinnacleblooms.org/physiotherapy');const out=await r.text();
       assert.equal(out,original.replace('content="http:','content="https:').replace(raw,repairSchemaText(raw)));assert(r.headers.has('x-pinnacle-legacy-schema'));
+    });
+    await t.test('correct social URL still allows the independent schema repair',async()=>{
+      fixture=original.replace('content="http:','content="https:');
+      const r=await runtime.dispatchFetch('https://www.pinnacleblooms.org/physiotherapy');
+      assert.equal(await r.text(),fixture.replace(raw,repairSchemaText(raw)));
+      assert.equal(r.headers.get('x-pinnacle-social-metadata'),null);
+      assert.equal(r.headers.get('x-pinnacle-legacy-schema'),'schema-entity-types-20261006');
     });
     await t.test('malformed and over-limit JSON-LD preserved byte for byte',async()=>{
       for(const text of ['{bad json}', ' '.repeat(SCHEMA_LIMIT)+raw]){
