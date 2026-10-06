@@ -64,15 +64,15 @@ for(const query of ['cart_sku=unknown','cart_sku=PBN-SP-101-EN-PB','cart_sku=PBN
  await expect(page.locator('[data-cart-checkout]')).toBeHidden();expect(f.mutations()).toBe(0);
 });
 for(const [name,options] of Object.entries({unavailable:{overrides:{availableForSale:false}},physical:{overrides:{requiresShipping:true}},price:{overrides:{price:{amount:'800',currencyCode:'INR'}}},currency:{overrides:{price:{amount:'799',currencyCode:'USD'}}},duplicate:{duplicate:true}}))test('fails closed for '+name,async({page})=>{
- const f=await fixture(page,options);await page.goto(origin+'/shop?cart_sku=PBN-SP-101-EN-PDF&quantity=1');
+ const f=await fixture(page,options);await page.goto(origin+'/shop/cart?cart_sku=PBN-SP-101-EN-PDF&quantity=1');
  await expect(page.locator('[data-cart-message]')).toContainText('does not select');expect(f.mutations()).toBe(0);
 });
 test('an unreadable saved bag is retained and never replaced',async({page})=>{
- const f=await fixture(page,{readError:true});await page.goto(origin+'/shop?cart_sku=PBN-SP-101-EN-PDF&quantity=1');
+ const f=await fixture(page,{readError:true});await page.goto(origin+'/shop/cart?cart_sku=PBN-SP-101-EN-PDF&quantity=1');
  await expect(page.locator('[data-cart-message]')).toContainText('could not connect');expect(f.mutations()).toBe(0);
  expect(await page.evaluate(()=>localStorage.getItem('pinnacle-book-cart-v1'))).toBe('fixture-cart');
 });
 test('a failed cart mutation does not advertise a ready checkout',async({page})=>{
- const f=await fixture(page,{updateError:true});await page.goto(origin+'/shop?cart_sku=PBN-SP-101-EN-PDF&quantity=1');
+ const f=await fixture(page,{updateError:true});await page.goto(origin+'/shop/cart?cart_sku=PBN-SP-101-EN-PDF&quantity=1');
  await expect(page.locator('[data-cart-message]')).toContainText('could not be updated');expect(f.mutations()).toBe(1);await expect(page.locator('[data-cart-checkout]')).toBeHidden();
 });
