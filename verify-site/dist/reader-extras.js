@@ -26,12 +26,13 @@
   if(!production||blocked||!/^G-[A-Z0-9]+$/.test(measurement||''))return;
   enabled=true;window['ga-disable-'+measurement]=false;
   window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments);};
-  window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+  if(!window.__pinnacleConsentDefaults){window.__pinnacleConsentDefaults=true;window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});}
+  window.gtag('consent','update',{analytics_storage:'granted'});
   if(loaded){window.gtag('consent','update',{analytics_storage:'granted'});return;}
   loaded=true;
   window.gtag('js',new Date());
   window.gtag('config',measurement,{send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,cookie_prefix:'pv',cookie_path:'/verify/',cookie_domain:'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',page_location:canonical(),page_title:'Pinnacle Verify',page_referrer:''});
-  const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+measurement;document.head.append(script);
+  if(!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')){const script=document.createElement('script');script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+measurement;document.head.append(script);}
   send('page_view',{content_group:pageKind()});
  };
  const choose=value=>{

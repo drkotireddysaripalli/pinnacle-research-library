@@ -130,7 +130,11 @@
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
     if (loaded) { window.gtag('consent','update',{analytics_storage:'granted'}); return; }
     loaded = true;
-    window.gtag('consent','default',{analytics_storage:'granted',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    if (!window.__pinnacleConsentDefaults) {
+      window.__pinnacleConsentDefaults = true;
+      window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    }
+    window.gtag('consent','update',{analytics_storage:'granted'});
     window.gtag('js',new Date());
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
@@ -138,9 +142,11 @@
       page_location:canonical,page_title:pageTitle,page_referrer:safeReferrer,ignore_referrer:!safeReferrer,
       campaign_id:'',campaign_source:'',campaign_medium:'',campaign_name:'',campaign_term:'',campaign_content:''
     });
-    const script=document.createElement('script');
-    script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;
-    document.head.append(script);
+    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+      const script=document.createElement('script');
+      script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;
+      document.head.append(script);
+    }
     send('page_view',{page_group:pageGroup,schema_version:2});
     const viewed = Object.entries(commerceCatalogue).find(([, item]) => item.path === pagePath);
     if (viewed) sendCommerce('view_item', [{sku:viewed[0],quantity:1,price:viewed[1].price}]);
@@ -186,7 +192,7 @@
       const contactLink = event.target?.closest?.('a[href]');
       const href = contactLink?.getAttribute('href');
       if (href) {
-        if (href === 'tel:+919100181181') {
+        if (href === 'tel:+919100181181' || (href.startsWith('tel:') && contactLink.dataset?.pinnacleAdCallTarget === 'central')) {
           const placement = contactLink.dataset?.cta;
           send('phone_link_click', {schema_version:2,page_group:'bookshop',link_placement:callPlacements.has(placement)?placement:'bookshop-contact',destination:'national_helpline_9100181181'});
           return;
@@ -209,7 +215,7 @@
     const placement=link.dataset.cta,href=link.getAttribute('href');
     if (directoryPlacements.has(placement)) send('centre_directory_action',{schema_version:2,page_group:pageGroup,action:placement.replace('centre-','')});
     if (!href) return;
-    if (callPlacements.has(placement) && href==='tel:+919100181181') send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'national_helpline_9100181181'});
+    if (callPlacements.has(placement) && (href==='tel:+919100181181' || (href.startsWith('tel:') && link.dataset.pinnacleAdCallTarget==='central'))) send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'national_helpline_9100181181'});
     if (pageGroup==='occupational_therapy' && (occupationalNavigation.has(placement)||placement==='mobile-assessment') && href==='#centres') send('centre_section_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'published_centre_directory'});
     if (pageGroup==='aba_therapy' && abaNavigation.has(placement) && href==='#centres') send('centre_section_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'published_centre_directory'});
     if (pageGroup==='occupational_therapy' && placement==='ot-share-whatsapp' && href.startsWith('https://wa.me/?text=')) send('page_share_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'whatsapp_share'});

@@ -1,5 +1,10 @@
 # Current page work — 6 October 2026
 
+## Authorised website-call measurement repair — active
+
+The human approved the Ads owner sending this bounded repair on 6 October. This website thread owns source, release and verification. Add a distinct advertising call-measurement choice using the current shared footer, preserve independent analytics and ordinary calling, exclude private Ask/auth/search/API pages, and restore numbers on withdrawal. Reuse the existing conversion action; no budget, bidding, health audiences, paid clicks or test calls. Acceptance: consent/browser/callback regression, current source CI, inactive candidates, full route/binding/asset preservation and live read-back. Existing growth schedule and unrelated page work stay held.
+
+
 ## Owner-directed portal and shop code consolidation — completed
 
 The owner assigned Ask, Sunshine, FAQ, Verify, Shop and Books code/release ownership to this Windows website thread on 6 October. Canonical guide: `../PORTAL-OWNERSHIP.md`. The Mac commerce task acknowledged the single website/theme code owner. Its 531 source files were transferred and hash-verified; private Shopify source `e4cf0342b6397d0db11592e02a4541126e7d0688` is pinned at `../commerce-shopify/`. Private storage preserves the supplied theme licence. Seven public entry documents and all five protected Worker versions/209 routes were checked without changing production. Receipt: `deployment/portal-ownership-20261006.json`.

@@ -1,35 +1,43 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import vm from 'node:vm';
+import fs from 'node:fs/promises';
 import worker from '../workers/google-ads-call-measurement/index.mjs';
-const origin='https://www.pinnacleblooms.org';
-const path='/pinnacle-pages-scripts/google-ads-call.js?v=2';
+const origin='https://www.pinnacleblooms.org',script='/pinnacle-pages-scripts/google-ads-call.js?v=3';
 const html='<html><head><title>Unchanged</title></head><body><header>Header</header><main><a href="tel:+919100181181">9100 181 181</a></main><footer>Footer</footer></body></html>';
 const env={PINNACLE_VERIFY:{fetch:async()=>new Response(html,{headers:{'content-type':'text/html'}})}};
-test('Ads defaults precede loading; general config retained; no phone conversion',async()=>{
- const source=await(await worker.fetch(new Request(origin+path),env)).text();
- const loads=[],sandbox={navigator:{},Date};sandbox.window=sandbox;
- sandbox.document={querySelector:()=>null,createElement:()=>({setAttribute(){}}),head:{appendChild(n){loads.push({src:n.src,commands:sandbox.dataLayer.map(x=>Array.from(x))});}}};
- vm.runInNewContext(source,sandbox);
- assert.equal(loads.length,1);assert.equal(loads[0].commands[0][0],'consent');assert.equal(loads[0].commands[0][1],'default');
- for(const key of ['ad_storage','ad_user_data','ad_personalization','analytics_storage'])assert.equal(loads[0].commands[0][2][key],'denied');
- assert(loads[0].commands.some(x=>x[0]==='config'&&x[1]==='AW-10810823199'));
- assert(!source.includes('phone_conversion_number'));assert(!source.includes('VNUcCMSy3YobEJ-kgKMo'));
+test('served bootstrap is exactly the shared module without exports',async()=>{
+ const source=await(await worker.fetch(new Request(origin+script),env)).text();
+ const canonical=(await fs.readFile('src/lib/google-ads-call-consent.mjs','utf8')).replace(/^export /gm,'');
+ assert.equal(source,canonical);assert(!source.includes('__name('));
 });
-test('Global Privacy Control withholds optional Ads loader',async()=>{
- const source=await(await worker.fetch(new Request(origin+path),env)).text();const sandbox={navigator:{globalPrivacyControl:true},Date};sandbox.window=sandbox;
- sandbox.document={querySelector(){throw Error('GPC loaded Ads');}};vm.runInNewContext(source,sandbox);
- assert(!sandbox.dataLayer.some(x=>x[0]==='config'));
-});
-test('Five measured pages retain body and CTA; bootstrap alone is injected',async()=>{
+test('five existing measured pages retain content and receive one common choice',async()=>{
  for(const p of ['/top-speech-therapy-center-india-proven-improvement-rate','/speech-therapy/service-information','/verify/guides/everyday-practice.html','/verify/guides/abilityscore.html','/verify/evidence/pinnacle-paradigm-shift.html']){
-  const r=await worker.fetch(new Request(origin+p),env),t=await r.text();assert.equal(r.headers.get('x-pinnacle-google-ads-call-measurement'),'v2-consent');
-  assert.equal((t.match(/google-ads-call.js\?v=2/g)||[]).length,1);assert(!t.includes('gtag/js?id='));assert(t.includes('<main><a href="tel:+919100181181">9100 181 181</a></main><footer>Footer</footer>'));
+  const r=await worker.fetch(new Request(origin+p),env),t=await r.text();
+  assert.equal(r.headers.get('x-pinnacle-google-ads-call-measurement'),'v3-call-opt-in');
+  assert.equal((t.match(/google-ads-call.js\?v=3/g)||[]).length,1);assert(!t.includes('gtag/js?id='));
+  assert(t.includes('<main><a href="tel:+919100181181">9100 181 181</a></main><footer>Footer'));
+  assert.equal((t.match(/data-ad-call-preferences/g)||[]).length,1);
   assert.equal(t.includes('data-pinnacle-mobile-call-cta'),p.startsWith('/verify/'));
+  const again={PINNACLE_VERIFY:{fetch:async()=>new Response(t,{headers:{'content-type':'text/html'}})}};
+  const twice=await(await worker.fetch(new Request(origin+p),again)).text();assert.equal(twice,t);
  }
- const t=await(await worker.fetch(new Request(origin+'/untouched'),env)).text();assert.equal(t,html);
 });
-test('Bootstrap HEAD and method controls retained',async()=>{
- assert.equal(await(await worker.fetch(new Request(origin+path,{method:'HEAD'}),env)).text(),'');
- assert.equal((await worker.fetch(new Request(origin+path,{method:'POST'}),env)).status,405);
+test('unrelated paths, non-HTML, non-success and POST pass through',async()=>{
+ assert.equal(await(await worker.fetch(new Request(origin+'/untouched'),env)).text(),html);
+ for(const [method,status,type] of [['POST',200,'text/html'],['GET',404,'text/html'],['GET',200,'application/json']]){
+  const e={PINNACLE_VERIFY:{fetch:async()=>new Response('original',{status,headers:{'content-type':type}})}};
+  const r=await worker.fetch(new Request(origin+'/speech-therapy/service-information',{method}),e);assert.equal(r.status,status);assert.equal(await r.text(),'original');
+ }
+});
+test('bootstrap HEAD and method controls retained',async()=>{
+ assert.equal(await(await worker.fetch(new Request(origin+script,{method:'HEAD'}),env)).text(),'');
+ assert.equal((await worker.fetch(new Request(origin+script,{method:'POST'}),env)).status,405);
+});
+test('Verify reader uses the current independent consent source on the three wrapper pages',async()=>{
+ const reader=await(await worker.fetch(new Request(origin+script+'&module=verify-reader'),env)).text();
+ assert.equal(reader,await fs.readFile('../verify-site/dist/reader-extras.js','utf8'));
+ const withReader=html.replace('</head>','<script defer src="/verify/_assets/reader-extras.9c5444bd34caead9.js"></script></head>');
+ const environment={PINNACLE_VERIFY:{fetch:async()=>new Response(withReader,{headers:{'content-type':'text/html'}})}};
+ const output=await(await worker.fetch(new Request(origin+'/verify/guides/abilityscore.html'),environment)).text();
+ assert(output.includes('google-ads-call.js?module=verify-reader&v=3'));assert(!output.includes('reader-extras.9c5444bd34caead9.js'));
 });

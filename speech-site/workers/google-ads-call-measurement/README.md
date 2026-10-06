@@ -1,19 +1,13 @@
-# Google Ads call-measurement wrapper — consent correction
+# Google Ads website-call measurement
 
-This existing Worker wraps five selected page routes and serves one bootstrap path. It is separate from the Astro/Verify Worker. The recovered original source is retained verbatim for comparison; the live rollback version is `462c081d-2f41-4f47-9467-c6321f2cd540` (deployment `868439d1-9ca3-49c6-a51b-cfffc6c3380a`).
+The existing wrapper owns five selected Speech/Verify routes and one bootstrap path. Public Ask pages load the same source through AskLayout. Private Ask account, auth, search and API routes stay excluded.
 
-`index.mjs` contains the bounded v2 correction: queue denied advertising/analytics defaults before loading Google; retain generic cookieless Ads configuration; respect Global Privacy Control; remove the phone-conversion configuration pending an independent advertising-measurement choice. Do not treat the existing **Allow analytics** control as advertising permission. Cache-bust the same bootstrap pathname using `?v=2`.
+The v3 implementation restores website-call measurement only after a separate advertising choice in the common footer. Global Privacy Control, refusal, expired consent and unavailable storage keep the helper off. Analytics permission is independent. Withdrawal restores the original display/dial targets, clears owned call-measurement cookies, and reloads to unload the helper; same-origin tabs receive withdrawal too. Ordinary calls work without permission.
 
-Google documents Phone Call Conversions as not yet supporting Consent Mode. A denied default alone does not establish that the helper respects the choice. Actual telephone actions, the existing consent-gated coarse call-click analytics, Verify mobile CTA, service binding and all routes remain intact. No promise of Ads-attributed connected calls is made during this hold.
+Shared source: `src/lib/google-ads-call-consent.mjs`. `scripts/build-ad-call-bootstrap.mjs` generates the served bootstrap before bundling. The wrapper also serves the corrected Verify reader script on its three existing Verify routes; immutable historical asset URLs are retained. Both analytics implementations preserve independent choices and share one Google loader.
 
-Sources reviewed 1 October 2026:
-- https://developers.google.com/tag-platform/security/concepts/consent-mode
-- https://developers.google.com/tag-platform/security/guides/consent
+Build and tests: production Astro build, Ask build, `npm run test:unit`, `scripts/validate-ad-call-opt-in.mjs`, `scripts/validate-verify-call-consent.mjs`. See `RELEASE-WEBSITE-CALL-MEASUREMENT-20261006.md` for the actual release state and coverage.
 
-## Release procedure
+Use current Cloudflare Worker version/binding/route read-back and a current rollback, then inactive version upload and explicit deployment. Do not use a historical wrapper or a narrowed route flag. The existing conversion action is AW-10810823199/VNUcCMSy3YobEJ-kgKMo, with visible source number9100 181181. A callback fixture is not proof of a real Google forwarding number or qualified call.
 
-Use Cloudflare Worker Versions upload, then an explicit 100% deployment only after verifying the current predecessor. Metadata: main_module `index.mjs`; compatibility_date `2026-09-18`; usage_model `standard`; binding `{type: service, name: PINNACLE_VERIFY, service: pinnacle-verify-route, environment: production}`. Do not alter route assignments or use a narrow `--route` override. Preserve the original source/binding and live rollback version.
-
-Checks: `node --test scripts/test-ads-consent-wrapper.mjs`; `node scripts/validate-ads-consent-wrapper.mjs --candidate`, then once without `--candidate` after activation. Check all five measured page representations/CTA and six existing route assignments. Keep generated browser receipts, source commit and deployment IDs in the release ledger.
-
-Restoring the phone-conversion helper requires an explicit advertising-measurement choice with withdrawal behavior. A later common consent UI change must be made in the common component and released consistently, separately from this correction.
+Google documents Phone Call Conversions as not yet supporting Consent Mode. The helper must remain gated, rather than relying on denied consent flags alone: https://developers.google.com/tag-platform/security/concepts/consent-mode

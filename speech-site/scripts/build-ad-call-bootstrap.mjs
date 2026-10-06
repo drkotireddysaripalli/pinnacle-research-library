@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';
+const source = await fs.readFile(new URL('../src/lib/google-ads-call-consent.mjs', import.meta.url), 'utf8');
+const bootstrap = source.replace(/^export /gm, '');
+const file = new URL('../workers/google-ads-call-measurement/index.mjs', import.meta.url);
+const wrapper = await fs.readFile(file, 'utf8');
+const begin = wrapper.indexOf('var BOOTSTRAP = ');
+const end = wrapper.indexOf('\nvar VERIFY_READER', begin);
+if (begin < 0 || end < 0) throw Error('Bootstrap build boundary missing');
+const reader = await fs.readFile(new URL('../../verify-site/dist/reader-extras.js', import.meta.url), 'utf8');
+const after = wrapper.slice(end).replace(/var VERIFY_READER = [^\n]*;/, () => 'var VERIFY_READER = ' + JSON.stringify(reader) + ';');
+await fs.writeFile(file, wrapper.slice(0, begin) + 'var BOOTSTRAP = ' + JSON.stringify(bootstrap) + ';' + after);
+console.log('Built call bootstrap from the shared source.');

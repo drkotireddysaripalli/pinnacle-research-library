@@ -10,6 +10,7 @@ import navigation from '../data/portal-navigation.json';
 import Icon from './Icon.astro';
 import PortalFooterGroup from './PortalFooterGroup.astro';
 import VerifyFooter from './VerifyFooter.astro';
+import AdCallPreferences from './AdCallPreferences.astro';
 const shapes=await getImage({src:footerShapes,format:'webp',quality:80});
 ---
 <footer class="portal-site-footer">
@@ -33,6 +34,7 @@ const shapes=await getImage({src:footerShapes,format:'webp',quality:80});
     <div class="portal-footer-identity"><span>© {new Date().getFullYear()} Pinnacle Blooms Network · Operated by Bharath Healthcare Laboratories Private Limited.</span><a href="https://www.bhclpl.org">Bharath Healthcare →</a></div>
     <a class="portal-review-link" href="https://www.trustpilot.com/review/pinnacleblooms.org">Review us on <strong>★ Trustpilot</strong></a>
     <details id="website-preferences" class="measurement-settings portal-measurement" data-speech-measurement hidden><summary>Optional analytics preferences</summary><p>With your permission, Google Analytics measures page visits and call or enquiry-link clicks. These are not completed calls or bookings. We exclude form details, query parameters and advertising identifiers from these events. Advertising personalisation is off.</p><div><button type="button" data-measurement-choice="accepted">Allow analytics</button><button type="button" data-measurement-choice="declined">Keep analytics off</button></div><p data-measurement-status role="status">Optional analytics is off until you choose.</p></details>
+    <AdCallPreferences />
     <p class="portal-footer-note">Information on this page supports a conversation with your care team. Goals, support and progress are individual to each child.</p>
   </div></div>
  </div>

@@ -5,6 +5,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import operatorEmblem from '../assets/bhcl-emblem-official.png';
 import regularFontUrl from '../../public/pinnacle-pages-fonts/sintony-latin.woff2?url';
 import measurementUrl from '../../public/pinnacle-pages-scripts/speech-measurement.js?url';
+import adCallUrl from '../lib/google-ads-call-consent.mjs?url';
 import AskNavigation from '../components/ask/AskNavigation.astro';
 import AskGate from '../components/ask/AskGate.astro';
 import AskVerification from '../components/ask/AskVerification.astro';
@@ -26,7 +27,7 @@ const graph={'@context':'https://schema.org','@graph':[
 <VernacularTypography/></head><body class="ask-page" data-page-variant="ask" data-shared-shell="v159">
  {!privatePage&&<><AskGate/><AskVerification/></>}<SiteHeader currentPath="/ask"/><AskNavigation q={q} lang={lang}/><main id="main" class="ask-registration-content"><slot/></main><SiteFooter/>
  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={contact.tel} data-cta="mobile-call">Call {contact.phone}</a><a href={contact.enrol} data-cta="mobile-assessment">Arrange a visit</a></nav>
- <script is:inline define:vars={{measurementUrl,privatePage}}>if(!privatePage&&!/^\/ask\/(?:account|auth)(?:\/|$)/.test(location.pathname))import(measurementUrl);</script>
+ <script is:inline define:vars={{measurementUrl,adCallUrl,privatePage}}>if(!privatePage&&!/^\/ask\/(?:te\/)?(?:account|auth|search|api)(?:\/|$)/.test(location.pathname)){import(adCallUrl);import(measurementUrl);}</script>
  <script>
  document.addEventListener('click',async(event)=>{
   const button=(event.target as HTMLElement).closest<HTMLButtonElement>('[data-ask-share]');if(!button)return;

@@ -3,6 +3,7 @@ import VernacularTypography from '../components/VernacularTypography.astro';
 import { speechOffer } from '../data/speech-offer';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import adCallUrl from '../lib/google-ads-call-consent.mjs?url';
 import { getImage } from 'astro:assets';
 import { origin, url, phone } from '../data/site';
 import '../styles/page.css';
@@ -51,5 +52,6 @@ const schema = {'@context':'https://schema.org','@graph':[
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
   <nav class="mobile-cta" aria-label={nativeContact?.label || "Contact Pinnacle"}><a href={phone.href} data-cta="mobile-call">{nativeContact?.call || "Call"} {nativeContact ? phone.display.replaceAll(' ', '\u00a0') : phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>
+  <script is:inline type="module" src={adCallUrl} data-pinnacle-ad-call-module></script>
   <script is:inline src={Astro.props.measurementScript || '/pinnacle-pages-scripts/speech-measurement.js'} defer></script>
 </body></html>
