@@ -50,6 +50,6 @@ const schema = {'@context':'https://schema.org','@graph':[
 <VernacularTypography/></head><body class:list={{'focused-campaign':focused,'enrolment-page':enrolmentDocument}} data-page-variant={focused ? 'focused' : 'service'}>
   {!isProduction && <div class="preview-note">Design preview · {label} · Links open the existing Pinnacle website</div>}
   <SiteHeader currentPath={path} /><main id="main"><slot /></main><SiteFooter />
-  <nav class="mobile-cta" aria-label={nativeContact?.label || "Contact Pinnacle"}><a href={phone.href} data-cta="mobile-call">{nativeContact?.call || "Call"} {phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>
+  <nav class="mobile-cta" aria-label={nativeContact?.label || "Contact Pinnacle"}><a href={phone.href} data-cta="mobile-call">{nativeContact?.call || "Call"} {nativeContact ? phone.display.replaceAll(' ', '\u00a0') : phone.display}</a><a href={contactAction.url} data-cta="mobile-assessment">{contactAction.mobileLabel}</a></nav>
   <script is:inline src={Astro.props.measurementScript || '/pinnacle-pages-scripts/speech-measurement.js'} defer></script>
 </body></html>

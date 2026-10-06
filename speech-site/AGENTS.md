@@ -51,7 +51,7 @@ For every substantial therapy-page change:
 
 Use public evidence for claims. MD-5 is non-diagnostic developmental-support software scope; BIS's named modules do not guarantee a child's outcome; FSC does not constitute foreign registration. Do not invent exclusivity, reviews, clinician credentials, appointments, patient cases or completed research findings.
 
-Retain the established Sintony typography and vivid Pinnacle palette. Keep the page readable on a 320 px viewport. Use selected source-backed facts and clear actions; avoid repetitive explanations and disclaimer-heavy blocks.
+Retain the established Sintony typography and vivid Pinnacle palette. The owner's 6 October vernacular requirement is implemented in `VERNACULAR-TYPOGRAPHY.md`: native Indian-script HTML uses the shared Anek contract (800 headings, 600 body, 700 controls), reused through `VernacularTypography.astro` and the common Worker transform. Keep native `lang` attributes; do not create page-specific native-font overrides. Keep the page readable on a 320 px viewport. Use selected source-backed facts and clear actions; avoid repetitive explanations and disclaimer-heavy blocks.
 
 ## Standing image standard — owner instruction, 30 September 2026
 

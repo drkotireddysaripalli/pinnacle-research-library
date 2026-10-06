@@ -34,8 +34,14 @@ export function applyVernacularTypography(request, response, Rewriter = globalTh
   const headers = new Headers(response.headers);
   for (const name of ['content-length', 'content-encoding', 'etag', 'last-modified', 'content-md5', 'digest', 'content-digest', 'repr-digest']) headers.delete(name);
   headers.set('x-pinnacle-typography', VERNACULAR_RELEASE);
+  let nativeDocument = false;
   // Public returning visitors get the same typography; retain their cache/privacy policy.
   return new Rewriter()
+    .on('html', {element(el) {nativeDocument = /^(?:te|hi|mr|sa|ne|kok|bn|as|pa|gu|or|od|ta|kn|ml)(?:-|$)/i.test(el.getAttribute('lang') || '');}})
+    .on('.mobile-cta a[href="tel:+919100181181"]', {text(chunk) {
+      // Keep the complete number on one line while the native call label can wrap.
+      if (nativeDocument && chunk.text.includes('9100 181 181')) chunk.replace(chunk.text.replaceAll('9100 181 181', '9100\u00a0181\u00a0181'));
+    }})
     .on('style[data-pinnacle-vernacular]', {element(el) {el.remove();}})
     .on('head', {element(el) {el.append(VERNACULAR_STYLE, {html: true});}})
     .transform(new Response(response.body, {status: response.status, statusText: response.statusText, headers}));
