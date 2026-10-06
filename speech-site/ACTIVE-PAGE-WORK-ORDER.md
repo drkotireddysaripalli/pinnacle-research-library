@@ -1,5 +1,9 @@
 # Current page work — 6 October 2026
 
+## Shared Shop checkout integrity — completed and live
+
+Runtime source ddcee0a5f9991f33d559918bd15476e94c69093b; successful CI37495775427; Portal ba536ab4-f94d-4b65-a8c6-2d270e2021ee; deployment b6a3065d-15c0-42da-8534-446548329cef. The current live bag reads all line pages,validates exact PDF variants/base INR prices/availability/non-shipping scope,and requires deliberate review after refreshed selection/quantity/total changes. Existing bag and consent handling retained. All228 routes,2,160 assets,37 other modules and six protected services preserved. EN/HI/TE actual API selections,phone/tablet/desktop captures,physical iPhone17Pro/iOS26.5 Safari,and an intercepted real checkout handoff passed; all test bags emptied. Both55-row feeds/33 PDF links and seven Amazon-linked pages preserved. No order/payment or theme publication. See RELEASE-BOOK-BAG-INTEGRITY-20261006.md and deployment/book-bag-integrity-20261006.json. The wider qualified-outcome/outreach/merchant gaps remain in the day-delivery register; schedulers stay deleted/disabled.
+
 ## Current execution control — direct work only
 
 The owner explicitly stopped schedulers on 6 October. `pinnacle-hourly-growth-delivery` is deleted; the retired Windows scheduler and API gateway are disabled. Do not recreate or resume scheduled execution without an explicit human instruction about scheduling. Older heartbeat wording below is historical. Campaign canonical/cache and the exact physiotherapy collection-schema acceptance are complete. The two existing exact `/enroll` bulk redirects now preserve query strings; six public paths and two real form selections passed. The offline evidence adapter now selects the newest completed audit and compares its date with release boundaries. See `RELEASE-CAMPAIGN-ENROLL-CLOSEOUT-20261006.md` for exact proof and remaining scope.

@@ -46,7 +46,10 @@ if(phase==='prepare'){
  await save(receiptPath,receipt);console.log(JSON.stringify({phase:receipt.phase,routes:receipt.routeCount,modules:receipt.moduleCount,rollback:receipt.rollback,retainedAssets:2160}));
 }else{
  const before=JSON.parse(await fs.readFile(path.join(priv,'before.json'),'utf8')),receipt=JSON.parse(await fs.readFile(receiptPath,'utf8')),now=await state();
- assert.deepEqual(now.routes,before.routes,'Route drift');assert.deepEqual(now.settings,before.settings,'Portal settings drift');
+ const expectedSettings=structuredClone(before.settings);
+ // A version upload updates this declared release annotation before promotion.
+ if(receipt.candidate)expectedSettings.annotations={...expectedSettings.annotations,'workers/message':id};
+ assert.deepEqual(now.routes,before.routes,'Route drift');assert.deepEqual(now.settings,expectedSettings,'Portal settings drift');
  for(const n of protectedNames)assert.deepEqual(now.workers[n],before.workers[n],n+' changed');
  assert.deepEqual(now.workers[worker].versions,phase==='verify'?[{version_id:receipt.candidate,percentage:100}]:before.workers[worker].versions,'Portal version drift');
  if(phase==='upload'){

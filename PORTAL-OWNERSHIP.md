@@ -4,6 +4,8 @@ Owner instruction: 6 October 2026. This supersedes earlier split website/shop co
 
 ## Start here
 
+Latest runtime release, 6 October 16:34 UTC: source ddcee0a5f9991f33d559918bd15476e94c69093b; Portal ba536ab4-f94d-4b65-a8c6-2d270e2021ee. The shared book-bag integrity repair is publicly verified; 228 routes, 2,160 assets, 37 other portal modules and six protected services are retained. The older release IDs below are dated history. Details: `speech-site/RELEASE-BOOK-BAG-INTEGRITY-20261006.md`; actual baseline/rollback and public proof: `speech-site/deployment/book-bag-integrity-20261006.json`. No hosted Shopify theme publication was needed.
+
 - Canonical repository: <https://github.com/drkotireddysaripalli/pinnacle-research-library> — `main`.
 - Accountable website thread: `01a0ef6b-507a-7630-828f-7ac81852a39c`.
 - Working checkout: `C:/Users/Siri Palace/Documents/Codex/2026-09-15/k/work/ask-distribution-release-20261003`.

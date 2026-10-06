@@ -1,0 +1,334 @@
+{
+  "id": "book-bag-integrity-20261006",
+  "phase": "verified-public",
+  "at": "2026-10-06T16:18:07.041Z",
+  "baseCommit": "e9f8f231daa6fc5eee6be8acd34411c0b8c71e99",
+  "rollback": [
+    {
+      "version_id": "c8a94088-f27b-4e0b-be0e-df0fdc4c2797",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 228,
+  "moduleCount": 38,
+  "retainedAssets": 2160,
+  "uploadedAssets": 0,
+  "originalHashes": {
+    "pinnacle-route-v12.mjs": "bfa9349d68bb08ae7dd7c733f56f20ea5686105ecedb878dcafdf01a1e2394d5",
+    "speech-handler.mjs": "98b4bfffafbdb323419f720359fdd57e682cd933081dd337c06d7466d17de2f8",
+    "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+    "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+    "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+    "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+    "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+    "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+    "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+    "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa",
+    "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+    "aba-assets.mjs": "8be7936a46cea4296aaca3318b7dcefa011aa359b7511a512007d28ff2967aa2",
+    "autism-assets.mjs": "8819010c7b6a368a5a5de932a470711a22452212d74798cc549ea8dcd035f066",
+    "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+    "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+    "suchitra-assets.mjs": "4a40b4338814a2432a007af6a3a797410d37efb21fade867267a89500096ae3b",
+    "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+    "enrolment-handler.mjs": "18bd39da5a46aa9d0cb0b2a533ad9ecc9be455e9ba1e6b252044bda74012f709",
+    "occupational-assets.mjs": "ff242611c0d61b80e5c20ddd87e1a9c778329e8862005eef7a36131885057e08",
+    "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+    "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+    "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+    "enrolment-assets.mjs": "879f0fda18032bf4af81bd6cd9f17dbf7873034193535cdc59d5e158ded097c1",
+    "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+    "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+    "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+    "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+    "discovery-handler.mjs": "24dbc590e0faf0ba34d2e8e450492894095324eff7a4d2c6770700b6408818b8",
+    "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+    "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186",
+    "shared-navigation.mjs": "b8e9701f7c396f7d28eacd10ac49b922ac519b6a3fc7859c5a00befd05ff4f07",
+    "book-attribution-assets.mjs": "0430f7f873ed7d7e223f778b8345db22d3f084cef7bbb63db639223666603fe2",
+    "book-attribution-handler.mjs": "83b402a5e6378e35fd236ac7f571e03374d61bb5ea8463d42324f6cbb110d059",
+    "public-route-aliases.mjs": "4d85837e6f1fd34edde50855661352c55218aaeb7c99a34b9b244fa3612d9dba",
+    "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092",
+    "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+    "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+    "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119"
+  },
+  "commit": "ddcee0a5f9991f33d559918bd15476e94c69093b",
+  "candidate": "ba536ab4-f94d-4b65-a8c6-2d270e2021ee",
+  "changedModules": [
+    "book-attribution-assets.mjs"
+  ],
+  "hashes": {
+    "pinnacle-route-v12.mjs": "bfa9349d68bb08ae7dd7c733f56f20ea5686105ecedb878dcafdf01a1e2394d5",
+    "speech-handler.mjs": "98b4bfffafbdb323419f720359fdd57e682cd933081dd337c06d7466d17de2f8",
+    "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+    "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+    "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+    "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+    "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+    "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+    "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+    "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa",
+    "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+    "aba-assets.mjs": "8be7936a46cea4296aaca3318b7dcefa011aa359b7511a512007d28ff2967aa2",
+    "autism-assets.mjs": "8819010c7b6a368a5a5de932a470711a22452212d74798cc549ea8dcd035f066",
+    "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+    "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+    "suchitra-assets.mjs": "4a40b4338814a2432a007af6a3a797410d37efb21fade867267a89500096ae3b",
+    "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+    "enrolment-handler.mjs": "18bd39da5a46aa9d0cb0b2a533ad9ecc9be455e9ba1e6b252044bda74012f709",
+    "occupational-assets.mjs": "ff242611c0d61b80e5c20ddd87e1a9c778329e8862005eef7a36131885057e08",
+    "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+    "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+    "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+    "enrolment-assets.mjs": "879f0fda18032bf4af81bd6cd9f17dbf7873034193535cdc59d5e158ded097c1",
+    "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+    "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+    "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+    "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+    "discovery-handler.mjs": "24dbc590e0faf0ba34d2e8e450492894095324eff7a4d2c6770700b6408818b8",
+    "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+    "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186",
+    "shared-navigation.mjs": "b8e9701f7c396f7d28eacd10ac49b922ac519b6a3fc7859c5a00befd05ff4f07",
+    "book-attribution-assets.mjs": "6807bbf03f8d160b42f68e52075ba7fbbf15256c15aed45204d33f525d3cff81",
+    "book-attribution-handler.mjs": "83b402a5e6378e35fd236ac7f571e03374d61bb5ea8463d42324f6cbb110d059",
+    "public-route-aliases.mjs": "4d85837e6f1fd34edde50855661352c55218aaeb7c99a34b9b244fa3612d9dba",
+    "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092",
+    "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+    "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+    "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119"
+  },
+  "deployment": "b6a3065d-15c0-42da-8534-446548329cef",
+  "promotedAt": "2026-10-06T16:34:02.523Z",
+  "verifiedAt": "2026-10-06T16:34:12.822Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-ask",
+    "pinnacle-ask-mcp",
+    "pinnacle-legacy-social-metadata",
+    "pinnacle-centre-search-repair",
+    "pinnacle-helpline",
+    "pinnacle-root-sitemap"
+  ],
+  "routesPreserved": 228,
+  "bindingsPreserved": true,
+  "completedAt": "2026-10-06T16:39:09.607757+00:00",
+  "ci": {
+    "at": "2026-10-06T16:32:30.480Z",
+    "commit": "ddcee0a5f9991f33d559918bd15476e94c69093b",
+    "runs": [
+      {
+        "id": 37495775427,
+        "name": "Portal quality",
+        "event": "push",
+        "status": "completed",
+        "conclusion": "success",
+        "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37495775427"
+      }
+    ]
+  },
+  "publicAcceptance": {
+    "at": "2026-10-06T16:34:10.513Z",
+    "feeds": [
+      {
+        "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/books-merchant-feed.xml",
+        "status": 200,
+        "rows": 33,
+        "checkoutLinks": 11,
+        "sha256": "1a4a5a6cedcaa94a665aaca2936cfd96caeaf847e456a53d8b6c3a51d01f015e"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/books-native-editions-merchant-feed.xml",
+        "status": 200,
+        "rows": 22,
+        "checkoutLinks": 22,
+        "sha256": "aee36b27b027ebea8cd4de4148caf1f9474c380df345493d7da774e466b7b6f5"
+      }
+    ],
+    "protectedBookLinks": [
+      {
+        "url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.in/dp/B0HLYKFDQ9",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.in/dp/B0HLYFTT36",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-occupational-hardbound-pair",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLYGDP86",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-hardbound-collection",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLY917FC",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters-softcover",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLZPP118",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life-softcover",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLZKRV9J",
+        "preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play-softcover",
+        "status": 200,
+        "amazonDestination": "https://www.amazon.com/dp/B0HLZJ9WKJ",
+        "preserved": true
+      }
+    ],
+    "cartScript": {
+      "status": 200,
+      "etag": "W/\"4d2687aaa81221597566ed35cb99e44bc1bd8cc3a019f5e62b2b53f4b08894eb\"",
+      "sourceMatches": true
+    },
+    "cart": {
+      "url": "https://www.pinnacleblooms.org/shop/cart?cart_sku=PBN-SP-101-TE-PDF&quantity=1",
+      "status": 200,
+      "robots": "noindex, follow",
+      "cache": "private, no-store",
+      "canonical": "https://www.pinnacleblooms.org/shop",
+      "typography": "anek-20261006"
+    }
+  },
+  "variants": {
+    "all33Exact": true,
+    "proof": "variant-readback.json"
+  },
+  "tests": {
+    "desktopFixtureCasesPassed": 42,
+    "integrityMatrixCasesPassed": 76,
+    "localFirefoxLaunchUnavailable": 19,
+    "correctedConsentCasesPassed": 4,
+    "moduleFeedUnitTestsPassed": 4,
+    "hostedFirefoxWebKit": "passed in exact-source CI",
+    "realApiCandidate": "candidate/report.json",
+    "realProduction": "production/report.json",
+    "controlledErrorVisual": "error-visual/report.json",
+    "readOnlyReview": "earlier P1 and P2 resolved; no further actionable findings"
+  },
+  "physical": {
+    "at": "2026-10-06T16:34:28.456Z",
+    "status": "passed",
+    "secondsBefore": 1141,
+    "noCheckoutNavigation": true,
+    "noOrder": true,
+    "device": {
+      "id": 44,
+      "name": "iPhone 17 Pro",
+      "version": "26.5",
+      "platform": "iOS"
+    },
+    "sessionId": "f5fde4fbbec1-60862c211901-b965e5f5c092-179130447691-97448896",
+    "actual": {
+      "browserName": "safari",
+      "platformName": "iOS"
+    },
+    "before": {
+      "url": "https://www.pinnacleblooms.org/shop/cart?cart_sku=PBN-SP-101-TE-PDF&quantity=1",
+      "canonical": "https://www.pinnacleblooms.org/shop",
+      "open": true,
+      "count": "1",
+      "title": "My Message Matters - Speech & Communication 101 - Telugu edition PDF ebook",
+      "price": "₹799.00",
+      "checkoutHost": "pinnacleblooms.myshopify.com",
+      "policies": [
+        "/terms-of-use",
+        "/refund-policy"
+      ],
+      "viewport": 402,
+      "overflow": 0
+    },
+    "reloadCount": 1,
+    "testBagEmptied": true,
+    "sessionClosed": true,
+    "finishedAt": "2026-10-06T16:35:04.578Z"
+  },
+  "handoff": {
+    "at": "2026-10-06T16:35:54.053Z",
+    "publicUrl": "https://www.pinnacleblooms.org/shop/cart?cart_sku=PBN-101-TE-PDF-SET4&quantity=1",
+    "sku": "PBN-101-TE-PDF-SET4",
+    "quantity": 1,
+    "totalINR": 2499,
+    "freshCartReadBeforeHandoff": true,
+    "checkoutHost": "pinnacleblooms.myshopify.com",
+    "checkoutRequestIntercepted": true,
+    "hostedCheckoutLoaded": false,
+    "ordersCreated": 0,
+    "testBagEmptied": true,
+    "analyticsConsent": "GPC; endpoints blocked"
+  },
+  "impactBoundary": "Verified checkout/customer journey; no order, revenue, qualified lead or ranking improvement inferred.",
+  "schedulers": "deleted/disabled; direct work only",
+  "skipped": [
+    "Physical Android for this patch",
+    "Physical iPad",
+    "Older OS versions",
+    "End-to-end paid purchase"
+  ],
+  "stylesheetReadback": {
+    "at": "2026-10-06T16:42:53.319Z",
+    "url": "https://www.pinnacleblooms.org/shop/cart",
+    "status": 200,
+    "responses": [
+      {
+        "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/shop.DbrLK0BH.css",
+        "status": 200,
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/PageLayout.CFRv48vS.css",
+        "status": 200,
+        "contentType": "text/css; charset=utf-8"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/BookCart.BquuuMpG.css",
+        "status": 200,
+        "contentType": "text/css; charset=utf-8"
+      }
+    ],
+    "failures": [],
+    "render": {
+      "css": [
+        {
+          "href": "https://www.pinnacleblooms.org/pinnacle-pages-assets/BookCart.BquuuMpG.css",
+          "loaded": true
+        },
+        {
+          "href": "https://www.pinnacleblooms.org/pinnacle-pages-assets/shop.DbrLK0BH.css",
+          "loaded": true
+        },
+        {
+          "href": "https://www.pinnacleblooms.org/pinnacle-pages-assets/PageLayout.CFRv48vS.css",
+          "loaded": true
+        }
+      ],
+      "dialog": {
+        "borderRadius": "20px",
+        "padding": "0px",
+        "color": "rgb(22, 41, 66)",
+        "fontFamily": "Sintony, Arial, sans-serif",
+        "width": "min(1060px, 100% - 32px)"
+      }
+    },
+    "cartMutations": 0
+  },
+  "independentHostedCheckoutReport": {
+    "source": "Authorised commerce thread message received in this pass",
+    "evidencePath": "worldwide-launch-20261003/shop-bag-release-acceptance-20261006",
+    "sourceCommit": "ddcee0a5f9991f33d559918bd15476e94c69093b",
+    "result": "Guest Shopify checkout reached with four exact lines and INR 4896 total; no fields, payment or order; root temporary bag emptied and pre-existing hosted cart untouched",
+    "verificationScope": "Reported by the commerce thread; root separately verified its own live bag, final handoff and exact stylesheet loading. Mac client block cause remains unconfirmed."
+  }
+}
