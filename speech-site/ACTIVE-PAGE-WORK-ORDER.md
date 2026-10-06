@@ -1,5 +1,9 @@
 # Current page work — 6 October 2026
 
+## Shop/Books/helpline lead-path check — complete; real outcomes dependent
+
+Ten actual public URLs and both measurement sources verified.54 shared measurement/enrolment tests and10 helpline tests pass. Signed-in GA4 confirms main G-2BYLRLFRDJ and evidence/helpline G-H9CLX1WJ7R in property361649365; no source correction or account change justified. Accepted enquiries require provider acknowledgement and consent; taps/navigation stay distinct. No deployment,live enquiry/call or synthetic event. Actual qualified outcomes await existing MyOperator case685868 and7October technical clarification. See `REVIEW-LEAD-PATH-CLOSEOUT-20261006.md`. Current runtime versions/routes and scheduler stop retained.
+
 ## Exact physiotherapy WebPage identities — completed and live
 
 Source `a6bd113`; successful CI `37499537094`; legacy version `46fa8ad2-f64c-47e1-a78b-db27d849b331`; deployment `828b9505-0332-47d4-803f-2631741f5017`. Two captured WebPage scripts now use canonical HTTPS/no-campaign-query self-identities. Four public before/after comparisons retain every other schema value, visible text and link. All 228 routes, bindings, the other eight legacy modules and five protected service versions are retained. The current Shop/Portal release remains unchanged. Receipt: `RELEASE-PHYSIOTHERAPY-IDENTITIES-20261006.md`. Website schedules remain stopped.

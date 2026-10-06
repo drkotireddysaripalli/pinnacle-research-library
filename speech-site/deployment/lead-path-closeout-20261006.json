@@ -1,0 +1,101 @@
+{
+  "checkedAt": "2026-10-06T17:36:04Z",
+  "status": "verified_without_source_change",
+  "publicAcceptance": {
+    "publicUrlsPassed": 10,
+    "helplineCentralCallPlacements": 8,
+    "sharedScriptMatches": true,
+    "helplineLogicMatches": true,
+    "noProductionCollectionOrSubmission": true
+  },
+  "urls": [
+    "https://www.pinnacleblooms.org/shop",
+    "https://www.pinnacleblooms.org/books",
+    "https://www.pinnacleblooms.org/books/hi",
+    "https://www.pinnacleblooms.org/books/te",
+    "https://www.pinnacleblooms.org/books/hi/speech-101",
+    "https://www.pinnacleblooms.org/books/te/speech-101",
+    "https://www.pinnacleblooms.org/national-autism-helpline",
+    "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech",
+    "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters",
+    "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational&centre=suchitraii"
+  ],
+  "measurementSources": {
+    "shared": {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/speech-measurement.js",
+      "status": 200,
+      "sha256": "f2f1d9add9a7b4856921fd0d07992d7b1c08d8b3722bf124dd601d03431b9f62",
+      "localSha256": "f2f1d9add9a7b4856921fd0d07992d7b1c08d8b3722bf124dd601d03431b9f62",
+      "matchesSource": true,
+      "ids": [
+        "G-2BYLRLFRDJ"
+      ]
+    },
+    "helpline": {
+      "sha256": "a6cb0a891ce638917e854b45258451701faf36b53e7d6732fc95f98f995faa5c",
+      "localSha256": "03c75984f4ed79f694d9d6b0fb354a610448936250b837d24dc962caac3d54ed",
+      "matchesSource": false,
+      "normalization": "CRLF and outer whitespace only",
+      "logicMatchesSource": true,
+      "normalizedSha256": "8bf828762e6647a3142004df5d939aed7b5f9a5278d7abf07fad66f1ae2360b7"
+    }
+  },
+  "ga4": {
+    "checkedAt": "2026-10-06T17:36:04Z",
+    "method": "Signed-in Google Analytics Admin stream list/details and GSC Wizard property list",
+    "propertyId": "properties/361649365",
+    "propertyName": "PinnacleBlooms - GA4",
+    "streams": [
+      {
+        "name": "PinnacleBlooms - GA4",
+        "streamId": "4811231552",
+        "measurementId": "G-2BYLRLFRDJ",
+        "configuredUrl": "http://www.pinnacleblooms.org/",
+        "usage": "Managed website, Shop, Books",
+        "receivingTrafficPast48Hours": true
+      },
+      {
+        "name": "Pinnacle Verify — Evidence & Research",
+        "streamId": "15806421407",
+        "measurementId": "G-H9CLX1WJ7R",
+        "configuredUrl": "https://www.pinnacleblooms.org/verify/",
+        "usage": "Existing evidence stream, also used by dedicated national helpline",
+        "receivingTrafficPast48Hours": true,
+        "enhancedMeasurementEnabled": false
+      }
+    ],
+    "keyEventsObserved": [
+      "phone_link_click",
+      "enquiry_accepted"
+    ],
+    "decision": "Same required property; preserve routing. No account or code change needed.",
+    "limits": "Property collection activity does not establish individual page delivery or genuine calls. No synthetic production event sent. Main stored HTTP URL is descriptive; current managed code sends canonical HTTPS page_location."
+  },
+  "tests": {
+    "measurementAndEnrolment": {
+      "passed": 54,
+      "failed": 0,
+      "skipped": 0
+    },
+    "helpline": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "sourceReview": "Existing reused read-only reviewer found no concrete gap in service/centre preservation or provider-acknowledgement/consent gates.",
+  "deployment": null,
+  "sourceCorrection": null,
+  "productionSyntheticEvents": false,
+  "currentPortal": "ba536ab4-f94d-4b65-a8c6-2d270e2021ee",
+  "currentLegacy": "46fa8ad2-f64c-47e1-a78b-db27d849b331",
+  "callOutcomeDependency": {
+    "owner": "Existing helpline operations/provider case",
+    "case": "685868",
+    "meeting": "2026-10-07 11:30-12:00 Asia/Kolkata",
+    "source": "Authorised commerce thread provider-reply report",
+    "condition": "Document session/agent IDs, answered/qualified meanings, forwarding/receiver acknowledgement and outcome joins; then consume aggregates."
+  },
+  "schedulerState": "Deleted/disabled; not resumed",
+  "notes": "Shared code and stream questions closed. Qualified outcomes, full site health, purchase attribution and verified placements remain open."
+}
