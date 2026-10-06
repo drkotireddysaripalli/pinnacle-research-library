@@ -1,0 +1,15 @@
+{
+  "completedAt": "2026-10-06T06:30:40.8787210Z",
+  "input": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\six-step-release-20261006\\urls.txt",
+  "output": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\pinnacle-growth-system\\six-step-release-20261006\\screaming-frog\\20261006-120029",
+  "reports": [
+    "canonicals_all.csv",
+    "h1_all.csv",
+    "internal_all.csv",
+    "meta_description_all.csv",
+    "page_titles_all.csv",
+    "response_codes_all.csv"
+  ],
+  "exitCode": 0,
+  "scope": "Bounded explicit public URL list; not a full site audit or visual/browser test."
+}

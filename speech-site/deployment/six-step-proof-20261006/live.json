@@ -1,0 +1,226 @@
+{
+  "at": "2026-10-06T06:30:31.990Z",
+  "checks": [
+    {
+      "id": "chandanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "location": null,
+      "bytes": 787153,
+      "sha256": "fd47bad4402838729acdce9220814fed59e3e67ffd82187b8bb5166a59e30119",
+      "pass": true
+    },
+    {
+      "id": "sunshine-old-sitemap",
+      "url": "https://www.pinnacleblooms.org/sunshine-condition.xml",
+      "status": 301,
+      "finalURL": "https://www.pinnacleblooms.org/sunshine-condition.xml",
+      "location": "https://www.pinnacleblooms.org/sunshine/sitemap.xml",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "id": "alias-wppsi4",
+      "url": "https://pinnacleblooms.org/ask/wppsi4",
+      "status": 301,
+      "finalURL": "https://pinnacleblooms.org/ask/wppsi4",
+      "location": "https://pinnacleblooms.org/ask/wppsi-iv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "id": "alias-aac",
+      "url": "https://pinnacleblooms.org/ask/aac",
+      "status": 301,
+      "finalURL": "https://pinnacleblooms.org/ask/aac",
+      "location": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/aac",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "id": "alias-lens/organ/anus",
+      "url": "https://pinnacleblooms.org/ask/lens/organ/anus",
+      "status": 301,
+      "finalURL": "https://pinnacleblooms.org/ask/lens/organ/anus",
+      "location": "https://pinnacleblooms.org/ask/how-does-the-anus-affect-a-child-s-development",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "id": "alias-code/XA0604",
+      "url": "https://pinnacleblooms.org/ask/code/XA0604",
+      "status": 301,
+      "finalURL": "https://pinnacleblooms.org/ask/code/XA0604",
+      "location": "https://pinnacleblooms.org/ask/how-does-the-lymphatic-vessels-and-thoracic-duct-affect-a-child-s-development",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "pass": true
+    },
+    {
+      "id": "sunshine-sitemap",
+      "url": "https://www.pinnacleblooms.org/sunshine/sitemap.xml",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/sunshine/sitemap.xml",
+      "location": null,
+      "bytes": 11715,
+      "sha256": "188566d14afd8ad1660dec8fd6aa9687aed16f5a1e70aeef3e2be45a8d4033bd",
+      "pass": true
+    },
+    {
+      "id": "measurement-/books/resources/measurement-v1.js",
+      "url": "https://www.pinnacleblooms.org/books/resources/measurement-v1.js",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/books/resources/measurement-v1.js",
+      "location": null,
+      "bytes": 21564,
+      "sha256": "f2f1d9add9a7b4856921fd0d07992d7b1c08d8b3722bf124dd601d03431b9f62",
+      "pass": true
+    },
+    {
+      "id": "protected-/sunshine",
+      "url": "https://www.pinnacleblooms.org/sunshine",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/sunshine",
+      "location": null,
+      "bytes": 166569,
+      "sha256": "7b931102aabeaa0cb1e2d00cb7daa10103616b0f4f4952b5cb9f29c2ca927ef8",
+      "pass": true
+    },
+    {
+      "id": "measurement-/pinnacle-pages-scripts/speech-measurement.js",
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/speech-measurement.js",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/speech-measurement.js",
+      "location": null,
+      "bytes": 21564,
+      "sha256": "f2f1d9add9a7b4856921fd0d07992d7b1c08d8b3722bf124dd601d03431b9f62",
+      "pass": true
+    },
+    {
+      "id": "suchitra",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "location": null,
+      "bytes": 163209,
+      "sha256": "c8d1c9e04d475f78ab470b39a41d7d08b589e2d20f4cf583e947299c56c1e844",
+      "pass": true
+    },
+    {
+      "id": "protected-/books",
+      "url": "https://www.pinnacleblooms.org/books",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/books",
+      "location": null,
+      "bytes": 189618,
+      "sha256": "1a7e84bb8eb3a38810f03aaa9246ece8a508bfe55ac8f1f16c3de17d53de2632",
+      "pass": true
+    },
+    {
+      "id": "protected-/enroll-autism-speech-aba-therapies-india",
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "location": null,
+      "bytes": 255238,
+      "sha256": "bea9343f5cecc0302fce7f25444626d069096bec3d8e3421172453348e87d1c3",
+      "pass": true
+    },
+    {
+      "id": "protected-/verify/",
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/verify/",
+      "location": null,
+      "bytes": 1027548,
+      "sha256": "1d133ba37fcc15cc09ebf6d2e140ed05e88de37112ff13a0f925f30a249bfdf1",
+      "pass": true
+    },
+    {
+      "id": "protected-/faq",
+      "url": "https://www.pinnacleblooms.org/faq",
+      "status": 200,
+      "finalURL": "https://www.pinnacleblooms.org/faq",
+      "location": null,
+      "bytes": 167408,
+      "sha256": "2fa8864d43ae40a0ed7acf8073a8af1216897b388e53016bce25ae14053d0550",
+      "pass": true
+    },
+    {
+      "id": "deic-json",
+      "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer.json",
+      "status": 200,
+      "finalURL": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer.json",
+      "location": null,
+      "bytes": 10856,
+      "sha256": "803c682858d99dfbd38c015636cf5f3b63a033d0d4973e9733ccc63d6a7f746e",
+      "pass": true
+    },
+    {
+      "id": "unknown-ask",
+      "url": "https://pinnacleblooms.org/ask/code/UNKNOWN-SIX-STEP-TEST",
+      "status": 404,
+      "finalURL": "https://pinnacleblooms.org/ask/code/UNKNOWN-SIX-STEP-TEST",
+      "location": null,
+      "bytes": 142255,
+      "sha256": "e0937f20b4a1d4f8aaf1cdc44a4782e9dcf478f9abdfefe1ce50edd06b8c26de",
+      "pass": true
+    },
+    {
+      "id": "deic-md",
+      "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer.md",
+      "status": 200,
+      "finalURL": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer.md",
+      "location": null,
+      "bytes": 7227,
+      "sha256": "a0f4717378beaf61ae3f641c2a042e87ff873dd3d8a06fc9e7fd3d119d813751",
+      "pass": true
+    },
+    {
+      "id": "deic-html",
+      "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+      "status": 200,
+      "finalURL": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+      "location": null,
+      "bytes": 181506,
+      "sha256": "62f9d09cdb0d5a6822d78cd927726362c0f21a464310f6a514f994e6c883db6f",
+      "pass": true
+    },
+    {
+      "id": "aac-collection",
+      "url": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/aac",
+      "status": 200,
+      "finalURL": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/aac",
+      "location": null,
+      "bytes": 164672,
+      "sha256": "944d597d39502af78c38cc0d80e65c07e7c98c5827d9148326dd43236a2a1063",
+      "pass": true
+    },
+    {
+      "id": "navigation-sitemap",
+      "url": "https://pinnacleblooms.org/ask/sitemap-navigation.xml",
+      "status": 200,
+      "finalURL": "https://pinnacleblooms.org/ask/sitemap-navigation.xml",
+      "location": null,
+      "bytes": 1504,
+      "sha256": "5a699bb99e0434368f9f1c0842e84a5300a88fdffb53db31ad00f2fd31eb94b3",
+      "pass": true
+    },
+    {
+      "id": "wppsi-collection",
+      "url": "https://pinnacleblooms.org/ask/wppsi-iv",
+      "status": 200,
+      "finalURL": "https://pinnacleblooms.org/ask/wppsi-iv",
+      "location": null,
+      "bytes": 148685,
+      "sha256": "17242c3da6ec118b5c97aa53f7b2bab986710f1621d42fe8aff242a8a6f4be4b",
+      "pass": true
+    }
+  ],
+  "pass": true
+}

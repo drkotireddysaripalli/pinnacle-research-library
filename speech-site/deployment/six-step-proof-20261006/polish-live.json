@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-06T06:48:24.908Z",
+  "checks": [
+    {
+      "id": "suchitra-/pinnacle-pages-assets/centre-page.DQSF3Fsd.css",
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/centre-page.DQSF3Fsd.css",
+      "status": 200,
+      "bytes": 8576,
+      "pass": true
+    },
+    {
+      "id": "suchitra-/pinnacle-pages-data/suchitra-evidence.json",
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/suchitra-evidence.json",
+      "status": 200,
+      "bytes": 11829,
+      "pass": true
+    },
+    {
+      "id": "suchitra-/pinnacle-pages-data/suchitra-evidence.txt",
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/suchitra-evidence.txt",
+      "status": 200,
+      "bytes": 8722,
+      "pass": true
+    },
+    {
+      "id": "suchitra-/pinnacle-pages-data/suchitra-machine.md",
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-data/suchitra-machine.md",
+      "status": 200,
+      "bytes": 9769,
+      "pass": true
+    },
+    {
+      "id": "suchitra-/pinnacle-pages-assets/google-ads-call-consent.CycsBYjf.mjs",
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/google-ads-call-consent.CycsBYjf.mjs",
+      "status": 200,
+      "bytes": 11688,
+      "pass": true
+    },
+    {
+      "id": "suchitra-/pinnacle-pages-html/suchitra.html",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": 200,
+      "bytes": 163209,
+      "pass": true
+    },
+    {
+      "id": "chandanagar-mobile",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "bytes": 1017582,
+      "pass": true
+    },
+    {
+      "id": "resolved-answer-how-does-the-lymphatic-vessels-and-thoracic-duct-affect-a-child-s-development",
+      "url": "https://pinnacleblooms.org/ask/how-does-the-lymphatic-vessels-and-thoracic-duct-affect-a-child-s-development",
+      "status": 200,
+      "bytes": 173726,
+      "pass": true
+    },
+    {
+      "id": "resolved-answer-how-does-the-anus-affect-a-child-s-development",
+      "url": "https://pinnacleblooms.org/ask/how-does-the-anus-affect-a-child-s-development",
+      "status": 200,
+      "bytes": 171756,
+      "pass": true
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,106 @@
+{
+  "at": "2026-10-06T06:31:20.811Z",
+  "mode": "ios",
+  "account": {
+    "secondsBefore": 1332,
+    "secondsAfter": 1332
+  },
+  "pages": [
+    {
+      "id": "suchitra",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": "passed",
+      "snapshot": {
+        "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "width": 393,
+        "height": 695,
+        "overflow": 0,
+        "h1": [
+          "Speech and autism support. Here in Suchitra."
+        ],
+        "phone": true,
+        "gate": null,
+        "google": false,
+        "title": "Speech & Autism Therapy in Suchitra | Pinnacle Blooms",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1"
+      }
+    },
+    {
+      "id": "chandanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": "passed",
+      "snapshot": {
+        "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+        "width": 393,
+        "height": 695,
+        "overflow": 0,
+        "h1": [
+          "Autism and speech support in Chanda Nagar.Begin with your child\u2019s everyday life."
+        ],
+        "phone": true,
+        "gate": null,
+        "google": false,
+        "title": "Autism & Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1"
+      }
+    },
+    {
+      "id": "deic",
+      "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+      "status": "passed",
+      "snapshot": {
+        "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+        "width": 393,
+        "height": 695,
+        "overflow": 0,
+        "h1": [
+          "What is a DEIC, and how can it help your child?"
+        ],
+        "phone": true,
+        "gate": true,
+        "google": false,
+        "title": "DEIC: Services, Age & How to Visit | Ask Pinnacle",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1"
+      }
+    },
+    {
+      "id": "aac",
+      "url": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/aac",
+      "status": "passed",
+      "snapshot": {
+        "url": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/aac",
+        "width": 393,
+        "height": 695,
+        "overflow": 0,
+        "h1": [
+          "AAC: communication beyond speech"
+        ],
+        "phone": true,
+        "gate": true,
+        "google": false,
+        "title": "AAC: communication beyond speech | Ask Pinnacle",
+        "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1"
+      }
+    }
+  ],
+  "status": "passed",
+  "device": {
+    "id": 33,
+    "name": "iPhone 16",
+    "platform": "iOS",
+    "version": "26.5"
+  },
+  "sessionId": "6a75525d-ded9-40bb-a1ea-ce381980a764",
+  "actual": {
+    "browserName": "safari",
+    "platformName": "iOS",
+    "platformVersion": "26.5"
+  },
+  "sessionClosed": true,
+  "provider": {
+    "id": 53427338,
+    "duration": 31,
+    "assetsAvailable": false
+  },
+  "finishedAt": "2026-10-06T06:32:05.816Z"
+}

@@ -1,0 +1,163 @@
+{
+  "candidates": {
+    "pinnacle-verify-route": {
+      "id": "1c1c9a4c-dc4d-473e-b13d-fde55df2517b",
+      "rollback": [
+        {
+          "version_id": "1243d4af-45f6-4af2-9ba5-5aa4211a46ea",
+          "percentage": 100
+        }
+      ],
+      "hashes": {
+        "occupational-assets.mjs": "ff242611c0d61b80e5c20ddd87e1a9c778329e8862005eef7a36131885057e08",
+        "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+        "speech-handler.mjs": "98b4bfffafbdb323419f720359fdd57e682cd933081dd337c06d7466d17de2f8",
+        "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+        "book-attribution-handler.mjs": "83b402a5e6378e35fd236ac7f571e03374d61bb5ea8463d42324f6cbb110d059",
+        "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+        "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+        "book-attribution-assets.mjs": "0430f7f873ed7d7e223f778b8345db22d3f084cef7bbb63db639223666603fe2",
+        "enrolment-assets.mjs": "879f0fda18032bf4af81bd6cd9f17dbf7873034193535cdc59d5e158ded097c1",
+        "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+        "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+        "pinnacle-route-v12.mjs": "b6b25f576be3005eec8176c6fc7182324f6c4fcdd72859f92dd94858e156f0f3",
+        "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+        "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+        "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+        "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092",
+        "autism-assets.mjs": "8819010c7b6a368a5a5de932a470711a22452212d74798cc549ea8dcd035f066",
+        "enrolment-handler.mjs": "18bd39da5a46aa9d0cb0b2a533ad9ecc9be455e9ba1e6b252044bda74012f709",
+        "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186",
+        "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+        "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+        "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+        "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+        "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa",
+        "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+        "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+        "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+        "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+        "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119",
+        "shared-navigation.mjs": "b4bc9405ea1905af37a6fb6060d326c04b1e80995ef1724c3366296a32f2befc",
+        "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+        "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+        "aba-assets.mjs": "8be7936a46cea4296aaca3318b7dcefa011aa359b7511a512007d28ff2967aa2",
+        "discovery-handler.mjs": "196c4aaf34b4e1059f37db9263c021876bfdacd5e9ad6fc8c56257d7fadda2f4",
+        "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+        "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+        "suchitra-assets.mjs": "8349a36f3319c8e238fbcb247d739c54525312d921ee69305550c82537660799"
+      },
+      "changed": [
+        "speech-handler.mjs",
+        "book-attribution-assets.mjs",
+        "suchitra-assets.mjs"
+      ]
+    },
+    "pinnacle-centre-search-repair": {
+      "id": "7a1ef29d-5ddd-4e0c-98a2-6952de544d24",
+      "rollback": [
+        {
+          "version_id": "a58bebc5-1ade-4e61-90b1-1dbc2d3ee482",
+          "percentage": 100
+        }
+      ],
+      "hashes": {
+        "kukatpally.mjs": "2dbc35562c2153031c69165bb26684f24e6c740b243373b4c29ecd95ace3964d",
+        "labbipet.mjs": "8d476a6f6d29ccbdfbc88e8b3cec54b28cc40c9d879aa79d6cbda442ce587df6",
+        "lbnagar.mjs": "ad7b270547459b00afc3c82e8d3d1da3e6d4b0308b2d265b6a6c879b993adbad",
+        "legacy-v11.mjs": "a51a36d90918c83414ba5b188f082bbd0e68c7a2af1135831b44224cdd434887",
+        "annanagar.mjs": "6d3d44fa65018433efba970de38532d4ca580eb53488c0fea51eb41d540ddcb5",
+        "centre-measurement.mjs": "58e303e832cd88849e0c42c8931ce6f960d9a8e1271f17f7201e0736e2bb43e7",
+        "centre-media.mjs": "054d54143c7a0f33d28a0fee66e6e1c65ebaffa8145a3591b236c227be115f4f",
+        "entry.mjs": "65cd445a0409bcb78a20b0a5a46a421ad948f60f06007aacf4a5c0516cce29b3",
+        "chandanagar.mjs": "53ce16945ff7a43075b950f5a45362e458237fa33bcc0f6b6ad2db0f0001bc5a"
+      },
+      "changed": [
+        "entry.mjs",
+        "centre-measurement.mjs",
+        "chandanagar.mjs"
+      ]
+    }
+  },
+  "promoted": [
+    "pinnacle-verify-route",
+    "pinnacle-centre-search-repair"
+  ],
+  "askVersion": "2cf7c62a-c8fe-4e78-8503-d65630d65088",
+  "commit": "9ca4566c1e9c35016cf32b4f6e753c9f2a69f71b",
+  "verifiedAt": "2026-10-06T06:48:11.296Z",
+  "routeCount": 209,
+  "bindingsPreserved": true,
+  "untouchedWorkers": [
+    "pinnacle-root-sitemap",
+    "pinnacle-legacy-social-metadata",
+    "pinnacle-google-ads-call-measurement",
+    "pinnacle-ask-mcp"
+  ],
+  "polishCandidates": {
+    "pinnacle-verify-route": {
+      "id": "db3ff756-4038-4962-a86a-a7d422ebe362",
+      "rollback": "1c1c9a4c-dc4d-473e-b13d-fde55df2517b",
+      "commit": "0203e497895e2911d64fbc770beb3a14297530c9",
+      "hashes": {
+        "speech-handler.mjs": "98b4bfffafbdb323419f720359fdd57e682cd933081dd337c06d7466d17de2f8",
+        "suchitra-assets.mjs": "7cb6e25b43c9b0e0eb096bfde3670ac1c7f43a8ea16da4df6f2d109553efac85",
+        "discovery-handler.mjs": "196c4aaf34b4e1059f37db9263c021876bfdacd5e9ad6fc8c56257d7fadda2f4",
+        "enrolment-assets.mjs": "879f0fda18032bf4af81bd6cd9f17dbf7873034193535cdc59d5e158ded097c1",
+        "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+        "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+        "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+        "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+        "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+        "enrolment-handler.mjs": "18bd39da5a46aa9d0cb0b2a533ad9ecc9be455e9ba1e6b252044bda74012f709",
+        "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+        "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+        "autism-assets.mjs": "8819010c7b6a368a5a5de932a470711a22452212d74798cc549ea8dcd035f066",
+        "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+        "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+        "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+        "occupational-assets.mjs": "ff242611c0d61b80e5c20ddd87e1a9c778329e8862005eef7a36131885057e08",
+        "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186",
+        "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+        "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+        "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+        "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+        "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+        "aba-assets.mjs": "8be7936a46cea4296aaca3318b7dcefa011aa359b7511a512007d28ff2967aa2",
+        "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+        "book-attribution-assets.mjs": "0430f7f873ed7d7e223f778b8345db22d3f084cef7bbb63db639223666603fe2",
+        "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+        "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa",
+        "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+        "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+        "pinnacle-route-v12.mjs": "b6b25f576be3005eec8176c6fc7182324f6c4fcdd72859f92dd94858e156f0f3",
+        "book-attribution-handler.mjs": "83b402a5e6378e35fd236ac7f571e03374d61bb5ea8463d42324f6cbb110d059",
+        "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119",
+        "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+        "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+        "shared-navigation.mjs": "b4bc9405ea1905af37a6fb6060d326c04b1e80995ef1724c3366296a32f2befc",
+        "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092"
+      }
+    },
+    "pinnacle-centre-search-repair": {
+      "id": "585d0f01-360f-4253-9f08-8f70d016ceda",
+      "rollback": "7a1ef29d-5ddd-4e0c-98a2-6952de544d24",
+      "commit": "0203e497895e2911d64fbc770beb3a14297530c9",
+      "hashes": {
+        "centre-measurement.mjs": "58e303e832cd88849e0c42c8931ce6f960d9a8e1271f17f7201e0736e2bb43e7",
+        "chandanagar.mjs": "86a0715c6a5dacae6330b60d31ff106877886e4ceadab6f9794ccc2ede9dfc47",
+        "entry.mjs": "65cd445a0409bcb78a20b0a5a46a421ad948f60f06007aacf4a5c0516cce29b3",
+        "kukatpally.mjs": "2dbc35562c2153031c69165bb26684f24e6c740b243373b4c29ecd95ace3964d",
+        "centre-media.mjs": "054d54143c7a0f33d28a0fee66e6e1c65ebaffa8145a3591b236c227be115f4f",
+        "labbipet.mjs": "8d476a6f6d29ccbdfbc88e8b3cec54b28cc40c9d879aa79d6cbda442ce587df6",
+        "lbnagar.mjs": "ad7b270547459b00afc3c82e8d3d1da3e6d4b0308b2d265b6a6c879b993adbad",
+        "legacy-v11.mjs": "a51a36d90918c83414ba5b188f082bbd0e68c7a2af1135831b44224cdd434887",
+        "annanagar.mjs": "6d3d44fa65018433efba970de38532d4ca580eb53488c0fea51eb41d540ddcb5"
+      }
+    }
+  },
+  "polishPromoted": [
+    "pinnacle-verify-route",
+    "pinnacle-centre-search-repair"
+  ]
+}

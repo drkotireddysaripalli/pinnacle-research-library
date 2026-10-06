@@ -1,0 +1,83 @@
+{
+  "at": "2026-10-06T06:48:25.385Z",
+  "mode": "android",
+  "account": {
+    "secondsBefore": 1332,
+    "secondsAfter": 1332
+  },
+  "pages": [
+    {
+      "id": "suchitra",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": "passed",
+      "snapshot": {
+        "gate": null,
+        "google": false,
+        "h1": [
+          "Speech and autism support. Here in Suchitra."
+        ],
+        "height": 647,
+        "overflow": 0,
+        "phone": true,
+        "title": "Speech & Autism Therapy in Suchitra | Pinnacle Blooms",
+        "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36",
+        "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "width": 360
+      },
+      "polish": {
+        "strip": null,
+        "underline": "underline",
+        "viewport": 647,
+        "whatsapp": null
+      }
+    },
+    {
+      "id": "chandanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": "passed",
+      "snapshot": {
+        "gate": null,
+        "google": false,
+        "h1": [
+          "Autism and speech support in Chanda Nagar.Begin with your child\u2019s everyday life."
+        ],
+        "height": 647,
+        "overflow": 0,
+        "phone": true,
+        "title": "Autism & Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms",
+        "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36",
+        "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+        "width": 360
+      },
+      "polish": {
+        "strip": {
+          "bottom": 647,
+          "height": 54
+        },
+        "underline": null,
+        "viewport": 647,
+        "whatsapp": "\"WhatsApp\""
+      }
+    }
+  ],
+  "status": "passed",
+  "device": {
+    "id": 29,
+    "name": "Galaxy S24",
+    "platform": "Android",
+    "version": "14.0"
+  },
+  "sessionId": "5b5a9cd16d52-c64c5eb3a178-c340e858de26-179126931276-45890901",
+  "actual": {
+    "platformName": "Android",
+    "browserName": "chrome",
+    "platformVersion": "14"
+  },
+  "sessionClosed": true,
+  "provider": {
+    "id": 53427749,
+    "duration": 7,
+    "assetsAvailable": false
+  },
+  "finishedAt": "2026-10-06T06:48:47.648Z"
+}

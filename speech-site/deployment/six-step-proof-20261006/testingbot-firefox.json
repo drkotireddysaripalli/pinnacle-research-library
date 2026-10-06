@@ -1,0 +1,100 @@
+{
+  "at": "2026-10-06T06:32:35.232Z",
+  "mode": "firefox",
+  "account": {
+    "secondsBefore": 1332,
+    "secondsAfter": 1332
+  },
+  "pages": [
+    {
+      "id": "suchitra",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": "passed",
+      "snapshot": {
+        "gate": null,
+        "google": false,
+        "h1": [
+          "Speech and autism support. Here in Suchitra."
+        ],
+        "height": 843,
+        "overflow": 0,
+        "phone": true,
+        "title": "Speech & Autism Therapy in Suchitra | Pinnacle Blooms",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:155.0) Gecko/20100101 Firefox/155.0",
+        "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "width": 1280
+      }
+    },
+    {
+      "id": "chandanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": "passed",
+      "snapshot": {
+        "gate": null,
+        "google": false,
+        "h1": [
+          "Autism and speech support in Chanda Nagar.Begin with your child\u2019s everyday life."
+        ],
+        "height": 843,
+        "overflow": 0,
+        "phone": true,
+        "title": "Autism & Speech Therapy in Chanda Nagar, Hyderabad | Pinnacle Blooms",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:155.0) Gecko/20100101 Firefox/155.0",
+        "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+        "width": 1280
+      }
+    },
+    {
+      "id": "deic",
+      "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+      "status": "passed",
+      "snapshot": {
+        "gate": true,
+        "google": false,
+        "h1": [
+          "What is a DEIC, and how can it help your child?"
+        ],
+        "height": 843,
+        "overflow": 0,
+        "phone": true,
+        "title": "DEIC: Services, Age & How to Visit | Ask Pinnacle",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:155.0) Gecko/20100101 Firefox/155.0",
+        "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+        "width": 1280
+      }
+    },
+    {
+      "id": "aac",
+      "url": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/aac",
+      "status": "passed",
+      "snapshot": {
+        "gate": true,
+        "google": false,
+        "h1": [
+          "AAC: communication beyond speech"
+        ],
+        "height": 843,
+        "overflow": 0,
+        "phone": true,
+        "title": "AAC: communication beyond speech | Ask Pinnacle",
+        "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:155.0) Gecko/20100101 Firefox/155.0",
+        "url": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/aac",
+        "width": 1280
+      }
+    }
+  ],
+  "status": "passed",
+  "sessionId": "08be8d7ffc0a-3afd195005ac-71382892ece4-179126835818-99630482",
+  "actual": {
+    "browserName": "firefox",
+    "browserVersion": "155.0",
+    "platformName": "windows"
+  },
+  "sessionClosed": true,
+  "provider": {
+    "id": 53427365,
+    "duration": 19,
+    "assetsAvailable": false
+  },
+  "finishedAt": "2026-10-06T06:33:06.476Z"
+}

@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-06T06:39:31.406Z",
+  "scope": "Mobile origin variation and bottom control placement",
+  "checks": [
+    {
+      "width": 320,
+      "pass": true,
+      "height": 844,
+      "overflow": 0,
+      "strip": {
+        "top": 790,
+        "bottom": 844,
+        "width": 320,
+        "height": 54
+      },
+      "source": "Find Pinnacle in Chanda Nagar / Madeenaguda.\n\nAbove Twins Toy Store, Happy Hospital, Madeenaguda, Hyderabad 500049.\nNear Fernandez Hospital. Confirm the location before travelling.\n\nOpen centre directions ↗ · Speak with the Pinnacle guidance team"
+    },
+    {
+      "width": 390,
+      "pass": true,
+      "height": 844,
+      "overflow": 0,
+      "strip": {
+        "top": 790,
+        "bottom": 844,
+        "width": 390,
+        "height": 54
+      },
+      "source": "Find Pinnacle in Chanda Nagar / Madeenaguda.\n\nAbove Twins Toy Store, Happy Hospital, Madeenaguda, Hyderabad 500049.\nNear Fernandez Hospital. Confirm the location before travelling.\n\nOpen centre directions ↗ · Speak with the Pinnacle guidance team"
+    }
+  ]
+}

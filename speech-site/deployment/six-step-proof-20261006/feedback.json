@@ -1,0 +1,29 @@
+{
+  "release": "six-step-release-20261006",
+  "owner": "this website chat",
+  "hold": "Existing general heartbeat remains paused. Consume at the next authorised continuation or page-release boundary.",
+  "checkpoints": [
+    {
+      "due": "2026-10-09",
+      "purpose": "One indexing/submission and source-attribution read-back; no ranking-uplift claim.",
+      "limit": "Only changed URL set; reuse completed crawl and no new full crawl."
+    },
+    {
+      "due": "2026-10-16",
+      "purpose": "Compare settled 7-13 October against 29 September-5 October; separate regional centres and global Ask.",
+      "limit": "One joined extraction; control for changed page mix and data lag."
+    },
+    {
+      "due": "2026-11-06",
+      "purpose": "Compare settled 7 October-3 November against 9 September-6 October.",
+      "limit": "Use actual matched call/enrolment aggregates if available; otherwise unavailable."
+    }
+  ],
+  "metrics": [
+    "GSC page clicks, impressions, CTR and position",
+    "GA4 consented sessions and source coverage",
+    "Navigation vs contact intent vs confirmed signup",
+    "Qualified calls and enrolments only from actual receiving-team aggregate"
+  ],
+  "qualified_outcomes": "Unavailable: Windsor currently exposes no receiving-team outcome source."
+}

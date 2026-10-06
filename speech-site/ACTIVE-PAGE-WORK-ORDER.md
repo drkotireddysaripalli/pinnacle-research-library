@@ -1,8 +1,8 @@
 # Current page work — 6 October 2026
 
-## Six-step search, reader journey and measurement delivery — active
+## Six-step search, reader journey and measurement delivery — deployed and verified
 
-Direct instruction: complete the six recommendations and use Windsor where practically useful. Scope: five evidenced broken destinations; Suchitra and Chanda Nagar journeys; consented source attribution; Ask DEIC/AAC/WPPSI context and therapy selection; declared mobile/browser regression; bounded settled-result feedback. Full work order and source evidence are in `../../pinnacle-growth-system/six-step-release-20261006/WORK-ORDER.md`. Keep accepted common shell, auth, full route/binding/asset union and unrelated commerce intact. No new whole-site crawl or resumed general heartbeat. Actual receiving-team outcomes remain an explicit data dependency. Completion requires exact commit, deployment and public read-back.
+Direct instruction: complete the six recommendations and use Windsor where practically useful. Scope: five evidenced broken destinations; Suchitra and Chanda Nagar journeys; consented source attribution; Ask DEIC/AAC/WPPSI context and therapy selection; declared mobile/browser regression; bounded settled-result feedback. Full work order and source evidence are in `../../pinnacle-growth-system/six-step-release-20261006/WORK-ORDER.md`. Keep accepted common shell, auth, full route/binding/asset union and unrelated commerce intact. No new whole-site crawl or resumed general heartbeat. Actual receiving-team outcomes remain an explicit data dependency. Delivered through source 0203e49 with Ask source 9ca4566; see RELEASE-SIX-STEP-20261006.md and deployment/six-step-proof-20261006/RESULT.md for exact live, device, search-submission and outcome boundaries.
 
 ## Authorised website-call measurement repair — deployed and verified
 

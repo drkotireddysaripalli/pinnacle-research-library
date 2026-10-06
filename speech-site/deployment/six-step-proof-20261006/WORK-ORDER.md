@@ -21,3 +21,7 @@ Commit and push exact source, pass focused build/tests, retain full Cloudflare r
 - Windsor native connector is live on a paid Standard plan; connected GBP records supply matching Suchitra and Chanda Nagar map/address identities. Windsor's Ask GA4 pull remains sparse; it does not resolve missing attribution by itself.
 - AAC has 38 published matched questions; WPPSI-IV has five. Legacy short routes currently fail despite content being available.
 - The general growth automation remains held. This is a bounded, directly authorised delivery wave.
+
+## Delivered
+
+All six implementation areas are released and publicly verified. See RESULT.md and the versioned release receipt. Real qualified-call/enrolment totals remain unavailable from the currently connected sources; the aggregate adapter and dated feedback dependency remain explicit. The general heartbeat remains paused.

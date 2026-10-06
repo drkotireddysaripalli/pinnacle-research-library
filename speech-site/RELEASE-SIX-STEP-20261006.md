@@ -29,3 +29,7 @@ The detailed acceptance contract is `deployment/six-step-proof-20261006/WORK-ORD
 Commit and push the exact source, require the existing Portal quality CI, promote Ask before the guarded Portal and centre workers, then read back the actual public routes, content, canonical metadata and measurement bytes. Preserve the 2,160-asset union and rollback versions.
 
 After publication, submit the changed canonical URLs once, record submission separately from indexing, and attach the public release receipts. Evaluate settled results at the next protected feedback boundary and after a complete matched week. Keep the held general growth schedule held. A successful test, indexing submission or source-attribution repair is not a claim of new qualified leads.
+
+## Delivered receipt
+
+Deployed and verified on 6 October 2026. See [the complete result](deployment/six-step-proof-20261006/RESULT.md), `release.json`, `polish-live.json`, the physical-device reports and `lighthouse-final.json` in that folder. The final source commit is 0203e49; the final Portal/Centre and Ask versions, preserved route/assets/bindings and separate outcome-data dependency are recorded there.

@@ -1,0 +1,105 @@
+{
+  "indexnow": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "batchId": "e7b3f68b-d1ab-4294-8a04-d018185b495a",
+    "submitted": 5,
+    "failed": 0,
+    "attempted": 5,
+    "pendingKeyValidation": false,
+    "outcome": "submitted",
+    "keyFile": [
+      {
+        "host": "www.pinnacleblooms.org",
+        "url": null,
+        "verified": true,
+        "error": null
+      },
+      {
+        "host": "pinnacleblooms.org",
+        "url": null,
+        "verified": true,
+        "error": null
+      }
+    ],
+    "submissions": [
+      {
+        "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/lens/entity%3Atherapy_modality/aac",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://pinnacleblooms.org/ask/wppsi-iv",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      }
+    ],
+    "message": "5 of 5 URL(s) sent were accepted by IndexNow."
+  },
+  "sitemaps": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "attempted": 2,
+    "submitted": 2,
+    "failed": 0,
+    "results": [
+      {
+        "sitemapUrl": "https://pinnacleblooms.org/ask/sitemap-navigation.xml",
+        "accepted": true,
+        "confirmed": true,
+        "lastSubmitted": "2026-10-06T06:32:03.985Z",
+        "isPending": true,
+        "isSitemapsIndex": false,
+        "type": "sitemap",
+        "warnings": "0",
+        "errors": "0"
+      },
+      {
+        "sitemapUrl": "https://www.pinnacleblooms.org/sunshine/sitemap.xml",
+        "accepted": true,
+        "confirmed": true,
+        "lastSubmitted": "2026-10-06T06:32:04.178Z",
+        "isPending": true,
+        "isSitemapsIndex": false,
+        "type": "sitemap",
+        "warnings": "0",
+        "errors": "0"
+      }
+    ],
+    "message": "Submitted 2 of 2 sitemap(s) to Search Console for sc-domain:pinnacleblooms.org. Submitting queues a download; it does not index the URLs.",
+    "actions": [
+      "Re-check list_sitemaps in a few hours: warnings, errors and indexed counts appear only after Google has downloaded the sitemap."
+    ]
+  },
+  "annotation": {
+    "annotation": {
+      "id": "0a16e766-11c6-4a32-be48-a5b92b36ebdd",
+      "scope": "property",
+      "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+      "event_date": "2026-10-06",
+      "label": "Six-step Ask and Hyderabad centre release",
+      "description": "Source 9ca4566 deployed: five route/sitemap repairs; Suchitra/Chanda Nagar visit journeys; DEIC/AAC/WPPSI Ask improvements; contextual therapy selection; allowlisted consented referrer origins. Public checks 22/22. Compare settled periods; no qualified-call or enrolment increase claimed.",
+      "category": "site_change",
+      "color": "#92278f",
+      "created_at": "2026-10-06T06:32:05.595+00:00"
+    }
+  }
+}
