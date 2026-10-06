@@ -16,7 +16,7 @@ const markup=`<!doctype html><meta charset="utf-8"><title>Isolated book bag acce
 
 async function fixture(page,{existing=[],overrides={},readError=false,updateError=false,duplicate=false}={}){
  let mutations=0,lines=existing.map(([sku,quantity])=>({sku,quantity}));
- const snapshot=()=>({id:'fixture-cart',checkoutUrl:'https://pinnacleblooms.myshopify.com/checkouts/fixture',totalQuantity:lines.reduce((s,l)=>s+l.quantity,0),cost:{totalAmount:{amount:String(lines.reduce((s,l)=>s+catalogue[l.sku].price*l.quantity,0)),currencyCode:'INR'}},lines:{nodes:lines.map(l=>({id:'line-'+l.sku,quantity:l.quantity,merchandise:variant(l.sku),cost:{totalAmount:{amount:String(catalogue[l.sku].price*l.quantity),currencyCode:'INR'}}}))}});
+ const snapshot=()=>({id:'fixture-cart',checkoutUrl:'https://pinnacleblooms.myshopify.com/checkouts/fixture',totalQuantity:lines.reduce((s,l)=>s+l.quantity,0),cost:{totalAmount:{amount:String(lines.reduce((s,l)=>s+catalogue[l.sku].price*l.quantity,0)),currencyCode:'INR'}},lines:{nodes:lines.map(l=>({id:'line-'+l.sku,quantity:l.quantity,merchandise:variant(l.sku),cost:{totalAmount:{amount:String(catalogue[l.sku].price*l.quantity),currencyCode:'INR'}}})),pageInfo:{hasNextPage:false,endCursor:null}}});
  if(existing.length||readError)await page.addInitScript(()=>localStorage.setItem('pinnacle-book-cart-v1','fixture-cart'));
  await page.route('**/*',async route=>{
   const req=route.request(),url=new URL(req.url());

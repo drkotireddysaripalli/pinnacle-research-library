@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 
 const origin='https://www.pinnacleblooms.org',sku='PBN-SP-101-EN-PDF';
 const catalogue={[sku]:{title:'My Message Matters',path:'/books/speech-communication-101-my-message-matters',price:799,books:[]}};
+const variant={id:'fixture-variant',sku,availableForSale:true,requiresShipping:false,price:{amount:'799',currencyCode:'INR'},product:{title:'My Message Matters'}};
 const markup=`<!doctype html><meta charset="utf-8"><title>Isolated checkout fixture</title><body>
 <section data-speech-measurement><p></p><span data-measurement-status></span><button data-measurement-choice="accepted">Allow</button><button data-measurement-choice="declined">Decline</button></section>
 <div data-book-commerce data-cart-catalogue='${JSON.stringify(catalogue)}'><button data-cart-open>Bag</button><span data-shop-status></span><span data-cart-count></span><dialog><button data-cart-close>Close</button><span data-cart-message></span><span data-cart-total></span><span data-cart-file-count></span><div data-cart-items></div><a data-cart-checkout>Checkout</a></dialog></div>
@@ -21,12 +22,12 @@ for(const scenario of ['accepted','declined','gpc','withdraw-pending','expired',
   const req=route.request(),url=new URL(req.url());
   if(url.hostname==='www.googletagmanager.com')return route.fulfill({contentType:'text/javascript',body:`document.addEventListener('click',e=>{const a=e.target.closest('[data-cart-checkout]');if(a&&window.pinnacleBookAnalyticsAllowed?.()){const u=new URL(a.href);u.searchParams.set('_gl','1*fixture*test');u.searchParams.set('private_extra','must-not-transfer');a.href=u.href;}});`});
   if(url.hostname==='pinnacleblooms.myshopify.com'&&url.pathname.startsWith('/api/')){
-   const {query}=req.postDataJSON();if(query.includes('products(first:50)'))return route.fulfill({json:{data:{products:{nodes:[]}}}});
+   const {query}=req.postDataJSON();if(query.includes('products(first:50)'))return route.fulfill({json:{data:{products:{nodes:[{variants:{nodes:[variant]}}]}}}});
    reads++;if(reads===2){refreshStarted();if(scenario==='withdraw-pending')await release;}
    if(reads===2&&scenario==='server-failure')return route.fulfill({status:503,body:'unavailable'});
    const empty=reads===2&&scenario==='expired';
    const host=reads===2&&scenario==='wrong-host'?'checkout.evil.example':'qg10s5-ie.myshopify.com';
-   return route.fulfill({json:{data:{cart:{id:'fixture-cart',checkoutUrl:`https://${host}/checkouts/${reads===2?'fresh':'old'}?key=required-store-key`,totalQuantity:empty?0:1,cost:{totalAmount:{amount:'799',currencyCode:'INR'}},lines:{nodes:empty?[]:[{id:'fixture-line',quantity:1,merchandise:{id:'fixture-variant',sku,product:{title:'My Message Matters'}},cost:{totalAmount:{amount:'799',currencyCode:'INR'}}}]}}}}});
+   return route.fulfill({json:{data:{cart:{id:'fixture-cart',checkoutUrl:`https://${host}/checkouts/${reads===2?'fresh':'old'}?key=required-store-key`,totalQuantity:empty?0:1,cost:{totalAmount:{amount:'799',currencyCode:'INR'}},lines:{nodes:empty?[]:[{id:'fixture-line',quantity:1,merchandise:variant,cost:{totalAmount:{amount:'799',currencyCode:'INR'}}}],pageInfo:{hasNextPage:false,endCursor:null}}}}}});
   }
   if(req.isNavigationRequest()&&url.origin!==origin){navigation=req.url();return route.fulfill({body:'<h1>Intercepted checkout</h1>',contentType:'text/html'});}
   if(url.origin===origin&&url.pathname==='/shop')return route.fulfill({body:markup,contentType:'text/html'});
