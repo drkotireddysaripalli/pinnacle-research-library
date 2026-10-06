@@ -30,7 +30,7 @@ jobs:
       - run: npm run test:ask-auth
       - run: npm run test:ask-content
       - run: node --test scripts/test-knowledge-catalogues.mjs
-      - run: node --test scripts/test-book-asset-inventory.mjs scripts/test-vernacular-typography.mjs
+      - run: node --test scripts/test-book-asset-inventory.mjs scripts/test-vernacular-typography.mjs scripts/test-book-cart-links.mjs
       - run: node --test scripts/test-staff-health.mjs scripts/test-legacy-social-metadata.mjs
       - run: npm run build:ask
   checks:

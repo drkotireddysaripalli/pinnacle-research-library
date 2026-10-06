@@ -16,7 +16,16 @@
   let catalogue = {};
   try { catalogue = JSON.parse(root.dataset.cartCatalogue || '{}'); } catch {}
   const variants = new Map();
-  let cart = null, busy = false, opener;
+  let cart = null, busy = false, ready = false, opener;
+  // A Merchant link opens our existing bag. Only one known PDF may be selected;
+  // a URL never changes the quantity of an item already in the customer's bag.
+  const incoming = new URL(location.href);
+  const directBag = incoming.pathname === '/shop/cart' && incoming.searchParams.has('cart_sku');
+  const requestedSku = incoming.searchParams.get('cart_sku');
+  const validBagLink = directBag && incoming.searchParams.getAll('cart_sku').length === 1
+    && incoming.searchParams.getAll('quantity').length <= 1
+    && (!incoming.searchParams.has('quantity') || incoming.searchParams.get('quantity') === '1')
+    && Object.hasOwn(catalogue, requestedSku) && /-(?:EN|HI|TE)-PDF(?:-SET[24])?$/.test(requestedSku);
   const fields = 'id checkoutUrl totalQuantity cost { totalAmount { amount currencyCode } } lines(first:50) { nodes { id quantity cost { totalAmount { amount currencyCode } } merchandise { ... on ProductVariant { id sku title product { title } } } } }';
   const money = value => new Intl.NumberFormat('en-IN', {style:'currency',currency:value.currencyCode,maximumFractionDigits:2}).format(Number(value.amount));
   const saved = () => { try { return localStorage.getItem(storageKey); } catch { return null; } };
@@ -29,6 +38,14 @@
     return body.data;
   }
   function element(tag, text, className) { const el=document.createElement(tag); el.textContent=text; if(className)el.className=className; return el; }
+  if(directBag){
+    const policies=element('p','','pbn-cart-note');
+    for(const [i,[label,path]] of [['Terms of use','/terms-of-use'],['Refund policy','/refund-policy']].entries()){
+      if(i)policies.append(document.createTextNode(' · '));
+      const link=element('a',label);link.href=path;link.target='_blank';link.rel='noopener';policies.append(link);
+    }
+    root.querySelector('.pbn-cart-delivery')?.append(policies);
+  }
   function render() {
     items.replaceChildren();
     const lines=cart?.lines.nodes || [];
@@ -54,7 +71,8 @@
       const title=element('h3','');
       if(entry){const link=element('a',entry.title);link.href=entry.path;title.append(link);}else title.textContent=line.merchandise.product.title;
       const meta=element('div','','pbn-cart-item-meta');
-      meta.append(element('p',(entry?.books.length>1?t('pdfPlural',{count:entry.books.length}):t('pdfSingular'))+' · '+t('quantity',{count:line.quantity})),element('strong',money(line.cost.totalAmount)));
+      const language = {EN:'English',HI:'हिन्दी / Hindi',TE:'తెలుగు / Telugu'}[line.merchandise.sku?.match(/-(EN|HI|TE)-PDF/)?.[1]];
+      meta.append(element('p',(language?language+' · ':'')+(entry?.books.length>1?t('pdfPlural',{count:entry.books.length}):t('pdfSingular'))+' · '+t('quantity',{count:line.quantity})),element('strong',money(line.cost.totalAmount)));
       copy.append(title,meta);
       if(entry?.books.length){
         const included=element('ul','','pbn-cart-included');
@@ -98,18 +116,27 @@
     cart=result.cart; remember(cart.id); render();
     if(result.warnings?.length) message.textContent=t('updatedWarning');
   }
+  const validVariant = sku => {
+    const v=variants.get(sku),entry=catalogue[sku];
+    return entry && v?.sku===sku && v.availableForSale===true && v.requiresShipping===false
+      && v.price?.currencyCode==='INR' && Number(v.price.amount)===Number(entry.price) ? v : null;
+  };
+  async function add(variant) {
+    const existing = cart?.lines.nodes.some(line=>line.merchandise.id===variant.id);
+    if (existing) {render();message.textContent=t('alreadyAdded');}
+    else if (cart) await change(`mutation Add($id:ID!,$lines:[CartLineInput!]!){cartLinesAdd(cartId:$id,lines:$lines){cart{${fields}} userErrors{message} warnings{code message}}}`,{id:cart.id,lines:[{merchandiseId:variant.id,quantity:1}]},'cartLinesAdd');
+    else await change(`mutation Create($input:CartInput!){cartCreate(input:$input){cart{${fields}} userErrors{message} warnings{code message}}}`,{input:{lines:[{merchandiseId:variant.id,quantity:1}],buyerIdentity:{countryCode:'IN'}}},'cartCreate');
+    const added = !existing && cart?.lines.nodes.find(line=>line.merchandise.id===variant.id);
+    if (added) measure('add_to_cart', [added]);
+    if(!cart?.lines.nodes.some(line=>line.merchandise.id===variant.id))throw new Error(t('cartUpdateFailed'));
+  }
   for (const button of buttons) button.addEventListener('click', async()=>{
-    if(busy) return;
-    const variant=variants.get(button.dataset.bookSku);
-    if(!variant?.availableForSale || variant.requiresShipping) return;
+    if(busy || !ready) return;
+    const variant=validVariant(button.dataset.bookSku);
+    if(!variant) return;
     busy=true; button.disabled=true; message.textContent='';
     try {
-      const existing = cart?.lines.nodes.some(line=>line.merchandise.id===variant.id);
-      if (existing) {render();message.textContent=t('alreadyAdded');}
-      else if (cart) await change(`mutation Add($id:ID!,$lines:[CartLineInput!]!){cartLinesAdd(cartId:$id,lines:$lines){cart{${fields}} userErrors{message} warnings{code message}}}`,{id:cart.id,lines:[{merchandiseId:variant.id,quantity:1}]},'cartLinesAdd');
-      else await change(`mutation Create($input:CartInput!){cartCreate(input:$input){cart{${fields}} userErrors{message} warnings{code message}}}`,{input:{lines:[{merchandiseId:variant.id,quantity:1}],buyerIdentity:{countryCode:'IN'}}},'cartCreate');
-      const added = !existing && cart?.lines.nodes.find(line=>line.merchandise.id===variant.id);
-      if (added) measure('add_to_cart', [added]);
+      await add(variant);
       open(button);
     } catch(e) {status.textContent=e.message;message.textContent=e.message;}
     finally {busy=false;button.disabled=false;}
@@ -144,13 +171,28 @@
     catch(e){message.textContent=e.message;}finally{busy=false;}
   });
   async function init(){
+    busy=true;
+    if(directBag){render();open(root.querySelector('[data-cart-open]'));message.textContent=t('checkingBag');dialog.setAttribute('aria-busy','true');}
+    let catalogueReady=false,bagReady=!saved();
     try {
       const data=await api('{products(first:50){nodes{variants(first:10){nodes{id sku availableForSale requiresShipping price{amount currencyCode}}}}}}');
-      for(const product of data.products.nodes)for(const variant of product.variants.nodes)variants.set(variant.sku,variant);
-      for(const button of buttons){const v=variants.get(button.dataset.bookSku);button.disabled=!(v?.availableForSale&&!v.requiresShipping&&v.price.currencyCode==='INR'&&Number(v.price.amount)===Number(button.dataset.bookPrice));if(button.disabled)button.textContent=t('currentlyUnavailable');}
+      for(const product of data.products.nodes)for(const variant of product.variants.nodes)variants.set(variant.sku,variants.has(variant.sku)?null:variant);
+      catalogueReady=true;
     }catch(e){status.textContent=e.message;buttons.forEach(b=>b.textContent=t('shopUnavailableShort'));}
-    const id=saved();if(id){try{cart=(await api(`query Cart($id:ID!){cart(id:$id){${fields}}}`,{id})).cart;if(!cart)remember(null);}catch{remember(null);}}
+    const id=saved();if(id){try{cart=(await api(`query Cart($id:ID!){cart(id:$id){${fields}}}`,{id})).cart;bagReady=true;if(!cart)remember(null);}catch(e){status.textContent=e.message;}}
+    ready=catalogueReady&&bagReady;
     render();
+    for(const button of buttons){button.disabled=!ready||!validVariant(button.dataset.bookSku);if(catalogueReady&&button.disabled)button.textContent=t('currentlyUnavailable');}
+    if(directBag){
+      try {
+        if(!ready)throw new Error(t('connectionError'));
+        const variant=validBagLink&&validVariant(requestedSku);
+        if(!variant)throw new Error('This link does not select an available PDF edition. Please choose a book below or call 9100 181 181.');
+        message.textContent='';await add(variant);measure('view_cart');
+      }catch(e){status.textContent=e.message;message.textContent=e.message;}
+      finally{dialog.removeAttribute('aria-busy');}
+    }
+    busy=false;
   }
   init();
 })();

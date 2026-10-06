@@ -1,5 +1,9 @@
 # Current page work —5October2026
 
+## Authorised commerce follow-through — direct PDF book bag
+
+One bounded release from the completed Anek baseline. Add first-party `/shop/cart` links for the existing 33 digital offers, reuse live SKU/price/availability checks, preserve existing bag items and prevent reload duplication. Restore delivery of the existing native-edition Merchant feed. All 209 routes and bindings remain. Commerce retains Merchant activation; no repeated recheck, feed fetch or indexing submission here. The growth schedule remains held. Acceptance and receipts: `RELEASE-BOOK-CART-LINKS-20261006.md`.
+
 ## Owner-requested vernacular typography — completed 6 October 2026
 
 Shared Anek typography is live across managed native HTML: 800 headings, 600 body, 700 controls. Portal `52ba9d40-eddb-4864-a08b-fae511f6f1f2`; Ask/FAQ `800a09a7-556c-4311-b07e-2ac548fd7c61`. Source `8726afb0789d5b7543a0ace1d3d598f3d5c4208b`. 30 local presentation checks, 8 phone-number grouping checks, and 9 physical-device page checks passed. Routes and bindings preserved. See `RELEASE-VERNACULAR-TYPOGRAPHY-20261006.md`. The existing growth schedule remains held; no unrelated page or commerce changes are included.
