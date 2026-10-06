@@ -1,5 +1,0 @@
----
-import {safeAskLink} from '../../lib/ask/content';
-const {items=[]}=Astro.props;
----
-<div class="ask-answer-grid">{items.filter(item=>safeAskLink(item.slug)).map(item=><a class="ask-answer-card" href={safeAskLink(item.slug)}><span class="ask-card-label">{item.lang==='te'?'తెలుగు':'Answer'}</span><h3>{item.title||item.question||item.q}</h3>{item.summary&&<p>{item.summary}</p>}<span class="ask-read">Read the answer <span aria-hidden="true">→</span></span></a>)}</div>

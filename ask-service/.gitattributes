@@ -1,3 +1,0 @@
-worker/index.js -text
-mcp-worker/index.js -text
-*.wasm binary

@@ -1,4 +1,0 @@
-# Preserve the reviewed origin-bundle bytes and their provenance checksum.
-public/pinnacle-pages-scripts/speech-enquiry-origin-v42.js -text -whitespace
-# This fixture mirrors production bytes exactly, including the origin's mixed newlines.
-scripts/fixtures/expected-robots-v103.txt -text -whitespace

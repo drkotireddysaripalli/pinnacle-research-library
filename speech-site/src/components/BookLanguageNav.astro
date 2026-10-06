@@ -1,7 +1,0 @@
----
-import editions from '../data/book-locales.json';
-const { englishPath='/books', locale='en', label='Read in your family’s language' }=Astro.props;
-const choices=[{language:'en-IN',name:'English',path:englishPath},...['hi','te'].map(language=>{const edition=editions.find(b=>b.locale===language&&b.englishPath===englishPath);return {language:language+'-IN',name:language==='hi'?'हिन्दी':'తెలుగు',path:edition?.path||'/books/'+language};})];
----
-<nav class="pbn-language-nav" aria-label="Book language"><span>{label}</span>{choices.map(c=><a href={c.path} lang={c.language} hreflang={c.language} aria-current={c.language.startsWith(locale)?'page':undefined}>{c.name}</a>)}</nav>
-<style>.pbn-language-nav{max-width:1220px;margin:20px auto;padding:16px 22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:#fff8ec;border-radius:20px;color:#392d45}.pbn-language-nav span{font-size:14px;margin-right:auto}.pbn-language-nav a{padding:9px 20px;border:1px solid #ded4e5;border-radius:30px;background:#fff;color:#70277c;font-weight:bold;text-decoration:none}.pbn-language-nav a[aria-current]{background:#70277c;color:#fff}@media(max-width:600px){.pbn-language-nav{margin:16px}.pbn-language-nav span{flex-basis:100%}}</style>

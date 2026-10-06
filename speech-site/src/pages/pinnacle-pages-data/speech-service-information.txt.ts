@@ -1,2 +1,0 @@
-import { speechServiceFacts as f } from '../../data/speech-service-facts';
-export const GET = () => new Response([f.title,f.url,'Updated: '+f.updatedOn,'Service sources checked: '+f.checkedOn,f.publisher,f.process,f.assessmentDuration,f.reportTiming,f.therapySession,f.feeStatus,f.appointmentConfirmation,'Arrange an assessment: '+f.assessmentOffer.bookingUrl,'Sources:',...f.sources.map(s=>s.url+' — '+s.scope)].join('\n\n')+'\n',{headers:{'Content-Type':'text/plain; charset=utf-8'}});

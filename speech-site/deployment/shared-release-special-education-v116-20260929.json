@@ -1,8 +1,0 @@
-{
-  "release": "release-special-education-v116-20260929",
-  "workerSha256": "c78f7c83dd88cddaf68224e14f18ef272388782d2ed360132aa4a0cc4add3be3",
-  "staticAssetsMatched": 634,
-  "managedAssetsMatched": 775,
-  "specialEducationAssetsVerified": 5,
-  "sharedRouteContract": true
-}

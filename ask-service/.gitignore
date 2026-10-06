@@ -1,4 +1,0 @@
-.private/
-*.settings.json
-.env*
-!*.example
