@@ -6,6 +6,22 @@ import {build} from 'esbuild';
 import {Miniflare, convertV4MiniflareOptions} from 'miniflare';
 import {repairSchemaText, SCHEMA_LIMIT} from '../deployment/legacy-social-metadata/schema.mjs';
 import {repairLegacyIdentity, organization} from '../deployment/legacy-social-metadata/organization.mjs';
+import {isMissingMedia,BRAND_IMAGE} from '../deployment/legacy-social-metadata/media.mjs';
+
+test('missing portraits are omitted from schema without substituting a logo as a person image',()=>{
+ const image='https://www.pinnacleblooms.org/Images/ProfileImages/20708623831.jpg';
+ for(const raw of [`{"@context":"https://schema.org","image":"${image}","@type":"Physician","identifier":90071992547409931234}`,`{"@context":"https://schema.org","@type":"Physician","image":"${image}"}`]){
+  const out=repairSchemaText(raw);assert.equal(JSON.parse(out).image,undefined);assert(!out.includes(BRAND_IMAGE));if(raw.includes('90071992547409931234'))assert(out.includes('90071992547409931234'));
+ }
+ assert(!isMissingMedia('https://other.example/Images/ProfileImages/20708623831.jpg'));
+ const normal='{"@context":"https://schema.org","@type":"Person","image":"https://www.pinnacleblooms.org/Images/ProfileImages/keep.jpg"}';assert.equal(repairSchemaText(normal),normal);
+});
+
+test('edge media repair changes exact dead images and retains working images and page content',async()=>{
+ const {outputFiles}=await build({stdin:{contents:`import {repairKnownBrokenMedia} from './deployment/legacy-social-metadata/media.mjs';export default {fetch(){return repairKnownBrokenMedia(new Response('<html><head><meta property="og:image" content="https://www.pinnacleblooms.org/Images/ProfileImages/20708623831.jpg"></head><body><h1>Published profile</h1><img src="/Images/ProfileImages/20708623831.jpg" srcset="bad.jpg 2x" alt="Portrait"><img src="/keep.jpg" alt="Keep"></body></html>',{headers:{'content-type':'text/html','cache-control':'private, max-age=60'}}));}}`,resolveDir:process.cwd()},bundle:true,format:'esm',platform:'browser',write:false});
+ const runtime=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-04',script:outputFiles[0].text}));
+ try{const r=await runtime.dispatchFetch('https://example.test'),t=await r.text();assert(t.includes('Pinnacle Blooms Network logo'));assert(t.includes('src="'+BRAND_IMAGE+'"'));assert(t.includes('<h1>Published profile</h1>'));assert(t.includes('<img src="/keep.jpg" alt="Keep">'));assert(!t.includes('srcset='));assert.equal(r.headers.get('cache-control'),'private, max-age=60');}finally{await runtime.dispose();}
+});
 
 const sample = {'@context':'https://schema.org', '@type':'Webpage', name:'తెలుగు family', description:'The text Webpage and xPath must remain.', speakable:{'@type':'SpeakableSpecification',xPath:['/html/head/title']}};
 test('corrects only term spelling, retaining values and Unicode',()=>{

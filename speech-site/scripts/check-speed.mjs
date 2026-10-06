@@ -11,13 +11,15 @@ import {pageContracts} from './page-quality-contracts.mjs';
 
 const args = process.argv.slice(2);
 const id = args[0] || 'occupational';
-const knowledgeContracts = {
+const additionalContracts = {
+  'suchitra': {path:'/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india',canonical:'/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india'},
+  'chandanagar': {path:'/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india',canonical:'/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india'},
   'faq-answer': {path:'/faq/english/speech-therapy/autism-speech-therapy',canonical:'/faq/english/speech-therapy/autism-speech-therapy'},
   'faq-directory': {path:'/faq',canonical:'/faq'},
   'sunshine-directory': {path:'/sunshine',canonical:'/sunshine'},
   'mirracles-directory': {path:'/allmirracles',canonical:'/allmirracles'}
 };
-const contract = pageContracts[id] || knowledgeContracts[id];
+const contract = pageContracts[id] || additionalContracts[id];
 if (!contract) throw Error('Choose a registered page: ' + Object.keys(pageContracts).join(', '));
 const production = args.includes('--production');
 const originArg = args.indexOf('--origin');

@@ -1,4 +1,5 @@
 import {repairLegacyIdentity} from './organization.mjs';
+import {isMissingMedia} from './media.mjs';
 // Correct observed term spellings and named legacy entity data types only.
 // Preserve numeric tokens, visible text, navigation and commerce records.
 export const SCHEMA_LIMIT = 256 * 1024;
@@ -36,6 +37,13 @@ export function repairSchemaText(text) {
         const props=node.properties,context=props.get('@context');
         if(context && !schemaContext(context.value)) safe=false;
         const type=props.get('@type')?.value;
+        const image=props.get('image');
+        if(image?.value.kind==='string'&&isMissingMedia(image.value.value)){
+          let start=image.key.index,end=image.value.token.index+image.value.token[0].length;
+          const after=text.slice(end).match(/^\s*,/),before=text.slice(0,start).match(/,\s*$/);
+          if(after)end+=after[0].length;else if(before)start-=before[0].length;
+          patches.push({start,end,value:''});
+        }
         if(type?.kind==='string' && type.value==='Webpage') patches.push({token:type.token,value:'"WebPage"'});
         const old=props.get('xPath');
         if(type?.value==='SpeakableSpecification' && old?.value.kind==='array' &&
@@ -56,7 +64,7 @@ export function repairSchemaText(text) {
     if(!safe) return text;
     // Splice only identified string tokens; all other bytes (including large
     // integers, whitespace, escapes and clinical/identity values) stay exact.
-    for(const patch of patches.sort((a,b)=>b.token.index-a.token.index)) text=text.slice(0,patch.token.index)+patch.value+text.slice(patch.token.index+patch.token[0].length);
+    for(const patch of patches.sort((a,b)=>(b.start??b.token.index)-(a.start??a.token.index))) {const start=patch.start??patch.token.index,end=patch.end??(start+patch.token[0].length);text=text.slice(0,start)+patch.value+text.slice(end);}
     return text;
   } catch { return text; }
 }

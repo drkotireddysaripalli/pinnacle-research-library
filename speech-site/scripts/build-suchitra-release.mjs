@@ -1,7 +1,14 @@
 // Add only the changed centre and its generated dependencies to the live union.
 import fs from 'node:fs/promises';import path from 'node:path';import {createHash} from 'node:crypto';import assert from 'node:assert/strict';
 const root=path.resolve(import.meta.dirname,'..'),dist=path.join(root,'dist'),file='centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india.html';
-const html=await fs.readFile(path.join(dist,file),'utf8');assert(html.includes('Here in Suchitra.')&&!html.includes('Design preview'));
+let html=await fs.readFile(path.join(dist,file),'utf8');assert(html.includes('Here in Suchitra.')&&!html.includes('Design preview'));
+// Keep the approved CSS bytes, but avoid two render-blocking stylesheet trips
+// on this first-visit centre page. Other pages retain their shared CSS cache.
+for(const match of [...html.matchAll(/<link rel="stylesheet" href="(\/pinnacle-pages-assets\/[A-Za-z0-9_.-]+\.css)">/g)]){
+ const css=await fs.readFile(path.join(dist,match[1].slice(1)),'utf8');assert(!css.includes('</style'));
+ html=html.replace(match[0],'<style data-centre-critical-css>'+css+'</style>');
+}
+await fs.writeFile(path.join(dist,file),html);
 const keys=new Set(['/pinnacle-pages-html/suchitra.html',...['evidence.json','evidence.txt','machine.md'].map(x=>'/pinnacle-pages-data/suchitra-'+x)]);
 for(const m of html.matchAll(/\/pinnacle-pages-assets\/[A-Za-z0-9_./-]+/g))keys.add(m[0]);
 const inventory=JSON.parse((await fs.readFile(path.join(root,'deployment/pinnacle-route-v12.mjs'),'utf8')).match(/const SPEECH_INVENTORY=(\{[^\n]+\});/)[1]),records={};let reused=0;

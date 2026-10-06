@@ -6,10 +6,11 @@ import {staffRoute} from './staff-routes.mjs';
 import {reduceKnownLegacyPayload} from './payload.mjs';
 import {SERVICES_PATH, SERVICES_URL, physiotherapyRedirect, repairServiceLinks} from './discovery.mjs';
 import {repairKnownLegacySchema} from './schema.mjs';
+import {repairKnownBrokenMedia} from './media.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 // Existing legacy templates with the same measured HTTP social/HTTPS canonical defect.
-export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training', '/staff', '/careers', '/dance-therapy', '/certified-courses'];
+export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training', '/staff', '/careers', '/dance-therapy', '/certified-courses', '/certifiedcourses', '/courses/466/Afraid'];
 export const ADDITIONAL_LEGACY_ROUTES = ['www.pinnacleblooms.org/t/*', 'www.pinnacleblooms.org/mirracles/*', ...ADDITIONAL_LEGACY_PATHS.map(p => 'www.pinnacleblooms.org' + p + '*')];
 const encoder = new TextEncoder();
 const transformedResponses = new WeakSet();
@@ -148,7 +149,7 @@ export async function handle(request, fetcher = fetch) {
   headers.delete('if-none-match'); headers.delete('if-modified-since');
   const upstream = new Request(request, {headers});
   const response = await transform(request, await fetcher(upstream));
-  return transformedResponses.has(response) ? repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response))) : response;
+  return transformedResponses.has(response) ? repairKnownBrokenMedia(repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response)))) : response;
 }
 
 export default {fetch: request => handle(request)};
