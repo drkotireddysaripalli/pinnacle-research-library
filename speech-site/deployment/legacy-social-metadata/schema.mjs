@@ -99,13 +99,35 @@ class LegacySchemaScript {
   }
 }
 
+async function repairPhysiotherapyCollection(text, normalized) {
+  const canonical='https://www.pinnacleblooms.org/physiotherapy', identities=[];
+  // The captured origin template varies only these two top-level URL strings.
+  // Entry has already checked the public response and its canonical/query choice.
+  const template=normalized.replace(/^([ \t]*"(?:id|url)"[ \t]*:[ \t]*)("(?:\\[\s\S]|[^"\\])*")/gm,(_,prefix,token)=>{
+    identities.push(JSON.parse(token).replace(/&(?:amp;)+/gi,'&'));
+    return prefix+JSON.stringify('http://www.pinnacleblooms.org/physiotherapy');
+  });
+  if(identities.length!==2 || identities[0]!==identities[1])return text;
+  try {
+    const url=new URL(identities[0]);
+    if(!['http:','https:'].includes(url.protocol)||url.hostname!=='www.pinnacleblooms.org'||url.pathname!=='/physiotherapy'||url.port||url.username||url.password||url.hash)return text;
+  } catch {return text;}
+  const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(template))),b=>b.toString(16).padStart(2,'0')).join('');
+  if(digest!=='bf6caa0a32cf9863d60110e924e8f72d3b59c78793311de1a69419790cda9f86')return text;
+  const data=JSON.parse(normalized.replace('//begin bracket for multiple entries under image','').replace('//end bracket for ImageGallery > image(s)','').replace('//end bracket for mainEntityOfPage',''));
+  data['@context']='https://schema.org';data['@id']=canonical;data.url=canonical;delete data.id;
+  return JSON.stringify(data);
+}
+
 export async function repairLegacyGraph(text) {
+  if(text.length>SCHEMA_LIMIT)return text;
   const normalized=text.trim().replaceAll('\r\n','\n');
   if (normalized.includes('"@type": "SpecialAnnouncement"') || normalized.includes('"@type": "CollectionPage"')) {
     const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
     // Exact malformed, expired shared COVID announcement and malformed dance
     // collection payload captured on 6 October. Do not reassert stale claims.
     if (['3b882bc81f30917b7b7971a18ef1717777912bb505f3cfb87aed8dbe2fbbd037','7181eeec2f921b7ece2f8451f343d6e61d16e806478213dc3ec3b8c675653b02'].includes(digest)) return null;
+    if(normalized.includes('"@type": "CollectionPage"'))text=await repairPhysiotherapyCollection(text,normalized);
   }
   return repairSchemaText(await repairLegacyIdentity(text));
 }

@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import {build} from 'esbuild';
 import {Miniflare, convertV4MiniflareOptions} from 'miniflare';
-import {repairSchemaText, SCHEMA_LIMIT} from '../deployment/legacy-social-metadata/schema.mjs';
+import {repairSchemaText, repairLegacyGraph, SCHEMA_LIMIT} from '../deployment/legacy-social-metadata/schema.mjs';
 import {repairLegacyIdentity, organization} from '../deployment/legacy-social-metadata/organization.mjs';
 import {isMissingMedia,BRAND_IMAGE} from '../deployment/legacy-social-metadata/media.mjs';
 
@@ -63,6 +63,17 @@ test('captured valid-but-outdated organisation is replaced only on an exact matc
   assert.notEqual(changed,text);assert.equal(await repairLegacyIdentity(changed),changed);
 });
 
+test('captured physiotherapy collection becomes valid JSON with canonical identities and unchanged content',async()=>{
+  const input=await fs.readFile('tests/fixtures/legacy-physiotherapy-collection.txt','utf8');
+  const canonical='https://www.pinnacleblooms.org/physiotherapy',origin=canonical.replace('https:','http:');
+  const source=JSON.parse(input.replace('//begin bracket for multiple entries under image','').replace('//end bracket for ImageGallery > image(s)','').replace('//end bracket for mainEntityOfPage',''));
+  for(const query of ['', '?utm_source=release&utm_medium=email&utm_campaign=parent-guide','?utm_source=release&amp;utm_medium=email&amp;utm_campaign=parent-guide','?utm_source=release&amp;amp;utm_medium=email&amp;amp;utm_campaign=parent-guide']){
+    const output=JSON.parse(await repairLegacyGraph(input.replaceAll(origin,origin+query)));
+    assert.deepEqual(output,{...Object.fromEntries(Object.entries(source).filter(([k])=>k!=='id')),'@context':'https://schema.org',url:canonical,'@id':canonical});
+  }
+  for(const changed of [input.replace('Best Physio Therapy','Changed source text'),input.replaceAll('/physiotherapy','/other'),input.replaceAll('http://www.pinnacleblooms.org/physiotherapy','http://other.example/physiotherapy'),input.replace('//end bracket for mainEntityOfPage','//different comment')])assert.equal(await repairLegacyGraph(changed),changed);
+});
+
 test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
   let fixture, chunkSize=7, sourceHeaders={};
   const bundled=await build({stdin:{contents:`import {handle} from './deployment/legacy-social-metadata/entry.mjs';export default {fetch(r,env){return handle(r,q=>env.ORIGIN.fetch(q));}}`,resolveDir:process.cwd()},bundle:true,format:'esm',platform:'browser',write:false});
@@ -84,6 +95,16 @@ test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
       assert.equal(await r.text(),fixture.replace(raw,repairSchemaText(raw)));
       assert.equal(r.headers.get('x-pinnacle-social-metadata'),null);
       assert.equal(r.headers.get('x-pinnacle-legacy-schema'),'schema-entity-types-20261006');
+    });
+    await t.test('captured collection in campaign response preserves query, call link and visible HTML',async()=>{
+      const captured=await fs.readFile('tests/fixtures/legacy-physiotherapy-collection.txt','utf8');
+      const query='?utm_source=release&utm_medium=email&utm_campaign=parent-guide';
+      const payload=captured.replaceAll('http://www.pinnacleblooms.org/physiotherapy','http://www.pinnacleblooms.org/physiotherapy'+query.replaceAll('&','&amp;'));
+      const visible='<h1>Family 🌸</h1><a href="tel:9100181181">Call Pinnacle</a><footer>Approved footer</footer>';
+      fixture=prefix.replaceAll('/physiotherapy"','/physiotherapy'+query.replaceAll('&','&amp;')+'"')+visible+'<script type="application/ld+json">'+payload+'</script></body></html>';
+      const response=await runtime.dispatchFetch('https://www.pinnacleblooms.org/physiotherapy'+query),out=await response.text();
+      assert(out.includes(visible));assert.equal(JSON.parse(out.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1]).url,'https://www.pinnacleblooms.org/physiotherapy');
+      assert(out.includes('href="https://www.pinnacleblooms.org/physiotherapy"'));assert(response.headers.has('x-pinnacle-legacy-schema'));
     });
     await t.test('malformed and over-limit JSON-LD preserved byte for byte',async()=>{
       for(const text of ['{bad json}', ' '.repeat(SCHEMA_LIMIT)+raw]){
