@@ -1,0 +1,100 @@
+{
+  "at": "2026-10-06T15:44:38.223860+00:00",
+  "change": "Preserve query strings on two existing enrolment bulk redirects",
+  "list_name": "centers",
+  "list_id": "42d1bd24721b4d5d807eecd8cd641391",
+  "rule_name": "ALL CENTERS",
+  "rule_id": "2fe3b1e2c4b54546b317934a0260fd1e",
+  "entries": [
+    {
+      "before": {
+        "source_url": "https://mobile.pinnacleblooms.org/enroll",
+        "target_url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "status_code": 301,
+        "include_subdomains": false,
+        "subpath_matching": false,
+        "preserve_path_suffix": false,
+        "preserve_query_string": false
+      },
+      "after": {
+        "source_url": "https://mobile.pinnacleblooms.org/enroll",
+        "target_url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "status_code": 301,
+        "include_subdomains": false,
+        "subpath_matching": false,
+        "preserve_path_suffix": false,
+        "preserve_query_string": true
+      }
+    },
+    {
+      "before": {
+        "source_url": "https://www.pinnacleblooms.org/enroll",
+        "target_url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "status_code": 301,
+        "include_subdomains": false,
+        "subpath_matching": false,
+        "preserve_path_suffix": false,
+        "preserve_query_string": false
+      },
+      "after": {
+        "source_url": "https://www.pinnacleblooms.org/enroll",
+        "target_url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "status_code": 301,
+        "include_subdomains": false,
+        "subpath_matching": false,
+        "preserve_path_suffix": false,
+        "preserve_query_string": true
+      }
+    }
+  ],
+  "before_observation": "Transcribed from the actual Cloudflare accessibility observation before mutation; backed by enroll-shortcut-before.json. The no-change AX file is not a full before-state export.",
+  "after_observation": "Saved full accessibility state, disabled Save control, checked options and live public read-back.",
+  "public_checks": {
+    "at": "2026-10-06T15:41:36.440774+00:00",
+    "rows": [
+      {
+        "url": "https://www.pinnacleblooms.org/enroll?service=autism&centre=kukatpally",
+        "status": 200,
+        "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=autism&centre=kukatpally",
+        "query_preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/enroll?therapy=speech&center=suchitra",
+        "status": 200,
+        "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?therapy=speech&center=suchitra",
+        "query_preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/enroll/?therapy=occupational&center=chanda-nagar",
+        "status": 200,
+        "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?therapy=occupational&center=chanda-nagar",
+        "query_preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?therapy=aba&center=kukatpally",
+        "status": 200,
+        "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?therapy=aba&center=kukatpally",
+        "query_preserved": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/enroll?service=speech&centre=suchitra",
+        "status": 200,
+        "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech&centre=suchitra",
+        "query_preserved": true
+      },
+      {
+        "url": "https://mobile.pinnacleblooms.org/enroll?service=speech&centre=suchitra",
+        "status": 200,
+        "final": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech&centre=suchitra",
+        "query_preserved": true
+      }
+    ],
+    "passed": true
+  },
+  "browser_selections": [
+    "Autism / Kukatpally",
+    "Speech / Suchitra"
+  ],
+  "no_enquiry_submitted": true,
+  "schedulers": "deleted/disabled"
+}

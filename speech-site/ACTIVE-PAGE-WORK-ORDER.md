@@ -2,13 +2,13 @@
 
 ## Current execution control — direct work only
 
-The owner explicitly stopped schedulers on 6 October. `pinnacle-hourly-growth-delivery` is deleted; the retired Windows scheduler and API gateway are disabled. Do not recreate or resume scheduled execution without an explicit human instruction about scheduling. Older heartbeat wording below is historical. The campaign canonical repair is deployed but acceptance remains open for old cached responses and one physiotherapy JSON-LD error; see the existing growth queue and `ecosystem-review-20261006/campaign-release-pending-cache.json`.
+The owner explicitly stopped schedulers on 6 October. `pinnacle-hourly-growth-delivery` is deleted; the retired Windows scheduler and API gateway are disabled. Do not recreate or resume scheduled execution without an explicit human instruction about scheduling. Older heartbeat wording below is historical. Campaign canonical/cache and the exact physiotherapy collection-schema acceptance are complete. The two existing exact `/enroll` bulk redirects now preserve query strings; six public paths and two real form selections passed. The offline evidence adapter now selects the newest completed audit and compares its date with release boundaries. See `RELEASE-CAMPAIGN-ENROLL-CLOSEOUT-20261006.md` for exact proof and remaining scope.
 
-## Shared audit repairs delivered; centre media at release acceptance
+## Shared audit repairs and centre media delivered
 
 The approved next website/search batch removed 702 retired sitemap entries, regenerated seven canonical FAQ maps and repaired shared legacy social/schema coverage plus the capitalised Ask entry. Source `600cc63967ea05924237bfce9e54991f06b41400`; 29 public checks and 10 GSC sitemap submissions completed. See `RELEASE-SHARED-SEARCH-20261006.md`. This does not certify Ahrefs health 100 or resolve all intermittent origin failures.
 
-Suchitra I and Chanda Nagar now have locally built exterior-first presentation, later interior photos and opt-in official centre walkthroughs. Chanda's old autoplay banner is removed. Production build, exact-transform regressions and local phone/tablet/desktop checks passed. Commit/CI, guarded promotion and production device/performance acceptance are the immediate next actions; see `RELEASE-CENTRE-MEDIA-20261006.md`.
+Suchitra I and Chanda Nagar now have live exterior-first presentation, later interior photos and opt-in official centre walkthroughs. Chanda's old autoplay banner is removed. Source/CI, guarded deployment, declared production device checks and performance acceptance passed; see `RELEASE-CENTRE-MEDIA-20261006.md`. Latest Suchitra lab evidence is mobile98/LCP1.999s and desktop100/LCP0.555s; this is specific lab evidence, not estate-wide field performance.
 
 ## Six-step search, reader journey and measurement delivery — deployed and verified
 

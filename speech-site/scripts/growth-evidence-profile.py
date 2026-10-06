@@ -35,6 +35,64 @@ def payloads(result):
         except (ValueError, TypeError):
             continue
 
+def audit_rows(value):
+    """Read saved native-tool, raw API or combined receipts without another API call."""
+    if isinstance(value, list):
+        for part in value:
+            yield from audit_rows(part)
+    elif isinstance(value, dict):
+        for row in value.get('healthscores', []):
+            if isinstance(row, dict) and row.get('project_id'):
+                yield dict(row)
+        for key, part in value.items():
+            if key == 'healthscores':
+                continue
+            if key == 'text' and isinstance(part, str):
+                try:
+                    yield from audit_rows(json.loads(part))
+                except ValueError:
+                    pass
+            elif isinstance(part, (dict, list)):
+                yield from audit_rows(part)
+
+def utc_date(value):
+    try:
+        parsed = dt.datetime.fromisoformat(value.replace('Z', '+00:00'))
+        return parsed.astimezone(dt.timezone.utc) if parsed.tzinfo else None
+    except (ValueError, TypeError, AttributeError):
+        return None
+
+def latest_completed_audits(snapshots, releases=None):
+    """A newer stopped/running crawl never displaces a completed baseline."""
+    projects = {}
+    for path, document in snapshots:
+        for row in audit_rows(document):
+            stamp = utc_date(row.get('date'))
+            if stamp is None:
+                continue
+            row['evidence_file'] = str(path)
+            projects.setdefault(str(row['project_id']), []).append((stamp, row))
+    result = []
+    for project_id, observed in sorted(projects.items()):
+        observed.sort(key=lambda item: item[0], reverse=True)
+        completed = [item for item in observed if item[1].get('status') == 'Completed']
+        if not completed:
+            row = dict(observed[0][1])
+            row['usable_completed_baseline'] = False
+            row['release_coverage'] = 'no_completed_baseline'
+        else:
+            stamp, selected = completed[0]
+            row = dict(selected)
+            row['usable_completed_baseline'] = True
+            release = (releases or {}).get(project_id)
+            release_at = utc_date(release.get('at')) if release else None
+            row['relevant_release'] = release
+            row['release_coverage'] = ('predates_release' if stamp < release_at else
+                'completed_after_release_requires_url_checks') if release_at else 'release_time_unavailable'
+        row['latest_observed_attempt'] = {key: observed[0][1].get(key) for key in ('date','status','total','evidence_file')}
+        result.append(row)
+    return result
+
 def aggregates(path):
     """Allow only aggregate rows; reject accidental person/contact-level input."""
     if path is None:
@@ -86,17 +144,19 @@ def build(root, outcome_path=None, windsor_dir=None):
             'position': p['position'], 'scope': 'Centre destination, not visitor residence or availability'}
            for region, group in regional['groups'].items() for p in group['pages']}
     ahrefs_path = work/'ahrefs-growth-20261004/audit-triage-20261004-raw.json'
-    ahrefs = read(ahrefs_path); source(ahrefs_path, 'Ahrefs saved audit')
-    audits = [row for obj in payloads(ahrefs['projects']['response']) for row in obj.get('healthscores', [])]
-    # Consume the newly available completed Ask crawl, retaining the earlier source.
+    audit_paths = [ahrefs_path]
     latest_ask = root/'ecosystem-closeout-20261005/ahrefs-ask-metadata.json'
     if latest_ask.exists():
-        source(latest_ask, 'Ahrefs Ask completed crawl metadata')
-        newer = [row for obj in payloads(read(latest_ask)) for row in obj.get('healthscores', [])]
-        ids = {r['project_id'] for r in newer}
-        audits = [r for r in audits if r['project_id'] not in ids] + newer
-    for row in audits:
-        row['usable_completed_baseline'] = row.get('status') == 'Completed'
+        audit_paths.append(latest_ask)
+    manifest_path = root/'evidence-sources.json'
+    manifest = read(manifest_path) if manifest_path.exists() else {}
+    source(manifest_path, 'Explicit saved evidence inputs and release boundaries')
+    audit_paths.extend(root/Path(path) for path in manifest.get('ahrefs_snapshots', []))
+    snapshots = []
+    for path in dict.fromkeys(path.resolve() for path in audit_paths):
+        source(path, 'Ahrefs dated audit snapshot')
+        snapshots.append((path.as_posix(), read(path)))
+    audits = latest_completed_audits(snapshots, manifest.get('relevant_releases'))
     keyword_path = work/'ahrefs-growth-20261004/india-organic-keywords-20261004.json'
     keyword_source = read(keyword_path); source(keyword_path, 'Ahrefs saved India query demand')
     demand = {}

@@ -1,0 +1,60 @@
+{
+  "id": "physiotherapy-schema-20261006",
+  "phase": "verified-configuration",
+  "at": "2026-10-06T14:59:32.835Z",
+  "baseCommit": "0783c0ac94afbb61940a92ea18af1763ce5147f7",
+  "rollback": [
+    {
+      "version_id": "b787435a-7f7b-4c05-b44b-3a7d89a4cba0",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 228,
+  "moduleCount": 9,
+  "originalHashes": {
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "entry.mjs": "e6caaa9cccddfe0e8cd1ba5df63485e531536b4da406d80a43cdc098f1d1271d",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6"
+  },
+  "commit": "a02a5802d5bbcb975c8fc6b1163f0ccaf7729d65",
+  "candidate": "b215ba6e-d850-493f-9bf0-133f01ea7a16",
+  "hashes": {
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "entry.mjs": "028a4217677484800409a7f7a8622b752771dff5bd357103f61d485644d1c0b7",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6"
+  },
+  "deployment": "2346b23a-fd5f-404b-b9ff-7f6b01fe6b68",
+  "promotedAt": "2026-10-06T15:11:11.160Z",
+  "verifiedAt": "2026-10-06T15:29:13.645Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-verify-route",
+    "pinnacle-ask",
+    "pinnacle-ask-mcp",
+    "pinnacle-centre-search-repair",
+    "pinnacle-helpline"
+  ],
+  "routesPreserved": 228,
+  "bindingsPreserved": true,
+  "publicAcceptance": {
+    "at": "2026-10-06T15:31:44.969355+00:00",
+    "campaign_pages_passed": 8,
+    "physiotherapy_variants_passed": 4,
+    "all_json_ld_parse": true,
+    "call_links_preserved": true,
+    "source_description_and_images_preserved": true,
+    "cache_purge_urls": 17,
+    "gsc_annotation_id": "06f482e1-68c4-46b3-bb11-0d0ec86b311d"
+  }
+}
