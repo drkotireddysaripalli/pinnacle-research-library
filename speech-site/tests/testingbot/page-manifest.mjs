@@ -48,7 +48,7 @@ export async function pageManifest(){
 
 export function selectCases(manifest,suite,{build=false,ids=[]}={}){
   if(![...suites,'all','daily'].includes(suite))throw Error('Unknown TestingBot suite '+suite);
-  const priority=suite==='daily'?['bvt','p1']:suite==='all'?suites:[suite];
+  const priority=suite==='daily'||suite==='p1'?['bvt','p1']:suite==='p2'?['bvt','p1','p2']:suite==='all'?suites:[suite];
   let selected=manifest.filter(r=>priority.includes(r.priority));
   if(ids.length){if(ids.some(id=>!manifest.some(r=>r.id===id)))throw Error('Unknown case ID');selected=manifest.filter(r=>ids.includes(r.id));}
   if(build)selected=selected.filter(r=>r.buildPath);

@@ -1,6 +1,12 @@
 # Current page work — 7 October 2026
 
-## Current request — Materials and Interventions portal integration
+## Current request — TestingBot BVT, priority and daily suites
+
+Implemented a reused API client, seven-case public BVT, five-case exact-build cloud BVT, P1/P2/P3 and bounded record/daily launchers. Current register: 264 cases, including two pending library roots. Production Chrome BVT passed 7/7 with a provider 3G exercise; physical iPhone 13/Safari and Galaxy S24/Chrome passed 14/14. GitHub run `37572743051` on source `9e59351618c837e3937c2764b591129cfabb5919` passed both jobs and all five actual candidate cases through the official TestingBot tunnel. These establish defined checks, not full-site/all-device acceptance. Wider suite execution is blocked by the provider's explicit insufficient-credit rejection; the connected API account reports Free Trial. Funding/existing funded credentials have been requested. Preserve the raw failed/harness/provisional evidence; no automatic baseline replacement or fabricated green counts. See `TESTINGBOT-TEST-SYSTEM.md` and `reviews/testingbot-test-system-20261007.json`.
+
+One newly authorised daily TestingBot heartbeat is active at 09:10 IST in this thread. The older broad website-quality heartbeat is now confirmed paused; stopped growth jobs are not resumed. The daily plan is 32 critical cases, eight presentation cases, 28 rotating records and three cases each on rotating secondary desktop/physical profiles. Keep upcoming acquisition acceptance from the Ads task in the existing website backlog. Test-only work does not alter production routes/content or establish real calls/enrolments.
+
+## Pending request — Materials and Interventions portal integration
 
 Owner requests the existing static HTML libraries at `materials.pinnacleblooms.org` and `interventions.pinnacleblooms.org` under `/materials` and `/interventions`, with shared portal chrome, useful library menus, full content, contextual category/resource/care links and bounded tool/discovery acceptance. `MATERIALS-INTERVENTIONS-MIGRATION-WORK-ORDER-20261007.md` records the inspected source architecture, exact route contract, importer/common layout, all-file dispositions and release acceptance. Public subdomain roots work; both proposed main-domain roots currently return 404. Current library robots/sitemap endpoints return HTML fallback content. Complete original export/file listing has been requested; source intake and the representative importer candidate are next. No library migration, tool acceptance, indexing or lead increase is claimed yet. Reuse the current live full union, preserve the approved common shell and all protected services. Schedulers remain stopped.
 

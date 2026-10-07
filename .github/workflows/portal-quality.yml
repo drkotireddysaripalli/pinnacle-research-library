@@ -36,6 +36,9 @@ jobs:
       - run: npm run build:ask
   checks:
     runs-on: ubuntu-latest
+    concurrency:
+      group: portal-testingbot-builds
+      cancel-in-progress: false
     timeout-minutes: 20
     defaults:
       run:

@@ -13,7 +13,9 @@ const suite=option('suite','bvt'),build=process.argv.includes('--build'),list=pr
 const manifest=await pageManifest(),selected=selectCases(manifest,suite,{build,ids:option('cases','').split(',').filter(Boolean)});
 const approvedShell=JSON.parse(await fs.readFile(new URL('../tests/fixtures/shared-authority-owner-approved.json',import.meta.url)));
 const visualReferences=JSON.parse(await fs.readFile(new URL('../tests/testingbot/visual-references.json',import.meta.url)));
-const matrixIds=option('matrix',suite==='bvt'?'chrome':suite==='p2'?'chrome,edge':'chrome,ios,android,firefox,safari').split(',');
+// Broader records default to one browser. Use explicit matrices for changed
+// shared templates; the daily plan rotates secondary browsers and devices.
+const matrixIds=option('matrix',suite==='p2'?'edge':'chrome').split(',');
 if(matrixIds.some(id=>!matrix[id]))throw Error('Unknown matrix entry');
 if(!selected.length)throw Error('Empty suite; refusing a vacuous pass');
 if(list){console.log(JSON.stringify({suite,build,matrix:matrixIds,cases:selected,pending:manifest.filter(r=>!r.published)},null,2));process.exit(0);}
@@ -72,9 +74,11 @@ for(const matrixId of matrixIds){
   const snap=async(test,name)=>{await evaluate('return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r(true))))');const encoded=await wd('/screenshot');const file=matrixId+'-'+test.id+'-'+name+'.png';await fs.writeFile(out+'/'+file,Buffer.from(encoded,'base64'));test.screenshots.push(file);};
   try{
     const desktop=config.kind==='desktop';
-    const caps={platformName:desktop?config.platformName:device.platform_name,browserName:config.browserName,...(desktop?{browserVersion:device.version}:{'appium:automationName':config.platformName==='iOS'?'XCUITest':'UiAutomator2','appium:deviceName':device.name,'appium:platformVersion':device.version,'appium:newCommandTimeout':90}),'tb:options':{name:'Pinnacle '+suite+' '+matrixId,build:'portal-'+source.slice(0,12)+'-'+suite,...(process.env.TESTINGBOT_TUNNEL_ID?{tunnelIdentifier:process.env.TESTINGBOT_TUNNEL_ID}:{}),...(!desktop?{realDevice:true}:{'screen-resolution':'1920x1080'}),debugging:desktop&&['chrome','edge'].includes(matrixId),screenrecorder:true,screenshot:false,maxduration:1800,idleTimeout:90}};
+    const caps={platformName:desktop?config.platformName:device.platform_name,browserName:config.browserName,...(desktop?{browserVersion:device.version}:{'appium:automationName':config.platformName==='iOS'?'XCUITest':'UiAutomator2','appium:deviceName':device.name,'appium:platformVersion':device.version,'appium:newCommandTimeout':90}),'tb:options':{name:'Pinnacle '+suite+' '+matrixId+' '+stamp,build:'portal-'+source.slice(0,12)+'-'+suite,...(process.env.TESTINGBOT_TUNNEL_ID?{tunnelIdentifier:process.env.TESTINGBOT_TUNNEL_ID}:{}),...(!desktop?{realDevice:true}:{'screen-resolution':'1920x1080'}),debugging:desktop&&['chrome','edge'].includes(matrixId),screenrecorder:true,screenshot:false,maxduration:1800,idleTimeout:90}};
     console.log('Starting '+matrixId+' '+device.name+' '+device.version);
-    const created=await request(client.hub+'/session','POST',{capabilities:{alwaysMatch:caps}},150000);
+    // Physical allocation/boot can outlast 150s. The provider evidence showed
+    // successful Android creation immediately before the old client timed out.
+    const created=await request(client.hub+'/session','POST',{capabilities:{alwaysMatch:caps}},desktop?240000:300000);
     sessionId=created.value?.sessionId||created.sessionId;if(!sessionId)throw Error('No session ID');
     session.sessionId=sessionId;session.providerCapabilities=created.value?.capabilities||{};session.dashboard='https://testingbot.com/members/tests/'+sessionId;
     await wd('/timeouts','POST',{pageLoad:60000,script:20000,implicit:1000});
@@ -105,16 +109,22 @@ for(const matrixId of matrixIds){
         await snap(t,'opening');
         if(process.argv.includes('--visual')&&!p.shell){
           const identity=[matrixId,config.kind==='physical'?device.name:config.platformName,t.document.width+'x'+t.document.height].join('-').replace(/[^a-zA-Z0-9-]/g,'-');
-          const name='pinnacle-common-v159-'+identity;
+          const name=(config.kind==='physical'?'pinnacle-opening-'+p.id+'-':'pinnacle-common-v159-')+identity;
+          const reference=visualReferences.approved.find(r=>r.name===name);
           try{
-            const result=await evaluate('tb:visual.snapshot='+JSON.stringify({name,options:{selector:'.portal-header',threshold:0.1,antialiasing:true}}));
+            // Appium's native interception did not resolve CSS crops on the
+            // physical web sessions. Use the documented viewport mode there.
+            const result=await evaluate('tb:visual.snapshot='+JSON.stringify({name,options:{...(config.kind==='desktop'?{selector:'.portal-header'}:{}),threshold:0.1,antialiasing:true}}));
             const v=typeof result==='string'?JSON.parse(result):result;
             if(typeof v?.match!=='boolean'||!v.visualId)throw Error('Provider did not return a real visual-comparison result');
-            const reference=visualReferences.approved.find(r=>r.name===name);
-            t.visual={name,...v,approval:reference?'approved-reference':'provisional-first-capture',referenceScope:'Shared header only; narrative/body/footer are separate checks and screenshots'};
-            if(reference&&(String(reference.visualId)!==String(v.visualId)||!v.match))t.checks.push({name:'Approved common-header visual reference matches',passed:false,error:'Visual ID changed or pixel regression detected',evidence:t.visual});
+            t.visual={name,...v,approval:reference?'approved-reference':'provisional-first-capture',referenceScope:config.kind==='physical'?'Exact page opening on this physical device/viewport':'Shared header only; narrative/body/footer are separate checks and screenshots'};
+            if(reference&&(String(reference.visualId)!==String(v.visualId)||!v.match))t.checks.push({name:'Approved visual reference matches',passed:false,error:'Visual ID changed or pixel regression detected',evidence:t.visual});
             else if(!reference)t.skipped.push('First provider screenshot is a provisional baseline; automatic baseline creation is not design approval');
-          }catch(e){t.skipped.push('Provider visual comparison unavailable: '+redact(e.message));}
+          }catch(e){
+            const error='Provider visual comparison unavailable: '+redact(e.message);
+            if(reference)t.checks.push({name:'Approved visual reference is verifiable',passed:false,error});
+            else t.skipped.push(error);
+          }
         }
         const gated=await visible('#ask-reader-gate[open]');
         if(p.gate){await check('Anonymous reader gets branded Google sign-in gate',()=>evaluate("const d=document.querySelector('#ask-reader-gate');return !!d?.open&&!!d.querySelector('[name=returnTo]')&&!!d.querySelector('img')"));t.skipped.push('Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite');}
@@ -150,7 +160,7 @@ for(const matrixId of matrixIds){
           // Small secondary text belongs to the P2 presentation suite, not the fast BVT release smoke.
           if(reading.smallText.length)t.warnings.push('P2 readability findings: '+JSON.stringify(reading.smallText));
           await check('Main content exists and internal anchors resolve',()=>reading.paragraphs>0&&reading.brokenAnchors.length===0);
-          if(suite!=='bvt')await check('P2 readable paragraph sizes and widths',()=>reading.smallText.length===0);
+          if(suite==='p2')await check('P2 readable paragraph sizes and widths',()=>reading.smallText.length===0);
           if(suite==='p2'){
             if(p.native)await check('Native reading typography uses the appropriate Anek family',()=>evaluate("const script=arguments[0]==='te'?/[\\u0c00-\\u0c7f]/:/[\\u0900-\\u097f]/;const a=[...document.querySelectorAll('main h1,main h2,main p')].filter(n=>script.test(n.textContent));return a.length>0&&a.every(n=>getComputedStyle(n).fontFamily.includes(arguments[0]==='te'?'Anek Telugu':'Anek Devanagari'))",p.native===true?'te':p.native));
             await check('Below-page images resolve after an explicit loading sweep',async()=>{const images=await evaluate("return (async()=>{const a=[...document.querySelectorAll('main img')].filter(n=>{const r=n.getBoundingClientRect();return r.width>0&&r.height>0});a.forEach(n=>n.loading='eager');await Promise.all(a.map(n=>Promise.race([n.decode().catch(()=>{}),new Promise(r=>setTimeout(r,6000))])));return {count:a.length,broken:a.filter(n=>!n.complete||!n.naturalWidth).map(n=>n.src)}})()");t.allImages=images;if(images.broken.length)throw Error(JSON.stringify(images));return images;});

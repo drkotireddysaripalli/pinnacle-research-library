@@ -1,0 +1,2258 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-07T05:03:46.264Z",
+  "purpose": "Actual build verification and bounded daily regressions",
+  "implementation": "TESTINGBOT-TEST-SYSTEM.md",
+  "siteProductionChanged": false,
+  "coverage": {
+    "defined": 264,
+    "published": 262,
+    "byPriority": {
+      "bvt": 7,
+      "p1": 25,
+      "p2": 37,
+      "p3": 195
+    },
+    "pending": [
+      {
+        "id": "materials",
+        "path": "/materials",
+        "canonical": "https://www.pinnacleblooms.org/materials",
+        "family": "html-library",
+        "priority": "p2",
+        "published": false,
+        "reason": "Migration/source intake pending"
+      },
+      {
+        "id": "interventions",
+        "path": "/interventions",
+        "canonical": "https://www.pinnacleblooms.org/interventions",
+        "family": "html-library",
+        "priority": "p2",
+        "published": false,
+        "reason": "Migration/source intake pending"
+      }
+    ],
+    "currentBvtDistinctUrls": 7,
+    "currentPublicPageBrowserPasses": 21,
+    "currentCandidatePasses": 5,
+    "otherProfilesNotYetRun": [
+      "Firefox/Windows",
+      "Safari/macOS",
+      "Edge/tablet viewport",
+      "physical iPad",
+      "physical small iPhone"
+    ],
+    "largerSuites": "Defined; wider P1/P2/P3 have not executed due provider credit rejection"
+  },
+  "verifiedRuns": [
+    {
+      "report": "audits/testingbot-suites/bvt-network-final-20261007/report.json",
+      "source": "9ebecf5366b6d32eef511549f9c47babb6d7d80d",
+      "build": false,
+      "suite": "bvt",
+      "runnerSha256": "7694be27a2ec98086084b089a637649778fbff3da1ea9fbb651ed5af6ff22c41",
+      "manifestSha256": "08acbbe170893f5489cb5810c50a13a45cefc8756fc27df48096de7336ba7751",
+      "counts": {
+        "selectedPages": 7,
+        "pageRuns": 7,
+        "passed": 7,
+        "failed": 0,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "overall": "functional-pass",
+      "providerSessionSeconds": 128,
+      "sessions": [
+        {
+          "matrix": "chrome",
+          "kind": "desktop",
+          "id": "fcb8ae23eaf4-812f08dc5ee1-4b64a0b825c0-179134792736-93519741",
+          "dashboard": "https://testingbot.com/members/tests/fcb8ae23eaf4-812f08dc5ee1-4b64a0b825c0-179134792736-93519741",
+          "status": "passed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53471378,
+            "success": true,
+            "durationSeconds": 128,
+            "assetsAvailable": false
+          },
+          "requested": {
+            "id": "chrome",
+            "kind": "desktop",
+            "browserName": "chrome",
+            "platformName": "WIN11",
+            "version": "153",
+            "width": 1440,
+            "height": 900,
+            "deviceName": "googlechrome"
+          },
+          "actualViewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "network": {
+            "preset": "3G",
+            "mode": "provider-emulated",
+            "status": "passed",
+            "cases": [
+              {
+                "id": "speech",
+                "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+                "passed": true,
+                "elapsedMs": 1081,
+                "evidence": {
+                  "call": true,
+                  "domContentLoadedMs": 567.1000000000931,
+                  "h1": "Speech Therapy for children Help your childbe understood.",
+                  "loadMs": 591.3000000000466,
+                  "overflow": false,
+                  "title": "Speech Therapy for Children Across India | Pinnacle Blooms",
+                  "ttfbMs": 136.70000000018626
+                }
+              },
+              {
+                "id": "enrolment",
+                "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+                "passed": true,
+                "elapsedMs": 811,
+                "evidence": {
+                  "call": true,
+                  "domContentLoadedMs": 293.89999999990687,
+                  "h1": "Every therapy matters.Your child’s life matters most.",
+                  "loadMs": 311.69999999995343,
+                  "overflow": false,
+                  "title": "Enrol at Pinnacle | Begin Your Child’s Therapy Journey",
+                  "ttfbMs": 83
+                }
+              }
+            ],
+            "providerCommandAccepted": true,
+            "log": {
+              "available": true,
+              "entryCount": 9
+            },
+            "restored": true
+          },
+          "cases": [
+            {
+              "id": "shop",
+              "url": "https://www.pinnacleblooms.org/shop",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"fontSize\":\"11px\",\"text\":\"Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock\",\"width\":596.625},{\"fontSize\":\"11px\",\"text\":\"Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco\",\"width\":566.5}]"
+              ],
+              "skipped": [],
+              "screenshots": [
+                "chrome-shop-opening.png",
+                "chrome-shop-content.png",
+                "chrome-shop-footer.png"
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "url": "https://www.pinnacleblooms.org/pinnacleai",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Seven lifecycle cards retain readable widths and words",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [],
+              "screenshots": [
+                "chrome-pinnacleai-opening.png",
+                "chrome-pinnacleai-content.png",
+                "chrome-pinnacleai-footer.png"
+              ]
+            },
+            {
+              "id": "speech",
+              "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [],
+              "screenshots": [
+                "chrome-speech-opening.png",
+                "chrome-speech-content.png",
+                "chrome-speech-footer.png"
+              ]
+            },
+            {
+              "id": "enrolment",
+              "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming autism preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming speech preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming occupational preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming aba preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Service labels do not split words into narrow columns",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [],
+              "screenshots": [
+                "chrome-enrolment-opening.png",
+                "chrome-enrolment-content.png",
+                "chrome-enrolment-footer.png"
+              ]
+            },
+            {
+              "id": "centre-suchitra",
+              "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Centre assessment keeps actual selected centre",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [],
+              "screenshots": [
+                "chrome-centre-suchitra-opening.png",
+                "chrome-centre-suchitra-content.png",
+                "chrome-centre-suchitra-footer.png"
+              ]
+            },
+            {
+              "id": "ask-answer",
+              "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Anonymous reader gets branded Google sign-in gate",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "Observed unthrottled browser LCP exceeds 2500ms; investigate with repeatable performance baseline, not a field result"
+              ],
+              "skipped": [
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "screenshots": [
+                "chrome-ask-answer-opening.png"
+              ]
+            },
+            {
+              "id": "verify",
+              "url": "https://www.pinnacleblooms.org/verify/",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Existing evidence header/footer remain present",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "Current Verify uses its separate evidence shell; common Astro-shell migration is not delivered"
+              ],
+              "skipped": [
+                "Portal navigation does not apply to this existing dedicated shell"
+              ],
+              "screenshots": [
+                "chrome-verify-opening.png",
+                "chrome-verify-content.png",
+                "chrome-verify-footer.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "audits/testingbot-suites/bvt-physical-final-20261007/report.json",
+      "source": "9e59351618c837e3937c2764b591129cfabb5919",
+      "build": false,
+      "suite": "bvt",
+      "runnerSha256": "8397dc1fdb0047bb11aa788141fc878a9af790dc90b056d76739b1952c91b523",
+      "manifestSha256": "08acbbe170893f5489cb5810c50a13a45cefc8756fc27df48096de7336ba7751",
+      "counts": {
+        "selectedPages": 7,
+        "pageRuns": 14,
+        "passed": 14,
+        "failed": 0,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "overall": "functional-pass",
+      "providerSessionSeconds": 338,
+      "sessions": [
+        {
+          "matrix": "ios",
+          "kind": "physical",
+          "id": "a27b0f390e76-ab648d7da000-de80a722990e-179134826383-26803314",
+          "dashboard": "https://testingbot.com/members/tests/a27b0f390e76-ab648d7da000-de80a722990e-179134826383-26803314",
+          "status": "passed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53471480,
+            "success": true,
+            "durationSeconds": 200,
+            "assetsAvailable": false,
+            "deviceName": "iPhone 13",
+            "platformName": "iOS",
+            "os": "MONTEREY",
+            "browser": "safari",
+            "browserVersion": "18.5"
+          },
+          "requested": {
+            "id": "ios",
+            "kind": "physical",
+            "platformName": "iOS",
+            "browserName": "safari",
+            "preferred": [
+              22,
+              44,
+              33
+            ],
+            "deviceName": "iPhone 13",
+            "version": "18.5"
+          },
+          "actualViewport": {
+            "width": 390,
+            "height": 663
+          },
+          "cases": [
+            {
+              "id": "shop",
+              "url": "https://www.pinnacleblooms.org/shop",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"text\":\"✦ THE PINNACLE 101 PARENT VISUAL LIBRARY\",\"fontSize\":\"10px\",\"width\":350},{\"text\":\"Explore every free sample. Choose your ebook and continue to secure checkout. Printed editions remain out of stock.\",\"fontSize\":\"11px\",\"width\":350},{\"text\":\"Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock\",\"fontSize\":\"11px\",\"width\":310},{\"text\":\"Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco\",\"fontSize\":\"11px\",\"width\":350},{\"text\":\"A LITTLE CLARITY BEFORE YOU CHOOSE\",\"fontSize\":\"10px\",\"width\":318.046875}]"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"a27b0f390e76-ab648d7da000-de80a722990e-179134826383-26803314\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "ios-shop-opening.png",
+                "ios-shop-content.png",
+                "ios-shop-footer.png"
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "url": "https://www.pinnacleblooms.org/pinnacleai",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Seven lifecycle cards retain readable widths and words",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"text\":\"PINNACLE BLOOMS NETWORK · THE WHOLE SYSTEM. ONE PURPOSE.\",\"fontSize\":\"11.68px\",\"width\":362},{\"text\":\"WHAT PINNACLEAI BRINGS TOGETHER\",\"fontSize\":\"11.68px\",\"width\":362},{\"text\":\"MULTI-SENSORY · MULTI-DISCIPLINARY · INTEGRATED\",\"fontSize\":\"11.68px\",\"width\":314},{\"text\":\"PINNACLEAI® → MAINSTREAM INCLUDED\",\"fontSize\":\"11.68px\",\"width\":362},{\"text\":\"LICENCES. DOCUMENTED SCALE. ORIGINAL EVIDENCE.\",\"fontSize\":\"11.68px\",\"width\":362},{\"text\":\"LET’S MAKE THE FIRST STEP SIMPLE\",\"fontSize\":\"11.68px\",\"width\":362}]"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"a27b0f390e76-ab648d7da000-de80a722990e-179134826383-26803314\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "ios-pinnacleai-opening.png",
+                "ios-pinnacleai-content.png",
+                "ios-pinnacleai-footer.png"
+              ]
+            },
+            {
+              "id": "speech",
+              "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"a27b0f390e76-ab648d7da000-de80a722990e-179134826383-26803314\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "ios-speech-opening.png",
+                "ios-speech-content.png",
+                "ios-speech-footer.png"
+              ]
+            },
+            {
+              "id": "enrolment",
+              "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming autism preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming speech preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming occupational preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming aba preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Service labels do not split words into narrow columns",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"a27b0f390e76-ab648d7da000-de80a722990e-179134826383-26803314\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "ios-enrolment-opening.png",
+                "ios-enrolment-content.png",
+                "ios-enrolment-footer.png"
+              ]
+            },
+            {
+              "id": "centre-suchitra",
+              "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Centre assessment keeps actual selected centre",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"a27b0f390e76-ab648d7da000-de80a722990e-179134826383-26803314\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "ios-centre-suchitra-opening.png",
+                "ios-centre-suchitra-content.png",
+                "ios-centre-suchitra-footer.png"
+              ]
+            },
+            {
+              "id": "ask-answer",
+              "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Anonymous reader gets branded Google sign-in gate",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"a27b0f390e76-ab648d7da000-de80a722990e-179134826383-26803314\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "screenshots": [
+                "ios-ask-answer-opening.png"
+              ]
+            },
+            {
+              "id": "verify",
+              "url": "https://www.pinnacleblooms.org/verify/",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Existing evidence header/footer remain present",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "Current Verify uses its separate evidence shell; common Astro-shell migration is not delivered",
+                "P2 readability findings: [{\"text\":\"PINNACLE’S HISTORICAL CHALLENGE\",\"fontSize\":\"10px\",\"width\":336},{\"text\":\"SEE THE PHILOSOPHY INSIDE THE WORK\",\"fontSize\":\"10px\",\"width\":312}]"
+              ],
+              "skipped": [
+                "Portal navigation does not apply to this existing dedicated shell"
+              ],
+              "screenshots": [
+                "ios-verify-opening.png",
+                "ios-verify-content.png",
+                "ios-verify-footer.png"
+              ]
+            }
+          ]
+        },
+        {
+          "matrix": "android",
+          "kind": "physical",
+          "id": "c9bafb12f98b-02e7d4b005b7-eca1d656a526-179134848073-8280989",
+          "dashboard": "https://testingbot.com/members/tests/c9bafb12f98b-02e7d4b005b7-eca1d656a526-179134848073-8280989",
+          "status": "passed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53471534,
+            "success": true,
+            "durationSeconds": 138,
+            "assetsAvailable": false,
+            "deviceName": "Galaxy S24",
+            "platformName": "Android",
+            "os": "REAL_ANDROID",
+            "browser": "chrome",
+            "browserVersion": "147.0.7727.111"
+          },
+          "requested": {
+            "id": "android",
+            "kind": "physical",
+            "platformName": "Android",
+            "browserName": "chrome",
+            "preferred": [
+              29,
+              32,
+              40
+            ],
+            "deviceName": "Galaxy S24",
+            "version": "14.0"
+          },
+          "actualViewport": {
+            "width": 360,
+            "height": 647
+          },
+          "cases": [
+            {
+              "id": "shop",
+              "url": "https://www.pinnacleblooms.org/shop",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"fontSize\":\"10px\",\"text\":\"✦ THE PINNACLE 101 PARENT VISUAL LIBRARY\",\"width\":320},{\"fontSize\":\"11px\",\"text\":\"Explore every free sample. Choose your ebook and continue to secure checkout. Printed editions remain out of stock.\",\"width\":320},{\"fontSize\":\"11px\",\"text\":\"Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock\",\"width\":280},{\"fontSize\":\"11px\",\"text\":\"Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco\",\"width\":320},{\"fontSize\":\"10px\",\"text\":\"A LITTLE CLARITY BEFORE YOU CHOOSE\",\"width\":317.9739685058594}]"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"c9bafb12f98b-02e7d4b005b7-eca1d656a526-179134848073-8280989\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "android-shop-opening.png",
+                "android-shop-content.png",
+                "android-shop-footer.png"
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "url": "https://www.pinnacleblooms.org/pinnacleai",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Seven lifecycle cards retain readable widths and words",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"fontSize\":\"11.68px\",\"text\":\"PINNACLE BLOOMS NETWORK · THE WHOLE SYSTEM. ONE PURPOSE.\",\"width\":332},{\"fontSize\":\"11.68px\",\"text\":\"WHAT PINNACLEAI BRINGS TOGETHER\",\"width\":332},{\"fontSize\":\"11.68px\",\"text\":\"MULTI-SENSORY · MULTI-DISCIPLINARY · INTEGRATED\",\"width\":284},{\"fontSize\":\"11.68px\",\"text\":\"PINNACLEAI® → MAINSTREAM INCLUDED\",\"width\":332},{\"fontSize\":\"11.68px\",\"text\":\"LICENCES. DOCUMENTED SCALE. ORIGINAL EVIDENCE.\",\"width\":332},{\"fontSize\":\"11.68px\",\"text\":\"LET’S MAKE THE FIRST STEP SIMPLE\",\"width\":332}]"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"c9bafb12f98b-02e7d4b005b7-eca1d656a526-179134848073-8280989\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "android-pinnacleai-opening.png",
+                "android-pinnacleai-content.png",
+                "android-pinnacleai-footer.png"
+              ]
+            },
+            {
+              "id": "speech",
+              "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"c9bafb12f98b-02e7d4b005b7-eca1d656a526-179134848073-8280989\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "android-speech-opening.png",
+                "android-speech-content.png",
+                "android-speech-footer.png"
+              ]
+            },
+            {
+              "id": "enrolment",
+              "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming autism preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming speech preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming occupational preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming aba preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Service labels do not split words into narrow columns",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"c9bafb12f98b-02e7d4b005b7-eca1d656a526-179134848073-8280989\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "android-enrolment-opening.png",
+                "android-enrolment-content.png",
+                "android-enrolment-footer.png"
+              ]
+            },
+            {
+              "id": "centre-suchitra",
+              "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Centre assessment keeps actual selected centre",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"c9bafb12f98b-02e7d4b005b7-eca1d656a526-179134848073-8280989\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}"
+              ],
+              "screenshots": [
+                "android-centre-suchitra-opening.png",
+                "android-centre-suchitra-content.png",
+                "android-centre-suchitra-footer.png"
+              ]
+            },
+            {
+              "id": "ask-answer",
+              "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Anonymous reader gets branded Google sign-in gate",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: {\"state\":\"false\",\"sessionId\":\"c9bafb12f98b-02e7d4b005b7-eca1d656a526-179134848073-8280989\",\"hCode\":1693083565,\"value\":{\"match\":false,\"error\":\"Element not found\"},\"class\":\"org.openqa.selenium.remote.Response\",\"status\":0}",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "screenshots": [
+                "android-ask-answer-opening.png"
+              ]
+            },
+            {
+              "id": "verify",
+              "url": "https://www.pinnacleblooms.org/verify/",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Existing evidence header/footer remain present",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "Current Verify uses its separate evidence shell; common Astro-shell migration is not delivered",
+                "P2 readability findings: [{\"fontSize\":\"10px\",\"text\":\"PINNACLE’S HISTORICAL CHALLENGE\",\"width\":306},{\"fontSize\":\"10px\",\"text\":\"SEE THE PHILOSOPHY INSIDE THE WORK\",\"width\":282}]"
+              ],
+              "skipped": [
+                "Portal navigation does not apply to this existing dedicated shell"
+              ],
+              "screenshots": [
+                "android-verify-opening.png",
+                "android-verify-content.png",
+                "android-verify-footer.png"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "report": "audits/testingbot-ci-20261007/evidence/report.json",
+      "source": "9e59351618c837e3937c2764b591129cfabb5919",
+      "build": true,
+      "suite": "bvt",
+      "runnerSha256": "4aeae888e07564ecaefe52ef673db0fe468e25b84f40d8f4de9e5e8ba127ec10",
+      "manifestSha256": "08acbbe170893f5489cb5810c50a13a45cefc8756fc27df48096de7336ba7751",
+      "counts": {
+        "selectedPages": 5,
+        "pageRuns": 5,
+        "passed": 5,
+        "failed": 0,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "overall": "functional-pass",
+      "providerSessionSeconds": 117,
+      "sessions": [
+        {
+          "matrix": "chrome",
+          "kind": "desktop",
+          "id": "ebc129cb62a9-83bb803746ea-2d1e6d724550-179134863115-89309973",
+          "dashboard": "https://testingbot.com/members/tests/ebc129cb62a9-83bb803746ea-2d1e6d724550-179134863115-89309973",
+          "status": "passed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53471588,
+            "success": true,
+            "durationSeconds": 117,
+            "assetsAvailable": false,
+            "deviceName": null,
+            "platformName": "",
+            "os": "WIN11",
+            "browser": "googlechrome",
+            "browserVersion": "153"
+          },
+          "requested": {
+            "id": "chrome",
+            "kind": "desktop",
+            "browserName": "chrome",
+            "platformName": "WIN11",
+            "version": "153",
+            "width": 1440,
+            "height": 900,
+            "deviceName": "googlechrome"
+          },
+          "actualViewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "cases": [
+            {
+              "id": "shop",
+              "url": "https://www.pinnacleblooms.org/shop",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"fontSize\":\"11px\",\"text\":\"Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock\",\"width\":596.625},{\"fontSize\":\"11px\",\"text\":\"Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco\",\"width\":566.5}]"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "screenshots": [
+                "chrome-shop-opening.png",
+                "chrome-shop-content.png",
+                "chrome-shop-footer.png"
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "url": "https://www.pinnacleblooms.org/pinnacleai",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Seven lifecycle cards retain readable widths and words",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "match": false,
+                "pixelDifference": 146,
+                "visualId": 20711,
+                "runId": 3562592,
+                "url": "https://testingbot.com/members/visual/20711/runs/3562592",
+                "approval": "provisional-first-capture",
+                "referenceScope": "Shared header only; narrative/body/footer are separate checks and screenshots"
+              },
+              "screenshots": [
+                "chrome-pinnacleai-opening.png",
+                "chrome-pinnacleai-content.png",
+                "chrome-pinnacleai-footer.png"
+              ]
+            },
+            {
+              "id": "speech",
+              "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "match": true,
+                "pixelDifference": 0,
+                "visualId": 20711,
+                "runId": 3562595,
+                "url": "https://testingbot.com/members/visual/20711/runs/3562595",
+                "approval": "provisional-first-capture",
+                "referenceScope": "Shared header only; narrative/body/footer are separate checks and screenshots"
+              },
+              "screenshots": [
+                "chrome-speech-opening.png",
+                "chrome-speech-content.png",
+                "chrome-speech-footer.png"
+              ]
+            },
+            {
+              "id": "enrolment",
+              "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming autism preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming speech preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming occupational preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Enrolment incoming aba preference survives",
+                  "passed": true
+                },
+                {
+                  "name": "Service labels do not split words into narrow columns",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "match": true,
+                "pixelDifference": 0,
+                "visualId": 20711,
+                "runId": 3562598,
+                "url": "https://testingbot.com/members/visual/20711/runs/3562598",
+                "approval": "provisional-first-capture",
+                "referenceScope": "Shared header only; narrative/body/footer are separate checks and screenshots"
+              },
+              "screenshots": [
+                "chrome-enrolment-opening.png",
+                "chrome-enrolment-content.png",
+                "chrome-enrolment-footer.png"
+              ]
+            },
+            {
+              "id": "centre-suchitra",
+              "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+              "status": "passed",
+              "checks": [
+                {
+                  "name": "Correct public document loads",
+                  "passed": true
+                },
+                {
+                  "name": "Browser/OS identity is actual requested coverage",
+                  "passed": true
+                },
+                {
+                  "name": "Requested CSS viewport is actually delivered",
+                  "passed": true
+                },
+                {
+                  "name": "Canonical and one meaningful main heading",
+                  "passed": true
+                },
+                {
+                  "name": "Loaded intended route",
+                  "passed": true
+                },
+                {
+                  "name": "No page overflow",
+                  "passed": true
+                },
+                {
+                  "name": "Shared header/footer and nine usable authority links",
+                  "passed": true
+                },
+                {
+                  "name": "Owner-approved authority wording and full evidence footer are preserved",
+                  "passed": true
+                },
+                {
+                  "name": "Structured data parses and social image exists",
+                  "passed": true
+                },
+                {
+                  "name": "Usable helpline destination remains available",
+                  "passed": true
+                },
+                {
+                  "name": "Mobile navigation opens, isolates content and restores focus",
+                  "passed": true
+                },
+                {
+                  "name": "A content disclosure opens and closes",
+                  "passed": true
+                },
+                {
+                  "name": "Centre assessment keeps actual selected centre",
+                  "passed": true
+                },
+                {
+                  "name": "Opening images actually decode",
+                  "passed": true
+                },
+                {
+                  "name": "Main content exists and internal anchors resolve",
+                  "passed": true
+                }
+              ],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "match": true,
+                "pixelDifference": 0,
+                "visualId": 20711,
+                "runId": 3562604,
+                "url": "https://testingbot.com/members/visual/20711/runs/3562604",
+                "approval": "provisional-first-capture",
+                "referenceScope": "Shared header only; narrative/body/footer are separate checks and screenshots"
+              },
+              "screenshots": [
+                "chrome-centre-suchitra-opening.png",
+                "chrome-centre-suchitra-content.png",
+                "chrome-centre-suchitra-footer.png"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ci": {
+    "runId": 37572743051,
+    "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37572743051",
+    "sourceCommit": "9e59351618c837e3937c2764b591129cfabb5919",
+    "conclusion": "success",
+    "jobs": [
+      "ask-build: success",
+      "checks: success"
+    ],
+    "candidateBvt": "5/5 pass via actual official tunnel",
+    "finalTestConfiguration": "Later test-only changes need their own funded build run; do not reuse this source receipt for a later promotion"
+  },
+  "initialFindings": {
+    "shop": "Two long secondary paragraphs measured at 11px; P2 finding retained",
+    "verify": "Dedicated evidence shell remains; common-shell migration not delivered",
+    "harness": "Appium synchronous Promise evidence and escaped script were repaired; invalid attempts retained",
+    "physicalVisual": "CSS crop failed at provider; repaired viewport mode awaits a funded acceptance",
+    "provisionalHeaderDifference": {
+      "visualId": 20711,
+      "pinnacleaiPixels": 146
+    },
+    "failedReports": [
+      "audits/testingbot-suites/initial-bvt-20261007/report.json",
+      "audits/testingbot-suites/bvt-physical-20261007/report.json",
+      "audits/testingbot-suites/bvt-physical-callback-20261007/report.json"
+    ]
+  },
+  "blocker": {
+    "owner": "Website task",
+    "provider": "TestingBot",
+    "accountPlan": "Free Trial",
+    "error": "Insufficient credits. Please add credits on testingbot.com",
+    "condition": "Fund this TestingBot account or configure existing funded credentials securely",
+    "nextCheckpoint": "On funding/access change, then next authorised daily run at 09:10 IST",
+    "noRepeatedQuotaAttempts": true
+  },
+  "daily": {
+    "id": "daily-pinnacle-testingbot-regression",
+    "status": "ACTIVE",
+    "time": "09:10 IST",
+    "normalSelectedPageRuns": 74,
+    "mode": "32 daily critical, 8 presentation, 28 rotating records, 3 secondary desktop, 3 physical",
+    "network": "Tuesday/Friday provider 3G",
+    "previousWebsiteQualityJob": "maintain-pinnacle-website-quality-and-conversions confirmed PAUSED"
+  },
+  "notEstablished": [
+    "All 262 published URLs passed this new suite",
+    "Full multi-browser/multi-device page acceptance",
+    "All visual baselines approved",
+    "Cold-load or field Core Web Vitals",
+    "Real OAuth/OTP/accepted customer enquiry/purchase",
+    "Rankings, indexing, citations, qualified calls or enrolment outcomes"
+  ]
+}

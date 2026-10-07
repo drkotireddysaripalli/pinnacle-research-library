@@ -33,6 +33,6 @@ try{
   report.finishedAt=new Date().toISOString();report.overall=report.runs.length===plan.length&&report.runs.every(r=>r.exitCode===0&&r.overall==='functional-pass')?'defined-checks-pass':'failed-or-incomplete';
   report.coverage.everExecuted=Object.keys(state.coverage||{}).length;report.coverage.notYetExecuted=manifest.filter(r=>r.published&&!state.coverage?.[r.id]).map(r=>r.id);
   state.lastDay=day;state.lastReport=dir+'/report.json';await writeJson(stateFile,state);await writeJson(dir+'/report.json',report);
-  console.log(JSON.stringify({report:dir+'/report.json',overall:report.overall,coverage:report.coverage}));
+  console.log(JSON.stringify({report:dir+'/report.json',overall:report.overall,coverage:{defined:report.coverage.defined,published:report.coverage.published,everExecuted:report.coverage.everExecuted,notYetExecuted:report.coverage.notYetExecuted.length}}));
   if(report.overall!=='defined-checks-pass')process.exitCode=1;
 }finally{await fs.rm(lock,{recursive:true,force:true});}

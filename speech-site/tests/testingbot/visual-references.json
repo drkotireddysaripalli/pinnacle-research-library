@@ -2,5 +2,17 @@
   "authority": "COMMON-SHELL-BASELINE.md and tests/fixtures/shared-authority-owner-approved.json",
   "ownerApprovedSourceTag": "pinnacle-common-shell-baseline-v159-20261001",
   "approvalRule": "Review the actual provider snapshot against the approved common design before registering its visualId. Never automatically update or replace a baseline after a failed comparison.",
-  "approved": []
+  "approved": [
+    {
+      "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+      "visualId": 20711,
+      "reviewedAt": "2026-10-07T05:03:46.248Z",
+      "reviewer": "Website implementation owner",
+      "approvalBasis": "Owner-approved common-shell tag and exact authority fixture; actual CI Shop and Speech opening screenshots reviewed",
+      "sourceCommit": "9e59351618c837e3937c2764b591129cfabb5919",
+      "providerReference": "https://testingbot.com/members/visual/20711/runs/3562595",
+      "scope": "Desktop common header only; no whole-page or physical baseline approval",
+      "pixelDifferenceNote": "Speech/Enrolment/Suchitra returned 0; provisional first PinnacleAI capture reported 146 and is retained for comparison"
+    }
+  ]
 }
