@@ -1,0 +1,122 @@
+{
+  "recordedAtUtc": "2026-10-07T04:09:54Z",
+  "scope": "Read-only representative source and discovery intake; not a migration or deployment",
+  "pages": [
+    {
+      "url": "https://materials.pinnacleblooms.org/",
+      "final": "https://materials.pinnacleblooms.org/",
+      "status": 200,
+      "bytes": 1579211,
+      "title": "Weighted Blanket & Lap Pad for Sensory Regulation | Pinnacle BloomsPinnacle Blooms® Therapy Materials Library",
+      "canonical": [],
+      "sourceSha256": "4aa855c5ed7baf9f90f08e18bd83fa764628a2891c730f7292e4be2026e1a58d"
+    },
+    {
+      "url": "https://materials.pinnacleblooms.org/sensory-regulation-tools",
+      "final": "https://materials.pinnacleblooms.org/sensory-regulation-tools",
+      "status": 200,
+      "bytes": 927068,
+      "title": "Sensory Regulation & Nervous System Modulation Materials | Pinnacle BloomsSensory Regulation & Nervous System Modulation Materials",
+      "canonical": [],
+      "sourceSha256": "4c35de3369db7254be466e9a4b6c829961e6d26fb3486d8f1a8d5cec708c56a9"
+    },
+    {
+      "url": "https://interventions.pinnacleblooms.org/",
+      "final": "https://interventions.pinnacleblooms.org/",
+      "status": 200,
+      "bytes": 860402,
+      "title": "Pinnacle Blooms® Interventions Library",
+      "canonical": [],
+      "sourceSha256": "e6d1f72697b896e9adaf99bfa6c01684aa1612020ede7b126720a23e94db79ae"
+    }
+  ],
+  "discoveryEndpoints": [
+    {
+      "url": "https://materials.pinnacleblooms.org/robots.txt",
+      "status": 200,
+      "bytes": 330133,
+      "type": "text/html; charset=utf-8",
+      "device": null,
+      "final": "https://materials.pinnacleblooms.org/robots.txt",
+      "locCount": 0
+    },
+    {
+      "url": "https://materials.pinnacleblooms.org/sitemap.xml",
+      "status": 200,
+      "bytes": 330133,
+      "type": "text/html; charset=utf-8",
+      "device": null,
+      "final": "https://materials.pinnacleblooms.org/sitemap.xml",
+      "locCount": 0
+    },
+    {
+      "url": "https://interventions.pinnacleblooms.org/robots.txt",
+      "status": 200,
+      "bytes": 328315,
+      "type": "text/html; charset=utf-8",
+      "device": null,
+      "final": "https://interventions.pinnacleblooms.org/robots.txt",
+      "locCount": 0
+    },
+    {
+      "url": "https://interventions.pinnacleblooms.org/sitemap.xml",
+      "status": 200,
+      "bytes": 328315,
+      "type": "text/html; charset=utf-8",
+      "device": null,
+      "final": "https://interventions.pinnacleblooms.org/sitemap.xml",
+      "locCount": 0
+    },
+    {
+      "url": "https://interventions.pinnacleblooms.org/sensory-processing",
+      "status": 200,
+      "bytes": 1295905,
+      "type": "text/html; charset=utf-8",
+      "device": "desktop",
+      "final": "https://interventions.pinnacleblooms.org/sensory-processing",
+      "locCount": 0
+    },
+    {
+      "url": "https://materials.pinnacleblooms.org/weighted-blanket-lap-pad-proprioceptive",
+      "status": 200,
+      "bytes": 330133,
+      "type": "text/html; charset=utf-8",
+      "device": "desktop",
+      "final": "https://materials.pinnacleblooms.org/weighted-blanket-lap-pad-proprioceptive",
+      "locCount": 0
+    }
+  ],
+  "portalEntries": [
+    {
+      "url": "https://www.pinnacleblooms.org/materials",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/interventions",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "existingWorker": {
+    "name": "materials-mobile-desktop-tracker",
+    "implementationObserved": "Static desktop/mobile HTML variant fetch with metadata repair",
+    "mutationMade": false
+  },
+  "coverage": {
+    "completeSourcePageCount": null,
+    "sourceListingReceived": false,
+    "deployed": false,
+    "toolsRun": [
+      "direct HTTP/body inspection",
+      "local source/route evidence inspection",
+      "read-only current Cloudflare source intake"
+    ],
+    "notRunForThisMigration": [
+      "Screaming Frog collection crawl",
+      "GSC sitemap submission",
+      "IndexNow submission",
+      "Ahrefs post-migration audit",
+      "TestingBot library acceptance",
+      "Lighthouse library acceptance"
+    ]
+  }
+}
