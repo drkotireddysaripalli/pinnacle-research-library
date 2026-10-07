@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-07T16:47:21.941012+00:00",
+  "commit": "c0cff6c85e9e41c3b81f23a5d7ca2e11e9ee1c63",
+  "deployment": {
+    "portal": "cd67e4d3-b31a-4eef-a943-386f66bb36c0",
+    "legacy": "de8aea1b-0f76-4d1b-97ba-839b7c197add",
+    "portal_version": "81e9351b-a30e-4772-9f27-22b9096dc1bd",
+    "legacy_version": "e41ea6bf-15cf-4e68-8c91-98b03baf3858"
+  },
+  "public_url": "https://www.pinnacleblooms.org/music-therapy",
+  "counts": {
+    "template_pages_verified": 34,
+    "known_roots_verified": 32,
+    "assessment_details_sampled": 2,
+    "malformed_jsonld_before": 40,
+    "malformed_jsonld_after": 1,
+    "known_alias_links_remaining_in_covered_capture": 0,
+    "exact_titles_updated": 6,
+    "initial_live_acceptance_requests": 51,
+    "targeted_final_campaign_requests": 3,
+    "unit_tests_passed": 82,
+    "unit_tests_failed": 0,
+    "testingbot_build_cases": 5,
+    "retained_assets": 3263,
+    "uploaded_assets": 0,
+    "existing_routes_preserved": 229,
+    "narrow_routes_added": 26,
+    "final_routes": 255,
+    "registered_centre_paths_in_case_guard": 62,
+    "indexnow_accepted": 36,
+    "indexnow_failed": 0
+  },
+  "remaining": [
+    {
+      "url": "https://www.pinnacleblooms.org/therapeuticai-effectiveness-study",
+      "condition": "Malformed MedicalStudy object remains. Reconcile scientific fields and patent wording with the current evidence ledger before publishing a valid replacement.",
+      "owner": "Website owner in this chat",
+      "trigger": "Source-based research graph correction"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/everyday-therapy-program",
+      "condition": "This legacy page declares the different everyday-therapy-home-study canonical. It intentionally bypasses a self-canonical repair; establish content equivalence before redirecting or replacing it.",
+      "owner": "Website owner in this chat",
+      "trigger": "Canonical/content equivalence decision"
+    },
+    {
+      "condition": "Finish durable enquiry request/receipt and operational outcome linkage described in ACQUISITION-RECEIPT-REMAINING-20261007.md. Current legacy intake returns true; source review is not durable idempotency or proven attribution.",
+      "owner": "Website owner; actual call/admission evidence from established operational systems",
+      "trigger": "Versioned receiver contract and isolated QA implementation"
+    },
+    {
+      "condition": "Broad metadata-length, internal-discovery and performance audit flags remain separately triaged. No full-site cleared count, new health score, rich-result award, AI citation or LCP improvement is claimed.",
+      "owner": "Website owner",
+      "trigger": "Changed evidence in existing completed audits or reproducible affected-template defect"
+    }
+  ],
+  "qualifications": [
+    "JSON syntax and canonical/OG agreement are scoped checks, not all schema.org rich-result requirements.",
+    "TestingBot BVT was Chrome against the exact five-page build; local Firefox/WebKit checks passed. This release did not rerun every physical device or claim all-page visual coverage.",
+    "IndexNow returned 200 with key validation; accepted submission does not establish indexing or Google inclusion.",
+    "Actual call qualification, visits and admissions were not measured in this metadata release."
+  ]
+}

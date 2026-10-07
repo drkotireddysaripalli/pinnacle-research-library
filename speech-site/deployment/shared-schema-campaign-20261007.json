@@ -1,0 +1,50 @@
+{
+  "id": "shared-schema-campaign-20261007",
+  "phase": "verified-configuration",
+  "at": "2026-10-07T16:44:44.851Z",
+  "baseCommit": "9bf3841ab1ba9b3e64d51ff87d90ef1cd512d388",
+  "rollback": [
+    {
+      "version_id": "a2d15402-725f-4676-b605-e7d7247390af",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 255,
+  "moduleCount": 9,
+  "originalHashes": {
+    "entry.mjs": "0ce5519673035692f4f48cb218c50da48e3708f879f6589861ed19fe45295d8d",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6"
+  },
+  "commit": "c0cff6c85e9e41c3b81f23a5d7ca2e11e9ee1c63",
+  "candidate": "e41ea6bf-15cf-4e68-8c91-98b03baf3858",
+  "hashes": {
+    "entry.mjs": "6238b793a29f12f5618441dea85512e73453b00402b3ce65b13a07c20cae1b20",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6"
+  },
+  "deployment": "de8aea1b-0f76-4d1b-97ba-839b7c197add",
+  "promotedAt": "2026-10-07T16:45:07.130Z",
+  "verifiedAt": "2026-10-07T16:45:16.120Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-verify-route",
+    "pinnacle-ask",
+    "pinnacle-ask-mcp",
+    "pinnacle-centre-search-repair",
+    "pinnacle-helpline"
+  ],
+  "routesPreserved": 255,
+  "bindingsPreserved": true
+}

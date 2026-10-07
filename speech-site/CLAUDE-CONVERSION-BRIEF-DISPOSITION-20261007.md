@@ -35,4 +35,5 @@ For each item return status, exact URLs, deployed revision, proof, unresolved de
 - `deployment/enrolment-receipt-candidate-20261007.json`
 - `WEBSITE-ADS-ACCEPTANCE-STATUS-20261007.md`
 - `ACQUISITION-RECEIPT-REMAINING-20261007.md`
-- Growth evidence: `../..` is not a deployment destination; the authoritative local records remain in `work/pinnacle-growth-system/lead-path-closeout-20261006/` under the calling workspace.
+- Existing acquisition evidence: `work/pinnacle-growth-system/lead-path-closeout-20261006/` under the calling workspace.
+- Shared repair acceptance: `work/pinnacle-growth-system/shared-repair-20261007/` under the calling workspace. Live proof and the final receipt identify the delivered revision; captured source checks alone do not establish deployment.
