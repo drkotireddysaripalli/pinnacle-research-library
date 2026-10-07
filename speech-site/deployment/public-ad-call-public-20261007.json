@@ -1,0 +1,64 @@
+{
+  "at": "2026-10-07T09:24:01.988Z",
+  "scope": "Direct public visits; Google vendor requests blocked; callback numbers isolated QA fixtures; no paid click, phone call, enquiry submission, login or real-family record.",
+  "module": "/pinnacle-pages-scripts/portal-ad-call-a2e131ede01e98c7.mjs",
+  "cases": [
+    {
+      "name": "guntur-phone",
+      "width": 390,
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+      "headers": {
+        "coverage": "public-20261007",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      "proof": {
+        "enabled": true,
+        "configs": 1,
+        "centralTargets": 8,
+        "displayAndDial": true,
+        "localsUntouched": true
+      },
+      "returningCookie": true,
+      "withdrawal": true,
+      "passed": true
+    },
+    {
+      "name": "occupational-desktop",
+      "width": 1440,
+      "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "headers": {
+        "coverage": "public-20261007",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      "proof": {
+        "enabled": true,
+        "configs": 1,
+        "centralTargets": 72,
+        "displayAndDial": true,
+        "localsUntouched": true
+      },
+      "returningCookie": true,
+      "withdrawal": true,
+      "passed": true
+    },
+    {
+      "name": "enrolment-small-phone",
+      "width": 320,
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "headers": {
+        "coverage": "public-20261007",
+        "cacheControl": "public, max-age=0, must-revalidate"
+      },
+      "proof": {
+        "enabled": true,
+        "configs": 1,
+        "centralTargets": 7,
+        "displayAndDial": true,
+        "localsUntouched": true
+      },
+      "returningCookie": true,
+      "withdrawal": true,
+      "passed": true
+    }
+  ]
+}
