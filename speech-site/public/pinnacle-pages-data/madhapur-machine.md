@@ -8,7 +8,7 @@ Find Pinnacle Blooms Network’s HitechCity, Madhapur centre at Pinnacle Blooms 
 Pinnacle Blooms Network, Beside Metro Station, Shop No - 1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081
 [Directions](https://goo.gl/maps/97GmATmYwGfYgjMx7) · [Contact](tel:+919100181181)
 Find us at Pinnacle Blooms Network, Beside Metro Station, Shop No - 1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081. Use the linked Google location and confirm your appointment, entrance, floor and access arrangements with the team before travelling.
-The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. Local telephone and undated review snapshot come from the supplied centre workbook. Opening hours, available professionals and actual appointments require confirmation.
+Network hours are 9:00 am–7:00 pm, excluding Sundays, second Saturdays, national holidays and the published holiday calendar. Confirm appointments and branch-specific changes before travelling. The receiving team confirms current service, professional, fees, entrance and access arrangements. Local telephone and the undated review snapshot come from the supplied centre workbook; dated live Google content is separately attributed.
 
 ## Life-first direction
 The child’s self-sufficient, mainstream-included life shapes the abilities to understand, goals, people, methods, everyday practice and review. Progress remains individual.

@@ -8,7 +8,7 @@ Find Pinnacle Blooms Network’s Rajahmundry centre at Pinnacle Blooms Network, 
 Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103
 [Directions](https://goo.gl/maps/NtbHgr9niGUAS1y78) · [Contact](tel:+919100181181)
 Find us at Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103. Use the linked Google location and confirm your appointment, entrance, floor and access arrangements with the team before travelling.
-The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. Local telephone and undated review snapshot come from the supplied centre workbook. Opening hours, available professionals and actual appointments require confirmation.
+Network hours are 9:00 am–7:00 pm, excluding Sundays, second Saturdays, national holidays and the published holiday calendar. Confirm appointments and branch-specific changes before travelling. The receiving team confirms current service, professional, fees, entrance and access arrangements. Local telephone and the undated review snapshot come from the supplied centre workbook; dated live Google content is separately attributed.
 
 ## Life-first direction
 The child’s self-sufficient, mainstream-included life shapes the abilities to understand, goals, people, methods, everyday practice and review. Progress remains individual.

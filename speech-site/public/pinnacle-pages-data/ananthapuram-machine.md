@@ -8,7 +8,7 @@ Find Pinnacle Blooms Network’s Ananthapuram centre at 2nd Cross Road, opposite
 2nd Cross Road, opposite SIU Church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh 515001, India
 [Directions](https://maps.app.goo.gl/5CP73TRFTLFzJ7gEA) · [Contact](tel:+919100181181)
 Find us on 2nd Cross Road, opposite SIU Church and beside BABY Hospital, Ashoknagar. Use the linked Pinnacle Anantapur directions and confirm your appointment address, entrance and access arrangements before travelling.
-The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. Local telephone and undated review snapshot come from the supplied centre workbook. Opening hours, available professionals and actual appointments require confirmation.
+Network hours are 9:00 am–7:00 pm, excluding Sundays, second Saturdays, national holidays and the published holiday calendar. Confirm appointments and branch-specific changes before travelling. The receiving team confirms current service, professional, fees, entrance and access arrangements. Local telephone and the undated review snapshot come from the supplied centre workbook; dated live Google content is separately attributed.
 
 ## Life-first direction
 The child’s self-sufficient, mainstream-included life shapes the abilities to understand, goals, people, methods, everyday practice and review. Progress remains individual.

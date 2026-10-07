@@ -8,7 +8,7 @@ Find Pinnacle Blooms Network’s Warangal centre at Pinnacle Blooms Network, Nea
 Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, Telangana 506001
 [Directions](https://goo.gl/maps/xouQpLfk1oDbVVtY8) · [Contact](tel:+919100181181)
 Find us at Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, Telangana 506001. Use the linked Google location and confirm your appointment, entrance, floor and access arrangements with the team before travelling.
-The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. Local telephone and undated review snapshot come from the supplied centre workbook. Opening hours, available professionals and actual appointments require confirmation.
+Network hours are 9:00 am–7:00 pm, excluding Sundays, second Saturdays, national holidays and the published holiday calendar. Confirm appointments and branch-specific changes before travelling. The receiving team confirms current service, professional, fees, entrance and access arrangements. Local telephone and the undated review snapshot come from the supplied centre workbook; dated live Google content is separately attributed.
 
 ## Life-first direction
 The child’s self-sufficient, mainstream-included life shapes the abilities to understand, goals, people, methods, everyday practice and review. Progress remains individual.

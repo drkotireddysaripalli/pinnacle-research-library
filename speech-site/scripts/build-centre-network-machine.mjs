@@ -1,12 +1,19 @@
 import fs from 'node:fs/promises';import path from 'node:path';
 import {centreRegister,centreWalkthrough} from '../src/data/centre-network-content.ts';
 import {centreEcosystem,centreStoryPlaylists,centreNarrativeChapters,centreHomeParticipation} from '../src/data/centre-story.ts';
+import {centreHoursPolicy,centreStaffCommitment,matchedIssuedCertificates} from '../src/data/centre-trust.ts';
 const root=path.resolve(import.meta.dirname,'..'),dir=path.join(root,'public/pinnacle-pages-data');
+const certificateDocuments=JSON.parse(await fs.readFile(path.join(root,'src/data/centre-certificates-20261007.json'),'utf8'));
+const googleLocations=JSON.parse(await fs.readFile(path.join(root,'src/data/centre-google-locations.json'),'utf8'));
 const rows=[];
 for(const c of centreRegister){
  const file=path.join(dir,c.id+'-evidence.json'),record=JSON.parse(await fs.readFile(file,'utf8'));
  Object.assign(record,{updated:'2026-10-07',localTelephone:c.directTelephone,coordinates:c.coordinates,nearbyCentres:c.nearbyCentres,catchmentLocalities:c.catchmentLocalities,catchmentPostcodes:c.catchmentPostcodes,walkthrough:centreWalkthrough(c.id),googleBusinessUrl:c.googleBusinessUrl,reviewSnapshot:c.reviewSnapshot,resources:['https://pinnacleblooms.org/ask','https://www.pinnacleblooms.org/faq','https://www.pinnacleblooms.org/sunshine','https://materials.pinnacleblooms.org/','https://www.pinnacleblooms.org/books','https://www.pinnacleblooms.org/shop']});
  if(c.pageStatus==='centre-enquiry'){
+  record.openingHours=centreHoursPolicy;record.staffingCommitment=centreStaffCommitment;
+  record.issuedFacilityDocuments=matchedIssuedCertificates(c,certificateDocuments);
+  const google=googleLocations.centres.find(row=>row.centreId===c.id&&row.status==='matched');
+  if(google)record.googleContent={endpoint:'/centers/_google/'+c.id,source:'Google Business Profile via authenticated Windsor connection',refresh:'On-demand after a 24-hour cache; dated provider content is attributed in the visible section. The featured five-star selection is separate from the overall Google rating.'};
   record.pinnacleEcosystem=centreEcosystem;record.networkStoryPlaylists=centreStoryPlaylists;
   record.pinnacleJourney={chapters:centreNarrativeChapters,homeParticipation:centreHomeParticipation,individualProgress:true,source:'https://www.pinnacleblooms.org/pinnacleai'};
   const extra=['Centre network narrative', 'Primary contact: 9100 181 181. The local centre telephone is an alternative.',...(c.directTelephone?['Local alternative: '+c.directTelephone]:[]),'Nearby centres: '+c.nearbyCentres.map(p=>p.name+' '+p.url).join('; '),'Nearby localities: '+c.catchmentLocalities.join(', '),'Nearby postcodes: '+c.catchmentPostcodes.join(', '),'Google listing: '+c.googleBusinessUrl,...(centreWalkthrough(c.id)?['Centre walkthrough: '+centreWalkthrough(c.id).url]:[]),...centreEcosystem.map(p=>p.title+' — '+p.role+'\n'+p.text+'\nhttps://www.pinnacleblooms.org'+p.path),...centreStoryPlaylists.map(p=>p.title+'\n'+p.text+'\n'+p.url),'Network stories are not a roster of this branch’s current staff. Individual experiences do not guarantee every child’s outcome.','Resources:',...record.resources];

@@ -1,13 +1,13 @@
 # Speech & Autism Therapy in Suchitra | Pinnacle Blooms
 Canonical: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india
-Updated: 2026-10-06
+Updated: 2026-10-07
 
 For your Suchitra visit, use our address above Mahesh Bank, near Municipal Park and Mee Seva at Suchitra Circle, Hyderabad. Call 9100 181 181 to discuss your child’s everyday priorities and confirm a suitable professional, service, appointment and fees before visiting.
 
 ## Location and visit
 Adjacent to Municipal Park and Mee Seva, above Mahesh Bank, Suchitra Circle, Bowenpally, Hyderabad, Telangana 500067, India
 [Directions](https://goo.gl/maps/UCxwGqhHNSZmmMRf7) · [Google profile](https://maps.google.com/maps?cid=13957310731181816583) · [Contact](tel:+919100181181)
-The receiving team confirms the current service, professional, appointment, fee, entrance and access arrangements. No current branch opening hours, direct local phone or review rating are inferred.
+The owner-confirmed network schedule is 09:00–19:00, excluding Sundays, the second Saturday of each month, national holidays and the published holiday calendar. The receiving team confirms the current service, professional, appointment, fee, branch-specific change, entrance and access arrangements. Named branch staff assignments and current individual review ratings are not inferred.
 
 ## Life-first direction
 Growing self-sufficiency and mainstream participation shape the abilities to understand, goals, people, methods, everyday practice and review. Progress remains individual.
@@ -37,10 +37,17 @@ Suppose the child places a block in the familiar adult’s open hand after a ges
 ### 6. Make a human review decision
 For this example, the family and professional keep practice with the familiar adult and clarify the invitation cue before adding a peer opportunity. They review whether the child can make the invitation comfortably, what help remains useful and whether the next person or setting fits.
 
-## Published professional profiles
-- [Manikonda Kalyani · Speech Therapist](https://www.pinnacleblooms.org/staff/Manikonda-kalyani/42082): confirm the professional and support available for your visit.
-- [Pujitha Sunkari · Behavioural Therapist](https://www.pinnacleblooms.org/staff/pujitha-sunkari/41101): confirm the professional and support available for your visit.
-- [Chokkapu Venkatalakshmi · Occupational Therapist](https://www.pinnacleblooms.org/staff/Chokkapu-venkatalakshmi/69096): confirm the professional and support available for your visit.
+## Pinnacle network staffing commitment
+Qualified. Appropriately certified. Full-time. Permanent.
+Pinnacle’s network staffing commitment is qualified, appropriately certified, full-time and permanent therapy staff, with no freelance or part-time therapy staffing.
+Network staffing commitment; public staff voices do not identify current branch assignments.
+[Public care and conduct standards](https://www.pinnacleblooms.org/staff-declaration)
+
+## Network appointment hours
+9:00 am–7:00 pm
+Closed Sundays, the second Saturday of each month, national holidays and dates in the published holiday calendar.
+[2026 holiday calendar · PDF](https://www.pinnacleblooms.org/assets/Pinnacle-Holiday-Calendar-2026.pdf)
+Confirm your appointment and any branch-specific change before travelling.
 
 ## Questions
 ### Where is Pinnacle Blooms Suchitra?

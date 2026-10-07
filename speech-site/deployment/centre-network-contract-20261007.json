@@ -1,0 +1,502 @@
+{
+  "at": "2026-10-07T10:25:43.776Z",
+  "passed": 62,
+  "rows": [
+    {
+      "id": "suchitra",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "assets": 72,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "gurunanak",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "assets": 66,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "jayanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+      "assets": 58,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "annanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india",
+      "assets": 72,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "delhi",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "assets": 28,
+      "localPhone": true,
+      "photos": 2,
+      "status": "location-status"
+    },
+    {
+      "id": "warangal",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+      "assets": 63,
+      "localPhone": true,
+      "photos": 2,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "asraonagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+      "assets": 59,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "ananthapuram",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "assets": 68,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "attapur",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+      "assets": 59,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "bnreddynagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+      "assets": 54,
+      "localPhone": true,
+      "photos": 0,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "begumpet",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+      "assets": 72,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "bhimavaram",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+      "assets": 79,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "chandanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "assets": 59,
+      "localPhone": true,
+      "photos": 2,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "dilsukhnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "assets": 63,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "eastmarredpally",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+      "assets": 68,
+      "localPhone": true,
+      "photos": 2,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "eluru",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+      "assets": 72,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "gachibowli",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+      "assets": 69,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "gajuwaka",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+      "assets": 67,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "guntur",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+      "assets": 67,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "habsiguda",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+      "assets": 61,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "hayathnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+      "assets": 58,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "himayatnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+      "assets": 60,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "madhapur",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+      "assets": 60,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "hydernagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+      "assets": 54,
+      "localPhone": true,
+      "photos": 0,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "indiranagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+      "assets": 58,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "jagadamba",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+      "assets": 77,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "jublieehills",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jubilee-hills-hyderabad-telangana-india",
+      "assets": 54,
+      "localPhone": false,
+      "photos": 0,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "kachiguda",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+      "assets": 59,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "kadapa",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+      "assets": 54,
+      "localPhone": true,
+      "photos": 0,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "kakinada",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+      "assets": 63,
+      "localPhone": true,
+      "photos": 2,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "karimnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+      "assets": 67,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "khajaguda",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+      "assets": 76,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "khammam",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+      "assets": 75,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "kondapur",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+      "assets": 54,
+      "localPhone": true,
+      "photos": 0,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "kukatpally",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "assets": 70,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "kurnool",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+      "assets": 74,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "lbnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "assets": 71,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "labbipet",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+      "assets": 79,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "mvp",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+      "assets": 54,
+      "localPhone": true,
+      "photos": 0,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "madhurawada",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+      "assets": 59,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "mahbubnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+      "assets": 82,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "marathahalli",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+      "assets": 68,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "miryalaguda",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+      "assets": 62,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "nad",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+      "assets": 74,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "nallagandla",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+      "assets": 68,
+      "localPhone": true,
+      "photos": 2,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "nandyala",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "assets": 67,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "nellore",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+      "assets": 59,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "nizamabad",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+      "assets": 54,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "nizampet",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "assets": 64,
+      "localPhone": true,
+      "photos": 2,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "ongole",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "assets": 64,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "pragathinagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+      "assets": 80,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "rajahmundry",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+      "assets": 75,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "srnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+      "assets": 63,
+      "localPhone": true,
+      "photos": 2,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "santoshnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+      "assets": 73,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "srikakulam",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "assets": 67,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "suchitraii",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "assets": 54,
+      "localPhone": false,
+      "photos": 0,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "tirupati",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "assets": 62,
+      "localPhone": true,
+      "photos": 3,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "usa",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-california-usa",
+      "assets": 10,
+      "localPhone": false,
+      "photos": 0,
+      "status": "location-status"
+    },
+    {
+      "id": "uppal",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+      "assets": 74,
+      "localPhone": true,
+      "photos": 4,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "vanasthalipuram",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+      "assets": 54,
+      "localPhone": true,
+      "photos": 0,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "vidyanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+      "assets": 59,
+      "localPhone": true,
+      "photos": 2,
+      "status": "centre-enquiry"
+    },
+    {
+      "id": "vikrampuri",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+      "assets": 59,
+      "localPhone": true,
+      "photos": 1,
+      "status": "centre-enquiry"
+    }
+  ]
+}

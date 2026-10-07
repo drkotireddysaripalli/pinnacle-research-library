@@ -20,17 +20,44 @@ export function approvedEndpoint(endpoint, origin) {
  if(typeof endpoint!=='string'||!endpoint)return null;
  try{const u=new URL(endpoint,origin);return u.origin===origin&&u.pathname==='/api/enrolment'&&!u.search&&!u.hash&&!u.username&&!u.password?u.href:null;}catch{return null;}
 }
-export async function submitEnrolment(endpoint, payload, {origin,fetchImpl=fetch,timeoutMs=15000}={}) {
+export const ATTEMPT_STORAGE_KEY='pbn-enrolment-request-v1';
+const requestKey=/^[A-Za-z0-9-]{8,100}$/;
+export function validAcceptedReceipt(receipt,requestId){return receipt?.schemaVersion===1&&receipt.requestId===requestId&&typeof receipt.id==='string'&&requestKey.test(receipt.id);}
+// Essential request metadata only. Contact details, note, preferences, query
+// strings and advertising identifiers never enter persistent browser storage.
+export function createAttemptStore(storage){
+ function read(){
+  const raw=storage.getItem(ATTEMPT_STORAGE_KEY);if(!raw)return null;
+  const entry=JSON.parse(raw);
+  if(entry?.schemaVersion!==1||!requestKey.test(entry.requestId||'')||!['pending','unknown','accepted'].includes(entry.state)||!Number.isFinite(entry.createdAt))throw new Error('invalid-request-state');
+  if(entry.state==='accepted'&&!validAcceptedReceipt(entry.receipt,entry.requestId)&&entry.contractVersion!==0)throw new Error('invalid-request-receipt');
+  return entry;
+ }
+ function write(entry){
+  const safe={schemaVersion:1,requestId:entry.requestId,state:entry.state,createdAt:entry.createdAt};
+  if(entry.state==='accepted'){
+   if(validAcceptedReceipt(entry.receipt,entry.requestId))safe.receipt={schemaVersion:1,requestId:entry.requestId,id:entry.receipt.id};
+   else if(entry.contractVersion===0)safe.contractVersion=0;
+   else throw new Error('invalid-request-receipt');
+  }
+  storage.setItem(ATTEMPT_STORAGE_KEY,JSON.stringify(safe));
+  return safe;
+ }
+ return {read,write,clear:()=>storage.removeItem(ATTEMPT_STORAGE_KEY)};
+}
+export async function submitEnrolment(endpoint, payload, {origin,fetchImpl=fetch,timeoutMs=15000,receiptRequired=false}={}) {
  const target=approvedEndpoint(endpoint,origin);
  if(!target)return {state:'unavailable'};
  const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),timeoutMs);
  try{
   const response=await fetchImpl(target,{method:'POST',headers:{'content-type':'application/json','accept':'application/json','idempotency-key':payload.requestId},credentials:'omit',cache:'no-store',redirect:'error',referrerPolicy:'no-referrer',signal:controller.signal,body:JSON.stringify(payload)});
   const json=await response.json();
-  // HTTP success alone is not acceptance. The same-origin adapter emits this
-  // envelope only after the existing PinnacleAI endpoint returns its exact true.
-  if(response.ok&&json?.status==='accepted')return {state:'accepted'};
-  if([400,422,429].includes(response.status)&&json?.status==='rejected')return {state:'rejected'};
+  // Acceptance requires the durable receiver receipt for this exact key.
+  if(response.ok&&json?.status==='accepted'&&validAcceptedReceipt(json.receipt,payload.requestId))return {state:'accepted',receipt:json.receipt};
+  // Explicit transitional legacy boundary. This is not a durable receipt and
+  // must never be described as deduplicated receiving-system acceptance.
+  if(!receiptRequired&&response.ok&&json?.status==='accepted'&&json.contractVersion===0)return {state:'accepted',contractVersion:0};
+  if([400,409,422,429].includes(response.status)&&json?.status==='rejected')return {state:'rejected'};
   return {state:'unknown'};
  }catch{return {state:'unknown'};}finally{clearTimeout(timer);}
 }

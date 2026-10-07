@@ -18,7 +18,8 @@ for(const c of centreRegister){
   const business=graph.find(e=>e['@type']==='LocalBusiness');assert(business,c.id+' local business');assert.equal(business.telephone,'+919100181181');
   assert(html.includes('id="google-reviews"')&&html.includes('id="nearby-centres"')&&html.includes('id="centre-books"'),c.id+' complete network journey');
   for(const block of ['centre-pinnacleai','centre-abilityscore','centre-readiness','centre-paradigm','centre-self-sufficient','centre-mainstream','centre-verify','centre-research','centre-citations'])assert(ids.includes(block),c.id+' visible ecosystem '+block);
-  assert.equal(nodes.filter(n=>n.tagName==='button'&&attr(n,'class')==='playlist-play').length,4,c.id+' four visible playlist players');
+  assert.equal(nodes.filter(n=>n.tagName==='button'&&attr(n,'data-trust-video')).length,4,c.id+' four public staff/family video previews');
+  assert.equal(nodes.filter(n=>n.tagName==='figure'&&attr(n,'class')==='trust-art').length,4,c.id+' four coordinated trust illustrations');
   if(c.directTelephone)assert(html.includes('tel:'+c.directTelephone),c.id+' local phone alternative');
   for(const section of ['find-us','life-first','support','first-visit','connected-pathway','family-resources','local-evidence','questions'])assert(ids.includes(section),c.id+' '+section);
   for(const chapter of ['understand','everyday','review','life'])assert(ids.includes('centre-chapter-'+chapter),c.id+' complete PinnacleAI chapter '+chapter);

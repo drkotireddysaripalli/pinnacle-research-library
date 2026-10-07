@@ -33,6 +33,7 @@ jobs:
       - run: node --test scripts/test-book-asset-inventory.mjs scripts/test-vernacular-typography.mjs scripts/test-book-cart-links.mjs
       - run: node --test scripts/test-staff-health.mjs scripts/test-legacy-social-metadata.mjs scripts/test-legacy-schema.mjs
       - run: node --test scripts/test-paid-centre-entry.mjs scripts/test-centre-measurement.mjs
+      - run: node --test scripts/test-centre-google-feed.mjs scripts/test-enrolment-receipt.mjs
       - run: npm run build:ask
   checks:
     runs-on: ubuntu-latest
@@ -86,6 +87,14 @@ jobs:
             sleep 1
           done
           exit 1
+      - name: Changed centre gallery and Google feed regressions
+        if: github.event_name != 'pull_request'
+        env:
+          CENTRE_TRUST_TEST_BASE: http://127.0.0.1:4340
+          CENTRE_GOOGLE_TEST_BASE: http://127.0.0.1:4340
+        run: |
+          node scripts/validate-centre-trust-browser.mjs
+          node scripts/validate-centre-google-browser.mjs
       - name: Connect TestingBot to this build
         if: github.event_name != 'pull_request'
         uses: testingbot/testingbot-tunnel-action@10358e89858c67a0e5c7aadb1b03ef0e2d320d20

@@ -1,0 +1,118 @@
+---
+import {Image} from 'astro:assets';
+import Icon from './Icon.astro';
+import {phone,url} from '../data/site';
+import {centreStaffCommitment,centreTrustImages,centreTrustVideos,centreTrustCollections} from '../data/centre-trust';
+type Kind='staff'|'families'|'visit'|'life'|'photos';
+interface Props {
+ kind?:Kind;
+ name?:string;
+ enquiry?:string;
+ photos?:{image:ImageMetadata;full:string;title:string;alt:string}[];
+ hasExterior?:boolean;
+}
+const {kind='staff',name='',enquiry='',photos=[],hasExterior=true}=Astro.props;
+const mode=kind as Kind;
+const artwork=import.meta.glob<{default:ImageMetadata}>('../assets/centre-trust-*-20261007.png',{eager:true});
+const imageSpec=mode!=='photos'?centreTrustImages[mode]:null;
+const image=imageSpec?artwork['../assets/'+imageSpec.file]?.default:null;
+if(imageSpec&&!image)throw new Error('Missing approved centre trust artwork: '+imageSpec.file);
+const people=mode==='staff';
+const isVideo=mode==='staff'||mode==='families';
+const clips=isVideo?centreTrustVideos[mode]:[];
+const collections=isVideo?centreTrustCollections[mode]:[];
+const sectionId=mode==='staff'?'people-and-families':mode==='families'?'family-voices':mode==='visit'?'first-visit':mode==='life'?'centre-life-outcome':'centre-gallery';
+const railId='centre-trust-rail-'+mode;
+const shownPhotos=photos.slice(0,2);
+const remainingPhotos=Math.max(0,photos.length-shownPhotos.length);
+---
+{isVideo&&<section class:list={['local-section','trust-section',{'trust-family':!people}]} id={sectionId} data-trust-gallery>
+ <div class="local-wrap">
+  <div class="trust-introduction">
+   <div>
+    <p class="local-kicker">{people?'Our people. A shared purpose.':'Parents and families, in their own words'}</p>
+    <h2>{people?<>People who stay with <em>the child’s journey.</em></>:<>Hear the moments that <em>matter to families.</em></>}</h2>
+    <p class="local-lead">{people?'Continuity, accountability and child safety support a clear direction: your child’s growing abilities, independence and participation in mainstream life.':'Listen to the questions, choices and everyday changes families choose to share. Their experiences can help you prepare your own conversation.'}</p>
+    {people?<><h3 class="trust-commitment">{centreStaffCommitment.headline}</h3><p>{centreStaffCommitment.text}</p><ul class="trust-reasons">{centreStaffCommitment.reasons.map(reason=><li><Icon name="check" size={18}/>{reason}</li>)}</ul><p class="trust-source">Network staffing commitment · confirmed 7 October 2026. <a href={url(centreStaffCommitment.sourceUrl)}>Read our public care and conduct standards <Icon name="arrow" size={16}/></a></p></>:<><p><strong>Everyday life gives progress its meaning.</strong> Hear parents discuss AbilityScore®, participation, confidence and the support around their child.</p><p class="trust-source">These are public Pinnacle network experiences. Featured families are not presented as families of this branch; an individual experience does not guarantee another child’s result.</p></>}
+   </div>
+   <figure class="trust-art"><Image src={image!} alt={imageSpec!.alt} widths={[360,540,800]} sizes="(max-width:760px) 92vw, 40vw" format="webp" quality={82} loading="lazy"/><figcaption>Illustrative Pinnacle family-and-care artwork.</figcaption></figure>
+  </div>
+  <div class="trust-rail-heading"><div><h3>{people?'Meet our professionals through their words':'Hear directly from Pinnacle parents'}</h3><p>Choose a video, or explore a full collection.</p></div><div class="trust-rail-controls"><button type="button" data-trust-scroll="previous" aria-controls={railId} aria-label={'Scroll '+(people?'professionals’':'families’')+' videos backward'}><span aria-hidden="true">←</span></button><button type="button" data-trust-scroll="next" aria-controls={railId} aria-label={'Scroll '+(people?'professionals’':'families’')+' videos forward'}><span aria-hidden="true">→</span></button></div></div>
+  <ul class="trust-rail" id={railId} tabindex="0" aria-label={people?'Pinnacle network professionals’ videos and collections':'Pinnacle network family videos and collections'}>
+   {clips.map(clip=><li class="trust-video-card"><button class="trust-video-opener" type="button" data-trust-video={clip.embed} data-trust-title={clip.title} aria-haspopup="dialog" aria-label={'Open video: '+clip.title}>
+    <span class="trust-portrait"><img src={'https://i.ytimg.com/vi/'+clip.video+'/hqdefault.jpg'} width="480" height="360" loading="lazy" referrerpolicy="no-referrer" alt={'Official Pinnacle video preview · '+clip.title}/><span class="trust-video-label"><Icon name={clip.icon} size={18}/>{clip.label}</span><span class="trust-play"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4.5v15l12-7.5Z"/></svg></span><span class="trust-portrait-caption">{clip.watch}</span></span>
+    <span class="trust-video-copy"><span class="trust-video-series">{clip.title}</span><strong>{clip.question}</strong><span>{clip.text}</span></span>
+   </button></li>)}
+   <li class="trust-collection-card"><Icon name={people?'people':'heart'} size={36}/><h3>Explore the full collections</h3><p>{people?'Hear more about our people’s purpose and how they explain the work.':'Choose the experience or language that helps your family’s conversation.'}</p><ul>{collections.map(collection=><li><a href={'https://www.youtube.com/playlist?list='+collection.list} target="_blank" rel="noopener"><Icon name={collection.icon} size={20}/><span>{collection.label}</span><Icon name="arrow" size={18}/></a></li>)}</ul><p class="trust-source">Public network collections on Pinnacle’s YouTube channel.</p></li>
+  </ul>
+  {people&&<p class="trust-source">These are network voices. A public video does not establish a speaker’s current branch assignment or individual professional registration. Ask the receiving team about the professional for your appointment.</p>}
+ </div>
+ <dialog class="trust-dialog" data-trust-dialog aria-labelledby={'trust-dialog-title-'+mode}>
+  <div class="trust-dialog-heading"><h3 id={'trust-dialog-title-'+mode} data-trust-dialog-title>Pinnacle network video</h3><button type="button" data-trust-close><span aria-hidden="true">×</span> Close video</button></div>
+  <div class="trust-player" data-trust-player></div><p>Public Pinnacle network video. <a data-trust-original target="_blank" rel="noopener">Watch on YouTube <Icon name="arrow" size={18}/></a></p>
+ </dialog>
+</section>}
+{mode==='visit'&&<section class="local-section local-wrap trust-visit" id={sectionId}>
+ <div class="trust-introduction">
+  <div><p class="local-kicker">Your first visit · understand before deciding</p><h2>Child-centred. <em>Parent and family-centred.</em></h2><p class="local-lead">Start with what your child enjoys, what they can already do and the everyday priorities that matter to your family.</p><p>A clinician-administered <a href={url('/abilityscore')}><strong>AbilityScore® displayed on 0–1000</strong></a> helps explain the starting picture. Your professional considers your child’s age, abilities, support and everyday context, then connects it with meaningful next steps toward a self-sufficient, mainstream-included life.</p><p>You should leave understanding more than a number: what was observed, what helps your child, which goal matters next and how the team will review it with you.</p></div>
+  <figure class="trust-art"><Image src={image!} alt={imageSpec!.alt} widths={[360,540,800]} sizes="(max-width:760px) 92vw, 40vw" format="webp" quality={82} loading="lazy"/><figcaption>Illustrative first-visit conversation.</figcaption></figure>
+ </div>
+ <ol class="trust-visit-steps"><li><Icon name="voice"/><h3>Bring the whole child into the conversation.</h3><p>Share interests, developmental history, a familiar everyday moment and any reports you want to discuss. Your child’s comfort and choices matter.</p></li><li><Icon name="measure"/><h3>Understand the assessment and its meaning.</h3><p>Ask what will be assessed, who will meet your child, their qualifications, what is included, the appointment time and applicable fees.</p></li><li><Icon name="compass"/><h3>Choose a useful next step together.</h3><p>Discuss a meaningful goal, relevant support, family participation and how reassessment and your observations will guide the plan.</p></li></ol>
+ <div class="local-actions"><a class="local-button" href={enquiry} data-cta="centre-enquiry"><Icon name="plan"/> Request an assessment at {name}</a><a class="local-text-link" href={phone.href} data-cta="centre-call"><Icon name="phone"/> Talk to us · {phone.display}</a><a class="local-text-link" href={url('/books/resources/first-conversation')}><Icon name="book"/> Prepare your first conversation</a></div>
+</section>}
+{mode==='life'&&<section class="local-section trust-life" id={sectionId}><div class="local-wrap trust-introduction">
+ <figure class="trust-art"><Image src={image!} alt={imageSpec!.alt} widths={[360,540,800]} sizes="(max-width:760px) 92vw, 40vw" format="webp" quality={82} loading="lazy"/><figcaption>Illustrative life direction; individual outcomes vary.</figcaption></figure>
+ <div><p class="local-kicker">The direction of every useful step</p><h2>A child’s abilities matter <em>in the life they make possible.</em></h2><p class="local-lead">Making a choice. Being understood. Getting ready. Joining play. Learning alongside others. These are the everyday opportunities we work toward with your family.</p><p>Measurement, relevant therapy, guided home practice and regular review connect around your child’s growing independence and participation. Readiness and suitable support guide each next step.</p><ul class="trust-reasons"><li><Icon name="home"/> Growing independence</li><li><Icon name="people"/> Mainstream participation</li><li><Icon name="heart"/> A wonderful life</li></ul><div class="local-actions"><a class="local-text-link" href={url('/self-sufficient')}>Explore self-sufficiency <Icon name="arrow"/></a><a class="local-text-link" href={url('/mainstream')}>Explore mainstream participation <Icon name="arrow"/></a></div></div>
+</div></section>}
+{mode==='photos'&&photos.length>0&&<section class="local-section local-wrap trust-premises" id={sectionId} data-trust-gallery>
+ <p class="local-kicker">Real place · matched premises photographs</p><h2>Get a feel for <em>the {name} centre.</em></h2>
+ <div class="trust-rail-heading"><p>Explore the actual spaces, then confirm current rooms, equipment and access arrangements.</p><div class="trust-rail-controls"><button type="button" data-trust-scroll="previous" aria-controls={railId} aria-label="Scroll centre photographs backward"><span aria-hidden="true">←</span></button><button type="button" data-trust-scroll="next" aria-controls={railId} aria-label="Scroll centre photographs forward"><span aria-hidden="true">→</span></button></div></div>
+ <ul class="trust-rail trust-photo-rail" id={railId} tabindex="0" aria-label={'Photographs of the '+name+' centre'}>{shownPhotos.map(photo=><li class="trust-photo-card"><figure><a href={photo.full} aria-label={'Open full photograph: '+photo.title}><span class="trust-portrait"><Image src={photo.image} alt={photo.alt} widths={[240,360,540]} sizes="(max-width:760px) 76vw, 280px" format="webp" loading="lazy"/></span></a><figcaption>{photo.title}<a href={photo.full}>Open full photograph <Icon name="arrow" size={18}/></a></figcaption></figure></li>)}
+  {remainingPhotos>0&&<li class="trust-more-photos"><a href="#centre-all-photos" data-trust-more-photos><Icon name="pin" size={36}/><strong>+{remainingPhotos}</strong><span>More centre photographs</span><span class="trust-more-link">Explore the complete gallery <Icon name="arrow"/></span></a></li>}
+ </ul>
+ {remainingPhotos>0&&<details id="centre-all-photos" class="trust-all-photos"><summary>All {photos.length} matched centre photographs</summary><div>{photos.map(photo=><figure><a href={photo.full}><Image src={photo.image} alt={photo.alt} widths={[320,540,800]} sizes="(max-width:760px) 88vw, 42vw" format="webp" loading="lazy"/></a><figcaption>{photo.title} · <a href={photo.full}>Open full photograph</a></figcaption></figure>)}</div></details>}
+ <p class="trust-source">First-party photographs matched to this branch. {hasExterior?'':'This gallery does not include an entrance photograph.'}</p>
+</section>}
+<script>
+ document.querySelectorAll<HTMLElement>('[data-trust-gallery]').forEach(section=>{
+  if(section.dataset.trustReady)return;
+  section.dataset.trustReady='true';
+  const rail=section.querySelector<HTMLElement>('.trust-rail');
+  const previous=section.querySelector<HTMLButtonElement>('[data-trust-scroll="previous"]');
+  const next=section.querySelector<HTMLButtonElement>('[data-trust-scroll="next"]');
+  const motion=():ScrollBehavior=>matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth';
+  const move=(direction:number)=>rail?.scrollBy({left:direction*Math.max(260,rail.clientWidth*.75),behavior:motion()});
+  const update=()=>{if(!rail)return;if(previous)previous.disabled=rail.scrollLeft<2;if(next)next.disabled=rail.scrollLeft+rail.clientWidth>=rail.scrollWidth-2;};
+  previous?.addEventListener('click',()=>move(-1));next?.addEventListener('click',()=>move(1));
+  rail?.addEventListener('scroll',update,{passive:true});
+  rail?.addEventListener('keydown',event=>{if(event.target!==rail)return;if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();move(event.key==='ArrowRight'?1:-1);}});
+  if(rail)new ResizeObserver(update).observe(rail);update();
+  section.querySelector<HTMLAnchorElement>('[data-trust-more-photos]')?.addEventListener('click',()=>{const details=section.querySelector<HTMLDetailsElement>('.trust-all-photos');if(details){details.open=true;details.querySelector<HTMLElement>('summary')?.focus();}});
+  const dialog=section.querySelector<HTMLDialogElement>('[data-trust-dialog]');
+  if(!dialog)return;
+  const player=dialog.querySelector<HTMLElement>('[data-trust-player]');
+  const heading=dialog.querySelector<HTMLElement>('[data-trust-dialog-title]');
+  const original=dialog.querySelector<HTMLAnchorElement>('[data-trust-original]');
+  let opener:HTMLButtonElement|null=null;
+  const clear=()=>{player?.replaceChildren();opener?.focus();};
+  dialog.addEventListener('close',clear);
+  dialog.querySelector<HTMLButtonElement>('[data-trust-close]')?.addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)dialog.close();});
+  section.querySelectorAll<HTMLButtonElement>('[data-trust-video]').forEach(button=>button.addEventListener('click',()=>{
+   if(!player)return;
+   const source=new URL(button.dataset.trustVideo!);
+   if(source.origin!=='https://www.youtube-nocookie.com')return;
+   opener=button;const title=button.dataset.trustTitle||'Pinnacle network video';
+   if(heading)heading.textContent=title;
+   if(original){const video=source.pathname.split('/').pop();original.href='https://www.youtube.com/watch?v='+encodeURIComponent(video||'')+(source.searchParams.has('list')?'&list='+encodeURIComponent(source.searchParams.get('list')!):'');}
+   const frame=document.createElement('iframe');frame.src=source.href;frame.title=title;frame.allow='encrypted-media; picture-in-picture; fullscreen';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';
+   player.replaceChildren(frame);dialog.showModal();
+  }));
+ });
+</script>
+<style>
+ .trust-section{background:#f4faf9}.trust-family{background:#fcf6fb}.trust-life{background:#f3f8fc}.trust-introduction{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);align-items:center;gap:clamp(1.4rem,4vw,3.3rem)}.trust-introduction>div,.trust-art{min-width:0}.trust-art{margin:0}.trust-art img{display:block;width:100%;height:auto;border-radius:28px;background:#fff}.trust-art figcaption{font-size:.82rem;line-height:1.5;color:#4d6371;margin-top:.6rem}.trust-commitment{font-size:1.3rem;line-height:1.5;color:#08746f;margin:1.4rem 0 .6rem}.trust-reasons{display:flex;flex-wrap:wrap;gap:.6rem 1rem;list-style:none;padding:0;margin:1.2rem 0}.trust-reasons li{display:flex;align-items:center;gap:.45rem;font-size:.95rem;font-weight:700}.trust-reasons svg{color:#08746f;flex:none}.trust-source{font-size:.87rem!important;line-height:1.65!important;color:#4b6070}.trust-source a{display:inline; text-decoration:underline;text-underline-offset:.18em}.trust-source a svg{vertical-align:middle}.trust-rail-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:2.3rem}.trust-rail-heading h3{margin:0;font-size:1.3rem;line-height:1.45}.trust-rail-heading p{margin:.55rem 0;font-size:1rem;line-height:1.6}.trust-rail-controls{display:flex;gap:.6rem;flex:none}.trust-rail-controls button{width:48px;height:48px;border:1px solid #c7dce1;border-radius:50%;background:#fff;color:#18315d;font:700 1.3rem/1 sans-serif;cursor:pointer}.trust-rail-controls button:disabled{opacity:.4;cursor:default}.trust-rail{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x proximity;list-style:none;padding:1.1rem .15rem 1.3rem;margin:0;overscroll-behavior-inline:contain;scrollbar-color:#8f2879 #e6ecef;scrollbar-width:thin}.trust-rail>li{flex:0 0 min(300px,78vw);min-width:0;scroll-snap-align:start}.trust-video-card{border:1px solid #d8e3e8;border-radius:24px;overflow:hidden;background:#fff}.trust-video-opener{display:block;width:100%;padding:0;border:0;background:transparent;text-align:left;font:inherit;color:#18315d;cursor:pointer}.trust-portrait{position:relative;display:flex;align-items:center;justify-content:center;aspect-ratio:9/16;background:#edf4f4;overflow:hidden;isolation:isolate}.trust-portrait>img{display:block;position:absolute;width:100%;height:100%;object-fit:contain}.trust-video-label{position:absolute;left:.7rem;top:.8rem;max-width:calc(100% - 1.4rem);display:flex;align-items:center;gap:.45rem;border-radius:24px;background:#fff;padding:.65rem .75rem;color:#08746f;font-size:.85rem;font-weight:700;line-height:1.5}.trust-play{position:absolute;bottom:4.6rem;left:calc(50% - 29px);display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#fff;color:#8f2879;box-shadow:0 4px 20px #17344e18}.trust-play svg{margin-left:3px}.trust-portrait-caption{position:absolute;inset:auto .9rem 1.1rem;text-align:center;font-size:1rem;font-weight:700;line-height:1.6;color:#18315d}.trust-video-copy{display:flex;flex-direction:column;gap:.8rem;padding:1.3rem;line-height:1.65}.trust-video-series{font-size:.82rem;font-weight:700;color:#8f2879}.trust-video-copy strong{font-size:1.13rem;line-height:1.45}.trust-video-copy>span:last-child{font-size:.95rem}.trust-collection-card{display:flex;flex-direction:column;justify-content:center;padding:1.4rem;border:1px solid #d7e0e7;border-radius:24px;background:#fff}.trust-collection-card>svg{color:#8f2879}.trust-collection-card h3{font-size:1.3rem;line-height:1.45;margin:.9rem 0}.trust-collection-card p{font-size:.97rem;line-height:1.65}.trust-collection-card ul{list-style:none;padding:0;margin:.5rem 0}.trust-collection-card li{border-top:1px solid #e0e8ed}.trust-collection-card a{display:flex;align-items:center;gap:.55rem;min-height:55px;padding:.65rem 0;color:#17344e;text-decoration:none;font-size:.92rem;font-weight:700;line-height:1.5}.trust-collection-card a span{flex:1}.trust-collection-card a>svg{flex:none;color:#8f2879}.trust-dialog{width:min(960px,94vw);max-height:92vh;padding:1.3rem;border:1px solid #cad7e0;border-radius:24px;color:#18315d;background:#fff;overflow:auto;box-shadow:0 20px 90px #09192780}.trust-dialog::backdrop{background:#0c203dcc}.trust-dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:1rem}.trust-dialog-heading h3{font-size:1.05rem;line-height:1.5;margin:0}.trust-dialog-heading button{display:flex;align-items:center;gap:.45rem;padding:.7rem .9rem;min-height:44px;border:1px solid #c5d2df;border-radius:12px;background:#fff;color:#18315d;font:700 .9rem/1.5 Sintony,sans-serif;cursor:pointer;flex:none}.trust-dialog-heading button span{font-size:1.4rem}.trust-player{aspect-ratio:16/9;background:#112641;border-radius:14px;overflow:hidden}.trust-player :global(iframe){display:block;width:100%;height:100%;border:0}.trust-dialog>p{font-size:.87rem;line-height:1.65}.trust-dialog>p a{display:inline-flex;align-items:center;gap:.35rem;text-decoration:underline}.trust-visit-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem;list-style:none;padding:0;margin:2rem 0}.trust-visit-steps li{padding:1.5rem;border:1px solid #d6e3e7;border-radius:22px;background:#fff}.trust-visit-steps h3{font-size:1.15rem;line-height:1.5}.trust-visit-steps p{font-size:1rem;line-height:1.75}.trust-visit-steps svg{color:#8f2879}.trust-photo-card figure{margin:0}.trust-photo-card .trust-portrait{border:1px solid #d8e3e8;border-radius:24px}.trust-photo-card figcaption{font-size:1rem;font-weight:700;line-height:1.65;padding:1rem .15rem}.trust-photo-card figcaption a{display:flex;align-items:center;gap:.4rem;margin-top:.4rem;font-size:.88rem;font-weight:400;text-decoration:underline}.trust-more-photos{display:flex;align-items:stretch}.trust-more-photos>a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.1rem;width:100%;aspect-ratio:9/16;padding:1.4rem;border:1px solid #d5dfeb;border-radius:24px;background:#f6f1fa;color:#18315d;text-align:center;text-decoration:none}.trust-more-photos strong{font-size:3.5rem;color:#8f2879;line-height:1.1}.trust-more-link{display:flex;align-items:center;gap:.4rem;font-weight:700;font-size:.9rem;line-height:1.6}.trust-all-photos{margin-top:1rem}.trust-all-photos summary{padding:1rem;min-height:48px;cursor:pointer;font-weight:700}.trust-all-photos>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}.trust-all-photos figure{margin:0}.trust-all-photos img{width:100%;height:auto;max-height:500px;object-fit:contain;background:#edf4f4;border-radius:20px}.trust-all-photos figcaption{font-size:.94rem;line-height:1.65;margin:.6rem 0}.trust-rail:focus-visible,.trust-video-opener:focus-visible,.trust-rail-controls button:focus-visible,.trust-collection-card a:focus-visible,.trust-more-photos a:focus-visible,.trust-dialog button:focus-visible{outline:3px solid #08746f;outline-offset:4px}.trust-video-opener:focus-visible{outline-offset:-4px}.trust-video-opener:hover .trust-play{background:#fcf1fa}.trust-collection-card a:hover{color:#8f2879;text-decoration:underline}.trust-life .trust-art{order:0}
+ @media(max-width:900px){.trust-visit-steps{grid-template-columns:1fr}.trust-rail>li{flex-basis:280px}.trust-introduction{gap:1.5rem}}
+ @media(max-width:760px){.trust-introduction{grid-template-columns:1fr}.trust-art{margin-top:.6rem}.trust-art img{max-height:480px;object-fit:contain}.trust-life .trust-art{order:1}.trust-rail>li{flex-basis:min(280px,78vw)}.trust-rail-heading{align-items:flex-start}.trust-rail-controls{gap:.4rem}.trust-rail-controls button{width:44px;height:44px}.trust-dialog{padding:.9rem;border-radius:18px}.trust-dialog-heading{align-items:flex-start}.trust-dialog-heading button{font-size:.8rem;padding:.55rem}.trust-all-photos>div{grid-template-columns:1fr}.trust-commitment{font-size:1.2rem}.trust-visit-steps li{padding:1.2rem}}
+ @media(prefers-reduced-motion:reduce){.trust-rail{scroll-behavior:auto}}
+</style>

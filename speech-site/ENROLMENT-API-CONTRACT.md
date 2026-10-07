@@ -45,11 +45,13 @@ Unknown services and centre slugs are rejected. A centre without a verified lega
 
 ## Acceptance behavior
 
-- The existing endpoint’s exact HTTP-success body `true` becomes HTTP 202 `{"status":"accepted"}`.
+- While the durable receiver is pending, the existing endpoint’s exact HTTP-success body `true` becomes HTTP 202 `{"status":"accepted","contractVersion":0}`. This explicit transitional boundary preserves legacy intake; it is not a durable receiving-system receipt.
 - Invalid public input becomes HTTP 422 `{"status":"rejected"}` without contacting PinnacleAI.
 - An origin failure, timeout, unexpected body or upstream failure becomes HTTP 502 `{"status":"unknown"}`.
 
-The browser shows success only for `accepted`. An uncertain result asks the visitor to call `9100 181 181` before trying again, avoiding accidental duplicate enquiries. No automatic retry is performed. Acceptance confirms receipt of an enquiry; it does not claim a booked appointment, assigned professional, enrolment or agreed fee.
+The browser shows success for the explicit legacy boundary or a matching verified receipt. It stores only the request key and confirmation state, and an accepted receipt when available; raw form details are not persisted. Pending/uncertain states survive a reload and ask the visitor to call `9100 181 181` before trying again. A restored accepted state never reposts or emits acceptance again. No automatic retry is performed. Acceptance confirms receipt of an enquiry; it does not claim a booked appointment, assigned professional, enrolment or agreed fee.
+
+The implemented durable candidate is documented in [ENROLMENT-DURABLE-RECEIPT-CANDIDATE-20261007.md](ENROLMENT-DURABLE-RECEIPT-CANDIDATE-20261007.md). It requires one private ledger table in the existing database and a named private service binding to the existing receiving Worker. Only after receiver/binding staging verification may `ENROLMENT_RECEIPT_VERSION="1"` be activated. In that mode the adapter accepts only a durably recorded receipt with its confirmed write reference, strips that private reference from public JSON, and never falls back to legacy/public intake. The default flag remains off until those receiving dependencies are complete.
 
 ## Verification boundary
 

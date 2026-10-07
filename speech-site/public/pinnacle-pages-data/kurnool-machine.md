@@ -8,7 +8,7 @@ Find Pinnacle Blooms Network’s Kurnool centre at Pinnacle Blooms Network, 1st 
 Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001
 [Directions](https://goo.gl/maps/ikLHkVtNkYakpTbv6) · [Contact](tel:+919100181181)
 Find us at Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001. Use the linked Google location and confirm your appointment, entrance, floor and access arrangements with the team before travelling.
-The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. Local telephone and undated review snapshot come from the supplied centre workbook. Opening hours, available professionals and actual appointments require confirmation.
+Network hours are 9:00 am–7:00 pm, excluding Sundays, second Saturdays, national holidays and the published holiday calendar. Confirm appointments and branch-specific changes before travelling. The receiving team confirms current service, professional, fees, entrance and access arrangements. Local telephone and the undated review snapshot come from the supplied centre workbook; dated live Google content is separately attributed.
 
 ## Life-first direction
 The child’s self-sufficient, mainstream-included life shapes the abilities to understand, goals, people, methods, everyday practice and review. Progress remains individual.

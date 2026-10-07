@@ -59,23 +59,31 @@
       "path": "/pinnacleai"
     }
   ],
-  "teamProfiles": [
-    {
-      "name": "Manikonda Kalyani",
-      "role": "Speech Therapist",
-      "url": "https://www.pinnacleblooms.org/staff/Manikonda-kalyani/42082"
-    },
-    {
-      "name": "Pujitha Sunkari",
-      "role": "Behavioural Therapist",
-      "url": "https://www.pinnacleblooms.org/staff/pujitha-sunkari/41101"
-    },
-    {
-      "name": "Chokkapu Venkatalakshmi",
-      "role": "Occupational Therapist",
-      "url": "https://www.pinnacleblooms.org/staff/Chokkapu-venkatalakshmi/69096"
-    }
-  ],
+  "networkStaffing": {
+    "source": "Owner-confirmed network staffing commitment",
+    "confirmedOn": "2026-10-07",
+    "headline": "Qualified. Appropriately certified. Full-time. Permanent.",
+    "text": "Pinnacle’s network staffing commitment is qualified, appropriately certified, full-time and permanent therapy staff, with no freelance or part-time therapy staffing.",
+    "reasons": [
+      "Continuity of care",
+      "Clear accountability",
+      "Child safety",
+      "Growing independence"
+    ],
+    "sourceUrl": "https://www.pinnacleblooms.org/staff-declaration",
+    "scope": "Network staffing commitment; public staff voices do not identify current branch assignments."
+  },
+  "networkHours": {
+    "opens": "09:00",
+    "closes": "19:00",
+    "display": "9:00 am–7:00 pm",
+    "confirmedOn": "2026-10-07",
+    "exclusions": "Closed Sundays, the second Saturday of each month, national holidays and dates in the published holiday calendar.",
+    "calendarYear": 2026,
+    "calendarUrl": "https://www.pinnacleblooms.org/assets/Pinnacle-Holiday-Calendar-2026.pdf",
+    "note": "Confirm your appointment and any branch-specific change before travelling.",
+    "scope": "Owner-confirmed network schedule. Confirm the appointment and any branch-specific change before travelling."
+  },
   "questions": [
     {
       "question": "Where is Pinnacle Blooms Suchitra?",
@@ -199,7 +207,7 @@
     "portalCheckedOn": "2026-09-19",
     "isAcceptedCredential": false
   },
-  "operationalBoundary": "The receiving team confirms the current service, professional, appointment, fee, entrance and access arrangements. No current branch opening hours, direct local phone or review rating are inferred.",
+  "operationalBoundary": "The owner-confirmed network schedule is 09:00–19:00, excluding Sundays, the second Saturday of each month, national holidays and the published holiday calendar. The receiving team confirms the current service, professional, appointment, fee, branch-specific change, entrance and access arrangements. Named branch staff assignments and current individual review ratings are not inferred.",
   "media": {
     "walkthrough": {
       "title": "Pinnacle @ SUCHITRA 1",
@@ -277,6 +285,35 @@
     "https://www.pinnacleblooms.org/books",
     "https://www.pinnacleblooms.org/shop"
   ],
+  "openingHours": {
+    "opens": "09:00",
+    "closes": "19:00",
+    "display": "9:00 am–7:00 pm",
+    "confirmedOn": "2026-10-07",
+    "exclusions": "Closed Sundays, the second Saturday of each month, national holidays and dates in the published holiday calendar.",
+    "calendarYear": 2026,
+    "calendarUrl": "https://www.pinnacleblooms.org/assets/Pinnacle-Holiday-Calendar-2026.pdf",
+    "note": "Confirm your appointment and any branch-specific change before travelling."
+  },
+  "staffingCommitment": {
+    "source": "Owner-confirmed network staffing commitment",
+    "confirmedOn": "2026-10-07",
+    "headline": "Qualified. Appropriately certified. Full-time. Permanent.",
+    "text": "Pinnacle’s network staffing commitment is qualified, appropriately certified, full-time and permanent therapy staff, with no freelance or part-time therapy staffing.",
+    "reasons": [
+      "Continuity of care",
+      "Clear accountability",
+      "Child safety",
+      "Growing independence"
+    ],
+    "sourceUrl": "/staff-declaration"
+  },
+  "issuedFacilityDocuments": [],
+  "googleContent": {
+    "endpoint": "/centers/_google/suchitra",
+    "source": "Google Business Profile via authenticated Windsor connection",
+    "refresh": "On-demand after a 24-hour cache; dated provider content is attributed in the visible section. The featured five-star selection is separate from the overall Google rating."
+  },
   "pinnacleEcosystem": [
     {
       "id": "pinnacleai",

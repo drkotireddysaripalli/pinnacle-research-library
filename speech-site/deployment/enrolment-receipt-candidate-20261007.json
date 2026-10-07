@@ -1,0 +1,101 @@
+{
+  "at": "2026-10-07T10:15:45.201Z",
+  "candidateOnly": true,
+  "productionReceiptActivated": false,
+  "defaultContractVersion": 0,
+  "privateReceiver": {
+    "candidateOnly": true,
+    "worker": "pbn-planetscale",
+    "sourceSha256": "96d69dee450a771b6bc546bffdc63dd5804e3667d95c9147ea3e48a823ab5380",
+    "modules": [
+      {
+        "module": "index.js",
+        "sha256": "fcefeeca75b09edb920444e71b563de6bc31cc6917bac7f576227b7b3bed5a5f",
+        "bytes": 4460337
+      },
+      {
+        "module": "website-enrolment-receipt.mjs",
+        "sha256": "bf2450c0d717fa22985aa4be0bd818aa39b86919f61c078bb6a6e1db18ecedff",
+        "bytes": 6920
+      }
+    ],
+    "modifiedFunctions": [
+      "HandleStaticWebForms: deny versioned receipts on public route",
+      "HandleLead: optional actual write reference capture",
+      "WebsiteEnrolmentReceipts: private RPC entrypoint"
+    ],
+    "legacyBranchesPreserved": true,
+    "requiresReviewedMigration": "deployment/website-enrolment-receipts.sql",
+    "requiresBinding": {
+      "type": "service",
+      "name": "PINNACLE_ENROLMENT_RECEIPTS",
+      "service": "pbn-planetscale",
+      "entrypoint": "WebsiteEnrolmentReceipts"
+    },
+    "activation": "Website Worker ENROLMENT_RECEIPT_VERSION=1 only after receiver and private binding deployment"
+  },
+  "sourceFiles": [
+    {
+      "path": "deployment/enrolment-handler.mjs",
+      "sha256": "6c97f8662d77b89c66e009a61614fdb581ffcb6d06f170d83acebb9a03e7804a"
+    },
+    {
+      "path": "deployment/enrolment-receipt.mjs",
+      "sha256": "bf2450c0d717fa22985aa4be0bd818aa39b86919f61c078bb6a6e1db18ecedff"
+    },
+    {
+      "path": "deployment/website-enrolment-receipts.sql",
+      "sha256": "2d42f7203b18557e0371a499639941cdebbb7dd1d862d532561270d809c31aa7"
+    },
+    {
+      "path": "public/pinnacle-pages-scripts/enrolment-api.mjs",
+      "sha256": "6f61ab19b7d7d661bd82484f41852b01118d9ca9bc0428dfbb54819848c1194e"
+    },
+    {
+      "path": "public/pinnacle-pages-scripts/enrolment.js",
+      "sha256": "35935805d3a5c83aeed4d06affd2b71d0a1c82a1d2d9fa695eadd4f530eb13a5"
+    },
+    {
+      "path": "scripts/prepare-enrolment-receiver.mjs",
+      "sha256": "275b16c98cd49071c84ac72eed1339f21969269301f99c0572a61ae11664bd07"
+    },
+    {
+      "path": "scripts/test-enrolment-receipt.mjs",
+      "sha256": "552d07e1c545bd3ca159020302349dbac50037c56e0a98f22a2622682038d651"
+    },
+    {
+      "path": "tests/fixtures/enrolment-ledger-sqlite.mjs",
+      "sha256": "bf408859c0549b0d60e4ee28081fcdb2d4e93517dc6319bf393697b7e4cd259c"
+    },
+    {
+      "path": "tests/fixtures/enrolment-ledger-restart.mjs",
+      "sha256": "73acc9cbe69f36b7b370e3e376eaa2d79f1d657b27fd40d589a9b690650cee77"
+    },
+    {
+      "path": "tests/browser/enrolment.spec.mjs",
+      "sha256": "834926fca5162d712162bd0f95fb13270fad75b044d66a1dcdd2d9a7e7ec7286"
+    }
+  ],
+  "verification": {
+    "unit": {
+      "command": "node --test scripts/test-enrolment.mjs scripts/test-enrolment-receipt.mjs",
+      "passed": 36,
+      "failed": 0,
+      "privateSourceAvailable": true
+    },
+    "browser": {
+      "command": "npx playwright test tests/browser/enrolment.spec.mjs --project=phone-390 --project=desktop-1440",
+      "passed": 18,
+      "failed": 0,
+      "sourceClientRoutesIntercepted": true,
+      "apiRoutesIntercepted": true
+    },
+    "processRestart": true,
+    "actualMySQLStagingVerified": false,
+    "actualCloudflareRpcVerified": false,
+    "productionLeadsCreated": 0,
+    "productionCallsMade": 0,
+    "customerRecordsQueried": 0
+  },
+  "activationNotes": "ENROLMENT-DURABLE-RECEIPT-CANDIDATE-20261007.md"
+}

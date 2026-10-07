@@ -8,7 +8,7 @@ Find Pinnacle Blooms Network’s Gurunanak Road, Vijayawada centre at 59A,4-6, 2
 59A,4-6, 2nd Floor, beside McDonald’s, Gurunanak Road, Vijayawada, Andhra Pradesh 520008, India
 [Directions](https://goo.gl/maps/iNFVd7gWmp7CAA4c7) · [Contact](tel:+919100181181)
 Find us on the second floor beside McDonald’s on Gurunanak Road. Use the linked directions and confirm your appointment address, entrance, floor and lift arrangements with us before travelling.
-The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. Local telephone and undated review snapshot come from the supplied centre workbook. Opening hours, available professionals and actual appointments require confirmation.
+Network hours are 9:00 am–7:00 pm, excluding Sundays, second Saturdays, national holidays and the published holiday calendar. Confirm appointments and branch-specific changes before travelling. The receiving team confirms current service, professional, fees, entrance and access arrangements. Local telephone and the undated review snapshot come from the supplied centre workbook; dated live Google content is separately attributed.
 
 ## Life-first direction
 The child’s self-sufficient, mainstream-included life shapes the abilities to understand, goals, people, methods, everyday practice and review. Progress remains individual.

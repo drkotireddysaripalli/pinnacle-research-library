@@ -1,4 +1,5 @@
 import {centreFacilities} from './centre-facilities.mjs';
+import {toReceiptEnrolment,validReceiptEnvelope} from './enrolment-receipt.mjs';
 
 export const ENROLMENT_API_PATH='/api/enrolment';
 export const ENROLMENT_UPSTREAM='https://mirracle.pinnacleblooms.org/api/gl/swfs';
@@ -32,7 +33,7 @@ const RESPONSE_HEADERS={
  'content-security-policy':"default-src 'none'; frame-ancestors 'none'"
 };
 
-function response(status,state){return new Response(JSON.stringify({status:state}),{status,headers:RESPONSE_HEADERS});}
+function response(status,state,receipt,contractVersion){return new Response(JSON.stringify({status:state,...(receipt?{receipt}: {}),...(contractVersion===undefined?{}:{contractVersion})}),{status,headers:RESPONSE_HEADERS});}
 function validPhone(phone){return typeof phone==='string'&&phone.length<=25&&/^[+\d\s().-]+$/.test(phone)&&phone.replace(/\D/g,'').length>=7&&phone.replace(/\D/g,'').length<=15;}
 function validEmail(email){return typeof email==='string'&&email.length<=254&&(!email||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));}
 function validRequestId(value){return typeof value==='string'&&value.length>=8&&value.length<=100&&/^[A-Za-z0-9-]+$/.test(value);}
@@ -88,19 +89,39 @@ export async function serveEnrolmentApi(request,env,{fetchImpl=fetch,timeoutMs=1
  if(!/^application\/json(?:\s*;|$)/i.test(request.headers.get('content-type')||''))return response(415,'rejected');
  let body;
  try{body=await readBoundedJson(request);}catch{return response(422,'rejected');}
- if(!validatePublicEnrolment(body))return response(422,'rejected');
+ if(!validatePublicEnrolment(body)||request.headers.get('idempotency-key')!==body.requestId)return response(422,'rejected');
+ // Activate only after the receiving table and versioned Worker patch are live.
+ // Keeping this flag absent retains the existing organisation's intake path.
+ const durableContract=env?.ENROLMENT_RECEIPT_VERSION==='1';
+ if(durableContract&&typeof env?.PINNACLE_ENROLMENT_RECEIPTS?.receive!=='function')return response(503,'unknown');
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
  try{
-  const upstreamOptions={method:'POST',headers:{'content-type':'application/json','accept':'text/plain, application/json'},body:JSON.stringify(toLegacyEnrolment(body)),signal:controller.signal};
+  const legacy=toLegacyEnrolment(body);
+  const upstreamOptions={method:'POST',headers:{'content-type':'application/json','accept':'text/plain, application/json'},body:JSON.stringify(legacy),signal:controller.signal};
   // The legacy API is served by another Worker in this account. A direct
   // service binding keeps the POST inside Cloudflare and avoids a routed
   // Worker-to-Worker subrequest being rejected with an empty HTTP 405.
-  const upstream=env?.PINNACLE_LEGACY?.fetch
+  let upstream;
+  if(durableContract){
+   // A named service-binding RPC entrypoint has no public URL. Protected join
+   // keys must never be returned by the legacy public /api/gl/swfs route.
+   const result=await Promise.race([
+    env.PINNACLE_ENROLMENT_RECEIPTS.receive(toReceiptEnrolment(legacy,body.requestId),body.requestId),
+    new Promise((_,reject)=>controller.signal.addEventListener('abort',()=>reject(new Error('receipt-timeout')),{once:true}))
+   ]);
+   upstream=new Response(JSON.stringify(result),{status:result?.httpStatus||503});
+  }else upstream=env?.PINNACLE_LEGACY?.fetch
    ?await env.PINNACLE_LEGACY.fetch(new Request(ENROLMENT_UPSTREAM,upstreamOptions))
    :await fetchImpl(ENROLMENT_UPSTREAM,upstreamOptions);
-  const answer=(await upstream.text()).trim().toLowerCase();
-  if(upstream.ok&&answer==='true')return response(202,'accepted');
-  console.warn('enrolment-upstream-unconfirmed',{status:upstream.status,contentType:upstream.headers.get('content-type')||'',answerKind:answer==='false'?'false':answer?'other':'empty',answerLength:answer.length});
+  const raw=await upstream.text();let answer;try{answer=JSON.parse(raw);}catch{}
+  if(!durableContract&&upstream.ok&&raw.trim().toLowerCase()==='true')return response(202,'accepted',undefined,0);
+  if(upstream.ok&&answer?.status==='accepted'&&validReceiptEnvelope(answer.receipt,body.requestId)&&typeof answer.receipt.leadReference==='string'&&answer.receipt.leadReference.trim()){
+   // Private lead IDs stop at this boundary. Browser/GA4 receives no CRM ID.
+   const receipt={schemaVersion:1,requestId:body.requestId,id:answer.receipt.id};
+   return response(202,'accepted',receipt,1);
+  }
+  if([409,422].includes(upstream.status)&&answer?.status==='rejected')return response(upstream.status,'rejected');
+  console.warn('enrolment-upstream-unconfirmed',{status:upstream.status});
   return response(502,'unknown');
- }catch(error){console.warn('enrolment-upstream-error',{name:error?.name||'Error',message:error?.message||'unknown'});return response(502,'unknown');}finally{clearTimeout(timer);}
+ }catch{console.warn('enrolment-upstream-error');return response(502,'unknown');}finally{clearTimeout(timer);}
 }

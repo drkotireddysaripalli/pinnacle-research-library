@@ -226,7 +226,7 @@
     "currentOperationVerified": false,
     "currentServiceAvailabilityVerified": false
   },
-  "operationalBoundary": "The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. Local telephone and undated review snapshot come from the supplied centre workbook. Opening hours, available professionals and actual appointments require confirmation.",
+  "operationalBoundary": "Network hours are 9:00 am–7:00 pm, excluding Sundays, second Saturdays, national holidays and the published holiday calendar. Confirm appointments and branch-specific changes before travelling. The receiving team confirms current service, professional, fees, entrance and access arrangements. Local telephone and the undated review snapshot come from the supplied centre workbook; dated live Google content is separately attributed.",
   "media": {
     "premises": [
       {
@@ -244,6 +244,29 @@
     ],
     "campaign": "Generated fictional family/professional campaign scene; not an actual branch room, named practitioner or patient outcome."
   },
+  "openingHours": {
+    "opens": "09:00",
+    "closes": "19:00",
+    "display": "9:00 am–7:00 pm",
+    "confirmedOn": "2026-10-07",
+    "exclusions": "Closed Sundays, the second Saturday of each month, national holidays and dates in the published holiday calendar.",
+    "calendarYear": 2026,
+    "calendarUrl": "https://www.pinnacleblooms.org/assets/Pinnacle-Holiday-Calendar-2026.pdf",
+    "note": "Confirm your appointment and any branch-specific change before travelling."
+  },
+  "staffingCommitment": {
+    "source": "Owner-confirmed network staffing commitment",
+    "confirmedOn": "2026-10-07",
+    "headline": "Qualified. Appropriately certified. Full-time. Permanent.",
+    "text": "Pinnacle’s network staffing commitment is qualified, appropriately certified, full-time and permanent therapy staff, with no freelance or part-time therapy staffing.",
+    "reasons": [
+      "Continuity of care",
+      "Clear accountability",
+      "Child safety",
+      "Growing independence"
+    ],
+    "sourceUrl": "/staff-declaration"
+  },
   "googleBusinessUrl": "https://maps.app.goo.gl/GKA5XTWLyRMqzpRs6",
   "reviewSnapshot": {
     "rating": 4.8,
@@ -252,6 +275,16 @@
     "sourceDate": null,
     "importedOn": "2026-10-07"
   },
+  "issuedFacilityDocuments": [
+    {
+      "centreId": "nad",
+      "hfrId": "IN2810039038",
+      "title": "DIGITAL_HEALTH_FACILITY-NAD-VIZAG.pdf",
+      "driveUrl": "https://drive.google.com/file/d/1HVdba77DVDqC-G1R7W2yJ9EEe-b_jqC3/view?usp=drivesdk",
+      "date": "12 Jan 2026",
+      "kind": "issued"
+    }
+  ],
   "pinnacleEcosystem": [
     {
       "id": "pinnacleai",
