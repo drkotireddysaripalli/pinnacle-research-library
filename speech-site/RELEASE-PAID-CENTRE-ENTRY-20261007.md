@@ -21,4 +21,8 @@ Baseline centre version: `442036b0-ee71-47d4-9982-62002c11cb84`. All 228 zone ro
 
 ## Owner follow-up
 
+### Returning-visitor correction
+
+The first production browser run passed 18 cases plus six default-entry mobile cases. Physical iPhone Air/iOS 26.2 Safari screenshots exposed Labbipet retaining its previous banner for a returning visitor. A public reproduction with a benign cookie confirmed the existing Labbipet transform intentionally sets `private, no-store`; the new entry then incorrectly skipped that internally produced public centre story. The follow-up allows only the exact prior Labbipet release, exact private policy, cookie-bearing request and known body identity to continue through the entry transform. Unknown private responses still pass through, and the result remains private. A native Worker-parser regression covers that chain and altered header/body/set-cookie/no-cookie guards. The first physical harness returned empty objects for promise-based synchronous WebDriver evaluation; its failed receipt is retained. A subsequent available legacy iPad session returned a provider error. Neither is counted as an automated physical pass.
+
 The owner has now requested a common centre rollout with authentic nameboard/exterior/emblem/tour/interior media, nearby centres, therapy/Verify/PinnacleAI links and relevant books/resources. Reuse `CentreDetailPage` and the existing centre/media records for that next coherent batch. Preserve confirmed identity, operational-status distinctions, Ads holds and the approved shared shell. This five-centre entry repair does not claim that full migration complete.

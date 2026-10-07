@@ -1,6 +1,6 @@
 // One shared, identity-guarded entry section for the five remaining paid-centre
 // legacy journeys. Existing centre content, navigation, forms and tags remain.
-export const PAID_CENTRE_RELEASE='paid-centre-entry-20261007';
+export const PAID_CENTRE_RELEASE='paid-centre-entry-20261007-v2';
 const prefix='/centers/best-autism-speech-aba-occupational-therapy-center-';
 export const PAID_CENTRES={
  [prefix+'lakshmipuram-guntur-ap-india']:{id:'guntur',facilityId:'3062527489',place:'Guntur',locality:'Lakshmipuram Main Road, beside Sweet Magic'},
@@ -54,8 +54,13 @@ export function paidCentreVideoBoot(){
 }
 const videoMarkup=(id,place)=>`<div class="pc-centre-video" style="max-width:960px;margin:24px auto;padding:0 12px"><button type="button" data-paid-centre-video="${id}" data-video-title="Pinnacle ${place} video" style="display:flex;width:100%;min-height:90px;align-items:center;justify-content:center;gap:12px;padding:20px;border:2px solid #8a217e;border-radius:12px;background:#f8f2fa;color:#652579;font:inherit;font-weight:700;font-size:18px;line-height:1.5;cursor:pointer"><span aria-hidden="true">▶</span>Watch the Pinnacle ${place} video</button></div>`;
 export async function transformPaidCentre(request,response,Rewriter=globalThis.HTMLRewriter){
- if(!isPaidCentreRequest(request)||!Rewriter||response.status!==200||!/^text\/html\b/i.test(response.headers.get('content-type')||'')||response.headers.has('set-cookie')||/no-store|no-transform/i.test(response.headers.get('cache-control')||'')||/noindex/i.test(response.headers.get('x-robots-tag')||'')||/cookie|authorization/i.test(response.headers.get('vary')||''))return response;
+ // The existing Labbipet transform deliberately makes returning visitors'
+ // otherwise public centre story private. Continue only that exact internal
+ // journey, retaining private caching; unknown private responses pass through.
+ const privateLabbipet=request.headers.has('cookie')&&paidCentreConfig(request)?.id==='labbipet'&&response.headers.get('x-pinnacle-local-journey')==='labbipet-parent-journey-20261004'&&response.headers.get('cache-control')==='private, no-store, max-age=0';
+ if(!isPaidCentreRequest(request)||!Rewriter||response.status!==200||!/^text\/html\b/i.test(response.headers.get('content-type')||'')||response.headers.has('set-cookie')||/no-transform/i.test(response.headers.get('cache-control')||'')||(/no-store/i.test(response.headers.get('cache-control')||'')&&!privateLabbipet)||/noindex/i.test(response.headers.get('x-robots-tag')||'')||/cookie|authorization/i.test(response.headers.get('vary')||''))return response;
  const config=paidCentreConfig(request);const html=await response.clone().text();
+ if(privateLabbipet&&!html.includes('id="pinnacle-labbipet-start"'))return response;
  if(BufferByteLength(html)>4*1024*1024||html.includes('id="pinnacle-centre-entry"')||!html.includes('ProfileImages/'+config.facilityId+'.jpg'))return response;
  // Require the known centre body once. Never alter a different template or a
  // redirected centre identity. Desktop and origin mobile are separate fixtures.

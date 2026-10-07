@@ -15,9 +15,9 @@ test('service values are exact allowlisted constants and malicious/prototype inp
  const c=paidCentreConfig(new Request(url+'?utm_content=speech'));assert.equal(c.service,'speech');const html=paidCentreMarkup(c);assert.match(html,/Speech therapy in Guntur/);assert.match(html,/service=speech&amp;centre=guntur/);assert.doesNotMatch(html,/gclid|utm_content/);
 });
 const source=fs.readFileSync(new URL('../deployment/centre-search-repair/paid-centre-entry.mjs',import.meta.url),'utf8');
-const mf=new Miniflare(convertV4MiniflareOptions({modules:[{type:'ESModule',path:'worker.mjs',contents:`import {transformPaidCentre} from './paid.mjs';export default{async fetch(req){const html=await req.text();const headers=JSON.parse(req.headers.get('x-fixture-headers')||'{}');const init=JSON.parse(req.headers.get('x-request-init')||'{}');const request=new Request('${url}',init);return transformPaidCentre(request,new Response(html,{status:Number(req.headers.get('x-fixture-status')||200),headers:{'content-type':'text/html',...headers}}));}}`},{type:'ESModule',path:'paid.mjs',contents:source}],compatibilityDate:'2026-09-22'}));
+const mf=new Miniflare(convertV4MiniflareOptions({modules:[{type:'ESModule',path:'worker.mjs',contents:`import {transformPaidCentre} from './paid.mjs';export default{async fetch(req){const html=await req.text();const headers=JSON.parse(req.headers.get('x-fixture-headers')||'{}');const init=JSON.parse(req.headers.get('x-request-init')||'{}');const request=new Request(req.headers.get('x-fixture-url')||'${url}',init);return transformPaidCentre(request,new Response(html,{status:Number(req.headers.get('x-fixture-status')||200),headers:{'content-type':'text/html',...headers}}));}}`},{type:'ESModule',path:'paid.mjs',contents:source}],compatibilityDate:'2026-09-22'}));
 test.after(()=>mf.dispose());
-const run=(html=fixture,headers={},init={},status=200)=>mf.dispatchFetch('http://fixture/',{method:'POST',headers:{'x-fixture-headers':JSON.stringify(headers),'x-request-init':JSON.stringify(init),'x-fixture-status':String(status)},body:html});
+const run=(html=fixture,headers={},init={},status=200,target=url)=>mf.dispatchFetch('http://fixture/',{method:'POST',headers:{'x-fixture-url':target,'x-fixture-headers':JSON.stringify(headers),'x-request-init':JSON.stringify(init),'x-fixture-status':String(status)},body:html});
 test('real Worker parser inserts before video, preserves body/form/schema/tags and defers YouTube',async()=>{
  const r=await run();const html=await r.text();assert.match(r.headers.get('x-pinnacle-paid-centre-entry'),/20261007/);assert.ok(html.indexOf('id="pinnacle-centre-entry"')<html.indexOf('class="video-section"'));assert.equal((html.match(/<h1\b/g)||[]).length,1);assert.match(html,/<h2>About Pinnacle Guntur<\/h2>/);assert.match(html,/Original centre narrative/);assert.match(html,/<form><input name="phone"><\/form>/);assert.match(html,/Approved navigation/);assert.match(html,/Approved footer/);assert.match(html,/originalTag\(\)/);assert.match(html,/"@type":"Place"/);assert.match(html,/data-paid-centre-video="uhiaPvi0ljI"/);assert.doesNotMatch(html,/<iframe[^>]*youtube/);
 });
@@ -28,4 +28,11 @@ test('real Worker keeps unknown/private/error/non-HTML responses and changed sou
 });
 test('cookie-bearing transformed responses remain private and stale validators are removed',async()=>{
  const r=await run(fixture,{etag:'old','content-length':'1'},{headers:{cookie:'returning=yes'}});assert.equal(r.headers.get('cache-control'),'private, no-store');assert.equal(r.headers.get('etag'),null);assert.equal(r.headers.get('content-length'),null);
+});
+test('returning Labbipet visitors receive the same opening without widening private-response guards',async()=>{
+ const target='https://www.pinnacleblooms.org'+Object.keys(PAID_CENTRES).find(p=>PAID_CENTRES[p].id==='labbipet');
+ const html=fixture.replace('3062527489','3062523180').replace('class="center-about-description"','class="center-about-description" id="pinnacle-labbipet-start"');
+ const headers={'cache-control':'private, no-store, max-age=0','x-pinnacle-local-journey':'labbipet-parent-journey-20261004'};const init={headers:{cookie:'returning=yes'}};
+ const r=await run(html,headers,init,200,target);assert.match(await r.text(),/Child-development support in Labbipet, Vijayawada/);assert.equal(r.headers.get('cache-control'),'private, no-store');
+ for(const [body,hdr,requestInit]of [[html,{...headers,'x-pinnacle-local-journey':'different'},init],[html.replace('pinnacle-labbipet-start','different'),headers,init],[html,{...headers,'set-cookie':'private=yes'},init],[html,headers,{}]])assert.equal(await(await run(body,hdr,requestInit,200,target)).text(),body);
 });
