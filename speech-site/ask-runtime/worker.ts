@@ -61,12 +61,12 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  }
  if(/^\/ask\/(?:og\/|f\/)/.test(path)||/\.(svg|png|woff2|js|xsl)$/.test(path))return legacy.fetch(request,env,ctx);
  const cacheable=!/^\/ask\/(?:te\/)?search$/.test(path)&&request.method==='GET'&&[...url.searchParams].every(([key,value])=>key==='page'&&/^[1-9][0-9]{0,3}$/.test(value));
- const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build',knowledge?'astro-20261006-v21-sunshine-recovery':'astro-20261006-v20-six-step');
+ const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build',knowledge?'astro-20261007-v22-faq-language-aliases':'astro-20261006-v20-six-step');
  const cacheKey=new Request(cacheURL);const cache=(caches as any).default;
  // Cache API hits can inherit the zone's longer browser TTL. Reapply the page
  // policy after lookup so edge caching never makes browsers retain old releases.
  if(cacheable){const saved=await cache.match(cacheKey);if(saved){const headers=new Headers(saved.headers);headers.set('cache-control','public, max-age=0, s-maxage=300');return new Response(saved.body,{status:saved.status,headers});}}
- const response=await handle(request,env,ctx);const headers=new Headers(response.headers);headers.set('x-pinnacle-ask-release','astro-20261003-google-identity');if(knowledge)headers.set('x-pinnacle-knowledge-release','20261005-v1');headers.set('x-content-type-options','nosniff');headers.set('referrer-policy','strict-origin');headers.set('cross-origin-opener-policy','same-origin-allow-popups');
+ const response=await handle(request,env,ctx);const headers=new Headers(response.headers);headers.set('x-pinnacle-ask-release','astro-20261003-google-identity');if(knowledge)headers.set('x-pinnacle-knowledge-release','20261007-v22');headers.set('x-content-type-options','nosniff');headers.set('referrer-policy','strict-origin');headers.set('cross-origin-opener-policy','same-origin-allow-popups');
  const body=await response.text();
  if(response.status===200&&headers.get('content-type')?.includes('text/html')&&!body.includes('</html>'))throw new Error('Incomplete HTML render');
  const output=new Response(request.method==='HEAD'?null:body,{status:response.status,headers});

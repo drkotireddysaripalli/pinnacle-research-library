@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';
-import {faqRoute,paged,requestedPage,pageURL,cleanPath,languages,themes,sunshineTypes} from '../src/lib/knowledge/catalogues.ts';
+import {faqRoute,faqRedirectURL,paged,requestedPage,pageURL,cleanPath,languages,themes,sunshineTypes} from '../src/lib/knowledge/catalogues.ts';
 import {safeReturn} from '../src/lib/ask/auth.mjs';
 const read=async n=>JSON.parse(await fs.readFile(new URL('../ask-public/knowledge-data/'+n+'.json',import.meta.url),'utf8'));
 const index=await read('faq-index'),manifest=await read('manifest');
@@ -20,6 +20,20 @@ test('Imported contact links remain usable and metadata decodes HTML entities on
  const item=index.find(x=>x.slug==='autism-speech-therapy'&&x.language==='english');const answer=await read('faq-'+item.language+'-'+item.id);
  assert.match(answer.html,/href="tel:\+919100181181"/);assert.match(answer.html,/href="mailto:care@pinnacleblooms.org"/);assert(!answer.html.includes('href="#"'));
  for(const x of index)for(const field of ['title','metaTitle','description'])assert(!/&(?:amp|quot|lt|gt);/.test(x[field]),x.url+' '+field);
+});
+test('ISO language aliases resolve every existing FAQ and keep ambiguous slugs missing',()=>{
+ for(const x of index){const code=languages[x.language].code;const alias=x.url.replace('/faq/'+x.language+'/','/faq/'+code+'/');const route=faqRoute(index,alias.slice(5));assert.equal(route.item.id,x.id,alias);assert.equal(route.redirect,x.url);}
+ for(const [name,{code}] of Object.entries(languages)){assert.equal(faqRoute(index,code).redirect,'/faq/'+name);assert.equal(faqRoute(index,code+'/speech-therapy').redirect,'/faq/'+name+'/speech-therapy');}
+ for(const slug of ['find-a-center','autism-speech-therapy'])assert.equal(faqRoute(index,'hi/'+slug).redirect,'/faq/hindi/speech-therapy/'+slug);
+ const ambiguous=[{language:'hindi',category:'speech-therapy',slug:'same',url:'/faq/hindi/speech-therapy/same'},{language:'hindi',category:'aba-therapy',slug:'same',url:'/faq/hindi/aba-therapy/same'}];assert.equal(faqRoute(ambiguous,'hi/same'),null);
+ assert.equal(faqRoute(index,'zz/find-a-center'),null);assert.equal(faqRoute(index,'hi/no-such-answer'),null);
+});
+test('FAQ canonical redirects preserve campaign and service context while cleaning answer controls',()=>{
+ const url=new URL('https://pinnacleblooms.org/faq/hi/find-a-center?utm_source=google&gclid=opaque&centre=123&service=speech&page=2&q=help');
+ const result=new URL(faqRedirectURL(url,faqRoute(index,'hi/find-a-center')));assert.equal(result.origin,'https://www.pinnacleblooms.org');assert.equal(result.pathname,'/faq/hindi/speech-therapy/find-a-center');
+ for(const key of ['utm_source','gclid','centre','service'])assert.equal(result.searchParams.get(key),url.searchParams.get(key));assert(!result.searchParams.has('q'));assert(!result.searchParams.has('page'));
+ const listing=new URL('https://www.pinnacleblooms.org/faq/te?page=2&q=speech');assert.equal(faqRedirectURL(listing,faqRoute(index,'te')),'https://www.pinnacleblooms.org/faq/telugu?page=2&q=speech');
+ assert.equal(faqRedirectURL(new URL('https://www.pinnacleblooms.org/faq/hindi/speech-therapy/find-a-center'),faqRoute(index,'hindi/speech-therapy/find-a-center')),null);
 });
 test('Google return paths extend only to the authorised knowledge families',()=>{
  for(const p of ['/faq','/faq/english/speech-therapy/autism-speech-therapy','/faq/telugu?q=speech&page=2','/sunshine','/sunshine/skills?page=3'])assert.equal(safeReturn(p),p);

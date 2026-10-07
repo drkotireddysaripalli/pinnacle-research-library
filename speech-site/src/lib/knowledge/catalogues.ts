@@ -37,11 +37,21 @@ export function matchesSearch(item:any,q:string){return !q||(item.title+' '+(ite
 export function cleanPath(value:string){try{const result=value.split('/').map(s=>decodeURIComponent(s)).join('/');return /[\\\x00-\x20\x7f?#]/.test(result)||result.split('/').some(s=>s==='.'||s==='..')?null:result.replace(/\/$/,'');}catch{return null;}}
 export function faqRoute(index:any[],path:string){
  const parts=path.split('/').filter(Boolean);if(!parts.length)return {mode:'home',language:'english'};
- const [language,category,slug]=parts;if(!Object.hasOwn(languages,language)||parts.length>3)return null;
- if(parts.length===1)return {mode:'listing',language};
- if(parts.length===2&&themes.some(t=>t.slug===category))return {mode:'listing',language,category};
+ const [requestedLanguage,category,slug]=parts;
+ const language=Object.hasOwn(languages,requestedLanguage)?requestedLanguage:Object.entries(languages).find(([,value])=>value.code===requestedLanguage)?.[0];
+ if(!language||parts.length>3)return null;
+ const listingRedirect=requestedLanguage!==language?'/faq/'+[language,...parts.slice(1)].join('/'):null;
+ if(parts.length===1)return {mode:'listing',language,redirect:listingRedirect};
+ if(parts.length===2&&themes.some(t=>t.slug===category))return {mode:'listing',language,category,redirect:listingRedirect};
  const found=index.filter(x=>x.language===language&&x.slug===(slug||category));
  const exact=found.find(x=>x.category===category);
  const item=exact||found.length===1&&found[0];
  return item?{mode:'answer',language,item,redirect:'/faq/'+path!==item.url?item.url:null}:null;
+}
+export function faqRedirectURL(requestURL:URL,route:any){
+ const destination=route?.redirect||(route?.mode==='answer'&&(requestURL.searchParams.has('page')||requestURL.searchParams.has('q'))?route.item.url:null);
+ if(!destination)return null;
+ const target=new URL(requestURL);target.protocol='https:';target.host=new URL(ORIGIN).host;target.pathname=destination;
+ if(route.mode==='answer'){target.searchParams.delete('page');target.searchParams.delete('q');}
+ return target.href;
 }

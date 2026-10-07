@@ -4,14 +4,13 @@ import KnowledgeLayout from '../../../src/layouts/KnowledgeLayout.astro';
 import Pagination from '../../../src/components/knowledge/Pagination.astro';
 import NextStep from '../../../src/components/knowledge/NextStep.astro';
 import Icon from '../../../src/components/Icon.astro';
-import {data,languages,themes,ORIGIN,faqRoute,cleanPath,requestedPage,paged,pageURL,matchesSearch,improvementQualifier,improvementLimitation} from '../../../src/lib/knowledge/catalogues';
+import {data,languages,themes,ORIGIN,faqRoute,faqRedirectURL,cleanPath,requestedPage,paged,pageURL,matchesSearch,improvementQualifier,improvementLimitation} from '../../../src/lib/knowledge/catalogues';
 const raw=Astro.params.path||'',path=cleanPath(raw),page=requestedPage(Astro.url.searchParams.get('page')),q=(Astro.url.searchParams.get('q')||'').trim().slice(0,200);
 let index:any[]=[],route:any=null,answer:any=null,items:any[]=[],pagination:any={items:[],pages:1,total:0,valid:true},related:any[]=[],error=false;
 try{
  index=await data(env,'faq-index');route=path!==null?faqRoute(index,path):null;
- if(route?.redirect)return Astro.redirect(ORIGIN+route.redirect,301);
+ const redirect=faqRedirectURL(Astro.url,route);if(redirect)return Astro.redirect(redirect,301);
  if(route?.mode==='answer'){
-  if(Astro.url.searchParams.has('page')||Astro.url.searchParams.has('q'))return Astro.redirect(ORIGIN+route.item.url,301);
   answer=await data(env,'faq-'+route.item.language+'-'+route.item.id);
   related=index.filter(x=>x.language===route.language&&x.category===answer.category&&x.id!==answer.id);
   const words=new Set(answer.title.toLowerCase().split(/\W+/).filter(w=>w.length>4));
