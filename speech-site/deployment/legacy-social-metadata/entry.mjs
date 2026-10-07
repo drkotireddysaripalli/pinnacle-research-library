@@ -106,7 +106,7 @@ async function repairHead(head, request) {
     try {
       const p=new URL(previous);
       sameNumericSocial=['http:','https:'].includes(p.protocol)&&p.hostname===parsed.hostname&&!p.port&&!p.username&&!p.password&&!p.search&&!p.hash&&p.pathname.replace(/\/$/,'').toLowerCase()===parsed.pathname.replace(/\/$/,'').toLowerCase();
-      if(sameNumericSocial){parsed.pathname=parsed.pathname.toLowerCase();target=parsed.href;}
+      if(sameNumericSocial&&![observedTarget,observedTarget.replace(/^https:/,'http:')].includes(previous)){parsed.pathname=parsed.pathname.toLowerCase();target=parsed.href;}
     }catch{}
   }
   const sameRecordedCourse = requestUrl.pathname.replace(/\/$/,'')==='/courses/466/Afraid' && parsed.pathname==='/courses/466/afraid';

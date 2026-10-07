@@ -2,6 +2,10 @@
 // routes independent. Preserve every video destination; load players on intent.
 const playScript=`<script data-pinnacle-video-intent>document.addEventListener('click',function(e){var b=e.target.closest('[data-pinnacle-video]');if(!b)return;var f=document.createElement('iframe');f.src=b.dataset.pinnacleVideo;f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.style='position:absolute;inset:0;width:100%;height:100%;border:0';b.parentNode.replaceChild(f,b);f.focus();});</script>`;
 const escape=s=>s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+class StaffTitle {
+ element(){this.buffer='';}
+ text(chunk){this.buffer+=chunk.text;if(!chunk.lastInTextNode){chunk.remove();return;}const known=['Best Speech Therapy Center in Hyderabad - Pinnacle Blooms','Pinnacle Blooms Network Staff - Best Speech Therapy Center in India'];chunk.replace(known.includes(this.buffer.trim())?'Pinnacle Blooms Network Team and Staff':this.buffer);this.buffer='';}
+}
 export function videoButton(src,{eager=false}={}){
  let u;try{u=new URL(src);}catch{return null;}
  if(!['www.youtube.com','www.youtube-nocookie.com'].includes(u.hostname)||!/^\/embed\/[\w-]{11}$/.test(u.pathname))return null;
@@ -24,6 +28,10 @@ export function repairKnownLegacyPerformance(response,request){
  }})
  .on('iframe',{element(e){const button=videoButton(e.getAttribute('src')||'',{eager:!video&&u.pathname.startsWith('/mirracles/')});if(button){e.replace(button,{html:true});video=true;}}})
  .on('body',{element(e){e.onEndTag(tag=>{if(video)tag.before(playScript,{html:true});});}});
+ if(u.pathname.replace(/\/$/,'')==='/staff'){
+  let heading=0;
+  rewrite.on('head title',new StaffTitle()).on('h1',{element(e){if(++heading>1)e.tagName='h2';}});
+ }
  const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])h.delete(k);h.set('x-pinnacle-reading-performance','image-video-intent-20261007');
  return rewrite.transform(new Response(response.body,{status:response.status,headers:h}));
 }

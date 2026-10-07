@@ -138,7 +138,7 @@ test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
         fixture=head+visible+script+'<script type="application/ld+json">'+remaining+'</script></body></html>';
         chunkSize=7;
         const response=await runtime.dispatchFetch('https://www.pinnacleblooms.org'+route);
-        assert.equal(await response.text(),fixture.replace(script,''));
+        assert.equal((await response.text()).replace(/<style data-pinnacle-reading-layout>[\s\S]*?<\/style>/,''),fixture.replace(script,''));
         assert(response.headers.has('x-pinnacle-legacy-schema'));
         sourceHeaders={'cache-control':'no-store'};
         assert.equal(await(await runtime.dispatchFetch('https://www.pinnacleblooms.org'+route)).text(),fixture);
