@@ -6,6 +6,16 @@ export function installAdCallConsent() {
   if (window.__pinnacleAdCallConsent) return;
   const hosts = new Set(['www.pinnacleblooms.org', 'pinnacleblooms.org']);
   const paths = new Set([
+    '/',
+    '/centers',
+    '/autism-therapy',
+    '/best-occupational-therapy-center-india-proven-improvement-rate',
+    '/best-aba-therapy-center-india-proven-improvement-rate',
+    '/best-special-education-center-call-9100181181',
+    '/speech-aba-autism-assessments',
+    '/enroll-autism-speech-aba-therapies-india',
+    '/about-us',
+    '/contact',
     '/top-speech-therapy-center-india-proven-improvement-rate',
     '/speech-therapy/service-information',
     '/verify/guides/everyday-practice.html',
@@ -14,8 +24,9 @@ export function installAdCallConsent() {
   ]);
   const publicAsk = /^\/ask(?:\/|$)/.test(location.pathname) &&
     !/^\/ask\/(?:te\/)?(?:account|auth|search|api)(?:\/|$)/.test(location.pathname);
+  const publicCentre = /^\/centers\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/.test(location.pathname);
   if (location.protocol !== 'https:' || !hosts.has(location.hostname) ||
-      !(paths.has(location.pathname) || publicAsk)) return;
+      !(paths.has(location.pathname) || publicAsk || publicCentre)) return;
   const state = {enabled: false, started: false};
   window.__pinnacleAdCallConsent = state;
   const id = 'AW-10810823199';

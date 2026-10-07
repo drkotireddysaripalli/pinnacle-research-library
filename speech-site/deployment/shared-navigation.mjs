@@ -2,7 +2,9 @@
 // Apply to already-released HTML without rebuilding unrelated page bodies.
 import {FOOTER_ART_STYLE,footerArtImage} from './footer-art.mjs';
 import {publicLinkTarget} from './public-link-target.mjs';
+import {applyPublicAdCall} from './public-ad-call-handler.mjs';
 export function repairSharedNavigation(request,response){
+ response=applyPublicAdCall(request,response);
  if(request.method!=='GET'||request.headers.has('authorization')||request.headers.has('range')||
  response.status!==200||!response.headers.get('content-type')?.includes('text/html')||
  response.headers.has('set-cookie')||/private|no-store|no-transform/i.test(response.headers.get('cache-control')||''))return response;

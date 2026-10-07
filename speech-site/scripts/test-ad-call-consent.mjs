@@ -30,6 +30,11 @@ test('private and unrelated paths and nonproduction hosts stay uninstrumented',(
  }
  assert(!harness({host:'local.invalid'}).win.__pinnacleAdCallConsent);
 });
+test('public paid centre/service/assessment/enrolment paths expose consent, with default-off and local-number protection',()=>{
+ const centres=JSON.parse(fs.readFileSync('src/data/centre-register.json','utf8')).centres;
+ const paths=['/','/centers','/autism-therapy','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/speech-aba-autism-assessments','/enroll-autism-speech-aba-therapies-india',...centres.map(c=>new URL(c.profileUrl).pathname)];
+ for(const path of paths){const h=harness({path,host:'www.pinnacleblooms.org'});assert(h.win.__pinnacleAdCallConsent,path);assert.equal(h.panel.hidden,false,path);assert.equal(h.scripts.length,0);h.choose('accepted');assert.equal(h.scripts.length,1,path);h.callback()('+1 202 555 0142','+12025550142');assert.equal(h.central.getAttribute('href'),'tel:+12025550142');assert.equal(h.localLink.getAttribute('href'),'tel:+914012345678');}
+});
 test('acceptance configures one conversion, never personalisation; callback updates display and dial',()=>{
  const h=harness();h.choose('accepted');h.choose('accepted');assert.equal(h.scripts.length,1);
  assert.equal(h.commands().filter(x=>x[0]==='config'&&x[1]===action).length,1);

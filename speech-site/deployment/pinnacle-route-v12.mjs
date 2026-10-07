@@ -1,4 +1,5 @@
 import {publicRouteAlias} from './public-route-aliases.mjs';
+import {servePublicAdCall} from './public-ad-call.mjs';
 import {applyVernacularTypography} from './vernacular-typography.mjs';
 import {repairSharedNavigation} from './shared-navigation.mjs';
 import {serveRootDiscovery} from './discovery-handler.mjs';
@@ -409,4 +410,4 @@ export async function transformReviewedHomeOrganization(request,response){
  return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
 }
 
-export default {async fetch(request,env,ctx){return applyVernacularTypography(request,repairSharedNavigation(request,await portalWorker.fetch(request,env,ctx)));}};
+export default {async fetch(request,env,ctx){const calls=servePublicAdCall(request);if(calls)return calls;return applyVernacularTypography(request,repairSharedNavigation(request,await portalWorker.fetch(request,env,ctx)));}};
