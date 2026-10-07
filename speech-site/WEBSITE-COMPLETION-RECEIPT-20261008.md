@@ -113,7 +113,7 @@ Delivered Ask/broken-links/multilingual FAQ aliases/campaign-physiotherapy ident
 
 ## Acceptance and next work
 
-Final verification: **73 targeted shared regression tests passed, zero failed; 6 final public source cases passed; all 3 affected reading-page runtime cases passed with zero browser errors.** Physical enrolment coverage separately passed 19 assertions on each of two actual devices. The final code revision's broader GitHub workflow was still running at the last 8 October readback; see `ci-final.json` and https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37672469103 . Do not treat its pending state as a pass. The earlier `c596e55` workflow completed successfully; it is earlier-source evidence only.
+Final verification: **73 targeted shared regression tests passed, zero failed; 6 final public source cases passed; all 3 affected reading-page runtime cases passed with zero browser errors.** Physical enrolment coverage separately passed 19 assertions on each of two actual devices. The final code revision's broader GitHub workflow is now **completed successfully**, freshly confirmed on 8 October: https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37672469103 . Its source is `911f5b53df98b955bb9c5acd38c83f4af2c3d959`; see the refreshed `ci-final.json`. This replaces the earlier pending readback. Workflow success does not close the LCP or operational outcome-join dependencies below.
 
 1. Guru exact page: **Pass**; GSC bad-escape validation handoff evidence ready.
 2. Durable receiver: **active and isolated integration verified**; actual operational outcome joins **Not tested/open**.
