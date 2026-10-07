@@ -55,7 +55,9 @@ async function providerRows(fetcher,key,resource,fields,timeoutMs,sleep){
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
  try{
   for(let attempt=0;attempt<2;attempt++){
-   const response=await fetcher(url.href,{signal:controller.signal,headers:{Accept:'application/json'},redirect:'error'});
+   // Workers supports manual/follow only. A redirect is a non-OK response here,
+   // so the API key is never forwarded to a second host.
+   const response=await fetcher(url.href,{signal:controller.signal,headers:{Accept:'application/json'},redirect:'manual'});
    if(response.status===202){if(attempt===0){await sleep(750);continue;}return {state:'pending',rows:[]};}
    if(!response.ok)return {state:'unavailable',rows:[]};
    const body=await response.json();

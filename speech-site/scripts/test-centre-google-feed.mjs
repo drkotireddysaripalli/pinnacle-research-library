@@ -8,6 +8,16 @@ const review=(extra={})=>({location_id:resource,review_id:'review-one',review_co
 const post=(extra={})=>({location_id:resource,post_id:'post-one',post_summary:'An original public update. Call our public network number 9100 181 181.',post_state:'LIVE',post_search_url:'https://www.google.com/search?q=public+update',post_create_time:'2026-10-03T09:12:00Z',post_media_google_url:'https://lh3.googleusercontent.com/public-image',data_fetched_at:'2026-10-07T11:00:00Z',...extra});
 const request=(id='suchitra',method='GET')=>new Request('https://www.pinnacleblooms.org/centers/_google/'+id,{method});
 const env={CENTRE_GOOGLE_WINDSOR_KEY:'unit-test-secret'};
+test('edge fetch uses supported redirect handling and never follows a credential-bearing redirect',async()=>{
+ let calls=0;
+ const serve=createCentreGoogleHandler({cache:null,now:()=>time,fetcher:async(url,options)=>{
+  assert.equal(options.redirect,'manual','Workers supports manual/follow, not error');calls++;
+  return new Response(null,{status:302,headers:{location:'https://untrusted.example/'}});
+ }});
+ const out=await (await serve(request(),env)).json();
+ assert.equal(calls,2,'Only the two original provider requests are made');
+ assert.equal(out.state,'unavailable');assert.deepEqual(out.reviews,[]);assert.deepEqual(out.posts,[]);
+});
 function memoryCache(){const values=new Map();return {values,async match(key){return values.get(key.url)?.clone();},async put(key,value){values.set(key.url,value.clone());},async delete(key){return values.delete(key.url);}};}
 function provider(url){const u=new URL(url),fields=u.searchParams.get('fields');assert.equal(u.hostname,'connectors.windsor.ai');assert.equal(u.searchParams.get('select_accounts'),resource);assert.equal(u.searchParams.get('date_preset'),'last_30d');assert(!fields.includes('review_id')||!fields.includes('post_id'),'Reviews and posts must use separate requests');return Response.json({data:fields.includes('review_id')?[review()]:[post()]});}
 

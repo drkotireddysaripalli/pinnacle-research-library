@@ -49,7 +49,7 @@ const remainingPhotos=Math.max(0,photos.length-shownPhotos.length);
  </div>
  <dialog class="trust-dialog" data-trust-dialog aria-labelledby={'trust-dialog-title-'+mode}>
   <div class="trust-dialog-heading"><h3 id={'trust-dialog-title-'+mode} data-trust-dialog-title>Pinnacle network video</h3><button type="button" data-trust-close><span aria-hidden="true">×</span> Close video</button></div>
-  <div class="trust-player" data-trust-player></div><p>Public Pinnacle network video. <a data-trust-original target="_blank" rel="noopener">Watch on YouTube <Icon name="arrow" size={18}/></a></p>
+  <div class="trust-player" data-trust-player></div><p>Public Pinnacle network video. <a href={'https://www.youtube.com/watch?v='+clips[0].video} data-trust-original target="_blank" rel="noopener">Watch on YouTube <Icon name="arrow" size={18}/></a></p>
  </dialog>
 </section>}
 {mode==='visit'&&<section class="local-section local-wrap trust-visit" id={sectionId}>

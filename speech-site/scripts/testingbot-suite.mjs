@@ -138,8 +138,11 @@ for(const matrixId of matrixIds){
             if(!await visible('.portal-mobile-menu-trigger')){
               if(p.shell==='evidence'||p.shell==='helpline'){t.skipped.push('Portal navigation does not apply to this existing dedicated shell');return {mode:p.shell,applicable:false};}
               const trigger=await wd('/element','POST',{using:'css selector',value:'.portal-therapy-menu summary'});
-              await wd('/actions','POST',{actions:[{type:'pointer',id:'desktop-mouse',parameters:{pointerType:'mouse'},actions:[{type:'pointerMove',duration:100,origin:trigger,x:0,y:0}]}]});
-              const open=await evaluate("return document.querySelector('.portal-therapy-menu').open");await click('main h1');return open&&!await evaluate("return document.querySelector('.portal-therapy-menu').open");
+              // Remote Safari retains the pointer across page navigation. Move
+              // out first so this page receives a real pointer-enter event.
+              const outside=await wd('/element','POST',{using:'css selector',value:'main h1'});
+              await wd('/actions','POST',{actions:[{type:'pointer',id:'desktop-mouse',parameters:{pointerType:'mouse'},actions:[{type:'pointerMove',duration:100,origin:outside,x:0,y:0},{type:'pointerMove',duration:100,origin:trigger,x:0,y:0}]}]});
+              const open=await evaluate("return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r(document.querySelector('.portal-therapy-menu').open))))");await click('main h1');return open&&!await evaluate("return document.querySelector('.portal-therapy-menu').open");
             }
             await click('.portal-mobile-menu-trigger');const open=await evaluate("return document.querySelector('.portal-directory-panel')?.getAttribute('aria-modal')==='true'&&document.querySelector('main').hasAttribute('inert')");
             await click('.portal-menu-close');return open&&await evaluate("return !document.querySelector('main').hasAttribute('inert')&&document.activeElement===document.querySelector('.portal-mobile-menu-trigger')");
