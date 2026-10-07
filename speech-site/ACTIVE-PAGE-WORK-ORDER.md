@@ -1,5 +1,10 @@
 # Current page work — 7 October 2026
 
+## Current request — the whole Pinnacle narrative at every centre
+
+Owner requests each centre to express the whole purpose and PinnacleAI journey, build parent confidence and enable a clear enquiry. Reuse the 60 live centre-enquiry pages and two location-status pages. Candidate joins a prominent life-purpose opening, local everyday example, four PinnacleAI chapters containing the seven established stages, the family's role at centre/home/school, a practical observation-to-review loop, source-linked evidence and a first-conversation resource beside the visit action. Approved common shell, authentic local media, central/local contact hierarchy and protected services remain the baseline. Complete the exact-source CI, guarded content release and public read-back before marking delivered. Local browser coverage is 12 cases across Edge 320/768/1440 and WebKit 390; source contract covers all 62 routes. Individual progress and source boundaries remain explicit.
+
+
 ## Current request — website/Ads acceptance disposition
 
 The owner supplied the complete 16-part website acceptance standard. `WEBSITE-ADS-ACCEPTANCE-STATUS-20261007.md` records source/current public read-back, scoped statuses, owners and triggers. The accepted intake response is real API acknowledgement, but no durable receipt/server idempotency or source-to-intake join is established. Current shared call eligibility excludes the new centre and other paid service/enrolment paths; the OT alias drops campaign parameters and enrolment public HTML has no call-choice panel. Close those shared contact/source defects in one bounded candidate, then establish the supported durable receiving bridge and reconcile the actual Ads/CRM outcome sources. This pass is an assessment/documentation delivery, not a production correction. TestingBot's funding block is now cleared as recorded below. Materials/Interventions source intake remains pending.

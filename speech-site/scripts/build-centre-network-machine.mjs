@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';import path from 'node:path';
 import {centreRegister,centreWalkthrough} from '../src/data/centre-network-content.ts';
-import {centreEcosystem,centreStoryPlaylists} from '../src/data/centre-story.ts';
+import {centreEcosystem,centreStoryPlaylists,centreNarrativeChapters,centreHomeParticipation} from '../src/data/centre-story.ts';
 const root=path.resolve(import.meta.dirname,'..'),dir=path.join(root,'public/pinnacle-pages-data');
 const rows=[];
 for(const c of centreRegister){
@@ -8,8 +8,11 @@ for(const c of centreRegister){
  Object.assign(record,{updated:'2026-10-07',localTelephone:c.directTelephone,coordinates:c.coordinates,nearbyCentres:c.nearbyCentres,catchmentLocalities:c.catchmentLocalities,catchmentPostcodes:c.catchmentPostcodes,walkthrough:centreWalkthrough(c.id),googleBusinessUrl:c.googleBusinessUrl,reviewSnapshot:c.reviewSnapshot,resources:['https://pinnacleblooms.org/ask','https://www.pinnacleblooms.org/faq','https://www.pinnacleblooms.org/sunshine','https://materials.pinnacleblooms.org/','https://www.pinnacleblooms.org/books','https://www.pinnacleblooms.org/shop']});
  if(c.pageStatus==='centre-enquiry'){
   record.pinnacleEcosystem=centreEcosystem;record.networkStoryPlaylists=centreStoryPlaylists;
+  record.pinnacleJourney={chapters:centreNarrativeChapters,homeParticipation:centreHomeParticipation,individualProgress:true,source:'https://www.pinnacleblooms.org/pinnacleai'};
   const extra=['Centre network narrative', 'Primary contact: 9100 181 181. The local centre telephone is an alternative.',...(c.directTelephone?['Local alternative: '+c.directTelephone]:[]),'Nearby centres: '+c.nearbyCentres.map(p=>p.name+' '+p.url).join('; '),'Nearby localities: '+c.catchmentLocalities.join(', '),'Nearby postcodes: '+c.catchmentPostcodes.join(', '),'Google listing: '+c.googleBusinessUrl,...(centreWalkthrough(c.id)?['Centre walkthrough: '+centreWalkthrough(c.id).url]:[]),...centreEcosystem.map(p=>p.title+' — '+p.role+'\n'+p.text+'\nhttps://www.pinnacleblooms.org'+p.path),...centreStoryPlaylists.map(p=>p.title+'\n'+p.text+'\n'+p.url),'Network stories are not a roster of this branch’s current staff. Individual experiences do not guarantee every child’s outcome.','Resources:',...record.resources];
-  for(const ext of ['txt','md']){const p=path.join(dir,c.id+(ext==='md'?'-machine.md':'-evidence.txt')),text=(await fs.readFile(p,'utf8')).split('\n<!-- centre-network-story -->')[0];await fs.writeFile(p,text+'\n<!-- centre-network-story -->\n'+extra.join('\n\n')+'\n');}
+  const journey=centreNarrativeChapters.map(chapter=>`Chapter ${chapter.letter}: ${chapter.title}\n${chapter.purpose}\nFamily participation: ${chapter.family}\n${c.profileUrl}#centre-chapter-${chapter.id}`);
+  journey.push(...centreHomeParticipation.map(scene=>scene.title+'\n'+scene.text));
+  for(const ext of ['txt','md']){const p=path.join(dir,c.id+(ext==='md'?'-machine.md':'-evidence.txt')),text=(await fs.readFile(p,'utf8')).split('\n<!-- centre-network-story -->')[0];await fs.writeFile(p,text+'\n<!-- centre-network-story -->\n'+extra.concat(journey).join('\n\n')+'\n');}
  }
  if(c.id==='usa'){record.locationStatus={currentUSClinicVerified:false};record.address=null;record.operationalBoundary='Historical location guidance. No current US clinic, address, local service or appointment is asserted.';record.directAnswer='Contact Pinnacle for location guidance and explore the network’s evidence and family resources.';record.questions=[];record.example=null;}
  await fs.writeFile(file,JSON.stringify(record,null,2)+'\n');

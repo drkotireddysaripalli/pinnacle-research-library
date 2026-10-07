@@ -20,6 +20,15 @@ for(const c of centreRegister){
   assert.equal(nodes.filter(n=>n.tagName==='button'&&attr(n,'class')==='playlist-play').length,4,c.id+' four visible playlist players');
   if(c.directTelephone)assert(html.includes('tel:'+c.directTelephone),c.id+' local phone alternative');
   for(const section of ['find-us','life-first','support','first-visit','connected-pathway','family-resources','local-evidence','questions'])assert(ids.includes(section),c.id+' '+section);
+  for(const chapter of ['understand','everyday','review','life'])assert(ids.includes('centre-chapter-'+chapter),c.id+' complete PinnacleAI chapter '+chapter);
+  const stageLists=nodes.filter(n=>n.tagName==='ol'&&attr(n,'class')?.includes('ecosystem-stage-pair'));
+  assert.equal(stageLists.length,4,c.id+' stages grouped into four chapters');
+  assert.deepEqual(stageLists.map(n=>Number(attr(n,'start'))),[1,3,5,7],c.id+' seven-stage order');
+  assert.equal(stageLists.reduce((count,n)=>count+n.childNodes.filter(x=>x.tagName==='li').length,0),7,c.id+' seven stages once');
+  assert(html.indexOf('id="everyday-example"')<html.indexOf('id="pinnacle-ecosystem"'),c.id+' local example before mechanism');
+  const visit=nodes.find(n=>attr(n,'id')==='first-visit');let preparationLink=false;walk(visit,n=>{if(n.tagName==='a'&&attr(n,'href')?.endsWith('/books/resources/first-conversation'))preparationLink=true;});
+  assert(preparationLink,c.id+' preparation belongs beside first visit');
+  assert(recordPlaceholderGuard(html),c.id+' local name in the journey');
  }
  if(c.id==='usa')assert(!graph.some(e=>e['@type']==='LocalBusiness'));
  const assets=new Set(html.match(/\/pinnacle-pages-assets\/[\w.-]+/g)||[]);for(const f of assets)assert((await fs.stat(path.join(root,'dist',f))).isFile(),c.id+' asset '+f);
@@ -29,5 +38,6 @@ for(const c of centreRegister){
  const record=JSON.parse(await fs.readFile(path.join(root,'dist/pinnacle-pages-data',c.id+'-evidence.json'),'utf8'));assert.equal(record.canonical,c.profileUrl,c.id+' machine identity');
  rows.push({id:c.id,url:c.profileUrl,assets:assets.size,localPhone:!!c.directTelephone,photos:c.images.length,status:c.pageStatus});
 }
+function recordPlaceholderGuard(html){return !html.includes('Pinnacle undefined')&&!html.includes('Pinnacle null');}
 assert.equal(rows.length,62);const sitemap=await fs.readFile(path.join(root,'dist/pinnacle-pages-data/speech-sitemap.xml'),'utf8');for(const c of centreRegister)assert.equal(sitemap.split('<loc>'+c.profileUrl+'</loc>').length-1,1,c.id+' one sitemap entry');
 await fs.mkdir(path.join(root,'deployment'),{recursive:true});await fs.writeFile(path.join(root,'deployment/centre-network-contract-20261007.json'),JSON.stringify({at:new Date().toISOString(),passed:rows.length,rows},null,2)+'\n');console.log(JSON.stringify({passed:rows.length,localPhoneAlternatives:rows.filter(r=>r.localPhone).length,canonicalRouteAssetSchemaAndAnchorChecks:true}));

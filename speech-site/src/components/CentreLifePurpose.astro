@@ -1,0 +1,23 @@
+---
+import Icon from './Icon.astro';
+import {url} from '../data/site';
+const {name}=Astro.props;
+---
+<section class="local-section centre-purpose" id="life-first" aria-labelledby="centre-purpose-title">
+ <div class="local-wrap">
+  <p class="local-kicker"><Icon name="sun"/>Pinnacle {name} · the purpose behind every step</p>
+  <h2 id="centre-purpose-title">Your child’s self-sufficient, <em>mainstream-included life.</em></h2>
+  <blockquote class="centre-purpose-quote">“We begin with the life you want your child to grow toward. Every ability we measure, goal we choose and step we review must have a reason in that life.”</blockquote>
+  <p class="local-lead">Being understood. Getting ready with more confidence. Joining play, learning and family life. At Pinnacle {name}, these everyday possibilities give the conversation its direction. PinnacleAI® brings measurement, a child-specific plan, relevant therapies, home practice and review around that purpose.</p>
+  <div class="centre-purpose-scenes" aria-label="What the life-first direction means">
+   <div><Icon name="voice" size={32}/><h3>A voice in their own life.</h3><p>Express a choice, ask for help and share an interest—in the way that works for your child.</p></div>
+   <div><Icon name="home" size={32}/><h3>More of the day becomes theirs.</h3><p>Take part in getting ready, mealtimes and familiar routines, with useful support and growing confidence.</p></div>
+   <div><Icon name="people" size={32}/><h3>People and places to belong with.</h3><p>Join a game, learn alongside others and participate at home, school and in the community.</p></div>
+  </div>
+  <div class="centre-purpose-shift" id="centre-paradigm"><Icon name="compass" size={32}/><div><h3>The Paradigm Shift: life gives the work its direction.</h3><p>Abilities are like the bricks of a home. Their value grows when they work together to make a life possible. Your family and our professionals choose meaningful priorities, carry practice into real routines and review what your child can use beyond the therapy room.</p><a class="local-text-link" href={url('/verify/evidence/pinnacle-paradigm-shift.html')}>Explore the Pinnacle Paradigm Shift <Icon name="arrow"/></a></div></div>
+  <p class="local-small">Growing independence and participation are the direction from the beginning. Each child’s pace, goals and support remain individual.</p>
+ </div>
+</section>
+<style>
+ .centre-purpose{background:#fff;border-block:1px solid #e5e9ed}.centre-purpose h2{max-width:1050px}.centre-purpose-quote{position:relative;margin:1.8rem 0 1.7rem;padding:1.3rem 1.6rem;border-left:5px solid #96277e;font-size:clamp(1.3rem,2.5vw,1.85rem);font-weight:700;line-height:1.6;color:#172650;background:#fcf7fc;border-radius:0 22px 22px 0;max-width:1120px}.centre-purpose-scenes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.8rem;margin:2.3rem 0}.centre-purpose-scenes>div{padding:1rem 0 1rem 1.3rem;border-left:3px solid #15978d}.centre-purpose-scenes>div:nth-child(2){border-color:#96277e}.centre-purpose-scenes>div:nth-child(3){border-color:#5b3f9c}.centre-purpose-scenes svg{color:#087568}.centre-purpose-scenes h3{margin:.7rem 0}.centre-purpose-scenes p{margin-bottom:0}.centre-purpose-shift{display:flex;align-items:flex-start;gap:1rem;padding:1.6rem;border:1px solid #d7e8e2;border-radius:24px;background:#f4fbf8}.centre-purpose-shift>svg{color:#087568;margin-top:.4rem}.centre-purpose-shift h3{margin-top:0}.centre-purpose-shift p{max-width:1000px}.centre-purpose>.local-wrap>.local-small{margin-top:1.5rem}@media(max-width:760px){.centre-purpose-scenes{grid-template-columns:1fr;gap:.75rem}.centre-purpose-quote{padding:1rem 1.2rem}.centre-purpose-shift{padding:1.2rem;gap:.75rem}}
+</style>

@@ -1,4 +1,15 @@
 // One source for the centre narrative and its machine-readable companions.
+export const centreNarrativeChapters = [
+ {id:'understand',letter:'A',title:'Understand your child.',purpose:'Turn the life you want to make possible into an explained starting picture and a child-specific plan.',stages:[1,2],family:'Bring what your child enjoys, what they can already do and the everyday priority that matters to your family. Ask what was measured, why the goal matters and how it will be reviewed.'},
+ {id:'everyday',letter:'B',title:'Connect therapy with everyday life.',purpose:'Give relevant therapies one useful direction, and help the family carry guided practice into familiar routines.',stages:[3,4],family:'See a suitable activity demonstrated. Agree what fits your day, how much help to offer and what to notice. Home participation supports professional care; you are not expected to do everything alone.'},
+ {id:'review',letter:'C',title:'Track. Review. Correct.',purpose:'Bring what happens in the centre, at home and in relevant learning settings back into the next decision.',stages:[5,6],family:'Share what your child used, where it happened, how comfortable they were and which help still mattered. Reassessment and your observations guide whether to continue, adapt or reconsider the plan.'},
+ {id:'life',letter:'D',title:'Your child’s life is the purpose.',purpose:'Keep growing independence, school readiness, relationships and mainstream participation in view at every stage.',stages:[7],family:'Look beyond completing an activity. Discuss whether an ability helps your child choose, communicate, join a routine or take part with another person, and what support makes that possible.'}
+];
+export const centreHomeParticipation = [
+ {icon:'people',title:'At the centre',text:'Your professional explains the goal and demonstrates suitable practice. Ask how the activity connects with the life priority you chose.'},
+ {icon:'home',title:'At home',text:'A parent, family member or caregiver brings a manageable opportunity into play, a meal or another familiar routine. The child’s choices and comfort stay central.'},
+ {icon:'book',title:'With school and caregivers',text:'With your consent, relevant teachers and caregivers can share observations and discuss the support that helps participation in another setting.'}
+];
 export const centreEcosystem = [
  {id:'pinnacleai',title:'PinnacleAI®',role:'One system. Your child’s whole life.',text:'Ability measurement, a child-specific plan, integrated therapies, everyday practice, tracking and reassessment work toward your child’s self-sufficient, mainstream-included life.',path:'/pinnacleai',visual:'system',icon:'loop'},
  {id:'abilityscore',title:'AbilityScore®',role:'Understand the starting point.',text:'Bring your child’s present abilities into a clear conversation. Measurement helps the family and professional choose meaningful goals and compare progress at review.',path:'/abilityscore',visual:'ability',icon:'measure'},
