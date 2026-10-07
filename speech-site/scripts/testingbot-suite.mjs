@@ -7,6 +7,7 @@ import {testingBotClient,writeJson} from './testingbot-client.mjs';
 import {pageManifest,selectCases,matrix} from '../tests/testingbot/page-manifest.mjs';
 import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
+import {headerReferenceName,imageInViewport} from '../tests/testingbot/presentation-state.mjs';
 
 const option=(name,fallback)=>{const i=process.argv.indexOf('--'+name);return i<0?fallback:process.argv[i+1];};
 const suite=option('suite','bvt'),build=process.argv.includes('--build'),list=process.argv.includes('--list');
@@ -27,6 +28,7 @@ const digest=file=>fs.readFile(file).then(b=>createHash('sha256').update(b).dige
 let source=process.env.GITHUB_SHA||process.env.TESTINGBOT_SOURCE_SHA;
 if(!source)try{const git=process.env.GIT_EXECUTABLE||(process.platform==='win32'?'C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe':'git');source=execFileSync(git,['rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).trim();}catch{source='unknown';}
 const report={schemaVersion:1,suite,startedAt:stamp,source,build,runnerSha256:await digest(new URL(import.meta.url)),manifestSha256:await digest(new URL('../tests/testingbot/page-manifest.mjs',import.meta.url)),account:{plan:account.plan,secondsBefore:account.seconds,desktopSlots:account.max_concurrent,physicalSlots:account.max_concurrent_mobile},selectedIds:selected.map(r=>r.id),requestedMatrix:matrixIds,sessions:[],pendingPages:manifest.filter(r=>!r.published),declaredLimits:['Public signed-out UI only; actual OAuth/OTP and upstream accepted leads/purchases are not exercised','TestingBot executes our assertions; it does not certify narrative quality or business outcomes','Screenshots require review against approved references; a capture is not visual acceptance','Browser lab timings are not field Core Web Vitals']};
+report.presentationStateSha256=await digest(new URL('../tests/testingbot/presentation-state.mjs',import.meta.url));
 await fs.mkdir(out,{recursive:true});
 const save=()=>writeJson(out+'/report.json',report);
 await save();console.log(JSON.stringify({suite,selected:selected.length,matrix:matrixIds,report:out+'/report.json',account:report.account}));
@@ -107,9 +109,11 @@ for(const matrixId of matrixIds){
         await check('Structured data parses and social image exists',()=>evaluate("const s=[...document.querySelectorAll('script[type=\"application/ld+json\"]')];return s.length>0&&s.every(n=>{try{return !!JSON.parse(n.textContent)}catch{return false}})&&(document.querySelector('meta[property=\"og:image\"]')?.content||'').startsWith('https://')"));
         await check('Usable helpline destination remains available',()=>evaluate("const a=[...document.querySelectorAll('a[href=\"tel:+919100181181\"]')];return a.length>0&&a.some(n=>{const r=n.getBoundingClientRect();return r.width>0&&r.height>0})"));
         await snap(t,'opening');
+        const gated=await visible('#ask-reader-gate[open]');
         if(process.argv.includes('--visual')&&!p.shell){
           const identity=[matrixId,config.kind==='physical'?device.name:config.platformName,t.document.width+'x'+t.document.height].join('-').replace(/[^a-zA-Z0-9-]/g,'-');
-          const name=(config.kind==='physical'?'pinnacle-opening-'+p.id+'-':'pinnacle-common-v159-')+identity;
+          const activePath=await evaluate("return [...new Set([...document.querySelectorAll('.portal-main-nav a[aria-current=page],.portal-therapy-nav a[aria-current=page]')].map(a=>new URL(a.href).pathname))].sort().join('--')");
+          const name=config.kind==='physical'?'pinnacle-opening-'+p.id+'-'+identity:headerReferenceName(identity,{gate:gated,activePath});
           const reference=visualReferences.approved.find(r=>r.name===name);
           try{
             // Appium's native interception did not resolve CSS crops on the
@@ -126,8 +130,8 @@ for(const matrixId of matrixIds){
             else t.skipped.push(error);
           }
         }
-        const gated=await visible('#ask-reader-gate[open]');
         if(p.gate){await check('Anonymous reader gets branded Google sign-in gate',()=>evaluate("const d=document.querySelector('#ask-reader-gate');return !!d?.open&&!!d.querySelector('[name=returnTo]')&&!!d.querySelector('img')"));t.skipped.push('Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite');}
+        else await check('Public destination has no unintended reader sign-in gate',()=>!gated);
         if(!gated){
           await check('Mobile navigation opens, isolates content and restores focus',async()=>{
             if(!await visible('.portal-mobile-menu-trigger')){
@@ -155,7 +159,7 @@ for(const matrixId of matrixIds){
           }
           if(p.kind==='centre'&&(!p.status||p.status==='centre-enquiry'))await check('Centre assessment keeps actual selected centre',()=>evaluate("const a=document.querySelector('.local-hero a[data-cta=\"hero-assessment\"]');return !!a&&new URL(a.href).searchParams.get('centre')===arguments[0]",p.centre));
           // Exercise lazy loading without external video/map activation or submitting forms.
-          await check('Opening images actually decode',async()=>{const evidence=await evaluate("return (async()=>{const images=[...document.querySelectorAll('main img')].filter(n=>{const r=n.getBoundingClientRect();return r.width>0&&r.height>0&&r.top<innerHeight&&r.bottom>0});await Promise.all(images.map(n=>Promise.race([n.decode().catch(()=>{}),new Promise(r=>setTimeout(r,4000))])));return {count:images.length,broken:images.filter(n=>!n.complete||!n.naturalWidth).map(n=>n.getAttribute('src'))}})()");t.openingImages=evidence;if(evidence.broken.length)throw Error(JSON.stringify(evidence));return evidence;});
+          await check('Current viewport images actually decode',async()=>{const evidence=await evaluate("return (async()=>{const images=[...document.querySelectorAll('main img')].filter("+imageInViewport.toString()+");await Promise.all(images.map(n=>Promise.race([n.decode().catch(()=>{}),new Promise(r=>setTimeout(r,4000))])));return {count:images.length,broken:images.filter(n=>!n.complete||!n.naturalWidth).map(n=>n.getAttribute('src'))}})()");t.viewportImages=evidence;if(evidence.broken.length)throw Error(JSON.stringify(evidence));return evidence;});
           const reading=await evaluate("const main=document.querySelector('main'),paras=[...main.querySelectorAll('p')].filter(n=>n.innerText.trim().length>30&&n.getBoundingClientRect().height>0),bad=paras.filter(n=>{const s=getComputedStyle(n);return parseFloat(s.fontSize)<12||n.getBoundingClientRect().width<120}).map(n=>({text:n.innerText.slice(0,120),fontSize:getComputedStyle(n).fontSize,width:n.getBoundingClientRect().width}));const broken=[...main.querySelectorAll('a[href^=\"#\"]')].filter(n=>n.hash.length>1&&!document.getElementById(decodeURIComponent(n.hash.slice(1)))).map(n=>n.hash);return {paragraphs:paras.length,smallText:bad,brokenAnchors:broken}");t.readability=reading;
           // Small secondary text belongs to the P2 presentation suite, not the fast BVT release smoke.
           if(reading.smallText.length)t.warnings.push('P2 readability findings: '+JSON.stringify(reading.smallText));

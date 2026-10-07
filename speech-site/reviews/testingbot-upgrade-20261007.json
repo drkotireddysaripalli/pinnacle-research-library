@@ -1,0 +1,291 @@
+{
+  "recordedAt": "2026-10-07T06:23:41.636Z",
+  "purpose": "Verify owner TestingBot upgrade and remove execution dependency",
+  "account": {
+    "plan": "Automated Pro - 1 Sessions - Unlimited",
+    "desktopSlots": 1,
+    "physicalSlots": 1,
+    "currentDesktopSessions": 0,
+    "currentPhysicalSessions": 0
+  },
+  "fundingBlockCleared": true,
+  "actualSessionsCreated": 3,
+  "initialP1CasesExecuted": 32,
+  "initialP1Result": "18 passed / 14 failed; original incorrect contract findings retained",
+  "correctedTargetedCases": [
+    "specialEducation",
+    "abilityscore",
+    "pinnacleai",
+    "ask-answer",
+    "mainstream",
+    "stories"
+  ],
+  "correctedTargetedResult": "Six affected cases passed across two scoped retests; not a complete corrected P1 pass",
+  "localContractGuardsPassed": 9,
+  "siteProductionChanged": false,
+  "testCorrections": [
+    "Separate neutral, aria-current authority and anonymous-gate backdrop references",
+    "Exclude native closed disclosures and horizontally offscreen images from current-viewport decode",
+    "Preserve source-defined public Mirracles archive; do not require an invented sign-in gate",
+    "Require no unintended gate on ordinary public destinations",
+    "Include presentation helper hash in exact-build release verification"
+  ],
+  "coverageStillPending": [
+    "Full P1 on final committed runner",
+    "P2/P3 and additional browser/device profiles",
+    "Visual review/registration of new state-specific provisional baselines",
+    "Exact-build CI for the final test configuration"
+  ],
+  "reports": [
+    {
+      "name": "p1-chrome",
+      "file": "audits/testingbot-upgrade-20261007/p1-chrome/report.json",
+      "source": "c868edea528c4b0a6d07c19a77888e3fcaca8178",
+      "runnerSha256": "921e3eddaee48e20a95b07a06a2af01e1673da78e6ef4337c65db1f9d95ffd3f",
+      "manifestSha256": "513e4733f333de050c951004192e4431e4842214d842bdc2b1ab2e253411e4b5",
+      "counts": {
+        "selectedPages": 32,
+        "pageRuns": 32,
+        "passed": 18,
+        "failed": 14,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "overall": "failed-or-incomplete",
+      "sessions": [
+        {
+          "dashboard": "https://testingbot.com/members/tests/93e6f74a09b0-9140197896b7-fa5bea6c6827-179135337090-93090040",
+          "status": "failed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53472926,
+            "success": false,
+            "durationSeconds": 558,
+            "assetsAvailable": false,
+            "deviceName": null,
+            "platformName": "",
+            "os": "WIN11",
+            "browser": "googlechrome",
+            "browserVersion": "153"
+          },
+          "failedCases": [
+            {
+              "id": "specialEducation",
+              "checks": [
+                {
+                  "name": "Opening images actually decode",
+                  "error": "{\"broken\":[\"/pinnacle-pages-assets/gurunanak-interior-1-2.3cpAiMLg_kw5aY.webp\",\"/pinnacle-pages-assets/jayanagar-exterior-41.Bh87jXgf_Z4XeS0.webp\"],\"count\":6}"
+                }
+              ]
+            },
+            {
+              "id": "abilityscore",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "readiness",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "ask-answer",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "ask-home",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "faq",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "faq-answer",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "sunshine",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "sunshine-category",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "stories",
+              "checks": [
+                {
+                  "name": "Anonymous reader gets branded Google sign-in gate",
+                  "error": "Assertion was false"
+                }
+              ]
+            },
+            {
+              "id": "faq-telugu",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "self-sufficient",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            },
+            {
+              "id": "mainstream",
+              "checks": [
+                {
+                  "name": "Approved visual reference matches",
+                  "error": "Visual ID changed or pixel regression detected"
+                }
+              ]
+            }
+          ],
+          "provisionalVisuals": []
+        }
+      ]
+    },
+    {
+      "name": "presentation-retest",
+      "file": "audits/testingbot-upgrade-20261007/presentation-retest/report.json",
+      "source": "c868edea528c4b0a6d07c19a77888e3fcaca8178",
+      "runnerSha256": "16f985f72414988c041ba291fba6a7f1c0f987728d9ede3ea28022797e8b8a4b",
+      "manifestSha256": "513e4733f333de050c951004192e4431e4842214d842bdc2b1ab2e253411e4b5",
+      "presentationStateSha256": "373dcc46f40c0fa0e75fbfa3cc92ad40453e8fdb7abc6cba06b0285ee00ac7d9",
+      "counts": {
+        "selectedPages": 6,
+        "pageRuns": 6,
+        "passed": 5,
+        "failed": 1,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "overall": "failed-or-incomplete",
+      "sessions": [
+        {
+          "dashboard": "https://testingbot.com/members/tests/c58ea004932b-89f49ae3cdd3-13d0528abf72-179135397461-04276004",
+          "status": "failed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53473193,
+            "success": false,
+            "durationSeconds": 115,
+            "assetsAvailable": false,
+            "deviceName": null,
+            "platformName": "",
+            "os": "WIN11",
+            "browser": "googlechrome",
+            "browserVersion": "153"
+          },
+          "failedCases": [
+            {
+              "id": "stories",
+              "checks": [
+                {
+                  "name": "Anonymous reader gets branded Google sign-in gate",
+                  "error": "Assertion was false"
+                }
+              ]
+            }
+          ],
+          "provisionalVisuals": []
+        }
+      ]
+    },
+    {
+      "name": "stories-contract-retest",
+      "file": "audits/testingbot-upgrade-20261007/stories-contract-retest/report.json",
+      "source": "c868edea528c4b0a6d07c19a77888e3fcaca8178",
+      "runnerSha256": "1ade06e77ff509bca9d0c4e104135c69338b7d59d1eeb9c3ab7143f3398357f5",
+      "manifestSha256": "871e25c11781fe1cf926173e5e4576b291e726ea431e676f872ce65e58b085ad",
+      "presentationStateSha256": "373dcc46f40c0fa0e75fbfa3cc92ad40453e8fdb7abc6cba06b0285ee00ac7d9",
+      "counts": {
+        "selectedPages": 1,
+        "pageRuns": 1,
+        "passed": 1,
+        "failed": 0,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "overall": "functional-pass",
+      "sessions": [
+        {
+          "dashboard": "https://testingbot.com/members/tests/4ba01377207e-79e34b49822a-a6502ffb3150-179135412569-98236518",
+          "status": "passed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53473259,
+            "success": true,
+            "durationSeconds": 24,
+            "assetsAvailable": false,
+            "deviceName": null,
+            "platformName": "",
+            "os": "WIN11",
+            "browser": "googlechrome",
+            "browserVersion": "153"
+          },
+          "failedCases": [],
+          "provisionalVisuals": []
+        }
+      ]
+    }
+  ]
+}

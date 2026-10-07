@@ -17,7 +17,7 @@ export async function pageManifest(){
   records.push(row('ask-answer','/ask/what-is-a-deic-and-what-services-does-it-offer','ask-answer','bvt',{canonical:'https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer',kind:'knowledge',gate:true}));
   records.push(row('verify','/verify/','verify','bvt',{kind:'verify',shell:'evidence',knownGap:'Current Verify uses its separate evidence shell; common Astro-shell migration is not delivered'}));
   records.push(row('ask-home','/ask','knowledge-index','p1',{canonical:'https://pinnacleblooms.org/ask',kind:'knowledge',gate:true}));
-  for(const [id,p] of [['faq','/faq'],['faq-answer','/faq/english/speech-therapy/autism-speech-therapy'],['sunshine','/sunshine'],['sunshine-category','/sunshine/techniques'],['stories','/allmirracles'],['faq-telugu','/faq/telugu']])records.push(row(id,p,id.includes('answer')?'knowledge-answer':'knowledge-index','p1',{kind:'knowledge',gate:true,native:id==='faq-telugu'}));
+  for(const [id,p] of [['faq','/faq'],['faq-answer','/faq/english/speech-therapy/autism-speech-therapy'],['sunshine','/sunshine'],['sunshine-category','/sunshine/techniques'],['stories','/allmirracles'],['faq-telugu','/faq/telugu']])records.push(row(id,p,id.includes('answer')?'knowledge-answer':'knowledge-index','p1',{kind:'knowledge',gate:id!=='stories',native:id==='faq-telugu'}));
   records.push(row('books','/books','book-collection','p1',{kind:'books'}));
   records.push(row('book-resource','/books/resources/first-conversation','book-resource','p2',{kind:'books'}));
   records.push(row('reassess-review-repeat','/reassess-review-repeat','pinnacleai-module','p1',{kind:'portal',buildPath:'/reassess-review-repeat'}));

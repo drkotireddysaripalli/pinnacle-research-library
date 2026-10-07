@@ -12,5 +12,5 @@ assert.equal(r.source,source,'BVT did not run against the source being promoted'
 assert.equal(r.build,true,'Public production smoke cannot replace candidate-build verification');
 assert.equal(r.suite,'bvt');assert(suiteVerdict(r),'BVT failed, skipped or incomplete');
 assert.deepEqual(r.selectedIds,selectCases(await pageManifest(),'bvt',{build:true}).map(x=>x.id),'Missing build case');
-for(const [key,file] of [['runnerSha256','./testingbot-suite.mjs'],['manifestSha256','../tests/testingbot/page-manifest.mjs']])assert.equal(r[key],createHash('sha256').update(await fs.readFile(new URL(file,import.meta.url))).digest('hex'),'BVT test source changed after the run');
+for(const [key,file] of [['runnerSha256','./testingbot-suite.mjs'],['manifestSha256','../tests/testingbot/page-manifest.mjs'],['presentationStateSha256','../tests/testingbot/presentation-state.mjs']])assert.equal(r[key],createHash('sha256').update(await fs.readFile(new URL(file,import.meta.url))).digest('hex'),'BVT test source changed after the run');
 console.log(JSON.stringify({passed:true,source,report:file,cases:r.selectedIds.length,scope:'Exact Astro candidate; protected Ask/Verify have separate public smoke and runtime tests'}));
