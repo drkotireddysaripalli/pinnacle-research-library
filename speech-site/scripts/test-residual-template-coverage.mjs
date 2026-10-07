@@ -37,6 +37,15 @@ test('observed collection syntax is repaired without changing images, copy or un
  assert.equal(j['@id'],origin+'/music-therapy');assert.equal(j.url,j['@id']);assert.equal(j.description,'Keep every claim and number 9007199254740993123');assert.equal(j.mainEntityOfPage.image[0].url,origin+'/images/seo/1.jpeg');assert(!('id' in j));
  for(const [raw,url] of [[collection,origin+'/different'],[collection.replace('ImageGallery','UnknownGallery'),origin+'/music-therapy'],[collection.replace('description','newProperty'),origin+'/music-therapy'],[collection,origin+'/music-therapy?private=1']])assert.equal(repairObservedCollection(raw,url),raw);
 });
+test('captured campaign collection decodes its URL entity without accepting a functional query',()=>{
+ const url=origin+'/music-therapy?utm_source=release-fixture&gclid=opaque';
+ const raw=collection.replaceAll('http://www.pinnacleblooms.org/music-therapy','http://www.pinnacleblooms.org/music-therapy?utm_source=release-fixture&amp;gclid=opaque');
+ const j=JSON.parse(repairObservedCollection(raw,url));
+ assert.equal(j['@id'],origin+'/music-therapy');assert.equal(j.url,j['@id']);assert.equal(j.description,'Keep every claim and number 9007199254740993123');
+ const functional=raw.replaceAll('utm_source=release-fixture','search=private');
+ assert.equal(repairObservedCollection(functional,url.replace('utm_source=release-fixture','search=private')),functional);
+ assert.equal(repairObservedCollection(raw,url.replace('gclid=opaque','gclid=different')),raw);
+});
 test('actual Worker parser preserves public document, privacy semantics and bounded stream guards',async t=>{
  const expired=await fs.readFile('tests/fixtures/legacy-expired-announcement.txt','utf8');
  const markup=path=>`<!doctype html><html><head><link rel="canonical" href="${origin+path}"><meta property="og:url" content="${(origin+path).replace('https:','http:')}"></head><body><header>Approved header</header><main>Family 🌸 తెలుగు <a href="/t/aba-therapy?utm_source=fixture#contact">ABA support</a></main><script type="application/ld+json">${expired}</script><script type="application/ld+json">${collection}</script><footer>Approved footer</footer></body></html>`;

@@ -173,8 +173,13 @@ export function repairObservedCollection(text,requestUrl) {
   if(!comments.every(c=>text.includes(c)))return text;
   try{
     const u=new URL(requestUrl),clean=comments.reduce((s,c)=>s.replace(c,''),text),data=JSON.parse(clean);
+    const tracking=new Set(['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','utm_source_platform','utm_creative_format','utm_marketing_tactic','gclid','dclid','msclkid','fbclid','gbraid','wbraid']);
+    // These templates HTML-escape ampersands even inside JSON-LD URL strings.
+    // Compare the decoded identity only; keep every non-URL field unchanged.
+    const identity=data.url?.replace(/&(?:amp|#0*38|#x0*26);/gi,'&');
     if(u.origin!=='https://www.pinnacleblooms.org'||data['@context']!=='http://schema.org'||data['@type']!=='CollectionPage'||
-      data.id!==data.url||new URL(data.url).href!==u.href.replace(/^https:/,'http:')||
+      u.hash||u.username||u.password||[...u.searchParams.keys()].some(k=>!tracking.has(k))||
+      data.id!==data.url||new URL(identity).href!==u.href.replace(/^https:/,'http:')||
       Object.keys(data).sort().join(',')!=='@context,@type,description,id,mainEntityOfPage,url'||
       data.mainEntityOfPage?.['@type']!=='ImageGallery'||!Array.isArray(data.mainEntityOfPage.image)||
       !data.mainEntityOfPage.image.every(i=>i['@type']==='ImageObject'&&typeof i.url==='string'))return text;
