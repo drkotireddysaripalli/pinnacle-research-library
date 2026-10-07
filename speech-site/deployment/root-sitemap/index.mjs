@@ -1,5 +1,6 @@
 import {retiredStaffIds,currentStaffPaths} from '../legacy-social-metadata/staff-records.mjs';
 import {faqPaths} from './faq-paths.mjs';
+import {repairVideoSitemap} from './video-output.mjs';
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
@@ -76,7 +77,7 @@ var PROXY_TARGETS = /* @__PURE__ */ new Map([
   ["/sitemaps/centres.xml", `${SITE_ORIGIN}/centerssitemap`],
   ["/sitemaps/staff.xml", "https://psapi.pinnacleblooms.org/staffsitemap"],
   ["/sitemaps/bots.xml", "https://psapi.pinnacleblooms.org/botsitemap"],
-  ["/sitemaps/miracles.xml", `${SITE_ORIGIN}/mirraclesitemap`],
+  ["/sitemaps/miracles.xml", `${SITE_ORIGIN}/mirraclesitemap?count=23000`],
   ["/sitemaps/faq-en.xml", `${SITE_ORIGIN}/faqenglishsitemap.xml`],
   ["/sitemaps/faq-te.xml", `${SITE_ORIGIN}/faqtelugusitemap.xml`],
   ["/sitemaps/faq-hi.xml", `${SITE_ORIGIN}/faqhindisitemap.xml`],
@@ -232,7 +233,15 @@ var index_default = {
         headers: { Allow: "GET, HEAD", "Cache-Control": "no-store" }
       });
     }
-    const { pathname } = new URL(request.url);
+    const requestUrl=new URL(request.url),{ pathname }=requestUrl;
+    if(pathname==='/mirraclesitemap' && requestUrl.origin===SITE_ORIGIN &&
+       [...requestUrl.searchParams.keys()].every(k=>k==='count') &&
+       (!requestUrl.searchParams.has('count')||/^\d{1,5}$/.test(requestUrl.searchParams.get('count'))) &&
+       !request.headers.has('authorization')&&!request.headers.has('range')){
+      const upstream=await fetch(new Request(request,{method:'GET'}));
+      return repairVideoSitemap(upstream,method);
+    }
+    if(pathname==='/mirraclesitemap')return fetch(request);
     if (pathname === "/sitemap.xml") {
       return xmlResponse(sitemapIndexXml(), 200, method);
     }

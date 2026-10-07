@@ -53,6 +53,10 @@ class WebsiteEnrolmentReceipts extends WebsiteReceiptWorkerEntrypoint {
 export {WebsiteEnrolmentReceipts};
 `;
  source='import {WorkerEntrypoint as WebsiteReceiptWorkerEntrypoint} from "cloudflare:workers";\nimport {receiveReceiptEnrolment as receiveWebsiteEnrolmentReceipt,sqlReceiptLedger as websiteEnrolmentSqlLedger} from "./website-enrolment-receipt.mjs";\n'+source+entrypoint;
+ // Deduplicate only the observed staff sitemap's repeated generated page URLs.
+ const staffAnchor='var rssResponse = GenarateSiteMap(data2, "STAFF", true);';
+ if(source.split(staffAnchor).length!==2)throw Error('Staff sitemap generator changed');
+ source=source.replace(staffAnchor,'const seenStaffUrls = new Set();\n    data2 = data2.filter(item => {const location=CreateHyperlink(item,"STAFF");if(seenStaffUrls.has(location))return false;seenStaffUrls.add(location);return true;});\n    '+staffAnchor);
  return source;
 }
 export async function prepareEnrolmentReceiver({input='ask-private/acquisition-receiver-20261007/index.js',output='ask-private/acquisition-receiver-candidate-20261007'}={}){

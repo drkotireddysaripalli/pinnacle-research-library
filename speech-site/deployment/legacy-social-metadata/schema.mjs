@@ -147,6 +147,16 @@ async function repairPhysiotherapyWebPage(text, requestUrl) {
 export async function repairLegacyGraph(text, requestUrl) {
   if(text.length>SCHEMA_LIMIT)return text;
   const normalized=text.trim().replaceAll('\r\n','\n');
+  // Exact Navaratri article: the origin placed unescaped CSS backslashes into
+  // JSON. Escape those bytes for JSON rather than changing its article/CSS.
+  // Unknown articles, changed content and private responses are not rewritten.
+  if(requestUrl && /^\/guru\/6385\//i.test(new URL(requestUrl).pathname) && normalized.includes('"@type": "NewsArticle"')) {
+    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
+    if(digest==='da6310191ba09480105f13f63e404b78b06a36ce60088249d6afcf9aa86caa0b') {
+      const repaired=text.replace(/(?<!\\)\\%/g,'\\\\%');
+      try { if(JSON.parse(repaired)['@type']==='NewsArticle')text=repaired; } catch { return text; }
+    }
+  }
   if (normalized.includes('"@type": "JobPosting"')) {
     const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
     // Exact shared five-job graph captured on therapy/story pages on 6 October.

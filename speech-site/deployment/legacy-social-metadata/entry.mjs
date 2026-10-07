@@ -9,6 +9,7 @@ import {repairKnownLegacySchema} from './schema.mjs';
 import {repairKnownBrokenMedia} from './media.mjs';
 import {repairPublicLinks} from '../public-link-target.mjs';
 import {sunshineRedirect} from '../sunshine-recovery-routes.mjs';
+import {repairKnownLegacyPerformance} from './performance.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 // Existing legacy templates with the same measured HTTP social/HTTPS canonical defect.
@@ -26,7 +27,7 @@ export function isEligible(request) {
   return request.method === 'GET' && url.protocol === 'https:' &&
     url.hostname === 'www.pinnacleblooms.org' &&
     (url.pathname === '/faq' || url.pathname.startsWith('/faq/') ||
-      /^\/(?:t|c|ma|b|m|a|abs|abilities|skills)\/[^/]+\/?$/.test(url.pathname) || /^\/mirracles\/\d+\/[^/]+\/?$/.test(url.pathname) ||
+      /^\/(?:t|c|ma|b|m|a|abs|abilities|skills)\/[^/]+\/?$/.test(url.pathname) || /^\/(?:mirracles|guru)\/\d+\/(?:[^/]+\/?)?$/.test(url.pathname) ||
       /^\/staff\/[^/]+\/\d+\/?$/.test(url.pathname) ||
       ADDITIONAL_LEGACY_PATHS.includes(url.pathname.replace(/\/$/, '')) ||
       ['/physiotherapy', '/physiotherapy/', SERVICES_PATH, SERVICES_PATH + '/'].includes(url.pathname)) &&
@@ -96,7 +97,7 @@ async function repairHead(head, request) {
   const samePath = parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '');
   // The legacy numeric Mirracles routes publish lowercase canonical slugs.
   // Only that documented route family permits a case-normalized comparison.
-  const sameMirracle = /^\/mirracles\/\d+\/[^/]+\/?$/.test(requestUrl.pathname) &&
+  const sameMirracle = /^\/(?:mirracles|guru)\/\d+\/(?:[^/]+\/?)?$/.test(requestUrl.pathname) &&
     parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '').toLowerCase();
   const sameRecordedCourse = requestUrl.pathname.replace(/\/$/,'')==='/courses/466/Afraid' && parsed.pathname==='/courses/466/afraid';
   // Published numeric staff profiles likewise use lowercase canonical slugs.
@@ -171,7 +172,7 @@ export async function handle(request, fetcher = fetch) {
   headers.delete('if-none-match'); headers.delete('if-modified-since');
   const upstream = new Request(request, {headers});
   const response = await transform(request, await fetcher(upstream));
-  return transformedResponses.has(response) ? repairPublicLinks(repairKnownBrokenMedia(repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response)),request.url))) : response;
+  return transformedResponses.has(response) ? repairKnownLegacyPerformance(repairPublicLinks(repairKnownBrokenMedia(repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response)),request.url))),request) : response;
 }
 
 export default {fetch: request => handle(request)};
