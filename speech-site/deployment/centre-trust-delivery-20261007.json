@@ -1,0 +1,187 @@
+{
+  "at": "2026-10-07T11:08:01.108Z",
+  "scope": "Shared centre narrative, four images and Google public feed",
+  "sourceCommit": "4102e0a1fb9bdcc763abc87b1ee5309a6f014921",
+  "workerVersion": "368d20d1-65ba-4c24-a963-e03268067073",
+  "deployment": "2dc41af0-0464-45ff-9def-e12b9718d37a",
+  "publishedCentrePages": 60,
+  "heldPagesPreserved": [
+    "delhi",
+    "usa"
+  ],
+  "protectedPublicDestinations": 9,
+  "cloudflareRoutesPreserved": 229,
+  "googleIdentityCoverage": {
+    "matched": 58,
+    "unmatched": [
+      "jublieehills"
+    ],
+    "ambiguous": [
+      "nad"
+    ],
+    "held": [
+      "delhi",
+      "usa"
+    ]
+  },
+  "googlePublicProof": [
+    {
+      "id": "suchitra",
+      "url": "https://www.pinnacleblooms.org/centers/_google/suchitra",
+      "httpStatus": 200,
+      "state": "ready",
+      "overall": {
+        "rating": 4.8,
+        "count": 443
+      },
+      "selectedReviews": 1,
+      "publishedPosts": 3,
+      "sourceFetchedAt": "2026-10-07T10:17:02.000Z",
+      "retrievedAt": "2026-10-07T11:05:43.137Z",
+      "expiresAt": "2026-10-08T11:05:43.137Z",
+      "secretAbsent": true,
+      "privateRowsAbsent": true,
+      "reviewsState": "ready",
+      "postsState": "ready"
+    },
+    {
+      "id": "guntur",
+      "url": "https://www.pinnacleblooms.org/centers/_google/guntur",
+      "httpStatus": 200,
+      "state": "ready",
+      "overall": {
+        "rating": 4.8,
+        "count": 241
+      },
+      "selectedReviews": 5,
+      "publishedPosts": 0,
+      "sourceFetchedAt": "2026-10-07T11:05:44.000Z",
+      "retrievedAt": "2026-10-07T11:05:56.522Z",
+      "expiresAt": "2026-10-08T11:05:56.522Z",
+      "secretAbsent": true,
+      "privateRowsAbsent": true,
+      "reviewsState": "ready",
+      "postsState": "unavailable"
+    }
+  ],
+  "testing": {
+    "exactSourceCI": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37610498680",
+    "localNarrativeCases": 12,
+    "localMediaCases": 4,
+    "fixtureGoogleBrowserCases": 6,
+    "googleUnitCases": 13,
+    "actualGoogleBrowserCases": 2,
+    "liveFunctionalDeviceCases": [
+      {
+        "matrix": "ios",
+        "id": "centre-suchitra",
+        "status": "passed",
+        "browser": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1",
+        "source": "72c3508bb9e96a0a68501bde461703ec65584d42",
+        "requestedDevice": "iPhone 17 Pro",
+        "actualDevice": "iPhone 17 Pro",
+        "actualOS": "26.5"
+      },
+      {
+        "matrix": "ios",
+        "id": "centre-guntur",
+        "status": "passed",
+        "browser": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.5 Mobile/15E148 Safari/604.1",
+        "source": "72c3508bb9e96a0a68501bde461703ec65584d42",
+        "requestedDevice": "iPhone 17 Pro",
+        "actualDevice": "iPhone 17 Pro",
+        "actualOS": "26.5"
+      },
+      {
+        "matrix": "android",
+        "id": "centre-suchitra",
+        "status": "passed",
+        "browser": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36",
+        "source": "72c3508bb9e96a0a68501bde461703ec65584d42",
+        "requestedDevice": "Galaxy S24",
+        "actualDevice": "Samsung SM-S921B (Galaxy S24)",
+        "actualOS": "14"
+      },
+      {
+        "matrix": "android",
+        "id": "centre-guntur",
+        "status": "passed",
+        "browser": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36",
+        "source": "72c3508bb9e96a0a68501bde461703ec65584d42",
+        "requestedDevice": "Galaxy S24",
+        "actualDevice": "Samsung SM-S921B (Galaxy S24)",
+        "actualOS": "14"
+      },
+      {
+        "matrix": "safari",
+        "id": "centre-suchitra",
+        "status": "passed",
+        "source": "72c3508bb9e96a0a68501bde461703ec65584d42",
+        "actualBrowser": "Safari",
+        "actualVersion": "26.3.1"
+      },
+      {
+        "matrix": "safari",
+        "id": "centre-guntur",
+        "status": "passed",
+        "source": "72c3508bb9e96a0a68501bde461703ec65584d42",
+        "actualBrowser": "Safari",
+        "actualVersion": "26.3.1"
+      }
+    ],
+    "deviceScope": "Functional device checks cover the initial centre-art release. The follow-up fixes an initially empty dialog href and the edge fetch protocol; final changed-build BVT and public Google rendering were verified separately.",
+    "visualScope": "Actual live section screenshots reviewed. New physical/Safari provider baselines remain provisional; no automatic whole-page design approval is claimed."
+  },
+  "lighthouse": {
+    "kind": "simulated lab measurements, not field Core Web Vitals",
+    "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+    "reports": [
+      {
+        "device": "mobile",
+        "scores": {
+          "performance": 99,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcpMs": 1220.1035000000002,
+          "lcpMs": 1686.207,
+          "tbtMs": 103,
+          "cls": 0,
+          "speedIndexMs": 1220.1035000000002
+        }
+      },
+      {
+        "device": "desktop",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcpMs": 516.3185,
+          "lcpMs": 516.8184999999999,
+          "tbtMs": 0,
+          "cls": 0,
+          "speedIndexMs": 516.3185
+        }
+      }
+    ]
+  },
+  "indexNow": {
+    "urls": 60,
+    "httpStatus": 200,
+    "submittedAt": "2026-10-07T11:06:49.001Z",
+    "meaning": "Updated URL notification received; this confirms submission only, not discovery, indexing, ranking, AI citation or conversion."
+  },
+  "limitations": [
+    "No qualified enquiry, connected call, admission, ranking gain or field Core Web Vitals is established by this release.",
+    "Jubilee Hills requires an attributable location identity in the connected Google source; NAD requires reconciliation of two competing location resources. Existing listing links remain available.",
+    "The separate durable enquiry receipt candidate remains unactivated; its deployment, private receiver migration and operational join are not established here.",
+    "Guntur reviews were verified; its separate posts request was temporarily unavailable. Zero returned posts is not evidence of no Google publications. Existing fallback and the daily on-demand refresh remain active."
+  ],
+  "noSyntheticEnquiry": true,
+  "pausedSchedulersNotRestarted": true
+}
