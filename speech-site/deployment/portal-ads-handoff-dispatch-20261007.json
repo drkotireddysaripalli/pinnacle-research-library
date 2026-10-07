@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "action": "owner_authorised_whole_portal_ads_handoff",
+  "confirmed_at_utc": "2026-10-07T03:55:44Z",
+  "human_authority": "Direct request in the website thread to send one comprehensive handoff to the existing Ads team for the whole portal and request completion of applicable advertising and growth requirements.",
+  "website_owner_thread_id": "01a0ef6b-507a-7630-828f-7ac81852a39c",
+  "target": {
+    "title": "Complete Google Ads fixes",
+    "thread_id": "01a0f1b0-5266-7782-bc9d-6fee487850d4",
+    "host_id": "durable",
+    "turn_id": "01a11480-b3fc-75e9-abca-637d3eb109e3",
+    "observed_state": "active_in_progress"
+  },
+  "dispatch": {
+    "tool_reported_error": false,
+    "send_count": 1,
+    "complete_user_message_read_back": true,
+    "immutable_handoff_commit": "79da72101cefb5529789d09468a9de4250f614d8",
+    "document": "speech-site/PORTAL-ADS-OUTCOME-HANDOFF-20261007.md",
+    "document_url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/blob/79da72101cefb5529789d09468a9de4250f614d8/speech-site/PORTAL-ADS-OUTCOME-HANDOFF-20261007.md"
+  },
+  "existing_read_only_reviewer": {
+    "scope": "Factual consistency with latest centre receipts and website-call source, coverage claims and authority/ownership",
+    "result": "no_findings"
+  },
+  "requested_actions": ["A01", "A02", "A03", "A04", "A05", "A06", "A07", "A08", "A09", "A10", "A11", "A12", "A13"],
+  "account_acceptance": {
+    "state": "pending_existing_ads_task_execution_and_readback",
+    "response_received": false,
+    "next_action": "Read the existing Ads task response; implement concrete website source defects here and retain exact owners/dependencies for account, listing, commerce and receiving-system outcomes.",
+    "completion_contract": "PORTAL-ADS-OUTCOME-HANDOFF-20261007.md sections 5 and 7"
+  },
+  "no_new_runtime_release": true,
+  "no_new_crawl_or_index_submission": true,
+  "no_campaign_or_budget_change_in_this_handoff": true,
+  "no_production_conversion_or_customer_record_created": true,
+  "no_scheduler_created_or_resumed": true,
+  "qualified_outcome_uplift_claimed": false
+}

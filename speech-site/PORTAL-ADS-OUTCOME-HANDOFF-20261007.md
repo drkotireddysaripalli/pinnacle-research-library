@@ -192,4 +192,10 @@ Feedback checkpoints already recorded: 9 October attribution/submission check, 1
 
 ## Dispatch receipt
 
-Prepared for the existing Google Ads execution task. Message delivery and the team's returned acceptance are recorded below after their actual occurrence; preparation alone is not dispatch or completion.
+The comprehensive message was sent once to **Complete Google Ads fixes** (`01a0f1b0-5266-7782-bc9d-6fee487850d4`, connected Mac host), confirmed at **7 October 2026 03:55:44 UTC / 09:25:44 IST**. Its latest turn `01a11480-b3fc-75e9-abca-637d3eb109e3` contains the complete message and is active/in progress. The message points to immutable handoff commit `79da72101cefb5529789d09468a9de4250f614d8` and requests execution plus an evidence-backed response in that existing task.
+
+One existing read-only reviewer checked this handoff against the centre receipts and website-call source; no factual/coverage/ownership finding. The source/documentation were committed and pushed; no website rebuild, deployment, recrawl, campaign change or production conversion was performed for this handoff.
+
+**Dispatch is verified; Ads/account acceptance remains pending.** Actions A01–A13 are requested requirements, not completed account-side work. This website owner retrieves the team's response and owns the resulting source changes. A response without actual read-back cannot close the requirements. No scheduler or parallel website owner was created.
+
+Machine receipt: [handoff dispatch](deployment/portal-ads-handoff-dispatch-20261007.json).
