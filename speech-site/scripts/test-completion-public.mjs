@@ -2,10 +2,20 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {repairLegacyGraph} from '../deployment/legacy-social-metadata/schema.mjs';
 import {isEligible} from '../deployment/legacy-social-metadata/entry.mjs';
 import {repairVideoEntry,repairVideoSitemap} from '../deployment/root-sitemap/video-output.mjs';
-import {videoButton} from '../deployment/legacy-social-metadata/performance.mjs';
+import {videoButton,repairMissingRatingCounter} from '../deployment/legacy-social-metadata/performance.mjs';
 import {build} from 'esbuild';
 import {Miniflare,convertV4MiniflareOptions} from 'miniflare';
 const f=JSON.parse(await fs.readFile(new URL('../tests/fixtures/guru-navaratri-jsonld.json',import.meta.url),'utf8'));
+test('shared rating callback tolerates absent counter while preserving actual rating and changed-code bypass',()=>{
+ const assignment="document.getElementById('votesupdate').innerText = (sData.aggregateRating.reviewCount) +\"\";";
+ const input='// getsunshinerating? jSuites.rating\n'+assignment+'\n'+assignment;
+ const result=repairMissingRatingCounter(input);
+ assert.equal((result.match(/ && /g)||[]).length,2);
+ const run=new Function('document','sData',result),data={aggregateRating:{reviewCount:12}};
+ assert.doesNotThrow(()=>run({getElementById:()=>null},data));
+ const el={innerText:''};run({getElementById:()=>el},data);assert.equal(el.innerText,'12');
+ assert.equal(repairMissingRatingCounter(input.replace('reviewCount','otherField')),input.replace('reviewCount','otherField'));
+});
 test('exact dangling medicine-ball comment is omitted; changed content and other routes bypass',async()=>{
  const f=JSON.parse(await fs.readFile(new URL('../tests/fixtures/materials-empty-comment-jsonld.json',import.meta.url),'utf8'));
  const repaired=await repairLegacyGraph(f.raw,f.url),data=JSON.parse(repaired);

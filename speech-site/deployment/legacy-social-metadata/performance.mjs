@@ -6,6 +6,25 @@ class StaffTitle {
  element(){this.buffer='';}
  text(chunk){this.buffer+=chunk.text;if(!chunk.lastInTextNode){chunk.remove();return;}const known=['Best Speech Therapy Center in Hyderabad - Pinnacle Blooms','Pinnacle Blooms Network Staff - Best Speech Therapy Center in India'];chunk.replace(known.includes(this.buffer.trim())?'Pinnacle Blooms Network Team and Staff':this.buffer);this.buffer='';}
 }
+export function repairMissingRatingCounter(text){
+ const assignment="document.getElementById('votesupdate').innerText = (sData.aggregateRating.reviewCount) +\"\";";
+ if(!text.includes('getsunshinerating?')||!text.includes('jSuites.rating')||text.split(assignment).length!==3)return text;
+ return text.replaceAll(assignment,"document.getElementById('votesupdate') && (document.getElementById('votesupdate').innerText = (sData.aggregateRating.reviewCount) +\"\");");
+}
+class RatingScript {
+ element(e){
+  this.pass=!!e.getAttribute('src')||!['','text/javascript','application/javascript'].includes(e.getAttribute('type')||'');this.buffer='';this.streaming=false;
+  if(!this.pass){this.open='<script'+[...e.attributes].map(([k,v])=>' '+k+'="'+escape(v)+'"').join('')+'>';e.removeAndKeepContent();}
+ }
+ text(chunk){
+  if(this.pass)return;
+  if(this.streaming){if(chunk.lastInTextNode)chunk.after('</script>',{html:true});return;}
+  this.buffer+=chunk.text;
+  if(this.buffer.length>32768){chunk.replace(this.open+this.buffer+(chunk.lastInTextNode?'</script>':''),{html:true});this.streaming=!chunk.lastInTextNode;this.buffer='';}
+  else if(!chunk.lastInTextNode)chunk.remove();
+  else{chunk.replace(this.open+repairMissingRatingCounter(this.buffer)+'</script>',{html:true});this.buffer='';}
+ }
+}
 export function videoButton(src,{eager=false}={}){
  let u;try{u=new URL(src);}catch{return null;}
  if(!['www.youtube.com','www.youtube-nocookie.com'].includes(u.hostname)||!/^\/embed\/[\w-]{11}$/.test(u.pathname))return null;
@@ -28,6 +47,7 @@ export function repairKnownLegacyPerformance(response,request){
  }})
  .on('iframe',{element(e){const button=videoButton(e.getAttribute('src')||'',{eager:!video&&u.pathname.startsWith('/mirracles/')});if(button){e.replace(button,{html:true});video=true;}}})
  .on('body',{element(e){e.onEndTag(tag=>{if(video)tag.before(playScript,{html:true});});}});
+ rewrite.on('script:not([src])',new RatingScript());
  if(u.pathname.replace(/\/$/,'')==='/staff'){
   let heading=0;
   rewrite.on('head title',new StaffTitle()).on('h1',{element(e){if(++heading>1)e.tagName='h2';}});
