@@ -163,7 +163,7 @@ test('Cloudflare streamed response, source fixtures and bypasses',async t=>{
       for(const campaign of ['',query]){
         fixture=prefix.replaceAll('/physiotherapy"','/physiotherapy'+campaign.replaceAll('&','&amp;')+'"')+visible+scripts.map(raw=>'<script type="application/ld+json">'+raw.replaceAll(origin,origin+campaign.replaceAll('&','&amp;'))+'</script>').join('')+'</body></html>';
         const out=await(await runtime.dispatchFetch(canonical+campaign)).text();
-        const expected=prefix.replace('content="http:','content="https:')+visible+scripts.map(raw=>'<script type="application/ld+json">'+raw.replaceAll(origin,canonical)+'</script>').join('')+'</body></html>';
+        const expected=prefix.replace('content="http:','content="https:')+visible.replace('href="/enroll?','href="/enroll-autism-speech-aba-therapies-india?')+scripts.map(raw=>'<script type="application/ld+json">'+raw.replaceAll(origin,canonical)+'</script>').join('')+'</body></html>';
         assert.equal(out,expected);
       }
     });

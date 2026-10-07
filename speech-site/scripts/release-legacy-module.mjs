@@ -6,7 +6,8 @@ import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {build} from 'esbuild';
-const [phase,id]=process.argv.slice(2);
+const [phase,id,baselineCommit='HEAD']=process.argv.slice(2);
+assert(baselineCommit==='HEAD'||/^[a-f0-9]{40}$/.test(baselineCommit),'An explicit committed baseline is required');
 assert(/^[a-z0-9-]{6,80}$/.test(id||''),'Unique release ID required');
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site);
 const priv=path.join(site,'ask-private',id),receiptPath=path.join(site,'deployment',id+'.json');
@@ -17,8 +18,8 @@ const base='/accounts/862998def1cd610fdb86b8e5c1d6ed4d/workers/scripts/',worker=
 const protectedNames=['pinnacle-verify-route','pinnacle-ask','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-helpline'];
 const sha=x=>createHash('sha256').update(x).digest('hex');
 const normalise=x=>x.toString().replaceAll('\r\n','\n').trim();
-async function committedBundle(){
- const output=await build({absWorkingDir:path.resolve(site,'../../..'),entryPoints:[path.join(site,'deployment/legacy-social-metadata/entry.mjs')],bundle:true,format:'esm',write:false,plugins:[{name:'committed-source',setup(b){b.onLoad({filter:/\.mjs$/},async args=>({contents:g(['show','HEAD:'+path.relative(repo,args.path).replaceAll('\\','/')]),loader:'js',resolveDir:path.dirname(args.path)}));}}]});
+async function committedBundle(ref='HEAD'){
+ const output=await build({absWorkingDir:path.resolve(site,'../../..'),entryPoints:[path.join(site,'deployment/legacy-social-metadata/entry.mjs')],bundle:true,format:'esm',write:false,plugins:[{name:'committed-source',setup(b){b.onLoad({filter:/\.mjs$/},async args=>({contents:g(['show',ref+':'+path.relative(repo,args.path).replaceAll('\\','/')]),loader:'js',resolveDir:path.dirname(args.path)}));}}]});
  return Buffer.from(output.outputFiles[0].text);
 }
 const save=(p,x)=>fs.writeFile(p,JSON.stringify(x,null,2)+'\n');
@@ -44,8 +45,8 @@ if(phase==='prepare'){
  await save(path.join(priv,'before.json'),before);
  await save(path.join(priv,'modules.json'),mods.map(m=>({name:m.name,base64:m.bytes.toString('base64')})));
  await fs.writeFile(path.join(priv,'entry-before.mjs'),deployed.bytes);
- assert.equal(sha(normalise(deployed.bytes)),sha(normalise(await committedBundle())),'Current HEAD bundle does not match the live module; compare captured entry-before.mjs');
- const receipt={id,phase:'prepared',at:before.at,baseCommit:g(['rev-parse','HEAD']),rollback:before.versions[worker],routeCount:before.routes.length,moduleCount:mods.length,originalHashes:Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]))};
+ assert.equal(sha(normalise(deployed.bytes)),sha(normalise(await committedBundle(baselineCommit))),'Committed baseline bundle does not match the live module; compare captured entry-before.mjs');
+ const receipt={id,phase:'prepared',at:before.at,baseCommit:g(['rev-parse',baselineCommit]),rollback:before.versions[worker],routeCount:before.routes.length,moduleCount:mods.length,originalHashes:Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]))};
  await save(receiptPath,receipt);console.log(JSON.stringify({phase:receipt.phase,routeCount:receipt.routeCount,moduleCount:receipt.moduleCount,rollback:receipt.rollback}));
 }else{
  const before=JSON.parse(await fs.readFile(path.join(priv,'before.json'),'utf8')),receipt=JSON.parse(await fs.readFile(receiptPath,'utf8'));

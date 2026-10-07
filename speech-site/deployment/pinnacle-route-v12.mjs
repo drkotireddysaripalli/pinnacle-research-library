@@ -1,4 +1,5 @@
 import {publicRouteAlias} from './public-route-aliases.mjs';
+import {repairResidualLegacyTemplates} from './legacy-template-coverage.mjs';
 import {servePublicAdCall} from './public-ad-call.mjs';
 import {serveCentreGoogle} from './centre-google-feed.mjs';
 import {applyVernacularTypography} from './vernacular-typography.mjs';
@@ -411,4 +412,4 @@ export async function transformReviewedHomeOrganization(request,response){
  return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
 }
 
-export default {async fetch(request,env,ctx){const google=await serveCentreGoogle(request,env,ctx);if(google)return google;const calls=servePublicAdCall(request);if(calls)return calls;return applyVernacularTypography(request,repairSharedNavigation(request,await portalWorker.fetch(request,env,ctx)));}};
+export default {async fetch(request,env,ctx){const google=await serveCentreGoogle(request,env,ctx);if(google)return google;const calls=servePublicAdCall(request);if(calls)return calls;return applyVernacularTypography(request,repairSharedNavigation(request,await repairResidualLegacyTemplates(request,await portalWorker.fetch(request,env,ctx))));}};

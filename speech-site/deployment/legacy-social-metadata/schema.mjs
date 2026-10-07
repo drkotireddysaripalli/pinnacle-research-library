@@ -161,7 +161,29 @@ export async function repairLegacyGraph(text, requestUrl) {
     if (['3b882bc81f30917b7b7971a18ef1717777912bb505f3cfb87aed8dbe2fbbd037','7181eeec2f921b7ece2f8451f343d6e61d16e806478213dc3ec3b8c675653b02'].includes(digest)) return null;
     if(normalized.includes('"@type": "CollectionPage"'))text=await repairPhysiotherapyCollection(text,normalized);
   }
-  return repairPhysiotherapyWebPage(repairSchemaText(await repairLegacyIdentity(text)),requestUrl);
+  return repairPhysiotherapyWebPage(repairSchemaText(await repairLegacyIdentity(repairObservedCollection(text,requestUrl))),requestUrl);
+}
+
+// The residual service collections contain these three literal JavaScript
+// comments in JSON-LD. Correct only the observed object structure and its own
+// public URL; preserve all descriptions, images, dates and numeric values.
+export function repairObservedCollection(text,requestUrl) {
+  if(text.length>SCHEMA_LIMIT||!requestUrl)return text;
+  const comments=['//begin bracket for multiple entries under image','//end bracket for ImageGallery > image(s)','//end bracket for mainEntityOfPage'];
+  if(!comments.every(c=>text.includes(c)))return text;
+  try{
+    const u=new URL(requestUrl),clean=comments.reduce((s,c)=>s.replace(c,''),text),data=JSON.parse(clean);
+    if(u.origin!=='https://www.pinnacleblooms.org'||data['@context']!=='http://schema.org'||data['@type']!=='CollectionPage'||
+      data.id!==data.url||new URL(data.url).href!==u.href.replace(/^https:/,'http:')||
+      Object.keys(data).sort().join(',')!=='@context,@type,description,id,mainEntityOfPage,url'||
+      data.mainEntityOfPage?.['@type']!=='ImageGallery'||!Array.isArray(data.mainEntityOfPage.image)||
+      !data.mainEntityOfPage.image.every(i=>i['@type']==='ImageObject'&&typeof i.url==='string'))return text;
+    let result=clean.replace(/("@context"\s*:\s*)"http:\/\/schema.org"/,'$1"https://schema.org"');
+    result=result.replace(/([{,]\s*)"id"(?=\s*:)/,'$1"@id"');
+    result=result.replace(/("(?:@id|url)"\s*:\s*)("(?:\\[\s\S]|[^"\\])*")/g,(all,prefix,raw)=>
+      JSON.parse(raw)===data.url?prefix+JSON.stringify(u.origin+u.pathname):all);
+    return result;
+  }catch{return text;}
 }
 
 export function repairKnownLegacySchema(response, requestUrl) {
