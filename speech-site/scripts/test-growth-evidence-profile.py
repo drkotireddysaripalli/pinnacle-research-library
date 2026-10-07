@@ -141,9 +141,14 @@ class ProfileTests(unittest.TestCase):
                 root/'regional-baseline-20261004.json':{'start':'2026-09-01','end':'2026-09-28','groups':{
                     'Hyderabad':{'pages':[dict(url=url,clicks=100,impressions=500,ctr=20,position=2)]}}},
                 ahrefs/'audit-triage-20261004-raw.json':{},
-                ahrefs/'india-organic-keywords-20261004.json':{'response':{'content':[]}},
+                ahrefs/'india-organic-keywords-20261004.json':{'response':{'content':[{'type':'text',
+                    'text':json.dumps({'keywords':[dict(keyword='old demand',best_position_url=url,best_position=20)]})}]}},
                 root/'evidence-sources.json':{'gsc_query_page_snapshots':['query.json'],'testingbot_reports':['browser.json'],
-                    'testingbot_report_globs':[],'pitchbox_snapshots':[],'ahrefs_snapshots':[],'windsor_evidence':None},
+                    'testingbot_report_globs':[],'pitchbox_snapshots':[],'ahrefs_snapshots':[],
+                    'ahrefs_keyword_snapshots':['fresh-keywords.json'],'windsor_evidence':None},
+                root/'fresh-keywords.json':{'observations':{'keywords':{'value':{'content':[{'type':'text',
+                    'text':json.dumps({'keywords':[dict(keyword='current demand',best_position_url=url,best_position=5)]})}]}},
+                    'unrelated':{'value':{'keywords':[dict(keyword='wrong source',best_position_url=url)]}}}},
                 root/'query.json':{'startDate':'2026-10-01','endDate':'2026-10-05','settledThrough':'2026-10-04',
                     'rows':[dict(query='occupational therapy',page=url+'&utm_source=gmb',clicks=1)]},
                 root/'browser.json':{'finishedAt':'2026-10-07T00:00:00Z','suite':'p2','sessions':[{
@@ -158,6 +163,17 @@ class ProfileTests(unittest.TestCase):
             self.assertEqual(row['testingbot'][0]['release_coverage'],'after_release_requires_revision_match')
             self.assertEqual(result['gsc_query_page']['state'],'saved_query_page_samples')
             self.assertTrue(any(s['kind'].startswith('GSC saved query/page') for s in result['sources']))
+            self.assertEqual(row['ahrefs_india_queries'][url][0]['keyword'],'current demand')
+            self.assertEqual(len(row['ahrefs_india_queries'][url]),1)
+            self.assertEqual(result['ahrefs_query_source'],(root/'fresh-keywords.json').resolve().as_posix())
+            self.assertEqual(result['ahrefs_query_sources'],[(root/'fresh-keywords.json').resolve().as_posix()])
+            self.assertFalse(any('india-organic-keywords-20261004' in s['file'] for s in result['sources']))
+
+    def test_keyword_payload_rejects_tool_errors_and_reads_legacy_receipts(self):
+        row={'keyword':'speech therapy','best_position_url':'https://www.pinnacleblooms.org/speech-therapy'}
+        response={'content':[{'type':'text','text':json.dumps({'keywords':[row]})}]}
+        self.assertEqual(list(profile.ahrefs_keyword_payloads({'response':response}))[0]['keywords'],[row])
+        self.assertEqual(list(profile.ahrefs_keyword_payloads({'isError':True,**response})),[])
 
     def test_personal_data_columns_are_rejected(self):
         with tempfile.TemporaryDirectory() as d:

@@ -61,6 +61,25 @@ def audit_rows(value):
             elif isinstance(part, (dict, list)):
                 yield from audit_rows(part)
 
+def ahrefs_keyword_payloads(value):
+    """Read the selected saved demand sample, not tracked-keyword or unrelated API data."""
+    if not isinstance(value, dict) or value.get('isError') is True:
+        return
+    if isinstance(value.get('keywords'), list):
+        yield value
+    elif isinstance(value.get('observations'), dict):
+        yield from ahrefs_keyword_payloads(value['observations'].get('keywords', {}).get('value'))
+    elif isinstance(value.get('structuredContent'), dict):
+        yield from ahrefs_keyword_payloads(value['structuredContent'])
+    elif value.get('content'):
+        for document in payloads(value):
+            yield from ahrefs_keyword_payloads(document)
+    else:
+        for key in ('response', 'data', 'value'):
+            if isinstance(value.get(key), dict):
+                yield from ahrefs_keyword_payloads(value[key])
+                break
+
 def utc_date(value):
     try:
         parsed = dt.datetime.fromisoformat(value.replace('Z', '+00:00'))
@@ -348,12 +367,19 @@ def build(root, outcome_path=None, windsor_dir=None):
         snapshots.append((path.as_posix(), read(path)))
     audits = latest_completed_audits(snapshots, manifest.get('relevant_releases'))
     keyword_path = work/'ahrefs-growth-20261004/india-organic-keywords-20261004.json'
-    keyword_source = read(keyword_path); source(keyword_path, 'Ahrefs saved India query demand')
+    keyword_paths = [root/Path(path) for path in manifest.get('ahrefs_keyword_snapshots', [])] or [keyword_path]
     demand = {}
-    for obj in payloads(keyword_source.get('response', {})):
-        for row in obj.get('keywords', []):
-            if row.get('best_position_url'):
-                demand.setdefault(url_key(row['best_position_url']), []).append(row)
+    query_sources = []
+    for path in dict.fromkeys(path.resolve() for path in keyword_paths):
+        if not path.exists():
+            continue
+        source(path, 'Ahrefs explicitly selected saved India query demand; bounded sample')
+        for obj in ahrefs_keyword_payloads(read(path)):
+            for row in obj.get('keywords', []):
+                if row.get('best_position_url'):
+                    demand.setdefault(url_key(row['best_position_url']), []).append(row)
+                    if path.as_posix() not in query_sources:
+                        query_sources.append(path.as_posix())
     frog_inputs = []
     frog_paths = list(root.glob('*/screaming-frog/*/receipt.json')) + list(root.glob('*/crawl/*/receipt.json'))
     frog_paths.extend(root/Path(p) for p in manifest.get('screaming_frog_receipts', []))
@@ -444,7 +470,8 @@ def build(root, outcome_path=None, windsor_dir=None):
     return {'generated_at': dt.datetime.now(dt.timezone.utc).isoformat(),
         'mode': 'offline_existing_evidence_only', 'queue': (root/'queue.json').as_posix(),
         'rows': sorted(rows, key=lambda r: -r['priority']), 'sources': sources,
-        'ahrefs_audits': audits, 'ahrefs_query_source': keyword_path.as_posix(),
+        'ahrefs_audits': audits, 'ahrefs_query_source': query_sources[0] if query_sources else None,
+        'ahrefs_query_sources': query_sources,
         'event_dictionary': EVENTS, 'receiving_team': aggregates(outcome_path), 'windsor':windsor,
         'testingbot':testingbot, 'pitchbox':pitchbox, 'gsc_query_page':gsc_samples,
         'url_observations':{u:{'gsc':gsc.get(u), 'ahrefs_india_queries':demand.get(u),
