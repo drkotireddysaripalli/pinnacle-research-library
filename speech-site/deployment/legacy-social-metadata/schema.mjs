@@ -159,7 +159,7 @@ export async function repairLegacyGraph(text, requestUrl) {
   // Unknown articles, changed content and private responses are not rewritten.
   if(requestUrl && /^\/guru\/6385\//i.test(new URL(requestUrl).pathname) && normalized.includes('"@type": "NewsArticle"')) {
     const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
-    if(digest==='da6310191ba09480105f13f63e404b78b06a36ce60088249d6afcf9aa86caa0b') {
+    if(['da6310191ba09480105f13f63e404b78b06a36ce60088249d6afcf9aa86caa0b','9bcea635b7843134b56010f35bf9932433da81b6ff4a0255e6d9fd887ca9c91d'].includes(digest)) {
       const repaired=text.replace(/(?<!\\)\\%/g,'\\\\%');
       try { if(JSON.parse(repaired)['@type']==='NewsArticle')text=repaired; } catch { return text; }
     }
@@ -169,7 +169,13 @@ export async function repairLegacyGraph(text, requestUrl) {
     // Exact shared five-job graph captured on therapy/story pages on 6 October.
     // Every job expires on 31 December 2025. Retire only this obsolete payload;
     // changed vacancies, mixed graphs and other JobPosting scripts pass through.
-    if(digest==='eee6f24856abce7f793489c5335315d223fb8d25b33260dd420a25a91f6b9ebe')return null;
+    if(['eee6f24856abce7f793489c5335315d223fb8d25b33260dd420a25a91f6b9ebe',
+      // Fresh mobile-origin variants: all five expired on 31 December 2022.
+      'b209d4edeaa00f092541d2efd99b8ffd5d4afcc51ea067f083ec8aebdc86d421',
+      '4d7ba2834d55686b43f3b58f1518a4ad63ff5f2859a5203efe1af55650a87874',
+      'c5d87b96f00aa3e546e7b3c8432453e57c9c10b9b760bd94ad7fd8ab044eeb5f',
+      'e6912de295d75760e81961c9ff109f6d5eca18c9f7cc639b5e63cc88f30385e8',
+      'c781d0860ec52308c3d7f563e674cfc0f25110c37828103fb52171369b164476'].includes(digest))return null;
   }
   if (normalized.includes('"@type": "SpecialAnnouncement"') || normalized.includes('"@type": "CollectionPage"')) {
     const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
