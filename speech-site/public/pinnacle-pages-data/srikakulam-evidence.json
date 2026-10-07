@@ -1,7 +1,7 @@
 {
   "title": "Pinnacle Blooms Srikakulam | Child Development & Therapy Enquiries",
   "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
-  "updated": "2026-10-01",
+  "updated": "2026-10-07",
   "brand": "Pinnacle Blooms Network",
   "operator": "Bharath Healthcare Laboratories Private Limited",
   "address": "Above Indian Bank, Sana Street, Rama Laxmana Road, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh 532001, India",
@@ -10,6 +10,71 @@
     "uri": "tel:+919100181181",
     "scope": "National guidance and appointment enquiries"
   },
+  "localTelephone": "+919121116846",
+  "coordinates": {
+    "latitude": 18.3055994,
+    "longitude": 83.8995595
+  },
+  "catchmentLocalities": [
+    "Duppalavalasa",
+    "pedapadu",
+    "Ragolu"
+  ],
+  "catchmentPostcodes": [
+    "532001",
+    "532410",
+    "532185",
+    "532407",
+    "532127",
+    "531133",
+    "534437",
+    "532484",
+    "532168",
+    "532005",
+    "532401",
+    "532402"
+  ],
+  "nearbyCentres": [
+    {
+      "id": "madhurawada",
+      "name": "Madhurawada",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+      "city": "Visakhapatnam",
+      "distanceKm": 78.5
+    },
+    {
+      "id": "mvp",
+      "name": "MVP, Vizag",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+      "city": "Visakhapatnam",
+      "distanceKm": 86.9
+    },
+    {
+      "id": "jagadamba",
+      "name": "Jagadamba, Visakhapatnam",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+      "city": "Visakhapatnam",
+      "distanceKm": 91.4
+    }
+  ],
+  "walkthrough": {
+    "provider": "drive",
+    "id": "1bhuaoM0qplvJ4mANiIYDeZebWRkx7wxO",
+    "url": "https://drive.google.com/file/d/1bhuaoM0qplvJ4mANiIYDeZebWRkx7wxO/view",
+    "embed": "https://drive.google.com/file/d/1bhuaoM0qplvJ4mANiIYDeZebWRkx7wxO/preview"
+  },
+  "networkStories": {
+    "soulPromise": "https://www.youtube.com/playlist?list=PL0lwT9W0zVphd8-yLQ7g7o09z4hhHXbsm",
+    "parentsAbilityScore": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpiKBcwqcaxBtGcrg1AX015g"
+  },
+  "resources": [
+    "https://pinnacleblooms.org/ask",
+    "https://www.pinnacleblooms.org/faq",
+    "https://www.pinnacleblooms.org/sunshine",
+    "https://materials.pinnacleblooms.org/",
+    "https://www.pinnacleblooms.org/books",
+    "https://www.pinnacleblooms.org/shop"
+  ],
   "maps": "https://maps.app.goo.gl/PMADYTynrwnyjeym7",
   "googleReviewDestination": "https://g.page/r/CfJdk9tbQh35EBM/review",
   "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=srikakulam",
@@ -87,7 +152,7 @@
     },
     {
       "question": "How do I contact this centre?",
-      "answer": "Call our national guidance and enquiry team on 9100 181 181 or send an enquiry with Srikakulam selected. Ask us to confirm the current contact and appointment arrangements for this location."
+      "answer": "Call 9100 181 181 or the listed local centre number +919121116846. Ask about a suitable assessment, the professional and appointment arrangements at Srikakulam."
     },
     {
       "question": "Where is the Srikakulam centre above Indian Bank?",
@@ -107,7 +172,7 @@
     },
     {
       "question": "Can I see photographs of this centre?",
-      "answer": "Yes. The premises gallery contains first-party photographs matched to this branch. Ask the team about current rooms, equipment and access arrangements. The branded campaign scene is illustrative."
+      "answer": "Yes. Our gallery shows photographs matched to this centre. Ask the team about current rooms, equipment and entrance access."
     },
     {
       "question": "What does the facility and software evidence establish?",
@@ -170,7 +235,7 @@
     "currentOperationVerified": false,
     "currentServiceAvailabilityVerified": false
   },
-  "operationalBoundary": "The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. No current branch hours, direct local phone or review rating are inferred.",
+  "operationalBoundary": "The receiving team confirms current service, professional, appointment, fees, entrance and access arrangements. Local telephone and undated review snapshot come from the supplied centre workbook. Opening hours, available professionals and actual appointments require confirmation.",
   "media": {
     "premises": [
       {
@@ -187,5 +252,166 @@
       }
     ],
     "campaign": "Generated fictional family/professional campaign scene; not an actual branch room, named practitioner or patient outcome."
-  }
+  },
+  "googleBusinessUrl": "https://maps.app.goo.gl/b14erJDg4Jyyabyw6",
+  "reviewSnapshot": {
+    "rating": 5,
+    "reviews": 17,
+    "source": "Owner-supplied centre workbook",
+    "sourceDate": null,
+    "importedOn": "2026-10-07"
+  },
+  "pinnacleEcosystem": [
+    {
+      "id": "pinnacleai",
+      "title": "PinnacleAI®",
+      "role": "One system. Your child’s whole life.",
+      "text": "Ability measurement, a child-specific plan, integrated therapies, everyday practice, tracking and reassessment work toward your child’s self-sufficient, mainstream-included life.",
+      "path": "/pinnacleai",
+      "visual": "system",
+      "icon": "loop"
+    },
+    {
+      "id": "abilityscore",
+      "title": "AbilityScore®",
+      "role": "Understand the starting point.",
+      "text": "Bring your child’s present abilities into a clear conversation. Measurement helps the family and professional choose meaningful goals and compare progress at review.",
+      "path": "/abilityscore",
+      "visual": "ability",
+      "icon": "measure"
+    },
+    {
+      "id": "readiness",
+      "title": "7 Readiness Indexes",
+      "role": "Make the next step useful.",
+      "text": "Consider what your child is ready to work toward, the support involved and the plan to discuss. Readiness connects measurement with practical decisions.",
+      "path": "/seven-readiness-indexes",
+      "visual": "readiness",
+      "icon": "compass"
+    },
+    {
+      "id": "paradigm",
+      "title": "160 Years · Paradigm Shift",
+      "role": "Begin with the life we want to make possible.",
+      "text": "The purpose shapes the measurement, goals, therapies, home practice and review from the beginning. A useful ability matters because of the life it enables.",
+      "path": "/verify/evidence/pinnacle-paradigm-shift.html#the-historical-challenge",
+      "visual": "purpose",
+      "icon": "sun"
+    },
+    {
+      "id": "self-sufficient",
+      "title": "Self-Sufficient",
+      "role": "More of everyday life, with less help.",
+      "text": "Choosing, communicating, getting ready and taking part in familiar routines give independence a practical meaning. Relevant support grows around your child’s own priorities.",
+      "path": "/self-sufficient",
+      "visual": "independence",
+      "icon": "home"
+    },
+    {
+      "id": "mainstream",
+      "title": "Mainstream",
+      "role": "A place in school, community and life.",
+      "text": "Learning alongside others, joining play and participating in everyday settings are the direction. Readiness, suitable support and family and school observations guide the journey.",
+      "path": "/mainstream",
+      "visual": "participation",
+      "icon": "people"
+    },
+    {
+      "id": "verify",
+      "title": "Verify",
+      "role": "Inspect the facts behind the confidence.",
+      "text": "Read original software licences, certificates, auditor reports and defined network figures. Follow each document’s scope, dates and UDIN trail directly to its source.",
+      "path": "/verify/",
+      "visual": "proof",
+      "icon": "shield"
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "role": "Understand the science and its evaluation.",
+      "text": "Explore the mechanism, evidence dossier, study methods and published research. See how the system is described, what was evaluated and what each source establishes.",
+      "path": "/verify/evidence/research-library.html",
+      "visual": "research",
+      "icon": "book"
+    },
+    {
+      "id": "citations",
+      "title": "Citations",
+      "role": "Carry the exact source forward.",
+      "text": "Parents, teachers, clinicians and scholars can share the relevant original source with its date and scope. Stable evidence links make the claims easier to inspect and discuss.",
+      "path": "/verify/evidence/cite.html",
+      "visual": "citations",
+      "icon": "plan"
+    }
+  ],
+  "networkStoryPlaylists": [
+    {
+      "title": "AbilityScore® · our professionals explain",
+      "label": "How we measure",
+      "watch": "Watch AbilityScore explained",
+      "question": "How do we understand your child’s starting point?",
+      "text": "Hear practitioners describe AbilityScore®, the abilities they measure and the way they discuss progress. Bring your own questions about what a useful measurement would mean for your child.",
+      "topics": [
+        "Ability measurement",
+        "Goals & progress"
+      ],
+      "list": "PL0lwT9W0zVpgRvW4j7ZG9OR-YQPL8V9U_",
+      "video": "WYnNsoS2UO0",
+      "icon": "measure",
+      "tone": "teal",
+      "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpgRvW4j7ZG9OR-YQPL8V9U_",
+      "embed": "https://www.youtube-nocookie.com/embed/WYnNsoS2UO0?list=PL0lwT9W0zVpgRvW4j7ZG9OR-YQPL8V9U_&rel=0"
+    },
+    {
+      "title": "AbilityScore® · parents speak",
+      "label": "Parents explain",
+      "watch": "Watch parents’ experiences",
+      "question": "What has the journey meant to other parents?",
+      "text": "Listen to parents speak about PinnacleAI®, AbilityScore® and their child’s journey in their own words. Notice the questions, changes and everyday priorities they choose to share.",
+      "topics": [
+        "Parents’ own words",
+        "Everyday priorities"
+      ],
+      "list": "PL0lwT9W0zVpiKBcwqcaxBtGcrg1AX015g",
+      "video": "_UQr7QUnjuI",
+      "icon": "heart",
+      "tone": "magenta",
+      "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpiKBcwqcaxBtGcrg1AX015g",
+      "embed": "https://www.youtube-nocookie.com/embed/_UQr7QUnjuI?list=PL0lwT9W0zVpiKBcwqcaxBtGcrg1AX015g&rel=0"
+    },
+    {
+      "title": "Our professionals’ Soul Promise",
+      "label": "Our promise",
+      "watch": "Hear our professionals’ promise",
+      "question": "What purpose brings our people together?",
+      "text": "Meet the people behind Pinnacle’s promise to children and families. Hear why growing abilities, participation and a wonderful life give their work its direction.",
+      "topics": [
+        "Meet our people",
+        "The child’s whole life"
+      ],
+      "list": "PL0lwT9W0zVphd8-yLQ7g7o09z4hhHXbsm",
+      "video": "I_7GncwRt_U",
+      "icon": "people",
+      "tone": "purple",
+      "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVphd8-yLQ7g7o09z4hhHXbsm",
+      "embed": "https://www.youtube-nocookie.com/embed/I_7GncwRt_U?list=PL0lwT9W0zVphd8-yLQ7g7o09z4hhHXbsm&rel=0"
+    },
+    {
+      "title": "Hear directly from families",
+      "label": "Families share",
+      "watch": "Watch family stories",
+      "question": "What does progress look like in family life?",
+      "text": "Hear families describe participation, progress and the support around their child. Their stories connect the larger Pinnacle purpose with the moments that matter at home and beyond.",
+      "topics": [
+        "Family experiences",
+        "Participation & confidence"
+      ],
+      "list": "PL0lwT9W0zVpg1K-DjznqnF_-zIhVdqikh",
+      "video": "m3SbHGuEXL4",
+      "icon": "sun",
+      "tone": "navy",
+      "url": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpg1K-DjznqnF_-zIhVdqikh",
+      "embed": "https://www.youtube-nocookie.com/embed/m3SbHGuEXL4?list=PL0lwT9W0zVpg1K-DjznqnF_-zIhVdqikh&rel=0"
+    }
+  ]
 }

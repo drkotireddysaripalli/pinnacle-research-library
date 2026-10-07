@@ -1,11 +1,374 @@
-{
-  "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india": {
-    "modifiedOn": "2026-09-30",
-    "contentContract": "suchitra-content.ts",
-    "release": "v131"
+[
+  {
+    "id": "suchitra",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
   },
-  "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india": {"modifiedOn":"2026-10-01","contentContract":"centre-detail-content.ts#dilsukhnagar","release":"v132"},
-  "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india": {"modifiedOn":"2026-10-01","contentContract":"centre-detail-content.ts#gurunanak","release":"v132"},
-  "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india": {"modifiedOn":"2026-10-01","contentContract":"centre-detail-content.ts#delhi","release":"v132"},
-  "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india": {"modifiedOn":"2026-10-01","contentContract":"centre-detail-content.ts#ananthapuram","release":"v132"}
-}
+  {
+    "id": "gurunanak",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "jayanagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "annanagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "delhi",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+    "status": "location-status",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "warangal",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "asraonagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "ananthapuram",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "attapur",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "bnreddynagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "begumpet",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "bhimavaram",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "chandanagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "dilsukhnagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "eastmarredpally",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "eluru",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "gachibowli",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "gajuwaka",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "guntur",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "habsiguda",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "hayathnagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "himayatnagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "madhapur",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "hydernagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "indiranagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "jagadamba",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "jublieehills",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jubilee-hills-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "kachiguda",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "kadapa",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "kakinada",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "karimnagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "khajaguda",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "khammam",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "kondapur",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "kukatpally",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "kurnool",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "lbnagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "labbipet",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "mvp",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "madhurawada",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "mahbubnagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "marathahalli",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "miryalaguda",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "nad",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "nallagandla",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "nandyala",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "nellore",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "nizamabad",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "nizampet",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "ongole",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "pragathinagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "rajahmundry",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "srnagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "santoshnagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "srikakulam",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "suchitraii",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "tirupati",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "usa",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-california-usa",
+    "status": "location-status",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "uppal",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "vanasthalipuram",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "vidyanagar",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  },
+  {
+    "id": "vikrampuri",
+    "path": "/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+    "status": "centre-enquiry",
+    "updatedOn": "2026-10-07"
+  }
+]

@@ -68,6 +68,7 @@ jobs:
           fs.appendFileSync(process.env.GITHUB_ENV,`PAGE_KIND=${activeQualityPage}\nPAGE_PATH=${page.path}\nCANONICAL_PATH=${page.canonical}\n`);
           JS
       - run: npm run check:page -- "$PAGE_KIND"
+      - run: node scripts/validate-centre-network.mjs
       - run: npx playwright test --project=firefox --project=webkit
       - run: npm run check:speed -- "$PAGE_KIND"
         if: github.event_name == 'workflow_dispatch' && inputs.speed

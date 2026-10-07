@@ -1,0 +1,42 @@
+{
+  "reviewedOn": "2026-10-07",
+  "source": "Owner-supplied centre Google Drive; see centre release media evidence",
+  "centres": {
+    "annanagar": {
+      "images": [
+        {
+          "file": "annanagar-exterior-new.jpg",
+          "kind": "exterior",
+          "alt": "Pinnacle Anna Nagar signage and entrance at the supplied Chennai premises.",
+          "caption": "Pinnacle Anna Nagar signage and entrance at the supplied Chennai premises."
+        },
+        {
+          "file": "annanagar-interior-new-1.jpg",
+          "kind": "interior",
+          "alt": "Play area in the supplied Pinnacle Anna Nagar, Chennai photographs.",
+          "caption": "Play area in the supplied Pinnacle Anna Nagar, Chennai photographs."
+        },
+        {
+          "file": "annanagar-interior-new-2.jpg",
+          "kind": "interior",
+          "alt": "Seating and reception area in the supplied Pinnacle Anna Nagar, Chennai photographs.",
+          "caption": "Seating and reception area in the supplied Pinnacle Anna Nagar, Chennai photographs."
+        }
+      ]
+    },
+    "hayathnagar": {
+      "images": [
+        {
+          "file": "hayathnagar-exterior-new.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle nameboard in the supplied Hayathnagar photograph.",
+          "caption": "Building and Pinnacle nameboard in the supplied Hayathnagar photograph."
+        }
+      ]
+    },
+    "nizampet": {
+      "images": [],
+      "emblem": "nizampet-profile-new.jpg"
+    }
+  }
+}

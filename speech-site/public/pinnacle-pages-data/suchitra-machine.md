@@ -83,3 +83,88 @@ https://www.youtube.com/watch?v=zT2fIZWRn-c
 Published historical tour; current rooms and equipment are confirmed before a visit.
 Three distinct authorised first-party Suchitra photographs, published from the released directory. Capture date and current equipment are not inferred.
 Generated fictional family/professional scene; not an actual Suchitra room, patient or outcome.
+
+<!-- centre-network-story -->
+Centre network narrative
+
+Primary contact: 9100 181 181. The local centre telephone is an alternative.
+
+Local alternative: +919100222183
+
+Nearby centres: Suchitra II https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india; Vikrampuri https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india; SR Nagar https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india
+
+Nearby localities: Jeedimetla, Bowenpally, Kompally, Kutubullapur
+
+Nearby postcodes: 500055, 500011, 500100, 501401, 500010, 500054, 500067, 500078, 500043
+
+Google listing: https://maps.app.goo.gl/s4pnjcs1FhMrLu598
+
+Centre walkthrough: https://www.youtube.com/watch?v=zT2fIZWRn-c
+
+PinnacleAI® — One system. Your child’s whole life.
+Ability measurement, a child-specific plan, integrated therapies, everyday practice, tracking and reassessment work toward your child’s self-sufficient, mainstream-included life.
+https://www.pinnacleblooms.org/pinnacleai
+
+AbilityScore® — Understand the starting point.
+Bring your child’s present abilities into a clear conversation. Measurement helps the family and professional choose meaningful goals and compare progress at review.
+https://www.pinnacleblooms.org/abilityscore
+
+7 Readiness Indexes — Make the next step useful.
+Consider what your child is ready to work toward, the support involved and the plan to discuss. Readiness connects measurement with practical decisions.
+https://www.pinnacleblooms.org/seven-readiness-indexes
+
+160 Years · Paradigm Shift — Begin with the life we want to make possible.
+The purpose shapes the measurement, goals, therapies, home practice and review from the beginning. A useful ability matters because of the life it enables.
+https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html#the-historical-challenge
+
+Self-Sufficient — More of everyday life, with less help.
+Choosing, communicating, getting ready and taking part in familiar routines give independence a practical meaning. Relevant support grows around your child’s own priorities.
+https://www.pinnacleblooms.org/self-sufficient
+
+Mainstream — A place in school, community and life.
+Learning alongside others, joining play and participating in everyday settings are the direction. Readiness, suitable support and family and school observations guide the journey.
+https://www.pinnacleblooms.org/mainstream
+
+Verify — Inspect the facts behind the confidence.
+Read original software licences, certificates, auditor reports and defined network figures. Follow each document’s scope, dates and UDIN trail directly to its source.
+https://www.pinnacleblooms.org/verify/
+
+Research — Understand the science and its evaluation.
+Explore the mechanism, evidence dossier, study methods and published research. See how the system is described, what was evaluated and what each source establishes.
+https://www.pinnacleblooms.org/verify/evidence/research-library.html
+
+Citations — Carry the exact source forward.
+Parents, teachers, clinicians and scholars can share the relevant original source with its date and scope. Stable evidence links make the claims easier to inspect and discuss.
+https://www.pinnacleblooms.org/verify/evidence/cite.html
+
+AbilityScore® · our professionals explain
+Hear practitioners describe AbilityScore®, the abilities they measure and the way they discuss progress. Bring your own questions about what a useful measurement would mean for your child.
+https://www.youtube.com/playlist?list=PL0lwT9W0zVpgRvW4j7ZG9OR-YQPL8V9U_
+
+AbilityScore® · parents speak
+Listen to parents speak about PinnacleAI®, AbilityScore® and their child’s journey in their own words. Notice the questions, changes and everyday priorities they choose to share.
+https://www.youtube.com/playlist?list=PL0lwT9W0zVpiKBcwqcaxBtGcrg1AX015g
+
+Our professionals’ Soul Promise
+Meet the people behind Pinnacle’s promise to children and families. Hear why growing abilities, participation and a wonderful life give their work its direction.
+https://www.youtube.com/playlist?list=PL0lwT9W0zVphd8-yLQ7g7o09z4hhHXbsm
+
+Hear directly from families
+Hear families describe participation, progress and the support around their child. Their stories connect the larger Pinnacle purpose with the moments that matter at home and beyond.
+https://www.youtube.com/playlist?list=PL0lwT9W0zVpg1K-DjznqnF_-zIhVdqikh
+
+Network stories are not a roster of this branch’s current staff. Individual experiences do not guarantee every child’s outcome.
+
+Resources:
+
+https://pinnacleblooms.org/ask
+
+https://www.pinnacleblooms.org/faq
+
+https://www.pinnacleblooms.org/sunshine
+
+https://materials.pinnacleblooms.org/
+
+https://www.pinnacleblooms.org/books
+
+https://www.pinnacleblooms.org/shop

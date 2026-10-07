@@ -1,0 +1,53 @@
+---
+import {Image} from 'astro:assets';
+import Icon from './Icon.astro';
+import {centreEcosystem} from '../data/centre-story';
+import {phone,url} from '../data/site';
+import system from '../assets/pinnacleai-life-path-20260930.png';
+import ability from '../assets/abilityscore-possibility-20261005.png';
+import readiness from '../assets/readiness-possibility-20261005.png';
+import purpose from '../assets/enrolment-family-life-path-branded-20260929.png';
+import independence from '../assets/self-sufficient-social-20261001.png';
+import participation from '../assets/mainstream-social-20261001.png';
+const images:Record<string,ImageMetadata>={ability,readiness,purpose,independence,participation};
+const {enquiry}=Astro.props;
+const lead=centreEcosystem[0];
+const chapters=[
+ {number:'01',icon:'measure',title:'Understand your child. Shape the plan.',text:'Measurement and readiness give your next conversation a starting point and a direction.',items:centreEcosystem.slice(1,3)},
+ {number:'02',icon:'sun',title:'Keep your child’s whole life in view.',text:'The purpose reaches beyond the session: growing independence and participation at home, school and in the community.',items:centreEcosystem.slice(3,6)},
+ {number:'03',icon:'shield',title:'See the evidence. Carry the source forward.',text:'Inspect the original documents, understand the science and share the exact source behind a claim.',items:centreEcosystem.slice(6,9)}
+];
+const diagrams:Record<string,{icon:string,text:string}[]>={
+ proof:[{icon:'shield',text:'Original licences & reports'},{icon:'measure',text:'Defined scope · dated figures'},{icon:'check',text:'Inspect the source · UDIN'}],
+ research:[{icon:'loop',text:'System mechanism'},{icon:'book',text:'Study design & methods'},{icon:'track',text:'Evaluation & findings'}],
+ citations:[{icon:'voice',text:'The exact claim'},{icon:'book',text:'Its original document'},{icon:'send',text:'A source you can share'}]
+};
+---
+<section class="local-section local-wrap centre-ecosystem" id="pinnacle-ecosystem">
+ <p class="local-kicker"><Icon name="loop"/>The whole Pinnacle purpose, at your local starting point</p>
+ <h2>Your centre connects with <em>the whole Pinnacle system.</em></h2>
+ <p class="local-lead">Our mission is a self-sufficient, mainstream life for 900 Million children worldwide. Your child’s own journey starts with their abilities, your family’s priorities and a plan you can understand.</p>
+ <article class="ecosystem-system" id="centre-pinnacleai">
+  <figure><Image src={system} alt="Illustrative PinnacleAI creative connecting measurement, family, therapies, everyday practice and a child’s life" widths={[480,720,1000]} sizes="(max-width:760px) 92vw, 46vw" format="webp" loading="lazy" quality={82}/></figure>
+  <div class="ecosystem-system-copy"><p class="local-kicker"><Icon name="loop"/>{lead.title}</p><h3>{lead.role}</h3><p>{lead.text}</p>
+   <div class="ecosystem-data"><Icon name="measure" size={28}/><div><strong>4 Billion Clinical Data Points</strong><span>Explore PinnacleAI’s system, science and evidence.</span></div></div>
+   <ul class="system-path" aria-label="A connected developmental journey"><li><Icon name="measure"/>Understand</li><li><Icon name="home"/>Practise</li><li><Icon name="track"/>Track & review</li><li><Icon name="sun"/>Your child’s life</li></ul>
+   <a class="ecosystem-link" href={url(lead.path)}>Explore PinnacleAI® <Icon name="arrow"/></a>
+  </div>
+ </article>
+ {chapters.map(chapter=><div class="ecosystem-chapter">
+  <div class="ecosystem-chapter-heading"><span class="ecosystem-chapter-mark"><Icon name={chapter.icon} size={28}/><small>{chapter.number}</small></span><div><h3>{chapter.title}</h3><p>{chapter.text}</p></div></div>
+  <div class:list={['ecosystem-grid',{'ecosystem-grid-two':chapter.items.length===2}]}>{chapter.items.map(item=><article class="ecosystem-card" id={'centre-'+item.id}>
+   {images[item.visual]?<figure><Image src={images[item.visual]} alt={'Illustrative Pinnacle '+item.title+' creative: '+item.role} widths={[320,480,720]} sizes="(max-width:760px) 92vw, (max-width:1000px) 44vw, 30vw" format="webp" loading="lazy" quality={82}/></figure>:<div class={'ecosystem-diagram diagram-'+item.visual} aria-hidden="true"><p class="diagram-heading"><Icon name={item.icon} size={30}/>{item.title}</p><div class="diagram-flow">{diagrams[item.visual].map((step,index)=><><div class="diagram-step"><span><Icon name={step.icon}/></span><strong>{step.text}</strong></div>{index<2&&<span class="diagram-arrow">↓</span>}</>)}</div></div>}
+   <div class="ecosystem-copy"><p class="local-kicker"><Icon name={item.icon}/>{item.title}</p><h3>{item.role}</h3><p>{item.text}</p><a class="ecosystem-link" href={url(item.path)}>Explore {item.title} <Icon name="arrow"/></a></div>
+  </article>)}</div>
+ </div>)}
+ <div class="ecosystem-next"><div><h3>What would this mean for your child?</h3><p>Bring one everyday priority. We’ll help you understand a suitable assessment and the next step.</p></div><div class="local-actions"><a class="local-button" href={phone.href} data-cta="centre-call"><Icon name="phone"/>Call {phone.display}</a>{enquiry&&<a class="local-button local-outline" href={enquiry} data-cta="centre-enquiry"><Icon name="plan"/>Request an assessment <Icon name="arrow"/></a>}</div></div>
+</section>
+<style>
+ .ecosystem-system{display:grid;grid-template-columns:1.05fr 1fr;gap:2.2rem;align-items:center;margin:2.5rem 0 3rem;border:1px solid #d9e4e6;border-radius:30px;background:#fff;overflow:hidden;padding:1.7rem}.ecosystem-system figure{margin:0}.ecosystem-system img{width:100%;height:auto}.ecosystem-system-copy h3{font-size:clamp(1.9rem,3.2vw,2.7rem);line-height:1.22;letter-spacing:-.04em;margin:.7rem 0 1rem}.ecosystem-system-copy>p{line-height:1.7}.ecosystem-data{display:flex;align-items:center;gap:.75rem;border-left:4px solid #96277e;background:#fbf5fc;padding:.9rem 1rem;margin:1.3rem 0;color:#7d246f}.ecosystem-data>svg{flex:none}.ecosystem-data strong{font-size:1.15rem;display:block}.ecosystem-data span{display:block;font-size:.85rem;line-height:1.5;margin-top:.3rem;color:#385263}.system-path{display:flex;flex-wrap:wrap;gap:.7rem 1rem;padding:0;list-style:none;margin:1.2rem 0 1.6rem}.system-path li{display:flex;align-items:center;gap:.35rem;font-size:.85rem;font-weight:700;color:#08746f}.system-path svg{width:18px;height:18px}
+ .ecosystem-chapter{margin-top:3rem}.ecosystem-chapter-heading{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.3rem}.ecosystem-chapter-heading h3{font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.25;letter-spacing:-.025em;margin:.1rem 0 .65rem}.ecosystem-chapter-heading p{margin:0;max-width:52rem;line-height:1.6}.ecosystem-chapter-mark{display:grid;place-items:center;flex:none;width:58px;gap:.1rem;color:#08746f;background:#eef8f6;border-radius:16px;padding:.7rem}.ecosystem-chapter-mark small{font-size:.72rem;font-weight:700}.ecosystem-chapter:nth-of-type(3) .ecosystem-chapter-mark{color:#96277e;background:#fcf1fa}.ecosystem-chapter:nth-of-type(4) .ecosystem-chapter-mark{color:#6b36a8;background:#f6f1fc}
+ .ecosystem-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}.ecosystem-grid-two{grid-template-columns:repeat(2,minmax(0,1fr))}.ecosystem-card{min-width:0;border:1px solid #d9e4e6;border-radius:26px;overflow:hidden;background:#fff;display:flex;flex-direction:column}.ecosystem-card figure{margin:0;padding:1rem;background:#fafcfc}.ecosystem-card img{width:100%;height:auto;aspect-ratio:1.4;object-fit:contain}.ecosystem-grid-two img{aspect-ratio:1.6;max-height:330px}.ecosystem-copy{padding:1.5rem;flex:1;display:flex;flex-direction:column}.ecosystem-copy h3{line-height:1.3;font-size:1.4rem;letter-spacing:-.02em}.ecosystem-copy>p{margin:.4rem 0 1.1rem;line-height:1.7}.ecosystem-copy>a{margin-top:auto}.ecosystem-link{display:flex;align-items:center;justify-content:space-between;gap:.5rem;min-height:48px;border-top:1px solid #e2e9ec;padding-top:.85rem;color:#8f2879;font-weight:700;text-decoration:none!important}.ecosystem-link:hover{color:#08746f}.ecosystem-link:focus-visible{outline:3px solid #8f2879;outline-offset:4px;border-radius:6px}.ecosystem-link>svg{flex:none}
+ .ecosystem-diagram{padding:1.4rem 1.2rem;background:#f3faf8;color:#08746f}.diagram-heading{display:flex;align-items:center;justify-content:center;gap:.55rem;font-weight:700;margin:0 0 .9rem!important}.diagram-flow{display:flex;flex-direction:column;align-items:center}.diagram-step{display:flex;align-items:center;gap:.7rem;min-height:50px;width:100%;padding:.5rem .7rem;border:1px solid #cfe3dd;border-radius:14px;background:#fff;font-size:.91rem;line-height:1.45}.diagram-step>span{display:grid;place-items:center;width:32px;height:32px;flex:none;background:#eef8f6;border-radius:50%}.diagram-arrow{font-size:1.25rem;line-height:1.5}.diagram-research{color:#18315d;background:#f0f5fa}.diagram-research .diagram-step>span{background:#edf2fa}.diagram-citations{background:#faf6fc;color:#8f2879}.diagram-citations .diagram-step>span{background:#f6edfa}
+ .ecosystem-next{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;margin-top:2.5rem;padding:1.6rem;border-left:5px solid #92207f;background:#fcf7fc;border-radius:0 24px 24px 0}.ecosystem-next p{margin-bottom:0}@media(max-width:1000px){.ecosystem-system{gap:1.4rem;padding:1.3rem}.ecosystem-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:760px){.ecosystem-system{grid-template-columns:1fr;padding:1rem;gap:1rem;border-radius:24px}.ecosystem-system-copy{padding:.3rem}.ecosystem-system-copy h3{font-size:2rem}.ecosystem-grid{grid-template-columns:1fr}.ecosystem-copy{padding:1.25rem}.ecosystem-card img{aspect-ratio:auto;max-height:330px}.ecosystem-next{padding:1.2rem}.ecosystem-chapter-mark{width:46px;padding:.55rem}.ecosystem-chapter-mark>svg{width:24px;height:24px}.ecosystem-chapter-heading{gap:.75rem}.ecosystem-data strong{font-size:1.05rem}}
+</style>

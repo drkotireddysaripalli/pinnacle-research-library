@@ -1,0 +1,4087 @@
+{
+  "updatedOn": "2026-10-07",
+  "primaryTelephone": "+919100181181",
+  "distanceBasis": "Approximate straight-line distance from supplied coordinates; not road distance or travel time",
+  "centres": [
+    {
+      "id": "suchitra",
+      "name": "Suchitra, Kompally",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Adjacent to Municipal Park, Mee Seva, Above Mahesh Bank, Suchitra Circle, Bowenpally, Hyd, TS, IN - 067",
+      "localTelephone": "+919100222183",
+      "photos": [
+        {
+          "file": "suchitra-exterior-0.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Suchitra, Kompally.",
+          "caption": "Centre building · Suchitra, Kompally"
+        },
+        {
+          "file": "suchitra-interior-5-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Suchitra, Kompally.",
+          "caption": "Inside the centre · Suchitra, Kompally"
+        },
+        {
+          "file": "suchitra-interior-5-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Suchitra, Kompally.",
+          "caption": "Inside the centre · Suchitra, Kompally"
+        }
+      ],
+      "emblem": "suchitra-profile-9.jpg",
+      "walkthrough": {
+        "provider": "youtube",
+        "id": "zT2fIZWRn-c",
+        "url": "https://www.youtube.com/watch?v=zT2fIZWRn-c",
+        "embed": "https://www.youtube-nocookie.com/embed/zT2fIZWRn-c?rel=0"
+      },
+      "nearby": [
+        {
+          "id": "suchitraii",
+          "name": "Suchitra II",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 0.2
+        },
+        {
+          "id": "vikrampuri",
+          "name": "Vikrampuri",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.3
+        },
+        {
+          "id": "srnagar",
+          "name": "SR Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.7
+        }
+      ],
+      "catchmentLocalities": [
+        "Jeedimetla",
+        "Bowenpally",
+        "Kompally",
+        "Kutubullapur"
+      ],
+      "catchmentPostcodes": [
+        "500055",
+        "500011",
+        "500100",
+        "501401",
+        "500010",
+        "500054",
+        "500067",
+        "500078",
+        "500043"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/s4pnjcs1FhMrLu598",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 430,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "gurunanak",
+      "name": "Gurunanak Road, Vijayawada",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, 59A,4-6, 2nd Floor, Beside McDonald Gurunanak Road, Vijayawada - 520008",
+      "localTelephone": "+919347080640",
+      "photos": [
+        {
+          "file": "gurunanak-interior-1-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Gurunanak Road, Vijayawada.",
+          "caption": "Inside the centre · Gurunanak Road, Vijayawada"
+        },
+        {
+          "file": "gurunanak-interior-1-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Gurunanak Road, Vijayawada.",
+          "caption": "Inside the centre · Gurunanak Road, Vijayawada"
+        },
+        {
+          "file": "gurunanak-interior-1-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Gurunanak Road, Vijayawada.",
+          "caption": "Inside the centre · Gurunanak Road, Vijayawada"
+        }
+      ],
+      "emblem": "gurunanak-profile-4.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1dIu-CEXlvyP9q_sHsq3jh8tNHls_cDUN",
+        "url": "https://drive.google.com/file/d/1dIu-CEXlvyP9q_sHsq3jh8tNHls_cDUN/view",
+        "embed": "https://drive.google.com/file/d/1dIu-CEXlvyP9q_sHsq3jh8tNHls_cDUN/preview"
+      },
+      "nearby": [
+        {
+          "id": "labbipet",
+          "name": "Labbipet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+          "city": "Vijayawada",
+          "distanceKm": 2.3
+        },
+        {
+          "id": "guntur",
+          "name": "Guntur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+          "city": "Guntur",
+          "distanceKm": 32.6
+        },
+        {
+          "id": "eluru",
+          "name": "Eluru",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+          "city": "Eluru",
+          "distanceKm": 52.9
+        }
+      ],
+      "catchmentLocalities": [
+        "Gurunanak",
+        "gannavaram",
+        "gudivada"
+      ],
+      "catchmentPostcodes": [
+        "520008",
+        "520007",
+        "520010",
+        "521151",
+        "521108",
+        "521101",
+        "521165",
+        "521301"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/ndbtKq1qteFYQYsN7",
+      "reviewSnapshot": {
+        "rating": 4.7,
+        "reviews": 156,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "jayanagar",
+      "name": "Jaya Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+      "status": "centre-enquiry",
+      "address": "12th Main, 27th Cross, 4th Block East, Jaya Nagar, Bengaluru, Karnataka, IN - 560011.",
+      "localTelephone": "+919804425444",
+      "photos": [
+        {
+          "file": "jayanagar-exterior-41.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Jaya Nagar.",
+          "caption": "Centre building · Jaya Nagar"
+        }
+      ],
+      "emblem": "jayanagar-profile-37.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "indiranagar",
+          "name": "Indira Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+          "city": "Bengaluru",
+          "distanceKm": 7.6
+        },
+        {
+          "id": "marathahalli",
+          "name": "Marathahalli",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+          "city": "Bengaluru",
+          "distanceKm": 14.4
+        }
+      ],
+      "catchmentLocalities": [
+        "Banshankari",
+        "Btm layout",
+        "Bommanahalli"
+      ],
+      "catchmentPostcodes": [
+        "560050",
+        "560078",
+        "560029",
+        "560076",
+        "560068",
+        "560004",
+        "560011",
+        "560022",
+        "572135",
+        "560100"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/56FxpWNQLMqFxkgF9",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 114,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "annanagar",
+      "name": "Anna Nagar, Chennai",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Gokulam Sabari, 3rd Avenue, Beside Anna Nagar Metro Station, Anna Nagar, Chennai, Tamil Nadu 600040",
+      "localTelephone": "+919100155381",
+      "photos": [
+        {
+          "file": "annanagar-exterior-new.jpg",
+          "kind": "exterior",
+          "alt": "Pinnacle Anna Nagar signage and entrance at the supplied Chennai premises.",
+          "caption": "Pinnacle Anna Nagar signage and entrance at the supplied Chennai premises."
+        },
+        {
+          "file": "annanagar-interior-new-1.jpg",
+          "kind": "interior",
+          "alt": "Play area in the supplied Pinnacle Anna Nagar, Chennai photographs.",
+          "caption": "Play area in the supplied Pinnacle Anna Nagar, Chennai photographs."
+        },
+        {
+          "file": "annanagar-interior-new-2.jpg",
+          "kind": "interior",
+          "alt": "Seating and reception area in the supplied Pinnacle Anna Nagar, Chennai photographs.",
+          "caption": "Seating and reception area in the supplied Pinnacle Anna Nagar, Chennai photographs."
+        }
+      ],
+      "emblem": "annanagar-profile-57.jpg",
+      "walkthrough": {
+        "provider": "youtube",
+        "id": "71610XG2tPM",
+        "url": "https://www.youtube.com/watch?v=71610XG2tPM",
+        "embed": "https://www.youtube-nocookie.com/embed/71610XG2tPM?rel=0"
+      },
+      "nearby": [],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [
+        "600040",
+        "600037",
+        "600106",
+        "600026",
+        "600023",
+        "600014",
+        "600116",
+        "621703",
+        "600016",
+        "600050",
+        "600093",
+        "600011"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/doRqR49nwGetAf8n9",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "delhi",
+      "name": "New Delhi",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "status": "location-status",
+      "address": "Ground, E17, Main Market, South Extension - 1, Near AIIMS, Delhi 110049",
+      "localTelephone": "+919804489444",
+      "photos": [
+        {
+          "file": "delhi-exterior-38.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at New Delhi.",
+          "caption": "Centre building · New Delhi"
+        },
+        {
+          "file": "delhi-interior-8-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle New Delhi.",
+          "caption": "Inside the centre · New Delhi"
+        }
+      ],
+      "emblem": "delhi-profile-18.jpg",
+      "walkthrough": null,
+      "nearby": [],
+      "catchmentLocalities": [
+        "South extension",
+        "Hauz khas"
+      ],
+      "catchmentPostcodes": [
+        "201301",
+        "110024",
+        "110092",
+        "110049",
+        "110016"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/W8janGS5dmzdXZg88",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 983,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "warangal",
+      "name": "Warangal",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Near SKYV Family Restaurant Pure Veg,Ramakrishna Colony, Subedari, Hanamkonda, Telangana 506001",
+      "localTelephone": "+919618666144",
+      "photos": [
+        {
+          "file": "warangal-exterior-40.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Warangal.",
+          "caption": "Centre building · Warangal"
+        },
+        {
+          "file": "warangal-interior-0-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Warangal.",
+          "caption": "Inside the centre · Warangal"
+        }
+      ],
+      "emblem": "warangal-profile-2.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "karimnagar",
+          "name": "Karimnagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+          "city": "Karimnagar",
+          "distanceKm": 66.1
+        }
+      ],
+      "catchmentLocalities": [
+        "Hanamkonda",
+        "kazipet"
+      ],
+      "catchmentPostcodes": [
+        "506002",
+        "506001",
+        "506003",
+        "506613",
+        "506167",
+        "576107",
+        "505468"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/SJii9XvaKfoaLqV28",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 87,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "asraonagar",
+      "name": "AS Rao Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Plot NO A-7, Solanki Plaza, RukiminiPuram Woodland Showroom Building, Lakshmipuram Colony, Rukminipuri Colony, Dr AS Rao Nagar, Hyderabad, Telangana 500062",
+      "localTelephone": "+918096877778",
+      "photos": [
+        {
+          "file": "asraonagar-exterior-7.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at AS Rao Nagar.",
+          "caption": "Centre building · AS Rao Nagar"
+        }
+      ],
+      "emblem": "asraonagar-profile-56.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1DdXMfl_-0DFmV2nnlpdDDvUOWXmmqHZd",
+        "url": "https://drive.google.com/file/d/1DdXMfl_-0DFmV2nnlpdDDvUOWXmmqHZd/view",
+        "embed": "https://drive.google.com/file/d/1DdXMfl_-0DFmV2nnlpdDDvUOWXmmqHZd/preview"
+      },
+      "nearby": [
+        {
+          "id": "vikrampuri",
+          "name": "Vikrampuri",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 6.3
+        },
+        {
+          "id": "eastmarredpally",
+          "name": "East Marredpally",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 6.5
+        },
+        {
+          "id": "habsiguda",
+          "name": "Habsiguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 7.8
+        }
+      ],
+      "catchmentLocalities": [
+        "Sainikpuri",
+        "Moulali"
+      ],
+      "catchmentPostcodes": [
+        "500094",
+        "500040",
+        "500083",
+        "500087",
+        "500062",
+        "500017"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/w9anpBSDGjE9guPKA",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 171,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "ananthapuram",
+      "name": "Ananthapuram",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "status": "centre-enquiry",
+      "address": "2nd Cross Rd, opp. to SIU church, beside BABY Hospital, Ashoknagar, Sai Nagar, Anantapur, Andhra Pradesh",
+      "localTelephone": "+919848025444",
+      "photos": [
+        {
+          "file": "ananthapuram-exterior-19.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Ananthapuram.",
+          "caption": "Centre building · Ananthapuram"
+        },
+        {
+          "file": "ananthapuram-interior-47-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Ananthapuram.",
+          "caption": "Inside the centre · Ananthapuram"
+        },
+        {
+          "file": "ananthapuram-interior-47-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Ananthapuram.",
+          "caption": "Inside the centre · Ananthapuram"
+        },
+        {
+          "file": "ananthapuram-interior-47-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Ananthapuram.",
+          "caption": "Inside the centre · Ananthapuram"
+        }
+      ],
+      "emblem": "ananthapuram-profile-58.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1wLzzUot_dbH-eA8UutfLRKVd001JVtDq",
+        "url": "https://drive.google.com/file/d/1wLzzUot_dbH-eA8UutfLRKVd001JVtDq/view",
+        "embed": "https://drive.google.com/file/d/1wLzzUot_dbH-eA8UutfLRKVd001JVtDq/preview"
+      },
+      "nearby": [],
+      "catchmentLocalities": [
+        "Bukkarayasamudram",
+        "Rapthadu"
+      ],
+      "catchmentPostcodes": [
+        "515001",
+        "515701",
+        "515004",
+        "515731",
+        "515761",
+        "515281",
+        "515763",
+        "515722",
+        "515661",
+        "515002",
+        "515651",
+        "515561",
+        "515521",
+        "515541",
+        "515812",
+        "515822",
+        "515003",
+        "515411"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/5CP73TRFTLFzJ7gEA",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 5,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "attapur",
+      "name": "Attapur",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Opp. PVNR Express Flyover, Pillar No. 136 Inner Ring Rd, Mushk Mahal, Attapur, Hyderabad, Telangana 500048",
+      "localTelephone": "+919618222944",
+      "photos": [
+        {
+          "file": "attapur-interior-46-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Attapur.",
+          "caption": "Inside the centre · Attapur"
+        }
+      ],
+      "emblem": "attapur-profile-55.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1UNyv928ZYn5_XhpPmo9cAzm9vE3AO44A",
+        "url": "https://drive.google.com/file/d/1UNyv928ZYn5_XhpPmo9cAzm9vE3AO44A/view",
+        "embed": "https://drive.google.com/file/d/1UNyv928ZYn5_XhpPmo9cAzm9vE3AO44A/preview"
+      },
+      "nearby": [
+        {
+          "id": "himayatnagar",
+          "name": "Himayat Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 7.3
+        },
+        {
+          "id": "kachiguda",
+          "name": "Kachiguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 7.9
+        },
+        {
+          "id": "khajaguda",
+          "name": "Khajaguda, Mehdipatnam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 8
+        }
+      ],
+      "catchmentLocalities": [
+        "Mehdipatnam",
+        "Shivarampally",
+        "kishmatpur"
+      ],
+      "catchmentPostcodes": [
+        "500028",
+        "500052",
+        "500030",
+        "500008",
+        "500048",
+        "500077",
+        "501218",
+        "509228"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/ZY2Y9NS9YcDZDCU9A",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 81,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "bnreddynagar",
+      "name": "BN Reddy Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Opposite Naveena Hospital, Nagarjuna Sagar Rd, Hastinapuram, BN Reddy Nagar, Hyderabad, Telangana 500079",
+      "localTelephone": "+919100945515",
+      "photos": [],
+      "emblem": "bnreddynagar-profile-52.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1FmtLKq4zG4VqEjpEV37PD8OXJujWoM3T",
+        "url": "https://drive.google.com/file/d/1FmtLKq4zG4VqEjpEV37PD8OXJujWoM3T/view",
+        "embed": "https://drive.google.com/file/d/1FmtLKq4zG4VqEjpEV37PD8OXJujWoM3T/preview"
+      },
+      "nearby": [
+        {
+          "id": "vanasthalipuram",
+          "name": "Vanasthalipuram",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 1.8
+        },
+        {
+          "id": "lbnagar",
+          "name": "LB Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.9
+        },
+        {
+          "id": "hayathnagar",
+          "name": "Hayathnagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.2
+        }
+      ],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [
+        "500079",
+        "501510",
+        "501511",
+        "500058"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/adj4k1Cn1Wt5HVG69",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "begumpet",
+      "name": "Begumpet",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Begumpet Rd, Old Patigadda, Chikoti Gardens, Begumpet, Hyderabad, Telangana 500016.",
+      "localTelephone": "+919100222186",
+      "photos": [
+        {
+          "file": "begumpet-exterior-16.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Begumpet.",
+          "caption": "Centre building · Begumpet"
+        },
+        {
+          "file": "begumpet-interior-45-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Begumpet.",
+          "caption": "Inside the centre · Begumpet"
+        },
+        {
+          "file": "begumpet-interior-45-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Begumpet.",
+          "caption": "Inside the centre · Begumpet"
+        }
+      ],
+      "emblem": "begumpet-profile-54.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1w5_Bu7_bS84lmFvCMa5rGdH1C9P_mqmD",
+        "url": "https://drive.google.com/file/d/1w5_Bu7_bS84lmFvCMa5rGdH1C9P_mqmD/view",
+        "embed": "https://drive.google.com/file/d/1w5_Bu7_bS84lmFvCMa5rGdH1C9P_mqmD/preview"
+      },
+      "nearby": [
+        {
+          "id": "srnagar",
+          "name": "SR Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.3
+        },
+        {
+          "id": "vikrampuri",
+          "name": "Vikrampuri",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.1
+        },
+        {
+          "id": "eastmarredpally",
+          "name": "East Marredpally",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.6
+        }
+      ],
+      "catchmentLocalities": [
+        "Punjagutta",
+        "Srinagar Colony"
+      ],
+      "catchmentPostcodes": [
+        "500016",
+        "500082",
+        "500034",
+        "500073",
+        "500003"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/8w1WNk65BKnZQ9pt9",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 196,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "bhimavaram",
+      "name": "Bhimavaram",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, 20th ward, Indian Bank Road, Police Bomma centre, Bhimavaram, Andhra Pradesh - 534202",
+      "localTelephone": "+919581208816",
+      "photos": [
+        {
+          "file": "bhimavaram-exterior-3.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Bhimavaram.",
+          "caption": "Centre building · Bhimavaram"
+        },
+        {
+          "file": "bhimavaram-interior-44-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Bhimavaram.",
+          "caption": "Inside the centre · Bhimavaram"
+        },
+        {
+          "file": "bhimavaram-interior-44-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Bhimavaram.",
+          "caption": "Inside the centre · Bhimavaram"
+        },
+        {
+          "file": "bhimavaram-interior-44-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Bhimavaram.",
+          "caption": "Inside the centre · Bhimavaram"
+        }
+      ],
+      "emblem": "bhimavaram-profile-53.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "eluru",
+          "name": "Eluru",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+          "city": "Eluru",
+          "distanceKm": 48.5
+        },
+        {
+          "id": "rajahmundry",
+          "name": "Rajahmundry",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+          "city": "Rajahmundry",
+          "distanceKm": 58.2
+        },
+        {
+          "id": "kakinada",
+          "name": "Kakinada",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+          "city": "Kakinada",
+          "distanceKm": 88.6
+        }
+      ],
+      "catchmentLocalities": [
+        "palakollu",
+        "narsapuram",
+        "tadepalligudem"
+      ],
+      "catchmentPostcodes": [
+        "534201",
+        "534260",
+        "534275",
+        "534211",
+        "534101",
+        "533201"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/oLx2gKd9PJeJh7DJA",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 97,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "chandanagar",
+      "name": "Chanda Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Above Twins Toy Store, Near Fernandez Hospital, Miyapur,Hyderabad, Telangana 500050",
+      "localTelephone": "+918985951444",
+      "photos": [
+        {
+          "file": "chandanagar-exterior-15.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Chanda Nagar.",
+          "caption": "Centre building · Chanda Nagar"
+        },
+        {
+          "file": "chandanagar-interior-43-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Chanda Nagar.",
+          "caption": "Inside the centre · Chanda Nagar"
+        }
+      ],
+      "emblem": "chandanagar-profile-51.jpg",
+      "walkthrough": {
+        "provider": "youtube",
+        "id": "rPl_kZm7LiE",
+        "url": "https://www.youtube.com/watch?v=rPl_kZm7LiE",
+        "embed": "https://www.youtube-nocookie.com/embed/rPl_kZm7LiE?rel=0"
+      },
+      "nearby": [
+        {
+          "id": "kondapur",
+          "name": "Kondapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.1
+        },
+        {
+          "id": "nallagandla",
+          "name": "Nallagandla",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.4
+        },
+        {
+          "id": "hydernagar",
+          "name": "HyderNagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.6
+        }
+      ],
+      "catchmentLocalities": [
+        "Miyapur",
+        "pantachervu"
+      ],
+      "catchmentPostcodes": [
+        "500049",
+        "502319",
+        "502032",
+        "502001",
+        "502291"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/N63GnmYgv7pDxdhx6",
+      "reviewSnapshot": {
+        "rating": 4.1,
+        "reviews": 241,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "dilsukhnagar",
+      "name": "Dilsukhnagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "No : 13-2-42/6/E/201 NR, Sai Nagar, Satyanarayanapuram, Vijeta classic empire, Chaitanyapuri, Dilsukhnagar, Hyderabad, Telengana.",
+      "localTelephone": "+919738179179",
+      "photos": [
+        {
+          "file": "dilsukhnagar-exterior-14.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Dilsukhnagar.",
+          "caption": "Centre building · Dilsukhnagar"
+        },
+        {
+          "file": "dilsukhnagar-interior-42-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Dilsukhnagar.",
+          "caption": "Inside the centre · Dilsukhnagar"
+        },
+        {
+          "file": "dilsukhnagar-interior-42-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Dilsukhnagar.",
+          "caption": "Inside the centre · Dilsukhnagar"
+        }
+      ],
+      "emblem": "dilsukhnagar-profile-50.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "lbnagar",
+          "name": "LB Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.3
+        },
+        {
+          "id": "santoshnagar",
+          "name": "Santosh Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 3.8
+        },
+        {
+          "id": "kachiguda",
+          "name": "Kachiguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.5
+        }
+      ],
+      "catchmentLocalities": [
+        "Saroornagar",
+        "Moosarambagh"
+      ],
+      "catchmentPostcodes": [
+        "500060",
+        "500035",
+        "500036",
+        "500044"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/8Pmg9E73dEjU235Y8",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 97,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "eastmarredpally",
+      "name": "East Marredpally",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "First Floor, Beside Central Bank, Entrenchment Road, Nehru Nagar Colony, East Marredpally, Secunderabad, Telangana 500026",
+      "localTelephone": "+919100095004",
+      "photos": [
+        {
+          "file": "eastmarredpally-exterior-20.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at East Marredpally.",
+          "caption": "Centre building · East Marredpally"
+        },
+        {
+          "file": "eastmarredpally-interior-41-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle East Marredpally.",
+          "caption": "Inside the centre · East Marredpally"
+        }
+      ],
+      "emblem": "eastmarredpally-profile-0.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1GH5J8s5pzT3pBooKUJeWQ2coheiTnHJO",
+        "url": "https://drive.google.com/file/d/1GH5J8s5pzT3pBooKUJeWQ2coheiTnHJO/view",
+        "embed": "https://drive.google.com/file/d/1GH5J8s5pzT3pBooKUJeWQ2coheiTnHJO/preview"
+      },
+      "nearby": [
+        {
+          "id": "vikrampuri",
+          "name": "Vikrampuri",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 1.8
+        },
+        {
+          "id": "begumpet",
+          "name": "Begumpet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.6
+        },
+        {
+          "id": "vidyanagar",
+          "name": "Vidyanagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.8
+        }
+      ],
+      "catchmentLocalities": [
+        "secundrabad",
+        "padmarao nagar"
+      ],
+      "catchmentPostcodes": [
+        "500003",
+        "500061",
+        "500025"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/xTrBcyDNp3ywpkE9A",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 75,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "eluru",
+      "name": "Eluru",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Satya complex, Opp:ganganamma temple, Gandhi nagar, Near,: power peta station,Eluru-534002, Eluru District, A.P",
+      "localTelephone": "+919618222544",
+      "photos": [
+        {
+          "file": "eluru-exterior-18.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Eluru.",
+          "caption": "Centre building · Eluru"
+        },
+        {
+          "file": "eluru-interior-40-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Eluru.",
+          "caption": "Inside the centre · Eluru"
+        },
+        {
+          "file": "eluru-interior-40-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Eluru.",
+          "caption": "Inside the centre · Eluru"
+        }
+      ],
+      "emblem": "eluru-profile-48.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1O67vyWj0_XW06S_RV01dMj1y0S3qA9Z3",
+        "url": "https://drive.google.com/file/d/1O67vyWj0_XW06S_RV01dMj1y0S3qA9Z3/view",
+        "embed": "https://drive.google.com/file/d/1O67vyWj0_XW06S_RV01dMj1y0S3qA9Z3/preview"
+      },
+      "nearby": [
+        {
+          "id": "bhimavaram",
+          "name": "Bhimavaram",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+          "city": "Bhimavaram",
+          "distanceKm": 48.5
+        },
+        {
+          "id": "gurunanak",
+          "name": "Gurunanak Road, Vijayawada",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+          "city": "Vijayawada",
+          "distanceKm": 52.9
+        },
+        {
+          "id": "labbipet",
+          "name": "Labbipet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+          "city": "Vijayawada",
+          "distanceKm": 55
+        }
+      ],
+      "catchmentLocalities": [
+        "Hanumanjunction",
+        "Bhimadole",
+        "nuzivedu"
+      ],
+      "catchmentPostcodes": [
+        "534001",
+        "521105",
+        "534101",
+        "534425",
+        "534460",
+        "521201"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/sJzfbsCaCvShU8dw5",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 62,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "gachibowli",
+      "name": "Gachibowli",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "3rd Floor, Above PizzaHut, Beside Yes Bank, Paradise Road, Grace Tower, Gachibowli Stadium Road, Gachibowli, Hyderabad, Telangana 500032",
+      "localTelephone": "+919100110280",
+      "photos": [
+        {
+          "file": "gachibowli-interior-39-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Gachibowli.",
+          "caption": "Inside the centre · Gachibowli"
+        },
+        {
+          "file": "gachibowli-interior-39-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Gachibowli.",
+          "caption": "Inside the centre · Gachibowli"
+        },
+        {
+          "file": "gachibowli-interior-39-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Gachibowli.",
+          "caption": "Inside the centre · Gachibowli"
+        }
+      ],
+      "emblem": "gachibowli-profile-47.jpg",
+      "walkthrough": null,
+      "nearby": [],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [
+        "500032",
+        "500075",
+        "501504",
+        "500091"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/YnFeoSy6KywBVbYQ8",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "gajuwaka",
+      "name": "Gajuwaka @ Vizag",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, 3rd Floor, Above Federal Bank , Kailash Nagar, Chaitanya Nagar, Gajuwaka, Visakhapatnam, Andhra Pradesh 530026",
+      "localTelephone": "+919618666344",
+      "photos": [
+        {
+          "file": "gajuwaka-exterior-23.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Gajuwaka @ Vizag.",
+          "caption": "Centre building · Gajuwaka @ Vizag"
+        },
+        {
+          "file": "gajuwaka-interior-38-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Gajuwaka @ Vizag.",
+          "caption": "Inside the centre · Gajuwaka @ Vizag"
+        },
+        {
+          "file": "gajuwaka-interior-38-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Gajuwaka @ Vizag.",
+          "caption": "Inside the centre · Gajuwaka @ Vizag"
+        }
+      ],
+      "emblem": "gajuwaka-profile-46.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1TWXQB-myoZr8IQEkZaxSFQbF5G-JhGA1",
+        "url": "https://drive.google.com/file/d/1TWXQB-myoZr8IQEkZaxSFQbF5G-JhGA1/view",
+        "embed": "https://drive.google.com/file/d/1TWXQB-myoZr8IQEkZaxSFQbF5G-JhGA1/preview"
+      },
+      "nearby": [
+        {
+          "id": "nad",
+          "name": "NAD, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 7.3
+        },
+        {
+          "id": "jagadamba",
+          "name": "Jagadamba, Visakhapatnam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 10.9
+        },
+        {
+          "id": "mvp",
+          "name": "MVP, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 14.9
+        }
+      ],
+      "catchmentLocalities": [
+        "Urvasi",
+        "duvvada",
+        "Lankelapalem"
+      ],
+      "catchmentPostcodes": [
+        "530026",
+        "530008",
+        "530046",
+        "531021",
+        "530044",
+        "530031",
+        "531001",
+        "531055"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/c1oVLXzaYujpUTDGA",
+      "reviewSnapshot": {
+        "rating": 4.7,
+        "reviews": 103,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "guntur",
+      "name": "Guntur",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+      "status": "centre-enquiry",
+      "address": "M. VENKATA RAVI, MADDULAEMPIRE, Lakshmipuram Main road Door.No:5-87-8/A, beside SWEET MAGIC, Guntur, Andhra Pradesh 522007",
+      "localTelephone": "+919804435444",
+      "photos": [
+        {
+          "file": "guntur-exterior-24.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Guntur.",
+          "caption": "Centre building · Guntur"
+        },
+        {
+          "file": "guntur-interior-37-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Guntur.",
+          "caption": "Inside the centre · Guntur"
+        },
+        {
+          "file": "guntur-interior-37-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Guntur.",
+          "caption": "Inside the centre · Guntur"
+        },
+        {
+          "file": "guntur-interior-37-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Guntur.",
+          "caption": "Inside the centre · Guntur"
+        }
+      ],
+      "emblem": "guntur-profile-45.jpg",
+      "walkthrough": {
+        "provider": "youtube",
+        "id": "uhiaPvi0ljI",
+        "url": "https://www.youtube.com/watch?v=uhiaPvi0ljI",
+        "embed": "https://www.youtube-nocookie.com/embed/uhiaPvi0ljI?rel=0"
+      },
+      "nearby": [
+        {
+          "id": "labbipet",
+          "name": "Labbipet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+          "city": "Vijayawada",
+          "distanceKm": 30.7
+        },
+        {
+          "id": "gurunanak",
+          "name": "Gurunanak Road, Vijayawada",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+          "city": "Vijayawada",
+          "distanceKm": 32.6
+        },
+        {
+          "id": "eluru",
+          "name": "Eluru",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+          "city": "Eluru",
+          "distanceKm": 84.7
+        }
+      ],
+      "catchmentLocalities": [
+        "Old Guntur",
+        "Gorantla",
+        "Nallapadu"
+      ],
+      "catchmentPostcodes": [
+        "522001",
+        "522002",
+        "522003",
+        "522034",
+        "522005",
+        "522403",
+        "522601",
+        "522616",
+        "523169",
+        "522201",
+        "522101"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/PygZuLSzWL7552pc7",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 205,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "habsiguda",
+      "name": "Habsiguda",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Habsiguda Metro Station, Ramanthpur Road, Opposite ICICI direct, Habsiguda, Hyderabad-500007",
+      "localTelephone": "+919347537388",
+      "photos": [
+        {
+          "file": "habsiguda-exterior-5.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Habsiguda.",
+          "caption": "Centre building · Habsiguda"
+        }
+      ],
+      "emblem": "habsiguda-profile-44.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1STcdbtE_OrfSibsA-rv4Z4G8G6AbBjna",
+        "url": "https://drive.google.com/file/d/1STcdbtE_OrfSibsA-rv4Z4G8G6AbBjna/view",
+        "embed": "https://drive.google.com/file/d/1STcdbtE_OrfSibsA-rv4Z4G8G6AbBjna/preview"
+      },
+      "nearby": [
+        {
+          "id": "uppal",
+          "name": "Uppal",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.3
+        },
+        {
+          "id": "vidyanagar",
+          "name": "Vidyanagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4
+        },
+        {
+          "id": "dilsukhnagar",
+          "name": "Dilsukhnagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5
+        }
+      ],
+      "catchmentLocalities": [
+        "nacharam",
+        "Sitaphalmandi"
+      ],
+      "catchmentPostcodes": [
+        "500007",
+        "500076",
+        "500061"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/dcMdZVvnQPyaWvpj6",
+      "reviewSnapshot": {
+        "rating": 4.6,
+        "reviews": 56,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "hayathnagar",
+      "name": "Hayathnagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "2 nd floor, H.no. 4-7-239, Opposite Union & ICICI banks, Hayath Nagar, Hyd- Vijayawada highway, Padmavathi colony,, Hyderabad, Telangana 501505",
+      "localTelephone": "+917981278524",
+      "photos": [
+        {
+          "file": "hayathnagar-exterior-new.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle nameboard in the supplied Hayathnagar photograph.",
+          "caption": "Building and Pinnacle nameboard in the supplied Hayathnagar photograph."
+        }
+      ],
+      "emblem": "hayathnagar-profile-43.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "vanasthalipuram",
+          "name": "Vanasthalipuram",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.6
+        },
+        {
+          "id": "bnreddynagar",
+          "name": "BN Reddy Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.2
+        },
+        {
+          "id": "lbnagar",
+          "name": "LB Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.6
+        }
+      ],
+      "catchmentLocalities": [
+        "Peddaamberpet",
+        "Inamguda",
+        "Gandicheruvu"
+      ],
+      "catchmentPostcodes": [
+        "501505",
+        "501512",
+        "501511",
+        "501508"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/ipmbrkt8XUY6DbTu9",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 52,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "himayatnagar",
+      "name": "Himayat Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Himayat Nagar, Beside brand factory, G plaza building, H no 3-6-524, Hyderabad, Telangana",
+      "localTelephone": "+919100222188",
+      "photos": [
+        {
+          "file": "himayatnagar-exterior-2.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Himayat Nagar.",
+          "caption": "Centre building · Himayat Nagar"
+        }
+      ],
+      "emblem": "himayatnagar-profile-42.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "kachiguda",
+          "name": "Kachiguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2
+        },
+        {
+          "id": "vidyanagar",
+          "name": "Vidyanagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.6
+        },
+        {
+          "id": "begumpet",
+          "name": "Begumpet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.2
+        }
+      ],
+      "catchmentLocalities": [
+        "Chikkadpally",
+        "Vidyanagar"
+      ],
+      "catchmentPostcodes": [
+        "500029",
+        "500020",
+        "500001",
+        "500004",
+        "500044",
+        "500061"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/8GQBw5MSE5XdGLWf8",
+      "reviewSnapshot": {
+        "rating": 4.7,
+        "reviews": 123,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "madhapur",
+      "name": "HitechCity, Madhapur",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Beside Metro Station, Shop No - 1, GHMC No-1-98/7/2/1F, Madhapur, Hyderabad, RR District, Pin Code - 500081",
+      "localTelephone": "+919491270444",
+      "photos": [
+        {
+          "file": "madhapur-exterior-4.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at HitechCity, Madhapur.",
+          "caption": "Centre building · HitechCity, Madhapur"
+        }
+      ],
+      "emblem": "madhapur-profile-41.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "khajaguda",
+          "name": "Khajaguda, Mehdipatnam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.7
+        },
+        {
+          "id": "kondapur",
+          "name": "Kondapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 3.6
+        },
+        {
+          "id": "hydernagar",
+          "name": "HyderNagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 6
+        }
+      ],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [
+        "500081",
+        "500018",
+        "500033",
+        "500034",
+        "500096"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/3kk59K6bFgVz2Jrb9",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "hydernagar",
+      "name": "HyderNagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "#16-2-226, Darshan plaza, 2nd Floor, Metro Pillar No: A684, Opp. Bhramaramba Theater, Hydernagar, Hyderabad - 500085.",
+      "localTelephone": "+919014451594",
+      "photos": [],
+      "emblem": "hydernagar-profile-40.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1nYBGW3j4Qx2cWdL1XAla8ekaBTaGGii9",
+        "url": "https://drive.google.com/file/d/1nYBGW3j4Qx2cWdL1XAla8ekaBTaGGii9/view",
+        "embed": "https://drive.google.com/file/d/1nYBGW3j4Qx2cWdL1XAla8ekaBTaGGii9/preview"
+      },
+      "nearby": [
+        {
+          "id": "nizampet",
+          "name": "Nizampet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 0.6
+        },
+        {
+          "id": "pragathinagar",
+          "name": "Pragathi Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.5
+        },
+        {
+          "id": "kukatpally",
+          "name": "Kukatpally, Vivekananda Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.9
+        }
+      ],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [],
+      "googleBusinessUrl": "https://goo.gl/maps/okJupJJWaGANnx8v9",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "indiranagar",
+      "name": "Indira Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+      "status": "centre-enquiry",
+      "address": "Opp. Motherhood Hospital, CMH Road, Indira Nagar, Bengaluru, Karnataka, IN - 560038.",
+      "localTelephone": "+919100222187",
+      "photos": [
+        {
+          "file": "indiranagar-exterior-26.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Indira Nagar.",
+          "caption": "Centre building · Indira Nagar"
+        }
+      ],
+      "emblem": "indiranagar-profile-39.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "jayanagar",
+          "name": "Jaya Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+          "city": "Bengaluru",
+          "distanceKm": 7.6
+        },
+        {
+          "id": "marathahalli",
+          "name": "Marathahalli",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+          "city": "Bengaluru",
+          "distanceKm": 8.5
+        }
+      ],
+      "catchmentLocalities": [
+        "Koramangla",
+        "Rammurthynagar",
+        "Ulsoor"
+      ],
+      "catchmentPostcodes": [
+        "560038",
+        "560034",
+        "560016",
+        "560042",
+        "560001",
+        "560072",
+        "560043"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/prtXW6HvU7YQGaYV6",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 67,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "jagadamba",
+      "name": "Jagadamba, Visakhapatnam",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+      "status": "centre-enquiry",
+      "address": "Door No. 28-10-4, revenue Ward No. 27, 3 Rd.floor, Vasavi Plaza, Opposite Tochitralaya Inox Theatres, very Near To Jagadamba Theatre, visakhapatnam - 530020",
+      "localTelephone": "+917386395212",
+      "photos": [
+        {
+          "file": "jagadamba-exterior-9.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Jagadamba, Visakhapatnam.",
+          "caption": "Centre building · Jagadamba, Visakhapatnam"
+        },
+        {
+          "file": "jagadamba-interior-34-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Jagadamba, Visakhapatnam.",
+          "caption": "Inside the centre · Jagadamba, Visakhapatnam"
+        },
+        {
+          "file": "jagadamba-interior-34-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Jagadamba, Visakhapatnam.",
+          "caption": "Inside the centre · Jagadamba, Visakhapatnam"
+        },
+        {
+          "file": "jagadamba-interior-34-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Jagadamba, Visakhapatnam.",
+          "caption": "Inside the centre · Jagadamba, Visakhapatnam"
+        }
+      ],
+      "emblem": "jagadamba-profile-38.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "152nlzXF6PqqO1iVY49y0RPxsTGiyKNN5",
+        "url": "https://drive.google.com/file/d/152nlzXF6PqqO1iVY49y0RPxsTGiyKNN5/view",
+        "embed": "https://drive.google.com/file/d/152nlzXF6PqqO1iVY49y0RPxsTGiyKNN5/preview"
+      },
+      "nearby": [
+        {
+          "id": "mvp",
+          "name": "MVP, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 4.5
+        },
+        {
+          "id": "nad",
+          "name": "NAD, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 8.3
+        },
+        {
+          "id": "gajuwaka",
+          "name": "Gajuwaka @ Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 10.9
+        }
+      ],
+      "catchmentLocalities": [
+        "Dwarakanagar",
+        "Allipuram"
+      ],
+      "catchmentPostcodes": [
+        "530001",
+        "530002",
+        "530016",
+        "530004",
+        "530020",
+        "530003",
+        "530018"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/KMp1ZydvhdxMTgoW7",
+      "reviewSnapshot": {
+        "rating": 4.5,
+        "reviews": 68,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "jublieehills",
+      "name": "Jubilee Hills",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jubilee-hills-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "LandMark - Sangeetha Studio, 761, Rd Number 39, CBI Colony, Jubilee Hills, Hyderabad, Telangana 500033",
+      "localTelephone": null,
+      "photos": [],
+      "emblem": null,
+      "walkthrough": null,
+      "nearby": [],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [],
+      "googleBusinessUrl": "https://goo.gl/maps/CkkaYTHVZR4b2HuS7",
+      "reviewSnapshot": null
+    },
+    {
+      "id": "kachiguda",
+      "name": "Kachiguda",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, First Floor, G7 Avenue, Beside DMart, Kachiguda Station Rd, Rahamath Bagh, Kachiguda, Hyderabad, Telangana 500027",
+      "localTelephone": "+919100440293",
+      "photos": [
+        {
+          "file": "kachiguda-exterior-8.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Kachiguda.",
+          "caption": "Centre building · Kachiguda"
+        }
+      ],
+      "emblem": "kachiguda-profile-36.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1XVQDC571zS_gSg2PcIaRdBqifeNCoSiB",
+        "url": "https://drive.google.com/file/d/1XVQDC571zS_gSg2PcIaRdBqifeNCoSiB/view",
+        "embed": "https://drive.google.com/file/d/1XVQDC571zS_gSg2PcIaRdBqifeNCoSiB/preview"
+      },
+      "nearby": [
+        {
+          "id": "vidyanagar",
+          "name": "Vidyanagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 1.9
+        },
+        {
+          "id": "himayatnagar",
+          "name": "Himayat Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2
+        },
+        {
+          "id": "dilsukhnagar",
+          "name": "Dilsukhnagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.5
+        }
+      ],
+      "catchmentLocalities": [
+        "malakpet",
+        "nampally",
+        "kachiguda"
+      ],
+      "catchmentPostcodes": [
+        "500027",
+        "500036",
+        "500012",
+        "500013",
+        "500001"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/QLJExHmie55hjqTb9",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 53,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "kadapa",
+      "name": "Kadapa",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+      "status": "centre-enquiry",
+      "address": "Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh",
+      "localTelephone": "+919121116845",
+      "photos": [],
+      "emblem": "kadapa-profile-35.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1rcpf2PP8UzVePc5DUSWYN3EVGkzD_nvO",
+        "url": "https://drive.google.com/file/d/1rcpf2PP8UzVePc5DUSWYN3EVGkzD_nvO/view",
+        "embed": "https://drive.google.com/file/d/1rcpf2PP8UzVePc5DUSWYN3EVGkzD_nvO/preview"
+      },
+      "nearby": [],
+      "catchmentLocalities": [
+        "Nagaraju Peta",
+        "Viswanathapuram",
+        "sankarapuram"
+      ],
+      "catchmentPostcodes": [],
+      "googleBusinessUrl": "https://maps.app.goo.gl/jWtNU8DaRq5imHie9",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 54,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "kakinada",
+      "name": "Kakinada",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Beside Sai baba Temple, Phase 2, Subash Road, Revenue Ward No. 8, Kakinada -533001",
+      "localTelephone": "+918125762999",
+      "photos": [
+        {
+          "file": "kakinada-exterior-42.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Kakinada.",
+          "caption": "Centre building · Kakinada"
+        },
+        {
+          "file": "kakinada-interior-31-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Kakinada.",
+          "caption": "Inside the centre · Kakinada"
+        }
+      ],
+      "emblem": "kakinada-profile-34.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "rajahmundry",
+          "name": "Rajahmundry",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+          "city": "Rajahmundry",
+          "distanceKm": 48.3
+        },
+        {
+          "id": "bhimavaram",
+          "name": "Bhimavaram",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+          "city": "Bhimavaram",
+          "distanceKm": 88.6
+        }
+      ],
+      "catchmentLocalities": [
+        "samarlakota",
+        "pitapuram",
+        "ramaraopet"
+      ],
+      "catchmentPostcodes": [
+        "533001",
+        "533004",
+        "533003",
+        "533002",
+        "533005",
+        "533006",
+        "533255",
+        "533450",
+        "533440",
+        "533401",
+        "533406"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/kUdG1Bek6ChMv7KZA",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 264,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "karimnagar",
+      "name": "Karimnagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, 3-1-323/A, Behind Civil hospital, Savaran street, Christian colony, Karimnagar, 505001",
+      "localTelephone": "+919908792374",
+      "photos": [
+        {
+          "file": "karimnagar-exterior-25.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Karimnagar.",
+          "caption": "Centre building · Karimnagar"
+        },
+        {
+          "file": "karimnagar-interior-30-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Karimnagar.",
+          "caption": "Inside the centre · Karimnagar"
+        },
+        {
+          "file": "karimnagar-interior-30-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Karimnagar.",
+          "caption": "Inside the centre · Karimnagar"
+        },
+        {
+          "file": "karimnagar-interior-30-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Karimnagar.",
+          "caption": "Inside the centre · Karimnagar"
+        }
+      ],
+      "emblem": "karimnagar-profile-33.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1d7klnUpBx8RhsAjafK9sCaMkWE4Zj0lO",
+        "url": "https://drive.google.com/file/d/1d7klnUpBx8RhsAjafK9sCaMkWE4Zj0lO/view",
+        "embed": "https://drive.google.com/file/d/1d7klnUpBx8RhsAjafK9sCaMkWE4Zj0lO/preview"
+      },
+      "nearby": [
+        {
+          "id": "warangal",
+          "name": "Warangal",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+          "city": "Warangal",
+          "distanceKm": 66.1
+        }
+      ],
+      "catchmentLocalities": [
+        "Jammikunta",
+        "Peddapalli"
+      ],
+      "catchmentPostcodes": [
+        "505001",
+        "505208",
+        "504208",
+        "502103",
+        "505301",
+        "505302",
+        "505122",
+        "505172"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/2JFYTYwgY4tGTVyXA",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 139,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "khajaguda",
+      "name": "Khajaguda, Mehdipatnam",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Khajaguda Nanakramguda Rd, Madhura Nagar Colony, Gachibowli, Rai Durg, Telangana 500032",
+      "localTelephone": "+919100442037",
+      "photos": [
+        {
+          "file": "khajaguda-exterior-27.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Khajaguda, Mehdipatnam.",
+          "caption": "Centre building · Khajaguda, Mehdipatnam"
+        },
+        {
+          "file": "khajaguda-interior-29-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Khajaguda, Mehdipatnam.",
+          "caption": "Inside the centre · Khajaguda, Mehdipatnam"
+        },
+        {
+          "file": "khajaguda-interior-29-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Khajaguda, Mehdipatnam.",
+          "caption": "Inside the centre · Khajaguda, Mehdipatnam"
+        },
+        {
+          "file": "khajaguda-interior-29-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Khajaguda, Mehdipatnam.",
+          "caption": "Inside the centre · Khajaguda, Mehdipatnam"
+        }
+      ],
+      "emblem": "khajaguda-profile-32.jpg",
+      "walkthrough": {
+        "provider": "youtube",
+        "id": "zr_ouPcjuDs",
+        "url": "https://www.youtube.com/watch?v=zr_ouPcjuDs",
+        "embed": "https://www.youtube-nocookie.com/embed/zr_ouPcjuDs?rel=0"
+      },
+      "nearby": [
+        {
+          "id": "madhapur",
+          "name": "HitechCity, Madhapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.7
+        },
+        {
+          "id": "kondapur",
+          "name": "Kondapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5
+        },
+        {
+          "id": "attapur",
+          "name": "Attapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 8
+        }
+      ],
+      "catchmentLocalities": [
+        "toli chowki",
+        "Manikonda",
+        "Shaikpet"
+      ],
+      "catchmentPostcodes": [
+        "500008",
+        "500081",
+        "500089",
+        "500075",
+        "500084"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/sSYyUgN1B7PKxQ8t8",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 75,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "khammam",
+      "name": "Khammam",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Yk Arcade Beside Buggaviti EntOpp. Indus ind bank Wyra road , Khammam, Telangana 507003",
+      "localTelephone": "+919100053004",
+      "photos": [
+        {
+          "file": "khammam-interior-28-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Khammam.",
+          "caption": "Inside the centre · Khammam"
+        },
+        {
+          "file": "khammam-interior-28-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Khammam.",
+          "caption": "Inside the centre · Khammam"
+        },
+        {
+          "file": "khammam-interior-28-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Khammam.",
+          "caption": "Inside the centre · Khammam"
+        }
+      ],
+      "emblem": "khammam-profile-31.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1BOnxAUt7vxPbPd_BXFAJeCWwRFLXYehv",
+        "url": "https://drive.google.com/file/d/1BOnxAUt7vxPbPd_BXFAJeCWwRFLXYehv/view",
+        "embed": "https://drive.google.com/file/d/1BOnxAUt7vxPbPd_BXFAJeCWwRFLXYehv/preview"
+      },
+      "nearby": [
+        {
+          "id": "miryalaguda",
+          "name": "Miryalaguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+          "city": "Miryalaguda",
+          "distanceKm": 76
+        },
+        {
+          "id": "labbipet",
+          "name": "Labbipet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+          "city": "Vijayawada",
+          "distanceKm": 97.9
+        },
+        {
+          "id": "gurunanak",
+          "name": "Gurunanak Road, Vijayawada",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+          "city": "Vijayawada",
+          "distanceKm": 98.9
+        }
+      ],
+      "catchmentLocalities": [
+        "suryapet",
+        "madhira",
+        "kodad"
+      ],
+      "catchmentPostcodes": [
+        "507001",
+        "507111",
+        "508213",
+        "507203",
+        "521175",
+        "508206",
+        "507303"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/m4rKcpYK3C8jMiZCA",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 178,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "kondapur",
+      "name": "Kondapur",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Plot No : 212/ B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, TS, IN - 500084.",
+      "localTelephone": "+919063377417",
+      "photos": [],
+      "emblem": null,
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "madhapur",
+          "name": "HitechCity, Madhapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 3.6
+        },
+        {
+          "id": "chandanagar",
+          "name": "Chanda Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.1
+        },
+        {
+          "id": "nallagandla",
+          "name": "Nallagandla",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.8
+        }
+      ],
+      "catchmentLocalities": [
+        "Hafeezpet"
+      ],
+      "catchmentPostcodes": [
+        "500084",
+        "500049"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/UzK5kRfteA8RG6fD9",
+      "reviewSnapshot": {
+        "rating": 4.2,
+        "reviews": 48,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "kukatpally",
+      "name": "Kukatpally, Vivekananda Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Plot No- 530 at Vivekananda Nagar, Kukatpally opp reliance fresh jawed Habib",
+      "localTelephone": "+919100222184",
+      "photos": [
+        {
+          "file": "kukatpally-exterior-29.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Kukatpally, Vivekananda Nagar.",
+          "caption": "Centre building · Kukatpally, Vivekananda Nagar"
+        },
+        {
+          "file": "kukatpally-interior-27-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Kukatpally, Vivekananda Nagar.",
+          "caption": "Inside the centre · Kukatpally, Vivekananda Nagar"
+        },
+        {
+          "file": "kukatpally-interior-27-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Kukatpally, Vivekananda Nagar.",
+          "caption": "Inside the centre · Kukatpally, Vivekananda Nagar"
+        }
+      ],
+      "emblem": "kukatpally-profile-30.jpg",
+      "walkthrough": {
+        "provider": "youtube",
+        "id": "UakQCuEIjQY",
+        "url": "https://www.youtube.com/watch?v=UakQCuEIjQY",
+        "embed": "https://www.youtube-nocookie.com/embed/UakQCuEIjQY?rel=0"
+      },
+      "nearby": [
+        {
+          "id": "nizampet",
+          "name": "Nizampet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.5
+        },
+        {
+          "id": "hydernagar",
+          "name": "HyderNagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.9
+        },
+        {
+          "id": "pragathinagar",
+          "name": "Pragathi Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 3
+        }
+      ],
+      "catchmentLocalities": [
+        "Vivekananda Nagar",
+        "Jagathgirigutta"
+      ],
+      "catchmentPostcodes": [
+        "500072",
+        "500055",
+        "500018",
+        "500037"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/gFYTeXS47JzK36xH8",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 289,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "kurnool",
+      "name": "Kurnool",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, 1st Floor, Sri Sai Estates, Opp. Income Tax Department, Muncipal Office Road, Kurnool, Andhra Pradesh 518001",
+      "localTelephone": "+919491507444",
+      "photos": [
+        {
+          "file": "kurnool-interior-26-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Kurnool.",
+          "caption": "Inside the centre · Kurnool"
+        },
+        {
+          "file": "kurnool-interior-26-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Kurnool.",
+          "caption": "Inside the centre · Kurnool"
+        },
+        {
+          "file": "kurnool-interior-26-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Kurnool.",
+          "caption": "Inside the centre · Kurnool"
+        }
+      ],
+      "emblem": "kurnool-profile-29.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1f1cucl6nRhD4IMVTCs_KIUy9e7K0csHI",
+        "url": "https://drive.google.com/file/d/1f1cucl6nRhD4IMVTCs_KIUy9e7K0csHI/view",
+        "embed": "https://drive.google.com/file/d/1f1cucl6nRhD4IMVTCs_KIUy9e7K0csHI/preview"
+      },
+      "nearby": [
+        {
+          "id": "nandyala",
+          "name": "Nandyala",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+          "city": "Nandyala",
+          "distanceKm": 61.2
+        }
+      ],
+      "catchmentLocalities": [
+        "pullur",
+        "nandikotkur"
+      ],
+      "catchmentPostcodes": [
+        "518001",
+        "509128",
+        "509125",
+        "518380",
+        "518501",
+        "518401",
+        "515001"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/Dp8KWn8XmXMC5REC8",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 144,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "lbnagar",
+      "name": "LB Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "No - 11-14-321/3, Building Name - K Square, 3rd Floor New Siri Nagar Colony Beside Croma store, above Raymond Store, near L.B Nagar Circle, Hyderabad, Telangana 500074",
+      "localTelephone": "+919573056244",
+      "photos": [
+        {
+          "file": "lbnagar-exterior-32.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at LB Nagar.",
+          "caption": "Centre building · LB Nagar"
+        },
+        {
+          "file": "lbnagar-interior-24-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle LB Nagar.",
+          "caption": "Inside the centre · LB Nagar"
+        },
+        {
+          "file": "lbnagar-interior-24-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle LB Nagar.",
+          "caption": "Inside the centre · LB Nagar"
+        }
+      ],
+      "emblem": "lbnagar-profile-27.jpg",
+      "walkthrough": {
+        "provider": "youtube",
+        "id": "D3qieAjsEEk",
+        "url": "https://www.youtube.com/watch?v=D3qieAjsEEk",
+        "embed": "https://www.youtube-nocookie.com/embed/D3qieAjsEEk?rel=0"
+      },
+      "nearby": [
+        {
+          "id": "dilsukhnagar",
+          "name": "Dilsukhnagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.3
+        },
+        {
+          "id": "bnreddynagar",
+          "name": "BN Reddy Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.9
+        },
+        {
+          "id": "vanasthalipuram",
+          "name": "Vanasthalipuram",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 3.2
+        }
+      ],
+      "catchmentLocalities": [
+        "Chintalakunta",
+        "Mansoorabad"
+      ],
+      "catchmentPostcodes": [
+        "500074",
+        "500068",
+        "500058",
+        "500035",
+        "500070",
+        "500053"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/BbKjGEMk3kYrNWXB7",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 452,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "labbipet",
+      "name": "Labbipet",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+      "status": "centre-enquiry",
+      "address": "Door No 39-9-7, Temple Street, Labbi Pet, Vijayawada, Andhra pradesh-520007",
+      "localTelephone": "+918885027293",
+      "photos": [
+        {
+          "file": "labbipet-exterior-45.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Labbipet.",
+          "caption": "Centre building · Labbipet"
+        },
+        {
+          "file": "labbipet-interior-25-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Labbipet.",
+          "caption": "Inside the centre · Labbipet"
+        },
+        {
+          "file": "labbipet-interior-25-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Labbipet.",
+          "caption": "Inside the centre · Labbipet"
+        },
+        {
+          "file": "labbipet-interior-25-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Labbipet.",
+          "caption": "Inside the centre · Labbipet"
+        }
+      ],
+      "emblem": "labbipet-profile-28.jpg",
+      "walkthrough": {
+        "provider": "youtube",
+        "id": "YkcZ_lRJxNY",
+        "url": "https://www.youtube.com/watch?v=YkcZ_lRJxNY",
+        "embed": "https://www.youtube-nocookie.com/embed/YkcZ_lRJxNY?rel=0"
+      },
+      "nearby": [
+        {
+          "id": "gurunanak",
+          "name": "Gurunanak Road, Vijayawada",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+          "city": "Vijayawada",
+          "distanceKm": 2.3
+        },
+        {
+          "id": "guntur",
+          "name": "Guntur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+          "city": "Guntur",
+          "distanceKm": 30.7
+        },
+        {
+          "id": "eluru",
+          "name": "Eluru",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+          "city": "Eluru",
+          "distanceKm": 55
+        }
+      ],
+      "catchmentLocalities": [
+        "Bhavanipuram",
+        "Mangalagiri",
+        "Gollapudi"
+      ],
+      "catchmentPostcodes": [
+        "520010",
+        "520012",
+        "521225",
+        "521228",
+        "521230",
+        "521235",
+        "522503",
+        "520001",
+        "522237"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/UX9rvDcdJkCHAgEJ6",
+      "reviewSnapshot": {
+        "rating": 4.7,
+        "reviews": 156,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "mvp",
+      "name": "MVP, Vizag",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+      "status": "centre-enquiry",
+      "address": "Above Karur Vysya Bank, MVP Double Road, Sector 8,Visakhapatnam, Andhra Pradesh 530017",
+      "localTelephone": "+918977909390",
+      "photos": [],
+      "emblem": "mvp-profile-22.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "14FJ7S_hknki5KFgPjriiT02y-pSnpME-",
+        "url": "https://drive.google.com/file/d/14FJ7S_hknki5KFgPjriiT02y-pSnpME-/view",
+        "embed": "https://drive.google.com/file/d/14FJ7S_hknki5KFgPjriiT02y-pSnpME-/preview"
+      },
+      "nearby": [
+        {
+          "id": "jagadamba",
+          "name": "Jagadamba, Visakhapatnam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 4.5
+        },
+        {
+          "id": "madhurawada",
+          "name": "Madhurawada",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 9.6
+        },
+        {
+          "id": "nad",
+          "name": "NAD, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 10.4
+        }
+      ],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [
+        "530017",
+        "530045",
+        "530048",
+        "531163",
+        "530004",
+        "530013",
+        "530052",
+        "535001",
+        "532001"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/QDeAvAZVMspCpWCRA",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "madhurawada",
+      "name": "Madhurawada",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+      "status": "centre-enquiry",
+      "address": "2nd floor, Opp Vedanta Women & Children Hospital, Car Shed Road, PM Palem, Madhurawada, Visakhapatnam, Andhra Pradesh 530041",
+      "localTelephone": "+919100870958",
+      "photos": [
+        {
+          "file": "madhurawada-exterior-31.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Madhurawada.",
+          "caption": "Centre building · Madhurawada"
+        }
+      ],
+      "emblem": "madhurawada-profile-26.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1wDwdzpAy9h8X3TL4nGjMeGcAy3nvLseH",
+        "url": "https://drive.google.com/file/d/1wDwdzpAy9h8X3TL4nGjMeGcAy3nvLseH/view",
+        "embed": "https://drive.google.com/file/d/1wDwdzpAy9h8X3TL4nGjMeGcAy3nvLseH/preview"
+      },
+      "nearby": [
+        {
+          "id": "mvp",
+          "name": "MVP, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 9.6
+        },
+        {
+          "id": "jagadamba",
+          "name": "Jagadamba, Visakhapatnam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 13.8
+        },
+        {
+          "id": "nad",
+          "name": "NAD, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 16.1
+        }
+      ],
+      "catchmentLocalities": [
+        "Bakkannapalem"
+      ],
+      "catchmentPostcodes": [
+        "530041",
+        "531163",
+        "531061",
+        "530048",
+        "530045",
+        "531173",
+        "530052"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/dz92rjcagJyygp8P6",
+      "reviewSnapshot": {
+        "rating": 4.2,
+        "reviews": 5,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "mahbubnagar",
+      "name": "Mahbubnagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+      "status": "centre-enquiry",
+      "address": "GLG Complex, opposite Chinnari Childrens Hospital, Rajendra Nagar, Mahbubnagar, Telangana",
+      "localTelephone": "+919100677374",
+      "photos": [
+        {
+          "file": "mahbubnagar-exterior-13.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Mahbubnagar.",
+          "caption": "Centre building · Mahbubnagar"
+        },
+        {
+          "file": "mahbubnagar-interior-22-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Mahbubnagar.",
+          "caption": "Inside the centre · Mahbubnagar"
+        },
+        {
+          "file": "mahbubnagar-interior-22-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Mahbubnagar.",
+          "caption": "Inside the centre · Mahbubnagar"
+        },
+        {
+          "file": "mahbubnagar-interior-22-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Mahbubnagar.",
+          "caption": "Inside the centre · Mahbubnagar"
+        }
+      ],
+      "emblem": "mahbubnagar-profile-25.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1aKweA5MkqSMyfvMSJA0rfShwCxY_wRCT",
+        "url": "https://drive.google.com/file/d/1aKweA5MkqSMyfvMSJA0rfShwCxY_wRCT/view",
+        "embed": "https://drive.google.com/file/d/1aKweA5MkqSMyfvMSJA0rfShwCxY_wRCT/preview"
+      },
+      "nearby": [
+        {
+          "id": "attapur",
+          "name": "Attapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 81.7
+        },
+        {
+          "id": "khajaguda",
+          "name": "Khajaguda, Mehdipatnam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 84.4
+        },
+        {
+          "id": "santoshnagar",
+          "name": "Santosh Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 85
+        }
+      ],
+      "catchmentLocalities": [
+        "Hanwada",
+        "Chakalpalle"
+      ],
+      "catchmentPostcodes": [
+        "509334",
+        "509335",
+        "509340",
+        "509301",
+        "509382"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/PVsMsiKuteuod5129",
+      "reviewSnapshot": {
+        "rating": 1,
+        "reviews": 5,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "marathahalli",
+      "name": "Marathahalli",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+      "status": "centre-enquiry",
+      "address": "No 3, Khata no 2389, SY No 115/6, KUNDALAHALLI, Bengaluru (Bangalore) Urban, Karnataka, 560049",
+      "localTelephone": "+919900428508",
+      "photos": [
+        {
+          "file": "marathahalli-exterior-44.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Marathahalli.",
+          "caption": "Centre building · Marathahalli"
+        },
+        {
+          "file": "marathahalli-interior-21-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Marathahalli.",
+          "caption": "Inside the centre · Marathahalli"
+        },
+        {
+          "file": "marathahalli-interior-21-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Marathahalli.",
+          "caption": "Inside the centre · Marathahalli"
+        }
+      ],
+      "emblem": "marathahalli-profile-24.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "indiranagar",
+          "name": "Indira Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+          "city": "Bengaluru",
+          "distanceKm": 8.5
+        },
+        {
+          "id": "jayanagar",
+          "name": "Jaya Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+          "city": "Bengaluru",
+          "distanceKm": 14.4
+        }
+      ],
+      "catchmentLocalities": [
+        "whitefield",
+        "Krishnarajapuram",
+        "panathur"
+      ],
+      "catchmentPostcodes": [
+        "560037",
+        "560066",
+        "560067",
+        "560036",
+        "560103",
+        "560087"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/yUrRDCe3iCPQEBg67",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 99,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "miryalaguda",
+      "name": "Miryalaguda",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+      "status": "centre-enquiry",
+      "address": "D, 20-19/1, Sagar Rd, opp. Kakatiya High School, Islampuram, Miryalaguda, Telangana 508207",
+      "localTelephone": "+919100945515",
+      "photos": [
+        {
+          "file": "miryalaguda-exterior-46.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Miryalaguda.",
+          "caption": "Centre building · Miryalaguda"
+        },
+        {
+          "file": "miryalaguda-interior-20-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Miryalaguda.",
+          "caption": "Inside the centre · Miryalaguda"
+        },
+        {
+          "file": "miryalaguda-interior-20-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Miryalaguda.",
+          "caption": "Inside the centre · Miryalaguda"
+        }
+      ],
+      "emblem": "miryalaguda-profile-23.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1a7kDhg8fs3SwVBL-DLVDw3cGBrbc2sA8",
+        "url": "https://drive.google.com/file/d/1a7kDhg8fs3SwVBL-DLVDw3cGBrbc2sA8/view",
+        "embed": "https://drive.google.com/file/d/1a7kDhg8fs3SwVBL-DLVDw3cGBrbc2sA8/preview"
+      },
+      "nearby": [
+        {
+          "id": "khammam",
+          "name": "Khammam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+          "city": "Khammam",
+          "distanceKm": 76
+        }
+      ],
+      "catchmentLocalities": [
+        "Yadgarpally",
+        "vemulapally",
+        "Avantipuram"
+      ],
+      "catchmentPostcodes": [
+        "508208",
+        "508217",
+        "508207",
+        "508201",
+        "508218",
+        "508278",
+        "508355",
+        "508204",
+        "508247",
+        "508213",
+        "508211",
+        "508377",
+        "508001",
+        "508206"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/yzGRyaJrBsiBikHz5",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 25,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "nad",
+      "name": "NAD, Vizag",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+      "status": "centre-enquiry",
+      "address": "Opp. HDFC Bank, Buchirajupalem, NAD, Visakhapatnam, AP, IN - 027",
+      "localTelephone": "+917386947444",
+      "photos": [
+        {
+          "file": "nad-exterior-34.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at NAD, Vizag.",
+          "caption": "Centre building · NAD, Vizag"
+        },
+        {
+          "file": "nad-interior-19-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle NAD, Vizag.",
+          "caption": "Inside the centre · NAD, Vizag"
+        },
+        {
+          "file": "nad-interior-19-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle NAD, Vizag.",
+          "caption": "Inside the centre · NAD, Vizag"
+        }
+      ],
+      "emblem": "nad-profile-21.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "gajuwaka",
+          "name": "Gajuwaka @ Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 7.3
+        },
+        {
+          "id": "jagadamba",
+          "name": "Jagadamba, Visakhapatnam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 8.3
+        },
+        {
+          "id": "mvp",
+          "name": "MVP, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 10.4
+        }
+      ],
+      "catchmentLocalities": [
+        "Muralinagar",
+        "Pendurthi",
+        "Sujatha Nagar"
+      ],
+      "catchmentPostcodes": [
+        "530007",
+        "530009",
+        "531173",
+        "530051",
+        "535183",
+        "531035",
+        "530028",
+        "530027"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/GKA5XTWLyRMqzpRs6",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 144,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "nallagandla",
+      "name": "Nallagandla",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Sri Godha Towers, Plot No 22/F/HIG, Nallagandla HUDA Complex, Nallagandla, Serilingampally-500019",
+      "localTelephone": "+919908793867",
+      "photos": [
+        {
+          "file": "nallagandla-exterior-35.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Nallagandla.",
+          "caption": "Centre building · Nallagandla"
+        },
+        {
+          "file": "nallagandla-interior-18-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Nallagandla.",
+          "caption": "Inside the centre · Nallagandla"
+        }
+      ],
+      "emblem": "nallagandla-profile-20.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "193oIb6hZsoyb6GwU80LVjKo50fAtNiwF",
+        "url": "https://drive.google.com/file/d/193oIb6hZsoyb6GwU80LVjKo50fAtNiwF/view",
+        "embed": "https://drive.google.com/file/d/193oIb6hZsoyb6GwU80LVjKo50fAtNiwF/preview"
+      },
+      "nearby": [
+        {
+          "id": "chandanagar",
+          "name": "Chanda Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.4
+        },
+        {
+          "id": "kondapur",
+          "name": "Kondapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.8
+        },
+        {
+          "id": "madhapur",
+          "name": "HitechCity, Madhapur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 8.3
+        }
+      ],
+      "catchmentLocalities": [
+        "Gopannapally",
+        "Tellapur"
+      ],
+      "catchmentPostcodes": [
+        "500019",
+        "500046",
+        "502221",
+        "502032",
+        "501503"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/QM5FvGMPTkYmg8VA9",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 89,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "nandyala",
+      "name": "Nandyala",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "status": "centre-enquiry",
+      "address": "Second Floor, Padmavati Nagar Rd, above Dominos, beside GSR Hospital, Srinivasa Nagar, Nandyala, Andhra Pradesh",
+      "localTelephone": "+919100056004",
+      "photos": [
+        {
+          "file": "nandyala-exterior-33.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Nandyala.",
+          "caption": "Centre building · Nandyala"
+        },
+        {
+          "file": "nandyala-interior-17-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Nandyala.",
+          "caption": "Inside the centre · Nandyala"
+        },
+        {
+          "file": "nandyala-interior-17-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Nandyala.",
+          "caption": "Inside the centre · Nandyala"
+        }
+      ],
+      "emblem": "nandyala-profile-1.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "101Ya5r3KeZMaWTkh9ZIr3Ga74KYBd9Pr",
+        "url": "https://drive.google.com/file/d/101Ya5r3KeZMaWTkh9ZIr3Ga74KYBd9Pr/view",
+        "embed": "https://drive.google.com/file/d/101Ya5r3KeZMaWTkh9ZIr3Ga74KYBd9Pr/preview"
+      },
+      "nearby": [
+        {
+          "id": "kurnool",
+          "name": "Kurnool",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+          "city": "Kurnool",
+          "distanceKm": 61.2
+        }
+      ],
+      "catchmentLocalities": [
+        "Viswa Nagar",
+        "AKBS Colony",
+        "Nadigadda"
+      ],
+      "catchmentPostcodes": [],
+      "googleBusinessUrl": "https://maps.app.goo.gl/cD1Rh7yuKqzzWNe87",
+      "reviewSnapshot": {
+        "rating": 4.7,
+        "reviews": 26,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "nellore",
+      "name": "Nellore",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, 101,1st floor, RS Imperial, opposite Babu Ice Cream, Subedar Pet, Nellore, Andhra Pradesh 524001",
+      "localTelephone": "+919908792438",
+      "photos": [
+        {
+          "file": "nellore-exterior-36.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Nellore.",
+          "caption": "Centre building · Nellore"
+        }
+      ],
+      "emblem": "nellore-profile-19.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1AtMM8Jqz4XS5PSYDo2KbCanQi2zkR83r",
+        "url": "https://drive.google.com/file/d/1AtMM8Jqz4XS5PSYDo2KbCanQi2zkR83r/view",
+        "embed": "https://drive.google.com/file/d/1AtMM8Jqz4XS5PSYDo2KbCanQi2zkR83r/preview"
+      },
+      "nearby": [],
+      "catchmentLocalities": [
+        "Naidupeta",
+        "Mypadu"
+      ],
+      "catchmentPostcodes": [
+        "524001",
+        "524201",
+        "524313",
+        "523001",
+        "524101",
+        "524121",
+        "524126"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/wLnK4y5bfJ7xkZ5N7",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 113,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "nizamabad",
+      "name": "Nizamabad",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Hyderabad Rd, opp. Vamshi International Hotel, Pragathi Nagar, Pulang, Nizamabad, Telangana 503001",
+      "localTelephone": "+917671816868",
+      "photos": [
+        {
+          "file": "nizamabad-exterior-47.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Nizamabad.",
+          "caption": "Centre building · Nizamabad"
+        }
+      ],
+      "emblem": "nizamabad-profile-17.jpg",
+      "walkthrough": null,
+      "nearby": [],
+      "catchmentLocalities": [
+        "janakampeta",
+        "Dharmavaram"
+      ],
+      "catchmentPostcodes": [
+        "503001",
+        "503186",
+        "505475",
+        "503111",
+        "503224",
+        "503185"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/Jn4RFai5QGQUcYZg8",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 37,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "nizampet",
+      "name": "Nizampet",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "2-43/3, 3rd Floor, Near Holistic Hospitals, Nizampet Rd, Jai Bharat Nagar,Nandamuri Nagar, Nagarjuna Homes, Nizampet, Hyderabad, Telangana 500090",
+      "localTelephone": "+919100086004",
+      "photos": [
+        {
+          "file": "nizampet-exterior-48.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Nizampet.",
+          "caption": "Centre building · Nizampet"
+        },
+        {
+          "file": "nizampet-interior-14-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Nizampet.",
+          "caption": "Inside the centre · Nizampet"
+        }
+      ],
+      "emblem": "nizampet-profile-new.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1SvsXBvZsWU8k75NyCOAmVkLok2XtZRBi",
+        "url": "https://drive.google.com/file/d/1SvsXBvZsWU8k75NyCOAmVkLok2XtZRBi/view",
+        "embed": "https://drive.google.com/file/d/1SvsXBvZsWU8k75NyCOAmVkLok2XtZRBi/preview"
+      },
+      "nearby": [
+        {
+          "id": "hydernagar",
+          "name": "HyderNagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 0.6
+        },
+        {
+          "id": "pragathinagar",
+          "name": "Pragathi Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2
+        },
+        {
+          "id": "kukatpally",
+          "name": "Kukatpally, Vivekananda Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.5
+        }
+      ],
+      "catchmentLocalities": [
+        "Hydernagar",
+        "nizampet"
+      ],
+      "catchmentPostcodes": [
+        "500085",
+        "500090"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/XsADCZLv9bx2TmJa8",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 36,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "ongole",
+      "name": "Ongole",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "status": "centre-enquiry",
+      "address": "Sundaraiah Bhavan Rd, near Gummadi Chest Hospital, Brundavan Nagar, Pandaripuram, Ongole, Andhra Pradesh 523001",
+      "localTelephone": "+919121116844",
+      "photos": [
+        {
+          "file": "ongole-exterior-37.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Ongole.",
+          "caption": "Centre building · Ongole"
+        },
+        {
+          "file": "ongole-interior-13-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Ongole.",
+          "caption": "Inside the centre · Ongole"
+        },
+        {
+          "file": "ongole-interior-13-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Ongole.",
+          "caption": "Inside the centre · Ongole"
+        }
+      ],
+      "emblem": "ongole-profile-15.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "13C2NkT3QMr0WOAz7GxdSnMe3SeM3QBlP",
+        "url": "https://drive.google.com/file/d/13C2NkT3QMr0WOAz7GxdSnMe3SeM3QBlP/view",
+        "embed": "https://drive.google.com/file/d/13C2NkT3QMr0WOAz7GxdSnMe3SeM3QBlP/preview"
+      },
+      "nearby": [
+        {
+          "id": "guntur",
+          "name": "Guntur",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+          "city": "Guntur",
+          "distanceKm": 98.3
+        }
+      ],
+      "catchmentLocalities": [
+        "valluru",
+        "tanguturu",
+        "kothapatnam"
+      ],
+      "catchmentPostcodes": [
+        "523102",
+        "523201",
+        "523286",
+        "523226",
+        "523263",
+        "523225",
+        "523001",
+        "523272",
+        "523274"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/r9SM91JgLRam7NgA6",
+      "reviewSnapshot": {
+        "rating": 4.3,
+        "reviews": 6,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "pragathinagar",
+      "name": "Pragathi Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Plot No. 782, Pragathi Nagar Rd, Pragathi Nagar, Hyderabad, Hyderabad, Telangana 500072",
+      "localTelephone": "+919908792553",
+      "photos": [
+        {
+          "file": "pragathinagar-exterior-1.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Pragathi Nagar.",
+          "caption": "Centre building · Pragathi Nagar"
+        },
+        {
+          "file": "pragathinagar-interior-12-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Pragathi Nagar.",
+          "caption": "Inside the centre · Pragathi Nagar"
+        },
+        {
+          "file": "pragathinagar-interior-12-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Pragathi Nagar.",
+          "caption": "Inside the centre · Pragathi Nagar"
+        },
+        {
+          "file": "pragathinagar-interior-12-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Pragathi Nagar.",
+          "caption": "Inside the centre · Pragathi Nagar"
+        }
+      ],
+      "emblem": "pragathinagar-profile-14.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1utBaf0BNVBFHbwIjJGROFqA-qyYxmJsA",
+        "url": "https://drive.google.com/file/d/1utBaf0BNVBFHbwIjJGROFqA-qyYxmJsA/view",
+        "embed": "https://drive.google.com/file/d/1utBaf0BNVBFHbwIjJGROFqA-qyYxmJsA/preview"
+      },
+      "nearby": [
+        {
+          "id": "nizampet",
+          "name": "Nizampet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2
+        },
+        {
+          "id": "hydernagar",
+          "name": "HyderNagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.5
+        },
+        {
+          "id": "kukatpally",
+          "name": "Kukatpally, Vivekananda Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 3
+        }
+      ],
+      "catchmentLocalities": [
+        "Bowrampet",
+        "Bollaram",
+        "mallampet"
+      ],
+      "catchmentPostcodes": [
+        "500090",
+        "500043",
+        "503122",
+        "502303",
+        "502319"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/BSegPmfyHdydq9ch8",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 185,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "rajahmundry",
+      "name": "Rajahmundry",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Opp. Gandhi Park Back Gate, Danvaipeta, Rajahmundry, AP, IN - 103",
+      "localTelephone": "+919100085004",
+      "photos": [
+        {
+          "file": "rajahmundry-exterior-12.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Rajahmundry.",
+          "caption": "Centre building · Rajahmundry"
+        },
+        {
+          "file": "rajahmundry-interior-11-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Rajahmundry.",
+          "caption": "Inside the centre · Rajahmundry"
+        },
+        {
+          "file": "rajahmundry-interior-11-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Rajahmundry.",
+          "caption": "Inside the centre · Rajahmundry"
+        }
+      ],
+      "emblem": "rajahmundry-profile-13.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1MCv2gy4yYx2-g0rCaCXTxpl1kvj7NulX",
+        "url": "https://drive.google.com/file/d/1MCv2gy4yYx2-g0rCaCXTxpl1kvj7NulX/view",
+        "embed": "https://drive.google.com/file/d/1MCv2gy4yYx2-g0rCaCXTxpl1kvj7NulX/preview"
+      },
+      "nearby": [
+        {
+          "id": "kakinada",
+          "name": "Kakinada",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+          "city": "Kakinada",
+          "distanceKm": 48.3
+        },
+        {
+          "id": "bhimavaram",
+          "name": "Bhimavaram",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+          "city": "Bhimavaram",
+          "distanceKm": 58.2
+        },
+        {
+          "id": "eluru",
+          "name": "Eluru",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+          "city": "Eluru",
+          "distanceKm": 79
+        }
+      ],
+      "catchmentLocalities": [
+        "Anaparthy",
+        "Katheru",
+        "Ravulapalem"
+      ],
+      "catchmentPostcodes": [
+        "533101",
+        "533103",
+        "533104",
+        "533105",
+        "533106",
+        "533308",
+        "533342",
+        "534301",
+        "534350",
+        "533238"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/piezcKUnnafBpc6X9",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 315,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "srnagar",
+      "name": "SR Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Plat No-B-50,Door No-7-2-B50/A 1/102, Industrial Estate, Near Benz showroom, ICICI Bank upside, Sanath Nagar,Hyderbad-500 018",
+      "localTelephone": "+919100222185",
+      "photos": [
+        {
+          "file": "srnagar-exterior-39.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at SR Nagar.",
+          "caption": "Centre building · SR Nagar"
+        },
+        {
+          "file": "srnagar-interior-6-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle SR Nagar.",
+          "caption": "Inside the centre · SR Nagar"
+        }
+      ],
+      "emblem": "srnagar-profile-11.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "begumpet",
+          "name": "Begumpet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.3
+        },
+        {
+          "id": "kukatpally",
+          "name": "Kukatpally, Vivekananda Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.7
+        },
+        {
+          "id": "vikrampuri",
+          "name": "Vikrampuri",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.7
+        }
+      ],
+      "catchmentLocalities": [
+        "Balkampet",
+        "Sanath Nagar"
+      ],
+      "catchmentPostcodes": [
+        "500018",
+        "500038",
+        "500016",
+        "500073",
+        "500045"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/8wFZkknoDHTwhmVD9",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 271,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "santoshnagar",
+      "name": "Santosh Nagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, Khaja Estate, New Santosh Nagar Colony, Main Road Saidabad, Hyderabad, Telangana 500059",
+      "localTelephone": "+919908792863",
+      "photos": [
+        {
+          "file": "santoshnagar-exterior-49.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Santosh Nagar.",
+          "caption": "Centre building · Santosh Nagar"
+        },
+        {
+          "file": "santoshnagar-interior-10-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Santosh Nagar.",
+          "caption": "Inside the centre · Santosh Nagar"
+        },
+        {
+          "file": "santoshnagar-interior-10-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Santosh Nagar.",
+          "caption": "Inside the centre · Santosh Nagar"
+        },
+        {
+          "file": "santoshnagar-interior-10-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Santosh Nagar.",
+          "caption": "Inside the centre · Santosh Nagar"
+        }
+      ],
+      "emblem": "santoshnagar-profile-12.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "dilsukhnagar",
+          "name": "Dilsukhnagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 3.8
+        },
+        {
+          "id": "lbnagar",
+          "name": "LB Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.2
+        },
+        {
+          "id": "kachiguda",
+          "name": "Kachiguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5
+        }
+      ],
+      "catchmentLocalities": [
+        "Chandrayangutta",
+        "Saidabad"
+      ],
+      "catchmentPostcodes": [
+        "500059",
+        "500079",
+        "500023",
+        "500024",
+        "500005",
+        "500053",
+        "500097",
+        "500064",
+        "500052"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/ohrF16RzFuCwdrNd7",
+      "reviewSnapshot": {
+        "rating": 4.9,
+        "reviews": 180,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "srikakulam",
+      "name": "Srikakulam",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "status": "centre-enquiry",
+      "address": "Above Indian Bank, Sana Street, Rama Laxmana Rd, Illisipuram, Meher Nager, Srikakulam, Andhra Pradesh",
+      "localTelephone": "+919121116846",
+      "photos": [
+        {
+          "file": "srikakulam-exterior-50.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Srikakulam.",
+          "caption": "Centre building · Srikakulam"
+        },
+        {
+          "file": "srikakulam-interior-7-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Srikakulam.",
+          "caption": "Inside the centre · Srikakulam"
+        },
+        {
+          "file": "srikakulam-interior-7-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Srikakulam.",
+          "caption": "Inside the centre · Srikakulam"
+        },
+        {
+          "file": "srikakulam-interior-7-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Srikakulam.",
+          "caption": "Inside the centre · Srikakulam"
+        }
+      ],
+      "emblem": "srikakulam-profile-10.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1bhuaoM0qplvJ4mANiIYDeZebWRkx7wxO",
+        "url": "https://drive.google.com/file/d/1bhuaoM0qplvJ4mANiIYDeZebWRkx7wxO/view",
+        "embed": "https://drive.google.com/file/d/1bhuaoM0qplvJ4mANiIYDeZebWRkx7wxO/preview"
+      },
+      "nearby": [
+        {
+          "id": "madhurawada",
+          "name": "Madhurawada",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 78.5
+        },
+        {
+          "id": "mvp",
+          "name": "MVP, Vizag",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 86.9
+        },
+        {
+          "id": "jagadamba",
+          "name": "Jagadamba, Visakhapatnam",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+          "city": "Visakhapatnam",
+          "distanceKm": 91.4
+        }
+      ],
+      "catchmentLocalities": [
+        "Duppalavalasa",
+        "pedapadu",
+        "Ragolu"
+      ],
+      "catchmentPostcodes": [
+        "532001",
+        "532410",
+        "532185",
+        "532407",
+        "532127",
+        "531133",
+        "534437",
+        "532484",
+        "532168",
+        "532005",
+        "532401",
+        "532402"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/b14erJDg4Jyyabyw6",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 17,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "suchitraii",
+      "name": "Suchitra II",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Plot No, 16, First Floor, Behind Westside Kompally, Suchitra Circle, Vennala Gadda, Quthbullapur, Hyderabad, Telangana 500067",
+      "localTelephone": null,
+      "photos": [],
+      "emblem": null,
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "suchitra",
+          "name": "Suchitra, Kompally",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 0.2
+        },
+        {
+          "id": "vikrampuri",
+          "name": "Vikrampuri",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.2
+        },
+        {
+          "id": "srnagar",
+          "name": "SR Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.7
+        }
+      ],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [
+        "500055",
+        "500011",
+        "500100",
+        "501401",
+        "500010",
+        "500054",
+        "500067",
+        "500078",
+        "500043"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/X9mCjr5Sd4mnT9r96",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "tirupati",
+      "name": "Tirupati",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "status": "centre-enquiry",
+      "address": "Air Bypass Rd, near ICICI Bank, Shanthi Nagar, New Balaji Colony, Tirupati, Andhra Pradesh",
+      "localTelephone": "+919100110284",
+      "photos": [
+        {
+          "file": "tirupati-exterior-11.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Tirupati.",
+          "caption": "Centre building · Tirupati"
+        },
+        {
+          "file": "tirupati-interior-4-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Tirupati.",
+          "caption": "Inside the centre · Tirupati"
+        },
+        {
+          "file": "tirupati-interior-4-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Tirupati.",
+          "caption": "Inside the centre · Tirupati"
+        }
+      ],
+      "emblem": "tirupati-profile-8.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1AB2XsscNZwWEVSdcSm56zYSr2L36S55k",
+        "url": "https://drive.google.com/file/d/1AB2XsscNZwWEVSdcSm56zYSr2L36S55k/view",
+        "embed": "https://drive.google.com/file/d/1AB2XsscNZwWEVSdcSm56zYSr2L36S55k/preview"
+      },
+      "nearby": [],
+      "catchmentLocalities": [
+        "Renigunta",
+        "pudipatla",
+        "gudimallam"
+      ],
+      "catchmentPostcodes": [
+        "517520",
+        "517101",
+        "517526",
+        "517640",
+        "517619",
+        "517501",
+        "517505",
+        "517561",
+        "517112",
+        "517551",
+        "517590",
+        "517583"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/ibSfbL6ayMzdYJfH8",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 10,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "usa",
+      "name": "USA",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-california-usa",
+      "status": "location-status",
+      "address": null,
+      "localTelephone": null,
+      "photos": [],
+      "emblem": null,
+      "walkthrough": null,
+      "nearby": [],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [],
+      "googleBusinessUrl": "https://goo.gl/maps/YNYNcqtGKtNdb2CV7",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "uppal",
+      "name": "Uppal",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Pinnacle Blooms Network, 2-163, First Floor, Adjacent to Sri Sai Medicure Diagnostic center, Vijayapuri Colony, Uppal, Secunderabad - 500039",
+      "localTelephone": "+919100909484",
+      "photos": [
+        {
+          "file": "uppal-exterior-51.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Uppal.",
+          "caption": "Centre building · Uppal"
+        },
+        {
+          "file": "uppal-interior-3-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Uppal.",
+          "caption": "Inside the centre · Uppal"
+        },
+        {
+          "file": "uppal-interior-3-1.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Uppal.",
+          "caption": "Inside the centre · Uppal"
+        },
+        {
+          "file": "uppal-interior-3-2.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Uppal.",
+          "caption": "Inside the centre · Uppal"
+        }
+      ],
+      "emblem": "uppal-profile-7.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1QHIeXMZ2i6GwlsO8rCEAQn3m87oqImmh",
+        "url": "https://drive.google.com/file/d/1QHIeXMZ2i6GwlsO8rCEAQn3m87oqImmh/view",
+        "embed": "https://drive.google.com/file/d/1QHIeXMZ2i6GwlsO8rCEAQn3m87oqImmh/preview"
+      },
+      "nearby": [
+        {
+          "id": "habsiguda",
+          "name": "Habsiguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.3
+        },
+        {
+          "id": "dilsukhnagar",
+          "name": "Dilsukhnagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.8
+        },
+        {
+          "id": "lbnagar",
+          "name": "LB Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.7
+        }
+      ],
+      "catchmentLocalities": [
+        "Nagole",
+        "Boduppal",
+        "Ghatkesaru"
+      ],
+      "catchmentPostcodes": [
+        "500039",
+        "500092",
+        "501301",
+        "508116",
+        "508126",
+        "500068"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/zkYCoKpMPosShLXH9",
+      "reviewSnapshot": {
+        "rating": 4.8,
+        "reviews": 71,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "vanasthalipuram",
+      "name": "Vanasthalipuram",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Plot no 33, MBR complex, Hill colony, Near Police Station, Vanasthalipuram, Hyderabad, Telangana",
+      "localTelephone": "+918247233774",
+      "photos": [],
+      "emblem": "vanasthalipuram-profile-6.jpg",
+      "walkthrough": null,
+      "nearby": [
+        {
+          "id": "bnreddynagar",
+          "name": "BN Reddy Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 1.8
+        },
+        {
+          "id": "hayathnagar",
+          "name": "Hayathnagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.6
+        },
+        {
+          "id": "lbnagar",
+          "name": "LB Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 3.2
+        }
+      ],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [
+        "500070",
+        "500035"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/CyjVhRvgQDCt6bFg8",
+      "reviewSnapshot": {
+        "rating": 5,
+        "reviews": 1,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    },
+    {
+      "id": "vidyanagar",
+      "name": "Vidyanagar",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Beside SBI, Padma Colony, Osmania University Rd, Nallakunta Main Rd, Vidya Nagar, Hyderabad, Telangana",
+      "localTelephone": "+919100488698",
+      "photos": [
+        {
+          "file": "vidyanagar-exterior-52.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Vidyanagar.",
+          "caption": "Centre building · Vidyanagar"
+        },
+        {
+          "file": "vidyanagar-interior-2-0.jpg",
+          "kind": "interior",
+          "alt": "Interior room at Pinnacle Vidyanagar.",
+          "caption": "Inside the centre · Vidyanagar"
+        }
+      ],
+      "emblem": "vidyanagar-profile-5.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1VYG6x9PQ0K8Hu3BnU7ftwNU3qzwO7BzG",
+        "url": "https://drive.google.com/file/d/1VYG6x9PQ0K8Hu3BnU7ftwNU3qzwO7BzG/view",
+        "embed": "https://drive.google.com/file/d/1VYG6x9PQ0K8Hu3BnU7ftwNU3qzwO7BzG/preview"
+      },
+      "nearby": [
+        {
+          "id": "kachiguda",
+          "name": "Kachiguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 1.9
+        },
+        {
+          "id": "himayatnagar",
+          "name": "Himayat Nagar",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 2.6
+        },
+        {
+          "id": "habsiguda",
+          "name": "Habsiguda",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4
+        }
+      ],
+      "catchmentLocalities": [],
+      "catchmentPostcodes": [],
+      "googleBusinessUrl": "https://maps.app.goo.gl/pmN3pXdEME16Hye89",
+      "reviewSnapshot": null
+    },
+    {
+      "id": "vikrampuri",
+      "name": "Vikrampuri",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+      "status": "centre-enquiry",
+      "address": "Plot No 22, 2nd Floor, Shamirpet Road, Opposite G Pulla Reddy Sweet House, Karkhana, Secunderabad, Telangana 500009.",
+      "localTelephone": "+919804458444",
+      "photos": [
+        {
+          "file": "vikrampuri-exterior-6.jpg",
+          "kind": "exterior",
+          "alt": "Building and Pinnacle signage at Vikrampuri.",
+          "caption": "Centre building · Vikrampuri"
+        }
+      ],
+      "emblem": "vikrampuri-profile-3.jpg",
+      "walkthrough": {
+        "provider": "drive",
+        "id": "1UAXRbz7DuCX4swdk2gbjHUnzgDXu6OUs",
+        "url": "https://drive.google.com/file/d/1UAXRbz7DuCX4swdk2gbjHUnzgDXu6OUs/view",
+        "embed": "https://drive.google.com/file/d/1UAXRbz7DuCX4swdk2gbjHUnzgDXu6OUs/preview"
+      },
+      "nearby": [
+        {
+          "id": "eastmarredpally",
+          "name": "East Marredpally",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 1.8
+        },
+        {
+          "id": "begumpet",
+          "name": "Begumpet",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 4.1
+        },
+        {
+          "id": "suchitraii",
+          "name": "Suchitra II",
+          "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+          "city": "Hyderabad",
+          "distanceKm": 5.2
+        }
+      ],
+      "catchmentLocalities": [
+        "Karkhana",
+        "Alwal"
+      ],
+      "catchmentPostcodes": [
+        "500009",
+        "500026",
+        "500010",
+        "500015",
+        "501301"
+      ],
+      "googleBusinessUrl": "https://maps.app.goo.gl/rCVAymFi473ikeu1A",
+      "reviewSnapshot": {
+        "rating": 4.6,
+        "reviews": 245,
+        "source": "Owner-supplied centre workbook",
+        "sourceDate": null,
+        "importedOn": "2026-10-07"
+      }
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "title": "Pinnacle Blooms USA | Child Development & Therapy Enquiries",
+  "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-california-usa",
+  "updated": "2026-10-07",
+  "brand": "Pinnacle Blooms Network",
+  "operator": "Bharath Healthcare Laboratories Private Limited",
+  "address": null,
+  "telephone": {
+    "display": "9100 181 181",
+    "uri": "tel:+919100181181",
+    "scope": "National guidance and appointment enquiries"
+  },
+  "localTelephone": null,
+  "coordinates": null,
+  "catchmentLocalities": [],
+  "catchmentPostcodes": [],
+  "nearbyCentres": [],
+  "walkthrough": null,
+  "networkStories": {
+    "soulPromise": "https://www.youtube.com/playlist?list=PL0lwT9W0zVphd8-yLQ7g7o09z4hhHXbsm",
+    "parentsAbilityScore": "https://www.youtube.com/playlist?list=PL0lwT9W0zVpiKBcwqcaxBtGcrg1AX015g"
+  },
+  "resources": [
+    "https://pinnacleblooms.org/ask",
+    "https://www.pinnacleblooms.org/faq",
+    "https://www.pinnacleblooms.org/sunshine",
+    "https://materials.pinnacleblooms.org/",
+    "https://www.pinnacleblooms.org/books",
+    "https://www.pinnacleblooms.org/shop"
+  ],
+  "maps": "https://goo.gl/maps/YNYNcqtGKtNdb2CV7",
+  "googleReviewDestination": null,
+  "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help",
+  "directAnswer": "Contact Pinnacle for location guidance and explore the network’s evidence and family resources.",
+  "example": null,
+  "stages": [
+    {
+      "icon": "measure",
+      "title": "Understand abilities",
+      "text": "Start with strengths, everyday observations and suitable assessment. Read AbilityScore with the child’s age, context and skills.",
+      "path": "/abilityscore"
+    },
+    {
+      "icon": "compass",
+      "title": "Plan for readiness",
+      "text": "Discuss what you want to make possible and agree useful priorities. Readiness views support professional judgement.",
+      "path": "/seven-readiness-indexes"
+    },
+    {
+      "icon": "people",
+      "title": "Choose relevant support",
+      "text": "Bring in the therapies, educational support or health review that fit this child. Every child does not need every service.",
+      "path": "/autism-therapy"
+    },
+    {
+      "icon": "home",
+      "title": "Practise in everyday life",
+      "text": "Use manageable, guided practice in meaningful routines. Family participation connects the work with daily life.",
+      "path": "/everyday-therapy"
+    },
+    {
+      "icon": "track",
+      "title": "Track and correct",
+      "text": "Bring relevant observations back into review. Ask what became useful, what support remains and what needs to change.",
+      "path": "/fusion-module"
+    },
+    {
+      "icon": "loop",
+      "title": "Reassess and repeat",
+      "text": "Compare abilities and context over time. Continue, adapt or complete support according to the child’s needs.",
+      "path": "/reassess-review-repeat"
+    },
+    {
+      "icon": "sun",
+      "title": "Grow independence and participation",
+      "text": "Keep self-sufficiency, learning, relationships and mainstream participation in view. Progress is individual.",
+      "path": "/pinnacleai"
+    }
+  ],
+  "questions": [],
+  "sources": [
+    {
+      "id": "location",
+      "name": "Published USA contact and location",
+      "url": "https://www.pinnacleblooms.org/contact-national-autism-helpline-24-7#USA",
+      "scope": "First-party address, landmarks and national contact. Appointment and access arrangements are confirmed separately."
+    },
+    {
+      "id": "maps",
+      "name": "Existing USA directions",
+      "url": "https://goo.gl/maps/YNYNcqtGKtNdb2CV7",
+      "scope": "Ask our national team about the options that can actually be arranged."
+    },
+    {
+      "id": "purpose",
+      "name": "Pinnacle’s life-first direction",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "scope": "Purpose and mechanism: the child’s self-sufficient, mainstream-included life shapes abilities, goals, methods, people, everyday practice and review. Individual outcomes are not guaranteed."
+    },
+    {
+      "id": "identity",
+      "name": "Brand and legal operator evidence",
+      "url": "https://www.pinnacleblooms.org/verify/#chapter-identity",
+      "scope": "Pinnacle Blooms Network is the brand; Bharath Healthcare Laboratories Private Limited is the legal operator."
+    },
+    {
+      "id": "md5",
+      "name": "Original MD-5 licence",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/md5.pdf#page=1",
+      "scope": "PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software for children aged 0–12. It is not a therapist credential or an outcome guarantee."
+    },
+    {
+      "id": "bis",
+      "name": "Original BIS licence and scope",
+      "url": "https://www.pinnacleblooms.org/verify/evidence/bis.pdf#page=2",
+      "scope": "Named software and quality-system scope; not approval of every centre, therapy or child outcome."
+    }
+  ],
+  "facilityRecord": null,
+  "operationalBoundary": "Historical location guidance. No current US clinic, address, local service or appointment is asserted.",
+  "media": {
+    "premises": [],
+    "campaign": "Generated fictional family/professional campaign scene; not an actual branch room, named practitioner or patient outcome."
+  },
+  "googleBusinessUrl": "https://goo.gl/maps/YNYNcqtGKtNdb2CV7",
+  "reviewSnapshot": {
+    "rating": 5,
+    "reviews": 1,
+    "source": "Owner-supplied centre workbook",
+    "sourceDate": null,
+    "importedOn": "2026-10-07"
+  },
+  "locationStatus": {
+    "currentUSClinicVerified": false
+  }
+}

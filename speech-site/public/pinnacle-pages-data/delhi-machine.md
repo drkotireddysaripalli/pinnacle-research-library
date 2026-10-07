@@ -1,6 +1,6 @@
 # Pinnacle Blooms Delhi | South Extension Status & Guidance
 Canonical: https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india
-Updated: 2026-10-01
+Updated: 2026-10-07
 
 Call 9100 181 181 before travelling to South Extension. Our source workbook marks this location INACTIVE; its dated facility-register approval does not confirm current operation or appointments. Ask our national team to check the current position and discuss available options for your child. The recorded location address is Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India.
 
@@ -47,7 +47,7 @@ Call our national guidance team on 9100 181 181, tell us your child’s everyday
 The address for this location is Ground, E17, Main Market, South Extension–1, near AIIMS, New Delhi, Delhi 110049, India. Confirm current operation and your appointment with us before travelling. For South Extension enquiries, use the E17, Main Market, South Extension–1 address near AIIMS. Confirm current operation and your appointment before travelling. The frontage photograph shows steps; tell us what entrance and access arrangements your family needs.
 
 ### How do I contact this centre?
-Call our national guidance and enquiry team on 9100 181 181 or send an enquiry with South Extension, New Delhi selected. Ask us to confirm the current contact and appointment arrangements for this location.
+Call 9100 181 181 or the listed local centre number +919804489444. Ask about a suitable assessment, the professional and appointment arrangements at South Extension, New Delhi.
 
 ### Is the South Extension entrance step-free?
 The entrance photograph shows steps. Tell us what access your family needs and confirm current operation, step-free access, parking and suitable arrival arrangements before booking or travelling.
@@ -62,7 +62,7 @@ You can describe a meaningful everyday moment, discuss present abilities and ask
 The receiving team confirms current appointments, the professional, assessment or therapy fees, what is included and cancellation terms. Free 24/7 telephone guidance is separate from centre opening hours and paid services; this page does not advertise a general free assessment.
 
 ### Can I see photographs of this centre?
-Yes. The premises gallery contains first-party photographs matched to this branch. Ask the team about current rooms, equipment and access arrangements. The branded campaign scene is illustrative.
+Yes. Our gallery shows photographs matched to this centre. Ask the team about current rooms, equipment and entrance access.
 
 ### What does the facility and software evidence establish?
 Workbook plus certificate copy dated 2026-03-15, recognition bundle p68. The recorded authenticated dashboard check was Approved on 19 September 2026; this is a facility-register status, distinct from current operation, therapy availability and individual outcomes. The source workbook flags this published location INACTIVE; current operation and appointments are not verified by this page. Confirm with the receiving team before travelling. The MD-5 and BIS records describe the named non-diagnostic software and their printed scopes. Facility records, professional qualifications and individual child outcomes are different things.

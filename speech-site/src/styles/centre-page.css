@@ -7,3 +7,8 @@
 
 /* Inline centre guidance links must remain identifiable without colour. */
 .local-small a,.local-integration a{text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1px}
+/* Put the useful action before longer explanation on a small screen. */
+@media(max-width:760px){.local-hero>div{display:flex;flex-direction:column}.local-hero>div>.local-kicker{order:0}.local-hero>div>.local-service-line{order:1}.local-hero>div>h1{order:2}.local-hero>div>.local-actions{order:3}.local-hero>div>.local-lead{order:4}.local-hero>div>.local-small{order:5}.local-hero>div>.local-text-link{order:6}.local-hero>div>.status-note{order:7}}
+
+/* Keep both entry actions usable before the longer mobile hero story. */
+@media(max-width:760px){.local-hero>div>.local-actions{order:1;margin-block:1rem}.local-hero>div>.local-service-line{order:2}.local-hero>div>h1{order:3}}

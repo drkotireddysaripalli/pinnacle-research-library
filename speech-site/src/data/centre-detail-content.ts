@@ -1,4 +1,5 @@
 import directory from './centre-directory.json' with {type:'json'};
+import {centreRegister,centreVideos,networkBrief,officialCentrePlaylist} from './centre-network-content.ts';
 import {assessmentContent} from './assessment-content.ts';
 
 const origin='https://www.pinnacleblooms.org';
@@ -13,8 +14,8 @@ export type FacilitySourceBrief={
  registryCheckedOn?:string;
 };
 export function describeFacilityEvidence(brief:FacilitySourceBrief){
- const status=brief.registryStatus||'Approved';
- const checkedOn=brief.registryCheckedOn||'2026-09-19';
+ const status=brief.registryStatus===null?'Not recorded':brief.registryStatus||'Approved';
+ const checkedOn=brief.registryCheckedOn===null?'date not retained':brief.registryCheckedOn||'2026-09-19';
  const certificateBacked=brief.certificateDate!==null&&brief.certificatePage!==null;
  const sourceLevel=brief.registrySourceLevel||(certificateBacked?'Workbook plus certificate copy':'Workbook-listed');
  if(sourceLevel==='Workbook plus certificate copy'&&!certificateBacked)throw new Error('Certificate-backed source requires date and bundle page: '+brief.hfr);
@@ -149,23 +150,24 @@ const briefs=[
   localQuestion:'Where is the Srikakulam centre above Indian Bank?',localAnswer:'Our Srikakulam location is above Indian Bank on Sana Street, Rama Laxmana Road, Illisipuram, Meher Nager, Srikakulam 532001. Use the building photograph and confirm your appointment address, entrance and floor access before travelling.',releaseLabel:'centre-v134-srikakulam-20261001'
  }
 ];
-export const centreDetails=briefs.map(brief=>{
- const branch=directory.find(c=>c.id===brief.id);if(!branch)throw new Error('Missing sourced centre '+brief.id);
- const address=`${brief.street}, ${brief.city}, ${brief.region} ${brief.postcode}, India`;
- const {facilityScope,facilityDisplay,facilityRecord}=describeFacilityEvidence(brief);
+const allBriefs=[...briefs,...centreRegister.filter(c=>c.id!=='suchitra'&&!briefs.some(b=>b.id===c.id)).map(networkBrief)];
+export const centreDetails=allBriefs.map(brief=>{
+ const branch=centreRegister.find(c=>c.id===brief.id);if(!branch)throw new Error('Missing sourced centre '+brief.id);
+ const address=briefs.some(b=>b.id===brief.id)?`${brief.street}, ${brief.city}, ${brief.region} ${brief.postcode}, India`:branch.address||'Contact our team for location guidance';
+ const {facilityScope,facilityDisplay,facilityRecord}=brief.hfr?describeFacilityEvidence(brief):{facilityScope:'See the network’s original software and operator records in Verify. No matched branch facility certificate is asserted here.',facilityDisplay:'Inspect our network’s original evidence in Verify.',facilityRecord:null};
  const sources=[
   {id:'location',name:'Published '+brief.label+' contact and location',url:branch.sourceUrl,scope:'First-party address, landmarks and national contact. Appointment and access arrangements are confirmed separately.'},
   {id:'maps',name:'Existing '+brief.label+' directions',url:branch.mapsUrl,scope:brief.arrival},
-  {id:'hfr',name:'Facility-source trail · '+brief.hfr,url:origin+'/verify/evidence/hfr-register.html#hfr-'+brief.hfr,scope:facilityScope,displayScope:facilityDisplay},
+  ...(brief.hfr?[{id:'hfr',name:'Facility-source trail · '+brief.hfr,url:origin+'/verify/evidence/hfr-register.html#hfr-'+brief.hfr,scope:facilityScope,displayScope:facilityDisplay}]:[]),
   {id:'purpose',name:'Pinnacle’s life-first direction',url:origin+'/verify/evidence/pinnacle-paradigm-shift.html',scope:'Purpose and mechanism: the child’s self-sufficient, mainstream-included life shapes abilities, goals, methods, people, everyday practice and review. Individual outcomes are not guaranteed.'},
   {id:'identity',name:'Brand and legal operator evidence',url:origin+'/verify/#chapter-identity',scope:'Pinnacle Blooms Network is the brand; Bharath Healthcare Laboratories Private Limited is the legal operator.'},
   {id:'md5',name:'Original MD-5 licence',url:origin+'/verify/evidence/md5.pdf#page=1',scope:'PinnacleAI GPT-OS v1.0.0 is Class B non-diagnostic developmental-support software for children aged 0–12. It is not a therapist credential or an outcome guarantee.'},
   {id:'bis',name:'Original BIS licence and scope',url:origin+'/verify/evidence/bis.pdf#page=2',scope:'Named software and quality-system scope; not approval of every centre, therapy or child outcome.'}
  ];
- return {...brief,branch,path:new URL(branch.profileUrl).pathname,address,updatedOn:'2026-10-01',
+ return {...brief,branch,path:new URL(branch.profileUrl).pathname,address,updatedOn:'2026-10-07',localTelephone:branch.directTelephone,nearby:branch.nearbyCentres,catchmentLocalities:branch.catchmentLocalities,catchmentPostcodes:branch.catchmentPostcodes,video:centreVideos[brief.id]||null,playlist:officialCentrePlaylist,isInternational:brief.id==='usa',
   title:brief.sourceFlag==='INACTIVE'?'Pinnacle Blooms Delhi | South Extension Status & Guidance':`Pinnacle Blooms ${brief.label} | Child Development & Therapy Enquiries`,
-  description:brief.sourceFlag==='INACTIVE'?'Looking for Pinnacle in Delhi? Check South Extension status before travelling. Call 9100 181 181 for guidance and discuss available options.':`Explore Pinnacle Blooms ${brief.label}: real centre photos, directions, life-first support, visit questions and dated evidence. Call 9100 181 181.`,
-  enquiry:origin+'/enroll-autism-speech-aba-therapies-india?service=help&centre='+brief.id,
+  description:brief.sourceFlag==='INACTIVE'?'Looking for Pinnacle in Delhi? Check South Extension status before travelling. Call 9100 181 181 for guidance and discuss available options.':`Explore Pinnacle Blooms ${brief.label}: local contact, directions, assessment enquiries and support for communication, routines and learning. Call 9100 181 181.`,
+  enquiry:origin+'/enroll-autism-speech-aba-therapies-india?service=help'+(branch.facilityId?'&centre='+brief.id:''),
   direct:brief.sourceFlag==='INACTIVE'
    ? `Call 9100 181 181 before travelling to South Extension. Our source workbook marks this location INACTIVE; its dated facility-register approval does not confirm current operation or appointments. Ask our national team to check the current position and discuss available options for your child. The recorded location address is ${address}.`
    : `Find Pinnacle Blooms Network’s ${brief.label} centre at ${address}. Call 9100 181 181 to discuss your child’s everyday priorities and confirm the suitable professional, available service, appointment and fee before visiting.`,
@@ -175,12 +177,12 @@ export const centreDetails=briefs.map(brief=>{
    {question:'Where is Pinnacle Blooms '+brief.label+'?',answer:brief.sourceFlag==='INACTIVE'
     ? 'The address for this location is '+address+'. Confirm current operation and your appointment with us before travelling. '+brief.arrival
     : 'Find us at '+address+'. '+brief.arrival},
-   {question:'How do I contact this centre?',answer:'Call our national guidance and enquiry team on 9100 181 181 or send an enquiry with '+brief.label+' selected. Ask us to confirm the current contact and appointment arrangements for this location.'},
+   {question:'How do I contact this centre?',answer:'Call 9100 181 181'+(branch.directTelephone?' or the listed local centre number '+branch.directTelephone:'')+'. Ask about a suitable assessment, the professional and appointment arrangements at '+brief.label+'.'},
    {question:brief.localQuestion,answer:brief.localAnswer},
    {question:'Can I discuss speech, occupational, ABA or autism support here?',answer:'Talk with us about your child’s everyday priorities. '+(brief.sourceFlag==='INACTIVE'?'First ask us to confirm current operation and whether a visit can be arranged at '+brief.label+'. ':'')+'Before booking, ask us to confirm the suitable assessment or support, the available professional and the appointment arrangements at '+brief.label+'. Relevant support follows your child’s individual needs; a child does not automatically need every therapy.'},
    {question:'What will a first conversation help me understand?',answer:'You can describe a meaningful everyday moment, discuss present abilities and ask about an appropriate assessment or support. Confirm who will meet your child, what the visit includes, how the family participates and how progress would be reviewed before deciding.'},
    {question:'What are the appointment hours and fees?',answer:'The receiving team confirms current appointments, the professional, assessment or therapy fees, what is included and cancellation terms. Free 24/7 telephone guidance is separate from centre opening hours and paid services; this page does not advertise a general free assessment.'},
-   {question:'Can I see photographs of this centre?',answer:'Yes. The premises gallery contains first-party photographs matched to this branch. Ask the team about current rooms, equipment and access arrangements. The branded campaign scene is illustrative.'},
+   {question:'Can I see photographs of this centre?',answer:brief.photos.length?'Yes. Our gallery shows photographs matched to this centre. Ask the team about current rooms, equipment and entrance access.':'Ask the team for current premises photographs and entrance guidance. This page uses Pinnacle branding rather than a photograph of another centre.'},
    {question:'What does the facility and software evidence establish?',answer:facilityScope+' The MD-5 and BIS records describe the named non-diagnostic software and their printed scopes. Facility records, professional qualifications and individual child outcomes are different things.'}
   ]
  };
