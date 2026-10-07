@@ -23,3 +23,10 @@ test('Cloudflare HTML runtime prioritises the actual material hero and defers th
  const runtime=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-04',script:bundle.outputFiles[0].text,serviceBindings:{ORIGIN:()=>new Response(input,{headers:{'content-type':'text/html'}})}}));
  try{const r=await runtime.dispatchFetch(origin+path),text=await r.text();assert(text.includes('fetchpriority="high"'));assert(!text.includes('<iframe'));assert(text.includes('data-pinnacle-video='));assert(text.includes('data-pinnacle-video-intent'));assert(text.includes('Existing header'));assert(text.includes('Existing footer'));}finally{await runtime.dispose();}
 });
+test('mobile numeric page case mismatch still receives JSON and intent-video repair',async()=>{
+ const p='/mirracles/15522/Published-Story',o='https://www.pinnacleblooms.org';
+ const input=`<html><head><link rel="canonical" href="${o+p}"><meta property="og:url" content="http://www.pinnacleblooms.org${p.toLowerCase()}"></head><body><iframe src="https://www.youtube.com/embed/kEb2XUN5eL0?autoplay=1"></iframe></body></html>`;
+ const b=await build({stdin:{contents:`import {handle} from './deployment/legacy-social-metadata/entry.mjs';export default {fetch(r,env){return handle(r,x=>env.ORIGIN.fetch(x));}}`,resolveDir:process.cwd()},bundle:true,format:'esm',write:false});
+ const runtime=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-04',script:b.outputFiles[0].text,serviceBindings:{ORIGIN:()=>new Response(input,{headers:{'content-type':'text/html'}})}}));
+ try {const r=await runtime.dispatchFetch(o+p),text=await r.text();assert(text.includes('href="'+o+p.toLowerCase()+'"'));assert(!text.includes('<iframe'));assert(text.includes('data-pinnacle-video='));}finally{await runtime.dispose();}
+});
