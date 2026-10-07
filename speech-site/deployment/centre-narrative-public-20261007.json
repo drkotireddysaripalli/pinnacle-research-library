@@ -1,0 +1,615 @@
+{
+  "at": "2026-10-07T08:33:08.533Z",
+  "sourceCommit": "447db004b63adc8e7aa9c7de0e54ac118df44d4e",
+  "workerVersion": "02468bbd-836d-4741-9d1f-e33bfd3c2a29",
+  "deployment": "2cf7b23c-5641-48ef-b6fa-62b471b344e5",
+  "passed": 60,
+  "pages": [
+    {
+      "id": "ananthapuram",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "0cb351a84f0e50380a8c91ee490b51c13b0fa6cb2a2bfd30fd7a4ffd403989a1",
+      "passed": true
+    },
+    {
+      "id": "annanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "b8b234483d97dc715c5bff7df8f1e33350082fbf83f75ff4a24be1bf01d484a2",
+      "passed": true
+    },
+    {
+      "id": "asraonagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "cdfef3059a2d3df03c6eac0d741e0844031d15549e0d07f60fd5b960bc3d36fe",
+      "passed": true
+    },
+    {
+      "id": "attapur",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "c633796550f74940ac032c8369f786119ccaba77d7c9e071c9fd35f87ce1459d",
+      "passed": true
+    },
+    {
+      "id": "begumpet",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "e5e1526ac836a885df4107c867c3004a8cf75df4da7e62f7168f39d0b591754b",
+      "passed": true
+    },
+    {
+      "id": "bhimavaram",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "6094719301a9e4fe725b8205250f1f4a657303cf6b72a24c5216cb37ed98c960",
+      "passed": true
+    },
+    {
+      "id": "bnreddynagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "4dc54d68124ace49c56af6b4292eddb4045dacec36f5fdd7dbb2c17e2c1aeebe",
+      "passed": true
+    },
+    {
+      "id": "chandanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "85b390c3adde3fb7872d0c428a00b0d321743cd1aa245ac99b8503592d46b882",
+      "passed": true
+    },
+    {
+      "id": "dilsukhnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "fe2be7fc6e0bb26885966375c0145c04e085bfe15c0cefdd3efd0d13033bfb95",
+      "passed": true
+    },
+    {
+      "id": "eastmarredpally",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "9b783b9c3d50faff15e799542cfd3282e5e9a893d9dc7f6637f518e37f643540",
+      "passed": true
+    },
+    {
+      "id": "eluru",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "7a7bb105c23570c81a97c2f1f1b62c507ef850c4354a9ef24cb265ea9662ca20",
+      "passed": true
+    },
+    {
+      "id": "gachibowli",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "290f7371a87acb5d6251dc0e335e5aa6cc4ad1f09a6796a8e4884437ae2da66a",
+      "passed": true
+    },
+    {
+      "id": "gajuwaka",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "a1e1c8b5091dd78b19600e660a7d31a4cf120170dcd9f62798b2c436dee45a77",
+      "passed": true
+    },
+    {
+      "id": "guntur",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "e9b54f83be7a7580aa2aeb4909c58bc9d4b5cbdcf1b7f855289bffbe45837add",
+      "passed": true
+    },
+    {
+      "id": "gurunanak",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "e97bddb56f6285d409f661a97e94c9b355704a77303888cc50be151cfa25edf1",
+      "passed": true
+    },
+    {
+      "id": "habsiguda",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "0c3540b37356c5b60688fc821efad77bfe100176e34684f78a85e9cc8b61cdf6",
+      "passed": true
+    },
+    {
+      "id": "hayathnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "5b3a5d2e9ecbf3a307ce18e72a5a92bf85d31c58886edb5f94455c6759d58bb8",
+      "passed": true
+    },
+    {
+      "id": "himayatnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "8a34136f9c1df556ce06057b136426ce61c0c96558beb2f82fe3262cfddeb931",
+      "passed": true
+    },
+    {
+      "id": "hydernagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "d2814345197cefbfdeafd97589d22ef5c0334de28d011803ed12ee29c423ef91",
+      "passed": true
+    },
+    {
+      "id": "indiranagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "129dcfa0302a356d8b95934fe35b2107c801db04601b3d654c02edf5fcd8ec39",
+      "passed": true
+    },
+    {
+      "id": "jagadamba",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "f55e37c944ef5ed9ebe17b2321896594b3672054de4d2c8d2640e2ea25d82386",
+      "passed": true
+    },
+    {
+      "id": "jayanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "29a38fab32f814d844d49de089b9bfdea3d141a14209c4df98455434a107f8a9",
+      "passed": true
+    },
+    {
+      "id": "jublieehills",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jubilee-hills-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "08045e6bcc701ea300105630ce15a6c0955a7231ffc26e9dbd53e7362f8b5458",
+      "passed": true
+    },
+    {
+      "id": "kachiguda",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "df743b64814640c9007bb4d1172a793a52a7788d428d88ccc4af6bc1a6a101c0",
+      "passed": true
+    },
+    {
+      "id": "kadapa",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "6daaf780f58640c0a847e6a11ac91f6ff30fbe333307a46b2c55aa076c1915fc",
+      "passed": true
+    },
+    {
+      "id": "kakinada",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "087c09a75812595136c02b9f33bd02d95cba1db000828fa62c393c83192ea2c3",
+      "passed": true
+    },
+    {
+      "id": "karimnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "e2fcda1ba0145fc64bf9e9a9d87888d22c205564f6684a2bb100c3fde7c242bd",
+      "passed": true
+    },
+    {
+      "id": "khajaguda",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "577f6ef3cec85243a512f371fec0268cbc12d3806e505810372cd0b9c85f5bf0",
+      "passed": true
+    },
+    {
+      "id": "khammam",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "1d5ed708ac04530440c3678ca7fd645b71e440ba0d947a8d11d0802f817ef67d",
+      "passed": true
+    },
+    {
+      "id": "kondapur",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "60903213e112b3ef90e1826e4ffbd5268fcbe2421efd64c66bd21de2923d9792",
+      "passed": true
+    },
+    {
+      "id": "kukatpally",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "df9c846cf022d968eaa5e29f1207756f84a8ce03029cc344248a15356b10d145",
+      "passed": true
+    },
+    {
+      "id": "kurnool",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "f37e1b491b0a0fb3603d1a2b2dc88a72658fcaa43a277786a526afe2417ddcdd",
+      "passed": true
+    },
+    {
+      "id": "labbipet",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "9cb91e4b0dda3224d992fea0646bb6605aeab7933701c5db7e987196f1f0a7a3",
+      "passed": true
+    },
+    {
+      "id": "lbnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "01175434a54953d9a18ade259188e6186dc11aa0e885f7a482ef2b0e2a2d5873",
+      "passed": true
+    },
+    {
+      "id": "madhapur",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "f0c9550de4614caedfca0955ade85fbc5dddb197387d53000ee3ee1102f72f4e",
+      "passed": true
+    },
+    {
+      "id": "madhurawada",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "ecd71b75e30951f75b1970ef5bfd048835d52a5a44939ce1901ded7fdd2044ca",
+      "passed": true
+    },
+    {
+      "id": "mahbubnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "15459275ff97b0fe68196cb971bb0247749318c4e1bedb87705936d7f9a1d0df",
+      "passed": true
+    },
+    {
+      "id": "marathahalli",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "e74b3424712726e1ec465c19a6b791f96cf7fcf7efe05e1425fe7a6142f8bf3e",
+      "passed": true
+    },
+    {
+      "id": "miryalaguda",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "41d420e559fcb909eef4eaee830bf3003a07b7f90e3346728e6403ea46481057",
+      "passed": true
+    },
+    {
+      "id": "mvp",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "c66ed673a36321690862abf33d6b822f117bc0539bf3d8f4cba58fa0912a9336",
+      "passed": true
+    },
+    {
+      "id": "nad",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "10ca4637f5fbd42ae3cda43837e7e78c46c7f38fbdd4294e54685a6d25bbe27e",
+      "passed": true
+    },
+    {
+      "id": "nallagandla",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "f272b1ebc995bd8e3c62cb106bed37071ecbfc756f7ac88efea3649fa94a9bd7",
+      "passed": true
+    },
+    {
+      "id": "nandyala",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "aad394fd82f1887e5d4897e8ae2b5e34b956007202aa0b34fc492dc3ea13ddb0",
+      "passed": true
+    },
+    {
+      "id": "nellore",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "ee2b25f5ed5261685e187c59c9b6e528453fc7b752803fa4af8d6ddd886ff487",
+      "passed": true
+    },
+    {
+      "id": "nizamabad",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "f495b0bac5efb34ca4d5bcbdd5a2ec5c390ea81490e3e906a8e7129530417669",
+      "passed": true
+    },
+    {
+      "id": "nizampet",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "34ea42e969e2bce0043dce79eef98d8249ff65b89d30cbffa6d069b6f37c2b0a",
+      "passed": true
+    },
+    {
+      "id": "ongole",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "7c36fce2a00669f493e63f4c18373a12926afbf9db84030e8b2303374b38dc1c",
+      "passed": true
+    },
+    {
+      "id": "pragathinagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "c01e261d0e2aebead68e21ff20f7a5eb440b56bc85fa561e055054fc523ae0ee",
+      "passed": true
+    },
+    {
+      "id": "rajahmundry",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "14906ab07f09e34db3937020cf7f86dc88beb31a656766f360aa395bfe586978",
+      "passed": true
+    },
+    {
+      "id": "santoshnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "194cb5bc293fe8e6ab1795a0e7aeada793b85d4d30dd9f3040963f1363f42f0e",
+      "passed": true
+    },
+    {
+      "id": "srikakulam",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "283da048f0af1343fa13bdd086cc2c9d52139bcaea142fb4e5bed81f6c477b83",
+      "passed": true
+    },
+    {
+      "id": "srnagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "07140d03f66addf514fcbaa90d0371a5b330859732f7a0c4faf6f94be3860f3d",
+      "passed": true
+    },
+    {
+      "id": "suchitra",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "342d52ba6422e2f16b652f3ac48ad2a3ea8969dc43c6082cd5bc0ab7a121bde5",
+      "passed": true
+    },
+    {
+      "id": "suchitraii",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "cf28267418e72ea26b4f984c9f7023cdeadaa6d556b8807a01efe48f4220f3ba",
+      "passed": true
+    },
+    {
+      "id": "tirupati",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "42c5f909860bed6217e647728573dd6ae5ec80fcc849f3385a946a9660db934a",
+      "passed": true
+    },
+    {
+      "id": "uppal",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "5010f93f87dd561b5aeb3877811505620dc8144bff19ae2ba1ff5d96c0b0107a",
+      "passed": true
+    },
+    {
+      "id": "vanasthalipuram",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "425cb5135a35ff2c608b60c60380f9826bac86b8376c93778977cd1bb6fd878f",
+      "passed": true
+    },
+    {
+      "id": "vidyanagar",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "1d621be63bda0ad98f910080046d89d4a47ef7b39c52cab9ab3bfc4d5d6344cd",
+      "passed": true
+    },
+    {
+      "id": "vikrampuri",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "c33518ecd90074bf98fc135b0f5f73deb46079542b80261c21ff84b80978b8a6",
+      "passed": true
+    },
+    {
+      "id": "warangal",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+      "status": 200,
+      "chapters": 4,
+      "stages": 7,
+      "evidenceSha256": "1cf2ef964dccff15af077f8673b61dd90f7d02145f00bc1ad4d78a3225fd0f56",
+      "passed": true
+    }
+  ],
+  "heldPagesPreserved": [
+    {
+      "id": "delhi",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "sha256": "53d314dc1cedf8812f08b5797bfd10f1f830fb29a5a40e97ac97b88046fc1bd0"
+    },
+    {
+      "id": "usa",
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-california-usa",
+      "sha256": "9c1a7f4d70f43aa85cbd13db8649227ac8bb176e87f90bbfd83de2c0e06aa174"
+    }
+  ],
+  "protectedPublic": [
+    {
+      "url": "https://www.pinnacleblooms.org/ask",
+      "status": 200,
+      "finalUrl": "https://pinnacleblooms.org/ask"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/faq"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/sunshine"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/verify/",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacleai",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/pinnacleai"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/speech-therapy",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/books"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/shop",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/shop"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+    }
+  ],
+  "changedStylesheets": [
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-assets/centre-page.BKffzIne.css",
+      "sha256": "eee7c8663beffe7177f9c44d710a2f18dfa70cd42eee43b1fd76cf56bd31741b"
+    }
+  ],
+  "noSyntheticEnquiry": true
+}

@@ -1,0 +1,215 @@
+{
+  "at": "2026-10-07T08:36:27.045Z",
+  "sourceCommit": "447db004b63adc8e7aa9c7de0e54ac118df44d4e",
+  "workerVersion": "02468bbd-836d-4741-9d1f-e33bfd3c2a29",
+  "deployment": "2cf7b23c-5641-48ef-b6fa-62b471b344e5",
+  "ci": {
+    "head_sha": "447db004b63adc8e7aa9c7de0e54ac118df44d4e",
+    "conclusion": "success",
+    "status": "completed",
+    "html_url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37593352830",
+    "id": 37593352830
+  },
+  "delivered": {
+    "enquiryPages": 60,
+    "statusPagesPreserved": 2,
+    "exactEvidenceExports": 60,
+    "centrePreferences": 60,
+    "protectedPublicDestinations": 9,
+    "routes": 229,
+    "modules": 39,
+    "totalAssets": 3263,
+    "bindingsPreserved": true,
+    "protectedWorkersUnchanged": [
+      "pinnacle-ask",
+      "pinnacle-ask-mcp",
+      "pinnacle-legacy-social-metadata",
+      "pinnacle-centre-search-repair",
+      "pinnacle-helpline",
+      "pinnacle-root-sitemap"
+    ]
+  },
+  "browser": {
+    "initialLiveCases": 12,
+    "edgeWidths": [
+      320,
+      768,
+      1440
+    ],
+    "webkitWidth": 390,
+    "finalChangedPreferenceCases": 2,
+    "actualFormPreferences": [
+      "gajuwaka",
+      "jagadamba"
+    ],
+    "scope": "No real enquiry or contact submitted"
+  },
+  "lighthouse": {
+    "at": "2026-10-07T08:12:07.728Z",
+    "id": "suchitra",
+    "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+    "kind": "simulated lab measurements, not field Core Web Vitals",
+    "reports": [
+      {
+        "device": "mobile",
+        "lighthouseVersion": "13.5.0",
+        "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "scores": {
+          "performance": 97,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcpMs": 2096.484,
+          "lcpMs": 2096.484,
+          "tbtMs": 0,
+          "cls": 0,
+          "speedIndexMs": 2096.484
+        },
+        "targets": {
+          "performance": 90,
+          "lcpMs": 2500,
+          "tbtMs": 200,
+          "cls": 0.1
+        },
+        "targetWarnings": [],
+        "warnings": [],
+        "findings": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "displayValue": "2.1 s"
+          },
+          {
+            "id": "largest-contentful-paint",
+            "title": "Largest Contentful Paint",
+            "displayValue": "2.1 s"
+          },
+          {
+            "id": "speed-index",
+            "title": "Speed Index",
+            "displayValue": "2.1 s"
+          },
+          {
+            "id": "interactive",
+            "title": "Time to Interactive",
+            "displayValue": "2.1 s"
+          },
+          {
+            "id": "cache-insight",
+            "title": "Use efficient cache lifetimes",
+            "displayValue": "Est savings of 4 KiB"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Forced reflow"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Improve image delivery",
+            "displayValue": "Est savings of 31 KiB"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "Legacy JavaScript",
+            "displayValue": "Est savings of 11 KiB"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree"
+          }
+        ]
+      },
+      {
+        "device": "desktop",
+        "lighthouseVersion": "13.5.0",
+        "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+        "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "fcpMs": 507.9884,
+          "lcpMs": 541.1203,
+          "tbtMs": 0,
+          "cls": 0,
+          "speedIndexMs": 507.9884
+        },
+        "targets": {
+          "performance": 90,
+          "lcpMs": 2500,
+          "tbtMs": 200,
+          "cls": 0.1
+        },
+        "targetWarnings": [],
+        "warnings": [],
+        "findings": [
+          {
+            "id": "cache-insight",
+            "title": "Use efficient cache lifetimes",
+            "displayValue": "Est savings of 4 KiB"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Forced reflow"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Improve image delivery",
+            "displayValue": "Est savings of 75 KiB"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "LCP request discovery"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "Legacy JavaScript",
+            "displayValue": "Est savings of 10 KiB"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree"
+          }
+        ]
+      }
+    ],
+    "reusedForClarityFollowup": "Only explicit inline-decoration styling and two centre query preferences changed; no layout, hero image, loading or script changes."
+  },
+  "physical": {
+    "status": "not-cleared",
+    "ios": {
+      "device": "iPhone 13",
+      "os": "18.5",
+      "cases": 2,
+      "result": "link-in-text-block failures retained",
+      "detectorDisagreement": "Live Edge/WebKit show underlines; suspected axe/Safari serialization mismatch remains unproven",
+      "nextTrigger": "Original device availability or the next affected centre/mobile acceptance boundary"
+    },
+    "android": {
+      "device": "Redmi Note 13",
+      "os": "14.0",
+      "cases": 2,
+      "result": "Provider/runtime timeouts before browser assertions",
+      "nextTrigger": "An available supported Galaxy device in the existing bounded physical suite"
+    },
+    "sessionsDeleted": true,
+    "rawReport": "audits/testingbot-centre-narrative-20261007/report.json"
+  },
+  "search": {
+    "indexNowSubmitted": 60,
+    "indexNowFailed": 0,
+    "pendingKeyValidation": false,
+    "batchId": "a570fda0-a1e1-43b2-b473-4e7532c34cf7",
+    "gscAnnotation": "210772ad-adb5-4671-9fe5-de5ae89e8c22",
+    "sitemap": "Existing accepted sitemap reused; URL set and contents unchanged",
+    "meaning": "Notification is not indexing, ranking, AI citation or qualified lead proof"
+  },
+  "qualifiedOutcome": "No synthetic enquiry, call, visit, admission or commercial uplift claimed",
+  "owner": "Current website thread"
+}

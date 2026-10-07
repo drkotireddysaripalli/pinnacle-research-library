@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-07T08:33:52.618Z",
+  "passed": 2,
+  "rows": [
+    {
+      "id": "gajuwaka",
+      "centrePreferenceRetained": true,
+      "inlineSourcesUnderlined": 4,
+      "noOverflow": true,
+      "viewport": 320,
+      "noEnquirySubmitted": true
+    },
+    {
+      "id": "jagadamba",
+      "centrePreferenceRetained": true,
+      "inlineSourcesUnderlined": 4,
+      "noOverflow": true,
+      "viewport": 320,
+      "noEnquirySubmitted": true
+    }
+  ]
+}

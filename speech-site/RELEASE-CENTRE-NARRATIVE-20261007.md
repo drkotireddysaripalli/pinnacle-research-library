@@ -31,3 +31,13 @@ Initial narrative published from 5664117aebdf08d5ec1fb0d5eeb173c072c78cf2 after 
 Public acceptance and exact delivered URLs will be recorded in `deployment/centre-narrative-public-20261007.json`. Search submission is a separate state from publication, indexing, ranking or qualified leads. Unchanged sitemap and metadata acceptance can be reused; notify IndexNow only for the 60 materially changed centre pages.
 
 Remaining operational evidence: current availability, hours, staffing, capacity and qualified calls/visits/admissions must come from their actual operating systems. Existing source and advertising holds remain in force. This content release does not establish new receiving-system acceptance or measured lead growth.
+
+## Final public delivery
+
+Source: 447db004b63adc8e7aa9c7de0e54ac118df44d4e. Exact-source CI 37593352830 passed. Portal 02468bbd-836d-4741-9d1f-e33bfd3c2a29; deployment 2cf7b23c-5641-48ef-b6fa-62b471b344e5. All 60 public documents have the four chapters/seven stages and selected-centre enquiry; all 60 evidence JSON exports match released bytes. Two status-page bodies and nine protected public destinations are unchanged/healthy. The live two-case 320px form exercise retains Gajuwaka and Jagadamba selections; inline source links are explicitly underlined. Full union: 3263 assets, 39 modules, 229 routes; all bindings and six protected services retained.
+
+IndexNow accepted 60, failed 0, key validation complete; batch a570fda0-a1e1-43b2-b473-4e7532c34cf7. GSC annotation 210772ad-adb5-4671-9fe5-de5ae89e8c22. Existing sitemap acceptance and unchanged metadata crawl evidence are reused. No fresh Ahrefs score, duplicate Screaming Frog crawl, Pitchbox placement or qualified-lead increase is claimed.
+
+The wider physical P2 results remain failed/incomplete, as detailed in deployment/centre-narrative-acceptance-20261007.json. iPhone 13/18.5 produced inline-link detector findings; the suspected Safari/axe mismatch needs same-session CSS evidence once that device is available. Android Redmi timed out before runtime checks. Both sessions were deleted, and raw failures remain. Hosted exact-build BVT and local/live browser coverage do not substitute for that physical scope.
+
+[Complete delivered URL list](CENTRE-NARRATIVE-DELIVERED-URLS-20261007.md) · [Public receipt](deployment/centre-narrative-public-20261007.json) · [Acceptance/coverage](deployment/centre-narrative-acceptance-20261007.json).
