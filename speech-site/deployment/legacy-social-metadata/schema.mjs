@@ -164,7 +164,7 @@ export async function repairLegacyGraph(text, requestUrl) {
       try { if(JSON.parse(repaired)['@type']==='NewsArticle')text=repaired; } catch { return text; }
     }
   }
-  if (normalized.includes('"@type": "JobPosting"')) {
+  if (/"@type"\s*:\s*"JobPosting"/.test(normalized)) {
     const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
     // Exact shared five-job graph captured on therapy/story pages on 6 October.
     // Every job expires on 31 December 2025. Retire only this obsolete payload;
