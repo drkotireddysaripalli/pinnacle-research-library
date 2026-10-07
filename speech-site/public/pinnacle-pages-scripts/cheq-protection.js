@@ -6,7 +6,7 @@
     '/pinnacleai', '/top-speech-therapy-center-india-proven-improvement-rate',
     '/best-occupational-therapy-center-india-proven-improvement-rate',
     '/best-aba-therapy-center-india-proven-improvement-rate',
-    '/best-autism-therapy-center-india-proven-improvement-rate',
+    '/autism-therapy',
     '/best-special-education-center-call-9100181181'
   ].includes(path);
   if (location.protocol !== 'https:' || location.hostname !== 'www.pinnacleblooms.org' || !safePath(location.pathname)) return;

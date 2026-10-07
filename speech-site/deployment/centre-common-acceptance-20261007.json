@@ -2,7 +2,7 @@
   "id": "centre-common-acceptance-20261007",
   "phase": "prepared",
   "at": "2026-10-07T03:14:38.116Z",
-  "baseCommit": "2a522fec62fed40fb4d4f334c16b1eb0d7cb224d",
+  "baseCommit": "0dcaa65c53994843116058b06afe273c56cc5e0f",
   "rollback": [
     {
       "version_id": "936bcf5f-e16a-4cf9-9294-f637394fd3b1",
@@ -19,7 +19,8 @@
     "pinnacle-route-v12.mjs",
     "speech-handler.mjs",
     "suchitra-assets.mjs",
-    "centre-routes.mjs"
+    "centre-routes.mjs",
+    "book-attribution-handler.mjs"
   ],
   "originalHashes": {
     "shared-navigation.mjs": "b8e9701f7c396f7d28eacd10ac49b922ac519b6a3fc7859c5a00befd05ff4f07",
