@@ -1,7 +1,7 @@
 // Existing live Worker settings/bindings/routes are the release baseline.
 // Private receiver code is read from ask-private and never enters Git.
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {execFileSync} from 'node:child_process';import {build} from 'esbuild';
-const [target,phase]=process.argv.slice(2);assert(['receiver-stage','receiver-final','sitemap','sitemap-followup'].includes(target));assert(['upload','promote','verify'].includes(phase));const isSitemap=target.startsWith('sitemap');
+const [target,phase]=process.argv.slice(2);assert(['receiver-stage','receiver-final','receiver-sitemap','sitemap','sitemap-followup'].includes(target));assert(['upload','promote','verify'].includes(phase));const isSitemap=target.startsWith('sitemap');
 const dir=path.resolve('ask-private/completion-20261007'),site=path.resolve('.'),repo=path.dirname(site);
 const worker=isSitemap?'pinnacle-root-sitemap':'pbn-planetscale',base='/accounts/862998def1cd610fdb86b8e5c1d6ed4d/workers/scripts/';
 const token=(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)?.[1];assert(token);
@@ -10,7 +10,7 @@ const sha=x=>createHash('sha256').update(x).digest('hex'),receiptPath=path.join(
 const api=async(p,method='GET',body)=>{const form=body instanceof FormData,r=await fetch('https://api.cloudflare.com/client/v4'+p,{method,headers:{authorization:'Bearer '+token,...(!form?{'content-type':'application/json'}:{})},body:body?(form?body:JSON.stringify(body)):undefined,signal:AbortSignal.timeout(60000)}),j=await r.json();assert(r.ok&&j.success,JSON.stringify({status:r.status,path:p,errors:j.errors}));return j.result;};
 const current=async()=>(await api(base+worker+'/deployments')).deployments.sort((a,b)=>b.created_on.localeCompare(a.created_on))[0];
 const snapshot=JSON.parse(await fs.readFile(path.join(dir,'snapshot.json'),'utf8')),settings=JSON.parse(await fs.readFile(path.join(dir,worker+'-settings.json'),'utf8'));
-const expected=target==='receiver-final'?JSON.parse(await fs.readFile(path.join(site,'deployment/completion-receiver-stage-20261007.json'),'utf8')).version:target==='sitemap-followup'?JSON.parse(await fs.readFile(path.join(site,'deployment/completion-sitemap-20261007.json'),'utf8')).version:snapshot.workers[worker].versions[0].version_id;
+const expected=target==='receiver-sitemap'?JSON.parse(await fs.readFile(path.join(site,'deployment/completion-receiver-final-20261007.json'),'utf8')).version:target==='receiver-final'?JSON.parse(await fs.readFile(path.join(site,'deployment/completion-receiver-stage-20261007.json'),'utf8')).version:target==='sitemap-followup'?JSON.parse(await fs.readFile(path.join(site,'deployment/completion-sitemap-20261007.json'),'utf8')).version:snapshot.workers[worker].versions[0].version_id;
 if(phase==='upload'){
  assert(!(await fs.stat(receiptPath).catch(()=>null)),'Existing release must be reconciled');
  assert.deepEqual((await current()).versions,[{version_id:expected,percentage:100}],'Live version drift');
@@ -21,7 +21,7 @@ if(phase==='upload'){
   const built=await build({entryPoints:['deployment/root-sitemap/index.mjs'],bundle:true,format:'esm',write:false});modules.push({name:'index.mjs',bytes:Buffer.from(built.outputFiles[0].contents)});
  }else{
   const candidate='ask-private/completion-receiver-20261007';
-  modules.push({name:'index.js',bytes:await fs.readFile(path.join(candidate,target==='receiver-final'?'production-index.js':'index.js'))});
+  modules.push({name:'index.js',bytes:await fs.readFile(path.join(candidate,target==='receiver-stage'?'index.js':'production-index.js'))});
   modules.push({name:'website-enrolment-receipt.mjs',bytes:await fs.readFile(path.join(candidate,'website-enrolment-receipt.mjs'))});
   if(target==='receiver-stage')modules.push({name:'enrolment-receipt-qa.mjs',bytes:await fs.readFile(path.join(candidate,'enrolment-receipt-qa.mjs'))});
  }

@@ -5,6 +5,18 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 export const RECEIVER_SOURCE_SHA256='96d69dee450a771b6bc546bffdc63dd5804e3667d95c9147ea3e48a823ab5380';
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
+export function isolateLegacySitemapWriter(source){
+ const anchor='var XMLObj = xmlWriter;';
+ for(const name of ['GenarateSiteMap','GenarateVideoSiteMap']){
+  const start=source.indexOf('function '+name+'('),end=source.indexOf('__name('+name+',',start);
+  if(start<0||end<start)throw new Error('Sitemap function boundary changed');
+  const scoped=source.slice(start,end);
+  if(scoped.split(anchor).length!==2)throw new Error('Sitemap writer boundary changed');
+  // Inherited static methods mutate only this response's arrays.
+  source=source.slice(0,start)+scoped.replace(anchor,'var XMLObj = class extends xmlWriter { static XML = []; static Nodes = []; static State = ""; };')+source.slice(end);
+ }
+ return source;
+}
 export function patchEnrolmentReceiver(bytes){
  if(digest(bytes)!==RECEIVER_SOURCE_SHA256)throw new Error('Receiver source has changed; review the new version before preparing a patch.');
  let source=bytes.toString('utf8');
@@ -57,7 +69,7 @@ export {WebsiteEnrolmentReceipts};
  const staffAnchor='var rssResponse = GenarateSiteMap(data2, "STAFF", true);';
  if(source.split(staffAnchor).length!==2)throw Error('Staff sitemap generator changed');
  source=source.replace(staffAnchor,'const seenStaffUrls = new Set();\n    data2 = data2.filter(item => {const location=CreateHyperlink(item,"STAFF");if(seenStaffUrls.has(location))return false;seenStaffUrls.add(location);return true;});\n    '+staffAnchor);
- return source;
+ return isolateLegacySitemapWriter(source);
 }
 export async function prepareEnrolmentReceiver({input='ask-private/acquisition-receiver-20261007/index.js',output='ask-private/acquisition-receiver-candidate-20261007'}={}){
  const bytes=await fs.readFile(input),candidate=patchEnrolmentReceiver(bytes),helper=await fs.readFile('deployment/enrolment-receipt.mjs');
