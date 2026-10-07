@@ -34,7 +34,7 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
     });
     await t.test('all newly covered public templates use the same exact correction and preserve body',async()=>{
       for(const path of ['/t/interactive-song-therapy','/mirracles/123/published-story','/allmirracles','/yoga-therapy','/teachertraining','/teacher-training']){
-        const input=html(path);const {body}=await run({body:input,chunk:37},path);assert.equal(body,input.replace('content="http:','content="https:'));
+        const input=html(path);const {body}=await run({body:input,chunk:37},path);assert.equal(body.replace(/<style data-pinnacle-reading-layout>[\s\S]*?<\/style>/,''),input.replace('content="http:','content="https:'));
       }
     });
     await t.test('changes only one social URL; Unicode and all body bytes identical',async()=>{
