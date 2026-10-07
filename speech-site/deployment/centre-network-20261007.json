@@ -1,0 +1,380 @@
+{
+  "id": "centre-network-20261007",
+  "phase": "verified-configuration",
+  "at": "2026-10-07T02:38:25.216Z",
+  "baseCommit": "9983102a0fdf8c4d702737b69ddb8ee593044e36",
+  "rollback": [
+    {
+      "version_id": "ba536ab4-f94d-4b65-a8c6-2d270e2021ee",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 228,
+  "originalModules": 38,
+  "retainedAssets": 2160,
+  "totalAssets": 3258,
+  "changedAssets": 1200,
+  "sourceCentrePages": 62,
+  "changedModules": [
+    "pinnacle-route-v12.mjs",
+    "speech-handler.mjs",
+    "suchitra-assets.mjs",
+    "centre-routes.mjs"
+  ],
+  "originalHashes": {
+    "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+    "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+    "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+    "book-attribution-assets.mjs": "6807bbf03f8d160b42f68e52075ba7fbbf15256c15aed45204d33f525d3cff81",
+    "enrolment-assets.mjs": "879f0fda18032bf4af81bd6cd9f17dbf7873034193535cdc59d5e158ded097c1",
+    "enrolment-handler.mjs": "18bd39da5a46aa9d0cb0b2a533ad9ecc9be455e9ba1e6b252044bda74012f709",
+    "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+    "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+    "shared-navigation.mjs": "b8e9701f7c396f7d28eacd10ac49b922ac519b6a3fc7859c5a00befd05ff4f07",
+    "discovery-handler.mjs": "24dbc590e0faf0ba34d2e8e450492894095324eff7a4d2c6770700b6408818b8",
+    "book-attribution-handler.mjs": "83b402a5e6378e35fd236ac7f571e03374d61bb5ea8463d42324f6cbb110d059",
+    "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+    "pinnacle-route-v12.mjs": "bfa9349d68bb08ae7dd7c733f56f20ea5686105ecedb878dcafdf01a1e2394d5",
+    "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+    "suchitra-assets.mjs": "4a40b4338814a2432a007af6a3a797410d37efb21fade867267a89500096ae3b",
+    "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+    "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+    "speech-handler.mjs": "98b4bfffafbdb323419f720359fdd57e682cd933081dd337c06d7466d17de2f8",
+    "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+    "public-route-aliases.mjs": "4d85837e6f1fd34edde50855661352c55218aaeb7c99a34b9b244fa3612d9dba",
+    "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+    "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119",
+    "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+    "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+    "occupational-assets.mjs": "ff242611c0d61b80e5c20ddd87e1a9c778329e8862005eef7a36131885057e08",
+    "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+    "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+    "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186",
+    "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+    "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092",
+    "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+    "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+    "aba-assets.mjs": "8be7936a46cea4296aaca3318b7dcefa011aa359b7511a512007d28ff2967aa2",
+    "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+    "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+    "autism-assets.mjs": "8819010c7b6a368a5a5de932a470711a22452212d74798cc549ea8dcd035f066",
+    "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+    "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa"
+  },
+  "routeChanges": [
+    {
+      "id": "7d8af4782c524a428ca6ba25358a0cff",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "f77b96dc6ca34793917da61f16cb4c19",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "2b2588e56a314f9d892f64ce60af5b0a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0d7cdb94d17346b8b29740bc3ffd3a70",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "d1ec76f2164646349bcf468a1321be23",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "10a01d4963134ea1ace0f4caed2157e4",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-california-usa*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0818f56ba69549e28c3fcc4c18540682",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "d45d64db3ba74be5b826120c0a9d37e4",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "e678d3a5c2724a9390e6c8c8fc08a3b3",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "a9f5f26af9c942879c85775ba2b03d55",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "20a0909d1e5b4ee099e6f92228deeb7e",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "5da09802ac894186ab4d9f76b33adf3c",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "895ad31ec13c4f1d93f1c54a37c3e9b5",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "b1e64d6707904e588de744468765719a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "a20f2e206c5a46b9b3175c3c1b4f3687",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "b51edce912cf4d2ba1642d58f3c6a2c8",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "b30dcb8ad12247dfb29e530eb5e19547",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "398e08d46d8c4235b972e8c4178b288a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "16050bbf88ee4c389aaf5f76c5b298d2",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "d09d691e557f4a2e87ef5492e2853868",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "9d785b936458400e8ef98f485b886fb1",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "3c4fdef325c1408e9cb186720239606e",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "bdec686aab344028af881039c8d66ff8",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "7b6d0c2ba8cd475f9335cac284d2fdda",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "fe2108f56ceb4c7a94b11ceb598b1b11",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "49152b845fd44c77b5789a483a41ecbe",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "145527279cf14f94bd4c093317129b38",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "1139d79dc9bb4d559621e1d97055a20f",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "36cec75e975d49c4a9a2d028cc131cc9",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "4964cff954454c299b22a2b041e72754",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0bc4abbe8e994318bdb867b389c57704",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "5dee8e65e5174286a9d262584d9e1185",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "d84c3000640d473fac46004abd73c513",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "c223fa4d9e494caab3fe968eb43a8a96",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "1b076e4202ac4e7fa9dad95ce5880f0f",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "e31a448a8ce342a485f0da93ff68c76c",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "ed51b4b3aa054be28e5b39c9485b9b00",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "4456151f5e484bb299598d6357fae119",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "07032033afaf4b9f9e0d46385546f2b7",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "24716acac58449c984a73337c4779075",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "2d5326fe800a417fb9f4be5b0c69326e",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "abaa748b3e414c308c57dbf09015dc76",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "9b24dc9b06e14159ba5eac633e22dc57",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "0c99c79b31d043fd93ad7b1f65bd754a",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "21b1972d86ed4f089fb4586536537c49",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "682e346f85e04c37a003307d1b8633bd",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "57b107c1af9940959a0629b217a1f2f7",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "87e8e200f6434717bcb170958c351e39",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "be50546201ee4930b861d4f099b9d1f5",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india*",
+      "script": "pinnacle-centre-search-repair"
+    },
+    {
+      "id": "70c252127a2b4a6490500b3196e0cf50",
+      "pattern": "www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india*",
+      "script": "pinnacle-centre-search-repair"
+    }
+  ],
+  "routeAdditions": [
+    {
+      "id": "b94c275302fa4738bd714f94a1f98160",
+      "pattern": "pinnacleblooms.org/centers/*",
+      "script": "pinnacle-verify-route"
+    }
+  ],
+  "commit": "2a522fec62fed40fb4d4f334c16b1eb0d7cb224d",
+  "candidate": "936bcf5f-e16a-4cf9-9294-f637394fd3b1",
+  "uploadedAssets": 1197,
+  "moduleHashes": {
+    "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+    "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+    "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+    "book-attribution-assets.mjs": "6807bbf03f8d160b42f68e52075ba7fbbf15256c15aed45204d33f525d3cff81",
+    "enrolment-assets.mjs": "879f0fda18032bf4af81bd6cd9f17dbf7873034193535cdc59d5e158ded097c1",
+    "enrolment-handler.mjs": "18bd39da5a46aa9d0cb0b2a533ad9ecc9be455e9ba1e6b252044bda74012f709",
+    "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+    "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+    "shared-navigation.mjs": "b8e9701f7c396f7d28eacd10ac49b922ac519b6a3fc7859c5a00befd05ff4f07",
+    "discovery-handler.mjs": "24dbc590e0faf0ba34d2e8e450492894095324eff7a4d2c6770700b6408818b8",
+    "book-attribution-handler.mjs": "83b402a5e6378e35fd236ac7f571e03374d61bb5ea8463d42324f6cbb110d059",
+    "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+    "pinnacle-route-v12.mjs": "2f53e65f4776aaa3fffe5408ff5db4ee3cf882fa9c5cd887cdd36dfd6ca794bb",
+    "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+    "suchitra-assets.mjs": "b8fc379d4efde0c6f8a5259e7f6dc984ba8d4e68e34759423d62f9db6c60f6f3",
+    "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+    "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+    "speech-handler.mjs": "fed0f9157eba4b979df03452cf5d8cd7a3edfe8f797bd4a5ae912949fb675c68",
+    "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+    "public-route-aliases.mjs": "4d85837e6f1fd34edde50855661352c55218aaeb7c99a34b9b244fa3612d9dba",
+    "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+    "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119",
+    "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+    "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+    "occupational-assets.mjs": "ff242611c0d61b80e5c20ddd87e1a9c778329e8862005eef7a36131885057e08",
+    "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+    "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+    "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186",
+    "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+    "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092",
+    "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+    "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+    "aba-assets.mjs": "8be7936a46cea4296aaca3318b7dcefa011aa359b7511a512007d28ff2967aa2",
+    "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+    "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+    "autism-assets.mjs": "8819010c7b6a368a5a5de932a470711a22452212d74798cc549ea8dcd035f066",
+    "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+    "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa",
+    "centre-routes.mjs": "219bc85da8df60341dfdc1b006b62b5622361b3939fef06ee8d83096ad12fc12"
+  },
+  "deployment": "d67b678c-407a-4f1f-987c-32da451df4e7",
+  "promotedAt": "2026-10-07T03:04:39.638Z",
+  "verifiedAt": "2026-10-07T03:06:05.178Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-ask",
+    "pinnacle-ask-mcp",
+    "pinnacle-legacy-social-metadata",
+    "pinnacle-centre-search-repair",
+    "pinnacle-helpline",
+    "pinnacle-root-sitemap"
+  ],
+  "routesPreserved": 229,
+  "bindingsPreserved": true
+}

@@ -238,3 +238,12 @@
     if (enquiryPlacements.has(placement) && validEnquiry) send('enquiry_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'existing_enrolment_form'});
   });
 })();
+
+// Reuse one first-party installer; its own page/consent guards keep it dormant.
+if (location.origin === 'https://www.pinnacleblooms.org' && !document.querySelector('script[data-pinnacle-cheq-loader]')) {
+  const protection = document.createElement('script');
+  protection.src = '/pinnacle-pages-scripts/cheq-protection.js';
+  protection.defer = true;
+  protection.setAttribute('data-pinnacle-cheq-loader','');
+  document.head.append(protection);
+}
