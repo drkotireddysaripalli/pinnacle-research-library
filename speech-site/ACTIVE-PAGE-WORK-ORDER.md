@@ -1,6 +1,12 @@
-# Current page work — 6 October 2026
+# Current page work — 7 October 2026
 
-## Paid-centre mobile entry repair — 7 October; candidate accepted, release pending
+## Centre network and common delivery — completed and live, 7 October
+
+This is the latest acceptance and supersedes the earlier centre candidate/pending entries below. All 62 centre routes are delivered: 60 enquiry pages and two location-status pages, without asserting an independently verified operating roster. Shared real-place/media, local enquiry, seven-stage/therapy/ecosystem, nearby-centre, Google listing, resource and book/evidence journeys are live. Source `8acb3c664eb5a1aa321a1f1f95f39d664fbdaf6e`, passed CI `37567484854`, Portal `bdbf28c1-187f-484d-9309-d8b1d1dfcda7`; all 229 routes, 39 modules, 3,260 assets, bindings and six protected services retained. All 62 public documents/evidence exports, 55 opening-image identities, current 72-entry child sitemap and nine protected public destinations passed read-back. GSC sitemap accepted; IndexNow 62 accepted/0 failed. Representative physical iOS/Android, hosted Firefox, local Edge/WebKit and production Lighthouse coverage is declared in `RELEASE-CENTRE-NETWORK-20261007.md` and its receipts. It is not proof of all-device coverage, indexing, rankings or qualified leads.
+
+Current owner-directed work: one whole-portal handoff to the existing **Complete Google Ads fixes** task, resolving stale source/call-implementation context and requesting actual campaign, destination, measurement, local, commerce and receiving-system acceptance. Website code/releases remain here. `PORTAL-ADS-OUTCOME-HANDOFF-20261007.md` defines actions/owners and completion evidence. Schedulers remain stopped; no new site release is needed for this documentation/handoff.
+
+## Historical paid-centre entry scope — superseded by the completed network release above
 
 Owner-authorised Ads handoff: one shared entry-section repair for Guntur, Khajaguda, Kakinada, Rajahmundry and Labbipet; verify Gurunanak Road's existing Astro journey unchanged. Keep the existing enquiry handler, common header/footer, protected routes and Ads holds. Scope/acceptance: `RELEASE-PAID-CENTRE-ENTRY-20261007.md`. Native Worker-parser and consent/enquiry regressions plus phone/tablet/desktop visual checks apply. Complete exact-source CI, guarded centre-only promotion and live proof before marking released.
 
