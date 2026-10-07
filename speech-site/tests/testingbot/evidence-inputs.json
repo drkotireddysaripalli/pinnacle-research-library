@@ -1,0 +1,11 @@
+{
+  "testingbot_reports": ["../ask-distribution-release-20261003/speech-site/audits/testingbot-build/report.json"],
+  "testingbot_report_globs": [
+    "../ask-distribution-release-20261003/speech-site/audits/testingbot-suites/*/report.json",
+    "../ask-distribution-release-20261003/speech-site/audits/testingbot-upgrade-20261007/*/report.json",
+    "../ask-distribution-release-20261003/speech-site/audits/testingbot-integration-20261007/*/report.json",
+    "../ask-distribution-release-20261003/speech-site/audits/testingbot-daily/*/*/report.json"
+  ],
+  "pitchbox_snapshots": ["pitchbox-review-20261007/summary.json"],
+  "windsor_evidence": "six-step-release-20261006"
+}

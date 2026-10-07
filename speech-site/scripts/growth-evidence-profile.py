@@ -93,6 +93,96 @@ def latest_completed_audits(snapshots, releases=None):
         result.append(row)
     return result
 
+def latest_frog_rows(receipts):
+    """Only successful completed exports; folder names never determine freshness."""
+    selected = {}
+    for receipt, metadata, rows in receipts:
+        stamp = utc_date(metadata.get('completedAt'))
+        if metadata.get('exitCode') != 0 or stamp is None:
+            continue
+        for raw in rows:
+            if not raw.get('Address'):
+                continue
+            key = url_key(raw['Address'])
+            record = {k:raw.get(k) for k in
+                ('Address','Status Code','Indexability','Canonical Link Element 1','Title 1','H1-1')}
+            record.update(completed_at=stamp.isoformat(), receipt=str(receipt))
+            if key not in selected or stamp > selected[key][0]:
+                selected[key] = (stamp, record)
+    return {key:value[1] for key,value in selected.items()}
+
+def testingbot_observations(reports):
+    """Keep the latest completed case per exact URL, browser and suite.
+
+    P1 cannot clear a P2 defect, another browser cannot clear Safari, and a
+    candidate-build pass cannot replace deployed production evidence.
+    """
+    latest, attempts, inputs = {}, {}, []
+    for file, report in reports:
+        if utc_date(report.get('finishedAt')) is None or not report.get('sessions'):
+            continue
+        inputs.append(str(file))
+        for session in report['sessions']:
+            for case in session.get('cases', []):
+                stamp = utc_date(case.get('finishedAt'))
+                canonical = case.get('canonical')
+                if stamp is None or not canonical or case.get('status') not in ('passed','failed'):
+                    continue
+                scope = 'p1' if report.get('suite')=='daily' else report.get('suite')
+                key = (url_key(canonical), session.get('matrix'), scope, bool(report.get('build')))
+                checks = case.get('checks', [])
+                confirmed = session.get('closed') is True and session.get('resultRecorded') is True
+                passed = (confirmed and case['status']=='passed' and bool(checks)
+                          and all(c.get('passed') is True for c in checks))
+                visual = case.get('visual', {})
+                record = dict(url=key[0], case_id=case['id'], matrix=key[1], suite=key[2],
+                    candidate_build=key[3], at=stamp.isoformat(), source=report.get('source'),
+                    runner_sha256=report.get('runnerSha256'), manifest_sha256=report.get('manifestSha256'),
+                    functional='pass' if passed else 'fail' if confirmed else 'unconfirmed',
+                    failed_checks=[c.get('name') for c in checks if c.get('passed') is not True],
+                    error=case.get('error'), warnings=case.get('warnings', []), skipped=case.get('skipped', []),
+                    visual_status=visual.get('approval', 'not-established'),
+                    visual_match=visual.get('match'), visual_id=visual.get('visualId'),
+                    browser=session.get('provider', {}).get('browser'),
+                    os=session.get('provider', {}).get('os'),
+                    device=session.get('provider', {}).get('deviceName'),
+                    viewport={k:case.get('document', {}).get(k) for k in ('width','height','dpr')},
+                    session_closed=session.get('closed'), result_recorded=session.get('resultRecorded'),
+                    provider_success=session.get('provider', {}).get('success'),
+                    report=str(file))
+                if key not in attempts or stamp > attempts[key][0]:
+                    attempts[key] = (stamp, record)
+                existing = latest.get(key)
+                # An interrupted/unclosed retry cannot clear a prior confirmed
+                # failure. Preserve the latest attempt separately for freshness.
+                if (existing is None or
+                    (record['functional']!='unconfirmed' and existing[1]['functional']=='unconfirmed') or
+                    ((record['functional']=='unconfirmed')==(existing[1]['functional']=='unconfirmed') and stamp>existing[0])):
+                    latest[key] = (stamp, record)
+    for key,(stamp,record) in latest.items():
+        if attempts[key][0] > stamp:
+            attempt = attempts[key][1]
+            record['latest_attempt'] = {k:attempt[k] for k in ('at','functional','report','source','session_closed','result_recorded')}
+    return {'state':'saved_completed_observations' if inputs else 'unavailable',
+            'reports_consumed':sorted(set(inputs)), 'records':[v[1] for _,v in sorted(latest.items())],
+            'boundary':'Assertions and visuals remain separate. Saved observations have their own date/source; no ranking, lead or full-site pass is inferred.'}
+
+def pitchbox_observations(snapshots):
+    """Allowlisted aggregate fields only; no messages, recipient or mailbox data."""
+    valid = [(utc_date(doc.get('checked_at_utc')), file, doc) for file,doc in snapshots]
+    valid = [row for row in valid if row[0] is not None]
+    if not valid:
+        return {'state':'unavailable'}
+    _, file, doc = max(valid, key=lambda row:row[0])
+    keys = ('checked_at_utc','active_campaigns','opportunities','excluded_no_fit','sent',
+            'inbound_records','wins_reported','eligible_messages_now','new_placements_verified',
+            'attributable_qualified_enquiries')
+    return {'state':'saved_aggregate_observation','source':str(file),
+            **{k:doc.get(k) for k in keys},
+            'public_destinations':[doc['existing_reference_repair']['destination']]
+                if doc.get('existing_reference_repair', {}).get('destination') else [],
+            'boundary':'Outreach and placement are separate. Browser health cannot authorise sending or prove a placement/lead.'}
+
 def aggregates(path):
     """Allow only aggregate rows; reject accidental person/contact-level input."""
     if path is None:
@@ -149,7 +239,10 @@ def build(root, outcome_path=None, windsor_dir=None):
     if latest_ask.exists():
         audit_paths.append(latest_ask)
     manifest_path = root/'evidence-sources.json'
-    manifest = read(manifest_path) if manifest_path.exists() else {}
+    defaults_path = Path(__file__).resolve().parents[1]/'tests/testingbot/evidence-inputs.json'
+    defaults = read(defaults_path) if defaults_path.exists() else {}
+    manifest = {**defaults, **(read(manifest_path) if manifest_path.exists() else {})}
+    source(defaults_path, 'Versioned offline TestingBot and aggregate Pitchbox input paths')
     source(manifest_path, 'Explicit saved evidence inputs and release boundaries')
     audit_paths.extend(root/Path(path) for path in manifest.get('ahrefs_snapshots', []))
     snapshots = []
@@ -164,25 +257,48 @@ def build(root, outcome_path=None, windsor_dir=None):
         for row in obj.get('keywords', []):
             if row.get('best_position_url'):
                 demand.setdefault(url_key(row['best_position_url']), []).append(row)
-    frog = {}
-    for receipt in sorted(root.glob('*/screaming-frog/*/receipt.json')):
+    frog_inputs = []
+    frog_paths = list(root.glob('*/screaming-frog/*/receipt.json')) + list(root.glob('*/crawl/*/receipt.json'))
+    frog_paths.extend(root/Path(p) for p in manifest.get('screaming_frog_receipts', []))
+    for receipt in dict.fromkeys(p.resolve() for p in frog_paths):
         source(receipt, 'Screaming Frog bounded run')
+        metadata = read(receipt)
         for csv_path in receipt.parent.glob('internal_all.csv'):
             source(csv_path, 'Screaming Frog URL rows')
             with csv_path.open(encoding='utf-8-sig', newline='') as handle:
-                for row in csv.DictReader(handle):
-                    if row.get('Address'):
-                        frog[url_key(row['Address'])] = {k: row.get(k) for k in
-                            ('Address','Status Code','Indexability','Canonical Link Element 1','Title 1','H1-1')}
+                frog_inputs.append((receipt.as_posix(), metadata, list(csv.DictReader(handle))))
+    frog = latest_frog_rows(frog_inputs)
     # Saved initial crawl remains evidence where no newer focused row is available.
     original = work/'ahrefs-growth-20261004/screaming-frog-setup/audits'
     for csv_path in sorted(original.glob('*/internal_all.csv')):
+        receipt = csv_path.parent/'receipt.json'
+        if not receipt.exists():
+            continue
+        metadata = read(receipt)
+        if metadata.get('exitCode') != 0 or utc_date(metadata.get('completedAt')) is None:
+            continue
         source(csv_path, 'Screaming Frog earlier sample')
         with csv_path.open(encoding='utf-8-sig', newline='') as handle:
             for row in csv.DictReader(handle):
                 if row.get('Address'):
-                    frog.setdefault(url_key(row['Address']), {k: row.get(k) for k in
-                        ('Address','Status Code','Indexability','Canonical Link Element 1','Title 1','H1-1')})
+                    frog_inputs.append((receipt.as_posix(), metadata, [row]))
+    frog = latest_frog_rows(frog_inputs)
+    tb_paths = [root/Path(p) for p in manifest.get('testingbot_reports', [])]
+    for pattern in manifest.get('testingbot_report_globs', []):
+        # Explicit local report roots only. This never fetches a provider or scans credentials.
+        tb_paths.extend(root.glob(pattern))
+    tb_inputs = []
+    for file in dict.fromkeys(p.resolve() for p in tb_paths):
+        if file.exists():
+            source(file, 'TestingBot saved execution; browser/visual scope remains explicit')
+            tb_inputs.append((file.as_posix(), read(file)))
+    testingbot = testingbot_observations(tb_inputs)
+    pb_inputs = []
+    for file in [root/Path(p) for p in manifest.get('pitchbox_snapshots', [])]:
+        if file.exists():
+            source(file, 'Pitchbox saved aggregate observation; no outreach mutation')
+            pb_inputs.append((file.as_posix(), read(file)))
+    pitchbox = pitchbox_observations(pb_inputs)
     results = {}
     for event in queue.get('results', []):
         results[event['item_id']] = event
@@ -205,10 +321,15 @@ def build(root, outcome_path=None, windsor_dir=None):
             'gsc': {u:gsc[u] for u in sorted(urls) if u in gsc},
             'screaming_frog': {u:frog[u] for u in sorted(urls) if u in frog}, 'release': release,
             'ahrefs_india_queries': {u:demand[u] for u in sorted(urls) if u in demand},
+            'testingbot': [r for r in testingbot['records'] if r['url'] in urls],
             'receipt': event['receipt'] if event else None,
             'next_condition': item.get('next_condition'),
             'measurement': item.get('measurement', 'No outcome attributed from delivery alone')})
     windsor = {'state': 'not_supplied'}
+    if windsor_dir is None and manifest.get('windsor_evidence'):
+        saved_windsor = root/manifest['windsor_evidence']
+        if (saved_windsor/'windsor-ga4.json').exists() and (saved_windsor/'windsor-gbp.json').exists():
+            windsor_dir = saved_windsor
     if windsor_dir is not None:
         ga4_path, gbp_path = windsor_dir/'windsor-ga4.json', windsor_dir/'windsor-gbp.json'
         ga4, gbp = read(ga4_path), read(gbp_path)
@@ -227,6 +348,9 @@ def build(root, outcome_path=None, windsor_dir=None):
         'rows': sorted(rows, key=lambda r: -r['priority']), 'sources': sources,
         'ahrefs_audits': audits, 'ahrefs_query_source': keyword_path.as_posix(),
         'event_dictionary': EVENTS, 'receiving_team': aggregates(outcome_path), 'windsor':windsor,
+        'testingbot':testingbot, 'pitchbox':pitchbox,
+        'url_observations':{u:{'gsc':gsc.get(u), 'ahrefs_india_queries':demand.get(u),
+                              'screaming_frog':frog.get(u)} for u in sorted(set(gsc)|set(frog)|set(demand))},
         'rules': ['Reuse queue IDs; this report cannot create tasks or send/crawl/submit.',
                   'Do not reopen completed repairs from older crawl findings.',
                   'Only completed Ahrefs audits establish their named scope.',

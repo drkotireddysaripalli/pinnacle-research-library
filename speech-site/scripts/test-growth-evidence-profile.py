@@ -9,6 +9,34 @@ spec.loader.exec_module(profile)
 EVENTS, OUTCOMES, aggregates, url_key, latest_completed_audits = (profile.EVENTS, profile.OUTCOMES, profile.aggregates, profile.url_key, profile.latest_completed_audits)
 
 class ProfileTests(unittest.TestCase):
+    def test_frog_freshness_uses_successful_completion_not_folder_order(self):
+        page={'Address':'https://www.pinnacleblooms.org/seva','Status Code':'200'}
+        runs=[('z-older',{'completedAt':'2026-10-01T00:00:00Z','exitCode':0},[{**page,'Status Code':'404'}]),
+              ('a-newer',{'completedAt':'2026-10-06T00:00:00Z','exitCode':0},[page]),
+              ('new-failed',{'completedAt':'2026-10-07T00:00:00Z','exitCode':1},[{**page,'Status Code':'500'}])]
+        r=profile.latest_frog_rows(runs)[page['Address']]
+        self.assertEqual(r['Status Code'],'200');self.assertEqual(r['receipt'],'a-newer')
+
+    def test_testingbot_preserves_browser_suite_and_candidate_boundaries(self):
+        def report(suite='p2',matrix='safari',passed=False,build=False,at='2026-10-06T00:00:00Z',closed=True):
+            return dict(finishedAt=at,suite=suite,build=build,source='fixture',sessions=[dict(matrix=matrix,
+                closed=closed,resultRecorded=True,provider={'success':passed},cases=[dict(id='shop',
+                canonical='https://www.pinnacleblooms.org/shop',finishedAt=at,status='passed' if passed else 'failed',
+                checks=[{'name':'readability','passed':passed}],visual={'approval':'provisional-first-capture'})])])
+        r=profile.testingbot_observations([('failed',report()),('p1-pass',report(suite='p1',passed=True,at='2026-10-07T00:00:00Z')),
+            ('chrome-pass',report(matrix='chrome',passed=True)),('build-pass',report(passed=True,build=True))])
+        failed=[v for v in r['records'] if v['functional']=='fail']
+        self.assertEqual(len(failed),1);self.assertEqual(failed[0]['matrix'],'safari');self.assertEqual(failed[0]['suite'],'p2')
+        self.assertEqual(profile.testingbot_observations([('unclosed',report(passed=True,closed=False))])['records'][0]['functional'],'unconfirmed')
+        retry=profile.testingbot_observations([('failed',report()),('unclosed-new',report(passed=True,closed=False,at='2026-10-07T00:00:00Z'))])['records'][0]
+        self.assertEqual(retry['functional'],'fail');self.assertEqual(retry['latest_attempt']['functional'],'unconfirmed')
+        running=report();del running['finishedAt'];self.assertEqual(profile.testingbot_observations([('running',running)])['state'],'unavailable')
+
+    def test_pitchbox_is_aggregate_and_sent_is_not_placement(self):
+        r=profile.pitchbox_observations([('saved',dict(checked_at_utc='2026-10-07T00:00:00Z',sent=1,
+            new_placements_verified=0,email='private@example.org',message='private',api_key='secret'))])
+        self.assertEqual(r['sent'],1);self.assertEqual(r['new_placements_verified'],0)
+        for field in ('email','message','api_key'):self.assertNotIn(field,r)
     def test_newest_completed_crawl_wins_independently_of_filename_order(self):
         old={'healthscores':[dict(project_id='1',date='2026-10-04T01:00:00Z',status='Completed',health_score=20)]}
         new={'requests':{'saved':[{'healthscores':[dict(project_id='1',date='2026-10-06T08:02:36Z',status='Completed',health_score=90)]}]}}

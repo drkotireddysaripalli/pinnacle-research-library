@@ -74,6 +74,8 @@ jobs:
       - run: node scripts/validate-centre-network.mjs
       - run: npx playwright test --project=firefox --project=webkit
       - run: npm run test:testingbot-contract
+      - name: Offline tool evidence contracts
+        run: python3 scripts/test-growth-evidence-profile.py
       - name: Start exact-build preview for TestingBot
         if: github.event_name != 'pull_request'
         run: |

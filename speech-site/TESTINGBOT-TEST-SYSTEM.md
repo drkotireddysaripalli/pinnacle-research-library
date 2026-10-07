@@ -55,6 +55,10 @@ Verify and the national helpline currently have dedicated shells. Their actual s
 
 The account currently permits limited concurrency. Sessions are reused across page cases and matrix jobs are sequential. A requested unavailable device is reported unavailable. Historical device screenshots are not current execution proof. Landscape, Windows high-contrast mode, 200% zoom, screen-reader operation and all older browser versions are not established by these default runs; add a targeted profile/check when a change makes one relevant.
 
+For the 768 × 1024 Edge CSS viewport, the runner now requests a supported 1920 × 1200 VM display so browser chrome does not clamp the content height. The earlier 1920 × 1080 VM actually delivered 768 × 961; those five failures are retained. CSS viewport assertions are unchanged. Provider support: <https://testingbot.com/support/web-automate/puppeteer/change-screen-resolution>. The 1440 × 900 desktop profiles keep their existing display setting.
+
+The viewport fitter reads actual outer-window bounds after real navigation and uses up to three adjustments, allowing for driver clamping and changing browser chrome. A still-unavailable viewport fails and stops the remaining same-profile cases rather than repeating that setup fault. The intermediate taller-display attempt delivered 768 × 1058 and remains recorded separately; it is not a successful tablet test.
+
 ## Visual references
 
 The existing accepted source is `COMMON-SHELL-BASELINE.md`, tag `pinnacle-common-shell-baseline-v159-20261001` and the owner's exact fixture `tests/fixtures/shared-authority-owner-approved.json`. These are reused, not replaced.
@@ -93,12 +97,22 @@ Cloudflare promotion must use the exact green build/receipt. This workflow is th
 
 - 32 BVT/P1 public cases on Chrome every day.
 - Eight P2 cases on tablet-size Edge: five critical page presentations plus three rotating support pages.
-- 28 rotating P3 records on Chrome; the current 195-record set receives a full pass through the rotation in seven completed daily runs.
-- Three critical cases on a rotating secondary desktop browser.
+- 28 P3 records on Chrome: six bounded slots for unresolved failures, saved search/reference demand or a reproducible varied sample, plus 22 oldest records. All 195 published P3 records receive execution in at most nine completed daily rotations when the manifest is unchanged; execution does not mean a pass.
+- Three critical cases on a rotating secondary desktop browser. An unresolved failure outside the other jobs replaces this slot with a three-case retry on its actual browser/suite; no additional session is added.
 - Three critical cases on a rotating physical iPhone, Android, iPad or small iPhone profile.
 - 3G checks on Tuesday/Friday. Explicit one-off runs can add a network check after a relevant release.
 
 This is **74 selected page runs across five sequential jobs** per normal completed daily plan. Counts of actual executed/passed/failed/unavailable cases are recorded separately. A queue wake is not a pass. The plan runs the full critical suite daily and broader records in rotation; it does not claim all 264 pages were tested in every device each day.
+
+### Existing-tool evidence feeds the daily selection
+
+Before allocating a session, the daily launcher runs the existing offline `growth-evidence-profile.py` once. Versioned `tests/testingbot/evidence-inputs.json` supplies saved TestingBot report roots, the dated aggregate Pitchbox snapshot and existing Windsor observations; the local `evidence-sources.json` retains Ahrefs inputs and release boundaries. No provider query, new crawl, email or index submission happens in this step.
+
+The profile joins existing work records by exact URL to GSC landing demand, saved Ahrefs India queries/completed audit state, completed Screaming Frog exports, browser execution and aggregate Pitchbox/Windsor observations. Each observation retains its own date/source. Screaming Frog URL evidence now selects the newest successful completed receipt by timestamp, including the existing `crawl/` exports; folder names and failed exports cannot replace it.
+
+Rotating P2 has one evidence/failure/sample slot and two oldest support pages, alongside its five fixed important presentations. P3 has six such slots and 22 oldest records. The varied sample is reproducible from the day and case ID. Same-suite/browser failures receive priority; a P1 pass cannot clear a P2 finding, Chrome cannot clear Safari, and an interrupted retry cannot clear a confirmed failure. Coverage state stores last execution, last pass and unresolved failure separately by browser and suite. Failed/missing cleanup never advances completed coverage. Individual visual approval/provisional/skipped state stays visible alongside functional results.
+
+This is a local evidence integration and selection mechanism. It does not make Pitchbox send from a test pass, make GSC certify visuals, make Ahrefs repair code, or establish actual calls/admissions. A promoted Cloudflare revision still needs its exact green candidate receipt and protected-runtime/public verification. Existing growth schedulers stay stopped.
 
 Automation: `daily-pinnacle-testingbot-regression`, daily 09:10 IST in this native Codex thread. The previous broader website-quality automation was paused, in keeping with the owner's scheduler stop. Other growth schedulers are not restarted. The new job reports only new/changed material failures, essential missing coverage or a required action; unchanged passes and repeated known findings remain quiet.
 
@@ -134,5 +148,7 @@ Manual P3/all-page runs use at most 28 cases per reused browser session and proc
 - On 7 October, after the successful public/physical/candidate BVTs, TestingBot rejected the wider daily run with **“Insufficient credits. Please add credits on testingbot.com.”** The API account reports Free Trial. The next condition is TestingBot funding or a funded account's secure credentials; the wider P1/P2/P3 and other-browser runs have not executed. Do not repeat that rejected run while the condition is unchanged. The new daily job remains configured and reports unchanged credit failure quietly.
 
 ### Funding condition cleared — 7 October
+
+Subsequent acceptance supersedes the execution gaps in the historical paragraph below: complete corrected production P1 is **32/32 Chrome/Windows functional pass**; final Edge P2 at actual **768 × 1024** is four pass/Shop readability fail. The two earlier Edge viewport-setup attempts remain in the receipt. All four owned sessions are closed with provider result read-back. 13 Node and 11 Python guards pass. CI for `9b2f944357728a561df274d3315d53536ea9b9fe` is independently observed successful; the final integration/fitter commit requires its own CI. See `reviews/TESTINGBOT-INTEGRATION-20261007.md` and its compact JSON receipt. The full 74-case daily plan, remaining P2/P3/device/dynamic-record and visual acceptance are not claimed completed.
 
 After the owner's upgrade, `/user` reports **Automated Pro - 1 Sessions - Unlimited**, one desktop slot and one physical slot. A new actual Chrome session executed all 32 P1 cases. The initial 18/32 result contained reference-state/visibility/reader-contract mistakes described above; it is retained and is not rewritten as a clean P1 pass. Targeted corrected cases are recorded separately under `audits/testingbot-upgrade-20261007/`. Nine local contract guards pass. The wider P2/P3/other-platform and final candidate-build acceptance still need their own execution; the prior account-credit dependency no longer applies. Reuse sessions sequentially within the actual slot limits. The provider's raw seconds counter is not interpreted as purchased time, usage cost or physical-device plan entitlement.

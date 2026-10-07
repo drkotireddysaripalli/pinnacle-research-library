@@ -1,0 +1,1259 @@
+{
+  "at": "2026-10-07T07:31:59.495Z",
+  "purpose": "Evidence-linked release/daily testing with bounded coverage and actual failure retention",
+  "siteProductionChanged": false,
+  "scheduler": "Existing daily TestingBot only; other growth schedules remain stopped",
+  "dailyConfigured": {
+    "caseRuns": 74,
+    "jobs": 5,
+    "definedPages": 264,
+    "publishedPages": 262,
+    "p3Records": 195,
+    "p3MaximumCompletedRotations": 9,
+    "dailyRunCompletedThisTurn": false
+  },
+  "localContracts": {
+    "nodePassed": 13,
+    "pythonPassed": 11
+  },
+  "evidence": {
+    "sourcesReused": 86,
+    "queueRecords": 54,
+    "exactUrlObservations": 334,
+    "testingbotState": "saved_completed_observations",
+    "testingbotRecords": 59,
+    "pitchboxState": "saved_aggregate_observation",
+    "pitchboxSnapshotAt": "2026-10-07T00:59:58.142754+00:00",
+    "pitchboxSent": 1,
+    "pitchboxVerifiedNewPlacements": 0,
+    "windsorState": "connected_source_observations",
+    "receivingTeam": "unavailable"
+  },
+  "exactBuildCi": {
+    "commit": "9b2f944357728a561df274d3315d53536ea9b9fe",
+    "status": "completed",
+    "conclusion": "success",
+    "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37581529052",
+    "finalIntegrationCommit": "Needs its own CI; prior success not assigned to final changes"
+  },
+  "remaining": [
+    "Shop 10–11px secondary copy: same Edge P2 must pass after a scoped site repair",
+    "New provisional visual references and page-body visual acceptance",
+    "Remaining P2/P3, physical/secondary profiles and traffic-directed dynamic Ask/FAQ record sampling",
+    "Actual accepted-enquiry/deduplication/attribution and call/admission operational proof",
+    "Promotion discipline around historical standalone release scripts and protected runtimes"
+  ],
+  "runs": [
+    {
+      "name": "p1-chrome",
+      "report": "audits/testingbot-integration-20261007/p1-chrome/report.json",
+      "source": "9b2f944357728a561df274d3315d53536ea9b9fe",
+      "runnerSha256": "9df627c3d23b2155ffcccff01d1b83274d49032f5e16833ab761543ed463aaba",
+      "presentationStateSha256": "373dcc46f40c0fa0e75fbfa3cc92ad40453e8fdb7abc6cba06b0285ee00ac7d9",
+      "startedAt": "2026-10-07T07:11:44.922Z",
+      "finishedAt": "2026-10-07T07:21:26.240Z",
+      "counts": {
+        "selectedPages": 32,
+        "pageRuns": 32,
+        "passed": 32,
+        "failed": 0,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "functionalPassed": true,
+      "visualAcceptance": "provisional-baselines-await-review",
+      "sessions": [
+        {
+          "matrix": "chrome",
+          "dashboard": "https://testingbot.com/members/tests/879a0fb95a04-b0fb3ddb4846-931866b16a4e-179135711000-36537594",
+          "status": "passed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53475038,
+            "success": true,
+            "durationSeconds": 569,
+            "assetsAvailable": false,
+            "deviceName": null,
+            "platformName": "",
+            "os": "WIN11",
+            "browser": "googlechrome",
+            "browserVersion": "153"
+          },
+          "cases": [
+            {
+              "id": "about",
+              "url": "https://www.pinnacleblooms.org/about-pinnacle-proven-improvement-rate",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "specialEducation",
+              "url": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "fusion",
+              "url": "https://www.pinnacleblooms.org/fusion-module",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "therapeuticai",
+              "url": "https://www.pinnacleblooms.org/therapeuticai",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "prognose",
+              "url": "https://www.pinnacleblooms.org/prognose",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "pdk",
+              "url": "https://www.pinnacleblooms.org/personal-development-kernel",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "everyday",
+              "url": "https://www.pinnacleblooms.org/everyday-therapy",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "abilityscore",
+              "url": "https://www.pinnacleblooms.org/abilityscore",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-active-abilityscore",
+                "visualId": 20714,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "readiness",
+              "url": "https://www.pinnacleblooms.org/seven-readiness-indexes",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "shop",
+              "url": "https://www.pinnacleblooms.org/shop",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [
+                "P2 readability findings: [{\"fontSize\":\"11px\",\"text\":\"Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock\",\"width\":596.625},{\"fontSize\":\"11px\",\"text\":\"Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco\",\"width\":566.5}]"
+              ],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": [
+                {
+                  "fontSize": "11px",
+                  "text": "Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock",
+                  "width": 596.625
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco",
+                  "width": 566.5
+                }
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "url": "https://www.pinnacleblooms.org/pinnacleai",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-active-pinnacleai",
+                "visualId": 20717,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "occupational",
+              "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "speech",
+              "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-active-top-speech-therapy-center-india-proven-improvement-rate",
+                "visualId": 20726,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "enrolment",
+              "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "aba",
+              "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "autism",
+              "url": "https://www.pinnacleblooms.org/autism-therapy",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "policies",
+              "url": "https://www.pinnacleblooms.org/policies",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "No content disclosure on this page"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "centre-suchitra",
+              "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "ask-answer",
+              "url": "https://pinnacleblooms.org/ask/what-is-a-deic-and-what-services-does-it-offer",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [
+                "Observed unthrottled browser LCP exceeds 2500ms; investigate with repeatable performance baseline, not a field result"
+              ],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-reader-gate",
+                "visualId": 20720,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "verify",
+              "url": "https://www.pinnacleblooms.org/verify/",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [
+                "Current Verify uses its separate evidence shell; common Astro-shell migration is not delivered"
+              ],
+              "skipped": [
+                "Portal navigation does not apply to this existing dedicated shell"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "ask-home",
+              "url": "https://pinnacleblooms.org/ask",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-reader-gate",
+                "visualId": 20720,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "faq",
+              "url": "https://www.pinnacleblooms.org/faq",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-reader-gate",
+                "visualId": 20720,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "faq-answer",
+              "url": "https://www.pinnacleblooms.org/faq/english/speech-therapy/autism-speech-therapy",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-reader-gate",
+                "visualId": 20720,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "sunshine",
+              "url": "https://www.pinnacleblooms.org/sunshine",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-reader-gate",
+                "visualId": 20720,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "sunshine-category",
+              "url": "https://www.pinnacleblooms.org/sunshine/techniques",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-reader-gate",
+                "visualId": 20720,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "stories",
+              "url": "https://www.pinnacleblooms.org/allmirracles",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "faq-telugu",
+              "url": "https://www.pinnacleblooms.org/faq/telugu",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval",
+                "Signed-in profile, WhatsApp OTP and protected reader interactions require a separately authorised real-user acceptance; no fake sign-in in this production suite",
+                "Covered anonymous overlay only; page content stays in server HTML but is not visually read through the gate"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-reader-gate",
+                "visualId": 20720,
+                "approval": "provisional-first-capture",
+                "match": false
+              },
+              "smallText": []
+            },
+            {
+              "id": "books",
+              "url": "https://www.pinnacleblooms.org/books",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "No content disclosure on this page"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "reassess-review-repeat",
+              "url": "https://www.pinnacleblooms.org/reassess-review-repeat",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900",
+                "visualId": 20711,
+                "approval": "approved-reference",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "helpline",
+              "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [
+                "National helpline currently has its dedicated shell; this suite preserves and tests that actual shell",
+                "P2 readability findings: [{\"fontSize\":\"11px\",\"text\":\"THE FIRST STEP IS A CONVERSATION\",\"width\":510.75},{\"fontSize\":\"11px\",\"text\":\"MANY QUESTIONS. ONE PLACE TO BEGIN.\",\"width\":435.046875},{\"fontSize\":\"11px\",\"text\":\"FIND YOUR NEXT STEP, CLOSER TO HOME\",\"width\":1220},{\"fontSize\":\"11px\",\"text\":\"THE PINNACLE DEVELOPMENTAL JOURNEY\",\"width\":790},{\"fontSize\":\"11px\",\"text\":\"A CLEARER NEXT STEP, IN FAMILIAR WORDS\",\"width\":1220}]"
+              ],
+              "skipped": [
+                "Portal navigation does not apply to this existing dedicated shell"
+              ],
+              "visual": null,
+              "smallText": [
+                {
+                  "fontSize": "11px",
+                  "text": "THE FIRST STEP IS A CONVERSATION",
+                  "width": 510.75
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "MANY QUESTIONS. ONE PLACE TO BEGIN.",
+                  "width": 435.046875
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "FIND YOUR NEXT STEP, CLOSER TO HOME",
+                  "width": 1220
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "THE PINNACLE DEVELOPMENTAL JOURNEY",
+                  "width": 790
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "A CLEARER NEXT STEP, IN FAMILIAR WORDS",
+                  "width": 1220
+                }
+              ]
+            },
+            {
+              "id": "self-sufficient",
+              "url": "https://www.pinnacleblooms.org/self-sufficient",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "mainstream",
+              "url": "https://www.pinnacleblooms.org/mainstream",
+              "status": "passed",
+              "viewport": {
+                "width": 1440,
+                "height": 900
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-chrome-WIN11-1440x900-active-mainstream",
+                "visualId": 20723,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "p2-edge",
+      "report": "audits/testingbot-integration-20261007/p2-edge/report.json",
+      "source": "9b2f944357728a561df274d3315d53536ea9b9fe",
+      "runnerSha256": "9df627c3d23b2155ffcccff01d1b83274d49032f5e16833ab761543ed463aaba",
+      "presentationStateSha256": "373dcc46f40c0fa0e75fbfa3cc92ad40453e8fdb7abc6cba06b0285ee00ac7d9",
+      "startedAt": "2026-10-07T07:21:55.795Z",
+      "finishedAt": "2026-10-07T07:24:27.622Z",
+      "counts": {
+        "selectedPages": 5,
+        "pageRuns": 5,
+        "passed": 0,
+        "failed": 5,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "functionalPassed": false,
+      "visualAcceptance": "provisional-baselines-await-review",
+      "sessions": [
+        {
+          "matrix": "edge",
+          "dashboard": "https://testingbot.com/members/tests/5f2192bd0142-3081857defa7-19be2d4d6e29-179135772100-39437542",
+          "status": "failed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53475488,
+            "success": false,
+            "durationSeconds": 141,
+            "assetsAvailable": false,
+            "deviceName": null,
+            "platformName": null,
+            "os": "WIN11",
+            "browser": "microsoftedge",
+            "browserVersion": "153"
+          },
+          "cases": [
+            {
+              "id": "shop",
+              "url": "https://www.pinnacleblooms.org/shop",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 961
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered",
+                "P2 readable paragraph sizes and widths"
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"fontSize\":\"10px\",\"text\":\"✦ THE PINNACLE 101 PARENT VISUAL LIBRARY\",\"width\":713},{\"fontSize\":\"11px\",\"text\":\"Explore every free sample. Choose your ebook and continue to secure checkout. Printed editions remain out of stock.\",\"width\":713},{\"fontSize\":\"11px\",\"text\":\"Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock\",\"width\":657},{\"fontSize\":\"11px\",\"text\":\"Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco\",\"width\":713},{\"fontSize\":\"10px\",\"text\":\"A LITTLE CLARITY BEFORE YOU CHOOSE\",\"width\":317.984375}]"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": [
+                {
+                  "fontSize": "10px",
+                  "text": "✦ THE PINNACLE 101 PARENT VISUAL LIBRARY",
+                  "width": 713
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Explore every free sample. Choose your ebook and continue to secure checkout. Printed editions remain out of stock.",
+                  "width": 713
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock",
+                  "width": 657
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco",
+                  "width": 713
+                },
+                {
+                  "fontSize": "10px",
+                  "text": "A LITTLE CLARITY BEFORE YOU CHOOSE",
+                  "width": 317.984375
+                }
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "url": "https://www.pinnacleblooms.org/pinnacleai",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 961
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered"
+              ],
+              "warnings": [
+                "Observed page layout shift exceeds 0.1"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "speech",
+              "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 961
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered"
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "enrolment",
+              "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 961
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered"
+              ],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-edge-WIN11-768x961",
+                "visualId": 20753,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "centre-suchitra",
+              "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 961
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered"
+              ],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-edge-WIN11-768x961",
+                "visualId": 20753,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "p2-edge-retall",
+      "report": "audits/testingbot-integration-20261007/p2-edge-retall/report.json",
+      "source": "9b2f944357728a561df274d3315d53536ea9b9fe",
+      "runnerSha256": "9a371744f92190159dc3c988d231ab4c4ce659b267d34895868f3ab95146d4fc",
+      "presentationStateSha256": "45b48b7bdb60afcd2d62ddbc6ea3f80a0310068f9ac036a1d55db65d351ffa7f",
+      "startedAt": "2026-10-07T07:24:45.905Z",
+      "finishedAt": "2026-10-07T07:27:20.179Z",
+      "counts": {
+        "selectedPages": 5,
+        "pageRuns": 5,
+        "passed": 0,
+        "failed": 5,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "functionalPassed": false,
+      "visualAcceptance": "provisional-baselines-await-review",
+      "sessions": [
+        {
+          "matrix": "edge",
+          "dashboard": "https://testingbot.com/members/tests/c370192362bc-8678de8b77fa-aa00bc0a7c2b-179135789044-97019761",
+          "status": "failed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53475581,
+            "success": false,
+            "durationSeconds": 144,
+            "assetsAvailable": false,
+            "deviceName": null,
+            "platformName": null,
+            "os": "WIN11",
+            "browser": "microsoftedge",
+            "browserVersion": "153"
+          },
+          "cases": [
+            {
+              "id": "shop",
+              "url": "https://www.pinnacleblooms.org/shop",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 1058
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered",
+                "P2 readable paragraph sizes and widths"
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"fontSize\":\"10px\",\"text\":\"✦ THE PINNACLE 101 PARENT VISUAL LIBRARY\",\"width\":713},{\"fontSize\":\"11px\",\"text\":\"Explore every free sample. Choose your ebook and continue to secure checkout. Printed editions remain out of stock.\",\"width\":713},{\"fontSize\":\"11px\",\"text\":\"Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock\",\"width\":657},{\"fontSize\":\"11px\",\"text\":\"Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco\",\"width\":713},{\"fontSize\":\"10px\",\"text\":\"A LITTLE CLARITY BEFORE YOU CHOOSE\",\"width\":317.984375}]"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": [
+                {
+                  "fontSize": "10px",
+                  "text": "✦ THE PINNACLE 101 PARENT VISUAL LIBRARY",
+                  "width": 713
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Explore every free sample. Choose your ebook and continue to secure checkout. Printed editions remain out of stock.",
+                  "width": 713
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock",
+                  "width": 657
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco",
+                  "width": 713
+                },
+                {
+                  "fontSize": "10px",
+                  "text": "A LITTLE CLARITY BEFORE YOU CHOOSE",
+                  "width": 317.984375
+                }
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "url": "https://www.pinnacleblooms.org/pinnacleai",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 1058
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered"
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "speech",
+              "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 1058
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered"
+              ],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "enrolment",
+              "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 1058
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered"
+              ],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-edge-WIN11-768x1058",
+                "visualId": 20762,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "centre-suchitra",
+              "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 1058
+              },
+              "failedChecks": [
+                "Requested CSS viewport is actually delivered"
+              ],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-edge-WIN11-768x1058",
+                "visualId": 20762,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "p2-edge-final",
+      "report": "audits/testingbot-integration-20261007/p2-edge-final/report.json",
+      "source": "9b2f944357728a561df274d3315d53536ea9b9fe",
+      "runnerSha256": "9deda557e9f50dfb12f17a94050fef390adcd23bd010302daab9722af9cac588",
+      "presentationStateSha256": "5a30801587a4edee466117c06115ad9df315a4415710f173265e33c17024ae3d",
+      "startedAt": "2026-10-07T07:28:25.559Z",
+      "finishedAt": "2026-10-07T07:31:04.211Z",
+      "counts": {
+        "selectedPages": 5,
+        "pageRuns": 5,
+        "passed": 4,
+        "failed": 1,
+        "unavailable": 0,
+        "pending": 2
+      },
+      "functionalPassed": false,
+      "visualAcceptance": "provisional-baselines-await-review",
+      "sessions": [
+        {
+          "matrix": "edge",
+          "dashboard": "https://testingbot.com/members/tests/14682581dfc2-4c39806631cb-628601659662-179135811038-29067149",
+          "status": "failed",
+          "closed": true,
+          "resultRecorded": true,
+          "provider": {
+            "id": 53475770,
+            "success": false,
+            "durationSeconds": 149,
+            "assetsAvailable": false,
+            "deviceName": null,
+            "platformName": null,
+            "os": "WIN11",
+            "browser": "microsoftedge",
+            "browserVersion": "153"
+          },
+          "cases": [
+            {
+              "id": "shop",
+              "url": "https://www.pinnacleblooms.org/shop",
+              "status": "failed",
+              "viewport": {
+                "width": 768,
+                "height": 1024
+              },
+              "failedChecks": [
+                "P2 readable paragraph sizes and widths"
+              ],
+              "warnings": [
+                "P2 readability findings: [{\"fontSize\":\"10px\",\"text\":\"✦ THE PINNACLE 101 PARENT VISUAL LIBRARY\",\"width\":713},{\"fontSize\":\"11px\",\"text\":\"Explore every free sample. Choose your ebook and continue to secure checkout. Printed editions remain out of stock.\",\"width\":713},{\"fontSize\":\"11px\",\"text\":\"Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock\",\"width\":657},{\"fontSize\":\"11px\",\"text\":\"Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco\",\"width\":713},{\"fontSize\":\"10px\",\"text\":\"A LITTLE CLARITY BEFORE YOU CHOOSE\",\"width\":317.984375}]"
+              ],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": [
+                {
+                  "fontSize": "10px",
+                  "text": "✦ THE PINNACLE 101 PARENT VISUAL LIBRARY",
+                  "width": 713
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Explore every free sample. Choose your ebook and continue to secure checkout. Printed editions remain out of stock.",
+                  "width": 713
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Softcover set ₹2,499 · Hardbound set ₹5,499 · Print out of stock",
+                  "width": 657
+                },
+                {
+                  "fontSize": "11px",
+                  "text": "Review the scope and status of the records in the Verify portal. Organisational credentials are not a guarantee of outco",
+                  "width": 713
+                },
+                {
+                  "fontSize": "10px",
+                  "text": "A LITTLE CLARITY BEFORE YOU CHOOSE",
+                  "width": 317.984375
+                }
+              ]
+            },
+            {
+              "id": "pinnacleai",
+              "url": "https://www.pinnacleblooms.org/pinnacleai",
+              "status": "passed",
+              "viewport": {
+                "width": 768,
+                "height": 1024
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "speech",
+              "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+              "status": "passed",
+              "viewport": {
+                "width": 768,
+                "height": 1024
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "Provider visual comparison unavailable: Provider did not return a real visual-comparison result"
+              ],
+              "visual": null,
+              "smallText": []
+            },
+            {
+              "id": "enrolment",
+              "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+              "status": "passed",
+              "viewport": {
+                "width": 768,
+                "height": 1024
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-edge-WIN11-768x1024",
+                "visualId": 20771,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            },
+            {
+              "id": "centre-suchitra",
+              "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+              "status": "passed",
+              "viewport": {
+                "width": 768,
+                "height": 1024
+              },
+              "failedChecks": [],
+              "warnings": [],
+              "skipped": [
+                "First provider screenshot is a provisional baseline; automatic baseline creation is not design approval"
+              ],
+              "visual": {
+                "name": "pinnacle-common-v159-edge-WIN11-768x1024",
+                "visualId": 20771,
+                "approval": "provisional-first-capture",
+                "match": true
+              },
+              "smallText": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

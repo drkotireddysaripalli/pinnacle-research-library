@@ -7,7 +7,7 @@ import {testingBotClient,writeJson} from './testingbot-client.mjs';
 import {pageManifest,selectCases,matrix} from '../tests/testingbot/page-manifest.mjs';
 import {measurePinnacleLifecycle} from '../tests/browser/pinnacle-lifecycle-contract.mjs';
 import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
-import {headerReferenceName,imageInViewport} from '../tests/testingbot/presentation-state.mjs';
+import {headerReferenceName,imageInViewport,desktopScreenResolution,fitCssViewport} from '../tests/testingbot/presentation-state.mjs';
 
 const option=(name,fallback)=>{const i=process.argv.indexOf('--'+name);return i<0?fallback:process.argv[i+1];};
 const suite=option('suite','bvt'),build=process.argv.includes('--build'),list=process.argv.includes('--list');
@@ -76,7 +76,7 @@ for(const matrixId of matrixIds){
   const snap=async(test,name)=>{await evaluate('return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r(true))))');const encoded=await wd('/screenshot');const file=matrixId+'-'+test.id+'-'+name+'.png';await fs.writeFile(out+'/'+file,Buffer.from(encoded,'base64'));test.screenshots.push(file);};
   try{
     const desktop=config.kind==='desktop';
-    const caps={platformName:desktop?config.platformName:device.platform_name,browserName:config.browserName,...(desktop?{browserVersion:device.version}:{'appium:automationName':config.platformName==='iOS'?'XCUITest':'UiAutomator2','appium:deviceName':device.name,'appium:platformVersion':device.version,'appium:newCommandTimeout':90}),'tb:options':{name:'Pinnacle '+suite+' '+matrixId+' '+stamp,build:'portal-'+source.slice(0,12)+'-'+suite,...(process.env.TESTINGBOT_TUNNEL_ID?{tunnelIdentifier:process.env.TESTINGBOT_TUNNEL_ID}:{}),...(!desktop?{realDevice:true}:{'screen-resolution':'1920x1080'}),debugging:desktop&&['chrome','edge'].includes(matrixId),screenrecorder:true,screenshot:false,maxduration:1800,idleTimeout:90}};
+    const caps={platformName:desktop?config.platformName:device.platform_name,browserName:config.browserName,...(desktop?{browserVersion:device.version}:{'appium:automationName':config.platformName==='iOS'?'XCUITest':'UiAutomator2','appium:deviceName':device.name,'appium:platformVersion':device.version,'appium:newCommandTimeout':90}),'tb:options':{name:'Pinnacle '+suite+' '+matrixId+' '+stamp,build:'portal-'+source.slice(0,12)+'-'+suite,...(process.env.TESTINGBOT_TUNNEL_ID?{tunnelIdentifier:process.env.TESTINGBOT_TUNNEL_ID}:{}),...(!desktop?{realDevice:true}:{'screen-resolution':desktopScreenResolution(config)}),debugging:desktop&&['chrome','edge'].includes(matrixId),screenrecorder:true,screenshot:false,maxduration:1800,idleTimeout:90}};
     console.log('Starting '+matrixId+' '+device.name+' '+device.version);
     // Physical allocation/boot can outlast 150s. The provider evidence showed
     // successful Android creation immediately before the old client timed out.
@@ -84,7 +84,7 @@ for(const matrixId of matrixIds){
     sessionId=created.value?.sessionId||created.sessionId;if(!sessionId)throw Error('No session ID');
     session.sessionId=sessionId;session.providerCapabilities=created.value?.capabilities||{};session.dashboard='https://testingbot.com/members/tests/'+sessionId;
     await wd('/timeouts','POST',{pageLoad:60000,script:20000,implicit:1000});
-    if(desktop){await wd('/window/rect','POST',{width:Math.max(config.width,500),height:config.height+180});const v=await evaluate('return {width:innerWidth,height:innerHeight}');await wd('/window/rect','POST',{width:Math.max(config.width,500)+(config.width-v.width),height:config.height+180+(config.height-v.height)});}
+    if(desktop)await wd('/window/rect','POST',{width:Math.max(config.width,500),height:config.height+180});
     for(const p of selected){
       const t={id:p.id,canonical:p.canonical,family:p.family,priority:p.priority,status:'running',checks:[],screenshots:[],warnings:p.knownGap?[p.knownGap]:[],skipped:[],startedAt:new Date().toISOString()};session.cases.push(t);await save();
       if(!p.published){t.status='pending';t.reason=p.reason;continue;}
@@ -95,6 +95,7 @@ for(const matrixId of matrixIds){
         await check('Correct public document loads',()=>response.status===200&&!/noindex/i.test(t.http.xRobots||''));
         if(response.status!==200)throw Error('Target document HTTP '+response.status);
         await wd('/url','POST',{url:target});
+        if(desktop)await fitCssViewport(config,{viewport:()=>evaluate('return new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(()=>r({width:innerWidth,height:innerHeight}))))'),rect:()=>wd('/window/rect'),resize:bounds=>wd('/window/rect','POST',bounds)});
         await evaluate('return document.fonts.ready.then(()=>true)');
         t.document=await evaluate("return {url:location.href,title:document.title,canonical:document.querySelector('link[rel=canonical]')?.href,description:document.querySelector('meta[name=description]')?.content,h1:[...document.querySelectorAll('main h1')].map(n=>n.textContent.trim()),width:innerWidth,height:innerHeight,ua:navigator.userAgent,screen:{width:screen.width,height:screen.height},dpr:devicePixelRatio,ready:document.readyState}");
         await check('Browser/OS identity is actual requested coverage',()=>{const c=session.providerCapabilities;const browser=String(c.browserName||'').toLowerCase().replace('microsoft','');const name=config.browserName.toLowerCase().replace('microsoft','');const ua=t.document.ua;return browser===name&&(desktop?(config.platformName==='WIN11'?/Windows/i.test(ua):/Mac/i.test(ua)):(config.platformName==='iOS'?/iPhone|iPad/i.test(ua):/Android/i.test(ua)));});
@@ -180,6 +181,7 @@ for(const matrixId of matrixIds){
         t.status=t.checks.length>0&&t.checks.every(c=>c.passed)?'passed':'failed';
       }catch(e){t.status='failed';t.error=redact(e.message);try{await snap(t,'failure');}catch{}}
       t.finishedAt=new Date().toISOString();await save();console.log(JSON.stringify({matrix:matrixId,case:p.id,status:t.status,failed:t.checks.filter(c=>!c.passed).map(c=>c.name),error:t.error}));
+      if(t.error?.startsWith('Requested CSS viewport unavailable:')){session.skipped.push('Remaining cases not executed: provider viewport could not be calibrated; no repeated identical setup attempts');break;}
     }
     if(process.argv.includes('--network')){
       if(!['chrome','edge'].includes(matrixId))session.skipped.push('Provider network commands are not enabled for this browser; no Safari/physical throttle claim');
