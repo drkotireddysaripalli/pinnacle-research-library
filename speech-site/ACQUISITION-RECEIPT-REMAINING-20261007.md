@@ -2,6 +2,8 @@
 
 ## Status: not complete
 
+**8 October update:** implementation items 1–4 and the isolated MySQL/RPC verification in item 6 were deployed in this website chat. The ledger, private named binding and versioned receiver/client are active. The source-review snapshot and “bridge missing” language below are historical and superseded by `WEBSITE-COMPLETION-RECEIPT-20261008.md` and `deployment/completion-enrolment-20261007.json`. Item 5—verified operational outcome exports and joins—remains open; no real qualification, attendance or admission attribution is claimed.
+
 Website implementation owner: this website thread. Existing admissions/telephony outcome access remains with the established operations coordination; a named receiving-system person and a verified protected outcome export have not been established here. MyOperator case 685868 is recorded in the existing closeout; a booked meeting is not evidence of its outcome.
 
 ## Fresh receiver evidence

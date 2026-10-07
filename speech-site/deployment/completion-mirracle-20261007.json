@@ -1,0 +1,17 @@
+{
+  "phase": "verified-live-shell",
+  "worker": "pinnacle-mirracle-client-privacy",
+  "version": "471e2c6b-3ba1-4126-b932-0a1a4b3006af",
+  "commit": "232d7f6286da7ef63629708cfe155af79aa16b62",
+  "sourceHash": "70586ed7048e2883b6446dbe49ee0a5edef406d58b03254203b68907cde8cbf1",
+  "bindings": 0,
+  "at": "2026-10-07T17:59:35.992Z",
+  "route": {
+    "id": "7898b8cb809442308dc1a0ea754c73e8",
+    "pattern": "mirracle.pinnacleblooms.org/*",
+    "script": "pinnacle-mirracle-client-privacy",
+    "request_limit_fail_open": false
+  },
+  "routesPreserved": 258,
+  "verifiedAt": "2026-10-07T17:59:43.190Z"
+}

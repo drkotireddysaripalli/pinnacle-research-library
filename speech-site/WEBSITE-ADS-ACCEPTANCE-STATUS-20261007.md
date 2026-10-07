@@ -1,5 +1,7 @@
 # Website and Ads acceptance — current disposition
 
+**8 October update:** the durable receipt bridge described as missing in this earlier snapshot is now active, with a named private RPC binding and isolated MySQL persistence/idempotency evidence. See `WEBSITE-COMPLETION-RECEIPT-20261008.md`. Its remaining operational source-to-call/qualification/appointment/attendance/admission joins are still unverified. Earlier unrelated delivery evidence remains scoped to its recorded release; this update does not certify all sixteen Ads acceptance criteria.
+
 7 October 2026. Website owner: this Windows website task. Governing criteria: the owner's complete 16-part acceptance standard supplied in this conversation. The linked Mac document has not been fetched here; the supplied text is sufficient to apply the requirements. This record assesses delivery and next work; it does not certify full acceptance or deploy a fix.
 
 ## Result

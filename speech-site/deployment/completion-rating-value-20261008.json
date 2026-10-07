@@ -1,0 +1,60 @@
+{
+  "id": "completion-rating-value-20261008",
+  "phase": "verified-live-public",
+  "at": "2026-10-07T19:10:30.616Z",
+  "baseCommit": "33c56d2648d058eea1c5452b4245b262cd5d34dd",
+  "rollback": [
+    {
+      "version_id": "55840404-bcf9-40ab-8225-16f6f7dcab19",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 259,
+  "moduleCount": 9,
+  "originalHashes": {
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "entry.mjs": "7f2f64a79d4015d9514799f530d9592440b0ecfaf5d7d57cc8f45040b78c87c8",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa"
+  },
+  "commit": "911f5b53df98b955bb9c5acd38c83f4af2c3d959",
+  "candidate": "06108763-eda8-4e2c-a44f-3b46956c3bc3",
+  "hashes": {
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "entry.mjs": "b6f57a9e11d166a153bd9f8d53bcf897cc014ba763654592ae6b25a02dad71e3",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa"
+  },
+  "deployment": "a6fd2c28-4df7-4a0c-888d-5c9dc842a5f3",
+  "promotedAt": "2026-10-07T19:12:22.469Z",
+  "verifiedAt": "2026-10-07T19:12:24.127Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-verify-route",
+    "pinnacle-ask",
+    "pinnacle-ask-mcp",
+    "pinnacle-centre-search-repair",
+    "pinnacle-helpline"
+  ],
+  "routesPreserved": 259,
+  "bindingsPreserved": true,
+  "publicVerifiedAt": "2026-10-07T19:13:08.078Z",
+  "publicEvidence": {
+    "jsonReadbackCases": 6,
+    "runtimeReadingCases": 3,
+    "allPassed": true,
+    "readbackSha256": "954f3044876925b845097fca6406a22c05fd4e9000438ae3fa08a4a39f0c6e1b",
+    "runtimeSha256": "a588f2e5f5e0ad2827bc935e155a27d02ec52c51701246d86e606774a15f6ec6",
+    "record": "work/website-completion-20261007/final-public-readback.json",
+    "runtimeRecord": "work/website-completion-20261007/runtime-final-proof.json"
+  }
+}

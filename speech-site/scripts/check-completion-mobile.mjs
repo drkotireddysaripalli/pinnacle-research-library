@@ -4,6 +4,7 @@ import path from 'node:path';
 import lighthouse from 'lighthouse';
 import {chromium} from '@playwright/test';
 import net from 'node:net';
+import {createHash} from 'node:crypto';
 const phase=process.argv[2]||'before';
 if(!['before','after'].includes(phase))throw Error('Use before or after');
 const root=path.resolve(import.meta.dirname,'../../../website-completion-20261007',phase+'-mobile');
@@ -12,11 +13,12 @@ const urls=JSON.parse(await fs.readFile(path.resolve(root,'../'+phase+'/summary.
 const selected=process.argv.slice(3),ids=selected.length?selected:['materials','miracles','mirracle-app','centre','abilities','staff','blog'];
 const socket=net.createServer();await new Promise(r=>socket.listen(0,'127.0.0.1',r));const port=socket.address().port;await new Promise(r=>socket.close(r));
 const browser=await chromium.launch({headless:true,args:[`--remote-debugging-port=${port}`]});
-const results={at:new Date().toISOString(),kind:'single mobile simulated Lighthouse lab pass; not field INP or physical-device proof',phase,pages:[]};
+let previous;try{previous=JSON.parse(await fs.readFile(path.join(root,'summary.json'),'utf8'));}catch{}
+const results={at:new Date().toISOString(),kind:'one mobile simulated Lighthouse lab pass per changed family; not field INP or physical-device proof',phase,pages:(previous?.pages||[]).filter(p=>!ids.includes(p.id))};
 try{
  for(const id of ids){
   const url=urls[id]?.url;if(!url)throw Error('Unknown family');
-  const report={id,url};
+  const report={id,url,at:new Date().toISOString()};
   try{
    const {lhr}=await lighthouse(url,{port,logLevel:'error',onlyCategories:['performance','accessibility','seo'],enableErrorReporting:false,blockedUrlPatterns:['*google-analytics.com*','*analytics.google.com*','*ob.aseasky.link*'],maxWaitForLoad:45000});
    await fs.writeFile(path.join(root,id+'-lighthouse.json'),JSON.stringify(lhr));
@@ -29,7 +31,10 @@ try{
   await context.route(/google-analytics\.com|analytics\.google\.com|ob\.aseasky\.link/,r=>r.abort());
   const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
   try{
-   await page.goto(url,{waitUntil:'domcontentloaded',timeout:60000});await page.waitForTimeout(2000);
+   const documentResponse=await page.goto(url,{waitUntil:'domcontentloaded',timeout:60000});
+   const documentBody=await documentResponse.body();
+   report.documentProof={status:documentResponse.status(),sha256:createHash('sha256').update(documentBody).digest('hex'),bytes:documentBody.length,headers:await documentResponse.allHeaders(),readingLayout:documentBody.includes(Buffer.from('data-pinnacle-reading-layout'))};
+   await page.waitForTimeout(2000);
    report.render=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,h1:[...document.querySelectorAll('h1')].map(e=>e.textContent.trim()),bodyVisible:document.body.getBoundingClientRect().height>0,images:[...document.images].filter(e=>e.getBoundingClientRect().top<innerHeight).map(e=>({src:e.currentSrc,loaded:e.complete&&e.naturalWidth>0,width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height})),links:[...document.querySelectorAll('a[href^="tel:"]')].map(e=>({href:e.getAttribute('href'),text:e.textContent.trim()})).slice(0,8)}));
    await page.screenshot({path:path.join(root,id+'-390.png')});
    const button=page.getByRole('button',{name:/menu|more|privacy settings|cookie settings/i}).first();

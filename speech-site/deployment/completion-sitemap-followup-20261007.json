@@ -1,0 +1,27 @@
+{
+  "target": "sitemap-followup",
+  "worker": "pinnacle-root-sitemap",
+  "phase": "verified-configuration",
+  "commit": "d8b38b5a964fcaa812836bed2b836c78d26a2d13",
+  "rollback": [
+    {
+      "version_id": "45622e37-4a8a-45d6-a9d4-18f36fdedf27",
+      "percentage": 100
+    }
+  ],
+  "version": "b5355814-5f77-4b51-b2c5-98b2544e1d75",
+  "at": "2026-10-07T17:54:54.128Z",
+  "hashes": {
+    "index.mjs": "7e2274f5e6d29bb2d22d1571e7c0eb4f31e3cb4ac4d5de94ef1ffcd116ee7bc0"
+  },
+  "existingBindingsPreserved": [],
+  "newPublicRoutes": 0,
+  "deployment": "3bfb19ef-66eb-4d09-b797-51e8a883282e",
+  "updatedAt": "2026-10-07T17:55:00.644Z",
+  "publicSitemapEvidence": {
+    "uniquePages": 19292,
+    "videos": 19163,
+    "missingRequired": 0,
+    "wellFormed": true
+  }
+}

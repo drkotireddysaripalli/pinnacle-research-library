@@ -1,0 +1,62 @@
+{
+  "target": "receiver-sitemap",
+  "worker": "pbn-planetscale",
+  "phase": "verified-configuration",
+  "commit": "930a4acd5d6cd007253d6d351f7606655d225724",
+  "rollback": [
+    {
+      "version_id": "1d8d7f64-9b02-444c-8572-d4a8e3419a00",
+      "percentage": 100
+    }
+  ],
+  "version": "fc9a831c-e0ba-4a8e-ae55-21ca74e8a79f",
+  "at": "2026-10-07T18:11:01.382Z",
+  "hashes": {
+    "index.js": "016fc08a456bb2274592f0f3ce94f02c3b21b89c3bdabde2abb1128ed2131b64",
+    "website-enrolment-receipt.mjs": "bf2450c0d717fa22985aa4be0bd818aa39b86919f61c078bb6a6e1db18ecedff"
+  },
+  "existingBindingsPreserved": [
+    "AISENSY_CORE_ENABLED",
+    "AISENSY_CORE_SHARED_SECRET",
+    "AISENSY_LEAD_RECEIPTS",
+    "DATABASE_HOST",
+    "DATABASE_PASSWORD",
+    "DATABASE_USERNAME",
+    "PBN_BUCKET",
+    "PINNACLE_AUTHSTORE_KV",
+    "PINNACLE_DB",
+    "PINNACLE_KV"
+  ],
+  "newPublicRoutes": 0,
+  "deployment": "49af0031-07d0-487c-8fc7-9decd3279c95",
+  "updatedAt": "2026-10-07T18:11:44.501Z",
+  "publicSitemapEvidence": {
+    "responseLocalWriterSequence": [
+      {
+        "name": "staff-first",
+        "url": "https://psapi.pinnacleblooms.org/staffsitemap",
+        "status": 200,
+        "xmlWellFormed": true,
+        "pages": 258,
+        "unique": 258
+      },
+      {
+        "name": "bots",
+        "url": "https://psapi.pinnacleblooms.org/botsitemap",
+        "status": 200,
+        "xmlWellFormed": true,
+        "pages": 726,
+        "unique": 726
+      },
+      {
+        "name": "staff-after-bots",
+        "url": "https://psapi.pinnacleblooms.org/staffsitemap",
+        "status": 200,
+        "xmlWellFormed": true,
+        "pages": 258,
+        "unique": 258
+      }
+    ],
+    "ledgerVerification": "isolated actual MySQL/private-RPC fixtures; no customer leads"
+  }
+}
