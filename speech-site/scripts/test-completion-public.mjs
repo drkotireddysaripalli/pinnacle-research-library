@@ -8,12 +8,13 @@ import {Miniflare,convertV4MiniflareOptions} from 'miniflare';
 const f=JSON.parse(await fs.readFile(new URL('../tests/fixtures/guru-navaratri-jsonld.json',import.meta.url),'utf8'));
 test('shared rating callback tolerates absent counter while preserving actual rating and changed-code bypass',()=>{
  const assignment="document.getElementById('votesupdate').innerText = (sData.aggregateRating.reviewCount) +\"\";";
- const input='// getsunshinerating? jSuites.rating\n'+assignment+'\n'+assignment;
+ const value="document.getElementById('ratingvalueupdate').innerText = (sData.aggregateRating.ratingValue) ;";
+ const input='// getsunshinerating? jSuites.rating\n'+assignment+'\n'+assignment+'\n'+value;
  const result=repairMissingRatingCounter(input);
- assert.equal((result.match(/ && /g)||[]).length,2);
- const run=new Function('document','sData',result),data={aggregateRating:{reviewCount:12}};
+ assert.equal((result.match(/ && /g)||[]).length,3);
+ const run=new Function('document','sData',result),data={aggregateRating:{reviewCount:12,ratingValue:4.5}};
  assert.doesNotThrow(()=>run({getElementById:()=>null},data));
- const el={innerText:''};run({getElementById:()=>el},data);assert.equal(el.innerText,'12');
+ const counter={innerText:''},rating={innerText:''};run({getElementById:id=>id==='votesupdate'?counter:rating},data);assert.equal(counter.innerText,'12');assert.equal(rating.innerText,4.5);
  assert.equal(repairMissingRatingCounter(input.replace('reviewCount','otherField')),input.replace('reviewCount','otherField'));
 });
 test('exact dangling medicine-ball comment is omitted; changed content and other routes bypass',async()=>{

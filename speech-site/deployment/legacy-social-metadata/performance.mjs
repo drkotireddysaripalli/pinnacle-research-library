@@ -9,7 +9,9 @@ class StaffTitle {
 export function repairMissingRatingCounter(text){
  const assignment="document.getElementById('votesupdate').innerText = (sData.aggregateRating.reviewCount) +\"\";";
  if(!text.includes('getsunshinerating?')||!text.includes('jSuites.rating')||text.split(assignment).length!==3)return text;
- return text.replaceAll(assignment,"document.getElementById('votesupdate') && (document.getElementById('votesupdate').innerText = (sData.aggregateRating.reviewCount) +\"\");");
+ const value="document.getElementById('ratingvalueupdate').innerText = (sData.aggregateRating.ratingValue) ;";
+ return text.replaceAll(assignment,"document.getElementById('votesupdate') && (document.getElementById('votesupdate').innerText = (sData.aggregateRating.reviewCount) +\"\");")
+  .replaceAll(value,"document.getElementById('ratingvalueupdate') && (document.getElementById('ratingvalueupdate').innerText = (sData.aggregateRating.ratingValue));");
 }
 class RatingScript {
  element(e){
