@@ -94,3 +94,21 @@ test('book PDF previews serve PDF MIME for browser readers on GET and HEAD',asyn
  const sampleEnv={ASSETS:{fetch:async r=>new Response(r.method==='HEAD'?null:'%PDF-fixture',{headers:{'content-type':'application/octet-stream'}})}};
  for(const method of ['GET','HEAD']){const response=await serveSpeech(request(path,{method}),sampleEnv,sampleInventory);assert.equal(response.status,200);assert.equal(response.headers.get('content-type'),'application/pdf');assert.equal(response.headers.get('x-content-type-options'),'nosniff');assert.equal(await response.text(),method==='HEAD'?'':'%PDF-fixture');}
 });
+
+test('common sitemap and analytics use the live union rather than bundled therapy snapshots',async()=>{
+ const bodies={'/pinnacle-pages-data/speech-sitemap.xml':'<urlset><url><loc>https://www.pinnacleblooms.org/centers/current-centre</loc></url></urlset>','/pinnacle-pages-scripts/speech-measurement.js':'/* current common analytics */'};
+ const current={ASSETS:{fetch:async r=>new Response(r.method==='HEAD'?null:bodies[new URL(r.url).pathname])}};
+ for(const [key,body]of Object.entries(bodies)){
+  const response=await serveSpeech(request(key),current,inventory);
+  assert.equal(await response.text(),body);
+  assert.equal(response.headers.get('etag'),'"speech-'+inventory[key]+'"');
+  const alias=key.endsWith('.xml')?await serveSpeech(request('/speech-therapy/sitemap.xml'),current,inventory):null;
+  if(alias)assert.equal(await alias.text(),body);
+ }
+ const missing=await serveSpeech(request('/pinnacle-pages-data/speech-sitemap.xml'),{ASSETS:{fetch:async()=>new Response('missing',{status:404})}},inventory);
+ assert.equal(missing.status,503,'Do not disguise a missing live sitemap with an old snapshot');
+});
+test('the approved CHEQ diagnostic can create its browser worker without broad external worker access',async()=>{
+ const response=await serveSpeech(request(canonical),env,inventory);
+ assert.match(response.headers.get('content-security-policy'),/worker-src 'self' blob:;/);
+});
