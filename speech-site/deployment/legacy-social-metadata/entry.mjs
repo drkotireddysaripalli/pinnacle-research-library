@@ -13,7 +13,7 @@ import {repairKnownLegacyPerformance} from './performance.mjs';
 export const RELEASE = 'legacy-social-https-20261004';
 export const HEAD_LIMIT = 64 * 1024;
 // Existing legacy templates with the same measured HTTP social/HTTPS canonical defect.
-export const ADDITIONAL_LEGACY_PATHS = ['/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training', '/staff', '/careers', '/dance-therapy', '/certified-courses', '/certifiedcourses', '/courses/466/Afraid', '/courses/466/afraid'];
+export const ADDITIONAL_LEGACY_PATHS = ['/therapeuticai-effectiveness-study', '/allmirracles', '/yoga-therapy', '/teachertraining', '/teacher-training', '/staff', '/careers', '/dance-therapy', '/certified-courses', '/certifiedcourses', '/courses/466/Afraid', '/courses/466/afraid'];
 export const ADDITIONAL_LEGACY_ROUTES = ['www.pinnacleblooms.org/t/*', 'www.pinnacleblooms.org/mirracles/*', ...ADDITIONAL_LEGACY_PATHS.map(p => 'www.pinnacleblooms.org' + p + '*')];
 const encoder = new TextEncoder();
 const transformedResponses = new WeakSet();
@@ -98,7 +98,7 @@ async function repairHead(head, request) {
   // The legacy numeric Mirracles routes publish lowercase canonical slugs.
   // Only that documented route family permits a case-normalized comparison.
   const sameMirracle = /^\/(?:mirracles|guru)\/\d+\/(?:[^/]+\/?)?$/.test(requestUrl.pathname) &&
-    parsed.pathname.replace(/\/$/, '') === requestUrl.pathname.replace(/\/$/, '').toLowerCase();
+    parsed.pathname.replace(/\/$/, '').toLowerCase() === requestUrl.pathname.replace(/\/$/, '').toLowerCase();
   const sameRecordedCourse = requestUrl.pathname.replace(/\/$/,'')==='/courses/466/Afraid' && parsed.pathname==='/courses/466/afraid';
   // Published numeric staff profiles likewise use lowercase canonical slugs.
   // Retired profiles and recorded canonical redirects are handled before here.

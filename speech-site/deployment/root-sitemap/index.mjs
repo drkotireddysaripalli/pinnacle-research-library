@@ -241,7 +241,7 @@ var index_default = {
       const upstream=await fetch(new Request(request,{method:'GET'}));
       return repairVideoSitemap(upstream,method);
     }
-    if(pathname==='/mirraclesitemap')return fetch(request);
+    if(pathname.startsWith('/mirraclesitemap'))return fetch(request);
     if (pathname === "/sitemap.xml") {
       return xmlResponse(sitemapIndexXml(), 200, method);
     }
@@ -263,7 +263,8 @@ var index_default = {
     }
     const target = PROXY_TARGETS.get(pathname);
     if (target) {
-      return proxySitemap(target, method);
+      const response=await proxySitemap(target, method);
+      return pathname==='/sitemaps/miracles.xml'?repairVideoSitemap(response,method):response;
     }
     return xmlResponse('<?xml version="1.0" encoding="UTF-8"?><error>Not found</error>\n', 404, method, "public, max-age=60");
   }

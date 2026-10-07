@@ -13,7 +13,7 @@ export function repairKnownLegacyPerformance(response,request){
  if(u.origin!=='https://www.pinnacleblooms.org'||!/^\/(?:ma\/[^/]+|abilities\/[^/]+|b\/[^/]+|staff\/?|mirracles\/\d+\/[^/]+)\/?$/.test(u.pathname))return response;
  let hero=false,video=false;
  const rewrite=new HTMLRewriter()
- .on('.img-holder > img, .all-staff-container > .cm-mini-header-seperator > img',{element(e){
+ .on('img',{element(e){
   if(hero)return;const src=e.getAttribute('src')||'';
   if(!/^https:\/\/(?:images\.pinnacleblooms\.org\/(?:Ability|Materials)\/Sections\/|www\.pinnacleblooms\.org\/(?:Assets\/Materials\/\d+\.(?:jpg|png)|Images\/pinnacle-about\.webp))/i.test(src))return;
   hero=true;e.setAttribute('loading','eager');e.setAttribute('fetchpriority','high');e.setAttribute('decoding','async');

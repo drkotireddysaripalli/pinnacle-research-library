@@ -147,6 +147,13 @@ async function repairPhysiotherapyWebPage(text, requestUrl) {
 export async function repairLegacyGraph(text, requestUrl) {
   if(text.length>SCHEMA_LIMIT)return text;
   const normalized=text.trim().replaceAll('\r\n','\n');
+  if(requestUrl && new URL(requestUrl).pathname==='/therapeuticai-effectiveness-study' && normalized.includes('"@type": "MedicalStudy"')) {
+    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');
+    if(digest==='5de8875439e3d8882ca65217746eb6a79851944fd349c7bc0750dd8e09be6821'){
+      const repaired=text.replace(/}\s*},\s*"softwareRequirements"/,'},\n    "softwareRequirements"');
+      try{if(JSON.parse(repaired)['@type']==='MedicalStudy')text=repaired;}catch{return text;}
+    }
+  }
   // Exact Navaratri article: the origin placed unescaped CSS backslashes into
   // JSON. Escape those bytes for JSON rather than changing its article/CSS.
   // Unknown articles, changed content and private responses are not rewritten.
