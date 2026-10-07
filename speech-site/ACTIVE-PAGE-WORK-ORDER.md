@@ -1,5 +1,11 @@
 # Current page work — 6 October 2026
 
+## Paid-centre mobile entry repair — 7 October; candidate accepted, release pending
+
+Owner-authorised Ads handoff: one shared entry-section repair for Guntur, Khajaguda, Kakinada, Rajahmundry and Labbipet; verify Gurunanak Road's existing Astro journey unchanged. Keep the existing enquiry handler, common header/footer, protected routes and Ads holds. Scope/acceptance: `RELEASE-PAID-CENTRE-ENTRY-20261007.md`. Native Worker-parser and consent/enquiry regressions plus phone/tablet/desktop visual checks apply. Complete exact-source CI, guarded centre-only promotion and live proof before marking released.
+
+Next owner-directed batch: reuse the existing shared centre page and mapped authentic media across remaining centre pages; add relevant nearby-centre, therapy, evidence, PinnacleAI and book/resource journeys. Do not invent local availability or rebuild each centre independently. Schedulers remain stopped.
+
 ## Shop/Books/helpline lead-path check — complete; real outcomes dependent
 
 Ten actual public URLs and both measurement sources verified.54 shared measurement/enrolment tests and10 helpline tests pass. Signed-in GA4 confirms main G-2BYLRLFRDJ and evidence/helpline G-H9CLX1WJ7R in property361649365; no source correction or account change justified. Accepted enquiries require provider acknowledgement and consent; taps/navigation stay distinct. No deployment,live enquiry/call or synthetic event. Actual qualified outcomes await existing MyOperator case685868 and7October technical clarification. See `REVIEW-LEAD-PATH-CLOSEOUT-20261006.md`. Current runtime versions/routes and scheduler stop retained.

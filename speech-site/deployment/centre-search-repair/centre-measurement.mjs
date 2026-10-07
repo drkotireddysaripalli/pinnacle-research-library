@@ -3,9 +3,13 @@ export const MEASUREMENT_RELEASE = 'centre-contact-measurement-20261005';
 export const CENTRE_ROUTES = {
   '/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india': {id:'kukatpally',service:'speech'},
   '/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india': {id:'lbnagar',service:'help'},
-  '/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india': {id:'labbipet',service:'help'},
+  '/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india': {id:'labbipet',service:'help',services:['help','speech','occupational','aba','autism']},
   '/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india': {id:'annanagar',service:'help'},
-  '/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india': {id:'chandanagar',service:'help'}
+  '/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india': {id:'chandanagar',service:'help'},
+  '/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india': {id:'guntur',service:'help',services:['help','speech','occupational','aba','autism']},
+  '/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india': {id:'khajaguda',service:'help',services:['help','speech','occupational','aba','autism']},
+  '/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india': {id:'kakinada',service:'help',services:['help','speech','occupational','aba','autism']},
+  '/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india': {id:'rajahmundry',service:'help',services:['help','speech','occupational','aba','autism']}
 };
 
 export function centreContactMeasurement(config) {
@@ -50,7 +54,7 @@ export function centreContactMeasurement(config) {
           target.pathname !== '/enroll-autism-speech-aba-therapies-india' ||
           keys.some(key => !['service','centre'].includes(key)) || new Set(keys).size !== keys.length) return;
       const centre = target.searchParams.get('centre'), service = target.searchParams.get('service');
-      if ((centre !== null && centre !== config.id) || (service !== null && service !== config.service)) return;
+      if ((centre !== null && centre !== config.id) || (service !== null && !(config.services||[config.service]).includes(service))) return;
       send('enquiry_link_click','existing_enrolment_form',config.id + '-enquiry');
     } catch { /* Ignore non-enrolment destinations. */ }
   });
@@ -61,7 +65,7 @@ export function measurementScript(path) {
   const config = CENTRE_ROUTES[path];
   if (!config) return '';
   return '<script id="pinnacle-centre-contact-measurement" data-cfasync="false">(' +
-    centreContactMeasurement.toString() + ')(' + JSON.stringify({...config,path}) + ');</script>';
+    centreContactMeasurement.toString() + ')(' + JSON.stringify({...config,path,services:config.services||[config.service]}) + ');</script>';
 }
 
 export async function addCentreMeasurement(request,response) {
