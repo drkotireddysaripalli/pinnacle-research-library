@@ -2,6 +2,7 @@
 // Reuse the established schema repairs without taking over another route owner.
 import {repairKnownLegacySchema} from './legacy-social-metadata/schema.mjs';
 import {repairPublicLinks} from './public-link-target.mjs';
+import {CENTRE_CANONICAL_PATHS} from './centre-canonical-paths.mjs';
 export const LEGACY_TEMPLATE_PATHS = new Set([
  '/seva-index','/question-comprehension-study','/therapeuticai-effectiveness-study',
  '/autism-speech-aba-news','/global-research-whitebook','/school-readiness-study',
@@ -18,6 +19,18 @@ export const LEGACY_TEMPLATE_PATHS = new Set([
 const tracking=new Set(['utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_id','utm_source_platform','utm_creative_format','utm_marketing_tactic','gclid','dclid','msclkid','fbclid','gbraid','wbraid']);
 const decode=value=>value?.replace(/&(?:amp|#0*38|#x0*26);/gi,'&');
 const enc=new TextEncoder();
+export function residualCentreAlias(request){
+ const u=new URL(request.url),path=u.pathname.replace(/\/$/,'').toLowerCase();
+ if(!['GET','HEAD'].includes(request.method)||u.origin!=='https://www.pinnacleblooms.org'||request.headers.has('authorization')||request.headers.has('range')||
+  !CENTRE_CANONICAL_PATHS.has(path)||u.pathname===path)return null;
+ u.pathname=path;
+ return new Response(null,{status:301,headers:{location:u.href,'cache-control':'public,max-age=300','x-pinnacle-route-repair':'registered-centre-case-20261007'}});
+}
+export function residualTemplateRequest(request){
+ if(!legacyTemplateEligible(request))return request;
+ const h=new Headers(request.headers);h.delete('if-none-match');h.delete('if-modified-since');
+ return new Request(request,{headers:h});
+}
 // Shorten verified titles at a phrase boundary, never by cutting characters
 // or rewriting clinical outcomes. A changed origin title cannot opt in.
 export const LEGACY_TITLE_REPAIRS={

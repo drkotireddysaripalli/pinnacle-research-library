@@ -3,10 +3,23 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {build} from 'esbuild';
 import {Miniflare,convertV4MiniflareOptions} from 'miniflare';
-import {legacyTemplateEligible,LEGACY_TEMPLATE_PATHS,LEGACY_TITLE_REPAIRS} from '../deployment/legacy-template-coverage.mjs';
+import {legacyTemplateEligible,LEGACY_TEMPLATE_PATHS,LEGACY_TITLE_REPAIRS,residualCentreAlias,residualTemplateRequest} from '../deployment/legacy-template-coverage.mjs';
+import {CENTRE_CANONICAL_PATHS} from '../deployment/centre-canonical-paths.mjs';
 import {PUBLIC_PAGE_ALIASES,publicLinkTarget} from '../deployment/public-link-target.mjs';
 import {repairObservedCollection} from '../deployment/legacy-social-metadata/schema.mjs';
 const origin='https://www.pinnacleblooms.org';
+test('all and only registered centre case variants use current pages with attribution intact',async()=>{
+ const register=JSON.parse(await fs.readFile('src/data/centre-register.json','utf8')).centres;
+ assert.deepEqual([...CENTRE_CANONICAL_PATHS].sort(),register.map(c=>new URL(c.profileUrl).pathname).sort());
+ for(const path of CENTRE_CANONICAL_PATHS){const source=path.replace('/centers/','/Centers/');const r=residualCentreAlias(new Request(origin+source+'?gclid=opaque&utm_source=fixture'));assert.equal(r.status,301);assert.equal(r.headers.get('location'),origin+path+'?gclid=opaque&utm_source=fixture');assert.equal(publicLinkTarget(source+'#contact'),path+'#contact');assert.equal(residualCentreAlias(new Request(origin+path)),null);}
+ for(const path of ['/Centers/unknown-centre','/api/Centers/known','/staff/Sensitive/123'])assert.equal(residualCentreAlias(new Request(origin+path)),null);
+ for(const opts of [{method:'POST'},{headers:{authorization:'fixture'}},{headers:{range:'bytes=0-2'}}])assert.equal(residualCentreAlias(new Request(origin+[...CENTRE_CANONICAL_PATHS][0].toUpperCase(),opts)),null);
+});
+test('old validators cannot restore stale repaired heads; credentials and source parameters survive',()=>{
+ const request=new Request(origin+'/music-therapy?gclid=opaque',{headers:{'if-none-match':'old','if-modified-since':'old',cookie:'choice=1'}}),forwarded=residualTemplateRequest(request);
+ assert.equal(forwarded.url,request.url);assert.equal(forwarded.headers.get('cookie'),'choice=1');assert(!forwarded.headers.has('if-none-match'));assert(!forwarded.headers.has('if-modified-since'));
+ const privateRequest=new Request(origin+'/ask/auth/callback',{headers:{'if-none-match':'old'}});assert.equal(residualTemplateRequest(privateRequest),privateRequest);
+});
 test('known compatibility links go directly to their final pages and retain attribution',()=>{
  for(const [source,target] of Object.entries(PUBLIC_PAGE_ALIASES))for(const prefix of ['',origin,'http://www.pinnacleblooms.org','https://pinnacleblooms.org'])for(const suffix of ['','/'])assert.equal(publicLinkTarget(prefix+source+suffix+'?utm_source=fixture&gclid=opaque#visit'),(prefix?origin:'')+target+'?utm_source=fixture&gclid=opaque#visit');
  for(const s of ['/ask/auth/callback?code=secret','/Images/Example.JPG','/centres/not-a-known-alias','https://external.test/enroll','/enroll-more'])assert.equal(publicLinkTarget(s),s);

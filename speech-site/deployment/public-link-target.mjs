@@ -1,5 +1,6 @@
 import {currentStaffPaths} from './legacy-social-metadata/staff-records.mjs';
 import {recoveryPath,invalidSunshineLinks} from './sunshine-recovery-routes.mjs';
+import {CENTRE_CANONICAL_PATHS} from './centre-canonical-paths.mjs';
 // Existing compatibility routes, publicly reconciled on 7 October. Link to
 // their actual final page while keeping source parameters and fragments.
 export const PUBLIC_PAGE_ALIASES={
@@ -25,6 +26,8 @@ export function publicLinkTarget(href) {
  if(recovered)return 'https://www.pinnacleblooms.org'+recovered+url.search+url.hash;
  if(/^\/(?:api|cdn-cgi|Images|Assets|downloads|verify\/documents)(?:\/|$)/i.test(url.pathname)||/^\/ask\/(?:auth|account)(?:\/|$)/i.test(url.pathname)||/\.[a-z0-9]{2,8}$/i.test(url.pathname))return href;
  let changed=false;
+ const centrePath=url.pathname.replace(/\/$/,'').toLowerCase();
+ if(CENTRE_CANONICAL_PATHS.has(centrePath)&&url.pathname!==centrePath){url.protocol='https:';url.hostname='www.pinnacleblooms.org';url.pathname=centrePath;changed=true;}
  if(Object.hasOwn(PUBLIC_PAGE_ALIASES,url.pathname.replace(/\/$/,''))){url.protocol='https:';url.hostname='www.pinnacleblooms.org';url.pathname=PUBLIC_PAGE_ALIASES[url.pathname.replace(/\/$/,'')];changed=true;}
  if(url.hostname==='www.pinnacleblooms.org'&&url.protocol==='http:'){url.protocol='https:';changed=true;}
  if(/^\/(?:ask|Ask)\/?$/.test(url.pathname)){url.protocol='https:';url.hostname='pinnacleblooms.org';url.pathname='/ask';changed=true;}
