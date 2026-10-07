@@ -36,7 +36,7 @@ jobs:
       - run: npm run build:ask
   checks:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     defaults:
       run:
         working-directory: speech-site
@@ -70,6 +70,54 @@ jobs:
       - run: npm run check:page -- "$PAGE_KIND"
       - run: node scripts/validate-centre-network.mjs
       - run: npx playwright test --project=firefox --project=webkit
+      - run: npm run test:testingbot-contract
+      - name: Start exact-build preview for TestingBot
+        if: github.event_name != 'pull_request'
+        run: |
+          node scripts/serve-quality-preview.mjs > audits/testingbot-preview.log 2>&1 &
+          echo $! > audits/testingbot-preview.pid
+          for attempt in $(seq 1 20); do
+            if curl --fail --silent http://127.0.0.1:4340/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Connect TestingBot to this build
+        if: github.event_name != 'pull_request'
+        uses: testingbot/testingbot-tunnel-action@10358e89858c67a0e5c7aadb1b03ef0e2d320d20
+        with:
+          key: ${{ secrets.TESTINGBOT_KEY }}
+          secret: ${{ secrets.TESTINGBOT_SECRET }}
+          tunnelIdentifier: portal-${{ github.run_id }}-${{ github.run_attempt }}
+          noCache: true
+          retryTimeout: 2
+          readyTimeout: 90
+          uploadLogFile: false
+      - name: TestingBot BVT gates this exact build
+        if: github.event_name != 'pull_request'
+        env:
+          TESTINGBOT_KEY: ${{ secrets.TESTINGBOT_KEY }}
+          TESTINGBOT_SECRET: ${{ secrets.TESTINGBOT_SECRET }}
+          TESTINGBOT_HUB: http://localhost:4445/wd/hub
+          TESTINGBOT_BASE_URL: http://localhost:4340
+          TESTINGBOT_TUNNEL_ID: portal-${{ github.run_id }}-${{ github.run_attempt }}
+        run: |
+          npm run test:bvt -- --matrix chrome --visual --out audits/testingbot-build
+          node scripts/assert-testingbot-release.mjs audits/testingbot-build/report.json
+      - name: Declare pull-request cloud coverage boundary
+        if: github.event_name == 'pull_request'
+        run: echo 'Cloud BVT is required on the trusted source build before release. Pull-request code receives no TestingBot secrets; existing local browser tests still run.'
+      - name: Save TestingBot build evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: testingbot-build-verification
+          path: speech-site/audits/testingbot-build/
+          if-no-files-found: ignore
+          retention-days: 14
+      - name: Stop exact-build preview
+        if: always() && github.event_name != 'pull_request'
+        run: |
+          if [ -f audits/testingbot-preview.pid ]; then kill "$(cat audits/testingbot-preview.pid)" || true; fi
       - run: npm run check:speed -- "$PAGE_KIND"
         if: github.event_name == 'workflow_dispatch' && inputs.speed
       - uses: actions/upload-artifact@v4

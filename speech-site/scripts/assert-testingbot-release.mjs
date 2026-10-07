@@ -1,0 +1,16 @@
+import fs from 'node:fs/promises';
+import {execFileSync} from 'node:child_process';
+import {createHash} from 'node:crypto';
+import assert from 'node:assert/strict';
+import {suiteVerdict} from '../tests/testingbot/verdict.mjs';
+import {pageManifest,selectCases} from '../tests/testingbot/page-manifest.mjs';
+const file=process.argv[2];if(!file)throw Error('Supply the exact-build TestingBot BVT report before promotion');
+const git=process.env.GIT_EXECUTABLE||(process.platform==='win32'?'C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe':'git');
+const source=process.env.GITHUB_SHA||execFileSync(git,['rev-parse','HEAD'],{encoding:'utf8',windowsHide:true}).trim();
+const r=JSON.parse(await fs.readFile(file,'utf8'));
+assert.equal(r.source,source,'BVT did not run against the source being promoted');
+assert.equal(r.build,true,'Public production smoke cannot replace candidate-build verification');
+assert.equal(r.suite,'bvt');assert(suiteVerdict(r),'BVT failed, skipped or incomplete');
+assert.deepEqual(r.selectedIds,selectCases(await pageManifest(),'bvt',{build:true}).map(x=>x.id),'Missing build case');
+for(const [key,file] of [['runnerSha256','./testingbot-suite.mjs'],['manifestSha256','../tests/testingbot/page-manifest.mjs']])assert.equal(r[key],createHash('sha256').update(await fs.readFile(new URL(file,import.meta.url))).digest('hex'),'BVT test source changed after the run');
+console.log(JSON.stringify({passed:true,source,report:file,cases:r.selectedIds.length,scope:'Exact Astro candidate; protected Ask/Verify have separate public smoke and runtime tests'}));

@@ -1,0 +1,6 @@
+{
+  "authority": "COMMON-SHELL-BASELINE.md and tests/fixtures/shared-authority-owner-approved.json",
+  "ownerApprovedSourceTag": "pinnacle-common-shell-baseline-v159-20261001",
+  "approvalRule": "Review the actual provider snapshot against the approved common design before registering its visualId. Never automatically update or replace a baseline after a failed comparison.",
+  "approved": []
+}
