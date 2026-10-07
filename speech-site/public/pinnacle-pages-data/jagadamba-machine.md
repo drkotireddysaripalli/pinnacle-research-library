@@ -65,7 +65,7 @@ Workbook plus certificate copy dated 12 Jan 2026, recognition bundle p74. The re
 - [Original BIS licence and scope](https://www.pinnacleblooms.org/verify/evidence/bis.pdf#page=2): Named software and quality-system scope; not approval of every centre, therapy or child outcome.
 
 ## Next step
-Call [9100 181 181](tel:+919100181181) or [ask about this centre](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help).
+Call [9100 181 181](tel:+919100181181) or [ask about this centre](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=help&centre=jagadamba).
 
 <!-- centre-network-story -->
 Centre network narrative

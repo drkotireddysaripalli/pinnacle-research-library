@@ -14,6 +14,7 @@ for(const c of centreRegister){
  const schema=JSON.parse(nodes.find(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').childNodes[0].value),graph=schema['@graph'];
  assert(!graph.some(e=>e.aggregateRating||e.review),c.id+' no self-serving review-star schema');
  if(c.pageStatus==='centre-enquiry'){
+  assert(nodes.some(n=>n.tagName==='a'&&attr(n,'data-cta')==='hero-assessment'&&new URL(attr(n,'href')).searchParams.get('centre')===c.id),c.id+' selected-centre enquiry');
   const business=graph.find(e=>e['@type']==='LocalBusiness');assert(business,c.id+' local business');assert.equal(business.telephone,'+919100181181');
   assert(html.includes('id="google-reviews"')&&html.includes('id="nearby-centres"')&&html.includes('id="centre-books"'),c.id+' complete network journey');
   for(const block of ['centre-pinnacleai','centre-abilityscore','centre-readiness','centre-paradigm','centre-self-sufficient','centre-mainstream','centre-verify','centre-research','centre-citations'])assert(ids.includes(block),c.id+' visible ecosystem '+block);
