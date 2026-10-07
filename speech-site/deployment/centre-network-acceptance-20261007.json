@@ -1,0 +1,313 @@
+{
+  "at": "2026-10-07T03:43:02.742Z",
+  "sourceCommit": "8acb3c664eb5a1aa321a1f1f95f39d664fbdaf6e",
+  "workerVersion": "bdbf28c1-187f-484d-9309-d8b1d1dfcda7",
+  "deployment": "e33900a4-a63f-4a82-b996-68d4e5f34472",
+  "ci": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37567484854",
+  "pages": {
+    "total": 62,
+    "enquiry": 60,
+    "status": 2,
+    "urls": [
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-south-extension-newdelhi-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jubilee-hills-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-california-usa",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+      "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india"
+    ]
+  },
+  "delivery": {
+    "routes": 229,
+    "assets": 3260,
+    "modules": 39,
+    "bindingsPreserved": true,
+    "protectedWorkers": [
+      "pinnacle-ask",
+      "pinnacle-ask-mcp",
+      "pinnacle-legacy-social-metadata",
+      "pinnacle-centre-search-repair",
+      "pinnacle-helpline",
+      "pinnacle-root-sitemap"
+    ],
+    "publicPages": 62,
+    "evidenceExports": 62,
+    "openingAssets": 55,
+    "protectedURLs": [
+      {
+        "url": "https://www.pinnacleblooms.org/centers",
+        "status": 200,
+        "finalURL": "https://www.pinnacleblooms.org/centers"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/ask",
+        "status": 200,
+        "finalURL": "https://pinnacleblooms.org/ask"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/ask/account",
+        "status": 200,
+        "finalURL": "https://pinnacleblooms.org/ask"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/verify/",
+        "status": 200,
+        "finalURL": "https://www.pinnacleblooms.org/verify/"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/faq",
+        "status": 200,
+        "finalURL": "https://www.pinnacleblooms.org/faq"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/sunshine",
+        "status": 200,
+        "finalURL": "https://www.pinnacleblooms.org/sunshine"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/shop",
+        "status": 200,
+        "finalURL": "https://www.pinnacleblooms.org/shop"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/books",
+        "status": 200,
+        "finalURL": "https://www.pinnacleblooms.org/books"
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+        "status": 200,
+        "finalURL": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india"
+      }
+    ],
+    "sitemap": "https://www.pinnacleblooms.org/pinnacle-pages-data/speech-sitemap.xml"
+  },
+  "coverage": {
+    "localProduction": 15,
+    "localProductionWidths": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "physicalIOS": {
+      "providerDevice": {
+        "id": 38,
+        "name": "iPhone Air",
+        "platform": "iOS",
+        "version": "26.2"
+      },
+      "passed": 3,
+      "viewports": [
+        {
+          "id": "gurunanak",
+          "width": 420,
+          "height": 746,
+          "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1"
+        },
+        {
+          "id": "guntur",
+          "width": 420,
+          "height": 746,
+          "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1"
+        },
+        {
+          "id": "vanasthalipuram",
+          "width": 420,
+          "height": 746,
+          "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.2 Mobile/15E148 Safari/604.1"
+        }
+      ],
+      "playlist": {
+        "count": 1,
+        "src": "https://www.youtube-nocookie.com/embed/WYnNsoS2UO0?list=PL0lwT9W0zVpgRvW4j7ZG9OR-YQPL8V9U_&rel=0"
+      }
+    },
+    "physicalAndroid": {
+      "providerDevice": {
+        "id": 29,
+        "name": "Galaxy S24",
+        "platform": "Android",
+        "version": "14.0"
+      },
+      "passed": 3,
+      "viewports": [
+        {
+          "id": "gurunanak",
+          "width": 360,
+          "height": 647,
+          "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36"
+        },
+        {
+          "id": "guntur",
+          "width": 360,
+          "height": 647,
+          "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36"
+        },
+        {
+          "id": "vanasthalipuram",
+          "width": 360,
+          "height": 647,
+          "ua": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Mobile Safari/537.36"
+        }
+      ],
+      "playlist": {
+        "count": 1,
+        "src": "https://www.youtube-nocookie.com/embed/WYnNsoS2UO0?list=PL0lwT9W0zVpgRvW4j7ZG9OR-YQPL8V9U_&rel=0"
+      }
+    },
+    "hostedFirefox": {
+      "passed": 6,
+      "catalogue": {
+        "id": 31556,
+        "name": "firefox",
+        "platform": "WIN11",
+        "version": "155"
+      },
+      "reportStatus": "passed"
+    },
+    "limits": [
+      "All 62 pages have the register and public contract check; physical-device testing uses three representative pages per device, not every device on every route.",
+      "Local Firefox could not launch on Windows; hosted Windows Firefox was tested instead.",
+      "Geometry/media, device and Lighthouse runs used the unchanged centre document/component bytes on the preceding common release. The final handler-only correction was verified with focused regressions, current sitemap delivery and CHEQ runtime."
+    ]
+  },
+  "measurement": {
+    "passedFamilies": 9,
+    "properties": {
+      "centre": "G-2BYLRLFRDJ",
+      "speech": "G-2BYLRLFRDJ",
+      "pinnacleai": "G-2BYLRLFRDJ",
+      "enrolment": "G-2BYLRLFRDJ",
+      "ask": "G-2BYLRLFRDJ",
+      "faq": "G-2BYLRLFRDJ",
+      "sunshine": "G-2BYLRLFRDJ",
+      "shop": "G-2BYLRLFRDJ",
+      "verify": "G-H9CLX1WJ7R"
+    },
+    "gtmContainerFound": false,
+    "oneConsentedPageview": true,
+    "googleNetworkBlockedInSyntheticCheck": true,
+    "qualifiedCallAdapterVerified": false
+  },
+  "cheq": {
+    "scope": "Optional, separately consented public commercial/centre pages; private knowledge/auth/form/checkout excluded",
+    "before": {
+      "vendorRequests": 0,
+      "tags": 0
+    },
+    "after": {
+      "tags": 1,
+      "responses": 1,
+      "queryFilter": "__pinnacle_no_query_parameter__"
+    },
+    "callbackConfirmed": true,
+    "queryCanaryLeaked": false,
+    "cspErrors": 0,
+    "limits": "Runtime delivery verified, not fraud prevention, ad exclusion or saved spending."
+  },
+  "screamingFrog": {
+    "at": "2026-10-07T03:24:06.7190304Z",
+    "sourceRelease": "936bcf5f-e16a-4cf9-9294-f637394fd3b1",
+    "urls": 62,
+    "canonicalMatches": 62,
+    "httpCanonicalMatches": 62,
+    "scope": "Existing bounded 62-URL crawl reused; metadata unchanged by later shared corrections."
+  },
+  "lighthouse": [
+    {
+      "device": "mobile",
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 2025.6015,
+        "lcpMs": 2194.204,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 2025.6015
+      },
+      "targetWarnings": []
+    },
+    {
+      "device": "desktop",
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcpMs": 501.9072,
+        "lcpMs": 596.0122999999999,
+        "tbtMs": 0,
+        "cls": 0,
+        "speedIndexMs": 501.9072
+      },
+      "targetWarnings": []
+    }
+  ],
+  "search": {
+    "ahrefs": "Existing findings reused; no fresh paid full-site audit or new Health Score claimed.",
+    "gsc": "Changed sitemap and IndexNow submission receipts recorded separately; submission does not establish indexing."
+  }
+}
