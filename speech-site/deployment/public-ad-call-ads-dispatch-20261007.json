@@ -1,0 +1,20 @@
+{
+  "at": "2026-10-07T09:27:36.472Z",
+  "action": "authorised_ads_acceptance_followup",
+  "authority": "Existing direct human request for a comprehensive handoff and completion checks with the existing Ads team",
+  "target": {
+    "title": "Complete Google Ads fixes",
+    "threadId": "01a0f1b0-5266-7782-bc9d-6fee487850d4",
+    "hostId": "durable"
+  },
+  "status": "sent_tool_confirmed",
+  "receiverAcceptance": "not_yet_verified",
+  "runtimeSource": "fac4e0e5604cb33559a9c321703044078c80e8a8",
+  "portalVersion": "1e7e0554-1d56-4394-b2d7-5d4c4aa7d658",
+  "sentScope": [
+    "Declared public call-coverage pass with exact evidence",
+    "Durable receipt and source/idempotency not complete",
+    "Operational receipt-to-call/outcome export not verified"
+  ],
+  "noMessageSentToUnverifiedDelegatingThread": true
+}
