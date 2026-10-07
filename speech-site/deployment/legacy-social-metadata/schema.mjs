@@ -154,6 +154,16 @@ export async function repairLegacyGraph(text, requestUrl) {
       try{if(JSON.parse(repaired)['@type']==='MedicalStudy')text=repaired;}catch{return text;}
     }
   }
+  // Exact medicine-ball article has an empty, dangling comment property.
+  // Its two dates are origin-rendered; every other byte remains fingerprinted.
+  if(requestUrl && new URL(requestUrl).pathname==='/ma/therapy-materials-medicine-ball' && normalized.includes('"@type": "Article"')) {
+    const template=normalized.replace(/("date(?:Published|Modified)"\s*:\s*)"[^"\n]*"/g,'$1"[DATE]"');
+    const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(template))),b=>b.toString(16).padStart(2,'0')).join('');
+    if(digest==='dc7bd884c3f231916136ab4871fcca902b46f59c63fd9884ff363250387810bc') {
+      const repaired=text.replace(/,\s*"comment"\s*:\s*(?=})/,'');
+      try{if(JSON.parse(repaired)['@type']==='Article')text=repaired;}catch{return text;}
+    }
+  }
   // Exact Navaratri article: the origin placed unescaped CSS backslashes into
   // JSON. Escape those bytes for JSON rather than changing its article/CSS.
   // Unknown articles, changed content and private responses are not rewritten.

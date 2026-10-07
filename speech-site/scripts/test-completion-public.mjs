@@ -6,6 +6,14 @@ import {videoButton} from '../deployment/legacy-social-metadata/performance.mjs'
 import {build} from 'esbuild';
 import {Miniflare,convertV4MiniflareOptions} from 'miniflare';
 const f=JSON.parse(await fs.readFile(new URL('../tests/fixtures/guru-navaratri-jsonld.json',import.meta.url),'utf8'));
+test('exact dangling medicine-ball comment is omitted; changed content and other routes bypass',async()=>{
+ const f=JSON.parse(await fs.readFile(new URL('../tests/fixtures/materials-empty-comment-jsonld.json',import.meta.url),'utf8'));
+ const repaired=await repairLegacyGraph(f.raw,f.url),data=JSON.parse(repaired);
+ assert.equal(data['@type'],'Article');assert(!('comment' in data));assert.equal(data.commentCount,25);assert.equal(data.wordCount,1069);
+ const changed=f.raw.replace('1069','1070');assert.equal(await repairLegacyGraph(changed,f.url),changed);
+ assert.equal(await repairLegacyGraph(f.raw,'https://www.pinnacleblooms.org/ma/other'),f.raw);
+ assert.doesNotThrow(()=>JSON.parse(repaired));
+});
 test('only the exact MedicalStudy delimiter defect changes; source values stay intact',async()=>{const f=JSON.parse(await fs.readFile(new URL('../tests/fixtures/therapeuticai-invalid-jsonld.json',import.meta.url),'utf8')),r=await repairLegacyGraph(f.raw,'https://www.pinnacleblooms.org/therapeuticai-effectiveness-study');assert.equal(JSON.parse(r)['@type'],'MedicalStudy');assert.equal(r,f.raw.replace(/}\s*},\s*"softwareRequirements"/,'},\n    "softwareRequirements"'));assert.equal(await repairLegacyGraph(f.raw+'changed','https://www.pinnacleblooms.org/therapeuticai-effectiveness-study'),f.raw+'changed');});
 test('exact Guru invalid CSS escapes serialize with article bytes preserved',async()=>{const r=await repairLegacyGraph(f.article,'https://www.pinnacleblooms.org/guru/6385/Navaratri-Day-6');assert.equal(JSON.parse(r)['@type'],'NewsArticle');assert.equal(r.replaceAll('\\\\%','\\%'),f.article);});
 test('changed Guru and other articles bypass the exact fingerprint',async()=>{assert.equal(await repairLegacyGraph(f.article+'x','https://www.pinnacleblooms.org/guru/6385/title'),f.article+'x');assert.equal(await repairLegacyGraph(f.article,'https://www.pinnacleblooms.org/guru/6386/title'),f.article);});
