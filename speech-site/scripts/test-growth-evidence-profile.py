@@ -1,4 +1,5 @@
 import csv
+import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -68,9 +69,95 @@ class ProfileTests(unittest.TestCase):
 
     def test_canonical_matching_keeps_distinct_hosts_and_routes(self):
         self.assertEqual(url_key('https://www.pinnacleblooms.org/enroll?service=ot#form'),
-                         'https://www.pinnacleblooms.org/enroll')
+                         'https://www.pinnacleblooms.org/enroll?service=ot')
         self.assertNotEqual(url_key('https://pinnacleblooms.org/ask'),
                             url_key('https://www.pinnacleblooms.org/ask'))
+
+    def test_only_tracking_parameters_are_removed(self):
+        page='https://www.pinnacleblooms.org/Ask?page=2&q=ability%20score&service=ot&centre=hyderabad&flag='
+        for parameter in ('utm_source', 'UTM_campaign', 'gclid', 'dclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid'):
+            with self.subTest(parameter=parameter):
+                self.assertEqual(url_key(page+'&'+parameter+'=test#results'), page)
+        for parameter in ('page', 'q', 'service', 'centre'):
+            with self.subTest(functional=parameter):
+                self.assertNotEqual(url_key('https://www.pinnacleblooms.org/ask?'+parameter+'=a'),
+                                    url_key('https://www.pinnacleblooms.org/ask?'+parameter+'=b'))
+
+    def test_gsc_native_envelope_preserves_partial_window_and_pagination(self):
+        raw=dict(startDate='2026-09-08', endDate='2026-10-05', dimensions=['query','page'],
+                 settledThrough='2026-10-04', dataMaturity={'firstIncompleteDate':'2026-10-05','dateBasis':'America/Los_Angeles'},
+                 pagination={'limit':80,'offset':0,'returned':80,'hasMore':True,'nextOffset':80},
+                 rows=[dict(keys=['occupational therapy','https://www.pinnacleblooms.org/enroll?service=ot&utm_source=gmb'],
+                            clicks=1,impressions=10,ctr=10,position=3)])
+        native={'content':[{'type':'text','text':json.dumps(raw)}], 'structuredContent':raw, 'isError':False}
+        envelope={'observations':{'gsc_parent_queries':{'status':'fulfilled','value':native}}}
+        result=profile.gsc_query_page_observations([('provider-readbacks.json',envelope)])
+        self.assertEqual(len(result['records']),1)
+        sample=result['records'][0]
+        self.assertEqual(sample['url'],'https://www.pinnacleblooms.org/enroll?service=ot')
+        self.assertEqual((sample['start'],sample['end'],sample['settledThrough']),('2026-09-08','2026-10-05','2026-10-04'))
+        self.assertEqual(sample['window_boundary'],'partial_window')
+        self.assertEqual(sample['row_boundary'],'partial_rows')
+        self.assertTrue(sample['pagination']['hasMore'])
+        self.assertEqual(sample['dateBasis'],'America/Los_Angeles')
+        self.assertNotIn('total_clicks',result)
+
+    def test_gsc_text_receipt_raw_response_and_unknown_maturity(self):
+        raw=dict(startDate='2026-10-01',endDate='2026-10-05',
+                 rows=[dict(query='speech therapy',page='https://www.pinnacleblooms.org/speech-therapy',clicks=2)])
+        text={'content':[{'type':'text','text':json.dumps(raw)}]}
+        unknown=profile.gsc_query_page_observations([('text',text)])['records'][0]
+        self.assertEqual(unknown['window_boundary'],'maturity_unavailable')
+        self.assertIsNone(unknown['settledThrough']);self.assertIsNone(unknown['pagination']['hasMore'])
+        partial=profile.gsc_query_page_observations([('raw',{**raw,'dataMaturity':{'firstIncompleteDate':'2026-10-05'}})])['records'][0]
+        self.assertEqual(partial['window_boundary'],'partial_window')
+        settled=profile.gsc_query_page_observations([('raw',{**raw,'settledThrough':'2026-10-05'})])['records'][0]
+        self.assertEqual(settled['window_boundary'],'settled_window')
+        missing=profile.gsc_query_page_observations([('raw',{'rows':raw['rows'],'settledThrough':'2026-10-05'})])['records'][0]
+        self.assertEqual(missing['window_boundary'],'window_dates_unavailable')
+
+    def test_testingbot_release_coverage_does_not_infer_revision_match(self):
+        release={'at':'2026-10-06T09:00:00Z','commit':'released-revision','deployment':'deployed-version'}
+        before={'at':'2026-10-06T08:00:00Z','candidate_build':False,'functional':'pass'}
+        after={**before,'at':'2026-10-06T10:00:00Z'}
+        self.assertEqual(profile.testingbot_release_observation(before,release)['release_coverage'],'predates_release')
+        checked=profile.testingbot_release_observation(after,release)
+        self.assertEqual(checked['release_coverage'],'after_release_requires_revision_match')
+        self.assertEqual(checked['functional'],'pass');self.assertNotIn('revision_match',checked)
+        self.assertEqual(profile.testingbot_release_observation({**after,'candidate_build':True},release)['release_coverage'],'candidate')
+        self.assertEqual(profile.testingbot_release_observation(after,None)['release_coverage'],'release_time_unavailable')
+        self.assertEqual(profile.testingbot_release_observation(after,{'at':'2026-10-06'})['release_coverage'],'release_time_unavailable')
+        self.assertNotIn('release_coverage',after)
+
+    def test_manifest_query_samples_join_without_replacing_regional_totals(self):
+        with tempfile.TemporaryDirectory() as d:
+            work=Path(d);root=work/'controller';root.mkdir()
+            ahrefs=work/'ahrefs-growth-20261004';ahrefs.mkdir()
+            url='https://www.pinnacleblooms.org/enroll?service=ot'
+            receipt=root/'release.json'
+            documents={root/'queue.json':{'items':[dict(id='repair',priority=10,status='completed',object=url)],
+                        'results':[{'item_id':'repair','receipt':str(receipt)}]},
+                receipt:{'at':'2026-10-06T09:00:00Z','commit':'revision','deployment':'version','public_url':url},
+                root/'regional-baseline-20261004.json':{'start':'2026-09-01','end':'2026-09-28','groups':{
+                    'Hyderabad':{'pages':[dict(url=url,clicks=100,impressions=500,ctr=20,position=2)]}}},
+                ahrefs/'audit-triage-20261004-raw.json':{},
+                ahrefs/'india-organic-keywords-20261004.json':{'response':{'content':[]}},
+                root/'evidence-sources.json':{'gsc_query_page_snapshots':['query.json'],'testingbot_reports':['browser.json'],
+                    'testingbot_report_globs':[],'pitchbox_snapshots':[],'ahrefs_snapshots':[],'windsor_evidence':None},
+                root/'query.json':{'startDate':'2026-10-01','endDate':'2026-10-05','settledThrough':'2026-10-04',
+                    'rows':[dict(query='occupational therapy',page=url+'&utm_source=gmb',clicks=1)]},
+                root/'browser.json':{'finishedAt':'2026-10-07T00:00:00Z','suite':'p2','sessions':[{
+                    'matrix':'chrome','closed':True,'resultRecorded':True,'cases':[{'id':'enroll','canonical':url,
+                    'finishedAt':'2026-10-07T00:00:00Z','status':'passed','checks':[{'name':'route','passed':True}]}]}]}}
+            for file,document in documents.items():file.write_text(json.dumps(document),encoding='utf-8')
+            result=profile.build(root);row=result['rows'][0]
+            self.assertEqual(row['gsc'][url]['clicks'],100)
+            self.assertEqual(row['gsc'][url]['end'],'2026-09-28')
+            self.assertEqual(row['gsc_query_page_samples'][0]['clicks'],1)
+            self.assertEqual(row['gsc_query_page_samples'][0]['window_boundary'],'partial_window')
+            self.assertEqual(row['testingbot'][0]['release_coverage'],'after_release_requires_revision_match')
+            self.assertEqual(result['gsc_query_page']['state'],'saved_query_page_samples')
+            self.assertTrue(any(s['kind'].startswith('GSC saved query/page') for s in result['sources']))
 
     def test_personal_data_columns_are_rejected(self):
         with tempfile.TemporaryDirectory() as d:

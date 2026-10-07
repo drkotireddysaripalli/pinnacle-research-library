@@ -5,7 +5,7 @@ import datetime as dt
 import hashlib
 import json
 from pathlib import Path
-from urllib.parse import urlsplit, urlunsplit
+from urllib.parse import unquote_plus, urlsplit, urlunsplit
 
 EVENTS = {
     'phone_link_click': 'contact_intent',
@@ -17,6 +17,7 @@ EVENTS = {
     'form_submit': 'unqualified_event', 'allKeyEvents': 'mixed_not_leads',
 }
 OUTCOMES = ('answered_calls', 'qualified_enquiries', 'walk_ins', 'completed_enrolments')
+TRACKING_PARAMS = {'gclid', 'dclid', 'gbraid', 'wbraid', 'fbclid', 'msclkid'}
 
 def read(path):
     return json.loads(path.read_text(encoding='utf-8-sig'))
@@ -24,7 +25,12 @@ def read(path):
 def url_key(url):
     """Match tracking variants only; retain hosts/paths unless an explicit canonical says otherwise."""
     p = urlsplit(url)
-    return urlunsplit((p.scheme.lower(), p.netloc.lower(), p.path or '/', '', ''))
+    parts = []
+    for part in p.query.split('&'):
+        name = unquote_plus(part.partition('=')[0]).lower()
+        if not name.startswith('utm_') and name not in TRACKING_PARAMS:
+            parts.append(part)
+    return urlunsplit((p.scheme.lower(), p.netloc.lower(), p.path or '/', '&'.join(parts), ''))
 
 def payloads(result):
     for block in result.get('content', []):
@@ -61,6 +67,91 @@ def utc_date(value):
         return parsed.astimezone(dt.timezone.utc) if parsed.tzinfo else None
     except (ValueError, TypeError, AttributeError):
         return None
+
+def gsc_query_page_payloads(value):
+    """Unwrap explicit saved query/page inputs without traversing unrelated observations."""
+    if not isinstance(value, dict) or value.get('isError') is True:
+        return
+    if isinstance(value.get('rows'), list):
+        yield value
+    elif isinstance(value.get('observations'), dict):
+        yield from gsc_query_page_payloads(value['observations'].get('gsc_parent_queries', {}).get('value'))
+    elif isinstance(value.get('structuredContent'), dict):
+        yield from gsc_query_page_payloads(value['structuredContent'])
+    elif value.get('content'):
+        for document in payloads(value):
+            yield from gsc_query_page_payloads(document)
+    else:
+        for key in ('response', 'data', 'value'):
+            if isinstance(value.get(key), dict):
+                yield from gsc_query_page_payloads(value[key])
+                break
+
+def gsc_query_page_observations(snapshots):
+    """Preserve sampled query rows and maturity; never derive site or page totals."""
+    records, inputs = [], []
+    for file, document in snapshots:
+        for response in gsc_query_page_payloads(document):
+            dimensions = response.get('dimensions', ['query', 'page'])
+            if not isinstance(dimensions, list) or not {'query', 'page'} <= set(dimensions):
+                continue
+            maturity = response.get('dataMaturity') or {}
+            start, end = response.get('startDate', response.get('start')), response.get('endDate', response.get('end'))
+            settled = response.get('settledThrough', maturity.get('settledThrough'))
+            incomplete = maturity.get('firstIncompleteDate')
+            def date(value):
+                try:
+                    return dt.date.fromisoformat(value)
+                except (ValueError, TypeError):
+                    return None
+            first, last, through, pending = map(date, (start, end, settled, incomplete))
+            if first is None or last is None:
+                window = 'window_dates_unavailable'
+            elif first > last:
+                window = 'invalid_window'
+            elif (through is not None and last > through) or (pending is not None and last >= pending):
+                window = 'partial_window'
+            elif through is not None:
+                window = 'settled_window'
+            else:
+                window = 'maturity_unavailable'
+            pagination = {key: response.get('pagination', {}).get(key)
+                          for key in ('limit', 'offset', 'returned', 'hasMore', 'nextOffset')}
+            if pagination['returned'] is None:
+                pagination['returned'] = len(response['rows'])
+            context = {'source': str(file), 'siteUrl': response.get('siteUrl'),
+                       'start': start, 'end': end, 'settledThrough': settled,
+                       'firstIncompleteDate': incomplete, 'dateBasis': maturity.get('dateBasis'),
+                       'pagination': pagination, 'window_boundary': window,
+                       'row_boundary': 'partial_rows' if pagination['hasMore'] is True else 'sampled_query_rows',
+                       'boundary': 'Query/page samples are not site or page totals; keep the regional baseline separate.'}
+            samples = []
+            for row in response['rows']:
+                if not isinstance(row, dict):
+                    continue
+                keys = row.get('keys', [])
+                fields = dict(zip(dimensions, keys)) if isinstance(keys, list) else {}
+                query, page = row.get('query', fields.get('query')), row.get('page', fields.get('page'))
+                if not isinstance(query, str) or not isinstance(page, str) or not page.startswith(('https://', 'http://')):
+                    continue
+                samples.append({**context, 'url': url_key(page), 'observed_page': page, 'query': query,
+                                **{key: row.get(key) for key in ('clicks', 'impressions', 'ctr', 'position')}})
+            inputs.append({**context, 'sample_count': len(samples)})
+            records.extend(samples)
+    return {'state': 'saved_query_page_samples' if inputs else 'unavailable',
+            'snapshots': inputs, 'records': records,
+            'boundary': 'No query-row sums, total substitution or growth claim; partial windows remain partial.'}
+
+def testingbot_release_observation(record, release):
+    """Time establishes coverage only; a production revision match still requires proof."""
+    observed_at = utc_date(record.get('at'))
+    release_at = utc_date(release.get('at')) if release else None
+    coverage = ('candidate' if record.get('candidate_build') else
+                'release_time_unavailable' if release_at is None or observed_at is None else
+                'predates_release' if observed_at < release_at else
+                'after_release_requires_revision_match')
+    return {**record, 'release_coverage': coverage,
+            'relevant_release': {key: release.get(key) for key in ('at', 'commit', 'deployment')} if release else None}
 
 def latest_completed_audits(snapshots, releases=None):
     """A newer stopped/running crawl never displaces a completed baseline."""
@@ -244,6 +335,12 @@ def build(root, outcome_path=None, windsor_dir=None):
     manifest = {**defaults, **(read(manifest_path) if manifest_path.exists() else {})}
     source(defaults_path, 'Versioned offline TestingBot and aggregate Pitchbox input paths')
     source(manifest_path, 'Explicit saved evidence inputs and release boundaries')
+    gsc_snapshots = []
+    for file in dict.fromkeys((root/Path(path)).resolve() for path in manifest.get('gsc_query_page_snapshots', [])):
+        if file.exists():
+            source(file, 'GSC saved query/page samples; pagination and maturity remain explicit')
+            gsc_snapshots.append((file.as_posix(), read(file)))
+    gsc_samples = gsc_query_page_observations(gsc_snapshots)
     audit_paths.extend(root/Path(path) for path in manifest.get('ahrefs_snapshots', []))
     snapshots = []
     for path in dict.fromkeys(path.resolve() for path in audit_paths):
@@ -319,9 +416,10 @@ def build(root, outcome_path=None, windsor_dir=None):
             'url': key, 'root_cause_key': item.get('root_cause_key', item['id']),
             'decision_evidence': item.get('evidence', item.get('source')),
             'gsc': {u:gsc[u] for u in sorted(urls) if u in gsc},
+            'gsc_query_page_samples': [r for r in gsc_samples['records'] if r['url'] in urls],
             'screaming_frog': {u:frog[u] for u in sorted(urls) if u in frog}, 'release': release,
             'ahrefs_india_queries': {u:demand[u] for u in sorted(urls) if u in demand},
-            'testingbot': [r for r in testingbot['records'] if r['url'] in urls],
+            'testingbot': [testingbot_release_observation(r, release) for r in testingbot['records'] if r['url'] in urls],
             'receipt': event['receipt'] if event else None,
             'next_condition': item.get('next_condition'),
             'measurement': item.get('measurement', 'No outcome attributed from delivery alone')})
@@ -348,7 +446,7 @@ def build(root, outcome_path=None, windsor_dir=None):
         'rows': sorted(rows, key=lambda r: -r['priority']), 'sources': sources,
         'ahrefs_audits': audits, 'ahrefs_query_source': keyword_path.as_posix(),
         'event_dictionary': EVENTS, 'receiving_team': aggregates(outcome_path), 'windsor':windsor,
-        'testingbot':testingbot, 'pitchbox':pitchbox,
+        'testingbot':testingbot, 'pitchbox':pitchbox, 'gsc_query_page':gsc_samples,
         'url_observations':{u:{'gsc':gsc.get(u), 'ahrefs_india_queries':demand.get(u),
                               'screaming_frog':frog.get(u)} for u in sorted(set(gsc)|set(frog)|set(demand))},
         'rules': ['Reuse queue IDs; this report cannot create tasks or send/crawl/submit.',
