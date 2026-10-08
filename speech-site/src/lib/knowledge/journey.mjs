@@ -13,6 +13,7 @@ export function readerLibrary(path){
  const key=path.match(/^\/(ask|faq|sunshine|allmirracles|materials|interventions)(?:\/|$)/)?.[1];
  return key==='allmirracles'?'mirracles':key||null;
 }
+/** @param {{title?:string, category?:string, service?:string}} [context] */
 export function knowledgeJourney({title='',category='',service}={}){
  const text=String(category)+' '+String(title);
  const selected=serviceChoices.filter(x=>service?x.key===service:x.match.test(text)).slice(0,2);
