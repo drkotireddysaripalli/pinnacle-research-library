@@ -53,6 +53,18 @@ test('runtime assessment removal keeps visible offer and all unrelated schema',a
  const html='<main>FREE speech assessment<script type="application/ld+json">'+graph([assessment,product])+'</script></main>';
  const out=await rewrite(new URL(canonical).pathname,html);assert(out.includes('FREE speech assessment'));const data=JSON.parse(out.match(/<script[^>]*>(.*?)<\/script>/s)[1]);assert(!data['@graph'][0].offers);assert.deepEqual(data['@graph'][1],product);
 });
+test('cookie-bearing public speech schema is repaired without relaxing response privacy',async()=>{
+ const html='<main>FREE speech assessment<script type="application/ld+json">'+graph([assessment,product])+'</script></main>';
+ const response=await runtime.dispatchFetch(canonical,{method:'POST',body:html,headers:{'x-private':'1'}});
+ assert.equal(response.headers.get('cache-control'),'private, no-store');
+ assert.equal(response.headers.get('set-cookie'),'session=fixture');
+ const out=await response.text(),data=JSON.parse(out.match(/<script[^>]*>(.*?)<\/script>/s)[1]);
+ assert(out.includes('FREE speech assessment'));
+ assert(!data['@graph'][0].offers);
+ assert.equal(data['@graph'][0].availableChannel.serviceUrl,offer.url);
+ assert.deepEqual(data['@graph'][1],product);
+ assert.equal(await rewrite('/private-account',html,'GET',true),html);
+});
 test('book templates and bag code use the book policy, without changing checkout operations',async()=>{
  for(const file of ['src/pages/books/[slug].astro','src/pages/books/[locale]/[slug].astro','src/pages/books/editions/[locale]/[slug].astro']){const source=await fs.readFile(file,'utf8');assert(source.includes('href="'+bookPolicyPath+'"'));assert(!source.includes('href="/refund-policy"'));}
  const cart=await fs.readFile('public/pinnacle-pages-scripts/book-commerce.js','utf8');assert(cart.includes("link.href='"+bookPolicyPath+"'"));assert(cart.includes("if(!root.querySelector('[data-book-order-policy]'))"));assert(!cart.includes("['Refund policy','/refund-policy']"));

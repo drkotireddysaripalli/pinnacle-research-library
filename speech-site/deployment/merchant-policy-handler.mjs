@@ -1,6 +1,9 @@
 import {bookPolicyAssets} from './merchant-policy-content.mjs';
 export const bookPolicyPath='/books/refund-and-delivery-policy';
 const commercePath=p=>p==='/shop'||p.startsWith('/shop/')||p==='/books'||p.startsWith('/books/');
+// This public page becomes private/no-store when a visitor has cookies. Keep
+// those privacy headers while repairing only its fingerprinted assessment node.
+const publicAssessmentPath=p=>p==='/top-speech-therapy-center-india-proven-improvement-rate';
 export function serveBookOrderPolicy(request){
   const url=new URL(request.url),entry=bookPolicyAssets[url.pathname];
   if(url.hostname!=='www.pinnacleblooms.org'||!entry)return null;
@@ -27,7 +30,7 @@ export function repairAssessmentSchema(text,canonical){
 }
 export function repairMerchantDiscovery(request,response){
   const u=new URL(request.url);
-  if(u.hostname!=='www.pinnacleblooms.org'||request.method!=='GET'||response.status!==200||!response.headers.get('content-type')?.includes('text/html')||request.headers.has('authorization')||(!commercePath(u.pathname)&&(response.headers.has('set-cookie')||/private|no-store/i.test(response.headers.get('cache-control')||''))))return response;
+  if(u.hostname!=='www.pinnacleblooms.org'||request.method!=='GET'||response.status!==200||!response.headers.get('content-type')?.includes('text/html')||request.headers.has('authorization')||(!commercePath(u.pathname)&&!publicAssessmentPath(u.pathname)&&(response.headers.has('set-cookie')||/private|no-store/i.test(response.headers.get('cache-control')||''))))return response;
   const headers=new Headers(response.headers);headers.delete('etag');headers.delete('last-modified');headers.delete('content-length');headers.set('x-pinnacle-merchant-source','20261008');
   response=new Response(response.body,{status:response.status,statusText:response.statusText,headers});
   if(commercePath(u.pathname)){
