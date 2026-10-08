@@ -27,7 +27,13 @@ export async function fetchPublicOrigin(request,fetcher=fetch){
  try{
   if(request.method==='GET'){
    const error=await boundedText(original.clone());
-   if(!/<title>\s*Error\s*<\/title>/i.test(error)||!error.includes('Newtonsoft.Json.JsonReaderException')||!error.includes('GetStaffandCentersData'))return original;
+   const rootFaqFailure=new URL(request.url).pathname==='/'&&[
+    'Unexpected character encountered while parsing value: &lt;. Path &#39;&#39;, line 0, position 0.',
+    'PinnacleBlooms.MISC.Utility.GetFaqs(String lang, String category)',
+    'ASP._Page_Views_Home_Index_V9_Mobile_cshtml.Execute()',
+    'Index-V9.Mobile.cshtml:line 11'
+   ].every(fragment=>error.includes(fragment));
+   if(!/<title>\s*Error\s*<\/title>/i.test(error)||!error.includes('Newtonsoft.Json.JsonReaderException')||!(error.includes('GetStaffandCentersData')||rootFaqFailure))return original;
   }
   const headers=new Headers(request.headers);headers.set('user-agent',desktop);headers.set('sec-ch-ua-mobile','?0');
   const retry=await fetcher(new Request(request,{method:'GET',headers}));

@@ -9,7 +9,14 @@ const DEFAULT_DESCRIPTION = 'Explore published Pinnacle videos, read the evidenc
 const brandLogoBytes = Uint8Array.from(atob(brandLogoBase64), c=>c.charCodeAt(0));
 export const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const jsonHtml = value => JSON.stringify(value).replace(/</g, '\\u003c').replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029');
-const displayTitle = record => record.title || 'Published record ' + record.id;
+export function displayTitle(record) {
+  const original=String(record.title||'').trim();
+  const title=original.replace(/#([^\s#]+)/g,(_,tag)=>
+    /^(?:pinnaclemirracles|1autismtherapycentresnetwork)$/i.test(tag)?'':
+    ' '+tag.replace(/([a-z])([A-Z])/g,'$1 $2')+' '
+  ).replace(/\s+/g,' ').trim();
+  return title||original||'Published record '+record.id;
+}
 const absolute = path => new URL(path, ORIGIN).href;
 
 function pathKey(path) {
@@ -153,7 +160,8 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
         const description = safeDescription(detail);
         const video = videoObject(detail);
         const body = `<nav class="crumbs" aria-label="Breadcrumb"><ol><li>${a(HOME,'Video library')}</li>${category?`<li>${a(categoryURL(category),category)}</li>`:''}<li aria-current="page">Video record</li></ol></nav><header class="hero"><p class="kicker">Pinnacle Mirracles · Published video</p><h1>${escapeHtml(displayTitle(detail))}</h1>${date?`<p class="caption">Published <time datetime="${escapeHtml(date)}">${escapeHtml(date.slice(0,10))}</time></p>`:''}<p class="source-note">A published record of one experience or explanation. It does not predict another child’s result.</p></header><div class="video-layout"><section aria-label="Published video">${player?`<div class="player"><button type="button" data-mirracles-player="${escapeHtml(player)}" data-video-title="${escapeHtml(displayTitle(detail))}" aria-label="Play video: ${escapeHtml(displayTitle(detail))}">${poster?`<img src="${escapeHtml(poster)}" alt="" width="480" height="270" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">`:''}<span class="play-label"><span>▶ Play video</span></span></button></div><p class="source-note">Selecting Play loads the YouTube player. ${a(detail.player,'Open the published player directly',' rel="noreferrer"')}</p><script src="${ASSETS}player.js" defer></script>`:'<div class="empty"><h2>Published archive record</h2><p>A playable video is not available in the current public source for this record.</p></div>'}</section><aside class="video-aside"><h2>Talk about your child’s next step</h2><p>Ask about assessment, meaningful goals and a plan that connects therapy with daily life.</p>${call()}<ul><li>${a('/centers','Find a centre')}</li><li>${a('/verify/','Read the evidence and its limits')}</li><li>${a('/sunshine','Explore development resources')}</li></ul></aside></div>${description?`<section class="content-section"><h2>Published description</h2><p class="published-description">${escapeHtml(description)}</p></section>`:''}<section class="content-section"><h2>${category?'More in '+escapeHtml(category):'More published videos'}</h2><div class="grid">${related.map(r=>card(r,'h3')).join('')}</div></section>${nextStep()}`;
-        return htmlResponse(documentHTML({title:displayTitle(detail),description:DEFAULT_DESCRIPTION,canonical:absolute(detail.path),image:poster,body,catalogue:c,shell:trustedShell,schema:video?[video]:[]}),{head,privatePage,responseHeaders});
+        const sourceTitle=detail.title&&displayTitle(detail)!==detail.title?`<details class="content-section"><summary>Published source title</summary><p class="published-description">${escapeHtml(detail.title)}</p></details>`:'';
+        return htmlResponse(documentHTML({title:displayTitle(detail),description:DEFAULT_DESCRIPTION,canonical:absolute(detail.path),image:poster,body:body+sourceTitle,catalogue:c,shell:trustedShell,schema:video?[video]:[]}),{head,privatePage,responseHeaders});
       }
       const category = categoryPath?.[1] || legacyCategory?.[1] || url.searchParams.get('category') || '';
       if (category && !c.categoryKeys.has(category)) return notFound();

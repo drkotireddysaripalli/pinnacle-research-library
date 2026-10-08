@@ -4,6 +4,17 @@ const mobile='Mozilla/5.0 Android Mobile';
 const req=(path='/?gclid=x&utm_source=google',options={})=>new Request('https://www.pinnacleblooms.org'+path,{headers:{'user-agent':mobile,...options.headers},method:options.method||'GET'});
 const error=()=>new Response('<title>Error</title>Newtonsoft.Json.JsonReaderException GetStaffandCentersData',{status:500,headers:{'content-type':'text/html'}});
 const success=(path='/')=>new Response('<title>#1 Autism Therapy Centres Network -for your kids</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'?gclid=x"><h1>Public home</h1>',{headers:{'content-type':'text/html','set-cookie':'public-preference=x','etag':'old','vary':'Accept-Encoding'}});
+// Exact public stack fragments from the observed homepage failure, without its
+// unrelated HTML, server filesystem path or exception output in the repository.
+const rootFaqError='<title>Error</title>Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: &lt;. Path &#39;&#39;, line 0, position 0.\n'+
+ 'at PinnacleBlooms.MISC.Utility.GetFaqs(String lang, String category)\n'+
+ 'at ASP._Page_Views_Home_Index_V9_Mobile_cshtml.Execute() Index-V9.Mobile.cshtml:line 11';
+test('observed root FAQ failure recovers, but wrong route or incomplete fingerprint does not',async()=>{
+ for(const [q,html,expected] of [[req(),rootFaqError,2],[req('/careers'),rootFaqError,1],[req(),rootFaqError.replace('Index-V9.Mobile.cshtml:line 11','different-view'),1]]){
+  let n=0;const original=new Response(html,{status:500,headers:{'content-type':'text/html'}});
+  const result=await fetchPublicOrigin(q,async()=>++n===1?original:success());assert.equal(n,expected);assert.equal(result.status,expected===2?200:500);
+ }
+});
 test('reproduced origin exception recovers once without dropping URL, cookies or query',async()=>{const seen=[];const r=await fetchPublicOrigin(req(undefined,{headers:{cookie:'preference=x'}}),async q=>{seen.push(q);return seen.length===1?error():success();});assert.equal(r.status,200);assert.equal(seen.length,2);assert.equal(seen[1].url,seen[0].url);assert.equal(seen[1].headers.get('cookie'),'preference=x');assert(!/Mobile/.test(seen[1].headers.get('user-agent')));assert.equal(r.headers.get('cache-control'),'private, no-store');assert.equal(r.headers.get('set-cookie'),'public-preference=x');assert.equal(r.headers.get('vary'),'Accept-Encoding, User-Agent');assert.equal(r.headers.get('etag'),null);assert((await r.text()).includes('href="https://www.pinnacleblooms.org/"'));});
 test('successful requests and unknown exceptions are never retried',async()=>{for(const response of [success(),new Response('<title>Error</title>Different failure',{status:500,headers:{'content-type':'text/html'}})]){let count=0;const r=await fetchPublicOrigin(req(),async()=>{count++;return response});assert.equal(r,response);assert.equal(count,1);}});
 test('auth, API, submissions, unknown paths, ranges and no-transform retain original behavior',async()=>{for(const q of [req('/api/enrolment'),req('/ask/account'),req('/',{method:'POST'}),req('/',{headers:{authorization:'Bearer x'}}),req('/',{headers:{range:'bytes=0-9'}}),req('/',{headers:{'cache-control':'no-transform'}})]){let count=0;const original=error();assert.equal(await fetchPublicOrigin(q,async()=>{count++;return original}),original);assert.equal(count,1);}});

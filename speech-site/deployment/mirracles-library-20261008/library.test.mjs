@@ -1,13 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {createMirraclesLibrary,videoObject,playerURL,ORIGIN,PAGE_SIZE} from './library.mjs';
+import {createMirraclesLibrary,videoObject,playerURL,displayTitle,ORIGIN,PAGE_SIZE} from './library.mjs';
 const loadJson = async name => JSON.parse(await fs.readFile(new URL('./data/'+name+'.json',import.meta.url),'utf8'));
 const catalogue = await loadJson('catalogue');
 const provenance = await loadJson('provenance');
 const handler = createMirraclesLibrary({loadJson});
 const get = (path,options) => handler(new Request(ORIGIN+path,options));
 const cards = html => (html.match(/<article class="card">/g)||[]).length;
+test('hashtag source titles have readable headings while original titles remain available',async()=>{
+ assert.equal(displayTitle({title:'#BeanBag#pinnaclemirracles #1autismtherapycentresnetwork'}),'Bean Bag');
+ assert.equal(displayTitle({title:'A parent explains everyday practice'}),'A parent explains everyday practice');
+ assert.equal(displayTitle({title:'#ADHD #SpeechDelay'}),'ADHD Speech Delay');
+ const row=catalogue.records.find(r=>r.path==='/mirracles/20708156700/-BeanBag-pinnaclemirracles-1autismtherapycentresnetwork');
+ const html=await (await get(row.path)).text();assert(html.includes('<h1>Bean Bag</h1>'));assert(html.includes('Published source title'));assert(html.includes('#BeanBag#pinnaclemirracles #1autismtherapycentresnetwork'));
+});
 
 test('actual source inventory preserves sitemap pages and every older public archive URL',async()=>{
   assert.equal(catalogue.order.length,19292);
