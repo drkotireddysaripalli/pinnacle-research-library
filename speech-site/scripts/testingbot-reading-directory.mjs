@@ -12,11 +12,14 @@ for(const [kind,d] of [['chrome',chrome],['ios',ios]]){
  try{
   const cap=kind==='ios'?{platformName:'iOS',browserName:'safari','appium:automationName':'XCUITest','appium:deviceName':d.name,'appium:platformVersion':d.version,'appium:newCommandTimeout':90,'tb:options':{realDevice:true,name:'Pinnacle directory '+source.slice(0,10),screenrecorder:true,maxduration:600}}:{platformName:'WIN11',browserName:'chrome',browserVersion:d.version,'tb:options':{name:'Pinnacle directory '+source.slice(0,10),screenrecorder:true,'screen-resolution':'1440x900',maxduration:600}};
   const created=await c.request(c.hub+'/session','POST',{capabilities:{alwaysMatch:cap}});sid=created.value.sessionId;const wd=async(p,m='GET',b)=>(await c.request(c.hub+'/session/'+sid+p,m,b)).value;
-  if(kind==='chrome')await wd('/window/rect','POST',{width:390,height:844});
+  if(kind==='chrome')await wd('/window/rect','POST',{width:1440,height:900});
+  await wd('/timeouts','POST',{pageLoad:45000,script:30000,implicit:0});
   for(const id of ['materials','abilities','blog']){
-   await wd('/url','POST',{url:pages[id].url});
+   await c.request(c.hub+'/session/'+sid+'/url','POST',{url:pages[id].url},120000);
    const measure="return {marker:document.querySelector('.sunshine-all-sections')?.getAttribute('data-pinnacle-topic-directory'),groups:document.querySelectorAll('details.pinnacle-topic-directory').length,closed:[...document.querySelectorAll('details.pinnacle-topic-directory')].every(e=>!e.open),overflow:document.documentElement.scrollWidth>innerWidth,phone:[...document.querySelectorAll('a[href]')].some(a=>a.getAttribute('href')==='tel:+919100181181'),width:innerWidth}";
    const state=await wd('/execute/sync','POST',{script:measure,args:[]});
+   await wd('/execute/sync','POST',{script:"document.querySelector('details.pinnacle-topic-directory > summary').scrollIntoView({block:'center'});return true",args:[]});
+   const beforeClick=await wd('/screenshot');await fs.writeFile(path.join(out,kind+'-'+id+'-before-click.png'),Buffer.from(beforeClick,'base64'));
    const element=await wd('/element','POST',{using:'css selector',value:'details.pinnacle-topic-directory > summary'});await wd('/element/'+element['element-6066-11e4-a52e-4f735466cecf']+'/click','POST',{});
    const opened=await wd('/execute/sync','POST',{script:"const e=document.querySelector('details.pinnacle-topic-directory');return {open:e.open,visibleLink:e.querySelector('a').getBoundingClientRect().height>0,links:e.querySelectorAll('a[href]').length}",args:[]});
    const png=await wd('/screenshot');await fs.writeFile(path.join(out,kind+'-'+id+'.png'),Buffer.from(png,'base64'));
