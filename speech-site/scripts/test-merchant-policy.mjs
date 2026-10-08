@@ -32,6 +32,9 @@ test('only the known assessment Offer is removed; service and appointment destin
  const out=JSON.parse(repairAssessmentSchema(graph([assessment,product]),canonical));
  assert.equal(out['@graph'][0].offers,undefined);assert.equal(out['@graph'][0]['@type'],'Service');assert.equal(out['@graph'][0].name,assessment.name);assert.equal(out['@graph'][0].availableChannel.serviceUrl,offer.url);assert.deepEqual(out['@graph'][1],product);
 });
+test('null nodes and unsafe unrelated numbers preserve public HTML safely',()=>{
+ for(const source of ['null',graph([null]),graph([assessment]).replace('\"@graph\":','\"identifier\":90071992547409931234,\"@graph\":')])assert.equal(repairAssessmentSchema(source,canonical),source);
+});
 test('unknown identities, plain book graphs and malformed JSON are unchanged',()=>{
  for(const source of [graph([product]),graph([{...assessment,'@id':origin+'/other#assessment'}]),graph([{...assessment,brand:{'@id':'https://other.example/#brand'}}]),'not json'])assert.equal(repairAssessmentSchema(source,canonical),source);
 });

@@ -12,10 +12,14 @@ export function serveBookOrderPolicy(request){
 // Only the exact optional managed assessment Service loses its commerce Offer.
 // Book Product/Offer nodes, unknown identities and visible assessment copy survive.
 export function repairAssessmentSchema(text,canonical){
+  // Pass through unsafe numeric tokens rather than round an unrelated identifier.
+  const tokens=text.replace(/"(?:\\.|[^"\\])*"/g,'""').match(/-?\d+(?:\.\d+)?(?:e[+-]?\d+)?/gi)||[];
+  if(tokens.some(token=>!Number.isFinite(Number(token))||(Number.isInteger(Number(token))&&!Number.isSafeInteger(Number(token)))))return text;
   let data;try{data=JSON.parse(text);}catch{return text;}
+  if(!data||typeof data!=='object')return text;
   let changed=false;
   for(const node of Array.isArray(data['@graph'])?data['@graph']:[]){
-    if(node['@type']!=='Service'||node['@id']!==canonical+'#assessment'||node.brand?.['@id']!=='https://www.pinnacleblooms.org/verify/#pinnacle-brand'||node.offers?.['@type']!=='Offer'||node.offers?.itemOffered?.['@id']!==node['@id'])continue;
+    if(!node||typeof node!=='object'||node['@type']!=='Service'||node['@id']!==canonical+'#assessment'||node.brand?.['@id']!=='https://www.pinnacleblooms.org/verify/#pinnacle-brand'||node.offers?.['@type']!=='Offer'||node.offers?.itemOffered?.['@id']!==node['@id'])continue;
     if(typeof node.offers.url==='string')node.availableChannel={'@type':'ServiceChannel',serviceUrl:node.offers.url};
     delete node.offers;changed=true;
   }
