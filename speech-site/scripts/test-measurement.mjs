@@ -21,16 +21,16 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
  }
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
+function harness({callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
- const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
+ const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL});
- return {win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href)=>{const link={href,dataset:{cta:placement},getAttribute:()=>href};listeners.click({target:{closest:()=>link}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ return {win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={})=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 
 test('consented source survives an untagged centre/form/direct journey; withdrawal clears it',()=>{
@@ -126,8 +126,8 @@ test('central WhatsApp contact taps on managed journeys use one exact event afte
 test('consented campaign attribution retains safe allowlisted fields on coarse public identities',()=>{
  const search='?utm_source=google&utm_medium=cpc&utm_campaign=Hyderabad_Speech&utm_id=PBN-20261008&utm_term=speech%20therapy&utm_content=hero_A&utm_source_platform=google_ads&utm_creative_format=search&utm_marketing_tactic=assessment&gclid=test123&gbraid=GBRAID-fixture_A&wbraid=WBRAID-fixture_B&fbclid=FBCLID-fixture_C&msclkid=MSCLKID-fixture_D&dclid=DCLID-fixture_E&q=INVENTED_PRIVATE_SEARCH&child=INVENTED_CHILD&phone=%2B919999999999#INVENTED_FRAGMENT';
  for(const options of [{},{origin:'https://pinnacleblooms.org',path:'/ask/INVENTED_PRIVATE_TOPIC',variant:'ask'},{path:'/sunshine/INVENTED_PRIVATE_TOPIC',variant:'knowledge'}]) {
-  const h=harness({...options,search:options.variant==='knowledge'?search.replace('&q=INVENTED_PRIVATE_SEARCH',''):search});assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);h.choose('accepted');
-  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+  const h=harness({...options,search:options.variant==='knowledge'?search.replace('&q=INVENTED_PRIVATE_SEARCH',''):search});assert.deepEqual(h.events().map(e=>e[1]),['google_ads_arrival']);assert.equal(h.events()[0][2].measurement_mode,'denied_storage');h.choose('accepted');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).filter(x=>x[0]==='config').at(-1)[2];
   const u=new URL(config.page_location);
   assert.equal(u.searchParams.get('gclid'),'test123');assert.equal(u.searchParams.get('utm_source'),'google');assert.equal(u.searchParams.get('utm_medium'),'cpc');
   assert.equal(u.searchParams.get('utm_campaign'),'Hyderabad_Speech');assert.equal(u.searchParams.get('utm_term'),'speech therapy');
@@ -135,7 +135,7 @@ test('consented campaign attribution retains safe allowlisted fields on coarse p
   for(const name of ['q','child','phone'])assert(!u.searchParams.has(name));assert.equal(u.hash,'');
   assert.equal(config.campaign_source,'google');assert.equal(config.campaign_medium,'cpc');assert.equal(config.campaign_name,'Hyderabad_Speech');assert.equal(config.campaign_id,'PBN-20261008');assert.equal(config.campaign_term,'speech therapy');assert.equal(config.campaign_content,'hero_A');
   assert.equal(config.allow_google_signals,false);assert.equal(config.allow_ad_personalization_signals,false);
-  assert.equal(h.events()[0][2].page_location,config.page_location);assert(!JSON.stringify(h.win.dataLayer).includes('INVENTED_'));
+  assert.equal(h.events().find(e=>e[1]==='page_view')[2].page_location,config.page_location);assert(!JSON.stringify(h.win.dataLayer).includes('INVENTED_'));
   h.choose('declined');const before=h.events().length;h.click(undefined,'https://wa.me/919100181181');assert.equal(h.events().length,before);
  }
  // Search-result journeys remain uninstrumented even with valid attribution.
@@ -456,14 +456,14 @@ test('approved inline callback receipts emit once and respect refusal, GPC and a
 test('undecided receipt uses denied storage immediately with no optional campaign or contact data',()=>{
  for(const path of [canonicalEnrolment,'/centers','/speech-therapy/service-information']){
   const h=harness({path,callback:true,search:'?utm_source=google&utm_medium=cpc&gclid=qaCampaign123&name=private-child'});
-  assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);h.accepted();h.accepted();
-  assert.deepEqual(h.events().map(e=>e[1]),['enquiry_accepted']);assert.equal(h.scripts.length,1);
-  assert.equal(h.events()[0][2].measurement_mode,'denied_storage');
+   assert.deepEqual(h.events().map(e=>e[1]),['google_ads_arrival']);assert.equal(h.scripts.length,1);h.accepted();h.accepted();
+   assert.deepEqual(h.events().map(e=>e[1]),['google_ads_arrival','enquiry_accepted']);assert.equal(h.scripts.length,1);
+   assert(h.events().every(e=>e[2].measurement_mode==='denied_storage'));
   const commands=Array.from(h.win.dataLayer,x=>Array.from(x));
   for(const c of commands.filter(c=>c[0]==='consent'))assert.equal(c[2].analytics_storage,'denied');
   const serialized=JSON.stringify(commands);for(const excluded of ['private-child','gclid','qaCampaign123','qa-event-request','qa-event-receipt','requestId','user_id','client_id'])assert(!serialized.includes(excluded));
   assert.equal(h.writes.length,0);assert.equal(h.cookies.length,0);assert.equal(h.win.pinnacleEnquirySource(),null);
-  h.choose('accepted');h.accepted();assert.deepEqual(h.events().map(e=>e[1]),['enquiry_accepted','page_view']);assert.equal(h.scripts.length,1);
+   h.choose('accepted');h.accepted();assert.deepEqual(h.events().map(e=>e[1]),['google_ads_arrival','enquiry_accepted','page_view']);assert.equal(h.scripts.length,1);
   h.accepted({schemaVersion:1,requestId:'qa-next-valid-request',id:'qa-next-valid-receipt'});assert.equal(h.events().at(-1)[2].measurement_mode,'consented');
  }
 });
@@ -488,4 +488,76 @@ test('fresh speech-info source uses the permitted speech family and exact call p
  const h=harness({path:'/speech-therapy/service-information',callback:true,search:'?utm_source=google&utm_medium=cpc&utm_campaign=QA-SPEECH-INFO&gclid=qaSpeechInfo123'});h.choose('accepted');
  const a=h.win.pinnacleEnquirySource();assert.equal(a.landingPath,'/top-speech-therapy-center-india-proven-improvement-rate');assert.equal(a.fields.gclid,'qaSpeechInfo123');
  h.click('callback-call','tel:+919100181181');h.click('hero-call','tel:+919100181181');assert.equal(h.events().filter(e=>e[1]==='phone_link_click').length,2);h.choose('declined');h.click('callback-call','tel:+919100181181');assert.equal(h.events().filter(e=>e[1]==='phone_link_click').length,2);assert.equal(h.win.pinnacleEnquirySource(),null);
+});
+
+const googleAdsEventNames=['google_ads_arrival','google_ads_phone_click','google_ads_whatsapp_click'];
+const adsEvents=h=>h.events().filter(e=>googleAdsEventNames.includes(e[1]));
+test('Google Ads arrival is immediate with denied storage and requires valid Google paid tags',()=>{
+ for(const search of ['?gclid=qaAdsClick123','?gbraid=qaAdsBraid123','?wbraid=qaAdsWeb123','?utm_source=Google&utm_medium=CPC&utm_campaign=Regional_Speech','?utm_source=google&utm_medium=paid_search']){
+  const h=harness({search});assert.equal(adsEvents(h).length,1);h.choose('accepted');h.choose('accepted');
+  assert.deepEqual(adsEvents(h).map(e=>e[1]),['google_ads_arrival']);
+  const event=adsEvents(h)[0][2];assert.equal(event.traffic_source,'google_ads');assert.equal(event.interaction_kind,'navigation');assert.equal(event.measurement_mode,'denied_storage');
+  assert.equal(new URL(event.page_location).search,'');assert.equal(event.page_referrer,'');assert.equal(event.campaign_name,undefined);assert.equal(event.source_basis,undefined);assert.equal(event.attribution_method,undefined);
+ }
+});
+test('organic Google, non-Google advertising and invalid tags never become Google Ads arrivals',()=>{
+ const searches=['','?utm_source=google&utm_medium=organic','?utm_source=google&utm_medium=referral','?utm_source=bing&utm_medium=cpc','?fbclid=qaFacebookClick','?msclkid=qaBingClick','?dclid=qaDisplayClick','?gclid=fixture%40example.test','?gbraid=9999999999','?wbraid='+('x'.repeat(257)),'?gclid=qaOne&gclid=qaTwo','?utm_source=google&utm_source=private&utm_medium=cpc'];
+ for(const search of searches){const h=harness({search,referrer:'https://www.google.com/search?q=INVENTED_PRIVATE'});h.choose('accepted');h.click('hero-call','tel:+919100181181');h.click(undefined,'https://wa.me/919100181181');assert.equal(adsEvents(h).length,0,search);}
+});
+test('Google Ads contact intent is once per page and event while native contact actions remain unchanged',()=>{
+ const h=harness({search:'?gclid=qaAdsClick123&utm_campaign=Regional_Speech&child_name=INVENTED_CHILD'});
+ const phone='tel:+919100181181',whatsapp='https://wa.me/919100181181?text=INVENTED_PRIVATE_MESSAGE';
+ assert.equal(h.click('hero-call',phone).href,phone);assert.equal(h.click(undefined,whatsapp).href,whatsapp);assert.deepEqual(adsEvents(h).map(e=>e[1]),googleAdsEventNames);
+ const beforeChoice=JSON.stringify(h.win.dataLayer);for(const excluded of ['qaAdsClick123','Regional_Speech','INVENTED_','gclid','utm_'])assert(!beforeChoice.includes(excluded));
+ assert.equal(h.writes.length,0);assert.equal(h.cookies.length,0);assert(adsEvents(h).every(e=>e[2].measurement_mode==='denied_storage'));
+ h.choose('accepted');
+ for(const placement of ['hero-call','footer-call',undefined])assert.equal(h.click(placement,phone).href,phone);
+ const forwarded='tel:+918001234567';assert.equal(h.click('hero-call',forwarded,{pinnacleAdCallTarget:'central'}).href,forwarded);
+ assert.equal(h.click(undefined,whatsapp).href,whatsapp);
+ const api='https://api.whatsapp.com/send?phone=919100181181&text=INVENTED_PRIVATE_MESSAGE';assert.equal(h.click('footer-whatsapp',api).href,api);
+ assert.deepEqual(adsEvents(h).map(e=>e[1]),googleAdsEventNames);
+ assert(adsEvents(h).slice(1).every(e=>e[2].interaction_kind==='contact_tap'&&e[2].destination==='national_helpline_9100181181'));
+ const text=JSON.stringify(h.events());for(const excluded of ['INVENTED_CHILD','INVENTED_PRIVATE_MESSAGE','8001234567','call_connected'])assert(!text.includes(excluded));
+});
+test('Google Ads contact events reject arbitrary phones, WhatsApp sharing and spoofed central destinations',()=>{
+ const h=harness({search:'?gclid=qaAdsClick123'});h.choose('accepted');
+ for(const href of ['tel:+919999999999','tel:+919100181181?child=private','https://wa.me/?text=INVENTED_PRIVATE','https://wa.me/919999999999','https://api.whatsapp.com/send?phone=919100181181&phone=919999999999','https://wa.me.evil.test/919100181181','https://user:pass@wa.me/919100181181'])h.click('hero-call',href);
+ assert.deepEqual(adsEvents(h).map(e=>e[1]),['google_ads_arrival']);
+});
+test('permitted Google Ads source survives an untagged journey without manufacturing another arrival',()=>{
+ const first=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech&gclid=qaAdsJourney123'});first.choose('accepted');
+ const next=harness({path:'/centers',search:'',sharedStore:first.store});assert.equal(adsEvents(next).length,0);
+ next.click('callback-call','tel:+919100181181');next.click(undefined,'https://wa.me/919100181181');
+ assert.deepEqual(adsEvents(next).map(e=>e[1]),['google_ads_phone_click','google_ads_whatsapp_click']);
+ for(const e of adsEvents(next)){assert.equal(e[2].source_basis,'permitted_journey');assert.equal(e[2].campaign_name,'Regional_Speech');assert.equal(e[2].campaign_source,'google');assert.equal(e[2].campaign_medium,'cpc');assert.equal(e[2].page_location,'https://www.pinnacleblooms.org/centers');}
+ const newer=harness({search:'?utm_source=google&utm_medium=organic',sharedStore:first.store});newer.click('hero-call','tel:+919100181181');assert.equal(adsEvents(newer).length,0);
+});
+test('Google Ads events preserve refusal, withdrawal, GPC, QA, private-route and search exclusions',()=>{
+ const search='?utm_source=google&utm_medium=cpc&gclid=qaAdsGuard123';
+ for(const options of [{gpc:true},{saved:{value:'declined',at:Date.now()}},{search:search+'&validation_test=1'},{path:'/payonline'},{origin:'http://127.0.0.1:4340'},{origin:'https://pinnacleblooms.org',path:'/ask/account',variant:'ask'},{path:'/faq',variant:'knowledge',search:search+'&q=INVENTED_PRIVATE'}]){
+  const h=harness({search,...options});if(!options.saved)h.choose('accepted');h.click('hero-call','tel:+919100181181');h.click(undefined,'https://wa.me/919100181181');assert.equal(adsEvents(h).length,0);assert.equal(h.scripts.length,0);
+ }
+ const h=harness({search});h.choose('accepted');h.choose('declined');h.click('hero-call','tel:+919100181181');h.click(undefined,'https://wa.me/919100181181');assert.deepEqual(adsEvents(h).map(e=>e[1]),['google_ads_arrival']);assert.equal(h.win.pinnacleEnquirySource(),null);
+});
+test('Google Ads events on public knowledge keep only the library bucket and approved source labels',()=>{
+ const h=harness({origin:'https://pinnacleblooms.org',path:'/ask/INVENTED_PRIVATE_TOPIC',variant:'ask',search:'?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech&gclid=qaAdsSafe123&name=INVENTED_PARENT'});
+ h.choose('accepted');h.click('ask-answer-call','tel:+919100181181');h.click(undefined,'https://wa.me/919100181181?text=INVENTED_PRIVATE_MESSAGE');
+ assert.equal(adsEvents(h).length,3);assert(adsEvents(h).every(e=>new URL(e[2].page_location).pathname==='/ask'));
+ const text=JSON.stringify(h.win.dataLayer);assert(!text.includes('INVENTED_'));assert(!text.includes('call_connected'));
+});
+test('granted Google Ads arrivals retain only sanitised source fields from the existing path',()=>{
+ const h=harness({saved:{value:'accepted',at:Date.now()},search:'?utm_source=google&utm_medium=cpc&utm_campaign=Regional_Speech&gclid=qaAdsGranted123&phone=INVENTED_PRIVATE'});
+ const event=adsEvents(h)[0][2];assert.equal(event.measurement_mode,'consented');assert.equal(event.source_basis,'current_url');assert.equal(event.attribution_method,'click_id');assert.equal(event.campaign_name,'Regional_Speech');assert.equal(event.campaign_source,'google');assert.equal(event.campaign_medium,'cpc');assert(!JSON.stringify(h.win.dataLayer).includes('INVENTED_'));
+});
+test('Google Ads SDK failures cannot interrupt native phone or WhatsApp actions',()=>{
+ const h=harness({search:'?gclid=qaAdsFailure123'});h.win.gtag=()=>{throw Error('SDK unavailable');};
+ for(const [placement,href] of [['hero-call','tel:+919100181181'],['footer-whatsapp','https://wa.me/919100181181?text=INVENTED_PRIVATE']])assert.equal(h.click(placement,href).href,href);
+ assert.deepEqual(adsEvents(h).map(e=>e[1]),['google_ads_arrival']);
+ const failedLoader=harness({search:'?gclid=qaAdsFailure123',tagLoadThrows:true});
+ for(const [placement,href] of [['hero-call','tel:+919100181181'],['footer-whatsapp','https://wa.me/919100181181']])assert.equal(failedLoader.click(placement,href).href,href);
+ assert.equal(adsEvents(failedLoader).length,0);assert.equal(failedLoader.scripts.length,0);
+});
+test('bookshop Ads contacts cannot borrow the separate therapy acquisition record',()=>{
+ const first=harness({search:'?gclid=qaTherapyAds123'});first.choose('accepted');
+ const shop=harness({path:'/shop',search:'',sharedStore:first.store});shop.choose('accepted');shop.click('header-call','tel:+919100181181');assert.equal(adsEvents(shop).length,0);
 });

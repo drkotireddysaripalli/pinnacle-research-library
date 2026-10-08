@@ -35,7 +35,7 @@ for(const [browserName,type]of [['chromium',chromium],['webkit',webkit]]){
   const accepted=requests.filter(r=>r.en==='enquiry_accepted'),cookies=await context.cookies();
   assert.equal(accepted.length,['unset','accepted','call-granted'].includes(state)?1:0,browserName+' '+state+' accepted wire');
   if(['unset','call-granted'].includes(state)){assert.equal(accepted[0].gcs,state==='call-granted'?'G110':'G100');assert.equal(accepted[0].dl,origin+path);assert(!cookies.some(c=>/^(ps_ga(?:_|$)|_ga(?:_|$))/.test(c.name)));assert(!requests.some(r=>r.en==='page_view'));}
-  if(!['unset','accepted','call-granted'].includes(state))assert.equal(requests.length,0);
+  if(!['unset','accepted','call-granted'].includes(state))assert.equal(requests.filter(r=>state!=='invalid'||r.en!=='google_ads_arrival').length,0);
   const wire=JSON.stringify(accepted);for(const value of ['ISOLATED_PRIVATE','isolated-wire-request','isolated-wire-receipt','phone','user_id',...(state==='accepted'?[]:['ISOLATED-CLICK'])])assert(!wire.includes(value),browserName+" "+state+" excluded "+value);
   results.push({browser:browserName,state,acceptedEvents:accepted.length,allInterceptedEvents:requests.map(r=>r.en),storageConsent:accepted[0]?.gcs||null,analyticsCookies:cookies.filter(c=>/^(ps_ga(?:_|$)|_ga(?:_|$))/.test(c.name)).length,passed:true});
   await context.close();

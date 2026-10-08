@@ -169,6 +169,35 @@
     if (!production || !enabled || blocked || knowledgeSearch || validationTraffic) return;
     try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
   };
+  // These identify tagged navigation/contact intent, never completed calls or
+  // conversions. Use only the already sanitised current/permitted source fields.
+  const paidGoogleMedia = new Set(['cpc','ppc','paid','paid_search','paidsearch','paid-search','paid search','cpm','cpv','display','paid_social','paid_video']);
+  const googleAdsEvents = window.__pinnacleGoogleAdsEvents || (window.__pinnacleGoogleAdsEvents = new Set());
+  const googleAdsSource = (allowJourney = true) => {
+    const current = Object.fromEntries(measurementURL.searchParams);
+    const tagged = Object.keys(current).length > 0;
+    const fields = tagged ? current : allowJourney && enabled && !isBookshop ? readSource()?.fields : null;
+    if (!fields) return null;
+    const click = ['gclid','gbraid','wbraid'].some(field => !!fields[field]);
+    const paid = fields.utm_source?.toLowerCase() === 'google' && paidGoogleMedia.has(fields.utm_medium?.toLowerCase());
+    if (!click && !paid) return null;
+    return {traffic_source:'google_ads',source_basis:tagged?'current_url':'permitted_journey',attribution_method:click?'click_id':'paid_utm',
+      ...Object.fromEntries(Object.entries(campaignFields).filter(([field])=>fields[field]).map(([field,name])=>[name,fields[field]]))};
+  };
+  const sendGoogleAds = (name, parameters, allowJourney = true) => {
+    if (!production || blocked || knowledgeSearch || validationTraffic || preference==='declined' || googleAdsEvents.has(name)) return;
+    const attribution = googleAdsSource(allowJourney);
+    if (!attribution) return;
+    try {
+      const payload={schema_version:1,page_group:pageGroup,measurement_mode:enabled?'consented':'denied_storage',...(enabled?attribution:{traffic_source:'google_ads'}),...parameters};
+      if (enabled) send(name,payload);
+      else {
+        configureTag('denied',canonical);
+        window.gtag('event',name,{...payload,page_variant:variant,page_location:canonical,page_title:pageTitle,page_referrer:'',send_to:id,transport_type:'beacon'});
+      }
+      googleAdsEvents.add(name);
+    } catch {} // Measurement failure must not stop native calling or WhatsApp.
+  };
   // A navigation handoff carries only already validated campaign fields, with
   // permission. It carries no reader identity, question, history or child data.
   document.addEventListener('click',event=>{
@@ -254,6 +283,7 @@
     configureTag('granted',measurementLocation,campaigns);
     loaded = true;
     send('page_view',{page_group:pageGroup,schema_version:2});
+    sendGoogleAds('google_ads_arrival',{interaction_kind:'navigation'},false);
     const viewed = Object.entries(commerceCatalogue).find(([, item]) => item.path === pagePath);
     if (viewed) sendCommerce('view_item', [{sku:viewed[0],quantity:1,price:viewed[1].price}]);
   };
@@ -284,6 +314,8 @@
     let saved;try { saved=JSON.parse(localStorage.getItem(key)); } catch {}
     if (saved && Number.isFinite(saved.at) && saved.at<=Date.now() && Date.now()-saved.at<lifetime) choose(saved.value, false);
   }
+  // Only a currently tagged landing is an arrival; a retained journey is not.
+  sendGoogleAds('google_ads_arrival',{interaction_kind:'navigation'},false);
   // Fixed event vocabulary only; arbitrary query values and form data are excluded.
   const acceptedRequests=window.__pinnacleAcceptedRequests||(window.__pinnacleAcceptedRequests=new Set());
   document.addEventListener('pinnacle:enquiry-accepted', event => {
@@ -299,7 +331,10 @@
       acceptedRequests.add(receipt.requestId);
     } catch {} // The receipt and parent confirmation survive a vendor failure.
   });
-  if(disclosure&&!isBookshop)disclosure.textContent+=' Accepted enquiries are always recorded in our protected receiving system. With no analytics choice, a minimal accepted-enquiry event may be sent to Google with analytics storage denied. Advertising call measurement follows its separate choice. Choosing to keep analytics off, or using Global Privacy Control, stops that Google event.';
+  if(disclosure){
+    if(!isBookshop)disclosure.textContent+=' Accepted enquiries are always recorded in our protected receiving system. With no analytics choice, a minimal accepted-enquiry event may be sent to Google with analytics storage denied.';
+    disclosure.textContent+=' Tagged Google Ads arrivals and central contact taps may also send minimal events with analytics storage denied and no campaign identifiers until you choose. Advertising call measurement follows its separate choice. Choosing to keep analytics off, or using Global Privacy Control, stops these Google events.';
+  }
   document.addEventListener('click',event=>{
     if (pageGroup === 'family_resource') {
       const resourceLink=event.target?.closest?.('a[data-resource="first_conversation_v1"]');
@@ -307,6 +342,10 @@
     }
     const contactLink = event.target?.closest?.('a[href]');
     const contactHref = contactLink?.getAttribute('href');
+    if (contactHref === 'tel:+919100181181' || (contactHref?.startsWith('tel:') && contactLink.dataset?.pinnacleAdCallTarget === 'central')) {
+      const placement = contactLink.dataset?.cta;
+      sendGoogleAds('google_ads_phone_click',{interaction_kind:'contact_tap',link_placement:callPlacements.has(placement)?placement:'central-phone',destination:'national_helpline_9100181181'});
+    }
     try {
       const target = new URL(contactHref,origin);
       const centralWhatsApp = target.protocol === 'https:' && !target.username && !target.password && !target.port && (
@@ -317,6 +356,7 @@
       if (centralWhatsApp) {
         const placement = contactLink.dataset?.cta;
         const placements = new Set(['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp']);
+        sendGoogleAds('google_ads_whatsapp_click',{interaction_kind:'contact_tap',link_placement:placements.has(placement)?placement:'central-whatsapp',destination:'national_helpline_9100181181'});
         send('whatsapp_click',{schema_version:3,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline_9100181181'});
         return; // One event per contact tap; sharing text never enters the event.
       }

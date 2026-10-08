@@ -15,6 +15,10 @@ export function repairSharedNavigation(request,response){
  headers.set('x-pinnacle-navigation','canonical-ask-20261005');
  let artwork='';
  return new HTMLRewriter().on('a[href]',{element(el){const before=el.getAttribute('href'),after=publicLinkTarget(before);if(after===null)el.remove();else if(after!==before)el.setAttribute('href',after);}})
+  .on('script[src]',{element(el){
+   const raw=el.getAttribute('src');
+   try{const u=new URL(raw,request.url);if(u.origin==='https://www.pinnacleblooms.org'&&u.pathname==='/pinnacle-pages-scripts/speech-measurement.js'){u.searchParams.set('v','paid-journey-20261008');el.setAttribute('src',raw.startsWith('/')?u.pathname+u.search:u.href);}}catch{}
+  }})
   .on('style[data-pinnacle-footer-art]',{element(el){el.remove();}})
   .on('style[data-pinnacle-callback-accessibility]',{element(el){el.remove();}})
   .on('head',{element(el){el.append(FOOTER_ART_STYLE+CALLBACK_ACCESSIBILITY_STYLE,{html:true});}})
