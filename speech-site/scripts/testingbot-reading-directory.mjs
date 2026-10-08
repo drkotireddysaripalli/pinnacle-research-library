@@ -1,7 +1,7 @@
 // Focused real-device regression for the changed legacy directory only.
 import fs from 'node:fs/promises';import path from 'node:path';import {testingBotClient,writeJson} from './testingbot-client.mjs';
 const out=path.resolve('../../../work/website-completion-20261008/testingbot-directory');await fs.mkdir(out,{recursive:true});const c=testingBotClient();
-const source=JSON.parse(await fs.readFile('deployment/completion-directory-20261008.json','utf8')).commit;
+const source=JSON.parse(await fs.readFile('deployment/completion-directory-phone-20261008.json','utf8')).commit;
 const pages=JSON.parse(await fs.readFile(path.join(out,'../public-structure.json'),'utf8'));
 const [devices,browsers]=await Promise.all([c.api('/devices/available'),c.api('/browsers')]);
 const chrome=browsers.filter(b=>b.platform==='WIN11'&&/chrome/i.test(b.name||b.browser||'')&&/^\d/.test(b.version)).sort((a,b)=>parseFloat(b.version)-parseFloat(a.version))[0];
