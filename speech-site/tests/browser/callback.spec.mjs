@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const centres=JSON.parse(fs.readFileSync('src/data/centre-directory.json','utf8'));
 const guntur=centres.find(c=>c.id==='guntur');
 const centrePath=new URL(guntur.profileUrl).pathname;
-const pages=[['directory','/centers','','help'],['speech','/speech-therapy/service-information','','speech'],['centre',centrePath,'guntur','help']];
+const pages=[['directory','/centers','','help'],['speech','/speech-therapy/service-information','','speech'],['centre',centrePath,'guntur','help'],['occupational','/best-occupational-therapy-center-india-proven-improvement-rate','','occupational'],['aba','/best-aba-therapy-center-india-proven-improvement-rate','','aba'],['autism','/autism-therapy','','autism']];
 test.beforeEach(async({context})=>{
  await context.route(/google-analytics|googletagmanager|doubleclick|googleadservices|aseasky/,r=>r.abort());
  await context.route('**/api/enrolment',r=>r.abort('blockedbyclient'));

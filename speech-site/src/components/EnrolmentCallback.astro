@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import FirstVisitPractical from './FirstVisitPractical.astro';
 import centres from '../data/centre-directory.json';
 import {phone,url} from '../data/site';
 interface Props { centre?:string; service?:string; location?:string; }
@@ -7,7 +8,7 @@ const {centre='',service='help',location='your preferred centre'}=Astro.props;
 const choices=[['help','Help me choose'],['speech','Speech & language'],['occupational','Occupational therapy'],['aba','ABA / behavioural support'],['education','Special education'],['autism','Autism / integrated support'],['other','Another service']];
 ---
 <section class="callback wrap" id="callback" aria-labelledby="request-title">
- <div class="callback-heading"><p class="eyebrow">One useful first conversation</p><h2 id="request-title">Let’s help you plan<br/><em>the next step.</em></h2><p class="enrol-form-intro">Leave your name and number. We’ll discuss suitable support at {location}, the assessment, appointment and fees before you decide.</p><a class="callback-call" href={phone.href} data-cta="callback-call"><Icon name="phone"/>Call {phone.display}</a><p>Free telephone guidance, 24/7. An enquiry does not confirm an appointment.</p></div>
+ <div class="callback-heading"><p class="eyebrow">One useful first conversation</p><h2 id="request-title">Let’s help you plan<br/><em>the next step.</em></h2><p class="enrol-form-intro">Leave your name and number. We’ll discuss suitable support at {location}, the assessment, appointment and fees before you decide.</p><a class="callback-call" href={phone.href} data-cta="callback-call"><Icon name="phone"/>Call {phone.display}</a><p>Free telephone guidance, 24/7. An enquiry does not confirm an appointment.</p><FirstVisitPractical/></div>
  <form id="pinnacle-enrolment" method="post" action="/api/enrolment" novalidate data-preview="false" data-api-endpoint="/api/enrolment" data-callback-contract="durable-enrolment-v1" data-default-centre={centre} data-default-service={service} aria-describedby="enrol-privacy">
   <noscript><p>Please enable JavaScript for this form, or call <a href={phone.href}>{phone.display}</a>.</p></noscript>
   <p id="enrol-unavailable">Loading the form… You can always call <a href={phone.href}>{phone.display}</a>.</p>

@@ -137,7 +137,7 @@
   const directoryPlacements = new Set(['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation']);
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
-  let enabled = false, loaded = false;
+  let enabled = false, loaded = false, tagStarted = false, preference = 'unset';
   const sourceKey='pinnacle-enquiry-source-v1',sourceLifetime=30*86400000;
   const acquisitionPath=location.pathname==='/speech-therapy/service-information'?'/top-speech-therapy-center-india-proven-improvement-rate':new URL(canonical).pathname;
   const acquisitionPaths=new Set(['/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
@@ -215,33 +215,42 @@
       }
     }
   };
+  // Actual receipt events do not wait for an optional browsing-analytics choice.
+  // An undecided visitor uses denied storage; an explicit refusal or GPC sends
+  // nothing. The protected receiver ledger remains the business authority.
+  const configureTag = (storage, measuredLocation, fields = {}) => {
+    window['ga-disable-' + id] = false;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    if (!window.__pinnacleConsentDefaults) {
+      window.__pinnacleConsentDefaults = true;
+      window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    }
+    window.gtag('consent','update',{analytics_storage:storage,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    window.gtag('set','ads_data_redaction',true);
+    window.gtag('set','url_passthrough',false);
+    if (!tagStarted) window.gtag('js',new Date());
+    window.gtag('config',id,{
+      send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
+      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
+      page_location:measuredLocation,page_title:pageTitle,page_referrer:storage==='granted'?safeReferrer:'',ignore_referrer:storage!=='granted'||!safeReferrer,
+      ...Object.fromEntries(Object.values(campaignFields).map(field=>[field,''])),...fields
+    });
+    if (!tagStarted && !document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+      const script=document.createElement('script');
+      script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;
+      document.head.append(script);
+    }
+    tagStarted = true;
+  };
   const start = () => {
     if (!production || blocked || knowledgeSearch) return;
     enabled = true;
     rememberSource();
     if(validationTraffic)return;
-    window['ga-disable-' + id] = false;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
     if (loaded) { window.gtag('consent','update',{analytics_storage:'granted'}); return; }
+    configureTag('granted',measurementLocation,campaigns);
     loaded = true;
-    if (!window.__pinnacleConsentDefaults) {
-      window.__pinnacleConsentDefaults = true;
-      window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
-    }
-    window.gtag('consent','update',{analytics_storage:'granted'});
-    window.gtag('js',new Date());
-    window.gtag('config',id,{
-      send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
-      cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
-      page_location:measurementLocation,page_title:pageTitle,page_referrer:safeReferrer,ignore_referrer:!safeReferrer,
-      ...campaigns
-    });
-    if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
-      const script=document.createElement('script');
-      script.async=true;script.src='https://www.googletagmanager.com/gtag/js?id='+id;
-      document.head.append(script);
-    }
     send('page_view',{page_group:pageGroup,schema_version:2});
     const viewed = Object.entries(commerceCatalogue).find(([, item]) => item.path === pagePath);
     if (viewed) sendCommerce('view_item', [{sku:viewed[0],quantity:1,price:viewed[1].price}]);
@@ -249,6 +258,7 @@
   const choose = (value, persist = true) => {
     if (!['accepted','declined'].includes(value)) return;
     if (!production) { tell('Preview: analytics is disabled. No analytics data is sent.'); return; }
+    preference = value;
     if (persist) { try { localStorage.setItem(key,JSON.stringify({value,at:Date.now()})); } catch {} }
     if (value==='accepted' && !blocked && !knowledgeSearch) {
       try { start(); tell('Optional analytics is on. Turn it off here at any time.'); }
@@ -256,7 +266,7 @@
     } else {
       enabled=false;window['ga-disable-'+id]=true;
       if(!isBookshop)forgetSource();
-      if (loaded) { try { window.gtag('consent','update',{analytics_storage:'denied'}); } catch {} }
+      if (tagStarted) { try { window.gtag('consent','update',{analytics_storage:'denied'}); } catch {} }
       clearCookies();
       tell(knowledgeSearch ? 'Your choice is saved. Analytics is disabled on search result pages.' : blocked ? 'Analytics is off because Global Privacy Control is enabled.' : 'Optional analytics is off. Your enquiry and call links still work.');
     }
@@ -277,11 +287,17 @@
   document.addEventListener('pinnacle:enquiry-accepted', event => {
     const receipt=event?.detail?.receipt;
     if(!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k)))return;
-    const callbackPage=(['centre_detail','centre_directory'].includes(pageGroup)||location.pathname==='/speech-therapy/service-information')&&document.querySelector('#pinnacle-enrolment[data-callback-contract="durable-enrolment-v1"][data-api-endpoint="/api/enrolment"]');
-    if ((pageGroup !== 'enrolment'&&!callbackPage) || acceptedRequests.has(receipt.requestId) || !production || !enabled || blocked || validationTraffic) return;
-    acceptedRequests.add(receipt.requestId);
-    send('enquiry_accepted',{schema_version:2,page_group:'enrolment',destination:'existing_enrolment_workflow'});
+    const callbackPage=(['centre_detail','centre_directory','occupational_therapy','aba_therapy','autism_therapy'].includes(pageGroup)||location.pathname==='/speech-therapy/service-information')&&document.querySelector('#pinnacle-enrolment[data-callback-contract="durable-enrolment-v1"][data-api-endpoint="/api/enrolment"]');
+    if ((pageGroup !== 'enrolment'&&!callbackPage) || acceptedRequests.has(receipt.requestId) || !production || blocked || knowledgeSearch || validationTraffic || preference==='declined') return;
+    try {
+      if (!enabled) configureTag('denied',canonical);
+      const parameters={schema_version:3,page_group:'enrolment',destination:'existing_enrolment_workflow',measurement_mode:enabled?'consented':'denied_storage'};
+      if (enabled) send('enquiry_accepted',parameters);
+      else window.gtag('event','enquiry_accepted',{...parameters,page_variant:variant,page_location:canonical,page_title:pageTitle,page_referrer:'',send_to:id,transport_type:'beacon'});
+      acceptedRequests.add(receipt.requestId);
+    } catch {} // The receipt and parent confirmation survive a vendor failure.
   });
+  if(disclosure&&!isBookshop)disclosure.textContent+=' Accepted enquiries are always recorded in our protected receiving system. With no analytics choice, a minimal accepted-enquiry event may be sent to Google with analytics and advertising storage denied. Choosing to keep analytics off, or using Global Privacy Control, stops that Google event.';
   document.addEventListener('click',event=>{
     if (pageGroup === 'family_resource') {
       const resourceLink=event.target?.closest?.('a[data-resource="first_conversation_v1"]');

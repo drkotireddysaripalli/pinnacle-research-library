@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import EnrolmentCallback from './EnrolmentCallback.astro';
 import HeroSlider from './HeroSlider.astro';
 import ActionStrip from './ActionStrip.astro';
 import Icon from './Icon.astro';
@@ -57,7 +58,8 @@ const reviewBranches=[
 
 ---
 <PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} serviceAreaServed={null} title={content.title} description={content.description} citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms Autism Therapy: one child, one life-first direction, with relevant support and 9100 181 181." imageCaption="A family-led, child-specific direction for communication, routines, learning and participation." shareImage={shareCard} shareVersion="2026-09-30-autism-life-first" publishedOn="2026-09-29" updatedOn="2026-10-05" enquiry={content.enquiry}>
-  <HeroSlider content={content} />
+  <HeroSlider content={{...content,enquiry:{...content.enquiry,url:'#callback',label:'Request a callback'}}} />
+  <EnrolmentCallback service="autism"/>
   <ActionStrip focused firstLabel="First conversation" firstHref="#first-conversation" />
 
   <section class="section wrap service-fit autism-fit" id="what-section" aria-labelledby="autism-fit-title">

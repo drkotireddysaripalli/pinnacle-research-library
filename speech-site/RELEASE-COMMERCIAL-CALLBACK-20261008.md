@@ -19,8 +19,12 @@ The established `/api/enrolment` contract remains responsible for durable accept
 
 ## Release state
 
-Prepared, awaiting exact-source CI and promotion. The candidate retains all 260 routes, 45 modules and 3,690 prior assets; it changes 71 assets and adds six, for 3,696 total. Only the shared route, enrolment assets and autism/centre assets modules change. Seven protected services, including Ask and the enquiry receiver, retain their versions and bindings. The rollback portal version is `d347b65a-404f-44cb-bc02-f5d7b8d8d9d5`.
+Deployed and publicly verified at source `3502d5b1df058dd3703fa1c2001cf4fc0f6cdf43`, Portal version `d358f2f7-7624-4a9c-8e57-4b705dab5cf8`, deployment `63bbac45-2b65-46b6-8fef-1a3940463a8f`. The release retains all 260 routes, 45 modules and 3,690 prior assets; it changes 71 assets and adds six, for 3,696 total. Only the shared route, enrolment assets and autism/centre assets modules change. Seven protected services retain their versions and bindings. Rollback: `d347b65a-404f-44cb-bc02-f5d7b8d8d9d5`.
+
+Exact-source CI and five TestingBot BVT cases passed. All 62 HTMLs and both public client hashes matched the release. Six physical functional cases passed on iPhone 13/iOS 18.5/Safari and Galaxy S24/Android 14/Chrome for centre, Speech and directory. Android showed a reduced keyboard viewport and reachable submit control; iOS demonstrated focus and reachability without a recorded reduced keyboard viewport. Provider network was not throttled. This is not visual-reference approval or field performance.
+
+Simulated mobile Lighthouse: Speech Performance 100, LCP 1.52 seconds; Guntur Performance 97, LCP 2.29 seconds. Both Accessibility/Best Practices/SEO 100, CLS 0, TBT 0. These are two lab samples, not field p75 or estate-wide scores. Evidence: `deployment/callback-public-readback-20261008.json`, `deployment/callback-physical-20261008/summary.json`, `deployment/callback-speed-20261008/summary.json`.
 
 Operational forwarding, qualified calls, CRM appointment/attendance/admission joins, account-side conversion selection, paid-destination mapping and field Core Web Vitals remain separate acceptance milestones. This release does not prove lead growth, indexing or improved Ads landing-page experience.
 
-Owner: this website chat. Next action: exact-source Portal quality/TestingBot BVT, guarded release, live document/client read-back and targeted physical-phone coverage. Existing growth schedulers remain stopped.
+Owner: this website chat. Next release extends the shared callback to OT/ABA/autism and fixes immediate denied-storage accepted-event transport for undecided visitors. This first callback release's optional-consent gate is superseded only when that next release is verified live. Existing growth schedulers remain stopped.

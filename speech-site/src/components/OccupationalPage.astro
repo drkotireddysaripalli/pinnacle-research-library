@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import EnrolmentCallback from './EnrolmentCallback.astro';
 import ActionStrip from './ActionStrip.astro';
 import CentreDirectory from './CentreDirectory.astro';
 import Icon from './Icon.astro';
@@ -17,7 +18,7 @@ import '../styles/occupational.css';
 import '../styles/therapy-reading.css';
 
 const canonical = url(content.path);
-const mobileCentreAction = {url:'#centres',mobileLabel:'Find a centre'};
+const mobileCentreAction = {url:'#callback',mobileLabel:'Request a callback'};
 const whatsappShare = 'https://wa.me/?text=' + encodeURIComponent('Occupational therapy for everyday life at Pinnacle Blooms. Start with one activity that matters: ' + canonical);
 const firstCallSteps = [
   ['heart','Tell us the moment','Share one activity you would like your child to enjoy or manage more confidently.'],
@@ -60,7 +61,7 @@ const reviewQuestions = [
         <p class="ot-hero-lead">Play, mealtimes, dressing and learning with others can all matter. Tell us one moment you would like your child to enjoy or manage more confidently.</p>
         <div class="ot-hero-actions">
           <a class="button primary" href={phone.href} data-cta="ot-hero-call"><Icon name="phone"/>Call {phone.display}</a>
-          <a class="button outline" href="#centres" data-cta="ot-hero-centres"><Icon name="pin"/>Find a Pinnacle centre</a>
+          <a class="button outline" href="#callback"><Icon name="arrow"/>Request a callback</a>
         </div>
         <p class="ot-hero-help">Free staffed telephone guidance, 24/7. Ask us to check the suitable OT professional, centre, visit and fees before you decide. <a href={url('/national-autism-helpline')}>How the Pinnacle/BHCL helpline works →</a></p>
       </div>
@@ -70,6 +71,7 @@ const reviewQuestions = [
     </div>
     <div class="wrap ot-hero-direction"><Icon name="compass" size={30}/><p><strong>Start with the life you want your child to join.</strong> Your child's growing self-sufficiency and participation in family, school and community life guide what the OT assesses, which goals and people fit, what your family practises and what we review together.</p></div>
   </section>
+  <EnrolmentCallback service="occupational"/>
   <ActionStrip focused firstLabel="Your first conversation" firstHref="#first-conversation" evidenceHref="#evidence" enrolHref={occupationalEnquiry}/>
 
   <span class="legacy-section-anchor" id="service-fit" aria-hidden="true"></span>

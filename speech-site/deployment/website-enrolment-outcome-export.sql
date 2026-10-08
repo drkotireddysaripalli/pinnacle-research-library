@@ -6,7 +6,8 @@ SELECT receipt_id,
        lead_reference,
        state,
        created_at_ms,
-       updated_at_ms
+       updated_at_ms,
+       source_json
 FROM website_enrolment_receipts
 WHERE state = 'accepted'
   AND lead_reference IS NOT NULL
@@ -18,3 +19,6 @@ ORDER BY updated_at_ms, receipt_id;
 -- assessment, attendance, admission or MyOperator call records are activated.
 -- Unknown/missing relationship IDs remain unmatched. Neither time proximity
 -- nor phone equality establishes an acquired family or conversion.
+-- source_json holds only the validated optional acquisition contract, never
+-- customer form fields. Keep receipt/reference/click IDs inside protected
+-- reporting. Public and vendor reports must use aggregates and approved fields.

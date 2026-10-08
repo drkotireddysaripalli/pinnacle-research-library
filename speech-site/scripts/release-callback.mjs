@@ -7,11 +7,11 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {createRequire} from 'node:module';
 
-const [phase,id]=process.argv.slice(2);
+const [phase,id,previousId]=process.argv.slice(2);
 assert(/^[a-z0-9-]{6,80}$/.test(id||''),'Unique release ID required');
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),priv=path.join(site,'ask-private',id),receiptPath=path.join(site,'deployment',id+'.json');
 const git='C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe';
-const g=args=>execFileSync(git,['-C',repo,...args],{encoding:'utf8',windowsHide:true}).trim();
+const g=args=>execFileSync(git,['-C',repo,...args],{encoding:'utf8',windowsHide:true,maxBuffer:64*1024*1024}).trim();
 const token=(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)?.[1];assert(token,'Existing Cloudflare login required');
 const base='/accounts/862998def1cd610fdb86b8e5c1d6ed4d/workers/scripts/',worker='pinnacle-verify-route',routePath='/zones/8b13f18e0589996b5d6512552372b434/workers/routes';
 const protectedNames=['pinnacle-ask','pinnacle-ask-mcp','pinnacle-legacy-social-metadata','pinnacle-centre-search-repair','pinnacle-helpline','pinnacle-root-sitemap','pbn-planetscale'];
@@ -31,25 +31,31 @@ async function modules(){
  const out=[];for(const [key,v] of await r.formData())if(typeof v!=='string'){const name=v.name||key;assert(/^[\w.-]+\.mjs$/.test(name));out.push({name,bytes:Buffer.from(await v.arrayBuffer())});}return out;
 }
 await fs.mkdir(priv,{recursive:true});
-if(phase==='prepare'){
- assert(!(await fs.stat(receiptPath).catch(()=>null)),'Receipt exists; reconcile instead of repeating');
- const [before,mods]=await Promise.all([state(),modules()]);
+if(phase==='prepare'||phase==='restage'){
+ const restage=phase==='restage';
+ if(restage)assert.equal(JSON.parse(await fs.readFile(receiptPath,'utf8')).phase,'prepared','Only an unuploaded candidate can be restaged');
+ else assert(!(await fs.stat(receiptPath).catch(()=>null)),'Receipt exists; reconcile instead of repeating');
+ const [before,mods]=restage?[JSON.parse(await fs.readFile(path.join(priv,'before.json'),'utf8')),JSON.parse(await fs.readFile(path.join(priv,'modules.json'),'utf8')).map(m=>({name:m.name,bytes:Buffer.from(m.base64,'base64')}))]:await Promise.all([state(),modules()]);
  const live=mods.find(m=>m.name==='pinnacle-route-v12.mjs');assert(live,'Live shared script module absent');
  assert.equal(sha(normalise(live.bytes)),sha(normalise(g(['show','HEAD:speech-site/deployment/pinnacle-route-v12.mjs']))),'HEAD baseline differs from live');
  await save(path.join(priv,'before.json'),before);await save(path.join(priv,'modules.json'),mods.map(m=>({name:m.name,base64:m.bytes.toString('base64')})));
- const union=path.join(site,'release-'+id);assert(!(await fs.stat(union).catch(()=>null)),'Reconcile existing asset union');
- await fs.cp(path.join(site,'release-enquiry-source-20261008'),union,{recursive:true});
- const readerKey='/mirracles-library-data/reader.json';await fs.mkdir(path.dirname(path.join(union,readerKey)),{recursive:true});await fs.copyFile(path.join(site,'ask-private/knowledge-journey-20261008/reader.json'),path.join(union,readerKey));
- const blake3=createRequire(path.join(site,'package.json'))('blake3-wasm'),priorManifest=JSON.parse(await fs.readFile(path.join(site,'ask-private/knowledge-journey-portal-20261008/manifest.json'),'utf8'));
+ const union=path.join(site,'release-'+id);if(!restage)assert(!(await fs.stat(union).catch(()=>null)),'Reconcile existing asset union');
+ assert(!previousId||/^[a-z0-9-]{6,80}$/.test(previousId),'Valid predecessor required');
+ if(!restage)await fs.cp(path.join(site,'release-'+(previousId||'enquiry-source-20261008')),union,{recursive:true});
+ if(!previousId){const readerKey='/mirracles-library-data/reader.json';await fs.mkdir(path.dirname(path.join(union,readerKey)),{recursive:true});await fs.copyFile(path.join(site,'ask-private/knowledge-journey-20261008/reader.json'),path.join(union,readerKey));}
+ const blake3=createRequire(path.join(site,'package.json'))('blake3-wasm'),priorManifest=JSON.parse(await fs.readFile(path.join(site,'ask-private',previousId||'knowledge-journey-portal-20261008','manifest.json'),'utf8'));
+ const retainedAssets=Object.keys(priorManifest).length;
  const assetHash=(bytes,key)=>blake3.hash(bytes.toString('base64')+path.extname(key).slice(1)).toString('hex').slice(0,32);
- assert.equal(Object.keys(priorManifest).length,3690,'Current retained asset count');
- for(const [key,r]of Object.entries(priorManifest)){const b=await fs.readFile(path.join(union,key));assert.equal(assetHash(b,key),r.hash,'Baseline mismatch '+key);assert.equal(b.length,r.size);}
- const changed=new Set(),htmlPaths=[];
+ assert.equal(retainedAssets,previousId?3696:3690,'Current retained asset count');
+ if(!restage)for(const [key,r]of Object.entries(priorManifest)){const b=await fs.readFile(path.join(union,key));assert.equal(assetHash(b,key),r.hash,'Baseline mismatch '+key);assert.equal(b.length,r.size);}
+ const changed=new Set(restage?JSON.parse(await fs.readFile(path.join(priv,'changed-assets.json'),'utf8')):[]),htmlPaths=[];
+ if(restage)for(const name of ['occupational','aba','autism']){const key='/pinnacle-pages-html/'+name+'.html';if(!priorManifest[key]){await fs.unlink(path.join(union,key)).catch(()=>{});changed.delete(key);}}
  async function overlay(key,file){const bytes=await fs.readFile(file),target=path.join(union,key),old=await fs.readFile(target).catch(()=>null);await fs.mkdir(path.dirname(target),{recursive:true});if(!old||!old.equals(bytes)){await fs.writeFile(target,bytes);changed.add(key);}return bytes;}
  const directory=JSON.parse(await fs.readFile(path.join(site,'src/data/centre-directory.json'),'utf8'));
  for(const c of directory){const pathname=new URL(c.profileUrl).pathname,file=path.join(site,'dist',pathname+'.html');if(!(await fs.stat(file).catch(()=>null)))continue;const html=await fs.readFile(file,'utf8');if(!html.includes('data-callback-contract="durable-enrolment-v1"'))continue;htmlPaths.push({url:'https://www.pinnacleblooms.org'+pathname,key:'/pinnacle-pages-html/'+c.id+'.html',file});}
  htmlPaths.push({url:'https://www.pinnacleblooms.org/centers',key:'/pinnacle-pages-html/centers.html',file:path.join(site,'dist/centers.html')},{url:'https://www.pinnacleblooms.org/speech-therapy/service-information',key:'/pinnacle-pages-html/service-information.html',file:path.join(site,'dist/speech-therapy/service-information.html')},{url:'https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india',key:'/pinnacle-pages-html/enrolment.html',file:path.join(site,'dist/enroll-autism-speech-aba-therapies-india.html')});
- assert(htmlPaths.length>=60&&htmlPaths.length<=64,'Bounded current centre callback cohort');
+ if(previousId)for(const [pathname,name]of [['/best-occupational-therapy-center-india-proven-improvement-rate','occupational-therapy'],['/best-aba-therapy-center-india-proven-improvement-rate','aba-therapy'],['/autism-therapy','autism-therapy']])htmlPaths.push({url:'https://www.pinnacleblooms.org'+pathname,key:'/pinnacle-pages-html/'+name+'.html',file:path.join(site,'dist',pathname+'.html')});
+ assert(htmlPaths.length>=60&&htmlPaths.length<=68,'Bounded current callback cohort');
  for(const page of htmlPaths){const html=(await overlay(page.key,page.file)).toString();for(const key of new Set(html.match(/\/pinnacle-pages-(?:assets|fonts|scripts)\/[\w./-]+/g)||[]))await overlay(key,path.join(site,'dist',key));}
  const clients=['/pinnacle-pages-scripts/enrolment.js','/pinnacle-pages-scripts/speech-measurement.js'];for(const key of clients)await overlay(key,path.join(site,'public',key));
  const htmlKeys=new Set(htmlPaths.map(p=>p.key)),changedModules=[];
@@ -62,8 +68,8 @@ if(phase==='prepare'){
  await save(path.join(priv,'candidate-modules.json'),changedModules);
  const runtime=(await api(base+worker+'/versions/'+before.workers[worker].versions[0].version_id)).resources.script_runtime.assets;
  assert.deepEqual({html_handling:runtime.html_handling,not_found_handling:runtime.not_found_handling,run_worker_first:runtime.raw_run_worker_first},{html_handling:'none',not_found_handling:'none',run_worker_first:true});
- const receipt={id,phase:'prepared',at:before.at,baseCommit:g(['rev-parse','HEAD']),rollback:before.workers[worker].versions,routeCount:before.routes.length,moduleCount:mods.length,retainedAssets:3690,changedAssets:changed.size,totalAssets:Object.keys(manifest).length,changedModules,htmlCount:htmlPaths.length,originalHashes:Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]))};
- await save(receiptPath,receipt);console.log(JSON.stringify({phase:receipt.phase,routes:receipt.routeCount,modules:receipt.moduleCount,rollback:receipt.rollback,retainedAssets:3690,totalAssets:receipt.totalAssets,changedAssets:receipt.changedAssets,changedModules,htmlCount:receipt.htmlCount}));
+ const receipt={id,phase:'prepared',at:before.at,baseCommit:g(['rev-parse','HEAD']),rollback:before.workers[worker].versions,routeCount:before.routes.length,moduleCount:mods.length,retainedAssets,changedAssets:changed.size,totalAssets:Object.keys(manifest).length,changedModules,htmlCount:htmlPaths.length,originalHashes:Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]))};
+ await save(receiptPath,receipt);console.log(JSON.stringify({phase:receipt.phase,routes:receipt.routeCount,modules:receipt.moduleCount,rollback:receipt.rollback,retainedAssets,totalAssets:receipt.totalAssets,changedAssets:receipt.changedAssets,changedModules,htmlCount:receipt.htmlCount}));
 }else{
  const before=JSON.parse(await fs.readFile(path.join(priv,'before.json'),'utf8')),receipt=JSON.parse(await fs.readFile(receiptPath,'utf8')),now=await state();
  const expectedSettings=structuredClone(before.settings);

@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import EnrolmentCallback from './EnrolmentCallback.astro';
 import HeroSlider from './HeroSlider.astro';
 import ActionStrip from './ActionStrip.astro';
 import Icon from './Icon.astro';
@@ -53,7 +54,9 @@ const disciplines = [
 ];
 ---
 <PageLayout path={content.path} label={content.label} serviceName={content.name} serviceType={content.type} serviceAreaServed={null} title={content.title} description={content.description} socialTitle="ABA Therapy for Children | Understand First | Pinnacle Blooms" socialDescription="Communication, choice and everyday participation guide respectful behavioural support. Call 9100 181 181." citations={content.citations} faqs={content.faqs} imageAlt="Pinnacle Blooms Network ABA Therapy: a child makes a choice with family and professional support. Call 9100 181 181." imageCaption="ABA and behavioural support connected to communication, choice and everyday life at Pinnacle Blooms Network." shareImage={abaSocial} shareVersion="20260930-aba-life-first" publishedOn="2026-09-29" updatedOn="2026-10-05" enquiry={content.enquiry}>
-  <HeroSlider content={content} /><ActionStrip focused firstLabel="First conversation" firstHref="#first-visit" evidenceHref="#evidence" enrolHref={abaEnquiry} />
+  <HeroSlider content={{...content,enquiry:{...content.enquiry,url:'#callback',label:'Request a callback'}}} />
+  <EnrolmentCallback service="aba"/>
+  <ActionStrip focused firstLabel="First conversation" firstHref="#first-visit" evidenceHref="#evidence" enrolHref={abaEnquiry} />
 
   <section class="section wrap service-fit aba-fit" id="service-fit" aria-labelledby="aba-fit-title">
     <div class="fit-heading"><p class="eyebrow">ABA therapy · A child’s life gives the goal direction</p><h2 id="aba-fit-title">Understand the moment. <em>Then choose a goal that matters.</em></h2></div>

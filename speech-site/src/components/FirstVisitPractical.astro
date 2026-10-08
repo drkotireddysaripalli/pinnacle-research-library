@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+import {url} from '../data/site';
+---
+<details class="visit-practical"><summary>Before you book: the visit, plan and fees</summary><div>
+ <p><Icon name="people"/><strong>Begin with your child and family.</strong> Share what your child enjoys and the everyday change you hope for. Ask which ability measurement, assessment and professional pathway fits that starting point.</p>
+ <p><Icon name="pin"/><strong>Confirm the visit.</strong> Ask for the suitable professional, centre, available time, language and access arrangements before travelling. A callback request is an enquiry; it is not a reserved appointment.</p>
+ <p><Icon name="book"/><strong>Understand the costs.</strong> Ask separately about assessment, any report or review, and continuing therapy. Confirm what the proposed fee includes and the recommended session plan before deciding. An offer shown for one service does not apply automatically to another.</p>
+ <p><Icon name="shield"/><strong>Decide with clarity.</strong> Discuss family practice, review arrangements and any relevant change or cancellation terms. <a href={url('/payment-and-billing')}>Payment information</a> · <a href={url('/refund-policy')}>Refund policy</a> · <a href={url('/verify')}>Explore Pinnacle evidence</a>.</p>
+ </div></details>
+<style>.visit-practical{margin-top:1rem;border-top:1px solid #dce8e8}.visit-practical summary{cursor:pointer;font-weight:700;padding:.8rem 0;min-height:44px}.visit-practical p{font-size:1rem;line-height:1.65}.visit-practical svg{vertical-align:middle;margin-right:.5rem;color:#078c89}.visit-practical a{text-decoration:underline;text-underline-offset:.15em}</style>

@@ -197,7 +197,7 @@ test('no analytics before consent; valid consent sends only fixed CTA fields',()
 });
 
 test('accepted enquiries send one fixed consented event on the enrolment route only',()=>{
- const h=harness({path:canonicalEnrolment});h.accepted();assert.equal(h.events().length,0);
+ const h=harness({path:canonicalEnrolment});
  h.choose('accepted');h.accepted();h.accepted();
  assert.deepEqual(h.events().map(e=>e[1]),['page_view','enquiry_accepted']);
  assert.equal(h.events()[1][2].page_group,'enrolment');
@@ -448,10 +448,32 @@ test('Knowledge campaign handoff requires consent and withdrawal restores the or
 
 test('approved inline callback receipts emit once and respect refusal, GPC and absent contract',()=>{
  for(const path of ['/centers','/speech-therapy/service-information']){
-  const h=harness({path,callback:true,search:''});h.accepted();assert.equal(h.events().length,0);h.choose('accepted');h.accepted();h.accepted();assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,1);
+  const h=harness({path,callback:true,search:''});h.choose('accepted');h.accepted();h.accepted();assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,1);
   assert(!JSON.stringify(h.events()).includes('qa-event-request'));h.choose('declined');h.accepted({schemaVersion:1,requestId:'qa-second-request',id:'qa-second-receipt'});assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,1);
   for(const options of [{callback:false},{callback:true,gpc:true},{callback:true,search:'?validation_test=1'},{callback:true,origin:'http://127.0.0.1:4340'}]){const b=harness({path,...options});b.choose('accepted');b.accepted();assert.equal(b.events().filter(e=>e[1]==='enquiry_accepted').length,0);}
  }
+});
+test('undecided receipt uses denied storage immediately with no optional campaign or contact data',()=>{
+ for(const path of [canonicalEnrolment,'/centers','/speech-therapy/service-information']){
+  const h=harness({path,callback:true,search:'?utm_source=google&utm_medium=cpc&gclid=qaCampaign123&name=private-child'});
+  assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);h.accepted();h.accepted();
+  assert.deepEqual(h.events().map(e=>e[1]),['enquiry_accepted']);assert.equal(h.scripts.length,1);
+  assert.equal(h.events()[0][2].measurement_mode,'denied_storage');
+  const commands=Array.from(h.win.dataLayer,x=>Array.from(x));
+  for(const c of commands.filter(c=>c[0]==='consent'))assert.equal(c[2].analytics_storage,'denied');
+  const serialized=JSON.stringify(commands);for(const excluded of ['private-child','gclid','qaCampaign123','qa-event-request','qa-event-receipt','requestId','user_id','client_id'])assert(!serialized.includes(excluded));
+  assert.equal(h.writes.length,0);assert.equal(h.cookies.length,0);assert.equal(h.win.pinnacleEnquirySource(),null);
+  h.choose('accepted');h.accepted();assert.deepEqual(h.events().map(e=>e[1]),['enquiry_accepted','page_view']);assert.equal(h.scripts.length,1);
+  h.accepted({schemaVersion:1,requestId:'qa-next-valid-request',id:'qa-next-valid-receipt'});assert.equal(h.events().at(-1)[2].measurement_mode,'consented');
+ }
+});
+test('automatic receipt transport does not override refusal or send invalid, QA, GPC or unapproved events',()=>{
+ for(const opts of [{saved:{value:'declined',at:Date.now()}},{gpc:true},{search:'?validation_test=1'},{origin:'http://127.0.0.1:4340'},{path:'/autism-therapy'}]){
+  const h=harness({path:canonicalEnrolment,...opts});h.accepted();assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);
+ }
+ const h=harness({path:canonicalEnrolment});h.choose('declined');h.accepted();assert.equal(h.events().length,0);
+ const invalid=harness({path:canonicalEnrolment});for(const receipt of [null,{schemaVersion:1,requestId:'short',id:'short'},{schemaVersion:1,requestId:'qa-valid-request',id:'qa-valid-receipt',phone:'private'}])invalid.accepted(receipt);assert.equal(invalid.events().length,0);
+ const withdrawal=harness({path:canonicalEnrolment});withdrawal.accepted();withdrawal.choose('declined');withdrawal.accepted({schemaVersion:1,requestId:'qa-another-request',id:'qa-another-receipt'});assert.equal(withdrawal.events().length,1);
 });
 test('fresh speech-info source uses the permitted speech family and exact call placements',()=>{
  const h=harness({path:'/speech-therapy/service-information',callback:true,search:'?utm_source=google&utm_medium=cpc&utm_campaign=QA-SPEECH-INFO&gclid=qaSpeechInfo123'});h.choose('accepted');

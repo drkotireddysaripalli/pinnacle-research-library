@@ -5,6 +5,13 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 export const RECEIVER_SOURCE_SHA256='96d69dee450a771b6bc546bffdc63dd5804e3667d95c9147ea3e48a823ab5380';
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
+export function patchEnquiryAnalyticsReceiver(bytes,expectedSha256){
+ if(digest(bytes)!==expectedSha256)throw new Error('Live receiver differs from the recorded release');
+ const anchor='class WebsiteEnrolmentReceipts extends WebsiteReceiptWorkerEntrypoint {';
+ let source=bytes.toString();if(source.split(anchor).length!==2||source.includes('readWebsiteEnquiryAnalytics'))throw new Error('Private receipt entrypoint boundary changed');
+ const method=`\n  async analytics(cohort) {\n    await getPSConnection(this.env);\n    if (!globalConnection) throw new Error("Receiving database unavailable");\n    return readWebsiteEnquiryAnalytics((sql, params) => globalConnection.execute(sql, params), cohort);\n  }\n`;
+ return 'import {readEnquiryAnalytics as readWebsiteEnquiryAnalytics} from "./website-enrolment-analytics.mjs";\n'+source.replace(anchor,anchor+method);
+}
 export function isolateLegacySitemapWriter(source){
  const anchor='var XMLObj = xmlWriter;';
  for(const name of ['GenarateSiteMap','GenarateVideoSiteMap']){
@@ -43,6 +50,11 @@ export function patchEnrolmentReceiver(bytes){
  const entrypoint=`
 // Private RPC entrypoint on the existing Worker. No public fetch handler.
 class WebsiteEnrolmentReceipts extends WebsiteReceiptWorkerEntrypoint {
+  async analytics(cohort) {
+    await getPSConnection(this.env);
+    if (!globalConnection) throw new Error("Receiving database unavailable");
+    return readWebsiteEnquiryAnalytics((sql, params) => globalConnection.execute(sql, params), cohort);
+  }
   async receive(data, idempotencyKey) {
     await getPSConnection(this.env);
     globalEnv = this.env;
@@ -64,7 +76,7 @@ class WebsiteEnrolmentReceipts extends WebsiteReceiptWorkerEntrypoint {
 }
 export {WebsiteEnrolmentReceipts};
 `;
- source='import {WorkerEntrypoint as WebsiteReceiptWorkerEntrypoint} from "cloudflare:workers";\nimport {receiveReceiptEnrolment as receiveWebsiteEnrolmentReceipt,sqlReceiptLedger as websiteEnrolmentSqlLedger} from "./website-enrolment-receipt.mjs";\n'+source+entrypoint;
+ source='import {WorkerEntrypoint as WebsiteReceiptWorkerEntrypoint} from "cloudflare:workers";\nimport {readEnquiryAnalytics as readWebsiteEnquiryAnalytics} from "./website-enrolment-analytics.mjs";\nimport {receiveReceiptEnrolment as receiveWebsiteEnrolmentReceipt,sqlReceiptLedger as websiteEnrolmentSqlLedger} from "./website-enrolment-receipt.mjs";\n'+source+entrypoint;
  // Deduplicate only the observed staff sitemap's repeated generated page URLs.
  const staffAnchor='var rssResponse = GenarateSiteMap(data2, "STAFF", true);';
  if(source.split(staffAnchor).length!==2)throw Error('Staff sitemap generator changed');
@@ -76,6 +88,7 @@ export async function prepareEnrolmentReceiver({input='ask-private/acquisition-r
  await fs.mkdir(output,{recursive:true});
  await fs.writeFile(path.join(output,'index.js'),candidate);
  await fs.writeFile(path.join(output,'website-enrolment-receipt.mjs'),helper);
+ await fs.writeFile(path.join(output,'website-enrolment-analytics.mjs'),await fs.readFile('deployment/enrolment-analytics.mjs'));
  const receipt={candidateOnly:true,worker:'pbn-planetscale',sourceSha256:digest(bytes),modules:[{module:'index.js',sha256:digest(candidate),bytes:Buffer.byteLength(candidate)},{module:'website-enrolment-receipt.mjs',sha256:digest(helper),bytes:helper.length}],modifiedFunctions:['HandleStaticWebForms: deny versioned receipts on public route','HandleLead: optional actual write reference capture','WebsiteEnrolmentReceipts: private RPC entrypoint'],legacyBranchesPreserved:true,requiresReviewedMigration:'deployment/website-enrolment-receipts.sql',requiresBinding:{type:'service',name:'PINNACLE_ENROLMENT_RECEIPTS',service:'pbn-planetscale',entrypoint:'WebsiteEnrolmentReceipts'},activation:'Website Worker ENROLMENT_RECEIPT_VERSION=1 only after receiver and private binding deployment'};
  await fs.writeFile(path.join(output,'candidate.json'),JSON.stringify(receipt,null,2)+'\n');
  return receipt;
