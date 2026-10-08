@@ -35,7 +35,7 @@ test('protected acquisition survives adapter and atomic ledger; same-key retries
   const source=JSON.parse(f.db.prepare('SELECT source_json FROM website_enrolment_receipts').get().source_json);assert.deepEqual(source.acquisition,acquisition);
   const changed={...p,source:{...p.source,acquisition:{...acquisition,fields:{utm_source:'bing'}}}};assert.equal((await (await send(changed)).json()).receipt.id,answer.receipt.id);assert.equal(calls,1);assert.deepEqual(JSON.parse(f.db.prepare('SELECT source_json FROM website_enrolment_receipts').get().source_json),source);
   assert(!JSON.stringify(answer).includes('gclid'));assert(!JSON.stringify(source).includes('ISOLATED QA FIXTURE'));
-  for(const invalid of [{...acquisition,landingPath:'/ask/private-child-topic'},{...acquisition,consent:'denied'},{...acquisition,fields:{email:'qa@example.com'}},{...acquisition,fields:{utm_campaign:'my child name'}},{...acquisition,rawUrl:'private'}])assert.equal((await send({...p,source:{...p.source,acquisition:invalid}})).status,422);
+  for(const invalid of [{...acquisition,landingPath:'/ask/private-child-topic'},{...acquisition,consent:'denied'},{...acquisition,capturedAt:Date.now()+3600000},{...acquisition,capturedAt:Date.now()-31*86400000},{...acquisition,fields:{email:'qa@example.com'}},{...acquisition,fields:{utm_campaign:'my child name'}},{...acquisition,rawUrl:'private'}]){assert.equal((await send({...p,source:{...p.source,acquisition:invalid}})).status,202);assert(!sent.WebsiteReceipt.source.acquisition,'Bad optional attribution must not block valid contact or cross private boundary');}
  }finally{f.close();}
 });
 
