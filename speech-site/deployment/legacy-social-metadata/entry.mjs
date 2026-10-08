@@ -1,3 +1,4 @@
+import {fetchPublicOrigin} from '../public-mobile-recovery.mjs';
 // Shared legacy metadata repair. The Astro portal, Ask and other route owners
 // remain independent. Inspect a bounded head; separately filter a known invalid
 // FAQ debug payload while streaming all remaining content unchanged.
@@ -168,7 +169,7 @@ export async function transform(request, response) {
   return result;
 }
 
-export async function handle(request, fetcher = fetch) {
+export async function handle(request, fetcher = fetchPublicOrigin) {
   const redirect = sunshineRedirect(request) || staffRoute(request) || physiotherapyRedirect(request);
   if (redirect) return redirect;
   if (request.method === 'GET' && new URL(request.url).origin + new URL(request.url).pathname === 'https://www.pinnacleblooms.org/franchise-autism-therapy-center' && !request.headers.has('authorization') && !request.headers.has('range')) {

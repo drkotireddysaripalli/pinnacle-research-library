@@ -1,3 +1,4 @@
+import {createMirraclesLibrary} from './mirracles-library.mjs';
 import {suchitraAsset,suchitraHash} from './suchitra-assets.mjs';
 import {enrolmentAsset,enrolmentHash} from './enrolment-assets.mjs';
 import {hasHardcoverEdition,addHardcoverLinks,HARDCOVER_LINK_RELEASE} from './book-hardcover-links.mjs';
@@ -35,7 +36,7 @@ export const CENTERS_CANONICAL='/centers';
 export const SUCHITRA_CANONICAL='/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india';
 export {CENTRE_DETAIL_ROUTES} from './centre-routes.mjs';
 import {CENTRE_DETAIL_ROUTES} from './centre-routes.mjs';
-export const PUBLIC_DOCUMENT_ROUTES={"/policies":"policies","/payment-and-billing":"payment-and-billing","/privacy-policy":"privacy-policy","/terms-of-use":"terms-of-use","/terms-of-service":"terms-of-service","/cookie-policy":"cookie-policy","/copyright-and-intellectual":"copyright-and-intellectual","/age-restriction-policy":"age-restriction-policy","/contact-information":"contact-information","/disclaimer-and-limitations-of-liabilities":"disclaimer-and-limitations-of-liabilities","/endorsement-and-testimonial":"endorsement-and-testimonial","/governing-and-jurisdiction":"governing-and-jurisdiction","/third-party-inegration":"third-party-inegration","/refund-policy":"refund-policy","/staff-declaration":"staff-declaration","/ethics-charter":"ethics-charter","/self-sufficient":"self-sufficient","/mainstream":"mainstream","/about-pinnacle-proven-improvement-rate":"about","/leadership":"leadership","/pinnacle-global-autism-framework":"framework"};
+export const PUBLIC_DOCUMENT_ROUTES={"/everyday-therapy-home-study":"everyday-home-study","/policies":"policies","/payment-and-billing":"payment-and-billing","/privacy-policy":"privacy-policy","/terms-of-use":"terms-of-use","/terms-of-service":"terms-of-service","/cookie-policy":"cookie-policy","/copyright-and-intellectual":"copyright-and-intellectual","/age-restriction-policy":"age-restriction-policy","/contact-information":"contact-information","/disclaimer-and-limitations-of-liabilities":"disclaimer-and-limitations-of-liabilities","/endorsement-and-testimonial":"endorsement-and-testimonial","/governing-and-jurisdiction":"governing-and-jurisdiction","/third-party-inegration":"third-party-inegration","/refund-policy":"refund-policy","/staff-declaration":"staff-declaration","/ethics-charter":"ethics-charter","/self-sufficient":"self-sufficient","/mainstream":"mainstream","/about-pinnacle-proven-improvement-rate":"about","/leadership":"leadership","/pinnacle-global-autism-framework":"framework"};
 export const PINNACLEAI_PATHS=['/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat'];
 const DOCUMENT='/speech-therapy/service-information';
 const ENROLMENT_PREVIEW='/pinnacle-pages-preview/enrolment';
@@ -44,7 +45,23 @@ const MIME={'.pdf':'application/pdf','.mjs':'text/javascript; charset=utf-8','.v
 function acceptsMarkdown(value=''){return value.split(',').some(entry=>{const [type,...parameters]=entry.trim().split(';');if(type.toLowerCase()!=='text/markdown')return false;const quality=parameters.map(parameter=>parameter.trim()).find(parameter=>parameter.toLowerCase().startsWith('q='));return quality?Number(quality.slice(2))>0:true;});}
 // Exact retired public profiles/assets. Other leadership and image paths keep origin handling.
 export function isRetiredLeadershipPath(path){let decoded;try{decoded=decodeURIComponent(path);}catch{return false;}return /^\/leadership\/(?:prudhvi-(?:matsa|masta)|maheshwari|(?:shoban|sobhan)-kumar)\/?$/i.test(decoded)||/^\/images\/leadershipimages\/(?:prudhvi|maheshwari|shoban|sobhan)_big_image\.(?:jpe?g|png)$/i.test(decoded);}
+// Read only published video assets through the existing public binding. No app,
+// account, payment, report or database routes are owned by this library.
+let mirraclesPublicHandler;
+async function serveMirraclesLibrary(request,env){
+ const u=new URL(request.url);
+ if(!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(u.hostname)||!(/^\/allmirracles(?:\/|$)/.test(u.pathname)||/^\/mirracles\/\d+(?:\/|$)/.test(u.pathname))||!env.ASSETS)return null;
+ if(!mirraclesPublicHandler){
+  let shellPromise;
+  const read=async name=>{if(!/^(?:catalogue|details-\d+|shell)$/.test(name))throw Error('Unknown public video asset');const r=await env.ASSETS.fetch(new Request('https://assets.local/mirracles-library-data/'+name+'.json'));if(r.status!==200)throw Error('Public video asset unavailable');return r.json();};
+  mirraclesPublicHandler=createMirraclesLibrary({loadJson:read,shell:async()=>{shellPromise??=read('shell').catch(e=>{shellPromise=undefined;throw e});return shellPromise},responseHeaders:{'Content-Security-Policy':"object-src 'none'; base-uri 'self'; frame-ancestors 'self'",'X-Pinnacle-Mirracles-Library':'public-20261008'}});
+ }
+ if(u.hostname==='pinnacleblooms.org'){u.hostname='www.pinnacleblooms.org';const known=await mirraclesPublicHandler(new Request(u.href,request));return known?new Response(null,{status:301,headers:{location:u.href,'cache-control':'private, no-store'}}):null;}
+ return mirraclesPublicHandler(request);
+}
+
 export async function serveSpeech(request,env,inventory){
+ const videos=await serveMirraclesLibrary(request,env);if(videos)return videos;
  const seva=serveSeva(request);if(seva)return seva;
  // Cloudflare matches query strings in route patterns. The /seva* trigger must
  // pass unowned neighbouring paths directly to their unchanged legacy origin.
@@ -64,11 +81,12 @@ export async function serveSpeech(request,env,inventory){
  const privateResponse=request.headers.has('cookie')||request.headers.has('authorization')||u.pathname==='/shop/cart';
  if(isRetiredLeadershipPath(u.pathname))return new Response(request.method==='HEAD'?null:'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex"><title>Profile no longer available | Pinnacle Blooms Network</title><main><h1>This profile is no longer available.</h1><p><a href="/leadership">Meet Pinnacle’s leadership</a></p></main></html>',{status:410,headers:{'content-type':'text/html; charset=utf-8','cache-control':'no-store','x-robots-tag':'noindex, noarchive','x-content-type-options':'nosniff'}});
  if(/^\/leadership\/?$/i.test(u.pathname)&&u.pathname!=='/leadership'){u.pathname='/leadership';return new Response(null,{status:301,headers:{location:u.href,'cache-control':privateResponse?'private, no-store':'public, max-age=0, must-revalidate'}});}
- const aliases=new Map([['/speech-therapy',SPEECH_CANONICAL],['/speech-therapy/',SPEECH_CANONICAL],[SPEECH_CANONICAL+'/',SPEECH_CANONICAL],['/occupational-therapy',OCCUPATIONAL_CANONICAL],['/occupational-therapy/',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy/',OCCUPATIONAL_CANONICAL],[OCCUPATIONAL_CANONICAL+'/',OCCUPATIONAL_CANONICAL],['/aba-therapy',ABA_CANONICAL],['/aba-therapy/',ABA_CANONICAL],['/t/aba-therapy',ABA_CANONICAL],['/t/aba-therapy/',ABA_CANONICAL],[ABA_CANONICAL+'/',ABA_CANONICAL],['/special-education',SPECIAL_EDUCATION_CANONICAL],['/special-education/',SPECIAL_EDUCATION_CANONICAL],['/Special-Education',SPECIAL_EDUCATION_CANONICAL],['/Special-Education/',SPECIAL_EDUCATION_CANONICAL],['/t/special-education',SPECIAL_EDUCATION_CANONICAL],['/t/special-education/',SPECIAL_EDUCATION_CANONICAL],[SPECIAL_EDUCATION_CANONICAL+'/',SPECIAL_EDUCATION_CANONICAL],[AUTISM_CANONICAL+'/',AUTISM_CANONICAL],[ASSESSMENT_CANONICAL+'/',ASSESSMENT_CANONICAL],['/t/autism-therapy',AUTISM_CANONICAL],['/t/autism-therapy/',AUTISM_CANONICAL],[CENTERS_CANONICAL+'/',CENTERS_CANONICAL],['/Centers',CENTERS_CANONICAL],['/Centers/',CENTERS_CANONICAL],['/centres',CENTERS_CANONICAL],['/centres/',CENTERS_CANONICAL],['/Centres',CENTERS_CANONICAL],['/Centres/',CENTERS_CANONICAL],['/locations',CENTERS_CANONICAL],['/locations/',CENTERS_CANONICAL],['/Locations',CENTERS_CANONICAL],['/Locations/',CENTERS_CANONICAL],['/enroll',ENROLMENT_CANONICAL],['/enroll/',ENROLMENT_CANONICAL],[ENROLMENT_CANONICAL+'/',ENROLMENT_CANONICAL],[ENROLMENT_PREVIEW,ENROLMENT_CANONICAL],[DOCUMENT+'/',DOCUMENT],[DOCUMENT+'.html',DOCUMENT]]);
+ const aliases=new Map([['/speech-therapy',SPEECH_CANONICAL],['/speech-therapy/',SPEECH_CANONICAL],[SPEECH_CANONICAL+'/',SPEECH_CANONICAL],['/occupational-therapy',OCCUPATIONAL_CANONICAL],['/occupational-therapy/',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy',OCCUPATIONAL_CANONICAL],['/t/occupational-therapy/',OCCUPATIONAL_CANONICAL],[OCCUPATIONAL_CANONICAL+'/',OCCUPATIONAL_CANONICAL],['/aba-therapy',ABA_CANONICAL],['/aba-therapy/',ABA_CANONICAL],['/t/aba-therapy',ABA_CANONICAL],['/t/aba-therapy/',ABA_CANONICAL],[ABA_CANONICAL+'/',ABA_CANONICAL],['/special-education',SPECIAL_EDUCATION_CANONICAL],['/special-education/',SPECIAL_EDUCATION_CANONICAL],['/Special-Education',SPECIAL_EDUCATION_CANONICAL],['/Special-Education/',SPECIAL_EDUCATION_CANONICAL],['/t/special-education',SPECIAL_EDUCATION_CANONICAL],['/t/special-education/',SPECIAL_EDUCATION_CANONICAL],[SPECIAL_EDUCATION_CANONICAL+'/',SPECIAL_EDUCATION_CANONICAL],[AUTISM_CANONICAL+'/',AUTISM_CANONICAL],[ASSESSMENT_CANONICAL+'/',ASSESSMENT_CANONICAL],['/t/autism-therapy',AUTISM_CANONICAL],['/t/autism-therapy/',AUTISM_CANONICAL],[CENTERS_CANONICAL+'/',CENTERS_CANONICAL],['/Centers',CENTERS_CANONICAL],['/Centers/',CENTERS_CANONICAL],['/centres',CENTERS_CANONICAL],['/centres/',CENTERS_CANONICAL],['/Centres',CENTERS_CANONICAL],['/Centres/',CENTERS_CANONICAL],['/locations',CENTERS_CANONICAL],['/locations/',CENTERS_CANONICAL],['/Locations',CENTERS_CANONICAL],['/Locations/',CENTERS_CANONICAL],['/enrol',ENROLMENT_CANONICAL],['/enrol/',ENROLMENT_CANONICAL],['/enroll',ENROLMENT_CANONICAL],['/enroll/',ENROLMENT_CANONICAL],[ENROLMENT_CANONICAL+'/',ENROLMENT_CANONICAL],[ENROLMENT_PREVIEW,ENROLMENT_CANONICAL],[DOCUMENT+'/',DOCUMENT],[DOCUMENT+'.html',DOCUMENT]]);
  for(const product of PINNACLEAI_PATHS)aliases.set(product+'/',product);
  for(const centre of Object.keys(CENTRE_DETAIL_ROUTES))aliases.set(centre+'/',centre);
  for(const document of Object.keys(PUBLIC_DOCUMENT_ROUTES))aliases.set(document+'/',document);
  for(const book of Object.keys(BOOK_ROUTES))aliases.set(book+'/',book);
+ aliases.set('/everyday-therapy-program','/everyday-therapy-home-study');aliases.set('/everyday-therapy-program/','/everyday-therapy-home-study');
  aliases.set('/pinnacle-ai','/pinnacleai');aliases.set('/pinnacle-ai/','/pinnacleai');
  aliases.set('/ability-score','/abilityscore');aliases.set('/ability-score/','/abilityscore');
  for(const guide of GUIDES)for(const suffix of ['/', '.html'])aliases.set('/speech-therapy/'+guide+suffix,'/speech-therapy/'+guide);
@@ -97,7 +115,7 @@ export async function serveSpeech(request,env,inventory){
  else if(key==='/pinnacleai/llms.txt')key='/pinnacle-pages-data/pinnacleai-llms.txt';
  else if(!/^\/pinnacle-pages-(?:assets|fonts|scripts|data)\//.test(key))return null;
  const wantsMarkdown=acceptsMarkdown(request.headers.get('accept')||'');
- if(wantsMarkdown&&Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,u.pathname))key='/pinnacle-pages-data/'+PUBLIC_DOCUMENT_ROUTES[u.pathname]+(['self-sufficient','mainstream','about','leadership','framework'].includes(PUBLIC_DOCUMENT_ROUTES[u.pathname])?'-machine.md':'-policy.md');
+ if(wantsMarkdown&&Object.hasOwn(PUBLIC_DOCUMENT_ROUTES,u.pathname))key='/pinnacle-pages-data/'+PUBLIC_DOCUMENT_ROUTES[u.pathname]+(['self-sufficient','mainstream','about','leadership','framework','everyday-home-study'].includes(PUBLIC_DOCUMENT_ROUTES[u.pathname])?'-machine.md':'-policy.md');
  if(wantsMarkdown&&key==='/pinnacle-pages-html/enrolment.html')key='/pinnacle-pages-data/enrolment-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/occupational-therapy.html')key='/pinnacle-pages-data/occupational-therapy-machine.md';
  else if(wantsMarkdown&&key==='/pinnacle-pages-html/aba-therapy.html')key='/pinnacle-pages-data/aba-therapy-machine.md';

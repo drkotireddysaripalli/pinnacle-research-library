@@ -27,6 +27,7 @@
     pages[path] = {title:'PinnacleAI',group:'pinnacleai',service:'help'};
   }
   for (const path of ['/self-sufficient','/mainstream']) pages[path] = {title:'Your Child’s Life at Pinnacle',group:'life_participation',service:'help'};
+  pages['/everyday-therapy-home-study'] = {title:'Everyday Therapy Home Study',group:'research_study',service:'help'};
   for (const path of ['/about-pinnacle-proven-improvement-rate','/leadership','/pinnacle-global-autism-framework']) pages[path] = {title:'Pinnacle Blooms Network',group:'organisation',service:'help'};
   for (const path of ['/policies','/payment-and-billing','/privacy-policy','/terms-of-use','/terms-of-service','/cookie-policy','/copyright-and-intellectual','/age-restriction-policy','/contact-information','/disclaimer-and-limitations-of-liabilities','/endorsement-and-testimonial','/governing-and-jurisdiction','/third-party-inegration','/refund-policy','/staff-declaration','/ethics-charter']) {
     pages[path] = {title:'Pinnacle Public Information',group:'public_information',service:'help'};
@@ -49,7 +50,8 @@
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   pages['/books/resources/first-conversation'] = {title:'Free First Conversation Planning Sheet',group:'family_resource',service:'help'};
   const pagePath = location.pathname;
-  const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !/^\/ask\/(?:te\/)?search$/.test(pagePath) && document.body?.dataset.pageVariant === 'ask';
+  const privateAskPath = /^\/ask\/(?:te\/)?(?:account|auth|api|search)(?:\/|$)/.test(pagePath);
+  const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !privateAskPath && document.body?.dataset.pageVariant === 'ask';
   // Knowledge families use fixed buckets: never send questions, story IDs or searches.
   const knowledgePath = location.origin === origin && document.body?.dataset.pageVariant === 'knowledge'
     ? pagePath.match(/^\/(faq|sunshine|allmirracles)(?:\/|$)/)?.[1] : null;
@@ -59,8 +61,45 @@
   const pageTitle = pageConfig?.title || document.title;
   const pageGroup = pageConfig?.group || 'managed_page';
   const isBookshop = pageGroup === 'bookshop';
+  // Retain bounded attribution identifiers only. The page identity remains the
+  // public/coarse canonical: no answer slug, search, child field or fragment.
+  const campaignFields = {utm_id:'campaign_id',utm_source:'campaign_source',utm_medium:'campaign_medium',utm_campaign:'campaign_name',utm_term:'campaign_term',utm_content:'campaign_content'};
+  const campaignKeys = [...Object.keys(campaignFields),'utm_source_platform','utm_creative_format','utm_marketing_tactic'];
+  const clickKeys = ['gclid','dclid','msclkid','fbclid','gbraid','wbraid'];
+  const campaigns = Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
+  const measurementURL = new URL(canonical);
+  const safeAttribution = (value, click) => {
+    if (typeof value !== 'string') return null;
+    value = value.trim();
+    if (!value || value.length > (click ? 256 : 128) ||
+        !(click ? /^[A-Za-z0-9._~-]+$/ : /^[A-Za-z0-9][A-Za-z0-9._~ -]*$/).test(value)) return null;
+    // Encoded/nested values, email addresses, phone-like strings, credentials
+    // and private clinical/free-text labels are not campaign identifiers.
+    const words = value.replace(/[._~-]/g,' ');
+    const numberParts = value.match(/(?:^|[^A-Za-z0-9])\+?\d[\d ().-]*\d(?=$|[^A-Za-z0-9])/g) || [];
+    const phoneLike = numberParts.some(part=>part.replace(/\D/g,'').length >= 10) ||
+      (/^[\d ().+-]+$/.test(value) && value.replace(/\D/g,'').length >= 7);
+    if (/@|%[0-9a-f]{2}/i.test(value) || phoneLike ||
+        /\b(?:private|secret|password|token)\b/i.test(words) ||
+        /\b(?:my|our)\b.*\b(?:child|son|daughter|patient)\b/i.test(words) ||
+        /\b(?:child|patient)\s+(?:name|id|details?|records?)\b/i.test(words) ||
+        /\b(?:email|phone|mobile|diagnosis|symptoms|report)\s+(?:address|number|name|id|details?|records?|result|value)\b/i.test(words)) return null;
+    return value;
+  };
+  try {
+    const parameters = new URL(location.href).searchParams;
+    for (const key of [...campaignKeys,...clickKeys]) {
+      const values = parameters.getAll(key);
+      if (values.length !== 1) continue;
+      const value = safeAttribution(values[0],clickKeys.includes(key));
+      if (value === null) continue;
+      measurementURL.searchParams.set(key,value);
+      if (Object.hasOwn(campaignFields,key)) campaigns[campaignFields[key]] = value;
+    }
+  } catch {}
+  const measurementLocation = measurementURL.href;
   // Send only a known referring platform's origin, never its paths, search
-  // terms, visitor-entered campaign values, or private referring domains.
+  // terms or private referring domains.
   let safeReferrer = '';
   // Keep only a recognised public platform's origin. Never send its query,
   // private path or the medical topic being read. This also preserves source
@@ -98,7 +137,7 @@
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {
     if (!production || !enabled || blocked || knowledgeSearch) return;
-    try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:canonical, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
+    try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
   };
   const commerceNames = new Set(['view_item','view_cart','add_to_cart','remove_from_cart','begin_checkout']);
   const sendCommerce = (name, lines) => {
@@ -144,8 +183,8 @@
     window.gtag('config',id,{
       send_page_view:false,allow_google_signals:false,allow_ad_personalization_signals:false,
       cookie_prefix:isBookshop?'pbn_books':'ps',cookie_path:isBookshop?'/':isAsk?'/ask':knowledgePath?'/'+knowledgePath:location.pathname,cookie_domain:isAsk?'pinnacleblooms.org':'www.pinnacleblooms.org',cookie_flags:'SameSite=Lax;Secure',cookie_expires:lifetime/1000,cookie_update:false,
-      page_location:canonical,page_title:pageTitle,page_referrer:safeReferrer,ignore_referrer:!safeReferrer,
-      campaign_id:'',campaign_source:'',campaign_medium:'',campaign_name:'',campaign_term:'',campaign_content:''
+      page_location:measurementLocation,page_title:pageTitle,page_referrer:safeReferrer,ignore_referrer:!safeReferrer,
+      ...campaigns
     });
     if (!document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
       const script=document.createElement('script');
@@ -181,7 +220,7 @@
     let saved;try { saved=JSON.parse(localStorage.getItem(key)); } catch {}
     if (saved && Number.isFinite(saved.at) && saved.at<=Date.now() && Date.now()-saved.at<lifetime) choose(saved.value, false);
   }
-  // Fixed event vocabulary only. Query strings, visitor text and form data never enter this module.
+  // Fixed event vocabulary only; arbitrary query values and form data are excluded.
   let acceptanceRecorded = false;
   document.addEventListener('pinnacle:enquiry-accepted', () => {
     if (pageGroup !== 'enrolment' || acceptanceRecorded || !production || !enabled || blocked) return;
@@ -193,9 +232,24 @@
       const resourceLink=event.target?.closest?.('a[data-resource="first_conversation_v1"]');
       if(resourceLink?.getAttribute('href') === '/books/resources/Pinnacle-First-Conversation-v1.pdf') send('resource_download_click',{schema_version:3,page_group:'family_resource',resource_id:'first_conversation_v1',format:'pdf',language:'en'});
     }
+    const contactLink = event.target?.closest?.('a[href]');
+    const contactHref = contactLink?.getAttribute('href');
+    try {
+      const target = new URL(contactHref,origin);
+      const centralWhatsApp = target.protocol === 'https:' && !target.username && !target.password && !target.port && (
+        (target.hostname === 'wa.me' && /^\/919100181181\/?$/.test(target.pathname)) ||
+        (target.hostname === 'api.whatsapp.com' && /^\/send\/?$/.test(target.pathname) &&
+          target.searchParams.getAll('phone').length === 1 && /^\+?919100181181$/.test(target.searchParams.get('phone')))
+      );
+      if (centralWhatsApp) {
+        const placement = contactLink.dataset?.cta;
+        const placements = new Set(['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp']);
+        send('whatsapp_click',{schema_version:3,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline_9100181181'});
+        return; // One event per contact tap; sharing text never enters the event.
+      }
+    } catch {}
     if (pageGroup === 'bookshop') {
-      const contactLink = event.target?.closest?.('a[href]');
-      const href = contactLink?.getAttribute('href');
+      const href = contactHref;
       if (href) {
         if (href === 'tel:+919100181181' || (href.startsWith('tel:') && contactLink.dataset?.pinnacleAdCallTarget === 'central')) {
           const placement = contactLink.dataset?.cta;
@@ -204,10 +258,6 @@
         }
         try {
           const target = new URL(href, origin);
-          if (target.origin === 'https://wa.me' && target.pathname === '/919100181181' && !target.username && !target.password) {
-            send('whatsapp_link_click', {schema_version:3,page_group:'bookshop',link_placement:'bookshop-contact',destination:'national_helpline_9100181181'});
-            return;
-          }
           const destination = target.href;
           const sample = Object.values(commerceCatalogue).flatMap(item => Array.isArray(item.books) ? item.books : [])
             .find(book => typeof book.sample === 'string' && new URL(book.sample, origin).href === destination);

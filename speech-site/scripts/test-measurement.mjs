@@ -73,7 +73,7 @@ test('bookshop direct contact links count once after consent without exporting W
  const whatsapp='https://wa.me/919100181181?text=private-child-name&source=private-value';
  h.click(undefined,'tel:+919100181181');h.click(undefined,whatsapp);assert.equal(h.events().length,0);
  h.choose('accepted');h.click(undefined,'tel:+919100181181');h.click('footer-call','tel:+919100181181');h.click(undefined,whatsapp);
- assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click','phone_link_click','whatsapp_link_click']);
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click','phone_link_click','whatsapp_click']);
  assert.equal(h.events()[1][2].link_placement,'bookshop-contact');assert.equal(h.events()[2][2].link_placement,'footer-call');
  const serialized=JSON.stringify(h.events());for(const value of ['private-child','private-value','?text=','purchase','enquiry_accepted'])assert(!serialized.includes(value));
  const count=h.events().length;
@@ -82,6 +82,67 @@ test('bookshop direct contact links count once after consent without exporting W
  h.choose('declined');h.click(undefined,whatsapp);h.click(undefined,'tel:+919100181181');assert.equal(h.events().length,count);
  for(const options of [{gpc:true},{origin:'http://127.0.0.1:4326'},{path:'/not-in-the-catalogue'}]){
   const blocked=harness({path:'/shop',commerceCatalogue,...options});blocked.choose('accepted');blocked.click(undefined,whatsapp);blocked.click(undefined,'tel:+919100181181');assert.equal(blocked.events().length,0);
+ }
+});
+test('central WhatsApp contact taps on managed journeys use one exact event after consent',()=>{
+ const cases=[{}, {path:'/enroll-autism-speech-aba-therapies-india'}, {path:'/centers'}, {path:'/faq',variant:'knowledge'}, {origin:'https://pinnacleblooms.org',path:'/ask/a-private-question',variant:'ask'}];
+ const links=['https://wa.me/919100181181?text=INVENTED_PRIVATE_CHILD&source=private-value','https://api.whatsapp.com/send?phone=919100181181&text=INVENTED_PRIVATE_CHILD','https://api.whatsapp.com/send?phone=%2B919100181181'];
+ for(const options of cases) {
+  const h=harness(options);for(const href of links)h.click(undefined,href);assert.equal(h.events().length,0);
+  h.choose('accepted');
+  for(const href of links)h.click('footer-whatsapp',href);
+  assert.deepEqual(h.events().map(e=>e[1]),['page_view','whatsapp_click','whatsapp_click','whatsapp_click']);
+  assert(h.events().slice(1).every(e=>e[2].link_placement==='footer-whatsapp'&&e[2].destination==='national_helpline_9100181181'));
+  h.click('INVENTED_PRIVATE_PLACEMENT','https://wa.me/919100181181');
+  assert.equal(h.events().at(-1)[2].link_placement,'central-whatsapp');
+  const before=h.events().length;
+  for(const href of ['https://wa.me/?text=INVENTED_PRIVATE_CHILD','https://wa.me/919999999999','https://api.whatsapp.com/send?phone=919999999999','https://api.whatsapp.com/send?phone=919100181181&phone=919999999999','https://api.whatsapp.com/share?phone=919100181181','https://api.whatsapp.com:9443/send?phone=919100181181','https://api.whatsapp.com.evil.test/send?phone=919100181181','http://wa.me/919100181181','https://user:pass@wa.me/919100181181'])h.click(undefined,href);
+  assert.equal(h.events().length,before);
+  const output=JSON.stringify(h.events());for(const excluded of ['INVENTED_PRIVATE','private-value','?text=','phone=','919999999999','a-private-question'])assert(!output.includes(excluded));
+  h.choose('declined');for(const href of links)h.click(undefined,href);assert.equal(h.events().length,before);
+ }
+ for(const options of [{gpc:true},{path:'/payonline'},{path:'/faq',variant:'knowledge',search:'?q=private-child'},{origin:'https://pinnacleblooms.org',path:'/ask/account',variant:'ask'}]) {
+  const h=harness(options);h.choose('accepted');h.click(undefined,links[0]);assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);
+ }
+});
+test('consented campaign attribution retains safe allowlisted fields on coarse public identities',()=>{
+ const search='?utm_source=google&utm_medium=cpc&utm_campaign=Hyderabad_Speech&utm_id=PBN-20261008&utm_term=speech%20therapy&utm_content=hero_A&utm_source_platform=google_ads&utm_creative_format=search&utm_marketing_tactic=assessment&gclid=test123&gbraid=GBRAID-fixture_A&wbraid=WBRAID-fixture_B&fbclid=FBCLID-fixture_C&msclkid=MSCLKID-fixture_D&dclid=DCLID-fixture_E&q=INVENTED_PRIVATE_SEARCH&child=INVENTED_CHILD&phone=%2B919999999999#INVENTED_FRAGMENT';
+ for(const options of [{},{origin:'https://pinnacleblooms.org',path:'/ask/INVENTED_PRIVATE_TOPIC',variant:'ask'},{path:'/sunshine/INVENTED_PRIVATE_TOPIC',variant:'knowledge'}]) {
+  const h=harness({...options,search:options.variant==='knowledge'?search.replace('&q=INVENTED_PRIVATE_SEARCH',''):search});assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);h.choose('accepted');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+  const u=new URL(config.page_location);
+  assert.equal(u.searchParams.get('gclid'),'test123');assert.equal(u.searchParams.get('utm_source'),'google');assert.equal(u.searchParams.get('utm_medium'),'cpc');
+  assert.equal(u.searchParams.get('utm_campaign'),'Hyderabad_Speech');assert.equal(u.searchParams.get('utm_term'),'speech therapy');
+  for(const name of ['gbraid','wbraid','fbclid','msclkid','dclid'])assert(u.searchParams.has(name));
+  for(const name of ['q','child','phone'])assert(!u.searchParams.has(name));assert.equal(u.hash,'');
+  assert.equal(config.campaign_source,'google');assert.equal(config.campaign_medium,'cpc');assert.equal(config.campaign_name,'Hyderabad_Speech');assert.equal(config.campaign_id,'PBN-20261008');assert.equal(config.campaign_term,'speech therapy');assert.equal(config.campaign_content,'hero_A');
+  assert.equal(config.allow_google_signals,false);assert.equal(config.allow_ad_personalization_signals,false);
+  assert.equal(h.events()[0][2].page_location,config.page_location);assert(!JSON.stringify(h.win.dataLayer).includes('INVENTED_'));
+  h.choose('declined');const before=h.events().length;h.click(undefined,'https://wa.me/919100181181');assert.equal(h.events().length,before);
+ }
+ // Search-result journeys remain uninstrumented even with valid attribution.
+ for(const options of [{path:'/faq',variant:'knowledge'},{path:'/allmirracles',variant:'knowledge'},{origin:'https://pinnacleblooms.org',path:'/ask/search',variant:'ask'},{origin:'https://pinnacleblooms.org',path:'/ask/te/search',variant:'ask'}]) {
+  const h=harness({...options,search});h.choose('accepted');assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);
+ }
+ // Public channel/device labels are valid values, not personal contact details.
+ const publicLabels=harness({search:'?utm_source=email&utm_medium=mobile&utm_campaign=Public_Report&utm_content=mobile_hero'});publicLabels.choose('accepted');
+ const labels=Array.from(publicLabels.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+ assert.equal(labels.campaign_source,'email');assert.equal(labels.campaign_medium,'mobile');assert.equal(labels.campaign_name,'Public_Report');assert.equal(labels.campaign_content,'mobile_hero');
+});
+test('unsafe, duplicate and oversized attribution is omitted without exporting private values',()=>{
+ const poisoned={utm_source:'fixture@example.test',utm_medium:'+91 99999 99999',utm_campaign:'my child INV-TEST',utm_id:'9876543210',utm_term:'private-child-detail',utm_content:'http://private.example/child',utm_source_platform:'x'.repeat(129),utm_creative_format:'child_name_INVENTED',utm_marketing_tactic:'patient_records_INV',gclid:'secret',gbraid:'token_INV',wbraid:'9999999999',fbclid:'x'.repeat(257),msclkid:'fixture@example.test',dclid:'%40private'};
+ for(const [field,value] of Object.entries(poisoned)) {
+  const h=harness({search:'?'+field+'='+encodeURIComponent(value)+'&utm_source=google&email=INVENTED_PRIVATE_EMAIL'});h.choose('accepted');
+  const config=Array.from(h.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];
+  assert(!new URL(config.page_location).searchParams.has(field),field);assert(!JSON.stringify(h.win.dataLayer).includes(value),field);
+  assert(!JSON.stringify(h.win.dataLayer).includes('INVENTED_PRIVATE_EMAIL'));
+ }
+ const duplicate=harness({search:'?utm_source=google&utm_source=private&gclid=test123&gclid=private'});duplicate.choose('accepted');
+ const config=Array.from(duplicate.win.dataLayer,x=>Array.from(x)).find(x=>x[0]==='config')[2];assert.equal(config.campaign_source,'');assert.equal(new URL(config.page_location).search,'');
+});
+test('Ask private and API descendants stay uninstrumented even with a public variant marker',()=>{
+ for(const path of ['/ask/account','/ask/account/preferences','/ask/auth/callback','/ask/api/item','/ask/te/account','/ask/te/auth/callback','/ask/search/results','/ask/te/search/results']) {
+  const h=harness({origin:'https://pinnacleblooms.org',path,variant:'ask',search:'?utm_source=google&gclid=test123'});h.choose('accepted');h.click(undefined,'https://wa.me/919100181181');assert.equal(h.events().length,0,path);assert.equal(h.scripts.length,0,path);
  }
 });
 test('Ask consented calls stay coarse and exclude the question slug and search query',()=>{
