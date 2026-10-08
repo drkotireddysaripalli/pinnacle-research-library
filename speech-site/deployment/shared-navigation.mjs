@@ -3,6 +3,8 @@
 import {FOOTER_ART_STYLE,footerArtImage} from './footer-art.mjs';
 import {publicLinkTarget} from './public-link-target.mjs';
 import {applyPublicAdCall} from './public-ad-call-handler.mjs';
+// Shared repair also covers already-released callbacks without rebuilding every centre.
+export const CALLBACK_ACCESSIBILITY_STYLE='<style data-pinnacle-callback-accessibility> .callback #enrol-privacy a{text-decoration:underline;text-underline-offset:.15em}</style>';
 export function repairSharedNavigation(request,response){
  response=applyPublicAdCall(request,response);
  if(request.method!=='GET'||request.headers.has('authorization')||request.headers.has('range')||
@@ -14,7 +16,8 @@ export function repairSharedNavigation(request,response){
  let artwork='';
  return new HTMLRewriter().on('a[href]',{element(el){const before=el.getAttribute('href'),after=publicLinkTarget(before);if(after===null)el.remove();else if(after!==before)el.setAttribute('href',after);}})
   .on('style[data-pinnacle-footer-art]',{element(el){el.remove();}})
-  .on('head',{element(el){el.append(FOOTER_ART_STYLE,{html:true});}})
+  .on('style[data-pinnacle-callback-accessibility]',{element(el){el.remove();}})
+  .on('head',{element(el){el.append(FOOTER_ART_STYLE+CALLBACK_ACCESSIBILITY_STYLE,{html:true});}})
   .on('.portal-footer[style]',{element(el){
    const style=el.getAttribute('style')||'';
    const match=/--portal-footer-art\s*:\s*url\(['"]?(\/pinnacle-pages-assets\/portal-footer-shapes\.[\w.-]+\.webp)['"]?\)\s*;?/.exec(style);

@@ -1,5 +1,5 @@
 // Bounded recovery of a reproduced ASP.NET mobile-rendering exception on four
-// public pages. It preserves the original URL, headers and query for attribution.
+// named public destinations. It preserves the original URL, headers and query for attribution.
 // It owns no account, API, payment, form submission or child-report route.
 const identities=new Map([
  ['/',/^#1 Autism Therapy Centres Network/i],
@@ -47,7 +47,7 @@ export async function fetchPublicOrigin(request,fetcher=fetch){
   if(retry.status!==200||!retry.headers.get('content-type')?.includes('text/html'))return original;
   let html=await boundedText(retry);const u=new URL(request.url),title=html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim()||'';
   const canonical=canonicalPath(html);
-  if(!identities.get(u.pathname).test(title)||!(canonical===u.pathname||(u.pathname==='/TOS'&&canonical==='/tos')))return original;
+  if(!identities.get(u.pathname).test(title)||!(canonical===u.pathname||(u.pathname==='/TOS'&&canonical==='/tos')||(u.pathname==='/franchise-autism-therapy-center'&&canonical==='/franchises')))return original;
   // Campaigns remain in the browser URL; the public canonical/OG identity is clean.
   html=html.replace(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i,`<link rel="canonical" href="${u.origin+canonical}">`);
   const out=new Headers(retry.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])out.delete(k);
