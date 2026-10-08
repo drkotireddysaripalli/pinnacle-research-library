@@ -120,6 +120,8 @@
     const copy = panel.querySelector?.('p');
     if (copy) copy.textContent = 'With your permission, Google Analytics measures the book journey, including the referring search or social platform, book views, sample clicks, book-bag changes, checkout starts and contact-link clicks. It can connect that journey to our Shopify checkout. A checkout start is not a completed purchase. We exclude customer details, search terms and checkout links from our event data. Advertising personalisation is off.';
   }
+  const disclosure = panel.querySelector?.('p');
+  if (disclosure) disclosure.textContent = (pageGroup === 'bookshop' ? disclosure.textContent : 'With your permission, Google Analytics measures page visits and call, WhatsApp or enquiry-link clicks. These are not completed calls or bookings. Advertising personalisation is off.') + ' Validated campaign labels and advertising click identifiers may accompany a coarse public page address to measure how you reached us. Form details, private answer paths and unrecognised URL fields stay excluded.';
   const production = isAsk || !!knowledgePath || (location.origin === origin && routes.has(location.pathname) && !!pageConfig);
   if (isAsk) routes.add('/ask');
   if (knowledgePath) routes.add('/'+knowledgePath);
