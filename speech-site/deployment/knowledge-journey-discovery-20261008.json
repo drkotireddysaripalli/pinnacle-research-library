@@ -1,0 +1,104 @@
+{
+  "at": "2026-10-08",
+  "source": "1c5084a69c3adf9ae5fa7e286206c79a2540aafc",
+  "annotation": {
+    "annotation": {
+      "id": "1941b744-45b0-4603-b317-ac90dc957f20",
+      "scope": "property",
+      "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+      "event_date": "2026-10-08",
+      "label": "Knowledge readers → Google identity and relevant enquiries",
+      "description": "Deployed source1c5084a: shared relevant call/centre/first-visit journey on Ask answer/topic, FAQ, Sunshine and public Mirracles templates; Mirracles reuses Google reader/profile/logout. Coarse first-library marker for new registrations; consented campaign handoff to maintained enquiry route.12 URL public checks,4 anonymous browser checks and5 exact-build TestingBot cases passed. Registration and taps remain separate from durable accepted enquiries/qualified calls. Materials/Interventions migration remains pending source intake.",
+      "category": "website-release",
+      "color": "#932580",
+      "created_at": "2026-10-08T08:57:14.886753+00:00"
+    }
+  },
+  "indexNow": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "batchId": "b26b2e04-dc87-4707-a982-5d297d4741a7",
+    "submitted": 10,
+    "failed": 0,
+    "attempted": 10,
+    "pendingKeyValidation": false,
+    "outcome": "submitted",
+    "keyFile": [
+      {
+        "host": "pinnacleblooms.org",
+        "url": null,
+        "verified": true,
+        "error": null
+      },
+      {
+        "host": "www.pinnacleblooms.org",
+        "url": null,
+        "verified": true,
+        "error": null
+      }
+    ],
+    "submissions": [
+      {
+        "url": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/faq",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/faq/english/speech-therapy/autism-speech-therapy",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/sunshine",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/sunshine/techniques",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/allmirracles",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/allmirracles/category/Conditions",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      },
+      {
+        "url": "https://www.pinnacleblooms.org/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+        "responseCode": 200,
+        "status": "submitted, key validated",
+        "accepted": true
+      }
+    ],
+    "message": "10 of 10 URL(s) sent were accepted by IndexNow."
+  },
+  "scope": "Only10 materially changed eligible representative URLs. Existing noindex topic and unchanged Ask home excluded. No whole-site resubmission or indexing claim."
+}

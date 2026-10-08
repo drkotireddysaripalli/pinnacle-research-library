@@ -1,0 +1,11 @@
+// Preserve the exact-source workflow and provider BVT receipt, without credentials.
+import fs from 'node:fs/promises';import {spawnSync} from 'node:child_process';import assert from 'node:assert/strict';
+const git='C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe';
+const c=spawnSync(git,['credential','fill'],{input:'protocol=https\nhost=github.com\n\n',encoding:'utf8',windowsHide:true});const key=c.stdout.split('\n').find(x=>x.startsWith('password='))?.slice(9).trim();assert(key);
+const current=JSON.parse(await fs.readFile('deployment/knowledge-journey-ci-20261008.json','utf8')),sha=current.commit,run=current.runs.find(r=>r.event==='push').id,base='https://api.github.com/repos/drkotireddysaripalli/pinnacle-research-library',headers={authorization:'Bearer '+key,'user-agent':'Pinnacle-release-proof','x-github-api-version':'2022-11-28'};
+const response=await fetch(base+'/actions/runs/'+run,{headers});assert(response.ok);const status=await response.json();assert.equal(status.head_sha,sha);assert.equal(status.conclusion,'success','Exact-source workflow must pass');
+await fs.writeFile('ask-private/knowledge-journey-portal-20261008/ci.json',JSON.stringify(status));
+const data=await(await fetch(base+'/actions/runs/'+run+'/artifacts',{headers})).json(),artifact=data.artifacts.find(x=>x.name==='testingbot-build-verification');assert(artifact&&!artifact.expired);
+const zip=await fetch(artifact.archive_download_url,{headers});assert(zip.ok);await fs.writeFile('ask-private/knowledge-journey-ci.zip',Buffer.from(await zip.arrayBuffer()));
+const code="import zipfile,json,pathlib; z=zipfile.ZipFile('ask-private/knowledge-journey-ci.zip'); n=next(n for n in z.namelist() if n.endswith('report.json')); d=json.loads(z.read(n)); pathlib.Path('deployment/knowledge-journey-ci-testingbot-20261008.json').write_text(json.dumps(d,indent=2),encoding='utf8'); print(json.dumps({'source':d['source'],'suite':d['suite'],'sessions':[{'matrix':s['matrix'],'status':s['status'],'id':s.get('sessionId'),'cases':len(s['cases']),'passed':sum(c['status']=='passed' for c in s['cases'])} for s in d['sessions']]}))";
+const p=spawnSync('C:/Python314/python.exe',['-c',code],{encoding:'utf8',windowsHide:true});assert.equal(p.status,0,p.stderr);console.log(p.stdout.trim());

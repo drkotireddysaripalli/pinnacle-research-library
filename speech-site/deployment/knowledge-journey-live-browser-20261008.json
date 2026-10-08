@@ -1,0 +1,58 @@
+{
+  "at": "2026-10-08T08:52:46.661Z",
+  "cases": 4,
+  "passed": 4,
+  "physicalDevice": false,
+  "realRegistrations": 0,
+  "realEnquiries": 0,
+  "rows": [
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+      "status": 200,
+      "library": "ask",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "googleIdentityIframe": true,
+      "overflow": false,
+      "centralPhone": true,
+      "errors": [],
+      "googleCompletion": "not performed",
+      "realRegistrations": 0
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+      "status": 200,
+      "library": "faq",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "googleIdentityIframe": true,
+      "overflow": false,
+      "centralPhone": true,
+      "errors": [],
+      "googleCompletion": "not performed",
+      "realRegistrations": 0
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/techniques",
+      "status": 200,
+      "library": "sunshine",
+      "returnTo": "/sunshine/techniques",
+      "googleIdentityIframe": true,
+      "overflow": false,
+      "centralPhone": true,
+      "errors": [],
+      "googleCompletion": "not performed",
+      "realRegistrations": 0
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/allmirracles",
+      "status": 200,
+      "library": "mirracles",
+      "returnTo": "/allmirracles",
+      "googleIdentityIframe": true,
+      "overflow": false,
+      "centralPhone": true,
+      "errors": [],
+      "googleCompletion": "not performed",
+      "realRegistrations": 0
+    }
+  ]
+}

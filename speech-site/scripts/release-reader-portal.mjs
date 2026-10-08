@@ -1,4 +1,4 @@
-// One committed mobile-recovery module over the current live portal. Preserve its
+// Three named knowledge-reader modules over the current live portal. Preserve its
 // full asset union, every other module, routes, bindings and protected services.
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -70,7 +70,7 @@ if(phase==='prepare'){
   assert.equal(receipt.phase,'uploaded');const result=await api(base+worker+'/deployments','POST',{strategy:'percentage',versions:[{version_id:receipt.candidate,percentage:100}]});receipt.deployment=result.id;receipt.phase='promoted';receipt.promotedAt=new Date().toISOString();
  }else if(phase==='verify'){
   const mods=await modules();assert.equal(mods.length,Object.keys(receipt.hashes).length);for(const m of mods)assert.equal(sha(m.bytes),receipt.hashes[m.name],m.name+' differs');
-  receipt.phase='verified-configuration';receipt.verifiedAt=now.at;receipt.protectedWorkersUnchanged=protectedNames;receipt.routesPreserved=now.routes.length;receipt.bindingsPreserved=true;
+  receipt.phase='verified-configuration';receipt.verifiedAt=now.at;receipt.protectedWorkersUnchanged=protectedNames.filter(n=>n!=='pinnacle-ask');receipt.approvedAskVersion=now.workers['pinnacle-ask'].versions;receipt.routesPreserved=now.routes.length;receipt.bindingsPreserved=true;
  }else throw Error('Use prepare/upload/promote/verify');
  await save(receiptPath,receipt);console.log(JSON.stringify({phase:receipt.phase,commit:receipt.commit,version:receipt.candidate,deployment:receipt.deployment,routes:receipt.routesPreserved}));
 }

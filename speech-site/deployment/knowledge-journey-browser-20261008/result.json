@@ -1,0 +1,540 @@
+{
+  "cases": 16,
+  "passed": 16,
+  "realRegistrations": 0,
+  "realEnquiries": 0,
+  "posts": [
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    }
+  ],
+  "rows": [
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।",
+        "readerProfile": "QA Reader",
+        "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+        "weight": "800"
+      },
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-320.png"
+    },
+    {
+      "path": "/allmirracles",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Mirracles video library",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-allmirracles-chromium-320.png"
+    },
+    {
+      "path": "/allmirracles/category/Conditions",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Conditions · Mirracles video library",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-allmirracles-category-Conditions-chromium-320.png"
+    },
+    {
+      "path": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Directly from Parent - Pinnacle Proven Integrated Autism Therapy Improvement - CDN - 10",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-mirracles-20710890947-Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10-chromium-320.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।",
+        "readerProfile": "QA Reader",
+        "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+        "weight": "800"
+      },
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-768.png"
+    },
+    {
+      "path": "/allmirracles",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Mirracles video library",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-allmirracles-chromium-768.png"
+    },
+    {
+      "path": "/allmirracles/category/Conditions",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Conditions · Mirracles video library",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-allmirracles-category-Conditions-chromium-768.png"
+    },
+    {
+      "path": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Directly from Parent - Pinnacle Proven Integrated Autism Therapy Improvement - CDN - 10",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-mirracles-20710890947-Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10-chromium-768.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।",
+        "readerProfile": "QA Reader",
+        "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+        "weight": "800"
+      },
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-1440.png"
+    },
+    {
+      "path": "/allmirracles",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Mirracles video library",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-allmirracles-chromium-1440.png"
+    },
+    {
+      "path": "/allmirracles/category/Conditions",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Conditions · Mirracles video library",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-allmirracles-category-Conditions-chromium-1440.png"
+    },
+    {
+      "path": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Directly from Parent - Pinnacle Proven Integrated Autism Therapy Improvement - CDN - 10",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-mirracles-20710890947-Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10-chromium-1440.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।",
+        "readerProfile": "QA Reader",
+        "font": "Pinnacle Anek, Sintony, Arial, sans-serif",
+        "weight": "800"
+      },
+      "screenshot": "-faq-hindi-occupational-therapy-webkit-390.png"
+    },
+    {
+      "path": "/allmirracles",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Mirracles video library",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-allmirracles-webkit-390.png"
+    },
+    {
+      "path": "/allmirracles/category/Conditions",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Conditions · Mirracles video library",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-allmirracles-category-Conditions-webkit-390.png"
+    },
+    {
+      "path": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Directly from Parent - Pinnacle Proven Integrated Autism Therapy Improvement - CDN - 10",
+        "readerProfile": "QA Reader",
+        "font": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "weight": "700"
+      },
+      "screenshot": "-mirracles-20710890947-Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10-webkit-390.png"
+    }
+  ]
+}

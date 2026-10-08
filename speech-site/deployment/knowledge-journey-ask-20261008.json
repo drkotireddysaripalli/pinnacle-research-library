@@ -1,0 +1,206 @@
+{
+  "phase": "verified-live",
+  "sourceCommit": "1c5084a69c3adf9ae5fa7e286206c79a2540aafc",
+  "at": "2026-10-08T08:13:32.196Z",
+  "routeCount": 260,
+  "rollback": [
+    {
+      "version_id": "4b22ec5c-ae61-4850-a42d-07b33a3e87ca",
+      "percentage": 100
+    }
+  ],
+  "protected": {
+    "portal": [
+      {
+        "version_id": "1c0cb464-faac-4bed-9a3b-3d7d5edc617e",
+        "percentage": 100
+      }
+    ],
+    "mcp": [
+      {
+        "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+        "percentage": 100
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "candidate": "0aad2e81-8d8d-4ec4-a470-360216c87e50",
+  "candidateBindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "bundleSHA256": "35c01394d4c760447ccbf7b8373a83c5c7a78c9aaa97a8a30f0f7064ed109bdb",
+  "baselineCommit": "a5943238f3648cbe6022703ba59dfbc034a2e175",
+  "promotedAt": "2026-10-08T08:52:05.154Z",
+  "afterRouteCount": 260,
+  "protectedUnchanged": true,
+  "publicVerifiedAt": "2026-10-08T08:56:09.482Z",
+  "publicReceipt": "deployment/knowledge-journey-live-20261008.json"
+}

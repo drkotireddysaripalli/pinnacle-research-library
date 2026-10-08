@@ -1,0 +1,12 @@
+import fs from 'node:fs/promises';import assert from 'node:assert/strict';import {chromium} from '@playwright/test';
+const urls=['https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan','https://www.pinnacleblooms.org/faq/hindi/occupational-therapy','https://www.pinnacleblooms.org/sunshine/techniques','https://www.pinnacleblooms.org/allmirracles'];
+const browser=await chromium.launch(),rows=[];
+try{for(const url of urls){const context=await browser.newContext({viewport:{width:390,height:844}}),page=await context.newPage(),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error'&&/Content Security Policy|Refused to/.test(m.text()))errors.push(m.text());});
+ await context.route(/https:\/\/(?:www\.googletagmanager|.*google-analytics|ob\.aseasky)/,r=>r.abort());
+ const response=await page.goto(url,{waitUntil:'domcontentloaded'});assert.equal(response.status(),200);await page.locator('#ask-reader-gate').waitFor({state:'visible',timeout:20000});
+ await page.waitForFunction(()=>document.querySelector('[data-ask-google-button] iframe')||(!document.querySelector('[data-ask-google-form]').hidden&&!document.querySelector('[data-ask-google-form] button').disabled),{},{timeout:20000});
+ const data=await page.evaluate(()=>({library:document.querySelector('[name=library]')?.value,returnTo:document.querySelector('[data-ask-google-form] [name=returnTo]')?.value,googleIdentityIframe:!!document.querySelector('[data-ask-google-button] iframe'),overflow:document.documentElement.scrollWidth>innerWidth+1,centralPhone:!!document.querySelector('#ask-reader-gate a[href="tel:+919100181181"]')}));assert(data.centralPhone);assert(!data.overflow);assert.equal(data.returnTo,new URL(url).pathname);assert.equal(errors.length,0,errors.join('\n'));
+ await page.screenshot({path:'deployment/knowledge-journey-browser-20261008/live-'+data.library+'-390.png'});rows.push({url,status:response.status(),...data,errors,googleCompletion:'not performed',realRegistrations:0});await context.close();
+}}finally{await browser.close();}
+await fs.writeFile('deployment/knowledge-journey-live-browser-20261008.json',JSON.stringify({at:new Date().toISOString(),cases:rows.length,passed:rows.length,physicalDevice:false,realRegistrations:0,realEnquiries:0,rows},null,2));console.log(JSON.stringify({cases:rows.length,passed:rows.length,realRegistrations:0}));

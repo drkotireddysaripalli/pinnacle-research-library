@@ -1,0 +1,1162 @@
+{
+  "cases": 36,
+  "passed": 36,
+  "realRegistrations": 0,
+  "realEnquiries": 0,
+  "posts": [
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "library": "ask",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/pincer-grasp",
+      "library": "ask",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/pincer-grasp",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/english/speech-therapy/autism-speech-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/english/speech-therapy/autism-speech-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/techniques",
+      "library": "sunshine",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/techniques",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "library": "sunshine",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "library": "ask",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/pincer-grasp",
+      "library": "ask",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/pincer-grasp",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/english/speech-therapy/autism-speech-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/english/speech-therapy/autism-speech-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/techniques",
+      "library": "sunshine",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/techniques",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "library": "sunshine",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "library": "ask",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/pincer-grasp",
+      "library": "ask",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/pincer-grasp",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/english/speech-therapy/autism-speech-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/english/speech-therapy/autism-speech-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/techniques",
+      "library": "sunshine",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/techniques",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "library": "sunshine",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "library": "ask",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/what-is-an-iep-individualised-education-plan",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/pincer-grasp",
+      "library": "ask",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/ask/pincer-grasp",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/hindi/occupational-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/english/speech-therapy/autism-speech-therapy",
+      "library": "faq",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/faq/english/speech-therapy/autism-speech-therapy",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/techniques",
+      "library": "sunshine",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/techniques",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "library": "sunshine",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/allmirracles/category/Conditions",
+      "library": null,
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/google",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": "mirracles",
+      "provider": "local-fixture-only"
+    },
+    {
+      "path": "/ask/auth/logout",
+      "origin": "http://127.0.0.1:4359",
+      "returnTo": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "library": null,
+      "provider": "local-fixture-only"
+    }
+  ],
+  "rows": [
+    {
+      "path": "/ask/what-is-an-iep-individualised-education-plan",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=education",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "What is an IEP (Individualised Education Plan)?",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-ask-what-is-an-iep-individualised-education-plan-chromium-320.png"
+    },
+    {
+      "path": "/ask/pincer-grasp",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Pincer grasp: meaning, development and safe practice",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-ask-pincer-grasp-chromium-320.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-320.png"
+    },
+    {
+      "path": "/faq/english/speech-therapy/autism-speech-therapy",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "What does speech therapy for my kid with autism entail at Pinnacle Blooms Network?",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-faq-english-speech-therapy-autism-speech-therapy-chromium-320.png"
+    },
+    {
+      "path": "/sunshine/techniques",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Therapy techniques in your child’s world.",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-sunshine-techniques-chromium-320.png"
+    },
+    {
+      "path": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Car seat cushions and child travel safety",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-sunshine-topic-car-seat-cushions-and-child-travel-safety-3394-chromium-320.png"
+    },
+    {
+      "path": "/allmirracles",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Mirracles video library",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-allmirracles-chromium-320.png"
+    },
+    {
+      "path": "/allmirracles/category/Conditions",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Conditions · Mirracles video library",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-allmirracles-category-Conditions-chromium-320.png"
+    },
+    {
+      "path": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "engine": "chromium",
+      "width": 320,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Directly from Parent - Pinnacle Proven Integrated Autism Therapy Improvement - CDN - 10",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-mirracles-20710890947-Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10-chromium-320.png"
+    },
+    {
+      "path": "/ask/what-is-an-iep-individualised-education-plan",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=education",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "What is an IEP (Individualised Education Plan)?",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-ask-what-is-an-iep-individualised-education-plan-chromium-768.png"
+    },
+    {
+      "path": "/ask/pincer-grasp",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Pincer grasp: meaning, development and safe practice",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-ask-pincer-grasp-chromium-768.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-768.png"
+    },
+    {
+      "path": "/faq/english/speech-therapy/autism-speech-therapy",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "What does speech therapy for my kid with autism entail at Pinnacle Blooms Network?",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-faq-english-speech-therapy-autism-speech-therapy-chromium-768.png"
+    },
+    {
+      "path": "/sunshine/techniques",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Therapy techniques in your child’s world.",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-sunshine-techniques-chromium-768.png"
+    },
+    {
+      "path": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Car seat cushions and child travel safety",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-sunshine-topic-car-seat-cushions-and-child-travel-safety-3394-chromium-768.png"
+    },
+    {
+      "path": "/allmirracles",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Mirracles video library",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-allmirracles-chromium-768.png"
+    },
+    {
+      "path": "/allmirracles/category/Conditions",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Conditions · Mirracles video library",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-allmirracles-category-Conditions-chromium-768.png"
+    },
+    {
+      "path": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "engine": "chromium",
+      "width": 768,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Directly from Parent - Pinnacle Proven Integrated Autism Therapy Improvement - CDN - 10",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-mirracles-20710890947-Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10-chromium-768.png"
+    },
+    {
+      "path": "/ask/what-is-an-iep-individualised-education-plan",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=education",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "What is an IEP (Individualised Education Plan)?",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-ask-what-is-an-iep-individualised-education-plan-chromium-1440.png"
+    },
+    {
+      "path": "/ask/pincer-grasp",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Pincer grasp: meaning, development and safe practice",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-ask-pincer-grasp-chromium-1440.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-1440.png"
+    },
+    {
+      "path": "/faq/english/speech-therapy/autism-speech-therapy",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "What does speech therapy for my kid with autism entail at Pinnacle Blooms Network?",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-faq-english-speech-therapy-autism-speech-therapy-chromium-1440.png"
+    },
+    {
+      "path": "/sunshine/techniques",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Therapy techniques in your child’s world.",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-sunshine-techniques-chromium-1440.png"
+    },
+    {
+      "path": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Car seat cushions and child travel safety",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-sunshine-topic-car-seat-cushions-and-child-travel-safety-3394-chromium-1440.png"
+    },
+    {
+      "path": "/allmirracles",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Mirracles video library",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-allmirracles-chromium-1440.png"
+    },
+    {
+      "path": "/allmirracles/category/Conditions",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Conditions · Mirracles video library",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-allmirracles-category-Conditions-chromium-1440.png"
+    },
+    {
+      "path": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "engine": "chromium",
+      "width": 1440,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Directly from Parent - Pinnacle Proven Integrated Autism Therapy Improvement - CDN - 10",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-mirracles-20710890947-Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10-chromium-1440.png"
+    },
+    {
+      "path": "/ask/what-is-an-iep-individualised-education-plan",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=education",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "What is an IEP (Individualised Education Plan)?",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-ask-what-is-an-iep-individualised-education-plan-webkit-390.png"
+    },
+    {
+      "path": "/ask/pincer-grasp",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Pincer grasp: meaning, development and safe practice",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-ask-pincer-grasp-webkit-390.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-faq-hindi-occupational-therapy-webkit-390.png"
+    },
+    {
+      "path": "/faq/english/speech-therapy/autism-speech-therapy",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "What does speech therapy for my kid with autism entail at Pinnacle Blooms Network?",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-faq-english-speech-therapy-autism-speech-therapy-webkit-390.png"
+    },
+    {
+      "path": "/sunshine/techniques",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Therapy techniques in your child’s world.",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-sunshine-techniques-webkit-390.png"
+    },
+    {
+      "path": "/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=occupational",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Car seat cushions and child travel safety",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-sunshine-topic-car-seat-cushions-and-child-travel-safety-3394-webkit-390.png"
+    },
+    {
+      "path": "/allmirracles",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Mirracles video library",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-allmirracles-webkit-390.png"
+    },
+    {
+      "path": "/allmirracles/category/Conditions",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Conditions · Mirracles video library",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-allmirracles-category-Conditions-webkit-390.png"
+    },
+    {
+      "path": "/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "engine": "webkit",
+      "width": 390,
+      "physicalDevice": false,
+      "google": "local signed-in fixture; no real Google account created",
+      "registrationReturn": true,
+      "logoutGate": true,
+      "nativePostOrigin": true,
+      "enquiry": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "geometry": {
+        "overflow": false,
+        "gateVisible": false,
+        "h1": "Directly from Parent - Pinnacle Proven Integrated Autism Therapy Improvement - CDN - 10",
+        "readerProfile": "QA Reader"
+      },
+      "screenshot": "-mirracles-20710890947-Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10-webkit-390.png"
+    }
+  ]
+}

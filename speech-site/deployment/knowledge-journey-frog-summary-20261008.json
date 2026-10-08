@@ -1,0 +1,20 @@
+{
+  "completedAt": "2026-10-08T08:54:32.9693415Z",
+  "scope": "12 explicit representative URLs, one crawl, not a whole-site health score",
+  "pages": 12,
+  "http200": 12,
+  "selfCanonical": 12,
+  "singleH1": 12,
+  "indexable": 11,
+  "intentionalNoindex": [
+    "https://pinnacleblooms.org/ask/pincer-grasp"
+  ],
+  "reports": [
+    "internal_all.csv",
+    "response_codes_all.csv",
+    "page_titles_all.csv",
+    "meta_description_all.csv",
+    "h1_all.csv",
+    "canonicals_all.csv"
+  ]
+}

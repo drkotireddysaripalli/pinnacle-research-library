@@ -1,0 +1,469 @@
+{
+  "at": "2026-10-08T08:56:09.482Z",
+  "source": "1c5084a69c3adf9ae5fa7e286206c79a2540aafc",
+  "askVersion": "0aad2e81-8d8d-4ec4-a470-360216c87e50",
+  "portalVersion": "d347b65a-404f-44cb-bc02-f5d7b8d8d9d5",
+  "cases": 12,
+  "passed": 12,
+  "realRegistrations": 0,
+  "realEnquiries": 0,
+  "scope": "Public HTTP/HTML/assets; not completed Google authorisation, physical devices or field performance",
+  "rows": [
+    {
+      "url": "https://pinnacleblooms.org/ask",
+      "finalURL": "https://pinnacleblooms.org/ask",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 0,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/google-ads-call-consent.FqeWzaS9.mjs",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+      "finalURL": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/google-ads-call-consent.FqeWzaS9.mjs",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/pincer-grasp",
+      "finalURL": "https://pinnacleblooms.org/ask/pincer-grasp",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/google-ads-call-consent.FqeWzaS9.mjs",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "noindex, follow",
+      "canonical": "https://pinnacleblooms.org/ask/pincer-grasp"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq",
+      "finalURL": "https://www.pinnacleblooms.org/faq",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/NextStep.ClQpwyKd.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/faq"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+      "finalURL": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/NextStep.ClQpwyKd.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq/english/speech-therapy/autism-speech-therapy",
+      "finalURL": "https://www.pinnacleblooms.org/faq/english/speech-therapy/autism-speech-therapy",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/NextStep.ClQpwyKd.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/faq/english/speech-therapy/autism-speech-therapy"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine",
+      "finalURL": "https://www.pinnacleblooms.org/sunshine",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/NextStep.ClQpwyKd.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/sunshine"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/techniques",
+      "finalURL": "https://www.pinnacleblooms.org/sunshine/techniques",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/NextStep.ClQpwyKd.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/sunshine/techniques"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "finalURL": "https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "single inline import of the shared fingerprinted measurement asset",
+      "assets": [
+        {
+          "path": "/ask/_assets/sintony-latin.DlpToHUc.woff2",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/shared-shell.r2oEjdp7.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/NextStep.ClQpwyKd.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/SiteHeader.astro_astro_type_script_index_0_lang.DXspBa6o.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/allmirracles",
+      "finalURL": "https://www.pinnacleblooms.org/allmirracles",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "/ask/_assets/speech-measurement.zFQspfZI.js",
+      "assets": [
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/allmirracles"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/allmirracles/category/Conditions",
+      "finalURL": "https://www.pinnacleblooms.org/allmirracles/category/Conditions",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "/ask/_assets/speech-measurement.zFQspfZI.js",
+      "assets": [
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/allmirracles/category/Conditions"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "finalURL": "https://www.pinnacleblooms.org/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10",
+      "status": 200,
+      "googleGate": 1,
+      "journeys": 1,
+      "h1": 1,
+      "measurement": "/ask/_assets/speech-measurement.zFQspfZI.js",
+      "assets": [
+        {
+          "path": "/ask/_assets/ask.BZjiqNvS.css",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/AskGate.astro_astro_type_script_index_0_lang.DwGnqkgl.js",
+          "status": 200
+        },
+        {
+          "path": "/ask/_assets/speech-measurement.zFQspfZI.js",
+          "status": 200
+        }
+      ],
+      "referrerPolicy": "strict-origin",
+      "robots": "index, follow, max-image-preview:large",
+      "canonical": "https://www.pinnacleblooms.org/mirracles/20710890947/Directly-from-Parent--Pinnacle-Proven-Integrated-Autism-Therapy-Improvement--CDN--10"
+    }
+  ]
+}

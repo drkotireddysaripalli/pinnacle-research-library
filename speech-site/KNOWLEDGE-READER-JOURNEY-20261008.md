@@ -26,4 +26,37 @@ Reuse the existing 7 October Ahrefs/GSC demand join for Hindi speech/OT, assessm
 
 Read-only review identified and root corrected native POST Origin under the video referrer policy, restoration of campaign-bearing links after withdrawal, and business-intent exclusion. Native copy uses the shared Anek contract; local Hindi weight/font checks apply.
 
-Release is pending exact-source CI/TestingBot BVT and guarded Ask/Portal promotion. Planned changes preserve all 260 routes, 21 Ask bindings, protected services, all 3,689 existing Portal assets and unchanged Portal modules; one public identity-free reader assembly asset is added. Final configuration and public URL receipts must be recorded before this document is marked delivered. Real Google completion on the new video route and downstream qualification remain distinct from browser fixtures.
+## Delivered release — 8 October 2026
+
+Runtime source: `1c5084a69c3adf9ae5fa7e286206c79a2540aafc` (shared implementation `22f2302` plus the corrected optional-service type declaration). The first CI attempt caught that declaration error; the corrected source passed Astro diagnostics and the entire Portal quality workflow. No failed check was bypassed.
+
+| Boundary | Actual evidence |
+| --- | --- |
+| Ask/FAQ/Sunshine deployment | `0aad2e81-8d8d-4ec4-a470-360216c87e50`, live read-back recorded in deployment/knowledge-journey-ask-20261008.json |
+| Portal/Mirracles deployment | Version `d347b65a-404f-44cb-bc02-f5d7b8d8d9d5`, deployment `dcb721a0-7464-46a3-8145-d58b2df2cbad` |
+| Exact-source CI | https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37751492742 — success |
+| TestingBot BVT | 5/5 cases passed, Chrome 153.0.8010.37 on provider Windows, 1440×900. Approved shared-header reference matched; this is not approval of every page body or a physical phone run. |
+| Knowledge fixture browser coverage | 36 initial cases across nine paths; 16 affected Hindi/video checks after final copy/placement changes. Chromium at 320/768/1440 and WebKit at 390; exact return/profile/logout/native POST. Overlapping cases are not added as unique coverage. |
+| Production signed-out browsers | 4/4 passed at 390px: Ask, Hindi FAQ, Sunshine techniques and Mirracles. Actual Google sign-in iframe, central number, return path and no overflow/CSP page error. No sign-in completion or real registration performed. |
+| Public HTML/assets | 12/12 URLs returned 200, one heading, reader gate and one shared measurement import. 11 include the new rail; Ask home retains its existing AskContact block. |
+| Screaming Frog | One 12-URL crawl: 12/12 HTTP 200, 12/12 self-canonical, 12/12 single H1. 11 indexable; the existing noindex Pincer Grasp topic remains excluded from submission. This is not a new whole-site Health Score. |
+| Discovery | GSC release annotation `1941b744-45b0-4603-b317-ac90dc957f20`; 10 changed eligible representative URLs accepted by IndexNow with validated keys, 0 failures. Batch `b26b2e04-dc87-4707-a982-5d297d4741a7`. Acceptance does not establish indexing, rankings or AI citations. Existing unchanged sitemaps were not resubmitted. |
+
+Configuration read-back preserved all 260 exact routes, 21 Ask bindings and all 3,689 existing Portal assets; one identity-free reader assembly asset was added. Three named Portal modules changed (`pinnacle-route-v12.mjs`, `speech-handler.mjs`, `mirracles-library.mjs`); the remaining 42 modules were preserved. Ask was deliberately updated as the sibling release. Other protected workers and their bindings remain unchanged. Rollback versions and exact module hashes remain in the release receipts.
+
+Live examples:
+
+- https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan
+- https://www.pinnacleblooms.org/faq/hindi/occupational-therapy
+- https://www.pinnacleblooms.org/sunshine/techniques
+- https://www.pinnacleblooms.org/sunshine/topic/car-seat-cushions-and-child-travel-safety-3394
+- https://www.pinnacleblooms.org/allmirracles
+
+Final evidence: deployment/knowledge-journey-live-20261008.json, deployment/knowledge-journey-live-browser-20261008.json, deployment/knowledge-journey-ci-testingbot-20261008.json, deployment/knowledge-journey-frog-summary-20261008.json and deployment/knowledge-journey-discovery-20261008.json. The GSC demand receipt retains the actual settled range and the unmatched GA4 rows; no registrations, accepted enquiries, qualified calls or admissions are inferred from those rows.
+
+## Remaining dependencies and boundaries
+
+- Materials/Interventions main-domain migration is still pending complete original HTML/assets intake. Existing owner and intake condition remain in MATERIALS-INTERVENTIONS-MIGRATION-WORK-ORDER-20261007.md. The shared library bucket and journey contract are ready for their imported templates; neither requested main-domain library is reported delivered.
+- Actual Google completion on the new Mirracles route is not established by local identity fixtures or the production anonymous Google iframe. Older actual Ask completion evidence is retained without relabelling it as a new Mirracles test.
+- Qualified-call, visit and admission linkage needs the relevant operational records. Signing in, tapping a button, IndexNow acceptance and an accepted website receipt remain separate stages.
+- No new scheduler, duplicate audit, paid Ahrefs query, outreach campaign or customer enquiry was created during this release.
