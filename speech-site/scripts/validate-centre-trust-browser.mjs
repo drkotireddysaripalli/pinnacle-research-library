@@ -10,7 +10,7 @@ for(const [engine,kind,width] of [[chromium,process.platform==='win32'?'edge':'c
  assert.equal(await page.locator('iframe').count(),0,'No eager third-party embeds');assert.equal(await page.locator('.trust-art img').count(),4,'Four coordinated illustrations');
  for(const id of ['first-visit','people-and-families','family-voices','centre-life-outcome']){
   const section=page.locator('#'+id);await section.scrollIntoViewIfNeeded();await page.evaluate(()=>document.fonts.ready);await page.waitForFunction(id=>[...document.querySelectorAll('#'+id+' .trust-art img')].every(image=>image.complete&&image.naturalWidth>0),id);
-  const state=await section.evaluate(n=>({overflow:document.documentElement.scrollWidth>innerWidth+1,images:[...n.querySelectorAll('.trust-art img')].map(i=>({loaded:i.complete&&i.naturalWidth>0,lazy:i.loading==='lazy',width:i.getBoundingClientRect().width}))}));assert(!state.overflow,id+' overflow');assert(state.images.every(i=>i.loaded&&i.lazy),id+' image load/lazy contract');
+  const state=await section.evaluate(n=>({overflow:document.documentElement.scrollWidth>innerWidth+1,viewport:innerWidth,scrollWidth:document.documentElement.scrollWidth,images:[...n.querySelectorAll('.trust-art img')].map(i=>({loaded:i.complete&&i.naturalWidth>0,lazy:i.loading==='lazy',width:i.getBoundingClientRect().width}))}));assert(!state.overflow,id+' overflow '+JSON.stringify({kind,width,viewport:state.viewport,scrollWidth:state.scrollWidth}));assert(state.images.every(i=>i.loaded&&i.lazy),id+' image load/lazy contract');
   if(id==='people-and-families'||id==='first-visit')await section.screenshot({path:path.join(out,kind+'-'+width+'-'+id+'.png')});
  }
  for(const id of ['people-and-families','family-voices']){
