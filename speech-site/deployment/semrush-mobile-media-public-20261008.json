@@ -1,0 +1,217 @@
+{
+  "checkedAt": "2026-10-08T15:37:07.432Z",
+  "source": "dcaf6eeb7a91413d79b8fd0fa5f3a61ef75773db",
+  "method": "Public HTTP GET with mobile user agent; no customer or analytics requests",
+  "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1",
+  "rows": [
+    {
+      "url": "https://www.pinnacleblooms.org/yoga-therapy",
+      "finalUrl": "https://www.pinnacleblooms.org/yoga-therapy",
+      "status": 200,
+      "elapsedMs": 388,
+      "canonical": "https://www.pinnacleblooms.org/yoga-therapy",
+      "recovery": "mobile-origin-20261008",
+      "title": "Best Yoga Therapy Centers In Hyderabad, Delhi, Vizag, Vijay",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 510254,
+      "sha256": "032b9f4f5f861db74aaa3934e3c45d02603c447fb4d5135352fdb24f372e0499",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/yoga-therapy?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "finalUrl": "https://www.pinnacleblooms.org/yoga-therapy?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "status": 200,
+      "elapsedMs": 966,
+      "canonical": "https://www.pinnacleblooms.org/yoga-therapy",
+      "recovery": "mobile-origin-20261008",
+      "title": "Best Yoga Therapy Centers In Hyderabad, Delhi, Vizag, Vijay",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 511502,
+      "sha256": "45355cb33328aeb5a3aabe24fbf67167b5fa54b577f726e3e6b7dd0e77648fc7",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/physiotherapy",
+      "finalUrl": "https://www.pinnacleblooms.org/physiotherapy",
+      "status": 200,
+      "elapsedMs": 275,
+      "canonical": "https://www.pinnacleblooms.org/physiotherapy",
+      "recovery": "mobile-origin-20261008",
+      "title": "Best Physio Therapy In Delhi, Hyderabad, Bengaluru, Vizag,",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 525339,
+      "sha256": "dae2891511498f02989fde3cbd559064415afa92fc54f9bb7c0db9d5d2a918ed",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/physiotherapy?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "finalUrl": "https://www.pinnacleblooms.org/physiotherapy?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "status": 200,
+      "elapsedMs": 986,
+      "canonical": "https://www.pinnacleblooms.org/physiotherapy",
+      "recovery": "mobile-origin-20261008",
+      "title": "Best Physio Therapy In Delhi, Hyderabad, Bengaluru, Vizag,",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 526587,
+      "sha256": "79b994e80acf7dbf355032aa9935f4c8e4a7d25f1afa82e97c1b4f4416a9c904",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/hydro-therapy",
+      "finalUrl": "https://www.pinnacleblooms.org/hydro-therapy",
+      "status": 200,
+      "elapsedMs": 450,
+      "canonical": "https://www.pinnacleblooms.org/hydro-therapy",
+      "recovery": "mobile-origin-20261008",
+      "title": "Best Hydro Therapy Centers in Delhi, Hyderabad, Bengaluru,",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 457995,
+      "sha256": "71c175ac8f37c8cee8884b1c05b17dc716e7abb5d5e03ca9fee61066b40bb4ac",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/hydro-therapy?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "finalUrl": "https://www.pinnacleblooms.org/hydro-therapy?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "status": 200,
+      "elapsedMs": 751,
+      "canonical": "https://www.pinnacleblooms.org/hydro-therapy",
+      "recovery": "mobile-origin-20261008",
+      "title": "Best Hydro Therapy Centers in Delhi, Hyderabad, Bengaluru,",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 459243,
+      "sha256": "ac3bfde333304b0506c38ce8b0d4132132a353ddbc44d958129c25c09efd83ab",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "finalUrl": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "status": 200,
+      "elapsedMs": 381,
+      "canonical": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "recovery": "mobile-origin-20261008",
+      "title": "Resources - Pinnacle Blooms Network Improving quality-of-li",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 475347,
+      "sha256": "1a7880ff482cae62cff6d76f5c14a4a29db0c14ee2941e5546376300978b544b",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "finalUrl": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "status": 200,
+      "elapsedMs": 826,
+      "canonical": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "recovery": "mobile-origin-20261008",
+      "title": "Resources - Pinnacle Blooms Network Improving quality-of-li",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 475539,
+      "sha256": "9bfc9f2bfea3aa2c02bf36a2bbb860693169f69129ebead998eb0da9eac95ea4",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-news",
+      "finalUrl": "https://www.pinnacleblooms.org/autism-speech-aba-news",
+      "status": 200,
+      "elapsedMs": 2330,
+      "canonical": "https://www.pinnacleblooms.org/autism-speech-aba-news",
+      "recovery": "mobile-origin-20261008",
+      "title": "News - Child Development, Rehabilitation centers - Autism",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 330863,
+      "sha256": "b04c7ac0184e9f85071c8ba8bd8206128cc184aee70251580d7a2597c1b7c1f6",
+      "pass": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-news?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "finalUrl": "https://www.pinnacleblooms.org/autism-speech-aba-news?utm_source=google&utm_medium=cpc&utm_campaign=validation_test&gclid=validation_test",
+      "status": 200,
+      "elapsedMs": 4694,
+      "canonical": "https://www.pinnacleblooms.org/autism-speech-aba-news",
+      "recovery": "mobile-origin-20261008",
+      "title": "News - Child Development, Rehabilitation centers - Autism",
+      "phoneLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "bytes": 331055,
+      "sha256": "e5358f006bcd232b672dce54e604311994183a10a605b9a988a10cc41da63bdf",
+      "pass": true
+    }
+  ],
+  "materials": {
+    "url": "https://materials.pinnacleblooms.org/",
+    "status": 200,
+    "repair": "materials-https-20261008",
+    "httpMaterialImages": [],
+    "unavailable": [
+      {
+        "alt": "Kids Play Jungle Tunnel — image unavailable"
+      }
+    ],
+    "correctedImageIds": [
+      2502,
+      29,
+      2405,
+      2308
+    ],
+    "pass": true
+  },
+  "pass": true
+}

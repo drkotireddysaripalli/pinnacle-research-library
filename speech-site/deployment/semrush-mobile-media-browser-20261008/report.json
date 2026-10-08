@@ -1,0 +1,126 @@
+{
+  "at": "2026-10-08T15:37:58.090Z",
+  "browser": "Microsoft Edge 154.0.4258.62",
+  "hostOS": "Windows",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "physicalDevice": false,
+  "network": "No artificial throttling; tracking and API requests intercepted",
+  "rows": [
+    {
+      "name": "yoga",
+      "url": "https://www.pinnacleblooms.org/yoga-therapy",
+      "status": 200,
+      "title": "Best Yoga Therapy Centers In Hyderabad, Delhi, Vizag, Vijay",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": [
+        "Best Yoga Therapy Center in Hyderabad - Pinnacle Blooms Network"
+      ],
+      "callLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "unavailableImages": []
+    },
+    {
+      "name": "resources",
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "status": 200,
+      "title": "Resources - Pinnacle Blooms Network Improving quality-of-li",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": [
+        "Resources - Pinnacle Blooms"
+      ],
+      "callLinks": [
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100181181"
+      ],
+      "unavailableImages": []
+    },
+    {
+      "name": "materials",
+      "url": "https://materials.pinnacleblooms.org/",
+      "status": 200,
+      "title": "Weighted Blanket & Lap Pad for Sensory Regulation | Pinnacle Blooms",
+      "width": 390,
+      "documentWidth": 390,
+      "h1": [],
+      "callLinks": [
+        "tel:+919100181181",
+        "tel:9100181181",
+        "tel:9100181181",
+        "tel:9100222183",
+        "tel:9100222184",
+        "tel:9100222185",
+        "tel:9100222186",
+        "tel:9100222188",
+        "tel:8096877778",
+        "tel:9573056244",
+        "tel:9347537388",
+        "tel:8885027293",
+        "tel:7386395212",
+        "tel:9738179179",
+        "tel:9063377417",
+        "tel:9804435444",
+        "tel:9804489444",
+        "tel:9100222187",
+        "tel:9804425444",
+        "tel:7386947444",
+        "tel:9908792374",
+        "tel:9908793867",
+        "tel:9908792438",
+        "tel:7981278524",
+        "tel:9908792553",
+        "tel:9618222944",
+        "tel:9618222544",
+        "tel:9618666344",
+        "tel:9618666144",
+        "tel:9100053004",
+        "tel:9491507444",
+        "tel:8125762999",
+        "tel:9581208816",
+        "tel:9100442037",
+        "tel:9100440293",
+        "tel:9100909484",
+        "tel:9908792863",
+        "tel:9347080640",
+        "tel:9900428508",
+        "tel:9100085004",
+        "tel:8985951444",
+        "tel:9100095004",
+        "tel:7671816868",
+        "tel:9100086004",
+        "tel:9121116845",
+        "tel:9121116846",
+        "tel:9100056004",
+        "tel:9121116844",
+        "tel:9100945515",
+        "tel:9848025444",
+        "tel:9100110284",
+        "tel:9100870958",
+        "tel:9100677374",
+        "tel:"
+      ],
+      "unavailableImages": [
+        {
+          "alt": "Kids Play Jungle Tunnel — image unavailable",
+          "loaded": false
+        }
+      ]
+    }
+  ],
+  "noCallsNoEnquiriesNoAnalytics": true,
+  "visualApproval": "Requires owner inspection of saved captures"
+}

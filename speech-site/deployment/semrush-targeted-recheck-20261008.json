@@ -1,0 +1,382 @@
+{
+  "checkedAt": "2026-10-08T15:12:38.263770+00:00",
+  "scope": "Five exact reported main URLs, one request per desktop/mobile UA; material index once; five HTTPS material images once. No browser/cookies/customer actions or retry.",
+  "mainPages": [
+    {
+      "url": "https://www.pinnacleblooms.org/yoga-therapy",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/yoga-therapy",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 444706,
+      "bodyTruncated": false,
+      "bodySha256": "be0057cb52df4e40a5fe7b062d7893466f547fb0e800e90c69dfe21e828730d6",
+      "title": [
+        "Best Yoga Therapy Centers In Hyderabad, Delhi, Vizag, Vijay"
+      ],
+      "h1": [
+        "Best Yoga Therapy Center in Hyderabad - Pinnacle Blooms Network"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 790
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/yoga-therapy",
+      "userAgentClass": "mobile",
+      "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+      "status": 500,
+      "finalUrl": "https://www.pinnacleblooms.org/yoga-therapy",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 245723,
+      "bodyTruncated": false,
+      "bodySha256": "4418a9be118e3a4df901e1ed3b7ef7f1c2265b0b55a6c50714d8a5fb49d69e4e",
+      "title": [
+        "Error"
+      ],
+      "h1": [
+        "Pinnacle Blooms Child Development, Rehabilitation Centre - Autism treatment"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 299
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/physiotherapy",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/physiotherapy",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 459594,
+      "bodyTruncated": false,
+      "bodySha256": "a159f12452a9515d655a02c0223ff14fe5c1fbbe8f07cdc0c1f06b0c21b22ed1",
+      "title": [
+        "Best Physio Therapy In Delhi, Hyderabad, Bengaluru, Vizag,"
+      ],
+      "h1": [
+        "Physio Therapy"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 417
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/physiotherapy",
+      "userAgentClass": "mobile",
+      "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+      "status": 500,
+      "finalUrl": "https://www.pinnacleblooms.org/physiotherapy",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 245728,
+      "bodyTruncated": false,
+      "bodySha256": "717ab12558d7a4347ac6b2d1cac538db6f86c6838b0edf29aaac46b06b2c2e92",
+      "title": [
+        "Error"
+      ],
+      "h1": [
+        "Pinnacle Blooms Child Development, Rehabilitation Centre - Autism treatment"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 253
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/hydro-therapy",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/hydro-therapy",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 392447,
+      "bodyTruncated": false,
+      "bodySha256": "c64d13a291b3f3ba1a20eb6acc92eb443409aa83c3f3e412ea364a6254d3f7d5",
+      "title": [
+        "Best Hydro Therapy Centers in Delhi, Hyderabad, Bengaluru,"
+      ],
+      "h1": [
+        "Hydro Therapy - Pinnacle Blooms"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 319
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/hydro-therapy",
+      "userAgentClass": "mobile",
+      "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+      "status": 500,
+      "finalUrl": "https://www.pinnacleblooms.org/hydro-therapy",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 245728,
+      "bodyTruncated": false,
+      "bodySha256": "8179f7541aed7320fd653174ad777547d862960fd92c154af89eef09ba714a15",
+      "title": [
+        "Error"
+      ],
+      "h1": [
+        "Pinnacle Blooms Child Development, Rehabilitation Centre - Autism treatment"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 287
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 409945,
+      "bodyTruncated": false,
+      "bodySha256": "174eccf9f3656068b5a00d1ef6fa79e19016a2e93a02f6cd6d3edf07dc12b41e",
+      "title": [
+        "Resources - Pinnacle Blooms Network Improving quality-of-li"
+      ],
+      "h1": [
+        "Resources - Pinnacle Blooms"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 179
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "userAgentClass": "mobile",
+      "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+      "status": 500,
+      "finalUrl": "https://www.pinnacleblooms.org/autism-speech-aba-parent-family-resources",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 245868,
+      "bodyTruncated": false,
+      "bodySha256": "7cfb4b5dea6916d0f83d80eaa4937a70400ec8dd54e17fbf8a26961edbd93236",
+      "title": [
+        "Error"
+      ],
+      "h1": [
+        "Pinnacle Blooms Child Development, Rehabilitation Centre - Autism treatment"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 229
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-news",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/autism-speech-aba-news",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 265393,
+      "bodyTruncated": false,
+      "bodySha256": "7a06e43568421bd84db8594dcfe1061e43b1afc1da69ea3b628823720c0b829b",
+      "title": [
+        "News - Child Development, Rehabilitation centers - Autism"
+      ],
+      "h1": [
+        "News - Pinnacle Blooms Speech Therapy, Autism Centre, Occupational Therapy, Hyderabad, Secunderabad, Speech Pathology, Special Education, Assessments & Treatments, Behavioral Modification, Group Therapy & Counseling"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 2041
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/autism-speech-aba-news",
+      "userAgentClass": "mobile",
+      "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Mobile Safari/537.36",
+      "status": 500,
+      "finalUrl": "https://www.pinnacleblooms.org/autism-speech-aba-news",
+      "redirects": [],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 245773,
+      "bodyTruncated": false,
+      "bodySha256": "fb397a7eb02807cb238dcadc8dc9becf3d452ad90fd2e7b49f981c1b0854483f",
+      "title": [
+        "Error"
+      ],
+      "h1": [
+        "Pinnacle Blooms Child Development, Rehabilitation Centre - Autism treatment"
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 2091
+    }
+  ],
+  "materialsIndex": {
+    "url": "https://materials.pinnacleblooms.org/",
+    "userAgentClass": "desktop",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+    "status": 200,
+    "finalUrl": "https://materials.pinnacleblooms.org/",
+    "redirects": [],
+    "contentType": "text/html; charset=utf-8",
+    "bytesRead": 1579211,
+    "bodyTruncated": false,
+    "bodySha256": "71f914edc83ce88a6f563be47dbd5ec5ce158d4e0bf6a8faff476b1d1b9d223d",
+    "title": [
+      "Weighted Blanket & Lap Pad for Sensory Regulation | Pinnacle Blooms"
+    ],
+    "h1": [],
+    "errorSignatures": [],
+    "httpMaterialAssetReferences": [
+      "http://pinnacleblooms.org/Assets/Materials/2308.jpg",
+      "http://pinnacleblooms.org/Assets/Materials/2405.jpg",
+      "http://pinnacleblooms.org/Assets/Materials/2502.jpg",
+      "http://pinnacleblooms.org/Assets/Materials/29.jpg",
+      "http://pinnacleblooms.org/Assets/Materials/309.jpg"
+    ],
+    "server": "cloudflare",
+    "recoveryHeader": "",
+    "elapsedMs": 400
+  },
+  "httpsMaterialAssets": [
+    {
+      "url": "https://pinnacleblooms.org/Assets/Materials/2502.jpg",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/Assets/Materials/2502.jpg",
+      "redirects": [
+        {
+          "status": 301,
+          "from": "https://pinnacleblooms.org/Assets/Materials/2502.jpg",
+          "to": "https://www.pinnacleblooms.org/Assets/Materials/2502.jpg"
+        }
+      ],
+      "contentType": "image/*",
+      "bytesRead": 116867,
+      "bodyTruncated": false,
+      "bodySha256": "f02019c0829865e2e93ecc47b0d856508a0c3b0e0211a8f952e396e614e2b96c",
+      "imageSignature": "ffd8ffe100bc457869660000",
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 112
+    },
+    {
+      "url": "https://pinnacleblooms.org/Assets/Materials/29.jpg",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/Assets/Materials/29.jpg",
+      "redirects": [
+        {
+          "status": 301,
+          "from": "https://pinnacleblooms.org/Assets/Materials/29.jpg",
+          "to": "https://www.pinnacleblooms.org/Assets/Materials/29.jpg"
+        }
+      ],
+      "contentType": "image/*",
+      "bytesRead": 144859,
+      "bodyTruncated": false,
+      "bodySha256": "25a27f222acf1d78b06177847d3a0e56b0a0462a5a5dec68a53ca55d6f2465f1",
+      "imageSignature": "ffd8ffe100bc457869660000",
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 133
+    },
+    {
+      "url": "https://pinnacleblooms.org/Assets/Materials/2405.jpg",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/Assets/Materials/2405.jpg",
+      "redirects": [
+        {
+          "status": 301,
+          "from": "https://pinnacleblooms.org/Assets/Materials/2405.jpg",
+          "to": "https://www.pinnacleblooms.org/Assets/Materials/2405.jpg"
+        }
+      ],
+      "contentType": "image/*",
+      "bytesRead": 150752,
+      "bodyTruncated": false,
+      "bodySha256": "966e7af96b18b7375c237f5185475bb8a084fda90f65d9003f366dfee23ff87d",
+      "imageSignature": "ffd8ffe100bc457869660000",
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 211
+    },
+    {
+      "url": "https://pinnacleblooms.org/Assets/Materials/2308.jpg",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/Assets/Materials/2308.jpg",
+      "redirects": [
+        {
+          "status": 301,
+          "from": "https://pinnacleblooms.org/Assets/Materials/2308.jpg",
+          "to": "https://www.pinnacleblooms.org/Assets/Materials/2308.jpg"
+        }
+      ],
+      "contentType": "image/*",
+      "bytesRead": 131704,
+      "bodyTruncated": false,
+      "bodySha256": "4231c2fdae346969d6de2157bd1def9d5f0b679b4bc264a58812e1fbeb9b846f",
+      "imageSignature": "ffd8ffe100bc457869660000",
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 255
+    },
+    {
+      "url": "https://pinnacleblooms.org/Assets/Materials/309.jpg",
+      "userAgentClass": "desktop",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+      "status": 404,
+      "finalUrl": "https://www.pinnacleblooms.org/Assets/Materials/309.jpg",
+      "redirects": [
+        {
+          "status": 301,
+          "from": "https://pinnacleblooms.org/Assets/Materials/309.jpg",
+          "to": "https://www.pinnacleblooms.org/Assets/Materials/309.jpg"
+        }
+      ],
+      "contentType": "text/html; charset=utf-8",
+      "bytesRead": 312219,
+      "bodyTruncated": false,
+      "bodySha256": "062747246828e369d74fbfce829e136f0abeecca1271d5b530e3b7ec5794b032",
+      "title": [
+        "Pinnacle Blooms - Not found"
+      ],
+      "h1": [
+        "Pinnacle Blooms Suchitra, Bowenpally, Kukatpally, Beghampet, SR Nagar."
+      ],
+      "errorSignatures": [],
+      "httpMaterialAssetReferences": [],
+      "server": "cloudflare",
+      "recoveryHeader": "",
+      "elapsedMs": 224
+    }
+  ]
+}

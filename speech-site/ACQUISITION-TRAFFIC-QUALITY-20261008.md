@@ -8,6 +8,8 @@ The target is useful coverage and qualified-enquiry value. No implementation can
 
 ## Current verified boundary
 
+**8 October follow-through:** the subsequent bounded source `dcaf6eeb7a91413d79b8fd0fa5f3a61ef75773db` is live on portal `37f604d5-aea9-4b4a-b4b3-211072a66b22`. It repairs five reproduced legacy mobile destinations plus Materials image transport through three existing workers, retaining the acquisition asset and receiver. See `RELEASE-SEMRUSH-MOBILE-MEDIA-20261008.md`. A new GSC Wizard request for paid engagement on 1–6 October returned a connector timeout; no engagement totals or fraud rate can be inferred from that unavailable result.
+
 Portal source `807ada10c541278a818fb8b3e295eda6b7dc2d84`, version `6ef726ae-6a35-4cbd-80c0-3100c61f338e`, live 20:20:04 IST. The three explicit Google Ads events and durable accepted-enquiry contract are documented in `measurement/GA4-EVENT-CONTRACT-20261004.md`. Evidence: 69 focused checks, 5/5 exact-source TestingBot BVT cases, 12/12 intercepted SDK cases and 65/65 public shared-script read-backs. This is scoped commercial coverage, not a claim that every separate knowledge worker was promoted.
 
 | Stage | Authoritative evidence | Current state / completion condition |
@@ -59,3 +61,17 @@ The combined report must keep paid clicks, measured arrivals, engaged sessions, 
 - [GA4 developer session guidance](https://developers.google.com/analytics/devguides/collection/ga4/sessions): meaningful engagement; avoid artificial keep-alive pings.
 
 This document is an implementation/completion contract. Open integration items are not represented as deployed or a fraud engine already functioning.
+
+## Minimum next integration, agreed ownership
+
+Reuse the existing protected receiver/reporting store; do not create a duplicate dashboard or event family. The existing receiver `WebsiteEnrolmentReceipts.analytics(cohort)` is a private service-binding RPC, not a public endpoint. Its projection exposes schemaVersion, cohort/time basis, complete cohort counts, limited rows and truncation. Rows contain opaque receiptId, protected leadReference, state, creation/update times, accepted event, permitted acquisition envelope/source status and explicit unknown Google/qualification/appointment/attendance/admission states. It currently has no CHEQ decision or Cloudflare-action fields.
+
+Website owner next action: establish the vendor's documented callback/export fields and available Cloudflare decision association, then add only validated coarse verdict/reason/time/decision reference and a supported request association to the existing protected reporting path. Retention and access must be explicit before persisting those signals. Raw vendor bodies, fingerprinting, blanket IP blocks and invented associations are excluded. No new security setting or automatic Ads exclusion is part of this completion step.
+
+Ads owner next action: reconcile actual paid click types, spend, lost rank/budget, Google-filtered invalid activity, posted credits and campaign conversion selections; supply the supported CHEQ integration specification/configuration if already available. Ads/operations own genuine call-session/CRM linkage. Native central telephone taps cannot identify the caller; missing mapping remains unmatched. A browser returning repeatedly is not proof that the same person deliberately exhausted a budget.
+
+Acceptance: one real, protected record with supported source/decision/outcome associations, or a clearly isolated non-customer fixture proving those fields without entering lead/conversion reports. Existing genuine receipt evidence currently proves one accepted intake record with unknown campaign source; it does not prove post-release Ads attribution, Google receipt or the fraud-feedback loop. These dependencies remain open and must be closed before any claim of end-to-end completion.
+
+## Central and branch contact coverage
+
+The owner explicitly requires 9100 181 181 as the main contact and genuine branch numbers as an alternative. The Ads owner reports 59 directory anchors labelled Centre direct in its 21:08 IST read-back. The shared script's Google Ads phone event currently covers central-number/marked-forwarding targets; it does not establish branch-call intent coverage or a MyOperator record for a branch call. Preserve these legitimate alternatives. If extending the existing phone-interaction model, distinguish central and branch scope with a coarse field and test one directory/centre journey before rollout. Do not add raw dialled numbers to Analytics or call a branch interaction a central call. This is an identified measurement gap, not evidence that any real lead was lost or any visitor was fraudulent. No contact action may wait for measurement.

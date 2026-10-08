@@ -1,0 +1,17 @@
+{
+  "recipientThread": "01a10f18-8f4f-7da2-96ed-ad7aa8d5aa1d",
+  "delivery": "failed",
+  "toolResult": "thread not found",
+  "source": "dcaf6eeb7a91413d79b8fd0fa5f3a61ef75773db",
+  "preparedEvidence": [
+    "RELEASE-SEMRUSH-MOBILE-MEDIA-20261008.md",
+    "ACQUISITION-AUTOMATIC-EVENT-20261008.md",
+    "ACQUISITION-TRAFFIC-QUALITY-20261008.md",
+    "measurement/GA4-EVENT-CONTRACT-20261004.md",
+    "deployment/automatic-enquiry-ledger-readback-20261008.json"
+  ],
+  "openIntegration": "Documented CHEQ callback/export verdict schema, configured retention and supported request association; Cloudflare decision association; genuine Google/call/CRM outcome reconciliation.",
+  "owner": "Website owner retains implementation. Existing Ads owner retains auctions, spend, Google invalid-traffic/billing reconciliation and call/CRM dependency.",
+  "nextTrigger": "Deliver existing handoff once the current Ads thread becomes reachable; continue receiver association only with the documented vendor/configuration evidence. No repeated unchanged polling or new scheduler.",
+  "recordedAt": "2026-10-08T15:43:45.726287+00:00"
+}
