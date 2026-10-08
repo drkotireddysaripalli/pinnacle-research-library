@@ -10,8 +10,8 @@
     {
       "id": "delivery",
       "source": "https://pinnacleblooms.myshopify.com/policies/shipping-policy",
-      "sourceHtmlSha256": "996410c548566d59431222d473956627e8b2e6fd875641f7b2fe57d584c3e5fb",
-      "html": "<h2>PDF delivery and printed editions</h2><p>PDF ebooks are digital products. No printed copy or physical shipment is included.</p><p>After successful payment, download links are sent to the email address entered at checkout. A single-book purchase includes one PDF; a two-book collection includes two separate PDFs; the complete collection includes four separate PDFs. Each complete book contains 45 file pages.</p><p>Check your order email and spam or junk folder if the download message is missing. For assistance, email <a href=\"mailto:care@pinnacleblooms.org\">care@pinnacleblooms.org</a> with your order number and the email used at checkout, or call <a href=\"tel:+919100181181\">9100 181 181</a>. Contact us before purchasing the same item again.</p><p>Softcover and hardbound editions are currently out of stock. We are not accepting orders for these editions or promising a dispatch date.</p>"
+      "sourceHtmlSha256": "774f604f2c1b2528d131eeda814c21c2fec7d16fd5a6391e23139ab2ff407375",
+      "html": "<h2>PDF delivery and printed editions</h2><p>PDF ebooks are digital products. No printed copy or physical shipment is included.</p><p>After successful payment, download links are sent to the email address entered at checkout. Your purchase includes the book or books and digital format described on the product page. Page counts vary by edition; check the product page before ordering.</p><p>Check your order email and spam or junk folder if the download message is missing. For assistance, email <a href=\"mailto:care@pinnacleblooms.org\">care@pinnacleblooms.org</a> with your order number and the email used at checkout, or call <a href=\"tel:+919100181181\">9100 181 181</a>. Contact us before purchasing the same item again.</p><p>Softcover and hardbound editions are currently out of stock. We are not accepting orders for these editions or promising a dispatch date.</p>"
     }
   ]
 }
