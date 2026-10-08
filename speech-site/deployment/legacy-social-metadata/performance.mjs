@@ -1,5 +1,6 @@
 // Public reading templates only. Keep enquiry, authentication and private app
 // routes independent. Preserve every video destination; load players on intent.
+import {addReadingDirectory} from './reading-directory.mjs';
 const playScript=`<script data-pinnacle-video-intent>document.addEventListener('click',function(e){var b=e.target.closest('[data-pinnacle-video]');if(!b)return;var f=document.createElement('iframe');f.src=b.dataset.pinnacleVideo;f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.style='position:absolute;inset:0;width:100%;height:100%;border:0';b.parentNode.replaceChild(f,b);f.focus();});</script>`;
 const escape=s=>s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 class StaffTitle {
@@ -35,7 +36,7 @@ export function videoButton(src,{eager=false}={}){
 }
 export function repairKnownLegacyPerformance(response,request){
  const u=new URL(request.url);
- if(u.origin!=='https://www.pinnacleblooms.org'||!/^\/(?:ma\/[^/]+|abilities\/[^/]+|b\/[^/]+|staff\/?|mirracles\/\d+\/[^/]+)\/?$/.test(u.pathname))return response;
+ if(u.origin!=='https://www.pinnacleblooms.org'||!/^\/(?:(?:ma|abilities|b|c|m|t|a|abs|skills)\/[^/]+|staff\/?|mirracles\/\d+\/[^/]+)\/?$/.test(u.pathname))return response;
  let hero=false,video=false;
  const dimensions=new Map([['https://images.pinnacleblooms.org/Ability/Sections/1220.jpg',[1024,1024]],['https://www.pinnacleblooms.org/Assets/Materials/20707165309.jpg',[300,300]],['https://www.pinnacleblooms.org/Images/pinnacle-about.webp',[415,250]]]);
  const rewrite=new HTMLRewriter()
@@ -50,10 +51,11 @@ export function repairKnownLegacyPerformance(response,request){
  .on('iframe',{element(e){const button=videoButton(e.getAttribute('src')||'',{eager:!video&&u.pathname.startsWith('/mirracles/')});if(button){e.replace(button,{html:true});video=true;}}})
  .on('body',{element(e){e.onEndTag(tag=>{if(video)tag.before(playScript,{html:true});});}});
  rewrite.on('script:not([src])',new RatingScript());
+ addReadingDirectory(rewrite);
  if(u.pathname.replace(/\/$/,'')==='/staff'){
   let heading=0;
   rewrite.on('head title',new StaffTitle()).on('h1',{element(e){if(++heading>1)e.tagName='h2';}});
  }
- const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])h.delete(k);h.set('x-pinnacle-reading-performance','image-video-intent-20261007');
+ const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])h.delete(k);h.set('x-pinnacle-reading-performance','native-topic-directory-20261008');
  return rewrite.transform(new Response(response.body,{status:response.status,headers:h}));
 }
