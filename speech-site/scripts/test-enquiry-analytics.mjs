@@ -12,8 +12,13 @@ test('owned business projection uses the durable state, exact IDs and no contact
 });
 test('projection validates optional sources rather than promoting arbitrary JSON',async()=>{
  const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc'}};
- const result=await readEnquiryAnalytics(async()=>({rows:[{receiptId:'a',leadReference:'lead_v1:123',state:'accepted',sourceJson:JSON.stringify({acquisition})},{receiptId:'b',leadReference:'lead_v1:124',state:'accepted',sourceJson:JSON.stringify({acquisition:{...acquisition,fields:{name:'private-child'}}})}]}),{startMs:0,endMs:86400000});
+ const result=await readEnquiryAnalytics(async()=>({rows:[{receiptId:'a',leadReference:'lead_v1:123',state:'accepted',createdAtMs:acquisition.capturedAt,sourceJson:JSON.stringify({acquisition})},{receiptId:'b',leadReference:'lead_v1:124',state:'accepted',createdAtMs:acquisition.capturedAt,sourceJson:JSON.stringify({acquisition:{...acquisition,fields:{name:'private-child'}}})}]}),{startMs:0,endMs:86400000});
  assert.equal(result.counts.acceptedWithPermittedCampaign,1);assert.deepEqual(result.rows[0].acquisition,acquisition);assert.equal(result.rows[1].acquisition,null);
+});
+test('valid historical source survives later device expiry while an expired-at-intake source is excluded',async()=>{
+ const at=Date.now()-60*86400000,acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:at,landingPath:'/centers',fields:{utm_source:'google'}};
+ const r=await readEnquiryAnalytics(async()=>({rows:[{state:'accepted',leadReference:'lead_v1:1',createdAtMs:at+86400000,sourceJson:JSON.stringify({acquisition})},{state:'accepted',leadReference:'lead_v1:2',createdAtMs:at+31*86400000,sourceJson:JSON.stringify({acquisition})}]}),{startMs:at,endMs:at+31*86400000});
+ assert.equal(r.counts.acceptedWithPermittedCampaign,1);assert.equal(r.rows[0].acquisition.capturedAt,at);assert.equal(r.rows[1].acquisition,null);
 });
 test('empty, unavailable and truncated reports remain explicit',async()=>{
  const empty=await readEnquiryAnalytics(async()=>({rows:[]}),{startMs:0,endMs:86400000});assert.equal(empty.counts.enquiryAccepted,0);assert.equal(empty.truncated,false);

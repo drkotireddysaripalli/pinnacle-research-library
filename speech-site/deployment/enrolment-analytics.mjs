@@ -12,7 +12,9 @@ export async function readEnquiryAnalytics(execute,{startMs,endMs,limit=1000}={}
  const rows=raw.slice(0,limit).map(r=>{
   states[Object.hasOwn(states,r.state)?r.state:'other']++;
   let source;try{source=typeof r.sourceJson==='string'?JSON.parse(r.sourceJson):r.sourceJson;}catch{}
-  const acquisition=normaliseAcquisition(source?.acquisition);
+  // Validate the stored permission at intake time. Device expiry must not erase
+  // a valid historical source from an already accepted business record.
+  const acquisition=normaliseAcquisition(source?.acquisition,Number(r.createdAtMs));
   return {receiptId:r.receiptId,leadReference:r.leadReference??null,state:r.state,
    createdAtMs:Number(r.createdAtMs),updatedAtMs:Number(r.updatedAtMs),
    event:r.state==='accepted'&&r.leadReference?'enquiry_accepted':null,
