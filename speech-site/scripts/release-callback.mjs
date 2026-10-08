@@ -33,11 +33,12 @@ async function modules(){
 await fs.mkdir(priv,{recursive:true});
 if(phase==='prepare'||phase==='restage'){
  const restage=phase==='restage';
- if(restage)assert.equal(JSON.parse(await fs.readFile(receiptPath,'utf8')).phase,'prepared','Only an unuploaded candidate can be restaged');
+ const priorReceipt=restage?JSON.parse(await fs.readFile(receiptPath,'utf8')):null;
+ if(restage)assert.equal(priorReceipt.phase,'prepared','Only an unuploaded candidate can be restaged');
  else assert(!(await fs.stat(receiptPath).catch(()=>null)),'Receipt exists; reconcile instead of repeating');
  const [before,mods]=restage?[JSON.parse(await fs.readFile(path.join(priv,'before.json'),'utf8')),JSON.parse(await fs.readFile(path.join(priv,'modules.json'),'utf8')).map(m=>({name:m.name,bytes:Buffer.from(m.base64,'base64')}))]:await Promise.all([state(),modules()]);
  const live=mods.find(m=>m.name==='pinnacle-route-v12.mjs');assert(live,'Live shared script module absent');
- assert.equal(sha(normalise(live.bytes)),sha(normalise(g(['show','HEAD:speech-site/deployment/pinnacle-route-v12.mjs']))),'HEAD baseline differs from live');
+ assert.equal(sha(normalise(live.bytes)),sha(normalise(g(['show',(priorReceipt?.baseCommit||'HEAD')+':speech-site/deployment/pinnacle-route-v12.mjs']))),'Recorded baseline differs from live');
  await save(path.join(priv,'before.json'),before);await save(path.join(priv,'modules.json'),mods.map(m=>({name:m.name,base64:m.bytes.toString('base64')})));
  const union=path.join(site,'release-'+id);if(!restage)assert(!(await fs.stat(union).catch(()=>null)),'Reconcile existing asset union');
  assert(!previousId||/^[a-z0-9-]{6,80}$/.test(previousId),'Valid predecessor required');
@@ -62,13 +63,14 @@ if(phase==='prepare'||phase==='restage'){
  for(const mod of mods){let text=mod.bytes.toString(),next=text;const match=text.match(/const records=(\{[^\n]+\});/);if(match){const records=JSON.parse(match[1]);let update=false;for(const key of [...htmlKeys,...clients])if(records[key]){const b=await fs.readFile(path.join(union,key));records[key]={hash:sha(b).slice(0,16),body:b.toString('base64')};update=true;}if(update)next=text.replace(match[0],'const records='+JSON.stringify(records)+';');}
  if(mod.name==='pinnacle-route-v12.mjs'){const match=next.match(/const SPEECH_INVENTORY=(\{[^\n]+\});/);assert(match);const inventory=JSON.parse(match[1]);for(const key of changed)inventory[key]=sha(await fs.readFile(path.join(union,key))).slice(0,16);next=next.replace(match[0],'const SPEECH_INVENTORY='+JSON.stringify(inventory)+';');}
  if(next!==text){changedModules.push(mod.name);await fs.writeFile(path.join(site,'deployment',mod.name),next);}}
+ if(previousId){const name='public-mobile-recovery.mjs',beforeModule=mods.find(m=>m.name===name);assert(beforeModule);if(!beforeModule.bytes.equals(await fs.readFile(path.join(site,'deployment',name))))changedModules.push(name);}
  const manifest={};for(const e of await fs.readdir(union,{recursive:true,withFileTypes:true}))if(e.isFile()){const file=path.join(e.parentPath,e.name),key='/'+path.relative(union,file).replaceAll('\\','/'),bytes=await fs.readFile(file);manifest[key]={hash:assetHash(bytes,key),size:bytes.length};}
  for(const key of Object.keys(priorManifest))assert(manifest[key],'Retained asset missing '+key);
  await save(path.join(priv,'manifest.json'),manifest);await save(path.join(priv,'changed-assets.json'),[...changed]);await save(path.join(priv,'html-paths.json'),htmlPaths.map(({url,key})=>({url,key})));
  await save(path.join(priv,'candidate-modules.json'),changedModules);
  const runtime=(await api(base+worker+'/versions/'+before.workers[worker].versions[0].version_id)).resources.script_runtime.assets;
  assert.deepEqual({html_handling:runtime.html_handling,not_found_handling:runtime.not_found_handling,run_worker_first:runtime.raw_run_worker_first},{html_handling:'none',not_found_handling:'none',run_worker_first:true});
- const receipt={id,phase:'prepared',at:before.at,baseCommit:g(['rev-parse','HEAD']),rollback:before.workers[worker].versions,routeCount:before.routes.length,moduleCount:mods.length,retainedAssets,changedAssets:changed.size,totalAssets:Object.keys(manifest).length,changedModules,htmlCount:htmlPaths.length,originalHashes:Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]))};
+ const receipt={id,phase:'prepared',at:before.at,baseCommit:priorReceipt?.baseCommit||g(['rev-parse','HEAD']),rollback:before.workers[worker].versions,routeCount:before.routes.length,moduleCount:mods.length,retainedAssets,changedAssets:changed.size,totalAssets:Object.keys(manifest).length,changedModules,htmlCount:htmlPaths.length,originalHashes:Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]))};
  await save(receiptPath,receipt);console.log(JSON.stringify({phase:receipt.phase,routes:receipt.routeCount,modules:receipt.moduleCount,rollback:receipt.rollback,retainedAssets,totalAssets:receipt.totalAssets,changedAssets:receipt.changedAssets,changedModules,htmlCount:receipt.htmlCount}));
 }else{
  const before=JSON.parse(await fs.readFile(path.join(priv,'before.json'),'utf8')),receipt=JSON.parse(await fs.readFile(receiptPath,'utf8')),now=await state();
