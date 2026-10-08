@@ -1,0 +1,10 @@
+---
+import {topicQuestionPaths,relatedPublishedTopics,completeTopicGroups,topicGroupId} from '../../lib/ask/topic-navigation';
+import {ASK} from '../../lib/ask/content';
+import Icon from '../Icon.astro';
+const {items=[],canonical,lang='en',total=0,page=1}=Astro.props;
+const groups=topicQuestionPaths(items,lang),related=lang==='en'?relatedPublishedTopics(canonical):[];
+const complete=completeTopicGroups(canonical,total,page,lang);
+const paths=complete.length?complete:groups.map(g=>({label:g.label,href:'#'+topicGroupId(g.key),count:null}));
+---
+{groups.length>0&&<section class="ask-wrap ask-section" data-topic-navigation><p class="ask-eyebrow">CHOOSE THE QUESTION THAT MATTERS NOW</p><h2>{lang==='te'?'మీకు ఇప్పుడు కావాల్సిన ప్రశ్నలతో మొదలుపెట్టండి.':'Explore this topic, one useful question at a time.'}</h2><nav class="ask-path-index" aria-label="Topic question paths">{paths.map(g=><a href={g.href}>{g.label}{g.count!==null&&<span> · {g.count}</span>}<Icon name="arrow" size={16}/></a>)}</nav><div class="ask-question-path-grid">{groups.map(g=><section class="ask-question-path" id={g.id}><h3>{g.label}</h3><ul>{g.items.map(x=><li><a href={x.href}>{x.title}<span aria-hidden="true">↗</span></a></li>)}</ul></section>)}</div>{related.length>0&&<nav class="ask-chips" aria-label="Related published topics"><strong>Related topics to explore</strong>{related.map(t=><a href={t.url}>{t.label}</a>)}</nav>}<nav class="ask-chips" aria-label="Explore the Ask catalogue"><a href={ASK}>Ask home & search</a><a href={ASK+'/topic-index'}>Topics A–Z</a><a href={ASK+'/lens'}>Browse by need</a></nav><p class="ask-small">The question links above are from this page. Topic groups can continue on later pages; the complete answer list and its pagination remain below.</p></section>}

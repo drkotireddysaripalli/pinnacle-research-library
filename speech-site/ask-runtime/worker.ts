@@ -5,7 +5,7 @@ import {answer,rpc} from '../src/lib/ask/repository';
 import {institution} from '../src/lib/ask/overrides';
 import {curatedPriorityAnswer,curatedPrioritySlugs,priorityEditorialSlugs} from '../src/lib/ask/priority-editorial';
 import {ASK} from '../src/lib/ask/content';
-import {medicalSafetySlug,intentEditorialSlugs} from '../src/lib/ask/intent-editorial';
+import {intentEditorialSlugs} from '../src/lib/ask/intent-editorial';
 import {answerNavigation} from '../src/lib/ask/answer-presentation';
 import {AUTH_HEADERS} from '../src/lib/ask/auth.mjs';
 import {data as knowledgeData,languages as knowledgeLanguages,themes as knowledgeThemes,sunshineTypes,pageURL as knowledgePageURL,ORIGIN as knowledgeOrigin} from '../src/lib/knowledge/catalogues';
@@ -46,7 +46,7 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  if(path==='/ask/sitemap-editorial.xml'){const enabled=await rpc(env,'ask_indexing_enabled');return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+(enabled?curatedPrioritySlugs:[]).map(slug=>'<url><loc>'+ASK+'/'+xml(slug)+'</loc><lastmod>2026-10-08</lastmod></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});}
  if(path==='/ask/sitemap.xml'||/^\/ask\/sitemap-\d+\.xml$/.test(path)){
  const n=Number(path.match(/sitemap-(\d+)/)?.[1]||1);const data=await rpc(env,'ask_portal_sitemap',{p_page:n});
- const body=path.endsWith('/sitemap.xml')?'<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Array.from({length:Math.ceil(data.total/10000)},(_,i)=>'<sitemap><loc>'+ASK+'/sitemap-'+(i+1)+'.xml</loc></sitemap>').join('')+'<sitemap><loc>'+ASK+'/sitemap-navigation.xml</loc></sitemap><sitemap><loc>'+ASK+'/sitemap-topics.xml</loc></sitemap><sitemap><loc>'+ASK+'/sitemap-editorial.xml</loc></sitemap></sitemapindex>':'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+data.items.filter((a:any)=>a.slug!==medicalSafetySlug).map((a:any)=>'<url><loc>'+ASK+'/'+xml(a.slug)+'</loc>'+([...priorityEditorialSlugs,...intentEditorialSlugs].includes(a.slug)?'<lastmod>2026-10-08</lastmod>':a.modified?'<lastmod>'+xml(a.modified.split('T')[0])+'</lastmod>':'')+'</url>').join('')+'</urlset>';
+ const body=path.endsWith('/sitemap.xml')?'<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Array.from({length:Math.ceil(data.total/10000)},(_,i)=>'<sitemap><loc>'+ASK+'/sitemap-'+(i+1)+'.xml</loc></sitemap>').join('')+'<sitemap><loc>'+ASK+'/sitemap-navigation.xml</loc></sitemap><sitemap><loc>'+ASK+'/sitemap-topics.xml</loc></sitemap><sitemap><loc>'+ASK+'/sitemap-editorial.xml</loc></sitemap></sitemapindex>':'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+data.items.map((a:any)=>'<url><loc>'+ASK+'/'+xml(a.slug)+'</loc>'+([...priorityEditorialSlugs,...intentEditorialSlugs].includes(a.slug)?'<lastmod>2026-10-08</lastmod>':a.modified?'<lastmod>'+xml(a.modified.split('T')[0])+'</lastmod>':'')+'</url>').join('')+'</urlset>';
  return new Response(body,{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
  }
  if(path==='/ask/sitemap-topics.xml'){const items=await rpc(env,'ask_indexing_enabled')?await rpc(env,'ask_portal_topic_sitemap'):[];return new Response('<?xml version='+String.fromCharCode(34)+'1.0'+String.fromCharCode(34)+' encoding='+String.fromCharCode(34)+'UTF-8'+String.fromCharCode(34)+'?><urlset xmlns='+String.fromCharCode(34)+'http://www.sitemaps.org/schemas/sitemap/0.9'+String.fromCharCode(34)+'>'+items.map((a:any)=>'<url><loc>'+ASK+'/'+xml(a.slug)+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});}
@@ -57,7 +57,7 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+paths.map(p=>'<url><loc>'+ASK+p+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
  }
  const imageMatch=path.match(/^\/ask\/([\w-]+)\.(png|svg)$/);
- if(imageMatch){const a=curatedPriorityAnswer(imageMatch[1]);if(a){
+ if(imageMatch){const a=curatedPriorityAnswer(imageMatch[1])||(intentEditorialSlugs.includes(imageMatch[1])?await answer(env,imageMatch[1],'en'):null);if(a){
   const card={t:a.title.slice(0,160),k:'Ask Pinnacle',s:a.meta_description.slice(0,190),g:[],m:[],l:'EN',u:a.canonical};
   const bytes=new TextEncoder().encode(JSON.stringify(card));let binary='';for(const b of bytes)binary+=String.fromCharCode(b);
   const token=btoa(binary).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');

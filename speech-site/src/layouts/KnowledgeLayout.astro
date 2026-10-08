@@ -5,6 +5,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import AskNavigation from '../components/ask/AskNavigation.astro';
 import AskGate from '../components/ask/AskGate.astro';
 import AskVerification from '../components/ask/AskVerification.astro';
+import KnowledgeDisclaimer from '../components/knowledge/KnowledgeDisclaimer.astro';
 import font from '../../public/pinnacle-pages-fonts/sintony-latin.woff2?url';
 import measurement from '../../public/pinnacle-pages-scripts/speech-measurement.js?url';
 import '../styles/page.css';import '../styles/portal-shell.css';import '../styles/readability.css';import '../styles/shared-shell.css';import '../styles/ask.css';import '../styles/knowledge.css';
@@ -30,7 +31,7 @@ const graph={'@context':'https://schema.org','@graph':[
  {reader&&<><AskGate brand={brand}/><AskVerification/></>}
  <SiteHeader currentPath={path.split('?')[0]}/>
  {reader&&<AskNavigation q={q} lang={lang} brand={brand} home={searchPath} searchPath={searchPath} browse="/sunshine"/>}
- <main id="main" class:list={{'ask-registration-content':reader,'knowledge-main':true}}><slot/></main><SiteFooter/>
+ <main id="main" class:list={{'ask-registration-content':reader,'knowledge-main':true}}><slot/><KnowledgeDisclaimer lang={lang}/></main><SiteFooter/>
  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href="tel:+919100181181" data-cta="mobile-call">Call 9100 181 181</a><a href={ORIGIN+'/enroll-autism-speech-aba-therapies-india'} data-cta="mobile-assessment">Arrange a visit</a></nav>
  <script is:inline define:vars={{measurement}}>import(measurement);</script>
  </body></html>

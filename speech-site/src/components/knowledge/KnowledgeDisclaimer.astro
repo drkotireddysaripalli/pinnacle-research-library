@@ -1,0 +1,6 @@
+---
+import {SITE} from '../../lib/ask/content';
+const {lang='en'}=Astro.props;
+const copy=lang==='hi'?'यह सामान्य जानकारी है। आपके बच्चे की ज़रूरत के अनुसार योग्य पेशेवर से सलाह लें। यह जानकारी व्यक्तिगत मेडिकल सलाह, निदान या आपातकालीन सेवा का विकल्प नहीं है।':lang==='te'?'ఇది సాధారణ సమాచారం. మీ బిడ్డకు సరిపోయే సలహా కోసం అర్హత ఉన్న ప్రొఫెషనల్‌తో మాట్లాడండి. ఇది వ్యక్తిగత మెడికల్ సలహా, నిర్ధారణ లేదా ఎమర్జెన్సీ సేవలకు బదులు కాదు.':'General information supports a conversation with an appropriately qualified professional. It does not replace individual medical advice, diagnosis or emergency care. Support and outcomes depend on the child’s needs and circumstances.';
+---
+<aside class="ask-wrap ask-small" data-knowledge-disclaimer lang={lang} aria-label="Information and policies" style="padding:24px 0"><p>{copy}</p><p><a href={SITE+'/disclaimer-and-limitations-of-liabilities'}>Disclaimer</a> · <a href={SITE+'/privacy-policy'}>Privacy</a> · <a href={SITE+'/terms-of-use'}>Terms of use</a> · <a href={SITE+'/policies'}>All policies</a></p></aside>

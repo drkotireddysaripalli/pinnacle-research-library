@@ -1,17 +1,18 @@
 import {repairContentLinks} from './links';
 import {reviewedAnswer} from './editorial';
+import {repairPublicScope} from './public-scope';
 export async function rpc(env:any,name:string,body:any={}){
  if(!env.SUPABASE_URL||!env.SUPABASE_KEY)throw new Error('Public content connection is unavailable');
  const cacheable=name!=='ask_public_search';
  const hash=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(name+JSON.stringify(body)));
  const key=new Request('https://pinnacleblooms.org/ask/__rpc/astro-20261003-v3-reading-paths/'+Array.from(new Uint8Array(hash),b=>b.toString(16).padStart(2,'0')).join(''));
  const cache=cacheable?(caches as any).default:null;
- if(cache){const saved=await cache.match(key);if(saved)return saved.json();}
+ if(cache){const saved=await cache.match(key);if(saved)return repairPublicScope(await saved.json());}
  const response=await fetch(env.SUPABASE_URL+'/rest/v1/rpc/'+name,{method:'POST',headers:{apikey:env.SUPABASE_KEY,authorization:'Bearer '+env.SUPABASE_KEY,'content-type':'application/json'},body:JSON.stringify(body),signal:AbortSignal.timeout(9000)});
  if(!response.ok)throw new Error('Public content lookup unavailable ('+response.status+')');
  const data=await response.json();
  if(cache)await cache.put(key,new Response(JSON.stringify(data),{headers:{'content-type':'application/json','cache-control':'public,max-age=60'}}));
- return data;
+ return repairPublicScope(data);
 }
 // Older published answers store resources as {count, items}; newer records
 // use arrays. Normalise at the content boundary for HTML and machine exports.

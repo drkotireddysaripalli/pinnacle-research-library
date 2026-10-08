@@ -9,6 +9,7 @@ import adCallUrl from '../lib/google-ads-call-consent.mjs?url';
 import AskNavigation from '../components/ask/AskNavigation.astro';
 import AskGate from '../components/ask/AskGate.astro';
 import AskVerification from '../components/ask/AskVerification.astro';
+import KnowledgeDisclaimer from '../components/knowledge/KnowledgeDisclaimer.astro';
 import {ASK,SITE,contact} from '../lib/ask/content';
 import '../styles/page.css';import '../styles/portal-shell.css';import '../styles/readability.css';import '../styles/shared-shell.css';import '../styles/ask.css';
 const {title,description,canonical=ASK,lang='en',robots='index, follow, max-image-preview:large',image=ASK+'/og/default.png',imageAlt=title,type='WebPage',schema=[],alternates=[],q='',crumbs=[],publication,privatePage=false}=Astro.props;
@@ -25,7 +26,7 @@ const graph={'@context':'https://schema.org','@graph':[
  {!privatePage&&<script type="application/ld+json" set:html={JSON.stringify(graph).replace(/</g,'\u003c')}/>}
  <link rel="preload" href={regularFontUrl} as="font" type="font/woff2" crossorigin/>
 <VernacularTypography/></head><body class="ask-page" data-page-variant="ask" data-shared-shell="v159">
- {!privatePage&&<><AskGate/><AskVerification/></>}<SiteHeader currentPath="/ask"/><AskNavigation q={q} lang={lang}/><main id="main" class="ask-registration-content"><slot/></main><SiteFooter/>
+ {!privatePage&&<><AskGate/><AskVerification/></>}<SiteHeader currentPath="/ask"/><AskNavigation q={q} lang={lang}/><main id="main" class="ask-registration-content"><slot/>{!privatePage&&<KnowledgeDisclaimer lang={lang}/>}</main><SiteFooter/>
  <nav class="mobile-cta" aria-label="Contact Pinnacle"><a href={contact.tel} data-cta="mobile-call">Call {contact.phone}</a><a href={contact.enrol} data-cta="mobile-assessment">Arrange a visit</a></nav>
  <script is:inline define:vars={{measurementUrl,adCallUrl,privatePage}}>if(!privatePage&&!/^\/ask\/(?:te\/)?(?:account|auth|search|api)(?:\/|$)/.test(location.pathname)){import(adCallUrl);import(measurementUrl);}</script>
  <script>
