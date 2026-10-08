@@ -15,14 +15,20 @@ const names=['google_ads_arrival','google_ads_phone_click','google_ads_whatsapp_
 for(const[browserName,type]of[['chromium',chromium],['webkit',webkit]]){
  const browser=await type.launch({headless:true});
  try{for(const state of ['unset','accepted','declined','gpc','qa','organic']){
-  const context=await browser.newContext({viewport:{width:390,height:844}}),requests=[];
+  const context=await browser.newContext({viewport:{width:390,height:844}}),requests=[],rawRequests=[];
   await context.route('**/*',async route=>{
    const u=new URL(route.request().url());
-   if(u.origin===origin&&u.pathname===path)return route.fulfill({contentType:'text/html',body:'<!doctype html><html><head></head><body><details data-speech-measurement><p></p><button data-measurement-choice="accepted">Allow</button><button data-measurement-choice="declined">Off</button><p data-measurement-status></p></details><a id="call" data-cta="header-call" href="tel:+919100181181">Call 9100 181 181</a><a id="whatsapp" data-cta="header-whatsapp" href="https://wa.me/919100181181">WhatsApp</a><script src="/pinnacle-pages-scripts/speech-measurement.js"></script></body></html>'});
+   if(u.origin===origin&&u.pathname===path)return route.fulfill({contentType:'text/html',body:'<!doctype html><html><head></head><body><details open data-speech-measurement><p></p><button data-measurement-choice="accepted">Allow</button><button data-measurement-choice="declined">Off</button><p data-measurement-status></p></details><a id="call" data-cta="header-call" href="tel:+919100181181">Call 9100 181 181</a><a id="whatsapp" data-cta="header-whatsapp" href="https://wa.me/919100181181">WhatsApp</a><script src="/pinnacle-pages-scripts/speech-measurement.js"></script></body></html>'});
    if(u.origin===origin&&u.pathname.endsWith('/speech-measurement.js'))return route.fulfill({contentType:'text/javascript',body:source});
    if(u.href===sdkUrl)return route.fulfill({contentType:'text/javascript',body:sdk});
    if(/(?:google-analytics\.com|analytics\.google\.com)$/.test(u.hostname)&&u.pathname.endsWith('/collect')){
-    const fields=new URLSearchParams(u.search);for(const[k,v]of new URLSearchParams(route.request().postData()||''))fields.set(k,v);requests.push(Object.fromEntries(fields));return route.fulfill({status:204});
+    const post=route.request().postData()||'';rawRequests.push({query:u.search,post});
+    // gtag can batch several events in newline-delimited POST rows. Each row
+    // shares the URL's common fields and must remain a distinct event.
+    for(const line of post.split('\n').filter(Boolean).length?post.split('\n').filter(Boolean):['']){
+     const fields=new URLSearchParams(u.search);for(const[k,v]of new URLSearchParams(line))fields.set(k,v);requests.push(Object.fromEntries(fields));
+    }
+    return route.fulfill({status:204});
    }
    return route.abort();
   });
@@ -48,6 +54,7 @@ for(const[browserName,type]of[['chromium',chromium],['webkit',webkit]]){
   const positive=['unset','accepted'].includes(state);
   if(positive){for(let i=0;i<30&&!names.every(name=>requests.some(r=>r.en===name));i++)await page.waitForTimeout(200);}
   else await page.waitForTimeout(350);
+  if(positive&&!names.every(name=>requests.some(r=>r.en===name)))await fs.writeFile(output.replace(/\.json$/,'.failure.json'),JSON.stringify({browserName,state,rawRequests,dataLayer:await page.evaluate(()=>Array.from(window.dataLayer||[]).filter(x=>x[0]==='event').map(x=>({name:x[1],parameters:x[2]})))},null,2));
   for(const name of names)assert.equal(requests.filter(r=>r.en===name).length,positive?1:0,browserName+' '+state+' '+name);
   const paid=requests.filter(r=>names.includes(r.en)),cookies=await context.cookies();
   if(state==='unset'){

@@ -1,0 +1,13 @@
+{
+  "annotation": {
+    "id": "a95ab1c4-ede4-491e-8d82-04c045d94fb2",
+    "scope": "property",
+    "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+    "event_date": "2026-10-08",
+    "label": "Acquisition callbacks and explicit Google Ads journey events deployed",
+    "description": "Website source 807ada10c541278a818fb8b3e295eda6b7dc2d84, portal 6ef726ae-6a35-4cbd-80c0-3100c61f338e. 65 callback/enrolment pages verified with shared script. Added google_ads_arrival, google_ads_phone_click and google_ads_whatsapp_click as navigation/interaction measures; accepted enquiry remains separate. Preserved 265 routes and protected services. Earlier 69 changed URLs submitted to IndexNow (submission only). This annotation is release context, not proof of ranking, indexing, Google event receipt or business growth.",
+    "category": "website_release",
+    "color": null,
+    "created_at": "2026-10-08T14:52:24.935056+00:00"
+  }
+}

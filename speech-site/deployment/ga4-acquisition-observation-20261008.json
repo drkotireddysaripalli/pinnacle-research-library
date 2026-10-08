@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-10-08T14:54:21.291Z",
+  "source": "GSC Wizard GA4 Data API",
+  "property": "361649365",
+  "host": "www.pinnacleblooms.org",
+  "range": {
+    "startDate": "2026-10-08",
+    "endDate": "2026-10-08",
+    "timeZone": "Asia/Calcutta"
+  },
+  "filters": [
+    "google_ads_arrival",
+    "google_ads_phone_click",
+    "google_ads_whatsapp_click",
+    "enquiry_accepted"
+  ],
+  "rowCount": 0,
+  "rows": [],
+  "interpretation": "No rows observed in the current-day standard report. Reporting freshness and genuine post-release traffic are unconfirmed. This is not evidence of zero business enquiries or failed SDK transport.",
+  "realGoogleReceiptProven": false
+}

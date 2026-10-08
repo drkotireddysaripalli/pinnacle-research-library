@@ -1,0 +1,276 @@
+{
+  "at": "2026-10-08T14:53:11.827Z",
+  "source": "live cache-busted shared script",
+  "sdk": "Google public gtag SDK",
+  "collectionIntercepted": true,
+  "liveAnalyticsEventsSent": 0,
+  "customerSubmissions": 0,
+  "calls": 0,
+  "whatsappMessages": 0,
+  "results": [
+    {
+      "browser": "chromium",
+      "state": "unset",
+      "paidEventCounts": {
+        "google_ads_arrival": 1,
+        "google_ads_phone_click": 1,
+        "google_ads_whatsapp_click": 1
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": "G100",
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "chromium",
+      "state": "accepted",
+      "paidEventCounts": {
+        "google_ads_arrival": 1,
+        "google_ads_phone_click": 1,
+        "google_ads_whatsapp_click": 1
+      },
+      "analyticsCookiesAtTap": 2,
+      "storageConsent": "G101",
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "chromium",
+      "state": "declined",
+      "paidEventCounts": {
+        "google_ads_arrival": 0,
+        "google_ads_phone_click": 0,
+        "google_ads_whatsapp_click": 0
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": null,
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "chromium",
+      "state": "gpc",
+      "paidEventCounts": {
+        "google_ads_arrival": 0,
+        "google_ads_phone_click": 0,
+        "google_ads_whatsapp_click": 0
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": null,
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "chromium",
+      "state": "qa",
+      "paidEventCounts": {
+        "google_ads_arrival": 0,
+        "google_ads_phone_click": 0,
+        "google_ads_whatsapp_click": 0
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": null,
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "chromium",
+      "state": "organic",
+      "paidEventCounts": {
+        "google_ads_arrival": 0,
+        "google_ads_phone_click": 0,
+        "google_ads_whatsapp_click": 0
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": null,
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "webkit",
+      "state": "unset",
+      "paidEventCounts": {
+        "google_ads_arrival": 1,
+        "google_ads_phone_click": 1,
+        "google_ads_whatsapp_click": 1
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": "G100",
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "webkit",
+      "state": "accepted",
+      "paidEventCounts": {
+        "google_ads_arrival": 1,
+        "google_ads_phone_click": 1,
+        "google_ads_whatsapp_click": 1
+      },
+      "analyticsCookiesAtTap": 2,
+      "storageConsent": "G101",
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "webkit",
+      "state": "declined",
+      "paidEventCounts": {
+        "google_ads_arrival": 0,
+        "google_ads_phone_click": 0,
+        "google_ads_whatsapp_click": 0
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": null,
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "webkit",
+      "state": "gpc",
+      "paidEventCounts": {
+        "google_ads_arrival": 0,
+        "google_ads_phone_click": 0,
+        "google_ads_whatsapp_click": 0
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": null,
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "webkit",
+      "state": "qa",
+      "paidEventCounts": {
+        "google_ads_arrival": 0,
+        "google_ads_phone_click": 0,
+        "google_ads_whatsapp_click": 0
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": null,
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    },
+    {
+      "browser": "webkit",
+      "state": "organic",
+      "paidEventCounts": {
+        "google_ads_arrival": 0,
+        "google_ads_phone_click": 0,
+        "google_ads_whatsapp_click": 0
+      },
+      "analyticsCookiesAtTap": 0,
+      "storageConsent": null,
+      "native": {
+        "call": {
+          "href": "tel:+919100181181",
+          "websitePrevented": false
+        },
+        "whatsapp": {
+          "href": "https://wa.me/919100181181",
+          "websitePrevented": false
+        }
+      },
+      "passed": true
+    }
+  ]
+}

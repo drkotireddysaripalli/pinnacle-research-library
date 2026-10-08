@@ -1,0 +1,726 @@
+{
+  "at": "2026-10-08T14:10:03.634Z",
+  "inventoryRows": 73,
+  "source": "Fresh Ads owner inventory8Oct:70www origin/path rows+3mobile origin/path rows, includes campaign-associated sitelinks with association enablement unexposed",
+  "reusedRows": 55,
+  "passedAvailability": 72,
+  "remaining": [
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child",
+      "status": 200,
+      "finalUrl": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": true,
+      "centralCall": true
+    },
+    {
+      "origin": "https://mobile.pinnacleblooms.org",
+      "path": "/services",
+      "status": 500,
+      "finalUrl": "https://www.pinnacleblooms.org/top-autism-therapy-services-india-proven-improvement-rate",
+      "canonical": "https://www.pinnacleblooms.org/top-autism-therapy-services-india-proven-improvement-rate",
+      "queryRetained": false,
+      "availability": false,
+      "knownReaderGate": false,
+      "centralCall": false
+    }
+  ],
+  "rows": [
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/speech-therapy/service-information",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/speech-therapy/service-information",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/best-occupational-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/aba-therapy",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/autism-therapy",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/autism-therapy",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/best-special-education-center-call-9100181181",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra-hyderabad-telangana-india",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/best-aba-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "status": 200,
+      "canonical": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "source": "Reused this release live HTML proof",
+      "availability": true,
+      "gate": "not a sign-in gated page"
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/top-speech-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child",
+      "status": 200,
+      "finalUrl": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": true,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/speech-therapy/teacher-observation-guide",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/speech-therapy/teacher-observation-guide?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/speech-therapy/teacher-observation-guide",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/enroll",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/research-studies",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/research-studies?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/research-studies",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/verify/evidence/research-library.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/research-library.html?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/verify/evidence/research-library.html",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/assesments",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/speech-aba-autism-assessments?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/speech-aba-autism-assessments",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/verify/guides/everyday-practice.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/verify/guides/everyday-practice.html",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/verify/guides/abilityscore.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/verify/guides/abilityscore.html",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/centres",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/centers?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/centers",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/verify/evidence/pinnacle-paradigm-shift.html",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/verify/evidence/pinnacle-paradigm-shift.html",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://www.pinnacleblooms.org",
+      "path": "/occupational-therapy",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://mobile.pinnacleblooms.org",
+      "path": "/special-education",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+      "canonical": "https://www.pinnacleblooms.org/best-special-education-center-call-9100181181",
+      "queryRetained": false,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    },
+    {
+      "origin": "https://mobile.pinnacleblooms.org",
+      "path": "/services",
+      "status": 500,
+      "finalUrl": "https://www.pinnacleblooms.org/top-autism-therapy-services-india-proven-improvement-rate",
+      "canonical": "https://www.pinnacleblooms.org/top-autism-therapy-services-india-proven-improvement-rate",
+      "queryRetained": false,
+      "availability": false,
+      "knownReaderGate": false,
+      "centralCall": false
+    },
+    {
+      "origin": "https://mobile.pinnacleblooms.org",
+      "path": "/autism-therapy",
+      "status": 200,
+      "finalUrl": "https://www.pinnacleblooms.org/autism-therapy?utm_source=google&utm_medium=cpc&validation_test=1",
+      "canonical": "https://www.pinnacleblooms.org/autism-therapy",
+      "queryRetained": true,
+      "availability": true,
+      "knownReaderGate": false,
+      "centralCall": true
+    }
+  ]
+}

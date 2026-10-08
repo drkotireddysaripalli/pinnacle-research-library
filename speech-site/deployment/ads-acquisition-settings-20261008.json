@@ -1,0 +1,72 @@
+{
+  "at": "2026-10-08T14:45:51.532Z",
+  "account": "299-021-1780",
+  "scope": "Existing action categories/optimization and two existing sitelink final URLs only",
+  "conversionActions": [
+    {
+      "id": "7818845893",
+      "event": "enquiry_accepted",
+      "category": "Submit lead form",
+      "optimization": "Secondary",
+      "count": "One",
+      "defaultValue": null,
+      "evidence": "ads-enquiry-secondary-20261008.png"
+    },
+    {
+      "id": "7270463226",
+      "event": "form_submit",
+      "name": "Form Submission — Assessment",
+      "optimization": "Secondary",
+      "count": "Every",
+      "defaultValue": 5000,
+      "currency": "INR",
+      "evidence": "ads-assessment-secondary-20261008.png"
+    }
+  ],
+  "sitelinks": [
+    {
+      "id": "425382704296",
+      "level": "Account",
+      "before": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child",
+      "after": "https://www.pinnacleblooms.org/centers",
+      "name": "Therapy Services",
+      "description1": "Child-specific goals and practice",
+      "description2": "Call about local centre services",
+      "saved": true,
+      "freshEditorReadback": true,
+      "policy": "Pending / Under review observed in associations",
+      "evidence": "ads-therapy-sitelink-directory-20261008.png"
+    },
+    {
+      "id": "425280165686",
+      "level": "1 campaign",
+      "before": "https://pinnacleblooms.org/ask/what-is-pinnacle-blooms-network-and-how-does-it-help-my-child",
+      "after": "https://www.pinnacleblooms.org/centers",
+      "name": "Therapy Services",
+      "description1": "Child-specific goals and practice",
+      "description2": "Call about local centre services",
+      "saved": true,
+      "freshEditorReadback": true,
+      "policy": "Not read back",
+      "evidence": "ads-campaign-therapy-sitelink-directory-20261008.png"
+    }
+  ],
+  "websiteCallReadback": {
+    "id": "7270259012",
+    "name": "Call from Website – Pinnacle",
+    "optimization": "Primary",
+    "count": "One",
+    "phone": "9100181181",
+    "callLengthSeconds": 60,
+    "defaultValue": 5000,
+    "currency": "INR",
+    "clickThroughWindowDays": 30,
+    "changed": false
+  },
+  "campaignImpact": {
+    "enquiryCategoryChange": "Review campaign impact showed removal of the now-empty Contact (Website) goal from 65 account-default campaigns; other goals retained, conversion and value effect None. No new Primary action added."
+  },
+  "newLiveCallsMade": 0,
+  "newCustomerEnquiriesSubmitted": 0,
+  "receiptDeliveryProven": false
+}

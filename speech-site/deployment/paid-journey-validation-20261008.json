@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-08T14:55:42.670Z",
+  "source": "807ada10c541278a818fb8b3e295eda6b7dc2d84",
+  "version": "6ef726ae-6a35-4cbd-80c0-3100c61f338e",
+  "localFocusedTests": 69,
+  "ci": {
+    "id": 37794182480,
+    "conclusion": "success",
+    "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37794182480"
+  },
+  "testingbot": {
+    "artifact": 11558093236,
+    "source": "807ada10c541278a818fb8b3e295eda6b7dc2d84",
+    "counts": {
+      "selectedPages": 5,
+      "pageRuns": 5,
+      "passed": 5,
+      "failed": 0,
+      "unavailable": 0,
+      "pending": 2
+    },
+    "functionalPassed": true,
+    "visualAcceptance": "provisional-baselines-await-review",
+    "requested": [
+      {
+        "id": "chrome",
+        "kind": "desktop",
+        "browserName": "chrome",
+        "platformName": "WIN11",
+        "version": "153",
+        "width": 1440,
+        "height": 900,
+        "deviceName": "googlechrome"
+      }
+    ],
+    "actualBrowserVerified": true
+  },
+  "sdk": {
+    "cases": 12,
+    "passed": true,
+    "source": "Live cache-busted shared script",
+    "GoogleCollectionIntercepted": true,
+    "liveAnalyticsEventsSent": 0,
+    "initialMismatch": "Harness parsed Google batched POST rows as one event; corrected parser. Follow-on fixture failure was a closed disclosure element; fixture now opens it. Neither required production changes."
+  },
+  "publicReadback": "paid-journey-public-readback-20261008.json",
+  "realGoogleReceiptProven": false
+}

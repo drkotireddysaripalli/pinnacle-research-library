@@ -1,0 +1,29 @@
+{
+  "recordedAt": "2026-10-08 15:07:07 UTC",
+  "recipient": {
+    "threadId": "01a0f1b0-5266-7782-bc9d-6fee487850d4",
+    "hostId": "durable",
+    "title": "Complete Google Ads fixes"
+  },
+  "status": "Sent; destination tool acknowledged threadId. Recipient execution is not implied.",
+  "source": "807ada10c541278a818fb8b3e295eda6b7dc2d84",
+  "portalVersion": "6ef726ae-6a35-4cbd-80c0-3100c61f338e",
+  "requestedEvidence": [
+    "Relevant service/city/intent inventory and impression-share/lost-rank/lost-budget evidence",
+    "Real post-cutover GA4 event receipt and correct diagnostic versus conversion reporting",
+    "Exact call-asset mapping, genuine forwarding/connection and custom-goal memberships",
+    "Remaining mobile/services active associations and sitelink policy status",
+    "Actual invalid-click/credit records and documented CHEQ callback/account feedback",
+    "Authoritative protected operator/CRM outcomes with unmatched reasons"
+  ],
+  "websiteOwnerRetains": [
+    "Documented CHEQ verdict integration",
+    "Cloudflare settings/log verification",
+    "Supported destination repair",
+    "OT/Autism performance residuals"
+  ],
+  "completionRecord": "ACQUISITION-AUTOMATIC-EVENT-20261008.md",
+  "trafficQualityContract": "ACQUISITION-TRAFFIC-QUALITY-20261008.md",
+  "separateThreadCreated": false,
+  "newSchedulerStarted": false
+}

@@ -1,0 +1,797 @@
+{
+  "at": "2026-10-08T14:50:29.083Z",
+  "commit": "807ada10c541278a818fb8b3e295eda6b7dc2d84",
+  "version": "6ef726ae-6a35-4cbd-80c0-3100c61f338e",
+  "deployment": "ed491937-c682-4f32-aa98-ec74dc85c1a8",
+  "changedSharedScript": {
+    "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/speech-measurement.js?v=paid-journey-20261008",
+    "sha256": "07f9110ff4399885a43db122eea699da259a10147477d07fa17a028c86565514",
+    "passed": true
+  },
+  "htmlChecked": 65,
+  "rows": [
+    {
+      "url": "https://www.pinnacleblooms.org/autism-therapy",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/best-aba-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/best-occupational-therapy-center-india-proven-improvement-rate",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anna-nagar-chennai-tamilnadu-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-asraonagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-attapur-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-begumpet-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bhimavaram-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-bn-reddy-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-chanda-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-dilsukhnagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-eluru-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gachibowli-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gajuwaka-vizag-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-gurunanak-road-vijayawada-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-habsiguda-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hayathnagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-himayatnagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-hydernagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-indiranagar-bengaluru-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jagadamba-vizag-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jayanagar-bengaluru-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jntu-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-jubilee-hills-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kachiguda-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kakinada-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-karimnagar-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khajaguda-mehdipatnam-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-khammam-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kurnool-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-labbipet-vijayawada-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lakshmipuram-guntur-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-lbnagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhapur-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-madhurawada-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mahbubnagar-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-marathalli-bengaluru-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-miryalaguda-ts-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-mvp-vizag-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nad-vizag-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nallagandla-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nandyala-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nellore-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-nizamabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-ongole-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-paradise-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-pragathi-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-rajahmundry-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-santosh-nagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-srnagar-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-suchitra2-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-tirupati-ap-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-uppal-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vanasthalipuram-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vidyanagar-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-vikrampuri-hyderabad-telangana-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-warangal-ts-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/speech-therapy/service-information",
+      "status": 200,
+      "checks": {
+        "HTTP200": true,
+        "sharedScript": true,
+        "cacheBusted": true,
+        "nativeCall": true,
+        "measurementControls": true
+      },
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "actualCalls": 0,
+  "customerSubmissions": 0
+}
