@@ -100,9 +100,15 @@
   }
   const bagSignature = value => JSON.stringify({total:value.cost?.totalAmount,lines:value.lines.nodes.map(line=>[line.id,line.merchandise?.id,line.merchandise?.sku,line.quantity,line.cost?.totalAmount]).sort((a,b)=>String(a[0]).localeCompare(String(b[0])))});
   function element(tag, text, className) { const el=document.createElement(tag); el.textContent=text; if(className)el.className=className; return el; }
+  if(!root.querySelector('[data-book-order-policy]')){
+    const policy=element('p','','pbn-cart-note');
+    const link=element('a','Book refunds and digital delivery');
+    link.href='/books/refund-and-delivery-policy';link.setAttribute('data-book-order-policy','');
+    policy.append(link);root.querySelector('.pbn-cart-delivery')?.append(policy);
+  }
   if(directBag){
     const policies=element('p','','pbn-cart-note');
-    for(const [i,[label,path]] of [['Terms of use','/terms-of-use'],['Refund policy','/refund-policy']].entries()){
+    for(const [i,[label,path]] of [['Terms of use','/terms-of-use']].entries()){
       if(i)policies.append(document.createTextNode(' · '));
       const link=element('a',label);link.href=path;link.target='_blank';link.rel='noopener';policies.append(link);
     }

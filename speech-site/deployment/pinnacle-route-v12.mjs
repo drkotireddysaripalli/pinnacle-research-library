@@ -1,3 +1,4 @@
+import {serveBookOrderPolicy,repairMerchantDiscovery} from './merchant-policy-handler.mjs';
 import {fetchPublicOrigin} from './public-mobile-recovery.mjs';
 import {publicRouteAlias} from './public-route-aliases.mjs';
 import {repairResidualLegacyTemplates,residualCentreAlias,residualTemplateRequest} from './legacy-template-coverage.mjs';
@@ -413,4 +414,4 @@ export async function transformReviewedHomeOrganization(request,response){
  return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
 }
 
-export default {async fetch(request,env,ctx){const alias=residualCentreAlias(request);if(alias)return alias;const google=await serveCentreGoogle(request,env,ctx);if(google)return google;const calls=servePublicAdCall(request);if(calls)return calls;return applyVernacularTypography(request,repairSharedNavigation(request,await repairResidualLegacyTemplates(request,await portalWorker.fetch(residualTemplateRequest(request),env,ctx))));}};
+export default {async fetch(request,env,ctx){const policy=serveBookOrderPolicy(request);if(policy)return policy;const alias=residualCentreAlias(request);if(alias)return alias;const google=await serveCentreGoogle(request,env,ctx);if(google)return google;const calls=servePublicAdCall(request);if(calls)return calls;return applyVernacularTypography(request,repairSharedNavigation(request,await repairResidualLegacyTemplates(request,repairMerchantDiscovery(request,await portalWorker.fetch(residualTemplateRequest(request),env,ctx)))));}};

@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import lockup from '../../assets/pinnacle-blooms-network-lockup.png';
+import policies from '../../data/book-order-policies.json';
+import '../../styles/policy-pages.css';
+---
+<PageLayout title="Book refunds and digital delivery | Pinnacle Blooms" description="Refund, download, billing-review and digital-delivery information for Pinnacle book orders, with order support and grievance contacts." path="/books/refund-and-delivery-policy" label="Book refunds and digital delivery" shareImage={lockup} shareFit="contain" imageAlt="Pinnacle Blooms Network" imageCaption="Book order policies" includeService={false} documentOnly={true} breadcrumbParent={{name:'Books',path:'/books'}} enquiry={{url:'/contact-information',mobileLabel:'Contact information'}}>
+  <section class="wrap policy-hero">
+    <a class="policy-back" href="/books">← Back to books</a>
+    <p class="eyebrow">Pinnacle Blooms Network · Book orders</p>
+    <h1>Book refunds and digital delivery</h1>
+    <p>Information about your book order, PDF downloads and billing support.</p>
+  </section>
+  <div class="wrap policy-layout">
+    <aside class="policy-navigation" aria-label="Book policy navigation">
+      <details open><summary>On this page</summary><ol><li><a href="#refunds">Refunds and billing review</a></li><li><a href="#delivery">PDF delivery and printed editions</a></li></ol></details>
+      <a class="policy-contact" href="/contact-information">Contact and grievance information</a>
+      <a class="policy-contact" href="/privacy-policy">Privacy policy</a>
+    </aside>
+    <article class="policy-document" aria-label="Book order policies">
+      {policies.sections.map(section=><section id={section.id} data-book-policy-section={section.id} set:html={section.html}/>)}
+    </article>
+  </div>
+  <section class="wrap section policy-related">
+    <h2>Related information</h2>
+    <nav aria-label="Related book and clinic information"><a href="/books">Explore books</a><a href="/shop">Bookshop</a><a href="/terms-of-use">Terms of use</a><a href="/refund-policy">Clinic refund policy</a></nav>
+    <p class="policy-reading">Book-order policy sources: <a href={policies.sections[0].source}>Shopify refund policy</a> · <a href={policies.sections[1].source}>Shopify shipping policy</a>.</p>
+  </section>
+</PageLayout>

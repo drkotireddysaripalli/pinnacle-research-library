@@ -1,0 +1,17 @@
+{
+  "capturedOn": "2026-10-08",
+  "sections": [
+    {
+      "id": "refunds",
+      "source": "https://pinnacleblooms.myshopify.com/policies/refund-policy",
+      "sourceHtmlSha256": "c8bd16179b01a37f1a4f623c496668623345dd8a0b12dc8649546f3dc8e37989",
+      "html": "<h2>Book orders, downloads and billing review</h2><p>Please check the book title, included titles, format and sample before ordering. PDF ebooks are delivered electronically after successful payment. Printed editions are currently out of stock.</p><p>Contact us if you received an incorrect or incomplete download, cannot access a purchased file, were charged twice, have an incorrect or unauthorised charge, or paid without receiving the product described. We will review your order, payment and delivery records and explain the resolution in writing.</p><p>Email <a href=\"mailto:care@pinnacleblooms.org\">care@pinnacleblooms.org</a> with the subject <strong>Book order review</strong>, your order number, payment date and amount, the affected book and the resolution requested. You can also call <a href=\"tel:+919100181181\">9100 181 181</a>. Do not send passwords, OTPs, full card details or unnecessary information about a child.</p><p>Refund requests are assessed against the information and conditions disclosed before purchase and applicable law. Accepted refunds follow the authorised payment route. Bank processing times can vary.</p><p>Nothing in this policy removes applicable consumer rights or remedies. For escalation, reply with your earlier correspondence and request review by the responsible management team. Our <a href=\"https://www.pinnacleblooms.org/contact-information\">Contact and Grievance Information</a> explains the established contact route.</p>"
+    },
+    {
+      "id": "delivery",
+      "source": "https://pinnacleblooms.myshopify.com/policies/shipping-policy",
+      "sourceHtmlSha256": "996410c548566d59431222d473956627e8b2e6fd875641f7b2fe57d584c3e5fb",
+      "html": "<h2>PDF delivery and printed editions</h2><p>PDF ebooks are digital products. No printed copy or physical shipment is included.</p><p>After successful payment, download links are sent to the email address entered at checkout. A single-book purchase includes one PDF; a two-book collection includes two separate PDFs; the complete collection includes four separate PDFs. Each complete book contains 45 file pages.</p><p>Check your order email and spam or junk folder if the download message is missing. For assistance, email <a href=\"mailto:care@pinnacleblooms.org\">care@pinnacleblooms.org</a> with your order number and the email used at checkout, or call <a href=\"tel:+919100181181\">9100 181 181</a>. Contact us before purchasing the same item again.</p><p>Softcover and hardbound editions are currently out of stock. We are not accepting orders for these editions or promising a dispatch date.</p>"
+    }
+  ]
+}
