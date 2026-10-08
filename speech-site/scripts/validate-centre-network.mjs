@@ -14,7 +14,12 @@ for(const c of centreRegister){
  const schema=JSON.parse(nodes.find(n=>n.tagName==='script'&&attr(n,'type')==='application/ld+json').childNodes[0].value),graph=schema['@graph'];
  assert(!graph.some(e=>e.aggregateRating||e.review),c.id+' no self-serving review-star schema');
  if(c.pageStatus==='centre-enquiry'){
-  assert(nodes.some(n=>n.tagName==='a'&&attr(n,'data-cta')==='hero-assessment'&&new URL(attr(n,'href')).searchParams.get('centre')===c.id),c.id+' selected-centre enquiry');
+  const assessment=nodes.find(n=>n.tagName==='a'&&attr(n,'data-cta')==='hero-assessment');assert(assessment,c.id+' opening assessment action');
+  const destination=new URL(attr(assessment,'href'),c.profileUrl);
+  if(destination.href===c.profileUrl+'#callback'){
+   const callback=nodes.find(n=>n.tagName==='form'&&attr(n,'id')==='pinnacle-enrolment');
+   assert(callback,c.id+' inline enquiry form');assert.equal(attr(callback,'method'),'post');assert.equal(attr(callback,'data-api-endpoint'),'/api/enrolment');assert.equal(attr(callback,'data-callback-contract'),'durable-enrolment-v1');assert.equal(attr(callback,'data-default-centre'),c.id,c.id+' selected-centre inline enquiry');
+  }else assert.equal(destination.searchParams.get('centre'),c.id,c.id+' selected-centre enquiry destination');
   const business=graph.find(e=>e['@type']==='LocalBusiness');assert(business,c.id+' local business');assert.equal(business.telephone,'+919100181181');
   assert(html.includes('id="google-reviews"')&&html.includes('id="nearby-centres"')&&html.includes('id="centre-books"'),c.id+' complete network journey');
   for(const block of ['centre-pinnacleai','centre-abilityscore','centre-readiness','centre-paradigm','centre-self-sufficient','centre-mainstream','centre-verify','centre-research','centre-citations'])assert(ids.includes(block),c.id+' visible ecosystem '+block);
