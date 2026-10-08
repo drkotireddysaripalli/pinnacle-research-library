@@ -1,0 +1,378 @@
+{
+  "scope": "Book policy release and cookie-bearing speech assessment schema correction",
+  "policyRelease": {
+    "source": "cdb3952551e98610117e86db5bbac01fff61aad8",
+    "version": "aa53bcb1-b85e-48eb-9368-02e072488f54",
+    "deployment": "addbc4bc-8824-4b84-82a7-70d425026536",
+    "verifiedAt": "2026-10-08T17:08:45.790Z",
+    "ci": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37812828272"
+  },
+  "correctionRelease": {
+    "source": "da47a7efa5311a36b6b5f7a2673e8047e55ca10d",
+    "version": "19dd529c-d388-4aa8-9cf5-c0a961eaba77",
+    "deployment": "310e7959-4dcf-40fb-aed5-d1ae25a2089e",
+    "verifiedAt": "2026-10-08T17:39:29.707Z",
+    "ci": {
+      "id": 37816878777,
+      "name": "Portal quality",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/37816878777"
+    }
+  },
+  "policyUrl": "https://www.pinnacleblooms.org/books/refund-and-delivery-policy",
+  "cause": "Non-commerce private/no-store responses bypassed the repair; a cookie made the public speech response private, leaving the old assessment Offer.",
+  "correction": "Allow only the exact public speech path through the strict assessment-node repair, preserving private/no-store, Set-Cookie and authorization bypass.",
+  "focusedTests": {
+    "passed": 11,
+    "failed": 0
+  },
+  "testingbot": {
+    "source": "da47a7efa5311a36b6b5f7a2673e8047e55ca10d",
+    "suite": "bvt",
+    "sessions": [
+      {
+        "matrix": "chrome",
+        "status": "passed",
+        "sessionId": "0a6e79bac6d8-7076c70a0a66-c9c56d628205-179148087073-15055021",
+        "cases": [
+          {
+            "id": "shop",
+            "status": "passed"
+          },
+          {
+            "id": "pinnacleai",
+            "status": "passed"
+          },
+          {
+            "id": "speech",
+            "status": "passed"
+          },
+          {
+            "id": "enrolment",
+            "status": "passed"
+          },
+          {
+            "id": "centre-suchitra",
+            "status": "passed"
+          }
+        ]
+      }
+    ]
+  },
+  "publicReadback": {
+    "at": "2026-10-08T17:39:34.091Z",
+    "phase": "after",
+    "rows": [
+      {
+        "id": "speech-public",
+        "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+        "status": 200,
+        "cacheControl": "public, max-age=0, must-revalidate",
+        "repair": "20261008",
+        "graphCount": 2,
+        "assessment": {
+          "@type": "Service",
+          "@id": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#assessment",
+          "name": "Speech and language assessment",
+          "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#assessment-start",
+          "provider": {
+            "@id": "https://www.pinnacleblooms.org/verify/#organization"
+          },
+          "brand": {
+            "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry"
+          }
+        },
+        "products": [],
+        "pageWithoutJsonLdHash": "058487d0ff0f9590318f2dfd423afc727d1b4e1063d1547cdf25046de4c71d2e",
+        "call": true,
+        "bookPolicy": false
+      },
+      {
+        "id": "speech-cookie",
+        "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+        "status": 200,
+        "cacheControl": "private, no-store",
+        "repair": "20261008",
+        "graphCount": 2,
+        "assessment": {
+          "@type": "Service",
+          "@id": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#assessment",
+          "name": "Speech and language assessment",
+          "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate#assessment-start",
+          "provider": {
+            "@id": "https://www.pinnacleblooms.org/verify/#organization"
+          },
+          "brand": {
+            "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?entry=speech-assessment#speech-assessment-enquiry"
+          }
+        },
+        "products": [],
+        "pageWithoutJsonLdHash": "faaa0af43caadb194cc0adba13fac7376bcc33c299404e28ac6e477084a462b1",
+        "call": true,
+        "bookPolicy": false
+      },
+      {
+        "id": "book-cookie",
+        "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters",
+        "status": 200,
+        "cacheControl": "private, no-store",
+        "repair": "20261008",
+        "graphCount": 1,
+        "products": [
+          {
+            "@type": [
+              "Book",
+              "Product"
+            ],
+            "@id": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters#product",
+            "name": "My Message Matters \u2014 Speech & Communication 101 \u2014 PDF ebook",
+            "description": "Pinnacle Blooms Network\u2019s 46-page Speech & Communication 101 parent guide to gestures, words, AAC and everyday communication. Preview My Message Matters.",
+            "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters",
+            "sku": "PBN-SP-101-EN-PDF",
+            "brand": {
+              "@id": "https://www.pinnacleblooms.org/verify/#pinnacle-brand"
+            },
+            "image": [
+              "https://www.pinnacleblooms.org/pinnacle-pages-assets/books-20261002/speech-101-front-cover.png",
+              "https://www.pinnacleblooms.org/pinnacle-pages-assets/books-20261002/speech-101-back-cover.png"
+            ],
+            "inLanguage": "en-IN",
+            "numberOfPages": 46,
+            "bookFormat": "https://schema.org/EBook",
+            "author": [
+              {
+                "@type": "Person",
+                "name": "Dr. Koti Reddy Saripalli",
+                "url": "https://www.pinnacleblooms.org/leadership"
+              },
+              {
+                "@type": "Person",
+                "name": "Dr. Sreeja Reddy Saripalli",
+                "url": "https://www.pinnacleblooms.org/leadership"
+              }
+            ],
+            "publisher": {
+              "@type": "Organization",
+              "name": "Pinnacle Blooms Network",
+              "url": "https://www.pinnacleblooms.org/books"
+            },
+            "offers": {
+              "@type": "Offer",
+              "price": 799,
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters"
+            }
+          }
+        ],
+        "pageWithoutJsonLdHash": "25aea26b89aac1d75a44af9b5d9b137ab809a4b53dcdaa916bc46119440aa707",
+        "call": true,
+        "bookPolicy": true
+      },
+      {
+        "id": "book-policy",
+        "url": "https://www.pinnacleblooms.org/books/refund-and-delivery-policy",
+        "status": 200,
+        "cacheControl": "public, max-age=60, must-revalidate",
+        "repair": null,
+        "graphCount": 1,
+        "products": [],
+        "pageWithoutJsonLdHash": "9409c7c4f68fbb6819c135dd247c9fa214dd03f20682540df022367d80461e22",
+        "call": true,
+        "bookPolicy": false
+      },
+      {
+        "id": "clinic-policy",
+        "url": "https://www.pinnacleblooms.org/refund-policy",
+        "status": 200,
+        "cacheControl": "public, max-age=0, must-revalidate",
+        "repair": "20261008",
+        "graphCount": 1,
+        "products": [],
+        "pageWithoutJsonLdHash": "c87cbf659966d9eaf7ff5b4746833dcd79f25288cc899a5df5022b9c28b901e9",
+        "call": true,
+        "bookPolicy": false
+      }
+    ]
+  },
+  "earlierPolicyEvidence": {
+    "responsive": {
+      "at": "2026-10-08T17:09:13.877Z",
+      "live": true,
+      "rows": [
+        {
+          "browser": "154.0.4258.62",
+          "engine": "Edge",
+          "os": "win32",
+          "width": 390,
+          "height": 1000,
+          "policy": 200,
+          "sections": 2,
+          "canonical": true,
+          "indexable": true,
+          "noHorizontalOverflow": true,
+          "bookPolicyLink": true,
+          "bagPolicyLinks": 1,
+          "externalMeasurementAndShopifyBlocked": true
+        },
+        {
+          "browser": "154.0.4258.62",
+          "engine": "Edge",
+          "os": "win32",
+          "width": 768,
+          "height": 1000,
+          "policy": 200,
+          "sections": 2,
+          "canonical": true,
+          "indexable": true,
+          "noHorizontalOverflow": true,
+          "bookPolicyLink": true,
+          "bagPolicyLinks": 1,
+          "externalMeasurementAndShopifyBlocked": true
+        },
+        {
+          "browser": "154.0.4258.62",
+          "engine": "Edge",
+          "os": "win32",
+          "width": 1440,
+          "height": 1000,
+          "policy": 200,
+          "sections": 2,
+          "canonical": true,
+          "indexable": true,
+          "noHorizontalOverflow": true,
+          "bookPolicyLink": true,
+          "bagPolicyLinks": 1,
+          "externalMeasurementAndShopifyBlocked": true
+        }
+      ],
+      "limits": "Desktop Edge with responsive viewports; not physical devices. No checkout, payment, analytics or customer records created."
+    },
+    "directBag": {
+      "url": "https://www.pinnacleblooms.org/shop/cart?cart_sku=PBN-SP-101-EN-PDF&quantity=1",
+      "status": 200,
+      "privateNoStore": true,
+      "noindex": true,
+      "bookPolicyLinks": 1,
+      "blockedExternalRequests": 2,
+      "shopifyOrMeasurementRequestsSent": 0,
+      "browser": "154.0.4258.62",
+      "viewport": {
+        "width": 390,
+        "height": 1000
+      },
+      "limit": "Policy link and bag presentation only. Shopify network intentionally blocked; no cart or customer record created."
+    },
+    "scripts": {
+      "at": "2026-10-08T17:10:29.464Z",
+      "measurementSha256": "07f9110ff4399885a43db122eea699da259a10147477d07fa17a028c86565514",
+      "measurementUnchanged": true,
+      "bookSha256": "57813a1cd60400caa854fd59c71fad14b367da2a0b055ed1317b8d32239a8bbe",
+      "bookPolicyPresent": true
+    },
+    "preservedSources": {
+      "comparison": "d338a31 to cdb3952",
+      "paths": [
+        {
+          "path": "src/data/book-catalog.json",
+          "sha256": "4a8f6db3bf1c90f9170bf789d23f5654e7c2dd21e96003fea568de3ce7369e0c",
+          "unchanged": true
+        },
+        {
+          "path": "src/data/book-locales.json",
+          "sha256": "c874b27f04df2d2b07c600967bd7a06d4dfe37d80cc18eb9156f05809171da6c",
+          "unchanged": true
+        },
+        {
+          "path": "src/data/book-merchant-editions.json",
+          "sha256": "080b088a7d93f8a5d259f2d7d0f3fa471761db0d676dd11ea7a38c3a1faba8a7",
+          "unchanged": true
+        },
+        {
+          "path": "src/data/book-edition-identifiers.json",
+          "sha256": "15517eea11e31ef3867d5d7e142dee1abdb76a8c936d456ec1cec69fae5ab368",
+          "unchanged": true
+        },
+        {
+          "path": "public/pinnacle-pages-data/books-merchant-feed.xml",
+          "sha256": "1a4a5a6cedcaa94a665aaca2936cfd96caeaf847e456a53d8b6c3a51d01f015e",
+          "unchanged": true
+        },
+        {
+          "path": "public/pinnacle-pages-data/books-native-editions-merchant-feed.xml",
+          "sha256": "aee36b27b027ebea8cd4de4148caf1f9474c380df345493d7da774e466b7b6f5",
+          "unchanged": true
+        },
+        {
+          "path": "deployment/book-kindle-links.mjs",
+          "sha256": "4580950d6bf7f229246d70c2c0634a0b51b9757c60d9bb380202a42ba0a9b8aa",
+          "unchanged": true
+        },
+        {
+          "path": "deployment/book-hardcover-links.mjs",
+          "sha256": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+          "unchanged": true
+        },
+        {
+          "path": "deployment/book-paperback-links.mjs",
+          "sha256": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119",
+          "unchanged": true
+        },
+        {
+          "path": "public/pinnacle-pages-scripts/speech-measurement.js",
+          "sha256": "1da9735372430a22dffbc054974a1045c71b71161e5ad0385159850b5503af8a",
+          "unchanged": true
+        }
+      ]
+    }
+  },
+  "preservation": {
+    "routes": 265,
+    "assets": 3706,
+    "uploadedAssets": 0,
+    "modules": 47,
+    "changedModules": [
+      "merchant-policy-handler.mjs"
+    ],
+    "bindings": true,
+    "protectedWorkers": [
+      "pbn-planetscale",
+      "pinnacle-ask",
+      "pinnacle-ask-mcp",
+      "pinnacle-legacy-social-metadata",
+      "pinnacle-centre-search-repair",
+      "pinnacle-helpline",
+      "pinnacle-root-sitemap",
+      "materials-mobile-desktop-tracker"
+    ]
+  },
+  "limits": [
+    "TestingBot hosted desktop BVT; no new physical-device run",
+    "No customer enquiries, calls, WhatsApp messages or purchases created",
+    "No catalogue, variant, stock, payment, feed or Merchant settings changed by this correction",
+    "Merchant review and retirement of historical service items require commerce account evidence; public source repair alone does not prove Google approval"
+  ],
+  "chromeDomReadback": {
+    "url": "https://www.pinnacleblooms.org/top-speech-therapy-center-india-proven-improvement-rate",
+    "method": "same normal Chrome extension tab reloaded after deployment",
+    "assessmentOffersBefore": 1,
+    "assessmentOffersAfter": 0,
+    "assessmentServiceRetained": true,
+    "assessmentEnquiryLinks": 3,
+    "centralCallLinks": 73,
+    "canonicalUnchanged": true,
+    "callsMade": 0,
+    "enquiriesSubmitted": 0
+  }
+}
