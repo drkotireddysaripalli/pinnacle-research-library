@@ -1,0 +1,69 @@
+{
+  "at": "2026-10-08T07:49:43.932Z",
+  "source": "422073d2f513e17113c67515e8996c0630651aad",
+  "rows": [
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-virtual-autism",
+      "browser": "chromium",
+      "status": 200,
+      "width": 390,
+      "scroll": 390,
+      "h1": "What does “virtual autism” mean, and what should parents do?",
+      "img": 1200,
+      "disclaimer": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism",
+      "browser": "chromium",
+      "status": 200,
+      "width": 390,
+      "scroll": 390,
+      "h1": "What does “high-functioning autism” mean?",
+      "img": 1200,
+      "disclaimer": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "status": 200,
+      "width": 390,
+      "scroll": 390,
+      "h1": "What should I ask before using nasal saline for my baby?",
+      "img": 1200,
+      "disclaimer": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-virtual-autism",
+      "browser": "webkit",
+      "status": 200,
+      "width": 390,
+      "scroll": 390,
+      "h1": "What does “virtual autism” mean, and what should parents do?",
+      "img": 1200,
+      "disclaimer": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism",
+      "browser": "webkit",
+      "status": 200,
+      "width": 390,
+      "scroll": 390,
+      "h1": "What does “high-functioning autism” mean?",
+      "img": 1200,
+      "disclaimer": true
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "browser": "webkit",
+      "status": 200,
+      "width": 390,
+      "scroll": 390,
+      "h1": "What should I ask before using nasal saline for my baby?",
+      "img": 1200,
+      "disclaimer": true
+    }
+  ],
+  "passed": 6,
+  "physical": false,
+  "scope": "Live documents/images with synthetic browser-only reader state; no real account, call or enquiry"
+}

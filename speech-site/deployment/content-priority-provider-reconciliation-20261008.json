@@ -1,0 +1,110 @@
+{
+  "at": "2026-10-08T07:27:56.259Z",
+  "meta": {
+    "offset": 0,
+    "count": 10,
+    "total": 172
+  },
+  "tests": [
+    {
+      "id": 53524244,
+      "sessionId": "354ff4782478-14042f086bdd-d2784ab98206-179144418181-63494951",
+      "name": "Nine-item checks (iphone15)",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T07:23:06.000Z",
+      "success": false,
+      "duration": 201,
+      "browser": "safari"
+    },
+    {
+      "id": 53524130,
+      "sessionId": "36c398317d60-def8706ca1bc-bbecc964dbe3-179144370492-77496949",
+      "name": "Nine-item checks (iphone15)",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T07:15:09.000Z",
+      "success": false,
+      "duration": 205,
+      "browser": "safari"
+    },
+    {
+      "id": 53523986,
+      "sessionId": "2ffe8401167c-abe18376a16a-da7f4d14aad4-179144316787-17564444",
+      "name": "Nine-item checks (iphone15)",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T07:06:13.000Z",
+      "success": false,
+      "duration": 255,
+      "browser": "safari"
+    },
+    {
+      "id": 53523919,
+      "sessionId": "a6e9299a9987-9f8a9340fc93-1920a0715b35-179144301309-55658703",
+      "name": "Pinnacle bvt chrome 2026-10-08T06:59:57.634Z",
+      "build": "portal-61bcee223454-bvt",
+      "created": "2026-10-08T07:03:37.000Z",
+      "success": true,
+      "duration": 126,
+      "browser": "googlechrome"
+    },
+    {
+      "id": 53523815,
+      "sessionId": "1b17ba18b24a-767d729ce398-beac8a72bfe6-179144271813-75721543",
+      "name": "Nine-item checks (in_vm)",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T06:58:41.000Z",
+      "success": false,
+      "duration": 283,
+      "browser": "googlechrome"
+    },
+    {
+      "id": 53523805,
+      "sessionId": "1a3c5f6c0d03-4aa8445812a5-1d2b06f5d536-179144269784-96038299",
+      "name": "geo probe w3c",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T06:58:21.000Z",
+      "success": false,
+      "duration": 4,
+      "browser": "googlechrome"
+    },
+    {
+      "id": 53523801,
+      "sessionId": "d2edb12d09dd-9f3fdb58173c-4fea900e5f67-179144268709-28492097",
+      "name": "geo probe legacy",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T06:58:08.000Z",
+      "success": false,
+      "duration": 5,
+      "browser": "googlechrome"
+    },
+    {
+      "id": 53523731,
+      "sessionId": "ed71796359e2-c149a720b348-2bad30be0739-179144237357-25310192",
+      "name": "Nine-item checks (in_vm)",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T06:52:57.000Z",
+      "success": false,
+      "duration": 273,
+      "browser": "googlechrome"
+    },
+    {
+      "id": 53523687,
+      "sessionId": "d0df4c3fcb8f-71e65cd2c026-04319251137c-179144206091-8216250",
+      "name": "Nine-item checks (redmi)",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T06:47:53.000Z",
+      "success": false,
+      "duration": 259,
+      "browser": "chrome"
+    },
+    {
+      "id": 53523605,
+      "sessionId": "82b50b0a9c3e-65e5eae5a308-68781b184af8-179144177998-52203222",
+      "name": "Phone availability sweep (redmi)",
+      "build": "Claude validation 8 Oct",
+      "created": "2026-10-08T06:43:08.000Z",
+      "success": false,
+      "duration": 195,
+      "browser": "chrome"
+    }
+  ]
+}

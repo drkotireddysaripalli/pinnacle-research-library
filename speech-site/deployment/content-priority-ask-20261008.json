@@ -1,0 +1,217 @@
+{
+  "phase": "verified-live",
+  "sourceCommit": "422073d2f513e17113c67515e8996c0630651aad",
+  "at": "2026-10-08T06:35:43.334Z",
+  "routeCount": 260,
+  "rollback": [
+    {
+      "version_id": "89eb9f27-3d8f-4cd0-b66b-04dd804f44b5",
+      "percentage": 100
+    }
+  ],
+  "protected": {
+    "portal": [
+      {
+        "version_id": "1c0cb464-faac-4bed-9a3b-3d7d5edc617e",
+        "percentage": 100
+      }
+    ],
+    "mcp": [
+      {
+        "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+        "percentage": 100
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "candidate": "4b22ec5c-ae61-4850-a42d-07b33a3e87ca",
+  "candidateBindings": [
+    {
+      "name": "ASK_AUTH_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_AUTH_PUBLISHABLE_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "type": "ratelimit"
+    },
+    {
+      "name": "ASK_AUTH_SECRET_KEY",
+      "type": "secret_text"
+    },
+    {
+      "name": "ASK_BASE",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_GOOGLE_CLIENT_ID",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_OAUTH_PROVIDERS",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASK_WHATSAPP_ENABLED",
+      "type": "plain_text"
+    },
+    {
+      "name": "ASSETS",
+      "type": "assets"
+    },
+    {
+      "name": "CANONICAL_ORIGIN",
+      "type": "plain_text"
+    },
+    {
+      "name": "IMAGES",
+      "type": "images"
+    },
+    {
+      "name": "KOSA_CACHE",
+      "type": "kv_namespace"
+    },
+    {
+      "name": "OG_BUCKET",
+      "type": "r2_bucket"
+    },
+    {
+      "name": "SUPABASE_KEY",
+      "type": "plain_text"
+    },
+    {
+      "name": "SUPABASE_SMS_HOOK_SECRET",
+      "type": "secret_text"
+    },
+    {
+      "name": "SUPABASE_URL",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_API_TOKEN",
+      "type": "secret_text"
+    },
+    {
+      "name": "WATI_CHANNEL_NUMBER",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_OTP_PARAMETER_NAMES",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TEMPLATE_NAME",
+      "type": "plain_text"
+    },
+    {
+      "name": "WATI_TENANT_ID",
+      "type": "plain_text"
+    }
+  ],
+  "bundleSHA256": "c85aae17a9febca77e27585aef54cdfba9bb7eb426c47e95ee4be52be02a997c",
+  "preparedFromCommit": "4337ab1ed68048afbc181dcfaf6a706ebe800431",
+  "localPreviewChecks": 59,
+  "focusedTests": {
+    "passed": 38,
+    "failed": 0
+  },
+  "supersededCandidate": "cc4f12de-94d9-4c01-bf89-8c6f755e9a4a",
+  "promotedAt": "2026-10-08T07:47:56.849Z",
+  "afterRouteCount": 260,
+  "protectedUnchanged": true,
+  "verifiedAt": "2026-10-08T07:48:54.640Z",
+  "publicProof": "deployment/content-priority-public-20261008.json",
+  "configurationProof": "deployment/content-priority-configuration-20261008.json",
+  "buildProof": "deployment/content-priority-ci-testingbot-20261008.json",
+  "liveBrowserProof": "deployment/content-priority-live-browser-20261008/results.json",
+  "indexnowAccepted": 565,
+  "googleSitemapsSubmitted": 3
+}

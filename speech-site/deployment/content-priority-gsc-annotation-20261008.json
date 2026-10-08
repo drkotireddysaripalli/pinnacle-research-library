@@ -1,0 +1,13 @@
+{
+  "annotation": {
+    "id": "50adfefb-fefa-40d8-8250-32b5e95c2f1a",
+    "scope": "property",
+    "site_id": "8d88b7b6-d448-42dc-bbeb-eed1b293bae8",
+    "event_date": "2026-10-08",
+    "label": "Ask topic navigation and priority parent guidance published",
+    "description": "Published Ask/knowledge runtime 422073d2f513 with real question-group navigation, cross-page anchors, related topics, common general-information/policy links, 11 reviewed/new English answers, two priority Hindi categories and the guarded hand-flapping legacy correction. Records and existing index rules retained. 565 changed canonical indexable URLs accepted by IndexNow; 3 Ask sitemaps accepted by GSC, download pending. Publication/submission only; no claimed ranking, citation or qualified-enquiry increase.",
+    "category": "release",
+    "color": "#8f2879",
+    "created_at": "2026-10-08T07:52:12.517952+00:00"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "suite": "bvt",
+  "startedAt": "2026-10-08T07:21:11.818Z",
+  "source": "f17639d73ac55de257fd7af5cd5ed9806599b112",
+  "build": true,
+  "runnerSha256": "dd6e028c92a0a31908355844ba0ae5e3bc950d2ced90deab5d23baa59f3355df",
+  "manifestSha256": "3d93316ab2f4daf265daa08270bf45c69edaf96bc5c87751126625df944a796c",
+  "account": {
+    "plan": "Automated Pro - 1 Sessions - Unlimited",
+    "secondsBefore": 6000000000,
+    "desktopSlots": 1,
+    "physicalSlots": 1,
+    "secondsAfter": 6000000000
+  },
+  "selectedIds": [
+    "shop",
+    "pinnacleai",
+    "speech",
+    "enrolment",
+    "centre-suchitra"
+  ],
+  "requestedMatrix": [
+    "chrome"
+  ],
+  "sessions": [
+    {
+      "matrix": "chrome",
+      "kind": "desktop",
+      "requested": {
+        "id": "chrome",
+        "kind": "desktop",
+        "browserName": "chrome",
+        "platformName": "WIN11",
+        "version": "153",
+        "width": 1440,
+        "height": 900,
+        "deviceName": "googlechrome"
+      },
+      "status": "failed",
+      "cases": [],
+      "artifacts": [],
+      "skipped": [],
+      "error": "The operation was aborted due to timeout"
+    }
+  ],
+  "pendingPages": [
+    {
+      "id": "materials",
+      "path": "/materials",
+      "canonical": "https://www.pinnacleblooms.org/materials",
+      "family": "html-library",
+      "priority": "p2",
+      "published": false,
+      "reason": "Migration/source intake pending"
+    },
+    {
+      "id": "interventions",
+      "path": "/interventions",
+      "canonical": "https://www.pinnacleblooms.org/interventions",
+      "family": "html-library",
+      "priority": "p2",
+      "published": false,
+      "reason": "Migration/source intake pending"
+    }
+  ],
+  "declaredLimits": [
+    "Public signed-out UI only; actual OAuth/OTP and upstream accepted leads/purchases are not exercised",
+    "TestingBot executes our assertions; it does not certify narrative quality or business outcomes",
+    "Screenshots require review against approved references; a capture is not visual acceptance",
+    "Browser lab timings are not field Core Web Vitals"
+  ],
+  "presentationStateSha256": "5a30801587a4edee466117c06115ad9df315a4415710f173265e33c17024ae3d",
+  "finishedAt": "2026-10-08T07:25:13.158Z",
+  "providerSessionSeconds": 0,
+  "functionalPassed": false,
+  "counts": {
+    "selectedPages": 5,
+    "pageRuns": 0,
+    "passed": 0,
+    "failed": 0,
+    "unavailable": 0,
+    "pending": 2
+  },
+  "visualAcceptance": "captures-await-review",
+  "overall": "failed-or-incomplete"
+}

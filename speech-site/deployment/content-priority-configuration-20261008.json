@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-08T07:47:58.193Z",
+  "routesPreserved": 260,
+  "bindingsPreserved": 21,
+  "bindingStateSHA256": "367f978332c9a7ff6cd0fbf6a89864cfa9d15439884cf42226569551fa3742c4",
+  "allExistingNonAssetBindingsIdentical": true,
+  "deployments": [
+    {
+      "name": "pinnacle-ask",
+      "versions": [
+        {
+          "version_id": "4b22ec5c-ae61-4850-a42d-07b33a3e87ca",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "name": "pinnacle-verify-route",
+      "versions": [
+        {
+          "version_id": "1c0cb464-faac-4bed-9a3b-3d7d5edc617e",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "name": "pinnacle-ask-mcp",
+      "versions": [
+        {
+          "version_id": "5fc3a111-be9d-401e-9856-674534594d5e",
+          "percentage": 100
+        }
+      ]
+    },
+    {
+      "name": "pinnacle-legacy-social-metadata",
+      "versions": [
+        {
+          "version_id": "971a323b-ba95-4c31-8ffd-3980404e5b95",
+          "percentage": 100
+        }
+      ]
+    }
+  ]
+}

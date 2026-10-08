@@ -1,6 +1,6 @@
 # Pinnacle TestingBot build and daily verification
 
-7 October 2026. Accountable owner: this website task. Purpose: protect a readable, usable parent journey to **9100 181 181**, assessment enquiries and the relevant Pinnacle resources across actual browsers and physical devices.
+8 October 2026. Accountable owner: this website task. Purpose: protect a readable, usable parent journey to **9100 181 181**, assessment enquiries and the relevant Pinnacle resources across actual browsers and physical devices.
 
 ## Definition of success
 
@@ -12,14 +12,14 @@ No production test places a phone call, sends a WhatsApp message or OTP, signs i
 
 `tests/testingbot/page-manifest.mjs` is the canonical register. It reuses the current page contracts, 62 centre release records, policy/institutional data, book catalogue and language editions. `verify-paths.json` records the **84 URLs in the actual public Verify sitemap** captured on 7 October; it does not infer the live collection from an old export.
 
-The initial register defines **264 cases: 262 published URLs and two explicitly pending libraries**. This is a managed-page/template register, not a claim to enumerate every dynamic Ask/FAQ/database record or legacy URL.
+The current register defines **271 cases: 269 published URLs and two explicitly pending libraries**. The 8 October content release adds five priority Ask answers and two native Hindi categories to P2. This is a managed-page/template register, not a claim to enumerate every dynamic Ask/FAQ/database record or legacy URL.
 
 | Suite | Scope | Completion rule |
 | --- | --- | --- |
 | BVT | Seven public cases: Shop, PinnacleAI, Speech, Enrolment, Suchitra, one Ask answer, Verify root | All selected cases pass on each requested browser; no unavailable coverage counted as green |
 | Exact-build BVT | Five Astro candidate cases: Shop, PinnacleAI, Speech, Enrolment, Suchitra | Test the candidate through the official tunnel, with the same source commit and test hashes; public production smoke cannot substitute |
 | P1 | BVT plus 25 important page cases, including therapies, PinnacleAI modules, care outcomes, books index, knowledge templates and helpline | Critical content/navigation/contact and incoming service/centre preference survive |
-| P2 | BVT/P1 plus 37 presentation/support records, including two unpublished libraries | Actual image decode, readable paragraphs, serious/critical accessibility findings, native Anek fonts, anchors and network checks; pending libraries stay pending |
+| P2 | BVT/P1 plus 44 presentation/support records, including two unpublished libraries | Actual image decode, readable paragraphs, serious/critical accessibility findings, native Anek fonts, anchors and network checks; pending libraries stay pending |
 | P3 | 195 further centre, offer, edition and Verify document records | Detect page-specific delivery, canonical, content, shell, asset and navigation regressions without duplicating every record across every browser |
 
 New library paths must be added from their real migration manifest when published. The current Materials/Interventions source dependency is not waived by this test setup.

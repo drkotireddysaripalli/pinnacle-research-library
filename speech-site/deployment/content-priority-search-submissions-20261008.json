@@ -1,0 +1,3565 @@
+{
+  "at": "2026-10-08T07:51:03.467Z",
+  "source": "422073d2f513e17113c67515e8996c0630651aad",
+  "indexnow": [
+    {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "83372ca1-bbe2-4d16-91f5-5146f0ba1d2a",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        },
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/what-is-virtual-autism",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/achievement-growth",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/achievement-orientation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/achievement-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/activity-completion",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/adaptability",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/adaptive",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/adaptive-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/adaptive-skills-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/adhd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/aggression-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/anxiety-child",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attachment",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attachment-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attachment-response",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attachment-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attention",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attention-and-inhibition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attention-to-detail",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attention-to-others",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/attention-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/auditory-memory",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/auditory-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/auditory-processing-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/autism",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/autonomy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/autonomy-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/awareness-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/balance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/balance-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/balance-hopping",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/ball-catching",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/bead-threading",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/behavior-awareness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/behavior-patterns",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/behavioral-observation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/behavioral-patterns",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/behavioral-regulation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/behaviors-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/block-stacking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/body-coordination",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/catching-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cause-and-effect",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cause-and-effect-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cerebral-palsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/change-resistance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/child-behavior",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/child-characteristics",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/child-characteristics-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/childhood-anxiety",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/childhood-apraxia-of-speech",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/childhood-epilepsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/childhood-sleep-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/climbing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/climbing-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/co-ordination-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cognitive",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cognitive-communication-pre-literacy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cognitive-component",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cognitive-flexibility",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cohesion",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cohesion-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/coloring-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/communication-expressive",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/communication-pragmatics",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/communication-receptive",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/communication-receptive-expressive",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/communication-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/communication-social-language",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/communication-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/completion-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/concept-formation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conceptual",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conceptual-thinking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conceptual-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conduct-dissocial",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conduct-dissocial-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conflict",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conflict-resolution",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conflict-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/contextual-language-use",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/control-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conversation-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/conversational-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/cooperative-play",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/coordination",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/c/hand-flapping-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "7f318d4e-5706-48ac-83e8-179fc0b46105",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://pinnacleblooms.org/ask/counting-ability",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/counting-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/craft-participation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/daily-living-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/daily-living-skills-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/decision-making-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/decision-making-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/descriptive-language",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/developmental-coordination-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/developmental-language-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/developmental-regression",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/developmental-trauma",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/distractibility",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/dld",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/down-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/dressing-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/dyscalculia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/dysgraphia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/dyslexia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/dyspraxia-verbal",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/early-math-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/early-words",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/early-words-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/echolalia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-awareness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-behavioural",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-behavioural-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-expression",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-inference",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-regulation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-response",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-responsiveness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/emotional-understanding",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/empathy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/empathy-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/enagagement-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/energy-regulation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/environmental-stressors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/epilepsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/event-description",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/executive-functioning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/expression-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/expressive-language",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/externalizing-behaviors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/eye-contact",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/eye-contact-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/face-recognition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/family-bonding",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/family-communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/family-organization",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/family-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/family-values",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/family-values-traditions",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/fasd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/feeding-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/feeding-eating-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/feeding-independence",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/fetal-alcohol-spectrum-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/fine-motor",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/fine-motor-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/fine-motor-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/fluid-reasoning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/focus-and-attention",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/focus-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/following-directions",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/foot-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/friendship-seeking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/friendship-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/frustration-tolerance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/game-rule-understanding",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/gdd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/general-knowledge",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/general-sensory-regulation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/genetic-chromosomal-syndromes",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/genetic-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/global-developmental-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/grammar-use",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/gross-motor",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/gross-motor-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/gross-motor-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/group-participation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/group-play",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/gymnastic-skill",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/head-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/hearing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/hearing-impairment",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/hopping-balance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/hopping-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/hyper-activity-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/hyperactivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/hypotonia-low-muscle-tone",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/id",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/imagination",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/imagination-duplicate",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/imagination-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/imaginative-play",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "9b0848aa-23df-44aa-a9d4-498654a97689",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://pinnacleblooms.org/ask/imitation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/imitation-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/imitation-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/imitative-behavior",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/impulse-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/impulse-regulation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/impulse-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/impulsivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/inattention",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/independence-autonomy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/inhibition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/inhibition-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/inhibition-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/initiation-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/inquiry-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/instruction-recall",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/intellectual-disability",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/interests-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/internalizing-behaviors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/interruption-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/joint-attention",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/joint-attention-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/jump-rope-coordination",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/jumping",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/jumping-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/jumping-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/language-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/language-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/language-structure",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/language-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/lateral-movement",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/line-tracing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/listening-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/long-term-memory",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/low-muscle-tone",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/mainstream",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/manual-dexterity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/memory-and-learning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/memory-and-recall",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/memory-retention",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/memory-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/mental-effort",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/mobility",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/mobility-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/mood-regulation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/motor",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/motor-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/motor-planning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/motor-planning-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/motor-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/motor-skils-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/multi-step-tasks",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/naming-speed",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/need-for-sameness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/non-verbal",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/non-verbal-communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/non-verbal-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/nonverbal",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/nonverbal-communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/nonverbal-minimally-verbal",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/object-identification",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/object-matching",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/object-permanence",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/object-recognition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/odd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/oppositional-defiant-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/oral-sensory-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/organization",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/organization-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/organization-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/parent-characteristics",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/parent-characteristics-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/parenting-challenges",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/participation-in-tasks",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/patience-and-turn-taking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/pattern-recognition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/pencil-grip",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/people-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/permanence-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/persistent-toe-walking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/personal-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/perspective-taking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/physical-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/physical-fine-motor",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/physical-gross-motor",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/physical-play",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/picky-eating",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/picture-description",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/planning-organization",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/play",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/play-imagination",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/play-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/play-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/practical",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/practical-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/prematurity-developmental-risk",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/pretend-play",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/pretend-play-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/problem-solving",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/problem-solving-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "28f2c807-bb53-4fd7-90d1-88973927e07a",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://pinnacleblooms.org/ask/processing-speed",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/pronunciation-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/proprioceptive-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/quantitative-reasoning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/quantity-comparison",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/question-asking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/question-comprehension",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/reasoning-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/receptive-language",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/receptive-language-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/regulation-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/relating-to-people",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/relationship-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/relationship-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/repetitive-behaviors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/repetitive-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/response-to-name",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/response-to-name-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/responsible-decision-making",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/restlessness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/restricted-behaviors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/restricted-interests",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/restricted-interests-repetitive-behaviors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/rett",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/rett-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/rigid-behaviors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/rigid-routines",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/risk-awareness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/rotational-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/routine-adaptability",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/routine-following",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/routine-management",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/routine-participation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/routine-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/running",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/running-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/running-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/safety-awareness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/school-readiness-gap",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/scissor-use",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/selective-mutism",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-advocacy-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-awareness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-awareness-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-care",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-care-dexterity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-care-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-care-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-control",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-management",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-monitoring",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-regulation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-regulation-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/self-regulation-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-aspects",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-avoidance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-feeding-selectivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-integration",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-regulation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-responses",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-seeking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sensory-tolerance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sentence-and-phrase-complexity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sentence-formation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sentence-repetition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/separation-anxiety",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/separation-anxiety-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sequential-memory",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/shape-drawing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/shape-recognition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/short-term-memory",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/simple-planning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sitting-balance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/situational-factors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/situational-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sld",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sleep-and-restlessness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sleep-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sleep-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-adaptation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-awareness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-communication-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-emotional",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-emotional-understanding",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-engagement",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-function",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-greeting",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-imagination",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-initiation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-initiative",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-interaction",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-interest",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-language",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "aa98dff0-b355-4cfc-a383-bd9d82f60042",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://pinnacleblooms.org/ask/social-motivation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-participation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-play",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-pragmatics",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-reciprocity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-referencing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-relationship-and-reciprocity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-responsiveness",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-sharing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/social-understanding",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/socialization",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/socialization-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sorting-categorization",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sound-production",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/spatial-concepts",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/spatial-reasoning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/spd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/special-interests",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/specific-learning-disability",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/speech-and-language-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/speech-clarity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/speech-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/speech-intelligibility",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/speech-language-and-communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/speech-language-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sprinting-ability",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/squatting-balance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/stair-climbing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/standing-balance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/static-balance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/stereotyped-behaviors",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/stereotyped-movement-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/stereotypic-movement",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/story-recall",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/storytelling-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/strength-agility",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/support",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/support-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/supportive-environment",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/sustained-attention",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/tactile",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/tactile-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/tactile-processing-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/task-completion",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/task-initiation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/task-management",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/task-monitoring",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/task-participation",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/task-persistence",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/task-responsibility",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/task-speed",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/temporal-concepts",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/tiptoe-balance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/tiptoe-walking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/toe-walking-cond",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/toileting-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/tourette",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/tourette-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/transitioning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/turn-taking-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/understanding",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/understanding-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/verbal-communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/verbal-comprehension",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/verbal-knowledge",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/verbal-reasoning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/verbal-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/verbal-understanding",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/vestibular-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual-impairment",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual-motor-integration",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual-reception",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual-recognition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual-scanning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual-spatial-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visual-spatial-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/visuospatial-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/vocabulary",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/vocabulary-comprehension-and-expression",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/vocabulary-knowledge",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/vocabulary-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/vocalization-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/vocalization-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/walk-toddler",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/walking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/walking-balance",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/word-knowledge",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/working-memory",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/adhd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/anxiety-child",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/attachment",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/attachment-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/auditory-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/auditory-processing-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/autism",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/cerebral-palsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "96cf3709-7d5c-4eec-9de9-8e2fb1597178",
+      "submitted": 65,
+      "failed": 0,
+      "attempted": 65,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://pinnacleblooms.org/ask/te/childhood-anxiety",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/childhood-apraxia-of-speech",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/childhood-epilepsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/childhood-sleep-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/conduct-dissocial",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/conduct-dissocial-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/developmental-coordination-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/developmental-language-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/developmental-regression",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/developmental-trauma",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/dld",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/down-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/dyscalculia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/dysgraphia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/dyslexia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/dyspraxia-verbal",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/emotional-behavioural",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/emotional-behavioural-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/epilepsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/fasd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/feeding-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/feeding-eating-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/fetal-alcohol-spectrum-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/fine-motor-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/genetic-chromosomal-syndromes",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/genetic-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/global-developmental-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/gross-motor-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/hearing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/hearing-impairment",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/hypotonia-low-muscle-tone",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/id",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/intellectual-disability",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/low-muscle-tone",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/motor-planning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/motor-planning-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/nonverbal",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/nonverbal-minimally-verbal",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/odd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/oppositional-defiant-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/persistent-toe-walking",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/prematurity-developmental-risk",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/regulation-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/rett",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/rett-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/school-readiness-gap",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/selective-mutism",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/self-regulation-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/sensory-feeding-selectivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/sensory-processing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/separation-anxiety",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/separation-anxiety-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/sld",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/sleep-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/social-communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/social-communication-difficulties",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/spd",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/specific-learning-disability",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/speech-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/speech-language-delay",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/stereotyped-movement-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/stereotypic-movement",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/tourette",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/tourette-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://pinnacleblooms.org/ask/te/visual-impairment",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "65 of 65 URL(s) sent were accepted by IndexNow."
+    }
+  ],
+  "sitemaps": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "attempted": 3,
+    "submitted": 3,
+    "failed": 0,
+    "results": [
+      {
+        "sitemapUrl": "https://pinnacleblooms.org/ask/sitemap.xml",
+        "accepted": true,
+        "confirmed": true,
+        "lastSubmitted": "2026-10-08T07:51:01.631Z",
+        "isPending": true,
+        "isSitemapsIndex": true,
+        "warnings": "0",
+        "errors": "0"
+      },
+      {
+        "sitemapUrl": "https://pinnacleblooms.org/ask/sitemap-topics.xml",
+        "accepted": true,
+        "confirmed": true,
+        "lastSubmitted": "2026-10-08T07:51:01.829Z",
+        "isPending": true,
+        "isSitemapsIndex": false,
+        "type": "sitemap",
+        "warnings": "0",
+        "errors": "0"
+      },
+      {
+        "sitemapUrl": "https://pinnacleblooms.org/ask/sitemap-editorial.xml",
+        "accepted": true,
+        "confirmed": true,
+        "lastSubmitted": "2026-10-08T07:51:01.932Z",
+        "isPending": true,
+        "isSitemapsIndex": false,
+        "warnings": "0",
+        "errors": "0"
+      }
+    ],
+    "message": "Submitted 3 of 3 sitemap(s) to Search Console for sc-domain:pinnacleblooms.org. Submitting queues a download; it does not index the URLs.",
+    "actions": [
+      "Re-check list_sitemaps in a few hours: warnings, errors and indexed counts appear only after Google has downloaded the sitemap."
+    ]
+  }
+}

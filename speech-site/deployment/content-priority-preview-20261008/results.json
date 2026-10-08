@@ -1,0 +1,1013 @@
+{
+  "at": "2026-10-08T07:16:34.998Z",
+  "base": "http://127.0.0.1:4358",
+  "rows": [
+    {
+      "path": "/faq/hindi/speech-therapy",
+      "browser": "chromium",
+      "h1": [
+        "स्पीच थेरेपी: आपके बच्चे की बात, आपके सवाल।"
+      ],
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "hi",
+      "width": 320,
+      "scroll": 320,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "bodyWeight": "600",
+      "screenshot": "-faq-hindi-speech-therapy-chromium-320.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "browser": "chromium",
+      "h1": [
+        "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।"
+      ],
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "hi",
+      "width": 320,
+      "scroll": 320,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "bodyWeight": "600",
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-320.png"
+    },
+    {
+      "path": "/ask/what-is-an-iep-individualised-education-plan",
+      "browser": "chromium",
+      "h1": [
+        "What is an IEP (Individualised Education Plan)?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-an-iep-individualised-education-plan-chromium-320.png"
+    },
+    {
+      "path": "/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home",
+      "browser": "chromium",
+      "h1": [
+        "How can I support my child’s pincer grasp at home?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-how-can-i-work-on-pincer-grasp-with-my-child-at-home-chromium-320.png"
+    },
+    {
+      "path": "/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india",
+      "browser": "chromium",
+      "h1": [
+        "How do I get a disability certificate for my child in India?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-how-do-i-get-a-disability-certificate-for-my-child-in-india-chromium-320.png"
+    },
+    {
+      "path": "/ask/is-stimming-always-a-bad-sign-that-must-be-stopped",
+      "browser": "chromium",
+      "h1": [
+        "Does hand-flapping or stimming need to be stopped?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-is-stimming-always-a-bad-sign-that-must-be-stopped-chromium-320.png"
+    },
+    {
+      "path": "/ask/what-is-a-shadow-teacher-and-does-my-child-need-one",
+      "browser": "chromium",
+      "h1": [
+        "What is a shadow teacher, and does my child need one?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-a-shadow-teacher-and-does-my-child-need-one-chromium-320.png"
+    },
+    {
+      "path": "/ask/what-is-virtual-autism",
+      "browser": "chromium",
+      "h1": [
+        "What does “virtual autism” mean, and what should parents do?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-virtual-autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-virtual-autism-chromium-320.png"
+    },
+    {
+      "path": "/ask/what-is-high-functioning-autism",
+      "browser": "chromium",
+      "h1": [
+        "What does “high-functioning autism” mean?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-high-functioning-autism-chromium-320.png"
+    },
+    {
+      "path": "/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "Are children’s binoculars useful for our child’s play?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-kids-binoculars-compact-and-is-it-right-for-my-child-chromium-320.png"
+    },
+    {
+      "path": "/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "Is a Pop-It fidget toy right for my child?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child-chromium-320.png"
+    },
+    {
+      "path": "/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps",
+      "browser": "chromium",
+      "h1": [
+        "How should we discuss a communication AbilityScore of 800–900?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps-chromium-320.png"
+    },
+    {
+      "path": "/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "What should I ask before using nasal saline for my baby?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child-chromium-320.png"
+    },
+    {
+      "path": "/ask/pincer-grasp",
+      "browser": "chromium",
+      "h1": [
+        "Pincer grasp: meaning, development and safe practice"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/pincer-grasp",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-pincer-grasp-chromium-320.png"
+    },
+    {
+      "path": "/ask/autism",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-chromium-320.png"
+    },
+    {
+      "path": "/ask/autism?page=3",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism?page=3",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-page-3-chromium-320.png"
+    },
+    {
+      "path": "/ask/autism?page=5",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism?page=5",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-page-5-chromium-320.png"
+    },
+    {
+      "path": "/ask/speech-delay",
+      "browser": "chromium",
+      "h1": [
+        "Speech Delay"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/speech-delay",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 320,
+      "scroll": 320,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-speech-delay-chromium-320.png"
+    },
+    {
+      "path": "/ask/te/speech-delay",
+      "browser": "chromium",
+      "h1": [
+        "Speech Delay"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/te/speech-delay",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "te",
+      "width": 320,
+      "scroll": 320,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-te-speech-delay-chromium-320.png"
+    },
+    {
+      "path": "/faq/hindi/speech-therapy",
+      "browser": "chromium",
+      "h1": [
+        "स्पीच थेरेपी: आपके बच्चे की बात, आपके सवाल।"
+      ],
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "hi",
+      "width": 768,
+      "scroll": 768,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "bodyWeight": "600",
+      "screenshot": "-faq-hindi-speech-therapy-chromium-768.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "browser": "chromium",
+      "h1": [
+        "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।"
+      ],
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "hi",
+      "width": 768,
+      "scroll": 768,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "bodyWeight": "600",
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-768.png"
+    },
+    {
+      "path": "/ask/what-is-an-iep-individualised-education-plan",
+      "browser": "chromium",
+      "h1": [
+        "What is an IEP (Individualised Education Plan)?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-an-iep-individualised-education-plan-chromium-768.png"
+    },
+    {
+      "path": "/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home",
+      "browser": "chromium",
+      "h1": [
+        "How can I support my child’s pincer grasp at home?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-how-can-i-work-on-pincer-grasp-with-my-child-at-home-chromium-768.png"
+    },
+    {
+      "path": "/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india",
+      "browser": "chromium",
+      "h1": [
+        "How do I get a disability certificate for my child in India?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-how-do-i-get-a-disability-certificate-for-my-child-in-india-chromium-768.png"
+    },
+    {
+      "path": "/ask/is-stimming-always-a-bad-sign-that-must-be-stopped",
+      "browser": "chromium",
+      "h1": [
+        "Does hand-flapping or stimming need to be stopped?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-is-stimming-always-a-bad-sign-that-must-be-stopped-chromium-768.png"
+    },
+    {
+      "path": "/ask/what-is-a-shadow-teacher-and-does-my-child-need-one",
+      "browser": "chromium",
+      "h1": [
+        "What is a shadow teacher, and does my child need one?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-a-shadow-teacher-and-does-my-child-need-one-chromium-768.png"
+    },
+    {
+      "path": "/ask/what-is-virtual-autism",
+      "browser": "chromium",
+      "h1": [
+        "What does “virtual autism” mean, and what should parents do?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-virtual-autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-virtual-autism-chromium-768.png"
+    },
+    {
+      "path": "/ask/what-is-high-functioning-autism",
+      "browser": "chromium",
+      "h1": [
+        "What does “high-functioning autism” mean?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-high-functioning-autism-chromium-768.png"
+    },
+    {
+      "path": "/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "Are children’s binoculars useful for our child’s play?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-kids-binoculars-compact-and-is-it-right-for-my-child-chromium-768.png"
+    },
+    {
+      "path": "/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "Is a Pop-It fidget toy right for my child?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child-chromium-768.png"
+    },
+    {
+      "path": "/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps",
+      "browser": "chromium",
+      "h1": [
+        "How should we discuss a communication AbilityScore of 800–900?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps-chromium-768.png"
+    },
+    {
+      "path": "/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "What should I ask before using nasal saline for my baby?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child-chromium-768.png"
+    },
+    {
+      "path": "/ask/pincer-grasp",
+      "browser": "chromium",
+      "h1": [
+        "Pincer grasp: meaning, development and safe practice"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/pincer-grasp",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-pincer-grasp-chromium-768.png"
+    },
+    {
+      "path": "/ask/autism",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-chromium-768.png"
+    },
+    {
+      "path": "/ask/autism?page=3",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism?page=3",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-page-3-chromium-768.png"
+    },
+    {
+      "path": "/ask/autism?page=5",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism?page=5",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-page-5-chromium-768.png"
+    },
+    {
+      "path": "/ask/speech-delay",
+      "browser": "chromium",
+      "h1": [
+        "Speech Delay"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/speech-delay",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 768,
+      "scroll": 768,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-speech-delay-chromium-768.png"
+    },
+    {
+      "path": "/ask/te/speech-delay",
+      "browser": "chromium",
+      "h1": [
+        "Speech Delay"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/te/speech-delay",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "te",
+      "width": 768,
+      "scroll": 768,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-te-speech-delay-chromium-768.png"
+    },
+    {
+      "path": "/faq/hindi/speech-therapy",
+      "browser": "chromium",
+      "h1": [
+        "स्पीच थेरेपी: आपके बच्चे की बात, आपके सवाल।"
+      ],
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "hi",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "bodyWeight": "600",
+      "screenshot": "-faq-hindi-speech-therapy-chromium-1440.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "browser": "chromium",
+      "h1": [
+        "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।"
+      ],
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "hi",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "bodyWeight": "600",
+      "screenshot": "-faq-hindi-occupational-therapy-chromium-1440.png"
+    },
+    {
+      "path": "/ask/what-is-an-iep-individualised-education-plan",
+      "browser": "chromium",
+      "h1": [
+        "What is an IEP (Individualised Education Plan)?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-an-iep-individualised-education-plan-chromium-1440.png"
+    },
+    {
+      "path": "/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home",
+      "browser": "chromium",
+      "h1": [
+        "How can I support my child’s pincer grasp at home?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-how-can-i-work-on-pincer-grasp-with-my-child-at-home-chromium-1440.png"
+    },
+    {
+      "path": "/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india",
+      "browser": "chromium",
+      "h1": [
+        "How do I get a disability certificate for my child in India?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-how-do-i-get-a-disability-certificate-for-my-child-in-india-chromium-1440.png"
+    },
+    {
+      "path": "/ask/is-stimming-always-a-bad-sign-that-must-be-stopped",
+      "browser": "chromium",
+      "h1": [
+        "Does hand-flapping or stimming need to be stopped?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-is-stimming-always-a-bad-sign-that-must-be-stopped-chromium-1440.png"
+    },
+    {
+      "path": "/ask/what-is-a-shadow-teacher-and-does-my-child-need-one",
+      "browser": "chromium",
+      "h1": [
+        "What is a shadow teacher, and does my child need one?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-a-shadow-teacher-and-does-my-child-need-one-chromium-1440.png"
+    },
+    {
+      "path": "/ask/what-is-virtual-autism",
+      "browser": "chromium",
+      "h1": [
+        "What does “virtual autism” mean, and what should parents do?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-virtual-autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-virtual-autism-chromium-1440.png"
+    },
+    {
+      "path": "/ask/what-is-high-functioning-autism",
+      "browser": "chromium",
+      "h1": [
+        "What does “high-functioning autism” mean?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-high-functioning-autism-chromium-1440.png"
+    },
+    {
+      "path": "/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "Are children’s binoculars useful for our child’s play?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-kids-binoculars-compact-and-is-it-right-for-my-child-chromium-1440.png"
+    },
+    {
+      "path": "/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "Is a Pop-It fidget toy right for my child?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child-chromium-1440.png"
+    },
+    {
+      "path": "/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps",
+      "browser": "chromium",
+      "h1": [
+        "How should we discuss a communication AbilityScore of 800–900?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps-chromium-1440.png"
+    },
+    {
+      "path": "/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "browser": "chromium",
+      "h1": [
+        "What should I ask before using nasal saline for my baby?"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child-chromium-1440.png"
+    },
+    {
+      "path": "/ask/pincer-grasp",
+      "browser": "chromium",
+      "h1": [
+        "Pincer grasp: meaning, development and safe practice"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/pincer-grasp",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-pincer-grasp-chromium-1440.png"
+    },
+    {
+      "path": "/ask/autism",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-chromium-1440.png"
+    },
+    {
+      "path": "/ask/autism?page=3",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism?page=3",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-page-3-chromium-1440.png"
+    },
+    {
+      "path": "/ask/autism?page=5",
+      "browser": "chromium",
+      "h1": [
+        "Autism"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/autism?page=5",
+      "robots": "noindex, follow",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-autism-page-5-chromium-1440.png"
+    },
+    {
+      "path": "/ask/speech-delay",
+      "browser": "chromium",
+      "h1": [
+        "Speech Delay"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/speech-delay",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "en-IN",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "Sintony, Arial, sans-serif",
+      "weight": "700",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-speech-delay-chromium-1440.png"
+    },
+    {
+      "path": "/ask/te/speech-delay",
+      "browser": "chromium",
+      "h1": [
+        "Speech Delay"
+      ],
+      "canonical": "https://pinnacleblooms.org/ask/te/speech-delay",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "te",
+      "width": 1440,
+      "scroll": 1440,
+      "font": "\"Pinnacle Anek\", Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": null,
+      "bodyWeight": null,
+      "screenshot": "-ask-te-speech-delay-chromium-1440.png"
+    },
+    {
+      "path": "/faq/hindi/speech-therapy",
+      "browser": "webkit",
+      "h1": [
+        "स्पीच थेरेपी: आपके बच्चे की बात, आपके सवाल।"
+      ],
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "hi",
+      "width": 390,
+      "scroll": 390,
+      "font": "Pinnacle Anek, Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": "Pinnacle Anek, Sintony, Arial, sans-serif",
+      "bodyWeight": "600",
+      "screenshot": "-faq-hindi-speech-therapy-webkit-390.png"
+    },
+    {
+      "path": "/faq/hindi/occupational-therapy",
+      "browser": "webkit",
+      "h1": [
+        "ऑक्यूपेशनल थेरेपी: रोज़ के काम, बढ़ती आज़ादी।"
+      ],
+      "canonical": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+      "robots": "index, follow, max-image-preview:large",
+      "lang": "hi",
+      "width": 390,
+      "scroll": 390,
+      "font": "Pinnacle Anek, Sintony, Arial, sans-serif",
+      "weight": "800",
+      "bodyFont": "Pinnacle Anek, Sintony, Arial, sans-serif",
+      "bodyWeight": "600",
+      "screenshot": "-faq-hindi-occupational-therapy-webkit-390.png"
+    }
+  ],
+  "checks": 59,
+  "anonymousGate": true,
+  "physicalDevices": false,
+  "session": "Synthetic local reader; no real account, enquiry or call"
+}

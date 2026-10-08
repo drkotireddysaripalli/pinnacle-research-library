@@ -1,0 +1,451 @@
+{
+  "at": "2026-10-08T07:48:54.640Z",
+  "source": "422073d2f513e17113c67515e8996c0630651aad",
+  "rows": [
+    {
+      "url": "https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 180783,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 10044,
+      "canonical": "<https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 6317,
+      "canonical": "<https://pinnacleblooms.org/ask/how-can-i-work-on-pincer-grasp-with-my-child-at-home>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 183778,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 188852,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 14498,
+      "canonical": "<https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 11337,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 10154,
+      "canonical": "<https://pinnacleblooms.org/ask/how-do-i-get-a-disability-certificate-for-my-child-in-india>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 7832,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-an-iep-individualised-education-plan>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-virtual-autism",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 172628,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-virtual-autism.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 7144,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-virtual-autism>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-virtual-autism.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 5188,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-virtual-autism>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 181391,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 180024,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 10438,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 9249,
+      "canonical": "<https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 7008,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-a-shadow-teacher-and-does-my-child-need-one>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 5796,
+      "canonical": "<https://pinnacleblooms.org/ask/is-stimming-always-a-bad-sign-that-must-be-stopped>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 173024,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 7047,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-high-functioning-autism>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 5163,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-high-functioning-autism>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 174470,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 174879,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 6359,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 6688,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 3428,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 3644,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 192914,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child",
+      "status": 200,
+      "kind": "answer-html",
+      "bytes": 150419,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 12622,
+      "canonical": "<https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child.json",
+      "status": 200,
+      "kind": "answer-json",
+      "bytes": 6477,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child>; rel=\"canonical\"",
+      "type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 8756,
+      "canonical": "<https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child.md",
+      "status": 200,
+      "kind": "answer-markdown",
+      "bytes": 3412,
+      "canonical": "<https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child>; rel=\"canonical\"",
+      "type": "text/markdown; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/pincer-grasp",
+      "status": 200,
+      "kind": "topic-collection",
+      "bytes": 148356,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/autism",
+      "status": 200,
+      "kind": "topic-collection",
+      "bytes": 167626,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/autism?page=3",
+      "status": 200,
+      "kind": "topic-collection",
+      "bytes": 165230,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/autism?page=5",
+      "status": 200,
+      "kind": "topic-collection",
+      "bytes": 165396,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/speech-delay",
+      "status": 200,
+      "kind": "topic-collection",
+      "bytes": 165822,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/te/speech-delay",
+      "status": 200,
+      "kind": "topic-collection",
+      "bytes": 180589,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq/hindi/speech-therapy",
+      "status": 200,
+      "kind": "hindi-category",
+      "bytes": 181127,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/faq/hindi/occupational-therapy",
+      "status": 200,
+      "kind": "hindi-category",
+      "bytes": 180630,
+      "canonical": null,
+      "type": "text/html"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/c/hand-flapping-therapy",
+      "status": 200,
+      "kind": "legacy-priority",
+      "bytes": 685042,
+      "canonical": null,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/sitemap-editorial.xml",
+      "status": 200,
+      "kind": "editorial-sitemap",
+      "bytes": 324,
+      "canonical": null,
+      "type": "application/xml; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/sitemap.xml",
+      "status": 200,
+      "kind": "sitemap-index",
+      "bytes": 733,
+      "canonical": null,
+      "type": "application/xml; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/sitemap-topics.xml",
+      "status": 200,
+      "kind": "topic-sitemap",
+      "bytes": 33742,
+      "canonical": null,
+      "type": "application/xml; charset=utf-8"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-virtual-autism.png",
+      "status": 200,
+      "kind": "answer-card",
+      "bytes": 87194,
+      "canonical": null,
+      "type": "image/png"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-high-functioning-autism.png",
+      "status": 200,
+      "kind": "answer-card",
+      "bytes": 87944,
+      "canonical": null,
+      "type": "image/png"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-kids-binoculars-compact-and-is-it-right-for-my-child.png",
+      "status": 200,
+      "kind": "answer-card",
+      "bytes": 89107,
+      "canonical": null,
+      "type": "image/png"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child.png",
+      "status": 200,
+      "kind": "answer-card",
+      "bytes": 85486,
+      "canonical": null,
+      "type": "image/png"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child.png",
+      "status": 200,
+      "kind": "answer-card",
+      "bytes": 89736,
+      "canonical": null,
+      "type": "image/png"
+    },
+    {
+      "url": "https://pinnacleblooms.org/ask/my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps.png",
+      "status": 200,
+      "kind": "answer-card",
+      "bytes": 92452,
+      "canonical": null,
+      "type": "image/png"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities",
+      "status": 200,
+      "kind": "policy-link",
+      "bytes": 127992,
+      "canonical": "<https://www.pinnacleblooms.org/disclaimer-and-limitations-of-liabilities>; rel=\"canonical\"",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/privacy-policy",
+      "status": 200,
+      "kind": "policy-link",
+      "bytes": 133088,
+      "canonical": "<https://www.pinnacleblooms.org/privacy-policy>; rel=\"canonical\"",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/terms-of-use",
+      "status": 200,
+      "kind": "policy-link",
+      "bytes": 127084,
+      "canonical": "<https://www.pinnacleblooms.org/terms-of-use>; rel=\"canonical\"",
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/policies",
+      "status": 200,
+      "kind": "policy-link",
+      "bytes": 132095,
+      "canonical": "<https://www.pinnacleblooms.org/policies>; rel=\"canonical\"",
+      "type": "text/html; charset=utf-8"
+    }
+  ],
+  "passed": 55,
+  "limitations": [
+    "No customer sign-in, call, OTP, enquiry or purchase",
+    "HTTP checks are not a ranking or indexing result"
+  ]
+}
