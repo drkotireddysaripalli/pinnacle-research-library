@@ -51,6 +51,7 @@ export function repairKnownLegacyPerformance(response,request){
  .on('iframe',{element(e){const button=videoButton(e.getAttribute('src')||'',{eager:!video&&u.pathname.startsWith('/mirracles/')});if(button){e.replace(button,{html:true});video=true;}}})
  .on('body',{element(e){e.onEndTag(tag=>{if(video)tag.before(playScript,{html:true});});}});
  rewrite.on('script:not([src])',new RatingScript());
+ rewrite.on('a[href]',{element(e){if(['tel:9100181181','tel:+919100181181'].includes(e.getAttribute('href')))e.setAttribute('href','tel:+919100181181');}});
  addReadingDirectory(rewrite);
  if(u.pathname.replace(/\/$/,'')==='/staff'){
   let heading=0;
