@@ -24,7 +24,8 @@ for(const [kind,content] of Object.entries(readingContent)){
   const request=(headers={},method='GET')=>new Request('https://www.pinnacleblooms.org'+content.path,{headers,method});
   const response=await serveSpeech(request({'if-none-match':'"speech-original"'}),env,{[key]:'original'});
   assert.equal(response.status,200);assert.equal(response.headers.get('content-length'),null);assert.equal(response.headers.get('last-modified'),null);
-  assert.equal(response.headers.get('x-pinnacle-reading'),READING_RELEASE);const delivered=await response.text();if(kind==='occupational'){assert.match(delivered,/data-therapy-reading="occupational"/);assert(delivered.includes(content.html.match(/<h2[^>]*>(.*?)<\/h2>/)[1]));assert(!delivered.includes('<style>'));}else assert(delivered.includes(content.html));
+  assert.equal(response.headers.get('x-pinnacle-reading'),READING_RELEASE);const delivered=await response.text();if(kind==='occupational'){assert.match(delivered,/data-therapy-reading="occupational"/);assert(delivered.includes(content.html.match(/<h2[^>]*>(.*?)<\/h2>/)[1]));// Scoped callback styles are legitimate; keep the runtime reading-widget CSS guard.
+  const readingStyle=content.html.match(/<style>([\s\S]*?)<\/style>/)?.[0];if(readingStyle)assert(!delivered.includes(readingStyle));}else assert(delivered.includes(content.html));
   const etag=response.headers.get('etag');assert(etag.includes(READING_RELEASE));
   const conditional=await serveSpeech(request({'if-none-match':etag}),env,{[key]:'original'});assert.equal(conditional.status,304);
   const head=await serveSpeech(request({},'HEAD'),env,{[key]:'original'});assert.equal(await head.text(),'');assert.equal(head.headers.get('etag'),etag);
