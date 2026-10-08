@@ -8,7 +8,7 @@ const sdkResponse=await fetch(sdkUrl,{signal:AbortSignal.timeout(30000)});assert
 const origin='https://www.pinnacleblooms.org',path='/enroll-autism-speech-aba-therapies-india',results=[];
 for(const [browserName,type]of [['chromium',chromium],['webkit',webkit]]){
  const browser=await type.launch({headless:true});
- try{for(const state of ['unset','accepted','declined','gpc','invalid']){
+ try{for(const state of ['unset','accepted','declined','gpc','invalid','call-granted']){
   const context=await browser.newContext({viewport:{width:390,height:844}}),requests=[];
   await context.route('**/*',async route=>{
    const url=new URL(route.request().url());
@@ -22,6 +22,7 @@ for(const [browserName,type]of [['chromium',chromium],['webkit',webkit]]){
   });
   await context.addInitScript(({state})=>{
    if(state==='gpc')Object.defineProperty(navigator,'globalPrivacyControl',{value:true});
+   if(state==='call-granted'){window.__pinnacleConsentDefaults=true;window.dataLayer=[];window.gtag=function(){window.dataLayer.push(arguments);};window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});window.gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'});}
    if(['accepted','declined'].includes(state))localStorage.setItem('pinnacle-speech-analytics-v1',JSON.stringify({value:state,at:Date.now()}));
   },{state});
   const page=await context.newPage();await page.goto(origin+path+'?name=ISOLATED_PRIVATE&gclid=ISOLATED-CLICK');
@@ -29,14 +30,14 @@ for(const [browserName,type]of [['chromium',chromium],['webkit',webkit]]){
    const receipt={schemaVersion:1,requestId:'isolated-wire-request',id:'isolated-wire-receipt',...(invalid?{phone:'ISOLATED_PRIVATE'}:{})};
    for(let i=0;i<2;i++)document.dispatchEvent(new CustomEvent('pinnacle:enquiry-accepted',{detail:{receipt}}));
   },{invalid:state==='invalid'});
-  if(['unset','accepted'].includes(state))await page.waitForFunction(()=>window.dataLayer?.some(x=>x[0]==='event'&&x[1]==='enquiry_accepted'));
-  for(let i=0;i<30&&['unset','accepted'].includes(state)&&!requests.some(r=>r.en==='enquiry_accepted');i++)await page.waitForTimeout(200);
+  if(['unset','accepted','call-granted'].includes(state))await page.waitForFunction(()=>window.dataLayer?.some(x=>x[0]==='event'&&x[1]==='enquiry_accepted'));
+  for(let i=0;i<30&&['unset','accepted','call-granted'].includes(state)&&!requests.some(r=>r.en==='enquiry_accepted');i++)await page.waitForTimeout(200);
   const accepted=requests.filter(r=>r.en==='enquiry_accepted'),cookies=await context.cookies();
-  assert.equal(accepted.length,['unset','accepted'].includes(state)?1:0,browserName+' '+state+' accepted wire');
-  if(state==='unset'){assert.equal(accepted[0].gcs,'G100');assert.equal(accepted[0].dl,origin+path);assert(!cookies.some(c=>/^(ps_|_ga)/.test(c.name)));assert(!requests.some(r=>r.en==='page_view'));}
-  if(!['unset','accepted'].includes(state))assert.equal(requests.length,0);
-  const wire=JSON.stringify(accepted);for(const value of ['ISOLATED_PRIVATE','isolated-wire-request','isolated-wire-receipt','phone','user_id'])assert(!wire.includes(value));
-  results.push({browser:browserName,state,acceptedEvents:accepted.length,allInterceptedEvents:requests.map(r=>r.en),storageConsent:accepted[0]?.gcs||null,analyticsCookies:cookies.filter(c=>/^(ps_|_ga)/.test(c.name)).length,passed:true});
+  assert.equal(accepted.length,['unset','accepted','call-granted'].includes(state)?1:0,browserName+' '+state+' accepted wire');
+  if(['unset','call-granted'].includes(state)){assert.equal(accepted[0].gcs,state==='call-granted'?'G110':'G100');assert.equal(accepted[0].dl,origin+path);assert(!cookies.some(c=>/^(ps_ga(?:_|$)|_ga(?:_|$))/.test(c.name)));assert(!requests.some(r=>r.en==='page_view'));}
+  if(!['unset','accepted','call-granted'].includes(state))assert.equal(requests.length,0);
+  const wire=JSON.stringify(accepted);for(const value of ['ISOLATED_PRIVATE','isolated-wire-request','isolated-wire-receipt','phone','user_id',...(state==='accepted'?[]:['ISOLATED-CLICK'])])assert(!wire.includes(value),browserName+" "+state+" excluded "+value);
+  results.push({browser:browserName,state,acceptedEvents:accepted.length,allInterceptedEvents:requests.map(r=>r.en),storageConsent:accepted[0]?.gcs||null,analyticsCookies:cookies.filter(c=>/^(ps_ga(?:_|$)|_ga(?:_|$))/.test(c.name)).length,passed:true});
   await context.close();
  }}finally{await browser.close();}
 }

@@ -226,7 +226,9 @@
       window.__pinnacleConsentDefaults = true;
       window.gtag('consent','default',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
     }
-    window.gtag('consent','update',{analytics_storage:storage,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});
+    // Advertising call measurement has its own explicit choice. Preserve its
+    // granted/denied state instead of overriding it from Analytics settings.
+    window.gtag('consent','update',{analytics_storage:storage,ad_personalization:'denied'});
     window.gtag('set','ads_data_redaction',true);
     window.gtag('set','url_passthrough',false);
     if (!tagStarted) window.gtag('js',new Date());
@@ -297,7 +299,7 @@
       acceptedRequests.add(receipt.requestId);
     } catch {} // The receipt and parent confirmation survive a vendor failure.
   });
-  if(disclosure&&!isBookshop)disclosure.textContent+=' Accepted enquiries are always recorded in our protected receiving system. With no analytics choice, a minimal accepted-enquiry event may be sent to Google with analytics and advertising storage denied. Choosing to keep analytics off, or using Global Privacy Control, stops that Google event.';
+  if(disclosure&&!isBookshop)disclosure.textContent+=' Accepted enquiries are always recorded in our protected receiving system. With no analytics choice, a minimal accepted-enquiry event may be sent to Google with analytics storage denied. Advertising call measurement follows its separate choice. Choosing to keep analytics off, or using Global Privacy Control, stops that Google event.';
   document.addEventListener('click',event=>{
     if (pageGroup === 'family_resource') {
       const resourceLink=event.target?.closest?.('a[data-resource="first_conversation_v1"]');

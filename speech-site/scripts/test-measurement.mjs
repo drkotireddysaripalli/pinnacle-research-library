@@ -467,6 +467,15 @@ test('undecided receipt uses denied storage immediately with no optional campaig
   h.accepted({schemaVersion:1,requestId:'qa-next-valid-request',id:'qa-next-valid-receipt'});assert.equal(h.events().at(-1)[2].measurement_mode,'consented');
  }
 });
+test('automatic receipt and later Analytics choices preserve separate granted call consent',()=>{
+ const h=harness({path:canonicalEnrolment,search:''});h.win.dataLayer=[];
+ h.win.gtag=function(){h.win.dataLayer.push(arguments);};h.win.__pinnacleConsentDefaults=true;
+ h.win.gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'denied'});
+ const current=()=>{const state={};for(const c of h.win.dataLayer)if(c[0]==='consent')Object.assign(state,c[2]);return state;};
+ h.accepted();assert.equal(current().analytics_storage,'denied');assert.equal(current().ad_storage,'granted');assert.equal(current().ad_user_data,'granted');
+ h.choose('accepted');assert.equal(current().analytics_storage,'granted');assert.equal(current().ad_storage,'granted');assert.equal(current().ad_user_data,'granted');
+ h.choose('declined');assert.equal(current().analytics_storage,'denied');assert.equal(current().ad_storage,'granted');assert.equal(current().ad_personalization,'denied');
+});
 test('automatic receipt transport does not override refusal or send invalid, QA, GPC or unapproved events',()=>{
  for(const opts of [{saved:{value:'declined',at:Date.now()}},{gpc:true},{search:'?validation_test=1'},{origin:'http://127.0.0.1:4340'},{path:'/autism-therapy'}]){
   const h=harness({path:canonicalEnrolment,...opts});h.accepted();assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);
