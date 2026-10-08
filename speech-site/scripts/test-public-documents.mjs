@@ -4,7 +4,7 @@ import {serveSpeech,PUBLIC_DOCUMENT_ROUTES,isRetiredLeadershipPath} from '../dep
 import {aboutAsset,aboutHash} from '../deployment/about-assets.mjs';
 const origin='https://www.pinnacleblooms.org';
 for(const[path,id]of Object.entries(PUBLIC_DOCUMENT_ROUTES)){
- const md=id+(['self-sufficient','mainstream','about','leadership','framework'].includes(id)?'-machine.md':'-policy.md');
+ const md=id+(['self-sufficient','mainstream','about','leadership','framework','everyday-home-study'].includes(id)?'-machine.md':'-policy.md');
  const inv={['/pinnacle-pages-html/'+id+'.html']:'public',['/pinnacle-pages-data/'+md]:'reading'};
  let assetRequest;
  const env={ASSETS:{fetch:async r=>{assetRequest=r;return new Response(r.method==='HEAD'?null:r.url.endsWith('.md')?'# reading':'public');}}};
