@@ -1,0 +1,52 @@
+{
+  "id": "completion-directory-layout-20261008",
+  "phase": "verified-live",
+  "at": "2026-10-08T02:03:19.127Z",
+  "baseCommit": "c4ac630536d4846b22fde3a1e9d6936b047ab776",
+  "rollback": [
+    {
+      "version_id": "b23aa8a0-5498-442e-a114-2d7274a30906",
+      "percentage": 100
+    }
+  ],
+  "routeCount": 260,
+  "moduleCount": 9,
+  "originalHashes": {
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "entry.mjs": "30a74df341732148fdba9640bc7e0ea5ef02b836d4b2dc7336a5d7ac75d78088",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709"
+  },
+  "commit": "38340ae567d8674fd45fab01fbff842a4e3f05d6",
+  "candidate": "9a898e2e-d4fb-4bf9-afbc-2f38f6b33fde",
+  "hashes": {
+    "staff-records.mjs": "6843f3add0149d197db344e0d0716469c95b9c5ea912d3f77d18202ecdd9b5aa",
+    "staff-routes.mjs": "b015a71d663630f5ebc25408ca2977ac76077655596a9905d8bda4f9208916b6",
+    "discovery.mjs": "c1956cf6977da7c18f9b4700b3de513c91ae445f05a3d32ebafcdc751cf196c3",
+    "franchise-canonical.mjs": "1e8797ef1a4d6775664a60f8ed96b21f33f754b20e42a7c4235f8da0301647b6",
+    "organization.mjs": "226bd088a3bb74c56c6740db7f156199422861832dc9a5a2db1ba4aa78740120",
+    "entry.mjs": "e42fdec7940230f0a58196976357417a2199757c203ff069a0b1f556d3a9f78e",
+    "media.mjs": "9dfacc477b83836366f8aa0845035dfd581c4f7a6d2723e35d084db2f27f9c30",
+    "payload.mjs": "c230ad1fef000dc98ad59d3708b89365b6e37ed767b7ca5bd8ef9cfc387e09fc",
+    "schema.mjs": "5ed05c4555ffe9288dbaaee97215e5ff1ded486ee509dd1966f23d7a2b4cc709"
+  },
+  "deployment": "c4c5f203-c0ae-4a76-87d8-fb713d437e7d",
+  "promotedAt": "2026-10-08T02:03:28.395Z",
+  "verifiedAt": "2026-10-08T02:03:29.697Z",
+  "protectedWorkersUnchanged": [
+    "pinnacle-verify-route",
+    "pinnacle-ask",
+    "pinnacle-ask-mcp",
+    "pinnacle-centre-search-repair",
+    "pinnacle-helpline"
+  ],
+  "routesPreserved": 260,
+  "bindingsPreserved": true,
+  "publicProof": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\website-completion-20261008\\testingbot-directory\\chrome-only-38340ae567-eIB4pi\\report.json",
+  "httpProof": "C:\\Users\\Siri Palace\\Documents\\Codex\\2026-09-15\\k\\work\\website-completion-20261008\\screaming-frog-summary.json"
+}

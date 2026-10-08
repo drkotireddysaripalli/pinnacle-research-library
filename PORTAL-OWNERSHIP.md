@@ -4,6 +4,8 @@ Owner instruction: 6 October 2026. This supersedes earlier split website/shop co
 
 ## Start here
 
+Latest public delivery, 8 October 2026: source `85cf7b62974f99c1e3794c67eb64186b9f5981ef`, Portal version `b9be28f3-cd77-49b7-9b89-d0fb69879cf4`, deployment `02bb5911-4a97-43cc-be5a-5f81ccb8b09f`. Fresh public Mirracles main/category/video templates, restored Everyday Therapy study, mobile origin recovery and consented campaign/WhatsApp measurement are verified. The latest legacy directory deployment is `c4c5f203-c0ae-4a76-87d8-fb713d437e7d`, bundled source `38340ae`. The full 260-route/3,688-asset union is retained. [Current delivery and remaining acceptance](speech-site/RELEASE-PUBLIC-COMPLETION-20261008.md) separates website proof from the unfinished campaign-to-CRM, real-call/outcome and policy requirements. Older runtime statements below are historical.
+
 Latest legacy metadata release, 6 October 17:01 UTC: source `a6bd113`, version `46fa8ad2-f64c-47e1-a78b-db27d849b331`, deployment `828b9505-0332-47d4-803f-2631741f5017`. Exact physiotherapy WebPage identities are publicly verified across four variants. The Shop/Portal runtime listed below remains unchanged. Details: `speech-site/RELEASE-PHYSIOTHERAPY-IDENTITIES-20261006.md`.
 
 Latest runtime release, 6 October 16:34 UTC: source ddcee0a5f9991f33d559918bd15476e94c69093b; Portal ba536ab4-f94d-4b65-a8c6-2d270e2021ee. The shared book-bag integrity repair is publicly verified; 228 routes, 2,160 assets, 37 other portal modules and six protected services are retained. The older release IDs below are dated history. Details: `speech-site/RELEASE-BOOK-BAG-INTEGRITY-20261006.md`; actual baseline/rollback and public proof: `speech-site/deployment/book-bag-integrity-20261006.json`. No hosted Shopify theme publication was needed.
@@ -29,7 +31,7 @@ All paths below are relative to this repository.
 | Verify | <https://www.pinnacleblooms.org/verify/> | `verify-site/content/`, `verify-site/scripts/`, `verify-site/dist/`, portal deployment modules | Static evidence build served through `pinnacle-verify-route`. Its separate Astro migration remains deferred; ownership consolidation does not replace evidence pages. |
 | Shop and Books | <https://www.pinnacleblooms.org/shop>, <https://www.pinnacleblooms.org/books> | `speech-site/src/pages/shop.astro`, `speech-site/src/pages/books/`, `speech-site/src/components/Book*.astro`, `speech-site/src/data/book-*`, `speech-site/public/pinnacle-pages-scripts/book-commerce.js` | Common portal frontend with Shopify Storefront cart/checkout. Public catalogue and feed generation remain here. |
 
-Mirracles uses `speech-site/ask-runtime/pages/allmirracles.astro` and the same knowledge catalogue. Preserve its existing detail routes alongside these five areas.
+Public Mirracles now uses `speech-site/deployment/mirracles-library-20261008/` and its flat runtime modules inside the main portal, with the source-derived catalogue and preserved detail aliases. The old `ask-runtime/pages/allmirracles.astro` is historical for that public route. The separate private React account/report application at `mirracle.pinnacleblooms.org` remains protected and was not replaced. See the 8 October delivery receipt above.
 
 The common header, footer, navigation and Anek typography stay in their shared components/styles and Worker transforms. Fix them there once, then check affected surfaces. The public site's visual/narrative quality bar is unchanged by this ownership transfer.
 
