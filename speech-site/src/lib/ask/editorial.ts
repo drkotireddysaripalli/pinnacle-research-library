@@ -1,10 +1,13 @@
 import {SITE} from './content';
+import {priorityEditorialAnswer} from './priority-editorial';
+import {intentEditorialAnswer} from './intent-editorial';
 // Reviewed public copy. Applied at the common answer boundary so HTML, text
 // and JSON have one source, while the original database record is retained.
 const deicSlug='what-is-a-deic-and-what-services-does-it-offer';
 const guidelines='https://www.nhm.gov.in/images/pdf/programmes/RBSK/Operational_Guidelines/Operational-Guidelines-DEIC-RBSK.pdf';
 const programme='https://rbsk.mohfw.gov.in/rbsk/ImportantInfo.aspx';
 export function reviewedAnswer(a:any){
+ a=intentEditorialAnswer(priorityEditorialAnswer(a));
  if(a?.slug!==deicSlug||a.lang!=='en')return a;
  const summary='A District Early Intervention Centre (DEIC) is a government child-health service under RBSK. It helps assess concerns identified through screening, coordinate early support, arrange referrals and follow up, with a primary focus on children up to six years. Ask your district hospital about local access and services.';
  return {...a,title:'What is a DEIC? Services, access and your child’s next step',h1:'What is a DEIC, and how can it help your child?',meta_title:'DEIC: Services, Age & How to Visit | Ask Pinnacle',summary,meta_description:'Understand District Early Intervention Centre services under RBSK, who they support, how to ask about a visit and what to bring. Official government sources.',content_updated_at:'2026-10-06',authority_links:[{label:'Government of India · DEIC operational guidelines',url:guidelines},{label:'Ministry of Health & Family Welfare · RBSK programme',url:programme}],faq:[{q:'What does DEIC stand for?',a:'DEIC stands for District Early Intervention Centre, a government child-health service under Rashtriya Bal Swasthya Karyakram (RBSK).'}, {q:'How can I arrange a DEIC visit?',a:'Contact your district hospital or local RBSK team. Ask where the DEIC is, its appointment process, documents, available professionals and the referral arrangements for your child’s age.'},{q:'Is Pinnacle a government DEIC?',a:'No. Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited. A Pinnacle visit is a separate choice; ask about its professional, availability, fees and plan before booking.'}],answer_md:`## What a DEIC does

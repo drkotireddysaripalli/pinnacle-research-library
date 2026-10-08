@@ -3,7 +3,9 @@ import {handle} from '@astrojs/cloudflare/handler';
 import legacy from '../../ask-service/worker/index.js';
 import {answer,rpc} from '../src/lib/ask/repository';
 import {institution} from '../src/lib/ask/overrides';
+import {curatedPriorityAnswer,curatedPrioritySlugs,priorityEditorialSlugs} from '../src/lib/ask/priority-editorial';
 import {ASK} from '../src/lib/ask/content';
+import {medicalSafetySlug,intentEditorialSlugs} from '../src/lib/ask/intent-editorial';
 import {answerNavigation} from '../src/lib/ask/answer-presentation';
 import {AUTH_HEADERS} from '../src/lib/ask/auth.mjs';
 import {data as knowledgeData,languages as knowledgeLanguages,themes as knowledgeThemes,sunshineTypes,pageURL as knowledgePageURL,ORIGIN as knowledgeOrigin} from '../src/lib/knowledge/catalogues';
@@ -41,9 +43,10 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
   }else{const manifest=await knowledgeData(env,'manifest');addPages('/allmirracles',manifest.mirraclesCount,60);}
   return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+[...new Set(paths)].map(p=>'<url><loc>'+xml(knowledgeOrigin+p)+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
  }
+ if(path==='/ask/sitemap-editorial.xml'){const enabled=await rpc(env,'ask_indexing_enabled');return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+(enabled?curatedPrioritySlugs:[]).map(slug=>'<url><loc>'+ASK+'/'+xml(slug)+'</loc><lastmod>2026-10-08</lastmod></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});}
  if(path==='/ask/sitemap.xml'||/^\/ask\/sitemap-\d+\.xml$/.test(path)){
  const n=Number(path.match(/sitemap-(\d+)/)?.[1]||1);const data=await rpc(env,'ask_portal_sitemap',{p_page:n});
- const body=path.endsWith('/sitemap.xml')?'<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Array.from({length:Math.ceil(data.total/10000)},(_,i)=>'<sitemap><loc>'+ASK+'/sitemap-'+(i+1)+'.xml</loc></sitemap>').join('')+'<sitemap><loc>'+ASK+'/sitemap-navigation.xml</loc></sitemap><sitemap><loc>'+ASK+'/sitemap-topics.xml</loc></sitemap></sitemapindex>':'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+data.items.map((a:any)=>'<url><loc>'+ASK+'/'+xml(a.slug)+'</loc>'+(a.modified?'<lastmod>'+xml(a.modified.split('T')[0])+'</lastmod>':'')+'</url>').join('')+'</urlset>';
+ const body=path.endsWith('/sitemap.xml')?'<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+Array.from({length:Math.ceil(data.total/10000)},(_,i)=>'<sitemap><loc>'+ASK+'/sitemap-'+(i+1)+'.xml</loc></sitemap>').join('')+'<sitemap><loc>'+ASK+'/sitemap-navigation.xml</loc></sitemap><sitemap><loc>'+ASK+'/sitemap-topics.xml</loc></sitemap><sitemap><loc>'+ASK+'/sitemap-editorial.xml</loc></sitemap></sitemapindex>':'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+data.items.filter((a:any)=>a.slug!==medicalSafetySlug).map((a:any)=>'<url><loc>'+ASK+'/'+xml(a.slug)+'</loc>'+([...priorityEditorialSlugs,...intentEditorialSlugs].includes(a.slug)?'<lastmod>2026-10-08</lastmod>':a.modified?'<lastmod>'+xml(a.modified.split('T')[0])+'</lastmod>':'')+'</url>').join('')+'</urlset>';
  return new Response(body,{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
  }
  if(path==='/ask/sitemap-topics.xml'){const items=await rpc(env,'ask_indexing_enabled')?await rpc(env,'ask_portal_topic_sitemap'):[];return new Response('<?xml version='+String.fromCharCode(34)+'1.0'+String.fromCharCode(34)+' encoding='+String.fromCharCode(34)+'UTF-8'+String.fromCharCode(34)+'?><urlset xmlns='+String.fromCharCode(34)+'http://www.sitemaps.org/schemas/sitemap/0.9'+String.fromCharCode(34)+'>'+items.map((a:any)=>'<url><loc>'+ASK+'/'+xml(a.slug)+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});}
@@ -53,15 +56,23 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  if(enabled){const [wppsi,aac]=await Promise.all([rpc(env,'ask_portal_collection',{p_kind:'topic',p_value:'wppsi-iv',p_lang:'en',p_page:1}),rpc(env,'ask_portal_collection',{p_kind:'entity:therapy_modality',p_value:'aac',p_lang:'en',p_page:1})]);if(wppsi.total>=4)paths.push('/wppsi-iv');if(aac.indexable&&aac.total)paths.push('/lens/entity%3Atherapy_modality/aac');}
  return new Response('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+paths.map(p=>'<url><loc>'+ASK+p+'</loc></url>').join('')+'</urlset>',{headers:{...textHeaders,'content-type':'application/xml; charset=utf-8'}});
  }
+ const imageMatch=path.match(/^\/ask\/([\w-]+)\.(png|svg)$/);
+ if(imageMatch){const a=curatedPriorityAnswer(imageMatch[1]);if(a){
+  const card={t:a.title.slice(0,160),k:'Ask Pinnacle',s:a.meta_description.slice(0,190),g:[],m:[],l:'EN',u:a.canonical};
+  const bytes=new TextEncoder().encode(JSON.stringify(card));let binary='';for(const b of bytes)binary+=String.fromCharCode(b);
+  const token=btoa(binary).replaceAll('+','-').replaceAll('/','_').replace(/=+$/,'');
+  const imageURL=new URL(request.url);imageURL.pathname='/ask/og/'+token+'.'+imageMatch[2];imageURL.search='';
+  return legacy.fetch(new Request(imageURL,request),env,ctx);
+ }}
  const exportMatch=path.match(/^\/ask\/([\w-]+)\.(md|json)$/);
- if(exportMatch){const slug=exportMatch[1];const a=institution(slug)||await answer(env,slug,slug.endsWith('-te')?'te':'en');if(!a)return new Response('Answer not found',{status:404,headers:{...textHeaders,'x-robots-tag':'noindex'}});
+ if(exportMatch){const slug=exportMatch[1];const a=institution(slug)||curatedPriorityAnswer(slug)||await answer(env,slug,slug.endsWith('-te')?'te':'en');if(!a)return new Response('Answer not found',{status:404,headers:{...textHeaders,'x-robots-tag':'noindex'}});
  const nav=answerNavigation(a);
  const body=exportMatch[2]==='json'?JSON.stringify(a):'# '+a.title+'\n\nCanonical: '+a.canonical+'\nPublisher: Pinnacle Blooms Network / Bharath Healthcare Laboratories Private Limited\n\n'+(a.summary||'')+'\n\n'+a.answer_md+'\n\n## Sources\n'+(a.authority_links||[]).map((s:any)=>'- '+(s.label||s.title||'Source')+': '+(s.url||s.href)).join('\n')+'\n\n## Connected topics and perspectives\n'+[...nav.topics,...nav.links].map(x=>'- '+x.label+': '+x.url).join('\n')+'\n\n## Related question paths\n'+(a.reading_paths||[]).map((g:any)=>'\n### '+g.label+'\n'+g.items.map((x:any)=>'- '+x.title+': '+ASK+'/'+x.slug).join('\n')).join('\n');
  return new Response(body,{headers:{...textHeaders,'content-type':exportMatch[2]==='json'?'application/json; charset=utf-8':'text/markdown; charset=utf-8','x-robots-tag':'noindex, follow','link':'<'+a.canonical+'>; rel="canonical"'}});
  }
  if(/^\/ask\/(?:og\/|f\/)/.test(path)||/\.(svg|png|woff2|js|xsl)$/.test(path))return legacy.fetch(request,env,ctx);
  const cacheable=!/^\/ask\/(?:te\/)?search$/.test(path)&&request.method==='GET'&&[...url.searchParams].every(([key,value])=>key==='page'&&/^[1-9][0-9]{0,3}$/.test(value));
- const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build',knowledge?'astro-20261007-v22-faq-language-aliases':'astro-20261006-v20-six-step');
+ const cacheURL=new URL(url);const page=cacheURL.searchParams.get('page');cacheURL.search='';if(page)cacheURL.searchParams.set('page',page);cacheURL.searchParams.set('__ask_build',knowledge?'astro-20261008-v23-hindi-guidance':'astro-20261008-v21-priority-guidance');
  const cacheKey=new Request(cacheURL);const cache=(caches as any).default;
  // Cache API hits can inherit the zone's longer browser TTL. Reapply the page
  // policy after lookup so edge caching never makes browsers retain old releases.

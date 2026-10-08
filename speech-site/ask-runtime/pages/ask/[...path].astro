@@ -11,6 +11,7 @@ import AskContact from '../../../src/components/ask/AskContact.astro';
 import {ASK,SITE,dimensions,guides,pretty,safeAskLink} from '../../../src/lib/ask/content';
 import {answer,directory,collection,search,rpc} from '../../../src/lib/ask/repository';
 import {institution} from '../../../src/lib/ask/overrides';
+import {curatedPriorityAnswer} from '../../../src/lib/ask/priority-editorial';
 import {askRouteAlias} from '../../../src/lib/ask/route-aliases';
 let invalidPath=false;
 let path=(Astro.params.path||'').replace(/\/+$/,'').split('/').map(segment=>{
@@ -43,11 +44,12 @@ try{
  else if(parts.length===2){mode='directory';title=pretty(parts[1])+' | Ask Pinnacle';intro='Explore published answers grouped by '+pretty(parts[1]).toLowerCase()+'.';data=await directory(env,parts[1],lang,page);if(!data.total)mode='missing';}
  else{mode='collection';title=pretty(parts[2])+' | Ask Pinnacle';intro='Explore explanations, everyday questions and next steps connected with '+pretty(parts[2]).toLowerCase()+'.';data=await collection(env,parts[1],parts[2],parts[1]==='language'&&['en','te'].includes(parts[2])?parts[2]:lang,page);if(!data.total)mode='missing';}
  }else if(!path.includes('/')){
- a=lang==='en'?institution(path):null;a=a||await answer(env,path,lang);
+ a=lang==='en'?(institution(path)||curatedPriorityAnswer(path)):null;a=a||await answer(env,path,lang);
  if(a){const resourceSlugs=[...(a.related_materials||[]),...(a.related_techniques||[])].map(x=>x.slug).filter(Boolean);a.resources=resourceSlugs.length?await rpc(env,'ask_portal_references',{p_slugs:resourceSlugs,p_lang:a.lang}):[];mode='answer';title=a.meta_title||a.title;intro=a.meta_description||a.summary||a.title;canonical=a.canonical;robots=a.meta_robots;lang=a.lang;alternates=languageAlternates(a.alternates||[],robots,canonical);const faqs=Array.isArray(a.faq)?a.faq.filter(f=>f.q&&f.a):[];if(faqs.length)schema.push({'@type':'FAQPage','@id':canonical+'#faq',mainEntity:faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))});}
  else{mode='collection';data=await collection(env,'topic',path,lang,page);title=pretty(path)+' | Ask Pinnacle';intro='Explore the questions families and professionals ask about '+pretty(path).toLowerCase()+'.';if(!data.total)mode='missing';}
  }else mode='missing';
  }
+ if(mode==='collection'&&lang==='en'&&path==='pincer-grasp'&&data.total){title='Pincer grasp: meaning, development and safe practice | Ask Pinnacle';intro='A pincer grasp uses the thumb and index finger together. Explore developmental questions, safe everyday practice and when to discuss hand use with a professional. Pinnacle Blooms Network connects the skill with useful participation in meals, play and learning.';}
  // These two established search destinations have distinct, useful published question sets.
  if(mode==='collection'&&lang==='en'&&data.total>=4){
   if(path==='dayc-2'){data.indexable=true;title='DAYC-2 assessment: age, purpose and what to expect | Ask Pinnacle';intro='Explore DAYC-2 questions about assessment age, what it measures, the assessment experience, strengths, limits and its comparison with AbilityScore.';}
@@ -68,7 +70,7 @@ const answerEntity=a?{'@type':'Question','@id':canonical+'#question',name:a.h1||
 if(a?.reading_paths?.length)for(const group of a.reading_paths){schema.push({'@type':'ItemList','@id':canonical+'#questions-'+group.key,name:group.label,itemListElement:group.items.filter(x=>safeAskLink(x.slug)).map((x,i)=>({'@type':'ListItem',position:i+1,name:x.title,url:safeAskLink(x.slug)}))});}
 const answerSources=a&&Array.isArray(a.authority_links)?a.authority_links.map(s=>s.url||s.href).filter(s=>/^https?:\/\//.test(s||'')):[];
 ---
-<AskLayout title={title} description={intro} canonical={canonical} lang={lang} robots={robots} schema={schema} alternates={alternates} q={q} crumbs={crumbs} type={mode==='answer'?'MedicalWebPage':mode==='home'?'WebPage':'CollectionPage'} image={mode==='answer'?ASK+'/'+a.slug+'.png':ASK+'/og/default.png'} publication={a?{datePublished:a.published_at,...(a.content_updated_at&&Number.isFinite(Date.parse(a.content_updated_at))?{dateModified:a.content_updated_at}:{}),lastReviewed:a.last_reviewed_at,mainEntity:answerEntity,...(answerSources.length?{citation:answerSources}:{})}:undefined}>
+<AskLayout title={title} description={intro} canonical={canonical} lang={lang} robots={robots} schema={schema} alternates={alternates} q={q} crumbs={crumbs} type={mode==='answer'?'MedicalWebPage':mode==='home'?'WebPage':'CollectionPage'} image={mode==='answer'&&!a.medicalSafetyPage?ASK+'/'+a.slug+'.png':ASK+'/og/default.png'} publication={a?{datePublished:a.published_at,...(a.content_updated_at&&Number.isFinite(Date.parse(a.content_updated_at))?{dateModified:a.content_updated_at}:{}),lastReviewed:a.last_reviewed_at,mainEntity:answerEntity,...(answerSources.length?{citation:answerSources}:{})}:undefined}>
  {mode==='topic-index'&&<AskTopicIndex items={data.items}/>}
  {mode==='home'&&<AskHome lang={lang}/>}
  {['directory','collection','guide'].includes(mode)&&<AskListing title={title.replace(' | Ask Pinnacle','')} intro={intro} data={data} mode={mode==='directory'?'directory':'collection'} canonical={canonical.split('?')[0]} page={page} lang={lang} guide={guide}/>}

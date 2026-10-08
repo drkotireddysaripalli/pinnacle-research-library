@@ -1,0 +1,8 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {build} from 'esbuild';
+const b=await build({entryPoints:['src/lib/ask/editorial.ts'],bundle:true,format:'esm',platform:'node',write:false});const {reviewedAnswer}=await import('data:text/javascript;base64,'+Buffer.from(b.outputFiles[0].text).toString('base64'));
+const slugs=['what-is-kids-binoculars-compact-and-is-it-right-for-my-child','what-is-pop-it-fidget-toy-stress-relief-and-is-it-right-for-my-child','what-is-baby-saline-nasal-spray-and-is-it-right-for-my-child','my-child-s-communication-abilityscore-is-800-900-what-are-the-next-steps'];
+test('individual intent decisions replace unsafe fields without changing identity or unrelated records',()=>{
+ for(const slug of slugs){const a=reviewedAnswer({slug,lang:'en',id:42,canonical:'https://pinnacleblooms.org/ask/'+slug,meta_robots:'index, follow',answer_md:'any diagnosis only at a Pinnacle',faq:[{q:'Old',a:'only under close watch'}]});assert.equal(a.id,42);assert(a.authority_links.length);assert(!a.answer_md.includes('any diagnosis only'));assert(!a.faq.some(x=>x.a.includes('only under close watch')));assert(a.meta_description.length<180);assert(a.answer_md.length>800);if(slug.includes('saline')){assert.equal(a.meta_robots,'noindex, follow');assert(a.medicalSafetyPage);assert(!a.answer_md.includes('tel:'));assert(a.answer_md.includes('emergency medical help'));}else assert.equal(a.meta_robots,'index, follow');}
+ const original={slug:'unrelated',lang:'en',answer_md:'Kept record'};assert.equal(reviewedAnswer(original),original);
+ const deic=reviewedAnswer({slug:'what-is-a-deic-and-what-services-does-it-offer',lang:'en'});assert(deic.summary.includes('District Early Intervention Centre'));
+});
