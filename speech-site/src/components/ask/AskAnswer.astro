@@ -4,6 +4,7 @@ import {renderMarkdown} from '../../lib/ask/markdown';
 import {answerReading,answerContext,answerCitation,answerNavigation,pathway} from '../../lib/ask/answer-presentation';
 import AnswerCards from './AnswerCards.astro';import AskContact from './AskContact.astro';import Icon from '../Icon.astro';
 import AskReadingPaths from './AskReadingPaths.astro';
+import ReaderJourney from '../knowledge/ReaderJourney.astro';
 const {answer:a}=Astro.props;
 const faq=Array.isArray(a.faq)?a.faq.filter(x=>x.q&&x.a):[];
 const sources=(Array.isArray(a.authority_links)?a.authority_links:[]).filter(x=>/^https?:\/\//.test(x.url||x.href||''));
@@ -21,6 +22,7 @@ const materials=(a.resources||[]).filter(x=>materialSlugs.has(x.slug));const tec
  <header class="ask-article-title"><p class="ask-eyebrow">{te?'మీ ప్రశ్నకు సమాధానం':'YOUR QUESTION. A CLEARER NEXT STEP.'}</p><h1>{a.h1||a.title}</h1>{a.summary&&<div class="ask-direct-answer answer-summary"><span class="ask-answer-label">{te?'సంక్షిప్తంగా':'THE SHORT ANSWER'}</span><p>{a.summary}</p></div>}<div class="ask-meta"><span>Pinnacle Blooms Network</span>{a.content_updated_at&&<span>Page updated <time datetime={a.content_updated_at}>{date(a.content_updated_at)}</time></span>}{a.published_at&&<span>Published <time datetime={a.published_at}>{date(a.published_at)}</time></span>}{a.last_reviewed_at&&<span>Content record updated <time datetime={a.last_reviewed_at}>{date(a.last_reviewed_at)}</time></span>}</div>
  {(a.alternates||[]).length>1&&<nav class="ask-chips" aria-label="Read this answer in another language">{a.alternates.map(x=><a href={x.href} lang={x.lang}>{x.lang==='te'?'తెలుగులో చదవండి':'Read in English'}</a>)}</nav>}
  </header>
+ <ReaderJourney title={a.title} lang={a.lang} enrol={context.enrol}/>
  <nav class="ask-jump-links" aria-label="On this page"><a href="#explanation"><Icon name="book" size={18}/>Read the answer</a>{a.reading_paths?.length>0&&<a href="#related-questions"><Icon name="layers" size={18}/>Connected questions</a>}<a href="#sources"><Icon name="shield" size={18}/>Sources</a><a href="#ask-answer-share"><Icon name="send" size={18}/>Share this answer</a><a href="#pinnacle-next-step"><Icon name="compass" size={18}/>Your next step</a></nav>
  <div class="ask-reading-layout"><div class="ask-reading-main">
  {reading.outline.length>2&&<details class="ask-contents"><summary>In this answer <span>{reading.outline.length} sections</span></summary><ol>{reading.outline.map(h=><li><a href={'#'+h.id}>{h.title}</a></li>)}</ol></details>}

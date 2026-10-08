@@ -7,13 +7,21 @@ export const ACCOUNT='/ask/account';
 // Matches the approved WATI code_template_pbn_v3 expiry; Supabase must use 360s at activation.
 export const OTP_EXPIRY_SECONDS=360;
 export function safeReturn(value){
- if(typeof value!=='string'||value.length>700||!/^\/(?:ask|faq|sunshine)(?:\/|[?#]|$)/.test(value)||/[\\\x00-\x20\x7f]/.test(value))return '/ask';
+ if(typeof value!=='string'||value.length>700||!/^\/(?:ask|faq|sunshine|allmirracles|mirracles)(?:\/|[?#]|$)/.test(value)||/[\\\x00-\x20\x7f]/.test(value))return '/ask';
  try{
   const rawPath=value.split(/[?#]/)[0],decoded=decodeURIComponent(rawPath);
-  if(!/^\/(?:ask|faq|sunshine)(?:\/[a-zA-Z0-9_:-]+)*$/.test(decoded)||/%(?:2f|5c)/i.test(rawPath)||/^\/ask\/(?:auth|account)(?:\/|$)/.test(decoded))return '/ask';
+  const normal=/^\/(?:ask|faq|sunshine)(?:\/[a-zA-Z0-9_:-]+)*$/.test(decoded);
+  const video=/^\/(?:allmirracles(?:\/category\/[^\/\\?#<>\x00-\x1f]+)?|mirracles\/\d+(?:\/[^\/\\?#<>\x00-\x1f]+)?)$/.test(decoded)&&!decoded.split('/').some(p=>p==='.'||p==='..');
+  if(!(normal||video)||/%(?:2f|5c)/i.test(rawPath)||/^\/ask\/(?:auth|account|reader-shell)(?:\/|$)/.test(decoded))return '/ask';
   const u=new URL(value,'https://pinnacleblooms.org');
   if(u.origin!=='https://pinnacleblooms.org')return '/ask';
-  for(const [key,v] of u.searchParams)if(!(key==='page'&&/^[1-9][0-9]{0,3}$/.test(v))&&!(key==='q'&&(/^(?:\/ask\/(?:te\/)?search|\/faq(?:\/[a-z-]+){0,2}|\/sunshine(?:\/[a-z-]+)?)$/.test(decoded))&&v.length<=200))return '/ask';
+  for(const [key,v] of u.searchParams){
+   const page=key==='page'&&/^[1-9][0-9]{0,3}$/.test(v);
+   const search=key==='q'&&(/^(?:\/ask\/(?:te\/)?search|\/faq(?:\/[a-z-]+){0,2}|\/sunshine(?:\/[a-z-]+)?|\/allmirracles)$/.test(decoded))&&v.length<=200;
+   const click=['gclid','dclid','msclkid','fbclid','gbraid','wbraid'].includes(key)&&/^[A-Za-z0-9._~-]{1,256}$/.test(v);
+   const campaign=/^utm_(?:id|source|medium|campaign|term|content|source_platform|creative_format|marketing_tactic)$/.test(key)&&/^[A-Za-z0-9][A-Za-z0-9._~ -]{0,127}$/.test(v)&&!/@|\b(?:secret|password|token|private)\b/i.test(v)&&!/^\d[\d ().+-]{6,}$/.test(v);
+   if(!(page||search||click||campaign)||u.searchParams.getAll(key).length!==1)return '/ask';
+  }
   if(u.hash&&!/^#[a-zA-Z0-9_-]+$/.test(u.hash))return '/ask';
   return u.pathname+u.search+u.hash;
  }catch{return '/ask';}
@@ -27,11 +35,13 @@ export function googleProfile(user){
 }
 // An app-specific, server-owned marker identifies Ask readers in the existing
 // Supabase user registry. It grants no IRWFA entitlement and stores no reading history.
-export async function registerReader(env,user){
+export const readerLibrary=value=>['ask','faq','sunshine','mirracles','materials','interventions'].includes(value)?value:null;
+export async function registerReader(env,user,library){
  if(user.app_metadata?.ask_reader?.registered_at)return true;
  if(!env.ASK_AUTH_SECRET_KEY)return false;
  const admin=createClient(env.SUPABASE_URL,env.ASK_AUTH_SECRET_KEY,{auth:{persistSession:false,autoRefreshToken:false},global:{fetch:(input,init)=>fetch(input,{...init,signal:AbortSignal.timeout(8000)})}});
- const {error}=await admin.auth.admin.updateUserById(user.id,{app_metadata:{ask_reader:{provider:'google',registered_at:new Date().toISOString()}}});
+ const firstLibrary=readerLibrary(library);
+ const {error}=await admin.auth.admin.updateUserById(user.id,{app_metadata:{ask_reader:{provider:'google',registered_at:new Date().toISOString(),...(firstLibrary?{first_library:firstLibrary}:{})}}});
  return !error;
 }
 export function phoneNumber(value){const v=String(value||'').replace(/[ ()-]/g,'');return /^\+[1-9][0-9]{7,14}$/.test(v)?v:null;}
@@ -90,7 +100,7 @@ export async function action(request,env,kind){
   const {data:{user},error}=await c.auth.auth.getUser();
   if(error&&error.name!=='AuthSessionMissingError'&&!(error.status>=400&&error.status<500))return c.reply('Sign-in service is temporarily unavailable.',503);
   const profile=googleProfile(user);
-  if(profile&&!await registerReader(env,user))return c.reply('Your registration could not be saved. Please try again.',503);
+  if(profile&&!await registerReader(env,user,request.headers.get('x-pinnacle-reader-library')))return c.reply('Your registration could not be saved. Please try again.',503);
   c.headers.set('content-type','application/json; charset=utf-8');
   return c.reply(JSON.stringify({profile:profile?{...profile,whatsappVerified:registrationComplete(user)}:null,csrf:csrf(c),...(!profile&&googleClientId(env)?{google:await googleConfiguration(c,env)}:{})}));
  }
@@ -99,7 +109,7 @@ export async function action(request,env,kind){
   const code=c.url.searchParams.get('code');if(!code||code.length>2048)return back('sign-in');
   const {data,error}=await c.auth.auth.exchangeCodeForSession(code);
   if(error||!googleProfile(data.user)){await c.auth.auth.signOut({scope:'local'});return back('sign-in');}
-  if(!await registerReader(env,data.user))return back('registration');
+  if(!await registerReader(env,data.user,c.cookies.get('pinnacle-ask-library')))return back('registration');
   const returnTo=safeReturn(c.cookies.get('pinnacle-ask-return'));c.set('pinnacle-ask-return','',{maxAge:0});
   return c.redirect(returnTo);
  }
@@ -117,13 +127,14 @@ export async function action(request,env,kind){
   if(!await googleCredentialMatches(token,googleClientId(env),nonce))return retry('sign-in');
   const {data,error}=await c.auth.auth.signInWithIdToken({provider:'google',token,nonce});
   if(error||!googleProfile(data.user)){await c.auth.auth.signOut({scope:'local'});return retry('sign-in');}
-  if(!await registerReader(env,data.user))return retry('registration');
+  if(!await registerReader(env,data.user,form.get('library')))return retry('registration');
   return c.redirect(returnTo);
  }
  if(Object.hasOwn(OAUTH_PROVIDERS,kind)){
   if(!enabledProviders(env).includes(kind))return c.reply('This sign-in option is not available yet.',503);
   if(await limited(env,'oauth:'+request.headers.get('cf-connecting-ip')))return back('wait');
   c.set('pinnacle-ask-return',safeReturn(form.get('returnTo')),{maxAge:1800});
+  const library=readerLibrary(form.get('library'));if(library)c.set('pinnacle-ask-library',library,{maxAge:1800});
   const {data,error}=await c.auth.auth.signInWithOAuth({provider:kind,options:{redirectTo:c.url.origin+'/ask/auth/callback',skipBrowserRedirect:true,...(OAUTH_PROVIDERS[kind].scopes?{scopes:OAUTH_PROVIDERS[kind].scopes}:{})}});
   return error||!data.url?back('sign-in'):c.redirect(data.url);
  }

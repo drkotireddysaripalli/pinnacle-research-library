@@ -1,0 +1,13 @@
+---
+// Public, identity-free assembly input for the portal video library. No user data.
+import AskGate from '../../../src/components/ask/AskGate.astro';
+import AskNavigation from '../../../src/components/ask/AskNavigation.astro';
+import AskVerification from '../../../src/components/ask/AskVerification.astro';
+import VernacularTypography from '../../../src/components/VernacularTypography.astro';
+import ReaderJourney from '../../../src/components/knowledge/ReaderJourney.astro';
+import measurement from '../../../public/pinnacle-pages-scripts/speech-measurement.js?url';
+import '../../../src/styles/ask.css';
+Astro.response.headers.set('X-Robots-Tag','noindex, follow');
+Astro.response.headers.set('Cache-Control','public, max-age=0, s-maxage=300');
+---
+<!doctype html><html lang="en"><head><meta name="robots" content="noindex, follow"/><VernacularTypography/></head><body><div data-reader-shell><AskGate brand="Pinnacle Mirracles"/><AskVerification/><AskNavigation brand="Pinnacle Mirracles" home="/allmirracles" searchPath="/allmirracles" browse="/sunshine"/></div><div data-reader-journey><ReaderJourney/></div><a data-reader-measurement href={measurement}>Shared measurement asset</a></body></html>

@@ -3,6 +3,7 @@ import {env} from 'cloudflare:workers';
 import KnowledgeLayout from '../../../src/layouts/KnowledgeLayout.astro';
 import Pagination from '../../../src/components/knowledge/Pagination.astro';
 import NextStep from '../../../src/components/knowledge/NextStep.astro';
+import ReaderJourney from '../../../src/components/knowledge/ReaderJourney.astro';
 import Icon from '../../../src/components/Icon.astro';
 import {data,languages,themes,ORIGIN,faqRoute,faqRedirectURL,cleanPath,requestedPage,paged,pageURL,matchesSearch,improvementQualifier,improvementLimitation} from '../../../src/lib/knowledge/catalogues';
 import {hindiFAQCategories,hindiFAQListing,reviewedHindiCategoryCopy} from '../../../src/lib/knowledge/hindi-category-copy';
@@ -39,6 +40,7 @@ const categoryCounts=themes.map(t=>{const copy=hindiListing?hindiFAQCategories[t
  {answer?.published&&<p class="knowledge-caption">Pinnacle FAQ library · First published <time datetime={answer.published}>{answer.published}</time></p>}
  <ul class="knowledge-pills" aria-label={hindiListing?hindiFAQListing.languageLabel:'Answer languages'}>{(answer?route.item.alternates.map(a=>({url:a.url,label:languages[a.language].label,code:a.lang})):Object.entries(languages).map(([key,val])=>({url:'/faq/'+key,label:val.label,code:val.code}))).map(x=><li><a href={x.url} lang={x.code} aria-current={x.code===lang?'page':undefined}>{x.label}</a></li>)}</ul>
  </header>
+ <ReaderJourney title={answer?.title||title} category={answer?.category||route.category} lang={lang}/>
  {answer?<>
  {answer.image&&<img src={answer.image} alt={answer.title} class="knowledge-answer-hero" loading="eager" fetchpriority="high"/>}
  <div class="knowledge-answer-grid"><article id="answer-text" class="knowledge-answer" lang={lang}><div set:html={answer.html}/>

@@ -18,7 +18,7 @@ const {brand='Ask Pinnacle'}=Astro.props;
   <p id="ask-gate-description">Use your Google account to continue.<br/>No additional form.</p>
   <div class="ask-gate-sign-in">
   <form method="post" action="/ask/auth/google" data-ask-google-form>
-   <input type="hidden" name="csrf" value=""/><input type="hidden" name="returnTo" value="/ask"/><input type="hidden" name="credential" value=""/>
+   <input type="hidden" name="csrf" value=""/><input type="hidden" name="returnTo" value="/ask"/><input type="hidden" name="credential" value=""/><input type="hidden" name="library" value=""/>
    <button type="submit" class="ask-google-button" disabled>
     <Image src={googleMark} width={20} height={20} alt="" loading="eager"/>
     Continue with Google
@@ -28,7 +28,7 @@ const {brand='Ask Pinnacle'}=Astro.props;
   </div>
   <p class="ask-gate-status" role="status" data-ask-gate-status>Checking your sign-in…</p>
   <button type="button" class="ask-gate-retry" data-ask-session-retry hidden>Try again</button>
-  <p class="ask-gate-privacy">Google shares your name, email and photo for your Ask reader profile.</p>
+  <p class="ask-gate-privacy">Google shares your name, email and photo for your Pinnacle reader profile. Signing in does not book a visit or subscribe you to marketing.</p>
   <p class="ask-gate-links"><a href="https://www.pinnacleblooms.org/privacy-policy">Privacy</a><span aria-hidden="true">·</span><a href="tel:+919100181181">Call 9100 181 181</a></p>
   <noscript><p>Enable JavaScript to sign in with Google.</p></noscript>
   </div>

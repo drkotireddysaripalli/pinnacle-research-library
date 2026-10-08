@@ -1,5 +1,6 @@
 // Identity is fetched separately: public SSR content never contains user data.
 import {setupAskVerification} from './ask-verification';
+import {readerLibrary} from '../lib/knowledge/journey.mjs';
 type GoogleIdentity={initialize:(options:Record<string,unknown>)=>void;renderButton:(element:HTMLElement,options:Record<string,unknown>)=>void;disableAutoSelect:()=>void};
 const googleIdentity=()=> (window as unknown as {google?:{accounts?:{id?:GoogleIdentity}}}).google?.accounts?.id;
 let googleLoader:Promise<void>|undefined;
@@ -27,6 +28,8 @@ if(gate){
  if(reason)history.replaceState(null,'',current.pathname+current.search+current.hash);
  if(reason==='signed-out')try{localStorage.setItem('ask-auth-change',String(Date.now()));}catch{}
  const returnTo=current.pathname+current.search+current.hash;
+ const library=readerLibrary(current.pathname)||'ask';
+ signIn.querySelector<HTMLInputElement>('[name=library]')!.value=library;
  for(const form of [signIn,signOut])form.querySelector<HTMLInputElement>('[name=returnTo]')!.value=returnTo;
  const lock=()=>{verification.close();profile.hidden=true;profile.open=false;openButton.hidden=false;if(!gate.open)gate.showModal();};
  gate.addEventListener('cancel',event=>event.preventDefault());
@@ -36,7 +39,7 @@ if(gate){
   if(pending)return;pending=true;button.disabled=true;retry.hidden=true;googleButton.hidden=true;
   status.textContent='Checking your sign-in…';
   try{
-   const response=await fetch('/ask/auth/session',{credentials:'same-origin',cache:'no-store',headers:{Accept:'application/json'},signal:AbortSignal.timeout(12000)});
+   const response=await fetch('/ask/auth/session',{credentials:'same-origin',cache:'no-store',headers:{Accept:'application/json','X-Pinnacle-Reader-Library':library},signal:AbortSignal.timeout(12000)});
    if(!response.ok)throw Error('session');
    const data=await response.json();if(!/^[0-9a-f-]{36}$/.test(data.csrf||''))throw Error('session');
    verification.update(data.profile?.whatsappVerified===true,data.csrf);

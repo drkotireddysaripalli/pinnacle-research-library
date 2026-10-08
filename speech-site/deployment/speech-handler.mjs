@@ -53,8 +53,8 @@ async function serveMirraclesLibrary(request,env){
  if(!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(u.hostname)||!(/^\/allmirracles(?:\/|$)/.test(u.pathname)||/^\/mirracles\/\d+(?:\/|$)/.test(u.pathname))||!env.ASSETS)return null;
  if(!mirraclesPublicHandler){
   let shellPromise;
-  const read=async name=>{if(!/^(?:catalogue|details-\d+|shell)$/.test(name))throw Error('Unknown public video asset');const r=await env.ASSETS.fetch(new Request('https://assets.local/mirracles-library-data/'+name+'.json'));if(r.status!==200)throw Error('Public video asset unavailable');return r.json();};
-  mirraclesPublicHandler=createMirraclesLibrary({loadJson:read,shell:async()=>{shellPromise??=read('shell').catch(e=>{shellPromise=undefined;throw e});return shellPromise},responseHeaders:{'Content-Security-Policy':"object-src 'none'; base-uri 'self'; frame-ancestors 'self'",'X-Pinnacle-Mirracles-Library':'public-20261008'}});
+  const read=async name=>{if(!/^(?:catalogue|details-\d+|shell|reader)$/.test(name))throw Error('Unknown public video asset');const r=await env.ASSETS.fetch(new Request('https://assets.local/mirracles-library-data/'+name+'.json'));if(r.status!==200)throw Error('Public video asset unavailable');return r.json();};
+  mirraclesPublicHandler=createMirraclesLibrary({loadJson:read,shell:async()=>{shellPromise??=Promise.all([read('shell'),read('reader')]).then(([shell,reader])=>({...shell,reader})).catch(e=>{shellPromise=undefined;throw e});return shellPromise},responseHeaders:{'Content-Security-Policy':"object-src 'none'; base-uri 'self'; frame-ancestors 'self'",'X-Pinnacle-Mirracles-Library':'public-reader-20261008'}});
  }
  if(u.hostname==='pinnacleblooms.org'){u.hostname='www.pinnacleblooms.org';const known=await mirraclesPublicHandler(new Request(u.href,request));return known?new Response(null,{status:301,headers:{location:u.href,'cache-control':'private, no-store'}}):null;}
  return mirraclesPublicHandler(request);

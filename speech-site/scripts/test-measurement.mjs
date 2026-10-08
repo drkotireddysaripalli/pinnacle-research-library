@@ -25,12 +25,12 @@ function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-ther
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
- const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>listeners[event]=fn};
+ const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL});
- return {win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ return {win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href)=>{const link={href,dataset:{cta:placement},getAttribute:()=>href};listeners.click({target:{closest:()=>link}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
 
 test('consented source survives an untagged centre/form/direct journey; withdrawal clears it',()=>{
@@ -435,5 +435,12 @@ test('native route expansion rejects unknown paths and malformed catalogue desti
  for(const path of ['https://evil.example/books/hi/speech-101','/books/fr/speech-101','/books/hi/speech-101?name=private','/books/hi/speech-101#private','/books/hi/../speech-101','/books/editions/te/unknown/nested']){
   const catalogue={[commerceLine.sku]:{...commerceFixture[commerceLine.sku],path,editionPaths:[path]}};
   const h=harness({path,commerceCatalogue:catalogue});h.choose('accepted');h.commerce('add_to_cart',[commerceLine]);assert.equal(h.events().length,0,path);
+ }
+});
+
+test('Knowledge campaign handoff requires consent and withdrawal restores the original link',()=>{
+ const destination='https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech';
+ for(const options of [{origin:'https://pinnacleblooms.org',path:'/ask/private-topic',variant:'ask'},{path:'/faq/english/speech-therapy',variant:'knowledge'},{path:'/mirracles/123/private-title',variant:'knowledge'}]){
+ const h=harness({...options,search:'?utm_source=google&utm_medium=cpc&gclid=qaClickAbc123'});assert.equal(h.click('knowledge-enrol',destination).href,destination);h.choose('accepted');const link=h.click('knowledge-enrol',destination);assert.equal(new URL(link.href).searchParams.get('gclid'),'qaClickAbc123');assert.equal(new URL(link.href).searchParams.get('service'),'speech');assert.equal(h.events().filter(e=>e[1]==='enquiry_link_click').length,1);assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,0);assert(!JSON.stringify(h.events()).includes('private-topic'));h.choose('declined');assert.equal(link.href,destination);assert.equal(h.click('knowledge-enrol',destination).href,destination);
  }
 });

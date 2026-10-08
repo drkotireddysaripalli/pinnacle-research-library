@@ -58,7 +58,7 @@ test('search input is escaped, uncached, noindexed and absent from metadata and 
   const ld=html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1];
   assert(!ld.includes('INVENTED'));JSON.parse(ld);
   assert.match(html,/<link rel="canonical" href="https:\/\/www.pinnacleblooms.org\/allmirracles">/);
-  assert.equal(r.headers.get('referrer-policy'),'no-referrer');
+  assert.equal(r.headers.get('referrer-policy'),'strict-origin');
 });
 test('detail and older alias preserve identity without eager external players',async()=>{
   const record=catalogue.records.find(r=>r.id===catalogue.order[0]);

@@ -54,7 +54,7 @@
   const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !privateAskPath && document.body?.dataset.pageVariant === 'ask';
   // Knowledge families use fixed buckets: never send questions, story IDs or searches.
   const knowledgePath = location.origin === origin && document.body?.dataset.pageVariant === 'knowledge'
-    ? pagePath.match(/^\/(faq|sunshine|allmirracles)(?:\/|$)/)?.[1] : null;
+    ? (/^\/mirracles\/\d+(?:\/|$)/.test(pagePath)?'allmirracles':pagePath.match(/^\/(faq|sunshine|allmirracles|materials|interventions)(?:\/|$)/)?.[1]) : null;
   const knowledgeSearch = !!knowledgePath && new URL(location.href).searchParams.has('q');
   const canonical = isAsk ? 'https://pinnacleblooms.org/ask' : origin + (knowledgePath ? '/'+knowledgePath : pages[pagePath]?.measurementPath || pagePath);
   const pageConfig = pages[pagePath] || (knowledgePath ? {title:'Pinnacle Knowledge Library',group:'knowledge',service:'help'} : null) || (isAsk ? {title:'Ask Pinnacle',group:'ask',service:'help'} : null) || (Object.hasOwn(documents,pagePath)?{title:documents[pagePath],group:'speech_therapy',service:'speech'}:null);
@@ -142,7 +142,8 @@
   const acquisitionPath=new URL(canonical).pathname;
   const acquisitionPaths=new Set(['/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
   if(disclosure&&!isBookshop)disclosure.textContent+=' With permission, a validated campaign record can stay on this device for up to 30 days and accompany your enquiry into our protected receiving system. Turning analytics off removes this optional device record.';
-  const forgetSource=()=>{try{localStorage.removeItem(sourceKey);}catch{}};
+  const handedOffLinks=new Map();
+  const forgetSource=()=>{for(const [link,href]of handedOffLinks)link.href=href;handedOffLinks.clear();try{localStorage.removeItem(sourceKey);}catch{}};
   const readSource=()=>{
     try{
       const saved=JSON.parse(localStorage.getItem(sourceKey));
@@ -168,6 +169,25 @@
     if (!production || !enabled || blocked || knowledgeSearch || validationTraffic) return;
     try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
   };
+  // A navigation handoff carries only already validated campaign fields, with
+  // permission. It carries no reader identity, question, history or child data.
+  document.addEventListener('click',event=>{
+    const link=event.target?.closest?.('a[href]');if(!link||!(isAsk||knowledgePath))return;
+    if(handedOffLinks.has(link)){link.href=handedOffLinks.get(link);handedOffLinks.delete(link);}
+    const library=isAsk?'ask':knowledgePath==='allmirracles'?'mirracles':knowledgePath;
+    const action=link.dataset?.cta;
+    if(action==='knowledge-enrol')send('enquiry_link_click',{schema_version:2,page_group:pageGroup,library,link_placement:action,destination:'existing_enrolment_form'});
+    if(action==='knowledge-service')send('knowledge_service_click',{schema_version:1,page_group:'knowledge',library});
+    if(action==='knowledge-centres')send('knowledge_centres_click',{schema_version:1,page_group:'knowledge',library});
+    if(!production||!enabled||blocked||knowledgeSearch||validationTraffic)return;
+    try{
+      const target=new URL(link.href||link.getAttribute('href'),location.href);
+      if(target.origin!==origin||!acquisitionPaths.has(target.pathname))return;
+      const fields=readSource()?.fields||Object.fromEntries(measurementURL.searchParams);
+      for(const [name,value]of Object.entries(fields))if(!target.searchParams.has(name))target.searchParams.set(name,value);
+      handedOffLinks.set(link,link.href||link.getAttribute('href'));link.href=target.href;
+    }catch{}
+  });
   const commerceNames = new Set(['view_item','view_cart','add_to_cart','remove_from_cart','begin_checkout']);
   const sendCommerce = (name, lines) => {
     if (pageGroup !== 'bookshop' || !commerceNames.has(name) || !Array.isArray(lines) || !lines.length || lines.length > 50) return;
@@ -319,7 +339,7 @@
       const validEntry=!entry||(pageConfig?.service==='speech'&&entry==='speech-assessment');
       validEnquiry=destination.origin===origin&&destination.pathname==='/enroll-autism-speech-aba-therapies-india'&&knownKeys&&validCentre&&validService&&validEntry;
     } catch {}
-    if (enquiryPlacements.has(placement) && validEnquiry) send('enquiry_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'existing_enrolment_form'});
+    if (enquiryPlacements.has(placement) && validEnquiry && !(placement==='knowledge-enrol'&&(isAsk||knowledgePath))) send('enquiry_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'existing_enrolment_form'});
   });
 })();
 

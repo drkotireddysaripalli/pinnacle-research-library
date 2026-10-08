@@ -2,6 +2,7 @@
 import {ASK,pretty} from '../../lib/ask/content';
 import Icon from '../Icon.astro';import AnswerCards from './AnswerCards.astro';import AskContact from './AskContact.astro';
 import AskTopicNavigation from './AskTopicNavigation.astro';
+import ReaderJourney from '../knowledge/ReaderJourney.astro';
 import {topicGroupId} from '../../lib/ask/topic-navigation';
 const {title,intro,data,mode='collection',canonical,lang='en',page=1,guide}=Astro.props;
 const prefix=lang==='te'?ASK+'/te':ASK;
@@ -11,6 +12,7 @@ const urlFor=(i:any)=>i.topic?prefix+'/'+encodeURIComponent(i.topic):prefix+'/le
 ---
 <section class="ask-wrap ask-list-hero"><p class="ask-eyebrow">ASK PINNACLE · {mode==='directory'?'EXPLORE A TOPIC':'QUESTIONS, EXPLANATIONS & NEXT STEPS'}</p><h1>{title}</h1><p class="ask-lead">{intro}</p>{data.total>0&&<p class="ask-count">{data.total.toLocaleString('en-IN')} {mode==='directory'?'topics with published answers':'published answers'} · {lang==='te'?'తెలుగు':'English'}{page>1&&' · Page '+page}</p>}</section>
 {mode==='collection'&&<AskTopicNavigation items={data.items} canonical={canonical} lang={lang} total={data.total} page={page}/>}
+<div class="ask-wrap"><ReaderJourney title={title} lang={lang}/></div>
 <section class="ask-wrap ask-section ask-list-body">
  {data.items?.length?mode==='directory'?<div class="ask-topic-grid">{data.items.map(i=><a class="ask-topic-card" href={urlFor(i)}><Icon name="book"/><h2>{i.label||pretty(i.value)}</h2><p>{i.answer_count} published {i.answer_count===1?'answer':'answers'}</p><span class="ask-read">Explore questions →</span></a>)}</div>:groupNames.map(group=><section class="ask-answer-group" id={topicGroupId(data.items.find(i=>(i.cluster_label||'Questions to explore')===group)?.cluster_key||'questions')}><h2>{group}</h2><AnswerCards items={data.items.filter(i=>(i.cluster_label||'Questions to explore')===group)}/></section>):<div class="ask-empty"><h2>No published answers in this view yet.</h2><p>Try a different topic or search for your question.</p><a class="ask-button" href={ASK+'/search'}>Search Ask</a>{lang==='te'&&<p><a href={canonical.replace('/ask/te/','/ask/')}>Explore this topic in English →</a></p>}</div>}
  <nav class="ask-pagination" aria-label="Result pages">{page>1&&<a rel="prev" href={nextURL(page-1)}>← Previous</a>}{data.has_more&&<a rel="next" href={nextURL(page+1)}>Next page →</a>}</nav>
