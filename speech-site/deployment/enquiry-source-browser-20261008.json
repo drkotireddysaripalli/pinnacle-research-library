@@ -1,0 +1,101 @@
+{
+  "at": "2026-10-08T04:56:11.398Z",
+  "testOnly": true,
+  "passed": true,
+  "isolation": "All public documents and API responses intercepted locally; actual SQLite ledger only",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "cases": [
+    {
+      "case": "accepted",
+      "requestId": "08662e2c-64a4-41bd-976b-69cccf368d70",
+      "receiptId": "a56a3b9f-2b02-44eb-9a06-6ccf203486d8",
+      "ledgerState": "accepted",
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india",
+        "contract": "website_enrolment_v1",
+        "acquisition": {
+          "schemaVersion": 1,
+          "consent": "analytics_accepted",
+          "capturedAt": 1791435357950,
+          "landingPath": "/top-speech-therapy-center-india-proven-improvement-rate",
+          "fields": {
+            "utm_source": "google",
+            "utm_medium": "cpc",
+            "utm_campaign": "ISOLATED-QA-BROWSER",
+            "gclid": "qaSourceBrowser123"
+          }
+        }
+      },
+      "submissions": 1,
+      "handoffs": 1,
+      "acceptedEvents": 1,
+      "reloadReposts": 0,
+      "reloadAcceptedEvents": 0
+    },
+    {
+      "case": "declined",
+      "requestId": "89a8812c-6786-4057-baf2-a2a8e6ed86dc",
+      "receiptId": "71e8eb59-c9c8-4d67-8ec4-c8b253f896ce",
+      "ledgerState": "accepted",
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india",
+        "contract": "website_enrolment_v1"
+      },
+      "submissions": 1,
+      "handoffs": 1,
+      "acceptedEvents": 0,
+      "reloadReposts": 0,
+      "reloadAcceptedEvents": 0
+    },
+    {
+      "case": "unknown",
+      "requestId": "6b81af43-5288-44c8-9a10-9326d57f7f0b",
+      "receiptId": "dc73ecaf-0b63-4445-90bf-ff31e584d131",
+      "ledgerState": "uncertain",
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india",
+        "contract": "website_enrolment_v1",
+        "acquisition": {
+          "schemaVersion": 1,
+          "consent": "analytics_accepted",
+          "capturedAt": 1791435365052,
+          "landingPath": "/top-speech-therapy-center-india-proven-improvement-rate",
+          "fields": {
+            "utm_source": "google",
+            "utm_medium": "cpc",
+            "utm_campaign": "ISOLATED-QA-BROWSER",
+            "gclid": "qaSourceBrowser123"
+          }
+        }
+      },
+      "submissions": 1,
+      "handoffs": 1,
+      "acceptedEvents": 0,
+      "reloadReposts": 0,
+      "reloadAcceptedEvents": 0
+    },
+    {
+      "case": "validation",
+      "requestId": "bb68c626-79f8-43ad-9e04-e5ca15a51bbc",
+      "receiptId": "e0cf9194-e04c-4e5e-983a-f75fc5dc25c0",
+      "ledgerState": "accepted",
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india",
+        "contract": "website_enrolment_v1"
+      },
+      "submissions": 1,
+      "handoffs": 1,
+      "acceptedEvents": 0,
+      "reloadReposts": 0,
+      "reloadAcceptedEvents": 0
+    }
+  ],
+  "isolatedHandoffs": 4,
+  "actualGoogleHits": 0,
+  "actualContacts": 0,
+  "productionEnquiries": 0,
+  "vendorRequestsBlocked": 8
+}

@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-08T05:16:15.975Z",
+  "passed": true,
+  "mode": "Read-only labelled QA page; GET only; external traffic blocked",
+  "source": "3b699ac26ab20d64743b56df78e1b45546b79463",
+  "portalVersion": "1c0cb464-faac-4bed-9a3b-3d7d5edc617e",
+  "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?service=speech&centre=suchitra&validation_test=enquiry-source-20261008",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "actual": {
+    "service": "speech",
+    "centre": "suchitra",
+    "sourceReader": "function",
+    "source": null,
+    "version": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/enrolment.js?v=source-20261008",
+    "events": 0
+  },
+  "errors": [],
+  "failedScripts": [],
+  "externalBlocked": 1,
+  "submissions": 0,
+  "calls": 0,
+  "actualGoogleHits": 0
+}
