@@ -27,7 +27,7 @@ export function repairAssessmentSchema(text,canonical){
 }
 export function repairMerchantDiscovery(request,response){
   const u=new URL(request.url);
-  if(u.hostname!=='www.pinnacleblooms.org'||request.method!=='GET'||response.status!==200||!response.headers.get('content-type')?.includes('text/html')||request.headers.has('authorization')||response.headers.has('set-cookie')||/private|no-store/i.test(response.headers.get('cache-control')||''))return response;
+  if(u.hostname!=='www.pinnacleblooms.org'||request.method!=='GET'||response.status!==200||!response.headers.get('content-type')?.includes('text/html')||request.headers.has('authorization')||(!commercePath(u.pathname)&&(response.headers.has('set-cookie')||/private|no-store/i.test(response.headers.get('cache-control')||''))))return response;
   const headers=new Headers(response.headers);headers.delete('etag');headers.delete('last-modified');headers.delete('content-length');headers.set('x-pinnacle-merchant-source','20261008');
   response=new Response(response.body,{status:response.status,statusText:response.statusText,headers});
   if(commercePath(u.pathname)){

@@ -38,14 +38,16 @@ test('null nodes and unsafe unrelated numbers preserve public HTML safely',()=>{
 test('unknown identities, plain book graphs and malformed JSON are unchanged',()=>{
  for(const source of [graph([product]),graph([{...assessment,'@id':origin+'/other#assessment'}]),graph([{...assessment,brand:{'@id':'https://other.example/#brand'}}]),'not json'])assert.equal(repairAssessmentSchema(source,canonical),source);
 });
-const bundle=await build({stdin:{contents:`import {repairMerchantDiscovery} from './deployment/merchant-policy-handler.mjs';export default {async fetch(request){return repairMerchantDiscovery(new Request(request.url,{method:request.headers.get('x-method')||'GET'}),new Response(await request.text(),{headers:{'content-type':'text/html'}}));}}`,resolveDir:process.cwd()},bundle:true,format:'esm',write:false});
+const bundle=await build({stdin:{contents:`import {repairMerchantDiscovery} from './deployment/merchant-policy-handler.mjs';export default {async fetch(request){return repairMerchantDiscovery(new Request(request.url,{method:request.headers.get('x-method')||'GET'}),new Response(await request.text(),{headers:{'content-type':'text/html',...(request.headers.has('x-private')?{'cache-control':'private, no-store','set-cookie':'session=fixture'}:{})}}));}}`,resolveDir:process.cwd()},bundle:true,format:'esm',write:false});
 const runtime=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-04',script:bundle.outputFiles[0].text}));
 after(()=>runtime.dispose());
-async function rewrite(path,html,method='GET'){return (await runtime.dispatchFetch(origin+path,{method:'POST',body:html,headers:{'x-method':method}})).text();}
+async function rewrite(path,html,method='GET',privateResponse=false){return (await runtime.dispatchFetch(origin+path,{method:'POST',body:html,headers:{'x-method':method,...(privateResponse?{'x-private':'1'}:{})}})).text();}
 test('runtime changes only book body policy links and keeps clinic footer and product offers',async()=>{
  const html='<main><a href="/refund-policy">Refund</a><script type="application/ld+json">'+graph([product])+'</script></main><footer><a href="/refund-policy">Clinic policy</a></footer>';
  const out=await rewrite('/books/test',html);assert(out.includes('<a href="'+bookPolicyPath+'">Refund</a>'));assert(out.includes('<footer><a href="/refund-policy">Clinic policy</a></footer>'));assert(out.includes(graph([product])));
  assert.equal(await rewrite('/refund-policy',html),html);assert.equal(await rewrite('/books/test',html,'POST'),html);
+ const privateBook=await rewrite('/books/test',html,'GET',true);assert(privateBook.includes('<a href="'+bookPolicyPath+'">Refund</a>'));
+ const privateResponse=await runtime.dispatchFetch(origin+'/books/test',{method:'POST',body:html,headers:{'x-private':'1'}});assert.equal(privateResponse.headers.get('cache-control'),'private, no-store');assert.equal(privateResponse.headers.get('set-cookie'),'session=fixture');
 });
 test('runtime assessment removal keeps visible offer and all unrelated schema',async()=>{
  const html='<main>FREE speech assessment<script type="application/ld+json">'+graph([assessment,product])+'</script></main>';
