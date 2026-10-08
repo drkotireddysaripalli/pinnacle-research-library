@@ -1,4 +1,4 @@
-import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=receipt-20261007';
+import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=source-20261008';
 const form=document.getElementById('pinnacle-enrolment');
 if(form){
  const preview=form.dataset.preview==='true',endpoint=form.dataset.apiEndpoint;
@@ -54,14 +54,15 @@ if(form){
   // A second tab rechecks the same metadata while holding the origin's Web Lock.
   // A reload turns pending into uncertain and never automatically sends again.
   if(restoreAttempt())return;
-  const payload=makePayload(data,crypto.randomUUID()),attempt={schemaVersion:1,requestId:payload.requestId,state:'pending',createdAt:Date.now()};
+  let acquisition;try{acquisition=window.pinnacleEnquirySource?.();}catch{}
+  const payload=makePayload(data,crypto.randomUUID(),acquisition),attempt={schemaVersion:1,requestId:payload.requestId,state:'pending',createdAt:Date.now()};
   try{attemptStore.write(attempt);}catch{uncertain=true;status.textContent='We could not safely save the request confirmation on this device. Please call 9100 181 181.';setBusy(false);return;}
   setBusy(true);status.textContent='Sending your request…';
-  const result=await submitEnrolment(endpoint,payload,{origin:location.origin});
+  const result=await submitEnrolment(endpoint,payload,{origin:location.origin,receiptRequired:true});
   if(result.state==='accepted'){
    // Persist before emitting. Reloading a receipt never re-emits the GA4 event.
    try{attemptStore.write({...attempt,state:'accepted',receipt:result.receipt,contractVersion:result.contractVersion});}catch{}
-   showAccepted();document.dispatchEvent(new Event('pinnacle:enquiry-accepted'));
+   showAccepted();document.dispatchEvent(new CustomEvent('pinnacle:enquiry-accepted',{detail:{receipt:result.receipt}}));
   }
   else if(result.state==='rejected'){
    try{attemptStore.clear();}catch{uncertain=true;}

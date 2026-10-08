@@ -24,6 +24,21 @@ test('receipt source is fixed; version/header/source conflicts never hand off',a
  }
  assert.equal(parseReceiptEnrolment(body,'different-key'),null);
 });
+test('protected acquisition survives adapter and atomic ledger; same-key retries keep first source',async()=>{
+ const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:'QA-SOURCE-ONLY',gclid:'qaClickSource123'}};
+ const p={...publicPayload,source:{...publicPayload.source,acquisition}};let sent;
+ const f=fixtureLedger();let calls=0;
+ try{
+  const env=rpcEnv(async(data,key)=>{sent=data;return receiveReceiptEnrolment(data,{idempotencyKey:key,ledger:f.ledger,handoff:async()=>{calls++;return 'qa_fixture_v1:only';}});});
+  const send=data=>serveEnrolmentApi(new Request(origin+endpoint,{method:'POST',headers:{origin,'content-type':'application/json','idempotency-key':p.requestId},body:JSON.stringify(data)}),env);
+  const answer=await (await send(p)).json();assert.equal(answer.status,'accepted');assert.equal(answer.receipt.requestId,p.requestId);assert.deepEqual(sent.WebsiteReceipt.source.acquisition,acquisition);
+  const source=JSON.parse(f.db.prepare('SELECT source_json FROM website_enrolment_receipts').get().source_json);assert.deepEqual(source.acquisition,acquisition);
+  const changed={...p,source:{...p.source,acquisition:{...acquisition,fields:{utm_source:'bing'}}}};assert.equal((await (await send(changed)).json()).receipt.id,answer.receipt.id);assert.equal(calls,1);assert.deepEqual(JSON.parse(f.db.prepare('SELECT source_json FROM website_enrolment_receipts').get().source_json),source);
+  assert(!JSON.stringify(answer).includes('gclid'));assert(!JSON.stringify(source).includes('ISOLATED QA FIXTURE'));
+  for(const invalid of [{...acquisition,landingPath:'/ask/private-child-topic'},{...acquisition,consent:'denied'},{...acquisition,fields:{email:'qa@example.com'}},{...acquisition,fields:{utm_campaign:'my child name'}},{...acquisition,rawUrl:'private'}])assert.equal((await send({...p,source:{...p.source,acquisition:invalid}})).status,422);
+ }finally{f.close();}
+});
+
 test('canonical hash covers every legacy handoff field and survives object property order',async()=>{
  const legacy=toLegacyEnrolment(publicPayload),reversed=Object.fromEntries(Object.entries(legacy).reverse());assert.equal(await payloadDigest(legacy),await payloadDigest(reversed));
  for(const field of ['Name','MobileNumber','EmailId','Message','Title'])assert.notEqual(await payloadDigest(legacy),await payloadDigest({...legacy,[field]:legacy[field]+' changed'}));

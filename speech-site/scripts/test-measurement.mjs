@@ -21,17 +21,35 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
  }
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,storageThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
+function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
  const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>listeners[event]=fn};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
- const store=new Map(saved?[[key,JSON.stringify(saved)]]:[]);
+ const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
- vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);}},Date,Set,JSON,URL});
- return {win,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:()=>listeners['pinnacle:enquiry-accepted']?.(),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL});
+ return {win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href)=>listeners.click({target:{closest:()=>({dataset:{cta:placement},getAttribute:()=>href})}}),commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
+
+test('consented source survives an untagged centre/form/direct journey; withdrawal clears it',()=>{
+ const first=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=QA-PINNACLE&gclid=qaClickAbc123&child_name=excluded'});
+ assert.equal(first.win.pinnacleEnquirySource(),null);assert.equal(first.store.has('pinnacle-enquiry-source-v1'),false);
+ first.choose('accepted');const acquisition=first.win.pinnacleEnquirySource();assert.equal(acquisition.fields.gclid,'qaClickAbc123');assert.equal(acquisition.fields.utm_campaign,'QA-PINNACLE');assert(!JSON.stringify(acquisition).includes('child_name'));
+ const centre=harness({path:'/centers',search:'',sharedStore:first.store});assert.deepEqual(JSON.parse(JSON.stringify(centre.win.pinnacleEnquirySource())),JSON.parse(JSON.stringify(acquisition)));
+ const form=harness({path:canonicalEnrolment,search:'',sharedStore:first.store});assert.equal(form.win.pinnacleEnquirySource().fields.gclid,'qaClickAbc123');form.choose('declined');assert.equal(form.win.pinnacleEnquirySource(),null);assert.equal(first.store.has('pinnacle-enquiry-source-v1'),false);
+});
+test('invalid, expired, GPC, unconsented and labelled validation sources cannot accompany an enquiry',()=>{
+ const h=harness({search:'?gclid=qaValidClick'});h.choose('accepted');const saved=JSON.parse(h.store.get('pinnacle-enquiry-source-v1'));saved.capturedAt=Date.now()-31*86400000;h.store.set('pinnacle-enquiry-source-v1',JSON.stringify(saved));assert.equal(h.win.pinnacleEnquirySource(),null);
+ for(const opts of [{gpc:true},{search:'?gclid=qaValidClick&validation_test=1'}]){const f=harness(opts);f.choose('accepted');assert.equal(f.win.pinnacleEnquirySource(),null);assert.equal(f.events().length,0);assert.equal(f.scripts.length,0);}
+});
+test('acceptance requires a minimal receipt; duplicates, private references and legacy envelopes are silent',()=>{
+ const h=harness({path:canonicalEnrolment});h.choose('accepted');
+ for(const invalid of [null,{}, {schemaVersion:0},{schemaVersion:1,requestId:'short',id:'qa-receipt'}, {schemaVersion:1,requestId:'qa-request',id:'qa-receipt',leadReference:'protected'}])h.accepted(invalid);
+ assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,0);h.accepted();h.accepted();h.accepted({schemaVersion:1,requestId:'qa-different-request',id:'qa-other-receipt'});assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,2);
+ assert(!JSON.stringify(h.events()).includes('qa-event-request'));
+});
 test('book identity spans sibling routes and withdrawal clears its root cookies only',()=>{
  const commerceCatalogue={'PBN-SP-101-EN-PDF':{title:'My Message Matters',path:'/books/speech-communication-101-my-message-matters',price:799}};
  for(const path of ['/shop','/books','/books/te','/books/speech-communication-101-my-message-matters']){

@@ -126,6 +126,10 @@
   if (isAsk) routes.add('/ask');
   if (knowledgePath) routes.add('/'+knowledgePath);
   const blocked = navigator.globalPrivacyControl === true;
+  let validationTraffic = new URL(location.href).searchParams.has('validation_test');
+  // Keep an explicitly labelled QA journey out of live totals after its query
+  // disappears during navigation. This tab-only flag contains no URL or user ID.
+  try{if(validationTraffic)sessionStorage.setItem('pinnacle-validation-v1',String(Date.now()));else{const at=Number(sessionStorage.getItem('pinnacle-validation-v1'));validationTraffic=at>0&&at<=Date.now()&&Date.now()-at<86400000;}}catch{}
   const callPlacements = new Set(['knowledge-call','ask-call','ask-answer-call','header-call','hero-call','centre-call','final-call','footer-call','mobile-call','directory-national-call','centre-national-call','centre-enquiry','ot-hero-call','ot-first-call','ot-final-call','aba-first-call','aba-final-call','autism-first-call','family-journey-call','example-call','pinnacleai-call','pinnacleai-close-call']);
   const enquiryPlacements = new Set(['knowledge-enrol','header-enrol','hero-assessment','early-assessment','visit-enquiry','final-enquiry','final-assessment','mobile-assessment','centre-enquiry','ot-final-enrol','aba-final-enrol','autism-first-enquiry']);
   const occupationalNavigation = new Set(['ot-hero-centres','ot-final-centres']);
@@ -134,11 +138,34 @@
   // Dated, verified form choices. Tests require this list to match centre-directory.json.
   const centreIds = ["suchitra","gurunanak","jayanagar","annanagar","delhi","warangal","asraonagar","ananthapuram","attapur","bnreddynagar","begumpet","bhimavaram","chandanagar","dilsukhnagar","eastmarredpally","eluru","gachibowli","guntur","habsiguda","hayathnagar","himayatnagar","madhapur","hydernagar","indiranagar","jublieehills","kachiguda","kadapa","kakinada","karimnagar","khajaguda","khammam","kondapur","kukatpally","kurnool","lbnagar","labbipet","mvp","madhurawada","mahbubnagar","marathahalli","miryalaguda","nad","nallagandla","nandyala","nellore","nizamabad","nizampet","ongole","pragathinagar","rajahmundry","srnagar","santoshnagar","srikakulam","suchitraii","tirupati","uppal","vanasthalipuram","vidyanagar","vikrampuri"];
   let enabled = false, loaded = false;
+  const sourceKey='pinnacle-enquiry-source-v1',sourceLifetime=30*86400000;
+  const acquisitionPath=new URL(canonical).pathname;
+  const acquisitionPaths=new Set(['/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
+  if(disclosure&&!isBookshop)disclosure.textContent+=' With permission, a validated campaign record can stay on this device for up to 30 days and accompany your enquiry into our protected receiving system. Turning analytics off removes this optional device record.';
+  const forgetSource=()=>{try{localStorage.removeItem(sourceKey);}catch{}};
+  const readSource=()=>{
+    try{
+      const saved=JSON.parse(localStorage.getItem(sourceKey));
+      if(!saved||saved.schemaVersion!==1||saved.consent!=='analytics_accepted'||!Number.isSafeInteger(saved.capturedAt)||saved.capturedAt>Date.now()||Date.now()-saved.capturedAt>sourceLifetime||!acquisitionPaths.has(saved.landingPath))return null;
+      const fields={};for(const [field,value]of Object.entries(saved.fields||{})){if(![...campaignKeys,...clickKeys].includes(field)||safeAttribution(value,clickKeys.includes(field))!==value)return null;fields[field]=value;}
+      if(!Object.keys(fields).length)return null;
+      return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields};
+    }catch{return null;}
+  };
+  const rememberSource=()=>{
+    if(!production||blocked||knowledgeSearch||isBookshop||validationTraffic||!acquisitionPaths.has(acquisitionPath))return;
+    const fields=Object.fromEntries(measurementURL.searchParams);
+    // A direct return retains the last permitted campaign instead of erasing it.
+    if(!Object.keys(fields).length)return;
+    try{localStorage.setItem(sourceKey,JSON.stringify({schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:acquisitionPath,fields}));}catch{}
+  };
+  // Form submission must still work when measurement is declined or unavailable.
+  window.pinnacleEnquirySource=()=>production&&enabled&&!blocked&&!knowledgeSearch&&!isBookshop&&!validationTraffic?readSource():null;
   // The cart asks at navigation time, so withdrawal also stops a pending handoff.
   if (isBookshop) window.pinnacleBookAnalyticsAllowed = () => production && enabled && !navigator.globalPrivacyControl;
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {
-    if (!production || !enabled || blocked || knowledgeSearch) return;
+    if (!production || !enabled || blocked || knowledgeSearch || validationTraffic) return;
     try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
   };
   const commerceNames = new Set(['view_item','view_cart','add_to_cart','remove_from_cart','begin_checkout']);
@@ -171,6 +198,8 @@
   const start = () => {
     if (!production || blocked || knowledgeSearch) return;
     enabled = true;
+    rememberSource();
+    if(validationTraffic)return;
     window['ga-disable-' + id] = false;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
@@ -206,6 +235,7 @@
       catch { enabled=false; tell('Analytics is unavailable. Your enquiry and call links still work.'); }
     } else {
       enabled=false;window['ga-disable-'+id]=true;
+      if(!isBookshop)forgetSource();
       if (loaded) { try { window.gtag('consent','update',{analytics_storage:'denied'}); } catch {} }
       clearCookies();
       tell(knowledgeSearch ? 'Your choice is saved. Analytics is disabled on search result pages.' : blocked ? 'Analytics is off because Global Privacy Control is enabled.' : 'Optional analytics is off. Your enquiry and call links still work.');
@@ -223,10 +253,12 @@
     if (saved && Number.isFinite(saved.at) && saved.at<=Date.now() && Date.now()-saved.at<lifetime) choose(saved.value, false);
   }
   // Fixed event vocabulary only; arbitrary query values and form data are excluded.
-  let acceptanceRecorded = false;
-  document.addEventListener('pinnacle:enquiry-accepted', () => {
-    if (pageGroup !== 'enrolment' || acceptanceRecorded || !production || !enabled || blocked) return;
-    acceptanceRecorded = true;
+  const acceptedRequests=window.__pinnacleAcceptedRequests||(window.__pinnacleAcceptedRequests=new Set());
+  document.addEventListener('pinnacle:enquiry-accepted', event => {
+    const receipt=event?.detail?.receipt;
+    if(!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k)))return;
+    if (pageGroup !== 'enrolment' || acceptedRequests.has(receipt.requestId) || !production || !enabled || blocked || validationTraffic) return;
+    acceptedRequests.add(receipt.requestId);
     send('enquiry_accepted',{schema_version:2,page_group:'enrolment',destination:'existing_enrolment_workflow'});
   });
   document.addEventListener('click',event=>{

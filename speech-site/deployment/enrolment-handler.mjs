@@ -1,5 +1,6 @@
 import {centreFacilities} from './centre-facilities.mjs';
 import {toReceiptEnrolment,validReceiptEnvelope} from './enrolment-receipt.mjs';
+import {validPublicEnrolmentSource} from '../public/pinnacle-pages-scripts/enrolment-source.mjs';
 
 export const ENROLMENT_API_PATH='/api/enrolment';
 export const ENROLMENT_UPSTREAM='https://mirracle.pinnacleblooms.org/api/gl/swfs';
@@ -44,7 +45,7 @@ export function validatePublicEnrolment(body){
  if(!contact||typeof contact.name!=='string'||!contact.name.trim()||contact.name.trim().length>100||!validPhone(contact.phone)||!validEmail(contact.email))return false;
  if(!preferences||!Object.hasOwn(SERVICE_MAP,preferences.service)||typeof preferences.centre!=='string')return false;
  if(preferences.centre&&!Object.hasOwn(centreFacilities,preferences.centre)&&!Object.hasOwn(CENTRE_WITHOUT_LEGACY_ID,preferences.centre))return false;
- return typeof body.message==='string'&&body.message.length<=500&&body.source?.page==='/enroll-autism-speech-aba-therapies-india';
+ return typeof body.message==='string'&&body.message.length<=500&&validPublicEnrolmentSource(body.source);
 }
 
 export function toLegacyEnrolment(body){
@@ -106,7 +107,7 @@ export async function serveEnrolmentApi(request,env,{fetchImpl=fetch,timeoutMs=1
    // A named service-binding RPC entrypoint has no public URL. Protected join
    // keys must never be returned by the legacy public /api/gl/swfs route.
    const result=await Promise.race([
-    env.PINNACLE_ENROLMENT_RECEIPTS.receive(toReceiptEnrolment(legacy,body.requestId),body.requestId),
+    env.PINNACLE_ENROLMENT_RECEIPTS.receive(toReceiptEnrolment(legacy,body.requestId,body.source),body.requestId),
     new Promise((_,reject)=>controller.signal.addEventListener('abort',()=>reject(new Error('receipt-timeout')),{once:true}))
    ]);
    upstream=new Response(JSON.stringify(result),{status:result?.httpStatus||503});

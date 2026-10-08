@@ -5,7 +5,8 @@ const path='/enroll-autism-speech-aba-therapies-india';
 // No customer request reaches a server: intercepted responses exercise the UI contract.
 test.beforeEach(async({page,context})=>{
  // Exercise this source revision while the owner performs the single final build.
- for(const file of ['enrolment.js','enrolment-api.mjs'])await context.route('**/pinnacle-pages-scripts/'+file,route=>route.fulfill({contentType:'text/javascript; charset=utf-8',body:fs.readFileSync('public/pinnacle-pages-scripts/'+file,'utf8')}));
+ for(const file of ['enrolment.js','enrolment-api.mjs','enrolment-source.mjs'])await context.route(new RegExp('/pinnacle-pages-scripts/'+file.replaceAll('.','\\.')+'(?:\\?|$)'),route=>route.fulfill({contentType:'text/javascript; charset=utf-8',body:fs.readFileSync('public/pinnacle-pages-scripts/'+file,'utf8')}));
+ await context.route(/google-analytics|googletagmanager|doubleclick|googleadservices|aseasky/,r=>r.abort());
  await page.route('**/api/enrolment',r=>r.abort('blockedbyclient'));
 });
 test('each supported service survives an incoming enquiry link, with centre choice',async({page})=>{

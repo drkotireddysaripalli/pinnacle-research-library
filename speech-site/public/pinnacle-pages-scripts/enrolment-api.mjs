@@ -1,5 +1,6 @@
 // Public form contract. Cloudflare translates this deliberately small envelope
 // to the existing PinnacleAI enrolment workflow without exposing that service.
+import {normaliseAcquisition} from './enrolment-source.mjs?v=source-20261008';
 export const services = new Set(['help','autism','speech','occupational','aba','education','other']);
 export function validateEnrolment(values, centreIds) {
  const errors={};
@@ -13,8 +14,9 @@ export function validateEnrolment(values, centreIds) {
  if(typeof values.message!=='string'||values.message.length>500)errors.message='Keep your note to 500 characters or fewer.';
  return errors;
 }
-export function makePayload(values, requestId) {
- return {schemaVersion:1,requestId,contact:{name:values.name.trim(),phone:values.phone.trim(),email:values.email.trim()},preferences:{service:values.service,centre:values.centre},message:values.message.trim(),source:{page:'/enroll-autism-speech-aba-therapies-india'}};
+export function makePayload(values, requestId, acquisition) {
+ const permitted=normaliseAcquisition(acquisition);
+ return {schemaVersion:1,requestId,contact:{name:values.name.trim(),phone:values.phone.trim(),email:values.email.trim()},preferences:{service:values.service,centre:values.centre},message:values.message.trim(),source:{page:'/enroll-autism-speech-aba-therapies-india',...(permitted?{acquisition:permitted}:{})}};
 }
 export function approvedEndpoint(endpoint, origin) {
  if(typeof endpoint!=='string'||!endpoint)return null;

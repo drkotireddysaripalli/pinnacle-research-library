@@ -10,7 +10,8 @@ export async function verifyMysqlReceiptContract(execute,runId){
  const checks=[];const check=(name,condition)=>{if(!condition)throw Error('Isolated contract failed: '+name);checks.push(name);};
  let handoffs=0;
  const lead={FormType:'Enroll',Name:'ISOLATED QA FIXTURE',MobileNumber:'+91 00000 00000',Message:'',EmailId:'',Services:['Speech Therapy'],FacilityIds:[''],Title:'Mx',Languages:['English']};
- const body=suffix=>toReceiptEnrolment(lead,'qa-'+runId+'-'+suffix);
+ const acquisition={schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:'/centers',fields:{utm_source:'google',utm_medium:'cpc',utm_campaign:'ISOLATED-QA-SOURCE',gclid:'qaSourceFixtureAbc123'}};
+ const body=suffix=>toReceiptEnrolment(lead,'qa-'+runId+'-'+suffix,{acquisition});
  async function handoff(key,data){
   handoffs++;const id=crypto.randomUUID(),digest=await payloadDigest(data);
   await execute('INSERT INTO website_enrolment_qa_intakes (id,request_key,payload_digest) VALUES (?,?,?)',[id,key,digest]);
@@ -23,6 +24,12 @@ export async function verifyMysqlReceiptContract(execute,runId){
  check('ten concurrent attempts perform one isolated committed handoff',handoffs===1&&concurrent.some(x=>x.status==='accepted'));
  const accepted=await receive(first),reused=await receive(first);
  check('accepted receipt read-back and reload retry preserve receipt',accepted.status==='accepted'&&reused.receipt.id===accepted.receipt.id&&handoffs===1);
+ const row=(await execute('SELECT request_key,state,receipt_id,source_json FROM website_enrolment_receipts_qa WHERE request_key=? LIMIT 1',[first.WebsiteReceipt.requestId])).rows?.[0];
+ const saved=typeof row?.source_json==='string'?JSON.parse(row.source_json):row?.source_json;
+ check('same opaque request ID retains consented paid source in authoritative isolated MySQL receipt',row?.request_key===first.WebsiteReceipt.requestId&&row?.state==='accepted'&&row?.receipt_id===accepted.receipt.id&&JSON.stringify(saved?.acquisition)===JSON.stringify(acquisition));
+ const altered=structuredClone(first);altered.WebsiteReceipt.source.acquisition.fields.utm_source='bing';await receive(altered);
+ const retained=(await execute('SELECT source_json FROM website_enrolment_receipts_qa WHERE request_key=? LIMIT 1',[first.WebsiteReceipt.requestId])).rows?.[0];
+ check('same-key retries cannot overwrite first claimed source',JSON.stringify(retained?.source_json)===JSON.stringify(row.source_json)&&handoffs===1);
  const conflict=await receive({...first,Name:'CHANGED QA FIXTURE'});
  check('same key with changed payload rejected before intake',conflict.httpStatus===409&&handoffs===1);
  const uncertain=body('uncertain'),before=handoffs;
@@ -38,5 +45,5 @@ export async function verifyMysqlReceiptContract(execute,runId){
  check('failed receipt commit remains uncertain and cannot repost',failedResponse.status==='unknown'&&failedRetry.status==='unknown'&&handoffs===afterFailed);
  const count=await execute('SELECT COUNT(*) AS total FROM website_enrolment_qa_intakes WHERE request_key LIKE ?',['qa-'+runId+'-%']);
  check('actual isolated MySQL intake count matches four unique handoffs',Number(count.rows?.[0]?.total)===4&&handoffs===4);
- return {testOnly:true,runId,productionTableReady:true,storage:'existing MySQL, isolated QA tables',privateRpc:true,checks,passed:checks.length,isolatedIntakes:4,customerIntakes:0,notifications:0,privateReferencesReturned:false};
+ return {testOnly:true,runId,productionTableReady:true,storage:'existing MySQL, isolated QA tables',privateRpc:true,checks,passed:checks.length,isolatedIntakes:4,customerIntakes:0,notifications:0,privateReferencesReturned:false,sourceTrace:{requestId:first.WebsiteReceipt.requestId,receiptId:accepted.receipt.id,state:row.state,source:saved}};
 }
