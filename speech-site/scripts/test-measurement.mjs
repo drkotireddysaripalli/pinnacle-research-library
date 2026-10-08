@@ -21,11 +21,11 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
  }
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
+function harness({callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
- const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
+ const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>scripts.push(x)},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
  const win={};
@@ -443,4 +443,18 @@ test('Knowledge campaign handoff requires consent and withdrawal restores the or
  for(const options of [{origin:'https://pinnacleblooms.org',path:'/ask/private-topic',variant:'ask'},{path:'/faq/english/speech-therapy',variant:'knowledge'},{path:'/mirracles/123/private-title',variant:'knowledge'}]){
  const h=harness({...options,search:'?utm_source=google&utm_medium=cpc&gclid=qaClickAbc123'});assert.equal(h.click('knowledge-enrol',destination).href,destination);h.choose('accepted');const link=h.click('knowledge-enrol',destination);assert.equal(new URL(link.href).searchParams.get('gclid'),'qaClickAbc123');assert.equal(new URL(link.href).searchParams.get('service'),'speech');assert.equal(h.events().filter(e=>e[1]==='enquiry_link_click').length,1);assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,0);assert(!JSON.stringify(h.events()).includes('private-topic'));h.choose('declined');assert.equal(link.href,destination);assert.equal(h.click('knowledge-enrol',destination).href,destination);
  }
+});
+
+
+test('approved inline callback receipts emit once and respect refusal, GPC and absent contract',()=>{
+ for(const path of ['/centers','/speech-therapy/service-information']){
+  const h=harness({path,callback:true,search:''});h.accepted();assert.equal(h.events().length,0);h.choose('accepted');h.accepted();h.accepted();assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,1);
+  assert(!JSON.stringify(h.events()).includes('qa-event-request'));h.choose('declined');h.accepted({schemaVersion:1,requestId:'qa-second-request',id:'qa-second-receipt'});assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,1);
+  for(const options of [{callback:false},{callback:true,gpc:true},{callback:true,search:'?validation_test=1'},{callback:true,origin:'http://127.0.0.1:4340'}]){const b=harness({path,...options});b.choose('accepted');b.accepted();assert.equal(b.events().filter(e=>e[1]==='enquiry_accepted').length,0);}
+ }
+});
+test('fresh speech-info source uses the permitted speech family and exact call placements',()=>{
+ const h=harness({path:'/speech-therapy/service-information',callback:true,search:'?utm_source=google&utm_medium=cpc&utm_campaign=QA-SPEECH-INFO&gclid=qaSpeechInfo123'});h.choose('accepted');
+ const a=h.win.pinnacleEnquirySource();assert.equal(a.landingPath,'/top-speech-therapy-center-india-proven-improvement-rate');assert.equal(a.fields.gclid,'qaSpeechInfo123');
+ h.click('callback-call','tel:+919100181181');h.click('hero-call','tel:+919100181181');assert.equal(h.events().filter(e=>e[1]==='phone_link_click').length,2);h.choose('declined');h.click('callback-call','tel:+919100181181');assert.equal(h.events().filter(e=>e[1]==='phone_link_click').length,2);assert.equal(h.win.pinnacleEnquirySource(),null);
 });

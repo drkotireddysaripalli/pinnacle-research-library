@@ -8,6 +8,8 @@ if(form){
  const centreIds=new Set([...centre.options].map(o=>o.value));
  const centreCard=document.getElementById('enrol-centre-card'),centreAnnouncement=document.getElementById('enrol-centre-announcement');
  function renderCentre(announce=false){
+  const selection=document.getElementById('callback-selection');
+  if(selection){const service=form.querySelector('[name="service"]:checked');selection.textContent=(service?.closest('label')?.textContent.trim()||'Help me choose')+' · '+centre.options[centre.selectedIndex].textContent;}
   if(!centreCard)return;
   const template=[...document.querySelectorAll('template[data-enrol-centre]')].find(t=>t.dataset.enrolCentre===centre.value);
   centreCard.replaceChildren();centreCard.hidden=!template;
@@ -89,10 +91,10 @@ if(form){
   restoreAttempt();setBusy(false);
   document.getElementById('enrol-unavailable').hidden=true;
   const params=new URLSearchParams(location.search),explicit=params.get('service'),entrySpeech=params.get('entry')==='speech-assessment',explicitService=services.has(explicit);
-  const selected=explicitService?explicit:entrySpeech?'speech':'help';
+  const selected=explicitService?explicit:entrySpeech?'speech':services.has(form.dataset.defaultService)?form.dataset.defaultService:'help';
   const option=form.querySelector('input[name="service"][value="'+selected+'"]');if(option)option.checked=true;
-  const preferred=params.get('centre'),explicitCentre=preferred&&centreIds.has(preferred);if(explicitCentre)centre.value=preferred;
-  if(preferences&&(explicitService||entrySpeech||explicitCentre))preferences.open=true;
+  const preferred=params.has('centre')?params.get('centre'):form.dataset.defaultCentre;if(centreIds.has(preferred))centre.value=preferred;
+  if(preferences&&(explicitService||entrySpeech||params.has('centre')))preferences.open=true;
   const offer=document.getElementById('enrol-speech-offer'),heading=document.getElementById('request-title'),intro=document.querySelector('.enrol-form-intro');
   const defaultHeading=heading?.innerHTML,defaultIntro=intro?.textContent,defaultAction=button.textContent;
   function renderOffer(){
@@ -102,7 +104,7 @@ if(form){
    if(intro)intro.textContent=active?'Your name and number are enough. The team will confirm your speech and language assessment appointment with you.':defaultIntro;
    if(!finished&&!pending&&!uncertain)button.textContent=active?(preview?'Check form preview':'Request my FREE speech assessment'):defaultAction;
   }
-  form.querySelectorAll('[name="service"]').forEach(option=>option.addEventListener('change',renderOffer));
+  form.querySelectorAll('[name="service"]').forEach(option=>option.addEventListener('change',()=>{renderOffer();renderCentre();}));
   renderOffer();
   renderCentre();
  }

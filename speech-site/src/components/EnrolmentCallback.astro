@@ -1,0 +1,33 @@
+---
+import Icon from './Icon.astro';
+import centres from '../data/centre-directory.json';
+import {phone,url} from '../data/site';
+interface Props { centre?:string; service?:string; location?:string; }
+const {centre='',service='help',location='your preferred centre'}=Astro.props;
+const choices=[['help','Help me choose'],['speech','Speech & language'],['occupational','Occupational therapy'],['aba','ABA / behavioural support'],['education','Special education'],['autism','Autism / integrated support'],['other','Another service']];
+---
+<section class="callback wrap" id="callback" aria-labelledby="request-title">
+ <div class="callback-heading"><p class="eyebrow">One useful first conversation</p><h2 id="request-title">Let’s help you plan<br/><em>the next step.</em></h2><p class="enrol-form-intro">Leave your name and number. We’ll discuss suitable support at {location}, the assessment, appointment and fees before you decide.</p><a class="callback-call" href={phone.href} data-cta="callback-call"><Icon name="phone"/>Call {phone.display}</a><p>Free telephone guidance, 24/7. An enquiry does not confirm an appointment.</p></div>
+ <form id="pinnacle-enrolment" method="post" action="/api/enrolment" novalidate data-preview="false" data-api-endpoint="/api/enrolment" data-callback-contract="durable-enrolment-v1" data-default-centre={centre} data-default-service={service} aria-describedby="enrol-privacy">
+  <noscript><p>Please enable JavaScript for this form, or call <a href={phone.href}>{phone.display}</a>.</p></noscript>
+  <p id="enrol-unavailable">Loading the form… You can always call <a href={phone.href}>{phone.display}</a>.</p>
+  <div id="enrol-error-summary" role="alert" tabindex="-1" hidden></div>
+  <fieldset disabled data-enrol-fields><legend class="callback-sr">Your contact details</legend><div class="callback-fields">
+   <div><label for="parent-name">Your name</label><input id="parent-name" name="name" autocomplete="name" required maxlength="100" aria-describedby="parent-name-error"/><p class="field-error" id="parent-name-error"></p></div>
+   <div><label for="parent-phone">Mobile number</label><input id="parent-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="25" aria-describedby="parent-phone-error"/><p class="field-error" id="parent-phone-error"></p></div>
+  </div></fieldset>
+  <fieldset disabled data-enrol-fields>
+   <legend class="callback-sr">Optional preferences</legend>
+   <p id="callback-selection" aria-live="polite">{choices.find(([value])=>value===service)?.[1]} · {centres.find(c=>c.id===centre)?.name || 'Help me find a centre'}</p>
+   <details id="enrol-preferences"><summary>Change service or centre</summary><div class="callback-preferences"><p id="service-label">What would you like help with?</p><div class="callback-choices" role="radiogroup" aria-labelledby="service-label">{choices.map(([value,label])=><label><input type="radio" name="service" value={value} checked={value===service}/><span>{label}</span></label>)}</div><p class="field-error" id="service-label-error"></p><label for="preferred-centre">Preferred centre</label><select id="preferred-centre" name="centre"><option value="">Help me find a centre</option>{centres.map(c=><option value={c.id} selected={c.id===centre}>{c.city} — {c.name}</option>)}</select><p class="field-error" id="preferred-centre-error"></p><p>We confirm current services and availability before your visit.</p></div></details>
+   <details class="enrol-optional"><summary>Add an email or a short note · optional</summary><div class="callback-preferences"><label for="parent-email">Email</label><input id="parent-email" name="email" type="email" autocomplete="email" maxlength="254" aria-describedby="parent-email-error"/><p class="field-error" id="parent-email-error"></p><label for="family-priority">What would you like to discuss?</label><textarea id="family-priority" name="message" rows="2" maxlength="500" aria-describedby="family-priority-error"></textarea><p class="field-error" id="family-priority-error"></p><p>Please save medical reports and detailed child information for your private conversation.</p></div></details>
+  </fieldset>
+  <p id="enrol-privacy">We use your details to respond to this enquiry. <a href={url('/privacy-policy')}>Privacy policy</a>.</p>
+  <button class="button primary" id="enrol-submit" type="submit" disabled>Request a callback <Icon name="arrow"/></button>
+  <div id="enrol-status" role="status" aria-live="polite" tabindex="-1"></div>
+ </form>
+</section>
+<script is:inline type="module" src="/pinnacle-pages-scripts/enrolment.js?v=callback-20261008"></script>
+<style>
+ .callback{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2.5rem;padding-block:2rem;scroll-margin-top:7rem}.callback h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.2}.callback p{line-height:1.65}.callback-call{display:inline-flex;align-items:center;gap:.6rem;font-weight:700;font-size:1.2rem;color:#9d1689;min-height:48px}.callback form{padding:1.6rem;border:1px solid #dce8e8;border-left:5px solid #078c89;border-radius:20px;background:#fff;min-width:0}.callback fieldset{border:0;padding:0;margin:0}.callback-fields,.callback-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.callback label{font-weight:700;display:block;margin-block:.5rem}.callback input:not([type=radio]),.callback select,.callback textarea{box-sizing:border-box;width:100%;min-height:48px;border:1px solid #75838e;border-radius:8px;padding:.65rem;font:inherit;color:#142a4a;background:#fff}.callback summary{font-weight:700;cursor:pointer;min-height:44px;padding-block:.5rem}.callback-preferences{padding-block:.6rem}.callback-choices label{display:flex;align-items:center;gap:.5rem;min-height:44px}.callback :focus-visible{outline:3px solid #078c89;outline-offset:3px}.callback .field-error{color:#b11d32;font-size:.95rem;margin:0}.callback #enrol-error-summary{border-left:4px solid #b11d32;padding:1rem}.callback #enrol-status{margin-top:1rem;line-height:1.65}.callback #enrol-privacy{font-size:.9rem}.callback-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@media(max-width:760px){.callback{grid-template-columns:1fr;gap:1rem}.callback form{padding:1.1rem}}@media(max-width:360px){.callback-fields,.callback-choices{grid-template-columns:1fr}}
+</style>

@@ -2,6 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import ActionStrip from './ActionStrip.astro';
 import CentreDirectory from './CentreDirectory.astro';
+import EnrolmentCallback from './EnrolmentCallback.astro';
 import TherapyTogether from './TherapyTogether.astro';
 import EvidenceLinks from './EvidenceLinks.astro';
 import Icon from './Icon.astro';
@@ -57,6 +58,7 @@ const directoryProof = [
       <p class="centre-hero-lead">Choose a real place to begin the conversation—then confirm the service, professional and appointment that fit your child.</p>
       <p>Search {centreCount} published locations, see selected centre spaces, open directions or ask the national Pinnacle team to help. Start with what you want to become more possible in your child’s everyday life. You do not need to assemble the plan alone.</p>
       <div class="centre-hero-actions"><a class="button primary" href="#centres"><Icon name="search"/>Search all {centreCount} locations</a><a class="button outline" href={phone.href} data-cta="hero-call"><Icon name="phone"/>Call {phone.display}</a></div>
+      <a class="text-link" href="#callback">Request an assessment <Icon name="arrow"/></a>
       <p class="centre-hero-note">Free guidance, 24/7 · Confirm the centre, service, professional, appointment and current fee before visiting.</p>
     </div>
     <div class="centre-hero-visual" role="group" aria-label="Photographs from published Pinnacle centre locations">
@@ -70,6 +72,7 @@ const directoryProof = [
   <ActionStrip focused firstLabel="Search centres" firstHref="#centres" />
 
   <CentreDirectory pagePath={content.path} enquiryTarget={centreEnquiry} directoryPage />
+  <EnrolmentCallback />
 
   <section class="section wrap centre-overview" aria-labelledby="centre-overview-title">
     <div class="split-heading"><div><p class="eyebrow">A directory you can use</p><h2 id="centre-overview-title">Location first.<br/><em>Confirmation before travel.</em></h2></div><p>This page gives families a single national directory. It keeps published place information, maps, photographs, enrolment choices and evidence together while making the limits clear.</p></div>
