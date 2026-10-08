@@ -4,7 +4,7 @@ import topicGroups from '../../data/ask-topic-groups.json';
 const families=[/^(speech|language|communication|listening|hearing|aac)(-|$)/,/^(school|learning|reading|writing|literacy|cognitive|memory|attention|planning|executive)(-|$)/,/^(fine-motor|gross-motor|motor|pincer|hand-eye|coordination|balance|movement)(-|$)/,/^(adaptive|self-care|self-help|feeding|dressing|toilet|independence|daily-living)(-|$)/,/^(social|friendship|peer|turn-taking|emotional|emotion)(-|$)/,/^(sensory|stimming|hand-flapping)(-|$)/];
 export function topicQuestionPaths(items:any[],lang='en') {
  const groups=new Map<string,any>(),seen=new Set<string>();
- for(const item of Array.isArray(items)?items:[]){const safe=safeAskLink(item?.slug),href=safe&&lang==='te'?safe.replace('/ask/','/ask/te/'):safe,title=item?.title||item?.question||item?.q;if(!href||!title||seen.has(href))continue;seen.add(href);
+ for(const item of Array.isArray(items)?items:[]){const href=safeAskLink(item?.slug),title=item?.title||item?.question||item?.q;if(!href||!title||seen.has(href))continue;seen.add(href);
   const key=String(item.cluster_key||'questions'),label=String(item.cluster_label||'Questions to explore');
   if(!groups.has(key))groups.set(key,{key,label,order:Number(item.cluster_sort)||99,items:[]});groups.get(key).items.push({href,title:String(title)});
  }
