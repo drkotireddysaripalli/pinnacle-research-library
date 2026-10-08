@@ -23,3 +23,19 @@ test('named legacy failures recover only matching public identities, including h
  const cases=[['/child-psychological-counseling','Best Child Counselling Centers in Delhi','/child-psychological-counseling','<title>Error</title>Newtonsoft.Json.JsonReaderException PinnacleBlooms.MISC.Utility.GetFaqs(String lang, String category) ASP._Page_Views_Home_PsychologicalCounselling_V9_Mobile_cshtml.Execute()'],['/franchise-autism-therapy-center','Advantages of pinnacle blooms network franchises','/franchises','<title>Error</title>Newtonsoft.Json.JsonReaderException GetStaffandCentersData'],['/epass','#1 Autism Therapy Centres Network','/epass',rootFaqError],['/TOS','Pinnacle Blooms - Terms of usage','/tos','<title>Error</title>Newtonsoft.Json.JsonReaderException GetStaffandCentersData']];
  for(const [path,title,canonical,html]of cases){let n=0;const r=await fetchPublicOrigin(req(path+'?utm_source=google'),async q=>{n++;assert(q.url.includes('utm_source=google'));return n===1?new Response(html,{status:500,headers:{'content-type':'text/html'}}):new Response('<title>'+title+'</title><link rel="canonical" href="https://www.pinnacleblooms.org'+canonical+'"><h1>Original public page</h1>',{headers:{'content-type':'text/html'}});});assert.equal(n,2);assert.equal(r.status,200);assert((await r.text()).includes('href="https://www.pinnacleblooms.org'+canonical+'"'));}
 });
+
+test('five Semrush mobile failures recover the same public page with campaign query intact',async()=>{
+ const pages=[['/yoga-therapy','Best Yoga Therapy Centers In Hyderabad, Delhi, Vizag, Vijay'],['/physiotherapy','Best Physio Therapy In Delhi, Hyderabad, Bengaluru, Vizag,'],['/hydro-therapy','Best Hydro Therapy Centers in Delhi, Hyderabad, Bengaluru,'],['/autism-speech-aba-parent-family-resources','Resources - Pinnacle Blooms Network Improving quality-of-li'],['/autism-speech-aba-news','News - Child Development, Rehabilitation centers - Autism']];
+ for(const [path,title]of pages){
+  let attempts=0;const q=req(path+'?utm_source=google&utm_medium=cpc');
+  const r=await fetchPublicOrigin(q,async request=>{
+   attempts++;assert.equal(request.url,q.url);
+   return attempts===1?error():new Response('<title>'+title+'</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'"><h1>Original public content</h1><a href="tel:+919100181181">Call</a>',{headers:{'content-type':'text/html'}});
+  });
+  assert.equal(r.status,200);assert.equal(attempts,2);assert.equal(r.headers.get('cache-control'),'private, no-store');
+  assert((await r.text()).includes('<h1>Original public content</h1>'));
+ }
+ let attempts=0;const q=req('/yoga-therapy');const original=error();
+ const r=await fetchPublicOrigin(q,async()=>++attempts===1?original:new Response('<title>Best Hydro Therapy Centers in Hyderabad</title><link rel="canonical" href="https://www.pinnacleblooms.org/yoga-therapy">',{headers:{'content-type':'text/html'}}));
+ assert.equal(r,original,'Wrong service title must never turn an error into an unrelated page');
+});

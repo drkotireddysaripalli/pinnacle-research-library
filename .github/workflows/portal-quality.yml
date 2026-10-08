@@ -33,6 +33,7 @@ jobs:
       - run: node --test scripts/test-knowledge-catalogues.mjs
       - run: node --test scripts/test-book-asset-inventory.mjs scripts/test-vernacular-typography.mjs scripts/test-book-cart-links.mjs
       - run: node --test scripts/test-staff-health.mjs scripts/test-legacy-social-metadata.mjs scripts/test-legacy-schema.mjs
+      - run: node --test scripts/test-public-mobile-recovery.mjs scripts/test-materials-media.mjs
       - run: node --test scripts/test-paid-centre-entry.mjs scripts/test-centre-measurement.mjs
       - run: node --test scripts/test-centre-google-feed.mjs scripts/test-enrolment-receipt.mjs
       - run: npm run build:ask

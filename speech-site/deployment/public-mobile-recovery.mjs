@@ -1,4 +1,4 @@
-// Bounded recovery of a reproduced ASP.NET mobile-rendering exception on four
+// Bounded recovery of a reproduced ASP.NET mobile-rendering exception on named
 // named public destinations. It preserves the original URL, headers and query for attribution.
 // It owns no account, API, payment, form submission or child-report route.
 const identities=new Map([
@@ -10,7 +10,12 @@ const identities=new Map([
  ['/franchise-autism-therapy-center',/^Advantages of pinnacle blooms network franchises/i],
  ['/epass',/^#1 Autism Therapy Centres Network/i],
  ['/TOS',/^Pinnacle Blooms - Terms of usage/i],
- ['/tos',/^Pinnacle Blooms - Terms of usage/i]
+ ['/tos',/^Pinnacle Blooms - Terms of usage/i],
+ ['/yoga-therapy',/^Best Yoga Therapy Centers In /i],
+ ['/physiotherapy',/^Best Physio Therapy In /i],
+ ['/hydro-therapy',/^Best Hydro Therapy Centers in /i],
+ ['/autism-speech-aba-parent-family-resources',/^Resources - Pinnacle Blooms Network /i],
+ ['/autism-speech-aba-news',/^News - Child Development, Rehabilitation centers/i]
 ]);
 const desktop='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
 export function knownMobilePublicRequest(request){
