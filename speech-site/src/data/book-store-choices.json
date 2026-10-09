@@ -1,0 +1,450 @@
+{
+  "source": "Approved private commerce issue 1, exact 33 mappings and live retailer editions; 9 October 2026",
+  "rows": [
+    {
+      "sku": "PBN-SP-101-EN-PDF",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/speech-communication-101-my-message-matters?variant=45295972646978",
+      "play": "https://play.google.com/store/books/details?id=gkgVEgAAQBAJ",
+      "amazon": [
+        "speech-en-pb"
+      ],
+      "flipkart": "speech-en-pb",
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-OT-101-EN-PDF",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/occupational-therapy-101-i-belong-in-everyday-life?variant=45295972745282",
+      "play": "https://play.google.com/store/books/details?id=cEgVEgAAQBAJ",
+      "amazon": [
+        "ot-en-kindle",
+        "ot-en-pb"
+      ],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-ABA-101-EN-PDF",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/aba-parent-education-101-understanding-everyday-behaviour",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/aba-parent-education-101-understanding-everyday-behaviour?variant=45295972843586",
+      "play": "https://play.google.com/store/books/details?id=bEgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-SE-101-EN-PDF",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/special-education-101-learning-through-everyday-play?variant=45295972941890",
+      "play": "https://play.google.com/store/books/details?id=bkgVEgAAQBAJ",
+      "amazon": [
+        "se-en-kindle",
+        "se-en-pb"
+      ],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-SP-OT-101-EN-PDF-SET2",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-occupational-pdf-pair",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-speech-occupational-pair?variant=45295973040194",
+      "play": "https://play.google.com/store/books/details?id=YbkVEgAAQBAJ",
+      "amazon": [
+        "speech-ot-en-hc"
+      ],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-SP-ABA-101-EN-PDF-SET2",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-behaviour-pdf-pair",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-speech-behaviour-pair?variant=45295973466178",
+      "play": "https://play.google.com/store/books/details?id=pLkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-SP-SE-101-EN-PDF-SET2",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-learning-pdf-pair",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-speech-learning-pair?variant=45295973564482",
+      "play": "https://play.google.com/store/books/details?id=prkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-OT-ABA-101-EN-PDF-SET2",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/pinnacle-101-occupational-behaviour-pdf-pair",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-occupational-behaviour-pair?variant=45295973662786",
+      "play": "https://play.google.com/store/books/details?id=krkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-OT-SE-101-EN-PDF-SET2",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/pinnacle-101-occupational-learning-pdf-pair",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-occupational-learning-pair?variant=45295973761090",
+      "play": "https://play.google.com/store/books/details?id=q7kVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-ABA-SE-101-EN-PDF-SET2",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/pinnacle-101-behaviour-learning-pdf-pair",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-behaviour-learning-pair?variant=45295973859394",
+      "play": "https://play.google.com/store/books/details?id=t7kVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-101-EN-PDF-SET4",
+      "lang": "en",
+      "page": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-pdf-collection",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-101-four-book-collection?variant=45295974285378",
+      "play": "https://play.google.com/store/books/details?id=m7kVEgAAQBAJ",
+      "amazon": [
+        "four-guide-en-hc"
+      ],
+      "flipkart": null,
+      "bookCount": 4,
+      "playPages": 187
+    },
+    {
+      "sku": "PBN-SP-101-HI-PDF",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/speech-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-101-hi?variant=45298362089538",
+      "play": "https://play.google.com/store/books/details?id=fEgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-OT-101-HI-PDF",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/ot-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-101-hi?variant=45298362187842",
+      "play": "https://play.google.com/store/books/details?id=dEgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-ABA-101-HI-PDF",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/aba-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-aba-101-hi?variant=45298362286146",
+      "play": "https://play.google.com/store/books/details?id=ckgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-SE-101-HI-PDF",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-special-education-101-hi?variant=45298362384450",
+      "play": "https://play.google.com/store/books/details?id=ekgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-SP-OT-101-HI-PDF-SET2",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/speech-ot-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-ot-101-hi?variant=45298362482754",
+      "play": "https://play.google.com/store/books/details?id=jbkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-SP-ABA-101-HI-PDF-SET2",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/speech-aba-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-aba-101-hi?variant=45298362581058",
+      "play": "https://play.google.com/store/books/details?id=qLkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-SP-SE-101-HI-PDF-SET2",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/speech-special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-special-education-101-hi?variant=45298362679362",
+      "play": "https://play.google.com/store/books/details?id=nbkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-OT-ABA-101-HI-PDF-SET2",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/ot-aba-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-aba-101-hi?variant=45298362777666",
+      "play": "https://play.google.com/store/books/details?id=ubkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-OT-SE-101-HI-PDF-SET2",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/ot-special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-special-education-101-hi?variant=45298362908738",
+      "play": "https://play.google.com/store/books/details?id=sbkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-ABA-SE-101-HI-PDF-SET2",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/aba-special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-aba-special-education-101-hi?variant=45298363007042",
+      "play": "https://play.google.com/store/books/details?id=tbkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-101-HI-PDF-SET4",
+      "lang": "hi",
+      "page": "https://www.pinnacleblooms.org/books/hi/speech-ot-aba-special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-ot-aba-special-education-101-hi?variant=45298363105346",
+      "play": "https://play.google.com/store/books/details?id=irkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 4,
+      "playPages": 187
+    },
+    {
+      "sku": "PBN-SP-101-TE-PDF",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/speech-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-101-te?variant=45298363203650",
+      "play": "https://play.google.com/store/books/details?id=akgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-OT-101-TE-PDF",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/ot-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-101-te?variant=45298363301954",
+      "play": "https://play.google.com/store/books/details?id=aEgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-ABA-101-TE-PDF",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/aba-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-aba-101-te?variant=45298363400258",
+      "play": "https://play.google.com/store/books/details?id=fkgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-SE-101-TE-PDF",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-special-education-101-te?variant=45298363498562",
+      "play": "https://play.google.com/store/books/details?id=gEgVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 1,
+      "playPages": 46
+    },
+    {
+      "sku": "PBN-SP-OT-101-TE-PDF-SET2",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/speech-ot-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-ot-101-te?variant=45298363596866",
+      "play": "https://play.google.com/store/books/details?id=kLkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-SP-ABA-101-TE-PDF-SET2",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/speech-aba-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-aba-101-te?variant=45298363695170",
+      "play": "https://play.google.com/store/books/details?id=rbkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-SP-SE-101-TE-PDF-SET2",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/speech-special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-speech-special-education-101-te?variant=45298363793474",
+      "play": "https://play.google.com/store/books/details?id=srkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-OT-ABA-101-TE-PDF-SET2",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/ot-aba-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-aba-101-te?variant=45298363891778",
+      "play": "https://play.google.com/store/books/details?id=lbkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-OT-SE-101-TE-PDF-SET2",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/ot-special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-ot-special-education-101-te?variant=45298363990082",
+      "play": "https://play.google.com/store/books/details?id=obkVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-ABA-SE-101-TE-PDF-SET2",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/aba-special-education-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-aba-special-education-101-te?variant=45298364088386",
+      "play": "https://play.google.com/store/books/details?id=r7kVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 2,
+      "playPages": 95
+    },
+    {
+      "sku": "PBN-101-TE-PDF-SET4",
+      "lang": "te",
+      "page": "https://www.pinnacleblooms.org/books/te/four-book-101",
+      "shopify": "https://pinnacleblooms.myshopify.com/products/pinnacle-four-book-101-te?variant=45298364186690",
+      "play": "https://play.google.com/store/books/details?id=l7kVEgAAQBAJ",
+      "amazon": [],
+      "flipkart": null,
+      "bookCount": 4,
+      "playPages": 187
+    }
+  ],
+  "amazon": [
+    {
+      "id": "ot-en-kindle",
+      "format": "Kindle ebook",
+      "asin": "B0HLYKFDQ9",
+      "isbn13": null,
+      "pages": null,
+      "url": "https://www.amazon.in/dp/B0HLYKFDQ9",
+      "path": "/books/occupational-therapy-101-i-belong-in-everyday-life"
+    },
+    {
+      "id": "se-en-kindle",
+      "format": "Kindle ebook",
+      "asin": "B0HLYFTT36",
+      "isbn13": null,
+      "pages": null,
+      "url": "https://www.amazon.in/dp/B0HLYFTT36",
+      "path": "/books/special-education-101-learning-through-everyday-play"
+    },
+    {
+      "id": "speech-en-pb",
+      "format": "Paperback",
+      "asin": "B0HLZPP118",
+      "isbn13": "9798178590706",
+      "pages": 44,
+      "url": "https://www.amazon.com/dp/B0HLZPP118",
+      "path": "/books/speech-communication-101-my-message-matters-softcover"
+    },
+    {
+      "id": "ot-en-pb",
+      "format": "Paperback",
+      "asin": "B0HLZKRV9J",
+      "isbn13": "9798178588741",
+      "pages": 44,
+      "url": "https://www.amazon.com/dp/B0HLZKRV9J",
+      "path": "/books/occupational-therapy-101-i-belong-in-everyday-life-softcover"
+    },
+    {
+      "id": "se-en-pb",
+      "format": "Paperback",
+      "asin": "B0HLZJ9WKJ",
+      "isbn13": "9798178764794",
+      "pages": 44,
+      "url": "https://www.amazon.com/dp/B0HLZJ9WKJ",
+      "path": "/books/special-education-101-learning-through-everyday-play-softcover"
+    },
+    {
+      "id": "speech-ot-en-hc",
+      "format": "One combined hardcover volume",
+      "asin": "B0HLYGDP86",
+      "isbn13": "9798160026138",
+      "pages": 96,
+      "url": "https://www.amazon.com/dp/B0HLYGDP86",
+      "path": "/books/pinnacle-101-speech-occupational-hardbound-pair"
+    },
+    {
+      "id": "four-guide-en-hc",
+      "format": "One combined hardcover volume",
+      "asin": "B0HLY917FC",
+      "isbn13": "9798160027036",
+      "pages": 188,
+      "url": "https://www.amazon.com/dp/B0HLY917FC",
+      "path": "/books/pinnacle-101-four-book-hardbound-collection"
+    }
+  ],
+  "flipkart": {
+    "id": "speech-en-pb",
+    "isbn13": "9798178590706",
+    "url": "https://www.flipkart.com/my-message-matters-illustrated-guide-everyday-communication/p/itmbcba7efb7976a?pid=9798178590706"
+  }
+}
