@@ -56,7 +56,7 @@ Success: real affected content/links/canonicals work; no unresolved critical reg
 | 3 | Native corporate homepage | Existing candidate and review packet received. Integration and production acceptance pending; candidate mobile lab LCP3.60s needs correction/real serving verification before calling it passed. Preserve current Speech root build. |
 | 4 | Remaining legacy families | Sunshine directory is not migration of every original body. Remaining knowledge details, staff/careers, Guru/news/resources and discovery/origin dependencies require importer/template batches. Legacy origin stays available until independence is proved. |
 | 5 | Testing and performance | Reconcile stale callback-navigation assertions, /allmirracles metadata/schema, Shop/Suchitra readability, iPad matcher and unavailable iPhone SE coverage. Use changed-case evidence; do not repeat today's daily run. Current saved OT2.840s/Autism2.676s lab LCP need scoped improvement, distinct from field CWV. |
-| 6 | Shopify finish | Portal64-page retailer release complete. Hosted private theme7240681 remains separate. Mac reports matching four hosted preimages; font delivery/application/read-back pending. Preserve catalogue/stock/payment/source owner. |
+| 6 | Shopify discovery and platform follow-through | Hosted theme accepted: 33 product pages, 99 variant combinations, 132 reciprocal language alternates, Anek rendering and zero native theme-check issues. Exact seven changed files pinned in private source commit d66f86ccb323b8ffbafb4214a85470f8485861cf. The complete current sitemap index declares one collection range containing only frontpage; the existing commerce administrator must reconcile native eligibility for the four published collections. Reviews and refund/support remain separate milestones. Preserve catalogue, stock, payments and source ownership. |
 | 7 | PinnacleAI and libraries | Continue approved editable V164. Scholars needs promised engineering diagram. Materials/Interventions require complete original HTML/assets intake; no reconstruction of missing content. |
 | 8 | Search demand and distribution | High-intent topic/service/centre journeys, verified branch media/identity and due qualified Pitchbox follow-through. CAAS next dated follow-up16October unless a reply changes it. Measure settled discovery/clicks separately from actual enquiries. |
 
@@ -70,4 +70,10 @@ Success: real affected content/links/canonicals work; no unresolved critical reg
 -ExistingFAQ4564-answer import, centre narratives, shared Anek, Ask identity and Verify evidence are retained.
 
 No new schedule, paid subscription, customer lead, purchase, broad crawl or unsupported improvement percentage was created by this review.
+
+## Shared tooling closeout — 9 October, 11:13 UTC
+
+PR11 merged at 0f9abffd17be77a5e1b19047ea21e85079915a8f. Corrected source 024b7f35db51cf8a14cef8ef00f2c20fb92d7b4d passed the trusted CI run 37920847889, including TestingBot BVT. The Windows acceptance at documentation commit 669e347171db2b95313866df15b351c2c855cc99 records 606 unit passes (2 skips), Chromium 272 passes (20 skips), Firefox 68 passes (5 skips), WebKit 68 passes (5 skips), 4 centre-gallery passes and 6 centre-feed passes. Failed attempts and targeted corrections remain in the evidence. The dedicated build runtime is Node 24.21.0; the Codex runtime was not replaced.
+
+This closes shared host/build tooling integration. It does not close physical-device or visual approval, field performance, the next full Worker release, real receiving-team linkage, qualified calls, admissions or the Ahrefs error families above. No portal production deployment occurred in this tooling closeout.
 
