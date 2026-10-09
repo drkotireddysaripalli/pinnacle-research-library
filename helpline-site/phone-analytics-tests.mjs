@@ -3,19 +3,20 @@ import vm from 'node:vm';
 import {readFile,writeFile} from 'node:fs/promises';
 const source=await readFile(new URL('./phone-analytics.js',import.meta.url),'utf8');
 const html=await readFile(new URL('./preview.html',import.meta.url),'utf8');
-const id='G-H9CLX1WJ7R',key='pinnacle-helpline-measurement-choice-v2';
+const id='G-H9CLX1WJ7R',key='pinnacle-helpline-measurement-choice-v3';
 const links=[...html.matchAll(/<a\b([^>]+data-call-placement="([^"]+)"[^>]*)>/g)].map(m=>({dataset:{callPlacement:m[2]},href:m[1].match(/href="([^"]+)"/)[1]}));
 function browser(options={}){
  const calls=[],scripts=[],listeners={},controls={},writes=[];
  const panel={hidden:true},status={textContent:''},jar=new Map(Object.entries(options.cookies||{}));
  const storage=new Map(options.saved?[[key,JSON.stringify(options.saved)]]:[]);
+ if(options.legacySaved)storage.set('pinnacle-helpline-measurement-choice-v2',JSON.stringify(options.legacySaved));
  for(const value of ['accepted','declined'])controls[value]={dataset:{analyticsChoice:value},addEventListener:(type,fn)=>controls[value][type]=fn};
  const document={querySelector:s=>s==='[data-analytics-panel]'?panel:status,querySelectorAll:()=>Object.values(controls),head:{append:s=>scripts.push(s)},createElement:()=>({}),addEventListener:(type,fn)=>(listeners[type]??=[]).push(fn)};
  Object.defineProperty(document,'cookie',{get:()=>[...jar].map(([k,v])=>k+'='+v).join('; '),set:value=>{writes.push(value);jar.delete(value.split('=')[0]);}});
  const window={};
  const location=new URL(options.url||'https://www.pinnacleblooms.org/national-autism-helpline?email=PRIVATE_CANARY#PRIVATE_CANARY');
  const localStorage={getItem:k=>{if(options.storageFailure)throw Error('unavailable');return storage.get(k)||null;},setItem:(k,v)=>{if(options.storageFailure)throw Error('unavailable');storage.set(k,v);}};
- const context={window,document,location,navigator:{globalPrivacyControl:!!options.gpc},localStorage,Date,Set,Number};
+ const context={window,document,location,navigator:{globalPrivacyControl:!!options.gpc},localStorage,Date,Set,Number,URL};
  vm.runInNewContext(source,context);
  const commands=()=>Array.from(window.dataLayer||[],args=>Array.from(args));
  const events=()=>commands().filter(c=>c[0]==='event');
@@ -35,6 +36,55 @@ test('GPC overrides saved acceptance and never starts Google',()=>{const b=brows
 test('Preview, apex and unrelated paths cannot load analytics',()=>{for(const url of ['http://127.0.0.1:8787/national-autism-helpline','https://pinnacleblooms.org/national-autism-helpline','https://www.pinnacleblooms.org/verify/']){const b=browser({url,saved:accepted});b.choose('accepted');b.click();assert.equal(b.scripts.length,0);assert.equal(b.commands().length,0);}});
 test('Storage unavailable, expired and future-dated consent all fail closed',()=>{for(const options of [{storageFailure:true},{saved:{value:'accepted',at:Date.now()-181*86400000}},{saved:{value:'accepted',at:Date.now()+86400000}}])assert.equal(browser(options).scripts.length,0);});
 test('Withdrawal stops events and clears only helpline cookies; renewed choice does not duplicate the tag',()=>{const b=browser({saved:accepted,cookies:{ph_ga:'1',ph_ga_H9CLX1WJ7R:'2',pv_ga:'keep',_ga:'keep'}});b.choose('declined');const n=b.events().length;b.click();assert.equal(b.events().length,n);assert.equal(b.jar.size,2);assert.equal(b.window['ga-disable-'+id],true);assert.ok(b.writes.every(c=>c.includes('path=/national-autism-helpline;')));b.choose('accepted');b.click();assert.equal(b.events().length,n+1);assert.equal(b.scripts.length,1);});
+const campaignNames=['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries'];
+const tagged=name=>'https://www.pinnacleblooms.org/national-autism-helpline?utm_source=chatgpt&utm_medium=paid&utm_campaign='+name;
+test('Exactly the two fixed ChatGPT campaign tuples accompany existing consented events',()=>{
+ for(const name of campaignNames){
+  const b=browser({url:tagged(name),saved:accepted});b.click();
+  assert.deepEqual(b.events().map(c=>c[1]),['page_view','phone_link_click']);
+  for(const event of b.events()){
+   assert.equal(event[2].campaign_source,'chatgpt');assert.equal(event[2].campaign_medium,'paid');assert.equal(event[2].campaign_name,name);
+   assert.equal(event[2].page_location,'https://www.pinnacleblooms.org/national-autism-helpline');assert.equal(event[2].page_referrer,'');assert.equal(event[2].send_to,id);
+  }
+  const config=b.commands().find(c=>c[0]==='config'&&c[1]===id)[2];assert.equal(config.campaign_name,name);
+  const adsConfig=b.commands().find(c=>c[0]==='config'&&c[1]==='AW-10810823199')[2];assert.equal(adsConfig.campaign_name,undefined);
+  assert.deepEqual([...b.storage.keys()],[key]);
+ }
+});
+test('Unknown, partial, duplicated and injected campaign tuples never enter analytics',()=>{
+ const rejected=[
+  'utm_source=chatgpt&utm_medium=paid&utm_campaign=PRIVATE_CANARY',
+  'utm_source=other&utm_medium=paid&utm_campaign=pinnacle_vizag_call_enquiries',
+  'utm_source=chatgpt&utm_medium=organic&utm_campaign=pinnacle_vizag_call_enquiries',
+  'utm_source=chatgpt&utm_campaign=pinnacle_vizag_call_enquiries',
+  'utm_source=chatgpt&utm_source=chatgpt&utm_medium=paid&utm_campaign=pinnacle_vizag_call_enquiries',
+  'utm_source=chatgpt&utm_medium=paid&utm_campaign=pinnacle_vizag_call_enquiries&utm_campaign=pinnacle_hyderabad_vijayawada_call_enquiries',
+  'utm_source=chatgpt%26PRIVATE_CANARY&utm_medium=paid&utm_campaign=pinnacle_vizag_call_enquiries',
+  'utm_source=chatgpt&utm_medium=paid&utm_campaign=pinnacle_vizag_call_enquiries%0APRIVATE_CANARY'
+ ];
+ for(const query of rejected){
+  const b=browser({url:'https://www.pinnacleblooms.org/national-autism-helpline?'+query,saved:accepted});b.click();
+  for(const event of b.events())for(const field of ['campaign_source','campaign_medium','campaign_name'])assert.equal(event[2][field],undefined);
+  assert(!JSON.stringify(b.commands()).includes('PRIVATE_CANARY'));
+ }
+});
+test('Other URL fields, advertising click identifiers and private fragments are not forwarded even on a valid tuple',()=>{
+ const b=browser({url:tagged(campaignNames[0])+'&utm_term=PRIVATE_CANARY&utm_content=PRIVATE_CANARY&oppref=PRIVATE_CANARY&gclid=PRIVATE_CANARY&email=PRIVATE_CANARY#PRIVATE_CANARY',saved:accepted});b.click();
+ const payload=JSON.stringify(b.commands());assert(!payload.includes('PRIVATE_CANARY'));assert(!payload.includes('oppref'));
+ for(const event of b.events())assert.equal(event[2].campaign_name,campaignNames[0]);
+});
+test('Tagged traffic without new consent, with old acceptance, refusal or GPC sends nothing',()=>{
+ for(const options of [{},{legacySaved:accepted},{saved:{value:'declined',at:Date.now()}},{saved:accepted,gpc:true}]){
+  const b=browser({url:tagged(campaignNames[0]),...options});b.click();assert.equal(b.scripts.length,0);assert.equal(b.events().length,0);
+ }
+});
+test('Repeated and renewed consent does not duplicate attributed page views, and dialing remains untouched',()=>{
+ const b=browser({url:tagged(campaignNames[0])});b.choose('accepted');b.choose('accepted');b.click();b.choose('declined');b.click();b.choose('accepted');b.choose('accepted');b.click();
+ assert.equal(b.scripts.length,1);assert.deepEqual(b.events().map(e=>e[1]),['page_view','phone_link_click','phone_link_click']);
+});
+test('New disclosure describes limited fixed campaign labels and preserves refusal-safe calling',()=>{
+ assert(html.includes('fixed campaign name, source and medium'));assert(html.includes('You can call with measurement off.'));assert(source.includes('pinnacle-helpline-measurement-choice-v3'));
+});
 const report={checkedAt:new Date().toISOString(),passed:results.length,results,scope:'First-party code tests. Actual third-party request/ingestion is checked separately in the browser. Phone-link events do not establish connected calls.'};
 await writeFile(new URL('./phone-analytics-test-results.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));
