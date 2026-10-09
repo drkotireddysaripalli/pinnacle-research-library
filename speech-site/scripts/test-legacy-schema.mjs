@@ -69,7 +69,7 @@ test('only the exact captured expired five-job graph is retired',async()=>{
   assert.deepEqual(Object.keys(graph),['@context','@graph']);
   assert.equal(graph['@graph'].length,5);
   assert(graph['@graph'].every(job=>job['@type']==='JobPosting'&&job.validThrough==='2025-12-31T00:00'));
-  for(const input of [raw,'\n'+raw+'\n',raw.replaceAll('\n','\r\n')])assert.equal(await repairLegacyGraph(input),null);
+  for(const input of [raw,'\n'+raw+'\n',raw.replace(/\r?\n/g,'\r\n')])assert.equal(await repairLegacyGraph(input),null);
   const mixed=structuredClone(graph);mixed['@graph'].push({'@type':'Organization',name:'Preserve me'});
   for(const changed of [raw.replaceAll('2025-12-31T00:00','2027-12-31T00:00'),raw.replace('Admin Manager','Updated Admin vacancy'),JSON.stringify(mixed),JSON.stringify(graph),raw.replace('https://schema.org','https://example.org'),raw.slice(0,-1)])assert.equal(await repairLegacyGraph(changed),changed);
 });
