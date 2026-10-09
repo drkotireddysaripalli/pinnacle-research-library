@@ -1,0 +1,406 @@
+{
+  "at": "2026-10-09T10:05:22.390Z",
+  "siteUrl": "sc-domain:pinnacleblooms.org",
+  "batchId": "e7747c75-295a-4001-b34b-f082a047306f",
+  "submitted": 64,
+  "failed": 0,
+  "attempted": 64,
+  "pendingKeyValidation": false,
+  "outcome": "submitted",
+  "keyFile": [
+    {
+      "host": "www.pinnacleblooms.org",
+      "url": null,
+      "verified": true,
+      "error": null
+    }
+  ],
+  "submissions": [
+    {
+      "url": "https://www.pinnacleblooms.org/books",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/aba-parent-education-101-understanding-everyday-behaviour",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/aba-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/ot-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/ot-aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/ot-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-ot-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-ot-aba-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/aba-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/four-book-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/ot-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/ot-aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/ot-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/speech-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/speech-aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/speech-ot-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/editions/te/speech-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/aba-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/ot-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/ot-aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/ot-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-ot-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-ot-aba-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life-softcover",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-behaviour-learning-pdf-pair",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-hardbound-collection",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-pdf-collection",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-occupational-behaviour-pdf-pair",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-occupational-learning-pdf-pair",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-behaviour-pdf-pair",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-learning-pdf-pair",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-occupational-hardbound-pair",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-occupational-pdf-pair",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play-softcover",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters-softcover",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/aba-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/four-book-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/ot-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/ot-aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/ot-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/speech-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/speech-aba-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/speech-ot-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/books/te/speech-special-education-101",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/shop",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    }
+  ],
+  "message": "64 of 64 URL(s) sent were accepted by IndexNow.",
+  "limits": "Accepted IndexNow submission with key validated. This is not confirmed indexing, ranking, AI citation or a business outcome."
+}

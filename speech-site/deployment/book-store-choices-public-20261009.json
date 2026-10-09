@@ -1,0 +1,587 @@
+{
+  "at": "2026-10-09T10:03:34.864Z",
+  "release": "book-store-choices-20261009",
+  "total": 64,
+  "passed": 64,
+  "failed": 0,
+  "priorDestinationComparisons": 7,
+  "rows": [
+    {
+      "path": "/books",
+      "url": "https://www.pinnacleblooms.org/books",
+      "status": 200,
+      "storePanels": 11,
+      "etag": null,
+      "sha256": "90aa28fdd91eb27cdcba31ab61db550892e02b194817a63061e1f1b69f54b580",
+      "result": "pass"
+    },
+    {
+      "path": "/books/aba-parent-education-101-understanding-everyday-behaviour",
+      "url": "https://www.pinnacleblooms.org/books/aba-parent-education-101-understanding-everyday-behaviour",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "e2e0e76867474d0aa5bc2074c1132e1200f8fd76b4b1dad469f173a669fb5ef3",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/aba-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "f3e47994eb2377a6ce83360642ebd5ba251be534e09731cc8735a78592733ec0",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/aba-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/aba-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "68af4146d09480c096ac8737d5b8c80a2fbfc69b7b4621dcc25f6a650e00e83c",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/ot-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/ot-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "c5199e7e4f8f4341ffb376ec4d70b3b3b94acca8cd4c648488de6d6044eafb39",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/ot-aba-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/ot-aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "9125e8b8050df95a02841a8869ea2a9ee3556fa4f452adf6ceb583d7ae0471fa",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/ot-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/ot-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "ae3cb5a5be0beaaed61fe8fdf346e1f0515ca997fea89d48add9828bde6002f2",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "669e50d3b65ef776e65a1a85c3eb7fa246f7aa2a79a10b52d0e9177103165370",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/speech-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "daa27eb14eca82e6663a0ed6700e19db59eefba9e80806e338bcc8a2865a9aea",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/speech-aba-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "e746b89c0fb928b5cfa4cf91c90a8dda7d634a116f980af9ccb329365cca3647",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/speech-ot-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-ot-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "fed268fe5005efd89f961a565c83b7994c3abaed38ab7214a81f28242af532aa",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/speech-ot-aba-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-ot-aba-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "c7c71807c6ce6e08df941c22bf53bf786e5adbd0c93a811d4ce90e9c3be21a80",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/hi/speech-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/hi/speech-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "d58e3eacdf21e155db5f74afea41d0c803bace260c6bfa0076e9b712c98a7a09",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/aba-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "00ad9474e6640c497e71d10c8be60607e930bf03d39a2e02d966377662f1a9f1",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/aba-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/aba-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "6c534bd2c5a9dc28aaa3a500712c74fa11c324051b179f34c2ed3a35f116d8ad",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/four-book-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/four-book-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "612b7125f275c7cf26ac886d8b66490c0b905f6d7f8b493c6d5d75db451263a5",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/ot-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/ot-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "4d6fc8cd5457cae3fbddc240a3c81cad8f6708cbf8cba1abafa5c8e524282051",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/ot-aba-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/ot-aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "67ec568683d4b5c762e695f042e44629b0d2062f2f0e01093d6495979193f411",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/ot-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/ot-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "5be24de8901c5349b4b92bc229cd5568a6de4dd9fedf1fa6c6986e328fa69d14",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "031e683d80832a2b1feb0dd8ac7d0fad234ebd4d492ff6a536dd3bbf3576bb83",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/speech-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/speech-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "e875e383fa04bb8e90fbca60352212ecae080cf17f2f60849040714dea8bb37b",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/speech-aba-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/speech-aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "5b11df64315a2a7675b36da28852db07d3fec72bf9dd39d72fdf8c8698dff74b",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/speech-ot-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/speech-ot-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "b8ca5dad5e6793044fef47cd1454fe661149d381322856cebec611b3f94d4e9f",
+      "result": "pass"
+    },
+    {
+      "path": "/books/editions/te/speech-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/editions/te/speech-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "44585f76a7d048455549c023d00325683e095cffc6daaa070c8cf263e6bd90c2",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi",
+      "url": "https://www.pinnacleblooms.org/books/hi",
+      "status": 200,
+      "storePanels": 11,
+      "etag": null,
+      "sha256": "d7d5cc87497d7dac14ea36ed40435017b1f15007e4007708b930c9118caa4bec",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/aba-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "a72e2acb49894016b334cf1b8d0ba74943bacd7534a6d953ce13bf87c0c1de72",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/aba-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/aba-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "574b11b1468be8d42840ab0c5d8ee250cc5c867c4a749266923154bfb88a4de3",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/ot-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/ot-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "02c2976fa027e7bc7933bde7f774855f4e99ad2dc29c55d9c132c070d95ed7c4",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/ot-aba-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/ot-aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "0c31c740695f0e05afd35f9b84da9d635422fdad76bd6142f83509cbd1efda99",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/ot-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/ot-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "587793b042cf05cb2e0128ee0a3e5eae2bfa1b6cb3fc80b431f4405bfe120a87",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "116f071fe5532e80e9cadf7aeb100edf7fab858892fabd1c0658e4fdf9970f30",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/speech-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "3cc83827620dcf6a7a1d0a77db7dd7c80766387d70104449384556815e0388da",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/speech-aba-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "da3c2e5f210c6e000a094c94d0bc9036b53106487a6fddd5186f377cf6f96244",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/speech-ot-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-ot-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "9c97bec89533c9e2fb0eaee59f271415d1aaec399fcfc0c14c3ecf23d199c02c",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/speech-ot-aba-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-ot-aba-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "1369f31c657d5660d8a3adc67ac22a4f0cb96da16dd9c3b6d1c614a3be1922d4",
+      "result": "pass"
+    },
+    {
+      "path": "/books/hi/speech-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/hi/speech-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "24729a04ed155c4e4b977e36cdf4e40426a5d93b0373c0279ba06b8c0036a764",
+      "result": "pass"
+    },
+    {
+      "path": "/books/occupational-therapy-101-i-belong-in-everyday-life",
+      "url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "7d944d0eb7b70a529f8d4b6ead014c84c893161f6a34653b36c4e81751e0b4c4",
+      "result": "pass"
+    },
+    {
+      "path": "/books/occupational-therapy-101-i-belong-in-everyday-life-softcover",
+      "url": "https://www.pinnacleblooms.org/books/occupational-therapy-101-i-belong-in-everyday-life-softcover",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "54035c7cbb82562bc58da3fc2d82eea09dc27ca1a6607e0d0f2fe9f7a07b2843",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-behaviour-learning-pdf-pair",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-behaviour-learning-pdf-pair",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "0d1cff0f3c15dbe9c7f52a9353b4a498c90cd43fd47d63fdf545317fc29ef5b8",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-four-book-hardbound-collection",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-hardbound-collection",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "e4b2b4e295cebaedc9b8229af6a734fab23677abda36bcfea15c0ff94668f5a2",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-four-book-pdf-collection",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-four-book-pdf-collection",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "a801b365626d9fed31519d417f3d8425bbe1da62ec84b38778837c0acb1438df",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-occupational-behaviour-pdf-pair",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-occupational-behaviour-pdf-pair",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "c84cf2ee847b185cd5f118f49ede82d547980f16042619bd0ee4240c0eec71e2",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-occupational-learning-pdf-pair",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-occupational-learning-pdf-pair",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "8f5c45bb3bdc561c57a351e1a7cd62d11bb8a0356d1c3e1ddde40df623992b6b",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-speech-behaviour-pdf-pair",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-behaviour-pdf-pair",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "2c37132770858afbbf076f1777e6dfbbe8aff3ff1f630333b661d4828252aec0",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-speech-learning-pdf-pair",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-learning-pdf-pair",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "4ab2e319450674e2d337b16ebbbddb897bc684ce4e148f4487e0c8ed52e218ec",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-speech-occupational-hardbound-pair",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-occupational-hardbound-pair",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "561f2405b22608f40619ec403d33253e58ff7d7a156e7cae5d77de9af5e95655",
+      "result": "pass"
+    },
+    {
+      "path": "/books/pinnacle-101-speech-occupational-pdf-pair",
+      "url": "https://www.pinnacleblooms.org/books/pinnacle-101-speech-occupational-pdf-pair",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "333739638a31ea656c3a6e3793b116c767cfbad3272b3057225372f021189e60",
+      "result": "pass"
+    },
+    {
+      "path": "/books/special-education-101-learning-through-everyday-play",
+      "url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "2280371e7ce3d4ef0d0828a50b38b9e9176cd04edf70f4a00b442bf222c1afd1",
+      "result": "pass"
+    },
+    {
+      "path": "/books/special-education-101-learning-through-everyday-play-softcover",
+      "url": "https://www.pinnacleblooms.org/books/special-education-101-learning-through-everyday-play-softcover",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "8dd3e58f0ec51d75d67e107ad68df2d08e2644bb75424c63aaa3e54a6a37546d",
+      "result": "pass"
+    },
+    {
+      "path": "/books/speech-communication-101-my-message-matters",
+      "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "d06aeeb477880187734c46af35d842bec615bae0dea05b5d12a4daaa7c696aa3",
+      "result": "pass"
+    },
+    {
+      "path": "/books/speech-communication-101-my-message-matters-softcover",
+      "url": "https://www.pinnacleblooms.org/books/speech-communication-101-my-message-matters-softcover",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "33eed2fe0742e57022bc764ca80b60640714a5545a9328e5a90531a3ebd53dc5",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te",
+      "url": "https://www.pinnacleblooms.org/books/te",
+      "status": 200,
+      "storePanels": 11,
+      "etag": null,
+      "sha256": "2f977a9a7e41010d796e898a76f65f6783d7a74c308f1bd66328a3c2b52b1a35",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/aba-101",
+      "url": "https://www.pinnacleblooms.org/books/te/aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "c76aaafd9b43f1456270c5631e52e80ba37a23535b6aa458e125a668abb3d961",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/aba-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/te/aba-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "ff3b917c0c1a78fe0f19a03659d7f3922d9411dee3a7ac99054fdfbb7a38b365",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/four-book-101",
+      "url": "https://www.pinnacleblooms.org/books/te/four-book-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "b6f2643abc69b05aeca32e9d8ddc96f212dbae31ab03010ce83238e82e3a75d8",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/ot-101",
+      "url": "https://www.pinnacleblooms.org/books/te/ot-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "4e184e8b6b3b08b5f31ea30b8855b8fd4892397738c2184f3d3de07920a12ad8",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/ot-aba-101",
+      "url": "https://www.pinnacleblooms.org/books/te/ot-aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "dd6684de403afef316d619dfd81d95ee4950dc06cd420bb1770961d45381c1ba",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/ot-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/te/ot-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "c7d0fa69b4987fc84ab43cc8d1cc9c8d89cc8c8cb5e4603b4daccd488b45c32b",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/te/special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "3c749df878133aa5f2cfcb5fd5daa959e569fc5bd9661f04b35d305bbda741e0",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/speech-101",
+      "url": "https://www.pinnacleblooms.org/books/te/speech-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "ff4fbf2ba10fc8f6da705a3d8a851998733c76d21f4e31d0e995734cb545aa42",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/speech-aba-101",
+      "url": "https://www.pinnacleblooms.org/books/te/speech-aba-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "2d8a0faeea6bc93dc2313a9b8b46c69609df25038e4299108468d7ccb84dd43d",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/speech-ot-101",
+      "url": "https://www.pinnacleblooms.org/books/te/speech-ot-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "452b072e449cb8399300e3e750ed8f41d6eb33d146fcf2f75caff4ca2ea07f11",
+      "result": "pass"
+    },
+    {
+      "path": "/books/te/speech-special-education-101",
+      "url": "https://www.pinnacleblooms.org/books/te/speech-special-education-101",
+      "status": 200,
+      "storePanels": 1,
+      "etag": null,
+      "sha256": "633abdd4078273ee9aae6361b4d34b74cbc05cf0e16cc3b8cc19c36840f53de1",
+      "result": "pass"
+    },
+    {
+      "path": "/shop",
+      "url": "https://www.pinnacleblooms.org/shop",
+      "status": 200,
+      "storePanels": 11,
+      "etag": null,
+      "sha256": "8685d300d31821e1b3decee584769c166d5b54966249bef377ec11933e3d108e",
+      "result": "pass"
+    }
+  ],
+  "limits": "Public HTML and exact links verified. No cart, purchase, analytics conversion, sign-in, call or customer record created. Marketplace stock/delivery and search indexing are separate."
+}
