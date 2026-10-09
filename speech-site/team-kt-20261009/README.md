@@ -27,6 +27,8 @@ Mac-to-Windows messages and the Mac's GitHub PR have been received. At package p
 3. [Team contracts](TEAM-CONTRACTS.md): the first two executable jobs, boundaries and completion requirements.
 4. [Access and runbook](ACCESS-AND-RUNBOOK.md): tools, secure access, build/test and resource rules.
 
+Follow-up delivery: [actual private evidence handover, test failures and Mac work reservation](EVIDENCE-HANDOVER.md). The Mac confirmed it received this KT. The private evidence package includes the executable offline source mapping; two new chat IDs remain unconfirmed.
+
 For a page change also read the existing [page standard](../PINNACLE-PAGE-CREATION-WORK-ORDER.md), [common shell](../COMMON-SHELL-BASELINE.md), [vernacular contract](../VERNACULAR-TYPOGRAPHY.md) and only the relevant source receipts. Do not load the whole historical conversation or run a fresh full audit to begin.
 
 ## One repository, one integration branch, separate working copies
