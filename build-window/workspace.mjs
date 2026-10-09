@@ -15,7 +15,9 @@ const previewPort = process.env.PINNACLE_PREVIEW_PORT || '4340';
 if (!/^\d+$/.test(previewPort) || Number(previewPort)<1024 || Number(previewPort)>65535) throw new Error('PINNACLE_PREVIEW_PORT must be an unprivileged local port.');
 const previewURL = 'http://127.0.0.1:' + previewPort;
 const localNode = path.join(here, '.toolchain', 'node_modules', 'node', 'bin', process.platform === 'win32' ? 'node.exe' : 'node');
-if (Number(process.versions.node.split('.')[0]) !== 24 && fs.existsSync(localNode)) {
+const expectedNode = fs.readFileSync(path.join(here, '.node-version'), 'utf8').trim();
+const expectedNpm = fs.readFileSync(path.join(here, '.npm-version'), 'utf8').trim();
+if (process.versions.node !== expectedNode && fs.existsSync(localNode) && fs.realpathSync(localNode) !== fs.realpathSync(process.execPath)) {
   const run = spawnSync(localNode, [fileURLToPath(import.meta.url), ...process.argv.slice(2)], {stdio: 'inherit', env: process.env});
   if (run.error) throw run.error;
   process.exit(run.status ?? 1);
@@ -55,6 +57,8 @@ const recipes = {
   seo: ['node', '../build-window/seo-evidence.mjs'],
   'frog-local': ['node', '../build-window/frog-local.mjs'],
   'ask-build': ['npm', 'run', 'build:ask'],
+  'ci-focused': ['node', '../build-window/ci-focused.mjs'],
+  'ci-local': ['node', '../build-window/ci-local.mjs', ...(process.argv[3] ? [process.argv[3]] : [])],
   browser: ['npm', 'exec', '--', 'playwright', 'test', 'tests/browser/portal-smoke.spec.mjs', 'tests/browser/pinnacleai-layout.spec.mjs', '--project=phone-320', '--project=phone-390', '--project=tablet-768', '--project=desktop-1440'],
   'browser-webkit': ['npm', 'exec', '--', 'playwright', 'test', 'tests/browser/portal-smoke.spec.mjs', 'tests/browser/pinnacleai-layout.spec.mjs', '--project=webkit'],
   'browser-all': ['npm', 'exec', '--', 'playwright', 'test', '--project=phone-320', '--project=phone-390', '--project=tablet-768', '--project=desktop-1440'],
@@ -73,9 +77,12 @@ const source = git('rev-parse', 'HEAD');
 const siteSourceTree = git('rev-parse', 'HEAD:speech-site');
 if (action === 'doctor') {
   const pkg = JSON.parse(fs.readFileSync(path.join(site, 'package.json'), 'utf8'));
+  const npmVersion = spawnSync(process.execPath, [npmCli(), '--version'], {encoding:'utf8',windowsHide:true});
   console.log(JSON.stringify({root, site, branch: branch || '(detached)', source,
     originMain: git('rev-parse', 'origin/main'), node: process.version,
-    ciNodeMajor: 24, nodeMatchesCI: Number(process.versions.node.split('.')[0]) === 24,
+    expectedNode, expectedNpm, nodeMatchesCI: process.versions.node === expectedNode,
+    npm: npmVersion.status === 0 ? npmVersion.stdout.trim() : 'unavailable',
+    npmMatchesCI: npmVersion.status === 0 && npmVersion.stdout.trim() === expectedNpm,
     dependenciesInstalled: fs.existsSync(path.join(site, 'node_modules', 'astro', 'package.json')),
     npmCli: npmCli(), scripts: Object.keys(pkg.scripts), commands: ['doctor', 'sync', ...Object.keys(recipes)],
     pages: Object.keys(pageContracts), localWorkers: 2,
@@ -93,7 +100,9 @@ if (action === 'sync') {
 }
 if (!recipes[action]) throw new Error('Choose: doctor, sync, ' + Object.keys(recipes).join(', '));
 if (!branch || ['main', 'master'].includes(branch)) throw new Error('Use a dedicated feature branch for this development launcher.');
-if (Number(process.versions.node.split('.')[0]) !== 24) throw new Error('Use Node 24 to match the existing CI. See build-window/README.md.');
+if (process.versions.node !== expectedNode) throw new Error('Use Node '+expectedNode+' to match CI. See build-window/README.md.');
+const npmVersion = spawnSync(process.execPath, [npmCli(), '--version'], {encoding:'utf8',windowsHide:true});
+if (npmVersion.status !== 0 || npmVersion.stdout.trim() !== expectedNpm) throw new Error('Use npm '+expectedNpm+' to match CI. See build-window/README.md.');
 
 fs.mkdirSync(results, {recursive: true});
 const verifiedCandidate = action === 'preview' || action === 'speed' || action.startsWith('browser') ? requireCandidate(root, results) : undefined;

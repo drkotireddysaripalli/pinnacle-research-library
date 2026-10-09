@@ -33,6 +33,19 @@ test('verified candidate accepts unchanged inputs and rejects an unstaged source
   f.write('speech-site/src/page.astro','Changed page');
   assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
 });
+
+test('known generated machine outputs accept only recorded before and after bytes',t=>{
+ const f=fixture(t);
+ for(const name of ['speech-site/public/pinnacle-pages-data/speech-llms.txt','speech-site/public/pinnacle-pages-data/about-policy-source.json','speech-site/src/data/centre-page-releases.json','speech-site/deployment/book-store-choices.mjs'])f.write(name,'Before\r\n');
+ const before=generatedHashes(f.root);
+ for(const name of Object.keys(before))f.write(name,'Generated\n');
+ const generatedSnapshots=makeSnapshots(before,generatedHashes(f.root));
+ const candidate={status:'passed',fingerprint:inputFingerprint(f.root,generatedSnapshots),generatedSnapshots};
+ fs.writeFileSync(path.join(f.results,'candidate.json'),JSON.stringify(candidate));
+ assert.equal(requireCandidate(f.root,f.results).status,'passed');
+ f.write('speech-site/public/pinnacle-pages-data/speech-llms.txt','Unexpected change');
+ assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
+});
 test('new untracked source invalidates a previously built candidate',t=>{
   const f=fixture(t);f.write('speech-site/src/new-page.astro','New page');
   assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
@@ -64,5 +77,12 @@ test('browser test edits change the test identity while preserving build reuse; 
   assert.equal(requireCandidate(f.root,f.results).status,'passed');
   assert.notEqual(browserTestFingerprint(f.root),before);
   f.write('speech-site/public/pinnacle-pages-scripts/enrolment.js','Changed served behavior');
+  assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
+});
+test('the timestamped centre validation receipt is separate from build inputs; other evidence remains guarded',t=>{
+  const f=fixture(t);
+  f.write('speech-site/deployment/centre-network-contract-20261007.json','New validation timestamp');
+  assert.equal(requireCandidate(f.root,f.results).status,'passed');
+  f.write('verify-site/content/source.md','Changed source evidence');
   assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
 });

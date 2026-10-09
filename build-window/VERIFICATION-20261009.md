@@ -18,7 +18,8 @@ The initial launcher is merged through PR9. This extension consumes Windows KT a
 | Separate Shop/language cohort |24passed at four sizes after replacing obsolete font aliases with the sharedPinnacle Anek contract,800heading weight and actual loaded Indic face; live digital cart, no purchase |
 | Candidate guards |6passed, including separate browser-test identity and unchanged-build reuse |
 | Evidence window |390/1440px:8evidence cards/18check rows, filters and command copy/fallback passed,0page errors,0page overflow |
-| Native Frog |24.3 Apple Silicon signed/notarized, actual native Licensed window verified with existing same-user entitlement;3local pages/sixCSV exports, all200; reused12URL Windows crawl separately |
+| Native Frog |24.3 Apple Silicon signed/notarized, actual native Licensed window verified with existing same-user entitlement; earlier pre-connection3local pages/sixCSV exports all200; reused12URL Windows crawl separately. Current connected-runtime validation failed and remains a separate manager-owned acceptance |
+| Frog settings guard |8targeted tests passed; actual shared-config invocation refused before preview/native execution. Enabled/unknown/missing/ambiguous provider flags, populated credentials, GA4/GSC cache folders and JVM/home overrides prevent the shared launcher from starting; shared settings are preserved |
 | Public enrolment Lighthouse |Mobile97/LCP2.429s;desktop100/LCP0.597s;TBT0,CLS0;accessibility/best-practices/SEO100; simulated lab only |
 
 Local uncompressed-preview Lighthouse separately measured mobile78/LCP4.354s, desktop99. Preserve it as a different transport boundary; the public run passed the existing enforced budgets. No same-source/cache-state Windows speed ratio was measured. The practical Mac improvements are functioning native Firefox, broader reproducible checks, separate failure artifacts, explicit source/test identities, unchanged-candidate reuse and an executable private evidence join.
