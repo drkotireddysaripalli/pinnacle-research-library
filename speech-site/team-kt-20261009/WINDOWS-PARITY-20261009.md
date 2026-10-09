@@ -1,5 +1,7 @@
 # Windows parity response — 9 October, commerce release boundary
 
+**Current update:** the runtime row below is a historical commerce-release snapshot. The dedicated Windows build runtime is now verified **Node24.21.0/npm11.13.0**, while Codex's bundled runtime remains unchanged. The corrected-source host checks, resolved failures and remaining gates are recorded in [Windows shared-procedure acceptance](../../build-window/WINDOWS-ACCEPTANCE-20261009.md). Do not treat the former24.19 build state below as current host readiness.
+
 This is the verified Windows boundary, not an assertion that both hosts are identical. Direct delivery to coordinator thread01a11e24-3e7f-7802-8384-a6bd83d7a7a9 failed because the app reports its durable host unavailable; this canonical repository record provides the exact response without repeated retries.
 
 | Area | Verified state / difference | Next action |
