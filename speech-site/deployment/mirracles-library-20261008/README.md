@@ -21,6 +21,27 @@ python deployment/mirracles-library-20261008/test_legacy_identities.py
 
 The builder reads saved files only. It generates chunked detail assets, the catalogue, provenance and `assets.mjs` here, and synchronizes the two flat runtime/asset sibling modules used by integration. It uses the authored CSS/player script and unchanged approved logo.
 
+## Authoritative legacy ID family recovery — 9 October 2026
+
+`data/authoritative-legacy-ids.json` now provides **23,525 old Id → existing public F25 mappings** from one read-only projection of the existing `mirracle_view_v1`-backed publication store. The runtime uses the compact `catalogue.legacyIds` relation. It does not publish private source rows, create video records or infer identity from titles. Public provenance contains source hashes, capture time and aggregate counts only.
+
+- 17,994 targets already belong to the current sitemap directory; 5,531 are already-public archive records.
+- 17,867 mappings have matching populated YouTube identities. No competing populated video identities or primary/path identity collisions were found.
+- 248 differing thumbnail representations are recorded; the authoritative Id/F25 join and matching video identity do not require mutable thumbnails to be equal.
+- 6,949 source rows have no existing public catalogue target and are excluded; this work does not decide their publication eligibility.
+- Every previous catalogue field is unchanged: 29,759 primary records, 19,292 directory entries and 57 exact aliases. The 55 media-verified cross-ID paths still render as before. Other old-ID bare/changed-slug requests redirect to the exact canonical with their complete query string retained.
+- Earlier unresolved sample IDs 15843, 20980, 20067 and 18253 are now resolved by this authoritative mapping. The earlier 33-group sample paragraph below is historical, not the current mapping status.
+
+`bulk_identities.py` performs the offline projection, membership/media checks, writes the public compact map and updates catalogue/provenance. The maintained full builder consumes the public map so future builds retain these identities. Reproduction uses the private captured projection locally:
+
+```text
+python deployment/mirracles-library-20261008/bulk_identities.py ask-private/server-error-family-20261009/mirracles-id-projection.json
+python -m unittest discover -s deployment/mirracles-library-20261008 -p "test_*.py" -v
+node --test deployment/mirracles-library-20261008/library.test.mjs
+```
+
+Both original and actual flat runtime tests exercise all 23,525 mappings as bare-ID and changed-slug redirects, including query bytes and Unicode URL encoding; conflict fixtures reject canonical shadowing, contradictory exact aliases and chains. The catalogue must be uploaded with the flat module to activate this repair.
+
 ## Source-verified legacy numeric aliases — 9 October 2026
 
 `data/legacy-identity-aliases.json` records dated original public-page evidence for **28 recovered numeric identities / 55 exact paths**. For example, old ID `2652` identifies the same primary/schema YouTube video and Stream thumbnail as current sitemap record `20688754201`. Recorded old paths render their current record with its current canonical/OG/video identity. A bare old ID or changed slug redirects to the current canonical, preserving the complete query string. These aliases add no listing or sitemap record; the source retains 29,759 primary records and reports recovered alias IDs separately.

@@ -127,6 +127,13 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
     cataloguePromise ??= Promise.resolve().then(()=>loadJson('catalogue')).then(c=> {
       const canonicalById = new Map(c.records.map(r=>[r.id,r]));
       const byId = new Map(canonicalById);
+      // Authoritative old Id -> existing public F25 identity. No chains or title joins.
+      for (const [oldId,targetId] of Object.entries(c.legacyIds||{})) {
+        const target=canonicalById.get(targetId);
+        if (!/^[0-9]+$/.test(oldId) || typeof targetId!=='string' || !/^[0-9]+$/.test(targetId) ||
+            !target || oldId===targetId || canonicalById.has(oldId)) throw Error('Conflicting authoritative legacy identity');
+        byId.set(oldId,target);
+      }
       const byPath = new Map();
       for (const r of c.records) byPath.set(pathKey(r.path),r);
       for (const [p,id] of Object.entries(c.aliasPaths||{})) {

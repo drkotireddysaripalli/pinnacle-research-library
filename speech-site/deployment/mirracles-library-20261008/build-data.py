@@ -3,6 +3,7 @@ from pathlib import Path
 import base64, collections, hashlib, json, re, xml.etree.ElementTree as ET
 from urllib.parse import urlsplit, unquote
 from legacy_identities import legacy_alias_paths
+from bulk_identities import validate_map, VERSION as BULK_VERSION
 
 HERE = Path(__file__).resolve().parent
 SITE = HERE.parent.parent
@@ -76,13 +77,17 @@ for alias, key in legacy_aliases.items():
     if alias_paths.get(alias, key) != key:
         raise ValueError('Legacy alias conflicts with an existing archive path')
     alias_paths[alias] = key
+bulk_source=HERE/'data/authoritative-legacy-ids.json'
+bulk=json.loads(bulk_source.read_text(encoding='utf-8'))
+assert bulk['version']==BULK_VERSION, 'Unexpected authoritative identity version'
+legacy_ids=validate_map(bulk['legacyIds'],index,alias_paths)
 counts = collections.Counter(records[k]['category'] for k in order if records[k]['category'])
 navigation = json.loads((SITE / 'src/data/portal-navigation.json').read_text(encoding='utf-8'))
-write('catalogue', {'version': 'mirracles-library-20261008', 'order': order, 'records': index, 'aliasPaths': alias_paths,
+write('catalogue', {'version': 'mirracles-library-20261008', 'order': order, 'records': index, 'aliasPaths': alias_paths, 'legacyIds': legacy_ids,
     'categories': [{'key': k, 'label': k, 'count': v} for k, v in sorted(counts.items())],
     'navigation': {'main': [{'label': x['label'], 'url': x['url']} for x in navigation['main']],
                    'therapy': [{'label': x['label'], 'url': x['url']} for x in navigation['therapy']]}})
-report = {'candidateOnly': True, 'source': str(SITEMAP.relative_to(WORK)),
+report = {'candidateOnly': True, 'authoritativeLegacyIds': {'source':bulk_source.name,'sha256':hashlib.sha256(bulk_source.read_bytes()).hexdigest(),**bulk['provenance']}, 'source': str(SITEMAP.relative_to(WORK)),
     'sourceSha256': hashlib.sha256(SITEMAP.read_bytes()).hexdigest(), 'sitemapPages': len(order),
     'sourceVideoEntries': sum(bool(records[k]['player']) for k in order),
     'publicArchivePathsPreserved': len(archive_paths), 'totalNumericIdentities': len(records),

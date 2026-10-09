@@ -104,7 +104,9 @@ test(runtime+': source-verified cross-ID aliases preserve the canonical video an
     assert(!catalogue.records.some(r=>r.id===mapping.legacyId));
   }
   for(const id of legacyIdentities.incidentSample.unresolvedLegacyIds) {
-    assert.equal(await get('/mirracles/'+id+'/UNRESOLVED'),null);
+    const target=catalogue.legacyIds?.[id];
+    const response=await get('/mirracles/'+id+'/UNRESOLVED');
+    if(target){assert.equal(response.status,308);assert.equal(response.headers.get('location'),ORIGIN+catalogue.records.find(r=>r.id===target).path);}else assert.equal(response,null);
   }
 });
 test(runtime+': ambiguous alias data fails closed instead of selecting a different video',async()=>{
@@ -175,3 +177,28 @@ test('flat runtime is equivalent and transient catalogue/shell failures recover'
   assert.equal((await shellRetry(new Request(ORIGIN+'/allmirracles'))).status,503);
   assert.equal((await shellRetry(new Request(ORIGIN+'/allmirracles'))).status,200);
 });
+
+for(const [runtime,createLibrary] of [['original',createMirraclesLibrary],['flat',createFlatMirraclesLibrary]]) {
+ test(runtime+': every authoritative old ID redirects to its existing canonical while query bytes survive',async()=>{
+  const scoped=createLibrary({loadJson:async name=>{assert.equal(name,'catalogue');return catalogue;}});
+  const primary=new Map(catalogue.records.map(r=>[r.id,r]));
+  assert.equal(Object.keys(catalogue.legacyIds).length,23525);
+  const query='?utm_source=google&gclid=INVENTED&q=one%20two&q=one+two&x=%2F%26&empty=';
+  for(const [old,target] of Object.entries(catalogue.legacyIds)){
+   assert(!primary.has(old));assert(primary.has(target));
+   for(const suffix of ['', '/INVENTED-CHANGED-SLUG']){
+    const response=await scoped(new Request(ORIGIN+'/mirracles/'+old+suffix+query));
+    assert.equal(response?.status,308,old);
+    assert.equal(response.headers.get('location'),new URL(primary.get(target).path,ORIGIN).href+query,old);
+   }
+  }
+  for(const old of ['1','1000','10000','10001','15843','20980','20067','18253'])assert(catalogue.legacyIds[old]);
+ });
+ test(runtime+': authoritative maps cannot shadow canonical or exact-path identities or form chains',async()=>{
+  const first=catalogue.records[0],second=catalogue.records[1],alias=legacyIdentities.mappings[0];
+  for(const legacyIds of [{[first.id]:second.id},{[alias.legacyId]:first.id},{'123':'456','456':first.id}]){
+   const broken=createLibrary({loadJson:async()=>({...catalogue,legacyIds})});
+   assert.equal((await broken(new Request(ORIGIN+'/mirracles/123/INVENTED'))).status,503);
+  }
+ });
+}
