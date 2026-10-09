@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawn, spawnSync} from 'node:child_process';
+import {generatedHashes, inputFingerprint, makeSnapshots, requireCandidate} from './candidate.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.dirname(here);
@@ -73,6 +74,9 @@ if (!branch || ['main', 'master'].includes(branch)) throw new Error('Use a dedic
 if (Number(process.versions.node.split('.')[0]) !== 24) throw new Error('Use Node 24 to match the existing CI. See build-window/README.md.');
 
 fs.mkdirSync(results, {recursive: true});
+if (action === 'preview' || action.startsWith('browser')) requireCandidate(root, results);
+const generatedBefore = action === 'build' ? generatedHashes(root) : undefined;
+const fingerprintBefore = action === 'build' ? inputFingerprint(root, makeSnapshots(generatedBefore, generatedBefore)) : undefined;
 const [kind, ...args] = recipes[action];
 const env = {...process.env, PINNACLE_RELEASE: 'production'};
 env.PATH = path.dirname(process.execPath) + path.delimiter + (process.env.PATH || '');
@@ -117,6 +121,13 @@ let receivedSignal;
 for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => {receivedSignal = signal; child.kill(signal);});
 child.on('error', error => {save({status: 'failed', error: error.message, completedAt: new Date().toISOString()}); process.exitCode = 1;});
 child.on('exit', (code, signal) => {
+  if (action === 'build' && code === 0) {
+    const generatedSnapshots = makeSnapshots(generatedBefore, generatedHashes(root));
+    const fingerprint = inputFingerprint(root, generatedSnapshots);
+    if (fingerprint !== fingerprintBefore) {code = 1; console.error('Build inputs changed during the build. Inspect the changes before rebuilding.');}
+    fs.writeFileSync(path.join(results, 'candidate.json'), JSON.stringify({status: code === 0 ? 'passed' : 'failed', source, siteSourceTree,
+      fingerprint, generatedSnapshots, builtAt: new Date().toISOString()}, null, 2) + '\n');
+  }
   save({status: action === 'preview' && (signal || receivedSignal) ? 'stopped' : code === 0 ? 'passed' : 'failed',
     exitCode: code, signal: signal || receivedSignal || null, completedAt: new Date().toISOString(),
     trackedSiteChangesAfter: git('status', '--porcelain', '--', 'speech-site')});

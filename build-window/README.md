@@ -45,7 +45,7 @@ npm install --prefix build-window/.toolchain --no-save --package-lock=false --no
 
 The launcher automatically uses that copy when the shell's Node major differs. Install the actual selected browser runtimes once from `speech-site` using `npx playwright install chromium webkit`. Edge requires a separately installed Edge browser; an emulated viewport is not physical-device acceptance. Optional Firefox/other coverage remains in the existing Playwright configuration.
 
-Receipts are under ignored `build-window/results/`; existing browser evidence is under `speech-site/audits/`. A receipt reports the command outcome and source SHA, with any tracked site changes visible. It is not a production release receipt. `pinnacle.code-workspace` provides optional editor tasks; the source, browser and terminal can also be opened directly in Codex.
+Receipts are under ignored `build-window/results/`; existing browser evidence is under `speech-site/audits/`. Preview/browser commands require a successful candidate receipt with matching input bytes, including uncommitted/untracked source. Only verified before/after bytes of declared generated outputs are normalized; unexpected edits still invalidate the candidate. Root tooling/docs changes permit reuse of the unchanged portal build. A receipt reports the command outcome and source SHA, with any tracked site changes visible. It is not a production release receipt. `pinnacle.code-workspace` provides optional editor tasks; the source, browser and terminal can also be opened directly in Codex.
 
 ## Existing tools and their role
 

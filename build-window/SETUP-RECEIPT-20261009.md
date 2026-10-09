@@ -5,6 +5,7 @@ Base source `10425a0b86aafb5e1d7ada114cc2325e943abc5b`, matching the Windows own
 | Check | Actual result |
 | --- | --- |
 | Launcher syntax/status | Passed; feature branch, source and Node 24 reported |
+| Candidate reuse guards | 4 passed; source/new-file/evidence/unexpected-generated changes and missing receipt rejected |
 | Existing static Astro build | Passed; original prebuild/build/postbuild executed once |
 | Existing unit suite | 600 registered tests: 599 passed, 1 explicit skip, 0 failed |
 | Existing TestingBot contract suite | 13 passed, 0 failed; no provider session allocated |
@@ -16,6 +17,8 @@ The first unit run produced three byte-parity failures after generated modules w
 The skipped unit case is `narrow private receiver candidate preserves legacy response and notification payload`. This setup does not complete that operational boundary. The existing Ask dynamic build, all-page/browser coverage, cloud exact-build BVT, real devices, production authentication/API dispatch, deployment, qualified calls and enrolments were not executed here.
 
 Local raw logs/receipts are in ignored `build-window/results/`; Playwright's current report is in `speech-site/audits/playwright-report/`. The last browser invocation writes the existing shared report location; the separate run logs/receipts preserve both executions.
+
+Independent review identified stale-candidate attribution in the initial launcher. Preview/browser now require matching actual input fingerprints from a successful build; verified generated pre/post bytes permit ordinary fixture restoration. The four focused guards passed, and the unchanged real candidate was accepted. Its initial fingerprint receipt was registered from the saved successful build/output patch against the unchanged clean baseline, preserving the one completed build rather than rerunning it for root-only tooling changes.
 
 The loopback preview is available at `http://127.0.0.1:4340/`, where the static build serves Speech Therapy. Source, terminal and browser panels were requested in the calling Codex task; the app returned `queued`. Browser automation rejected localhost navigation with `net::ERR_BLOCKED_BY_CLIENT`, so no visible in-app preview is claimed. Local Playwright execution independently verified the selected candidate cases. Open the loopback address directly in an ordinary browser on the Mac, or run the documented preview command after restarting the workspace.
 
