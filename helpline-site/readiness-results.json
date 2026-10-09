@@ -1,11 +1,11 @@
 {
-  "time": "2026-09-25T11:49:33.437Z",
+  "time": "2026-10-09T04:14:38.690Z",
   "passed": 23,
   "skipped": 0,
   "assetCount": 11,
   "assetBytes": 890864,
-  "htmlBytes": 86629,
-  "gzipBytes": 21556,
+  "htmlBytes": 88046,
+  "gzipBytes": 22017,
   "results": [
     {
       "name": "GET serves the static page and correct canonical",
@@ -44,7 +44,7 @@
       "passed": true
     },
     {
-      "name": "CSP narrowly permits the existing Cloudflare beacon and its same-origin receiver",
+      "name": "CSP permits only the deployed measurement endpoints and existing Cloudflare beacon",
       "passed": true
     },
     {
@@ -100,15 +100,5 @@
       "passed": true
     }
   ],
-  "visualReview": {
-    "checkedOn": "2026-09-25",
-    "viewport": {
-      "width": 390,
-      "height": 844
-    },
-    "horizontalOverflow": false,
-    "heroCallVisible": true,
-    "fixedCallVisible": true,
-    "privacyPanelBlocksCalling": false
-  }
+  "visualReview": "Pending root browser review; local server provided."
 }
