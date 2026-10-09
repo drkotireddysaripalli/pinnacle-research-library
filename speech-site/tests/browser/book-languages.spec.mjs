@@ -1,5 +1,6 @@
 import {test,expect} from '@playwright/test';
 import fs from 'node:fs/promises';
+import {VERNACULAR_RELEASE} from '../../deployment/vernacular-typography.mjs';
 for(const locale of ['hi','te'])test(`native ${locale} books preserve language, navigation and readable layouts`,async({page},info)=>{
  test.skip(process.env.PAGE_PATH!=='/shop','Bookshop acceptance only');
  await page.goto(`/books/${locale}/speech-101`);
@@ -7,8 +8,11 @@ for(const locale of ['hi','te'])test(`native ${locale} books preserve language, 
  await expect(page.locator('h1')).toHaveCount(1);
  await expect(page.locator('.pbn-native-contents li')).toHaveCount(31);
  await page.evaluate(()=>document.fonts.ready);
- const font=locale==='hi'?'AnekHindi':'AnekTelugu';
- expect(await page.locator('.pbn-native h1').evaluate((el,f)=>getComputedStyle(el).fontFamily.includes(f),font)).toBe(true);
+ await expect(page.locator('style[data-pinnacle-vernacular]')).toHaveAttribute('data-pinnacle-vernacular',VERNACULAR_RELEASE);
+ expect(await page.locator('.pbn-native h1').evaluate(el=>getComputedStyle(el).fontFamily.includes('Pinnacle Anek'))).toBe(true);
+ expect(await page.locator('.pbn-native h1').evaluate(el=>getComputedStyle(el).fontWeight)).toBe('800');
+ const range=locale==='hi'?'U+900-97F':'U+C00-C7F';
+ expect(await page.evaluate(r=>[...document.fonts].some(f=>f.family==='Pinnacle Anek'&&f.status==='loaded'&&f.unicodeRange.toUpperCase().includes(r)),range)).toBe(true);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1)).toBe(true);
  await expect(page.locator('.pbn-commerce-nav a').nth(2)).toHaveAttribute('href',`/books/${locale}#pairs`);
  await page.locator('.pbn-native-product img').first().evaluate(img=>img.decode());

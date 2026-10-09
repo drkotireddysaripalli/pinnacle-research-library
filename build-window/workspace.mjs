@@ -3,13 +3,17 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawn, spawnSync} from 'node:child_process';
-import {generatedHashes, inputFingerprint, makeSnapshots, requireCandidate} from './candidate.mjs';
+import {browserTestFingerprint, generatedHashes, inputFingerprint, makeSnapshots, requireCandidate} from './candidate.mjs';
+import {pageContracts} from '../speech-site/scripts/page-quality-contracts.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.dirname(here);
 const site = path.join(root, 'speech-site');
 const results = path.join(here, 'results');
 const action = process.argv[2] || 'doctor';
+const previewPort = process.env.PINNACLE_PREVIEW_PORT || '4340';
+if (!/^\d+$/.test(previewPort) || Number(previewPort)<1024 || Number(previewPort)>65535) throw new Error('PINNACLE_PREVIEW_PORT must be an unprivileged local port.');
+const previewURL = 'http://127.0.0.1:' + previewPort;
 const localNode = path.join(here, '.toolchain', 'node_modules', 'node', 'bin', process.platform === 'win32' ? 'node.exe' : 'node');
 if (Number(process.versions.node.split('.')[0]) !== 24 && fs.existsSync(localNode)) {
   const run = spawnSync(localNode, [fileURLToPath(import.meta.url), ...process.argv.slice(2)], {stdio: 'inherit', env: process.env});
@@ -43,11 +47,27 @@ const recipes = {
   build: ['npm', 'run', 'build'],
   unit: ['npm', 'run', 'test:unit'],
   contracts: ['npm', 'run', 'test:testingbot-contract'],
+  types: ['npm', 'run', 'check:types'],
+  'ask-auth': ['npm', 'run', 'test:ask-auth'],
+  'ask-content': ['npm', 'run', 'test:ask-content'],
+  'centre-contract': ['node', 'scripts/validate-centre-network.mjs'],
+  'evidence-contract': ['python', 'scripts/test-growth-evidence-profile.py'],
+  seo: ['node', '../build-window/seo-evidence.mjs'],
+  'frog-local': ['node', '../build-window/frog-local.mjs'],
   'ask-build': ['npm', 'run', 'build:ask'],
   browser: ['npm', 'exec', '--', 'playwright', 'test', 'tests/browser/portal-smoke.spec.mjs', 'tests/browser/pinnacleai-layout.spec.mjs', '--project=phone-320', '--project=phone-390', '--project=tablet-768', '--project=desktop-1440'],
   'browser-webkit': ['npm', 'exec', '--', 'playwright', 'test', 'tests/browser/portal-smoke.spec.mjs', 'tests/browser/pinnacleai-layout.spec.mjs', '--project=webkit'],
+  'browser-all': ['npm', 'exec', '--', 'playwright', 'test', '--project=phone-320', '--project=phone-390', '--project=tablet-768', '--project=desktop-1440'],
+  'browser-firefox': ['npm', 'exec', '--', 'playwright', 'test', '--project=firefox'],
+  'browser-webkit-all': ['npm', 'exec', '--', 'playwright', 'test', '--project=webkit'],
+  'browser-edge': ['npm', 'exec', '--', 'playwright', 'test', '--project=edge'],
+  'browser-enrolment': ['npm', 'exec', '--', 'playwright', 'test', 'tests/browser/enrolment.spec.mjs', '--project=phone-320', '--project=phone-390', '--project=tablet-768', '--project=desktop-1440'],
+  'browser-shop': ['npm', 'exec', '--', 'playwright', 'test', 'tests/browser/shop.spec.mjs', 'tests/browser/book-languages.spec.mjs', 'tests/browser/portal-smoke.spec.mjs', '--project=phone-320', '--project=phone-390', '--project=tablet-768', '--project=desktop-1440'],
+  speed: ['npm', 'run', 'check:speed', '--', process.argv[3] || 'enrolment', '--enforce'],
   preview: ['node', 'scripts/serve-quality-preview.mjs']
 };
+const selectedPage = action.startsWith('browser') && !['browser', 'browser-webkit'].includes(action) ? (process.argv[3] || 'enrolment') : action === 'speed' ? (process.argv[3] || 'enrolment') : undefined;
+if (selectedPage && !pageContracts[selectedPage]) throw new Error('Choose a registered page: ' + Object.keys(pageContracts).join(', '));
 const branch = git('branch', '--show-current');
 const source = git('rev-parse', 'HEAD');
 const siteSourceTree = git('rev-parse', 'HEAD:speech-site');
@@ -58,7 +78,9 @@ if (action === 'doctor') {
     ciNodeMajor: 24, nodeMatchesCI: Number(process.versions.node.split('.')[0]) === 24,
     dependenciesInstalled: fs.existsSync(path.join(site, 'node_modules', 'astro', 'package.json')),
     npmCli: npmCli(), scripts: Object.keys(pkg.scripts), commands: ['doctor', 'sync', ...Object.keys(recipes)],
-    previewURL: 'http://127.0.0.1:4340/',
+    pages: Object.keys(pageContracts), localWorkers: 2,
+    screamingFrogInstalled: fs.existsSync('/Applications/Screaming Frog SEO Spider.app/Contents/MacOS/ScreamingFrogSEOSpiderLauncher'),
+    previewURL: previewURL + '/',
     cloudTests: 'Use existing trusted CI / Windows coordinator. Local launcher starts no cloud sessions.'}, null, 2));
   process.exit(0);
 }
@@ -74,7 +96,7 @@ if (!branch || ['main', 'master'].includes(branch)) throw new Error('Use a dedic
 if (Number(process.versions.node.split('.')[0]) !== 24) throw new Error('Use Node 24 to match the existing CI. See build-window/README.md.');
 
 fs.mkdirSync(results, {recursive: true});
-if (action === 'preview' || action.startsWith('browser')) requireCandidate(root, results);
+const verifiedCandidate = action === 'preview' || action === 'speed' || action.startsWith('browser') ? requireCandidate(root, results) : undefined;
 const generatedBefore = action === 'build' ? generatedHashes(root) : undefined;
 const fingerprintBefore = action === 'build' ? inputFingerprint(root, makeSnapshots(generatedBefore, generatedBefore)) : undefined;
 const [kind, ...args] = recipes[action];
@@ -82,7 +104,11 @@ const env = {...process.env, PINNACLE_RELEASE: 'production'};
 env.PATH = path.dirname(process.execPath) + path.delimiter + (process.env.PATH || '');
 // Always use the loopback candidate. Ambient shell configuration cannot select production.
 delete env.PORTAL_ORIGIN;
-env.QUALITY_PREVIEW_PORT = '4340';
+env.QUALITY_PREVIEW_PORT = previewPort;
+if (selectedPage) {
+  env.PAGE_PATH = pageContracts[selectedPage].path;
+  env.CANONICAL_PATH = pageContracts[selectedPage].canonical;
+}
 if (action.startsWith('browser')) {
   if (!fs.existsSync(path.join(site, 'dist', 'index.html'))) throw new Error('Build the static candidate first.');
   const previewRecord = path.join(results, 'preview.json');
@@ -90,16 +116,25 @@ if (action.startsWith('browser')) {
     const record = JSON.parse(fs.readFileSync(previewRecord, 'utf8'));
     try {
       process.kill(record.childPid, 0);
-      if (record.siteSourceTree !== siteSourceTree) throw new Error('Running preview belongs to another portal source tree; restart it.');
-      env.PORTAL_ORIGIN = 'http://127.0.0.1:4340';
+      if (record.candidateFingerprint ? record.candidateFingerprint !== verifiedCandidate.fingerprint : record.siteSourceTree !== siteSourceTree) throw new Error('Running preview belongs to another candidate; restart it.');
+      if (record.previewURL && record.previewURL!==previewURL) throw new Error('Set PINNACLE_PREVIEW_PORT to the port owned by this checkout preview.');
+      env.PORTAL_ORIGIN = previewURL;
     } catch (error) {
       if (error.code !== 'ESRCH') throw error;
     }
   }
+  if (previewPort!=='4340' && !env.PORTAL_ORIGIN) throw new Error('Start this checkout preview before testing a custom local port.');
 }
 if (action === 'preview' && !fs.existsSync(path.join(site, 'dist', 'index.html'))) throw new Error('Build the static candidate first.');
 const actualArgs = kind === 'npm' ? [npmCli(), ...args] : args;
 const startedAt = new Date().toISOString();
+let browserEvidence;
+if (action.startsWith('browser')) {
+  browserEvidence = path.join(results, 'browser-evidence', action + '-' + (selectedPage || 'default') + '-' + startedAt.replace(/[:.]/g,'-'));
+  fs.mkdirSync(browserEvidence,{recursive:true});
+  actualArgs.push('--output',path.join(browserEvidence,'artifacts'));
+  env.PLAYWRIGHT_HTML_OUTPUT_DIR=path.join(browserEvidence,'report');
+}
 const trackedSiteChangesBefore = git('status', '--porcelain', '--', 'speech-site');
 // These byte-parity fixtures must be regenerated from this checkout's source,
 // including its actual line endings. Reuse the existing small builders.
@@ -110,17 +145,30 @@ if (action === 'unit') {
     if (prep.status !== 0) throw new Error(script + ' failed before unit execution.');
   }
 }
-const child = spawn(process.execPath, actualArgs, {cwd: site, stdio: 'inherit', env});
+const executable = kind === 'python' ? (process.env.PINNACLE_PYTHON || 'python3') : process.execPath;
+const log = fs.createWriteStream(path.join(results, action + (selectedPage ? '-' + selectedPage : '') + '.log'));
+const child = spawn(executable, actualArgs, {cwd: site, stdio: ['inherit', 'pipe', 'pipe'], env});
+child.stdout.on('data', bytes => {process.stdout.write(bytes); log.write(bytes);});
+child.stderr.on('data', bytes => {process.stderr.write(bytes); log.write(bytes);});
 const record = {action, branch, source, siteSourceTree, node: process.version, startedAt, childPid: child.pid,
+  executable, args: actualArgs, selectedPage,
+  previewURL,
+  ...(verifiedCandidate ? {candidateFingerprint:verifiedCandidate.fingerprint,builtSource:verifiedCandidate.source} : {}),
+  ...(browserEvidence ? {browserEvidence} : {}),
+  ...(action.startsWith('browser') ? {browserTestFingerprint:browserTestFingerprint(root)} : {}),
   trackedSiteChangesBefore,
-  scope: action.startsWith('browser') ? 'Existing static portal smoke + PinnacleAI layout cases on selected emulated projects' : action,
+  scope: action.startsWith('browser') ? (['browser', 'browser-webkit'].includes(action) ? 'Existing static portal smoke + PinnacleAI layout cases on selected emulated projects' : action==='browser-enrolment' ? 'Existing enrolment response, receipt/reload and duplicate-submit cases at four Chromium sizes' : action==='browser-shop' ? 'Shop, Hindi/Telugu editions and shared-shell cases at four Chromium sizes; live digital cart, no purchase' : 'All registered local browser cases; inspect explicit skips and chosen page contract') : action,
   establishedByThisRun: 'Only the selected local command; no cloud, physical-device, deployment or business result is implied'};
-const save = data => fs.writeFileSync(path.join(results, action + '.json'), JSON.stringify({...record, ...data}, null, 2) + '\n');
+const save = data => fs.writeFileSync(path.join(results, action + (selectedPage ? '-' + selectedPage : '') + '.json'), JSON.stringify({...record, ...data}, null, 2) + '\n');
 save({status: 'running'});
 let receivedSignal;
 for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => {receivedSignal = signal; child.kill(signal);});
 child.on('error', error => {save({status: 'failed', error: error.message, completedAt: new Date().toISOString()}); process.exitCode = 1;});
-child.on('exit', (code, signal) => {
+child.on('close', (code, signal) => {
+  log.end();
+  if (action.startsWith('browser') && record.browserTestFingerprint !== browserTestFingerprint(root)) {
+    code=1; console.error('Browser tests changed during execution; this run cannot establish the final test source.');
+  }
   if (action === 'build' && code === 0) {
     const generatedSnapshots = makeSnapshots(generatedBefore, generatedHashes(root));
     const fingerprint = inputFingerprint(root, generatedSnapshots);
