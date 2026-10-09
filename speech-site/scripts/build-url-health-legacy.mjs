@@ -12,7 +12,9 @@ const helper=await build({stdin:{contents:"export {repairSidebarBreadcrumb} from
 const compiled=helper.outputFiles[0].text.replace(/\nexport \{[\s\S]*?\};\s*$/,'');
 const anchor='async function repairLegacyGraph(text, requestUrl) {';
 assert.equal(coverageLive.split(anchor).length,2);assert(!coverageLive.includes('repairSidebarBreadcrumb'));
-const coverageCandidate=coverageLive.replace(anchor,compiled+'\n'+anchor+'\n  text = repairSidebarBreadcrumb(text, requestUrl); if (text === null) return null;');
+const mediaGuard='u.origin === '+JSON.stringify('https://www.pinnacleblooms.org')+' && missing.has(u.pathname)';
+assert.equal(coverageLive.split(mediaGuard).length,2);
+const coverageCandidate=coverageLive.replace(mediaGuard,'["https://www.pinnacleblooms.org","https://pinnacleblooms.org"].includes(u.origin) && missing.has(u.pathname)').replace(anchor,compiled+'\n'+anchor+'\n  text = repairSidebarBreadcrumb(text, requestUrl); if (text === null) return null;');
 await fs.writeFile('deployment/url-health-legacy-templates.mjs',coverageCandidate);
 const helperRuntime=await build({entryPoints:['deployment/url-health-repair.mjs'],bundle:true,format:'esm',write:false});await fs.writeFile('deployment/url-health-runtime.mjs',helperRuntime.outputFiles[0].text);
-console.log('Portal legacy bundle retained byte-for-byte outside the exact breadcrumb helper/call insertion.');
+console.log('Portal legacy bundle retained outside the breadcrumb insertion and exact same-site image-host guard.');

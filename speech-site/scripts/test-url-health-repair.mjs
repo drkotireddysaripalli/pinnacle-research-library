@@ -1,6 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import {build} from 'esbuild';import {Miniflare,convertV4MiniflareOptions} from 'miniflare';
 import {urlHealthAlias,healthLinkTarget} from '../deployment/url-health-repair.mjs';
 import {repairSidebarBreadcrumb} from '../deployment/legacy-social-metadata/schema.mjs';
+import {isMissingMedia} from '../deployment/legacy-social-metadata/media.mjs';
 import {createMirraclesLibrary,PAGE_SIZE} from '../deployment/mirracles-library.mjs';
 
 test('new Guru directory links all restored articles and every page from the shared portal',async()=>{
@@ -17,6 +18,10 @@ test('new Guru directory links all restored articles and every page from the sha
 });
 
 const origin='https://www.pinnacleblooms.org';
+test('known dead image repair covers both real site hosts and excludes lookalike hosts',()=>{
+ for(const host of ['www.pinnacleblooms.org','pinnacleblooms.org'])assert(isMissingMedia('https://'+host+'/images/therapysphere-room.jpg'));
+ for(const url of ['https://other.example/images/therapysphere-room.jpg','https://pinnacleblooms.org.other.example/images/therapysphere-room.jpg','https://pinnacleblooms.org:444/images/therapysphere-room.jpg','https://pinnacleblooms.org/images/not-in-the-record.jpg'])assert(!isMissingMedia(url));
+});
 test('precise malformed service and sitemap aliases preserve attribution and refuse unrelated routes',()=>{
  const url=origin+'/ABA%20/%20Behavioral%20Therapy?gclid=test&utm_source=google';
  const r=urlHealthAlias(new Request(url));assert.equal(r.status,301);assert.equal(r.headers.get('location'),origin+'/best-aba-therapy-center-india-proven-improvement-rate?gclid=test&utm_source=google');

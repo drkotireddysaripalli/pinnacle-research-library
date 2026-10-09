@@ -6,7 +6,7 @@ const missing=new Set(["/Assets/Materials/20707165343.jpg", "/Images/ProfileImag
 missing.add('/Assets/Materials/318.jpg');
 // Remaining exact 9 October audit image failures, publicly rechecked as 404.
 for(const p of ['/Assets/AbilityScore_Universal_0-1000_Child%20Development_Metric.jpg','/Assets/Materials/20707167545.jpg','/Assets/Materials/962.jpg','/Assets/OG/495.jpg','/images/therapysphere-room.jpg'])missing.add(p);
-export function isMissingMedia(value){try{const u=new URL(value,'https://www.pinnacleblooms.org');return u.origin==='https://www.pinnacleblooms.org'&&missing.has(u.pathname);}catch{return false;}}
+export function isMissingMedia(value){try{const u=new URL(value,'https://www.pinnacleblooms.org');return ['https://www.pinnacleblooms.org','https://pinnacleblooms.org'].includes(u.origin)&&missing.has(u.pathname);}catch{return false;}}
 export function repairKnownBrokenMedia(response){
  const headers=new Headers(response.headers);for(const key of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])headers.delete(key);
  headers.set('x-pinnacle-known-media','verified-missing-20261006');

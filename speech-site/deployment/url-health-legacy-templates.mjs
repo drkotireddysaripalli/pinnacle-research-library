@@ -12,7 +12,7 @@ var missing = /* @__PURE__ */ new Set(["/Assets/Materials/20707165343.jpg", "/Im
 function isMissingMedia(value) {
   try {
     const u = new URL(value, "https://www.pinnacleblooms.org");
-    return u.origin === "https://www.pinnacleblooms.org" && missing.has(u.pathname);
+    return ["https://www.pinnacleblooms.org","https://pinnacleblooms.org"].includes(u.origin) && missing.has(u.pathname);
   } catch {
     return false;
   }
