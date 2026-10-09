@@ -1,0 +1,15 @@
+{
+  "folders": [{"name": "Pinnacle shared codebase", "path": ".."}],
+  "settings": {"files.exclude": {"**/node_modules": true, "**/.toolchain": true}},
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {"label": "Pinnacle: workspace status", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "doctor"], "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": []},
+      {"label": "Pinnacle: build candidate", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "build"], "options": {"cwd": "${workspaceFolder}"}, "group": "build", "problemMatcher": []},
+      {"label": "Pinnacle: unit tests", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "unit"], "options": {"cwd": "${workspaceFolder}"}, "group": "test", "problemMatcher": []},
+      {"label": "Pinnacle: responsive smoke", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "browser"], "options": {"cwd": "${workspaceFolder}"}, "group": "test", "problemMatcher": []},
+      {"label": "Pinnacle: WebKit smoke", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "browser-webkit"], "options": {"cwd": "${workspaceFolder}"}, "group": "test", "problemMatcher": []},
+      {"label": "Pinnacle: local preview", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "preview"], "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": []}
+    ]
+  }
+}
