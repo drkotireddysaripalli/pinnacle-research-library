@@ -4,6 +4,23 @@ import {isMissingMedia} from './media.mjs';
 // Preserve numeric tokens, visible text, navigation and commerce records.
 export const SCHEMA_LIMIT = 256 * 1024;
 
+const sidebarBreadcrumbNames=new Set(['Paediatric Therapy Techniques','Paediatric Sensorial / Neurological/ Developmental Conditions','Paediatric Behaviors / Tantrums','Paediatric Developmental Milestones','Paediatric Therapy Materials','Paediatric Assessments','Pinnacle AbilityScore Assessments','Pinnacle AbilityScore Abilities','Pinnacle AbilityScore Skills']);
+export function repairSidebarBreadcrumb(text,requestUrl){
+ try{
+  const u=new URL(requestUrl);if(u.origin!=='https://www.pinnacleblooms.org'||!/^\/(?:t|c|b|m|ma|a|abs|abilities|skills)\/[^/]+\/?$/.test(u.pathname))return text;
+  const data=JSON.parse(text),items=data.itemListElement;
+  if(!['http://schema.org','https://schema.org'].includes(data['@context'])||data['@type']!=='BreadcrumbList'||!Array.isArray(items))return text;
+  // The common sidebar prints nine unrelated category labels with this
+  // article's identity. Keep every visible menu; omit only those exact false graphs.
+  if(items.length===2&&items[0]?.position===1&&items[0]?.item?.name==='Home'&&
+    items[0].item['@id']==='https://www.pinnacleblooms.org/'&&items[1]?.position===2&&
+    sidebarBreadcrumbNames.has(items[1]?.item?.name)&&
+    items[1].item['@id']==='http://www.pinnacleblooms.org'+u.pathname)return null;
+  return text;
+ }catch{return text;}
+}
+
+
 export function repairSchemaText(text) {
   if (text.length > SCHEMA_LIMIT) return text;
   try {
@@ -146,6 +163,7 @@ async function repairPhysiotherapyWebPage(text, requestUrl) {
 
 export async function repairLegacyGraph(text, requestUrl) {
   if(text.length>SCHEMA_LIMIT)return text;
+  text=repairSidebarBreadcrumb(text,requestUrl);if(text===null)return null;
   const normalized=text.trim().replaceAll('\r\n','\n');
   if(requestUrl && new URL(requestUrl).pathname==='/therapeuticai-effectiveness-study' && normalized.includes('"@type": "MedicalStudy"')) {
     const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(normalized))),b=>b.toString(16).padStart(2,'0')).join('');

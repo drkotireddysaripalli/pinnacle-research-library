@@ -1,3 +1,4 @@
+import {urlHealthAlias,repairUrlHealth} from './url-health-repair.mjs';
 import {serveBookOrderPolicy,repairMerchantDiscovery} from './merchant-policy-handler.mjs';
 import {fetchPublicOrigin} from './public-mobile-recovery.mjs';
 import {publicRouteAlias} from './public-route-aliases.mjs';
@@ -305,6 +306,7 @@ export function isContextualAskRoute(request,rules=CONTEXTUAL_EVIDENCE_RULES){
 
 const portalWorker = {
   async fetch(request,env,ctx){
+   const healthAlias=urlHealthAlias(request);if(healthAlias)return healthAlias;
    const publicAlias=publicRouteAlias(request);if(publicAlias)return publicAlias;
   const discoveryResponse=await serveRootDiscovery(request,env);if(discoveryResponse)return discoveryResponse;
   const enrolmentApiResponse=await serveEnrolmentApi(request,env);if(enrolmentApiResponse)return enrolmentApiResponse;
@@ -414,4 +416,4 @@ export async function transformReviewedHomeOrganization(request,response){
  return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
 }
 
-export default {async fetch(request,env,ctx){const policy=serveBookOrderPolicy(request);if(policy)return policy;const alias=residualCentreAlias(request);if(alias)return alias;const google=await serveCentreGoogle(request,env,ctx);if(google)return google;const calls=servePublicAdCall(request);if(calls)return calls;return applyVernacularTypography(request,repairSharedNavigation(request,await repairResidualLegacyTemplates(request,repairMerchantDiscovery(request,await portalWorker.fetch(residualTemplateRequest(request),env,ctx)))));}};
+export default {async fetch(request,env,ctx){const policy=serveBookOrderPolicy(request);if(policy)return policy;const alias=residualCentreAlias(request);if(alias)return alias;const google=await serveCentreGoogle(request,env,ctx);if(google)return google;const calls=servePublicAdCall(request);if(calls)return calls;return applyVernacularTypography(request,repairSharedNavigation(request,await repairResidualLegacyTemplates(request,repairMerchantDiscovery(request,repairUrlHealth(request,await portalWorker.fetch(residualTemplateRequest(request),env,ctx))))));}};

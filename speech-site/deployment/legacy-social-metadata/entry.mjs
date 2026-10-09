@@ -1,3 +1,4 @@
+import {urlHealthAlias,repairUrlHealth} from '../url-health-repair.mjs';
 import {fetchPublicOrigin} from '../public-mobile-recovery.mjs';
 // Shared legacy metadata repair. The Astro portal, Ask and other route owners
 // remain independent. Inspect a bounded head; separately filter a known invalid
@@ -171,7 +172,7 @@ export async function transform(request, response) {
 }
 
 export async function handle(request, fetcher = fetchPublicOrigin) {
-  const redirect = sunshineRedirect(request) || staffRoute(request) || physiotherapyRedirect(request);
+  const redirect = urlHealthAlias(request) || sunshineRedirect(request) || staffRoute(request) || physiotherapyRedirect(request);
   if (redirect) return redirect;
   if (request.method === 'GET' && new URL(request.url).origin + new URL(request.url).pathname === 'https://www.pinnacleblooms.org/franchise-autism-therapy-center' && !request.headers.has('authorization') && !request.headers.has('range')) {
     const headers = new Headers(request.headers);
@@ -187,4 +188,4 @@ export async function handle(request, fetcher = fetchPublicOrigin) {
   return transformedResponses.has(response) ? repairPriorityContent(request, repairKnownLegacyPerformance(repairPublicLinks(repairKnownBrokenMedia(repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response)),request.url))),request)) : response;
 }
 
-export default {fetch: request => handle(request)};
+export default {fetch: async request => repairUrlHealth(request,await handle(request))};

@@ -82,7 +82,7 @@ function sharedFooter(navigation) {
   return `<footer class="brand-footer"><div class="wrap"><h2>Support that connects with everyday life</h2><nav class="footer-links" aria-label="Therapies">${navigation.therapy.map(x=>a(x.url,x.label)).join('')}</nav><nav class="footer-links" aria-label="Evidence and contact">${a('/verify/','Verify the evidence')}${a('/faq','Parent questions')}${a('/sunshine','Development resources')}${a('/contact-national-autism-helpline-24-7','Contact Pinnacle')}${a('/policies','Policies and your rights')}${a('/privacy-policy','Privacy')}${a('https://wa.me/919100181181','WhatsApp Pinnacle',' rel="noreferrer"')}</nav><p class="source-note">Information supports a conversation with your care team. Goals, support and progress are individual to each child.</p><p class="source-note">Pinnacle Blooms Network · Operated by Bharath Healthcare Laboratories Private Limited.</p></div></footer>`;
 }
 function nextStep() {
-  return `<section class="next-step"><h2>What would be meaningful for your child?</h2><p>Bring your questions to our team. Discuss assessment, a child-specific plan, everyday practice and how progress will be reviewed.</p><div class="next-actions">${call()}${a('/enroll-autism-speech-aba-therapies-india','Arrange a first conversation')}${a('/verify/','Read the evidence')}</div></section>`;
+  return `<section class="next-step"><h2>What would be meaningful for your child?</h2><p>Bring your questions to our team. Discuss assessment, a child-specific plan, everyday practice and how progress will be reviewed.</p><div class="next-actions">${call()}${a('/enroll-autism-speech-aba-therapies-india','Arrange a first conversation')}${a('/verify/','Read the evidence')}${a('/guru','Read Pinnacle Guru articles')}</div></section>`;
 }
 function card(record, level='h2') {
   const poster = imageURL(record.poster);
@@ -90,7 +90,11 @@ function card(record, level='h2') {
 }
 function pagination(base, page, pages, q) {
   if (pages <= 1) return '';
-  return `<nav class="pagination" aria-label="Video pages">${page>1?a(pageURL(base,page-1,q),'← Previous',' rel="prev"'):''}<span aria-current="page">Page ${page} of ${pages}</span>${page<pages?a(pageURL(base,page+1,q),'Next →',' rel="next"'):''}</nav>`;
+  const nearby=[...new Set([1,page-2,page-1,page,page+1,page+2,pages])].filter(n=>n>0&&n<=pages).sort((a,b)=>a-b);
+  // Every approved directory page is reachable in one click. This is ordinary
+  // server-rendered navigation, retaining the existing directory membership.
+  const directory=!q&&page===1?`<details class="content-section"><summary>Browse all ${pages} library pages</summary><nav class="category-list" aria-label="All video library pages">${Array.from({length:pages},(_,i)=>a(pageURL(base,i+1),'Page '+(i+1),i+1===page?' aria-current="page"':'')).join('')}</nav></details>`:'';
+  return `<nav class="pagination" aria-label="Video pages">${page>1?a(pageURL(base,page-1,q),'← Previous',' rel="prev"'):''}${nearby.map(n=>n===page?`<span aria-current="page">Page ${n} of ${pages}</span>`:a(pageURL(base,n,q),String(n))).join(' ')}${page<pages?a(pageURL(base,page+1,q),'Next →',' rel="next"'):''}</nav>${directory}`;
 }
 function documentHTML({title,description=DEFAULT_DESCRIPTION,canonical,image,body,schema=[],catalogue,noindex=false,shell}) {
   const reader=shell?.reader;

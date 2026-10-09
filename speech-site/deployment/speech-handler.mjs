@@ -65,7 +65,7 @@ async function serveMirraclesLibrary(request,env){
 let guruPublicHandler;
 async function serveGuruRecovery(request,env){
  const u=new URL(request.url);
- if(!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(u.hostname)||!/^\/guru\/\d+(?:\/|$)/.test(u.pathname)||!env.ASSETS)return null;
+ if(!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(u.hostname)||!/^\/guru(?:\/?$|\/\d+(?:\/|$))/.test(u.pathname)||!env.ASSETS)return null;
  if(!guruPublicHandler){
   let shellPromise;
   const read=async asset=>{const r=await env.ASSETS.fetch(new Request('https://assets.local'+asset));if(!r.ok)throw Error('Published article asset unavailable');return r.json();};
