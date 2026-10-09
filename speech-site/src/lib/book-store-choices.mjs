@@ -37,12 +37,17 @@ export function storeChoicePanel(row,{compact=false,contentLocale=row?.lang||'en
 // Replace only known retailer panels; retain every other page byte and exact canonical.
 const oldPanels=/<aside\b(?=[^>]*(?:class="pbn-play-purchase"|data-paperback-panel=|data-hardcover-panel=))[^>]*>[\s\S]*?<\/aside>/g;
 function stripPanels(html){return html.replace(oldPanels,'');}
+function removeCoveredPanels(html){
+ const replacements=[...html.matchAll(/<aside\b(?=[^>]*data-store-choices=)[^>]*>[\s\S]*?<\/aside>/g)].map(x=>x[0]).join('');
+ const destinations=new Set([...replacements.matchAll(/href="([^"]+)"/g)].map(x=>x[1]));
+ return html.replace(oldPanels,panel=>[...panel.matchAll(/href="([^"]+)"/g)].every(x=>destinations.has(x[1]))?'':panel);
+}
 export function addStoreChoices(html,path){
  if(!hasStoreChoices(path))return html;
  const canonical=html.match(/<link\b(?=[^>]*\brel="canonical")[^>]*>/g)||[];
  if(canonical.length!==1||!canonical[0].includes('href="'+origin+path+'"'))return html;
  // Future Astro builds already contain this component. Do not duplicate or remove it.
- if(html.includes('data-store-choices='))return stripPanels(html);
+ if(html.includes('data-store-choices='))return removeCoveredPanels(html);
  const row=storeRowForPath(path);
  if(row){
   const contentLocale=path.startsWith('/books/editions/')?'en':row.lang;
@@ -61,5 +66,5 @@ export function addStoreChoices(html,path){
    if(four){const panel=storeChoicePanel(four,{compact:true,styles:false});html=path==='/shop'?html.replace(/(<p class="pbn-small-note">Softcover set[\s\S]*?<\/p>)/,'$1'+panel):html.replace('<div class="pbn-book-sets">',panel+'<div class="pbn-book-sets">');}
   }
  }
- return html.includes('data-store-choices=')?stripPanels(html).replace('</head>',storeChoiceStyles+'</head>'):html;
+ return html.includes('data-store-choices=')?removeCoveredPanels(html).replace('</head>',storeChoiceStyles+'</head>'):html;
 }
