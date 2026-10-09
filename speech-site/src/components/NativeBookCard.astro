@@ -1,5 +1,6 @@
 ---
+import BookStoreChoices from './BookStoreChoices.astro';
 const {book}=Astro.props;
 const u=book.ui;
 ---
-<article class="pbn-native-card"><a href={book.path}><img src={book.front} alt={book.title+' · '+book.languageName} width="1492" height="1054" loading="lazy"/><p class="pbn-native-kicker">{book.members.map(m=>m.discipline).join(' + ')}</p><h3>{book.title}</h3></a><p>{book.shortDescription}</p><div class="pbn-native-price"><strong>₹{book.price.toLocaleString('en-IN')}</strong><span>{book.bookCount} · {u.pdf}</span></div>{book.saving>0&&<p class="pbn-native-saving">{u.save} ₹{book.saving}</p>}<a class="pbn-native-button" href={book.path}>{book.subtitle} ↗</a>{book.bookCount===1&&<a class="pbn-native-sample" href={book.members[0].sample} target="_blank" rel="noopener">{u.preview} ↗</a>}</article>
+<article class="pbn-native-card"><a href={book.path}><img src={book.front} alt={book.title+' · '+book.languageName} width="1492" height="1054" loading="lazy"/><p class="pbn-native-kicker">{book.members.map(m=>m.discipline).join(' + ')}</p><h3>{book.title}</h3></a><p>{book.shortDescription}</p><div class="pbn-native-price"><strong>₹{book.price.toLocaleString('en-IN')}</strong><span>{book.bookCount} · {u.pdf}</span></div>{book.saving>0&&<p class="pbn-native-saving">{u.save} ₹{book.saving}</p>}<a class="pbn-native-button" href={book.path}>{book.subtitle} ↗</a>{book.bookCount===1&&<a class="pbn-native-sample" href={book.members[0].sample} target="_blank" rel="noopener">{u.preview} ↗</a>}<BookStoreChoices sku={book.sku} compact={true}/></article>

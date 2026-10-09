@@ -1,3 +1,4 @@
+import {hasStoreChoices,addStoreChoices,STORE_CHOICE_RELEASE} from './book-store-choices.mjs';
 import {createMirraclesLibrary} from './mirracles-library.mjs';
 import {suchitraAsset,suchitraHash} from './suchitra-assets.mjs';
 import {enrolmentAsset,enrolmentHash} from './enrolment-assets.mjs';
@@ -154,7 +155,8 @@ export async function serveSpeech(request,env,inventory){
  const kindleLinks=isHtml&&hasKindleEdition(u.pathname);
  const hardcoverLinks=isHtml&&hasHardcoverEdition(u.pathname);
  const paperbackLinks=isHtml&&hasPaperbackEdition(u.pathname);
- const etag='"speech-'+(commonAsset?inventory[key]:(suchitraHash(key)||enrolmentHash(key)||autismHash(key)||aboutHash(key)||specialEducationHash(key)||fusionHash(key)||abaHash(key)||therapeuticaiHash(key)||prognoseHash(key)||pdkHash(key)||occupationalHash(key)||everydayHash(key)||abilityscoreHash(key)||readinessHash(key)||inventory[key]))+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+(editionSummary?'-'+EDITION_SEARCH_RELEASE:'')+(kindleLinks?'-'+KINDLE_LINK_RELEASE:'')+(hardcoverLinks?'-'+HARDCOVER_LINK_RELEASE:'')+(paperbackLinks?'-'+PAPERBACK_LINK_RELEASE:'')+'"';headers.set('etag',etag);
+ const storeChoices=isHtml&&hasStoreChoices(u.pathname);
+ const etag='"speech-'+(commonAsset?inventory[key]:(suchitraHash(key)||enrolmentHash(key)||autismHash(key)||aboutHash(key)||specialEducationHash(key)||fusionHash(key)||abaHash(key)||therapeuticaiHash(key)||prognoseHash(key)||pdkHash(key)||occupationalHash(key)||everydayHash(key)||abilityscoreHash(key)||readinessHash(key)||inventory[key]))+(collectionAction?'-collection-links-20261004':'')+(resourceLink?'-first-conversation-v1':'')+(parentReading?'-'+READING_RELEASE:'')+(editionSummary?'-'+EDITION_SEARCH_RELEASE:'')+(kindleLinks?'-'+KINDLE_LINK_RELEASE:'')+(hardcoverLinks?'-'+HARDCOVER_LINK_RELEASE:'')+(paperbackLinks?'-'+PAPERBACK_LINK_RELEASE:'')+(storeChoices?'-'+STORE_CHOICE_RELEASE:'')+'"';headers.set('etag',etag);
  if(isHtml){headers.set('vary','Accept');headers.set('x-robots-tag','index, follow, max-image-preview:large');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');headers.set('content-security-policy',"default-src 'self'; img-src 'self' data: https://i.ytimg.com https://obs.aseasky.link; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com https://ob.aseasky.link https://obs.aseasky.link; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://obs.aseasky.link"+((Object.hasOwn(BOOK_ROUTES,u.pathname)||u.pathname==='/shop/cart')?" https://pinnacleblooms.myshopify.com":"")+(Object.hasOwn(CENTRE_DETAIL_ROUTES,u.pathname)?"; frame-src https://www.youtube-nocookie.com https://www.google.com https://drive.google.com":"")+"; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests");}
  if(u.pathname==='/shop/cart'){headers.set('x-robots-tag','noindex, follow');headers.set('link','<https://www.pinnacleblooms.org/shop>; rel="canonical"');}
  if(isMachineDocument){headers.set('vary','Accept');headers.set('link','<https://www.pinnacleblooms.org'+u.pathname+'>; rel="canonical"');}
@@ -193,6 +195,11 @@ export async function serveSpeech(request,env,inventory){
   for(const name of ['content-length','content-md5','digest','content-digest','repr-digest','last-modified'])headers.delete(name);
   headers.set('x-pinnacle-paperback-links',PAPERBACK_LINK_RELEASE);
   if(body)body=addPaperbackLinks(typeof body==='string'?body:await new Response(body).text(),u.pathname);
+ }
+ if(storeChoices){
+  for(const name of ['content-length','content-md5','digest','content-digest','repr-digest','last-modified'])headers.delete(name);
+  headers.set('x-pinnacle-store-choices',STORE_CHOICE_RELEASE);
+  if(body)body=addStoreChoices(typeof body==='string'?body:await new Response(body).text(),u.pathname);
  }
  return new Response(body,{status:source.status,headers});
 }

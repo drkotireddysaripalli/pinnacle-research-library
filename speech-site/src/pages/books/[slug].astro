@@ -1,7 +1,7 @@
 ---
 import {paperbackForPath,paperbackPanel} from '../../../deployment/book-paperback-links.mjs';
 import {hardcoverForPath,hardcoverPanel} from '../../../deployment/book-hardcover-links.mjs';
-import BookPlayPurchase from '../../components/BookPlayPurchase.astro';
+import BookStoreChoices from '../../components/BookStoreChoices.astro';
 import BookLanguageNav from '../../components/BookLanguageNav.astro';
 import BookCart from '../../components/BookCart.astro';
 import PageLayout from '../../layouts/PageLayout.astro';
@@ -39,9 +39,7 @@ const graph=[{'@type':book.bundle?'Product':['Book','Product'],'@id':origin+book
    <div class="pbn-book-intro"><p class="eyebrow">Pinnacle Blooms Network · {book.discipline}</p><h1>{book.title}</h1><p class="pbn-book-subtitle">{book.subtitle}</p><p class="pbn-book-hook">{book.hook}</p><p class="pbn-book-authors">By {book.authors.join(' & ')}</p>
     <nav class="pbn-book-formats" aria-label="Choose book format">{siblings.map(x=><a href={x.path} aria-current={x.sku===book.sku?'page':undefined}>{editionName(x)}<strong>{money(x.price)}</strong></a>)}</nav>
     <div class="pbn-book-offer"><p class="pbn-book-format">{book.format} · English</p><p class="pbn-book-price">{money(book.price)} <span>INR</span></p>{book.bundle&&<p class="pbn-book-saving">Save {money(saving)} compared with the individual listed editions.</p>}{book.physical?<button disabled>{book.statusText}</button>:<button type="button" class="pbn-add-to-cart" data-book-sku={book.sku} data-book-price={book.price} disabled>Add ebook to bag</button>}<p>{book.statusDetail}</p><p class="pbn-book-sku">Product ID: {book.sku}</p></div>
-    {!book.physical&&<BookPlayPurchase sku={book.sku}/>}
-    <Fragment set:html={hardcoverPanel(hardcoverForPath(book.path))}/>
-    <Fragment set:html={paperbackPanel(paperbackForPath(book.path))}/>
+    {(!book.physical||paperbackForPath(book.path)||hardcoverForPath(book.path))&&<BookStoreChoices sku={ebook.sku}/>}
     <div class="pbn-book-actions"><a class="pbn-book-preview-button" href="#preview">{book.bundle?'Preview the included books':'Read the free sample'}</a><a href={collectionOffers.length?'#collections':'/books#collections'}>{collectionOffers.length?(book.bundle?'Explore the complete collection':'Save with an ebook or book collection'):'Compare all collections and formats'} {collectionOffers.length?'↓':'→'}</a></div>
     {!book.physical&&<p class="pbn-book-digital-note"><strong>{book.bookCount===1?'The complete 46-page ebook':book.bookCount+' complete ebooks'} · Full-colour PDF</strong><br/>Read on a phone, tablet or computer. For purchase assistance, <a href="tel:+919100181181">call 9100 181 181</a>. <a href="https://www.pinnacleblooms.org/national-autism-helpline">National Autism Helpline</a> · <a href="https://www.pinnacleblooms.org/verify">Pinnacle Verify</a>. Select your ebook above and continue to secure checkout.</p>}
    </div>
