@@ -72,3 +72,25 @@ Keep the separate Grace Tower/Gachibowli branch (500032, resource `1418156794909
 Owner/dependency: the local-listing/operations owner must supply current premises, retained resource, CID/Place ID, canonical page and dated basis for each exception; the Ads owner supplies the dated asset association. Then this website owner aligns the maintained register and identity map in one scoped release. The other 48 native-matched centres do not depend on this resolution. No address or listing changes were made on incomplete evidence.
 
 Sources: `src/data/centre-register.json`, `src/data/centre-google-locations.json`, original `All Centers-AllResponses.xlsx`, and the protected `ask-private/gbp-source-handoff-20261009/centre-identity-review.md` with exact row and source links.
+
+## Follow-up identity response to Ads — 9 October
+
+The original workbook was re-read for the requested two identities. Its SHA-256 still matches `4d07b0601749ea9866ddcf00969bbaaf34de7c634c112fce868943bac8a87596`; last modification is 7 October 2026, 07:30:59 IST. These are exact source-backed mappings, not fresh confirmation of the operating premises or Google's duplicate/canonical status.
+
+| Field | Kondapur 212/B | Kadapa Apsara Circle |
+|---|---|---|
+| Workbook | Sheet1 row 15; Id 17; Name Gachibowli; ShortCode GCB | Sheet1 row 53; Id 59; Name Kadapa; ShortCode KDP |
+| Workbook address | Plot No 212/B, Sriram Nagar, Botanical Gardens, Above Vasireddy Sweets, Chirec Lane, Kondapur, Hyderabad, Telangana 500084 | Apsara Cir Rd, Opposite GAJJALA MATERNITY HOSPITAL, N.G.O Colony, Kadapa, Andhra Pradesh 516002 |
+| Workbook coordinates | 17.460444, 78.353944 | 14.4746398, 78.8365724 |
+| Website centre / facility | `kondapur` / `3062523153` | `kadapa` / `9353254802` |
+| Google resource | `locations/8084727145258127335` | `locations/1619614362612848040` |
+| Google Place ID | `ChIJyyjmrcyTyzsR2sgHuyWXucA` | `ChIJdS6_9QZzszsRr2gWxZKXKQM` |
+| Exact identity | [Maps CID 13887297114281068762](https://maps.google.com/maps?cid=13887297114281068762) | [Maps CID 227879912786520239](https://maps.google.com/maps?cid=227879912786520239) |
+| Original review link | [Workbook review identity](https://g.page/r/CdrIB7sll7nAEBM/review) | [Workbook review identity](https://g.page/r/Ca9oFsWSlykDEBM/review) |
+| Landing page | [Kondapur](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kondapur-hyderabad-telangana-india) | [Kadapa](https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india) |
+
+The Gachibowli label on the first record is a source alias. The incoming Ads asset association `235658427805` to Kadapa `1619614362612848040` agrees with the saved website mapping; its live Ads setting has not been independently re-read here. The distinct alternative Kadapa resource `3498916109569948721` has Place ID `ChIJwz1qzO9zszsRAFHQnW-9BTw` and coordinates 14.4710962, 78.8358894. A more descriptive label alone does not establish a reason to replace the existing mapping.
+
+Remaining source limit: both maintained centre rows retain `checkedOn: 2026-09-28`. The saved authenticated 7 October Google identity export contains identifiers and coordinates, but no street-address lines or duplicate/canonical decision. HFR corroboration does not replace current operations confirmation. The listing/operations owner supplies that confirmation where the competing profiles still create a conflict; Ads applies its existing exception criteria to the exact identities above.
+
+No newer affected source-precedence change or deployment receipt was found. The source `c820c8a4`, Portal version `3106a925-5e4b-4cdd-b211-d026ff52af48`, deployment `df99e622-e66f-48db-b596-00351ef51d8d` and 05:54 IST public verification at the top remain the latest recorded repair. Subsequent handover/tooling commits are not website releases.
