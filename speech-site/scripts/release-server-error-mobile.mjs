@@ -41,7 +41,9 @@ async function committedSource(spec){
  assert.equal(sha(norm(local)),sha(norm(committed)),'Uncommitted module source: '+spec.file);return committed;
 }
 function metadata(settings,spec,assets){
- const m={main_module:spec.main,compatibility_date:settings.compatibility_date,compatibility_flags:settings.compatibility_flags||[],bindings:settings.bindings.map(x=>x.type==='assets'?{name:x.name,type:'assets'}:{name:x.name,type:'inherit'}),annotations:{...settings.annotations,'workers/message':id}};
+ // Cloudflare exposes read-only annotations (for example workers/triggered_by).
+ // Submit only the supported release message; preserve runtime configuration.
+ const m={main_module:spec.main,compatibility_date:settings.compatibility_date,compatibility_flags:settings.compatibility_flags||[],bindings:settings.bindings.map(x=>x.type==='assets'?{name:x.name,type:'assets'}:{name:x.name,type:'inherit'}),annotations:{'workers/message':id}};
  if(assets)m.assets={jwt:assets.jwt,config:{html_handling:'none',not_found_handling:'none',run_worker_first:true}};
  for(const k of ['placement','tail_consumers','logpush','observability','limits','usage_model'])if(settings[k]!==undefined)m[k]=settings[k];return m;
 }

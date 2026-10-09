@@ -1,0 +1,29 @@
+{
+  "at": "2026-10-09T15:50:19.503Z",
+  "release": "server-error-mobile-20261009",
+  "siteUrl": "sc-domain:pinnacleblooms.org",
+  "batchId": "ee274561-4a1b-4c61-aaa7-f7599f8ccffe",
+  "submitted": 1,
+  "failed": 0,
+  "attempted": 1,
+  "pendingKeyValidation": false,
+  "outcome": "submitted",
+  "keyFile": [
+    {
+      "host": "www.pinnacleblooms.org",
+      "url": null,
+      "verified": true,
+      "error": null
+    }
+  ],
+  "submissions": [
+    {
+      "url": "https://www.pinnacleblooms.org/t/interactive-song-therapy",
+      "responseCode": 200,
+      "status": "submitted, key validated",
+      "accepted": true
+    }
+  ],
+  "message": "1 of 1 URL(s) sent were accepted by IndexNow.",
+  "meaning": "Changed URL notification, not indexing or ranking proof"
+}

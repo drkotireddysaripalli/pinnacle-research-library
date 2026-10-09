@@ -1,0 +1,3998 @@
+{
+  "at": "2026-10-09T15:41:14.719Z",
+  "release": "server-error-family-20261009",
+  "actionId": "7672556f-3afb-4dbc-a700-3637dbaa672e",
+  "submitted": 550,
+  "failed": 0,
+  "meaning": "Changed URL notifications accepted; not proof of indexing, ranking or Ahrefs recrawl.",
+  "batches": [
+    {
+      "at": "2026-10-09T15:40:36.816Z",
+      "urls": [
+        "https://www.pinnacleblooms.org/guru/5845/behaviour-disorders",
+        "https://www.pinnacleblooms.org/guru/5846/today-s-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5847/monday-morning-smiles",
+        "https://www.pinnacleblooms.org/guru/5848/behavioural-disorder",
+        "https://www.pinnacleblooms.org/guru/5849/treatment-of-vertigo",
+        "https://www.pinnacleblooms.org/guru/5850/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5851/today-s-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5852/clinical-depression",
+        "https://www.pinnacleblooms.org/guru/5853/behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/5854/today-s-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5855/clinical-depression",
+        "https://www.pinnacleblooms.org/guru/5856/clinical-depression",
+        "https://www.pinnacleblooms.org/guru/5857/prognosis-in-phonological-disorder",
+        "https://www.pinnacleblooms.org/guru/5858/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/5859/language-disorders",
+        "https://www.pinnacleblooms.org/guru/5860/kid-rabooni-testimoial-video",
+        "https://www.pinnacleblooms.org/guru/5861/sensory-integration-dysfunction",
+        "https://www.pinnacleblooms.org/guru/5862/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/5863/sensory-integration-dysfunction",
+        "https://www.pinnacleblooms.org/guru/5864/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/5865/monday-morning-smiles",
+        "https://www.pinnacleblooms.org/guru/5866/obsessive-compulsive-disorder",
+        "https://www.pinnacleblooms.org/guru/5867/collab-topic--behaviour-theraphy",
+        "https://www.pinnacleblooms.org/guru/5868/today-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5869/obsessive-compulsive-disorder",
+        "https://www.pinnacleblooms.org/guru/5870/collab-topic--speech-therapist",
+        "https://www.pinnacleblooms.org/guru/5871/today-s-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5872/childhood-apraxia",
+        "https://www.pinnacleblooms.org/guru/5873/dyslexia",
+        "https://www.pinnacleblooms.org/guru/5874/development-coordination-disorder",
+        "https://www.pinnacleblooms.org/guru/5875/collab-topic-occupational-therapi",
+        "https://www.pinnacleblooms.org/guru/5876/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/5877/attention-deficit-hyperactivity-disorder",
+        "https://www.pinnacleblooms.org/guru/5878/attention-deficit-hyperactivity-disorder",
+        "https://www.pinnacleblooms.org/guru/5879/today-s-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5880/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/5881/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/5882/monday-morning-smiles",
+        "https://www.pinnacleblooms.org/guru/5883/collab-topic",
+        "https://www.pinnacleblooms.org/guru/5884/collab-topic",
+        "https://www.pinnacleblooms.org/guru/5885/dysarthria",
+        "https://www.pinnacleblooms.org/guru/5886/early-childhood-intervention",
+        "https://www.pinnacleblooms.org/guru/5887/today-s-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5888/cerebral-palsy",
+        "https://www.pinnacleblooms.org/guru/5889/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5890/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/5891/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5892/oppositional-defiant-disorder",
+        "https://www.pinnacleblooms.org/guru/5893/collab-topic-speech-therapy",
+        "https://www.pinnacleblooms.org/guru/5894/orofacial-myofunctional-disorders-omds-",
+        "https://www.pinnacleblooms.org/guru/5895/down-syndrome",
+        "https://www.pinnacleblooms.org/guru/5896/traumatic-injuries-to-the-brain",
+        "https://www.pinnacleblooms.org/guru/5897/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5898/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5899/disruptive-behaviour-disorder",
+        "https://www.pinnacleblooms.org/guru/5900/collab-topic--behavioral-therapy",
+        "https://www.pinnacleblooms.org/guru/5901/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/5902/traumatic-injuries-to-the-spinal-cord",
+        "https://www.pinnacleblooms.org/guru/5903/stages-of-behaviour-transition",
+        "https://www.pinnacleblooms.org/guru/5904/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/5905/stuttering",
+        "https://www.pinnacleblooms.org/guru/5906/collab-topic-speech-therapi",
+        "https://www.pinnacleblooms.org/guru/5907/assistive-technology",
+        "https://www.pinnacleblooms.org/guru/5908/juvenile-rheumatoid-arthritis",
+        "https://www.pinnacleblooms.org/guru/5909/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5910/functional-cognition",
+        "https://www.pinnacleblooms.org/guru/5911/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5912/collab-topic--behavioural-theraphy",
+        "https://www.pinnacleblooms.org/guru/5913/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/5914/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5915/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5916/identification",
+        "https://www.pinnacleblooms.org/guru/5917/identification",
+        "https://www.pinnacleblooms.org/guru/5918/sleep-management",
+        "https://www.pinnacleblooms.org/guru/5919/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5920/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5921/behaviour-management",
+        "https://www.pinnacleblooms.org/guru/5922/collab-topic--behavioural-therapi",
+        "https://www.pinnacleblooms.org/guru/5923/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5924/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5925/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5926/writing-skills",
+        "https://www.pinnacleblooms.org/guru/5927/proprioceptive-sensitivity-",
+        "https://www.pinnacleblooms.org/guru/5928/proprioceptive-sensitivities",
+        "https://www.pinnacleblooms.org/guru/5929/proprioceptive-sensitivity",
+        "https://www.pinnacleblooms.org/guru/5930/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5931/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5932/proprioceptive-sensitivity",
+        "https://www.pinnacleblooms.org/guru/5933/proprioceptive-sensitivity",
+        "https://www.pinnacleblooms.org/guru/5934/collab-topic-behavioural-theraphy",
+        "https://www.pinnacleblooms.org/guru/5935/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5936/autism-spectrum-disorder",
+        "https://www.pinnacleblooms.org/guru/5937/speech-therapy",
+        "https://www.pinnacleblooms.org/guru/5938/communication",
+        "https://www.pinnacleblooms.org/guru/5939/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5940/reading-skills",
+        "https://www.pinnacleblooms.org/guru/5941/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5942/noise-sensitivity",
+        "https://www.pinnacleblooms.org/guru/5943/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5944/noise-sensitivity"
+      ],
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "681eee52-0e66-4e3e-9cda-f7c2040b1bb5",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5845/behaviour-disorders",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5846/today-s-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5847/monday-morning-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5848/behavioural-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5849/treatment-of-vertigo",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5850/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5851/today-s-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5852/clinical-depression",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5853/behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5854/today-s-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5855/clinical-depression",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5856/clinical-depression",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5857/prognosis-in-phonological-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5858/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5859/language-disorders",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5860/kid-rabooni-testimoial-video",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5861/sensory-integration-dysfunction",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5862/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5863/sensory-integration-dysfunction",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5864/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5865/monday-morning-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5866/obsessive-compulsive-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5867/collab-topic--behaviour-theraphy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5868/today-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5869/obsessive-compulsive-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5870/collab-topic--speech-therapist",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5871/today-s-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5872/childhood-apraxia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5873/dyslexia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5874/development-coordination-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5875/collab-topic-occupational-therapi",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5876/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5877/attention-deficit-hyperactivity-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5878/attention-deficit-hyperactivity-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5879/today-s-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5880/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5881/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5882/monday-morning-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5883/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5884/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5885/dysarthria",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5886/early-childhood-intervention",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5887/today-s-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5888/cerebral-palsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5889/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5890/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5891/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5892/oppositional-defiant-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5893/collab-topic-speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5894/orofacial-myofunctional-disorders-omds-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5895/down-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5896/traumatic-injuries-to-the-brain",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5897/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5898/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5899/disruptive-behaviour-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5900/collab-topic--behavioral-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5901/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5902/traumatic-injuries-to-the-spinal-cord",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5903/stages-of-behaviour-transition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5904/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5905/stuttering",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5906/collab-topic-speech-therapi",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5907/assistive-technology",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5908/juvenile-rheumatoid-arthritis",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5909/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5910/functional-cognition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5911/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5912/collab-topic--behavioural-theraphy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5913/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5914/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5915/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5916/identification",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5917/identification",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5918/sleep-management",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5919/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5920/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5921/behaviour-management",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5922/collab-topic--behavioural-therapi",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5923/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5924/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5925/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5926/writing-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5927/proprioceptive-sensitivity-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5928/proprioceptive-sensitivities",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5929/proprioceptive-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5930/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5931/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5932/proprioceptive-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5933/proprioceptive-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5934/collab-topic-behavioural-theraphy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5935/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5936/autism-spectrum-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5937/speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5938/communication",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5939/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5940/reading-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5941/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5942/noise-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5943/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5944/noise-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "at": "2026-10-09T15:40:40.273Z",
+      "urls": [
+        "https://www.pinnacleblooms.org/guru/5945/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5946/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/5947/difference-between-ot-and-bt",
+        "https://www.pinnacleblooms.org/guru/5948/collab-topic",
+        "https://www.pinnacleblooms.org/guru/5949/today-s-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5950/difference-between-bt-and-ot",
+        "https://www.pinnacleblooms.org/guru/5951/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/5952/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5953/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5954/neuro-diversity",
+        "https://www.pinnacleblooms.org/guru/5955/today-s-collab-topic",
+        "https://www.pinnacleblooms.org/guru/5956/neuro-diversity",
+        "https://www.pinnacleblooms.org/guru/5957/neuro-diversity",
+        "https://www.pinnacleblooms.org/guru/5958/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5959/integration-of-ot-and-bt",
+        "https://www.pinnacleblooms.org/guru/5960/early-intervention",
+        "https://www.pinnacleblooms.org/guru/5961/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5962/early-intervention-for-speech",
+        "https://www.pinnacleblooms.org/guru/5963/vestibular-sensitivity",
+        "https://www.pinnacleblooms.org/guru/5964/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5965/vestibular-sensitivity",
+        "https://www.pinnacleblooms.org/guru/5966/vestibular-sensitivity",
+        "https://www.pinnacleblooms.org/guru/5967/vestibular-sensitivity",
+        "https://www.pinnacleblooms.org/guru/5968/guillian-barre-syndrome",
+        "https://www.pinnacleblooms.org/guru/5969/gbs",
+        "https://www.pinnacleblooms.org/guru/5970/gbs",
+        "https://www.pinnacleblooms.org/guru/5971/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5972/types-of-adaptation-and-process",
+        "https://www.pinnacleblooms.org/guru/5973/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5975/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/5976/Types-of-adaptation-and-process",
+        "https://www.pinnacleblooms.org/guru/5977/collab-topic",
+        "https://www.pinnacleblooms.org/guru/5978/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/5980/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5981/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5982/auditory-processing-disorder",
+        "https://www.pinnacleblooms.org/guru/5983/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/5984/collab-topic",
+        "https://www.pinnacleblooms.org/guru/5985/central-auditory-processing-disorder",
+        "https://www.pinnacleblooms.org/guru/5986/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5987/teaching-strategies-for-special-education",
+        "https://www.pinnacleblooms.org/guru/5988/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/5989/cerebral-palsy-",
+        "https://www.pinnacleblooms.org/guru/5990/collab-topic",
+        "https://www.pinnacleblooms.org/guru/5991/cerebral-palsy",
+        "https://www.pinnacleblooms.org/guru/5992/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5993/schizophrenia",
+        "https://www.pinnacleblooms.org/guru/5994/collab-topic",
+        "https://www.pinnacleblooms.org/guru/5995/schizophrenia",
+        "https://www.pinnacleblooms.org/guru/5996/executive-function-deficit",
+        "https://www.pinnacleblooms.org/guru/5997/collab-topic--speech-therapi",
+        "https://www.pinnacleblooms.org/guru/5998/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/5999/executive-function-disorder",
+        "https://www.pinnacleblooms.org/guru/6000/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6001/executive-function-deficits",
+        "https://www.pinnacleblooms.org/guru/6002/curricular-adaptation-meaning",
+        "https://www.pinnacleblooms.org/guru/6003/myasthenia-gravis",
+        "https://www.pinnacleblooms.org/guru/6004/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6005/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6006/myasthenia-gravis",
+        "https://www.pinnacleblooms.org/guru/6007/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6008/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6009/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6010/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6011/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6012/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6013/today-collab-topic",
+        "https://www.pinnacleblooms.org/guru/6014/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6016/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6017/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6018/difference-between-ads-and-adhd-",
+        "https://www.pinnacleblooms.org/guru/6019/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6020/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6021/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6022/Phobias",
+        "https://www.pinnacleblooms.org/guru/6023/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6024/phobia",
+        "https://www.pinnacleblooms.org/guru/6025/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6026/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6027/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6028/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6029/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6030/dementia",
+        "https://www.pinnacleblooms.org/guru/6031/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6032/dementia",
+        "https://www.pinnacleblooms.org/guru/6033/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6034/how-iq-variant-to-autism-kids",
+        "https://www.pinnacleblooms.org/guru/6035/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6036/speech-collab-topic",
+        "https://www.pinnacleblooms.org/guru/6037/late-language-emergence",
+        "https://www.pinnacleblooms.org/guru/6038/today-s-blog-topic",
+        "https://www.pinnacleblooms.org/guru/6039/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6040/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6041/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6042/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6043/de-quervains-syndrome",
+        "https://www.pinnacleblooms.org/guru/6044/learning-and-teaching",
+        "https://www.pinnacleblooms.org/guru/6045/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6046/adhd-conditions",
+        "https://www.pinnacleblooms.org/guru/6047/spasmodic-dysphonia"
+      ],
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "457f6e9e-5192-420d-ab17-d92a71dc1e42",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5945/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5946/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5947/difference-between-ot-and-bt",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5948/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5949/today-s-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5950/difference-between-bt-and-ot",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5951/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5952/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5953/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5954/neuro-diversity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5955/today-s-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5956/neuro-diversity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5957/neuro-diversity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5958/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5959/integration-of-ot-and-bt",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5960/early-intervention",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5961/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5962/early-intervention-for-speech",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5963/vestibular-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5964/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5965/vestibular-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5966/vestibular-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5967/vestibular-sensitivity",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5968/guillian-barre-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5969/gbs",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5970/gbs",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5971/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5972/types-of-adaptation-and-process",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5973/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5975/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5976/Types-of-adaptation-and-process",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5977/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5978/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5980/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5981/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5982/auditory-processing-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5983/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5984/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5985/central-auditory-processing-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5986/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5987/teaching-strategies-for-special-education",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5988/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5989/cerebral-palsy-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5990/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5991/cerebral-palsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5992/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5993/schizophrenia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5994/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5995/schizophrenia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5996/executive-function-deficit",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5997/collab-topic--speech-therapi",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5998/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/5999/executive-function-disorder",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6000/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6001/executive-function-deficits",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6002/curricular-adaptation-meaning",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6003/myasthenia-gravis",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6004/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6005/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6006/myasthenia-gravis",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6007/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6008/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6009/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6010/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6011/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6012/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6013/today-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6014/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6016/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6017/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6018/difference-between-ads-and-adhd-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6019/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6020/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6021/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6022/Phobias",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6023/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6024/phobia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6025/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6026/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6027/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6028/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6029/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6030/dementia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6031/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6032/dementia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6033/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6034/how-iq-variant-to-autism-kids",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6035/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6036/speech-collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6037/late-language-emergence",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6038/today-s-blog-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6039/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6040/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6041/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6042/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6043/de-quervains-syndrome",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6044/learning-and-teaching",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6045/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6046/adhd-conditions",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6047/spasmodic-dysphonia",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "at": "2026-10-09T15:40:42.921Z",
+      "urls": [
+        "https://www.pinnacleblooms.org/guru/6048/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6049/muscular-dystrophy",
+        "https://www.pinnacleblooms.org/guru/6050/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6051/muscular-dystrophy",
+        "https://www.pinnacleblooms.org/guru/6052/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6053/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6054/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6055/monday-morning-smiles",
+        "https://www.pinnacleblooms.org/guru/6056/educational-psychology",
+        "https://www.pinnacleblooms.org/guru/6057/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6058/educational-psychology",
+        "https://www.pinnacleblooms.org/guru/6059/cognitive-development-skills",
+        "https://www.pinnacleblooms.org/guru/6060/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6061/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6062/feeding-therapy",
+        "https://www.pinnacleblooms.org/guru/6063/collab-topic-speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6064/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6065/genu-valgum-and-genu-varus",
+        "https://www.pinnacleblooms.org/guru/6066/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6067/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6068/importance-of-special-education",
+        "https://www.pinnacleblooms.org/guru/6069/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6070/behaviour-issues-and-parenting-styles",
+        "https://www.pinnacleblooms.org/guru/6071/tracheostomy-and-ventilator-dependence",
+        "https://www.pinnacleblooms.org/guru/6072/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6073/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6074/monday-morning-smiles",
+        "https://www.pinnacleblooms.org/guru/6075/improving-reading-comprehension-skills",
+        "https://www.pinnacleblooms.org/guru/6076/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6077/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6078/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6079/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6080/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6081/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6082/speech-delay-vs-autism",
+        "https://www.pinnacleblooms.org/guru/6083/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6084/palsy-of-the-cerebral-nerve",
+        "https://www.pinnacleblooms.org/guru/6085/wai-cerebral-palsy",
+        "https://www.pinnacleblooms.org/guru/6086/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6087/adhd-in-childrens-causes-and-symptoms",
+        "https://www.pinnacleblooms.org/guru/6088/adha-in-children-causes-and-symptoms",
+        "https://www.pinnacleblooms.org/guru/6089/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6090/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6091/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6092/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6093/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6094/difference-between-upper-motor-lesion-lower-motor-lesion",
+        "https://www.pinnacleblooms.org/guru/6095/difference-between-upper-motor-lesion-and-lower-motor-lesion",
+        "https://www.pinnacleblooms.org/guru/6096/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6097/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6098/collab-topic-please",
+        "https://www.pinnacleblooms.org/guru/6099/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6100/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6101/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6102/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6103/monday-morning-smiles",
+        "https://www.pinnacleblooms.org/guru/6104/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6105/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6106/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6107/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6108/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6109/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6110/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6111/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6112/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6113/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6114/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6115/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6116/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6117/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6118/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6119/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6120/children-s-social-and-moral-development",
+        "https://www.pinnacleblooms.org/guru/6121/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6122/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6123/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6124/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6125/traumatic-injury-and-language-function",
+        "https://www.pinnacleblooms.org/guru/6126/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6127/polymyalgia-gheumatica",
+        "https://www.pinnacleblooms.org/guru/6128/occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6130/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6131/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6132/all-monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6133/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6134/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6135/collab-topic--sai-chand",
+        "https://www.pinnacleblooms.org/guru/6136/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6137/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6138/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6139/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6140/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6141/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6142/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6143/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6144/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6145/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6146/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6147/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6148/collab-topic--behavioural-therapy"
+      ],
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "69a809df-fb85-4c76-aec0-f79d5e31bb3c",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6048/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6049/muscular-dystrophy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6050/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6051/muscular-dystrophy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6052/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6053/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6054/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6055/monday-morning-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6056/educational-psychology",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6057/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6058/educational-psychology",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6059/cognitive-development-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6060/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6061/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6062/feeding-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6063/collab-topic-speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6064/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6065/genu-valgum-and-genu-varus",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6066/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6067/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6068/importance-of-special-education",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6069/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6070/behaviour-issues-and-parenting-styles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6071/tracheostomy-and-ventilator-dependence",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6072/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6073/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6074/monday-morning-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6075/improving-reading-comprehension-skills",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6076/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6077/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6078/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6079/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6080/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6081/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6082/speech-delay-vs-autism",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6083/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6084/palsy-of-the-cerebral-nerve",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6085/wai-cerebral-palsy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6086/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6087/adhd-in-childrens-causes-and-symptoms",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6088/adha-in-children-causes-and-symptoms",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6089/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6090/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6091/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6092/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6093/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6094/difference-between-upper-motor-lesion-lower-motor-lesion",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6095/difference-between-upper-motor-lesion-and-lower-motor-lesion",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6096/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6097/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6098/collab-topic-please",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6099/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6100/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6101/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6102/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6103/monday-morning-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6104/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6105/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6106/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6107/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6108/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6109/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6110/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6111/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6112/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6113/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6114/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6115/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6116/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6117/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6118/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6119/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6120/children-s-social-and-moral-development",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6121/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6122/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6123/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6124/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6125/traumatic-injury-and-language-function",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6126/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6127/polymyalgia-gheumatica",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6128/occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6130/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6131/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6132/all-monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6133/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6134/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6135/collab-topic--sai-chand",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6136/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6137/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6138/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6139/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6140/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6141/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6142/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6143/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6144/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6145/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6146/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6147/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6148/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "at": "2026-10-09T15:40:46.687Z",
+      "urls": [
+        "https://www.pinnacleblooms.org/guru/6149/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6150/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6151/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6152/monday-smile",
+        "https://www.pinnacleblooms.org/guru/6153/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6154/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6155/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6156/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6157/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6158/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6159/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6160/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6161/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6162/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6163/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6164/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6165/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6166/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6167/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6168/collab-topic-behavioural-therapie",
+        "https://www.pinnacleblooms.org/guru/6169/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6170/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6171/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6172/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6173/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6174/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6175/colla-topic",
+        "https://www.pinnacleblooms.org/guru/6176/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6177/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6178/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6179/collab-topic-occupational-therapie",
+        "https://www.pinnacleblooms.org/guru/6180/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6181/collab-topic-behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6182/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6183/collab-topic-speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6184/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6185/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6186/collab-topic-behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6187/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6188/collab-topic-please",
+        "https://www.pinnacleblooms.org/guru/6189/collab-topic-occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6190/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6191/collab-topic-speech-therapist",
+        "https://www.pinnacleblooms.org/guru/6192/collab-topic-occupational-therapi",
+        "https://www.pinnacleblooms.org/guru/6193/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6194/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6195/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6196/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6197/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6198/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6199/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6200/collab-topic-occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6201/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6202/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6203/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6204/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6205/collab-topic-speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6206/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6207/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6208/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6209/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6210/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6211/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6212/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6213/all-monday-smiles-indiranagar-bangalore",
+        "https://www.pinnacleblooms.org/guru/6214/all-monday-smiles-indiranagar-bangalore",
+        "https://www.pinnacleblooms.org/guru/6215/all-monday-smiles-indiranagar-bangalore",
+        "https://www.pinnacleblooms.org/guru/6216/Monday-Smiles",
+        "https://www.pinnacleblooms.org/guru/6217/all-smiles-morning--khammam-facility",
+        "https://www.pinnacleblooms.org/guru/6218/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6219/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6220/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6221/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6222/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6223/monday-all-smile-on-pinnacle",
+        "https://www.pinnacleblooms.org/guru/6224/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6225/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6226/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6227/collab-topic-occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6228/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6229/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6230/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6231/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6232/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6233/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6234/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6235/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6236/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6237/monthly-all-smiles",
+        "https://www.pinnacleblooms.org/guru/6238/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6239/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6240/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6241/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6242/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6243/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6244/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6245/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6246/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6247/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6248/monday-all-smiles"
+      ],
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "3e5634f0-ebf1-46c0-8a6c-e4656d054f4e",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6149/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6150/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6151/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6152/monday-smile",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6153/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6154/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6155/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6156/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6157/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6158/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6159/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6160/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6161/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6162/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6163/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6164/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6165/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6166/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6167/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6168/collab-topic-behavioural-therapie",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6169/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6170/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6171/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6172/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6173/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6174/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6175/colla-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6176/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6177/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6178/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6179/collab-topic-occupational-therapie",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6180/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6181/collab-topic-behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6182/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6183/collab-topic-speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6184/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6185/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6186/collab-topic-behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6187/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6188/collab-topic-please",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6189/collab-topic-occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6190/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6191/collab-topic-speech-therapist",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6192/collab-topic-occupational-therapi",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6193/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6194/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6195/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6196/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6197/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6198/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6199/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6200/collab-topic-occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6201/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6202/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6203/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6204/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6205/collab-topic-speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6206/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6207/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6208/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6209/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6210/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6211/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6212/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6213/all-monday-smiles-indiranagar-bangalore",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6214/all-monday-smiles-indiranagar-bangalore",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6215/all-monday-smiles-indiranagar-bangalore",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6216/Monday-Smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6217/all-smiles-morning--khammam-facility",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6218/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6219/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6220/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6221/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6222/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6223/monday-all-smile-on-pinnacle",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6224/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6225/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6226/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6227/collab-topic-occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6228/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6229/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6230/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6231/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6232/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6233/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6234/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6235/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6236/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6237/monthly-all-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6238/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6239/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6240/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6241/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6242/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6243/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6244/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6245/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6246/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6247/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6248/monday-all-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "at": "2026-10-09T15:40:49.712Z",
+      "urls": [
+        "https://www.pinnacleblooms.org/guru/6249/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6250/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6251/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6252/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6253/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6254/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6255/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6256/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6257/good-morning-sir-mam-all-smiles--pragati-nagar-facility-on-29-7-2024--we-wish-you-a-wonderful-week-ahead-best-empowerment-to-your-kids-from-1-autism-treatment-child-development-rehab-center-network-",
+        "https://www.pinnacleblooms.org/guru/6258/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6259/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6260/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6261/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6262/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6263/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6264/monday-smiles-pragathi-nagar-5-8-2024",
+        "https://www.pinnacleblooms.org/guru/6265/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6266/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6267/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6268/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6269/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6270/collab-topic--behavioral-therapy",
+        "https://www.pinnacleblooms.org/guru/6271/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6272/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6273/collab-topic--behavioral-therapy",
+        "https://www.pinnacleblooms.org/guru/6274/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6275/monday-smile",
+        "https://www.pinnacleblooms.org/guru/6276/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6277/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6278/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6279/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6280/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6281/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6282/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6283/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6284/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6285/monday-smile",
+        "https://www.pinnacleblooms.org/guru/6286/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6287/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6288/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6289/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6290/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6291/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6292/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6293/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6294/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6295/monday-smile",
+        "https://www.pinnacleblooms.org/guru/6296/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6297/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6298/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6299/monday-smiles",
+        "https://www.pinnacleblooms.org/guru/6300/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6301/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6302/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6303/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6304/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6305/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6306/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6307/collab-topic",
+        "https://www.pinnacleblooms.org/guru/6308/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6309/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6310/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6311/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6312/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6313/collab-topic--speech-therapy",
+        "https://www.pinnacleblooms.org/guru/6314/collab-topic--occupational-therapist",
+        "https://www.pinnacleblooms.org/guru/6315/collab-topic--occupational-therapist",
+        "https://www.pinnacleblooms.org/guru/6316/collab-topic-special-education",
+        "https://www.pinnacleblooms.org/guru/6317/collab-topic--behavioral-therapy",
+        "https://www.pinnacleblooms.org/guru/6318/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6319/collab-topic--behavioural-therapy",
+        "https://www.pinnacleblooms.org/guru/6320/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6321/Collab-topic--Occupational-Therapy",
+        "https://www.pinnacleblooms.org/guru/6322/collab-topic--occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6323/monday-smile",
+        "https://www.pinnacleblooms.org/guru/6324/monday-all-smile",
+        "https://www.pinnacleblooms.org/guru/6325/allmonday-smiles",
+        "https://www.pinnacleblooms.org/guru/6326/collab-topic-occupational-therapy",
+        "https://www.pinnacleblooms.org/guru/6369/test",
+        "https://www.pinnacleblooms.org/guru/6370/test",
+        "https://www.pinnacleblooms.org/guru/6371/tested",
+        "https://www.pinnacleblooms.org/guru/6372/test",
+        "https://www.pinnacleblooms.org/guru/6373/testing-the-blog-with-actual-image",
+        "https://www.pinnacleblooms.org/guru/6374/hello-article-image",
+        "https://www.pinnacleblooms.org/guru/6375/ok-testing",
+        "https://www.pinnacleblooms.org/guru/6376/ok-tetsing-again",
+        "https://www.pinnacleblooms.org/guru/6377/i-a-m-the-file-boss",
+        "https://www.pinnacleblooms.org/guru/6378/hello",
+        "https://www.pinnacleblooms.org/guru/6379/%F0%9F%8C%B8-Navratri-Day-9-%E2%80%93-Sri-Durga-Devi-Amma-Bala-Roopam-%F0%9F%8C%B8",
+        "https://www.pinnacleblooms.org/guru/6384/pinnacle-family-diwali-group-therapy-celebration",
+        "https://www.pinnacleblooms.org/guru/6386/pinnacle-diwali-celebrations",
+        "https://www.pinnacleblooms.org/mirracles/1/-PBNSU2-Material-369481",
+        "https://www.pinnacleblooms.org/mirracles/1000/CLAY-OT--malayalam-369356-HMN",
+        "https://www.pinnacleblooms.org/mirracles/10000/Technique-5-for-empowering-kids-who-exhibits-Pinching-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/10001/Technique-4-for-empowering-kids-who-exhibits-Pinching-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/10112/Technique-4-for-empowering-kids-who-exhibits-Harming-Others-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/10112/technique-4-for-empowering-kids-who-exhibits-harming-others-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/10826/Technique-2-for-empowering-kids-who-exhibits-Hitting-Others-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/10826/technique-2-for-empowering-kids-who-exhibits-hitting-others-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/1160/-SUC-PBN-TAMIL-369353"
+      ],
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "e7687d71-cb62-4eec-b8fd-8d263ccb813d",
+      "submitted": 100,
+      "failed": 0,
+      "attempted": 100,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6249/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6250/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6251/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6252/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6253/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6254/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6255/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6256/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6257/good-morning-sir-mam-all-smiles--pragati-nagar-facility-on-29-7-2024--we-wish-you-a-wonderful-week-ahead-best-empowerment-to-your-kids-from-1-autism-treatment-child-development-rehab-center-network-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6258/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6259/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6260/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6261/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6262/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6263/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6264/monday-smiles-pragathi-nagar-5-8-2024",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6265/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6266/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6267/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6268/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6269/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6270/collab-topic--behavioral-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6271/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6272/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6273/collab-topic--behavioral-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6274/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6275/monday-smile",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6276/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6277/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6278/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6279/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6280/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6281/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6282/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6283/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6284/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6285/monday-smile",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6286/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6287/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6288/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6289/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6290/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6291/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6292/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6293/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6294/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6295/monday-smile",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6296/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6297/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6298/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6299/monday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6300/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6301/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6302/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6303/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6304/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6305/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6306/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6307/collab-topic",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6308/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6309/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6310/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6311/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6312/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6313/collab-topic--speech-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6314/collab-topic--occupational-therapist",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6315/collab-topic--occupational-therapist",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6316/collab-topic-special-education",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6317/collab-topic--behavioral-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6318/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6319/collab-topic--behavioural-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6320/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6321/Collab-topic--Occupational-Therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6322/collab-topic--occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6323/monday-smile",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6324/monday-all-smile",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6325/allmonday-smiles",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6326/collab-topic-occupational-therapy",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6369/test",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6370/test",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6371/tested",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6372/test",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6373/testing-the-blog-with-actual-image",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6374/hello-article-image",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6375/ok-testing",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6376/ok-tetsing-again",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6377/i-a-m-the-file-boss",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6378/hello",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6379/%F0%9F%8C%B8-Navratri-Day-9-%E2%80%93-Sri-Durga-Devi-Amma-Bala-Roopam-%F0%9F%8C%B8",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6384/pinnacle-family-diwali-group-therapy-celebration",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/guru/6386/pinnacle-diwali-celebrations",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/1/-PBNSU2-Material-369481",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/1000/CLAY-OT--malayalam-369356-HMN",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/10000/Technique-5-for-empowering-kids-who-exhibits-Pinching-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/10001/Technique-4-for-empowering-kids-who-exhibits-Pinching-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/10112/Technique-4-for-empowering-kids-who-exhibits-Harming-Others-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/10112/technique-4-for-empowering-kids-who-exhibits-harming-others-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/10826/Technique-2-for-empowering-kids-who-exhibits-Hitting-Others-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/10826/technique-2-for-empowering-kids-who-exhibits-hitting-others-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/1160/-SUC-PBN-TAMIL-369353",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "100 of 100 URL(s) sent were accepted by IndexNow."
+    },
+    {
+      "at": "2026-10-09T15:40:52.845Z",
+      "urls": [
+        "https://www.pinnacleblooms.org/mirracles/1160/-suc-pbn-tamil-369353",
+        "https://www.pinnacleblooms.org/mirracles/12833/Technique-3-for-empowering-kids-who-exhibits-Repeatation-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/12833/technique-3-for-empowering-kids-who-exhibits-repeatation-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/1297/-Techniques-PBNKKP-369023",
+        "https://www.pinnacleblooms.org/mirracles/1297/-techniques-pbnkkp-369023",
+        "https://www.pinnacleblooms.org/mirracles/13688/Technique-2-for-empowering-kids-who-exhibits-Argues-With-Purpose-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/13688/technique-2-for-empowering-kids-who-exhibits-argues-with-purpose-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/14238/What-is-Irritated-When-Touched-and-why-kids-do-Irritated-When-Touched-Tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/14238/what-is-irritated-when-touched-and-why-kids-do-irritated-when-touched-tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/1457/-Shapes-coloursconcept-hindi-369442-PBNDSX",
+        "https://www.pinnacleblooms.org/mirracles/1457/-shapes-coloursconcept-hindi-369442-pbndsx",
+        "https://www.pinnacleblooms.org/mirracles/15051/Technique-1-for-empowering-kids-who-exhibits-Sliding-Down-The-Chair-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/15051/technique-1-for-empowering-kids-who-exhibits-sliding-down-the-chair-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/15077/What-is-Ignorance-and-why-kids-do-Ignorance-Tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/15077/what-is-ignorance-and-why-kids-do-ignorance-tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/15085/Technique-2-for-empowering-kids-who-exhibits-Afraid-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/15085/technique-2-for-empowering-kids-who-exhibits-afraid-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/15099/Technique-6-for-empowering-kids-who-exhibits-Sobbing-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/15099/technique-6-for-empowering-kids-who-exhibits-sobbing-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/15342/Technique-6-for-empowering-kids-who-exhibits-Anger-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/15342/technique-6-for-empowering-kids-who-exhibits-anger-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/15349/Symptoms-and-How-to-Identify-Anger-Tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/15349/symptoms-and-how-to-identify-anger-tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/16017/Technique-2-for-empowering-kids-who-exhibits-Temper-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/16017/technique-2-for-empowering-kids-who-exhibits-temper-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/16122/-Rub-SmellVegetables-pbndsx-369567-english",
+        "https://www.pinnacleblooms.org/mirracles/16122/-rub-smellvegetables-pbndsx-369567-english",
+        "https://www.pinnacleblooms.org/mirracles/16272/What-is-Gambles-and-why-kids-do-Gambles-Tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/16272/what-is-gambles-and-why-kids-do-gambles-tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/18749/What-is-Aggression-and-why-kids-do-Aggression-Tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/18749/what-is-aggression-and-why-kids-do-aggression-tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/19362/What-is-Escaping-and-why-kids-do-Escaping-Tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/19362/what-is-escaping-and-why-kids-do-escaping-tantrum-",
+        "https://www.pinnacleblooms.org/mirracles/21583/Technique-6-for-empowering-kids-who-exhibits-Avoiding-Blowing-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/21583/technique-6-for-empowering-kids-who-exhibits-avoiding-blowing-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/22039/Technique-3-for-empowering-kids-who-exhibits-Angry-Ranting-Tantrum",
+        "https://www.pinnacleblooms.org/mirracles/22039/technique-3-for-empowering-kids-who-exhibits-angry-ranting-tantrum",
+        "https://www.pinnacleblooms.org/mirracles/2643/-Material-PBNLBN-369229-Tamil",
+        "https://www.pinnacleblooms.org/mirracles/2643/-material-pbnlbn-369229-tamil",
+        "https://www.pinnacleblooms.org/mirracles/2652/-eyecontact-hindi-369653-PBNDSX",
+        "https://www.pinnacleblooms.org/mirracles/2652/-eyecontact-hindi-369653-pbndsx",
+        "https://www.pinnacleblooms.org/mirracles/2924/-Material-Malayalam-PBNKKP-369332",
+        "https://www.pinnacleblooms.org/mirracles/2924/-material-malayalam-pbnkkp-369332",
+        "https://www.pinnacleblooms.org/mirracles/2951/what-are-the-shining-paper-pbn-vin-369513",
+        "https://www.pinnacleblooms.org/mirracles/4869/Technique-5-for-empowering-kids-who-have-Sameness-Condition",
+        "https://www.pinnacleblooms.org/mirracles/4869/technique-5-for-empowering-kids-who-have-sameness-condition",
+        "https://www.pinnacleblooms.org/mirracles/5543/-PBN--SUC--369376--telugu",
+        "https://www.pinnacleblooms.org/mirracles/5543/-pbn--suc--369376--telugu",
+        "https://www.pinnacleblooms.org/mirracles/852/-BatandBall-pinnaclemirracles-1autismtherapycentresnetwork-PBJN",
+        "https://www.pinnacleblooms.org/mirracles/852/-batandball-pinnaclemirracles-1autismtherapycentresnetwork-pbjn"
+      ],
+      "siteUrl": "sc-domain:pinnacleblooms.org",
+      "batchId": "467de798-a06e-4ac9-8d58-751dc60322fd",
+      "submitted": 50,
+      "failed": 0,
+      "attempted": 50,
+      "pendingKeyValidation": false,
+      "outcome": "submitted",
+      "keyFile": [
+        {
+          "host": "www.pinnacleblooms.org",
+          "url": null,
+          "verified": true,
+          "error": null
+        }
+      ],
+      "submissions": [
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/1160/-suc-pbn-tamil-369353",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/12833/Technique-3-for-empowering-kids-who-exhibits-Repeatation-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/12833/technique-3-for-empowering-kids-who-exhibits-repeatation-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/1297/-Techniques-PBNKKP-369023",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/1297/-techniques-pbnkkp-369023",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/13688/Technique-2-for-empowering-kids-who-exhibits-Argues-With-Purpose-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/13688/technique-2-for-empowering-kids-who-exhibits-argues-with-purpose-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/14238/What-is-Irritated-When-Touched-and-why-kids-do-Irritated-When-Touched-Tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/14238/what-is-irritated-when-touched-and-why-kids-do-irritated-when-touched-tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/1457/-Shapes-coloursconcept-hindi-369442-PBNDSX",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/1457/-shapes-coloursconcept-hindi-369442-pbndsx",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15051/Technique-1-for-empowering-kids-who-exhibits-Sliding-Down-The-Chair-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15051/technique-1-for-empowering-kids-who-exhibits-sliding-down-the-chair-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15077/What-is-Ignorance-and-why-kids-do-Ignorance-Tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15077/what-is-ignorance-and-why-kids-do-ignorance-tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15085/Technique-2-for-empowering-kids-who-exhibits-Afraid-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15085/technique-2-for-empowering-kids-who-exhibits-afraid-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15099/Technique-6-for-empowering-kids-who-exhibits-Sobbing-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15099/technique-6-for-empowering-kids-who-exhibits-sobbing-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15342/Technique-6-for-empowering-kids-who-exhibits-Anger-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15342/technique-6-for-empowering-kids-who-exhibits-anger-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15349/Symptoms-and-How-to-Identify-Anger-Tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/15349/symptoms-and-how-to-identify-anger-tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/16017/Technique-2-for-empowering-kids-who-exhibits-Temper-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/16017/technique-2-for-empowering-kids-who-exhibits-temper-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/16122/-Rub-SmellVegetables-pbndsx-369567-english",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/16122/-rub-smellvegetables-pbndsx-369567-english",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/16272/What-is-Gambles-and-why-kids-do-Gambles-Tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/16272/what-is-gambles-and-why-kids-do-gambles-tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/18749/What-is-Aggression-and-why-kids-do-Aggression-Tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/18749/what-is-aggression-and-why-kids-do-aggression-tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/19362/What-is-Escaping-and-why-kids-do-Escaping-Tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/19362/what-is-escaping-and-why-kids-do-escaping-tantrum-",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/21583/Technique-6-for-empowering-kids-who-exhibits-Avoiding-Blowing-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/21583/technique-6-for-empowering-kids-who-exhibits-avoiding-blowing-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/22039/Technique-3-for-empowering-kids-who-exhibits-Angry-Ranting-Tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/22039/technique-3-for-empowering-kids-who-exhibits-angry-ranting-tantrum",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/2643/-Material-PBNLBN-369229-Tamil",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/2643/-material-pbnlbn-369229-tamil",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/2652/-eyecontact-hindi-369653-PBNDSX",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/2652/-eyecontact-hindi-369653-pbndsx",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/2924/-Material-Malayalam-PBNKKP-369332",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/2924/-material-malayalam-pbnkkp-369332",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/2951/what-are-the-shining-paper-pbn-vin-369513",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/4869/Technique-5-for-empowering-kids-who-have-Sameness-Condition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/4869/technique-5-for-empowering-kids-who-have-sameness-condition",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/5543/-PBN--SUC--369376--telugu",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/5543/-pbn--suc--369376--telugu",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/852/-BatandBall-pinnaclemirracles-1autismtherapycentresnetwork-PBJN",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        },
+        {
+          "url": "https://www.pinnacleblooms.org/mirracles/852/-batandball-pinnaclemirracles-1autismtherapycentresnetwork-pbjn",
+          "responseCode": 200,
+          "status": "submitted, key validated",
+          "accepted": true
+        }
+      ],
+      "message": "50 of 50 URL(s) sent were accepted by IndexNow."
+    }
+  ]
+}

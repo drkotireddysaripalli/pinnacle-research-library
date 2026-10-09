@@ -1,0 +1,118 @@
+{
+  "at": "2026-10-09T15:45:30.176Z",
+  "targetEvents": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "propertyId": "properties/361649365",
+    "siteScope": null,
+    "dataSource": "ga4-api",
+    "timeZone": "Asia/Calcutta",
+    "range": {
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-09"
+    },
+    "comparisonRange": null,
+    "hasComparison": false,
+    "dimension": "event",
+    "secondaryDimension": "date",
+    "metrics": [
+      "eventCount",
+      "totalUsers"
+    ],
+    "rowCount": 0,
+    "totalRows": 0,
+    "truncated": false,
+    "rows": []
+  },
+  "comparisonEvents": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "propertyId": "properties/361649365",
+    "siteScope": null,
+    "dataSource": "ga4-api",
+    "timeZone": "Asia/Calcutta",
+    "range": {
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-09"
+    },
+    "comparisonRange": null,
+    "hasComparison": false,
+    "dimension": "event",
+    "secondaryDimension": "date",
+    "metrics": [
+      "eventCount",
+      "totalUsers"
+    ],
+    "rowCount": 4,
+    "totalRows": 4,
+    "truncated": false,
+    "rows": [
+      {
+        "key": "page_view",
+        "date": "2026-10-08",
+        "eventCount": 539,
+        "prevEventCount": 0,
+        "totalUsers": 395,
+        "prevTotalUsers": 0
+      },
+      {
+        "key": "whatsapp_click",
+        "date": "2026-10-08",
+        "eventCount": 15,
+        "prevEventCount": 0,
+        "totalUsers": 15,
+        "prevTotalUsers": 0
+      },
+      {
+        "key": "enroll",
+        "date": "2026-10-08",
+        "eventCount": 7,
+        "prevEventCount": 0,
+        "totalUsers": 6,
+        "prevTotalUsers": 0
+      },
+      {
+        "key": "page_view",
+        "date": "2026-10-09",
+        "eventCount": 787,
+        "prevEventCount": 0,
+        "totalUsers": 764,
+        "prevTotalUsers": 0
+      }
+    ]
+  },
+  "paidSource": {
+    "siteUrl": "sc-domain:pinnacleblooms.org",
+    "propertyId": "properties/361649365",
+    "siteScope": null,
+    "dataSource": "ga4-api",
+    "timeZone": "Asia/Calcutta",
+    "range": {
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-09"
+    },
+    "comparisonRange": null,
+    "hasComparison": false,
+    "dimension": "sourceMedium",
+    "secondaryDimension": "date",
+    "metrics": [
+      "sessions",
+      "activeUsers",
+      "keyEvents"
+    ],
+    "rowCount": 1,
+    "totalRows": 1,
+    "truncated": false,
+    "rows": [
+      {
+        "key": "google / cpc",
+        "date": "2026-10-08",
+        "sessions": 28,
+        "prevSessions": 0,
+        "activeUsers": 26,
+        "prevActiveUsers": 0,
+        "keyEvents": 45,
+        "prevKeyEvents": 0
+      }
+    ]
+  },
+  "interpretation": "Standard GA4 reports contain page views and an existing WhatsApp event, but no rows for the four new acquisition events. Current-day and processing-lag limits apply. No inferred zero enquiries or completed attributed business loop."
+}
