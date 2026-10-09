@@ -15,7 +15,7 @@ export const focusedSuites = [
   ['scripts/test-centre-google-feed.mjs','scripts/test-enrolment-receipt.mjs'],
   ['scripts/test-enrolment-lead-slack.mjs','scripts/test-enrolment-slack-attachment.mjs'],
 ];
-export const launcherSuites=['build-window/candidate.test.mjs','build-window/frog-settings.test.mjs'];
+export const launcherSuites=['build-window/candidate.test.mjs','build-window/frog-settings.test.mjs','build-window/preview-process.test.mjs'];
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
   for(const [cwd,suites] of [[root,[launcherSuites]],[path.join(root,'speech-site'),focusedSuites]]){

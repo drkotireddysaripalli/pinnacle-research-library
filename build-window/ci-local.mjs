@@ -4,7 +4,8 @@ import path from 'node:path';
 import net from 'node:net';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
-import {spawn,spawnSync} from 'node:child_process';
+import {spawnSync} from 'node:child_process';
+import {startPreview,stopPreview} from './preview-process.mjs';
 import {activeQualityPage,pageContracts} from '../speech-site/scripts/page-quality-contracts.mjs';
 import {requireCandidate,browserTestFingerprint} from './candidate.mjs';
 
@@ -20,7 +21,7 @@ delete env.PORTAL_ORIGIN;
 const source=spawnSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'});
 if(source.status!==0)throw Error('Git source unavailable');
 const results=path.join(root,'build-window/results');fs.mkdirSync(results,{recursive:true});
-const toolFiles=['build-window/ci-local.mjs','build-window/ci-focused.mjs','build-window/workspace.mjs','build-window/candidate.mjs','build-window/frog-settings.mjs','build-window/frog-local.mjs','build-window/.node-version','build-window/.npm-version','.github/workflows/portal-quality.yml'];
+const toolFiles=['build-window/ci-local.mjs','build-window/ci-focused.mjs','build-window/workspace.mjs','build-window/candidate.mjs','build-window/frog-settings.mjs','build-window/frog-local.mjs','build-window/preview-process.mjs','build-window/preview-process.test.mjs','build-window/.node-version','build-window/.npm-version','.github/workflows/portal-quality.yml'];
 const toolHashes=()=>Object.fromEntries(toolFiles.map(file=>[file,createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
 const receiptPath=path.join(results,'ci-local-receipt.json');
 const receipt={source:source.stdout.trim(),page,startedAt:new Date().toISOString(),node:process.version,platform:process.platform,arch:process.arch,previewURL:origin,stages:[],status:'running',notEstablished:['Trusted exact-source cloud BVT','Physical devices','Private Worker runtime/full production union','Public release','Accepted lead/person URL/Slack member opening','Business outcomes']};
@@ -49,7 +50,9 @@ try{
   if(contract.static)run('page contract',[contract.static],site,{...env,PAGE_PATH:contract.path,CANONICAL_PATH:contract.canonical});
   await new Promise((resolve,reject)=>{const socket=net.createServer();socket.once('error',reject);socket.listen(Number(port),'127.0.0.1',()=>socket.close(resolve));});
   previewOutput=fs.openSync(path.join(results,'ci-local-preview.log'),'w');
-  preview=spawn(process.execPath,[launcher,'preview'],{cwd:root,env,stdio:['ignore',previewOutput,previewOutput]});
+  const previewCandidate=requireCandidate(root,results);
+  preview=startPreview({script:path.join(site,'scripts/serve-quality-preview.mjs'),cwd:site,port,env,stdio:['ignore',previewOutput,previewOutput]});
+  fs.writeFileSync(path.join(results,'preview.json'),JSON.stringify({action:'preview',source:source.stdout.trim(),childPid:preview.pid,candidateFingerprint:previewCandidate.fingerprint,previewURL:origin,status:'running'},null,2)+'\n');
   let previewError;preview.on('error',error=>{previewError=error;});
   let ready=false;
   for(let attempt=0;attempt<30;attempt++){
@@ -68,13 +71,11 @@ try{
 finally{
   if(preview&&preview.exitCode===null&&preview.signalCode===null){
     receipt.ownedPreviewPid=preview.pid;
-    const closed=await new Promise(resolve=>{
-      const timer=setTimeout(()=>resolve(false),5000);
-      preview.once('close',()=>{clearTimeout(timer);resolve(true);});preview.kill('SIGTERM');
-    });
+    const closed=await stopPreview(preview,port);
     receipt.previewCloseConfirmed=closed;
     if(!closed){receipt.status='failed';receipt.error='Owned preview shutdown was not confirmed';process.exitCode=1;}
-  }else if(preview){receipt.previewCloseConfirmed=true;}
+  }else if(preview){receipt.previewCloseConfirmed=await stopPreview(preview,port);if(!receipt.previewCloseConfirmed){receipt.status='failed';receipt.error='Preview listener remains active';process.exitCode=1;}}
+  if(preview&&receipt.previewCloseConfirmed){const p=path.join(results,'preview.json');const record=JSON.parse(fs.readFileSync(p,'utf8'));fs.writeFileSync(p,JSON.stringify({...record,status:'stopped',completedAt:new Date().toISOString()},null,2)+'\n');}
   if(previewOutput!==undefined)fs.closeSync(previewOutput);
   try{
     receipt.toolHashesAfter=toolHashes();receipt.browserTestFingerprintAfter=browserTestFingerprint(root);
