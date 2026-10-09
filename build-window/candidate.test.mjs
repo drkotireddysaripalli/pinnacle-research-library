@@ -8,7 +8,12 @@ import {generatedHashes,inputFingerprint,makeSnapshots,requireCandidate} from '.
 
 function fixture(t) {
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'pinnacle-candidate-'));
-  t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  t.after(()=>{
+    const resolvedRoot=fs.realpathSync(root),resolvedTemp=fs.realpathSync(os.tmpdir());
+    assert.equal(path.dirname(resolvedRoot),resolvedTemp,'Fixture cleanup must stay in the resolved temporary directory');
+    assert.match(path.basename(resolvedRoot),/^pinnacle-candidate-/);
+    fs.rmSync(resolvedRoot,{recursive:true,force:true});
+  });
   const write=(p,text)=>{fs.mkdirSync(path.dirname(path.join(root,p)),{recursive:true});fs.writeFileSync(path.join(root,p),text);};
   write('speech-site/src/page.astro','Original page');
   write('speech-site/deployment/public-ad-call.mjs','Original generated module');

@@ -1,5 +1,9 @@
 # Integrated Pinnacle portal: one code and release owner
 
+## Mac engineering execution — owner instruction, 9 October 2026
+
+The founder has authorized two Mac implementation teams plus the existing Mac build coordinator to work on this canonical codebase. Read the [portable KT and team contracts](speech-site/team-kt-20261009/README.md). Search Engineering owns scoped shared search repairs; Page Engineering begins the native homepage and later continues the existing PinnacleAI design. These are authorized source-editing teams, distinct from read-only reviewers. Each uses a separate working branch/copy and delivers reviewed commits to the same `main`; they do not concurrently write the same checkout. The existing website chat retains product/narrative decisions, integration and sole production-release authority until an explicit transfer with verified readiness. Older single-implementation wording below applies subject to this bounded exception. Shared routing, deployment, authentication, receiving API, consent and common-shell changes remain coordinated through the integration owner. No new scheduler or duplicate tool-specific teams are authorized by this setup.
+
 Owner instruction: 6 October 2026. This supersedes earlier split website/shop code ownership. The current Windows website thread owns the public **Ask, Sunshine, FAQ, Verify, Shop and Books** experience, its source changes, shared presentation, testing, releases and website integration backlog. The Mac commerce thread acknowledged that assignment, and its retained source has been transferred, verified and checked into the private Shopify component linked from this checkout.
 
 ## Start here

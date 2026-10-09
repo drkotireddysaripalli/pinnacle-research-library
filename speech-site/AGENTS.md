@@ -1,5 +1,9 @@
 # Therapy page development and independent review
 
+## Authorized Mac implementation teams — 9 October 2026
+
+The owner now authorizes two scoped Mac implementation chats, coordinated by the existing Mac build chat. Read `team-kt-20261009/README.md` and `TEAM-CONTRACTS.md`. Search Engineering and Page Engineering may edit their assigned source on separate working branches/copies; they are not read-only reviewers. This bounded instruction supersedes older single-implementation wording below. The website owner retains integration and production deployment, shared route/auth/receiver/consent changes and founder-facing narrative/design decisions. Do not create a team per tool, duplicate paid test runs, recreate stopped growth schedules, or concurrently modify the same shared file. At most two independent implementation batches run; each must return a concrete tested patch and exact evidence. Existing independent reviewers remain read-only and bounded.
+
 ## Integrated portal code ownership — 6 October 2026
 
 Read `../PORTAL-OWNERSHIP.md` for the canonical source/release map. This website thread is the single code and deployment owner for Ask, Sunshine, FAQ, Verify, Shop and Books. Reconcile changes from the Mac commerce task into this repository before release; do not maintain or deploy a parallel corporate-site checkout. Merchant/Shopify/Amazon publishing and support operations may continue in the existing commerce task, with exact website requirements/results coordinated here. Old READMEs and dated build scripts do not override the current live receipt, full asset union or active work order. Keep existing schedule holds.
