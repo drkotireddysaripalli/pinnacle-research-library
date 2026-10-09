@@ -10,15 +10,15 @@ The owner explicitly requested Mac engineering teams, continuity of existing wor
 |---|---|---|
 | Product, narrative, integration and production release | Existing website chat `01a0ef6b-507a-7630-828f-7ac81852a39c` | Work with the founder on the homepage/PinnacleAI; integrate reviewed patches and own deployed verification. |
 | Mac build coordinator | Existing Mac chat `01a11e24-3e7f-7802-8384-a6bd83d7a7a9` | Maintain the shared local build environment, coordinate bounded tests and deliver integration-ready work. |
-| Pinnacle Search Engineering | New Mac chat requested; creation receipt pending | Complete shared technical repairs using the existing Ahrefs/GSC/Frog evidence, beginning with actual broken useful destinations. |
-| Pinnacle Page Engineering | New Mac chat requested; creation receipt pending | Build the native homepage; then continue the approved PinnacleAI design/source. |
+| Pinnacle Search Engineering | Active Mac chat `01a11e66-9290-7160-a803-db161727035f` | Complete shared technical repairs using the existing Ahrefs/GSC/Frog evidence, beginning with actual broken useful destinations. |
+| Pinnacle Page Engineering | Active Mac chat `01a11e66-969e-72c3-a0d6-fdbe180c4c5a` | Build the native homepage; then continue the approved PinnacleAI design/source. |
 | Commerce operations | Existing chat `01a0f6ef-1af3-7bf0-98aa-9db53523e555` | Existing Shopify/Merchant/publishing work and precise website dependencies. No duplicate commerce team. |
 
 At most two implementation streams run in parallel. QA belongs to the coordinator and existing test system, not a new standing team. Tools such as Ahrefs, GSC, Screaming Frog, TestingBot and Pitchbox are capabilities used by accountable owners; each does not need its own chat.
 
 ### Actual dispatch state
 
-Mac-to-Windows messages and the Mac's GitHub PR have been received. At package preparation, Windows-to-Mac app dispatch still returned “Unavailable or failed hosts: durable” despite the user's reconnect. This is a directional app-routing issue, not an absent Mac workspace. Do not claim new chats are created until their actual thread IDs and Mac host are recorded. The shared repository is the portable handoff channel. Reuse an existing matching team if one is discovered before creation.
+The Mac coordinator has confirmed both chats were created locally on the Mac, with separate clean checkouts at `4e0b811a2179099947a0d1a6cc6c3ae5bca446f6`: Search uses `codex/mac-search-engineering-20261009` / port 4343; Page uses `codex/mac-page-engineering-20261009` / port 4344. The coordinator retains port 4340 and test/tooling work. Search has independently sent its first scoped investigation receipt. The Mac also confirmed the private evidence import and all 177 export hashes. Windows-to-Mac direct app dispatch remains unavailable; shared GitHub handoffs and inbound Mac messages are working. These creation/import states are confirmed by the Mac coordinator's receipt, not by a successful Windows app read-back.
 
 ## Read only what the assignment needs
 
@@ -27,7 +27,7 @@ Mac-to-Windows messages and the Mac's GitHub PR have been received. At package p
 3. [Team contracts](TEAM-CONTRACTS.md): the first two executable jobs, boundaries and completion requirements.
 4. [Access and runbook](ACCESS-AND-RUNBOOK.md): tools, secure access, build/test and resource rules.
 
-Follow-up delivery: [actual private evidence handover, test failures and Mac work reservation](EVIDENCE-HANDOVER.md). The Mac confirmed it received this KT. The private evidence package includes the executable offline source mapping; two new chat IDs remain unconfirmed.
+Follow-up delivery: [actual private evidence handover, test failures and Mac work reservation](EVIDENCE-HANDOVER.md). The Mac confirmed it received the KT and successfully ran the private evidence import. Both new chat IDs are recorded above.
 
 For a page change also read the existing [page standard](../PINNACLE-PAGE-CREATION-WORK-ORDER.md), [common shell](../COMMON-SHELL-BASELINE.md), [vernacular contract](../VERNACULAR-TYPOGRAPHY.md) and only the relevant source receipts. Do not load the whole historical conversation or run a fresh full audit to begin.
 

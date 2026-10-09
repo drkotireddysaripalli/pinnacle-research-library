@@ -56,6 +56,15 @@ All four saved Screaming Frog profiles are included byte-for-byte, with hashes m
 
 TestingBot credentials remain in the existing trusted workflow secret store. Native GSC/GA4/PageSpeed/AI authentication is not claimed by delivering a Frog profile. Existing Ads/commerce/correspondence ownership and schedule holds remain unchanged.
 
-## Remaining acknowledgement
+## Received Mac acknowledgement and next work
 
-Mac to return: successful private import; exact request receipts for reported usage; finite current defects and the test-only PR; actual IDs/host/branches for the two requested implementation chats. Team allocation remains [TEAM-CONTRACTS.md](TEAM-CONTRACTS.md). No new chat is claimed created until confirmed.
+The Mac coordinator independently confirmed the private `6104d466` import: 183 Git blobs / 3,542,375 bytes, all 177 export hashes, 56 relocated JSON records and an offline join of 59 queue items / 97 sources. It also confirmed both local Mac chats are active at clean base `4e0b811`:
+
+- **Pinnacle Search Engineering**: `01a11e66-9290-7160-a803-db161727035f`, branch `codex/mac-search-engineering-20261009`, port 4343.
+- **Pinnacle Page Engineering**: `01a11e66-969e-72c3-a0d6-fdbe180c4c5a`, branch `codex/mac-page-engineering-20261009`, port 4344.
+
+The coordinator retains port 4340 and the tooling/test patch. It additionally reserved `tests/browser/book-languages.spec.mjs` to align outdated font expectations with the current shared Anek contract. It reports the 36 affected enrolment cases, 24 Shop responsive cases, and full Firefox/WebKit selected suites passing after their respective corrections; these overlapping scopes must not be summed into a unique all-site total. Exact code/receipts and the single test PR are still due for integration review.
+
+Search Engineering has supplied its first direct receipt and requested the bounded 33-ID legacy slice. That slice is delivered as an additive private supplement, with original source hashes, player metadata and explicit missing database-eligibility provenance. A same-user Screaming Frog licence supplement is encrypted to the coordinator's supplied RSA-3072 recipient key; no plaintext credential is in Git/chat. Activation remains for the Mac to verify.
+
+Remaining: exact provider usage receipts; reviewable test patch; verified mapping patch and homepage candidate under [TEAM-CONTRACTS.md](TEAM-CONTRACTS.md). Website deployment and real business outcomes remain separate from this completed team/evidence setup.
