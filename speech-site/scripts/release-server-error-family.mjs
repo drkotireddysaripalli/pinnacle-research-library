@@ -10,7 +10,7 @@ const [phase,id]=process.argv.slice(2);
 assert(/^[a-z0-9-]{6,80}$/.test(id||''),'Unique release ID required');
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),priv=path.join(site,'ask-private',id),receiptPath=path.join(site,'deployment',id+'.json');
 const git='C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe';
-const g=args=>execFileSync(git,['-C',repo,...args],{encoding:'utf8',windowsHide:true}).trim();
+const g=args=>execFileSync(git,['-C',repo,...args],{encoding:'utf8',windowsHide:true,maxBuffer:64*1024*1024}).trim();
 const token=(await fs.readFile(path.join(process.env.APPDATA,'xdg.config/.wrangler/config/default.toml'),'utf8')).match(/oauth_token\s*=\s*"([^"]+)"/)?.[1];assert(token,'Existing Cloudflare login required');
 const base='/accounts/862998def1cd610fdb86b8e5c1d6ed4d/workers/scripts/',worker='pinnacle-verify-route',routePath='/zones/8b13f18e0589996b5d6512552372b434/workers/routes';
 const protectedNames=['pbn-planetscale','pinnacle-ask','pinnacle-ask-mcp','pinnacle-legacy-social-metadata','pinnacle-centre-search-repair','pinnacle-helpline','pinnacle-root-sitemap','materials-mobile-desktop-tracker'];
