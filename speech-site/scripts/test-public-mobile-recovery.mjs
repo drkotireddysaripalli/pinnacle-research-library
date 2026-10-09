@@ -52,3 +52,20 @@ test('five Semrush mobile failures recover the same public page with campaign qu
  const r=await fetchPublicOrigin(q,async()=>++attempts===1?original:new Response('<title>Best Hydro Therapy Centers in Hyderabad</title><link rel="canonical" href="https://www.pinnacleblooms.org/yoga-therapy">',{headers:{'content-type':'text/html'}}));
  assert.equal(r,original,'Wrong service title must never turn an error into an unrelated page');
 });
+
+test('resource headings accept real template newlines and nested text but reject empty markup',async()=>{
+ const path='/t/interactive-song-therapy';
+ const failure='<title>Error</title>System.NullReferenceException ASP._Page_Views_Shared_SunshineInnerPage_V9_Mobile_cshtml.Execute()';
+ const headings=[
+  ['<h1 class="resource-heading">\n  Transforming everyday practice\n</h1>',200],
+  ['<h1 class="resource-heading">\n <span>Interactive</span> <strong>Song Therapy</strong>\n</h1>',200],
+  ['<h1> \n\t </h1>',500],['<h1><span> </span></h1>',500],
+  ['<h1>&nbsp; &#160; &#xA0;</h1>',500],['<h1><!-- Not visible --></h1>',500],
+  ['<h1><script>Not a heading</script></h1>',500],['<h2>Wrong level</h2>',500]
+ ];
+ for(const [heading,status] of headings){
+  let calls=0;const first=new Response(failure,{status:500,headers:{'content-type':'text/html'}});
+  const result=await fetchPublicOrigin(req(path+'?gclid=INVENTED'),async()=>++calls===1?first:new Response('<title>Interactive Song Therapy | Pinnacle Blooms</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'">'+heading,{headers:{'content-type':'text/html'}}));
+  assert.equal(calls,2);assert.equal(result.status,status,heading);if(status===500)assert.equal(result,first);
+ }
+});

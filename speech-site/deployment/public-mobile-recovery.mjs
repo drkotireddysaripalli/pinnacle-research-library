@@ -35,6 +35,11 @@ function canonicalPath(html){
  const tag=html.match(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i)?.[0];const href=tag?.match(/\bhref=["']([^"']+)["']/i)?.[1];
  try{const u=new URL(href?.replaceAll('&amp;','&'));return u.origin==='https://www.pinnacleblooms.org'?u.pathname:null;}catch{return null;}
 }
+function hasPublicHeading(html){
+ const content=html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]||'';
+ const text=content.replace(/<!--[\s\S]*?-->/g,'').replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi,'').replace(/<[^>]*>/g,'').replace(/&(?:nbsp|#0*160|#x0*a0);/gi,' ').trim();
+ return text.length>0;
+}
 export async function fetchPublicOrigin(request,fetcher=fetch){
  const original=await fetcher(request);
  if(!knownMobilePublicRequest(request)||original.status!==500||!original.headers.get('content-type')?.includes('text/html'))return original;
@@ -59,7 +64,7 @@ export async function fetchPublicOrigin(request,fetcher=fetch){
   let html=await boundedText(retry);const u=new URL(request.url),title=html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim()||'';
   const canonical=canonicalPath(html);
    const expectedTitle=identities.get(u.pathname);
-   const titleMatches=expectedTitle?expectedTitle.test(title):publicResourcePath(u.pathname)&&title.length>5&&!/^(?:error|not found|page not found)\b/i.test(title)&&/<h1\b[^>]*>[^<\s]/i.test(html);
+   const titleMatches=expectedTitle?expectedTitle.test(title):publicResourcePath(u.pathname)&&title.length>5&&!/^(?:error|not found|page not found)\b/i.test(title)&&hasPublicHeading(html);
    if(!titleMatches||!(canonical===u.pathname||(u.pathname==='/TOS'&&canonical==='/tos')||(u.pathname==='/franchise-autism-therapy-center'&&canonical==='/franchises')))return original;
   // Campaigns remain in the browser URL; the public canonical/OG identity is clean.
   html=html.replace(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i,`<link rel="canonical" href="${u.origin+canonical}">`);
