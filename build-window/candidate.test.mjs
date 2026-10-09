@@ -44,3 +44,12 @@ test('changed evidence and an absent successful receipt prevent preview acceptan
   fs.unlinkSync(path.join(f.results,'candidate.json'));
   assert.throws(()=>requireCandidate(f.root,f.results),/No verified candidate/);
 });
+test('a declared generated file first created by a build does not become a new source input',t=>{
+  const f=fixture(t),before=generatedHashes(f.root);
+  const fingerprintBefore=inputFingerprint(f.root,makeSnapshots(before,before));
+  f.write('speech-site/deployment/new-page-assets.mjs','New generated asset module');
+  const snapshots=makeSnapshots(before,generatedHashes(f.root));
+  assert.equal(inputFingerprint(f.root,snapshots),fingerprintBefore);
+  f.write('speech-site/deployment/new-page-assets.mjs','Unexpected later edit');
+  assert.notEqual(inputFingerprint(f.root,snapshots),fingerprintBefore);
+});
