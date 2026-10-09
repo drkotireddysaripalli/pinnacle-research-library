@@ -158,6 +158,12 @@
     const fields=Object.fromEntries(measurementURL.searchParams);
     // A direct return retains the last permitted campaign instead of erasing it.
     if(!Object.keys(fields).length)return;
+    // A declared GBP visit is weaker evidence than an already permitted paid
+    // journey. Keep the complete prior envelope; never attach its click ID to
+    // a different listing's UTMs or silently turn a paid source into organic.
+    const isGbp=fields.utm_source?.toLowerCase()==='google'&&fields.utm_medium?.toLowerCase()==='organic'&&fields.utm_campaign?.toLowerCase()==='gbp';
+    const paidEvidence=value=>!!value&&(['gclid','gbraid','wbraid','dclid','msclkid'].some(key=>!!value[key])||['cpc','ppc','paid','paid_search','paidsearch','paid-search','paid search','cpm','cpv','display','paid_social','paid_video'].includes(value.utm_medium?.toLowerCase()));
+    if(isGbp&&!paidEvidence(fields)&&paidEvidence(readSource()?.fields))return;
     try{localStorage.setItem(sourceKey,JSON.stringify({schemaVersion:1,consent:'analytics_accepted',capturedAt:Date.now(),landingPath:acquisitionPath,fields}));}catch{}
   };
   // Form submission must still work when measurement is declined or unavailable.

@@ -453,6 +453,35 @@ test('approved inline callback receipts emit once and respect refusal, GPC and a
   for(const options of [{callback:false},{callback:true,gpc:true},{callback:true,search:'?validation_test=1'},{callback:true,origin:'http://127.0.0.1:4340'}]){const b=harness({path,...options});b.choose('accepted');b.accepted();assert.equal(b.events().filter(e=>e[1]==='enquiry_accepted').length,0);}
  }
 });
+
+test('GBP listing key survives coarse centre path and a different selected-centre journey',()=>{
+ const centrePath='/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india';
+ const first=harness({path:centrePath,search:'?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=anathapuram-ap'});
+ first.choose('accepted');const source=first.win.pinnacleEnquirySource();
+ assert.equal(source.landingPath,'/centers');assert.equal(source.fields.utm_content,'anathapuram-ap');
+ const form=harness({path:canonicalEnrolment,search:'?centre=kadapa',sharedStore:first.store});
+ assert.deepEqual(JSON.parse(JSON.stringify(form.win.pinnacleEnquirySource())),JSON.parse(JSON.stringify(source)));
+ assert.equal(form.events().filter(e=>e[1]==='google_ads_arrival').length,0);
+});
+
+test('a GBP tag cannot replace permitted paid evidence or borrow its click identifier',()=>{
+ const first=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=QA-PAID&utm_content=paid-creative&gclid=qaPaidSource123'});first.choose('accepted');
+ const paid=JSON.stringify(first.win.pinnacleEnquirySource());
+ const gbp=harness({path:'/centers',search:'?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=anathapuram-ap',sharedStore:first.store});
+ assert.equal(JSON.stringify(gbp.win.pinnacleEnquirySource()),paid);
+ assert.equal(gbp.events().filter(e=>e[1]==='google_ads_arrival').length,0,'A GBP arrival must not become a fabricated new Ads arrival');
+ const currentPaid=harness({path:'/centers',search:'?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=anathapuram-ap&gclid=qaCurrentClick123',sharedStore:first.store});
+ assert.equal(currentPaid.win.pinnacleEnquirySource().fields.gclid,'qaCurrentClick123');
+ assert.equal(currentPaid.events().find(e=>e[1]==='google_ads_arrival')?.[2]?.attribution_method,'click_id');
+ currentPaid.choose('declined');assert.equal(currentPaid.win.pinnacleEnquirySource(),null);
+});
+
+test('expired paid evidence does not suppress a new permitted GBP source',()=>{
+ const first=harness({search:'?gclid=qaExpiredSource123'});first.choose('accepted');
+ const saved=JSON.parse(first.store.get('pinnacle-enquiry-source-v1'));saved.capturedAt=Date.now()-31*86400000;first.store.set('pinnacle-enquiry-source-v1',JSON.stringify(saved));
+ const gbp=harness({path:'/centers',search:'?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=anathapuram-ap',sharedStore:first.store});
+ assert.equal(gbp.win.pinnacleEnquirySource().fields.utm_content,'anathapuram-ap');assert(!gbp.win.pinnacleEnquirySource().fields.gclid);
+});
 test('undecided receipt uses denied storage immediately with no optional campaign or contact data',()=>{
  for(const path of [canonicalEnrolment,'/centers','/speech-therapy/service-information']){
   const h=harness({path,callback:true,search:'?utm_source=google&utm_medium=cpc&gclid=qaCampaign123&name=private-child'});
