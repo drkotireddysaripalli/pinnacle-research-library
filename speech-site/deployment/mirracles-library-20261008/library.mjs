@@ -125,10 +125,20 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
   let cataloguePromise;
   async function catalogue() {
     cataloguePromise ??= Promise.resolve().then(()=>loadJson('catalogue')).then(c=> {
-      const byId = new Map(c.records.map(r=>[r.id,r]));
+      const canonicalById = new Map(c.records.map(r=>[r.id,r]));
+      const byId = new Map(canonicalById);
       const byPath = new Map();
       for (const r of c.records) byPath.set(pathKey(r.path),r);
-      for (const [p,id] of Object.entries(c.aliasPaths||{})) byPath.set(pathKey(p),byId.get(id));
+      for (const [p,id] of Object.entries(c.aliasPaths||{})) {
+        const key = pathKey(p), target = canonicalById.get(id);
+        const alias = key?.match(/^\/mirracles\/(\d+)\/[^/]+$/);
+        if (!alias || !target || (byPath.has(key) && byPath.get(key)!==target) ||
+          (byId.has(alias[1]) && byId.get(alias[1])!==target)) throw Error('Conflicting public identity alias');
+        byPath.set(key,target);
+        // Only source-verified cross-ID paths supply an old numeric identity.
+        // Bare IDs and changed slugs then retain the normal canonical redirect.
+        byId.set(alias[1],target);
+      }
       return {...c,byId,byPath,ordered:c.order.map(id=>byId.get(id)),categoryKeys:new Set(c.categories.map(c=>c.key))};
     }).catch(error=>{cataloguePromise=undefined;throw error;});
     return cataloguePromise;

@@ -16,9 +16,20 @@ From the speech-site directory:
 ```
 python deployment/mirracles-library-20261008/build-data.py
 node --test deployment/mirracles-library-20261008/library.test.mjs
+python deployment/mirracles-library-20261008/test_legacy_identities.py
 ```
 
-The builder reads saved files only. All generated files stay under this candidate directory. It generates chunked detail assets, the catalogue, provenance and `assets.mjs` from the authored CSS/player script and unchanged approved logo.
+The builder reads saved files only. It generates chunked detail assets, the catalogue, provenance and `assets.mjs` here, and synchronizes the two flat runtime/asset sibling modules used by integration. It uses the authored CSS/player script and unchanged approved logo.
+
+## Source-verified legacy numeric aliases — 9 October 2026
+
+`data/legacy-identity-aliases.json` records dated original public-page evidence for **28 recovered numeric identities / 55 exact paths**. For example, old ID `2652` identifies the same primary/schema YouTube video and Stream thumbnail as current sitemap record `20688754201`. Recorded old paths render their current record with its current canonical/OG/video identity. A bare old ID or changed slug redirects to the current canonical, preserving the complete query string. These aliases add no listing or sitemap record; the source retains 29,759 primary records and reports recovered alias IDs separately.
+
+`legacy_identities.py` validates the original player/thumbnail pair, successful source receipt, exact current public-sitemap target and absence of identity collisions before the builder emits aliases. Identical media pairs with competing targets are rejected. The same player with different thumbnails can resolve only to the uniquely matching pair; this distinguishes old ID `1160`. Runtime loading rejects conflicting/missing targets and alias chains. Missing provenance remains unresolved; titles are never used to infer equivalence. The original HTML is retained privately outside the repository, with its hash in the manifest.
+
+The verified private supplement at `d4251ef1619e78b642318f5877147bc460e767d2` supplies all 33 historical incident groups: one is already native, 28 are recovered here and four remain unresolved (`15843`, `20980`, `20067`, `18253`). Neither their original players nor their thumbnails occur in the maintained catalogue. They retain the existing owner/fallback. The precise private source lookup slice goes to Windows for original database/publication/consent disposition; no separate eligibility/consent export was available. Thirty-one exact original-page reads and the reused 2652 observation supplied the immutable-media joins; no broad crawl was run. The sample is not a full legacy population or a current error total.
+
+Integration must synchronize `library.mjs` into the flat sibling `../mirracles-library.mjs` with the existing import replacement and validate the recovered aliases against that flat module. The full builder also writes flat sibling assets and needs its original saved video-map input; this scoped patch does not run it or edit those integration-owned siblings. Thirteen candidate Node tests and seven offline identity-evidence tests cover the source patch. Browser/cloud/build/deployment and flat-alias verification remain integration coverage; the existing flat homepage-equivalence assertion alone does not cover the new cross-ID behavior.
 
 ## Integration contract
 

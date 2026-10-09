@@ -1,10 +1,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
-import {createMirraclesLibrary,videoObject,playerURL,displayTitle,ORIGIN,PAGE_SIZE} from './library.mjs';
+import {createMirraclesLibrary,videoObject,playerURL,displayTitle,escapeHtml,ORIGIN,PAGE_SIZE} from './library.mjs';
 const loadJson = async name => JSON.parse(await fs.readFile(new URL('./data/'+name+'.json',import.meta.url),'utf8'));
 const catalogue = await loadJson('catalogue');
 const provenance = await loadJson('provenance');
+const legacyIdentities = await loadJson('legacy-identity-aliases');
 const handler = createMirraclesLibrary({loadJson});
 const get = (path,options) => handler(new Request(ORIGIN+path,options));
 const cards = html => (html.match(/<article class="card">/g)||[]).length;
@@ -72,6 +73,50 @@ test('detail and older alias preserve identity without eager external players',a
   assert.equal(new URL(wrongSlug.headers.get('location')).pathname,new URL(record.path,ORIGIN).pathname);
   const empty=catalogue.records.find(r=>r.inSitemap&&!r.poster);
   const emptyHTML=await(await get(empty.path)).text();assert(!emptyHTML.includes('data-mirracles-player='));assert(!emptyHTML.includes('"@type":"VideoObject"'));
+});
+test('source-verified cross-ID aliases preserve the canonical video and redirect query bytes',async()=>{
+  for(const mapping of legacyIdentities.mappings) {
+    for(const path of mapping.paths) {
+      const response=await get(path);assert.equal(response.status,200,path);
+      const html=await response.text(),canonical=ORIGIN+mapping.canonicalPath;
+      assert(html.includes('<link rel="canonical" href="'+canonical+'">'));
+      assert(html.includes('<meta property="og:url" content="'+canonical+'">'));
+      assert(html.includes('data-mirracles-player="'+escapeHtml(playerURL(mapping.source.schemaPlayer))+'"'));
+      const graph=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+      for(const node of graph.filter(n=>n['@type']==='VideoObject'))assert.equal(node.url,canonical);
+      const head=await get(path,{method:'HEAD'});assert.equal(head.status,200);assert.equal(await head.text(),'');
+      const cookie=await get(path,{headers:{cookie:'fixture=INVENTED'}});assert.equal(cookie.headers.get('cache-control'),'private, no-store');
+      for(const options of [{headers:{authorization:'INVENTED'}},{headers:{range:'bytes=0-100'}},{method:'POST',body:'INVENTED'}]) {
+        assert.equal(await get(path,options),null);
+      }
+    }
+    const query='?q=one%20two&q=one+two&encoded=%2F%26&empty=&gclid=INVENTED';
+    for(const path of ['/mirracles/'+mapping.legacyId,'/mirracles/'+mapping.legacyId+'/INVENTED']) {
+      const response=await get(path+query);assert.equal(response.status,308);
+      assert.equal(response.headers.get('location'),ORIGIN+mapping.canonicalPath+query);
+      assert.equal(response.headers.get('cache-control'),'private, no-store');
+    }
+    assert(!catalogue.order.includes(mapping.legacyId));
+    assert(!catalogue.records.some(r=>r.id===mapping.legacyId));
+  }
+  for(const id of legacyIdentities.incidentSample.unresolvedLegacyIds) {
+    assert.equal(await get('/mirracles/'+id+'/UNRESOLVED'),null);
+  }
+});
+test('ambiguous alias data fails closed instead of selecting a different video',async()=>{
+  const first=catalogue.records[0],second=catalogue.records[1],legacy=legacyIdentities.mappings[0];
+  const invalidMaps=[
+    {[first.path]:second.id},
+    {['/mirracles/'+first.id+'/INVENTED']:second.id},
+    {[legacy.paths[0]]:first.id,['/mirracles/'+legacy.legacyId+'/CONFLICT']:second.id},
+    {'/mirracles/123/INVENTED':'999999999999999999'},
+    {'/mirracles/123/%2fother':first.id},
+    {'/mirracles/123/INVENTED':first.id,'/mirracles/124/CHAIN':'123'}
+  ];
+  for(const aliasPaths of invalidMaps) {
+    const invalid=createMirraclesLibrary({loadJson:async()=>({...catalogue,aliasPaths})});
+    assert.equal((await invalid(new Request(ORIGIN+'/mirracles/'+legacy.legacyId))).status,503);
+  }
 });
 test('VideoObject requires source fields, trustworthy dates and safe source descriptions',()=>{
   const r={id:'123',path:'/mirracles/123/INVENTED',title:'Invented public fixture',description:'A published activity explanation.',poster:'https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg',published:'2026-01-01T12:00:00+05:30',player:'https://www.youtube.com/embed/abcdefghijk'};

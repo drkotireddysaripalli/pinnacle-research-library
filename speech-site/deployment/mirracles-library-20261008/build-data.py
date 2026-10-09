@@ -2,6 +2,7 @@
 from pathlib import Path
 import base64, collections, hashlib, json, re, xml.etree.ElementTree as ET
 from urllib.parse import urlsplit, unquote
+from legacy_identities import legacy_alias_paths
 
 HERE = Path(__file__).resolve().parent
 SITE = HERE.parent.parent
@@ -61,6 +62,9 @@ for chunk in source_chunks:
         if not records[key]['title'] and item.get('title'):
             records[key]['title'] = item['title']
 
+legacy_source = HERE / 'data/legacy-identity-aliases.json'
+legacy_aliases = legacy_alias_paths(json.loads(legacy_source.read_text(encoding='utf-8')), records)
+
 details = list(records.values())
 for i in range(0, len(details), 500):
     chunk = details[i:i+500]
@@ -68,6 +72,10 @@ for i in range(0, len(details), 500):
     for r in chunk: r['chunk'] = i // 500
 index = [{k: r[k] for k in ['id', 'path', 'title', 'poster', 'published', 'category', 'inSitemap', 'chunk']} for r in details]
 alias_paths = {p: r['id'] for r in details for p in r['aliases']}
+for alias, key in legacy_aliases.items():
+    if alias_paths.get(alias, key) != key:
+        raise ValueError('Legacy alias conflicts with an existing archive path')
+    alias_paths[alias] = key
 counts = collections.Counter(records[k]['category'] for k in order if records[k]['category'])
 navigation = json.loads((SITE / 'src/data/portal-navigation.json').read_text(encoding='utf-8'))
 write('catalogue', {'version': 'mirracles-library-20261008', 'order': order, 'records': index, 'aliasPaths': alias_paths,
@@ -79,6 +87,9 @@ report = {'candidateOnly': True, 'source': str(SITEMAP.relative_to(WORK)),
     'sourceVideoEntries': sum(bool(records[k]['player']) for k in order),
     'publicArchivePathsPreserved': len(archive_paths), 'totalNumericIdentities': len(records),
     'archiveOnlyIdentities': len(records)-len(order), 'categories': dict(sorted(counts.items())),
+    'legacyIdentityAliases': {'source': legacy_source.name,
+        'sha256': hashlib.sha256(legacy_source.read_bytes()).hexdigest(),
+        'numericIdentities': len({p.split('/')[2] for p in legacy_aliases}), 'paths': len(legacy_aliases)},
     'categoryPolicy': 'Exact nonempty source category values; no inferred therapy/topic mapping',
     'sourceChunks': [{'file': p.name, 'sha256': hashlib.sha256(p.read_bytes()).hexdigest()} for p in source_chunks],
     'sharedInputs': ['src/components/SiteHeader.astro', 'src/components/SiteFooter.astro', 'src/data/portal-navigation.json', 'src/data/site.ts']}
