@@ -1,6 +1,19 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {fetchPublicOrigin} from '../deployment/public-mobile-recovery.mjs';
 const mobile='Mozilla/5.0 Android Mobile';
+test('shared public resource template recovers exact article and retains campaign bytes',async()=>{
+ const failure='<title>Error</title>System.NullReferenceException ASP._Page_Views_Shared_SunshineInnerPage_V9_Mobile_cshtml.Execute()';
+ for(const prefix of ['t','c','ma','b','m','a','abs','abilities','skills']){
+  const path='/'+prefix+'/interactive-song-therapy',q=req(path+'?gclid=a%2Bb&utm_content=x&utm_content=y');let count=0;
+  const r=await fetchPublicOrigin(q,async retry=>{assert.equal(retry.url,q.url);return ++count===1?new Response(failure,{status:500,headers:{'content-type':'text/html'}}):new Response('<title>Interactive Song Therapy | Pinnacle Blooms</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'"><h1>Interactive Song Therapy</h1><p>Original article content</p>',{headers:{'content-type':'text/html'}});});
+  assert.equal(r.status,200);assert.equal(count,2);assert((await r.text()).includes('Original article content'));
+ }
+ for(const [path,body,canonical] of [['/api/interactive-song-therapy',failure,'/api/interactive-song-therapy'],['/t/interactive-song-therapy',failure.replace('SunshineInnerPage','UnrelatedPage'),'/t/interactive-song-therapy'],['/t/interactive-song-therapy',failure,'/t/different-topic']]){
+  let count=0;const first=new Response(body,{status:500,headers:{'content-type':'text/html'}});
+  const r=await fetchPublicOrigin(req(path),async()=>++count===1?first:new Response('<title>Different topic</title><link rel="canonical" href="https://www.pinnacleblooms.org'+canonical+'"><h1>Different topic</h1>',{headers:{'content-type':'text/html'}}));
+  assert.equal(r,first);
+ }
+});
 const req=(path='/?gclid=x&utm_source=google',options={})=>new Request('https://www.pinnacleblooms.org'+path,{headers:{'user-agent':mobile,...options.headers},method:options.method||'GET'});
 const error=()=>new Response('<title>Error</title>Newtonsoft.Json.JsonReaderException GetStaffandCentersData',{status:500,headers:{'content-type':'text/html'}});
 const success=(path='/')=>new Response('<title>#1 Autism Therapy Centres Network -for your kids</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'?gclid=x"><h1>Public home</h1>',{headers:{'content-type':'text/html','set-cookie':'public-preference=x','etag':'old','vary':'Accept-Encoding'}});

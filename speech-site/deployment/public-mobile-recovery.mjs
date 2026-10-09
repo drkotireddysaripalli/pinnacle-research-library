@@ -1,5 +1,5 @@
-// Bounded recovery of a reproduced ASP.NET mobile-rendering exception on named
-// named public destinations. It preserves the original URL, headers and query for attribution.
+// Bounded recovery of reproduced ASP.NET mobile-template exceptions on public
+// destinations. Preserve the original URL, headers and query for attribution.
 // It owns no account, API, payment, form submission or child-report route.
 const identities=new Map([
  ['/',/^#1 Autism Therapy Centres Network/i],
@@ -18,9 +18,13 @@ const identities=new Map([
  ['/autism-speech-aba-news',/^News - Child Development, Rehabilitation centers/i]
 ]);
 const desktop='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
+// These public resource families share SunshineInnerPage-V9.Mobile.cshtml.
+// Recovery still requires the exact observed exception and a successful,
+// self-canonical desktop response; unknown/authenticated routes pass through.
+const publicResourcePath=path=>/^\/(?:t|c|ma|b|m|a|abs|abilities|skills)\/[a-z0-9][a-z0-9-]*\/?$/.test(path);
 export function knownMobilePublicRequest(request){
  const u=new URL(request.url);
- return ['GET','HEAD'].includes(request.method)&&u.origin==='https://www.pinnacleblooms.org'&&identities.has(u.pathname)&&/Android|iPhone|iPad|Mobile/i.test(request.headers.get('user-agent')||'')&&!['authorization','range','if-range','if-match','if-none-match','if-modified-since','if-unmodified-since'].some(k=>request.headers.has(k))&&!/\bno-transform\b/i.test(request.headers.get('cache-control')||'');
+  return ['GET','HEAD'].includes(request.method)&&u.origin==='https://www.pinnacleblooms.org'&&(identities.has(u.pathname)||publicResourcePath(u.pathname))&&/Android|iPhone|iPad|Mobile/i.test(request.headers.get('user-agent')||'')&&!['authorization','range','if-range','if-match','if-none-match','if-modified-since','if-unmodified-since'].some(k=>request.headers.has(k))&&!/\bno-transform\b/i.test(request.headers.get('cache-control')||'');
 }
 async function boundedText(response){
  const reader=response.body?.getReader();if(!reader)return '';let bytes=0;const chunks=[];
@@ -45,14 +49,18 @@ export async function fetchPublicOrigin(request,fetcher=fetch){
     'Index-V9.Mobile.cshtml:line 11'
    ].every(fragment=>error.includes(fragment));
    const counsellingFaqFailure=path==='/child-psychological-counseling'&&error.includes('PinnacleBlooms.MISC.Utility.GetFaqs(String lang, String category)')&&error.includes('ASP._Page_Views_Home_PsychologicalCounselling_V9_Mobile_cshtml.Execute()');
-   if(!/<title>\s*Error\s*<\/title>/i.test(error)||!error.includes('Newtonsoft.Json.JsonReaderException')||!(error.includes('GetStaffandCentersData')||rootFaqFailure||counsellingFaqFailure))return original;
+   const resourceNullFailure=publicResourcePath(path)&&error.includes('System.NullReferenceException')&&error.includes('ASP._Page_Views_Shared_SunshineInnerPage_V9_Mobile_cshtml.Execute()');
+   const knownJsonFailure=error.includes('Newtonsoft.Json.JsonReaderException')&&(error.includes('GetStaffandCentersData')||rootFaqFailure||counsellingFaqFailure);
+   if(!/<title>\s*Error\s*<\/title>/i.test(error)||!(resourceNullFailure||knownJsonFailure))return original;
   }
   const headers=new Headers(request.headers);headers.set('user-agent',desktop);headers.set('sec-ch-ua-mobile','?0');
   const retry=await fetcher(new Request(request,{method:'GET',headers}));
   if(retry.status!==200||!retry.headers.get('content-type')?.includes('text/html'))return original;
   let html=await boundedText(retry);const u=new URL(request.url),title=html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim()||'';
   const canonical=canonicalPath(html);
-  if(!identities.get(u.pathname).test(title)||!(canonical===u.pathname||(u.pathname==='/TOS'&&canonical==='/tos')||(u.pathname==='/franchise-autism-therapy-center'&&canonical==='/franchises')))return original;
+   const expectedTitle=identities.get(u.pathname);
+   const titleMatches=expectedTitle?expectedTitle.test(title):publicResourcePath(u.pathname)&&title.length>5&&!/^(?:error|not found|page not found)\b/i.test(title)&&/<h1\b[^>]*>[^<\s]/i.test(html);
+   if(!titleMatches||!(canonical===u.pathname||(u.pathname==='/TOS'&&canonical==='/tos')||(u.pathname==='/franchise-autism-therapy-center'&&canonical==='/franchises')))return original;
   // Campaigns remain in the browser URL; the public canonical/OG identity is clean.
   html=html.replace(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i,`<link rel="canonical" href="${u.origin+canonical}">`);
   const out=new Headers(retry.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])out.delete(k);

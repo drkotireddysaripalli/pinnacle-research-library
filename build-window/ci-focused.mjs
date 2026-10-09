@@ -7,6 +7,7 @@ import {spawnSync} from 'node:child_process';
 export const focusedSuites = [
   ['scripts/test-ask-priority-editorial.mjs','scripts/test-ask-intent-editorial.mjs','scripts/test-priority-hindi-copy.mjs','scripts/test-priority-legacy-content.mjs','scripts/test-ask-topic-navigation.mjs'],
   ['scripts/test-knowledge-catalogues.mjs'],
+  ['deployment/mirracles-library-20261008/library.test.mjs','scripts/test-mirracles-corpus.mjs','deployment/guru-recovery-20261009/handler.test.mjs','scripts/test-server-error-routing.mjs'],
   ['scripts/test-book-asset-inventory.mjs','scripts/test-vernacular-typography.mjs','scripts/test-book-cart-links.mjs'],
   ['scripts/test-staff-health.mjs','scripts/test-legacy-social-metadata.mjs','scripts/test-legacy-schema.mjs'],
   ['scripts/test-public-mobile-recovery.mjs','scripts/test-materials-media.mjs'],

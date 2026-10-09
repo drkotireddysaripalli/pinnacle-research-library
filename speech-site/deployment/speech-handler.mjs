@@ -1,5 +1,6 @@
 import {hasStoreChoices,addStoreChoices,STORE_CHOICE_RELEASE} from './book-store-choices.mjs';
 import {createMirraclesLibrary} from './mirracles-library.mjs';
+import {createGuruRecovery} from './guru-recovery.mjs';
 import {suchitraAsset,suchitraHash} from './suchitra-assets.mjs';
 import {enrolmentAsset,enrolmentHash} from './enrolment-assets.mjs';
 import {hasHardcoverEdition,addHardcoverLinks,HARDCOVER_LINK_RELEASE} from './book-hardcover-links.mjs';
@@ -61,7 +62,20 @@ async function serveMirraclesLibrary(request,env){
  return mirraclesPublicHandler(request);
 }
 
+let guruPublicHandler;
+async function serveGuruRecovery(request,env){
+ const u=new URL(request.url);
+ if(!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(u.hostname)||!/^\/guru\/\d+(?:\/|$)/.test(u.pathname)||!env.ASSETS)return null;
+ if(!guruPublicHandler){
+  let shellPromise;
+  const read=async asset=>{const r=await env.ASSETS.fetch(new Request('https://assets.local'+asset));if(!r.ok)throw Error('Published article asset unavailable');return r.json();};
+  guruPublicHandler=createGuruRecovery({loadJson:async name=>{if(name!=='articles')throw Error('Unknown public article asset');return read('/guru-recovery-data/articles.json');},shell:async()=>{shellPromise??=read('/mirracles-library-data/shell.json').catch(e=>{shellPromise=undefined;throw e;});return shellPromise;}});
+ }
+ return guruPublicHandler(request);
+}
+
 export async function serveSpeech(request,env,inventory){
+ const guru=await serveGuruRecovery(request,env);if(guru)return guru;
  const videos=await serveMirraclesLibrary(request,env);if(videos)return videos;
  const seva=serveSeva(request);if(seva)return seva;
  // Cloudflare matches query strings in route patterns. The /seva* trigger must
