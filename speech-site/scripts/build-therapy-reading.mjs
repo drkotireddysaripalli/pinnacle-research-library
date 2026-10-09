@@ -2,6 +2,7 @@
 // Future full-union builds already contain the component and are idempotent.
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {parse} from 'parse5';
 import {therapyReading} from '../src/data/therapy-reading.mjs';
+import {updateReadingMarkdown} from './therapy-reading-markdown.mjs';
 const root=process.cwd(),entries={};
 for(const [kind,item]of Object.entries(therapyReading)){
  const file=kind==='speech'?'index.html':item.path.slice(1)+'.html';
@@ -13,7 +14,7 @@ for(const [kind,item]of Object.entries(therapyReading)){
  entries[kind]={path:item.path,anchor:item.anchor,html:fragment,markdown};
  const name=kind==='speech'?'speech-llms.txt':'occupational-therapy-machine.md';
  // Both source reading aid and build output keep the same visible links.
- for(const dir of ['public','dist']){const target=path.join(root,dir,'pinnacle-pages-data',name);const prior=await fs.readFile(target,'utf8');const marker='\n\n## '+item.heading;await fs.writeFile(target,prior.split(marker)[0].trimEnd()+markdown);}
+ for(const dir of ['public','dist']){const target=path.join(root,dir,'pinnacle-pages-data',name);const prior=await fs.readFile(target,'utf8');await fs.writeFile(target,updateReadingMarkdown(prior,item.heading,markdown));}
 }
 await fs.writeFile(path.join(root,'deployment/therapy-reading-content.mjs'),'// Generated from TherapyBookCompanion.astro; do not edit.\nexport const readingContent='+JSON.stringify(entries)+';\n');
 console.log(JSON.stringify({therapyReading:Object.keys(entries),bytes:Object.values(entries).reduce((n,e)=>n+Buffer.byteLength(e.html),0)}));

@@ -3,6 +3,14 @@ import assert from 'node:assert/strict';
 import {readingContent} from '../deployment/therapy-reading-content.mjs';
 import {readingEntry,addTherapyReading,READING_RELEASE} from '../deployment/therapy-reading.mjs';
 import {serveSpeech} from '../deployment/speech-handler.mjs';
+import {updateReadingMarkdown} from './therapy-reading-markdown.mjs';
+for(const newline of ['\n','\r\n'])test(`public reading build replaces its existing section with ${JSON.stringify(newline)} input`,()=>{
+ const markdown='\n\n## Reading\n\nCurrent book links\n';
+ const prior='Original care\n\n## Reading\n\nOld book links\n\n## Reading\n\nDuplicate book links\n';
+ const actual=updateReadingMarkdown(prior.replaceAll('\n',newline),'Reading',markdown);
+ assert.equal(actual,'Original care'+markdown);
+ assert.equal(updateReadingMarkdown(actual,'Reading',markdown),actual);
+});
 for(const [kind,content] of Object.entries(readingContent)){
  const key=`/pinnacle-pages-html/${kind==='speech'?'speech':'occupational-therapy'}.html`;
  const fixture=`<html><head><link rel="canonical" href="https://www.pinnacleblooms.org${content.path}"></head><body><a href="tel:+919100181181">Call</a><section id="${content.anchor}">Preserved care</section></body></html>`;

@@ -3,9 +3,12 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 
-const generated = p => /^speech-site\/deployment\/(?:[a-z0-9-]+-assets|public-ad-call|therapy-reading-content)\.mjs$/.test(p)
+const generated = p => /^speech-site\/deployment\/(?:[a-z0-9-]+-assets|public-ad-call|therapy-reading-content|book-store-choices|book-edition-search-content)\.mjs$/.test(p)
   || p === 'speech-site/workers/google-ads-call-measurement/index.mjs'
-  || /^speech-site\/public\/pinnacle-pages-data\/.*(?:-machine\.md|-evidence\.(?:json|txt)|sitemap\.xml)$/.test(p);
+  // Explicit outputs of the existing machine/policy/book/centre builders.
+  // Their exact before/after bytes are retained; later unexpected edits still fail.
+  || ['speech-site/src/data/centre-page-releases.json','speech-site/public/pinnacle-pages-data/centre-network.json'].includes(p)
+  || /^speech-site\/public\/pinnacle-pages-data\/.*(?:-(?:machine|reading|policy)\.md|-(?:evidence|sources|policy-source)\.(?:json|txt)|llms\.txt|sitemap\.xml)$/.test(p);
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 function paths(root) {
   return execFileSync('git', ['ls-files', '-z', '--cached', '--others', '--exclude-standard', '--', 'speech-site', 'verify-site'], {cwd: root, encoding: 'utf8', maxBuffer: 8 * 1024 * 1024})
