@@ -20,6 +20,8 @@ Before a new assignment, fetch main, inspect the changes and reconcile the featu
 
 ## Commands
 
+The common procedure is [PROCESS-CONTRACT.md](PROCESS-CONTRACT.md). Both local teams and CI use the declared Node24.21.0/npm11.13.0 pins. `doctor` reports an exact mismatch; required execution refuses it. Use `node build-window/workspace.mjs ci-local` for the hosted workflow's complete local gate sequence, or `ci-local enrolment` for that registered page. `ci-focused` runs the shared focused offline/launcher registry. The aggregate preserves each underlying receipt and writes `results/ci-local-receipt.json`; cloud, private-runtime, physical-device, production and operational gates remain separately required.
+
 Run from the repository root, on a feature branch:
 
 ```sh

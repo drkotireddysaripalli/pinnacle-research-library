@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-09-25T11:59:41.700Z",
-  "passed": 10,
+  "checkedAt": "2026-10-09T04:14:38.539Z",
+  "passed": 16,
   "results": [
     {
       "name": "Eight real call links have unique approved placements and the correct number",
@@ -11,7 +11,7 @@
       "passed": true
     },
     {
-      "name": "Acceptance loads one tag and one clean page view, with ads and auto page views off",
+      "name": "Acceptance loads one tag and one clean page view, with advertising consent denied and automatic GA page views off",
       "passed": true
     },
     {
@@ -40,6 +40,30 @@
     },
     {
       "name": "Withdrawal stops events and clears only helpline cookies; renewed choice does not duplicate the tag",
+      "passed": true
+    },
+    {
+      "name": "Exactly the two fixed ChatGPT campaign tuples accompany existing consented events",
+      "passed": true
+    },
+    {
+      "name": "Unknown, partial, duplicated and injected campaign tuples never enter analytics",
+      "passed": true
+    },
+    {
+      "name": "Other URL fields, advertising click identifiers and private fragments are not forwarded even on a valid tuple",
+      "passed": true
+    },
+    {
+      "name": "Tagged traffic without new consent, with old acceptance, refusal or GPC sends nothing",
+      "passed": true
+    },
+    {
+      "name": "Repeated and renewed consent does not duplicate attributed page views, and dialing remains untouched",
+      "passed": true
+    },
+    {
+      "name": "New disclosure describes limited fixed campaign labels and preserves refusal-safe calling",
       "passed": true
     }
   ],

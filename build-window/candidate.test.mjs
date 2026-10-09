@@ -66,3 +66,10 @@ test('browser test edits change the test identity while preserving build reuse; 
   f.write('speech-site/public/pinnacle-pages-scripts/enrolment.js','Changed served behavior');
   assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
 });
+test('the timestamped centre validation receipt is separate from build inputs; other evidence remains guarded',t=>{
+  const f=fixture(t);
+  f.write('speech-site/deployment/centre-network-contract-20261007.json','New validation timestamp');
+  assert.equal(requireCandidate(f.root,f.results).status,'passed');
+  f.write('verify-site/content/source.md','Changed source evidence');
+  assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
+});

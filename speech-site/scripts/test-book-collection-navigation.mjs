@@ -15,8 +15,8 @@ for(const format of ['pdf','softcover','hardbound'])test(format+' library links 
  const head=await serveSpeech(new Request('https://www.pinnacleblooms.org'+pathname,{method:'HEAD'}),env,inventory);
  assert.equal(await head.text(),'');assert.equal(head.headers.get('etag'),response.headers.get('etag'));
 });
-test('other books retain their own collection link and validator',async()=>{
+test('other books retain their collection link with the new retailer validator',async()=>{
  const pathname='/books/speech-communication-101-my-message-matters',key='/pinnacle-pages-html/'+BOOK_ROUTES[pathname]+'.html';
  const response=await serveSpeech(new Request('https://www.pinnacleblooms.org'+pathname),env,{[key]:'fixture-original'});
- assert.equal(await response.text(),html);assert.equal(response.headers.get('etag'),'"speech-fixture-original"');
+ assert.equal(await response.text(),html);assert.equal(response.headers.get('etag'),'"speech-fixture-original-book-store-choices-20261009"');
 });

@@ -1,0 +1,5 @@
+---
+import {storeRowForSku,storeChoicePanel} from '../lib/book-store-choices.mjs';
+const {sku,compact=false,contentLocale}=Astro.props;
+---
+<Fragment set:html={storeChoicePanel(storeRowForSku(sku),{compact,...(contentLocale?{contentLocale}:{})})}/>

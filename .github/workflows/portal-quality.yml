@@ -7,9 +7,9 @@ on:
         type: boolean
         default: false
   pull_request:
-    paths: ['speech-site/src/**', 'speech-site/ask-runtime/**', 'speech-site/ask-public/**', 'speech-site/wrangler.ask.jsonc', 'speech-site/public/**', 'speech-site/scripts/**', 'speech-site/tests/**', 'speech-site/deployment/**/*.mjs', 'speech-site/*config*', 'speech-site/package*.json', 'speech-site/.npmrc', 'speech-site/.nvmrc', '.github/workflows/portal-quality.yml']
+    paths: ['build-window/**', 'speech-site/src/**', 'speech-site/ask-runtime/**', 'speech-site/ask-public/**', 'speech-site/wrangler.ask.jsonc', 'speech-site/public/**', 'speech-site/scripts/**', 'speech-site/tests/**', 'speech-site/deployment/**/*.mjs', 'speech-site/*config*', 'speech-site/package*.json', 'speech-site/.npmrc', 'speech-site/.nvmrc', '.github/workflows/portal-quality.yml']
   push:
-    paths: ['speech-site/src/**', 'speech-site/ask-runtime/**', 'speech-site/ask-public/**', 'speech-site/wrangler.ask.jsonc', 'speech-site/public/**', 'speech-site/scripts/**', 'speech-site/tests/**', 'speech-site/deployment/**/*.mjs', 'speech-site/*config*', 'speech-site/package*.json', 'speech-site/.npmrc', 'speech-site/.nvmrc', '.github/workflows/portal-quality.yml']
+    paths: ['build-window/**', 'speech-site/src/**', 'speech-site/ask-runtime/**', 'speech-site/ask-public/**', 'speech-site/wrangler.ask.jsonc', 'speech-site/public/**', 'speech-site/scripts/**', 'speech-site/tests/**', 'speech-site/deployment/**/*.mjs', 'speech-site/*config*', 'speech-site/package*.json', 'speech-site/.npmrc', 'speech-site/.nvmrc', '.github/workflows/portal-quality.yml']
 permissions:
   contents: read
 jobs:
@@ -23,20 +23,16 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version-file: 'build-window/.node-version'
           cache: npm
           cache-dependency-path: speech-site/package-lock.json
+      - name: Use the shared npm version
+        run: npm install --global "npm@$(cat ../build-window/.npm-version)" --no-audit --no-fund
       - run: npm ci
       - run: npm run test:ask-auth
       - run: npm run test:ask-content
-      - run: node --test scripts/test-ask-priority-editorial.mjs scripts/test-ask-intent-editorial.mjs scripts/test-priority-hindi-copy.mjs scripts/test-priority-legacy-content.mjs scripts/test-ask-topic-navigation.mjs
-      - run: node --test scripts/test-knowledge-catalogues.mjs
-      - run: node --test scripts/test-book-asset-inventory.mjs scripts/test-vernacular-typography.mjs scripts/test-book-cart-links.mjs
-      - run: node --test scripts/test-staff-health.mjs scripts/test-legacy-social-metadata.mjs scripts/test-legacy-schema.mjs
-      - run: node --test scripts/test-public-mobile-recovery.mjs scripts/test-materials-media.mjs
-      - run: node --test scripts/test-merchant-policy.mjs
-      - run: node --test scripts/test-paid-centre-entry.mjs scripts/test-centre-measurement.mjs
-      - run: node --test scripts/test-centre-google-feed.mjs scripts/test-enrolment-receipt.mjs
+      - name: Shared focused offline and launcher contracts
+        run: node ../build-window/ci-focused.mjs
       - run: npm run build:ask
   checks:
     runs-on: ubuntu-latest
@@ -51,9 +47,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version-file: 'build-window/.node-version'
           cache: npm
           cache-dependency-path: speech-site/package-lock.json
+      - name: Use the shared npm version
+        run: npm install --global "npm@$(cat ../build-window/.npm-version)" --no-audit --no-fund
       - run: npm ci
       - name: Install browser runtimes with bounded mirror requests
         timeout-minutes: 6

@@ -17,6 +17,9 @@ export function generatedHashes(root) {
 export function inputFingerprint(root, snapshots = {}) {
   const hash = createHash('sha256');
   for (const p of paths(root)) {
+    // This validator writes a timestamped test receipt after the build. It is
+    // not imported or served; ci-local retains its separate artifact hash.
+    if (p === 'speech-site/deployment/centre-network-contract-20261007.json') continue;
     // Local Playwright cases are not inputs to the Astro/Worker build. Their
     // separate hash is recorded on browser receipts, so assertion-only fixes
     // can reuse the unchanged built candidate without hiding test changes.
