@@ -50,6 +50,9 @@ for(const state of ['accepted','unknown'])test('reload holds '+state+' request a
  await page.addInitScript(()=>{window.qaAcceptanceEvents=0;document.addEventListener('pinnacle:enquiry-accepted',()=>window.qaAcceptanceEvents++);});
  await page.unroute('**/api/enrolment');await page.route('**/api/enrolment',async route=>{calls++;firstKey=route.request().postDataJSON().requestId;await route.fulfill({status:state==='accepted'?202:502,contentType:'application/json',body:JSON.stringify({status:state,...(state==='accepted'?{receipt:{schemaVersion:1,requestId:firstKey,id:'qa-browser-reload-receipt'},contractVersion:1}:{})})});});
  await page.goto(path);await page.locator('#parent-name').fill('ISOLATED BROWSER QA');await page.locator('#parent-phone').fill('+91 00000 00000');await page.locator('#enrol-submit').click();
+ // Submission disables the button before the asynchronous transport settles.
+ // Wait for the mocked response before checking its count and durable receipt.
+ await expect(page.locator('#enrol-status')).toContainText(state==='accepted'?'Your request has been received':'could not confirm');
  await expect(page.locator('#enrol-submit')).toBeDisabled();expect(calls).toBe(1);
  expect(await page.evaluate(()=>window.qaAcceptanceEvents)).toBe(state==='accepted'?1:0);
  const stored=await page.evaluate(()=>localStorage.getItem('pbn-enrolment-request-v1'));expect(stored).toContain(firstKey);for(const text of ['ISOLATED BROWSER QA','00000','contact','message','preferences'])expect(stored).not.toContain(text);

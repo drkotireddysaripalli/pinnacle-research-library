@@ -1,15 +1,222 @@
 {
-  "folders": [{"name": "Pinnacle shared codebase", "path": ".."}],
-  "settings": {"files.exclude": {"**/node_modules": true, "**/.toolchain": true}},
+  "folders": [
+    {
+      "name": "Pinnacle shared codebase",
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.toolchain": true
+    }
+  },
   "tasks": {
     "version": "2.0.0",
     "tasks": [
-      {"label": "Pinnacle: workspace status", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "doctor"], "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": []},
-      {"label": "Pinnacle: build candidate", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "build"], "options": {"cwd": "${workspaceFolder}"}, "group": "build", "problemMatcher": []},
-      {"label": "Pinnacle: unit tests", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "unit"], "options": {"cwd": "${workspaceFolder}"}, "group": "test", "problemMatcher": []},
-      {"label": "Pinnacle: responsive smoke", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "browser"], "options": {"cwd": "${workspaceFolder}"}, "group": "test", "problemMatcher": []},
-      {"label": "Pinnacle: WebKit smoke", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "browser-webkit"], "options": {"cwd": "${workspaceFolder}"}, "group": "test", "problemMatcher": []},
-      {"label": "Pinnacle: local preview", "type": "process", "command": "node", "args": ["build-window/workspace.mjs", "preview"], "options": {"cwd": "${workspaceFolder}"}, "problemMatcher": []}
+      {
+        "label": "Pinnacle: workspace status",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "doctor"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: build candidate",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "build"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "build",
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: unit tests",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "unit"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "test",
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: responsive smoke",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "browser"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "test",
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: WebKit smoke",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "browser-webkit"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "test",
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: local preview",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "preview"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: source typing",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "types"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: Ask authentication",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "ask-auth"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: Ask content",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "ask-content"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: Ask Worker build",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "ask-build"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: full responsive suite",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "browser-all",
+          "enrolment"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: Firefox suite",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "browser-firefox",
+          "enrolment"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: WebKit suite",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "browser-webkit-all",
+          "enrolment"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: page speed budgets",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "speed",
+          "enrolment"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      },
+      {
+        "label": "Pinnacle: search evidence window",
+        "type": "process",
+        "command": "node",
+        "args": [
+          "build-window/workspace.mjs",
+          "seo"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": []
+      }
     ]
   }
 }

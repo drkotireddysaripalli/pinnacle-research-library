@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {execFileSync} from 'node:child_process';
-import {generatedHashes,inputFingerprint,makeSnapshots,requireCandidate} from './candidate.mjs';
+import {browserTestFingerprint,generatedHashes,inputFingerprint,makeSnapshots,requireCandidate} from './candidate.mjs';
 
 function fixture(t) {
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'pinnacle-candidate-'));
@@ -57,4 +57,12 @@ test('a declared generated file first created by a build does not become a new s
   assert.equal(inputFingerprint(f.root,snapshots),fingerprintBefore);
   f.write('speech-site/deployment/new-page-assets.mjs','Unexpected later edit');
   assert.notEqual(inputFingerprint(f.root,snapshots),fingerprintBefore);
+});
+test('browser test edits change the test identity while preserving build reuse; served script edits still invalidate',t=>{
+  const f=fixture(t),before=browserTestFingerprint(f.root);
+  f.write('speech-site/tests/browser/enrolment.spec.mjs','Changed assertion');
+  assert.equal(requireCandidate(f.root,f.results).status,'passed');
+  assert.notEqual(browserTestFingerprint(f.root),before);
+  f.write('speech-site/public/pinnacle-pages-scripts/enrolment.js','Changed served behavior');
+  assert.throws(()=>requireCandidate(f.root,f.results),/inputs changed/);
 });

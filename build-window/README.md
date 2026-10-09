@@ -33,6 +33,31 @@ node build-window/workspace.mjs browser-webkit
 node build-window/workspace.mjs preview
 ```
 
+The extended verification commands are:
+
+```sh
+node build-window/workspace.mjs types
+node build-window/workspace.mjs ask-auth
+node build-window/workspace.mjs ask-content
+node build-window/workspace.mjs ask-build
+node build-window/workspace.mjs evidence-contract
+node build-window/workspace.mjs browser-all enrolment
+node build-window/workspace.mjs browser-firefox enrolment
+node build-window/workspace.mjs browser-webkit-all enrolment
+node build-window/workspace.mjs browser-shop shop
+node build-window/workspace.mjs speed enrolment
+node build-window/workspace.mjs frog-local
+node build-window/workspace.mjs seo
+```
+
+The full browser profiles run every registered local case; page-specific skips are real omissions. `browser-shop shop` covers the separate Shop and Hindi/Telugu cohort. `browser-enrolment enrolment` isolates the response/receipt/reload regression. The installed Chromium, Firefox and WebKit are local engines, with emulated sizes. Edge requires an actual installed browser. `speed` enforces existing Lighthouse budgets on the local candidate; retain live measurements separately because the original quality server's uncompressed transport differs. `frog-local` calls the native vendor CLI for exactly three loopback URLs and six basic CSV exports, after the application first-run agreement is completed. It neither uses connected vendor APIs nor crawls the public estate.
+
+`seo` generates an offline interactive `results/dashboard.html` and JSON from local test/search receipts, completed committed Frog exports and the private handover's aggregate evidence. It makes no API call and starts no scheduler. Missing local evidence is shown as missing. Keep search/account/queue data and copied private files under ignored results; publish only the code and scoped sanitized verification receipt.
+
+Each browser run retains a separate timestamped HTML report, traces and screenshots under `results/browser-evidence/`. Its receipt records actual command arguments, source, build fingerprint and browser-test fingerprint. Browser-test-only edits can reuse the unchanged candidate; served scripts, evidence and unexpected generated changes still invalidate it. A test edit during execution invalidates that run.
+
+Parallel teams use distinct loopback ports by setting `PINNACLE_PREVIEW_PORT` for both preview and browser commands. Start that checkout's preview first for a custom port. See the [actual team roster](TEAM-ROSTER-20261009.md), [verification receipt](VERIFICATION-20261009.md) and [tool handover](SEO-HANDOVER-20261009.md).
+
 `doctor` reports the branch, source SHA, runtime and installed scripts. `install` uses the existing npm lockfile. `build`, `unit`, `contracts` and `ask-build` call the original portal scripts. Before unit execution, the launcher refreshes the three existing call/bootstrap/commerce script modules used by byte-parity tests, so fixtures match this checkout's source and line endings. Generated tracked changes are shown in the receipt and must be reviewed separately from authored changes. The two browser commands reuse the existing public-page and PinnacleAI layout tests: four Chromium viewport profiles and one emulated WebKit profile. They establish those selected cases only. Broader changed-page acceptance uses the existing registered page contract and relevant tests; do not repeat an unchanged build just to launch the same browser cases.
 
 The preview serves the built static candidate at **http://127.0.0.1:4340**. Its root `/` is the Speech Therapy candidate; the production homepage has a separate legacy handler. Other entries include `/pinnacleai`, `/enroll-autism-speech-aba-therapies-india` and `/shop`. Run preview in one terminal and local tests in another; the launcher recognizes its running preview. Ctrl+C stops the owned preview. This static server cannot establish Ask Worker authentication, protected APIs, bindings, production dispatch or the complete public asset union. `ask-build` is a distinct existing dynamic build.
@@ -43,7 +68,7 @@ The existing CI uses Node 24. Use an installed Node 24 runtime or install a loca
 npm install --prefix build-window/.toolchain --no-save --package-lock=false --no-audit --no-fund node@24
 ```
 
-The launcher automatically uses that copy when the shell's Node major differs. Install the actual selected browser runtimes once from `speech-site` using `npx playwright install chromium webkit`. Edge requires a separately installed Edge browser; an emulated viewport is not physical-device acceptance. Optional Firefox/other coverage remains in the existing Playwright configuration.
+The launcher automatically uses that copy when the shell's Node major differs. Install the actual selected browser runtimes once from `speech-site` using `npx playwright install chromium firefox webkit`. All three engines were installed and executed on this Mac. Edge requires a separately installed Edge browser; an emulated viewport is not physical-device acceptance. Other coverage remains in the existing Playwright configuration.
 
 Receipts are under ignored `build-window/results/`; existing browser evidence is under `speech-site/audits/`. Preview/browser commands require a successful candidate receipt with matching input bytes, including uncommitted/untracked source. Only verified before/after bytes of declared generated outputs are normalized; unexpected edits still invalidate the candidate. Root tooling/docs changes permit reuse of the unchanged portal build. A receipt reports the command outcome and source SHA, with any tracked site changes visible. It is not a production release receipt. `pinnacle.code-workspace` provides optional editor tasks; the source, browser and terminal can also be opened directly in Codex.
 

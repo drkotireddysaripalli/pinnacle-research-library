@@ -17,11 +17,23 @@ export function generatedHashes(root) {
 export function inputFingerprint(root, snapshots = {}) {
   const hash = createHash('sha256');
   for (const p of paths(root)) {
+    // Local Playwright cases are not inputs to the Astro/Worker build. Their
+    // separate hash is recorded on browser receipts, so assertion-only fixes
+    // can reuse the unchanged built candidate without hiding test changes.
+    if (p.startsWith('speech-site/tests/browser/')) continue;
     const full = path.join(root, p);
     const value = fs.existsSync(full) ? digest(fs.readFileSync(full)) : '(deleted)';
     const expected = snapshots[p];
     if (generated(p) && expected && [expected.before, expected.after].includes(value)) continue;
     hash.update(p + '\0' + value + '\n');
+  }
+  return hash.digest('hex');
+}
+export function browserTestFingerprint(root) {
+  const hash = createHash('sha256');
+  for (const p of paths(root).filter(p=>p.startsWith('speech-site/tests/browser/'))) {
+    const full=path.join(root,p);
+    hash.update(p+'\0'+(fs.existsSync(full)?digest(fs.readFileSync(full)):'(deleted)')+'\n');
   }
   return hash.digest('hex');
 }
