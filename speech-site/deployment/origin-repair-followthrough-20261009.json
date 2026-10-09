@@ -1,0 +1,322 @@
+{
+  "at": "2026-10-09T00:22:54.803Z",
+  "windows": {
+    "before": {
+      "start": "2026-10-08T22:35:00Z",
+      "end": "2026-10-08T23:15:00Z"
+    },
+    "after": {
+      "start": "2026-10-08T23:20:00Z",
+      "end": "2026-10-09T00:00:00Z"
+    }
+  },
+  "evidenceClass": "Cloudflare adaptive estimates of external HTTP requests, including crawlers; not unique people or lost leads",
+  "groups": {
+    "afterErrors": [
+      {
+        "count": 87,
+        "dimensions": {
+          "clientRequestHTTPHost": "tvapi.pinnacleblooms.org",
+          "edgeResponseStatus": 500
+        }
+      },
+      {
+        "count": 12,
+        "dimensions": {
+          "clientRequestHTTPHost": "psapi.pinnacleblooms.org",
+          "edgeResponseStatus": 503
+        }
+      },
+      {
+        "count": 5,
+        "dimensions": {
+          "clientRequestHTTPHost": "www.pinnacleblooms.org",
+          "edgeResponseStatus": 500
+        }
+      },
+      {
+        "count": 2,
+        "dimensions": {
+          "clientRequestHTTPHost": "pinnacleblooms.org",
+          "edgeResponseStatus": 503
+        }
+      }
+    ],
+    "afterTotals": [
+      {
+        "count": 11835,
+        "dimensions": {
+          "clientRequestHTTPHost": "www.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 6690,
+        "dimensions": {
+          "clientRequestHTTPHost": "pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 6022,
+        "dimensions": {
+          "clientRequestHTTPHost": "psapi.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 1220,
+        "dimensions": {
+          "clientRequestHTTPHost": "d.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 622,
+        "dimensions": {
+          "clientRequestHTTPHost": "books.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 492,
+        "dimensions": {
+          "clientRequestHTTPHost": "mirracle.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 244,
+        "dimensions": {
+          "clientRequestHTTPHost": "interventions.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 242,
+        "dimensions": {
+          "clientRequestHTTPHost": "images.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 224,
+        "dimensions": {
+          "clientRequestHTTPHost": "materials.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 160,
+        "dimensions": {
+          "clientRequestHTTPHost": "tvapi.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 140,
+        "dimensions": {
+          "clientRequestHTTPHost": "pediatricians.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 136,
+        "dimensions": {
+          "clientRequestHTTPHost": "test.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 104,
+        "dimensions": {
+          "clientRequestHTTPHost": "ask-mcp.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 9,
+        "dimensions": {
+          "clientRequestHTTPHost": "abs.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 3,
+        "dimensions": {
+          "clientRequestHTTPHost": "testmobile.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 3,
+        "dimensions": {
+          "clientRequestHTTPHost": "alpha.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 3,
+        "dimensions": {
+          "clientRequestHTTPHost": "mobile.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 2,
+        "dimensions": {
+          "clientRequestHTTPHost": "res.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 1,
+        "dimensions": {
+          "clientRequestHTTPHost": "ask.pinnacleblooms.org"
+        }
+      }
+    ],
+    "beforeErrors": [
+      {
+        "count": 221,
+        "dimensions": {
+          "clientRequestHTTPHost": "d.pinnacleblooms.org",
+          "edgeResponseStatus": 500
+        }
+      },
+      {
+        "count": 200,
+        "dimensions": {
+          "clientRequestHTTPHost": "tvapi.pinnacleblooms.org",
+          "edgeResponseStatus": 500
+        }
+      },
+      {
+        "count": 69,
+        "dimensions": {
+          "clientRequestHTTPHost": "www.pinnacleblooms.org",
+          "edgeResponseStatus": 500
+        }
+      },
+      {
+        "count": 28,
+        "dimensions": {
+          "clientRequestHTTPHost": "books.pinnacleblooms.org",
+          "edgeResponseStatus": 500
+        }
+      },
+      {
+        "count": 7,
+        "dimensions": {
+          "clientRequestHTTPHost": "psapi.pinnacleblooms.org",
+          "edgeResponseStatus": 503
+        }
+      },
+      {
+        "count": 2,
+        "dimensions": {
+          "clientRequestHTTPHost": "pinnacleblooms.org",
+          "edgeResponseStatus": 503
+        }
+      }
+    ],
+    "beforeTotals": [
+      {
+        "count": 18776,
+        "dimensions": {
+          "clientRequestHTTPHost": "www.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 4878,
+        "dimensions": {
+          "clientRequestHTTPHost": "pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 4534,
+        "dimensions": {
+          "clientRequestHTTPHost": "psapi.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 713,
+        "dimensions": {
+          "clientRequestHTTPHost": "d.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 632,
+        "dimensions": {
+          "clientRequestHTTPHost": "mirracle.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 433,
+        "dimensions": {
+          "clientRequestHTTPHost": "books.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 429,
+        "dimensions": {
+          "clientRequestHTTPHost": "tvapi.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 370,
+        "dimensions": {
+          "clientRequestHTTPHost": "abs.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 215,
+        "dimensions": {
+          "clientRequestHTTPHost": "materials.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 186,
+        "dimensions": {
+          "clientRequestHTTPHost": "images.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 170,
+        "dimensions": {
+          "clientRequestHTTPHost": "test.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 127,
+        "dimensions": {
+          "clientRequestHTTPHost": "interventions.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 72,
+        "dimensions": {
+          "clientRequestHTTPHost": "ask-mcp.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 44,
+        "dimensions": {
+          "clientRequestHTTPHost": "alpha.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 2,
+        "dimensions": {
+          "clientRequestHTTPHost": "speech100.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 2,
+        "dimensions": {
+          "clientRequestHTTPHost": "pediatricians.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 2,
+        "dimensions": {
+          "clientRequestHTTPHost": "mirraclestaging.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 1,
+        "dimensions": {
+          "clientRequestHTTPHost": "testmobile.pinnacleblooms.org"
+        }
+      },
+      {
+        "count": 1,
+        "dimensions": {
+          "clientRequestHTTPHost": "mobile.pinnacleblooms.org"
+        }
+      }
+    ]
+  }
+}

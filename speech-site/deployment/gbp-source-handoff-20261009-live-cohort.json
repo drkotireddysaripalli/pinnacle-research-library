@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-09T00:14:21.255Z",
+  "cohort": {
+    "startMs": 1791484200000,
+    "endMs": 1791504860927
+  },
+  "countScope": "whole_receipt_creation_cohort",
+  "truncated": false,
+  "counts": {
+    "accepted": 0,
+    "claimed": 0,
+    "handoff_started": 0,
+    "uncertain": 0,
+    "other": 0,
+    "enquiryAccepted": 0
+  },
+  "acceptedWithPermittedCampaign": 0,
+  "gbpTaggedAcceptedInReturnedRows": 0,
+  "example": null,
+  "qualification": "unknown",
+  "note": "Declared GBP tagging is not proof of organic acquisition. No contact fields or operational reference exported."
+}

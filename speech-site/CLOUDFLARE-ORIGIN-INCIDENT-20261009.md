@@ -36,6 +36,20 @@ These are HTTP requests with phone/desktop user agents, not physical-device or T
 
 Maintained receipt: [API route restoration](deployment/api-route-restoration-20261009.json). Full retirement checklist: [legacy migration inventory](LEGACY-RETIREMENT-INVENTORY-20261009.md).
 
+### First comparable post-repair window
+
+Read after the repair on 9 October. Equal 40-minute intervals: **04:05–04:45 IST before**, **04:50–05:30 IST after**. Cloudflare adaptive estimates filtered to external `eyeball` requests; these include crawlers and are not unique people, lost leads or proof of revenue impact. This is an early comparison, not a settled 24-hour all-clear.
+
+| Host | Before requests / 5xx | After requests / 5xx |
+|---|---:|---:|
+| www | 18,776 / 69 | 11,835 / 5 |
+| d | 713 / 221 | 1,220 / 0 |
+| books | 433 / 28 | 622 / 0 |
+| psapi | 4,534 / 7 | 6,022 / 12 |
+| tvapi | 429 / 200 | 160 / 87 |
+
+The reproduced host families improved after restoration, but five www errors and the separate psapi/tvapi incidents remain to be traced. A zero result applies only to its stated interval. `score` had no requests in either window, so this comparison supplies no evidence of its recovery. Saved aggregate proof: [post-repair comparison](deployment/origin-repair-followthrough-20261009.json).
+
 ## Alert email verification
 
 Read the actual Cloudflare messages in the signed-in kotii@kgvpl.com Outlook mailbox, sender noreply@notify.cloudflare.com, subject `[Alert] HTTP origin errors detected for pinnacleblooms.org`.

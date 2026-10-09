@@ -14,6 +14,20 @@ The two new exact-host catch-alls shadowed existing API routes. All original 23 
 
 This fixes the reproduced outage. It does not migrate the restored legacy pages. Keep the pinnacleblooms.org domain and its useful URLs permanently; the eventual retirement target is the legacy ASP.NET/IIS application/origin, not the domain, Cloudflare routing layer or every existing API Worker.
 
+## Which APIs must remain
+
+The route receipt proves original ownership and restored dispatch, not that every historical method is still required by a current caller. An API must not be deleted merely because the public page using a similar name has moved.
+
+| API/service group | Evidence and present disposition |
+|---|---|
+| `/api/gl/gettotalstaff`, `/api/gl/getfaqlang`, `/api/gl/getkvforwebsite` | Directly involved in the reproduced legacy page failures; authenticated read-only checks returned valid JSON after route restoration. Keep while these consumers remain. |
+| `/api/enrolment` and private `WebsiteEnrolmentReceipts` service | Current portal enquiry path; required independently of the old public HTML site. Its more-specific ownership was preserved. |
+| OTP validation/sending, assessment booking, contacts/data sync, user/activity/widget/blob operations, sockets and `/ws` | Existing registrations restored to their original Workers. No live write, OTP or customer transaction was invoked during diagnosis. Retain until a consumer/owner review establishes a supported replacement or verified retirement. |
+| Ask content/sign-in and WATI verification | Maintained Supabase/Ask integrations. Their existence is separate from legacy ASP.NET rendering and does not justify deleting authentication routes. |
+| Private Mirracle account/report application and other operational hosts | Public video-library migration does not retire these services. Confirm backend/server dependencies separately before server shutdown. |
+
+Future catch-all changes need effective-route regression checks: a protected API request must reach the intended Worker and return its expected payload type. Merely comparing that the old route records still exist missed this incident. The route restoration has four focused planning tests covering ownership, conflicts, precise socket routing and repeat-safe planning; only the three read-only API contracts above received live functional checks in this incident.
+
 ## Work packages and completion conditions
 
 | Priority | Package | Completion condition |

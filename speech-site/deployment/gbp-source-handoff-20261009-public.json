@@ -1,0 +1,46 @@
+{
+  "at": "2026-10-09T00:24:51.466Z",
+  "scope": "public delivery readback; no JS execution or form submission",
+  "checks": [
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/speech-measurement.js",
+      "at": "2026-10-09T00:24:51.466Z",
+      "status": 200,
+      "ray": "a4793ea1ba922e96-HYD",
+      "sha256": "ccba1938d3cfd32ac171f6c30130769bff027abd9af8fe5d23ae7f4cf12988eb",
+      "matchesCommittedMeasurement": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/speech-measurement.js?v=ads-journey-20261008",
+      "at": "2026-10-09T00:24:51.466Z",
+      "status": 200,
+      "ray": "a4793ea1aa8e2b45-HYD",
+      "sha256": "ccba1938d3cfd32ac171f6c30130769bff027abd9af8fe5d23ae7f4cf12988eb",
+      "matchesCommittedMeasurement": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-anathapuram-ap-india?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=anathapuram-ap",
+      "at": "2026-10-09T00:24:51.409Z",
+      "status": 200,
+      "ray": "a4793ea1b9855801-HYD",
+      "sharedMeasurement": true,
+      "existingEnrolmentEndpoint": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/centers/best-autism-speech-aba-occupational-therapy-center-kadapa-ap-india",
+      "at": "2026-10-09T00:24:51.406Z",
+      "status": 200,
+      "ray": "a4793ea1be2b5ef9-HYD",
+      "sharedMeasurement": true,
+      "existingEnrolmentEndpoint": true
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?centre=kadapa",
+      "at": "2026-10-09T00:24:51.410Z",
+      "status": 200,
+      "ray": "a4793ea1ba932b45-HYD",
+      "sharedMeasurement": true,
+      "existingEnrolmentEndpoint": true
+    }
+  ]
+}

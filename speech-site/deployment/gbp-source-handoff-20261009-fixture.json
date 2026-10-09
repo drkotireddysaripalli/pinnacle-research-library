@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-09T00:12:30.236Z",
+  "evidenceClass": "isolated_local_persisted_transport_fixture",
+  "productionDatabase": false,
+  "realEnquiry": false,
+  "requestId": "qa-gbp-4abd5563-28e0-4165-a606-fc5b72eda623",
+  "receiptId": "a94828ee-16db-4d72-a2d0-3f2dc96d5fb6",
+  "state": "accepted",
+  "source": {
+    "page": "/enroll-autism-speech-aba-therapies-india",
+    "contract": "website_enrolment_v1",
+    "acquisition": {
+      "schemaVersion": 1,
+      "consent": "analytics_accepted",
+      "capturedAt": 1791504750111,
+      "landingPath": "/centers",
+      "fields": {
+        "utm_source": "google",
+        "utm_medium": "organic",
+        "utm_campaign": "gbp",
+        "utm_content": "anathapuram-ap"
+      }
+    }
+  },
+  "listingCentre": {
+    "key": "anathapuram-ap",
+    "basis": "declared GBP UTM convention; not verified organic acquisition"
+  },
+  "selectedCentre": {
+    "key": "kadapa",
+    "facilityId": "9353254802",
+    "basis": "separate form selection mapped by maintained centreFacilities"
+  },
+  "deduplication": {
+    "concurrentAttempts": 10,
+    "retries": 3,
+    "committedFixtureIntakes": 1,
+    "changedSelectedCentreStatus": 409,
+    "firstClaimedSourceRetained": true
+  },
+  "customerIntakes": 0,
+  "googleRequests": 0,
+  "notifications": 0,
+  "measurementSha256": "ccba1938d3cfd32ac171f6c30130769bff027abd9af8fe5d23ae7f4cf12988eb"
+}
