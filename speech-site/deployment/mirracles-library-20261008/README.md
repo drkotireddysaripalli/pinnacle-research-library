@@ -70,6 +70,20 @@ The default CSP permits only the candidate's self-hosted scripts/styles, approve
 
 ## Recorded validation
 
+### Windows integration acceptance — 9 October 2026
+
+The reviewed 28-identity/55-path recovery is integrated into both the maintained
+library and actual flat runtime. All 15 Node 24.21.0 contracts pass, including
+every recorded alias, bare/changed-slug redirects with exact query preservation,
+canonical/OG/video identity, protected request guards, ambiguous mappings and all
+four unresolved fallback identities. The seven Python 3.14 offline evidence
+tests pass. Tests explicitly read UTF-8, and the exact provenance-hashed public
+manifest is pinned to LF across Windows/macOS checkouts. No mapping was inferred.
+The catalogue comparison adds 55 aliases only: all 29,759 original records,
+19,292 listing entries, original aliases and other catalogue fields are equal.
+No full data regeneration, cloud test, crawl, production deploy or live public
+acceptance was performed by this scoped integration.
+
 Ten targeted Node tests pass: source URL/category preservation, 24-item pagination, category variants, safely escaped search, detail/alias behavior, complete-source VideoObject, protected-route fallthrough, HEAD/error/shared-shell behavior, common-shell header overrides/cookie caching, flat runtime equivalence and transient source/shell failure recovery. The earlier isolated Playwright fixture passes at 390px: no horizontal overflow, 52px call target, no initial iframe, one blocked privacy-enhanced player request after Play. It used invented poster responses and blocked all external requests. See `browser-fixture-result.json` and the two candidate screenshots. The final deployment adjustments were covered by the targeted Node tests; no additional browser pass was necessary.
 
 The current source yields 19,010 candidate VideoObjects after completeness and legacy-claim checks. This is a source/rendering result, not Google validation, indexing, live performance or conversion evidence.

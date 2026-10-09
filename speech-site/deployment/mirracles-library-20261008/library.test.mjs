@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {createMirraclesLibrary,videoObject,playerURL,displayTitle,escapeHtml,ORIGIN,PAGE_SIZE} from './library.mjs';
+import {createMirraclesLibrary as createFlatMirraclesLibrary} from '../mirracles-library.mjs';
 const loadJson = async name => JSON.parse(await fs.readFile(new URL('./data/'+name+'.json',import.meta.url),'utf8'));
 const catalogue = await loadJson('catalogue');
 const provenance = await loadJson('provenance');
@@ -74,7 +75,10 @@ test('detail and older alias preserve identity without eager external players',a
   const empty=catalogue.records.find(r=>r.inSitemap&&!r.poster);
   const emptyHTML=await(await get(empty.path)).text();assert(!emptyHTML.includes('data-mirracles-player='));assert(!emptyHTML.includes('"@type":"VideoObject"'));
 });
-test('source-verified cross-ID aliases preserve the canonical video and redirect query bytes',async()=>{
+for (const [runtime, createLibrary] of [['original', createMirraclesLibrary], ['flat', createFlatMirraclesLibrary]]) {
+test(runtime+': source-verified cross-ID aliases preserve the canonical video and redirect query bytes',async()=>{
+  const scoped=createLibrary({loadJson});
+  const get=(path,options)=>scoped(new Request(ORIGIN+path,options));
   for(const mapping of legacyIdentities.mappings) {
     for(const path of mapping.paths) {
       const response=await get(path);assert.equal(response.status,200,path);
@@ -103,7 +107,7 @@ test('source-verified cross-ID aliases preserve the canonical video and redirect
     assert.equal(await get('/mirracles/'+id+'/UNRESOLVED'),null);
   }
 });
-test('ambiguous alias data fails closed instead of selecting a different video',async()=>{
+test(runtime+': ambiguous alias data fails closed instead of selecting a different video',async()=>{
   const first=catalogue.records[0],second=catalogue.records[1],legacy=legacyIdentities.mappings[0];
   const invalidMaps=[
     {[first.path]:second.id},
@@ -114,10 +118,11 @@ test('ambiguous alias data fails closed instead of selecting a different video',
     {'/mirracles/123/INVENTED':first.id,'/mirracles/124/CHAIN':'123'}
   ];
   for(const aliasPaths of invalidMaps) {
-    const invalid=createMirraclesLibrary({loadJson:async()=>({...catalogue,aliasPaths})});
+    const invalid=createLibrary({loadJson:async()=>({...catalogue,aliasPaths})});
     assert.equal((await invalid(new Request(ORIGIN+'/mirracles/'+legacy.legacyId))).status,503);
   }
 });
+}
 test('VideoObject requires source fields, trustworthy dates and safe source descriptions',()=>{
   const r={id:'123',path:'/mirracles/123/INVENTED',title:'Invented public fixture',description:'A published activity explanation.',poster:'https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg',published:'2026-01-01T12:00:00+05:30',player:'https://www.youtube.com/embed/abcdefghijk'};
   assert.equal(videoObject(r).embedUrl,'https://www.youtube-nocookie.com/embed/abcdefghijk');

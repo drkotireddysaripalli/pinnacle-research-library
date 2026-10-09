@@ -8,22 +8,22 @@ import unittest
 from legacy_identities import legacy_alias_paths
 
 HERE = Path(__file__).resolve().parent
-MANIFEST = json.loads((HERE / 'data/legacy-identity-aliases.json').read_text())
+MANIFEST = json.loads((HERE / 'data/legacy-identity-aliases.json').read_text(encoding='utf-8'))
 RECORDS = {}
 for file in (HERE / 'data').glob('details-*.json'):
-    RECORDS.update(json.loads(file.read_text()))
+    RECORDS.update(json.loads(file.read_text(encoding='utf-8')))
 
 
 class LegacyIdentityEvidence(unittest.TestCase):
     def test_all_evidenced_aliases_are_generated_without_new_directory_records(self):
         aliases = legacy_alias_paths(MANIFEST, RECORDS)
-        catalogue = json.loads((HERE / 'data/catalogue.json').read_text())
+        catalogue = json.loads((HERE / 'data/catalogue.json').read_text(encoding='utf-8'))
         for path, target in aliases.items():
             self.assertEqual(catalogue['aliasPaths'][path], target)
         self.assertEqual(len(catalogue['records']), 29759)
         self.assertEqual(len(catalogue['order']), 19292)
         self.assertTrue(set(row['legacyId'] for row in MANIFEST['mappings']).isdisjoint(catalogue['order']))
-        provenance = json.loads((HERE / 'data/provenance.json').read_text())['legacyIdentityAliases']
+        provenance = json.loads((HERE / 'data/provenance.json').read_text(encoding='utf-8'))['legacyIdentityAliases']
         self.assertEqual(provenance['sha256'], hashlib.sha256((HERE / 'data/legacy-identity-aliases.json').read_bytes()).hexdigest())
         self.assertEqual(provenance['paths'], len(aliases))
         self.assertEqual(provenance['numericIdentities'], len({path.split('/')[2] for path in aliases}))
