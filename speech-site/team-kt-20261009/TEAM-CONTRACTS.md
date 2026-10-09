@@ -4,7 +4,7 @@
 
 The founder requested dedicated Mac engineering chats, shared source, a full KT and completion of useful work. These are implementation assignments, not extra read-only reviewers. This instruction does not widen authority for purchases, binding agreements, expanded security access, unrelated account changes or private-data disclosure. Existing explicit account/outreach approvals remain scoped to their original purpose.
 
-The Mac coordinator may create/reuse the following **two** Mac-hosted chats under that human mandate. Use the existing saved canonical project and clean main baseline. Do not create Windows or cloud substitutes and label them Mac. Record their actual thread IDs, host, branch, base and first action in the existing handoff. If the app cannot create them, state that precise gate and continue the already-authorized coordinator work; do not create an agent swarm.
+The Mac coordinator may create/reuse the following **two** Mac-hosted chats under that human mandate. Prefer the existing saved canonical project and clean main baseline. If no local Git project is listed, create local projectless chats on the Mac and give each a separate checkout of the canonical repository at current main; the absence of a saved project is not itself a blocker. Do not create Windows or cloud substitutes and label them Mac. Record their actual thread IDs, host, branch, base and first action in the existing handoff. If local chat creation itself is unavailable, state that precise gate and continue the already-authorized coordinator work; do not create an agent swarm.
 
 ## Team 1 — Pinnacle Search Engineering
 
