@@ -1,6 +1,6 @@
 {
   "id": "chatgpt-enquiry-20261010",
-  "phase": "assembled",
+  "phase": "verified-live",
   "baseCommit": "2b930a238414965eb80f31f787a26810b17e7a15",
   "at": "2026-10-09T23:53:23.564Z",
   "routeCount": 307,
@@ -17,7 +17,19 @@
         "index.js": "2d9def77d6ec87752142984ff5e47707e97ab3e5e432175681f17b3521a4550a",
         "website-enrolment-analytics.mjs": "942589eaf80bb916787b236947fe0d44588b98eaaee97f6c40255ddfecb4aa04",
         "website-enrolment-receipt.mjs": "fda68e828002220e5806b7f3ba6e85917c94129681a81dd959865a0b1d90361c"
-      }
+      },
+      "hashes": {
+        "index.js": "2d9def77d6ec87752142984ff5e47707e97ab3e5e432175681f17b3521a4550a",
+        "website-enrolment-analytics.mjs": "f390e8327096edee64a0167d434cc5ef61aa3c62997ff48bcc2c55dbf9c07747",
+        "website-enrolment-receipt.mjs": "86e1e8fe4f4bdef62c33398094d0e12e27aa7c250438a0f34d29a0cca8cb308e"
+      },
+      "changedModules": [
+        "website-enrolment-analytics.mjs",
+        "website-enrolment-receipt.mjs"
+      ],
+      "candidate": "ea776ab4-7fc0-43f9-b574-2341a15b0878",
+      "promoted": true,
+      "deployment": "264186e9-da3b-439d-9636-8ea34ebbaf5c"
     },
     "pinnacle-verify-route": {
       "rollback": [
@@ -77,7 +89,71 @@
         "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
         "legacy-template-coverage.mjs": "a49b9aea2dee733a997908745aadd3665c0e2a9b603a854fe9058445bd424450",
         "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186"
-      }
+      },
+      "hashes": {
+        "book-paperback-links.mjs": "e826484400b25443c3d9f5c6ab43d0a9f23d633c83b3c9c6dfea20eae99bd119",
+        "centre-facilities.mjs": "52a6192d8f388a2c8bdd46957764265fc800c708ef12cd69dd3403681fe0f2aa",
+        "enrolment-handler.mjs": "36bb5c793e416b65c78eb9672c16bcc7e694ae0907d5afae921424810743bbfd",
+        "first-conversation-handler.mjs": "2f2960d099f122c070a859cefd327be41e42cfcc31eb6446b4e8053efedbe814",
+        "public-route-aliases.mjs": "4d85837e6f1fd34edde50855661352c55218aaeb7c99a34b9b244fa3612d9dba",
+        "shared-navigation.mjs": "8dd61aa7a063c53025e2d144dd314c2dc30ede5b6aba0620b78debaaa3abc692",
+        "suchitra-assets.mjs": "faff80184d0c9c94c0065fb3cd1a29fbcc407202fcc60eb7d830cd3fd47680c9",
+        "abilityscore-assets.mjs": "75b7750652d21878ed7c64c0ec803318e7fee4b985c2da7b1a6cbb440a67dbe5",
+        "book-attribution-assets.mjs": "29447a92aa563f8f990817011386856dfb7bf74ed3800ed552a61fcac49a0670",
+        "book-store-choices.mjs": "1bbfeaddf4d53b10eaff6c291c38143fc50ef8adf79ce755930dc17bd30795e2",
+        "pdk-assets.mjs": "2dd3d64af747b9db49120f4a10ebbbbd3d7c57f0a23984082bd36010c73eb0bc",
+        "shopify-physical-feed.mjs": "bc8d5809d6597b28ed6168527686962d1d639a5bd779507a2fe583ab7f85d092",
+        "therapeuticai-assets.mjs": "fcecda2acd7d9d9ce8c9944ac17d39e94fadb3d67b8e7fda86b4973c0f1ac387",
+        "therapy-reading.mjs": "f3a5d6b77076f693556510173fa645f4e3616191296491524f2c4acb2296d6e6",
+        "aba-assets.mjs": "ca02dd24761ed582e2921702aabe95e18ccbda15949c81c80e27b785cd4b4706",
+        "first-conversation-links.mjs": "e839d0a713d116afec993a9dc9fb8fe056736e6ad1cced4032b630369c5b1ab5",
+        "guru-recovery.mjs": "74fe510f8b6bec55933ddadce75f29066263e6ffa135cf148e2a50a095fd17c4",
+        "merchant-policy-content.mjs": "a4535c78321bfea28bdba9fe1793e3d0390fad64bb9296c1d448d86f424ad551",
+        "prognose-assets.mjs": "7c8a57f97802ec6d26b12c1421ee7ccfea79407d36448694cbed9e4be7c2ea1b",
+        "seva-assets.mjs": "609407badad0fe1e40839118c1ea03c22087f00587130902728882e6c97c43e6",
+        "special-education-assets.mjs": "c01b376fd10a171c36413f6e52b377f5c921012ab39c16659bf234e332861788",
+        "book-edition-search.mjs": "6fceab9a546017a9117248fae4c76f7da50389534d9851a0061c39394b8d93cc",
+        "first-conversation-assets.mjs": "a9848c98179806ab2e8cff8307dcf04d2a5ad89d0b3a85de5640de8f6e885c52",
+        "fusion-assets.mjs": "038160d982ba5f1921245c406a60d7cdce00b30e5a55c8a32d51c405fbd24202",
+        "mirracles-library-assets.mjs": "5f45c2bc24d1a498f16ae822b241e6feccf42fbb3681b4da9cb48aa4b369d339",
+        "occupational-assets.mjs": "09ab03f805ad13a608c45db6302879e6ad85f1c58b07924afc86a86f2bff96a4",
+        "pinnacle-route-v12.mjs": "960d6c73347a8684427354f31c1384af44045ec4f368b5520e0dbb45e5190aff",
+        "speech-enquiry-handler.mjs": "3adbf286ba503099efa3f586cbf10a4352fa812f93edb5e4d341ecb60ddf7b81",
+        "vernacular-typography.mjs": "e62291ae149927decd2af51aa037e0f58bc7e04c7febc842f51fd75e3b84af5d",
+        "autism-assets.mjs": "9f7e3aa07c7d1a28413b378f3a51cdf9373e47186938b15a7cc1f70b85b405ac",
+        "book-kindle-links.mjs": "4884fc647f131d47080bd924a0e1464adea64dd84ec4ce495c5c799b4d6184f5",
+        "centre-routes.mjs": "219bc85da8df60341dfdc1b006b62b5622361b3939fef06ee8d83096ad12fc12",
+        "seva-handler.mjs": "70a880cb92bc5afe19134ab14f3cc6eec84add3ca2c6c13dadfaad540da5e412",
+        "therapy-reading-content.mjs": "85cf2474fc033d31f5bc85e5d81f2fed02b76b2b9fd3e2b86dedc6a2ec0b34a1",
+        "book-attribution-handler.mjs": "3d1e67b2685fa7f200121793d9c952c862305b79e9457ba25e70ae2c04015eda",
+        "enrolment-assets.mjs": "545af8d1a9423a44503e79d4246ccbb8f9f46b8e74af7bac5937ab984523171f",
+        "everyday-assets.mjs": "c2d1981ce3c40a398f1976f88865373f11c95534777b84ee25971a3f018925a7",
+        "public-ad-call.mjs": "1ef0a973417e75b8e27cdb4fffeced817e4ccc8cf1df5065aef29a5bc83d13d6",
+        "speech-handler.mjs": "880cdfd97b6148fab090d5618ac0dc0d7e1752181212fc34e0d023d384384a79",
+        "book-hardcover-links.mjs": "1d3b57875cf0a987c1d3209fddd5fca05b7b6029ef1eed655eec17ab5f5a468e",
+        "centre-google-feed.mjs": "aa6b99dda921e555fb97a01132ac9915b0837a1c7671d40bb8338b51ff5b8ed4",
+        "discovery-handler.mjs": "24dbc590e0faf0ba34d2e8e450492894095324eff7a4d2c6770700b6408818b8",
+        "merchant-policy-handler.mjs": "8d97096de6a6d9b0e664ce857e46fa3edb362d4c18ed727da326e40751f74c1e",
+        "mirracles-library.mjs": "f385792a114d5ae7490fedf1a9bd207006f3f63bf87832f37b977581e8fe534b",
+        "public-mobile-recovery.mjs": "6af9689a0f1597a49d63bdadba5e916aa7617604087c1325f8c2695b0db4e5cb",
+        "url-health-repair.mjs": "1f5559a163073c9e7603820e615b27dbe7972280e2ea79312f1501741fde8c95",
+        "about-assets.mjs": "3f46f874a62cc12257a37eab806297033718481c42eae42f1107d937d6246cab",
+        "book-edition-search-content.mjs": "9e3f172ef531175b74c7864be8b7b78109effeffc3c2d34424fbd3072f5d3aee",
+        "legacy-template-coverage.mjs": "a49b9aea2dee733a997908745aadd3665c0e2a9b603a854fe9058445bd424450",
+        "readiness-assets.mjs": "2eea3965436a2baf840f46442512e86cd28c4370e5fda07b729723b3c4fc4186"
+      },
+      "changedModules": [
+        "enrolment-handler.mjs",
+        "book-attribution-assets.mjs",
+        "aba-assets.mjs",
+        "occupational-assets.mjs",
+        "pinnacle-route-v12.mjs",
+        "autism-assets.mjs",
+        "enrolment-assets.mjs"
+      ],
+      "candidate": "30e0775d-6c42-41d9-865f-a53eadadad22",
+      "promoted": true,
+      "deployment": "7c987ac2-11a6-4871-a6cc-efb29ff5f874"
     },
     "pinnacle-helpline": {
       "rollback": [
@@ -88,7 +164,56 @@
       ],
       "originalHashes": {
         "worker.mjs": "132fbc92f736bd198fbde07760e9f161478fc73b2f2d14b6585d5309fcd86b08"
-      }
+      },
+      "hashes": {
+        "worker.mjs": "a5241a67f273c6d79a5e68644bedba038872cdd7ee326467e7c1b7de1a4a4872"
+      },
+      "changedModules": [
+        "worker.mjs"
+      ],
+      "candidate": "32260f9d-e74f-4cd0-ad10-fd20bc9c6f27",
+      "promoted": true,
+      "deployment": "f551b17e-4c5e-4f62-8348-229a5ed3ac43"
     }
-  }
+  },
+  "commit": "b23692b13e3975167b71fb7121c032e9146e1de3",
+  "uploadedAssets": 4,
+  "publicProof": [
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/enrolment.js?v=helpline-source-20261010",
+      "status": 200,
+      "sha256": "2a0a1ddcef8830d09f17644d8d8153fe9c7a7567cf07bfb64a8e42f8d9bc815c"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/enrolment-api.mjs?v=helpline-source-20261010",
+      "status": 200,
+      "sha256": "2734de2117713d0f80108452d553c9af685e557fcff4a2357075f39d356b07b0"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/enrolment-source.mjs?v=helpline-source-20261010",
+      "status": 200,
+      "sha256": "3dd10e54db157c72e482b0e8a77e203f683ad04b5df116d752753a683d4b1c47"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/pinnacle-pages-scripts/speech-measurement.js?v=helpline-source-20261010",
+      "status": 200,
+      "sha256": "eb10279cf507b1d0dc01ddc633079144c56f12e4c03150053ec603e19c62b6bc"
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/national-autism-helpline",
+      "status": 200,
+      "phoneLinks": 8,
+      "callback": "/enroll-autism-speech-aba-therapies-india",
+      "cspHash": "KK1FzsRpmWCP8tqGx0M7grRMLCBKzi+B6uNBVrxfwjI="
+    },
+    {
+      "url": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+      "status": 200,
+      "clientVersion": "helpline-source-20261010"
+    }
+  ],
+  "verifiedAt": "2026-10-10T01:01:13.756Z",
+  "routesPreserved": 307,
+  "bindingsPreserved": true,
+  "productionTestEnquiries": 0
 }

@@ -2,6 +2,37 @@
 
 Owner: existing website integration/release owner. Work order: 9 October 2026. Base: current main `2b930a238414965eb80f31f787a26810b17e7a15`.
 
+## Delivery status — verified live, 10 October 2026
+
+Website source commit: `b23692b13e3975167b71fb7121c032e9146e1de3`. Public/module/configuration verification completed at **01:01:13 UTC / 06:31:13 IST**. The existing website chat owns release and rollback.
+
+- [Helpline and callback action](https://www.pinnacleblooms.org/national-autism-helpline)
+- [Existing enrolment destination](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india)
+- [Exact-source Portal quality and TestingBot BVT: passed](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/38010700516)
+- **115 passing local test entries, one skipped historical private-candidate fixture, zero failures; five passing isolated browser journeys.** The unavailable historical fixture is not production receipt proof; current canonical receipt and concurrency tests passed separately.
+- Live read-only Edge check at 390×844: helpline initialized, all eight telephone links present, callback navigation and destination form initialized, zero JavaScript exceptions. External analytics and intake requests were intercepted. This was browser emulation on Windows, not a physical phone.
+- All **307 Cloudflare routes, 3,707 portal assets, existing bindings and protected Workers preserved**. Four changed public client assets uploaded. Existing private `index.js`/`HandleLead` code retained byte-for-byte.
+
+| Worker | Live version | Rollback version |
+|---|---|---|
+| Private receiver | `ea776ab4-7fc0-43f9-b574-2341a15b0878` | `4933e7ee-184b-4528-b145-a977e8cf1435` |
+| Portal | `30e0775d-6c42-41d9-865f-a53eadadad22` | `da5d7a3d-b0f4-47d9-badb-965791b5aacc` |
+| Helpline | `32260f9d-e74f-4cd0-ad10-fd20bc9c6f27` | `28ef7505-3aca-435a-920b-3301c35a7d5e` |
+
+One pre-upload read failed with Cloudflare authentication error 10000/HTTP 401. The existing Wrangler OAuth session refreshed successfully; no upload had happened at that failure. The resumed command reused all five passed local stages and the exact successful hosted build. Upload, promotion and verification then passed. The local runner now appends attempt-delimited logs and retains prior stage checkpoints on future retries; the initial failed upload's exception is separately recorded in the local execution incident record.
+
+Evidence: `deployment/chatgpt-enquiry-20261010.json`, `deployment/chatgpt-enquiry-browser-20261010.json`, `deployment/chatgpt-enquiry-public-browser-20261010.json`, and private `ask-private/chatgpt-enquiry-20261010/execution/` logs/checkpoints.
+
+## Repeatable local execution
+
+From this `speech-site` directory, use the existing pinned runtime:
+
+```powershell
+& '../../tooling-runtimes/node-v24.21.0-win-x64/node.exe' scripts/verify-chatgpt-enquiry.mjs
+```
+
+The default verifies isolated build/contracts/browser behavior. `--release` also waits for the exact trusted CI and uses the guarded, pre-assembled release helper. A completed release must not be blindly rerun: reconcile its receipt/current live versions first. The script owns its lock, local waits, full log files and checkpoint comparison. Successful results are reused only while the recorded source, dependencies, configuration and acceptance fingerprint match. Model involvement is reserved for implementation, interpreting failures and release judgment. No model API-key gateway or growth scheduler is used.
+
 ## Implemented scope
 
 - One secondary **Request a callback** link from `/national-autism-helpline` to the existing `/enroll-autism-speech-aba-therapies-india`. Eight central phone links and native calling remain unchanged. No assumed centre or treatment.

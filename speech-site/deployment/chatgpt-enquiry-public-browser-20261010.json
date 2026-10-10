@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-10T01:02:08.525Z",
+  "mode": "live-read-only-browser",
+  "browser": "Microsoft Edge",
+  "os": "Windows",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "physicalDevice": false,
+  "helplineStatus": "initialized",
+  "phoneLinks": 8,
+  "callback": "/enroll-autism-speech-aba-therapies-india",
+  "destination": "https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india",
+  "formCount": 2,
+  "sourceHelper": "function",
+  "errors": [],
+  "blockedExternalOrIntakeRequests": 2,
+  "productionEnquiries": 0,
+  "calls": 0,
+  "googleTestHits": 0
+}
