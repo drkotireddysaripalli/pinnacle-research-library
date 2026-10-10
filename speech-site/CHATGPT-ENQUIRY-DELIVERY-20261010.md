@@ -9,7 +9,7 @@ Website source commit: `b23692b13e3975167b71fb7121c032e9146e1de3`. Public/module
 - [Helpline and callback action](https://www.pinnacleblooms.org/national-autism-helpline)
 - [Existing enrolment destination](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india)
 - [Exact-source Portal quality and TestingBot BVT: passed](https://github.com/drkotireddysaripalli/pinnacle-research-library/actions/runs/38010700516)
-- **115 passing local test entries, one skipped historical private-candidate fixture, zero failures; five passing isolated browser journeys.** The unavailable historical fixture is not production receipt proof; current canonical receipt and concurrency tests passed separately.
+- **116 passing local test entries, one skipped historical private-candidate fixture, zero failures; five passing isolated browser journeys.** Test-evidence commit `a748182` adds a two-tab Google fixture proving that distinct gclid/UTM/source envelopes survive concurrent durable intake even after the shared device envelope advances to the second tab. The unavailable historical fixture is not production receipt proof; current canonical receipt and concurrency tests passed separately.
 - Live read-only Edge check at 390×844: helpline initialized, all eight telephone links present, callback navigation and destination form initialized, zero JavaScript exceptions. External analytics and intake requests were intercepted. This was browser emulation on Windows, not a physical phone.
 - All **307 Cloudflare routes, 3,707 portal assets, existing bindings and protected Workers preserved**. Four changed public client assets uploaded. Existing private `index.js`/`HandleLead` code retained byte-for-byte.
 
