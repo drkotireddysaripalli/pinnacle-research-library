@@ -6,11 +6,11 @@ Updated: 5 October 2026
 
 Pinnacle Blooms Network · Every child. One life. One clear direction.
 
-# Every therapy matters. Your child’s life matters most.
+# Request an assessment or enrolment conversation. Your child’s life matters most.
 
-Your child’s self-sufficient, mainstream-included life is the purpose from the beginning. Start with one everyday priority—asking for help, getting ready or joining in. We connect assessment, suitable therapies, family practice and review around the life you want your child to grow toward.
+Tell us how to reach you and receive confirmation after your enquiry is accepted. We then help you discuss the suitable assessment, professional, centre, appointment options and fees. A successful request is not yet an appointment or enrolment.
 
-[Start my family’s conversation](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india#enrolment-form)
+[Request an assessment](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india#enrolment-form)
 
 [Call 9100 181 181](tel:+919100181181)
 
