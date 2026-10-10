@@ -432,17 +432,18 @@ const HOME_MEASUREMENT_SCRIPT='<script defer src="/pinnacle-pages-scripts/speech
 // Migrates only the reviewed public homepage fingerprint. GTM, Ads and call measurement remain intact.
 export async function transformReviewedHomepageMeasurement(request,response){
  const url=new URL(request.url);
- if(request.method!=='GET'||url.origin!=='https://www.pinnacleblooms.org'||url.pathname!=='/'||url.search)return response;
+ if(request.method!=='GET'||url.origin!=='https://www.pinnacleblooms.org'||url.pathname!=='/')return response;
  if(['authorization','cookie','range','if-range','if-match','if-none-match','if-modified-since','if-unmodified-since'].some(name=>request.headers.has(name))||/\bno-transform\b/i.test(request.headers.get('cache-control')||''))return response;
  if(!canTransformContextResponse(response))return response;
  const declared=Number(response.headers.get('content-length'));
  if(Number.isFinite(declared)&&declared>CONTEXT_BODY_LIMIT)return response;
  const html=await readContextBodyBounded(response);
  if(html===null)return response;
- const required=[HOME_GA4_LOADER,HOME_GA4_CONFIG,'GTM-W9ZHX459','AW-10810823199','data-ad-call-preferences','</body>'];
+ const legacyConfig=html.includes(HOME_GA4_CONFIG)?HOME_GA4_CONFIG:HOME_GA4_CONFIG.replace(/\n/g,'\r\n');
+ const required=[HOME_GA4_LOADER,legacyConfig,'GTM-W9ZHX459','AW-10810823199','data-ad-call-preferences','</body>'];
  if(required.some(marker=>!html.includes(marker))||html.includes('data-speech-measurement')||html.includes('/pinnacle-pages-scripts/speech-measurement.js'))return response;
- if(html.split(HOME_GA4_LOADER).length!==2||html.split(HOME_GA4_CONFIG).length!==2||html.split('</body>').length!==2)return response;
- const result=html.replace(HOME_GA4_LOADER,'').replace(HOME_GA4_CONFIG,'').replace('</body>',HOME_MEASUREMENT_PANEL+HOME_MEASUREMENT_SCRIPT+'</body>');
+ if(html.split(HOME_GA4_LOADER).length!==2||html.split(legacyConfig).length!==2||html.split('</body>').length!==2)return response;
+ const result=html.replace(HOME_GA4_LOADER,'').replace(legacyConfig,'').replace('</body>',HOME_MEASUREMENT_PANEL+HOME_MEASUREMENT_SCRIPT+'</body>');
  if(result.includes('gtag/js?id=G-2BYLRLFRDJ')||result.includes("gtag('config', 'G-2BYLRLFRDJ')")||!result.includes('GTM-W9ZHX459')||!result.includes("gtag('config', 'AW-10810823199')")||!result.includes('data-ad-call-preferences'))return response;
  const h=new Headers(response.headers);
  for(const name of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest','accept-ranges'])h.delete(name);
