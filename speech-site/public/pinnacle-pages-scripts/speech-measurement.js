@@ -3,6 +3,7 @@
   const id = 'G-2BYLRLFRDJ';
   const origin = 'https://www.pinnacleblooms.org';
   const pages = {
+    '/': {title:'Pinnacle Blooms Network',group:'home',service:'help'},
     '/top-speech-therapy-center-india-proven-improvement-rate': {title:'Pinnacle Speech Therapy',group:'speech_therapy',service:'speech'},
     '/best-occupational-therapy-center-india-proven-improvement-rate': {title:'Pinnacle Occupational Therapy',group:'occupational_therapy',service:'occupational'},
     '/best-aba-therapy-center-india-proven-improvement-rate': {title:'Pinnacle ABA Therapy',group:'aba_therapy',service:'aba'},
@@ -194,7 +195,36 @@
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {
     if (!production || !enabled || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic) return;
-    try { window.gtag('event', name, {...permittedCampaigns(), ...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
+    try { window.gtag('event', name, {...permittedCampaigns(), page_group:pageGroup, measurement_mode:'consented', ...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
+  };
+  const vitalRelease = 'ga4-common-20261010';
+  let vitalsStarted = false;
+  const vitalShape = (name,value) => {
+    if (!Number.isFinite(value) || value < 0) return null;
+    if (name === 'LCP') return {rating:value<=2500?'good':value<=4000?'needs_improvement':'poor',value_bucket:value<=1000?'le_1s':value<=2500?'1_2_5s':value<=4000?'2_5_4s':'gt_4s'};
+    if (name === 'INP') return {rating:value<=200?'good':value<=500?'needs_improvement':'poor',value_bucket:value<=100?'le_100ms':value<=200?'100_200ms':value<=500?'200_500ms':'gt_500ms'};
+    if (name === 'CLS') return {rating:value<=0.1?'good':value<=0.25?'needs_improvement':'poor',value_bucket:value<=0.05?'le_0_05':value<=0.1?'0_05_0_1':value<=0.25?'0_1_0_25':'gt_0_25'};
+    return null;
+  };
+  const startWebVitals = () => {
+    if (vitalsStarted || !production || !enabled || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || typeof PerformanceObserver !== 'function' || Math.random() >= 0.1) return;
+    vitalsStarted = true;
+    const values={LCP:null,INP:null,CLS:0},seen={CLS:false},sent=new Set(),observers=[],interactions=new Map();
+    const watch=(type,receive,options={type,buffered:true})=>{try{const observer=new PerformanceObserver(list=>{for(const entry of list.getEntries())receive(entry);});observer.observe(options);observers.push(observer);}catch{}};
+    watch('largest-contentful-paint',entry=>{values.LCP=entry.renderTime||entry.loadTime||entry.startTime;});
+    watch('event',entry=>{if(entry.interactionId>0&&Number.isFinite(entry.duration)){interactions.set(entry.interactionId,Math.max(interactions.get(entry.interactionId)||0,entry.duration));const durations=[...interactions.values()].sort((a,b)=>b-a);values.INP=durations[Math.floor(durations.length/50)]||null;}},{type:'event',buffered:true,durationThreshold:40});
+    watch('layout-shift',entry=>{if(!entry.hadRecentInput&&Number.isFinite(entry.value)){values.CLS+=entry.value;seen.CLS=true;}});
+    const emit=()=>{
+      if (!enabled || blocked || navigator.globalPrivacyControl || validationTraffic) return;
+      for(const name of ['LCP','INP','CLS']){
+        if(sent.has(name)||(name==='CLS'?!seen.CLS:values[name]===null))continue;
+        const shape=vitalShape(name,values[name]);if(!shape)continue;
+        try{window.gtag('event','web_vital_sample',{metric_name:name,...shape,release_id:vitalRelease,page_group:pageGroup,send_to:id});sent.add(name);}catch{}
+      }
+      for(const observer of observers)try{observer.disconnect();}catch{}
+    };
+    document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')emit();});
+    window.addEventListener?.('pagehide',emit,{once:true});
   };
   // These identify tagged navigation/contact intent, never completed calls or
   // conversions. Use only the already sanitised current/permitted source fields.
@@ -233,8 +263,8 @@
     const library=isAsk?'ask':knowledgePath==='allmirracles'?'mirracles':knowledgePath;
     const action=link.dataset?.cta;
     if(action==='knowledge-enrol')send('enquiry_link_click',{schema_version:2,page_group:pageGroup,library,link_placement:action,destination:'existing_enrolment_form'});
-    if(action==='knowledge-service')send('knowledge_service_click',{schema_version:1,page_group:'knowledge',library});
-    if(action==='knowledge-centres')send('knowledge_centres_click',{schema_version:1,page_group:'knowledge',library});
+    if(action==='knowledge-service')send('knowledge_service_click',{schema_version:1,page_group:'knowledge',library,link_placement:action,destination:'therapy_services'});
+    if(action==='knowledge-centres')send('knowledge_centres_click',{schema_version:1,page_group:'knowledge',library,link_placement:action,destination:'published_centre_directory'});
     if(!production||!enabled||blocked||knowledgeSearch||validationTraffic)return;
     try{
       const target=new URL(link.href||link.getAttribute('href'),location.href);
@@ -310,6 +340,7 @@
     configureTag('granted',measurementLocation,permittedCampaigns());
     loaded = true;
     send('page_view',{page_group:pageGroup,schema_version:2});
+    startWebVitals();
     sendGoogleAds('google_ads_arrival',{interaction_kind:'navigation'},false);
     const viewed = Object.entries(commerceCatalogue).find(([, item]) => item.path === pagePath);
     if (viewed) sendCommerce('view_item', [{sku:viewed[0],quantity:1,price:viewed[1].price}]);
@@ -378,7 +409,7 @@
   document.addEventListener('click',event=>{
     if (pageGroup === 'family_resource') {
       const resourceLink=event.target?.closest?.('a[data-resource="first_conversation_v1"]');
-      if(resourceLink?.getAttribute('href') === '/books/resources/Pinnacle-First-Conversation-v1.pdf') send('resource_download_click',{schema_version:3,page_group:'family_resource',resource_id:'first_conversation_v1',format:'pdf',language:'en'});
+      if(resourceLink?.getAttribute('href') === '/books/resources/Pinnacle-First-Conversation-v1.pdf') send('resource_download_click',{schema_version:3,page_group:'family_resource',resource_id:'first_conversation_v1',format:'pdf',language:'en',link_placement:'resource_download',destination:'first_conversation_pdf'});
     }
     const contactLink = event.target?.closest?.('a[href]');
     const contactHref = contactLink?.getAttribute('href');
@@ -414,14 +445,14 @@
           const destination = target.href;
           const sample = Object.values(commerceCatalogue).flatMap(item => Array.isArray(item.books) ? item.books : [])
             .find(book => typeof book.sample === 'string' && new URL(book.sample, origin).href === destination);
-          if (sample) send('sample_preview', {schema_version:3,page_group:'bookshop',item_id:sample.sku,item_name:sample.title});
+          if (sample) send('sample_preview', {schema_version:3,page_group:'bookshop',item_id:sample.sku,item_name:sample.title,link_placement:'book_sample',destination:'book_sample_pdf'});
         } catch {}
       }
     }
     const link=event.target?.closest?.('[data-cta]');
     if (!link) return;
     const placement=link.dataset.cta,href=link.getAttribute('href');
-    if (directoryPlacements.has(placement)) send('centre_directory_action',{schema_version:2,page_group:pageGroup,action:placement.replace('centre-','')});
+    if (directoryPlacements.has(placement)) send('centre_directory_action',{schema_version:2,page_group:pageGroup,action:placement.replace('centre-',''),link_placement:placement,destination:'published_centre_directory'});
     if (!href) return;
     if (callPlacements.has(placement) && (href==='tel:+919100181181' || (href.startsWith('tel:') && link.dataset.pinnacleAdCallTarget==='central'))) send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'national_helpline_9100181181'});
     if (pageGroup==='occupational_therapy' && (occupationalNavigation.has(placement)||placement==='mobile-assessment') && href==='#centres') send('centre_section_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'published_centre_directory'});

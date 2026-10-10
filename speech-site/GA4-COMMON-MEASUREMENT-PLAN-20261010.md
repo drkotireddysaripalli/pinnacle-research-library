@@ -10,7 +10,13 @@ Answer: which acquisition sources and public journeys produce accepted enquiries
 
 Shared measurement module, public enrolment component, idempotent receiver, durable private receipt/lead reference, optional 30-day acquisition envelope, native phone/WhatsApp actions and existing GA event vocabulary already exist. The current helpline repair reuses them.
 
-The Ads owner's 9 October readback reports property 361649365, streams G-H9CLX1WJ7R and G-2BYLRLFRDJ, existing enquiry_accepted key event and four custom definitions: link_placement, measurement_mode, page_group, destination. This document does not independently re-certify their current account state. No new property or competing conversion action is proposed.
+The 10 October Admin readback for property 361649365 confirms the main web stream G-2BYLRLFRDJ, a separate Verify stream, the existing enquiry_accepted key event and four custom definitions: link_placement, measurement_mode, page_group and destination. G-H9CLX1WJ7R is used by the separately deployed National Autism Helpline implementation but was not listed as a data stream in that property readback. Its account/property ownership remains an Ads/Analytics-owner reconciliation item; this release does not create or move a stream, merge browser identifiers or change helpline consent.
+
+## Shared release boundary — 10 October 2026
+
+The common G-2BYLRLFRDJ module now includes the root homepage in its explicit route allowlist, supplies a non-empty page_group and measurement_mode on consented shared events, and supplies fixed link_placement/destination values on approved contact and navigation actions. A 10% in-page sample reports LCP, INP and CLS only as rating and coarse value buckets, tagged with a fixed release ID and page family. It sends no raw timing, URL/query, referrer, campaign, browser trace, visitor ID or form detail.
+
+The durable-receipt gate for enquiry_accepted is unchanged. Private Ask/auth/search routes remain excluded; knowledge searches remain excluded; QA-tagged journeys remain excluded; Verify remains on its separate stream and choice; and National Autism Helpline G-H9CLX1WJ7R remains outside this shared release.
 
 ## Collection design
 
