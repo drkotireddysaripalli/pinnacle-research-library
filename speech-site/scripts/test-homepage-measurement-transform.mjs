@@ -10,7 +10,9 @@ const config=`<script>
         gtag('config', 'G-2BYLRLFRDJ');
 
         /**/</script>`;
-const fixture='<!doctype html><html><head><script>GTM-W9ZHX459</script><script>AW-10810823199</script><script>gtag(\'config\', \'AW-10810823199\')</script>'+loader+config+'</head><body><details data-ad-call-preferences></details></body></html>';
+// This is the origin-stage fingerprint. The ad-call preference panel is added
+// later by the outer shared-navigation transform and is intentionally absent.
+const fixture='<!doctype html><html><head><script>GTM-W9ZHX459</script><script>AW-10810823199</script><script>gtag(\'config\', \'AW-10810823199\')</script>'+loader+config+'</head><body></body></html>';
 const response=()=>new Response(fixture,{headers:{'content-type':'text/html; charset=utf-8','content-length':String(Buffer.byteLength(fixture)),'etag':'legacy'}});
 
 for(const [url,source] of [
@@ -27,7 +29,7 @@ for(const [url,source] of [
  assert.equal((html.match(/speech-measurement\.js/g)||[]).length,1);
  assert(html.includes('GTM-W9ZHX459'));
  assert(html.includes("gtag('config', 'AW-10810823199')"));
- assert(html.includes('data-ad-call-preferences'));
+ assert(!html.includes('data-ad-call-preferences'));
  assert.equal(transformed.headers.get('etag'),null);
 }
 
@@ -39,7 +41,7 @@ for(const request of [
  assert.equal(await untouched.text(),fixture);
 }
 
-const changedFixture=fixture.replace('data-ad-call-preferences','data-call-preferences');
+const changedFixture=fixture.replace('GTM-W9ZHX459','GTM-CHANGED');
 const changed=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/'),new Response(changedFixture,{headers:{'content-type':'text/html'}}));
 assert.equal(await changed.text(),changedFixture);
 

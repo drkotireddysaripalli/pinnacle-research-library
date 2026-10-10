@@ -440,11 +440,13 @@ export async function transformReviewedHomepageMeasurement(request,response){
  const html=await readContextBodyBounded(response);
  if(html===null)return response;
  const legacyConfig=html.includes(HOME_GA4_CONFIG)?HOME_GA4_CONFIG:HOME_GA4_CONFIG.replace(/\n/g,'\r\n');
- const required=[HOME_GA4_LOADER,legacyConfig,'GTM-W9ZHX459','AW-10810823199','data-ad-call-preferences','</body>'];
+ // The ad-call preference panel is added by the outer shared-navigation layer
+ // after portalWorker returns. Requiring it here rejects the real origin HTML.
+ const required=[HOME_GA4_LOADER,legacyConfig,'GTM-W9ZHX459','AW-10810823199','</body>'];
  if(required.some(marker=>!html.includes(marker))||html.includes('data-speech-measurement')||html.includes('/pinnacle-pages-scripts/speech-measurement.js'))return response;
  if(html.split(HOME_GA4_LOADER).length!==2||html.split(legacyConfig).length!==2||html.split('</body>').length!==2)return response;
  const result=html.replace(HOME_GA4_LOADER,'').replace(legacyConfig,'').replace('</body>',HOME_MEASUREMENT_PANEL+HOME_MEASUREMENT_SCRIPT+'</body>');
- if(result.includes('gtag/js?id=G-2BYLRLFRDJ')||result.includes("gtag('config', 'G-2BYLRLFRDJ')")||!result.includes('GTM-W9ZHX459')||!result.includes("gtag('config', 'AW-10810823199')")||!result.includes('data-ad-call-preferences'))return response;
+ if(result.includes('gtag/js?id=G-2BYLRLFRDJ')||result.includes("gtag('config', 'G-2BYLRLFRDJ')")||!result.includes('GTM-W9ZHX459')||!result.includes("gtag('config', 'AW-10810823199')"))return response;
  const h=new Headers(response.headers);
  for(const name of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest','accept-ranges'])h.delete(name);
  return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
