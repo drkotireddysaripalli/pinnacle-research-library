@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {assessmentContent as content} from '../src/data/assessment-content.ts';
 const html=fs.readFileSync('dist/speech-aba-autism-assessments.html','utf8');
+assert(html.includes('Child Development &amp; Therapy Assessment.'));
+assert(html.includes('A child development and therapy assessment helps your family understand'));
 const graph=JSON.parse(html.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)[1])['@graph'];
 const faq=graph.find(item=>item['@type']==='FAQPage');
 assert.equal((html.match(/<h1\b/g)||[]).length,1);assert(html.includes('index, follow, max-image-preview:large'));assert(html.includes('rel="canonical" href="https://www.pinnacleblooms.org'+content.path+'"'));

@@ -1,9 +1,9 @@
 # Child Development Assessment | Pinnacle Blooms Network
 Canonical: https://www.pinnacleblooms.org/speech-aba-autism-assessments
 
-> Understand your child today. Choose a clearer next step for life.
+> Child Development & Therapy Assessment. Understand today. Choose a clearer next step.
 
-Communication. Play. Daily routines. Learning. Start with what your child can do and what you want to make more possible.
+A child development and therapy assessment helps your family understand communication, play, daily routines and learning, then discuss the suitable professional, service and next step.
 
 ## What assessment clarifies
 A child development assessment brings family priorities, professional observation and suitable measures together to understand present abilities and support needs. The aim is an explained starting picture and a useful next-step discussion—not a score on its own.
