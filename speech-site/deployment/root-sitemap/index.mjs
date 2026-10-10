@@ -25,6 +25,8 @@ var CORE_URLS = [
   "/careers",
   "/franchise-autism-therapy-center",
   "/speech-aba-autism-assessments",
+  "/self-sufficient",
+  "/mainstream",
   "/autism-speech-aba-parent-family-resources",
   "/autism-speech-aba-news",
   "/teacher-training",
@@ -71,7 +73,10 @@ var CHILD_SITEMAPS = [
   "/sitemaps/faq-mr.xml",
   "/sitemaps/faq-ta.xml",
   "/sitemaps/faq-ml.xml",
-  "/verify/sitemap.xml"
+  "/verify/sitemap.xml",
+  "/speech-therapy/sitemap.xml",
+  "/pinnacleai/sitemap.xml",
+  "/national-autism-helpline/sitemap.xml"
 ];
 var PROXY_TARGETS = /* @__PURE__ */ new Map([
   ["/sitemaps/centres.xml", `${SITE_ORIGIN}/centerssitemap`],

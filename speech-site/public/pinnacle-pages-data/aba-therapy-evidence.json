@@ -53,6 +53,13 @@
       "pageStatement": "Published centre identities, addresses, maps and selected images are provided with a dated source trail.",
       "source": "https://www.pinnacleblooms.org/verify/evidence/centre-entity-reference.html",
       "boundary": "The directory does not establish current ABA availability, professional credentials, fees or appointment capacity. Confirm before travel."
+    },
+    {
+      "topic": "Family practice between professional visits",
+      "pageStatement": "Families can learn an agreed support strategy from professionals, use it in a familiar routine and bring observations back to review.",
+      "source": "https://www.nice.org.uk/guidance/cg170/chapter/recommendations",
+      "reviewedOn": "2026-10-10",
+      "boundary": "General caregiver partnership guidance with relevant support and training. The page gives no unsupervised programme, prescribed hours, guaranteed result or home-visit availability."
     }
   ],
   "questions": [
@@ -82,7 +89,7 @@
     },
     {
       "question": "How does the family take part?",
-      "answer": "Families help identify the everyday moments that matter, describe what happens across routines and review what is becoming easier, what support remains and what the team should change. Family participation is informed partnership, not blame or a substitute for professional care."
+      "answer": "Families help choose meaningful routines and review what happens. Ask the professional team to show you an agreed way to support communication or a manageable task at home, with room for your child to choose, refuse or ask for a break. Bring observations of comfort and support back to review. This partnership does not replace professional care or confirm that home visits are available."
     },
     {
       "question": "How can school observations inform review?",
@@ -95,6 +102,14 @@
     {
       "question": "What does PinnacleAI support?",
       "answer": "PinnacleAI GPT-OS v1.0.0 is non-diagnostic developmental-support software for ability measurement, readiness tracking, progress forecasting and adaptive plan support within its licensed scope. Professionals and families interpret the information and remain responsible for care decisions."
+    },
+    {
+      "question": "What happens at the first ABA conversation or assessment?",
+      "answer": "Begin with one everyday moment, your questions and any relevant reports you already have. Before a visit, the team confirms the suitable professional, centre, appointment and fees. The professional may observe communication, play or a routine, discuss what needs further assessment and explain a proposed next step. Ask how the goal will be reviewed before deciding."
+    },
+    {
+      "question": "What will ABA support cost, and how is the schedule decided?",
+      "answer": "The team confirms current fees, appointment options and the proposed process with you before enrolment. The assessed need, meaningful goal and professional review guide the plan; no fixed programme, number of sessions or outcome suits every child. Free telephone guidance is separate from assessment and therapy fees."
     },
     {
       "question": "Is ABA available at every Pinnacle centre?",
@@ -123,5 +138,10 @@
     "5Compare what actually happenedWas the pause requested with a cue or independently? Did the same support help at home and during group play? Track the setting, the child’s response and the adult help alongside the outcome.Track & correct",
     "6Change the plan and reassessIf a request works only with an adult cue, keep that help visible in the record. Adjust the next step, check comfort and review again before increasing demands or reducing support.Reassess",
     "7Keep the whole life in viewBeing heard, making choices and joining everyday life are steps toward growing self-sufficiency and mainstream participation. The direction stays clear; the route and pace remain individual.Self-sufficient life"
-  ]
+  ],
+  "updatedOn": "2026-10-10",
+  "familyAnswerReview": {
+    "reviewedOn": "2026-10-10",
+    "scope": "Changed family FAQ only; earlier checkedOn remains 2026-10-05."
+  }
 }
