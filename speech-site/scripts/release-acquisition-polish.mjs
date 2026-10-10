@@ -7,8 +7,10 @@ import {createHash} from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {createRequire} from 'node:module';
 import {build} from 'esbuild';
-const [phase,id]=process.argv.slice(2);
+const [phase,id,targetArg]=process.argv.slice(2);
 assert(/^[a-z0-9-]{6,80}$/.test(id||''),'Unique release ID required');
+const requestedTargets=targetArg?targetArg.split(',').filter(Boolean):['public-mobile-recovery.mjs','shared-navigation.mjs'];
+assert(requestedTargets.length&&requestedTargets.every(name=>/^[a-z0-9.-]+\.mjs$/.test(name)),'Comma-separated module names required');
 const site=path.resolve(import.meta.dirname,'..'),repo=path.dirname(site),priv=path.join(site,'ask-private',id),receiptPath=path.join(site,'deployment',id+'.json');
 const git='C:/Users/Siri Palace/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/git/cmd/git.exe';
 const g=args=>execFileSync(git,['-C',repo,...args],{encoding:'utf8',windowsHide:true}).trim();
@@ -43,7 +45,7 @@ if(phase==='prepare'){
  const assets=await api(base+worker+'/assets-upload-session','POST',{manifest});assert.equal(assets.buckets.length,0,'Unchanged union must not need uploads');await save(path.join(priv,'assets.json'),assets);
  const runtime=(await api(base+worker+'/versions/'+before.workers[worker].versions[0].version_id)).resources.script_runtime.assets;
  assert.deepEqual({html_handling:runtime.html_handling,not_found_handling:runtime.not_found_handling,run_worker_first:runtime.raw_run_worker_first},{html_handling:'none',not_found_handling:'none',run_worker_first:true});
- const receipt={id,phase:'prepared',at:before.at,baseCommit:g(['rev-parse','HEAD']),rollback:before.workers[worker].versions,routeCount:before.routes.length,moduleCount:mods.length,retainedAssets:3706,uploadedAssets:0,originalHashes:Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]))};
+ const receipt={id,phase:'prepared',at:before.at,baseCommit:g(['rev-parse','HEAD']),rollback:before.workers[worker].versions,routeCount:before.routes.length,moduleCount:mods.length,retainedAssets:3706,uploadedAssets:0,targets:requestedTargets,originalHashes:Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]))};
  await save(receiptPath,receipt);console.log(JSON.stringify({phase:receipt.phase,routes:receipt.routeCount,modules:receipt.moduleCount,rollback:receipt.rollback,retainedAssets:3706}));
 }else{
  const before=JSON.parse(await fs.readFile(path.join(priv,'before.json'),'utf8')),receipt=JSON.parse(await fs.readFile(receiptPath,'utf8')),now=await state();
@@ -56,7 +58,7 @@ if(phase==='prepare'){
  if(phase==='upload'){
   assert.equal(receipt.phase,'prepared');const commit=g(['rev-parse','HEAD']);assert.equal(g(['ls-remote','origin','refs/heads/main']).split(/\s/)[0],commit,'Push source before upload');
   const ci=JSON.parse(await fs.readFile(path.join(priv,'ci.json'),'utf8'));assert.equal(ci.head_sha,commit);assert.equal(ci.status,'completed');assert.equal(ci.conclusion,'success','Exact source CI required');
-  const mods=JSON.parse(await fs.readFile(path.join(priv,'modules.json'),'utf8')).map(m=>({name:m.name,bytes:Buffer.from(m.base64,'base64')})),targets=['public-mobile-recovery.mjs','shared-navigation.mjs'];
+  const mods=JSON.parse(await fs.readFile(path.join(priv,'modules.json'),'utf8')).map(m=>({name:m.name,bytes:Buffer.from(m.base64,'base64')})),targets=receipt.targets;
   for(const target of targets){let bytes=await fs.readFile(path.join(site,'deployment',target));assert.equal(sha(normalise(bytes)),sha(normalise(g(['show','HEAD:speech-site/deployment/'+target]))),'Source changed after commit');if(target==='shared-navigation.mjs'){const built=await build({entryPoints:[path.join(site,'deployment',target)],bundle:true,format:'esm',write:false,external:['./public-ad-call.mjs']});bytes=Buffer.from(built.outputFiles[0].contents);}const existing=mods.find(m=>m.name===target);if(existing)existing.bytes=bytes;else mods.push({name:target,bytes});}
   const assets=JSON.parse(await fs.readFile(path.join(priv,'assets.json'),'utf8')),s=before.settings,metadata={main_module:'pinnacle-route-v12.mjs',assets:{jwt:assets.jwt,config:{html_handling:'none',not_found_handling:'none',run_worker_first:true}},compatibility_date:s.compatibility_date,compatibility_flags:s.compatibility_flags||[],bindings:s.bindings.map(x=>x.type==='assets'?{name:x.name,type:'assets'}:{name:x.name,type:'inherit'}),annotations:{'workers/message':id}};
   for(const k of ['placement','tail_consumers','logpush','observability','limits','usage_model'])if(s[k]!==undefined)metadata[k]=s[k];
