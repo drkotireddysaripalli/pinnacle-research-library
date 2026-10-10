@@ -25,13 +25,17 @@ assert(html.includes('data-ad-call-preferences'));
 assert.equal(transformed.headers.get('etag'),null);
 
 for(const request of [
- new Request('https://www.pinnacleblooms.org/?campaign=test'),
  new Request('https://www.pinnacleblooms.org/',{headers:{cookie:'private=1'}}),
  new Request('https://www.pinnacleblooms.org/',{method:'HEAD'})
 ]){
  const untouched=await transformReviewedHomepageMeasurement(request,response());
  assert.equal(await untouched.text(),fixture);
 }
+
+const campaign=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/?utm_source=google&utm_medium=cpc&utm_campaign=qa&child_name=excluded'),response());
+const campaignHtml=await campaign.text();
+assert.equal((campaignHtml.match(/data-speech-measurement/g)||[]).length,1);
+assert(!campaignHtml.includes('gtag/js?id=G-2BYLRLFRDJ'));
 
 const changedFixture=fixture.replace('data-ad-call-preferences','data-call-preferences');
 const changed=await transformReviewedHomepageMeasurement(new Request('https://www.pinnacleblooms.org/'),new Response(changedFixture,{headers:{'content-type':'text/html'}}));

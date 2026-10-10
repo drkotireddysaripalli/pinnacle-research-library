@@ -432,7 +432,7 @@ const HOME_MEASUREMENT_SCRIPT='<script defer src="/pinnacle-pages-scripts/speech
 // Migrates only the reviewed public homepage fingerprint. GTM, Ads and call measurement remain intact.
 export async function transformReviewedHomepageMeasurement(request,response){
  const url=new URL(request.url);
- if(request.method!=='GET'||url.origin!=='https://www.pinnacleblooms.org'||url.pathname!=='/'||url.search)return response;
+ if(request.method!=='GET'||url.origin!=='https://www.pinnacleblooms.org'||url.pathname!=='/')return response;
  if(['authorization','cookie','range','if-range','if-match','if-none-match','if-modified-since','if-unmodified-since'].some(name=>request.headers.has(name))||/\bno-transform\b/i.test(request.headers.get('cache-control')||''))return response;
  if(!canTransformContextResponse(response))return response;
  const declared=Number(response.headers.get('content-length'));
