@@ -11,3 +11,5 @@
 
 /* Bookshop type stays inside its page; the approved common shell retains Sintony. */
 .pbn .pbn-add-to-cart{width:100%;margin-top:15px;font-family:inherit}.pbn-pair-offer{min-width:0}.pbn-pair-offer .pbn-add-to-cart{margin-top:8px;background:#f0f7f5;color:#08666c}.pbn p.pbn-book-name{font-size:13px;min-height:0;margin-bottom:10px;color:#7554a2;font-weight:600}.pbn-collection-copy .pbn-add-to-cart{width:auto}.pbn .pbn-book-card>p:not(.pbn-kicker){min-height:0}.pbn-book-card .pbn-card-bottom{margin-top:auto}.pbn .pbn-book-card>p{margin-bottom:16px}.pbn a.pbn-format-choice{display:block;font-size:12px;margin-top:10px;text-decoration:underline;color:#52616c}@media(max-width:370px){.pbn-book-grid{grid-template-columns:1fr}.pbn-book-card h3{min-height:0}.pbn-cover-link{max-width:100%}.pbn-card-bottom{flex-wrap:nowrap}.pbn-small-link{width:auto}}
+
+@media(max-width:800px){.pbn .pbn-eyebrow,.pbn .pbn-status,.pbn .pbn-small-note{font-size:14px!important}}

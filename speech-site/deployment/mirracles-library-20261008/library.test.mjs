@@ -35,6 +35,8 @@ test('actual source inventory preserves sitemap pages and every older public arc
 test('server-rendered main and category pages contain24 cards and correct nonoverlapping pagination',async()=>{
   const first=await get('/allmirracles'),second=await get('/allmirracles?page=2');
   assert.equal(first.status,200);const one=await first.text(),two=await second.text();
+  assert.match(one,/<meta property="og:image" content="https:\/\//);
+  assert.match(one,/<meta name="twitter:image" content="https:\/\//);
   assert.equal(cards(one),PAGE_SIZE);assert.equal(cards(two),PAGE_SIZE);
   assert(one.includes(catalogue.records.find(r=>r.id===catalogue.order[0]).path));
   assert(!two.includes('href="'+catalogue.records.find(r=>r.id===catalogue.order[0]).path+'"'));
