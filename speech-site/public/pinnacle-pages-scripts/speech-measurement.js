@@ -428,7 +428,7 @@
         const placement = contactLink.dataset?.cta;
         const placements = new Set(['header-whatsapp','hero-whatsapp','footer-whatsapp','mobile-whatsapp','centre-whatsapp','knowledge-whatsapp','ask-whatsapp']);
         sendGoogleAds('google_ads_whatsapp_click',{interaction_kind:'contact_tap',link_placement:placements.has(placement)?placement:'central-whatsapp',destination:'national_helpline_9100181181'});
-        send('whatsapp_click',{schema_version:3,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline_9100181181'});
+        send('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:placements.has(placement)?placement:isBookshop?'bookshop-contact':'central-whatsapp',destination:'national_helpline_9100181181'});
         return; // One event per contact tap; sharing text never enters the event.
       }
     } catch {}

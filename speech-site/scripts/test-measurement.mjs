@@ -117,7 +117,7 @@ test('bookshop direct contact links count once after consent without exporting W
  const whatsapp='https://wa.me/919100181181?text=private-child-name&source=private-value';
  h.click(undefined,'tel:+919100181181');h.click(undefined,whatsapp);assert.equal(h.events().length,0);
  h.choose('accepted');h.click(undefined,'tel:+919100181181');h.click('footer-call','tel:+919100181181');h.click(undefined,whatsapp);
- assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click','phone_link_click','whatsapp_click']);
+ assert.deepEqual(h.events().map(e=>e[1]),['page_view','phone_link_click','phone_link_click','whatsapp_link_click']);
  assert.equal(h.events()[1][2].link_placement,'bookshop-contact');assert.equal(h.events()[2][2].link_placement,'footer-call');
  const serialized=JSON.stringify(h.events());for(const value of ['private-child','private-value','?text=','purchase','enquiry_accepted'])assert(!serialized.includes(value));
  const count=h.events().length;
@@ -135,7 +135,7 @@ test('central WhatsApp contact taps on managed journeys use one exact event afte
   const h=harness(options);for(const href of links)h.click(undefined,href);assert.equal(h.events().length,0);
   h.choose('accepted');
   for(const href of links)h.click('footer-whatsapp',href);
-  assert.deepEqual(h.events().map(e=>e[1]),['page_view','whatsapp_click','whatsapp_click','whatsapp_click']);
+  assert.deepEqual(h.events().map(e=>e[1]),['page_view','whatsapp_link_click','whatsapp_link_click','whatsapp_link_click']);
   assert(h.events().slice(1).every(e=>e[2].link_placement==='footer-whatsapp'&&e[2].destination==='national_helpline_9100181181'));
   h.click('INVENTED_PRIVATE_PLACEMENT','https://wa.me/919100181181');
   assert.equal(h.events().at(-1)[2].link_placement,'central-whatsapp');
