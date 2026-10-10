@@ -21,17 +21,43 @@ test('unrecognised, authenticated and private referrers remain excluded',()=>{
  }
 });
 const canonicalEnrolment='/enroll-autism-speech-aba-therapies-india';
-function harness({callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret'}={}){
+function harness({callback=false,origin='https://www.pinnacleblooms.org',path='/top-speech-therapy-center-india-proven-improvement-rate',gpc=false,saved,sharedStore,storageThrows=false,tagLoadThrows=false,variant='service',commerceCatalogue={},referrer='',search='?utm_term=private-child-detail&gclid=secret',performanceEntries=null}={}){
  const listeners={},buttons={},scripts=[],cookies=[],writes=[];
  const panel={hidden:true},status={textContent:''};
  const choices=['accepted','declined'].map(value=>({dataset:{measurementChoice:value},disabled:false,addEventListener:(_,cb)=>buttons[value]=cb}));
- const doc={referrer,body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
+ const doc={referrer,visibilityState:'visible',body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
- const win={};
- vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL});
- return {win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={})=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
+ const win={addEventListener:(event,fn)=>{const previous=listeners['window:'+event];listeners['window:'+event]=data=>{previous?.(data);fn(data);};}};
+ class FakePerformanceObserver{constructor(callback){this.callback=callback;}observe(options){this.callback({getEntries:()=>performanceEntries?.[options.type]||[]});}disconnect(){}}
+ const testMath=Object.create(Math);testMath.random=()=>0;
+ vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL,Math:testMath,PerformanceObserver:performanceEntries?FakePerformanceObserver:undefined});
+ return {win,store,get scripts(){return scripts.filter(s=>s.src?.startsWith('https://www.googletagmanager.com/'));},get localScripts(){return scripts.filter(s=>s.src?.startsWith('/'));},cookies,writes,panel,status,choices,choose:value=>buttons[value](),hide:()=>{doc.visibilityState='hidden';listeners.visibilitychange?.();listeners['window:pagehide']?.();},accepted:(receipt={schemaVersion:1,requestId:'qa-event-request',id:'qa-event-receipt'})=>listeners['pinnacle:enquiry-accepted']?.({detail:{receipt}}),click:(placement,href,dataset={})=>{const link={href,dataset:{cta:placement,...dataset},getAttribute:()=>href};listeners.click({target:{closest:()=>link},preventDefault:()=>{throw Error('Contact navigation must remain native');},stopPropagation:()=>{throw Error('Contact navigation must remain native');}});return link;},commerce:(name,items,extra={})=>listeners['pinnacle:commerce']?.({detail:{name,items,...extra}}),events:()=>Array.from(win.dataLayer||[],x=>Array.from(x)).filter(x=>x[0]==='event')};
 }
+
+test('homepage uses the shared stream with populated reporting dimensions',()=>{
+ const h=harness({path:'/',search:''});h.choose('accepted');
+ const pageView=h.events().find(event=>event[1]==='page_view');
+ assert.equal(pageView[2].page_group,'home');assert.equal(pageView[2].measurement_mode,'consented');
+ h.click('hero-call','tel:+919100181181');
+ const phone=h.events().find(event=>event[1]==='phone_link_click');
+ assert.equal(phone[2].link_placement,'hero-call');assert.equal(phone[2].destination,'national_helpline_9100181181');assert.equal(phone[2].measurement_mode,'consented');
+});
+
+test('sampled web vitals use coarse buckets and the five-field privacy contract',()=>{
+ const h=harness({path:'/',search:'',performanceEntries:{
+  'largest-contentful-paint':[{startTime:2860}],event:[{duration:176,interactionId:1}],
+  'layout-shift':[{value:0.04,hadRecentInput:false},{value:0.08,hadRecentInput:false},{value:8,hadRecentInput:true}]
+ }});h.choose('accepted');h.hide();
+ const samples=h.events().filter(event=>event[1]==='web_vital_sample');assert.equal(samples.length,3);
+ const expectedKeys=['metric_name','page_group','rating','release_id','value_bucket'];
+ for(const sample of samples){const {send_to,...reportable}=sample[2];assert.equal(send_to,'G-2BYLRLFRDJ');assert.deepEqual(Object.keys(reportable).sort(),expectedKeys);assert.equal(sample[2].page_group,'home');assert.equal(sample[2].release_id,'ga4-common-20261010');}
+ const byName=Object.fromEntries(samples.map(sample=>[sample[2].metric_name,sample[2]]));
+ assert.deepEqual([byName.LCP.rating,byName.LCP.value_bucket],['needs_improvement','2_5_4s']);
+ assert.deepEqual([byName.INP.rating,byName.INP.value_bucket],['good','100_200ms']);
+ assert.deepEqual([byName.CLS.rating,byName.CLS.value_bucket],['needs_improvement','0_1_0_25']);
+ assert(!JSON.stringify(samples).includes('page_location'));assert(!JSON.stringify(samples).includes('client_id'));
+});
 
 test('consented source survives an untagged centre/form/direct journey; withdrawal clears it',()=>{
  const first=harness({search:'?utm_source=google&utm_medium=cpc&utm_campaign=QA-PINNACLE&gclid=qaClickAbc123&child_name=excluded'});
@@ -338,7 +364,19 @@ test('centre directory actions stay coarse and never export centre names, hashes
  const h=harness({path:'/centers'});h.choose('accepted');
  for(const placement of ['centre-profile','centre-maps','centre-whatsapp','centre-vcard','centre-share','centre-copy-link','centre-copy-citation'])h.click(placement,'https://www.pinnacleblooms.org/centers#centre-suchitra');
  const events=h.events().filter(event=>event[1]==='centre_directory_action');assert.equal(events.length,7);
+ assert(events.every(event=>event[2].link_placement&&event[2].destination==='published_centre_directory'&&event[2].measurement_mode==='consented'));
  const serialized=JSON.stringify(events);for(const privateValue of ['suchitra','centre-suchitra','private-child-detail'])assert(!serialized.includes(privateValue));
+});
+
+test('knowledge navigation events expose only useful fixed navigation dimensions',()=>{
+ const h=harness({path:'/faq',variant:'knowledge',search:''});h.choose('accepted');
+ h.click('knowledge-service','/top-speech-therapy-center-india-proven-improvement-rate');
+ h.click('knowledge-centres','/centers');
+ const navigation=h.events().filter(event=>['knowledge_service_click','knowledge_centres_click'].includes(event[1]));assert.equal(navigation.length,2);
+ assert.deepEqual(navigation.map(event=>[event[2].link_placement,event[2].destination]),[
+  ['knowledge-service','therapy_services'],['knowledge-centres','published_centre_directory']
+ ]);
+ assert(navigation.every(event=>event[2].page_group==='knowledge'&&event[2].measurement_mode==='consented'));
 });
 
 test('assessment calls and generic enquiries are consented fixed events',()=>{
