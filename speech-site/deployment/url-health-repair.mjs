@@ -6,6 +6,14 @@ export const URL_ALIASES={
  '/Special Education / Cognitive Therapy':'/best-special-education-center-call-9100181181',
  '/Special Education/Cognitive Behavioral Therapy':'/best-special-education-center-call-9100181181',
  '/allmirracles-sitemap.xml':'/sitemaps/miracles.xml',
+ // Shared legacy navigation still emits these redirecting destinations on
+ // hundreds of pages. Point both incoming aliases and rendered links at the
+ // sole maintained destination so crawlers and parents do not pay a hop.
+ '/verify':'/verify/',
+ '/innovation':'/pinnacle-ai-innovations-revolutionizing-autism-history',
+ '/franchises':'/franchise-autism-therapy-center',
+ // Historical centre ribbons used the pre-records evidence location.
+ '/verify/evidence/operating-metrics.html':'/verify/evidence/records/operating-metrics.html',
  // Consolidate search-shaped aliases into the maintained service and centre
  // destinations. These aliases must not become thin, competing landing pages.
  '/child-psychologist':'/child-psychological-counseling',
@@ -44,6 +52,12 @@ export function repairUrlHealth(request,response){
  const rewrite=new HTMLRewriter().on('a[href]',{element(e){
   const value=e.getAttribute('href'),target=healthLinkTarget(value);if(target!==value)e.setAttribute('href',target);
   let link;try{link=new URL(value,ORIGIN);}catch{return;}
+  // Internal discovery links must remain followable. Retain any other rel
+  // tokens (for example noopener) while removing the repeated legacy nofollow.
+  if(link.origin===ORIGIN){
+   const rel=(e.getAttribute('rel')||'').split(/\s+/).filter(Boolean).filter(token=>token.toLowerCase()!=='nofollow');
+   if(rel.length)e.setAttribute('rel',rel.join(' '));else e.removeAttribute('rel');
+  }
   // The nine study templates link to a PDF that was never published.
   // Provide the existing dated evidence register without pretending it is a download.
   if(link.origin===ORIGIN&&link.pathname==='/assets/abilityscore-summary.pdf'){

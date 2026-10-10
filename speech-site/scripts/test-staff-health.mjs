@@ -19,5 +19,5 @@ test('current profiles and one source conflict stay live; duplicate slugs canoni
 test('core sitemap removes redirect alias and adds the useful recovered collections',async()=>{
  const r=await sitemap.fetch(new Request(origin+'/sitemaps/core.xml'));assert.equal(r.status,200);const xml=await r.text();
  assert(xml.includes('/physiotherapy</loc>'));assert(!xml.includes('/physio-therapy</loc>'));assert(xml.includes('/franchise-autism-therapy-center</loc>'));
- for(const p of ['/faq','/sunshine','/allmirracles'])assert(xml.includes(p+'</loc>'));assert.equal([...xml.matchAll(/<loc>/g)].length,47);
+ for(const p of ['/faq','/sunshine','/allmirracles','/self-sufficient','/mainstream'])assert(xml.includes(p+'</loc>'));assert.equal([...xml.matchAll(/<loc>/g)].length,49);
 });
