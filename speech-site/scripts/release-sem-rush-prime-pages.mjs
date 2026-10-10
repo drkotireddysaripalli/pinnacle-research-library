@@ -16,7 +16,7 @@ const account='/accounts/862998def1cd610fdb86b8e5c1d6ed4d/workers/scripts/',rout
 const portal='pinnacle-verify-route',legacy='pinnacle-legacy-social-metadata',sitemap='pinnacle-root-sitemap',targets=[portal,legacy,sitemap];
 const protectedNames=['pbn-planetscale','pinnacle-ask','pinnacle-ask-mcp','pinnacle-centre-search-repair','pinnacle-helpline','materials-mobile-desktop-tracker'];
 const specs={
- [portal]:{main:'pinnacle-route-v12.mjs',module:'url-health-repair.mjs',entry:'deployment/url-health-repair.mjs',assets:true},
+ [portal]:{main:'pinnacle-route-v12.mjs',replacements:[['url-health-repair.mjs','deployment/url-health-repair.mjs'],['aba-assets.mjs','deployment/aba-assets.mjs']],assets:true},
  [legacy]:{main:'entry.mjs',module:'entry.mjs',entry:'deployment/legacy-social-metadata/entry.mjs'},
  [sitemap]:{main:'index.mjs',module:'index.mjs',entry:'deployment/root-sitemap/index.mjs'}
 };
@@ -31,7 +31,7 @@ await fs.mkdir(priv,{recursive:true});
 if(phase==='prepare'){
  assert(!(await fs.stat(receiptPath).catch(()=>null)),'Existing receipt: reconcile its phase');
  const base=g(['rev-parse','origin/main']),[before,...moduleRows]=await Promise.all([state(),...targets.map(modules)]),captured=Object.fromEntries(targets.map((n,i)=>[n,moduleRows[i]]));
- for(const n of targets){const spec=specs[n],live=captured[n].find(m=>m.name===spec.module);assert(live,'Missing '+n+'/'+spec.module);if(n!==legacy){const expected=await bundle(spec.entry,base);assert.equal(sha(norm(live.bytes)),sha(norm(expected)),n+' live baseline differs from origin/main');}await save(path.join(priv,n+'-modules.json'),captured[n].map(m=>({name:m.name,base64:m.bytes.toString('base64')})));}
+ for(const n of targets){const spec=specs[n];if(n===portal){for(const [module,entry] of spec.replacements){const live=captured[n].find(m=>m.name===module);assert(live,'Missing '+n+'/'+module);const expected=await bundle(entry,base);assert.equal(sha(norm(live.bytes)),sha(norm(expected)),n+'/'+module+' live baseline differs from origin/main');}}else{const live=captured[n].find(m=>m.name===spec.module);assert(live,'Missing '+n+'/'+spec.module);if(n!==legacy){const expected=await bundle(spec.entry,base);assert.equal(sha(norm(live.bytes)),sha(norm(expected)),n+' live baseline differs from origin/main');}}await save(path.join(priv,n+'-modules.json'),captured[n].map(m=>({name:m.name,base64:m.bytes.toString('base64')})));}
  const manifest=JSON.parse(await fs.readFile(path.join(site,'ask-private/testingbot-regression-20261010/manifest.json'),'utf8'));assert(Object.keys(manifest).length>=3707,'Complete current portal asset union required');
  const assets=await api(account+portal+'/assets-upload-session','POST',{manifest});assert.equal(assets.buckets.flat().length,0,'Portal assets changed unexpectedly');
  await save(path.join(priv,'before.json'),before);await save(path.join(priv,'assets.json'),assets);await save(path.join(priv,'manifest.json'),manifest);
@@ -48,7 +48,8 @@ if(phase==='prepare'){
     const live=mods.find(m=>m.name==='entry.mjs');assert(live&&!mods.some(m=>m.name==='entry-base.mjs'),'Unexpected legacy wrapper baseline');live.name='entry-base.mjs';
     const health=await bundle('deployment/url-health-repair.mjs');mods.push({name:'url-health-repair.mjs',bytes:health});
     mods.push({name:'entry.mjs',bytes:Buffer.from("import base from './entry-base.mjs';import{urlHealthAlias,repairUrlHealth}from './url-health-repair.mjs';export default{async fetch(request,env,ctx){const alias=urlHealthAlias(request);if(alias)return alias;const response=await base.fetch(request,env,ctx);return repairUrlHealth(request,response);}};\n")});
-   }else{const replacement=await bundle(spec.entry),current=mods.find(m=>m.name===spec.module);assert(current);current.bytes=replacement;}
+   }else if(n===portal){for(const [module,entry] of spec.replacements){const current=mods.find(m=>m.name===module);assert(current);current.bytes=await bundle(entry);}}
+   else{const replacement=await bundle(spec.entry),current=mods.find(m=>m.name===spec.module);assert(current);current.bytes=replacement;}
    const assets=spec.assets?JSON.parse(await fs.readFile(path.join(priv,'assets.json'),'utf8')):null,form=new FormData();form.set('metadata',JSON.stringify(metadata(before.workers[n].settings,spec,assets)));for(const m of mods)form.set(m.name,new Blob([m.bytes],{type:'application/javascript+module'}),m.name);const result=await checkpoint(n,'upload',()=>api(account+n+'/versions?bindings_inherit=strict','POST',form));record.candidate=result.id;record.hashes=Object.fromEntries(mods.map(m=>[m.name,sha(m.bytes)]));delete receipt.pending;receipt.phase='partially-uploaded';await save(receiptPath,receipt);}receipt.phase='uploaded';
  }else if(phase==='promote'){
   assert(['uploaded','partially-promoted','promoted'].includes(receipt.phase));for(const n of [sitemap,legacy,portal]){const record=receipt.workers[n];if(record.promoted)continue;const result=await checkpoint(n,'promote',()=>api(account+n+'/deployments','POST',{strategy:'percentage',versions:[{version_id:record.candidate,percentage:100}]}));record.deployment=result.id;record.promoted=true;record.promotedAt=new Date().toISOString();delete receipt.pending;receipt.phase='partially-promoted';await save(receiptPath,receipt);}receipt.phase='promoted';
