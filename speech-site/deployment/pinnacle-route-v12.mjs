@@ -357,8 +357,9 @@ const portalWorker = {
   if(incoming.hostname!=='www.pinnacleblooms.org')return fetch(request);
   if(incoming.pathname==='/'){
    const original=await fetchPublicOrigin(request);if(!['GET','HEAD'].includes(request.method)||original.status!==200||!original.headers.get('content-type')?.includes('text/html'))return original;
-   const reviewed=await transformReviewedHomeOrganization(request,original);
-   const response=await transformContextualEvidence(request,reviewed,globalThis.HTMLRewriter,[HOME_EVIDENCE_RULE]);
+    const reviewed=await transformReviewedHomeOrganization(request,original);
+    const measured=await transformReviewedHomepageMeasurement(request,reviewed);
+    const response=await transformContextualEvidence(request,measured,globalThis.HTMLRewriter,[HOME_EVIDENCE_RULE]);
    const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])h.delete(k);
    if(!h.get('cache-control')?.match(/private|no-store/i)&&!h.has('set-cookie'))h.set('cache-control','public, max-age=60');
    if(request.method==='HEAD')return new Response(null,{status:200,headers:h});
@@ -411,6 +412,38 @@ export async function transformReviewedHomeOrganization(request,response){
   return open+JSON.stringify(repaired).replace(/</g,'\\u003c')+close;
  });
  if(changed!==1||expiredRemoved!==1)return response;
+ const h=new Headers(response.headers);
+ for(const name of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest','accept-ranges'])h.delete(name);
+ return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
+}
+
+const HOME_GA4_LOADER='<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ"></script>';
+const HOME_GA4_CONFIG=`<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2BYLRLFRDJ');
+
+        /**/</script>`;
+const HOME_MEASUREMENT_PANEL='<details id="website-preferences" class="measurement-settings portal-measurement" data-speech-measurement hidden style="box-sizing:border-box;max-width:100%;padding:16px;margin-bottom:24px;border:1px solid #d9bfd6;border-radius:8px;background:#fff;color:#302638;font-size:14px;line-height:1.65;font-family:inherit"><summary style="min-height:44px;color:#652579;font-weight:700;cursor:pointer">Optional analytics preferences</summary><p style="color:#302638;max-width:850px">With your permission, Google Analytics measures page visits and call or enquiry-link clicks. These are not completed calls or bookings. We exclude form details, private answer paths and unrecognised URL fields. With permission, validated campaign labels and advertising click identifiers can measure how you reached us. Advertising personalisation is off.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-measurement-choice="accepted">Allow analytics</button><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-measurement-choice="declined">Keep analytics off</button></div><p style="color:#302638" data-measurement-status role="status">Optional analytics is off until you choose.</p></details>';
+const HOME_MEASUREMENT_SCRIPT='<script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=ga4-common-20261010"></script>';
+
+// Migrates only the reviewed public homepage fingerprint. GTM, Ads and call measurement remain intact.
+export async function transformReviewedHomepageMeasurement(request,response){
+ const url=new URL(request.url);
+ if(request.method!=='GET'||url.origin!=='https://www.pinnacleblooms.org'||url.pathname!=='/'||url.search)return response;
+ if(['authorization','cookie','range','if-range','if-match','if-none-match','if-modified-since','if-unmodified-since'].some(name=>request.headers.has(name))||/\bno-transform\b/i.test(request.headers.get('cache-control')||''))return response;
+ if(!canTransformContextResponse(response))return response;
+ const declared=Number(response.headers.get('content-length'));
+ if(Number.isFinite(declared)&&declared>CONTEXT_BODY_LIMIT)return response;
+ const html=await readContextBodyBounded(response);
+ if(html===null)return response;
+ const required=[HOME_GA4_LOADER,HOME_GA4_CONFIG,'GTM-W9ZHX459','AW-10810823199','data-ad-call-preferences','</body>'];
+ if(required.some(marker=>!html.includes(marker))||html.includes('data-speech-measurement')||html.includes('/pinnacle-pages-scripts/speech-measurement.js'))return response;
+ if(html.split(HOME_GA4_LOADER).length!==2||html.split(HOME_GA4_CONFIG).length!==2||html.split('</body>').length!==2)return response;
+ const result=html.replace(HOME_GA4_LOADER,'').replace(HOME_GA4_CONFIG,'').replace('</body>',HOME_MEASUREMENT_PANEL+HOME_MEASUREMENT_SCRIPT+'</body>');
+ if(result.includes('gtag/js?id=G-2BYLRLFRDJ')||result.includes("gtag('config', 'G-2BYLRLFRDJ')")||!result.includes('GTM-W9ZHX459')||!result.includes("gtag('config', 'AW-10810823199')")||!result.includes('data-ad-call-preferences'))return response;
  const h=new Headers(response.headers);
  for(const name of ['content-length','content-encoding','etag','last-modified','content-md5','digest','content-digest','repr-digest','accept-ranges'])h.delete(name);
  return new Response(result,{status:response.status,statusText:response.statusText,headers:h});
