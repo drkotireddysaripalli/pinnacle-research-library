@@ -27,6 +27,15 @@ test('precise malformed service and sitemap aliases preserve attribution and ref
  const r=urlHealthAlias(new Request(url));assert.equal(r.status,301);assert.equal(r.headers.get('location'),origin+'/best-aba-therapy-center-india-proven-improvement-rate?gclid=test&utm_source=google');
  assert.equal(healthLinkTarget('/Special%20Education%20/%20Cognitive%20Therapy#next'),origin+'/best-special-education-center-call-9100181181#next');
  assert.equal(urlHealthAlias(new Request(origin+'/allmirracles-sitemap.xml')).headers.get('location'),origin+'/sitemaps/miracles.xml');
+ const aliases={
+  '/child-psychologist':'/child-psychological-counseling',
+  '/child-psychologist-near-me':'/child-psychological-counseling',
+  '/child-counselor-near-me':'/child-psychological-counseling',
+  '/speech-therapist-near-me':'/top-speech-therapy-center-india-proven-improvement-rate',
+  '/occupational-therapist-near-me':'/best-occupational-therapy-center-india-proven-improvement-rate',
+  '/autism-center-near-me':'/centers'
+ };
+ for(const [source,target] of Object.entries(aliases))assert.equal(urlHealthAlias(new Request(origin+source+'?utm_source=google')).headers.get('location'),origin+target+'?utm_source=google');
  for(const [u,options] of [[url,{method:'POST'}],[url,{headers:{authorization:'Bearer private'}}],[origin+'/api/ABA%20/%20Behavioral%20Therapy',{}],['https://example.com/ABA%20/%20Behavioral%20Therapy',{}]])assert.equal(urlHealthAlias(new Request(u,options)),null);
 });
 test('only duplicated sidebar identity graphs are omitted; true breadcrumbs and content remain',()=>{
@@ -46,12 +55,12 @@ test('all approved catalogue pages are reachable from the root without adding ar
  assert(!page400.includes('aria-label="All video library pages"'));assert(page400.includes('href="/allmirracles"'));
  const search=await(await handle(new Request(origin+'/allmirracles?q=therapy'))).text();assert(!search.includes('aria-label="All video library pages"'));assert(search.includes('noindex'));
 });
-test('actual edge HTML rewrite fixes mobile canonicals, source links and missing media while keeping privacy headers',async()=>{
- const source=String.raw`import {repairUrlHealth} from './deployment/url-health-repair.mjs';export default{fetch(request){return repairUrlHealth(request,new Response('<html><head><link rel="canonical" data-m="2" href="https://mobile.pinnacleblooms.org/child-psychological-counseling"><meta property="og:url" content="https://mobile.pinnacleblooms.org/child-psychological-counseling"></head><body><h1>Child counselling</h1><a href="/assets/abilityscore-summary.pdf" download>Download Summary</a><a href="/ABA%20/%20Behavioral%20Therapy?utm_source=google">ABA</a><img src="/Assets/OG/495.jpg" alt="Broken"><a href="tel:+919100181181">Call</a></body></html>',{headers:{'content-type':'text/html','cache-control':'private, no-store','set-cookie':'session=retained; Secure; HttpOnly','etag':'"old"'}}));}}`;
+test('actual edge HTML rewrite fixes child-psychology identity and conversion path while keeping privacy headers',async()=>{
+ const source=String.raw`import {repairUrlHealth} from './deployment/url-health-repair.mjs';export default{fetch(request){return repairUrlHealth(request,new Response('<html><head><title>Old title</title><meta name="description" content="Old description"><link rel="canonical" data-m="2" href="https://www.pinnacleblooms.org/child-psychological-counseling?gclid=test"><meta property="og:url" content="https://www.pinnacleblooms.org/child-psychological-counseling?gclid=test"></head><body><h1>Child counselling</h1><a href="/assets/abilityscore-summary.pdf" download>Download Summary</a><a href="/ABA%20/%20Behavioral%20Therapy?utm_source=google">ABA</a><img src="/Assets/OG/495.jpg" alt="Broken"></body></html>',{headers:{'content-type':'text/html','cache-control':'private, no-store','set-cookie':'session=retained; Secure; HttpOnly','etag':'"old"'}}));}}`;
  const b=await build({stdin:{contents:source,resolveDir:process.cwd()},bundle:true,format:'esm',write:false});
  const mf=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-04',script:b.outputFiles[0].text}));
  try{const r=await mf.dispatchFetch(origin+'/child-psychological-counseling?gclid=test'),s=await r.text();
- assert(s.includes('href="'+origin+'/child-psychological-counseling"'));assert(!s.includes('mobile.pinnacleblooms.org'));assert(s.includes('Read study evidence'));assert(!s.includes('download>'));assert(!s.includes('src="/Assets/OG/495.jpg"'));assert(s.includes('Pinnacle Blooms Network logo'));assert(s.includes('tel:+919100181181'));assert.equal(r.headers.get('cache-control'),'private, no-store');assert(r.headers.get('set-cookie').includes('session=retained'));assert.equal(r.headers.get('etag'),null);
+ assert(s.includes('href="'+origin+'/child-psychological-counseling"'));assert(!s.includes('canonical" data-m="2" href="'+origin+'/child-psychological-counseling?'));assert(s.includes('<title>Child Psychologist &amp; Psychological Counselling | Pinnacle Blooms</title>'));assert(s.includes('Child psychology and counselling support for children and families'));assert(s.includes('data-cta="child-psychology-call"'));assert(s.includes('data-cta="child-psychology-assessment"'));assert(s.includes('Read study evidence'));assert(!s.includes('download>'));assert(!s.includes('src="/Assets/OG/495.jpg"'));assert(s.includes('Pinnacle Blooms Network logo'));assert(s.includes('tel:+919100181181'));assert.equal(r.headers.get('cache-control'),'private, no-store');assert(r.headers.get('set-cookie').includes('session=retained'));assert.equal(r.headers.get('etag'),null);
  }finally{await mf.dispose();}
 });
 
