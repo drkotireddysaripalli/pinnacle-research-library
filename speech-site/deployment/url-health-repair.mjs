@@ -32,6 +32,9 @@ export function urlHealthAlias(request){
  if(!['GET','HEAD'].includes(request.method)||u.origin!==ORIGIN||request.headers.has('authorization')||request.headers.has('range'))return null;
  let p;try{p=decodeURIComponent(u.pathname).replace(/\/$/,'');}catch{return null;}
  const target=URL_ALIASES[p];if(!target)return null;
+ // A canonical trailing-slash URL normalises to the same alias key. Do not
+ // redirect that already-canonical request back to itself.
+ if(u.pathname===target)return null;
  u.pathname=target;return new Response(null,{status:301,headers:{location:u.href,'cache-control':'public, max-age=300','x-pinnacle-url-repair':'shared-url-health-20261009'}});
 }
 export function healthLinkTarget(value){
