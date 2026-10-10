@@ -1,5 +1,5 @@
 import type { ServiceContent } from './service-content';
-import everydayLife from '../assets/aba-hero-life-first-20260930.png';
+import abaPoster from '../assets/aba-therapy-complete-poster-20261010.png';
 import communicationJourney from '../assets/aba-transition-choice-20260930.png';
 import { abaPath, url } from './site';
 
@@ -7,12 +7,12 @@ export const abaEnquiry = url('/enroll-autism-speech-aba-therapies-india?service
 
 export const abaContent: ServiceContent = {
   id:'aba', path:abaPath, label:'ABA Therapy',
-  name:'ABA therapy and behavioural support for children', type:'Child behavioural support',
+  name:'ABA therapy and behavioural support for children', type:'ABA therapy and child behavioural support',
   title:'ABA Therapy for Children in India | Pinnacle Blooms Network',
   description:'ABA and behavioural support for communication, choice and participation in everyday life. See how Pinnacle begins, find a centre and call 9100 181 181.',
   enquiry:{url:abaEnquiry,label:'Start a conversation',mobileLabel:'Start a conversation'},
   guidanceNote:'Free, staffed telephone guidance 24/7. We help check the suitable professional, centre, appointment and current fees before you visit; visits and therapy are priced separately.',
-  discover:{label:'How behavioural support begins',href:'#service-fit'},
+  discover:{label:'Find a Pinnacle Centre',href:'#centres'},
   citations:[
     '/verify/','/verify/evidence/pinnacle-paradigm-shift.html','/verify/evidence/paradigm/04-one-shared-direction.html',
     '/verify/evidence/paradigm/05-practice-in-everyday-life.html','/verify/evidence/paradigm/06-feedback-that-shapes-care.html',
@@ -23,11 +23,11 @@ export const abaContent: ServiceContent = {
     'https://www.cdc.gov/autism/treatment/index.html',
     'https://www.who.int/news-room/fact-sheets/detail/rehabilitation',
   ]),
-  image:{source:everydayLife,alt:'An Indian child chooses a play activity while his mother and a behavioural-support professional in a full-sleeve white Pinnacle coat listen.',caption:'Begin with the child’s communication and choices.'},
+  image:{source:abaPoster,alt:'Pinnacle Blooms Network ABA Therapy for Children poster showing an Indian child choosing a play activity with his mother and a behavioural-support professional in a full-sleeve white Pinnacle coat. Communication, everyday skills and participation lead to a first conversation, assessment and centre search. Call 9100 181 181.',caption:'ABA Therapy for Children: communication, everyday skills and participation, beginning with the child’s individual needs.'},
   hero:{
-    heading:'Understand what is happening.',
+    heading:'Communication. Choices. Everyday skills.',
     emphasis:'Help your child take part.',
-    lead:'A busy transition. A request for a break. A moment in play or class.',
+    lead:'Understand what is happening. A busy transition. A request for a break. A moment in play or class.',
     copy:'Your child’s self-sufficient, mainstream-included life gives our work its direction. At Pinnacle, we connect behavioural support, communication, everyday practice and review around the abilities your child needs to take part.',
     moments:[{icon:'voice',label:'Be heard'},{icon:'home',label:'Make choices'},{icon:'people',label:'Take part'}]
   },
@@ -53,10 +53,12 @@ export const abaContent: ServiceContent = {
     {question:'Does respectful ABA require forced eye contact or stopping harmless differences?',answer:'Forced eye contact, suppressing harmless self-regulation and compliance for its own sake are not meaningful default goals. Ask why a proposed goal matters to your child and how comfort, choice and communication will be respected.'},
     {question:'What is a functional assessment?',answer:'A functional assessment examines patterns around a behaviour, including what happens before and after, communication, health, sensory or environmental factors, task demands and the need the child may be trying to meet. The professional decides what assessment is appropriate.'},
     {question:'How are health, communication, sensory and environmental factors considered?',answer:'Behaviour can have several contributing factors. The team should consider communication, pain or health concerns, emotional needs, sensory context, routines and environmental demands, and involve or refer to relevant professionals when indicated.'},
-    {question:'How does the family take part?',answer:'Families help identify the everyday moments that matter, describe what happens across routines and review what is becoming easier, what support remains and what the team should change. Family participation is informed partnership, not blame or a substitute for professional care.'},
+    {question:'How does the family take part?',answer:'Families help choose meaningful routines and review what happens. Ask the professional team to show you an agreed way to support communication or a manageable task at home, with room for your child to choose, refuse or ask for a break. Bring observations of comfort and support back to review. This partnership does not replace professional care or confirm that home visits are available.'},
     {question:'How can school observations inform review?',answer:'When relevant and consented, teachers can share what happens during classroom activities, transitions and participation. The team can compare those observations with home and therapy information while protecting the child’s privacy.'},
     {question:'How can ABA, speech therapy, occupational therapy and special education work together?',answer:'Each discipline contributes a distinct perspective. A child-specific plan may connect behavioural support with communication, routines, sensory-motor access or learning. Every child does not need every therapy.'},
     {question:'What does PinnacleAI support?',answer:'PinnacleAI GPT-OS v1.0.0 is non-diagnostic developmental-support software for ability measurement, readiness tracking, progress forecasting and adaptive plan support within its licensed scope. Professionals and families interpret the information and remain responsible for care decisions.'},
+    {question:'What happens at the first ABA conversation or assessment?',answer:'Begin with one everyday moment, your questions and any relevant reports you already have. Before a visit, the team confirms the suitable professional, centre, appointment and fees. The professional may observe communication, play or a routine, discuss what needs further assessment and explain a proposed next step. Ask how the goal will be reviewed before deciding.'},
+    {question:'What will ABA support cost, and how is the schedule decided?',answer:'The team confirms current fees, appointment options and the proposed process with you before enrolment. The assessed need, meaningful goal and professional review guide the plan; no fixed programme, number of sessions or outcome suits every child. Free telephone guidance is separate from assessment and therapy fees.'},
     {question:'Is ABA available at every Pinnacle centre?',answer:'Service and professional availability can differ by location. Call 9100 181 181 or use the centre directory so the team can confirm a suitable centre, professional, appointment and current fees before you travel.'}
   ]
 };

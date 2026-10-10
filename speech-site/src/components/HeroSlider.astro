@@ -22,7 +22,7 @@ const slides = [{image:content.image.source,alt:content.image.alt,caption:conten
       <div class="hero-evidence"><Icon name="shield" size={18} /><span>PinnacleAI software: <a href={url('/verify/evidence/records/md5.html')}>MD-5 licence</a> · <a href={url('/verify/evidence/bis.pdf#page=2')}>BIS scope</a></span></div>
       <a class="hero-discover" href={content.discover?.href || '#first-visit'}>{content.discover?.label || 'See what to expect at your first visit'} <span aria-hidden="true">↓</span></a>
     </div>
-    <div class="hero-visual" data-carousel role="region" aria-roledescription="carousel" aria-label={content.label+' in everyday life'}>
+    <div class:list={["hero-visual", {"hero-visual--complete-poster": content.id === 'aba'}]} data-carousel role="region" aria-roledescription="carousel" aria-label={content.label+' in everyday life'}>
       {slides.map((slide, index) => <figure class="hero-slide" role="group" aria-roledescription="slide" aria-label={(index+1)+' of '+slides.length} hidden={index!==0}>
         <Image src={slide.image} widths={[480,720,960,1200]} sizes="(min-width: 1360px) 680px, (min-width: 761px) 50vw, calc(100vw - 36px)" width={1200} height={1000} fit="cover" format="webp" quality={80} alt={slide.alt} loading={index===0 ? 'eager' : 'lazy'} fetchpriority={index===0 ? 'high' : 'auto'} />
       </figure>)}
@@ -47,3 +47,9 @@ const slides = [{image:content.image.source,alt:content.image.alt,caption:conten
     carousel.querySelector('[data-next]')?.addEventListener('click', () => show(1));
   }
 </script>
+<style>
+  :global(.hero-visual--complete-poster .hero-slide img) {
+    object-fit: contain;
+    background: #fff;
+  }
+</style>
