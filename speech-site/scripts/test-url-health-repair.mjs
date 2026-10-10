@@ -28,6 +28,7 @@ test('precise malformed service and sitemap aliases preserve attribution and ref
  assert.equal(healthLinkTarget('/Special%20Education%20/%20Cognitive%20Therapy#next'),origin+'/best-special-education-center-call-9100181181#next');
  assert.equal(urlHealthAlias(new Request(origin+'/allmirracles-sitemap.xml')).headers.get('location'),origin+'/sitemaps/miracles.xml');
  assert.equal(urlHealthAlias(new Request(origin+'/verify')).headers.get('location'),origin+'/verify/');
+ assert.equal(urlHealthAlias(new Request(origin+'/verify/')),null);
  assert.equal(healthLinkTarget('/innovation'),origin+'/pinnacle-ai-innovations-revolutionizing-autism-history');
  assert.equal(healthLinkTarget('/franchises?utm_source=internal'),origin+'/franchise-autism-therapy-center?utm_source=internal');
  assert.equal(healthLinkTarget('/verify/evidence/operating-metrics.html#source-pinpoints'),origin+'/verify/evidence/records/operating-metrics.html#source-pinpoints');
