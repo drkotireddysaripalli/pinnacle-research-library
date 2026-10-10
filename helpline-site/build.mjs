@@ -89,7 +89,8 @@ const font = await readFile(path.join(directory, 'anek-telugu-subset.woff2'));
 const license = await readFile(path.join(directory, 'anek-telugu-OFL.txt'), 'utf8');
 html = html.replace('@@SCHEMA@@', JSON.stringify(schema).replaceAll('<', '\\u003c'))
   .replace('@@FONT_LICENSE@@', license.replaceAll('--', '—'));
-const phoneAnalytics = await readFile(path.join(directory, 'phone-analytics.js'), 'utf8');
+// HTML parsers normalise CRLF before checking an inline-script CSP hash.
+const phoneAnalytics = (await readFile(path.join(directory, 'phone-analytics.js'), 'utf8')).replaceAll('\r\n','\n').replaceAll('\r','\n');
 html = html.replace('@@PHONE_ANALYTICS@@', phoneAnalytics);
 const analyticsHash = createHash('sha256').update(phoneAnalytics).digest('base64');
 if (html.includes('@@')) throw new Error('Unfilled template placeholder');

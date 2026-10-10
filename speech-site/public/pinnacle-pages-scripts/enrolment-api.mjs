@@ -1,6 +1,6 @@
 // Public form contract. Cloudflare translates this deliberately small envelope
 // to the existing PinnacleAI enrolment workflow without exposing that service.
-import {normaliseAcquisition} from './enrolment-source.mjs?v=source-20261008';
+import {normaliseAcquisition} from './enrolment-source.mjs?v=helpline-source-20261010';
 export const services = new Set(['help','autism','speech','occupational','aba','education','other']);
 export function validateEnrolment(values, centreIds) {
  const errors={};

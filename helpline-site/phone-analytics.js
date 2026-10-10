@@ -2,7 +2,9 @@
 (() => {
   const id = 'G-H9CLX1WJ7R'; // Existing approved evidence stream; enhanced measurement is off.
   const canonical = 'https://www.pinnacleblooms.org/national-autism-helpline';
-  const storageKey = 'pinnacle-helpline-measurement-choice-v3';
+  const storageKey = 'pinnacle-helpline-measurement-choice-v4';
+  const sourceKey = 'pinnacle-enquiry-source-v1', sourceLifetime = 30 * 86400000;
+  const landingPath = '/national-autism-helpline', capturedAt = Date.now();
   // Only the two fixed ad campaign labels may enter optional analytics.
   // Never forward the full URL, unrecognised UTMs, click IDs or visitor input.
   const allowedCampaigns = new Set(['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries']);
@@ -15,6 +17,9 @@
       return {campaign_source:'chatgpt',campaign_medium:'paid',campaign_name:name[0]};
     } catch { return {}; }
   })();
+  // PR12's fixed analytics labels are unchanged. The new retained source is
+  // stricter: other campaign fields or click IDs cannot enter its handoff.
+  const sourceCampaignAllowed = ![...new URL(location.href).searchParams.keys()].some(key => (/^utm_/i.test(key) || /^(?:gclid|dclid|msclkid|fbclid|gbraid|wbraid|oppref)$/i.test(key)) && !['utm_source','utm_medium','utm_campaign'].includes(key));
   const lifetime = 180 * 86400000;
   const placements = new Set(['nav','hero','concerns','first_call','telugu','service_reference','closing','mobile_sticky']);
   const panel = document.querySelector('[data-analytics-panel]');
@@ -22,7 +27,27 @@
   if (!panel || !status) return;
   const production = location.origin === 'https://www.pinnacleblooms.org' && location.pathname === '/national-autism-helpline';
   const blocked = navigator.globalPrivacyControl === true;
+  let validationTraffic = new URL(location.href).searchParams.has('validation_test');
+  try {
+    if (validationTraffic) sessionStorage.setItem('pinnacle-validation-v1', String(Date.now()));
+    else { const at = Number(sessionStorage.getItem('pinnacle-validation-v1')); validationTraffic = at > 0 && at <= Date.now() && Date.now() - at < 86400000; }
+  } catch {}
   let enabled = false, loaded = false;
+  const currentPermission = () => {
+    try { const choice = JSON.parse(localStorage.getItem(storageKey)); return choice?.value === 'accepted' && Number.isFinite(choice.at) && choice.at <= Date.now() && Date.now() - choice.at < lifetime; } catch { return false; }
+  };
+  const forgetHelplineSource = () => {
+    try { if (JSON.parse(localStorage.getItem(sourceKey))?.landingPath === landingPath) localStorage.removeItem(sourceKey); } catch {}
+  };
+  const rememberSource = () => {
+    if (!production || blocked || navigator.globalPrivacyControl || validationTraffic || !currentPermission() || !campaign.campaign_name || !sourceCampaignAllowed) return;
+    const fields = {utm_source:'chatgpt',utm_medium:'paid',utm_campaign:campaign.campaign_name};
+    try {
+      const prior = JSON.parse(localStorage.getItem(sourceKey));
+      if (prior?.schemaVersion === 1 && prior.consent === 'analytics_accepted' && prior.landingPath === landingPath && Number.isSafeInteger(prior.capturedAt) && prior.capturedAt <= Date.now() && Date.now() - prior.capturedAt <= sourceLifetime && Object.keys(prior.fields || {}).length === 3 && Object.entries(fields).every(([key,value]) => prior.fields[key] === value)) return;
+      localStorage.setItem(sourceKey, JSON.stringify({schemaVersion:1,consent:'analytics_accepted',capturedAt,landingPath,fields}));
+    } catch {} // Optional source storage must never obstruct calling or the callback link.
+  };
   const tell = text => { status.textContent = text; };
   const clearCookies = () => {
     for (const cookie of document.cookie.split(';')) {
@@ -32,14 +57,15 @@
     }
   };
   const send = (name, parameters) => {
-    if (!enabled || blocked) return;
+    if (!enabled || blocked || navigator.globalPrivacyControl || validationTraffic || !currentPermission()) return;
     try {
       window.gtag('event', name, { ...parameters, ...campaign, page_location: canonical, page_title: 'Pinnacle National Autism Helpline', page_referrer: '', send_to: id });
     } catch { /* Collection must never interrupt a telephone link. */ }
   };
   const start = () => {
-    if (!production || blocked) return;
+    if (!production || blocked || navigator.globalPrivacyControl || validationTraffic) return;
     enabled = true;
+    rememberSource();
     window['ga-disable-' + id] = false;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
@@ -78,6 +104,7 @@
       window['ga-disable-' + id] = true;
       if (loaded) { try { window.gtag('consent','update',{ analytics_storage:'denied' }); } catch {} }
       clearCookies();
+      forgetHelplineSource();
       tell(blocked ? 'Optional measurement is off because Global Privacy Control is enabled.' : 'Optional measurement is off. You can call as usual.');
     }
   };
@@ -93,6 +120,14 @@
     if (saved.value === 'accepted') { try { start(); tell('Optional measurement allowed. You can turn it off here at any time.'); } catch { enabled = false; } }
     else if (saved.value === 'declined') tell('Optional measurement is off. You can call as usual.');
   }
+  if (!currentPermission() || validationTraffic) forgetHelplineSource();
+  window.addEventListener?.('storage', event => {
+    if ((event.key === storageKey || event.key === null) && !currentPermission()) {
+      enabled = false; window['ga-disable-' + id] = true; clearCookies(); forgetHelplineSource();
+      if (loaded) { try { window.gtag('consent','update',{analytics_storage:'denied'}); } catch {} }
+      tell('Optional measurement is off. You can call or request a callback as usual.');
+    }
+  });
   // One bubbling click listener also covers keyboard activation; never intercept dialing.
   document.addEventListener('click', event => {
     const link = event.target?.closest?.('a[data-call-placement]');

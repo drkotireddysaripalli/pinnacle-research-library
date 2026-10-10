@@ -66,6 +66,9 @@
   const campaignFields = {utm_id:'campaign_id',utm_source:'campaign_source',utm_medium:'campaign_medium',utm_campaign:'campaign_name',utm_term:'campaign_term',utm_content:'campaign_content'};
   const campaignKeys = [...Object.keys(campaignFields),'utm_source_platform','utm_creative_format','utm_marketing_tactic'];
   const clickKeys = ['gclid','dclid','msclkid','fbclid','gbraid','wbraid'];
+  const helplinePath='/national-autism-helpline',helplineChoiceKey='pinnacle-helpline-measurement-choice-v4';
+  const helplineCampaigns=new Set(['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries']);
+  const validHelplineFields=fields=>!!fields&&typeof fields==='object'&&!Array.isArray(fields)&&Object.keys(fields).length===3&&fields.utm_source==='chatgpt'&&fields.utm_medium==='paid'&&helplineCampaigns.has(fields.utm_campaign);
   const campaigns = Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
   const measurementURL = new URL(canonical);
   const safeAttribution = (value, click) => {
@@ -88,6 +91,9 @@
   };
   try {
     const parameters = new URL(location.href).searchParams;
+    if(parameters.getAll('utm_source').some(value=>value.toLowerCase()==='chatgpt')){
+      if(!['utm_source','utm_medium','utm_campaign'].every(key=>parameters.getAll(key).length===1)||!validHelplineFields(Object.fromEntries([...parameters].filter(([key])=>[...campaignKeys,...clickKeys,'oppref'].includes(key)))))throw Error('Unapproved ChatGPT tuple');
+    }
     for (const key of [...campaignKeys,...clickKeys]) {
       const values = parameters.getAll(key);
       if (values.length !== 1) continue;
@@ -141,13 +147,21 @@
   const sourceKey='pinnacle-enquiry-source-v1',sourceLifetime=30*86400000;
   const acquisitionPath=location.pathname==='/speech-therapy/service-information'?'/top-speech-therapy-center-india-proven-improvement-rate':new URL(canonical).pathname;
   const acquisitionPaths=new Set(['/centers','/autism-therapy','/speech-aba-autism-assessments','/top-speech-therapy-center-india-proven-improvement-rate','/best-occupational-therapy-center-india-proven-improvement-rate','/best-aba-therapy-center-india-proven-improvement-rate','/best-special-education-center-call-9100181181','/enroll-autism-speech-aba-therapies-india','/pinnacleai','/abilityscore','/seven-readiness-indexes','/personal-development-kernel','/prognose','/therapeuticai','/everyday-therapy','/fusion-module','/reassess-review-repeat','/self-sufficient','/mainstream','/faq','/sunshine','/allmirracles']);
+  acquisitionPaths.add(helplinePath);
   if(disclosure&&!isBookshop)disclosure.textContent+=' With permission, a validated campaign record can stay on this device for up to 30 days and accompany your enquiry into our protected receiving system. Turning analytics off removes this optional device record.';
   const handedOffLinks=new Map();
   const forgetSource=()=>{for(const [link,href]of handedOffLinks)link.href=href;handedOffLinks.clear();try{localStorage.removeItem(sourceKey);}catch{}};
-  const readSource=()=>{
+  const savedPermission=choiceKey=>{
+    try{const choice=JSON.parse(localStorage.getItem(choiceKey));return choice?.value==='accepted'&&Number.isFinite(choice.at)&&choice.at<=Date.now()&&Date.now()-choice.at<lifetime;}catch{return false;}
+  };
+  const readSource=(snapshot)=>{
+    // Neither stream's choice grants permission to the other. Check at use time
+    // so expiry and withdrawal in another tab cannot revive optional attribution.
+    if(!enabled||navigator.globalPrivacyControl||!savedPermission(key))return null;
     try{
-      const saved=JSON.parse(localStorage.getItem(sourceKey));
-      if(!saved||saved.schemaVersion!==1||saved.consent!=='analytics_accepted'||!Number.isSafeInteger(saved.capturedAt)||saved.capturedAt>Date.now()||Date.now()-saved.capturedAt>sourceLifetime||!acquisitionPaths.has(saved.landingPath))return null;
+      const saved=snapshot===undefined?JSON.parse(localStorage.getItem(sourceKey)):snapshot;
+      if(!saved||Object.keys(saved).some(key=>!['schemaVersion','consent','capturedAt','landingPath','fields'].includes(key))||saved.schemaVersion!==1||saved.consent!=='analytics_accepted'||!Number.isSafeInteger(saved.capturedAt)||saved.capturedAt>Date.now()||Date.now()-saved.capturedAt>sourceLifetime||!acquisitionPaths.has(saved.landingPath)){if(saved&&snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
+      if(saved.landingPath===helplinePath&&(!savedPermission(helplineChoiceKey)||!validHelplineFields(saved.fields))){if(snapshot===undefined)localStorage.removeItem(sourceKey);return null;}
       const fields={};for(const [field,value]of Object.entries(saved.fields||{})){if(![...campaignKeys,...clickKeys].includes(field)||safeAttribution(value,clickKeys.includes(field))!==value)return null;fields[field]=value;}
       if(!Object.keys(fields).length)return null;
       return {schemaVersion:1,consent:'analytics_accepted',capturedAt:saved.capturedAt,landingPath:saved.landingPath,fields};
@@ -168,12 +182,19 @@
   };
   // Form submission must still work when measurement is declined or unavailable.
   window.pinnacleEnquirySource=()=>production&&enabled&&!blocked&&!knowledgeSearch&&!isBookshop&&!validationTraffic?readSource():null;
+  const permittedCampaigns=()=>{
+    const retained=window.pinnacleEnquirySource();
+    if(!Object.keys(Object.fromEntries(measurementURL.searchParams)).length&&retained?.landingPath===helplinePath){
+      return {...campaigns,campaign_source:retained.fields.utm_source,campaign_medium:retained.fields.utm_medium,campaign_name:retained.fields.utm_campaign};
+    }
+    return campaigns;
+  };
   // The cart asks at navigation time, so withdrawal also stops a pending handoff.
   if (isBookshop) window.pinnacleBookAnalyticsAllowed = () => production && enabled && !navigator.globalPrivacyControl;
   const tell = text => { status.textContent = text; };
   const send = (name, parameters) => {
-    if (!production || !enabled || blocked || knowledgeSearch || validationTraffic) return;
-    try { window.gtag('event', name, {...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
+    if (!production || !enabled || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic) return;
+    try { window.gtag('event', name, {...permittedCampaigns(), ...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
   };
   // These identify tagged navigation/contact intent, never completed calls or
   // conversions. Use only the already sanitised current/permitted source fields.
@@ -286,7 +307,7 @@
     rememberSource();
     if(validationTraffic)return;
     if (loaded) { window.gtag('consent','update',{analytics_storage:'granted'}); return; }
-    configureTag('granted',measurementLocation,campaigns);
+    configureTag('granted',measurementLocation,permittedCampaigns());
     loaded = true;
     send('page_view',{page_group:pageGroup,schema_version:2});
     sendGoogleAds('google_ads_arrival',{interaction_kind:'navigation'},false);
@@ -320,6 +341,12 @@
     let saved;try { saved=JSON.parse(localStorage.getItem(key)); } catch {}
     if (saved && Number.isFinite(saved.at) && saved.at<=Date.now() && Date.now()-saved.at<lifetime) choose(saved.value, false);
   }
+  window.addEventListener?.('storage',event=>{
+    if(event.key===key||event.key===null){if(!savedPermission(key))choose('declined',false);}
+    if(event.key===helplineChoiceKey&&!savedPermission(helplineChoiceKey)){
+      try{if(JSON.parse(localStorage.getItem(sourceKey))?.landingPath===helplinePath)forgetSource();}catch{}
+    }
+  });
   // Only a currently tagged landing is an arrival; a retained journey is not.
   sendGoogleAds('google_ads_arrival',{interaction_kind:'navigation'},false);
   // Fixed event vocabulary only; arbitrary query values and form data are excluded.
@@ -328,11 +355,18 @@
     const receipt=event?.detail?.receipt;
     if(!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k)))return;
     const callbackPage=(['centre_detail','centre_directory','occupational_therapy','aba_therapy','autism_therapy'].includes(pageGroup)||location.pathname==='/speech-therapy/service-information')&&document.querySelector('#pinnacle-enrolment[data-callback-contract="durable-enrolment-v1"][data-api-endpoint="/api/enrolment"]');
-    if ((pageGroup !== 'enrolment'&&!callbackPage) || acceptedRequests.has(receipt.requestId) || !production || blocked || knowledgeSearch || validationTraffic || preference==='declined') return;
+    if ((pageGroup !== 'enrolment'&&!callbackPage) || acceptedRequests.has(receipt.requestId) || !production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || preference==='declined' || (enabled&&!savedPermission(key))) return;
     try {
       if (!enabled) configureTag('denied',canonical);
       const parameters={schema_version:3,page_group:'enrolment',destination:'existing_enrolment_workflow',measurement_mode:enabled?'consented':'denied_storage'};
-      if (enabled) send('enquiry_accepted',parameters);
+      if (enabled) {
+        // The receipt belongs to the submitted snapshot, not a later tab/URL.
+        // Revalidate its expiry and both applicable permissions at emission.
+        const acceptedSource=readSource(event.detail?.acquisition||null);
+        const acceptedCampaigns=Object.fromEntries(Object.values(campaignFields).map(field=>[field,'']));
+        for(const [field,name]of Object.entries(campaignFields))if(acceptedSource?.fields[field])acceptedCampaigns[name]=acceptedSource.fields[field];
+        send('enquiry_accepted',{...parameters,...acceptedCampaigns});
+      }
       else window.gtag('event','enquiry_accepted',{...parameters,page_variant:variant,page_location:canonical,page_title:pageTitle,page_referrer:'',send_to:id,transport_type:'beacon'});
       acceptedRequests.add(receipt.requestId);
     } catch {} // The receipt and parent confirmation survive a vendor failure.

@@ -3,19 +3,19 @@ import vm from 'node:vm';
 import {readFile,writeFile} from 'node:fs/promises';
 const source=await readFile(new URL('./phone-analytics.js',import.meta.url),'utf8');
 const html=await readFile(new URL('./preview.html',import.meta.url),'utf8');
-const id='G-H9CLX1WJ7R',key='pinnacle-helpline-measurement-choice-v3';
+const id='G-H9CLX1WJ7R',key='pinnacle-helpline-measurement-choice-v4';
 const links=[...html.matchAll(/<a\b([^>]+data-call-placement="([^"]+)"[^>]*)>/g)].map(m=>({dataset:{callPlacement:m[2]},href:m[1].match(/href="([^"]+)"/)[1]}));
 function browser(options={}){
  const calls=[],scripts=[],listeners={},controls={},writes=[];
  const panel={hidden:true},status={textContent:''},jar=new Map(Object.entries(options.cookies||{}));
  const storage=new Map(options.saved?[[key,JSON.stringify(options.saved)]]:[]);
- if(options.legacySaved)storage.set('pinnacle-helpline-measurement-choice-v2',JSON.stringify(options.legacySaved));
+ if(options.legacySaved)storage.set('pinnacle-helpline-measurement-choice-v3',JSON.stringify(options.legacySaved));
  for(const value of ['accepted','declined'])controls[value]={dataset:{analyticsChoice:value},addEventListener:(type,fn)=>controls[value][type]=fn};
  const document={querySelector:s=>s==='[data-analytics-panel]'?panel:status,querySelectorAll:()=>Object.values(controls),head:{append:s=>scripts.push(s)},createElement:()=>({}),addEventListener:(type,fn)=>(listeners[type]??=[]).push(fn)};
  Object.defineProperty(document,'cookie',{get:()=>[...jar].map(([k,v])=>k+'='+v).join('; '),set:value=>{writes.push(value);jar.delete(value.split('=')[0]);}});
  const window={};
  const location=new URL(options.url||'https://www.pinnacleblooms.org/national-autism-helpline?email=PRIVATE_CANARY#PRIVATE_CANARY');
- const localStorage={getItem:k=>{if(options.storageFailure)throw Error('unavailable');return storage.get(k)||null;},setItem:(k,v)=>{if(options.storageFailure)throw Error('unavailable');storage.set(k,v);}};
+ const localStorage={getItem:k=>{if(options.storageFailure)throw Error('unavailable');return storage.get(k)||null;},setItem:(k,v)=>{if(options.storageFailure)throw Error('unavailable');storage.set(k,v);},removeItem:k=>storage.delete(k)};
  const context={window,document,location,navigator:{globalPrivacyControl:!!options.gpc},localStorage,Date,Set,Number,URL};
  vm.runInNewContext(source,context);
  const commands=()=>Array.from(window.dataLayer||[],args=>Array.from(args));
@@ -48,7 +48,7 @@ test('Exactly the two fixed ChatGPT campaign tuples accompany existing consented
   }
   const config=b.commands().find(c=>c[0]==='config'&&c[1]===id)[2];assert.equal(config.campaign_name,name);
   const adsConfig=b.commands().find(c=>c[0]==='config'&&c[1]==='AW-10810823199')[2];assert.equal(adsConfig.campaign_name,undefined);
-  assert.deepEqual([...b.storage.keys()],[key]);
+  assert.deepEqual([...b.storage.keys()],[key,'pinnacle-enquiry-source-v1']);
  }
 });
 test('Unknown, partial, duplicated and injected campaign tuples never enter analytics',()=>{
@@ -83,7 +83,7 @@ test('Repeated and renewed consent does not duplicate attributed page views, and
  assert.equal(b.scripts.length,1);assert.deepEqual(b.events().map(e=>e[1]),['page_view','phone_link_click','phone_link_click']);
 });
 test('New disclosure describes limited fixed campaign labels and preserves refusal-safe calling',()=>{
- assert(html.includes('fixed campaign name, source and medium'));assert(html.includes('You can call with measurement off.'));assert(source.includes('pinnacle-helpline-measurement-choice-v3'));
+ assert(html.includes('fixed campaign name, source and medium'));assert(html.includes('You can call or request a callback with measurement off.'));assert(source.includes('pinnacle-helpline-measurement-choice-v4'));
 });
 const report={checkedAt:new Date().toISOString(),passed:results.length,results,scope:'First-party code tests. Actual third-party request/ingestion is checked separately in the browser. Phone-link events do not establish connected calls.'};
 await writeFile(new URL('./phone-analytics-test-results.json',import.meta.url),JSON.stringify(report,null,2)+'\n');

@@ -1,6 +1,12 @@
 // Shared public/private validation. No raw URL, referrer, form field or free text
 // belongs in the protected acquisition envelope.
 export const ACQUISITION_LIFETIME_MS=30*86400000;
+export const HELPLINE_PATH='/national-autism-helpline';
+export const HELPLINE_CONSENT_KEY='pinnacle-helpline-measurement-choice-v4';
+export const CHATGPT_CAMPAIGNS=['pinnacle_vizag_call_enquiries','pinnacle_hyderabad_vijayawada_call_enquiries'];
+export function validHelplineCampaign(fields){
+ return !!fields&&typeof fields==='object'&&!Array.isArray(fields)&&Object.keys(fields).length===3&&fields.utm_source==='chatgpt'&&fields.utm_medium==='paid'&&CHATGPT_CAMPAIGNS.includes(fields.utm_campaign);
+}
 export const ACQUISITION_KEYS=['utm_id','utm_source','utm_medium','utm_campaign','utm_term','utm_content','utm_source_platform','utm_creative_format','utm_marketing_tactic','gclid','dclid','msclkid','fbclid','gbraid','wbraid'];
 const CLICK_KEYS=new Set(['gclid','dclid','msclkid','fbclid','gbraid','wbraid']);
 export function safeAcquisitionValue(value,key){
@@ -15,7 +21,8 @@ export function normaliseAcquisition(value,now=Date.now()){
  if(!value||typeof value!=='object'||Array.isArray(value)||Object.keys(value).some(k=>!['schemaVersion','consent','capturedAt','landingPath','fields'].includes(k))||value.schemaVersion!==1||value.consent!=='analytics_accepted')return null;
  if(!Number.isSafeInteger(value.capturedAt)||value.capturedAt>now+60000||now-value.capturedAt>ACQUISITION_LIFETIME_MS)return null;
  // Only coarse public acquisition surfaces, never a question, child or account URL.
- if(typeof value.landingPath!=='string'||value.landingPath.length>160||!/^\/(?:centers|autism-therapy|speech-aba-autism-assessments|top-speech-therapy-center-india-proven-improvement-rate|best-occupational-therapy-center-india-proven-improvement-rate|best-aba-therapy-center-india-proven-improvement-rate|best-special-education-center-call-9100181181|enroll-autism-speech-aba-therapies-india|pinnacleai|abilityscore|seven-readiness-indexes|personal-development-kernel|prognose|therapeuticai|everyday-therapy|fusion-module|reassess-review-repeat|self-sufficient|mainstream|faq|sunshine|allmirracles)$/.test(value.landingPath))return null;
+ if(typeof value.landingPath!=='string'||value.landingPath.length>160||!/^\/(?:national-autism-helpline|centers|autism-therapy|speech-aba-autism-assessments|top-speech-therapy-center-india-proven-improvement-rate|best-occupational-therapy-center-india-proven-improvement-rate|best-aba-therapy-center-india-proven-improvement-rate|best-special-education-center-call-9100181181|enroll-autism-speech-aba-therapies-india|pinnacleai|abilityscore|seven-readiness-indexes|personal-development-kernel|prognose|therapeuticai|everyday-therapy|fusion-module|reassess-review-repeat|self-sufficient|mainstream|faq|sunshine|allmirracles)$/.test(value.landingPath))return null;
+ if(value.landingPath===HELPLINE_PATH&&!validHelplineCampaign(value.fields))return null;
  if(!value.fields||typeof value.fields!=='object'||Array.isArray(value.fields))return null;
  const entries=Object.entries(value.fields);if(!entries.length||entries.length>ACQUISITION_KEYS.length)return null;
  const fields={};for(const [key,raw]of entries){const safe=safeAcquisitionValue(raw,key);if(safe===null||safe!==raw)return null;fields[key]=safe;}

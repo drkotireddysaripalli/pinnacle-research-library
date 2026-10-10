@@ -1,0 +1,158 @@
+{
+  "at": "2026-10-10T00:48:35.323Z",
+  "passed": true,
+  "browser": "Microsoft Edge / Chromium",
+  "os": "win32",
+  "physicalDevice": false,
+  "network": "All requests intercepted locally; external requests blocked. No speed simulation.",
+  "cases": [
+    {
+      "state": "accepted-mobile",
+      "campaign": "pinnacle_vizag_call_enquiries",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "submissions": 1,
+      "handoffs": 1,
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india",
+        "acquisition": {
+          "schemaVersion": 1,
+          "consent": "analytics_accepted",
+          "capturedAt": 1791593296383,
+          "landingPath": "/national-autism-helpline",
+          "fields": {
+            "utm_source": "chatgpt",
+            "utm_medium": "paid",
+            "utm_campaign": "pinnacle_vizag_call_enquiries"
+          }
+        }
+      },
+      "receiptState": "accepted",
+      "privateReference": "qa_fixture_v1:chatgpt-browser-only",
+      "acceptedEvents": 1,
+      "reloadSubmissions": 0,
+      "reloadAcceptedEvents": 0,
+      "phoneLinks": 8,
+      "pageErrors": []
+    },
+    {
+      "state": "accepted-desktop",
+      "campaign": "pinnacle_hyderabad_vijayawada_call_enquiries",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "submissions": 1,
+      "handoffs": 1,
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india",
+        "acquisition": {
+          "schemaVersion": 1,
+          "consent": "analytics_accepted",
+          "capturedAt": 1791593302032,
+          "landingPath": "/national-autism-helpline",
+          "fields": {
+            "utm_source": "chatgpt",
+            "utm_medium": "paid",
+            "utm_campaign": "pinnacle_hyderabad_vijayawada_call_enquiries"
+          }
+        }
+      },
+      "receiptState": "accepted",
+      "privateReference": "qa_fixture_v1:chatgpt-browser-only",
+      "acceptedEvents": 1,
+      "reloadSubmissions": 0,
+      "reloadAcceptedEvents": 0,
+      "phoneLinks": 8,
+      "pageErrors": []
+    },
+    {
+      "state": "refused",
+      "campaign": "pinnacle_vizag_call_enquiries",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "submissions": 1,
+      "handoffs": 1,
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india"
+      },
+      "receiptState": "accepted",
+      "privateReference": "qa_fixture_v1:chatgpt-browser-only",
+      "acceptedEvents": 0,
+      "reloadSubmissions": 0,
+      "reloadAcceptedEvents": 0,
+      "phoneLinks": 8,
+      "pageErrors": []
+    },
+    {
+      "state": "unknown",
+      "campaign": "pinnacle_vizag_call_enquiries",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "submissions": 1,
+      "handoffs": 1,
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india",
+        "acquisition": {
+          "schemaVersion": 1,
+          "consent": "analytics_accepted",
+          "capturedAt": 1791593310220,
+          "landingPath": "/national-autism-helpline",
+          "fields": {
+            "utm_source": "chatgpt",
+            "utm_medium": "paid",
+            "utm_campaign": "pinnacle_vizag_call_enquiries"
+          }
+        }
+      },
+      "receiptState": "uncertain",
+      "privateReference": null,
+      "acceptedEvents": 0,
+      "reloadSubmissions": 0,
+      "reloadAcceptedEvents": 0,
+      "phoneLinks": 8,
+      "pageErrors": []
+    },
+    {
+      "state": "rejected",
+      "campaign": "pinnacle_vizag_call_enquiries",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "submissions": 1,
+      "handoffs": 0,
+      "source": {
+        "page": "/enroll-autism-speech-aba-therapies-india",
+        "acquisition": {
+          "schemaVersion": 1,
+          "consent": "analytics_accepted",
+          "capturedAt": 1791593312698,
+          "landingPath": "/national-autism-helpline",
+          "fields": {
+            "utm_source": "chatgpt",
+            "utm_medium": "paid",
+            "utm_campaign": "pinnacle_vizag_call_enquiries"
+          }
+        }
+      },
+      "receiptState": "rejected",
+      "privateReference": null,
+      "acceptedEvents": 0,
+      "reloadSubmissions": 0,
+      "reloadAcceptedEvents": 0,
+      "phoneLinks": 8,
+      "pageErrors": []
+    }
+  ],
+  "blockedExternalRequests": 13,
+  "productionEnquiries": 0,
+  "actualGoogleHits": 0,
+  "callsPlaced": 0
+}

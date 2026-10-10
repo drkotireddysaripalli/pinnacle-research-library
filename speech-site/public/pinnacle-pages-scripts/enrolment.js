@@ -1,4 +1,4 @@
-import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=source-20261008';
+import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=helpline-source-20261010';
 const form=document.getElementById('pinnacle-enrolment');
 if(form){
  const preview=form.dataset.preview==='true',endpoint=form.dataset.apiEndpoint;
@@ -64,7 +64,7 @@ if(form){
   if(result.state==='accepted'){
    // Persist before emitting. Reloading a receipt never re-emits the GA4 event.
    try{attemptStore.write({...attempt,state:'accepted',receipt:result.receipt,contractVersion:result.contractVersion});}catch{}
-   showAccepted();document.dispatchEvent(new CustomEvent('pinnacle:enquiry-accepted',{detail:{receipt:result.receipt}}));
+   showAccepted();document.dispatchEvent(new CustomEvent('pinnacle:enquiry-accepted',{detail:{receipt:result.receipt,acquisition:payload.source.acquisition||null}}));
   }
   else if(result.state==='rejected'){
    try{attemptStore.clear();}catch{uncertain=true;}

@@ -13,7 +13,7 @@ export const focusedSuites = [
   ['scripts/test-public-mobile-recovery.mjs','scripts/test-materials-media.mjs'],
   ['scripts/test-merchant-policy.mjs'],
   ['scripts/test-paid-centre-entry.mjs','scripts/test-centre-measurement.mjs'],
-  ['scripts/test-centre-google-feed.mjs','scripts/test-enrolment-receipt.mjs'],
+  ['scripts/test-centre-google-feed.mjs','scripts/test-enrolment-receipt.mjs','scripts/test-helpline-acquisition.mjs','../helpline-site/phone-analytics-tests.mjs'],
   ['scripts/test-enrolment-lead-slack.mjs','scripts/test-enrolment-slack-attachment.mjs'],
 ];
 export const launcherSuites=['build-window/candidate.test.mjs','build-window/frog-settings.test.mjs','build-window/preview-process.test.mjs'];
