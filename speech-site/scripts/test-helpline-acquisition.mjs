@@ -24,6 +24,28 @@ test('accepted attribution uses its submitted snapshot despite a concurrent sour
   form.accepted(receipt,submitted);assert.equal(eventRows(form)[0][2].campaign_name,campaigns[0]);
  }
 });
+test('concurrent Google tabs retain each submission gclid and UTM envelope through durable intake',async()=>{
+ const clickA='EAIaIQobChMIqaClickEnvelopeSourceA',clickB='EAIaIQobChMIqaClickEnvelopeSourceB';
+ const store=new Map(),tagA='?utm_source=google&utm_medium=cpc&utm_campaign=google_tab_a&gclid='+clickA;
+ const tagB='?utm_source=google&utm_medium=cpc&utm_campaign=google_tab_b&gclid='+clickB;
+ const landingA=client({path:'/centers',search:tagA,store});landingA.choose('accepted');
+ const formA=client({path:enrol,store});formA.choose('accepted');const submittedA=formA.source();
+ const landingB=client({path:'/autism-therapy',search:tagB,store});landingB.choose('accepted');
+ const formB=client({path:enrol,store});formB.choose('accepted');const submittedB=formB.source();
+ assert.equal(submittedA.fields.gclid,clickA);assert.equal(submittedA.fields.utm_campaign,'google_tab_a');
+ assert.equal(submittedB.fields.gclid,clickB);assert.equal(submittedB.fields.utm_campaign,'google_tab_b');
+ const f=fixtureLedger(),handoffs=[];
+ const env={ENROLMENT_RECEIPT_VERSION:'1',PINNACLE_ENROLMENT_RECEIPTS:{receive:(data,key)=>receiveReceiptEnrolment(data,{idempotencyKey:key,ledger:f.ledger,handoff:async lead=>{handoffs.push(lead);return 'qa_fixture_v1:multi-tab';}})}};
+ const fetchImpl=(url,options)=>serveEnrolmentApi(new Request(url,{...options,headers:{...options.headers,origin}}),env);
+ const send=(source,suffix)=>submitEnrolment('/api/enrolment',makePayload(values,'qa-multi-tab-'+suffix,source),{origin,fetchImpl,receiptRequired:true});
+ try{
+  const [a,b]=await Promise.all([send(submittedA,'source-a'),send(submittedB,'source-b')]);assert.equal(a.state,'accepted');assert.equal(b.state,'accepted');assert.equal(handoffs.length,2);
+  const rows=f.db.prepare('SELECT request_key, source_json FROM website_enrolment_receipts ORDER BY request_key').all();assert.equal(rows.length,2);
+  const persisted=Object.fromEntries(rows.map(row=>[row.request_key,JSON.parse(row.source_json).acquisition]));
+  assert.deepEqual(persisted['qa-multi-tab-source-a'],submittedA);assert.deepEqual(persisted['qa-multi-tab-source-b'],submittedB);
+  assert.equal(JSON.parse(store.get(sourceKey)).fields.gclid,clickB);
+ } finally {f.close();}
+});
 test('pending receipt still succeeds but helpline withdrawal suppresses its optional labels',()=>{
  const first=client({search:tagged(campaigns[0])});first.choose('accepted');const form=client({path:enrol,store:first.store});form.choose('accepted');const submitted=form.source();
  first.choose('declined');form.accepted(receipt,submitted);assert.equal(eventRows(form).length,1);assert.equal(eventRows(form)[0][2].campaign_name,'');
