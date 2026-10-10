@@ -29,11 +29,11 @@ const pages=[
 ];
 const acquisition=[
  '/best-aba-therapy-center-india-proven-improvement-rate',
- '/speech-therapy',
- '/best-occupational-therapy-centers-india',
+ '/top-speech-therapy-center-india-proven-improvement-rate',
+ '/best-occupational-therapy-center-india-proven-improvement-rate',
  '/autism-therapy',
- '/best-special-education-centers-india',
- '/assessment',
+ '/best-special-education-center-call-9100181181',
+ '/speech-aba-autism-assessments',
  '/enroll-autism-speech-aba-therapies-india',
  '/national-autism-helpline'
 ];
