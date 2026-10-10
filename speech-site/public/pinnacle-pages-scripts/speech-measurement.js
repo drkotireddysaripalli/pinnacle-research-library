@@ -389,7 +389,7 @@
     if ((pageGroup !== 'enrolment'&&!callbackPage) || acceptedRequests.has(receipt.requestId) || !production || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic || preference==='declined' || (enabled&&!savedPermission(key))) return;
     try {
       if (!enabled) configureTag('denied',canonical);
-      const parameters={schema_version:3,page_group:'enrolment',destination:'existing_enrolment_workflow',measurement_mode:enabled?'consented':'denied_storage'};
+      const parameters={schema_version:4,page_group:'enrolment',link_placement:callbackPage?'inline-callback-form':'enrolment-form',destination:'existing_enrolment_workflow',measurement_mode:enabled?'consented':'denied_storage'};
       if (enabled) {
         // The receipt belongs to the submitted snapshot, not a later tab/URL.
         // Revalidate its expiry and both applicable permissions at emission.
