@@ -12,7 +12,7 @@ const config=`<script>
         /**/</script>`;
 // This is the origin-stage fingerprint. The ad-call preference panel is added
 // later by the outer shared-navigation transform and is intentionally absent.
-const fixture='<!doctype html><html><head><script>GTM-W9ZHX459</script><script>AW-10810823199</script><script>gtag(\'config\', \'AW-10810823199\')</script>'+loader+config+'</head><body></body></html>';
+const fixture='<!doctype html><html><head><!-- Google Tag Manager --><script>GTM-W9ZHX459</script><script>AW-10810823199</script><script>gtag(\'config\', \'AW-10810823199\')</script>'+loader+config+'</head><body></body></html>';
 const response=()=>new Response(fixture,{headers:{'content-type':'text/html; charset=utf-8','content-length':String(Buffer.byteLength(fixture)),'etag':'legacy'}});
 
 for(const [url,source] of [
@@ -30,6 +30,8 @@ for(const [url,source] of [
  assert(html.includes('GTM-W9ZHX459'));
  assert(html.includes("gtag('config', 'AW-10810823199')"));
  assert(!html.includes('data-ad-call-preferences'));
+ assert.equal((html.match(/pinnacle-measurement-privacy-bootstrap/g)||[]).length,1);
+ assert(html.indexOf('pinnacle-measurement-privacy-bootstrap')<html.indexOf('GTM-W9ZHX459'));
  assert.equal(transformed.headers.get('etag'),null);
 }
 
