@@ -227,6 +227,7 @@ test('accepted enquiries send one fixed consented event on the enrolment route o
  h.choose('accepted');h.accepted();h.accepted();
  assert.deepEqual(h.events().map(e=>e[1]),['page_view','enquiry_accepted']);
  assert.equal(h.events()[1][2].page_group,'enrolment');
+ assert.equal(h.events()[1][2].link_placement,'enrolment-form');
  assert.equal(h.events()[1][2].destination,'existing_enrolment_workflow');
  assert.equal(h.events()[1][2].page_location,'https://www.pinnacleblooms.org'+canonicalEnrolment);
  const text=JSON.stringify(h.events());for(const excluded of ['private-child-detail','requestId','contact','phone','centre=','service=','gclid'])assert(!text.includes(excluded));
@@ -486,7 +487,7 @@ test('Knowledge campaign handoff requires consent and withdrawal restores the or
 
 test('approved inline callback receipts emit once and respect refusal, GPC and absent contract',()=>{
  for(const path of ['/centers','/speech-therapy/service-information']){
-  const h=harness({path,callback:true,search:''});h.choose('accepted');h.accepted();h.accepted();assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,1);
+  const h=harness({path,callback:true,search:''});h.choose('accepted');h.accepted();h.accepted();assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,1);assert.equal(h.events().find(e=>e[1]==='enquiry_accepted')[2].link_placement,'inline-callback-form');
   assert(!JSON.stringify(h.events()).includes('qa-event-request'));h.choose('declined');h.accepted({schemaVersion:1,requestId:'qa-second-request',id:'qa-second-receipt'});assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,1);
   for(const options of [{callback:false},{callback:true,gpc:true},{callback:true,search:'?validation_test=1'},{callback:true,origin:'http://127.0.0.1:4340'}]){const b=harness({path,...options});b.choose('accepted');b.accepted();assert.equal(b.events().filter(e=>e[1]==='enquiry_accepted').length,0);}
  }
