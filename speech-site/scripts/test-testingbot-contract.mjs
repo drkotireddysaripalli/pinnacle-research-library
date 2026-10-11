@@ -59,3 +59,17 @@ test('Unclosed or incomplete runs never advance coverage and last pass remains d
   report.sessions[0].cases[0]={id:'x',finishedAt:'2026-10-08',status:'failed',checks:[{name:'canonical',passed:false}]};recordCoverage(state,report);
   assert.equal(state.coverageByProfile['x|chrome|p3'].lastPassed,'2026-10-07');assert.deepEqual(state.coverageByProfile['x|chrome|p3'].unresolvedFailure.checks,['canonical']);
 });
+import {testingBotClient} from './testingbot-client.mjs';
+test('Empty provider 400 can retry an explicitly read-only observation; mutations and real failures never retry',async()=>{
+ const savedFetch=globalThis.fetch,savedKey=process.env.TESTINGBOT_KEY,savedSecret=process.env.TESTINGBOT_SECRET;
+ process.env.TESTINGBOT_KEY='isolated-fixture-key';process.env.TESTINGBOT_SECRET='isolated-fixture-secret';
+ try{const client=testingBotClient();let calls=0;
+ globalThis.fetch=async()=>++calls===1?new Response('',{status:400}):Response.json({value:false});
+ assert.equal((await client.request('https://hub.testingbot.com/wd/hub/session/fixture/execute/async','POST',{script:'return false'},1000,true)).value,false);assert.equal(calls,2);
+ calls=0;globalThis.fetch=async()=>{calls++;return new Response('',{status:400})};
+ await assert.rejects(()=>client.request('https://hub.testingbot.com/wd/hub/session/fixture/element/x/click','POST',{},1000),/HTTP 400/);assert.equal(calls,1);
+ calls=0;await assert.rejects(()=>client.request('https://hub.testingbot.com/wd/hub/session/fixture/execute/async','POST',{script:'return false'},1000,true),/HTTP 400/);assert.equal(calls,3);
+ calls=0;globalThis.fetch=async()=>{calls++;return Response.json({value:{error:'javascript error',message:'real assertion error'}},{status:400})};
+ await assert.rejects(()=>client.request('https://hub.testingbot.com/wd/hub/session/fixture/execute/async','POST',{script:'return false'},1000,true),/real assertion error/);assert.equal(calls,1);
+ }finally{globalThis.fetch=savedFetch;if(savedKey===undefined)delete process.env.TESTINGBOT_KEY;else process.env.TESTINGBOT_KEY=savedKey;if(savedSecret===undefined)delete process.env.TESTINGBOT_SECRET;else process.env.TESTINGBOT_SECRET=savedSecret;}
+});

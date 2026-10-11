@@ -13,10 +13,16 @@ export function testingBotClient(){
   }
   const authorization='Basic '+Buffer.from(key+':'+secret).toString('base64');
   const redact=s=>String(s).replaceAll(key,'[redacted]').replaceAll(secret,'[redacted]').replaceAll(authorization,'[redacted]');
-  const request=async(url,method='GET',body,timeout=60000)=>{
+  const request=async(url,method='GET',body,timeout=60000,readOnly=false)=>{
     const form=body instanceof URLSearchParams;
-    const r=await fetch(url,{method,headers:{Authorization:authorization,...(body?{'Content-Type':form?'application/x-www-form-urlencoded':'application/json'}:{})},body:body?(form?body:JSON.stringify(body)):undefined,redirect:'error',signal:AbortSignal.timeout(timeout)});
-    const raw=await r.text();let data;try{data=JSON.parse(raw);}catch{throw Error('TestingBot returned non-JSON HTTP '+r.status);}
+    let r,raw;
+    for(let attempt=0;attempt<3;attempt++){
+      r=await fetch(url,{method,headers:{Authorization:authorization,...(body?{'Content-Type':form?'application/x-www-form-urlencoded':'application/json'}:{})},body:body?(form?body:JSON.stringify(body)):undefined,redirect:'error',signal:AbortSignal.timeout(timeout)});
+      raw=await r.text();
+      if(!(readOnly&&r.status===400&&raw===''&&attempt<2))break;
+      await new Promise(resolve=>setTimeout(resolve,250));
+    }
+    let data;try{data=JSON.parse(raw);}catch{throw Error('TestingBot returned non-JSON HTTP '+r.status+' on '+method+' '+new URL(url).pathname);}
     if(!r.ok||data.value?.error)throw Error(redact(data.value?.message||data.error||raw).slice(0,1200));
     return data;
   };

@@ -35,6 +35,9 @@ jobs:
         run: node ../build-window/ci-focused.mjs
       - run: npm run build:ask
   checks:
+    # Internal branches already run this exact source on push. Fork PRs retain
+    # their untrusted checks; trusted push/dispatch remains the release gate.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name != github.repository
     runs-on: ubuntu-latest
     concurrency:
       group: portal-testingbot-builds

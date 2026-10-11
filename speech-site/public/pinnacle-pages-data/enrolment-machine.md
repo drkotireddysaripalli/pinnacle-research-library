@@ -40,7 +40,7 @@ One full month of one service: Speech Therapy (ST), Occupational Therapy (OT), B
 
 [Call 9100 181 181](tel:+919100181181)
 
-Terms: ₹14,499 for one full month of one listed therapy service, regularly ₹25,999. Available for the first 4,999 qualifying children or families in total. The care team confirms eligibility and remaining availability before enrolment. Services are not bundled. The separate free speech and language assessment offer does not make ongoing therapy free.
+Terms: ₹14,499 for one full month of one listed therapy service, regularly ₹25,999. Available for the first 4,999 qualifying children or families in total. The care team confirms eligibility and remaining availability before enrolment. Services are not bundled. This offer cannot be combined with other promotional discounts. The separate free speech and language assessment offer does not make ongoing therapy free.
 
 Let’s make the first step simple
 
