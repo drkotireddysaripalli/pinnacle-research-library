@@ -136,8 +136,9 @@ test(runtime+': ambiguous alias data fails closed instead of selecting a differe
 test('VideoObject requires source fields, trustworthy dates and safe source descriptions',()=>{
   const r={id:'123',path:'/mirracles/123/INVENTED',title:'Invented public fixture',description:'A published activity explanation.',poster:'https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg',published:'2026-01-01T12:00:00+05:30',player:'https://www.youtube.com/embed/abcdefghijk'};
   assert.equal(videoObject(r).embedUrl,'https://www.youtube-nocookie.com/embed/abcdefghijk');
-  for(const k of ['title','description','poster','published','player'])assert.equal(videoObject({...r,[k]:null}),null,k);
-  assert.equal(videoObject({...r,description:'97% proven improvement'}),null);
+  for(const k of ['title','poster','published','player'])assert.equal(videoObject({...r,[k]:null}),null,k);
+  assert(!videoObject({...r,description:'97% proven improvement'}).description.includes('97%'));
+  assert(videoObject({...r,description:null}).description.includes('Invented public fixture'));
   assert.equal(playerURL('https://evil.test/embed/abcdefghijk'),null);
   assert.equal(playerURL('javascript:alert(1)'),null);
 });

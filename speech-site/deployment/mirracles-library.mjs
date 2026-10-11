@@ -28,12 +28,40 @@ const clip = (value,limit) => {
   const cut=text.slice(0,limit+1).replace(/\s+\S*$/,'').replace(/[,:;.!?\-–—\s]+$/,'');
   return (cut||text.slice(0,limit).trim())+'…';
 };
-export function detailSeoTitle(record){const id=String(record.id);const room=60-(' | '+BRAND).length-' · '.length-id.length;return clip(displayTitle(record),Math.max(12,room-1))+' · '+id;}
-export function detailSeoDescription(record){
-  return clip(`${BRAND} Mirracles video ${record.id}: ${displayTitle(record)}. Watch this published record and discuss child-specific next steps.`,155);
-}
 const absolute = path => new URL(path, ORIGIN).href;
-const categoryLabel = value => String(value||'Published video').replace(/([a-z])([A-Z])/g,'$1 $2').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim();
+const categoryLabel = value => ({ParentAppreciation:'Parent testimonies',Materials:'Therapy materials',Techniques:'Therapy techniques',techniques:'Therapy techniques',Conditions:'Child development',Tantrums:'Behaviour and everyday support',PinnaclePromise:'Staff promises',IndependenceDayPromise:'Independence Day staff promises',RepublicDayPromise:'Republic Day staff promises',PinnacleAwards:'Awards and appreciation',PinnacleWonderfulLife:'Family experiences'}[value]||String(value||'Published video').replace(/([a-z])([A-Z])/g,'$1 $2').replace(/[_-]+/g,' ').trim());
+export function sourceCentre(record){
+ const match=String(record.description||'').match(/Pinnacle\s*@\s*([A-Za-z][A-Za-z .'-]{2,60}?)(?=\s*[❤♥#\n]|$)/i);
+ return match?match[1].trim():null;
+}
+export function videoSubject(record){
+ const title=displayTitle(record);
+ if(/Directly from Parent/i.test(title)){
+   const series=title.match(/(?:CDN|[A-Z]{2,5})\s*-\s*\d+$/)?.[0];
+   return ['Parent testimony',sourceCentre(record),series].filter(Boolean).join(' · ');
+ }
+ return title.replace(/Pinnacle(?: Blooms(?: Network)?)?\s*(?:Proven\s*)?/gi,'').replace(/\bProven\s+(?:Integrated\s+)?Autism Therapy Improvement\b/gi,'Autism therapy experience').replace(/\s*[-–|]\s*$/,'').replace(/\s+/g,' ').trim()||categoryLabel(record.category)+' video';
+}
+export function detailSeoTitle(record,duplicate=false){return clip(videoSubject(record),duplicate?48:65)+(duplicate?' · '+record.id:'');}
+export function videoDescription(record){
+ const kind=categoryLabel(record.category).toLowerCase();
+ return `Watch “${videoSubject(record)}”, a ${kind} video published by ${BRAND}${sourceCentre(record)?' at '+sourceCentre(record):''}. Individual experiences are not predictions of another child’s outcome.`;
+}
+export function detailSeoDescription(record){
+ return `${clip(videoSubject(record),65)}. ${BRAND}: ${categoryLabel(record.category).toLowerCase()}. Explore related support; call 9100 181 181. Video ${record.id}.`;
+}
+const serviceRules=[
+ [/speech|language|communication|articulation/i,'/top-speech-therapy-center-india-proven-improvement-rate','Speech therapy'],
+ [/occupational|sensory|motor|grasp|handwriting|bean.?bag/i,'/best-occupational-therapy-center-india-proven-improvement-rate','Occupational therapy'],
+ [/behavio[u]?r|tantrum|aba/i,'/best-aba-therapy-center-india-proven-improvement-rate','ABA and behavioural therapy'],
+ [/autism/i,'/autism-therapy','Autism therapy'],
+ [/special education|learning|school/i,'/best-special-education-center-call-9100181181','Special education']
+];
+export function relevantServices(record){
+ // Use the title and first source paragraph; boilerplate hashtags do not assign every service.
+ const topic=displayTitle(record)+' '+String(record.description||'').split(/\n\s*\n/)[0]+' '+record.category;
+ return serviceRules.filter(([pattern])=>pattern.test(topic)).map(([,url,label])=>[url,label]);
+}
 
 function pathKey(path) {
   try {
@@ -76,11 +104,11 @@ function safeDescription(record) {
   return text;
 }
 export function videoObject(record) {
-  const description = safeDescription(record), poster = imageURL(record.poster), uploadDate = publishedDate(record.published);
+  const description = videoDescription(record), poster = imageURL(record.poster), uploadDate = publishedDate(record.published);
   const player = playerURL(record.player);
   if (!record.title || !description || !poster || !uploadDate || !player) return null;
-  return {'@type':'VideoObject','@id':absolute(record.path)+'#video',name:record.title,description,
-    thumbnailUrl:[poster],uploadDate,embedUrl:player.split('?')[0],url:absolute(record.path),publisher:{'@id':ORG_ID},isPartOf:{'@id':COLLECTION_ID},about:categoryLabel(record.category)};
+  return {'@type':'VideoObject','@id':absolute(record.path)+'#video',name:videoSubject(record),description,
+    thumbnailUrl:[poster],uploadDate,embedUrl:player.split('?')[0],identifier:player.split('/embed/')[1].split('?')[0],url:absolute(record.path),publisher:{'@id':ORG_ID},isPartOf:{'@id':COLLECTION_ID},about:categoryLabel(record.category)};
 }
 function archiveEntity(record) { return {'@type':'CreativeWork','@id':absolute(record.path)+'#record',name:displayTitle(record),url:absolute(record.path),publisher:{'@id':ORG_ID},isPartOf:{'@id':COLLECTION_ID},about:categoryLabel(record.category),...(publishedDate(record.published)?{datePublished:publishedDate(record.published)}:{})}; }
 function categoryURL(key) { return HOME + '/category/' + encodeURIComponent(key); }
@@ -101,9 +129,10 @@ function sharedFooter(navigation) {
 function nextStep() {
   return `<section class="next-step"><h2>What would be meaningful for your child?</h2><p>Bring your questions to our team. Discuss assessment, a child-specific plan, everyday practice and how progress will be reviewed.</p><div class="next-actions">${call()}${a('/enroll-autism-speech-aba-therapies-india','Arrange a first conversation')}${a('/verify/','Read the evidence')}${a('/guru','Read Pinnacle Guru articles')}</div></section>`;
 }
-function resourceLinks(category) {
+function resourceLinks(record) {
+  const category=record.category;
   const contextual=/material/i.test(category)?[['/materials','Therapy materials'],['/interventions','Interventions and techniques']]:/technique/i.test(category)?[['/interventions','Interventions and techniques'],['/materials','Therapy materials']]:/parent|promise|wonderful|award/i.test(category)?[['/verify/','Evidence and claim sources'],['/centers','Find a Pinnacle centre']]:[['/ask','Ask child-development questions'],['/faq','Parent FAQs']];
-  return `<section class="content-section"><h2>Continue with ${BRAND}</h2><p>Use this video as one part of a child-specific conversation. Explore connected guidance, evidence and support.</p><nav class="category-list" aria-label="Connected Pinnacle resources">${[...contextual,['/ask','Ask child-development questions'],['/faq','Parent FAQs'],['/sunshine','Sunshine resources'],['/materials','Therapy materials'],['/interventions','Interventions'],['/enroll-autism-speech-aba-therapies-india','Request an assessment conversation']].map(([url,label])=>a(url,label)).join('')}</nav></section>`;
+  return `<section class="content-section"><h2>Continue with ${BRAND}</h2><p>Use this video as one part of a child-specific conversation. Explore connected guidance, evidence and support.</p><nav class="category-list" aria-label="Connected Pinnacle resources">${[...relevantServices(record),...contextual,['/national-autism-helpline','National Autism Helpline'],['/verify/','Verified network evidence'],['/ask','Ask child-development questions'],['/faq','Parent FAQs'],['/sunshine','Sunshine resources'],['/materials','Therapy materials'],['/interventions','Interventions'],['/enroll-autism-speech-aba-therapies-india','Request an assessment conversation']].map(([url,label])=>a(url,label)).join('')}</nav></section>`;
 }
 function card(record, level='h2') {
   const poster = imageURL(record.poster);
@@ -155,6 +184,8 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
   let cataloguePromise;
   async function catalogue() {
     cataloguePromise ??= Promise.resolve().then(()=>loadJson('catalogue')).then(c=> {
+      const titleCounts=new Map();
+      for(const r of c.records){const key=detailSeoTitle(r);titleCounts.set(key,(titleCounts.get(key)||0)+1);}
       const canonicalById = new Map(c.records.map(r=>[r.id,r]));
       const byId = new Map(canonicalById);
       // Authoritative old Id -> existing public F25 identity. No chains or title joins.
@@ -176,7 +207,7 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
         // Bare IDs and changed slugs then retain the normal canonical redirect.
         byId.set(alias[1],target);
       }
-      return {...c,byId,byPath,ordered:c.order.map(id=>byId.get(id)),categoryKeys:new Set(c.categories.map(c=>c.key))};
+      return {...c,titleCounts,byId,byPath,ordered:c.order.map(id=>byId.get(id)),categoryKeys:new Set(c.categories.map(c=>c.key))};
     }).catch(error=>{cataloguePromise=undefined;throw error;});
     return cataloguePromise;
   }
@@ -208,11 +239,12 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
         const category = detail.category;
         const related = c.ordered.filter(r=>r.id!==record.id && (category?r.category===category:true)).slice(0,6);
         const description = safeDescription(detail);
+        const subject=videoSubject(detail);
         const video = videoObject(detail), entity=video||archiveEntity(detail);
         const recordSummary=`Published by ${BRAND}, this is Mirracles video record ${detail.id}${category?' in '+categoryLabel(category):''}${date?' dated '+date.slice(0,10):''}, titled “${displayTitle(detail)}”. It is a real-world record for understanding the subject and preparing child-specific questions; one experience does not predict another child’s result.`;
-        const body = `<nav class="crumbs" aria-label="Breadcrumb"><ol><li>${a(HOME,'Video library')}</li>${category?`<li>${a(categoryURL(category),category)}</li>`:''}<li aria-current="page">Video record</li></ol></nav><header class="hero"><p class="kicker">${BRAND} · Mirracles${category?' · '+escapeHtml(categoryLabel(category)):''}</p><h1>${escapeHtml(displayTitle(detail))}</h1>${date?`<p class="caption">Published <time datetime="${escapeHtml(date)}">${escapeHtml(date.slice(0,10))}</time></p>`:''}<p class="source-note">A published record of one experience or explanation. It does not predict another child’s result.</p></header><div class="video-layout"><section aria-label="Published video">${player?`<div class="player"><button type="button" data-mirracles-player="${escapeHtml(player)}" data-video-title="${escapeHtml(displayTitle(detail))}" aria-label="Play video: ${escapeHtml(displayTitle(detail))}">${poster?`<img src="${escapeHtml(poster)}" alt="" width="480" height="270" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">`:''}<span class="play-label"><span>▶ Play video</span></span></button></div><p class="source-note">Selecting Play loads the YouTube player. ${a(detail.player,'Open the published player directly',' rel="noreferrer"')}</p><script src="${ASSETS}player.js" defer></script>`:'<div class="empty"><h2>Published archive record</h2><p>A playable video is not available in the current public source for this record.</p></div>'}</section><aside class="video-aside"><h2>Talk about your child’s next step</h2><p>Ask about assessment, meaningful goals and a plan that connects therapy with daily life.</p>${call()}<ul><li>${a('/centers','Find a centre')}</li><li>${a('/verify/','Read the evidence and its limits')}</li><li>${a('/sunshine','Explore development resources')}</li></ul></aside></div><section class="content-section"><h2>About this published record</h2><p>${escapeHtml(recordSummary)}</p></section>${description?`<section class="content-section"><h2>Published description</h2><p class="published-description">${escapeHtml(description)}</p></section>`:''}${resourceLinks(category)}<section class="content-section"><h2>${category?'More in '+escapeHtml(categoryLabel(category)):'More published videos'}</h2><div class="grid">${related.map(r=>card(r,'h3')).join('')}</div></section>${nextStep()}`;
+        const body = `<nav class="crumbs" aria-label="Breadcrumb"><ol><li>${a(HOME,'Video library')}</li>${category?`<li>${a(categoryURL(category),category)}</li>`:''}<li aria-current="page">Video record</li></ol></nav><header class="hero"><p class="kicker">${BRAND} · Mirracles${category?' · '+escapeHtml(categoryLabel(category)):''}</p><h1>${escapeHtml(subject)}</h1>${date?`<p class="caption">Published <time datetime="${escapeHtml(date)}">${escapeHtml(date.slice(0,10))}</time></p>`:''}<p class="source-note">A published record of one experience or explanation. It does not predict another child’s result.</p></header><div class="video-layout"><section aria-label="Published video">${player?`<div class="player"><button type="button" data-mirracles-player="${escapeHtml(player)}" data-video-title="${escapeHtml(displayTitle(detail))}" aria-label="Play video: ${escapeHtml(displayTitle(detail))}">${poster?`<img src="${escapeHtml(poster)}" alt="" width="480" height="270" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">`:''}<span class="play-label"><span>▶ Play video</span></span></button></div><p class="source-note">Selecting Play loads the YouTube player. ${a(detail.player,'Open the published player directly',' rel="noreferrer"')}</p><script src="${ASSETS}player.js" defer></script>`:'<div class="empty"><h2>Published archive record</h2><p>A playable video is not available in the current public source for this record.</p></div>'}</section><aside class="video-aside"><h2>Talk about your child’s next step</h2><p>Ask about assessment, meaningful goals and a plan that connects therapy with daily life.</p>${call()}<ul><li>${a('/centers','Find a centre')}</li><li>${a('/verify/','Read the evidence and its limits')}</li><li>${a('/sunshine','Explore development resources')}</li></ul></aside></div><section class="content-section"><h2>About this published record</h2><p>${escapeHtml(videoDescription(detail))}</p><p>${escapeHtml(recordSummary)}</p></section>${description?`<section class="content-section"><h2>Published description</h2><p class="published-description">${escapeHtml(description)}</p></section>`:''}${resourceLinks(detail)}<section class="content-section"><h2>${category?'More in '+escapeHtml(categoryLabel(category)):'More published videos'}</h2><div class="grid">${related.map(r=>card(r,'h3')).join('')}</div></section>${nextStep()}`;
         const sourceTitle=detail.title&&displayTitle(detail)!==detail.title?`<details class="content-section"><summary>Published source title</summary><p class="published-description">${escapeHtml(detail.title)}</p></details>`:'';
-        return htmlResponse(documentHTML({title:displayTitle(detail),seoTitle:detailSeoTitle(detail),titleSuffix:BRAND,description:detailSeoDescription(detail),canonical:absolute(detail.path),image:poster,body:body+sourceTitle,catalogue:c,shell:trustedShell,schema:[entity]}),{head,privatePage,responseHeaders});
+        return htmlResponse(documentHTML({title:displayTitle(detail),seoTitle:detailSeoTitle(detail,(c.titleCounts.get(detailSeoTitle(record))||0)>1),titleSuffix:BRAND,description:detailSeoDescription(detail),canonical:absolute(detail.path),image:poster,body:body+sourceTitle,catalogue:c,shell:trustedShell,schema:[entity]}),{head,privatePage,responseHeaders});
       }
       const category = categoryPath?.[1] || legacyCategory?.[1] || url.searchParams.get('category') || '';
       if (category && !c.categoryKeys.has(category)) return notFound();
@@ -225,12 +257,13 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
       const pages = Math.max(1,Math.ceil(matches.length/PAGE_SIZE));
       if (page>pages) return notFound();
       const items = matches.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);
-      const title = category?category+' · Mirracles video library':'Mirracles video library';
+      const title = category?categoryLabel(category)+' videos':'Mirracles video library';
+      const listingDescription=`${category?categoryLabel(category):'Real-world development and therapy'} videos from ${BRAND}. Browse ${matches.length.toLocaleString('en-IN')} published records${page>1?' · Page '+page:''}; explore support and call 9100 181 181.`;
       const itemList = {'@type':'ItemList',name:title,itemListElement:items.map((r,i)=>({'@type':'ListItem',position:(page-1)*PAGE_SIZE+i+1,name:displayTitle(r),url:absolute(r.path)}))};
-      const body = `<header class="hero"><p class="kicker">Pinnacle Blooms Network · Mirracles</p><h1>${escapeHtml(title)}</h1><p>Explore published videos about development, therapy activities and individual experiences. Choose a subject, shape your questions and discuss what would be meaningful for your child.</p><div class="hero-actions">${call()}${a('/verify/','Explore the evidence')}</div></header><form class="browse-form" method="get" action="${escapeHtml(base)}"><div><label for="video-search">Search published video titles</label><input id="video-search" type="search" name="q" maxlength="100" value="${escapeHtml(q)}"></div><button type="submit">Search videos</button></form><nav aria-label="Video categories"><ul class="category-list"><li>${a(HOME,'All videos',!category?' aria-current="page"':'')}</li>${c.categories.map(cat=>`<li>${a(categoryURL(cat.key),cat.label+' ('+cat.count.toLocaleString('en-IN')+')',category===cat.key?' aria-current="page"':'')}</li>`).join('')}</ul></nav><p class="caption">${matches.length.toLocaleString('en-IN')} published records${q?' matching “'+escapeHtml(q)+'”':''} · Showing ${matches.length?(page-1)*PAGE_SIZE+1:0}–${Math.min(page*PAGE_SIZE,matches.length)}. Individual experiences are not a prediction of another child’s result.</p>${items.length?`<div class="grid">${items.map(r=>card(r)).join('')}</div>`:'<div class="empty"><h2>No matching video titles</h2><p>Try another title or browse a category.</p></div>'}${pagination(base,page,pages,q)}${nextStep()}`;
+      const body = `<header class="hero"><p class="kicker">Pinnacle Blooms Network · Mirracles</p><h1>${escapeHtml(title)}</h1><p>Explore published videos about development, therapy activities and individual experiences. Choose a subject, shape your questions and discuss what would be meaningful for your child.</p><div class="hero-actions">${call()}${a('/verify/','Explore the evidence')}</div></header><form class="browse-form" method="get" action="${escapeHtml(base)}"><div><label for="video-search">Search published video titles</label><input id="video-search" type="search" name="q" maxlength="100" value="${escapeHtml(q)}"></div><button type="submit">Search videos</button></form><nav aria-label="Video categories"><ul class="category-list"><li>${a(HOME,'All videos',!category?' aria-current="page"':'')}</li>${c.categories.map(cat=>`<li>${a(categoryURL(cat.key),categoryLabel(cat.key)+' ('+cat.count.toLocaleString('en-IN')+')',category===cat.key?' aria-current="page"':'')}</li>`).join('')}</ul></nav><p class="caption">${matches.length.toLocaleString('en-IN')} published records${q?' matching “'+escapeHtml(q)+'”':''} · Showing ${matches.length?(page-1)*PAGE_SIZE+1:0}–${Math.min(page*PAGE_SIZE,matches.length)}. Individual experiences are not a prediction of another child’s result.</p>${items.length?`<div class="grid">${items.map(r=>card(r)).join('')}</div>`:'<div class="empty"><h2>No matching video titles</h2><p>Try another title or browse a category.</p></div>'}${pagination(base,page,pages,q)}${resourceLinks({category:category||'',title:title})}${nextStep()}`;
       // Search terms never enter canonical/OG URLs, JSON-LD or analytics.
       const listingImage=items.map(record=>imageURL(record.poster)).find(Boolean);
-      return htmlResponse(documentHTML({title:title+(page>1?' · Page '+page:''),canonical:absolute(pageURL(base,page)),image:listingImage,body,catalogue:c,shell:trustedShell,noindex:!!q,schema:[itemList]}),{head,privatePage:privatePage||!!q,noindex:!!q,responseHeaders});
+      return htmlResponse(documentHTML({title:title+(page>1?' · Page '+page:''),titleSuffix:BRAND,description:listingDescription,canonical:absolute(pageURL(base,page)),image:listingImage,body,catalogue:c,shell:trustedShell,noindex:!!q,schema:[itemList]}),{head,privatePage:privatePage||!!q,noindex:!!q,responseHeaders});
     } catch {
       return htmlResponse('<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Video library temporarily unavailable</title><main><h1>The video library is temporarily unavailable.</h1><p>Please try again later or <a href="tel:+919100181181">call 9100 181 181</a>.</p></main></html>',{status:503,head,noindex:true,responseHeaders});
     }
