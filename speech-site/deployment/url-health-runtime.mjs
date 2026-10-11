@@ -596,6 +596,7 @@ function addReadingDirectory(rewrite) {
 }
 
 // deployment/reading-paint.mjs
+var READING_COMPONENTS = 'document.addEventListener("DOMContentLoaded",function(){var original=window.GetHomeArticles;if(typeof original!=="function")return;window.GetHomeArticles=function(id){if(!document.getElementById(id))return;return original.apply(this,arguments);};},{once:true});';
 function repairReadingPaint(request, response) {
   const u = new URL(request.url);
   if (request.method !== "GET" || u.origin !== "https://www.pinnacleblooms.org" || !/^\/(?:t|c|ma|b|m|a|abs|abilities|skills)\/[a-z0-9][a-z0-9-]*\/?$/.test(u.pathname) || response.status !== 200 || !response.headers.get("content-type")?.includes("text/html")) return response;
@@ -634,7 +635,7 @@ function repairReadingPaint(request, response) {
     else if (id === "G-2BYLRLFRDJ" && googleLoader) e.remove();
   } }).on("head", { element(e) {
     e.prepend('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>', { html: true });
-    e.onEndTag((t) => t.before("<style data-pinnacle-reading-heading-font>.pinnacle-topic-directory{content-visibility:auto;contain-intrinsic-size:auto 160px}.pinnacle-topic-directory:not([open]) .content-sunshine{display:none!important}h1:not([lang]),h2:not([lang]),h3:not([lang]){font-family:Georgia,serif!important}@media(max-width:600px){body{background-image:url(/cdn-cgi/image/width=480,quality=65,format=auto/images/background.jpg)!important}}</style>", { html: true }));
+    e.onEndTag((t) => t.before("<script data-pinnacle-reading-components>" + READING_COMPONENTS + "<\/script><style data-pinnacle-reading-heading-font>.pinnacle-topic-directory{content-visibility:auto;contain-intrinsic-size:auto 160px}.pinnacle-topic-directory:not([open]) .content-sunshine{display:none!important}h1:not([lang]),h2:not([lang]),h3:not([lang]){font-family:Georgia,serif!important}@media(max-width:600px){body{background-image:url(/cdn-cgi/image/width=480,quality=65,format=auto/images/background.jpg)!important}}</style>", { html: true }));
   } }).on('link[rel="stylesheet"]', { element(e) {
     let url;
     try {
