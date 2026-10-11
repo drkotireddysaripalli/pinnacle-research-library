@@ -33,9 +33,11 @@ test('Cloudflare runtime preserves body, guards and response semantics', async t
       assert.equal(r.status,200);assert.equal((body.match(/rel="canonical"/g)||[]).length,1);assert(body.includes('href="'+origin+path+'"'));assert(body.includes('content="'+origin+path+'"'));assert(body.includes('Approved header'));assert(body.includes('Approved footer'));
     });
     await t.test('all newly covered public templates use the same exact correction and preserve body',async()=>{
-      for(const path of ['/t/interactive-song-therapy','/mirracles/123/published-story','/allmirracles','/yoga-therapy','/teachertraining','/teacher-training']){
+      for(const path of ['/t/interactive-song-therapy','/mirracles/123/published-story','/allmirracles','/yoga-therapy','/teacher-training']){
         const input=html(path);const {body}=await run({body:input,chunk:37},path);assert.equal(body.replace(/<style data-pinnacle-reading-layout>[\s\S]*?<\/style>/,''),input.replace('content="http:','content="https:'));
       }
+      const {r}=await run({},'/teachertraining?utm_source=guide',{redirect:'manual'});
+      assert.equal(r.status,301);assert.equal(r.headers.get('location'),origin+'/teacher-training?utm_source=guide');
     });
     await t.test('changes only one social URL; Unicode and all body bytes identical',async()=>{
       const {r,body}=await run();assert.equal(body,html().replace('content="http:','content="https:'));assert.equal(r.headers.get('cache-control'),'private, max-age=60');assert.equal(r.headers.get('vary'),'*, accept-encoding');assert.equal(r.headers.get('etag'),null);assert.equal(r.headers.get('last-modified'),null);assert(r.headers.has('x-pinnacle-social-metadata'));
