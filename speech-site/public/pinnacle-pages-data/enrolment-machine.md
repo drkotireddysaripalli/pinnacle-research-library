@@ -2,7 +2,7 @@
 
 Canonical: https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india
 
-Updated: 5 October 2026
+Updated: 11 October 2026
 
 Pinnacle Blooms Network · Every child. One life. One clear direction.
 
@@ -41,6 +41,18 @@ One full month of one service: Speech Therapy (ST), Occupational Therapy (OT), B
 [Call 9100 181 181](tel:+919100181181)
 
 Terms: ₹14,499 for one full month of one listed therapy service, regularly ₹25,999. Available for the first 4,999 qualifying children or families in total. The care team confirms eligibility and remaining availability before enrolment. Services are not bundled. This offer cannot be combined with other promotional discounts. The separate free speech and language assessment offer does not make ongoing therapy free.
+
+A separate offer · New paid-plan enrolments
+
+## ₹4,999 Navratri discount
+
+For new enrolments into a paid child-development therapy plan, from 11 October to 25 October 2026.
+
+Separate offer: This ₹4,999 discount cannot be combined with the ₹14,499 one-service monthly offer above. ₹4,999 is the discount amount; the first-4,999-family limit belongs to the monthly offer.
+
+[Enquire about the Navratri discount](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india#enrolment-form)
+
+[Call 9100 181 181](tel:+919100181181)
 
 Let’s make the first step simple
 
