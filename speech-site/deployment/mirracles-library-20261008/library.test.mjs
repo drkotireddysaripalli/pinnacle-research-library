@@ -71,7 +71,7 @@ test('detail and older alias preserve identity without eager external players',a
   assert(html.includes('loading="eager" fetchpriority="high"'));assert.equal(cards(html),6);
   assert(html.includes('tel:+919100181181'));
   assert(html.includes('Pinnacle Blooms Network®'));
-  assert(html.includes('href="/materials"')&&html.includes('href="/interventions"')&&html.includes('href="/sunshine"'));
+  assert(html.includes('href="/ask"')&&html.includes('href="/faq"')&&html.includes('href="/materials"')&&html.includes('href="/interventions"')&&html.includes('href="/sunshine"'));
   const graph=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
   assert(graph.some(n=>n['@type']==='Organization'&&n.name==='Pinnacle Blooms Network'));
   assert(graph.some(n=>n['@type']==='WebPage'&&n.publisher?.['@id']==='https://www.pinnacleblooms.org/#organization'&&n.mainEntity?.['@id']));

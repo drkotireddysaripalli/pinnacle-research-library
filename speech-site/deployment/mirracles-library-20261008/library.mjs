@@ -103,7 +103,7 @@ function nextStep() {
 }
 function resourceLinks(category) {
   const contextual=/material/i.test(category)?[['/materials','Therapy materials'],['/interventions','Interventions and techniques']]:/technique/i.test(category)?[['/interventions','Interventions and techniques'],['/materials','Therapy materials']]:/parent|promise|wonderful|award/i.test(category)?[['/verify/','Evidence and claim sources'],['/centers','Find a Pinnacle centre']]:[['/ask','Ask child-development questions'],['/faq','Parent FAQs']];
-  return `<section class="content-section"><h2>Continue with ${BRAND}</h2><p>Use this video as one part of a child-specific conversation. Explore connected guidance, evidence and support.</p><nav class="category-list" aria-label="Connected Pinnacle resources">${[...contextual,['/sunshine','Sunshine resources'],['/materials','Therapy materials'],['/interventions','Interventions'],['/enroll-autism-speech-aba-therapies-india','Request an assessment conversation']].map(([url,label])=>a(url,label)).join('')}</nav></section>`;
+  return `<section class="content-section"><h2>Continue with ${BRAND}</h2><p>Use this video as one part of a child-specific conversation. Explore connected guidance, evidence and support.</p><nav class="category-list" aria-label="Connected Pinnacle resources">${[...contextual,['/ask','Ask child-development questions'],['/faq','Parent FAQs'],['/sunshine','Sunshine resources'],['/materials','Therapy materials'],['/interventions','Interventions'],['/enroll-autism-speech-aba-therapies-india','Request an assessment conversation']].map(([url,label])=>a(url,label)).join('')}</nav></section>`;
 }
 function card(record, level='h2') {
   const poster = imageURL(record.poster);
