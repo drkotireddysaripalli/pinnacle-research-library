@@ -41,6 +41,18 @@ function hasPublicHeading(html){
  return text.length>0;
 }
 export async function fetchPublicOrigin(request,fetcher=fetch){
+ if(knownMobilePublicRequest(request)&&publicResourcePath(new URL(request.url).pathname)){
+  // This entire public family uses the reproduced failing mobile template.
+  // Avoid the failed first hop, but accept only a real self-canonical article.
+  try{const headers=new Headers(request.headers);headers.set('user-agent',desktop);headers.set('sec-ch-ua-mobile','?0');const r=await fetcher(new Request(request,{method:'GET',headers}));
+   if(r.status===200&&r.headers.get('content-type')?.includes('text/html')){const html=await boundedText(r),u=new URL(request.url),title=html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim()||'';
+    if(canonicalPath(html)===u.pathname&&title.length>5&&!/^(?:error|not found|page not found)\b/i.test(title)&&hasPublicHeading(html)){
+     const out=new Headers(r.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])out.delete(k);out.set('cache-control','private, no-store');out.set('x-pinnacle-public-render-recovery','verified-topic-direct-20261011');out.set('vary',[...new Set((out.get('vary')||'').split(',').map(v=>v.trim()).filter(Boolean).concat('User-Agent'))].join(', '));return new Response(request.method==='HEAD'?null:html,{status:200,headers:out});
+    }
+   }
+  }catch{/* A changed origin must fall back to the original request. */}
+  return fetcher(request);
+ }
  const original=await fetcher(request);
  if(!knownMobilePublicRequest(request)||original.status!==500||!original.headers.get('content-type')?.includes('text/html'))return original;
  try{
