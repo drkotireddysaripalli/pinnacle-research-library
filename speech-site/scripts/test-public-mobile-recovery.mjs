@@ -1,6 +1,19 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {fetchPublicOrigin} from '../deployment/public-mobile-recovery.mjs';
 import {fetchPublicOrigin as legacyFetchPublicOrigin} from '../deployment/legacy-recovery-entry.mjs';
+
+test('short edge cache shares only validated anonymous query-free articles and fails open',async()=>{
+ const url='https://www.pinnacleblooms.org/t/interactive-song-therapy';let stored,count=0;
+ const cache={async match(){return stored?.clone();},async put(key,response){assert(key.url.includes('/__pinnacle_public_reading_v1/'));assert.equal(response.headers.get('cache-control'),'public, max-age=120');stored=response;}};
+ const origin=async()=>{count++;return new Response('<title>Interactive Song Therapy</title><link rel="canonical" href="'+url+'"><h1>Interactive Song Therapy</h1>',{headers:{'content-type':'text/html'}});};
+ const q=new Request(url,{headers:{'user-agent':'Android Mobile'}});
+ assert.equal((await fetchPublicOrigin(q,origin,cache)).headers.get('x-pinnacle-public-article-cache'),'MISS');
+ assert.equal((await fetchPublicOrigin(q,origin,cache)).headers.get('x-pinnacle-public-article-cache'),'HIT');assert.equal(count,1);
+ for(const request of [new Request(url+'?utm_source=google',{headers:{'user-agent':'Android Mobile'}}),new Request(url,{headers:{'user-agent':'Android Mobile',cookie:'preference=x'}})])assert.equal((await fetchPublicOrigin(request,origin,cache)).headers.get('x-pinnacle-public-article-cache'),'BYPASS');
+ assert.equal(count,3);
+ stored=null;await fetchPublicOrigin(q,async()=>{const r=await origin();r.headers.set('set-cookie','preference=x');return r;},cache);assert.equal(stored,null);
+ const failed={match(){throw Error('cache unavailable')},put(){throw Error('cache unavailable')}};assert.equal((await fetchPublicOrigin(q,origin,failed)).status,200);
+});
 test('deployed legacy entry uses the same proactive public recovery as the portal',async()=>{
  for(const path of ['/t/interactive-song-therapy','/c/hand-flapping-therapy']){
   let count=0;

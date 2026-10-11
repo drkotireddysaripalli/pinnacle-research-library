@@ -602,7 +602,15 @@ function repairReadingPaint(request, response) {
   const resize = (p, w) => "/cdn-cgi/image/width=" + w + ",quality=75,format=auto" + p;
   let hero = false, googleLoader = false;
   const mobile = /Android|iPhone|iPad|Mobile/i.test(request.headers.get("user-agent") || "");
-  const rewrite = new HTMLRewriter().on(".mirracle-loading", { element(e) {
+  const rewrite = new HTMLRewriter().on("script[src]", { element(e) {
+    let src;
+    try {
+      src = new URL(e.getAttribute("src"), u.origin);
+    } catch {
+      return;
+    }
+    if (src.origin === u.origin && src.pathname === "/bundles/newmirracleportal" && src.search === "?v=42") e.setAttribute("defer", "");
+  } }).on(".mirracle-loading", { element(e) {
     const classes = (e.getAttribute("class") || "").split(/\s+/).filter(Boolean);
     if (!classes.includes("active")) e.setAttribute("class", classes.concat("active").join(" "));
   } }).on('link[rel="preload"][as="image"]', { element(e) {

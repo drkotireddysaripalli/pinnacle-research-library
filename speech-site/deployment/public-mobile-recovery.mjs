@@ -40,8 +40,14 @@ function hasPublicHeading(html){
  const text=content.replace(/<!--[\s\S]*?-->/g,'').replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi,'').replace(/<[^>]*>/g,'').replace(/&(?:nbsp|#0*160|#x0*a0);/gi,' ').trim();
  return text.length>0;
 }
-export async function fetchPublicOrigin(request,fetcher=fetch){
+export async function fetchPublicOrigin(request,fetcher=fetch,edgeCache=globalThis.caches?.default){
  if(knownMobilePublicRequest(request)&&publicResourcePath(new URL(request.url).pathname)){
+  const originalUrl=new URL(request.url);
+  // Share only anonymous, query-free, validated public articles. Requests with
+  // cookies, campaign fields or credentials retain their exact origin journey.
+  const cacheable=request.method==='GET'&&!originalUrl.search&&!request.headers.has('cookie')&&!request.headers.has('authorization')&&edgeCache;
+  const key=cacheable?new Request(originalUrl.origin+'/__pinnacle_public_reading_v1'+originalUrl.pathname):null;
+  if(key){try{const hit=await edgeCache.match(key);if(hit){const headers=new Headers(hit.headers);headers.set('cache-control','private, no-store');headers.set('x-pinnacle-public-article-cache','HIT');return new Response(hit.body,{status:200,headers});}}catch{/* Cache availability must never block contact. */}}
   // This entire public family uses the reproduced failing mobile template.
   // Avoid the failed first hop, but accept only a real self-canonical article.
   try{const headers=new Headers(request.headers);headers.set('user-agent',desktop);headers.set('sec-ch-ua-mobile','?0');const r=await fetcher(new Request(request,{method:'GET',headers}));
@@ -51,6 +57,8 @@ export async function fetchPublicOrigin(request,fetcher=fetch){
      // Announce the actual article image before the large HTML body arrives.
      // Material archive families have separate image-fallback rules.
      if(!/^\/(?:ma|m|a)\//.test(u.pathname)){const image=html.match(/<img\b[^>]*\bsrc=["'](?:https:\/\/www\.pinnacleblooms\.org)?(\/Assets\/Materials\/\d+\.(?:jpg|png))["']/i)?.[1];if(image)out.append('link','<'+u.origin+'/cdn-cgi/image/width=480,quality=75,format=auto'+image+'>; rel=preload; as=image; fetchpriority=high');}
+     out.set('x-pinnacle-public-article-cache',key?'MISS':'BYPASS');
+     if(key&&!r.headers.has('set-cookie')){try{const stored=new Headers(out);stored.set('cache-control','public, max-age=120');await edgeCache.put(key,new Response(html,{status:200,headers:stored}));}catch{/* Keep the validated origin article when storage fails. */}}
      return new Response(request.method==='HEAD'?null:html,{status:200,headers:out});
     }
    }
