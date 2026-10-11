@@ -25,8 +25,9 @@ export function installAdCallConsent() {
   const publicAsk = /^\/ask(?:\/|$)/.test(location.pathname) &&
     !/^\/ask\/(?:te\/)?(?:account|auth|search|api)(?:\/|$)/.test(location.pathname);
   const publicCentre = /^\/centers\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/.test(location.pathname);
+  const publicLegacy=document.body?.dataset?.pageVariant==='legacy_knowledge'&&(/^\/(?:ma|t|b|c)\/[a-z0-9-]+\/?$/.test(location.pathname)||location.pathname==='/contact-national-autism-helpline-24-7');
   if (location.protocol !== 'https:' || !hosts.has(location.hostname) ||
-      !(paths.has(location.pathname) || publicAsk || publicCentre)) return;
+      !(paths.has(location.pathname) || publicAsk || publicCentre || publicLegacy)) return;
   const state = {enabled: false, started: false};
   window.__pinnacleAdCallConsent = state;
   const id = 'AW-10810823199';
@@ -103,6 +104,7 @@ export function installAdCallConsent() {
     state.started = true;
     window.gtag('js', new Date());
     window.gtag('config', action, {
+      ...(publicLegacy?{page_location:'https://www.pinnacleblooms.org/legacy-knowledge',page_title:'Pinnacle Knowledge Library',page_referrer:'',ignore_referrer:true}:{}),
       phone_conversion_number: originalDisplay,
       phone_conversion_callback: callback,
       send_page_view: false,
@@ -113,6 +115,7 @@ export function installAdCallConsent() {
         !document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
       const script = document.createElement('script');
       script.async = true;
+      script.referrerPolicy = 'no-referrer';
       script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
       script.setAttribute('data-pinnacle-ad-call-loader', '');
       document.head.appendChild(script);
