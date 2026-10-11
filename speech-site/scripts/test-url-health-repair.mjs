@@ -2,7 +2,7 @@ import test from 'node:test';import assert from 'node:assert/strict';import fs f
 import {urlHealthAlias,healthLinkTarget} from '../deployment/url-health-repair.mjs';
 import {repairSidebarBreadcrumb} from '../deployment/legacy-social-metadata/schema.mjs';
 import {isMissingMedia} from '../deployment/legacy-social-metadata/media.mjs';
-import {createMirraclesLibrary,PAGE_SIZE} from '../deployment/mirracles-library.mjs';
+import {createMirraclesLibrary,PAGE_SIZE,detailSeoTitle,detailSeoDescription} from '../deployment/mirracles-library.mjs';
 
 test('new Guru directory links all restored articles and every page from the shared portal',async()=>{
  const data=JSON.parse(await fs.readFile('deployment/guru-recovery-20261009/data/articles.json','utf8'));
@@ -21,6 +21,25 @@ const origin='https://www.pinnacleblooms.org';
 test('known dead image repair covers both real site hosts and excludes lookalike hosts',()=>{
  for(const host of ['www.pinnacleblooms.org','pinnacleblooms.org'])assert(isMissingMedia('https://'+host+'/images/therapysphere-room.jpg'));
  for(const url of ['https://other.example/images/therapysphere-room.jpg','https://pinnacleblooms.org.other.example/images/therapysphere-room.jpg','https://pinnacleblooms.org:444/images/therapysphere-room.jpg','https://pinnacleblooms.org/images/not-in-the-record.jpg'])assert(!isMissingMedia(url));
+});
+test('shared repairs cover the exact Semrush route, language and legacy-media families',async()=>{
+ const aliases={
+  '/centers/best-autism-speech-aba-occupational-therapy-center-srikakulkam-ap-india':'/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india',
+  '/b/activities-of-daily-living':'/c/activities-of-daily-living',
+  '/autism-therapy-centers/kukatpally':'/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india'
+ };
+ for(const [source,target] of Object.entries(aliases))assert.equal(urlHealthAlias(new Request(origin+source+'?utm_source=test')).headers.get('location'),origin+target+'?utm_source=test');
+ const source=`import {repairUrlHealth} from './deployment/url-health-repair.mjs';export default{fetch(request){return repairUrlHealth(request,new Response('<html lang="en"><head><meta property="og:image" content="/Assets/Materials/305.jpg"></head><body><img src="/Assets/Materials/305.jpg" alt="Old"></body></html>',{headers:{'content-type':'text/html'}}));}}`;
+ const b=await build({stdin:{contents:source,resolveDir:process.cwd()},bundle:true,format:'esm',write:false});const mf=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-04',script:b.outputFiles[0].text}));
+ try{const te=await(await mf.dispatchFetch(origin+'/faq/telugu/speech-therapy/example')).text();assert(te.includes('<html lang="te">'));assert(te.includes('/Assets/Materials/305.jpg'));
+ const material=await(await mf.dispatchFetch(origin+'/ma/yellow-color-baskets-therapy')).text();assert(material.includes('data-pinnacle-brand-fallback="true"'));assert(!material.includes('src="/Assets/Materials/305.jpg"'));assert(!material.includes('content="/Assets/Materials/305.jpg"'));
+ }finally{await mf.dispose();}
+});
+test('Mirracles detail metadata stays unique and within search-safe lengths',()=>{
+ const first={id:'104251',title:'A very long published video title that would otherwise create the same oversized title warning on every generated detail page'};
+ const second={...first,id:'104252'};
+ assert.notEqual(detailSeoTitle(first),detailSeoTitle(second));assert(detailSeoTitle(first).length+' | Pinnacle Blooms'.length<=60);
+ assert.notEqual(detailSeoDescription(first),detailSeoDescription(second));assert(detailSeoDescription(first).length<=156);assert(detailSeoDescription(first).includes(first.id));
 });
 test('precise malformed service and sitemap aliases preserve attribution and refuse unrelated routes',()=>{
  const url=origin+'/ABA%20/%20Behavioral%20Therapy?gclid=test&utm_source=google';

@@ -11,12 +11,22 @@ function isMissingMedia(value) {
     return false;
   }
 }
-function repairKnownBrokenMedia(response) {
+var legacyMaterialPage = /^\/(?:ma|m|a)\//i;
+var legacyMaterialImage = /^\/Assets\/Materials\/\d+\.jpg$/i;
+function repairKnownBrokenMedia(request, response) {
+  const pagePath = typeof request === "string" ? new URL(request).pathname : new URL(request.url).pathname;
+  const unusable = (value) => isMissingMedia(value) || (() => {
+    try {
+      return legacyMaterialPage.test(pagePath) && legacyMaterialImage.test(new URL(value, "https://www.pinnacleblooms.org").pathname);
+    } catch {
+      return false;
+    }
+  })();
   const headers = new Headers(response.headers);
   for (const key of ["content-length", "content-encoding", "etag", "last-modified", "content-md5", "digest"]) headers.delete(key);
-  headers.set("x-pinnacle-known-media", "verified-missing-20261006");
+  headers.set("x-pinnacle-known-media", "verified-missing-20261011");
   return new HTMLRewriter().on("img", { element(el) {
-    if (!isMissingMedia(el.getAttribute("src"))) return;
+    if (!unusable(el.getAttribute("src"))) return;
     if (new URL(el.getAttribute("src"), "https://www.pinnacleblooms.org").pathname === "/Assets/Materials/318.jpg") {
       el.remove();
       return;
@@ -27,7 +37,7 @@ function repairKnownBrokenMedia(response) {
     el.setAttribute("style", (el.getAttribute("style") || "") + ";object-fit:contain;background:#fff;padding:12px;box-sizing:border-box;");
     for (const name of ["srcset", "data-src", "data-srcset"]) el.removeAttribute(name);
   } }).on("meta", { element(el) {
-    if (["og:image", "twitter:image"].includes(el.getAttribute("property") || el.getAttribute("name")) && isMissingMedia(el.getAttribute("content"))) el.setAttribute("content", BRAND_IMAGE);
+    if (["og:image", "twitter:image"].includes(el.getAttribute("property") || el.getAttribute("name")) && unusable(el.getAttribute("content"))) el.setAttribute("content", BRAND_IMAGE);
   } }).transform(new Response(response.body, { status: response.status, statusText: response.statusText, headers }));
 }
 
@@ -37,8 +47,30 @@ var URL_ALIASES = {
   "/ABA / Behavioral Therapy": "/best-aba-therapy-center-india-proven-improvement-rate",
   "/Special Education / Cognitive Therapy": "/best-special-education-center-call-9100181181",
   "/Special Education/Cognitive Behavioral Therapy": "/best-special-education-center-call-9100181181",
-  "/allmirracles-sitemap.xml": "/sitemaps/miracles.xml"
+  "/allmirracles-sitemap.xml": "/sitemaps/miracles.xml",
+  // Shared legacy navigation still emits these redirecting destinations on
+  // hundreds of pages. Point both incoming aliases and rendered links at the
+  // sole maintained destination so crawlers and parents do not pay a hop.
+  "/verify": "/verify/",
+  "/innovation": "/pinnacle-ai-innovations-revolutionizing-autism-history",
+  "/franchises": "/franchise-autism-therapy-center",
+  // Historical centre ribbons used the pre-records evidence location.
+  "/verify/evidence/operating-metrics.html": "/verify/evidence/records/operating-metrics.html",
+  // Consolidate search-shaped aliases into the maintained service and centre
+  // destinations. These aliases must not become thin, competing landing pages.
+  "/child-psychologist": "/child-psychological-counseling",
+  "/child-psychologist-near-me": "/child-psychological-counseling",
+  "/child-counselor-near-me": "/child-psychological-counseling",
+  "/speech-therapist-near-me": "/top-speech-therapy-center-india-proven-improvement-rate",
+  "/occupational-therapist-near-me": "/best-occupational-therapy-center-india-proven-improvement-rate",
+  "/autism-center-near-me": "/centers",
+  // Exact live 404s reported by the 10 October Semrush full crawl. Keep the
+  // old identities available while consolidating them into maintained pages.
+  "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulkam-ap-india": "/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india",
+  "/b/activities-of-daily-living": "/c/activities-of-daily-living",
+  "/autism-therapy-centers/kukatpally": "/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india"
 };
+var FAQ_LANGUAGES = { english: "en-IN", hindi: "hi", telugu: "te", tamil: "ta", kannada: "kn", malayalam: "ml", bengali: "bn" };
 var metadataPaths = /* @__PURE__ */ new Map([
   ["/child-psychological-counseling", /* @__PURE__ */ new Set(["https://mobile.pinnacleblooms.org/child-psychological-counseling", "http://www.pinnacleblooms.org/child-psychological-counseling", "http://mobile.pinnacleblooms.org/child-psychological-counseling"])],
   ["/franchise-autism-therapy-center", /* @__PURE__ */ new Set(["https://mobile.pinnacleblooms.org/franchises", "http://mobile.pinnacleblooms.org/franchises", "https://www.pinnacleblooms.org/franchises", "http://www.pinnacleblooms.org/franchises"])]
@@ -54,6 +86,7 @@ function urlHealthAlias(request) {
   }
   const target = URL_ALIASES[p];
   if (!target) return null;
+  if (u.pathname === target) return null;
   u.pathname = target;
   return new Response(null, { status: 301, headers: { location: u.href, "cache-control": "public, max-age=300", "x-pinnacle-url-repair": "shared-url-health-20261009" } });
 }
@@ -90,6 +123,11 @@ function repairUrlHealth(request, response) {
     } catch {
       return;
     }
+    if (link.origin === ORIGIN) {
+      const rel = (e.getAttribute("rel") || "").split(/\s+/).filter(Boolean).filter((token) => token.toLowerCase() !== "nofollow");
+      if (rel.length) e.setAttribute("rel", rel.join(" "));
+      else e.removeAttribute("rel");
+    }
     if (link.origin === ORIGIN && link.pathname === "/assets/abilityscore-summary.pdf") {
       e.setAttribute("href", "/verify/evidence/records/study-portfolio.html");
       e.removeAttribute("download");
@@ -97,11 +135,23 @@ function repairUrlHealth(request, response) {
       e.setInnerContent("Read study evidence");
     }
   } });
+  const faqLanguage = u.pathname.match(/^\/faq\/([^/]+)(?:\/|$)/i)?.[1]?.toLowerCase();
+  if (FAQ_LANGUAGES[faqLanguage]) rewrite.on("html", { element(e) {
+    e.setAttribute("lang", FAQ_LANGUAGES[faqLanguage]);
+  } });
   if (old) {
     let seen = false;
+    const sameIdentity = (value) => {
+      try {
+        const target = new URL(value, ORIGIN);
+        return target.origin === ORIGIN && target.pathname === u.pathname;
+      } catch {
+        return false;
+      }
+    };
     rewrite.on('link[rel="canonical"]', { element(e) {
       const href = e.getAttribute("href");
-      if (href !== canonical && !old.has(href)) return;
+      if (href !== canonical && !old.has(href) && !sameIdentity(href)) return;
       if (seen) e.remove();
       else {
         e.setAttribute("href", canonical);
@@ -109,10 +159,30 @@ function repairUrlHealth(request, response) {
       }
     } });
     rewrite.on('meta[property="og:url"]', { element(e) {
-      if (old.has(e.getAttribute("content"))) e.setAttribute("content", canonical);
+      const value = e.getAttribute("content");
+      if (old.has(value) || sameIdentity(value)) e.setAttribute("content", canonical);
     } });
+    if (u.pathname === "/child-psychological-counseling") {
+      let title = false, description = false, heading = false;
+      rewrite.on("title", { element(e) {
+        if (title) return;
+        title = true;
+        e.setInnerContent("Child Psychologist & Psychological Counselling | Pinnacle Blooms");
+      } });
+      rewrite.on('meta[name="description"]', { element(e) {
+        if (description) return;
+        description = true;
+        e.setAttribute("content", "Child psychology and counselling guidance for children and families. Find a Pinnacle centre and call 9100 181 181 to confirm the professional, appointment and fee.");
+      } });
+      rewrite.on("h1", { element(e) {
+        if (heading) return;
+        heading = true;
+        e.setInnerContent("Child psychology and counselling support for children and families");
+        e.after('<section id="child-psychology-next-step" aria-label="Talk with Pinnacle about child psychology and counselling" style="box-sizing:border-box;max-width:980px;margin:18px auto;padding:20px;border:1px solid #d9bfd6;border-radius:16px;background:#fff;color:#18233f;box-shadow:0 10px 28px rgba(24,35,63,.08)"><p style="margin:0 0 14px;font-size:1.05rem;line-height:1.65">Talk through concerns about emotions, behaviour, learning or participation. Pinnacle will help you identify an appropriate centre and confirm the available qualified professional, appointment and fee before you visit.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><a href="tel:+919100181181" data-cta="child-psychology-call" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;border-radius:999px;background:#652579;color:#fff;text-decoration:none;font-weight:800">Call 9100 181 181</a><a href="/enroll-autism-speech-aba-therapies-india?service=psychological-counselling" data-cta="child-psychology-assessment" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;border:2px solid #652579;border-radius:999px;background:#fff;color:#652579;text-decoration:none;font-weight:800">Request an assessment</a><a href="/centers" style="display:inline-flex;align-items:center;min-height:48px;color:#315c80;font-weight:800">Find a Pinnacle centre near you</a></div><p style="margin:14px 0 0;font-size:.92rem;line-height:1.55">Pinnacle does not diagnose from this page. Confirm the suitable service and professional for your child with the receiving team.</p></section>', { html: true });
+      } });
+    }
   }
-  return repairKnownBrokenMedia(rewrite.transform(new Response(response.body, { status: response.status, statusText: response.statusText, headers })));
+  return repairKnownBrokenMedia(request, rewrite.transform(new Response(response.body, { status: response.status, statusText: response.statusText, headers })));
 }
 export {
   URL_ALIASES,
