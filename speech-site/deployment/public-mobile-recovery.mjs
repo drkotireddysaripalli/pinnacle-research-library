@@ -47,7 +47,11 @@ export async function fetchPublicOrigin(request,fetcher=fetch){
   try{const headers=new Headers(request.headers);headers.set('user-agent',desktop);headers.set('sec-ch-ua-mobile','?0');const r=await fetcher(new Request(request,{method:'GET',headers}));
    if(r.status===200&&r.headers.get('content-type')?.includes('text/html')){const html=await boundedText(r),u=new URL(request.url),title=html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim()||'';
     if(canonicalPath(html)===u.pathname&&title.length>5&&!/^(?:error|not found|page not found)\b/i.test(title)&&hasPublicHeading(html)){
-     const out=new Headers(r.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])out.delete(k);out.set('cache-control','private, no-store');out.set('x-pinnacle-public-render-recovery','verified-topic-direct-20261011');out.set('vary',[...new Set((out.get('vary')||'').split(',').map(v=>v.trim()).filter(Boolean).concat('User-Agent'))].join(', '));return new Response(request.method==='HEAD'?null:html,{status:200,headers:out});
+     const out=new Headers(r.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])out.delete(k);out.set('cache-control','private, no-store');out.set('x-pinnacle-public-render-recovery','verified-topic-direct-20261011');out.set('vary',[...new Set((out.get('vary')||'').split(',').map(v=>v.trim()).filter(Boolean).concat('User-Agent'))].join(', '));
+     // Announce the actual article image before the large HTML body arrives.
+     // Material archive families have separate image-fallback rules.
+     if(!/^\/(?:ma|m|a)\//.test(u.pathname)){const image=html.match(/<img\b[^>]*\bsrc=["'](?:https:\/\/www\.pinnacleblooms\.org)?(\/Assets\/Materials\/\d+\.(?:jpg|png))["']/i)?.[1];if(image)out.append('link','<'+u.origin+'/cdn-cgi/image/width=480,quality=75,format=auto'+image+'>; rel=preload; as=image; fetchpriority=high');}
+     return new Response(request.method==='HEAD'?null:html,{status:200,headers:out});
     }
    }
   }catch{/* A changed origin must fall back to the original request. */}
