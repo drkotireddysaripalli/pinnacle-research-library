@@ -1,0 +1,26 @@
+import fs from 'node:fs';
+import vm from 'node:vm';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+const source=fs.readFileSync(new URL('../public/pinnacle-pages-scripts/enrolment.js',import.meta.url),'utf8').replace(/^import[^\n]+\n/,'');
+function harness({preview=false,invalid=false,result='accepted',writeFails=false,storageFails=false,saved=null,endpointAllowed=true}={}){
+ const events=[],nodes=new Map();let receiverCalls=0,state=saved;
+ const node=id=>{if(nodes.has(id))return nodes.get(id);const n={id,value:'',dataset:{},options:[{value:'',textContent:'Help find a centre'}],selectedIndex:0,hidden:false,disabled:false,textContent:'',innerHTML:'',open:false,listeners:{},addEventListener(name,fn){(this.listeners[name]??=[]).push(fn);},setAttribute(){},matches(){return true;},replaceChildren(){},append(){},after(){},focus(){},closest(){return {textContent:'Help me choose'};},querySelector(){return radio;},querySelectorAll(){return[];},reset(){}};nodes.set(id,n);return n;};
+ const radio={value:'help',checked:true,closest:()=>({textContent:'Help me choose'}),addEventListener(){}};
+ const form=node('pinnacle-enrolment');form.dataset={preview:String(preview),apiEndpoint:'/api/enrolment'};
+ for(const [id,value]of [['parent-name','PRIVATE_NAME'],['parent-phone','PRIVATE_PHONE'],['parent-email','PRIVATE_EMAIL'],['family-priority','PRIVATE_MESSAGE']])node(id).value=value;
+ const document={getElementById:node,createElement:()=>node('generated-'+nodes.size),querySelector:()=>null,querySelectorAll:()=>[],dispatchEvent:event=>events.push(event)};
+ const store={read:()=>state,write:value=>{if(writeFails)throw Error('storage');state=value;},clear:()=>{state=null;}};
+ const localStorage={setItem(){if(storageFails)throw Error('storage');},removeItem(){}};
+ vm.runInNewContext(source,{document,window:{pinnacleEnquirySource:()=>null},location:{origin:'https://www.pinnacleblooms.org',search:'',reload(){}},navigator:{},localStorage,crypto:{randomUUID:()=> 'private-request'},services:new Set(['help']),approvedEndpoint:()=>endpointAllowed,validateEnrolment:()=>invalid?{name:'PRIVATE_ERROR_MESSAGE'}:{},makePayload:()=>({requestId:'private-request',source:{}}),createAttemptStore:()=>store,submitEnrolment:async()=>{receiverCalls++;return {state:result,receipt:{schemaVersion:1,requestId:'private-request',id:'private-receipt'},contractVersion:1};},CustomEvent:class{constructor(type,options){this.type=type;this.detail=options.detail;}},Date,URLSearchParams,queueMicrotask});
+ const progress=()=>events.filter(e=>e.type==='pinnacle:enquiry-progress').map(e=>JSON.parse(JSON.stringify(e.detail)));
+ return{progress,events,get receiverCalls(){return receiverCalls;},focus:()=>form.listeners.focusin?.forEach(f=>f()),submit:async()=>{for(const f of form.listeners.submit||[])await f({preventDefault(){}});}};
+}
+test('coarse focus notifications allow the consent-aware collector to retry and deduplicate; preview is silent',()=>{const h=harness();h.focus();h.focus();assert.deepEqual(h.progress(),[{stage:'start'},{stage:'start'}]);assert.equal(h.receiverCalls,0);const p=harness({preview:true});p.focus();assert.deepEqual(p.progress(),[]);});
+test('invalid input is a fixed validation category and never calls the receiver',async()=>{const h=harness({invalid:true});await h.submit();assert.deepEqual(h.progress(),[{stage:'error',error_category:'validation'}]);assert.equal(h.receiverCalls,0);});
+test('accepted receipt preserves accepted path without exposing data in reliability events',async()=>{const h=harness();h.focus();await h.submit();await h.submit();assert.equal(h.receiverCalls,1);assert.equal(h.events.filter(e=>e.type==='pinnacle:enquiry-accepted').length,1);assert.deepEqual(h.progress(),[{stage:'start'},{stage:'attempt'}]);assert(!JSON.stringify(h.progress()).includes('PRIVATE'));assert(!JSON.stringify(h.progress()).includes('private-request'));});
+test('receiver rejection and uncertainty do not emit accepted events',async()=>{for(const result of ['rejected','unknown']){const h=harness({result});await h.submit();assert.equal(h.receiverCalls,1);assert.equal(h.events.filter(e=>e.type==='pinnacle:enquiry-accepted').length,0);assert.deepEqual(h.progress(),[{stage:'attempt'},{stage:'error',error_category:result==='rejected'?'receiver_rejected':'receiver_unconfirmed'}]);}});
+test('storage write failure never attempts receiver',async()=>{const h=harness({writeFails:true});await h.submit();assert.equal(h.receiverCalls,0);assert.deepEqual(h.progress(),[{stage:'error',error_category:'storage_unavailable'}]);});
+test('storage readiness failure and unavailable endpoint are fixed diagnostics',async()=>{for(const args of [{storageFails:true},{endpointAllowed:false}]){const h=harness(args);await h.submit();assert.equal(h.receiverCalls,0);assert.deepEqual(h.progress(),[{stage:'error',error_category:args.storageFails?'storage_unavailable':'endpoint_unavailable'}]);}});
+test('restored accepted receipt does not redispatch acceptance or attempt',async()=>{const h=harness({saved:{state:'accepted'}});await h.submit();assert.equal(h.receiverCalls,0);assert.equal(h.events.length,0);});
+test('preview validation never emits events or submits private values',async()=>{const h=harness({preview:true});await h.submit();assert.equal(h.receiverCalls,0);assert.equal(h.events.length,0);});

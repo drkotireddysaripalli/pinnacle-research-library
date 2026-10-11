@@ -28,7 +28,7 @@ function harness({callback=false,origin='https://www.pinnacleblooms.org',path='/
  const doc={referrer,visibilityState:'visible',body:{dataset:{pageVariant:variant}},querySelector:s=>s.startsWith('#pinnacle-enrolment[')?(callback?{}:null):s.startsWith('script[')?null:s==='[data-speech-measurement]'?panel:s==='[data-book-commerce]'?{dataset:{cartCatalogue:JSON.stringify(commerceCatalogue)}}:status,querySelectorAll:()=>choices,createElement:()=>({setAttribute(k,v){this[k]=v;}}),head:{append:x=>{if(tagLoadThrows&&x.src?.startsWith('https://www.googletagmanager.com/'))throw Error('SDK loader unavailable');scripts.push(x);}},addEventListener:(event,fn)=>{const previous=listeners[event];listeners[event]=data=>{previous?.(data);fn(data);};}};
  Object.defineProperty(doc,'cookie',{get:()=> 'ps_ga=123; pbn_books_ga=456; pbn_books_ga_2BYLRLFRDJ=session; ph_ga=keep; unrelated=keep',set:value=>cookies.push(value)});
  const store=sharedStore||new Map(saved?[[key,JSON.stringify(saved)]]:[]);
- const win={addEventListener:(event,fn)=>{const previous=listeners['window:'+event];listeners['window:'+event]=data=>{previous?.(data);fn(data);};}};
+ const win={__qaProgress:detail=>listeners['pinnacle:enquiry-progress']?.({detail}),addEventListener:(event,fn)=>{const previous=listeners['window:'+event];listeners['window:'+event]=data=>{previous?.(data);fn(data);};}};
  class FakePerformanceObserver{constructor(callback){this.callback=callback;}observe(options){this.callback({getEntries:()=>performanceEntries?.[options.type]||[]});}disconnect(){}}
  const testMath=Object.create(Math);testMath.random=()=>0;
  vm.runInNewContext(source,{window:win,document:doc,location:{origin,pathname:path,href:origin+path+search},navigator:{globalPrivacyControl:gpc},localStorage:{getItem:k=>{if(storageThrows)throw Error();return store.get(k)||null;},setItem:(k,v)=>{if(storageThrows)throw Error();writes.push([k,v]);store.set(k,v);},removeItem:k=>store.delete(k)},Date,Set,JSON,URL,Math:testMath,PerformanceObserver:performanceEntries?FakePerformanceObserver:undefined});
@@ -51,7 +51,7 @@ test('sampled web vitals use coarse buckets and the five-field privacy contract'
  }});h.choose('accepted');h.hide();
  const samples=h.events().filter(event=>event[1]==='web_vital_sample');assert.equal(samples.length,3);
  const expectedKeys=['metric_name','page_group','rating','release_id','value_bucket'];
- for(const sample of samples){const {send_to,...reportable}=sample[2];assert.equal(send_to,'G-2BYLRLFRDJ');assert.deepEqual(Object.keys(reportable).sort(),expectedKeys);assert.equal(sample[2].page_group,'home');assert.equal(sample[2].release_id,'ga4-common-20261010');}
+ for(const sample of samples){const {send_to,...reportable}=sample[2];assert.equal(send_to,'G-2BYLRLFRDJ');assert.deepEqual(Object.keys(reportable).sort(),expectedKeys);assert.equal(sample[2].page_group,'home');assert.equal(sample[2].release_id,'ga4-reliability-20261011');}
  const byName=Object.fromEntries(samples.map(sample=>[sample[2].metric_name,sample[2]]));
  assert.deepEqual([byName.LCP.rating,byName.LCP.value_bucket],['needs_improvement','2_5_4s']);
  assert.deepEqual([byName.INP.rating,byName.INP.value_bucket],['good','100_200ms']);
@@ -628,4 +628,42 @@ test('Google Ads SDK failures cannot interrupt native phone or WhatsApp actions'
 test('bookshop Ads contacts cannot borrow the separate therapy acquisition record',()=>{
  const first=harness({search:'?gclid=qaTherapyAds123'});first.choose('accepted');
  const shop=harness({path:'/shop',search:'',sharedStore:first.store});shop.choose('accepted');shop.click('header-call','tel:+919100181181');assert.equal(adsEvents(shop).length,0);
+});
+
+test('form reliability is fixed-vocabulary, consented and never an accepted lead',()=>{
+ const h=harness({callback:true,path:canonicalEnrolment,search:''});
+ h.win.__qaProgress({stage:'start'});assert.equal(h.events().length,0);
+ h.choose('accepted');h.win.__qaProgress({stage:'start'});h.win.__qaProgress({stage:'start'});
+ h.win.__qaProgress({stage:'attempt'});
+ for(const error_category of ['validation','storage_unavailable','endpoint_unavailable','receiver_rejected','receiver_unconfirmed'])h.win.__qaProgress({stage:'error',error_category});
+ const events=h.events().filter(e=>e[1]!=='page_view');
+ assert.equal(events.filter(e=>e[1]==='form_start').length,1);
+ assert.equal(events.filter(e=>e[1]==='enquiry_submit_attempt').length,1);
+ assert.equal(events.filter(e=>e[1]==='form_error').length,5);
+ assert.equal(events.filter(e=>e[1]==='enquiry_accepted').length,0);
+ assert(events.every(e=>e[2].measurement_mode==='consented'&&e[2].link_placement==='enrolment-form'));
+ const before=h.events().length;
+ for(const detail of [{stage:'accepted'},{stage:'error',error_category:'PRIVATE_MESSAGE'},{stage:'start',name:'PRIVATE_NAME'},{stage:'attempt',requestId:'PRIVATE_ID'}])h.win.__qaProgress(detail);
+ assert.equal(h.events().length,before);
+ h.choose('declined');h.win.__qaProgress({stage:'error',error_category:'validation'});assert.equal(h.events().length,before);
+});
+test('refused focus can resume after permission and repeated permitted focus records one start',()=>{
+ const h=harness({callback:true,path:canonicalEnrolment,search:''});
+ h.choose('declined');h.win.__qaProgress({stage:'start'});h.win.__qaProgress({stage:'start'});
+ assert.equal(h.events().filter(e=>e[1]==='form_start').length,0);
+ h.choose('accepted');h.win.__qaProgress({stage:'start'});h.win.__qaProgress({stage:'start'});
+ assert.equal(h.events().filter(e=>e[1]==='form_start').length,1);
+ assert.equal(h.events().filter(e=>e[1]==='enquiry_accepted').length,0);
+});
+
+test('QA, GPC and unsupported pages cannot emit form reliability events',()=>{
+ for(const options of [{callback:true,path:canonicalEnrolment,search:'?validation_test=1'},{callback:true,path:canonicalEnrolment,gpc:true},{callback:false,path:'/'}]){
+  const h=harness(options);h.choose('accepted');const before=h.events().length;h.win.__qaProgress({stage:'attempt'});assert.equal(h.events().length,before);
+ }
+});
+test('CLS uses the largest bounded session window rather than cumulative shifts',()=>{
+ const h=harness({path:'/',search:'',performanceEntries:{'layout-shift':[
+  {value:0.04,hadRecentInput:false,startTime:0},{value:0.04,hadRecentInput:false,startTime:700},
+  {value:0.04,hadRecentInput:false,startTime:2000},{value:0.04,hadRecentInput:false,startTime:2700}
+ ]}});h.choose('accepted');h.hide();const cls=h.events().find(e=>e[1]==='web_vital_sample'&&e[2].metric_name==='CLS');assert.equal(cls[2].rating,'good');assert.equal(cls[2].value_bucket,'0_05_0_1');
 });
