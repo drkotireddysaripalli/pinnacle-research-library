@@ -1,9 +1,14 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {LEGACY_TAGS,LEGACY_NOSCRIPT_TAGS,LEGACY_TAG_REPLACEMENTS} from '../deployment/legacy-measurement-fingerprints.mjs';
-import {legacyMeasurementScope,migrateLegacyPrefix,repairLegacyMeasurement,serveLegacyMeasurementCall,stripLegacyNoscript} from '../deployment/legacy-measurement.mjs';
+import {legacyMeasurementScope,migrateLegacyPrefix,repairLegacyMeasurement,repairLegacyExclusions,serveLegacyMeasurementCall,stripLegacyNoscript} from '../deployment/legacy-measurement.mjs';
 const request=path=>new Request('https://www.pinnacleblooms.org'+path);
 const fixture=path=>'<html><head><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'">'+LEGACY_TAGS.join('')+'<script src="/functional.js"></script></head><body><h1>Parent guidance</h1></body></html>';
+test('the activated split removes only exact public noscript without changing ordinary measurement or contact',async()=>{
+ const path='/t/bead-stringing-therapy',old=fixture(path).replace('</body>',LEGACY_NOSCRIPT_TAGS[0]+'<a href="tel:+919100181181">Call</a></body>');
+ const response=await repairLegacyExclusions(request(path),new Response(old,{headers:{'content-type':'text/html','link':'</hero.jpg>; rel=preload; as=image'}}));
+ assert.equal(await response.text(),old.replace(LEGACY_NOSCRIPT_TAGS[0],''));assert.equal(response.headers.get('link'),'</hero.jpg>; rel=preload; as=image');assert.equal(response.headers.get('x-pinnacle-legacy-exclusion'),'exact-noscript-only');
+});
 test('fingerprinted public families replace only verified analytics with the existing collector and call module',()=>{
  for(const path of ['/ma/ringtoss-therapy','/t/bead-stringing-therapy','/b/understanding-managing-spitting-saliva-tantrums','/c/hand-flapping-therapy','/contact-national-autism-helpline-24-7']){
   const result=migrateLegacyPrefix(fixture(path),request(path));assert(result);assert.equal(result.removed,LEGACY_TAGS.length);

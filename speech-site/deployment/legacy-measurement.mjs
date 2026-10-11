@@ -42,6 +42,16 @@ export function stripLegacyNoscript(body){
  const tokens=[...new Set(LEGACY_NOSCRIPT_TAGS.flatMap(t=>[t,t.replaceAll('\r\n','\n')]))],keep=Math.max(...tokens.map(t=>t.length))-1,decoder=new TextDecoder(),encoder=new TextEncoder();let pending='';
  return body.pipeThrough(new TransformStream({transform(bytes,c){pending+=decoder.decode(bytes,{stream:true});for(const token of tokens)pending=pending.replaceAll(token,'');if(pending.length>keep){c.enqueue(encoder.encode(pending.slice(0,-keep)));pending=pending.slice(-keep);}},flush(c){pending+=decoder.decode();for(const token of tokens)pending=pending.replaceAll(token,'');c.enqueue(encoder.encode(pending));}}));
 }
+// Public measurement stays staged: only the independently reviewed exclusion
+// is active. No public collector, preferences, call helper or links are added.
+export async function repairLegacyExclusions(request,response){
+ const scope=legacyMeasurementScope(request);
+ if(!scope||response.status!==200||!response.body||!response.headers.get('content-type')?.includes('text/html')||/no-transform/i.test(response.headers.get('cache-control')||''))return response;
+ if(scope==='private')return repairLegacyMeasurement(request,response);
+ const headers=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])headers.delete(k);
+ headers.set('x-pinnacle-legacy-exclusion','exact-noscript-only');
+ return new Response(stripLegacyNoscript(response.body),{status:response.status,statusText:response.statusText,headers});
+}
 export async function repairLegacyMeasurement(request,response){
  if(!legacyMeasurementScope(request)||response.status!==200||!response.body||response.headers.has('content-security-policy')||!response.headers.get('content-type')?.includes('text/html')||/no-transform/i.test(response.headers.get('cache-control')||''))return response;
  const reader=response.body.getReader(),decoder=new TextDecoder(),encoder=new TextEncoder(),chunks=[];let prefix='',done=false;

@@ -1,4 +1,4 @@
-import {repairLegacyMeasurement,serveLegacyMeasurementCall} from "./legacy-measurement.runtime.mjs";
+import {repairLegacyExclusions as repairLegacyMeasurement,serveLegacyMeasurementCall} from "./legacy-measurement.runtime.mjs";
 import {urlHealthAlias,repairUrlHealth} from './url-health-repair.mjs';
 import {serveBookOrderPolicy,repairMerchantDiscovery} from './merchant-policy-handler.mjs';
 import {fetchPublicOrigin} from './public-mobile-recovery.mjs';
