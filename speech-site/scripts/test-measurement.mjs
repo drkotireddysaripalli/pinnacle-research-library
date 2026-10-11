@@ -667,3 +667,19 @@ test('CLS uses the largest bounded session window rather than cumulative shifts'
   {value:0.04,hadRecentInput:false,startTime:2000},{value:0.04,hadRecentInput:false,startTime:2700}
  ]}});h.choose('accepted');h.hide();const cls=h.events().find(e=>e[1]==='web_vital_sample'&&e[2].metric_name==='CLS');assert.equal(cls[2].rating,'good');assert.equal(cls[2].value_bucket,'0_05_0_1');
 });
+
+test('fingerprinted legacy knowledge uses only a coarse identity and canonical contact events',()=>{
+ for(const path of ['/ma/ringtoss-therapy','/t/bead-stringing-therapy','/b/understanding-managing-spitting-saliva-tantrums','/c/hand-flapping-therapy','/contact-national-autism-helpline-24-7']){
+  const h=harness({path,variant:'legacy_knowledge',search:''});h.choose('accepted');h.click('knowledge-call','tel:+919100181181');h.click('knowledge-whatsapp','https://api.whatsapp.com/send?phone=919100181181&text=PRIVATE_TEXT');h.click('knowledge-whatsapp','https://wa.me/919100181181?text=PRIVATE_TEXT');
+  assert.equal(h.events().filter(e=>e[1]==='page_view').length,1);assert.equal(h.events().filter(e=>e[1]==='phone_link_click').length,1);assert.equal(h.events().filter(e=>e[1]==='whatsapp_link_click').length,2);
+  for(const event of h.events()){assert.equal(event[2].page_group,'knowledge');assert.equal(event[2].page_location,'https://www.pinnacleblooms.org/legacy-knowledge');}
+  assert(!JSON.stringify(h.events()).includes(path));assert(!JSON.stringify(h.events()).includes('PRIVATE_TEXT'));assert(!JSON.stringify(h.events()).includes('click_url'));
+  h.choose('declined');const n=h.events().length;h.click('knowledge-call','tel:+919100181181');assert.equal(h.events().length,n);
+ }
+});
+
+test('private document/account paths cannot start the shared collector even with a spoofed variant',()=>{
+ for(const path of ['/documents/private-record','/account','/payroll/report','/internal/report']){
+  const h=harness({path,variant:'legacy_knowledge',search:''});assert.equal(h.events().length,0);assert.equal(h.scripts.length,0);
+ }
+});

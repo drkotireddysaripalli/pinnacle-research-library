@@ -25,8 +25,9 @@ export function installAdCallConsent() {
   const publicAsk = /^\/ask(?:\/|$)/.test(location.pathname) &&
     !/^\/ask\/(?:te\/)?(?:account|auth|search|api)(?:\/|$)/.test(location.pathname);
   const publicCentre = /^\/centers\/best-autism-speech-aba-occupational-therapy-center-[a-z0-9-]+$/.test(location.pathname);
+  const publicLegacy=document.body?.dataset?.pageVariant==='legacy_knowledge'&&(/^\/(?:ma|t|b|c)\/[a-z0-9-]+\/?$/.test(location.pathname)||location.pathname==='/contact-national-autism-helpline-24-7');
   if (location.protocol !== 'https:' || !hosts.has(location.hostname) ||
-      !(paths.has(location.pathname) || publicAsk || publicCentre)) return;
+      !(paths.has(location.pathname) || publicAsk || publicCentre || publicLegacy)) return;
   const state = {enabled: false, started: false};
   window.__pinnacleAdCallConsent = state;
   const id = 'AW-10810823199';

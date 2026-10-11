@@ -51,10 +51,12 @@
   const documents = {'/speech-therapy/service-information':'Pinnacle Speech Therapy — Service Information','/speech-therapy/first-visit-guide':'Pinnacle Speech Therapy — First Visit Guide','/speech-therapy/teacher-observation-guide':'Pinnacle Speech Therapy — Teacher Observation Guide'};
   pages['/books/resources/first-conversation'] = {title:'Free First Conversation Planning Sheet',group:'family_resource',service:'help'};
   const pagePath = location.pathname;
+  if(/^\/(?:account|auth|admin|internal|private|customer|customers|patient|patients|payroll|reports|report|documents|document)(?:\/|$)/i.test(pagePath))return;
+  const legacyKnowledge=location.origin===origin&&document.body?.dataset.pageVariant==='legacy_knowledge'&&(/^(?:\/ma|\/t|\/b|\/c)\/[a-z0-9-]+\/?$/.test(pagePath)||pagePath==='/contact-national-autism-helpline-24-7');
   const privateAskPath = /^\/ask\/(?:te\/)?(?:account|auth|api|search)(?:\/|$)/.test(pagePath);
   const isAsk = location.origin === 'https://pinnacleblooms.org' && /^\/ask(?:\/|$)/.test(pagePath) && !privateAskPath && document.body?.dataset.pageVariant === 'ask';
   // Knowledge families use fixed buckets: never send questions, story IDs or searches.
-  const knowledgePath = location.origin === origin && document.body?.dataset.pageVariant === 'knowledge'
+  const knowledgePath = legacyKnowledge?'legacy-knowledge':location.origin === origin && document.body?.dataset.pageVariant === 'knowledge'
     ? (/^\/mirracles\/\d+(?:\/|$)/.test(pagePath)?'allmirracles':pagePath.match(/^\/(faq|sunshine|allmirracles|materials|interventions)(?:\/|$)/)?.[1]) : null;
   const knowledgeSearch = !!knowledgePath && new URL(location.href).searchParams.has('q');
   const canonical = isAsk ? 'https://pinnacleblooms.org/ask' : origin + (knowledgePath ? '/'+knowledgePath : pages[pagePath]?.measurementPath || pagePath);
