@@ -4,6 +4,7 @@ import {publicLinkTarget} from './public-link-target.mjs';
 import {repairKnownLegacySchema} from './legacy-social-metadata/schema.mjs';
 import {RepeatedFontFaces} from './legacy-social-metadata/reading-directory.mjs';
 import {repairReadingPaint} from './reading-paint.mjs';
+import {repairKnownLegacyPerformance} from './legacy-social-metadata/performance.mjs';
 const ORIGIN='https://www.pinnacleblooms.org';
 export const URL_ALIASES={
  '/groupteaching':'/group-teaching','/parenttraining':'/parent-training',
@@ -106,6 +107,8 @@ export function repairUrlHealth(request,response){
   if(fonts.has(key))e.remove();else fonts.add(key);
  }});
  if(u.pathname==='/speech-aba-autism-assessments')rewrite.on('main',{element(e){e.append('<section data-pinnacle-assessment-guides><h2>Read about assessment approaches</h2><p>These reference guides explain distinct assessments. The receiving professional confirms which, if any, is appropriate for your child.</p><ul><li><a href="/assessments/speech-and-language-evaluation-assessment">Speech and language evaluation</a></li><li><a href="/assessments/hamilton-depression-rating-scale-ham-d">Hamilton Depression Rating Scale: professional reference</a></li></ul></section>',{html:true});}});
- return repairReadingPaint(request,repairKnownLegacySchema(repairKnownBrokenMedia(request,rewrite.transform(new Response(response.body,{status:response.status,statusText:response.statusText,headers}))),request.url));
+ let repaired=repairKnownLegacySchema(repairKnownBrokenMedia(request,rewrite.transform(new Response(response.body,{status:response.status,statusText:response.statusText,headers}))),request.url);
+ if(!repaired.headers.has('x-pinnacle-reading-performance'))repaired=repairKnownLegacyPerformance(repaired,request);
+ return repairReadingPaint(request,repaired);
 }
 
