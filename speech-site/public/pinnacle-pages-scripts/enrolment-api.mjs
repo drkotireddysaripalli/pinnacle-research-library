@@ -1,6 +1,7 @@
 // Public form contract. Cloudflare translates this deliberately small envelope
 // to the existing PinnacleAI enrolment workflow without exposing that service.
-import {normaliseAcquisition} from './enrolment-source.mjs?v=helpline-source-20261010';
+import {normaliseAcquisition} from './enrolment-source.mjs?v=navratri-20261011';
+export const NAVRATRI_OFFER_REFERENCE='navratri-one-service-month-2026';
 export const services = new Set(['help','autism','speech','occupational','aba','education','other']);
 export function validateEnrolment(values, centreIds) {
  const errors={};
@@ -16,7 +17,7 @@ export function validateEnrolment(values, centreIds) {
 }
 export function makePayload(values, requestId, acquisition) {
  const permitted=normaliseAcquisition(acquisition);
- return {schemaVersion:1,requestId,contact:{name:values.name.trim(),phone:values.phone.trim(),email:values.email.trim()},preferences:{service:values.service,centre:values.centre},message:values.message.trim(),source:{page:'/enroll-autism-speech-aba-therapies-india',...(permitted?{acquisition:permitted}:{})}};
+ return {schemaVersion:1,requestId,contact:{name:values.name.trim(),phone:values.phone.trim(),email:values.email.trim()},preferences:{service:values.service,centre:values.centre,...(values.offer===NAVRATRI_OFFER_REFERENCE?{offer:NAVRATRI_OFFER_REFERENCE}:{})},message:values.message.trim(),source:{page:'/enroll-autism-speech-aba-therapies-india',...(permitted?{acquisition:permitted}:{})}};
 }
 export function approvedEndpoint(endpoint, origin) {
  if(typeof endpoint!=='string'||!endpoint)return null;

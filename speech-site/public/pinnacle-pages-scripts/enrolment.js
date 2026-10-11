@@ -1,10 +1,12 @@
-import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=helpline-source-20261010';
+import {services,validateEnrolment,makePayload,approvedEndpoint,submitEnrolment,createAttemptStore} from './enrolment-api.mjs?v=navratri-20261011';
 const form=document.getElementById('pinnacle-enrolment');
 if(form){
  const preview=form.dataset.preview==='true',endpoint=form.dataset.apiEndpoint;
  const button=document.getElementById('enrol-submit'),summary=document.getElementById('enrol-error-summary'),status=document.getElementById('enrol-status'),centre=document.getElementById('preferred-centre'),preferences=document.getElementById('enrol-preferences');
  const anotherRequest=document.createElement('button');anotherRequest.type='button';anotherRequest.className='button secondary';anotherRequest.textContent='Start a different enquiry';anotherRequest.hidden=true;status.after(anotherRequest);
  const fields={name:'parent-name',phone:'parent-phone',email:'parent-email',service:'service-label',centre:'preferred-centre',message:'family-priority'};
+ const offerReference=form.dataset.offerReference||'',promotionStart=Date.parse(form.dataset.promotionStart||''),promotionEnd=Date.parse(form.dataset.promotionEnd||'');
+ const activeOffer=()=>Number.isFinite(promotionStart)&&Number.isFinite(promotionEnd)&&Date.now()>=promotionStart&&Date.now()<promotionEnd?offerReference:'';
  const centreIds=new Set([...centre.options].map(o=>o.value));
  const centreCard=document.getElementById('enrol-centre-card'),centreAnnouncement=document.getElementById('enrol-centre-announcement');
  function renderCentre(announce=false){
@@ -23,7 +25,7 @@ if(form){
  if(!preview){try{attemptStore=createAttemptStore(localStorage);const probe='pbn-enrolment-storage-check';localStorage.setItem(probe,'1');localStorage.removeItem(probe);storageReady=true;}catch{}}
  const controls=[...form.querySelectorAll('[data-enrol-fields]')];
  function setBusy(busy){pending=busy;form.setAttribute('aria-busy',String(busy));controls.forEach(fieldset=>{fieldset.disabled=busy||finished;});button.disabled=busy||finished||uncertain;}
- function values(){return {name:document.getElementById(fields.name).value,phone:document.getElementById(fields.phone).value,email:document.getElementById(fields.email).value,service:form.querySelector('[name="service"]:checked')?.value||'',centre:centre.value,message:document.getElementById(fields.message).value};}
+ function values(){return {name:document.getElementById(fields.name).value,phone:document.getElementById(fields.phone).value,email:document.getElementById(fields.email).value,service:form.querySelector('[name="service"]:checked')?.value||'',centre:centre.value,message:document.getElementById(fields.message).value,offer:activeOffer()};}
  function showErrors(errors){
   summary.replaceChildren();summary.hidden=!Object.keys(errors).length;
   for(const [name,id] of Object.entries(fields)){
