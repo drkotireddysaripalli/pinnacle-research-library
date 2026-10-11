@@ -26,6 +26,18 @@ Different concerns may bring you here. You should not have to assemble the journ
 
 One child. One life. Every step working toward it.
 
+One-service monthly enrolment offer
+
+## One full month of one therapy service for ₹14,499.
+
+Choose one service: Speech Therapy, Occupational Therapy, Behaviour Therapy or Special Education. The regular monthly price is ₹25,999. The care team confirms the selected service, suitable centre, schedule and availability before enrolment.
+
+[Request an enrolment conversation](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india?offer=navratri-one-service-month-2026#enrolment-form)
+
+[Call 9100 181 181](tel:+919100181181)
+
+Terms: ₹14,499 for one full month of one listed therapy service, regularly ₹25,999. Available for the first 4,999 qualifying children or families in total. The care team confirms eligibility and remaining availability before enrolment. Services are not bundled. The separate free speech and language assessment offer does not make ongoing therapy free.
+
 Let’s make the first step simple
 
 ## Tell us how to reach you. We’ll listen first.

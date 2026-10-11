@@ -119,10 +119,33 @@ const disciplines = [
 
   <section class="final-cta aba-final" id="next-step" aria-labelledby="aba-next-title"><div class="wrap"><div class="close-sun official-close"><Image src={emblem} width={96} height={96} format="webp" loading="lazy" alt="Pinnacle Blooms Network emblem"/></div><p class="eyebrow">Every Child Counts®</p><h2 id="aba-next-title">Start with one everyday moment that matters.</h2><p>Tell us what happens and what you hope can become easier. We’ll listen, help identify a suitable first professional conversation and explain the next step before you decide.</p><div class="final-actions"><a class="button white" href={phone.href} data-cta="aba-final-call"><Icon name="phone"/>Call {phone.display}</a><a class="button light-outline" href="#centres" data-cta="aba-final-centres">Find a centre <Icon name="arrow"/></a><a class="button light-outline" href={abaEnquiry} data-cta="aba-final-enrol">Begin enrolment <Icon name="arrow"/></a></div><p class="final-guidance">Free, staffed telephone guidance 24/7. Ordinary network call charges may apply. Centre visits and therapy have separately confirmed fees.</p><div class="aba-share-actions"><a href={whatsappShare} target="_blank" rel="noopener noreferrer" data-cta="aba-share-whatsapp">Share this page on WhatsApp ↗</a><button type="button" data-aba-share hidden>Share with family</button><button type="button" data-aba-copy hidden>Copy page link</button><p data-aba-share-status role="status" aria-live="polite"></p></div><a class="helpline-link" href={url('/national-autism-helpline')}>Pinnacle / BHCL National Autism Helpline →</a></div></section>
 <script>
+  const acquisitionKeys=['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  const landing=new URL(location.href);
+  const acquisition=new URLSearchParams();
+  for(const key of acquisitionKeys)for(const value of landing.searchParams.getAll(key))if(value)acquisition.append(key,value);
+  const carryAcquisition=(href:string)=>{
+    const target=new URL(href,location.href);
+    for(const [key,value] of acquisition)if(!target.searchParams.has(key))target.searchParams.append(key,value);
+    return target;
+  };
+  if(acquisition.size){
+    for(const anchor of document.querySelectorAll<HTMLAnchorElement>('main a[href]')){
+      const target=new URL(anchor.href,location.href);
+      if((target.origin===location.origin||['www.pinnacleblooms.org','pinnacleblooms.org'].includes(target.hostname))&&(/^(\/centers(?:\/|$)|\/enroll-autism-speech-aba-therapies-india$)/.test(target.pathname)))anchor.href=carryAcquisition(target.href).href;
+      if(target.hostname==='wa.me'&&target.searchParams.has('text')){
+        const text=target.searchParams.get('text')||'';
+        target.searchParams.set('text',text.replace(/https:\/\/www\.pinnacleblooms\.org\/best-aba-therapy-center-india-proven-improvement-rate[^\s]*/g,match=>{
+          const shared=carryAcquisition(match);
+          return shared.href;
+        }));
+        anchor.href=target.href;
+      }
+    }
+  }
   const shareButton=document.querySelector<HTMLButtonElement>('[data-aba-share]');
   const copyButton=document.querySelector<HTMLButtonElement>('[data-aba-copy]');
   const status=document.querySelector<HTMLElement>('[data-aba-share-status]');
-  const pageUrl=document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href||location.href;
+  const pageUrl=acquisition.size?carryAcquisition(document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href||location.href).href:(document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href||location.href);
   if(shareButton&&navigator.share){shareButton.hidden=false;shareButton.addEventListener('click',async()=>{try{await navigator.share({title:'ABA Therapy for Everyday Life | Pinnacle Blooms',url:pageUrl});}catch(error){if((error as Error).name!=='AbortError'&&status)status.textContent='Use the WhatsApp link or copy the page link.';}});}
   if(copyButton&&navigator.clipboard){copyButton.hidden=false;copyButton.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(pageUrl);if(status)status.textContent='Page link copied.';}catch{if(status)status.textContent='Copy was unavailable. Use the WhatsApp link.';}});}
 </script>
