@@ -1,3 +1,4 @@
+import {fetchPublicOrigin as sharedFetchPublicOrigin} from "./public-mobile-recovery.mjs";
 // deployment/legacy-social-metadata/media.mjs
 var BRAND_IMAGE = "https://www.pinnacleblooms.org/pinnacle-pages-assets/pinnacle-blooms-network-lockup.CUnZranx_Z2nTFgn.webp";
 var missing = /* @__PURE__ */ new Set(["/Assets/Materials/20707165343.jpg", "/Images/ProfileImages/12798111602.jpg", "/Images/ProfileImages/20552642664.jpg", "/Images/ProfileImages/20707155230.jpg", "/Images/ProfileImages/20708422583.jpg", "/Images/ProfileImages/20708623831.jpg", "/Images/ProfileImages/20708666496.jpg", "/Images/ProfileImages/20709822519.jpg", "/Images/ProfileImages/20710414688.jpg", "/Images/ProfileImages/3062523339.jpg", "/Images/ProfileImages/3062523460.jpg", "/Images/ProfileImages/3062523628.jpg", "/Images/ProfileImages/3062523633.jpg", "/Images/ProfileImages/3062523640.jpg", "/Images/ProfileImages/3062523874.jpg", "/Images/ProfileImages/3062525279.jpg", "/Images/ProfileImages/3062526597.jpg", "/Images/ProfileImages/3159708782.jpg", "/Images/ProfileImages/3178670904.jpg", "/Images/ProfileImages/3549649944.jpg"]);
@@ -180,46 +181,7 @@ function hasPublicHeading(html) {
   const text = content.replace(/<!--[\s\S]*?-->/g, "").replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, "").replace(/<[^>]*>/g, "").replace(/&(?:nbsp|#0*160|#x0*a0);/gi, " ").trim();
   return text.length > 0;
 }
-async function fetchPublicOrigin(request, fetcher = fetch) {
-  const original = await fetcher(request);
-  if (!knownMobilePublicRequest(request) || original.status !== 500 || !original.headers.get("content-type")?.includes("text/html")) return original;
-  try {
-    if (request.method === "GET") {
-      const error = await boundedText(original.clone());
-      const path = new URL(request.url).pathname;
-      const rootFaqFailure = ["/", "/epass"].includes(path) && [
-        "Unexpected character encountered while parsing value: &lt;. Path &#39;&#39;, line 0, position 0.",
-        "PinnacleBlooms.MISC.Utility.GetFaqs(String lang, String category)",
-        "ASP._Page_Views_Home_Index_V9_Mobile_cshtml.Execute()",
-        "Index-V9.Mobile.cshtml:line 11"
-      ].every((fragment) => error.includes(fragment));
-      const counsellingFaqFailure = path === "/child-psychological-counseling" && error.includes("PinnacleBlooms.MISC.Utility.GetFaqs(String lang, String category)") && error.includes("ASP._Page_Views_Home_PsychologicalCounselling_V9_Mobile_cshtml.Execute()");
-      const resourceNullFailure = publicResourcePath(path) && error.includes("System.NullReferenceException") && error.includes("ASP._Page_Views_Shared_SunshineInnerPage_V9_Mobile_cshtml.Execute()");
-      const knownJsonFailure = error.includes("Newtonsoft.Json.JsonReaderException") && (error.includes("GetStaffandCentersData") || rootFaqFailure || counsellingFaqFailure);
-      if (!/<title>\s*Error\s*<\/title>/i.test(error) || !(resourceNullFailure || knownJsonFailure)) return original;
-    }
-    const headers = new Headers(request.headers);
-    headers.set("user-agent", desktop);
-    headers.set("sec-ch-ua-mobile", "?0");
-    const retry = await fetcher(new Request(request, { method: "GET", headers }));
-    if (retry.status !== 200 || !retry.headers.get("content-type")?.includes("text/html")) return original;
-    let html = await boundedText(retry);
-    const u = new URL(request.url), title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() || "";
-    const canonical2 = canonicalPath(html);
-    const expectedTitle = identities.get(u.pathname);
-    const titleMatches = expectedTitle ? expectedTitle.test(title) : publicResourcePath(u.pathname) && title.length > 5 && !/^(?:error|not found|page not found)\b/i.test(title) && hasPublicHeading(html);
-    if (!titleMatches || !(canonical2 === u.pathname || u.pathname === "/TOS" && canonical2 === "/tos" || u.pathname === "/franchise-autism-therapy-center" && canonical2 === "/franchises")) return original;
-    html = html.replace(/<link\b(?=[^>]*\brel=["']canonical["'])[^>]*>/i, `<link rel="canonical" href="${u.origin + canonical2}">`);
-    const out = new Headers(retry.headers);
-    for (const k of ["content-length", "content-encoding", "etag", "last-modified", "age", "expires"]) out.delete(k);
-    out.set("cache-control", "private, no-store");
-    out.set("x-pinnacle-public-render-recovery", "mobile-origin-20261008");
-    out.set("vary", [...new Set((out.get("vary") || "").split(",").map((v) => v.trim()).filter(Boolean).concat("User-Agent"))].join(", "));
-    return new Response(request.method === "HEAD" ? null : html, { status: 200, headers: out });
-  } catch {
-    return original;
-  }
-}
+async function fetchPublicOrigin(request, fetcher = fetch) { return sharedFetchPublicOrigin(request,fetcher); }
 
 // deployment/legacy-social-metadata/franchise-canonical.mjs
 var canonical = "https://www.pinnacleblooms.org/franchise-autism-therapy-center";
@@ -1183,6 +1145,7 @@ async function handle(request, fetcher = fetchPublicOrigin) {
 }
 var entry_default = { fetch: async (request) => repairUrlHealth(request, await handle(request)) };
 export {
+  fetchPublicOrigin,
   ADDITIONAL_LEGACY_PATHS,
   ADDITIONAL_LEGACY_ROUTES,
   HEAD_LIMIT,

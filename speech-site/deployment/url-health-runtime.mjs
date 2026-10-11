@@ -615,7 +615,7 @@ function repairReadingPaint(request, response) {
     else if (id === "G-2BYLRLFRDJ" && googleLoader) e.remove();
   } }).on("head", { element(e) {
     e.prepend('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>', { html: true });
-    e.onEndTag((t) => t.before("<style data-pinnacle-reading-heading-font>.pinnacle-topic-directory:not([open]) .content-sunshine{display:none!important}h1:not([lang]),h2:not([lang]),h3:not([lang]){font-family:Georgia,serif!important}@media(max-width:600px){body{background-image:url(/cdn-cgi/image/width=480,quality=65,format=auto/images/background.jpg)!important}}</style>", { html: true }));
+    e.onEndTag((t) => t.before("<style data-pinnacle-reading-heading-font>.pinnacle-topic-directory{content-visibility:auto;contain-intrinsic-size:auto 160px}.pinnacle-topic-directory:not([open]) .content-sunshine{display:none!important}h1:not([lang]),h2:not([lang]),h3:not([lang]){font-family:Georgia,serif!important}@media(max-width:600px){body{background-image:url(/cdn-cgi/image/width=480,quality=65,format=auto/images/background.jpg)!important}}</style>", { html: true }));
   } }).on('link[rel="stylesheet"]', { element(e) {
     let url;
     try {
