@@ -1,6 +1,10 @@
 import {retiredStaffIds,currentStaffPaths} from '../legacy-social-metadata/staff-records.mjs';
 import {faqPaths} from './faq-paths.mjs';
 import {repairVideoSitemap} from './video-output.mjs';
+import {topicPaths} from './topic-paths.mjs';
+import {LEGACY_TEMPLATE_PATHS} from '../legacy-template-coverage.mjs';
+import {healthLinkTarget} from '../url-health-repair.mjs';
+import {publicLinkTarget} from '../public-link-target.mjs';
 var __defProp = Object.defineProperty;
 var __name = (target, value) => __defProp(target, "name", { value, configurable: true });
 
@@ -60,7 +64,6 @@ var CORE_URLS = [
 var CHILD_SITEMAPS = [
   "/faq/sitemap.xml",
   "/sunshine/sitemap.xml",
-  "/allmirracles-sitemap.xml",
   "/sitemaps/core.xml",
   "/sitemaps/centres.xml",
   "/sitemaps/staff.xml",
@@ -116,7 +119,10 @@ ${entries}
 }
 __name(sitemapIndexXml, "sitemapIndexXml");
 function coreSitemapXml() {
-  const entries = CORE_URLS.map((path) => `  <url><loc>${SITE_ORIGIN}${path}</loc></url>`).join("\n");
+  const paths=[...new Set([...CORE_URLS,...topicPaths,...LEGACY_TEMPLATE_PATHS,
+    '/assessments/hamilton-depression-rating-scale-ham-d','/assessments/speech-and-language-evaluation-assessment'
+  ].map(p=>publicLinkTarget(healthLinkTarget(p))).filter(Boolean).map(p=>new URL(p,SITE_ORIGIN).href))];
+  const entries = paths.map((url) => `  <url><loc>${url}</loc></url>`).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entries}
@@ -174,6 +180,9 @@ async function normalizedUrlsetSitemap(target, method, stripVolatileMetadata = f
   const uniqueEntries = [];
   for (let entry of entries) {
     let location = entry.match(/<loc>([\s\S]*?)<\/loc>/i)?.[1]?.trim();
+    // /shop is an intentionally noindex chooser; retain its public journey,
+    // but it is not an indexable sitemap destination.
+    if(location==='https://www.pinnacleblooms.org/shop')continue;
     // The older bots feed includes the same staff records as the dedicated
     // staff feed. Apply the approved retirement/canonical source to both.
     // Match page <loc> only; image:loc and all nonstaff entries are preserved.

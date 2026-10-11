@@ -4,6 +4,12 @@ import {CENTRE_CANONICAL_PATHS} from './centre-canonical-paths.mjs';
 // Existing compatibility routes, publicly reconciled on 7 October. Link to
 // their actual final page while keeping source parameters and fragments.
 export const PUBLIC_PAGE_ALIASES={
+ '/contact':'/contact-national-autism-helpline-24-7',
+ '/services':'/top-autism-therapy-services-india-proven-improvement-rate',
+ '/news':'/autism-speech-aba-news',
+ '/occupational-therapy':'/best-occupational-therapy-center-india-proven-improvement-rate',
+ '/aba-therapy':'/best-aba-therapy-center-india-proven-improvement-rate',
+ '/special-education':'/best-special-education-center-call-9100181181',
  '/centres':'/centers','/locations':'/centers','/pinnacle-ai':'/pinnacleai',
  '/ability-score':'/abilityscore',
  '/t/occupational-therapy':'/best-occupational-therapy-center-india-proven-improvement-rate',

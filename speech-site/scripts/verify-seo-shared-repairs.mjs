@@ -22,7 +22,8 @@ await fs.writeFile('deployment/url-health-runtime.mjs',runtime.outputFiles[0].te
 const tests=[
  'scripts/test-url-health-repair.mjs',
  'deployment/mirracles-library-20261008/library.test.mjs',
- 'scripts/test-legacy-schema.mjs'
+ 'scripts/test-legacy-schema.mjs',
+ 'scripts/test-seo-remainder.mjs'
 ];
 const result=spawnSync(node,['--test',...tests],{cwd:site,encoding:'utf8',windowsHide:true});
 process.stdout.write(result.stdout||'');process.stderr.write(result.stderr||'');
