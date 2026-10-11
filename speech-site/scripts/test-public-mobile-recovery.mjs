@@ -5,13 +5,14 @@ test('shared public resource template recovers exact article and retains campaig
  const failure='<title>Error</title>System.NullReferenceException ASP._Page_Views_Shared_SunshineInnerPage_V9_Mobile_cshtml.Execute()';
  for(const prefix of ['t','c','ma','b','m','a','abs','abilities','skills']){
   const path='/'+prefix+'/interactive-song-therapy',q=req(path+'?gclid=a%2Bb&utm_content=x&utm_content=y');let count=0;
-  const r=await fetchPublicOrigin(q,async retry=>{assert.equal(retry.url,q.url);return ++count===1?new Response(failure,{status:500,headers:{'content-type':'text/html'}}):new Response('<title>Interactive Song Therapy | Pinnacle Blooms</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'"><h1>Interactive Song Therapy</h1><p>Original article content</p>',{headers:{'content-type':'text/html'}});});
-  assert.equal(r.status,200);assert.equal(count,2);assert((await r.text()).includes('Original article content'));
+  const r=await fetchPublicOrigin(q,async retry=>{assert.equal(retry.url,q.url);assert(!/Mobile/.test(retry.headers.get('user-agent')));count++;return new Response('<title>Interactive Song Therapy | Pinnacle Blooms</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'"><h1>Interactive Song Therapy</h1><p>Original article content</p>',{headers:{'content-type':'text/html'}});});
+  assert.equal(r.status,200);assert.equal(count,1);assert((await r.text()).includes('Original article content'));
  }
  for(const [path,body,canonical] of [['/api/interactive-song-therapy',failure,'/api/interactive-song-therapy'],['/t/interactive-song-therapy',failure.replace('SunshineInnerPage','UnrelatedPage'),'/t/interactive-song-therapy'],['/t/interactive-song-therapy',failure,'/t/different-topic']]){
   let count=0;const first=new Response(body,{status:500,headers:{'content-type':'text/html'}});
-  const r=await fetchPublicOrigin(req(path),async()=>++count===1?first:new Response('<title>Different topic</title><link rel="canonical" href="https://www.pinnacleblooms.org'+canonical+'"><h1>Different topic</h1>',{headers:{'content-type':'text/html'}}));
+  const r=await fetchPublicOrigin(req(path),async()=>{count++;return first;});
   assert.equal(r,first);
+  assert.equal(count,path.startsWith('/api/')?1:2);
  }
 });
 const req=(path='/?gclid=x&utm_source=google',options={})=>new Request('https://www.pinnacleblooms.org'+path,{headers:{'user-agent':mobile,...options.headers},method:options.method||'GET'});
@@ -65,7 +66,7 @@ test('resource headings accept real template newlines and nested text but reject
  ];
  for(const [heading,status] of headings){
   let calls=0;const first=new Response(failure,{status:500,headers:{'content-type':'text/html'}});
-  const result=await fetchPublicOrigin(req(path+'?gclid=INVENTED'),async()=>++calls===1?first:new Response('<title>Interactive Song Therapy | Pinnacle Blooms</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'">'+heading,{headers:{'content-type':'text/html'}}));
-  assert.equal(calls,2);assert.equal(result.status,status,heading);if(status===500)assert.equal(result,first);
+  const result=await fetchPublicOrigin(req(path+'?gclid=INVENTED'),async q=>{calls++;return /Mobile/.test(q.headers.get('user-agent'))?first:new Response('<title>Interactive Song Therapy | Pinnacle Blooms</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'">'+heading,{headers:{'content-type':'text/html'}});});
+  assert.equal(calls,status===200?1:2);assert.equal(result.status,status,heading);if(status===500)assert.equal(result,first);
  }
 });
