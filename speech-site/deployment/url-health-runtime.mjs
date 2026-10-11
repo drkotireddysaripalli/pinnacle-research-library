@@ -602,7 +602,15 @@ function repairReadingPaint(request, response) {
   const resize = (p, w) => "/cdn-cgi/image/width=" + w + ",quality=75,format=auto" + p;
   let hero = false, googleLoader = false;
   const mobile = /Android|iPhone|iPad|Mobile/i.test(request.headers.get("user-agent") || "");
-  const rewrite = new HTMLRewriter().on("script[src]", { element(e) {
+  const rewrite = new HTMLRewriter().on('link[rel="preload"][as="image"]', { element(e) {
+    let image;
+    try {
+      image = new URL(e.getAttribute("href"), u.origin);
+    } catch {
+      return;
+    }
+    if (image.origin === u.origin && ["/media/image/Pinnacle-blooms-Logo.jpg", "/Images/pinnacle-logo9.jpg"].includes(image.pathname)) e.setAttribute("href", resize(image.pathname, 320));
+  } }).on("script[src]", { element(e) {
     let src;
     try {
       src = new URL(e.getAttribute("src"), u.origin);
