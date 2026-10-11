@@ -1,5 +1,13 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {fetchPublicOrigin} from '../deployment/public-mobile-recovery.mjs';
+import {fetchPublicOrigin as legacyFetchPublicOrigin} from '../deployment/legacy-recovery-entry.mjs';
+test('deployed legacy entry uses the same proactive public recovery as the portal',async()=>{
+ for(const path of ['/t/interactive-song-therapy','/c/hand-flapping-therapy']){
+  let count=0;
+  const r=await legacyFetchPublicOrigin(new Request('https://www.pinnacleblooms.org'+path,{headers:{'user-agent':'Android Mobile'}}),async q=>{count++;assert(!/Mobile/.test(q.headers.get('user-agent')));return new Response('<title>Public therapy topic</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'"><h1>Public therapy topic</h1><img src="/Assets/Materials/695.jpg">',{headers:{'content-type':'text/html'}});});
+  assert.equal(count,1);assert.equal(r.headers.get('x-pinnacle-public-render-recovery'),'verified-topic-direct-20261011');assert(r.headers.get('link').includes('rel=preload'));
+ }
+});
 const mobile='Mozilla/5.0 Android Mobile';
 test('shared public resource template recovers exact article and retains campaign bytes',async()=>{
  const failure='<title>Error</title>System.NullReferenceException ASP._Page_Views_Shared_SunshineInnerPage_V9_Mobile_cshtml.Execute()';
