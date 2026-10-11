@@ -600,10 +600,22 @@ function repairReadingPaint(request, response) {
   const u = new URL(request.url);
   if (request.method !== "GET" || u.origin !== "https://www.pinnacleblooms.org" || !/^\/(?:t|c|ma|b|m|a|abs|abilities|skills)\/[a-z0-9][a-z0-9-]*\/?$/.test(u.pathname) || response.status !== 200 || !response.headers.get("content-type")?.includes("text/html")) return response;
   const resize = (p, w) => "/cdn-cgi/image/width=" + w + ",quality=75,format=auto" + p;
-  let hero = false;
+  let hero = false, googleLoader = false;
   const mobile = /Android|iPhone|iPad|Mobile/i.test(request.headers.get("user-agent") || "");
-  const rewrite = new HTMLRewriter().on("head", { element(e) {
-    e.onEndTag((t) => t.before("<style data-pinnacle-reading-heading-font>h1:not([lang]),h2:not([lang]),h3:not([lang]){font-family:Georgia,serif!important}@media(max-width:600px){body{background-image:url(/cdn-cgi/image/width=480,quality=65,format=auto/images/background.jpg)!important}}</style>", { html: true }));
+  const rewrite = new HTMLRewriter().on("script[src]", { element(e) {
+    let src;
+    try {
+      src = new URL(e.getAttribute("src"), u.origin);
+    } catch {
+      return;
+    }
+    if (src.origin !== "https://www.googletagmanager.com" || src.pathname !== "/gtag/js" || [...src.searchParams.keys()].some((k) => k !== "id")) return;
+    const id = src.searchParams.get("id");
+    if (id === "AW-10810823199") googleLoader = true;
+    else if (id === "G-2BYLRLFRDJ" && googleLoader) e.remove();
+  } }).on("head", { element(e) {
+    e.prepend('<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>', { html: true });
+    e.onEndTag((t) => t.before("<style data-pinnacle-reading-heading-font>.pinnacle-topic-directory:not([open]) .content-sunshine{display:none!important}h1:not([lang]),h2:not([lang]),h3:not([lang]){font-family:Georgia,serif!important}@media(max-width:600px){body{background-image:url(/cdn-cgi/image/width=480,quality=65,format=auto/images/background.jpg)!important}}</style>", { html: true }));
   } }).on('link[rel="stylesheet"]', { element(e) {
     let url;
     try {
