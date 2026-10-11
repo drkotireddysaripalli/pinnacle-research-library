@@ -1,8 +1,83 @@
 // deployment/legacy-measurement-fingerprints.mjs
 var LEGACY_TAGS = ["<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':\r\nnew Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=\r\n'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,'script','dataLayer','GTM-W9ZHX459');<\/script>", '<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10810823199"><\/script>', "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'AW-10810823199');\r\n    <\/script>", "<script>\r\n        window.dataLayer = window.dataLayer || [];\r\n        function gtag() { dataLayer.push(arguments); }\r\n        gtag('js', new Date());\r\n\r\n        gtag('config', 'G-2BYLRLFRDJ');\r\n\r\n        /**/<\/script>", "<script>\r\n  gtag('config', 'AW-10810823199/VNUcCMSy3YobEJ-kgKMo', {\r\n    'phone_conversion_number': '9100181181'\r\n  });\r\n<\/script>", '<script data-cfasync="false" async src="https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ"><\/script>'];
+var LEGACY_NOSCRIPT_TAGS = ['<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9ZHX459"\r\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>'];
+var LEGACY_TAG_REPLACEMENTS = [[`<script>\r
+        // document.addEventListener('DOMContentLoaded', function () {\r
+        setTimeout(function () {\r
+            try {\r
+                console.log("done");\r
+\r
+\r
+                let gtagScript = document.createElement('script');\r
+                gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ";\r
+                gtagScript.async = true;\r
+				gtagScript.setAttribute("data-cfasync", "false"); // \u2705 important\r
+                document.head.appendChild(gtagScript);\r
+\r
+                gtagScript.onload = function () {\r
+                    window.dataLayer = window.dataLayer || [];\r
+                    function gtag() { dataLayer.push(arguments); }\r
+                    gtag('js', new Date());\r
+                    gtag('config', 'G-2BYLRLFRDJ');\r
+                    gtag('config', 'AW-10810823199');\r
+					gtag('config', 'AW-10810823199/VNUcCMSy3YobEJ-kgKMo', {\r
+    'phone_conversion_number': '9100181181'\r
+  });\r
+                };\r
+\r
+				\r
+\r
+\r
+                // loadjscssfile('https://www.googletagmanager.com/gtag/js?id=G-2BYLRLFRDJ', "js", false);\r
+                // window.dataLayer = window.dataLayer || [];\r
+                // function gtag() { dataLayer.push(arguments); }\r
+                // gtag('js', new Date());\r
+\r
+                // gtag('config', 'G-2BYLRLFRDJ');\r
+                //gtag('config', 'AW-10810823199');\r
+            }\r
+            catch (e) {\r
+                console.log(e);\r
+            }\r
+            try {\r
+                loadjscssfile('https://kit.fontawesome.com/f61cb0b5c9.js', "js", false);\r
+            }\r
+            catch (e) {\r
+                console.log(e);\r
+            }\r
+\r
+            setTimeout(function () {\r
+                try {\r
+                    loadjscssfile('//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js', "js", false);\r
+                }\r
+                catch (e) {\r
+                }\r
+            }, 6000);\r
+\r
+        }, 4000);\r
+    <\/script>`, `<script>\r
+        // document.addEventListener('DOMContentLoaded', function () {\r
+        setTimeout(function () {\r
+            try {\r
+                loadjscssfile('https://kit.fontawesome.com/f61cb0b5c9.js', "js", false);\r
+            }\r
+            catch (e) {\r
+                console.log(e);\r
+            }\r
+\r
+            setTimeout(function () {\r
+                try {\r
+                    loadjscssfile('//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js', "js", false);\r
+                }\r
+                catch (e) {\r
+                }\r
+            }, 6000);\r
+\r
+        }, 4000);\r
+    <\/script>`]];
 
 // deployment/public-ad-call.mjs
-var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-14e25cf9a633d670.mjs";
+var PUBLIC_AD_CALL_PATH = "/pinnacle-pages-scripts/portal-ad-call-1b357bec67c18321.mjs";
 var publicAdCallMarkup = '<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden style="box-sizing:border-box;max-width:100%;padding:16px;margin-bottom:88px;border:1px solid #d9bfd6;border-radius:8px;background:#fff;color:#302638;font-size:14px;line-height:1.65;font-family:inherit"><summary style="min-height:44px;color:#652579;font-weight:700;cursor:pointer">Optional advertising call measurement</summary><p style="color:#302638;max-width:850px">With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="accepted">Allow call measurement</button><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p style="color:#302638" data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>';
 var source = `// Shared advertising call measurement. No advertising helper runs before opt-in.\r
 export const preferencesMarkup = \`<details class="measurement-settings portal-measurement" data-ad-call-preferences hidden style="box-sizing:border-box;max-width:100%;padding:16px;margin-bottom:88px;border:1px solid #d9bfd6;border-radius:8px;background:#fff;color:#302638;font-size:14px;line-height:1.65;font-family:inherit"><summary style="min-height:44px;color:#652579;font-weight:700;cursor:pointer">Optional advertising call measurement</summary><p style="color:#302638;max-width:850px">With your permission, Google may use advertising cookies and temporarily show a forwarding number that connects to Pinnacle at 9100 181 181. This helps measure calls from our ads. Calling works without permission. This does not enable personalised advertising.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="accepted">Allow call measurement</button><button style="min-height:44px;padding:10px 16px;background:#fff;color:#652579;border:1px solid #652579;border-radius:6px;font:inherit;cursor:pointer" type="button" data-ad-call-choice="declined">Keep call measurement off</button></div><p style="color:#302638" data-ad-call-status role="status">Advertising call measurement is off until you choose.</p></details>\`;\r
@@ -110,6 +185,7 @@ export function installAdCallConsent() {\r
     state.started = true;\r
     window.gtag('js', new Date());\r
     window.gtag('config', action, {\r
+      ...(publicLegacy?{page_location:'https://www.pinnacleblooms.org/legacy-knowledge',page_title:'Pinnacle Knowledge Library',page_referrer:'',ignore_referrer:true}:{}),\r
       phone_conversion_number: originalDisplay,\r
       phone_conversion_callback: callback,\r
       send_page_view: false,\r
@@ -120,6 +196,7 @@ export function installAdCallConsent() {\r
         !document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {\r
       const script = document.createElement('script');\r
       script.async = true;\r
+      script.referrerPolicy = 'no-referrer';\r
       script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;\r
       script.setAttribute('data-pinnacle-ad-call-loader', '');\r
       document.head.appendChild(script);\r
@@ -218,6 +295,8 @@ function servePublicAdCall(request) {
 var serveLegacyMeasurementCall = servePublicAdCall;
 var normal = (text) => text.replaceAll("\r\n", "\n").trim();
 var fingerprints = new Set(LEGACY_TAGS.map(normal));
+var replacements = new Map(LEGACY_TAG_REPLACEMENTS.map(([old, next]) => [normal(old), next]));
+for (const old of replacements.keys()) fingerprints.add(old);
 var tagPattern = /<script\b[^>]*>[\s\S]*?<\/script>/gi;
 var analyticsTag = (tag) => /googletagmanager|googleadservices|G-2BYLRLFRDJ|AW-10810823199|GTM-W9ZHX459|_googWcm/.test(tag);
 function legacyMeasurementScope(request) {
@@ -229,6 +308,7 @@ function legacyMeasurementScope(request) {
   return null;
 }
 var panel = '<details class="measurement-settings" data-speech-measurement hidden style="box-sizing:border-box;flex:1;min-width:150px;padding:4px 12px;font-size:14px;color:#18233f"><summary style="min-height:44px;cursor:pointer">Optional analytics preferences</summary><p>With your permission, Google Analytics measures visits and contact clicks using a fixed knowledge-library identity. We exclude article paths, form details and link text. Calling works with analytics off.</p><button type="button" data-measurement-choice="accepted">Allow analytics</button><button type="button" data-measurement-choice="declined">Keep analytics off</button><p data-measurement-status role="status">Optional analytics is off until you choose.</p></details>';
+var earlyCapture = '(()=>{const queue=[];const listener=e=>{if(navigator.globalPrivacyControl===true)return;let permission;try{permission=JSON.parse(localStorage.getItem("pinnacle-speech-analytics-v1"));}catch{return;}if(permission?.value!=="accepted"||!Number.isFinite(permission.at)||permission.at>Date.now()||Date.now()-permission.at>=180*86400000)return;const a=e.target?.closest?.("a[href]");if(!a||queue.length>=10)return;const href=a.getAttribute("href");if(href==="tel:+919100181181")queue.push("call");else{try{const u=new URL(href,location.origin);if((u.hostname==="wa.me"&&u.pathname==="/919100181181")||(u.hostname==="api.whatsapp.com"&&u.pathname==="/send"&&u.searchParams.get("phone")==="919100181181"))queue.push("whatsapp");}catch{}}};document.addEventListener("click",listener);window.__pinnacleLegacyCapture={queue,stop(){document.removeEventListener("click",listener);}};})();';
 function migrateLegacyPrefix(prefix, request) {
   const scope = legacyMeasurementScope(request);
   if (!scope || prefix.includes("data-pinnacle-legacy-measurement")) return null;
@@ -238,11 +318,12 @@ function migrateLegacyPrefix(prefix, request) {
     const u = new URL(request.url), canonical = /\blink\b[^>]*\brel=["']canonical["'][^>]*\bhref=["']([^"']+)["']/i.exec(prefix)?.[1];
     if (canonical !== u.origin + u.pathname || !tags.some((t) => t.includes("GTM-W9ZHX459")) || !tags.some((t) => t.includes("gtag('config', 'G-2BYLRLFRDJ')")) || !tags.some((t) => t.includes("'AW-10810823199/VNUcCMSy3YobEJ-kgKMo'"))) return null;
   }
-  let result = prefix.replace(tagPattern, (tag) => analyticsTag(tag) ? "" : tag);
+  let result = prefix.replace(tagPattern, (tag) => analyticsTag(tag) ? replacements.get(normal(tag)) || "" : tag);
   if (scope === "private") return { scope, html: result, removed: tags.length };
-  const inserted = '<aside aria-label="Optional measurement preferences" style="display:flex;flex-wrap:wrap;align-items:start;background:#fff">' + panel + publicAdCallMarkup.replace("padding:16px", "flex:1;min-width:150px;padding:4px 12px").replace("margin-bottom:88px", "margin-bottom:0") + '</aside><script src="/pinnacle-pages-scripts/speech-measurement.js?v=legacy-cohorts-20261011"><\/script><script type="module" src="' + PUBLIC_AD_CALL_PATH + '"><\/script>';
+  const controls = '<aside aria-label="Optional measurement preferences" style="display:flex;flex-wrap:wrap;align-items:start;background:#fff">' + panel + publicAdCallMarkup.replace("padding:16px", "flex:1;min-width:150px;padding:4px 12px").replace("margin-bottom:88px", "margin-bottom:0") + "</aside>";
+  const inserted = '<script data-pinnacle-legacy-collector="early-v3">' + earlyCapture + '<\/script><script defer src="/pinnacle-pages-scripts/speech-measurement.js?v=legacy-cohorts-20261011-v3"><\/script><script type="module" src="' + PUBLIC_AD_CALL_PATH + '"><\/script>';
   result = result.replace(/<body\b([^>]*)>/i, (_, attributes) => "<body" + attributes + ' data-page-variant="legacy_knowledge" data-pinnacle-legacy-measurement="' + scope + '">' + inserted);
-  return { scope, html: result, removed: tags.length };
+  return { scope, html: result, controls, removed: tags.length };
 }
 function resume(parts, reader) {
   return new ReadableStream({ start(c) {
@@ -261,6 +342,22 @@ function resume(parts, reader) {
   }, cancel(reason) {
     return reader.cancel(reason);
   } });
+}
+function stripLegacyNoscript(body) {
+  const tokens = [...new Set(LEGACY_NOSCRIPT_TAGS.flatMap((t) => [t, t.replaceAll("\r\n", "\n")]))], keep = Math.max(...tokens.map((t) => t.length)) - 1, decoder = new TextDecoder(), encoder = new TextEncoder();
+  let pending = "";
+  return body.pipeThrough(new TransformStream({ transform(bytes, c) {
+    pending += decoder.decode(bytes, { stream: true });
+    for (const token of tokens) pending = pending.replaceAll(token, "");
+    if (pending.length > keep) {
+      c.enqueue(encoder.encode(pending.slice(0, -keep)));
+      pending = pending.slice(-keep);
+    }
+  }, flush(c) {
+    pending += decoder.decode();
+    for (const token of tokens) pending = pending.replaceAll(token, "");
+    c.enqueue(encoder.encode(pending));
+  } }));
 }
 async function repairLegacyMeasurement(request, response) {
   if (!legacyMeasurementScope(request) || response.status !== 200 || !response.body || response.headers.has("content-security-policy") || !response.headers.get("content-type")?.includes("text/html") || /no-transform/i.test(response.headers.get("cache-control") || "")) return response;
@@ -292,7 +389,10 @@ async function repairLegacyMeasurement(request, response) {
   if (done) reader.releaseLock();
   let result = new Response(done ? migrated ? migrated.html : raw : resume(parts, reader), { status: response.status, statusText: response.statusText, headers });
   if (!migrated) return result;
-  return new HTMLRewriter().on("iframe[src]", { element(e) {
+  result = new Response(stripLegacyNoscript(result.body), { status: result.status, statusText: result.statusText, headers: result.headers });
+  return new HTMLRewriter().on("body", { element(e) {
+    if (migrated.controls) e.append(migrated.controls, { html: true });
+  } }).on("iframe[src]", { element(e) {
     const src = e.getAttribute("src");
     try {
       const u = new URL(src, request.url);
@@ -318,5 +418,6 @@ export {
   legacyMeasurementScope,
   migrateLegacyPrefix,
   repairLegacyMeasurement,
-  serveLegacyMeasurementCall
+  serveLegacyMeasurementCall,
+  stripLegacyNoscript
 };

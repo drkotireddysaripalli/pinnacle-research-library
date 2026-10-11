@@ -1,22 +1,30 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LEGACY_TAGS} from '../deployment/legacy-measurement-fingerprints.mjs';
-import {legacyMeasurementScope,migrateLegacyPrefix,repairLegacyMeasurement,serveLegacyMeasurementCall} from '../deployment/legacy-measurement.mjs';
+import {LEGACY_TAGS,LEGACY_NOSCRIPT_TAGS,LEGACY_TAG_REPLACEMENTS} from '../deployment/legacy-measurement-fingerprints.mjs';
+import {legacyMeasurementScope,migrateLegacyPrefix,repairLegacyMeasurement,serveLegacyMeasurementCall,stripLegacyNoscript} from '../deployment/legacy-measurement.mjs';
 const request=path=>new Request('https://www.pinnacleblooms.org'+path);
 const fixture=path=>'<html><head><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'">'+LEGACY_TAGS.join('')+'<script src="/functional.js"></script></head><body><h1>Parent guidance</h1></body></html>';
 test('fingerprinted public families replace only verified analytics with the existing collector and call module',()=>{
  for(const path of ['/ma/ringtoss-therapy','/t/bead-stringing-therapy','/b/understanding-managing-spitting-saliva-tantrums','/c/hand-flapping-therapy','/contact-national-autism-helpline-24-7']){
   const result=migrateLegacyPrefix(fixture(path),request(path));assert(result);assert.equal(result.removed,LEGACY_TAGS.length);
-  assert(result.html.includes('data-page-variant="legacy_knowledge"'));assert(result.html.includes('/functional.js'));assert(result.html.includes('data-speech-measurement'));assert(result.html.includes('data-ad-call-preferences'));
-  assert(!result.html.includes('GTM-W9ZHX459'));assert(!result.html.includes("gtag('config'"));assert(!result.html.includes('click_url'));assert.equal(migrateLegacyPrefix(result.html,request(path)),null);
+  assert(result.html.includes('data-page-variant="legacy_knowledge"'));assert(result.html.includes('/functional.js'));assert(result.controls.includes('data-speech-measurement'));assert(result.controls.includes('data-ad-call-preferences'));
+  assert(!result.html.includes('GTM-W9ZHX459'));assert(result.html.includes('data-pinnacle-legacy-collector="early-v3"'));assert(result.html.includes('<script defer src="/pinnacle-pages-scripts/speech-measurement.js'));assert.equal(migrateLegacyPrefix(result.html,request(path)),null);
  }
+});
+test('exact noscript suppression survives every byte split without deleting unrelated fallbacks',async()=>{
+ const token=LEGACY_NOSCRIPT_TAGS[0],before='<h1>తెలుగు</h1>',after='<noscript>Keep native contact</noscript>';const bytes=new TextEncoder().encode(before+token+after);
+ for(let split=1;split<bytes.length;split++){const body=new ReadableStream({start(c){c.enqueue(bytes.slice(0,split));c.enqueue(bytes.slice(split));c.close();}});assert.equal(await new Response(stripLegacyNoscript(body)).text(),before+after);}
 });
 test('unknown mixed tag owners and different canonical identities cannot silently migrate',()=>{
  const path='/t/bead-stringing-therapy';assert.equal(migrateLegacyPrefix(fixture(path).replace('</head>',"<script>gtag('event', 'other_owner'); // G-2BYLRLFRDJ</script></head>"),request(path)),null);
  assert.equal(migrateLegacyPrefix(fixture('/t/different'),request(path)),null);
 });
+test('reviewed mixed snippets preserve their icon and review-widget functionality',()=>{
+ const path='/t/bead-stringing-therapy',result=migrateLegacyPrefix(fixture(path).replace('</head>',LEGACY_TAG_REPLACEMENTS[0][0]+'</head>'),request(path));
+ assert(result);assert(result.html.includes(LEGACY_TAG_REPLACEMENTS[0][1]));assert(result.html.includes('fontawesome'));assert(result.html.includes('trustpilot'));assert(!result.html.includes('gtagScript.src'));
+});
 test('private routes remove exact old producers without adding new optional measurement',()=>{
- for(const path of ['/account','/auth/session','/documents/private-record','/payroll/report','/customer/record','/internal/report']){const result=migrateLegacyPrefix(fixture(path),request(path));assert.equal(result.scope,'private');assert(!result.html.includes('googletagmanager'));assert(!result.html.includes('speech-measurement.js'));assert(!result.html.includes('data-ad-call-preferences'));assert(result.html.includes('/functional.js'));}
+ for(const path of ['/account','/auth/session','/documents/private-record','/payroll/report','/customer/record','/internal/report']){const result=migrateLegacyPrefix(fixture(path),request(path));assert.equal(result.scope,'private');assert(!result.html.includes('googletagmanager'));assert(!result.html.includes('speech-measurement.js'));assert(!result.controls);assert(result.html.includes('/functional.js'));}
 });
 test('public policy/evidence/commerce/auth API and unknown hosts are outside migration',()=>{
  for(const path of ['/verify/evidence/records/study-portfolio.html','/shop','/api/enrolment','/national-autism-helpline','/faq/example'])assert.equal(legacyMeasurementScope(request(path)),null);

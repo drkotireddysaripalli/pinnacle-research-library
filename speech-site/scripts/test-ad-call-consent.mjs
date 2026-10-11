@@ -4,13 +4,13 @@ import vm from 'node:vm';
 import fs from 'node:fs';
 const source=fs.readFileSync('src/lib/google-ads-call-consent.mjs','utf8').replace(/^export /gm,'');
 const key='pinnacle-ad-call-consent-v1',action='AW-10810823199/VNUcCMSy3YobEJ-kgKMo';
-function harness({path='/ask/example',host='pinnacleblooms.org',gpc=false,saved,storage=false,panelMissing=false,loader=false}={}){
+function harness({path='/ask/example',host='pinnacleblooms.org',gpc=false,saved,storage=false,panelMissing=false,loader=false,variant}={}){
  const local=new Map(saved?[[key,JSON.stringify(saved)]]:[]),session=new Map(),scripts=[],cookies=[],clicks={},listeners={};let reloads=0,mutate;
  const link=(href,text)=>{const attrs=new Map([['href',href],['aria-label','Call '+text]]),node={nodeValue:text};return {attrs,node,setAttribute:(k,v)=>attrs.set(k,v),getAttribute:k=>attrs.get(k)??null,removeAttribute:k=>attrs.delete(k)};};
  const central=link('tel:+919100181181','Call 9100\u00a0181\u00a0181'),localLink=link('tel:+914012345678','040 1234 5678'),links=[central,localLink];
  const buttons=['accepted','declined'].map(value=>({dataset:{adCallChoice:value},addEventListener:(e,f)=>clicks[value]=f}));
  const status={textContent:''},panel={hidden:true,querySelectorAll:()=>buttons};
- const doc={readyState:'complete',body:{},querySelector:s=>s==='[data-ad-call-preferences]'?(panelMissing?null:panel):s==='[data-ad-call-status]'?status:s.startsWith('script[')?(loader||scripts.length?{}:null):null,querySelectorAll:()=>links,createTreeWalker:l=>{let moved=false;return {currentNode:l.node,nextNode:()=>moved?false:(moved=true)};},createElement:()=>({setAttribute(){}}),head:{appendChild:s=>scripts.push(s)},addEventListener:(e,f)=>listeners[e]=f};
+ const doc={readyState:'complete',body:{dataset:{pageVariant:variant}},querySelector:s=>s==='[data-ad-call-preferences]'?(panelMissing?null:panel):s==='[data-ad-call-status]'?status:s.startsWith('script[')?(loader||scripts.length?{}:null):null,querySelectorAll:()=>links,createTreeWalker:l=>{let moved=false;return {currentNode:l.node,nextNode:()=>moved?false:(moved=true)};},createElement:()=>({setAttribute(){}}),head:{appendChild:s=>scripts.push(s)},addEventListener:(e,f)=>listeners[e]=f};
  Object.defineProperty(doc,'cookie',{get:()=> 'gwcc=fixture; _gcl_aw=fixture; ps_ga=keep; unrelated=keep',set:v=>cookies.push(v)});
  const mapStore=m=>({getItem:k=>{if(storage)throw Error('storage unavailable');return m.get(k)||null;},setItem:(k,v)=>{if(storage)throw Error('storage unavailable');m.set(k,v);},removeItem:k=>{if(storage)throw Error('storage unavailable');m.delete(k);}});
  const win={addEventListener:(e,f)=>listeners[e]=f},ctx={window:win,document:doc,location:{protocol:'https:',hostname:host,pathname:path,reload:()=>reloads++},navigator:{globalPrivacyControl:gpc},localStorage:mapStore(local),sessionStorage:mapStore(session),MutationObserver:class{constructor(f){mutate=f;}observe(){}},Date,Set,Map,JSON};

@@ -104,6 +104,7 @@ export function installAdCallConsent() {
     state.started = true;
     window.gtag('js', new Date());
     window.gtag('config', action, {
+      ...(publicLegacy?{page_location:'https://www.pinnacleblooms.org/legacy-knowledge',page_title:'Pinnacle Knowledge Library',page_referrer:'',ignore_referrer:true}:{}),
       phone_conversion_number: originalDisplay,
       phone_conversion_callback: callback,
       send_page_view: false,
@@ -114,6 +115,7 @@ export function installAdCallConsent() {
         !document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
       const script = document.createElement('script');
       script.async = true;
+      script.referrerPolicy = 'no-referrer';
       script.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
       script.setAttribute('data-pinnacle-ad-call-loader', '');
       document.head.appendChild(script);

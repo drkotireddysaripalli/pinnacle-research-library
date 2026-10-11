@@ -494,6 +494,13 @@
     } catch {}
     if (enquiryPlacements.has(placement) && validEnquiry && !(placement==='knowledge-enrol'&&(isAsk||knowledgePath))) send('enquiry_link_click',{schema_version:2,page_group:pageGroup,link_placement:placement,destination:'existing_enrolment_form'});
   });
+  if(legacyKnowledge&&window.__pinnacleLegacyCapture){
+    const capture=window.__pinnacleLegacyCapture;capture.stop?.();
+    for(const kind of Array.isArray(capture.queue)?capture.queue.splice(0,10):[]){
+      if(kind==='call')send('phone_link_click',{schema_version:2,page_group:pageGroup,link_placement:'knowledge-call',destination:'national_helpline_9100181181'});
+      if(kind==='whatsapp')send('whatsapp_link_click',{schema_version:4,page_group:pageGroup,link_placement:'knowledge-whatsapp',destination:'national_helpline_9100181181'});
+    }
+  }
 })();
 
 // Reuse one first-party installer; its own page/consent guards keep it dormant.
