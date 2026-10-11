@@ -207,7 +207,9 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
         // Bare IDs and changed slugs then retain the normal canonical redirect.
         byId.set(alias[1],target);
       }
-      return {...c,titleCounts,byId,byPath,ordered:c.order.map(id=>byId.get(id)),categoryKeys:new Set(c.categories.map(c=>c.key))};
+      const ordered=c.order.map(id=>byId.get(id)),byCategory=new Map(),positions=new Map();
+      for(const record of ordered){const key=record.category||'';if(!byCategory.has(key))byCategory.set(key,[]);const group=byCategory.get(key);positions.set(record.id,group.length);group.push(record);}
+      return {...c,titleCounts,byId,byPath,ordered,byCategory,positions,categoryKeys:new Set(c.categories.map(c=>c.key))};
     }).catch(error=>{cataloguePromise=undefined;throw error;});
     return cataloguePromise;
   }
@@ -237,7 +239,14 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
         if (!detail || detail.path!==record.path) throw Error('Public detail missing');
         const player = playerURL(detail.player), poster = imageURL(detail.poster), date = publishedDate(detail.published);
         const category = detail.category;
-        const related = c.ordered.filter(r=>r.id!==record.id && (category?r.category===category:true)).slice(0,6);
+        // Stable source-order neighbours give every approved video a contextual
+        // incoming link. Reuse the isolate's category index instead of scanning
+        // all nineteen thousand published records on every detail request.
+        const group=c.byCategory.get(category||'')||c.ordered,position=c.positions.get(record.id)??-1;
+        const related=[];
+        for(let step=1;step<=Math.min(7,group.length)&&related.length<6;step++){
+          const candidate=group[(position+step)%group.length];if(candidate&&candidate.id!==record.id)related.push(candidate);
+        }
         const description = safeDescription(detail);
         const subject=videoSubject(detail);
         const video = videoObject(detail), entity=video||archiveEntity(detail);

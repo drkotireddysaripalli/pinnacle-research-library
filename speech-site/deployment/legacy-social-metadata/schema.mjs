@@ -1,5 +1,6 @@
 import {repairLegacyIdentity} from './organization.mjs';
 import {isMissingMedia} from './media.mjs';
+import {currentStaffPaths} from './staff-records.mjs';
 // Correct observed term spellings and named legacy entity data types only.
 // Preserve numeric tokens, visible text, navigation and commerce records.
 export const SCHEMA_LIMIT = 256 * 1024;
@@ -22,6 +23,7 @@ export function repairSidebarBreadcrumb(text,requestUrl){
 
 
 export function repairSchemaText(text) {
+  const original=text;
   if (text.length > SCHEMA_LIMIT) return text;
   try {
     JSON.parse(text); // Syntax validation only: never reserialize numeric values.
@@ -54,6 +56,22 @@ export function repairSchemaText(text) {
         const props=node.properties,context=props.get('@context');
         if(context && !schemaContext(context.value)) safe=false;
         const type=props.get('@type')?.value;
+        if(type?.value==='Organization'&&props.get('name')?.value.value==='Pinnace Blooms Network')
+          patches.push({token:props.get('name').value.token,value:'"Pinnacle Blooms Network"'});
+        if(['Webpage','WebPage'].includes(type?.value))for(const key of ['thumbnailUrl','dateCreated']){
+          const empty=props.get(key);
+          if(empty?.value.kind==='string'&&empty.value.value===''){
+            let start=empty.key.index,end=empty.value.token.index+empty.value.token[0].length;
+            const after=text.slice(end).match(/^\s*,/),before=text.slice(0,start).match(/,\s*$/);
+            if(after)end+=after[0].length;else if(before)start-=before[0].length;
+            patches.push({start,end,value:''});
+          }
+        }
+        const url=props.get('url')?.value;
+        if(type?.value==='Person'&&url?.kind==='string'){
+          const staff=url.value.match(/^https?:\/\/www\.pinnacleblooms\.org\/staff\/[^/?#]+\/\/([1-9]\d*)$/);
+          if(staff&&currentStaffPaths[staff[1]])patches.push({token:url.token,value:JSON.stringify('https://www.pinnacleblooms.org'+currentStaffPaths[staff[1]])});
+        }
         const image=props.get('image');
         if(image?.value.kind==='string'&&isMissingMedia(image.value.value)){
           let start=image.key.index,end=image.value.token.index+image.value.token[0].length;
@@ -82,8 +100,9 @@ export function repairSchemaText(text) {
     // Splice only identified string tokens; all other bytes (including large
     // integers, whitespace, escapes and clinical/identity values) stay exact.
     for(const patch of patches.sort((a,b)=>(b.start??b.token.index)-(a.start??a.token.index))) {const start=patch.start??patch.token.index,end=patch.end??(start+patch.token[0].length);text=text.slice(0,start)+patch.value+text.slice(end);}
+    JSON.parse(text); // Overlapping adjacent removals must never emit invalid JSON.
     return text;
-  } catch { return text; }
+  } catch { return original; }
 }
 
 class LegacySchemaScript {
