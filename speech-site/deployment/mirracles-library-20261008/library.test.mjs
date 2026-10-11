@@ -70,6 +70,12 @@ test('detail and older alias preserve identity without eager external players',a
   assert.equal(r.status,200);assert(!/<iframe\b/i.test(html));assert(html.includes('data-mirracles-player="https://www.youtube-nocookie.com/embed/'));
   assert(html.includes('loading="eager" fetchpriority="high"'));assert.equal(cards(html),6);
   assert(html.includes('tel:+919100181181'));
+  assert(html.includes('Pinnacle Blooms Network®'));
+  assert(html.includes('href="/materials"')&&html.includes('href="/interventions"')&&html.includes('href="/sunshine"'));
+  const graph=JSON.parse(html.match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/)[1])['@graph'];
+  assert(graph.some(n=>n['@type']==='Organization'&&n.name==='Pinnacle Blooms Network'));
+  assert(graph.some(n=>n['@type']==='WebPage'&&n.publisher?.['@id']==='https://www.pinnacleblooms.org/#organization'&&n.mainEntity?.['@id']));
+  const entity=graph.find(n=>['VideoObject','CreativeWork'].includes(n['@type']));assert.equal(entity.publisher['@id'],'https://www.pinnacleblooms.org/#organization');
   const aliasPath=Object.keys(catalogue.aliasPaths)[0];
   assert.equal((await get(aliasPath)).status,200);
   const wrongSlug=await get('/mirracles/'+record.id+'/INVENTED?q=retain');assert.equal(wrongSlug.status,308);
