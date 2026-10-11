@@ -59,7 +59,7 @@ export function toLegacyEnrolment(body){
   `Service preference: ${SERVICE_LABEL[body.preferences.service]}.`,
  `Centre preference: ${centreName}.`
  ];
- if(body.preferences.offer===NAVRATRI_OFFER_REFERENCE)parts.push('Offer requested: Navratri one-service month — ₹14,499 for one full month of one service (Speech Therapy, Occupational Therapy, Behaviour Therapy or Special Education), regularly ₹25,999. Limited to the first 4,999 qualifying children or families in total; confirm eligibility and remaining availability with the care team. Confirm eligibility, selected service, schedule, availability and price before enrolment. Services are not bundled.');
+ if(body.preferences.offer===NAVRATRI_OFFER_REFERENCE)parts.push('Offer requested: Pinnacle Navratri 2026 Offer — ₹14,499 for one full month of one service (Speech Therapy, Occupational Therapy, Behaviour Therapy or Special Education), regularly ₹25,999. Limited to the first 4,999 qualifying children or families in total; confirm eligibility and remaining availability with the care team. Confirm eligibility, selected service, schedule, availability and price before enrolment. Services are not bundled.');
  if(body.message.trim())parts.push(`Family note: ${body.message.trim()}`);
  else parts.push('Please contact the enquirer to understand the suitable next step.');
  return {
