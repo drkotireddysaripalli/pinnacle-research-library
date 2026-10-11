@@ -24,6 +24,7 @@
     "test:all-pages": "node scripts/testingbot-records.mjs --suite all",
     "test:testingbot-contract": "node --test scripts/test-testingbot-contract.mjs",
     "test:daily": "node scripts/testingbot-daily.mjs",
+    "verify:seo-shared": "node scripts/verify-seo-shared-repairs.mjs",
     "check:page": "node scripts/check-page.mjs",
     "check:speed": "node scripts/check-speed.mjs",
     "build:ask": "astro build --config astro.ask.config.mjs",

@@ -21,8 +21,14 @@ export const URL_ALIASES={
  '/child-counselor-near-me':'/child-psychological-counseling',
  '/speech-therapist-near-me':'/top-speech-therapy-center-india-proven-improvement-rate',
  '/occupational-therapist-near-me':'/best-occupational-therapy-center-india-proven-improvement-rate',
- '/autism-center-near-me':'/centers'
+ '/autism-center-near-me':'/centers',
+ // Exact live 404s reported by the 10 October Semrush full crawl. Keep the
+ // old identities available while consolidating them into maintained pages.
+ '/centers/best-autism-speech-aba-occupational-therapy-center-srikakulkam-ap-india':'/centers/best-autism-speech-aba-occupational-therapy-center-srikakulam-ap-india',
+ '/b/activities-of-daily-living':'/c/activities-of-daily-living',
+ '/autism-therapy-centers/kukatpally':'/centers/best-autism-speech-aba-occupational-therapy-center-kukatpally-hyderabad-telangana-india'
 };
+const FAQ_LANGUAGES={english:'en-IN',hindi:'hi',telugu:'te',tamil:'ta',kannada:'kn',malayalam:'ml',bengali:'bn'};
 const metadataPaths=new Map([
  ['/child-psychological-counseling',new Set(['https://mobile.pinnacleblooms.org/child-psychological-counseling','http://www.pinnacleblooms.org/child-psychological-counseling','http://mobile.pinnacleblooms.org/child-psychological-counseling'])],
  ['/franchise-autism-therapy-center',new Set(['https://mobile.pinnacleblooms.org/franchises','http://mobile.pinnacleblooms.org/franchises','https://www.pinnacleblooms.org/franchises','http://www.pinnacleblooms.org/franchises'])]
@@ -67,6 +73,8 @@ export function repairUrlHealth(request,response){
    e.setAttribute('href','/verify/evidence/records/study-portfolio.html');e.removeAttribute('download');e.removeAttribute('target');e.setInnerContent('Read study evidence');
   }
  }});
+ const faqLanguage=u.pathname.match(/^\/faq\/([^/]+)(?:\/|$)/i)?.[1]?.toLowerCase();
+ if(FAQ_LANGUAGES[faqLanguage])rewrite.on('html',{element(e){e.setAttribute('lang',FAQ_LANGUAGES[faqLanguage]);}});
  if(old){
   let seen=false;
   const sameIdentity=value=>{try{const target=new URL(value,ORIGIN);return target.origin===ORIGIN&&target.pathname===u.pathname;}catch{return false;}};
@@ -79,6 +87,6 @@ export function repairUrlHealth(request,response){
    rewrite.on('h1',{element(e){if(heading)return;heading=true;e.setInnerContent('Child psychology and counselling support for children and families');e.after('<section id="child-psychology-next-step" aria-label="Talk with Pinnacle about child psychology and counselling" style="box-sizing:border-box;max-width:980px;margin:18px auto;padding:20px;border:1px solid #d9bfd6;border-radius:16px;background:#fff;color:#18233f;box-shadow:0 10px 28px rgba(24,35,63,.08)"><p style="margin:0 0 14px;font-size:1.05rem;line-height:1.65">Talk through concerns about emotions, behaviour, learning or participation. Pinnacle will help you identify an appropriate centre and confirm the available qualified professional, appointment and fee before you visit.</p><div style="display:flex;flex-wrap:wrap;gap:12px"><a href="tel:+919100181181" data-cta="child-psychology-call" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;border-radius:999px;background:#652579;color:#fff;text-decoration:none;font-weight:800">Call 9100 181 181</a><a href="/enroll-autism-speech-aba-therapies-india?service=psychological-counselling" data-cta="child-psychology-assessment" style="display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 18px;border:2px solid #652579;border-radius:999px;background:#fff;color:#652579;text-decoration:none;font-weight:800">Request an assessment</a><a href="/centers" style="display:inline-flex;align-items:center;min-height:48px;color:#315c80;font-weight:800">Find a Pinnacle centre near you</a></div><p style="margin:14px 0 0;font-size:.92rem;line-height:1.55">Pinnacle does not diagnose from this page. Confirm the suitable service and professional for your child with the receiving team.</p></section>',{html:true});}});
   }
  }
- return repairKnownBrokenMedia(rewrite.transform(new Response(response.body,{status:response.status,statusText:response.statusText,headers})));
+ return repairKnownBrokenMedia(request,rewrite.transform(new Response(response.body,{status:response.status,statusText:response.statusText,headers})));
 }
 

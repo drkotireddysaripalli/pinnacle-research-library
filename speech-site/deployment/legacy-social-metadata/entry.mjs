@@ -185,7 +185,7 @@ export async function handle(request, fetcher = fetchPublicOrigin) {
   headers.delete('if-none-match'); headers.delete('if-modified-since');
   const upstream = new Request(request, {headers});
   const response = await transform(request, await fetcher(upstream));
-  return transformedResponses.has(response) ? repairPriorityContent(request, repairKnownLegacyPerformance(repairPublicLinks(repairKnownBrokenMedia(repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response)),request.url))),request)) : response;
+  return transformedResponses.has(response) ? repairPriorityContent(request, repairKnownLegacyPerformance(repairPublicLinks(repairKnownBrokenMedia(request,repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response)),request.url))),request)) : response;
 }
 
 export default {fetch: async request => repairUrlHealth(request,await handle(request))};
