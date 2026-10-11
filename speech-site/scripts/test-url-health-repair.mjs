@@ -38,8 +38,8 @@ test('shared repairs cover the exact Semrush route, language and legacy-media fa
 test('Mirracles detail metadata stays unique and within search-safe lengths',()=>{
  const first={id:'104251',title:'A very long published video title that would otherwise create the same oversized title warning on every generated detail page'};
  const second={...first,id:'104252'};
- assert.notEqual(detailSeoTitle(first),detailSeoTitle(second));assert(detailSeoTitle(first).length+' | Pinnacle Blooms'.length<=60);
- const longId={...first,id:'20710890947'};assert(detailSeoTitle(longId).length+' | Pinnacle Blooms'.length<=60);
+ assert.notEqual(detailSeoTitle(first),detailSeoTitle(second));assert(detailSeoTitle(first).length+' | Pinnacle Blooms Network®'.length<=60);
+ const longId={...first,id:'20710890947'};assert(detailSeoTitle(longId).length+' | Pinnacle Blooms Network®'.length<=60);
  assert.notEqual(detailSeoDescription(first),detailSeoDescription(second));assert(detailSeoDescription(first).length<=156);assert(detailSeoDescription(first).includes(first.id));
 });
 test('precise malformed service and sitemap aliases preserve attribution and refuse unrelated routes',()=>{

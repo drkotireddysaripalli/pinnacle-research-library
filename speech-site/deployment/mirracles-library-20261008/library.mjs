@@ -5,6 +5,11 @@ export const PAGE_SIZE = 24;
 const HOME = '/allmirracles';
 const ASSETS = HOME + '/_assets/';
 const PHONE = 'tel:+919100181181';
+const BRAND = 'Pinnacle Blooms Network®';
+const BRAND_SCHEMA = 'Pinnacle Blooms Network';
+const ORG_ID = ORIGIN + '/#organization';
+const WEBSITE_ID = ORIGIN + '/#website';
+const COLLECTION_ID = ORIGIN + HOME + '#collection';
 const DEFAULT_DESCRIPTION = 'Explore published Pinnacle videos, read the evidence, and discuss a child-specific next step with our team.';
 const brandLogoBytes = Uint8Array.from(atob(brandLogoBase64), c=>c.charCodeAt(0));
 export const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -23,11 +28,12 @@ const clip = (value,limit) => {
   const cut=text.slice(0,limit+1).replace(/\s+\S*$/,'').replace(/[,:;.!?\-–—\s]+$/,'');
   return (cut||text.slice(0,limit).trim())+'…';
 };
-export function detailSeoTitle(record){const id=String(record.id);const room=60-' | Pinnacle Blooms'.length-' · '.length-id.length;return clip(displayTitle(record),Math.max(12,room-1))+' · '+id;}
+export function detailSeoTitle(record){const id=String(record.id);const room=60-(' | '+BRAND).length-' · '.length-id.length;return clip(displayTitle(record),Math.max(12,room-1))+' · '+id;}
 export function detailSeoDescription(record){
-  return clip(`Pinnacle Mirracles video ${record.id}: ${displayTitle(record)}. Review this published record and discuss child-specific questions with the Pinnacle team.`,155);
+  return clip(`${BRAND} Mirracles video ${record.id}: ${displayTitle(record)}. Watch this published record and discuss child-specific next steps.`,155);
 }
 const absolute = path => new URL(path, ORIGIN).href;
+const categoryLabel = value => String(value||'Published video').replace(/([a-z])([A-Z])/g,'$1 $2').replace(/[_-]+/g,' ').replace(/\s+/g,' ').trim();
 
 function pathKey(path) {
   try {
@@ -74,8 +80,9 @@ export function videoObject(record) {
   const player = playerURL(record.player);
   if (!record.title || !description || !poster || !uploadDate || !player) return null;
   return {'@type':'VideoObject','@id':absolute(record.path)+'#video',name:record.title,description,
-    thumbnailUrl:[poster],uploadDate,embedUrl:player.split('?')[0],url:absolute(record.path)};
+    thumbnailUrl:[poster],uploadDate,embedUrl:player.split('?')[0],url:absolute(record.path),publisher:{'@id':ORG_ID},isPartOf:{'@id':COLLECTION_ID},about:categoryLabel(record.category)};
 }
+function archiveEntity(record) { return {'@type':'CreativeWork','@id':absolute(record.path)+'#record',name:displayTitle(record),url:absolute(record.path),publisher:{'@id':ORG_ID},isPartOf:{'@id':COLLECTION_ID},about:categoryLabel(record.category),...(publishedDate(record.published)?{datePublished:publishedDate(record.published)}:{})}; }
 function categoryURL(key) { return HOME + '/category/' + encodeURIComponent(key); }
 function pageURL(base, page, q = '') {
   const params = new URLSearchParams();
@@ -94,6 +101,10 @@ function sharedFooter(navigation) {
 function nextStep() {
   return `<section class="next-step"><h2>What would be meaningful for your child?</h2><p>Bring your questions to our team. Discuss assessment, a child-specific plan, everyday practice and how progress will be reviewed.</p><div class="next-actions">${call()}${a('/enroll-autism-speech-aba-therapies-india','Arrange a first conversation')}${a('/verify/','Read the evidence')}${a('/guru','Read Pinnacle Guru articles')}</div></section>`;
 }
+function resourceLinks(category) {
+  const contextual=/material/i.test(category)?[['/materials','Therapy materials'],['/interventions','Interventions and techniques']]:/technique/i.test(category)?[['/interventions','Interventions and techniques'],['/materials','Therapy materials']]:/parent|promise|wonderful|award/i.test(category)?[['/verify/','Evidence and claim sources'],['/centers','Find a Pinnacle centre']]:[['/ask','Ask child-development questions'],['/faq','Parent FAQs']];
+  return `<section class="content-section"><h2>Continue with ${BRAND}</h2><p>Use this video as one part of a child-specific conversation. Explore connected guidance, evidence and support.</p><nav class="category-list" aria-label="Connected Pinnacle resources">${[...contextual,['/sunshine','Sunshine resources'],['/materials','Therapy materials'],['/interventions','Interventions'],['/enroll-autism-speech-aba-therapies-india','Request an assessment conversation']].map(([url,label])=>a(url,label)).join('')}</nav></section>`;
+}
 function card(record, level='h2') {
   const poster = imageURL(record.poster);
   return `<article class="card">${a(record.path,'').replace('</a>',`<div class="card-media">${poster?`<img src="${escapeHtml(poster)}" alt="" width="480" height="270" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:'<span>Published archive</span>'}</div><div class="card-copy">${record.category?`<span class="category">${escapeHtml(record.category)}</span>`:''}<${level}>${escapeHtml(displayTitle(record))}</${level}><span class="read">Open this video record →</span></div></a>`)}</article>`;
@@ -110,8 +121,12 @@ function documentHTML({title,seoTitle=title,titleSuffix='Pinnacle Blooms Network
   const reader=shell?.reader;
   if(reader?.journey)body=body.includes('</header>')?body.replace('</header>','</header>'+reader.journey):body+reader.journey;
   const footer=reader?String(shell?.footer||'').replace('src="/pinnacle-pages-scripts/speech-measurement.js"','src="'+escapeHtml(reader.measurement)+'"'):shell?.footer;
+  const primary=schema[0]?.['@id'];
   const graph = {'@context':'https://schema.org','@graph':[
-    {'@type':'WebPage','@id':canonical+'#page',url:canonical,name:title,description,isAccessibleForFree:!reader,...(reader?{hasPart:{'@type':'WebPageElement',isAccessibleForFree:false,cssSelector:'.ask-registration-content'}}:{})},...schema]};
+    {'@type':'Organization','@id':ORG_ID,name:BRAND_SCHEMA,url:ORIGIN,logo:{'@type':'ImageObject',url:absolute(ASSETS+'logo.png')}},
+    {'@type':'WebSite','@id':WEBSITE_ID,url:ORIGIN,name:BRAND_SCHEMA,publisher:{'@id':ORG_ID}},
+    {'@type':'CollectionPage','@id':COLLECTION_ID,url:absolute(HOME),name:'Pinnacle Mirracles video library',isPartOf:{'@id':WEBSITE_ID},publisher:{'@id':ORG_ID}},
+    {'@type':'WebPage','@id':canonical+'#page',url:canonical,name:title,description,isPartOf:{'@id':WEBSITE_ID},publisher:{'@id':ORG_ID},...(primary?{mainEntity:{'@id':primary}}:{}),isAccessibleForFree:!reader,...(reader?{hasPart:{'@type':'WebPageElement',isAccessibleForFree:false,cssSelector:'.ask-registration-content'}}:{})},...schema]};
   const socialImage=image||absolute(ASSETS+'logo.png');
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(seoTitle)} | ${escapeHtml(titleSuffix)}</title><meta name="description" content="${escapeHtml(description)}"><meta name="robots" content="${noindex?'noindex, follow':'index, follow, max-image-preview:large'}"><link rel="canonical" href="${escapeHtml(canonical)}"><meta property="og:type" content="website"><meta property="og:title" content="${escapeHtml(title)}"><meta property="og:description" content="${escapeHtml(description)}"><meta property="og:url" content="${escapeHtml(canonical)}"><meta property="og:image" content="${escapeHtml(socialImage)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="${escapeHtml(socialImage)}">${shell?.head??''}${reader?.head??''}<link rel="stylesheet" href="${ASSETS}library.css"><script type="application/ld+json">${jsonHtml(graph)}</script></head><body class="ask-page" data-page-variant="knowledge">${shell?.header??sharedHeader(catalogue.navigation)}${reader?.html??''}<main id="main" class="wrap ask-registration-content">${body}</main>${footer??sharedFooter(catalogue.navigation)}<nav class="mobile-call" aria-label="Contact Pinnacle">${call()}</nav></body></html>`;
 }
@@ -193,11 +208,11 @@ export function createMirraclesLibrary({loadJson,shell,responseHeaders}={}) {
         const category = detail.category;
         const related = c.ordered.filter(r=>r.id!==record.id && (category?r.category===category:true)).slice(0,6);
         const description = safeDescription(detail);
-        const video = videoObject(detail);
-        const recordSummary=`This is Pinnacle Mirracles record ${detail.id}${category?' in '+category:''}${date?' published '+date.slice(0,10):''}, titled “${displayTitle(detail)}”. Use the record to note the question, activity or concern you want to discuss with the receiving team.`;
-        const body = `<nav class="crumbs" aria-label="Breadcrumb"><ol><li>${a(HOME,'Video library')}</li>${category?`<li>${a(categoryURL(category),category)}</li>`:''}<li aria-current="page">Video record</li></ol></nav><header class="hero"><p class="kicker">Pinnacle Mirracles · Published video</p><h1>${escapeHtml(displayTitle(detail))}</h1>${date?`<p class="caption">Published <time datetime="${escapeHtml(date)}">${escapeHtml(date.slice(0,10))}</time></p>`:''}<p class="source-note">A published record of one experience or explanation. It does not predict another child’s result.</p></header><div class="video-layout"><section aria-label="Published video">${player?`<div class="player"><button type="button" data-mirracles-player="${escapeHtml(player)}" data-video-title="${escapeHtml(displayTitle(detail))}" aria-label="Play video: ${escapeHtml(displayTitle(detail))}">${poster?`<img src="${escapeHtml(poster)}" alt="" width="480" height="270" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">`:''}<span class="play-label"><span>▶ Play video</span></span></button></div><p class="source-note">Selecting Play loads the YouTube player. ${a(detail.player,'Open the published player directly',' rel="noreferrer"')}</p><script src="${ASSETS}player.js" defer></script>`:'<div class="empty"><h2>Published archive record</h2><p>A playable video is not available in the current public source for this record.</p></div>'}</section><aside class="video-aside"><h2>Talk about your child’s next step</h2><p>Ask about assessment, meaningful goals and a plan that connects therapy with daily life.</p>${call()}<ul><li>${a('/centers','Find a centre')}</li><li>${a('/verify/','Read the evidence and its limits')}</li><li>${a('/sunshine','Explore development resources')}</li></ul></aside></div><section class="content-section"><h2>About this published record</h2><p>${escapeHtml(recordSummary)}</p></section>${description?`<section class="content-section"><h2>Published description</h2><p class="published-description">${escapeHtml(description)}</p></section>`:''}<section class="content-section"><h2>${category?'More in '+escapeHtml(category):'More published videos'}</h2><div class="grid">${related.map(r=>card(r,'h3')).join('')}</div></section>${nextStep()}`;
+        const video = videoObject(detail), entity=video||archiveEntity(detail);
+        const recordSummary=`Published by ${BRAND}, this is Mirracles video record ${detail.id}${category?' in '+categoryLabel(category):''}${date?' dated '+date.slice(0,10):''}, titled “${displayTitle(detail)}”. It is a real-world record for understanding the subject and preparing child-specific questions; one experience does not predict another child’s result.`;
+        const body = `<nav class="crumbs" aria-label="Breadcrumb"><ol><li>${a(HOME,'Video library')}</li>${category?`<li>${a(categoryURL(category),category)}</li>`:''}<li aria-current="page">Video record</li></ol></nav><header class="hero"><p class="kicker">${BRAND} · Mirracles${category?' · '+escapeHtml(categoryLabel(category)):''}</p><h1>${escapeHtml(displayTitle(detail))}</h1>${date?`<p class="caption">Published <time datetime="${escapeHtml(date)}">${escapeHtml(date.slice(0,10))}</time></p>`:''}<p class="source-note">A published record of one experience or explanation. It does not predict another child’s result.</p></header><div class="video-layout"><section aria-label="Published video">${player?`<div class="player"><button type="button" data-mirracles-player="${escapeHtml(player)}" data-video-title="${escapeHtml(displayTitle(detail))}" aria-label="Play video: ${escapeHtml(displayTitle(detail))}">${poster?`<img src="${escapeHtml(poster)}" alt="" width="480" height="270" loading="eager" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">`:''}<span class="play-label"><span>▶ Play video</span></span></button></div><p class="source-note">Selecting Play loads the YouTube player. ${a(detail.player,'Open the published player directly',' rel="noreferrer"')}</p><script src="${ASSETS}player.js" defer></script>`:'<div class="empty"><h2>Published archive record</h2><p>A playable video is not available in the current public source for this record.</p></div>'}</section><aside class="video-aside"><h2>Talk about your child’s next step</h2><p>Ask about assessment, meaningful goals and a plan that connects therapy with daily life.</p>${call()}<ul><li>${a('/centers','Find a centre')}</li><li>${a('/verify/','Read the evidence and its limits')}</li><li>${a('/sunshine','Explore development resources')}</li></ul></aside></div><section class="content-section"><h2>About this published record</h2><p>${escapeHtml(recordSummary)}</p></section>${description?`<section class="content-section"><h2>Published description</h2><p class="published-description">${escapeHtml(description)}</p></section>`:''}${resourceLinks(category)}<section class="content-section"><h2>${category?'More in '+escapeHtml(categoryLabel(category)):'More published videos'}</h2><div class="grid">${related.map(r=>card(r,'h3')).join('')}</div></section>${nextStep()}`;
         const sourceTitle=detail.title&&displayTitle(detail)!==detail.title?`<details class="content-section"><summary>Published source title</summary><p class="published-description">${escapeHtml(detail.title)}</p></details>`:'';
-        return htmlResponse(documentHTML({title:displayTitle(detail),seoTitle:detailSeoTitle(detail),titleSuffix:'Pinnacle Blooms',description:detailSeoDescription(detail),canonical:absolute(detail.path),image:poster,body:body+sourceTitle,catalogue:c,shell:trustedShell,schema:video?[video]:[]}),{head,privatePage,responseHeaders});
+        return htmlResponse(documentHTML({title:displayTitle(detail),seoTitle:detailSeoTitle(detail),titleSuffix:BRAND,description:detailSeoDescription(detail),canonical:absolute(detail.path),image:poster,body:body+sourceTitle,catalogue:c,shell:trustedShell,schema:[entity]}),{head,privatePage,responseHeaders});
       }
       const category = categoryPath?.[1] || legacyCategory?.[1] || url.searchParams.get('category') || '';
       if (category && !c.categoryKeys.has(category)) return notFound();
