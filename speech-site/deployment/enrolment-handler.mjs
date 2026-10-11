@@ -6,6 +6,7 @@ export const ENROLMENT_API_PATH='/api/enrolment';
 export const ENROLMENT_UPSTREAM='https://mirracle.pinnacleblooms.org/api/gl/swfs';
 
 const MAX_BODY_BYTES=16*1024;
+export const NAVRATRI_OFFER_REFERENCE='navratri-one-service-month-2026';
 const SERVICE_MAP={
  help:'Assements - Treatments',
  // Keep the upstream's existing assessment service; preserve the family's
@@ -44,6 +45,7 @@ export function validatePublicEnrolment(body){
  const contact=body.contact,preferences=body.preferences;
  if(!contact||typeof contact.name!=='string'||!contact.name.trim()||contact.name.trim().length>100||!validPhone(contact.phone)||!validEmail(contact.email))return false;
  if(!preferences||!Object.hasOwn(SERVICE_MAP,preferences.service)||typeof preferences.centre!=='string')return false;
+ if(Object.hasOwn(preferences,'offer')&&preferences.offer!==NAVRATRI_OFFER_REFERENCE)return false;
  if(preferences.centre&&!Object.hasOwn(centreFacilities,preferences.centre)&&!Object.hasOwn(CENTRE_WITHOUT_LEGACY_ID,preferences.centre))return false;
  return typeof body.message==='string'&&body.message.length<=500&&validPublicEnrolmentSource(body.source);
 }
@@ -55,8 +57,9 @@ export function toLegacyEnrolment(body){
  const parts=[
   'Website enrolment request.',
   `Service preference: ${SERVICE_LABEL[body.preferences.service]}.`,
-  `Centre preference: ${centreName}.`
+ `Centre preference: ${centreName}.`
  ];
+ if(body.preferences.offer===NAVRATRI_OFFER_REFERENCE)parts.push('Offer requested: Navratri one-service month — ₹14,499 for one full month of one service (Speech Therapy, Occupational Therapy, Behaviour Therapy or Special Education), regularly ₹25,999. Limited to the first 4,999 qualifying children or families in total; confirm eligibility and remaining availability with the care team. Confirm eligibility, selected service, schedule, availability and price before enrolment. Services are not bundled.');
  if(body.message.trim())parts.push(`Family note: ${body.message.trim()}`);
  else parts.push('Please contact the enquirer to understand the suitable next step.');
  return {

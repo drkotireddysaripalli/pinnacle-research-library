@@ -29,6 +29,7 @@ const proof=[
  ['people','An organisation you can identify','Pinnacle Blooms Network is operated by Bharath Healthcare Laboratories Private Limited.','Verify the organisation','/verify/evidence/records/lei.html']
 ];
 const citations=proof.map(p=>url(p[4])).concat([url('/verify/#family-observations'),url('/verify/#feedback-changes-plan')]);
+const navratriOffer={reference:'navratri-one-service-month-2026'};
 const questions=[
  ['What makes the Pinnacle approach different?','We begin with the life your child is growing toward. Greater independence and participation in family, school and community give assessment, goals, therapies, everyday practice and review one shared purpose.'],
  ['What can I discuss in the first conversation?','Tell us about everyday moments you want to make easier: communicating a need, managing a routine, learning or taking part with others. Ask about assessment, suitable support, the centre and fees. You do not need to know the name of a therapy to begin.'],
@@ -47,11 +48,17 @@ const questions=[
   <figure class="enrol-hero-art"><Image src={family} widths={[480,720,1080,1536]} sizes="(min-width:900px) 48vw, 100vw" width={1536} height={864} format="webp" quality={82} loading="eager" fetchpriority="high" alt="An Indian mother, father and child speaking with a child-development professional, connected to everyday home routines and school participation."/><HeroProofPanel compact/><figcaption>One child. One life. Every step working toward it.</figcaption></figure>
  </section>
  <span id="speech-assessment-enquiry" class="anchor-target" aria-hidden="true"></span>
+ <section class="wrap enrol-seasonal-offer" id="navratri-one-service-month-offer" aria-labelledby="navratri-offer-title" data-navratri-offer>
+  <p class="eyebrow">One-service monthly enrolment offer</p>
+  <div><h2 id="navratri-offer-title">One full month of one therapy service for ₹14,499.</h2><p>Choose one service: Speech Therapy, Occupational Therapy, Behaviour Therapy or Special Education. The regular monthly price is ₹25,999. The care team confirms the selected service, suitable centre, schedule and availability before enrolment.</p></div>
+  <div class="enrol-seasonal-actions"><a class="button primary" data-navratri-enrol href={`?offer=${navratriOffer.reference}#enrolment-form`}>Request an enrolment conversation <Icon name="arrow"/></a><a class="button outline" href={phone.href}><Icon name="phone"/> Call {phone.display}</a></div>
+  <p class="enrol-seasonal-terms"><strong>Terms:</strong> ₹14,499 for one full month of one listed therapy service, regularly ₹25,999. Available for the first 4,999 qualifying children or families in total. The care team confirms eligibility and remaining availability before enrolment. Services are not bundled. The separate free speech and language assessment offer does not make ongoing therapy free.</p>
+ </section>
  <section class="enrol-body wrap" id="enrolment-form" aria-labelledby="request-title">
   <div class="enrol-card"><p class="eyebrow">Let’s make the first step simple</p><h2 id="request-title">Tell us how to reach you.<br/>We’ll listen first.</h2><p class="enrol-form-intro">Your name and number are enough. You do not need to choose a therapy or explain your child’s whole history here.</p>
    <aside id="enrol-speech-offer" class="enrol-speech-offer" hidden aria-labelledby="enrol-speech-offer-title"><p class="eyebrow">Speech and language assessment</p><h3 id="enrol-speech-offer-title"><s>{speechOffer.listedDisplay}</s> <strong>FREE</strong></h3><p>Request the confirmed FREE speech and language assessment. Ongoing therapy and other assessments are priced separately; the team confirms your appointment and the suitable professional.</p><a href={url('/speech-therapy/service-information')}>Read the offer and included service details →</a><p><a href="/top-speech-therapy-center-india-proven-improvement-rate">Understand the speech pathway →</a></p></aside>
    {previewOnly&&<p class="enrol-preview-note">Design preview · This form does not send enquiries. To contact us now, <a href={url(livePath)}>use the live enrolment form</a> or call {phone.display}.</p>}
-   <form id="pinnacle-enrolment" method="post" action={previewOnly?'#':apiEndpoint} novalidate data-preview={String(previewOnly)} data-api-endpoint={previewOnly?'':apiEndpoint} data-source-path={livePath} aria-describedby="enrol-privacy">
+   <form id="pinnacle-enrolment" method="post" action={previewOnly?'#':apiEndpoint} novalidate data-preview={String(previewOnly)} data-api-endpoint={previewOnly?'':apiEndpoint} data-source-path={livePath} data-offer-reference={navratriOffer.reference} aria-describedby="enrol-privacy">
     <noscript><p class="enrol-error-summary">Please enable JavaScript to use this form, or <a href={phone.href}>call {phone.display}</a>.</p></noscript>
     <p id="enrol-unavailable" class="field-help">Loading the form… If it stays unavailable, please <a href={phone.href}>call {phone.display}</a>.</p>
     <div id="enrol-error-summary" class="enrol-error-summary" role="alert" tabindex="-1" hidden></div>
@@ -95,5 +102,22 @@ const questions=[
  <p class="wrap enrol-support-links"><a href="/pinnacle-pages-data/enrolment-evidence.json">Page sources and frequently asked questions</a> · <a href="/pinnacle-pages-data/enrolment-machine.md">Text reading edition</a></p>
  <section class="section wrap enrol-questions" id="questions" aria-labelledby="enrol-questions-title"><h2 id="enrol-questions-title">Before your first visit</h2>{questions.map(([question,answer])=><details><summary>{question}</summary><p>{answer}</p></details>)}</section>
  <section class="wrap enrol-close" aria-labelledby="enrol-close-title"><Icon name="sun" size={42}/><div><p class="enrol-life-ribbon">SELF-SUFFICIENT · MAINSTREAM · WONDERFUL LIFE · POSSIBLE.</p><h2 id="enrol-close-title">Begin a journey built<br/>around your child’s life.</h2><p>Start with a conversation. We will listen to what matters, help identify a suitable first step and explain the options before you decide.</p></div><div class="enrol-close-actions"><a class="button primary" href="#enrolment-form">Start my family’s conversation <Icon name="arrow"/></a><a class="button outline" href={phone.href} data-cta="final-call">Call {phone.display}</a></div></section>
- <script is:inline type="module" src="/pinnacle-pages-scripts/enrolment.js?v=helpline-source-20261010"></script>
+ <script>
+  const offer=document.querySelector<HTMLElement>('[data-navratri-offer]');
+  if(offer){
+   const enrolLink=offer.querySelector<HTMLAnchorElement>('[data-navratri-enrol]');
+   if(enrolLink){
+    const target=new URL(enrolLink.href,location.href),current=new URL(location.href);
+    for(const [key,value] of current.searchParams){if(key==='gclid'||key==='gbraid'||key==='wbraid'||key.startsWith('utm_'))target.searchParams.set(key,value)}
+    target.searchParams.set('offer','navratri-one-service-month-2026');enrolLink.href=target.href;
+   }
+  }
+ </script>
+ <script is:inline type="module" src="/pinnacle-pages-scripts/enrolment.js?v=navratri-20261011"></script>
 </PageLayout>
+<style>
+ .enrol-seasonal-offer{margin-block:30px 64px;padding:clamp(24px,4vw,46px);border:2px solid #8f2879;border-radius:24px;background:linear-gradient(135deg,#fff8fc,#fff 58%,#f3fbe9);box-shadow:0 18px 46px rgba(87,28,75,.1)}
+ .enrol-seasonal-offer>.eyebrow{color:#8f2879}.enrol-seasonal-offer h2{max-width:880px;margin:.45rem 0 1rem;font-size:clamp(1.8rem,4vw,3.1rem);line-height:1.1;color:#51204a}.enrol-seasonal-offer>div>p{max-width:900px;font-size:1.05rem;line-height:1.75}.enrol-seasonal-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.enrol-seasonal-terms{margin:22px 0 0;padding-top:18px;border-top:1px solid #dcc9d8;font-size:.92rem;line-height:1.7;color:#554d58}
+ .enrol-seasonal-offer[data-expired="true"]{border-color:#c9c2c8;background:#f8f6f8}.enrol-seasonal-offer[data-expired="true"]>.eyebrow,.enrol-seasonal-offer[data-expired="true"] h2{color:#625b61}
+ @media(max-width:620px){.enrol-seasonal-actions{display:grid}.enrol-seasonal-actions .button{width:100%}}
+</style>
