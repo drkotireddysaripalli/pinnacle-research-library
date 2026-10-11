@@ -23,7 +23,7 @@ const clip = (value,limit) => {
   const cut=text.slice(0,limit+1).replace(/\s+\S*$/,'').replace(/[,:;.!?\-–—\s]+$/,'');
   return (cut||text.slice(0,limit).trim())+'…';
 };
-export function detailSeoTitle(record){return clip(displayTitle(record),32)+' · '+record.id;}
+export function detailSeoTitle(record){const id=String(record.id);const room=60-' | Pinnacle Blooms'.length-' · '.length-id.length;return clip(displayTitle(record),Math.max(12,room-1))+' · '+id;}
 export function detailSeoDescription(record){
   return clip(`Pinnacle Mirracles video ${record.id}: ${displayTitle(record)}. Review this published record and discuss child-specific questions with the Pinnacle team.`,155);
 }
