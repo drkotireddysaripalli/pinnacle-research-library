@@ -54,13 +54,16 @@ for(const matrixId of matrixIds){
   }
   const session={matrix:matrixId,kind:config.kind,requested:{...config,deviceName:device.name,version:device.version},status:'starting',cases:[],artifacts:[],skipped:[]};
   report.sessions.push(session);await save();let sessionId;
-  const wd=async(suffix,method='GET',body)=>{const d=await request(client.hub+'/session/'+sessionId+suffix,method,body);return d.value;};
+  const wd=async(suffix,method='GET',body,readOnly=method==='GET')=>{const d=await request(client.hub+'/session/'+sessionId+suffix,method,body,60000,readOnly);return d.value;};
   // Appium Safari does not wait for a Promise returned by execute/sync.
   // Use the standard async callback so physical devices return real evidence.
   const evaluate=async(script,...args)=>{
     if(script.startsWith('tb:'))return wd('/execute/sync','POST',{script,args});
     const wrapped="const input=Array.from(arguments),done=input.pop();try{Promise.resolve((function(){\n"+script+"\n}).apply(null,input)).then(done,e=>done({__testingbotScriptError:String(e.message||e)}))}catch(e){done({__testingbotScriptError:String(e.message||e)})}";
-    const result=await wd('/execute/async','POST',{script:wrapped,args});
+    // Retry only observations. Never replay clicks, navigation, form submission,
+    // storage writes or other script mutations after an uncertain response.
+    const readOnly=!/\b(?:fetch|XMLHttpRequest|setAttribute|removeAttribute|scrollIntoView|scrollTo|scrollBy)\b|\.(?:click|focus|blur|submit|requestSubmit|dispatchEvent|assign|replace|resizeTo|resizeBy|setItem|removeItem|clear|toggle|add|remove|push)\s*\(|(?:\.open|\.value|\.innerHTML|\.textContent|\.location|\.loading)\s*=(?!=)/.test(script);
+    const result=await wd('/execute/async','POST',{script:wrapped,args},readOnly);
     if(result?.__testingbotScriptError)throw Error(result.__testingbotScriptError);
     return result;
   };
