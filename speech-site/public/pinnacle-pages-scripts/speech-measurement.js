@@ -197,7 +197,7 @@
     if (!production || !enabled || blocked || navigator.globalPrivacyControl || knowledgeSearch || validationTraffic) return;
     try { window.gtag('event', name, {...permittedCampaigns(), page_group:pageGroup, measurement_mode:'consented', ...parameters, page_variant:variant, page_location:measurementLocation, page_title:pageTitle, page_referrer:safeReferrer, send_to:id}); } catch {}
   };
-  const vitalRelease = 'ga4-common-20261010';
+  const vitalRelease = 'ga4-reliability-20261011';
   let vitalsStarted = false;
   const vitalShape = (name,value) => {
     if (!Number.isFinite(value) || value < 0) return null;
@@ -213,7 +213,14 @@
     const watch=(type,receive,options={type,buffered:true})=>{try{const observer=new PerformanceObserver(list=>{for(const entry of list.getEntries())receive(entry);});observer.observe(options);observers.push(observer);}catch{}};
     watch('largest-contentful-paint',entry=>{values.LCP=entry.renderTime||entry.loadTime||entry.startTime;});
     watch('event',entry=>{if(entry.interactionId>0&&Number.isFinite(entry.duration)){interactions.set(entry.interactionId,Math.max(interactions.get(entry.interactionId)||0,entry.duration));const durations=[...interactions.values()].sort((a,b)=>b-a);values.INP=durations[Math.floor(durations.length/50)]||null;}},{type:'event',buffered:true,durationThreshold:40});
-    watch('layout-shift',entry=>{if(!entry.hadRecentInput&&Number.isFinite(entry.value)){values.CLS+=entry.value;seen.CLS=true;}});
+    // CLS is the largest session window, not all shifts across a long visit.
+    let clsStart=null,clsLast=null,clsWindow=0;
+    watch('layout-shift',entry=>{if(!entry.hadRecentInput&&Number.isFinite(entry.value)){
+      const at=Number.isFinite(entry.startTime)?entry.startTime:0;
+      if(clsStart!==null&&at-clsLast<1000&&at-clsStart<5000)clsWindow+=entry.value;
+      else{clsStart=at;clsWindow=entry.value;}
+      clsLast=at;values.CLS=Math.max(values.CLS,clsWindow);seen.CLS=true;
+    }});
     const emit=()=>{
       if (!enabled || blocked || navigator.globalPrivacyControl || validationTraffic) return;
       for(const name of ['LCP','INP','CLS']){
@@ -382,6 +389,20 @@
   sendGoogleAds('google_ads_arrival',{interaction_kind:'navigation'},false);
   // Fixed event vocabulary only; arbitrary query values and form data are excluded.
   const acceptedRequests=window.__pinnacleAcceptedRequests||(window.__pinnacleAcceptedRequests=new Set());
+  const formStages=new Set(['start','attempt','error']);
+  const formErrors=new Set(['validation','storage_unavailable','endpoint_unavailable','receiver_rejected','receiver_unconfirmed']);
+  let formStarted=false;
+  document.addEventListener('pinnacle:enquiry-progress',event=>{
+    const detail=event?.detail;
+    if(!detail||!formStages.has(detail.stage)||Object.keys(detail).some(k=>!['stage','error_category'].includes(k)))return;
+    if(!document.querySelector('#pinnacle-enrolment[data-api-endpoint="/api/enrolment"]'))return;
+    if(detail.stage==='error'&&!formErrors.has(detail.error_category))return;
+    if(detail.stage!=='error'&&detail.error_category!==undefined)return;
+    if(detail.stage==='start'&&formStarted)return;
+    const name={start:'form_start',attempt:'enquiry_submit_attempt',error:'form_error'}[detail.stage];
+    send(name,{schema_version:1,link_placement:pageGroup==='enrolment'?'enrolment-form':'inline-callback-form',destination:'existing_enrolment_workflow',...(detail.stage==='error'?{error_category:detail.error_category}:{}),release_id:vitalRelease});
+    if(detail.stage==='start'&&production&&enabled&&!blocked&&!navigator.globalPrivacyControl&&!knowledgeSearch&&!validationTraffic)formStarted=true;
+  });
   document.addEventListener('pinnacle:enquiry-accepted', event => {
     const receipt=event?.detail?.receipt;
     if(!receipt||receipt.schemaVersion!==1||typeof receipt.requestId!=='string'||typeof receipt.id!=='string'||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.requestId)||!/^[A-Za-z0-9-]{8,100}$/.test(receipt.id)||Object.keys(receipt).some(k=>!['schemaVersion','requestId','id'].includes(k)))return;

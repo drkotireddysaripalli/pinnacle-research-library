@@ -19,6 +19,14 @@ if(form){
  centre.addEventListener('change',()=>renderCentre(true));
  form.addEventListener('reset',()=>queueMicrotask(()=>{renderCentre();if(preferences)preferences.open=false;}));
  let pending=false,finished=false,uncertain=false;
+ // Fixed categories only. Never attach field names, values, errors or receipt IDs.
+ function progress(stage,error_category){
+  if(preview)return;
+  try{document.dispatchEvent(new CustomEvent('pinnacle:enquiry-progress',{detail:{stage,...(error_category?{error_category}:{})}}));}catch{}
+ }
+ // The collector deduplicates only after permission; a pre-permission focus must
+ // not prevent a later permitted start. These notifications contain no values.
+ form.addEventListener('focusin',()=>{if(!finished)progress('start');});
  let attemptStore,storageReady=preview;
  if(!preview){try{attemptStore=createAttemptStore(localStorage);const probe='pbn-enrolment-storage-check';localStorage.setItem(probe,'1');localStorage.removeItem(probe);storageReady=true;}catch{}}
  const controls=[...form.querySelectorAll('[data-enrol-fields]')];
@@ -58,8 +66,9 @@ if(form){
   if(restoreAttempt())return;
   let acquisition;try{acquisition=window.pinnacleEnquirySource?.();}catch{}
   const payload=makePayload(data,crypto.randomUUID(),acquisition),attempt={schemaVersion:1,requestId:payload.requestId,state:'pending',createdAt:Date.now()};
-  try{attemptStore.write(attempt);}catch{uncertain=true;status.textContent='We could not safely save the request confirmation on this device. Please call 9100 181 181.';setBusy(false);return;}
+  try{attemptStore.write(attempt);}catch{progress('error','storage_unavailable');uncertain=true;status.textContent='We could not safely save the request confirmation on this device. Please call 9100 181 181.';setBusy(false);return;}
   setBusy(true);status.textContent='Sending your request…';
+  progress('attempt');
   const result=await submitEnrolment(endpoint,payload,{origin:location.origin,receiptRequired:true});
   if(result.state==='accepted'){
    // Persist before emitting. Reloading a receipt never re-emits the GA4 event.
@@ -67,10 +76,12 @@ if(form){
    showAccepted();document.dispatchEvent(new CustomEvent('pinnacle:enquiry-accepted',{detail:{receipt:result.receipt,acquisition:payload.source.acquisition||null}}));
   }
   else if(result.state==='rejected'){
+   progress('error','receiver_rejected');
    try{attemptStore.clear();}catch{uncertain=true;}
    status.textContent='Your request was not accepted. Your details are still here. Please check them and try again, or call 9100 181 181.';
   }
   else {
+   progress('error','receiver_unconfirmed');
    uncertain=true;try{attemptStore.write({...attempt,state:'unknown'});}catch{}
    status.textContent='We could not confirm whether your request was received. Please call 9100 181 181 before sending another request. Your details are still here.';button.textContent='Please call to confirm';
   }
@@ -78,9 +89,9 @@ if(form){
  }
  form.addEventListener('submit',async event=>{
   event.preventDefault();if(pending||finished||uncertain)return;
-  status.textContent='';const data=values(),errors=validateEnrolment(data,centreIds);showErrors(errors);if(Object.keys(errors).length)return;
+  status.textContent='';const data=values(),errors=validateEnrolment(data,centreIds);showErrors(errors);if(Object.keys(errors).length){progress('error','validation');return;}
   if(preview){status.textContent='Preview checked. No request has been sent. Your details have not been saved or transmitted.';status.focus();return;}
-  if(!approvedEndpoint(endpoint,location.origin)||!crypto.randomUUID||!storageReady){status.textContent='The form is unavailable on this device. Please call 9100 181 181.';status.focus();return;}
+  if(!approvedEndpoint(endpoint,location.origin)||!crypto.randomUUID||!storageReady){progress('error',storageReady?'endpoint_unavailable':'storage_unavailable');status.textContent='The form is unavailable on this device. Please call 9100 181 181.';status.focus();return;}
   setBusy(true);
   if(navigator.locks?.request)await navigator.locks.request('pbn-enrolment-request',()=>sendValidated(data));
   else await sendValidated(data);
