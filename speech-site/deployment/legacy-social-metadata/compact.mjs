@@ -53,7 +53,7 @@ export class LegacyIndentationCompactor {
 
 export function compactLegacyIndentation(request,response){
  const u=new URL(request.url);
- if(request.method!=='GET'||u.origin!=='https://www.pinnacleblooms.org'||!FAMILIES.test(u.pathname)||request.headers.has('authorization')||request.headers.has('range')||response.status!==200||!response.body||response.headers.has('set-cookie')||/no-store|no-transform/i.test(response.headers.get('cache-control')||'')||/noindex/i.test(response.headers.get('x-robots-tag')||'')||!/^text\/html(?:\s*;|$)/i.test(response.headers.get('content-type')||''))return response;
+ if(request.method!=='GET'||u.origin!=='https://www.pinnacleblooms.org'||!FAMILIES.test(u.pathname)||request.headers.has('authorization')||request.headers.has('range')||response.status!==200||!response.body||response.headers.has('x-pinnacle-legacy-compact')||response.headers.has('set-cookie')||/no-store|no-transform/i.test(response.headers.get('cache-control')||'')||/noindex/i.test(response.headers.get('x-robots-tag')||'')||!/^text\/html(?:\s*;|$)/i.test(response.headers.get('content-type')||''))return response;
  if(/charset\s*=\s*(?!utf-8(?:\s|;|$))/i.test(response.headers.get('content-type')||''))return response;
  const decoder=new TextDecoder('utf-8',{fatal:true}),encoder=new TextEncoder(),compact=new LegacyIndentationCompactor();
  const headers=new Headers(response.headers);
