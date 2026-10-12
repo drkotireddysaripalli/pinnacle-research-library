@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "hosts": ["www.pinnacleblooms.org", "pinnacleblooms.org", "interventions.pinnacleblooms.org", "materials.pinnacleblooms.org", "pediatricians.pinnacleblooms.org"],
+  "family_buckets": {"ask": 8, "mirracles": 4},
+  "html_page_size": 500,
+  "eligibility_max_age_days": 7,
+  "llms_full": false,
+  "llms_full_max_bytes": 250000,
+  "priority_and_changefreq_export": false,
+  "page_lastmod_source": "verified significant publishing-content change only"
+}
