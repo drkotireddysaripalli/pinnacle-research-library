@@ -20,7 +20,7 @@ try{
   await page.locator('#enrol-submit').waitFor({state:'visible'});await page.evaluate(()=>document.fonts.ready);
   const monthly=page.locator('#navratri-one-service-month-offer'),discount=page.locator('#navratri-paid-plan-discount-2026');
   assert.equal(await monthly.locator('s').innerText(),'₹25,999/-');assert((await monthly.locator('.enrol-offer-price strong').innerText()).includes('₹14,499/-'));
-  assert.equal(await monthly.locator('.enrol-offer-limit').innerText(),'Only for the first 4,999 kids and families.');assert(!(await monthly.innerText()).includes('25 October 2026'));
+  assert.equal(await monthly.locator('.enrol-offer-limit').innerText(),'Only for the first 4,999 kids and families.');assert((await monthly.innerText()).includes('Ends 25 October 2026 at 11:59 pm IST'));
   assert((await monthly.locator('s').evaluate(n=>getComputedStyle(n).textDecorationLine)).includes('line-through'));
   assert.equal(await discount.locator('h2').innerText(),'₹4,999 Navratri discount');
   assert.equal(await discount.locator('time[datetime="2026-10-11"]').innerText(),'11 October');assert.equal(await discount.locator('time[datetime="2026-10-25"]').innerText(),'25 October 2026');

@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "navratri-one-service-month-2026",
+  "revision": "20261012-1",
+  "enabled": true,
+  "startsAt": "2026-10-11T00:00:00+05:30",
+  "expiresAt": "2026-10-25T23:59:00+05:30",
+  "title": "Pinnacle Navratri 2026 Offer",
+  "regularPrice": "₹25,999/-",
+  "offerPrice": "₹14,499/-",
+  "limit": "Only for the first 4,999 kids and families.",
+  "description": "One full month of one service: Speech Therapy (ST), Occupational Therapy (OT), Behaviour Therapy (BT) or Special Education (SE).",
+  "terms": "The care team confirms eligibility, selected service, suitable centre, schedule and remaining availability before enrolment. Services are not bundled. This offer cannot be combined with other promotional discounts. The separate free speech and language assessment offer does not make ongoing therapy free.",
+  "expiryLabel": "Ends 25 October 2026 at 11:59 pm IST, or when the first 4,999 places are filled.",
+  "detailsPath": "/enroll-autism-speech-aba-therapies-india#navratri-one-service-month-offer",
+  "enquiryPath": "/enroll-autism-speech-aba-therapies-india?offer=navratri-one-service-month-2026#enrolment-form",
+  "enquiryLabel": "Enquire about the offer",
+  "phone": "tel:+919100181181",
+  "phoneLabel": "Call 9100 181 181",
+  "summary": "One full month · One ST / OT / BT / SE service"
+}
