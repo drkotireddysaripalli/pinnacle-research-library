@@ -25,8 +25,8 @@ if(phase==='prepare'){
  const oldStyle=(await (await import('esbuild')).transform(oldSource,{loader:'css',minify:true,charset:'utf8',target:'es2022'})).code;
  const newStyle=(await (await import('esbuild')).transform(await fs.readFile('public/pinnacle-pages-styles/site-announcement.css','utf8'),{loader:'css',minify:true,charset:'utf8',target:'es2022'})).code;
  assert.notEqual(oldStyle,newStyle);assert(newStyle.includes('.cm-h-searchbar:not(.active){visibility:hidden;pointer-events:none}'));
- const needle=JSON.stringify(oldStyle),matches=candidate.items.filter(m=>Buffer.from(m.base64,'base64').toString().includes(needle));assert.equal(matches.length,1,'Exact live announcement stylesheet must match the approved preimage');
- const m=matches[0],text=Buffer.from(m.base64,'base64').toString();assert.equal(text.split(needle).length,2);m.base64=Buffer.from(text.replace(needle,JSON.stringify(newStyle))).toString('base64');
+ assert(!/[`\\]/.test(oldStyle+newStyle)&&!oldStyle.includes('${')&&!newStyle.includes('${'));const needle=oldStyle,matches=candidate.items.filter(m=>Buffer.from(m.base64,'base64').toString().includes(needle));assert.equal(matches.length,1,'Exact live announcement stylesheet must match the approved preimage');
+ const m=matches[0],text=Buffer.from(m.base64,'base64').toString();assert.equal(text.split(needle).length,2);m.base64=Buffer.from(text.replace(needle,newStyle)).toString('base64');
  await save(priv+'/candidate.json',candidate);await save(file,{id,source,phase:'prepared',worker,entry:candidate.entry,rollback:before.workers[worker].versions,originalModuleHashes:hashes(original),moduleHashes:hashes(candidate),changedModules:[m.name],addedModules:[],routes:before.routes.length,pending:null,oldStyleSha256:sha(oldStyle),newStyleSha256:sha(newStyle)});console.log(JSON.stringify({phase:'prepared',source,worker,routes:before.routes.length,changedModule:m.name,change:'one owned CSS asset; scripts, config and enquiry data unchanged'}));
 }else if(phase==='draft'||phase==='watch'){
  const headers=ghHeaders(),rec=await read(file);assert.equal(source,rec.source);
@@ -45,3 +45,4 @@ if(phase==='prepare'){
  }
  if(phase==='verify'||rec.phase==='promoted'){const now=await state();assert.deepEqual(routes(now.routes),routes(before.routes));for(const n of names){assert.deepEqual(settings(now.workers[n].settings),settings(before.workers[n].settings));assert.deepEqual(now.workers[n].versions,n===worker?[{version_id:rec.candidate,percentage:100}]:before.workers[n].versions);}assert.deepEqual(hashes(await mods()),rec.moduleHashes);rec.phase='verified-modules-and-configuration';rec.verifiedAt=new Date().toISOString();await save(file,rec);console.log(JSON.stringify({phase:rec.phase,source,main:rec.merge?.sha,version:rec.candidate,deployment:rec.deployment,routes:now.routes.length,protectedWorkers:8}));}
 }
+
