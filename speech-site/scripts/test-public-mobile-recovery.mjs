@@ -4,7 +4,7 @@ import {fetchPublicOrigin as legacyFetchPublicOrigin} from '../deployment/legacy
 
 test('short edge cache shares only validated anonymous query-free articles and fails open',async()=>{
  const url='https://www.pinnacleblooms.org/t/interactive-song-therapy';let stored,count=0;
- const cache={async match(){return stored?.clone();},async put(key,response){assert(key.url.includes('/__pinnacle_public_reading_v2/'));assert.equal(response.headers.get('cache-control'),'public, max-age=120');stored=response;}};
+ const cache={async match(){return stored?.clone();},async put(key,response){assert(key.url.includes('/__pinnacle_public_reading_v3/'));assert.equal(response.headers.get('cache-control'),'public, max-age=120');stored=response;}};
  const origin=async()=>{count++;return new Response('<title>Interactive Song Therapy</title><link rel="canonical" href="'+url+'"><h1>Interactive Song Therapy</h1>',{headers:{'content-type':'text/html'}});};
  const q=new Request(url,{headers:{'user-agent':'Android Mobile'}});
  assert.equal((await fetchPublicOrigin(q,origin,cache)).headers.get('x-pinnacle-public-article-cache'),'MISS');
@@ -98,4 +98,9 @@ test('validated anonymous mobile article is compacted before private delivery; c
  const origin=async()=>new Response(html,{headers:{'content-type':'text/html'}}),r=await fetchPublicOrigin(new Request(url,{headers:{'user-agent':'Android Mobile'}}),origin,{match:async()=>null,put:async()=>{}}),body=await r.text();assert(body.length<html.length);assert(body.includes('<h1>Play therapy</h1>'));assert(body.includes('<script>const x="\\n   literal";</script>'));assert(body.includes('tel:+919100181181'));assert.equal(r.headers.get('cache-control'),'private, no-store');assert.equal(r.headers.get('x-pinnacle-legacy-compact'),'validated-mobile-indentation-20261012');
  const cookie=await fetchPublicOrigin(new Request(url,{headers:{'user-agent':'Android Mobile',cookie:'fixture=x'}}),origin,{match:async()=>null,put:async()=>{}});assert.equal(await cookie.text(),html);assert.equal(cookie.headers.get('x-pinnacle-legacy-compact'),null);
  const noTransform=await fetchPublicOrigin(new Request(url,{headers:{'user-agent':'Android Mobile'}}),async()=>new Response(html,{headers:{'content-type':'text/html','cache-control':'no-transform'}}),{match:async()=>null,put:async()=>{}});assert.equal(await noTransform.text(),html);
+});
+
+
+test('validated article exposes the real hero preload before blocking scripts, with the same image as its HTTP hint',async()=>{
+ const url='https://www.pinnacleblooms.org/t/play-therapy',html='<html><head><title>Play therapy</title><script src="/existing.js"></script><link rel="canonical" href="'+url+'"></head><body><h1>Play therapy</h1><img src="/Assets/Materials/765.jpg" alt="Actual article image"><a href="tel:+919100181181">Call</a></body></html>',origin=async()=>new Response(html,{headers:{'content-type':'text/html'}}),r=await fetchPublicOrigin(new Request(url,{headers:{'user-agent':'Android Mobile'}}),origin,{match:async()=>null,put:async()=>{}}),body=await r.text(),image='https://www.pinnacleblooms.org/cdn-cgi/image/width=480,quality=65,format=auto/Assets/Materials/765.jpg';assert(body.indexOf('data-pinnacle-public-image')<body.indexOf('/existing.js'));assert(body.includes('href="'+image+'"'));assert(r.headers.get('link').includes(image));assert(body.includes('src="/Assets/Materials/765.jpg"'));assert(body.includes('tel:+919100181181'));assert.equal(r.headers.get('cache-control'),'private, no-store');
 });
