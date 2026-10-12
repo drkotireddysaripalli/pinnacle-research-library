@@ -1,9 +1,11 @@
 import {currentStaffPaths} from './legacy-social-metadata/staff-records.mjs';
 import {recoveryPath,invalidSunshineLinks} from './sunshine-recovery-routes.mjs';
 import {CENTRE_CANONICAL_PATHS} from './centre-canonical-paths.mjs';
+import {CANONICAL_NAV_ALIASES} from './canonical-navigation-aliases.mjs';
 // Existing compatibility routes, publicly reconciled on 7 October. Link to
 // their actual final page while keeping source parameters and fragments.
 export const PUBLIC_PAGE_ALIASES={
+ ...CANONICAL_NAV_ALIASES,
  '/contact':'/contact-national-autism-helpline-24-7',
  '/services':'/top-autism-therapy-services-india-proven-improvement-rate',
  '/news':'/autism-speech-aba-news',
