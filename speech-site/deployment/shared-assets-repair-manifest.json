@@ -1,0 +1,29 @@
+{
+  "restored": {
+    "source": "/pinnacle-pages-scripts/portal-ad-call-14e25cf9a633d670.mjs",
+    "target": "/pinnacle-pages-scripts/portal-ad-call-14e25cf9a633d670.mjs",
+    "originalBytes": 12414,
+    "bytes": 12414,
+    "originalSHA256": "14e25cf9a633d6709a52d519b6f0296fd671759763342dc16c19d8db01e07f6a",
+    "sha256": "14e25cf9a633d6709a52d519b6f0296fd671759763342dc16c19d8db01e07f6a",
+    "licenceNoticesRetained": true
+  },
+  "call": {
+    "source": "/pinnacle-pages-assets/google-ads-call-consent.FqeWzaS9.mjs",
+    "target": "/pinnacle-pages-scripts/google-ads-call-consent-496c830e032631ef.mjs",
+    "originalBytes": 12178,
+    "bytes": 8343,
+    "originalSHA256": "a2e131ede01e98c72f09ec5aab665ba4519967c769c72fa0511d51aeb2c796e3",
+    "sha256": "496c830e032631efe960f70d39e36343ccfb06d17676eb165b34cebd18b9a4b7",
+    "licenceNoticesRetained": true
+  },
+  "legacy": {
+    "source": "/bundles/newmirracleportal?v=42",
+    "target": "/pinnacle-pages-scripts/newmirracleportal-0b3284dc5de1efb1.js",
+    "originalBytes": 308711,
+    "bytes": 207175,
+    "originalSHA256": "bf6fc446dd9840ab9b23518ca1ce94dd8b90af03851e161750cc9d2330dce0e8",
+    "sha256": "0b3284dc5de1efb1c5ff12746295b41113d377aa32d7ee8a0936fb5902289214",
+    "licenceNoticesRetained": true
+  }
+}

@@ -1,0 +1,3 @@
+# These are previously served public assets. Their original bytes and hashes
+# must survive checkout on both Windows and Linux for cached-page compatibility.
+speech-site/deployment/shared-asset-sources/* -text

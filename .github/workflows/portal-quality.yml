@@ -88,6 +88,18 @@ jobs:
           path: speech-site/outputs/site-announcement-20261012/
           if-no-files-found: ignore
           retention-days: 14
+      - name: Verify shared asset compatibility and call behavior
+        run: npm run test:shared-assets-repair
+      - name: Verify original and minified enquiry/call behavior in browsers
+        run: node scripts/check-shared-assets-browser.mjs
+      - name: Save shared asset repair evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shared-assets-repair
+          path: speech-site/outputs/semrush-assets-20261012/
+          if-no-files-found: ignore
+          retention-days: 14
       - run: npm run test:testingbot-contract
       - name: Offline tool evidence contracts
         run: python3 scripts/test-growth-evidence-profile.py
