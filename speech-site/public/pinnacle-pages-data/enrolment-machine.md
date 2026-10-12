@@ -44,18 +44,6 @@ Terms: ₹14,499 for one full month of one listed therapy service, regularly ₹
 
 Ends 25 October 2026 at 11:59 pm IST, or when the first 4,999 places are filled.
 
-A separate offer · New paid-plan enrolments
-
-## ₹4,999 Navratri discount
-
-For new enrolments into a paid child-development therapy plan, from 11 October to 25 October 2026.
-
-Separate offer: This ₹4,999 discount cannot be combined with the ₹14,499 one-service monthly offer above. ₹4,999 is the discount amount; the first-4,999-family limit belongs to the monthly offer.
-
-[Enquire about the Navratri discount](https://www.pinnacleblooms.org/enroll-autism-speech-aba-therapies-india#enrolment-form)
-
-[Call 9100 181 181](tel:+919100181181)
-
 Let’s make the first step simple
 
 ## Tell us how to reach you. We’ll listen first.
