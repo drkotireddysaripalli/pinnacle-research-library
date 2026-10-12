@@ -1,6 +1,7 @@
 // Bounded recovery of reproduced ASP.NET mobile-template exceptions on public
 // destinations. Preserve the original URL, headers and query for attribution.
 // It owns no account, API, payment, form submission or child-report route.
+import {LegacyIndentationCompactor} from './legacy-social-metadata/compact.mjs';
 const identities=new Map([
  ['/',/^#1 Autism Therapy Centres Network/i],
  ['/contact-national-autism-helpline-24-7',/^Contact Us - Pinnacle Blooms Network/i],
@@ -46,7 +47,7 @@ export async function fetchPublicOrigin(request,fetcher=fetch,edgeCache=globalTh
   // Share only anonymous, query-free, validated public articles. Requests with
   // cookies, campaign fields or credentials retain their exact origin journey.
   const cacheable=request.method==='GET'&&!originalUrl.search&&!request.headers.has('cookie')&&!request.headers.has('authorization')&&edgeCache;
-  const key=cacheable?new Request(originalUrl.origin+'/__pinnacle_public_reading_v1'+originalUrl.pathname):null;
+  const key=cacheable?new Request(originalUrl.origin+'/__pinnacle_public_reading_v2'+originalUrl.pathname):null;
   if(key){try{const hit=await edgeCache.match(key);if(hit){const headers=new Headers(hit.headers);headers.set('cache-control','private, no-store');headers.set('x-pinnacle-public-article-cache','HIT');return new Response(hit.body,{status:200,headers});}}catch{/* Cache availability must never block contact. */}}
   // This entire public family uses the reproduced failing mobile template.
   // Avoid the failed first hop, but accept only a real self-canonical article.
@@ -56,17 +57,24 @@ export async function fetchPublicOrigin(request,fetcher=fetch,edgeCache=globalTh
      const out=new Headers(r.headers);for(const k of ['content-length','content-encoding','etag','last-modified','age','expires'])out.delete(k);out.set('cache-control','private, no-store');out.set('x-pinnacle-public-render-recovery','verified-topic-direct-20261011');out.set('vary',[...new Set((out.get('vary')||'').split(',').map(v=>v.trim()).filter(Boolean).concat('User-Agent'))].join(', '));
      // Announce the actual article image before the large HTML body arrives.
      // Material archive families have separate image-fallback rules.
-     if(!/^\/(?:ma|m|a)\//.test(u.pathname)){const image=html.match(/<img\b[^>]*\bsrc=["'](?:https:\/\/www\.pinnacleblooms\.org)?(\/Assets\/Materials\/\d+\.(?:jpg|png))["']/i)?.[1];if(image)out.append('link','<'+u.origin+'/cdn-cgi/image/width=480,quality=75,format=auto'+image+'>; rel=preload; as=image; fetchpriority=high');}
+     if(!/^\/(?:ma|m|a)\//.test(u.pathname)){const image=html.match(/<img\b[^>]*\bsrc=["'](?:https:\/\/www\.pinnacleblooms\.org)?(\/Assets\/Materials\/\d+\.(?:jpg|png))["']/i)?.[1];if(image)out.append('link','<'+u.origin+'/cdn-cgi/image/width=480,quality=65,format=auto'+image+'>; rel=preload; as=image; fetchpriority=high');}
+     // The validated public origin has already been bounded and decoded here.
+     // Compact its indentation before private recovery headers are applied;
+     // never broaden the cache key or process cookie/authenticated responses.
+     let deliveredHtml=html;
+     if(!request.headers.has('cookie')&&!r.headers.has('set-cookie')&&!/no-transform/i.test(r.headers.get('cache-control')||'')){
+      deliveredHtml=new LegacyIndentationCompactor().push(html,true);out.set('x-pinnacle-legacy-compact','validated-mobile-indentation-20261012');
+     }
      out.set('x-pinnacle-public-article-cache',key?'MISS':'BYPASS');
      if(key&&!r.headers.has('set-cookie')){try{
       const stored=new Headers(out);stored.set('cache-control','public, max-age=120');
-      const write=edgeCache.put(key,new Response(html,{status:200,headers:stored})).catch(()=>{});
+      const write=edgeCache.put(key,new Response(deliveredHtml,{status:200,headers:stored})).catch(()=>{});
       // Extend only the existing anonymous public-cache write. Send the validated
       // page without making the family wait for storage; Node fixtures retain
       // their prior awaited behavior when the Worker builtin is unavailable.
       try{const builtin='cloudflare:workers';const {waitUntil}=await import(builtin);waitUntil(write);}catch{await write;}
      }catch{/* Keep the validated origin article when storage fails. */}}
-     return new Response(request.method==='HEAD'?null:html,{status:200,headers:out});
+     return new Response(request.method==='HEAD'?null:deliveredHtml,{status:200,headers:out});
     }
    }
   }catch{/* A changed origin must fall back to the original request. */}

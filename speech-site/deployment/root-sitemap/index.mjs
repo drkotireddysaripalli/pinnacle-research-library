@@ -1,3 +1,4 @@
+import {publishedGuruPaths} from './guru-paths.mjs';
 import {retiredStaffIds,currentStaffPaths} from '../legacy-social-metadata/staff-records.mjs';
 import {faqPaths} from './faq-paths.mjs';
 import {repairVideoSitemap} from './video-output.mjs';
@@ -119,10 +120,10 @@ ${entries}
 }
 __name(sitemapIndexXml, "sitemapIndexXml");
 function coreSitemapXml() {
-  const paths=[...new Set([...CORE_URLS,...topicPaths,...LEGACY_TEMPLATE_PATHS,
+  const paths=[...new Set([...CORE_URLS,...topicPaths,...LEGACY_TEMPLATE_PATHS,...publishedGuruPaths,
     '/assessments/hamilton-depression-rating-scale-ham-d','/assessments/speech-and-language-evaluation-assessment'
   ].map(p=>publicLinkTarget(healthLinkTarget(p))).filter(Boolean).map(p=>new URL(p,SITE_ORIGIN).href))];
-  const entries = paths.map((url) => `  <url><loc>${url}</loc></url>`).join("\n");
+  const entries = paths.map((url) => `  <url><loc>${url.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')}</loc></url>`).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${entries}

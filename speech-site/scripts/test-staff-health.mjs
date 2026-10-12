@@ -20,5 +20,5 @@ test('core sitemap removes redirect alias and adds the useful recovered collecti
  const r=await sitemap.fetch(new Request(origin+'/sitemaps/core.xml'));assert.equal(r.status,200);const xml=await r.text();
  assert(xml.includes('/physiotherapy</loc>'));assert(!xml.includes('/physio-therapy</loc>'));assert(xml.includes('/franchise-autism-therapy-center</loc>'));
  for(const p of ['/faq','/sunshine','/allmirracles','/self-sufficient','/mainstream','/t/interactive-song-therapy','/seva-index'])assert(xml.includes(p+'</loc>'));
- const locs=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);assert.equal(locs.length,1868);assert(!locs.includes(origin+'/everyday-therapy-program'));assert.equal(locs.filter(x=>x===origin+'/everyday-therapy-home-study').length,1);assert.equal(new Set(locs).size,locs.length);
+ const locs=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);assert.equal(locs.length,2359);assert(!locs.includes(origin+'/everyday-therapy-program'));assert.equal(locs.filter(x=>x===origin+'/everyday-therapy-home-study').length,1);assert.equal(new Set(locs).size,locs.length);assert.equal(locs.filter(x=>x.includes('/guru/')).length,491);
 });

@@ -3,7 +3,7 @@ export const READING_COMPONENTS="document.addEventListener(\"DOMContentLoaded\",
 export function repairReadingPaint(request,response){
  const u=new URL(request.url);
  if(request.method!=='GET'||u.origin!=='https://www.pinnacleblooms.org'||!/^\/(?:t|c|ma|b|m|a|abs|abilities|skills)\/[a-z0-9][a-z0-9-]*\/?$/.test(u.pathname)||response.status!==200||!response.headers.get('content-type')?.includes('text/html'))return response;
- const resize=(p,w)=>'/cdn-cgi/image/width='+w+',quality=75,format=auto'+p;
+ const resize=(p,w)=>'/cdn-cgi/image/width='+w+',quality='+(w===480&&p.startsWith('/Assets/Materials/')?65:75)+',format=auto'+p;
  let hero=false,googleLoader=false;const mobile=/Android|iPhone|iPad|Mobile/i.test(request.headers.get('user-agent')||'');
  const rewrite=new HTMLRewriter()
  .on('script[src]',{element(e){let src;try{src=new URL(e.getAttribute('src'),u.origin);}catch{return;}if(src.origin===u.origin&&src.pathname==='/bundles/newmirracleportal'&&src.search==='?v=42')e.setAttribute('defer','');}})
