@@ -1,7 +1,7 @@
-// Correct the preview head only on seven existing maintained public pages that
+// Correct the preview head only on existing maintained public pages that
 // already declare index/follow in the receiving handler's HTTP header. This
 // changes neither operating status, advertising holds nor unknown profiles.
-const ids=['anna-nagar-chennai-tamilnadu-india','jayanagar-bengaluru-india','kukatpally-hyderabad-telangana-india','rajahmundry-ap-india','tirupati-ap-india','labbipet-vijayawada-ap-india','lbnagar-hyderabad-telangana-india'];
+const ids=['anna-nagar-chennai-tamilnadu-india','jayanagar-bengaluru-india','kukatpally-hyderabad-telangana-india','rajahmundry-ap-india','tirupati-ap-india','labbipet-vijayawada-ap-india','lbnagar-hyderabad-telangana-india','nad-vizag-ap-india'];
 export const publishedCentreIndexabilityPaths=new Set(ids.map(x=>'/centers/best-autism-speech-aba-occupational-therapy-center-'+x));
 export function repairCentreIndexability(request,response){
  const u=new URL(request.url),robots=response.headers.get('x-robots-tag')||'';

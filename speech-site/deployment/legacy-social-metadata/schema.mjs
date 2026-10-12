@@ -33,7 +33,7 @@ export function repairSchemaText(text) {
     function read() {
       const token=tokens[index++], raw=token[0];
       if(raw==='{' || raw==='[') {
-        const node={kind:raw==='{'?'object':'array',properties:new Map(),children:[]};
+        const node={kind:raw==='{'?'object':'array',properties:new Map(),children:[],start:token.index};
         const close=raw==='{'?'}':']';
         while(tokens[index][0]!==close) {
           if(raw==='{') {
@@ -44,18 +44,29 @@ export function repairSchemaText(text) {
           } else node.children.push(read());
           if(tokens[index][0]===',') index++;
         }
-        index++;return node;
+        node.end=tokens[index++].index+1;return node;
       }
       return {kind:raw.startsWith('"')?'string':'primitive',value:raw.startsWith('"')?JSON.parse(raw):raw,token};
     }
     const tree=read(),roots=tree.kind==='array'?tree.children:[tree];
     if(!roots.every(root=>root.kind==='object' && schemaContext(root.properties.get('@context')?.value))) return text;
     const patches=[];
-    function visit(node) {
+    function visit(node,ancestorType) {
       if(node.kind==='object') {
         const props=node.properties,context=props.get('@context');
         if(context && !schemaContext(context.value)) safe=false;
         const type=props.get('@type')?.value;
+        if(type?.value==='SoftwareApplication'&&props.get('name')?.value.value==='Mirracle by Pinnacle Blooms Network'&&props.get('applicationCategory')?.value.value==='HEALTH_AND_FITNESS')
+          patches.push({token:props.get('applicationCategory').value.token,value:'"HealthApplication"'});
+        // Breadcrumb labels belong to ListItem, not to the referenced WebPage.
+        // Otherwise Home and Pinnacle Blooms merge into conflicting page names.
+        if(type?.value==='ListItem'&&ancestorType==='BreadcrumbList'){
+          const item=props.get('item')?.value,name=item?.properties?.get('name')?.value,id=item?.properties?.get('@id')?.value,position=props.get('position')?.value;
+          if(item?.kind==='object'&&item.properties.size===2&&name?.kind==='string'&&name.value.trim()&&id?.kind==='string'&&position?.kind==='primitive'&&/^[1-9]\d?$/.test(position.value)&&(!props.has('name')||props.get('name').value.value===name.value)){
+            let publicUrl=false;try{const u=new URL(id.value);publicUrl=u.protocol==='https:'&&['www.pinnacleblooms.org','pinnacleblooms.org'].includes(u.hostname)&&!u.port&&!u.username&&!u.password&&!u.hash&&!u.search&&!/^\/(?:api|account|payment|epass)(?:\/|$)/i.test(u.pathname);}catch{}
+            if(publicUrl)patches.push({start:item.start,end:item.end,value:JSON.stringify(id.value)+(props.has('name')?'':',"name":'+name.token[0])});
+          }
+        }
         if(type?.value==='Organization'&&props.get('name')?.value.value==='Pinnace Blooms Network')
           patches.push({token:props.get('name').value.token,value:'"Pinnacle Blooms Network"'});
         if(['Webpage','WebPage'].includes(type?.value))for(const key of ['thumbnailUrl','dateCreated']){
@@ -93,7 +104,8 @@ export function repairSchemaText(text) {
         }
         if(['Webpage','WebPage'].includes(type?.value))namedEntity('publisher','Pinnacle','Organization');
       }
-      for(const child of node.children||[]) visit(child);
+      const nextType=node.kind==='object'?node.properties.get('@type')?.value.value||ancestorType:ancestorType;
+      for(const child of node.children||[]) visit(child,nextType);
     }
     visit(tree);
     if(!safe) return text;
