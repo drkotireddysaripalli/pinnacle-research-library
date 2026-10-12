@@ -1,4 +1,4 @@
-// Verify public offer separation without submitting an enquiry or placing a call.
+// Verify the single approved public offer without submitting an enquiry or placing a call.
 import fs from 'node:fs/promises';
 import {spawn} from 'node:child_process';
 import assert from 'node:assert/strict';
@@ -18,22 +18,19 @@ try{
   const query='?offer=navratri-one-service-month-2026&utm_source=google&utm_medium=cpc&utm_campaign=validation_test&service=speech';
   const response=await page.goto(base+pathname+query);assert.equal(response.status(),200);
   await page.locator('#enrol-submit').waitFor({state:'visible'});await page.evaluate(()=>document.fonts.ready);
-  const monthly=page.locator('#navratri-one-service-month-offer'),discount=page.locator('#navratri-paid-plan-discount-2026');
+  const monthly=page.locator('#navratri-one-service-month-offer');
   assert.equal(await monthly.locator('s').innerText(),'₹25,999/-');assert((await monthly.locator('.enrol-offer-price strong').innerText()).includes('₹14,499/-'));
   assert.equal(await monthly.locator('.enrol-offer-limit').innerText(),'Only for the first 4,999 kids and families.');assert((await monthly.innerText()).includes('Ends 25 October 2026 at 11:59 pm IST'));
   assert((await monthly.locator('s').evaluate(n=>getComputedStyle(n).textDecorationLine)).includes('line-through'));
-  assert.equal(await discount.locator('h2').innerText(),'₹4,999 Navratri discount');
-  assert.equal(await discount.locator('time[datetime="2026-10-11"]').innerText(),'11 October');assert.equal(await discount.locator('time[datetime="2026-10-25"]').innerText(),'25 October 2026');
-  assert((await discount.innerText()).includes('cannot be combined with the ₹14,499 one-service monthly offer'));
-  for(const block of [monthly,discount])assert.equal(await block.locator('a[href="tel:+919100181181"]').count(),1);
-  const destination=new URL(await discount.locator('[data-navratri-discount-enrol]').getAttribute('href'),page.url());
-  assert.equal(destination.pathname,pathname);assert.equal(destination.hash,'#enrolment-form');assert.equal(destination.searchParams.get('offer'),null);assert.equal(destination.searchParams.get('service'),'speech');assert.equal(destination.searchParams.get('utm_source'),'google');
-  await discount.scrollIntoViewIfNeeded();const screenshot=out+`/${live?'live':'local'}-discount-${width}.png`;await discount.screenshot({path:screenshot});
-  await discount.locator('[data-navratri-discount-enrol]').click();await page.waitForURL(u=>u.pathname===pathname&&!u.searchParams.has('offer')&&u.hash==='#enrolment-form');
+  assert.equal(await monthly.locator('a[href="tel:+919100181181"]').count(),1);assert.equal(await page.locator('#navratri-paid-plan-discount-2026').count(),0);assert(!(await page.locator('body').innerText()).includes('₹4,999 Navratri discount'));
+  const destination=new URL(await monthly.locator('[data-navratri-enrol]').getAttribute('href'),page.url());
+  assert.equal(destination.pathname,pathname);assert.equal(destination.hash,'#enrolment-form');assert.equal(destination.searchParams.get('offer'),'navratri-one-service-month-2026');assert.equal(destination.searchParams.get('service'),'speech');assert.equal(destination.searchParams.get('utm_source'),'google');
+  await monthly.scrollIntoViewIfNeeded();const screenshot=out+`/${live?'live':'local'}-monthly-${width}.png`;await monthly.screenshot({path:screenshot});
+  await monthly.locator('[data-navratri-enrol]').click();await page.waitForURL(u=>u.pathname===pathname&&u.searchParams.get('offer')==='navratri-one-service-month-2026'&&u.hash==='#enrolment-form');
   await page.waitForFunction(()=>!document.querySelector('#enrol-submit').disabled);assert.equal(await page.locator('input[name="service"]:checked').inputValue(),'speech');
   assert(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1));
   assert(!await page.evaluate(()=>Array.from(window.dataLayer||[]).some(e=>e?.[0]==='event'&&e[1]==='enquiry_accepted')));assert.deepEqual(errors,[]);
-  results.push({width,status:response.status(),screenshot,monthlyPreserved:true,discountSeparate:true,dates:['2026-10-11','2026-10-25'],centralCallHref:'tel:+919100181181',callbackDestination:destination.href,monthlyOfferRemovedFromDiscountJourney:true,servicePreserved:true,formEnabled:true,noOverflow:true,noPageLoadAcceptance:true,errors});
+  results.push({width,status:response.status(),screenshot,monthlyPreserved:true,obsoleteDiscountAbsent:true,expiry:'2026-10-25T23:59:59+05:30',centralCallHref:'tel:+919100181181',callbackDestination:destination.href,offerPreserved:true,servicePreserved:true,formEnabled:true,noOverflow:true,noPageLoadAcceptance:true,errors});
   await context.close();
  }
 }finally{await browser.close();if(server){server.kill();await new Promise(r=>server.once('exit',r));}await fs.writeFile(out+`/${live?'live':'local'}-browser.json`,JSON.stringify({scope:live?'Public deployed Chromium browsers':'Exact local production build',externalTransportsIntercepted:true,realEnquiries:0,realCalls:0,results},null,2)+'\n');}
