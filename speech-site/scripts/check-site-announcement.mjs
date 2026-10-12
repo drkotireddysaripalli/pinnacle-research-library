@@ -17,7 +17,7 @@ try{
   try{for(const width of [320,390,768,1440]){
    const context=await browser.newContext({viewport:{width,height:900}}),errors=[];await context.route('**/*',r=>{const u=new URL(r.request().url());if(u.pathname.startsWith('/api/')||(![new URL(base).hostname,'www.pinnacleblooms.org'].includes(u.hostname)))return r.fulfill({status:200,body:''});return r.continue();});
    const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
-   if(!live)await context.route('https://www.pinnacleblooms.org/**',r=>r.continue({url:base+new URL(r.request().url()).pathname+new URL(r.request().url()).search}));
+   if(!live)await context.route('https://www.pinnacleblooms.org/**',async r=>{const u=new URL(r.request().url()),response=await context.request.get(base+u.pathname+u.search);return r.fulfill({response,headers:{...response.headers(),'access-control-allow-origin':base}});});
    const response=await page.goto(base+centrePath+'?utm_source=google&utm_medium=cpc&utm_campaign=validation_test');assert.equal(response.status(),200);
    const bar=page.locator('#pinnacle-site-announcement');await bar.waitFor({state:'visible'});await page.waitForFunction(()=>document.querySelector('[data-announcement-enquiry]')?.href.includes('utm_campaign=validation_test'));
    assert.equal(await bar.locator('.pna-price').innerText(),'₹14,499/-');assert.equal(await bar.locator('s').innerText(),'₹25,999/-');assert.equal(await bar.locator('.pna-limit').innerText(),config.limit);assert((await bar.locator('.pna-summary').innerText()).includes('One full month'));
