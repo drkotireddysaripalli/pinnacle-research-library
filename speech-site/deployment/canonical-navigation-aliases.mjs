@@ -3,7 +3,8 @@
 export const CANONICAL_NAV_ALIASES=Object.freeze({
  '/about':'/about-pinnacle-proven-improvement-rate',
  '/all-resources':'/autism-speech-aba-parent-family-resources',
- '/assesments':'/speech-aba-autism-assessments'
+ '/assesments':'/speech-aba-autism-assessments',
+ '/everyday-therapy-program':'/everyday-therapy-home-study'
 });
 export function canonicalNavigationTarget(href){
  if(typeof href!=='string'||!(/^(?:https?:\/\/(?:www\.)?pinnacleblooms\.org(?:[/?#]|$)|\/(?!\/))/.test(href)))return href;

@@ -23,7 +23,9 @@ for(const book of editions){
 }
 for(const locale of ['hi','te']){const html=fs.readFileSync('dist/books/'+locale+'.html','utf8');assert(html.includes('id="singles"')&&html.includes('id="pairs"'));}
 for(const font of ['anek-devanagari','anek-telugu'])assert(fs.statSync('public/pinnacle-pages-fonts/'+font+'.woff2').size>10000);
-assert.equal((fs.readFileSync('public/pinnacle-pages-data/books-sitemap.xml','utf8').match(/<loc>/g)||[]).length,81);
+const booksSitemap=fs.readFileSync('public/pinnacle-pages-data/books-sitemap.xml','utf8');
+assert.equal((booksSitemap.match(/<loc>/g)||[]).length,80);
+assert(!booksSitemap.includes('<loc>https://www.pinnacleblooms.org/shop</loc>'),'The noindex chooser remains usable, outside the indexable sitemap');
 console.log('PASS:22 native offers,2 hubs,locale cart copy,hreflang,prices,assets,contact routes and private-file boundary.');
 
 for(const p of presentations){const b=editions.find(b=>b.sku===p.sku),html=fs.readFileSync('dist'+p.path+'.html','utf8');assert(b);assert(html.includes('<html lang="en-IN"'));assert(html.includes('rel="canonical" href="'+origin+p.path+'"'));const graph=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];const product=graph.find(n=>n['@id']===origin+p.path+'#product');assert.equal(product.inLanguage,b.language);assert.equal(product.offers.price,b.price);assert.equal(product.sku,b.sku);assert.equal(product.offers.availability,'https://schema.org/'+(b.available?'InStock':'OutOfStock'));assert(html.includes(p.edition_label));assert.equal(html.includes('data-book-sku="'+b.sku+'"'),b.available);assert(BOOK_ROUTES[p.path]);for(const member of p.included_books)assert(html.includes(member.sample_url));}

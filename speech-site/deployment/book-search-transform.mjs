@@ -1,0 +1,6 @@
+import {bookSearchMetadataMap}from'./book-search-metadata.mjs';
+export function repairBookSearchMetadata(request,response){
+ const u=new URL(request.url),m=bookSearchMetadataMap[u.pathname];if(u.origin!=='https://www.pinnacleblooms.org'||!m||request.method!=='GET'||request.headers.has('authorization')||request.headers.has('range')||response.status!==200||!/^text\/html\b/i.test(response.headers.get('content-type')||''))return response;
+ const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])h.delete(k);h.set('x-pinnacle-book-search','source-edition-20261012');let title=false,description=false;
+ return new HTMLRewriter().on('head title',{element(e){if(title)e.remove();else{e.setInnerContent(m.title);title=true;}}}).on('head meta[name="description"]',{element(e){if(description)e.remove();else{e.setAttribute('content',m.description);description=true;}}}).on('head meta[property="og:title"],head meta[name="twitter:title"]',{element(e){e.setAttribute('content',m.title);}}).on('head meta[property="og:description"],head meta[name="twitter:description"]',{element(e){e.setAttribute('content',m.description);}}).transform(new Response(response.body,{status:response.status,statusText:response.statusText,headers:h}));
+}

@@ -21,7 +21,7 @@ test('bounded editorial overlay preserves real record identity, publication and 
   const original={slug,lang:'en',id:321,canonical:'https://pinnacleblooms.org/ask/'+slug,meta_robots:'index, follow',published_at:'2026-06-11',last_reviewed_at:'2026-06-11',editorial:{reviewed_by:null,reviewed_at:'2026-06-11'},og_image:'/existing-public-image.webp',qr_source:'https://pinnacleblooms.org/ask/'+slug,related:[{slug:'existing-related'}],related_materials:{count:1,items:[{slug:'existing-material'}]},reading_paths:[{kind:'skill'}],alternates:[{lang:'te'}],entity:{key:'existing-key'},lenses:[{kind:'route',value:'existing'}]};
   const actual=priorityEditorialAnswer(original);
   for(const field of ['id','slug','lang','canonical','meta_robots','published_at','last_reviewed_at','editorial','og_image','qr_source','related','related_materials','reading_paths','alternates','entity','lenses'])assert.equal(actual[field],original[field],slug+': '+field);
-  assert.equal(actual.content_updated_at,'2026-10-08');
+  assert.equal(actual.content_updated_at,slug==='what-is-a-shadow-teacher-and-does-my-child-need-one'?'2026-10-12':'2026-10-08');
   assert.equal(priorityEditorialAnswer({...original,lang:'te'}).title,undefined);
   for(const link of actual.authority_links)assert(actual.answer_md.includes(link.url),slug+': source visible beside guidance');
  }
@@ -84,15 +84,15 @@ test('shadow teacher guidance avoids blanket need, credentials and placement gua
 });
 
 test('curated source-backed records carry truthful dates and no fabricated reviewer or database id',()=>{
- assert.deepEqual(curatedPrioritySlugs,['what-is-virtual-autism','what-is-high-functioning-autism']);
+ assert.deepEqual(curatedPrioritySlugs,['what-is-virtual-autism','what-is-high-functioning-autism','what-is-a-shadow-teacher-and-does-my-child-need-one-te']);
  assert.equal(curatedPriorityAnswer('unpublished-invented-slug'),null);
  for(const slug of curatedPrioritySlugs){
   const a=curatedPriorityAnswer(slug);
-  assert.equal(a.lang,'en');assert.equal(a.content_updated_at,'2026-10-08');
+  const native=slug.endsWith('-te');assert.equal(a.lang,native?'te':'en');assert.equal(a.content_updated_at,native?'2026-10-12':'2026-10-08');
   assert.equal(a.canonical,'https://pinnacleblooms.org/ask/'+slug);
   assert.equal(a.editorial.reviewed_by,null);assert.equal(a.id,undefined);assert.equal(a.editorial.reviewed_at,undefined);
   for(const source of a.authority_links)assert(a.answer_md.includes(source.url));
-  assert.match(copy(a),/non-diagnostic developmental-support/);
+  assert.match(copy(a),native?/నిర్ధారణ కోసం కాకుండా/:/non-diagnostic developmental-support/);
  }
  const virtual=copy(curatedPriorityAnswer('what-is-virtual-autism'));
  assert.match(virtual,/does not establish|does not prove/);

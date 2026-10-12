@@ -58,7 +58,14 @@ export async function fetchPublicOrigin(request,fetcher=fetch,edgeCache=globalTh
      // Material archive families have separate image-fallback rules.
      if(!/^\/(?:ma|m|a)\//.test(u.pathname)){const image=html.match(/<img\b[^>]*\bsrc=["'](?:https:\/\/www\.pinnacleblooms\.org)?(\/Assets\/Materials\/\d+\.(?:jpg|png))["']/i)?.[1];if(image)out.append('link','<'+u.origin+'/cdn-cgi/image/width=480,quality=75,format=auto'+image+'>; rel=preload; as=image; fetchpriority=high');}
      out.set('x-pinnacle-public-article-cache',key?'MISS':'BYPASS');
-     if(key&&!r.headers.has('set-cookie')){try{const stored=new Headers(out);stored.set('cache-control','public, max-age=120');await edgeCache.put(key,new Response(html,{status:200,headers:stored}));}catch{/* Keep the validated origin article when storage fails. */}}
+     if(key&&!r.headers.has('set-cookie')){try{
+      const stored=new Headers(out);stored.set('cache-control','public, max-age=120');
+      const write=edgeCache.put(key,new Response(html,{status:200,headers:stored})).catch(()=>{});
+      // Extend only the existing anonymous public-cache write. Send the validated
+      // page without making the family wait for storage; Node fixtures retain
+      // their prior awaited behavior when the Worker builtin is unavailable.
+      try{const builtin='cloudflare:workers';const {waitUntil}=await import(builtin);waitUntil(write);}catch{await write;}
+     }catch{/* Keep the validated origin article when storage fails. */}}
      return new Response(request.method==='HEAD'?null:html,{status:200,headers:out});
     }
    }

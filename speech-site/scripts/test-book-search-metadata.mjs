@@ -1,0 +1,14 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import {build}from'esbuild';import {Miniflare,convertV4MiniflareOptions}from'miniflare';import {bookSearchMetadataMap,bookSearchMetadata}from'../src/lib/book-search-metadata.mjs';import {bookSearchMetadataMap as generated}from'../deployment/book-search-metadata.mjs';
+test('77 actual editions have distinct subject, format and language metadata without altering catalogue records',async()=>{
+ assert.equal(Object.keys(bookSearchMetadataMap).length,77);assert.deepEqual(bookSearchMetadataMap,generated);assert.equal(new Set(Object.values(generated).map(x=>x.title)).size,77);
+ for(const [p,m]of Object.entries(generated)){assert(m.title.length<=70,p);assert(m.description.length<=160,p);assert(m.title.includes('Pinnacle Blooms'));assert(m.description.includes('9100 181 181'));}
+ assert.equal(bookSearchMetadata('/shop'),null);assert.equal(bookSearchMetadata('/api/enrolment'),null);
+ const catalogue=JSON.parse(await fs.readFile('src/data/book-catalog.json'));for(const b of catalogue){const m=generated[b.path];assert(m);assert(m.title.includes({PDF:'PDF',PB:'Softcover',HB:'Hardbound'}[b.formatCode]));}
+});
+test('streaming metadata replacement preserves offers, SKU, prices, cart, canonical and contact; unrelated pages unchanged',async()=>{
+ const code="import{repairBookSearchMetadata}from'./deployment/book-search-transform.mjs';export default{fetch(r){return repairBookSearchMetadata(r,new Response('<html><head><title>Old title</title><meta name=\"description\" content=\"Old\"><link rel=\"canonical\" href=\"https://www.pinnacleblooms.org/books/example\"><script type=\"application/ld+json\">{\"sku\":\"KEEP\",\"price\":499}</script></head><body><h1>Actual book name</h1><button data-book-sku=\"KEEP\">Buy</button><a href=\"tel:+919100181181\">Call</a></body></html>',{headers:{'content-type':'text/html','cache-control':'private,no-store'}}));}}";
+ const b=await build({stdin:{contents:code,resolveDir:process.cwd()},bundle:true,format:'esm',write:false}),mf=new Miniflare(convertV4MiniflareOptions({modules:true,compatibilityDate:'2026-10-03',script:b.outputFiles[0].text}));try{
+ for(const p of Object.keys(generated)){const r=await mf.dispatchFetch('https://www.pinnacleblooms.org'+p),h=await r.text();assert(h.includes('<title>'+generated[p].title.replaceAll('&','&amp;')+'</title>')||h.includes('<title>'+generated[p].title+'</title>'));for(const s of ['"sku":"KEEP","price":499','data-book-sku="KEEP"','Actual book name','tel:+919100181181','rel="canonical"'])assert(h.includes(s));assert.equal(r.headers.get('cache-control'),'private,no-store');}
+ for(const p of ['/shop','/books/unknown','/api/enrolment'])assert((await(await mf.dispatchFetch('https://www.pinnacleblooms.org'+p)).text()).includes('<title>Old title</title>'));
+ }finally{await mf.dispose();}
+});
