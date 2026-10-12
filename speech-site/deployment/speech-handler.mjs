@@ -1,6 +1,7 @@
 import {hasStoreChoices,addStoreChoices,STORE_CHOICE_RELEASE} from './book-store-choices.mjs';
 import {createMirraclesLibrary} from './mirracles-library.mjs';
 import {createGuruRecovery} from './guru-recovery.mjs';
+import {guruSourceJson} from './guru-source-assets.mjs';
 import {suchitraAsset,suchitraHash} from './suchitra-assets.mjs';
 import {enrolmentAsset,enrolmentHash} from './enrolment-assets.mjs';
 import {hasHardcoverEdition,addHardcoverLinks,HARDCOVER_LINK_RELEASE} from './book-hardcover-links.mjs';
@@ -68,7 +69,7 @@ async function serveGuruRecovery(request,env){
  if(!['www.pinnacleblooms.org','pinnacleblooms.org'].includes(u.hostname)||!/^\/guru(?:\/?$|\/\d+(?:\/|$))/.test(u.pathname)||!env.ASSETS)return null;
  if(!guruPublicHandler){
   let shellPromise;
-  const read=async asset=>{const r=await env.ASSETS.fetch(new Request('https://assets.local'+asset));if(!r.ok)throw Error('Published article asset unavailable');return r.json();};
+  const read=async asset=>{const pinned=guruSourceJson(asset);if(pinned)return pinned;const r=await env.ASSETS.fetch(new Request('https://assets.local'+asset));if(!r.ok)throw Error('Published article asset unavailable');return r.json();};
   guruPublicHandler=createGuruRecovery({loadJson:async name=>{if(name!=='articles')throw Error('Unknown public article asset');return read('/guru-recovery-data/articles.json');},shell:async()=>{shellPromise??=read('/mirracles-library-data/shell.json').catch(e=>{shellPromise=undefined;throw e;});return shellPromise;}});
  }
  return guruPublicHandler(request);
