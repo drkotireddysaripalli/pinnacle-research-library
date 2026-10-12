@@ -1,5 +1,6 @@
 // Deterministic checkpointed public-fixture proof; never sends an enquiry.
 import fs from 'node:fs/promises';import assert from 'node:assert/strict';import {createHash} from 'node:crypto';import {gzipSync} from 'node:zlib';import {parse} from 'parse5';import {LegacyIndentationCompactor} from '../deployment/legacy-social-metadata/compact.mjs';
+import {fontFaceKey} from '../deployment/legacy-social-metadata/reading-directory.mjs';
 const dir=process.env.LEGACY_PROOF_DIR||'outputs/legacy-markup-performance-20261012';
 const save=(p,x)=>fs.writeFile(p,JSON.stringify(x,null,2)+'\n'),hash=x=>createHash('sha256').update(x).digest('hex');
 await fs.mkdir(dir+'/before',{recursive:true});await fs.mkdir(dir+'/after',{recursive:true});
@@ -10,7 +11,7 @@ export function signature(html){
  const scripts=[],styles=[],links=[],forms=[],headings=[],text=[],elements=[];
  function walk(n){
   if(n.nodeName==='#text'){if(n.value.trim()&& !['script','style'].includes(n.parentNode?.tagName))text.push(n.value);return;}
-  if(n.tagName){elements.push({tag:n.tagName,attrs:n.attrs});if(n.tagName==='script'||n.tagName==='style'){const x=hash((n.childNodes||[]).map(x=>x.value||'').join(''));(n.tagName==='script'?scripts:styles).push({attrs:n.attrs,hash:x});}if(n.tagName==='a')links.push(n.attrs);if(['form','input','select','option','textarea','button'].includes(n.tagName))forms.push({tag:n.tagName,attrs:n.attrs});if(/^h[1-6]$/.test(n.tagName))headings.push({tag:n.tagName,attrs:n.attrs});}
+  if(n.tagName){elements.push({tag:n.tagName,attrs:n.attrs});if(n.tagName==='script'||n.tagName==='style'){const raw=(n.childNodes||[]).map(x=>x.value||'').join(''),x=hash(n.tagName==='style'?(fontFaceKey(raw)||raw):raw);(n.tagName==='script'?scripts:styles).push({attrs:n.attrs,hash:x});}if(n.tagName==='a')links.push(n.attrs);if(['form','input','select','option','textarea','button'].includes(n.tagName))forms.push({tag:n.tagName,attrs:n.attrs});if(/^h[1-6]$/.test(n.tagName))headings.push({tag:n.tagName,attrs:n.attrs});}
   for(const c of n.childNodes||[])walk(c);if(n.content)walk(n.content);
  }walk(parse(html));return{scripts,styles,links,forms,headings,text,elements};
 }
