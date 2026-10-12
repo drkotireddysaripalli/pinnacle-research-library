@@ -189,4 +189,5 @@ export async function handle(request, fetcher = fetchPublicOrigin) {
 }
 
 import {serveAnnouncement,applySiteAnnouncement} from '../site-announcement.mjs';
-export default {fetch: async (request,env) => await serveAnnouncement(request,env)||applySiteAnnouncement(request,repairUrlHealth(request,await handle(request)),env)};
+import {serveSharedAssetRepair,repairSharedAssetReferences} from '../shared-assets-repair.mjs';
+export default {fetch: async (request,env) => serveSharedAssetRepair(request)||repairSharedAssetReferences(request,await (await serveAnnouncement(request,env)||applySiteAnnouncement(request,repairUrlHealth(request,await handle(request)),env)))};
