@@ -1,4 +1,5 @@
 ---
+import {bookSearchMetadata} from '../../../lib/book-search-metadata.mjs';
 import BookStoreChoices from '../../../components/BookStoreChoices.astro';
 import PageLayout from '../../../layouts/PageLayout.astro';
 import BookCart from '../../../components/BookCart.astro';
@@ -8,11 +9,12 @@ import editions from '../../../data/book-locales.json';
 import '../../../styles/book-languages.css';
 export function getStaticPaths(){return editions.map(book=>({params:{locale:book.locale,slug:book.slug},props:{book}}));}
 const {book}=Astro.props,u=book.ui,origin='https://www.pinnacleblooms.org';
+const searchMetadata=bookSearchMetadata(book.path);
 const related=editions.filter(b=>b.locale===book.locale&&b.path!==book.path&&(book.bookCount===1?b.bookCount>1&&b.bookKeys.includes(book.bookKeys[0]):b.bookCount===1&&book.bookKeys.includes(b.bookKeys[0])));
 const alternates=[{language:'en-IN',path:book.englishPath},...editions.filter(b=>b.englishPath===book.englishPath).map(b=>({language:b.language,path:b.path})),{language:'x-default',path:book.englishPath}];
 const graph=[{'@type':book.bookCount===1?['Book','Product']:'Product','@id':origin+book.path+'#product',name:book.title,description:book.shortDescription,url:origin+book.path,sku:book.sku,brand:{'@id':origin+'/verify/#pinnacle-brand'},image:[origin+book.front,...(book.back?[origin+book.back]:[])],inLanguage:book.language,...(book.bookCount===1?{bookFormat:'https://schema.org/EBook',numberOfPages:46,author:book.authors.map(name=>({'@type':'Person',name,url:origin+'/leadership'})),publisher:{'@type':'Organization',name:'Pinnacle Blooms Network',url:origin+'/books'}}:{}),offers:{'@type':'Offer',price:book.price,priceCurrency:'INR',availability:'https://schema.org/'+(book.available?'InStock':'OutOfStock'),itemCondition:'https://schema.org/NewCondition',url:origin+book.path}}];
 ---
-<PageLayout title={book.seoTitle} description={book.seoDescription} path={book.path} label={book.title} contentLanguage={book.language} languageAlternates={alternates} shareStatic={book.front} imageAlt={book.title} documentOnly={true} includeService={false} primaryEntityId={origin+book.path+'#product'} entityGraph={graph} faqs={book.faqs} breadcrumbParent={{name:u.shop,path:'/books/'+book.locale}}>
+<PageLayout title={searchMetadata?.title||book.seoTitle} description={searchMetadata?.description||book.seoDescription} path={book.path} label={book.title} contentLanguage={book.language} languageAlternates={alternates} shareStatic={book.front} imageAlt={book.title} documentOnly={true} includeService={false} primaryEntityId={origin+book.path+'#product'} entityGraph={graph} faqs={book.faqs} breadcrumbParent={{name:u.shop,path:'/books/'+book.locale}}>
 <BookCart locale={book.locale}/><BookLanguageNav englishPath={book.englishPath} locale={book.locale} label={u.language}/>
 <p class="pbn-native-wrap"><a href={"/books/editions/"+book.locale+"/"+book.slug}>English product details · {book.locale==='hi'?'Hindi':'Telugu'} edition ↗</a></p>
 <article class:list={['pbn-native','pbn-native-'+book.locale]} lang={book.language}>

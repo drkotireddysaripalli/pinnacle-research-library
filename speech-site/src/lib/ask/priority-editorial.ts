@@ -1,4 +1,5 @@
 import {ASK, SITE} from './content';
+import {shadowTeluguAnswer,shadowTeluguSlug,shadowLanguageLink} from './shadow-te';
 
 // Source-checked public guidance, updated 8 October 2026. This date records
 // a content update; it is not a claim of an individual clinician's review.
@@ -264,7 +265,7 @@ ${contact('education')}
 export const priorityEditorialSlugs=Object.freeze(Object.keys(priorityCopy));
 export function priorityEditorialAnswer(a:any){
  if(!a||a.lang!=='en'||!Object.hasOwn(priorityCopy,a.slug))return a;
- return {...a,...priorityCopy[a.slug],content_updated_at:'2026-10-08'};
+ return shadowLanguageLink({...a,...priorityCopy[a.slug],content_updated_at:'2026-10-08'});
 }
 
 const virtualSummary='“Virtual autism” is an informal label sometimes used for developmental concerns in children with heavy screen exposure. It is not a substitute for a recognised autism assessment. The American Academy of Pediatrics says evidence does not establish that screen use causes autism. Support healthier routines and seek assessment for concerns without waiting for a screen break to explain everything.';
@@ -347,11 +348,12 @@ ${contact('autism')}
 `}
 };
 
-export const curatedPrioritySlugs=Object.freeze(Object.keys(curatedCopy));
+export const curatedPrioritySlugs=Object.freeze([...Object.keys(curatedCopy),shadowTeluguSlug]);
 // Manually curated public records: no claimed database row or human reviewer.
 // The release owner must add these real editorial routes to publication/sitemap
 // handling and supply the shared social-image/QR policy at that boundary.
 export function curatedPriorityAnswer(slug:string){
+ const native=shadowTeluguAnswer(slug);if(native)return native;
  if(!Object.hasOwn(curatedCopy,slug))return null;
  return {slug,lang:'en',canonical:ASK+'/'+slug,meta_robots:'index, follow, max-image-preview:large',...curatedCopy[slug],content_updated_at:'2026-10-08',editorial:{developed_by:'Pinnacle Blooms Network',reviewed_by:null},related:[],alternates:[],dimensions:[],lenses:[],related_materials:[],related_techniques:[]};
 }
