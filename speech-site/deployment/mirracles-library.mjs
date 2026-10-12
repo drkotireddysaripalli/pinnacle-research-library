@@ -1,4 +1,5 @@
 import {css, playerJs, brandLogoBase64} from './mirracles-library-assets.mjs';
+import {brandedTitle} from '../src/lib/shared-page-titles.mjs';
 
 export const ORIGIN = 'https://www.pinnacleblooms.org';
 export const PAGE_SIZE = 24;
@@ -42,7 +43,10 @@ export function videoSubject(record){
  }
  return title.replace(/Pinnacle(?: Blooms(?: Network)?)?\s*(?:Proven\s*)?/gi,'').replace(/\bProven\s+(?:Integrated\s+)?Autism Therapy Improvement\b/gi,'Autism therapy experience').replace(/\s*[-–|]\s*$/,'').replace(/\s+/g,' ').trim()||categoryLabel(record.category)+' video';
 }
-export function detailSeoTitle(record,duplicate=false){return clip(videoSubject(record),duplicate?48:65)+(duplicate?' · '+record.id:'');}
+export function detailSeoTitle(record,duplicate=false){
+ const title=brandedTitle(videoSubject(record),BRAND,{identity:duplicate?String(record.id):''});
+ return title.slice(0,-(' | '+BRAND).length);
+}
 export function videoDescription(record){
  const kind=categoryLabel(record.category).toLowerCase();
  return `Watch “${videoSubject(record)}”, a ${kind} video published by ${BRAND}${sourceCentre(record)?' at '+sourceCentre(record):''}. Individual experiences are not predictions of another child’s outcome.`;
