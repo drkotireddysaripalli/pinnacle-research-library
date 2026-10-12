@@ -17,7 +17,10 @@ export function testingBotClient(){
     const form=body instanceof URLSearchParams;
     let r,raw;
     for(let attempt=0;attempt<3;attempt++){
-      r=await fetch(url,{method,headers:{Authorization:authorization,...(body?{'Content-Type':form?'application/x-www-form-urlencoded':'application/json'}:{})},body:body?(form?body:JSON.stringify(body)):undefined,redirect:'error',signal:AbortSignal.timeout(timeout)});
+      // Keep command framing independent across the provider's WebDriver proxy.
+      // A fresh connection avoids reusing a relay socket after an empty HTTP 400;
+      // it does not replay uncertain clicks, navigation or submissions.
+      r=await fetch(url,{method,headers:{Authorization:authorization,Connection:'close',...(body?{'Content-Type':form?'application/x-www-form-urlencoded':'application/json'}:{})},body:body?(form?body:JSON.stringify(body)):undefined,redirect:'error',signal:AbortSignal.timeout(timeout)});
       raw=await r.text();
       if(!(readOnly&&r.status===400&&raw===''&&attempt<2))break;
       await new Promise(resolve=>setTimeout(resolve,250));
