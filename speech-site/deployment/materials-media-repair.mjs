@@ -1,11 +1,12 @@
 // One shared transport correction for existing Materials HTML. Preserve the
 // published descriptions; a missing photograph is explicitly unavailable.
 const placeholder='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240"><rect width="400" height="240" fill="#f3f4f6"/><text x="200" y="125" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#4b5563">Image unavailable</text></svg>');
+export const unavailableMaterialImage=placeholder;
 export function materialImageTarget(value){
  if(typeof value!=='string'||!/^https?:\/\//i.test(value))return null;
  let u;try{u=new URL(value);}catch{return null;}
  if(!['pinnacleblooms.org','www.pinnacleblooms.org'].includes(u.hostname)||u.username||u.password||u.port||u.search||u.hash||!/^\/Assets\/Materials\/\d+\.(?:jpg|jpeg|png|webp)$/i.test(u.pathname))return null;
- if(u.pathname==='/Assets/Materials/309.jpg')return{unavailable:true,url:placeholder};
+ if(['/Assets/Materials/309.jpg','/Assets/Materials/2484.jpg'].includes(u.pathname))return{unavailable:true,url:placeholder};
  return{unavailable:false,url:'https://www.pinnacleblooms.org'+u.pathname};
 }
 export function repairMaterialsMedia(request,response){

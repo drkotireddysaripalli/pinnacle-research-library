@@ -4,7 +4,7 @@ import {fetchPublicOrigin as legacyFetchPublicOrigin} from '../deployment/legacy
 
 test('short edge cache shares only validated anonymous query-free articles and fails open',async()=>{
  const url='https://www.pinnacleblooms.org/t/interactive-song-therapy';let stored,count=0;
- const cache={async match(){return stored?.clone();},async put(key,response){assert(key.url.includes('/__pinnacle_public_reading_v1/'));assert.equal(response.headers.get('cache-control'),'public, max-age=120');stored=response;}};
+ const cache={async match(){return stored?.clone();},async put(key,response){assert(key.url.includes('/__pinnacle_public_reading_v2/'));assert.equal(response.headers.get('cache-control'),'public, max-age=120');stored=response;}};
  const origin=async()=>{count++;return new Response('<title>Interactive Song Therapy</title><link rel="canonical" href="'+url+'"><h1>Interactive Song Therapy</h1>',{headers:{'content-type':'text/html'}});};
  const q=new Request(url,{headers:{'user-agent':'Android Mobile'}});
  assert.equal((await fetchPublicOrigin(q,origin,cache)).headers.get('x-pinnacle-public-article-cache'),'MISS');
@@ -90,4 +90,12 @@ test('resource headings accept real template newlines and nested text but reject
   const result=await fetchPublicOrigin(req(path+'?gclid=INVENTED'),async q=>{calls++;return /Mobile/.test(q.headers.get('user-agent'))?first:new Response('<title>Interactive Song Therapy | Pinnacle Blooms</title><link rel="canonical" href="https://www.pinnacleblooms.org'+path+'">'+heading,{headers:{'content-type':'text/html'}});});
   assert.equal(calls,status===200?1:2);assert.equal(result.status,status,heading);if(status===500)assert.equal(result,first);
  }
+});
+
+
+test('validated anonymous mobile article is compacted before private delivery; cookies and no-transform preserve original bytes',async()=>{
+ const url='https://www.pinnacleblooms.org/t/play-therapy',html='<html><head><title>Play therapy</title><link rel="canonical" href="'+url+'"></head><body>\n      <h1>Play therapy</h1>\n  <a href="tel:+919100181181">Call</a><script>const x="\\n   literal";</script>\n </body></html>';
+ const origin=async()=>new Response(html,{headers:{'content-type':'text/html'}}),r=await fetchPublicOrigin(new Request(url,{headers:{'user-agent':'Android Mobile'}}),origin,{match:async()=>null,put:async()=>{}}),body=await r.text();assert(body.length<html.length);assert(body.includes('<h1>Play therapy</h1>'));assert(body.includes('<script>const x="\\n   literal";</script>'));assert(body.includes('tel:+919100181181'));assert.equal(r.headers.get('cache-control'),'private, no-store');assert.equal(r.headers.get('x-pinnacle-legacy-compact'),'validated-mobile-indentation-20261012');
+ const cookie=await fetchPublicOrigin(new Request(url,{headers:{'user-agent':'Android Mobile',cookie:'fixture=x'}}),origin,{match:async()=>null,put:async()=>{}});assert.equal(await cookie.text(),html);assert.equal(cookie.headers.get('x-pinnacle-legacy-compact'),null);
+ const noTransform=await fetchPublicOrigin(new Request(url,{headers:{'user-agent':'Android Mobile'}}),async()=>new Response(html,{headers:{'content-type':'text/html','cache-control':'no-transform'}}),{match:async()=>null,put:async()=>{}});assert.equal(await noTransform.text(),html);
 });
