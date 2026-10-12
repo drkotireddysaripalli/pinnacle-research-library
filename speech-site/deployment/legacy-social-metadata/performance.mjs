@@ -1,6 +1,7 @@
 // Public reading templates only. Keep enquiry, authentication and private app
 // routes independent. Preserve every video destination; load players on intent.
 import {addReadingDirectory} from './reading-directory.mjs';
+import {compactLegacyIndentation} from './compact.mjs';
 const playScript=`<script data-pinnacle-video-intent>document.addEventListener('click',function(e){var b=e.target.closest('[data-pinnacle-video]');if(!b)return;var f=document.createElement('iframe');f.src=b.dataset.pinnacleVideo;f.title=b.getAttribute('aria-label');f.allow='autoplay; encrypted-media; picture-in-picture';f.allowFullscreen=true;f.style='position:absolute;inset:0;width:100%;height:100%;border:0';b.parentNode.replaceChild(f,b);f.focus();});</script>`;
 const escape=s=>s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
 class StaffTitle {
@@ -58,5 +59,5 @@ export function repairKnownLegacyPerformance(response,request){
   rewrite.on('head title',new StaffTitle()).on('h1',{element(e){if(++heading>1)e.tagName='h2';}});
  }
  const h=new Headers(response.headers);for(const k of ['content-length','content-encoding','etag','last-modified','content-md5','digest'])h.delete(k);h.set('x-pinnacle-reading-performance','native-topic-directory-20261008');
- return rewrite.transform(new Response(response.body,{status:response.status,headers:h}));
+ return compactLegacyIndentation(request,rewrite.transform(new Response(response.body,{status:response.status,headers:h})));
 }
