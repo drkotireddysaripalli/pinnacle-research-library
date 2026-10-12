@@ -87,6 +87,8 @@ The existing `.github/workflows/portal-quality.yml` retains its Ask/runtime/unit
 4. Runs `node scripts/assert-testingbot-release.mjs audits/testingbot-build/report.json` to reject stale production reports, missing build cases or changed test sources.
 5. Keeps the evidence artifact and stops the preview/tunnel.
 
+12 October transport correction: WebDriver commands use the authenticated `https://hub.testingbot.com/wd/hub` endpoint. The existing `tunnelIdentifier` still routes the cloud browser's candidate-page traffic through the isolated official tunnel. This bypasses the local control relay that returned repeated empty HTTP 400 responses; it does not replay uncertain clicks, relax assertions or replace failed visual baselines. Failed provider attempts remain separate evidence.
+
 TestingBot credentials were installed as encrypted repository secrets and their names read back. Credentials are not committed. Untrusted PR code receives no cloud credentials; existing local browser tests still run, and the trusted source build must pass before release.
 
 Cloudflare promotion must use the exact green build/receipt. This workflow is the build verification path; it does not silently patch every historical standalone deployment script or claim branch-protection/account policies were changed. Worker-only/Ask/Verify runtime changes retain their own focused runtime and public-route checks because the five Astro candidate cases cannot establish those protected deployments.

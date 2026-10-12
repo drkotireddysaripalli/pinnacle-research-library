@@ -125,7 +125,7 @@ jobs:
         env:
           TESTINGBOT_KEY: ${{ secrets.TESTINGBOT_KEY }}
           TESTINGBOT_SECRET: ${{ secrets.TESTINGBOT_SECRET }}
-          TESTINGBOT_HUB: http://localhost:4445/wd/hub
+          TESTINGBOT_HUB: https://hub.testingbot.com/wd/hub
           TESTINGBOT_BASE_URL: http://localhost:4340
           TESTINGBOT_TUNNEL_ID: portal-${{ github.run_id }}-${{ github.run_attempt }}
         run: |
