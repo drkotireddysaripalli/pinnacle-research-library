@@ -86,4 +86,5 @@ const askWorker = {async fetch(request:Request,env:any,ctx:ExecutionContext){
  }catch(error){console.error('Ask request failed',error instanceof Error?error.message:'error');return new Response('Ask is temporarily unavailable. Please try again or call 9100 181 181.',{status:503,headers:{'content-type':'text/plain; charset=utf-8','cache-control':'no-store','retry-after':'60','x-robots-tag':'noindex'}})}
 }};
 
-export default {async fetch(request:Request,env:any,ctx:ExecutionContext){return applyVernacularTypography(request,await askWorker.fetch(request,env,ctx));}};
+import {serveAnnouncement,applySiteAnnouncement} from '../deployment/site-announcement.mjs';
+export default {async fetch(request:Request,env:any,ctx:ExecutionContext){return await serveAnnouncement(request,env)||applySiteAnnouncement(request,applyVernacularTypography(request,await askWorker.fetch(request,env,ctx)),env);}};

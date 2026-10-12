@@ -457,4 +457,5 @@ export async function transformReviewedHomepageMeasurement(request,response){
 
 const canonicalWorker = {async fetch(request,env,ctx){const policy=serveBookOrderPolicy(request);if(policy)return policy;const alias=residualCentreAlias(request);if(alias)return alias;const google=await serveCentreGoogle(request,env,ctx);if(google)return google;const calls=servePublicAdCall(request);if(calls)return calls;return applyVernacularTypography(request,repairSharedNavigation(request,await repairResidualLegacyTemplates(request,repairMerchantDiscovery(request,repairUrlHealth(request,await portalWorker.fetch(residualTemplateRequest(request),env,ctx))))));}};
 
-export default {async fetch(request,env,ctx){return serveLegacyMeasurementCall(request)||repairLegacyMeasurement(request,await canonicalWorker.fetch(request,env,ctx));}};
+import {serveAnnouncement,applySiteAnnouncement} from './site-announcement.mjs';
+export default {async fetch(request,env,ctx){return await serveAnnouncement(request,env)||applySiteAnnouncement(request,serveLegacyMeasurementCall(request)||await repairLegacyMeasurement(request,await canonicalWorker.fetch(request,env,ctx)),env);}};

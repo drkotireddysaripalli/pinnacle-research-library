@@ -188,4 +188,5 @@ export async function handle(request, fetcher = fetchPublicOrigin) {
   return transformedResponses.has(response) ? repairPriorityContent(request, repairKnownLegacyPerformance(repairPublicLinks(repairKnownBrokenMedia(request,repairKnownLegacySchema(repairServiceLinks(request, reduceKnownLegacyPayload(request, response)),request.url))),request)) : response;
 }
 
-export default {fetch: async request => repairUrlHealth(request,await handle(request))};
+import {serveAnnouncement,applySiteAnnouncement} from '../site-announcement.mjs';
+export default {fetch: async (request,env) => await serveAnnouncement(request,env)||applySiteAnnouncement(request,repairUrlHealth(request,await handle(request)),env)};

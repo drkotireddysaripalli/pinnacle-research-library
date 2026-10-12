@@ -78,6 +78,16 @@ jobs:
       - run: npm run check:page -- "$PAGE_KIND"
       - run: node scripts/validate-centre-network.mjs
       - run: npx playwright test --project=firefox --project=webkit
+      - name: Verify the shared announcement in the real Worker runtime
+        run: node scripts/check-site-announcement.mjs
+      - name: Save shared announcement runtime evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-announcement-runtime
+          path: speech-site/outputs/site-announcement-20261012/
+          if-no-files-found: ignore
+          retention-days: 14
       - run: npm run test:testingbot-contract
       - name: Offline tool evidence contracts
         run: python3 scripts/test-growth-evidence-profile.py
@@ -115,7 +125,7 @@ jobs:
         env:
           TESTINGBOT_KEY: ${{ secrets.TESTINGBOT_KEY }}
           TESTINGBOT_SECRET: ${{ secrets.TESTINGBOT_SECRET }}
-          TESTINGBOT_HUB: http://localhost:4445/wd/hub
+          TESTINGBOT_HUB: https://hub.testingbot.com/wd/hub
           TESTINGBOT_BASE_URL: http://localhost:4340
           TESTINGBOT_TUNNEL_ID: portal-${{ github.run_id }}-${{ github.run_attempt }}
         run: |

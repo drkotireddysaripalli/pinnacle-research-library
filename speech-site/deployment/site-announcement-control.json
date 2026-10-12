@@ -1,0 +1,13 @@
+{
+  "namespace": "22de4561727d403eab6fb4b24a1f46e4",
+  "binding": "PINNACLE_ANNOUNCEMENTS",
+  "key": "active",
+  "workers": ["pinnacle-verify-route", "pinnacle-ask", "pinnacle-legacy-social-metadata"],
+  "bareAssetRoutes": [
+    "pinnacleblooms.org/pinnacle-pages-scripts/site-announcement.js*",
+    "pinnacleblooms.org/pinnacle-pages-styles/site-announcement.css*",
+    "pinnacleblooms.org/pinnacle-pages-data/site-announcement.json*"
+  ],
+  "owner": "Current website engineering chat",
+  "scope": "Shared public announcement; no public configuration writes or customer data"
+}

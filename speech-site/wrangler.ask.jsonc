@@ -8,13 +8,20 @@
   "assets": {
     "binding": "ASSETS",
     "run_worker_first": [
-      "/ask/*", "/faq*", "/sunshine*", "/allmirracles*"
+      "/ask/*",
+      "/faq*",
+      "/sunshine*",
+      "/allmirracles*"
     ]
   },
   "kv_namespaces": [
     {
       "binding": "KOSA_CACHE",
       "id": "d4401f15f2d04e399c3fdf617f7a529c"
+    },
+    {
+      "binding": "PINNACLE_ANNOUNCEMENTS",
+      "id": "22de4561727d403eab6fb4b24a1f46e4"
     }
   ],
   "r2_buckets": [
@@ -23,11 +30,16 @@
       "bucket_name": "pinnacle-ask-og"
     }
   ],
-  "ratelimits": [{
-    "name": "ASK_AUTH_RATE_LIMIT",
-    "namespace_id": "202610030531",
-    "simple": {"limit": 8, "period": 60}
-  }],
+  "ratelimits": [
+    {
+      "name": "ASK_AUTH_RATE_LIMIT",
+      "namespace_id": "202610030531",
+      "simple": {
+        "limit": 8,
+        "period": 60
+      }
+    }
+  ],
   "vars": {
     "ASK_BASE": "/ask",
     "CANONICAL_ORIGIN": "https://pinnacleblooms.org",
