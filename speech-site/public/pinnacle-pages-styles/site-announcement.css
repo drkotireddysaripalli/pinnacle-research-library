@@ -1,5 +1,9 @@
 #pinnacle-site-announcement,#pinnacle-announcement-details{font-family:Sintony,Arial,sans-serif;box-sizing:border-box;color:#172741}
 #pinnacle-site-announcement[hidden]{display:none!important}
+/* The legacy closed search bar uses a negative margin. With an announcement
+   above it, that bar overlaps contact controls. Its existing active class
+   still opens Search; this rule changes only the closed announcement state. */
+body[data-pinnacle-announcement] .cm-h-searchbar:not(.active){visibility:hidden;pointer-events:none}
 #pinnacle-site-announcement{position:relative;background:#fff5fa;border-bottom:1px solid #e0bdd6;padding:12px max(16px,calc((100vw - 1440px)/2));line-height:1.5}
 #pinnacle-site-announcement .pna-inner{display:flex;align-items:center;gap:14px;max-width:1440px;margin:auto}
 #pinnacle-site-announcement .pna-copy{flex:1;min-width:0}
