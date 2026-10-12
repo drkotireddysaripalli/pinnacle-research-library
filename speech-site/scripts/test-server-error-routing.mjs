@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs/promises';
 import {serveSpeech} from '../deployment/speech-handler.mjs';
 
-test('actual shared portal renders the original Guru article using only the two published assets',async()=>{
+test('actual shared portal renders the original Guru article from the pinned published source',async()=>{
  const source=await fs.readFile(new URL('../deployment/guru-recovery-20261009/handler.mjs',import.meta.url),'utf8');
  const flat=await fs.readFile(new URL('../deployment/guru-recovery.mjs',import.meta.url),'utf8');
  assert.equal(flat.replaceAll('\r\n','\n'),source.replaceAll('\r\n','\n'));
@@ -23,5 +23,5 @@ test('actual shared portal renders the original Guru article using only the two 
  assert.equal(response.status,200);const html=await response.text();
  assert.match(html,/<h1(?:\s|>)/);assert(html.includes('tel:+919100181181'));
  assert(html.includes('https://www.pinnacleblooms.org'+record.canonicalPath));
- assert.deepEqual(requests.sort(),['/guru-recovery-data/articles.json','/mirracles-library-data/shell.json']);
+ assert.deepEqual(requests,[],'The maintained public corpus and shell must no longer depend on unavailable runtime assets');
 });
