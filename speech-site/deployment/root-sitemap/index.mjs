@@ -205,6 +205,17 @@ async function normalizedUrlsetSitemap(target, method, stripVolatileMetadata = f
   if (uniqueEntries.length === 0 || uniqueEntries.length > 5e4) {
     return xmlResponse('<?xml version="1.0" encoding="UTF-8"?><error>Invalid upstream sitemap</error>\n', 502, method, "no-store");
   }
+  // The legacy feed omits some maintained, publicly indexable profiles.
+  // Complete only the dedicated staff feed from the existing published register.
+  // Preserve unknown upstream records and their images; do not invent lastmod.
+  if (stripVolatileMetadata) {
+    for (const [id, path] of Object.entries(currentStaffPaths)) {
+      const location = SITE_ORIGIN + path;
+      if (retiredStaffIds.has(Number(id)) || seenLocations.has(location)) continue;
+      seenLocations.add(location);
+      uniqueEntries.push('<url><loc>'+location+'</loc></url>');
+    }
+  }
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
