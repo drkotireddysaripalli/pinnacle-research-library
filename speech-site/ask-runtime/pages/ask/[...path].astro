@@ -13,6 +13,7 @@ import {answer,directory,collection,search,rpc} from '../../../src/lib/ask/repos
 import {institution} from '../../../src/lib/ask/overrides';
 import {curatedPriorityAnswer} from '../../../src/lib/ask/priority-editorial';
 import {askRouteAlias} from '../../../src/lib/ask/route-aliases';
+import {askAnswerTitle} from '../../../src/lib/shared-page-titles.mjs';
 let invalidPath=false;
 let path=(Astro.params.path||'').replace(/\/+$/,'').split('/').map(segment=>{
  try { const decoded=decodeURIComponent(segment); if(/[\/\\\x00-\x1f\x7f]/.test(decoded))invalidPath=true; return decoded; }
@@ -45,7 +46,7 @@ try{
  else{mode='collection';title=pretty(parts[2])+' | Ask Pinnacle';intro='Explore explanations, everyday questions and next steps connected with '+pretty(parts[2]).toLowerCase()+'.';data=await collection(env,parts[1],parts[2],parts[1]==='language'&&['en','te'].includes(parts[2])?parts[2]:lang,page);if(!data.total)mode='missing';}
  }else if(!path.includes('/')){
  a=lang==='en'?(institution(path)||curatedPriorityAnswer(path)):null;a=a||await answer(env,path,lang);
- if(a){const resourceSlugs=[...(a.related_materials||[]),...(a.related_techniques||[])].map(x=>x.slug).filter(Boolean);a.resources=resourceSlugs.length?await rpc(env,'ask_portal_references',{p_slugs:resourceSlugs,p_lang:a.lang}):[];mode='answer';title=a.meta_title||a.title;intro=a.meta_description||a.summary||a.title;canonical=a.canonical;robots=a.meta_robots;lang=a.lang;alternates=languageAlternates(a.alternates||[],robots,canonical);const faqs=Array.isArray(a.faq)?a.faq.filter(f=>f.q&&f.a):[];if(faqs.length)schema.push({'@type':'FAQPage','@id':canonical+'#faq',mainEntity:faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))});}
+ if(a){const resourceSlugs=[...(a.related_materials||[]),...(a.related_techniques||[])].map(x=>x.slug).filter(Boolean);a.resources=resourceSlugs.length?await rpc(env,'ask_portal_references',{p_slugs:resourceSlugs,p_lang:a.lang}):[];mode='answer';title=askAnswerTitle(a);intro=a.meta_description||a.summary||a.title;canonical=a.canonical;robots=a.meta_robots;lang=a.lang;alternates=languageAlternates(a.alternates||[],robots,canonical);const faqs=Array.isArray(a.faq)?a.faq.filter(f=>f.q&&f.a):[];if(faqs.length)schema.push({'@type':'FAQPage','@id':canonical+'#faq',mainEntity:faqs.map(f=>({'@type':'Question',name:f.q,acceptedAnswer:{'@type':'Answer',text:f.a}}))});}
  else{mode='collection';data=await collection(env,'topic',path,lang,page);title=pretty(path)+' | Ask Pinnacle';intro='Explore the questions families and professionals ask about '+pretty(path).toLowerCase()+'.';if(!data.total)mode='missing';}
  }else mode='missing';
  }
