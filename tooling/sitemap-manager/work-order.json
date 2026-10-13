@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-13T06:32:20+00:00",
+  "updated_at": "2026-10-13T13:09:11.821273+00:00",
   "accountable_owner": "This existing Pinnacle sitemap chat",
   "objective": "Deliver a repeatable, source-backed sitemap ecosystem for Pinnacle pages, images, videos and approved public companions, with safe publication, supported engine discovery and maintainable verification.",
   "completion_boundary": "Prepared files, local tests, native storage, production serving, engine processing and care outcomes are separately evidenced. Whole-estate completeness requires publisher and asset inventories.",
@@ -17,7 +17,12 @@
       "evidence": [
         "tooling/sitemap-manager/work-order.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM02",
@@ -33,23 +38,46 @@
         "outputs/sitemap-manager-review-receipt.json",
         "work/sitemap-manager-job.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM03",
       "task": "Close publishing and whole-media source coverage",
-      "status": "waiting_for_source",
+      "status": "in_progress",
       "validation": "Publisher manifests cover every public host/module and original image/video library, including public assessment question/example media. Reconcile the reported Windows 225k run and every unmatched item; document exclusions and source coverage.",
-      "owner": "Publisher/source owner",
+      "owner": "Publisher/source owner + sitemap workstream",
       "depends_on": [
         "SM02"
       ],
-      "next_action": "Recovered all dedicated media-field rows from public FAQ/Sunshine/Guru CMS (4,115 records). Reconcile their publication mapping and locate object-store/embedded/question-image inventories before claiming full coverage.",
+      "next_action": "Both protected R2 packages received and every internal file hash verified. Complete current publisher-version/curation and embedded-media reconciliation using the 40,611 exact candidate relationships; retain unassociated and withheld objects with explicit dispositions.",
       "evidence": [
         "outputs/sitemap-coverage-and-field-contract-20261013.json",
-        "outputs/sitemap-public-cms-media-receipt-20261013.json"
+        "outputs/sitemap-public-cms-media-receipt-20261013.json",
+        "outputs/sitemap-live-owner-delivery-20261013.json",
+        "outputs/sitemap-publisher-media-import-20261013.json",
+        "outputs/sitemap-current-eligibility-exceptions-20261013.json",
+        "outputs/sitemap-execution-route-receipt-20261013.json",
+        "outputs/sitemap-r2-reconciliation-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 75,
+        "pending_percent": 25,
+        "basis": "Three of four source checkpoints accepted; this is not a percentage of images eligible for indexing.",
+        "accepted_checkpoints": [
+          "Collected search/crawl baseline reconciled",
+          "Available publisher page/media export received and verified",
+          "Relevant R2 inventory and deployed Ask mapping received; 276,885 exported objects accounted for"
+        ],
+        "pending_checkpoints": [
+          "Whole public publisher coverage, current versions, curation and unmatched dispositions accepted"
+        ]
+      }
     },
     {
       "id": "SM04",
@@ -66,7 +94,12 @@
         "tooling/sitemap-manager/schema/planetscale-v2.sql",
         "outputs/sitemap-catalogue-v2-import-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM05",
@@ -77,14 +110,20 @@
       "depends_on": [
         "SM04"
       ],
-      "next_action": "Collected snapshot and expanded candidates reconciled. All 4,115 dedicated CMS media fields have retained raw evidence and resolved image candidates; 83,169 assets and 87,454 uses stored, without public-image promotion. Reconcile remaining publishing inventories.",
+      "next_action": "Current collected catalogue extended with the hash-verified publisher export: 84,134 assets and 127,969 media uses. 40,515 new relationships mapped, 661 retained as unmatched. R2 inventory and approved media/output coverage remain open under SM03/SM08.",
       "evidence": [
         "outputs/sitemap-catalogue-v2-import-20261013.json",
         "outputs/sitemap-catalogue-v2-enrichment-20261013.json",
         "outputs/sitemap-catalogue-v2-public-media-import-20261013.json",
-        "outputs/sitemap-catalogue-v2-relative-media-import-20261013.json"
+        "outputs/sitemap-catalogue-v2-relative-media-import-20261013.json",
+        "outputs/sitemap-publisher-media-import-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM06",
@@ -96,33 +135,60 @@
         "SM04",
         "SM05"
       ],
-      "next_action": "31 tables/308 columns/126 indexes verified natively; zero initial rows. Private export complete and hash-verified: 1,247,276 rows/2,503 bounded batches, 2,229,278,168 bytes. Existing Windows owner confirms it has not received/loaded these files. Reuse a protected transfer and existing authenticated native bulk route; verify native counts and ordered canonical row hashes.",
+      "next_action": "Optional native row mirror remains unverified and is deferred from the active sitemap delivery path. Reuse the working local catalogue; resume cloud loading only through a verified exact-target bulk route after public media and maintenance gates close.",
       "evidence": [
         "outputs/sitemap-ddl-approval-manifest-20261013.json",
         "outputs/sitemap-planetscale-v2-native-creation-20261013.json",
         "outputs/sitemap-planetscale-v2-schema-validation-20261013.json",
         "outputs/sitemap-planetscale-v2-initial-row-counts-20261013.json",
         "tooling/sitemap-manager/baseline/receipt-v2-20261013.json",
-        "outputs/sitemap-mysql-v2-export-20261013.json"
+        "outputs/sitemap-mysql-v2-export-20261013.json",
+        "outputs/sitemap-private-transfer-route-receipt-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 50,
+        "pending_percent": 50,
+        "basis": "Milestone estimate: 2 of four equally counted task checkpoints accepted; not time, indexing, site-health or media-library coverage.",
+        "accepted_checkpoints": [
+          "Native 31-table schema created and readback verified",
+          "Catalogue and bounded SQL export prepared and hash verified"
+        ],
+        "pending_checkpoints": [
+          "Native data import completed",
+          "Native counts, relationships and deltas readback verified"
+        ]
+      }
     },
     {
       "id": "SM07",
       "task": "Apply the content population standard",
       "status": "in_progress",
       "validation": "36 applicable field rules and 10 family profiles govern identity, purpose, tone, evidence, contributor/reviewer, dates and CTA; imported values retain source/version; new consequential claims require actual review.",
-      "owner": "Module/content owners",
+      "owner": "Module/content owners + sitemap workstream",
       "depends_on": [
         "SM04"
       ],
-      "next_action": "Available metadata and shared brand are populated; field gaps are quantified: 615 titles, 625 descriptions and 3,467 languages unknown among 71,047 candidates; publishing-content dates/versions and review/link/mirror evidence remain source dependencies.",
+      "next_action": "Reconcile unknown catalogue fields against authoritative published metadata and content versions; populate applicable evidence, dates, attribution and review without invented clinical claims.",
       "evidence": [
         "outputs/sitemap-catalogue-v2-enrichment-20261013.json",
         "tooling/sitemap-manager/editorial-policy.json",
         "outputs/sitemap-catalogue-field-gaps-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 50,
+        "pending_percent": 50,
+        "basis": "Milestone estimate: 2 of four equally counted task checkpoints accepted; not time, indexing, site-health or media-library coverage.",
+        "accepted_checkpoints": [
+          "36 field rules and ten family profiles defined",
+          "Available source metadata and institution profile populated"
+        ],
+        "pending_checkpoints": [
+          "Unknown/version/date fields reconciled against publisher",
+          "Applicable claim, attribution and clinical review records accepted"
+        ]
+      }
     },
     {
       "id": "SM08",
@@ -134,11 +200,27 @@
         "SM03",
         "SM05"
       ],
-      "next_action": "Store expanded candidates separately, preserve existing source references and verify representative template/provider classes before promotion.",
+      "next_action": "40,170 current public Ask answer parents have exact R2 PNG candidates; 441 direct publisher/object joins verified. Apply current publisher versions, curation/default overrides and legitimate use/rights evidence, then build and verify the expanded files. Keep 40,170 SVG variants, 65,807 hash-card objects and unbound resource/video objects out of automatic promotion.",
       "evidence": [
-        "work/sitemap-media-expansion/media-expansion-receipt.json"
+        "work/sitemap-media-expansion/media-expansion-receipt.json",
+        "outputs/sitemap-live-owner-delivery-20261013.json",
+        "outputs/sitemap-publisher-media-import-20261013.json",
+        "outputs/sitemap-r2-reconciliation-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 50,
+        "pending_percent": 50,
+        "basis": "Two of four eligibility checkpoints accepted; candidate relationship counts are not emitted media counts.",
+        "accepted_checkpoints": [
+          "Channel eligibility and version contracts implemented",
+          "Exact R2/publisher candidate relationships and public answer membership reconciled"
+        ],
+        "pending_checkpoints": [
+          "Current publisher versions, curation and rendered-use profiles populated",
+          "Expanded media release passes production readback"
+        ]
+      }
     },
     {
       "id": "SM09",
@@ -157,125 +239,197 @@
         "outputs/sitemap-renderer-field-coverage-20261013.json",
         "outputs/sitemap-normalized-release-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM10",
       "task": "Build human navigation and approved text companions",
-      "status": "ready",
+      "status": "verified",
       "validation": "Human sitemap has useful family navigation; text/Markdown/LLM companions preserve the approved canonical content/version, attribution and sources. Private or unapproved text is never published.",
-      "owner": "Sitemap + page owners",
+      "owner": "Sitemap + existing website release owner",
       "depends_on": [
         "SM07",
         "SM09"
       ],
-      "next_action": "Reuse the current human sitemap and curated companion mechanism; validate approved representation hashes.",
+      "next_action": "Baseline human navigation and ten curated Markdown/LLM companions are live with the approved shared shell. Extend only approved source/version-matched representations as new inventory is accepted.",
       "evidence": [
-        "tooling/sitemap-manager/manager.py"
+        "tooling/sitemap-manager/manager.py",
+        "outputs/sitemap-live-owner-delivery-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM11",
       "task": "Validate and check in a reproducible release",
-      "status": "in_progress",
-      "validation": "Meaningful contracts and official XSD/current-field rules pass; a fresh build reproduces public hashes; exact eligible membership reconciles; source commit/PR and scoped CI identify the candidate.",
+      "status": "verified",
+      "validation": "Meaningful contracts and official XSD/current-field rules pass for the accepted collected baseline; a fresh normalized build reproduces public hashes; exact eligible membership reconciles; source commit/PR and scoped CI identify the release. Expanded asset acceptance remains SM03/SM08.",
       "owner": "Sitemap workstream",
       "depends_on": [
         "SM05",
-        "SM08",
         "SM09",
         "SM10"
       ],
-      "next_action": "71 Python/5 hosting contracts pass; 44 real-candidate XML and five synthetic all-field XML files pass official XSD. Check in this finished renderer update to the same PR and verify exact-source CI. Expanded-media/source acceptance remains separate.",
+      "next_action": "Reproducible normalized baseline and source commit/PR/CI accepted. Apply the same meaningful checks to future source/profile changes; do not repeat unchanged full crawls.",
       "evidence": [
         "tooling/sitemap-manager/baseline/receipt-20261012.json",
         "PR58",
         "outputs/sitemap-v2-release-validation-20261013.json",
-        "tooling/sitemap-manager/baseline/receipt-v2-20261013.json"
+        "tooling/sitemap-manager/baseline/receipt-v2-20261013.json",
+        "outputs/sitemap-owner-continue-and-final-renderer-20261013.json",
+        "outputs/sitemap-live-owner-delivery-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM12",
       "task": "Integrate into the existing website release pipeline",
-      "status": "in_progress",
+      "status": "verified",
       "validation": "Adapter/discovery additions integrated into the existing authoritative full asset/route/binding union; unchanged protected services and unrelated file hashes preserved; owner acceptance and rollback recorded.",
       "owner": "Existing website release owner",
       "depends_on": [
         "SM11"
       ],
-      "next_action": "Web Build confirmed exact PR/source/tree, 7/7 documented source hashes, archive integrity, 71,047 URLs/225 files/44 XML and five hosts. Intake is complete; integration/deployment and private export load have not started/been accepted. Continue the same owner with the finished renderer revision.",
+      "next_action": "PR65 is merged and deployed into the authoritative asset/route union. Preserve the accepted integration and use its recorded rollback path for subsequent managed releases.",
       "evidence": [
         "tooling/sitemap-manager/README.md",
         "outputs/pinnacle-sitemap-work-order-20261013.html",
         "outputs/sitemap-release-owner-handoff-20261013.json",
-        "Windows outputs/sitemap-owner-handoff-20261013/INTAKE.json"
+        "Windows outputs/sitemap-owner-handoff-20261013/INTAKE.json",
+        "outputs/sitemap-live-owner-delivery-20261013.json",
+        "https://github.com/drkotireddysaripalli/pinnacle-research-library/pull/65"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM13",
       "task": "Deploy and verify public serving",
-      "status": "waiting_for_release",
+      "status": "verified",
       "validation": "All managed public files on five exact hosts return direct 200, correct MIME and expected hashes; root discovery works; routes/auth/consent/receiver preserved; actual deployment and rollback readback pass.",
       "owner": "Existing website release owner",
       "depends_on": [
         "SM12"
       ],
-      "next_action": "Publish the accepted full union, then run verify-public. No submission before readback.",
-      "evidence": [],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "next_action": "215/215 published files and ten discovery roots are evidenced by owner readback; all five managed indexes independently return direct 200 with XML MIME. Proceed with supported registration and media expansion.",
+      "evidence": [
+        "outputs/sitemap-live-owner-delivery-20261013.json",
+        "outputs/sitemap-live-index-status-20261013.json"
+      ],
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Accepted against the stated task criterion for the collected baseline; whole source/media coverage remains a separate open task."
+      }
     },
     {
       "id": "SM14",
       "task": "Submit through supported search/discovery channels",
-      "status": "waiting_for_publication",
+      "status": "verified",
       "validation": "Live indexes registered in existing verified Google/Bing and any applicable connected engine property; robots discovery retained. IndexNow sends only proven changed URLs; unsupported directory/engine routes have an explicit disposition.",
       "owner": "Search workstream",
       "depends_on": [
         "SM13"
       ],
-      "next_action": "Google properties and Bing sites/feeds connected. IndexNow current property key/file verified; verify each notified host scope. Yandex direct connection absent. Submit after public readback and retain native acceptance receipts.",
+      "next_action": "Five managed indexes accepted in Google and registered/readback in Bing. Retain robot discovery. Direct Yandex is unconnected; IndexNow uses only verified created/updated/deleted pages, not an eligibility-only or XML-only change. No other direct submission route is currently verified; record a newly connected supported channel before using it.",
       "evidence": [
-        "outputs/sitemap-engine-route-matrix-20261013.json"
+        "outputs/sitemap-engine-route-matrix-20261013.json",
+        "outputs/sitemap-google-managed-submission-20261013.json",
+        "outputs/sitemap-engine-pre-registration-read-20261013.json",
+        "outputs/sitemap-bing-managed-submission-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Connected-release distribution accepted: five Google and five Bing registrations, live robots discovery, and explicit disposition of unconnected direct/changed-URL-only channels. Engine processing remains SM15."
+      }
     },
     {
       "id": "SM15",
       "task": "Verify engine fetch and processing",
-      "status": "waiting_for_publication",
+      "status": "verified",
       "validation": "Per-engine submitted URL, last fetch/processing, warnings/errors and URL coverage recorded; resolve actual errors. Submission acceptance is not processing or guaranteed indexing.",
       "owner": "Search workstream",
       "depends_on": [
         "SM14"
       ],
-      "next_action": "Read native processing after engines fetch; retry only after a changed failure cause.",
-      "evidence": [],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "next_action": "Engine root processing accepted. Continue SM03/SM08 media coverage, SM16 actual publisher refresh and SM17 current page repair; index acceptance does not establish page indexing.",
+      "evidence": [
+        "outputs/sitemap-google-managed-submission-20261013.json",
+        "outputs/sitemap-google-managed-processing-20261013.json",
+        "outputs/sitemap-bing-managed-submission-20261013.json",
+        "outputs/sitemap-engine-root-acceptance-20261013.json"
+      ],
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Native Google downloads and zero root warnings/errors, five Bing Success feeds, and independently reconciled public XML membership accepted. No page indexing guarantee.",
+        "accepted_checkpoints": [
+          "Native per-host processing receipts collected",
+          "All five managed Google roots downloaded and parsed",
+          "All five managed Bing roots accepted",
+          "71,047 unique page members, XML limits and provider counter boundaries reconciled"
+        ],
+        "pending_checkpoints": []
+      }
     },
     {
       "id": "SM16",
       "task": "Enable repeatable maintenance and rollback",
-      "status": "ready",
+      "status": "in_progress",
       "validation": "Existing publishing events drive catalogue deltas, eligibility/content/media checks, immutable release, safe assembly/readback and supported notifications; source drift/expiry/errors produce actionable exceptions; one accountable schedule/queue.",
       "owner": "Website release + sitemap workstreams",
       "depends_on": [
         "SM12",
         "SM13"
       ],
-      "next_action": "Attach the tested job commands to the existing publisher/release workflow; prove a changed/deleted-record cycle and last-valid rollback.",
+      "next_action": "Changed/deleted eligible fixture and last-valid asset-union rollback now pass with holds and unrelated bytes preserved. Real postbuild currently republishes the pinned baseline; connect actual Git/database publisher changes and reconcile matching Worker/routes/discovery state before claiming live automatic maintenance.",
       "evidence": [
         "tooling/sitemap-manager/run.py",
-        "tooling/sitemap-manager/tests"
+        "tooling/sitemap-manager/tests",
+        "outputs/sitemap-live-owner-delivery-20261013.json",
+        "tooling/sitemap-manager/tests/test_manager.py"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 50,
+        "pending_percent": 50,
+        "basis": "Milestone estimate: 2 of four equally counted task checkpoints accepted; not time, indexing, site-health or media-library coverage.",
+        "accepted_checkpoints": [
+          "Deterministic build and validation commands implemented",
+          "Release integration and rollback route recorded"
+        ],
+        "pending_checkpoints": [
+          "Publisher-triggered changed/deleted-record cycle verified",
+          "Maintenance exceptions and accountable follow-up verified"
+        ]
+      }
     },
     {
       "id": "SM17",
       "task": "Verify brand and care-journey connections",
-      "status": "ready",
+      "status": "in_progress",
       "validation": "Correct central 9100181181 call action and topic-specific care/resource links in applicable outputs; measurement separates click, connected call, qualified enquiry, attendance and enrolment; no fabricated patient/test lead.",
       "owner": "Page + care measurement owners",
       "depends_on": [
@@ -283,11 +437,25 @@
         "SM10",
         "SM13"
       ],
-      "next_action": "Preserve existing receiver/consent; verify relevant public destinations and use receiving-system evidence for actual outcomes.",
+      "next_action": "Three currently included service destinations have dated HTTP500 evidence; the website owner has the exact repair scope. Restore real usable destinations and verify topic-specific tracking; noindex/clinical/source holds remain explicit.",
       "evidence": [
-        "outputs/pinnacle-content-population-standard-20261013.json"
+        "outputs/pinnacle-content-population-standard-20261013.json",
+        "outputs/sitemap-current-eligibility-exceptions-20261013.json"
       ],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 50,
+        "pending_percent": 50,
+        "basis": "Milestone estimate: 2 of four equally counted task checkpoints accepted; not time, indexing, site-health or media-library coverage.",
+        "accepted_checkpoints": [
+          "Approved institution identity and care contact profile stored",
+          "Human directory and shared branding published"
+        ],
+        "pending_checkpoints": [
+          "Topic-specific care/resource destinations and tracking verified",
+          "Receiving-system attribution stages and outcome boundaries verified"
+        ]
+      }
     },
     {
       "id": "SM18",
@@ -306,9 +474,22 @@
         "SM16",
         "SM17"
       ],
-      "next_action": "Produce one final completion receipt with exact scope, hashes, live URLs and remaining material limitations.",
+      "next_action": "Close the same work order only after all applicable source/media, engine processing, content and maintenance gates have accepted receipts; record optional cloud work separately.",
       "evidence": [],
-      "deadline": "Before the dependent milestone; no calendar deadline was supplied"
+      "deadline": "Before the dependent milestone; no calendar deadline was supplied",
+      "progress": {
+        "complete_percent": 0,
+        "pending_percent": 100,
+        "basis": "Milestone estimate: 0 of four equally counted task checkpoints accepted; not time, indexing, site-health or media-library coverage.",
+        "accepted_checkpoints": [],
+        "pending_checkpoints": [
+          "Source/content/media gates accepted",
+          "Public serving and engine gates accepted",
+          "Repeatable maintenance and relevant journey gates accepted",
+          "One final scope and limitations receipt accepted"
+        ]
+      }
     }
-  ]
+  ],
+  "progress_method": "Open-task percentages are coarse milestone estimates from four stated checkpoints per task. Fully verified task counts are reported separately. Tasks differ in effort; no actual media-library coverage denominator is verified."
 }

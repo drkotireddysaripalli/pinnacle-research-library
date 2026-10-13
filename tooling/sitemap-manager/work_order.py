@@ -13,7 +13,9 @@ def render(data):
     esc = lambda x: html.escape(str(x), quote=True)
     rows = []
     for task in data['tasks']:
-        rows.append('<tr><td><strong>'+esc(task['id'])+'</strong><br>'+esc(task['task'])+'</td><td>'+esc(task['status'])+'</td><td>'+esc(task['validation'])+'</td><td>'+esc(task['owner'])+'<br><strong>Next:</strong> '+esc(task['next_action'])+'<br><strong>Dependency:</strong> '+esc(', '.join(task['depends_on']) or 'None')+'</td><td>'+esc('; '.join(task['evidence']) or 'No completion receipt yet')+'</td></tr>')
+        progress = task.get('progress')
+        progress_text = '' if progress is None else '<br><strong>'+esc(progress['complete_percent'])+'% complete / '+esc(progress['pending_percent'])+'% pending</strong><br>'+esc(progress['basis'])
+        rows.append('<tr><td><strong>'+esc(task['id'])+'</strong><br>'+esc(task['task'])+'</td><td>'+esc(task['status'])+progress_text+'</td><td>'+esc(task['validation'])+'</td><td>'+esc(task['owner'])+'<br><strong>Next:</strong> '+esc(task['next_action'])+'<br><strong>Dependency:</strong> '+esc(', '.join(task['depends_on']) or 'None')+'</td><td>'+esc('; '.join(task['evidence']) or 'No completion receipt yet')+'</td></tr>')
     return '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Pinnacle sitemap work order</title><style>body{font:15px/1.6 system-ui;margin:0;background:#f3f6f8;color:#173047}main{max-width:1500px;margin:auto;padding:25px}h1{font-size:30px}header{background:white;padding:24px;border-radius:12px;margin-bottom:20px}.scroll{overflow:auto}table{border-collapse:collapse;background:white;width:100%}th,td{text-align:left;vertical-align:top;border:1px solid #d8e3e9;padding:14px;min-width:160px}th{background:#e8f1f5}td:nth-child(3){min-width:300px}td:last-child{overflow-wrap:anywhere}a{color:#075f90}</style><main><header><h1>Pinnacle sitemap ecosystem — one accountable work order</h1><p><strong>Objective:</strong> '+esc(data['objective'])+'</p><p><strong>Accountable owner:</strong> '+esc(data['accountable_owner'])+'<br><strong>Updated:</strong> '+esc(data['updated_at'])+'</p><p>'+esc(data['completion_boundary'])+'</p></header><div class="scroll"><table><thead><tr><th>Task</th><th>State</th><th>Validation / completion criterion</th><th>Owner and next action</th><th>Evidence</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table></div><p>'+esc(data['execution_rules'])+'</p></main></html>'
 
 
@@ -25,6 +27,11 @@ def check(data):
         if not all(t[k] for k in ('task','validation','owner','next_action')): raise ValueError('Incomplete work item')
         if not all(d in ids for d in t['depends_on']): raise ValueError('Unresolved dependency')
         if t['status']=='verified' and not t['evidence']: raise ValueError('Verified item needs evidence')
+        progress = t.get('progress')
+        if progress is not None:
+            if progress['complete_percent'] + progress['pending_percent'] != 100: raise ValueError('Invalid progress split')
+            if not 0 <= progress['complete_percent'] <= 100 or not progress['basis']: raise ValueError('Invalid progress estimate')
+            if t['status'] == 'verified' and progress['complete_percent'] != 100: raise ValueError('Verified progress must be complete')
     visited, active = set(), set()
     def visit(key):
         if key in active: raise ValueError('Dependency cycle')
