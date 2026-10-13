@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 
 export const focusedSuites = [
+  ['scripts/test-managed-sitemap-runtime.mjs'],
   ['scripts/test-ask-priority-editorial.mjs','scripts/test-shadow-telugu.mjs','scripts/test-ask-intent-editorial.mjs','scripts/test-priority-hindi-copy.mjs','scripts/test-priority-legacy-content.mjs','scripts/test-ask-topic-navigation.mjs'],
   ['scripts/test-knowledge-catalogues.mjs','scripts/test-faq-metadata-navigation.mjs','scripts/test-shared-page-titles.mjs','scripts/test-ask-title-identities.mjs','scripts/test-current-receiver-base.mjs','scripts/test-shared-clearance.mjs'],
   ['deployment/mirracles-library-20261008/library.test.mjs','scripts/test-mirracles-corpus.mjs','deployment/guru-recovery-20261009/handler.test.mjs','scripts/test-server-error-routing.mjs','scripts/test-url-health-repair.mjs'],

@@ -1,0 +1,1462 @@
+{
+  "proposal_version": "2.1-field-contract-design",
+  "date": "2026-10-13",
+  "tables": {
+    "url_registry": {
+      "purpose": "Every discovered address, including external links and non-HTTP link destinations. Address identity is separate from content identity.",
+      "key": "url_id",
+      "fields": [
+        "url",
+        "normalized_url_sha256",
+        "scheme",
+        "host",
+        "address_kind",
+        "first_seen_at",
+        "last_seen_at",
+        "is_current"
+      ],
+      "unique": [
+        "normalized_url_sha256"
+      ]
+    },
+    "pages": {
+      "purpose": "One logical public page record with source identity and current canonical address.",
+      "key": "page_id",
+      "fields": [
+        "source_system",
+        "source_record_key",
+        "primary_url_id",
+        "canonical_url_id",
+        "module_type",
+        "language",
+        "title",
+        "description",
+        "topic_keywords_json",
+        "publication_status",
+        "content_version_sha256",
+        "published_date_or_datetime",
+        "significant_modified_date_or_datetime",
+        "modified_date_precision",
+        "modified_evidence_id",
+        "metadata_json"
+      ],
+      "references": {
+        "primary_url_id": "url_registry",
+        "canonical_url_id": "url_registry",
+        "modified_evidence_id": "observations"
+      },
+      "unique": [
+        "source_system + source_record_key + language",
+        "primary_url_id"
+      ]
+    },
+    "assets": {
+      "purpose": "One logical image, video, audio or public document, independent of its encodings and page uses.",
+      "key": "asset_id",
+      "fields": [
+        "source_system",
+        "source_asset_key",
+        "asset_kind",
+        "name",
+        "description",
+        "language",
+        "publication_status",
+        "publisher_modified_date_or_datetime",
+        "rights_status",
+        "credit_text",
+        "copyright_notice",
+        "license_url_id",
+        "acquire_license_url_id",
+        "descriptive_metadata_json",
+        "original_publication_value",
+        "upload_value",
+        "publication_date_precision"
+      ],
+      "references": {
+        "license_url_id": "url_registry",
+        "acquire_license_url_id": "url_registry"
+      },
+      "unique": [
+        "source_system + source_asset_key"
+      ]
+    },
+    "asset_renditions": {
+      "purpose": "Originals, format/size variants, delivery aliases and external video players.",
+      "key": "rendition_id",
+      "fields": [
+        "asset_id",
+        "url_id",
+        "rendition_kind",
+        "representation_key",
+        "declared_content_type",
+        "detected_media_type",
+        "width_px",
+        "height_px",
+        "duration_ms",
+        "byte_size",
+        "byte_sha256",
+        "transform_metadata_json",
+        "first_seen_at",
+        "last_seen_at",
+        "bitrate_kbps",
+        "frame_rate",
+        "sampling_rate_khz",
+        "audio_channels"
+      ],
+      "references": {
+        "asset_id": "assets",
+        "url_id": "url_registry"
+      },
+      "unique": [
+        "asset_id + url_id + representation_key"
+      ]
+    },
+    "media_uses": {
+      "purpose": "Each distinct placement of an asset on a page; repeated use and different context are preserved.",
+      "key": "use_id",
+      "fields": [
+        "page_id",
+        "asset_id",
+        "rendered_rendition_id",
+        "slot_key",
+        "role",
+        "alt_text",
+        "caption",
+        "context_text",
+        "public_question_or_example_key",
+        "page_content_version_sha256",
+        "evidence_id",
+        "publication_state",
+        "placement_identity_sha256",
+        "placement_basis"
+      ],
+      "references": {
+        "page_id": "pages",
+        "asset_id": "assets",
+        "rendered_rendition_id": "asset_renditions",
+        "evidence_id": "observations"
+      },
+      "unique": [
+        "page_id + slot_key + page_content_version_sha256",
+        "placement_identity_sha256"
+      ]
+    },
+    "links": {
+      "purpose": "Each link occurrence, including internal/external anchors, call links and declared metadata links.",
+      "key": "link_id",
+      "fields": [
+        "source_page_id",
+        "target_url_id",
+        "slot_key",
+        "raw_href",
+        "target_fragment",
+        "anchor_text",
+        "rel_tokens_json",
+        "element_kind",
+        "relationship_kind",
+        "hreflang",
+        "page_content_version_sha256",
+        "evidence_id",
+        "publication_state"
+      ],
+      "references": {
+        "source_page_id": "pages",
+        "target_url_id": "url_registry",
+        "evidence_id": "observations"
+      },
+      "unique": [
+        "source_page_id + slot_key + page_content_version_sha256"
+      ]
+    },
+    "asset_relations": {
+      "purpose": "Connections between media: thumbnail_of, poster_for, derived_from, contains, transcript_for.",
+      "key": "relation_id",
+      "fields": [
+        "source_asset_id",
+        "target_asset_id",
+        "relationship_kind",
+        "evidence_id",
+        "publication_state"
+      ],
+      "references": {
+        "source_asset_id": "assets",
+        "target_asset_id": "assets",
+        "evidence_id": "observations"
+      }
+    },
+    "page_relations": {
+      "purpose": "Publisher-approved semantic relationships, distinct from observed link placements.",
+      "key": "relation_id",
+      "fields": [
+        "source_page_id",
+        "target_page_id",
+        "relationship_kind",
+        "language_code",
+        "evidence_id",
+        "publication_state"
+      ],
+      "references": {
+        "source_page_id": "pages",
+        "target_page_id": "pages",
+        "evidence_id": "observations"
+      },
+      "examples": [
+        "translation_of",
+        "category_parent",
+        "related_resource",
+        "care_next_step"
+      ]
+    },
+    "agents": {
+      "purpose": "Reusable creator, publisher, copyright-holder and reviewer identities.",
+      "key": "agent_id",
+      "fields": [
+        "agent_kind",
+        "name",
+        "public_profile_url_id",
+        "source_identity_key"
+      ],
+      "references": {
+        "public_profile_url_id": "url_registry"
+      },
+      "unique": [
+        "source_identity_key"
+      ]
+    },
+    "asset_contributors": {
+      "purpose": "Many-to-many attribution and ownership roles without assuming a single creator.",
+      "key": "contribution_id",
+      "fields": [
+        "asset_id",
+        "agent_id",
+        "role",
+        "evidence_id"
+      ],
+      "references": {
+        "asset_id": "assets",
+        "agent_id": "agents",
+        "evidence_id": "observations"
+      },
+      "unique": [
+        "asset_id + agent_id + role"
+      ]
+    },
+    "source_imports": {
+      "purpose": "Original import scope, source type, input hash and completeness declaration.",
+      "key": "import_id",
+      "fields": [
+        "source_type",
+        "source_scope",
+        "input_sha256",
+        "source_observed_at",
+        "imported_at",
+        "expected_rows",
+        "received_rows",
+        "completeness_state",
+        "raw_artifact_reference"
+      ]
+    },
+    "observations": {
+      "purpose": "Append-only source evidence, not a replacement for publisher-owned fields.",
+      "key": "observation_id",
+      "fields": [
+        "import_id",
+        "subject_kind",
+        "subject_id",
+        "attribute_name",
+        "observed_value_json",
+        "observed_at",
+        "source_version_sha256",
+        "value_sha256"
+      ],
+      "references": {
+        "import_id": "source_imports"
+      },
+      "subject_integrity": "Validate subject_kind and subject_id against the named table during import; use typed physical references where the final SQL design permits."
+    },
+    "eligibility_decisions": {
+      "purpose": "Separate decisions for page URLs, image uses, video uses, news and public text.",
+      "key": "decision_id",
+      "fields": [
+        "subject_kind",
+        "subject_id",
+        "channel",
+        "decision",
+        "reason_code",
+        "policy_version",
+        "source_version_sha256",
+        "evidence_id",
+        "decided_at",
+        "expires_at"
+      ],
+      "values": {
+        "decision": [
+          "INCLUDE",
+          "HOLD",
+          "EXCLUDE"
+        ]
+      },
+      "subject_integrity": "Validate typed subject existence and source version; a page exclusion must not become an automatic image-asset exclusion.",
+      "references": {
+        "evidence_id": "observations"
+      }
+    },
+    "text_representations": {
+      "purpose": "Approved public text/Markdown versions connected to canonical pages and the exact source version.",
+      "key": "representation_id",
+      "fields": [
+        "page_id",
+        "public_url_id",
+        "language",
+        "format",
+        "source_content_sha256",
+        "text_artifact_reference",
+        "text_sha256",
+        "approval_state",
+        "approved_source_sha256"
+      ],
+      "references": {
+        "page_id": "pages",
+        "public_url_id": "url_registry"
+      }
+    },
+    "publication_runs": {
+      "purpose": "A deterministic generated release with validation and public-readback evidence.",
+      "key": "publication_id",
+      "fields": [
+        "input_manifest_sha256",
+        "policy_version",
+        "release_sha256",
+        "state",
+        "generated_at",
+        "validated_at",
+        "published_at",
+        "previous_accepted_publication_id",
+        "coverage_receipt_reference"
+      ]
+    },
+    "sitemap_files": {
+      "purpose": "Each file in a release, including host, kind, shard, hash and fetch/processing status.",
+      "key": "file_id",
+      "fields": [
+        "publication_id",
+        "host",
+        "public_url_id",
+        "file_kind",
+        "family",
+        "shard_key",
+        "byte_size",
+        "uncompressed_size",
+        "entry_count",
+        "content_sha256",
+        "actual_file_modified_at",
+        "submission_and_fetch_receipt_reference"
+      ],
+      "references": {
+        "publication_id": "publication_runs",
+        "public_url_id": "url_registry"
+      },
+      "unique": [
+        "publication_id + host + public_url_id"
+      ]
+    },
+    "sitemap_memberships": {
+      "purpose": "Exact emitted page/media memberships for coverage and exclusion reconciliation.",
+      "key": "membership_id",
+      "fields": [
+        "file_id",
+        "page_id",
+        "media_use_id",
+        "eligibility_decision_id",
+        "source_version_sha256"
+      ],
+      "references": {
+        "file_id": "sitemap_files",
+        "page_id": "pages",
+        "media_use_id": "media_uses",
+        "eligibility_decision_id": "eligibility_decisions"
+      }
+    },
+    "property_definitions": {
+      "key": "property_id",
+      "fields": [
+        "standard_key",
+        "standard_snapshot_sha256",
+        "property_key",
+        "domain_types_json",
+        "range_types_json",
+        "datatype",
+        "cardinality",
+        "nested_shape_json",
+        "constraints_json",
+        "lifecycle_status",
+        "output_profile_rules_json",
+        "source_url"
+      ],
+      "purpose": "Versioned, named property dictionary. Generic JSON storage alone is not a field-coverage guarantee.",
+      "references": {},
+      "unique": [
+        "standard_key + standard_snapshot_sha256 + property_key"
+      ],
+      "status": "proposal_only"
+    },
+    "metadata_values": {
+      "key": "value_id",
+      "fields": [
+        "subject_kind",
+        "subject_id",
+        "property_id",
+        "ordinal",
+        "language",
+        "value_json",
+        "source_evidence_id",
+        "source_version_sha256",
+        "publication_state"
+      ],
+      "purpose": "Sparse standard-defined values, checked against the dictionary; structural relationships remain in their dedicated tables.",
+      "references": {
+        "property_id": "property_definitions",
+        "source_evidence_id": "observations"
+      },
+      "unique": [
+        "subject_kind + subject_id + property_id + ordinal + source_version_sha256"
+      ],
+      "status": "proposal_only"
+    },
+    "page_sitemap_profiles": {
+      "key": "page_profile_id",
+      "fields": [
+        "page_id",
+        "priority",
+        "change_frequency",
+        "source_evidence_id",
+        "source_version_sha256"
+      ],
+      "purpose": "Explicit optional protocol hints, independent of internal business priority.",
+      "references": {
+        "page_id": "pages",
+        "source_evidence_id": "observations"
+      },
+      "unique": [
+        "page_id"
+      ],
+      "status": "proposal_only"
+    },
+    "image_sitemap_profiles": {
+      "key": "image_profile_id",
+      "fields": [
+        "media_use_id",
+        "rendition_id",
+        "source_evidence_id",
+        "source_version_sha256"
+      ],
+      "purpose": "Parent-page image use and selected stable public image rendition.",
+      "references": {
+        "media_use_id": "media_uses",
+        "rendition_id": "asset_renditions",
+        "source_evidence_id": "observations"
+      },
+      "unique": [
+        "media_use_id + rendition_id"
+      ],
+      "status": "proposal_only"
+    },
+    "video_sitemap_profiles": {
+      "key": "video_profile_id",
+      "fields": [
+        "media_use_id",
+        "thumbnail_rendition_id",
+        "title",
+        "description",
+        "content_rendition_id",
+        "player_url_id",
+        "duration_seconds",
+        "expiration_value",
+        "rating",
+        "view_count",
+        "publication_value",
+        "family_friendly",
+        "restriction_relationship",
+        "restriction_country_codes_json",
+        "platform_relationship",
+        "platform_codes_json",
+        "requires_subscription",
+        "uploader_name",
+        "uploader_info_url_id",
+        "live",
+        "tags_json",
+        "source_evidence_id",
+        "source_version_sha256"
+      ],
+      "purpose": "All 17 current video element values and all three current video attributes, with semantic constraints.",
+      "references": {
+        "media_use_id": "media_uses",
+        "thumbnail_rendition_id": "asset_renditions",
+        "content_rendition_id": "asset_renditions",
+        "player_url_id": "url_registry",
+        "uploader_info_url_id": "url_registry",
+        "source_evidence_id": "observations"
+      },
+      "unique": [
+        "media_use_id"
+      ],
+      "status": "proposal_only"
+    },
+    "news_publications": {
+      "key": "news_publication_id",
+      "fields": [
+        "name",
+        "language",
+        "source_evidence_id"
+      ],
+      "purpose": "Verified publication identity and its news-language code.",
+      "references": {
+        "source_evidence_id": "observations"
+      },
+      "unique": [],
+      "status": "proposal_only"
+    },
+    "news_sitemap_profiles": {
+      "key": "news_profile_id",
+      "fields": [
+        "page_id",
+        "news_publication_id",
+        "article_title",
+        "original_publication_value",
+        "qualifies_as_news",
+        "source_evidence_id",
+        "source_version_sha256"
+      ],
+      "purpose": "Actual news eligibility and publication projection; never infer from an evergreen page title.",
+      "references": {
+        "page_id": "pages",
+        "news_publication_id": "news_publications",
+        "source_evidence_id": "observations"
+      },
+      "unique": [
+        "page_id"
+      ],
+      "status": "proposal_only"
+    },
+    "translation_groups": {
+      "key": "translation_group_id",
+      "fields": [
+        "publisher_group_key",
+        "source_evidence_id",
+        "approval_state"
+      ],
+      "purpose": "Actual editorially equivalent translation groups.",
+      "references": {
+        "source_evidence_id": "observations"
+      },
+      "unique": [
+        "publisher_group_key"
+      ],
+      "status": "proposal_only"
+    },
+    "translation_members": {
+      "key": "translation_member_id",
+      "fields": [
+        "translation_group_id",
+        "page_id",
+        "hreflang",
+        "source_evidence_id"
+      ],
+      "purpose": "Self/reciprocal alternates with at most one genuine x-default member per group.",
+      "references": {
+        "translation_group_id": "translation_groups",
+        "page_id": "pages",
+        "source_evidence_id": "observations"
+      },
+      "unique": [
+        "translation_group_id + hreflang"
+      ],
+      "status": "proposal_only"
+    },
+    "output_profiles": {
+      "key": "output_profile_id",
+      "fields": [
+        "profile_key",
+        "profile_version",
+        "index_root",
+        "page_root",
+        "alternate_rel",
+        "namespaces_json",
+        "allowed_fields_json",
+        "allowed_attributes_json",
+        "optional_field_policy_json",
+        "file_limits_json",
+        "schema_references_json",
+        "source_snapshot_sha256"
+      ],
+      "purpose": "Consumer-specific allowlists and XML serialization metadata.",
+      "references": {},
+      "unique": [
+        "profile_key + profile_version"
+      ],
+      "status": "proposal_only"
+    },
+    "claims": {
+      "key": "claim_id",
+      "fields": [
+        "subject_kind",
+        "subject_id",
+        "claim_text",
+        "claim_type",
+        "scope_json",
+        "source_version_sha256",
+        "approval_state",
+        "public_disclosure_state"
+      ],
+      "unique": []
+    },
+    "claim_evidence": {
+      "key": "claim_evidence_id",
+      "fields": [
+        "claim_id",
+        "observation_id",
+        "relationship_kind",
+        "source_locator",
+        "review_id"
+      ],
+      "references": {
+        "claim_id": "claims",
+        "observation_id": "observations",
+        "review_id": "content_reviews"
+      },
+      "unique": [
+        "claim_id + observation_id + relationship_kind"
+      ]
+    },
+    "content_reviews": {
+      "key": "review_id",
+      "fields": [
+        "subject_kind",
+        "subject_id",
+        "agent_id",
+        "review_kind",
+        "reviewed_source_sha256",
+        "decision",
+        "reviewed_at",
+        "next_review_at",
+        "evidence_id"
+      ],
+      "references": {
+        "agent_id": "agents",
+        "evidence_id": "observations"
+      },
+      "unique": []
+    },
+    "subject_contributors": {
+      "key": "contributor_id",
+      "fields": [
+        "subject_kind",
+        "subject_id",
+        "agent_id",
+        "role",
+        "source_version_sha256",
+        "evidence_id"
+      ],
+      "references": {
+        "agent_id": "agents",
+        "evidence_id": "observations"
+      },
+      "unique": [
+        "subject_kind + subject_id + agent_id + role + source_version_sha256"
+      ]
+    }
+  },
+  "physical_design_rules": [
+    "Use stable surrogate IDs, plus unique source identities and conservative normalized-URL SHA256 values. Compare actual normalized strings on hash conflict.",
+    "Use binary/case-sensitive URL storage; preserve meaningful path/query differences and do not collapse hosts or redirects without evidence.",
+    "Store timestamps in UTC with source value and precision; preserve date-only values. Crawl/import/file timestamps must not become page lastmod.",
+    "Retain NULL for unknown metadata. Empty alt text means explicitly decorative and is distinct from unknown alt text.",
+    "Image/video bytes stay in existing object storage. Store locations, metadata, hashes and relationships in SQL.",
+    "Use typed, indexed columns for frequently queried fields and relationships; JSON for sparse descriptive extensions and raw evidence.",
+    "Index both directions of relationships: page/asset, source/target, parent/variant; index eligibility channel/decision, canonical host/module and import/version.",
+    "Every rendered_rendition_id in media_uses must belong to the same asset_id; enforce in the importer and with appropriate composite references where supported.",
+    "Keep original-file identity, logical artwork identity, byte equality and rendition identity separate. Never merge distinct artwork solely because one thumbnail hash matches.",
+    "Store actual placements separately from planned semantic relationships; planned care links must not be counted as deployed internal links.",
+    "Manage evidence as content/version changes and referenced import artifacts rather than repeating entire unchanged crawl dumps in database rows.",
+    "Use database foreign-key constraints where compatible and enabled. Verify existing PlanetScale settings before preparing executable DDL; do not change settings from this proposal."
+  ],
+  "field_contract": [
+    {
+      "family": "index",
+      "path": "sitemapindex",
+      "requirement": "required",
+      "original_state": "STRUCTURE",
+      "original_binding": "sitemap_files per host",
+      "revised_binding": "output_profiles.index_root",
+      "datatype": "container",
+      "cardinality": "1",
+      "constraint": "SM namespace; flat leaf references",
+      "current_v1_exporter": "supported",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "index",
+      "path": "sitemapindex/sitemap",
+      "requirement": "required",
+      "original_state": "STRUCTURE",
+      "original_binding": "sitemap_files",
+      "revised_binding": "sitemap_files",
+      "datatype": "container",
+      "cardinality": "1..50000",
+      "constraint": "One child per member leaf",
+      "current_v1_exporter": "supported",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "index",
+      "path": "sitemapindex/sitemap/loc",
+      "requirement": "required",
+      "original_state": "DIRECT",
+      "original_binding": "sitemap_files.public_url_id",
+      "revised_binding": "sitemap_files.public_url_id",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Absolute same-host leaf URL",
+      "current_v1_exporter": "supported",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "index",
+      "path": "sitemapindex/sitemap/lastmod",
+      "requirement": "optional",
+      "original_state": "DIRECT",
+      "original_binding": "sitemap_files.actual_file_modified_at",
+      "revised_binding": "sitemap_files.actual_file_modified_at",
+      "datatype": "W3C_date",
+      "cardinality": "0..1",
+      "constraint": "Actual public file-content change; preserve unchanged date",
+      "current_v1_exporter": "not_emitted",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "page",
+      "path": "urlset",
+      "requirement": "required",
+      "original_state": "STRUCTURE",
+      "original_binding": "sitemap_files",
+      "revised_binding": "output_profiles.page_root",
+      "datatype": "container",
+      "cardinality": "1",
+      "constraint": "SM namespace; UTF-8",
+      "current_v1_exporter": "supported",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "page",
+      "path": "urlset/url",
+      "requirement": "required",
+      "original_state": "STRUCTURE",
+      "original_binding": "sitemap_memberships",
+      "revised_binding": "sitemap_memberships",
+      "datatype": "container",
+      "cardinality": "1..50000",
+      "constraint": "Complete eligible membership; file count/size limits",
+      "current_v1_exporter": "supported",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "page",
+      "path": "urlset/url/loc",
+      "requirement": "required",
+      "original_state": "DIRECT",
+      "original_binding": "pages.canonical_url_id",
+      "revised_binding": "pages.canonical_url_id",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Absolute canonical URL; protocol length/scope",
+      "current_v1_exporter": "supported",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "page",
+      "path": "urlset/url/lastmod",
+      "requirement": "optional",
+      "original_state": "DIRECT",
+      "original_binding": "pages.significant_modified_date_or_datetime",
+      "revised_binding": "pages.significant_modified_date_or_datetime",
+      "datatype": "W3C_date",
+      "cardinality": "0..1",
+      "constraint": "Significant publisher change with source date precision",
+      "current_v1_exporter": "supported",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "page",
+      "path": "urlset/url/changefreq",
+      "requirement": "optional",
+      "original_state": "MISSING",
+      "original_binding": "",
+      "revised_binding": "page_sitemap_profiles.change_frequency",
+      "datatype": "string",
+      "cardinality": "0..1",
+      "constraint": "always|hourly|daily|weekly|monthly|yearly|never; Google/Bing ignore",
+      "current_v1_exporter": "not_emitted",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "page",
+      "path": "urlset/url/priority",
+      "requirement": "optional",
+      "original_state": "MISSING",
+      "original_binding": "",
+      "revised_binding": "page_sitemap_profiles.priority",
+      "datatype": "number",
+      "cardinality": "0..1",
+      "constraint": "Finite 0..1; Google/Bing ignore",
+      "current_v1_exporter": "not_emitted",
+      "source": "https://www.sitemaps.org/protocol.html",
+      "literal": null
+    },
+    {
+      "family": "image",
+      "path": "urlset/url/image:image",
+      "requirement": "required_if_image",
+      "original_state": "STRUCTURE",
+      "original_binding": "media_uses",
+      "revised_binding": "image_sitemap_profiles",
+      "datatype": "container",
+      "cardinality": "1..1000",
+      "constraint": "Actual eligible parent/image association",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "image",
+      "path": "urlset/url/image:image/image:loc",
+      "requirement": "required",
+      "original_state": "MAPPED",
+      "original_binding": "media_uses -> asset_renditions.url_id",
+      "revised_binding": "image_sitemap_profiles.rendition_id -> asset_renditions.url_id",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Public usable image; CDN access/verification",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/image-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video",
+      "requirement": "required_if_video",
+      "original_state": "STRUCTURE",
+      "original_binding": "media_uses",
+      "revised_binding": "video_sitemap_profiles",
+      "datatype": "container",
+      "cardinality": "1..many",
+      "constraint": "Relevant actual parent-page video",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:thumbnail_loc",
+      "requirement": "required",
+      "original_state": "MAPPED",
+      "original_binding": "asset_relations thumbnail -> rendition",
+      "revised_binding": "video_sitemap_profiles.thumbnail_rendition_id",
+      "datatype": "URI",
+      "cardinality": "1",
+      "constraint": "Accessible relevant thumbnail URL",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:title",
+      "requirement": "required",
+      "original_state": "DIRECT",
+      "original_binding": "assets.name",
+      "revised_binding": "video_sitemap_profiles.title",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Nonempty; XSD maximum 100 characters",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:description",
+      "requirement": "required",
+      "original_state": "DIRECT",
+      "original_binding": "assets.description",
+      "revised_binding": "video_sitemap_profiles.description",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Nonempty; maximum 2048 characters",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:content_loc",
+      "requirement": "one_of_locations",
+      "original_state": "MAPPED",
+      "original_binding": "asset_renditions rendition_kind original",
+      "revised_binding": "video_sitemap_profiles.content_rendition_id",
+      "datatype": "URI",
+      "cardinality": "0..1",
+      "constraint": "Playable media URL; differs from parent",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:player_loc",
+      "requirement": "one_of_locations",
+      "original_state": "MAPPED",
+      "original_binding": "asset_renditions rendition_kind player",
+      "revised_binding": "video_sitemap_profiles.player_url_id",
+      "datatype": "URI",
+      "cardinality": "0..1",
+      "constraint": "Specific player URL; differs from parent",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:duration",
+      "requirement": "optional",
+      "original_state": "MAPPED",
+      "original_binding": "asset_renditions.duration_ms",
+      "revised_binding": "video_sitemap_profiles.duration_seconds",
+      "datatype": "integer",
+      "cardinality": "0..1",
+      "constraint": "Integer seconds 1..28800; preserve original precision",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:expiration_date",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.expiration_value",
+      "datatype": "W3C_date",
+      "cardinality": "0..1",
+      "constraint": "Only actual expiry; otherwise omit",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:rating",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.rating",
+      "datatype": "number",
+      "cardinality": "0..1",
+      "constraint": "Finite 0..5; actual measured rating",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:view_count",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.view_count",
+      "datatype": "integer",
+      "cardinality": "0..1",
+      "constraint": "Nonnegative integer; actual measured views",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:publication_date",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.publication_value",
+      "datatype": "W3C_date",
+      "cardinality": "0..1",
+      "constraint": "Original video publication; not asset modification",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:family_friendly",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.family_friendly",
+      "datatype": "string",
+      "cardinality": "0..1",
+      "constraint": "yes|no; actual classification",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:restriction",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.restriction_country_codes_json",
+      "datatype": "array",
+      "cardinality": "0..1",
+      "constraint": "Nonempty ISO3166-1 alpha2 list when present",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:platform",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.platform_codes_json",
+      "datatype": "array",
+      "cardinality": "0..1",
+      "constraint": "Nonempty subset: web,mobile,tv",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:requires_subscription",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.requires_subscription",
+      "datatype": "string",
+      "cardinality": "0..1",
+      "constraint": "yes|no; actual access condition",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:uploader",
+      "requirement": "optional",
+      "original_state": "MAPPED",
+      "original_binding": "asset_contributors -> agents.name",
+      "revised_binding": "video_sitemap_profiles.uploader_name",
+      "datatype": "string",
+      "cardinality": "0..1",
+      "constraint": "Actual name; maximum 255 characters",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:live",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.live",
+      "datatype": "string",
+      "cardinality": "0..1",
+      "constraint": "yes|no; actual stream state",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:tag",
+      "requirement": "optional",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.tags_json",
+      "datatype": "array",
+      "cardinality": "0..32",
+      "constraint": "Up to 32 nonempty video-specific terms",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:restriction/@relationship",
+      "requirement": "required_if_parent",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.restriction_relationship",
+      "datatype": "string",
+      "cardinality": "0..1",
+      "constraint": "allow|deny; require matching country list",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:platform/@relationship",
+      "requirement": "required_if_parent",
+      "original_state": "GENERIC",
+      "original_binding": "assets.descriptive_metadata_json",
+      "revised_binding": "video_sitemap_profiles.platform_relationship",
+      "datatype": "string",
+      "cardinality": "0..1",
+      "constraint": "allow|deny; require matching platform list",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "video",
+      "path": "urlset/url/video:video/video:uploader/@info",
+      "requirement": "optional",
+      "original_state": "MAPPED",
+      "original_binding": "agents.public_profile_url_id",
+      "revised_binding": "video_sitemap_profiles.uploader_info_url_id",
+      "datatype": "string",
+      "cardinality": "0..1",
+      "constraint": "Absolute URL on parent page host",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/video-sitemaps",
+      "literal": null
+    },
+    {
+      "family": "news",
+      "path": "urlset/url/news:news",
+      "requirement": "required_if_news",
+      "original_state": "STRUCTURE",
+      "original_binding": "pages.module_type potential",
+      "revised_binding": "news_sitemap_profiles",
+      "datatype": "container",
+      "cardinality": "0..1_per_page",
+      "constraint": "Genuine qualifying news; recent two days",
+      "current_v1_exporter": "not_implemented",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap",
+      "literal": null
+    },
+    {
+      "family": "news",
+      "path": "urlset/url/news:news/news:publication",
+      "requirement": "required",
+      "original_state": "STRUCTURE",
+      "original_binding": "no dedicated publication binding",
+      "revised_binding": "news_publications",
+      "datatype": "container",
+      "cardinality": "1",
+      "constraint": "One verified news publication",
+      "current_v1_exporter": "not_implemented",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap",
+      "literal": null
+    },
+    {
+      "family": "news",
+      "path": "urlset/url/news:news/news:publication/news:name",
+      "requirement": "required",
+      "original_state": "GENERIC",
+      "original_binding": "pages.metadata_json",
+      "revised_binding": "news_publications.name",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Actual news publication name",
+      "current_v1_exporter": "not_implemented",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap",
+      "literal": null
+    },
+    {
+      "family": "news",
+      "path": "urlset/url/news:news/news:publication/news:language",
+      "requirement": "required",
+      "original_state": "MAPPED",
+      "original_binding": "pages.language requires news-language mapping",
+      "revised_binding": "news_publications.language",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "ISO639 two/three letters; zh-cn/zh-tw exceptions",
+      "current_v1_exporter": "not_implemented",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap",
+      "literal": null
+    },
+    {
+      "family": "news",
+      "path": "urlset/url/news:news/news:publication_date",
+      "requirement": "required",
+      "original_state": "DIRECT",
+      "original_binding": "pages.published_date_or_datetime",
+      "revised_binding": "news_sitemap_profiles.original_publication_value",
+      "datatype": "W3C_date",
+      "cardinality": "1",
+      "constraint": "Original article publication",
+      "current_v1_exporter": "not_implemented",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap",
+      "literal": null
+    },
+    {
+      "family": "news",
+      "path": "urlset/url/news:news/news:title",
+      "requirement": "required",
+      "original_state": "DIRECT",
+      "original_binding": "pages.title",
+      "revised_binding": "news_sitemap_profiles.article_title",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Displayed article title",
+      "current_v1_exporter": "not_implemented",
+      "source": "https://developers.google.com/search/docs/crawling-indexing/sitemaps/news-sitemap",
+      "literal": null
+    },
+    {
+      "family": "language",
+      "path": "urlset/url/xhtml:link",
+      "requirement": "required_if_alternates",
+      "original_state": "STRUCTURE",
+      "original_binding": "links + page_relations",
+      "revised_binding": "translation_members",
+      "datatype": "container",
+      "cardinality": "0..many",
+      "constraint": "Equivalent translations; self/reciprocal group",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+      "literal": null
+    },
+    {
+      "family": "language",
+      "path": "urlset/url/xhtml:link/@rel",
+      "requirement": "required",
+      "original_state": "DIRECT",
+      "original_binding": "links.rel_tokens_json + constant",
+      "revised_binding": "output_profiles.alternate_rel",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Fixed alternate",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+      "literal": "alternate"
+    },
+    {
+      "family": "language",
+      "path": "urlset/url/xhtml:link/@hreflang",
+      "requirement": "required",
+      "original_state": "DIRECT",
+      "original_binding": "links.hreflang",
+      "revised_binding": "translation_members.hreflang",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Supported language/script/region or x-default",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+      "literal": null
+    },
+    {
+      "family": "language",
+      "path": "urlset/url/xhtml:link/@href",
+      "requirement": "required",
+      "original_state": "MAPPED",
+      "original_binding": "links.target_url_id",
+      "revised_binding": "translation_members.page_id -> pages.canonical_url_id",
+      "datatype": "string",
+      "cardinality": "1",
+      "constraint": "Absolute equivalent destination",
+      "current_v1_exporter": "supported",
+      "source": "https://developers.google.com/search/docs/specialty/international/localized-versions",
+      "literal": null
+    }
+  ],
+  "namespace_contract": {
+    "default": "http://www.sitemaps.org/schemas/sitemap/0.9",
+    "image": "http://www.google.com/schemas/sitemap-image/1.1",
+    "video": "http://www.google.com/schemas/sitemap-video/1.1",
+    "news": "http://www.google.com/schemas/sitemap-news/0.9",
+    "xhtml": "http://www.w3.org/1999/xhtml",
+    "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "xsi:schemaLocation": "Optional validation hint consisting of namespace/schema URL pairs; no ranking benefit.",
+    "declaration": {
+      "version": "1.0",
+      "encoding": "UTF-8",
+      "standalone": "Optional XML infrastructure; not an SEO data attribute."
+    },
+    "rule": "Do not add arbitrary attributes to sitemap elements. Namespace declarations are infrastructure, not additional metadata fields."
+  },
+  "output_constants": {
+    "index_root": "{http://www.sitemaps.org/schemas/sitemap/0.9}sitemapindex",
+    "page_root": "{http://www.sitemaps.org/schemas/sitemap/0.9}urlset",
+    "alternate_rel": "alternate"
+  },
+  "profile_validation_rules": {
+    "file_limits": {
+      "url_entries": 50000,
+      "index_members": 50000,
+      "uncompressed_bytes": 52428800,
+      "image_children_per_parent": 1000,
+      "news_children_per_file": 1000
+    },
+    "serialization": {
+      "encoding": "UTF-8",
+      "absolute_urls": true,
+      "xml_escape_values": true,
+      "DTD_external_entities": "forbidden",
+      "schemaLocation": "optional_infrastructure"
+    },
+    "optional_unknown_values": {
+      "store": null,
+      "emit": false,
+      "reason_required": true
+    },
+    "sparse_storage": "Register property definitions once; store values only when supplied. Do not allocate thousands of empty metadata rows per asset.",
+    "page": {
+      "priority": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1,
+        "finite": true
+      },
+      "change_frequency": {
+        "type": "string",
+        "enum": [
+          "always",
+          "hourly",
+          "daily",
+          "weekly",
+          "monthly",
+          "yearly",
+          "never"
+        ]
+      }
+    },
+    "video": {
+      "required": [
+        "thumbnail_rendition_id",
+        "title",
+        "description"
+      ],
+      "at_least_one": [
+        "content_rendition_id",
+        "player_url_id"
+      ],
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "description": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 2048
+      },
+      "duration_seconds": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 28800
+      },
+      "rating": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 5,
+        "finite": true
+      },
+      "view_count": {
+        "type": "integer",
+        "minimum": 0
+      },
+      "yes_no_fields": [
+        "family_friendly",
+        "requires_subscription",
+        "live"
+      ],
+      "tags": {
+        "type": "array",
+        "maxItems": 32,
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "uploader_name": {
+        "type": "string",
+        "maxLength": 255
+      },
+      "uploader_info_host": "same_as_parent_page",
+      "country_relationship": {
+        "enum": [
+          "allow",
+          "deny"
+        ],
+        "requires_nonempty_country_list": true
+      },
+      "countries": "ISO3166-1 alpha2 membership requires pinned production codebook",
+      "platform_relationship": {
+        "enum": [
+          "allow",
+          "deny"
+        ],
+        "requires_nonempty_platform_list": true
+      },
+      "platforms": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "enum": [
+            "web",
+            "mobile",
+            "tv"
+          ]
+        }
+      },
+      "date_values": "validated W3C full-date or timezone-bearing date-time; source precision preserved",
+      "content_player_differs_from_parent": true,
+      "semantics": "real video values and source applicability; no invented metrics or expiry"
+    },
+    "news": {
+      "genuine_news_required": true,
+      "max_age_days": 2,
+      "max_entries": 1000,
+      "publication_language": "ISO639 two/three letters; zh-cn / zh-tw exceptions",
+      "publication_date": "original article publication, not import or sitemap generation"
+    },
+    "alternates": {
+      "rel": "alternate",
+      "real_equivalence": true,
+      "self_included": true,
+      "reciprocal": true,
+      "max_x_default": 1,
+      "language_membership": "consumer-supported language/script/region codebooks"
+    },
+    "integrity": {
+      "rendition_belongs_to_asset": true,
+      "media_use_page_matches_membership": true,
+      "source_version_matches_approved_projection": true,
+      "generic_observation_subject": "typed subject must exist",
+      "hash_collision": "compare original normalized strings",
+      "source_identity_keys": "unique and nonnull when authoritative source identity exists"
+    },
+    "infrastructure_note": "The profile defines named fields and constraints; SQL types, full codebooks and production adapters still require implementation."
+  },
+  "status": "Physical implementation reference; no cloud migration applied",
+  "database_policy": {
+    "mysql_table_prefix": "website_sm2_",
+    "mysql_foreign_keys": "disabled on existing PlanetScale database; enforce app integrity and do not change database setting",
+    "sqlite_foreign_keys": "enabled, deferred; composite media-use ownership enforced"
+  }
+}
