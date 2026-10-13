@@ -1,0 +1,6 @@
+---
+import AssessmentPage from '../../components/AssessmentPage.astro';
+import {assessmentCategories} from '../../data/public-service-recovery';
+export function getStaticPaths(){return Object.entries(assessmentCategories).map(([category,topic])=>({params:{category},props:{category,topic}}));}
+---
+<AssessmentPage category={Astro.props.category} topic={Astro.props.topic} />
