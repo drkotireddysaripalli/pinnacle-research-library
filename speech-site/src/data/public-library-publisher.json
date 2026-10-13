@@ -4,14 +4,38 @@
     {
       "id": "public-library-guide",
       "title": "Find the right Pinnacle reading resource",
-      "description": "Start with your question, explore the relevant public resource and bring useful questions to a conversation about your child’s next step.",
+      "description": "Start with your question, explore the relevant public resource and bring useful questions to a conversation about your child’s next step. Use each collection in its own context; this reading guide does not replace an individual assessment.",
       "items": [
-        {"label": "Ask Pinnacle", "url": "https://pinnacleblooms.org/ask", "description": "Explore child-development questions, explanations and their source links."},
-        {"label": "Frequently asked questions", "url": "https://www.pinnacleblooms.org/faq", "description": "Follow questions connected with therapies and everyday participation."},
-        {"label": "Sunshine", "url": "https://www.pinnacleblooms.org/sunshine", "description": "Browse the published Sunshine collection and its connected topics."},
-        {"label": "Mirracles videos", "url": "https://www.pinnacleblooms.org/mirracles", "description": "Explore the public video collection in its original context."},
-        {"label": "Therapy materials", "url": "https://materials.pinnacleblooms.org/", "description": "Read the public material guides before discussing their suitability with your child’s professional."},
-        {"label": "Interventions", "url": "https://interventions.pinnacleblooms.org/", "description": "Explore educational resources; a public guide does not prescribe a programme for an individual child."}
+        {
+          "label": "Ask Pinnacle",
+          "url": "https://pinnacleblooms.org/ask",
+          "description": "Explore child-development questions, explanations and their source links."
+        },
+        {
+          "label": "Frequently asked questions",
+          "url": "https://www.pinnacleblooms.org/faq",
+          "description": "Follow questions connected with therapies and everyday participation."
+        },
+        {
+          "label": "Sunshine",
+          "url": "https://www.pinnacleblooms.org/sunshine",
+          "description": "Browse the published Sunshine collection and its connected topics."
+        },
+        {
+          "label": "Mirracles videos",
+          "url": "https://www.pinnacleblooms.org/mirracles",
+          "description": "Explore the public video collection in its original context."
+        },
+        {
+          "label": "Therapy materials",
+          "url": "https://materials.pinnacleblooms.org/",
+          "description": "Read the public material guides before discussing their suitability with your child’s professional."
+        },
+        {
+          "label": "Interventions",
+          "url": "https://interventions.pinnacleblooms.org/",
+          "description": "Explore educational resources; a public guide does not prescribe a programme for an individual child."
+        }
       ]
     }
   ]
