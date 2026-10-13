@@ -35,12 +35,14 @@ class CatalogueV2Tests(unittest.TestCase):
         self.assertTrue(receipt['passed']);self.assertEqual(receipt['table_counts']['pages'],2)
         db=sqlite3.connect(self.root/'v2.db');self.assertEqual(db.execute('SELECT title FROM pages WHERE title IS NOT NULL').fetchone()[0],'An actual source title')
         self.assertEqual(db.execute('SELECT COUNT(*) FROM content_reviews').fetchone()[0],0)
+        db.close()
     def test_candidate_image_is_stored_but_not_promoted(self):
         source=self.source();candidate=self.root/'candidate.jsonl'
         candidate.write_text(json.dumps({'page_url':'https://www.pinnacleblooms.org/example','image_url':'https://images.pinnacleblooms.org/new.png','uses':['og_metadata_candidate'],'state':'candidate'})+'\n')
         r=c.import_catalogue(source,candidate,self.root/'v2.db',self.data)
         self.assertEqual(r['table_counts']['assets'],1);self.assertEqual(r['table_counts']['media_uses'],1);self.assertEqual(r['table_counts']['image_sitemap_profiles'],0)
         db=sqlite3.connect(self.root/'v2.db');self.assertIsNone(db.execute('SELECT alt_text FROM media_uses').fetchone()[0])
+        db.close()
     def test_count_mismatch_preserves_previous_catalogue(self):
         source=self.source();target=self.root/'v2.db';target.write_bytes(b'previous accepted store')
         with self.assertRaises(ValueError):c.import_catalogue(source,None,target,self.data,{'INCLUDE':100})
