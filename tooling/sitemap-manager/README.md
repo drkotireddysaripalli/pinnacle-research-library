@@ -133,6 +133,35 @@ network access occurs during this check.
 
 ## Optional database synchronization
 
+### Reviewed publisher media exports
+
+`publisher_media.py` imports the website owner's hash-verified public page/media
+export into the existing private normalized catalogue. Supply the accepted
+transfer-manifest SHA256 and its actual observation timestamp. All file hashes,
+row accounting and the exact eligible-page set must match before commit.
+
+```sh
+python tooling/sitemap-manager/publisher_media.py \
+  --db private/catalogue.sqlite3 \
+  --manifest private/publisher-export/TRANSFER-MANIFEST.json \
+  --manifest-sha256 <accepted-transfer-manifest-sha256> \
+  --observed-at <actual-offset-qualified-observation-time> \
+  --receipt private/publisher-media-import.json
+```
+
+Image, video, player and poster references retain their distinct source roles.
+Unknown parents or unparsed source values stay in hashed evidence. Replays are
+idempotent; no omitted record becomes a deletion and no candidate gains rights,
+page-version or public sitemap approval merely through import. Complete R2 and
+publisher coverage remains a separate acceptance gate.
+
+The changed/deleted-record fixture also exercises later-release assembly and
+last-valid rollback while preserving holds and every unrelated asset byte. This
+is local contract proof. Live automatic maintenance still requires the existing
+website owner to connect real publisher signals to generation, composition,
+matching Worker/routes/discovery publication and readback. The initial pinned
+release driver must not be replayed as a recurring deployment script.
+
 ### Normalized catalogue and the single work order
 
 The [work order](work-order.json) is the accountable queue for this ecosystem.
