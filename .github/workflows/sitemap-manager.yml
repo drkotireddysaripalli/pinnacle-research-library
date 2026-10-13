@@ -1,10 +1,10 @@
 name: Sitemap manager contracts
 on:
   pull_request:
-    paths: ['tooling/sitemap-manager/**', '.github/workflows/sitemap-manager.yml']
+    paths: ['tooling/sitemap-manager/**', 'speech-site/src/data/public-library-publisher.json', 'speech-site/scripts/*managed*.mjs', 'speech-site/scripts/git-publisher-records.mjs', '.github/workflows/sitemap-manager.yml']
   push:
     branches: [main]
-    paths: ['tooling/sitemap-manager/**', '.github/workflows/sitemap-manager.yml']
+    paths: ['tooling/sitemap-manager/**', 'speech-site/src/data/public-library-publisher.json', 'speech-site/scripts/*managed*.mjs', 'speech-site/scripts/git-publisher-records.mjs', '.github/workflows/sitemap-manager.yml']
 permissions:
   contents: read
 jobs:
