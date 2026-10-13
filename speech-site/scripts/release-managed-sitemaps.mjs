@@ -65,7 +65,7 @@ async function prepare(){
  const references=new Set();
  for(const f of manifest.files.filter(x=>x.kind==='html')){const html=await fs.readFile('release-managed-sitemaps-20261013/'+f.path,'utf8');for(const m of html.matchAll(/(?:https:\/\/www\.pinnacleblooms\.org)?(\/pinnacle-pages-(?:assets|scripts|styles|fonts)\/[A-Za-z0-9_./-]+)/g))references.add(m[1]);}
  for(const key of references)if(!fullManifest[key])await add(key,await fs.readFile('dist'+key));
- const roots=await read(priv+'/public-roots-before.json'),config={roots:{},html:{}};
+ const roots=await read(priv+'/public-roots-before.json'),config={roots:{},html:{},publicAssets:changed.filter(p=>!p.startsWith('/_managed_sitemaps/'))};
  for(const host of hosts)for(const kind of ['robots','llms']){
   const suffix='/'+kind+'.txt',row=roots.find(r=>r.host===host&&r.path===suffix),fallback=roots.find(r=>r.host==='www.pinnacleblooms.org'&&r.path===suffix);
   const valid=row?.status===200&&row.type?.includes('text/plain');

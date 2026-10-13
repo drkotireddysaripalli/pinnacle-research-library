@@ -27,7 +27,9 @@ export function withManagedSitemaps(original,config){
    const body=addition.trim()&&!base.includes(addition.trim())?base.trimEnd()+'\n\n'+addition.trim()+'\n':base;
    return new Response(request.method==='HEAD'?null:body,{headers:{'Content-Type':'text/plain; charset=utf-8','Cache-Control':'public, max-age=300','X-Content-Type-Options':'nosniff'}});
   }
-  const response=await original.fetch(request,env,ctx);
+  const response=config.publicAssets?.includes(url.pathname)&&['GET','HEAD'].includes(request.method)
+   ?await env.ASSETS.fetch(new Request(new URL(url.pathname,'https://assets.local'),{method:request.method}))
+   :await original.fetch(request,env,ctx);
   // Only public static files may be loaded by the other owned sitemap hosts.
   // No API, identity, receipt, or private-response CORS policy changes.
   const origin=request.headers.get('Origin');let allowed=false;
