@@ -171,7 +171,7 @@ def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None
   saved=[json.loads(line) for line in Path(reuse_resources).read_text(encoding='utf8').splitlines() if line]
   resources={r['page_url']:r for r in saved}
   if set(resources)!=set(urls) or len(resources)!=len(saved):raise ValueError('Reusable resource snapshot incomplete or duplicate')
-  raw.write_text(''.join(packed(resources[u])+'\n' for u in urls))
+  raw.write_text(''.join(packed(resources[u])+'\n' for u in urls),encoding='utf8')
  else:
   with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool,raw.open('w',encoding='utf8') as checkpoint:
    for url,result in zip(urls,pool.map(lambda u:public_resource(u,prior[u] if prior[u].get('content_sha256') else None),urls)):
@@ -181,9 +181,9 @@ def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None
   target.execute('BEGIN IMMEDIATE');changes,exceptions=apply_ask(target,snapshot,baseline,metadata_reader);rchanges,rexceptions,current=apply_resources(target,resources,prior,aliases);changes+=rchanges;exceptions+=rexceptions
   target.execute('INSERT OR REPLACE INTO receipts VALUES(?,?,?)',('native-source-refresh','source_refresh',packed({'snapshot_sha256':snapshot['sourceSHA256'],'resource_source_pages':len(resources),'changes':changes,'exceptions':exceptions})));target.commit()
  finally:target.close()
- (output/'resource-snapshot.jsonl').write_text(''.join(packed(current.get(u,resources[u]))+'\n' for u in urls))
+ (output/'resource-snapshot.jsonl').write_text(''.join(packed(current.get(u,resources[u]))+'\n' for u in urls),encoding='utf8')
  result={'candidate_feed':str(candidate.resolve()),'source_snapshot_sha256':snapshot['sourceSHA256'],'ask_eligible_checked':snapshot['eligibleTotal'],'resources_checked':len(resources),'changes':changes,'exceptions':exceptions,'source_rows_modified':False,'private_objects_inventoried':False,'observation_is_not_lastmod':True}
- (output/'source-delta.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');return result
+ (output/'source-delta.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf8');return result
 
 def main():
  if '--validate-resource-labels' in __import__('sys').argv:

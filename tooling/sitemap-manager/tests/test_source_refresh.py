@@ -35,5 +35,10 @@ class SourceRefresh(unittest.TestCase):
   proof=s.validate_resource_labels(root,source,Path(self.temp.name)/'feed.sqlite3');self.assertEqual(proof['distinctResourceLabelsMatched'],1)
   (root/'index.html').write_text('<main><a href="'+self.resource+'">Approved titleAromatherapy / Scent Kit</a></main>')
   with self.assertRaisesRegex(ValueError,'authoritative document head'):s.validate_resource_labels(root,source,Path(self.temp.name)/'feed.sqlite3')
+ def test_native_checkpoint_preserves_indian_scripts_and_rupee_without_locale_defaults(self):
+  self.db.commit();title='Telugu \u0c24\u0c32\u0c4d\u0c32\u0c3f \u20b9';record={'page_url':self.resource,'publication_qualified':True,'media_references':[],'video_objects':[],'body_sha256':'d'*64,'content_sha256':'e'*64,'observed_at':'2026-10-14T00:00:00Z','title':title,'description':title}
+  cache=Path(self.temp.name)/'resources.jsonl';cache.write_text(json.dumps(record,ensure_ascii=False)+'\n',encoding='utf8');snapshot=self.snapshot([{'slug':'real-parent-question','lang':'en','publisher_source_fingerprint':self.fp}]);snapshot['sourceSHA256']='f'*64
+  out=Path(self.temp.name)/'native';result=s.refresh(Path(self.temp.name)/'feed.sqlite3',snapshot,self.baseline,[record],out,reuse_resources=cache)
+  saved=json.loads((out/'resource-snapshot.jsonl').read_text(encoding='utf8'));self.assertEqual(saved['title'],title);self.assertEqual(result['resources_checked'],1)
 
 if __name__=='__main__':unittest.main()
