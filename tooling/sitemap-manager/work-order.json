@@ -54,27 +54,28 @@
       "depends_on": [
         "SM02"
       ],
-      "next_action": "R2 bucket/object metadata inventory is running with the existing authenticated website owner after direct founder authorization. Received and hash-verified the publisher export; 41,176 input relationships accounted for. Reconcile R2 public mappings, assessment/example and embedded media, plus dated page eligibility exceptions.",
+      "next_action": "Both protected R2 packages received and every internal file hash verified. Complete current publisher-version/curation and embedded-media reconciliation using the 40,611 exact candidate relationships; retain unassociated and withheld objects with explicit dispositions.",
       "evidence": [
         "outputs/sitemap-coverage-and-field-contract-20261013.json",
         "outputs/sitemap-public-cms-media-receipt-20261013.json",
         "outputs/sitemap-live-owner-delivery-20261013.json",
         "outputs/sitemap-publisher-media-import-20261013.json",
         "outputs/sitemap-current-eligibility-exceptions-20261013.json",
-        "outputs/sitemap-execution-route-receipt-20261013.json"
+        "outputs/sitemap-execution-route-receipt-20261013.json",
+        "outputs/sitemap-r2-reconciliation-20261013.json"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
-        "complete_percent": 50,
-        "pending_percent": 50,
-        "basis": "Milestone estimate: 2 of four equally counted task checkpoints accepted; not time, indexing, site-health or media-library coverage.",
+        "complete_percent": 75,
+        "pending_percent": 25,
+        "basis": "Three of four source checkpoints accepted; this is not a percentage of images eligible for indexing.",
         "accepted_checkpoints": [
           "Collected search/crawl baseline reconciled",
-          "Available publisher page/media map exported"
+          "Available publisher page/media export received and verified",
+          "Relevant R2 inventory and deployed Ask mapping received; 276,885 exported objects accounted for"
         ],
         "pending_checkpoints": [
-          "Original library, embedded and assessment inventories reconciled",
-          "Whole-source coverage and exclusion dispositions accepted"
+          "Whole public publisher coverage, current versions, curation and unmatched dispositions accepted"
         ]
       }
     },
@@ -134,7 +135,7 @@
         "SM04",
         "SM05"
       ],
-      "next_action": "Load the prepared hash-verified catalogue through an exact-target-verified existing native connection and reconcile counts/deltas. Optional cloud synchronization must not delay sitemap coverage or submission.",
+      "next_action": "Optional native row mirror remains unverified and is deferred from the active sitemap delivery path. Reuse the working local catalogue; resume cloud loading only through a verified exact-target bulk route after public media and maintenance gates close.",
       "evidence": [
         "outputs/sitemap-ddl-approval-manifest-20261013.json",
         "outputs/sitemap-planetscale-v2-native-creation-20261013.json",
@@ -199,24 +200,25 @@
         "SM03",
         "SM05"
       ],
-      "next_action": "Public publisher-map input is now stored and checked. Reconcile R2 originals and actual public-use/version/rights eligibility; preserve 241 mapped relationships whose parents remain HOLD. Candidate counts do not equal public sitemap coverage.",
+      "next_action": "40,170 current public Ask answer parents have exact R2 PNG candidates; 441 direct publisher/object joins verified. Apply current publisher versions, curation/default overrides and legitimate use/rights evidence, then build and verify the expanded files. Keep 40,170 SVG variants, 65,807 hash-card objects and unbound resource/video objects out of automatic promotion.",
       "evidence": [
         "work/sitemap-media-expansion/media-expansion-receipt.json",
         "outputs/sitemap-live-owner-delivery-20261013.json",
-        "outputs/sitemap-publisher-media-import-20261013.json"
+        "outputs/sitemap-publisher-media-import-20261013.json",
+        "outputs/sitemap-r2-reconciliation-20261013.json"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
-        "complete_percent": 25,
-        "pending_percent": 75,
-        "basis": "Milestone estimate: 1 of four equally counted task checkpoints accepted; not time, indexing, site-health or media-library coverage.",
+        "complete_percent": 50,
+        "pending_percent": 50,
+        "basis": "Two of four eligibility checkpoints accepted; candidate relationship counts are not emitted media counts.",
         "accepted_checkpoints": [
-          "Media candidates retained and output profiles validated"
+          "Channel eligibility and version contracts implemented",
+          "Exact R2/publisher candidate relationships and public answer membership reconciled"
         ],
         "pending_checkpoints": [
-          "New assets mapped to approved eligible public use with rights/access evidence",
-          "Crawlable image renditions and applicable playback/prominence checks verified",
-          "Expanded eligible media output released and readback accepted"
+          "Current publisher versions, curation and rendered-use profiles populated",
+          "Expanded media release passes production readback"
         ]
       }
     },
@@ -365,31 +367,31 @@
     {
       "id": "SM15",
       "task": "Verify engine fetch and processing",
-      "status": "in_progress",
+      "status": "verified",
       "validation": "Per-engine submitted URL, last fetch/processing, warnings/errors and URL coverage recorded; resolve actual errors. Submission acceptance is not processing or guaranteed indexing.",
       "owner": "Search workstream",
       "depends_on": [
         "SM14"
       ],
-      "next_action": "Google four of five managed roots have downloaded with zero reported errors; Bing three of five report Success. Complete the outstanding roots/children after actual processing changes and reconcile current public eligibility faults separately from XML membership.",
+      "next_action": "Engine root processing accepted. Continue SM03/SM08 media coverage, SM16 actual publisher refresh and SM17 current page repair; index acceptance does not establish page indexing.",
       "evidence": [
         "outputs/sitemap-google-managed-submission-20261013.json",
         "outputs/sitemap-google-managed-processing-20261013.json",
-        "outputs/sitemap-bing-managed-submission-20261013.json"
+        "outputs/sitemap-bing-managed-submission-20261013.json",
+        "outputs/sitemap-engine-root-acceptance-20261013.json"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied",
       "progress": {
-        "complete_percent": 25,
-        "pending_percent": 75,
-        "basis": "Coarse milestone estimate: native processing evidence received, but not all five hosts and child coverage accepted yet. No indexing guarantee.",
+        "complete_percent": 100,
+        "pending_percent": 0,
+        "basis": "Native Google downloads and zero root warnings/errors, five Bing Success feeds, and independently reconciled public XML membership accepted. No page indexing guarantee.",
         "accepted_checkpoints": [
-          "Native per-host processing receipts collected"
+          "Native per-host processing receipts collected",
+          "All five managed Google roots downloaded and parsed",
+          "All five managed Bing roots accepted",
+          "71,047 unique page members, XML limits and provider counter boundaries reconciled"
         ],
-        "pending_checkpoints": [
-          "All managed Google downloads/parse states accepted",
-          "All managed Bing downloads/parse states accepted",
-          "Actual coverage and warnings/errors resolved or dispositioned"
-        ]
+        "pending_checkpoints": []
       }
     },
     {

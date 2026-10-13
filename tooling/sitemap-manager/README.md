@@ -135,6 +135,25 @@ network access occurs during this check.
 
 ### Reviewed publisher media exports
 
+`r2_reconcile.py` verifies the selected R2/Ask manifests and the publisher input
+hashes, joins only actual object identities and published answer-shard parents,
+and creates a replayable candidate JSONL map. It distinguishes rendered PNG
+candidates from SVG variants and unassociated hash-card objects. R2 modification
+dates never become page `lastmod`. Unassociated images/videos remain in the
+verified inventory, with no invented page binding, rights or deletion.
+
+```sh
+python tooling/sitemap-manager/r2_reconcile.py \
+  --job private/r2-reconciliation-job.json \
+  --output private/reconciled-media-candidates.jsonl \
+  --receipt private/r2-reconciliation-receipt.json
+```
+
+The selected job pins the `r2_manifest`, `ask_manifest`, `publisher_media`,
+`eligible_pages` and current public `answer_membership` file paths/hashes. Its
+output is not a sitemap approval. Current publisher content versions, curation
+overrides and actual rendered use still feed the normalized profile gates.
+
 `publisher_media.py` imports the website owner's hash-verified public page/media
 export into the existing private normalized catalogue. Supply the accepted
 transfer-manifest SHA256 and its actual observation timestamp. All file hashes,
