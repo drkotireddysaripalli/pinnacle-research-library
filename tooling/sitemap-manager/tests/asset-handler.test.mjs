@@ -15,6 +15,10 @@ test('each host uses its isolated namespace, GET/HEAD and stable etag',async()=>
 test('SPA HTML cannot pretend to be an XML sitemap',async()=>{
  const response=await handle(new Request('https://www.pinnacleblooms.org/sitemap-pages-ask-001.xml'),{ASSETS:{fetch:async()=>new Response('<!doctype html><h1>Home</h1>')}});assert.equal(response.status,502);
 });
+test('conditional News leaves use the same isolated XML handler',async()=>{
+ let internal;const r=await handle(new Request('https://www.pinnacleblooms.org/sitemap-news-news-001.xml'),{ASSETS:{fetch:async request=>{internal=request.url;return new Response('<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"/>');}}});
+ assert.equal(r.status,200);assert.match(r.headers.get('Content-Type'),/application\/xml/);assert.match(internal,/\/_managed_sitemaps\/www\.pinnacleblooms\.org\/sitemap-news-news-001\.xml$/);
+});
 test('unsupported methods, encoded paths and internal namespace are rejected',async()=>{
  for(const [path,method,status] of [['/site-map/%2ftest.xml','GET',404],['/sitemap-managed.xml','POST',405],['/_managed_sitemaps/www.pinnacleblooms.org/llms.txt','GET',404]]) assert.equal((await handle(new Request('https://www.pinnacleblooms.org'+path,{method}),{})).status,status);
 });

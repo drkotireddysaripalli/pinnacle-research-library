@@ -18,6 +18,7 @@ import shutil
 import tempfile
 import urllib.parse
 import manager
+import normalized_profiles
 
 HERE = Path(__file__).resolve().parent
 
@@ -264,6 +265,7 @@ def import_catalogue(legacy_path, candidate_path, output, data, expected=None):
             # Existing source text remains draft/catalogue data, not new clinical approval.
             legacy={k:row[k] for k in ('priority_hint','change_frequency_hint','relevance','og_image','llm_text','llm_approved')}
             legacy['curation']=meta.get('curation',{})
+            legacy['alternates']=meta.get('alternates',[])
             w.put('pages',dict(page_id=pid,source_system='collected_url_register',source_record_key=uid,primary_url_id=uid,canonical_url_id=canonical,module_type=row['module_type'],language=row['language'],title=row['title'],description=row['description'],topic_keywords_json=json.loads(row['keywords_json'] or '[]'),publication_status='observed_candidate',significant_modified_date_or_datetime=row['content_modified_at'],modified_date_precision=('date' if row['content_modified_at'] and len(row['content_modified_at'])==10 else 'datetime') if row['content_modified_at'] else None,modified_evidence_id=eid if row['content_modified_at'] else None,metadata_json={'legacy':legacy,'source_record_evidence_id':eid,'missing_fields_are_unknown':True}))
             if row['priority_hint'] is not None or row['change_frequency_hint']:
                 w.put('page_sitemap_profiles',dict(page_profile_id=identity('page-profile',pid),page_id=pid,priority=row['priority_hint'],change_frequency=row['change_frequency_hint'],source_evidence_id=eid,source_version_sha256=source_hash))
@@ -498,7 +500,7 @@ def export_mysql_v2(path, output, data, batch_size=500, max_bytes=4*1024*1024):
         if stage.exists():shutil.rmtree(stage)
 
 
-def export_compatible(path, output, data):
+def export_compatible(path, output, data, use_profiles=False):
     """Feed the existing validated generator from normalized state.
 
     Candidates never become images/video/LLM output through this bridge. The
@@ -514,22 +516,44 @@ def export_compatible(path, output, data):
     target=manager.connect(temp)
     try:
         evidence={r['observation_id']:json.loads(r['observed_value_json']) for r in source.execute("SELECT observation_id,observed_value_json FROM observations WHERE attribute_name IN ('legacy_record','existing_sitemap_image','existing_sitemap_video')")}
+        profiles=normalized_profiles.collect(source) if use_profiles else None
         images=collections.defaultdict(list);videos=collections.defaultdict(list)
         for table,attr,dest in [('image_sitemap_profiles','image','images'),('video_sitemap_profiles','video','videos')]:
             for item in source.execute('SELECT m.page_id,m.publication_state,p.source_evidence_id FROM '+table+' p JOIN media_uses m ON '+('p.media_use_id=m.use_id')):
                 if item['publication_state']!='existing_public_sitemap_reference':continue
                 (images if dest=='images' else videos)[item['page_id']].append(evidence[item['source_evidence_id']])
+        if profiles:images=profiles['images'];videos=profiles['videos']
         rows=source.execute("SELECT u.*,e.decision,e.evidence_id,p.page_id,p.module_type,p.title,p.description,p.canonical_url_id,p.language,p.significant_modified_date_or_datetime,p.topic_keywords_json,p.metadata_json FROM url_registry u JOIN eligibility_decisions e ON e.subject_id=u.url_id AND e.subject_kind='url' AND e.channel='page_sitemap' LEFT JOIN pages p ON p.primary_url_id=u.url_id WHERE u.is_current=1 ORDER BY u.url")
         count=collections.Counter()
         for item in rows:
             x=dict(item);ev=evidence[x['evidence_id']];metadata=json.loads(x['metadata_json']) if x['metadata_json'] else {};legacy=metadata.get('legacy',{})
             canonical=source.execute('SELECT url FROM url_registry WHERE url_id=?',(x['canonical_url_id'],)).fetchone() if x['canonical_url_id'] else None
             row=dict(url_hash=digest(x['url']),url=x['url'],host=x['host'],module_type=x['module_type'] or manager.family_name(ev['eligibility'].get('family','other')),decision=x['decision'],title=x['title'],description=x['description'],keywords_json=x['topic_keywords_json'] or '[]',canonical_url=canonical[0] if canonical else (x['url'] if x['decision']=='INCLUDE' else None),language=x['language'],content_modified_at=x['significant_modified_date_or_datetime'],priority_hint=legacy.get('priority_hint'),change_frequency_hint=legacy.get('change_frequency_hint'),relevance=legacy.get('relevance'),og_image=legacy.get('og_image'),images_json=packed(images[x['page_id']]),videos_json=packed(videos[x['page_id']]),links_json='[]',llm_text=legacy.get('llm_text'),llm_approved=legacy.get('llm_approved',0),metadata_json=packed({'eligibility':ev['eligibility'],'fields':ev['fields'],'curation':legacy.get('curation',{}),'normalized_catalogue_source':True}),row_sha256='')
+            meta=json.loads(row['metadata_json']);meta['alternates']=legacy.get('alternates',[])
+            if profiles:
+                if x['page_id'] in profiles['pages']:meta['sitemap_profile']=profiles['pages'][x['page_id']]
+                if x['page_id'] in profiles['news']:meta['news_profile']=profiles['news'][x['page_id']]
+                if x['page_id'] in profiles['alternates']:meta['alternates']=profiles['alternates'][x['page_id']]
+            row['metadata_json']=packed(meta)
             if not row['llm_text']:row['llm_text']=manager.reference_text(row)
             manager.upsert(target,manager.refresh_digest(row));count[row['decision']]+=1
         target.commit();target.close();source.close();inactive_destination(output);os.replace(temp,output)
-        return {'decisions':dict(count),'rows':sum(count.values()),'projection_sha256':file_hash(output),'candidate_promotion':False,'scope':'Current collected snapshot; imported legacy source references only'}
+        return {'decisions':dict(count),'rows':sum(count.values()),'projection_sha256':file_hash(output),'candidate_promotion':False,'normalized_profiles':use_profiles,'published_file_modifications':profiles['published_file_modifications'] if profiles else {},'scope':'Current collected snapshot; source-versioned output profiles' if profiles else 'Current collected snapshot; imported legacy source references only'}
     except BaseException:target.close();source.close();Path(temp).unlink(missing_ok=True);raise
+
+
+def build_normalized(path, projection, policy_path, output, data):
+    disjoint_paths(path,projection,policy_path,output)
+    if any(Path(p).resolve().is_relative_to(Path(output).resolve()) for p in (path,projection,policy_path)):raise ValueError('Private inputs/projection cannot be placed in public release')
+    policy=json.loads(Path(policy_path).read_text())
+    frozen,source_hash=frozen_snapshot(path,Path(projection).parent/'profile-source-snapshots')
+    receipt=export_compatible(frozen,projection,data,True)
+    policy['published_file_modifications']=receipt['published_file_modifications']
+    db=manager.connect(projection)
+    try:release=manager.build_release(db,output,policy)
+    finally:db.close()
+    receipt.update(frozen_source_sha256=source_hash,frozen_source_artifact=str(frozen.resolve()),release_id=release['release_id'],page_urls=release['page_urls'],public_files=len(release['files']),public_deployed=False)
+    return receipt
 
 
 def main():
@@ -538,12 +562,14 @@ def main():
     a=s.add_parser('import');a.add_argument('--legacy-db',type=Path,required=True);a.add_argument('--candidate-media',type=Path);a.add_argument('--db',type=Path,required=True);a.add_argument('--receipt',type=Path,required=True);a.add_argument('--expected-decisions',type=Path)
     a=s.add_parser('validate');a.add_argument('--db',type=Path,required=True)
     a=s.add_parser('seed');a.add_argument('--db',type=Path,required=True);a.add_argument('--registry',type=Path,required=True);a.add_argument('--editorial',type=Path,default=HERE/'editorial-policy.json');a.add_argument('--brand',type=Path,default=HERE/'brand-profile.json');a.add_argument('--receipt',type=Path,required=True)
-    a=s.add_parser('export-generator');a.add_argument('--db',type=Path,required=True);a.add_argument('--output',type=Path,required=True);a.add_argument('--receipt',type=Path,required=True)
+    a=s.add_parser('export-generator');a.add_argument('--db',type=Path,required=True);a.add_argument('--output',type=Path,required=True);a.add_argument('--receipt',type=Path,required=True);a.add_argument('--normalized-profiles',action='store_true')
     a=s.add_parser('import-public-media');a.add_argument('--db',type=Path,required=True);a.add_argument('--source',type=Path,required=True);a.add_argument('--receipt',type=Path,required=True)
     a=s.add_parser('resolve-relative-media');a.add_argument('--source',type=Path,required=True);a.add_argument('--origin',required=True);a.add_argument('--evidence',type=Path,required=True);a.add_argument('--output',type=Path,required=True);a.add_argument('--receipt',type=Path,required=True)
     a=s.add_parser('export-mysql-v2');a.add_argument('--db',type=Path,required=True);a.add_argument('--output',type=Path,required=True);a.add_argument('--batch-size',type=int,default=500);a.add_argument('--max-bytes',type=int,default=4*1024*1024);a.add_argument('--receipt',type=Path,required=True)
+    a=s.add_parser('build-normalized');a.add_argument('--db',type=Path,required=True);a.add_argument('--projection',type=Path,required=True);a.add_argument('--policy',type=Path,required=True);a.add_argument('--output',type=Path,required=True);a.add_argument('--receipt',type=Path,required=True)
     a=p.parse_args();data=model()
-    if hasattr(a,'receipt'):disjoint_paths(a.receipt,*[getattr(a,k,None) for k in ('db','legacy_db','candidate_media','expected_decisions','output','registry','editorial','brand','source','evidence')])
+    if a.command=='build-normalized' and a.receipt.resolve().is_relative_to(a.output.resolve()):raise ValueError('Private receipt cannot be placed in public release')
+    if hasattr(a,'receipt'):disjoint_paths(a.receipt,*[getattr(a,k,None) for k in ('db','legacy_db','candidate_media','expected_decisions','output','registry','editorial','brand','source','evidence','projection','policy')])
     if a.command=='schema':
         a.output.mkdir(parents=True,exist_ok=True)
         for mysql,name in [(False,'sqlite-v2.sql'),(True,'planetscale-v2.sql')]: (a.output/name).write_text(ddl(data,mysql))
@@ -553,13 +579,15 @@ def main():
         receipt=import_catalogue(a.legacy_db,a.candidate_media,a.db,data,expected);a.receipt.parent.mkdir(parents=True,exist_ok=True);a.receipt.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
         print(packed(receipt));return
     if a.command in ('seed','export-generator'):
-        receipt=seed_registry(a.db,a.registry,a.editorial,a.brand,data) if a.command=='seed' else export_compatible(a.db,a.output,data)
+        receipt=seed_registry(a.db,a.registry,a.editorial,a.brand,data) if a.command=='seed' else export_compatible(a.db,a.output,data,a.normalized_profiles)
         a.receipt.parent.mkdir(parents=True,exist_ok=True);a.receipt.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n');print(packed(receipt));return
     if a.command=='import-public-media':
         receipt=import_public_media(a.db,a.source,data);a.receipt.parent.mkdir(parents=True,exist_ok=True);a.receipt.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n');print(packed(receipt));return
     if a.command in ('resolve-relative-media','export-mysql-v2'):
         receipt=resolve_relative_media(a.source,a.origin,a.evidence,a.output) if a.command=='resolve-relative-media' else export_mysql_v2(a.db,a.output,data,a.batch_size,a.max_bytes)
         a.receipt.parent.mkdir(parents=True,exist_ok=True);a.receipt.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n');print(packed(receipt));return
+    if a.command=='build-normalized':
+        receipt=build_normalized(a.db,a.projection,a.policy,a.output,data);a.receipt.parent.mkdir(parents=True,exist_ok=True);a.receipt.write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n');print(packed(receipt));return
     db=sqlite3.connect('file:'+str(a.db.resolve())+'?mode=ro',uri=True);print(packed(validate(db,data)));db.close()
 
 

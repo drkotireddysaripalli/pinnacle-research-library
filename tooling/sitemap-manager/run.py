@@ -108,7 +108,7 @@ def verify_public(release,workers=4):
    with urllib.request.build_opener(NoRedirect).open(request,timeout=30) as response:
     blob=response.read(f['bytes']+1);ct=response.headers.get('Content-Type','');etag=response.headers.get('ETag')
     if response.status!=200 or m.sha(blob)!=f['sha256']:raise ValueError('Public status or bytes mismatch')
-    if f['kind'] in ('index','pages','images','videos') and not ('xml' in ct):raise ValueError('Public XML MIME type mismatch')
+    if f['kind'] in ('index','pages','images','videos','news') and not ('xml' in ct):raise ValueError('Public XML MIME type mismatch')
     if f['kind']=='html' and 'text/html' not in ct:raise ValueError('Public HTML MIME type mismatch')
     return {'url':f['public_url'],'passed':True,'sha256':f['sha256'],'etag':etag}
   except Exception as error:return {'url':f['public_url'],'passed':False,'error':str(error)}

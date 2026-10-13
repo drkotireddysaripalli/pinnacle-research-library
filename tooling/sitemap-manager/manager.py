@@ -6,14 +6,15 @@ promotion and network notifications are explicit separate commands.
 from __future__ import annotations
 import argparse, collections, csv, datetime as dt, hashlib, html, json, os
 from pathlib import Path
-import re, shutil, sqlite3, tempfile, urllib.parse, urllib.request
+import math, re, shutil, sqlite3, tempfile, urllib.parse, urllib.request
 import xml.etree.ElementTree as ET
 
 SM='http://www.sitemaps.org/schemas/sitemap/0.9'
 IM='http://www.google.com/schemas/sitemap-image/1.1'
 VI='http://www.google.com/schemas/sitemap-video/1.1'
 XH='http://www.w3.org/1999/xhtml'
-ET.register_namespace('',SM);ET.register_namespace('image',IM);ET.register_namespace('video',VI);ET.register_namespace('xhtml',XH)
+NW='http://www.google.com/schemas/sitemap-news/0.9'
+ET.register_namespace('',SM);ET.register_namespace('image',IM);ET.register_namespace('video',VI);ET.register_namespace('xhtml',XH);ET.register_namespace('news',NW)
 MAX_URLS=50000;MAX_BYTES=50*1024*1024
 VIDEO_FIELDS=('thumbnail_loc','title','description','content_loc','player_loc','duration','expiration_date','rating','view_count','publication_date','tag','family_friendly','restriction','requires_subscription','uploader','platform','live')
 UTC=dt.timezone.utc
@@ -248,6 +249,33 @@ def video_element(data,warnings,page):
   else:text_tag(result,VI,key,value)
  return result
 
+def optional_page_profile(profile):
+ if not profile:return []
+ if not profile.get('source_evidence_id') or not re.fullmatch('[a-f0-9]{64}',profile.get('source_version_sha256','')):raise ValueError('Page profile requires versioned evidence')
+ fields=[];freq=profile.get('change_frequency');priority=profile.get('priority')
+ if freq is not None:
+  if freq not in ('always','hourly','daily','weekly','monthly','yearly','never'):raise ValueError('Invalid change frequency')
+  fields.append(('changefreq',freq))
+ if priority is not None:
+  if isinstance(priority,bool) or not isinstance(priority,(float,int)) or not math.isfinite(priority) or not 0<=priority<=1:raise ValueError('Invalid sitemap priority')
+  fields.append(('priority',priority))
+ return fields
+
+def news_element(profile,as_of,window=True):
+ if not profile or profile.get('qualifies_as_news')!=1:return None
+ if not profile.get('source_evidence_id') or not re.fullmatch('[a-f0-9]{64}',profile.get('source_version_sha256','')):raise ValueError('News profile requires versioned evidence')
+ if not all(isinstance(profile.get(k),str) and profile[k].strip() for k in ('publication_name','publication_language','article_title')):raise ValueError('Missing News metadata')
+ if not re.fullmatch('zh-cn|zh-tw|[a-z]{2,3}',profile['publication_language']):raise ValueError('Invalid News language')
+ value=profile.get('original_publication_value')
+ if not valid_date(value):raise ValueError('Invalid original News publication date')
+ pub=dt.datetime.fromisoformat(value.replace('Z','+00:00'));pub=pub.replace(tzinfo=UTC) if pub.tzinfo is None else pub
+ reference=dt.datetime.fromisoformat(as_of.replace('Z','+00:00'))
+ if reference.tzinfo is None:raise ValueError('News cutoff requires timezone')
+ if window and not reference-dt.timedelta(days=2)<=pub<=reference:return None
+ result=ET.Element('{'+NW+'}news');publication=ET.SubElement(result,'{'+NW+'}publication')
+ text_tag(publication,NW,'name',profile['publication_name']);text_tag(publication,NW,'language',profile['publication_language'])
+ text_tag(result,NW,'publication_date',value);text_tag(result,NW,'title',profile['article_title']);return result
+
 def eligible(row,hosts,max_age_days=None):
  if row['decision']!='INCLUDE':return False
  if row['host'] not in hosts:raise ValueError('Unapproved host: '+row['host'])
@@ -273,7 +301,8 @@ def alternate_groups(rows):
 
 def build_release(db,output,policy):
  out=Path(output);previous=json.loads((out/'manifest.json').read_text()) if (out/'manifest.json').exists() else {}
- prev={f['path']:f for f in previous.get('files',[])};stamp=now();warnings=[];files=[];groups=collections.defaultdict(list)
+ prev={f['path']:f for f in previous.get('files',[])};stamp=now();warnings=[];files=[];groups=collections.defaultdict(list);news_as_of=policy.get('news_as_of',stamp)
+ if not valid_date(news_as_of) or len(news_as_of)<=10:raise ValueError('News cutoff requires a W3C datetime')
  rows=[dict(r) for r in db.execute("SELECT * FROM pages WHERE decision='INCLUDE' ORDER BY url")]
  hosts=set(policy['hosts']);counts=collections.Counter()
  for row in rows:
@@ -290,11 +319,15 @@ def build_release(db,output,policy):
  def leaf(host,family,kind,bucket,items):
   root=ET.Element('{'+SM+'}urlset');accepted=0
   for row in items:
-   media=json.loads(row['images_json'] if kind=='images' else row['videos_json']) if kind!='pages' else None
+   media=json.loads(row['images_json'] if kind=='images' else row['videos_json']) if kind in ('images','videos') else None
+   metadata=json.loads(row['metadata_json'])
+   article=news_element(metadata.get('news_profile'),news_as_of) if kind=='news' else None
+   if kind=='news' and article is None:continue
    if media==[]:continue
    u=ET.Element('{'+SM+'}url');text_tag(u,SM,'loc',row['url'])
    if row['content_modified_at']:text_tag(u,SM,'lastmod',row['content_modified_at'])
    if kind=='pages':
+    for key,value in optional_page_profile(metadata.get('sitemap_profile')):text_tag(u,SM,key,value)
     for alternate in json.loads(row['metadata_json']).get('alternates',[]):ET.SubElement(u,'{'+XH+'}link',{'rel':'alternate','hreflang':alternate['language'],'href':normal(alternate['url'])})
    if kind=='images':
     if len(media)>1000:raise ValueError('Too many image references for page')
@@ -305,10 +338,11 @@ def build_release(db,output,policy):
      elem=video_element(video,warnings,row['url'])
      if elem is not None:u.append(elem)
     if not u.findall('{'+VI+'}video'):continue
+   if kind=='news':u.append(article)
    root.append(u);accepted+=1
   if not accepted:return
   blob=ET.tostring(root,encoding='utf-8',xml_declaration=True)
-  if len(blob)>MAX_BYTES or accepted>MAX_URLS:
+  if len(blob)>MAX_BYTES or accepted>(1000 if kind=='news' else MAX_URLS):
    if len(items)<2:raise ValueError('Single entry exceeds XML size limit')
    middle=len(items)//2;leaf(host,family,kind,bucket+'a',items[:middle]);leaf(host,family,kind,bucket+'b',items[middle:]);return
   # Root leaves avoid imposing a subdirectory scope on unrelated page paths.
@@ -319,14 +353,18 @@ def build_release(db,output,policy):
    if not isinstance(buckets,int) or buckets<1:raise ValueError('Invalid stable bucket count')
    for number in range(buckets):
     selected=[r for r in items if int(r['url_hash'][:8],16)%buckets==number]
-    for kind in ('pages','images','videos'):leaf(host,family,kind,f'{number+1:03d}',selected)
+    for kind in ('pages','images','videos','news'):leaf(host,family,kind,f'{number+1:03d}',selected)
   for host in sorted(counts):
-   index=ET.Element('{'+SM+'}sitemapindex');children=[f for f in files if f['host']==host and f['kind'] in ('pages','images','videos')]
+   index=ET.Element('{'+SM+'}sitemapindex');children=[f for f in files if f['host']==host and f['kind'] in ('pages','images','videos','news')]
    if len(children)>50000:raise ValueError('Index limit exceeded')
    for f in sorted(children,key=lambda x:x['path']):
     s=ET.SubElement(index,'{'+SM+'}sitemap');text_tag(s,SM,'loc',f['public_url'])
-    # Index lastmod is optional. The local build time is not evidence that a
-    # public child sitemap changed, so publication metadata is kept internal.
+    published=policy.get('published_file_modifications',{}).get(f['public_url'])
+    if published and published.get('content_sha256')==f['sha256']:
+     if published.get('state')!='public_verified' or not published.get('receipt') or not valid_date(published.get('lastmod')):raise ValueError('Index date requires matching verified public-content evidence')
+     modified=dt.datetime.fromisoformat(published['lastmod'].replace('Z','+00:00'));modified=modified.replace(tzinfo=UTC) if modified.tzinfo is None else modified
+     if modified>dt.datetime.now(UTC):raise ValueError('Future index modification date')
+     text_tag(s,SM,'lastmod',published['lastmod'])
    blob=ET.tostring(index,encoding='utf-8',xml_declaration=True)
    if len(blob)>MAX_BYTES:raise ValueError('Oversized index')
    save(host,'sitemap-managed.xml',blob,'index',len(children))
@@ -356,6 +394,7 @@ def build_release(db,output,policy):
     save(host,'site-map/llms-full.txt',bundle,'llms_bundle')
   generator_sha=sha(dump({name:digest_file(Path(__file__).parent/name) for name in ('manager.py','reconcile.py','run.py','asset-handler.mjs')}))
   manifest={'schema_version':1,'created_at':stamp,'release_id':sha(dump([(f['path'],f['sha256']) for f in sorted(files,key=lambda x:x['path'])])),'generator_sha256':generator_sha,'page_urls':len(rows),'hosts':dict(counts),'files':files,'warnings':warnings,'public_status':'built_not_deployed','policy_sha256':sha(dump(policy))}
+  if any(f['kind']=='news' for f in files):manifest['news_as_of']=news_as_of
   (stage/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
   validate_release(stage)
   backup=out.with_name(out.name+'.previous')
@@ -384,13 +423,14 @@ def validate_release(directory):
   if sha(blob)!=f['sha256']:raise ValueError('File hash mismatch')
   if len(blob)!=f['bytes'] or f['host'] not in m['hosts'] or f['public_url']!='https://'+f['host']+'/'+f['path'].split('/',1)[1]:raise ValueError('Manifest identity mismatch')
   seen_files.add(f['path'])
-  if f['kind'] not in ('index','pages','images','videos'):continue
+  if f['kind'] not in ('index','pages','images','videos','news'):continue
   if len(blob)>MAX_BYTES:raise ValueError('Oversized XML')
   if b'<!DOCTYPE' in blob or b'<!ENTITY' in blob:raise ValueError('Unsafe XML declaration')
   root=ET.fromstring(blob)
   expected='{'+SM+'}'+('sitemapindex' if f['kind']=='index' else 'urlset')
   if root.tag!=expected or root.attrib:raise ValueError('Wrong XML root')
   if len(root)>MAX_URLS:raise ValueError('Too many XML entries')
+  if f['kind']=='news' and len(root)>1000:raise ValueError('Too many News entries')
   if len(root)!=f['entries']:raise ValueError('XML entry count mismatch')
   for entry in root:
    if entry.tag!='{'+SM+'}'+('sitemap' if f['kind']=='index' else 'url') or entry.attrib:raise ValueError('Wrong entry element')
@@ -405,14 +445,23 @@ def validate_release(directory):
    allowed={'{'+SM+'}loc','{'+SM+'}lastmod'}
    if f['kind']=='images':allowed.add('{'+IM+'}image')
    elif f['kind']=='videos':allowed.add('{'+VI+'}video')
-   elif f['kind']=='pages':allowed.add('{'+XH+'}link')
+   elif f['kind']=='pages':allowed.update(('{'+XH+'}link','{'+SM+'}priority','{'+SM+'}changefreq'))
+   elif f['kind']=='news':allowed.add('{'+NW+'}news')
    if any(e.tag not in allowed for e in entry):raise ValueError('Unsupported XML field')
    if f['kind']=='index':
     target=f['host']+'/'+urllib.parse.urlsplit(loc.text).path.lstrip('/')
-    if target not in records or records[target]['kind'] not in ('pages','images','videos'):raise ValueError('Broken or nested sitemap reference')
+    if target not in records or records[target]['kind'] not in ('pages','images','videos','news'):raise ValueError('Broken or nested sitemap reference')
     if target in referenced:raise ValueError('Repeated child reference')
     referenced.add(target)
    if f['kind']=='pages':
+    profile={}
+    for key in ('priority','changefreq'):
+     elements=entry.findall('{'+SM+'}'+key)
+     if len(elements)>1 or any(e.attrib or len(e) for e in elements):raise ValueError('Repeated or structured optional page field')
+     if elements:
+      try:profile['priority' if key=='priority' else 'change_frequency']=float(elements[0].text) if key=='priority' else elements[0].text
+      except (TypeError,ValueError):raise ValueError('Invalid optional page field')
+    if profile:optional_page_profile(dict(profile,source_evidence_id='semantic_validation',source_version_sha256='0'*64))
     if loc.text in page_set:raise ValueError('Duplicate page membership')
     page_set.add(loc.text);host_counts[f['host']]+=1
     alternate_set=set()
@@ -442,9 +491,19 @@ def validate_release(directory):
      issues=[];rebuilt=video_element({'values':values},issues,loc.text)
      if rebuilt is None or issues or ET.tostring(rebuilt)!=ET.tostring(video):raise ValueError('Invalid video semantics')
     media_parents.add(loc.text)
+   if f['kind']=='news':
+    news=entry.findall('{'+NW+'}news')
+    if len(news)!=1:raise ValueError('News parent needs exactly one article')
+    node=news[0];publication=node.find('{'+NW+'}publication')
+    if publication is None or node.attrib or publication.attrib or [e.tag for e in node]!=['{'+NW+'}publication','{'+NW+'}publication_date','{'+NW+'}title'] or [e.tag for e in publication]!=['{'+NW+'}name','{'+NW+'}language']:raise ValueError('Invalid News shape')
+    if any(e.attrib or len(e) for e in list(publication)+list(node)[1:]):raise ValueError('Invalid News scalar')
+    profile={'qualifies_as_news':1,'source_evidence_id':'semantic_validation','source_version_sha256':'0'*64,'publication_name':publication[0].text,'publication_language':publication[1].text,'original_publication_value':node[1].text,'article_title':node[2].text}
+    rebuilt=news_element(profile,m.get('news_as_of',''))
+    if rebuilt is None or ET.tostring(rebuilt)!=ET.tostring(node):raise ValueError('Invalid News semantics/window')
+    media_parents.add(loc.text)
  if len(page_set)!=m['page_urls']:raise ValueError('Catalogue and sitemap coverage differ')
  if dict(host_counts)!=m['hosts'] or not media_parents<=page_set:raise ValueError('Media/host coverage differs')
- if referenced!={f['path'] for f in m['files'] if f['kind'] in ('pages','images','videos')}:raise ValueError('Unreferenced sitemap')
+ if referenced!={f['path'] for f in m['files'] if f['kind'] in ('pages','images','videos','news')}:raise ValueError('Unreferenced sitemap')
  for url,group in alternates.items():
   if url not in {u for _,u in group} or any(alternates.get(u)!=group for _,u in group):raise ValueError('Nonreciprocal hreflang')
  return {'valid':True,'page_urls':len(page_set),'files':len(seen_files),'release_id':m['release_id']}

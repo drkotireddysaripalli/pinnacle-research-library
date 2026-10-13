@@ -54,11 +54,13 @@ empty. An OG candidate does not prove that an image appears on the page.
 Inlink counts do not establish the actual destinations of links.
 
 Page XML emits `loc`, evidenced `lastmod` and, when supplied, reciprocal approved
-language alternates. Titles/descriptions/keywords remain catalogue/HTML/curation
+language alternates. Explicit versioned page profiles can emit optional
+`priority`/`changefreq`; absent values are omitted. Titles/descriptions/keywords remain catalogue/HTML/curation
 fields; they are not invented sitemap tags. Both Google and Bing ignore
-`priority` and `changefreq`; those stay internal. Crawl time and build time never
-become page modification dates. Index modification dates are omitted because
-a local build is not proof of a public child-file change.
+`priority` and `changefreq`; their presence does not improve those engines' ranking.
+Crawl time and build time never become page modification dates. Index `lastmod`
+requires matching public child-file bytes, an actual modification date and a
+public-verification receipt; a local build does not supply that evidence.
 
 Image XML emits current `image:image` / `image:loc` fields. Video XML validates
 required thumbnail/title/description and media/player identity, lengths, dates,
@@ -66,8 +68,10 @@ duration, flags, tags and restriction attributes. Empty optional tags are omitte
 titles exceeding 100 characters are shortened at a word boundary and logged
 with the original. Existing sitemap media is retained with source provenance;
 that is not proof that every video is currently playable, prominent or eligible
-for a video result. No news sitemap is generated without a qualifying dated
-news-publishing inventory.
+for a video result. News is conditional on a versioned, positively qualified
+publication/article inventory. Only articles within the build's two-day window
+are emitted, at most 1,000 per file; evergreen, stale and future articles are
+omitted. New profiles use current documented fields, without legacy News tags.
 
 Draft LLM references can be stored for every row, but no per-page mirror is public
 without review. Curation supplies `reviewed_sha256` for the exact public reference
@@ -185,10 +189,29 @@ evidence precede cloud acceptance. Native bulk synchronization requires a scoped
 authenticated route in the receiving environment; generated SQL is not proof
 that rows were synchronized.
 
-The current profile bridge preserves the existing imported public-sitemap media.
-It does not promote expanded OG/template candidates, invent missing dates or
-authors, or certify whole-library coverage. Full publisher/asset inventories and
-actual content/evidence reviews remain explicit work-order dependencies.
+The compatibility projection preserves existing imported public-sitemap media.
+Use `export-generator --normalized-profiles` or the repeatable wrapper below to
+render the normalized image/video/page/news and approved translation profiles.
+Existing imported references retain their declared baseline scope. New media
+requires an approved public use, matching published page version, rights status
+and exactly one channel INCLUDE for that version. Source/evidence mismatches,
+candidate profiles and stale translations fail validation. No dates or authors
+are invented. Whole-library/source and actual content reviews remain dependencies.
+
+```sh
+python tooling/sitemap-manager/catalogue_v2.py build-normalized \
+  --db private/catalogue-v2.sqlite3 --projection private/projection.sqlite3 \
+  --policy tooling/sitemap-manager/policy.json --output private/public-release \
+  --receipt private/normalized-build.json
+```
+
+The wrapper retains a frozen input snapshot, generates the validated private
+projection, composes verified public-file modification evidence and builds the
+public release. Database/projection/policy/receipt paths must remain outside the
+public output directory. `public_verified` publication rows require an actual
+coverage receipt. Applicable conditional profiles must be approved/populated;
+an empty News inventory produces no News file. This is technical eligibility,
+not a guarantee of rich results or indexing.
 
 `import-public-media --db private/catalogue-v2.sqlite3 --source private/cms-media.json
 --receipt private/cms-import.json` imports dedicated media metadata only from the

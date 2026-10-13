@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-10-13T05:59:04+00:00",
+  "updated_at": "2026-10-13T06:32:20+00:00",
   "accountable_owner": "This existing Pinnacle sitemap chat",
   "objective": "Deliver a repeatable, source-backed sitemap ecosystem for Pinnacle pages, images, videos and approved public companions, with safe publication, supported engine discovery and maintainable verification.",
   "completion_boundary": "Prepared files, local tests, native storage, production serving, engine processing and care outcomes are separately evidenced. Whole-estate completeness requires publisher and asset inventories.",
@@ -96,7 +96,7 @@
         "SM04",
         "SM05"
       ],
-      "next_action": "Approved exact DDL executed in kotii/pinnacleactive/main: all 31 tables, 308 columns and 126 indexes match native readback. Tables initially empty. Use the existing authenticated bulk route, then verify row hashes/counts; creation does not close synchronization. Private source export completed: 1247276 rows in 2503 bounded hash-verified SQL batches. Apply via the existing authenticated native route and read back counts/hashes; exported files are not synchronized rows.",
+      "next_action": "31 tables/308 columns/126 indexes verified natively; zero initial rows. Private export complete and hash-verified: 1,247,276 rows/2,503 bounded batches, 2,229,278,168 bytes. Existing Windows owner confirms it has not received/loaded these files. Reuse a protected transfer and existing authenticated native bulk route; verify native counts and ordered canonical row hashes.",
       "evidence": [
         "outputs/sitemap-ddl-approval-manifest-20261013.json",
         "outputs/sitemap-planetscale-v2-native-creation-20261013.json",
@@ -143,16 +143,19 @@
     {
       "id": "SM09",
       "task": "Implement every supported sitemap output profile",
-      "status": "ready",
+      "status": "verified",
       "validation": "All 43 current core/image/video/news/hreflang paths are mapped and validated; optional fields use evidence and applicability; flat exact-host indexes obey 50k/50MiB limits. No deprecated or invented AI tags.",
       "owner": "Sitemap workstream",
       "depends_on": [
         "SM05"
       ],
-      "next_action": "Storage and the validated field dictionary cover all 43 paths. Finish the normalized approved-profile renderer plus optional index lastmod, priority/changefreq and conditional qualifying News output; the compatibility renderer currently preserves imported references.",
+      "next_action": "All 43 current XML field paths are rendered and observed in an official-XSD-valid synthetic fixture. Full-catalogue normalized build reproduces the original 225 public files exactly. Populate only evidenced applicable profiles; no qualifying News data currently loaded.",
       "evidence": [
         "outputs/sitemap-field-contract-validation-20261013.json",
-        "tooling/sitemap-manager/manager.py"
+        "tooling/sitemap-manager/manager.py",
+        "tooling/sitemap-manager/normalized_profiles.py",
+        "outputs/sitemap-renderer-field-coverage-20261013.json",
+        "outputs/sitemap-normalized-release-20261013.json"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied"
     },
@@ -184,7 +187,7 @@
         "SM09",
         "SM10"
       ],
-      "next_action": "Normalized projection reproduces the reviewed public release exactly; 59 Python/4 Node contracts and 44 official-schema XML files pass. Commit/push this same-PR implementation and verify exact-source CI; expanded-media acceptance and full optional renderer remain separate.",
+      "next_action": "71 Python/5 hosting contracts pass; 44 real-candidate XML and five synthetic all-field XML files pass official XSD. Check in this finished renderer update to the same PR and verify exact-source CI. Expanded-media/source acceptance remains separate.",
       "evidence": [
         "tooling/sitemap-manager/baseline/receipt-20261012.json",
         "PR58",
@@ -196,16 +199,18 @@
     {
       "id": "SM12",
       "task": "Integrate into the existing website release pipeline",
-      "status": "ready",
+      "status": "in_progress",
       "validation": "Adapter/discovery additions integrated into the existing authoritative full asset/route/binding union; unchanged protected services and unrelated file hashes preserved; owner acceptance and rollback recorded.",
       "owner": "Existing website release owner",
       "depends_on": [
         "SM11"
       ],
-      "next_action": "Named handoff authorized. Send tested PR58 packet to the existing Windows release owner; refresh complete union, preserve protected routes and compose human navigation with approved common shell/native typography before publication.",
+      "next_action": "Web Build confirmed exact PR/source/tree, 7/7 documented source hashes, archive integrity, 71,047 URLs/225 files/44 XML and five hosts. Intake is complete; integration/deployment and private export load have not started/been accepted. Continue the same owner with the finished renderer revision.",
       "evidence": [
         "tooling/sitemap-manager/README.md",
-        "outputs/pinnacle-sitemap-work-order-20261013.html"
+        "outputs/pinnacle-sitemap-work-order-20261013.html",
+        "outputs/sitemap-release-owner-handoff-20261013.json",
+        "Windows outputs/sitemap-owner-handoff-20261013/INTAKE.json"
       ],
       "deadline": "Before the dependent milestone; no calendar deadline was supplied"
     },
