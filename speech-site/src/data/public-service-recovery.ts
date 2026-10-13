@@ -37,7 +37,7 @@ export const recoveryServices = {
 } as const;
 export const assessmentCategories = {
  speech:{label:'Speech and language',opening:'Speech & language assessment.',question:'Help your child be understood.',service:'speech',related:'/top-speech-therapy-center-india-proven-improvement-rate'},
- 'special-education':{label:'Special education',opening:'Learning & special education assessment.',question:'Understand the next step for learning and participation.',service:'special',related:'/best-special-education-center-call-9100181181'},
+ 'special-education':{label:'Special education',opening:'Learning & special education assessment.',question:'Understand the next step for learning and participation.',service:'education',related:'/best-special-education-center-call-9100181181'},
  psychological:{label:'Psychological',opening:'Psychological assessment enquiries.',question:'Bring your question. Confirm the appropriate professional.',service:'help',related:'/child-psychological-counseling'},
  personality:{label:'Personality',opening:'Personality assessment enquiries.',question:'Confirm the purpose, age range and suitable professional.',service:'help',related:'/speech-aba-autism-assessments'},
  occupational:{label:'Occupational therapy',opening:'Occupational therapy assessment.',question:'Connect everyday activities with a useful next step.',service:'occupational',related:'/best-occupational-therapy-center-india-proven-improvement-rate'},
