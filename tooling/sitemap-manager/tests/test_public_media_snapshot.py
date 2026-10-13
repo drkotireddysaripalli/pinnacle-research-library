@@ -16,6 +16,13 @@ class PublicMediaSnapshot(unittest.TestCase):
             self.assertEqual(parser.snapshot()['title'], 'AAC Apps & Software | Pinnacle Blooms')
             self.assertEqual(parser.snapshot()['h1'], 'AAC')
 
+    def test_head_svg_and_second_title_never_replace_or_extend_document_title(self):
+        markup='<head><svg><title>Icon before document title</title></svg><title>Actual document title</title><svg><title>Icon inside malformed head</title></svg><title>Duplicate title</title></head><body>Content</body>'
+        from source_refresh import PublicHTML
+        for reader in (p.MediaHTML,PublicHTML):
+            parser=reader('https://materials.pinnacleblooms.org/aac');parser.feed(markup)
+            self.assertEqual(parser.snapshot()['title'],'Actual document title')
+
     def test_transformed_image_keeps_separate_actual_rendition_and_r2_source(self):
         actual = 'https://images.pinnacleblooms.org/cdn-cgi/image/width=1400,quality=55/Assets/example.png'
         parser = p.MediaHTML('https://materials.pinnacleblooms.org/example')
