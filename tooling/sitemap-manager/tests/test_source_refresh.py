@@ -29,5 +29,11 @@ class SourceRefresh(unittest.TestCase):
   changes,holds,_=s.apply_resources(self.db,{self.resource:current},{},{});self.assertFalse(changes);self.assertFalse(holds);self.assertEqual(len(json.loads(self.db.execute('select videos_json from pages where url=?',(self.resource,)).fetchone()[0])),1)
  def test_transient_resource_failure_does_not_infer_deletion(self):
   changes,holds,_=s.apply_resources(self.db,{self.resource:{'publication_qualified':False,'status':503,'error':'temporary'}},{},{});self.assertFalse(changes);self.assertEqual(len(holds),1);self.assertEqual(self.db.execute('select decision from pages where url=?',(self.resource,)).fetchone()[0],'INCLUDE')
+ def test_navigation_requires_exact_authoritative_head_title_not_a_denylist(self):
+  self.db.commit();root=Path(self.temp.name)/'release';root.mkdir();(root/'manifest.json').write_text(json.dumps({'files':[{'kind':'html','path':'index.html'}]}));source=[{'page_url':self.resource,'publication_qualified':True,'title':'Approved title'}]
+  (root/'index.html').write_text('<nav><a href="'+self.resource+'">Materials</a></nav><main><a href="/site-map/">Index</a><a href="'+self.resource+'">Approved title</a></main>')
+  proof=s.validate_resource_labels(root,source,Path(self.temp.name)/'feed.sqlite3');self.assertEqual(proof['distinctResourceLabelsMatched'],1)
+  (root/'index.html').write_text('<main><a href="'+self.resource+'">Approved titleAromatherapy / Scent Kit</a></main>')
+  with self.assertRaisesRegex(ValueError,'authoritative document head'):s.validate_resource_labels(root,source,Path(self.temp.name)/'feed.sqlite3')
 
 if __name__=='__main__':unittest.main()

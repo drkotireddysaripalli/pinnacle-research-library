@@ -5,6 +5,7 @@ Private candidate/checkpoint files only. No source DB/care writes or engine call
 from __future__ import annotations
 import argparse,concurrent.futures,csv,datetime as dt,hashlib,json,sqlite3,urllib.request,urllib.error,urllib.parse,subprocess
 from pathlib import Path
+from html.parser import HTMLParser
 import manager as m
 from public_media_snapshot import MediaHTML,MAX_BODY
 
@@ -82,6 +83,38 @@ def apply_ask(db,snapshot,baseline,metadata_reader=None):
 
 def video_values(v):return v.get('values',v)
 
+def validate_resource_labels(release,records,feed):
+ """Every approved resource navigation label must match its actual head title."""
+ db=m.connect(feed)
+ try:included={r[0] for r in db.execute("SELECT url FROM pages WHERE decision='INCLUDE'")}
+ finally:db.close()
+ expected={m.normal(r['page_url']):r['title'] for r in records if r.get('publication_qualified') and m.normal(r['page_url']) in included}
+ seen=set();checked=0
+ class Links(HTMLParser):
+  def __init__(self):super().__init__(convert_charrefs=True);self.href=None;self.text=[];self.main=False
+  def handle_starttag(self,tag,attrs):
+   if tag=='main':self.main=True
+   if tag=='a' and self.main:self.href=dict(attrs).get('href');self.text=[]
+  def handle_data(self,data):
+   if self.href:self.text.append(data)
+  def handle_endtag(self,tag):
+   nonlocal checked
+   if tag=='main':self.main=False
+   if tag!='a' or not self.href:return
+   if urllib.parse.urlsplit(self.href).scheme not in ('http','https'):
+    self.href=None;return
+   url=m.normal(self.href)
+   if url in expected:
+    actual=''.join(self.text).strip()
+    if actual!=expected[url].strip():raise ValueError('Resource label does not equal authoritative document head title: '+url)
+    seen.add(url);checked+=1
+   self.href=None
+ release=Path(release);manifest=json.loads((release/'manifest.json').read_text())
+ for f in manifest['files']:
+  if f['kind']=='html':parser=Links();parser.feed((release/f['path']).read_text(encoding='utf8'));parser.close()
+ if seen!=set(expected):raise ValueError('Generated resource navigation coverage differs from approved source: '+str(len(set(expected)-seen)))
+ return {'authoritativeResourceTitles':len(expected),'distinctResourceLabelsMatched':len(seen),'renderedLabelOccurrencesMatched':checked,'mismatches':0,'comparison':'exact document-head title text by approved parent URL'}
+
 def video_location(v):
  v=video_values(v);return v.get('content_loc') or v.get('player_loc')
 
@@ -153,6 +186,8 @@ def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None
  (output/'source-delta.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');return result
 
 def main():
+ if '--validate-resource-labels' in __import__('sys').argv:
+  p=argparse.ArgumentParser();p.add_argument('--validate-resource-labels',type=Path,required=True);p.add_argument('--resource-source',type=Path,required=True);p.add_argument('--feed',type=Path,required=True);p.add_argument('--proof',type=Path,required=True);a=p.parse_args();records=[json.loads(l) for l in a.resource_source.read_text(encoding='utf8').splitlines() if l];proof=validate_resource_labels(a.validate_resource_labels,records,a.feed);a.proof.write_text(json.dumps(proof,indent=2)+'\n');print(packed(proof));return
  if '--r2-source' in __import__('sys').argv:
   p=argparse.ArgumentParser();p.add_argument('--r2-source',required=True,type=Path);p.add_argument('--delta',required=True,type=Path);a=p.parse_args();r2=json.loads(a.r2_source.read_text());delta=json.loads(a.delta.read_text());db=m.connect(delta['candidate_feed'])
   try:
