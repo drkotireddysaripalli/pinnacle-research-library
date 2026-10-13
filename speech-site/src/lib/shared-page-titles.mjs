@@ -37,7 +37,7 @@ export function askAnswerTitle(answer){
  // Retain the full source for proven identity collisions, numeric bands and
  // explicit locality/language qualifiers. Reuse unchanged safe titles elsewhere.
  // Longer editorial titles remain reviewable rather than being falsely unique.
- const qualifiers=subject.match(/\d+\s*[-–]\s*\d+|\b(?:not|never|without|Hyderabad|Telangana|Andhra Pradesh|Guntur|Vijayawada|Visakhapatnam|Tirupati|Warangal|Chennai|Bengaluru|Hindi|Telugu|Tamil|Kannada|Malayalam|Marathi|Bengali|Gujarati|Punjabi|Odia|Urdu|(?:speech(?: and language)?|occupational|ABA|autism|behaviour|behavior|parent-mediated) therapy|developmental (?:coordination|language) disorder)\b/giu)||[];
+ const qualifiers=subject.match(/\d+\s*[-–]\s*\d+|\b(?:not|never|without|Hyderabad|Telangana|Andhra Pradesh|Guntur|Vijayawada|Visakhapatnam|Tirupati|Warangal|Chennai|Bengaluru|Hindi|Telugu|Tamil|Kannada|Malayalam|Marathi|Bengali|Gujarati|Punjabi|Odia|Urdu|(?:language|cognitive|physical|social|communication|emotional|adaptive|sensory|motor) development|(?:speech(?: and language)?|occupational|ABA|autism|behaviour|behavior|parent-mediated) therapy|developmental (?:coordination|language) disorder)\b/giu)||[];
  const missingQualifier=qualifiers.some(x=>!compact.toLocaleLowerCase('en').includes(x.toLocaleLowerCase('en')));
  return askTitleIdentityCollisions.has(compact)||missingQualifier?subject+' | Ask Pinnacle':compact;
 }

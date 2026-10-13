@@ -10,6 +10,7 @@ test('AbilityScore interpretation retains the full domain and each actual range'
  });
  assert.equal(new Set(titles).size,3);
  assert.notEqual(askAnswerTitle({h1:'What an AbilityScore of 200–300 in Language means'}),askAnswerTitle({h1:'What an AbilityScore of 200–300 in Language Development Means'}));
+ assert(askAnswerTitle({h1:'What an AbilityScore of 200–300 in Language Development Means'}).includes('Language Development'));
 });
 
 test('question identity survives independently of a length target',()=>{
