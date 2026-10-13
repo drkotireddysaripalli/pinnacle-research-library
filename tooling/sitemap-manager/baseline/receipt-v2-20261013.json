@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-13",
+  "scope": "Normalized local implementation and native table creation; production serving/engine processing not yet accepted",
+  "contracts": {
+    "python_passed": 59,
+    "node_passed": 4,
+    "official_xsd_xml_files_passed": 44
+  },
+  "collected_current_addresses": 221335,
+  "eligible_page_candidates": 71047,
+  "hold": 23600,
+  "excluded": 126688,
+  "normalized_assets": 83169,
+  "media_uses": 87454,
+  "cms_dedicated_media_records_accounted": 4115,
+  "approved_ddl_sha256": "99afe72a268c96a1070921b170b7f130744fc8072a9c384ceaf0c2167b816dfb",
+  "native_schema": {
+    "organization": "kotii",
+    "database": "pinnacleactive",
+    "branch": "main",
+    "tables": 31,
+    "columns": 308,
+    "indexes": 126,
+    "foreign_keys_enabled": false,
+    "rows_at_creation": 0,
+    "exact_ddl_readback_verified": true,
+    "data_synchronized": false
+  },
+  "public_candidate": {
+    "release_id": "264f85221596f585f3de370e4c6a31484c1cddb9c45044f39478439b459198f5",
+    "files": 225,
+    "xml_files": 44,
+    "page_urls": 71047,
+    "image_references": 364,
+    "video_entries": 19163,
+    "deployed_by_this_workstream": false,
+    "unchanged_from_reviewed_baseline": true
+  },
+  "review_disposition": {
+    "five_initial_review_findings": "corrected with regression tests",
+    "two_followup_review_findings": "missing expected-decisions preflight and ambiguous projection decisions corrected with regression tests",
+    "independent_final_recheck_claimed": false
+  },
+  "known_dependencies": [
+    "Complete public publishing/object-store/embedded/question-media inventories",
+    "Missing publisher content/version/review/link evidence",
+    "Normalized approved-profile renderer and three optional core fields plus conditional qualifying News output",
+    "Native authenticated bulk-data receiving route and readback",
+    "Owner shared-shell/typography and complete deployment union integration",
+    "Public file readback before supported engine submission and processing acceptance"
+  ],
+  "source_code_sha256": {
+    "catalogue_v2.py": "d17ba8898f772668147745d66f26659de96a846421c0e8fad4e2bc9d13c73a2d",
+    "tests/test_catalogue_v2.py": "032de5fb9b2a88d92a5fcff26c966ab5a2b01d01abba20a005c00e6876fabef3",
+    "schema/catalogue-v2.contract.json": "bf0da9cac119f4a4870b0d9b80932255e2253dd98322f7b2bfa5732bbd3510cb",
+    "schema/planetscale-v2.sql": "99afe72a268c96a1070921b170b7f130744fc8072a9c384ceaf0c2167b816dfb",
+    "editorial-policy.json": "3fbf558b835425cffadbaced80b5da77056ee29371ed5b796cc78b491e6b5f85",
+    "brand-profile.json": "a9894d8b1a0c61a1aa6924df6a7df7fc2bb4958c2bb68e26e25cb2ce7700fe64",
+    "work_order.py": "20b4ce4c08fadef62672de51637ec628d34aef705ffb85a9dc82e6af4f871c81"
+  }
+}

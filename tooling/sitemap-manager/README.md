@@ -129,6 +129,96 @@ network access occurs during this check.
 
 ## Optional database synchronization
 
+### Normalized catalogue and the single work order
+
+The [work order](work-order.json) is the accountable queue for this ecosystem.
+Each item names its owner, dependency, next action and validation criterion.
+Render it with `python tooling/sitemap-manager/work_order.py --html private/work-order.html`.
+Do not mark native storage, public serving or engine processing complete from an
+offline file or a passing test.
+
+`catalogue_v2.py` implements the reviewed normalized model in
+`schema/catalogue-v2.contract.json`: 27 catalogue/standards tables plus four
+claim, claim-evidence, review and contributor tables. SQLite enables deferred
+foreign keys and composite media/rendition ownership. The existing PlanetScale
+database has foreign keys disabled; the importer and readback validator enforce
+identity/provenance/relationship integrity without changing that setting.
+Optional descriptive fields retain NULL. `editorial-policy.json` defines the
+36 population rules, 10 family profiles and scoped evidence/review requirements.
+`brand-profile.json` carries the shared, source-linked organisation/contact
+identity; it is not a clinical byline or a new outcome claim.
+
+```sh
+python tooling/sitemap-manager/catalogue_v2.py schema --output private/schema
+python tooling/sitemap-manager/catalogue_v2.py import \
+  --legacy-db private/catalogue.sqlite3 \
+  --candidate-media private/page-image-candidates.jsonl \
+  --db private/catalogue-v2.sqlite3 --receipt private/import-v2.json \
+  --expected-decisions private/job.json
+python tooling/sitemap-manager/catalogue_v2.py seed \
+  --db private/catalogue-v2.sqlite3 \
+  --registry private/standards-property-registry.json \
+  --receipt private/dictionary-v2.json
+python tooling/sitemap-manager/catalogue_v2.py validate --db private/catalogue-v2.sqlite3
+python tooling/sitemap-manager/catalogue_v2.py export-generator \
+  --db private/catalogue-v2.sqlite3 --output private/generator-projection.sqlite3 \
+  --receipt private/projection.json
+python tooling/sitemap-manager/manager.py build \
+  --db private/generator-projection.sqlite3 \
+  --policy tooling/sitemap-manager/policy.json --output private/release
+```
+
+The importer freezes a SQLite backup, including committed WAL records, hashes
+and retains that source artifact, and imports one consistent snapshot. It rejects
+input/output/receipt aliases, active destination sidecars, conflicting immutable
+replays, missing provenance and invalid decisions. Candidate associations with
+unmapped parents remain evidence with reconciled counts. They never silently
+become approved images. The compatibility projection requires one accepted
+page-sitemap decision per current URL; conflicting versions need explicit
+resolution. The existing generator continues to enforce canonical, freshness,
+media and public-text approval rules.
+
+Store the SQLite database, frozen sources, row exports and receipts outside
+public website assets and this repository. The 31-table MySQL DDL is a review
+artifact. Human approval of its exact statements and native schema/readback
+evidence precede cloud acceptance. Native bulk synchronization requires a scoped
+authenticated route in the receiving environment; generated SQL is not proof
+that rows were synchronized.
+
+The current profile bridge preserves the existing imported public-sitemap media.
+It does not promote expanded OG/template candidates, invent missing dates or
+authors, or certify whole-library coverage. Full publisher/asset inventories and
+actual content/evidence reviews remain explicit work-order dependencies.
+
+`import-public-media --db private/catalogue-v2.sqlite3 --source private/cms-media.json
+--receipt private/cms-import.json` imports dedicated media metadata only from the
+declared public `faq`, `sunshine` and `guru` sources. Each source artifact declares
+its date, scope, row count and rows. It accounts for unmapped parents and unparsed
+fields without promotion. Root-relative paths need a separate, source-linked
+resolution artifact with the documented publishing origin; do not guess image
+locations or treat a declared image field as pixel/rights verification.
+
+```sh
+python tooling/sitemap-manager/catalogue_v2.py resolve-relative-media \
+  --source private/cms-media.json --origin https://www.pinnacleblooms.org/ \
+  --evidence private/origin-evidence.json --output private/cms-resolved.json \
+  --receipt private/resolution.json
+python tooling/sitemap-manager/catalogue_v2.py export-mysql-v2 \
+  --db private/catalogue-v2.sqlite3 --output private/mysql-v2-export \
+  --receipt private/mysql-v2-export.json
+```
+
+The normalized export freezes and validates the source, then creates at most
+500-row/4-MiB batches with UTF-8 hex literals. The private manifest declares the
+approved schema hash, each batch hash, exact table counts and ordered row hashes.
+JSON cells are parsed and canonically serialized for row hashing, so JSON key
+order/spacing does not cause a false native mismatch. The receiving environment
+must verify every named batch before applying it with its existing scoped native
+connection, then read all columns in primary-key order, canonicalize JSON in the
+same way and reconcile row hashes/counts plus logical references. UPSERT retains
+history; it never implicitly deletes missing records. A new export directory is
+required. SQL generation is not native data loading or validation.
+
 Keep this website catalogue separate from care, caller and employee tables.
 The connected PlanetScale tool requires explicit human approval of the exact DDL
 before table creation. It must not be bypassed through another route.

@@ -1,0 +1,590 @@
+{
+  "version": "pinnacle-editorial-population-v1",
+  "date": "2026-10-13",
+  "tone_and_experience": {
+    "voice": "Warm, clear, specific, respectful and professionally grounded. Speak directly to families as capable partners.",
+    "purpose": "Keep Pinnacle's child-centred purpose: growing self-sufficiency and meaningful mainstream participation, with the support and adaptations that fit the child.",
+    "expertise": "Explain the observation, choice, reason and review point. Define technical names once in familiar words; use the right professional contribution for the topic.",
+    "wisdom": "A useful record helps someone notice what matters, understand context, make an informed next decision and know what to discuss in review.",
+    "wording": "Use concrete routines and examples. Acknowledge strengths and individual circumstances. Prefer understandable descriptions over rankings, excessive superlatives or fear.",
+    "history": "Attribute verified historical experience to its real person, team, programme or organisation and dates. Page-specific insight shows experience; a repeated 16+ years line cannot supply that insight.",
+    "language": "Follow each family's preferred language and respectful disability terminology where known. Keep approved programme spellings and native-script language/typography contracts. Qualified translations preserve the source's meaning and limits.",
+    "brand_in_images": "Preserve approved Pinnacle emblem/name, colours and applicable 9100 181 181 social-card presentation. Approved professional-coat depiction must not imply that a therapist is a medical doctor. Keep essential wording in accessible HTML as well.",
+    "length": "Use the length needed for the question and context. There is no required paragraph count or SEO word target. Avoid duplication when the useful answer is already complete."
+  },
+  "field_rules": [
+    {
+      "subject": "all",
+      "field": "source_identity_and_version",
+      "fill_rule": "Preserve the source system/key, import ID and exact source version. Keep raw values alongside approved values; a crawler snapshot cannot overwrite accepted editorial copy.",
+      "required_when": "Every record",
+      "storage_mapping": "source_imports + observations; native source keys on pages/assets",
+      "public_destination": "Internal provenance",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "all",
+      "field": "language_and_publication_state",
+      "fill_rule": "Use the actual language and independent editorial, verification and publication states. Translate the meaning and qualification together; use real native-script review where needed.",
+      "required_when": "Every record",
+      "storage_mapping": "pages/assets + observations + metadata_values",
+      "public_destination": "HTML lang and supported language metadata",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "all",
+      "field": "brand_profile_ref",
+      "fill_rule": "Reference Pinnacle's versioned shared brand identity, purpose and contact. Do not copy a dated credential bundle into every record.",
+      "required_when": "Every Pinnacle-owned public page/asset; external items keep their true publisher",
+      "storage_mapping": "agents for publisher identity; proposed business metadata in metadata_values",
+      "public_destination": "Publisher identity, About/Verify and relevant brand presentation",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "module_type_and_parent",
+      "fill_rule": "Use the maintained module/taxonomy and real parent. Ask, Sunshine, Mirracles and assessment questions are distinct profiles; private assessment instances are never public content records.",
+      "required_when": "Every public page",
+      "storage_mapping": "pages.module_type + page_relations",
+      "public_destination": "Breadcrumbs, navigation and relevant structured data",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "audience_need",
+      "fill_rule": "Write the one question or task this page addresses, the intended reader and context. Infer intent only as a draft when no approved brief exists.",
+      "required_when": "Every editorial public page",
+      "storage_mapping": "Proposed pinnacle_editorial properties in metadata_values",
+      "public_destination": "Opening explanation and useful navigation",
+      "population_route": "Editorial classification; review uncertain cases"
+    },
+    {
+      "subject": "page",
+      "field": "title",
+      "fill_rule": "Give the topic or question first; use the appropriate Pinnacle family name naturally. Be specific and accurate. Avoid identical benefit promises across unrelated topics.",
+      "required_when": "Every page",
+      "storage_mapping": "pages.title; retain source title observation",
+      "public_destination": "H1 and appropriately adapted HTML title",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "description_and_direct_answer",
+      "fill_rule": "Write a complete, useful answer or summary in the record's language. Reflect the actual body and do not cut mid-sentence. Search snippets can differ from the supplied description.",
+      "required_when": "Every editorial page",
+      "storage_mapping": "pages.description + proposed answer property + versioned text representation",
+      "public_destination": "Visible summary, meta description and suitable structured description",
+      "population_route": "Source-backed editorial draft, then review"
+    },
+    {
+      "subject": "page",
+      "field": "care_purpose_and_intended_value",
+      "fill_rule": "State what the reader can understand, discuss, choose or do next. Connect to communication, choice, everyday routines, learning or participation when relevant. Record this as intended value, not measured improvement.",
+      "required_when": "Educational and care pages",
+      "storage_mapping": "Proposed purpose/reader_value properties",
+      "public_destination": "Main explanation and contextual call to action",
+      "population_route": "Editor using the approved life-first narrative"
+    },
+    {
+      "subject": "page",
+      "field": "practice_insight",
+      "fill_rule": "Capture a topic-specific decision or observation from a named approved expert or documented workflow. Record the source and conditions. AI-written wisdom is a draft, not first-hand clinical experience.",
+      "required_when": "When professional/operational experience is claimed",
+      "storage_mapping": "Proposed insight property + observations; proposed claims/claim_evidence joins",
+      "public_destination": "A useful explanatory passage and attributable source",
+      "population_route": "Named expert contribution or approved source extraction"
+    },
+    {
+      "subject": "page",
+      "field": "example_kind_and_context",
+      "fill_rule": "Label an example as illustrative, documented observation, consented experience or research finding. Include relevant setting and support; never convert a fictional scenario into a patient case.",
+      "required_when": "Every example",
+      "storage_mapping": "Proposed example properties + evidence observations",
+      "public_destination": "Visible example label and explanation",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "author_and_contributors",
+      "fill_rule": "Identify who actually wrote, supplied, translated or edited this version. Link to an existing genuine profile. Institutional publisher is valid; it does not prove a clinician wrote the article.",
+      "required_when": "Every authored resource; show a byline when useful/expected",
+      "storage_mapping": "agents; proposed subject_contributors join",
+      "public_destination": "Accurate byline/profile and supported author markup",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "reviewer_and_review_scope",
+      "fill_rule": "Record the real reviewer, relevant verified expertise, version inspected, decision and review date. An editorial check, clinical review and independent registry check are separate actions.",
+      "required_when": "Clinical advice/claims require the relevant clinical review; factual operational metadata follows its scoped check",
+      "storage_mapping": "agents + observations; proposed content_reviews join",
+      "public_destination": "Relevant reviewer statement and genuine credentials",
+      "population_route": "Actual assigned reviewer; never fabricate a sign-off"
+    },
+    {
+      "subject": "claim",
+      "field": "claim_text_type_and_scope",
+      "fill_rule": "Store exact approved wording and distinguish educational explanation, organisational fact, experience, study finding, regulatory scope, service promise and individual outcome. Record entity/product/version/population/premises where applicable.",
+      "required_when": "Every consequential claim",
+      "storage_mapping": "Proposed claims join; staged claim bundle with evidence observations",
+      "public_destination": "Claim and concise qualification beside the relevant evidence",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "claim",
+      "field": "evidence_and_citations",
+      "fill_rule": "Attach the source that supports this specific claim, not just a general Verify link. Keep issuer/author, document title, URL/DOI, date/version, page/table/section locator, public disclosure level, source hash and review decision. Record support, qualification or contradiction.",
+      "required_when": "Every factual/clinical/regulatory/history/outcome claim needing support",
+      "storage_mapping": "source_imports + observations; proposed claim_evidence join",
+      "public_destination": "Contextual citation with an inspectable public source",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "claim",
+      "field": "outcome_definition",
+      "fill_rule": "For a measured outcome include population, sample/denominator, timeframe, measure, method, evidence design, attribution limitations and consented disclosure scope. A mission, aim, score gain or testimony has its own evidence type.",
+      "required_when": "When a result or effectiveness statement is published",
+      "storage_mapping": "Proposed typed claim properties and claim evidence",
+      "public_destination": "Result with relevant method and limits",
+      "population_route": "Approved research/outcome source; never derive from clicks"
+    },
+    {
+      "subject": "claim",
+      "field": "credential_scope_and_validity",
+      "fill_rule": "Use the exact holder, licence/credential ID, issuer, device/version, premises/intended use, dates and verification action. Attribute a practitioner credential to that person and a company licence to its stated holder.",
+      "required_when": "When a credential is used",
+      "storage_mapping": "agents + metadata_values + observations + proposed claim links",
+      "public_destination": "Relevant credential/source panel",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "dates",
+      "fill_rule": "Keep first publication, meaningful content modification, source capture, editorial review and clinical review separate. Only a real substantial change can update content lastmod; unknown dates stay unknown.",
+      "required_when": "Every dated claim/date output",
+      "storage_mapping": "pages date fields + observations; review extension",
+      "public_destination": "Accurate visible dates, markup and supported sitemap lastmod",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "contact_and_next_step",
+      "fill_rule": "Choose an appropriate resource, centre, assessment conversation or call. Use central 9100181181 contact. Explain the next decision; don't imply a click booked a visit. Operational promises need their approved source.",
+      "required_when": "Care-oriented pages; other records may use a reading/source action",
+      "storage_mapping": "links + page_relations + proposed CTA profile metadata",
+      "public_destination": "Contextual CTA and consent-aware coarse engagement measurement",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "topic_taxonomy",
+      "fill_rule": "Use relevant maintained topics and entities. Keep keyword research internal. Do not load every autism/therapy/city term into every title, description or asset.",
+      "required_when": "For classification/retrieval",
+      "storage_mapping": "pages.topic_keywords_json + semantic metadata/page_relations",
+      "public_destination": "Relevant topic navigation and supported about/mentions",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "canonical_and_related_resources",
+      "fill_rule": "Retain the established canonical and relate only genuinely useful resources. Record why an edge exists: definition, example, evidence, translation, next care step or related material.",
+      "required_when": "Every page and relationship",
+      "storage_mapping": "url_registry + pages canonical + page_relations + links",
+      "public_destination": "Working canonical, breadcrumbs and contextual links",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "page",
+      "field": "business_intent_and_measurement",
+      "fill_rule": "Keep educate, prepare, enquire, attend and enrol as separate stages. Mark enquiry goals as goals; measured qualification, attendance and enrolment come from authorised receiving systems, linked only by protected/opaque IDs.",
+      "required_when": "When acquisition intent/results are tracked",
+      "storage_mapping": "Internal business metadata and protected reporting integration",
+      "public_destination": "Appropriate CTA; no family/clinical free text in general analytics",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "asset",
+      "field": "subject_name_description_and_role",
+      "fill_rule": "Describe the actual asset and what it contributes to a topic. Separate subject, educational purpose, creator and role (hero, question example, diagram, demonstration, icon, evidence scan, social card).",
+      "required_when": "Every public asset",
+      "storage_mapping": "assets name/description + media_uses role/context + descriptive metadata",
+      "public_destination": "Asset caption/description and appropriate media markup",
+      "population_route": "Inspect the actual media; source extract technical fields"
+    },
+    {
+      "subject": "asset",
+      "field": "creator_credit_rights_and_license",
+      "fill_rule": "Store actual creator, credit, rights holder, licence and permitted uses. Do not infer ownership or reuse rights from being online. Original and derivative/rendition identities stay connected.",
+      "required_when": "Every public asset; rights status must be known before new use",
+      "storage_mapping": "asset_contributors + assets rights/credit/license + asset_relations",
+      "public_destination": "Applicable credit/license and supported image-rights metadata",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "asset",
+      "field": "origin_and_disclosure",
+      "fill_rule": "Distinguish real photo/footage, authored diagram, licensed stock, AI illustration, composite and scanned evidence. AI family artwork is illustrative; an approved brand logo does not turn it into clinical evidence.",
+      "required_when": "Every asset with a truth/attribution implication",
+      "storage_mapping": "Proposed origin/disclosure metadata + observations",
+      "public_destination": "Useful visible disclosure/caption when its nature matters",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "asset",
+      "field": "publication_permission",
+      "fill_rule": "For identifiable people/children or testimonies keep protected permission evidence and its permitted channel, use, date and revocation status. Public output contains approved material, never the consent document or private case identifiers.",
+      "required_when": "Identifiable people, stories or private-origin assets",
+      "storage_mapping": "Protected evidence reference; public catalogue stores approved status/opaque pointer only",
+      "public_destination": "Approved public disclosure scope",
+      "population_route": "Authorised permission review"
+    },
+    {
+      "subject": "asset",
+      "field": "technical_metadata",
+      "fill_rule": "Measure MIME type, dimensions, bytes, hash, duration, aspect ratio and available renditions from the file/provider. Keep actual publication/upload dates apart from file mtime or discovery time.",
+      "required_when": "As applicable by media type",
+      "storage_mapping": "asset_renditions + assets publication values + observations",
+      "public_destination": "Correct rendering/performance metadata and supported media fields",
+      "population_route": "Deterministic file/provider extraction"
+    },
+    {
+      "subject": "image_use",
+      "field": "alt_text",
+      "fill_rule": "Describe the information or action this image supplies in this placement. For purely decorative or redundant images use alt=''. A linked image needs an accessible destination/action name. Complex charts need a nearby full text explanation. Brand/phone belongs here only when relevant to its actual function or essential visible information.",
+      "required_when": "Each rendered image use",
+      "storage_mapping": "media_uses.alt_text, keyed by page/slot/version",
+      "public_destination": "HTML alt; not a current image-sitemap tag",
+      "population_route": "Actual-media inspection plus accessibility review"
+    },
+    {
+      "subject": "image_use",
+      "field": "caption_and_context",
+      "fill_rule": "Explain the useful connection between the illustration and the page. Keep captions distinct from alt text. Preserve essential diagram labels, instructions and important contact text in accessible HTML too.",
+      "required_when": "When a caption/explanation adds meaning",
+      "storage_mapping": "media_uses.caption/context_text",
+      "public_destination": "Visible caption and nearby content",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "image_use",
+      "field": "question_or_example_connection",
+      "fill_rule": "Link to a public content question/example ID and its version, not an individual's assessment response. Establish which question, material, ability or intervention the image illustrates.",
+      "required_when": "Question/example/assessment educational images",
+      "storage_mapping": "media_uses.public_question_or_example_key + page_relations",
+      "public_destination": "Relevant public question/example page",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "image_use",
+      "field": "preferred_rendition",
+      "fill_rule": "Use a stable public representative rendition for discovery and an appropriate OG image for sharing. Confirm it depicts this topic and works at preview sizes. Preserve approved brand lockup and contact on applicable branded creatives.",
+      "required_when": "When an image is selected for a sitemap/social preview",
+      "storage_mapping": "asset_renditions + media_uses + image_sitemap_profiles",
+      "public_destination": "HTML image, OG/primaryImageOfPage and image:loc",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "video",
+      "field": "title_and_description",
+      "fill_rule": "Summarise the actual clip, its subject and type. A material demonstration and a parent testimony need different descriptions. Do not replace the clip summary with identical promotional boilerplate.",
+      "required_when": "Each published video",
+      "storage_mapping": "assets + video_sitemap_profiles",
+      "public_destination": "Visible player context, supported VideoObject and video:title/description",
+      "population_route": "Watch/transcribe the actual video, then approve"
+    },
+    {
+      "subject": "video",
+      "field": "transcript_captions_and_chapters",
+      "fill_rule": "Use a checked transcript, language-tagged captions and real timecoded chapters. Do not invent spoken claims, clinical instructions or timecodes. Link to the useful canonical watch page.",
+      "required_when": "When available or needed for accessible explanation",
+      "storage_mapping": "Proposed media text metadata + versioned representations + asset_relations",
+      "public_destination": "Accessible transcript/captions and supported chapter/key-moment markup",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "video",
+      "field": "restrictions_and_metrics",
+      "fill_rule": "Use provider/rights evidence for real rating, view count, publication/expiry, subscription, territory/platform restrictions, uploader and live status. Missing values stay absent; family-friendly is not a clinical safety approval.",
+      "required_when": "When the optional value is true and applicable",
+      "storage_mapping": "video_sitemap_profiles + evidence observations",
+      "public_destination": "Supported truthful video fields only",
+      "population_route": "Provider extraction and rights verification"
+    },
+    {
+      "subject": "link",
+      "field": "anchor_text_and_function",
+      "fill_rule": "Name the actual destination or action. Use natural topic-specific anchors; a call link should make the call action and number clear. Do not inject the helpline or experience slogan into every internal anchor.",
+      "required_when": "Every rendered link",
+      "storage_mapping": "links.anchor_text/element_kind/relationship_kind",
+      "public_destination": "Accessible HTML anchor",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "link",
+      "field": "contextual_relationship_and_check",
+      "fill_rule": "Record source page, target, placement, fragment, version, relationship, relevance reason and observed destination status. Use genuine rel/hreflang values; distinguish a citation from an endorsement.",
+      "required_when": "Every internal/external relationship",
+      "storage_mapping": "links + page_relations + observations; proposed business relevance property",
+      "public_destination": "Contextual navigation, citation and legitimate alternate links",
+      "population_route": "source extraction plus verification"
+    },
+    {
+      "subject": "representation",
+      "field": "approved_text_and_source_version",
+      "fill_rule": "Export the approved public meaning, attribution and citations from the same page version, with canonical/source date and language. Exclude private forms, consent records and unpublished claims.",
+      "required_when": "Each public text/Markdown/LLM companion",
+      "storage_mapping": "text_representations + observations",
+      "public_destination": "Approved public text/Markdown; optional selected llms.txt references",
+      "population_route": "source extraction plus verification"
+    }
+  ],
+  "module_profiles": [
+    {
+      "module": "Ask",
+      "purpose": "Answer one real parent/professional question.",
+      "fill": "Question; direct answer; relevant context; a practical example or question to bring to a professional; claim-specific sources; true authorship/review; suitable connected resource/care action.",
+      "experience": "Explain the decision that matters for this question using a sourced professional contribution; do not paste a corporate history paragraph."
+    },
+    {
+      "module": "FAQ",
+      "purpose": "Resolve a focused factual or service question.",
+      "fill": "Exact question and concise answer; operational scope/date/source; deeper related page if needed; matching visible FAQ content before any eligible markup.",
+      "experience": "Make recurring uncertainty easier to resolve: what the first step involves and what the family should confirm."
+    },
+    {
+      "module": "Sunshine",
+      "purpose": "Explain a developmental concept, ability, skill or related topic in everyday life.",
+      "fill": "Clear definition; everyday context; strengths/supports; one useful discussion question; topic relationships; appropriate evidence and review.",
+      "experience": "Show what to notice and why context changes the next decision. Keep independence compatible with useful support."
+    },
+    {
+      "module": "Materials",
+      "purpose": "Explain a specific material and its appropriate purpose.",
+      "fill": "Actual item/images; intended role; relevant tasks/abilities; instructions and practical limitations from a qualified source; age/supervision/safety considerations only when established for that item; rights and linked professional context.",
+      "experience": "Explain why this material fits a particular task and how suitability is checked. Never promise results from owning the item."
+    },
+    {
+      "module": "Interventions / techniques",
+      "purpose": "Explain a method and the professional decision behind it.",
+      "fill": "Method definition; intended goal; suitable context; who selects/demonstrates it; practical example; applicable cautions and adaptation/review point; direct evidence.",
+      "experience": "Show selection, response and adjustment rather than repeating a list of therapies."
+    },
+    {
+      "module": "Assessments / AbilityScore",
+      "purpose": "Explain measurement and what a professional can interpret.",
+      "fill": "Instrument/version; domains; purpose; intended population and scope; administration/interpretation roles; score meaning and limits; public example-question/image connections; validated source for any measurement claim.",
+      "experience": "Connect the starting picture to a useful discussion. Educational example content and private child responses have separate storage/publication boundaries."
+    },
+    {
+      "module": "Mirracles",
+      "purpose": "Give an accurate context for a published video, demonstration or consented experience.",
+      "fill": "Real clip title/description; category; uploader/date; transcript/captions when available; genuine permissions; source details; distinction between individual experience, demonstration and study finding.",
+      "experience": "Explain the context and what a family can learn or ask; a testimony never becomes a universal success statistic."
+    },
+    {
+      "module": "Services / centres",
+      "purpose": "Help a family choose an informed first conversation or suitable visit.",
+      "fill": "Real service/location; currently confirmed contact and care scope; relevant professional facts; first-visit process; fees/availability source where included; useful locality/transport facts where known.",
+      "experience": "Clarify the next decision using actual service knowledge. Location pages need real local differences."
+    },
+    {
+      "module": "Verify / research",
+      "purpose": "Let the reader inspect identity, credential or research evidence.",
+      "fill": "Exact claim; issuer/author; original/version; locator; scope/limitations; review method/date; original-reviewed versus issuer-confirmed status; correction/supersession history.",
+      "experience": "Explain what this source establishes and why it matters for the current question."
+    },
+    {
+      "module": "Educational resources / books",
+      "purpose": "Help a reader understand and choose a specific resource.",
+      "fill": "Edition/title; author/language; audience; real contents/use; images and rights; current legitimate access/purchase path if appropriate; preserve approved commercial terms.",
+      "experience": "Show the resource's concrete use, with genuine author/editor contribution and a truthful excerpt or example."
+    }
+  ],
+  "evidence_contract": {
+    "minimum": [
+      "claim text/type",
+      "specific subject/scope",
+      "source identity/title/author or issuer",
+      "public source URL or protected pointer",
+      "document date/version/hash",
+      "page/table/section locator",
+      "evidence relationship",
+      "actual verification/review action",
+      "reviewer identity/date",
+      "approval and disclosure scope"
+    ],
+    "research_when_applicable": [
+      "study design",
+      "population",
+      "sample/denominator",
+      "timeframe",
+      "measure",
+      "method",
+      "result with units",
+      "uncertainty/limitations",
+      "funding/authorship/publication status"
+    ],
+    "verification_states": [
+      "source supplied",
+      "original inspected",
+      "publisher statement matched",
+      "issuer/registry checked",
+      "qualified topical review completed"
+    ],
+    "editorial_states": [
+      "raw",
+      "draft",
+      "source checked",
+      "review approved",
+      "superseded",
+      "held"
+    ],
+    "publication_states": [
+      "not public",
+      "approved for publication",
+      "published",
+      "withdrawn"
+    ],
+    "state_rule": "Verification, editorial approval and publication are separate dimensions. A live page is not proof of clinical review, and an inspected original is not a current issuer check.",
+    "empty_value_rule": "Use unknown, not applicable, pending evidence or withheld with a reason. Never fill with synthetic ratings, dates, authors, outcomes, licences or metrics just to complete optional fields."
+  },
+  "quality_gates": [
+    {
+      "id": "G01",
+      "check": "Source identity and raw evidence preserved; approved source version known",
+      "scope": "All imports",
+      "owner": "Catalogue/data owner"
+    },
+    {
+      "id": "G02",
+      "check": "Purpose, audience and topic match the actual content",
+      "scope": "Editorial pages/assets",
+      "owner": "Module editor"
+    },
+    {
+      "id": "G03",
+      "check": "Every consequential claim has its scope, evidence and actual review decision",
+      "scope": "Claims",
+      "owner": "Evidence owner and relevant reviewer"
+    },
+    {
+      "id": "G04",
+      "check": "True creators/reviewers and relevant credentials; no inferred sign-off",
+      "scope": "Authored/reviewed content",
+      "owner": "Editorial/review owner"
+    },
+    {
+      "id": "G05",
+      "check": "Examples, research and outcomes have the correct evidence type",
+      "scope": "Examples and result claims",
+      "owner": "Module/evidence editor"
+    },
+    {
+      "id": "G06",
+      "check": "Media inspected; rights/permission adequate; alt and caption serve the actual placement",
+      "scope": "Public media uses",
+      "owner": "Asset/editorial owner"
+    },
+    {
+      "id": "G07",
+      "check": "Real public relationship, working destination and correct contact/action",
+      "scope": "Links/CTAs",
+      "owner": "Search/page owner"
+    },
+    {
+      "id": "G08",
+      "check": "Dates and language are truthful; applicable translation reviewed",
+      "scope": "Dated/multilingual outputs",
+      "owner": "Module/translation editor"
+    },
+    {
+      "id": "G09",
+      "check": "HTML, structured data and public text mirrors describe the same approved version",
+      "scope": "Public representations",
+      "owner": "Page/search engineering"
+    },
+    {
+      "id": "G10",
+      "check": "Sitemap admits only technically eligible URLs/assets and supported, evidenced fields",
+      "scope": "Discovery outputs",
+      "owner": "Sitemap manager"
+    },
+    {
+      "id": "G11",
+      "check": "Public delivery and permissions rechecked for the actual release",
+      "scope": "Deployment",
+      "owner": "Existing website release owner"
+    },
+    {
+      "id": "G12",
+      "check": "Business outcomes sourced from receiving systems, distinct from engagement",
+      "scope": "Outcome reporting",
+      "owner": "Care operations/reporting owner"
+    }
+  ],
+  "output_boundaries": [
+    {
+      "output": "Page/image/video HTML",
+      "content": "Topic, direct answer, relevant brand purpose, actual authors/reviewers, captions/alternatives, contextual evidence and appropriate next step"
+    },
+    {
+      "output": "Structured data / media metadata",
+      "content": "Only the supported relevant factual properties that match the public content; internal business fields need an explicit valid mapping"
+    },
+    {
+      "output": "Page sitemap",
+      "content": "Eligible canonical URL, supported date/alternates/hints when applicable; the full narrative/brand/evidence bundle is not arbitrary XML"
+    },
+    {
+      "output": "Image sitemap",
+      "content": "Parent URL and stable supported image location. Alt/caption/brand/rights remain in their appropriate page/media metadata; deprecated image tags stay disabled"
+    },
+    {
+      "output": "Video sitemap",
+      "content": "Actual clip metadata and evidenced applicable optional values; unrelated slogans or invented view counts are not enrichment"
+    },
+    {
+      "output": "News sitemap",
+      "content": "Only qualifying current news with the applicable publication metadata and dates"
+    },
+    {
+      "output": "Text/Markdown/LLM companions",
+      "content": "Faithful public version of the approved page, canonical/date, attribution and citations. Optional llms.txt can reference selected useful resources; it is not a promised indexing or ranking mechanism"
+    },
+    {
+      "output": "Internal catalogue/reporting",
+      "content": "Source versions, decisions, evidence, business purpose and protected measurement references that do not belong in public search formats"
+    }
+  ],
+  "source_precedence": [
+    {
+      "data": "Approved narrative/terms/brand",
+      "authority": "Latest accepted version and its source/evidence contract; crawler or vendor suggestion cannot overwrite it"
+    },
+    {
+      "data": "Canonical/content/module identity",
+      "authority": "Maintained publisher CMS/repository/publication manifest, reconciled to current serving HTML"
+    },
+    {
+      "data": "Clinical explanation and advice",
+      "authority": "Relevant primary clinical guidance/research and actual qualified topical review"
+    },
+    {
+      "data": "Rights/identity/credentials",
+      "authority": "Actual creator/rights/permission/issuer records with exact scope and check date"
+    },
+    {
+      "data": "File/media metrics",
+      "authority": "Actual file/provider measurements; file mtime is not original publication"
+    },
+    {
+      "data": "Search demand/engagement",
+      "authority": "Dated GSC/GA4/vendor measurement; useful for prioritisation, not clinical truth"
+    },
+    {
+      "data": "Qualified care outcomes",
+      "authority": "Authorised receiving/care systems with an explicit definition and protected linkage"
+    }
+  ],
+  "status": "Editorial population rules; new claims and copy still require scoped review"
+}
