@@ -13,7 +13,7 @@ export function withManagedSitemaps(original,config){
     const h=new Headers(managed.headers),page=config.html[url.hostname+url.pathname.replace(/\/$/,'/index.html')];
     if(page?.csp)h.set('Content-Security-Policy',page.csp);
     h.set('Referrer-Policy','strict-origin-when-cross-origin');h.set('Permissions-Policy','camera=(), microphone=(), geolocation=()');
-    h.set('Link','<'+url.origin+url.pathname+'>; rel="canonical"');
+    h.set('Link','<'+url.origin+url.pathname.replace(/\/$/,'/index.html')+'>; rel="canonical"');
     return new Response(managed.body,{status:managed.status,headers:h});
    }return managed;
   }
