@@ -104,6 +104,39 @@ class R2Reconciliation(unittest.TestCase):
         self.assertEqual(receipt['accounting']['unassociated_objects_retained'], 2)
         self.assertFalse(receipt['deletions_inferred'])
 
+    def html_input(self, refs, parent=None):
+        url = parent or self.parent
+        value = {'page_url': url, 'status': 200, 'final_url': url,
+                 'canonical_urls': [], 'robots': [], 'body_sha256': 'c'*64,
+                 'title': 'Actual public topic', 'description': 'Public resource description',
+                 'observed_at': '2026-10-13T10:00:00Z', 'media_references': refs,
+                 'video_objects': []}
+        path = self.root/'html.jsonl'; path.write_text(json.dumps(value)+'\n')
+        self.inputs['html_snapshot'] = {'path': str(path), 'sha256': c.file_hash(path)}
+        self.save_job()
+
+    def test_dom_video_binding_requires_an_actual_inventory_object(self):
+        url = 'https://images.pinnacleblooms.org/Assets/Materials/video/example.mp4'
+        self.r2files['public-resource-objects.csv'].append(dict(bucket='pbn-test', object_key='Assets/Materials/video/example.mp4', size_bytes='456', content_type='video/mp4', etag='movie', last_modified='', media_kind='video', configured_public_urls=json.dumps([url])))
+        self.r2files['summary.json']['exported_objects'] = 3
+        self.publish('r2_manifest', self.r2files, 'r2')
+        self.html_input([{'media_url': url, 'media_kind': 'video', 'tag': 'source', 'attribute': 'src'}])
+        receipt = r.reconcile(self.job, self.output)
+        self.assertEqual(receipt['accounting']['dom_matched_video_relationships'], 1)
+        self.assertFalse(receipt['public_promotion'])
+
+    def test_dom_parent_cannot_promote_an_unknown_or_private_page(self):
+        self.html_input([], 'https://www.pinnacleblooms.org/private-patient-record')
+        with self.assertRaisesRegex(ValueError, 'parent contradicts accepted publisher baseline'):
+            r.reconcile(self.job, self.output)
+        self.assertFalse(self.output.exists())
+
+    def test_dom_reference_without_object_remains_unmatched(self):
+        self.html_input([{'media_url': 'https://images.pinnacleblooms.org/Assets/missing.png', 'media_kind': 'image', 'tag': 'img', 'attribute': 'src'}])
+        receipt = r.reconcile(self.job, self.output)
+        self.assertEqual(receipt['accounting']['dom_unmatched_relationships_retained'], 1)
+        self.assertEqual(receipt['accounting']['dom_matched_image_relationships'], 0)
+
 
 if __name__ == '__main__':
     unittest.main()
