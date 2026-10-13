@@ -109,7 +109,7 @@ def validate_resource_labels(release,records,feed):
     if actual!=expected[url].strip():raise ValueError('Resource label does not equal authoritative document head title: '+url)
     seen.add(url);checked+=1
    self.href=None
- release=Path(release);manifest=json.loads((release/'manifest.json').read_text())
+ release=Path(release);manifest=json.loads((release/'manifest.json').read_text(encoding='utf8'))
  for f in manifest['files']:
   if f['kind']=='html':parser=Links();parser.feed((release/f['path']).read_text(encoding='utf8'));parser.close()
  if seen!=set(expected):raise ValueError('Generated resource navigation coverage differs from approved source: '+str(len(set(expected)-seen)))
@@ -187,9 +187,9 @@ def refresh(feed,snapshot,baseline,resource_baseline,output,metadata_reader=None
 
 def main():
  if '--validate-resource-labels' in __import__('sys').argv:
-  p=argparse.ArgumentParser();p.add_argument('--validate-resource-labels',type=Path,required=True);p.add_argument('--resource-source',type=Path,required=True);p.add_argument('--feed',type=Path,required=True);p.add_argument('--proof',type=Path,required=True);a=p.parse_args();records=[json.loads(l) for l in a.resource_source.read_text(encoding='utf8').splitlines() if l];proof=validate_resource_labels(a.validate_resource_labels,records,a.feed);a.proof.write_text(json.dumps(proof,indent=2)+'\n');print(packed(proof));return
+  p=argparse.ArgumentParser();p.add_argument('--validate-resource-labels',type=Path,required=True);p.add_argument('--resource-source',type=Path,required=True);p.add_argument('--feed',type=Path,required=True);p.add_argument('--proof',type=Path,required=True);a=p.parse_args();records=[json.loads(l) for l in a.resource_source.read_text(encoding='utf8').splitlines() if l];proof=validate_resource_labels(a.validate_resource_labels,records,a.feed);a.proof.write_text(json.dumps(proof,indent=2)+'\n',encoding='utf8');print(packed(proof));return
  if '--r2-source' in __import__('sys').argv:
-  p=argparse.ArgumentParser();p.add_argument('--r2-source',required=True,type=Path);p.add_argument('--delta',required=True,type=Path);a=p.parse_args();r2=json.loads(a.r2_source.read_text());delta=json.loads(a.delta.read_text());db=m.connect(delta['candidate_feed'])
+  p=argparse.ArgumentParser();p.add_argument('--r2-source',required=True,type=Path);p.add_argument('--delta',required=True,type=Path);a=p.parse_args();r2=json.loads(a.r2_source.read_text(encoding='utf8'));delta=json.loads(a.delta.read_text(encoding='utf8'));db=m.connect(delta['candidate_feed'])
   try:
    db.execute('BEGIN IMMEDIATE')
    for change in r2['changes']:
@@ -203,29 +203,29 @@ def main():
       else:
        row['videos_json']=m.dump([v for v in json.loads(row['videos_json']) if m.normal(video_location(v))!=selected]);delta['exceptions'].append({'url':row['url'],'condition':'Changed/deleted video storage requires current title, description and thumbnail qualification; stale optional facts were not retained','owner':'resource publisher'})
      row['metadata_json']=m.dump(meta);m.upsert(db,m.refresh_digest(row));delta['changes'].append({'url':row['url'],'kind':'storage_reference_deleted' if not change['present'] else 'referenced_storage_metadata_changed'})
-   delta['exceptions']+=r2['holds'];db.commit();a.delta.write_text(json.dumps(delta,ensure_ascii=False,indent=2)+'\n')
+   delta['exceptions']+=r2['holds'];db.commit();a.delta.write_text(json.dumps(delta,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
   except BaseException:db.rollback();raise
   finally:db.close()
   print(packed({'referenced_storage_changes':len(r2['changes']),'held_storage_signals':len(r2['holds']),'source_records_modified':False}));return
  if '--generate-feed' in __import__('sys').argv:
   a=argparse.ArgumentParser();a.add_argument('--generate-feed',required=True,type=Path);a.add_argument('--policy',required=True,type=Path);a.add_argument('--generated',required=True,type=Path);v=a.parse_args();db=m.connect(v.generate_feed)
-  try:r=m.build_release(db,v.generated,json.loads(v.policy.read_text()));print(packed({'release':r['release_id'],'pages':r['page_urls'],'files':len(r['files'])}))
+  try:r=m.build_release(db,v.generated,json.loads(v.policy.read_text(encoding='utf8')));print(packed({'release':r['release_id'],'pages':r['page_urls'],'files':len(r['files'])}))
   finally:db.close()
   return
  if '--package-release' in __import__('sys').argv:
   import zipfile
-  a=argparse.ArgumentParser();a.add_argument('--package-release',required=True,type=Path);a.add_argument('--archive',required=True,type=Path);v=a.parse_args();m.validate_release(v.package_release);manifest=json.loads((v.package_release/'manifest.json').read_text());v.archive.parent.mkdir(parents=True,exist_ok=True)
+  a=argparse.ArgumentParser();a.add_argument('--package-release',required=True,type=Path);a.add_argument('--archive',required=True,type=Path);v=a.parse_args();m.validate_release(v.package_release);manifest=json.loads((v.package_release/'manifest.json').read_text(encoding='utf8'));v.archive.parent.mkdir(parents=True,exist_ok=True)
   if v.archive.exists():raise ValueError('Archive already exists; reconcile the checkpoint')
   with zipfile.ZipFile(v.archive,'w',zipfile.ZIP_DEFLATED) as z:
    for name in ['manifest.json']+[f['path'] for f in manifest['files']]:z.write(v.package_release/name,name)
   print(packed({'archive_sha256':m.digest_file(v.archive),'release':manifest['release_id']}));return
  p=argparse.ArgumentParser();p.add_argument('--feed',required=True,type=Path);p.add_argument('--snapshot',required=True,type=Path);p.add_argument('--baseline-publisher',required=True,type=Path);p.add_argument('--resource-baseline',required=True,type=Path);p.add_argument('--output',required=True,type=Path);p.add_argument('--node',required=True);p.add_argument('--bindings',required=True);p.add_argument('--aliases',type=Path);p.add_argument('--reuse-resources',type=Path);a=p.parse_args()
- snapshot=json.loads(a.snapshot.read_text());baseline=list(csv.DictReader(a.baseline_publisher.open(encoding='utf-8-sig')));resources=[json.loads(line) for line in a.resource_baseline.read_text(encoding='utf8').splitlines() if line]
+ snapshot=json.loads(a.snapshot.read_text(encoding='utf8'));baseline=list(csv.DictReader(a.baseline_publisher.open(encoding='utf-8-sig')));resources=[json.loads(line) for line in a.resource_baseline.read_text(encoding='utf8').splitlines() if line]
  def reader(url,source):
   target=a.output/'answer-readbacks'/('source-'+hashlib.sha256(url.encode()).hexdigest()+'.json');target.parent.mkdir(parents=True,exist_ok=True)
   r=subprocess.run([a.node,'scripts/current-public-answer.mjs','--url',url,'--bindings',a.bindings,'--output',str(target)],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding='utf8')
   if r.returncode:return {'publication_qualified':False,'error':'Current maintained-reader comparison failed; see private source exception'}
-  return json.loads(target.read_text())
- result=refresh(a.feed,snapshot,baseline,resources,a.output,reader,json.loads(a.aliases.read_text()) if a.aliases else None,a.reuse_resources);print(packed({k:result[k] for k in ('candidate_feed','ask_eligible_checked','resources_checked','source_rows_modified','private_objects_inventoried')}|{'changes':len(result['changes']),'exceptions':len(result['exceptions'])}))
+  return json.loads(target.read_text(encoding='utf8'))
+ result=refresh(a.feed,snapshot,baseline,resources,a.output,reader,json.loads(a.aliases.read_text(encoding='utf8')) if a.aliases else None,a.reuse_resources);print(packed({k:result[k] for k in ('candidate_feed','ask_eligible_checked','resources_checked','source_rows_modified','private_objects_inventoried')}|{'changes':len(result['changes']),'exceptions':len(result['exceptions'])}))
 
 if __name__=='__main__':main()
