@@ -1,9 +1,19 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs/promises';import {createHash} from 'node:crypto';
 import {build} from 'esbuild';import {Miniflare,convertV4MiniflareOptions} from 'miniflare';
 import {parse} from 'parse5';
-import {faqMetadataMap,faqMetadata} from '../src/lib/knowledge/metadata.mjs';
+import {faqMetadataMap,faqMetadata,faqLanguageIndexDescription} from '../src/lib/knowledge/metadata.mjs';
 import {canonicalNavigationTarget} from '../deployment/canonical-navigation-aliases.mjs';
 const file='ask-public/knowledge-data/faq-index.json',bytes=await fs.readFile(file),index=JSON.parse(bytes),sha=b=>createHash('sha256').update(b).digest('hex');
+
+test('language-index source reuse leaves answer,category,search,pagination,error and other-language metadata alone',()=>{
+ const english={path:'english',route:{mode:'listing',language:'english'},title:'English child development questions | Pinnacle Blooms Network'};
+ const telugu={path:'telugu',route:{mode:'listing',language:'telugu'},title:'తెలుగు child development questions | Pinnacle Blooms Network'};
+ assert.equal(faqLanguageIndexDescription(english),english.title);
+ assert.equal(faqLanguageIndexDescription(telugu),telugu.title);
+ assert.notEqual(faqLanguageIndexDescription(english),faqLanguageIndexDescription(telugu));
+ for(const changed of [{page:2},{q:'speech'},{error:true},{missing:true},{title:''},{path:''},{path:'en'},{route:null},{route:{mode:'answer',language:'english'}},{route:{mode:'listing',language:'english',category:'speech-therapy'}},{route:{mode:'listing',language:'telugu'}}])assert.equal(faqLanguageIndexDescription({...english,...changed}),null);
+ assert.equal(faqLanguageIndexDescription({path:'hindi',route:{mode:'listing',language:'hindi'},title:'Accepted Hindi title'}),null);
+});
 test('all FAQ metadata is source-based, bounded and distinct without changing records',async()=>{
  const map=faqMetadataMap(index),seen=new Set(),descriptions=new Set(),samples=[];
  for(const x of index){const m=map.get(x.url);assert(m.title.length<=70,x.url);assert(m.description.length<=160,x.url);assert(m.title.endsWith(' | Pinnacle Blooms'));assert(m.description.endsWith('9100 181 181'));assert(!seen.has(m.title),x.url);seen.add(m.title);assert(!/\ufffd/.test(m.title+m.description));if(samples.length<7&&!samples.some(s=>s.lang===x.lang))samples.push({url:'https://www.pinnacleblooms.org'+x.url,lang:x.lang,...m});}

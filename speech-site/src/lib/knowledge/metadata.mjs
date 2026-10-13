@@ -60,6 +60,12 @@ export function faqMetadata(answer,{question=false,questionDescription=false}={}
  return {title,description};
 }
 const maps=new WeakMap();
+// Reuse the already-published language identity, without new translation or
+// clinical copy. This is only for these two first-page language indexes.
+export function faqLanguageIndexDescription({path,route,title,page=1,q='',error=false,missing=false}){
+ if(error||missing||q||page!==1||!['english','telugu'].includes(path)||route?.mode!=='listing'||route.category||route.language!==path)return null;
+ return typeof title==='string'&&title?title:null;
+}
 export function faqMetadataMap(index){
  if(maps.has(index))return maps.get(index);
  const map=new Map(index.map(x=>[x.url,faqMetadata(x)]));
