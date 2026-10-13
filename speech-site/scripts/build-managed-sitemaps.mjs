@@ -4,6 +4,7 @@ import {execFileSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 import {parse,serialize} from 'parse5';
+import {applyGitPublisher,managedNavigationCSS} from './git-publisher-records.mjs';
 const root='release-managed-sitemaps-20261013';
 const selection=process.env.PINNACLE_SITEMAP_SELECTION||'../tooling/sitemap-manager/publication-selection.json';
 const python=process.env.PYTHON_EXECUTABLE||(process.platform==='win32'?'C:/Python314/python.exe':'python3');
@@ -47,11 +48,15 @@ for(const entry of manifest.files){
   if(['href','src','action','poster'].includes(a.name)&&a.value.startsWith('/')&&!a.value.startsWith('//')&&!a.value.startsWith('/site-map/'))a.value='https://www.pinnacleblooms.org'+a.value;
  }});
  const head=nodes(doc,'head')[0],style={nodeName:'style',tagName:'style',namespaceURI:'http://www.w3.org/1999/xhtml',attrs:[],parentNode:head,childNodes:[]};
- style.childNodes=[{nodeName:'#text',parentNode:style,value:'.managed-sitemap{max-width:1200px;margin:0 auto;padding:clamp(20px,4vw,56px)}.managed-sitemap h1{font-size:clamp(28px,4vw,44px);line-height:1.2;margin:0 0 24px}.managed-sitemap ul{padding-left:24px}.managed-sitemap li{margin:10px 0;overflow-wrap:anywhere}.managed-sitemap a{text-decoration:underline;text-underline-offset:3px}.managed-sitemap nav{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}.managed-sitemap nav a{padding:10px 14px;border:1px solid #e2cce5;border-radius:12px}.managed-sitemap p{font-size:16px;line-height:1.6}'}];head.childNodes.push(style);
+ style.childNodes=[{nodeName:'#text',parentNode:style,value:managedNavigationCSS}];head.childNodes.push(style);
  const html=serialize(doc);assert.equal(nodes(parse(html),'h1').length,1);assert(html.includes('portal-header')&&html.includes('portal-footer'));assert(html.includes('tel:+919100181181'));
  await fs.writeFile(file,html);entry.bytes=Buffer.byteLength(html);entry.sha256=hash(html);
  report.html.push({path:entry.path,url:entry.public_url,sha256:entry.sha256,bytes:entry.bytes});
 }
+const publisherEntries=await applyGitPublisher({root:stage,manifest,base});
+for(const f of report.html){const current=manifest.files.find(x=>x.path===f.path);Object.assign(f,{sha256:current.sha256,bytes:current.bytes});}
+report.html.push(...publisherEntries.map(f=>({path:f.path,url:f.public_url,sha256:f.sha256,bytes:f.bytes})));
+report.publisherRecords=manifest.git_publisher_records;
 assert.equal(report.html.length,manifest.files.filter(f=>f.kind==='html').length);
 manifest.release_id=hash(JSON.stringify(manifest.files.toSorted((a,b)=>a.path<b.path?-1:a.path>b.path?1:0).map(f=>[f.path,f.sha256])));
 const fragments=manifest.files.filter(f=>['robots_addition','llms_addition'].includes(f.kind)).length;
