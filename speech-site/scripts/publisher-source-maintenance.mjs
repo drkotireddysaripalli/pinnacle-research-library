@@ -1,5 +1,6 @@
 // One native source job. No model, messages, customer records or new credentials.
 import fs from 'node:fs/promises';import path from 'node:path';import assert from 'node:assert/strict';import {spawn} from 'node:child_process';import {createHash} from 'node:crypto';import {acquirePublisherLock} from './public-source-lock.mjs';
+import {verifiedR2Source} from './verified-r2-source.mjs';
 const configPath='ask-private/public-publisher-config.json',hash=b=>createHash('sha256').update(b).digest('hex'),read=p=>fs.readFile(p,'utf8').then(JSON.parse),save=async(p,v)=>{await fs.mkdir(path.dirname(p),{recursive:true});await fs.writeFile(p,JSON.stringify(v,null,2)+'\n')};
 const now=new Date(),id='maintenance-'+now.toISOString().replace(/[^0-9]/g,''),root=path.resolve('ask-private',id),out=path.resolve('outputs',id);await fs.mkdir(root,{recursive:true});await fs.mkdir(out,{recursive:true});
 const releaseLock=acquirePublisherLock(path.resolve('../../../work/pinnacle-growth-system/native-source-maintenance.lock'),id),receipt={id,startedAt:now.toISOString(),modelCalls:0,newCredentials:false,steps:[],status:'running'},report=out+'/report.json';await save(report,receipt);
@@ -17,14 +18,15 @@ try{
   for(let segment=0;segment<3;segment++){assert.equal(await run('r2-segment-'+segment,['scripts/r2-approved-rotation.mjs','--root',r2root]),0);if((await read(r2root+'/state.json')).complete)break;}
  }
  const r2state=await read(r2root+'/state.json');receipt.r2Complete=r2state.complete;receipt.r2MetadataPages=r2state.completedPages;
- let events=[];
+ let qualifiedR2;
  if(r2state.complete){const p=await read(r2root+'/proof.json'),delta=await read(r2root+'/qualified-changes.json');receipt.r2Proof=p;receipt.r2ObservedAt=r2state.completedAt;
   // Initialization records are metadata only; never a reason to remove video.
   if(delta.initializations?.length){for(const x of delta.initializations)if(approved[x.id]&&!approved[x.id].etag)approved[x.id].etag=x.etag;cfg.r2_associations=root+'/initialized-r2-associations.json';await save(cfg.r2_associations,approved);await save(configPath,cfg);receipt.metadataInitializations=delta.initializations.length;}
-  events=delta.changes.slice(0,128).map(x=>{const i=x.id.indexOf('/');return {bucket:x.id.slice(0,i),key:x.id.slice(i+1),operation:x.operation};});receipt.pendingR2Changes=Math.max(0,delta.changes.length-events.length);receipt.unstableR2Holds=delta.holds.length;
+  qualifiedR2=verifiedR2Source(p,delta,approved,registrySHA,r2state.completedAt);receipt.r2StableChangesDrained=qualifiedR2.totalStableChangesApplied;receipt.pendingR2Changes=qualifiedR2.remainingStableChanges;receipt.unstableR2Holds=delta.holds.length;
  }
- const sourceId=id+'-source',args=['scripts/publish-public-source.mjs','--config',configPath,'--id',sourceId];
- if(events.length){const file=root+'/r2-events.json';await save(file,{schema_version:1,event_id:id,objects:events});args.push('--r2-events',file);}
+ const sourceId=id+'-source',jobConfig={...await read(configPath)};
+ if(qualifiedR2){const file=root+'/qualified-r2-source.json';await save(file,qualifiedR2);jobConfig.reuse_r2=file;}
+ const jobConfigPath=root+'/job-config.json';await save(jobConfigPath,jobConfig);const args=['scripts/publish-public-source.mjs','--config',jobConfigPath,'--id',sourceId];
  let code=await run('source-publisher',args);
  if(code!==0){
   const failed=await read('outputs/'+sourceId+'/source-release.json').catch(()=>null);
@@ -38,6 +40,6 @@ try{
   }
  }
  if(code!==0){receipt.status='failed-last-good-preserved';receipt.sourceReceipt='outputs/'+sourceId+'/source-release.json';throw Error('Source publisher failed; exact checkpoint retained');}
- const source=await read('outputs/'+sourceId+'/source-release.json');assert(['verified_unchanged_publication','verified_published'].includes(source.phase));receipt.sourcePhase=source.phase;receipt.sourceReceipt='outputs/'+sourceId+'/source-release.json';receipt.status=r2state.complete?'verified':'source-verified-r2-rotation-pending';receipt.finishedAt=new Date().toISOString();await save(report,receipt);console.log(JSON.stringify({status:receipt.status,sourcePhase:source.phase,r2Complete:r2state.complete,report}));
+ const source=await read('outputs/'+sourceId+'/source-release.json');assert(['verified_unchanged_publication','verified_published'].includes(source.phase));receipt.sourcePhase=source.phase;receipt.sourceReceipt='outputs/'+sourceId+'/source-release.json';receipt.status=r2state.complete&&!receipt.pendingR2Changes&&!receipt.unstableR2Holds&&!source.sourceExceptions?'verified':'source-verified-pending-source-holds-or-R2-coverage';receipt.finishedAt=new Date().toISOString();await save(report,receipt);console.log(JSON.stringify({status:receipt.status,sourcePhase:source.phase,r2Complete:r2state.complete,report}));
 }catch(error){receipt.status='failed-last-good-preserved';receipt.error=error.message;receipt.finishedAt=new Date().toISOString();await save(report,receipt);process.exitCode=1;}
 finally{releaseLock();}
