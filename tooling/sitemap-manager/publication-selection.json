@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "archive": "baseline/release-20261012.zip",
+  "archive_sha256": "30188e1769b3a51215bc57dbdcc699716ee6774a9af13ae7a5cc4f7ff077a732",
+  "release_id": "264f85221596f585f3de370e4c6a31484c1cddb9c45044f39478439b459198f5",
+  "expected_page_urls": 71047,
+  "reviewed_source": "PR58 collected baseline, published and verified by PR65; newer candidate media is not promoted by this pointer."
+}
