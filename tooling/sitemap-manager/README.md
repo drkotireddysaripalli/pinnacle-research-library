@@ -154,6 +154,38 @@ The selected job pins the `r2_manifest`, `ask_manifest`, `publisher_media`,
 output is not a sitemap approval. Current publisher content versions, curation
 overrides and actual rendered use still feed the normalized profile gates.
 
+The optional pinned `html_snapshot` input adds real source-image/video joins from
+anonymous resource HTML. `public_media_snapshot.py` collects only the accepted
+Materials, Interventions and `/abs/` example pages with bounded concurrency;
+compressed HTML and byte hashes are protected evidence. Unicode and encoded
+canonical addresses normalize consistently. A missing optional canonical tag is
+recorded as unknown; a conflicting canonical or noindex is an explicit hold.
+
+`public_media_profiles.py` combines the verified candidate map, actual publisher
+content fingerprints/curation overrides, current HTML placements, public image
+HEAD evidence and the separately recorded human reference authorization. Its
+review output records thumbnail selections and any editorial descriptions.
+Unbound objects, noindex parents, unavailable images and generated/placeholder
+video dates, durations or view counts are never silently approved.
+
+```sh
+python tooling/sitemap-manager/public_media_profiles.py \
+  --review-job private/publication-review-job.json \
+  --output private/reviewed-public-media.json \
+  --receipt private/publication-review-receipt.json
+python tooling/sitemap-manager/public_media_profiles.py \
+  --db private/candidate-catalogue.sqlite3 \
+  --source private/reviewed-public-media.json \
+  --source-sha256 '<selected-reviewed-source-sha256>' \
+  --receipt private/public-media-profile-receipt.json
+```
+
+The normalized projection connects original and rendered renditions to the same
+logical asset, binds every active use/profile to its actual current page version,
+preserves prior source/placement history and deduplicates image output per page.
+The apply command is transactional. It does not publish or load the optional
+cloud mirror; production serving still requires the existing owner's release.
+
 `publisher_media.py` imports the website owner's hash-verified public page/media
 export into the existing private normalized catalogue. Supply the accepted
 transfer-manifest SHA256 and its actual observation timestamp. All file hashes,
