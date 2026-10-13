@@ -1,6 +1,6 @@
 # Source refresh through the existing native publishing command
 
-The website owner runs one bounded command on the existing publishing machine:
+The existing local `postbuild` now invokes `scripts/public-source-trigger.mjs` whenever the approved private configuration exists. CI and publisher-child builds skip dispatch, and a source-publisher ownership lock blocks overlap. The same bounded entry point can be invoked explicitly:
 
 ```text
 npm run sitemap:publish-source -- --config ask-private/public-publisher-config.json --id <unique-publisher-event-id>
@@ -24,6 +24,8 @@ The first current run checked 40,170 eligible Ask records twice, all 1,103 appro
 
 The approved seed replays the 71,047-page public feed. Unknown/private/unassociated additions are not automatically promoted. Source content/clinical records, original assessment questionnaires, paid books, advertisements, receiving systems and stopped growth jobs are not modified by this publisher command.
 
-External publishers must invoke this existing entry point or supply their object event to its next release checkpoint. An out-of-band database/R2 console write cannot wake a stopped scheduler. Full real-time provider-to-machine dispatch is not established or claimed by a successful manual/native publishing command. The explicit fallback is current source reconciliation on each publisher/release invocation.
+The trigger runs at a local build/publishing checkpoint. No periodic reconciliation job or provider write hook exists on this machine: the only Pinnacle Windows tasks discovered are the disabled retired API scheduler/gateway. Those remain stopped. External database/R2 edits therefore wait for the next publishing checkpoint or an explicit existing uploader signal. This is not continuous provider-to-machine dispatch, and requires the publishing host and its existing credentials to be available. A failed job retains its logs/checkpoint and unreconciled lock rather than silently starting another release.
+
+The document-title parser is shared by both the public media snapshot and refresh readers. It now reads `<head><title>` and excludes SVG accessibility titles. A fixture exercises both readers. The existing 1,103 complete resource observations were reused, with bounded head-only readback for 92 affected documents; actual source fingerprints were recomputed. All 126 reviewed resource video titles were compared with the actual head titles (without the publisher suffix), and all already matched. Their descriptions and dates were preserved.
 
 The first unbounded fingerprint attempt hit the unchanged 6,000ms statement timeout. Its exact original RPC was restored and read back before the bounded additive extension was installed. Owner, security mode, EXECUTE grants, source filter and normal sitemap page size remain unchanged. The corrected complete reader passed both stable snapshots. Failed attempts remain in the private evidence; they are not green results.

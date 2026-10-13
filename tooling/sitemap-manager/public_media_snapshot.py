@@ -54,6 +54,7 @@ class MediaHTML(HTMLParser):
         self.references = []
         self.video_objects = []
         self.in_title = self.in_h1 = self.in_video = False
+        self.in_head = False
         self.json_script = False
         self.json_data = []
 
@@ -78,7 +79,9 @@ class MediaHTML(HTMLParser):
         a = dict(attrs)
         if tag == 'base' and a.get('href'):
             self.base = self.address(a['href']) or self.base
-        if tag == 'title': self.in_title = True
+        if tag == 'head': self.in_head = True
+        # SVG accessibility titles describe icons, not the document.
+        if tag == 'title': self.in_title = self.in_head
         if tag == 'h1': self.in_h1 = True
         if tag == 'meta':
             name = a.get('name', '').lower()
@@ -115,6 +118,7 @@ class MediaHTML(HTMLParser):
         if self.json_script: self.json_data.append(data)
 
     def handle_endtag(self, tag):
+        if tag == 'head': self.in_head = self.in_title = False
         if tag == 'title': self.in_title = False
         if tag == 'h1': self.in_h1 = False
         if tag == 'video': self.in_video = False

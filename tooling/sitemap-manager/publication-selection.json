@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "archive": "baseline/publisher-refresh-source-refresh-20261014.zip",
-  "archive_sha256": "17fa761c0bcf708e11674075b06ca69d10fab504f31ba2840f1000f6811eb7e2",
-  "release_id": "b502bb93b64145e805b5c1eef0b3a0a40e99477affa814cc3d27b136f649d7fc",
+  "archive": "baseline/publisher-refresh-source-head-20261014.zip",
+  "archive_sha256": "18b30394cbedc822e3ccf0f311719d8548b0b216a021b1ef5e42b816a8d24d36",
+  "release_id": "4527d7403fc48c32676c07297ecf079b3753391376ce4477cf888c11fed79163",
   "expected_page_urls": 71047,
-  "reviewed_source": "Bounded owner-authorized public publisher refresh; complete stable Ask content fingerprints, current public resource DOM and existing reviewed media rights/parent associations. Source receipt source-refresh-20261014"
+  "reviewed_source": "Bounded owner-authorized public publisher refresh; complete stable Ask content fingerprints, current public resource DOM and existing reviewed media rights/parent associations. Source receipt source-head-20261014"
 }

@@ -7,6 +7,15 @@ import public_media_snapshot as p
 
 
 class PublicMediaSnapshot(unittest.TestCase):
+    def test_document_title_excludes_inline_svg_accessibility_title(self):
+        markup = '<html><head><title>AAC Apps &amp; Software | Pinnacle Blooms</title></head><body><h1>AAC</h1><svg><title>Tool ID:16.1</title></svg></body></html>'
+        from source_refresh import PublicHTML
+        for reader in (p.MediaHTML, PublicHTML):
+            parser = reader('https://materials.pinnacleblooms.org/aac')
+            parser.feed(markup)
+            self.assertEqual(parser.snapshot()['title'], 'AAC Apps & Software | Pinnacle Blooms')
+            self.assertEqual(parser.snapshot()['h1'], 'AAC')
+
     def test_transformed_image_keeps_separate_actual_rendition_and_r2_source(self):
         actual = 'https://images.pinnacleblooms.org/cdn-cgi/image/width=1400,quality=55/Assets/example.png'
         parser = p.MediaHTML('https://materials.pinnacleblooms.org/example')
