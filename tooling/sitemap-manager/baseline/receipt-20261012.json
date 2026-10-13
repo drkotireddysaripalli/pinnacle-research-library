@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-12",
+  "status": "built_reviewed_not_deployed",
+  "source_base_sha": "2b68da7",
+  "release_id": "264f85221596f585f3de370e4c6a31484c1cddb9c45044f39478439b459198f5",
+  "generator_sha256": "f658b3fc39eab9b084421d8e6f11240dfd9ec1fdcb5b81465264bff773f1a42a",
+  "archive_sha256": "30188e1769b3a51215bc57dbdcc699716ee6774a9af13ae7a5cc4f7ff077a732",
+  "archive_bytes": 3652477,
+  "current_url_identities": 221335,
+  "historical_tombstones": 421,
+  "current_decisions": {
+    "INCLUDE": 71047,
+    "HOLD": 23600,
+    "EXCLUDE": 126688
+  },
+  "hosts": {
+    "interventions.pinnacleblooms.org": 893,
+    "materials.pinnacleblooms.org": 162,
+    "pediatricians.pinnacleblooms.org": 1,
+    "pinnacleblooms.org": 42118,
+    "www.pinnacleblooms.org": 27873
+  },
+  "file_counts": {
+    "pages": 33,
+    "videos": 4,
+    "images": 2,
+    "index": 5,
+    "robots_addition": 5,
+    "html": 161,
+    "markdown": 5,
+    "llms": 5,
+    "llms_addition": 5
+  },
+  "image_references": 364,
+  "video_entries": 19163,
+  "warnings": {
+    "video_empty_tags_omitted": 2840,
+    "video_title_shortened": 468
+  },
+  "validation": {
+    "python_contracts": 33,
+    "node_contracts": 4,
+    "semantic_validation": "passed",
+    "official_xsd_files": 44,
+    "official_image_elements": 364,
+    "official_video_elements": 19163,
+    "rebuild_public_release_id": "identical",
+    "independent_review": "no unresolved blocking findings in offline review scope"
+  },
+  "corrections": [
+    "421 old query identities altered by generic entity decoding are historical nonpublic tombstones; 221335 corrected current identities retained",
+    "Two obsolete Ask aliases redirect to canonical URLs already included; final candidate count reduced from 71049 to 71047",
+    "2840 empty optional video tags omitted",
+    "468 overlong video titles shortened at word boundaries with originals retained"
+  ],
+  "not_verified": [
+    "whole-estate publishing completeness beyond supplied exports",
+    "new files publicly served",
+    "engine submission and processing of managed indexes",
+    "every video playback/prominence/rights",
+    "qualified enquiry and enrolment outcome"
+  ],
+  "source_inputs": [
+    {
+      "role": "frog",
+      "sha256": "9de0c25a1f3c1ce3294ddaea98ce1d80a5a49a6ea4fdd0ded71120a3dfe38300",
+      "expected_rows": 200000,
+      "date": "2026-10-09 to 2026-10-10",
+      "scope": "All recovered internal rows; configured 200,000-URL crawl guard reached"
+    },
+    {
+      "role": "ahrefs",
+      "sha256": "ea5312ef9af4af654fdb58bcc09e6a2397b0068f73bc154e607428a51acc4e40",
+      "expected_rows": 59471,
+      "date": "2026-10-12",
+      "scope": "All internal URLs in the Always-on audit bulk export, project 10477823"
+    },
+    {
+      "role": "semrush_issues",
+      "sha256": "2faf8367d49e47b0c29925b71c74eea8c8270852c9fe3148b2b4b2e569d99e5c",
+      "expected_rows": 67529,
+      "date": "2026-10-12",
+      "scope": "Full matching page-level issue export"
+    },
+    {
+      "role": "semrush_status",
+      "sha256": "7a6c634bff897b4f8c1a3558c785ba98d08eff1c89037604cb98da93794ed565",
+      "expected_rows": 67529,
+      "date": "2026-10-12",
+      "scope": "Complete current native crawled-page status export; meta robots field unavailable"
+    },
+    {
+      "role": "gsc_performance-0",
+      "sha256": "7bcd3bb346519b1b27782cc77319b1fe89e25c4283606c76955ba54d8d4505c8",
+      "expected_rows": 10000,
+      "date": "2025-06-12 to 2026-10-10",
+      "scope": "Distinct page search-activity rows; domain property; fully paginated warehouse response"
+    },
+    {
+      "role": "gsc_performance-1",
+      "sha256": "adccbcc74b86ba2f340c989b8a239e7467ffd5dcf0f09713a1fdc2b91bff3d90",
+      "expected_rows": 10000,
+      "date": "2025-06-12 to 2026-10-10",
+      "scope": "Distinct page search-activity rows; domain property; fully paginated warehouse response"
+    },
+    {
+      "role": "gsc_performance-2",
+      "sha256": "c87ad1cfa2763f26bf3670d308db5345c6fe55b3b92217d66740eeff7de7031f",
+      "expected_rows": 9713,
+      "date": "2025-06-12 to 2026-10-10",
+      "scope": "Distinct page search-activity rows; domain property; fully paginated warehouse response"
+    },
+    {
+      "role": "gsc_saved_performance",
+      "sha256": "d0784a99f34b57758e098f8fb914f0fac45ac38a973dab5fb5f2c78b88690971",
+      "expected_rows": 15136,
+      "date": "2026-09-09 to 2026-10-06",
+      "scope": "Previously reconciled settled page export; discovery only"
+    },
+    {
+      "role": "gsc_inspections",
+      "sha256": "bff5f14fc0f8d25caa196184730e25b018cdd0b76acdfd9fa26d0150b6dce68f",
+      "expected_rows": 81,
+      "date": "2026-10-12 retrieval",
+      "scope": "All 81 stored domain-property inspections; observation dates retained"
+    },
+    {
+      "role": "gsc_tracked",
+      "sha256": "5bf9a4a8a12c33d2102388f4db3dce3a1f221419aa2085850c98e03e551c29e0",
+      "expected_rows": 389,
+      "date": "2026-10-12 retrieval",
+      "scope": "All configured tracker URLs; selected cohort, not the full estate"
+    },
+    {
+      "role": "sitemap_urls",
+      "sha256": "ff89ff508fa89ec6005679fee3b78e60afc81e70eae8a693a975c141c071a0af",
+      "expected_rows": 67569,
+      "date": "2026-10-12",
+      "scope": "Current deduplicated advertisements from discovered sitemaps across six known hosts"
+    },
+    {
+      "role": "live_metadata",
+      "sha256": "eb74b4582ef09b4ce3b07a54a5455864480027b05da8c5735bdcf575de8dcbe9",
+      "expected_rows": 596,
+      "date": "2026-10-12",
+      "scope": "Prior bounded checks plus two refreshed obsolete Ask redirects"
+    },
+    {
+      "role": "media_census",
+      "sha256": "30fcd06edab017f5eaff6db31e97e32ef232d4f061243380b18b08cfab6dd1b0",
+      "expected_rows": null,
+      "date": "2026-10-12",
+      "scope": null
+    }
+  ]
+}
