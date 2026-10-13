@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "archive": "baseline/release-media-20261013.zip",
-  "archive_sha256": "44f9bfae4b26755d9fa4d37e54519fd10e7e1c6f8994c76ac752005fb76344f5",
-  "release_id": "b19067a5dcaabae5469951206baddf810bd88993c51f8e7a715497c01cb00ab5",
+  "archive": "baseline/publisher-refresh-source-qualified-20261014.zip",
+  "archive_sha256": "f3e26a5dc7e5058057f753e76909364444e4fb7429e7b14b67562da92c6a34ba",
+  "release_id": "588b733b2efbf274b9345e1b08c2ea2e03797a64405d28dd8ae3d0037b50c9e8",
   "expected_page_urls": 71047,
-  "reviewed_source": "Reviewed normalized public media release; PR69 source054b7a17cd63c8776cca690005c0bf83394772fe; reviewed input197d8bc0b641b579fdc4645adcbf796df06fb0cd3ba83b02aeabd173eb92eb91; source holds and unverified optional video metrics excluded."
+  "reviewed_source": "Bounded owner-authorized public publisher refresh; complete stable Ask content fingerprints, current public resource DOM and existing reviewed media rights/parent associations. Source receipt source-qualified-20261014"
 }
